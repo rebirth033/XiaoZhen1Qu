@@ -22,5 +22,22 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
             return Json(result);
         }
-	}
+
+        public JsonResult ValidateCheckCode()
+        {
+            string YZM = Request["YZM"];
+            //生成的验证码被保存到session中
+            if (Session["CheckCode"] != null)
+            {
+                string checkcode = Session["CheckCode"].ToString();
+                if (YZM == checkcode)
+                    return Json(new { Result = EnResultType.Success });
+                else
+                    return Json(new { Result = EnResultType.Failed });
+            }
+            else
+                return Json(new { Result = EnResultType.Failed });
+        }
+
+    }
 }

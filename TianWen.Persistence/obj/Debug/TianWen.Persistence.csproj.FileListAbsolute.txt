@@ -28,3 +28,13 @@ F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.Persistence\
 F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.Persistence\obj\Debug\TianWen.Persistence.csprojResolveAssemblyReference.cache
 F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.Persistence\obj\Debug\TianWen.Persistence.dll
 F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.Persistence\obj\Debug\TianWen.Persistence.pdb
+D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.Persistence\bin\Debug\TianWen.Persistence.dll
+D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.Persistence\bin\Debug\TianWen.Persistence.pdb
+D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.Persistence\bin\Debug\Oracle.ManagedDataAccess.dll
+D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.Persistence\bin\Debug\TianWen.Utility.dll
+D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.Persistence\bin\Debug\Syncfusion.Calculate.Base.dll
+D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.Persistence\bin\Debug\log4net.dll
+D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.Persistence\bin\Debug\TianWen.Utility.pdb
+D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.Persistence\obj\Debug\TianWen.Persistence.csprojResolveAssemblyReference.cache
+D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.Persistence\obj\Debug\TianWen.Persistence.dll
+D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.Persistence\obj\Debug\TianWen.Persistence.pdb

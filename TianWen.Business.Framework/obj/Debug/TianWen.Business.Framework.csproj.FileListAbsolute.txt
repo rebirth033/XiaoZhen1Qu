@@ -35,3 +35,15 @@ F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.Business.Fra
 F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.Business.Framework\bin\Debug\Common.Logging.dll
 F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.Business.Framework\obj\Debug\TianWen.Business.Framework.dll
 F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.Business.Framework\obj\Debug\TianWen.Business.Framework.pdb
+D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.Business.Framework\bin\Debug\TianWen.Business.Framework.dll
+D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.Business.Framework\bin\Debug\TianWen.Business.Framework.pdb
+D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.Business.Framework\bin\Debug\Spring.Core.dll
+D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.Business.Framework\bin\Debug\System.Web.Mvc.dll
+D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.Business.Framework\bin\Debug\Common.Logging.dll
+D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.Business.Framework\bin\Debug\System.Web.Razor.dll
+D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.Business.Framework\bin\Debug\System.Web.WebPages.Razor.dll
+D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.Business.Framework\bin\Debug\System.Web.WebPages.dll
+D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.Business.Framework\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.Business.Framework\obj\Debug\TianWen.Business.Framework.dll
+D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.Business.Framework\obj\Debug\TianWen.Business.Framework.pdb
+D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.Business.Framework\obj\Debug\TianWen.Business.Framework.csprojResolveAssemblyReference.cache

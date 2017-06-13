@@ -16,3 +16,10 @@ F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.Utility\bin\
 F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.Utility\bin\Debug\Syncfusion.Calculate.Base.dll
 F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.Utility\obj\Debug\TianWen.Utility.dll
 F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.Utility\obj\Debug\TianWen.Utility.pdb
+D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.Utility\bin\Debug\TianWen.Utility.dll
+D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.Utility\bin\Debug\TianWen.Utility.pdb
+D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.Utility\bin\Debug\log4net.dll
+D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.Utility\bin\Debug\Syncfusion.Calculate.Base.dll
+D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.Utility\obj\Debug\TianWen.Utility.dll
+D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.Utility\obj\Debug\TianWen.Utility.pdb
+D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.Utility\obj\Debug\TianWen.Utility.csprojResolveAssemblyReference.cache
