@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DA728F20-E388-4236-B1B6-072C04E1BD05}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TianWen.GloablResource</RootNamespace>
+    <AssemblyName>TianWen.GloablResource</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TianWen\ApplicationManager\Account.cs" />
+    <Compile Include="TianWen\ApplicationManager\ISessionManager.cs" />
+    <Compile Include="TianWen\GlobalResource\Agent.cs" />
+    <Compile Include="TianWen\GlobalResource\AgentHelp.cs" />
+    <Compile Include="TianWen\GlobalResource\AgentRight.cs" />
+    <Compile Include="TianWen\GlobalResource\Code.cs" />
+    <Compile Include="TianWen\GlobalResource\Department.cs" />
+    <Compile Include="TianWen\GlobalResource\DepartmentHelp.cs" />
+    <Compile Include="TianWen\GlobalResource\FlowWork.cs" />
+    <Compile Include="TianWen\GlobalResource\IAgentDao.cs" />
+    <Compile Include="TianWen\GlobalResource\IDepartmentDao.cs" />
+    <Compile Include="TianWen\GlobalResource\IOrganizationDao.cs" />
+    <Compile Include="TianWen\GlobalResource\ISystemRightDao.cs" />
+    <Compile Include="TianWen\GlobalResource\IUserDao.cs" />
+    <Compile Include="TianWen\GlobalResource\LoginRule.cs" />
+    <Compile Include="TianWen\GlobalResource\Model\WebmenuModel.cs" />
+    <Compile Include="TianWen\GlobalResource\Organization.cs" />
+    <Compile Include="TianWen\GlobalResource\OrganizationHelp.cs" />
+    <Compile Include="TianWen\GlobalResource\RightControl.cs" />
+    <Compile Include="TianWen\GlobalResource\SystemRight.cs" />
+    <Compile Include="TianWen\GlobalResource\SystemRightHelp.cs" />
+    <Compile Include="TianWen\GlobalResource\User.cs" />
+    <Compile Include="TianWen\GlobalResource\UserHelp.cs" />
+    <Compile Include="TianWen\GlobalResource\UserRight.cs" />
+    <Compile Include="TianWen\GlobalResource\UserView.cs" />
+    <Compile Include="TianWen\GlobalResource\WebMenu.cs" />
+    <Compile Include="TianWen\SystemManager\IApplication.cs" />
+    <Compile Include="TianWen\SystemManager\IApplicationResource.cs" />
+    <Compile Include="TianWen\SystemManager\ICodeTypeDao.cs" />
+    <Compile Include="TianWen\SystemManager\IDistrictDao.cs" />
+    <Compile Include="TianWen\SystemManager\IFlowWorkConfigDao.cs" />
+    <Compile Include="TianWen\SystemManager\IFlowWorkSortDao.cs" />
+    <Compile Include="TianWen\SystemManager\ILocutionDao.cs" />
+    <Compile Include="TianWen\SystemManager\IMemberDao.cs" />
+    <Compile Include="TianWen\SystemManager\IMenuDao.cs" />
+    <Compile Include="TianWen\SystemManager\Interface\IDatatableDao.cs" />
+    <Compile Include="TianWen\SystemManager\Interface\IUserDepartment.cs" />
+    <Compile Include="TianWen\SystemManager\IOutFlowConfigDao.cs" />
+    <Compile Include="TianWen\SystemManager\IPurviewDao.cs" />
+    <Compile Include="TianWen\SystemManager\IRoleDao.cs" />
+    <Compile Include="TianWen\SystemManager\ISystemManageConfigDao.cs" />
+    <Compile Include="TianWen\SystemManager\IWebConfigDao.cs" />
+    <Compile Include="TianWen\SystemManager\Model\RoleRight.cs" />
+    <Compile Include="TianWen\Utility\GlobalResource\Portal\MenuModel.cs" />
+    <Compile Include="TianWen\Utility\SystemManager\ICodeDao.cs" />
+    <Compile Include="TianWen\Utility\SystemManager\IGroupDao.cs" />
+    <Compile Include="TianWen\Utility\SystemManager\ISumDayConfigDao.cs" />
+    <Compile Include="TianWen\Utility\SystemManager\ISystemActionDao.cs" />
+    <Compile Include="TianWen\WebForm\Controls\IDivTreeDataReader.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TianWen.Persistence\TianWen.Persistence.csproj">
+      <Project>{5ca7ce75-937f-4c81-893f-68e152b16a68}</Project>
+      <Name>TianWen.Persistence</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TianWen.Utility\TianWen.Utility.csproj">
+      <Project>{8df78723-2bd3-472c-b5bc-e0406ac3a285}</Project>
+      <Name>TianWen.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

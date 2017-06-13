@@ -1,0 +1,10 @@
+F:\源码管理\占补平衡\源代码\BusinessFramework\bin\Debug\BusinessFramework.dll
+F:\源码管理\占补平衡\源代码\BusinessFramework\bin\Debug\BusinessFramework.pdb
+F:\源码管理\占补平衡\源代码\BusinessFramework\bin\Debug\TianWen.GlobalResource.dll
+F:\源码管理\占补平衡\源代码\BusinessFramework\bin\Debug\TianWen.Utility.dll
+F:\源码管理\占补平衡\源代码\BusinessFramework\bin\Debug\TianWen.Persistence.dll
+F:\源码管理\占补平衡\源代码\BusinessFramework\bin\Debug\log4net.dll
+F:\源码管理\占补平衡\源代码\BusinessFramework\bin\Debug\Syncfusion.Calculate.Base.dll
+F:\源码管理\占补平衡\源代码\BusinessFramework\obj\Debug\BusinessFramework.dll
+F:\源码管理\占补平衡\源代码\BusinessFramework\obj\Debug\BusinessFramework.pdb
+F:\源码管理\占补平衡\源代码\BusinessFramework\bin\Debug\Spring.Core.dll

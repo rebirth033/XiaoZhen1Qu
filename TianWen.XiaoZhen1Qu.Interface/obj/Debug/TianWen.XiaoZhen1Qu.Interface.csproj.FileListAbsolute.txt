@@ -1,0 +1,14 @@
+F:\源码管理\占补平衡\源代码\TianWen.XiaoZhen1Qu.Interface\bin\Debug\TianWen.XiaoZhen1Qu.Interface.dll
+F:\源码管理\占补平衡\源代码\TianWen.XiaoZhen1Qu.Interface\bin\Debug\TianWen.XiaoZhen1Qu.Interface.pdb
+F:\源码管理\占补平衡\源代码\TianWen.XiaoZhen1Qu.Interface\bin\Debug\NHibernate.dll
+F:\源码管理\占补平衡\源代码\TianWen.XiaoZhen1Qu.Interface\bin\Debug\TianWen.Nhibernate.dll
+F:\源码管理\占补平衡\源代码\TianWen.XiaoZhen1Qu.Interface\bin\Debug\FluentNHibernate.dll
+F:\源码管理\占补平衡\源代码\TianWen.XiaoZhen1Qu.Interface\obj\Debug\TianWen.XiaoZhen1Qu.Interface.dll
+F:\源码管理\占补平衡\源代码\TianWen.XiaoZhen1Qu.Interface\obj\Debug\TianWen.XiaoZhen1Qu.Interface.pdb
+D:\源代码\TianWen.XiaoZhen1Qu.Interface\bin\Debug\TianWen.XiaoZhen1Qu.Interface.dll
+D:\源代码\TianWen.XiaoZhen1Qu.Interface\bin\Debug\TianWen.XiaoZhen1Qu.Interface.pdb
+D:\源代码\TianWen.XiaoZhen1Qu.Interface\obj\Debug\TianWen.XiaoZhen1Qu.Interface.dll
+D:\源代码\TianWen.XiaoZhen1Qu.Interface\obj\Debug\TianWen.XiaoZhen1Qu.Interface.pdb
+D:\源代码\TianWen.XiaoZhen1Qu.Interface\bin\Debug\NHibernate.dll
+F:\源码管理\占补平衡\源代码\TianWen.XiaoZhen1Qu.Interface\obj\Debug\TianWen.XiaoZhen1Qu.Interface.csprojResolveAssemblyReference.cache
+F:\源码管理\占补平衡\源代码\TianWen.XiaoZhen1Qu.Interface\bin\Debug\TianWen.Nhibernate.pdb

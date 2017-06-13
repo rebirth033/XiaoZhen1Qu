@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.net http://www.springframework.net/xsd/spring-objects.xsd">
+  <object id="RepositoryWin" type="TianWen.Nhibernate.Repository.WinRepository,TianWen.Nhibernate" singleton="false">
+  </object>
+
+  <object id="RepositoryWeb" type="TianWen.Nhibernate.Repository.WebRepository,TianWen.Nhibernate" singleton="false">
+  </object>
+
+  <!--<object id="DAOBase" type="TianWen.XiaoZhen1Qu.DAO.DAOBase,TianWen.XiaoZhen1Qu" singleton="false">
+    <property name="Repository">
+      <ref object="RepositoryWeb"/>
+    </property>
+  </object>-->
+
+  <!--<object id="YHJBXXDAO" type="Teleware.TDZZ.DAO.YHJBXXDAO,TianWen.XiaoZhen1Qu" singleton="false" parent="DAOBase">
+    <property name="Repository">
+      <ref object="RepositoryWeb"/>
+    </property>
+  </object>-->
+</objects>
+
+
+

@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5CA7CE75-937F-4C81-893F-68E152B16A68}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TianWen.Persistence</RootNamespace>
+    <AssemblyName>TianWen.Persistence</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.JScript" />
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.121.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\GlobalBin\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TianWen\Persistence\BaseCommandHelp.cs" />
+    <Compile Include="TianWen\Persistence\BaseDbHelp.cs" />
+    <Compile Include="TianWen\Persistence\Class2.cs" />
+    <Compile Include="TianWen\Persistence\CmdParameterExt.cs" />
+    <Compile Include="TianWen\Persistence\ColumnAttribute.cs" />
+    <Compile Include="TianWen\Persistence\ColumnType.cs" />
+    <Compile Include="TianWen\Persistence\CommandHelp4Ole.cs" />
+    <Compile Include="TianWen\Persistence\CommandHelp4Oracle.cs" />
+    <Compile Include="TianWen\Persistence\DataSource.cs" />
+    <Compile Include="TianWen\Persistence\DataSourceTypes.cs" />
+    <Compile Include="TianWen\Persistence\DbAccess.cs" />
+    <Compile Include="TianWen\Persistence\DbAccessOnlyInsert.cs" />
+    <Compile Include="TianWen\Persistence\DbFactory.cs" />
+    <Compile Include="TianWen\Persistence\DbHelp4Ole.cs" />
+    <Compile Include="TianWen\Persistence\DbHelp4Oracle.cs" />
+    <Compile Include="TianWen\Persistence\DbHelpClassTypes.cs" />
+    <Compile Include="TianWen\Persistence\IDbAccessSave.cs" />
+    <Compile Include="TianWen\Persistence\IDbCommandHelp.cs" />
+    <Compile Include="TianWen\Persistence\IDbHelp.cs" />
+    <Compile Include="TianWen\Persistence\OldDbAccess.cs" />
+    <Compile Include="TianWen\Persistence\SqlBuilder.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TianWen.Utility\TianWen.Utility.csproj">
+      <Project>{8df78723-2bd3-472c-b5bc-e0406ac3a285}</Project>
+      <Name>TianWen.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
