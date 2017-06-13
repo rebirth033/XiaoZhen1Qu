@@ -4,19 +4,18 @@
 });
 
 function Save() {
+    var jsonObj = new JsonDB("divReg");
+    var obj = jsonObj.GetJsonObject();
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/YHJBXX/Register",
         dataType: "json",
         data:
         {
-            //RightSEC: RightSEC,
-            //Perm: Perm,
-            //Method: "CreateBasic", //新增
-            //Json: jsonObj.JsonToString(obj)
+            Json: jsonObj.JsonToString(obj)
         },
         success: function (xml) {
-            if (xml.Result === "1") {
+            if (xml.Result === 1) {
                 alert("保存成功");
             } else {
                 alert("保存失败");

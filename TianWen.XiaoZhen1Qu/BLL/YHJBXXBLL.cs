@@ -28,6 +28,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
             {
                 try
                 {
+                    yhjbxx.SQRQ = DateTime.Now;
                     DAO.Save(yhjbxx);
                     DAO.Repository.Session.Flush();
                     transaction.Commit();

@@ -120,6 +120,7 @@
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\js\bootstrap.min.js" />
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\js\npm.js" />
     <Content Include="Areas\Business\Scripts\Business\COMMON.js" />
+    <Content Include="Areas\Business\Scripts\Business\PageJson.js" />
     <Content Include="Areas\Business\Scripts\Business\YHJBXX.js" />
     <Content Include="Areas\Business\Scripts\jquery-1.9.1.min.js" />
     <Content Include="Config\SpringConfig\BLL.xml" />
