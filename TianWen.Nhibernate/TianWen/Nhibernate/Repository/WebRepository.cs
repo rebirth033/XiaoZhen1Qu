@@ -1,9 +1,10 @@
-﻿namespace TianWen.Nhibernate.Repository
+﻿
+using TianWen.Nhibernate.TianWen.Nhibernate.Core.SessionFactory;
+using TianWen.Nhibernate.TianWen.Nhibernate.Threading;
+
+namespace TianWen.Nhibernate.TianWen.Nhibernate.Repository
 {
     using NHibernate;
-    using System;
-    using TianWen.Nhibernate.Core.SessionFactory;
-    using TianWen.Nhibernate.Threading;
 
     public class WebRepository : AbstractRepository
     {

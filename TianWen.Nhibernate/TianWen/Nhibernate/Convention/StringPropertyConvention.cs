@@ -1,4 +1,4 @@
-﻿namespace TianWen.Nhibernate.Convention
+﻿namespace TianWen.Nhibernate.TianWen.Nhibernate.Convention
 {
     using FluentNHibernate.Conventions;
     using FluentNHibernate.Conventions.AcceptanceCriteria;

@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TianWen.XiaoZhen1Qu.Entities.Models;
 
 namespace TianWen.XiaoZhen1Qu.Interface
 {
@@ -12,5 +13,7 @@ namespace TianWen.XiaoZhen1Qu.Interface
         IDAO DAO { get; set; }
 
         DataTable GetYHJBXXListByPage();
+
+        object CreateBasic(YHJBXX yhjbxx);
     }
 }

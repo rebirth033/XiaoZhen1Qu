@@ -1,4 +1,4 @@
-﻿namespace TianWen.Nhibernate.Core.SessionFactory
+﻿namespace TianWen.Nhibernate.TianWen.Nhibernate.Core.SessionFactory
 {
     using FluentNHibernate.Cfg;
     using NHibernate;

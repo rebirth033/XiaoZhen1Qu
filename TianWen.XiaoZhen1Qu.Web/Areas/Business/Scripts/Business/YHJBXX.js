@@ -1,11 +1,33 @@
-﻿KISSY.ready(function (S) {
-    KISSY.use('dom,event,anim', function (S, DOM, Event, Anim) {
-        var btn = DOM.get('#btnReg');
-        Event.on(btn, 'click', function () {
-            new Anim('#demo-img', 'left: 400px; opacity: 0', 2, 'easeOut',
-              function () {
-                  new Anim('#demo-txt', 'left: 0; opacity: 1; fontSize: 28px', 2, 'bounceOut').run();
-              }).run();
-        });
-    });
+﻿$(document).ready(function() {
+    $("#Reg").bind("click", Save);
+    $("#Cancel").bind("click", Close);
 });
+
+function Save() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/YHJBXX/Register",
+        dataType: "json",
+        data:
+        {
+            //RightSEC: RightSEC,
+            //Perm: Perm,
+            //Method: "CreateBasic", //新增
+            //Json: jsonObj.JsonToString(obj)
+        },
+        success: function (xml) {
+            if (xml.Result === "1") {
+                alert("保存成功");
+            } else {
+                alert("保存失败");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+            _masker.CloseMasker(false, errorThrown);
+        }
+    });
+}
+
+function Close() {
+    
+}

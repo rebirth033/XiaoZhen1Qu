@@ -32,7 +32,8 @@ namespace TianWen.Framework.Common
             IApplicationContext context3;
             if (ContextManager.TianWenContext == null)
             {
-                TianWenContext context2 = new TianWenContext {
+                TianWenContext context2 = new TianWenContext
+                {
                     EventNo = "Init" + DateTime.Now.Ticks
                 };
                 ContextManager.TianWenContext = context2;
@@ -61,10 +62,10 @@ namespace TianWen.Framework.Common
                     list.Add(str4);
                 }
             }
-            string[] strArray2 = (string[]) list.ToArray(typeof(string));
+            string[] configurationLocations = (string[])list.ToArray(typeof(string));
             try
             {
-                context = new XmlApplicationContext(strArray2);
+                context = new XmlApplicationContext(configurationLocations);
                 if (!ContextRegistry.IsContextRegistered(context.Name))
                 {
                     ContextRegistry.RegisterContext(context);

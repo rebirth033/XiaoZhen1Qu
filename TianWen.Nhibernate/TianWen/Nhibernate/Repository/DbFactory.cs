@@ -1,8 +1,9 @@
-﻿namespace TianWen.Nhibernate.Repository
+﻿using TianWen.Nhibernate.TianWen.Nhibernate.Core.SessionFactory;
+
+namespace TianWen.Nhibernate.TianWen.Nhibernate.Repository
 {
     using System;
     using System.Web;
-    using TianWen.Nhibernate.Core.SessionFactory;
 
     public class DbFactory
     {

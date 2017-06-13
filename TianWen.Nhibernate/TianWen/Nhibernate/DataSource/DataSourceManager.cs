@@ -1,4 +1,4 @@
-﻿namespace TianWen.Nhibernate.DataSource
+﻿namespace TianWen.Nhibernate.TianWen.Nhibernate.DataSource
 {
     using System;
     using System.Collections.Generic;

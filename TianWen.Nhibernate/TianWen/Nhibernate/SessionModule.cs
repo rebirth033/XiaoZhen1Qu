@@ -2,10 +2,10 @@
 using System;
 using System.Collections.Generic;
 using System.Web;
-using TianWen.Nhibernate.Repository;
-using TianWen.Nhibernate.Threading;
+using TianWen.Nhibernate.TianWen.Nhibernate.Repository;
+using TianWen.Nhibernate.TianWen.Nhibernate.Threading;
 
-namespace TianWen.Nhibernate
+namespace TianWen.Nhibernate.TianWen.Nhibernate
 {
     public class SessionModule : IHttpModule
     {

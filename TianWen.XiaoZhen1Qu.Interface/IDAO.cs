@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Data;
 using NHibernate;
-using TianWen.Nhibernate.Repository;
+using TianWen.Nhibernate.TianWen.Nhibernate.Repository;
 
 namespace TianWen.XiaoZhen1Qu.Interface
 {

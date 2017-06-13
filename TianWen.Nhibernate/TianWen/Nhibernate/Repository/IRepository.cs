@@ -1,10 +1,8 @@
-﻿namespace TianWen.Nhibernate.Repository
-{
-    using NHibernate;
-    using System;
-    using System.Collections.Generic;
-    using System.Data;
-    using System.Runtime.InteropServices;
+﻿using System.Collections.Generic;
+using System.Data;
+using NHibernate;
+
+namespace TianWen.Nhibernate.TianWen.Nhibernate.Repository{
 
     public interface IRepository
     {

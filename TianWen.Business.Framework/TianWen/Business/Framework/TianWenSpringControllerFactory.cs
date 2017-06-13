@@ -82,15 +82,6 @@ namespace TianWen.Business.Framework.TianWen.Business.Framework
             }
         }
 
-        public static string ApplicationContextName
-        {
-            [CompilerGenerated]
-            get { return ""; }
-            [CompilerGenerated]
-            set
-            {
-                ;
-            }
-        }
+        public static string ApplicationContextName { get; set; }
     }
 }

@@ -1,11 +1,8 @@
 ﻿using NHibernate;
-using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using TianWen.Nhibernate.Repository;
+using TianWen.Nhibernate.TianWen.Nhibernate.Repository;
 using TianWen.XiaoZhen1Qu.Interface;
 
 namespace TianWen.XiaoZhen1Qu.DAO

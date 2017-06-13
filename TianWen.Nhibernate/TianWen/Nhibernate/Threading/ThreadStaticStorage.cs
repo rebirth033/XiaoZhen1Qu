@@ -1,4 +1,4 @@
-﻿namespace TianWen.Nhibernate.Threading
+﻿namespace TianWen.Nhibernate.TianWen.Nhibernate.Threading
 {
     using System;
     using System.Collections;

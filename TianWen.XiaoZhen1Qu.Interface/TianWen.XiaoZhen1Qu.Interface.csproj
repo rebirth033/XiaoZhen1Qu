@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TianWen.XiaoZhen1Qu.Interface</RootNamespace>
     <AssemblyName>TianWen.XiaoZhen1Qu.Interface</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -51,6 +52,10 @@
     <ProjectReference Include="..\TianWen.Nhibernate\TianWen.Nhibernate.csproj">
       <Project>{8f745c92-213c-4aaa-bcaf-e137cd1a1f59}</Project>
       <Name>TianWen.Nhibernate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TianWen.XiaoZhen1Qu.Entities\TianWen.XiaoZhen1Qu.Entities.csproj">
+      <Project>{ea6742ca-453b-405e-aef5-be9363a3e4dd}</Project>
+      <Name>TianWen.XiaoZhen1Qu.Entities</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

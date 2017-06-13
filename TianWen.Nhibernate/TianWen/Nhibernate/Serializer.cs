@@ -1,4 +1,4 @@
-﻿namespace TianWen.Nhibernate
+﻿namespace TianWen.Nhibernate.TianWen.Nhibernate
 {
     using System;
     using System.IO;

@@ -1,8 +1,6 @@
-﻿using System;
-using System.Runtime.CompilerServices;
-using System.Web.Mvc;
-using TianWen.Nhibernate.DataSource;
-using TianWen.Nhibernate.Repository;
+﻿using System.Web.Mvc;
+using TianWen.Nhibernate.TianWen.Nhibernate.DataSource;
+using TianWen.Nhibernate.TianWen.Nhibernate.Repository;
 
 namespace TianWen.Framework.Common.Attributes
 {
@@ -14,7 +12,7 @@ namespace TianWen.Framework.Common.Attributes
             {
                 if (string.IsNullOrEmpty(this.DbName))
                 {
-                    foreach (TianWen.Nhibernate.DataSource.DataSource source in DataSourceManager.getDataSourceList())
+                    foreach (DataSource source in DataSourceManager.getDataSourceList())
                     {
                         DbFactory.Instance.GetRepository(source.SourceName).Commit();
                     }
@@ -32,7 +30,7 @@ namespace TianWen.Framework.Common.Attributes
             {
                 if (string.IsNullOrEmpty(this.DbName))
                 {
-                    foreach (TianWen.Nhibernate.DataSource.DataSource source in DataSourceManager.getDataSourceList())
+                    foreach (DataSource source in DataSourceManager.getDataSourceList())
                     {
                         DbFactory.Instance.GetRepository(source.SourceName).BeginTransaction();
                     }

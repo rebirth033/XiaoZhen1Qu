@@ -1,4 +1,4 @@
-﻿namespace TianWen.Nhibernate.Repository
+﻿namespace TianWen.Nhibernate.TianWen.Nhibernate.Repository
 {
     using System;
 

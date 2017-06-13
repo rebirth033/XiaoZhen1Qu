@@ -1,4 +1,4 @@
-﻿namespace TianWen.Nhibernate.NhEventArgs
+﻿namespace TianWen.Nhibernate.TianWen.Nhibernate.NhEventArgs
 {
     using NHibernate.Cfg;
     using System;

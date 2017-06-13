@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TianWen.XiaoZhen1Qu</RootNamespace>
     <AssemblyName>TianWen.XiaoZhen1Qu</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -49,9 +50,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\TianWen.Framework\TianWen.Framework.csproj">
+      <Project>{8626dc66-af76-4afd-afa7-fd6aeefee1d4}</Project>
+      <Name>TianWen.Framework</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TianWen.Nhibernate\TianWen.Nhibernate.csproj">
       <Project>{8f745c92-213c-4aaa-bcaf-e137cd1a1f59}</Project>
       <Name>TianWen.Nhibernate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TianWen.XiaoZhen1Qu.Entities\TianWen.XiaoZhen1Qu.Entities.csproj">
+      <Project>{ea6742ca-453b-405e-aef5-be9363a3e4dd}</Project>
+      <Name>TianWen.XiaoZhen1Qu.Entities</Name>
     </ProjectReference>
     <ProjectReference Include="..\TianWen.XiaoZhen1Qu.Interface\TianWen.XiaoZhen1Qu.Interface.csproj">
       <Project>{c795d539-68ad-4271-96ae-3114633a3124}</Project>
