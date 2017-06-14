@@ -1,7 +1,23 @@
 ﻿.input_text {
     width:80%;
 }
-.input_yzm {
-    width:50%;
-    display:inline;
+
+tr {
+    text-align: center !important;
+    border-top: 0px !important;
+}
+
+td {
+    text-align: center !important;
+    border: 0px !important;
+}
+
+.title {
+    font-family: "宋体";
+    font-size: 30px;
+    
+}
+
+.form-control {
+    display: inline !important;
 }
