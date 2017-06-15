@@ -1,9 +1,11 @@
 ﻿$(document).ready(function() {
-    $("#Reg").bind("click", ValidateCheckCode);
+    $("#Reg").bind("click", Save);
     $("#Cancel").bind("click", Close);
+    $("[data-toggle='tooltip']").tooltip();
 });
 
 function Save() {
+    if (ValidateMM() === false) return;
     var jsonObj = new JsonDB("divReg");
     var obj = jsonObj.GetJsonObject();
     $.ajax({
@@ -58,4 +60,15 @@ function ValidateCheckCode() {
             _masker.CloseMasker(false, errorThrown);
         }
     });
+}
+
+function ValidateMM() {
+    if ($("#MM").val() !== $("#QRMM").val()) {
+        alert("确认密码与密码不匹配");
+        $("#QRMM").css("border-color", "#a94442");
+        $("#QRMM").focus();
+        return false;
+    } else {
+        return true;
+    }
 }
