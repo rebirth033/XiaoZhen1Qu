@@ -1,8 +1,44 @@
-﻿$(document).ready(function() {
+﻿$(document).ready(function () {
     $("#Reg").bind("click", Save);
     $("#Cancel").bind("click", Close);
     $("[data-toggle='tooltip']").tooltip();
+    $("#YHM").bind("blur", YHMCheck);
+    $("#YHM").bind("keydown", ColorChange);
+    BindToolTip();
 });
+
+function BindToolTip() {
+    var YHMoptions = {
+        title: "·5-15个字符 ·请勿包含身份证银行卡等隐私信息,一旦设置成功无法修改",
+        animation: true,
+        placement: 'right',
+        trigger: 'focus'
+    }
+    var MMoptions = {
+        title: "6-20个字符 只能包含字母、数字以及标点符号（除空格） 至少包含数字和字母",
+        animation: true,
+        placement: 'right',
+        trigger: 'focus'
+    }
+    $("#YHM").tooltip(YHMoptions);
+    $("#MM").tooltip(MMoptions);
+}
+
+function YHMCheck() {
+    if ($("#YHM").val().length < 5) {
+        $("#YHM").css("border-color", "#F2272D");
+        $("#YHMInfo").css("color", "#F2272D");
+        $("#YHMInfo").html("会员名为5-15个字符，请修改");
+    }
+    else {
+        $("#YHM").css("border-color", "#999");
+        $("#YHMInfo").html("");
+    }
+}
+
+function ColorChange() {
+    $("#YHM").css("border-color", "#999");
+}
 
 function Save() {
     if (ValidateMM() === false) return;
@@ -30,7 +66,7 @@ function Save() {
 }
 
 function Close() {
-    
+
 }
 
 //点击切换验证码
@@ -65,7 +101,7 @@ function ValidateCheckCode() {
 function ValidateMM() {
     if ($("#MM").val() !== $("#QRMM").val()) {
         alert("确认密码与密码不匹配");
-        $("#QRMM").css("border-color", "#a94442");
+        $("#QRMM").css("border-color", "#F2272D");
         $("#QRMM").focus();
         return false;
     } else {
