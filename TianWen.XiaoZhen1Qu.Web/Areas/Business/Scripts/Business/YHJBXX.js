@@ -4,6 +4,10 @@
     $("[data-toggle='tooltip']").tooltip();
     $("#YHM").bind("blur", YHMCheck);
     $("#YHM").bind("keydown", ColorChange);
+    $("#MM").bind("blur", MMCheck);
+    $("#MM").bind("keydown",  ColorChange);
+    $("#QRMM").bind("blur", QRMMCheck);
+    $("#QRMM").bind("keydown", ColorChange);
     BindToolTip();
 });
 
@@ -15,7 +19,7 @@ function BindToolTip() {
         trigger: 'focus'
     }
     var MMoptions = {
-        title: "6-20个字符 只能包含字母、数字以及标点符号（除空格） 至少包含数字和字母",
+        title: "·6-20个字符 ·只能包含字母、数字以及标点符号（除空格） ·至少包含数字和字母",
         animation: true,
         placement: 'right',
         trigger: 'focus'
@@ -25,7 +29,7 @@ function BindToolTip() {
 }
 
 function YHMCheck() {
-    if ($("#YHM").val().length < 5) {
+    if (($("#YHM").val().length < 5 && $("#YHM").val().length > 0) || $("#YHM").val().length > 15) {
         $("#YHM").css("border-color", "#F2272D");
         $("#YHMInfo").css("color", "#F2272D");
         $("#YHMInfo").html("会员名为5-15个字符，请修改");
@@ -36,8 +40,32 @@ function YHMCheck() {
     }
 }
 
+function MMCheck() {
+    if (($("#MM").val().length < 6 && $("#MM").val().length > 0) || $("#MM").val().length > 20) {
+        $("#MM").css("border-color", "#F2272D");
+        $("#MMInfo").css("color", "#F2272D");
+        $("#MMInfo").html("密码为6-20个字符，请修改");
+    }
+    else {
+        $("#MM").css("border-color", "#999");
+        $("#MMInfo").html("");
+    }
+}
+
+function QRMMCheck() {
+    if (($("#QRMM").val().length < 6 && $("#QRMM").val().length > 0) || $("#QRMM").val().length > 20) {
+        $("#QRMM").css("border-color", "#F2272D");
+        $("#QRMMInfo").css("color", "#F2272D");
+        $("#QRMMInfo").html("确认密码为6-20个字符，请修改");
+    }
+    else {
+        $("#QRMM").css("border-color", "#999");
+        $("#QRMMInfo").html("");
+    }
+}
+
 function ColorChange() {
-    $("#YHM").css("border-color", "#999");
+    $(this).css("border-color", "#999");
 }
 
 function Save() {
