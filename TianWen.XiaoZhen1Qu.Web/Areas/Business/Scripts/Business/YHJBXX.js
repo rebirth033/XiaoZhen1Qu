@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    $("#Reg").bind("click", Save);
+    $("#Reg").bind("click", Register);
     $("#Cancel").bind("click", Close);
     $("[data-toggle='tooltip']").tooltip();
     $("#YHM").bind("blur", YHMCheck);
@@ -8,6 +8,8 @@
     $("#MM").bind("keydown",  ColorChange);
     $("#QRMM").bind("blur", QRMMCheck);
     $("#QRMM").bind("keydown", ColorChange);
+    $("#SJ").bind("blur", SJCheck);
+    $("#SJ").bind("keydown", ColorChange);
     BindToolTip();
 });
 
@@ -44,9 +46,13 @@ function YHMCheck() {
         $("#YHMInfo").css("color", "#F2272D");
         $("#YHMInfo").html("会员名为5-15个字符，请修改");
     }
-    else {
+    else if ($("#YHM").val().length === 0) {
         $("#YHM").css("border-color", "#999");
         $("#YHMInfo").html("");
+    }
+    else {
+        $("#YHM").css("border-color", "#999");
+        $("#YHMInfo").html('<img src=' + getRootPath() + '/Areas/Business/Css/images/yes.png />');
     }
 }
 
@@ -56,9 +62,13 @@ function MMCheck() {
         $("#MMInfo").css("color", "#F2272D");
         $("#MMInfo").html("密码为6-20个字符，请修改");
     }
-    else {
+    else if ($("#MM").val().length === 0) {
         $("#MM").css("border-color", "#999");
         $("#MMInfo").html("");
+    }
+    else {
+        $("#MM").css("border-color", "#999");
+        $("#MMInfo").html('<img src=' + getRootPath() + '/Areas/Business/Css/images/yes.png />');
     }
 }
 
@@ -67,10 +77,48 @@ function QRMMCheck() {
         $("#QRMM").css("border-color", "#F2272D");
         $("#QRMMInfo").css("color", "#F2272D");
         $("#QRMMInfo").html("确认密码为6-20个字符，请修改");
+        return false;
+    }
+    else if ($("#QRMM").val().length === 0) {
+        $("#QRMM").css("border-color", "#999");
+        $("#QRMMInfo").html("");
+        return false;
     }
     else {
         $("#QRMM").css("border-color", "#999");
+        $("#QRMMInfo").html('<img src=' + getRootPath() + '/Areas/Business/Css/images/yes.png />');
+    }
+    if ($("#QRMM").val() !== $("#MM").val()) {
+        $("#QRMM").css("border-color", "#F2272D");
+        $("#QRMMInfo").css("color", "#F2272D");
+        $("#QRMMInfo").html("两次输入的密码不一致，请重新输入");
+        return false;
+    }
+    else if ($("#QRMM").val().length === 0) {
+        $("#QRMM").css("border-color", "#999");
         $("#QRMMInfo").html("");
+        return false;
+    }
+    else {
+        $("#QRMM").css("border-color", "#999");
+        $("#QRMMInfo").html('<img src=' + getRootPath() + '/Areas/Business/Css/images/yes.png />');
+        return true;
+    }
+}
+
+function SJCheck() {
+    if (!ValidateCellPhone($(this).val())) {
+        $("#SJ").css("border-color", "#F2272D");
+        $("#SJInfo").css("color", "#F2272D");
+        $("#SJInfo").html("手机号码格式不正确，请重新输入");
+    }
+    else if ($("#SJ").val().length === 0) {
+        $("#SJ").css("border-color", "#999");
+        $("#SJInfo").html("");
+    }
+    else {
+        $("#SJ").css("border-color", "#999");
+        $("#SJInfo").html('<img src=' + getRootPath() + '/Areas/Business/Css/images/yes.png />');
     }
 }
 
@@ -78,8 +126,8 @@ function ColorChange() {
     $(this).css("border-color", "#999");
 }
 
-function Save() {
-    if (ValidateMM() === false) return;
+function Register() {
+    if (Validate() === false) return;
     var jsonObj = new JsonDB("divReg");
     var obj = jsonObj.GetJsonObject();
     $.ajax({
@@ -134,15 +182,4 @@ function ValidateCheckCode() {
             _masker.CloseMasker(false, errorThrown);
         }
     });
-}
-
-function ValidateMM() {
-    if ($("#MM").val() !== $("#QRMM").val()) {
-        alert("确认密码与密码不匹配");
-        $("#QRMM").css("border-color", "#F2272D");
-        $("#QRMM").focus();
-        return false;
-    } else {
-        return true;
-    }
 }
