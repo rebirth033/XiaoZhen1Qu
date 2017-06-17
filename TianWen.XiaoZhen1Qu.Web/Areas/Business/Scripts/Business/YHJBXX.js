@@ -13,19 +13,29 @@
 
 function BindToolTip() {
     var YHMoptions = {
-        title: "·5-15个字符 ·请勿包含身份证银行卡等隐私信息,一旦设置成功无法修改",
+        title: "<li style='text-align:left;height:20px'>·5-15个字符,推荐使用中文</li><li style='text-align:left'>·请勿包含身份证银行卡等隐私信息,一旦设置成功无法修改</li>",
         animation: true,
+        html: true,
         placement: 'right',
         trigger: 'focus'
     }
     var MMoptions = {
-        title: "·6-20个字符 ·只能包含字母、数字以及标点符号（除空格） ·至少包含数字和字母",
+        title: "<li style='text-align:left;'>·6-20个字符</li><li style='text-align:left;'>·只能包含字母、数字以及标点符号（除空格）</li><li style='text-align:left;'>·至少包含数字和字母</li>",
         animation: true,
+        html: true,
+        placement: 'right',
+        trigger: 'focus'
+    }
+    var QRMMoptions = {
+        title: "<li style='text-align:left;'>·请再次输入你的密码</li>",
+        animation: true,
+        html: true,
         placement: 'right',
         trigger: 'focus'
     }
     $("#YHM").tooltip(YHMoptions);
     $("#MM").tooltip(MMoptions);
+    $("#QRMM").tooltip(QRMMoptions);
 }
 
 function YHMCheck() {
