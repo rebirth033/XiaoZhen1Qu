@@ -761,7 +761,7 @@ function ChangeDateFormat(cellval) {
 //联系电话验证
 function ValidateCellPhone(PhoneValue) {
     //联系电话的正则表达式
-    var zz = /^(\d{11})$/g;
+    var zz = /^((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(18[0,5-9]))\d{8}$/g;
     if (PhoneValue.length > 0) {
         return zz.test(PhoneValue);
     }

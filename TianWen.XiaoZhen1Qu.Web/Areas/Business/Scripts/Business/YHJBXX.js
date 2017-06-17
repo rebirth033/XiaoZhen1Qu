@@ -11,6 +11,7 @@
     $("#SJ").bind("blur", SJCheck);
     $("#SJ").bind("keydown", ColorChange);
     BindToolTip();
+    DragValidate($("#dragEle"), $(".tips"));
 });
 
 function BindToolTip() {
@@ -45,14 +46,17 @@ function YHMCheck() {
         $("#YHM").css("border-color", "#F2272D");
         $("#YHMInfo").css("color", "#F2272D");
         $("#YHMInfo").html("会员名为5-15个字符，请修改");
+        return false;
     }
     else if ($("#YHM").val().length === 0) {
         $("#YHM").css("border-color", "#999");
         $("#YHMInfo").html("");
+        return false;
     }
     else {
         $("#YHM").css("border-color", "#999");
         $("#YHMInfo").html('<img src=' + getRootPath() + '/Areas/Business/Css/images/yes.png />');
+        return true;
     }
 }
 
@@ -61,14 +65,17 @@ function MMCheck() {
         $("#MM").css("border-color", "#F2272D");
         $("#MMInfo").css("color", "#F2272D");
         $("#MMInfo").html("密码为6-20个字符，请修改");
+        return false;
     }
     else if ($("#MM").val().length === 0) {
         $("#MM").css("border-color", "#999");
         $("#MMInfo").html("");
+        return false;
     }
     else {
         $("#MM").css("border-color", "#999");
         $("#MMInfo").html('<img src=' + getRootPath() + '/Areas/Business/Css/images/yes.png />');
+        return true;
     }
 }
 
@@ -107,23 +114,55 @@ function QRMMCheck() {
 }
 
 function SJCheck() {
-    if (!ValidateCellPhone($(this).val())) {
+    if (!ValidateCellPhone($("#SJ").val())) {
         $("#SJ").css("border-color", "#F2272D");
         $("#SJInfo").css("color", "#F2272D");
         $("#SJInfo").html("手机号码格式不正确，请重新输入");
+        return false;
     }
     else if ($("#SJ").val().length === 0) {
         $("#SJ").css("border-color", "#999");
         $("#SJInfo").html("");
+        return false;
     }
     else {
         $("#SJ").css("border-color", "#999");
         $("#SJInfo").html('<img src=' + getRootPath() + '/Areas/Business/Css/images/yes.png />');
+        return true;
     }
 }
 
 function ColorChange() {
     $(this).css("border-color", "#999");
+}
+
+function Validate() {
+    if (YHMCheck() && MMCheck() && QRMMCheck() && SJCheck())
+        return true;
+    else
+    {
+        if ($("#YHM").val().length === 0) {
+            $("#YHM").css("border-color", "#F2272D");
+            $("#YHMInfo").css("color", "#F2272D");
+            $("#YHMInfo").html("请输入用户名");
+        }
+        if ($("#MM").val().length === 0) {
+            $("#MM").css("border-color", "#F2272D");
+            $("#MMInfo").css("color", "#F2272D");
+            $("#MMInfo").html("请输入登录密码");
+        }
+        if ($("#QRMM").val().length === 0) {
+            $("#QRMM").css("border-color", "#F2272D");
+            $("#QRMMInfo").css("color", "#F2272D");
+            $("#QRMMInfo").html("请再次输入登录密码");
+        }
+        if ($("#SJ").val().length === 0) {
+            $("#SJ").css("border-color", "#F2272D");
+            $("#SJInfo").css("color", "#F2272D");
+            $("#SJInfo").html("请输入手机号");
+        }
+        return false;
+    }
 }
 
 function Register() {
@@ -155,31 +194,42 @@ function Close() {
 
 }
 
-//点击切换验证码
-function f_refreshtype() {
-    var Image1 = document.getElementById("img");
-    if (Image1 != null) {
-        Image1.src = Image1.src + "?";
-    }
-}
-
-function ValidateCheckCode() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/YHJBXX/ValidateCheckCode",
-        dataType: "json",
-        data:
-        {
-            YZM: $("#YZM").val()
-        },
-        success: function (xml) {
-            if (xml.Result === 1)
-                Save();
-            else
-                alert("验证码有误");
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-            _masker.CloseMasker(false, errorThrown);
-        }
+function DragValidate (dargEle,msgEle){
+    var dragging = false;//滑块拖动标识
+    var iX;
+    dargEle.mousedown(function(e) {
+        dragging = true;
+        iX = e.clientX; //获取初始坐标
     });
-}
+    $(document).mousemove(function(e) {
+        if (dragging) {
+            var e = e || window.event;
+            var oX = e.clientX - iX;
+            //if (oX > 70) alert(oX);
+            if(oX < 40){
+                return false;
+            };
+            if(oX >= 260){//容器宽度+10
+                oX = 260;
+                return false;
+            };
+            $("#YHM").val(oX);
+            $(".dragEle").css("left", oX + "px");
+            return false;
+        };
+    });
+    $(document).mouseup(function(e) {
+        var e = e || window.event;
+        var oX = e.clientX - iX;
+        alert(oX);
+        if (oX < 290) {
+            $(".dragEle").css("left", "0");
+            msgEle.text("拖动滑块到最右边,完成验证");
+        }else{
+            dargEle.attr("validate","true").text("验证成功！").unbind("mousedown");
+        };
+        dragging = false;
+    });
+};
+
+

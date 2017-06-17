@@ -111,6 +111,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Business\Aspx\png.aspx" />
+    <Content Include="Areas\Business\Css\images\no.png" />
+    <Content Include="Areas\Business\Css\images\yes.png" />
     <Content Include="Areas\Business\Css\PageCommon.css" />
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\css\bootstrap-theme.css" />
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\css\bootstrap-theme.min.css" />
