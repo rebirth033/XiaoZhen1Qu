@@ -15,5 +15,6 @@ namespace TianWen.XiaoZhen1Qu.Interface
         DataTable GetYHJBXXListByPage();
 
         object CreateBasic(YHJBXX yhjbxx);
+        string GetObjByYHM(string YHM);
     }
 }

@@ -23,7 +23,7 @@ function BindToolTip() {
         trigger: 'focus'
     }
     var MMoptions = {
-        title: "<li style='text-align:left;'>·6-20个字符</li><li style='text-align:left;'>·只能包含字母、数字以及标点符号（除空格）</li><li style='text-align:left;'>·至少包含数字和字母</li>",
+        title: "<li style='text-align:left;'>·6-20个字符,密码不能和用户名重复</li><li style='text-align:left;'>·只能包含字母、数字以及标点符号（除空格）</li><li style='text-align:left;'>·至少包含数字和字母</li>",
         animation: true,
         html: true,
         placement: 'right',
@@ -56,8 +56,32 @@ function YHMCheck() {
     else {
         $("#YHM").css("border-color", "#999");
         $("#YHMInfo").html('<img src=' + getRootPath() + '/Areas/Business/Css/images/yes.png />');
-        return true;
     }
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/YHJBXX/ValidateYHM",
+        dataType: "json",
+        data:
+        {
+            YHM: $("#YHM").val()
+        },
+        success: function (xml) {
+            if (xml !== "" && xml !== null) {
+                $("#YHM").css("border-color", "#F2272D");
+                $("#YHMInfo").css("color", "#F2272D");
+                $("#YHMInfo").html("会员名已存在，请修改");
+                return false;
+            }
+            else {
+                $("#YHM").css("border-color", "#999");
+                $("#YHMInfo").html('<img src=' + getRootPath() + '/Areas/Business/Css/images/yes.png />');
+                return true;
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+            return false;
+        }
+    });
 }
 
 function MMCheck() {
@@ -70,6 +94,37 @@ function MMCheck() {
     else if ($("#MM").val().length === 0) {
         $("#MM").css("border-color", "#999");
         $("#MMInfo").html("");
+        return false;
+    }
+    else {
+        $("#MM").css("border-color", "#999");
+        $("#MMInfo").html('<img src=' + getRootPath() + '/Areas/Business/Css/images/yes.png />');
+    }
+    if ($("#YHM").val() === $("#MM").val()) {
+        $("#MM").css("border-color", "#F2272D");
+        $("#MMInfo").css("color", "#F2272D");
+        $("#MMInfo").html("密码不能和用户名相同，请修改");
+        return false;
+    }
+    else {
+        $("#MM").css("border-color", "#999");
+        $("#MMInfo").html('<img src=' + getRootPath() + '/Areas/Business/Css/images/yes.png />');
+    }
+    if ($("#MM").val().split(' ').length > 1) {
+        $("#MM").css("border-color", "#F2272D");
+        $("#MMInfo").css("color", "#F2272D");
+        $("#MMInfo").html("密码不能包含空格，请修改");
+        return false;
+    }
+    else {
+        $("#MM").css("border-color", "#999");
+        $("#MMInfo").html('<img src=' + getRootPath() + '/Areas/Business/Css/images/yes.png />');
+    }
+    
+    if (!/^(?![^a-zA-Z]+$)(?!\D+$)/.test($("#MM").val())) {
+        $("#MM").css("border-color", "#F2272D");
+        $("#MMInfo").css("color", "#F2272D");
+        $("#MMInfo").html("密码至少包含数字和字母，请修改");
         return false;
     }
     else {
@@ -211,7 +266,6 @@ function DragValidate(dargEle, msgEle) {
                 oX = 260;
                 return false;
             };
-            $("#YHM").val(oX);
             $(".dragEle").css("left", oX + "px");
             $(".dragTip").css("width", oX + "px");
             return false;
@@ -233,5 +287,3 @@ function DragValidate(dargEle, msgEle) {
         dragging = false;
     });
 };
-
-
