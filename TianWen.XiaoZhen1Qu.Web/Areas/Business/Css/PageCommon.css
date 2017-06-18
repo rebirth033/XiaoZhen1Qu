@@ -67,8 +67,28 @@ li {
     border-radius: 4px;
     text-align: center;
     cursor:move;
+    z-index:99;
+}
+
+.dragTip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 34px;
+    width: 40px;
+    background: #5bc0de;
+    color:#fff;
+    border-radius: 4px;
+    text-align: center;
+    overflow:hidden;
+    font-size:14px;
+}
+
+.dragTipInner {
+    width: 300px;
 }
 
 .tips {
     text-align: center;
+    font-size:14px;
 }

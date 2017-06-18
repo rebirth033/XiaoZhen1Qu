@@ -5,13 +5,13 @@
     $("#YHM").bind("blur", YHMCheck);
     $("#YHM").bind("keydown", ColorChange);
     $("#MM").bind("blur", MMCheck);
-    $("#MM").bind("keydown",  ColorChange);
+    $("#MM").bind("keydown", ColorChange);
     $("#QRMM").bind("blur", QRMMCheck);
     $("#QRMM").bind("keydown", ColorChange);
     $("#SJ").bind("blur", SJCheck);
     $("#SJ").bind("keydown", ColorChange);
     BindToolTip();
-    DragValidate($(".dragEle"), $(".tips"));
+    DragValidate($(".dragEle"), $(".dragTipInner"));
 });
 
 function BindToolTip() {
@@ -139,8 +139,7 @@ function ColorChange() {
 function Validate() {
     if (YHMCheck() && MMCheck() && QRMMCheck() && SJCheck())
         return true;
-    else
-    {
+    else {
         if ($("#YHM").val().length === 0) {
             $("#YHM").css("border-color", "#F2272D");
             $("#YHMInfo").css("color", "#F2272D");
@@ -194,39 +193,42 @@ function Close() {
 
 }
 
-function DragValidate (dargEle,msgEle){
+function DragValidate(dargEle, msgEle) {
     var dragging = false;//滑块拖动标识
     var iX;
-    dargEle.mousedown(function(e) {
+    dargEle.mousedown(function (e) {
         dragging = true;
         iX = e.clientX; //获取初始坐标
     });
-    $(document).mousemove(function(e) {
+    $(document).mousemove(function (e) {
         if (dragging) {
             var e = e || window.event;
             var oX = e.clientX - iX;
-            if(oX < 40){
+            if (oX < 40) {
                 return false;
             };
-            if(oX >= 260){//容器宽度+10
+            if (oX >= 260) {//容器宽度+10
                 oX = 260;
                 return false;
             };
             $("#YHM").val(oX);
             $(".dragEle").css("left", oX + "px");
+            $(".dragTip").css("width", oX + "px");
             return false;
         };
     });
-    $(document).mouseup(function(e) {
+    $(document).mouseup(function (e) {
         var e = e || window.event;
         var oX = e.clientX - iX;
         if (oX < 260) {
             $(".dragEle").css("left", "0");
+            $(".dragTip").css("width", "0");
             msgEle.text("拖动滑块到最右边,完成验证");
-        }else{
-            dargEle.attr("validate", "true").unbind("mousedown");
-            //dargEle.attr("validate", "true").text("验证成功！").unbind("mousedown");
-            msgEle.text("验证成功!");
+        } else {
+            if ($(".dragTip").width() > 40) {
+                dargEle.attr("validate", "true").html('<img src=' + getRootPath() + '/Areas/Business/Css/images/yes.png />').unbind("mousedown");
+                msgEle.text("验证成功!");
+            }
         };
         dragging = false;
     });
