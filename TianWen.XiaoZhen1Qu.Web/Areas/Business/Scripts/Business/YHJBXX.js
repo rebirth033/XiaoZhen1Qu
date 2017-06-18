@@ -11,7 +11,7 @@
     $("#SJ").bind("blur", SJCheck);
     $("#SJ").bind("keydown", ColorChange);
     BindToolTip();
-    DragValidate($("#dragEle"), $(".tips"));
+    DragValidate($(".dragEle"), $(".tips"));
 });
 
 function BindToolTip() {
@@ -205,7 +205,6 @@ function DragValidate (dargEle,msgEle){
         if (dragging) {
             var e = e || window.event;
             var oX = e.clientX - iX;
-            //if (oX > 70) alert(oX);
             if(oX < 40){
                 return false;
             };
@@ -221,12 +220,13 @@ function DragValidate (dargEle,msgEle){
     $(document).mouseup(function(e) {
         var e = e || window.event;
         var oX = e.clientX - iX;
-        alert(oX);
-        if (oX < 290) {
+        if (oX < 260) {
             $(".dragEle").css("left", "0");
             msgEle.text("拖动滑块到最右边,完成验证");
         }else{
-            dargEle.attr("validate","true").text("验证成功！").unbind("mousedown");
+            dargEle.attr("validate", "true").unbind("mousedown");
+            //dargEle.attr("validate", "true").text("验证成功！").unbind("mousedown");
+            msgEle.text("验证成功!");
         };
         dragging = false;
     });
