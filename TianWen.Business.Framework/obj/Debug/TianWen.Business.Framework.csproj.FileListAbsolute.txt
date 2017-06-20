@@ -47,4 +47,3 @@ D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.Busi
 D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.Business.Framework\obj\Debug\TianWen.Business.Framework.dll
 D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.Business.Framework\obj\Debug\TianWen.Business.Framework.pdb
 D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.Business.Framework\obj\Debug\TianWen.Business.Framework.csprojResolveAssemblyReference.cache
-F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.Business.Framework\obj\Debug\TianWen.Business.Framework.csprojResolveAssemblyReference.cache
