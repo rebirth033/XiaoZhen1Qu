@@ -2,11 +2,11 @@
 function getRootPath() {
     var strFullPath = window.document.location.href;
     var strPath = window.document.location.pathname;
-   
+
     var pos = strFullPath.indexOf(strPath);
     var prePath = strFullPath.substring(0, pos);
     var postPath = strPath.substring(0, strPath.substr(1).indexOf('/') + 1);
-    
+
     return (prePath + postPath);
 }
 
@@ -249,7 +249,7 @@ function getNowDate(connector) {
 
 //取得对象的左侧位置
 function GetElementLeftSubscribe(obj, positionNum) {
-    
+
     var x = obj.offsetLeft;
     while (obj = obj.offsetParent) x += obj.offsetLeft;
     return x;
@@ -272,14 +272,14 @@ function GetElementBottomSubscribe(obj, positionNum) {
 
             return (y + positionNum + theight);// + "px";
         } else {
-        return (y + theight);// + "px";
+            return (y + theight);// + "px";
         }
     }
 }
 
 //显示弹出层
 function popShow(sourceId, popDivId) {
-    
+
     var obj = document.getElementById(sourceId);
     var left = GetElementLeftSubscribe(obj, 0);
     var bottom = GetElementBottomSubscribe(obj, 0);
@@ -295,9 +295,9 @@ function popShow(sourceId, popDivId) {
     }
 
     if ((objWidth * 1 + left * 1 + 20) > document.body.clientWidth) {
-        $("#" + popDivId).css("left", left -  (objWidth*1 + left*1 + 20) + document.body.clientWidth);    
+        $("#" + popDivId).css("left", left - (objWidth * 1 + left * 1 + 20) + document.body.clientWidth);
     } else {
-        $("#" + popDivId).css("left", left - 0);    
+        $("#" + popDivId).css("left", left - 0);
     }
 
     $("#" + popDivId).show();
@@ -311,7 +311,7 @@ function popShowWorkBox(sourceId, popDivId) {
     var bottom = GetElementBottomSubscribe(obj, 0);
 
 
-   
+
     $("#" + popDivId).css("top", bottom + 5);
     $("#" + popDivId).css("left", left - 0);
     $("#" + popDivId).show();
@@ -383,7 +383,7 @@ function UnCheckAll(chklID) {
 /// <param name="isAppend">是否追加</param>
 /// <param name="plusOption">是否将请选择加到第一个Option</param>
 function fillSelectWithJson(controlID, json, dataTextField, dataValueField, isAppend, plusOption) {
-    
+
     //检查页面是否存在该对象
     if ($("#" + controlID) == null) {
         $.messager.alert('提示', '没有找到id=' + controlID + "的下拉框!", 'error');
@@ -406,7 +406,7 @@ function fillSelectWithJson(controlID, json, dataTextField, dataValueField, isAp
         tableName = p;
         break;
     }
-    
+
     if (tableName == "") {
         return false;
     }
@@ -439,7 +439,7 @@ function fillSelectWithJson(controlID, json, dataTextField, dataValueField, isAp
 function setServerDateToNormal(value) {
     var jsondate = value;
     value = eval("new " + jsondate.substr(1, jsondate.length - 2)).toLocaleDateString().toString().replace('年', '-').replace('月', '-').replace('日', '').replace(/\//g, '-');
-    
+
     var arr = value.split('-');
     var year;
     var month;
@@ -736,19 +736,18 @@ function removeDivCenter(divId) {
 
 //动态提交FORM 
 function commitForm(url, data, target) {
-   document.write("</div><form id='formCommon' target='"+target+"' action='" + url + "' method='post'>" +
-        "<input type='hidden' name='hideData' value='" + data + "'></input>" +
-        "</form><script>document.getElementById('formCommon').submit();</script>");
+    document.write("</div><form id='formCommon' target='" + target + "' action='" + url + "' method='post'>" +
+         "<input type='hidden' name='hideData' value='" + data + "'></input>" +
+         "</form><script>document.getElementById('formCommon').submit();</script>");
 
 }
 
 function ChangeDateFormat(cellval) {
-
     if (cellval.toUpperCase().indexOf("/DATE(") >= 0) {
         var date = new Date(parseInt(cellval.replace("/Date(", "").replace(")/", ""), 10));
         var month = date.getMonth() + 1 < 10 ? "0" + (date.getMonth() + 1) : date.getMonth() + 1;
         var currentDate = date.getDate() < 10 ? "0" + date.getDate() : date.getDate();
-        
+
         if (!(date > new Date(1900, 1, 1))) {
             return "";
         } else {
@@ -757,4 +756,14 @@ function ChangeDateFormat(cellval) {
     } else {
         return cellval;
     }
- }
+}
+
+//联系电话验证
+function ValidateCellPhone(PhoneValue) {
+    //联系电话的正则表达式
+    var zz = /^((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(18[0,5-9]))\d{8}$/g;
+    if (PhoneValue.length > 0) {
+        return zz.test(PhoneValue);
+    }
+    return true;
+}

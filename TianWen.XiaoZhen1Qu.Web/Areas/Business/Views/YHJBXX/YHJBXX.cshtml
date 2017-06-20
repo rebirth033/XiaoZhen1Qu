@@ -12,30 +12,42 @@
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/YHJBXX.js")"></script>
 </head>
 <body>
-<div id="divReg">
-    <table class="table" style="width: 470px;">
-        <tr>
-            <td class="headtd"><span class="title">欢迎注册小镇1区</span></td>
-        </tr>
-        <tr>
-            <td><input type="text" data-placement="right" title=".5-15个字符 \n\r.请勿包含身份证银行卡等隐私信息,一旦设置成功无法修改" data-toggle="tooltip" class="form-control input_text" id="YHM" column="YHM" placeholder="请输入用户名"></td>
-        </tr>
-        <tr>
-            <td><input type="password" class="form-control input_text" id="MM" column="MM" placeholder="请输入登录密码"></td>
-        </tr>
-        <tr>
-            <td><input type="password" class="form-control input_text" id="QRMM" column="QRMM" placeholder="请再次输入登录密码"></td>
-        </tr>
-        <tr>
-            <td><input type="text" class="form-control input_text" id="SJ" column="SJ" placeholder="请输入手机号"></td>
-        </tr>
-        <tr>
-            <td><input type="text" class="form-control input_text" id="YZM" column="YZM" placeholder="请输入验证码"></td>
-        </tr>
-        <tr>
-            <td><input type="button" class="btn btn-info input_text" id="Reg" value="同意条款并注册"/></td>
-        </tr>
-    </table>
-</div>
+    <div id="divReg">
+        <table class="table" style="width: 600px;">
+            <tr>
+                <td class="headtd"><span class="title">欢迎注册小镇1区</span></td>
+            </tr>
+            <tr>
+                <td style="width:50%"><input type="text" class="form-control input_text" id="YHM" column="YHM" placeholder="请输入用户名"></td>
+                <td class="Info" id="YHMInfo" style="width:50%"></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="password" class="form-control input_text" id="MM" column="MM" placeholder="请输入登录密码">
+                </td>
+                <td class="Info" id="MMInfo" style="width:50%"></td>
+            </tr>
+            <tr>
+                <td><input type="password" class="form-control input_text" id="QRMM" column="QRMM" placeholder="请再次输入登录密码"></td>
+                <td class="Info" id="QRMMInfo" style="width:50%"></td>
+            </tr>
+            <tr>
+                <td><input type="text" class="form-control input_text" id="SJ" column="SJ" placeholder="请输入手机号"></td>
+                <td class="Info" id="SJInfo" style="width:50%"></td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="box">
+                        <div class="dragEle">>></div>
+                        <div class="dragTip"><div class="dragTipInner">拖动滑块到最右边,完成验证</div></div>
+                        <div class="tips">拖动滑块到最右边,完成验证</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="button" class="btn btn-info input_text" id="Reg" value="同意条款并注册" /></td>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>

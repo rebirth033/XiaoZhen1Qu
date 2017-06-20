@@ -39,5 +39,10 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
                 return Json(new { Result = EnResultType.Failed });
         }
 
+        public string ValidateYHM()
+        {
+            string YHM = Request["YHM"];
+            return YHJBXXBLL.GetObjByYHM(YHM);
+        }
     }
 }

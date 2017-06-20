@@ -24,5 +24,5 @@ D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.Nhib
 D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.Nhibernate\bin\Debug\Iesi.Collections.dll
 D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.Nhibernate\obj\Debug\TianWen.Nhibernate.dll
 D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.Nhibernate\obj\Debug\TianWen.Nhibernate.pdb
-D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.Nhibernate\obj\Debug\TianWen.Nhibernate.csprojResolveAssemblyReference.cache
 F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.Nhibernate\obj\Debug\TianWen.Nhibernate.csprojResolveAssemblyReference.cache
+D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.Nhibernate\obj\Debug\TianWen.Nhibernate.csprojResolveAssemblyReference.cache

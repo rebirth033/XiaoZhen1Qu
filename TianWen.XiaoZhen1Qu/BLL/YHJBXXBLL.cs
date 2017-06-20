@@ -23,7 +23,6 @@ namespace TianWen.XiaoZhen1Qu.BLL
             {
                 return new { Result = EnResultType.Failed, Message = "用户名已存在!" };
             }
-
             using (ITransaction transaction = DAO.BeginTransaction())
             {
                 try
@@ -45,6 +44,15 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     };
                 }
             }
+        }
+
+        public string GetObjByYHM(string YHM)
+        {
+            object o1 = DAO.Repository.ExecuteScalar(string.Format("SELECT COUNT(1) FROM YHJBXX WHERE YHM='{0}'", YHM));
+            if (o1 != null && int.Parse(o1.ToString()) > 0)
+                return o1.ToString();
+            else
+                return string.Empty; 
         }
     }
 }
