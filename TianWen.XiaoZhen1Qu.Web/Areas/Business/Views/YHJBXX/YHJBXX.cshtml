@@ -32,10 +32,17 @@
                 <td class="Info" id="QRMMInfo" style="width:50%"></td>
             </tr>
             <tr>
-                <td><input type="text" class="form-control input_text" id="SJ" column="SJ" placeholder="请输入手机号"></td>
-                <td class="Info" id="SJInfo" style="width:50%"></td>
+                <td id="tdSJ">
+                    <input type="text" class="form-control input_text" id="SJ" column="SJ" placeholder="请输入手机号">
+                    <input type="button" class="btn btn-info" id="HQYZM" value="获取验证码" />
+                </td>
+                <td class="Info" id="SJInfo" style="width: 50%"></td>
             </tr>
             <tr>
+                <td><input type="text" class="form-control input_text" id="YZM" column="YZM" placeholder="请输入验证码"></td>
+                <td class="Info" id="YZMInfo" style="width:50%"></td>
+            </tr>
+            @*<tr>
                 <td>
                     <div class="box">
                         <div class="dragEle">>></div>
@@ -43,7 +50,7 @@
                         <div class="tips">拖动滑块到最右边,完成验证</div>
                     </div>
                 </td>
-            </tr>
+            </tr>*@
             <tr>
                 <td><input type="button" class="btn btn-info input_text" id="Reg" value="同意条款并注册" /></td>
             </tr>

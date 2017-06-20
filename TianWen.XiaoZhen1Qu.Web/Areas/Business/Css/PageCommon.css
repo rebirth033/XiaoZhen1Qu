@@ -2,13 +2,25 @@
     width: 300px;
 }
 
+#SJ {
+    width: 200px !important;
+}
+
+#tdSJ {
+    text-align: left !important;
+}
+
+#HQYZM {
+    vertical-align: top !important;
+}
+
 tr {
-    text-align: center !important;
+    text-align: center;
     border-top: 0px !important;
 }
 
 td {
-    text-align: center !important;
+    text-align: center;
     border: 0px !important;
 }
 

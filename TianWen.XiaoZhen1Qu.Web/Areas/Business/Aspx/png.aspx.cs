@@ -28,7 +28,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Aspx
             int number;
             string checkCode = String.Empty;
             int iSeed = DateTime.Now.Millisecond;
-            System.Random random = new Random(iSeed);
+            Random random = new Random(iSeed);
             for (int i = 0; i < iCount; i++)
             {
                 number = random.Next(10);

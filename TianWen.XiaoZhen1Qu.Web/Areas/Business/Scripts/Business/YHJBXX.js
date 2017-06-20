@@ -10,8 +10,9 @@
     $("#QRMM").bind("keydown", ColorChange);
     $("#SJ").bind("blur", SJCheck);
     $("#SJ").bind("keydown", ColorChange);
+    $("#HQYZM").bind("click", GetCheckCode);
     BindToolTip();
-    DragValidate($(".dragEle"), $(".dragTipInner"));
+    //DragValidate($(".dragEle"), $(".dragTipInner"));
 });
 
 function BindToolTip() {
@@ -42,6 +43,7 @@ function BindToolTip() {
 }
 
 function YHMCheck() {
+    ValidateYHM();
     if (($("#YHM").val().length < 5 && $("#YHM").val().length > 0) || $("#YHM").val().length > 15) {
         $("#YHM").css("border-color", "#F2272D");
         $("#YHMInfo").css("color", "#F2272D");
@@ -56,32 +58,8 @@ function YHMCheck() {
     else {
         $("#YHM").css("border-color", "#999");
         $("#YHMInfo").html('<img src=' + getRootPath() + '/Areas/Business/Css/images/yes.png />');
+        return true;
     }
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/YHJBXX/ValidateYHM",
-        dataType: "json",
-        data:
-        {
-            YHM: $("#YHM").val()
-        },
-        success: function (xml) {
-            if (xml !== "" && xml !== null) {
-                $("#YHM").css("border-color", "#F2272D");
-                $("#YHMInfo").css("color", "#F2272D");
-                $("#YHMInfo").html("会员名已存在，请修改");
-                return false;
-            }
-            else {
-                $("#YHM").css("border-color", "#999");
-                $("#YHMInfo").html('<img src=' + getRootPath() + '/Areas/Business/Css/images/yes.png />');
-                return true;
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-            return false;
-        }
-    });
 }
 
 function MMCheck() {
@@ -120,7 +98,7 @@ function MMCheck() {
         $("#MM").css("border-color", "#999");
         $("#MMInfo").html('<img src=' + getRootPath() + '/Areas/Business/Css/images/yes.png />');
     }
-    
+
     if (!/^(?![^a-zA-Z]+$)(?!\D+$)/.test($("#MM").val())) {
         $("#MM").css("border-color", "#F2272D");
         $("#MMInfo").css("color", "#F2272D");
@@ -235,7 +213,7 @@ function Register() {
             if (xml.Result === 1) {
                 alert("注册成功");
             } else {
-                alert("注册失败");
+                alert("注册失败:" + xml.Message);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -287,3 +265,71 @@ function DragValidate(dargEle, msgEle) {
         dragging = false;
     });
 };
+
+function ValidateYHM() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/YHJBXX/ValidateYHM",
+        dataType: "json",
+        data:{
+            YHM: $("#YHM").val()
+        },
+        success: function (xml) {
+            if (xml.Result === 0) {
+                $("#YHM").css("border-color", "#F2272D");
+                $("#YHMInfo").css("color", "#F2272D");
+                $("#YHMInfo").html("会员名已存在，请修改");
+            }
+            else {
+                $("#YHM").css("border-color", "#999");
+                $("#YHMInfo").html('<img src=' + getRootPath() + '/Areas/Business/Css/images/yes.png />');
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+
+function GetCheckCode() {
+    //if ($('#SJ').length === 11) {
+        $.ajax({
+            type: "get",
+            dataType: "json",
+            url: getRootPath() + "/Business/YHJBXX/GetYHM",
+            data: {
+                SJ: $("#SJ").val(),
+                clienttime: new Date().getTime()
+            },
+            success: function (xml) {
+                if (xml.result === 1) {
+                    alert("验证码发送成功");
+                    GetNumber();
+                    return true;
+                }
+                else {
+                    alert("验证码发送失败");
+                    return false;
+                }
+            }
+        });
+   // }
+}
+var count = 5;
+function GetNumber() {
+    $("#btnCode").attr("disabled", "disabled");
+    $("#btnCode").val(count + "秒之后点击获取");
+    count--;
+    if (count > 0) {
+        setTimeout(GetNumber, 1000);
+    }
+    else {
+        $("#btnCode").val("点击获取验证码");
+        $("#btnCode").attr("disabled", "");
+        count = 5;
+    }
+}
+
+function ValidateCheckCode() {
+    
+}
