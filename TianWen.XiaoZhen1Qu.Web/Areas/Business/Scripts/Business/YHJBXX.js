@@ -280,7 +280,7 @@ function DragValidate(dargEle, msgEle) {
             msgEle.text("拖动滑块到最右边,完成验证");
         } else {
             if ($(".dragTip").width() > 40) {
-                dargEle.attr("validate", "true").html('<img src=' + getRootPath() + '/Areas/Business/Css/images/yes.png />').unbind("mousedown");
+                dargEle.attr("validate", "true").unbind("mousedown");
                 msgEle.text("验证成功!");
             }
         };
