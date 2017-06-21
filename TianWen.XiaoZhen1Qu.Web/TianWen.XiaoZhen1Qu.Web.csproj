@@ -124,6 +124,7 @@
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\js\npm.js" />
     <Content Include="Areas\Business\Scripts\Business\COMMON.js" />
     <Content Include="Areas\Business\Scripts\Business\PageJson.js" />
+    <Content Include="Areas\Business\Scripts\Business\YHDLXX.js" />
     <Content Include="Areas\Business\Scripts\Business\YHJBXX.js" />
     <Content Include="Areas\Business\Scripts\jquery-1.9.1.min.js" />
     <Content Include="Config\SpringConfig\BLL.xml" />
@@ -146,6 +147,7 @@
     </Compile>
     <Compile Include="Areas\Business\BusinessAreaRegistration.cs" />
     <Compile Include="Areas\Business\Common\BaseController.cs" />
+    <Compile Include="Areas\Business\Controllers\YHDLXXController.cs" />
     <Compile Include="Areas\Business\Controllers\YHJBXXController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -170,6 +172,7 @@
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="NHDataSources.config" />
+    <Content Include="Areas\Business\Views\YHDLXX\YHDLXX.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

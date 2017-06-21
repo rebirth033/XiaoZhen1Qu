@@ -5,5 +5,10 @@
       <ref object="YHJBXXBLL"/>
     </property>
   </object>
+  <object id="YHDLXXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.YHDLXXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="YHJBXXBLL">
+      <ref object="YHJBXXBLL"/>
+    </property>
+  </object>
 </objects>
 
