@@ -10,7 +10,8 @@
     $("#QRMM").bind("keydown", ColorChange);
     $("#SJ").bind("blur", SJCheck);
     $("#SJ").bind("keydown", ColorChange);
-    $("#HQYZM").bind("click", GetCheckCode);
+    $("#btnHQYZM").bind("click", GetCheckCode);
+    $("#YZM").bind("blur", ValidateCheckCode);
     BindToolTip();
     //DragValidate($(".dragEle"), $(".dragTipInner"));
 });
@@ -43,23 +44,43 @@ function BindToolTip() {
 }
 
 function YHMCheck() {
-    ValidateYHM();
-    if (($("#YHM").val().length < 5 && $("#YHM").val().length > 0) || $("#YHM").val().length > 15) {
-        $("#YHM").css("border-color", "#F2272D");
-        $("#YHMInfo").css("color", "#F2272D");
-        $("#YHMInfo").html("会员名为5-15个字符，请修改");
-        return false;
-    }
-    else if ($("#YHM").val().length === 0) {
-        $("#YHM").css("border-color", "#999");
-        $("#YHMInfo").html("");
-        return false;
-    }
-    else {
-        $("#YHM").css("border-color", "#999");
-        $("#YHMInfo").html('<img src=' + getRootPath() + '/Areas/Business/Css/images/yes.png />');
-        return true;
-    }
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/YHJBXX/ValidateYHM",
+        dataType: "json",
+        data: {
+            YHM: $("#YHM").val()
+        },
+        success: function (xml) {
+            if (xml.Result === 0) {
+                $("#YHM").css("border-color", "#F2272D");
+                $("#YHMInfo").css("color", "#F2272D");
+                $("#YHMInfo").html("会员名已存在，请修改");
+            }
+            else {
+                if (($("#YHM").val().length < 5 && $("#YHM").val().length > 0) || $("#YHM").val().length > 15) {
+                    $("#YHM").css("border-color", "#F2272D");
+                    $("#YHMInfo").css("color", "#F2272D");
+                    $("#YHMInfo").html("会员名为5-15个字符，请修改");
+                    return false;
+                }
+                else if ($("#YHM").val().length === 0) {
+                    $("#YHM").css("border-color", "#999");
+                    $("#YHMInfo").html("");
+                    return false;
+                }
+                else {
+                    $("#YHM").css("border-color", "#999");
+                    $("#YHMInfo").html('<img src=' + getRootPath() + '/Areas/Business/Css/images/yes.png />');
+                    return true;
+                }
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+    
 }
 
 function MMCheck() {
@@ -170,31 +191,58 @@ function ColorChange() {
 }
 
 function Validate() {
-    if (YHMCheck() && MMCheck() && QRMMCheck() && SJCheck())
-        return true;
-    else {
-        if ($("#YHM").val().length === 0) {
-            $("#YHM").css("border-color", "#F2272D");
-            $("#YHMInfo").css("color", "#F2272D");
-            $("#YHMInfo").html("请输入用户名");
-        }
-        if ($("#MM").val().length === 0) {
-            $("#MM").css("border-color", "#F2272D");
-            $("#MMInfo").css("color", "#F2272D");
-            $("#MMInfo").html("请输入登录密码");
-        }
-        if ($("#QRMM").val().length === 0) {
-            $("#QRMM").css("border-color", "#F2272D");
-            $("#QRMMInfo").css("color", "#F2272D");
-            $("#QRMMInfo").html("请再次输入登录密码");
-        }
-        if ($("#SJ").val().length === 0) {
-            $("#SJ").css("border-color", "#F2272D");
-            $("#SJInfo").css("color", "#F2272D");
-            $("#SJInfo").html("请输入手机号");
-        }
+    if (!/^[0-9]{6}$/.test($("#YZM").val())) {
+        $("#YZM").css("border-color", "#F2272D");
+        $("#YZMInfo").css("color", "#F2272D");
+        $("#YZMInfo").html("请输入正确的手机验证码");
         return false;
     }
+    $.ajax({
+        type: "POST",
+        dataType: "json",
+        url: getRootPath() + "/Business/YHJBXX/ValidateCheckCode",
+        data: {
+            YZM: $("#YZM").val()
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                $("#YZM").css("border-color", "#999");
+                $("#YZMInfo").html('<img src=' + getRootPath() + '/Areas/Business/Css/images/yes.png />');
+                if (YHMCheck() && MMCheck() && QRMMCheck() && SJCheck() && ValidateCheckCode())
+                    return true;
+                else {
+                    if ($("#YHM").val().length === 0) {
+                        $("#YHM").css("border-color", "#F2272D");
+                        $("#YHMInfo").css("color", "#F2272D");
+                        $("#YHMInfo").html("请输入用户名");
+                    }
+                    if ($("#MM").val().length === 0) {
+                        $("#MM").css("border-color", "#F2272D");
+                        $("#MMInfo").css("color", "#F2272D");
+                        $("#MMInfo").html("请输入登录密码");
+                    }
+                    if ($("#QRMM").val().length === 0) {
+                        $("#QRMM").css("border-color", "#F2272D");
+                        $("#QRMMInfo").css("color", "#F2272D");
+                        $("#QRMMInfo").html("请再次输入登录密码");
+                    }
+                    if ($("#SJ").val().length === 0) {
+                        $("#SJ").css("border-color", "#F2272D");
+                        $("#SJInfo").css("color", "#F2272D");
+                        $("#SJInfo").html("请输入手机号");
+                    }
+                    return false;
+                }
+            }
+            else {
+                $("#YZM").css("border-color", "#F2272D");
+                $("#YZMInfo").css("color", "#F2272D");
+                $("#YZMInfo").html(xml.Message);
+                return false;
+            }
+        }
+    });
+    
 }
 
 function Register() {
@@ -271,7 +319,7 @@ function ValidateYHM() {
         type: "POST",
         url: getRootPath() + "/Business/YHJBXX/ValidateYHM",
         dataType: "json",
-        data:{
+        data: {
             YHM: $("#YHM").val()
         },
         success: function (xml) {
@@ -292,18 +340,22 @@ function ValidateYHM() {
 }
 
 function GetCheckCode() {
-    //if ($('#SJ').length === 11) {
+    if ($("#SJ").val().length === 0) {
+        $("#SJ").css("border-color", "#F2272D");
+        $("#SJInfo").css("color", "#F2272D");
+        $("#SJInfo").html("请输入手机号");
+        return;
+    }
+    if (SJCheck()) {
         $.ajax({
-            type: "get",
+            type: "POST",
             dataType: "json",
-            url: getRootPath() + "/Business/YHJBXX/GetYHM",
+            url: getRootPath() + "/Business/YHJBXX/GetYZM",
             data: {
-                SJ: $("#SJ").val(),
-                clienttime: new Date().getTime()
+                SJ: $("#SJ").val()
             },
             success: function (xml) {
-                if (xml.result === 1) {
-                    alert("验证码发送成功");
+                if (xml.Result === 1) {
                     GetNumber();
                     return true;
                 }
@@ -313,23 +365,49 @@ function GetCheckCode() {
                 }
             }
         });
-   // }
+    }
 }
-var count = 5;
+var count = 60;
 function GetNumber() {
-    $("#btnCode").attr("disabled", "disabled");
-    $("#btnCode").val(count + "秒之后点击获取");
+    $("#btnHQYZM").attr("disabled", "disabled");
+    $("#btnHQYZM").val(count + "S后重新获取");
     count--;
     if (count > 0) {
         setTimeout(GetNumber, 1000);
     }
     else {
-        $("#btnCode").val("点击获取验证码");
-        $("#btnCode").attr("disabled", "");
-        count = 5;
+        $("#btnHQYZM").val("获取验证码");
+        $("#btnHQYZM").removeAttr("disabled");
+        count = 60;
     }
 }
 
 function ValidateCheckCode() {
-    
+    if (!/^[0-9]{6}$/.test($("#YZM").val())) {
+        $("#YZM").css("border-color", "#F2272D");
+        $("#YZMInfo").css("color", "#F2272D");
+        $("#YZMInfo").html("请输入正确的手机验证码");
+        return false;
+    }
+    $.ajax({
+        type: "POST",
+        dataType: "json",
+        url: getRootPath() + "/Business/YHJBXX/ValidateCheckCode",
+        data: {
+            YZM: $("#YZM").val()
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                $("#YZM").css("border-color", "#999");
+                $("#YZMInfo").html('<img src=' + getRootPath() + '/Areas/Business/Css/images/yes.png />');
+                return true;
+            }
+            else {
+                $("#YZM").css("border-color", "#F2272D");
+                $("#YZMInfo").css("color", "#F2272D");
+                $("#YZMInfo").html(xml.Message);
+                return false;
+            }
+        }
+    });
 }
