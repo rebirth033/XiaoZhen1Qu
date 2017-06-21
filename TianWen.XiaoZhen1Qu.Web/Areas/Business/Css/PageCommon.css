@@ -3,15 +3,16 @@
 }
 
 #SJ {
-    width: 200px !important;
+    width: 175px !important;
 }
 
 #tdSJ {
     text-align: left !important;
 }
 
-#HQYZM {
+#btnHQYZM {
     vertical-align: top !important;
+    width: 120px !important;
 }
 
 tr {

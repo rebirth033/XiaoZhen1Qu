@@ -36,12 +36,12 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             {
                 string checkcode = Session["CheckCode"].ToString();
                 if (YZM == checkcode)
-                    return Json(new { Result = EnResultType.Success });
+                    return Json(new { Result = EnResultType.Success, Message = "验证成功" });
                 else
-                    return Json(new { Result = EnResultType.Failed });
+                    return Json(new { Result = EnResultType.Failed, Message = "验证码错误或过期，请重新获取" });
             }
             else
-                return Json(new { Result = EnResultType.Failed });
+                return Json(new { Result = EnResultType.Failed, Message = "请点击获取验证码按钮" });
         }
 
         public JsonResult ValidateYHM()
@@ -53,7 +53,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
                 return Json(new { Result = EnResultType.Failed });
         }
 
-        public JsonResult GetYHM()
+        public JsonResult GetYZM()
         {
             string SJ = Request["SJ"];
             Random random = new Random();
@@ -72,7 +72,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             StreamReader ser = new StreamReader(sr, Encoding.Default);
             string strRet = ser.ReadToEnd();
 
-            return Json(new { Result = EnResultType.Success, Message = strRet });
+            return Json(new { Result = EnResultType.Success, YZM = checkcode });
         }
     }
 }
