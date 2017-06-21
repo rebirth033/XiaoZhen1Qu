@@ -1,4 +1,6 @@
-﻿$(document).ready(function () {
+﻿var count = 60;
+
+$(document).ready(function () {
     $("#Reg").bind("click", Register);
     $("#Cancel").bind("click", Close);
     $("[data-toggle='tooltip']").tooltip();
@@ -367,7 +369,7 @@ function GetCheckCode() {
         });
     }
 }
-var count = 60;
+
 function GetNumber() {
     $("#btnHQYZM").attr("disabled", "disabled");
     $("#btnHQYZM").val(count + "S后重新获取");
