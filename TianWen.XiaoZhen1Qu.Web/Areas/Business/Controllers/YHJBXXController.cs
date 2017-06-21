@@ -21,36 +21,23 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public JsonResult Register()
         {
-            string json = Request["Json"];
-            YHJBXX yhjbxx = JsonHelper.ConvertJsonToObject<YHJBXX>(json);
-            object result = YHJBXXBLL.CreateBasic(yhjbxx);
-
-            return Json(result);
-        }
-
-        public JsonResult ValidateCheckCode()
-        {
             string YZM = Request["YZM"];
             //生成的验证码被保存到session中
             if (Session["CheckCode"] != null)
             {
                 string checkcode = Session["CheckCode"].ToString();
                 if (YZM == checkcode)
-                    return Json(new { Result = EnResultType.Success, Message = "验证成功" });
+                {
+                    string json = Request["Json"];
+                    YHJBXX yhjbxx = JsonHelper.ConvertJsonToObject<YHJBXX>(json);
+                    object result = YHJBXXBLL.CreateBasic(yhjbxx);
+                    return Json(result);
+                }
                 else
-                    return Json(new { Result = EnResultType.Failed, Message = "验证码错误或过期，请重新获取" });
+                    return Json(new { Result = EnResultType.Failed, Message = "验证码错误或过期，请重新获取", Type = 1 });
             }
             else
-                return Json(new { Result = EnResultType.Failed, Message = "请点击获取验证码按钮" });
-        }
-
-        public JsonResult ValidateYHM()
-        {
-            string YHM = Request["YHM"];
-            if (string.IsNullOrEmpty(YHJBXXBLL.GetObjByYHM(YHM)))
-                return Json(new { Result = EnResultType.Success });
-            else
-                return Json(new { Result = EnResultType.Failed });
+                return Json(new { Result = EnResultType.Failed, Message = "请点击获取验证码按钮", Type = 1 });
         }
 
         public JsonResult GetYZM()

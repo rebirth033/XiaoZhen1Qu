@@ -46,43 +46,45 @@ function BindToolTip() {
 }
 
 function YHMCheck() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/YHJBXX/ValidateYHM",
-        dataType: "json",
-        data: {
-            YHM: $("#YHM").val()
-        },
-        success: function (xml) {
-            if (xml.Result === 0) {
-                $("#YHM").css("border-color", "#F2272D");
-                $("#YHMInfo").css("color", "#F2272D");
-                $("#YHMInfo").html("会员名已存在，请修改");
-            }
-            else {
-                if (($("#YHM").val().length < 5 && $("#YHM").val().length > 0) || $("#YHM").val().length > 15) {
-                    $("#YHM").css("border-color", "#F2272D");
-                    $("#YHMInfo").css("color", "#F2272D");
-                    $("#YHMInfo").html("会员名为5-15个字符，请修改");
-                    return false;
-                }
-                else if ($("#YHM").val().length === 0) {
-                    $("#YHM").css("border-color", "#999");
-                    $("#YHMInfo").html("");
-                    return false;
-                }
-                else {
-                    $("#YHM").css("border-color", "#999");
-                    $("#YHMInfo").html('<img src=' + getRootPath() + '/Areas/Business/Css/images/yes.png />');
-                    return true;
-                }
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+    if (($("#YHM").val().length < 5 && $("#YHM").val().length > 0) || $("#YHM").val().length > 15) {
+        $("#YHM").css("border-color", "#F2272D");
+        $("#YHMInfo").css("color", "#F2272D");
+        $("#YHMInfo").html("会员名为5-15个字符，请修改");
+        return false;
+    }
+    else if ($("#YHM").val().length === 0) {
+        $("#YHM").css("border-color", "#F2272D");
+        $("#YHMInfo").css("color", "#F2272D");
+        $("#YHMInfo").html("请输入用户名");
+        return false;
+    }
+    else {
+        $("#YHM").css("border-color", "#999");
+        $("#YHMInfo").html('<img src=' + getRootPath() + '/Areas/Business/Css/images/yes.png />');
+        return true;
+    }
+    //$.ajax({
+    //    type: "POST",
+    //    url: getRootPath() + "/Business/YHJBXX/ValidateYHM",
+    //    dataType: "json",
+    //    data: {
+    //        YHM: $("#YHM").val()
+    //    },
+    //    success: function (xml) {
+    //        if (xml.Result === 0) {
+    //            $("#YHM").css("border-color", "#F2272D");
+    //            $("#YHMInfo").css("color", "#F2272D");
+    //            $("#YHMInfo").html("会员名已存在，请修改");
+    //            return false;
+    //        }
+    //        else {
 
-        }
-    });
-    
+    //        }
+    //    },
+    //    error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+    //    }
+    //});
 }
 
 function MMCheck() {
@@ -93,8 +95,9 @@ function MMCheck() {
         return false;
     }
     else if ($("#MM").val().length === 0) {
-        $("#MM").css("border-color", "#999");
-        $("#MMInfo").html("");
+        $("#MM").css("border-color", "#F2272D");
+        $("#MMInfo").css("color", "#F2272D");
+        $("#MMInfo").html("请输入登录密码");
         return false;
     }
     else {
@@ -143,8 +146,9 @@ function QRMMCheck() {
         return false;
     }
     else if ($("#QRMM").val().length === 0) {
-        $("#QRMM").css("border-color", "#999");
-        $("#QRMMInfo").html("");
+        $("#QRMM").css("border-color", "#F2272D");
+        $("#QRMMInfo").css("color", "#F2272D");
+        $("#QRMMInfo").html("请再次输入登录密码");
         return false;
     }
     else {
@@ -177,8 +181,9 @@ function SJCheck() {
         return false;
     }
     else if ($("#SJ").val().length === 0) {
-        $("#SJ").css("border-color", "#999");
-        $("#SJInfo").html("");
+        $("#SJ").css("border-color", "#F2272D");
+        $("#SJInfo").css("color", "#F2272D");
+        $("#SJInfo").html("请输入手机号");
         return false;
     }
     else {
@@ -193,58 +198,12 @@ function ColorChange() {
 }
 
 function Validate() {
-    if (!/^[0-9]{6}$/.test($("#YZM").val())) {
-        $("#YZM").css("border-color", "#F2272D");
-        $("#YZMInfo").css("color", "#F2272D");
-        $("#YZMInfo").html("请输入正确的手机验证码");
-        return false;
-    }
-    $.ajax({
-        type: "POST",
-        dataType: "json",
-        url: getRootPath() + "/Business/YHJBXX/ValidateCheckCode",
-        data: {
-            YZM: $("#YZM").val()
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                $("#YZM").css("border-color", "#999");
-                $("#YZMInfo").html('<img src=' + getRootPath() + '/Areas/Business/Css/images/yes.png />');
-                if (YHMCheck() && MMCheck() && QRMMCheck() && SJCheck() && ValidateCheckCode())
-                    return true;
-                else {
-                    if ($("#YHM").val().length === 0) {
-                        $("#YHM").css("border-color", "#F2272D");
-                        $("#YHMInfo").css("color", "#F2272D");
-                        $("#YHMInfo").html("请输入用户名");
-                    }
-                    if ($("#MM").val().length === 0) {
-                        $("#MM").css("border-color", "#F2272D");
-                        $("#MMInfo").css("color", "#F2272D");
-                        $("#MMInfo").html("请输入登录密码");
-                    }
-                    if ($("#QRMM").val().length === 0) {
-                        $("#QRMM").css("border-color", "#F2272D");
-                        $("#QRMMInfo").css("color", "#F2272D");
-                        $("#QRMMInfo").html("请再次输入登录密码");
-                    }
-                    if ($("#SJ").val().length === 0) {
-                        $("#SJ").css("border-color", "#F2272D");
-                        $("#SJInfo").css("color", "#F2272D");
-                        $("#SJInfo").html("请输入手机号");
-                    }
-                    return false;
-                }
-            }
-            else {
-                $("#YZM").css("border-color", "#F2272D");
-                $("#YZMInfo").css("color", "#F2272D");
-                $("#YZMInfo").html(xml.Message);
-                return false;
-            }
-        }
-    });
-    
+    if (!YHMCheck()) return false;
+    if (!MMCheck()) return false;
+    if (!QRMMCheck()) return false;
+    if (!SJCheck()) return false;
+    if (!ValidateCheckCode()) return false;
+    return true;
 }
 
 function Register() {
@@ -257,13 +216,24 @@ function Register() {
         dataType: "json",
         data:
         {
-            Json: jsonObj.JsonToString(obj)
+            Json: jsonObj.JsonToString(obj),
+            YZM: $("#YZM").val()
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 alert("注册成功");
             } else {
-                alert("注册失败:" + xml.Message);
+                //alert(xml.Message);
+                if (xml.Type === 1) {
+                    $("#YZM").css("border-color", "#F2272D");
+                    $("#YZMInfo").css("color", "#F2272D");
+                    $("#YZMInfo").html(xml.Message);
+                }
+                if (xml.Type === 2) {
+                    $("#YHM").css("border-color", "#F2272D");
+                    $("#YHMInfo").css("color", "#F2272D");
+                    $("#YHMInfo").html(xml.Message);
+                }
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -385,31 +355,21 @@ function GetNumber() {
 }
 
 function ValidateCheckCode() {
+    if ($("#YZM").val().length === 0) {
+        $("#YZM").css("border-color", "#F2272D");
+        $("#YZMInfo").css("color", "#F2272D");
+        $("#YZMInfo").html("请输入手机验证码");
+        return false;
+    }
     if (!/^[0-9]{6}$/.test($("#YZM").val())) {
         $("#YZM").css("border-color", "#F2272D");
         $("#YZMInfo").css("color", "#F2272D");
         $("#YZMInfo").html("请输入正确的手机验证码");
         return false;
     }
-    $.ajax({
-        type: "POST",
-        dataType: "json",
-        url: getRootPath() + "/Business/YHJBXX/ValidateCheckCode",
-        data: {
-            YZM: $("#YZM").val()
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                $("#YZM").css("border-color", "#999");
-                $("#YZMInfo").html('<img src=' + getRootPath() + '/Areas/Business/Css/images/yes.png />');
-                return true;
-            }
-            else {
-                $("#YZM").css("border-color", "#F2272D");
-                $("#YZMInfo").css("color", "#F2272D");
-                $("#YZMInfo").html(xml.Message);
-                return false;
-            }
-        }
-    });
+    else {
+        $("#YZM").css("border-color", "#999");
+        $("#YZMInfo").html('<img src=' + getRootPath() + '/Areas/Business/Css/images/yes.png />');
+        return true;
+    }
 }
