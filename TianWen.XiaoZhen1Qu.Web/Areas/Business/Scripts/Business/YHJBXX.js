@@ -63,28 +63,6 @@ function YHMCheck() {
         $("#YHMInfo").html('<img src=' + getRootPath() + '/Areas/Business/Css/images/yes.png />');
         return true;
     }
-    //$.ajax({
-    //    type: "POST",
-    //    url: getRootPath() + "/Business/YHJBXX/ValidateYHM",
-    //    dataType: "json",
-    //    data: {
-    //        YHM: $("#YHM").val()
-    //    },
-    //    success: function (xml) {
-    //        if (xml.Result === 0) {
-    //            $("#YHM").css("border-color", "#F2272D");
-    //            $("#YHMInfo").css("color", "#F2272D");
-    //            $("#YHMInfo").html("会员名已存在，请修改");
-    //            return false;
-    //        }
-    //        else {
-
-    //        }
-    //    },
-    //    error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-    //    }
-    //});
 }
 
 function MMCheck() {
@@ -223,7 +201,6 @@ function Register() {
             if (xml.Result === 1) {
                 alert("注册成功");
             } else {
-                //alert(xml.Message);
                 if (xml.Type === 1) {
                     $("#YZM").css("border-color", "#F2272D");
                     $("#YZMInfo").css("color", "#F2272D");

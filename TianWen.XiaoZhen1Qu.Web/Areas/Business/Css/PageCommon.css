@@ -105,3 +105,28 @@ li {
     text-align: center;
     font-size:14px;
 }
+
+/*.active {
+    color: #555;
+    cursor: default;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+    border-radius: 4px 4px 0 0;
+}*/
+
+.spanZDDD {
+    vertical-align: top; 
+    margin-left: 1px; 
+    font-size: 14px; 
+    color: #999;
+}
+
+#aWJMM {
+    cursor: pointer; 
+    text-decoration: none; 
+    color: #666;
+    vertical-align: top;
+    font-size: 14px;
+    float: right;
+}

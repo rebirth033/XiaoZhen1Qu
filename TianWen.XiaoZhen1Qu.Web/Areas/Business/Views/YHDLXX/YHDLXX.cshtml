@@ -12,29 +12,70 @@
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/YHDLXX.js")"></script>
 </head>
 <body>
-    <div id="divReg">
-        <table class="table" style="width: 600px;">
+    <div>
+        <table class="table" style="width: 300px;">
             <tr>
                 <td class="headtd"><span class="title">欢迎来到小镇1区</span></td>
             </tr>
             <tr>
-                <td id="tdSJ">
-                    <input type="text" class="form-control input_text" id="SJ" column="SJ" placeholder="请输入手机号">
-                    <input type="button" class="btn btn-info" id="btnHQYZM" value="获取验证码" />
+                <td>
+                    <ul id="myTab" class="nav nav-tabs" style="width: 300px">
+                        <li id="liMMDL" style="width: 150px" class="active"><a href="#username" data-toggle="tab">用户名密码登录</a></li>
+                        <li id="liSJDL" style="width: 150px;"><a href="#cellphone" data-toggle="tab">手机验证码登录</a></li>
+                    </ul>
                 </td>
-                <td class="Info" id="SJInfo" style="width: 50%"></td>
-            </tr>
-            <tr>
-                <td><input type="text" class="form-control input_text" id="YZM" column="YZM" placeholder="请输入验证码"></td>
-                <td class="Info" id="YZMInfo" style="width:50%"></td>
-            </tr>
-            <tr>
-                <td style="text-align:left"><input type="checkbox" /><span style="vertical-align:top;margin-left:10px;font-size:14px;color:#999;">下次自动登录</span></td>
-            </tr>
-            <tr>
-                <td><input type="button" class="btn btn-info input_text" id="Reg" value="登录" /></td>
             </tr>
         </table>
+    </div>
+<div id="myTabContent" class="tab-content">
+    <div id="username" style="display: block">
+        <table class="table" style="width: 600px;">
+            <tr>
+                <td style="width: 50%"><input type="text" class="form-control input_text" id="YHM" column="YHM" placeholder="请输入用户名"></td>
+                <td class="Info" id="YHMInfo" style="width: 50%"></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="password" class="form-control input_text" id="MM" column="MM" placeholder="请输入登录密码">
+                </td>
+                <td class="Info" id="MMInfo" style="width: 50%"></td>
+            </tr>
+            <tr>
+                <td style="text-align: left">
+                    <input id="checkMMSFZDDL" type="checkbox" />
+                    <span class="spanZDDD">下次自动登录</span>
+                    <a id="aWJMM" href="#">忘记密码</a>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="button" class="btn btn-info input_text" id="MMDL" value="登录" /></td>
+            </tr>
+        </table>
+    </div>
+        <div id="cellphone" style="display: none">
+            <table class="table" style="width: 600px;">
+                <tr>
+                    <td id="tdSJ">
+                        <input type="text" class="form-control input_text" id="SJ" column="SJ" placeholder="请输入手机号">
+                        <input type="button" class="btn btn-info" id="btnHQYZM" value="获取验证码" />
+                    </td>
+                    <td class="Info" id="SJInfo" style="width: 50%"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" class="form-control input_text" id="YZM" column="YZM" placeholder="请输入验证码"></td>
+                    <td class="Info" id="YZMInfo" style="width: 50%"></td>
+                </tr>
+                <tr>
+                    <td style="text-align: left">
+                        <input id="checkSJSFZDDL" type="checkbox" />
+                        <span class="spanZDDD">下次自动登录</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="button" class="btn btn-info input_text" id="SJDL" value="登录" /></td>
+                </tr>
+            </table>
+        </div>
     </div>
 </body>
 </html>

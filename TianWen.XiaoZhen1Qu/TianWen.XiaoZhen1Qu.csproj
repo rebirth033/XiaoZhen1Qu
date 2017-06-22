@@ -44,8 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\BaseBLL.cs" />
+    <Compile Include="BLL\YHDLXXBLL.cs" />
     <Compile Include="BLL\YHJBXXBLL.cs" />
     <Compile Include="DAO\DAOBase.cs" />
+    <Compile Include="DAO\YHDLXXDAO.cs" />
     <Compile Include="DAO\YHJBXXDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

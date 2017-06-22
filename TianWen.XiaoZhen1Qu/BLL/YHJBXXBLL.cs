@@ -27,6 +27,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
             {
                 try
                 {
+                    yhjbxx.MM = EncryptionHelper.MD5Encrypt64(yhjbxx.MM);
                     yhjbxx.SQRQ = DateTime.Now;
                     DAO.Save(yhjbxx);
                     DAO.Repository.Session.Flush();
