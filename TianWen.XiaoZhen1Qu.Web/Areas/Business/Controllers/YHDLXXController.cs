@@ -20,9 +20,12 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         {
             string YZM = Request["YZM"];
 
-            TimeSpan span = DateTime.Now.Subtract(Convert.ToDateTime(Session["Time"].ToString()));
-            if (span.TotalSeconds > 60)
-                return Json(new { Result = EnResultType.Failed, Message = "验证码过期，请重新获取" });
+            if (!string.IsNullOrEmpty(Session["Time"].ToString()))
+            {
+                TimeSpan span = DateTime.Now.Subtract(Convert.ToDateTime(Session["Time"].ToString()));
+                if (span.TotalSeconds > 60)
+                    return Json(new { Result = EnResultType.Failed, Message = "验证码过期，请重新获取" });
+            }
             //生成的验证码被保存到session中
             if (Session["CheckCode"] != null)
             {
