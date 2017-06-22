@@ -1,10 +1,5 @@
 ﻿using System;
-using System.IO;
-using System.Net;
-using System.Text;
 using System.Web.Mvc;
-using System.Xml;
-using CommonClassLib.Helper;
 using TianWen.XiaoZhen1Qu.Entities.Models;
 using TianWen.XiaoZhen1Qu.Web.Areas.Business.Common;
 using TianWen.XiaoZhen1Qu.Interface;
@@ -14,13 +9,14 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
     public class YHDLXXController : BaseController
     {
         public IYHJBXXBLL YHJBXXBLL { get; set; }
+        public IYHDLXXBLL YHDLXXBLL { get; set; }
 
         public ActionResult YHDLXX()
         {
             return View();
         }
 
-        public JsonResult Login()
+        public JsonResult SJLogin()
         {
             string YZM = Request["YZM"];
 
@@ -40,6 +36,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             }
             else
                 return Json(new { Result = EnResultType.Failed, Message = "请点击获取验证码按钮" });
+        }
+
+        public JsonResult MMLogin()
+        {
+            string YHM = Request["YHM"];
+            string MM = Request["MM"];
+            return Json(YHDLXXBLL.CheckLogin(YHM, MM));
         }
     }
 }

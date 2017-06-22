@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="IBaseBLL.cs" />
     <Compile Include="IDAO.cs" />
+    <Compile Include="IYHDLXXBLL.cs" />
     <Compile Include="IYHJBXXBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

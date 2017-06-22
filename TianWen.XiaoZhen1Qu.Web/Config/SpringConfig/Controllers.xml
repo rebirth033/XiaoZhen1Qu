@@ -9,6 +9,9 @@
     <property name="YHJBXXBLL">
       <ref object="YHJBXXBLL"/>
     </property>
+    <property name="YHDLXXBLL">
+      <ref object="YHDLXXBLL"/>
+    </property>
   </object>
 </objects>
 
