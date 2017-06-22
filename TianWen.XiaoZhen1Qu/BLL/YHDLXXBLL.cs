@@ -16,8 +16,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
             {
                 return new { Result = EnResultType.Failed, Message = "用户名不存在，请重新输入"};
             }
-
-            o1 = DAO.Repository.ExecuteScalar(string.Format("SELECT COUNT(1) FROM YHJBXX WHERE YHM='{0}' and MM='{1}'", YHM, MM));
+            o1 = DAO.Repository.ExecuteScalar(string.Format("SELECT COUNT(1) FROM YHJBXX WHERE YHM='{0}' and MM='{1}'", YHM, EncryptionHelper.MD5Encrypt64(MM)));
             if (int.Parse(o1.ToString()) == 0)
             {
                 return new {Result = EnResultType.Failed, Message = "密码错误，请重新输入"};

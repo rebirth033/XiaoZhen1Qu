@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="DTO\YHJBXX_DTO.cs" />
     <Compile Include="Maps\YHJBXX_Map.cs" />
+    <Compile Include="Models\EncryptionHelper.cs" />
     <Compile Include="Models\PublicType.cs" />
     <Compile Include="Models\YHJBXX.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
