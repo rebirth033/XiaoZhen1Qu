@@ -182,8 +182,9 @@ function MMDL() {
         data:
         {
             YHM: $("#YHM").val(),
-            MM: $("#MM").val()
-        },
+            MM: $("#MM").val(),
+            SFZDDL: $("#checkMMSFZDDL")[0].checked
+},
         success: function (xml) {
             if (xml.Result === 1) {
                 alert(xml.Message);

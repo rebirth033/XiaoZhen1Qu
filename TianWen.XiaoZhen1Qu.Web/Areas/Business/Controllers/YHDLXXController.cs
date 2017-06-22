@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Net;
+using System.Web;
 using System.Web.Mvc;
 using TianWen.XiaoZhen1Qu.Entities.Models;
 using TianWen.XiaoZhen1Qu.Web.Areas.Business.Common;
@@ -43,9 +45,24 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public JsonResult MMLogin()
         {
+            HttpCookie ckUsername, ckSessionid;
+            ZDDLXX zddlxx = new ZDDLXX();
             string YHM = Request["YHM"];
             string MM = Request["MM"];
-            return Json(YHDLXXBLL.CheckLogin(YHM, MM));
+            if (Request["SFZDDL"] == "true")
+            {
+                ckUsername = new HttpCookie("autoLoginUser", YHM);
+                ckUsername.Expires = DateTime.Now.AddDays(14);
+                ckSessionid = new HttpCookie("sessionID", Session.SessionID);
+                ckSessionid.Expires = DateTime.Now.AddDays(14);
+                Response.Cookies.Add(ckUsername);
+                Response.Cookies.Add(ckSessionid);
+                return Json(YHDLXXBLL.CheckLogin(YHM, MM, Session.SessionID));
+            }
+            else
+            {
+                return Json(YHDLXXBLL.CheckLogin(YHM, MM, string.Empty));
+            }
         }
     }
 }

@@ -9,6 +9,8 @@ namespace TianWen.XiaoZhen1Qu.Interface
     {
         IDAO DAO { get; set; }
 
-        object CheckLogin(string YHM, string MM);
+        object CheckLogin(string YHM, string MM, string SessionID);
+
+        object AutoLogin(string YHM, string SessionID);
     }
 }
