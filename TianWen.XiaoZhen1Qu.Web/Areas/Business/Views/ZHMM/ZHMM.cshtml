@@ -3,7 +3,6 @@
     Layout = "~/Areas/Business/Views/Shared/_ListLayout.cshtml";
 }
 
-
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
@@ -14,21 +13,27 @@
     <div id="divReg">
         <table class="table" style="width: 600px;">
             <tr>
-                <td class="headtd"><span class="title">找回密码</span></td>
+                <td class="headtd">
+                    <div style="width: 432px;">
+                        <div class="divstep" id="divQRZH">
+                            @*<img class="imgstep" style="background: url(@Url.Content("~/Areas/Business/Css/images/one-blue.png")) no-repeat; " />*@
+                            <span style="color: #5bc0de; font-size: 18px; margin-bottom: 5px;">确认账户</span>
+                            <em style="width: 130px; height: 2px; float: left; background: #5bc0de"></em>
+                        </div>
+                        <div class="divstep" id="divYZZH">
+                            <span style="color: #cccccc; font-size: 18px; margin-bottom: 5px;">验证账户</span>
+                            <em style="width: 130px; height: 2px; float: left; background: #cccccc"></em>
+                        </div>
+                        <div class="divstep" id="divCZMM">
+                            <span style="color: #cccccc; font-size: 18px; margin-bottom: 5px;">重置密码</span>
+                            <em style="width: 130px; height: 2px; float: left;background: #cccccc"></em>
+                        </div>
+                    </div>
+                </td>
             </tr>
             <tr>
                 <td style="width:50%"><input type="text" class="form-control input_text" id="YHM" column="YHM" placeholder="请输入用户名"></td>
                 <td class="Info" id="YHMInfo" style="width:50%"></td>
-            </tr>
-            <tr>
-                <td>
-                    <input type="password" class="form-control input_text" id="MM" column="MM" placeholder="请输入登录密码">
-                </td>
-                <td class="Info" id="MMInfo" style="width:50%"></td>
-            </tr>
-            <tr>
-                <td><input type="password" class="form-control input_text" id="QRMM" column="QRMM" placeholder="请再次输入登录密码"></td>
-                <td class="Info" id="QRMMInfo" style="width:50%"></td>
             </tr>
             <tr>
                 <td id="tdSJ">
@@ -38,11 +43,7 @@
                 <td class="Info" id="SJInfo" style="width: 50%"></td>
             </tr>
             <tr>
-                <td><input type="text" class="form-control input_text" id="YZM" column="YZM" placeholder="请输入验证码"></td>
-                <td class="Info" id="YZMInfo" style="width:50%"></td>
-            </tr>
-            <tr>
-                <td><input type="button" class="btn btn-info input_text" id="Commit" value="提交" /></td>
+                <td><input type="button" class="btn btn-info input_text" id="Commit" value="下一步" /></td>
             </tr>
         </table>
     </div>
