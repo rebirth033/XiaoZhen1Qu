@@ -58,6 +58,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
                     string result = YHJBXXBLL.GetObjByYHMOrSJ(SJ);
                     if (!string.IsNullOrEmpty(result))
                     {
+                        Session["SJ"] = SJ;
                         return Json(new { Result = EnResultType.Success, Message = "验证成功" });
                     }
                     else
@@ -74,6 +75,14 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             {
                 return Json(new { Result = EnResultType.Failed, Message = "验证码不存在", Type = 1 });
             }
+        }
+
+        public JsonResult CZMM()
+        {
+            string MM = Request["MM"];
+            string SJ = Session["SJ"].ToString() ;
+            object result = YHJBXXBLL.CreateBasic(yhjbxx);
+            return Json(result);
         }
     }
 }

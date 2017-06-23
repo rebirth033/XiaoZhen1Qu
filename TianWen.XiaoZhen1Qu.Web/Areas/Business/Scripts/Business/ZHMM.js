@@ -6,6 +6,7 @@ $(document).ready(function () {
     $("#btnHQYZM").bind("click", GetCheckCode);
     $("#btnFirst").bind("click", QRZH);
     $("#btnSecond").bind("click", YZZH);
+    $("#btnThird").bind("click", CZMM);
     $("#spanQRZH").css("color", "#5bc0de");
     $("#emQRZH").css("background", "#5bc0de");
 });
@@ -87,6 +88,44 @@ function YZZH() {
     });
 }
 
+function CZMM() {
+    if (!CZMMValidate()) return;
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/ZHMM/CZMM",
+        dataType: "json",
+        data:
+        {
+            MM: $("#MM").val(),
+            QRMM: $("#QRMM").val(),
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                $("#spanYZZH").css("color", "#cccccc");
+                $("#emYZZH").css("background", "#cccccc");
+                $("#spanCZMM").css("color", "#5bc0de");
+                $("#emCZMM").css("background", "#5bc0de");
+                $("#divSecond").css("display", "none");
+                $("#divThird").css("display", "block");
+            } else {
+                if (xml.Type === 1) {
+                    $("#YZM").css("border-color", "#F2272D");
+                    $("#YZMInfo").css("color", "#F2272D");
+                    $("#YZMInfo").html(xml.Message);
+                }
+                if (xml.Type === 2) {
+                    $("#SJ").css("border-color", "#F2272D");
+                    $("#SJInfo").css("color", "#F2272D");
+                    $("#SJInfo").html(xml.Message);
+                }
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+            _masker.CloseMasker(false, errorThrown);
+        }
+    });
+}
+
 function QRZHValidate() {
     if (!YHMCheck()) return false;
     if (!TXYZMCheck()) return false;
@@ -96,6 +135,12 @@ function QRZHValidate() {
 function YZZHValidate() {
     if (!SJCheck()) return false;
     if (!YZMCheck()) return false;
+    return true;
+}
+
+function CZMMValidate() {
+    if (!MMCheck()) return false;
+    if (!QRMMCheck()) return false;
     return true;
 }
 
@@ -177,7 +222,7 @@ function MMCheck() {
     if (($("#MM").val().length < 6 && $("#MM").val().length > 0) || $("#MM").val().length > 20) {
         $("#MM").css("border-color", "#F2272D");
         $("#MMInfo").css("color", "#F2272D");
-        $("#MMInfo").html("密码为6-20个字符，请修改");
+        $("#MMInfo").html("密码为6-20个字符");
         return false;
     }
     if ($("#MM").val().length === 0) {
@@ -189,13 +234,13 @@ function MMCheck() {
     if ($("#MM").val().split(' ').length > 1) {
         $("#MM").css("border-color", "#F2272D");
         $("#MMInfo").css("color", "#F2272D");
-        $("#MMInfo").html("密码不能包含空格，请修改");
+        $("#MMInfo").html("密码不能包含空格");
         return false;
     }
     if (!/^(?![^a-zA-Z]+$)(?!\D+$)/.test($("#MM").val())) {
         $("#MM").css("border-color", "#F2272D");
         $("#MMInfo").css("color", "#F2272D");
-        $("#MMInfo").html("密码至少包含数字和字母，请修改");
+        $("#MMInfo").html("密码至少包含数字和字母");
         return false;
     }
     else {
@@ -209,7 +254,7 @@ function QRMMCheck() {
     if (($("#QRMM").val().length < 6 && $("#QRMM").val().length > 0) || $("#QRMM").val().length > 20) {
         $("#QRMM").css("border-color", "#F2272D");
         $("#QRMMInfo").css("color", "#F2272D");
-        $("#QRMMInfo").html("确认密码为6-20个字符，请修改");
+        $("#QRMMInfo").html("确认密码为6-20个字符");
         return false;
     }
     if ($("#QRMM").val().length === 0) {
@@ -221,7 +266,7 @@ function QRMMCheck() {
     if ($("#QRMM").val() !== $("#MM").val()) {
         $("#QRMM").css("border-color", "#F2272D");
         $("#QRMMInfo").css("color", "#F2272D");
-        $("#QRMMInfo").html("两次输入的密码不一致，请重新输入");
+        $("#QRMMInfo").html("两次输入的密码不一致");
         return false;
     }
     else {

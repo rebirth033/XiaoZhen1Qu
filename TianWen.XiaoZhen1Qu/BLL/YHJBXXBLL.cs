@@ -17,7 +17,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
 
         public object CreateBasic(YHJBXX yhjbxx)
         {
-            object o1 = DAO.Repository.ExecuteScalar(string.Format("SELECT COUNT(1) FROM YHJBXX WHERE YHM='{0}'",yhjbxx.YHM));
+            object o1 = DAO.Repository.ExecuteScalar(string.Format("SELECT COUNT(1) FROM YHJBXX WHERE YHM='{0}'", yhjbxx.YHM));
 
             if (o1 != null && int.Parse(o1.ToString()) > 0)
             {
@@ -48,13 +48,49 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
+        public object UpdatePassword(string MM, string SJ)
+        {
+            using (ITransaction transaction = DAO.BeginTransaction())
+            {
+                try
+                {
+                     = EncryptionHelper.MD5Encrypt64(MM);
+                    yhjbxx.SQRQ = DateTime.Now;
+                    DAO.Save(yhjbxx);
+                    DAO.Repository.Session.Flush();
+                    transaction.Commit();
+                    return new { Result = EnResultType.Success, Message = "保存成功!", Value = new { YHID = yhjbxx.YHID } };
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    LoggerManager.Error("YHJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                    return new
+                    {
+                        Result = EnResultType.Failed,
+                        Message = "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!",
+                        Type = 3
+                    };
+                }
+            }
+        }
+
         public string GetObjByYHM(string YHM)
         {
             object o1 = DAO.Repository.ExecuteScalar(string.Format("SELECT COUNT(1) FROM YHJBXX WHERE YHM='{0}'", YHM));
             if (o1 != null && int.Parse(o1.ToString()) > 0)
                 return o1.ToString();
             else
-                return string.Empty; 
+                return string.Empty;
+        }
+
+        public string GetObjByYHM(string YHM)
+        {
+            object o1 = DAO.Repository.ExecuteScalar(string.Format("SELECT COUNT(1) FROM YHJBXX WHERE YHM='{0}'", YHM));
+            if (o1 != null && int.Parse(o1.ToString()) > 0)
+                return o1.ToString();
+            else
+                return string.Empty;
         }
 
         public string GetObjByYHMOrSJ(string YHM)
