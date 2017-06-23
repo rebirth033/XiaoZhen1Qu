@@ -56,5 +56,14 @@ namespace TianWen.XiaoZhen1Qu.BLL
             else
                 return string.Empty; 
         }
+
+        public string GetObjByYHMOrSJ(string YHM)
+        {
+            object o1 = DAO.Repository.ExecuteScalar(string.Format("SELECT COUNT(1) FROM YHJBXX WHERE YHM='{0}' or SJ='{0}'", YHM));
+            if (o1 != null && int.Parse(o1.ToString()) > 0)
+                return o1.ToString();
+            else
+                return string.Empty;
+        }
     }
 }
