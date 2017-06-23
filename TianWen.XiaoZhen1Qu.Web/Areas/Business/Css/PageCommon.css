@@ -1,5 +1,5 @@
 ﻿.input_text {
-    width: 300px;
+    width: 390px;
 }
 
 #SJ {
@@ -146,4 +146,18 @@ li {
     height: 30px;
     float: left;
     cursor: default;
+}
+
+.spanstep {
+    font-size: 18px; 
+    margin-bottom: 5px;
+    line-height: 40px;
+    color: #cccccc;
+}
+
+.emstep {
+    width: 130px; 
+    height: 2px; 
+    float: left;
+    background: #cccccc;
 }
