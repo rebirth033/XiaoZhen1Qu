@@ -13,6 +13,7 @@ $(document).ready(function () {
     $("#YZM").bind("blur", ValidateCheckCode);
     $("#liSJDL").bind("click", Showcellphone);
     $("#liMMDL").bind("click", Showusername);
+    $("#aWJMM").attr("href", getRootPath() + "/Business/ZHMM/ZHMM");
 });
 
 function Showcellphone() {

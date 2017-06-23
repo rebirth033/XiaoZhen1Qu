@@ -127,6 +127,7 @@
     <Content Include="Areas\Business\Scripts\Business\YHDLXX.js" />
     <Content Include="Areas\Business\Scripts\Business\YHGL.js" />
     <Content Include="Areas\Business\Scripts\Business\YHJBXX.js" />
+    <Content Include="Areas\Business\Scripts\Business\ZHMM.js" />
     <Content Include="Areas\Business\Scripts\jquery-1.9.1.min.js" />
     <Content Include="Config\SpringConfig\BLL.xml" />
     <Content Include="Config\SpringConfig\Controllers.xml" />
@@ -151,6 +152,7 @@
     <Compile Include="Areas\Business\Controllers\YHDLXXController.cs" />
     <Compile Include="Areas\Business\Controllers\YHGLController.cs" />
     <Compile Include="Areas\Business\Controllers\YHJBXXController.cs" />
+    <Compile Include="Areas\Business\Controllers\ZHMMController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -176,6 +178,7 @@
     <Content Include="NHDataSources.config" />
     <Content Include="Areas\Business\Views\YHDLXX\YHDLXX.cshtml" />
     <Content Include="Areas\Business\Views\YHGL\YHGL.cshtml" />
+    <Content Include="Areas\Business\Views\ZHMM\ZHMM.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

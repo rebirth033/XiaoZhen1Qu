@@ -18,5 +18,10 @@
       <ref object="YHDLXXBLL"/>
     </property>
   </object>
+  <object id="ZHMMController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.ZHMMController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <!--<property name="YHDLXXBLL">
+      <ref object="YHDLXXBLL"/>
+    </property>-->
+  </object>
 </objects>
 
