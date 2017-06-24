@@ -101,23 +101,9 @@ function CZMM() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                $("#spanYZZH").css("color", "#cccccc");
-                $("#emYZZH").css("background", "#cccccc");
-                $("#spanCZMM").css("color", "#5bc0de");
-                $("#emCZMM").css("background", "#5bc0de");
-                $("#divSecond").css("display", "none");
-                $("#divThird").css("display", "block");
+                alert(xml.Message);
             } else {
-                if (xml.Type === 1) {
-                    $("#YZM").css("border-color", "#F2272D");
-                    $("#YZMInfo").css("color", "#F2272D");
-                    $("#YZMInfo").html(xml.Message);
-                }
-                if (xml.Type === 2) {
-                    $("#SJ").css("border-color", "#F2272D");
-                    $("#SJInfo").css("color", "#F2272D");
-                    $("#SJInfo").html(xml.Message);
-                }
+                alert(xml.Message);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

@@ -34,7 +34,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Aspx
                 number = random.Next(10);
                 checkCode += number.ToString();
             }
-            Session["CheckCode"] = checkCode;
+            Session["TXCheckCode"] = checkCode;
             return checkCode;
         }
 

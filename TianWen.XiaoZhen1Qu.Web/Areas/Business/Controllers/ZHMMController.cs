@@ -20,9 +20,9 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         {
             string Value = Request["Value"];
             string TXYZM = Request["TXYZM"];
-            if (Session["CheckCode"] != null)
+            if (Session["TXCheckCode"] != null)
             {
-                string checkcode = Session["CheckCode"].ToString();
+                string checkcode = Session["TXCheckCode"].ToString();
                 if (TXYZM == checkcode)
                 {
                     string result = YHJBXXBLL.GetObjByYHMOrSJ(Value);
@@ -73,7 +73,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             }
             else
             {
-                return Json(new { Result = EnResultType.Failed, Message = "验证码不存在", Type = 1 });
+                return Json(new { Result = EnResultType.Failed, Message = "请获取验证码", Type = 1 });
             }
         }
 
@@ -81,7 +81,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         {
             string MM = Request["MM"];
             string SJ = Session["SJ"].ToString() ;
-            object result = YHJBXXBLL.CreateBasic(yhjbxx);
+            object result = YHJBXXBLL.UpdatePassword(MM, SJ);
             return Json(result);
         }
     }

@@ -4,6 +4,7 @@ using NHibernate;
 using TianWen.XiaoZhen1Qu.Entities.Models;
 using TianWen.XiaoZhen1Qu.Interface;
 using TianWen.Framework.Log;
+using System.Collections.Generic;
 
 namespace TianWen.XiaoZhen1Qu.BLL
 {
@@ -54,22 +55,29 @@ namespace TianWen.XiaoZhen1Qu.BLL
             {
                 try
                 {
-                     = EncryptionHelper.MD5Encrypt64(MM);
-                    yhjbxx.SQRQ = DateTime.Now;
-                    DAO.Save(yhjbxx);
-                    DAO.Repository.Session.Flush();
-                    transaction.Commit();
-                    return new { Result = EnResultType.Success, Message = "保存成功!", Value = new { YHID = yhjbxx.YHID } };
+                    YHJBXX yhjbxx = GetObjBySJ(SJ);
+                    if (yhjbxx != null)
+                    {
+                        yhjbxx.MM = EncryptionHelper.MD5Encrypt64(MM);
+                        DAO.Update(yhjbxx);
+                        DAO.Repository.Session.Flush();
+                        transaction.Commit();
+                        return new { Result = EnResultType.Success, Message = "修改成功", Value = new { YHID = yhjbxx.YHID } };
+                    }
+                    else
+                    {
+                        return new { Result = EnResultType.Failed, Message = "手机号为空或不存在" };
+                    }
+                    
                 }
                 catch (Exception ex)
                 {
                     transaction.Rollback();
-                    LoggerManager.Error("YHJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                    LoggerManager.Error("YHJBXXBLL", "修改失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
                     return new
                     {
                         Result = EnResultType.Failed,
-                        Message = "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!",
-                        Type = 3
+                        Message = "修改失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!"
                     };
                 }
             }
@@ -84,13 +92,13 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 return string.Empty;
         }
 
-        public string GetObjByYHM(string YHM)
+        public YHJBXX GetObjBySJ(string SJ)
         {
-            object o1 = DAO.Repository.ExecuteScalar(string.Format("SELECT COUNT(1) FROM YHJBXX WHERE YHM='{0}'", YHM));
-            if (o1 != null && int.Parse(o1.ToString()) > 0)
-                return o1.ToString();
+            IList<YHJBXX> list = DAO.Repository.GetObjectList<YHJBXX>(String.Format("FROM YHJBXX WHERE SJ='{0}'", SJ));
+            if (list.Count > 0)
+                return list[0];
             else
-                return string.Empty;
+                return null;
         }
 
         public string GetObjByYHMOrSJ(string YHM)
