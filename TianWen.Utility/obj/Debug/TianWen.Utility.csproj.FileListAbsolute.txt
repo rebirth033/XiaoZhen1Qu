@@ -22,3 +22,4 @@ D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.Util
 D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.Utility\bin\Debug\Syncfusion.Calculate.Base.dll
 D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.Utility\obj\Debug\TianWen.Utility.dll
 D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.Utility\obj\Debug\TianWen.Utility.pdb
+D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.Utility\obj\Debug\TianWen.Utility.csprojResolveAssemblyReference.cache

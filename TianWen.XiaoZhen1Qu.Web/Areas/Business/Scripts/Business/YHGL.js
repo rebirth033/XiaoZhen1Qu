@@ -1,4 +1,8 @@
 ﻿$(document).ready(function () {
+    
+});
+
+function AutoLogin() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/YHGL/AutoLogin",
@@ -18,4 +22,4 @@
             _masker.CloseMasker(false, errorThrown);
         }
     });
-});
+}
