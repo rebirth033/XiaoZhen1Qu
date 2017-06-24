@@ -1,8 +1,10 @@
 ﻿var count = 60;
 
 $(document).ready(function () {
-    $("#YHM").bind("blur", YHMCheck);
-    $("#TXYZM").bind("blur", TXYZMCheck);
+    //$("#YHM").bind("blur", YHMCheck);
+    //$("#TXYZM").bind("blur", TXYZMCheck);
+    $("#imgTXYZM").bind("click", QHTXYZM);
+    $("#TXYZM").bind("focus", TXYZMTip);
     $("#btnHQYZM").bind("click", GetCheckCode);
     $("#btnFirst").bind("click", QRZH);
     $("#btnSecond").bind("click", YZZH);
@@ -297,4 +299,14 @@ function GetNumber() {
         $("#btnHQYZM").removeAttr("disabled");
         count = 60;
     }
+}
+
+function TXYZMTip() {
+    $("#TXYZM").css("border-color", "#999");
+    $("#TXYZMInfo").css("color", "#999");
+    $("#TXYZMInfo").html('验证码看不清？<span onclick="QHTXYZM()" style="cursor:pointer;text-decoration:none;color:#5bc0de">换一下？</span>');
+}
+
+function QHTXYZM() {
+    $("#imgTXYZM")[0].src = getRootPath() + '/Areas/Business/Aspx/png.aspx?'+Math.random();
 }
