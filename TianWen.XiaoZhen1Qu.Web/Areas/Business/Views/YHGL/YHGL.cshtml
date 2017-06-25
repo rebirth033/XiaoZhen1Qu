@@ -15,7 +15,7 @@
     <div id="divHead" style="background-color: #5bc0de; background-image: url('../../Css/images/logo3_small.png'); width: 100%; height: 80px; vertical-align: middle;">
         <div style="float:left; width:145px; margin-left:133px;">
             <img style="width:145px;text-align:center;color:white;font-size:25px;float:left" src="@Url.Content("~/Areas/Business/Css/images/logo.png")" />
-            <span style="width:145px;text-align:center;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;color:white;font-size:17px;float:left">Infotownlet.com</span>
+            <span style="width:145px;text-align:center;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;color:white;font-size:17px;float:left;cursor:default;">infotownlet.com</span>
         </div>
         <ul style="width:450px;height:80px;display:block; float:left;margin-left:100px; margin-top:20px; vertical-align:middle">
             <li class="liHead">个人中心</li>
@@ -23,8 +23,35 @@
             <li class="liHead">我的资金</li>
         </ul>
     </div>
-    <div id="divContent" style="width:100%; height:561px">
-        <div style="height"></div>
+    <div id="divSplit" style="width:100%; height:30px">
+
+    </div>
+    <div id="divContent" style="width:100%; height:531px">
+        <div id="divLeftMenu" style="height:100%; float:left; width:184px; background-color:#fafafa; margin-left:130px; text-align:center">
+            <ul style="display:block; padding:20px 0 0 20px">
+                <li class="liLeftMenu">
+                    <span class="spanleftfirst" id="spanQRZH">个人中心</span>
+                    <em class="emstep" id="emQRZH"></em>
+                </li>
+                <li class="liLeftMenu"><span class="spanleftsecond" id="spanWDFB">我的发布</span></li>
+                <li class="liLeftMenu"><span class="spanleftsecond" id="spanWDSC">我的收藏</span></li>
+                <li class="liLeftMenu"><span class="spanleftsecond" id="spanWDQZ">我的求职</span></li>
+                <li class="liLeftMenu"><span class="spanleftsecond" id="spanWDZP">我的招聘</span></li>
+                <li class="liLeftMenu"><span class="spanleftsecond" id="spanWDZP">我的交易</span></li>
+                <li class="liLeftMenu"><span class="spanleftsecond" id="spanWDZP">我的订购</span></li>
+                <li class="liLeftMenu"><span class="spanleftsecond" id="spanWDZP">客户服务</span></li>
+                <li class="liLeftMenu"><span class="spanleftsecond" id="spanWDZP">帮助中心</span></li>
+            </ul>
+        </div>
+        <div id="divRightContent" style="height:100%;width:900px;float:left; margin-left: 10px;">
+            <ul id="myTab" class="nav nav-tabs" style="width: 100%">
+                <li class="active"><a href="#username" data-toggle="tab">最新信息</a></li>
+                <li class="liRightHead"><a href="#cellphone" data-toggle="tab">显示中的信息</a></li>
+                <li class="liRightHead"><a href="#cellphone" data-toggle="tab">审核中的信息</a></li>
+                <li class="liRightHead"><a href="#cellphone" data-toggle="tab">已删除的信息</a></li>
+                <li class="liRightHead"><a href="#cellphone" data-toggle="tab">未显示信息</a></li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>

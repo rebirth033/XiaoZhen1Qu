@@ -155,6 +155,7 @@
     </Compile>
     <Compile Include="Areas\Business\BusinessAreaRegistration.cs" />
     <Compile Include="Areas\Business\Common\BaseController.cs" />
+    <Compile Include="Areas\Business\Controllers\WDFBController.cs" />
     <Compile Include="Areas\Business\Controllers\YHDLXXController.cs" />
     <Compile Include="Areas\Business\Controllers\YHGLController.cs" />
     <Compile Include="Areas\Business\Controllers\YHJBXXController.cs" />
@@ -185,6 +186,7 @@
     <Content Include="Areas\Business\Views\YHDLXX\YHDLXX.cshtml" />
     <Content Include="Areas\Business\Views\YHGL\YHGL.cshtml" />
     <Content Include="Areas\Business\Views\ZHMM\ZHMM.cshtml" />
+    <Content Include="Areas\Business\Views\WDFB\WDFB.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
