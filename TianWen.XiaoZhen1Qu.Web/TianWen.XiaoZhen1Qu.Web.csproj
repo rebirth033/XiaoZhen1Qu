@@ -111,6 +111,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Business\Aspx\png.aspx" />
+    <Content Include="Areas\Business\Css\images\logo.png" />
     <Content Include="Areas\Business\Css\images\no.png" />
     <Content Include="Areas\Business\Css\images\one-blue.png" />
     <Content Include="Areas\Business\Css\images\three-blue.png" />
