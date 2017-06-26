@@ -1,5 +1,6 @@
 ﻿$(document).ready(function () {
-    
+    ToWDFB();
+    $("#spanWDFB").bind("click", ToWDFB);
 });
 
 function AutoLogin() {
@@ -22,4 +23,8 @@ function AutoLogin() {
             _masker.CloseMasker(false, errorThrown);
         }
     });
+}
+
+function ToWDFB() {
+    $("#iframeright").attr("src", getRootPath() + "/Business/WDFB/WDFB");
 }
