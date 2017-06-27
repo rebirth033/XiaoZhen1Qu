@@ -129,6 +129,7 @@
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\js\bootstrap.min.js" />
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\js\npm.js" />
     <Content Include="Areas\Business\Scripts\Business\COMMON.js" />
+    <Content Include="Areas\Business\Scripts\Business\LBXZ.js" />
     <Content Include="Areas\Business\Scripts\Business\PageJson.js" />
     <Content Include="Areas\Business\Scripts\Business\WDFB.js" />
     <Content Include="Areas\Business\Scripts\Business\YHDLXX.js" />

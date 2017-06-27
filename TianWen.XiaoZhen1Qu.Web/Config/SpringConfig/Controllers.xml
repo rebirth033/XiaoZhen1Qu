@@ -29,9 +29,9 @@
     </property>-->
   </object>
   <object id="LBXZController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.LBXZController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
-    <!--<property name="YHJBXXBLL">
-      <ref object="YHJBXXBLL"/>
-    </property>-->
+    <property name="LBXXBLL">
+      <ref object="LBXXBLL"/>
+    </property>
   </object>
 </objects>
 
