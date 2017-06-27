@@ -19,7 +19,7 @@ function LoadDL() {
                 for (var i = 0; i < xml.list.length; i++) {
                     if(i % 6 === 0 || i === 0)
                         trhtml = "<tr>";
-                    trhtml += "<td class=\"DL\" onclick=\"LoadXL('" + xml.list[i].CODEID + "')\">" + xml.list[i].CODENAME + "</td>";
+                    trhtml += "<td class=\"DL\" onclick=\"LoadXL('" + xml.list[i].CODEID + "','" + xml.list[i].CODENAME + "')\">" + xml.list[i].CODENAME + "</td>";
                     if ((i + 1) % 6 === 0 || (i + 1) === xml.list.length) {
                         trhtml += "</tr>";
                         DLhtml += trhtml;
@@ -34,7 +34,7 @@ function LoadDL() {
     });
 }
 
-function LoadXL(CODEID) {
+function LoadXL(CODEID, CODENAME) {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/LBXZ/LoadXL",
@@ -46,17 +46,27 @@ function LoadXL(CODEID) {
         success: function (xml) {
             if (xml.Result === 1) {
                 var XLhtml = "", trhtml = "";
-                for (var i = 0; i < xml.list.length; i++) {
-                    if (i % 6 === 0 || i === 0)
+                if (CODENAME === "二手物品") {
+                    for (var i = 0; i < xml.list.length; i++) {
                         trhtml = "<tr>";
-                    trhtml += "<td class=\"DL\" onclick=\"LoadXL('" + xml.list[i].CODEVALUE + "')\">" + xml.list[i].CODENAME + "</td>";
-                    if ((i + 1) % 6 === 0 || (i+1) === xml.list.length) {
+                        trhtml += "<td class=\"DLFirst\" onclick=\"LoadXL('" + xml.list[i].CODEVALUE + "')\">" + xml.list[i].CODENAME + "</td><td></td><td></td><td></td><td></td><td></td>";
                         trhtml += "</tr>";
                         XLhtml += trhtml;
+                    }
+                } else {
+                    for (var i = 0; i < xml.list.length; i++) {
+                        if (i % 6 === 0 || i === 0)
+                            trhtml = "<tr>";
+                        trhtml += "<td class=\"DL\" onclick=\"LoadXL('" + xml.list[i].CODEVALUE + "')\">" + xml.list[i].CODENAME + "</td>";
+                        if ((i + 1) % 6 === 0 || (i + 1) === xml.list.length) {
+                            trhtml += "</tr>";
+                            XLhtml += trhtml;
+                        }
                     }
                 }
                 $("#tableXL").html(XLhtml);
                 $("#divXL").css("display", "block");
+                $("#divXLText").html("选择" + CODENAME + "小类");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

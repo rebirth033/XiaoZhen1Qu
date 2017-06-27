@@ -127,7 +127,7 @@ li {
 }
 
 .divstep {
-    width: 200px;
+    width: 300px;
     text-align: center;
     height: 30px;
     float: left;
@@ -142,7 +142,7 @@ li {
 }
 
 .emstep {
-    width: 200px;
+    width: 300px;
     height: 2px;
     float: left;
     background: #cccccc;
@@ -154,7 +154,7 @@ li {
     line-height: 40px;
     color: #595757;
     font-weight: bolder;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .spanleftsecond {
@@ -162,7 +162,7 @@ li {
     margin-bottom: 5px;
     line-height: 40px;
     color: #595757;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .liHead {
@@ -181,22 +181,48 @@ li {
 }
 
 .liRightHead {
-    width:120px;
+    width: 120px;
+}
+
+.DLFirst {
+    cursor: pointer;
+    font-size: 14px;
+    width: 150px;
+    font-weight: bold;
+}
+
+.DLFirst:hover {
+    color: #5bc0de;
+    /*text-decoration: underline;*/
+    background-color: #fafafa;
 }
 
 .DL {
     cursor: pointer;
-    
+    font-size: 14px;
+    width: 150px;
 }
+
 .DL:hover {
-    color:#5bc0de;
-    text-decoration: underline;
+    color: #5bc0de;
+    /*text-decoration: underline;*/
+    background-color: #fafafa;
 }
 
 .divLB {
-     width: 600px;
-     text-align: center; 
-     padding-top: 2px; 
-     font-size: 15px; 
-     margin-left: 10px;
+    width: 900px;
+    text-align: center;
+    padding-top: 2px;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.DLText {
+    background-color: #5bc0de;
+    font-size: 14px;
+    padding-top: 3px;
+    color: white;
+    float: left;
+    height: 28px;
+    width: 180px;
 }

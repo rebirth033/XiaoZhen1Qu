@@ -13,3 +13,39 @@ NHibernate.MappingException: Could not compile the mapping document: (XmlDocumen
    在 NHibernate.Cfg.XmlHbmBinding.MappingRootBinder.Bind(HbmMapping mappingSchema)
    在 NHibernate.Cfg.Configuration.AddDeserializedMapping(HbmMapping mappingDocument, String documentFileName)
    --- 内部异常堆栈跟踪的结尾 ---
+2017-06-27 19:25:32,700 [28] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-01722: 无效数字
+
+
+2017-06-27 19:25:32,747 [28] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-01722: 无效数字
+
+
+2017-06-27 19:58:00,205 [50] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-01722: 无效数字
+
+
+2017-06-27 19:58:00,205 [50] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-01722: 无效数字
+
+
+2017-06-27 19:58:01,344 [16] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-01722: 无效数字
+
+
+2017-06-27 19:58:01,344 [16] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-01722: 无效数字
+
+
+2017-06-27 19:58:03,665 [16] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-01722: 无效数字
+
+
+2017-06-27 19:58:03,665 [16] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-01722: 无效数字
+
+
+2017-06-27 19:58:09,583 [46] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-01722: 无效数字
+
+
+2017-06-27 19:58:09,583 [46] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-01722: 无效数字
+
+
+2017-06-27 19:58:10,144 [16] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-01722: 无效数字
+
+
+2017-06-27 19:58:10,144 [16] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-01722: 无效数字
+
+
