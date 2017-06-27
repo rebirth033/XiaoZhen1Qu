@@ -16,65 +16,58 @@
         <table class="table" style="width: 600px;">
             <tr>
                 <td class="headtd">
-                    <div style="width: 432px;">
-                        <div class="divstep" id="divQRZH">
-                            <span class="spanstep" id="spanQRZH">选择大类</span>
-                            <em class="emstep" id="emQRZH"></em>
+                    <div style="width: 600px;">
+                        <div class="divstep" id="divXZDL">
+                            <span class="spanstep" id="spanXZDL">选择大类</span>
+                            <em class="emstep" id="emXZDL"></em>
                         </div>
-                        <div class="divstep" id="divYZZH">
-                            <span class="spanstep" id="spanYZZH">选择小类</span>
-                            <em class="emstep" id="emYZZH"></em>
+                        <div class="divstep" id="divXZXL">
+                            <span class="spanstep" id="spanXZXL">选择小类</span>
+                            <em class="emstep" id="emXZXL"></em>
                         </div>
-                        <div class="divstep" id="divCZMM">
-                            <span class="spanstep" id="spanCZMM">发布信息</span>
-                            <em class="emstep" id="emCZMM"></em>
+                        <div class="divstep" id="divFBXX">
+                            <span class="spanstep" id="spanFBXX">发布信息</span>
+                            <em class="emstep" id="emFBXX"></em>
                         </div>
                     </div>
                 </td>
             </tr>
         </table>
     </div>
-    <div id="myTabContent" class="tab-content">
-        <div id="divFirst" style="display: block">
-            <table id="tableDL" class="table" style="width: 600px;">
-                
-            </table>
-        </div>
-        <div id="divSecond" style="display: none">
-            <table class="table" style="width: 600px;">
-                <tr>
-                    <td>
-                        <input type="text" id="SJ" class="form-control input_text" style="width: 266px;" placeholder="请输入手机号">
-                        <input type="button" class="btn btn-info" id="btnHQYZM" value="获取验证码" />
-                    </td>
-                    <td class="Info" id="SJInfo" style="width: 50%"></td>
-                </tr>
-                <tr>
-                    <td><input type="text" class="form-control input_text" id="YZM" placeholder="请输入验证码"></td>
-                    <td class="Info" id="YZMInfo" style="width: 50%"></td>
-                </tr>
-                <tr>
-                    <td><input type="button" class="btn btn-info input_text" id="btnSecond" value="下一步" /></td>
-                </tr>
-            </table>
-        </div>
-        <div id="divThird" style="display: none">
-            <table class="table" style="width: 600px;">
-                <tr>
-                    <td>
-                        <input type="password" id="MM" class="form-control input_text" placeholder="新密码">
-                    </td>
-                    <td class="Info" id="MMInfo" style="width: 50%"></td>
-                </tr>
-                <tr>
-                    <td><input type="password" id="QRMM" class="form-control input_text" placeholder="确认新密码"></td>
-                    <td class="Info" id="QRMMInfo" style="width: 50%"></td>
-                </tr>
-                <tr>
-                    <td><input type="button" class="btn btn-info input_text" id="btnThird" value="确定" /></td>
-                </tr>
-            </table>
-        </div>
+<div id="myTabContent" class="tab-content">
+    <div id="divDL" class="divLB" style="display: block;">
+        <div style="background-color: #5bc0de; color: white; float: left; height: 28px; width: 180px; ">选择大类</div>
+        <img style="width: 20px; height: 28px; float: left;" src="@Url.Content("~/Areas/Business/Css/images/righttip.png")" />
     </div>
+    <div id="divFirst" style="display: block; width: 600px;">
+        <table id="tableDL" class="table" style="width: 600px;">
+        </table>
+    </div>
+    <div id="divXL" class="divLB" style="display: none;">
+        <div style="background-color: #5bc0de; color: white; float: left; height: 28px; width: 180px; ">选择小类</div>
+        <img style="width: 20px; height: 28px; float: left;" src="@Url.Content("~/Areas/Business/Css/images/righttip.png")" />
+    </div>
+    <div id="divSecond" style="display: block; width: 600px;">
+        <table id="tableXL" class="table" style="width: 600px;">
+        </table>
+    </div>
+    <div id="divThird" style="display: none">
+        <table class="table" style="width: 600px;">
+            <tr>
+                <td>
+                    <input type="password" id="MM" class="form-control input_text" placeholder="新密码">
+                </td>
+                <td class="Info" id="MMInfo" style="width: 50%"></td>
+            </tr>
+            <tr>
+                <td><input type="password" id="QRMM" class="form-control input_text" placeholder="确认新密码"></td>
+                <td class="Info" id="QRMMInfo" style="width: 50%"></td>
+            </tr>
+            <tr>
+                <td><input type="button" class="btn btn-info input_text" id="btnThird" value="确定"/></td>
+            </tr>
+        </table>
+    </div>
+</div>
 </body>
 </html>

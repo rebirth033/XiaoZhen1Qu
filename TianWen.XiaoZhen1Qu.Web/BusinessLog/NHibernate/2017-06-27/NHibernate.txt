@@ -1,0 +1,15 @@
+2017-06-27 10:49:23,508 [27] ERROR NHibernate.Util.ReflectHelper [(null)] - Could not load type Integer.
+
+System.TypeLoadException: Could not load type Integer. Possible cause: no assembly name specified.
+   在 NHibernate.Util.ReflectHelper.TypeFromAssembly(AssemblyQualifiedTypeName name, Boolean throwOnError)
+2017-06-27 10:49:23,570 [27] ERROR NHibernate.Cfg.Configuration [(null)] - Could not compile the mapping document: (XmlDocument)
+
+NHibernate.MappingException: Could not compile the mapping document: (XmlDocument) ---> NHibernate.MappingException: Could not determine type for: Integer, for columns: NHibernate.Mapping.Column(CODEID)
+   在 NHibernate.Mapping.SimpleValue.get_Type()
+   在 NHibernate.Cfg.XmlHbmBinding.ClassIdBinder.CreateIdentifierProperty(HbmId idSchema, PersistentClass rootClass, SimpleValue id)
+   在 NHibernate.Cfg.XmlHbmBinding.ClassIdBinder.BindId(HbmId idSchema, PersistentClass rootClass, Table table)
+   在 NHibernate.Cfg.XmlHbmBinding.RootClassBinder.Bind(HbmClass classSchema, IDictionary`2 inheritedMetas)
+   在 NHibernate.Cfg.XmlHbmBinding.MappingRootBinder.AddEntitiesMappings(HbmMapping mappingSchema, IDictionary`2 inheritedMetas)
+   在 NHibernate.Cfg.XmlHbmBinding.MappingRootBinder.Bind(HbmMapping mappingSchema)
+   在 NHibernate.Cfg.Configuration.AddDeserializedMapping(HbmMapping mappingDocument, String documentFileName)
+   --- 内部异常堆栈跟踪的结尾 ---

@@ -102,15 +102,6 @@ li {
     font-size: 14px;
 }
 
-/*.active {
-    color: #555;
-    cursor: default;
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-bottom-color: transparent;
-    border-radius: 4px 4px 0 0;
-}*/
-
 .spanZDDD {
     vertical-align: top;
     margin-left: 1px;
@@ -136,7 +127,7 @@ li {
 }
 
 .divstep {
-    width: 130px;
+    width: 200px;
     text-align: center;
     height: 30px;
     float: left;
@@ -148,6 +139,13 @@ li {
     margin-bottom: 5px;
     line-height: 40px;
     color: #cccccc;
+}
+
+.emstep {
+    width: 200px;
+    height: 2px;
+    float: left;
+    background: #cccccc;
 }
 
 .spanleftfirst {
@@ -167,13 +165,6 @@ li {
     cursor:pointer;
 }
 
-.emstep {
-    width: 130px;
-    height: 2px;
-    float: left;
-    background: #cccccc;
-}
-
 .liHead {
     width: 130px;
     color: white;
@@ -191,4 +182,21 @@ li {
 
 .liRightHead {
     width:120px;
+}
+
+.DL {
+    cursor: pointer;
+    
+}
+.DL:hover {
+    color:#5bc0de;
+    text-decoration: underline;
+}
+
+.divLB {
+     width: 600px;
+     text-align: center; 
+     padding-top: 2px; 
+     font-size: 15px; 
+     margin-left: 10px;
 }

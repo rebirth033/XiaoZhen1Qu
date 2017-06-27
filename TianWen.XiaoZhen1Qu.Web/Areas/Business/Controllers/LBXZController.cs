@@ -17,5 +17,11 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         {
             return Json(LBXXBLL.LoadDL());
         }
+
+        public JsonResult LoadXL()
+        {
+            string CODEID = Request["CODEID"];
+            return Json(LBXXBLL.LoadXL(CODEID));
+        }
     }
 }

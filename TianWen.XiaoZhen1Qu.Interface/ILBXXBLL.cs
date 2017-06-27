@@ -10,5 +10,6 @@ namespace TianWen.XiaoZhen1Qu.Interface
         IDAO DAO { get; set; }
 
         object LoadDL();
+        object LoadXL(string CODEID);
     }
 }
