@@ -314,25 +314,19 @@ insert into codes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (18, '大类', '农林牧副渔', null, 18, null);
 
 insert into codes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (19, '小类', '整租房', null, 1, 1);
+values (19, '小类', '房屋', null, 1, 287);
 
 insert into codes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (20, '小类', '日租房/短租房', null, 3, 1);
+values (20, '小类', '商铺', null, 2, 287);
 
 insert into codes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (21, '小类', '二手房出售', null, 5, 1);
+values (22, '小类', '房屋', null, 1, 288);
 
 insert into codes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (22, '小类', '新房出售', null, 6, 1);
+values (23, '小类', '商铺', null, 2, 288);
 
 insert into codes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (23, '小类', '商铺租售', null, 7, 1);
-
-insert into codes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (24, '小类', '写字楼', null, 8, 1);
-
-insert into codes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (25, '小类', '厂房/仓库/土地', null, 10, 1);
+values (24, '小类', '写字楼', null, 3, 288);
 
 insert into codes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (26, '小类', '手机数码', null, 1, 2);
@@ -422,13 +416,10 @@ insert into codes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (171, '小类', '生活服务加盟', null, 13, 9);
 
 insert into codes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (183, '小类', '合租房', null, 2, 1);
+values (183, '小类', '写字楼', null, 3, 287);
 
 insert into codes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (184, '小类', '求租房', null, 4, 1);
-
-insert into codes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (185, '小类', '车位', null, 9, 1);
+values (185, '小类', '车位', null, 4, 287);
 
 insert into codes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (186, '小类', '二手手机', null, 1, 26);
@@ -723,5 +714,26 @@ values (157, '小类', '食品批发', null, 22, 13);
 
 insert into codes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (158, '小类', '其他商务服务', null, 23, 13);
+
+insert into codes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (287, '小类', '出租/求租', null, 1, 1);
+
+insert into codes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (288, '小类', '出售/求购', null, 2, 1);
+
+insert into codes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (289, '小类', '厂房', null, 5, 287);
+
+insert into codes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (290, '小类', '车位', null, 4, 288);
+
+insert into codes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (291, '小类', '厂房', null, 5, 288);
+
+insert into codes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (292, '小类', '仓库', null, 6, 288);
+
+insert into codes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (293, '小类', '仓库', null, 6, 287);
 
 prompt Done.
