@@ -185,28 +185,22 @@ li {
 }
 
 .DLFirst {
-    cursor: pointer;
     font-size: 14px;
     width: 150px;
     font-weight: bold;
-}
-
-.DLFirst:hover {
-    color: #5bc0de;
-    /*text-decoration: underline;*/
-    background-color: #fafafa;
 }
 
 .DL {
     cursor: pointer;
     font-size: 14px;
     width: 150px;
+    height: 60px;
+    vertical-align: middle
 }
 
 .DL:hover {
     color: #5bc0de;
-    /*text-decoration: underline;*/
-    background-color: #fafafa;
+    /*background-color: #fafafa;*/
 }
 
 .divLB {

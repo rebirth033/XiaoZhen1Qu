@@ -1,10 +1,10 @@
 ﻿$(document).ready(function () {
-    $("#spanXZDL").css("color", "#5bc0de");
-    $("#emXZDL").css("background", "#5bc0de");
     LoadDL();
 });
 
 function LoadDL() {
+    $("#spanXZDL").css("color", "#5bc0de");
+    $("#emXZDL").css("background", "#5bc0de");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/LBXZ/LoadDL",
@@ -35,6 +35,10 @@ function LoadDL() {
 }
 
 function LoadXL(CODEID, CODENAME) {
+    $("#spanXZDL").css("color", "#cccccc");
+    $("#emXZDL").css("background", "#cccccc");
+    $("#spanXZXL").css("color", "#5bc0de");
+    $("#emXZXL").css("background", "#5bc0de");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/LBXZ/LoadXL",
@@ -49,7 +53,10 @@ function LoadXL(CODEID, CODENAME) {
                 if (CODENAME === "二手物品") {
                     for (var i = 0; i < xml.list.length; i++) {
                         trhtml = "<tr>";
-                        trhtml += "<td class=\"DLFirst\" onclick=\"LoadXL('" + xml.list[i].CODEVALUE + "')\">" + xml.list[i].CODENAME + "</td><td></td><td></td><td></td><td></td><td></td>";
+                        trhtml += "<td class=\"DLFirst\">" + xml.list[i].CODENAME + "</td>";
+                        for (var j = 0; j < xml.list[i]._CODES.length; j++) {
+                            trhtml += "<td class=\"DL\">" + xml.list[i]._CODES[j].CODENAME + "</td>";
+                        }
                         trhtml += "</tr>";
                         XLhtml += trhtml;
                     }
@@ -59,6 +66,8 @@ function LoadXL(CODEID, CODENAME) {
                             trhtml = "<tr>";
                         trhtml += "<td class=\"DL\" onclick=\"LoadXL('" + xml.list[i].CODEVALUE + "')\">" + xml.list[i].CODENAME + "</td>";
                         if ((i + 1) % 6 === 0 || (i + 1) === xml.list.length) {
+                            for (var j = 0; j < (6 - i - 1) ; j++)
+                                trhtml += "<td class=\"DL\"></td>";
                             trhtml += "</tr>";
                             XLhtml += trhtml;
                         }
@@ -66,6 +75,7 @@ function LoadXL(CODEID, CODENAME) {
                 }
                 $("#tableXL").html(XLhtml);
                 $("#divXL").css("display", "block");
+                $("#spanXZDL").html(CODENAME);
                 $("#divXLText").html("选择" + CODENAME + "小类");
             }
         },

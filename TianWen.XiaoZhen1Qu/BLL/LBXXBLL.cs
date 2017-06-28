@@ -26,8 +26,25 @@ namespace TianWen.XiaoZhen1Qu.BLL
         {
             try
             {
-                IList<CODES> list = DAO.Repository.GetObjectList<CODES>(String.Format("FROM CODES WHERE TYPENAME='小类' AND PARENTID='{0}' ORDER BY CODEORDER", CODEID));
-                return new { Result = EnResultType.Success, list = list };
+                IList<CODES> result = new List<CODES>();
+                IList<CODES> list = DAO.Repository.GetObjectList<CODES>(String.Format("FROM CODES WHERE TYPENAME='小类' ORDER BY CODEORDER"));
+
+                foreach (var obj in list)
+                {
+                    if (obj.PARENTID.ToString() == CODEID)
+                    {
+                        foreach (var childobj in list)
+                        {
+                            if (childobj.PARENTID == obj.CODEID)
+                            {
+                                obj._CODES.Add(childobj);
+                            }
+                        }
+                        result.Add(obj);
+                    }
+                }
+
+                return new { Result = EnResultType.Success, list = result };
             }
             catch (Exception ex)
             {
@@ -37,5 +54,5 @@ namespace TianWen.XiaoZhen1Qu.BLL
         }
     }
 
-   
+
 }

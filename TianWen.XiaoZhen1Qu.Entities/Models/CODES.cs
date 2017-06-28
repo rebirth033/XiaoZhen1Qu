@@ -1,9 +1,15 @@
-﻿using NHibernate.Mapping.Attributes;
+﻿using System.Collections.Generic;
+using NHibernate.Mapping.Attributes;
 
 namespace TianWen.XiaoZhen1Qu.Entities.Models
 {
     public class CODES
     {
+        public CODES()
+        {
+            _CODES = new List<CODES>();
+        }
+
         /// <summary>
         /// 用户ID
         /// </summary>
@@ -39,5 +45,8 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// </summary>
         [Property]
         public virtual int PARENTID { get; set; }
+
+
+        public virtual IList<CODES> _CODES { get; set; }
     }
 }
