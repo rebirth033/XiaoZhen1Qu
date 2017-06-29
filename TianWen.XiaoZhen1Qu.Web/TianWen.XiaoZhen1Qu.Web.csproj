@@ -111,9 +111,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Business\Aspx\png.aspx" />
+    <Content Include="Areas\Business\Css\FWCZ.css" />
     <Content Include="Areas\Business\Css\images\arrow_down.png" />
     <Content Include="Areas\Business\Css\images\arrow_up.png" />
     <Content Include="Areas\Business\Css\images\cellphone.png" />
+    <Content Include="Areas\Business\Css\images\icons.png" />
     <Content Include="Areas\Business\Css\images\logo.png" />
     <Content Include="Areas\Business\Css\images\no.png" />
     <Content Include="Areas\Business\Css\images\one-blue.png" />
@@ -123,6 +125,7 @@
     <Content Include="Areas\Business\Css\images\two-gray.png" />
     <Content Include="Areas\Business\Css\images\yes.png" />
     <Content Include="Areas\Business\Css\images\righttip.png" />
+    <Content Include="Areas\Business\Css\LBXZ.css" />
     <Content Include="Areas\Business\Css\PageCommon.css" />
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\css\bootstrap-theme.css" />
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\css\bootstrap-theme.min.css" />

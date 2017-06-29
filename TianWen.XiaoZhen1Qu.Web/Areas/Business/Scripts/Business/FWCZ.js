@@ -1,5 +1,7 @@
 ﻿$(document).ready(function () {
     $("#spanCXLB").bind("click", CXLB);
+    $("#imgZTCZ").bind("click", ZTCZSelect);
+    $("#imgDJCZ").bind("click", DJCZSelect);
     LoadTXXX();
 });
 
@@ -28,4 +30,14 @@ function LoadTXXX() {
 
 function CXLB() {
     window.location.href = getRootPath() + "/Business/LBXZ/LBXZ";
+}
+
+function ZTCZSelect() {
+    $("#imgZTCZ").css("background-position", "-67px -57px");
+    $("#imgDJCZ").css("background-position", "-67px 0px");
+}
+
+function DJCZSelect() {
+    $("#imgDJCZ").css("background-position", "-67px -57px");
+    $("#imgZTCZ").css("background-position", "-67px 0px");
 }
