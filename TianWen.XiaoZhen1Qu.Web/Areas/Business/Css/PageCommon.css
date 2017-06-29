@@ -184,13 +184,13 @@ li {
     width: 120px;
 }
 
-.DLFirst {
+.LBFirst {
     font-size: 14px;
     width: 150px;
     font-weight: bold;
 }
 
-.DL {
+.LB {
     cursor: pointer;
     font-size: 14px;
     width: 150px;
@@ -198,7 +198,7 @@ li {
     vertical-align: middle
 }
 
-.DL:hover {
+.LB:hover {
     color: #5bc0de;
     /*background-color: #fafafa;*/
 }

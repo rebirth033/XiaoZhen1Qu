@@ -12,7 +12,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
         {
             try
             {
-                IList<CODES> list = DAO.Repository.GetObjectList<CODES>(String.Format("FROM CODES WHERE TYPENAME='大类' ORDER BY CODEORDER"));
+                IList<XXLB> list = DAO.Repository.GetObjectList<XXLB>(String.Format("FROM XXLB WHERE LBLX='大类' ORDER BY LBORDER"));
                 return new { Result = EnResultType.Success, list = list };
             }
             catch (Exception ex)
@@ -22,22 +22,22 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
-        public object LoadXL(string CODEID)
+        public object LoadXL(string LBID)
         {
             try
             {
-                IList<CODES> result = new List<CODES>();
-                IList<CODES> list = DAO.Repository.GetObjectList<CODES>(String.Format("FROM CODES WHERE TYPENAME='小类' ORDER BY CODEORDER"));
+                IList<XXLB> result = new List<XXLB>();
+                IList<XXLB> list = DAO.Repository.GetObjectList<XXLB>(String.Format("FROM XXLB WHERE LBLX='小类' ORDER BY LBORDER"));
 
                 foreach (var obj in list)
                 {
-                    if (obj.PARENTID.ToString() == CODEID)
+                    if (obj.PARENTID.ToString() == LBID)
                     {
                         foreach (var childobj in list)
                         {
-                            if (childobj.PARENTID == obj.CODEID)
+                            if (childobj.PARENTID == obj.LBID)
                             {
-                                obj._CODES.Add(childobj);
+                                obj.XXLBS.Add(childobj);
                             }
                         }
                         result.Add(obj);
@@ -45,6 +45,21 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
 
                 return new { Result = EnResultType.Success, list = result };
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("error", ex.Message);
+                return new { Result = EnResultType.Failed, Message = "加载失败" };
+            }
+        }
+
+        public object LoadLBByID(string LBID)
+        {
+            try
+            {
+                IList<XXLB> list = DAO.Repository.GetObjectList<XXLB>(String.Format("FROM XXLB WHERE LBID='{0}'", LBID));
+
+                return new { Result = EnResultType.Success, list = list };
             }
             catch (Exception ex)
             {

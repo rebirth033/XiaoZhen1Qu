@@ -33,5 +33,10 @@
       <ref object="LBXXBLL"/>
     </property>
   </object>
+  <object id="FWCZController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.FWCZController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="FWCZJBXXBLL">
+      <ref object="FWCZJBXXBLL"/>
+    </property>
+  </object>
 </objects>
 

@@ -5,14 +5,8 @@ using System.Text;
 
 namespace TianWen.XiaoZhen1Qu.Interface
 {
-    public interface ILBXXBLL
+    public interface IFWCZJBXXBLL
     {
         IDAO DAO { get; set; }
-
-        object LoadDL();
-
-        object LoadXL(string CODEID);
-
-        object LoadLBByID(string LBID);
     }
 }

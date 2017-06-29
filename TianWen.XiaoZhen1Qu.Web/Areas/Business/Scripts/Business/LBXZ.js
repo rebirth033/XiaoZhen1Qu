@@ -19,7 +19,7 @@ function LoadDL() {
                 for (var i = 0; i < xml.list.length; i++) {
                     if (i % 6 === 0 || i === 0)
                         trhtml = "<tr>";
-                    trhtml += "<td class=\"DL\" onclick=\"LoadXL('" + xml.list[i].CODEID + "','" + xml.list[i].CODENAME + "')\">" + xml.list[i].CODENAME + "</td>";
+                    trhtml += "<td class=\"LB\" onclick=\"LoadXL('" + xml.list[i].LBID + "','" + xml.list[i].LBNAME + "')\">" + xml.list[i].LBNAME + "</td>";
                     if ((i + 1) % 6 === 0 || (i + 1) === xml.list.length) {
                         trhtml += "</tr>";
                         DLhtml += trhtml;
@@ -34,7 +34,7 @@ function LoadDL() {
     });
 }
 
-function LoadXL(CODEID, CODENAME) {
+function LoadXL(LBID, LBNAME) {
     $("#spanXZDL").css("color", "#cccccc");
     $("#emXZDL").css("background", "#cccccc");
     $("#spanXZXL").css("color", "#5bc0de");
@@ -45,24 +45,24 @@ function LoadXL(CODEID, CODENAME) {
         dataType: "json",
         data:
         {
-            CODEID: CODEID
+            LBID: LBID
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var XLhtml = "", trhtml = "";
-                if (CODENAME === "二手物品" || CODENAME === "房产" || CODENAME === "车辆" || CODENAME === "生活服务") {
+                if (LBNAME === "二手物品" || LBNAME === "房产" || LBNAME === "车辆" || LBNAME === "生活服务") {
                     for (var i = 0; i < xml.list.length; i++) {
-                        if (xml.list[i]._CODES.length > 5)
-                            trhtml = "<tr><td class=\"DLFirst\">" + xml.list[i].CODENAME + "</td>";
+                        if (xml.list[i].XXLBS.length > 5)
+                            trhtml = "<tr><td class=\"LBFirst\">" + xml.list[i].LBNAME + "</td>";
                         else
-                            trhtml = "<tr class=\"trXL\"><td class=\"DLFirst\">" + xml.list[i].CODENAME + "</td>";
-                        for (var j = 0; j < xml.list[i]._CODES.length; j++) {
+                            trhtml = "<tr class=\"trXL\"><td class=\"LBFirst\">" + xml.list[i].LBNAME + "</td>";
+                        for (var j = 0; j < xml.list[i].XXLBS.length; j++) {
                             if (j === 5) {
-                                trhtml = "<tr class=\"trXL\"><td class=\"DLFirst\"></td>";
+                                trhtml = "<tr class=\"trXL\"><td class=\"LBFirst\"></td>";
                                 continue;
                             }
-                            trhtml += "<td class=\"DL\">" + xml.list[i]._CODES[j].CODENAME + "</td>";
-                            if (j === 4 && j !== (xml.list[i]._CODES.length - 1)) {
+                            trhtml += "<td class=\"LB\" onclick=\"FBXX('" + xml.list[i].XXLBS[j].FBYM + "','" + xml.list[i].XXLBS[j].LBID + "')\">" + xml.list[i].XXLBS[j].LBNAME + "</td>";
+                            if (j === 4 && j !== (xml.list[i].XXLBS.length - 1)) {
                                 trhtml += "</tr>";
                                 XLhtml += trhtml;
                             }
@@ -75,10 +75,10 @@ function LoadXL(CODEID, CODENAME) {
                     for (var i = 0; i < xml.list.length; i++) {
                         if (i % 6 === 0 || i === 0)
                             trhtml = "<tr>";
-                        trhtml += "<td class=\"DL\" onclick=\"LoadXL('" + xml.list[i].CODEVALUE + "')\">" + xml.list[i].CODENAME + "</td>";
+                        trhtml += "<td class=\"LB\" onclick=\"FBXX('" + xml.list[i].FBYM + "','" + xml.list[i].LBID + "')\">" + xml.list[i].LBNAME + "</td>";
                         if ((i + 1) % 6 === 0 || (i + 1) === xml.list.length) {
                             for (var j = 0; j < (6 - i - 1) ; j++)
-                                trhtml += "<td class=\"DL\"></td>";
+                                trhtml += "<td class=\"LB\"></td>";
                             trhtml += "</tr>";
                             XLhtml += trhtml;
                         }
@@ -86,12 +86,16 @@ function LoadXL(CODEID, CODENAME) {
                 }
                 $("#tableXL").html(XLhtml);
                 $("#divXL").css("display", "block");
-                $("#spanXZDL").html(CODENAME);
-                $("#divXLText").html("选择" + CODENAME + "小类");
+                $("#spanXZDL").html("1." + LBNAME);
+                $("#divXLText").html("2.选择" + LBNAME + "小类");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
             _masker.CloseMasker(false, errorThrown);
         }
     });
+}
+
+function FBXX(FBYM, LBID) {
+    window.location.href = getRootPath() + "/Business/" + FBYM + "/" + FBYM + "?CLICKID=" + LBID;
 }

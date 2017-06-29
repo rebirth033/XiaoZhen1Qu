@@ -133,6 +133,7 @@
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\js\bootstrap.min.js" />
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\js\npm.js" />
     <Content Include="Areas\Business\Scripts\Business\COMMON.js" />
+    <Content Include="Areas\Business\Scripts\Business\FWCZ.js" />
     <Content Include="Areas\Business\Scripts\Business\LBXZ.js" />
     <Content Include="Areas\Business\Scripts\Business\PageJson.js" />
     <Content Include="Areas\Business\Scripts\Business\WDFB.js" />
@@ -161,6 +162,7 @@
     </Compile>
     <Compile Include="Areas\Business\BusinessAreaRegistration.cs" />
     <Compile Include="Areas\Business\Common\BaseController.cs" />
+    <Compile Include="Areas\Business\Controllers\FWCZController.cs" />
     <Compile Include="Areas\Business\Controllers\LBXZController.cs" />
     <Compile Include="Areas\Business\Controllers\WDFBController.cs" />
     <Compile Include="Areas\Business\Controllers\YHDLXXController.cs" />
@@ -195,6 +197,7 @@
     <Content Include="Areas\Business\Views\ZHMM\ZHMM.cshtml" />
     <Content Include="Areas\Business\Views\WDFB\WDFB.cshtml" />
     <Content Include="Areas\Business\Views\LBXZ\LBXZ.cshtml" />
+    <Content Include="Areas\Business\Views\FWCZ\FWCZ.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
