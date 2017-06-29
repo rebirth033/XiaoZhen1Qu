@@ -220,3 +220,7 @@ li {
     height: 28px;
     width: 180px;
 }
+
+.trXL {
+    border-bottom: 1px #f1f1f1 solid;
+}
