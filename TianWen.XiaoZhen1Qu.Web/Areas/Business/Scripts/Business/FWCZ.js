@@ -83,7 +83,7 @@ function LoadZXQK() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                var html = "<ul class='uldropdown'><li class='lidropdown'>请选择朝向</li>";
+                var html = "<ul class='uldropdown'><li class='lidropdown'>请选择装修情况</li>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='lidropdown'>" + xml.list[i].CODENAME + "</li>";
                 }
@@ -109,7 +109,7 @@ function LoadZZLX() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'><li class='lidropdown'>请选择朝向</li>";
+                var html = "<ul class='uldropdown' style='overflow-y: scroll;'><li class='lidropdown'>请选择住宅类型</li>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='lidropdown'>" + xml.list[i].CODENAME + "</li>";
                 }
