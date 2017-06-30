@@ -37,6 +37,9 @@
     <property name="FWCZJBXXBLL">
       <ref object="FWCZJBXXBLL"/>
     </property>
+    <property name="BaseBLL">
+      <ref object="BaseBLL"/>
+    </property>
   </object>
 </objects>
 
