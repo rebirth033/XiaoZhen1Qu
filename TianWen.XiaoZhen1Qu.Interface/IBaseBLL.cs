@@ -8,6 +8,6 @@ namespace TianWen.XiaoZhen1Qu.Interface
 {
     public interface IBaseBLL
     {
-
+        object LoadCODES(string TYPENAME);
     }
 }

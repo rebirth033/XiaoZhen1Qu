@@ -2,8 +2,19 @@
     $("#spanCXLB").bind("click", CXLB);
     $("#imgZTCZ").bind("click", ZTCZSelect);
     $("#imgDJCZ").bind("click", DJCZSelect);
+    $("#divUploadOut").bind("mouseover", GetUploadCss);
+    $("#divUploadOut").bind("mouseleave", LeaveUploadCss);
+    BindHover();
     LoadTXXX();
-});
+    LoadFWCX();
+    LoadZXQK();
+    LoadZZLX();
+    LoadYFFS();
+    LoadFWPZ();
+    LoadFWLD();
+    LoadCZYQ();
+    LoadBHFY();
+}); 
 
 function LoadTXXX() {
     $("#spanTXXX").css("color", "#5bc0de");
@@ -40,4 +51,298 @@ function ZTCZSelect() {
 function DJCZSelect() {
     $("#imgDJCZ").css("background-position", "-67px -57px");
     $("#imgZTCZ").css("background-position", "-67px 0px");
+}
+
+function LoadFWCX() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/FWCZ/LoadCODES",
+        dataType: "json",
+        data:
+        {
+            TYPENAME: "朝向"
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";//<li class='lidropdown'>请选择朝向</li>
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='lidropdown' onclick='SelectFWCX(this)'>" + xml.list[i].CODENAME + "</li>";
+                }
+                html += "</ul>";
+                $("#divFWCX").html(html);
+                $("#divFWCX").css("display", "none");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+            _masker.CloseMasker(false, errorThrown);
+        }
+    });
+}
+
+function LoadZXQK() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/FWCZ/LoadCODES",
+        dataType: "json",
+        data:
+        {
+            TYPENAME: "装修情况"
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='uldropdown' style='height: 171px;'>";//<li class='lidropdown'>请选择装修情况</li>
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='lidropdown' onclick='SelectZXQK(this)'>" + xml.list[i].CODENAME + "</li>";
+                }
+                html += "</ul>";
+                $("#divZXQK").html(html);
+                $("#divZXQK").css("display", "none");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+            _masker.CloseMasker(false, errorThrown);
+        }
+    });
+}
+
+function LoadZZLX() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/FWCZ/LoadCODES",
+        dataType: "json",
+        data:
+        {
+            TYPENAME: "住宅类型"
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";//<li class='lidropdown'>请选择住宅类型</li>
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='lidropdown' onclick='SelectZZLX(this)'>" + xml.list[i].CODENAME + "</li>";
+                }
+                html += "</ul>";
+                $("#divZZLX").html(html);
+                $("#divZZLX").css("display", "none");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+            _masker.CloseMasker(false, errorThrown);
+        }
+    });
+}
+
+function LoadYFFS() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/FWCZ/LoadCODES",
+        dataType: "json",
+        data:
+        {
+            TYPENAME: "押付方式"
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";//<li class='lidropdown'>请选择住宅类型</li>
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='lidropdown' onclick='SelectYFFS(this)'>" + xml.list[i].CODENAME + "</li>";
+                }
+                html += "</ul>";
+                $("#divYFFS").html(html);
+                $("#divYFFS").css("display", "none");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+            _masker.CloseMasker(false, errorThrown);
+        }
+    });
+}
+
+function LoadFWPZ() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/FWCZ/LoadCODES",
+        dataType: "json",
+        data:
+        {
+            TYPENAME: "房屋配置"
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='ulFWPZ'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='liFWPZ' onclick='SelectFWPZ(this)'>" + xml.list[i].CODENAME + "</li>";
+                    if (i === 5 || i === 11) {
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
+                    }
+                }
+                html += "</ul>";
+                $("#divFWPZText").html(html);
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+            _masker.CloseMasker(false, errorThrown);
+        }
+    });
+}
+
+function LoadFWLD() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/FWCZ/LoadCODES",
+        dataType: "json",
+        data:
+        {
+            TYPENAME: "房屋亮点"
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='ulFWPZ'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='liFWPZ' onclick='SelectFWPZ(this)'>" + xml.list[i].CODENAME + "</li>";
+                    if (i === 5 || i === 11) {
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
+                    }
+                }
+                html += "</ul>";
+                $("#divFWLDText").html(html);
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+            _masker.CloseMasker(false, errorThrown);
+        }
+    });
+}
+
+function LoadCZYQ() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/FWCZ/LoadCODES",
+        dataType: "json",
+        data:
+        {
+            TYPENAME: "出租要求"
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='ulFWPZ'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='liFWPZ' onclick='SelectFWPZ(this)'>" + xml.list[i].CODENAME + "</li>";
+                    if (i === 5 || i === 11) {
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
+                    }
+                }
+                html += "</ul>";
+                $("#divCZYQText").html(html);
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+            _masker.CloseMasker(false, errorThrown);
+        }
+    });
+}
+
+function LoadBHFY() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/FWCZ/LoadCODES",
+        dataType: "json",
+        data:
+        {
+            TYPENAME: "包含费用"
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='ulFWPZ'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='liFWPZ' onclick='SelectFWPZ(this)'>" + xml.list[i].CODENAME + "</li>";
+                    if (i === 5 || i === 11) {
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
+                    }
+                }
+                html += "</ul>";
+                $("#divBHFYText").html(html);
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+            _masker.CloseMasker(false, errorThrown);
+        }
+    });
+}
+
+function BindHover() {
+    $("#divFWCXText").hover(function () {
+        $("#divFWCX").css("display", "block");
+    }, function () {
+        $("#divFWCX").css("display", "none");
+    });
+    $("#divFWCX").hover(function () {
+        $("#divFWCX").css("display", "block");
+    }, function () {
+        $("#divFWCX").css("display", "none");
+    });
+    $("#divZXQKText").hover(function () {
+        $("#divZXQK").css("display", "block");
+    }, function () {
+        $("#divZXQK").css("display", "none");
+    });
+    $("#divZXQK").hover(function () {
+        $("#divZXQK").css("display", "block");
+    }, function () {
+        $("#divZXQK").css("display", "none");
+    });
+    $("#divZZLXText").hover(function () {
+        $("#divZZLX").css("display", "block");
+    }, function () {
+        $("#divZZLX").css("display", "none");
+    });
+    $("#divZZLX").hover(function () {
+        $("#divZZLX").css("display", "block");
+    }, function () {
+        $("#divZZLX").css("display", "none");
+    });
+    $("#divYFFSText").hover(function () {
+        $("#divYFFS").css("display", "block");
+    }, function () {
+        $("#divYFFS").css("display", "none");
+    });
+    $("#divYFFS").hover(function () {
+        $("#divYFFS").css("display", "block");
+    }, function () {
+        $("#divYFFS").css("display", "none");
+    });
+}
+
+function SelectFWCX(obj) {
+    $("#spanFWCX").html(obj.innerHTML);
+    $("#divFWCX").css("display", "none");
+}
+
+function SelectZXQK(obj) {
+    $("#spanZXQK").html(obj.innerHTML);
+    $("#divZXQK").css("display", "none");
+}
+
+function SelectZZLX(obj) {
+    $("#spanZZLX").html(obj.innerHTML);
+    $("#divZZLX").css("display", "none");
+}
+
+function SelectYFFS(obj) {
+    $("#spanYFFS").html(obj.innerHTML);
+    $("#divYFFS").css("display", "none");
+}
+
+function SelectFWPZ(obj) {
+    if ($(obj).css("color") === "rgb(51, 51, 51)") 
+        $(obj).css("color", "#5bc0de");
+    else
+        $(obj).css("color", "#333333");
+}
+
+function GetUploadCss() {
+    $("#divUploadOut").css("border-color", "#5bc0de");
+}
+
+function LeaveUploadCss() {
+    $("#divUploadOut").css("border-color", "#cccccc");
 }

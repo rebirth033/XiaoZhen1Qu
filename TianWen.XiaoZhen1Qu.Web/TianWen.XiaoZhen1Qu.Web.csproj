@@ -123,6 +123,9 @@
     <Content Include="Areas\Business\Css\images\three-gray.png" />
     <Content Include="Areas\Business\Css\images\two-blue.png" />
     <Content Include="Areas\Business\Css\images\two-gray.png" />
+    <Content Include="Areas\Business\Css\images\upload.png" />
+    <Content Include="Areas\Business\Css\images\upload_small.png" />
+    <Content Include="Areas\Business\Css\images\upload_small2.png" />
     <Content Include="Areas\Business\Css\images\yes.png" />
     <Content Include="Areas\Business\Css\images\righttip.png" />
     <Content Include="Areas\Business\Css\LBXZ.css" />
