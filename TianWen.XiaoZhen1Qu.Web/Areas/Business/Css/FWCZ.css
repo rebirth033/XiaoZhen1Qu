@@ -1,12 +1,13 @@
 ﻿.divFWCZ {
     width: 900px;
-    text-align: center;
+    text-align: left;
     padding-top: 2px;
     font-size: 15px;
     margin-left: 10px;
     margin-bottom: 10px;
     height: 50px;
     position: relative;
+    display: block; 
 }
 
 .divLeft {
@@ -35,6 +36,14 @@
     /*background-position: -67px -57px;*/
     background-position: -67px -0px;
     cursor: pointer;
+}
+
+.spanFWQK {
+    display: inline-block;
+    width: 105px;
+    height: 30px;
+    text-align: center;
+    margin-top: 4px;
 }
 
 .spanFWLX {
@@ -91,7 +100,55 @@
     background: #FFFFFF;
 }
 
-.lidropdown:hover {
-    background: #ececec;
+    .lidropdown:hover {
+        background: #ececec;
+        color: #333333;
+    }
+
+.required {
+    color: #fd634f;
+    display: inline-block;
+    width: 20px;
+    height: 36px;
+    font-family: "宋体", "SimSun";
+}
+
+.liFWPZ {
+    display: inline-block;
+    width: 105px;
+    height: 30px;
+    text-align: left;
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+.ulFWPZ {
+    display: inline-block;
+    padding-left: 0;
+}
+
+.divSplit {
+    width: 900px;
+    text-align: center;
+    padding-top: 2px;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    height: 70px;
+    position: relative;
+}
+
+.spanSplit {
+    font-size: 18px;
+    margin-bottom: 5px;
+    line-height: 40px;
+    display: block;
     color: #333333;
+}
+
+.emSplit {
+    width: 900px;
+    height: 1px;
+    float: left;
+    background: #cccccc;
 }
