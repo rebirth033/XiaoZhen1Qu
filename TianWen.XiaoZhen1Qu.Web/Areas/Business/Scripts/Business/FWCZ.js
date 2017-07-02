@@ -15,7 +15,13 @@
     LoadFWLD();
     LoadCZYQ();
     LoadBHFY();
-}); 
+    LoadDefault();
+});
+
+function LoadDefault() {
+    $("#imgZTCZ").css("background-position", "-67px -57px");
+    $("#imgDJCZ").css("background-position", "-67px 0px");
+}
 
 function LoadTXXX() {
     $("#spanTXXX").css("color", "#5bc0de");
@@ -359,8 +365,10 @@ function Validate() {
 
 function FB() {
     if (Validate() === false) return;
-    var jsonObj = new JsonDB("divReg");
+    var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
+    alert(jsonObj.JsonToString(obj));
+    return;
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/YHJBXX/Register",
