@@ -46,6 +46,23 @@
     margin-top: 4px;
 }
 
+.divFWQKArrow {
+    background-image: url(http://localhost/XiaoZhen1Qu/Areas/Business/Css/images/arrow_down.png); 
+    width: 16px; 
+    height: 16px; 
+    display: inline-block; 
+    vertical-align: middle;
+}
+
+.inputFWLX {
+     width: 80px; 
+     margin-top: 1px; 
+     border: none; 
+     height: 30px; 
+     text-align: center;
+     width: 100px;
+}
+
 .spanFWLX {
     border: 1px solid #cccccc;
     display: inline-block;
@@ -151,4 +168,10 @@
     height: 1px;
     float: left;
     background: #cccccc;
+}
+
+.inputLXRXX {
+     width: 594px; 
+     padding: 6px 12px;
+     color: #999999;
 }

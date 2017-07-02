@@ -4,6 +4,7 @@
     $("#imgDJCZ").bind("click", DJCZSelect);
     $("#divUploadOut").bind("mouseover", GetUploadCss);
     $("#divUploadOut").bind("mouseleave", LeaveUploadCss);
+    $("#btnFB").bind("click", FB);
     BindHover();
     LoadTXXX();
     LoadFWCX();
@@ -345,4 +346,48 @@ function GetUploadCss() {
 
 function LeaveUploadCss() {
     $("#divUploadOut").css("border-color", "#cccccc");
+}
+
+function Validate() {
+    //if (!YHMCheck()) return false;
+    //if (!MMCheck()) return false;
+    //if (!QRMMCheck()) return false;
+    //if (!SJCheck()) return false;
+    //if (!ValidateCheckCode()) return false;
+    return true;
+}
+
+function FB() {
+    if (Validate() === false) return;
+    var jsonObj = new JsonDB("divReg");
+    var obj = jsonObj.GetJsonObject();
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/YHJBXX/Register",
+        dataType: "json",
+        data:
+        {
+            Json: jsonObj.JsonToString(obj),
+            YZM: $("#YZM").val()
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                alert("注册成功");
+            } else {
+                if (xml.Type === 1) {
+                    $("#YZM").css("border-color", "#F2272D");
+                    $("#YZMInfo").css("color", "#F2272D");
+                    $("#YZMInfo").html(xml.Message);
+                }
+                if (xml.Type === 2) {
+                    $("#YHM").css("border-color", "#F2272D");
+                    $("#YHMInfo").css("color", "#F2272D");
+                    $("#YHMInfo").html(xml.Message);
+                }
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+            _masker.CloseMasker(false, errorThrown);
+        }
+    });
 }

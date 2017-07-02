@@ -57,7 +57,7 @@
                     <span class="spanFWCZ">小区名称</span>
                 </div>
                 <div class="divRight">
-                    <input class="spanFWLX" style="width: 594px; padding: 6px 12px; color: #999999" type="text" placeholder="请输入小区名称" />
+                    <input id="XZMC" column="XQMC" class="spanFWLX" style="width: 594px; padding: 6px 12px; color: #999999" type="text" placeholder="请输入小区名称" />
                 </div>
             </div>
             <div id="divFWLX" class="divFWCZ">
@@ -67,21 +67,21 @@
                 </div>
                 <div class="divRight">
                     <span class="spanFWLX">
-                        <input style="width: 80px; margin-top: 1px; border: none; height: 30px; text-align: center; width: 100px" type="text" />
-                        <span style="color: #999;">室</span>
+                        <input id="S" column="S" class="inputFWLX" type="text" />
+                        <span class="spanFontColor">室</span>
                     </span>
                     <span class="spanFWLX">
-                        <input style="width: 80px; margin-top: 1px; border: none; height: 30px; text-align: center; width: 100px" type="text" />
-                        <span style="color: #999;">厅</span>
+                        <input id="T" column="T" class="inputFWLX" type="text" />
+                        <span class="spanFontColor">厅</span>
                     </span>
                     <span class="spanFWLX">
-                        <input style="width: 80px; margin-top: 1px; border: none; height: 30px; text-align: center; width: 100px" type="text" />
-                        <span style="color: #999;">卫</span>
+                        <input id="W" column="W" class="inputFWLX" type="text" />
+                        <span class="spanFontColor">卫</span>
                     </span>
                     <span class="spanFWLX" style="width: 198px">
-                        <span style="color: #999; margin-left: 8px">共</span>
-                        <input style="width: 80px; margin-top: 1px; border: none; height: 30px; text-align: center; width: 100px" type="text" />
-                        <span style="color: #999;">平（㎡）</span>
+                        <span class="spanFontColor" style="margin-left: 8px">共</span>
+                        <input id="PFM" column="PFM" class="inputFWLX" type="text" />
+                        <span class="spanFontColor">平（㎡）</span>
                     </span>
                 </div>
             </div>
@@ -94,7 +94,7 @@
                     <div class="spanFWLXOut">
                         <div id="divFWCXText" class="spanFWLXIn">
                             <span id="spanFWCX" class="spanFWQK">朝向</span>
-                            <div style="background-image: url(http://localhost/XiaoZhen1Qu/Areas/Business/Css/images/arrow_down.png); width: 16px; height: 16px; display: inline-block; vertical-align: middle;"></div>
+                            <div class="divFWQKArrow"></div>
                         </div>
                         <div id="divFWCX" class="divdropdown">
                         </div>
@@ -102,7 +102,7 @@
                     <div class="spanFWLXOut">
                         <div id="divZXQKText" class="spanFWLXIn">
                             <span id="spanZXQK" class="spanFWQK">装修情况</span>
-                            <div style="background-image: url(http://localhost/XiaoZhen1Qu/Areas/Business/Css/images/arrow_down.png); width: 16px; height: 16px; display: inline-block; vertical-align: middle;"></div>
+                            <div class="divFWQKArrow"></div>
                         </div>
                         <div id="divZXQK" class="divdropdown">
                         </div>
@@ -110,7 +110,7 @@
                     <div class="spanFWLXOut">
                         <div id="divZZLXText" class="spanFWLXIn">
                             <span id="spanZZLX" class="spanFWQK">住宅类型</span>
-                            <div style="background-image: url(http://localhost/XiaoZhen1Qu/Areas/Business/Css/images/arrow_down.png); width: 16px; height: 16px; display: inline-block; vertical-align: middle;"></div>
+                            <div class="divFWQKArrow"></div>
                         </div>
                         <div id="divZZLX" class="divdropdown">
                         </div>
@@ -122,16 +122,16 @@
                     <span class="required">*</span>
                     <span class="spanFWCZ">楼层分布</span>
                 </div>
-                <div class="divRight" style="position: relative">
+                <div class="divRight">
                     <span class="spanFWLX" style="width: 160px;">
-                        <span style="color: #999; margin-left: 8px">第</span>
-                        <input style="width: 80px; margin-top: 1px; border: none; height: 30px; text-align: center; width: 100px" type="text" />
-                        <span style="color: #999;">层</span>
+                        <span class="spanFontColor" style=" margin-left: 8px">第</span>
+                        <input class="inputLCFB" type="text" />
+                        <span class="spanFontColor">层</span>
                     </span>
                     <span class="spanFWLX" style="width: 160px;">
-                        <span style="color: #999; margin-left: 8px">共</span>
-                        <input style="width: 80px; margin-top: 1px; border: none; height: 30px; text-align: center; width: 100px" type="text" />
-                        <span style="color: #999;">层</span>
+                        <span class="spanFontColor" style="margin-left: 8px">共</span>
+                        <input class="inputLCFB" type="text" />
+                        <span class="spanFontColor">层</span>
                     </span>
                 </div>
             </div>
@@ -140,15 +140,15 @@
                     <span class="required">*</span>
                     <span class="spanFWCZ">房屋租金</span>
                 </div>
-                <div class="divRight" style="position: relative">
-                    <span class="spanFWLX" style="width: 160px;">
-                        <input style="width: 80px; margin-top: 1px; border: none; height: 30px; text-align: center; width: 100px" type="text" />
-                        <span style="color: #999;">元/月</span>
+                <div class="divRight">
+                    <span class="spanFWLX" style="width: 160px; display: inline-block;">
+                        <input class="inputLCFB" type="text" />
+                        <span class="spanFontColor">元/月</span>
                     </span>
-                    <div class="spanFWLXOut">
-                        <div id="divYFFSText" class="spanFWLXIn">
-                            <span id="spanYFFS" style="display: inline-block; width: 105px; height: 30px; text-align: center; margin-top: 4px;">押付方式</span>
-                            <div style="background-image: url(http://localhost/XiaoZhen1Qu/Areas/Business/Css/images/arrow_down.png); width: 16px; height: 16px; display: inline-block; vertical-align: middle;"></div>
+                    <div class="spanFWLXOut" style="border: 1px solid #cccccc; border-radius: 4px;">
+                        <div id="divYFFSText" class="spanFWLXIn" style="border: none; margin-top: 6px;">
+                            <span id="spanYFFS" class="spanFWQK" style="margin-top: 0">押付方式</span>
+                            <div class="divFWQKArrow"></div>
                         </div>
                         <div id="divYFFS" class="divdropdown">
                         </div>
@@ -238,13 +238,13 @@
                 <span class="spanSplit">联系人信息</span>
                 <em class="emSplit"></em>
             </div>
-            <div id="divLXDH" class="divFWCZ">
+            <div id="divLXR" class="divFWCZ">
                 <div class="divLeft" style="margin-left: 114px;">
                     <span class="required">*</span>
                     <span id="spanLXDH">联系人</span>
                 </div>
                 <div class="divRight">
-                    <input class="spanFWLX" style="width: 594px; padding: 6px 12px; color: #999999" type="text" placeholder="请输入联系人" />
+                    <input class="spanFWLX inputLXRXX" type="text" placeholder="请输入联系人" />
                 </div>
             </div>
             <div id="divLXDH" class="divFWCZ">
@@ -253,7 +253,7 @@
                     <span id="spanLXDH">联系电话</span>
                 </div>
                 <div class="divRight">
-                    <input class="spanFWLX" style="width: 594px; padding: 6px 12px; color: #999999" type="text" placeholder="请输入联系电话" />
+                    <input class="spanFWLX inputLXRXX" type="text" placeholder="请输入联系电话" />
                 </div>
             </div>
             <div id="divQQ" class="divFWCZ">
@@ -262,7 +262,7 @@
                     <span id="spanQQ">QQ</span>
                 </div>
                 <div class="divRight">
-                    <input class="spanFWLX" style="width: 594px; padding: 6px 12px; color: #999999" type="text" placeholder="请输入QQ" />
+                    <input class="spanFWLX inputLXRXX" type="text" placeholder="请输入QQ" />
                 </div>
             </div>
             <div id="divFB" class="divSplit" style="display: block; text-align: center; margin-top: 40px;">

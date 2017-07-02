@@ -184,3 +184,14 @@ li {
     width: 120px;
 }
 
+.spanFontColor {
+    color: #999999;
+}
+
+.inputLCFB {
+    margin-top: 1px; 
+    border: none; 
+    height: 30px; 
+    text-align: center;
+    width: 100px;
+}
