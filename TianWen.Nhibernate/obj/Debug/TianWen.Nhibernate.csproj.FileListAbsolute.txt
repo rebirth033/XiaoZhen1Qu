@@ -32,4 +32,3 @@ F:\福建天问信息技术责任有限公司\小镇1区源代码\TianWen.Nhiber
 F:\福建天问信息技术责任有限公司\小镇1区源代码\TianWen.Nhibernate\bin\Debug\Iesi.Collections.dll
 F:\福建天问信息技术责任有限公司\小镇1区源代码\TianWen.Nhibernate\obj\Debug\TianWen.Nhibernate.dll
 F:\福建天问信息技术责任有限公司\小镇1区源代码\TianWen.Nhibernate\obj\Debug\TianWen.Nhibernate.pdb
-F:\福建天问信息技术责任有限公司\小镇1区源代码\TianWen.Nhibernate\obj\Debug\TianWen.Nhibernate.csprojResolveAssemblyReference.cache

@@ -54,4 +54,3 @@ F:\福建天问信息技术责任有限公司\小镇1区源代码\TianWen.Busine
 F:\福建天问信息技术责任有限公司\小镇1区源代码\TianWen.Business.Framework\bin\Debug\Common.Logging.dll
 F:\福建天问信息技术责任有限公司\小镇1区源代码\TianWen.Business.Framework\obj\Debug\TianWen.Business.Framework.dll
 F:\福建天问信息技术责任有限公司\小镇1区源代码\TianWen.Business.Framework\obj\Debug\TianWen.Business.Framework.pdb
-F:\福建天问信息技术责任有限公司\小镇1区源代码\TianWen.Business.Framework\obj\Debug\TianWen.Business.Framework.csprojResolveAssemblyReference.cache

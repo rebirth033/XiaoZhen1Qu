@@ -340,7 +340,7 @@ function SelectYFFS(obj) {
 }
 
 function SelectFWPZ(obj) {
-    if ($(obj).css("color") === "rgb(51, 51, 51)") 
+    if ($(obj).css("color") === "rgb(51, 51, 51)")
         $(obj).css("color", "#5bc0de");
     else
         $(obj).css("color", "#333333");
@@ -367,16 +367,25 @@ function FB() {
     if (Validate() === false) return;
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
-    alert(jsonObj.JsonToString(obj));
-    return;
+    //手动添加如下字段
+    obj = jsonObj.AddJson(obj, "FWCX", "'" + $("#spanFWCX").html() + "'");
+    obj = jsonObj.AddJson(obj, "ZXQK", "'" + $("#spanZXQK").html() + "'");
+    obj = jsonObj.AddJson(obj, "ZZLX", "'" + $("#spanZZLX").html() + "'");
+    obj = jsonObj.AddJson(obj, "BHFY", "'" + GetDX("BHFY") + "'");
+    obj = jsonObj.AddJson(obj, "FWPZ", "'" + GetDX("FWPZ") + "'");
+    obj = jsonObj.AddJson(obj, "FWLD", "'" + GetDX("FWLD") + "'");
+    obj = jsonObj.AddJson(obj, "CZYQ", "'" + GetDX("CZYQ") + "'");
+    obj = jsonObj.AddJson(obj, "CZFS", "'" + GetCZFS() + "'");
+    obj = jsonObj.AddJson(obj, "ZZLX", "'" + $("#spanZZLX").html() + "'");
+    obj = jsonObj.AddJson(obj, "ZZLX", "'" + $("#spanZZLX").html() + "'");
+
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/YHJBXX/Register",
+        url: getRootPath() + "/Business/FWCZ/FB",
         dataType: "json",
         data:
         {
-            Json: jsonObj.JsonToString(obj),
-            YZM: $("#YZM").val()
+            Json: jsonObj.JsonToString(obj)
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -398,4 +407,20 @@ function FB() {
             _masker.CloseMasker(false, errorThrown);
         }
     });
+}
+
+function GetDX(type) {
+    var result = "";
+    $("#div" + type + "Text").find("li").each(function (i) {
+        if ($(this).css("color") !== "rgb(51, 51, 51)")
+            result += i + ",";
+    });
+    return result.substr(0, result.length - 1);
+}
+
+function GetCZFS() {
+    if ($("#imgZTCZ").css("background-position") === "-67px -57px")
+        return "0";
+    else
+        return "1";
 }

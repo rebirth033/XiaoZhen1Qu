@@ -50,11 +50,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Maps\CODES_Map.cs" />
+    <Compile Include="Maps\FWCZJBXX_Map.cs" />
     <Compile Include="Maps\XXLB_Map.cs" />
     <Compile Include="Maps\YHJBXX_Map.cs" />
     <Compile Include="Maps\ZDDLXX_Map.cs" />
     <Compile Include="Models\CODES.cs" />
     <Compile Include="Models\EncryptionHelper.cs" />
+    <Compile Include="Models\FWCZJBXX.cs" />
     <Compile Include="Models\PublicType.cs" />
     <Compile Include="Models\XXLB.cs" />
     <Compile Include="Models\YHJBXX.cs" />
