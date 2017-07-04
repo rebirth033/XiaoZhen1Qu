@@ -606,6 +606,15 @@ Array.prototype.baoremove = function (dx) {
     if (isNaN(dx) || dx > this.length) { return false; }
     this.splice(dx, 1);
 }
+
+Array.prototype.contains = function (needle) {
+    for (i in this) {
+        if (this[i] == needle) return true;
+    }
+    return false;
+}
+
+
 //  b = ['1','2','3','4','5']; 
 //  alert("elements: "+b+"\nLength: "+b.length); 
 //  b.baoremove(1); //删除下标为1的元素 

@@ -17,7 +17,26 @@ namespace TianWen.XiaoZhen1Qu.BLL
 
             if (o1 != null && int.Parse(o1.ToString()) > 0)
             {
-                return new { Result = EnResultType.Success, Message = "已存在!", Value = new { FWCZID = fwczjbxx.FWCZID } };
+                using (ITransaction transaction = DAO.BeginTransaction())
+                {
+                    try
+                    {
+                        DAO.Update(fwczjbxx);
+                        transaction.Commit();
+                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { FWCZID = fwczjbxx.FWCZID } };
+                    }
+                    catch (Exception ex)
+                    {
+                        transaction.Rollback();
+                        LoggerManager.Error("YHJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                        return new
+                        {
+                            Result = EnResultType.Failed,
+                            Message = "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!",
+                            Type = 3
+                        };
+                    }
+                }
             }
             else
             {
@@ -26,9 +45,8 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     try
                     {
                         DAO.Save(fwczjbxx);
-                        DAO.Repository.Session.Flush();
                         transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "保存成功!", Value = new { FWCZID = fwczjbxx.FWCZID } };
+                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { FWCZID = fwczjbxx.FWCZID } };
                     }
                     catch (Exception ex)
                     {
@@ -44,6 +62,41 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
             }
         }
-        
+
+
+        public object LoadFWCZXX(string FWCZID)
+        {
+            try
+            {
+                FWCZJBXX yhjbxx = GetObjByID(FWCZID);
+                if (yhjbxx != null)
+                {
+
+                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { FWCZXX = yhjbxx } };
+                }
+                else
+                {
+                    return new { Result = EnResultType.Failed, Message = "不存在" };
+                }
+
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("FWCZJBXXBLL", "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                return new
+                {
+                    Result = EnResultType.Failed,
+                    Message = "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!"
+                };
+            }
+        }
+        public FWCZJBXX GetObjByID(string FWCZID)
+        {
+            IList<FWCZJBXX> list = DAO.Repository.GetObjectList<FWCZJBXX>(String.Format("FROM FWCZJBXX WHERE FWCZID='{0}'", FWCZID));
+            if (list.Count > 0)
+                return list[0];
+            else
+                return null;
+        }
     }
 }

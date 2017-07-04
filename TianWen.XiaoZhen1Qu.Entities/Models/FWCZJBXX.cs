@@ -64,17 +64,17 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// 朝向
         /// </summary>
         [Property]
-        public virtual int CX { get; set; }
+        public virtual string CX { get; set; }
         /// <summary>
         /// 装修情况
         /// </summary>
         [Property]
-        public virtual int ZXQK { get; set; }
+        public virtual string ZXQK { get; set; }
         /// <summary>
         /// 住宅类型
         /// </summary>
         [Property]
-        public virtual int ZZLX { get; set; }
+        public virtual string ZZLX { get; set; }
         /// <summary>
         /// 层
         /// </summary>
@@ -94,7 +94,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// 押付方式
         /// </summary>
         [Property]
-        public virtual int YFFS { get; set; }
+        public virtual string YFFS { get; set; }
         /// <summary>
         /// 租金已包含费用
         /// </summary>

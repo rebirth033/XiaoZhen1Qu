@@ -33,5 +33,12 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             object result = FWCZJBXXBLL.SaveFWCZJBXX(yhjbxx);
             return Json(result);
         }
+
+        public JsonResult LoadFWCZXX()
+        {
+            string FWCZID = Request["FWCZID"];
+            object result = FWCZJBXXBLL.LoadFWCZXX(FWCZID);
+            return Json(result);
+        }
     }
 }

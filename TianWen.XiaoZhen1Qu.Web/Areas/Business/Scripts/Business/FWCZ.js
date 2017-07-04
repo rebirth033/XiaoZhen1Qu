@@ -16,6 +16,7 @@
     LoadCZYQ();
     LoadBHFY();
     LoadDefault();
+    LoadFWCZXX();
 });
 
 function LoadDefault() {
@@ -368,16 +369,18 @@ function FB() {
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
-    obj = jsonObj.AddJson(obj, "FWCX", "'" + $("#spanFWCX").html() + "'");
+    obj = jsonObj.AddJson(obj, "CX", "'" + $("#spanFWCX").html() + "'");
     obj = jsonObj.AddJson(obj, "ZXQK", "'" + $("#spanZXQK").html() + "'");
     obj = jsonObj.AddJson(obj, "ZZLX", "'" + $("#spanZZLX").html() + "'");
-    obj = jsonObj.AddJson(obj, "BHFY", "'" + GetDX("BHFY") + "'");
+    obj = jsonObj.AddJson(obj, "YFFS", "'" + $("#spanYFFS").html() + "'");
+    obj = jsonObj.AddJson(obj, "ZJYBHFY", "'" + GetDX("BHFY") + "'");
     obj = jsonObj.AddJson(obj, "FWPZ", "'" + GetDX("FWPZ") + "'");
     obj = jsonObj.AddJson(obj, "FWLD", "'" + GetDX("FWLD") + "'");
     obj = jsonObj.AddJson(obj, "CZYQ", "'" + GetDX("CZYQ") + "'");
-    obj = jsonObj.AddJson(obj, "CZFS", "'" + GetCZFS() + "'");
-    obj = jsonObj.AddJson(obj, "ZZLX", "'" + $("#spanZZLX").html() + "'");
-    obj = jsonObj.AddJson(obj, "ZZLX", "'" + $("#spanZZLX").html() + "'");
+    //obj = jsonObj.AddJson(obj, "CZFS", "'" + GetCZFS() + "'");
+    //obj = jsonObj.AddJson(obj, "ZZLX", "'" + $("#spanZZLX").html() + "'");
+    //obj = jsonObj.AddJson(obj, "ZZLX", "'" + $("#spanZZLX").html() + "'");
+    obj = jsonObj.AddJson(obj, "FWCZID", "'" + getUrlParam("FWCZID") + "'");
 
     $.ajax({
         type: "POST",
@@ -389,7 +392,7 @@ function FB() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                alert("注册成功");
+                alert("发布成功");
             } else {
                 if (xml.Type === 1) {
                     $("#YZM").css("border-color", "#F2272D");
@@ -418,9 +421,46 @@ function GetDX(type) {
     return result.substr(0, result.length - 1);
 }
 
+function SetDX(type, value) {
+    var result = "";
+    var values = value.split(',');
+    $("#div" + type + "Text").find("li").each(function (i) {
+        if (values.contains(i))
+            $(this).css("color", "#5bc0de");
+    });
+    return result.substr(0, result.length - 1);
+}
+
 function GetCZFS() {
     if ($("#imgZTCZ").css("background-position") === "-67px -57px")
         return "0";
     else
         return "1";
+}
+
+function LoadFWCZXX() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/FWCZ/LoadFWCZXX",
+        dataType: "json",
+        data:
+        {
+            FWCZID: getUrlParam("FWCZID")
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var jsonObj = new JsonDB("myTabContent");
+                jsonObj.DisplayFromJson("myTabContent", xml.Value.FWCZXX);
+                $("#FWCZID").val(xml.Value.FWCZXX.FWCZID);
+                SetDX("BHFY", xml.Value.FWCZXX.ZJYBHFY);
+                SetDX("FWPZ", xml.Value.FWCZXX.FWPZ);
+                SetDX("FWLD", xml.Value.FWCZXX.FWLD);
+                SetDX("CZYQ", xml.Value.FWCZXX.CZYQ);
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+            _masker.CloseMasker(false, errorThrown);
+        }
+    });
+    
 }

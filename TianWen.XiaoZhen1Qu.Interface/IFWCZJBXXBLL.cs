@@ -11,5 +11,7 @@ namespace TianWen.XiaoZhen1Qu.Interface
         IDAO DAO { get; set; }
 
         object SaveFWCZJBXX(FWCZJBXX fwczjbxx);
+
+        object LoadFWCZXX(string FWCZID);
     }
 }
