@@ -4,17 +4,79 @@
     $("#imgDJCZ").bind("click", DJCZSelect);
     $("#divUploadOut").bind("mouseover", GetUploadCss);
     $("#divUploadOut").bind("mouseleave", LeaveUploadCss);
+    $("#btnFB").bind("click", FB);
+    $(".inputLCFB").bind("focus", LCFBFocus);
+    $(".inputLCFB").bind("blur", LCFBBlur);
+    $(".inputFWLX").bind("focus", LCFBFocus);
+    $(".inputFWLX").bind("blur", LCFBBlur);
+    $("#FYMS").bind("focus", FYMSFocus);
+    $("#FYMS").bind("blur", FYMSBlur);
+    $("#KRZSJ" ).datepicker({ minDate: 0 });
+
     BindHover();
     LoadTXXX();
     LoadFWCX();
     LoadZXQK();
     LoadZZLX();
     LoadYFFS();
-    LoadFWPZ();
-    LoadFWLD();
-    LoadCZYQ();
     LoadBHFY();
-}); 
+    LoadDefault();
+    LoadFWCZXX();
+    FYMSSetDefault();
+});
+
+function FYMSFocus() {
+    $("#FYMS").css("color", "#333333");
+}
+
+function FYMSBlur() {
+    $("#FYMS").css("color", "#999999");
+}
+
+function FYMSSetDefault() {
+    var fyms = "1.房屋特征：\r\n\r\n2.周边配套：\r\n\r\n3.房东心态：";
+    $("#FYMS").html(fyms);
+}
+
+function LCFBFocus() {
+    if ($(this)[0].id === "C")
+        $("#spanC").css("border", "1px solid #5bc0de");
+    if ($(this)[0].id === "GJC")
+        $("#spanGJC").css("border", "1px solid #5bc0de");
+    if ($(this)[0].id === "ZJ")
+        $("#spanZJ").css("border", "1px solid #5bc0de");
+    if ($(this)[0].id === "S")
+        $("#spanS").css("border", "1px solid #5bc0de");
+    if ($(this)[0].id === "T")
+        $("#spanT").css("border", "1px solid #5bc0de");
+    if ($(this)[0].id === "W")
+        $("#spanW").css("border", "1px solid #5bc0de");
+    if ($(this)[0].id === "PFM")
+        $("#spanPFM").css("border", "1px solid #5bc0de");
+
+}
+
+function LCFBBlur() {
+    if ($(this)[0].id === "C")
+        $("#spanC").css("border", "1px solid #cccccc");
+    if ($(this)[0].id === "GJC")
+        $("#spanGJC").css("border", "1px solid #cccccc");
+    if ($(this)[0].id === "ZJ")
+        $("#spanZJ").css("border", "1px solid #cccccc");
+    if ($(this)[0].id === "S")
+        $("#spanS").css("border", "1px solid #cccccc");
+    if ($(this)[0].id === "T")
+        $("#spanT").css("border", "1px solid #cccccc");
+    if ($(this)[0].id === "W")
+        $("#spanW").css("border", "1px solid #cccccc");
+    if ($(this)[0].id === "PFM")
+        $("#spanPFM").css("border", "1px solid #cccccc");
+}
+
+function LoadDefault() {
+    $("#imgZTCZ").css("background-position", "-67px -57px");
+    $("#imgDJCZ").css("background-position", "-67px 0px");
+}
 
 function LoadTXXX() {
     $("#spanTXXX").css("color", "#5bc0de");
@@ -157,6 +219,35 @@ function LoadYFFS() {
     });
 }
 
+function LoadBHFY() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/FWCZ/LoadCODES",
+        dataType: "json",
+        data:
+        {
+            TYPENAME: "包含费用"
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='ulFWPZ'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='liFWPZ' onclick='SelectFWPZ(this)'>" + xml.list[i].CODENAME + "</li>";
+                    if (i === 5 || i === 11) {
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
+                    }
+                }
+                html += "</ul>";
+                $("#divBHFYText").html(html);
+            }
+            LoadFWPZ();
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+            _masker.CloseMasker(false, errorThrown);
+        }
+    });
+}
+
 function LoadFWPZ() {
     $.ajax({
         type: "POST",
@@ -178,6 +269,7 @@ function LoadFWPZ() {
                 html += "</ul>";
                 $("#divFWPZText").html(html);
             }
+            LoadFWLD();
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
             _masker.CloseMasker(false, errorThrown);
@@ -206,6 +298,7 @@ function LoadFWLD() {
                 html += "</ul>";
                 $("#divFWLDText").html(html);
             }
+            LoadCZYQ();
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
             _masker.CloseMasker(false, errorThrown);
@@ -234,6 +327,7 @@ function LoadCZYQ() {
                 html += "</ul>";
                 $("#divCZYQText").html(html);
             }
+            LoadFWCZXX();
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
             _masker.CloseMasker(false, errorThrown);
@@ -241,74 +335,74 @@ function LoadCZYQ() {
     });
 }
 
-function LoadBHFY() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/FWCZ/LoadCODES",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "包含费用"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='ulFWPZ'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liFWPZ' onclick='SelectFWPZ(this)'>" + xml.list[i].CODENAME + "</li>";
-                    if (i === 5 || i === 11) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
-                    }
-                }
-                html += "</ul>";
-                $("#divBHFYText").html(html);
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-            _masker.CloseMasker(false, errorThrown);
-        }
-    });
+function HoverStyle(name) {
+    $("#div" + name + "Text").css("border-top", "1px solid #5bc0de").css("border-right", "1px solid #5bc0de").css("border-left", "1px solid #5bc0de").css("border-bottom", "1px solid #5bc0de");
+    $("#div" + name).find("ul").css("border-left", "1px solid #5bc0de").css("border-right", "1px solid #5bc0de").css("border-bottom", "1px solid #5bc0de");
+    $("#span" + name).css("color", "#333333");
+}
+
+function LeaveStyle(name) {
+    $("#div" + name + "Text").css("border-top", "1px solid #cccccc").css("border-right", "1px solid #cccccc").css("border-left", "1px solid #cccccc").css("border-bottom", "1px solid #cccccc");
+    $("#div" + name).find("ul").css("border-left", "1px solid #cccccc").css("border-right", "1px solid #cccccc").css("border-bottom", "1px solid #cccccc");
+    $("#span" + name).css("color", "#999999");
 }
 
 function BindHover() {
     $("#divFWCXText").hover(function () {
         $("#divFWCX").css("display", "block");
+        HoverStyle("FWCX");
     }, function () {
         $("#divFWCX").css("display", "none");
+        LeaveStyle("FWCX");
     });
     $("#divFWCX").hover(function () {
         $("#divFWCX").css("display", "block");
+        HoverStyle("FWCX");
     }, function () {
         $("#divFWCX").css("display", "none");
+        LeaveStyle("FWCX");
     });
     $("#divZXQKText").hover(function () {
         $("#divZXQK").css("display", "block");
+        HoverStyle("ZXQK");
     }, function () {
         $("#divZXQK").css("display", "none");
+        LeaveStyle("ZXQK");
     });
     $("#divZXQK").hover(function () {
         $("#divZXQK").css("display", "block");
+        HoverStyle("ZXQK");
     }, function () {
         $("#divZXQK").css("display", "none");
+        LeaveStyle("ZXQK");
     });
     $("#divZZLXText").hover(function () {
         $("#divZZLX").css("display", "block");
+        HoverStyle("ZZLX");
     }, function () {
         $("#divZZLX").css("display", "none");
+        LeaveStyle("ZZLX");
     });
     $("#divZZLX").hover(function () {
         $("#divZZLX").css("display", "block");
+        HoverStyle("ZZLX");
     }, function () {
         $("#divZZLX").css("display", "none");
+        LeaveStyle("ZZLX");
     });
     $("#divYFFSText").hover(function () {
         $("#divYFFS").css("display", "block");
+        HoverStyle("YFFS");
     }, function () {
         $("#divYFFS").css("display", "none");
+        LeaveStyle("YFFS");
     });
     $("#divYFFS").hover(function () {
         $("#divYFFS").css("display", "block");
+        HoverStyle("YFFS");
     }, function () {
         $("#divYFFS").css("display", "none");
+        LeaveStyle("YFFS");
     });
 }
 
@@ -333,7 +427,7 @@ function SelectYFFS(obj) {
 }
 
 function SelectFWPZ(obj) {
-    if ($(obj).css("color") === "rgb(51, 51, 51)") 
+    if ($(obj).css("color") === "rgb(51, 51, 51)")
         $(obj).css("color", "#5bc0de");
     else
         $(obj).css("color", "#333333");
@@ -345,4 +439,136 @@ function GetUploadCss() {
 
 function LeaveUploadCss() {
     $("#divUploadOut").css("border-color", "#cccccc");
+}
+
+function Validate() {
+    //if (!YHMCheck()) return false;
+    //if (!MMCheck()) return false;
+    //if (!QRMMCheck()) return false;
+    //if (!SJCheck()) return false;
+    //if (!ValidateCheckCode()) return false;
+    return true;
+}
+
+function FB() {
+    if (Validate() === false) return;
+    var jsonObj = new JsonDB("myTabContent");
+    var obj = jsonObj.GetJsonObject();
+    //手动添加如下字段
+    obj = jsonObj.AddJson(obj, "CX", "'" + $("#spanFWCX").html() + "'");
+    obj = jsonObj.AddJson(obj, "ZXQK", "'" + $("#spanZXQK").html() + "'");
+    obj = jsonObj.AddJson(obj, "ZZLX", "'" + $("#spanZZLX").html() + "'");
+    obj = jsonObj.AddJson(obj, "YFFS", "'" + $("#spanYFFS").html() + "'");
+    obj = jsonObj.AddJson(obj, "ZJYBHFY", "'" + GetDX("BHFY") + "'");
+    obj = jsonObj.AddJson(obj, "FWPZ", "'" + GetDX("FWPZ") + "'");
+    obj = jsonObj.AddJson(obj, "FWLD", "'" + GetDX("FWLD") + "'");
+    obj = jsonObj.AddJson(obj, "CZYQ", "'" + GetDX("CZYQ") + "'");
+    obj = jsonObj.AddJson(obj, "CZFS", "'" + GetCZFS() + "'");
+    if (getUrlParam("FWCZID") !== null)
+        obj = jsonObj.AddJson(obj, "FWCZID", "'" + getUrlParam("FWCZID") + "'");
+    //obj = jsonObj.AddJson(obj, "ZZLX", "'" + $("#spanZZLX").html() + "'");
+    //obj = jsonObj.AddJson(obj, "ZZLX", "'" + $("#spanZZLX").html() + "'");
+    //obj = jsonObj.AddJson(obj, "FWCZID", "'" + FWCZID + "'");
+
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/FWCZ/FB",
+        dataType: "json",
+        data:
+        {
+            Json: jsonObj.JsonToString(obj),
+            FYMS: $("#FYMS").html()
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                alert("发布成功");
+            } else {
+                if (xml.Type === 1) {
+                    $("#YZM").css("border-color", "#F2272D");
+                    $("#YZMInfo").css("color", "#F2272D");
+                    $("#YZMInfo").html(xml.Message);
+                }
+                if (xml.Type === 2) {
+                    $("#YHM").css("border-color", "#F2272D");
+                    $("#YHMInfo").css("color", "#F2272D");
+                    $("#YHMInfo").html(xml.Message);
+                }
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+            
+        }
+    });
+}
+
+function GetDX(type) {
+    var result = "";
+    $("#div" + type + "Text").find("li").each(function (i) {
+        if ($(this).css("color") !== "rgb(51, 51, 51)")
+            result += i + ",";
+    });
+    return result.substr(0, result.length - 1);
+}
+
+function SetDX(type, value) {
+    var result = "";
+    var values = value.split(',');
+    $("#div" + type + "Text").find("li").each(function (i) {
+        if (values.contains(i))
+            $(this).css("color", "#5bc0de");
+    });
+    return result.substr(0, result.length - 1);
+}
+
+function GetCZFS() {
+    if ($("#imgZTCZ").css("background-position") === "-67px -57px")
+        return "0";
+    else
+        return "1";
+}
+
+function SetCZFS(CZFS) {
+    if (CZFS === 0) {
+        $("#imgZTCZ").css("background-position", "-67px -57px");
+        $("#imgDJCZ").css("background-position", "-67px 0px");
+    }
+    else {
+        $("#imgZTCZ").css("background-position", "-67px 0px");
+        $("#imgDJCZ").css("background-position", "-67px -57px");
+    }
+}
+
+function LoadFWCZXX() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/FWCZ/LoadFWCZXX",
+        dataType: "json",
+        data:
+        {
+            FWCZID: getUrlParam("FWCZID")
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var jsonObj = new JsonDB("myTabContent");
+                jsonObj.DisplayFromJson("myTabContent", xml.Value.FWCZXX);
+                jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
+                $("#FWCZID").val(xml.Value.FWCZXX.FWCZID);
+                SetDX("BHFY", xml.Value.FWCZXX.ZJYBHFY);
+                SetDX("FWPZ", xml.Value.FWCZXX.FWPZ);
+                SetDX("FWLD", xml.Value.FWCZXX.FWLD);
+                SetDX("CZYQ", xml.Value.FWCZXX.CZYQ);
+                SetCZFS(xml.Value.FWCZXX.CZFS);
+                $("#spanFWCX").html(xml.Value.FWCZXX.CX);
+                $("#spanZXQK").html(xml.Value.FWCZXX.ZXQK);
+                $("#spanZZLX").html(xml.Value.FWCZXX.ZZLX);
+                $("#spanYFFS").html(xml.Value.FWCZXX.YFFS);
+                $("#FYMS").html(xml.Value.FWCZXX.FYMS);
+                $("#KRZSJ").val(xml.Value.FWCZXX.KRZSJ.ToString("yyyy-MM-dd"));
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+            _masker.CloseMasker(false, errorThrown);
+        }
+    });
+
 }

@@ -184,3 +184,27 @@ li {
     width: 120px;
 }
 
+.spanFontColor {
+    color: #999999;
+}
+
+.spanFontColor:focus {
+    color: #333333;
+}
+
+.inputLCFB {
+    margin-top: 1px; 
+    border: none; 
+    height: 30px; 
+    text-align: center;
+    width: 100px;
+}
+
+/*清除谷歌浏览器下的 search 叉号*/
+/*input::-webkit-search-cancel-button{
+  display: none;
+}*/
+/*清除IE下的 search 叉号*/
+input[type=text]::-ms-clear{
+  display: none;
+}
