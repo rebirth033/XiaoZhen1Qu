@@ -11,24 +11,27 @@ namespace TianWen.XiaoZhen1Qu.BLL
 {
     public class FWCZJBXXBLL : BaseBLL, IFWCZJBXXBLL
     {
-        public object SaveFWCZJBXX(FWCZJBXX fwczjbxx)
+        public object SaveFWCZJBXX(JCXX jcxx, FWCZJBXX fwczjbxx)
         {
-            object o1 = DAO.Repository.ExecuteScalar(string.Format("SELECT COUNT(1) FROM FWCZJBXX WHERE FWCZID='{0}'", fwczjbxx.FWCZID));
+            object o1 = DAO.Repository.ExecuteScalar(string.Format("SELECT JCXXID FROM FWCZJBXX WHERE FWCZID='{0}'", fwczjbxx.FWCZID));
 
-            if (o1 != null && int.Parse(o1.ToString()) > 0)
+            if (!string.IsNullOrEmpty(o1.ToString()))
             {
                 using (ITransaction transaction = DAO.BeginTransaction())
                 {
                     try
                     {
+                        fwczjbxx.JCXXID = o1.ToString();
+                        jcxx.JCXXID = o1.ToString();
+                        DAO.Update(jcxx);
                         DAO.Update(fwczjbxx);
                         transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { FWCZID = fwczjbxx.FWCZID } };
+                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, FWCZID = fwczjbxx.FWCZID } };
                     }
                     catch (Exception ex)
                     {
                         transaction.Rollback();
-                        LoggerManager.Error("YHJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                        LoggerManager.Error("FWCZJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
                         return new
                         {
                             Result = EnResultType.Failed,
@@ -44,14 +47,16 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 {
                     try
                     {
+                        fwczjbxx.JCXXID = jcxx.JCXXID;
+                        DAO.Save(jcxx);
                         DAO.Save(fwczjbxx);
                         transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { FWCZID = fwczjbxx.FWCZID } };
+                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, FWCZID = fwczjbxx.FWCZID } };
                     }
                     catch (Exception ex)
                     {
                         transaction.Rollback();
-                        LoggerManager.Error("YHJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                        LoggerManager.Error("FWCZJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
                         return new
                         {
                             Result = EnResultType.Failed,
@@ -71,8 +76,8 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 FWCZJBXX yhjbxx = GetObjByID(FWCZID);
                 if (yhjbxx != null)
                 {
-
-                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { FWCZXX = yhjbxx } };
+                    JCXX jcxx = GetJCXXByID(yhjbxx.JCXXID);
+                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { FWCZXX = yhjbxx, JCXX = jcxx } };
                 }
                 else
                 {
@@ -93,6 +98,15 @@ namespace TianWen.XiaoZhen1Qu.BLL
         public FWCZJBXX GetObjByID(string FWCZID)
         {
             IList<FWCZJBXX> list = DAO.Repository.GetObjectList<FWCZJBXX>(String.Format("FROM FWCZJBXX WHERE FWCZID='{0}'", FWCZID));
+            if (list.Count > 0)
+                return list[0];
+            else
+                return null;
+        }
+
+        public JCXX GetJCXXByID(string JCXXID)
+        {
+            IList<JCXX> list = DAO.Repository.GetObjectList<JCXX>(String.Format("FROM JCXX WHERE JCXXID='{0}'", JCXXID));
             if (list.Count > 0)
                 return list[0];
             else

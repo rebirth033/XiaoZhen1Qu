@@ -10,7 +10,7 @@ namespace TianWen.XiaoZhen1Qu.Interface
     {
         IDAO DAO { get; set; }
 
-        object SaveFWCZJBXX(FWCZJBXX fwczjbxx);
+        object SaveFWCZJBXX(JCXX jcxx, FWCZJBXX fwczjbxx);
 
         object LoadFWCZXX(string FWCZID);
     }

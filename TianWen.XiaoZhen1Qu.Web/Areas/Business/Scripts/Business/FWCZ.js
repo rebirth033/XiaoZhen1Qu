@@ -9,6 +9,8 @@
     $(".inputLCFB").bind("blur", LCFBBlur);
     $(".inputFWLX").bind("focus", LCFBFocus);
     $(".inputFWLX").bind("blur", LCFBBlur);
+    $("#FYMS").bind("focus", FYMSFocus);
+    $("#FYMS").bind("blur", FYMSBlur);
     BindHover();
     LoadTXXX();
     LoadFWCX();
@@ -18,7 +20,21 @@
     LoadBHFY();
     LoadDefault();
     LoadFWCZXX();
+    FYMSSetDefault();
 });
+
+function FYMSFocus() {
+    $("#FYMS").css("color", "#333333");
+}
+
+function FYMSBlur() {
+    $("#FYMS").css("color", "#999999");
+}
+
+function FYMSSetDefault() {
+    var fyms = "1.房屋特征：\r\n\r\n2.周边配套：\r\n\r\n3.房东心态：";
+    $("#FYMS").html(fyms);
+}
 
 function LCFBFocus() {
     if ($(this)[0].id === "C")
@@ -35,7 +51,7 @@ function LCFBFocus() {
         $("#spanW").css("border", "1px solid #5bc0de");
     if ($(this)[0].id === "PFM")
         $("#spanPFM").css("border", "1px solid #5bc0de");
-    
+
 }
 
 function LCFBBlur() {
@@ -444,9 +460,11 @@ function FB() {
     obj = jsonObj.AddJson(obj, "FWLD", "'" + GetDX("FWLD") + "'");
     obj = jsonObj.AddJson(obj, "CZYQ", "'" + GetDX("CZYQ") + "'");
     obj = jsonObj.AddJson(obj, "CZFS", "'" + GetCZFS() + "'");
+    if (getUrlParam("FWCZID") !== null)
+        obj = jsonObj.AddJson(obj, "FWCZID", "'" + getUrlParam("FWCZID") + "'");
     //obj = jsonObj.AddJson(obj, "ZZLX", "'" + $("#spanZZLX").html() + "'");
     //obj = jsonObj.AddJson(obj, "ZZLX", "'" + $("#spanZZLX").html() + "'");
-    obj = jsonObj.AddJson(obj, "FWCZID", "'" + getUrlParam("FWCZID") + "'");
+    //obj = jsonObj.AddJson(obj, "FWCZID", "'" + FWCZID + "'");
 
     $.ajax({
         type: "POST",
@@ -454,7 +472,8 @@ function FB() {
         dataType: "json",
         data:
         {
-            Json: jsonObj.JsonToString(obj)
+            Json: jsonObj.JsonToString(obj),
+            FYMS: $("#FYMS").html()
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -473,7 +492,7 @@ function FB() {
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-            _masker.CloseMasker(false, errorThrown);
+            
         }
     });
 }
@@ -505,7 +524,7 @@ function GetCZFS() {
 }
 
 function SetCZFS(CZFS) {
-    if (CZFS === "0"){
+    if (CZFS === 0) {
         $("#imgZTCZ").css("background-position", "-67px -57px");
         $("#imgDJCZ").css("background-position", "-67px 0px");
     }
@@ -528,6 +547,7 @@ function LoadFWCZXX() {
             if (xml.Result === 1) {
                 var jsonObj = new JsonDB("myTabContent");
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.FWCZXX);
+                jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
                 $("#FWCZID").val(xml.Value.FWCZXX.FWCZID);
                 SetDX("BHFY", xml.Value.FWCZXX.ZJYBHFY);
                 SetDX("FWPZ", xml.Value.FWCZXX.FWPZ);
@@ -538,11 +558,12 @@ function LoadFWCZXX() {
                 $("#spanZXQK").html(xml.Value.FWCZXX.ZXQK);
                 $("#spanZZLX").html(xml.Value.FWCZXX.ZZLX);
                 $("#spanYFFS").html(xml.Value.FWCZXX.YFFS);
+                $("#FYMS").html(xml.Value.FWCZXX.FYMS);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
             _masker.CloseMasker(false, errorThrown);
         }
     });
-    
+
 }
