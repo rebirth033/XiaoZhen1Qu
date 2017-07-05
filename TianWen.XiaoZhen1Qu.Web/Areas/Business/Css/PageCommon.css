@@ -188,6 +188,10 @@ li {
     color: #999999;
 }
 
+.spanFontColor:focus {
+    color: #333333;
+}
+
 .inputLCFB {
     margin-top: 1px; 
     border: none; 
