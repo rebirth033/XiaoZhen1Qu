@@ -57,7 +57,7 @@
                     <span class="spanFWCZ">小区名称</span>
                 </div>
                 <div class="divRight">
-                    <input id="XZMC" column="XQMC" class="spanFWLX" style="width: 594px; padding: 6px 12px; color: #999999" type="text" placeholder="请输入小区名称"/>
+                    <input id="XZMC" column="XQMC" class="spanFWLX SRK" style="width: 594px; padding: 6px 12px; color: #999999" type="text" placeholder="请输入小区名称"/>
                 </div>
             </div>
             <div id="divFWLX" class="divFWCZ">
@@ -66,19 +66,19 @@
                     <span class="spanFWCZ">房屋类型</span>
                 </div>
                 <div class="divRight">
-                    <span class="spanFWLX">
+                    <span id="spanS" class="spanFWLX SRK">
                         <input id="S" column="S" class="inputFWLX" type="text" />
                         <span class="spanFontColor">室</span>
                     </span>
-                    <span class="spanFWLX">
+                    <span id="spanT" class="spanFWLX SRK">
                         <input id="T" column="T" class="inputFWLX" type="text" />
                         <span class="spanFontColor">厅</span>
                     </span>
-                    <span class="spanFWLX">
+                    <span id="spanW" class="spanFWLX SRK">
                         <input id="W" column="W" class="inputFWLX" type="text" />
                         <span class="spanFontColor">卫</span>
                     </span>
-                    <span class="spanFWLX" style="width: 198px">
+                    <span id="spanPFM" class="spanFWLX SRK" style="width: 198px">
                         <span class="spanFontColor" style="margin-left: 8px">共</span>
                         <input id="PFM" column="PFM" class="inputFWLX" type="text" />
                         <span class="spanFontColor">平（㎡）</span>
@@ -92,7 +92,7 @@
                 </div>
                 <div class="divRight">
                     <div class="spanFWLXOut">
-                        <div id="divFWCXText" class="spanFWLXIn">
+                        <div id="divFWCXText" class="spanFWLXIn SRK">
                             <span id="spanFWCX" column="CX" class="spanFWQK">南北</span>
                             <div class="divFWQKArrow"></div>
                         </div>
@@ -100,7 +100,7 @@
                         </div>
                     </div>
                     <div class="spanFWLXOut">
-                        <div id="divZXQKText" class="spanFWLXIn">
+                        <div id="divZXQKText" class="spanFWLXIn SRK">
                             <span id="spanZXQK" column="ZXQK" class="spanFWQK">简单装修</span>
                             <div class="divFWQKArrow"></div>
                         </div>
@@ -108,7 +108,7 @@
                         </div>
                     </div>
                     <div class="spanFWLXOut">
-                        <div id="divZZLXText" class="spanFWLXIn">
+                        <div id="divZZLXText" class="spanFWLXIn SRK">
                             <span id="spanZZLX" column="ZZLX" class="spanFWQK">普通住宅</span>
                             <div class="divFWQKArrow"></div>
                         </div>
@@ -123,34 +123,34 @@
                     <span class="spanFWCZ">楼层分布</span>
                 </div>
                 <div class="divRight">
-                    <span class="spanFWLX">
+                    <span id="spanC" class="spanFWLX SRK">
                         <span class="spanFontColor" style=" margin-left: 8px">第</span>
                         <input id="C" column="C" class="inputLCFB" type="text" style="width: 70px" />
                         <span class="spanFontColor">层</span>
                     </span>
-                    <span class="spanFWLX">
+                    <span id="spanGJC" class="spanFWLX SRK">
                         <span class="spanFontColor" style="margin-left: 8px">共</span>
                         <input id="GJC" column="GJC" class="inputLCFB" type="text" style="width: 70px" />
                         <span class="spanFontColor">层</span>
                     </span>
                 </div>
             </div>
-            <div id="divFWZJ" class="divFWCZ" style="z-index: 997">
+            <div id="divZJ" class="divFWCZ" style="z-index: 997">
                 <div class="divLeft">
                     <span class="required">*</span>
                     <span class="spanFWCZ">房屋租金</span>
                 </div>
                 <div class="divRight">
-                    <span class="spanFWLX" style=" display: inline-block;">
-                        <input id="FWZJ" column="ZJ" class="inputLCFB" type="text" style="width: 78px" />
+                    <span id="spanZJ" class="spanFWLX SRK" style=" display: inline-block;">
+                        <input id="ZJ" column="ZJ" class="inputLCFB" type="text" style="width: 78px" />
                         <span class="spanFontColor">元/月</span>
                     </span>
-                    <div class="spanFWLXOut" style="border: 1px solid #cccccc; border-radius: 4px;">
-                        <div id="divYFFSText" class="spanFWLXIn" style="border: none; margin-top: 6px;">
+                    <div id="divYFFSText" class="spanFWLXOut SRK" style="border: 1px solid #cccccc; border-radius: 4px;">
+                        <div class="spanFWLXIn" style="border: none; margin-top: 6px;">
                             <span id="spanYFFS" column="YFFS" class="spanFWQK" style="margin-top: 0">押一付一</span>
                             <div class="divFWQKArrow"></div>
                         </div>
-                        <div id="divYFFS" class="divdropdown">
+                        <div id="divYFFS" class="divdropdown" style="margin-top: -7px; margin-left: -1px;">
                         </div>
                     </div>
                 </div>
@@ -197,7 +197,7 @@
                     <span id="spanKRZSJ">可入住时间</span>
                 </div>
                 <div class="divRight">
-                    <input class="spanFWLX" style="width: 594px; padding: 6px 12px; color: #999999" type="text" placeholder="请输入可入住时间" />
+                    <input class="spanFWLX SRK" style="width: 594px; padding: 6px 12px; color: #999999" type="text" placeholder="请输入可入住时间" />
                 </div>
             </div>
             <div id="divFYBT" class="divFWCZ" style="margin-top: 22px;">
@@ -206,7 +206,7 @@
                     <span id="spanFYBT">房源标题</span>
                 </div>
                 <div class="divRight">
-                    <input column="FYBT" class="spanFWLX" style="width: 594px; padding: 6px 12px; color: #999999" type="text" placeholder="请输入房源标题" />
+                    <input column="FYBT" class="spanFWLX SRK" style="width: 594px; padding: 6px 12px; color: #999999" type="text" placeholder="请输入房源标题" />
                 </div>
             </div>
             <div id="divFYMS" class="divFWCZ" style="height: 170px;">
@@ -215,7 +215,7 @@
                     <span id="spanFYMS">房源描述</span>
                 </div>
                 <div class="divRight">
-                    <textarea column="FYMS" class="spanFWLX" style="width: 594px; height: 170px; padding: 6px 12px; color: #999999" placeholder="请输入房源标题"></textarea>
+                    <textarea column="FYMS" class="spanFWLX SRK" style="width: 594px; height: 170px; padding: 6px 12px; color: #999999" placeholder="请输入房源标题"></textarea>
                 </div>
             </div>
             <div id="divFWZP" class="divFWCZ">
@@ -244,7 +244,7 @@
                     <span id="spanLXDH">联系人</span>
                 </div>
                 <div class="divRight">
-                    <input column="LXR" class="spanFWLX inputLXRXX" type="text" placeholder="请输入联系人" />
+                    <input column="LXR" class="spanFWLX inputLXRXX SRK" type="text" placeholder="请输入联系人" />
                 </div>
             </div>
             <div id="divLXDH" class="divFWCZ">
@@ -253,7 +253,7 @@
                     <span id="spanLXDH">联系电话</span>
                 </div>
                 <div class="divRight">
-                    <input column="LXDH" class="spanFWLX inputLXRXX" type="text" placeholder="请输入联系电话" />
+                    <input column="LXDH" class="spanFWLX inputLXRXX SRK" type="text" placeholder="请输入联系电话" />
                 </div>
             </div>
             <div id="divQQ" class="divFWCZ">
@@ -262,14 +262,13 @@
                     <span id="spanQQ">QQ</span>
                 </div>
                 <div class="divRight">
-                    <input column="QQ" class="spanFWLX inputLXRXX" type="text" placeholder="请输入QQ" />
+                    <input column="QQ" class="spanFWLX inputLXRXX SRK" type="text" placeholder="请输入QQ" />
                 </div>
             </div>
             <div id="divFB" class="divSplit" style="display: block; text-align: center; margin-top: 40px;">
                 <input type="button" class="btn btn-info input_text" style="height: 50px; font-size: 24px;" id="btnFB" value="发布" />
             </div>
         </div>
-
     </div>
 </body>
 </html>

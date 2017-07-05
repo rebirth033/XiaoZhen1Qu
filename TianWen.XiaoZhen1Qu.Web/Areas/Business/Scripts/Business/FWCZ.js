@@ -5,19 +5,55 @@
     $("#divUploadOut").bind("mouseover", GetUploadCss);
     $("#divUploadOut").bind("mouseleave", LeaveUploadCss);
     $("#btnFB").bind("click", FB);
+    $(".inputLCFB").bind("focus", LCFBFocus);
+    $(".inputLCFB").bind("blur", LCFBBlur);
+    $(".inputFWLX").bind("focus", LCFBFocus);
+    $(".inputFWLX").bind("blur", LCFBBlur);
     BindHover();
     LoadTXXX();
     LoadFWCX();
     LoadZXQK();
     LoadZZLX();
     LoadYFFS();
-    LoadFWPZ();
-    LoadFWLD();
-    LoadCZYQ();
     LoadBHFY();
     LoadDefault();
     LoadFWCZXX();
 });
+
+function LCFBFocus() {
+    if ($(this)[0].id === "C")
+        $("#spanC").css("border", "1px solid #5bc0de");
+    if ($(this)[0].id === "GJC")
+        $("#spanGJC").css("border", "1px solid #5bc0de");
+    if ($(this)[0].id === "ZJ")
+        $("#spanZJ").css("border", "1px solid #5bc0de");
+    if ($(this)[0].id === "S")
+        $("#spanS").css("border", "1px solid #5bc0de");
+    if ($(this)[0].id === "T")
+        $("#spanT").css("border", "1px solid #5bc0de");
+    if ($(this)[0].id === "W")
+        $("#spanW").css("border", "1px solid #5bc0de");
+    if ($(this)[0].id === "PFM")
+        $("#spanPFM").css("border", "1px solid #5bc0de");
+    
+}
+
+function LCFBBlur() {
+    if ($(this)[0].id === "C")
+        $("#spanC").css("border", "1px solid #cccccc");
+    if ($(this)[0].id === "GJC")
+        $("#spanGJC").css("border", "1px solid #cccccc");
+    if ($(this)[0].id === "ZJ")
+        $("#spanZJ").css("border", "1px solid #cccccc");
+    if ($(this)[0].id === "S")
+        $("#spanS").css("border", "1px solid #cccccc");
+    if ($(this)[0].id === "T")
+        $("#spanT").css("border", "1px solid #cccccc");
+    if ($(this)[0].id === "W")
+        $("#spanW").css("border", "1px solid #cccccc");
+    if ($(this)[0].id === "PFM")
+        $("#spanPFM").css("border", "1px solid #cccccc");
+}
 
 function LoadDefault() {
     $("#imgZTCZ").css("background-position", "-67px -57px");
@@ -165,6 +201,35 @@ function LoadYFFS() {
     });
 }
 
+function LoadBHFY() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/FWCZ/LoadCODES",
+        dataType: "json",
+        data:
+        {
+            TYPENAME: "包含费用"
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='ulFWPZ'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='liFWPZ' onclick='SelectFWPZ(this)'>" + xml.list[i].CODENAME + "</li>";
+                    if (i === 5 || i === 11) {
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
+                    }
+                }
+                html += "</ul>";
+                $("#divBHFYText").html(html);
+            }
+            LoadFWPZ();
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+            _masker.CloseMasker(false, errorThrown);
+        }
+    });
+}
+
 function LoadFWPZ() {
     $.ajax({
         type: "POST",
@@ -186,6 +251,7 @@ function LoadFWPZ() {
                 html += "</ul>";
                 $("#divFWPZText").html(html);
             }
+            LoadFWLD();
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
             _masker.CloseMasker(false, errorThrown);
@@ -214,6 +280,7 @@ function LoadFWLD() {
                 html += "</ul>";
                 $("#divFWLDText").html(html);
             }
+            LoadCZYQ();
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
             _masker.CloseMasker(false, errorThrown);
@@ -242,6 +309,7 @@ function LoadCZYQ() {
                 html += "</ul>";
                 $("#divCZYQText").html(html);
             }
+            LoadFWCZXX();
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
             _masker.CloseMasker(false, errorThrown);
@@ -249,74 +317,72 @@ function LoadCZYQ() {
     });
 }
 
-function LoadBHFY() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/FWCZ/LoadCODES",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "包含费用"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='ulFWPZ'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liFWPZ' onclick='SelectFWPZ(this)'>" + xml.list[i].CODENAME + "</li>";
-                    if (i === 5 || i === 11) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
-                    }
-                }
-                html += "</ul>";
-                $("#divBHFYText").html(html);
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-            _masker.CloseMasker(false, errorThrown);
-        }
-    });
+function HoverStyle(name) {
+    $("#div" + name + "Text").css("border-top", "1px solid #5bc0de").css("border-right", "1px solid #5bc0de").css("border-left", "1px solid #5bc0de").css("border-bottom", "1px solid #5bc0de");
+    $("#div" + name).find("ul").css("border-left", "1px solid #5bc0de").css("border-right", "1px solid #5bc0de").css("border-bottom", "1px solid #5bc0de");
+}
+
+function LeaveStyle(name) {
+    $("#div" + name + "Text").css("border-top", "1px solid #cccccc").css("border-right", "1px solid #cccccc").css("border-left", "1px solid #cccccc").css("border-bottom", "1px solid #cccccc");
+    $("#div" + name).find("ul").css("border-left", "1px solid #cccccc").css("border-right", "1px solid #cccccc").css("border-bottom", "1px solid #cccccc");
 }
 
 function BindHover() {
     $("#divFWCXText").hover(function () {
         $("#divFWCX").css("display", "block");
+        HoverStyle("FWCX");
     }, function () {
         $("#divFWCX").css("display", "none");
+        LeaveStyle("FWCX");
     });
     $("#divFWCX").hover(function () {
         $("#divFWCX").css("display", "block");
+        HoverStyle("FWCX");
     }, function () {
         $("#divFWCX").css("display", "none");
+        LeaveStyle("FWCX");
     });
     $("#divZXQKText").hover(function () {
         $("#divZXQK").css("display", "block");
+        HoverStyle("ZXQK");
     }, function () {
         $("#divZXQK").css("display", "none");
+        LeaveStyle("ZXQK");
     });
     $("#divZXQK").hover(function () {
         $("#divZXQK").css("display", "block");
+        HoverStyle("ZXQK");
     }, function () {
         $("#divZXQK").css("display", "none");
+        LeaveStyle("ZXQK");
     });
     $("#divZZLXText").hover(function () {
         $("#divZZLX").css("display", "block");
+        HoverStyle("ZZLX");
     }, function () {
         $("#divZZLX").css("display", "none");
+        LeaveStyle("ZZLX");
     });
     $("#divZZLX").hover(function () {
         $("#divZZLX").css("display", "block");
+        HoverStyle("ZZLX");
     }, function () {
         $("#divZZLX").css("display", "none");
+        LeaveStyle("ZZLX");
     });
     $("#divYFFSText").hover(function () {
         $("#divYFFS").css("display", "block");
+        HoverStyle("YFFS");
     }, function () {
         $("#divYFFS").css("display", "none");
+        LeaveStyle("YFFS");
     });
     $("#divYFFS").hover(function () {
         $("#divYFFS").css("display", "block");
+        HoverStyle("YFFS");
     }, function () {
         $("#divYFFS").css("display", "none");
+        LeaveStyle("YFFS");
     });
 }
 
@@ -377,7 +443,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "FWPZ", "'" + GetDX("FWPZ") + "'");
     obj = jsonObj.AddJson(obj, "FWLD", "'" + GetDX("FWLD") + "'");
     obj = jsonObj.AddJson(obj, "CZYQ", "'" + GetDX("CZYQ") + "'");
-    //obj = jsonObj.AddJson(obj, "CZFS", "'" + GetCZFS() + "'");
+    obj = jsonObj.AddJson(obj, "CZFS", "'" + GetCZFS() + "'");
     //obj = jsonObj.AddJson(obj, "ZZLX", "'" + $("#spanZZLX").html() + "'");
     //obj = jsonObj.AddJson(obj, "ZZLX", "'" + $("#spanZZLX").html() + "'");
     obj = jsonObj.AddJson(obj, "FWCZID", "'" + getUrlParam("FWCZID") + "'");
@@ -438,6 +504,17 @@ function GetCZFS() {
         return "1";
 }
 
+function SetCZFS(CZFS) {
+    if (CZFS === "0"){
+        $("#imgZTCZ").css("background-position", "-67px -57px");
+        $("#imgDJCZ").css("background-position", "-67px 0px");
+    }
+    else {
+        $("#imgZTCZ").css("background-position", "-67px 0px");
+        $("#imgDJCZ").css("background-position", "-67px -57px");
+    }
+}
+
 function LoadFWCZXX() {
     $.ajax({
         type: "POST",
@@ -456,6 +533,11 @@ function LoadFWCZXX() {
                 SetDX("FWPZ", xml.Value.FWCZXX.FWPZ);
                 SetDX("FWLD", xml.Value.FWCZXX.FWLD);
                 SetDX("CZYQ", xml.Value.FWCZXX.CZYQ);
+                SetCZFS(xml.Value.FWCZXX.CZFS);
+                $("#spanFWCX").html(xml.Value.FWCZXX.CX);
+                $("#spanZXQK").html(xml.Value.FWCZXX.ZXQK);
+                $("#spanZZLX").html(xml.Value.FWCZXX.ZZLX);
+                $("#spanYFFS").html(xml.Value.FWCZXX.YFFS);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

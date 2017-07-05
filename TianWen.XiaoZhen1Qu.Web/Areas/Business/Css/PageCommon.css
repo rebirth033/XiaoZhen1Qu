@@ -195,3 +195,8 @@ li {
     text-align: center;
     width: 100px;
 }
+
+/*清除IE下的 search 叉号*/
+input[type=search]::-ms-clear{
+  display: none;
+}
