@@ -217,26 +217,6 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TianWen.Business.Framework\TianWen.Business.Framework.csproj">
-      <Project>{1d4e9293-db7d-4876-91ad-c6cb0124f0e5}</Project>
-      <Name>TianWen.Business.Framework</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\TianWen.Framework\TianWen.Framework.csproj">
-      <Project>{8626dc66-af76-4afd-afa7-fd6aeefee1d4}</Project>
-      <Name>TianWen.Framework</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\TianWen.Nhibernate\TianWen.Nhibernate.csproj">
-      <Project>{8f745c92-213c-4aaa-bcaf-e137cd1a1f59}</Project>
-      <Name>TianWen.Nhibernate</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\TianWen.Persistence\TianWen.Persistence.csproj">
-      <Project>{5ca7ce75-937f-4c81-893f-68e152b16a68}</Project>
-      <Name>TianWen.Persistence</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\TianWen.Utility\TianWen.Utility.csproj">
-      <Project>{8df78723-2bd3-472c-b5bc-e0406ac3a285}</Project>
-      <Name>TianWen.Utility</Name>
-    </ProjectReference>
     <ProjectReference Include="..\TianWen.XiaoZhen1Qu.Entities\TianWen.XiaoZhen1Qu.Entities.csproj">
       <Project>{ea6742ca-453b-405e-aef5-be9363a3e4dd}</Project>
       <Name>TianWen.XiaoZhen1Qu.Entities</Name>
