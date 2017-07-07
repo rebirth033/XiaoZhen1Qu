@@ -45,11 +45,16 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             object result = FWCZJBXXBLL.LoadFWCZXX(FWCZID);
             return Json(result);
         }
-        public JsonResult LoadXQJBXXS()
+        public JsonResult LoadXQJBXXSByHZ()
         {
             string XQMC = Request["XQMC"];
-            return Json(FWCZJBXXBLL.LoadXQJBXXS(XQMC));
+            return Json(FWCZJBXXBLL.LoadXQJBXXSByHZ(XQMC));
         }
-        
+
+        public JsonResult LoadXQJBXXSByPY()
+        {
+            string XQMC = Request["XQMC"];
+            return Json(FWCZJBXXBLL.LoadXQJBXXSByPY(XQMC));
+        }
     }
 }

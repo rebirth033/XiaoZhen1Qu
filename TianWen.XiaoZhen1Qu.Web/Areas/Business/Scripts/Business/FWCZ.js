@@ -117,40 +117,113 @@ function DJCZSelect() {
 }
 
 function LoadXQMC() {
-    if ($("#XQMC").val() === "") {
+    var XQMC = $("#XQMC").val();
+    if (XQMC === "") {
         $("#divXQMClist").css("display", "none");
         return;
     }
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/FWCZ/LoadXQJBXXS",
-        dataType: "json",
-        data:
-        {
-            XQMC: $("#XQMC").val()
-        },
-        success: function (xml) {
-            if (xml.Result === 1 && xml.list.length > 0) {
-                var html = "<ul id='ulXQMC' class='uldropdown' style='height: " + (xml.list.length * 34.5) + "px;width:594px;background-color:#ffffff'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    var index = xml.list[i].XQMC.indexOf($("#XQMC").val());
-                    var xqmchtml = "";
-                    if (index === 0)
-                        xqmchtml = "<span style='color:#333333;font-weight:bolder;'>" + $("#XQMC").val() + "</span>" + "<span style='color:#333333'>" + xml.list[i].XQMC.substr(1, xml.list[i].XQMC.length - $("#XQMC").val().length) + "</span>";
-                    else {
-                        xqmchtml = "<span style='color:#333333'>" + xml.list[i].XQMC.substr(0, index) + "</span>" + "<span style='color:#333333;font-weight:bolder;'>" + xml.list[i].XQMC.substr(index, 1) + "</span>" + "<span style='color:#333333'>" + xml.list[i].XQMC.substr(index + 1, xml.list[i].XQMC.length - index - 1) + "</span>";
+    if (/^[\u4e00-\u9fa5]+$/i.test(XQMC)) {//判断是否是汉字
+        $.ajax({
+            type: "POST",
+            url: getRootPath() + "/Business/FWCZ/LoadXQJBXXSByHZ",
+            dataType: "json",
+            data:
+            {
+                XQMC: XQMC
+            },
+            success: function (xml) {
+                if (xml.Result === 1 && xml.list.length > 0) {
+                    var html = "<ul id='ulXQMC' class='uldropdown' style='height: " + (xml.list.length * 34.5) + "px;width:594px;background-color:#ffffff'>";
+                    for (var i = 0; i < xml.list.length; i++) {
+                        var index = xml.list[i].XQMC.indexOf(XQMC);
+                        var xqmclength = XQMC.length;
+                        var xqmchtml = "";
+                        if (index === 0)
+                            xqmchtml = "<span style='color:#333333;font-weight:bolder;'>" + XQMC + "</span>" + "<span style='color:#333333'>" + xml.list[i].XQMC.substr(xqmclength, xml.list[i].XQMC.length - XQMC.length) + "</span>";
+                        else {
+                            xqmchtml = "<span style='color:#333333'>" + xml.list[i].XQMC.substr(0, index) + "</span>" + "<span style='color:#333333;font-weight:bolder;'>" + xml.list[i].XQMC.substr(index, xqmclength) + "</span>" + "<span style='color:#333333'>" + xml.list[i].XQMC.substr(index + xqmclength, xml.list[i].XQMC.length - index - xqmclength) + "</span>";
+                        }
+                        html += "<li class='lidropdown' onclick='SelectXQMC(this)'>" + xqmchtml + "&nbsp;&nbsp;<span style='color:#999999;font-size:12px;'>" + xml.list[i].XQDZ + "</span>" + "</li>";
                     }
-                    html += "<li class='lidropdown' onclick='SelectXQMC(this)'>" + xqmchtml + "&nbsp;&nbsp;<span style='color:#999999;font-size:12px;'>" + xml.list[i].XQDZ + "</span>" + "</li>";
+                    html += "</ul>";
+                    $("#divXQMClist").html(html);
+                    $("#divXQMClist").css("display", "block");
                 }
-                html += "</ul>";
-                $("#divXQMClist").html(html);
-                $("#divXQMClist").css("display", "block");
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
             }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-            _masker.CloseMasker(false, errorThrown);
+        });
+    } else {
+        $.ajax({
+            type: "POST",
+            url: getRootPath() + "/Business/FWCZ/LoadXQJBXXSByPY",
+            dataType: "json",
+            data:
+            {
+                XQMC: XQMC
+            },
+            success: function (xml) {
+                if (xml.Result === 1 && xml.list.length > 0) {
+                    var html = "<ul id='ulXQMC' class='uldropdown' style='height: " + (xml.list.length * 34.5) + "px;width:594px;background-color:#ffffff'>";
+                    for (var i = 0; i < xml.list.length; i++) {
+                        var index = 0;
+                        var pys = xml.list[i].XQMCPY.split(' ');
+                        var count = 0;
+                        var syxqmc = XQMC;
+                        index = GetStartIndex(pys, syxqmc);
+                        for (var j = 0; j < pys.length; j++) {
+                            if (syxqmc.length > pys[j].length) {
+                                if (syxqmc.indexOf(pys[j]) !== -1) {
+                                    count ++;
+                                    syxqmc = syxqmc.substr(pys[j].length, syxqmc.length - pys[j].length);
+                                }
+                            }
+                            else{
+                                if (pys[j].indexOf(syxqmc) !== -1 || pys[j].indexOf(syxqmc) !== -1) {
+                                count++;
+                                break;;
+                                }
+                            }
+                        }
+                        var getlength = count;
+                        var xqmchtml = "";
+                        if (index === 0)
+                            xqmchtml = "<span style='color:#333333;font-weight:bolder;'>" + xml.list[i].XQMC.substr(0, getlength) + "</span>" + "<span style='color:#333333'>" + xml.list[i].XQMC.substr(getlength, xml.list[i].XQMC.length - getlength) + "</span>";
+                        else {
+                            xqmchtml = "<span style='color:#333333'>" + xml.list[i].XQMC.substr(0, index) + "</span>" + "<span style='color:#333333;font-weight:bolder;'>" + xml.list[i].XQMC.substr(index, getlength) + "</span>" + "<span style='color:#333333'>" + xml.list[i].XQMC.substr(index + getlength, xml.list[i].XQMC.length - index - getlength) + "</span>";
+                        }
+                        html += "<li class='lidropdown' onclick='SelectXQMC(this)'>" + xqmchtml + "&nbsp;&nbsp;<span style='color:#999999;font-size:12px;'>" + xml.list[i].XQDZ + "</span>" + "</li>";
+                    }
+                    html += "</ul>";
+                    $("#divXQMClist").html(html);
+                    $("#divXQMClist").css("display", "block");
+                }
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+            }
+        });
+    }
+}
+
+function GetStartIndex(pys, sqmc) {
+    var index = 0;
+    for (var j = 0; j < pys.length; j++) {
+        if (sqmc.length > pys[j].length) {
+            if (sqmc.indexOf(pys[j]) !== -1) {
+                index = j;
+                break;;
+            }
         }
-    });
+        else {
+            if (pys[j].indexOf(sqmc) !== -1 || pys[j].indexOf(sqmc) !== -1) {
+                index = j;
+                break;;
+            }
+        }
+    }
+    return index;
 }
 
 function LoadFWCX() {

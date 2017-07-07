@@ -113,11 +113,25 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 return null;
         }
 
-        public object LoadXQJBXXS(string XQMC)
+        public object LoadXQJBXXSByHZ(string XQMC)
         {
             try
             {
-                IList<XQJBXX> list = DAO.Repository.GetObjectList<XQJBXX>(String.Format("FROM XQJBXX WHERE XQMC like '%{0}%' or XQMCPY like '%{0}%' and ROWNUM <= 10 ORDER BY XQMC", XQMC));
+                IList<XQJBXX> list = DAO.Repository.GetObjectList<XQJBXX>(String.Format("FROM XQJBXX WHERE XQMC like '%{0}%' and ROWNUM <= 10 ORDER BY XQMC", XQMC));
+                return new { Result = EnResultType.Success, list = list };
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("error", ex.Message);
+                return new { Result = EnResultType.Failed, Message = "加载失败" };
+            }
+        }
+
+        public object LoadXQJBXXSByPY(string XQMC)
+        {
+            try
+            {
+                IList<XQJBXX> list = DAO.Repository.GetObjectList<XQJBXX>(String.Format("FROM XQJBXX WHERE XQMCPYQKG like '%{0}%' and ROWNUM <= 10 ORDER BY XQMC", XQMC));
                 return new { Result = EnResultType.Success, list = list };
             }
             catch (Exception ex)
