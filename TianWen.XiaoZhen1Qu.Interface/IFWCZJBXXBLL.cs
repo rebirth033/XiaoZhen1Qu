@@ -13,5 +13,9 @@ namespace TianWen.XiaoZhen1Qu.Interface
         object SaveFWCZJBXX(JCXX jcxx, FWCZJBXX fwczjbxx);
 
         object LoadFWCZXX(string FWCZID);
+
+        object LoadXQJBXXSByHZ(string XQMC);
+
+        object LoadXQJBXXSByPY(string XQMC);
     }
 }

@@ -1,0 +1,8 @@
+F:\福建天问信息技术责任有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Entities\bin\Release\TianWen.XiaoZhen1Qu.Entities.dll
+F:\福建天问信息技术责任有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Entities\bin\Release\TianWen.XiaoZhen1Qu.Entities.pdb
+F:\福建天问信息技术责任有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Entities\bin\Release\FluentNHibernate.dll
+F:\福建天问信息技术责任有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Entities\bin\Release\NHibernate.dll
+F:\福建天问信息技术责任有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Entities\bin\Release\NHibernate.Mapping.Attributes.dll
+F:\福建天问信息技术责任有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Entities\bin\Release\Iesi.Collections.dll
+F:\福建天问信息技术责任有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Entities\obj\Release\TianWen.XiaoZhen1Qu.Entities.dll
+F:\福建天问信息技术责任有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Entities\obj\Release\TianWen.XiaoZhen1Qu.Entities.pdb

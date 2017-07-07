@@ -1,0 +1,67 @@
+﻿@{
+    ViewBag.Title = "YHGL";
+    Layout = "~/Areas/Business/Views/Shared/_ListLayout.cshtml";
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/YHGL.js")"></script>
+</head>
+<body style="width: 100%; height: 100%;">
+    <div id="divTop" style="width: 100%; height: 30px; background-color: #fafafa; vertical-align: middle;">
+        <div style="width: 290px; margin-left: 53%; text-align: center; height: 25px; padding-top: 5px;">
+            <a style="text-decoration: none; color: #5bc0de; font-size: 12px; cursor: pointer">
+                信息小镇首页
+            </a>
+            <img style="width: 1px; height: 12px; background: #cccccc; margin: -3px 5px 0 5px;" />
+            <a style="text-decoration: none; color: #666; font-size: 12px; cursor: pointer">
+                <img src="@Url.Content("~/Areas/Business/Css/images/cellphone.png")" style="width: 12px; height: 18px; margin: -3px 5px 0 5px;" />
+                手机登录
+            </a>
+            <img style="width: 1px; height: 12px; background: #cccccc; margin: -3px 5px 0 5px;" />
+            <a style="text-decoration: none; color: #666; font-size: 12px; cursor: pointer">
+                rebirth033
+                <img src="@Url.Content("~/Areas/Business/Css/images/arrow_down.png")" style="width: 12px; height: 18px; margin: -3px 5px 0 5px;" />
+            </a>
+        </div>
+    </div>
+    <div id="divHead" style="background-color: #5bc0de; background-image: url('../../Css/images/logo3_small.png'); width: 100%; height: 80px; vertical-align: middle;">
+        <div style="float: left; width: 120px; margin-left: 200px; margin-top: 5px;">
+            <img style="width: 100%; text-align: center; color: white; font-size: 25px; float: left;" src="@Url.Content("~/Areas/Business/Css/images/logo.png")" />
+            <span style="width: 100%; text-align: center; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: white; font-size: 17px; float: left; cursor: default;">infotownlet.com</span>
+        </div>
+        <ul style="width: 450px; height: 80px; display: block; float: left; margin-left: 100px; margin-top: 20px; vertical-align: middle">
+            <li class="liHead">个人中心</li>
+            <li class="liHead">账户设置</li>
+            <li class="liHead">我的资金</li>
+        </ul>
+    </div>
+    <div id="divSplit" style="width: 100%; height: 30px">
+
+    </div>
+    <div id="divContent" style="width: 100%; height: 531px">
+        <div id="divLeftMenu" style="height: 100%; float: left; width: 184px; background-color: #fafafa; margin-left: 170px; text-align: center">
+            <ul style="display: block; padding: 20px 0 0 20px">
+                <li class="liLeftMenu">
+                    <span class="spanleftfirst" id="spanQRZH">个人中心</span>
+                    <em class="emstep" style="width: 140px; height: 1px;" id="emQRZH"></em>
+                </li>
+                <li class="liLeftMenu"><span class="spanleftsecond" id="spanWDFB">我的发布</span></li>
+                <li class="liLeftMenu"><span class="spanleftsecond" id="spanWDSC">我的收藏</span></li>
+                <li class="liLeftMenu"><span class="spanleftsecond" id="spanWDQZ">我的求职</span></li>
+                <li class="liLeftMenu"><span class="spanleftsecond" id="spanWDZP">我的招聘</span></li>
+                <li class="liLeftMenu"><span class="spanleftsecond" id="spanWDJY">我的交易</span></li>
+                <li class="liLeftMenu"><span class="spanleftsecond" id="spanWDDG">我的订购</span></li>
+                <li class="liLeftMenu"><span class="spanleftsecond" id="spanKHFW">客户服务</span></li>
+                <li class="liLeftMenu"><span class="spanleftsecond" id="spanBZZX">帮助中心</span></li>
+            </ul>
+        </div>
+        <div id="divRightContent" style="height: 100%; width: 900px; float: left; margin-left: 10px;">
+            <iframe id="iframeright" style="border: none; width: 100%; height: 100%"></iframe>
+        </div>
+    </div>
+</body>
+</html>

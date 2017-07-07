@@ -1,4 +1,5 @@
 ﻿$(document).ready(function () {
+    $("#XQMC").bind("keyup", LoadXQMC);
     $("#spanCXLB").bind("click", CXLB);
     $("#imgZTCZ").bind("click", ZTCZSelect);
     $("#imgDJCZ").bind("click", DJCZSelect);
@@ -11,7 +12,7 @@
     $(".inputFWLX").bind("blur", LCFBBlur);
     $("#FYMS").bind("focus", FYMSFocus);
     $("#FYMS").bind("blur", FYMSBlur);
-    $("#KRZSJ" ).datepicker({ minDate: 0 });
+    $("#KRZSJ").datepicker({ minDate: 0 });
 
     BindHover();
     LoadTXXX();
@@ -113,6 +114,123 @@ function ZTCZSelect() {
 function DJCZSelect() {
     $("#imgDJCZ").css("background-position", "-67px -57px");
     $("#imgZTCZ").css("background-position", "-67px 0px");
+}
+
+function LoadXQMC() {
+    var XQMC = $("#XQMC").val();
+    if (XQMC === "") {
+        $("#divXQMClist").css("display", "none");
+        return;
+    }
+    if (/^[\u4e00-\u9fa5]+$/i.test(XQMC)) //判断是否是汉字
+        LoadXQJBXXSByHZ(XQMC);
+    else
+        LoadXQJBXXSByPY(XQMC);
+}
+
+function LoadXQJBXXSByHZ(XQMC) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/FWCZ/LoadXQJBXXSByHZ",
+        dataType: "json",
+        data:
+        {
+            XQMC: XQMC
+        },
+        success: function (xml) {
+            if (xml.Result === 1 && xml.list.length > 0) {
+                var html = "<ul id='ulXQMC' class='uldropdown' style='height: " + (xml.list.length * 34.5) + "px;width:594px;background-color:#ffffff'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    var index = xml.list[i].XQMC.indexOf(XQMC);
+                    var xqmclength = XQMC.length;
+                    var xqmchtml = "";
+                    if (index === 0)
+                        xqmchtml = "<span style='color:#333333;font-weight:bolder;'>" + XQMC + "</span>" + "<span style='color:#333333'>" + xml.list[i].XQMC.substr(xqmclength, xml.list[i].XQMC.length - XQMC.length) + "</span>";
+                    else {
+                        xqmchtml = "<span style='color:#333333'>" + xml.list[i].XQMC.substr(0, index) + "</span>" + "<span style='color:#333333;font-weight:bolder;'>" + xml.list[i].XQMC.substr(index, xqmclength) + "</span>" + "<span style='color:#333333'>" + xml.list[i].XQMC.substr(index + xqmclength, xml.list[i].XQMC.length - index - xqmclength) + "</span>";
+                    }
+                    html += "<li class='lidropdown' onclick='SelectXQMC(this)'>" + xqmchtml + "&nbsp;&nbsp;<span style='color:#999999;font-size:12px;'>" + xml.list[i].XQDZ + "</span>" + "</li>";
+                }
+                html += "</ul>";
+                $("#divXQMClist").html(html);
+                $("#divXQMClist").css("display", "block");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+
+function LoadXQJBXXSByPY(XQMC) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/FWCZ/LoadXQJBXXSByPY",
+        dataType: "json",
+        data:
+        {
+            XQMC: XQMC
+        },
+        success: function (xml) {
+            if (xml.Result === 1 && xml.list.length > 0) {
+                var html = "<ul id='ulXQMC' class='uldropdown' style='height: " + (xml.list.length * 34.5) + "px;width:594px;background-color:#ffffff'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    var index = 0;
+                    var pys = xml.list[i].XQMCPY.split(' ');
+                    var count = 0;
+                    var syxqmc = XQMC;
+                    index = GetStartIndex(pys, syxqmc);
+                    for (var j = 0; j < pys.length; j++) {
+                        if (syxqmc.length > pys[j].length) {
+                            if (syxqmc.indexOf(pys[j]) !== -1) {
+                                count++;
+                                syxqmc = syxqmc.substr(pys[j].length, syxqmc.length - pys[j].length);
+                            }
+                        }
+                        else {
+                            if (pys[j].indexOf(syxqmc) !== -1 || pys[j].indexOf(syxqmc) !== -1) {
+                                count++;
+                                break;;
+                            }
+                        }
+                    }
+                    var getlength = count;
+                    var xqmchtml = "";
+                    if (index === 0)
+                        xqmchtml = "<span style='color:#333333;font-weight:bolder;'>" + xml.list[i].XQMC.substr(0, getlength) + "</span>" + "<span style='color:#333333'>" + xml.list[i].XQMC.substr(getlength, xml.list[i].XQMC.length - getlength) + "</span>";
+                    else {
+                        xqmchtml = "<span style='color:#333333'>" + xml.list[i].XQMC.substr(0, index) + "</span>" + "<span style='color:#333333;font-weight:bolder;'>" + xml.list[i].XQMC.substr(index, getlength) + "</span>" + "<span style='color:#333333'>" + xml.list[i].XQMC.substr(index + getlength, xml.list[i].XQMC.length - index - getlength) + "</span>";
+                    }
+                    html += "<li class='lidropdown' onclick='SelectXQMC(this)'>" + xqmchtml + "&nbsp;&nbsp;<span style='color:#999999;font-size:12px;'>" + xml.list[i].XQDZ + "</span>" + "</li>";
+                }
+                html += "</ul>";
+                $("#divXQMClist").html(html);
+                $("#divXQMClist").css("display", "block");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+
+function GetStartIndex(pys, sqmc) {
+    var index = 0;
+    for (var j = 0; j < pys.length; j++) {
+        if (sqmc.length > pys[j].length) {
+            if (sqmc.indexOf(pys[j]) !== -1) {
+                index = j;
+                break;;
+            }
+        }
+        else {
+            if (pys[j].indexOf(sqmc) !== -1 || pys[j].indexOf(sqmc) !== -1) {
+                index = j;
+                break;;
+            }
+        }
+    }
+    return index;
 }
 
 function LoadFWCX() {
@@ -406,6 +524,15 @@ function BindHover() {
     });
 }
 
+function SelectXQMC(obj) {
+    var html = "";
+    for (var i = 0; i < $(obj).find("span").length - 1; i++) {
+        html += $(obj).find("span")[i].innerHTML;
+    }
+    $("#XQMC").val(html);
+    $("#divXQMClist").css("display", "none");
+}
+
 function SelectFWCX(obj) {
     $("#spanFWCX").html(obj.innerHTML);
     $("#divFWCX").css("display", "none");
@@ -496,7 +623,7 @@ function FB() {
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-            
+
         }
     });
 }
