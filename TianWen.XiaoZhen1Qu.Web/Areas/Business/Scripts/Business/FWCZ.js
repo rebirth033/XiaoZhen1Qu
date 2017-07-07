@@ -1,4 +1,5 @@
 ﻿$(document).ready(function () {
+    $("#XQMC").bind("keyup", LoadXQMC);
     $("#spanCXLB").bind("click", CXLB);
     $("#imgZTCZ").bind("click", ZTCZSelect);
     $("#imgDJCZ").bind("click", DJCZSelect);
@@ -11,7 +12,7 @@
     $(".inputFWLX").bind("blur", LCFBBlur);
     $("#FYMS").bind("focus", FYMSFocus);
     $("#FYMS").bind("blur", FYMSBlur);
-    $("#KRZSJ" ).datepicker({ minDate: 0 });
+    $("#KRZSJ").datepicker({ minDate: 0 });
 
     BindHover();
     LoadTXXX();
@@ -113,6 +114,43 @@ function ZTCZSelect() {
 function DJCZSelect() {
     $("#imgDJCZ").css("background-position", "-67px -57px");
     $("#imgZTCZ").css("background-position", "-67px 0px");
+}
+
+function LoadXQMC() {
+    if ($("#XQMC").val() === "") {
+        $("#divXQMClist").css("display", "none");
+        return;
+    }
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/FWCZ/LoadXQJBXXS",
+        dataType: "json",
+        data:
+        {
+            XQMC: $("#XQMC").val()
+        },
+        success: function (xml) {
+            if (xml.Result === 1 && xml.list.length > 0) {
+                var html = "<ul id='ulXQMC' class='uldropdown' style='height: " + (xml.list.length * 34.5) + "px;width:594px;background-color:#ffffff'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    var index = xml.list[i].XQMC.indexOf($("#XQMC").val());
+                    var xqmchtml = "";
+                    if (index === 0)
+                        xqmchtml = "<span style='color:#333333;font-weight:bolder;'>" + $("#XQMC").val() + "</span>" + "<span style='color:#333333'>" + xml.list[i].XQMC.substr(1, xml.list[i].XQMC.length - $("#XQMC").val().length) + "</span>";
+                    else {
+                        xqmchtml = "<span style='color:#333333'>" + xml.list[i].XQMC.substr(0, index) + "</span>" + "<span style='color:#333333;font-weight:bolder;'>" + xml.list[i].XQMC.substr(index, 1) + "</span>" + "<span style='color:#333333'>" + xml.list[i].XQMC.substr(index + 1, xml.list[i].XQMC.length - index - 1) + "</span>";
+                    }
+                    html += "<li class='lidropdown' onclick='SelectXQMC(this)'>" + xqmchtml + "&nbsp;&nbsp;<span style='color:#999999;font-size:12px;'>" + xml.list[i].XQDZ + "</span>" + "</li>";
+                }
+                html += "</ul>";
+                $("#divXQMClist").html(html);
+                $("#divXQMClist").css("display", "block");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+            _masker.CloseMasker(false, errorThrown);
+        }
+    });
 }
 
 function LoadFWCX() {
@@ -406,6 +444,15 @@ function BindHover() {
     });
 }
 
+function SelectXQMC(obj) {
+    var html = "";
+    for (var i = 0; i < $(obj).find("span").length - 1; i++) {
+        html += $(obj).find("span")[i].innerHTML;
+    }
+    $("#XQMC").val(html);
+    $("#divXQMClist").css("display", "none");
+}
+
 function SelectFWCX(obj) {
     $("#spanFWCX").html(obj.innerHTML);
     $("#divFWCX").css("display", "none");
@@ -496,7 +543,7 @@ function FB() {
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-            
+
         }
     });
 }

@@ -68,7 +68,6 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
-
         public object LoadFWCZXX(string FWCZID)
         {
             try
@@ -95,6 +94,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 };
             }
         }
+
         public FWCZJBXX GetObjByID(string FWCZID)
         {
             IList<FWCZJBXX> list = DAO.Repository.GetObjectList<FWCZJBXX>(String.Format("FROM FWCZJBXX WHERE FWCZID='{0}'", FWCZID));
@@ -111,6 +111,20 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 return list[0];
             else
                 return null;
+        }
+
+        public object LoadXQJBXXS(string XQMC)
+        {
+            try
+            {
+                IList<XQJBXX> list = DAO.Repository.GetObjectList<XQJBXX>(String.Format("FROM XQJBXX WHERE XQMC like '%{0}%' or XQMCPY like '%{0}%' and ROWNUM <= 10 ORDER BY XQMC", XQMC));
+                return new { Result = EnResultType.Success, list = list };
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("error", ex.Message);
+                return new { Result = EnResultType.Failed, Message = "加载失败" };
+            }
         }
     }
 }
