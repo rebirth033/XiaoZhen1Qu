@@ -19,7 +19,7 @@ namespace WLPC.Ashx
             string url = context.Request["lianjie"];
             string page = context.Request["page"];
             string area = context.Request["area"];
-            string pageinfo;
+            string pageinfo, childpageinfo;
             try
             {
                 pageinfo = GetPageInfo(url);
@@ -35,7 +35,22 @@ namespace WLPC.Ashx
                 MatchCollection matches = regex.Matches(pageinfo);
                 for (int i = 0; i < matches.Count; i++)
                 {
-                    string sql = "insert into xqjbxx values(s_xqjbxx.nextval,'" + matches[i].Groups["text"].Value + "','','" + page + "','" + area + "','')";
+                    string address = string.Empty;
+                    childpageinfo = GetPageInfo(matches[i].Groups["url"].Value);
+                    pattern = "<p(\\s+(class=\"address\"|'([^'])*'|\\w+=\"(([^\"])*)\"|'([^'])*'))+>(?<text>(.*?))</p>";
+                    regex = new Regex(pattern);
+                    MatchCollection childmatches = regex.Matches(childpageinfo);
+                    for (int j = 0; j < childmatches.Count; j++)
+                    {
+                        if (childmatches[j].ToString().Contains("address"))
+                        {
+                            address = childmatches[j].Groups["text"].Value;
+                            break;
+                        }
+                    }
+                    if (!string.IsNullOrEmpty(address))
+                        address = address.Substring(address.IndexOf('[')+1, address.Length - address.IndexOf('[') - 1-1);
+                    string sql = "insert into xqjbxx values(s_xqjbxx.nextval,'" + matches[i].Groups["text"].Value + "','"+ address + "','','','','" + area + "','" + page + "')";
                     command.CommandText = sql;
                     command.ExecuteNonQuery();
                 }

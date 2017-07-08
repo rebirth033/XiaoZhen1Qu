@@ -180,7 +180,7 @@ function LoadXQJBXXSByPY(XQMC) {
                     var count = 0;
                     var syxqmc = XQMC;
 
-                    if (xml.list[i].XQMCPYSZM.indexOf(syxqmc) !== -1) {
+                    if (xml.list[i].XQMCPYSZM != null && xml.list[i].XQMCPYSZM.indexOf(syxqmc) !== -1) {
                         index = GetStartIndexBySZM(xml.list[i].XQMCPYSZM, syxqmc);
                         count = syxqmc.length;
                     }
