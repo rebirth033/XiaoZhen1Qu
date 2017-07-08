@@ -179,18 +179,25 @@ function LoadXQJBXXSByPY(XQMC) {
                     var pys = xml.list[i].XQMCPY.split(' ');
                     var count = 0;
                     var syxqmc = XQMC;
-                    index = GetStartIndex(pys, syxqmc);
-                    for (var j = 0; j < pys.length; j++) {
-                        if (syxqmc.length > pys[j].length) {
-                            if (syxqmc.indexOf(pys[j]) !== -1) {
-                                count++;
-                                syxqmc = syxqmc.substr(pys[j].length, syxqmc.length - pys[j].length);
+
+                    if (xml.list[i].XQMCPYSZM.indexOf(syxqmc) !== -1) {
+                        index = GetStartIndexBySZM(xml.list[i].XQMCPYSZM, syxqmc);
+                        count = syxqmc.length;
+                    }
+                    else {
+                        index = GetStartIndex(pys, syxqmc);
+                        for (var j = 0; j < pys.length; j++) {
+                            if (syxqmc.length > pys[j].length) {
+                                if (syxqmc.indexOf(pys[j]) !== -1) {
+                                    count++;
+                                    syxqmc = syxqmc.substr(pys[j].length, syxqmc.length - pys[j].length);
+                                }
                             }
-                        }
-                        else {
-                            if (pys[j].indexOf(syxqmc) !== -1 || pys[j].indexOf(syxqmc) !== -1) {
-                                count++;
-                                break;;
+                            else {
+                                if (pys[j].indexOf(syxqmc) !== -1 || pys[j].indexOf(syxqmc) !== -1) {
+                                    count++;
+                                    break;;
+                                }
                             }
                         }
                     }
@@ -231,6 +238,10 @@ function GetStartIndex(pys, sqmc) {
         }
     }
     return index;
+}
+
+function GetStartIndexBySZM(pyszm, sqmc) {
+    return pyszm.indexOf(sqmc);
 }
 
 function LoadFWCX() {

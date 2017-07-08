@@ -38,6 +38,12 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// </summary>
         [Property]
         public virtual string XQMCPYQKG { get; set; }
-        
+
+        /// <summary>
+        /// 小区名称拼音首字母
+        /// </summary>
+        [Property]
+        public virtual string XQMCPYSZM { get; set; }
+
     }
 }
