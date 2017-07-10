@@ -131,7 +131,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
         {
             try
             {
-                IList<XQJBXX> list = DAO.Repository.GetObjectList<XQJBXX>(String.Format("FROM XQJBXX WHERE XQMCPYQKG like '%{0}%' and ROWNUM <= 10 ORDER BY XQMC", XQMC));
+                IList<XQJBXX> list = DAO.Repository.GetObjectList<XQJBXX>(String.Format("FROM XQJBXX WHERE (XQMCPYQKG like '%{0}%' or XQMCPYSZM like '%{0}%') and ROWNUM <= 10 ORDER BY XQMC", XQMC));
                 return new { Result = EnResultType.Success, list = list };
             }
             catch (Exception ex)

@@ -33,7 +33,6 @@ D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.Xiao
 D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Interface\bin\Debug\FluentNHibernate.dll
 D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Interface\bin\Debug\NHibernate.Mapping.Attributes.dll
 D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Interface\bin\Debug\Iesi.Collections.dll
-D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Interface\bin\Debug\TianWen.Nhibernate.pdb
 D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Interface\bin\Debug\TianWen.XiaoZhen1Qu.Entities.pdb
 D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Interface\obj\Debug\TianWen.XiaoZhen1Qu.Interface.csprojResolveAssemblyReference.cache
 D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Interface\obj\Debug\TianWen.XiaoZhen1Qu.Interface.dll

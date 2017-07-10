@@ -17,7 +17,7 @@
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/jquery-ui-1.12.1.custom/jquery.ui.datepicker-zh-CN.js")"></script>
 </head>
 <body style="width: 100%; height: 100%; font-family: 微软雅黑">
-    <div style="width: 1440px; text-align: center;">
+    <div style="width: 1440px; text-align: center; ">
         <div id="divLBHead" style="margin-left: 18%; margin-top: 20px;">
             <table class="table" style="width: 100%; text-align: center;">
                 <tr>
@@ -134,7 +134,7 @@
                 </div>
                 <div class="divRight">
                     <span id="spanC" class="spanFWLX SRK">
-                        <span class="spanFontColor" style=" margin-left: 8px">第</span>
+                        <span class="spanFontColor" style=" margin-left 8px">第</span>
                         <input id="C" column="C" class="inputLCFB spanFontColor" type="text" style="width: 70px" />
                         <span class="spanFontColor">层</span>
                     </span>
@@ -151,7 +151,7 @@
                     <span class="spanFWCZ">房屋租金</span>
                 </div>
                 <div class="divRight">
-                    <span id="spanZJ" class="spanFWLX SRK" style=" display: inline-block;">
+                    <span id="spanZJ" class="spanFWLX SRK" style=" display inline-block;">
                         <input id="ZJ" column="ZJ" class="inputLCFB spanFontColor" type="text" style="width: 78px" />
                         <span class="spanFontColor">元/月</span>
                     </span>
@@ -232,6 +232,17 @@
                     </div>
                     <div style="margin-left: 214px; font-size: 14px; color: #999999;">
                         <span>最多8张，可多选上传，最大10mb。有图可使浏览量增加3倍，并会在推荐位显示。</span>
+                    </div>
+
+                </div>
+            </div>
+            <div id="divFWZPValue" class="divFWCZ" style="display: block; text-align: left; margin-top: 140px;">
+                <div class="divLeft" style="height: 170px; vertical-align: top;">
+                    <span class="required"></span>
+                    <span id="spanFWZP" style="width:56px; display:inline-block;"></span>
+                </div>
+                <div class="divRight">
+                    <div id="divImg" style="border:1px solid #999999; width:130px;height:130px; display:inline-block;">
                     </div>
                 </div>
             </div>

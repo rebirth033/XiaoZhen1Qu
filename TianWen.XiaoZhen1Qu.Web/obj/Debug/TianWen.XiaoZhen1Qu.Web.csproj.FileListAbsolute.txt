@@ -138,11 +138,6 @@ D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.Xiao
 D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\FluentNHibernate.dll
 D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\Oracle.ManagedDataAccess.dll
 D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\NHibernate.Mapping.Attributes.dll
-D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\TianWen.Business.Framework.pdb
-D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\TianWen.Framework.pdb
-D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\TianWen.Nhibernate.pdb
-D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\TianWen.Persistence.pdb
-D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\TianWen.Utility.pdb
 D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\TianWen.XiaoZhen1Qu.Entities.pdb
 D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\TianWen.XiaoZhen1Qu.Interface.pdb
 D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\TianWen.XiaoZhen1Qu.pdb

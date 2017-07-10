@@ -14,6 +14,11 @@
     $("#FYMS").bind("blur", FYMSBlur);
     $("#KRZSJ").datepicker({ minDate: 0 });
 
+    $("#inputUpload").change(function () {
+        var file = this.files[0];
+        readFile(file, $("#divImg"));
+    });
+
     BindHover();
     LoadTXXX();
     LoadFWCX();
@@ -25,7 +30,35 @@
     LoadFWCZXX();
     FYMSSetDefault();
 });
+//新建阅读器
+var reader = new FileReader();
+function readFile(file, element) {
+    //根据文件类型选择阅读方式
+    switch (file.type) {
+        case 'image/jpg':
+        case 'image/png':
+        case 'image/jpeg':
+        case 'image/gif':
+            reader.readAsDataURL(file);
+            break;
+    }
 
+    reader.addEventListener('load', function () {
+        //如果说让读取的文件显示的话 还是需要通过文件的类型创建不同的标签
+        switch (file.type) {
+            case 'image/jpg':
+            case 'image/png':
+            case 'image/jpeg':
+            case 'image/gif':
+                var img = document.createElement('img');
+                img.src = reader.result;
+                element.append(img);
+                element.siblings(".addhao").hide();
+                element.show();
+                break;
+        }
+    });
+}
 function FYMSFocus() {
     $("#FYMS").css("color", "#333333");
 }
@@ -179,18 +212,25 @@ function LoadXQJBXXSByPY(XQMC) {
                     var pys = xml.list[i].XQMCPY.split(' ');
                     var count = 0;
                     var syxqmc = XQMC;
-                    index = GetStartIndex(pys, syxqmc);
-                    for (var j = 0; j < pys.length; j++) {
-                        if (syxqmc.length > pys[j].length) {
-                            if (syxqmc.indexOf(pys[j]) !== -1) {
-                                count++;
-                                syxqmc = syxqmc.substr(pys[j].length, syxqmc.length - pys[j].length);
+
+                    if (xml.list[i].XQMCPYSZM != null && xml.list[i].XQMCPYSZM.indexOf(syxqmc) !== -1) {
+                        index = GetStartIndexBySZM(xml.list[i].XQMCPYSZM, syxqmc);
+                        count = syxqmc.length;
+                    }
+                    else {
+                        index = GetStartIndex(pys, syxqmc);
+                        for (var j = 0; j < pys.length; j++) {
+                            if (syxqmc.length > pys[j].length) {
+                                if (syxqmc.indexOf(pys[j]) !== -1) {
+                                    count++;
+                                    syxqmc = syxqmc.substr(pys[j].length, syxqmc.length - pys[j].length);
+                                }
                             }
-                        }
-                        else {
-                            if (pys[j].indexOf(syxqmc) !== -1 || pys[j].indexOf(syxqmc) !== -1) {
-                                count++;
-                                break;;
+                            else {
+                                if (pys[j].indexOf(syxqmc) !== -1 || pys[j].indexOf(syxqmc) !== -1) {
+                                    count++;
+                                    break;;
+                                }
                             }
                         }
                     }
@@ -231,6 +271,10 @@ function GetStartIndex(pys, sqmc) {
         }
     }
     return index;
+}
+
+function GetStartIndexBySZM(pyszm, sqmc) {
+    return pyszm.indexOf(sqmc);
 }
 
 function LoadFWCX() {
