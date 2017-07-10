@@ -30,8 +30,10 @@
     LoadFWCZXX();
     FYMSSetDefault();
 });
+
 //新建阅读器
 var reader = new FileReader();
+
 function readFile(file, element) {
     //根据文件类型选择阅读方式
     switch (file.type) {
@@ -59,6 +61,7 @@ function readFile(file, element) {
         }
     });
 }
+
 function FYMSFocus() {
     $("#FYMS").css("color", "#333333");
 }
@@ -150,6 +153,44 @@ function DJCZSelect() {
 }
 
 function LoadXQMC() {
+    if (event.keyCode === 40) {//按下
+        var lis = $("#divXQMClist").find("li");
+        for (var i = 0; i < lis.length; i++) {
+            if ($("#divXQMClist").find("li:eq(" + i + ")").css("background-color") === "rgb(236, 236, 236)") {
+                $("#divXQMClist").find("li:eq(" + i + ")").css("background-color", "#FFFFFF");
+                $("#divXQMClist").find("li:eq(" + i + ")").bind("mouseover", function() {$(this).css("background-color", "#ececec");});
+                $("#divXQMClist").find("li:eq(" + i + ")").bind("mouseleave", function () {$(this).css("background-color", "#FFFFFF");});
+                $("#divXQMClist").find("li:eq(" + (i + 1) + ")").css("background-color", "#ececec");
+                return;
+            }
+        }
+        $("#divXQMClist").find("li:eq(0)").css("background-color", "#ececec");
+        return;
+    }
+    if (event.keyCode === 38) {//按上
+        var lis = $("#divXQMClist").find("li");
+        for (var i = 0; i < lis.length; i++) {
+            if ($("#divXQMClist").find("li:eq(" + i + ")").css("background-color") === "rgb(236, 236, 236)") {
+                if (i !== 0)
+                    $("#divXQMClist").find("li:eq(" + (i - 1) + ")").css("background-color", "#ececec");
+                $("#divXQMClist").find("li:eq(" + i + ")").css("background-color", "#FFFFFF");
+                $("#divXQMClist").find("li:eq(" + i + ")").bind("mouseover", function () { $(this).css("background-color", "#ececec"); });
+                $("#divXQMClist").find("li:eq(" + i + ")").bind("mouseleave", function () { $(this).css("background-color", "#FFFFFF"); });
+                return;
+            }
+        }
+        $("#divXQMClist").find("li:eq(" + (lis.length-1) + ")").css("background-color", "#ececec");
+        return;
+    }
+    if (event.keyCode === 13) {//回车
+        var lis = $("#divXQMClist").find("li");
+        for (var i = 0; i < lis.length; i++) {
+            if ($("#divXQMClist").find("li:eq(" + i + ")").css("background-color") === "rgb(236, 236, 236)") {
+                SelectXQMC($("#divXQMClist").find("li:eq(" + i + ")"));
+                return;
+            }
+        }
+    }
     var XQMC = $("#XQMC").val();
     if (XQMC === "") {
         $("#divXQMClist").css("display", "none");
