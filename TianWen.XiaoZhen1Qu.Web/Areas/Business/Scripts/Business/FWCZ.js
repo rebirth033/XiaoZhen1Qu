@@ -16,7 +16,11 @@
 
     $("#inputUpload").change(function () {
         var file = this.files[0];
-        readFile(file, $("#divImg"));
+        readFile(file);
+        //readFile(file, $("#divImg2"));
+        //readFile(file, $("#divImg3"));
+        //readFile(file, $("#divImg4"));
+
     });
 
     BindHover();
@@ -34,7 +38,7 @@
 //新建阅读器
 var reader = new FileReader();
 
-function readFile(file, element) {
+function readFile(file) {
     //根据文件类型选择阅读方式
     switch (file.type) {
         case 'image/jpg':
@@ -52,11 +56,9 @@ function readFile(file, element) {
             case 'image/png':
             case 'image/jpeg':
             case 'image/gif':
-                var img = document.createElement('img');
-                img.src = reader.result;
-                element.append(img);
-                element.siblings(".addhao").hide();
-                element.show();
+                $("#divImg1").html("<img src='" + reader.result + "' style='width:100%;height:100%' />");
+                $("#divImg2").html("<img src='" + reader.result + "' style='width:100%;height:100%' />");
+                $("#divImg3").html("<img src='" + reader.result + "' style='width:100%;height:100%' />");
                 break;
         }
     });
