@@ -30,15 +30,24 @@
 
 function Upload() {
     var f = $(this).get(0).files[0];
-    var form = $("#myform");
-    var formData = new FormData(form);
-    formData.append('Filedata', f);
-    formData.append('width', "130");
-    formData.append('height', "130");
-    var xhr = new XMLHttpRequest();
-    xhr.addEventListener("load", uploadComplete, false);
-    xhr.open('POST', getRootPath() + "/Areas/Business/Ashx/SavePhotos.Ashx");
-    xhr.send(formData);
+    var reader = new FileReader();
+    reader.readAsDataURL(f);
+    reader.onload = function (theFile) {
+        var image = new Image();
+        image.src = theFile.target.result;
+        image.onload = function () {
+            var form = $("#myform");
+            var formData = new FormData(form);
+            formData.append('Filedata', f);
+            formData.append('width', this.width);
+            formData.append('height', this.height);
+            var xhr = new XMLHttpRequest();
+            xhr.addEventListener("load", uploadComplete, false);
+            xhr.open('POST', getRootPath() + "/Areas/Business/Ashx/SavePhotos.Ashx");
+            xhr.send(formData);
+        };
+    };
+    
    
 }
 

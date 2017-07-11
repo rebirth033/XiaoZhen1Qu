@@ -190,11 +190,12 @@
 
 .divImg {
     /*border: 1px solid #999999;*/
-    width: 130px;
-    height: 130px;
+    width: 150px;
+    height: 146px;
     display: inline-block;
     margin-right: 21px;
     border-radius: 4px;
+    overflow: hidden;
 }
 
 .file {
