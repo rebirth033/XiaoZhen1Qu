@@ -200,6 +200,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Business\Ashx\SavePhotos.ashx.cs">
+      <DependentUpon>SavePhotos.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Areas\Business\Aspx\png.aspx.cs">
       <DependentUpon>png.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -247,6 +250,7 @@
     <Content Include="Areas\Business\Views\FWCZ\FWCZ.cshtml" />
     <Content Include="Areas\Business\Scripts\jquery-ui-1.12.1.custom\package.json" />
     <Content Include="Areas\Business\Scripts\jquery-ui-1.12.1.custom\jquery.ui.datepicker-zh-CN.js" />
+    <Content Include="Areas\Business\Ashx\SavePhotos.ashx" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -257,6 +261,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Business\Photos\" />
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>

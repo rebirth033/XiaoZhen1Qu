@@ -1,4 +1,5 @@
 ﻿$(document).ready(function () {
+    
     $("#XQMC").bind("keyup", LoadXQMC);
     $("#spanCXLB").bind("click", CXLB);
     $("#imgZTCZ").bind("click", ZTCZSelect);
@@ -13,15 +14,7 @@
     $("#FYMS").bind("focus", FYMSFocus);
     $("#FYMS").bind("blur", FYMSBlur);
     $("#KRZSJ").datepicker({ minDate: 0 });
-
-    $("#inputUpload").change(function () {
-        var file = this.files[0];
-        readFile(file);
-        //readFile(file, $("#divImg2"));
-        //readFile(file, $("#divImg3"));
-        //readFile(file, $("#divImg4"));
-
-    });
+    $("#inputUpload").bind("change", Upload);
 
     BindHover();
     LoadTXXX();
@@ -35,34 +28,25 @@
     FYMSSetDefault();
 });
 
-//新建阅读器
-var reader = new FileReader();
-
-function readFile(file) {
-    //根据文件类型选择阅读方式
-    switch (file.type) {
-        case 'image/jpg':
-        case 'image/png':
-        case 'image/jpeg':
-        case 'image/gif':
-            reader.readAsDataURL(file);
-            break;
-    }
-
-    reader.addEventListener('load', function () {
-        //如果说让读取的文件显示的话 还是需要通过文件的类型创建不同的标签
-        switch (file.type) {
-            case 'image/jpg':
-            case 'image/png':
-            case 'image/jpeg':
-            case 'image/gif':
-                $("#divImg1").html("<img src='" + reader.result + "' style='width:100%;height:100%' />");
-                $("#divImg2").html("<img src='" + reader.result + "' style='width:100%;height:100%' />");
-                $("#divImg3").html("<img src='" + reader.result + "' style='width:100%;height:100%' />");
-                break;
-        }
-    });
+function Upload() {
+    var f = $(this).get(0).files[0];
+    var form = $("#myform");
+    var formData = new FormData(form);
+    formData.append('Filedata', f);
+    formData.append('width', "130");
+    formData.append('height', "130");
+    var xhr = new XMLHttpRequest();
+    xhr.addEventListener("load", uploadComplete, false);
+    xhr.open('POST', getRootPath() + "/Areas/Business/Ashx/SavePhotos.Ashx");
+    xhr.send(formData);
+   
 }
+
+function uploadComplete(evt) {
+    var imagepath = getRootPath() + evt.target.responseText;
+    $("#divImgs").append("<img src='" + imagepath + "' class='divImg' />");
+}
+
 
 function FYMSFocus() {
     $("#FYMS").css("color", "#333333");
@@ -135,7 +119,7 @@ function LoadTXXX() {
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-            _masker.CloseMasker(false, errorThrown);
+            
         }
     });
 }
@@ -160,8 +144,8 @@ function LoadXQMC() {
         for (var i = 0; i < lis.length; i++) {
             if ($("#divXQMClist").find("li:eq(" + i + ")").css("background-color") === "rgb(236, 236, 236)") {
                 $("#divXQMClist").find("li:eq(" + i + ")").css("background-color", "#FFFFFF");
-                $("#divXQMClist").find("li:eq(" + i + ")").bind("mouseover", function() {$(this).css("background-color", "#ececec");});
-                $("#divXQMClist").find("li:eq(" + i + ")").bind("mouseleave", function () {$(this).css("background-color", "#FFFFFF");});
+                $("#divXQMClist").find("li:eq(" + i + ")").bind("mouseover", function () { $(this).css("background-color", "#ececec"); });
+                $("#divXQMClist").find("li:eq(" + i + ")").bind("mouseleave", function () { $(this).css("background-color", "#FFFFFF"); });
                 $("#divXQMClist").find("li:eq(" + (i + 1) + ")").css("background-color", "#ececec");
                 return;
             }
@@ -181,7 +165,7 @@ function LoadXQMC() {
                 return;
             }
         }
-        $("#divXQMClist").find("li:eq(" + (lis.length-1) + ")").css("background-color", "#ececec");
+        $("#divXQMClist").find("li:eq(" + (lis.length - 1) + ")").css("background-color", "#ececec");
         return;
     }
     if (event.keyCode === 13) {//回车
@@ -341,7 +325,7 @@ function LoadFWCX() {
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-            _masker.CloseMasker(false, errorThrown);
+            
         }
     });
 }
@@ -367,7 +351,7 @@ function LoadZXQK() {
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-            _masker.CloseMasker(false, errorThrown);
+            
         }
     });
 }
@@ -393,7 +377,7 @@ function LoadZZLX() {
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-            _masker.CloseMasker(false, errorThrown);
+            
         }
     });
 }
@@ -419,7 +403,7 @@ function LoadYFFS() {
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-            _masker.CloseMasker(false, errorThrown);
+            
         }
     });
 }
@@ -448,7 +432,7 @@ function LoadBHFY() {
             LoadFWPZ();
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-            _masker.CloseMasker(false, errorThrown);
+            
         }
     });
 }
@@ -477,7 +461,7 @@ function LoadFWPZ() {
             LoadFWLD();
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-            _masker.CloseMasker(false, errorThrown);
+            
         }
     });
 }
@@ -506,7 +490,7 @@ function LoadFWLD() {
             LoadCZYQ();
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-            _masker.CloseMasker(false, errorThrown);
+            
         }
     });
 }
@@ -535,7 +519,7 @@ function LoadCZYQ() {
             LoadFWCZXX();
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-            _masker.CloseMasker(false, errorThrown);
+            
         }
     });
 }
@@ -781,7 +765,7 @@ function LoadFWCZXX() {
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-            _masker.CloseMasker(false, errorThrown);
+            
         }
     });
 

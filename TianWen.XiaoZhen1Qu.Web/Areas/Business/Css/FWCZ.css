@@ -189,10 +189,28 @@
 }
 
 .divImg {
-    border: 1px solid #999999;
+    /*border: 1px solid #999999;*/
     width: 130px;
     height: 130px;
     display: inline-block;
     margin-right: 21px;
     border-radius: 4px;
+}
+
+.file {
+    margin-top: -20px; 
+    margin-left: -58.5px; 
+    float: left; 
+    width: 195px; 
+    height: 145px; 
+    opacity: 0; 
+    cursor: pointer;
+}
+
+.divUpload {
+    width: 76px; 
+    height: 107px; 
+    margin-top: 20px; 
+    margin-left: 58.5px; 
+    background-image: url(http://localhost/XiaoZhen1Qu/Areas/Business/Css/images/upload_small2.png)
 }
