@@ -29,6 +29,7 @@
 });
 
 function Upload() {
+    $("#divFWZPValue").css("display", "block");
     var f = $(this).get(0).files[0];
     var reader = new FileReader();
     reader.readAsDataURL(f);
@@ -53,7 +54,17 @@ function Upload() {
 
 function uploadComplete(evt) {
     var imagepath = getRootPath() + evt.target.responseText;
-    $("#divImgs").append("<img src='" + imagepath + "' class='divImg' />");
+    if ($("#divImgs1").find("img").length < 4){
+        $("#divImgs1").append("<img src='" + imagepath + "' class='divImg' />");
+    }
+    else{
+        $("#divLXRXX").css("margin-top", "300px");
+        $("#divImgs2").append("<img src='" + imagepath + "' class='divImg' />");
+    }
+    if ($("#divImgs2").find("img").length === 4) {
+        $("#divUploadOut").css("background-color", "#ececec");
+        $("#inputUpload").attr("disabled", "disabled");
+    }
 }
 
 
@@ -106,8 +117,8 @@ function LCFBBlur() {
 }
 
 function LoadDefault() {
-    $("#imgZTCZ").css("background-position", "-67px -57px");
-    $("#imgDJCZ").css("background-position", "-67px 0px");
+    $("#imgZTCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+    $("#imgDJCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
 }
 
 function LoadTXXX() {
@@ -138,13 +149,13 @@ function CXLB() {
 }
 
 function ZTCZSelect() {
-    $("#imgZTCZ").css("background-position", "-67px -57px");
-    $("#imgDJCZ").css("background-position", "-67px 0px");
+    $("#imgZTCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+    $("#imgDJCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
 }
 
 function DJCZSelect() {
-    $("#imgDJCZ").css("background-position", "-67px -57px");
-    $("#imgZTCZ").css("background-position", "-67px 0px");
+    $("#imgZTCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+    $("#imgDJCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
 }
 
 function LoadXQMC() {

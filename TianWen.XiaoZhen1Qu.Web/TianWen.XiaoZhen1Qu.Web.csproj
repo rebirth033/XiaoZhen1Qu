@@ -142,11 +142,13 @@
     <Content Include="Areas\Business\Css\images\logo.png" />
     <Content Include="Areas\Business\Css\images\no.png" />
     <Content Include="Areas\Business\Css\images\one-blue.png" />
+    <Content Include="Areas\Business\Css\images\radio_blue.png" />
+    <Content Include="Areas\Business\Css\images\radio_gray.png" />
+    <Content Include="Areas\Business\Css\images\radio_gray2.png" />
     <Content Include="Areas\Business\Css\images\three-blue.png" />
     <Content Include="Areas\Business\Css\images\three-gray.png" />
     <Content Include="Areas\Business\Css\images\two-blue.png" />
     <Content Include="Areas\Business\Css\images\two-gray.png" />
-    <Content Include="Areas\Business\Css\images\upload.png" />
     <Content Include="Areas\Business\Css\images\upload_small.png" />
     <Content Include="Areas\Business\Css\images\upload_small2.png" />
     <Content Include="Areas\Business\Css\images\yes.png" />

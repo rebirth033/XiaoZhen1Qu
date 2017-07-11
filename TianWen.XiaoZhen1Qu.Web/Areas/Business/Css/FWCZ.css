@@ -30,12 +30,12 @@
 }
 
 .iFWCZ {
-    width: 16px;
-    height: 16px;
-    background-image: url(http://localhost/XiaoZhen1Qu/Areas/Business/Css/images/icon.png);
-    /*background-position: -67px -57px;*/
-    background-position: -67px -0px;
+    width: 18px;
+    height: 18px;
+    /*background-image: url(http://10.0.1.165/XiaoZhen1Qu/Areas/Business/Css/images/icon.png);
+    background-position: -67px -0px;*/
     cursor: pointer;
+    border: none !important;
 }
 
 .spanFWQK {
@@ -47,7 +47,7 @@
 }
 
 .divFWQKArrow {
-    background-image: url(http://localhost/XiaoZhen1Qu/Areas/Business/Css/images/arrow_down.png);
+    background-image: url(http://10.0.1.165/XiaoZhen1Qu/Areas/Business/Css/images/arrow_down.png);
     width: 16px;
     height: 16px;
     display: inline-block;
@@ -169,7 +169,7 @@
 }
 
 .inputLXRXX {
-    width: 350px;
+    width: 472px;
     padding: 6px 12px;
     color: #999999;
 }
@@ -194,6 +194,7 @@
     height: 146px;
     display: inline-block;
     margin-right: 21px;
+    margin-top: 20px;
     border-radius: 4px;
     overflow: hidden;
 }
@@ -213,5 +214,5 @@
     height: 107px; 
     margin-top: 20px; 
     margin-left: 58.5px; 
-    background-image: url(http://localhost/XiaoZhen1Qu/Areas/Business/Css/images/upload_small2.png)
+    background-image: url(http://10.0.1.165/XiaoZhen1Qu/Areas/Business/Css/images/upload_small2.png)
 }
