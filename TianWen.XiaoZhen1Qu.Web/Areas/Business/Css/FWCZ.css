@@ -200,8 +200,6 @@
 }
 
 .file {
-    margin-top: -20px; 
-    margin-left: -58.5px; 
     float: left; 
     width: 195px; 
     height: 145px; 
@@ -209,10 +207,10 @@
     cursor: pointer;
 }
 
-.divUpload {
-    width: 76px; 
-    height: 107px; 
-    margin-top: 20px; 
-    margin-left: 58.5px; 
-    background-image: url(http://10.0.1.165/XiaoZhen1Qu/Areas/Business/Css/images/upload_small2.png)
+.divUploadOut {
+    width: 193px; 
+    height: 142px; 
+    display: inline-block; 
+    border: 1px solid #cccccc; 
+    background-image: url(http://10.0.1.165/XiaoZhen1Qu/Areas/Business/Css/images/upload_small2.png);
 }
