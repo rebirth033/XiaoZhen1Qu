@@ -144,7 +144,6 @@
     <Content Include="Areas\Business\Css\images\one-blue.png" />
     <Content Include="Areas\Business\Css\images\radio_blue.png" />
     <Content Include="Areas\Business\Css\images\radio_gray.png" />
-    <Content Include="Areas\Business\Css\images\radio_gray2.png" />
     <Content Include="Areas\Business\Css\images\three-blue.png" />
     <Content Include="Areas\Business\Css\images\three-gray.png" />
     <Content Include="Areas\Business\Css\images\two-blue.png" />
