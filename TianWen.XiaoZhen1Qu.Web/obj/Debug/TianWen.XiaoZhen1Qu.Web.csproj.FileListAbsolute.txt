@@ -164,11 +164,11 @@ F:\福建天问信息技术责任有限公司\小镇1区源代码\TianWen.XiaoZh
 F:\福建天问信息技术责任有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Web\bin\TianWen.XiaoZhen1Qu.dll
 F:\福建天问信息技术责任有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Web\bin\TianWen.XiaoZhen1Qu.Entities.dll
 F:\福建天问信息技术责任有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Web\bin\TianWen.XiaoZhen1Qu.Interface.dll
-F:\福建天问信息技术责任有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Web\bin\Spring.Aop.dll
-F:\福建天问信息技术责任有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Web\bin\NHibernate.dll
 F:\福建天问信息技术责任有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Web\bin\FluentNHibernate.dll
-F:\福建天问信息技术责任有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Web\bin\Oracle.ManagedDataAccess.dll
 F:\福建天问信息技术责任有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Web\bin\NHibernate.Mapping.Attributes.dll
+F:\福建天问信息技术责任有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Web\bin\NHibernate.dll
+F:\福建天问信息技术责任有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Web\bin\Spring.Aop.dll
+F:\福建天问信息技术责任有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Web\bin\Oracle.ManagedDataAccess.dll
 F:\福建天问信息技术责任有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Web\bin\TianWen.XiaoZhen1Qu.Entities.pdb
 F:\福建天问信息技术责任有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Web\bin\TianWen.XiaoZhen1Qu.Interface.pdb
 F:\福建天问信息技术责任有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Web\bin\TianWen.XiaoZhen1Qu.pdb
