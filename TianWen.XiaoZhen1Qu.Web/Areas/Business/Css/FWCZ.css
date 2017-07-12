@@ -45,7 +45,7 @@
 }
 
 .divFWQKArrow {
-    background-image: url(http://10.0.1.165/XiaoZhen1Qu/Areas/Business/Css/images/arrow_down.png);
+    background-image: url(../../Css/images/arrow_down.png);
     width: 16px;
     height: 16px;
     display: inline-block;
@@ -209,7 +209,7 @@
     height: 145px; 
     display: inline-block; 
     border: 1px solid #cccccc; 
-    background-image: url(http://10.0.1.165/XiaoZhen1Qu/Areas/Business/Css/images/upload_small2.png);
+    background-image: url(../../Css/images/upload_small2.png);
 }
 
 .Warn {
