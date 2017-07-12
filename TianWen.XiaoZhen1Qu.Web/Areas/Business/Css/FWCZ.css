@@ -5,7 +5,7 @@
     font-size: 15px;
     margin-left: 10px;
     margin-bottom: 10px;
-    height: 50px;
+    height: 62px;
     position: relative;
     display: block;
 }
@@ -32,8 +32,6 @@
 .iFWCZ {
     width: 18px;
     height: 18px;
-    /*background-image: url(http://10.0.1.165/XiaoZhen1Qu/Areas/Business/Css/images/icon.png);
-    background-position: -67px -0px;*/
     cursor: pointer;
     border: none !important;
 }
@@ -189,7 +187,6 @@
 }
 
 .divImg {
-    /*border: 1px solid #999999;*/
     width: 150px;
     height: 146px;
     display: inline-block;
@@ -214,3 +211,26 @@
     border: 1px solid #cccccc; 
     background-image: url(http://10.0.1.165/XiaoZhen1Qu/Areas/Business/Css/images/upload_small2.png);
 }
+
+.Warn {
+    font-size: 14px;
+    color: #fd634f;
+    margin-left: 220px;
+    z-index: 999;
+    position: relative;
+}
+
+.Info {
+    font-size: 14px;
+    color: #5bc0de;
+    margin-left: 220px;
+    z-index: 999;
+     position: relative;
+}
+
+.imgTip {
+    width: 18px;
+    height: 18px;
+    margin-right: 2px;
+}
+

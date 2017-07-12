@@ -1,16 +1,18 @@
 ﻿$(document).ready(function () {
-    
     $("#XQMC").bind("keyup", LoadXQMC);
+    $("#XQMC").bind("blur", ValidateXQMC);
+    $("#XQMC").bind("blur", HideXQMCList);
+    $("#XQMC").bind("focus", InfoXQMC);
     $("#spanCXLB").bind("click", CXLB);
     $("#imgZTCZ").bind("click", ZTCZSelect);
     $("#imgDJCZ").bind("click", DJCZSelect);
     $("#divUploadOut").bind("mouseover", GetUploadCss);
     $("#divUploadOut").bind("mouseleave", LeaveUploadCss);
     $("#btnFB").bind("click", FB);
-    $(".inputLCFB").bind("focus", LCFBFocus);
-    $(".inputLCFB").bind("blur", LCFBBlur);
-    $(".inputFWLX").bind("focus", LCFBFocus);
-    $(".inputFWLX").bind("blur", LCFBBlur);
+    $(".inputLCFB").bind("focus", FWLXYLCFBFocus);
+    $(".inputLCFB").bind("blur", FWLXYLCFBBlur);
+    $(".inputFWLX").bind("focus", FWLXYLCFBFocus);
+    $(".inputFWLX").bind("blur", FWLXYLCFBBlur);
     $("#FYMS").bind("focus", FYMSFocus);
     $("#FYMS").bind("blur", FYMSBlur);
     $("#KRZSJ").datepicker({ minDate: 0 });
@@ -28,6 +30,48 @@
     FYMSSetDefault();
 });
 
+function ValidateXQMC()
+{
+    if ($("#XQMC").val() === "" || $("#XQMC").val() === null) {
+        $("#divXQMCTip").css("display", "block");
+        $("#divXQMCTip").attr("class", "Warn");
+        $("#divXQMCTip").html('<img src="http://10.0.1.165/XiaoZhen1Qu/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写小区名称啦');
+        $("#XQMC").css("border-color", "#fd634f");
+    } else {
+        $("#divXQMCTip").css("display", "none");
+        $("#XQMC").css("border-color", "#cccccc");
+    }
+}
+
+function InfoXQMC() {
+    $("#divXQMCTip").attr("class", "Info");
+    $("#divXQMCTip").html('<img src="http://10.0.1.165/XiaoZhen1Qu/Areas/Business/Css/images/info.png" class="imgTip" />2-20个汉字,不能填写电话、特殊符号');
+    $("#XQMC").css("border-color", "#5bc0de");
+}
+
+function HideXQMCList() {
+    $("#divXQMClist").css("display", "none");
+}
+
+function ValidateFWLX() {
+    if ($("#S").val() === "" || $("#S").val() === null) {
+        $("#divFWLXTip").css("display", "block");
+        $("#divFWLXTip").attr("class", "Warn");
+        $("#divXQMCTip").html('<img src="http://10.0.1.165/XiaoZhen1Qu/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写小区名称啦');
+        $("#XQMC").css("border-color", "#fd634f");
+    } else {
+        $("#divXQMCTip").css("display", "none");
+        $("#XQMC").css("border-color", "#cccccc");
+    }
+}
+
+function InfoFWLX() {
+    $("#divXQMCTip").attr("class", "Info");
+    $("#divXQMCTip").html('<img src="http://10.0.1.165/XiaoZhen1Qu/Areas/Business/Css/images/info.png" class="imgTip" />2-20个汉字,不能填写电话、特殊符号');
+    $("#XQMC").css("border-color", "#5bc0de");
+}
+
+//上传照片
 function Upload() {
     $("#divFWZPValue").css("display", "block");
     var f = $(this).get(0).files[0];
@@ -48,10 +92,8 @@ function Upload() {
             xhr.send(formData);
         };
     };
-    
-   
 }
-
+//上传完成事件
 function uploadComplete(evt) {
     var imagepath = getRootPath() + evt.target.responseText;
     if ($("#divImgs1").find("img").length < 4){
@@ -67,7 +109,6 @@ function uploadComplete(evt) {
     }
 }
 
-
 function FYMSFocus() {
     $("#FYMS").css("color", "#333333");
 }
@@ -81,7 +122,7 @@ function FYMSSetDefault() {
     $("#FYMS").html(fyms);
 }
 
-function LCFBFocus() {
+function FWLXYLCFBFocus() {
     if ($(this)[0].id === "C")
         $("#spanC").css("border", "1px solid #5bc0de");
     if ($(this)[0].id === "GJC")
@@ -99,7 +140,7 @@ function LCFBFocus() {
 
 }
 
-function LCFBBlur() {
+function FWLXYLCFBBlur() {
     if ($(this)[0].id === "C")
         $("#spanC").css("border", "1px solid #cccccc");
     if ($(this)[0].id === "GJC")
@@ -208,6 +249,7 @@ function LoadXQMC() {
         LoadXQJBXXSByPY(XQMC);
 }
 
+//根据汉字获取小区信息
 function LoadXQJBXXSByHZ(XQMC) {
     $.ajax({
         type: "POST",
@@ -241,7 +283,7 @@ function LoadXQJBXXSByHZ(XQMC) {
         }
     });
 }
-
+//根据拼音获取小区信息
 function LoadXQJBXXSByPY(XQMC) {
     $.ajax({
         type: "POST",
