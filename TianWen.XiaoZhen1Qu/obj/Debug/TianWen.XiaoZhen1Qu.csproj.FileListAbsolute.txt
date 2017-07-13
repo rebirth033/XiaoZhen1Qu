@@ -23,7 +23,6 @@ F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu\
 F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu\bin\Debug\TianWen.Nhibernate.dll
 F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu\bin\Debug\TianWen.XiaoZhen1Qu.Interface.dll
 F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu\bin\Debug\FluentNHibernate.dll
-F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu\bin\Debug\TianWen.Nhibernate.pdb
 F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu\bin\Debug\TianWen.XiaoZhen1Qu.Interface.pdb
 F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu\obj\Debug\TianWen.XiaoZhen1Qu.csprojResolveAssemblyReference.cache
 F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu\obj\Debug\TianWen.XiaoZhen1Qu.dll
@@ -36,7 +35,6 @@ F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu\
 F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu\bin\Debug\Spring.Core.dll
 F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu\bin\Debug\NHibernate.Mapping.Attributes.dll
 F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu\bin\Debug\Common.Logging.dll
-F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu\bin\Debug\TianWen.Framework.pdb
 F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu\bin\Debug\TianWen.XiaoZhen1Qu.Entities.pdb
 F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu\bin\Debug\Iesi.Collections.dll
 D:\QMDownload\Hotfix\福建天问信息技术有限公司\源代码\TianWen.XiaoZhen1Qu\bin\Debug\NHibernate.dll

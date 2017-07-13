@@ -209,7 +209,7 @@
     height: 145px; 
     display: inline-block; 
     border: 1px solid #cccccc; 
-    background-image: url(../../Css/images/upload_small2.png);
+    background-image: url(../Css/images/upload_small2.png);
 }
 
 .Warn {

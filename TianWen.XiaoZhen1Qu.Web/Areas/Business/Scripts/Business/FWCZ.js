@@ -1,4 +1,5 @@
-﻿$(document).ready(function () {
+﻿var isleave = true;
+$(document).ready(function () {
     $("#XQMC").bind("keyup", LoadXQMC);
     $("#spanCXLB").bind("click", CXLB);
     $("#imgZTCZ").bind("click", ZTCZSelect);
@@ -26,7 +27,6 @@
     LoadFWCZXX();
     FYMSSetDefault();
 });
-
 //上传照片
 function Upload() {
     $("#divFWZPValue").css("display", "block");
@@ -51,7 +51,7 @@ function Upload() {
 }
 //上传完成事件
 function uploadComplete(evt) {
-    var imagepath = getRootPath() + evt.target.responseText;
+    var imagepath = getRootPath() + "/Areas/Business/Photos/" + evt.target.responseText;
     if ($("#divImgs1").find("img").length < 4){
         $("#divImgs1").append("<img src='" + imagepath + "' class='divImg' />");
     }
@@ -63,6 +63,7 @@ function uploadComplete(evt) {
         $("#divUploadOut").css("background-color", "#ececec");
         $("#inputUpload").attr("disabled", "disabled");
     }
+    ValidateFWZP();
 }
 
 function FYMSFocus() {
@@ -199,7 +200,7 @@ function LoadXQMC() {
         $("#divXQMClist").css("display", "none");
         return;
     }
-    if (/^[\u4e00-\u9fa5]+$/i.test(XQMC)) //判断是否是汉字
+    if (ValidateChinese(XQMC)) //判断是否是汉字
         LoadXQJBXXSByHZ(XQMC);
     else
         LoadXQJBXXSByPY(XQMC);
@@ -217,7 +218,7 @@ function LoadXQJBXXSByHZ(XQMC) {
         },
         success: function (xml) {
             if (xml.Result === 1 && xml.list.length > 0) {
-                var html = "<ul id='ulXQMC' class='uldropdown' style='height: " + (xml.list.length * 34.5) + "px;width:594px;background-color:#ffffff'>";
+                var html = "<ul id='ulXQMC' onmouseover='MouseOver()' onmouseleave='MouseLeave()' class='uldropdown' style='height: " + (xml.list.length * 34.5) + "px;width:594px;background-color:#ffffff'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     var index = xml.list[i].XQMC.indexOf(XQMC);
                     var xqmclength = XQMC.length;
@@ -227,7 +228,7 @@ function LoadXQJBXXSByHZ(XQMC) {
                     else {
                         xqmchtml = "<span style='color:#333333'>" + xml.list[i].XQMC.substr(0, index) + "</span>" + "<span style='color:#333333;font-weight:bolder;'>" + xml.list[i].XQMC.substr(index, xqmclength) + "</span>" + "<span style='color:#333333'>" + xml.list[i].XQMC.substr(index + xqmclength, xml.list[i].XQMC.length - index - xqmclength) + "</span>";
                     }
-                    html += "<li class='lidropdown' onclick='SelectXQMC(this)'>" + xqmchtml + "&nbsp;&nbsp;<span style='color:#999999;font-size:12px;'>" + (xml.list[i].XQDZ === null ? "" : xml.list[i].XQDZ) + "</span>" + "</li>";
+                    html += "<li class='lidropdown' onmouseover='UnbindBlur(this)' onclick='SelectXQMC(this)'>" + xqmchtml + "&nbsp;&nbsp;<span style='color:#999999;font-size:12px;'>" + (xml.list[i].XQDZ === null ? "" : xml.list[i].XQDZ) + "</span>" + "</li>";
                 }
                 html += "</ul>";
                 $("#divXQMClist").html(html);
@@ -251,7 +252,7 @@ function LoadXQJBXXSByPY(XQMC) {
         },
         success: function (xml) {
             if (xml.Result === 1 && xml.list.length > 0) {
-                var html = "<ul id='ulXQMC' class='uldropdown' style='height: " + (xml.list.length * 34.5) + "px;width:594px;background-color:#ffffff'>";
+                var html = "<ul id='ulXQMC' onmouseover='MouseOver()' onmouseleave='MouseLeave()' class='uldropdown' style='height: " + (xml.list.length * 34.5) + "px;width:594px;background-color:#ffffff'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     var index = 0;
                     var pys = xml.list[i].XQMCPY.split(' ');
@@ -620,6 +621,7 @@ function SelectXQMC(obj) {
     }
     $("#XQMC").val(html);
     $("#divXQMClist").css("display", "none");
+    isleave = true;
 }
 
 function SelectFWCX(obj) {
@@ -657,17 +659,8 @@ function LeaveUploadCss() {
     $("#divUploadOut").css("border-color", "#cccccc");
 }
 
-function Validate() {
-    //if (!YHMCheck()) return false;
-    //if (!MMCheck()) return false;
-    //if (!QRMMCheck()) return false;
-    //if (!SJCheck()) return false;
-    //if (!ValidateCheckCode()) return false;
-    return true;
-}
-
 function FB() {
-    if (Validate() === false) return;
+    if (AllValidate() === false) return;
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
@@ -787,4 +780,12 @@ function LoadFWCZXX() {
         }
     });
 
+}
+
+function MouseOver() {
+    isleave = false;
+}
+
+function MouseLeave() {
+    isleave = true;
 }

@@ -90,11 +90,6 @@ F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.
 F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Web\bin\FluentNHibernate.dll
 F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Web\bin\NHibernate.dll
 F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Web\bin\Oracle.ManagedDataAccess.dll
-F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Web\bin\TianWen.Business.Framework.pdb
-F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Web\bin\TianWen.Framework.pdb
-F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Web\bin\TianWen.Nhibernate.pdb
-F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Web\bin\TianWen.Persistence.pdb
-F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Web\bin\TianWen.Utility.pdb
 F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Web\obj\Debug\TianWen.XiaoZhen1Qu.Web.csprojResolveAssemblyReference.cache
 F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Web\obj\Debug\TianWen.XiaoZhen1Qu.Web.dll
 F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Web\obj\Debug\TianWen.XiaoZhen1Qu.Web.pdb

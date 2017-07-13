@@ -17,7 +17,6 @@ F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.
 F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Interface\bin\Debug\NHibernate.dll
 F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Interface\bin\Debug\TianWen.Nhibernate.dll
 F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Interface\bin\Debug\FluentNHibernate.dll
-F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Interface\bin\Debug\TianWen.Nhibernate.pdb
 F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Interface\obj\Debug\TianWen.XiaoZhen1Qu.Interface.csprojResolveAssemblyReference.cache
 F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Interface\obj\Debug\TianWen.XiaoZhen1Qu.Interface.dll
 F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Interface\obj\Debug\TianWen.XiaoZhen1Qu.Interface.pdb

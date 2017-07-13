@@ -75,13 +75,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Ashx
             gbmPhoto.Dispose();
             bmPhoto.Dispose();
 
-            return urlToVirtual(filePath) + fileName;
+            return fileName;
         }
 
          // 将物理路径转换成相对路径  
          private string urlToVirtual(string imagesurl1)  
          {  
-             string tmpRootDir = HttpContext.Current.Server.MapPath(System.Web.HttpContext.Current.Request.ApplicationPath.ToString());//获取程序根目录  
+             string tmpRootDir = HttpContext.Current.Server.MapPath(System.Web.HttpContext.Current.Request.ApplicationPath);//获取程序根目录  
              string imagesurl2 = imagesurl1.Replace(tmpRootDir, ""); //转换成相对路径  
              imagesurl2 = imagesurl2.Replace(@"\", @"/");  
              return imagesurl2;  
