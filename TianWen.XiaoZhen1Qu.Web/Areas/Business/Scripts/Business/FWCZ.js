@@ -52,10 +52,10 @@ function Upload() {
 //上传完成事件
 function uploadComplete(evt) {
     var imagepath = getRootPath() + "/Areas/Business/Photos/" + evt.target.responseText;
-    if ($("#divImgs1").find("img").length < 4){
+    if ($("#divImgs1").find("img").length < 4) {
         $("#divImgs1").append("<img src='" + imagepath + "' class='divImg' />");
     }
-    else{
+    else {
         $("#divLXRXX").css("margin-top", "300px");
         $("#divImgs2").append("<img src='" + imagepath + "' class='divImg' />");
     }
@@ -137,7 +137,7 @@ function LoadTXXX() {
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-            
+
         }
     });
 }
@@ -344,7 +344,7 @@ function LoadFWCX() {
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-            
+
         }
     });
 }
@@ -370,7 +370,7 @@ function LoadZXQK() {
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-            
+
         }
     });
 }
@@ -396,7 +396,7 @@ function LoadZZLX() {
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-            
+
         }
     });
 }
@@ -422,7 +422,7 @@ function LoadYFFS() {
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-            
+
         }
     });
 }
@@ -451,7 +451,7 @@ function LoadBHFY() {
             LoadFWPZ();
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-            
+
         }
     });
 }
@@ -480,7 +480,7 @@ function LoadFWPZ() {
             LoadFWLD();
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-            
+
         }
     });
 }
@@ -509,7 +509,7 @@ function LoadFWLD() {
             LoadCZYQ();
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-            
+
         }
     });
 }
@@ -538,7 +538,7 @@ function LoadCZYQ() {
             LoadFWCZXX();
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-            
+
         }
     });
 }
@@ -659,57 +659,6 @@ function LeaveUploadCss() {
     $("#divUploadOut").css("border-color", "#cccccc");
 }
 
-function FB() {
-    if (AllValidate() === false) return;
-    var jsonObj = new JsonDB("myTabContent");
-    var obj = jsonObj.GetJsonObject();
-    //手动添加如下字段
-    obj = jsonObj.AddJson(obj, "CX", "'" + $("#spanFWCX").html() + "'");
-    obj = jsonObj.AddJson(obj, "ZXQK", "'" + $("#spanZXQK").html() + "'");
-    obj = jsonObj.AddJson(obj, "ZZLX", "'" + $("#spanZZLX").html() + "'");
-    obj = jsonObj.AddJson(obj, "YFFS", "'" + $("#spanYFFS").html() + "'");
-    obj = jsonObj.AddJson(obj, "ZJYBHFY", "'" + GetDX("BHFY") + "'");
-    obj = jsonObj.AddJson(obj, "FWPZ", "'" + GetDX("FWPZ") + "'");
-    obj = jsonObj.AddJson(obj, "FWLD", "'" + GetDX("FWLD") + "'");
-    obj = jsonObj.AddJson(obj, "CZYQ", "'" + GetDX("CZYQ") + "'");
-    obj = jsonObj.AddJson(obj, "CZFS", "'" + GetCZFS() + "'");
-    if (getUrlParam("FWCZID") !== null)
-        obj = jsonObj.AddJson(obj, "FWCZID", "'" + getUrlParam("FWCZID") + "'");
-    //obj = jsonObj.AddJson(obj, "ZZLX", "'" + $("#spanZZLX").html() + "'");
-    //obj = jsonObj.AddJson(obj, "ZZLX", "'" + $("#spanZZLX").html() + "'");
-    //obj = jsonObj.AddJson(obj, "FWCZID", "'" + FWCZID + "'");
-
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/FWCZ/FB",
-        dataType: "json",
-        data:
-        {
-            Json: jsonObj.JsonToString(obj),
-            FYMS: $("#FYMS").html()
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                alert("发布成功");
-            } else {
-                if (xml.Type === 1) {
-                    $("#YZM").css("border-color", "#F2272D");
-                    $("#YZMInfo").css("color", "#F2272D");
-                    $("#YZMInfo").html(xml.Message);
-                }
-                if (xml.Type === 2) {
-                    $("#YHM").css("border-color", "#F2272D");
-                    $("#YHMInfo").css("color", "#F2272D");
-                    $("#YHMInfo").html(xml.Message);
-                }
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-
 function GetDX(type) {
     var result = "";
     $("#div" + type + "Text").find("li").each(function (i) {
@@ -762,21 +711,26 @@ function LoadFWCZXX() {
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.FWCZXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
                 $("#FWCZID").val(xml.Value.FWCZXX.FWCZID);
-                SetDX("BHFY", xml.Value.FWCZXX.ZJYBHFY);
-                SetDX("FWPZ", xml.Value.FWCZXX.FWPZ);
-                SetDX("FWLD", xml.Value.FWCZXX.FWLD);
-                SetDX("CZYQ", xml.Value.FWCZXX.CZYQ);
+                if (xml.Value.FWCZXX.ZJYBHFY !== null)
+                    SetDX("BHFY", xml.Value.FWCZXX.ZJYBHFY);
+                if (xml.Value.FWCZXX.FWPZ !== null)
+                    SetDX("FWPZ", xml.Value.FWCZXX.FWPZ);
+                if (xml.Value.FWCZXX.FWLD !== null)
+                    SetDX("FWLD", xml.Value.FWCZXX.FWLD);
+                if (xml.Value.FWCZXX.CZYQ !== null)
+                    SetDX("CZYQ", xml.Value.FWCZXX.CZYQ);
                 SetCZFS(xml.Value.FWCZXX.CZFS);
                 $("#spanFWCX").html(xml.Value.FWCZXX.CX);
                 $("#spanZXQK").html(xml.Value.FWCZXX.ZXQK);
                 $("#spanZZLX").html(xml.Value.FWCZXX.ZZLX);
                 $("#spanYFFS").html(xml.Value.FWCZXX.YFFS);
                 $("#FYMS").html(xml.Value.FWCZXX.FYMS);
-                $("#KRZSJ").val(xml.Value.FWCZXX.KRZSJ.ToString("yyyy-MM-dd"));
+                if(xml.Value.FWCZXX.KRZSJ.ToString("yyyy-MM-dd") !== "1-1-1")
+                    $("#KRZSJ").val(xml.Value.FWCZXX.KRZSJ.ToString("yyyy-MM-dd"));
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-            
+
         }
     });
 
@@ -788,4 +742,54 @@ function MouseOver() {
 
 function MouseLeave() {
     isleave = true;
+}
+
+function FB() {
+    if (AllValidate() === false) return;
+    var jsonObj = new JsonDB("myTabContent");
+    var obj = jsonObj.GetJsonObject();
+    //手动添加如下字段
+    obj = jsonObj.AddJson(obj, "CX", "'" + $("#spanFWCX").html() + "'");
+    obj = jsonObj.AddJson(obj, "ZXQK", "'" + $("#spanZXQK").html() + "'");
+    obj = jsonObj.AddJson(obj, "ZZLX", "'" + $("#spanZZLX").html() + "'");
+    obj = jsonObj.AddJson(obj, "YFFS", "'" + $("#spanYFFS").html() + "'");
+    obj = jsonObj.AddJson(obj, "ZJYBHFY", "'" + GetDX("BHFY") + "'");
+    obj = jsonObj.AddJson(obj, "FWPZ", "'" + GetDX("FWPZ") + "'");
+    obj = jsonObj.AddJson(obj, "FWLD", "'" + GetDX("FWLD") + "'");
+    obj = jsonObj.AddJson(obj, "CZYQ", "'" + GetDX("CZYQ") + "'");
+    obj = jsonObj.AddJson(obj, "CZFS", "'" + GetCZFS() + "'");
+    if($("#KRZSJ").val() !== "");
+    obj = jsonObj.AddJson(obj, "KRZSJ", "'" + $("#KRZSJ").val() + "'");
+    if (getUrlParam("FWCZID") !== null)
+        obj = jsonObj.AddJson(obj, "FWCZID", "'" + getUrlParam("FWCZID") + "'");
+
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/FWCZ/FB",
+        dataType: "json",
+        data:
+        {
+            Json: jsonObj.JsonToString(obj),
+            FYMS: $("#FYMS").html()
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                alert("发布成功");
+            } else {
+                if (xml.Type === 1) {
+                    $("#YZM").css("border-color", "#F2272D");
+                    $("#YZMInfo").css("color", "#F2272D");
+                    $("#YZMInfo").html(xml.Message);
+                }
+                if (xml.Type === 2) {
+                    $("#YHM").css("border-color", "#F2272D");
+                    $("#YHMInfo").css("color", "#F2272D");
+                    $("#YHMInfo").html(xml.Message);
+                }
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
 }

@@ -15,7 +15,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
         {
             object o1 = DAO.Repository.ExecuteScalar(string.Format("SELECT JCXXID FROM FWCZJBXX WHERE FWCZID='{0}'", fwczjbxx.FWCZID));
 
-            if (!string.IsNullOrEmpty(o1.ToString()))
+            if (o1 != null)
             {
                 using (ITransaction transaction = DAO.BeginTransaction())
                 {

@@ -202,7 +202,7 @@ function ValidateBT() {
     } else {
         $("#divBTTip").css("display", "none");
         $("#BT").css("border-color", "#cccccc");
-        return trye;
+        return true;
     }
 }
 
@@ -279,7 +279,7 @@ function LCFBValidate() {
 }
 
 function AllValidate() {
-    if (ValidateXQMC() & FWLXValidate() & LCFBValidate() & ValidateZJ() & ValidateBT & ValidateFWZP() & ValidateLXR() & ValidateLXDH())
+    if (ValidateXQMC() & FWLXValidate() & LCFBValidate() & ValidateZJ() & ValidateBT() & ValidateFWZP() & ValidateLXR() & ValidateLXDH())
         return true;
     else
         return false;
