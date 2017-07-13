@@ -41,7 +41,6 @@ function ValidateXQMC() {
 function InfoXQMC() {
     $("#divXQMCTip").attr("class", "Info");
     $("#divXQMCTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />不超过30字');
-    $("#XQMC").css("border-color", "#5bc0de");
 }
 
 function HideXQMCList() {
@@ -54,7 +53,7 @@ function ValidateFWLX_S() {
         $("#divFWLXTip").css("display", "block");
         $("#divFWLXTip").attr("class", "Warn");
         $("#divFWLXTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写室啦');
-        $("#S").css("border-color", "#fd634f");
+        $("#spanS").css("border-color", "#fd634f");
         return false;
     } else {
         $("#divFWLXTip").css("display", "none");
@@ -66,7 +65,6 @@ function ValidateFWLX_S() {
 function InfoFWLX_S() {
     $("#divFWLXTip").attr("class", "Info");
     $("#divFWLXTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />填写1、2、3等数字，不能是0');
-    $("#S").css("border-color", "#5bc0de");
 }
 
 function ValidateFWLX_T() {
@@ -74,7 +72,7 @@ function ValidateFWLX_T() {
         $("#divFWLXTip").css("display", "block");
         $("#divFWLXTip").attr("class", "Warn");
         $("#divFWLXTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写厅啦');
-        $("#T").css("border-color", "#fd634f");
+        $("#spanT").css("border-color", "#fd634f");
         return false;
     } else {
         $("#divFWLXTip").css("display", "none");
@@ -86,7 +84,6 @@ function ValidateFWLX_T() {
 function InfoFWLX_T() {
     $("#divFWLXTip").attr("class", "Info");
     $("#divFWLXTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />填写1、2、3等数字，没有请填0');
-    $("#T").css("border-color", "#5bc0de");
 }
 
 function ValidateFWLX_W() {
@@ -94,7 +91,7 @@ function ValidateFWLX_W() {
         $("#divFWLXTip").css("display", "block");
         $("#divFWLXTip").attr("class", "Warn");
         $("#divFWLXTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写卫啦');
-        $("#W").css("border-color", "#fd634f");
+        $("#spanW").css("border-color", "#fd634f");
         return false;
     } else {
         $("#divFWLXTip").css("display", "none");
@@ -106,7 +103,6 @@ function ValidateFWLX_W() {
 function InfoFWLX_W() {
     $("#divFWLXTip").attr("class", "Info");
     $("#divFWLXTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />填写1、2、3等数字，没有请填0');
-    $("#W").css("border-color", "#5bc0de");
 }
 
 function ValidateFWLX_PFM() {
@@ -114,7 +110,7 @@ function ValidateFWLX_PFM() {
         $("#divFWLXTip").css("display", "block");
         $("#divFWLXTip").attr("class", "Warn");
         $("#divFWLXTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写面积啦');
-        $("#PFM").css("border-color", "#fd634f");
+        $("#spanPFM").css("border-color", "#fd634f");
         return false;
     } else {
         $("#divFWLXTip").css("display", "none");
@@ -126,7 +122,6 @@ function ValidateFWLX_PFM() {
 function InfoFWLX_PFM() {
     $("#divFWLXTip").attr("class", "Info");
     $("#divFWLXTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />填写1、2、3等数字，不能是0');
-    $("#PFM").css("border-color", "#5bc0de");
 }
 
 function ValidateLCFB_C() {
@@ -134,7 +129,7 @@ function ValidateLCFB_C() {
         $("#divLCFBTip").css("display", "block");
         $("#divLCFBTip").attr("class", "Warn");
         $("#divLCFBTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写楼层啦');
-        $("#C").css("border-color", "#fd634f");
+        $("#spanC").css("border-color", "#fd634f");
         return false;
     } else {
         $("#divLCFBTip").css("display", "none");
@@ -146,7 +141,6 @@ function ValidateLCFB_C() {
 function InfoLCFB_C() {
     $("#divLCFBTip").attr("class", "Info");
     $("#divLCFBTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />填写数字，地下室用负数填写，最多可填写两位数喔');
-    $("#C").css("border-color", "#5bc0de");
 }
 
 function ValidateLCFB_GJC() {
@@ -154,7 +148,7 @@ function ValidateLCFB_GJC() {
         $("#divLCFBTip").css("display", "block");
         $("#divLCFBTip").attr("class", "Warn");
         $("#divLCFBTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写总层数啦');
-        $("#GJC").css("border-color", "#fd634f");
+        $("#spanGJC").css("border-color", "#fd634f");
         return false;
     } else {
         $("#divLCFBTip").css("display", "none");
@@ -166,7 +160,6 @@ function ValidateLCFB_GJC() {
 function InfoLCFB_GJC() {
     $("#divLCFBTip").attr("class", "Info");
     $("#divLCFBTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />填写数字，最多可填写两位数喔');
-    $("#GJC").css("border-color", "#5bc0de");
 }
 
 function ValidateZJ() {
@@ -174,7 +167,7 @@ function ValidateZJ() {
         $("#divZJTip").css("display", "block");
         $("#divZJTip").attr("class", "Warn");
         $("#divZJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写租金啦');
-        $("#ZJ").css("border-color", "#fd634f");
+        $("#spanZJ").css("border-color", "#fd634f");
         return false;
     } else {
         $("#divZJTip").css("display", "none");
@@ -186,7 +179,6 @@ function ValidateZJ() {
 function InfoZJ() {
     $("#divZJTip").attr("class", "Info");
     $("#divZJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数，面议则填0');
-    $("#ZJ").css("border-color", "#5bc0de");
 }
 
 function ValidateBT() {
@@ -206,7 +198,6 @@ function ValidateBT() {
 function InfoBT() {
     $("#divBTTip").attr("class", "Info");
     $("#divBTTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />标题6-50字');
-    $("#BT").css("border-color", "#5bc0de");
 }
 
 function ValidateFWZP() {
@@ -239,7 +230,6 @@ function ValidateLXR() {
 function InfoLXR() {
     $("#divLXRTip").attr("class", "Info");
     $("#divLXRTip").html('');
-    $("#LXR").css("border-color", "#5bc0de");
 }
 
 function ValidateLXDH() {
@@ -259,7 +249,6 @@ function ValidateLXDH() {
 function InfoLXDH() {
     $("#divLXDHTip").attr("class", "Info");
     $("#divLXDHTip").html('');
-    $("#LXDH").css("border-color", "#5bc0de");
 }
 
 function FWLXValidate() {
