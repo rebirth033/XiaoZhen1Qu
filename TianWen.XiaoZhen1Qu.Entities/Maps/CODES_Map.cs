@@ -24,7 +24,6 @@ namespace TianWen.XiaoZhen1Qu.Entities.Maps
             #region ManyToOne
 
             #endregion
-
         }
     }
 }

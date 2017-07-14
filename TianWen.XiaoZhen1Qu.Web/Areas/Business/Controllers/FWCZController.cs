@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
@@ -31,6 +32,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         {
             string json = Request["Json"];
             string fyms = Request["FYMS"];
+            string fwzp = Request["FWZP"];
             JCXX jcxx = JsonHelper.ConvertJsonToObject<JCXX>(json);
             jcxx.YHID = "2718ced3-996d-427d-925d-a08e127cc0b8";
             jcxx.LLCS = 0;
@@ -39,8 +41,22 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             jcxx.LXDZ = "福州市";
             FWCZJBXX yhjbxx = JsonHelper.ConvertJsonToObject<FWCZJBXX>(json);
             yhjbxx.FYMS = fyms;
-            object result = FWCZJBXXBLL.SaveFWCZJBXX(jcxx, yhjbxx);
+            List<PHOTOS> photos = GetFWZP(fwzp);
+            object result = FWCZJBXXBLL.SaveFWCZJBXX(jcxx, yhjbxx, photos);
             return Json(result);
+        }
+
+        public List<PHOTOS> GetFWZP(string fwzp)
+        {
+            List<PHOTOS> photos = new List<PHOTOS>();
+            string[] zps = fwzp.Split(',');
+            foreach (var zp in zps)
+            {
+                PHOTOS photo = new PHOTOS();
+                photo.PHOTOURL = zp;
+                photos.Add(photo);
+            }
+            return photos;
         }
 
         public JsonResult LoadFWCZXX()
@@ -49,6 +65,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             object result = FWCZJBXXBLL.LoadFWCZXX(FWCZID);
             return Json(result);
         }
+
         public JsonResult LoadXQJBXXSByHZ()
         {
             string XQMC = Request["XQMC"];

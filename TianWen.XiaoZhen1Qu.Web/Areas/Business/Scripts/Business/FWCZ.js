@@ -24,7 +24,6 @@ $(document).ready(function () {
     LoadYFFS();
     LoadBHFY();
     LoadDefault();
-    LoadFWCZXX();
     FYMSSetDefault();
 });
 //上传照片
@@ -52,14 +51,14 @@ function Upload() {
 //上传完成事件
 function uploadComplete(evt) {
     var imagepath = getRootPath() + "/Areas/Business/Photos/" + evt.target.responseText;
-    if ($("#divImgs1").find("img").length < 4) {
-        $("#divImgs1").append("<img src='" + imagepath + "' class='divImg' />");
+    if ($("#ulImgs1").find("img").length < 4) {
+        $("#ulImgs1").append("<li class='liImg'><img src='" + imagepath + "' class='divImg' /><li>");
     }
     else {
         $("#divLXRXX").css("margin-top", "300px");
-        $("#divImgs2").append("<img src='" + imagepath + "' class='divImg' />");
+        $("#ulImgs2").append("<li class='liImg'><img src='" + imagepath + "' class='divImg' /><li>");
     }
-    if ($("#divImgs2").find("img").length === 4) {
+    if ($("#ulImgs2").find("img").length === 4) {
         $("#divUploadOut").css("background-color", "#ececec");
         $("#inputUpload").attr("disabled", "disabled");
     }
@@ -725,8 +724,10 @@ function LoadFWCZXX() {
                 $("#spanZZLX").html(xml.Value.FWCZXX.ZZLX);
                 $("#spanYFFS").html(xml.Value.FWCZXX.YFFS);
                 $("#FYMS").html(xml.Value.FWCZXX.FYMS);
-                if(xml.Value.FWCZXX.KRZSJ.ToString("yyyy-MM-dd") !== "1-1-1")
+                if (xml.Value.FWCZXX.KRZSJ.ToString("yyyy-MM-dd") !== "1-1-1")
                     $("#KRZSJ").val(xml.Value.FWCZXX.KRZSJ.ToString("yyyy-MM-dd"));
+                LoadPhotos(xml.Value.Photos);
+                return;
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -744,6 +745,31 @@ function MouseLeave() {
     isleave = true;
 }
 
+function GetPhotoUrls() {
+    var photourls = "";
+    $("#ulImgs1").find("img").each(function () {
+        photourls += $(this).attr("src") + ",";
+    });
+    $("#ulImgs2").find("img").each(function () {
+        photourls += $(this).attr("src") + ",";
+    });
+    return RTrim(photourls);
+}
+
+function LoadPhotos(photos) {
+    if (photos.length > 0) {
+        $("#divFWZPValue").css("display", "block");
+        if (photos.length > 4)
+            $("#divLXRXX").css("margin-top", "300px");
+        for (var i = 0; i < photos.length; i++) {
+            if (i > 3)
+                $("#ulImgs2").append("<li class='liImg'><<img src='" + photos[i].PHOTOURL + "' class='divImg' /><div class='opacity'></div></li>");
+            else
+                $("#ulImgs1").append("<li class='liImg'><img src='" + photos[i].PHOTOURL + "' class='divImg' /><div class='opacity'></div></li>");
+        }
+    }
+}
+
 function FB() {
     if (AllValidate() === false) return;
     var jsonObj = new JsonDB("myTabContent");
@@ -758,8 +784,8 @@ function FB() {
     obj = jsonObj.AddJson(obj, "FWLD", "'" + GetDX("FWLD") + "'");
     obj = jsonObj.AddJson(obj, "CZYQ", "'" + GetDX("CZYQ") + "'");
     obj = jsonObj.AddJson(obj, "CZFS", "'" + GetCZFS() + "'");
-    if($("#KRZSJ").val() !== "");
-    obj = jsonObj.AddJson(obj, "KRZSJ", "'" + $("#KRZSJ").val() + "'");
+    if ($("#KRZSJ").val() !== "")
+        obj = jsonObj.AddJson(obj, "KRZSJ", "'" + $("#KRZSJ").val() + "'");
     if (getUrlParam("FWCZID") !== null)
         obj = jsonObj.AddJson(obj, "FWCZID", "'" + getUrlParam("FWCZID") + "'");
 
@@ -770,7 +796,8 @@ function FB() {
         data:
         {
             Json: jsonObj.JsonToString(obj),
-            FYMS: $("#FYMS").html()
+            FYMS: $("#FYMS").html(),
+            FWZP: GetPhotoUrls()
         },
         success: function (xml) {
             if (xml.Result === 1) {
