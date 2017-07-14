@@ -763,9 +763,9 @@ function LoadPhotos(photos) {
             $("#divLXRXX").css("margin-top", "300px");
         for (var i = 0; i < photos.length; i++) {
             if (i > 3)
-                $("#ulImgs2").append("<li class='liImg'><<img src='" + photos[i].PHOTOURL + "' class='divImg' /><div class='opacity'></div></li>");
+                $("#ulImgs2").append("<li class='liImg'><img src='" + photos[i].PHOTOURL + "' class='divImg' /><div class='toolbar_wrap'><div class='opacity'></div><div class='toolbar'><a class='edit'></a><a class='delete'></a></div></div></li>");
             else
-                $("#ulImgs1").append("<li class='liImg'><img src='" + photos[i].PHOTOURL + "' class='divImg' /><div class='opacity'></div></li>");
+                $("#ulImgs1").append("<li class='liImg'><img src='" + photos[i].PHOTOURL + "' class='divImg' /><div class='toolbar_wrap'><div class='opacity'></div><div class='toolbar'><a class='edit'></a><a class='delete'></a></div></div></li>");
         }
     }
 }

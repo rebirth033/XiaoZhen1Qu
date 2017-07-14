@@ -138,6 +138,8 @@
     <Content Include="Areas\Business\Css\images\arrow_down.png" />
     <Content Include="Areas\Business\Css\images\arrow_up.png" />
     <Content Include="Areas\Business\Css\images\cellphone.png" />
+    <Content Include="Areas\Business\Css\images\delete.png" />
+    <Content Include="Areas\Business\Css\images\edit.png" />
     <Content Include="Areas\Business\Css\images\icon.png" />
     <Content Include="Areas\Business\Css\images\info.png" />
     <Content Include="Areas\Business\Css\images\logo.png" />
