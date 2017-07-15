@@ -776,18 +776,31 @@ function LoadPhotos(photos) {
 function BindToolBar() {
     $("#ulImgs1").find("img").each(function (i) {
         $(this).bind("mouseover", function () {
-            $("#ulImgs1").find(".toolbar_wrap:eq(" + i + ")").css("display", "block");
+            $(this).next().css("display", "block");
         });
         $("#ulImgs1").find(".toolbar_wrap:eq(" + i + ")").bind("mouseleave", function () {
-            $("#ulImgs1").find(".toolbar_wrap:eq(" + i + ")").css("display", "none");
+            $(this).css("display", "none");
         });
     });
     $("#ulImgs2").find("img").each(function (i) {
         $(this).bind("mouseover", function () {
-            $("#ulImgs2").find(".toolbar_wrap:eq(" + i + ")").css("display", "block");
+            $(this).next().css("display", "block");
         });
         $("#ulImgs2").find(".toolbar_wrap:eq(" + i + ")").bind("mouseleave", function () {
-            $("#ulImgs2").find(".toolbar_wrap:eq(" + i + ")").css("display", "none");
+            $(this).css("display", "none");
+        });
+    });
+    $("#ulImgs1").find(".delete").each(function(i) {
+        $(this).bind("click", function() {
+            $(this).parent().parent().parent("li").remove();
+            if ($("#ulImgs2").find("li").length > 0) {
+                $("#ulImgs1").append($("#ulImgs2").find("li:eq(0)"));
+            }
+        });
+    });
+    $("#ulImgs2").find(".delete").each(function (i) {
+        $(this).bind("click", function () {
+            $(this).parent().parent().parent("li").remove();
         });
     });
 }

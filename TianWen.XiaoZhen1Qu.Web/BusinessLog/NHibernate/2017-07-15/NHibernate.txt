@@ -1,0 +1,168 @@
+2017-07-15 11:51:16,803 [137] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: select codes0_.CODEID as CODEID0_, codes0_.TYPENAME as TYPENAME0_, codes0_.CODENAME as CODENAME0_, codes0_.CODEVALUE as CODEVALUE0_, codes0_.CODEORDER as CODEORDER0_, codes0_.PARENTID as PARENTID0_ from CODES codes0_ where codes0_.TYPENAME='住宅类型' order by codes0_.CODEORDER
+
+System.Data.OracleClient.OracleException (0x80131938): ORA-03113: 通信通道的文件结尾
+进程 ID: 0
+会话 ID: 480 序列号: 2263
+
+   在 System.Data.OracleClient.OracleConnection.CheckError(OciErrorHandle errorHandle, Int32 rc)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, Boolean needRowid, OciRowidDescriptor& rowidDescriptor, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.OracleClient.OracleCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   在 NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2017-07-15 11:51:16,803 [95] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: select xxlb0_.LBID as LBID5_, xxlb0_.LBLX as LBLX5_, xxlb0_.LBNAME as LBNAME5_, xxlb0_.LBORDER as LBORDER5_, xxlb0_.PARENTID as PARENTID5_, xxlb0_.FBYM as FBYM5_ from XXLB xxlb0_ where xxlb0_.LBID=''
+
+System.Data.OracleClient.OracleException (0x80131938): ORA-03113: 通信通道的文件结尾
+进程 ID: 0
+会话 ID: 447 序列号: 1348
+
+   在 System.Data.OracleClient.OracleConnection.CheckError(OciErrorHandle errorHandle, Int32 rc)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, Boolean needRowid, OciRowidDescriptor& rowidDescriptor, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.OracleClient.OracleCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   在 NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2017-07-15 11:51:16,803 [116] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: select codes0_.CODEID as CODEID0_, codes0_.TYPENAME as TYPENAME0_, codes0_.CODENAME as CODENAME0_, codes0_.CODEVALUE as CODEVALUE0_, codes0_.CODEORDER as CODEORDER0_, codes0_.PARENTID as PARENTID0_ from CODES codes0_ where codes0_.TYPENAME='朝向' order by codes0_.CODEORDER
+
+System.Data.OracleClient.OracleException (0x80131938): ORA-03113: 通信通道的文件结尾
+进程 ID: 0
+会话 ID: 448 序列号: 2044
+
+   在 System.Data.OracleClient.OracleConnection.CheckError(OciErrorHandle errorHandle, Int32 rc)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, Boolean needRowid, OciRowidDescriptor& rowidDescriptor, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.OracleClient.OracleCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   在 NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2017-07-15 11:51:16,803 [117] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: select codes0_.CODEID as CODEID0_, codes0_.TYPENAME as TYPENAME0_, codes0_.CODENAME as CODENAME0_, codes0_.CODEVALUE as CODEVALUE0_, codes0_.CODEORDER as CODEORDER0_, codes0_.PARENTID as PARENTID0_ from CODES codes0_ where codes0_.TYPENAME='包含费用' order by codes0_.CODEORDER
+
+System.Data.OracleClient.OracleException (0x80131938): ORA-03113: 通信通道的文件结尾
+进程 ID: 0
+会话 ID: 516 序列号: 10066
+
+   在 System.Data.OracleClient.OracleConnection.CheckError(OciErrorHandle errorHandle, Int32 rc)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, Boolean needRowid, OciRowidDescriptor& rowidDescriptor, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.OracleClient.OracleCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   在 NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2017-07-15 11:51:16,849 [137] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-03113: 通信通道的文件结尾
+进程 ID: 0
+会话 ID: 480 序列号: 2263
+
+
+2017-07-15 11:51:16,850 [117] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-03113: 通信通道的文件结尾
+进程 ID: 0
+会话 ID: 516 序列号: 10066
+
+
+2017-07-15 11:51:16,852 [137] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-03113: 通信通道的文件结尾
+进程 ID: 0
+会话 ID: 480 序列号: 2263
+
+
+2017-07-15 11:51:16,853 [137] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-03113: 通信通道的文件结尾
+进程 ID: 0
+会话 ID: 480 序列号: 2263
+
+
+2017-07-15 11:51:16,854 [95] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-03113: 通信通道的文件结尾
+进程 ID: 0
+会话 ID: 447 序列号: 1348
+
+
+2017-07-15 11:51:16,854 [95] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-03113: 通信通道的文件结尾
+进程 ID: 0
+会话 ID: 447 序列号: 1348
+
+
+2017-07-15 11:51:16,855 [95] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-03113: 通信通道的文件结尾
+进程 ID: 0
+会话 ID: 447 序列号: 1348
+
+
+2017-07-15 11:51:16,855 [116] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-03113: 通信通道的文件结尾
+进程 ID: 0
+会话 ID: 448 序列号: 2044
+
+
+2017-07-15 11:51:16,855 [117] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-03113: 通信通道的文件结尾
+进程 ID: 0
+会话 ID: 516 序列号: 10066
+
+
+2017-07-15 11:51:16,857 [117] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-03113: 通信通道的文件结尾
+进程 ID: 0
+会话 ID: 516 序列号: 10066
+
+
+2017-07-15 11:51:16,856 [116] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-03113: 通信通道的文件结尾
+进程 ID: 0
+会话 ID: 448 序列号: 2044
+
+
+2017-07-15 11:51:16,857 [116] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-03113: 通信通道的文件结尾
+进程 ID: 0
+会话 ID: 448 序列号: 2044
+
+
+2017-07-15 11:51:17,388 [123] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: select codes0_.CODEID as CODEID0_, codes0_.TYPENAME as TYPENAME0_, codes0_.CODENAME as CODENAME0_, codes0_.CODEVALUE as CODEVALUE0_, codes0_.CODEORDER as CODEORDER0_, codes0_.PARENTID as PARENTID0_ from CODES codes0_ where codes0_.TYPENAME='押付方式' order by codes0_.CODEORDER
+
+System.Data.OracleClient.OracleException (0x80131938): ORA-03113: 通信通道的文件结尾
+进程 ID: 0
+会话 ID: 500 序列号: 3158
+
+   在 System.Data.OracleClient.OracleConnection.CheckError(OciErrorHandle errorHandle, Int32 rc)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, Boolean needRowid, OciRowidDescriptor& rowidDescriptor, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.OracleClient.OracleCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   在 NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2017-07-15 11:51:17,388 [123] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-03113: 通信通道的文件结尾
+进程 ID: 0
+会话 ID: 500 序列号: 3158
+
+
+2017-07-15 11:51:17,388 [123] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-03113: 通信通道的文件结尾
+进程 ID: 0
+会话 ID: 500 序列号: 3158
+
+
+2017-07-15 11:51:17,388 [123] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-03113: 通信通道的文件结尾
+进程 ID: 0
+会话 ID: 500 序列号: 3158
+
+
+2017-07-15 11:51:17,932 [152] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: select codes0_.CODEID as CODEID0_, codes0_.TYPENAME as TYPENAME0_, codes0_.CODENAME as CODENAME0_, codes0_.CODEVALUE as CODEVALUE0_, codes0_.CODEORDER as CODEORDER0_, codes0_.PARENTID as PARENTID0_ from CODES codes0_ where codes0_.TYPENAME='装修情况' order by codes0_.CODEORDER
+
+System.Data.OracleClient.OracleException (0x80131938): ORA-03113: 通信通道的文件结尾
+进程 ID: 0
+会话 ID: 529 序列号: 5015
+
+   在 System.Data.OracleClient.OracleConnection.CheckError(OciErrorHandle errorHandle, Int32 rc)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, Boolean needRowid, OciRowidDescriptor& rowidDescriptor, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.OracleClient.OracleCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   在 NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2017-07-15 11:51:17,932 [152] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-03113: 通信通道的文件结尾
+进程 ID: 0
+会话 ID: 529 序列号: 5015
+
+
+2017-07-15 11:51:17,932 [152] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-03113: 通信通道的文件结尾
+进程 ID: 0
+会话 ID: 529 序列号: 5015
+
+
+2017-07-15 11:51:17,932 [152] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-03113: 通信通道的文件结尾
+进程 ID: 0
+会话 ID: 529 序列号: 5015
+
+

@@ -226,16 +226,16 @@
 
 .liImg {
     display: inline-block;
-    width: 150px;
-    height: 146px;
+    width: 130px;
+    height: 100px;
     position: relative;
     float: left;
     margin-right: 10px;
 }
 
 .divImg {
-    width: 150px;
-    height: 146px;
+    width: 130px;
+    height: 100px;
     display: inline-block;
     margin-right: 10px;
     margin-top: 20px;
@@ -245,8 +245,8 @@
 }
 
 .toolbar_wrap {
-    width: 150px;
-    height: 146px;
+    width: 130px;
+    height: 100px;
     position: absolute;
     top: 20px;
     left: 0;
@@ -254,15 +254,15 @@
     display: none;
 }
 
-.toolbar_wrap:hover {
-    display: block;
-    width: 150px;
-    height: 146px;
-    position: absolute;
-    top: 20px;
-    left: 0;
-    cursor: move;
-}
+    .toolbar_wrap:hover {
+        display: block;
+        width: 130px;
+        height: 100px;
+        position: absolute;
+        top: 20px;
+        left: 0;
+        cursor: move;
+    }
 
 .opacity {
     position: absolute;
@@ -289,7 +289,7 @@
 
 .edit {
     background-image: url(../Css/images/edit.png);
-        width: 20px;
+    width: 20px;
     height: 20px;
     position: absolute;
     text-decoration: none;
@@ -297,6 +297,11 @@
     top: 0;
     cursor: pointer;
 }
+
+    .edit:active {
+        background-image: url(../Css/images/edit_select.png);
+    }
+
 
 .delete {
     background-image: url(../Css/images/delete.png);
@@ -308,3 +313,7 @@
     top: 0;
     cursor: pointer;
 }
+
+    .delete:active {
+        background-image: url(../Css/images/delete_select.png);
+    }
