@@ -52,19 +52,26 @@ function Upload() {
 function uploadComplete(evt) {
     var imagepath = getRootPath() + "/Areas/Business/Photos/" + evt.target.responseText;
     if ($("#ulImgs1").find("img").length < 4) {
-        $("#ulImgs1").append("<li draggable='true' class='liImg'><img src='" + imagepath + "' class='divImg' /><div class='toolbar_wrap'><div class='opacity'></div><div class='toolbar'><a class='edit'></a><a class='delete'></a></div></div><li>");
+        $("#ulImgs1").append("<li draggable='true' class='liImg'><img src='" + imagepath + "' class='divImg' /><div class='toolbar_wrap'><div class='opacity'></div><div class='toolbar'><a class='edit'></a><a class='delete'></a></div></div></li>");
         
     }
     else {
         $("#divLXRXX").css("margin-top", "300px");
-        $("#ulImgs2").append("<li draggable='true' class='liImg'><img src='" + imagepath + "' class='divImg' /><div class='toolbar_wrap'><div class='opacity'></div><div class='toolbar'><a class='edit'></a><a class='delete'></a></div></div><li>");
+        $("#ulImgs2").append("<li draggable='true' class='liImg'><img src='" + imagepath + "' class='divImg' /><div class='toolbar_wrap'><div class='opacity'></div><div class='toolbar'><a class='edit'></a><a class='delete'></a></div></div></li>");
     }
+    ControlUpload();
+    ValidateFWZP();
+    BindToolBar();
+}
+
+function ControlUpload() {
     if ($("#ulImgs2").find("img").length === 4) {
         $("#divUploadOut").css("background-color", "#ececec");
         $("#inputUpload").attr("disabled", "disabled");
+    } else {
+        $("#divUploadOut").css("background-color", "#fff");
+        $("#inputUpload").removeAttr("disabled");
     }
-    ValidateFWZP();
-    BindToolBar();
 }
 
 function FYMSFocus() {
@@ -774,33 +781,61 @@ function LoadPhotos(photos) {
 }
 
 function BindToolBar() {
-    $("#ulImgs1").find("img").each(function (i) {
-        $(this).bind("mouseover", function () {
-            $(this).next().css("display", "block");
-        });
-        $("#ulImgs1").find(".toolbar_wrap:eq(" + i + ")").bind("mouseleave", function () {
-            $(this).css("display", "none");
-        });
-    });
-    $("#ulImgs2").find("img").each(function (i) {
-        $(this).bind("mouseover", function () {
-            $(this).next().css("display", "block");
-        });
-        $("#ulImgs2").find(".toolbar_wrap:eq(" + i + ")").bind("mouseleave", function () {
-            $(this).css("display", "none");
-        });
-    });
+    BindMouse();
     $("#ulImgs1").find(".delete").each(function(i) {
         $(this).bind("click", function() {
             $(this).parent().parent().parent("li").remove();
             if ($("#ulImgs2").find("li").length > 0) {
-                $("#ulImgs1").append($("#ulImgs2").find("li:eq(0)"));
+                $("#ulImgs1").append($("#ulImgs2").find("li:eq(0)")[0].outerHTML);
+                $("#ulImgs2").find("li:eq(0)").remove();
+                BindMouse();
+                ControlUpload();
+                BindUlImg1();
             }
         });
     });
     $("#ulImgs2").find(".delete").each(function (i) {
         $(this).bind("click", function () {
             $(this).parent().parent().parent("li").remove();
+            BindMouse();
+            ControlUpload();
+        });
+    });
+}
+
+function BindMouse() {
+    $("#ulImgs1").find("img").each(function (i) {
+        $(this).bind("mouseover", function () {
+            $(this).next().css("display", "block");
+        });
+        $("#ulImgs1").find(".toolbar_wrap").each(function() {
+            $(this).bind("mouseleave", function() {
+                $(this).css("display", "none");
+            });
+        });
+    });
+    $("#ulImgs2").find("img").each(function (i) {
+        $(this).bind("mouseover", function () {
+            $(this).next().css("display", "block");
+        });
+        $("#ulImgs2").find(".toolbar_wrap").each(function () {
+            $(this).bind("mouseleave", function () {
+                $(this).css("display", "none");
+            });
+        });
+    });
+}
+
+function BindUlImg1() {
+    $("#ulImgs1").find(".delete").each(function (i) {
+        $(this).bind("click", function () {
+            $(this).parent().parent().parent("li").remove();
+            if ($("#ulImgs2").find("li").length > 0) {
+                $("#ulImgs1").append($("#ulImgs2").find("li:eq(0)")[0].outerHTML);
+                $("#ulImgs2").find("li:eq(0)").remove();
+                BindMouse();
+                ControlUpload();
+            }
         });
     });
 }
