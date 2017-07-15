@@ -54,7 +54,7 @@ function uploadComplete(evt) {
     var imagepath = getRootPath() + "/Areas/Business/Photos/" + evt.target.responseText;
     if ($("#ulImgs1").find("img").length < 4) {
         $("#ulImgs1").append("<li draggable='true' class='liImg'><img src='" + imagepath + "' class='divImg' /><div class='toolbar_wrap'><div class='opacity'></div><div class='toolbar'><a class='edit'></a><a class='delete'></a></div></div></li>");
-        
+
     }
     else {
         $("#divLXRXX").css("margin-top", "300px");
@@ -792,8 +792,8 @@ function BindMouseHover() {
         $(this).bind("mouseover", function () {
             $(this).next().css("display", "block");
         });
-        $("#ulImgs1").find(".toolbar_wrap").each(function() {
-            $(this).bind("mouseleave", function() {
+        $("#ulImgs1").find(".toolbar_wrap").each(function () {
+            $(this).bind("mouseleave", function () {
                 $(this).css("display", "none");
             });
         });
@@ -811,11 +811,22 @@ function BindMouseHover() {
 }
 
 function BindUlImgEdit() {
-    $("#ulImgs1").find(".edit").each(function (i) {
+    $(".ulImgs").find(".edit").each(function (i) {
         $(this).unbind("click");
         $(this).bind("click", function () {
             $("#shadow").css("display", "block");
             $("#editImgWindow").css("display", "block");
+            var c = $("#canvas")[0];
+            var cxt = c.getContext("2d");
+            var img = new Image();
+            img.src = $(this).parent().parent().parent().find("img").attr("src");
+            img.width = img.width / 15;
+            img.height = img.height / 15;
+            img.onload = function () //确保图片已经加载完毕  
+            {
+                cxt.clearRect(0, 0, c.width, c.height);
+                cxt.drawImage(img, 0, 0, img.width, img.height);
+            }
         });
     });
 }
