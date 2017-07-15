@@ -52,17 +52,19 @@ function Upload() {
 function uploadComplete(evt) {
     var imagepath = getRootPath() + "/Areas/Business/Photos/" + evt.target.responseText;
     if ($("#ulImgs1").find("img").length < 4) {
-        $("#ulImgs1").append("<li class='liImg'><img src='" + imagepath + "' class='divImg' /><li>");
+        $("#ulImgs1").append("<li draggable='true' class='liImg'><img src='" + imagepath + "' class='divImg' /><div class='toolbar_wrap'><div class='opacity'></div><div class='toolbar'><a class='edit'></a><a class='delete'></a></div></div><li>");
+        
     }
     else {
         $("#divLXRXX").css("margin-top", "300px");
-        $("#ulImgs2").append("<li class='liImg'><img src='" + imagepath + "' class='divImg' /><li>");
+        $("#ulImgs2").append("<li draggable='true' class='liImg'><img src='" + imagepath + "' class='divImg' /><div class='toolbar_wrap'><div class='opacity'></div><div class='toolbar'><a class='edit'></a><a class='delete'></a></div></div><li>");
     }
     if ($("#ulImgs2").find("img").length === 4) {
         $("#divUploadOut").css("background-color", "#ececec");
         $("#inputUpload").attr("disabled", "disabled");
     }
     ValidateFWZP();
+    BindToolBar();
 }
 
 function FYMSFocus() {
@@ -763,11 +765,31 @@ function LoadPhotos(photos) {
             $("#divLXRXX").css("margin-top", "300px");
         for (var i = 0; i < photos.length; i++) {
             if (i > 3)
-                $("#ulImgs2").append("<li class='liImg'><img src='" + photos[i].PHOTOURL + "' class='divImg' /><div class='toolbar_wrap'><div class='opacity'></div><div class='toolbar'><a class='edit'></a><a class='delete'></a></div></div></li>");
+                $("#ulImgs2").append("<li draggable='true' class='liImg'><img src='" + photos[i].PHOTOURL + "' class='divImg' /><div class='toolbar_wrap'><div class='opacity'></div><div class='toolbar'><a class='edit'></a><a class='delete'></a></div></div></li>");
             else
-                $("#ulImgs1").append("<li class='liImg'><img src='" + photos[i].PHOTOURL + "' class='divImg' /><div class='toolbar_wrap'><div class='opacity'></div><div class='toolbar'><a class='edit'></a><a class='delete'></a></div></div></li>");
+                $("#ulImgs1").append("<li draggable='true' class='liImg'><img src='" + photos[i].PHOTOURL + "' class='divImg' /><div class='toolbar_wrap'><div class='opacity'></div><div class='toolbar'><a class='edit'></a><a class='delete'></a></div></div></li>");
         }
+        BindToolBar();
     }
+}
+
+function BindToolBar() {
+    $("#ulImgs1").find("img").each(function (i) {
+        $(this).bind("mouseover", function () {
+            $("#ulImgs1").find(".toolbar_wrap:eq(" + i + ")").css("display", "block");
+        });
+        $("#ulImgs1").find(".toolbar_wrap:eq(" + i + ")").bind("mouseleave", function () {
+            $("#ulImgs1").find(".toolbar_wrap:eq(" + i + ")").css("display", "none");
+        });
+    });
+    $("#ulImgs2").find("img").each(function (i) {
+        $(this).bind("mouseover", function () {
+            $("#ulImgs2").find(".toolbar_wrap:eq(" + i + ")").css("display", "block");
+        });
+        $("#ulImgs2").find(".toolbar_wrap:eq(" + i + ")").bind("mouseleave", function () {
+            $("#ulImgs2").find(".toolbar_wrap:eq(" + i + ")").css("display", "none");
+        });
+    });
 }
 
 function FB() {
