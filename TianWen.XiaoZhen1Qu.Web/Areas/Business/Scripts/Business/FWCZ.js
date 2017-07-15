@@ -781,29 +781,12 @@ function LoadPhotos(photos) {
 }
 
 function BindToolBar() {
-    BindMouse();
-    $("#ulImgs1").find(".delete").each(function(i) {
-        $(this).bind("click", function() {
-            $(this).parent().parent().parent("li").remove();
-            if ($("#ulImgs2").find("li").length > 0) {
-                $("#ulImgs1").append($("#ulImgs2").find("li:eq(0)")[0].outerHTML);
-                $("#ulImgs2").find("li:eq(0)").remove();
-                BindMouse();
-                ControlUpload();
-                BindUlImg1();
-            }
-        });
-    });
-    $("#ulImgs2").find(".delete").each(function (i) {
-        $(this).bind("click", function () {
-            $(this).parent().parent().parent("li").remove();
-            BindMouse();
-            ControlUpload();
-        });
-    });
+    BindMouseHover();
+    BindUlImgDelete();
 }
 
-function BindMouse() {
+
+function BindMouseHover() {
     $("#ulImgs1").find("img").each(function (i) {
         $(this).bind("mouseover", function () {
             $(this).next().css("display", "block");
@@ -826,16 +809,53 @@ function BindMouse() {
     });
 }
 
-function BindUlImg1() {
+function BindUlImgDelete() {
     $("#ulImgs1").find(".delete").each(function (i) {
+        $(this).unbind("click");
         $(this).bind("click", function () {
             $(this).parent().parent().parent("li").remove();
             if ($("#ulImgs2").find("li").length > 0) {
                 $("#ulImgs1").append($("#ulImgs2").find("li:eq(0)")[0].outerHTML);
                 $("#ulImgs2").find("li:eq(0)").remove();
-                BindMouse();
+                BindMouseHover();
+                ControlUpload();
+                BindUlImg1Delete();
+            }
+        });
+    });
+    $("#ulImgs2").find(".delete").each(function (i) {
+        $(this).unbind("click");
+        $(this).bind("click", function () {
+            $(this).parent().parent().parent("li").remove();
+            BindMouseHover();
+            ControlUpload();
+            BindUlImg2Delete();
+        });
+    });
+}
+
+function BindUlImg1Delete() {
+    $("#ulImgs1").find(".delete").each(function (i) {
+        $(this).unbind("click");
+        $(this).bind("click", function () {
+            $(this).parent().parent().parent("li").remove();
+            if ($("#ulImgs2").find("li").length > 0) {
+                $("#ulImgs1").append($("#ulImgs2").find("li:eq(0)")[0].outerHTML);
+                $("#ulImgs2").find("li:eq(0)").remove();
+                BindMouseHover();
                 ControlUpload();
             }
+        });
+    });
+}
+
+function BindUlImg2Delete() {
+    $("#ulImgs2").find(".delete").each(function (i) {
+        $(this).unbind("click");
+        $(this).bind("click", function () {
+            $(this).parent().parent().parent("li").remove();
+            BindMouseHover();
+            ControlUpload();
         });
     });
 }
