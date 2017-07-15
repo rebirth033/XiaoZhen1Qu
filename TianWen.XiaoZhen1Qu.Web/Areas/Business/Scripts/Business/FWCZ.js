@@ -15,6 +15,7 @@ $(document).ready(function () {
     $("#FYMS").bind("blur", FYMSBlur);
     $("#KRZSJ").datepicker({ minDate: 0 });
     $("#inputUpload").bind("change", Upload);
+    $("#btnClose").bind("click", CloseWindow);
 
     BindHover();
     LoadTXXX();
@@ -782,9 +783,9 @@ function LoadPhotos(photos) {
 
 function BindToolBar() {
     BindMouseHover();
+    BindUlImgEdit();
     BindUlImgDelete();
 }
-
 
 function BindMouseHover() {
     $("#ulImgs1").find("img").each(function (i) {
@@ -805,6 +806,16 @@ function BindMouseHover() {
             $(this).bind("mouseleave", function () {
                 $(this).css("display", "none");
             });
+        });
+    });
+}
+
+function BindUlImgEdit() {
+    $("#ulImgs1").find(".edit").each(function (i) {
+        $(this).unbind("click");
+        $(this).bind("click", function () {
+            $("#shadow").css("display", "block");
+            $("#editImgWindow").css("display", "block");
         });
     });
 }
@@ -858,6 +869,11 @@ function BindUlImg2Delete() {
             ControlUpload();
         });
     });
+}
+
+function CloseWindow() {
+    $("#shadow").css("display", "none");
+    $("#editImgWindow").css("display", "none");
 }
 
 function FB() {

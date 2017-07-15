@@ -18,7 +18,7 @@
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/jquery-ui-1.12.1.custom/jquery.ui.datepicker-zh-CN.js")"></script>
 </head>
 <body style="width: 100%; height: 100%; font-family: 微软雅黑">
-    <div style="width: 1440px; text-align: center; ">
+    <div style="width: 1440px; text-align: center;">
         <div id="divLBHead" style="margin-left: 18%; margin-top: 20px;">
             <table class="table" style="width: 100%; text-align: center;">
                 <tr>
@@ -62,7 +62,7 @@
                     <span class="spanFWCZ">小区名称</span>
                 </div>
                 <div class="divRight">
-                    <div class="spanFWLXOut" style="z-index: 1000;position: relative">
+                    <div class="spanFWLXOut" style="z-index: 1000; position: relative">
                         <div id="divXQMCText" class="spanFWLXIn SRK" style="border: none;">
                             <input id="XQMC" maxlength="30" column="XQMC" class="spanFWLX SRK" style="width: 594px; margin-top: 0px; padding: 4px 12px; color: #999999;" type="text" placeholder="请输入小区名称" />
                         </div>
@@ -137,7 +137,7 @@
                 </div>
                 <div class="divRight">
                     <span id="spanC" class="spanFWLX SRK">
-                        <span class="spanFontColor" style=" margin-left:8px">第</span>
+                        <span class="spanFontColor" style="margin-left: 8px">第</span>
                         <input id="C" maxlength="2" column="C" class="inputLCFB spanFontColor" type="text" style="width: 70px" />
                         <span class="spanFontColor">层</span>
                     </span>
@@ -155,11 +155,11 @@
                     <span class="spanFWCZ">房屋租金</span>
                 </div>
                 <div class="divRight">
-                    <span id="spanZJ" class="spanFWLX SRK" style=" display:inline-block;">
+                    <span id="spanZJ" class="spanFWLX SRK" style="display: inline-block;">
                         <input id="ZJ" maxlength="9" column="ZJ" class="inputLCFB spanFontColor" type="text" style="width: 78px" />
                         <span class="spanFontColor">元/月</span>
                     </span>
-                    <div id="divYFFSText" class="spanFWLXOut SRK" style="border: 1px solid #cccccc; border-radius: 4px; z-index: 997; position: relative; ">
+                    <div id="divYFFSText" class="spanFWLXOut SRK" style="border: 1px solid #cccccc; border-radius: 4px; z-index: 997; position: relative;">
                         <div class="spanFWLXIn" style="border: none; margin-top: 6px;">
                             <span id="spanYFFS" column="YFFS" class="spanFWQK spanFontColor" style="margin-top: 0">押一付一</span>
                             <div class="divFWQKArrow"></div>
@@ -167,7 +167,7 @@
                         <div id="divYFFS" class="divdropdown" style="margin-top: -7px; margin-left: -1px;">
                         </div>
                     </div>
-                    <div id="divZJTip" class="Warn" style="z-index: 996; position: relative; "></div>
+                    <div id="divZJTip" class="Warn" style="z-index: 996; position: relative;"></div>
                 </div>
             </div>
             <div id="divBHFY" class="divFWCZ" style="z-index: 994; height: 80px; margin-top: -18px;">
@@ -233,7 +233,7 @@
                 <div class="divRight">
                     <div id="divUploadOut" class="divUploadOut">
                         <form action="" enctype="multipart/form-data" id="myform" method="post">
-                            <input id="inputUpload" unselectable="on" type="file" multiple="multiple" class="file"/>
+                            <input id="inputUpload" unselectable="on" type="file" multiple="multiple" class="file" />
                         </form>
                     </div>
                     <div style="margin-left: 214px; font-size: 14px; color: #999999;">
@@ -245,14 +245,14 @@
             <div id="divFWZPValue" class="divFWCZ" style="display: none; text-align: left; margin-top: 140px;">
                 <div class="divLeft" style="height: 170px; vertical-align: top;">
                     <span class="required"></span>
-                    <span id="spanFWZP" style="width:56px; display:inline-block;"></span>
+                    <span id="spanFWZP" style="width: 56px; display: inline-block;"></span>
                 </div>
                 <div id="divImgs1" class="divRight" style="display: inline-block; width: 670px;">
                     <ul id="ulImgs1" style="padding-left: 0px;"></ul>
                 </div>
                 <div class="divLeft" style="height: 170px; vertical-align: top;">
                     <span class="required"></span>
-                    <span id="spanFWZP" style="width:56px; display:inline-block;"></span>
+                    <span id="spanFWZP" style="width: 56px; display: inline-block;"></span>
                 </div>
                 <div id="divImgs2" class="divRight" style="display: inline-block; width: 670px;">
                     <ul id="ulImgs2" style="padding-left: 0px;"></ul>
@@ -303,6 +303,13 @@
             <div id="divFB" class="divSplit" style="display: block; text-align: center; margin-top: 40px;">
                 <input type="button" class="btn btn-info input_text" style="height: 50px; font-size: 24px;" id="btnFB" value="发布" />
             </div>
+        </div>
+    </div>
+    <div id="shadow"></div>
+    <div id="editImgWindow">
+        <div id="editImgHead">
+            <span>编辑图片</span>
+            <div id="btnClose"></div>
         </div>
     </div>
 </body>
