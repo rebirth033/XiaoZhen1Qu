@@ -16,7 +16,7 @@ $(document).ready(function () {
     $("#KRZSJ").datepicker({ minDate: 0 });
     $("#inputUpload").bind("change", Upload);
     $("#btnClose").bind("click", CloseWindow);
-    
+
 
     BindHover();
     LoadTXXX();
@@ -28,55 +28,6 @@ $(document).ready(function () {
     LoadDefault();
     FYMSSetDefault();
 });
-
-//上传照片
-function Upload() {
-    $("#divFWZPValue").css("display", "block");
-    var f = $(this).get(0).files[0];
-    var reader = new FileReader();
-    reader.readAsDataURL(f);
-    reader.onload = function (theFile) {
-        var image = new Image();
-        image.src = theFile.target.result;
-        image.onload = function () {
-            var form = $("#myform");
-            var formData = new FormData(form);
-            formData.append('Filedata', f);
-            formData.append('width', this.width);
-            formData.append('height', this.height);
-            var xhr = new XMLHttpRequest();
-            xhr.addEventListener("load", uploadComplete, false);
-            xhr.open('POST', getRootPath() + "/Areas/Business/Ashx/SavePhotos.Ashx");
-            xhr.send(formData);
-        };
-    };
-}
-
-//上传完成事件
-function uploadComplete(evt) {
-    var imagepath = getRootPath() + "/Areas/Business/Photos/" + evt.target.responseText;
-    if ($("#ulImgs1").find("img").length < 4) {
-        $("#ulImgs1").append("<li draggable='true' class='liImg'><img src='" + imagepath + "' class='divImg' /><div class='toolbar_wrap'><div class='opacity'></div><div class='toolbar'><a class='edit'></a><a class='delete'></a></div></div></li>");
-
-    }
-    else {
-        $("#divLXRXX").css("margin-top", "300px");
-        $("#ulImgs2").append("<li draggable='true' class='liImg'><img src='" + imagepath + "' class='divImg' /><div class='toolbar_wrap'><div class='opacity'></div><div class='toolbar'><a class='edit'></a><a class='delete'></a></div></div></li>");
-    }
-    ControlUpload();
-    ValidateFWZP();
-    BindToolBar();
-}
-
-function ControlUpload() {
-    if ($("#ulImgs2").find("img").length === 4) {
-        $("#divUploadOut").css("background-color", "#ececec");
-        $("#inputUpload").attr("disabled", "disabled");
-    } else {
-        $("#divUploadOut").css("background-color", "#fff");
-        $("#inputUpload").removeAttr("disabled");
-    }
-}
 
 function FYMSFocus() {
     $("#FYMS").css("color", "#333333");
@@ -829,7 +780,8 @@ function BindUlImgEdit() {
                 var left = (c.width - img.width / 3) / 2;
                 var top = (c.height - img.height / 3) / 2;
                 cxt.drawImage(img, left, top, img.width / 3, img.height / 3);
-                $("#rotate").bind("click", {src:img.src}, Rotate);
+                $("#rotate").bind("click", { src: img.src }, Rotate);
+                $("#btnSavePhoto").bind("click", { src: img.src }, SavePhoto);
             }
         });
     });
@@ -905,6 +857,78 @@ function Rotate(obj) {
         cxt.drawImage(img, left, top, img.width / 3, img.height / 3);
     }
 
+}
+
+function SavePhoto(obj) {
+    var filepath = obj.data.src;
+    var c = $("#canvas")[0];
+    var data = c.toDataURL();
+    var b64 = data.substring(22);
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Areas/Business/Ashx/SavePhotos.Ashx",
+        dataType: "json",
+        data:
+        {
+            data: b64,
+            filepath: filepath
+        },
+        success: function (xml) {
+            alert(xml);
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+
+//上传照片
+function Upload() {
+    $("#divFWZPValue").css("display", "block");
+    var f = $(this).get(0).files[0];
+    var reader = new FileReader();
+    reader.readAsDataURL(f);
+    reader.onload = function (theFile) {
+        var image = new Image();
+        image.src = theFile.target.result;
+        image.onload = function () {
+            var form = $("#myform");
+            var formData = new FormData(form);
+            formData.append('Filedata', f);
+            formData.append('width', this.width);
+            formData.append('height', this.height);
+            var xhr = new XMLHttpRequest();
+            xhr.addEventListener("load", uploadComplete, false);
+            xhr.open('POST', getRootPath() + "/Areas/Business/Ashx/SavePhotos.Ashx");
+            xhr.send(formData);
+        };
+    };
+}
+
+//上传完成事件
+function uploadComplete(evt) {
+    var imagepath = getRootPath() + "/Areas/Business/Photos/" + evt.target.responseText;
+    if ($("#ulImgs1").find("img").length < 4) {
+        $("#ulImgs1").append("<li draggable='true' class='liImg'><img src='" + imagepath + "' class='divImg' /><div class='toolbar_wrap'><div class='opacity'></div><div class='toolbar'><a class='edit'></a><a class='delete'></a></div></div></li>");
+
+    }
+    else {
+        $("#divLXRXX").css("margin-top", "300px");
+        $("#ulImgs2").append("<li draggable='true' class='liImg'><img src='" + imagepath + "' class='divImg' /><div class='toolbar_wrap'><div class='opacity'></div><div class='toolbar'><a class='edit'></a><a class='delete'></a></div></div></li>");
+    }
+    ControlUpload();
+    ValidateFWZP();
+    BindToolBar();
+}
+
+function ControlUpload() {
+    if ($("#ulImgs2").find("img").length === 4) {
+        $("#divUploadOut").css("background-color", "#ececec");
+        $("#inputUpload").attr("disabled", "disabled");
+    } else {
+        $("#divUploadOut").css("background-color", "#fff");
+        $("#inputUpload").removeAttr("disabled");
+    }
 }
 
 function CloseWindow() {

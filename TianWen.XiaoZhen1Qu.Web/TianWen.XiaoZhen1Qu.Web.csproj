@@ -225,6 +225,7 @@
     </Compile>
     <Compile Include="Areas\Business\BusinessAreaRegistration.cs" />
     <Compile Include="Areas\Business\Common\BaseController.cs" />
+    <Compile Include="Areas\Business\Common\Common.cs" />
     <Compile Include="Areas\Business\Controllers\FWCZController.cs" />
     <Compile Include="Areas\Business\Controllers\LBXZController.cs" />
     <Compile Include="Areas\Business\Controllers\WDFBController.cs" />

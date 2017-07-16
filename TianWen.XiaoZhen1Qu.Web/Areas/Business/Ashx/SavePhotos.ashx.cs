@@ -15,7 +15,11 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Ashx
     {
         public void ProcessRequest(HttpContext context)
         {
-            context.Response.Write(SavePhoto(context));
+            var data = context.Request["data"];
+            if (data != null)
+                context.Response.Write(SavePhoto64(context));
+            else
+                context.Response.Write(SavePhoto(context));
         }
 
         public string SavePhoto(HttpContext context)
@@ -44,10 +48,10 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Ashx
         public string ResizeImg(Stream ImgFile, int maxWidth, int maxHeight)
         {
             string filePath = System.Configuration.ConfigurationManager.AppSettings["PhotoSavePath"];
-            string fileName = DateTime.Now.ToString("yyyyMMddhhmmssffff") + ".jpg";
+            string fileName = DateTime.Now.ToString("yyyyMMddHHmmssffff") + ".jpg";
 
             Image imgPhoto = Image.FromStream(ImgFile);
-            
+
             decimal desiredRatio = Math.Min((decimal)maxWidth / imgPhoto.Width, (decimal)maxHeight / imgPhoto.Height);
             int iWidth = (int)(imgPhoto.Width * desiredRatio);
             int iHeight = (int)(imgPhoto.Height * desiredRatio);
@@ -64,19 +68,32 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Ashx
             gbmPhoto.FillRectangle(new SolidBrush(color), new Rectangle(0, 0, iWidth, iHeight));
 
             gbmPhoto.DrawImage(imgPhoto, new Rectangle(0, 0, iWidth, iHeight), new Rectangle(0, 0, imgPhoto.Width, imgPhoto.Height), GraphicsUnit.Pixel);
-            
+
             if (!Directory.Exists(filePath))
             {
                 Directory.CreateDirectory(filePath);
             }
 
             bmPhoto.Save((filePath + fileName), ImageFormat.Jpeg);
-            
+
             imgPhoto.Dispose();
             gbmPhoto.Dispose();
             bmPhoto.Dispose();
 
             return fileName;
+        }
+
+        public string SavePhoto64(HttpContext context)
+        {
+            string tmpRootDir = HttpContext.Current.Server.MapPath(System.Web.HttpContext.Current.Request.ApplicationPath.ToString());//获取程序根目录 
+            string virtualpath = context.Request["filepath"].ToString();
+            string filename = virtualpath.Substring(virtualpath.LastIndexOf('/') + 1, virtualpath.Length - virtualpath.LastIndexOf('/') - 1);
+            string physicalpath = tmpRootDir + @"\Areas\Business\Photos\" + filename;
+            FileStream fs = File.Create(physicalpath);
+            byte[] bytes = Convert.FromBase64String(context.Request["data"]);
+            fs.Write(bytes, 0, bytes.Length);
+            fs.Close();
+            return string.Empty;
         }
 
         public bool IsReusable
