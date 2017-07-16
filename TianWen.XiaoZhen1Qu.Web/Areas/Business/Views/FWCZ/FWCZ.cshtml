@@ -312,8 +312,25 @@
             <div id="btnClose"></div>
         </div>
         <div id="canvasFrame">
-            <canvas id="canvas"></canvas>
+            <canvas id="canvas" width="1570" height="870" style="width:785px;height:435px;"></canvas>
         </div>
+        <div id="toolBar">
+            <div id="editToolBar">
+                <div class="editToolButton" id="rotate">
+                    <div class="editButtonIcon" style="background-image:url(@Url.Content("~/Areas/Business/Css/images/rotate.png"))"></div>
+                    <span>旋转</span>
+                </div>
+                <div class="editToolButton" id="clip">
+                    <div class="editButtonIcon" style="background-image:url(@Url.Content("~/Areas/Business/Css/images/clip.png"))"></div>
+                    <span>裁剪</span>
+                </div>
+                <div class="editToolButton" id="mosaic">
+                    <div class="editButtonIcon" style="background-image:url(@Url.Content("~/Areas/Business/Css/images/mosaic.png"))"></div>
+                    <span>模糊</span>
+                </div>
+            </div>
+        </div>
+        <input type="button" class="btn btn-info" style="height: 34px; width:69px; position:absolute;bottom:14px;right:77px;" id="btnSavePhoto" value="保&nbsp;&nbsp;存" />
     </div>
 </body>
 </html>

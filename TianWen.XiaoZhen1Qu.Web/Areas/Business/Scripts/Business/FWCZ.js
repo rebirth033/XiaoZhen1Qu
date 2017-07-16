@@ -16,6 +16,7 @@ $(document).ready(function () {
     $("#KRZSJ").datepicker({ minDate: 0 });
     $("#inputUpload").bind("change", Upload);
     $("#btnClose").bind("click", CloseWindow);
+    
 
     BindHover();
     LoadTXXX();
@@ -27,6 +28,7 @@ $(document).ready(function () {
     LoadDefault();
     FYMSSetDefault();
 });
+
 //上传照片
 function Upload() {
     $("#divFWZPValue").css("display", "block");
@@ -49,6 +51,7 @@ function Upload() {
         };
     };
 }
+
 //上传完成事件
 function uploadComplete(evt) {
     var imagepath = getRootPath() + "/Areas/Business/Photos/" + evt.target.responseText;
@@ -820,12 +823,13 @@ function BindUlImgEdit() {
             var cxt = c.getContext("2d");
             var img = new Image();
             img.src = $(this).parent().parent().parent().find("img").attr("src");
-            img.width = img.width / 15;
-            img.height = img.height / 15;
             img.onload = function () //确保图片已经加载完毕  
             {
                 cxt.clearRect(0, 0, c.width, c.height);
-                cxt.drawImage(img, 0, 0, img.width, img.height);
+                var left = (c.width - img.width / 3) / 2;
+                var top = (c.height - img.height / 3) / 2;
+                cxt.drawImage(img, left, top, img.width / 3, img.height / 3);
+                $("#rotate").bind("click", {src:img.src}, Rotate);
             }
         });
     });
@@ -880,6 +884,27 @@ function BindUlImg2Delete() {
             ControlUpload();
         });
     });
+}
+
+function Rotate(obj) {
+    var c = $("#canvas")[0];
+    var cxt = c.getContext("2d");
+    var x = c.width / 2; //画布宽度的一半
+    var y = c.height / 2;//画布高度的一半
+
+    var img = new Image();
+    img.src = obj.data.src;
+    img.onload = function () //确保图片已经加载完毕  
+    {
+        cxt.clearRect(0, 0, c.width, c.height);
+        cxt.translate(x, y);//将绘图原点移到画布中点
+        cxt.rotate((Math.PI / 180) * 90);//旋转角度
+        cxt.translate(-x, -y);//将画布原点移动
+        var left = (c.width - img.width / 3) / 2;
+        var top = (c.height - img.height / 3) / 2;
+        cxt.drawImage(img, left, top, img.width / 3, img.height / 3);
+    }
+
 }
 
 function CloseWindow() {

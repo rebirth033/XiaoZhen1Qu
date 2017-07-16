@@ -45,7 +45,7 @@
 }
 
 .divFWQKArrow {
-    background-image: url(../Css/images/arrow_down.png);
+    background-image: url(images/arrow_down.png);
     width: 16px;
     height: 16px;
     display: inline-block;
@@ -199,7 +199,7 @@
     height: 145px;
     display: inline-block;
     border: 1px solid #cccccc;
-    background-image: url(../Css/images/upload_small2.png);
+    background-image: url(images/upload_small2.png);
 }
 
 .Warn {
@@ -288,7 +288,7 @@
 }
 
 .edit {
-    background-image: url(../Css/images/edit.png);
+    background-image: url(images/edit.png);
     width: 20px;
     height: 20px;
     position: absolute;
@@ -299,12 +299,12 @@
 }
 
     .edit:active {
-        background-image: url(../Css/images/edit_select.png);
+        background-image: url(images/edit_select.png);
     }
 
 
 .delete {
-    background-image: url(../Css/images/delete.png);
+    background-image: url(images/delete.png);
     width: 20px;
     height: 20px;
     position: absolute;
@@ -315,15 +315,15 @@
 }
 
     .delete:active {
-        background-image: url(../Css/images/delete_select.png);
+        background-image: url(images/delete_select.png);
     }
 
 #shadow {
     display: none;
     height: 100%;
     width: 100%;
-    background-color: #cccccc;
-    opacity: 0.8;
+    background-color: #000;
+    opacity: 0.5;
     position: fixed;
     top: 0;
     left: 0;
@@ -333,15 +333,15 @@
 #editImgWindow {
     display: none;
     border-radius: 4px;
-    width: 1136px;
-    height: 662px;
+    width: 936px;
+    height: 562px;
     position: fixed;
     top: 50%;
     left: 50%;
     z-index: 1000;
     background: #fff;
-    margin-top: -331px;
-    margin-left: -568px;
+    margin-top: -290px;
+    margin-left: -467px;
 }
 
 #editImgHead {
@@ -354,38 +354,75 @@
     cursor: default;
 }
 
-#editImgHead span {
-    font-size: 16px;
-    font-weight: 700;
-    position: absolute;
-    top: 20px;
-    left: 25px;
-}
+    #editImgHead span {
+        font-size: 16px;
+        font-weight: 700;
+        position: absolute;
+        top: 20px;
+        left: 25px;
+    }
 
-#editImgHead div {
-    height: 17px;
-    width: 17px;
-    position: absolute;
-    right: 25px;
-    top: 25px;
-    background-image: url(../Css/images/close.png);
-    cursor: pointer
-}
+    #editImgHead div {
+        height: 17px;
+        width: 17px;
+        position: absolute;
+        right: 25px;
+        top: 25px;
+        background-image: url(images/close.png);
+        cursor: pointer;
+    }
 
 #canvasFrame {
     z-index: 1001;
     position: absolute;
-    left: 70px;
-    top: 66px;
-    width: 995px;
-    height: 475px;
+    left: 75.5px;
+    top: 56px;
+    width: 785px;
+    height: 435px;
     background-color: #E1E1E1;
 }
 
 #canvas {
-    width: 100%;
-    height: 100%;
     left: 0px;
     top: 0px;
     position: absolute;
+}
+
+#toolBar {
+    position: absolute;
+    left: 76px;
+    top: 495px;
+    width: 785px;
+    height: 60px;
+    /*border: 1px solid #E1E1E1;*/
+}
+
+#editToolBar {
+    position: absolute;
+    left: 50%;
+    margin-left: -90px;
+}
+
+.editToolButton {
+    height: 60px;
+    width: 60px;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    color: gray;
+}
+
+    .editToolButton span {
+        display:inline-block;
+        position:absolute;
+        bottom:3px;
+        left:15px;
+    }
+
+.editButtonIcon {
+    height:27px;
+    width:27px;
+    position:absolute;
+    left:17px;
+    top:5px;
 }
