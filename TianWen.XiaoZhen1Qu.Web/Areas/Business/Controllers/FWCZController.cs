@@ -54,6 +54,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             {
                 PHOTOS photo = new PHOTOS();
                 photo.PHOTOURL = zp;
+                photo.PHOTONAME = photo.PHOTOURL.Substring(photo.PHOTOURL.LastIndexOf('/') + 1, photo.PHOTOURL.Length - photo.PHOTOURL.LastIndexOf('/') - 1);
                 photos.Add(photo);
             }
             return photos;

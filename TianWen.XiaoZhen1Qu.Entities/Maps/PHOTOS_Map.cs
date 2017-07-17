@@ -11,6 +11,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Maps
             #region 属性
             Id(x => x.PHOTOID, "PHOTOID").GeneratedBy.Assigned().CustomType("AnsiString");
             Map(x => x.PHOTOURL, "PHOTOURL");
+            Map(x => x.PHOTONAME, "PHOTONAME");
             Map(x => x.JCXXID, "JCXXID");
             #endregion
 

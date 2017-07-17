@@ -26,6 +26,12 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string PHOTOURL { get; set; }
 
         /// <summary>
+        /// 照片名称
+        /// </summary>
+        [Property]
+        public virtual string PHOTONAME { get; set; }
+
+        /// <summary>
         /// 基础信息ID
         /// </summary>
         [Property]

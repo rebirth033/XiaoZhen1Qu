@@ -709,17 +709,6 @@ function MouseLeave() {
     isleave = true;
 }
 
-function GetPhotoUrls() {
-    var photourls = "";
-    $("#ulImgs1").find("img").each(function () {
-        photourls += $(this).attr("src") + ",";
-    });
-    $("#ulImgs2").find("img").each(function () {
-        photourls += $(this).attr("src") + ",";
-    });
-    return RTrim(photourls);
-}
-
 function LoadPhotos(photos) {
     if (photos.length > 0) {
         $("#divFWZPValue").css("display", "block");
@@ -934,6 +923,17 @@ function ControlUpload() {
 function CloseWindow() {
     $("#shadow").css("display", "none");
     $("#editImgWindow").css("display", "none");
+}
+
+function GetPhotoUrls() {
+    var photourls = "";
+    $("#ulImgs1").find("img").each(function () {
+        photourls += $(this).attr("src") + ",";
+    });
+    $("#ulImgs2").find("img").each(function () {
+        photourls += $(this).attr("src") + ",";
+    });
+    return RTrim(photourls);
 }
 
 function FB() {

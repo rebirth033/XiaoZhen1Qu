@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Text;
+using System.IO;
 using NHibernate;
+using NHibernate.Linq;
 using TianWen.Framework.Log;
 using TianWen.XiaoZhen1Qu.Entities.Models;
 using TianWen.XiaoZhen1Qu.Interface;
@@ -14,6 +15,9 @@ namespace TianWen.XiaoZhen1Qu.BLL
     {
         public object SaveFWCZJBXX(JCXX jcxx, FWCZJBXX fwczjbxx, List<PHOTOS> photos)
         {
+            string[] photoNames = photos.Select(x => x.PHOTONAME).ToArray();
+            DirectoryInfo TheFolder = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory + "/Areas/Business/Photos/");
+            FileInfo[] fileinfos = TheFolder.GetFiles();
             DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM FWCZJBXX WHERE FWCZID='{0}'", fwczjbxx.FWCZID));
 
             if (dt.Rows.Count > 0)
@@ -22,16 +26,29 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 {
                     try
                     {
-                        //照片全删全插
-                        List<PHOTOS> old_photos = DAO.GetObjectList<PHOTOS>(string.Format("FROM PHOTOS WHERE JCXXID='{0}'", dt.Rows[0]["JCXXID"])).ToList();
-                        foreach (var obj in old_photos)
+                        if (photos.Count > 0)
                         {
-                            DAO.Remove(obj);
+                            //照片全删全插
+                            List<PHOTOS> old_photos = DAO.GetObjectList<PHOTOS>(string.Format("FROM PHOTOS WHERE JCXXID='{0}'", dt.Rows[0]["JCXXID"])).ToList();
+                            foreach (var obj in old_photos)
+                            {
+                                DAO.Remove(obj);
+                            }
                         }
                         foreach (var obj in photos)
                         {
                             obj.JCXXID = dt.Rows[0]["JCXXID"].ToString();
                             DAO.Save(obj);
+                        }
+
+                        if (photos.Count > 0)
+                        {
+                            //删除多余照片文件
+                            foreach (FileInfo fileobj in fileinfos)
+                            {
+                                if (!photoNames.Contains(fileobj.Name))
+                                    File.Delete(AppDomain.CurrentDomain.BaseDirectory + "/Areas/Business/Photos/" + fileobj.Name);
+                            }
                         }
 
                         fwczjbxx.JCXXID = dt.Rows[0]["JCXXID"].ToString();

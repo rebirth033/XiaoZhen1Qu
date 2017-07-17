@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Web;
-using TianWen.XiaoZhen1Qu.Interface;
 
 namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Ashx
 {
@@ -47,8 +45,8 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Ashx
 
         public string ResizeImg(Stream ImgFile, int maxWidth, int maxHeight)
         {
-            string tmpRootDir = HttpContext.Current.Server.MapPath(HttpContext.Current.Request.ApplicationPath);//获取程序根目录
-            string filePath = tmpRootDir + @"\Areas\Business\Photos\";
+            string RootDir = HttpContext.Current.Server.MapPath(HttpContext.Current.Request.ApplicationPath);//获取程序根目录
+            string filePath = RootDir + @"\Areas\Business\Photos\";
             string fileName = DateTime.Now.ToString("yyyyMMddHHmmssffff") + ".jpg";
 
             Image imgPhoto = Image.FromStream(ImgFile);
@@ -86,10 +84,10 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Ashx
 
         public string SavePhoto64(HttpContext context)
         {
-            string tmpRootDir = HttpContext.Current.Server.MapPath(HttpContext.Current.Request.ApplicationPath);//获取程序根目录 
+            string RootDir = HttpContext.Current.Server.MapPath(HttpContext.Current.Request.ApplicationPath);//获取程序根目录 
             string virtualpath = context.Request["filepath"];
             string filename = virtualpath.Substring(virtualpath.LastIndexOf('/') + 1, virtualpath.Length - virtualpath.LastIndexOf('/') - 1);
-            string physicalpath = tmpRootDir + @"\Areas\Business\Photos\" + filename;
+            string physicalpath = RootDir + @"\Areas\Business\Photos\" + filename;
             FileStream fs = File.Create(physicalpath);
             byte[] bytes = Convert.FromBase64String(context.Request["data"]);
             fs.Write(bytes, 0, bytes.Length);
