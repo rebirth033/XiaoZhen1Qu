@@ -13,9 +13,9 @@ function LoadPhotos(photos) {
             $("#divLXRXX").css("margin-top", "300px");
         for (var i = 0; i < photos.length; i++) {
             if (i > 3)
-                $("#ulImgs2").append("<li draggable='true' class='liImg'><img src='" + photos[i].PHOTOURL + "' class='divImg' /><div class='toolbar_wrap'><div class='opacity'></div><div class='toolbar'><a class='edit'></a><a class='delete'></a></div></div></li>");
+                $("#ulImgs2").append("<li draggable='true' class='liImg'><img id='ulImgs2_" + (i + 1) + "' src='" + photos[i].PHOTOURL + "' class='divImg' /><div class='toolbar_wrap'><div class='opacity'></div><div class='toolbar'><a class='edit'></a><a class='delete'></a></div></div></li>");
             else
-                $("#ulImgs1").append("<li draggable='true' class='liImg'><img src='" + photos[i].PHOTOURL + "' class='divImg' /><div class='toolbar_wrap'><div class='opacity'></div><div class='toolbar'><a class='edit'></a><a class='delete'></a></div></div></li>");
+                $("#ulImgs1").append("<li draggable='true' class='liImg'><img id='ulImgs1_" + (i + 1) + "' src='" + photos[i].PHOTOURL + "' class='divImg' /><div class='toolbar_wrap'><div class='opacity'></div><div class='toolbar'><a class='edit'></a><a class='delete'></a></div></div></li>");
         }
         BindToolBar();
     }
@@ -60,6 +60,8 @@ function BindUlImgEdit() {
             var cxt = c.getContext("2d");
             var img = new Image();
             img.src = $(this).parent().parent().parent().find("img").attr("src");
+            var id = $(this).parent().parent().parent().find("img").attr("id");
+            img.src = img.src.substr(0, img.src.length - img.src.indexOf('?') - 1);
             img.onload = function () //确保图片已经加载完毕  
             {
                 cxt.clearRect(0, 0, c.width, c.height);
@@ -67,7 +69,7 @@ function BindUlImgEdit() {
                 var top = (c.height - img.height) / 2;
                 cxt.drawImage(img, left, top, img.width, img.height);
                 $("#rotate").bind("click", { src: img.src }, Rotate);
-                $("#btnSavePhoto").bind("click", { src: img.src }, SavePhoto);
+                $("#btnSavePhoto").bind("click", { src: img.src, id: id }, SavePhoto);
             }
         });
     });
@@ -160,11 +162,12 @@ function SavePhoto(obj) {
             filepath: filepath
         },
         success: function (xml) {
+
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
             $("#shadow").css("display", "none");
             $("#editImgWindow").css("display", "none");
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
+            $("#" + obj.data.id).attr("src", obj.data.src + "?t=" + Math.random());
         }
     });
 }
@@ -223,11 +226,12 @@ function CloseWindow() {
 
 function GetPhotoUrls() {
     var photourls = "";
-    $("#ulImgs1").find("img").each(function () {
-        photourls += $(this).attr("src") + ",";
-    });
-    $("#ulImgs2").find("img").each(function () {
-        photourls += $(this).attr("src") + ",";
+    $(".ulImgs").find("img").each(function () {
+        var src = $(this).attr("src");
+        if (src.indexOf('?') !== -1)
+            photourls += src.substr(0, src.indexOf('?')) + ",";
+        else 
+            photourls += src + ",";
     });
     return RTrim(photourls);
 }
