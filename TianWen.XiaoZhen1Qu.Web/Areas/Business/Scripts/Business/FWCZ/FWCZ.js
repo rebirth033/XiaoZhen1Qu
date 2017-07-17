@@ -17,7 +17,6 @@ $(document).ready(function () {
     $("#inputUpload").bind("change", Upload);
     $("#btnClose").bind("click", CloseWindow);
 
-
     BindHover();
     LoadTXXX();
     LoadFWCX();
