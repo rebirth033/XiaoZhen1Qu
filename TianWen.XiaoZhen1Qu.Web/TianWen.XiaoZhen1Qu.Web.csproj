@@ -174,8 +174,9 @@
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\js\npm.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\Common.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\Regular.js" />
-    <Content Include="Areas\Business\Scripts\Business\FWCZ.js" />
-    <Content Include="Areas\Business\Scripts\Business\FWCZYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\FWCZ\FWCZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\FWCZ\FWCZYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\FWCZ\FWCZZP.js" />
     <Content Include="Areas\Business\Scripts\Business\LBXZ.js" />
     <Content Include="Areas\Business\Scripts\Business\PageJson.js" />
     <Content Include="Areas\Business\Scripts\Business\WDFB.js" />
