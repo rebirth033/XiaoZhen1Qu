@@ -47,7 +47,8 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Ashx
 
         public string ResizeImg(Stream ImgFile, int maxWidth, int maxHeight)
         {
-            string filePath = System.Configuration.ConfigurationManager.AppSettings["PhotoSavePath"];
+            string tmpRootDir = HttpContext.Current.Server.MapPath(HttpContext.Current.Request.ApplicationPath);//获取程序根目录
+            string filePath = tmpRootDir + @"\Areas\Business\Photos\";
             string fileName = DateTime.Now.ToString("yyyyMMddHHmmssffff") + ".jpg";
 
             Image imgPhoto = Image.FromStream(ImgFile);
@@ -85,8 +86,8 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Ashx
 
         public string SavePhoto64(HttpContext context)
         {
-            string tmpRootDir = HttpContext.Current.Server.MapPath(System.Web.HttpContext.Current.Request.ApplicationPath.ToString());//获取程序根目录 
-            string virtualpath = context.Request["filepath"].ToString();
+            string tmpRootDir = HttpContext.Current.Server.MapPath(HttpContext.Current.Request.ApplicationPath);//获取程序根目录 
+            string virtualpath = context.Request["filepath"];
             string filename = virtualpath.Substring(virtualpath.LastIndexOf('/') + 1, virtualpath.Length - virtualpath.LastIndexOf('/') - 1);
             string physicalpath = tmpRootDir + @"\Areas\Business\Photos\" + filename;
             FileStream fs = File.Create(physicalpath);
