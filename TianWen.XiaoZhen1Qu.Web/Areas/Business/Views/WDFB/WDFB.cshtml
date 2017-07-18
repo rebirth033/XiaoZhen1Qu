@@ -9,16 +9,42 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title></title>
+    <link href="@Url.Content("~/Areas/Business/Css/YHGL.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Areas/Business/Scripts/jquery-ui-1.12.1.custom/jquery-ui.min.css")" rel="stylesheet" />
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/WDFB.js")"></script>
 </head>
 <body>
-    <div>
-        <ul id="myTab" class="nav nav-tabs" style="width: 100%">
-            <li class="active"><a href="#username" data-toggle="tab">最新信息</a></li>
-            <li class="liRightHead"><a href="#cellphone" data-toggle="tab">显示中的信息</a></li>
-            <li class="liRightHead"><a href="#cellphone" data-toggle="tab">审核中的信息</a></li>
-            <li class="liRightHead"><a href="#cellphone" data-toggle="tab">已删除的信息</a></li>
-            <li class="liRightHead"><a href="#cellphone" data-toggle="tab">未显示信息</a></li>
+    <div class="wdfb_right_head">
+        <div class="divstep" id="divZXXX">
+            <span class="spanstep" id="spanZXXX">最新信息</span>
+            <em class="emstep" id="emZXXX"></em>
+        </div>
+        <div class="divstep" id="divXSZXX">
+            <span class="spanstep" id="spanXSZXX">显示中的信息</span>
+            <em class="emstep" id="emXSZXX"></em>
+        </div>
+        <div class="divstep" id="divSHZXX">
+            <span class="spanstep" id="spanSHZXX">审核中的信息</span>
+            <em class="emstep" id="emSHZXX"></em>
+        </div>
+        <div class="divstep" id="divYSCXX">
+            <span class="spanstep" id="spanYSCXX">已删除的信息</span>
+            <em class="emstep" id="emYSCXX"></em>
+        </div>
+        <div class="divstep" id="divWXSXX">
+            <span class="spanstep" id="spanWXSXX">未显示信息</span>
+            <em class="emstep" id="emWXSXX"></em>
+        </div>
+        <div class="divstep">
+            <span class="spanstep" id="spanOther">&nbsp;</span>
+            <em class="emstep" id="emOther" style="width: 250px;"></em>
+        </div>
+    </div>
+    <div class="new_info">
+        <ul class="ul_new_info">
+            <li class="li_new_info">
+                <div class="div_new_info"></div>
+            </li>
         </ul>
     </div>
 </body>
