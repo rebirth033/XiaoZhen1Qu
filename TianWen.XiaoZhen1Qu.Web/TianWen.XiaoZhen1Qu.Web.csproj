@@ -222,6 +222,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Business\Ashx\GenerateQRCode.ashx.cs">
+      <DependentUpon>GenerateQRCode.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Areas\Business\Ashx\SavePhotos.ashx.cs">
       <DependentUpon>SavePhotos.ashx</DependentUpon>
     </Compile>
@@ -277,6 +280,7 @@
     <Content Include="Areas\Business\Scripts\jquery-ui-1.12.1.custom\jquery.ui.datepicker-zh-CN.js" />
     <Content Include="Areas\Business\Ashx\SavePhotos.ashx" />
     <Content Include="Areas\Business\Views\FBCG\FBCG.cshtml" />
+    <Content Include="Areas\Business\Ashx\GenerateQRCode.ashx" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
