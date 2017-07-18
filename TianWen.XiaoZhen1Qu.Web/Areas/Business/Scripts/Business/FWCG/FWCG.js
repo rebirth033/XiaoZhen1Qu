@@ -1,6 +1,7 @@
 ﻿$(document).ready(function () {
     $("#spanWCFB").css("color", "#5bc0de");
     $("#emWCFB").css("background", "#5bc0de");
+    $("#btnGLXX").bind("click", ToYHGL);
     GenerateQRCode();
 });
 
@@ -21,4 +22,8 @@ function GenerateQRCode() {
 
         }
     });
+}
+
+function ToYHGL() {
+    window.location.href = getRootPath() + "/Business/YHGL/YHGL";
 }
