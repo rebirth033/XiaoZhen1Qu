@@ -41,5 +41,7 @@
       <ref object="BaseBLL"/>
     </property>
   </object>
+  <object id="FBCGController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.FBCGController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+  </object>
 </objects>
 

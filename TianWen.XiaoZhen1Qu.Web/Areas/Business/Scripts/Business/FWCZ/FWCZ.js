@@ -731,7 +731,7 @@ function FB() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                alert("发布成功");
+                window.location.href = getRootPath() + "/Business/FBCG/FBCG";
             } else {
                 if (xml.Type === 1) {
                     $("#YZM").css("border-color", "#F2272D");

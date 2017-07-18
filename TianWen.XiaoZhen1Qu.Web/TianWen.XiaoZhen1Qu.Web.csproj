@@ -134,6 +134,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Business\Aspx\png.aspx" />
+    <Content Include="Areas\Business\Css\FBCG.css" />
     <Content Include="Areas\Business\Css\FWCZ.css" />
     <Content Include="Areas\Business\Css\images\arrow_down.png" />
     <Content Include="Areas\Business\Css\images\arrow_up.png" />
@@ -149,6 +150,7 @@
     <Content Include="Areas\Business\Css\images\logo.png" />
     <Content Include="Areas\Business\Css\images\mosaic.png" />
     <Content Include="Areas\Business\Css\images\no.png" />
+    <Content Include="Areas\Business\Css\images\ok.png" />
     <Content Include="Areas\Business\Css\images\one-blue.png" />
     <Content Include="Areas\Business\Css\images\radio_blue.png" />
     <Content Include="Areas\Business\Css\images\radio_gray.png" />
@@ -174,6 +176,7 @@
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\js\npm.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\Common.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\Regular.js" />
+    <Content Include="Areas\Business\Scripts\Business\FWCG\FWCG.js" />
     <Content Include="Areas\Business\Scripts\Business\FWCZ\FWCZ.js" />
     <Content Include="Areas\Business\Scripts\Business\FWCZ\FWCZYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\FWCZ\FWCZZP.js" />
@@ -227,6 +230,7 @@
     <Compile Include="Areas\Business\BusinessAreaRegistration.cs" />
     <Compile Include="Areas\Business\Common\BaseController.cs" />
     <Compile Include="Areas\Business\Common\Common.cs" />
+    <Compile Include="Areas\Business\Controllers\FBCGController.cs" />
     <Compile Include="Areas\Business\Controllers\FWCZController.cs" />
     <Compile Include="Areas\Business\Controllers\LBXZController.cs" />
     <Compile Include="Areas\Business\Controllers\WDFBController.cs" />
@@ -266,6 +270,7 @@
     <Content Include="Areas\Business\Scripts\jquery-ui-1.12.1.custom\package.json" />
     <Content Include="Areas\Business\Scripts\jquery-ui-1.12.1.custom\jquery.ui.datepicker-zh-CN.js" />
     <Content Include="Areas\Business\Ashx\SavePhotos.ashx" />
+    <Content Include="Areas\Business\Views\FBCG\FBCG.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

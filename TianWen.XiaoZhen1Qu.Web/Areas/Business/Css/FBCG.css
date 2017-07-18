@@ -1,0 +1,14 @@
+﻿.fbcg_warning {
+    background: #d6f0f8;
+    border: 1px solid #9ddcee;
+    padding: 0 15px;
+    padding-top: 4px;
+    color: #000;
+    width: 450px;
+    height: 34px;
+    font: 400 12px/190% Hiragino Sans GB, 微软雅黑, Microsoft YaHei, SimHei, Tahoma, 宋体, SimSun, sansserif;
+}
+
+.fbcg_left {
+    padding: 20px 100px 20px 50px;
+}
