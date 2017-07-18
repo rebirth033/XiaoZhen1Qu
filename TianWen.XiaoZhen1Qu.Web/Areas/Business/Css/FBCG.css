@@ -69,13 +69,6 @@
     margin-left: 10px;
 }
 
-.fbcg_share {
-    height: 104px;
-    width: 162px;
-    display: block;
-    background-image: url(images/share.png);
-}
-
 .fbcg_tg {
     width: 380px;
     color: #bbb;
@@ -85,12 +78,20 @@
     text-align: left;
 }
 
+.fbcg_share {
+    height: 104px;
+    width: 162px;
+    display: block;
+    background-image: url(images/share.png);
+    text-align: left;
+}
+
 .fbcg_share_img {
     width: 90px;
     height: 90px;
-    top: 0;
-    left: 0;
-    background-image: url(images/QR.png);
+    top: 7px;
+    left: 7px;
+    position: relative;
 }
 
 .fbcg_sm {

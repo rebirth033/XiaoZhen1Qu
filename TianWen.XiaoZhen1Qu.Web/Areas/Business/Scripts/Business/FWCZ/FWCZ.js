@@ -689,7 +689,6 @@ function LoadFWCZXX() {
 
         }
     });
-
 }
 
 function MouseOver() {
