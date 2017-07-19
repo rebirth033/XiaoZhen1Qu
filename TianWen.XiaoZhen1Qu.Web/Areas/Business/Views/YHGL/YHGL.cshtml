@@ -12,18 +12,18 @@
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/YHGL.js")"></script>
 </head>
 <body style="width: 100%; height: 100%;">
-    <div id="divTop" style="width: 100%; height: 30px; background-color: #fafafa; vertical-align: middle;">
-        <div style="width: 290px; margin-left: 53%; text-align: center; height: 25px; padding-top: 5px;">
-            <a style="text-decoration: none; color: #5bc0de; font-size: 12px; cursor: pointer">
+    <div id="divTop" class="div_top">
+        <div class="div_top_right">
+            <a class="a_top_right_sy no_line">
                 信息小镇首页
             </a>
-            <img style="width: 1px; height: 12px; background: #cccccc; margin: -3px 5px 0 5px;" />
-            <a style="text-decoration: none; color: #666; font-size: 12px; cursor: pointer">
-                <img src="@Url.Content("~/Areas/Business/Css/images/cellphone.png")" style="width: 12px; height: 18px; margin: -3px 5px 0 5px;" />
+            <img class="img_top_right_split" />
+            <a class="a_top_right_sjdl no_line">
+                <img class="img_top_right_sjdl" />
                 手机登录
             </a>
-            <img style="width: 1px; height: 12px; background: #cccccc; margin: -3px 5px 0 5px;" />
-            <a style="text-decoration: none; color: #666; font-size: 12px; cursor: pointer">
+            <img class="img_top_right_split" />
+            <a class="a_top_right_yhm no_line">
                 rebirth033
                 <img src="@Url.Content("~/Areas/Business/Css/images/arrow_down.png")" style="width: 12px; height: 18px; margin: -3px 5px 0 5px;" />
             </a>
@@ -35,9 +35,9 @@
             <span style="width: 100%; text-align: center; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: white; font-size: 17px; float: left; cursor: default;">infotownlet.com</span>
         </div>
         <ul style="width: 450px; height: 80px; display: block; float: left; margin-left: 100px; margin-top: 20px; vertical-align: middle">
-            <li class="liHead">个人中心</li>
-            <li class="liHead">账户设置</li>
-            <li class="liHead">我的资金</li>
+            <li class="liHead" id="liGRZX">个人中心</li>
+            <li class="liHead" id="liZHSZ">账户设置</li>
+            <li class="liHead" id="liSHGJ">生活工具</li>
         </ul>
     </div>
     <div id="divSplit" style="width: 100%; height: 30px">
@@ -45,7 +45,7 @@
     </div>
     <div id="divContent" style="width: 100%; height: 931px;">
         <div id="divLeftMenu" style="height: 100%; float: left; width: 184px; background-color: #fafafa; margin-left: 170px; text-align: center">
-            <ul style="display: block; padding: 20px 0 0 20px">
+            <ul id="ulGRZX" style="display: block; padding: 20px 0 0 20px">
                 <li class="liLeftMenu">
                     <span class="spanleftfirst" id="spanQRZH">个人中心</span>
                     <em class="emstep" style="width: 140px; height: 1px;"></em>
@@ -59,7 +59,7 @@
                 <li class="liLeftMenu"><span class="spanleftsecond" id="spanKHFW">客户服务</span></li>
                 <li class="liLeftMenu"><span class="spanleftsecond" id="spanBZZX">帮助中心</span></li>
             </ul>
-            <ul style="display: block; padding: 20px 0 0 20px">
+            <ul id="ulZHSZ" style="display: block; padding: 20px 0 0 20px">
                 <li class="liLeftMenu">
                     <span class="spanleftfirst" id="spanZHSZ">账户设置</span>
                     <em class="emstep" style="width: 140px; height: 1px;"></em>
@@ -69,7 +69,8 @@
                 <li class="liLeftMenu"><span class="spanleftsecond" id="spanRZGL">认证管理</span></li>
                 <li class="liLeftMenu"><span class="spanleftsecond" id="spanMMSZ">密码设置</span></li>
                 <li class="liLeftMenu"><span class="spanleftsecond" id="spanXXGL">消息管理</span></li>
-            </ul><ul style="display: block; padding: 20px 0 0 20px">
+            </ul>
+            <ul id="ulSHGJ" style="display: block; padding: 20px 0 0 20px">
                 <li class="liLeftMenu">
                     <span class="spanleftfirst" id="spanSHGJ">生活工具</span>
                     <em class="emstep" style="width: 140px; height: 1px;"></em>
