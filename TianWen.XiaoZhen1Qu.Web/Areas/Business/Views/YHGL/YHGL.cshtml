@@ -8,6 +8,7 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title></title>
+    <link href="@Url.Content("~/Areas/Business/Css/YHGL.css")" rel="stylesheet" />
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/YHGL.js")"></script>
 </head>
 <body style="width: 100%; height: 100%;">
@@ -42,12 +43,12 @@
     <div id="divSplit" style="width: 100%; height: 30px">
 
     </div>
-    <div id="divContent" style="width: 100%; height: 931px">
+    <div id="divContent" style="width: 100%; height: 931px;">
         <div id="divLeftMenu" style="height: 100%; float: left; width: 184px; background-color: #fafafa; margin-left: 170px; text-align: center">
             <ul style="display: block; padding: 20px 0 0 20px">
                 <li class="liLeftMenu">
                     <span class="spanleftfirst" id="spanQRZH">个人中心</span>
-                    <em class="emstep" style="width: 140px; height: 1px;" id="emQRZH"></em>
+                    <em class="emstep" style="width: 140px; height: 1px;"></em>
                 </li>
                 <li class="liLeftMenu"><span class="spanleftsecond" id="spanWDFB">我的发布</span></li>
                 <li class="liLeftMenu"><span class="spanleftsecond" id="spanWDSC">我的收藏</span></li>
@@ -61,14 +62,25 @@
             <ul style="display: block; padding: 20px 0 0 20px">
                 <li class="liLeftMenu">
                     <span class="spanleftfirst" id="spanZHSZ">账户设置</span>
-                    <em class="emstep" style="width: 140px; height: 1px;" id="emQRZH"></em>
+                    <em class="emstep" style="width: 140px; height: 1px;"></em>
                 </li>
                 <li class="liLeftMenu"><span class="spanleftsecond" id="spanGRZL">个人资料</span></li>
                 <li class="liLeftMenu"><span class="spanleftsecond" id="spanZHBD">账号绑定</span></li>
                 <li class="liLeftMenu"><span class="spanleftsecond" id="spanRZGL">认证管理</span></li>
                 <li class="liLeftMenu"><span class="spanleftsecond" id="spanMMSZ">密码设置</span></li>
                 <li class="liLeftMenu"><span class="spanleftsecond" id="spanXXGL">消息管理</span></li>
+            </ul><ul style="display: block; padding: 20px 0 0 20px">
+                <li class="liLeftMenu">
+                    <span class="spanleftfirst" id="spanSHGJ">生活工具</span>
+                    <em class="emstep" style="width: 140px; height: 1px;"></em>
+                </li>
+                <li class="liLeftMenu"><span class="spanleftsecond" id="spanHFCZ">话费充值</span></li>
+                <li class="liLeftMenu"><span class="spanleftsecond" id="spanDKCZ">点卡充值</span></li>
+                <li class="liLeftMenu"><span class="spanleftsecond" id="spanHCDP">火车订票</span></li>
+                <li class="liLeftMenu"><span class="spanleftsecond" id="spanWZCX">违章查询</span></li>
+                <li class="liLeftMenu"><span class="spanleftsecond" id="spanJDYD">酒店预订</span></li>
             </ul>
+
         </div>
         <div id="divRightContent" style="height: 100%; width: 900px; float: left; margin-left: 10px;">
             <iframe id="iframeright" style="border: none; width: 100%; height: 100%"></iframe>
