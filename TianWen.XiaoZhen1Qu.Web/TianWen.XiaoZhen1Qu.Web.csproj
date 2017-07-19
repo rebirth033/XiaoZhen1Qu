@@ -48,6 +48,9 @@
     <Reference Include="CommonClassLib">
       <HintPath>..\GlobalBin\CommonClassLib.dll</HintPath>
     </Reference>
+    <Reference Include="Gma.QrCodeNet.Encoding.Net35">
+      <HintPath>..\GlobalBin\Gma.QrCodeNet.Encoding.Net35.dll</HintPath>
+    </Reference>
     <Reference Include="Iesi.Collections">
       <HintPath>..\GlobalBin\Iesi.Collections.dll</HintPath>
     </Reference>
@@ -134,6 +137,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Business\Aspx\png.aspx" />
+    <Content Include="Areas\Business\Css\FBCG.css" />
     <Content Include="Areas\Business\Css\FWCZ.css" />
     <Content Include="Areas\Business\Css\images\arrow_down.png" />
     <Content Include="Areas\Business\Css\images\arrow_up.png" />
@@ -149,10 +153,14 @@
     <Content Include="Areas\Business\Css\images\logo.png" />
     <Content Include="Areas\Business\Css\images\mosaic.png" />
     <Content Include="Areas\Business\Css\images\no.png" />
+    <Content Include="Areas\Business\Css\images\ok.png" />
     <Content Include="Areas\Business\Css\images\one-blue.png" />
+    <Content Include="Areas\Business\Css\images\QR.png" />
     <Content Include="Areas\Business\Css\images\radio_blue.png" />
     <Content Include="Areas\Business\Css\images\radio_gray.png" />
     <Content Include="Areas\Business\Css\images\rotate.png" />
+    <Content Include="Areas\Business\Css\images\share.png" />
+    <Content Include="Areas\Business\Css\images\test.jpg" />
     <Content Include="Areas\Business\Css\images\three-blue.png" />
     <Content Include="Areas\Business\Css\images\three-gray.png" />
     <Content Include="Areas\Business\Css\images\two-blue.png" />
@@ -164,6 +172,8 @@
     <Content Include="Areas\Business\Css\images\righttip.png" />
     <Content Include="Areas\Business\Css\LBXZ.css" />
     <Content Include="Areas\Business\Css\PageCommon.css" />
+    <Content Include="Areas\Business\Css\YHGL.css" />
+    <Content Include="Areas\Business\Css\ZHMM.css" />
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\css\bootstrap-theme.css" />
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\css\bootstrap-theme.min.css" />
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\css\bootstrap.css" />
@@ -174,6 +184,7 @@
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\js\npm.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\Common.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\Regular.js" />
+    <Content Include="Areas\Business\Scripts\Business\FWCG\FWCG.js" />
     <Content Include="Areas\Business\Scripts\Business\FWCZ\FWCZ.js" />
     <Content Include="Areas\Business\Scripts\Business\FWCZ\FWCZYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\FWCZ\FWCZZP.js" />
@@ -214,6 +225,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Business\Ashx\GenerateQRCode.ashx.cs">
+      <DependentUpon>GenerateQRCode.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Areas\Business\Ashx\SavePhotos.ashx.cs">
       <DependentUpon>SavePhotos.ashx</DependentUpon>
     </Compile>
@@ -227,6 +241,8 @@
     <Compile Include="Areas\Business\BusinessAreaRegistration.cs" />
     <Compile Include="Areas\Business\Common\BaseController.cs" />
     <Compile Include="Areas\Business\Common\Common.cs" />
+    <Compile Include="Areas\Business\Common\QRCodeHelper.cs" />
+    <Compile Include="Areas\Business\Controllers\FBCGController.cs" />
     <Compile Include="Areas\Business\Controllers\FWCZController.cs" />
     <Compile Include="Areas\Business\Controllers\LBXZController.cs" />
     <Compile Include="Areas\Business\Controllers\WDFBController.cs" />
@@ -266,6 +282,8 @@
     <Content Include="Areas\Business\Scripts\jquery-ui-1.12.1.custom\package.json" />
     <Content Include="Areas\Business\Scripts\jquery-ui-1.12.1.custom\jquery.ui.datepicker-zh-CN.js" />
     <Content Include="Areas\Business\Ashx\SavePhotos.ashx" />
+    <Content Include="Areas\Business\Views\FBCG\FBCG.cshtml" />
+    <Content Include="Areas\Business\Ashx\GenerateQRCode.ashx" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -277,6 +295,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Business\Photos\" />
+    <Folder Include="Areas\Business\QRCode\" />
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>

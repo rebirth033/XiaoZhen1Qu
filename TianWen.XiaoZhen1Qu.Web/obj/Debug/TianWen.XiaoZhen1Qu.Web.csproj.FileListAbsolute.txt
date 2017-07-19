@@ -170,3 +170,4 @@ F:\福建天问信息技术责任有限公司\小镇1区源代码\TianWen.XiaoZh
 F:\福建天问信息技术责任有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Web\obj\Debug\TianWen.XiaoZhen1Qu.Web.csprojResolveAssemblyReference.cache
 F:\福建天问信息技术责任有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Web\obj\Debug\TianWen.XiaoZhen1Qu.Web.dll
 F:\福建天问信息技术责任有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Web\obj\Debug\TianWen.XiaoZhen1Qu.Web.pdb
+F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Web\bin\Gma.QrCodeNet.Encoding.Net35.dll
