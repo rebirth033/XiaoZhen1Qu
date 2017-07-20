@@ -4,15 +4,16 @@
 });
 
 function LoadDefault() {
-    $("#spanZXXX").css("color", "#5bc0de");
-    $("#emZXXX").css("background-color", "#5bc0de");
+    $("#spanZJFBXX").css("color", "#5bc0de");
+    $("#emZJFBXX").css("background-color", "#5bc0de");
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/WDFB/LoadZXXX",
+        url: getRootPath() + "/Business/WDFB/LoadYHFBXX",
         dataType: "json",
         data:
         {
-            YHID: "2718ced3-996d-427d-925d-a08e127cc0b8"
+            YHID: "2718ced3-996d-427d-925d-a08e127cc0b8",
+            TYPE: "ZJFBXX"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -56,7 +57,10 @@ function LoadInfo(obj) {
     html += ('<div class="div_new_info_body_left">');
     html += ('<div class="div_new_info_body_left_inner">');
     html += ('<div class="div_new_info_body_left_inner_img">');
-    html += ('<img class="img_new_info_body_left" />');
+    if (obj.PHOTOS.length > 0)
+        html += ('<img class="img_new_info_body_left" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
+    else
+        html += ('<img class="img_new_info_body_left" />');
     html += ('</div>');
     html += ('<div class="div_new_info_body_left_inner_info">');
     html += ('<span class="span_new_info_body_left_bt">' + obj.BT + '</span>');
@@ -66,7 +70,7 @@ function LoadInfo(obj) {
     html += ('</div>');
     html += ('</div>');
     html += ('<div class="div_new_info_body_middle">');
-    if(obj.STATUS === 1)
+    if (obj.STATUS === 1)
         html += ('<span class="span_new_info_body_middle active">个人删除</span>');
     else
         html += ('<span class="span_new_info_body_middle">个人删除</span>');

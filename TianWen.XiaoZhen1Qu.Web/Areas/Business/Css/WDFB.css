@@ -85,7 +85,6 @@
 .img_new_info_body_left {
     width: 90px;
     height: 77px;
-    background-image: url(images/test.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -96,7 +95,7 @@
     height: 77px;
     display: inline-block;
     vertical-align: middle;
-    margin-left: 4px;
+    margin-left: 8px;
     padding-top: 5px;
 }
 

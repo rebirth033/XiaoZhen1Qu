@@ -13,9 +13,9 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return View();
         }
 
-        public JsonResult LoadZXXX()
+        public JsonResult LoadYHFBXX()
         {
-            return Json(WDFBBLL.LoadZXXX(Request["YHID"]));
+            return Json(WDFBBLL.LoadYHFBXX(Request["YHID"], Request["TYPE"]));
         }
     }
 }

@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using NHibernate.Mapping.Attributes;
 
 namespace TianWen.XiaoZhen1Qu.Entities.Models
@@ -11,6 +9,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public JCXX()
         {
             JCXXID = Guid.NewGuid().ToString("N");
+            PHOTOS = new List<PHOTOS>();
         }
 
         /// <summary>
@@ -84,5 +83,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// </summary>
         [Property]
         public virtual int STATUS { get; set; }
+
+        public virtual IList<PHOTOS> PHOTOS { get; set; }
     }
 }
