@@ -74,16 +74,23 @@ function LoadInfo(obj) {
     html += ('</div>');
     html += ('</div>');
     html += ('<div class="div_new_info_body_middle">');
-    if (obj.STATUS === 1)
-        html += ('<span class="span_new_info_body_middle active" onclick="Delete(\'' + obj.JCXXID + '\')">个人删除</span>');
+    if (obj.STATUS === 1){
+        html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_status">显示中</span>');
+        html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_read">浏览:28</span>');
+        html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_tip">进行置顶或精准推广会让你的信息成交更快哦。</span>');
+    }
     else
         html += ('<span class="span_new_info_body_middle">个人删除</span>');
     html += ('</div>');
     html += ('<div class="div_new_info_body_right">');
     if (obj.STATUS === 0)
         html += ('<span class="span_new_info_body_right active" onclick="Restore(\'' + obj.JCXXID + '\')">恢复</span>');
-    else
-        html += ('<span class="span_new_info_body_right">恢复</span>');
+    else {
+        html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_update">修改</span>');
+        html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_refresh">刷新</span>');
+        html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_top">置顶</span>');
+        html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_delete">删除</span>');
+    }
     html += ('</div>');
     html += ('</div>');
     html += ('</div>');
