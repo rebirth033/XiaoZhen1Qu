@@ -52,6 +52,7 @@
     <Compile Include="BLL\BaseBLL.cs" />
     <Compile Include="BLL\FWCZJBXXBLL.cs" />
     <Compile Include="BLL\LBXXBLL.cs" />
+    <Compile Include="BLL\WDFBBLL.cs" />
     <Compile Include="BLL\YHDLXXBLL.cs" />
     <Compile Include="BLL\YHJBXXBLL.cs" />
     <Compile Include="DAO\DAOBase.cs" />

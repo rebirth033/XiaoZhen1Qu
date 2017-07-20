@@ -172,6 +172,7 @@
     <Content Include="Areas\Business\Css\images\righttip.png" />
     <Content Include="Areas\Business\Css\LBXZ.css" />
     <Content Include="Areas\Business\Css\PageCommon.css" />
+    <Content Include="Areas\Business\Css\WDFB.css" />
     <Content Include="Areas\Business\Css\YHGL.css" />
     <Content Include="Areas\Business\Css\ZHMM.css" />
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\css\bootstrap-theme.css" />

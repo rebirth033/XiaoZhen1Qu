@@ -10,7 +10,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
     {
         public FWCZJBXX()
         {
-            FWCZID = Guid.NewGuid().ToString();
+            FWCZID = Guid.NewGuid().ToString("N");
         }
 
         /// <summary>

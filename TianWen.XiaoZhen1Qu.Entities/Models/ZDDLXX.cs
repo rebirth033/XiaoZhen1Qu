@@ -10,7 +10,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
     {
         public ZDDLXX()
         {
-            ZDDLID = Guid.NewGuid().ToString();
+            ZDDLID = Guid.NewGuid().ToString("N");
         }
         /// <summary>
         /// 用户ID

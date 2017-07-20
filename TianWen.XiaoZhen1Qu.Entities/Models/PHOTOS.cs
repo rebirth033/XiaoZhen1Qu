@@ -10,7 +10,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
     {
         public PHOTOS()
         {
-            PHOTOID = Guid.NewGuid().ToString();
+            PHOTOID = Guid.NewGuid().ToString("N");
         }
 
         /// <summary>

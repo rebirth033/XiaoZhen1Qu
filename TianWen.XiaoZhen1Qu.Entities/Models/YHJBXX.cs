@@ -7,7 +7,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
     {
         public YHJBXX()
         {
-            YHID = Guid.NewGuid().ToString();
+            YHID = Guid.NewGuid().ToString("N");
         }
         /// <summary>
         /// 用户ID

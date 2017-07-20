@@ -7,7 +7,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
     {
         public XQJBXX()
         {
-            XQJBXXID = Guid.NewGuid().ToString();
+            XQJBXXID = Guid.NewGuid().ToString("N");
         }
         /// <summary>
         /// 小区基本信息ID

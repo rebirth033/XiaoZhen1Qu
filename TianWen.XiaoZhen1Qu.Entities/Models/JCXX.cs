@@ -10,7 +10,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
     {
         public JCXX()
         {
-            JCXXID = Guid.NewGuid().ToString();
+            JCXXID = Guid.NewGuid().ToString("N");
         }
 
         /// <summary>
@@ -72,5 +72,17 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// </summary>
         [Property]
         public virtual string BT { get; set; }
+        
+        /// <summary>
+        /// 导航
+        /// </summary>
+        [Property]
+        public virtual string DH { get; set; }
+
+        /// <summary>
+        /// 当前状态
+        /// </summary>
+        [Property]
+        public virtual int STATUS { get; set; }
     }
 }
