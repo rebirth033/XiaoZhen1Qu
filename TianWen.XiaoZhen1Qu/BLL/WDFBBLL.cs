@@ -17,7 +17,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 IList<JCXX> list = new List<JCXX>();
                 if (TYPE == "divZJFBXX")//最近发布信息，暂定三个月以内
                 {
-                    list = DAO.Repository.GetObjectList<JCXX>(String.Format("FROM JCXX WHERE YHID='{0}' AND STATUS = 1 AND CJSJ >= TO_DATE(to_char(add_months(sysdate, -3), 'yyyy-mm-dd hh24:mi:ss'), 'yyyy-mm-dd hh24:mi:ss') ORDER BY CJSJ", YHID));
+                    list = DAO.Repository.GetObjectList<JCXX>(String.Format("FROM JCXX WHERE YHID='{0}' AND CJSJ >= TO_DATE(to_char(add_months(sysdate, -3), 'yyyy-mm-dd hh24:mi:ss'), 'yyyy-mm-dd hh24:mi:ss') ORDER BY CJSJ", YHID));
                 }
                 if (TYPE == "divXSZXX")//显示中信息
                 {

@@ -81,9 +81,9 @@ function LoadInfo(obj) {
     html += ('</div>');
     html += ('<div class="div_new_info_body_right">');
     if (obj.STATUS === 0)
-        html += ('<span class="span_new_info_body_right active">恢复</span>');
+        html += ('<span class="span_new_info_body_right active" onclick="Restore(this)">恢复</span>');
     else
-        html += ('<span class="span_new_info_body_right">恢复</span>');
+        html += ('<span class="span_new_info_body_right" onclick="Restore(this)">恢复</span>');
     html += ('</div>');
     html += ('</div>');
     html += ('</div>');
@@ -107,5 +107,11 @@ function NoInfo(TYPE) {
     }
     if (TYPE === "divWXSXX") {
         $("#div_main_info").html('<div class="div_no_info">您没有未显示信息</div>');
+    }
+}
+
+function Restore(obj) {
+    if (confirm("您确定恢复本条信息吗")) {
+        alert(3);
     }
 }
