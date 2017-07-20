@@ -60,16 +60,22 @@ function LoadInfo(obj) {
     html += ('</div>');
     html += ('<div class="div_new_info_body_left_inner_info">');
     html += ('<span class="span_new_info_body_left_bt">' + obj.BT + '</span>');
-    html += ('<span class="span_new_info_body_left_rq">' + obj.CJSJ.ToString("yyyy-MM-dd") + '</span>');
+    html += ('<span class="span_new_info_body_left_rq">' + obj.CJSJ.ToString("yyyy-MM-dd hh:mm:ss") + '</span>');
     html += ('<span class="span_new_info_body_left_dh">' + obj.DH + '</span>');
     html += ('</div>');
     html += ('</div>');
     html += ('</div>');
     html += ('<div class="div_new_info_body_middle">');
-    html += ('<span class="span_new_info_body_middle">个人删除</span>');
+    if(obj.STATUS === 1)
+        html += ('<span class="span_new_info_body_middle active">个人删除</span>');
+    else
+        html += ('<span class="span_new_info_body_middle">个人删除</span>');
     html += ('</div>');
     html += ('<div class="div_new_info_body_right">');
-    html += ('<span class="span_new_info_body_right">恢复</span>');
+    if (obj.STATUS === 0)
+        html += ('<span class="span_new_info_body_right active">恢复</span>');
+    else
+        html += ('<span class="span_new_info_body_right">恢复</span>');
     html += ('</div>');
     html += ('</div>');
     html += ('</div>');

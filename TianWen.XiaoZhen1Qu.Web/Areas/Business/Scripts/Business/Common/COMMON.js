@@ -104,9 +104,14 @@ String.prototype.ToString = function (format) {
     format = format.replace("yy", dateTime.getFullYear().toString().substr(2));
     format = format.replace("MM", dateTime.getMonth() + 1);
     format = format.replace("dd", dateTime.getDate());
-    format = format.replace("hh", dateTime.getHours());
-    format = format.replace("mm", dateTime.getMinutes());
-    format = format.replace("ss", dateTime.getSeconds());
+    format = format.replace("hh", p(dateTime.getHours()));
+    format = format.replace("mm", p(dateTime.getMinutes()));
+    format = format.replace("ss", p(dateTime.getSeconds()));
     format = format.replace("ms", dateTime.getMilliseconds());
     return format;
 };
+
+//创建补0函数
+function p(s) {
+    return s < 10 ? '0' + s : s;
+}
