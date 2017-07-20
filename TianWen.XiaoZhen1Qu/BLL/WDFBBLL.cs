@@ -47,5 +47,25 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 return new { Result = EnResultType.Failed, Message = "加载失败" };
             }
         }
+
+
+        public object UpdateYHFBXX(string JCXXID, string OPTYPE)
+        {
+            try
+            {
+                JCXX jcxx = DAO.GetObjectByID<JCXX>(JCXXID);
+                if (OPTYPE == "DELETE")
+                    jcxx.STATUS = 0;
+                if (OPTYPE == "RESTORE")
+                    jcxx.STATUS = 1;
+                DAO.Update(jcxx);
+                return new { Result = EnResultType.Success };
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("error", ex.Message);
+                return new { Result = EnResultType.Failed, Message = "修改失败" };
+            }
+        }
     }
 }

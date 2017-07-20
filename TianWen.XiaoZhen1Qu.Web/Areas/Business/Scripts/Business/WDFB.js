@@ -2,7 +2,7 @@
     $("#spanZJFBXX").css("color", "#5bc0de");
     $("#emZJFBXX").css("background-color", "#5bc0de");
     $(".divstep").bind("click", HeadActive);
-    LoadDefault("divZJFBXX");
+    //LoadDefault("divZJFBXX");
 });
 
 function LoadDefault(TYPE) {
@@ -75,15 +75,15 @@ function LoadInfo(obj) {
     html += ('</div>');
     html += ('<div class="div_new_info_body_middle">');
     if (obj.STATUS === 1)
-        html += ('<span class="span_new_info_body_middle active">个人删除</span>');
+        html += ('<span class="span_new_info_body_middle active" onclick="Delete(\'' + obj.JCXXID + '\')">个人删除</span>');
     else
         html += ('<span class="span_new_info_body_middle">个人删除</span>');
     html += ('</div>');
     html += ('<div class="div_new_info_body_right">');
     if (obj.STATUS === 0)
-        html += ('<span class="span_new_info_body_right active" onclick="Restore(this)">恢复</span>');
+        html += ('<span class="span_new_info_body_right active" onclick="Restore(\'' + obj.JCXXID + '\')">恢复</span>');
     else
-        html += ('<span class="span_new_info_body_right" onclick="Restore(this)">恢复</span>');
+        html += ('<span class="span_new_info_body_right">恢复</span>');
     html += ('</div>');
     html += ('</div>');
     html += ('</div>');
@@ -110,8 +110,53 @@ function NoInfo(TYPE) {
     }
 }
 
-function Restore(obj) {
-    if (confirm("您确定恢复本条信息吗")) {
-        alert(3);
+function Restore(JCXXID) {
+    if (confirm("您确定恢复本条信息吗?")) {
+        $.ajax({
+            type: "POST",
+            url: getRootPath() + "/Business/WDFB/UpdateYHFBXX",
+            dataType: "json",
+            data:
+            {
+                JCXXID: JCXXID,
+                OPTYPE: "RESTORE"
+            },
+            success: function (xml) {
+                if (xml.Result === 1) {
+                    alert("信息恢复成功");
+                    $(".divstep").each(function() {
+                        alert($(this).find("span")[0].css("color"));
+                    });
+                    LoadDefault("divZJFBXX");
+                }
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+                _masker.CloseMasker(false, errorThrown);
+            }
+        });
+    }
+}
+
+function Delete(JCXXID) {
+    if (confirm("您确定删除本条信息吗?")) {
+        $.ajax({
+            type: "POST",
+            url: getRootPath() + "/Business/WDFB/UpdateYHFBXX",
+            dataType: "json",
+            data:
+            {
+                JCXXID: JCXXID,
+                OPTYPE: "DELETE"
+            },
+            success: function (xml) {
+                if (xml.Result === 1) {
+                    alert("信息删除成功");
+                    LoadDefault("divZJFBXX");
+                }
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+                _masker.CloseMasker(false, errorThrown);
+            }
+        });
     }
 }
