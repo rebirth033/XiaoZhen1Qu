@@ -33,19 +33,19 @@ function ToWDFB() {
 }
 
 function ShowGRZX() {
-    $("ulGRZX").css("display", "block");
-    $("ulZHSZ").css("display", "block");
-    $("ulSHGJ").css("display", "block");
+    $("#ulGRZX").css("display", "block");
+    $("#ulZHSZ").css("display", "block");
+    $("#ulSHGJ").css("display", "block");
 }
 
 function ShowZHSZ() {
-    $("ulGRZX").css("display", "none");
-    $("ulZHSZ").css("display", "block");
-    $("ulSHGJ").css("display", "block");
+    $("#ulGRZX").css("display", "none");
+    $("#ulZHSZ").css("display", "block");
+    $("#ulSHGJ").css("display", "block");
 }
 
 function ShowSHGJ() {
-    $("ulGRZX").css("display", "none");
-    $("ulZHSZ").css("display", "none");
-    $("ulSHGJ").css("display", "block");
+    $("#ulGRZX").css("display", "none");
+    $("#ulZHSZ").css("display", "none");
+    $("#ulSHGJ").css("display", "block");
 }

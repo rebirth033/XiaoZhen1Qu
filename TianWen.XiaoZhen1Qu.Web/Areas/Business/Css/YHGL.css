@@ -36,7 +36,7 @@
 
 .no_line:hover {
     text-decoration: none;
-    color:#5bc0de;
+    color: #5bc0de;
 }
 
 .img_top_right_sjdl {
@@ -52,4 +52,116 @@
     color: #666;
     font-size: 12px;
     cursor: pointer;
+}
+
+.img_top_right_yhm {
+    background-image: url(images/arrow_down.png);
+    width: 12px;
+    height: 18px;
+    margin: 0px 5px 0 5px;
+}
+
+.div_head {
+    background-color: #5bc0de;
+    width: 100%;
+    height: 80px;
+    vertical-align: middle;
+}
+
+.div_head_left {
+    float: left;
+    width: 120px;
+    margin-left: 200px;
+    margin-top: 5px;
+}
+
+.img_head_left {
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    float: left;
+}
+
+.span_head_left {
+    width: 100%;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    font-size: 17px;
+    float: left;
+    cursor: default;
+}
+
+.ul_head_right {
+    width: 450px;
+    height: 80px;
+    display: block;
+    float: left;
+    margin-left: 100px;
+    margin-top: 20px;
+    vertical-align: middle;
+}
+
+.li_head_right {
+    width: 130px;
+    color: white;
+    height: 40px;
+    font-size: 18px;
+    display: inline;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.div_split {
+    width: 100%;
+    height: 30px;
+}
+
+.div_content {
+    width: 100%;
+    height: 931px;
+}
+
+.div_left_menu {
+    height: 100%;
+    float: left;
+    width: 184px;
+    background-color: #fafafa;
+    margin-left: 170px;
+    text-align: center;
+}
+
+.ul_left_menu {
+    display: block;
+    padding: 20px 0 0 20px;
+}
+
+.span_left_menu_first {
+    font-size: 18px;
+    margin-bottom: 5px;
+    line-height: 40px;
+    color: #595757;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.span_left_menu_second {
+    font-size: 15px;
+    margin-bottom: 5px;
+    line-height: 40px;
+    color: #595757;
+    cursor: pointer;
+}
+
+.em_left_menu {
+    width: 140px;
+    height: 1px;
+    float: left;
+    background: #cccccc;
+}
+
+.li_left_menu {
+    width: 130px;
+    text-align: center;
 }

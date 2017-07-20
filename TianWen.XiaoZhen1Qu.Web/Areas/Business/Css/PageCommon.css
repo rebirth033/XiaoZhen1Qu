@@ -148,23 +148,6 @@ li {
     background: #cccccc;
 }
 
-.spanleftfirst {
-    font-size: 18px;
-    margin-bottom: 5px;
-    line-height: 40px;
-    color: #595757;
-    font-weight: bolder;
-    cursor: pointer;
-}
-
-.spanleftsecond {
-    font-size: 15px;
-    margin-bottom: 5px;
-    line-height: 40px;
-    color: #595757;
-    cursor: pointer;
-}
-
 .liHead {
     width: 130px;
     color: white;
@@ -173,11 +156,6 @@ li {
     display: inline;
     margin-left: 30px;
     cursor: pointer;
-}
-
-.liLeftMenu {
-    width: 130px;
-    text-align: center;
 }
 
 .liRightHead {
