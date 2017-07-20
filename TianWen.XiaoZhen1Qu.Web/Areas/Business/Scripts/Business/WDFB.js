@@ -2,7 +2,7 @@
     $("#spanZJFBXX").css("color", "#5bc0de");
     $("#emZJFBXX").css("background-color", "#5bc0de");
     $(".divstep").bind("click", HeadActive);
-    //LoadDefault("divZJFBXX");
+    LoadDefault("divZJFBXX");
 });
 
 function LoadDefault(TYPE) {
@@ -124,10 +124,7 @@ function Restore(JCXXID) {
             success: function (xml) {
                 if (xml.Result === 1) {
                     alert("信息恢复成功");
-                    $(".divstep").each(function() {
-                        alert($(this).find("span")[0].css("color"));
-                    });
-                    LoadDefault("divZJFBXX");
+                    LoadByActive();
                 }
             },
             error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -138,6 +135,7 @@ function Restore(JCXXID) {
 }
 
 function Delete(JCXXID) {
+    
     if (confirm("您确定删除本条信息吗?")) {
         $.ajax({
             type: "POST",
@@ -151,7 +149,7 @@ function Delete(JCXXID) {
             success: function (xml) {
                 if (xml.Result === 1) {
                     alert("信息删除成功");
-                    LoadDefault("divZJFBXX");
+                    LoadByActive();
                 }
             },
             error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -159,4 +157,11 @@ function Delete(JCXXID) {
             }
         });
     }
+}
+
+function LoadByActive() {
+    $(".spanstep").each(function (i) {
+        if ($("#" + this.id).css("color") === "rgb(91, 192, 222)")
+            LoadDefault($("#" + this.id).parent()[0].id);
+    });
 }
