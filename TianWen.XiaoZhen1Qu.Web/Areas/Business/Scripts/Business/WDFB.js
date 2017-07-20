@@ -1,11 +1,11 @@
 ﻿$(document).ready(function () {
-    $(".divstep").bind("click", HeadActive);
-    LoadDefault();
-});
-
-function LoadDefault() {
     $("#spanZJFBXX").css("color", "#5bc0de");
     $("#emZJFBXX").css("background-color", "#5bc0de");
+    $(".divstep").bind("click", HeadActive);
+    LoadDefault("divZJFBXX");
+});
+
+function LoadDefault(TYPE) {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/WDFB/LoadYHFBXX",
@@ -13,13 +13,16 @@ function LoadDefault() {
         data:
         {
             YHID: "2718ced3-996d-427d-925d-a08e127cc0b8",
-            TYPE: "ZJFBXX"
+            TYPE: TYPE
         },
         success: function (xml) {
             if (xml.Result === 1) {
+                $("#div_main_info").html('');
                 for (var i = 0; i < xml.list.length; i++) {
                     LoadInfo(xml.list[i]);
                 }
+                if (xml.list.length === 0)
+                    NoInfo(TYPE);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -43,6 +46,7 @@ function HeadActive() {
     $(this).find("em").each(function () {
         $(this).css("background-color", "#5bc0de");
     });
+    LoadDefault($(this)[0].id);
 }
 
 function LoadInfo(obj) {
@@ -86,4 +90,22 @@ function LoadInfo(obj) {
     html += ('</li>');
     html += ('</ul>');
     $("#div_main_info").append(html);
+}
+
+function NoInfo(TYPE) {
+    if (TYPE === "divZJFBXX") {
+        $("#div_main_info").html('<div class="div_no_info">您最近三个月内没有发布信息</div>');
+    }
+    if (TYPE === "divXSZXX") {
+        $("#div_main_info").html('<div class="div_no_info">您没有显示中信息</div>');
+    }
+    if (TYPE === "divDSHXX") {
+        $("#div_main_info").html('<div class="div_no_info">您没有待审核信息</div>');
+    }
+    if (TYPE === "divYSCXX") {
+        $("#div_main_info").html('<div class="div_no_info">您没有已删除信息</div>');
+    }
+    if (TYPE === "divWXSXX") {
+        $("#div_main_info").html('<div class="div_no_info">您没有未显示信息</div>');
+    }
 }
