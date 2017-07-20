@@ -1,4 +1,5 @@
 ﻿$(document).ready(function () {
+    $("#liGRZX").css("font-size", "18px").css("font-weight", "700");
     $("#liGRZX").bind("click", ShowGRZX);
     $("#liZHSZ").bind("click", ShowZHSZ);
     $("#liSHGJ").bind("click", ShowSHGJ);
@@ -33,18 +34,27 @@ function ToWDFB() {
 }
 
 function ShowGRZX() {
+    $("#liGRZX").css("font-size", "18px").css("font-weight", "700");
+    $("#liZHSZ").css("font-size", "16px").css("font-weight", "normal");
+    $("#liSHGJ").css("font-size", "16px").css("font-weight", "normal");
     $("#ulGRZX").css("display", "block");
     $("#ulZHSZ").css("display", "block");
     $("#ulSHGJ").css("display", "block");
 }
 
 function ShowZHSZ() {
+    $("#liZHSZ").css("font-size", "18px").css("font-weight", "700");
+    $("#liGRZX").css("font-size", "16px").css("font-weight", "normal");
+    $("#liSHGJ").css("font-size", "16px").css("font-weight", "normal");
     $("#ulGRZX").css("display", "none");
     $("#ulZHSZ").css("display", "block");
     $("#ulSHGJ").css("display", "block");
 }
 
 function ShowSHGJ() {
+    $("#liSHGJ").css("font-size", "18px").css("font-weight", "700");
+    $("#liGRZX").css("font-size", "16px").css("font-weight", "normal");
+    $("#liZHSZ").css("font-size", "16px").css("font-weight", "normal");
     $("#ulGRZX").css("display", "none");
     $("#ulZHSZ").css("display", "none");
     $("#ulSHGJ").css("display", "block");
