@@ -173,6 +173,7 @@
     <Content Include="Areas\Business\Css\LBXZ.css" />
     <Content Include="Areas\Business\Css\PageCommon.css" />
     <Content Include="Areas\Business\Css\WDFB.css" />
+    <Content Include="Areas\Business\Css\WDSC.css" />
     <Content Include="Areas\Business\Css\YHGL.css" />
     <Content Include="Areas\Business\Css\ZHMM.css" />
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\css\bootstrap-theme.css" />
@@ -192,6 +193,7 @@
     <Content Include="Areas\Business\Scripts\Business\LBXZ.js" />
     <Content Include="Areas\Business\Scripts\Business\PageJson.js" />
     <Content Include="Areas\Business\Scripts\Business\WDFB.js" />
+    <Content Include="Areas\Business\Scripts\Business\WDSC.js" />
     <Content Include="Areas\Business\Scripts\Business\YHDLXX.js" />
     <Content Include="Areas\Business\Scripts\Business\YHGL.js" />
     <Content Include="Areas\Business\Scripts\Business\YHJBXX.js" />
@@ -248,6 +250,7 @@
     <Compile Include="Areas\Business\Controllers\FWCZController.cs" />
     <Compile Include="Areas\Business\Controllers\LBXZController.cs" />
     <Compile Include="Areas\Business\Controllers\WDFBController.cs" />
+    <Compile Include="Areas\Business\Controllers\WDSCController.cs" />
     <Compile Include="Areas\Business\Controllers\YHDLXXController.cs" />
     <Compile Include="Areas\Business\Controllers\YHGLController.cs" />
     <Compile Include="Areas\Business\Controllers\YHJBXXController.cs" />
@@ -286,6 +289,7 @@
     <Content Include="Areas\Business\Ashx\SavePhotos.ashx" />
     <Content Include="Areas\Business\Views\FBCG\FBCG.cshtml" />
     <Content Include="Areas\Business\Ashx\GenerateQRCode.ashx" />
+    <Content Include="Areas\Business\Views\WDSC\WDSC.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

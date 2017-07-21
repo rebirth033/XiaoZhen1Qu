@@ -52,6 +52,7 @@
     <Compile Include="IFWCZJBXXBLL.cs" />
     <Compile Include="ILBXXBLL.cs" />
     <Compile Include="IWDFBBLL.cs" />
+    <Compile Include="IWDSCBLL.cs" />
     <Compile Include="IYHDLXXBLL.cs" />
     <Compile Include="IYHJBXXBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

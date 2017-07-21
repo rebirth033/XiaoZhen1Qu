@@ -48,7 +48,6 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
-
         public object UpdateYHFBXX(string JCXXID, string OPTYPE)
         {
             try

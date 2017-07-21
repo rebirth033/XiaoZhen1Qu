@@ -48,5 +48,10 @@
       <ref object="CommonBLL"/>
     </property>
   </object>
+  <object id="WDSCController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.WDSCController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="WDSCBLL">
+      <ref object="WDSCBLL"/>
+    </property>
+  </object>
 </objects>
 

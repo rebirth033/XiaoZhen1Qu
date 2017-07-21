@@ -1,10 +1,11 @@
 ﻿$(document).ready(function () {
     $("#liGRZX").css("font-size", "18px").css("font-weight", "700");
+    ToWDFB();
     $("#liGRZX").bind("click", ShowGRZX);
     $("#liZHSZ").bind("click", ShowZHSZ);
     $("#liSHGJ").bind("click", ShowSHGJ);
     $("#spanWDFB").bind("click", ToWDFB);
-    ToWDFB();
+    $("#spanWDSC").bind("click", ToWDSC);
 });
 
 function AutoLogin() {
@@ -24,13 +25,17 @@ function AutoLogin() {
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-            _masker.CloseMasker(false, errorThrown);
+            
         }
     });
 }
 
 function ToWDFB() {
     $("#iframeright").attr("src", getRootPath() + "/Business/WDFB/WDFB");
+}
+
+function ToWDSC() {
+    $("#iframeright").attr("src", getRootPath() + "/Business/WDSC/WDSC");
 }
 
 function ShowGRZX() {

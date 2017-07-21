@@ -155,6 +155,12 @@
     cursor: pointer;
 }
 
+.span_left_menu_second:hover {
+    color: #ff6100;
+}
+
+
+
 .em_left_menu {
     width: 140px;
     height: 1px;
