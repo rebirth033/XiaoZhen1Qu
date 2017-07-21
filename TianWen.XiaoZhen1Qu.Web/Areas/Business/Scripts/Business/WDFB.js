@@ -74,9 +74,9 @@ function LoadInfo(obj) {
     html += ('</div>');
     html += ('</div>');
     html += ('<div class="div_new_info_body_middle">');
-    if (obj.STATUS === 1){
+    if (obj.STATUS === 1) {
         html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_status">显示中</span>');
-        html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_read">浏览:28</span>');
+        html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_read">浏览:' + obj.LLCS + '</span>');
         html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_tip">进行置顶或精准推广会让你的信息成交更快哦。</span>');
     }
     else
@@ -142,7 +142,7 @@ function Restore(JCXXID) {
 }
 
 function Delete(JCXXID) {
-    
+
     if (confirm("您确定删除本条信息吗?")) {
         $.ajax({
             type: "POST",
@@ -178,11 +178,11 @@ function Update(JCXXID, LBID) {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                window.parent.location.href = getRootPath() + "/Business/" + xml.Value.FBYM + "/" + xml.Value.FBYM + "?" + xml.Value.Key + "=" + xml.Value.Value + "&CLICKID=" + xml.Value.LBID;
+                window.open(getRootPath() + "/Business/" + xml.Value.FBYM + "/" + xml.Value.FBYM + "?" + xml.Value.Key + "=" + xml.Value.Value + "&CLICKID=" + xml.Value.LBID);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-            
+
         }
     });
 }
