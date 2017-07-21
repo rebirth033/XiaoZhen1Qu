@@ -6,6 +6,8 @@
     $("#liSHGJ").bind("click", ShowSHGJ);
     $("#spanWDFB").bind("click", ToWDFB);
     $("#spanWDSC").bind("click", ToWDSC);
+    $("#spanWDQZ").bind("click", ExpandWDQZ);
+    $("#imgWDQZ").bind("click", ExpandWDQZ);
 });
 
 function AutoLogin() {
@@ -63,4 +65,10 @@ function ShowSHGJ() {
     $("#ulGRZX").css("display", "none");
     $("#ulZHSZ").css("display", "none");
     $("#ulSHGJ").css("display", "block");
+}
+
+function ExpandWDQZ() {
+    $(".WDQZ_child").each(function() {
+        $(this).css("display", "block");
+    });
 }
