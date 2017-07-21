@@ -36,6 +36,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             JCXX jcxx = JsonHelper.ConvertJsonToObject<JCXX>(json);
             jcxx.YHID = "2718ced3-996d-427d-925d-a08e127cc0b8";
             jcxx.LLCS = 0;
+            jcxx.STATUS = 1;
             jcxx.ZXGXSJ = DateTime.Now;
             jcxx.CJSJ = DateTime.Now;
             jcxx.LXDZ = "福州市";

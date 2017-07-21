@@ -713,6 +713,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "FWLD", "'" + GetDX("FWLD") + "'");
     obj = jsonObj.AddJson(obj, "CZYQ", "'" + GetDX("CZYQ") + "'");
     obj = jsonObj.AddJson(obj, "CZFS", "'" + GetCZFS() + "'");
+    obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     if ($("#KRZSJ").val() !== "")
         obj = jsonObj.AddJson(obj, "KRZSJ", "'" + $("#KRZSJ").val() + "'");
     if (getUrlParam("FWCZJBXXID") !== null)
