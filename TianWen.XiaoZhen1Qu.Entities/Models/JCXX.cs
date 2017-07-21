@@ -84,6 +84,12 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         [Property]
         public virtual int STATUS { get; set; }
 
+        /// <summary>
+        /// 信息类别ID
+        /// </summary>
+        [Property]
+        public virtual int LBID { get; set; }
+
         public virtual IList<PHOTOS> PHOTOS { get; set; }
     }
 }

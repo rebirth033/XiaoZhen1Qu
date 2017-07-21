@@ -19,6 +19,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Maps
             Map(x => x.LBORDER, "LBORDER");
             Map(x => x.PARENTID, "PARENTID");
             Map(x => x.FBYM, "FBYM");
+            Map(x => x.FBTABLE, "FBTABLE");
             #endregion
 
             #region OneToMany

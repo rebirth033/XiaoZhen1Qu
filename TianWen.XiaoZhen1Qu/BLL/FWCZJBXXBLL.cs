@@ -18,7 +18,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
             string[] photoNames = photos.Select(x => x.PHOTONAME).ToArray();
             DirectoryInfo TheFolder = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory + "/Areas/Business/Photos/");
             FileInfo[] fileinfos = TheFolder.GetFiles();
-            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM FWCZJBXX WHERE FWCZID='{0}'", fwczjbxx.FWCZID));
+            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM FWCZJBXX WHERE FWCZID='{0}'", fwczjbxx.FWCZJBXXID));
 
             if (dt.Rows.Count > 0)
             {
@@ -56,7 +56,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                         DAO.Update(jcxx);
                         DAO.Update(fwczjbxx);
                         transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, FWCZID = fwczjbxx.FWCZID } };
+                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, FWCZID = fwczjbxx.FWCZJBXXID } };
                     }
                     catch (Exception ex)
                     {
@@ -92,7 +92,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                             DAO.Save(obj);
                         }
                         transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, FWCZID = fwczjbxx.FWCZID } };
+                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, FWCZID = fwczjbxx.FWCZJBXXID } };
                     }
                     catch (Exception ex)
                     {
@@ -109,11 +109,11 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
-        public object LoadFWCZXX(string FWCZID)
+        public object LoadFWCZXX(string FWCZJBXXID)
         {
             try
             {
-                FWCZJBXX yhjbxx = GetObjByID(FWCZID);
+                FWCZJBXX yhjbxx = GetObjByID(FWCZJBXXID);
                 if (yhjbxx != null)
                 {
                     JCXX jcxx = GetJCXXByID(yhjbxx.JCXXID);
@@ -138,7 +138,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
 
         public FWCZJBXX GetObjByID(string FWCZID)
         {
-            IList<FWCZJBXX> list = DAO.Repository.GetObjectList<FWCZJBXX>(String.Format("FROM FWCZJBXX WHERE FWCZID='{0}'", FWCZID));
+            IList<FWCZJBXX> list = DAO.Repository.GetObjectList<FWCZJBXX>(String.Format("FROM FWCZJBXX WHERE FWCZJBXXID='{0}'", FWCZID));
             if (list.Count > 0)
                 return list[0];
             else

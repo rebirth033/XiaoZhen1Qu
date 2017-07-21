@@ -86,10 +86,10 @@ function LoadInfo(obj) {
     if (obj.STATUS === 0)
         html += ('<span class="span_new_info_body_right active" onclick="Restore(\'' + obj.JCXXID + '\')">恢复</span>');
     else {
-        html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_update">修改</span>');
-        html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_refresh">刷新</span>');
-        html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_top">置顶</span>');
-        html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_delete">删除</span>');
+        html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_common_button span_new_info_body_middle_update" onclick="Update(\'' + obj.JCXXID + '\',\'' + obj.LBID + '\')">修改</span>');
+        html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_common_button span_new_info_body_middle_refresh">刷新</span>');
+        html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_common_button span_new_info_body_middle_top">置顶</span>');
+        html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_common_button span_new_info_body_middle_delete"  onclick="Delete(\'' + obj.JCXXID + '\')">删除</span>');
     }
     html += ('</div>');
     html += ('</div>');
@@ -164,6 +164,27 @@ function Delete(JCXXID) {
             }
         });
     }
+}
+
+function Update(JCXXID, LBID) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/GetIDByJCXXIDAndLBID",
+        dataType: "json",
+        data:
+        {
+            JCXXID: JCXXID,
+            LBID: LBID
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                window.parent.location.href = getRootPath() + "/Business/" + xml.Value.FBYM + "/" + xml.Value.FBYM + "?" + xml.Value.Key + "=" + xml.Value.Value + "&CLICKID=" + xml.Value.LBID;
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+            
+        }
+    });
 }
 
 function LoadByActive() {

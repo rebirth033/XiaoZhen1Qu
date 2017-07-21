@@ -12,7 +12,8 @@ create table JCXX
   qq     VARCHAR2(20),
   bt     VARCHAR2(100),
   dh     VARCHAR2(100),
-  status NUMBER(2)
+  status NUMBER(2),
+  lbid   NUMBER(8)
 )
 tablespace XIAOZHEN
   pctfree 10
@@ -52,6 +53,8 @@ comment on column JCXX.dh
   is '导航';
 comment on column JCXX.status
   is '当前状态（0:删除,1:显示,2:隐藏,3:待审核）';
+comment on column JCXX.lbid
+  is '信息类别ID';
 -- Create/Recreate primary, unique and foreign key constraints 
 alter table JCXX
   add constraint PK_JCXX primary key (JCXXID)

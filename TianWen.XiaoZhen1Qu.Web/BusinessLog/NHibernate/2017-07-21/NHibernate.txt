@@ -1,0 +1,80 @@
+2017-07-21 11:00:42,363 [24] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: select fwczjbxx0_.FWCZJBXXID as FWCZJBXXID1_, fwczjbxx0_.JCXXID as JCXXID1_, fwczjbxx0_.CZFS as CZFS1_, fwczjbxx0_.XQMC as XQMC1_, fwczjbxx0_.S as S1_, fwczjbxx0_.T as T1_, fwczjbxx0_.W as W1_, fwczjbxx0_.PFM as PFM1_, fwczjbxx0_.CX as CX1_, fwczjbxx0_.ZXQK as ZXQK1_, fwczjbxx0_.ZZLX as ZZLX1_, fwczjbxx0_.C as C1_, fwczjbxx0_.GJC as GJC1_, fwczjbxx0_.ZJ as ZJ1_, fwczjbxx0_.YFFS as YFFS1_, fwczjbxx0_.ZJYBHFY as ZJYBHFY1_, fwczjbxx0_.FWPZ as FWPZ1_, fwczjbxx0_.FWLD as FWLD1_, fwczjbxx0_.CZYQ as CZYQ1_, fwczjbxx0_.FYMS as FYMS1_, fwczjbxx0_.KRZSJ as KRZSJ1_ from FWCZJBXX fwczjbxx0_ where FWCZID=''
+
+System.Data.OracleClient.OracleException (0x80131938): ORA-00904: "FWCZID": 标识符无效
+
+   在 System.Data.OracleClient.OracleConnection.CheckError(OciErrorHandle errorHandle, Int32 rc)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, Boolean needRowid, OciRowidDescriptor& rowidDescriptor, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.OracleClient.OracleCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   在 NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2017-07-21 11:00:42,426 [24] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-00904: "FWCZID": 标识符无效
+
+
+2017-07-21 11:00:42,441 [24] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-00904: "FWCZID": 标识符无效
+
+
+2017-07-21 11:00:42,441 [24] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-00904: "FWCZID": 标识符无效
+
+
+2017-07-21 11:01:04,287 [33] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: select fwczjbxx0_.FWCZJBXXID as FWCZJBXXID1_, fwczjbxx0_.JCXXID as JCXXID1_, fwczjbxx0_.CZFS as CZFS1_, fwczjbxx0_.XQMC as XQMC1_, fwczjbxx0_.S as S1_, fwczjbxx0_.T as T1_, fwczjbxx0_.W as W1_, fwczjbxx0_.PFM as PFM1_, fwczjbxx0_.CX as CX1_, fwczjbxx0_.ZXQK as ZXQK1_, fwczjbxx0_.ZZLX as ZZLX1_, fwczjbxx0_.C as C1_, fwczjbxx0_.GJC as GJC1_, fwczjbxx0_.ZJ as ZJ1_, fwczjbxx0_.YFFS as YFFS1_, fwczjbxx0_.ZJYBHFY as ZJYBHFY1_, fwczjbxx0_.FWPZ as FWPZ1_, fwczjbxx0_.FWLD as FWLD1_, fwczjbxx0_.CZYQ as CZYQ1_, fwczjbxx0_.FYMS as FYMS1_, fwczjbxx0_.KRZSJ as KRZSJ1_ from FWCZJBXX fwczjbxx0_ where FWCZID=''
+
+System.Data.OracleClient.OracleException (0x80131938): ORA-00904: "FWCZID": 标识符无效
+
+   在 System.Data.OracleClient.OracleConnection.CheckError(OciErrorHandle errorHandle, Int32 rc)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, Boolean needRowid, OciRowidDescriptor& rowidDescriptor, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.OracleClient.OracleCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   在 NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2017-07-21 11:01:04,287 [33] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-00904: "FWCZID": 标识符无效
+
+
+2017-07-21 11:01:04,287 [33] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-00904: "FWCZID": 标识符无效
+
+
+2017-07-21 11:01:04,287 [33] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-00904: "FWCZID": 标识符无效
+
+
+2017-07-21 11:03:53,820 [21] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: select fwczjbxx0_.FWCZJBXXID as FWCZJBXXID1_, fwczjbxx0_.JCXXID as JCXXID1_, fwczjbxx0_.CZFS as CZFS1_, fwczjbxx0_.XQMC as XQMC1_, fwczjbxx0_.S as S1_, fwczjbxx0_.T as T1_, fwczjbxx0_.W as W1_, fwczjbxx0_.PFM as PFM1_, fwczjbxx0_.CX as CX1_, fwczjbxx0_.ZXQK as ZXQK1_, fwczjbxx0_.ZZLX as ZZLX1_, fwczjbxx0_.C as C1_, fwczjbxx0_.GJC as GJC1_, fwczjbxx0_.ZJ as ZJ1_, fwczjbxx0_.YFFS as YFFS1_, fwczjbxx0_.ZJYBHFY as ZJYBHFY1_, fwczjbxx0_.FWPZ as FWPZ1_, fwczjbxx0_.FWLD as FWLD1_, fwczjbxx0_.CZYQ as CZYQ1_, fwczjbxx0_.FYMS as FYMS1_, fwczjbxx0_.KRZSJ as KRZSJ1_ from FWCZJBXX fwczjbxx0_ where FWCZID='19a309b0-9756-4ce4-a4f9-d68caa8db580'
+
+System.Data.OracleClient.OracleException (0x80131938): ORA-00904: "FWCZID": 标识符无效
+
+   在 System.Data.OracleClient.OracleConnection.CheckError(OciErrorHandle errorHandle, Int32 rc)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, Boolean needRowid, OciRowidDescriptor& rowidDescriptor, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.OracleClient.OracleCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   在 NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2017-07-21 11:03:53,851 [21] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-00904: "FWCZID": 标识符无效
+
+
+2017-07-21 11:03:53,854 [21] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-00904: "FWCZID": 标识符无效
+
+
+2017-07-21 11:03:53,855 [21] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-00904: "FWCZID": 标识符无效
+
+
+2017-07-21 11:04:01,161 [32] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: select fwczjbxx0_.FWCZJBXXID as FWCZJBXXID1_, fwczjbxx0_.JCXXID as JCXXID1_, fwczjbxx0_.CZFS as CZFS1_, fwczjbxx0_.XQMC as XQMC1_, fwczjbxx0_.S as S1_, fwczjbxx0_.T as T1_, fwczjbxx0_.W as W1_, fwczjbxx0_.PFM as PFM1_, fwczjbxx0_.CX as CX1_, fwczjbxx0_.ZXQK as ZXQK1_, fwczjbxx0_.ZZLX as ZZLX1_, fwczjbxx0_.C as C1_, fwczjbxx0_.GJC as GJC1_, fwczjbxx0_.ZJ as ZJ1_, fwczjbxx0_.YFFS as YFFS1_, fwczjbxx0_.ZJYBHFY as ZJYBHFY1_, fwczjbxx0_.FWPZ as FWPZ1_, fwczjbxx0_.FWLD as FWLD1_, fwczjbxx0_.CZYQ as CZYQ1_, fwczjbxx0_.FYMS as FYMS1_, fwczjbxx0_.KRZSJ as KRZSJ1_ from FWCZJBXX fwczjbxx0_ where FWCZID='19a309b0-9756-4ce4-a4f9-d68caa8db580'
+
+System.Data.OracleClient.OracleException (0x80131938): ORA-00904: "FWCZID": 标识符无效
+
+   在 System.Data.OracleClient.OracleConnection.CheckError(OciErrorHandle errorHandle, Int32 rc)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, Boolean needRowid, OciRowidDescriptor& rowidDescriptor, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.OracleClient.OracleCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   在 NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2017-07-21 11:04:01,162 [32] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-00904: "FWCZID": 标识符无效
+
+
+2017-07-21 11:04:01,162 [32] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-00904: "FWCZID": 标识符无效
+
+
+2017-07-21 11:04:01,162 [32] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-00904: "FWCZID": 标识符无效
+
+

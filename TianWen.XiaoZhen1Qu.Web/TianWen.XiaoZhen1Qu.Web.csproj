@@ -243,6 +243,7 @@
     <Compile Include="Areas\Business\Common\BaseController.cs" />
     <Compile Include="Areas\Business\Common\Common.cs" />
     <Compile Include="Areas\Business\Common\QRCodeHelper.cs" />
+    <Compile Include="Areas\Business\Controllers\CommonController.cs" />
     <Compile Include="Areas\Business\Controllers\FBCGController.cs" />
     <Compile Include="Areas\Business\Controllers\FWCZController.cs" />
     <Compile Include="Areas\Business\Controllers\LBXZController.cs" />

@@ -43,5 +43,10 @@
   </object>
   <object id="FBCGController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.FBCGController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
   </object>
+  <object id="CommonController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.CommonController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="CommonBLL">
+      <ref object="CommonBLL"/>
+    </property>
+  </object>
 </objects>
 

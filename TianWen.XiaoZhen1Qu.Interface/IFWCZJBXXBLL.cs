@@ -12,7 +12,7 @@ namespace TianWen.XiaoZhen1Qu.Interface
 
         object SaveFWCZJBXX(JCXX jcxx, FWCZJBXX fwczjbxx, List<PHOTOS> photos);
 
-        object LoadFWCZXX(string FWCZID);
+        object LoadFWCZXX(string FWCZJBXXID);
 
         object LoadXQJBXXSByHZ(string XQMC);
 

@@ -657,14 +657,14 @@ function LoadFWCZXX() {
         dataType: "json",
         data:
         {
-            FWCZID: getUrlParam("FWCZID")
+            FWCZJBXXID: getUrlParam("FWCZJBXXID")
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var jsonObj = new JsonDB("myTabContent");
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.FWCZXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
-                $("#FWCZID").val(xml.Value.FWCZXX.FWCZID);
+                $("#FWCZJBXXID").val(xml.Value.FWCZXX.FWCZJBXXID);
                 if (xml.Value.FWCZXX.ZJYBHFY !== null)
                     SetDX("BHFY", xml.Value.FWCZXX.ZJYBHFY);
                 if (xml.Value.FWCZXX.FWPZ !== null)
@@ -715,8 +715,8 @@ function FB() {
     obj = jsonObj.AddJson(obj, "CZFS", "'" + GetCZFS() + "'");
     if ($("#KRZSJ").val() !== "")
         obj = jsonObj.AddJson(obj, "KRZSJ", "'" + $("#KRZSJ").val() + "'");
-    if (getUrlParam("FWCZID") !== null)
-        obj = jsonObj.AddJson(obj, "FWCZID", "'" + getUrlParam("FWCZID") + "'");
+    if (getUrlParam("FWCZJBXXID") !== null)
+        obj = jsonObj.AddJson(obj, "FWCZJBXXID", "'" + getUrlParam("FWCZJBXXID") + "'");
 
     $.ajax({
         type: "POST",

@@ -62,8 +62,8 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public JsonResult LoadFWCZXX()
         {
-            string FWCZID = Request["FWCZID"];
-            object result = FWCZJBXXBLL.LoadFWCZXX(FWCZID);
+            string FWCZJBXXID = Request["FWCZJBXXID"];
+            object result = FWCZJBXXBLL.LoadFWCZXX(FWCZJBXXID);
             return Json(result);
         }
 

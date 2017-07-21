@@ -48,6 +48,13 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// </summary>
         [Property]
         public virtual string FBYM { get; set; }
+        
+        /// <summary>
+        /// 类别对应数据表
+        /// </summary>
+        [Property]
+        public virtual string FBTABLE { get; set; }
+        
 
 
         public virtual IList<XXLB> XXLBS { get; set; }
