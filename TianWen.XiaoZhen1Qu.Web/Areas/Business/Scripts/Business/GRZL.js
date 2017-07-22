@@ -4,11 +4,11 @@
     $("#emSYWXTX").css("background-color", "#5bc0de");
     $("#button_main_photo_bcwxtx").css("display", "block");
     $(".divstep").bind("click", HeadActive);
-    $("#divBDSC").bind("click", ShowBDSC);
     //LoadDefault("divZJFBXX");
 });
 
 function HeadActive() {
+    alert(this.id.substr(3, 4));
     $(".divstep").each(function () {
         $(this).find("span").each(function () {
             $(this).css("color", "#cccccc");
@@ -25,9 +25,4 @@ function HeadActive() {
     $(this).find("em").each(function () {
         $(this).css("background-color", "#5bc0de");
     });
-    //LoadDefault($(this)[0].id);
-}
-
-function ShowBDSC() {
-
 }
