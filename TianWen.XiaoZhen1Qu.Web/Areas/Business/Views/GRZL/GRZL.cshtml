@@ -17,8 +17,34 @@
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/jquery-ui-1.12.1.custom/jquery.ui.datepicker-zh-CN.js")"></script>
 </head>
 <body>
-    <div>
-    grzl
+    <div class="right_head">
+        <div class="divstep" id="divSYWXTX">
+            <span class="spanstep" id="spanSYWXTX">使用微信头像</span>
+            <em class="emstep" id="emSYWXTX"></em>
+        </div>
+        <div class="divstep" id="divBDSC">
+            <span class="spanstep" id="spanBDSC">本地上传</span>
+            <em class="emstep" id="emBDSC"></em>
+        </div>
+        <div class="divstep" id="divXTTX">
+            <span class="spanstep" id="spanXTTX">系统头像</span>
+            <em class="emstep" id="emXTTX"></em>
+        </div>
+        <div class="divstep">
+            <span class="spanstep" id="spanOther">&nbsp;</span>
+            <em class="emstep" id="emOther" style="width: 510px;"></em>
+        </div>
+    </div>
+    <div id="div_main_info" class="div_main_info">
+        <div class="div_main_photo" id="div_main_photo">
+            <div class="div_main_photo_img">
+                <img class="img_main_photo" src="@Url.Content("~/Areas/Business/Css/images/test.jpg")"/>
+            </div>
+            <div class="div_main_photo_button">
+                <input class="button_main_photo" id="button_main_photo_bcwxtx" type="button" value="保存微信头像" />
+                <input class="button_main_photo" id="button_main_photo_sctx" type="button" value="上传头像" />
+            </div>
+        </div>
     </div>
 </body>
 </html>

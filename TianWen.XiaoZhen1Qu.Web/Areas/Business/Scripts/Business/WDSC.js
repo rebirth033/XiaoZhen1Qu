@@ -1,5 +1,6 @@
 ﻿$(document).ready(function () {
     $("#spanSCXX").css("color", "#5bc0de");
+    $("#spanSCXX").css("font-weight", "700");
     $("#emSCXX").css("background-color", "#5bc0de");
     $(".divstep").bind("click", HeadActive);
     LoadDefault("divSCXX");
@@ -9,6 +10,7 @@ function HeadActive() {
     $(".divstep").each(function () {
         $(this).find("span").each(function () {
             $(this).css("color", "#cccccc");
+            $(this).css("font-weight", "normal");
         });
         $(this).find("em").each(function () {
             $(this).css("background-color", "#cccccc");
@@ -16,6 +18,7 @@ function HeadActive() {
     });
     $(this).find("span").each(function () {
         $(this).css("color", "#5bc0de");
+        $(this).css("font-weight", "700");
     });
     $(this).find("em").each(function () {
         $(this).css("background-color", "#5bc0de");
