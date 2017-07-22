@@ -91,6 +91,18 @@ function LoadInfo(obj) {
     $("#div_main_info").append(html);
 }
 
+function NoInfo(TYPE) {
+    if (TYPE === "divSCXX") {
+        $("#div_main_info").html('<div class="div_no_info">您没有收藏的信息</div>');
+    }
+    if (TYPE === "divLLGXX") {
+        $("#div_main_info").html('<div class="div_no_info">您没有浏览过的信息</div>');
+    }
+    if (TYPE === "divGZDP") {
+        $("#div_main_info").html('<div class="div_no_info">您没有关注的店铺</div>');
+    }
+}
+
 function Delete(JCXXID) {
     $.ajax({
         type: "POST",

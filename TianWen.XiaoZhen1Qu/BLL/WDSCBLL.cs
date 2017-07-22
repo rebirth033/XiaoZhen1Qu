@@ -12,10 +12,14 @@ namespace TianWen.XiaoZhen1Qu.BLL
         {
             try
             {
-                IList<YHSCXX> YHSCXXs = DAO.Repository.GetObjectList<YHSCXX>(String.Format("FROM YHSCXX WHERE YHID='{0}'", YHID));
+                IList<YHSCXX> YHSCXXs = new List<YHSCXX>();
+                IList<JCXX> JCXXs = new List<JCXX>();
+
+                YHSCXXs = DAO.Repository.GetObjectList<YHSCXX>(String.Format("FROM YHSCXX WHERE YHID='{0}'", YHID));
+
                 if (YHSCXXs.Count > 0)
                 {
-                    IList<JCXX> JCXXs = DAO.Repository.GetObjectList<JCXX>(String.Format("FROM JCXX WHERE JCXXID='{0}'", YHSCXXs[0].JCXXID));
+                    JCXXs = DAO.Repository.GetObjectList<JCXX>(String.Format("FROM JCXX WHERE JCXXID='{0}'", YHSCXXs[0].JCXXID));
                     if (JCXXs.Count > 0)
                     {
                         foreach (var jcxx in JCXXs)
@@ -25,7 +29,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     }
                     return new { Result = EnResultType.Success, list = JCXXs };
                 }
-                return new { Result = EnResultType.Success };
+                return new { Result = EnResultType.Success, list = JCXXs };
             }
             catch (Exception ex)
             {

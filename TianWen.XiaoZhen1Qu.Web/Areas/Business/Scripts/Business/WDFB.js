@@ -104,16 +104,16 @@ function NoInfo(TYPE) {
         $("#div_main_info").html('<div class="div_no_info">您最近三个月内没有发布信息</div>');
     }
     if (TYPE === "divXSZXX") {
-        $("#div_main_info").html('<div class="div_no_info">您没有显示中信息</div>');
+        $("#div_main_info").html('<div class="div_no_info">您没有显示中的信息</div>');
     }
     if (TYPE === "divDSHXX") {
-        $("#div_main_info").html('<div class="div_no_info">您没有待审核信息</div>');
+        $("#div_main_info").html('<div class="div_no_info">您没有待审核的信息</div>');
     }
     if (TYPE === "divYSCXX") {
-        $("#div_main_info").html('<div class="div_no_info">您没有已删除信息</div>');
+        $("#div_main_info").html('<div class="div_no_info">您没有已删除的信息</div>');
     }
     if (TYPE === "divWXSXX") {
-        $("#div_main_info").html('<div class="div_no_info">您没有未显示信息</div>');
+        $("#div_main_info").html('<div class="div_no_info">您没有未显示的信息</div>');
     }
 }
 

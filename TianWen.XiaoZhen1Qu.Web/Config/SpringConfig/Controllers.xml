@@ -53,5 +53,7 @@
       <ref object="WDSCBLL"/>
     </property>
   </object>
+  <object id="GRZLController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.GRZLController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+  </object>
 </objects>
 
