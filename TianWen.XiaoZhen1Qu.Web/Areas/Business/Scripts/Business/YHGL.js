@@ -1,13 +1,18 @@
 ﻿$(document).ready(function () {
     $("#liGRZX").css("font-size", "18px").css("font-weight", "700");
+    $("#imgWDQZ").attr("src", getRootPath() + "/Areas/Business/Css/images/down.png");
+    $("#imgWDZP").attr("src", getRootPath() + "/Areas/Business/Css/images/down.png");
     ToWDFB();
     $("#liGRZX").bind("click", ShowGRZX);
     $("#liZHSZ").bind("click", ShowZHSZ);
     $("#liSHGJ").bind("click", ShowSHGJ);
     $("#spanWDFB").bind("click", ToWDFB);
     $("#spanWDSC").bind("click", ToWDSC);
-    $("#spanWDQZ").bind("click", ExpandWDQZ);
-    $("#imgWDQZ").bind("click", ExpandWDQZ);
+    $("#spanWDQZ").parent().bind("click", { type: "WDQZ" }, ExpandSecond_Leaf);
+    $("#spanWDZP").parent().bind("click", { type: "WDZP" }, ExpandSecond_Tree);
+    $("#spanZWGL").parent().bind("click", { type: "ZWGL" }, ExpandThird);
+    $("#spanJLGL").parent().bind("click", { type: "JLGL" }, ExpandThird);
+    $("#spanZHXX").parent().bind("click", { type: "ZHXX" }, ExpandThird);
 });
 
 function AutoLogin() {
@@ -27,7 +32,7 @@ function AutoLogin() {
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-            
+
         }
     });
 }
@@ -67,8 +72,63 @@ function ShowSHGJ() {
     $("#ulSHGJ").css("display", "block");
 }
 
-function ExpandWDQZ() {
-    $(".WDQZ_child").each(function() {
-        $(this).css("display", "block");
-    });
+function ExpandSecond_Leaf(obj) {
+    if ($("#img" + obj.data.type).attr("src").indexOf("up") !== -1) {
+        $("." + obj.data.type + "_child").each(function () {
+            $(this).css("display", "none");
+        });
+        $(".img_left_menu_third").each(function () {
+            $(this).css("display", "none");
+        });
+        $("#img" + obj.data.type).attr("src", getRootPath() + "/Areas/Business/Css/images/down.png");
+    } else {
+        $("." + obj.data.type + "_child").each(function () {
+            $(this).css("display", "block");
+        });
+        $(".img_left_menu_third").each(function () {
+            $(this).css("display", "block");
+        });
+        $("#img" + obj.data.type).attr("src", getRootPath() + "/Areas/Business/Css/images/up.png");
+    }
+}
+
+function ExpandSecond_Tree(obj) {
+    if ($("#img" + obj.data.type).attr("src").indexOf("up") !== -1) {
+        $("." + obj.data.type + "_child").each(function () {
+            $(this).css("display", "none");
+        });
+        $(".img_left_menu_third").each(function () {
+            $(this).css("display", "none");
+        });
+        $("#img" + obj.data.type).attr("src", getRootPath() + "/Areas/Business/Css/images/down.png");
+    } else {
+        $("." + obj.data.type + "_child").each(function () {
+            $(this).css("display", "block");
+        });
+        $(".img_left_menu_third").each(function () {
+            $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/expand.png");
+            $(this).css("display", "block");
+        });
+        $("#img" + obj.data.type).attr("src", getRootPath() + "/Areas/Business/Css/images/up.png");
+    }
+}
+
+function ExpandThird(obj) {
+    if ($("#img" + obj.data.type).attr("src").indexOf("expand") !== -1) {
+        $("." + obj.data.type + "_child").each(function () {
+            $(this).css("display", "block");
+        });
+        $(".img_left_menu_four").each(function () {
+            $(this).css("display", "block");
+        });
+        $("#img" + obj.data.type).attr("src", getRootPath() + "/Areas/Business/Css/images/contract.png");
+    } else {
+        $("." + obj.data.type + "_child").each(function () {
+            $(this).css("display", "none");
+        });
+        $(".img_left_menu_four").each(function () {
+            $(this).css("display", "none");
+        });
+        $("#img" + obj.data.type).attr("src", getRootPath() + "/Areas/Business/Css/images/expand.png");
+    }
 }
