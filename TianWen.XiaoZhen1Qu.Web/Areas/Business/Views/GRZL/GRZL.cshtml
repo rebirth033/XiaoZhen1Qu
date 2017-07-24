@@ -37,12 +37,33 @@
     </div>
     <div id="div_main_info" class="div_main_info">
         <div class="div_main_photo" id="div_main_photo">
-            <div class="div_main_photo_img">
-                <img class="img_main_photo" src="@Url.Content("~/Areas/Business/Css/images/test.jpg")"/>
+            <div class="div_main_photo_left">
+                <img id="img_main_photo" class="img_main_photo" />
+                <div class="div_main_photo_button">
+                    <input class="button_main_photo" id="btnTBWXTX" type="button" value="同步微信头像" />
+                    <div class="div_button_main_photo">
+                        <div class="div_button_main_photo_child">上传本地头像</div>
+                        <form action="" enctype="multipart/form-data" id="form_button_main_photo" method="post">
+                            <input class="button_main_photo button_main_photo_upload" id="btnBDSC" type="file" unselectable="on" />
+                        </form>
+                    </div>
+                    <input class="button_main_photo" id="btnXTSC" type="button" value="上传系统头像" />
+                </div>
             </div>
-            <div class="div_main_photo_button">
-                <input class="button_main_photo" id="btnSYWXTX" type="button" value="保存微信头像" />
-                <input class="button_main_photo" id="btnBDSC" type="button" value="上传头像" />
+            <div id="div_main_photo_middle" class="div_main_photo_middle">
+                <img id="img_main_photo_middle" class="img_main_photo_middle" />
+                <span class="span_main_photo_middle" style="margin-top: 15px; margin-bottom: 10px;">圆形头像预览</span>
+                <span class="span_main_photo_middle">图片格式：gif jpg png</span>
+                <span class="span_main_photo_middle">最适尺寸：120*120px </span>
+            </div>
+            <div id="div_main_photo_middle_xt" class="div_main_photo_middle_xt">
+                <span class="span_main_photo_middle_xt">请选择喜欢的系统头像：</span>
+                <ul class="ul_main_photo_middle_xt">
+                    <li class="li_main_photo_middle_xt"><img class="img_main_photo_middle_xt" src="@Url.Content("~/Areas/Business/Css/images/system_photo1.png")" /></li>
+                    <li class="li_main_photo_middle_xt"><img class="img_main_photo_middle_xt" src="@Url.Content("~/Areas/Business/Css/images/system_photo2.png")" /></li>
+                    <li class="li_main_photo_middle_xt"><img class="img_main_photo_middle_xt" src="@Url.Content("~/Areas/Business/Css/images/system_photo3.png")" /></li>
+                    <li class="li_main_photo_middle_xt"><img class="img_main_photo_middle_xt" src="@Url.Content("~/Areas/Business/Css/images/system_photo4.png")" /></li>
+                </ul>
             </div>
         </div>
     </div>

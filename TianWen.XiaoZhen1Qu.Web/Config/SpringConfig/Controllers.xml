@@ -54,6 +54,9 @@
     </property>
   </object>
   <object id="GRZLController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.GRZLController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="YHJBXXBLL">
+      <ref object="YHJBXXBLL"/>
+    </property>
   </object>
 </objects>
 
