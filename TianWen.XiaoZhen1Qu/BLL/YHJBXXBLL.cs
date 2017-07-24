@@ -5,6 +5,10 @@ using TianWen.XiaoZhen1Qu.Entities.Models;
 using TianWen.XiaoZhen1Qu.Interface;
 using TianWen.Framework.Log;
 using System.Collections.Generic;
+using System.IO;
+using TianWen.XiaoZhen1Qu.Entities.Common;
+using System.Drawing;
+using System.Drawing.Imaging;
 
 namespace TianWen.XiaoZhen1Qu.BLL
 {
@@ -49,6 +53,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
+        //修改密码
         public object UpdatePassword(string MM, string SJ)
         {
             using (ITransaction transaction = DAO.BeginTransaction())
@@ -68,7 +73,60 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     {
                         return new { Result = EnResultType.Failed, Message = "手机号为空或不存在" };
                     }
-                    
+
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    LoggerManager.Error("YHJBXXBLL", "修改失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                    return new
+                    {
+                        Result = EnResultType.Failed,
+                        Message = "修改失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!"
+                    };
+                }
+            }
+        }
+
+        //修改头像
+        public object UpdateTX(string YHID, string TX)
+        {
+            string copyfilename = TX == string.Empty ? TX : TX.Substring(TX.LastIndexOf('/') + 1, TX.Length - TX.LastIndexOf('/') - 1);
+
+            string filepath = Common.GetRootPath() + @"\Areas\Business\Photos\" + YHID + @"\GRZL\";
+
+            string copypath = Common.GetRootPath() + @"\Areas\Business\Css\images\";
+
+            using (ITransaction transaction = DAO.BeginTransaction())
+            {
+                try
+                {
+                    YHJBXX yhjbxx = DAO.GetObjectByID<YHJBXX>(YHID);
+                    if (yhjbxx != null)
+                    {
+                        yhjbxx.TX = "TX.jpg";
+
+                        DAO.Update(yhjbxx);
+
+                        Bitmap bm = Common.ReadImageFile(copypath + copyfilename);
+
+                        if (!Directory.Exists(filepath))
+                        {
+                            Directory.CreateDirectory(filepath);
+                        }
+
+                        bm.Save((filepath + "TX.jpg"), ImageFormat.Jpeg);
+                        bm.Dispose();
+
+                        DAO.Repository.Session.Flush();
+                        transaction.Commit();
+                        return new { Result = EnResultType.Success, Message = "上传头像成功", Value = new { YHID = yhjbxx.YHID } };
+                    }
+                    else
+                    {
+                        return new { Result = EnResultType.Failed, Message = "用户不存在" };
+                    }
+
                 }
                 catch (Exception ex)
                 {
@@ -108,6 +166,29 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 return o1.ToString();
             else
                 return string.Empty;
+        }
+
+        public object GetObjByID(string YHID)
+        {
+            try
+            {
+                YHJBXX obj = DAO.GetObjectByID<YHJBXX>(YHID);
+                return new
+                {
+                    Result = EnResultType.Success,
+                    YHJBXX = obj
+                };
+
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("YHJBXXBLL", "修改失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                return new
+                {
+                    Result = EnResultType.Failed,
+                    Message = "修改失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!"
+                };
+            }
         }
     }
 }

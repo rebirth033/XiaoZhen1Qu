@@ -32,7 +32,8 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Ashx
                     {
                         int width = Convert.ToInt32(context.Request.Form["width"]);
                         int height = Convert.ToInt32(context.Request.Form["height"]);
-                        return ResizeImg(file.InputStream, width, height);
+                        string ydid = context.Request.Form["ydid"];
+                        return ResizeImg(file.InputStream, width, height, ydid);
                     }
                 }
             }
@@ -43,10 +44,10 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Ashx
             return string.Empty;
         }
 
-        public string ResizeImg(Stream ImgFile, int maxWidth, int maxHeight)
+        public string ResizeImg(Stream ImgFile, int maxWidth, int maxHeight, string ydid)
         {
             string RootDir = HttpContext.Current.Server.MapPath(HttpContext.Current.Request.ApplicationPath);//获取程序根目录
-            string filePath = RootDir + @"\Areas\Business\Photos\";
+            string filePath = RootDir + @"\Areas\Business\Photos\" + ydid + @"\";
             string fileName = DateTime.Now.ToString("yyyyMMddHHmmssffff") + ".jpg";
 
             Image imgPhoto = Image.FromStream(ImgFile);

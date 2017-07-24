@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data;
 using TianWen.XiaoZhen1Qu.Entities.Models;
 
 namespace TianWen.XiaoZhen1Qu.Interface
@@ -21,5 +16,9 @@ namespace TianWen.XiaoZhen1Qu.Interface
         string GetObjByYHMOrSJ(string YHM);
 
         object UpdatePassword(string MM, string SJ);
+
+        object UpdateTX(string YHID, string TX);
+
+        object GetObjByID(string YHID);
     }
 }

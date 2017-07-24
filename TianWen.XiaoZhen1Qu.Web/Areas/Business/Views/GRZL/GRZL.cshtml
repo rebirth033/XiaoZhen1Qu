@@ -17,34 +17,94 @@
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/jquery-ui-1.12.1.custom/jquery.ui.datepicker-zh-CN.js")"></script>
 </head>
 <body>
-    <div class="right_head">
-        <div class="divstep" id="divSYWXTX">
-            <span class="spanstep" id="spanSYWXTX">使用微信头像</span>
-            <em class="emstep" id="emSYWXTX"></em>
-        </div>
-        <div class="divstep" id="divBDSC">
-            <span class="spanstep" id="spanBDSC">本地上传</span>
-            <em class="emstep" id="emBDSC"></em>
-        </div>
-        <div class="divstep" id="divXTTX">
-            <span class="spanstep" id="spanXTTX">系统头像</span>
-            <em class="emstep" id="emXTTX"></em>
-        </div>
-        <div class="divstep">
-            <span class="spanstep" id="spanOther">&nbsp;</span>
-            <em class="emstep" id="emOther" style="width: 510px;"></em>
-        </div>
-    </div>
-    <div id="div_main_info" class="div_main_info">
-        <div class="div_main_photo" id="div_main_photo">
-            <div class="div_main_photo_img">
-                <img class="img_main_photo" src="@Url.Content("~/Areas/Business/Css/images/test.jpg")"/>
+    <form action="" enctype="multipart/form-data" id="form_button_main_photo" method="post">
+        <div class="div_photo">
+            <div class="divstep" id="divSYWXTX">
+                <span class="spanstep" id="spanSYWXTX">使用微信头像</span>
+                <em class="emstep" id="emSYWXTX"></em>
             </div>
-            <div class="div_main_photo_button">
-                <input class="button_main_photo" id="btnSYWXTX" type="button" value="保存微信头像" />
-                <input class="button_main_photo" id="btnBDSC" type="button" value="上传头像" />
+            <div class="divstep" id="divBDSC">
+                <span class="spanstep" id="spanBDSC">本地上传</span>
+                <em class="emstep" id="emBDSC"></em>
+            </div>
+            <div class="divstep" id="divXTTX">
+                <span class="spanstep" id="spanXTTX">系统头像</span>
+                <em class="emstep" id="emXTTX"></em>
+            </div>
+            <div class="divstep">
+                <span class="spanstep" id="spanOther">&nbsp;</span>
+                <em class="emstep" id="emOther" style="width: 510px;"></em>
             </div>
         </div>
-    </div>
+        <div id="div_photo_info" class="div_photo_info">
+            <div class="div_main_photo" id="div_main_photo">
+                <div class="div_main_photo_left">
+                    <img id="img_main_photo" class="img_main_photo" />
+                    <div class="div_main_photo_button">
+                        <input class="button_main_photo" id="btnTBWXTX" type="button" value="同步微信头像" />
+                        <div class="div_button_main_photo">
+                            <div class="div_button_main_photo_child">上传本地头像</div>
+
+                            <input class="button_main_photo button_main_photo_upload" id="btnBDSC" type="file" unselectable="on" />
+
+                        </div>
+                        <input class="button_main_photo" id="btnXTSC" type="button" value="上传系统头像" />
+                    </div>
+                </div>
+                <div id="div_main_photo_middle" class="div_main_photo_middle">
+                    <img id="img_main_photo_middle" class="img_main_photo_middle" />
+                    <span class="span_main_photo_middle" style="margin-top: 15px; margin-bottom: 10px;">圆形头像预览</span>
+                    <span class="span_main_photo_middle">图片格式：gif jpg png</span>
+                    <span class="span_main_photo_middle">最适尺寸：120*120px </span>
+                </div>
+                <div id="div_main_photo_middle_xt" class="div_main_photo_middle_xt">
+                    <span class="span_main_photo_middle_xt">请选择喜欢的系统头像：</span>
+                    <ul class="ul_main_photo_middle_xt">
+                        <li class="li_main_photo_middle_xt"><img class="img_main_photo_middle_xt" src="@Url.Content("~/Areas/Business/Css/images/system_photo1.jpg")" /></li>
+                        <li class="li_main_photo_middle_xt"><img class="img_main_photo_middle_xt" src="@Url.Content("~/Areas/Business/Css/images/system_photo2.jpg")" /></li>
+                        <li class="li_main_photo_middle_xt"><img class="img_main_photo_middle_xt" src="@Url.Content("~/Areas/Business/Css/images/system_photo3.jpg")" /></li>
+                        <li class="li_main_photo_middle_xt"><img class="img_main_photo_middle_xt" src="@Url.Content("~/Areas/Business/Css/images/system_photo4.jpg")" /></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="div_person_head">
+            <div class="divstep_info" id="divXGGRZL">
+                <span class="spanstep_info" id="spanXGGRZL">修改个人资料</span>
+                <em class="emstep_info" id="emXGGRZL"></em>
+            </div>
+            <div class="divstep_info">
+                <span class="spanstep_info" id="spanOther">&nbsp;</span>
+                <em class="emstep_info" id="emOther" style="width: 770px;"></em>
+            </div>
+        </div>
+        <div class="div_person_info">
+            <div class="div_person_info_left">
+                <span class="span_person_info">用户名：</span>
+            </div>
+            <div class="div_person_info_right">
+                <input id="input_person_info_yhm" maxlength="30" class="input_person_info" type="text" />
+                <img class="img_person_info" />
+                <span class="span_person_info">修改</span>
+            </div>
+        </div>
+        <div class="div_person_info">
+            <div class="div_person_info_left">
+                <span class="span_person_info">手机：</span>
+            </div>
+            <div class="div_person_info_right">
+                <input id="input_person_info_yhm" maxlength="30" class="input_person_info" type="text" />
+            </div>
+        </div>
+
+        <div class="div_person_info">
+            <div class="div_person_info_left">
+                <span class="span_person_info">邮箱：</span>
+            </div>
+            <div class="div_person_info_right">
+                <input id="input_person_info_yhm" maxlength="30" class="input_person_info" type="text" />
+            </div>
+        </div>
+    </form>
 </body>
 </html>

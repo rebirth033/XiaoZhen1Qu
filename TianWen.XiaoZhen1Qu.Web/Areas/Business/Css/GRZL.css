@@ -1,4 +1,4 @@
-﻿.right_head {
+﻿.div_photo {
     width: 900px;
     display: block;
     height: 50px;
@@ -27,25 +27,26 @@
     background: #cccccc;
 }
 
-.div_main_info {
+.div_photo_info {
     display: block;
     width: 100%;
 }
 
 .div_main_photo {
-    width: 900px; 
+    width: 900px;
     height: 220px;
 }
 
-.div_main_photo_img {
-    width: 140px; 
+.div_main_photo_left {
+    width: 140px;
     height: 140px;
     border: 1px solid #cccccc;
     margin-top: 17px;
+    float: left;
 }
 
 .img_main_photo {
-    width: 128px; 
+    width: 128px;
     height: 128px;
     background-repeat: no-repeat;
     background-position: center;
@@ -58,14 +59,164 @@
     margin-left: 2px;
 }
 
-.button_main_photo {
+.div_button_main_photo {
+    z-index: 100;
+    float: left;
     font-size: 14px;
     width: 135px;
     height: 40px;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+}
+
+.div_button_main_photo_child {
+    padding-top: 10px;
+    width: 135px;
+    height: 40px;
+    background-color: #5bc0de;
+    position: relative;
+    display: block;
+    float: left;
+    z-index: 101;
+    color: #fff;
     border-radius: 4px;
+}
+
+.button_main_photo {
+    position: absolute;
+    font-size: 14px;
+    width: 135px;
+    height: 40px;
     cursor: pointer;
     background: #5bc0de;
-    color: #fff;
-    border: none;
     display: none;
+    z-index: 102;
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.button_main_photo_upload {
+    border-radius: 4px;
+    opacity: 0;
+}
+
+.div_main_photo_middle {
+    float: left;
+    margin-top: 25px;
+    margin-left: 120px;
+    text-align: center;
+    display: none;
+    width: 150px;
+}
+
+.img_main_photo_middle {
+    border-radius: 50%;
+    width: 128px;
+    height: 128px;
+}
+
+.span_main_photo_middle {
+    float: left;
+    font-size: 14px;
+    color: #999;
+    width: 150px;
+    display: block;
+    text-align: center;
+}
+
+.div_main_photo_middle_xt {
+    float: left;
+    margin-top: 25px;
+    margin-left: 120px;
+    text-align: center;
+    display: none;
+}
+
+.span_main_photo_middle_xt {
+    font-size: 14px;
+    color: #999;
+    width: 180px;
+    display: block;
+    text-align: center;
+}
+
+.ul_main_photo_middle_xt {
+    margin-top: 20px;
+}
+
+.li_main_photo_middle_xt {
+    cursor: pointer;
+    float: left;
+    display: block;
+    width: 85px;
+    margin-right: 13px;
+}
+
+.img_main_photo_middle_xt {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.div_person_head {
+    width: 100%;
+    display: block;
+    margin-top: 20px;
+    height: 46px;
+}
+
+.divstep_info {
+    width: 130px;
+    text-align: center;
+    height: 45px;
+    float: left;
+    cursor: pointer;
+    display: block;
+}
+
+.spanstep_info {
+    margin-bottom: 5px;
+    line-height: 44px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #666;
+}
+
+.emstep_info {
+    width: 130px;
+    height: 1px;
+    float: left;
+    background: #cccccc;
+}
+
+.div_person_info {
+        width: 100%;
+    display: block;
+    margin-top: 20px;
+}
+
+.div_person_info_left {
+    color: gray;
+    text-align: right;
+    display: inline-block;
+    font-size: 14px;
+    width:10%;
+}
+
+.div_person_info_right {
+    display: inline-block;
+    margin-left: 10px;
+    position: relative;
+    width:20%;
+}
+
+.input_person_info {
+    width:99%;
+    border:1px solid #ccc;
+    border-radius:4px;
+    height:34px;
+    padding:4px 12px;
 }

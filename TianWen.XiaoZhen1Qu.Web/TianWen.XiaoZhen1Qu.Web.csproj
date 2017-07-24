@@ -159,11 +159,16 @@
     <Content Include="Areas\Business\Css\images\no.png" />
     <Content Include="Areas\Business\Css\images\ok.png" />
     <Content Include="Areas\Business\Css\images\one-blue.png" />
+    <Content Include="Areas\Business\Css\images\person_info_edit.png" />
     <Content Include="Areas\Business\Css\images\QR.png" />
     <Content Include="Areas\Business\Css\images\radio_blue.png" />
     <Content Include="Areas\Business\Css\images\radio_gray.png" />
     <Content Include="Areas\Business\Css\images\rotate.png" />
     <Content Include="Areas\Business\Css\images\share.png" />
+    <Content Include="Areas\Business\Css\images\system_photo1.png" />
+    <Content Include="Areas\Business\Css\images\system_photo2.png" />
+    <Content Include="Areas\Business\Css\images\system_photo3.png" />
+    <Content Include="Areas\Business\Css\images\system_photo4.png" />
     <Content Include="Areas\Business\Css\images\test.jpg" />
     <Content Include="Areas\Business\Css\images\three-blue.png" />
     <Content Include="Areas\Business\Css\images\three-gray.png" />
@@ -237,6 +242,9 @@
     <Compile Include="Areas\Business\Ashx\GenerateQRCode.ashx.cs">
       <DependentUpon>GenerateQRCode.ashx</DependentUpon>
     </Compile>
+    <Compile Include="Areas\Business\Ashx\SaveGRZLPhotos.ashx.cs">
+      <DependentUpon>SaveGRZLPhotos.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Areas\Business\Ashx\SavePhotos.ashx.cs">
       <DependentUpon>SavePhotos.ashx</DependentUpon>
     </Compile>
@@ -249,7 +257,6 @@
     </Compile>
     <Compile Include="Areas\Business\BusinessAreaRegistration.cs" />
     <Compile Include="Areas\Business\Common\BaseController.cs" />
-    <Compile Include="Areas\Business\Common\Common.cs" />
     <Compile Include="Areas\Business\Common\QRCodeHelper.cs" />
     <Compile Include="Areas\Business\Controllers\CommonController.cs" />
     <Compile Include="Areas\Business\Controllers\FBCGController.cs" />
@@ -298,6 +305,7 @@
     <Content Include="Areas\Business\Ashx\GenerateQRCode.ashx" />
     <Content Include="Areas\Business\Views\WDSC\WDSC.cshtml" />
     <Content Include="Areas\Business\Views\GRZL\GRZL.cshtml" />
+    <Content Include="Areas\Business\Ashx\SaveGRZLPhotos.ashx" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -51,15 +51,15 @@ function LiFocus() {
 }
 //我的发布
 function ToWDFB() {
-    $("#iframeright").attr("src", getRootPath() + "/Business/WDFB/WDFB");
+    $("#iframeright").attr("src", getRootPath() + "/Business/WDFB/WDFB?YHID="+getUrlParam("YHID"));
 }
 //我的收藏
 function ToWDSC() {
-    $("#iframeright").attr("src", getRootPath() + "/Business/WDSC/WDSC");
+    $("#iframeright").attr("src", getRootPath() + "/Business/WDSC/WDSC?YHID=" + getUrlParam("YHID"));
 }
 //个人资料
 function ToGRZL() {
-    $("#iframeright").attr("src", getRootPath() + "/Business/GRZL/GRZL");
+    $("#iframeright").attr("src", getRootPath() + "/Business/GRZL/GRZL?YHID=" + getUrlParam("YHID"));
 }
 //显示个人中心
 function ShowGRZX() {
