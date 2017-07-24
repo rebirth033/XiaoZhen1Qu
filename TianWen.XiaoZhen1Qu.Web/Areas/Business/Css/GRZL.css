@@ -1,4 +1,4 @@
-﻿.right_head {
+﻿.div_photo {
     width: 900px;
     display: block;
     height: 50px;
@@ -27,18 +27,18 @@
     background: #cccccc;
 }
 
-.div_main_info {
+.div_photo_info {
     display: block;
     width: 100%;
 }
 
 .div_main_photo {
-    width: 900px; 
+    width: 900px;
     height: 220px;
 }
 
 .div_main_photo_left {
-    width: 140px; 
+    width: 140px;
     height: 140px;
     border: 1px solid #cccccc;
     margin-top: 17px;
@@ -46,7 +46,7 @@
 }
 
 .img_main_photo {
-    width: 128px; 
+    width: 128px;
     height: 128px;
     background-repeat: no-repeat;
     background-position: center;
@@ -109,6 +109,7 @@
     margin-left: 120px;
     text-align: center;
     display: none;
+    width: 150px;
 }
 
 .img_main_photo_middle {
@@ -118,6 +119,7 @@
 }
 
 .span_main_photo_middle {
+    float: left;
     font-size: 14px;
     color: #999;
     width: 150px;
@@ -126,7 +128,7 @@
 }
 
 .div_main_photo_middle_xt {
-        float: left;
+    float: left;
     margin-top: 25px;
     margin-left: 120px;
     text-align: center;
@@ -134,7 +136,7 @@
 }
 
 .span_main_photo_middle_xt {
-        font-size: 14px;
+    font-size: 14px;
     color: #999;
     width: 180px;
     display: block;
@@ -157,4 +159,34 @@
     width: 80px;
     height: 80px;
     border-radius: 50%;
+}
+
+.div_person_Info {
+    width: 100%;
+    display: block;
+    margin-top: 20px;
+}
+
+.divstep_info {
+    width: 130px;
+    text-align: center;
+    height: 45px;
+    float: left;
+    cursor: pointer;
+    display: block;
+}
+
+.spanstep_info {
+    margin-bottom: 5px;
+    line-height: 44px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #666;
+}
+
+.emstep_info {
+    width: 130px;
+    height: 1px;
+    float: left;
+    background: #cccccc;
 }
