@@ -241,6 +241,9 @@
     <Compile Include="Areas\Business\Ashx\GenerateQRCode.ashx.cs">
       <DependentUpon>GenerateQRCode.ashx</DependentUpon>
     </Compile>
+    <Compile Include="Areas\Business\Ashx\SaveGRZLPhotos.ashx.cs">
+      <DependentUpon>SaveGRZLPhotos.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Areas\Business\Ashx\SavePhotos.ashx.cs">
       <DependentUpon>SavePhotos.ashx</DependentUpon>
     </Compile>
@@ -253,7 +256,6 @@
     </Compile>
     <Compile Include="Areas\Business\BusinessAreaRegistration.cs" />
     <Compile Include="Areas\Business\Common\BaseController.cs" />
-    <Compile Include="Areas\Business\Common\Common.cs" />
     <Compile Include="Areas\Business\Common\QRCodeHelper.cs" />
     <Compile Include="Areas\Business\Controllers\CommonController.cs" />
     <Compile Include="Areas\Business\Controllers\FBCGController.cs" />
@@ -302,6 +304,7 @@
     <Content Include="Areas\Business\Ashx\GenerateQRCode.ashx" />
     <Content Include="Areas\Business\Views\WDSC\WDSC.cshtml" />
     <Content Include="Areas\Business\Views\GRZL\GRZL.cshtml" />
+    <Content Include="Areas\Business\Ashx\SaveGRZLPhotos.ashx" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

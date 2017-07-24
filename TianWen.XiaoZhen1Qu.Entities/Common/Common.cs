@@ -4,7 +4,7 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Web;
 
-namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Common
+namespace TianWen.XiaoZhen1Qu.Entities.Common
 {
     public class Common
     {
@@ -54,6 +54,39 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Common
             MemoryStream memStream = new MemoryStream(bytes);
             BinaryFormatter binFormatter = new BinaryFormatter();
             return (Image)binFormatter.Deserialize(memStream);
+        }
+        #endregion
+
+        #region 图片文件读写
+        public static Bitmap ReadImageFile(string path)
+        {
+            FileStream fs = File.OpenRead(path); //OpenRead
+            int filelength = 0;
+            filelength = (int)fs.Length; //获得文件长度 
+            Byte[] image = new Byte[filelength]; //建立一个字节数组 
+            fs.Read(image, 0, filelength); //按字节流读取 
+            Image imgPhoto = Image.FromStream(fs);
+            fs.Close();
+            Bitmap bmPhoto = new Bitmap(imgPhoto);
+            Graphics gbmPhoto = Graphics.FromImage(bmPhoto);
+
+            //设置高质量插值法
+            gbmPhoto.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.High;
+
+            Color color = Color.FromArgb(255, 250, 255, 249);    //背景透明
+
+            gbmPhoto.FillRectangle(new SolidBrush(color), new Rectangle(0, 0, bmPhoto.Width, bmPhoto.Height));
+
+            gbmPhoto.DrawImage(imgPhoto, new Rectangle(0, 0, bmPhoto.Width, bmPhoto.Height), new Rectangle(0, 0, imgPhoto.Width, imgPhoto.Height), GraphicsUnit.Pixel);
+
+            return bmPhoto;
+        }
+        #endregion
+
+        #region 获取程序根路径
+        public static string GetRootPath()
+        {
+            return HttpContext.Current.Server.MapPath(HttpContext.Current.Request.ApplicationPath);//获取程序根目录
         }
         #endregion
     }

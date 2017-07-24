@@ -1,15 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
+using System.Linq;
 using System.Web;
 
 namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Ashx
 {
     /// <summary>
-    /// 保存图片
+    /// SaveGRZLPhotos 的摘要说明
     /// </summary>
-    public class SavePhotos : IHttpHandler
+    public class SaveGRZLPhotos : IHttpHandler
     {
         public void ProcessRequest(HttpContext context)
         {
@@ -32,8 +34,10 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Ashx
                     {
                         int width = Convert.ToInt32(context.Request.Form["width"]);
                         int height = Convert.ToInt32(context.Request.Form["height"]);
-                        string ydid = context.Request.Form["ydid"];
-                        return ResizeImg(file.InputStream, width, height, ydid);
+                        string yhid = context.Request.Form["yhid"];
+                        string type = context.Request.Form["type"];
+                        string filename = context.Request.Form["filename"];
+                        return ResizeImg(file.InputStream, width, height, yhid, type, filename);
                     }
                 }
             }
@@ -44,11 +48,12 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Ashx
             return string.Empty;
         }
 
-        public string ResizeImg(Stream ImgFile, int maxWidth, int maxHeight, string ydid)
+        public string ResizeImg(Stream ImgFile, int maxWidth, int maxHeight, string yhid, string type, string fileName)
         {
             string RootDir = HttpContext.Current.Server.MapPath(HttpContext.Current.Request.ApplicationPath);//获取程序根目录
-            string filePath = RootDir + @"\Areas\Business\Photos\" + ydid + @"\";
-            string fileName = DateTime.Now.ToString("yyyyMMddHHmmssffff") + ".jpg";
+            string filePath = RootDir + @"\Areas\Business\Photos\" + yhid + @"\" + type + @"\";
+
+            fileName = fileName == string.Empty ? DateTime.Now.ToString("yyyyMMddHHmmssffff") + ".jpg" : fileName+ ".jpg";
 
             Image imgPhoto = Image.FromStream(ImgFile);
 

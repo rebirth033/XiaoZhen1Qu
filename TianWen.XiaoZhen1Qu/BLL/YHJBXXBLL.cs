@@ -5,6 +5,10 @@ using TianWen.XiaoZhen1Qu.Entities.Models;
 using TianWen.XiaoZhen1Qu.Interface;
 using TianWen.Framework.Log;
 using System.Collections.Generic;
+using System.IO;
+using TianWen.XiaoZhen1Qu.Entities.Common;
+using System.Drawing;
+using System.Drawing.Imaging;
 
 namespace TianWen.XiaoZhen1Qu.BLL
 {
@@ -87,6 +91,12 @@ namespace TianWen.XiaoZhen1Qu.BLL
         //修改头像
         public object UpdateTX(string YHID, string TX)
         {
+            string copyfilename = TX == string.Empty ? TX : TX.Substring(TX.LastIndexOf('/') + 1, TX.Length - TX.LastIndexOf('/') - 1);
+
+            string filepath = Common.GetRootPath() + @"\Areas\Business\Photos\" + YHID + @"\GRZL\";
+
+            string copypath = Common.GetRootPath() + @"\Areas\Business\Css\images\";
+
             using (ITransaction transaction = DAO.BeginTransaction())
             {
                 try
@@ -94,8 +104,20 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     YHJBXX yhjbxx = DAO.GetObjectByID<YHJBXX>(YHID);
                     if (yhjbxx != null)
                     {
-                        yhjbxx.TX = TX == string.Empty ? TX : TX.Substring(TX.LastIndexOf('/') + 1,  TX.Length-TX.LastIndexOf('/')-1);
+                        yhjbxx.TX = "TX.jpg";
+
                         DAO.Update(yhjbxx);
+
+                        Bitmap bm = Common.ReadImageFile(copypath + copyfilename);
+
+                        if (!Directory.Exists(filepath))
+                        {
+                            Directory.CreateDirectory(filepath);
+                        }
+
+                        bm.Save((filepath + "TX.jpg"), ImageFormat.Jpeg);
+                        bm.Dispose();
+
                         DAO.Repository.Session.Flush();
                         transaction.Commit();
                         return new { Result = EnResultType.Success, Message = "上传头像成功", Value = new { YHID = yhjbxx.YHID } };

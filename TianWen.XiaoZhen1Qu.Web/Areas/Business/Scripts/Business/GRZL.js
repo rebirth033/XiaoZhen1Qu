@@ -94,8 +94,8 @@ function LoadGRZL() {
             YHID: getUrlParam("YHID")
         },
         success: function (xml) {
-            $("#img_main_photo").attr("src", getRootPath() + "/Areas/Business/Css/images/" + xml.YHJBXX.TX);
-            $("#img_main_photo_middle").attr("src", getRootPath() + "/Areas/Business/Css/images/" + xml.YHJBXX.TX);
+            $("#img_main_photo").attr("src", getRootPath() + "/Areas/Business/Photos/" + getUrlParam("YHID") + "/GRZL/" + xml.YHJBXX.TX + "?j=" + Math.random());
+            $("#img_main_photo_middle").attr("src", getRootPath() + "/Areas/Business/Photos/" + getUrlParam("YHID") + "/GRZL/" + xml.YHJBXX.TX + "?j=" + Math.random());
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
@@ -119,16 +119,18 @@ function Upload() {
             formData.append('width', this.width);
             formData.append('height', this.height);
             formData.append('yhid', getUrlParam("YHID"));
+            formData.append('type', "GRZL");
+            formData.append('filename', "TX");
             var xhr = new XMLHttpRequest();
             xhr.addEventListener("load", uploadComplete, false);
-            xhr.open('POST', getRootPath() + "/Areas/Business/Ashx/SavePhotos.Ashx");
+            xhr.open('POST', getRootPath() + "/Areas/Business/Ashx/SaveGRZLPhotos.Ashx");
             xhr.send(formData);
         };
     };
 }
 //上传完成事件
 function uploadComplete(evt) {
-    var imagepath = getRootPath() + "/Areas/Business/Photos/" + evt.target.responseText;
-    $("#img_main_photo").attr("src", imagepath);
-    $("#img_main_photo_middle").attr("src", imagepath);
+    var imagepath = getRootPath() + "/Areas/Business/Photos/" + getUrlParam("YHID") + "/GRZL/" + evt.target.responseText;
+    $("#img_main_photo").attr("src", imagepath + "?j=" + Math.random());
+    $("#img_main_photo_middle").attr("src", imagepath + "?j=" + Math.random());
 }
