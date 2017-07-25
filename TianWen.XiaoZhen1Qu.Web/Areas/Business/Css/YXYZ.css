@@ -1,0 +1,80 @@
+﻿.div_head {
+    width: 900px; 
+    text-align: center;
+    height: 48px;
+}
+
+.div_head_inner {
+    width: 600px;
+    margin-left: 16%;
+}
+
+.divstep {
+    width: 196px;
+    text-align: center;
+    height: 48px;
+    float: left;
+    cursor: default;
+}
+
+.spanstep {
+    font-size: 14px;
+    margin-bottom: 5px;
+    line-height: 40px;
+    color: #cccccc;
+}
+
+.emstep {
+    width: 196px;
+    height: 2px;
+    float: left;
+    background: #cccccc;
+}
+
+.div_content {
+    width: 900px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.table {
+    margin-left: 26%;
+}
+
+.input_content {
+    width: 100%;
+    cursor: default;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 34px;
+    padding: 4px 12px;
+    display: inline-block;
+}
+
+:-ms-input-placeholder.input_content {
+    color: #999;
+}
+
+.Info {
+    font-family: 微软雅黑 !important;
+    vertical-align: middle !important;
+    text-align: left !important;
+}
+
+.div_bdcg {
+    width: 100%; 
+    margin-top: 20px;
+    height: 70px;
+}
+
+.div_bdcg_tip {
+    font-size: 20px;
+    font-family: 微软雅黑 !important;
+}
+
+.img_bdcg_tip {
+    width: 38px;
+    height: 38px;
+    background: url(images/ok.png);
+    margin-right: 10px;
+}

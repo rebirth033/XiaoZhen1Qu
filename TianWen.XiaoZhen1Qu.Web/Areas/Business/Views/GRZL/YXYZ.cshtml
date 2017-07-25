@@ -1,0 +1,88 @@
+﻿@{
+    ViewBag.Title = "YXYZ";
+    Layout = "~/Areas/Business/Views/Shared/_ListLayout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+
+    <link href="@Url.Content("~/Areas/Business/Css/YXYZ.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Areas/Business/Scripts/jquery-ui-1.12.1.custom/jquery-ui.min.css")" rel="stylesheet" />
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/YXYZ.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/jquery-ui-1.12.1.custom/jquery-ui.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/jquery-ui-1.12.1.custom/jquery.ui.datepicker-zh-CN.js")"></script>
+</head>
+<body>
+    <div class="div_head">
+        <div class="div_head_inner">
+            <div class="divstep" id="divTXYX">
+                <span class="spanstep" id="spanTXYX">1.填写邮箱</span>
+                <em class="emstep" id="emTXYX"></em>
+            </div>
+            <div class="divstep" id="divCSYJ">
+                <span class="spanstep" id="spanCSYJ">2.查收邮件</span>
+                <em class="emstep" id="emCSYJ"></em>
+            </div>
+            <div class="divstep" id="divWCRZ">
+                <span class="spanstep" id="spanWCRZ">3.完成认证</span>
+                <em class="emstep" id="emWCRZ"></em>
+            </div>
+        </div>
+    </div>
+    <div id="myTabContent" class="div_content">
+        <div id="divFirst" style="display: block">
+            <table class="table" style="width: 600px;">
+                <tr>
+                    <td>
+                        <span>您的邮箱：</span>
+                        <input type="text" id="inputYSJ" readonly="readonly" class="input_content" style="width: 316px;">
+                    </td>
+                    <td class="Info" id="YSJInfo" style="width: 50%"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" class="btn btn-info input_text" id="btnFirst" value="发送认证邮件" /></td>
+                </tr>
+            </table>
+        </div>
+        <div id="divSecond" style="display: none">
+            <table class="table" style="width: 600px; ">
+                <tr>
+                    <td>
+                        <input type="text" id="inputXSJ" class="input_content" style="width: 270px;" placeholder="请输入新手机号">
+                        <input class="btn btn-info" id="btnHQXSJYZM" type="button" style="margin-top: -3px; width: 116px;" id="btnHQYZM" value="获取验证码" />
+                    </td>
+                    <td class="Info" id="XSJInfo" style="width: 50%"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" class="input_content" id="XSJYZM" placeholder="请输入验证码"></td>
+                    <td class="Info" id="XSJYZMInfo" style="width: 50%"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" class="btn btn-info input_text" id="btnSecond" value="绑定" /></td>
+                </tr>
+            </table>
+        </div>
+        <div id="divThird" style="display: none">
+            <table class="table" style="width: 600px; ">
+                <tr>
+                    <td>
+                        <div class="div_bdcg">
+                            <div class="div_bdcg_tip">
+                                <img class="img_bdcg_tip" />修改成功!
+                            </div>
+                        </div>
+                    </td>
+                    <td class="Info" id="test" style="width: 50%"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" class="btn btn-info input_text" id="btnThird" value="返回" /></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

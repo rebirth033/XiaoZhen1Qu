@@ -11,6 +11,8 @@
     $("#span_person_info_right_yhm").bind("click", UpdateYHM);
     $("#img_person_info_sj").bind("click", UpdateSJ);
     $("#span_person_info_right_sj").bind("click", UpdateSJ);
+    $("#img_person_info_yx").bind("click", UpdateYX);
+    $("#span_person_info_right_yx").bind("click", UpdateYX);
     LoadGRZL();
 });
 
@@ -176,4 +178,8 @@ function UpdateYHM() {
 
 function UpdateSJ() {
     window.location.href = getRootPath() + "/Business/GRZL/HBSJ?SJ=" + $("#input_person_info_sj").val() + "&YHID=" + getUrlParam("YHID");
+}
+
+function UpdateYX() {
+    window.location.href = getRootPath() + "/Business/GRZL/YXYZ?YX=" + $("#input_person_info_yx").val() + "&YHID=" + getUrlParam("YHID");
 }

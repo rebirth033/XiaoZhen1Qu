@@ -22,6 +22,11 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return View();
         }
 
+        public ActionResult YXYZ()
+        {
+            return View();
+        }
+
         public JsonResult SaveXTTX()
         {
             object result = YHJBXXBLL.UpdateTX(Request["YHID"], Request["TX"]);

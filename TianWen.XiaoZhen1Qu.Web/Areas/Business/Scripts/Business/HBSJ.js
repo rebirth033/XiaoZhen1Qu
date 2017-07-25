@@ -1,4 +1,4 @@
-﻿var count = 60;
+﻿var ysjcount = 60, xsjcount = 60;;
 
 $(document).ready(function () {
     $("#spanJBSJ").css("color", "#5bc0de");
@@ -241,29 +241,29 @@ function GetXSJCheckCode(obj) {
 
 function GetYSJNumber() {
     $("#btnHQYSJYZM").attr("disabled", "disabled");
-    $("#btnHQYSJYZM").val(count + "S后重新获取");
-    count--;
-    if (count > 0) {
+    $("#btnHQYSJYZM").val(ysjcount + "S后重新获取");
+    ysjcount--;
+    if (ysjcount > 0) {
         setTimeout(GetYSJNumber, 1000);
     }
     else {
         $("#btnHQYSJYZM").val("获取验证码");
         $("#btnHQYSJYZM").removeAttr("disabled");
-        count = 60;
+        ysjcount = 60;
     }
 }
 
 function GetXSJNumber() {
     $("#btnHQXSJYZM").attr("disabled", "disabled");
-    $("#btnHQXSJYZM").val(count + "S后重新获取");
-    count--;
-    if (count > 0) {
+    $("#btnHQXSJYZM").val(xsjcount + "S后重新获取");
+    xsjcount--;
+    if (xsjcount > 0) {
         setTimeout(GetXSJNumber, 1000);
     }
     else {
         $("#btnHQXSJYZM").val("获取验证码");
         $("#btnHQXSJYZM").removeAttr("disabled");
-        count = 60;
+        xsjcount = 60;
     }
 }
 
