@@ -8,7 +8,9 @@
     $("#btnXTSC").bind("click", SaveXTTX);
     $("#btnBDSC").bind("change", Upload);
     $("#img_person_info_yhm").bind("click", UpdateYHM);
-    $("#span_person_info_right_xg").bind("click", UpdateYHM);
+    $("#span_person_info_right_yhm").bind("click", UpdateYHM);
+    $("#img_person_info_sj").bind("click", UpdateSJ);
+    $("#span_person_info_right_sj").bind("click", UpdateSJ);
     LoadGRZL();
 });
 
@@ -140,11 +142,11 @@ function uploadComplete(evt) {
 }
 
 function UpdateYHM() {
-    if ($("#span_person_info_right_xg").html() === "修改") {
+    if ($("#span_person_info_right_yhm").html() === "修改") {
         $("#input_person_info_yhm").css("border", "1px solid #cccccc");
         $("#input_person_info_yhm").css("cursor", "text");
         $("#input_person_info_yhm").removeAttr("readonly");
-        $("#span_person_info_right_xg").html("确认");
+        $("#span_person_info_right_yhm").html("确认");
     } else {
         $.ajax({
             type: "POST",
@@ -161,7 +163,7 @@ function UpdateYHM() {
                     $("#input_person_info_yhm").css("border", "none");
                     $("#input_person_info_yhm").css("cursor", "default");
                     $("#input_person_info_yhm").attr("readonly", "readonly");
-                    $("#span_person_info_right_xg").html("修改");
+                    $("#span_person_info_right_yhm").html("修改");
                 }
             },
             error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -170,4 +172,8 @@ function UpdateYHM() {
         });
        
     }
+}
+
+function UpdateSJ() {
+    window.location.href = getRootPath() + "/Business/GRZL/HBSJ?SJ=" + $("#input_person_info_sj").val() + "&YHID=" + getUrlParam("YHID");
 }

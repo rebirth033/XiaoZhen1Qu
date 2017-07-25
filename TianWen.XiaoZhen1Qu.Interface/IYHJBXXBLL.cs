@@ -21,6 +21,8 @@ namespace TianWen.XiaoZhen1Qu.Interface
 
         object UpdateYHM(string YHID, string YHM);
 
+        object UpdateSJ(string YHID, string SJ);
+
         object GetObjByID(string YHID);
     }
 }

@@ -17,6 +17,11 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return View();
         }
 
+        public ActionResult HBSJ()
+        {
+            return View();
+        }
+
         public JsonResult SaveXTTX()
         {
             object result = YHJBXXBLL.UpdateTX(Request["YHID"], Request["TX"]);
@@ -32,6 +37,12 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         public JsonResult UpdateYHM()
         {
             object result = YHJBXXBLL.UpdateYHM(Request["YHID"], Request["YHM"]);
+            return Json(result);
+        }
+
+        public JsonResult UpdateSJ()
+        {
+            object result = YHJBXXBLL.UpdateSJ(Request["YHID"], Request["SJ"]);
             return Json(result);
         }
     }

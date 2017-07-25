@@ -140,6 +140,7 @@
     <Content Include="Areas\Business\Css\FBCG.css" />
     <Content Include="Areas\Business\Css\FWCZ.css" />
     <Content Include="Areas\Business\Css\GRZL.css" />
+    <Content Include="Areas\Business\Css\HBSJ.css" />
     <Content Include="Areas\Business\Css\images\arrow_down.png" />
     <Content Include="Areas\Business\Css\images\arrow_up.png" />
     <Content Include="Areas\Business\Css\images\cellphone.png" />
@@ -201,6 +202,7 @@
     <Content Include="Areas\Business\Scripts\Business\FWCZ\FWCZYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\FWCZ\FWCZZP.js" />
     <Content Include="Areas\Business\Scripts\Business\GRZL.js" />
+    <Content Include="Areas\Business\Scripts\Business\HBSJ.js" />
     <Content Include="Areas\Business\Scripts\Business\LBXZ.js" />
     <Content Include="Areas\Business\Scripts\Business\PageJson.js" />
     <Content Include="Areas\Business\Scripts\Business\WDFB.js" />
@@ -306,6 +308,7 @@
     <Content Include="Areas\Business\Views\WDSC\WDSC.cshtml" />
     <Content Include="Areas\Business\Views\GRZL\GRZL.cshtml" />
     <Content Include="Areas\Business\Ashx\SaveGRZLPhotos.ashx" />
+    <Content Include="Areas\Business\Views\GRZL\HBSJ.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

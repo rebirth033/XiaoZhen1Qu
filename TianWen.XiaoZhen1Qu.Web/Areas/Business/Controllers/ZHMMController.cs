@@ -84,5 +84,26 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             object result = YHJBXXBLL.UpdatePassword(MM, SJ);
             return Json(result);
         }
+
+        public JsonResult YZMQR()
+        {
+            string YZM = Request["YZM"];
+            if (Session["CheckCode"] != null)
+            {
+                string checkcode = Session["CheckCode"].ToString();
+                if (YZM == checkcode)
+                {
+                    return Json(new { Result = EnResultType.Success, Message = "验证成功" });
+                }
+                else
+                {
+                    return Json(new { Result = EnResultType.Failed, Message = "验证码错误，请重新输入", Type = 1 });
+                }
+            }
+            else
+            {
+                return Json(new { Result = EnResultType.Failed, Message = "请获取验证码", Type = 1 });
+            }
+        }
     }
 }
