@@ -7,11 +7,13 @@
     $(".li_main_photo_middle_xt").bind("click", LoadSystemPhoto);
     $("#btnXTSC").bind("click", SaveXTTX);
     $("#btnBDSC").bind("change", Upload);
+    $("#img_person_info_yhm").bind("click", UpdateYHM);
+    $("#span_person_info_right_xg").bind("click", UpdateYHM);
     LoadGRZL();
 });
 
 function HeadActive() {
-    Load(this.id.substr(3, this.id.length-this.id.indexOf('div')));
+    Load(this.id.substr(3, this.id.length - this.id.indexOf('div')));
     $(".divstep").each(function () {
         $(this).find("span").each(function () {
             $(this).css("color", "#cccccc");
@@ -58,7 +60,7 @@ function Load(type) {
 }
 
 function LoadSystemPhoto() {
-    $(this).find("img").each(function() {
+    $(this).find("img").each(function () {
         $("#img_main_photo").attr("src", (this.src));
     });
 }
@@ -96,13 +98,15 @@ function LoadGRZL() {
         success: function (xml) {
             $("#img_main_photo").attr("src", getRootPath() + "/Areas/Business/Photos/" + getUrlParam("YHID") + "/GRZL/" + xml.YHJBXX.TX + "?j=" + Math.random());
             $("#img_main_photo_middle").attr("src", getRootPath() + "/Areas/Business/Photos/" + getUrlParam("YHID") + "/GRZL/" + xml.YHJBXX.TX + "?j=" + Math.random());
+            $("#input_person_info_yhm").val(xml.YHJBXX.YHM);
+            $("#input_person_info_sj").val(xml.YHJBXX.SJ);
+            $("#input_person_info_yx").val(xml.YHJBXX.DZYJ);
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
         }
     });
 }
-
 
 //上传照片
 function Upload() {
@@ -133,4 +137,37 @@ function uploadComplete(evt) {
     var imagepath = getRootPath() + "/Areas/Business/Photos/" + getUrlParam("YHID") + "/GRZL/" + evt.target.responseText;
     $("#img_main_photo").attr("src", imagepath + "?j=" + Math.random());
     $("#img_main_photo_middle").attr("src", imagepath + "?j=" + Math.random());
+}
+
+function UpdateYHM() {
+    if ($("#span_person_info_right_xg").html() === "修改") {
+        $("#input_person_info_yhm").css("border", "1px solid #cccccc");
+        $("#input_person_info_yhm").css("cursor", "text");
+        $("#input_person_info_yhm").removeAttr("readonly");
+        $("#span_person_info_right_xg").html("确认");
+    } else {
+        $.ajax({
+            type: "POST",
+            url: getRootPath() + "/Business/GRZL/UpdateYHM",
+            dataType: "json",
+            data:
+            {
+                YHM: $("#input_person_info_yhm").val(),
+                YHID: getUrlParam("YHID")
+            },
+            success: function (xml) {
+                if (xml.Result === 1) {
+                    alert("修改成功");
+                    $("#input_person_info_yhm").css("border", "none");
+                    $("#input_person_info_yhm").css("cursor", "default");
+                    $("#input_person_info_yhm").attr("readonly", "readonly");
+                    $("#span_person_info_right_xg").html("修改");
+                }
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+            }
+        });
+       
+    }
 }

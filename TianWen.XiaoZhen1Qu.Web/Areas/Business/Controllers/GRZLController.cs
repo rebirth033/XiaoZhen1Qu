@@ -28,5 +28,11 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             object result = YHJBXXBLL.GetObjByID(Request["YHID"]);
             return Json(result);
         }
+
+        public JsonResult UpdateYHM()
+        {
+            object result = YHJBXXBLL.UpdateYHM(Request["YHID"], Request["YHM"]);
+            return Json(result);
+        }
     }
 }
