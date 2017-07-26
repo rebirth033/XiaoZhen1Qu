@@ -262,22 +262,20 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
-        public object SendEmail(string YHID, string YX)
+        public object SendEmail(string YHID, string YX, string CheckCode)
         {
             try
             {
-                
                 YHJBXX yhjbxx = DAO.GetObjectByID<YHJBXX>(YHID);
-                
                 if (yhjbxx != null)
                 {
                     MailMessage msg = new MailMessage();
                     msg.To.Add(YX);
-                    msg.From = new MailAddress("980381266@qq.com", "信息小镇", System.Text.Encoding.UTF8);
+                    msg.From = new MailAddress("980381266@qq.com", "信息小镇", Encoding.UTF8);
                     msg.Subject = "邮件认证 - 信息小镇";
-                    msg.SubjectEncoding = System.Text.Encoding.UTF8;//邮件标题编码 
+                    msg.SubjectEncoding = Encoding.UTF8;//邮件标题编码 
 
-                    string url = "http://www.infotownlet.com/email/?para=E7D7D47927E72493FAAF099BF4087DD2|1ccefa740ADD0684184C8D35775397A253AD13F3|C095A3368A45D8E9EEA845F430F12B92116ADE0C645041FD|0&utm_source=email-interaction&utm_medium=attestation-email&utm_campaign=attestation-email";
+                    string url =  "http://localhost/" + Common.GetVirtualRootPath() + "/Business/GRZL/YXYZCG?para=" + EncryptionHelper.MD5Encrypt64(CheckCode);
                     StringBuilder sb = new StringBuilder();
                     sb.AppendFormat(@"<div style='width: 650px; margin-left: 27%; height: 600px; border: 1px solid #bce9f6; '>
                                 <div style='background-color: #5bc0de; width: 100%; height: 80px; vertical-align: middle;'>
@@ -309,7 +307,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     client.Port = 587;//SMTP端口，QQ邮箱填写587
                     client.EnableSsl = true;//启用SSL加密  
                     object userState = msg;
-                    client.SendAsync(msg, userState); 
+                    client.SendAsync(msg, userState);
                     return new { Result = EnResultType.Success, Message = "发送成功", Value = new { YHID = yhjbxx.YHID } };
                 }
                 else

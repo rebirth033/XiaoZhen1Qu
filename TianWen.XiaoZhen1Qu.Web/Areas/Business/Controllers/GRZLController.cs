@@ -2,6 +2,7 @@
 using TianWen.XiaoZhen1Qu.BLL;
 using TianWen.XiaoZhen1Qu.Interface;
 using TianWen.XiaoZhen1Qu.Web.Areas.Business.Common;
+using System;
 
 namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 {
@@ -54,7 +55,10 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public JsonResult SendEmail()
         {
-            object result = YHJBXXBLL.SendEmail(Request["YHID"], Request["YX"]);
+            Random random = new Random();
+            string CheckCode = random.Next(100000, 999999).ToString();//6位验证码
+            Session["CheckCode"] = CheckCode;
+            object result = YHJBXXBLL.SendEmail(Request["YHID"], Request["YX"], CheckCode);
             return Json(result);
         }
     }

@@ -3,6 +3,7 @@ using System.Drawing;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Web;
+using System.Web.Hosting;
 
 namespace TianWen.XiaoZhen1Qu.Entities.Common
 {
@@ -84,9 +85,15 @@ namespace TianWen.XiaoZhen1Qu.Entities.Common
         #endregion
 
         #region 获取程序根路径
+        //获取物理路径
         public static string GetRootPath()
         {
             return HttpContext.Current.Server.MapPath(HttpContext.Current.Request.ApplicationPath);//获取程序根目录
+        }
+
+        public static string GetVirtualRootPath()
+        {
+            return HttpContext.Current.Request.ApplicationPath;
         }
         #endregion
     }
