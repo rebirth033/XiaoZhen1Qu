@@ -187,6 +187,7 @@
     <Content Include="Areas\Business\Css\WDSC.css" />
     <Content Include="Areas\Business\Css\YHGL.css" />
     <Content Include="Areas\Business\Css\YXYZ.css" />
+    <Content Include="Areas\Business\Css\YXYZCG.css" />
     <Content Include="Areas\Business\Css\ZHMM.css" />
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\css\bootstrap-theme.css" />
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\css\bootstrap-theme.min.css" />
@@ -212,6 +213,7 @@
     <Content Include="Areas\Business\Scripts\Business\YHGL.js" />
     <Content Include="Areas\Business\Scripts\Business\YHJBXX.js" />
     <Content Include="Areas\Business\Scripts\Business\YXYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\YXYZCG.js" />
     <Content Include="Areas\Business\Scripts\Business\ZHMM.js" />
     <Content Include="Areas\Business\Scripts\jquery-1.9.1.min.js" />
     <Content Include="Areas\Business\Scripts\jquery-ui-1.12.1.custom\AUTHORS.txt" />
@@ -312,6 +314,7 @@
     <Content Include="Areas\Business\Ashx\SaveGRZLPhotos.ashx" />
     <Content Include="Areas\Business\Views\GRZL\HBSJ.cshtml" />
     <Content Include="Areas\Business\Views\GRZL\YXYZ.cshtml" />
+    <Content Include="Areas\Business\Views\GRZL\YXYZCG.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

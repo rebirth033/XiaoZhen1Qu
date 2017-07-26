@@ -10,6 +10,7 @@ using TianWen.XiaoZhen1Qu.Entities.Common;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Net.Mail;
+using System.Text;
 
 namespace TianWen.XiaoZhen1Qu.BLL
 {
@@ -275,10 +276,30 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     msg.From = new MailAddress("980381266@qq.com", "信息小镇", System.Text.Encoding.UTF8);
                     msg.Subject = "邮件认证 - 信息小镇";
                     msg.SubjectEncoding = System.Text.Encoding.UTF8;//邮件标题编码 
-                    msg.Body = "亲爱的信息小镇用户 " + yhjbxx.YHM + @"：请点击以下链接完成邮件认证（如无法打开请把此链接复制粘贴到浏览器打开）
-认证成功后可获得 50 个信用。信用值越高，每天可发布的信息数量越多，认证后的邮箱可用于登录和找回密码。\n\r58同城邮件中心
-\n\r2017.07.26";//邮件内容  
-                    msg.BodyEncoding = System.Text.Encoding.UTF8;//邮件内容编码 
+
+                    string url = "http://www.infotownlet.com/email/?para=E7D7D47927E72493FAAF099BF4087DD2|1ccefa740ADD0684184C8D35775397A253AD13F3|C095A3368A45D8E9EEA845F430F12B92116ADE0C645041FD|0&utm_source=email-interaction&utm_medium=attestation-email&utm_campaign=attestation-email";
+                    StringBuilder sb = new StringBuilder();
+                    sb.AppendFormat(@"<div style='width: 650px; margin-left: 27%; height: 600px; border: 1px solid #bce9f6; '>
+                                <div style='background-color: #5bc0de; width: 100%; height: 80px; vertical-align: middle;'>
+                                    <div style='float: left; width: 120px; margin-left: 50px; margin-top: 5px;'>
+                                        <img style='width: 100%; text-align: center; color: white; font-size: 25px; float: left;' src='http://localhost/XiaoZhen1Qu/Areas/Business/Css/images/logo.png' />
+                                        <span style='width: 100%; color:#fff; text-align: center; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: white; font-size: 17px; float: left; cursor: default;'>infotownlet.com</span>
+                                    </div>
+                                </div>
+                                <div style='width: 600px; text-align: left; height: 520px; font-size: 14px; padding: 30px 20px; line-height: 24px; word-wrap: break-word; font-family:宋体'>
+                                    <p style='margin-bottom: 10px;'>亲爱的信息小镇用户 {0}：</p>
+                                    <p>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;请点击以下链接完成邮件认证（如无法打开请把此链接复制粘贴到浏览器打开）<br />
+                                        认证成功后可获得 50 个信用。信用值越高，每天可发布的信息数量越多，认证后的邮箱<br />
+                                        可用于登录和找回密码。<br /><br />
+                                    </p>
+                                    <p><a style='color: #5bc0de; font-size: 16px; cursor: pointer'>{1}<br /><br /></a></p>
+                                    <p style='text-align: right'>信息小镇邮件中心</p>
+                                    <p style='text-align: right'> {2}</p>
+                                </div>
+                                </div>'", yhjbxx.YHM, url, DateTime.Now.ToShortDateString());
+                    msg.Body = sb.ToString();
+                    msg.BodyEncoding = Encoding.UTF8;//邮件内容编码 
                     msg.IsBodyHtml = true;//是否是HTML邮件
                     msg.Priority = MailPriority.High;//邮件优先级 
 
