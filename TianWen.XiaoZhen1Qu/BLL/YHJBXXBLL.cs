@@ -9,6 +9,7 @@ using System.IO;
 using TianWen.XiaoZhen1Qu.Entities.Common;
 using System.Drawing;
 using System.Drawing.Imaging;
+using System.Net.Mail;
 
 namespace TianWen.XiaoZhen1Qu.BLL
 {
@@ -247,6 +248,53 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     Result = EnResultType.Success,
                     YHJBXX = obj
                 };
+
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("YHJBXXBLL", "修改失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                return new
+                {
+                    Result = EnResultType.Failed,
+                    Message = "修改失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!"
+                };
+            }
+        }
+
+        public object SendEmail(string YHID, string YX)
+        {
+            try
+            {
+                
+                YHJBXX yhjbxx = DAO.GetObjectByID<YHJBXX>(YHID);
+                
+                if (yhjbxx != null)
+                {
+                    MailMessage msg = new MailMessage();
+                    msg.To.Add(YX);
+                    msg.From = new MailAddress("980381266@qq.com", "信息小镇", System.Text.Encoding.UTF8);
+                    msg.Subject = "邮件认证 - 信息小镇";
+                    msg.SubjectEncoding = System.Text.Encoding.UTF8;//邮件标题编码 
+                    msg.Body = "亲爱的信息小镇用户 " + yhjbxx.YHM + @"：请点击以下链接完成邮件认证（如无法打开请把此链接复制粘贴到浏览器打开）
+认证成功后可获得 50 个信用。信用值越高，每天可发布的信息数量越多，认证后的邮箱可用于登录和找回密码。\n\r58同城邮件中心
+\n\r2017.07.26";//邮件内容  
+                    msg.BodyEncoding = System.Text.Encoding.UTF8;//邮件内容编码 
+                    msg.IsBodyHtml = true;//是否是HTML邮件
+                    msg.Priority = MailPriority.High;//邮件优先级 
+
+                    SmtpClient client = new SmtpClient();
+                    client.Credentials = new System.Net.NetworkCredential("980381266@qq.com", "vbfhologcvanbfch");//邮箱用户名，smtp服务授权密码
+                    client.Host = "smtp.qq.com";//SMTP服务器地址  
+                    client.Port = 587;//SMTP端口，QQ邮箱填写587
+                    client.EnableSsl = true;//启用SSL加密  
+                    object userState = msg;
+                    client.SendAsync(msg, userState); 
+                    return new { Result = EnResultType.Success, Message = "发送成功", Value = new { YHID = yhjbxx.YHID } };
+                }
+                else
+                {
+                    return new { Result = EnResultType.Failed, Message = "用户不存在" };
+                }
 
             }
             catch (Exception ex)

@@ -33,11 +33,31 @@ function EmailCheck() {
 
 function SendEmail() {
     if (EmailValidate() === false) return;
-    $("#spanTXYX").css("color", "#cccccc");
-    $("#spanTXYX").css("font-weight", "700");
-    $("#emTXYX").css("background", "#cccccc");
-    $("#divFirst").css("display", "none");
-    $("#divSecond").css("display", "block");
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/GRZL/SendEmail",
+        dataType: "json",
+        data:
+        {
+            YHID: getUrlParam("YHID"),
+            YX: $("#inputYX").val()
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                $("#spanTXYX").css("color", "#cccccc");
+                $("#spanTXYX").css("font-weight", "normal");
+                $("#emTXYX").css("background", "#cccccc");
+                $("#spanCSYJ").css("color", "#5bc0de");
+                $("#spanCSYJ").css("font-weight", "700");
+                $("#emCSYJ").css("background", "#5bc0de");
+                $("#divFirst").css("display", "none");
+                $("#divSecond").css("display", "block");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+            _masker.CloseMasker(false, errorThrown);
+        }
+    });
 }
 
 function ToQQYX() {

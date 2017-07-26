@@ -24,5 +24,7 @@ namespace TianWen.XiaoZhen1Qu.Interface
         object UpdateSJ(string YHID, string SJ);
 
         object GetObjByID(string YHID);
+
+        object SendEmail(string YHID, string YX);
     }
 }

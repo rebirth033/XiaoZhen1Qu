@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using TianWen.XiaoZhen1Qu.BLL;
 using TianWen.XiaoZhen1Qu.Interface;
 using TianWen.XiaoZhen1Qu.Web.Areas.Business.Common;
@@ -48,6 +44,12 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         public JsonResult UpdateSJ()
         {
             object result = YHJBXXBLL.UpdateSJ(Request["YHID"], Request["SJ"]);
+            return Json(result);
+        }
+
+        public JsonResult SendEmail()
+        {
+            object result = YHJBXXBLL.SendEmail(Request["YHID"], Request["YX"]);
             return Json(result);
         }
     }
