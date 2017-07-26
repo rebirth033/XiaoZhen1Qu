@@ -7,6 +7,16 @@ function ValidateCellPhone(value) {
     return true;
 }
 
+//邮箱验证
+function ValidateEmail(value) {
+    var zz = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+$/g;
+    if (value.length > 0) {
+        return zz.test(value);
+    }
+    return true;
+}
+
+
 //汉字验证
 function ValidateChinese(value) {
     var zz = /^[\u4E00-\u9FA5]+$/g;
@@ -24,3 +34,4 @@ function ValidateNumber(value) {
     }
     return true;
 }
+

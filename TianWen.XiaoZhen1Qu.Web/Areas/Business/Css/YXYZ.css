@@ -41,14 +41,22 @@
     margin-left: 26%;
 }
 
+.table tr {
+    height: 80px;
+}
+
+.table tr td {
+    vertical-align: middle !important;
+}
+
 .input_content {
     width: 100%;
-    cursor: default;
     border: 1px solid #ccc;
     border-radius: 4px;
     height: 34px;
     padding: 4px 12px;
     display: inline-block;
+    cursor: text;
 }
 
 :-ms-input-placeholder.input_content {
@@ -61,20 +69,24 @@
     text-align: left !important;
 }
 
-.div_bdcg {
-    width: 100%; 
-    margin-top: 20px;
-    height: 70px;
+.div_csyj {
+   
 }
 
-.div_bdcg_tip {
-    font-size: 20px;
-    font-family: 微软雅黑 !important;
+.span_yx {
+    cursor: pointer;
+    font-size: 18px;
+    color: #595757;
+    line-height: 1.8;
+    font-weight: 700;
 }
 
-.img_bdcg_tip {
-    width: 38px;
-    height: 38px;
-    background: url(images/ok.png);
-    margin-right: 10px;
+.span_yx:hover {
+    color: #5bc0de;
+}
+
+.span_yxrz {
+    color: #000;
+    font-size: 18px;
+    font-weight: 700;
 }
