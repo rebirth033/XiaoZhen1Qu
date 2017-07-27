@@ -55,6 +55,7 @@
     <Compile Include="BLL\CommonBLL.cs" />
     <Compile Include="BLL\FWCZJBXXBLL.cs" />
     <Compile Include="BLL\LBXXBLL.cs" />
+    <Compile Include="BLL\RZGLBLL.cs" />
     <Compile Include="BLL\WDFBBLL.cs" />
     <Compile Include="BLL\WDSCBLL.cs" />
     <Compile Include="BLL\YHDLXXBLL.cs" />

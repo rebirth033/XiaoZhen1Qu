@@ -149,10 +149,12 @@
     <Content Include="Areas\Business\Css\images\contract.png" />
     <Content Include="Areas\Business\Css\images\delete.png" />
     <Content Include="Areas\Business\Css\images\delete_select.png" />
+    <Content Include="Areas\Business\Css\images\dgzhrz.png" />
     <Content Include="Areas\Business\Css\images\down.png" />
     <Content Include="Areas\Business\Css\images\edit.png" />
     <Content Include="Areas\Business\Css\images\edit_select.png" />
     <Content Include="Areas\Business\Css\images\expand.png" />
+    <Content Include="Areas\Business\Css\images\grsfzrz.png" />
     <Content Include="Areas\Business\Css\images\icon.png" />
     <Content Include="Areas\Business\Css\images\info.png" />
     <Content Include="Areas\Business\Css\images\logo.png" />
@@ -163,9 +165,12 @@
     <Content Include="Areas\Business\Css\images\person_info_edit.png" />
     <Content Include="Areas\Business\Css\images\qqbd.png" />
     <Content Include="Areas\Business\Css\images\QR.png" />
+    <Content Include="Areas\Business\Css\images\qtrz.png" />
     <Content Include="Areas\Business\Css\images\radio_blue.png" />
     <Content Include="Areas\Business\Css\images\radio_gray.png" />
+    <Content Include="Areas\Business\Css\images\rlrz.png" />
     <Content Include="Areas\Business\Css\images\rotate.png" />
+    <Content Include="Areas\Business\Css\images\scsfzrz.png" />
     <Content Include="Areas\Business\Css\images\share.png" />
     <Content Include="Areas\Business\Css\images\rzsj.png" />
     <Content Include="Areas\Business\Css\images\sorry.png" />
@@ -187,8 +192,13 @@
     <Content Include="Areas\Business\Css\images\yes.png" />
     <Content Include="Areas\Business\Css\images\righttip.png" />
     <Content Include="Areas\Business\Css\images\yxbd.png" />
+    <Content Include="Areas\Business\Css\images\yyzfdsfrz.png" />
+    <Content Include="Areas\Business\Css\images\yyzffrrz.png" />
+    <Content Include="Areas\Business\Css\images\yyzfptrz.png" />
+    <Content Include="Areas\Business\Css\images\zmsmrz.png" />
     <Content Include="Areas\Business\Css\LBXZ.css" />
     <Content Include="Areas\Business\Css\PageCommon.css" />
+    <Content Include="Areas\Business\Css\RZGL\RZGL.css" />
     <Content Include="Areas\Business\Css\WDFB.css" />
     <Content Include="Areas\Business\Css\WDSC.css" />
     <Content Include="Areas\Business\Css\YHGL.css" />
@@ -214,6 +224,7 @@
     <Content Include="Areas\Business\Scripts\Business\HBSJ.js" />
     <Content Include="Areas\Business\Scripts\Business\LBXZ.js" />
     <Content Include="Areas\Business\Scripts\Business\PageJson.js" />
+    <Content Include="Areas\Business\Scripts\Business\RZGL\RZGL.js" />
     <Content Include="Areas\Business\Scripts\Business\WDFB.js" />
     <Content Include="Areas\Business\Scripts\Business\WDSC.js" />
     <Content Include="Areas\Business\Scripts\Business\YHDLXX.js" />
@@ -277,6 +288,7 @@
     <Compile Include="Areas\Business\Controllers\FWCZController.cs" />
     <Compile Include="Areas\Business\Controllers\GRZLController.cs" />
     <Compile Include="Areas\Business\Controllers\LBXZController.cs" />
+    <Compile Include="Areas\Business\Controllers\RZGLController.cs" />
     <Compile Include="Areas\Business\Controllers\WDFBController.cs" />
     <Compile Include="Areas\Business\Controllers\WDSCController.cs" />
     <Compile Include="Areas\Business\Controllers\YHDLXXController.cs" />
@@ -325,6 +337,7 @@
     <Content Include="Areas\Business\Views\GRZL\YXYZ.cshtml" />
     <Content Include="Areas\Business\Views\GRZL\YXYZCG.cshtml" />
     <Content Include="Areas\Business\Views\ZHBD\ZHBD.cshtml" />
+    <Content Include="Areas\Business\Views\RZGL\RZGL.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

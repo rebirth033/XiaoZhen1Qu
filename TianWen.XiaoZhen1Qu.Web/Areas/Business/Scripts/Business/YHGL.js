@@ -10,6 +10,7 @@
     $("#spanWDSC").bind("click", ToWDSC);
     $("#spanGRZL").bind("click", ToGRZL);
     $("#spanZHBD").bind("click", ToZHBD);
+    $("#spanRZGL").bind("click", ToRZGL);
     $("#spanWDQZ").parent().bind("click", { type: "WDQZ" }, ExpandSecond_Leaf);
     $("#spanWDZP").parent().bind("click", { type: "WDZP" }, ExpandSecond_Tree);
     $("#spanZWGL").parent().bind("click", { type: "ZWGL" }, ExpandThird);
@@ -62,9 +63,13 @@ function ToWDSC() {
 function ToGRZL() {
     $("#iframeright").attr("src", getRootPath() + "/Business/GRZL/GRZL?YHID=" + getUrlParam("YHID"));
 }
-//个人资料
+//账号绑定
 function ToZHBD() {
     $("#iframeright").attr("src", getRootPath() + "/Business/ZHBD/ZHBD?YHID=" + getUrlParam("YHID"));
+}
+//认证管理
+function ToRZGL() {
+    $("#iframeright").attr("src", getRootPath() + "/Business/RZGL/RZGL?YHID=" + getUrlParam("YHID"));
 }
 //显示个人中心
 function ShowGRZX() {

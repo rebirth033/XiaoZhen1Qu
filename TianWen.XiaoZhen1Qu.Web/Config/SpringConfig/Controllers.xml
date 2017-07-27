@@ -63,5 +63,10 @@
       <ref object="ZHBDBLL"/>
     </property>
   </object>
+  <object id="RZGLController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.RZGLController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="RZGLBLL">
+      <ref object="RZGLBLL"/>
+    </property>
+  </object>
 </objects>
 
