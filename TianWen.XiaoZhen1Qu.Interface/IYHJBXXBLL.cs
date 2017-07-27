@@ -26,5 +26,7 @@ namespace TianWen.XiaoZhen1Qu.Interface
         object GetObjByID(string YHID);
 
         object SendEmail(string YHID, string YX, string CheckCode);
+
+        object YHYZ(string YHID_Cryptograph, string CheckCode_Cryptograph);
     }
 }

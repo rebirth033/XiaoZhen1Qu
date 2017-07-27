@@ -82,10 +82,17 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string QQ { get; set; }
 
         /// <summary>
-        /// 电子邮件
+        /// 电子邮箱
         /// </summary>
         [Property]
-        public virtual string DZYJ { get; set; }
+        public virtual string DZYX { get; set; }
+
+
+        /// <summary>
+        /// 电子邮箱验证码
+        /// </summary>
+        [Property]
+        public virtual string DZYXYZM { get; set; }
 
         /// <summary>
         /// 头像

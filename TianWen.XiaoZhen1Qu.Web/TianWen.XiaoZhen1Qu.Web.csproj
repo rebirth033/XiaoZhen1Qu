@@ -166,6 +166,7 @@
     <Content Include="Areas\Business\Css\images\radio_gray.png" />
     <Content Include="Areas\Business\Css\images\rotate.png" />
     <Content Include="Areas\Business\Css\images\share.png" />
+    <Content Include="Areas\Business\Css\images\sorry.png" />
     <Content Include="Areas\Business\Css\images\system_photo1.jpg" />
     <Content Include="Areas\Business\Css\images\system_photo2.jpg" />
     <Content Include="Areas\Business\Css\images\system_photo3.jpg" />

@@ -104,7 +104,7 @@ function LoadGRZL() {
             $("#img_main_photo_middle").attr("src", getRootPath() + "/Areas/Business/Photos/" + getUrlParam("YHID") + "/GRZL/" + xml.YHJBXX.TX + "?j=" + Math.random());
             $("#input_person_info_yhm").val(xml.YHJBXX.YHM);
             $("#input_person_info_sj").val(xml.YHJBXX.SJ);
-            $("#input_person_info_yx").val(xml.YHJBXX.DZYJ);
+            $("#input_person_info_yx").val(xml.YHJBXX.DZYX);
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 

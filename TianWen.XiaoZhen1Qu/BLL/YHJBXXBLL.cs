@@ -9,6 +9,7 @@ using System.IO;
 using TianWen.XiaoZhen1Qu.Entities.Common;
 using System.Drawing;
 using System.Drawing.Imaging;
+using System.Linq;
 using System.Net.Mail;
 using System.Text;
 
@@ -125,6 +126,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
+        //修改手机号
         public object UpdateSJ(string YHID, string SJ)
         {
             using (ITransaction transaction = DAO.BeginTransaction())
@@ -158,6 +160,77 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
             }
         }
+
+        //修改邮箱
+        public object UpdateYX(string YHID, string YX)
+        {
+            using (ITransaction transaction = DAO.BeginTransaction())
+            {
+                try
+                {
+                    YHJBXX yhjbxx = DAO.GetObjectByID<YHJBXX>(YHID);
+                    if (yhjbxx != null)
+                    {
+                        yhjbxx.DZYX = YX;
+                        DAO.Update(yhjbxx);
+                        DAO.Repository.Session.Flush();
+                        transaction.Commit();
+                        return new { Result = EnResultType.Success, Message = "修改成功", Value = new { YHID = yhjbxx.YHID } };
+                    }
+                    else
+                    {
+                        return new { Result = EnResultType.Failed, Message = "用户不存在" };
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    LoggerManager.Error("YHJBXXBLL", "修改失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                    return new
+                    {
+                        Result = EnResultType.Failed,
+                        Message = "修改失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!"
+                    };
+                }
+            }
+        }
+
+        //修改邮箱验证码
+        public object UpdateYXYZM(string YHID, string YXYZM)
+        {
+            using (ITransaction transaction = DAO.BeginTransaction())
+            {
+                try
+                {
+                    YHJBXX yhjbxx = DAO.GetObjectByID<YHJBXX>(YHID);
+                    if (yhjbxx != null)
+                    {
+                        yhjbxx.DZYXYZM = YXYZM;
+                        DAO.Update(yhjbxx);
+                        DAO.Repository.Session.Flush();
+                        transaction.Commit();
+                        return new { Result = EnResultType.Success, Message = "修改成功", Value = new { YHID = yhjbxx.YHID } };
+                    }
+                    else
+                    {
+                        return new { Result = EnResultType.Failed, Message = "用户不存在" };
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    LoggerManager.Error("YHJBXXBLL", "修改失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                    return new
+                    {
+                        Result = EnResultType.Failed,
+                        Message = "修改失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!"
+                    };
+                }
+            }
+        }
+
 
         //修改头像
         public object UpdateTX(string YHID, string TX)
@@ -269,13 +342,14 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 YHJBXX yhjbxx = DAO.GetObjectByID<YHJBXX>(YHID);
                 if (yhjbxx != null)
                 {
+                    UpdateYXYZM(YHID, EncryptionHelper.MD5Encrypt64(CheckCode));
+                    UpdateYX(YHID, YX);
                     MailMessage msg = new MailMessage();
                     msg.To.Add(YX);
                     msg.From = new MailAddress("980381266@qq.com", "信息小镇", Encoding.UTF8);
                     msg.Subject = "邮件认证 - 信息小镇";
                     msg.SubjectEncoding = Encoding.UTF8;//邮件标题编码 
-
-                    string url =  "http://localhost/" + Common.GetVirtualRootPath() + "/Business/GRZL/YXYZCG?para=" + EncryptionHelper.MD5Encrypt64(CheckCode);
+                    string url =  "http://localhost" + Common.GetVirtualRootPath() + "/Business/GRZL/YXYZCG?para=" + EncryptionHelper.MD5Encrypt64(YHID) + "|" + EncryptionHelper.MD5Encrypt64(CheckCode);
                     StringBuilder sb = new StringBuilder();
                     sb.AppendFormat(@"<div style='width: 650px; margin-left: 27%; height: 600px; border: 1px solid #bce9f6; '>
                                 <div style='background-color: #5bc0de; width: 100%; height: 80px; vertical-align: middle;'>
@@ -291,7 +365,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                                         认证成功后可获得 50 个信用。信用值越高，每天可发布的信息数量越多，认证后的邮箱<br />
                                         可用于登录和找回密码。<br /><br />
                                     </p>
-                                    <p><a style='color: #5bc0de; font-size: 16px; cursor: pointer'>{1}<br /><br /></a></p>
+                                    <p><a style='color: #5bc0de; font-size: 16px; cursor: pointer' href='{1}' target='_blank'>{1}<br /><br /></a></p>
                                     <p style='text-align: right'>信息小镇邮件中心</p>
                                     <p style='text-align: right'> {2}</p>
                                 </div>
@@ -323,6 +397,37 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 {
                     Result = EnResultType.Failed,
                     Message = "修改失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!"
+                };
+            }
+        }
+
+        public object YHYZ(string YHID_Cryptograph, string CheckCode_Cryptograph)
+        {
+            try
+            {
+                List<YHJBXX> yhjbxxs = DAO.GetObjectList<YHJBXX>(string.Format("FROM YHJBXX")).ToList();
+                foreach (var yhjbxx in yhjbxxs)
+                {
+                    if (EncryptionHelper.MD5Encrypt64(yhjbxx.YHID) == YHID_Cryptograph)
+                    {
+                        if (yhjbxx.DZYXYZM == CheckCode_Cryptograph)
+                            return new { Result = EnResultType.Success, Message = "验证成功", Value = new { YHM = yhjbxx.YHM, DZYX = yhjbxx.DZYX } };
+                        else
+                        {
+                            UpdateYX(yhjbxx.YHID, string.Empty);
+                            return new { Result = EnResultType.Failed, Message = "验证失败,链接不正确" };
+                        }
+                    }
+                }
+                return new { Result = EnResultType.Failed, Message = "验证失败,链接不正确" };
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("YHJBXXBLL", "验证失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                return new
+                {
+                    Result = EnResultType.Failed,
+                    Message = "验证失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!"
                 };
             }
         }

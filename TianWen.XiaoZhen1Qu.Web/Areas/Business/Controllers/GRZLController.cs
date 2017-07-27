@@ -57,9 +57,25 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         {
             Random random = new Random();
             string CheckCode = random.Next(100000, 999999).ToString();//6位验证码
-            Session["CheckCode"] = CheckCode;
             object result = YHJBXXBLL.SendEmail(Request["YHID"], Request["YX"], CheckCode);
             return Json(result);
+        }
+
+        public JsonResult YXYZYBC()
+        {
+            try
+            {
+                string[] values = Request["para"].Split('|');
+                string YHID_Cryptograph = values[0];
+                string CheckCode_Cryptograph = values[1];
+                object result = YHJBXXBLL.YHYZ(YHID_Cryptograph, CheckCode_Cryptograph);
+
+                return Json(result);
+            }
+            catch (Exception ex)
+            {
+                return Json(null);
+            }
         }
     }
 }
