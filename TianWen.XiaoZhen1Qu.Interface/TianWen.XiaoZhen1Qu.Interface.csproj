@@ -55,6 +55,7 @@
     <Compile Include="IWDSCBLL.cs" />
     <Compile Include="IYHDLXXBLL.cs" />
     <Compile Include="IYHJBXXBLL.cs" />
+    <Compile Include="IZHBDBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

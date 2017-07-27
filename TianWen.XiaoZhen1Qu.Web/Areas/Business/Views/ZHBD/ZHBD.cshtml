@@ -1,0 +1,86 @@
+﻿@{
+    ViewBag.Title = "ZHBD";
+    Layout = "~/Areas/Business/Views/Shared/_ListLayout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+
+    <link href="@Url.Content("~/Areas/Business/Css/ZHBD/ZHBD.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Areas/Business/Scripts/jquery-ui-1.12.1.custom/jquery-ui.min.css")" rel="stylesheet" />
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/ZHBD/ZHBD.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/jquery-ui-1.12.1.custom/jquery-ui.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/jquery-ui-1.12.1.custom/jquery.ui.datepicker-zh-CN.js")"></script>
+</head>
+<body>
+    <form action="" enctype="multipart/form-data" id="form_button_main_photo" method="post">
+        <div class="div_content">
+            <div class="div_content_info">
+                <div class="div_content_info_left">
+                    <span class="img_content_info" id="img_content_info_rzsj"></span>
+                    <div class="div_content_info_left_info">
+                        <span class="span_content_info_left">认证手机</span>
+                        <p class="p_content_info">可进行手机号验证以设定认证手机号</p>
+                    </div>
+                </div>
+                <div class="div_content_info_right">
+                    <span class="span_content_info_right" id="span_content_info_right_rzsj">换绑</span>
+                </div>
+            </div>
+            <div class="div_content_info">
+                <div class="div_content_info_left">
+                    <span class="img_content_info" id="img_content_info_yxbd" ></span>
+                    <div class="div_content_info_left_info">
+                        <span class="span_content_info_left">邮箱绑定</span>
+                        <p class="p_content_info">可使用绑定邮箱直接登录信息小镇</p>
+                    </div>
+                </div>
+                <div class="div_content_info_right">
+                    <span class="span_content_info_right" id="span_content_info_right_yxbd">换绑</span>
+                </div>
+            </div>
+            <em class="em_content_info"></em>
+            <div class="div_content_info">
+                <div class="div_content_info_left">
+                    <span class="img_content_info" id="img_content_info_qqbd"></span>
+                    <div class="div_content_info_left_info">
+                        <span class="span_content_info_left">QQ绑定</span>
+                        <p class="p_content_info">可使用QQ账号直接登录信息小镇<br />分享信息至Qzone</p>
+                    </div>
+                </div>
+                <div class="div_content_info_right">
+                    <span class="span_content_info_right" id="span_content_info_right_qqbd">换绑</span>
+                </div>
+            </div>
+            <div class="div_content_info">
+                <div class="div_content_info_left">
+                    <span class="img_content_info" id="img_content_info_xlwb"></span>
+                    <div class="div_content_info_left_info">
+                        <span class="span_content_info_left">新浪微博</span>
+                        <p class="p_content_info">可使用微博账号直接登录信息小镇<br />发布时分享信息至微博</p>
+                    </div>
+                </div>
+                <div class="div_content_info_right">
+                    <span class="span_content_info_right" id="span_content_info_right_xlwb">换绑</span>
+                </div>
+            </div>
+            <div class="div_content_info">
+                <div class="div_content_info_left">
+                    <span class="img_content_info" id="img_content_info_wxbd"></span>
+                    <div class="div_content_info_left_info">
+                        <span class="span_content_info_left">微信绑定</span>
+                        <p class="p_content_info">可使用微信账号直接登录信息小镇<br/>发布时分享信息至微信朋友圈和微信好友</p>
+                    </div>
+                </div>
+                <div class="div_content_info_right">
+                    <span class="span_content_info_right" id="span_content_info_right_wxbd">换绑</span>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

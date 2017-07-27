@@ -9,6 +9,7 @@
     $("#spanWDFB").bind("click", ToWDFB);
     $("#spanWDSC").bind("click", ToWDSC);
     $("#spanGRZL").bind("click", ToGRZL);
+    $("#spanZHBD").bind("click", ToZHBD);
     $("#spanWDQZ").parent().bind("click", { type: "WDQZ" }, ExpandSecond_Leaf);
     $("#spanWDZP").parent().bind("click", { type: "WDZP" }, ExpandSecond_Tree);
     $("#spanZWGL").parent().bind("click", { type: "ZWGL" }, ExpandThird);
@@ -60,6 +61,10 @@ function ToWDSC() {
 //个人资料
 function ToGRZL() {
     $("#iframeright").attr("src", getRootPath() + "/Business/GRZL/GRZL?YHID=" + getUrlParam("YHID"));
+}
+//个人资料
+function ToZHBD() {
+    $("#iframeright").attr("src", getRootPath() + "/Business/ZHBD/ZHBD?YHID=" + getUrlParam("YHID"));
 }
 //显示个人中心
 function ShowGRZX() {

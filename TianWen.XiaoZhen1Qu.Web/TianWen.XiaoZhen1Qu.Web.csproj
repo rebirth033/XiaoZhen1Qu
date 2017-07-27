@@ -161,11 +161,13 @@
     <Content Include="Areas\Business\Css\images\ok.png" />
     <Content Include="Areas\Business\Css\images\one-blue.png" />
     <Content Include="Areas\Business\Css\images\person_info_edit.png" />
+    <Content Include="Areas\Business\Css\images\qqbd.png" />
     <Content Include="Areas\Business\Css\images\QR.png" />
     <Content Include="Areas\Business\Css\images\radio_blue.png" />
     <Content Include="Areas\Business\Css\images\radio_gray.png" />
     <Content Include="Areas\Business\Css\images\rotate.png" />
     <Content Include="Areas\Business\Css\images\share.png" />
+    <Content Include="Areas\Business\Css\images\rzsj.png" />
     <Content Include="Areas\Business\Css\images\sorry.png" />
     <Content Include="Areas\Business\Css\images\system_photo1.jpg" />
     <Content Include="Areas\Business\Css\images\system_photo2.jpg" />
@@ -180,8 +182,11 @@
     <Content Include="Areas\Business\Css\images\upload_small.png" />
     <Content Include="Areas\Business\Css\images\upload_small2.png" />
     <Content Include="Areas\Business\Css\images\warn.png" />
+    <Content Include="Areas\Business\Css\images\wxbd.png" />
+    <Content Include="Areas\Business\Css\images\xlwb.png" />
     <Content Include="Areas\Business\Css\images\yes.png" />
     <Content Include="Areas\Business\Css\images\righttip.png" />
+    <Content Include="Areas\Business\Css\images\yxbd.png" />
     <Content Include="Areas\Business\Css\LBXZ.css" />
     <Content Include="Areas\Business\Css\PageCommon.css" />
     <Content Include="Areas\Business\Css\WDFB.css" />
@@ -189,6 +194,7 @@
     <Content Include="Areas\Business\Css\YHGL.css" />
     <Content Include="Areas\Business\Css\YXYZ.css" />
     <Content Include="Areas\Business\Css\YXYZCG.css" />
+    <Content Include="Areas\Business\Css\ZHBD\ZHBD.css" />
     <Content Include="Areas\Business\Css\ZHMM.css" />
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\css\bootstrap-theme.css" />
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\css\bootstrap-theme.min.css" />
@@ -215,6 +221,7 @@
     <Content Include="Areas\Business\Scripts\Business\YHJBXX.js" />
     <Content Include="Areas\Business\Scripts\Business\YXYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\YXYZCG.js" />
+    <Content Include="Areas\Business\Scripts\Business\ZHBD\ZHBD.js" />
     <Content Include="Areas\Business\Scripts\Business\ZHMM.js" />
     <Content Include="Areas\Business\Scripts\jquery-1.9.1.min.js" />
     <Content Include="Areas\Business\Scripts\jquery-ui-1.12.1.custom\AUTHORS.txt" />
@@ -275,6 +282,7 @@
     <Compile Include="Areas\Business\Controllers\YHDLXXController.cs" />
     <Compile Include="Areas\Business\Controllers\YHGLController.cs" />
     <Compile Include="Areas\Business\Controllers\YHJBXXController.cs" />
+    <Compile Include="Areas\Business\Controllers\ZHBDController.cs" />
     <Compile Include="Areas\Business\Controllers\ZHMMController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -316,6 +324,7 @@
     <Content Include="Areas\Business\Views\GRZL\HBSJ.cshtml" />
     <Content Include="Areas\Business\Views\GRZL\YXYZ.cshtml" />
     <Content Include="Areas\Business\Views\GRZL\YXYZCG.cshtml" />
+    <Content Include="Areas\Business\Views\ZHBD\ZHBD.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
