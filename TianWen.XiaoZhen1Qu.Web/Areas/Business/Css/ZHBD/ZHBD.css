@@ -19,7 +19,8 @@
 }
 
 #img_content_info_rzsj {
-    background-image: url(../images/rzsj.png);
+    background-image: url(../images/rzsj2.png);
+    background-size: 100%;
 }
 
 #img_content_info_yxbd {
@@ -28,6 +29,7 @@
 
 #img_content_info_qqbd {
     background-image: url(../images/qqbd.png);
+    background-size: 100%;
 }
 
 #img_content_info_xlwb {
@@ -36,6 +38,7 @@
 
 #img_content_info_wxbd {
     background-image: url(../images/wxbd.png);
+    background-size: 100%;
 }
 
 .div_content_info_left_info {
