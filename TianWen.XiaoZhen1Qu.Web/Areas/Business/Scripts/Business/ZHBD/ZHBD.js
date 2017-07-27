@@ -2,12 +2,6 @@
 $(document).ready(function () {
     $("#span_content_info_right_rzsj").bind("click", UpdateSJ);
     $("#span_content_info_right_yxbd").bind("click", UpdateYX);
-    $("#span_content_info_right_qqbd").html("立即绑定");
-    $("#span_content_info_right_xlwb").html("立即绑定");
-    $("#span_content_info_right_wxbd").html("立即绑定");
-    $("#span_content_info_right_qqbd").css("background-color", "#e16f28");
-    $("#span_content_info_right_xlwb").css("background-color", "#e16f28");
-    $("#span_content_info_right_wxbd").css("background-color", "#e16f28");
     LoadGRZL();
 });
 

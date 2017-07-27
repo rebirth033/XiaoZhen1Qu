@@ -154,7 +154,7 @@
     <Content Include="Areas\Business\Css\images\edit.png" />
     <Content Include="Areas\Business\Css\images\edit_select.png" />
     <Content Include="Areas\Business\Css\images\expand.png" />
-    <Content Include="Areas\Business\Css\images\grsfzrz.png" />
+    <Content Include="Areas\Business\Css\images\grsfrz.png" />
     <Content Include="Areas\Business\Css\images\icon.png" />
     <Content Include="Areas\Business\Css\images\info.png" />
     <Content Include="Areas\Business\Css\images\logo.png" />
@@ -192,9 +192,9 @@
     <Content Include="Areas\Business\Css\images\yes.png" />
     <Content Include="Areas\Business\Css\images\righttip.png" />
     <Content Include="Areas\Business\Css\images\yxbd.png" />
-    <Content Include="Areas\Business\Css\images\yyzfdsfrz.png" />
-    <Content Include="Areas\Business\Css\images\yyzffrrz.png" />
-    <Content Include="Areas\Business\Css\images\yyzfptrz.png" />
+    <Content Include="Areas\Business\Css\images\yyzzdsfrz.png" />
+    <Content Include="Areas\Business\Css\images\yyzzfrrz.png" />
+    <Content Include="Areas\Business\Css\images\yyzzptrz.png" />
     <Content Include="Areas\Business\Css\images\zmsmrz.png" />
     <Content Include="Areas\Business\Css\LBXZ.css" />
     <Content Include="Areas\Business\Css\PageCommon.css" />

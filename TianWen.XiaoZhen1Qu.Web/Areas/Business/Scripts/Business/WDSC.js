@@ -2,6 +2,7 @@
     $("#spanSCXX").css("color", "#5bc0de");
     $("#spanSCXX").css("font-weight", "700");
     $("#emSCXX").css("background-color", "#5bc0de");
+    $("#emSCXX").css("height", "2px");
     $(".divstep").bind("click", HeadActive);
     LoadDefault("divSCXX");
 });
@@ -14,6 +15,7 @@ function HeadActive() {
         });
         $(this).find("em").each(function () {
             $(this).css("background-color", "#cccccc");
+            $(this).css("height", "1px");
         });
     });
     $(this).find("span").each(function () {
@@ -22,6 +24,7 @@ function HeadActive() {
     });
     $(this).find("em").each(function () {
         $(this).css("background-color", "#5bc0de");
+        $(this).css("height", "2px");
     });
     LoadDefault($(this)[0].id);
 }

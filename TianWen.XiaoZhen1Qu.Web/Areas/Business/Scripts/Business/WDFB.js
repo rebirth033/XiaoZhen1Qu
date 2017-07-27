@@ -2,6 +2,7 @@
     $("#spanZJFBXX").css("color", "#5bc0de");
     $("#spanZJFBXX").css("font-weight", "700");
     $("#emZJFBXX").css("background-color", "#5bc0de");
+    $("#emZJFBXX").css("height", "2px");
     $(".divstep").bind("click", HeadActive);
     LoadDefault("divZJFBXX");
 });
@@ -13,6 +14,7 @@ function HeadActive() {
             $(this).css("font-weight", "normal");
         });
         $(this).find("em").each(function () {
+            $(this).css("height", "1px");
             $(this).css("background-color", "#cccccc");
         });
     });
@@ -21,6 +23,7 @@ function HeadActive() {
         $(this).css("font-weight", "700");
     });
     $(this).find("em").each(function () {
+        $(this).css("height", "2px");
         $(this).css("background-color", "#5bc0de");
     });
     LoadDefault($(this)[0].id);

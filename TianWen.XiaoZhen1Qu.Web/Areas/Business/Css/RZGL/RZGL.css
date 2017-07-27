@@ -27,6 +27,9 @@
     background: #e9e9e9;
 }
 
+.div_content {
+    height: 130px;
+}
 
 .div_content_info {
     width: 900px;
@@ -36,8 +39,8 @@
 }
 
 .img_content_info {
-    width: 45px;
-    height: 45px;
+    width: 62px;
+    height: 62px;
     display: block;
     background-repeat: no-repeat;
     float: left;
@@ -48,43 +51,70 @@
     background-position-y: center;
 }
 
-#img_content_info_rzsj {
-    background-image: url(../images/rzsj.png);
+#img_content_info_rlrz {
+    background-image: url(../images/rlrz.png);
 }
 
-#img_content_info_yxbd {
-    background-image: url(../images/yxbd.png);
+#img_content_info_zmsmrz {
+    background-image: url(../images/zmsmrz.png);
 }
 
-#img_content_info_qqbd {
-    background-image: url(../images/qqbd.png);
+#img_content_info_scsfzrz {
+    background-image: url(../images/scsfzrz.png);
 }
 
-#img_content_info_xlwb {
-    background-image: url(../images/xlwb.png);
+#img_content_info_grsfrz {
+    background-image: url(../images/grsfrz.png);
 }
 
-#img_content_info_wxbd {
-    background-image: url(../images/wxbd.png);
+#img_content_info_yyzzfrrz {
+    background-image: url(../images/yyzzfrrz.png);
+}
+
+#img_content_info_dgzhrz {
+    background-image: url(../images/dgzhrz.png);
+}
+
+#img_content_info_yyzzdsfrz {
+    background-image: url(../images/yyzzdsfrz.png);
+}
+
+#img_content_info_yyzzptrz {
+    background-image: url(../images/yyzzptrz.png);
+}
+
+#img_content_info_qtrz {
+    background-image: url(../images/qtrz.png);
 }
 
 .div_content_info_left_info {
     display: block;
     float: left;
-    width: 450px;
+    width: 400px;
 }
 
 .span_content_info_left {
-    font: 16px/1.2 "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", arial, Tahoma, SimSun, sans-serif;
+    font: 18px/1.2 "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", arial, Tahoma, SimSun, sans-serif;
     font-weight: 700;
-    color: #333;
+    color: #333333;
+    float: left;
+    display: block;
+    width: 160px;
+    margin-top: 3px;
 }
 
-.p_content_info {
+.ul_content_info {
     color: #999;
     line-height: 18px;
     font-size: 14px;
-    margin-top: 2px;
+    margin-top: -5px;
+    float: left;
+    display: block;
+}
+
+.li_content_info {
+    line-height: 30px;
+    color: #333;
 }
 
 .div_content_info_right_info {
@@ -106,6 +136,10 @@
     text-align: center;
     padding-top: 4px;
 }
+
+    .span_content_info_right:hover {
+        background-color: #31b0d5;
+    }
 
 .em_content_info {
     height: 1px;

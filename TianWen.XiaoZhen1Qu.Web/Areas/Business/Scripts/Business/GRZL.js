@@ -2,6 +2,7 @@
     $("#spanSYWXTX").css("color", "#5bc0de");
     $("#spanSYWXTX").css("font-weight", "700");
     $("#emSYWXTX").css("background-color", "#5bc0de");
+    $("#emSYWXTX").css("height", "2px");
     $("#btnTBWXTX").css("display", "block");
     $(".divstep").bind("click", HeadActive);
     $(".li_main_photo_middle_xt").bind("click", LoadSystemPhoto);
@@ -24,6 +25,7 @@ function HeadActive() {
             $(this).css("font-weight", "normal");
         });
         $(this).find("em").each(function () {
+            $(this).css("height", "1px");
             $(this).css("background-color", "#cccccc");
         });
     });
@@ -32,6 +34,7 @@ function HeadActive() {
         $(this).css("font-weight", "700");
     });
     $(this).find("em").each(function () {
+        $(this).css("height", "2px");
         $(this).css("background-color", "#5bc0de");
     });
 }
