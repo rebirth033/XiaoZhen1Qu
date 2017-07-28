@@ -197,7 +197,8 @@ function QQBD() {
             },
             success: function (xml) {
                 if (xml.Result === 1) {
-                    HideQQ();
+                    CloseQQRZ();
+                    $("#iframeright").attr("src", getRootPath() + "/Business/ZHBD/ZHBD?YHID=" + getUrlParam("YHID"));
                 }
             },
             error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

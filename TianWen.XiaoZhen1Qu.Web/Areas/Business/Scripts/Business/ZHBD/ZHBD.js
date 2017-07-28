@@ -1,7 +1,6 @@
 ﻿var sj = "", yx = "", qq = "", wb = "", wx = "";
 $(document).ready(function () {
     $("#span_content_info_right_rzsj").bind("click", SJBD);
-    $("#span_content_info_right_qqjb").bind("click", QQJB);
     LoadGRZL();
 });
 
@@ -112,22 +111,25 @@ function GenerateQRCode() {
 }
 //解绑QQ
 function QQJB() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/GRZL/UpdateQQ",
-        dataType: "json",
-        data:
-        {
-            YHID: getUrlParam("YHID"),
-            QQ: ""
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                alert("QQ解绑成功");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+    if (confirm("确定要删除吗?")) {
+        $.ajax({
+            type: "POST",
+            url: getRootPath() + "/Business/GRZL/UpdateQQ",
+            dataType: "json",
+            data:
+            {
+                YHID: getUrlParam("YHID"),
+                QQ: ""
+            },
+            success: function(xml) {
+                if (xml.Result === 1) {
+                    alert("QQ解绑成功");
+                    window.location.reload();
+                }
+            },
+            error: function(XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
-        }
-    });
+            }
+        });
+    }
 }
