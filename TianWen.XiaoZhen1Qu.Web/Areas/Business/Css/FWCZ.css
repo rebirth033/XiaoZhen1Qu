@@ -318,18 +318,6 @@
         background-image: url(images/delete_select.png);
     }
 
-#shadow {
-    display: none;
-    height: 100%;
-    width: 100%;
-    background-color: #000;
-    opacity: 0.5;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
-}
-
 #editImgWindow {
     display: none;
     border-radius: 4px;

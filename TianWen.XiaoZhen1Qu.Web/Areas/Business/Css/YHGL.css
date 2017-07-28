@@ -223,3 +223,47 @@
 .li_left_menu_expand {
     cursor: pointer;
 }
+
+.shadow {
+    display: none;
+    background-color: #000;
+    opacity: 0.5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.editImgWindow {
+    display: none;
+    border-radius: 4px;
+    width: 400px;
+    height: 420px;
+    position: fixed;
+    z-index: 1000;
+    background: #fff;
+}
+
+.topbar {
+    height: 34px;
+    background-color: #e5e2e2;
+    border-bottom: 1px solid #c7c7c7;
+    width: 400px;
+}
+
+.span_toolbar {
+    color: #1a1a1a;
+    font: 700 14px/34px "宋体";
+    margin-left: 10px;
+}
+
+.span_close {
+    float: right;
+    width: 15px;
+    height: 15px;
+    display: block;
+    background-image: url(images/qqyz_close.png);
+    margin-top: 7px;
+    margin-right: 10px;
+    cursor: pointer;
+}

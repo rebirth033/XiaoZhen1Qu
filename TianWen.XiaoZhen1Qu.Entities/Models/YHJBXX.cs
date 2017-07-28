@@ -105,5 +105,17 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// </summary>
         [Property]
         public virtual int XYDJ { get; set; }
+
+        /// <summary>
+        /// 微博
+        /// </summary>
+        [Property]
+        public virtual string WB { get; set; }
+
+        /// <summary>
+        /// 微信
+        /// </summary>
+        [Property]
+        public virtual string WX { get; set; }
     }
 }

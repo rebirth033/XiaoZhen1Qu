@@ -17,6 +17,7 @@
     $("#spanJLGL").parent().bind("click", { type: "JLGL" }, ExpandThird);
     $("#spanZHXX").parent().bind("click", { type: "ZHXX" }, ExpandThird);
     $(".li_left_menu").bind("click", LiFocus);
+    $("#span_close").bind("click", CloseQQRZ);
 });
 //自动登录
 function AutoLogin() {
@@ -161,4 +162,9 @@ function ExpandThird(obj) {
         });
         $("#img" + obj.data.type).attr("src", getRootPath() + "/Areas/Business/Css/images/expand.png");
     }
+}
+//关闭QQ认证窗口
+function CloseQQRZ() {
+    $("#editImgWindow").css("display", "none");
+    $("#shadow").css("display", "none");
 }
