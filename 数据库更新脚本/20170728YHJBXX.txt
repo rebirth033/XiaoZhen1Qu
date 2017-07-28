@@ -1,0 +1,86 @@
+-- Create table
+create table YHJBXX
+(
+  yhid    VARCHAR2(50) not null,
+  yhm     VARCHAR2(200) not null,
+  mm      VARCHAR2(100),
+  sqrq    DATE,
+  zsxm    VARCHAR2(200),
+  xb      NUMBER(1),
+  csrq    DATE,
+  txdz    VARCHAR2(200),
+  yb      VARCHAR2(10),
+  gxqm    VARCHAR2(500),
+  sj      VARCHAR2(20),
+  qq      VARCHAR2(50),
+  dzyx    VARCHAR2(50),
+  tx      VARCHAR2(100),
+  xydj    NUMBER(10),
+  dzyxyzm VARCHAR2(50),
+  wb      VARCHAR2(100),
+  wx      VARCHAR2(100)
+)
+tablespace XIAOZHEN
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table YHJBXX
+  is '用户基本信息';
+-- Add comments to the columns 
+comment on column YHJBXX.yhid
+  is '用户ID';
+comment on column YHJBXX.yhm
+  is '用户名';
+comment on column YHJBXX.mm
+  is '密码';
+comment on column YHJBXX.sqrq
+  is '申请日期';
+comment on column YHJBXX.zsxm
+  is '真实姓名';
+comment on column YHJBXX.xb
+  is '性别';
+comment on column YHJBXX.csrq
+  is '出生日期';
+comment on column YHJBXX.txdz
+  is '通讯地址';
+comment on column YHJBXX.yb
+  is '邮编';
+comment on column YHJBXX.gxqm
+  is '个性签名';
+comment on column YHJBXX.sj
+  is '手机';
+comment on column YHJBXX.qq
+  is 'QQ';
+comment on column YHJBXX.dzyx
+  is '电子邮箱';
+comment on column YHJBXX.tx
+  is '头像';
+comment on column YHJBXX.xydj
+  is '信用等级';
+comment on column YHJBXX.dzyxyzm
+  is '电子邮箱验证码';
+comment on column YHJBXX.wb
+  is '微博';
+comment on column YHJBXX.wx
+  is '微信';
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table YHJBXX
+  add constraint PK_YHJBXX primary key (YHID)
+  using index 
+  tablespace USERS
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    minextents 1
+    maxextents unlimited
+  );
