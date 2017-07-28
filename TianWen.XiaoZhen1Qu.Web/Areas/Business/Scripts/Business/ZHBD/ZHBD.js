@@ -1,6 +1,7 @@
 ﻿var sj = "", yx = "", qq = "", wb = "", wx = "";
 $(document).ready(function () {
     $("#span_content_info_right_rzsj").bind("click", SJBD);
+    $("#span_content_info_right_qqjb").bind("click", QQJB);
     LoadGRZL();
 });
 
@@ -27,10 +28,7 @@ function QQBD() {
         $(this).css("background-image", "url(" + getRootPath() + "/Areas/Business/Css/images/qqtx.png" + ")");
         $(this).css("background-repeat", "no-repeat");
     });
-}
-
-function QQJB() {
-    
+    GenerateQRCode();
 }
 
 function LoadGRZL() {
@@ -89,4 +87,47 @@ function HandleBD(yx, qq, wb, wx) {
         $("#span_content_info_right_wxbd").css("display", "none");
         $("#span_content_info_right_wxjb").css("display", "block");
     }
+}
+//生成二维码
+function GenerateQRCode() {
+    var qrdata = "980381266";
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Areas/Business/Ashx/GenerateQRCode.ashx",
+        data:
+        {
+            qrdata: qrdata
+        },
+        success: function (filename) {
+            $(window.parent.document).find("#span_body_qrcode").each(function() {
+                $(this).css("background-image", "url(" + getRootPath() + "/Areas/Business/QRCode/" + filename + ")");
+                $(this).css("background-repeat", "no-repeat");
+                $(this).css("background-size", "100%");
+            });
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//解绑QQ
+function QQJB() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/GRZL/UpdateQQ",
+        dataType: "json",
+        data:
+        {
+            YHID: getUrlParam("YHID"),
+            QQ: ""
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                alert("QQ解绑成功");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
 }

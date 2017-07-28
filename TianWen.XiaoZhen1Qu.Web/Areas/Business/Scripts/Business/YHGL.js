@@ -20,6 +20,7 @@
     $("#span_close").bind("click", CloseQQRZ);
     $("#div_body_image_qqtx").bind("mouseover", ShowQQ);
     $("#div_body_image_qqtx").bind("mouseleave", HideQQ);
+    $("#div_body_image_qqtx").bind("click", QQBD);
 });
 //自动登录
 function AutoLogin() {
@@ -180,5 +181,28 @@ function ShowQQ() {
 function HideQQ() {
     $(this).find("div").each(function () {
         $(this).css("display", "none");
+    });
+}
+//绑定QQ
+function QQBD() {
+    $("#div_body_image_qqtx").find(".toolbar").each(function() {
+        $.ajax({
+            type: "POST",
+            url: getRootPath() + "/Business/GRZL/UpdateQQ",
+            dataType: "json",
+            data:
+            {
+                YHID: getUrlParam("YHID"),
+                QQ: $(this).html()
+            },
+            success: function (xml) {
+                if (xml.Result === 1) {
+                    HideQQ();
+                }
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+            }
+        });
     });
 }

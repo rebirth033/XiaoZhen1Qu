@@ -293,18 +293,6 @@
     padding-left: 109px;
 }
 
-.span_body_image {
-    width: 80px;
-    height: 80px;
-    display: block;
-    float: left;
-    margin-right: 15px;
-}
-
-    .span_body_image:hover {
-        box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.075), 0px 0px 10px rgba(102, 175, 233, 0.8);
-    }
-
 .div_body_image_qqtx {
     width: 80px;
     height: 80px;
@@ -312,7 +300,19 @@
     float: left;
     position: relative;
     cursor: pointer;
+    margin-right: 15px;
 }
+
+.span_body_image {
+    width: 80px;
+    height: 80px;
+    display: block;
+    float: left;
+}
+
+    .span_body_image:hover {
+        box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.075), 0px 0px 10px rgba(102, 175, 233, 0.8);
+    }
 
 .toolbar_wrap {
     display: block;
