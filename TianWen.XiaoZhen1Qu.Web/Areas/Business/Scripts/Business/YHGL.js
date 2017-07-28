@@ -18,6 +18,8 @@
     $("#spanZHXX").parent().bind("click", { type: "ZHXX" }, ExpandThird);
     $(".li_left_menu").bind("click", LiFocus);
     $("#span_close").bind("click", CloseQQRZ);
+    $("#div_body_image_qqtx").bind("mouseover", ShowQQ);
+    $("#div_body_image_qqtx").bind("mouseleave", HideQQ);
 });
 //自动登录
 function AutoLogin() {
@@ -167,4 +169,16 @@ function ExpandThird(obj) {
 function CloseQQRZ() {
     $("#editImgWindow").css("display", "none");
     $("#shadow").css("display", "none");
+}
+//显示QQ号码
+function ShowQQ() {
+    $(this).find("div").each(function () {
+        $(this).css("display", "block");
+    });
+}
+//隐藏QQ号码
+function HideQQ() {
+    $(this).find("div").each(function () {
+        $(this).css("display", "none");
+    });
 }

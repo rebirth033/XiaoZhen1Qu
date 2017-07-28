@@ -224,7 +224,7 @@
     cursor: pointer;
 }
 
-.shadow {
+.div_shadow {
     display: none;
     background-color: #000;
     opacity: 0.5;
@@ -234,7 +234,7 @@
     z-index: 999;
 }
 
-.editImgWindow {
+.div_editImgWindow {
     display: none;
     border-radius: 4px;
     width: 400px;
@@ -244,7 +244,7 @@
     background: #fff;
 }
 
-.topbar {
+.div_topbar {
     height: 34px;
     background-color: #e5e2e2;
     border-bottom: 1px solid #c7c7c7;
@@ -266,4 +266,86 @@
     margin-top: 7px;
     margin-right: 10px;
     cursor: pointer;
+}
+
+.div_body_title {
+    text-align: center;
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 20px;
+    width: 400px;
+    margin-top: 15px;
+}
+
+.div_body_tip {
+    text-align: center;
+    color: #999;
+    font-size: 16px;
+    margin-bottom: 20px;
+    width: 400px;
+    margin-top: 15px;
+}
+
+.div_body_image {
+    margin-top: 15px;
+    width: 400px;
+    text-align: center;
+    padding-left: 109px;
+}
+
+.span_body_image {
+    width: 80px;
+    height: 80px;
+    display: block;
+    float: left;
+    margin-right: 15px;
+}
+
+    .span_body_image:hover {
+        box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.075), 0px 0px 10px rgba(102, 175, 233, 0.8);
+    }
+
+.div_body_image_qqtx {
+    width: 80px;
+    height: 80px;
+    display: block;
+    float: left;
+    position: relative;
+    cursor: pointer;
+}
+
+.toolbar_wrap {
+    display: block;
+    width: 80px;
+    height: 20px;
+    cursor: pointer;
+    margin-top: 60px;
+    position: absolute;
+    top: 0;
+}
+
+.opacity {
+    display: none;
+    width: 80px;
+    height: 20px;
+    background-color: #000;
+    opacity: 0.3;
+    z-index: 900;
+    position: absolute;
+    top: 0;
+    z-index: 900;
+}
+
+.toolbar {
+    display: none;
+    width: 80px;
+    height: 20px;
+    color: #fff;
+    float: left;
+    position: absolute;
+    top: 0;
+    z-index: 901;
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: 2px;
 }
