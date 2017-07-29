@@ -197,6 +197,7 @@ function QQBD() {
             },
             success: function (xml) {
                 if (xml.Result === 1) {
+                    alert("QQ绑定成功");
                     CloseQQRZ();
                     $("#iframeright").attr("src", getRootPath() + "/Business/ZHBD/ZHBD?YHID=" + getUrlParam("YHID"));
                 }

@@ -18,7 +18,25 @@ function Back() {
 //微博登录
 function WBDL() {
     if (Validate() === false) return;
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/GRZL/UpdateWB",
+        dataType: "json",
+        data:
+        {
+            YHID: getUrlParam("YHID"),
+            WB: $('#inputZH').val()
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                alert("微博绑定成功");
+                Back();
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
+        }
+    });
 }
 //账号检查
 function ZHCheck() {

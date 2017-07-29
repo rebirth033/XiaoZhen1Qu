@@ -34,6 +34,10 @@ function WBBD() {
     window.location.href = getRootPath() + "/Business/ZHBD/WBBD?YHID=" + getUrlParam("YHID");
 }
 
+function WXBD() {
+    window.location.href = getRootPath() + "/Business/ZHBD/WXBD?YHID=" + getUrlParam("YHID");
+}
+
 function LoadGRZL() {
     $.ajax({
         type: "POST",
@@ -88,9 +92,11 @@ function HandleBD(yx, qq, wb, wx) {
     if (wx === "" || wx === null) {
         $("#span_content_info_right_wxbd").css("display", "block");
         $("#span_content_info_right_wxjb").css("display", "none");
+        $("#span_content_info_right_wxbd").bind("click", WXBD);
     } else {
         $("#span_content_info_right_wxbd").css("display", "none");
         $("#span_content_info_right_wxjb").css("display", "block");
+        $("#span_content_info_right_wxjb").bind("click", WXJB);
     }
 }
 //生成二维码
@@ -145,6 +151,30 @@ function WBJB() {
         $.ajax({
             type: "POST",
             url: getRootPath() + "/Business/GRZL/UpdateWB",
+            dataType: "json",
+            data:
+            {
+                YHID: getUrlParam("YHID"),
+                WB: ""
+            },
+            success: function (xml) {
+                if (xml.Result === 1) {
+                    alert("微博解绑成功");
+                    window.location.reload();
+                }
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+            }
+        });
+    }
+}
+//微信解绑
+function WXJB() {
+    if (confirm("确定要解绑吗?")) {
+        $.ajax({
+            type: "POST",
+            url: getRootPath() + "/Business/GRZL/UpdateWX",
             dataType: "json",
             data:
             {

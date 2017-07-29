@@ -266,6 +266,41 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
+        //修改微信
+        public object UpdateWX(string YHID, string WX)
+        {
+            using (ITransaction transaction = DAO.BeginTransaction())
+            {
+                try
+                {
+                    YHJBXX yhjbxx = DAO.GetObjectByID<YHJBXX>(YHID);
+                    if (yhjbxx != null)
+                    {
+                        yhjbxx.WX = WX;
+                        DAO.Update(yhjbxx);
+                        DAO.Repository.Session.Flush();
+                        transaction.Commit();
+                        return new { Result = EnResultType.Success, Message = "修改成功", Value = new { YHID = yhjbxx.YHID } };
+                    }
+                    else
+                    {
+                        return new { Result = EnResultType.Failed, Message = "用户不存在" };
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    LoggerManager.Error("YHJBXXBLL", "修改失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                    return new
+                    {
+                        Result = EnResultType.Failed,
+                        Message = "修改失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!"
+                    };
+                }
+            }
+        }
+
         //修改邮箱验证码
         public object UpdateYXYZM(string YHID, string YXYZM)
         {

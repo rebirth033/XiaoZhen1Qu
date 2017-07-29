@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "WXBD";
+    Layout = "~/Areas/Business/Views/Shared/_ListLayout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link href="@Url.Content("~/Areas/Business/Css/ZHBD/WXBD.css")" rel="stylesheet" />
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/ZHBD/WXBD.js")"></script>
+</head>
+<body class="body">
+    <div class="div_content">
+        <div class="div_head">
+            <span class="span_head"></span>
+        </div>
+        <div class="div_body">
+            <div class="div_body_title">请用微信扫描下方二维码，在打开的页面中点击“关注”</div>
+            <div class="div_body_info">
+                <span class="span_body_info" id="span_body_info"></span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
