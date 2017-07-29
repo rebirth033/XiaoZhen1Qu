@@ -190,6 +190,7 @@
     <Content Include="Areas\Business\Css\images\upload_small.png" />
     <Content Include="Areas\Business\Css\images\upload_small2.png" />
     <Content Include="Areas\Business\Css\images\warn.png" />
+    <Content Include="Areas\Business\Css\images\wb_logo.png" />
     <Content Include="Areas\Business\Css\images\wxbd.png" />
     <Content Include="Areas\Business\Css\images\xlwb.png" />
     <Content Include="Areas\Business\Css\images\yes.png" />

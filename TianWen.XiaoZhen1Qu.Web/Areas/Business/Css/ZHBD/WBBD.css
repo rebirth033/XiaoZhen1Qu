@@ -83,12 +83,12 @@
 
 .tr_div_body {
     height: 50px;
-     width: 100%;
+    width: 100%;
 }
 
 .td_div_body {
     height: 50px;
-     width: 100%;
+    width: 100%;
 }
 
 .input_content {
@@ -133,3 +133,9 @@
     .input_bottom:hover {
         background-color: #31b0d5;
     }
+
+.Info {
+    font-family: 微软雅黑 !important;
+    vertical-align: middle !important;
+    text-align: left !important;
+}
