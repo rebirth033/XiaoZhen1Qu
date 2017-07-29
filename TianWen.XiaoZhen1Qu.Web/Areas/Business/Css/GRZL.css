@@ -98,6 +98,10 @@
     cursor: pointer;
 }
 
+.button_main_photo:hover {
+    background: #31b0d5;
+}
+
 .button_main_photo_upload {
     border-radius: 4px;
     opacity: 0;

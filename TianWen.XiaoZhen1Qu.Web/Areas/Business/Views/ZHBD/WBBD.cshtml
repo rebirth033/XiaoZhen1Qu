@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "WBBD";
+    Layout = "~/Areas/Business/Views/Shared/_ListLayout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+
+    <link href="@Url.Content("~/Areas/Business/Css/ZHBD/WBBD.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Areas/Business/Scripts/jquery-ui-1.12.1.custom/jquery-ui.min.css")" rel="stylesheet" />
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/ZHBD/WBBD.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/jquery-ui-1.12.1.custom/jquery-ui.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/jquery-ui-1.12.1.custom/jquery.ui.datepicker-zh-CN.js")"></script>
+</head>
+<body class="body">
+    <div class="div_content">
+        <div class="div_head">
+            <span class="span_head_left"></span>
+            <span class="span_head_right span_head_right_cursor">二维码登录</span>
+            <span class="span_head_right">|</span>
+            <span class="span_head_right span_head_right_cursor">注册</span>
+        </div>
+        <div class="div_body">
+            <div class="div_body_title">使用你的微博帐号访问 <span class="div_body_href">信息小镇</span> ，并同时登录微博</div>
+            <div class="div_body_info">
+                <table class="table_div_body">
+                    <tr class="tr_div_body">
+                        <td class="td_div_body">
+                            <span style="display: inline-block; height: 30px;">账&nbsp;&nbsp;&nbsp;&nbsp;号：</span>
+                            <input type="text" id="inputZH" class="input_content" style="width: 316px;" placeholder="请输入账号">
+                        </td>
+                        <td class="Info" id="ZHInfo" style="width: 50%"></td>
+                    </tr>
+                    <tr class="tr_div_body">
+                        <td class="td_div_body">
+                            <span style="display:inline-block; height:30px;">密&nbsp;&nbsp;&nbsp;&nbsp;码：</span>
+                            <input type="text" id="inputMM" class="input_content" style="width: 316px;" placeholder="请输入密码">
+                        </td>
+                        <td class="Info" id="MMInfo" style="width: 50%"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="div_body_split"></div>
+            <div class="div_body_bottom">
+                <input class="input_bottom" type="button" value="取消"/>
+                <input class="input_bottom" type="button" value="登录" />
+            </div>
+        </div>
+    </div>
+</body>
+</html>

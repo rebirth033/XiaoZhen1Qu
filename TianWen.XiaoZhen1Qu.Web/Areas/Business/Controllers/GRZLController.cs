@@ -59,6 +59,12 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return Json(result);
         }
 
+        public JsonResult UpdateWB()
+        {
+            object result = YHJBXXBLL.UpdateWB(Request["YHID"], Request["WB"]);
+            return Json(result);
+        }
+
         public JsonResult SendEmail()
         {
             Random random = new Random();

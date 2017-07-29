@@ -25,6 +25,8 @@ namespace TianWen.XiaoZhen1Qu.Interface
 
         object UpdateQQ(string YHID, string QQ);
 
+        object UpdateWB(string YHID, string WB);
+
         object GetObjByID(string YHID);
 
         object SendEmail(string YHID, string YX, string CheckCode);

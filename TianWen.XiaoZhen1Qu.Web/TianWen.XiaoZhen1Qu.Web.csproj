@@ -207,6 +207,7 @@
     <Content Include="Areas\Business\Css\YHGL.css" />
     <Content Include="Areas\Business\Css\YXYZ.css" />
     <Content Include="Areas\Business\Css\YXYZCG.css" />
+    <Content Include="Areas\Business\Css\ZHBD\WBBD.css" />
     <Content Include="Areas\Business\Css\ZHBD\ZHBD.css" />
     <Content Include="Areas\Business\Css\ZHMM.css" />
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\css\bootstrap-theme.css" />
@@ -235,6 +236,7 @@
     <Content Include="Areas\Business\Scripts\Business\YHJBXX.js" />
     <Content Include="Areas\Business\Scripts\Business\YXYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\YXYZCG.js" />
+    <Content Include="Areas\Business\Scripts\Business\ZHBD\WBBD.js" />
     <Content Include="Areas\Business\Scripts\Business\ZHBD\ZHBD.js" />
     <Content Include="Areas\Business\Scripts\Business\ZHMM.js" />
     <Content Include="Areas\Business\Scripts\jquery-1.9.1.min.js" />
@@ -341,6 +343,7 @@
     <Content Include="Areas\Business\Views\GRZL\YXYZCG.cshtml" />
     <Content Include="Areas\Business\Views\ZHBD\ZHBD.cshtml" />
     <Content Include="Areas\Business\Views\RZGL\RZGL.cshtml" />
+    <Content Include="Areas\Business\Views\ZHBD\WBBD.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

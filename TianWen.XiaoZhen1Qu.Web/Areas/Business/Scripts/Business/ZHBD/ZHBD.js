@@ -9,7 +9,7 @@ function SJBD() {
 }
 
 function YXBD() {
-    window.location.href = getRootPath() + "/Business/GRZL/YXYZ?YX=" + yx + "&YHID=" + getUrlParam("YHID");
+    window.location.href = getRootPath() + "/Business/GRZL/YXYZ?YHID=" + getUrlParam("YHID");
 }
 
 function QQBD() {
@@ -28,6 +28,10 @@ function QQBD() {
         $(this).css("background-repeat", "no-repeat");
     });
     GenerateQRCode();
+}
+
+function WBBD() {
+    window.location.href = getRootPath() + "/Business/ZHBD/WBBD?YHID=" + getUrlParam("YHID");
 }
 
 function LoadGRZL() {
@@ -75,9 +79,11 @@ function HandleBD(yx, qq, wb, wx) {
     if (wb === "" || wb === null) {
         $("#span_content_info_right_wbbd").css("display", "block");
         $("#span_content_info_right_wbjb").css("display", "none");
+        $("#span_content_info_right_wbbd").bind("click", WBBD);
     } else {
         $("#span_content_info_right_wbbd").css("display", "none");
         $("#span_content_info_right_wbjb").css("display", "block");
+        $("#span_content_info_right_wbjb").bind("click", WBJB);
     }
     if (wx === "" || wx === null) {
         $("#span_content_info_right_wxbd").css("display", "block");
@@ -111,7 +117,7 @@ function GenerateQRCode() {
 }
 //解绑QQ
 function QQJB() {
-    if (confirm("确定要删除吗?")) {
+    if (confirm("确定要解绑吗?")) {
         $.ajax({
             type: "POST",
             url: getRootPath() + "/Business/GRZL/UpdateQQ",
@@ -128,6 +134,30 @@ function QQJB() {
                 }
             },
             error: function(XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+            }
+        });
+    }
+}
+//解绑微博
+function WBJB() {
+    if (confirm("确定要解绑吗?")) {
+        $.ajax({
+            type: "POST",
+            url: getRootPath() + "/Business/GRZL/UpdateWB",
+            dataType: "json",
+            data:
+            {
+                YHID: getUrlParam("YHID"),
+                WB: ""
+            },
+            success: function (xml) {
+                if (xml.Result === 1) {
+                    alert("微博解绑成功");
+                    window.location.reload();
+                }
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
             }
         });

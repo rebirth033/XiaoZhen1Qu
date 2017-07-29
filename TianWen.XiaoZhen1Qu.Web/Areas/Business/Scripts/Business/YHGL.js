@@ -2,7 +2,6 @@
     $("#liGRZX").css("font-size", "18px").css("font-weight", "700");
     $("#imgWDQZ").attr("src", getRootPath() + "/Areas/Business/Css/images/down.png");
     $("#imgWDZP").attr("src", getRootPath() + "/Areas/Business/Css/images/down.png");
-    ToWDFB();
     $("#liGRZX").bind("click", ShowGRZX);
     $("#liZHSZ").bind("click", ShowZHSZ);
     $("#liSHGJ").bind("click", ShowSHGJ);
@@ -21,6 +20,7 @@
     $("#div_body_image_qqtx").bind("mouseover", ShowQQ);
     $("#div_body_image_qqtx").bind("mouseleave", HideQQ);
     $("#div_body_image_qqtx").bind("click", QQBD);
+    ToWDFB();
 });
 //自动登录
 function AutoLogin() {

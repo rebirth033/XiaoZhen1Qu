@@ -14,6 +14,8 @@
     $("#span_person_info_right_sj").bind("click", UpdateSJ);
     $("#img_person_info_yx").bind("click", UpdateYX);
     $("#span_person_info_right_yx").bind("click", UpdateYX);
+    $("#btnBDSC").bind("mouseover", function() { $("#div_button_main_photo_child").css("background-color", "#31b0d5") });
+    $("#btnBDSC").bind("mouseleave", function () { $("#div_button_main_photo_child").css("background-color", "#5bd0de") });
     LoadGRZL();
 });
 

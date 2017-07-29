@@ -196,6 +196,41 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
+        //修改微博
+        public object UpdateWB(string YHID, string WB)
+        {
+            using (ITransaction transaction = DAO.BeginTransaction())
+            {
+                try
+                {
+                    YHJBXX yhjbxx = DAO.GetObjectByID<YHJBXX>(YHID);
+                    if (yhjbxx != null)
+                    {
+                        yhjbxx.WB = WB;
+                        DAO.Update(yhjbxx);
+                        DAO.Repository.Session.Flush();
+                        transaction.Commit();
+                        return new { Result = EnResultType.Success, Message = "修改成功", Value = new { YHID = yhjbxx.YHID } };
+                    }
+                    else
+                    {
+                        return new { Result = EnResultType.Failed, Message = "用户不存在" };
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    LoggerManager.Error("YHJBXXBLL", "修改失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                    return new
+                    {
+                        Result = EnResultType.Failed,
+                        Message = "修改失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!"
+                    };
+                }
+            }
+        }
+
         //修改邮箱
         public object UpdateYX(string YHID, string YX)
         {
