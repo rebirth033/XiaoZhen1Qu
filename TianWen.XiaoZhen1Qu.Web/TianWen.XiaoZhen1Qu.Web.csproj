@@ -207,6 +207,7 @@
     <Content Include="Areas\Business\Css\RZGL\RZGL.css" />
     <Content Include="Areas\Business\Css\WDFB.css" />
     <Content Include="Areas\Business\Css\WDSC.css" />
+    <Content Include="Areas\Business\Css\XXGL\XXGL.css" />
     <Content Include="Areas\Business\Css\YHGL.css" />
     <Content Include="Areas\Business\Css\YXYZ.css" />
     <Content Include="Areas\Business\Css\YXYZCG.css" />
@@ -236,6 +237,7 @@
     <Content Include="Areas\Business\Scripts\Business\RZGL\RZGL.js" />
     <Content Include="Areas\Business\Scripts\Business\WDFB.js" />
     <Content Include="Areas\Business\Scripts\Business\WDSC.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXGL\XXGL.js" />
     <Content Include="Areas\Business\Scripts\Business\YHDLXX.js" />
     <Content Include="Areas\Business\Scripts\Business\YHGL.js" />
     <Content Include="Areas\Business\Scripts\Business\YHJBXX.js" />
@@ -302,6 +304,7 @@
     <Compile Include="Areas\Business\Controllers\RZGLController.cs" />
     <Compile Include="Areas\Business\Controllers\WDFBController.cs" />
     <Compile Include="Areas\Business\Controllers\WDSCController.cs" />
+    <Compile Include="Areas\Business\Controllers\XXGLController.cs" />
     <Compile Include="Areas\Business\Controllers\YHDLXXController.cs" />
     <Compile Include="Areas\Business\Controllers\YHGLController.cs" />
     <Compile Include="Areas\Business\Controllers\YHJBXXController.cs" />
@@ -352,6 +355,7 @@
     <Content Include="Areas\Business\Views\ZHBD\WBBD.cshtml" />
     <Content Include="Areas\Business\Views\ZHBD\WXBD.cshtml" />
     <Content Include="Areas\Business\Views\GRZL\MMSZ.cshtml" />
+    <Content Include="Areas\Business\Views\XXGL\XXGL.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
