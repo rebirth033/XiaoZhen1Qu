@@ -20,6 +20,7 @@
     <div class="div_content">
         <div class="div_head">
             <span class="span_head">修改密码</span>
+            <span class="span_head_wjmm" id="span_head_wjmm">忘记旧密码?</span>
         </div>
         <div class="div_body">
             <table class="table_div_body">
@@ -34,7 +35,7 @@
                     <td class="td_div_body">
                         <span class="required">*</span>
                         <span style="display: inline-block; height: 30px;">旧密码：</span>
-                        <input type="text" id="inputJMM" class="input_content" placeholder="请输入旧密码">
+                        <input class="input_content" type="password" id="inputJMM" maxlength="20" placeholder="请输入旧密码">
                     </td>
                     <td class="Info" id="JMMInfo"></td>
                 </tr>
@@ -42,7 +43,7 @@
                     <td class="td_div_body">
                         <span class="required">*</span>
                         <span style="display: inline-block; height: 30px;">新密码：</span>
-                        <input type="text" id="inputXMM" class="input_content" placeholder="请输入新密码">
+                        <input class="input_content" type="password" id="inputXMM" maxlength="20" placeholder="请输入新密码">
                     </td>
                     <td class="Info" id="XMMInfo"></td>
                 </tr>
@@ -50,14 +51,14 @@
                     <td class="td_div_body">
                         <span class="required">*</span>
                         <span style="display: inline-block; height: 30px;">确认密码：</span>
-                        <input type="text" id="inputQRMM" class="input_content" placeholder="请输入确认密码">
+                        <input class="input_content" type="password" id="inputQRMM" maxlength="20" placeholder="请输入确认密码">
                     </td>
                     <td class="Info" id="QRMMInfo"></td>
                 </tr>
             </table>
         </div>
         <div class="div_bottom">
-            <input class="input_bottom" id="input_bottom_wcxg" type="button" value="完成修改" />
+            <input class="input_bottom" id="input_bottom_wcxg" type="button" value="完成修改"/>
         </div>
     </div>
 </body>

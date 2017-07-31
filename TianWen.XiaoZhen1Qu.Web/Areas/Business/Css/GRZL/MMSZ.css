@@ -15,8 +15,20 @@
     font-size: 14px;
     font-weight: 700;
     margin-left: 15px;
-    
-    display: block;
+   float: left;
+}
+
+.span_head_wjmm {
+    cursor: pointer;
+    color: #595757;
+    font-size: 12px;
+    float: left;
+    margin-top: 2px;
+    margin-left: 10px;
+}
+
+.span_head_wjmm:hover {
+    color: #ff6100;
 }
 
 .table_div_body {
@@ -95,4 +107,6 @@
     vertical-align: middle !important;
     text-align: left !important;
     width: 250px;
+    padding-left: 10px;
+    padding-bottom: 10px
 }
