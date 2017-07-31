@@ -311,9 +311,9 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     YHJBXX yhjbxx = DAO.GetObjectByID<YHJBXX>(YHID);
                     if (yhjbxx != null)
                     {
-                        if (yhjbxx.MM == JMM)
+                        if (yhjbxx.MM == EncryptionHelper.MD5Encrypt64(JMM))
                         {
-                            yhjbxx.MM = XMM;
+                            yhjbxx.MM = EncryptionHelper.MD5Encrypt64(XMM);
                             DAO.Update(yhjbxx);
                             DAO.Repository.Session.Flush();
                             transaction.Commit();
@@ -321,14 +321,13 @@ namespace TianWen.XiaoZhen1Qu.BLL
                         }
                         else
                         {
-                            return new { Result = EnResultType.Failed, Message = "旧密码不正确" };
+                            return new { Result = EnResultType.Failed, Message = "旧密码不正确", Type = 2 };
                         }
                     }
                     else
                     {
-                        return new { Result = EnResultType.Failed, Message = "用户不存在" };
+                        return new { Result = EnResultType.Failed, Message = "用户不存在", Type = 1 };
                     }
-
                 }
                 catch (Exception ex)
                 {
@@ -337,7 +336,8 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     return new
                     {
                         Result = EnResultType.Failed,
-                        Message = "修改失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!"
+                        Message = "修改失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!",
+                        Type = 1
                     };
                 }
             }

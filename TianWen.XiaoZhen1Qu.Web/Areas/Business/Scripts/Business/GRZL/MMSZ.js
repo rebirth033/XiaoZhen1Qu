@@ -35,10 +35,13 @@ function WCXG() {
             XMM: $("#inputXMM").val()
         },
         success: function (xml) {
-            if (xml.Result === 0) {
-                alert(xml.Message);
+            if (xml.Result === 0 && xml.Type === 2) {
+                $("#inputJMM").css("border-color", "#F2272D");
+                $("#JMMInfo").css("color", "#F2272D");
+                $("#JMMInfo").html(xml.Message);
             } else {
                 alert("密码修改成功");
+                window.location.reload();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
