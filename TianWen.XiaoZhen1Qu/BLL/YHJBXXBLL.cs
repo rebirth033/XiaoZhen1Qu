@@ -12,6 +12,7 @@ using System.Drawing.Imaging;
 using System.Linq;
 using System.Net.Mail;
 using System.Text;
+using Microsoft.SqlServer.Server;
 
 namespace TianWen.XiaoZhen1Qu.BLL
 {
@@ -281,6 +282,47 @@ namespace TianWen.XiaoZhen1Qu.BLL
                         DAO.Repository.Session.Flush();
                         transaction.Commit();
                         return new { Result = EnResultType.Success, Message = "修改成功", Value = new { YHID = yhjbxx.YHID } };
+                    }
+                    else
+                    {
+                        return new { Result = EnResultType.Failed, Message = "用户不存在" };
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    LoggerManager.Error("YHJBXXBLL", "修改失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                    return new
+                    {
+                        Result = EnResultType.Failed,
+                        Message = "修改失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!"
+                    };
+                }
+            }
+        }
+
+        public object MMCZ(string YHID, string JMM, string XMM)
+        {
+            using (ITransaction transaction = DAO.BeginTransaction())
+            {
+                try
+                {
+                    YHJBXX yhjbxx = DAO.GetObjectByID<YHJBXX>(YHID);
+                    if (yhjbxx != null)
+                    {
+                        if (yhjbxx.MM == JMM)
+                        {
+                            yhjbxx.MM = XMM;
+                            DAO.Update(yhjbxx);
+                            DAO.Repository.Session.Flush();
+                            transaction.Commit();
+                            return new { Result = EnResultType.Success, Message = "修改成功", Value = new { YHID = yhjbxx.YHID } };
+                        }
+                        else
+                        {
+                            return new { Result = EnResultType.Failed, Message = "旧密码不正确" };
+                        }
                     }
                     else
                     {

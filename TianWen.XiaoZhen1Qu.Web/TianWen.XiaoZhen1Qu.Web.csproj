@@ -139,7 +139,8 @@
     <Content Include="Areas\Business\Aspx\png.aspx" />
     <Content Include="Areas\Business\Css\FBCG.css" />
     <Content Include="Areas\Business\Css\FWCZ.css" />
-    <Content Include="Areas\Business\Css\GRZL.css" />
+    <Content Include="Areas\Business\Css\GRZL\GRZL.css" />
+    <Content Include="Areas\Business\Css\GRZL\MMSZ.css" />
     <Content Include="Areas\Business\Css\HBSJ.css" />
     <Content Include="Areas\Business\Css\images\arrow_down.png" />
     <Content Include="Areas\Business\Css\images\arrow_up.png" />
@@ -227,7 +228,8 @@
     <Content Include="Areas\Business\Scripts\Business\FWCZ\FWCZ.js" />
     <Content Include="Areas\Business\Scripts\Business\FWCZ\FWCZYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\FWCZ\FWCZZP.js" />
-    <Content Include="Areas\Business\Scripts\Business\GRZL.js" />
+    <Content Include="Areas\Business\Scripts\Business\GRZL\GRZL.js" />
+    <Content Include="Areas\Business\Scripts\Business\GRZL\MMSZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HBSJ.js" />
     <Content Include="Areas\Business\Scripts\Business\LBXZ.js" />
     <Content Include="Areas\Business\Scripts\Business\PageJson.js" />
@@ -349,6 +351,7 @@
     <Content Include="Areas\Business\Views\RZGL\RZGL.cshtml" />
     <Content Include="Areas\Business\Views\ZHBD\WBBD.cshtml" />
     <Content Include="Areas\Business\Views\ZHBD\WXBD.cshtml" />
+    <Content Include="Areas\Business\Views\GRZL\MMSZ.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
