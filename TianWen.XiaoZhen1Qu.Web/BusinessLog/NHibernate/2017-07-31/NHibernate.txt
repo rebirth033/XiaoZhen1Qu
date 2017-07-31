@@ -1,0 +1,255 @@
+2017-07-31 20:16:27,842 [32] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: SELECT yhjbxx0_.YHID as YHID6_0_, yhjbxx0_.YHM as YHM6_0_, yhjbxx0_.MM as MM6_0_, yhjbxx0_.SQRQ as SQRQ6_0_, yhjbxx0_.ZSXM as ZSXM6_0_, yhjbxx0_.XB as XB6_0_, yhjbxx0_.CSRQ as CSRQ6_0_, yhjbxx0_.TXDZ as TXDZ6_0_, yhjbxx0_.YB as YB6_0_, yhjbxx0_.GXQM as GXQM6_0_, yhjbxx0_.SJ as SJ6_0_, yhjbxx0_.QQ as QQ6_0_, yhjbxx0_.DZYX as DZYX6_0_, yhjbxx0_.DZYXYZM as DZYXYZM6_0_, yhjbxx0_.TX as TX6_0_, yhjbxx0_.XYDJ as XYDJ6_0_, yhjbxx0_.WB as WB6_0_, yhjbxx0_.WX as WX6_0_ FROM YHJBXX yhjbxx0_ WHERE yhjbxx0_.YHID=:p0
+
+System.Data.OracleClient.OracleException (0x80131938): ORA-00904: "YHJBXX0_"."DZYXYZM": 标识符无效
+
+   在 System.Data.OracleClient.OracleConnection.CheckError(OciErrorHandle errorHandle, Int32 rc)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, Boolean needRowid, OciRowidDescriptor& rowidDescriptor, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.ExecuteReader(CommandBehavior behavior)
+   在 NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2017-07-31 20:16:27,905 [32] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-00904: "YHJBXX0_"."DZYXYZM": 标识符无效
+
+
+2017-07-31 20:16:27,905 [32] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-00904: "YHJBXX0_"."DZYXYZM": 标识符无效
+
+
+2017-07-31 20:16:30,213 [29] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: SELECT yhjbxx0_.YHID as YHID6_0_, yhjbxx0_.YHM as YHM6_0_, yhjbxx0_.MM as MM6_0_, yhjbxx0_.SQRQ as SQRQ6_0_, yhjbxx0_.ZSXM as ZSXM6_0_, yhjbxx0_.XB as XB6_0_, yhjbxx0_.CSRQ as CSRQ6_0_, yhjbxx0_.TXDZ as TXDZ6_0_, yhjbxx0_.YB as YB6_0_, yhjbxx0_.GXQM as GXQM6_0_, yhjbxx0_.SJ as SJ6_0_, yhjbxx0_.QQ as QQ6_0_, yhjbxx0_.DZYX as DZYX6_0_, yhjbxx0_.DZYXYZM as DZYXYZM6_0_, yhjbxx0_.TX as TX6_0_, yhjbxx0_.XYDJ as XYDJ6_0_, yhjbxx0_.WB as WB6_0_, yhjbxx0_.WX as WX6_0_ FROM YHJBXX yhjbxx0_ WHERE yhjbxx0_.YHID=:p0
+
+System.Data.OracleClient.OracleException (0x80131938): ORA-00904: "YHJBXX0_"."DZYXYZM": 标识符无效
+
+   在 System.Data.OracleClient.OracleConnection.CheckError(OciErrorHandle errorHandle, Int32 rc)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, Boolean needRowid, OciRowidDescriptor& rowidDescriptor, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.ExecuteReader(CommandBehavior behavior)
+   在 NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2017-07-31 20:16:30,213 [29] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-00904: "YHJBXX0_"."DZYXYZM": 标识符无效
+
+
+2017-07-31 20:16:30,213 [29] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-00904: "YHJBXX0_"."DZYXYZM": 标识符无效
+
+
+2017-07-31 20:16:34,316 [30] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: SELECT yhjbxx0_.YHID as YHID6_0_, yhjbxx0_.YHM as YHM6_0_, yhjbxx0_.MM as MM6_0_, yhjbxx0_.SQRQ as SQRQ6_0_, yhjbxx0_.ZSXM as ZSXM6_0_, yhjbxx0_.XB as XB6_0_, yhjbxx0_.CSRQ as CSRQ6_0_, yhjbxx0_.TXDZ as TXDZ6_0_, yhjbxx0_.YB as YB6_0_, yhjbxx0_.GXQM as GXQM6_0_, yhjbxx0_.SJ as SJ6_0_, yhjbxx0_.QQ as QQ6_0_, yhjbxx0_.DZYX as DZYX6_0_, yhjbxx0_.DZYXYZM as DZYXYZM6_0_, yhjbxx0_.TX as TX6_0_, yhjbxx0_.XYDJ as XYDJ6_0_, yhjbxx0_.WB as WB6_0_, yhjbxx0_.WX as WX6_0_ FROM YHJBXX yhjbxx0_ WHERE yhjbxx0_.YHID=:p0
+
+System.Data.OracleClient.OracleException (0x80131938): ORA-00904: "YHJBXX0_"."DZYXYZM": 标识符无效
+
+   在 System.Data.OracleClient.OracleConnection.CheckError(OciErrorHandle errorHandle, Int32 rc)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, Boolean needRowid, OciRowidDescriptor& rowidDescriptor, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.ExecuteReader(CommandBehavior behavior)
+   在 NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2017-07-31 20:16:34,316 [30] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-00904: "YHJBXX0_"."DZYXYZM": 标识符无效
+
+
+2017-07-31 20:16:34,316 [30] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-00904: "YHJBXX0_"."DZYXYZM": 标识符无效
+
+
+2017-07-31 20:16:37,171 [8] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: SELECT yhjbxx0_.YHID as YHID6_0_, yhjbxx0_.YHM as YHM6_0_, yhjbxx0_.MM as MM6_0_, yhjbxx0_.SQRQ as SQRQ6_0_, yhjbxx0_.ZSXM as ZSXM6_0_, yhjbxx0_.XB as XB6_0_, yhjbxx0_.CSRQ as CSRQ6_0_, yhjbxx0_.TXDZ as TXDZ6_0_, yhjbxx0_.YB as YB6_0_, yhjbxx0_.GXQM as GXQM6_0_, yhjbxx0_.SJ as SJ6_0_, yhjbxx0_.QQ as QQ6_0_, yhjbxx0_.DZYX as DZYX6_0_, yhjbxx0_.DZYXYZM as DZYXYZM6_0_, yhjbxx0_.TX as TX6_0_, yhjbxx0_.XYDJ as XYDJ6_0_, yhjbxx0_.WB as WB6_0_, yhjbxx0_.WX as WX6_0_ FROM YHJBXX yhjbxx0_ WHERE yhjbxx0_.YHID=:p0
+
+System.Data.OracleClient.OracleException (0x80131938): ORA-00904: "YHJBXX0_"."DZYXYZM": 标识符无效
+
+   在 System.Data.OracleClient.OracleConnection.CheckError(OciErrorHandle errorHandle, Int32 rc)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, Boolean needRowid, OciRowidDescriptor& rowidDescriptor, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.ExecuteReader(CommandBehavior behavior)
+   在 NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2017-07-31 20:16:37,171 [8] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-00904: "YHJBXX0_"."DZYXYZM": 标识符无效
+
+
+2017-07-31 20:16:37,171 [8] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-00904: "YHJBXX0_"."DZYXYZM": 标识符无效
+
+
+2017-07-31 20:16:37,405 [22] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: SELECT yhjbxx0_.YHID as YHID6_0_, yhjbxx0_.YHM as YHM6_0_, yhjbxx0_.MM as MM6_0_, yhjbxx0_.SQRQ as SQRQ6_0_, yhjbxx0_.ZSXM as ZSXM6_0_, yhjbxx0_.XB as XB6_0_, yhjbxx0_.CSRQ as CSRQ6_0_, yhjbxx0_.TXDZ as TXDZ6_0_, yhjbxx0_.YB as YB6_0_, yhjbxx0_.GXQM as GXQM6_0_, yhjbxx0_.SJ as SJ6_0_, yhjbxx0_.QQ as QQ6_0_, yhjbxx0_.DZYX as DZYX6_0_, yhjbxx0_.DZYXYZM as DZYXYZM6_0_, yhjbxx0_.TX as TX6_0_, yhjbxx0_.XYDJ as XYDJ6_0_, yhjbxx0_.WB as WB6_0_, yhjbxx0_.WX as WX6_0_ FROM YHJBXX yhjbxx0_ WHERE yhjbxx0_.YHID=:p0
+
+System.Data.OracleClient.OracleException (0x80131938): ORA-00904: "YHJBXX0_"."DZYXYZM": 标识符无效
+
+   在 System.Data.OracleClient.OracleConnection.CheckError(OciErrorHandle errorHandle, Int32 rc)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, Boolean needRowid, OciRowidDescriptor& rowidDescriptor, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.ExecuteReader(CommandBehavior behavior)
+   在 NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2017-07-31 20:16:37,405 [22] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-00904: "YHJBXX0_"."DZYXYZM": 标识符无效
+
+
+2017-07-31 20:16:37,405 [22] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-00904: "YHJBXX0_"."DZYXYZM": 标识符无效
+
+
+2017-07-31 20:16:40,837 [22] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: SELECT yhjbxx0_.YHID as YHID6_0_, yhjbxx0_.YHM as YHM6_0_, yhjbxx0_.MM as MM6_0_, yhjbxx0_.SQRQ as SQRQ6_0_, yhjbxx0_.ZSXM as ZSXM6_0_, yhjbxx0_.XB as XB6_0_, yhjbxx0_.CSRQ as CSRQ6_0_, yhjbxx0_.TXDZ as TXDZ6_0_, yhjbxx0_.YB as YB6_0_, yhjbxx0_.GXQM as GXQM6_0_, yhjbxx0_.SJ as SJ6_0_, yhjbxx0_.QQ as QQ6_0_, yhjbxx0_.DZYX as DZYX6_0_, yhjbxx0_.DZYXYZM as DZYXYZM6_0_, yhjbxx0_.TX as TX6_0_, yhjbxx0_.XYDJ as XYDJ6_0_, yhjbxx0_.WB as WB6_0_, yhjbxx0_.WX as WX6_0_ FROM YHJBXX yhjbxx0_ WHERE yhjbxx0_.YHID=:p0
+
+System.Data.OracleClient.OracleException (0x80131938): ORA-00904: "YHJBXX0_"."DZYXYZM": 标识符无效
+
+   在 System.Data.OracleClient.OracleConnection.CheckError(OciErrorHandle errorHandle, Int32 rc)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, Boolean needRowid, OciRowidDescriptor& rowidDescriptor, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.ExecuteReader(CommandBehavior behavior)
+   在 NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2017-07-31 20:16:40,837 [22] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-00904: "YHJBXX0_"."DZYXYZM": 标识符无效
+
+
+2017-07-31 20:16:40,837 [22] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-00904: "YHJBXX0_"."DZYXYZM": 标识符无效
+
+
+2017-07-31 20:16:42,413 [32] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: SELECT yhjbxx0_.YHID as YHID6_0_, yhjbxx0_.YHM as YHM6_0_, yhjbxx0_.MM as MM6_0_, yhjbxx0_.SQRQ as SQRQ6_0_, yhjbxx0_.ZSXM as ZSXM6_0_, yhjbxx0_.XB as XB6_0_, yhjbxx0_.CSRQ as CSRQ6_0_, yhjbxx0_.TXDZ as TXDZ6_0_, yhjbxx0_.YB as YB6_0_, yhjbxx0_.GXQM as GXQM6_0_, yhjbxx0_.SJ as SJ6_0_, yhjbxx0_.QQ as QQ6_0_, yhjbxx0_.DZYX as DZYX6_0_, yhjbxx0_.DZYXYZM as DZYXYZM6_0_, yhjbxx0_.TX as TX6_0_, yhjbxx0_.XYDJ as XYDJ6_0_, yhjbxx0_.WB as WB6_0_, yhjbxx0_.WX as WX6_0_ FROM YHJBXX yhjbxx0_ WHERE yhjbxx0_.YHID=:p0
+
+System.Data.OracleClient.OracleException (0x80131938): ORA-00904: "YHJBXX0_"."DZYXYZM": 标识符无效
+
+   在 System.Data.OracleClient.OracleConnection.CheckError(OciErrorHandle errorHandle, Int32 rc)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, Boolean needRowid, OciRowidDescriptor& rowidDescriptor, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.ExecuteReader(CommandBehavior behavior)
+   在 NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2017-07-31 20:16:42,413 [32] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-00904: "YHJBXX0_"."DZYXYZM": 标识符无效
+
+
+2017-07-31 20:16:42,413 [32] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-00904: "YHJBXX0_"."DZYXYZM": 标识符无效
+
+
+2017-07-31 20:16:56,265 [30] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: SELECT yhjbxx0_.YHID as YHID6_0_, yhjbxx0_.YHM as YHM6_0_, yhjbxx0_.MM as MM6_0_, yhjbxx0_.SQRQ as SQRQ6_0_, yhjbxx0_.ZSXM as ZSXM6_0_, yhjbxx0_.XB as XB6_0_, yhjbxx0_.CSRQ as CSRQ6_0_, yhjbxx0_.TXDZ as TXDZ6_0_, yhjbxx0_.YB as YB6_0_, yhjbxx0_.GXQM as GXQM6_0_, yhjbxx0_.SJ as SJ6_0_, yhjbxx0_.QQ as QQ6_0_, yhjbxx0_.DZYX as DZYX6_0_, yhjbxx0_.DZYXYZM as DZYXYZM6_0_, yhjbxx0_.TX as TX6_0_, yhjbxx0_.XYDJ as XYDJ6_0_, yhjbxx0_.WB as WB6_0_, yhjbxx0_.WX as WX6_0_ FROM YHJBXX yhjbxx0_ WHERE yhjbxx0_.YHID=:p0
+
+System.Data.OracleClient.OracleException (0x80131938): ORA-00904: "YHJBXX0_"."DZYXYZM": 标识符无效
+
+   在 System.Data.OracleClient.OracleConnection.CheckError(OciErrorHandle errorHandle, Int32 rc)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, Boolean needRowid, OciRowidDescriptor& rowidDescriptor, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.ExecuteReader(CommandBehavior behavior)
+   在 NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2017-07-31 20:16:56,265 [30] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-00904: "YHJBXX0_"."DZYXYZM": 标识符无效
+
+
+2017-07-31 20:16:56,265 [30] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-00904: "YHJBXX0_"."DZYXYZM": 标识符无效
+
+
+2017-07-31 20:17:07,232 [30] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: SELECT yhjbxx0_.YHID as YHID6_0_, yhjbxx0_.YHM as YHM6_0_, yhjbxx0_.MM as MM6_0_, yhjbxx0_.SQRQ as SQRQ6_0_, yhjbxx0_.ZSXM as ZSXM6_0_, yhjbxx0_.XB as XB6_0_, yhjbxx0_.CSRQ as CSRQ6_0_, yhjbxx0_.TXDZ as TXDZ6_0_, yhjbxx0_.YB as YB6_0_, yhjbxx0_.GXQM as GXQM6_0_, yhjbxx0_.SJ as SJ6_0_, yhjbxx0_.QQ as QQ6_0_, yhjbxx0_.DZYX as DZYX6_0_, yhjbxx0_.DZYXYZM as DZYXYZM6_0_, yhjbxx0_.TX as TX6_0_, yhjbxx0_.XYDJ as XYDJ6_0_, yhjbxx0_.WB as WB6_0_, yhjbxx0_.WX as WX6_0_ FROM YHJBXX yhjbxx0_ WHERE yhjbxx0_.YHID=:p0
+
+System.Data.OracleClient.OracleException (0x80131938): ORA-00904: "YHJBXX0_"."DZYXYZM": 标识符无效
+
+   在 System.Data.OracleClient.OracleConnection.CheckError(OciErrorHandle errorHandle, Int32 rc)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, Boolean needRowid, OciRowidDescriptor& rowidDescriptor, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.ExecuteReader(CommandBehavior behavior)
+   在 NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2017-07-31 20:17:07,232 [30] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-00904: "YHJBXX0_"."DZYXYZM": 标识符无效
+
+
+2017-07-31 20:17:07,232 [30] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-00904: "YHJBXX0_"."DZYXYZM": 标识符无效
+
+
+2017-07-31 20:17:10,227 [22] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: SELECT yhjbxx0_.YHID as YHID6_0_, yhjbxx0_.YHM as YHM6_0_, yhjbxx0_.MM as MM6_0_, yhjbxx0_.SQRQ as SQRQ6_0_, yhjbxx0_.ZSXM as ZSXM6_0_, yhjbxx0_.XB as XB6_0_, yhjbxx0_.CSRQ as CSRQ6_0_, yhjbxx0_.TXDZ as TXDZ6_0_, yhjbxx0_.YB as YB6_0_, yhjbxx0_.GXQM as GXQM6_0_, yhjbxx0_.SJ as SJ6_0_, yhjbxx0_.QQ as QQ6_0_, yhjbxx0_.DZYX as DZYX6_0_, yhjbxx0_.DZYXYZM as DZYXYZM6_0_, yhjbxx0_.TX as TX6_0_, yhjbxx0_.XYDJ as XYDJ6_0_, yhjbxx0_.WB as WB6_0_, yhjbxx0_.WX as WX6_0_ FROM YHJBXX yhjbxx0_ WHERE yhjbxx0_.YHID=:p0
+
+System.Data.OracleClient.OracleException (0x80131938): ORA-00904: "YHJBXX0_"."DZYXYZM": 标识符无效
+
+   在 System.Data.OracleClient.OracleConnection.CheckError(OciErrorHandle errorHandle, Int32 rc)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, Boolean needRowid, OciRowidDescriptor& rowidDescriptor, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.ExecuteReader(CommandBehavior behavior)
+   在 NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2017-07-31 20:17:10,227 [22] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-00904: "YHJBXX0_"."DZYXYZM": 标识符无效
+
+
+2017-07-31 20:17:10,227 [22] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-00904: "YHJBXX0_"."DZYXYZM": 标识符无效
+
+
+2017-07-31 20:17:31,802 [39] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: SELECT yhjbxx0_.YHID as YHID6_0_, yhjbxx0_.YHM as YHM6_0_, yhjbxx0_.MM as MM6_0_, yhjbxx0_.SQRQ as SQRQ6_0_, yhjbxx0_.ZSXM as ZSXM6_0_, yhjbxx0_.XB as XB6_0_, yhjbxx0_.CSRQ as CSRQ6_0_, yhjbxx0_.TXDZ as TXDZ6_0_, yhjbxx0_.YB as YB6_0_, yhjbxx0_.GXQM as GXQM6_0_, yhjbxx0_.SJ as SJ6_0_, yhjbxx0_.QQ as QQ6_0_, yhjbxx0_.DZYX as DZYX6_0_, yhjbxx0_.DZYXYZM as DZYXYZM6_0_, yhjbxx0_.TX as TX6_0_, yhjbxx0_.XYDJ as XYDJ6_0_, yhjbxx0_.WB as WB6_0_, yhjbxx0_.WX as WX6_0_ FROM YHJBXX yhjbxx0_ WHERE yhjbxx0_.YHID=:p0
+
+System.Data.OracleClient.OracleException (0x80131938): ORA-00904: "YHJBXX0_"."DZYXYZM": 标识符无效
+
+   在 System.Data.OracleClient.OracleConnection.CheckError(OciErrorHandle errorHandle, Int32 rc)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, Boolean needRowid, OciRowidDescriptor& rowidDescriptor, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.ExecuteReader(CommandBehavior behavior)
+   在 NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2017-07-31 20:17:31,802 [39] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-00904: "YHJBXX0_"."DZYXYZM": 标识符无效
+
+
+2017-07-31 20:17:31,802 [39] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-00904: "YHJBXX0_"."DZYXYZM": 标识符无效
+
+
+2017-07-31 20:17:47,933 [39] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: SELECT yhjbxx0_.YHID as YHID6_0_, yhjbxx0_.YHM as YHM6_0_, yhjbxx0_.MM as MM6_0_, yhjbxx0_.SQRQ as SQRQ6_0_, yhjbxx0_.ZSXM as ZSXM6_0_, yhjbxx0_.XB as XB6_0_, yhjbxx0_.CSRQ as CSRQ6_0_, yhjbxx0_.TXDZ as TXDZ6_0_, yhjbxx0_.YB as YB6_0_, yhjbxx0_.GXQM as GXQM6_0_, yhjbxx0_.SJ as SJ6_0_, yhjbxx0_.QQ as QQ6_0_, yhjbxx0_.DZYX as DZYX6_0_, yhjbxx0_.DZYXYZM as DZYXYZM6_0_, yhjbxx0_.TX as TX6_0_, yhjbxx0_.XYDJ as XYDJ6_0_, yhjbxx0_.WB as WB6_0_, yhjbxx0_.WX as WX6_0_ FROM YHJBXX yhjbxx0_ WHERE yhjbxx0_.YHID=:p0
+
+System.Data.OracleClient.OracleException (0x80131938): ORA-00904: "YHJBXX0_"."DZYXYZM": 标识符无效
+
+   在 System.Data.OracleClient.OracleConnection.CheckError(OciErrorHandle errorHandle, Int32 rc)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, Boolean needRowid, OciRowidDescriptor& rowidDescriptor, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.ExecuteReader(CommandBehavior behavior)
+   在 NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2017-07-31 20:17:47,933 [39] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-00904: "YHJBXX0_"."DZYXYZM": 标识符无效
+
+
+2017-07-31 20:17:47,933 [39] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-00904: "YHJBXX0_"."DZYXYZM": 标识符无效
+
+
+2017-07-31 20:19:41,677 [40] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: SELECT yhjbxx0_.YHID as YHID6_0_, yhjbxx0_.YHM as YHM6_0_, yhjbxx0_.MM as MM6_0_, yhjbxx0_.SQRQ as SQRQ6_0_, yhjbxx0_.ZSXM as ZSXM6_0_, yhjbxx0_.XB as XB6_0_, yhjbxx0_.CSRQ as CSRQ6_0_, yhjbxx0_.TXDZ as TXDZ6_0_, yhjbxx0_.YB as YB6_0_, yhjbxx0_.GXQM as GXQM6_0_, yhjbxx0_.SJ as SJ6_0_, yhjbxx0_.QQ as QQ6_0_, yhjbxx0_.DZYX as DZYX6_0_, yhjbxx0_.DZYXYZM as DZYXYZM6_0_, yhjbxx0_.TX as TX6_0_, yhjbxx0_.XYDJ as XYDJ6_0_, yhjbxx0_.WB as WB6_0_, yhjbxx0_.WX as WX6_0_ FROM YHJBXX yhjbxx0_ WHERE yhjbxx0_.YHID=:p0
+
+System.Data.OracleClient.OracleException (0x80131938): ORA-00904: "YHJBXX0_"."DZYX": 标识符无效
+
+   在 System.Data.OracleClient.OracleConnection.CheckError(OciErrorHandle errorHandle, Int32 rc)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, Boolean needRowid, OciRowidDescriptor& rowidDescriptor, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.ExecuteReader(CommandBehavior behavior)
+   在 NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2017-07-31 20:19:41,677 [40] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-00904: "YHJBXX0_"."DZYX": 标识符无效
+
+
+2017-07-31 20:19:41,677 [40] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-00904: "YHJBXX0_"."DZYX": 标识符无效
+
+
+2017-07-31 20:19:55,670 [32] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: SELECT yhjbxx0_.YHID as YHID6_0_, yhjbxx0_.YHM as YHM6_0_, yhjbxx0_.MM as MM6_0_, yhjbxx0_.SQRQ as SQRQ6_0_, yhjbxx0_.ZSXM as ZSXM6_0_, yhjbxx0_.XB as XB6_0_, yhjbxx0_.CSRQ as CSRQ6_0_, yhjbxx0_.TXDZ as TXDZ6_0_, yhjbxx0_.YB as YB6_0_, yhjbxx0_.GXQM as GXQM6_0_, yhjbxx0_.SJ as SJ6_0_, yhjbxx0_.QQ as QQ6_0_, yhjbxx0_.DZYX as DZYX6_0_, yhjbxx0_.DZYXYZM as DZYXYZM6_0_, yhjbxx0_.TX as TX6_0_, yhjbxx0_.XYDJ as XYDJ6_0_, yhjbxx0_.WB as WB6_0_, yhjbxx0_.WX as WX6_0_ FROM YHJBXX yhjbxx0_ WHERE yhjbxx0_.YHID=:p0
+
+System.Data.OracleClient.OracleException (0x80131938): ORA-00904: "YHJBXX0_"."DZYX": 标识符无效
+
+   在 System.Data.OracleClient.OracleConnection.CheckError(OciErrorHandle errorHandle, Int32 rc)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, Boolean needRowid, OciRowidDescriptor& rowidDescriptor, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.ExecuteReader(CommandBehavior behavior)
+   在 NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2017-07-31 20:19:55,670 [32] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-00904: "YHJBXX0_"."DZYX": 标识符无效
+
+
+2017-07-31 20:19:55,670 [32] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-00904: "YHJBXX0_"."DZYX": 标识符无效
+
+
+2017-07-31 20:19:59,118 [41] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: SELECT yhjbxx0_.YHID as YHID6_0_, yhjbxx0_.YHM as YHM6_0_, yhjbxx0_.MM as MM6_0_, yhjbxx0_.SQRQ as SQRQ6_0_, yhjbxx0_.ZSXM as ZSXM6_0_, yhjbxx0_.XB as XB6_0_, yhjbxx0_.CSRQ as CSRQ6_0_, yhjbxx0_.TXDZ as TXDZ6_0_, yhjbxx0_.YB as YB6_0_, yhjbxx0_.GXQM as GXQM6_0_, yhjbxx0_.SJ as SJ6_0_, yhjbxx0_.QQ as QQ6_0_, yhjbxx0_.DZYX as DZYX6_0_, yhjbxx0_.DZYXYZM as DZYXYZM6_0_, yhjbxx0_.TX as TX6_0_, yhjbxx0_.XYDJ as XYDJ6_0_, yhjbxx0_.WB as WB6_0_, yhjbxx0_.WX as WX6_0_ FROM YHJBXX yhjbxx0_ WHERE yhjbxx0_.YHID=:p0
+
+System.Data.OracleClient.OracleException (0x80131938): ORA-00904: "YHJBXX0_"."DZYX": 标识符无效
+
+   在 System.Data.OracleClient.OracleConnection.CheckError(OciErrorHandle errorHandle, Int32 rc)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, Boolean needRowid, OciRowidDescriptor& rowidDescriptor, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.ExecuteReader(CommandBehavior behavior)
+   在 NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2017-07-31 20:19:59,118 [41] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-00904: "YHJBXX0_"."DZYX": 标识符无效
+
+
+2017-07-31 20:19:59,118 [41] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-00904: "YHJBXX0_"."DZYX": 标识符无效
+
+
+2017-07-31 20:22:09,080 [32] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: SELECT yhjbxx0_.YHID as YHID6_0_, yhjbxx0_.YHM as YHM6_0_, yhjbxx0_.MM as MM6_0_, yhjbxx0_.SQRQ as SQRQ6_0_, yhjbxx0_.ZSXM as ZSXM6_0_, yhjbxx0_.XB as XB6_0_, yhjbxx0_.CSRQ as CSRQ6_0_, yhjbxx0_.TXDZ as TXDZ6_0_, yhjbxx0_.YB as YB6_0_, yhjbxx0_.GXQM as GXQM6_0_, yhjbxx0_.SJ as SJ6_0_, yhjbxx0_.QQ as QQ6_0_, yhjbxx0_.DZYX as DZYX6_0_, yhjbxx0_.DZYXYZM as DZYXYZM6_0_, yhjbxx0_.TX as TX6_0_, yhjbxx0_.XYDJ as XYDJ6_0_, yhjbxx0_.WB as WB6_0_, yhjbxx0_.WX as WX6_0_ FROM YHJBXX yhjbxx0_ WHERE yhjbxx0_.YHID=:p0
+
+System.Data.OracleClient.OracleException (0x80131938): ORA-00904: "YHJBXX0_"."DZYX": 标识符无效
+
+   在 System.Data.OracleClient.OracleConnection.CheckError(OciErrorHandle errorHandle, Int32 rc)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, Boolean needRowid, OciRowidDescriptor& rowidDescriptor, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.ExecuteReader(CommandBehavior behavior)
+   在 NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2017-07-31 20:22:09,080 [32] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-00904: "YHJBXX0_"."DZYX": 标识符无效
+
+
+2017-07-31 20:22:09,080 [32] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-00904: "YHJBXX0_"."DZYX": 标识符无效
+
+
+2017-07-31 20:22:19,375 [32] ERROR NHibernate.AdoNet.AbstractBatcher [(null)] - Could not execute query: SELECT yhjbxx0_.YHID as YHID6_0_, yhjbxx0_.YHM as YHM6_0_, yhjbxx0_.MM as MM6_0_, yhjbxx0_.SQRQ as SQRQ6_0_, yhjbxx0_.ZSXM as ZSXM6_0_, yhjbxx0_.XB as XB6_0_, yhjbxx0_.CSRQ as CSRQ6_0_, yhjbxx0_.TXDZ as TXDZ6_0_, yhjbxx0_.YB as YB6_0_, yhjbxx0_.GXQM as GXQM6_0_, yhjbxx0_.SJ as SJ6_0_, yhjbxx0_.QQ as QQ6_0_, yhjbxx0_.DZYX as DZYX6_0_, yhjbxx0_.DZYXYZM as DZYXYZM6_0_, yhjbxx0_.TX as TX6_0_, yhjbxx0_.XYDJ as XYDJ6_0_, yhjbxx0_.WB as WB6_0_, yhjbxx0_.WX as WX6_0_ FROM YHJBXX yhjbxx0_ WHERE yhjbxx0_.YHID=:p0
+
+System.Data.OracleClient.OracleException (0x80131938): ORA-00904: "YHJBXX0_"."DZYX": 标识符无效
+
+   在 System.Data.OracleClient.OracleConnection.CheckError(OciErrorHandle errorHandle, Int32 rc)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, Boolean needRowid, OciRowidDescriptor& rowidDescriptor, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.Execute(OciStatementHandle statementHandle, CommandBehavior behavior, ArrayList& resultParameterOrdinals)
+   在 System.Data.OracleClient.OracleCommand.ExecuteReader(CommandBehavior behavior)
+   在 NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2017-07-31 20:22:19,375 [32] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-00904: "YHJBXX0_"."DZYX": 标识符无效
+
+
+2017-07-31 20:22:19,390 [32] ERROR NHibernate.Util.ADOExceptionReporter [(null)] - ORA-00904: "YHJBXX0_"."DZYX": 标识符无效
+
+

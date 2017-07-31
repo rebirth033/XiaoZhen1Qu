@@ -1,0 +1,43 @@
+-- Create table
+create table YHXX
+(
+  yhxxid VARCHAR2(50) not null,
+  fjr    VARCHAR2(50),
+  xxnr   VARCHAR2(500),
+  xxsj   DATE
+)
+tablespace XIAOZHEN
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the columns 
+comment on column YHXX.yhxxid
+  is '主键';
+comment on column YHXX.fjr
+  is '发件人';
+comment on column YHXX.xxnr
+  is '消息内容';
+comment on column YHXX.xxsj
+  is '消息时间';
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table YHXX
+  add primary key (YHXXID)
+  using index 
+  tablespace XIAOZHEN
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );

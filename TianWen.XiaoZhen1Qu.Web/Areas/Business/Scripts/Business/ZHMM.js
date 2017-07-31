@@ -12,7 +12,7 @@ $(document).ready(function () {
     $("#spanQRZH").css("color", "#5bc0de");
     $("#emQRZH").css("background", "#5bc0de");
 });
-
+//确认账户
 function QRZH() {
     if (!QRZHValidate()) return;
     $.ajax({
@@ -51,7 +51,7 @@ function QRZH() {
 
     });
 }
-
+//验证账户
 function YZZH() {
     if (!YZZHValidate()) return;
     $.ajax({
@@ -85,11 +85,11 @@ function YZZH() {
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-            _masker.CloseMasker(false, errorThrown);
+
         }
     });
 }
-
+//重置密码
 function CZMM() {
     if (!CZMMValidate()) return;
     $.ajax({
@@ -99,11 +99,12 @@ function CZMM() {
         data:
         {
             MM: $("#MM").val(),
-            QRMM: $("#QRMM").val(),
+            QRMM: $("#QRMM").val()
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 alert(xml.Message);
+                ToMMSZ();
             } else {
                 alert(xml.Message);
             }
@@ -113,25 +114,25 @@ function CZMM() {
         }
     });
 }
-
+//确认账户前检查
 function QRZHValidate() {
     if (!YHMCheck()) return false;
     if (!TXYZMCheck()) return false;
     return true;
 }
-
+//验证账户前检查
 function YZZHValidate() {
     if (!SJCheck()) return false;
     if (!YZMCheck()) return false;
     return true;
 }
-
+//重置密码前检查
 function CZMMValidate() {
     if (!MMCheck()) return false;
     if (!QRMMCheck()) return false;
     return true;
 }
-
+//用户名检查
 function YHMCheck() {
     if ($("#YHM").val().length === 0) {
         $("#YHM").css("border-color", "#F2272D");
@@ -145,7 +146,7 @@ function YHMCheck() {
         return true;
     }
 }
-
+//图形验证检查
 function TXYZMCheck() {
     if ($("#TXYZM").val().length === 0) {
         $("#TXYZM").css("border-color", "#F2272D");
@@ -165,7 +166,7 @@ function TXYZMCheck() {
         return true;
     }
 }
-
+//手机检查
 function SJCheck() {
     if (!ValidateCellPhone($("#SJ").val())) {
         $("#SJ").css("border-color", "#F2272D");
@@ -185,7 +186,7 @@ function SJCheck() {
         return true;
     }
 }
-
+//验证码检查
 function YZMCheck() {
     if ($("#YZM").val().length === 0) {
         $("#YZM").css("border-color", "#F2272D");
@@ -205,7 +206,7 @@ function YZMCheck() {
         return true;
     }
 }
-
+//密码检查
 function MMCheck() {
     if (($("#MM").val().length < 6 && $("#MM").val().length > 0) || $("#MM").val().length > 20) {
         $("#MM").css("border-color", "#F2272D");
@@ -237,7 +238,7 @@ function MMCheck() {
         return true;
     }
 }
-
+//确认密码检查
 function QRMMCheck() {
     if (($("#QRMM").val().length < 6 && $("#QRMM").val().length > 0) || $("#QRMM").val().length > 20) {
         $("#QRMM").css("border-color", "#F2272D");
@@ -263,7 +264,7 @@ function QRMMCheck() {
         return true;
     }
 }
-
+//获取验证码
 function GetCheckCode() {
     if (SJCheck()) {
         $.ajax({
@@ -286,7 +287,7 @@ function GetCheckCode() {
         });
     }
 }
-
+//获取秒数
 function GetNumber() {
     $("#btnHQYZM").attr("disabled", "disabled");
     $("#btnHQYZM").val(count + "S后重新获取");
@@ -300,7 +301,7 @@ function GetNumber() {
         count = 60;
     }
 }
-
+//图形验证提示
 function TXYZMTip() {
     $("#TXYZM").css("border-color", "#999");
     $("#TXYZMInfo").css("color", "#999");
@@ -308,5 +309,9 @@ function TXYZMTip() {
 }
 
 function QHTXYZM() {
-    $("#imgTXYZM")[0].src = getRootPath() + '/Areas/Business/Aspx/png.aspx?'+Math.random();
+    $("#imgTXYZM")[0].src = getRootPath() + '/Areas/Business/Aspx/png.aspx?' + Math.random();
+}
+//密码设置
+function ToMMSZ() {
+    window.location.href = getRootPath() + "/Business/GRZL/MMSZ?YHID=" + getUrlParam("YHID");
 }

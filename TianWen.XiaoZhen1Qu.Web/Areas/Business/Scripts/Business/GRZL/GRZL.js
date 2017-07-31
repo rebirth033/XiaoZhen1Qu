@@ -166,7 +166,7 @@ function UpdateYHM() {
             },
             success: function (xml) {
                 if (xml.Result === 1) {
-                    alert("修改成功");
+                    alert("用户名修改成功");
                     $("#input_person_info_yhm").css("border", "none");
                     $("#input_person_info_yhm").css("cursor", "default");
                     $("#input_person_info_yhm").attr("readonly", "readonly");

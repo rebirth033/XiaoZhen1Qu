@@ -1,0 +1,68 @@
+﻿@{
+    ViewBag.Title = "XXGL";
+    Layout = "~/Areas/Business/Views/Shared/_ListLayout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link href="@Url.Content("~/Areas/Business/Css/XXGL/XXGL.css")" rel="stylesheet" />
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/XXGL/XXGL.js")"></script>
+</head>
+<body>
+    <div class="div_content">
+        <div class="divstep" id="divXTTZ">
+            <span class="spanstep" id="spanXTTZ">系统通知</span>
+            <em class="emstep" id="emXTTZ"></em>
+        </div>
+        <div class="divstep" id="divKHZX">
+            <span class="spanstep" id="spanKHZX">客户咨询</span>
+            <em class="emstep" id="emKHZX"></em>
+        </div>
+        <div class="divstep" id="divWDZX">
+            <span class="spanstep" id="spanWDZX">我的咨询</span>
+            <em class="emstep" id="emWDZX"></em>
+        </div>
+        <div class="divstep">
+            <span class="spanstep" id="spanOther">&nbsp;</span>
+            <em class="emstep" id="emOther" style="width: 510px;"></em>
+        </div>
+    </div>
+    <div id="div_main_info" class="div_main_info">
+        <div id="divFirst" style="display: block">
+            <div class="div_main_info_head">
+                共<span class="span_main_info_head" id="span_main_info_head_gjt">12</span>条，<span class="span_main_info_head" id="span_main_info_head_wdjt">7</span>条未读
+            </div>
+            <table id="divFirst" class="table_main_info">
+                <thead>
+                    <tr class="tr_main_info">
+                        <th style="width:40px;"></th>
+                        <th style="width:120px;">发件人</th>
+                        <th style="width:400px;">消息内容</th>
+                        <th style="width:120px;">时间</th>
+                        <th style="width:80px;">操作</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody_main_info_xttz">
+                    @*<tr class="tr_main_info">
+                        <td style="width:40px;"><input type="checkbox" value="" /></td>
+                        <td style="width:120px;">系统</td>
+                        <td style="width:400px;"><a class="a_main_info_xxnr">您成功更改了登录密码</a>。</td>
+                        <td style="width:120px;">2017-07-31 17:52 </td>
+                        <td style="width:80px;"><a class="a_main_info_cz">删除</a></td>
+                    </tr>*@
+                </tbody>
+            </table>
+        </div>
+        <div id="divSecond" style="display: none">
+            <table class="table_main_info"></table>
+        </div>
+        <div id="divThird" style="display: none">
+            <table class="table_main_info"></table>
+        </div>
+    </div>
+</body>
+</html>

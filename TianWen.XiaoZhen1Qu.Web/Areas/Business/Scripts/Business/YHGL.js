@@ -10,6 +10,8 @@
     $("#spanGRZL").bind("click", ToGRZL);
     $("#spanZHBD").bind("click", ToZHBD);
     $("#spanRZGL").bind("click", ToRZGL);
+    $("#spanMMSZ").bind("click", ToMMSZ);
+    $("#spanXXGL").bind("click", ToXXGL);
     $("#spanWDQZ").parent().bind("click", { type: "WDQZ" }, ExpandSecond_Leaf);
     $("#spanWDZP").parent().bind("click", { type: "WDZP" }, ExpandSecond_Tree);
     $("#spanZWGL").parent().bind("click", { type: "ZWGL" }, ExpandThird);
@@ -75,6 +77,15 @@ function ToZHBD() {
 function ToRZGL() {
     $("#iframeright").attr("src", getRootPath() + "/Business/RZGL/RZGL?YHID=" + getUrlParam("YHID"));
 }
+//密码设置
+function ToMMSZ() {
+    $("#iframeright").attr("src", getRootPath() + "/Business/GRZL/MMSZ?YHID=" + getUrlParam("YHID"));
+}
+//消息管理
+function ToXXGL() {
+    $("#iframeright").attr("src", getRootPath() + "/Business/XXGL/XXGL?YHID=" + getUrlParam("YHID"));
+}
+
 //显示个人中心
 function ShowGRZX() {
     $("#liGRZX").css("font-size", "18px").css("font-weight", "700");

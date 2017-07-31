@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     $("#span_head_right_zc").bind("click", ToWBZC);
-    $("#input_bottom_qx").bind("click", Back);
+    $("#input_bottom_fh").bind("click", Back);
     $("#input_bottom_dl").bind("click", WBDL);
     $('#inputZH').bind("focus", { id: "inputZH" }, HideTip);
     $('#inputMM').bind("focus", { id: "inputMM" }, HideTip);
