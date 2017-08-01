@@ -23,6 +23,9 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
 
                 int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
+                int TotalCount = list.Count;
+                var WDCountlist = from p in list.Where(p => p.STATUS == 0) select p;
+                int WCCount = WDCountlist.Count();
 
                 var listnew = from p in list
                     .Skip((int.Parse(PageIndex) - 1) * int.Parse(PageSize))
@@ -33,7 +36,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 {
                     obj.XXLBMC = Enum.GetName(typeof(XXLBMJ), obj.XXLB);
                 }
-                return new { Result = EnResultType.Success, list = listnew, PageCount = PageCount };
+                return new { Result = EnResultType.Success, list = listnew, PageCount = PageCount, TotalCount = TotalCount, WCCount = WCCount };
             }
             catch (Exception ex)
             {

@@ -5,7 +5,7 @@ $(document).ready(function () {
     $("#emXTTZ").css("background-color", "#5bc0de");
     $("#emXTTZ").css("height", "2px");
     $(".divstep").bind("click", HeadActive);
-    LoadDefault("divXTTZLB");
+    LoadDefault("divXTTZLB", currentIndex);
 });
 
 function HeadActive() {
@@ -30,7 +30,8 @@ function HeadActive() {
     LoadDefault($(this)[0].id);
 }
 
-function LoadDefault(TYPE) {
+function LoadDefault(TYPE, PageIndex) {
+    currentIndex = parseInt(PageIndex);
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/XXGL/LoadYHXX",
@@ -40,15 +41,14 @@ function LoadDefault(TYPE) {
             YHID: getUrlParam("YHID"),
             TYPE: TYPE,
             PageSize: 10,
-            PageIndex: currentIndex
+            PageIndex: PageIndex
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 LoadPage(xml.PageCount);
-
                 $("#tbody_main_info_xttz").html('');
-                $("#span_main_info_head_wdjt").html(_.filter(xml.list, function (obj) { return obj.STATUS == 0; }).length);
-                $("#span_main_info_head_gjt").html(xml.list.length);
+                $("#span_main_info_head_gjt").html(xml.TotalCount);
+                $("#span_main_info_head_wdjt").html(xml.WCCount);
                 for (var i = 0; i < xml.list.length; i++) {
                     LoadInfo(xml.list[i]);
                 }
@@ -63,13 +63,20 @@ function LoadDefault(TYPE) {
 }
 
 function LoadPage(PageCount) {
-    if (currentIndex > 1)
-        $("#div_main_info_bottom_fy").append('<a class="a_main_info_bottom_fy">上一页</a>');
-    for (var i = 1; i <= PageCount; i++) {
-        $("#div_main_info_bottom_fy").append('<a class="a_main_info_bottom_fy">' + i + '</a>');
+    var index = parseInt(currentIndex);
+    $("#div_main_info_bottom_fy").html('');
+    if (index > 1) {
+        $("#div_main_info_bottom_fy").append('<a onclick="LoadDefault(\'' + "divXTTZLB" + '\',\'' + (index-1) + '\')" class="a_main_info_bottom_fy">上一页</a>');
     }
-    if (currentIndex < PageCount)
-        $("#div_main_info_bottom_fy").append('<a class="a_main_info_bottom_fy">下一页</a>');
+    for (var i = 1; i <= PageCount; i++) {
+        if (i === index) 
+            $("#div_main_info_bottom_fy").append('<a onclick="LoadDefault(\'' + "divXTTZLB" + '\',\'' + i + '\')" class="a_main_info_bottom_fy a_main_info_bottom_fy_current">' + i + '</a>');
+        else
+            $("#div_main_info_bottom_fy").append('<a onclick="LoadDefault(\'' + "divXTTZLB" + '\',\'' + i + '\')" class="a_main_info_bottom_fy">' + i + '</a>');
+    }
+    if (index < PageCount) {
+        $("#div_main_info_bottom_fy").append('<a onclick="LoadDefault(\'' + "divXTTZLB" + '\',\'' + (index+1) + '\')" class="a_main_info_bottom_fy">下一页</a>');
+    }
 }
 
 function LoadInfo(obj) {
@@ -108,7 +115,7 @@ function DeleteYHXX(YHXXID) {
             },
             success: function (xml) {
                 if (xml.Result === 1) {
-                    LoadDefault("divXTTZLB");
+                    LoadDefault("divXTTZLB", currentIndex);
                 }
             },
             error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

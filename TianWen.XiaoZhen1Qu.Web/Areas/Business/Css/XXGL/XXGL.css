@@ -146,7 +146,11 @@
     display: inline-block;
     margin: 0 6px;
     color: #333;
+}
 
+.a_main_info_bottom_fy_current {
+        background-color: #5bc0de;
+    color: #ffffff;
 }
 
 .a_main_info_bottom_fy:hover {
