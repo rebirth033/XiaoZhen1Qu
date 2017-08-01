@@ -13,7 +13,7 @@
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/XXGL/XXGL.js")"></script>
 </head>
 <body>
-    <div class="right_head">
+    <div class="div_content">
         <div class="divstep" id="divXTTZ">
             <span class="spanstep" id="spanXTTZ">系统通知</span>
             <em class="emstep" id="emXTTZ"></em>
@@ -32,40 +32,37 @@
         </div>
     </div>
     <div id="div_main_info" class="div_main_info">
-        @*<ul class="ul_new_info">
-                <li class="li_new_info">
-                    <div class="div_new_info">
-                        <div class="div_new_info_head">
-                            <span class="span_new_info_head">信息号: 5f66c203-82ce-497e-964f-059179d345f9</span>
-                        </div>
-                        <div class="div_new_info_body">
-                            <div class="div_new_info_body_left">
-                                <div class="div_new_info_body_left_inner">
-                                    <div class="div_new_info_body_left_inner_img">
-                                        <img class="img_new_info_body_left" src="@Url.Content("~/Areas/Business/Css/images/test.jpg")" />
-                                    </div>
-                                    <div class="div_new_info_body_left_inner_info">
-                                        <span class="span_new_info_body_left_bt">君临天华B区5号楼单身公寓一套</span>
-                                        <span class="span_new_info_body_left_rq">2017-7-19 03:01:41</span>
-                                        <span class="span_new_info_body_left_dh">福州 - 房产信息 - 租房</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="div_new_info_body_middle">
-                                <span class="span_new_info_body_middle_common span_new_info_body_middle_status">显示中</span>
-                                <span class="span_new_info_body_middle_common span_new_info_body_middle_read">浏览:28</span>
-                                <span class="span_new_info_body_middle_common span_new_info_body_middle_tip">进行置顶或精准推广会让你的信息成交更快哦。</span>
-                            </div>
-                            <div class="div_new_info_body_right">
-                                <span class="span_new_info_body_middle_common span_new_info_body_middle_update">修改</span>
-                                <span class="span_new_info_body_middle_common span_new_info_body_middle_refresh">刷新</span>
-                                <span class="span_new_info_body_middle_common span_new_info_body_middle_top">置顶</span>
-                                <span class="span_new_info_body_middle_common span_new_info_body_middle_delete">删除</span>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            </ul>*@
+        <div id="divFirst" style="display: block">
+            <div class="div_main_info_head">
+                共<span class="span_main_info_head" id="span_main_info_head_gjt">12</span>条，<span class="span_main_info_head" id="span_main_info_head_wdjt">7</span>条未读
+            </div>
+            <table id="divFirst" class="table_main_info">
+                <thead>
+                    <tr class="tr_main_info">
+                        <th style="width:40px;"></th>
+                        <th style="width:120px;">发件人</th>
+                        <th style="width:400px;">消息内容</th>
+                        <th style="width:120px;">时间</th>
+                        <th style="width:80px;">操作</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody_main_info_xttz">
+                    @*<tr class="tr_main_info">
+                        <td style="width:40px;"><input type="checkbox" value="" /></td>
+                        <td style="width:120px;">系统</td>
+                        <td style="width:400px;"><a class="a_main_info_xxnr">您成功更改了登录密码</a>。</td>
+                        <td style="width:120px;">2017-07-31 17:52 </td>
+                        <td style="width:80px;"><a class="a_main_info_cz">删除</a></td>
+                    </tr>*@
+                </tbody>
+            </table>
+        </div>
+        <div id="divSecond" style="display: none">
+            <table class="table_main_info"></table>
+        </div>
+        <div id="divThird" style="display: none">
+            <table class="table_main_info"></table>
+        </div>
     </div>
 </body>
 </html>
