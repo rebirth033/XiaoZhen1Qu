@@ -77,6 +77,7 @@
     cursor: pointer;
     font-weight: 700;
     font-size: 14px;
+    color: #333;
 }
 
     .a_main_info_xxnr:hover {
@@ -84,7 +85,6 @@
     }
 
 .a_main_info_cz {
-    font-weight: 700;
     cursor: pointer;
 }
 
@@ -92,15 +92,17 @@
         color: #ff6100;
     }
 
-.span_main_info_head {
+.span_main_info_head_gjt {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #333;
+}
+
+.span_main_info_head_wdjt {
     cursor: pointer;
     text-decoration: underline;
     color: red;
 }
-
-    .span_main_info_head:hover {
-        color: #ff6100;
-    }
 
 .checkbox_main_info_bottom {
     float: left;
@@ -123,6 +125,10 @@
     color: #333;
     border-radius: 4px;
     border: 1px solid #ccc;
+}
+
+.input_main_info_bottom:hover {
+    background-color: #e2e2e2;
 }
 
 .div_main_info_bottom_fy {

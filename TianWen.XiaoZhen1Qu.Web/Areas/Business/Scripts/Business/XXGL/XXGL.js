@@ -1,4 +1,5 @@
-﻿$(document).ready(function () {
+﻿var currentIndex = 1;
+$(document).ready(function () {
     $("#spanXTTZ").css("color", "#5bc0de");
     $("#spanXTTZ").css("font-weight", "700");
     $("#emXTTZ").css("background-color", "#5bc0de");
@@ -37,11 +38,17 @@ function LoadDefault(TYPE) {
         data:
         {
             YHID: getUrlParam("YHID"),
-            TYPE: TYPE
+            TYPE: TYPE,
+            PageSize: 10,
+            PageIndex: currentIndex
         },
         success: function (xml) {
             if (xml.Result === 1) {
+                LoadPage(xml.PageCount);
+
                 $("#tbody_main_info_xttz").html('');
+                $("#span_main_info_head_wdjt").html(_.filter(xml.list, function (obj) { return obj.STATUS == 0; }).length);
+                $("#span_main_info_head_gjt").html(xml.list.length);
                 for (var i = 0; i < xml.list.length; i++) {
                     LoadInfo(xml.list[i]);
                 }
@@ -55,6 +62,16 @@ function LoadDefault(TYPE) {
     });
 }
 
+function LoadPage(PageCount) {
+    if (currentIndex > 1)
+        $("#div_main_info_bottom_fy").append('<a class="a_main_info_bottom_fy">上一页</a>');
+    for (var i = 1; i <= PageCount; i++) {
+        $("#div_main_info_bottom_fy").append('<a class="a_main_info_bottom_fy">' + i + '</a>');
+    }
+    if (currentIndex < PageCount)
+        $("#div_main_info_bottom_fy").append('<a class="a_main_info_bottom_fy">下一页</a>');
+}
+
 function LoadInfo(obj) {
     var html = "";
     html += ('<tr class="tr_main_info">');
@@ -62,7 +79,7 @@ function LoadInfo(obj) {
     html += ('<td style="width:120px;">' + obj.FJR + '</td>');
     html += ('<td style="width:400px;"><a class="a_main_info_xxnr">' + obj.XXNR + '</a>。</td>');
     html += ('<td style="width:120px;">' + obj.XXSJ.ToString("yyyy-MM-dd hh:mm:ss") + '</td>');
-    html += ('<td style="width:80px;"><a class="a_main_info_cz">删除</a></td>');
+    html += ('<td style="width:80px;"><a class="a_main_info_cz" onclick="DeleteYHXX(' + obj.YHXXID + ')">删除</a></td>');
     html += ('</tr>');
     $("#tbody_main_info_xttz").append(html);
 }
@@ -76,5 +93,27 @@ function NoInfo(TYPE) {
     }
     if (TYPE === "divWDZXLB") {
         $("#div_main_info").html('<div class="div_no_info">您暂时没有咨询消息</div>');
+    }
+}
+
+function DeleteYHXX(YHXXID) {
+    if (confirm("确定要删除吗?")) {
+        $.ajax({
+            type: "POST",
+            url: getRootPath() + "/Business/XXGL/DeleteYHXX",
+            dataType: "json",
+            data:
+            {
+                YHXXID: YHXXID
+            },
+            success: function (xml) {
+                if (xml.Result === 1) {
+                    LoadDefault("divXTTZLB");
+                }
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+            }
+        });
     }
 }

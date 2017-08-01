@@ -266,6 +266,7 @@
     <Content Include="Areas\Business\Scripts\jquery-ui-1.12.1.custom\jquery-ui.theme.css" />
     <Content Include="Areas\Business\Scripts\jquery-ui-1.12.1.custom\jquery-ui.theme.min.css" />
     <Content Include="Areas\Business\Scripts\jquery-ui-1.12.1.custom\LICENSE.txt" />
+    <Content Include="Areas\Business\Scripts\underscore.min.js" />
     <Content Include="Config\SpringConfig\BLL.xml" />
     <Content Include="Config\SpringConfig\Controllers.xml" />
     <Content Include="Config\SpringConfig\DAO.xml" />

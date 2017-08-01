@@ -19,6 +19,12 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string YHXXID { get; set; }
 
         /// <summary>
+        /// 用户ID
+        /// </summary>
+        [Property]
+        public virtual string YHID { get; set; }
+
+        /// <summary>
         /// 发件人
         /// </summary>
         [Property]
@@ -42,11 +48,15 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         [Property]
         public virtual int XXLB { get; set; }
 
+        /// <summary>
+        /// 消息状态
+        /// </summary>
+        [Property]
+        public virtual int STATUS { get; set; }
 
         /// <summary>
         /// 消息类别
         /// </summary>
-        
         public virtual string XXLBMC { get; set; }
     }
 }

@@ -6,7 +6,8 @@ create table YHXX
   xxnr   VARCHAR2(500),
   xxsj   DATE,
   xxlb   NUMBER(2),
-  yhid   VARCHAR2(50)
+  yhid   VARCHAR2(50),
+  status NUMBER(2)
 )
 tablespace XIAOZHEN
   pctfree 10
@@ -31,6 +32,8 @@ comment on column YHXX.xxlb
   is '消息类别（0:系统通知）';
 comment on column YHXX.yhid
   is '用户ID';
+comment on column YHXX.status
+  is '消息状态（0:未读;1:已读）';
 -- Create/Recreate primary, unique and foreign key constraints 
 alter table YHXX
   add primary key (YHXXID)

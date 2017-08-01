@@ -19,7 +19,12 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public JsonResult LoadYHXX()
         {
-            return Json(XXGLBLL.LoadYHXX(Request["YHID"], Request["TYPE"]));
+            return Json(XXGLBLL.LoadYHXX(Request["YHID"], Request["TYPE"], Request["PageIndex"], Request["PageSize"]));
+        }
+
+        public JsonResult DeleteYHXX()
+        {
+            return Json(XXGLBLL.DeleteYHXX(Request["YHXXID"]));
         }
     }
 }
