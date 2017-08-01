@@ -45,6 +45,29 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
+        public object LoadYHXXMX(string YHID, string YHXXID)
+        {
+            try
+            {
+                IList<YHXX> list = new List<YHXX>();
+                list = DAO.Repository.GetObjectList<YHXX>(String.Format("FROM YHXX WHERE YHID='{0}' AND YHXXID={1} ORDER BY XXSJ DESC", YHID, YHXXID));
+
+                if (list.Count > 0)
+                {
+                    return new {Result = EnResultType.Success, YHXX = list.FirstOrDefault()};
+                }
+                else
+                {
+                    return new { Result = EnResultType.Failed, Message = "用户消息不存在" };
+                }
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("error", ex.Message);
+                return new { Result = EnResultType.Failed, Message = "加载失败" };
+            }
+        }
+
         public object DeleteYHXX(string[] YHXXIDs)
         {
             using (ITransaction transaction = DAO.BeginTransaction())
@@ -76,7 +99,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
-        public object ZDYHXX(string[] YHXXIDs)
+        public object YDYHXX(string[] YHXXIDs)
         {
             using (ITransaction transaction = DAO.BeginTransaction())
             {

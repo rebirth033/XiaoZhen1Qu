@@ -17,9 +17,19 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return View();
         }
 
+        public ActionResult XXGLMX()
+        {
+            return View();
+        }
+
         public JsonResult LoadYHXX()
         {
             return Json(XXGLBLL.LoadYHXX(Request["YHID"], Request["TYPE"], Request["PageIndex"], Request["PageSize"]));
+        }
+
+        public JsonResult LoadYHXXMX()
+        {
+            return Json(XXGLBLL.LoadYHXXMX(Request["YHID"], Request["YHXXID"]));
         }
 
         public JsonResult DeleteYHXX()
@@ -27,9 +37,9 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return Json(XXGLBLL.DeleteYHXX(Request["YHXXID"].Split(',')));
         }
 
-        public JsonResult ZDYHXX()
+        public JsonResult YDYHXX()
         {
-            return Json(XXGLBLL.ZDYHXX(Request["YHXXID"].Split(',')));
+            return Json(XXGLBLL.YDYHXX(Request["YHXXID"].Split(',')));
         }
         
     }

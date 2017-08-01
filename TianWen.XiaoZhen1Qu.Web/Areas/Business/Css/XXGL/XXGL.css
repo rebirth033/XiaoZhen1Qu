@@ -84,6 +84,10 @@
         color: #ff6100;
     }
 
+.a_main_info_xxnr_yd {
+    font-weight: normal;
+}
+
 .a_main_info_cz {
     cursor: pointer;
 }
@@ -127,9 +131,9 @@
     border: 1px solid #ccc;
 }
 
-.input_main_info_bottom:hover {
-    background-color: #e2e2e2;
-}
+    .input_main_info_bottom:hover {
+        background-color: #e2e2e2;
+    }
 
 .div_main_info_bottom_fy {
     float: right;
@@ -149,7 +153,7 @@
 }
 
 .a_main_info_bottom_fy_current {
-        background-color: #5bc0de;
+    background-color: #5bc0de;
     color: #ffffff;
 }
 

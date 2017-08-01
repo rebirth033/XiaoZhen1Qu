@@ -208,6 +208,7 @@
     <Content Include="Areas\Business\Css\WDFB.css" />
     <Content Include="Areas\Business\Css\WDSC.css" />
     <Content Include="Areas\Business\Css\XXGL\XXGL.css" />
+    <Content Include="Areas\Business\Css\XXGL\XXGLMX.css" />
     <Content Include="Areas\Business\Css\YHGL.css" />
     <Content Include="Areas\Business\Css\YXYZ.css" />
     <Content Include="Areas\Business\Css\YXYZCG.css" />
@@ -238,6 +239,7 @@
     <Content Include="Areas\Business\Scripts\Business\WDFB.js" />
     <Content Include="Areas\Business\Scripts\Business\WDSC.js" />
     <Content Include="Areas\Business\Scripts\Business\XXGL\XXGL.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXGL\XXGLMX.js" />
     <Content Include="Areas\Business\Scripts\Business\YHDLXX.js" />
     <Content Include="Areas\Business\Scripts\Business\YHGL.js" />
     <Content Include="Areas\Business\Scripts\Business\YHJBXX.js" />
@@ -357,6 +359,7 @@
     <Content Include="Areas\Business\Views\ZHBD\WXBD.cshtml" />
     <Content Include="Areas\Business\Views\GRZL\MMSZ.cshtml" />
     <Content Include="Areas\Business\Views\XXGL\XXGL.cshtml" />
+    <Content Include="Areas\Business\Views\XXGL\XXGLMX.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

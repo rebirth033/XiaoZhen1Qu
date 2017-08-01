@@ -7,7 +7,7 @@ $(document).ready(function () {
     $(".divstep").bind("click", HeadActive);
     $("#checkbox_main_info_bottom").bind("click", SelectAll);
     $("#input_main_info_bottom_scxzx").bind("click", DeleteSelect);
-    $("#input_main_info_bottom_swzd").bind("click", ZDSelect);
+    $("#input_main_info_bottom_swzd").bind("click", YDSelect);
     LoadDefault("divXTTZLB", currentIndex);
 });
 
@@ -87,11 +87,18 @@ function LoadInfo(obj) {
     html += ('<tr class="tr_main_info">');
     html += ('<td style="width:40px;"><input type="checkbox" value="' + obj.YHXXID + '" /></td>');
     html += ('<td style="width:120px;">' + obj.FJR + '</td>');
-    html += ('<td style="width:400px;"><a class="a_main_info_xxnr">' + obj.XXNR + '</a>。</td>');
+    if(obj.STATUS === 0)
+        html += ('<td style="width:400px;"><a class="a_main_info_xxnr" onclick="ShowYHXX(' + obj.YHXXID + ')">' + obj.XXNR + '</a>。</td>');
+    else
+        html += ('<td style="width:400px;"><a class="a_main_info_xxnr a_main_info_xxnr_yd" onclick="ShowYHXX(' + obj.YHXXID + ')">' + obj.XXNR + '</a>。</td>');
     html += ('<td style="width:120px;">' + obj.XXSJ.ToString("yyyy-MM-dd hh:mm:ss") + '</td>');
     html += ('<td style="width:80px;"><a class="a_main_info_cz" onclick="DeleteYHXX(' + obj.YHXXID + ')">删除</a></td>');
     html += ('</tr>');
     $("#tbody_main_info_xttz").append(html);
+}
+
+function ShowYHXX(YHXXID) {
+    window.location.href = getRootPath() + "/Business/XXGL/XXGLMX?YHXXID=" + YHXXID + "&YHID=" + getUrlParam("YHID") + "&GJT=" + $("#span_main_info_head_gjt").html() + "&WDJT=" + $("#span_main_info_head_wdjt").html();
 }
 
 function NoInfo(TYPE) {
@@ -99,10 +106,10 @@ function NoInfo(TYPE) {
         $("#tbody_main_info_xttz").html('<div class="div_no_info">您暂时没有系统通知消息</div>');
     }
     if (TYPE === "divKHZXLB") {
-        $("#div_main_info").html('<div class="div_no_info">您暂时没有咨询消息</div>');
+        $("#tbody_main_info_khzx").html('<div class="div_no_info">您暂时没有咨询消息</div>');
     }
     if (TYPE === "divWDZXLB") {
-        $("#div_main_info").html('<div class="div_no_info">您暂时没有咨询消息</div>');
+        $("#tbody_main_info_wdzx").html('<div class="div_no_info">您暂时没有咨询消息</div>');
     }
 }
 
@@ -128,11 +135,11 @@ function DeleteYHXX(YHXXID) {
     }
 }
 
-function ZDYHXX(YHXXID) {
+function YDYHXX(YHXXID) {
     if (confirm("确定要将这些消息设成已读吗?")) {
         $.ajax({
             type: "POST",
-            url: getRootPath() + "/Business/XXGL/ZDYHXX",
+            url: getRootPath() + "/Business/XXGL/YDYHXX",
             dataType: "json",
             data:
             {
@@ -168,11 +175,12 @@ function DeleteSelect() {
     DeleteYHXX(RTrim(selects));
 }
 
-function ZDSelect() {
+function YDSelect() {
     var selects = "";
     $("#tbody_main_info_xttz").find("input[type='checkbox']").each(function () {
         if ($(this).prop("checked") === true)
             selects += $(this).val() + ",";
     });
-    ZDYHXX(RTrim(selects));
+    YDYHXX(RTrim(selects));
 }
+
