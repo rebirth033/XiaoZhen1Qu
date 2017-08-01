@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\Common.cs" />
+    <Compile Include="Enum\XXLB.cs" />
     <Compile Include="Maps\CODES_Map.cs" />
     <Compile Include="Maps\FWCZJBXX_Map.cs" />
     <Compile Include="Maps\JCXX_Map.cs" />
@@ -60,6 +61,7 @@
     <Compile Include="Maps\XXLB_Map.cs" />
     <Compile Include="Maps\YHJBXX_Map.cs" />
     <Compile Include="Maps\YHSCXX_Map.cs" />
+    <Compile Include="Maps\YHXX_Map.cs" />
     <Compile Include="Maps\ZDDLXX_Map.cs" />
     <Compile Include="Models\CODES.cs" />
     <Compile Include="Models\EncryptionHelper.cs" />
@@ -71,6 +73,7 @@
     <Compile Include="Models\XXLB.cs" />
     <Compile Include="Models\YHJBXX.cs" />
     <Compile Include="Models\YHSCXX.cs" />
+    <Compile Include="Models\YHXX.cs" />
     <Compile Include="Models\ZDDLXX.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

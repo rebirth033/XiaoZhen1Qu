@@ -4,7 +4,9 @@ create table YHXX
   yhxxid VARCHAR2(50) not null,
   fjr    VARCHAR2(50),
   xxnr   VARCHAR2(500),
-  xxsj   DATE
+  xxsj   DATE,
+  xxlb   NUMBER(2),
+  yhid   VARCHAR2(50)
 )
 tablespace XIAOZHEN
   pctfree 10
@@ -12,8 +14,7 @@ tablespace XIAOZHEN
   maxtrans 255
   storage
   (
-    initial 64K
-    next 1M
+    initial 64
     minextents 1
     maxextents unlimited
   );
@@ -26,6 +27,10 @@ comment on column YHXX.xxnr
   is '消息内容';
 comment on column YHXX.xxsj
   is '消息时间';
+comment on column YHXX.xxlb
+  is '消息类别（0:系统通知）';
+comment on column YHXX.yhid
+  is '用户ID';
 -- Create/Recreate primary, unique and foreign key constraints 
 alter table YHXX
   add primary key (YHXXID)
@@ -37,7 +42,6 @@ alter table YHXX
   storage
   (
     initial 64K
-    next 1M
     minextents 1
     maxextents unlimited
   );
