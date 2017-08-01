@@ -45,25 +45,23 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
-        public object DeleteYHXX(string YHXXID)
+        public object DeleteYHXX(string[] YHXXIDs)
         {
             using (ITransaction transaction = DAO.BeginTransaction())
             {
                 try
                 {
-                    YHXX yhxx = DAO.GetObjectByID<YHXX>(YHXXID);
-                    if (yhxx != null)
+                    foreach (var YHXXID in YHXXIDs)
                     {
-                        DAO.Remove(yhxx);
-                        DAO.Repository.Session.Flush();
-                        transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "删除成功" };
+                        YHXX yhxx = DAO.GetObjectByID<YHXX>(YHXXID);
+                        if (yhxx != null)
+                        {
+                            DAO.Remove(yhxx);
+                        }
                     }
-                    else
-                    {
-                        return new { Result = EnResultType.Failed, Message = "消息不存在" };
-                    }
-
+                    DAO.Repository.Session.Flush();
+                    transaction.Commit();
+                    return new { Result = EnResultType.Success, Message = "删除成功" };
                 }
                 catch (Exception ex)
                 {
@@ -73,6 +71,38 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     {
                         Result = EnResultType.Failed,
                         Message = "删除失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!"
+                    };
+                }
+            }
+        }
+
+        public object ZDYHXX(string[] YHXXIDs)
+        {
+            using (ITransaction transaction = DAO.BeginTransaction())
+            {
+                try
+                {
+                    foreach (var YHXXID in YHXXIDs)
+                    {
+                        YHXX yhxx = DAO.GetObjectByID<YHXX>(YHXXID);
+                        if (yhxx != null)
+                        {
+                            yhxx.STATUS = 1;
+                            DAO.Update(yhxx);
+                        }
+                    }
+                    DAO.Repository.Session.Flush();
+                    transaction.Commit();
+                    return new { Result = EnResultType.Success, Message = "修改成功" };
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    LoggerManager.Error("YHJBXXBLL", "修改失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                    return new
+                    {
+                        Result = EnResultType.Failed,
+                        Message = "修改失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!"
                     };
                 }
             }

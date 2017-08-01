@@ -11,6 +11,8 @@ namespace TianWen.XiaoZhen1Qu.Interface
 
         object LoadYHXX(string YHID, string TYPE, string PageIndex, string PageSize);
 
-        object DeleteYHXX(string YHXXID);
+        object DeleteYHXX(string[] YHXXIDs);
+
+        object ZDYHXX(string[] YHXXIDs);
     }
 }

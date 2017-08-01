@@ -37,7 +37,7 @@ function pageHeight() {
 
 //移除字串末尾的逗号
 function RTrim(str) {
-    if (str.charAt(str.length - 1) == ",")
+    if (str.charAt(str.length - 1) === ',')
         return str.substring(0, str.length - 1);
     else
         return str;

@@ -24,7 +24,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public JsonResult DeleteYHXX()
         {
-            return Json(XXGLBLL.DeleteYHXX(Request["YHXXID"]));
+            return Json(XXGLBLL.DeleteYHXX(Request["YHXXID"].Split(',')));
         }
+
+        public JsonResult ZDYHXX()
+        {
+            return Json(XXGLBLL.ZDYHXX(Request["YHXXID"].Split(',')));
+        }
+        
     }
 }
