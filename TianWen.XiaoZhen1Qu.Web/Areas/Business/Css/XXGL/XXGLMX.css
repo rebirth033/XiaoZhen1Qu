@@ -76,7 +76,7 @@
 }
 
     .span_main_info_head_fhsyj:hover {
-        text-decoration: underline;
+        text-decoration: none;
         color: #ff6100;
     }
 
@@ -84,11 +84,11 @@
     float: right;
     cursor: pointer;
     color: #333;
-    margin-left: 10px;
+    margin-right: 10px;
     font-size: 12px;
 }
 
     .span_main_info_head_right:hover {
-        text-decoration: underline;
+        text-decoration: none;
         color: #ff6100;
     }

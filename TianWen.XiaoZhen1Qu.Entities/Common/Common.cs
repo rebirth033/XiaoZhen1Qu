@@ -96,5 +96,20 @@ namespace TianWen.XiaoZhen1Qu.Entities.Common
             return HttpContext.Current.Request.ApplicationPath;
         }
         #endregion
+
+        #region string类型和byte[]类型相互转换
+        //string类型转成byte[]：
+        public static byte[] ToByte(string str)
+        {
+            return System.Text.Encoding.Default.GetBytes(str);
+        }
+
+        //byte[]类型转成string：
+        public static string ToString(byte[] bytes)
+        {
+            return System.Text.Encoding.Default.GetString(bytes);
+        }
+
+        #endregion
     }
 }

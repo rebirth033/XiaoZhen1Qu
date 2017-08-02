@@ -13,6 +13,10 @@ namespace TianWen.XiaoZhen1Qu.Interface
 
         object LoadYHXXMX(string YHID, string YHXXID);
 
+        object LoadUpYHXXMX(string YHID, string YHXXID);
+
+        object LoadDownYHXXMX(string YHID, string YHXXID);
+
         object DeleteYHXX(string[] YHXXIDs);
 
         object YDYHXX(string[] YHXXIDs);

@@ -7,7 +7,7 @@ $(document).ready(function () {
     $(".divstep").bind("click", HeadActive);
     $("#checkbox_main_info_bottom").bind("click", SelectAll);
     $("#input_main_info_bottom_scxzx").bind("click", DeleteSelect);
-    $("#input_main_info_bottom_swzd").bind("click", YDSelect);
+    $("#input_main_info_bottom_swyd").bind("click", YDSelect);
     LoadDefault("divXTTZLB", currentIndex);
 });
 
@@ -103,13 +103,13 @@ function ShowYHXX(YHXXID) {
 
 function NoInfo(TYPE) {
     if (TYPE === "divXTTZLB") {
-        $("#tbody_main_info_xttz").html('<div class="div_no_info">您暂时没有系统通知消息</div>');
+        $("#divXTTZLB").html('<div class="div_no_info">您暂时没有系统通知消息</div>');
     }
     if (TYPE === "divKHZXLB") {
-        $("#tbody_main_info_khzx").html('<div class="div_no_info">您暂时没有咨询消息</div>');
+        $("#divKHZXLB").html('<div class="div_no_info">您暂时没有咨询消息</div>');
     }
     if (TYPE === "divWDZXLB") {
-        $("#tbody_main_info_wdzx").html('<div class="div_no_info">您暂时没有咨询消息</div>');
+        $("#divWDZXLB").html('<div class="div_no_info">您暂时没有咨询消息</div>');
     }
 }
 

@@ -55,8 +55,19 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual int STATUS { get; set; }
 
         /// <summary>
-        /// 消息类别
+        /// 详细信息
+        /// </summary>
+        [Property]
+        public virtual byte[] XXXX { get; set; }
+
+        /// <summary>
+        /// 消息类别名称
         /// </summary>
         public virtual string XXLBMC { get; set; }
+
+        /// <summary>
+        /// 详细信息字符串
+        /// </summary>
+        public virtual string XXXXSTR { get; set; }
     }
 }

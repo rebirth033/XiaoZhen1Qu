@@ -142,6 +142,7 @@
     <Content Include="Areas\Business\Css\GRZL\GRZL.css" />
     <Content Include="Areas\Business\Css\GRZL\MMSZ.css" />
     <Content Include="Areas\Business\Css\HBSJ.css" />
+    <Content Include="Areas\Business\Css\HFCZ\HFCZ.css" />
     <Content Include="Areas\Business\Css\images\arrow_down.png" />
     <Content Include="Areas\Business\Css\images\arrow_up.png" />
     <Content Include="Areas\Business\Css\images\cellphone.png" />
@@ -233,6 +234,7 @@
     <Content Include="Areas\Business\Scripts\Business\GRZL\GRZL.js" />
     <Content Include="Areas\Business\Scripts\Business\GRZL\MMSZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HBSJ.js" />
+    <Content Include="Areas\Business\Scripts\Business\HFCZ\HFCZ.js" />
     <Content Include="Areas\Business\Scripts\Business\LBXZ.js" />
     <Content Include="Areas\Business\Scripts\Business\PageJson.js" />
     <Content Include="Areas\Business\Scripts\Business\RZGL\RZGL.js" />
@@ -275,6 +277,7 @@
     <Content Include="Global.asax" />
     <Content Include="hibernate.cfg.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Web.config" />
   </ItemGroup>
@@ -303,6 +306,7 @@
     <Compile Include="Areas\Business\Controllers\FBCGController.cs" />
     <Compile Include="Areas\Business\Controllers\FWCZController.cs" />
     <Compile Include="Areas\Business\Controllers\GRZLController.cs" />
+    <Compile Include="Areas\Business\Controllers\HFCZController.cs" />
     <Compile Include="Areas\Business\Controllers\LBXZController.cs" />
     <Compile Include="Areas\Business\Controllers\RZGLController.cs" />
     <Compile Include="Areas\Business\Controllers\WDFBController.cs" />
@@ -323,7 +327,9 @@
     <Content Include="packages.config" />
     <Content Include="Areas\Business\Views\YHJBXX\YHJBXX.cshtml" />
     <Content Include="Config\log4net.Config" />
-    <Content Include="DataSources.config" />
+    <Content Include="DataSources.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Areas\Business\Views\Web.config" />
     <Content Include="Areas\Business\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Business\Views\Shared\_ListLayout.cshtml" />
@@ -360,6 +366,7 @@
     <Content Include="Areas\Business\Views\GRZL\MMSZ.cshtml" />
     <Content Include="Areas\Business\Views\XXGL\XXGL.cshtml" />
     <Content Include="Areas\Business\Views\XXGL\XXGLMX.cshtml" />
+    <Content Include="Areas\Business\Views\HFCZ\HFCZ.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

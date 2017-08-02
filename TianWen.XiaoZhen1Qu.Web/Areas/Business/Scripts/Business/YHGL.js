@@ -12,6 +12,7 @@
     $("#spanRZGL").bind("click", ToRZGL);
     $("#spanMMSZ").bind("click", ToMMSZ);
     $("#spanXXGL").bind("click", ToXXGL);
+    $("#spanHFCZ").bind("click", ToHFCZ);
     $("#spanWDQZ").parent().bind("click", { type: "WDQZ" }, ExpandSecond_Leaf);
     $("#spanWDZP").parent().bind("click", { type: "WDZP" }, ExpandSecond_Tree);
     $("#spanZWGL").parent().bind("click", { type: "ZWGL" }, ExpandThird);
@@ -84,6 +85,11 @@ function ToMMSZ() {
 //消息管理
 function ToXXGL() {
     $("#iframeright").attr("src", getRootPath() + "/Business/XXGL/XXGL?YHID=" + getUrlParam("YHID"));
+}
+
+//话费充值
+function ToHFCZ() {
+    $("#iframeright").attr("src", getRootPath() + "/Business/HFCZ/HFCZ?YHID=" + getUrlParam("YHID"));
 }
 
 //显示个人中心
