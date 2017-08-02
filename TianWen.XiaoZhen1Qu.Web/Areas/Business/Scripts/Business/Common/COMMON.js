@@ -43,6 +43,14 @@ function RTrim(str) {
         return str;
 }
 
+//移除字串末尾指定字符
+function RTrim(str, char) {
+    if (str.charAt(str.length - 1) === char)
+        return str.substring(0, str.length - 1);
+    else
+        return str;
+}
+
 //将字符串内容倒序输出
 function reverseStr(olds) {
     var ss = "";

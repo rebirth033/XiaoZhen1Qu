@@ -13,8 +13,63 @@
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/HFCZ/HFCZ.js")"></script>
 </head>
 <body>
-    <div>
-    
+    <div class="div_photo">
+        <div class="divstep" id="divHFCZ">
+            <span class="spanstep" id="spanHFCZ">话费充值</span>
+            <em class="emstep" id="emHFCZ"></em>
+        </div>
+        <div class="divstep" id="divLLCZ">
+            <span class="spanstep" id="spanLLCZ">流量充值</span>
+            <em class="emstep" id="emLLCZ"></em>
+        </div>
+        <div class="divstep">
+            <span class="spanstep">&nbsp;</span>
+            <em class="emstep" style="width: 640px;"></em>
+        </div>
+    </div>
+    <div id="div_HFCZ" style="display: block">
+        <div class="div_content">
+            <div class="div_content_info">
+                <span class="span_content_info_left">手机号码：</span>
+                <input class="input_content" id="inputSJHM" type="text" placeholder="请输入手机号码">
+            </div>
+            <div class="div_content_info">
+                <span class="span_content_info_left">话费充值：</span>
+                <span class="span_content_info">30元</span>
+                <span class="span_content_info">50元</span>
+                <span class="span_content_info">100元</span>
+                <span class="span_content_info">200元</span>
+                <span class="span_content_info">300元</span>
+                <span class="span_content_info">500元</span>
+            </div>
+            <div class="div_content_info">
+                <span class="span_content_info_left">共需支付：</span>
+                <input class="input_content_gxzf" id="inputGXZF" value="0.0元" type="text">
+                <div class="div_content_info_left">友情提醒：本平台流量和话费不向消费者开具发票</div>
+            </div>
+            <div class="div_content_info">
+                <input class="input_content_ljzf" id="inputLJZF" value="立即支付" type="text">
+            </div>
+        </div>
+    </div>
+    <div id="div_LLCZ" style="display: none">
+        <div class="div_content">
+            <div class="div_content_info">
+                <div class="div_content_info_left">
+                    <span class="img_content_info" id="img_content_info_rlrz"></span>
+                    <div class="div_content_info_left_info">
+                        <span class="span_content_info_left">人脸认证</span>
+                        <ul class="ul_content_info">
+                            <li class="li_content_info">&nbsp;&nbsp;•&nbsp;&nbsp;请在明亮地方认证</li>
+                            <li class="li_content_info">&nbsp;&nbsp;•&nbsp;&nbsp;简单便捷、实时通过</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="div_content_info_right">
+                    <span class="span_content_info_right" id="span_content_info_right_rzsj">去认证</span>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
