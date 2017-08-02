@@ -7,7 +7,7 @@ $(document).ready(function () {
     $(".divstep").bind("click", HeadActive);
     $("#checkbox_main_info_bottom").bind("click", SelectAll);
     $("#input_main_info_bottom_scxzx").bind("click", DeleteSelect);
-    $("#input_main_info_bottom_swzd").bind("click", YDSelect);
+    $("#input_main_info_bottom_swyd").bind("click", YDSelect);
     LoadDefault("divXTTZLB", currentIndex);
 });
 

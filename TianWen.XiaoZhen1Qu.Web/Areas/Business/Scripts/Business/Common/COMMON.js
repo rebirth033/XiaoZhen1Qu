@@ -115,3 +115,27 @@ String.prototype.ToString = function (format) {
 function p(s) {
     return s < 10 ? '0' + s : s;
 }
+
+function HTMLEncode(str) {
+    var s = "";
+    if (str.length === 0) return "";
+    s = str.replace(/&/g, "&");
+    s = s.replace(/</g, "<");
+    s = s.replace(/>/g, ">");
+    s = s.replace(/ /g, " ");
+    s = s.replace(/\'/g, "'");
+    s = s.replace(/\"/g, "\"");
+    return s;
+}
+
+function HTMLDecode(str) {
+    var s = "";
+    if (str.length === 0) return "";
+    s = str.replace(/&/g, "&");
+    s = s.replace(/</g, "<");
+    s = s.replace(/>/g, ">");
+    s = s.replace(/ /g, " ");
+    s = s.replace(/'/g, "\'");
+    s = s.replace(/"/g, "\"");
+    return s;
+}

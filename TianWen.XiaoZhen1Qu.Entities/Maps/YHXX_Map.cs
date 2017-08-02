@@ -20,6 +20,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Maps
             Map(x => x.XXLB, "XXLB");
             Map(x => x.STATUS, "STATUS");
             Map(x => x.YHID, "YHID");
+            Map(x => x.XXXX, "XXXX");
             #endregion
 
             #region OneToMany

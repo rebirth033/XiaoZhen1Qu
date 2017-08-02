@@ -15,11 +15,12 @@
 <body>
     <div class="div_main_info">
         <div class="div_main_info_head">
+            <input type="hidden" id="input_yhxxid" value="" />
             共<span class="span_main_info_head_gjt" id="span_main_info_head_gjt"></span>条，
             <span class="span_main_info_head_wdjt" id="span_main_info_head_wdjt"></span>条未读
             <span class="span_main_info_head_fhsyj" id="span_main_info_head_fhsyj">返回上一级</span>
-            <span class="span_main_info_head_right">上一条</span>
-            <span class="span_main_info_head_right">下一条</span>
+            <span class="span_main_info_head_right" id="span_main_info_head_xyt">下一条</span>
+            <span class="span_main_info_head_right" id="span_main_info_head_syt">上一条</span>
         </div>
         <div class="div_main_info_info">
             <table class="table_main_info_info">
@@ -36,10 +37,7 @@
                     <td class="td_main_info_info_right" id="td_main_info_info_right_fjr"></td>
                 </tr>
                 <tr class="tr_main_info_info">
-                    <td class="td_main_info_info" colspan="2">
-                        <p>小区环境好不好？一搜小区名就知道！<br>这里有真实业主评价供你参考，帮助你找小区，更安心，更放心！<br><img src="//img.58cdn.com.cn/weixin/img/qypj/xq_qrcode.png">（手机微信或58同城APP扫描二维码使用）<br>您可以搜索小区名称，看到大家对小区的评价，也能看到小区正在出租或出售的房源。<br>小贴士：打开58同城APP，向下滑到【便民工具】，里面也有<a style="color: rgb(0, 0, 255); text-decoration: underline;" href="https://wen.58.com/ctool/pc_guide?from=pc_znx_xq_1" target="_blank">【小区百事通】</a>供你长期使用哦！<br>
-                        </p>
-                    </td>
+                    <td class="td_main_info_info" id="td_main_info_info_right_xxxx" colspan="2"></td>
                 </tr>
             </table>
         </div>

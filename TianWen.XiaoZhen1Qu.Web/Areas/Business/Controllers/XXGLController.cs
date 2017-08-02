@@ -32,6 +32,16 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return Json(XXGLBLL.LoadYHXXMX(Request["YHID"], Request["YHXXID"]));
         }
 
+        public JsonResult LoadUpYHXXMX()
+        {
+            return Json(XXGLBLL.LoadUpYHXXMX(Request["YHID"], Request["YHXXID"]));
+        }
+
+        public JsonResult LoadDownYHXXMX()
+        {
+            return Json(XXGLBLL.LoadDownYHXXMX(Request["YHID"], Request["YHXXID"]));
+        }
+
         public JsonResult DeleteYHXX()
         {
             return Json(XXGLBLL.DeleteYHXX(Request["YHXXID"].Split(',')));
