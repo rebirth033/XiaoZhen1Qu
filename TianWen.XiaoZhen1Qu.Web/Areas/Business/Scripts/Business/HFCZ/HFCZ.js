@@ -44,6 +44,7 @@ function Load(id) {
 }
 
 function SelectHF() {
+    searchMobilePhoneGuiSuArea2($("#inputHFSJHM").val());
     $(".span_content_info_HF").each(function () {
         $(this).css("background-color", "#fff");
         $(this).css("color", "#333");
@@ -121,10 +122,6 @@ function LLSJCheck() {
         $("#span_content_info_llsj").html('');
         return true;
     }
-    var isChinaMobile = /^134[0-8]\\d{7}$|^(?:13[5-9]|147|15[0-27-9]|178|18[2-478])\\d{8}$/; //移动方面最新答复
-    var isChinaUnion = /^(?:13[0-2]|145|15[56]|176|18[56])\\d{8}$/; //向联通微博确认并未回复
-    var isChinaTelcom = /^(?:133|153|177|18[019])\\d{8}$/; //1349号段 电信方面没给出答复，视作不存在
-    var isOtherTelphone = /^170([059])\\d{7}$/;//其他运营商
 }
 
 function HFCZ() {
@@ -133,4 +130,30 @@ function HFCZ() {
 
 function LLCZ() {
     if (!LLSJCheck()) return;
+}
+
+//查询手机归属地 
+function searchMobilePhoneGuiSuArea(mobileNo) {
+    alert(mobileNo);
+    $.ajax({
+        type: "POST",
+        url: "https://service.sh.10086.cn/tools.do?method=getPhoneNativeInfo",
+        datatype: "json",
+        data: "phone=" + mobileNo,
+        success: function (res) {
+            var mobilehtml = "";
+            if (res != "-1" && res != "-2") {
+                var result = res.split(";");
+                alert(result[1]);
+                alert(result[2]);
+                alert(result[3]);
+            } else {
+                alert("<span class='fontHigh'>非常抱歉!系统中没有您需要的信息...</span>");
+            }
+        },
+        error: function (xml) {
+            alert(3);
+            alert("<span class='fontHigh'>非常抱歉!系统中没有您需要的信息...</span>");
+        }
+    });
 }
