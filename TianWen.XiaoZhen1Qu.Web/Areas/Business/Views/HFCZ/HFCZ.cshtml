@@ -31,16 +31,17 @@
         <div class="div_content">
             <div class="div_content_info">
                 <span class="span_content_info_left">手机号码：</span>
-                <input class="input_content" id="inputSJHM" type="text" placeholder="请输入手机号码">
+                <input class="input_content" id="inputHFSJHM" maxlength="11" type="text" placeholder="请输入手机号码">
+                <span class="span_conent_info" id="span_conent_info_hfsj"></span>
             </div>
             <div class="div_content_info">
                 <span class="span_content_info_left">话费充值：</span>
-                <span class="span_content_info">30元</span>
-                <span class="span_content_info">50元</span>
-                <span class="span_content_info">100元</span>
-                <span class="span_content_info">200元</span>
-                <span class="span_content_info">300元</span>
-                <span class="span_content_info">500元</span>
+                <span class="span_content_info_HF">30元</span>
+                <span class="span_content_info_HF">50元</span>
+                <span class="span_content_info_HF">100元</span>
+                <span class="span_content_info_HF">200元</span>
+                <span class="span_content_info_HF">300元</span>
+                <span class="span_content_info_HF">500元</span>
             </div>
             <div class="div_content_info">
                 <span class="span_content_info_left">共需支付：</span>
@@ -48,26 +49,45 @@
                 <div class="div_content_info_left">友情提醒：本平台流量和话费不向消费者开具发票</div>
             </div>
             <div class="div_content_info">
-                <input class="input_content_ljzf" id="inputLJZF" value="立即支付" type="text">
+                <input class="input_content_ljzf" id="inputHFLJCZ" value="立即充值" type="button">
             </div>
         </div>
     </div>
     <div id="div_LLCZ" style="display: none">
         <div class="div_content">
             <div class="div_content_info">
-                <div class="div_content_info_left">
-                    <span class="img_content_info" id="img_content_info_rlrz"></span>
-                    <div class="div_content_info_left_info">
-                        <span class="span_content_info_left">人脸认证</span>
-                        <ul class="ul_content_info">
-                            <li class="li_content_info">&nbsp;&nbsp;•&nbsp;&nbsp;请在明亮地方认证</li>
-                            <li class="li_content_info">&nbsp;&nbsp;•&nbsp;&nbsp;简单便捷、实时通过</li>
-                        </ul>
-                    </div>
+                <span class="span_content_info_left">手机号码：</span>
+                <input class="input_content" id="inputLLSJHM" maxlength="11" type="text" placeholder="请输入手机号码">
+                <span class="span_conent_info" id="span_content_info_llsj"></span>
+            </div>
+            <div class="div_content_info">
+                <span class="span_content_info_left">流量充值：</span>
+                <span class="span_content_info_LL">10M</span>
+                <span class="span_content_info_LL">30M</span>
+                <span class="span_content_info_LL">70M</span>
+                <span class="span_content_info_LL">100M</span>
+                <span class="span_content_info_LL">300M</span>
+                <span class="span_content_info_LL">500M</span>
+            </div>
+            <div class="div_content_info">
+                <span class="span_content_info_left_space"></span>
+                <span class="span_content_info_LL">1G</span>
+                <span class="span_content_info_LL">2G</span>
+            </div>
+            <div class="div_content_info" style="height: 156px;">
+                <span class="span_content_info_left">流量价格：</span>
+                <input class="input_content_gxzf" id="inputLLJG" value="0.0元" type="text">
+                <div class="div_content_info_left" style="height: 108px;">
+                    流量充值说明<br />
+                    1、生效时间：充值成功即时生效<br />
+                    2、使用范围：支持全国流量<br />
+                    3、使用有效期：当月有效<br />
+                    4、充值次数限制：不限次数<br />
+                    5、友情提醒：本平台流量和话费不向消费者开具发票<br />
                 </div>
-                <div class="div_content_info_right">
-                    <span class="span_content_info_right" id="span_content_info_right_rzsj">去认证</span>
-                </div>
+            </div>
+            <div class="div_content_info">
+                <input class="input_content_ljzf" id="inputLLLJCZ" value="立即充值" type="button">
             </div>
         </div>
     </div>
