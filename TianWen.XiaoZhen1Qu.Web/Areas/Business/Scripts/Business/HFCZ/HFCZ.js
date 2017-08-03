@@ -8,6 +8,8 @@
     $(".span_content_info_LL").bind("click", SelectLL);
     $("#inputHFLJCZ").bind("click", HFCZ);
     $("#inputLLLJCZ").bind("click", LLCZ);
+    $("#inputHFSJHM").bind("blur", HFSJCheck);
+    $("#inputLLSJHM").bind("blur", LLSJCheck);
 });
 
 function HeadActive() {
@@ -44,7 +46,6 @@ function Load(id) {
 }
 
 function SelectHF() {
-    searchMobilePhoneGuiSuArea2($("#inputHFSJHM").val());
     $(".span_content_info_HF").each(function () {
         $(this).css("background-color", "#fff");
         $(this).css("color", "#333");
@@ -86,19 +87,19 @@ function SelectLL() {
 function HFSJCheck() {
     if (!ValidateCellPhone($("#inputHFSJHM").val())) {
         $("#inputHFSJHM").css("border-color", "#F2272D");
-        $("#span_conent_info_hfsj").css("color", "#F2272D");
-        $("#span_conent_info_hfsj").html("手机号码格式不正确");
+        $("#span_content_info_hfsj").css("color", "#F2272D");
+        $("#span_content_info_hfsj").html("手机号码格式不正确");
         return false;
     }
     else if ($("#inputHFSJHM").val().length === 0) {
         $("#inputHFSJHM").css("border-color", "#F2272D");
-        $("#span_conent_info_hfsj").css("color", "#F2272D");
-        $("#span_conent_info_hfsj").html("请输入手机号");
+        $("#span_content_info_hfsj").css("color", "#F2272D");
+        $("#span_content_info_hfsj").html("请输入手机号");
         return false;
     }
     else {
         $("#inputHFSJHM").css("border-color", "#999");
-        $("#span_conent_info_hfsj").html('');
+        HFSearchMobilePhoneGuiSuArea($("#inputHFSJHM").val());
         return true;
     }
 }
@@ -119,7 +120,7 @@ function LLSJCheck() {
     }
     else {
         $("#inputLLSJHM").css("border-color", "#999");
-        $("#span_content_info_llsj").html('');
+        LLSearchMobilePhoneGuiSuArea($("#inputLLSJHM").val());
         return true;
     }
 }
@@ -133,27 +134,45 @@ function LLCZ() {
 }
 
 //查询手机归属地 
-function searchMobilePhoneGuiSuArea(mobileNo) {
-    alert(mobileNo);
+function HFSearchMobilePhoneGuiSuArea(MobileNo) {
     $.ajax({
         type: "POST",
-        url: "https://service.sh.10086.cn/tools.do?method=getPhoneNativeInfo",
-        datatype: "json",
-        data: "phone=" + mobileNo,
-        success: function (res) {
-            var mobilehtml = "";
-            if (res != "-1" && res != "-2") {
-                var result = res.split(";");
-                alert(result[1]);
-                alert(result[2]);
-                alert(result[3]);
-            } else {
-                alert("<span class='fontHigh'>非常抱歉!系统中没有您需要的信息...</span>");
+        url: getRootPath() + "/Business/HFCZ/SearchMobilePhoneGuiSuArea",
+        dataType: "json",
+        data:
+        {
+            YHID: getUrlParam("YHID"),
+            MobileNo: MobileNo
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                $("#span_content_info_hfsj").html("<span style='color:#5bc0de'>"+xml.Values[5] + "&nbsp;&nbsp;" + xml.Values[1] + "&nbsp;&nbsp;" + xml.Values[2] + "</span>");
             }
         },
-        error: function (xml) {
-            alert(3);
-            alert("<span class='fontHigh'>非常抱歉!系统中没有您需要的信息...</span>");
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+
+//查询手机归属地 
+function LLSearchMobilePhoneGuiSuArea(MobileNo) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/HFCZ/SearchMobilePhoneGuiSuArea",
+        dataType: "json",
+        data:
+        {
+            YHID: getUrlParam("YHID"),
+            MobileNo: MobileNo
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                $("#span_content_info_llsj").html("<span style='color:#5bc0de'>" + xml.Values[5] + "&nbsp;&nbsp;" + xml.Values[1] + "&nbsp;&nbsp;" + xml.Values[2] + "</span>");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
         }
     });
 }

@@ -71,7 +71,7 @@ namespace WLPC.Ashx
             HttpWebResponse myRep = (HttpWebResponse)myReq.GetResponse();
             Stream myStream = myRep.GetResponseStream();
             StreamReader sr = new StreamReader(myStream, Encoding.UTF8);
-            return sr.ReadToEnd().ToString();
+            return sr.ReadToEnd();
         }
 
         public bool IsReusable

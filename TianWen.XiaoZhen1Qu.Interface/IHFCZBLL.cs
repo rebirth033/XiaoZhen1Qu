@@ -8,5 +8,7 @@ namespace TianWen.XiaoZhen1Qu.Interface
     public interface IHFCZBLL
     {
         IDAO DAO { get; set; }
+
+        object SearchMobilePhoneGuiSuArea(string YHID, string MobileNo);
     }
 }
