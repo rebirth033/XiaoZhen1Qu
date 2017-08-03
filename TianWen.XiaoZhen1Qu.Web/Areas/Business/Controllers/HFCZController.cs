@@ -16,6 +16,11 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return View();
         }
 
+        public ActionResult ZFFS()
+        {
+            return View();
+        }
+
         public JsonResult SearchMobilePhoneGuiSuArea()
         {
             object result = HFCZBLL.SearchMobilePhoneGuiSuArea(Request["YHID"], Request["MobileNo"]);

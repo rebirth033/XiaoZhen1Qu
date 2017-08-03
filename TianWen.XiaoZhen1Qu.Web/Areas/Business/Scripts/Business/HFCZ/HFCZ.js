@@ -10,8 +10,11 @@
     $("#inputLLLJCZ").bind("click", LLCZ);
     $("#inputHFSJHM").bind("blur", HFSJCheck);
     $("#inputLLSJHM").bind("blur", LLSJCheck);
+    $("#span_content_info_left_zffs_zfb").bind("click", ToZFFS);
+    $("#span_content_info_left_zffs_wx").bind("click", ToZFFS);
+    SelectZFB();
 });
-
+//标题切换
 function HeadActive() {
     $(".divstep").each(function () {
         $(this).find("span").each(function () {
@@ -33,7 +36,7 @@ function HeadActive() {
     });
     Load(this.id);
 }
-
+//话费、流量切换
 function Load(id) {
     if (id === "divHFCZ") {
         $("#div_HFCZ").css("display", "block");
@@ -44,7 +47,7 @@ function Load(id) {
         $("#div_LLCZ").css("display", "block");
     }
 }
-
+//选择话费
 function SelectHF() {
     $(".span_content_info_HF").each(function () {
         $(this).css("background-color", "#fff");
@@ -54,7 +57,7 @@ function SelectHF() {
     $(this).css("color", "#fff");
     $("#inputGXZF").val(parseFloat(RTrim($(this).html(), "元")) * 0.999 + "元");
 }
-
+//选择流量
 function SelectLL() {
     $(".span_content_info_LL").each(function () {
         $(this).css("background-color", "#fff");
@@ -82,8 +85,7 @@ function SelectLL() {
         $("#inputLLJG").val("94元");
 
 }
-
-//手机检查
+//话费手机检查
 function HFSJCheck() {
     if (!ValidateCellPhone($("#inputHFSJHM").val())) {
         $("#inputHFSJHM").css("border-color", "#F2272D");
@@ -103,8 +105,7 @@ function HFSJCheck() {
         return true;
     }
 }
-
-//手机检查
+//流量手机检查
 function LLSJCheck() {
     if (!ValidateCellPhone($("#inputLLSJHM").val())) {
         $("#inputLLSJHM").css("border-color", "#F2272D");
@@ -124,16 +125,17 @@ function LLSJCheck() {
         return true;
     }
 }
-
+//话费充值
 function HFCZ() {
     if (!HFSJCheck()) return;
+    ToZFFS();
 }
-
+//流量充值
 function LLCZ() {
     if (!LLSJCheck()) return;
+    ToZFFS();
 }
-
-//查询手机归属地 
+//话费查询手机归属地 
 function HFSearchMobilePhoneGuiSuArea(MobileNo) {
     $.ajax({
         type: "POST",
@@ -154,8 +156,7 @@ function HFSearchMobilePhoneGuiSuArea(MobileNo) {
         }
     });
 }
-
-//查询手机归属地 
+//流量查询手机归属地 
 function LLSearchMobilePhoneGuiSuArea(MobileNo) {
     $.ajax({
         type: "POST",
@@ -175,4 +176,10 @@ function LLSearchMobilePhoneGuiSuArea(MobileNo) {
 
         }
     });
+}
+//转到支付方式页面
+function ToZFFS() {
+    window.location.href = getRootPath() + "/Business/HFCZ/ZFFS";
+    //$("#span_content_info_left_zffs_zfb").css("border-color", "#ff6100");
+    //$("#span_content_info_left_zffs_wx").css("border-color", "#ccc");
 }

@@ -65,14 +65,14 @@
 }
 
 .span_content_info_left {
-    display: inline-block; 
+    display: inline-block;
     height: 30px;
     margin-left: 34px;
     margin-top: 10px;
 }
 
 .span_content_info_left_space {
-        display: inline-block; 
+    display: inline-block;
     height: 30px;
     margin-left: 105px;
     margin-top: 10px;
@@ -102,7 +102,7 @@
 
 
 .div_content_info_left {
-    display: block; 
+    display: block;
     height: 30px;
     margin-left: 34px;
     color: #999;
@@ -120,9 +120,9 @@
     border: none;
     cursor: pointer;
     text-align: center;
-        margin-left: 34px;
+    margin-left: 34px;
 }
 
-.input_content_ljzf:hover {
-    background: #31b0d5;
-}
+    .input_content_ljzf:hover {
+        background: #31b0d5;
+    }

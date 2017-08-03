@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "ZFFS";
+    Layout = "~/Areas/Business/Views/Shared/_ListLayout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link href="@Url.Content("~/Areas/Business/Css/HFCZ/ZFFS.css")" rel="stylesheet" />
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/HFCZ/ZFFS.js")"></script>
+</head>
+<body>
+    <div>
+        <div class="div_content">
+            <div class="div_content_info">
+                <span class="span_content_info_img span_content_info_one"></span>
+                <span class="span_content_info_text" style="color: #5bc0de;">填写信息</span>
+                <em class="em_content_info" style="background-color: #5bc0de;"></em>
+                <span class="span_content_info_img span_content_info_two"></span>
+                <span class="span_content_info_text" style="color: #5bc0de;">支付方式</span>
+                <em class="em_content_info" style="background-color: #cccccc;"></em>
+                <span class="span_content_info_img span_content_info_three"></span>
+                <span class="span_content_info_text">充值完成</span>
+            </div>
+            <div class="div_content_info" style="height: 100px;">
+                <span class="span_content_info_left_zffs" id="span_content_info_left_zffs_zfb"></span>
+                <span class="span_content_info_left_zffs" id="span_content_info_left_zffs_wx"></span>
+            </div>
+            <div class="div_content_info">
+                <input class="input_content_ljzf" id="inputHFLJCZ" value="立即充值" type="button">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
