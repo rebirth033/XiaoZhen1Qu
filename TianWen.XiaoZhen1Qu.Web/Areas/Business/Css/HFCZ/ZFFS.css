@@ -90,3 +90,16 @@
 #span_content_info_left_zffs_wx {
     background-image: url(../images/zffs_wx.png);
 }
+
+.span_content_info_qrcode {
+    width: 174px;
+    height: 174px;
+    display: inline-block;
+    margin-left: 47px;
+    float: left;
+}
+
+.p_content_info {
+    display: block;
+    padding-left: 250px;
+}

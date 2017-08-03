@@ -12,7 +12,6 @@
     $("#inputLLSJHM").bind("blur", LLSJCheck);
     $("#span_content_info_left_zffs_zfb").bind("click", ToZFFS);
     $("#span_content_info_left_zffs_wx").bind("click", ToZFFS);
-    SelectZFB();
 });
 //标题切换
 function HeadActive() {
@@ -85,7 +84,7 @@ function SelectLL() {
         $("#inputLLJG").val("94元");
 
 }
-//话费手机检查
+//话费手机号码检查
 function HFSJCheck() {
     if (!ValidateCellPhone($("#inputHFSJHM").val())) {
         $("#inputHFSJHM").css("border-color", "#F2272D");
@@ -103,6 +102,20 @@ function HFSJCheck() {
         $("#inputHFSJHM").css("border-color", "#999");
         HFSearchMobilePhoneGuiSuArea($("#inputHFSJHM").val());
         return true;
+    }
+}
+//话费手机充值金额检查
+function HFCheck() {
+    var hasSelect = false;
+    $(".span_content_info_HF").each(function () {
+        if ($(this).css("color") !== "rgb(51, 51, 51)")
+            hasSelect = true;
+    });
+    if (hasSelect)
+        return true;
+    else {
+        alert("还未选择充值金额");
+        return false;
     }
 }
 //流量手机检查
@@ -125,14 +138,40 @@ function LLSJCheck() {
         return true;
     }
 }
+//流量手机充值流量检查
+function LLCheck() {
+    var hasSelect = false;
+    $(".span_content_info_LL").each(function () {
+        if ($(this).css("color") !== "rgb(51, 51, 51)")
+            hasSelect = true;
+    });
+    if (hasSelect)
+        return true;
+    else {
+        alert("还未选择充值流量包");
+        return false;
+    }
+}
+//话费充值验证
+function HFValidate() {
+    if (!HFSJCheck()) return false;
+    if (!HFCheck()) return false;
+    return true;
+}
+//流量充值验证
+function LLValidate() {
+    if (!LLSJCheck()) return false;
+    if (!LLCheck()) return false;
+    return true;
+}
 //话费充值
 function HFCZ() {
-    if (!HFSJCheck()) return;
+    if (!HFValidate()) return;
     ToZFFS();
 }
 //流量充值
 function LLCZ() {
-    if (!LLSJCheck()) return;
+    if (!LLValidate()) return;
     ToZFFS();
 }
 //话费查询手机归属地 
@@ -180,6 +219,4 @@ function LLSearchMobilePhoneGuiSuArea(MobileNo) {
 //转到支付方式页面
 function ToZFFS() {
     window.location.href = getRootPath() + "/Business/HFCZ/ZFFS";
-    //$("#span_content_info_left_zffs_zfb").css("border-color", "#ff6100");
-    //$("#span_content_info_left_zffs_wx").css("border-color", "#ccc");
 }
