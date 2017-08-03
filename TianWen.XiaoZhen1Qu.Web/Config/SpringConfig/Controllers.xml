@@ -78,5 +78,10 @@
       <ref object="HFCZBLL"/>
     </property>
   </object>
+  <object id="YXCZController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.YXCZController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="YXCZBLL">
+      <ref object="YXCZBLL"/>
+    </property>
+  </object>
 </objects>
 

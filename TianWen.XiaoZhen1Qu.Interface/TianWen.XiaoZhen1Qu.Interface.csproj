@@ -58,6 +58,7 @@
     <Compile Include="IXXGLBLL.cs" />
     <Compile Include="IYHDLXXBLL.cs" />
     <Compile Include="IYHJBXXBLL.cs" />
+    <Compile Include="IYXCZBLL.cs" />
     <Compile Include="IZHBDBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

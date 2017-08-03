@@ -13,6 +13,7 @@
     $("#spanMMSZ").bind("click", ToMMSZ);
     $("#spanXXGL").bind("click", ToXXGL);
     $("#spanHFCZ").bind("click", ToHFCZ);
+    $("#spanYXCZ").bind("click", ToYXCZ);
     $("#spanWDQZ").parent().bind("click", { type: "WDQZ" }, ExpandSecond_Leaf);
     $("#spanWDZP").parent().bind("click", { type: "WDZP" }, ExpandSecond_Tree);
     $("#spanZWGL").parent().bind("click", { type: "ZWGL" }, ExpandThird);
@@ -90,6 +91,11 @@ function ToXXGL() {
 //话费充值
 function ToHFCZ() {
     $("#iframeright").attr("src", getRootPath() + "/Business/HFCZ/HFCZ?YHID=" + getUrlParam("YHID"));
+}
+
+//游戏充值
+function ToYXCZ() {
+    $("#iframeright").attr("src", getRootPath() + "/Business/YXCZ/YXCZ?YHID=" + getUrlParam("YHID"));
 }
 
 //显示个人中心

@@ -214,6 +214,7 @@
     <Content Include="Areas\Business\Css\XXGL\XXGL.css" />
     <Content Include="Areas\Business\Css\XXGL\XXGLMX.css" />
     <Content Include="Areas\Business\Css\YHGL.css" />
+    <Content Include="Areas\Business\Css\YXCZ\YXCZ.css" />
     <Content Include="Areas\Business\Css\YXYZ.css" />
     <Content Include="Areas\Business\Css\YXYZCG.css" />
     <Content Include="Areas\Business\Css\ZHBD\WBBD.css" />
@@ -249,6 +250,7 @@
     <Content Include="Areas\Business\Scripts\Business\YHDLXX.js" />
     <Content Include="Areas\Business\Scripts\Business\YHGL.js" />
     <Content Include="Areas\Business\Scripts\Business\YHJBXX.js" />
+    <Content Include="Areas\Business\Scripts\Business\YXCZ\YXCZ.js" />
     <Content Include="Areas\Business\Scripts\Business\YXYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\YXYZCG.js" />
     <Content Include="Areas\Business\Scripts\Business\ZHBD\WBBD.js" />
@@ -319,6 +321,7 @@
     <Compile Include="Areas\Business\Controllers\YHDLXXController.cs" />
     <Compile Include="Areas\Business\Controllers\YHGLController.cs" />
     <Compile Include="Areas\Business\Controllers\YHJBXXController.cs" />
+    <Compile Include="Areas\Business\Controllers\YXCZController.cs" />
     <Compile Include="Areas\Business\Controllers\ZHBDController.cs" />
     <Compile Include="Areas\Business\Controllers\ZHMMController.cs" />
     <Compile Include="Global.asax.cs">
@@ -372,6 +375,7 @@
     <Content Include="Areas\Business\Views\XXGL\XXGLMX.cshtml" />
     <Content Include="Areas\Business\Views\HFCZ\HFCZ.cshtml" />
     <Content Include="Areas\Business\Views\HFCZ\ZFFS.cshtml" />
+    <Content Include="Areas\Business\Views\YXCZ\YXCZ.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
