@@ -1,6 +1,7 @@
 ﻿$(document).ready(function () {
     $("#span_content_info_left_zffs_zfb").bind("click", SelectZFB);
     $("#span_content_info_left_zffs_wx").bind("click", SelectWX);
+    $("#inputHFLJCZ").bind("click", LJCZ);
     SelectZFB();
     GenerateQRCode("微信支付,用户名：980361288@qq.com", "span_content_info_qrcode");
 });
@@ -36,4 +37,9 @@ function GenerateQRCode(qrdata, bindtag) {
 
         }
     });
+}
+
+//跳转支付宝支付页面
+function LJCZ() {
+    
 }

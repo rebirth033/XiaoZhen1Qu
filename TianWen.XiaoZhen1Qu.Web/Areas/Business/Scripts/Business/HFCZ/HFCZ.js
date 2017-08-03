@@ -167,15 +167,15 @@ function LLValidate() {
 //话费充值
 function HFCZ() {
     if (!HFValidate()) return;
-    ToZFFS();
+    ToZFFS($("#inputHFSJHM").val(), "HF", "30元");
 }
 //流量充值
 function LLCZ() {
     if (!LLValidate()) return;
-    ToZFFS();
+    ToZFFS($("#inputLLSJHM").val(), "LL", "10M");
 }
 //话费查询手机归属地 
-function HFSearchMobilePhoneGuiSuArea(MobileNo) {
+function HFSearchMobilePhoneGuiSuArea(mobileNo) {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/HFCZ/SearchMobilePhoneGuiSuArea",
@@ -183,7 +183,7 @@ function HFSearchMobilePhoneGuiSuArea(MobileNo) {
         data:
         {
             YHID: getUrlParam("YHID"),
-            MobileNo: MobileNo
+            MobileNo: mobileNo
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -196,7 +196,7 @@ function HFSearchMobilePhoneGuiSuArea(MobileNo) {
     });
 }
 //流量查询手机归属地 
-function LLSearchMobilePhoneGuiSuArea(MobileNo) {
+function LLSearchMobilePhoneGuiSuArea(mobileNo) {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/HFCZ/SearchMobilePhoneGuiSuArea",
@@ -204,7 +204,7 @@ function LLSearchMobilePhoneGuiSuArea(MobileNo) {
         data:
         {
             YHID: getUrlParam("YHID"),
-            MobileNo: MobileNo
+            MobileNo: mobileNo
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -217,6 +217,6 @@ function LLSearchMobilePhoneGuiSuArea(MobileNo) {
     });
 }
 //转到支付方式页面
-function ToZFFS() {
-    window.location.href = getRootPath() + "/Business/HFCZ/ZFFS";
+function ToZFFS(mobileNo, type, standard) {
+    window.location.href = getRootPath() + "/Business/HFCZ/ZFFS?MobileNo=" + mobileNo + "&Type=" + type + "&Standard=" + standard;
 }
