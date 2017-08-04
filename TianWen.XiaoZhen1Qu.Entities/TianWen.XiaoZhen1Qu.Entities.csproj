@@ -62,6 +62,7 @@
     <Compile Include="Maps\YHJBXX_Map.cs" />
     <Compile Include="Maps\YHSCXX_Map.cs" />
     <Compile Include="Maps\YHXX_Map.cs" />
+    <Compile Include="Maps\YXJBXX_Map.cs" />
     <Compile Include="Maps\ZDDLXX_Map.cs" />
     <Compile Include="Models\CODES.cs" />
     <Compile Include="Models\EncryptionHelper.cs" />
@@ -74,6 +75,7 @@
     <Compile Include="Models\YHJBXX.cs" />
     <Compile Include="Models\YHSCXX.cs" />
     <Compile Include="Models\YHXX.cs" />
+    <Compile Include="Models\YXJBXX.cs" />
     <Compile Include="Models\ZDDLXX.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -13,19 +13,49 @@
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/YXCZ/YXCZ.js")"></script>
 </head>
 <body>
-    <div class="div_photo">
+    <div class="div_content">
         <div class="divstep" id="divDKCZ">
             <span class="spanstep" id="spanDKCZ">点卡充值</span>
             <em class="emstep" id="emDKCZ"></em>
         </div>
-        <div class="divstep" id="divJBCZ">
-            <span class="spanstep" id="spanJBCZ">金币充值</span>
-            <em class="emstep" id="emJBCZ"></em>
-        </div>
+        @*<div class="divstep" id="divJBCZ">
+                <span class="spanstep" id="spanJBCZ">金币充值</span>
+                <em class="emstep" id="emJBCZ"></em>
+            </div>*@
         <div class="divstep">
             <span class="spanstep">&nbsp;</span>
-            <em class="emstep" style="width: 640px;"></em>
+            <em class="emstep" style="width: 770px;"></em>
         </div>
+    </div>
+    <div id="div_content_dkcz" style="display: block">
+        <div class="div_content" id="div_content_yxxz" style="display: none">
+            <div class="div_content" id="div_content_yxbq">
+            </div>
+            <div class="div_content" id="div_content_yxmc">
+            </div>
+        </div>
+        <div class="div_content" id="div_content_yxcz">
+
+            <div class="div_content_info"><span class="span_content_info_left">您选择的游戏为</span><span class="span_content_info_yxmc">传奇3</span><span class="span_content_info_cxxz">重新选择</span></div>
+            <div class="div_content_info">
+                <span class="span_content_info_left">面值：</span>
+                <div class="div_content_info_right">
+                    <div class="div_content_info_right_mz"><input type="radio" /><span>1元</span></div>
+                    <div class="div_content_info_right_mz"><input type="radio" /><span>10元</span></div>
+                    <div class="div_content_info_right_mz"><input type="radio" /><span>30元</span></div>
+                    <div class="div_content_info_right_mz"><input type="radio" /><span>35元</span></div>
+                    <div class="div_content_info_right_mz"><input type="radio" /><span>45元</span></div>
+                    <div class="div_content_info_right_mz"><input type="radio" /><span>50元</span></div>
+                </div>
+            </div>
+            <div class="div_content_info">
+                <span class="span_content_info_left">售价：</span>
+                <input class="input_content_gxzf" id="inputGXZF" value="0.0元" type="text">
+            </div>
+        </div>
+    </div>
+    <div id="div_content_jbcz" style="display: none">
+
     </div>
 </body>
 </html>
