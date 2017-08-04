@@ -9,7 +9,9 @@
     $("#inputHFLJCZ").bind("click", HFCZ);
     $("#inputLLLJCZ").bind("click", LLCZ);
     $("#inputHFSJHM").bind("blur", HFSJCheck);
+    $("#inputHFSJHM").bind("keyup", HFSJKeyUp);
     $("#inputLLSJHM").bind("blur", LLSJCheck);
+    $("#inputLLSJHM").bind("keyup", LLSJKeyUp);
     $("#span_content_info_left_zffs_zfb").bind("click", ToZFFS);
     $("#span_content_info_left_zffs_wx").bind("click", ToZFFS);
 });
@@ -86,21 +88,21 @@ function SelectLL() {
 }
 //话费手机号码检查
 function HFSJCheck() {
-    if (!ValidateCellPhone($("#inputHFSJHM").val())) {
+    if (!ValidateCellPhone($("#inputHFSJHM").val().replace(/\s/g, ""))) {
         $("#inputHFSJHM").css("border-color", "#F2272D");
         $("#span_content_info_hfsj").css("color", "#F2272D");
         $("#span_content_info_hfsj").html("手机号码格式不正确");
         return false;
     }
-    else if ($("#inputHFSJHM").val().length === 0) {
+    else if ($("#inputHFSJHM").val().replace(/\s/g, "").length === 0) {
         $("#inputHFSJHM").css("border-color", "#F2272D");
         $("#span_content_info_hfsj").css("color", "#F2272D");
         $("#span_content_info_hfsj").html("请输入手机号");
         return false;
     }
     else {
-        $("#inputHFSJHM").css("border-color", "#999");
-        HFSearchMobilePhoneGuiSuArea($("#inputHFSJHM").val());
+        $("#inputHFSJHM").css("border-color", "#ccc");
+        HFSearchMobilePhoneGuiSuArea($("#inputHFSJHM").val().replace(/\s/g, ""));
         return true;
     }
 }
@@ -120,21 +122,21 @@ function HFCheck() {
 }
 //流量手机检查
 function LLSJCheck() {
-    if (!ValidateCellPhone($("#inputLLSJHM").val())) {
+    if (!ValidateCellPhone($("#inputLLSJHM").val().replace(/\s/g, ""))) {
         $("#inputLLSJHM").css("border-color", "#F2272D");
         $("#span_content_info_llsj").css("color", "#F2272D");
         $("#span_content_info_llsj").html("手机号码格式不正确");
         return false;
     }
-    else if ($("#inputLLSJHM").val().length === 0) {
+    else if ($("#inputLLSJHM").val().replace(/\s/g, "").length === 0) {
         $("#inputLLSJHM").css("border-color", "#F2272D");
         $("#span_content_info_llsj").css("color", "#F2272D");
         $("#span_content_info_llsj").html("请输入手机号");
         return false;
     }
     else {
-        $("#inputLLSJHM").css("border-color", "#999");
-        LLSearchMobilePhoneGuiSuArea($("#inputLLSJHM").val());
+        $("#inputLLSJHM").css("border-color", "#ccc");
+        LLSearchMobilePhoneGuiSuArea($("#inputLLSJHM").val().replace(/\s/g, ""));
         return true;
     }
 }
@@ -219,4 +221,18 @@ function LLSearchMobilePhoneGuiSuArea(mobileNo) {
 //转到支付方式页面
 function ToZFFS(mobileNo, type, standard) {
     window.location.href = getRootPath() + "/Business/HFCZ/ZFFS?MobileNo=" + mobileNo + "&Type=" + type + "&Standard=" + standard;
+}
+//键入话费手机号触发
+function HFSJKeyUp() {
+    if (event.keyCode !== 8 && ($("#inputHFSJHM").val().replace(/\s/g, "").length === 3 || $("#inputHFSJHM").val().replace(/\s/g, "").length === 7))
+        $("#inputHFSJHM").val($("#inputHFSJHM").val() + " ");
+    if ($("#inputHFSJHM").val().replace(/\s/g, "").length === 11)
+        HFSJCheck();
+}
+//键入流量手机号触发
+function LLSJKeyUp() {
+    if (event.keyCode !== 8 && ($("#inputLLSJHM").val().replace(/\s/g, "").length === 3 || $("#inputLLSJHM").val().replace(/\s/g, "").length === 7))
+        $("#inputLLSJHM").val($("#inputLLSJHM").val() + " ");
+    if ($("#inputLLSJHM").val().replace(/\s/g, "").length === 11)
+        LLSJCheck();
 }
