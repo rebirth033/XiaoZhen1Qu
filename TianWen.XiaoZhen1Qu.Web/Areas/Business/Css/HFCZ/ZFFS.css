@@ -71,6 +71,10 @@
     margin-left: 58px;
 }
 
+.input_content_ljzf:hover {
+    background: #31b0d5;
+}
+
 .span_content_info_left_zffs {
     display: inline-block;
     width: 182px;

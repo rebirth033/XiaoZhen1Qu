@@ -116,9 +116,47 @@
     float: left;
 }
 
-.input_content_gxzf {
+.input_content_sj {
     font-size: 16px;
     border: none;
     color: #ff6100;
     height: 40px;
+}
+
+.radio_content_info_right_mz {
+    display: inline-block;
+    float: left;
+    line-height: 20px;
+    margin-top: 14px !important;
+}
+.radio_content_info_right_mz:hover {
+    color: #5bc0de;
+
+}
+
+.span_content_info_right_mz {
+    font-size: 14px;
+    color: #333;
+    display: inline-block;
+    float: left;
+    margin-left: 5px;
+}
+
+.input_content_ljzf {
+    font-size: 14px;
+    width: 135px;
+    height: 40px;
+    cursor: pointer;
+    background: #5bc0de;
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    margin-left: 98px;
+    margin-top: 14px
+}
+
+.input_content_ljzf:hover {
+    background: #31b0d5;
 }

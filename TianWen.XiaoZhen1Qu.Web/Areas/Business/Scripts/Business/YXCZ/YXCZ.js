@@ -4,6 +4,9 @@
     $("#emDKCZ").css("background-color", "#5bc0de");
     $("#emDKCZ").css("height", "2px");
     $(".divstep").bind("click", HeadActive);
+    $("#span_content_info_cxxz").bind("click", CCXZ);
+    $("input[type='radio']").bind("click", MZXZ);
+    $(".radio_content_info_right_mz").bind("click", CalSJ);
     Load("divDKCZ");
 }); 
 //标题切换
@@ -89,10 +92,10 @@ function LoadYXMC(SZM) {
             if (xml.Result === 1) {
                 var html = "";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += '<span class=\"span_yxmc\">' + xml.list[i].YXMC+ '</span>';
+                    html += '<span class="span_yxmc" onclick="YXCZ(\'' + xml.list[i].YXMC + '\')">' + xml.list[i].YXMC + '</span>';
                 }
                 if (xml.list.length === 0)
-                    html += '<span class=\"span_yxmc\">该字母下暂无游戏</span>';
+                    html += '<span class="span_yxmc">该字母下暂无游戏</span>';
                 $("#div_content_yxmc").html(html);
             }
         },
@@ -109,4 +112,27 @@ function LoadRMYX() {
     $("#emRMYX").css("height", "2px");
     $("#emRMYX").css("background-color", "#5bc0de");
     LoadYXMC("divRMYX");
+}
+//重新选择
+function CCXZ() {
+    $("#div_content_yxcz").css("display", "none");
+    $("#div_content_yxxz").css("display", "block");
+}
+//游戏充值
+function YXCZ(yxmc) {
+    $("#div_content_yxcz").css("display", "block");
+    $("#div_content_yxxz").css("display", "none");
+    $("#span_content_info_yxmc").html(yxmc);
+}
+//面值选择
+function MZXZ() {
+    $("input[type='radio']").each(function () {
+        $(this).prop("checked", false);
+    });
+    $(this).prop("checked", true);
+}
+//获取售价
+function CalSJ() {
+    var obj = $(this).parent().find("span");
+    $("#inputSJ").val(parseFloat(RTrim(obj[0].innerHTML, "元")) * 0.985 + "元");
 }
