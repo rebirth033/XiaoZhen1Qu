@@ -3,7 +3,8 @@ create table YXJBXX
 (
   yxjbxxid VARCHAR2(50) not null,
   yxmc     VARCHAR2(200),
-  sfrmyx   NUMBER(1)
+  sfrmyx   NUMBER(1),
+  yxmcszm  VARCHAR2(2)
 )
 tablespace USERS
   pctfree 10
@@ -22,6 +23,8 @@ comment on column YXJBXX.yxmc
   is '游戏名称';
 comment on column YXJBXX.sfrmyx
   is '是否热门游戏';
+comment on column YXJBXX.yxmcszm
+  is '游戏名称首字母';
 -- Create/Recreate primary, unique and foreign key constraints 
 alter table YXJBXX
   add primary key (YXJBXXID)
