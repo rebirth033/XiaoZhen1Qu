@@ -54,8 +54,13 @@
 .span_content_info_qhcs {
     font-size: 12px;
     color: #999;
-    cursor: pointer;
 }
+
+    .span_content_info_qhcs:hover {
+        cursor: pointer;
+        color: #ef6100;
+        text-decoration: underline;
+    }
 
 .divLeft {
     color: gray;
@@ -102,27 +107,26 @@
 
 .div_dropdown {
     float: left;
-    width: 294px;
+    width: 530px;
     height: 260px;
     background-color: #fff;
     border: 1px solid #ccc;
-
 }
 
 .span_xzq {
     display: inline-block;
-    width: 70px;
+    width: 130px;
     height: 30px;
     text-align: center;
     padding-top: 3px;
-    cursor: pointer
+    cursor: pointer;
 }
 
-.span_xzq:hover {
-    background-color: #5bc0de;
-    color: #fff;
-    font-weight: 700;
-}
+    .span_xzq:hover {
+        background-color: #5bc0de;
+        color: #fff;
+        font-weight: 700;
+    }
 
 .input_content {
     width: 210px;

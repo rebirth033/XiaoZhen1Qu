@@ -9,5 +9,9 @@ namespace TianWen.XiaoZhen1Qu.Interface
     public interface ICommonBLL
     {
         object GetIDByJCXXIDAndLBID(string JCXXID, string LBID);
+
+        object GetDistrictByGrade(string Grade);
+
+        object GetDistrictBySuperCode(string SuperCode); 
     }
 }

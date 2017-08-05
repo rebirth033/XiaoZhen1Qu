@@ -18,5 +18,19 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             object result = CommonBLL.GetIDByJCXXIDAndLBID(JCXXID, LBID);
             return Json(result);
         }
+
+        public JsonResult GetDistrictByGrade()
+        {
+            string Grade = Request["Grade"];
+            object result = CommonBLL.GetDistrictByGrade(Grade);
+            return Json(result);
+        }
+
+        public JsonResult GetDistrictBySuperCode()
+        {
+            string SupserCode = Request["SupserCode"];
+            object result = CommonBLL.GetDistrictBySuperCode(SupserCode);
+            return Json(result);
+        }
     }
 }

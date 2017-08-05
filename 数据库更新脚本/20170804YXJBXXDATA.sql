@@ -1,5 +1,5 @@
-set feedback off
-set define off
+set feedback off;
+set define off;
 insert into yxjbxx (YXJBXXID, YXMC, SFRMYX, YXMCSZM)
 values ('1', '艾尔之光', 0, 'A');
 
@@ -645,4 +645,5 @@ values ('214', '征途怀旧版', 0, 'Z');
 insert into yxjbxx (YXJBXXID, YXMC, SFRMYX, YXMCSZM)
 values ('215', '战网一卡通', 0, 'Z');
 
-commit();
+set feedback on;
+set define on;

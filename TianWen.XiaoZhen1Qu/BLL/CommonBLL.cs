@@ -12,7 +12,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
 {
     public class CommonBLL : BaseBLL, ICommonBLL
     {
-
+        //根据基础信息ID和类别ID获取
         public object GetIDByJCXXIDAndLBID(string JCXXID, string LBID)
         {
             try
@@ -27,6 +27,44 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     }
                 }
                 return new { Result = EnResultType.Failed, Message = "不存在" };
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("CommonBLL", "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                return new
+                {
+                    Result = EnResultType.Failed,
+                    Message = "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!"
+                };
+            }
+        }
+
+        //根据行政区级别获取行政区
+        public object GetDistrictByGrade(string Grade)
+        {
+            try
+            {
+                List<DISTRICT> districts = DAO.GetObjectList<DISTRICT>(string.Format("FROM DISTRICT WHERE GRADE = '{0}' ORDER BY CODE", Grade)).ToList();
+                return new { Result = EnResultType.Success, list = districts };
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("CommonBLL", "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                return new
+                {
+                    Result = EnResultType.Failed,
+                    Message = "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!"
+                };
+            }
+        }
+
+        //根据父级行政区编码获取行政区
+        public object GetDistrictBySuperCode(string SuperCode)
+        {
+            try
+            {
+                List<DISTRICT> districts = DAO.GetObjectList<DISTRICT>(string.Format("FROM DISTRICT WHERE SuperCode = '{0}' ORDER BY CODE", SuperCode)).ToList();
+                return new { Result = EnResultType.Success, list = districts };
             }
             catch (Exception ex)
             {
