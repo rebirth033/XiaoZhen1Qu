@@ -42,8 +42,10 @@ function GetCitys(CODE) {
         success: function (xml) {
             if (xml.Result === 1) {
                 var html = "";
-                for (var i = 0; i < xml.list.length; i++)
-                    html += '<span class="span_xzq" onclick="SelectXZQ(\'' + xml.list[i].NAME + '\')">' + xml.list[i].NAME + '</span>';
+                for (var i = 0; i < xml.list.length; i++) {
+                    var CityName = xml.list[i].NAME.replace("市", "").replace("县", "").replace("地区", "").replace("林区", "");
+                    html += '<span class="span_xzq" onclick="SelectXZQ(\'' + CityName + '\')">' + CityName + '</span>';
+                }
                 $("#div_xzq").html(html);
                 $("#div_xzq").css("display", "block");
             }
