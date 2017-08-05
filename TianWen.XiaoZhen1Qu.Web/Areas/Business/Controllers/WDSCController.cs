@@ -9,7 +9,7 @@ using TianWen.XiaoZhen1Qu.Web.Areas.Business.Common;
 
 namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 {
-    public class WDSCController:BaseController
+    public class WDSCController : BaseController
     {
         public IWDSCBLL WDSCBLL { get; set; }
 

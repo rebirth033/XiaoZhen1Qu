@@ -145,6 +145,7 @@
     <Content Include="Areas\Business\Css\HFCZ\HFCZ.css" />
     <Content Include="Areas\Business\Css\HFCZ\ZFFS.css" />
     <Content Include="Areas\Business\Css\images\arrow_down.png" />
+    <Content Include="Areas\Business\Css\images\arrow_down_big.png" />
     <Content Include="Areas\Business\Css\images\arrow_up.png" />
     <Content Include="Areas\Business\Css\images\cellphone.png" />
     <Content Include="Areas\Business\Css\images\clip.png" />
@@ -211,6 +212,7 @@
     <Content Include="Areas\Business\Css\RZGL\RZGL.css" />
     <Content Include="Areas\Business\Css\WDFB.css" />
     <Content Include="Areas\Business\Css\WDSC.css" />
+    <Content Include="Areas\Business\Css\WZCX\WZCX.css" />
     <Content Include="Areas\Business\Css\XXGL\XXGL.css" />
     <Content Include="Areas\Business\Css\XXGL\XXGLMX.css" />
     <Content Include="Areas\Business\Css\YHGL.css" />
@@ -245,6 +247,7 @@
     <Content Include="Areas\Business\Scripts\Business\RZGL\RZGL.js" />
     <Content Include="Areas\Business\Scripts\Business\WDFB.js" />
     <Content Include="Areas\Business\Scripts\Business\WDSC.js" />
+    <Content Include="Areas\Business\Scripts\Business\WZCX\WZCX.js" />
     <Content Include="Areas\Business\Scripts\Business\XXGL\XXGL.js" />
     <Content Include="Areas\Business\Scripts\Business\XXGL\XXGLMX.js" />
     <Content Include="Areas\Business\Scripts\Business\YHDLXX.js" />
@@ -317,6 +320,7 @@
     <Compile Include="Areas\Business\Controllers\RZGLController.cs" />
     <Compile Include="Areas\Business\Controllers\WDFBController.cs" />
     <Compile Include="Areas\Business\Controllers\WDSCController.cs" />
+    <Compile Include="Areas\Business\Controllers\WZCXController.cs" />
     <Compile Include="Areas\Business\Controllers\XXGLController.cs" />
     <Compile Include="Areas\Business\Controllers\YHDLXXController.cs" />
     <Compile Include="Areas\Business\Controllers\YHGLController.cs" />
@@ -376,6 +380,7 @@
     <Content Include="Areas\Business\Views\HFCZ\HFCZ.cshtml" />
     <Content Include="Areas\Business\Views\HFCZ\ZFFS.cshtml" />
     <Content Include="Areas\Business\Views\YXCZ\YXCZ.cshtml" />
+    <Content Include="Areas\Business\Views\WZCX\WZCX.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

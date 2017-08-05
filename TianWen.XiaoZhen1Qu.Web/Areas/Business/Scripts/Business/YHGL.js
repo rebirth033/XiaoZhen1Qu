@@ -14,6 +14,7 @@
     $("#spanXXGL").bind("click", ToXXGL);
     $("#spanHFCZ").bind("click", ToHFCZ);
     $("#spanYXCZ").bind("click", ToYXCZ);
+    $("#spanWZCX").bind("click", ToWZCX);
     $("#spanWDQZ").parent().bind("click", { type: "WDQZ" }, ExpandSecond_Leaf);
     $("#spanWDZP").parent().bind("click", { type: "WDZP" }, ExpandSecond_Tree);
     $("#spanZWGL").parent().bind("click", { type: "ZWGL" }, ExpandThird);
@@ -96,6 +97,11 @@ function ToHFCZ() {
 //游戏充值
 function ToYXCZ() {
     $("#iframeright").attr("src", getRootPath() + "/Business/YXCZ/YXCZ?YHID=" + getUrlParam("YHID"));
+}
+
+//违章查询
+function ToWZCX() {
+    $("#iframeright").attr("src", getRootPath() + "/Business/WZCX/WZCX?YHID=" + getUrlParam("YHID"));
 }
 
 //显示个人中心
