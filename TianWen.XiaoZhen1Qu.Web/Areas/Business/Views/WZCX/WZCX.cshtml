@@ -14,70 +14,83 @@
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/WZCX/WZCX.js")"></script>
 </head>
 <body>
-    <div class="div_content_head"><span class="span_div_content_title">全国交通违章查询</span></div>
+    <div class="div_content_head">
+        <span class="span_div_content_title">全国交通违章查询</span>
+    </div>
     <em class="em_content_info"></em>
-    <div class="div_content_info">
+    <div class="div_content_info" style="z-index: 999">
         <div class="divLeft">
             <span class="spanFWCZ">查询区域</span>
         </div>
         <div class="divRight">
-            <span class="span_content_info_xzq" id="span_content_info_xzq">福州</span>
-            <span class="span_content_info_qhcs" id="span_content_info_qhcs">[切换城市]</span>
+            <div class="spanCPHOut">
+                <div style="width: 200px">
+                    <span class="span_content_info_xzq" id="span_content_info_xzq">福州</span>
+                    <span class="span_content_info_qhcs" id="span_content_info_qhcs">[切换城市]</span>
+                </div>
+                    <div id="divFWCX" class="div_dropdown">
+                        <span class="span_xzq">北京市</span>
+                        <span class="span_xzq">上海市</span>
+                        <span class="span_xzq">广州市</span>
+                        <span class="span_xzq">深圳市</span>
+                    </div>
+                </div>
+
         </div>
     </div>
-<div class="div_content_info">
-    <div class="divLeft">
-        <span class="spanFWCZ">车牌号</span>
-    </div>
-    <div class="divRight">
-        <div class="spanCPHOut">
-            <div id="divCPHText" class="spanCPHIn SRK">
-                <span id="spanFWCX" column="CX" class="spanWZCX">闽</span>
-                <div class="divFWQKArrow"></div>
+    <div class="div_content_info" style="z-index: 998">
+        <div class="divLeft">
+            <span class="spanFWCZ">车牌号</span>
+        </div>
+        <div class="divRight">
+            <div class="spanCPHOut">
+                <div id="divCPHText" class="spanCPHIn SRK">
+                    <span id="spanFWCX" column="CX" class="spanWZCX">闽</span>
+                    <div class="divFWQKArrow"></div>
+                </div>
+                <div id="divFWCX" class="div_dropdown">
+                </div>
             </div>
-            <div id="divFWCX" class="divdropdown">
+            <input class="input_content" id="inputHFSJHM" style="width: 146px;" type="text" value="A">
+        </div>
+        <div class="divLeft">
+            <span class="spanFWCZ">购车时间</span>
+        </div>
+        <div class="divRight">
+            <div class="spanCPHOut">
+                <div id="divFWCXText" class="spanCPHIn SRK" style="width: 210px;">
+                    <span id="spanFWCX" column="CX" class="spanWZCX"></span>
+                    <div class="divFWQKArrow"></div>
+                </div>
+                <div id="divFWCX" class="divdropdown">
+                </div>
             </div>
         </div>
-        <input class="input_content" id="inputHFSJHM" style="width: 146px;" type="text" value="A">
     </div>
-    <div class="divLeft">
-        <span class="spanFWCZ">购车时间</span>
-    </div>
-    <div class="divRight">
-        <div class="spanCPHOut">
-            <div id="divFWCXText" class="spanCPHIn SRK" style="width: 210px;">
-                <span id="spanFWCX" column="CX" class="spanWZCX"></span>
-                <div class="divFWQKArrow"></div>
-            </div>
-            <div id="divFWCX" class="divdropdown">
-            </div>
-        </div>
-    </div>
-</div>
-<div class="div_content_info">
-    <div class="divLeft">
-        <span class="spanFWCZ">车架号</span>
-    </div>
-    <div class="divRight">
-        <input class="input_content" id="inputCJH" maxlength="13" type="text" value="">
-    </div>
-    <div class="divLeft">
-        <span class="spanFWCZ">发动机号</span>
-    </div>
-    <div class="divRight">
-        <input class="input_content" id="inputFDJH" maxlength="13" type="text" value="">
-    </div>
-</div>
-<div class="div_content_info">
-    <div class="divLeft">
-        <span class="spanFWCZ">手机号码</span>
-    </div>
-    <div class="divRight">
-        <input class="input_content" id="inputSJHM" maxlength="13" type="text" value="">
-    </div>
-</div>
     <div class="div_content_info">
-       <input class="input_content_mfcx" id="input_content" type="button" value="免费查询" />
+        <div class="divLeft">
+            <span class="spanFWCZ">车架号</span>
+        </div>
+        <div class="divRight">
+            <input class="input_content" id="inputCJH" maxlength="13" type="text" value="">
+        </div>
+        <div class="divLeft">
+            <span class="spanFWCZ">发动机号</span>
+        </div>
+        <div class="divRight">
+            <input class="input_content" id="inputFDJH" maxlength="13" type="text" value="">
+        </div>
+    </div>
+    <div class="div_content_info">
+        <div class="divLeft">
+            <span class="spanFWCZ">手机号码</span>
+        </div>
+        <div class="divRight">
+            <input class="input_content" id="inputSJHM" maxlength="13" type="text" value="">
+        </div>
+    </div>
+    <div class="div_content_info">
+        <input class="input_content_mfcx" id="input_content" type="button" value="免费查询" />
     </div>
 </body>
 </html>
