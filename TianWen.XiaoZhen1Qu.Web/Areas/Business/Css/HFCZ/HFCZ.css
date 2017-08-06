@@ -87,9 +87,10 @@
     display: inline-block;
     cursor: text;
     width: 316px;
+    margin-left: 4px;
 }
 
-.input_content_gxzf {
+.span_content_gxzf {
     font-size: 16px;
     border: none;
     color: #ff6100;

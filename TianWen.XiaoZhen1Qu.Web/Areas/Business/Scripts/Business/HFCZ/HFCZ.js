@@ -56,7 +56,7 @@ function SelectHF() {
     });
     $(this).css("background-color", "#5bc0de");
     $(this).css("color", "#fff");
-    $("#inputGXZF").val(parseFloat(RTrim($(this).html(), "元")) * 0.999 + "元");
+    $("#spanGXZF").html(parseFloat(RTrim($(this).html(), "元")) * 0.999 + "元");
 }
 //选择流量
 function SelectLL() {
@@ -67,23 +67,23 @@ function SelectLL() {
     $(this).css("background-color", "#5bc0de");
     $(this).css("color", "#fff");
     if ($(this).html() === "10M")
-        $("#inputLLJG").val("2.85元");
+        $("#spanLLJG").html("2.85元");
     if ($(this).html() === "10M")
-        $("#inputLLJG").val("2.85元");
+        $("#spanLLJG").html("2.85元");
     if ($(this).html() === "30M")
-        $("#inputLLJG").val("4.75元");
+        $("#spanLLJG").html("4.75元");
     if ($(this).html() === "70M")
-        $("#inputLLJG").val("7.5元");
+        $("#spanLLJG").vhtmlal("7.5元");
     if ($(this).html() === "100M")
-        $("#inputLLJG").val("10元");
+        $("#spanLLJG").html("10元");
     if ($(this).html() === "300M")
-        $("#inputLLJG").val("15元");
+        $("#spanLLJG").html("15元");
     if ($(this).html() === "500M")
-        $("#inputLLJG").val("28.5元");
+        $("#spanLLJG").html("28.5元");
     if ($(this).html() === "1G")
-        $("#inputLLJG").val("48元");
+        $("#spanLLJG").html("48元");
     if ($(this).html() === "2G")
-        $("#inputLLJG").val("94元");
+        $("#spanLLJG").html("94元");
 
 }
 //话费手机号码检查
