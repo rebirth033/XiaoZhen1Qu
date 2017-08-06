@@ -84,7 +84,6 @@ function SelectLL() {
         $("#spanLLJG").html("48元");
     if ($(this).html() === "2G")
         $("#spanLLJG").html("94元");
-
 }
 //话费手机号码检查
 function HFSJCheck() {

@@ -1,5 +1,6 @@
 ﻿$(document).ready(function () {
     $("#span_content_info_qhcs").bind("click", LoadXZQByGrade);
+    $("body").bind("click", CloseXZQ);
 });
 
 function LoadXZQByGrade() {
@@ -58,5 +59,9 @@ function GetCitys(CODE) {
 
 function SelectXZQ(NAME) {
     $("#span_content_info_xzq").html(NAME);
+    $("#div_xzq").css("display", "none");
+}
+
+function CloseXZQ() {
     $("#div_xzq").css("display", "none");
 }
