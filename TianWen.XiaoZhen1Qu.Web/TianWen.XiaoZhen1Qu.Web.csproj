@@ -137,6 +137,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Business\Aspx\png.aspx" />
+    <Content Include="Areas\Business\Css\BZZX\BZZX.css" />
     <Content Include="Areas\Business\Css\FBCG.css" />
     <Content Include="Areas\Business\Css\FWCZ.css" />
     <Content Include="Areas\Business\Css\GRZL\GRZL.css" />
@@ -231,6 +232,7 @@
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\js\bootstrap.js" />
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\js\bootstrap.min.js" />
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\js\npm.js" />
+    <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\Common.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\Regular.js" />
     <Content Include="Areas\Business\Scripts\Business\FWCG\FWCG.js" />
@@ -311,6 +313,7 @@
     <Compile Include="Areas\Business\BusinessAreaRegistration.cs" />
     <Compile Include="Areas\Business\Common\BaseController.cs" />
     <Compile Include="Areas\Business\Common\QRCodeHelper.cs" />
+    <Compile Include="Areas\Business\Controllers\BZZXController.cs" />
     <Compile Include="Areas\Business\Controllers\CommonController.cs" />
     <Compile Include="Areas\Business\Controllers\FBCGController.cs" />
     <Compile Include="Areas\Business\Controllers\FWCZController.cs" />
@@ -381,6 +384,7 @@
     <Content Include="Areas\Business\Views\HFCZ\ZFFS.cshtml" />
     <Content Include="Areas\Business\Views\YXCZ\YXCZ.cshtml" />
     <Content Include="Areas\Business\Views\WZCX\WZCX.cshtml" />
+    <Content Include="Areas\Business\Views\BZZX\BZZX.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

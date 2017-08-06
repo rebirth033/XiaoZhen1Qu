@@ -101,6 +101,7 @@ function HFSJCheck() {
     }
     else {
         $("#inputHFSJHM").css("border-color", "#ccc");
+        $("#span_content_info_hfsj").html("");
         HFSearchMobilePhoneGuiSuArea($("#inputHFSJHM").val().replace(/\s/g, ""));
         return true;
     }
@@ -135,6 +136,7 @@ function LLSJCheck() {
     }
     else {
         $("#inputLLSJHM").css("border-color", "#ccc");
+        $("#span_content_info_llsj").html("");
         LLSearchMobilePhoneGuiSuArea($("#inputLLSJHM").val().replace(/\s/g, ""));
         return true;
     }

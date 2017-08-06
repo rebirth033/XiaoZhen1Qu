@@ -38,6 +38,10 @@
     padding-top: 33px;
 }
 
+.span_conent_info {
+    margin-left: 10px;
+}
+
 .span_content_info_HF {
     border: 1px solid #ccc;
     border-radius: 4px;

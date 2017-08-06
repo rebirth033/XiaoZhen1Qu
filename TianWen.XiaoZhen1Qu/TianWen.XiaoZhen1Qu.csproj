@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\BaseBLL.cs" />
+    <Compile Include="BLL\BZZXBLL.cs" />
     <Compile Include="BLL\CommonBLL.cs" />
     <Compile Include="BLL\FWCZJBXXBLL.cs" />
     <Compile Include="BLL\HFCZBLL.cs" />
