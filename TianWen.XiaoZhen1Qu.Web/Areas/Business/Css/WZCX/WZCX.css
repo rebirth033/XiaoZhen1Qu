@@ -65,14 +65,14 @@
 .divLeft {
     color: gray;
     text-align: right;
-    margin-left: 40px;
+    margin-left: 30px;
     display: inline-block;
     width: 65px;
     font-size: 14px;
 }
 
 .divRight {
-    display: inline;
+    display: inline-block;
     margin-left: 15px;
     position: relative;
 }
@@ -90,8 +90,10 @@
 
 .spanCPHOut {
     display: inline-block;
+    float:left;
     width: 60px;
     height: 34px;
+    margin-right: 10px;
 }
 
 .spanCPHIn {
@@ -101,8 +103,12 @@
     height: 34px;
     border-radius: 4px;
     font-size: 14px;
-    padding-top: 4px;
-    padding-left: 8px;
+}
+
+.spanXZQJC {
+    display: inline-block;
+    margin-top: 4px;
+    margin-left: 8px;
 }
 
 .div_dropdown {
@@ -111,6 +117,7 @@
     height: 242px;
     background-color: #fff;
     border: 1px solid #ccc;
+    display: none;
 }
 
 .span_xzq {
@@ -129,7 +136,7 @@
     }
 
 .input_content {
-    width: 210px;
+    width: 260px;
     border: 1px solid #ccc;
     border-radius: 4px;
     height: 34px;
@@ -154,3 +161,18 @@
     .input_content_mfcx:hover {
         background-color: #31b0d5;
     }
+
+:-ms-input-placeholder.input_content {
+    color: #999;
+}
+
+.ul_right {
+    width: 500px;
+    display: inline-block;
+    margin-left: -40px;
+}
+
+.li_right {
+    display: inline-block;
+    float: left;
+}

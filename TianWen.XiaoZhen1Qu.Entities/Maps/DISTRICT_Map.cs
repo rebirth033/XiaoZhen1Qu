@@ -16,6 +16,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Maps
             Map(x => x.GRADE, "GRADE");
             Map(x => x.ADLEVEL, "ADLEVEL");
             Map(x => x.AREA, "AREA");
+            Map(x => x.SHORTNAME, "SHORTNAME"); 
             #endregion
 
             #region OneToMany

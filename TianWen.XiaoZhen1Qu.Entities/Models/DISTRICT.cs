@@ -54,5 +54,11 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// </summary>
         [Property]
         public virtual string AREA { get; set; }
+
+        /// <summary>
+        /// 行政区简称
+        /// </summary>
+        [Property]
+        public virtual string SHORTNAME { get; set; }
     }
 }
