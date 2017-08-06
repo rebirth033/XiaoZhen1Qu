@@ -14,7 +14,7 @@
     text-align: left;
     display: block;
     margin-bottom: 10px;
-    padding-left: 60px;
+    padding-left: 228px;
     position: relative;
 }
 
@@ -90,7 +90,7 @@
 
 .spanCPHOut {
     display: inline-block;
-    float:left;
+    float: left;
     width: 60px;
     height: 34px;
     margin-right: 10px;
@@ -146,7 +146,7 @@
 }
 
 .input_content_mfcx {
-    width: 316px;
+    width: 331px;
     border: 1px solid #ccc;
     border-radius: 4px;
     height: 34px;
@@ -155,7 +155,7 @@
     cursor: text;
     background-color: #5bc0de;
     color: #ffffff;
-    margin-left: 202px;
+    margin-left: 39px;
 }
 
     .input_content_mfcx:hover {
@@ -175,4 +175,9 @@
 .li_right {
     display: inline-block;
     float: left;
+}
+
+.span_info {
+    color: red;
+    margin-left:10px;
 }

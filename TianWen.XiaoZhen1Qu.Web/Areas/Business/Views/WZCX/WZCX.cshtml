@@ -34,53 +34,82 @@
         </div>
     </div>
     <div class="div_content_info" style="z-index: 998">
-        <div class="divLeft">
-            <span class="spanFWCZ">车牌号</span>
-        </div>
-        <div class="divRight">
-            <div class="spanCPHOut">
-                <div id="divCPHText" class="spanCPHIn SRK">
-                    <span id="spanXZQJC" column="CX" class="spanXZQJC">闽</span>
-                    <div class="divFWQKArrow"></div>
-                </div>
-                <div id="div_XZQJC" class="div_dropdown">
-                </div>
-            </div>
-            <div class="spanCPHOut">
-                <div id="divCPHSZMText" class="spanCPHIn SRK">
-                    <span id="spanCPHSZM" column="CX" class="spanXZQJC">A</span>
-                    <div class="divFWQKArrow"></div>
-                </div>
-                <div id="div_CPHSZM" class="div_dropdown" style="height:212px;">
-                </div>
-            </div>
-            <input class="input_content" id="inputHFSJHM" style="width: 119px;" type="text" value="" placeholder="车牌号后5位">
-        </div>
+        <table>
+            <tr>
+                <td>
+                    <div class="divLeft">
+                        <span class="spanFWCZ">车牌号</span>
+                    </div>
+                </td>
+                <td>
+                    <div class="spanCPHOut" style="margin-left:15px;">
+                        <div id="divCPHText" class="spanCPHIn SRK">
+                            <span id="spanXZQJC" column="CX" class="spanXZQJC">闽</span>
+                            <div class="divFWQKArrow"></div>
+                        </div>
+                        <div id="div_XZQJC" class="div_dropdown">
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="spanCPHOut">
+                        <div id="divCPHSZMText" class="spanCPHIn SRK">
+                            <span id="spanCPHSZM" column="CX" class="spanXZQJC">A</span>
+                            <div class="divFWQKArrow"></div>
+                        </div>
+                        <div id="div_CPHSZM" class="div_dropdown" style="height:212px;">
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <input class="input_content" id="inputCPHHWW" maxlength="5" style="width: 119px;" type="text" value="" placeholder="车牌号后5位">
+                </td>
+                <td>
+                    <span class="span_info" id="span_CPHInfo"></span>
+                </td>
+            </tr>
+        </table>
     </div>
     <div class="div_content_info">
-        <div class="divLeft">
-            <span class="spanFWCZ">车架号</span>
-        </div>
-        <div class="divRight">
-            <input class="input_content" id="inputCJH" maxlength="13" type="text" value="" placeholder="请输入车架号码后6位">
-        </div>
-        <div class="divLeft">
-            <span class="spanFWCZ">发动机号</span>
-        </div>
-        <div class="divRight">
-            <input class="input_content" id="inputFDJH" maxlength="13" type="text" value="" placeholder="请输入发动机号码后6位">
-        </div>
+        <table>
+            <tr>
+                <td>
+                    <div class="divLeft">
+                        <span class="spanFWCZ">车架号</span>
+                    </div>
+                </td>
+                <td>
+                    <div class="divRight">
+                        <input class="input_content" id="inputCJH" maxlength="6" type="text" value="" placeholder="请输入车架号码后6位">
+                    </div>
+                </td>
+                <td>
+                    <span class="span_info" id="span_CJHInfo"></span>
+                </td>
+            </tr>
+        </table>
     </div>
     <div class="div_content_info">
-        <div class="divLeft">
-            <span class="spanFWCZ">手机号码</span>
-        </div>
-        <div class="divRight">
-            <input class="input_content" id="inputSJHM" maxlength="13" type="text" value=""  placeholder="请输入手机号码">
-        </div>
+        <table>
+            <tr>
+                <td>
+                    <div class="divLeft">
+                        <span class="spanFWCZ">发动机号</span>
+                    </div>
+                </td>
+                <td>
+                    <div class="divRight">
+                        <input class="input_content" id="inputFDJH" maxlength="6" type="text" value="" placeholder="请输入发动机号码后6位">
+                    </div>
+                </td>
+                <td>
+                    <span class="span_info" id="span_FDJHInfo"></span>
+                </td>
+            </tr>
+        </table>
     </div>
     <div class="div_content_info">
-        <input class="input_content_mfcx" id="input_content" type="button" value="免费查询" />
+        <input class="input_content_mfcx" id="input_content_mfcx" type="button" value="免费查询" />
     </div>
 </body>
 </html>
