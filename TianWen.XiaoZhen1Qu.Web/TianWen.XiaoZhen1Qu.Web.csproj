@@ -138,6 +138,7 @@
   <ItemGroup>
     <Content Include="Areas\Business\Aspx\png.aspx" />
     <Content Include="Areas\Business\Css\BZZX\BZZX.css" />
+    <Content Include="Areas\Business\Css\BZZX\BZZX_SY.css" />
     <Content Include="Areas\Business\Css\FBCG.css" />
     <Content Include="Areas\Business\Css\FWCZ.css" />
     <Content Include="Areas\Business\Css\GRZL\GRZL.css" />
@@ -163,6 +164,7 @@
     <Content Include="Areas\Business\Css\images\icon.png" />
     <Content Include="Areas\Business\Css\images\info.png" />
     <Content Include="Areas\Business\Css\images\logo.png" />
+    <Content Include="Areas\Business\Css\images\logo_blue.png" />
     <Content Include="Areas\Business\Css\images\mosaic.png" />
     <Content Include="Areas\Business\Css\images\no.png" />
     <Content Include="Areas\Business\Css\images\ok.png" />
@@ -233,6 +235,7 @@
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\js\bootstrap.min.js" />
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\js\npm.js" />
     <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX.js" />
+    <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_SY.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\Common.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\Regular.js" />
     <Content Include="Areas\Business\Scripts\Business\FWCG\FWCG.js" />
@@ -385,6 +388,10 @@
     <Content Include="Areas\Business\Views\YXCZ\YXCZ.cshtml" />
     <Content Include="Areas\Business\Views\WZCX\WZCX.cshtml" />
     <Content Include="Areas\Business\Views\BZZX\BZZX.cshtml" />
+    <Content Include="Areas\Business\Views\BZZX\BZZX_SY.cshtml" />
+    <Content Include="Areas\Business\Views\BZZX\BZZX_CJWT.cshtml" />
+    <Content Include="Areas\Business\Views\BZZX\BZZX_LXKF.cshtml" />
+    <Content Include="Areas\Business\Views\BZZX\BZZX_WZJY.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
