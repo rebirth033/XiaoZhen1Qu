@@ -47,7 +47,7 @@
 
 .span_head_nav_info {
     color: #fff;
-    width: 110px;
+    width: 100px;
     height: 40px;
     text-align: center;
     padding-top: 7px;
@@ -55,6 +55,7 @@
     font-weight: 700;
     display: inline-block;
     font-family: 微软雅黑;
+    float: left;
 }
 
     .span_head_nav_info:hover {
@@ -64,6 +65,7 @@
 
 .div_body {
     width: 1000px;
+    height: 700px;
     margin: 0 auto;
     text-align: left;
 }

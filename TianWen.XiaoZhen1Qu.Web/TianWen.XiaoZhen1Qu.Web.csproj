@@ -149,6 +149,7 @@
     <Content Include="Areas\Business\Css\images\arrow_down.png" />
     <Content Include="Areas\Business\Css\images\arrow_down_big.png" />
     <Content Include="Areas\Business\Css\images\arrow_up.png" />
+    <Content Include="Areas\Business\Css\images\bzzx_sy_zhyecz.png" />
     <Content Include="Areas\Business\Css\images\cellphone.png" />
     <Content Include="Areas\Business\Css\images\clip.png" />
     <Content Include="Areas\Business\Css\images\close.png" />
