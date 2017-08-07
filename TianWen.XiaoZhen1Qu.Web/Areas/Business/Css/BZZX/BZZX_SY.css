@@ -39,9 +39,21 @@
 
 .span_left_box_info_text {
     color: #5bc0de;
-    height: 28px;
+    height: 20px;
     width: 120px;
     display: block;
     margin: 0 auto;
     margin-top: 10px;
+}
+
+.span_left_box_info_remark {
+    color: #5bc0de;
+    height: 20px;
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 1px;
+    font-size: 12px;
+    color: #999;
+    display: none;
 }
