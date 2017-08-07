@@ -1,0 +1,84 @@
+﻿body {
+    text-align: center;
+}
+
+.div_head {
+    width: 100%;
+}
+
+.div_head_main {
+    width: 1000px;
+    height: 75px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.span_head_main_logo {
+    background-image: url(../images/logo_blue.png);
+    background-repeat: no-repeat;
+    width: 155px;
+    height: 55px;
+    display: inline-block;
+    margin-top: 20px;
+    float: left;
+}
+
+.span_head_main_bzzx {
+    font: 26px "微软雅黑", "黑体", sans-serif;
+    color: #666;
+    float: left;
+    margin-top: 37px;
+    margin-left: 15px;
+}
+
+.div_head_nav {
+    width: 100%;
+    height: 40px;
+    background-color: #5bc0de;
+    margin-top: 10px;
+}
+
+.div_head_nav_info {
+    width: 1000px;
+    height: 40px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.span_head_nav_info {
+    color: #fff;
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    padding-top: 7px;
+    font-size: 16px;
+    font-weight: 700;
+    display: inline-block;
+    font-family: 微软雅黑;
+    float: left;
+}
+
+.div_body {
+    width: 1000px;
+    height: 700px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.div_body_nav {
+    margin-top: 20px;
+}
+
+.span_body_nav {
+    display: inline-block;
+    width: 500px;
+    height: 34px;
+    float: left;
+    color: #31b0d5;
+    padding-top: 3px;
+}
+
+.span_body_nav:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
