@@ -132,7 +132,7 @@ function LoadInfo(obj) {
     html += ('<td style="width:140px;">' + obj.CJSJ.ToString("yyyy-MM-dd hh:mm:ss") + '</td>');
     html += ('<td style="width:70px;">' + obj.LX + '</td>');
     html += ('<td style="width:140px;">' + obj.JYSM + '</td>');
-    html += ('<td style="width:120px;">' + obj.JE + '</td>');
+    html += ('<td style="width:120px;">' + obj.JE.toFixed(2) + '</td>');
     html += ('<td style="width:120px;"><a class="a_main_info_cz" onclick="ViewDetail(' + obj.SZMXID + ')">查看详细</a></td>');
     html += ('</tr>');
     $("#tbody_main_info_xttz").append(html);
