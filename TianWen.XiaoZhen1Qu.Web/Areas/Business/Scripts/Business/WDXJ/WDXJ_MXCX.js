@@ -5,9 +5,9 @@ $(document).ready(function () {
     $("#emSZMX").css("background-color", "#31b0d5");
     $("#emSZMX").css("height", "2px");
     $(".divstep").bind("click", HeadActive);
-    $("#div_main_info_head_lx").find(".span_main_info_right").bind("click", { id: "lx" }, SpanActive);
-    $("#div_main_info_head_zjlx").find(".span_main_info_right").bind("click", { id: "zjlx" }, SpanActive);
-    $("#div_main_info_head_sj").find(".span_main_info_right").bind("click", { id: "sj" }, SpanActive);
+    $("#div_main_info_head_lx").find(".span_main_info_right").bind("click", { id: "lx", PageIndex: currentIndex }, SpanActive);
+    $("#div_main_info_head_zjlx").find(".span_main_info_right").bind("click", { id: "zjlx", PageIndex: currentIndex }, SpanActive);
+    $("#div_main_info_head_sj").find(".span_main_info_right").bind("click", { id: "sj", PageIndex: currentIndex }, SpanActive);
     $("#input_kssj").datepicker({ minDate: 0 });
     $("#input_jssj").datepicker({ minDate: 0 });
     LoadDefault(currentIndex);
@@ -52,6 +52,7 @@ function SpanActive(obj) {
     });
     $(this).css("background-color", "#31b0d5");
     $(this).css("color", "#ffffff");
+    LoadSZMX(obj.data.PageIndex);
 }
 
 function LoadDefault(PageIndex) {
@@ -67,6 +68,17 @@ function LoadInfo(id) {
 }
 
 function LoadSZMX(PageIndex) {
+    var LX = "", ZJLX = "";
+    $("#div_main_info_head_lx").find(".span_main_info_right").each(function () {
+        if ($(this).css("background-color") === "rgb(49, 176, 213)") {
+            LX = $(this).html() === "全部" ? "" : $(this).html();
+        }
+    });
+    $("#div_main_info_head_zjlx").find(".span_main_info_right").each(function () {
+        if ($(this).css("background-color") === "rgb(49, 176, 213)") {
+            ZJLX = $(this).html() === "全部" ? "" : $(this).html();
+        }
+    });
     currentIndex = parseInt(PageIndex);
     $.ajax({
         type: "POST",
@@ -75,6 +87,8 @@ function LoadSZMX(PageIndex) {
         data:
         {
             YHID: getUrlParam("YHID"),
+            LX: LX,
+            ZJLX: ZJLX,
             PageSize: 5,
             PageIndex: PageIndex
         },
@@ -82,8 +96,6 @@ function LoadSZMX(PageIndex) {
             if (xml.Result === 1) {
                 LoadPage(xml.PageCount);
                 $("#tbody_main_info_xttz").html('');
-                $("#span_main_info_head_gjt").html(xml.TotalCount);
-                $("#span_main_info_head_wdjt").html(xml.WCCount);
                 for (var i = 0; i < xml.list.length; i++) {
                     LoadInfo(xml.list[i]);
                 }
@@ -97,3 +109,31 @@ function LoadSZMX(PageIndex) {
     });
 }
 
+function LoadPage(PageCount) {
+    var index = parseInt(currentIndex);
+    $("#div_main_info_bottom_fy").html('');
+    if (index > 1) {
+        $("#div_main_info_bottom_fy").append('<a onclick="LoadSZMX(\'' + (index - 1) + '\')" class="a_main_info_bottom_fy">上一页</a>');
+    }
+    for (var i = 1; i <= PageCount; i++) {
+        if (i === index)
+            $("#div_main_info_bottom_fy").append('<a onclick="LoadSZMX(\'' + i + '\')" class="a_main_info_bottom_fy a_main_info_bottom_fy_current">' + i + '</a>');
+        else
+            $("#div_main_info_bottom_fy").append('<a onclick="LoadSZMX(\'' + i + '\')" class="a_main_info_bottom_fy">' + i + '</a>');
+    }
+    if (index < PageCount) {
+        $("#div_main_info_bottom_fy").append('<a onclick="LoadSZMX(\'' + (index + 1) + '\')" class="a_main_info_bottom_fy">下一页</a>');
+    }
+}
+
+function LoadInfo(obj) {
+    var html = "";
+    html += ('<tr class="tr_main_info">');
+    html += ('<td style="width:140px;">' + obj.CJSJ.ToString("yyyy-MM-dd hh:mm:ss") + '</td>');
+    html += ('<td style="width:70px;">' + obj.LX + '</td>');
+    html += ('<td style="width:140px;">' + obj.JYSM + '</td>');
+    html += ('<td style="width:120px;">' + obj.JE + '</td>');
+    html += ('<td style="width:120px;"><a class="a_main_info_cz" onclick="ViewDetail(' + obj.SZMXID + ')">查看详细</a></td>');
+    html += ('</tr>');
+    $("#tbody_main_info_xttz").append(html);
+}
