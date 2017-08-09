@@ -45,7 +45,7 @@
         </div>
     </div>
     <div id="div_main_info" class="div_main_info">
-        <div id="div_SZMX" style="display: block">
+        <div id="div_SZMX" style="display: none">
             <div class="div_main_info_head" id="div_main_info_head_lx">
                 <span class="span_main_info_left">类型：</span>
                 <span class="span_main_info_right" id="span_main_info_right_lxqb">全部</span>
@@ -76,24 +76,65 @@
                     <input id="input_jssj" maxlength="2" column="S" class="inputFWLX spanFontColor" type="text" />
                     <span class="span_main_info_right_sj"></span>
                 </span>
-                <span class="span_main_info_right_button">查询</span>
+                <span class="span_main_info_right_button" id="span_main_info_right_button">查询</span>
             </div>
             <table class="table_main_info">
-                    <thead>
-                        <tr class="tr_main_info">
-                            <th style="width: 140px;">创建时间</th>
-                            <th style="width: 70px;">类型</th>
-                            <th style="width: 140px;">交易说明</th>
-                            <th style="width: 120px;">金额（元）</th>
-                            <th style="width: 120px;">操作</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tbody_main_info_xttz"></tbody>
-                </table>
-                <div class="div_main_info_bottom">
-                    <div class="div_main_info_bottom_fy" id="div_main_info_bottom_fy">
-                    </div>
+                <thead>
+                    <tr class="tr_main_info">
+                        <th style="width: 140px;">创建时间</th>
+                        <th style="width: 70px;">类型</th>
+                        <th style="width: 140px;">交易说明</th>
+                        <th style="width: 120px;">金额（元）</th>
+                        <th style="width: 120px;">操作</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody_main_info_xttz"></tbody>
+            </table>
+            <div class="div_main_info_bottom">
+                <div class="div_main_info_bottom_fy" id="div_main_info_bottom_fy">
                 </div>
+            </div>
+        </div>
+        <div id="div_DJJDJL" style="display: none">
+            <div class="div_main_info_head" id="div_main_info_head_djjd_lx">
+                <span class="span_main_info_left">类型：</span>
+                <span class="span_main_info_right" id="span_main_info_right_djjdqb">全部</span>
+                <span class="span_main_info_right" id="span_main_info_right_dj">冻结</span>
+                <span class="span_main_info_right" id="span_main_info_right_jd">解冻</span>
+            </div>
+            <div class="div_main_info_head" id="div_main_info_head_djjd_sj">
+                <span class="span_main_info_right" id="span_main_info_right_djjd_jt" style="width: 45px; margin-left: 20px;">今天</span>
+                <span class="span_main_info_right" id="span_main_info_right_djjd_jygy" style="width: 75px;">近一个月</span>
+                <span class="span_main_info_right" id="span_main_info_right_djjd_jsgy" style="width: 75px;">近三个月</span>
+                <span class="span_main_info_left">起止时间：</span>
+                <span id="spanS" class="spanFWLX">
+                    <input id="input_djjd_kssj" class="inputFWLX spanFontColor" type="text" />
+                    <span class="span_main_info_right_sj"></span>
+                </span>
+                <span style="display: inline-block; float: left; margin-left: 5px; margin-right: 5px; margin-top: 2px;">
+                    -
+                </span>
+                <span id="spanS" class="spanFWLX">
+                    <input id="input_djjd_jssj" class="inputFWLX spanFontColor" type="text" />
+                    <span class="span_main_info_right_sj"></span>
+                </span>
+                <span class="span_main_info_right_button" id="span_main_info_right_djjd_button">查询</span>
+            </div>
+            <table class="table_main_info">
+                <thead>
+                    <tr class="tr_main_info">
+                        <th style="width: 140px;">创建时间</th>
+                        <th style="width: 70px;">金额（元）</th>
+                        <th style="width: 140px;">类型</th>
+                        <th style="width: 120px;">备注</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody_main_info_djjd_xttz"></tbody>
+            </table>
+            <div class="div_main_info_bottom">
+                <div class="div_main_info_bottom_fy" id="div_main_info_bottom_fy">
+                </div>
+            </div>
         </div>
     </div>
 </body>

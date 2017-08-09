@@ -11,7 +11,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
 {
     public class WDXJBLL : BaseBLL, IWDXJBLL
     {
-        public object LoadSZMX(string YHID, string LX, string ZJLX, string PageIndex, string PageSize)
+        public object LoadSZMX(string YHID, string LX, string ZJLX, string StartTime, string EndTime, string PageIndex, string PageSize)
         {
             try
             {
@@ -22,6 +22,10 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     Condition.AppendFormat(" AND LX in('退款','充值')");
                 if (!string.IsNullOrEmpty(ZJLX) && ZJLX == "支出")
                     Condition.AppendFormat(" AND LX in('消费','提现')");
+                if (!string.IsNullOrEmpty(StartTime))
+                    Condition.AppendFormat(" AND CJSJ >= TO_DATE('{0} 00:00:00','yyyy-mm-dd HH24:MI:SS')", StartTime);
+                if (!string.IsNullOrEmpty(EndTime))
+                    Condition.AppendFormat(" AND CJSJ <= TO_DATE('{0} 23:59:59','yyyy-mm-dd HH24:MI:SS')", EndTime);
                 IList<SZMX> list = new List<SZMX>();
                 list = DAO.Repository.GetObjectList<SZMX>(String.Format("FROM SZMX WHERE 0=0 {0} ORDER BY CJSJ DESC", Condition));
 

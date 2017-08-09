@@ -9,6 +9,6 @@ namespace TianWen.XiaoZhen1Qu.Interface
     {
         IDAO DAO { get; set; }
 
-        object LoadSZMX(string YHID, string LX, string ZJLX, string PageIndex, string PageSize);
+        object LoadSZMX(string YHID, string LX, string ZJLX, string StartTime, string EndTime, string PageIndex, string PageSize);
     }
 }

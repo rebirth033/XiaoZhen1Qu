@@ -5,7 +5,8 @@ create table SZMX
   cjsj   DATE,
   lx     VARCHAR2(20),
   jysm   VARCHAR2(100),
-  je     NUMBER(10,2)
+  je     NUMBER(10,2),
+  jelx   VARCHAR2(1)
 )
 tablespace USERS
   pctfree 10
@@ -28,6 +29,8 @@ comment on column SZMX.jysm
   is '交易说明';
 comment on column SZMX.je
   is '金额';
+comment on column SZMX.jelx
+  is '金额类型';
 -- Create/Recreate primary, unique and foreign key constraints 
 alter table SZMX
   add primary key (SZMXID)

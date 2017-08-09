@@ -43,5 +43,11 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// </summary>
         [Property]
         public virtual decimal JE { get; set; }
+
+        /// <summary>
+        /// 金额
+        /// </summary>
+        [Property]
+        public virtual string JELX { get; set; }
     }
 }
