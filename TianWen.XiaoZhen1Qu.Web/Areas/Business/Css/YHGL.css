@@ -150,12 +150,13 @@
 .span_left_menu_second {
     font-size: 16px;
     margin-bottom: 5px;
-    line-height: 35px;
+    line-height: 40px;
     color: #595757;
     cursor: pointer;
     text-align: right;
+    margin-right: 16px;
     display: inline-block;
-    width: 70px;
+    width: 80px;
 }
 
     .span_left_menu_second:hover {
@@ -165,11 +166,13 @@
 .span_left_menu_third {
     font-size: 14px;
     margin-bottom: 5px;
-    line-height: 40px;
-    margin-left: 25px;
+    line-height: 35px;
+    margin-left: 50px;
     color: #595757;
     cursor: pointer;
     display: none;
+    text-align: left;
+    width: 70px;
 }
 
     .span_left_menu_third:hover {
@@ -179,7 +182,7 @@
 .span_left_menu_four {
     font-size: 12px;
     margin-bottom: 5px;
-    line-height: 40px;
+    line-height: 35px;
     margin-left: 25px;
     color: #595757;
     cursor: pointer;
