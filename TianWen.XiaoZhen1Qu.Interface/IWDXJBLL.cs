@@ -5,8 +5,10 @@ using System.Text;
 
 namespace TianWen.XiaoZhen1Qu.Interface
 {
-    public interface IWDZJBLL
+    public interface IWDXJBLL
     {
         IDAO DAO { get; set; }
+
+        object LoadSZMX(string YHID, string TYPE, string PageIndex, string PageSize);
     }
 }

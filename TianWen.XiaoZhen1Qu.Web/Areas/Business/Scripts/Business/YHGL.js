@@ -7,7 +7,6 @@
     $("#spanWDFB").bind("click", ToWDFB);
     $("#spanWDSC").bind("click", ToWDSC);
     $("#spanGRZL").bind("click", ToGRZL);
-    $("#spanWDZJ").bind("click", OpenWDZJ);
     $("#spanZHBD").bind("click", ToZHBD);
     $("#spanRZGL").bind("click", ToRZGL);
     $("#spanMMSZ").bind("click", ToMMSZ);
@@ -16,6 +15,7 @@
     $("#spanYXCZ").bind("click", ToYXCZ);
     $("#spanWZCX").bind("click", ToWZCX);
     $("#spanBZZX").bind("click", OpenBZZX);
+    $("#spanXJMXCX").bind("click", ToXJMXCX);
     $("#spanWDQZ").parent().bind("click", { type: "WDQZ" }, ExpandSecond_Leaf);
     $("#spanWDZP").parent().bind("click", { type: "WDZP" }, ExpandSecond_Tree);
     $("#spanZWGL").parent().bind("click", { type: "ZWGL" }, ExpandThird);
@@ -75,9 +75,9 @@ function ToWDSC() {
 function ToGRZL() {
     $("#iframeright").attr("src", getRootPath() + "/Business/GRZL/GRZL?YHID=" + getUrlParam("YHID"));
 }
-//我的资金
-function OpenWDZJ() {
-    window.open(getRootPath() + "/Business/WDZJ/WDZJ?YHID=" + getUrlParam("YHID"));
+//我的资金>现金>明细查询
+function ToXJMXCX() {
+    $("#iframeright").attr("src", getRootPath() + "/Business/WDXJ/WDXJ_MXCX?YHID=" + getUrlParam("YHID"));
 }
 //账号绑定
 function ToZHBD() {
@@ -95,27 +95,22 @@ function ToMMSZ() {
 function ToXXGL() {
     $("#iframeright").attr("src", getRootPath() + "/Business/XXGL/XXGL?YHID=" + getUrlParam("YHID"));
 }
-
 //话费充值
 function ToHFCZ() {
     $("#iframeright").attr("src", getRootPath() + "/Business/HFCZ/HFCZ?YHID=" + getUrlParam("YHID"));
 }
-
 //游戏充值
 function ToYXCZ() {
     $("#iframeright").attr("src", getRootPath() + "/Business/YXCZ/YXCZ?YHID=" + getUrlParam("YHID"));
 }
-
 //违章查询
 function ToWZCX() {
     $("#iframeright").attr("src", getRootPath() + "/Business/WZCX/WZCX?YHID=" + getUrlParam("YHID"));
 }
-
 //帮助中心
 function OpenBZZX() {
     window.open(getRootPath() + "/Business/BZZX/BZZX?YHID=" + getUrlParam("YHID"));
 }
-
 //显示我的信息
 function ShowWDXX() {
     $("#liWDXX").css("font-size", "18px").css("font-weight", "700");

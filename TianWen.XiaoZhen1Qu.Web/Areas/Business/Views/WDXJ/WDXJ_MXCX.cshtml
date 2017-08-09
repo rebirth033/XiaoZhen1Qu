@@ -1,0 +1,100 @@
+﻿@{
+    ViewBag.Title = "WDZJ";
+    Layout = "~/Areas/Business/Views/Shared/_ListLayout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link href="@Url.Content("~/Areas/Business/Css/WDXJ/WDXJ_MXCX.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Areas/Business/Scripts/jquery-ui-1.12.1.custom/jquery-ui.min.css")" rel="stylesheet" />
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/jquery-ui-1.12.1.custom/jquery-ui.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/jquery-ui-1.12.1.custom/jquery.ui.datepicker-zh-CN.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/WDXJ/WDXJ_MXCX.js")"></script>
+</head>
+<body>
+    <div class="div_head">
+        <div class="div_head_info">
+            <span class="span_head_tip">现金总金额</span>
+            <span class="span_head_info">0.00元</span>
+        </div>
+        <div class="div_head_info">
+            <span class="span_head_tip">可用金额</span>
+            <span class="span_head_info">0.00元</span>
+        </div>
+        <div class="div_head_info">
+            <span class="span_head_tip">冻结中金额</span>
+            <span class="span_head_info">0.00元</span>
+        </div>
+    </div>
+    <div class="div_content">
+        <div class="divstep" id="divSZMX">
+            <span class="spanstep" id="spanSZMX">收支明细</span>
+            <em class="emstep" id="emSZMX"></em>
+        </div>
+        <div class="divstep" id="divDJJDJL">
+            <span class="spanstep" id="spanDJJDJL">冻结解冻记录</span>
+            <em class="emstep" id="emDJJDJL"></em>
+        </div>
+        <div class="divstep">
+            <span class="spanstep" id="spanOther">&nbsp;</span>
+            <em class="emstep" id="emOther" style="width: 640px;"></em>
+        </div>
+    </div>
+    <div id="div_main_info" class="div_main_info">
+        <div id="div_SZMX" style="display: block">
+            <div class="div_main_info_head" id="div_main_info_head_lx">
+                <span class="span_main_info_left">类型：</span>
+                <span class="span_main_info_right" id="span_main_info_right_lxqb">全部</span>
+                <span class="span_main_info_right" id="span_main_info_right_cz">充值</span>
+                <span class="span_main_info_right" id="span_main_info_right_xf">消费</span>
+                <span class="span_main_info_right" id="span_main_info_right_tk">退款</span>
+                <span class="span_main_info_right" id="span_main_info_right_zz">转账</span>
+            </div>
+            <div class="div_main_info_head" id="div_main_info_head_zjlx">
+                <span class="span_main_info_left">资金流向：</span>
+                <span class="span_main_info_right" id="span_main_info_right_zjlxqb">全部</span>
+                <span class="span_main_info_right" id="span_main_info_right_cr">存入</span>
+                <span class="span_main_info_right" id="span_main_info_right_zc">支出</span>
+            </div>
+            <div class="div_main_info_head" id="div_main_info_head_sj">
+                <span class="span_main_info_right" id="span_main_info_right_jt" style="width: 45px; margin-left: 20px;">今天</span>
+                <span class="span_main_info_right" id="span_main_info_right_jygy" style="width: 75px;">近一个月</span>
+                <span class="span_main_info_right" id="span_main_info_right_jsgy" style="width: 75px;">近三个月</span>
+                <span class="span_main_info_left">起止时间：</span>
+                <span id="spanS" class="spanFWLX">
+                    <input id="input_kssj" maxlength="2" column="S" class="inputFWLX spanFontColor" type="text" />
+                    <span class="span_main_info_right_sj"></span>
+                </span>
+                <span style="display: inline-block; float: left; margin-left: 5px; margin-right: 5px; margin-top: 2px;">
+                    -
+                </span>
+                <span id="spanS" class="spanFWLX">
+                    <input id="input_jssj" maxlength="2" column="S" class="inputFWLX spanFontColor" type="text" />
+                    <span class="span_main_info_right_sj"></span>
+                </span>
+                <span class="span_main_info_right_button">查询</span>
+            </div>
+            <table class="table_main_info">
+                    <thead>
+                        <tr class="tr_main_info">
+                            <th style="width: 140px;">创建时间</th>
+                            <th style="width: 70px;">类型</th>
+                            <th style="width: 140px;">交易说明</th>
+                            <th style="width: 120px;">金额（元）</th>
+                            <th style="width: 120px;">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody_main_info_xttz"></tbody>
+                </table>
+                <div class="div_main_info_bottom">
+                    <div class="div_main_info_bottom_fy" id="div_main_info_bottom_fy">
+                    </div>
+                </div>
+        </div>
+    </div>
+</body>
+</html>
