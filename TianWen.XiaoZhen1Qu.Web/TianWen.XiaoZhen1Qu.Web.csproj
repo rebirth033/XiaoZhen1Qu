@@ -140,6 +140,7 @@
     <Content Include="Areas\Business\Css\BZZX\BZZX.css" />
     <Content Include="Areas\Business\Css\BZZX\BZZX_SY.css" />
     <Content Include="Areas\Business\Css\BZZX\BZZX_SY_ZDJS.css" />
+    <Content Include="Areas\Business\Css\BZZX\BZZX_SY_ZHMM.css" />
     <Content Include="Areas\Business\Css\FBCG.css" />
     <Content Include="Areas\Business\Css\FWCZ.css" />
     <Content Include="Areas\Business\Css\GRZL\GRZL.css" />
@@ -227,6 +228,7 @@
     <Content Include="Areas\Business\Css\RZGL\RZGL.css" />
     <Content Include="Areas\Business\Css\WDFB.css" />
     <Content Include="Areas\Business\Css\WDSC.css" />
+    <Content Include="Areas\Business\Css\WDZJ\WDZJ.css" />
     <Content Include="Areas\Business\Css\WZCX\WZCX.css" />
     <Content Include="Areas\Business\Css\XXGL\XXGL.css" />
     <Content Include="Areas\Business\Css\XXGL\XXGLMX.css" />
@@ -249,6 +251,7 @@
     <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX.js" />
     <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_SY.js" />
     <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_SY_ZDJS.js" />
+    <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_SY_ZHMM.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\Common.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\Regular.js" />
     <Content Include="Areas\Business\Scripts\Business\FWCG\FWCG.js" />
@@ -265,6 +268,7 @@
     <Content Include="Areas\Business\Scripts\Business\RZGL\RZGL.js" />
     <Content Include="Areas\Business\Scripts\Business\WDFB.js" />
     <Content Include="Areas\Business\Scripts\Business\WDSC.js" />
+    <Content Include="Areas\Business\Scripts\Business\WDZJ\WDZJ.js" />
     <Content Include="Areas\Business\Scripts\Business\WZCX\WZCX.js" />
     <Content Include="Areas\Business\Scripts\Business\XXGL\XXGL.js" />
     <Content Include="Areas\Business\Scripts\Business\XXGL\XXGLMX.js" />
@@ -339,6 +343,7 @@
     <Compile Include="Areas\Business\Controllers\RZGLController.cs" />
     <Compile Include="Areas\Business\Controllers\WDFBController.cs" />
     <Compile Include="Areas\Business\Controllers\WDSCController.cs" />
+    <Compile Include="Areas\Business\Controllers\WDZJController.cs" />
     <Compile Include="Areas\Business\Controllers\WZCXController.cs" />
     <Compile Include="Areas\Business\Controllers\XXGLController.cs" />
     <Compile Include="Areas\Business\Controllers\YHDLXXController.cs" />
@@ -406,6 +411,8 @@
     <Content Include="Areas\Business\Views\BZZX\BZZX_LXKF.cshtml" />
     <Content Include="Areas\Business\Views\BZZX\BZZX_WZJY.cshtml" />
     <Content Include="Areas\Business\Views\BZZX\BZZX_SY_ZDJS.cshtml" />
+    <Content Include="Areas\Business\Views\BZZX\BZZX_SY_ZHMM.cshtml" />
+    <Content Include="Areas\Business\Views\WDZJ\WDZJ.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

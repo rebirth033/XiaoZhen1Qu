@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "WDZJ";
+    Layout = "~/Areas/Business/Views/Shared/_ListLayout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link href="@Url.Content("~/Areas/Business/Css/WDZJ/WDZJ.css")" rel="stylesheet" />
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/WDZJ/WDZJ.js")"></script>
+</head>
+<body>
+    <div class="div_head">
+        <div class="div_head_main">
+            <span class="span_head_main_logo"></span>
+            <span class="span_head_main_bzzx">我的资金</span>
+        </div>
+        <div class="div_head_nav">
+            <div class="div_head_nav_info">
+                <span class="span_head_nav_info" id="span_head_nav_info_sy">信息小镇 > 我的资金</span>
+            </div>
+        </div>
+    </div>
+    <div class="div_body">
+        <iframe id="iframeright" style="border: none; width: 100%; height: 100%"></iframe>
+    </div>
+</body>
+</html>

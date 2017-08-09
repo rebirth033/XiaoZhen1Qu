@@ -1,13 +1,13 @@
 ﻿$(document).ready(function () {
-    $("#liGRZX").css("font-size", "18px").css("font-weight", "700");
-    $("#imgWDQZ").attr("src", getRootPath() + "/Areas/Business/Css/images/down.png");
-    $("#imgWDZP").attr("src", getRootPath() + "/Areas/Business/Css/images/down.png");
-    $("#liGRZX").bind("click", ShowGRZX);
-    $("#liZHSZ").bind("click", ShowZHSZ);
+    $("#liWDXX").css("font-size", "18px").css("font-weight", "700");
+    $("#liWDXX").bind("click", ShowWDXX);
+    $("#liWDZH").bind("click", ShowWDZH);
+    $("#liWDZJ").bind("click", ShowWDZJ);
     $("#liSHGJ").bind("click", ShowSHGJ);
     $("#spanWDFB").bind("click", ToWDFB);
     $("#spanWDSC").bind("click", ToWDSC);
     $("#spanGRZL").bind("click", ToGRZL);
+    $("#spanWDZJ").bind("click", OpenWDZJ);
     $("#spanZHBD").bind("click", ToZHBD);
     $("#spanRZGL").bind("click", ToRZGL);
     $("#spanMMSZ").bind("click", ToMMSZ);
@@ -15,7 +15,7 @@
     $("#spanHFCZ").bind("click", ToHFCZ);
     $("#spanYXCZ").bind("click", ToYXCZ);
     $("#spanWZCX").bind("click", ToWZCX);
-    $("#spanBZZX").bind("click", ToBZZX);
+    $("#spanBZZX").bind("click", OpenBZZX);
     $("#spanWDQZ").parent().bind("click", { type: "WDQZ" }, ExpandSecond_Leaf);
     $("#spanWDZP").parent().bind("click", { type: "WDZP" }, ExpandSecond_Tree);
     $("#spanZWGL").parent().bind("click", { type: "ZWGL" }, ExpandThird);
@@ -73,6 +73,10 @@ function ToWDSC() {
 function ToGRZL() {
     $("#iframeright").attr("src", getRootPath() + "/Business/GRZL/GRZL?YHID=" + getUrlParam("YHID"));
 }
+//我的资金
+function OpenWDZJ() {
+    window.open(getRootPath() + "/Business/WDZJ/WDZJ?YHID=" + getUrlParam("YHID"));
+}
 //账号绑定
 function ToZHBD() {
     $("#iframeright").attr("src", getRootPath() + "/Business/ZHBD/ZHBD?YHID=" + getUrlParam("YHID"));
@@ -106,35 +110,52 @@ function ToWZCX() {
 }
 
 //帮助中心
-function ToBZZX() {
+function OpenBZZX() {
     window.open(getRootPath() + "/Business/BZZX/BZZX?YHID=" + getUrlParam("YHID"));
 }
 
-//显示个人中心
-function ShowGRZX() {
-    $("#liGRZX").css("font-size", "18px").css("font-weight", "700");
-    $("#liZHSZ").css("font-size", "16px").css("font-weight", "normal");
+//显示我的信息
+function ShowWDXX() {
+    $("#liWDXX").css("font-size", "18px").css("font-weight", "700");
+    $("#liWDZH").css("font-size", "16px").css("font-weight", "normal");
+    $("#liWDZJ").css("font-size", "16px").css("font-weight", "normal");
     $("#liSHGJ").css("font-size", "16px").css("font-weight", "normal");
-    $("#ulGRZX").css("display", "block");
-    $("#ulZHSZ").css("display", "block");
+    $("#ulWDXX").css("display", "block");
+    $("#ulWDZH").css("display", "block");
+    $("#ulWDZJ").css("display", "block");
     $("#ulSHGJ").css("display", "block");
 }
-//显示账户设置
-function ShowZHSZ() {
-    $("#liZHSZ").css("font-size", "18px").css("font-weight", "700");
-    $("#liGRZX").css("font-size", "16px").css("font-weight", "normal");
+//显示我的账户
+function ShowWDZH() {
+    $("#liWDXX").css("font-size", "18px").css("font-weight", "normal");
+    $("#liWDZH").css("font-size", "18px").css("font-weight", "700");
+    $("#liWDZJ").css("font-size", "16px").css("font-weight", "normal");
     $("#liSHGJ").css("font-size", "16px").css("font-weight", "normal");
-    $("#ulGRZX").css("display", "none");
-    $("#ulZHSZ").css("display", "block");
+    $("#ulWDXX").css("display", "none");
+    $("#ulWDZH").css("display", "block");
+    $("#ulWDZJ").css("display", "block");
+    $("#ulSHGJ").css("display", "block");
+}
+//显示我的资金
+function ShowWDZJ() {
+    $("#liWDXX").css("font-size", "18px").css("font-weight", "normal");
+    $("#liWDZH").css("font-size", "18px").css("font-weight", "normal");
+    $("#liWDZJ").css("font-size", "16px").css("font-weight", "700");
+    $("#liSHGJ").css("font-size", "16px").css("font-weight", "normal");
+    $("#ulWDXX").css("display", "none");
+    $("#ulWDZH").css("display", "none");
+    $("#ulWDZJ").css("display", "block");
     $("#ulSHGJ").css("display", "block");
 }
 //显示生活工具
 function ShowSHGJ() {
-    $("#liSHGJ").css("font-size", "18px").css("font-weight", "700");
-    $("#liGRZX").css("font-size", "16px").css("font-weight", "normal");
-    $("#liZHSZ").css("font-size", "16px").css("font-weight", "normal");
-    $("#ulGRZX").css("display", "none");
-    $("#ulZHSZ").css("display", "none");
+    $("#liWDXX").css("font-size", "18px").css("font-weight", "normal");
+    $("#liWDZH").css("font-size", "18px").css("font-weight", "normal");
+    $("#liWDZJ").css("font-size", "16px").css("font-weight", "normal");
+    $("#liSHGJ").css("font-size", "16px").css("font-weight", "700");
+    $("#ulWDXX").css("display", "none");
+    $("#ulWDZH").css("display", "none");
+    $("#ulWDZJ").css("display", "none");
     $("#ulSHGJ").css("display", "block");
 }
 //展开第二级叶子节点

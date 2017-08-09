@@ -3,6 +3,7 @@
     $(".div_left_box_info").bind("mouseleave", HideRemark);
     
     $("#div_left_box_info_zdjs").bind("click", OpenZDJS);
+    $("#div_left_box_info_zhmm").bind("click", OpenZHMM);
 });
 
 function ShowRemark() {
@@ -19,4 +20,8 @@ function HideRemark() {
 
 function OpenZDJS() {
     window.open(getRootPath() + "/Business/BZZX/BZZX_SY_ZDJS?YHID=" + getUrlParam("YHID"));
+}
+
+function OpenZHMM() {
+    window.open(getRootPath() + "/Business/BZZX/BZZX_SY_ZHMM?YHID=" + getUrlParam("YHID"));
 }

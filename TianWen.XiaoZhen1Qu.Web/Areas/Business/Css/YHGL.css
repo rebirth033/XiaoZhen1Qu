@@ -150,9 +150,12 @@
 .span_left_menu_second {
     font-size: 16px;
     margin-bottom: 5px;
-    line-height: 40px;
+    line-height: 35px;
     color: #595757;
     cursor: pointer;
+    text-align: right;
+    display: inline-block;
+    width: 70px;
 }
 
     .span_left_menu_second:hover {

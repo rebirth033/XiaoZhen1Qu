@@ -93,5 +93,10 @@
       <ref object="BZZXBLL"/>
     </property>
   </object>
+  <object id="WDZJController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.WDZJController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="WDZJBLL">
+      <ref object="WDZJBLL"/>
+    </property>
+  </object>
 </objects>
 
