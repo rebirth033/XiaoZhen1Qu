@@ -5,6 +5,7 @@
     $("#emWXZF").css("height", "2px");
     $(".divstep").bind("click", HeadActive);
     $("#span_main_info_body_bottom_xy").bind("click", ShowFWXY);
+    $("#input_main_info_ljzf").bind("click", LJZF);
     LoadDefault("divWXZF");
 });
 
@@ -31,16 +32,19 @@ function HeadActive() {
 }
 
 function LoadDefault(id) {
-    $("#img_radio_wxzf").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    //$("#imgDJCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
     LoadDivInfo(id);
 }
 
 function LoadDivInfo(id) {
     if (id === "divWXZF") {
-        $("#div_WXZF").css("display", "block");
-        //$("#div_DJJDJL").css("display", "none");
-        //LoadSZMX();
+        $("#img_radio_wxzf").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+        $("#div_main_info_body_wxfz").css("display", "block");
+        $("#div_main_info_body_zfbfz").css("display", "none");
+    }
+    if (id === "divZFBZF") {
+        $("#img_radio_zfbzf").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+        $("#div_main_info_body_wxfz").css("display", "none");
+        $("#div_main_info_body_zfbfz").css("display", "block");
     }
     //else {
     //    $("#div_SZMX").css("display", "none");
@@ -60,4 +64,45 @@ function ShowFWXY() {
         $(this).css("left", window.screen.availWidth / 2 - 462.5);
         $(this).css("top", window.screen.availHeight / 2 - 332);
     });
+}
+
+function CheckFWXY() {
+    if ($("#input_main_info_body_bottom").prop("checked") === true) {
+        return true;
+    }
+    else {
+        alert("请仔细阅读《信息小镇现金服务协议》，并点击同意按钮");
+        return false;
+    }
+}
+
+function CheckCZJE() {
+    if (!ValidateCZJE($("#inputCZJE").val())) {
+        $("#inputCZJE").css("border-color", "#F2272D");
+        $("#span_content_info_czje").css("color", "#F2272D");
+        $("#span_content_info_czje").html("充值金额输入格式不正确");
+        return false;
+    }
+    else if ($("#inputCZJE").val().length === 0) {
+        $("#inputCZJE").css("border-color", "#F2272D");
+        $("#span_content_info_czje").css("color", "#F2272D");
+        $("#span_content_info_czje").html("请输入充值金额");
+        return false;
+    }
+    else {
+        $("#inputCZJE").css("border-color", "#999");
+        $("#span_content_info_czje").html('');
+        return true;
+    }
+}
+
+function LJZFValidate() {
+    if (!CheckCZJE()) return false;
+    if (!CheckFWXY()) return false;
+    return true;
+}
+
+function LJZF() {
+    if (!LJZFValidate()) return;
+    alert("支付成功");
 }

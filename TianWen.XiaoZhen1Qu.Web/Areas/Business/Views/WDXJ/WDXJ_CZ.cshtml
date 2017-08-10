@@ -20,13 +20,13 @@
                     <span class="span_content_info_left" style="font-weight: 700">充值金额：</span>
                 </td>
                 <td>
-                    <input class="input_content" id="inputHFSJHM" type="text" placeholder="请输入充值金额">
+                    <input class="input_content" id="inputCZJE" type="text" placeholder="请输入充值金额">
                 </td>
                 <td>
                     <span class="span_content_info_dy">元</span>
                 </td>
                 <td>
-                    <span class="span_content_info" id="span_content_info_yzxx"></span>
+                    <span class="span_content_info" id="span_content_info_czje"></span>
                 </td>
             </tr>
         </table>
@@ -75,22 +75,28 @@
         </div>
     </div>
     <div id="div_main_info" class="div_main_info">
-        <div id="div_WXZF" style="display: none">
-            <div class="div_main_info_body">
-                <div class="div_main_info_zffs">
-                    <img class="img_radio" id="img_radio_wxzf" />
-                    <img class="img_zffs" id="img_zffs_wxzf" src="@Url.Content("~/Areas/Business/Css/images/WDZJ/wdxj_cz_wxzf.png")" />
-                    <img class="img_select" src="@Url.Content("~/Areas/Business/Css/images/WDZJ/wdxj_cz_zffs_select.png")" />
-                </div>
+        <div class="div_main_info_body" id="div_main_info_body_wxfz">
+            <div class="div_main_info_zffs">
+                <img class="img_radio" id="img_radio_wxzf"/>
+                <img class="img_zffs" id="img_zffs_wxzf" src="@Url.Content("~/Areas/Business/Css/images/WDZJ/wdxj_cz_wxzf.png")"/>
+                <img class="img_select" src="@Url.Content("~/Areas/Business/Css/images/WDZJ/wdxj_cz_zffs_select.png")"/>
             </div>
+        </div>
+        <div class="div_main_info_body" id="div_main_info_body_zfbfz">
+            <div class="div_main_info_zffs">
+                <img class="img_radio" id="img_radio_zfbzf" />
+                <img class="img_zffs" id="img_zffs_zfbzf" src="@Url.Content("~/Areas/Business/Css/images/WDZJ/wdxj_cz_zfbzf.png")" />
+                <img class="img_select" src="@Url.Content("~/Areas/Business/Css/images/WDZJ/wdxj_cz_zffs_select.png")" />
+            </div>
+        </div>
             <div class="div_main_info_body">
-                <input class="input_main_info_right_button" value="立即支付" type="button"/>
+                <input class="input_main_info_ljzf" id="input_main_info_ljzf" value="立即支付" type="button" />
             </div>
             <div class="div_main_info_body">
                 <table>
                     <tr>
                         <td>
-                            <input class="input_main_info_body_bottom" type="checkbox" />
+                            <input class="input_main_info_body_bottom" id="input_main_info_body_bottom" type="checkbox" />
                         </td>
                         <td>
                             <span class="span_main_info_body_bottom">已阅读并同意</span>
@@ -101,7 +107,6 @@
                     </tr>
                 </table>
             </div>
-        </div> 
     </div>
 </body>
 </html>

@@ -44,3 +44,11 @@ function ValidateCPH(value) {
     return true;
 }
 
+//充值金额验证
+function ValidateCZJE(value) {
+    var zz = /^[\d]+$/g;
+    if (value.length > 0) {
+        return zz.test(value);
+    }
+    return true;
+}

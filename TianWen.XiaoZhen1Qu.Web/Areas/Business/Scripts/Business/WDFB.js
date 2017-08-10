@@ -148,7 +148,6 @@ function Restore(JCXXID) {
 }
 
 function Delete(JCXXID) {
-
     if (confirm("您确定删除本条信息吗?")) {
         $.ajax({
             type: "POST",

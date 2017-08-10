@@ -22,7 +22,7 @@
 
 .input_content {
     width: 220px;
-    border: 1px solid #ef6100;
+    border: 1px solid #cccccc;
     border-radius: 4px;
     height: 34px;
     padding: 4px 12px;
@@ -108,7 +108,7 @@
     right: 0;
 }
 
-.input_main_info_right_button {
+.input_main_info_ljzf {
     position: absolute;
     font-size: 14px;
     width: 135px;

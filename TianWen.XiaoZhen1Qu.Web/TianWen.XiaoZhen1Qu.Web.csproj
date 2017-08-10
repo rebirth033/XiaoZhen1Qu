@@ -212,6 +212,7 @@
     <Content Include="Areas\Business\Css\images\warn.png" />
     <Content Include="Areas\Business\Css\images\wb_logo.png" />
     <Content Include="Areas\Business\Css\images\WDZJ\wdxj_cz_wxzf.png" />
+    <Content Include="Areas\Business\Css\images\WDZJ\wdxj_cz_zfbzf.png" />
     <Content Include="Areas\Business\Css\images\WDZJ\wdxj_cz_zffs_select.png" />
     <Content Include="Areas\Business\Css\images\WDZJ\wdxj_mxcx_sj.png" />
     <Content Include="Areas\Business\Css\images\wxbd.png" />
