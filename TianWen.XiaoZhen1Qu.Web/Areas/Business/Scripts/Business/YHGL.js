@@ -26,6 +26,7 @@
     $("#spanTGB").parent().bind("click", { type: "TGB" }, ExpandSecond_Leaf);
     $(".li_left_menu").bind("click", LiFocus);
     $("#span_close").bind("click", CloseQQRZ);
+    $("#span_xjfwxy_close").bind("click", CloseXJFWXY);
     $("#div_body_image_qqtx").bind("mouseover", ShowQQ);
     $("#div_body_image_qqtx").bind("mouseleave", HideQQ);
     $("#div_body_image_qqtx").bind("click", QQBD);
@@ -229,6 +230,12 @@ function CloseQQRZ() {
     $("#editImgWindow").css("display", "none");
     $("#shadow").css("display", "none");
 }
+//关闭信息小镇现金服务协议窗口
+function CloseXJFWXY() {
+    $("#XJFWXYWindow").css("display", "none");
+    $("#shadow").css("display", "none");
+}
+
 //显示QQ号码
 function ShowQQ() {
     $(this).find("div").each(function () {

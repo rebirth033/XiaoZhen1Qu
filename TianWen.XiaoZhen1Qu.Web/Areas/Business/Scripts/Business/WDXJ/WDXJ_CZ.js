@@ -4,6 +4,7 @@
     $("#emWXZF").css("background-color", "#31b0d5");
     $("#emWXZF").css("height", "2px");
     $(".divstep").bind("click", HeadActive);
+    $("#span_main_info_body_bottom_xy").bind("click", ShowFWXY);
     LoadDefault("divWXZF");
 });
 
@@ -46,4 +47,17 @@ function LoadDivInfo(id) {
     //    $("#div_DJJDJL").css("display", "block");
     //    LoadDJJDJL();
     //}
+}
+
+function ShowFWXY() {
+    $(window.parent.document).find("#shadow").each(function () {
+        $(this).css("width", window.parent.document.body.clientWidth);
+        $(this).css("height", window.parent.document.body.clientHeight);
+        $(this).css("display", "block");
+    });
+    $(window.parent.document).find("#XJFWXYWindow").each(function () {
+        $(this).css("display", "block");
+        $(this).css("left", window.screen.availWidth / 2 - 462.5);
+        $(this).css("top", window.screen.availHeight / 2 - 332);
+    });
 }

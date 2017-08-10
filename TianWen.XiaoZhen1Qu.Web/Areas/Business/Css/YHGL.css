@@ -250,11 +250,51 @@
     background: #fff;
 }
 
+.div_XJFWXYWindow {
+    display: none;
+    width: 925px;
+    height: 563px;
+    position: fixed;
+    z-index: 1000;
+    background: #fff;
+}
+
+.div_XJFWXYbody {
+    padding: 10px 30px 10px 30px;
+    font-family: 宋体;
+    overflow-y: scroll;
+    height: 529px;
+}
+
+.div_XJFWXYbottom {
+    border-top: 1px solid #cccccc;
+    display: block;
+    text-align: center;
+    height: 60px;
+    color: #333;
+    padding-top: 18px;
+    font-family: Microsoft YaHei, SimHei, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.div_body_text {
+    width: 100%;
+    line-height: 28px;
+}
+
 .div_topbar {
     height: 34px;
     background-color: #e5e2e2;
     border-bottom: 1px solid #c7c7c7;
     width: 400px;
+}
+
+.div_XJFWXYtopbar {
+    height: 34px;
+    background-color: #e5e2e2;
+    border-bottom: 1px solid #c7c7c7;
+    width: 925px;
 }
 
 .span_toolbar {
@@ -354,4 +394,37 @@
     font-size: 12px;
     font-weight: 700;
     margin-top: 2px;
+}
+
+.div_bottom {
+    border-top: 1px solid #cccccc;
+    display: block;
+    text-align: center;
+    height: 100px;
+    color: #333;
+    padding-top: 15px;
+    font-family: Microsoft YaHei, SimHei, Arial, Helvetica, sans-serif;
+    margin-top: 20px;
+    background-color: #000;
+    opacity: 0.5;
+    color: #fff;
+    line-height: 34px;
+}
+
+.span_div_bottom_inner {
+    font-size: 14px;
+    font-family: "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", tahoma, arial, simhei;
+}
+
+.span_div_bottom_inner:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.em_div_bottom_inner {
+    width: 1px;
+    background-color: #fff;
+    height: 9px;
+    margin: 2px 5px 0px 5px;
+    display: inline-block;
 }
