@@ -1,0 +1,107 @@
+﻿@{
+    ViewBag.Title = "WDXJ_CZ";
+    Layout = "~/Areas/Business/Views/Shared/_ListLayout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link href="@Url.Content("~/Areas/Business/Css/WDXJ/WDXJ_CZ.css")" rel="stylesheet" />
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/WDXJ/WDXJ_CZ.js")"></script>
+</head>
+<body>
+    <div class="div_head">
+        <table>
+            <tr>
+                <td>
+                    <span class="span_content_info_left" style="font-weight: 700">充值金额：</span>
+                </td>
+                <td>
+                    <input class="input_content" id="inputHFSJHM" type="text" placeholder="请输入充值金额">
+                </td>
+                <td>
+                    <span class="span_content_info_dy">元</span>
+                </td>
+                <td>
+                    <span class="span_content_info" id="span_content_info_yzxx"></span>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="div_content">
+        <table>
+            <tr>
+                <td>
+                    <span class="span_content_info_left" style="font-weight: 700">选择支付方式：</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="div_content" style="margin-top: 0px;">
+        <div class="divstep" id="divWXZF">
+            <span class="spanstep" id="spanWXZF">微信支付</span>
+            <em class="emstep" id="emWXZF"></em>
+        </div>
+        <div class="divstep" id="divWYZF">
+            <span class="spanstep" id="spanWYZF">网银支付</span>
+            <em class="emstep" id="emWYZF"></em>
+        </div>
+        <div class="divstep" id="divKJZF">
+            <span class="spanstep" id="spanKJZF">快捷支付</span>
+            <em class="emstep" id="emKJZF"></em>
+        </div>
+        <div class="divstep" id="divZFBZF">
+            <span class="spanstep" id="spanZFBZF">支付宝支付</span>
+            <em class="emstep" id="emZFBZF"></em>
+        </div>
+        <div class="divstep" id="divYFTZF">
+            <span class="spanstep" id="spanYFTZF">易付通支付</span>
+            <em class="emstep" id="emYFTZF"></em>
+        </div>
+        <div class="divstep" id="divSJKCZ">
+            <span class="spanstep" id="spanSJKCZ">手机卡充值</span>
+            <em class="emstep" id="emSJKCZ"></em>
+        </div>
+        <div class="divstep" id="divYHHK">
+            <span class="spanstep" id="spanYHHK">银行汇款</span>
+            <em class="emstep" id="emYHHK"></em>
+        </div>
+        <div class="divstep">
+            <span class="spanstep" id="spanOther">&nbsp;</span>
+            <em class="emstep" id="emOther" style="width: 200px;"></em>
+        </div>
+    </div>
+    <div id="div_main_info" class="div_main_info">
+        <div id="div_WXZF" style="display: none">
+            <div class="div_main_info_body">
+                <div class="div_main_info_zffs">
+                    <img class="img_radio" id="img_radio_wxzf" />
+                    <img class="img_zffs" id="img_zffs_wxzf" src="@Url.Content("~/Areas/Business/Css/images/WDZJ/wdxj_cz_wxzf.png")" />
+                    <img class="img_select" src="@Url.Content("~/Areas/Business/Css/images/WDZJ/wdxj_cz_zffs_select.png")" />
+                </div>
+            </div>
+            <div class="div_main_info_body">
+                <input class="input_main_info_right_button" value="立即支付" type="button"/>
+            </div>
+            <div class="div_main_info_body">
+                <table>
+                    <tr>
+                        <td>
+                            <input class="input_main_info_body_bottom" type="checkbox" />
+                        </td>
+                        <td>
+                            <span class="span_main_info_body_bottom">已阅读并同意</span>
+                        </td>
+                        <td>
+                            <span class="span_main_info_body_bottom span_main_info_body_bottom_xy">《信息小镇现金服务协议》</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div> 
+    </div>
+</body>
+</html>

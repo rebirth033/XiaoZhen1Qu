@@ -16,6 +16,7 @@
     $("#spanWZCX").bind("click", ToWZCX);
     $("#spanBZZX").bind("click", OpenBZZX);
     $("#spanXJMXCX").bind("click", ToXJMXCX);
+    $("#spanXJCZ").bind("click", ToXJCZ);
     $("#spanWDQZ").parent().bind("click", { type: "WDQZ" }, ExpandSecond_Leaf);
     $("#spanWDZP").parent().bind("click", { type: "WDZP" }, ExpandSecond_Tree);
     $("#spanZWGL").parent().bind("click", { type: "ZWGL" }, ExpandThird);
@@ -78,6 +79,10 @@ function ToGRZL() {
 //我的资金>现金>明细查询
 function ToXJMXCX() {
     $("#iframeright").attr("src", getRootPath() + "/Business/WDXJ/WDXJ_MXCX?YHID=" + getUrlParam("YHID"));
+}
+//我的资金>现金>充值
+function ToXJCZ() {
+    $("#iframeright").attr("src", getRootPath() + "/Business/WDXJ/WDXJ_CZ?YHID=" + getUrlParam("YHID"));
 }
 //账号绑定
 function ToZHBD() {

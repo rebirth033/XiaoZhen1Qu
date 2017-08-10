@@ -13,6 +13,11 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return View();
         }
 
+        public ActionResult WDXJ_CZ()
+        {
+            return View();
+        }
+
         public JsonResult LoadSZMX()
         {
             return Json(WDXJBLL.LoadSZMX(Request["YHID"], Request["LX"], Request["ZJLX"], Request["StartTime"], Request["EndTime"], Request["PageIndex"], Request["PageSize"]));

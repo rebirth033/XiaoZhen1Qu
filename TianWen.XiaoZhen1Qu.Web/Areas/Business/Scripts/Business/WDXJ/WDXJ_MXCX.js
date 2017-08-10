@@ -37,12 +37,12 @@ function HeadActive(obj) {
         });
     });
     $(this).find("span").each(function () {
-        $(this).css("color", "#5bc0de");
+        $(this).css("color", "#31b0d5");
         $(this).css("font-weight", "700");
     });
     $(this).find("em").each(function () {
         $(this).css("height", "2px");
-        $(this).css("background-color", "#5bc0de");
+        $(this).css("background-color", "#31b0d5");
     });
     LoadDivInfo(this.id, obj.data.PageIndex);
 }

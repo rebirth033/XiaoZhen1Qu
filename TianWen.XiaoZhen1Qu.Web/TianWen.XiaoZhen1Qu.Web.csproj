@@ -211,6 +211,8 @@
     <Content Include="Areas\Business\Css\images\upload_small2.png" />
     <Content Include="Areas\Business\Css\images\warn.png" />
     <Content Include="Areas\Business\Css\images\wb_logo.png" />
+    <Content Include="Areas\Business\Css\images\WDZJ\wdxj_cz_wxzf.png" />
+    <Content Include="Areas\Business\Css\images\WDZJ\wdxj_cz_zffs_select.png" />
     <Content Include="Areas\Business\Css\images\WDZJ\wdxj_mxcx_sj.png" />
     <Content Include="Areas\Business\Css\images\wxbd.png" />
     <Content Include="Areas\Business\Css\images\wxbd_head_img.png" />
@@ -229,6 +231,7 @@
     <Content Include="Areas\Business\Css\RZGL\RZGL.css" />
     <Content Include="Areas\Business\Css\WDFB.css" />
     <Content Include="Areas\Business\Css\WDSC.css" />
+    <Content Include="Areas\Business\Css\WDXJ\WDXJ_CZ.css" />
     <Content Include="Areas\Business\Css\WDXJ\WDXJ_MXCX.css" />
     <Content Include="Areas\Business\Css\WZCX\WZCX.css" />
     <Content Include="Areas\Business\Css\XXGL\XXGL.css" />
@@ -269,6 +272,7 @@
     <Content Include="Areas\Business\Scripts\Business\RZGL\RZGL.js" />
     <Content Include="Areas\Business\Scripts\Business\WDFB.js" />
     <Content Include="Areas\Business\Scripts\Business\WDSC.js" />
+    <Content Include="Areas\Business\Scripts\Business\WDXJ\WDXJ_CZ.js" />
     <Content Include="Areas\Business\Scripts\Business\WDXJ\WDXJ_MXCX.js" />
     <Content Include="Areas\Business\Scripts\Business\WZCX\WZCX.js" />
     <Content Include="Areas\Business\Scripts\Business\XXGL\XXGL.js" />
@@ -414,6 +418,7 @@
     <Content Include="Areas\Business\Views\BZZX\BZZX_SY_ZDJS.cshtml" />
     <Content Include="Areas\Business\Views\BZZX\BZZX_SY_ZHMM.cshtml" />
     <Content Include="Areas\Business\Views\WDXJ\WDXJ_MXCX.cshtml" />
+    <Content Include="Areas\Business\Views\WDXJ\WDXJ_CZ.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
