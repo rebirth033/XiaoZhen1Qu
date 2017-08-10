@@ -15,6 +15,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
         {
             try
             {
+                string YHZHXXID = GetYHZHXXIDByYHID(YHID);
                 StringBuilder Condition = new StringBuilder();
                 if (!string.IsNullOrEmpty(LX))
                     Condition.AppendFormat(" AND LX='{0}'", LX);
@@ -27,7 +28,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 if (!string.IsNullOrEmpty(EndTime))
                     Condition.AppendFormat(" AND CJSJ <= TO_DATE('{0} 23:59:59','yyyy-mm-dd HH24:MI:SS')", EndTime);
                 IList<SZMX> list = new List<SZMX>();
-                list = DAO.Repository.GetObjectList<SZMX>(String.Format("FROM SZMX WHERE 0=0 {0} ORDER BY CJSJ DESC", Condition));
+                list = DAO.Repository.GetObjectList<SZMX>(String.Format("FROM SZMX WHERE YHZHXXID='{0}' {1} ORDER BY CJSJ DESC", YHZHXXID, Condition));
 
                 int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                 int TotalCount = list.Count;

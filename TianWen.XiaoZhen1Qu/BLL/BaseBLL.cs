@@ -29,6 +29,24 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 return new { Result = EnResultType.Failed, Message = "加载失败" };
             }
         }
+
+        //根据用户ID获取用户账户ID
+        public string GetYHZHXXIDByYHID(string YHID)
+        {
+            try
+            {
+                IList<YHZHXX> list = DAO.Repository.GetObjectList<YHZHXX>(String.Format("FROM YHZHXX WHERE YHID='{0}'", YHID));
+                if (list.Count > 0)
+                    return list.FirstOrDefault().YHZHXXID;
+                else
+                    return string.Empty;
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("error", ex.Message);
+                return string.Empty;
+            }
+        }
     }
 
 }

@@ -3,22 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using NHibernate.Mapping.Attributes;
-using Remotion.Linq.Clauses.ResultOperators;
 
 namespace TianWen.XiaoZhen1Qu.Entities.Models
 {
-    public class SZMX
+    public class DJJDJL
     {
-        public SZMX()
+        public DJJDJL()
         {
-            SZMXID = Guid.NewGuid().ToString("N");
+            DJJDJLID = Guid.NewGuid().ToString("N");
         }
 
         /// <summary>
-        /// 收支说明ID
+        /// 冻结解冻记录ID
         /// </summary>
         [Id]
-        public virtual string SZMXID { get; set; }
+        public virtual string DJJDJLID { get; set; }
 
         /// <summary>
         /// 创建时间
@@ -27,28 +26,22 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual DateTime CJSJ { get; set; }
 
         /// <summary>
-        /// 类型
-        /// </summary>
-        [Property]
-        public virtual string LX { get; set; }
-
-        /// <summary>
-        /// 交易说明
-        /// </summary>
-        [Property]
-        public virtual string JYSM { get; set; }
-
-        /// <summary>
         /// 金额
         /// </summary>
         [Property]
         public virtual decimal JE { get; set; }
 
         /// <summary>
-        /// 金额类型
+        /// 类型
         /// </summary>
         [Property]
-        public virtual string JELX { get; set; }
+        public virtual string LX { get; set; }
+
+        /// <summary>
+        /// 备注
+        /// </summary>
+        [Property]
+        public virtual string BZ { get; set; }
 
         /// <summary>
         /// 用户账户信息ID

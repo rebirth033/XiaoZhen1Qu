@@ -7,18 +7,17 @@ using TianWen.XiaoZhen1Qu.Entities.Models;
 
 namespace TianWen.XiaoZhen1Qu.Entities.Maps
 {
-    public class SZMX_Map : ClassMap<SZMX>
+    public class DJJDJL_Map : ClassMap<DJJDJL>
     {
-        public SZMX_Map()
+        public DJJDJL_Map()
         {
-            Table("SZMX");
+            Table("DJJDJL");
             #region 属性
-            Id(x => x.SZMXID, "SZMXID").GeneratedBy.Assigned().CustomType("AnsiString");
+            Id(x => x.DJJDJLID, "DJJDJLID").GeneratedBy.Assigned().CustomType("AnsiString");
             Map(x => x.CJSJ, "CJSJ");
-            Map(x => x.LX, "LX");
-            Map(x => x.JYSM, "JYSM");
             Map(x => x.JE, "JE");
-            Map(x => x.JELX, "JELX");
+            Map(x => x.LX, "LX");
+            Map(x => x.BZ, "BZ");
             Map(x => x.YHZHXXID, "YHZHXXID");
             #endregion
 
