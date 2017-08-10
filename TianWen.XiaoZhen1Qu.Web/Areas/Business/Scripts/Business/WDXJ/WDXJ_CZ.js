@@ -40,17 +40,20 @@ function LoadDivInfo(id) {
         $("#img_radio_wxzf").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
         $("#div_main_info_body_wxfz").css("display", "block");
         $("#div_main_info_body_zfbfz").css("display", "none");
+        $("#div_main_info_body_wyzf").css("display", "none");
     }
     if (id === "divZFBZF") {
         $("#img_radio_zfbzf").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
         $("#div_main_info_body_wxfz").css("display", "none");
         $("#div_main_info_body_zfbfz").css("display", "block");
+        $("#div_main_info_body_wyzf").css("display", "none");
     }
-    //else {
-    //    $("#div_SZMX").css("display", "none");
-    //    $("#div_DJJDJL").css("display", "block");
-    //    LoadDJJDJL();
-    //}
+    if (id === "divWYZF") {
+        $("#img_radio_wyzf_gsyh").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+        $("#div_main_info_body_wxfz").css("display", "none");
+        $("#div_main_info_body_zfbfz").css("display", "none");
+        $("#div_main_info_body_wyzf").css("display", "block");
+    }
 }
 
 function ShowFWXY() {

@@ -9,7 +9,6 @@
     text-align: center;
     padding-top: 20px;
     border-radius: 4px;
-    
     height: 82px;
 }
 
@@ -100,6 +99,26 @@
     padding-top: 1px;
 }
 
+.div_main_info_zffs_wyzf {
+    width: 136px;
+    height: 36px;
+    border: 1px solid #ef6100;
+    position: relative;
+    padding-top: 1px;
+}
+
+.div_main_info_tip {
+    width: 100%;
+    height: 36px;
+    display: block;
+    text-align: left;
+    font-size: 12px;
+}
+
+.span_main_info_tip {
+    color: #ef6100;
+}
+
 .img_select {
     width: 20px;
     height: 20px;
@@ -140,8 +159,8 @@
     color: #666;
 }
 
-.span_main_info_body_bottom_xy:hover {
-    cursor: pointer;
-    text-decoration: underline;
-    color: #ef6100;
-}
+    .span_main_info_body_bottom_xy:hover {
+        cursor: pointer;
+        text-decoration: underline;
+        color: #ef6100;
+    }
