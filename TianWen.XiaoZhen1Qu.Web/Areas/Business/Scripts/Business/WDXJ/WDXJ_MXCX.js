@@ -8,12 +8,20 @@ $(document).ready(function () {
     $("#div_main_info_head_lx").find(".span_main_info_right").bind("click", { id: "lx", PageIndex: currentIndex }, SpanActive);
     $("#div_main_info_head_zjlx").find(".span_main_info_right").bind("click", { id: "zjlx", PageIndex: currentIndex }, SpanActive);
     $("#div_main_info_head_sj").find(".span_main_info_right").bind("click", { id: "sj", PageIndex: currentIndex }, SpanActive);
+    $("#div_main_info_head_djjd_lx").find(".span_main_info_right").bind("click", { id: "lx", PageIndex: currentIndex }, DJJDJLSpanActive);
+    $("#div_main_info_head_djjd_sj").find(".span_main_info_right").bind("click", { id: "sj", PageIndex: currentIndex }, DJJDJLSpanActive);
     $("#input_kssj").datepicker({ maxDate: 0 });
     $("#input_jssj").datepicker({ maxDate: 0 });
+    $("#input_djjd_kssj").datepicker({ maxDate: 0 });
+    $("#input_djjd_jssj").datepicker({ maxDate: 0 });
     $("#span_main_info_right_button").bind("click", { PageIndex: currentIndex }, SelectSZMX);
+    $("#span_main_info_right_djjd_button").bind("click", { PageIndex: currentIndex }, SelectDJJDJL);
     $("#span_main_info_right_jt").bind("click", { PageIndex: currentIndex, SJ: "今天" }, SelectSZMXBySJ);
     $("#span_main_info_right_jygy").bind("click", { PageIndex: currentIndex, SJ: "近一个月" }, SelectSZMXBySJ);
     $("#span_main_info_right_jsgy").bind("click", { PageIndex: currentIndex, SJ: "近三个月" }, SelectSZMXBySJ);
+    $("#span_main_info_right_djjd_jt").bind("click", { PageIndex: currentIndex, SJ: "今天" }, SelectDJJDJLBySJ);
+    $("#span_main_info_right_djjd_jygy").bind("click", { PageIndex: currentIndex, SJ: "近一个月" }, SelectDJJDJLBySJ);
+    $("#span_main_info_right_djjd_jsgy").bind("click", { PageIndex: currentIndex, SJ: "近三个月" }, SelectDJJDJLBySJ);
     LoadDefault(currentIndex);
 });
 
@@ -57,6 +65,26 @@ function SpanActive(obj) {
     $(this).css("background-color", "#31b0d5");
     $(this).css("color", "#ffffff");
     LoadSZMX(obj.data.PageIndex);
+}
+
+function DJJDJLSpanActive(obj) {
+    var id = this.id;
+    $("#div_main_info_head_djjd_" + obj.data.id).find(".span_main_info_right").each(function () {
+        $(this).css("background-color", "#ffffff");
+        $(this).css("color", "#31b0d5");
+        $(this).off('mouseenter').unbind('mouseleave');
+        if (this.id !== id)
+            $(this).hover(function () {
+                $(this).css("background-color", "#f0f8fa");
+                $(this).css("color", "#ff6100");
+            }, function () {
+                $(this).css("background-color", "#ffffff");
+                $(this).css("color", "#31b0d5");
+            });
+    });
+    $(this).css("background-color", "#31b0d5");
+    $(this).css("color", "#ffffff");
+    LoadDJJDJL(obj.data.PageIndex);
 }
 
 function LoadDefault(PageIndex) {
@@ -107,10 +135,10 @@ function LoadSZMX(PageIndex) {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                LoadPage(xml.PageCount);
+                LoadSZMXPage(xml.PageCount);
                 $("#tbody_main_info_xttz").html('');
                 for (var i = 0; i < xml.list.length; i++) {
-                    LoadInfo(xml.list[i]);
+                    LoadSZMXInfo(xml.list[i]);
                 }
                 if (xml.list.length === 0)
                     NoInfo(TYPE);
@@ -122,7 +150,45 @@ function LoadSZMX(PageIndex) {
     });
 }
 
-function LoadPage(PageCount) {
+function LoadDJJDJL(PageIndex) {
+    var LX = "";
+    $("#div_main_info_head_djjd_lx").find(".span_main_info_right").each(function () {
+        if ($(this).css("background-color") === "rgb(49, 176, 213)") {
+            LX = $(this).html() === "全部" ? "" : $(this).html();
+        }
+    });
+    currentDJJDIndex = parseInt(PageIndex);
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/WDXJ/LoadDJJDJL",
+        dataType: "json",
+        data:
+        {
+            YHID: getUrlParam("YHID"),
+            LX: LX,
+            StartTime: $("#input_djjd_kssj").val(),
+            EndTime: $("#input_djjd_jssj").val(),
+            PageSize: 5,
+            PageIndex: PageIndex
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                LoadDJJDJLPage(xml.PageCount);
+                $("#tbody_main_info_djjd_xttz").html('');
+                for (var i = 0; i < xml.list.length; i++) {
+                    LoadDJJDJLInfo(xml.list[i]);
+                }
+                if (xml.list.length === 0)
+                    NoInfo(TYPE);
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+
+function LoadSZMXPage(PageCount) {
     var index = parseInt(currentIndex);
     $("#div_main_info_bottom_fy").html('');
     if (index > 1) {
@@ -139,16 +205,21 @@ function LoadPage(PageCount) {
     }
 }
 
-function LoadInfo(obj) {
-    var html = "";
-    html += ('<tr class="tr_main_info">');
-    html += ('<td style="width:140px;">' + obj.CJSJ.ToString("yyyy-MM-dd hh:mm:ss") + '</td>');
-    html += ('<td style="width:70px;">' + obj.LX + '</td>');
-    html += ('<td style="width:140px;">' + obj.JYSM + '</td>');
-    html += ('<td style="width:120px;color:' + (obj.JELX === "+" ? "green" : "red") + ';" >' + obj.JELX + obj.JE.toFixed(2) + '</td>');
-    html += ('<td style="width:120px;"><a class="a_main_info_cz" onclick="ViewDetail(' + obj.SZMXID + ')">查看详细</a></td>');
-    html += ('</tr>');
-    $("#tbody_main_info_xttz").append(html);
+function LoadDJJDJLPage(PageCount) {
+    var index = parseInt(currentIndex);
+    $("#div_main_info_bottom_djjdjl_fy").html('');
+    if (index > 1) {
+        $("#div_main_info_bottom_djjdjl_fy").append('<a onclick="LoadDJJDJL(\'' + (index - 1) + '\')" class="a_main_info_bottom_fy">上一页</a>');
+    }
+    for (var i = 1; i <= PageCount; i++) {
+        if (i === index)
+            $("#div_main_info_bottom_djjdjl_fy").append('<a onclick="LoadDJJDJL(\'' + i + '\')" class="a_main_info_bottom_fy a_main_info_bottom_fy_current">' + i + '</a>');
+        else
+            $("#div_main_info_bottom_djjdjl_fy").append('<a onclick="LoadDJJDJL(\'' + i + '\')" class="a_main_info_bottom_fy">' + i + '</a>');
+    }
+    if (index < PageCount) {
+        $("#div_main_info_bottom_djjdjl_fy").append('<a onclick="LoadDJJDJL(\'' + (index + 1) + '\')" class="a_main_info_bottom_fy">下一页</a>');
+    }
 }
 
 function SelectSZMX(obj) {
@@ -204,10 +275,10 @@ function SelectSZMXBySJ(obj) {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                LoadPage(xml.PageCount);
+                LoadSZMXPage(xml.PageCount);
                 $("#tbody_main_info_xttz").html('');
                 for (var i = 0; i < xml.list.length; i++) {
-                    LoadInfo(xml.list[i]);
+                    LoadSZMXInfo(xml.list[i]);
                 }
                 if (xml.list.length === 0)
                     NoInfo(TYPE);
@@ -219,14 +290,38 @@ function SelectSZMXBySJ(obj) {
     });
 }
 
-function LoadDJJDJL(PageIndex) {
-    var LX = "";
-    $("#div_main_info_head_djjd_lx").find(".span_main_info_right").each(function () {
+function SelectDJJDJL(obj) {
+    LoadDJJDJL(obj.data.PageIndex);
+} 
+
+function SelectDJJDJLBySJ(obj) {
+    var LX = "", StartTime, EndTime;
+    $("#div_main_info_head_lx").find(".span_main_info_right").each(function () {
         if ($(this).css("background-color") === "rgb(49, 176, 213)") {
             LX = $(this).html() === "全部" ? "" : $(this).html();
         }
     });
-    currentDJJDIndex = parseInt(PageIndex);
+
+    var myDate = new Date();
+
+    if (obj.data.SJ === "今天") {
+        myDate = new Date();
+        StartTime = getNowFormatDate(myDate);
+        EndTime = getNowFormatDate(myDate);
+    }
+    if (obj.data.SJ === "近一个月") {
+        myDate = new Date();
+        EndTime = getNowFormatDate(myDate);
+        myDate.setMonth(myDate.getMonth() - 1);
+        StartTime = getNowFormatDate(myDate);
+    }
+    if (obj.data.SJ === "近三个月") {
+        myDate = new Date();
+        EndTime = getNowFormatDate(myDate);
+        myDate.setMonth(myDate.getMonth() - 3);
+        StartTime = getNowFormatDate(myDate);
+    }
+    currentIndex = parseInt(obj.data.PageIndex);
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/WDXJ/LoadDJJDJL",
@@ -235,17 +330,17 @@ function LoadDJJDJL(PageIndex) {
         {
             YHID: getUrlParam("YHID"),
             LX: LX,
-            StartTime: $("#input_kssj").val(),
-            EndTime: $("#input_jssj").val(),
+            StartTime: StartTime,
+            EndTime: EndTime,
             PageSize: 5,
-            PageIndex: PageIndex
+            PageIndex: obj.data.PageIndex
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                LoadPage(xml.PageCount);
+                LoadDJJDJLPage(xml.PageCount);
                 $("#tbody_main_info_djjd_xttz").html('');
                 for (var i = 0; i < xml.list.length; i++) {
-                    LoadInfo(xml.list[i]);
+                    LoadDJJDJLInfo(xml.list[i]);
                 }
                 if (xml.list.length === 0)
                     NoInfo(TYPE);
@@ -255,4 +350,27 @@ function LoadDJJDJL(PageIndex) {
 
         }
     });
+}
+
+function LoadSZMXInfo(obj) {
+    var html = "";
+    html += ('<tr class="tr_main_info">');
+    html += ('<td style="width:140px;">' + obj.CJSJ.ToString("yyyy-MM-dd hh:mm:ss") + '</td>');
+    html += ('<td style="width:70px;">' + obj.LX + '</td>');
+    html += ('<td style="width:140px;">' + obj.JYSM + '</td>');
+    html += ('<td style="width:120px;color:' + (obj.JELX === "+" ? "green" : "red") + ';" >' + obj.JELX + obj.JE.toFixed(2) + '</td>');
+    html += ('<td style="width:120px;"><a class="a_main_info_cz" onclick="ViewDetail(' + obj.SZMXID + ')">查看详细</a></td>');
+    html += ('</tr>');
+    $("#tbody_main_info_xttz").append(html);
+}
+
+function LoadDJJDJLInfo(obj) {
+    var html = "";
+    html += ('<tr class="tr_main_info">');
+    html += ('<td style="width:140px;">' + obj.CJSJ.ToString("yyyy-MM-dd hh:mm:ss") + '</td>');
+    html += ('<td style="width:140px;">' + obj.LX + '</td>');
+    html += ('<td style="width:140px;color:' + (obj.LX === "冻结" ? "green" : "red") + ';" >' + obj.JE.toFixed(2) + '</td>');
+    html += ('<td style="width:120px;">' + obj.BZ + '</td>');
+    html += ('</tr>');
+    $("#tbody_main_info_djjd_xttz").append(html);
 }
