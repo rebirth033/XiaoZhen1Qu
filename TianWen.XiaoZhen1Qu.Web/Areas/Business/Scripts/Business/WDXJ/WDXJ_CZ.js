@@ -36,6 +36,7 @@ function LoadAll() {
     LoadWYZF();
     LoadKJZF();
     LoadZFBZF();
+    LoadYHHK();
     LoadDivInfo("divWXZF");
 }
 
@@ -99,6 +100,10 @@ function LoadZFBZF() {
     $("#div_main_info_body_zfbzf").html(html);
 }
 
+function LoadYHHK() {
+    
+}
+
 function LoadDivInfo(id) {
     if (id === "divWXZF") {
         $("#img_radio_wxzf").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
@@ -106,6 +111,7 @@ function LoadDivInfo(id) {
         $("#div_main_info_body_zfbzf").css("display", "none");
         $("#div_main_info_body_wyzf").css("display", "none");
         $("#div_main_info_body_kjzf").css("display", "none");
+        $("#div_main_info_body_yhhk").css("display", "none");
     }
     if (id === "divZFBZF") {
         $("#img_radio_zfbzf").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
@@ -113,6 +119,7 @@ function LoadDivInfo(id) {
         $("#div_main_info_body_zfbzf").css("display", "block");
         $("#div_main_info_body_wyzf").css("display", "none");
         $("#div_main_info_body_kjzf").css("display", "none");
+        $("#div_main_info_body_yhhk").css("display", "none");
     }
     if (id === "divWYZF") {
         $("#div_main_info_body_wyzf").find(".img_radio").each(function () {
@@ -125,6 +132,7 @@ function LoadDivInfo(id) {
         $("#div_main_info_body_zfbzf").css("display", "none");
         $("#div_main_info_body_wyzf").css("display", "block");
         $("#div_main_info_body_kjzf").css("display", "none");
+        $("#div_main_info_body_yhhk").css("display", "none");
     }
     if (id === "divKJZF") {
         $("#div_main_info_body_kjzf").find(".img_radio").each(function () {
@@ -137,6 +145,15 @@ function LoadDivInfo(id) {
         $("#div_main_info_body_zfbzf").css("display", "none");
         $("#div_main_info_body_wyzf").css("display", "none");
         $("#div_main_info_body_kjzf").css("display", "block");
+        $("#div_main_info_body_yhhk").css("display", "none");
+    }
+    if (id === "divYHHK") {
+        $("#div_main_info_body_wxzf").css("display", "none");
+        $("#div_main_info_body_zfbzf").css("display", "none");
+        $("#div_main_info_body_wyzf").css("display", "none");
+        $("#div_main_info_body_kjzf").css("display", "none");
+        $("#div_main_info_body_yhhk").css("display", "block");
+        $("#div_bottom").css("display", "none");
     }
 }
 
