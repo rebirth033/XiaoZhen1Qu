@@ -6,8 +6,7 @@
     $(".divstep").bind("click", HeadActive);
     $("#span_main_info_body_bottom_xy").bind("click", ShowFWXY);
     $("#input_main_info_ljzf").bind("click", LJZF);
-    $(".div_main_info_zffs_wyzf").bind("click", SelectWYZF_YH);
-    LoadDefault("divWXZF");
+    LoadAll();
 });
 
 function HeadActive() {
@@ -32,34 +31,112 @@ function HeadActive() {
     LoadDivInfo(this.id);
 }
 
-function LoadDefault(id) {
-    LoadDivInfo(id);
+function LoadAll() {
+    LoadWXZF();
+    LoadWYZF();
+    LoadKJZF();
+    LoadZFBZF();
+    LoadDivInfo("divWXZF");
+}
+
+function LoadWXZF() {
+    var html = "";
+    html += '<div class="div_main_info_zffs">';
+    html += '<img class="img_radio" id="img_radio_wxzf" />';
+    html += '<img class="img_zffs" id="img_zffs_wxzf" src="' + getRootPath() + "/Areas/Business/Css/images/WDZJ/wdxj_cz_wxzf.png" + '" />';
+    html += '<img class="img_select" src="' + getRootPath() + "/Areas/Business/Css/images/WDZJ/wdxj_cz_zffs_select.png" + '" />';
+    html += '</div>';
+    $("#div_main_info_body_wxzf").html(html);
+}
+
+function LoadWYZF() {
+    var yharray = new Array("gsyh", "zsyh", "nyyh", "zgyh", "jsyh", "pfyh:right", "jtyh", "msyh", "payh:bottom", "gfyh:bottom", "gdyh:bottom", "bjyh:bottom right", "zxyh:bottom", "xyyh:bottom right");
+    var html = '<div class="div_main_info_tip">请选择支付的银行卡<span class="span_main_info_tip">（请确保您的银行卡已开通网银）</span></div>';
+    for (var i = 0; i < yharray.length; i++) {
+        var values = yharray[i].split(':');
+        html += '<div class="div_main_info_zffs_wyzf ' + values[1] + '" id="div_main_info_zffs_wyzf_' + values[0] + '">';
+        html += '<img class="img_radio" id="img_radio_wyzf_' + values[0] + '"/>';
+        html += '<img class="img_zffs" id="img_zffs_wxzf_gsyh" src="' + getRootPath() + "/Areas/Business/Css/images/WDZJ/wdxj_cz_" + values[0] + ".png" + '"/>';
+        html += '<img class="img_select" id="img_select_wyzf_' + values[0] + '"/>';
+        html += '</div>';
+    }
+    $("#div_main_info_body_wyzf").html(html);
+    $(".div_main_info_zffs_wyzf").bind("click", { zffs: "wyzf" }, SelectWYZF_YH);
+}
+
+function LoadKJZF() {
+    var yharray = new Array("gsyh", "zsyh", "nyyh", "zgyh", "jsyh", "pfyh:right", "jtyh", "msyh", "payh:bottom", "gfyh:bottom", "gdyh:bottom", "bjyh:bottom right", "zxyh:bottom", "xyyh:bottom right");
+    var html = '<div class="div_main_info_tip">借记卡快捷<span class="span_main_info_tip">（需根据银行预留手机号确认）</span></div>';
+    for (var i = 0; i < yharray.length; i++) {
+        var values = yharray[i].split(':');
+        html += '<div class="div_main_info_zffs_wyzf ' + values[1] + '" id="div_main_info_zffs_jjkkjzf_' + values[0] + '">';
+        html += '<img class="img_radio" id="img_radio_jjkkjzf_' + values[0] + '"/>';
+        html += '<img class="img_zffs" id="img_zffs_jjkkjzf_gsyh" src="' + getRootPath() + "/Areas/Business/Css/images/WDZJ/wdxj_cz_" + values[0] + ".png" + '"/>';
+        html += '<img class="img_select" id="img_select_jjkkjzf_' + values[0] + '"/>';
+        html += '</div>';
+    }
+    html += '<div class="div_main_info_tip">信用卡快捷<span class="span_main_info_tip">（需根据银行预留手机号确认）</span></div>';
+    for (var i = 0; i < yharray.length; i++) {
+        var values = yharray[i].split(':');
+        html += '<div class="div_main_info_zffs_wyzf ' + values[1] + '" id="div_main_info_zffs_xykkjzf_' + values[0] + '">';
+        html += '<img class="img_radio" id="img_radio_xykkjzf_' + values[0] + '"/>';
+        html += '<img class="img_zffs" id="img_zffs_xykkjzf_gsyh" src="' + getRootPath() + "/Areas/Business/Css/images/WDZJ/wdxj_cz_" + values[0] + ".png" + '"/>';
+        html += '<img class="img_select" id="img_select_xykkjzf_' + values[0] + '"/>';
+        html += '</div>';
+    }
+    $("#div_main_info_body_kjzf").html(html);
+    $(".div_main_info_zffs_wyzf").bind("click", { zffs: "jjkkjzf" }, SelectWYZF_YH);
+    $(".div_main_info_zffs_wyzf").bind("click", { zffs: "xykkjzf" }, SelectWYZF_YH);
+}
+
+function LoadZFBZF() {
+    var html = "";
+    html += '<div class="div_main_info_zffs">';
+    html += '<img class="img_radio" id="img_radio_zfbzf" />';
+    html += '<img class="img_zffs" id="img_zffs_zfbzf" src="' + getRootPath() + "/Areas/Business/Css/images/WDZJ/wdxj_cz_zfbzf.png" + '" />';
+    html += '<img class="img_select" src="' + getRootPath() + "/Areas/Business/Css/images/WDZJ/wdxj_cz_zffs_select.png" + '" />';
+    html += '</div>';
+    $("#div_main_info_body_zfbzf").html(html);
 }
 
 function LoadDivInfo(id) {
     if (id === "divWXZF") {
         $("#img_radio_wxzf").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-        $("#div_main_info_body_wxfz").css("display", "block");
-        $("#div_main_info_body_zfbfz").css("display", "none");
+        $("#div_main_info_body_wxzf").css("display", "block");
+        $("#div_main_info_body_zfbzf").css("display", "none");
         $("#div_main_info_body_wyzf").css("display", "none");
+        $("#div_main_info_body_kjzf").css("display", "none");
     }
     if (id === "divZFBZF") {
         $("#img_radio_zfbzf").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-        $("#div_main_info_body_wxfz").css("display", "none");
-        $("#div_main_info_body_zfbfz").css("display", "block");
+        $("#div_main_info_body_wxzf").css("display", "none");
+        $("#div_main_info_body_zfbzf").css("display", "block");
         $("#div_main_info_body_wyzf").css("display", "none");
+        $("#div_main_info_body_kjzf").css("display", "none");
     }
     if (id === "divWYZF") {
         $("#div_main_info_body_wyzf").find(".img_radio").each(function () {
             $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
         });
-        
         $("#img_radio_wyzf_gsyh").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
         $("#img_select_wyzf_gsyh").attr("src", getRootPath() + "/Areas/Business/Css/images/WDZJ/wdxj_cz_zffs_select.png");
         $("#div_main_info_zffs_wyzf_gsyh").css("border", "1px solid #ef6100");
-        $("#div_main_info_body_wxfz").css("display", "none");
-        $("#div_main_info_body_zfbfz").css("display", "none");
+        $("#div_main_info_body_wxzf").css("display", "none");
+        $("#div_main_info_body_zfbzf").css("display", "none");
         $("#div_main_info_body_wyzf").css("display", "block");
+        $("#div_main_info_body_kjzf").css("display", "none");
+    }
+    if (id === "divKJZF") {
+        $("#div_main_info_body_kjzf").find(".img_radio").each(function () {
+            $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+        });
+        $("#img_radio_jjkkjzf_gsyh").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+        $("#img_select_jjkkjzf_gsyh").attr("src", getRootPath() + "/Areas/Business/Css/images/WDZJ/wdxj_cz_zffs_select.png");
+        $("#div_main_info_zffs_jjkkjzf_gsyh").css("border", "1px solid #ef6100");
+        $("#div_main_info_body_wxzf").css("display", "none");
+        $("#div_main_info_body_zfbzf").css("display", "none");
+        $("#div_main_info_body_wyzf").css("display", "none");
+        $("#div_main_info_body_kjzf").css("display", "block");
     }
 }
 
@@ -117,17 +194,16 @@ function LJZF() {
     alert("支付成功");
 }
 
-function SelectWYZF_YH() {
-    $("#div_main_info_body_wyzf").find(".img_radio").each(function () {
+function SelectWYZF_YH(obj) {
+    $("#div_main_info_body_kjzf").find(".img_radio").each(function () {
         $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
     });
-    $("#div_main_info_body_wyzf").find(".img_select").each(function () {
+    $("#div_main_info_body_kjzf").find(".img_select").each(function () {
         $(this).attr("src", "");
     });
-    $("#div_main_info_body_wyzf").find(".div_main_info_zffs_wyzf").each(function () {
+    $("#div_main_info_body_kjzf").find(".div_main_info_zffs_wyzf").each(function () {
         $(this).css("border-color", "#cccccc");
     });
-
     $(this).find(".img_radio").each(function () {
         $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
     });

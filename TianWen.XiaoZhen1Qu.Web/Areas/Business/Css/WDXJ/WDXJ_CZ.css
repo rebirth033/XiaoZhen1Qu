@@ -89,6 +89,7 @@
     height: 18px;
     cursor: pointer;
     border: none !important;
+    margin-right: 20px;
 }
 
 .img_radio_wyzf {
@@ -120,6 +121,7 @@
 .bottom {
     border-bottom: 1px solid #cccccc;
 }
+
 .right {
     border-right: 1px solid #cccccc;
 }
@@ -130,6 +132,8 @@
     display: block;
     text-align: left;
     font-size: 12px;
+    float: left;
+    margin-top: 10px;
 }
 
 .span_main_info_tip {
@@ -181,3 +185,37 @@
         text-decoration: underline;
         color: #ef6100;
     }
+
+.em_main_info_body_split {
+    background-color: #ccc;
+    height: 1px;
+    width: 100%;
+    display: block;
+}
+
+.span_main_info_body_wxlj {
+    font-size: 12px;
+    color: #31b0d5;
+    line-height: 30px;
+    display: block;
+}
+
+    .span_main_info_body_wxlj:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+.span_main_info_body_wxts {
+    font-size: 12px;
+    color: #999;
+    line-height: 30px;
+    display: block;
+}
+
+.div_main_info_body_wxts {
+    display: block;
+    width: 100%;
+    height: 30px;
+    padding-top: 20px;
+    text-align: left;
+}
