@@ -91,6 +91,13 @@
     border: none !important;
 }
 
+.img_radio_wyzf {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    border: none !important;
+}
+
 .div_main_info_zffs {
     width: 170px;
     height: 36px;
@@ -102,9 +109,19 @@
 .div_main_info_zffs_wyzf {
     width: 136px;
     height: 36px;
-    border: 1px solid #ef6100;
+    border-top: 1px solid #cccccc;
+    border-left: 1px solid #cccccc;
     position: relative;
     padding-top: 1px;
+    float: left;
+    cursor: pointer;
+}
+
+.bottom {
+    border-bottom: 1px solid #cccccc;
+}
+.right {
+    border-right: 1px solid #cccccc;
 }
 
 .div_main_info_tip {

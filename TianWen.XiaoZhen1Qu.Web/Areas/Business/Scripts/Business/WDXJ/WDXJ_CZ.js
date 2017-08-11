@@ -6,6 +6,7 @@
     $(".divstep").bind("click", HeadActive);
     $("#span_main_info_body_bottom_xy").bind("click", ShowFWXY);
     $("#input_main_info_ljzf").bind("click", LJZF);
+    $(".div_main_info_zffs_wyzf").bind("click", SelectWYZF_YH);
     LoadDefault("divWXZF");
 });
 
@@ -49,7 +50,13 @@ function LoadDivInfo(id) {
         $("#div_main_info_body_wyzf").css("display", "none");
     }
     if (id === "divWYZF") {
+        $("#div_main_info_body_wyzf").find(".img_radio").each(function () {
+            $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+        });
+        
         $("#img_radio_wyzf_gsyh").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+        $("#img_select_wyzf_gsyh").attr("src", getRootPath() + "/Areas/Business/Css/images/WDZJ/wdxj_cz_zffs_select.png");
+        $("#div_main_info_zffs_wyzf_gsyh").css("border", "1px solid #ef6100");
         $("#div_main_info_body_wxfz").css("display", "none");
         $("#div_main_info_body_zfbfz").css("display", "none");
         $("#div_main_info_body_wyzf").css("display", "block");
@@ -108,4 +115,24 @@ function LJZFValidate() {
 function LJZF() {
     if (!LJZFValidate()) return;
     alert("支付成功");
+}
+
+function SelectWYZF_YH() {
+    $("#div_main_info_body_wyzf").find(".img_radio").each(function () {
+        $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+    });
+    $("#div_main_info_body_wyzf").find(".img_select").each(function () {
+        $(this).attr("src", "");
+    });
+    $("#div_main_info_body_wyzf").find(".div_main_info_zffs_wyzf").each(function () {
+        $(this).css("border-color", "#cccccc");
+    });
+
+    $(this).find(".img_radio").each(function () {
+        $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+    });
+    $(this).find(".img_select").each(function () {
+        $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/WDZJ/wdxj_cz_zffs_select.png");
+    });
+    $(this).css("border", "1px solid #ef6100");
 }
