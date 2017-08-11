@@ -99,15 +99,29 @@
     border: none !important;
 }
 
-.div_main_info_zffs {
+.div_main_info_zffs_dsfptzf {
     width: 170px;
     height: 36px;
-    border: 1px solid #ef6100;
+    border: 1px solid #cccccc;
     position: relative;
     padding-top: 1px;
+    float: left;
+        cursor: pointer;
+
 }
 
 .div_main_info_zffs_wyzf {
+    width: 136px;
+    height: 36px;
+    border-top: 1px solid #cccccc;
+    border-left: 1px solid #cccccc;
+    position: relative;
+    padding-top: 1px;
+    float: left;
+    cursor: pointer;
+}
+
+.div_main_info_zffs_kjzf {
     width: 136px;
     height: 36px;
     border-top: 1px solid #cccccc;
