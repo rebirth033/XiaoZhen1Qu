@@ -157,7 +157,7 @@
 .img_select {
     width: 20px;
     height: 20px;
-    display: block;
+    display: inline-block;
     position: absolute;
     bottom: 0;
     right: 0;
