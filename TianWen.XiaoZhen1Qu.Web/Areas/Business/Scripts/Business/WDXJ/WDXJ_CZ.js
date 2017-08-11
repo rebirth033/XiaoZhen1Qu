@@ -44,12 +44,12 @@ function LoadDSFPTZF() {
     html += '<div class="div_main_info_zffs_dsfptzf" id="div_main_info_zffs_wxzf">';
     html += '<img class="img_radio" id="img_radio_wxzf" />';
     html += '<img class="img_zffs" id="img_zffs_wxzf" src="' + getRootPath() + "/Areas/Business/Css/images/WDZJ/wdxj_cz_wxzf.png" + '" />';
-    html += '<img class="img_select" id="img_select_wxzf" />';
+    html += '<span class="img_select" id="img_select_wxzf"></span>';
     html += '</div>';
     html += '<div class="div_main_info_zffs_dsfptzf" id="div_main_info_zffs_zfbzf">';
     html += '<img class="img_radio" id="img_radio_zfbzf" />';
     html += '<img class="img_zffs" id="img_zffs_zfbzf" src="' + getRootPath() + "/Areas/Business/Css/images/WDZJ/wdxj_cz_zfbzf.png" + '" />';
-    html += '<img class="img_select" id="img_select_zfbzf" />';
+    html += '<span class="img_select" id="img_select_zfbzf"></span>';
     html += '</div>';
     $("#div_main_info_body_dsfptzf").html(html);
     $(".div_main_info_zffs_dsfptzf").bind("click", { zffs: "dsfptzf" }, SelectWYZF_YH);
@@ -63,7 +63,7 @@ function LoadWYZF() {
         html += '<div class="div_main_info_zffs_wyzf ' + values[1] + '" id="div_main_info_zffs_wyzf_' + values[0] + '">';
         html += '<img class="img_radio" id="img_radio_wyzf_' + values[0] + '"/>';
         html += '<img class="img_zffs" id="img_zffs_wxzf_gsyh" src="' + getRootPath() + "/Areas/Business/Css/images/WDZJ/wdxj_cz_" + values[0] + ".png" + '"/>';
-        html += '<img class="img_select" id="img_select_wyzf_' + values[0] + '"/>';
+        html += '<span class="img_select" id="img_select_wyzf_' + values[0] + '"></span>';
         html += '</div>';
     }
     $("#div_main_info_body_wyzf").html(html);
@@ -78,7 +78,7 @@ function LoadKJZF() {
         html += '<div class="div_main_info_zffs_kjzf ' + values[1] + '" id="div_main_info_zffs_jjkkjzf_' + values[0] + '">';
         html += '<img class="img_radio" id="img_radio_jjkkjzf_' + values[0] + '"/>';
         html += '<img class="img_zffs" id="img_zffs_jjkkjzf_' + values[0] + '" src="' + getRootPath() + "/Areas/Business/Css/images/WDZJ/wdxj_cz_" + values[0] + ".png" + '"/>';
-        html += '<img class="img_select" id="img_select_jjkkjzf_' + values[0] + '"/>';
+        html += '<span class="img_select" id="img_select_jjkkjzf_' + values[0] + '"></span>';
         html += '</div>';
     }
     html += '<div class="div_main_info_tip">信用卡快捷<span class="span_main_info_tip">（需根据银行预留手机号确认）</span></div>';
@@ -87,7 +87,7 @@ function LoadKJZF() {
         html += '<div class="div_main_info_zffs_kjzf ' + values[1] + '" id="div_main_info_zffs_xykkjzf_' + values[0] + '">';
         html += '<img class="img_radio" id="img_radio_xykkjzf_' + values[0] + '"/>';
         html += '<img class="img_zffs" id="img_zffs_xykkjzf_' + values[0] + '" src="' + getRootPath() + "/Areas/Business/Css/images/WDZJ/wdxj_cz_" + values[0] + ".png" + '"/>';
-        html += '<img class="img_select" id="img_select_xykkjzf_' + values[0] + '"/>';
+        html += '<span class="img_select" id="img_select_xykkjzf_' + values[0] + '"></span>';
         html += '</div>';
     }
     $("#div_main_info_body_kjzf").html(html);
@@ -213,7 +213,7 @@ function SelectWYZF_YH(obj) {
         $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
     });
     $("#div_main_info_body_" + obj.data.zffs).find(".img_select").each(function () {
-        $(this).attr("src", "");
+        $(this).css("background-image", "");
     });
     $("#div_main_info_body_" + obj.data.zffs).find(".div_main_info_zffs_" + obj.data.zffs).each(function () {
         $(this).css("border", "1px solid #cccccc");
@@ -222,7 +222,7 @@ function SelectWYZF_YH(obj) {
         $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
     });
     $(this).find(".img_select").each(function () {
-        $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/WDZJ/wdxj_cz_zffs_select.png");
+        $(this).css("background-image", 'url(' + getRootPath() + '/Areas/Business/Css/images/WDZJ/wdxj_cz_zffs_select.png)');
     });
     $(this).css("border", "1px solid #ef6100");
 }
@@ -233,7 +233,7 @@ function FirstLoad(zffs) {
             $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
         });
         $("#img_radio_wxzf").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-        $("#img_select_wxzf").attr("src", getRootPath() + "/Areas/Business/Css/images/WDZJ/wdxj_cz_zffs_select.png");
+        $("#img_select_wxzf").css("background-image", 'url(' + getRootPath() + '/Areas/Business/Css/images/WDZJ/wdxj_cz_zffs_select.png)');
         $("#div_main_info_zffs_wxzf").css("border", "1px solid #ef6100");
     }
     if (zffs === "wyzf") {
@@ -241,7 +241,7 @@ function FirstLoad(zffs) {
             $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
         });
         $("#img_radio_wyzf_gsyh").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-        $("#img_select_wyzf_gsyh").attr("src", getRootPath() + "/Areas/Business/Css/images/WDZJ/wdxj_cz_zffs_select.png");
+        $("#img_select_wyzf_gsyh").css("background-image", 'url(' + getRootPath() + '/Areas/Business/Css/images/WDZJ/wdxj_cz_zffs_select.png)');
         $("#div_main_info_zffs_wyzf_gsyh").css("border", "1px solid #ef6100");
     }
     if (zffs === "kjzf") {
@@ -249,7 +249,7 @@ function FirstLoad(zffs) {
             $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
         });
         $("#img_radio_jjkkjzf_gsyh").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-        $("#img_select_jjkkjzf_gsyh").attr("src", getRootPath() + "/Areas/Business/Css/images/WDZJ/wdxj_cz_zffs_select.png");
+        $("#img_select_jjkkjzf_gsyh").css("background-image", 'url(' + getRootPath() + '/Areas/Business/Css/images/WDZJ/wdxj_cz_zffs_select.png)');
         $("#div_main_info_zffs_jjkkjzf_gsyh").css("border", "1px solid #ef6100");
     }
 }
