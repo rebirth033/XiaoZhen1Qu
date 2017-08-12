@@ -30,6 +30,8 @@
     $("#div_body_image_qqtx").bind("mouseover", ShowQQ);
     $("#div_body_image_qqtx").bind("mouseleave", HideQQ);
     $("#div_body_image_qqtx").bind("click", QQBD);
+    $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);
+    $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
     LoadYHJBXX();
     ToWDFB();
 });
@@ -44,12 +46,22 @@ function LoadYHJBXX() {
             YHID: getUrlParam("YHID")
         },
         success: function (xml) {
-            $("#span_top_right_yhm").html(xml.YHJBXX.YHM);
+            $("#span_top_right_yhm_text").html(xml.YHJBXX.YHM);
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
         }
     });
+}
+//显示用户菜单
+function ShowYHCD() {
+    $("#div_top_right_dropdown_yhm").css("display", "block");
+    $("#span_top_right_yhm_img").css("background-image", 'url(' + getRootPath() + "/Areas/Business/Css/images/arrow_up.png" + ')');
+}
+//隐藏用户菜单
+function HideYHCD() {
+    $("#div_top_right_dropdown_yhm").css("display", "none");
+    $("#span_top_right_yhm_img").css("background-image", 'url(' + getRootPath() + "/Areas/Business/Css/images/arrow_down.png" +')');
 }
 //自动登录
 function AutoLogin() {
@@ -80,13 +92,13 @@ function LiFocus() {
             $(this).css("color", "#595757");
         });
     });
-    $(this).find("span").each(function() {
+    $(this).find("span").each(function () {
         $(this).css("color", "#ff6100");
     });
 }
 //我的发布
 function ToWDFB() {
-    $("#iframeright").attr("src", getRootPath() + "/Business/WDFB/WDFB?YHID="+getUrlParam("YHID"));
+    $("#iframeright").attr("src", getRootPath() + "/Business/WDFB/WDFB?YHID=" + getUrlParam("YHID"));
 }
 //我的收藏
 function ToWDSC() {
@@ -204,7 +216,7 @@ function ExpandSecond_Leaf(obj) {
 function ExpandSecond_Tree(obj) {
     if ($("#img" + obj.data.type).attr("src").indexOf("up") !== -1) {
         $("." + obj.data.type + "_child").each(function () {
-            $("." + this.id.substr(4, 4) + "_child").each(function() {
+            $("." + this.id.substr(4, 4) + "_child").each(function () {
                 $(this).css("display", "none");
             });
             $(this).css("display", "none");
@@ -268,7 +280,7 @@ function HideQQ() {
 }
 //绑定QQ
 function QQBD() {
-    $("#div_body_image_qqtx").find(".toolbar").each(function() {
+    $("#div_body_image_qqtx").find(".toolbar").each(function () {
         $.ajax({
             type: "POST",
             url: getRootPath() + "/Business/GRZL/UpdateQQ",
@@ -290,4 +302,8 @@ function QQBD() {
             }
         });
     });
+}
+//退出
+function Exit() {
+    window.location.href = getRootPath() + "/Business/YHDLXX/YHDLXX";
 }
