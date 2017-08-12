@@ -30,8 +30,27 @@
     $("#div_body_image_qqtx").bind("mouseover", ShowQQ);
     $("#div_body_image_qqtx").bind("mouseleave", HideQQ);
     $("#div_body_image_qqtx").bind("click", QQBD);
+    LoadYHJBXX();
     ToWDFB();
 });
+//加载用户基本信息
+function LoadYHJBXX() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/GRZL/GetGRZL",
+        dataType: "json",
+        data:
+        {
+            YHID: getUrlParam("YHID")
+        },
+        success: function (xml) {
+            $("#span_top_right_yhm").html(xml.YHJBXX.YHM);
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
 //自动登录
 function AutoLogin() {
     $.ajax({
@@ -235,7 +254,6 @@ function CloseXJFWXY() {
     $("#XJFWXYWindow").css("display", "none");
     $("#shadow").css("display", "none");
 }
-
 //显示QQ号码
 function ShowQQ() {
     $(this).find("div").each(function () {
