@@ -1,0 +1,28 @@
+﻿body {
+    text-align: center;
+}
+
+.div_head {
+    width: 100%;
+    height: 80px;
+    display: block;
+    padding-left: 80px;
+}
+
+.span_head_main_logo {
+    background-image: url(images/logo_blue.png);
+    background-repeat: no-repeat;
+    width: 155px;
+    height: 55px;
+    display: inline-block;
+    margin-top: 10px;
+    float: left;
+}
+
+.em_head_split {
+    height: 1px;
+    width: 100%;
+    display: block;
+    margin-top: 10px;
+    background-color: #31b0d5;
+}

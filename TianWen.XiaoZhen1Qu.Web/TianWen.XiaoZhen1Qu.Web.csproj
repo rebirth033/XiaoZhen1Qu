@@ -252,6 +252,7 @@
     <Content Include="Areas\Business\Css\WZCX\WZCX.css" />
     <Content Include="Areas\Business\Css\XXGL\XXGL.css" />
     <Content Include="Areas\Business\Css\XXGL\XXGLMX.css" />
+    <Content Include="Areas\Business\Css\YHDLXX.css" />
     <Content Include="Areas\Business\Css\YHGL.css" />
     <Content Include="Areas\Business\Css\YXCZ\YXCZ.css" />
     <Content Include="Areas\Business\Css\YXYZ.css" />
