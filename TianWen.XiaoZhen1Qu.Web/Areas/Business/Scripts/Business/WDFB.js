@@ -36,7 +36,7 @@ function LoadDefault(TYPE) {
         dataType: "json",
         data:
         {
-            YHID: "2718ced3-996d-427d-925d-a08e127cc0b8",
+            YHID: getUrlParam("YHID"),
             TYPE: TYPE
         },
         success: function (xml) {

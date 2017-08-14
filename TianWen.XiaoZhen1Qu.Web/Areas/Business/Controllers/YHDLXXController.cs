@@ -34,7 +34,8 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
                 string checkcode = Session["CheckCode"].ToString();
                 if (YZM == checkcode)
                 {
-                    return Json(new { Result = EnResultType.Success, Message = "登录成功" });
+                    YHJBXX yhjbxx = YHDLXXBLL.AddUserBySJ(Request["SJ"]);
+                    return Json(new { Result = EnResultType.Success, Message = "登录成功", YHID = yhjbxx.YHID });
                 }
                 else
                     return Json(new { Result = EnResultType.Failed, Message = "验证码错误，请重新输入" });

@@ -26,46 +26,6 @@ function Showusername() {
     $("#cellphone").css("display", "none");
 }
 
-function SJCheck() {
-    if (!ValidateCellPhone($("#SJ").val())) {
-        $("#SJ").css("border-color", "#F2272D");
-        $("#SJInfo").css("color", "#F2272D");
-        $("#SJInfo").html("手机号码格式不正确，请重新输入");
-        return false;
-    }
-    else if ($("#SJ").val().length === 0) {
-        $("#SJ").css("border-color", "#F2272D");
-        $("#SJInfo").css("color", "#F2272D");
-        $("#SJInfo").html("请输入手机号");
-        return false;
-    }
-    else {
-        $("#SJ").css("border-color", "#999");
-        $("#SJInfo").html("");
-        return true;
-    }
-}
-
-function ValidateCheckCode() {
-    if ($("#YZM").val().length === 0) {
-        $("#YZM").css("border-color", "#F2272D");
-        $("#YZMInfo").css("color", "#F2272D");
-        $("#YZMInfo").html("请输入手机验证码");
-        return false;
-    }
-    if (!/^[0-9]{6}$/.test($("#YZM").val())) {
-        $("#YZM").css("border-color", "#F2272D");
-        $("#YZMInfo").css("color", "#F2272D");
-        $("#YZMInfo").html("请输入正确的手机验证码");
-        return false;
-    }
-    else {
-        $("#YZM").css("border-color", "#999");
-        $("#YZMInfo").html("");
-        return true;
-    }
-}
-
 function YHMCheck() {
     if (($("#YHM").val().length < 5 && $("#YHM").val().length > 0) || $("#YHM").val().length > 15) {
         $("#YHM").css("border-color", "#F2272D");
@@ -137,6 +97,46 @@ function MMCheck() {
     }
 }
 
+function SJCheck() {
+    if (!ValidateCellPhone($("#SJ").val())) {
+        $("#SJ").css("border-color", "#F2272D");
+        $("#SJInfo").css("color", "#F2272D");
+        $("#SJInfo").html("手机号码格式不正确，请重新输入");
+        return false;
+    }
+    else if ($("#SJ").val().length === 0) {
+        $("#SJ").css("border-color", "#F2272D");
+        $("#SJInfo").css("color", "#F2272D");
+        $("#SJInfo").html("请输入手机号");
+        return false;
+    }
+    else {
+        $("#SJ").css("border-color", "#999");
+        $("#SJInfo").html("");
+        return true;
+    }
+}
+
+function ValidateCheckCode() {
+    if ($("#YZM").val().length === 0) {
+        $("#YZM").css("border-color", "#F2272D");
+        $("#YZMInfo").css("color", "#F2272D");
+        $("#YZMInfo").html("请输入手机验证码");
+        return false;
+    }
+    if (!/^[0-9]{6}$/.test($("#YZM").val())) {
+        $("#YZM").css("border-color", "#F2272D");
+        $("#YZMInfo").css("color", "#F2272D");
+        $("#YZMInfo").html("请输入正确的手机验证码");
+        return false;
+    }
+    else {
+        $("#YZM").css("border-color", "#999");
+        $("#YZMInfo").html("");
+        return true;
+    }
+}
+
 function SJDLValidate() {
     if (!SJCheck()) return false;
     if (!ValidateCheckCode()) return false;
@@ -157,11 +157,12 @@ function SJDL() {
         dataType: "json",
         data:
         {
+            SJ: $("#SJ").val(),
             YZM: $("#YZM").val()
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                alert(xml.Message);
+                window.location.href = getRootPath() + "/Business/YHGL/YHGL?YHID=" + xml.YHID;
             } else {
                 $("#YZM").css("border-color", "#F2272D");
                 $("#YZMInfo").css("color", "#F2272D");
@@ -185,12 +186,21 @@ function MMDL() {
             YHM: $("#YHM").val(),
             MM: $("#MM").val(),
             SFZDDL: $("#checkMMSFZDDL")[0].checked
-},
+        },
         success: function (xml) {
             if (xml.Result === 1) {
                 alert(xml.Message);
             } else {
-                alert(xml.Message);
+                if (xml.Type === 1) {
+                    $("#YHM").css("border-color", "#F2272D");
+                    $("#YHMInfo").css("color", "#F2272D");
+                    $("#YHMInfo").html(xml.Message);
+                }
+                if (xml.Type === 2) {
+                    $("#MM").css("border-color", "#F2272D");
+                    $("#MMInfo").css("color", "#F2272D");
+                    $("#MMInfo").html(xml.Message);
+                }
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
