@@ -141,7 +141,7 @@ function LoadSZMX(PageIndex) {
                     LoadSZMXInfo(xml.list[i]);
                 }
                 if (xml.list.length === 0)
-                    NoInfo(TYPE);
+                    NoInfo("divSZMX");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -179,7 +179,7 @@ function LoadDJJDJL(PageIndex) {
                     LoadDJJDJLInfo(xml.list[i]);
                 }
                 if (xml.list.length === 0)
-                    NoInfo(TYPE);
+                    NoInfo("divDJJDJL");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -373,4 +373,13 @@ function LoadDJJDJLInfo(obj) {
     html += ('<td style="width:120px;">' + obj.BZ + '</td>');
     html += ('</tr>');
     $("#tbody_main_info_djjd_xttz").append(html);
+}
+
+function NoInfo(TYPE) {
+    if (TYPE === "divSZMX") {
+        $("#tbody_main_info_xttz").html('<div class="div_no_info">暂无收支明细记录</div>');
+    }
+    if (TYPE === "divDJJDJL") {
+        $("#tbody_main_info_djjd_xttz").html('<div class="div_no_info">暂无冻结解冻记录</div>');
+    }
 }
