@@ -235,6 +235,7 @@
     <Content Include="Areas\Business\Css\images\xlwb.png" />
     <Content Include="Areas\Business\Css\images\yes.png" />
     <Content Include="Areas\Business\Css\images\righttip.png" />
+    <Content Include="Areas\Business\Css\images\yhdlxx_background.jpg" />
     <Content Include="Areas\Business\Css\images\yxbd.png" />
     <Content Include="Areas\Business\Css\images\yyzzdsfrz.png" />
     <Content Include="Areas\Business\Css\images\yyzzfrrz.png" />
