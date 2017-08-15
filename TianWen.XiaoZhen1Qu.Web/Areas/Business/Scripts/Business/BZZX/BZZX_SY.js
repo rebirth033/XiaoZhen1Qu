@@ -1,13 +1,14 @@
 ﻿$(document).ready(function () {
     $(".div_left_box_info").bind("mouseover", ShowRemark);
     $(".div_left_box_info").bind("mouseleave", HideRemark);
-    
+
     $("#div_left_box_info_zdjs").bind("click", OpenZDJS);
     $("#div_left_box_info_zhmm").bind("click", OpenZHMM);
+    $("#div_left_box_info_zhyecz").bind("click", OpenZHYECZ);
 });
 
 function ShowRemark() {
-    $(this).find(".span_left_box_info_remark").each(function() {
+    $(this).find(".span_left_box_info_remark").each(function () {
         $(this).css("display", "block");
     });
 }
@@ -24,4 +25,8 @@ function OpenZDJS() {
 
 function OpenZHMM() {
     window.open(getRootPath() + "/Business/BZZX/BZZX_SY_ZHMM?YHID=" + getUrlParam("YHID"));
+}
+
+function OpenZHYECZ() {
+    window.open(getRootPath() + "/Business/YHGL/YHGL?YHID=" + getUrlParam("YHID") + "&Show=WDZJ");
 }

@@ -87,6 +87,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     YHJBXX newobj = new YHJBXX();
                     newobj.MM = EncryptionHelper.MD5Encrypt64("111111a");
                     newobj.SJ = SJ;
+                    newobj.SQRQ = DateTime.Now;
                     newobj.YHM = "new_user";
                     DAO.Save(newobj);
                     return newobj;

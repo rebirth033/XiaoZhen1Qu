@@ -33,7 +33,10 @@
     $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
     LoadYHJBXX();
-    ToWDFB();
+    if (getUrlParam("Show") === "WDZJ")
+        ShowWDZJ();
+    else
+        ShowWDXX();
 });
 //加载用户基本信息
 function LoadYHJBXX() {
@@ -61,7 +64,7 @@ function ShowYHCD() {
 //隐藏用户菜单
 function HideYHCD() {
     $("#div_top_right_dropdown_yhm").css("display", "none");
-    $("#span_top_right_yhm_img").css("background-image", 'url(' + getRootPath() + "/Areas/Business/Css/images/arrow_down.png" +')');
+    $("#span_top_right_yhm_img").css("background-image", 'url(' + getRootPath() + "/Areas/Business/Css/images/arrow_down.png" + ')');
 }
 //自动登录
 function AutoLogin() {
@@ -158,6 +161,7 @@ function ShowWDXX() {
     $("#ulWDZH").css("display", "block");
     $("#ulWDZJ").css("display", "block");
     $("#ulSHGJ").css("display", "block");
+    ToWDFB();
 }
 //显示我的账户
 function ShowWDZH() {
@@ -169,6 +173,7 @@ function ShowWDZH() {
     $("#ulWDZH").css("display", "block");
     $("#ulWDZJ").css("display", "block");
     $("#ulSHGJ").css("display", "block");
+    ToGRZL();
 }
 //显示我的资金
 function ShowWDZJ() {
@@ -180,6 +185,7 @@ function ShowWDZJ() {
     $("#ulWDZH").css("display", "none");
     $("#ulWDZJ").css("display", "block");
     $("#ulSHGJ").css("display", "block");
+    ToXJMXCX();
 }
 //显示生活工具
 function ShowSHGJ() {
@@ -191,6 +197,7 @@ function ShowSHGJ() {
     $("#ulWDZH").css("display", "none");
     $("#ulWDZJ").css("display", "none");
     $("#ulSHGJ").css("display", "block");
+    ToHFCZ();
 }
 //展开第二级叶子节点
 function ExpandSecond_Leaf(obj) {
