@@ -21,11 +21,6 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return View();
         }
 
-        public ActionResult BZZX_SY_ZDJS()
-        {
-            return View();
-        }
-
         public ActionResult BZZX_CJWT()
         {
             return View();
@@ -41,7 +36,17 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return View();
         }
 
-        public ActionResult BZZX_SY_ZHMM(object obj)
+        public ActionResult BZZX_SY_ZDJS()
+        {
+            return View();
+        }
+
+        public ActionResult BZZX_SY_ZHMM()
+        {
+            return View();
+        }
+
+        public ActionResult BZZX_SY_DHMYCX()
         {
             return View();
         }

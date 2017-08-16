@@ -100,12 +100,6 @@
     color: #ff6100;
 }
 
-:-ms-input-placeholder.input_content {
-    color: #999;
-}
-
-
-
 .div_content_info_left {
     display: block;
     height: 30px;
@@ -131,3 +125,7 @@
     .input_content_ljzf:hover {
         background: #31b0d5;
     }
+
+:-ms-input-placeholder.input_content {
+    color: #999;
+}

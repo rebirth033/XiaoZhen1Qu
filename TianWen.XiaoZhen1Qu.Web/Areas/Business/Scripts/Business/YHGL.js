@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-    $("#liWDXX").css("font-size", "18px").css("font-weight", "700");
     $("#liWDXX").bind("click", ShowWDXX);
     $("#liWDZH").bind("click", ShowWDZH);
     $("#liWDZJ").bind("click", ShowWDZJ);
@@ -165,7 +164,7 @@ function ShowWDXX() {
 }
 //显示我的账户
 function ShowWDZH() {
-    $("#liWDXX").css("font-size", "18px").css("font-weight", "normal");
+    $("#liWDXX").css("font-size", "16px").css("font-weight", "normal");
     $("#liWDZH").css("font-size", "18px").css("font-weight", "700");
     $("#liWDZJ").css("font-size", "16px").css("font-weight", "normal");
     $("#liSHGJ").css("font-size", "16px").css("font-weight", "normal");
@@ -177,9 +176,9 @@ function ShowWDZH() {
 }
 //显示我的资金
 function ShowWDZJ() {
-    $("#liWDXX").css("font-size", "18px").css("font-weight", "normal");
-    $("#liWDZH").css("font-size", "18px").css("font-weight", "normal");
-    $("#liWDZJ").css("font-size", "16px").css("font-weight", "700");
+    $("#liWDXX").css("font-size", "16px").css("font-weight", "normal");
+    $("#liWDZH").css("font-size", "16px").css("font-weight", "normal");
+    $("#liWDZJ").css("font-size", "18px").css("font-weight", "700");
     $("#liSHGJ").css("font-size", "16px").css("font-weight", "normal");
     $("#ulWDXX").css("display", "none");
     $("#ulWDZH").css("display", "none");
@@ -189,10 +188,10 @@ function ShowWDZJ() {
 }
 //显示生活工具
 function ShowSHGJ() {
-    $("#liWDXX").css("font-size", "18px").css("font-weight", "normal");
-    $("#liWDZH").css("font-size", "18px").css("font-weight", "normal");
+    $("#liWDXX").css("font-size", "16px").css("font-weight", "normal");
+    $("#liWDZH").css("font-size", "16px").css("font-weight", "normal");
     $("#liWDZJ").css("font-size", "16px").css("font-weight", "normal");
-    $("#liSHGJ").css("font-size", "16px").css("font-weight", "700");
+    $("#liSHGJ").css("font-size", "18px").css("font-weight", "700");
     $("#ulWDXX").css("display", "none");
     $("#ulWDZH").css("display", "none");
     $("#ulWDZJ").css("display", "none");

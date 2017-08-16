@@ -1,0 +1,136 @@
+﻿body {
+    text-align: center;
+}
+
+.div_head {
+    width: 100%;
+}
+
+.div_head_main {
+    width: 1000px;
+    height: 75px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.span_head_main_logo {
+    background-image: url(../images/logo_blue.png);
+    background-repeat: no-repeat;
+    width: 155px;
+    height: 55px;
+    display: inline-block;
+    margin-top: 20px;
+    float: left;
+}
+
+.span_head_main_bzzx {
+    font: 26px "微软雅黑", "黑体", sans-serif;
+    color: #666;
+    float: left;
+    margin-top: 37px;
+    margin-left: 15px;
+}
+
+.em_split {
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: #ccc;
+    margin-top: 20px;
+}
+
+.div_content_info {
+    display: block;
+    width: 1000px;
+    height: 120px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 40px 20px;
+    font-family: 宋体;
+    color: #666;
+}
+
+.div_content_info_inner {
+    display: block;
+    height: 40px;
+    width: 100%;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.span_sjhm {
+    border: 1px solid #cccccc;
+    display: inline-block;
+    width: 280px;
+    height: 34px;
+    border-radius: 4px;
+    font-size: 14px;
+    float: left;
+    padding-top: 2px;
+}
+
+.input_sjhm {
+    width: 252px;
+    border: none;
+    height: 28px;
+    float: left;
+    padding: 2px 12px;
+}
+
+.span_sjhm_cx {
+    background-image: url(../images/BZZX/bzzx_sy_dhmycx_cx.png);
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    float: left;
+    margin-top: 2px;
+}
+
+.input_content {
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    height: 34px;
+    padding: 4px 12px;
+    display: inline-block;
+    cursor: text;
+    width: 100px;
+    margin-left: 4px;
+    background-color: #31b0d5;
+    color: #fff;
+}
+
+.img_content_info_yzm {
+    height: 34px;
+    vertical-align: top;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.span_content_info_inner_yzm {
+    cursor: pointer;
+    color: #ff6100;
+}
+
+    .span_content_info_inner_yzm:hover {
+        text-decoration: underline;
+    }
+
+:-ms-input-placeholder.input_sjhm {
+    color: #999;
+}
+
+:-ms-input-placeholder.input_yzm {
+    color: #999;
+}
+
+.input_yzm {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 34px;
+    padding: 4px 12px;
+    display: inline-block;
+    cursor: text;
+    width: 280px;
+}
