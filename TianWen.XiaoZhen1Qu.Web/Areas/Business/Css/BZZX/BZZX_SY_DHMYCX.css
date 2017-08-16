@@ -134,3 +134,34 @@
     cursor: text;
     width: 280px;
 }
+
+.span_sjhm_info {
+    display: block;
+    height: 25px;
+    padding-top: 5px;
+}
+
+.span_content_info_sjyzm_tip {
+    font-size: 14px;
+    display: block;
+    height: 30px;
+    width: 100%;
+}
+
+.span_content_info_sjyzm_tip_inner {
+    color: #31b0de;
+    cursor: pointer;
+}
+
+    .span_content_info_sjyzm_tip_inner:hover {
+        color: #ff6100;
+    }
+
+.span_content_info_sjyzm_bottom_tip {
+    font-size: 12px;
+    color: #999;
+}
+
+.span_content_info_sjyzm_bottom_tip_red {
+    color: #ff0000;
+}

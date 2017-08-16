@@ -21,22 +21,40 @@
     </div>
     <em class="em_split"></em>
     <div class="div_body">
-        <div class="div_content_info">
-            <span class="span_content_info">第一步：输入您的手机号码，点击查询按钮查找信息</span>
-            <div class="div_content_info_inner">
-                <span class="span_sjhm">
-                    <input id="input_sjhm_cx" maxlength="11" class="input_sjhm" type="text"  placeholder="手机号" />
-                    <span class="span_sjhm_cx"></span>
-                </span>
-                <input class="input_content" id="input_content_info_cx" value="点击查询" type="button" />
+        <div id="div_sjhsr" style="display:none;">
+            <div class="div_content_info">
+                <span class="span_content_info">第一步：输入您的手机号码，点击查询按钮查找信息</span>
+                <div class="div_content_info_inner">
+                    <span class="span_sjhm">
+                        <input id="input_sjhm" maxlength="11" class="input_sjhm" type="text" placeholder="手机号" />
+                        <span class="span_sjhm_cx"></span>
+                    </span>
+                    <input class="input_content" id="input_content_info_cx" value="点击查询" type="button" />
+                    <span class="span_sjhm_info" id="span_sjhm_info"></span>
+                </div>
+            </div>
+            <div class="div_content_info" style="padding-top:20px;">
+                <span class="span_content_info">输入验证码</span>
+                <div class="div_content_info_inner">
+                    <input id="input_txyzm" type="text" style="width: 280px" class="input_yzm" placeholder="图片验证码" />
+                    <img class="img_content_info_yzm" id="imgTXYZM" title="看不清？点击图片换一张" src="@Url.Content("~/Areas/Business/Aspx/png.aspx")" />
+                    <span class="span_content_info_inner_yzm" id="span_content_info_inner_yzm">看不清？</span>
+                </div>
+                <span class="span_txyzm_info" id="span_txyzm_info"></span>
             </div>
         </div>
-        <div class="div_content_info" style="padding-top:20px;">
-            <span class="span_content_info">输入验证码</span>
-            <div class="div_content_info_inner">
-                <input id="TXYZM" type="text" style="width: 280px" class="input_yzm" placeholder="图片验证码" />
-                <img class="img_content_info_yzm" id="imgTXYZM" title="看不清？点击图片换一张" src="@Url.Content("~/Areas/Business/Aspx/png.aspx")" />
-                <span class="span_content_info_inner_yzm" id="span_content_info_inner_yzm">看不清？</span>
+        <div id="div_htyzm" style="display:block;">
+            <div class="div_content_info">
+                <span class="span_content_info">第二步：回填验证码</span>
+                <div class="div_content_info_inner">
+                    <span class="span_content_info_sjyzm_tip">手机验证码已通过短信发送到您的手机。<span class="span_content_info_sjyzm_tip_inner" id="span_content_info_sjyzm_tip_inner">点击这里重新查找信息</span></span>
+                    <input id="input_txyzm" type="text" style="width: 280px" class="input_yzm" placeholder="手机验证码" />
+                    <input class="input_content" id="input_content_info_cx" value="确定" type="button" />
+                    <span class="span_sjhm_info" id="span_sjhm_info"></span>
+                </div>
+            </div>
+            <div class="div_content_info">
+                <span class="span_content_info_sjyzm_bottom_tip">提示：受网络影响，短信发送可能有延迟；信息删除需要几分钟，请耐心等待（<span class="span_content_info_sjyzm_bottom_tip_red">不收取任何通讯费</span>）</span>
             </div>
         </div>
     </div>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using TianWen.XiaoZhen1Qu.Entities.Models;
 using TianWen.XiaoZhen1Qu.Interface;
 using TianWen.XiaoZhen1Qu.Web.Areas.Business.Common;
 
@@ -11,6 +12,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
     public class BZZXController : BaseController
     {
         public IBZZXBLL BZZXBLL { get; set; }
+        public IYHJBXXBLL YHJBXXBLL { get; set; }
         public ActionResult BZZX()
         {
             return View();
@@ -49,6 +51,36 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         public ActionResult BZZX_SY_DHMYCX()
         {
             return View();
+        }
+
+        public JsonResult SJCX()
+        {
+            string SJ = Request["SJ"];
+            string TXYZM = Request["TXYZM"];
+            if (Session["TXCheckCode"] != null)
+            {
+                string checkcode = Session["TXCheckCode"].ToString();
+                if (TXYZM == checkcode)
+                {
+                    string result = YHJBXXBLL.GetObjByYHMOrSJ(SJ);
+                    if (!string.IsNullOrEmpty(result))
+                    {
+                        return Json(new { Result = EnResultType.Success, Message = "验证成功" });
+                    }
+                    else
+                    {
+                        return Json(new { Result = EnResultType.Failed, Message = "手机号不存在，请重新输入", Type = 1 });
+                    }
+                }
+                else
+                {
+                    return Json(new { Result = EnResultType.Failed, Message = "验证码错误，请重新输入", Type = 2 });
+                }
+            }
+            else
+            {
+                return Json(new { Result = EnResultType.Failed, Message = "验证码不存在", Type = 2 });
+            }
         }
     }
 }
