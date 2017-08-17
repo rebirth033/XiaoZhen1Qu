@@ -2,6 +2,7 @@
     $("#imgTXYZM").bind("click", QHTXYZM);
     $("#span_content_info_inner_yzm").bind("click", QHTXYZM);
     $("#input_content_info_cx").bind("click", SJCX);
+    $("#input_content_info_qd").bind("click", YZZH);
     $("#span_content_info_sjyzm_tip_inner").bind("click", ToSJHSR);
 });
 //切换图形验证码
@@ -68,7 +69,8 @@ function SJCX() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                ToHYTZM();
+                GetCheckCode();
+                
             } else {
                 if (xml.Type === 1) {
                     $("#input_sjhm").css("border-color", "#F2272D");
@@ -96,4 +98,76 @@ function ToSJHSR() {
 function ToHYTZM() {
     $("#div_sjhsr").css("display", "none");
     $("#div_htyzm").css("display", "block");
+}
+//获取手机验证码
+function GetCheckCode() {
+    $.ajax({
+        type: "POST",
+        dataType: "json",
+        url: getRootPath() + "/Business/YHJBXX/GetYZM",
+        data: {
+            SJ: $("#input_sjhm").val()
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                ToHYTZM();
+            }
+            else {
+                alert("验证码发送失败");
+            }
+        }
+    });
+}
+//验证账户前检查
+function YZZHValidate() {
+    if (!YZMCheck()) return false;
+    return true;
+}
+//验证码检查
+function YZMCheck() {
+    if ($("#input_sjyzm").val().length === 0) {
+        $("#input_sjyzm").css("border-color", "#F2272D");
+        $("#span_sjyzm_info").css("color", "#F2272D");
+        $("#span_sjyzm_info").html("请输入手机验证码");
+        return false;
+    }
+    if (!/^[0-9]{6}$/.test($("#input_sjyzm").val())) {
+        $("#input_sjyzm").css("border-color", "#F2272D");
+        $("#span_sjyzm_info").css("color", "#F2272D");
+        $("#span_sjyzm_info").html("手机验证码输入格式有误");
+        return false;
+    }
+    else {
+        $("#input_sjyzm").css("border-color", "#999");
+        $("#span_sjyzm_info").html('');
+        return true;
+    }
+}
+//验证账户
+function YZZH() {
+    if (!YZZHValidate()) return;
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/BZZX/YZZH",
+        dataType: "json",
+        data:
+        {
+            SJ: $("#input_sjhm").val(),
+            YZM: $("#input_sjyzm").val(),
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                
+            } else {
+                if (xml.Type === 1) {
+                    $("#input_sjyzm").css("border-color", "#F2272D");
+                    $("#span_sjyzm_info").css("color", "#F2272D");
+                    $("#span_sjyzm_info").html(xml.Message);
+                }
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
 }
