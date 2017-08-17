@@ -42,7 +42,7 @@
 .div_content_info {
     display: block;
     width: 1000px;
-    height: 70px;
+    height: 120px;
     margin: 0 auto;
     text-align: left;
     padding: 40px 20px;
@@ -166,6 +166,13 @@
     color: #ff0000;
     font-weight: bold;
     font-size: 12px;
+}
+
+.span_txyzm_info {
+    width: 100%;
+    height: 30px;
+    margin-top: 30px;
+    display: block;
 }
 
 .span_content_info_sjyzm_tip_inner {
@@ -293,3 +300,34 @@
         color: #ff6100;
         text-decoration: underline;
     }
+
+.span_main_info_bottom_sdzh {
+    border: 1px solid #cccccc;
+    display: inline-block;
+    width: 170px;
+    height: 23px;
+    border-radius: 4px;
+    font-size: 14px;
+    float: left;
+    padding-top: 2px;
+    margin-left: 10px;
+    background-color: rgba(241,241,241,1);
+}
+
+.span_main_info_bottom_sdzh_inner {
+    background-image: url(../images/BZZX/bzzx_sy_dhmycx_sd.png);
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    float: left;
+    margin-left: 4px;
+}
+
+.input_main_info_bottom_sdzh {
+    width: 145px;
+    border: none;
+    height: 18px;
+    float: left;
+    padding: 0px 2px;
+    font-size: 12px;
+}

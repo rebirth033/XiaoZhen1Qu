@@ -5,6 +5,7 @@ $(document).ready(function () {
     $("#input_content_info_cx").bind("click", SJCX);
     $("#input_content_info_qd").bind("click", YZZH);
     $("#span_content_info_sjyzm_tip_inner").bind("click", ToSJHSR);
+    $("#checkbox_main_info_bottom").bind("click", SelectAll);
     LoadDefault("divZJFBXX", currentIndex);
 });
 //切换图形验证码
@@ -95,11 +96,19 @@ function SJCX() {
 function ToSJHSR() {
     $("#div_sjhsr").css("display", "block");
     $("#div_htyzm").css("display", "none");
+    $("#div_sdzh").css("display", "none");
 }
 //回填验证码
 function ToHYTZM() {
     $("#div_sjhsr").css("display", "none");
     $("#div_htyzm").css("display", "block");
+    $("#div_sdzh").css("display", "none");
+}
+//账号锁定
+function ToZHSD() {
+    $("#div_sjhsr").css("display", "none");
+    $("#div_htyzm").css("display", "none");
+    $("#div_sdzh").css("display", "block");
 }
 //获取手机验证码
 function GetCheckCode() {
@@ -159,7 +168,7 @@ function YZZH() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-
+                ToZHSD();
             } else {
                 if (xml.Type === 1) {
                     $("#input_sjyzm").css("border-color", "#F2272D");
@@ -214,7 +223,7 @@ function LoadInfo(obj) {
     html += ('</tr>');
     $("#tbody_main_info_xttz").append(html);
 }
-
+//加载分页
 function LoadPage(PageCount) {
     var index = parseInt(currentIndex);
     $("#div_main_info_bottom_fy").html('');
@@ -230,4 +239,13 @@ function LoadPage(PageCount) {
     if (index < PageCount) {
         $("#div_main_info_bottom_fy").append('<a onclick="LoadDefault(\'' + "divZJFBXX" + '\',\'' + (index + 1) + '\')" class="a_main_info_bottom_fy">下一页</a>');
     }
+}
+//全选
+function SelectAll() {
+    $("#tbody_main_info_xttz").find("input[type='checkbox']").each(function () {
+        if ($("#checkbox_main_info_bottom").prop("checked") === true)
+            $(this).prop("checked", true);
+        else
+            $(this).prop("checked", false);
+    });
 }
