@@ -66,13 +66,13 @@ function SJCX() {
         dataType: "json",
         data:
         {
-            SJ:$("#input_sjhm").val(),
+            SJ: $("#input_sjhm").val(),
             TXYZM: $("#input_txyzm").val()
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 GetCheckCode();
-                
+
             } else {
                 if (xml.Type === 1) {
                     $("#input_sjhm").css("border-color", "#F2272D");
@@ -159,7 +159,7 @@ function YZZH() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                
+
             } else {
                 if (xml.Type === 1) {
                     $("#input_sjyzm").css("border-color", "#F2272D");
@@ -208,9 +208,9 @@ function LoadInfo(obj) {
     var html = "";
     html += ('<tr class="tr_main_info">');
     html += ('<td style="width:40px;"><input type="checkbox" value="' + obj.YHXXID + '" /></td>');
-    html += ('<td style="width:120px;">' + obj.BT + '</td>');
-    html += ('<td style="width:120px;">' + obj.JCXXID + '</td>');
-    html += ('<td style="width:120px;">' + obj.CJSJ.ToString("yyyy-MM-dd hh:mm:ss") + '</td>');
+    html += ('<td style="width:360px;"><span class="span_main_info_bt">' + obj.BT + '</span></td>');
+    html += ('<td style="width:250px;">' + obj.JCXXID + '</td>');
+    html += ('<td style="width:250px;">' + obj.CJSJ.ToString("yyyy-MM-dd hh:mm:ss") + '</td>');
     html += ('</tr>');
     $("#tbody_main_info_xttz").append(html);
 }

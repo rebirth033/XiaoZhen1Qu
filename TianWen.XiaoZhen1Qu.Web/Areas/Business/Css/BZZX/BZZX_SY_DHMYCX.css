@@ -42,7 +42,7 @@
 .div_content_info {
     display: block;
     width: 1000px;
-    height: 120px;
+    height: 70px;
     margin: 0 auto;
     text-align: left;
     padding: 40px 20px;
@@ -203,7 +203,7 @@
 
 .tr_main_info {
     color: #666;
-    font-size: 12px;
+    font-size: 14px;
     border-bottom: 1px solid #f1f1f1;
     height: 38px;
 }
@@ -217,7 +217,7 @@
         text-align: left;
         padding-left: 10px;
     }
-    
+
 .checkbox_main_info_bottom {
     float: left;
 }
@@ -283,3 +283,13 @@
     color: #000;
     text-align: center;
 }
+
+.span_main_info_bt {
+    cursor: pointer;
+    color: #31b0d5;
+}
+
+    .span_main_info_bt:hover {
+        color: #ff6100;
+        text-decoration: underline;
+    }
