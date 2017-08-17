@@ -15,7 +15,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public JsonResult LoadYHFBXX()
         {
-            return Json(WDFBBLL.LoadYHFBXX(Request["YHID"], Request["TYPE"]));
+            return Json(WDFBBLL.LoadYHFBXX(Request["YHID"], Request["TYPE"], Request["PageIndex"], Request["PageSize"]));
         }
 
         public JsonResult UpdateYHFBXX()

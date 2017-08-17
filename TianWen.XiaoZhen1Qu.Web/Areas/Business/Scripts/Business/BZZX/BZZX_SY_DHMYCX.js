@@ -1,9 +1,11 @@
-﻿$(document).ready(function () {
+﻿var currentIndex = 1;
+$(document).ready(function () {
     $("#imgTXYZM").bind("click", QHTXYZM);
     $("#span_content_info_inner_yzm").bind("click", QHTXYZM);
     $("#input_content_info_cx").bind("click", SJCX);
     $("#input_content_info_qd").bind("click", YZZH);
     $("#span_content_info_sjyzm_tip_inner").bind("click", ToSJHSR);
+    LoadDefault("divZJFBXX", currentIndex);
 });
 //切换图形验证码
 function QHTXYZM() {
@@ -170,4 +172,62 @@ function YZZH() {
 
         }
     });
+}
+//加载发布信息
+function LoadDefault(TYPE, PageIndex) {
+    currentIndex = parseInt(PageIndex);
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/WDFB/LoadYHFBXX",
+        dataType: "json",
+        data:
+        {
+            YHID: getUrlParam("YHID"),
+            TYPE: TYPE,
+            PageSize: 10,
+            PageIndex: PageIndex
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                LoadPage(xml.PageCount);
+                $("#tbody_main_info_xttz").html('');
+                for (var i = 0; i < xml.list.length; i++) {
+                    LoadInfo(xml.list[i]);
+                }
+                if (xml.list.length === 0)
+                    NoInfo(TYPE);
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//发布信息html拼接
+function LoadInfo(obj) {
+    var html = "";
+    html += ('<tr class="tr_main_info">');
+    html += ('<td style="width:40px;"><input type="checkbox" value="' + obj.YHXXID + '" /></td>');
+    html += ('<td style="width:120px;">' + obj.BT + '</td>');
+    html += ('<td style="width:120px;">' + obj.JCXXID + '</td>');
+    html += ('<td style="width:120px;">' + obj.CJSJ.ToString("yyyy-MM-dd hh:mm:ss") + '</td>');
+    html += ('</tr>');
+    $("#tbody_main_info_xttz").append(html);
+}
+
+function LoadPage(PageCount) {
+    var index = parseInt(currentIndex);
+    $("#div_main_info_bottom_fy").html('');
+    if (index > 1) {
+        $("#div_main_info_bottom_fy").append('<a onclick="LoadDefault(\'' + "divZJFBXX" + '\',\'' + (index - 1) + '\')" class="a_main_info_bottom_fy">上一页</a>');
+    }
+    for (var i = 1; i <= PageCount; i++) {
+        if (i === index)
+            $("#div_main_info_bottom_fy").append('<a onclick="LoadDefault(\'' + "divZJFBXX" + '\',\'' + i + '\')" class="a_main_info_bottom_fy a_main_info_bottom_fy_current">' + i + '</a>');
+        else
+            $("#div_main_info_bottom_fy").append('<a onclick="LoadDefault(\'' + "divZJFBXX" + '\',\'' + i + '\')" class="a_main_info_bottom_fy">' + i + '</a>');
+    }
+    if (index < PageCount) {
+        $("#div_main_info_bottom_fy").append('<a onclick="LoadDefault(\'' + "divZJFBXX" + '\',\'' + (index + 1) + '\')" class="a_main_info_bottom_fy">下一页</a>');
+    }
 }

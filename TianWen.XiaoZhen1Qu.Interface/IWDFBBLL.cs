@@ -9,7 +9,7 @@ namespace TianWen.XiaoZhen1Qu.Interface
     {
         IDAO DAO { get; set; }
 
-        object LoadYHFBXX(string YHID, string TYPE);
+        object LoadYHFBXX(string YHID, string TYPE, string PageIndex, string PageSize);
 
         object UpdateYHFBXX(string JCXXID, string OPTYPE);
     }

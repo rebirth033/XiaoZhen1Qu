@@ -10,7 +10,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
 {
     public class WDFBBLL : BaseBLL, IWDFBBLL
     {
-        public object LoadYHFBXX(string YHID, string TYPE)
+        public object LoadYHFBXX(string YHID, string TYPE, string PageIndex, string PageSize)
         {
             try
             {
@@ -35,11 +35,22 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 {
                     list = DAO.Repository.GetObjectList<JCXX>(String.Format("FROM JCXX WHERE YHID='{0}' AND STATUS = 2 ORDER BY CJSJ", YHID));
                 }
-                foreach (var jcxx in list)
+
+                int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
+                int TotalCount = list.Count;
+                var WDCountlist = from p in list.Where(p => p.STATUS == 0) select p;
+                int WCCount = WDCountlist.Count();
+
+                var listnew = from p in list
+                    .Skip((int.Parse(PageIndex) - 1) * int.Parse(PageSize))
+                    .Take(int.Parse(PageSize))
+                              select p;
+
+                foreach (var jcxx in listnew)
                 {
                     jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
                 }
-                return new { Result = EnResultType.Success, list = list };
+                return new { Result = EnResultType.Success, list = listnew };
             }
             catch (Exception ex)
             {
