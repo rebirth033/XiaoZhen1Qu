@@ -1,0 +1,79 @@
+﻿body {
+    text-align: center;
+}
+
+.div_head {
+    width: 100%;
+}
+
+.div_head_main {
+    width: 1000px;
+    height: 75px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.span_head_main_logo {
+    background-image: url(../images/logo_blue.png);
+    background-repeat: no-repeat;
+    width: 155px;
+    height: 55px;
+    display: inline-block;
+    margin-top: 20px;
+    float: left;
+}
+
+.span_head_main_bzzx {
+    font: 26px "微软雅黑", "黑体", sans-serif;
+    color: #666;
+    float: left;
+    margin-top: 37px;
+    margin-left: 15px;
+}
+
+.em_split {
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: #ccc;
+    margin-top: 20px;
+}
+
+.div_content_info {
+    display: block;
+    width: 1000px;
+    height: 30px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 20px 20px;
+    font-family: 宋体;
+    color: #666;
+    font-size: 14px;
+}
+
+.span_content_info_head_tip {
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+}
+
+.span_content_info_body {
+    padding-left: 20px;
+}
+
+.span_content_info_body_light {
+    color: #ef6100;
+    font-weight: 700;
+}
+
+.span_content_info_img {
+    display: block;
+    height: 293px;
+    width: 968px;
+    background-image: url(../images/BZZX/bzzx_sy_yyyzm.png);
+}
+
+.span_content_info_tip {
+    margin-top: 10px;
+    display: block;
+}

@@ -6,6 +6,7 @@
     $("#div_left_box_info_zhmm").bind("click", OpenZHMM);
     $("#div_left_box_info_zhyecz").bind("click", OpenZHYECZ);
     $("#div_left_box_info_dhbmycx").bind("click", OpenDHMYCX);
+    $("#div_left_box_info_sbddxyzm").bind("click", OpenYYYZM);
 });
 
 function ShowRemark() {
@@ -34,4 +35,8 @@ function OpenZHYECZ() {
 
 function OpenDHMYCX() {
     window.open(getRootPath() + "/Business/BZZX/BZZX_SY_DHMYCX?YHID=" + getUrlParam("YHID"));
+}
+
+function OpenYYYZM() {
+    window.open(getRootPath() + "/Business/BZZX/BZZX_SY_YYYZM?YHID=" + getUrlParam("YHID"));
 }
