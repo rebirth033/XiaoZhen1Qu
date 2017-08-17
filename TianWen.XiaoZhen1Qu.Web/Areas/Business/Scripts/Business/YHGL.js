@@ -21,7 +21,7 @@
     $("#spanZWGL").parent().bind("click", { type: "ZWGL" }, ExpandThird);
     $("#spanJLGL").parent().bind("click", { type: "JLGL" }, ExpandThird);
     $("#spanZHXX").parent().bind("click", { type: "ZHXX" }, ExpandThird);
-    $("#spanXJ").parent().bind("click", { type: "XJ" }, ExpandSecond_Leaf);
+    //$("#spanXJ").parent().bind("click", { type: "XJ" }, ExpandSecond_Leaf);
     $("#spanTGB").parent().bind("click", { type: "TGB" }, ExpandSecond_Leaf);
     $(".li_left_menu").bind("click", LiFocus);
     $("#span_close").bind("click", CloseQQRZ);

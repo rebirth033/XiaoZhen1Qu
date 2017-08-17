@@ -1,10 +1,11 @@
-﻿$(document).ready(function () {
+﻿var currentIndex = 1;
+$(document).ready(function () {
     $("#spanZJFBXX").css("color", "#5bc0de");
     $("#spanZJFBXX").css("font-weight", "700");
     $("#emZJFBXX").css("background-color", "#5bc0de");
     $("#emZJFBXX").css("height", "2px");
     $(".divstep").bind("click", HeadActive);
-    LoadDefault("divZJFBXX");
+    LoadDefault("divZJFBXX", currentIndex);
 });
 
 function HeadActive() {
@@ -26,10 +27,11 @@ function HeadActive() {
         $(this).css("height", "2px");
         $(this).css("background-color", "#5bc0de");
     });
-    LoadDefault($(this)[0].id);
+    LoadDefault($(this)[0].id, currentIndex);
 }
 
-function LoadDefault(TYPE) {
+function LoadDefault(TYPE, PageIndex) {
+    currentIndex = parseInt(PageIndex);
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/WDFB/LoadYHFBXX",
@@ -37,7 +39,9 @@ function LoadDefault(TYPE) {
         data:
         {
             YHID: getUrlParam("YHID"),
-            TYPE: TYPE
+            TYPE: TYPE,
+            PageSize: 5,
+            PageIndex: PageIndex
         },
         success: function (xml) {
             if (xml.Result === 1) {
