@@ -8,6 +8,7 @@
     $("#div_left_box_info_sbddxyzm").bind("click", OpenYYYZM);
     $("#div_left_box_info_rzsm").bind("click", OpenRZSM);
     $("#div_left_box_info_xxwffb").bind("click", OpenXXWFFB);
+    $("#div_left_box_info_xxbsc").bind("click", OpenXXBSC);
 });
 
 function ShowRemark() {
@@ -48,4 +49,8 @@ function OpenRZSM() {
 
 function OpenXXWFFB() {
     window.open(getRootPath() + "/Business/BZZX/BZZX_SY_XXWFFB?YHID=" + getUrlParam("YHID"));
+}
+
+function OpenXXBSC() {
+    window.open(getRootPath() + "/Business/BZZX/BZZX_SY_XXBSC?YHID=" + getUrlParam("YHID"));
 }

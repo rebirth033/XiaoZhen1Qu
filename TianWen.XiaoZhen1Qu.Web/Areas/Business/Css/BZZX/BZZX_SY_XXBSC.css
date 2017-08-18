@@ -61,8 +61,15 @@
 .div_body_nav {
     margin-top: 20px;
     display: block;
-    height: 240px;
     width: 1000px;
+    font-family: 宋体;
+}
+
+.div_body_nav_inner {
+    display: inline-block;
+    width: 450px;
+    vertical-align: top;
+    font-weight: bold;
 }
 
 .span_body_nav {
@@ -78,6 +85,11 @@
         cursor: pointer;
         color: #ff6100;
     }
+
+.childnode {
+    padding-left: 30px;
+    font-weight: normal;
+}
 
 .div_body_nav_title {
     background-color: #f7f7f7;

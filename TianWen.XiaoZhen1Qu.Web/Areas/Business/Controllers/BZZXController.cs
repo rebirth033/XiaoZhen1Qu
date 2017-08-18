@@ -13,6 +13,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
     {
         public IBZZXBLL BZZXBLL { get; set; }
         public IYHJBXXBLL YHJBXXBLL { get; set; }
+
         public ActionResult BZZX()
         {
             return View();
@@ -64,6 +65,11 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         }
 
         public ActionResult BZZX_SY_XXWFFB()
+        {
+            return View();
+        }
+
+        public ActionResult BZZX_SY_XXBSC()
         {
             return View();
         }
