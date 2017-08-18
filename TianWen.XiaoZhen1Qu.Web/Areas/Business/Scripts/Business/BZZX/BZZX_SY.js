@@ -1,12 +1,12 @@
 ﻿$(document).ready(function () {
     $(".div_left_box_info").bind("mouseover", ShowRemark);
     $(".div_left_box_info").bind("mouseleave", HideRemark);
-
     $("#div_left_box_info_zdjs").bind("click", OpenZDJS);
     $("#div_left_box_info_zhmm").bind("click", OpenZHMM);
     $("#div_left_box_info_zhyecz").bind("click", OpenZHYECZ);
     $("#div_left_box_info_dhbmycx").bind("click", OpenDHMYCX);
     $("#div_left_box_info_sbddxyzm").bind("click", OpenYYYZM);
+    $("#div_left_box_info_rzsm").bind("click", OpenRZSM);
 });
 
 function ShowRemark() {
@@ -39,4 +39,8 @@ function OpenDHMYCX() {
 
 function OpenYYYZM() {
     window.open(getRootPath() + "/Business/BZZX/BZZX_SY_YYYZM?YHID=" + getUrlParam("YHID"));
+}
+
+function OpenRZSM() {
+    window.open(getRootPath() + "/Business/BZZX/BZZX_SY_RZSM?YHID=" + getUrlParam("YHID"));
 }
