@@ -63,6 +63,11 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return View();
         }
 
+        public ActionResult BZZX_SY_XXWFFB()
+        {
+            return View();
+        }
+
         public JsonResult SJCX()
         {
             string SJ = Request["SJ"];
