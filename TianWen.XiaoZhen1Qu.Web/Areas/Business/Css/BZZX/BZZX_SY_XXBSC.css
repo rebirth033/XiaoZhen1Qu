@@ -104,6 +104,11 @@
     font-size: 16px;
 }
 
+.div_body_nav_title_child {
+    font-weight: normal;
+    font-size: 16px;
+}
+
 .div_body_nav_text {
     font-size: 14px;
     padding: 10px 10px;
@@ -220,4 +225,22 @@
     height: 9px;
     margin: 2px 5px 0px 5px;
     display: inline-block;
+}
+
+th {
+    text-align: center;
+    background-color: #31b0d5;
+    color: #fff;
+    border: 1px solid #000 !important;
+}
+
+td {
+    border: 1px solid #000 !important;
+    width: 800px;
+}
+
+.td_content {
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
 }
