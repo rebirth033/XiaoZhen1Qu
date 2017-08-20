@@ -244,3 +244,16 @@ td {
     padding-left: 10px;
     padding-right: 10px;
 }
+
+.td_bdfw_dl {
+    width: 100px;
+}
+
+.td_bdfw_xl {
+    width: 200px;
+}
+
+
+.td_bdfw_clfs {
+    width: 150px;
+}
