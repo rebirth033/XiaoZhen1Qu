@@ -257,3 +257,29 @@ td {
 .td_bdfw_clfs {
     width: 150px;
 }
+
+.div_fhdb {
+    cursor: pointer;
+    float: right;
+    display: inline-block;
+}
+
+.span_fhdb {
+    display: inline-block;
+    float: right;
+    width: 55px;
+    height: 100%;
+    color: #31b0d5;
+    font-size: 12px;
+    padding: 3px 3px;
+}
+
+.span_fhdb_img {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    float: right;
+    margin-top: 5px;
+    background-image: url(../images/BZZX/bzzx_sy_xxbsc_fhdb.png);
+    margin-right: 10px;
+}

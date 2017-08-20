@@ -168,6 +168,7 @@
     <Content Include="Areas\Business\Css\images\BZZX\bzzx_sy_rzsm_yxrz.png" />
     <Content Include="Areas\Business\Css\images\BZZX\bzzx_sy_rzsm_yyzzrz.png" />
     <Content Include="Areas\Business\Css\images\BZZX\bzzx_sy_xxbsc.png" />
+    <Content Include="Areas\Business\Css\images\BZZX\bzzx_sy_xxbsc_fhdb_hover.png" />
     <Content Include="Areas\Business\Css\images\BZZX\bzzx_sy_xxwffb.png" />
     <Content Include="Areas\Business\Css\images\BZZX\bzzx_sy_xxwffb_tck.png" />
     <Content Include="Areas\Business\Css\images\BZZX\bzzx_sy_yyyzm.png" />
@@ -177,6 +178,7 @@
     <Content Include="Areas\Business\Css\images\BZZX\bzzx_sy_dhbmycx.png" />
     <Content Include="Areas\Business\Css\images\BZZX\bzzx_sy_sbddxyzm.png" />
     <Content Include="Areas\Business\Css\images\BZZX\bzzx_sy_xxwffb_jp.png" />
+    <Content Include="Areas\Business\Css\images\BZZX\bzzx_sy_xxbsc_fhdb.png" />
     <Content Include="Areas\Business\Css\images\cellphone.png" />
     <Content Include="Areas\Business\Css\images\clip.png" />
     <Content Include="Areas\Business\Css\images\close.png" />
