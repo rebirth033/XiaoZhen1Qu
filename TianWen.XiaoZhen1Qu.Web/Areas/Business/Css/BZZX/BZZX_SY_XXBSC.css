@@ -67,14 +67,14 @@
 
 .div_body_nav_inner {
     display: inline-block;
-    width: 450px;
+    width: 300px;
     vertical-align: top;
     font-weight: bold;
 }
 
 .span_body_nav {
     display: inline-block;
-    width: 500px;
+    width: 330px;
     height: 34px;
     float: left;
     color: #1790b4;
