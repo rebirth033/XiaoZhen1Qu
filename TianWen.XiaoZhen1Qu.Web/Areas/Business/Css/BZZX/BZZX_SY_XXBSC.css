@@ -67,14 +67,34 @@
 
 .div_body_nav_inner {
     display: inline-block;
-    width: 300px;
+    width: 100%;
     vertical-align: top;
     font-weight: bold;
+    height:40px;
+}
+
+.span_body_nav_inner_first {
+    width: 1000px;
+    display: inline-block;
+    background-color: #f7f7f7;
+    height: 34px;
+    border-left: 2px solid #5bc0de;
+    padding-left: 10px;
+    padding-top: 6px;
+    font-weight: 700;
+}
+
+.span_body_nav_inner {
+    width: 1000px;
+    display: inline-block;
+    height: 34px;
+    padding-left: 10px;
+    padding-top: 6px;
 }
 
 .span_body_nav {
     display: inline-block;
-    width: 330px;
+    width: 220px;
     height: 34px;
     float: left;
     color: #1790b4;
