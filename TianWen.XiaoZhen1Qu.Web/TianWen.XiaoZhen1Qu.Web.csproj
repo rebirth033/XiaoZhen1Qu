@@ -140,6 +140,7 @@
     <Content Include="Areas\Business\Css\BZZX\BZZX.css" />
     <Content Include="Areas\Business\Css\BZZX\BZZX_SY.css" />
     <Content Include="Areas\Business\Css\BZZX\BZZX_SY_DHMYCX.css" />
+    <Content Include="Areas\Business\Css\BZZX\BZZX_SY_FBGZLTZ.css" />
     <Content Include="Areas\Business\Css\BZZX\BZZX_SY_RZSM.css" />
     <Content Include="Areas\Business\Css\BZZX\BZZX_SY_XXBSC.css" />
     <Content Include="Areas\Business\Css\BZZX\BZZX_SY_XXWFFB.css" />
@@ -160,6 +161,7 @@
     <Content Include="Areas\Business\Css\images\BZZX\bzzx_sy_dhmycx_sd.png" />
     <Content Include="Areas\Business\Css\images\BZZX\bzzx_sy_esjybzzx.png" />
     <Content Include="Areas\Business\Css\images\BZZX\bzzx_sy_fbgzltz.png" />
+    <Content Include="Areas\Business\Css\images\BZZX\bzzx_sy_fbgzltz_ty.png" />
     <Content Include="Areas\Business\Css\images\BZZX\bzzx_sy_ftbg.png" />
     <Content Include="Areas\Business\Css\images\BZZX\bzzx_sy_rzsm.png" />
     <Content Include="Areas\Business\Css\images\BZZX\bzzx_sy_rzsm_rzgl.png" />
@@ -290,6 +292,7 @@
     <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX.js" />
     <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_SY.js" />
     <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_SY_DHMYCX.js" />
+    <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_SY_FBGZLTZ.js" />
     <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_SY_RZSM.js" />
     <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_SY_XXBSC.js" />
     <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_SY_XXWFFB.js" />
@@ -464,6 +467,7 @@
     <Content Include="Areas\Business\Views\BZZX\BZZX_SY_RZSM.cshtml" />
     <Content Include="Areas\Business\Views\BZZX\BZZX_SY_XXWFFB.cshtml" />
     <Content Include="Areas\Business\Views\BZZX\BZZX_SY_XXBSC.cshtml" />
+    <Content Include="Areas\Business\Views\BZZX\BZZX_SY_FBGZLTZ.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
