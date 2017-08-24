@@ -1,0 +1,681 @@
+﻿@{
+    ViewBag.Title = "BZZX_SY_FTBG";
+    Layout = "~/Areas/Business/Views/Shared/_ListLayout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link href="@Url.Content("~/Areas/Business/Css/BZZX/BZZX_SY_FTBG.css")" rel="stylesheet" />
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/BZZX/BZZX_SY_FTBG.js")"></script>
+</head>
+<body>
+    <div class="div_head">
+        <div class="div_head_main">
+            <span class="span_head_main_logo"></span>
+            <span class="span_head_main_bzzx">帮助中心</span>
+        </div>
+    </div>
+    <em class="em_split"></em>
+    <div class="div_body">
+        <div class="div_body_nav">
+            <div class="div_body_nav_inner">
+                <span class="span_body_nav" id="1"><span class="span_body_nav_inner">1、信息小镇信息质量标准总则</span></span>
+                <span class="span_body_nav" id="2"><span class="span_body_nav_inner">2、本地服务行业信息质量标准细则</span></span>
+                <span class="span_body_nav" id="3"><span class="span_body_nav_inner">3、招聘行业信息质量标准细则</span></span>
+            </div>
+            <div class="div_body_nav_inner">
+                <span class="span_body_nav" id="4"><span class="span_body_nav_inner">4、房产行业信息质量标准细则</span></span>
+                <span class="span_body_nav" id="5"><span class="span_body_nav_inner">5、二手市场信息质量标准细则</span></span>
+                <span class="span_body_nav" id="6"><span class="span_body_nav_inner">6、车辆市场信息质量标准细则</span></span>
+            </div>
+        </div>
+        <div class="div_body_nav_title" id="div_body_nav_title_1">1.信息小镇信息质量标准总则<div class="div_fhdb"><span class="span_fhdb_img"></span><span class="span_fhdb">返回顶部</span></div></div>
+        <div class="div_body_nav_text">
+            <table>
+                <tr>
+                    <td colspan="2">
+                        <span class="span_body_nav_text_title" style="font-weight:bold;">第一章 总述</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_title">第一条</td>
+                    <td class="td_content">为营造开放、可信、安全的分类信息平台，保障信息小镇用户的合法权益，维护和谐的网络商业环境，信息小镇信息质量标准委员会制订本总则。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">第二条</td>
+                    <td class="td_content">本总则旨在提高信息小镇平台信息质量，打击违法和虚假信息，保护信息小镇用户的根本利益，优化服务体验。本总则适用于所有使用信息小镇任何产品或服务（以下统称“服务”）的用户，用户在适用本总则上一律平等。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">第三条</td>
+                    <td class="td_content">用户使用信息小镇平台服务的全部行为（包括但不限于信息发布、线下交易、服务提供等）需符合中华人民共和国（下称“中国”）法律法规、中国承认或加入的国际条约及用户与信息小镇间法律协议的有关规定/约定，并应对自身使用信息小镇平台服务的全部行为独立承担全部法律责任。信息小镇根据用户使用信息小镇平台服务过程中的全部行为作为判定信息质量的基本出发点和标准。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">第四条</td>
+                    <td class="td_content">信息小镇信息质量的评判标准为：合法性、真实性、有效性、及时性、完整性、穷极相关性。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">第五条</td>
+                    <td class="td_content">信息小镇有权拒绝与涉嫌不诚信经营的商户合作。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">第六条</td>
+                    <td class="td_content">本总则中所述的违规行为，依照总则中所述的处罚方式处理。信息小镇平台默认实行“无罪推定”原则，但对于信息小镇信息质量标准委员会规定的高危类别及行为，实行“有罪推定”原则。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">第七条</td>
+                    <td class="td_content">信息小镇不同产品类别施行不同的质量标准细则（下称“细则”），细则为本总则的有效组成部分；如细则中有不同于本总则的特别约定，按特别约定执行；如细则中未约定的，均按本总则约定执行。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">第八条</td>
+                    <td class="td_content">信息小镇信息质量标准委员会有权依据国家法律法规的更新对本总则及（或）各细则进行修订，并在网站上进行公示。如发生争议时，以最新的《信息小镇信息质量标准总则》为准。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">第九条</td>
+                    <td class="td_content">本总则是《信息小镇使用协议》、《信息小镇推广用户服务协议》的有效组成部分，本总则未涉及的事项按照《信息小镇使用协议》、《信息小镇推广用户服务协议》相关约定处理。</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <span class="span_body_nav_text_title" style="font-weight:bold;">第二章 定义</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_title">第十条</td>
+                    <td class="td_content">信息小镇：指信息小镇网(www.infotownlet.com)、信息小镇无线站点（包括wap.infotownlet.com）及信息小镇移动应用软件（APP）（简称“信息小镇平台”）的所有者及其关联服务提供方。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">第十一条</td>
+                    <td class="td_content">用户：包含注册用户和非注册用户，注册用户是指通过信息小镇平台完成全部注册程序后，使用信息小镇平台服务的用户；非注册用户是指未进行注册、直接登录信息小镇平台或通过其他网站进入信息小镇平台使用信息小镇平台服务的用户。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">第十二条</td>
+                    <td class="td_content">付费用户：指向信息小镇支付网络推广服务费用的用户。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">第十三条</td>
+                    <td class="td_content">评价：指在成功完成交易后，双方对交易情况作出的评述，评价记录是信息小镇用户交易状况的重要标记，双方在进行评价时应保证所作评价公正、客观、真实。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">第十四条</td>
+                    <td class="td_content">投诉方：指向信息小镇平台用户发起投诉的符合相关法律规定的自然人、法人、其他组织。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">第十五条</td>
+                    <td class="td_content">被投诉方：指投诉方所投诉的信息小镇平台用户。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">第十六条</td>
+                    <td class="td_content">反通知：被投诉方接到信息小镇的整改通知后向信息小镇提交的相关证明材料。</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <span class="span_body_nav_text_title" style="font-weight:bold;">第三章 违规行为</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_title">第十七条</td>
+                    <td class="td_content">发布包括但不限于如下列出的非法信息，根据情节轻重删除所有违规内容，关闭账号，直至解除合作关系且不返还剩余服务费用。非法信息指违反中华人民共和国宪法、法律、行政法规、规范性文件等法律政策的信息：</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（一）</td>
+                    <td class="td_content">煽动抵抗或违反中华人民共和国宪法、法律、行政法规、规范性文件执行的信息。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（二）</td>
+                    <td class="td_content">煽动颠覆政府或社会主义制度的信息。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（三）</td>
+                    <td class="td_content">煽动分裂国家、破坏祖国统一的信息。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（四）</td>
+                    <td class="td_content">煽动民族仇恨、民族歧视，破坏民族团结的信息。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（五）</td>
+                    <td class="td_content">制造谎言或歪曲事实、散布谣言、破坏社会秩序的信息。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（六）</td>
+                    <td class="td_content">宣扬封建迷信、传播有性挑逗性质的材料、涉及发布疑似色情、赌博、暴力或凶杀的信息。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（七）</td>
+                    <td class="td_content">宣扬恐怖主义或唆使他人犯罪、公开侮辱他人或歪曲事实诽谤他人的信息。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（八）</td>
+                    <td class="td_content">损害国家机关声誉信息。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（九）</td>
+                    <td class="td_content">其它违反中华人民共和国宪法、法律、行政法规和规范性文件的信息。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">第十八条</td>
+                    <td class="td_content">发布包括但不限于如下列示的有悖社会公序良俗的信息，依据各类别信息质量标准细则给予相应处罚。<br />有悖社会公序良俗的信息指不违背强制性法律或未有明确的法律规定，但违反社会的一般善良风俗习惯和公认的道德规范的信息。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">第十九条</td>
+                    <td class="td_content">发布虚假信息，依据各类别质量标准细则给予相应处罚。<br />虚假信息指提供的商品或服务与内容描述不符或发布行业完全不相关的信息。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">第二十条</td>
+                    <td class="td_content">发布无意义信息，依据各类别信息质量标准细则给予相应处罚。<br />无意义信息指对于浏览者无价值的信息，包括但不限于信息描述与发布行业无明显关联、信息表述模糊使浏览者难以理解或者易产生误解、信息描述违背一般书写常识。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">第二十一条</td>
+                    <td class="td_content">其他侵犯用户权益的行为，依据各类别信息质量标准细则给予相应处罚。<br />侵犯用户权益的行为包括但不限于服务过程中违背用户意愿、侵犯用户人身及财产权益、恶意攫取流量损害他人利益、拒不履行双方约定的行为。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">第二十二条</td>
+                    <td class="td_content">因账号管理不善被他人盗用发生的违规行为，如用户无法自证被盗实情或者不配合信息小镇调查，参照上述违规行为给予相应处罚。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">第二十三条</td>
+                    <td class="td_content">其他违反中国法律法规、中国承认或加入的国际条约相关规定及用户与信息小镇间法律协议约定的违规行为。</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <span class="span_body_nav_text_title" style="font-weight:bold;">第四章 处罚方式</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_title">第二十四条</td>
+                    <td class="td_content">内容处理：对用户发布或者上传到信息小镇平台用于展示的推广物料，包括但不限于信息、图片、店铺、企业、微站等进行如下一种或多种处理。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（一）</td>
+                    <td class="td_content">降权：根据违规情节轻重减少展示效果。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（二）</td>
+                    <td class="td_content">返回修改：屏蔽用户发布的信息，用户需对信息进行修改并使其通过审核后方可展示。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（三）</td>
+                    <td class="td_content">删除触犯本总则及细则的内容，无法展示和修改。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">第二十五条</td>
+                    <td class="td_content">账号限权：限制用户所享有之信息小镇服务的权利，包含以下一种或多种处理。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（一）</td>
+                    <td class="td_content">禁止在信息小镇平台的推广展示行为。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（二）</td>
+                    <td class="td_content">禁止在信息小镇平台的信息发布行为。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（三）</td>
+                    <td class="td_content">关闭账号。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（四）</td>
+                    <td class="td_content">扣除保证金或服务费用，用于赔付用户损失。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（五）</td>
+                    <td class="td_content">终止服务，解除合作关系。</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <span class="span_body_nav_text_title" style="font-weight:bold;">第五章 处罚方式的具体运用</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_title">第二十六条</td>
+                    <td class="td_content">在处理信息质量问题时，从信息内容和用户行为两方面来确定处罚的程度：</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（一）</td>
+                    <td class="td_content">适用减轻处罚的情形：一般违规用户对权益受损者积极赔偿补救并减轻消极社会影响。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（二）</td>
+                    <td class="td_content">适用从轻处罚的情形：由于用户不知情而导致的违规行为，或者长期合作诚信用户偶犯情节较轻的违规行为。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（三）</td>
+                    <td class="td_content">适用从重处罚的情形：严重违法违规、给其他用户及（或）信息小镇造成实际经济损失。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（四）</td>
+                    <td class="td_content">适用加重处罚的情形：严重违法违规、累计多次违规或造成恶劣社会影响。</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <span class="span_body_nav_text_title" style="font-weight:bold;">第六章 处罚的申诉</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_title">第二十七条</td>
+                    <td class="td_content">被投诉方须于信息小镇整改通知规定期限内提交相关证明材料，逾期未提交证明材料或者提交不充分的，信息小镇有权根据当时所掌握的情况进行判断，并给出最终处理方式；如提交证明材料虚假，则加重处罚并禁止再次进行申诉。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">第二十八条</td>
+                    <td class="td_content">用户在使用信息小镇平台具体产品类别时的违规行为处理及申诉流程如有相应细则规定的，应按细则的相关规定执行。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">第二十九条</td>
+                    <td class="td_content">用户账号被关闭后15天内可联系客服进行申诉流程，用户账号被关闭后15天以上且3个月以内进行申诉需要明确说明15天内未申诉的原因后联系客服进行申诉流程，用户账号被关闭3个月以上的申诉不予受理。</td>
+                </tr>
+            </table>
+        </div>
+        <div class="div_body_nav_title" id="div_body_nav_title_2">2.本地服务行业信息质量标准细则<div class="div_fhdb"><span class="span_fhdb_img"></span><span class="span_fhdb">返回顶部</span></div></div>
+        <div class="div_body_nav_text">
+            <table>
+                <tr>
+                    <td colspan="2">
+                        <span class="span_body_nav_text_title" style="font-weight:bold;">第一章 概述</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_title">第一条</td>
+                    <td class="td_content">为了保障信息小镇用户的合法权益，根据《信息小镇信息质量标准总则》，结合信息小镇打击本地服务行业欺诈行为的具体经验及实际情况，制定信息小镇本地服务行业信息质量标准细则（以下简称“本细则”）。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">第二条</td>
+                    <td class="td_content">本细则针对信息小镇本地服务行业违规行为的认定和处罚、本地服务信息发布规范等进行了规定。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">第三条</td>
+                    <td class="td_content">本细则为《信息小镇信息质量标准总则》的有效组成部分，本细则中的所有术语、简称、定义，如无特殊说明，与总则中规定的相同。</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <span class="span_body_nav_text_title" style="font-weight:bold;">第二章 本地服务信息分类</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_title">第四条</td>
+                    <td class="td_content">信息小镇依据用户使用习惯，将本地服务行业类别分为：家政服务、婚庆摄影、教育培训、商务服务、装修建材、汽车服务、旅游酒店、医疗健康、餐饮美食、丽人、休闲娱乐、招商加盟、批发采购、农林牧副渔等。</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <span class="span_body_nav_text_title" style="font-weight:bold;">第三章 违规行为的认定和处罚</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_title">第五条</td>
+                    <td class="td_content">用户发布包括但不限于如下非法信息的，根据情节轻重进行以下一种或多种处理：删除所有违规内容、关闭账号、扣除保证金及（或）服务费、终止服务等。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（一）</td>
+                    <td class="td_content">发布含有违反中华人民共和国宪法、法律、行政法规、规范性文件以及国家法律法规明令禁止的产品或服务信息。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（二）</td>
+                    <td class="td_content">无资质发布国家法律法规有明确资质要求或需前置审批及行政许可的产品或服务信息。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（三）</td>
+                    <td class="td_content">服务或交易过程中使用暴力、恐吓、教唆、欺骗等行为，侵犯他人人身及财产权益。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">第六条</td>
+                    <td class="td_content">发布包括但不限于以下列示的有悖社会公序良俗的信息，删除所有违规内容。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（一）</td>
+                    <td class="td_content">信息中含有低俗、下流、恶趣味等描述或恶意辱骂、诽谤、人身攻击等内容。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（二）</td>
+                    <td class="td_content">信息内容违背正常伦理、道德、社会风俗习惯等。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">第七条</td>
+                    <td class="td_content">发布包括但不限于以下列示的虚假信息，删除所有违规内容。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（一）</td>
+                    <td class="td_content">提供虚假产品或服务。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（二）</td>
+                    <td class="td_content">对产品或者服务做出与实际内容不相符的描述。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">第八条</td>
+                    <td class="td_content">发布包括但不限于以下列示的无意义信息（对浏览者无帮助信息），根据情节轻重进行以下一种或多种处理：降权违规信息、返回修改违规信息、删除所有违规内容等。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（一）</td>
+                    <td class="td_content">信息描述与所属类别无关联。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（二）</td>
+                    <td class="td_content">信息内容填写不全或者不规范。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">第九条</td>
+                    <td class="td_content">其他包括但不限于以下列示的侵犯用户权益的行为，根据情节轻重进行以下一种或多种处理：降权违规信息、返回修改违规信息、删除所有违规内容、关闭账号、扣除保证金及（或）服务费、终止服务等。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（一）</td>
+                    <td class="td_content">未经授权使用他人品牌提供产品或服务的行为。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（二）</td>
+                    <td class="td_content">通过各种方式故意注册大量账户或发布大量信息，违规攫取流量，并伤害其他用户利益的行为。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（三）</td>
+                    <td class="td_content">交易、服务过程中拒不履行双方约定的行为。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（四）</td>
+                    <td class="td_content">违反本地服务信息填写规范的行为。</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <span class="span_body_nav_text_title" style="font-weight:bold;">第四章 附则</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <span class="span_body_nav_text_title" style="font-weight:bold;">附件一 本地服务信息填写规范</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_title">关于标题</td>
+                    <td class="td_content">标题是所有信息内容主旨的全部体现，表达信息发布者的意图。言简意赅、表词达意的标题文字更容易受到潜在消费群体的青睐。我们鼓励信息发布者如实、恰当、富有技巧地为信息内容拟一个合适的标题，同时不允许发布包括但不限于以下情形的标题：</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（一）</td>
+                    <td class="td_content">含有违反国家法律法规以及国家法律法规明令禁止的标题描述。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（二）</td>
+                    <td class="td_content">超出本地服务类别允许发布信息的范围，与本地服务行业信息无关的标题描述。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（三）</td>
+                    <td class="td_content">表达模糊、无法判断信息发布者意图的标题描述。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（四）</td>
+                    <td class="td_content">标题中含有无关符号、字母、数字等内容且影响浏览者判断其真实意图的标题描述。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（五）</td>
+                    <td class="td_content">夸大事实，容易对信息浏览者产生误导的标题描述。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">关于图片</td>
+                    <td class="td_content">图片是浏览者最直观了解信息详情的入口，图片的质量影响浏览者对信息的判断，在一定程度上，浏览者的偏好受图片的左右。我们鼓励信息发布者上传真实、清晰、合理尺寸的图片，同时不允许发布包括但不限于以下情形的图片：</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（一）</td>
+                    <td class="td_content">图片内容含有违反国家法律法规以及国家法律法规明令禁止的内容。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（二）</td>
+                    <td class="td_content">图片内容与本地服务的类别信息无关联。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（三）</td>
+                    <td class="td_content">未经他人许可，盗用、冒用他人的图片。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（四）</td>
+                    <td class="td_content">发布所有权存在纠纷、争议的图片。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（五）</td>
+                    <td class="td_content">图片模糊、难以辨认，影响浏览者对信息内容的判断。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（六）</td>
+                    <td class="td_content">上传多张与信息内容无关联的图片，影响浏览者对信息内容的判断。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（七）</td>
+                    <td class="td_content">图片中所含有的联系方式等内容占据大量的图片面积，影响浏览者对图片内容的判断。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（八）</td>
+                    <td class="td_content">图片中所含有的联系方式与信息所留联系方式不一致。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">关于联系方式</td>
+                    <td class="td_content">联系方式在买家和卖家之间起纽带作用，电话号码、QQ、微信等主流通讯工具均属于联系方式的范畴，信息发布者在信息发布时可根据自己的意愿选择一种或多种联系方式进行填写。为了保证能够与信息发布者及时取得联系，我们要求真实、有效的电话号码为必填选项，同时不允许发布包括但不限于以下情形的联系方式：</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（一）</td>
+                    <td class="td_content">盗用、冒用他人联系方式。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（二）</td>
+                    <td class="td_content">联系方式虚假、不存在（电话号码、QQ、微信虚假或不存在）。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（三）</td>
+                    <td class="td_content">联系方式不规范书写（用字母“o”代替数字“0”，用字母“l”代替数字“1”等情形）。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（四）</td>
+                    <td class="td_content">联系方式中含有非法含义的字符或拼音。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">关于联系人</td>
+                    <td class="td_content">联系人是信息内容的发布者和信息意图的表达者，真实有效的联系人身份是信息质量的根基，信息发布者出于保护隐私的需要，可以使用姓氏与“先生”、“女士”、“老师”、“小姐”等称谓进行搭配，但必须保证用户的性别与其称谓相符合，避免对信息浏览者造成不必要的误解。信息发布者也可以根据自己的偏好，使用个性化的称谓或昵称。我们要求信息发者使用本人真实身份进行信息的发布，保证通过联系方式能够联系到信息发布者本人，同时不允许发布包括但不限于以下情形的联系方式：</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（一）</td>
+                    <td class="td_content">含有违反国家法律法规以及国家法律法规明令禁止的词汇表述。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（二）</td>
+                    <td class="td_content">违反社会公序良俗，辱骂、诽谤他人的词汇表述。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（三）</td>
+                    <td class="td_content">隐晦、容易令人产生歧义的词汇表述。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（四）</td>
+                    <td class="td_content">对信息本身做广告性描述的词汇表述。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">关于内容</td>
+                    <td class="td_content">内容是信息的主体部分，是对信息发布者所发布产品、服务的详尽描述。用户可从本地服务企业的发展状况、业务范围、发展潜力等方面进行如实描述。用户也可根据自己的偏好，进行个性化语言描述。我们鼓励用户发布真实有效的信息内容，同时不允许发布包括但不限于以下情形的内容：</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（一）</td>
+                    <td class="td_content">含有违反国家法律法规以及国家法律法规明令禁止的信息描述。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（二）</td>
+                    <td class="td_content">违反社会公序良俗的信息描述。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（三）</td>
+                    <td class="td_content">超出本地服务类别允许发布信息的范围，与本地服务类别信息无关的信息描述。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（四）</td>
+                    <td class="td_content">虚假、伪造、夸大事实的信息描述。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（五）</td>
+                    <td class="td_content">表达隐晦、含糊、语意不清，容易让信息浏览者产生歧义的信息描述。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（六）</td>
+                    <td class="td_content">内容含有无关字符，对信息浏览者正常浏览信息造成干扰的信息描述。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">关于价格</td>
+                    <td class="td_content">价格是产品、服务价值的最终体现，也是双方达成交易的最终标尺。我们要求信息发布者如实表达自己的心理价位，不允许通过虚假的价格误导信息浏览者。标注的价格是信息发布者心理价位与市场价位的统一，任何违背市场经济规律、违反市场价格趋势进行的价格标注，我们有理由怀疑其动机是否超出市场主体的正当经济行为。我们鼓励信息发布者真实表述心理价位，同时不允许出现包括但不限于以下情形：</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（一）</td>
+                    <td class="td_content">标注价格与实际交易价格偏离一般市场价格波动范围（双方另有约定除外）。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（二）</td>
+                    <td class="td_content">价格表述含糊，价格单位与价格数字之间不匹配。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（三）</td>
+                    <td class="td_content">价格项中的价格表述与其他项中的价格表述不一致。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（四）</td>
+                    <td class="td_content">不规范的价格书写方式（用字母“o”代替数字“0”，用字母“l”代替数字“1”等情形）。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">关于地址</td>
+                    <td class="td_content">地址是指信息发布者的所在地或产品、服务的所在地，涉及到本地服务类别，特指企业、商家的所在地。我们要求信息发布者对地址项进行详实描述，能够精确到具体的街道、楼层、门牌号、摊位号，不伪造地址、不冒用地址，同时不允许发布包括但不限于以下情形的地址信息：</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（一）</td>
+                    <td class="td_content">盗用、冒用他人地址。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（二）</td>
+                    <td class="td_content">描述的地址虚假。</td>
+                </tr>
+                <tr>
+                    <td class="td_title"></td>
+                    <td class="td_content">如有其他未尽事宜，请参照《信息小镇信息质量标准总则》及信息小镇相关线上协议、规则等规定进行处理。</td>
+                </tr>
+            </table>
+        </div>
+        <div class="div_body_nav_title" id="div_body_nav_title_3">3.招聘行业信息质量标准细则<div class="div_fhdb"><span class="span_fhdb_img"></span><span class="span_fhdb">返回顶部</span></div></div>
+        <div class="div_body_nav_text">
+            <table>
+                <tr>
+                    <td colspan="2">
+                        <span class="span_body_nav_text_title" style="font-weight:bold;">第一章 概述</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_title">第一条</td>
+                    <td class="td_content">为了保护信息小镇招聘与求职用户的合法权益，根据《信息小镇信息质量标准总则》，结合信息小镇打击信息小镇平台内招聘行业欺诈行为的具体经验及实际情况，制定信息小镇招聘行业信息质量标准细则（以下简称“本细则”）。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">第二条</td>
+                    <td class="td_content">本细则主要针对信息小镇常规招聘行业和兼职招聘行业违规行为的认定和处罚、招聘信息发布规范、简历发布规范、面试邀请规范等进行了规定。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">第三条</td>
+                    <td class="td_content">本细则为《信息小镇信息质量标准总则》的有效组成部分，本细则中的所有术语、简称、定义，如无特殊说明，与总则中规定的相同。</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <span class="span_body_nav_text_title" style="font-weight:bold;">第二章 招聘行为实施方式</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_title">第四条</td>
+                    <td class="td_content">企业直招：是指企业不通过其他第三方机构，以自己名义直接在信息小镇平台发布招聘信息。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">第五条</td>
+                    <td class="td_content">职业中介：是指经政府主管部门审核批准具有法人资质、被特许经营的、为用人单位招用人员和劳动者求职提供中介服务及其他相关服务的经营性组织，包括但不限于人力资源服务机构、职业介绍所、保安服务机构、船员服务机构、猎头公司等。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">第六条</td>
+                    <td class="td_content">劳务派遣：劳务派遣机构是指经政府主管部门审核批准具有法人资质、被特许经营劳务派遣业务的机构，其与劳动者之间订立劳动合同并支付报酬，把劳动者派向其他实际用工单位，再由实际用工单位向劳务派遣机构支付服务费用的一种用工形式。</td>
+                </tr>
+
+                <tr>
+                    <td class="td_title">第七条</td>
+                    <td class="td_content">定向委培：定向培训是指用人单位根据生产服务岗位的技能要求，委托社会培训机构对其准备招聘的人员在上岗前实施的职业技能培训，培训考核合格后，由企业择优录用。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">第八条</td>
+                    <td class="td_content">其他符合中国法律法规、中国承认或加入的国际条约及信息小镇平台相关协议及规则的招聘行为。</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <span class="span_body_nav_text_title" style="font-weight:bold;">第三章 违规行为的认定和处罚</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_title">第九条</td>
+                    <td class="td_content">用户发布包括但不限于如下非法信息的，根据情节轻重进行以下一种或多种处理：删除所有违规内容、关闭账号、扣除保证金及（或）服务费、终止服务等。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（一）</td>
+                    <td class="td_content">发布含有违反中华人民共和国宪法、法律、行政法规、规范性文件以及国家法律法规明令禁止的职位、信息。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（二）</td>
+                    <td class="td_content">无资质发布国家法律法规对招聘方有明确资质要求的职位。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（三）</td>
+                    <td class="td_content">招聘过程中使用暴力、恐吓、教唆、欺骗等方式，侵犯他人人身及财产权益。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">第十条</td>
+                    <td class="td_content">发布包括但不限于以下列示的有悖社会公序良俗的信息，删除所有违规内容。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（一）</td>
+                    <td class="td_content">信息中含有低俗、下流、恶趣味等描述或恶意辱骂、诽谤、人身攻击等内容。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（二）</td>
+                    <td class="td_content">信息内容违背正常伦理、道德、社会风俗习惯等。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">第十一条</td>
+                    <td class="td_content">发布包括但不限于以下列示的虚假信息，删除所有违规内容。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（一）</td>
+                    <td class="td_content">招聘信息中，关键内容（含企业名称、职位名称、职位类别、工作地址、联系方式、薪酬福利等）填写虚假。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（二）</td>
+                    <td class="td_content">发布销售、推广、转让等与建立劳动关系无关的信息或服务。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（三）</td>
+                    <td class="td_content">招聘与公司性质以及经营范围无关联的职位。</td>
+                </tr>
+                <tr>
+                    <td class="td_title">（四）</td>
+                    <td class="td_content">职介故意隐藏身份，以企业直招名义发布其所代理的招聘职位，职介公司为自身公司招聘人员，按照企业直招认定。</td>
+                </tr>
+            </table>
+        </div>
+        <div class="div_body_nav_title" id="div_body_nav_title_4">4.房产行业信息质量标准细则<div class="div_fhdb"><span class="span_fhdb_img"></span><span class="span_fhdb">返回顶部</span></div></div>
+        <div class="div_body_nav_text">
+        </div>
+        <div class="div_body_nav_title" id="div_body_nav_title_5">5.二手市场信息质量标准细则<div class="div_fhdb"><span class="span_fhdb_img"></span><span class="span_fhdb">返回顶部</span></div></div>
+        <div class="div_body_nav_text">
+        </div>
+        <div class="div_body_nav_title" id="div_body_nav_title_6">6.车辆市场信息质量标准细则<div class="div_fhdb"><span class="span_fhdb_img"></span><span class="span_fhdb">返回顶部</span></div></div>
+        <div class="div_body_nav_text">
+        </div>
+    </div>
+    <div class="div_bottom">
+        <div class="div_bottom_inner">
+            <span class="span_div_bottom_inner">关于信息小镇</span>
+            <em class="em_div_bottom_inner"></em>
+            <span class="span_div_bottom_inner">联系我们</span>
+            <em class="em_div_bottom_inner"></em>
+            <span class="span_div_bottom_inner">友情链接</span>
+        </div>
+        <div class="div_bottom_inner">
+            <span class="span_div_bottom_inner">推广服务</span>
+            <em class="em_div_bottom_inner"></em>
+            <span class="span_div_bottom_inner">客户服务中心</span>
+            <em class="em_div_bottom_inner"></em>
+            <span class="span_div_bottom_inner">Copyright&nbsp;©&nbsp;&nbsp;www.infotownlet.com</span>
+        </div>
+    </div>
+</body>
+</html>

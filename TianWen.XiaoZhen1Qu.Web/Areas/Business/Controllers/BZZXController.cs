@@ -78,6 +78,10 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         {
             return View();
         }
+        public ActionResult BZZX_SY_FTBG()
+        {
+            return View();
+        }
 
         public JsonResult SJCX()
         {
