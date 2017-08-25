@@ -142,6 +142,7 @@
     <Content Include="Areas\Business\Css\BZZX\BZZX_SY_DHMYCX.css" />
     <Content Include="Areas\Business\Css\BZZX\BZZX_SY_FBGZLTZ.css" />
     <Content Include="Areas\Business\Css\BZZX\BZZX_SY_FTBG.css" />
+    <Content Include="Areas\Business\Css\BZZX\BZZX_SY_KSDH_XSSYZN.css" />
     <Content Include="Areas\Business\Css\BZZX\BZZX_SY_RZSM.css" />
     <Content Include="Areas\Business\Css\BZZX\BZZX_SY_XXBSC.css" />
     <Content Include="Areas\Business\Css\BZZX\BZZX_SY_XXWFFB.css" />
@@ -295,6 +296,7 @@
     <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_SY_DHMYCX.js" />
     <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_SY_FBGZLTZ.js" />
     <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_SY_FTBG.js" />
+    <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_SY_KSDH_XSSYZN.js" />
     <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_SY_RZSM.js" />
     <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_SY_XXBSC.js" />
     <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_SY_XXWFFB.js" />
