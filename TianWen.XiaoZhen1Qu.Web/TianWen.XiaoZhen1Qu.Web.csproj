@@ -159,6 +159,7 @@
     <Content Include="Areas\Business\Css\images\arrow_down.png" />
     <Content Include="Areas\Business\Css\images\arrow_down_big.png" />
     <Content Include="Areas\Business\Css\images\arrow_up.png" />
+    <Content Include="Areas\Business\Css\images\BZZX\bzzx_fhdb_hz.png" />
     <Content Include="Areas\Business\Css\images\BZZX\bzzx_sy_dhmycx_cx.png" />
     <Content Include="Areas\Business\Css\images\BZZX\bzzx_sy_dhmycx_sd.png" />
     <Content Include="Areas\Business\Css\images\BZZX\bzzx_sy_esjybzzx.png" />
@@ -183,6 +184,7 @@
     <Content Include="Areas\Business\Css\images\BZZX\bzzx_sy_sbddxyzm.png" />
     <Content Include="Areas\Business\Css\images\BZZX\bzzx_sy_xxwffb_jp.png" />
     <Content Include="Areas\Business\Css\images\BZZX\bzzx_sy_xxbsc_fhdb.png" />
+    <Content Include="Areas\Business\Css\images\BZZX\bzzx_fhdb.png" />
     <Content Include="Areas\Business\Css\images\cellphone.png" />
     <Content Include="Areas\Business\Css\images\clip.png" />
     <Content Include="Areas\Business\Css\images\close.png" />
@@ -474,6 +476,7 @@
     <Content Include="Areas\Business\Views\BZZX\BZZX_SY_FBGZLTZ.cshtml" />
     <Content Include="Areas\Business\Views\BZZX\BZZX_SY_FTBG.cshtml" />
     <Content Include="Areas\Business\Views\BZZX\BZZX_SY_KSDH_XSSYZN.cshtml" />
+    <Content Include="Areas\Business\Views\BZZX\BZZX_SY_KSDH_YHZCYDL.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

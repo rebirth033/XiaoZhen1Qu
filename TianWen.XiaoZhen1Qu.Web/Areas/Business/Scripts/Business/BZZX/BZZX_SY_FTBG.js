@@ -1,8 +1,7 @@
 ﻿$(document).ready(function () {
     $(".span_body_nav").bind("click", GoToTip);
-    $(".div_fhdb").bind("click", GoToTop);
-    $(".div_fhdb").bind("mouseover", ActiveFHDB);
-    $(".div_fhdb").bind("mouseleave", UnActiveFHDB);
+    $("#div_rtop").bind("mouseover", TopShow);
+    $("#div_rtop").bind("mouseleave", TopHide);
 });
 
 function GoToTip() {
@@ -14,24 +13,19 @@ function GoToTop() {
     $("html,body").stop().animate({ scrollTop: "0" }, 300, "swing", function () { });
 }
 
-function ActiveFHDB() {
-    $(this).find("span").each(function () {
-        if ($(this).attr("class") === "span_fhdb_img") {
-            $(this).css("background-image", "url(" + getRootPath() + "/Areas/Business/Css/images/BZZX/bzzx_sy_xxbsc_fhdb_hover.png)");
-        }
-        if ($(this).attr("class") === "span_fhdb") {
-            $(this).css("color", "#ef6100");
-        }
-    });
+//拖动滚动条或滚动鼠标轮
+window.onscroll = function () {
+    if (document.body.scrollTop || document.documentElement.scrollTop > 0) {
+        $("#div_rtop").css("display", "block");
+    } else {
+        $("#div_rtop").css("display", "none");
+    }
 }
 
-function UnActiveFHDB() {
-    $(this).find("span").each(function () {
-        if ($(this).attr("class") === "span_fhdb_img") {
-            $(this).css("background-image", "url(" + getRootPath() + "/Areas/Business/Css/images/BZZX/bzzx_sy_xxbsc_fhdb.png)");
-        }
-        if ($(this).attr("class") === "span_fhdb") {
-            $(this).css("color", "#31b0d5");
-        }
-    });
+function TopShow() {
+    $("#div_rtop").css("background-image", "url(" + getRootPath() + "/Areas/Business/Css/images/BZZX/bzzx_fhdb_hz.png)");
+}
+
+function TopHide() {
+    $("#div_rtop").css("background-image", "url(" + getRootPath() + "/Areas/Business/Css/images/BZZX/bzzx_fhdb.png)");
 }
