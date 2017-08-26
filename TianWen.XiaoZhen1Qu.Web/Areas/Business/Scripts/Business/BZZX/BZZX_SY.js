@@ -11,7 +11,16 @@
     $("#div_left_box_info_xxbsc").bind("click", OpenXXBSC);
     $("#div_left_box_info_fbgzltz").bind("click", OpenFBGZLTZ);
     $("#div_left_box_info_ftbg").bind("click", OpenFTBG);
-    $("#span_left_box_bottom_right_cwczyh").bind("click", OpenCWZCYH);
+    $("#span_left_box_bottom_right_cwczyh").bind("click", OpenXSSYZN);
+    $("#span_left_box_bottom_right_rhfbxx").bind("click", OpenXSSYZN);
+    $("#span_left_box_bottom_right_rhglxx").bind("click", OpenXSSYZN);
+    $("#span_left_box_bottom_right_rhczxx").bind("click", OpenXSSYZN);
+    $("#span_left_box_bottom_right_xxshgf").bind("click", OpenXSSYZN);
+    $("#span_left_box_bottom_right_mjrm").bind("click", OpenXSSYZN);
+    $("#span_left_box_bottom_right_yhmxg").bind("click", OpenYHZCYDL);
+    $("#span_left_box_bottom_right_wfdl").bind("click", OpenYHZCYDL);
+    $("#span_left_box_bottom_right_zhdshbd").bind("click", OpenYHZCYDL);
+    $("#span_left_box_bottom_right_zhzx").bind("click", OpenYHZCYDL);
 });
 
 function ShowRemark() {
@@ -66,6 +75,10 @@ function OpenFTBG() {
     window.open(getRootPath() + "/Business/BZZX/BZZX_SY_FTBG?YHID=" + getUrlParam("YHID"));
 }
 
-function OpenCWZCYH() {
+function OpenXSSYZN() {
     window.open(getRootPath() + "/Business/BZZX/BZZX_SY_KSDH_XSSYZN?YHID=" + getUrlParam("YHID"));
+}
+
+function OpenYHZCYDL() {
+    window.open(getRootPath() + "/Business/BZZX/BZZX_SY_KSDH_YHZCYDL?YHID=" + getUrlParam("YHID"));
 }
