@@ -473,6 +473,7 @@
     <Content Include="Areas\Business\Views\BZZX\BZZX_SY_XXBSC.cshtml" />
     <Content Include="Areas\Business\Views\BZZX\BZZX_SY_FBGZLTZ.cshtml" />
     <Content Include="Areas\Business\Views\BZZX\BZZX_SY_FTBG.cshtml" />
+    <Content Include="Areas\Business\Views\BZZX\BZZX_SY_KSDH_XSSYZN.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
