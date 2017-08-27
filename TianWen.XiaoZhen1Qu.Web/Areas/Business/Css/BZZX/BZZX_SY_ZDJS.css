@@ -81,9 +81,13 @@
     padding-top: 3px;
 }
 
-.span_body_nav:hover {
-    cursor: pointer;
-    color: #ff6100;
+    .span_body_nav:hover {
+        cursor: pointer;
+        color: #ff6100;
+    }
+
+.span_body_nav_inner {
+    font-weight: 700;
 }
 
 .div_body_nav_title {
@@ -109,13 +113,12 @@
 .highlight {
     color: #ff6100;
     font-weight: 700;
-    
 }
 
-.highlight:hover {
-    text-decoration: none;
-    color: #ff6100;
-}
+    .highlight:hover {
+        text-decoration: none;
+        color: #ff6100;
+    }
 
 .div_rtop {
     width: 40px;
