@@ -11,25 +11,34 @@
     $("#div_left_box_info_xxbsc").bind("click", OpenXXBSC);
     $("#div_left_box_info_fbgzltz").bind("click", OpenFBGZLTZ);
     $("#div_left_box_info_ftbg").bind("click", OpenFTBG);
+
     $("#span_left_box_bottom_right_cwczyh").bind("click", OpenXSSYZN);
     $("#span_left_box_bottom_right_rhfbxx").bind("click", OpenXSSYZN);
     $("#span_left_box_bottom_right_rhglxx").bind("click", OpenXSSYZN);
     $("#span_left_box_bottom_right_rhczxx").bind("click", OpenXSSYZN);
     $("#span_left_box_bottom_right_xxshgf").bind("click", OpenXSSYZN);
     $("#span_left_box_bottom_right_mjrm").bind("click", OpenXSSYZN);
+
     $("#span_left_box_bottom_right_yhmxg").bind("click", OpenYHZCYDL);
     $("#span_left_box_bottom_right_wfdl").bind("click", OpenYHZCYDL);
+
     $("#span_left_box_bottom_right_xxzlbbxs").bind("click", OpenXXFBYSC);
     $("#span_left_box_bottom_right_tsxxxshcf").bind("click", OpenXXFBYSC);
     $("#span_left_box_bottom_right_xxwffb").bind("click", OpenXXWFFB);
     $("#span_left_box_bottom_right_xxbsc").bind("click", OpenXXBSC);
     $("#span_left_box_bottom_right_rhxgscxx").bind("click", OpenXXFBYSC);
+
     $("#span_left_box_bottom_right_rzzx").bind("click", OpenRZSM);
     $("#span_left_box_bottom_right_rhrz").bind("click", OpenRZSM);
     $("#span_left_box_bottom_right_ghrz").bind("click", OpenRZSM);
     $("#span_left_box_bottom_right_sbdrzm").bind("click", OpenRZSM);
     $("#span_left_box_bottom_right_sbdrzyj").bind("click", OpenRZSM);
     $("#span_left_box_bottom_right_gdrzwt").bind("click", OpenRZSM);
+
+    $("#span_left_box_bottom_right_smsxy").bind("click", OpenZHDJYXY);
+    $("#span_left_box_bottom_right_xydzjyjs").bind("click", OpenZHDJYXY);
+    $("#span_left_box_bottom_right_djyftl").bind("click", OpenZHDJYXY);
+    $("#span_left_box_bottom_right_tytxxgxcs").bind("click", OpenZHDJYXY);
 });
 
 function ShowRemark() {
@@ -94,4 +103,8 @@ function OpenYHZCYDL() {
 
 function OpenXXFBYSC() {
     window.open(getRootPath() + "/Business/BZZX/BZZX_SY_KSDH_XXFBYSC?YHID=" + getUrlParam("YHID"));
+}
+
+function OpenZHDJYXY() {
+    window.open(getRootPath() + "/Business/BZZX/BZZX_SY_KSDH_ZHDJYXY?YHID=" + getUrlParam("YHID"));
 }
