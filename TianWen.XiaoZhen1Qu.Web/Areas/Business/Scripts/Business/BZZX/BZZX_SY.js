@@ -39,6 +39,14 @@
     $("#span_left_box_bottom_right_xydzjyjs").bind("click", OpenZHDJYXY);
     $("#span_left_box_bottom_right_djyftl").bind("click", OpenZHDJYXY);
     $("#span_left_box_bottom_right_tytxxgxcs").bind("click", OpenZHDJYXY);
+
+    $("#span_left_box_bottom_right_pcfp").bind("click", OpenWLFPCS);
+    $("#span_left_box_bottom_right_wlzpfp").bind("click", OpenWLFPCS);
+    $("#span_left_box_bottom_right_wjfp").bind("click", OpenWLFPCS);
+    $("#span_left_box_bottom_right_cwfp").bind("click", OpenWLFPCS);
+    $("#span_left_box_bottom_right_esjyfp").bind("click", OpenWLFPCS);
+    $("#span_left_box_bottom_right_fcfp").bind("click", OpenWLFPCS);
+    $("#span_left_box_bottom_right_hcpfp").bind("click", OpenWLFPCS);
 });
 
 function ShowRemark() {
@@ -107,4 +115,8 @@ function OpenXXFBYSC() {
 
 function OpenZHDJYXY() {
     window.open(getRootPath() + "/Business/BZZX/BZZX_SY_KSDH_ZHDJYXY?YHID=" + getUrlParam("YHID"));
+}
+
+function OpenWLFPCS() {
+    window.open(getRootPath() + "/Business/BZZX/BZZX_SY_KSDH_WLFPCS?YHID=" + getUrlParam("YHID"));
 }
