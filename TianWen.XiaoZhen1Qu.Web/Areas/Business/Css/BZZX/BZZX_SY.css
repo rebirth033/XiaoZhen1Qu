@@ -60,7 +60,7 @@
 }
 
 .span_left_box_info_text {
-    color: #1790b4;
+    color: #0000cd;
     height: 20px;
     width: 120px;
     display: block;
@@ -100,7 +100,7 @@
 }
 
 .span_left_box_bottom_right {
-    color: #1790b4;
+    color: #0000cd;
     font-size: 14px;
     display: inline-block;
     float: left;
@@ -108,7 +108,7 @@
 }
 
     .span_left_box_bottom_right:hover {
-        color: #ff6100;
+        color: #fd7600;
     }
 
 .em_left_box_bottom_right {

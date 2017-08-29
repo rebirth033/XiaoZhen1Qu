@@ -65,6 +65,19 @@
     font-family: 宋体;
 }
 
+
+.span_body_nav_inner_first {
+    width: 1000px;
+    display: inline-block;
+    background-color: #f7f7f7;
+    height: 34px;
+    border-left: 2px solid #5bc0de;
+    padding-left: 10px;
+    padding-top: 6px;
+    font-weight: 700;
+}
+
+
 .div_body_nav_inner {
     display: inline-block;
     width: 100%;
@@ -86,7 +99,7 @@
     width: 330px;
     height: 34px;
     float: left;
-    color: #1790b4;
+    color: #0000cd;
     padding-top: 3px;
 }
 
@@ -331,6 +344,26 @@ table {
     width: 20px;
     height: 20px;
     display: inline-block;
+}
+
+.div_txxts {
+    height: 70px;
+    width: 100%;
+    display: block;
+    border: 1px solid #1790b4;
+    background-color: #b5dfec;
+    padding: 0px 10px;
+    font-size: 15px;
+}
+
+.div_zj_fwysf {
+    height: 450px;
+    width: 100%;
+    display: block;
+    border: 1px solid #1790b4;
+    background-color: #b5dfec;
+    padding: 0px 10px;
+    font-size: 14px;
 }
 
 .div_rtop {

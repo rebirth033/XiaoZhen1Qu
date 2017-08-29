@@ -42,7 +42,6 @@
 
     $("#span_left_box_bottom_right_pcfp").bind("click", OpenWLFPCS);
     $("#span_left_box_bottom_right_wlzpfp").bind("click", OpenWLFPCS);
-    $("#span_left_box_bottom_right_wjfp").bind("click", OpenWLFPCS);
     $("#span_left_box_bottom_right_cwfp").bind("click", OpenWLFPCS);
     $("#span_left_box_bottom_right_esjyfp").bind("click", OpenWLFPCS);
     $("#span_left_box_bottom_right_fcfp").bind("click", OpenWLFPCS);
