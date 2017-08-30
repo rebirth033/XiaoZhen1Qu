@@ -318,6 +318,24 @@ table {
     font-size: 14px;
 }
 
+.span_esfbllc {
+    background-image: url(../images/BZZX/bzzx_sy_esfbllc.png);
+    width: 591px;
+    height: 658px;
+    display: block;
+    margin-left: 200px;
+    margin-top: 10px;
+}
+
+.span_hcpyp {
+    background-image: url(../images/BZZX/bzzx_sy_hcpyp.png);
+    width: 548px;
+    height: 680px;
+    display: block;
+    margin-left: 200px;
+    margin-top: 10px;
+}
+
 .img_content_gs {
     background-image: url(../images/BZZX/bzzx_sy_gs.png);
     width: 140px;
