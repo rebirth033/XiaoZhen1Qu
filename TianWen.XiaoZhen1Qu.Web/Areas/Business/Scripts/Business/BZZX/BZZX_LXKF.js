@@ -1,6 +1,7 @@
 ﻿$(document).ready(function () {
     $(".span_wtlx_inner_right").bind("click", SelectWTLX);
     $("#span_wtlx_inner_right_xxbsc").bind("click", showXXBSC);
+    $("#btnCKBSCYY").bind("click", CKBSCYY);
     bindHover();
 });
 
@@ -26,4 +27,24 @@ function bindHover() {
             $(this).css("background-color", "#eBeBeB").css("font-weight", "normal").css("color", "#000");
         })
     });
+}
+
+function CKBSCYY() {
+    if (!XXBHCheck()) return;
+
+}
+
+//用户名检查
+function XXBHCheck() {
+    if ($("#inputXXBH").val().length === 0) {
+        $("#inputXXBH").css("border-color", "#F2272D");
+        $("#XXBHInfo").css("color", "#F2272D");
+        $("#XXBHInfo").html("请输入信息编号");
+        return false;
+    }
+    else {
+        $("#inputXXBH").css("border-color", "#999");
+        $("#XXBHInfo").html('');
+        return true;
+    }
 }

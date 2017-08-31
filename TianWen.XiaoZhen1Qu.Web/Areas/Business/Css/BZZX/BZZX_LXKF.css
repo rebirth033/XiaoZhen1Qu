@@ -120,6 +120,20 @@
     cursor: text;
 }
 
+.btn_info {
+    background-color: #31b0d5;
+}
+
 :-ms-input-placeholder.input_content {
     color: #999;
 }
+
+.span_ckxxbh {
+    color: #333;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+    .span_ckxxbh:hover {
+        color: #ff6a00;
+    }
