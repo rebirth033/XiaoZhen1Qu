@@ -38,13 +38,12 @@ function CKBSCYY() {
 function XXBHCheck() {
     if ($("#inputXXBH").val().length === 0) {
         $("#inputXXBH").css("border-color", "#F2272D");
-        $("#XXBHInfo").css("color", "#F2272D");
-        $("#XXBHInfo").html("请输入信息编号");
+        $("#td_xxbhinfo").html("<span id=\"XXBHInfo\" style=\"padding-left:12px;color:#F2272D\">请输入信息编号</span>");
         return false;
     }
     else {
         $("#inputXXBH").css("border-color", "#999");
-        $("#XXBHInfo").html('');
+        $("#td_xxbhinfo").html("<div class=\"div_bscyy\"></div>");
         return true;
     }
 }
