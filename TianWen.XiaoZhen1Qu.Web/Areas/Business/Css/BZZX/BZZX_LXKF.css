@@ -1,6 +1,6 @@
 ﻿.div_body {
     width: 100%;
-    height: 600px;
+    height: 640px;
     display: block;
     border: 1px solid #DEDEDE;
     margin-top: 20px;
@@ -39,6 +39,7 @@
 .span_step_second {
     width: 30px;
     height: 30px;
+    margin-left: 18px;
     display: inline-block;
     background-image: url(../images/two-blue.png);
 }
@@ -80,7 +81,6 @@
     cursor: pointer;
     padding-top: 6px;
     margin-right: 10px;
-    margin-top: 4px;
 }
 
     .span_wtlx_inner_right:hover {
@@ -88,3 +88,24 @@
         color: #fff;
         font-weight: 700;
     }
+
+.table_wtjj {
+    width: 100%;
+    height: 100%;
+}
+
+.tr_wtjj {
+    height: 40px;
+    width: 100%;
+}
+
+.td_wtjj_inner_left {
+    font-weight: 700;
+    width: 150px;
+    text-align: right;
+}
+
+.td_wtjj_inner_right {
+    width: 620px;
+    text-align: left;
+}
