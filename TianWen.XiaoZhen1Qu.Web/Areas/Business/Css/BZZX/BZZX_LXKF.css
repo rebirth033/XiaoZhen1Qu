@@ -9,9 +9,13 @@
 
 .div_content {
     width: 100%;
-    height: 80px;
+    height: 45px;
     display: block;
-    padding: 20px 40px;
+    padding-left: 40px;
+}
+
+.div_content_wtlx {
+    height: 240px;
 }
 
 .span_step_text {
@@ -27,6 +31,7 @@
 .span_step_first {
     width: 30px;
     height: 30px;
+    margin-left: 18px;
     display: inline-block;
     background-image: url(../images/one-blue.png);
 }
@@ -39,7 +44,7 @@
 }
 
 .div_wtlx {
-    width: 800px;
+    width: 770px;
     height: 100%;
     background-color: #fff;
     display: block;
@@ -63,7 +68,7 @@
 }
 
 .td_wtlx_inner_right {
-    width: 700px;
+    width: 670px;
 }
 
 .span_wtlx_inner_right {
