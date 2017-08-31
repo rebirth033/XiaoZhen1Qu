@@ -138,6 +138,7 @@
   <ItemGroup>
     <Content Include="Areas\Business\Aspx\png.aspx" />
     <Content Include="Areas\Business\Css\BZZX\BZZX.css" />
+    <Content Include="Areas\Business\Css\BZZX\BZZX_LXKF.css" />
     <Content Include="Areas\Business\Css\BZZX\BZZX_SY.css" />
     <Content Include="Areas\Business\Css\BZZX\BZZX_SY_DHMYCX.css" />
     <Content Include="Areas\Business\Css\BZZX\BZZX_SY_FBGZLTZ.css" />
@@ -305,6 +306,7 @@
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\js\bootstrap.min.js" />
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\js\npm.js" />
     <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX.js" />
+    <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_LXKF.js" />
     <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_SY.js" />
     <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_SY_DHMYCX.js" />
     <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_SY_FBGZLTZ.js" />
