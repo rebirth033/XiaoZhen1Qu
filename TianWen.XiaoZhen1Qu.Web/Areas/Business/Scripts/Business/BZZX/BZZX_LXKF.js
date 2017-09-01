@@ -1,10 +1,8 @@
 ﻿$(document).ready(function () {
     $(".span_wtlx_inner_right").bind("click", SelectWTLX);
-    $("#span_wtlx_inner_right_xxbsc").bind("click", showXXBSC);
-    $("#btnCKBSCYY").bind("click", CKBSCYY);
     bindHover();
 });
-
+//选择问题类型
 function SelectWTLX() {
     $(".span_wtlx_inner_right").each(function () {
         $(this).css("background-color", "#eBeBeB").css("font-weight", "normal").css("color", "#000");
@@ -14,11 +12,7 @@ function SelectWTLX() {
     $(this).unbind("mouseleave");
     showWTLX(this.id);
 }
-
-function showXXBSC() {
-    $("#span_step_text_second").html("请输入您的信息编号:")
-}
-
+//绑定问题类型hover事件
 function bindHover() {
     $(".span_wtlx_inner_right").each(function () {
         $(this).bind("mouseover", function () {
@@ -29,12 +23,11 @@ function bindHover() {
         })
     });
 }
-
+//查询信息被删除原因
 function CKBSCYY() {
     if (!XXBHCheck()) return;
 
 }
-
 //信息编号检查
 function XXBHCheck() {
     if ($("#inputXXBH").val().length === 0) {
@@ -48,19 +41,28 @@ function XXBHCheck() {
         return true;
     }
 }
-
+//信息被删除->填表单
 function TBD() {
     $("#div_content_tjkf").css("display", "block");
 }
-
+//显示问题类型
 function showWTLX(id) {
     $(".div_wtjj_inner").each(function () {
         $(this).css("display", "none");
     });
     if (id.indexOf("xxbsc") != -1)
         ShowXXBSC();
+    if (id.indexOf("xxbfhxg") != -1)
+        ShowXXBFHXG();
 }
-
+//信息被删除
 function ShowXXBSC() {
+    $("#span_step_text_second").html("请输入您的信息编号：")
     $("#div_xxbsc").css("display", "block");
+    $("#btnCKBSCYY").bind("click", CKBSCYY);
+}
+//信息被返回修改
+function ShowXXBFHXG() {
+    $("#span_step_text_second").html("请描述您遇到的问题：")
+    $("#div_xxbfhxg").css("display", "block");
 }
