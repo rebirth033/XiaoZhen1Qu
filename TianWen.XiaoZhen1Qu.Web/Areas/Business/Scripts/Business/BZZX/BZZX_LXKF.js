@@ -84,6 +84,14 @@ function showWTLX(id) {
         ShowBPWFCZJ();
     if (id.indexOf("bpwessj") != -1)
         ShowBPWESSJ();
+    if (id.indexOf("bpwzj") != -1)
+        ShowBPWZJ();
+    if (id.indexOf("ghrz") != -1)
+        ShowGHRZ();
+    if (id.indexOf("zhmm") != -1)
+        ShowZHMM();
+    if (id.indexOf("zhbd") != -1)
+        ShowZHBD();
 }
 //信息被删除
 function ShowXXBSC() {
@@ -158,6 +166,31 @@ function ShowBPWESSJ() {
     $("#tr_xxbh").css("display", "none");
     BindWTMS();
 }
+//被判为职介
+function ShowBPWZJ() {
+    $("#span_step_text_second").html("请选择具体问题：<span class=\"span_second_lx\">[被判为职介]</span>");
+    $("#div_bpwzj").css("display", "block");
+    $("#div_bpwzj .span_wtjj_inner").bind("click", SelectJTWT);
+}
+//跟换认证
+function ShowGHRZ() {
+    $("#span_step_text_second").html("请选择具体问题：<span class=\"span_second_lx\">[跟换认证]</span>");
+    $("#div_ghrz").css("display", "block");
+    $("#div_ghrz .span_wtjj_inner").bind("click", SelectJTWT);
+}
+//找回密码
+function ShowZHMM() {
+    $("#span_step_text_second").html("请描述您遇到的问题：<span class=\"span_second_lx\">[找回密码]</span>");
+    $("#div_xxbfhxg").css("display", "block");
+    $("#tr_xxbh").css("display", "none");
+    BindWTMS();
+}
+//账号被盗
+function ShowZHBD() {
+    $("#span_step_text_second").html("请选择具体问题：<span class=\"span_second_lx\">[账户被盗]</span>");
+    $("#div_zhbd").css("display", "block");
+    $("#div_zhbd .span_wtjj_inner").bind("click", SelectJTWT);
+}
 //绑定问题描述框
 function BindWTMS() {
     $("#textarea_mswt").bind("focus", WTMSFocus);
@@ -217,6 +250,54 @@ function showJTWT(id) {
     }
     if (id.indexOf("zhwfdl") != -1) {
         $("#div_wtjj_inner_zhwfdl").css("display", "block");
+    }
+    if (id.indexOf("bpwzjdyy") != -1) {
+        $("#div_wtjj_inner_bpwzjdyy").css("display", "block");
+    }
+    if (id.indexOf("fbzpxxsbpwzj") != -1) {
+        $("#div_wtjj_inner_fbzpxxsbpwzj").css("display", "block");
+    }
+    if (id.indexOf("ksghsjrz") != -1) {
+        $("#div_wtjj_inner_ksghsjrz").css("display", "block");
+    }
+    if (id.indexOf("ksghyx") != -1) {
+        $("#div_wtjj_inner_ksghyx").css("display", "block");
+    }
+    if (id.indexOf("qxsmrz") != -1) {
+        $("#div_wtjj_inner_qxsmrz").css("display", "block");
+    }
+    if (id.indexOf("qxyyzzrz") != -1) {
+        $("#div_wtjj_inner_qxyyzzrz").css("display", "block");
+    }
+    if (id.indexOf("wfjssjdx") != -1) {
+        $("#div_wtjj_inner_wfjssjdx").css("display", "block");
+    }
+    if (id.indexOf("xyxggsm") != -1) {
+        $("#div_wtjj_inner_xyxggsm").css("display", "block");
+    }
+    if (id.indexOf("yyzzrztbg") != -1) {
+        $("#div_wtjj_inner_yyzzrztbg").css("display", "block");
+    }
+    if (id.indexOf("rhtjyyzzrz") != -1) {
+        $("#div_wtjj_inner_rhtjyyzzrz").css("display", "block");
+    }
+    if (id.indexOf("qxgrsfrz") != -1) {
+        $("#div_wtjj_inner_qxgrsfrz").css("display", "block");
+    }
+    if (id.indexOf("tszhmmcw") != -1) {
+        $("#div_wtjj_inner_tszhmmcw").css("display", "block");
+    }
+    if (id.indexOf("sjbmyhbbrrz") != -1) {
+        $("#div_wtjj_inner_sjbmyhbbrrz").css("display", "block");
+    }
+    if (id.indexOf("qtbdqk") != -1) {
+        $("#div_wtjj_inner_qtbdqk").css("display", "block");
+    }
+    if (id.indexOf("zhbdxzx") != -1) {
+        $("#div_wtjj_inner_zhbdxzx").css("display", "block");
+    }
+    if (id.indexOf("rhfzzhbd") != -1) {
+        $("#div_wtjj_inner_rhfzzhbd").css("display", "block");
     }
 }
 
