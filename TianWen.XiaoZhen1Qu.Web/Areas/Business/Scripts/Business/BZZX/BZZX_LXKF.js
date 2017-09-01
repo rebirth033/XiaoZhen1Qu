@@ -120,13 +120,13 @@ function ShowMYSJHM() {
 function ShowQTXXMY() {
     $("#span_step_text_second").html("请选择具体问题：");
     $("#div_qtxxmy").css("display", "block");
-    $(".span_wtjj_inner").bind("click", SelectJTWT);
+    $("#div_qtxxmy .span_wtjj_inner").bind("click", SelectJTWT);
 }
 //申诉被投诉
 function ShowSSBTS() {
     $("#span_step_text_second").html("请选择具体问题：");
     $("#div_ssbts").css("display", "block");
-    $(".span_wtjj_inner").bind("click", SelectJTWT);
+    $("#div_ssbts .span_wtjj_inner").bind("click", SelectJTWT);
 }
 //绑定问题描述框
 function BindWTMS() {
@@ -156,6 +156,6 @@ function SelectJTWT() {
     showJTWT(this.id);
 }
 //显示具体问题
-function showJTWT() {
-    alert(id);
+function showJTWT(id) {
+
 }
