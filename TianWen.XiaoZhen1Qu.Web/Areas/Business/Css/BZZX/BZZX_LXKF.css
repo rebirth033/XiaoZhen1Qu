@@ -1,6 +1,5 @@
 ﻿.div_body {
     width: 100%;
-    height: 640px;
     display: block;
     border: 1px solid #DEDEDE;
     margin-top: 20px;
@@ -16,6 +15,10 @@
 
 .div_content_wtlx {
     height: 240px;
+}
+
+.div_content_wtjj {
+    height: 340px;
 }
 
 .span_step_text {
@@ -44,6 +47,14 @@
     background-image: url(../images/two-blue.png);
 }
 
+.span_step_third {
+    width: 30px;
+    height: 30px;
+    margin-left: 18px;
+    display: inline-block;
+    background-image: url(../images/three-blue.png);
+}
+
 .div_wtlx {
     width: 770px;
     height: 100%;
@@ -51,6 +62,7 @@
     margin-left: 60px;
     background-color: #fff;
     border: 1px solid #DEDEDE;
+    border-radius: 4px;
 }
 
 .div_wtjj {
@@ -102,7 +114,7 @@
 
 .td_wtjj_inner_left {
     font-weight: 700;
-    width: 150px;
+    width: 65px;
     text-align: right;
 }
 
@@ -140,9 +152,13 @@
         color: #ff6a00;
     }
 
-.div_bscyy {
+.textarea_bscyy {
     width: 500px;
     height: 200px;
     background-color: #fff;
     border: 1px solid #DEDEDE;
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
 }
