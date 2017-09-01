@@ -166,6 +166,7 @@
     <Content Include="Areas\Business\Css\images\arrow_down_big.png" />
     <Content Include="Areas\Business\Css\images\arrow_up.png" />
     <Content Include="Areas\Business\Css\images\BZZX\bzzx_fhdb_hz.png" />
+    <Content Include="Areas\Business\Css\images\BZZX\bzzx_lxkf_mygrxx.png" />
     <Content Include="Areas\Business\Css\images\BZZX\bzzx_sy_dhmycx_cx.png" />
     <Content Include="Areas\Business\Css\images\BZZX\bzzx_sy_dhmycx_sd.png" />
     <Content Include="Areas\Business\Css\images\BZZX\bzzx_sy_esfbllc.png" />

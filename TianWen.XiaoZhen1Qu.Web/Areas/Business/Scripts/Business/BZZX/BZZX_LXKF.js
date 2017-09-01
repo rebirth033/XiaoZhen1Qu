@@ -81,50 +81,54 @@ function showWTLX(id) {
 }
 //信息被删除
 function ShowXXBSC() {
-    $("#span_step_text_second").html("请输入您的信息编号：");
+    $("#span_step_text_second").html("请输入您的信息编号：<span class=\"span_second_lx\">[信息被删除]</span>");
     $("#div_xxbsc").css("display", "block");
     $("#btnCKBSCYY").bind("click", CKBSCYY);
 }
 //信息被返回修改
 function ShowXXBFHXG() {
-    $("#span_step_text_second").html("请描述您遇到的问题：");
+    $("#span_step_text_second").html("请描述您遇到的问题：<span class=\"span_second_lx\">[信息被返回修改]</span>");
     $("#div_xxbfhxg").css("display", "block");
+    $("#tr_xxbh").css("display", "");
     BindWTMS();
 }
 //信息被判分类不当
 function ShowXXBPFLDB() {
-    $("#span_step_text_second").html("请描述您遇到的问题：");
+    $("#span_step_text_second").html("请描述您遇到的问题：<span class=\"span_second_lx\">[信息被判分类不当]</span>");
     $("#div_xxbfhxg").css("display", "block");
+    $("#tr_xxbh").css("display", "");
     BindWTMS();
 }
 //信息不显示
 function ShowXXBXS() {
-    $("#span_step_text_second").html("请描述您遇到的问题：");
+    $("#span_step_text_second").html("请描述您遇到的问题：<span class=\"span_second_lx\">[信息不显示]</span>");
     $("#div_xxbfhxg").css("display", "block");
+    $("#tr_xxbh").css("display", "");
     BindWTMS();
 }
 //投诉举报虚假信息
 function ShowTSJBXJXX() {
-    $("#span_step_text_second").html("请描述您遇到的问题：");
+    $("#span_step_text_second").html("请描述您遇到的问题：<span class=\"span_second_lx\">[投诉举报虚假信息]</span>");
     $("#div_xxbfhxg").css("display", "block");
+    $("#tr_xxbh").css("display", "");
     BindWTMS();
 }
 //冒用手机号码
 function ShowMYSJHM() {
-    $("#span_step_text_second").html("请描述您遇到的问题：");
+    $("#span_step_text_second").html("请描述您遇到的问题：<span class=\"span_second_lx\">[冒用手机号码]</span>");
     $("#div_xxbfhxg").css("display", "block");
     $("#tr_xxbh").css("display", "none");
     BindWTMS();
 }
 //其它信息冒用
 function ShowQTXXMY() {
-    $("#span_step_text_second").html("请选择具体问题：");
+    $("#span_step_text_second").html("请选择具体问题：<span class=\"span_second_lx\">[其它信息冒用]</span>");
     $("#div_qtxxmy").css("display", "block");
     $("#div_qtxxmy .span_wtjj_inner").bind("click", SelectJTWT);
 }
 //申诉被投诉
 function ShowSSBTS() {
-    $("#span_step_text_second").html("请选择具体问题：");
+    $("#span_step_text_second").html("请选择具体问题：<span class=\"span_second_lx\">[申诉被投诉]</span>");
     $("#div_ssbts").css("display", "block");
     $("#div_ssbts .span_wtjj_inner").bind("click", SelectJTWT);
 }

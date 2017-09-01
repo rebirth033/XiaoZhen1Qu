@@ -162,7 +162,7 @@
     margin-bottom: 10px;
     margin-top: 10px;
     border-radius: 4px;
-    padding: 9px;
+    padding: 4px 9px;
     color: #999999;
 }
 
@@ -209,4 +209,9 @@
     width: 641px;
     height: 233px;
     background-image: url(../images/BZZX//bzzx_lxkf_mygrxx.png);
+}
+
+.span_second_lx {
+    font-size: 14px;
+    color: #ff6a00;
 }
