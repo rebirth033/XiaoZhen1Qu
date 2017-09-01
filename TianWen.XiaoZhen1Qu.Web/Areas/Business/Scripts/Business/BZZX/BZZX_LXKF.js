@@ -170,5 +170,18 @@ function showJTWT(id) {
     }
     if (id.indexOf("gsxxbmy") != -1) {
         $("#div_wtjj_inner_gsxxbmy").css("display", "block");
-    } 
+    }
+    if (id.indexOf("btswxjwfxx") != -1) {
+        $("#div_wtjj_inner_btswxjwfxx").css("display", "block");
+    }
+    if (id.indexOf("xxbsczmb") != -1) {
+        $("#div_wtjj_inner_xxbsczmb").css("display", "block");
+    }
+    if (id.indexOf("xxbxs") != -1) {
+        $("#div_wtjj_inner_xxbxs").css("display", "block");
+    }
+    if (id.indexOf("rhscdgsdpj") != -1) {
+        $("#div_wtjj_inner_rhscdgsdpj").css("display", "block");
+    }
 }
+
