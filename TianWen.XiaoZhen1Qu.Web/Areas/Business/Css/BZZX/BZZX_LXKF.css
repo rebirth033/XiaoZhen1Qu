@@ -5,6 +5,7 @@
     border: 1px solid #DEDEDE;
     margin-top: 20px;
     background-color: #FBFBFB;
+    font-family: 宋体;
 }
 
 .div_content {
@@ -215,3 +216,12 @@
     font-size: 14px;
     color: #ff6a00;
 }
+
+.span_href {
+    color: #0000cd;
+    cursor: pointer;
+}
+
+    .span_href:hover {
+        text-decoration: underline;
+    }

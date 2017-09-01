@@ -78,6 +78,12 @@ function showWTLX(id) {
         ShowQTXXMY();
     if (id.indexOf("ssbts") != -1)
         ShowSSBTS();
+    if (id.indexOf("zhbdj") != -1)
+        ShowZHBDJ();
+    if (id.indexOf("bpwfczj") != -1)
+        ShowBPWFCZJ();
+    if (id.indexOf("bpwessj") != -1)
+        ShowBPWESSJ();
 }
 //信息被删除
 function ShowXXBSC() {
@@ -132,6 +138,26 @@ function ShowSSBTS() {
     $("#div_ssbts").css("display", "block");
     $("#div_ssbts .span_wtjj_inner").bind("click", SelectJTWT);
 }
+//账号被冻结
+function ShowZHBDJ() {
+    $("#span_step_text_second").html("请选择具体问题：<span class=\"span_second_lx\">[账号被冻结]</span>");
+    $("#div_zhbdj").css("display", "block");
+    $("#div_zhbdj .span_wtjj_inner").bind("click", SelectJTWT);
+}
+//被判为房产中介
+function ShowBPWFCZJ() {
+    $("#span_step_text_second").html("请描述您遇到的问题：<span class=\"span_second_lx\">[被判为房产中介]</span>");
+    $("#div_xxbfhxg").css("display", "block");
+    $("#tr_xxbh").css("display", "none");
+    BindWTMS();
+}
+//被判为二手商家
+function ShowBPWESSJ() {
+    $("#span_step_text_second").html("请描述您遇到的问题：<span class=\"span_second_lx\">[被判为二手商家]</span>");
+    $("#div_xxbfhxg").css("display", "block");
+    $("#tr_xxbh").css("display", "none");
+    BindWTMS();
+}
 //绑定问题描述框
 function BindWTMS() {
     $("#textarea_mswt").bind("focus", WTMSFocus);
@@ -182,6 +208,15 @@ function showJTWT(id) {
     }
     if (id.indexOf("rhscdgsdpj") != -1) {
         $("#div_wtjj_inner_rhscdgsdpj").css("display", "block");
+    }
+    if (id.indexOf("fbxxstssjzhdj") != -1) {
+        $("#div_wtjj_inner_fbxxstssjzhdj").css("display", "block");
+    }
+    if (id.indexOf("zhbdjdyyssm") != -1) {
+        $("#div_wtjj_inner_zhbdjdyyssm").css("display", "block");
+    }
+    if (id.indexOf("zhwfdl") != -1) {
+        $("#div_wtjj_inner_zhwfdl").css("display", "block");
     }
 }
 
