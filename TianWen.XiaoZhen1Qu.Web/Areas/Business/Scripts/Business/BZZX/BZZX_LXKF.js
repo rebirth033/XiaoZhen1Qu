@@ -92,6 +92,12 @@ function showWTLX(id) {
         ShowZHMM();
     if (id.indexOf("zhbd") != -1)
         ShowZHBD();
+    if (id.indexOf("czwt") != -1)
+        ShowCZWT();
+    if (id.indexOf("hzzx") != -1)
+        ShowHZZX();
+    if (id.indexOf("zxzz") != -1)
+        ShowZXZZ();
 }
 //信息被删除
 function ShowXXBSC() {
@@ -190,6 +196,24 @@ function ShowZHBD() {
     $("#span_step_text_second").html("请选择具体问题：<span class=\"span_second_lx\">[账户被盗]</span>");
     $("#div_zhbd").css("display", "block");
     $("#div_zhbd .span_wtjj_inner").bind("click", SelectJTWT);
+}
+//充值问题
+function ShowCZWT() {
+    $("#span_step_text_second").html("请描述您遇到的问题：<span class=\"span_second_lx\">[充值问题]</span>");
+    $("#div_czwt").css("display", "block");
+    $("#div_czwt .span_wtjj_inner").bind("click", SelectJTWT);
+}
+//合作咨询
+function ShowHZZX() {
+    $("#span_step_text_second").html("请描述您遇到的问题：<span class=\"span_second_lx\">[合作咨询]</span>");
+    $("#div_hzzx").css("display", "block");
+    $("#div_hzzx .span_wtjj_inner").bind("click", SelectJTWT);
+}
+//在线增值
+function ShowZXZZ() {
+    $("#span_step_text_second").html("请描述您遇到的问题：<span class=\"span_second_lx\">[在线增值]</span>");
+    $("#div_zxzz").css("display", "block");
+    $("#div_zxzz .span_wtjj_inner").bind("click", SelectJTWT);
 }
 //绑定问题描述框
 function BindWTMS() {
@@ -298,6 +322,26 @@ function showJTWT(id) {
     }
     if (id.indexOf("rhfzzhbd") != -1) {
         $("#div_wtjj_inner_rhfzzhbd").css("display", "block");
+    }
+    if (id.indexOf("xykjczfp") != -1) {
+        $("#div_wtjj_inner_xykjczfp").css("display", "block");
+    }
+    if (id.indexOf("sqtkdz") != -1) {
+        $("#div_wtjj_inner_sqtkdz").css("display", "block");
+    }
+    if (id.indexOf("zdyfk") != -1) {
+        $("#div_wtjj_inner_zdyfk").css("display", "block");
+    }
+    //合作咨询
+    if (id.indexOf("sfzs") != -1) {
+        $("#div_wtjj_inner_sfzs").css("display", "block");
+    }
+    //在线增值
+    if (id.indexOf("xcwhy") != -1) {
+        $("#div_wtjj_inner_xcwhy").css("display", "block");
+    }
+    if (id.indexOf("mjbmyzmb") != -1) {
+        $("#div_wtjj_inner_mjbmyzmb").css("display", "block");
     }
 }
 
