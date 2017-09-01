@@ -157,5 +157,14 @@ function SelectJTWT() {
 }
 //显示具体问题
 function showJTWT(id) {
-
+    $(".div_qtxxmy_inner").css("display", "none");
+    if (id.indexOf("sfzbmy") != -1) {
+        $("#div_wtjj_inner_sfzbmy").css("display", "block");
+    }
+    if (id.indexOf("mygrxx") != -1) {
+        $("#div_wtjj_inner_mygrxx").css("display", "block");
+    }
+    if (id.indexOf("gsxxbmy") != -1) {
+        $("#div_wtjj_inner_gsxxbmy").css("display", "block");
+    } 
 }

@@ -192,3 +192,21 @@
     .span_wtjj_inner:hover {
         color: #ff6a00;
     }
+
+.div_qtxxmy_inner {
+    width: 100%;
+    display: block;
+    background-color: #fff;
+    border: 1px solid #DEDEDE;
+    height: 160px;
+    font-size: 13px;
+    padding: 6px 12px;
+    line-height: 30px;
+}
+
+.span_wtjj_inner_mygrxx_inner {
+    display: block;
+    width: 641px;
+    height: 233px;
+    background-image: url(../images/BZZX//bzzx_lxkf_mygrxx.png);
+}
