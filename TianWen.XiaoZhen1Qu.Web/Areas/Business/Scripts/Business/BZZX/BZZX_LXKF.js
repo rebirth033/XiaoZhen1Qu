@@ -24,6 +24,17 @@ function bindHover() {
         })
     });
 }
+//绑定具体问题hover事件
+function bindJTWTHover() {
+    $(".span_wtjj_inner").each(function () {
+        $(this).bind("mouseover", function () {
+            $(this).css("color", "#ff6a00");
+        })
+        $(this).bind("mouseleave", function () {
+            $(this).css("color", "#0000cd");
+        })
+    });
+}
 //查询信息被删除原因
 function CKBSCYY() {
     if (!XXBHCheck()) return;
@@ -38,7 +49,7 @@ function XXBHCheck() {
     }
     else {
         $("#inputXXBH").css("border-color", "#999");
-        $("#td_xxbhinfo").html("<textarea class=\"textarea_bscyy\"></textarea><span>以上信息没有解决您的问题？</span><input class=\"btn btn-info\" type=\"button\" style=\"margin-top: -3px; width: 140px;\" value=\"填表单，联系客服\" onclick=\"TBD()\" />");
+        $("#td_xxbhinfo").html("<textarea class=\"textarea_mswt\"></textarea><span>以上信息没有解决您的问题？</span><input class=\"btn btn-info\" type=\"button\" style=\"margin-top: -3px; width: 140px;\" value=\"填表单，联系客服\" onclick=\"TBD()\" />");
         return true;
     }
 }
@@ -63,6 +74,10 @@ function showWTLX(id) {
         ShowTSJBXJXX();
     if (id.indexOf("mysjhm") != -1)
         ShowMYSJHM();
+    if (id.indexOf("qtxxmy") != -1)
+        ShowQTXXMY();
+    if (id.indexOf("ssbts") != -1)
+        ShowSSBTS();
 }
 //信息被删除
 function ShowXXBSC() {
@@ -98,22 +113,49 @@ function ShowTSJBXJXX() {
 function ShowMYSJHM() {
     $("#span_step_text_second").html("请描述您遇到的问题：");
     $("#div_xxbfhxg").css("display", "block");
+    $("#tr_xxbh").css("display", "none");
     BindWTMS();
 }
-
+//其它信息冒用
+function ShowQTXXMY() {
+    $("#span_step_text_second").html("请选择具体问题：");
+    $("#div_qtxxmy").css("display", "block");
+    $(".span_wtjj_inner").bind("click", SelectJTWT);
+}
+//申诉被投诉
+function ShowSSBTS() {
+    $("#span_step_text_second").html("请选择具体问题：");
+    $("#div_ssbts").css("display", "block");
+    $(".span_wtjj_inner").bind("click", SelectJTWT);
+}
+//绑定问题描述框
 function BindWTMS() {
     $("#textarea_mswt").bind("focus", WTMSFocus);
     $("#textarea_mswt").bind("blur", WTMSBlur);
 }
-
+//问题描述框鼠标键入
 function WTMSFocus() {
     $("#textarea_mswt").css("color", "#333333");
     $("#textarea_mswt").html("");
 }
-
+//问题描述框鼠标移除
 function WTMSBlur() {
     $("#textarea_mswt").css("color", "#999999");
     if ($("#textarea_mswt").html() === "") {
         $("#textarea_mswt").html("请描述您的具体问题，字数在15至300之间");
     }
+}
+//选择具体问题
+function SelectJTWT() {
+    $(".span_wtjj_inner").each(function () {
+        $(this).css("font-weight", "normal").css("color", "#0000cd");
+    });
+    bindJTWTHover();
+    $(this).css("color", "#ef6a00");
+    $(this).unbind("mouseleave");
+    showJTWT(this.id);
+}
+//显示具体问题
+function showJTWT() {
+    alert(id);
 }

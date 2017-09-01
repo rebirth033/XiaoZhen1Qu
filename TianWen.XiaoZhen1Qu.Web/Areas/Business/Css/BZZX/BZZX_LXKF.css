@@ -178,3 +178,17 @@
     border: none;
     cursor: pointer;
 }
+
+.span_wtjj_inner {
+    width: 50%;
+    height: 35px;
+    display: block;
+    float: left;
+    text-align: left;
+    color: #0000cd;
+    cursor: pointer;
+}
+
+    .span_wtjj_inner:hover {
+        color: #ff6a00;
+    }
