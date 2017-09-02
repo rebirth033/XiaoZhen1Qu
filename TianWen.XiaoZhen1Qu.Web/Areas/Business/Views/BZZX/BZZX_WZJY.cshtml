@@ -1,5 +1,6 @@
 ﻿@{
-    Layout = null;
+    ViewBag.Title = "BZZX_WZJY";
+    Layout = "~/Areas/Business/Views/Shared/_ListLayout.cshtml";
 }
 
 <!DOCTYPE html>
@@ -8,10 +9,43 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title></title>
+    <link href="@Url.Content("~/Areas/Business/Css/BZZX/BZZX_WZJY.css")" rel="stylesheet" />
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/BZZX/BZZX_WZJY.js")"></script>
 </head>
 <body>
-    <div>
-    
+    <div class="div_body">
+        <div class="div_wtjj_inner">
+            <table class="table_wtjj">
+                <tr class="tr_wtjj">
+                    <td class="td_wtjj_inner_left">类别：</td>
+                    <td class="td_wtjj_inner_right">
+                        <span class="span_wtlx_inner_right" id="span_wtlx_inner_right_xxbsc">信息分类建议</span>
+                        <span class="span_wtlx_inner_right" id="span_wtlx_inner_right_xxbfhxg">区域划分建议</span>
+                        <span class="span_wtlx_inner_right" id="span_wtlx_inner_right_xxbfhxg">创意点子</span>
+                        <span class="span_wtlx_inner_right" id="span_wtlx_inner_right_xxbfhxg">其它点子</span>
+                    </td>
+                </tr>
+                <tr class="tr_wtjj">
+                    <td class="td_wtjj_inner_left" style="vertical-align:top;padding-top:15px;">意见内容：</td>
+                    <td class="td_wtjj_inner_right">
+                        <textarea class="textarea_mswt" id="textarea_mswt">请描述您的具体问题，字数在15至300之间</textarea>
+                    </td>
+                </tr>
+                <tr class="tr_wtjj">
+                    <td class="td_wtjj_inner_left">上传图片：</td>
+                    <td class="td_wtjj_inner_right">
+                        <input type="button" value="图片上传" />
+                        <span>已上传图片1/5，最多可上传5张图片，支持：jpg/gif/png格式 </span>
+                    </td>
+                </tr>
+                <tr class="tr_wtjj" style="height:65px;vertical-align:top;">
+                    <td class="td_wtjj_inner_left"></td>
+                    <td class="td_wtjj_inner_right" style="padding-top:10px;">
+                        <input class="button" type="button" value="提交建议" style="width:153px; height:44px" />
+                    </td>
+                </tr>
+            </table>
+        </div>
     </div>
 </body>
 </html>
