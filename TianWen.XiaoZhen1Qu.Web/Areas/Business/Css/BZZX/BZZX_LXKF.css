@@ -1,6 +1,5 @@
 ﻿.div_body {
     width: 100%;
-    height: 760px;
     display: block;
     border: 1px solid #DEDEDE;
     margin-top: 20px;
@@ -20,7 +19,7 @@
 }
 
 .div_content_wtjj {
-    height: 340px;
+    height: 365px;
 }
 
 .span_step_text {
