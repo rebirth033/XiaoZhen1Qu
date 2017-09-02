@@ -98,6 +98,8 @@ function showWTLX(id) {
         ShowHZZX();
     if (id.indexOf("zxzz") != -1)
         ShowZXZZ();
+    if (id.indexOf("xtwt") != -1)
+        ShowXTWT();
 }
 //信息被删除
 function ShowXXBSC() {
@@ -214,6 +216,12 @@ function ShowZXZZ() {
     $("#span_step_text_second").html("请描述您遇到的问题：<span class=\"span_second_lx\">[在线增值]</span>");
     $("#div_zxzz").css("display", "block");
     $("#div_zxzz .span_wtjj_inner").bind("click", SelectJTWT);
+}
+//系统问题
+function ShowXTWT() {
+    $("#span_step_text_second").html("请描述您遇到的问题：<span class=\"span_second_lx\">[系统问题]</span>");
+    $("#div_xtwt").css("display", "block");
+    $("#div_xtwt .span_wtjj_inner").bind("click", SelectJTWT);
 }
 //绑定问题描述框
 function BindWTMS() {
@@ -342,6 +350,43 @@ function showJTWT(id) {
     }
     if (id.indexOf("mjbmyzmb") != -1) {
         $("#div_wtjj_inner_mjbmyzmb").css("display", "block");
+    }
+    //系统问题
+    if (id.indexOf("xxfbsb") != -1) {
+        $("#div_wtjj_inner_xxfbsb").css("display", "block");
+    }
+    if (id.indexOf("dbkwy") != -1) {
+        $("#div_wtjj_inner_dbkwy").css("display", "block");
+    }
+    if (id.indexOf("nrsrbl") != -1) {
+        $("#div_wtjj_inner_nrsrbl").css("display", "block");
+    }
+    if (id.indexOf("qymcwfgh") != -1) {
+        $("#div_wtjj_inner_qymcwfgh").css("display", "block");
+    }
+    if (id.indexOf("xyscxx") != -1) {
+        $("#div_wtjj_inner_xyscxx").css("display", "block");
+    }
+    if (id.indexOf("zpxggsmc") != -1) {
+        $("#div_wtjj_inner_zpxggsmc").css("display", "block");
+    }
+    if (id.indexOf("sbddxyzm") != -1) {
+        $("#div_wtjj_inner_sbddxyzm").css("display", "block");
+    }
+    if (id.indexOf("xghsjrz") != -1) {
+        $("#div_wtjj_inner_xghsjrz").css("display", "block");
+    }
+    if (id.indexOf("yyzzwfsc") != -1) {
+        $("#div_wtjj_inner_yyzzwfsc").css("display", "block");
+    }
+    if (id.indexOf("yyzzyzbl") != -1) {
+        $("#div_wtjj_inner_yyzzyzbl").css("display", "block");
+    }
+    if (id.indexOf("xxsxbl") != -1) {
+        $("#div_wtjj_inner_xxsxbl").css("display", "block");
+    }
+    if (id.indexOf("yrkyzdnr") != -1) {
+        $("#div_wtjj_inner_yrkyzdnr").css("display", "block");
     }
 }
 
