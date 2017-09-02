@@ -187,3 +187,28 @@
     margin-top: 14px;
     margin-left: 10px;
 }
+
+.required {
+    color: #F2272D;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    font-family: "宋体", "SimSun";
+}
+
+.divUploadOut {
+    width: 48px;
+    height: 40px;
+    display: inline-block;
+    border: 1px solid #cccccc;
+    background-image:url(../images/BZZX/bzzx_wzyj_sctp.png);
+    background-size:100%;
+}
+
+.file {
+    float: left;
+    width: 48px;
+    height: 40px;
+    opacity: 0;
+    cursor: pointer;
+}

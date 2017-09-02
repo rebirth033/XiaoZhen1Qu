@@ -44,7 +44,8 @@ function BindWTMS() {
 //问题描述框鼠标键入
 function WTMSFocus() {
     $("#textarea_yjnr").css("color", "#333333");
-    $("#textarea_yjnr").html("");
+    if ($("#textarea_yjnr").val().indexOf("您可填写15-300字") !== -1)
+        $("#textarea_yjnr").html("");
 }
 //问题描述框鼠标移除
 function WTMSBlur() {
