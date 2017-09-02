@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
-using System.Drawing.Imaging;
-using System.IO;
-using System.Web;
 using System.Web.Mvc;
 using CommonClassLib.Helper;
 using TianWen.XiaoZhen1Qu.Entities.Models;
@@ -42,23 +38,9 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             jcxx.LXDZ = "福州市";
             FWCZJBXX yhjbxx = JsonHelper.ConvertJsonToObject<FWCZJBXX>(json);
             yhjbxx.FYMS = fyms;
-            List<PHOTOS> photos = GetFWZP(fwzp);
+            List<PHOTOS> photos = GetTP(fwzp);
             object result = FWCZJBXXBLL.SaveFWCZJBXX(jcxx, yhjbxx, photos);
             return Json(result);
-        }
-
-        public List<PHOTOS> GetFWZP(string fwzp)
-        {
-            List<PHOTOS> photos = new List<PHOTOS>();
-            string[] zps = fwzp.Split(',');
-            foreach (var zp in zps)
-            {
-                PHOTOS photo = new PHOTOS();
-                photo.PHOTOURL = zp;
-                photo.PHOTONAME = photo.PHOTOURL.Substring(photo.PHOTOURL.LastIndexOf('/') + 1, photo.PHOTOURL.Length - photo.PHOTOURL.LastIndexOf('/') - 1);
-                photos.Add(photo);
-            }
-            return photos;
         }
 
         public JsonResult LoadFWCZXX()

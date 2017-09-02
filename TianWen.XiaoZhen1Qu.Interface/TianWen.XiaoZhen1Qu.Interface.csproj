@@ -58,6 +58,7 @@
     <Compile Include="IWDSCBLL.cs" />
     <Compile Include="IWDXJBLL.cs" />
     <Compile Include="IWZCXBLL.cs" />
+    <Compile Include="IWZYJBLL.cs" />
     <Compile Include="IXXGLBLL.cs" />
     <Compile Include="IYHDLXXBLL.cs" />
     <Compile Include="IYHJBXXBLL.cs" />

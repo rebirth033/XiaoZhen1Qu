@@ -4,7 +4,6 @@ using System.Data;
 using System.Linq;
 using System.IO;
 using NHibernate;
-using NHibernate.Linq;
 using TianWen.Framework.Log;
 using TianWen.XiaoZhen1Qu.Entities.Models;
 using TianWen.XiaoZhen1Qu.Interface;

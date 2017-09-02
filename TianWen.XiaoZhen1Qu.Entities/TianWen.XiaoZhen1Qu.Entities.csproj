@@ -60,6 +60,7 @@
     <Compile Include="Maps\JCXX_Map.cs" />
     <Compile Include="Maps\PHOTOS_Map.cs" />
     <Compile Include="Maps\SZMX_Map.cs" />
+    <Compile Include="Maps\WZYJ_Map.cs" />
     <Compile Include="Maps\XQJBXX_Map.cs" />
     <Compile Include="Maps\XXLB_Map.cs" />
     <Compile Include="Maps\YHJBXX_Map.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="Models\PHOTOS.cs" />
     <Compile Include="Models\PublicType.cs" />
     <Compile Include="Models\SZMX.cs" />
+    <Compile Include="Models\WZYJ.cs" />
     <Compile Include="Models\XQJBXX.cs" />
     <Compile Include="Models\XXLB.cs" />
     <Compile Include="Models\YHJBXX.cs" />
