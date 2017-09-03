@@ -411,3 +411,13 @@
     left:17px;
     top:5px;
 }
+
+.div_shadow {
+    display: none;
+    background-color: #000;
+    opacity: 0.5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}

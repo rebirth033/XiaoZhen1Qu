@@ -19,9 +19,9 @@ function QQBD() {
         $(this).css("display", "block");
     });
     $(window.parent.document).find("#editImgWindow").each(function () {
-        $(this).css("display", "block");
         $(this).css("left", window.screen.availWidth / 2 - 200);
         $(this).css("top", window.screen.availHeight / 2 - 210);
+        $(this).css("display", "block");
     });
     $(window.parent.document).find("#span_body_qqtx").each(function () {
         $(this).css("background-image", "url(" + getRootPath() + "/Areas/Business/Css/images/qqtx.png" + ")");

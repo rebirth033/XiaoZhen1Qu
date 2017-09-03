@@ -3,6 +3,7 @@
     $("#span_head_nav_info_lxkf").bind("click", ToLXKF);
     $("#span_head_nav_info_wzjy").bind("click", ToWZJY);
     ToWZJY();
+    $("#btnClose").bind("click", CloseWindow);
 });
 
 //帮助中心_首页
@@ -21,4 +22,30 @@ function ToLXKF() {
 function ToWZJY() {
     $(".div_body").css("height", "430px");
     $("#iframeright").attr("src", getRootPath() + "/Business/BZZX/BZZX_WZJY?YHID=" + getUrlParam("YHID"));
+}
+
+//翻转
+function Rotate(obj) {
+    var c = $("#canvas")[0];
+    var cxt = c.getContext("2d");
+    var x = c.width / 2; //画布宽度的一半
+    var y = c.height / 2;//画布高度的一半
+
+    var img = new Image();
+    img.src = obj.data.src;
+    img.onload = function () //确保图片已经加载完毕  
+    {
+        cxt.clearRect(0, 0, c.width, c.height);
+        cxt.translate(x, y);//将绘图原点移到画布中点
+        cxt.rotate((Math.PI / 180) * 90);//旋转角度
+        cxt.translate(-x, -y);//将画布原点移动
+        var left = (c.width - img.width) / 2;
+        var top = (c.height - img.height) / 2;
+        cxt.drawImage(img, left, top, img.width, img.height);
+    }
+}
+//关闭图片编辑窗口
+function CloseWindow() {
+    $("#shadow").css("display", "none");
+    $("#editImgWindow").css("display", "none");
 }

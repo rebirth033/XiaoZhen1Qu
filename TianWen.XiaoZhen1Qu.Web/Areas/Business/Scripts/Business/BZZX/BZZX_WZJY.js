@@ -1,6 +1,7 @@
 ﻿$(document).ready(function () {
     $(".span_wtlx_inner_right").bind("click", SelectWTLX);
     $("#btnTJYJ").bind("click", TJYJ);
+    $("#inputUpload").bind("change", Upload);
     bindHover();
     BindWTMS();
 });
