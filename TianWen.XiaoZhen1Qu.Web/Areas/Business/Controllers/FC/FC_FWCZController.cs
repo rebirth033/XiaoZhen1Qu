@@ -8,12 +8,12 @@ using TianWen.XiaoZhen1Qu.Web.Areas.Business.Common;
 
 namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 {
-    public class FWCZController : BaseController
+    public class FC_FWCZController : BaseController
     {
         public IFWCZJBXXBLL FWCZJBXXBLL { get; set; }
         public IBaseBLL BaseBLL { get; set; }
 
-        public ActionResult FWCZ()
+        public ActionResult FC_FWCZ()
         {
             return View();
         }
