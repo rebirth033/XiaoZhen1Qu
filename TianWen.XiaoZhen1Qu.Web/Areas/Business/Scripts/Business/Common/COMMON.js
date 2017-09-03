@@ -162,3 +162,15 @@ function getNowFormatDate(date) {
     var currentdate = year + seperator1 + month + seperator1 + strDate;
     return currentdate;
 }
+
+function GetPhotoUrls() {
+    var photourls = "";
+    $(".ulImgs").find("img").each(function () {
+        var src = $(this).attr("src");
+        if (src.indexOf('?') !== -1)
+            photourls += src.substr(0, src.indexOf('?')) + ",";
+        else
+            photourls += src + ",";
+    });
+    return RTrim(photourls);
+}

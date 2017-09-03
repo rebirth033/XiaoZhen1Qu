@@ -3,13 +3,14 @@ using TianWen.XiaoZhen1Qu.Entities.Models;
 
 namespace TianWen.XiaoZhen1Qu.Entities.Maps
 {
-    public class WZYJ_Map : ClassMap<WZYJ>
+    public class WZJY_Map : ClassMap<WZJY>
     {
-        public WZYJ_Map()
+        public WZJY_Map()
         {
-            Table("WZYJ");
+            Table("WZJY");
             #region 属性
-            Id(x => x.WZYJID, "WZYJID").GeneratedBy.Assigned().CustomType("AnsiString");
+            Id(x => x.WZJYID, "WZJYID").GeneratedBy.Assigned().CustomType("AnsiString");
+            Map(x => x.JCXXID, "JCXXID");
             Map(x => x.LB, "LB");
             Map(x => x.YJNR, "YJNR");
             Map(x => x.TP, "TP");

@@ -12,22 +12,24 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
     {
         public IWZYJBLL WZYJBLL { get; set; }
 
-        public JsonResult SaveWZYJ()
+        public JsonResult SaveWZJY()
         {
-            string json = Request["Json"];
+            string LB = Request["LB"];
             string yjnr = Request["YJNR"];
             string fwzp = Request["FWZP"];
-            JCXX jcxx = JsonHelper.ConvertJsonToObject<JCXX>(json);
+            JCXX jcxx = new JCXX();
             jcxx.YHID = "2718ced3-996d-427d-925d-a08e127cc0b8";
             jcxx.LLCS = 0;
             jcxx.STATUS = 1;
             jcxx.ZXGXSJ = DateTime.Now;
             jcxx.CJSJ = DateTime.Now;
             jcxx.LXDZ = "福州市";
-            WZYJ wzyj = JsonHelper.ConvertJsonToObject<WZYJ>(json);
-            wzyj.YJNR = yjnr;
+            WZJY wzjy = new WZJY();
+            wzjy.YJNR = yjnr;
+            wzjy.LB = LB;
+            wzjy.JCXXID = jcxx.JCXXID;
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = WZYJBLL.SaveWZYJ(jcxx, wzyj, photos);
+            object result = WZYJBLL.SaveWZJY(jcxx, wzjy, photos);
             return Json(result);
         }
     }

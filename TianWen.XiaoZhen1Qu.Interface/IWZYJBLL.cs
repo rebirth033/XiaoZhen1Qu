@@ -8,6 +8,6 @@ namespace TianWen.XiaoZhen1Qu.Interface
     {
         IDAO DAO { get; set; }
 
-        object SaveWZYJ(JCXX jcxx, WZYJ wzyj, List<PHOTOS> photos);
+        object SaveWZJY(JCXX jcxx, WZJY wzyj, List<PHOTOS> photos);
     }
 }

@@ -12,7 +12,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
 {
     public class WZYJBLL: BaseBLL, IWZYJBLL
     {
-        public object SaveWZYJ(JCXX jcxx, WZYJ wzyj, List<PHOTOS> photos)
+        public object SaveWZJY(JCXX jcxx, WZJY wzjy, List<PHOTOS> photos)
         {
             string[] photoNames = photos.Select(x => x.PHOTONAME).ToArray();
             DirectoryInfo TheFolder = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory + "/Areas/Business/Photos/");
@@ -47,9 +47,9 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     }
                     
                     DAO.Save(jcxx);
-                    DAO.Save(wzyj);
+                    DAO.Save(wzjy);
                     transaction.Commit();
-                    return new { Result = EnResultType.Success, Message = "保存成功!", Value = new { JCXXID = jcxx.JCXXID, WZYJID = wzyj.WZYJID } };
+                    return new { Result = EnResultType.Success, Message = "提交成功，感谢您的建议!", Value = new { JCXXID = jcxx.JCXXID, WZJYID = wzjy.WZJYID } };
                 }
                 catch (Exception ex)
                 {
