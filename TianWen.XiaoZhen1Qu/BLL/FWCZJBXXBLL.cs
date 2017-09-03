@@ -12,6 +12,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
 {
     public class FWCZJBXXBLL : BaseBLL, IFWCZJBXXBLL
     {
+        //保存房屋出租基本信息
         public object SaveFWCZJBXX(JCXX jcxx, FWCZJBXX fwczjbxx, List<PHOTOS> photos)
         {
             string[] photoNames = photos.Select(x => x.PHOTONAME).ToArray();
@@ -107,7 +108,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
             }
         }
-
+        //加载房屋出租基本信息
         public object LoadFWCZXX(string FWCZJBXXID)
         {
             try
@@ -134,7 +135,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 };
             }
         }
-
+        //根据ID获取房屋出租基本信息
         public FWCZJBXX GetObjByID(string FWCZJBXXID)
         {
             IList<FWCZJBXX> list = DAO.Repository.GetObjectList<FWCZJBXX>(String.Format("FROM FWCZJBXX WHERE FWCZJBXXID='{0}'", FWCZJBXXID));
@@ -143,7 +144,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
             else
                 return null;
         }
-
+        //根据ID获取基础信息
         public JCXX GetJCXXByID(string JCXXID)
         {
             IList<JCXX> list = DAO.Repository.GetObjectList<JCXX>(String.Format("FROM JCXX WHERE JCXXID='{0}'", JCXXID));
@@ -152,12 +153,12 @@ namespace TianWen.XiaoZhen1Qu.BLL
             else
                 return null;
         }
-
+        //根据基础信息获取图片集
         public List<PHOTOS> GetPhtosByJCXXID(string JCXXID)
         {
             return DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}'", JCXXID)).ToList();
         }
-
+        //根据汉子获取小区基本信息
         public object LoadXQJBXXSByHZ(string XQMC)
         {
             try
@@ -171,7 +172,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 return new { Result = EnResultType.Failed, Message = "加载失败" };
             }
         }
-
+        //根据拼音获取小区基本信息
         public object LoadXQJBXXSByPY(string XQMC)
         {
             try

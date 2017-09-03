@@ -50,7 +50,7 @@ function LoadXL(LBID, LBNAME) {
         success: function (xml) {
             if (xml.Result === 1) {
                 var XLhtml = "", trhtml = "";
-                if (LBNAME === "二手物品" || LBNAME === "房产" || LBNAME === "车辆" || LBNAME === "生活服务") {
+                if (LBNAME === "二手物品" || LBNAME === "生活服务") {
                     for (var i = 0; i < xml.list.length; i++) {
                         if (xml.list[i].XXLBS.length > 5)
                             trhtml = "<tr><td class=\"LBFirst\">" + xml.list[i].LBNAME + "</td>";

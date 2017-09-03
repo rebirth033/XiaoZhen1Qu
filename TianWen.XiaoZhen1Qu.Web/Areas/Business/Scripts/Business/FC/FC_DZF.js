@@ -172,7 +172,7 @@ function LoadXQMC() {
 function LoadXQJBXXSByHZ(XQMC) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FWCZ/LoadXQJBXXSByHZ",
+        url: getRootPath() + "/Business/FC_FW/LoadXQJBXXSByHZ",
         dataType: "json",
         data:
         {
@@ -206,7 +206,7 @@ function LoadXQJBXXSByHZ(XQMC) {
 function LoadXQJBXXSByPY(XQMC) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FWCZ/LoadXQJBXXSByPY",
+        url: getRootPath() + "/Business/FC_FW/LoadXQJBXXSByPY",
         dataType: "json",
         data:
         {
@@ -288,7 +288,7 @@ function GetStartIndexBySZM(pyszm, sqmc) {
 function LoadFWCX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC_FWCZ/LoadCODES",
+        url: getRootPath() + "/Business/FC_FW/LoadCODES",
         dataType: "json",
         data:
         {
@@ -314,7 +314,7 @@ function LoadFWCX() {
 function LoadZXQK() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC_FWCZ/LoadCODES",
+        url: getRootPath() + "/Business/FC_FW/LoadCODES",
         dataType: "json",
         data:
         {
@@ -340,7 +340,7 @@ function LoadZXQK() {
 function LoadZZLX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC_FWCZ/LoadCODES",
+        url: getRootPath() + "/Business/FC_FW/LoadCODES",
         dataType: "json",
         data:
         {
@@ -366,7 +366,7 @@ function LoadZZLX() {
 function LoadYFFS() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC_FWCZ/LoadCODES",
+        url: getRootPath() + "/Business/FC_FW/LoadCODES",
         dataType: "json",
         data:
         {
@@ -392,7 +392,7 @@ function LoadYFFS() {
 function LoadBHFY() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC_FWCZ/LoadCODES",
+        url: getRootPath() + "/Business/FC_FW/LoadCODES",
         dataType: "json",
         data:
         {
@@ -421,7 +421,7 @@ function LoadBHFY() {
 function LoadFWPZ() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC_FWCZ/LoadCODES",
+        url: getRootPath() + "/Business/FC_FW/LoadCODES",
         dataType: "json",
         data:
         {
@@ -450,7 +450,7 @@ function LoadFWPZ() {
 function LoadFWLD() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC_FWCZ/LoadCODES",
+        url: getRootPath() + "/Business/FC_FW/LoadCODES",
         dataType: "json",
         data:
         {
@@ -479,7 +479,7 @@ function LoadFWLD() {
 function LoadCZYQ() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC_FWCZ/LoadCODES",
+        url: getRootPath() + "/Business/FC_FW/LoadCODES",
         dataType: "json",
         data:
         {
@@ -653,7 +653,7 @@ function SetCZFS(CZFS) {
 function LoadFWCZXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC_FWCZ/LoadFWCZXX",
+        url: getRootPath() + "/Business/FC_FW/LoadFWCZXX",
         dataType: "json",
         data:
         {
