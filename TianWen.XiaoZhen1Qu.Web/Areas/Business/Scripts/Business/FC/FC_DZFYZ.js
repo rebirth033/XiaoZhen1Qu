@@ -2,20 +2,14 @@
     $("#XQMC").bind("blur", ValidateXQMC);
     $("#XQMC").bind("blur", HideXQMCList);
     $("#XQMC").bind("focus", InfoXQMC);
-    $("#S").bind("blur", ValidateFWLX_S);
-    $("#S").bind("focus", InfoFWLX_S);
-    $("#T").bind("blur", ValidateFWLX_T);
-    $("#T").bind("focus", InfoFWLX_T);
-    $("#W").bind("blur", ValidateFWLX_W);
-    $("#W").bind("focus", InfoFWLX_W);
-    $("#PFM").bind("blur", ValidateFWLX_PFM);
-    $("#PFM").bind("focus", InfoFWLX_PFM);
-    $("#C").bind("blur", ValidateLCFB_C);
-    $("#C").bind("focus", InfoLCFB_C);
-    $("#GJC").bind("blur", ValidateLCFB_GJC);
-    $("#GJC").bind("focus", InfoLCFB_GJC);
+    $("#ZDZQ").bind("blur", ValidateZDZQ);
+    $("#ZDZQ").bind("focus", InfoZDZQ);
+    $("#YZRS").bind("blur", ValidateYZRS);
+    $("#YZRS").bind("focus", InfoYZRS);
     $("#ZJ").bind("blur", ValidateZJ);
     $("#ZJ").bind("focus", InfoZJ);
+    $("#MJ").bind("blur", ValidateMJ);
+    $("#MJ").bind("focus", InfoMJ);
     $("#BT").bind("blur", ValidateBT);
     $("#BT").bind("focus", InfoBT);
     $("#LXR").bind("blur", ValidateLXR);
@@ -37,139 +31,7 @@ function ValidateXQMC() {
         return true;
     }
 }
-
-function ValidateFWLX_S() {
-    if ($("#S").val() === "" || $("#S").val() === null) {
-        $("#divFWLXTip").css("display", "block");
-        $("#divFWLXTip").attr("class", "Warn");
-        $("#divFWLXTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写室啦');
-        $("#spanS").css("border-color", "#fd634f");
-        return false;
-    } else {
-        if (ValidateNumber($("#S").val()) && $("#S").val() !== "0") {
-            $("#divFWLXTip").css("display", "none");
-            $("#S").css("border-color", "#cccccc");
-            return true;
-        } else {
-            $("#divFWLXTip").css("display", "block");
-            $("#divFWLXTip").attr("class", "Warn");
-            $("#divFWLXTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />室请填写整数，不能是0');
-            $("#spanS").css("border-color", "#fd634f");
-            return false;
-        }
-    }
-}
-
-function ValidateFWLX_T() {
-    if ($("#T").val() === "" || $("#T").val() === null) {
-        $("#divFWLXTip").css("display", "block");
-        $("#divFWLXTip").attr("class", "Warn");
-        $("#divFWLXTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写厅啦');
-        $("#spanT").css("border-color", "#fd634f");
-        return false;
-    } else {
-        if (ValidateNumber($("#T").val())) {
-            $("#divFWLXTip").css("display", "none");
-            $("#T").css("border-color", "#cccccc");
-            return true;
-        } else {
-            $("#divFWLXTip").css("display", "block");
-            $("#divFWLXTip").attr("class", "Warn");
-            $("#divFWLXTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />厅请填写整数');
-            $("#spanT").css("border-color", "#fd634f");
-            return false;
-        }
-    }
-}
-
-function ValidateFWLX_W() {
-    if ($("#W").val() === "" || $("#W").val() === null) {
-        $("#divFWLXTip").css("display", "block");
-        $("#divFWLXTip").attr("class", "Warn");
-        $("#divFWLXTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写卫啦');
-        $("#spanW").css("border-color", "#fd634f");
-        return false;
-    } else {
-        if (ValidateNumber($("#W").val())) {
-            $("#divFWLXTip").css("display", "none");
-            $("#W").css("border-color", "#cccccc");
-            return true;
-        } else {
-            $("#divFWLXTip").css("display", "block");
-            $("#divFWLXTip").attr("class", "Warn");
-            $("#divFWLXTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />卫请填写整数');
-            $("#spanW").css("border-color", "#fd634f");
-            return false;
-        }
-    }
-}
-
-function ValidateFWLX_PFM() {
-    if ($("#PFM").val() === "" || $("#PFM").val() === null) {
-        $("#divFWLXTip").css("display", "block");
-        $("#divFWLXTip").attr("class", "Warn");
-        $("#divFWLXTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写面积啦');
-        $("#spanPFM").css("border-color", "#fd634f");
-        return false;
-    } else {
-        if (ValidateNumber($("#PFM").val()) && $("#PFM").val() !== "0") {
-            $("#divFWLXTip").css("display", "none");
-            $("#PFM").css("border-color", "#cccccc");
-            return true;
-        } else {
-            $("#divFWLXTip").css("display", "block");
-            $("#divFWLXTip").attr("class", "Warn");
-            $("#divFWLXTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />面积请填写整数，不能是0');
-            $("#spanPFM").css("border-color", "#fd634f");
-            return false;
-        }
-    }
-}
-
-function ValidateLCFB_C() {
-    if ($("#C").val() === "" || $("#C").val() === null) {
-        $("#divLCFBTip").css("display", "block");
-        $("#divLCFBTip").attr("class", "Warn");
-        $("#divLCFBTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写楼层啦');
-        $("#spanC").css("border-color", "#fd634f");
-        return false;
-    } else {
-        if (ValidateNumber($("#C").val()) && $("#C").val() !== "0") {
-            $("#divLCFBTip").css("display", "none");
-            $("#C").css("border-color", "#cccccc");
-            return true;
-        } else {
-            $("#divLCFBTip").css("display", "block");
-            $("#divLCFBTip").attr("class", "Warn");
-            $("#divLCFBTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />楼层请填写整数，不能是0');
-            $("#spanC").css("border-color", "#fd634f");
-            return false;
-        }
-    }
-}
-
-function ValidateLCFB_GJC() {
-    if ($("#GJC").val() === "" || $("#GJC").val() === null) {
-        $("#divLCFBTip").css("display", "block");
-        $("#divLCFBTip").attr("class", "Warn");
-        $("#divLCFBTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写总层数啦');
-        $("#spanGJC").css("border-color", "#fd634f");
-        return false;
-    } else {
-        if (ValidateNumber($("#GJC").val()) && $("#GJC").val() !== "0") {
-            $("#divLCFBTip").css("display", "none");
-            $("#spanGJC").css("border-color", "#cccccc");
-            return true;
-        } else {
-            $("#divLCFBTip").css("display", "block");
-            $("#divLCFBTip").attr("class", "Warn");
-            $("#divLCFBTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />总层数请填写整数，不能是0');
-            $("#spanGJC").css("border-color", "#fd634f");
-            return false;
-        }
-    }
-}
-
+//验证租金
 function ValidateZJ() {
     if ($("#ZJ").val() === "" || $("#ZJ").val() === null) {
         $("#divZJTip").css("display", "block");
@@ -191,7 +53,73 @@ function ValidateZJ() {
         }
     }
 }
-
+//验证面积
+function ValidateMJ() {
+    if ($("#MJ").val() === "" || $("#MJ").val() === null) {
+        $("#divMJTip").css("display", "inline-block");
+        $("#divMJTip").attr("class", "Warn");
+        $("#divMJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写面积啦');
+        $("#spanMJ").css("border-color", "#fd634f");
+        return false;
+    } else {
+        if (ValidateNumber($("#ZJ").val()) && $("#ZJ").val() !== "0") {
+            $("#divMJTip").css("display", "none");
+            $("#spanMJ").css("border-color", "#cccccc");
+            return true;
+        } else {
+            $("#divMJTip").css("display", "inline-block");
+            $("#divMJTip").attr("class", "Warn");
+            $("#divMJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />面积请填写整数');
+            $("#spanMJ").css("border-color", "#fd634f");
+            return false;
+        }
+    }
+}
+//验证最短租期
+function ValidateZDZQ() {
+    if ($("#ZDZQ").val() === "" || $("#ZDZQ").val() === null) {
+        $("#divZDZQTip").css("display", "block");
+        $("#divZDZQTip").attr("class", "Warn");
+        $("#divZDZQTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写最短租期啦');
+        $("#spanZDZQ").css("border-color", "#fd634f");
+        return false;
+    } else {
+        if (ValidateNumber($("#ZDZQ").val()) && $("#ZDZQ").val() !== "0") {
+            $("#divZDZQTip").css("display", "none");
+            $("#spanZDZQ").css("border-color", "#cccccc");
+            return true;
+        } else {
+            $("#divZDZQTip").css("display", "block");
+            $("#divZDZQTip").attr("class", "Warn");
+            $("#divZDZQTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />租期请填写整数');
+            $("#spanZDZQ").css("border-color", "#fd634f");
+            return false;
+        }
+    }
+}
+//宜租人数
+function ValidateYZRS() {
+    if ($("#YZRS").val() === "" || $("#YZRS").val() === null) {
+        $("#divYZRSTip").css("display", "inline-block");
+        $("#divYZRSTip").attr("class", "Warn");
+        $("#divYZRSTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写宜租人数啦');
+        $("#spanYZRS").css("border-color", "#fd634f");
+        return false;
+    } else {
+        if (ValidateNumber($("#YZRS").val()) && $("#YZRS").val() !== "0") {
+            $("#divYZRSTip").css("display", "none");
+            $("#spanYZRS").css("border-color", "#cccccc");
+            return true;
+        } else {
+            $("#divYZRSTip").css("display", "inline-block");
+            $("#divYZRSTip").attr("class", "Warn");
+            $("#divYZRSTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />宜租人数请填写整数');
+            $("#spanYZRS").css("border-color", "#fd634f");
+            return false;
+        }
+    }
+}
+//验证标题
 function ValidateBT() {
     if ($("#BT").val() === "" || $("#BT").val() === null) {
         $("#divBTTip").css("display", "block");
@@ -217,7 +145,6 @@ function ValidateFWZP() {
         return true;
     }
 }
-
 
 function ValidateLXR() {
     if ($("#LXR").val() === "" || $("#LXR").val() === null) {
@@ -279,7 +206,7 @@ function LCFBValidate() {
 }
 
 function AllValidate() {
-    if (ValidateXQMC() & FWLXValidate() & LCFBValidate() & ValidateZJ() & ValidateBT() & ValidateFWZP() & ValidateLXR() & ValidateLXDH())
+    if (ValidateXQMC() & ValidateZJ() & ValidateMJ() & ValidateZDZQ() & ValidateYZRS() & ValidateBT() & ValidateFWZP() & ValidateLXR() & ValidateLXDH())
         return true;
     else
         return false;
@@ -292,52 +219,28 @@ function InfoXQMC() {
     $("#XQMC").css("border-color", "#5bc0de");
 }
 
-function InfoFWLX_S() {
-    $("#divFWLXTip").css("display", "block");
-    $("#divFWLXTip").attr("class", "Info");
-    $("#divFWLXTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />填写整数，不能是0');
-    //$("#spanS").css("border-color", "#5bc0de");
-}
-
-function InfoFWLX_T() {
-    $("#divFWLXTip").css("display", "block");
-    $("#divFWLXTip").attr("class", "Info");
-    $("#divFWLXTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />填写整数，没有请填0');
-    //$("#spanT").css("border-color", "#5bc0de");
-}
-
-function InfoFWLX_W() {
-    $("#divFWLXTip").css("display", "block");
-    $("#divFWLXTip").attr("class", "Info");
-    $("#divFWLXTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />填写整数，没有请填0');
-    //$("#spanW").css("border-color", "#5bc0de");
-}
-
-function InfoFWLX_PFM() {
-    $("#divFWLXTip").css("display", "block");
-    $("#divFWLXTip").attr("class", "Info");
-    $("#divFWLXTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />填写整数，不能是0');
-    //$("#spanPFM").css("border-color", "#5bc0de");
-}
-
-function InfoLCFB_C() {
-    $("#divLCFBTip").css("display", "block");
-    $("#divLCFBTip").attr("class", "Info");
-    $("#divLCFBTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />填写整数，地下室用负数填写，不能为0');
-    //$("#spanC").css("border-color", "#5bc0de");
-}
-
-function InfoLCFB_GJC() {
-    $("#divLCFBTip").css("display", "block");
-    $("#divLCFBTip").attr("class", "Info");
-    $("#divLCFBTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />填写整数，不能为0');
-    //$("#spanGJC").css("border-color", "#5bc0de");
-}
-
 function InfoZJ() {
     $("#divZJTip").css("display", "block");
     $("#divZJTip").attr("class", "Info");
     $("#divZJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数，面议则填0');
+}
+
+function InfoZDZQ() {
+    $("#divZDZQTip").css("display", "block");
+    $("#divZDZQTip").attr("class", "Info");
+    $("#divZDZQTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数');
+}
+
+function InfoYZRS() {
+    $("#divYZRSTip").css("display", "inline-block");
+    $("#divYZRSTip").attr("class", "Info");
+    $("#divYZRSTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数');
+}
+
+function InfoMJ() {
+    $("#divMJTip").css("display", "inline-block");
+    $("#divMJTip").attr("class", "Info");
+    $("#divMJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数');
 }
 
 function InfoBT() {

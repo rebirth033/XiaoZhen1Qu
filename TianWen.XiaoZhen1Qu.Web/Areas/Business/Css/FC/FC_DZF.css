@@ -214,6 +214,7 @@
     margin-left: 220px;
     z-index: 999;
     position: relative;
+    width: 180px;
 }
 
 .Info {
@@ -222,6 +223,7 @@
     margin-left: 220px;
     z-index: 999;
     position: relative;
+    width: 180px;
 }
 
 .imgTip {
