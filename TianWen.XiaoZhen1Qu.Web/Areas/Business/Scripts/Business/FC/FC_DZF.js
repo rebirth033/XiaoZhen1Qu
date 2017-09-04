@@ -14,7 +14,7 @@ $(document).ready(function () {
     $("#btnClose").bind("click", CloseWindow);
     $("#span_xzdz").bind("click", OpenXZDZ);
     $("#div_dz_close").bind("click", CloseWindow);
-    OpenXZDZ();
+
     BindHover();
     LoadFWLX();
     LoadZJDW();
@@ -47,8 +47,9 @@ function OpenXZDZ() {
     map.centerAndZoom("福州市", 11);//创建点坐标,地图初始化
     map.enableScrollWheelZoom(true);//允许鼠标滑轮放大缩小 
     map.enableContinuousZoom(true);//允许惯性拖拽
-    map.addControl(new BMap.NavigationControl({ isOpen: true, anchor: BMAP_ANCHOR_TOP_RIGHT }));  //添加默认缩放平移控件,右上角打开
+    map.addControl(new BMap.NavigationControl({ isOpen: true, anchor: BMAP_ANCHOR_BOTTOM_LEFT }));  //添加默认缩放平移控件,右上角打开
     map.addControl(new BMap.OverviewMapControl({ isOpen: true, anchor: BMAP_ANCHOR_BOTTOM_RIGHT })); //添加默认缩略地图控件,右下角打开
+    map.addControl(new BMap.MapTypeControl());//添加卫星控件
 
     $("#input_dtss").keydown(function (e) {
         var curKey = e.which;
@@ -57,8 +58,12 @@ function OpenXZDZ() {
             return false;
         }
     });
-    $("#btn_dtss").click(function () {searchByStationName(map);});
-    
+    $("#btn_dtss").click(function () { searchByStationName(map); });
+    $("#btn_savedz").click(function () { SaveDZ(); });
+}
+
+function SaveDZ() {
+    CloseWindow();
 }
 
 function searchByStationName(map) {
@@ -160,100 +165,6 @@ function LoadXQMC() {
         LoadXQJBXXSByHZ(XQMC);
     else
         LoadXQJBXXSByPY(XQMC);
-}
-
-//根据汉字获取小区信息
-function LoadXQJBXXSByHZ(XQMC) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/FC_FW/LoadXQJBXXSByHZ",
-        dataType: "json",
-        data:
-        {
-            XQMC: XQMC
-        },
-        success: function (xml) {
-            if (xml.Result === 1 && xml.list.length > 0) {
-                var html = "<ul id='ulXQMC' onmouseover='MouseOver()' onmouseleave='MouseLeave()' class='uldropdown' style='height: " + (xml.list.length * 34.5) + "px;width:594px;background-color:#ffffff'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    var index = xml.list[i].XQMC.indexOf(XQMC);
-                    var xqmclength = XQMC.length;
-                    var xqmchtml = "";
-                    if (index === 0)
-                        xqmchtml = "<span style='color:#333333;font-weight:bolder;'>" + XQMC + "</span>" + "<span style='color:#333333'>" + xml.list[i].XQMC.substr(xqmclength, xml.list[i].XQMC.length - XQMC.length) + "</span>";
-                    else {
-                        xqmchtml = "<span style='color:#333333'>" + xml.list[i].XQMC.substr(0, index) + "</span>" + "<span style='color:#333333;font-weight:bolder;'>" + xml.list[i].XQMC.substr(index, xqmclength) + "</span>" + "<span style='color:#333333'>" + xml.list[i].XQMC.substr(index + xqmclength, xml.list[i].XQMC.length - index - xqmclength) + "</span>";
-                    }
-                    html += "<li class='lidropdown' onmouseover='UnbindBlur(this)' onclick='SelectXQMC(this)'>" + xqmchtml + "&nbsp;&nbsp;<span style='color:#999999;font-size:12px;'>" + (xml.list[i].XQDZ === null ? "" : xml.list[i].XQDZ) + "</span>" + "</li>";
-                }
-                html += "</ul>";
-                $("#divXQMClist").html(html);
-                $("#divXQMClist").css("display", "block");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//根据拼音获取小区信息
-function LoadXQJBXXSByPY(XQMC) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/FC_FW/LoadXQJBXXSByPY",
-        dataType: "json",
-        data:
-        {
-            XQMC: XQMC
-        },
-        success: function (xml) {
-            if (xml.Result === 1 && xml.list.length > 0) {
-                var html = "<ul id='ulXQMC' onmouseover='MouseOver()' onmouseleave='MouseLeave()' class='uldropdown' style='height: " + (xml.list.length * 34.5) + "px;width:594px;background-color:#ffffff'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    var index = 0;
-                    var pys = xml.list[i].XQMCPY.split(' ');
-                    var count = 0;
-                    var syxqmc = XQMC;
-
-                    if (xml.list[i].XQMCPYSZM != null && xml.list[i].XQMCPYSZM.indexOf(syxqmc) !== -1) {
-                        index = GetStartIndexBySZM(xml.list[i].XQMCPYSZM, syxqmc);
-                        count = syxqmc.length;
-                    }
-                    else {
-                        index = GetStartIndex(pys, syxqmc);
-                        for (var j = 0; j < pys.length; j++) {
-                            if (syxqmc.length > pys[j].length) {
-                                if (syxqmc.indexOf(pys[j]) !== -1) {
-                                    count++;
-                                    syxqmc = syxqmc.substr(pys[j].length, syxqmc.length - pys[j].length);
-                                }
-                            }
-                            else {
-                                if (pys[j].indexOf(syxqmc) !== -1 || pys[j].indexOf(syxqmc) !== -1) {
-                                    count++;
-                                    break;;
-                                }
-                            }
-                        }
-                    }
-                    var getlength = count;
-                    var xqmchtml = "";
-                    if (index === 0)
-                        xqmchtml = "<span style='color:#333333;font-weight:bolder;'>" + xml.list[i].XQMC.substr(0, getlength) + "</span>" + "<span style='color:#333333'>" + xml.list[i].XQMC.substr(getlength, xml.list[i].XQMC.length - getlength) + "</span>";
-                    else {
-                        xqmchtml = "<span style='color:#333333'>" + xml.list[i].XQMC.substr(0, index) + "</span>" + "<span style='color:#333333;font-weight:bolder;'>" + xml.list[i].XQMC.substr(index, getlength) + "</span>" + "<span style='color:#333333'>" + xml.list[i].XQMC.substr(index + getlength, xml.list[i].XQMC.length - index - getlength) + "</span>";
-                    }
-                    html += "<li class='lidropdown' onclick='SelectXQMC(this)'>" + xqmchtml + "&nbsp;&nbsp;<span style='color:#999999;font-size:12px;'>" + (xml.list[i].XQDZ === null ? "" : xml.list[i].XQDZ) + "</span>" + "</li>";
-                }
-                html += "</ul>";
-                $("#divXQMClist").html(html);
-                $("#divXQMClist").css("display", "block");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
 }
 
 function GetStartIndex(pys, sqmc) {
@@ -373,17 +284,6 @@ function BindHover() {
         LeaveStyle("ZJDW");
     });
 }
-
-function SelectXQMC(obj) {
-    var html = "";
-    for (var i = 0; i < $(obj).find("span").length - 1; i++) {
-        html += $(obj).find("span")[i].innerHTML;
-    }
-    $("#XQMC").val(html);
-    $("#divXQMClist").css("display", "none");
-    isleave = true;
-}
-
 
 function SelectFWLX(obj) {
     $("#spanFWLX").html(obj.innerHTML);
