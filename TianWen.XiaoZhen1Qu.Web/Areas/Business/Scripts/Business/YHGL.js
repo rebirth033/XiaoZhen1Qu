@@ -30,6 +30,7 @@
     $("#div_body_image_qqtx").bind("click", QQBD);
     $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
+    $("#span_fbxx").bind("click", OpenLBXZ);
     LoadYHJBXX();
     if (getUrlParam("Show") === "WDZJ")
         ShowWDZJ();
@@ -148,6 +149,10 @@ function ToWZCX() {
 //帮助中心
 function OpenBZZX() {
     window.open(getRootPath() + "/Business/BZZX/BZZX?YHID=" + getUrlParam("YHID"));
+}
+//类别选择
+function OpenLBXZ() {
+    window.open(getRootPath() + "/Business/LBXZ/LBXZ?YHID=" + getUrlParam("YHID"));
 }
 //显示我的信息
 function ShowWDXX() {

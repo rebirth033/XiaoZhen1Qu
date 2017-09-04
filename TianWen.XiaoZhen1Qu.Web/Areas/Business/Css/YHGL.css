@@ -461,3 +461,18 @@
     margin: 2px 5px 0px 5px;
     display: inline-block;
 }
+
+.span_fbxx {
+    width: 90px;
+    height: 34px;
+    border: 1px solid #fff;
+    /*border-radius: 4px;*/
+    float: right;
+    display: inline-block;
+    color: #fff;
+    font-size: 16px;
+    padding: 3px 12px;
+    margin-right: 100px;
+    margin-top: 19px;
+    cursor: pointer;
+}

@@ -655,7 +655,6 @@
     <Content Include="Areas\Business\Scripts\UEditor\ueditor.all.min.js" />
     <Content Include="Areas\Business\Scripts\UEditor\ueditor.config.js" />
     <Content Include="Areas\Business\Scripts\UEditor\ueditor.js" />
-    <Content Include="Areas\Business\Scripts\UEditor\ueditor.parse.js" />
     <Content Include="Areas\Business\Scripts\UEditor\ueditor.parse.min.js" />
     <Content Include="Areas\Business\Scripts\underscore.min.js" />
     <Content Include="Config\SpringConfig\BLL.xml" />
