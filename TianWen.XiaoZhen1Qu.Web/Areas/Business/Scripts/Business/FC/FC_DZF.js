@@ -7,17 +7,17 @@ $(document).ready(function () {
     $("#divUploadOut").bind("mouseover", GetUploadCss);
     $("#divUploadOut").bind("mouseleave", LeaveUploadCss);
     $("#btnFB").bind("click", FB);
-    $(".inputFWLX").bind("focus", FWLXYLCFBFocus);
-    $(".inputFWLX").bind("blur", FWLXYLCFBBlur);
     $("#FYMS").bind("focus", FYMSFocus);
     $("#FYMS").bind("blur", FYMSBlur);
     $("#KRZSJ").datepicker({ minDate: 0 });
     $("#inputUpload").bind("change", Upload);
     $("#btnClose").bind("click", CloseWindow);
-
+    $("#span_xzdz").bind("click", OpenXZDZ);
+    $("#div_dz_close").bind("click", CloseWindow);
+    OpenXZDZ();
     BindHover();
     LoadFWLX();
-    LoadYFFS();
+    LoadZJDW();
     LoadDefault();
     FYMSSetDefault();
 });
@@ -35,44 +35,44 @@ function FYMSSetDefault() {
     $("#FYMS").html(fyms);
 }
 
-function FWLXYLCFBFocus() {
-    if ($(this)[0].id === "C")
-        $("#spanC").css("border", "1px solid #5bc0de");
-    if ($(this)[0].id === "GJC")
-        $("#spanGJC").css("border", "1px solid #5bc0de");
-    if ($(this)[0].id === "ZJ")
-        $("#spanZJ").css("border", "1px solid #5bc0de");
-    if ($(this)[0].id === "S")
-        $("#spanS").css("border", "1px solid #5bc0de");
-    if ($(this)[0].id === "T")
-        $("#spanT").css("border", "1px solid #5bc0de");
-    if ($(this)[0].id === "W")
-        $("#spanW").css("border", "1px solid #5bc0de");
-    if ($(this)[0].id === "PFM")
-        $("#spanPFM").css("border", "1px solid #5bc0de");
-
-}
-
-function FWLXYLCFBBlur() {
-    if ($(this)[0].id === "C")
-        $("#spanC").css("border", "1px solid #cccccc");
-    if ($(this)[0].id === "GJC")
-        $("#spanGJC").css("border", "1px solid #cccccc");
-    if ($(this)[0].id === "ZJ")
-        $("#spanZJ").css("border", "1px solid #cccccc");
-    if ($(this)[0].id === "S")
-        $("#spanS").css("border", "1px solid #cccccc");
-    if ($(this)[0].id === "T")
-        $("#spanT").css("border", "1px solid #cccccc");
-    if ($(this)[0].id === "W")
-        $("#spanW").css("border", "1px solid #cccccc");
-    if ($(this)[0].id === "PFM")
-        $("#spanPFM").css("border", "1px solid #cccccc");
-}
-
 function LoadDefault() {
     $("#imgZTCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
     $("#imgDJCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+}
+
+function OpenXZDZ() {
+    $("#shadow").css("display", "block");
+    $("#editDZWindow").css("display", "block");
+    var map = new BMap.Map("container");//创建地图实例
+    map.centerAndZoom("福州市", 11);//创建点坐标,地图初始化
+    map.enableScrollWheelZoom(true);//允许鼠标滑轮放大缩小 
+    map.enableContinuousZoom(true);//允许惯性拖拽
+    map.addControl(new BMap.NavigationControl({ isOpen: true, anchor: BMAP_ANCHOR_TOP_RIGHT }));  //添加默认缩放平移控件,右上角打开
+    map.addControl(new BMap.OverviewMapControl({ isOpen: true, anchor: BMAP_ANCHOR_BOTTOM_RIGHT })); //添加默认缩略地图控件,右下角打开
+
+    $("#input_dtss").keydown(function (e) {
+        var curKey = e.which;
+        if (curKey == 13) {
+            searchByStationName(map);
+            return false;
+        }
+    });
+    $("#btn_dtss").click(function () {searchByStationName(map);});
+    
+}
+
+function searchByStationName(map) {
+    map.clearOverlays();//清空原来的标注
+    var keyword = document.getElementById("input_dtss").value;
+    var localSearch = new BMap.LocalSearch(map);
+    localSearch.enableAutoViewport(); //允许自动调节窗体大小
+    localSearch.setSearchCompleteCallback(function (searchResult) {
+        var poi = searchResult.getPoi(0);
+        map.centerAndZoom(poi.point, 13);
+        var marker = new BMap.Marker(new BMap.Point(poi.point.lng, poi.point.lat));  // 创建标注，为要查询的地址对应的经纬度
+        map.addOverlay(marker);
+    });
+    localSearch.search(keyword);
 }
 
 function LoadTXXX() {
@@ -290,7 +290,7 @@ function LoadFWLX() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";//<li class='lidropdown'>请选择住宅类型</li>
+                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='lidropdown' onclick='SelectFWLX(this)'>" + xml.list[i].CODENAME + "</li>";
                 }
@@ -305,24 +305,24 @@ function LoadFWLX() {
     });
 }
 
-function LoadYFFS() {
+function LoadZJDW() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/FC_FW/LoadCODES",
         dataType: "json",
         data:
         {
-            TYPENAME: "押付方式"
+            TYPENAME: "租金单位"
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";//<li class='lidropdown'>请选择住宅类型</li>
+                var html = "<ul class='uldropdown' style='overflow-y: none;height:70px;margin-left:-1px;'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectYFFS(this)'>" + xml.list[i].CODENAME + "</li>";
+                    html += "<li class='lidropdown' onclick='SelectZJDW(this)'>" + xml.list[i].CODENAME + "</li>";
                 }
                 html += "</ul>";
-                $("#divYFFS").html(html);
-                $("#divYFFS").css("display", "none");
+                $("#divZJDW").html(html);
+                $("#divZJDW").css("display", "none");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -358,19 +358,19 @@ function BindHover() {
         $("#divFWLX").css("display", "none");
         LeaveStyle("FWLX");
     });
-    $("#divYFFSText").hover(function () {
-        $("#divYFFS").css("display", "block");
-        HoverStyle("YFFS");
+    $("#divZJDWText").hover(function () {
+        $("#divZJDW").css("display", "block");
+        HoverStyle("ZJDW");
     }, function () {
-        $("#divYFFS").css("display", "none");
-        LeaveStyle("YFFS");
+        $("#divZJDW").css("display", "none");
+        LeaveStyle("ZJDW");
     });
-    $("#divYFFS").hover(function () {
-        $("#divYFFS").css("display", "block");
-        HoverStyle("YFFS");
+    $("#divZJDW").hover(function () {
+        $("#divZJDW").css("display", "block");
+        HoverStyle("ZJDW");
     }, function () {
-        $("#divYFFS").css("display", "none");
-        LeaveStyle("YFFS");
+        $("#divZJDW").css("display", "none");
+        LeaveStyle("ZJDW");
     });
 }
 
@@ -390,9 +390,9 @@ function SelectFWLX(obj) {
     $("#divFWLX").css("display", "none");
 }
 
-function SelectYFFS(obj) {
-    $("#spanYFFS").html(obj.innerHTML);
-    $("#divYFFS").css("display", "none");
+function SelectZJDW(obj) {
+    $("#spanZJDW").html(obj.innerHTML);
+    $("#divZJDW").css("display", "none");
 }
 
 function SelectFWPZ(obj) {

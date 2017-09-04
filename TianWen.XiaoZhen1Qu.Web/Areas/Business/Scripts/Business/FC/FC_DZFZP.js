@@ -222,4 +222,5 @@ function ControlUpload() {
 function CloseWindow() {
     $("#shadow").css("display", "none");
     $("#editImgWindow").css("display", "none");
+    $("#editDZWindow").css("display", "none");
 }
