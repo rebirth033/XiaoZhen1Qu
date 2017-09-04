@@ -17,15 +17,16 @@
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/jquery-ui-1.12.1.custom/jquery-ui.min.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/jquery-ui-1.12.1.custom/jquery.ui.datepicker-zh-CN.js")"></script>
 </head>
-<body style="width: 100%; height: 100%; font-family: 微软雅黑">
-    <div style="width: 1440px; text-align: center;">
-        <div id="divLBHead" style="margin-left: 18%; margin-top: 20px;">
-            <table class="table" style="width: 100%; text-align: center;">
+<body>
+    <div class="div_body">
+        <div class="div_head" id="divLBHead">
+            <table class="table">
                 <tr>
-                    <td class="headtd">
-                        <div style="width: 900px;">
+                    <td>
+                        <div class="div_td_head">
                             <div class="divstep" id="divLBXZ">
-                                <span class="spanstep" id="spanLBXZ"></span><span id="spanCXLB" style="color: #5bc0de; cursor: pointer; font-size: 12px; margin-left: 2px">重选类别</span>
+                                <span class="spanstep" id="spanLBXZ"></span>
+                                <span class="span_cxlb" id="spanCXLB">重选类别</span>
                                 <em class="emstep" id="emLBXZ"></em>
                             </div>
                             <div class="divstep" id="divTXXX">
@@ -41,7 +42,7 @@
                 </tr>
             </table>
         </div>
-        <div id="myTabContent" style="margin-left: 18%; padding-bottom: 150px;">
+        <div id="myTabContent" style="margin-left: 15%; padding-bottom: 150px;">
             <div id="divJBXX" class="divSplit" style="display: block; text-align: left">
                 <span class="spanSplit">基本信息</span>
                 <em class="emSplit"></em>
