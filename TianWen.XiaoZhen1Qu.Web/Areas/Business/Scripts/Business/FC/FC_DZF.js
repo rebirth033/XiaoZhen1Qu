@@ -342,22 +342,19 @@ function FB() {
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
-    obj = jsonObj.AddJson(obj, "CX", "'" + $("#spanFWCX").html() + "'");
-    obj = jsonObj.AddJson(obj, "ZXQK", "'" + $("#spanZXQK").html() + "'");
-    obj = jsonObj.AddJson(obj, "ZZLX", "'" + $("#spanZZLX").html() + "'");
-    obj = jsonObj.AddJson(obj, "YFFS", "'" + $("#spanYFFS").html() + "'");
-    obj = jsonObj.AddJson(obj, "ZJYBHFY", "'" + GetDX("BHFY") + "'");
-    obj = jsonObj.AddJson(obj, "FWPZ", "'" + GetDX("FWPZ") + "'");
-    obj = jsonObj.AddJson(obj, "FWLD", "'" + GetDX("FWLD") + "'");
-    obj = jsonObj.AddJson(obj, "CZYQ", "'" + GetDX("CZYQ") + "'");
-    obj = jsonObj.AddJson(obj, "CZFS", "'" + GetCZFS() + "'");
+    obj = jsonObj.AddJson(obj, "ZDZQ", "'" + $("#spanZDZQ").html() + "'");
+    obj = jsonObj.AddJson(obj, "ZJ", "'" + $("#spanZJ").html() + "'");
+    obj = jsonObj.AddJson(obj, "ZJDW", "'" + $("#spanZJDW").html() + "'");
+    obj = jsonObj.AddJson(obj, "YZRS", "'" + $("#spanYZRS").html() + "'");
+    obj = jsonObj.AddJson(obj, "MJ", "'" + $("#spanMJ").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    if (getUrlParam("FWCZJBXXID") !== null)
-        obj = jsonObj.AddJson(obj, "FWCZJBXXID", "'" + getUrlParam("FWCZJBXXID") + "'");
+
+    if (getUrlParam("DZFJBXXID") !== null)
+        obj = jsonObj.AddJson(obj, "DZFJBXXID", "'" + getUrlParam("DZFJBXXID") + "'");
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FWCZ/FB",
+        url: getRootPath() + "/Business/FC_DZF/FB",
         dataType: "json",
         data:
         {

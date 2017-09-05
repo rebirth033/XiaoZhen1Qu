@@ -1,78 +1,78 @@
-﻿var ue = UE.getEditor('editor');
+﻿var ue = UE.getEditor('FYMS');
 function isFocus(e) {
-    alert(UE.getEditor('editor').isFocus());
+    alert(UE.getEditor('FYMS').isFocus());
     UE.dom.domUtils.preventDefault(e)
 }
 function setblur(e) {
-    UE.getEditor('editor').blur();
+    UE.getEditor('FYMS').blur();
     UE.dom.domUtils.preventDefault(e)
 }
 function insertHtml() {
     var value = prompt('插入html代码', '');
-    UE.getEditor('editor').execCommand('insertHtml', value)
+    UE.getEditor('FYMS').execCommand('insertHtml', value)
 }
 function createEditor() {
     enableBtn();
-    UE.getEditor('editor');
+    UE.getEditor('FYMS');
 }
 function getAllHtml() {
-    alert(UE.getEditor('editor').getAllHtml())
+    alert(UE.getEditor('FYMS').getAllHtml())
 }
 function getContent() {
     var arr = [];
     arr.push("使用editor.getContent()方法可以获得编辑器的内容");
     arr.push("内容为：");
-    arr.push(UE.getEditor('editor').getContent());
+    arr.push(UE.getEditor('FYMS').getContent());
     alert(arr.join("\n"));
 }
 function getPlainTxt() {
     var arr = [];
     arr.push("使用editor.getPlainTxt()方法可以获得编辑器的带格式的纯文本内容");
     arr.push("内容为：");
-    arr.push(UE.getEditor('editor').getPlainTxt());
+    arr.push(UE.getEditor('FYMS').getPlainTxt());
     alert(arr.join('\n'))
 }
 function setContent(isAppendTo) {
     var arr = [];
     arr.push("使用editor.setContent('欢迎使用ueditor')方法可以设置编辑器的内容");
-    UE.getEditor('editor').setContent('欢迎使用ueditor', isAppendTo);
+    UE.getEditor('FYMS').setContent('欢迎使用ueditor', isAppendTo);
     alert(arr.join("\n"));
 }
 function setDisabled() {
-    UE.getEditor('editor').setDisabled('fullscreen');
+    UE.getEditor('FYMS').setDisabled('fullscreen');
     disableBtn("enable");
 }
 function setEnabled() {
-    UE.getEditor('editor').setEnabled();
+    UE.getEditor('FYMS').setEnabled();
     enableBtn();
 }
 function getText() {
     //当你点击按钮时编辑区域已经失去了焦点，如果直接用getText将不会得到内容，所以要在选回来，然后取得内容
-    var range = UE.getEditor('editor').selection.getRange();
+    var range = UE.getEditor('FYMS').selection.getRange();
     range.select();
-    var txt = UE.getEditor('editor').selection.getText();
+    var txt = UE.getEditor('FYMS').selection.getText();
     alert(txt)
 }
 function getContentTxt() {
     var arr = [];
     arr.push("使用editor.getContentTxt()方法可以获得编辑器的纯文本内容");
     arr.push("编辑器的纯文本内容为：");
-    arr.push(UE.getEditor('editor').getContentTxt());
+    arr.push(UE.getEditor('FYMS').getContentTxt());
     alert(arr.join("\n"));
 }
 function hasContent() {
     var arr = [];
     arr.push("使用editor.hasContents()方法判断编辑器里是否有内容");
     arr.push("判断结果为：");
-    arr.push(UE.getEditor('editor').hasContents());
+    arr.push(UE.getEditor('FYMS').hasContents());
     alert(arr.join("\n"));
 }
 function setFocus() {
-    UE.getEditor('editor').focus();
+    UE.getEditor('FYMS').focus();
 }
 function deleteEditor() {
     disableBtn();
-    UE.getEditor('editor').destroy();
+    UE.getEditor('FYMS').destroy();
 }
 function disableBtn(str) {
     var div = document.getElementById('btns');
@@ -93,9 +93,9 @@ function enableBtn() {
     }
 }
 function getLocalData() {
-    alert(UE.getEditor('editor').execCommand("getlocaldata"));
+    alert(UE.getEditor('FYMS').execCommand("getlocaldata"));
 }
 function clearLocalData() {
-    UE.getEditor('editor').execCommand("clearlocaldata");
+    UE.getEditor('FYMS').execCommand("clearlocaldata");
     alert("已清空草稿箱")
 }

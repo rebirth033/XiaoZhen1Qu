@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
+using TianWen.XiaoZhen1Qu.Entities.Models;
 
 namespace TianWen.XiaoZhen1Qu.Interface
 {
@@ -9,5 +7,6 @@ namespace TianWen.XiaoZhen1Qu.Interface
     {
         IDAO DAO { get; set; }
         
+        object SaveDZFJBXX(JCXX jcxx, FC_DZFJBXX dzfjbxx, List<PHOTOS> photos);
     }
 }

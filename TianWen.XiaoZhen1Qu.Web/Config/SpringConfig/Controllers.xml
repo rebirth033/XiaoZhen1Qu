@@ -45,9 +45,6 @@
     <property name="FC_DZFBLL">
       <ref object="FC_DZFBLL"/>
     </property>
-    <property name="BaseBLL">
-      <ref object="BaseBLL"/>
-    </property>
   </object>
   <object id="FBCGController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.FBCGController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
   </object>

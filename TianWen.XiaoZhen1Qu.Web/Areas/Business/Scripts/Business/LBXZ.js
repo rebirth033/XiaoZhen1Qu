@@ -97,5 +97,5 @@ function LoadXL(LBID, LBNAME) {
 }
 
 function FBXX(FBYM, LBID) {
-    window.location.href = getRootPath() + "/Business/" + FBYM + "/" + FBYM + "?CLICKID=" + LBID;
+    window.location.href = getRootPath() + "/Business/" + FBYM + "/" + FBYM + "?CLICKID=" + LBID + "&YHID=" + getUrlParam("YHID");
 }
