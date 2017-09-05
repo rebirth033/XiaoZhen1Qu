@@ -22,20 +22,20 @@ $(document).ready(function () {
     LoadFC_DZFJBXX();
     //FYMSSetDefault();
 });
-
+//房屋描述框focus
 function FYMSFocus() {
     $("#FYMS").css("color", "#333333");
 }
-
+//房屋描述框blur
 function FYMSBlur() {
     $("#FYMS").css("color", "#999999");
 }
-
+//房屋描述框设默认文本
 function FYMSSetDefault() {
     var fyms = "1.房屋特征：\r\n\r\n2.周边配套：\r\n\r\n3.房东心态：";
     $("#FYMS").html(fyms);
 }
-
+//加载默认
 function LoadDefault() {
     ue.ready(function () {
         ue.setHeight(200);
@@ -43,7 +43,7 @@ function LoadDefault() {
     $("#imgDZF").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
     $("#imgRZF").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
 }
-
+//打开新增地址
 function OpenXZDZ() {
     $("#shadow").css("display", "block");
     $("#editDZWindow").css("display", "block");
@@ -69,7 +69,7 @@ function OpenXZDZ() {
 function SaveDZ() {
     CloseWindow();
 }
-
+//地址定位
 function searchByStationName(map) {
     map.clearOverlays();//清空原来的标注
     var keyword = document.getElementById("input_dtss").value;
@@ -106,7 +106,7 @@ function LoadTXXX() {
         }
     });
 }
-
+//重选类别
 function CXLB() {
     window.location.href = getRootPath() + "/Business/LBXZ/LBXZ";
 }
@@ -120,30 +120,7 @@ function RZFSelect() {
     $("#imgDZF").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
     $("#imgRZF").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
 }
-
-function GetStartIndex(pys, sqmc) {
-    var index = 0;
-    for (var j = 0; j < pys.length; j++) {
-        if (sqmc.length > pys[j].length) {
-            if (sqmc.indexOf(pys[j]) !== -1) {
-                index = j;
-                break;;
-            }
-        }
-        else {
-            if (pys[j].indexOf(sqmc) !== -1 || pys[j].indexOf(sqmc) !== -1) {
-                index = j;
-                break;;
-            }
-        }
-    }
-    return index;
-}
-
-function GetStartIndexBySZM(pyszm, sqmc) {
-    return pyszm.indexOf(sqmc);
-}
-
+//加载房屋类型
 function LoadFWLX() {
     $.ajax({
         type: "POST",
@@ -169,7 +146,7 @@ function LoadFWLX() {
         }
     });
 }
-
+//加载租金单位
 function LoadZJDW() {
     $.ajax({
         type: "POST",
@@ -316,7 +293,7 @@ function LoadFC_DZFJBXX() {
                 //SetCZFS(xml.Value.FWCZXX.CZFS);
                 $("#spanFWLX").html(xml.Value.FC_DZFJBXX.FWLX);
                 $("#spanZJDW").html(xml.Value.FC_DZFJBXX.ZJDW);
-                //$("#FYMS").html(xml.Value.FC_DZFJBXX.FYMS);
+                $("#JYGZ").html(xml.Value.FC_DZFJBXX.JYGZ);
                 LoadPhotos(xml.Value.Photos);
                 return;
             }
@@ -355,11 +332,12 @@ function FB() {
         {
             Json: jsonObj.JsonToString(obj),
             FYMS: ue.getContent(),
-            FWZP: GetPhotoUrls()
+            FWZP: GetPhotoUrls(),
+            JYGZ: $("#JYGZ").val()
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                window.location.href = getRootPath() + "/Business/FBCG/FBCG?YHID=" + getUrlParam("YHID");
+                window.location.href = getRootPath() + "/Business/FBCG/FBCG";
             } else {
                 if (xml.Type === 1) {
                     $("#YZM").css("border-color", "#F2272D");
