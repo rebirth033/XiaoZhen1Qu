@@ -1,20 +1,19 @@
 ﻿var isleave = true;
 $(document).ready(function () {
-    $("#XQMC").bind("keyup", LoadXQMC);
     $("#spanCXLB").bind("click", CXLB);
-    $("#imgZTCZ").bind("click", ZTCZSelect);
-    $("#imgDJCZ").bind("click", DJCZSelect);
+    $("#imgDZF").bind("click", DZFSelect);
+    $("#imgRZF").bind("click", RZFSelect);
     $("#divUploadOut").bind("mouseover", GetUploadCss);
     $("#divUploadOut").bind("mouseleave", LeaveUploadCss);
     $("#btnFB").bind("click", FB);
     $("#FYMS").bind("focus", FYMSFocus);
     $("#FYMS").bind("blur", FYMSBlur);
-    $("#KRZSJ").datepicker({ minDate: 0 });
     $("#inputUpload").bind("change", Upload);
     $("#btnClose").bind("click", CloseWindow);
     $("#span_xzdz").bind("click", OpenXZDZ);
     $("#div_dz_close").bind("click", CloseWindow);
 
+    LoadTXXX();
     BindHover();
     LoadFWLX();
     LoadZJDW();
@@ -36,8 +35,8 @@ function FYMSSetDefault() {
 }
 
 function LoadDefault() {
-    $("#imgZTCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgDJCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+    $("#imgDZF").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+    $("#imgRZF").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
 }
 
 function OpenXZDZ() {
@@ -107,64 +106,14 @@ function CXLB() {
     window.location.href = getRootPath() + "/Business/LBXZ/LBXZ";
 }
 
-function ZTCZSelect() {
-    $("#imgZTCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgDJCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+function DZFSelect() {
+    $("#imgDZF").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+    $("#imgRZF").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
 }
 
-function DJCZSelect() {
-    $("#imgZTCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    $("#imgDJCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-}
-
-function LoadXQMC() {
-    if (event.keyCode === 40) {//按下
-        var lis = $("#divXQMClist").find("li");
-        for (var i = 0; i < lis.length; i++) {
-            if ($("#divXQMClist").find("li:eq(" + i + ")").css("background-color") === "rgb(236, 236, 236)") {
-                $("#divXQMClist").find("li:eq(" + i + ")").css("background-color", "#FFFFFF");
-                $("#divXQMClist").find("li:eq(" + i + ")").bind("mouseover", function () { $(this).css("background-color", "#ececec"); });
-                $("#divXQMClist").find("li:eq(" + i + ")").bind("mouseleave", function () { $(this).css("background-color", "#FFFFFF"); });
-                $("#divXQMClist").find("li:eq(" + (i + 1) + ")").css("background-color", "#ececec");
-                return;
-            }
-        }
-        $("#divXQMClist").find("li:eq(0)").css("background-color", "#ececec");
-        return;
-    }
-    if (event.keyCode === 38) {//按上
-        var lis = $("#divXQMClist").find("li");
-        for (var i = 0; i < lis.length; i++) {
-            if ($("#divXQMClist").find("li:eq(" + i + ")").css("background-color") === "rgb(236, 236, 236)") {
-                if (i !== 0)
-                    $("#divXQMClist").find("li:eq(" + (i - 1) + ")").css("background-color", "#ececec");
-                $("#divXQMClist").find("li:eq(" + i + ")").css("background-color", "#FFFFFF");
-                $("#divXQMClist").find("li:eq(" + i + ")").bind("mouseover", function () { $(this).css("background-color", "#ececec"); });
-                $("#divXQMClist").find("li:eq(" + i + ")").bind("mouseleave", function () { $(this).css("background-color", "#FFFFFF"); });
-                return;
-            }
-        }
-        $("#divXQMClist").find("li:eq(" + (lis.length - 1) + ")").css("background-color", "#ececec");
-        return;
-    }
-    if (event.keyCode === 13) {//回车
-        var lis = $("#divXQMClist").find("li");
-        for (var i = 0; i < lis.length; i++) {
-            if ($("#divXQMClist").find("li:eq(" + i + ")").css("background-color") === "rgb(236, 236, 236)") {
-                SelectXQMC($("#divXQMClist").find("li:eq(" + i + ")"));
-                return;
-            }
-        }
-    }
-    var XQMC = $("#XQMC").val();
-    if (XQMC === "") {
-        $("#divXQMClist").css("display", "none");
-        return;
-    }
-    if (ValidateChinese(XQMC)) //判断是否是汉字
-        LoadXQJBXXSByHZ(XQMC);
-    else
-        LoadXQJBXXSByPY(XQMC);
+function RZFSelect() {
+    $("#imgDZF").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+    $("#imgRZF").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
 }
 
 function GetStartIndex(pys, sqmc) {
@@ -403,8 +352,6 @@ function FB() {
     obj = jsonObj.AddJson(obj, "CZYQ", "'" + GetDX("CZYQ") + "'");
     obj = jsonObj.AddJson(obj, "CZFS", "'" + GetCZFS() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    if ($("#KRZSJ").val() !== "")
-        obj = jsonObj.AddJson(obj, "KRZSJ", "'" + $("#KRZSJ").val() + "'");
     if (getUrlParam("FWCZJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "FWCZJBXXID", "'" + getUrlParam("FWCZJBXXID") + "'");
 
