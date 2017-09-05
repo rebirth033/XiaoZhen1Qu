@@ -721,7 +721,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FWCZ/FB",
+        url: getRootPath() + "/Business/FC_FW/FB",
         dataType: "json",
         data:
         {
@@ -731,7 +731,7 @@ function FB() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                window.location.href = getRootPath() + "/Business/FBCG/FBCG";
+                window.location.href = getRootPath() + "/Business/FBCG/FBCG?YHID=" + getUrlParam("YHID");
             } else {
                 if (xml.Type === 1) {
                     $("#YZM").css("border-color", "#F2272D");

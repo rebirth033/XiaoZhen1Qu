@@ -113,7 +113,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
         {
             try
             {
-                FWCZJBXX yhjbxx = GetObjByID(FWCZJBXXID);
+                FWCZJBXX yhjbxx = DAO.GetObjectByID<FWCZJBXX>(FWCZJBXXID);
                 if (yhjbxx != null)
                 {
                     JCXX jcxx = GetJCXXByID(yhjbxx.JCXXID);
@@ -134,29 +134,6 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     Message = "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!"
                 };
             }
-        }
-        //根据ID获取房屋出租基本信息
-        public FWCZJBXX GetObjByID(string FWCZJBXXID)
-        {
-            IList<FWCZJBXX> list = DAO.Repository.GetObjectList<FWCZJBXX>(String.Format("FROM FWCZJBXX WHERE FWCZJBXXID='{0}'", FWCZJBXXID));
-            if (list.Count > 0)
-                return list[0];
-            else
-                return null;
-        }
-        //根据ID获取基础信息
-        public JCXX GetJCXXByID(string JCXXID)
-        {
-            IList<JCXX> list = DAO.Repository.GetObjectList<JCXX>(String.Format("FROM JCXX WHERE JCXXID='{0}'", JCXXID));
-            if (list.Count > 0)
-                return list[0];
-            else
-                return null;
-        }
-        //根据基础信息获取图片集
-        public List<PHOTOS> GetPhtosByJCXXID(string JCXXID)
-        {
-            return DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}'", JCXXID)).ToList();
         }
         //根据汉子获取小区基本信息
         public object LoadXQJBXXSByHZ(string XQMC)

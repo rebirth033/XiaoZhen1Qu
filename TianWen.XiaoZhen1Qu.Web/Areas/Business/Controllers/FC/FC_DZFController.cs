@@ -17,6 +17,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return View();
         }
 
+        [ValidateInput(false)]
         public JsonResult FB()
         {
             string json = Request["Json"];
@@ -36,11 +37,11 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return Json(result);
         }
 
-        //public JsonResult LoadFWCZXX()
-        //{
-        //    string FWCZJBXXID = Request["FWCZJBXXID"];
-        //    object result = FWCZJBXXBLL.LoadFWCZXX(FWCZJBXXID);
-        //    return Json(result);
-        //}
+        public JsonResult LoadFC_DZFJBXX()
+        {
+            string FC_DZFJBXXID = Request["FC_DZFJBXXID"];
+            object result = FC_DZFBLL.LoadFC_DZFJBXX(FC_DZFJBXXID);
+            return Json(result);
+        }
     }
 }

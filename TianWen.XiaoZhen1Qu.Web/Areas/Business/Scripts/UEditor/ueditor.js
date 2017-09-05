@@ -1,5 +1,4 @@
-﻿var ue = UE.getEditor('FYMS');
-function isFocus(e) {
+﻿function isFocus(e) {
     alert(UE.getEditor('FYMS').isFocus());
     UE.dom.domUtils.preventDefault(e)
 }

@@ -1,4 +1,5 @@
 ﻿var isleave = true;
+var ue = UE.getEditor('FYMS');
 $(document).ready(function () {
     $("#spanCXLB").bind("click", CXLB);
     $("#imgDZF").bind("click", DZFSelect);
@@ -18,7 +19,8 @@ $(document).ready(function () {
     LoadFWLX();
     LoadZJDW();
     LoadDefault();
-    FYMSSetDefault();
+    LoadFC_DZFJBXX();
+    //FYMSSetDefault();
 });
 
 function FYMSFocus() {
@@ -35,6 +37,9 @@ function FYMSSetDefault() {
 }
 
 function LoadDefault() {
+    ue.ready(function () {
+        ue.setHeight(200);
+    });
     $("#imgDZF").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
     $("#imgRZF").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
 }
@@ -288,45 +293,38 @@ function SetCZFS(CZFS) {
     }
 }
 
-function LoadFWCZXX() {
-    //$.ajax({
-    //    type: "POST",
-    //    url: getRootPath() + "/Business/FC_FW/LoadFWCZXX",
-    //    dataType: "json",
-    //    data:
-    //    {
-    //        FWCZJBXXID: getUrlParam("FWCZJBXXID")
-    //    },
-    //    success: function (xml) {
-    //        if (xml.Result === 1) {
-    //            var jsonObj = new JsonDB("myTabContent");
-    //            jsonObj.DisplayFromJson("myTabContent", xml.Value.FWCZXX);
-    //            jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
-    //            $("#FWCZJBXXID").val(xml.Value.FWCZXX.FWCZJBXXID);
-    //            if (xml.Value.FWCZXX.ZJYBHFY !== null)
-    //                SetDX("BHFY", xml.Value.FWCZXX.ZJYBHFY);
-    //            if (xml.Value.FWCZXX.FWPZ !== null)
-    //                SetDX("FWPZ", xml.Value.FWCZXX.FWPZ);
-    //            if (xml.Value.FWCZXX.FWLD !== null)
-    //                SetDX("FWLD", xml.Value.FWCZXX.FWLD);
-    //            if (xml.Value.FWCZXX.CZYQ !== null)
-    //                SetDX("CZYQ", xml.Value.FWCZXX.CZYQ);
-    //            SetCZFS(xml.Value.FWCZXX.CZFS);
-    //            $("#spanFWCX").html(xml.Value.FWCZXX.CX);
-    //            $("#spanZXQK").html(xml.Value.FWCZXX.ZXQK);
-    //            $("#spanZZLX").html(xml.Value.FWCZXX.ZZLX);
-    //            $("#spanYFFS").html(xml.Value.FWCZXX.YFFS);
-    //            $("#FYMS").html(xml.Value.FWCZXX.FYMS);
-    //            if (xml.Value.FWCZXX.KRZSJ.ToString("yyyy-MM-dd") !== "1-1-1")
-    //                $("#KRZSJ").val(xml.Value.FWCZXX.KRZSJ.ToString("yyyy-MM-dd"));
-    //            LoadPhotos(xml.Value.Photos);
-    //            return;
-    //        }
-    //    },
-    //    error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+function LoadFC_DZFJBXX() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/FC_DZF/LoadFC_DZFJBXX",
+        dataType: "json",
+        data:
+        {
+            FC_DZFJBXXID: getUrlParam("FC_DZFJBXXID")
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var jsonObj = new JsonDB("myTabContent");
+                jsonObj.DisplayFromJson("myTabContent", xml.Value.FC_DZFJBXX);
+                jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
+                $("#FC_DZFJBXXID").val(xml.Value.FC_DZFJBXX.FC_DZFJBXXID);
+                //设置编辑器的内容
+                ue.ready(function () {
+                    ue.setHeight(200);
+                    ue.setContent(xml.Value.FC_DZFJBXX.FYMS);
+                });
+                //SetCZFS(xml.Value.FWCZXX.CZFS);
+                $("#spanFWLX").html(xml.Value.FC_DZFJBXX.FWLX);
+                $("#spanZJDW").html(xml.Value.FC_DZFJBXX.ZJDW);
+                //$("#FYMS").html(xml.Value.FC_DZFJBXX.FYMS);
+                LoadPhotos(xml.Value.Photos);
+                return;
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
-    //    }
-    //});
+        }
+    });
 }
 
 function MouseOver() {
@@ -342,16 +340,13 @@ function FB() {
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
-    obj = jsonObj.AddJson(obj, "ZDZQ", "'" + $("#spanZDZQ").html() + "'");
-    obj = jsonObj.AddJson(obj, "ZJ", "'" + $("#spanZJ").html() + "'");
+    obj = jsonObj.AddJson(obj, "FWLX", "'" + $("#spanFWLX").html() + "'");
     obj = jsonObj.AddJson(obj, "ZJDW", "'" + $("#spanZJDW").html() + "'");
-    obj = jsonObj.AddJson(obj, "YZRS", "'" + $("#spanYZRS").html() + "'");
-    obj = jsonObj.AddJson(obj, "MJ", "'" + $("#spanMJ").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
 
-    if (getUrlParam("DZFJBXXID") !== null)
-        obj = jsonObj.AddJson(obj, "DZFJBXXID", "'" + getUrlParam("DZFJBXXID") + "'");
-
+    if (getUrlParam("FC_DZFJBXXID") !== null)
+        obj = jsonObj.AddJson(obj, "FC_DZFJBXXID", "'" + getUrlParam("FC_DZFJBXXID") + "'");
+    
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/FC_DZF/FB",
@@ -359,12 +354,12 @@ function FB() {
         data:
         {
             Json: jsonObj.JsonToString(obj),
-            FYMS: $("#FYMS").html(),
+            FYMS: ue.getContent(),
             FWZP: GetPhotoUrls()
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                window.location.href = getRootPath() + "/Business/FBCG/FBCG";
+                window.location.href = getRootPath() + "/Business/FBCG/FBCG?YHID=" + getUrlParam("YHID");
             } else {
                 if (xml.Type === 1) {
                     $("#YZM").css("border-color", "#F2272D");

@@ -47,6 +47,22 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 return string.Empty;
             }
         }
+
+        //根据ID获取基础信息
+        public JCXX GetJCXXByID(string JCXXID)
+        {
+            IList<JCXX> list = DAO.Repository.GetObjectList<JCXX>(String.Format("FROM JCXX WHERE JCXXID='{0}'", JCXXID));
+            if (list.Count > 0)
+                return list[0];
+            else
+                return null;
+        }
+
+        //根据基础信息获取图片集
+        public List<PHOTOS> GetPhtosByJCXXID(string JCXXID)
+        {
+            return DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}'", JCXXID)).ToList();
+        }
     }
 
 }

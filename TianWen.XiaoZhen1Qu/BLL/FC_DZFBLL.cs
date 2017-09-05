@@ -18,7 +18,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
             string[] photoNames = photos.Select(x => x.PHOTONAME).ToArray();
             DirectoryInfo TheFolder = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory + "/Areas/Business/Photos/");
             FileInfo[] fileinfos = TheFolder.GetFiles();
-            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM FC_DZFJBXX WHERE DZFJBXXID='{0}'", dzfjbxx.DZFJBXXID));
+            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM FC_DZFJBXX WHERE FC_DZFJBXXID='{0}'", dzfjbxx.FC_DZFJBXXID));
 
             if (dt.Rows.Count > 0)
             {
@@ -56,7 +56,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                         DAO.Update(jcxx);
                         DAO.Update(dzfjbxx);
                         transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, DZFJBXXID = dzfjbxx.DZFJBXXID } };
+                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, DZFJBXXID = dzfjbxx.FC_DZFJBXXID } };
                     }
                     catch (Exception ex)
                     {
@@ -92,7 +92,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                             DAO.Save(obj);
                         }
                         transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, DZFJBXXID = dzfjbxx.DZFJBXXID } };
+                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, DZFJBXXID = dzfjbxx.FC_DZFJBXXID } };
                     }
                     catch (Exception ex)
                     {
@@ -106,6 +106,33 @@ namespace TianWen.XiaoZhen1Qu.BLL
                         };
                     }
                 }
+            }
+        }
+        //加载短租房基本信息
+        public object LoadFC_DZFJBXX(string FC_DZFJBXXID)
+        {
+            try
+            {
+                FC_DZFJBXX dzfjbxx = DAO.GetObjectByID<FC_DZFJBXX>(FC_DZFJBXXID);
+                if (dzfjbxx != null)
+                {
+                    JCXX jcxx = GetJCXXByID(dzfjbxx.JCXXID);
+                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { FC_DZFJBXX = dzfjbxx, JCXX = jcxx, Photos = GetPhtosByJCXXID(dzfjbxx.JCXXID) } };
+                }
+                else
+                {
+                    return new { Result = EnResultType.Failed, Message = "不存在" };
+                }
+
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("FWCZJBXXBLL", "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                return new
+                {
+                    Result = EnResultType.Failed,
+                    Message = "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!"
+                };
             }
         }
     }

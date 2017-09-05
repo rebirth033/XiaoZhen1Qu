@@ -652,7 +652,7 @@
     <Content Include="Areas\Business\Scripts\UEditor\third-party\zeroclipboard\ZeroClipboard.js" />
     <Content Include="Areas\Business\Scripts\UEditor\third-party\zeroclipboard\ZeroClipboard.min.js" />
     <Content Include="Areas\Business\Scripts\UEditor\third-party\zeroclipboard\ZeroClipboard.swf" />
-    <Content Include="Areas\Business\Scripts\UEditor\ueditor.all.min.js" />
+    <Content Include="Areas\Business\Scripts\UEditor\ueditor.all.js" />
     <Content Include="Areas\Business\Scripts\UEditor\ueditor.config.js" />
     <Content Include="Areas\Business\Scripts\UEditor\ueditor.js" />
     <Content Include="Areas\Business\Scripts\UEditor\ueditor.parse.min.js" />
