@@ -172,5 +172,5 @@ function GetPhotoUrls() {
         else
             photourls += src + ",";
     });
-    return RTrim(photourls);
+    return RTrim(photourls, ",");
 }

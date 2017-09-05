@@ -323,7 +323,7 @@ function FB() {
 
     if (getUrlParam("FC_DZFJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "FC_DZFJBXXID", "'" + getUrlParam("FC_DZFJBXXID") + "'");
-    
+
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/FC_DZF/FB",

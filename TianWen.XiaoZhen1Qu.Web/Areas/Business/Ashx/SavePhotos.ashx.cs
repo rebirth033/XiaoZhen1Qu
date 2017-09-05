@@ -3,14 +3,19 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Web;
+using TianWen.Framework.Common;
+using TianWen.XiaoZhen1Qu.Interface;
+using TianWen.XiaoZhen1Qu.Entities.Models;
 
 namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Ashx
 {
     /// <summary>
     /// 保存图片
     /// </summary>
-    public class SavePhotos : IHttpHandler
+    public class SavePhotos : IHttpHandler, System.Web.SessionState.IRequiresSessionState
     {
+        IFWCZJBXXBLL FWCZJBXXBLL = SpringHelper.GetSpringObject<IFWCZJBXXBLL>("FWCZJBXXBLL");
+
         public void ProcessRequest(HttpContext context)
         {
             var data = context.Request["data"];
@@ -32,8 +37,8 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Ashx
                     {
                         int width = Convert.ToInt32(context.Request.Form["width"]);
                         int height = Convert.ToInt32(context.Request.Form["height"]);
-                        string ydid = context.Request.Form["ydid"];
-                        return ResizeImg(file.InputStream, width, height, ydid);
+                        YHJBXX yhjbxx = FWCZJBXXBLL.GetYHJBXXByYHM(context.Session["YHM"].ToString());
+                        return ResizeImg(file.InputStream, width, height, yhjbxx.YHID);
                     }
                 }
             }
@@ -80,15 +85,16 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Ashx
             gbmPhoto.Dispose();
             bmPhoto.Dispose();
 
-            return fileName;
+            return ydid + "/" + fileName;
         }
 
         public string SavePhoto64(HttpContext context)
         {
+            YHJBXX yhjbxx = FWCZJBXXBLL.GetYHJBXXByYHM(context.Session["YHM"].ToString());
             string RootDir = HttpContext.Current.Server.MapPath(HttpContext.Current.Request.ApplicationPath);//获取程序根目录 
             string virtualpath = context.Request["filepath"];
             string filename = virtualpath.Substring(virtualpath.LastIndexOf('/') + 1, virtualpath.Length - virtualpath.LastIndexOf('/') - 1);
-            string physicalpath = RootDir + @"\Areas\Business\Photos\" + filename;
+            string physicalpath = RootDir + @"\Areas\Business\Photos\" + yhjbxx.YHID + @"\" + filename;
             FileStream fs = File.Create(physicalpath);
             byte[] bytes = Convert.FromBase64String(context.Request["data"]);
             fs.Write(bytes, 0, bytes.Length);
