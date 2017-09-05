@@ -9,15 +9,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 {
     public class BaseController : Controller
     {
-        public IBaseBLL BaseBLL { get; set; }
 
-        public YHJBXX USER
-        {
-            get
-            {
-                return GetUser();
-            }
-        }
         public List<PHOTOS> GetTP(string fwzp)
         {
             List<PHOTOS> photos = new List<PHOTOS>();
@@ -30,12 +22,6 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
                 photos.Add(photo);
             }
             return photos;
-        }
-
-        public YHJBXX GetUser()
-        {
-            YHJBXX User = BaseBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
-            return User;
         }
     }
 }

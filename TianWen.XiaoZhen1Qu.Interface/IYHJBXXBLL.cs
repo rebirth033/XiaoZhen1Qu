@@ -3,7 +3,7 @@ using TianWen.XiaoZhen1Qu.Entities.Models;
 
 namespace TianWen.XiaoZhen1Qu.Interface
 {
-    public interface IYHJBXXBLL
+    public interface IYHJBXXBLL : IBaseBLL
     {
         IDAO DAO { get; set; }
 

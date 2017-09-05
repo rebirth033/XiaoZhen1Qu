@@ -4,7 +4,7 @@ using TianWen.XiaoZhen1Qu.Entities.Models;
 
 namespace TianWen.XiaoZhen1Qu.Interface
 {
-    public interface IWZYJBLL
+    public interface IWZYJBLL : IBaseBLL
     {
         IDAO DAO { get; set; }
 

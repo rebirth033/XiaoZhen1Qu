@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 using TianWen.XiaoZhen1Qu.Interface;
-using TianWen.XiaoZhen1Qu.Web.Areas.Business.Common;
+using TianWen.XiaoZhen1Qu.Entities.Models;
 
 namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 {
@@ -15,7 +15,9 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public JsonResult LoadYHFBXX()
         {
-            return Json(WDFBBLL.LoadYHFBXX(BaseBLL.GetYHJBXXByYHM(Session["YHM"].ToString()).YHID, Request["TYPE"], Request["PageIndex"], Request["PageSize"]));
+            string YHM = Session["YHM"].ToString();
+            YHJBXX yhjbxx = WDFBBLL.GetYHJBXXByYHM(YHM);
+            return Json(WDFBBLL.LoadYHFBXX(yhjbxx.YHID, Request["TYPE"], Request["PageIndex"], Request["PageSize"]));
         }
 
         public JsonResult UpdateYHFBXX()

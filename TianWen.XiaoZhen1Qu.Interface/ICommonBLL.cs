@@ -6,7 +6,7 @@ using Microsoft.SqlServer.Server;
 
 namespace TianWen.XiaoZhen1Qu.Interface
 {
-    public interface ICommonBLL
+    public interface ICommonBLL : IBaseBLL
     {
         object GetIDByJCXXIDAndLBID(string JCXXID, string LBID);
 

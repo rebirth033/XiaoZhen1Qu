@@ -5,7 +5,7 @@ using System.Text;
 
 namespace TianWen.XiaoZhen1Qu.Interface
 {
-    public interface IXXGLBLL
+    public interface IXXGLBLL : IBaseBLL
     {
         IDAO DAO { get; set; }
 
