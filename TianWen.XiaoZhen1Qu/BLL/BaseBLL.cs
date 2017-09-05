@@ -63,6 +63,16 @@ namespace TianWen.XiaoZhen1Qu.BLL
         {
             return DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}'", JCXXID)).ToList();
         }
+
+        //根据用户名获取用户基本信息
+        public YHJBXX GetYHJBXXByYHM(string YHM)
+        {
+            IList<YHJBXX> list = DAO.Repository.GetObjectList<YHJBXX>(String.Format("FROM YHJBXX WHERE YHM='{0}'", YHM));
+            if (list.Count > 0)
+                return list[0];
+            else
+                return null;
+        }
     }
 
 }

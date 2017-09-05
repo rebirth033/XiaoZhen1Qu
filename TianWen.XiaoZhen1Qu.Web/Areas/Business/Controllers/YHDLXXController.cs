@@ -35,6 +35,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
                 if (YZM == checkcode)
                 {
                     YHJBXX yhjbxx = YHDLXXBLL.AddUserBySJ(Request["SJ"]);
+                    Session["YHM"] = yhjbxx.YHM;
                     return Json(new { Result = EnResultType.Success, Message = "登录成功", YHID = yhjbxx.YHID });
                 }
                 else
@@ -58,11 +59,17 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
                 ckSessionid.Expires = DateTime.Now.AddDays(14);
                 Response.Cookies.Add(ckUsername);
                 Response.Cookies.Add(ckSessionid);
-                return Json(YHDLXXBLL.CheckLogin(YHM, MM, Session.SessionID));
+                object result = YHDLXXBLL.CheckLogin(YHM, MM, Session.SessionID);
+                if (Json(result).Data.ToString().Contains("登录成功"))
+                    Session["YHM"] = YHM;
+                return Json(result);
             }
             else
             {
-                return Json(YHDLXXBLL.CheckLogin(YHM, MM, string.Empty));
+                object result = YHDLXXBLL.CheckLogin(YHM, MM, string.Empty);
+                if (Json(result).Data.ToString().Contains("登录成功"))
+                    Session["YHM"] = YHM;
+                return Json(result);
             }
         }
     }

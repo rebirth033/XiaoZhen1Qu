@@ -6,6 +6,7 @@ using NHibernate.Mapping.Attributes;
 
 namespace TianWen.XiaoZhen1Qu.Entities.Models
 {
+    //自动登录信息
     public class ZDDLXX
     {
         public ZDDLXX()
@@ -25,7 +26,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string YHM { get; set; }
 
         /// <summary>
-        /// 用户名
+        /// SessionID
         /// </summary>
         [Property]
         public virtual string SESSIONID { get; set; }

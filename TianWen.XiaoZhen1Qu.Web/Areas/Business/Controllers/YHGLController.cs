@@ -7,8 +7,10 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
     public class YHGLController : BaseController
     {
         public IYHDLXXBLL YHDLXXBLL { get; set; }
+
         public ActionResult YHGL()
         {
+            ViewData["YHM"] = Session["YHM"];
             return View();
         }
 

@@ -686,7 +686,7 @@
       <DependentUpon>png.aspx</DependentUpon>
     </Compile>
     <Compile Include="Areas\Business\BusinessAreaRegistration.cs" />
-    <Compile Include="Areas\Business\Common\BaseController.cs" />
+    <Compile Include="Areas\Business\Controllers\BaseController.cs" />
     <Compile Include="Areas\Business\Common\QRCodeHelper.cs" />
     <Compile Include="Areas\Business\Controllers\BZZX\BZZXController.cs" />
     <Compile Include="Areas\Business\Controllers\BZZX\WZYJController.cs" />

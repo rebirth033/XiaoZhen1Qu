@@ -31,30 +31,11 @@
     $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
     $("#span_fbxx").bind("click", OpenLBXZ);
-    LoadYHJBXX();
     if (getUrlParam("Show") === "WDZJ")
         ShowWDZJ();
     else
         ShowWDXX();
 });
-//加载用户基本信息
-function LoadYHJBXX() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/GRZL/GetGRZL",
-        dataType: "json",
-        data:
-        {
-            YHID: getUrlParam("YHID")
-        },
-        success: function (xml) {
-            $("#span_top_right_yhm_text").html(xml.YHJBXX.YHM);
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
 //显示用户菜单
 function ShowYHCD() {
     $("#div_top_right_dropdown_yhm").css("display", "block");
@@ -100,59 +81,59 @@ function LiFocus() {
 }
 //我的发布
 function ToWDFB() {
-    $("#iframeright").attr("src", getRootPath() + "/Business/WDFB/WDFB?YHID=" + getUrlParam("YHID"));
+    $("#iframeright").attr("src", getRootPath() + "/Business/WDFB/WDFB");
 }
 //我的收藏
 function ToWDSC() {
-    $("#iframeright").attr("src", getRootPath() + "/Business/WDSC/WDSC?YHID=" + getUrlParam("YHID"));
+    $("#iframeright").attr("src", getRootPath() + "/Business/WDSC/WDSC");
 }
 //个人资料
 function ToGRZL() {
-    $("#iframeright").attr("src", getRootPath() + "/Business/GRZL/GRZL?YHID=" + getUrlParam("YHID"));
+    $("#iframeright").attr("src", getRootPath() + "/Business/GRZL/GRZL");
 }
 //我的资金>现金>明细查询
 function ToXJMXCX() {
-    $("#iframeright").attr("src", getRootPath() + "/Business/WDXJ/WDXJ_MXCX?YHID=" + getUrlParam("YHID"));
+    $("#iframeright").attr("src", getRootPath() + "/Business/WDXJ/WDXJ_MXCX");
 }
 //我的资金>现金>充值
 function ToXJCZ() {
-    $("#iframeright").attr("src", getRootPath() + "/Business/WDXJ/WDXJ_CZ?YHID=" + getUrlParam("YHID"));
+    $("#iframeright").attr("src", getRootPath() + "/Business/WDXJ/WDXJ_CZ");
 }
 //账号绑定
 function ToZHBD() {
-    $("#iframeright").attr("src", getRootPath() + "/Business/ZHBD/ZHBD?YHID=" + getUrlParam("YHID"));
+    $("#iframeright").attr("src", getRootPath() + "/Business/ZHBD/ZHBD");
 }
 //认证管理
 function ToRZGL() {
-    $("#iframeright").attr("src", getRootPath() + "/Business/RZGL/RZGL?YHID=" + getUrlParam("YHID"));
+    $("#iframeright").attr("src", getRootPath() + "/Business/RZGL/RZGL");
 }
 //密码设置
 function ToMMSZ() {
-    $("#iframeright").attr("src", getRootPath() + "/Business/GRZL/MMSZ?YHID=" + getUrlParam("YHID"));
+    $("#iframeright").attr("src", getRootPath() + "/Business/GRZL/MMSZ");
 }
 //消息管理
 function ToXXGL() {
-    $("#iframeright").attr("src", getRootPath() + "/Business/XXGL/XXGL?YHID=" + getUrlParam("YHID"));
+    $("#iframeright").attr("src", getRootPath() + "/Business/XXGL/XXGL");
 }
 //话费充值
 function ToHFCZ() {
-    $("#iframeright").attr("src", getRootPath() + "/Business/HFCZ/HFCZ?YHID=" + getUrlParam("YHID"));
+    $("#iframeright").attr("src", getRootPath() + "/Business/HFCZ/HFCZ");
 }
 //游戏充值
 function ToYXCZ() {
-    $("#iframeright").attr("src", getRootPath() + "/Business/YXCZ/YXCZ?YHID=" + getUrlParam("YHID"));
+    $("#iframeright").attr("src", getRootPath() + "/Business/YXCZ/YXCZ");
 }
 //违章查询
 function ToWZCX() {
-    $("#iframeright").attr("src", getRootPath() + "/Business/WZCX/WZCX?YHID=" + getUrlParam("YHID"));
+    $("#iframeright").attr("src", getRootPath() + "/Business/WZCX/WZCX");
 }
 //帮助中心
 function OpenBZZX() {
-    window.open(getRootPath() + "/Business/BZZX/BZZX?YHID=" + getUrlParam("YHID"));
+    window.open(getRootPath() + "/Business/BZZX/BZZX");
 }
 //类别选择
 function OpenLBXZ() {
-    window.open(getRootPath() + "/Business/LBXZ/LBXZ?YHID=" + getUrlParam("YHID"));
+    window.open(getRootPath() + "/Business/LBXZ/LBXZ");
 }
 //显示我的信息
 function ShowWDXX() {
@@ -304,7 +285,7 @@ function QQBD() {
                 if (xml.Result === 1) {
                     alert("QQ绑定成功");
                     CloseQQRZ();
-                    $("#iframeright").attr("src", getRootPath() + "/Business/ZHBD/ZHBD?YHID=" + getUrlParam("YHID"));
+                    $("#iframeright").attr("src", getRootPath() + "/Business/ZHBD/ZHBD");
                 }
             },
             error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

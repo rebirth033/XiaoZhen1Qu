@@ -5,10 +5,19 @@ using CommonClassLib.Helper;
 using TianWen.XiaoZhen1Qu.Entities.Models;
 using TianWen.XiaoZhen1Qu.Interface;
 
-namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Common
+namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 {
     public class BaseController : Controller
     {
+        public IBaseBLL BaseBLL { get; set; }
+
+        public YHJBXX USER
+        {
+            get
+            {
+                return GetUser();
+            }
+        }
         public List<PHOTOS> GetTP(string fwzp)
         {
             List<PHOTOS> photos = new List<PHOTOS>();
@@ -21,6 +30,12 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Common
                 photos.Add(photo);
             }
             return photos;
+        }
+
+        public YHJBXX GetUser()
+        {
+            YHJBXX User = BaseBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            return User;
         }
     }
 }
