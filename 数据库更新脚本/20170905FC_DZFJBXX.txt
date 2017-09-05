@@ -1,0 +1,64 @@
+-- Create table
+create table FC_DZFJBXX
+(
+  fc_dzfjbxxid VARCHAR2(50) not null,
+  jcxxid       VARCHAR2(50),
+  fwlx         VARCHAR2(20),
+  zdzq         NUMBER(6),
+  zj           NUMBER(8),
+  yzrs         NUMBER(6),
+  mj           NUMBER(8),
+  dz           VARCHAR2(200),
+  czfs         NUMBER(1),
+  fyms         VARCHAR2(4000)
+)
+tablespace XIAOZHEN1QU
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table FC_DZFJBXX
+  is '房产_短租房/日租房基本信息';
+-- Add comments to the columns 
+comment on column FC_DZFJBXX.fc_dzfjbxxid
+  is '主键';
+comment on column FC_DZFJBXX.jcxxid
+  is '基础信息ID';
+comment on column FC_DZFJBXX.fwlx
+  is '房屋类型';
+comment on column FC_DZFJBXX.zdzq
+  is '最短租期';
+comment on column FC_DZFJBXX.zj
+  is '租金';
+comment on column FC_DZFJBXX.yzrs
+  is '宜租人数';
+comment on column FC_DZFJBXX.mj
+  is '面积';
+comment on column FC_DZFJBXX.dz
+  is '地址';
+comment on column FC_DZFJBXX.czfs
+  is '出租方式';
+comment on column FC_DZFJBXX.fyms
+  is '房源描述';
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table FC_DZFJBXX
+  add primary key (FC_DZFJBXXID)
+  using index 
+  tablespace XIAOZHEN1QU
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
