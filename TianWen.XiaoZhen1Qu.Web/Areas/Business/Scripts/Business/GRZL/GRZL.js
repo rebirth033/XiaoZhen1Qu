@@ -8,8 +8,8 @@
     $(".li_main_photo_middle_xt").bind("click", LoadSystemPhoto);
     $("#btnXTSC").bind("click", SaveXTTX);
     $("#btnBDSC").bind("change", Upload);
-    $("#img_person_info_yhm").bind("click", UpdateYHM);
-    $("#span_person_info_right_yhm").bind("click", UpdateYHM);
+    //$("#img_person_info_yhm").bind("click", UpdateYHM);
+    //$("#span_person_info_right_yhm").bind("click", UpdateYHM);
     $("#img_person_info_sj").bind("click", UpdateSJ);
     $("#span_person_info_right_sj").bind("click", UpdateSJ);
     $("#img_person_info_yx").bind("click", UpdateYX);
@@ -145,38 +145,36 @@ function uploadComplete(evt) {
     $("#img_main_photo").attr("src", imagepath + "?j=" + Math.random());
     $("#img_main_photo_middle").attr("src", imagepath + "?j=" + Math.random());
 }
-//修改用户名
-function UpdateYHM() {
-    if ($("#span_person_info_right_yhm").html() === "修改") {
-        $("#input_person_info_yhm").css("border", "1px solid #cccccc");
-        $("#input_person_info_yhm").css("cursor", "text");
-        $("#input_person_info_yhm").removeAttr("readonly");
-        $("#span_person_info_right_yhm").html("确认");
-    } else {
-        $.ajax({
-            type: "POST",
-            url: getRootPath() + "/Business/GRZL/UpdateYHM",
-            dataType: "json",
-            data:
-            {
-                YHM: $("#input_person_info_yhm").val()
-            },
-            success: function (xml) {
-                if (xml.Result === 1) {
-                    alert("用户名修改成功");
-                    $("#input_person_info_yhm").css("border", "none");
-                    $("#input_person_info_yhm").css("cursor", "default");
-                    $("#input_person_info_yhm").attr("readonly", "readonly");
-                    $("#span_person_info_right_yhm").html("修改");
-                }
-            },
-            error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-            }
-        });
-       
-    }
-}
+////修改用户名
+//function UpdateYHM() {
+//    if ($("#span_person_info_right_yhm").html() === "修改") {
+//        $("#input_person_info_yhm").css("border", "1px solid #cccccc");
+//        $("#input_person_info_yhm").css("cursor", "text");
+//        $("#input_person_info_yhm").removeAttr("readonly");
+//        $("#span_person_info_right_yhm").html("确认");
+//    } else {
+//        $.ajax({
+//            type: "POST",
+//            url: getRootPath() + "/Business/GRZL/UpdateYHM",
+//            dataType: "json",
+//            data:
+//            {
+//                YHM: $("#input_person_info_yhm").val()
+//            },
+//            success: function (xml) {
+//                if (xml.Result === 1) {
+//                    alert("用户名修改成功");
+//                    $("#input_person_info_yhm").css("border", "none");
+//                    $("#input_person_info_yhm").css("cursor", "default");
+//                    $("#input_person_info_yhm").attr("readonly", "readonly");
+//                    $("#span_person_info_right_yhm").html("修改");
+//                }
+//            },
+//            error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+//            }
+//        });
+//    }
+//}
 //修改手机
 function UpdateSJ() {
     window.location.href = getRootPath() + "/Business/GRZL/HBSJ?SJ=" + $("#input_person_info_sj").val();

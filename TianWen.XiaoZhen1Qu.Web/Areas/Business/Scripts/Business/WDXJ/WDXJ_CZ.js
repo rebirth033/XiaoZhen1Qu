@@ -163,7 +163,7 @@ function ShowFWXY() {
     $(window.parent.document).find("#XJFWXYWindow").each(function () {
         $(this).css("display", "block");
         $(this).css("left", window.screen.availWidth / 2 - 462.5);
-        $(this).css("top", window.screen.availHeight / 2 - 332);
+        $(this).css("top", window.screen.availHeight / 2 - 310);
     });
 }
 
