@@ -10,7 +10,7 @@ function EmailValidate() {
     if (!EmailCheck()) return false;
     return true;
 }
-
+//邮箱验证
 function EmailCheck() {
     if (!ValidateEmail($("#inputYX").val())) {
         $("#inputYX").css("border-color", "#F2272D");
@@ -30,7 +30,7 @@ function EmailCheck() {
         return true;
     }
 }
-
+//发送邮件
 function SendEmail() {
     if (EmailValidate() === false) return;
     $.ajax({
@@ -39,7 +39,6 @@ function SendEmail() {
         dataType: "json",
         data:
         {
-            YHID: getUrlParam("YHID"),
             YX: $("#inputYX").val()
         },
         success: function (xml) {

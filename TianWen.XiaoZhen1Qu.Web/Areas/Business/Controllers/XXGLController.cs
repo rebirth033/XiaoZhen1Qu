@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using TianWen.XiaoZhen1Qu.Interface;
-using TianWen.XiaoZhen1Qu.Web.Areas.Business.Common;
+using TianWen.XiaoZhen1Qu.Entities.Models;
 
 namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 {
@@ -24,22 +20,26 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public JsonResult LoadYHXX()
         {
-            return Json(XXGLBLL.LoadYHXX(Request["YHID"], Request["TYPE"], Request["PageIndex"], Request["PageSize"]));
+            YHJBXX yhjbxx = XXGLBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            return Json(XXGLBLL.LoadYHXX(yhjbxx.YHID, Request["TYPE"], Request["PageIndex"], Request["PageSize"]));
         }
 
         public JsonResult LoadYHXXMX()
         {
-            return Json(XXGLBLL.LoadYHXXMX(Request["YHID"], Request["YHXXID"]));
+            YHJBXX yhjbxx = XXGLBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            return Json(XXGLBLL.LoadYHXXMX(yhjbxx.YHID, Request["YHXXID"]));
         }
 
         public JsonResult LoadUpYHXXMX()
         {
-            return Json(XXGLBLL.LoadUpYHXXMX(Request["YHID"], Request["YHXXID"]));
+            YHJBXX yhjbxx = XXGLBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            return Json(XXGLBLL.LoadUpYHXXMX(yhjbxx.YHID, Request["YHXXID"]));
         }
 
         public JsonResult LoadDownYHXXMX()
         {
-            return Json(XXGLBLL.LoadDownYHXXMX(Request["YHID"], Request["YHXXID"]));
+            YHJBXX yhjbxx = XXGLBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            return Json(XXGLBLL.LoadDownYHXXMX(yhjbxx.YHID, Request["YHXXID"]));
         }
 
         public JsonResult DeleteYHXX()

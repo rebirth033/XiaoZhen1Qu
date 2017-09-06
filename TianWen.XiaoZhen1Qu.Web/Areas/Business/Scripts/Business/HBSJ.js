@@ -88,7 +88,6 @@ function UpdateSJ() {
         dataType: "json",
         data:
         {
-            YHID:getUrlParam("YHID"),
             SJ: $("#inputXSJ").val()
         },
         success: function (xml) {
@@ -268,5 +267,5 @@ function GetXSJNumber() {
 }
 
 function ToGRZL() {
-    window.location.href = getRootPath() + "/Business/GRZL/GRZL?YHID=" + getUrlParam("YHID");
+    window.location.href = getRootPath() + "/Business/GRZL/GRZL";
 }

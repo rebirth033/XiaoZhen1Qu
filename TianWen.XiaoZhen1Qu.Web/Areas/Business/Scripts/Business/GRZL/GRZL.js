@@ -81,8 +81,7 @@ function SaveXTTX() {
         dataType: "json",
         data:
         {
-            TX: $("#img_main_photo").attr("src"),
-            YHID: getUrlParam("YHID")
+            TX: $("#img_main_photo").attr("src")
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -94,7 +93,7 @@ function SaveXTTX() {
         }
     });
 }
-
+//加载个人资料
 function LoadGRZL() {
     $.ajax({
         type: "POST",
@@ -102,11 +101,11 @@ function LoadGRZL() {
         dataType: "json",
         data:
         {
-            YHID: getUrlParam("YHID")
+
         },
         success: function (xml) {
-            $("#img_main_photo").attr("src", getRootPath() + "/Areas/Business/Photos/" + getUrlParam("YHID") + "/GRZL/" + xml.YHJBXX.TX + "?j=" + Math.random());
-            $("#img_main_photo_middle").attr("src", getRootPath() + "/Areas/Business/Photos/" + getUrlParam("YHID") + "/GRZL/" + xml.YHJBXX.TX + "?j=" + Math.random());
+            $("#img_main_photo").attr("src", getRootPath() + "/Areas/Business/Photos/" + xml.YHJBXX.YHID + "/GRZL/" + xml.YHJBXX.TX + "?j=" + Math.random());
+            $("#img_main_photo_middle").attr("src", getRootPath() + "/Areas/Business/Photos/" + xml.YHJBXX.YHID + "/GRZL/" + xml.YHJBXX.TX + "?j=" + Math.random());
             $("#input_person_info_yhm").val(xml.YHJBXX.YHM);
             $("#input_person_info_sj").val(xml.YHJBXX.SJ);
             $("#input_person_info_yx").val(xml.YHJBXX.DZYX);
@@ -116,7 +115,6 @@ function LoadGRZL() {
         }
     });
 }
-
 //上传照片
 function Upload() {
     var f = $(this).get(0).files[0];
@@ -147,7 +145,7 @@ function uploadComplete(evt) {
     $("#img_main_photo").attr("src", imagepath + "?j=" + Math.random());
     $("#img_main_photo_middle").attr("src", imagepath + "?j=" + Math.random());
 }
-
+//修改用户名
 function UpdateYHM() {
     if ($("#span_person_info_right_yhm").html() === "修改") {
         $("#input_person_info_yhm").css("border", "1px solid #cccccc");
@@ -161,8 +159,7 @@ function UpdateYHM() {
             dataType: "json",
             data:
             {
-                YHM: $("#input_person_info_yhm").val(),
-                YHID: getUrlParam("YHID")
+                YHM: $("#input_person_info_yhm").val()
             },
             success: function (xml) {
                 if (xml.Result === 1) {
@@ -180,11 +177,11 @@ function UpdateYHM() {
        
     }
 }
-
+//修改手机
 function UpdateSJ() {
-    window.location.href = getRootPath() + "/Business/GRZL/HBSJ?SJ=" + $("#input_person_info_sj").val() + "&YHID=" + getUrlParam("YHID");
+    window.location.href = getRootPath() + "/Business/GRZL/HBSJ?SJ=" + $("#input_person_info_sj").val();
 }
 
 function UpdateYX() {
-    window.location.href = getRootPath() + "/Business/GRZL/YXYZ?YX=" + $("#input_person_info_yx").val() + "&YHID=" + getUrlParam("YHID");
+    window.location.href = getRootPath() + "/Business/GRZL/YXYZ?YX=" + $("#input_person_info_yx").val();
 }

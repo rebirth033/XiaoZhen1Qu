@@ -6,7 +6,7 @@
     $("#input_yhxxid").val(getUrlParam("YHXXID"));
     LoadDefault("divXTTZLB");
 });
-
+//加载默认
 function LoadDefault(TYPE) {
     $.ajax({
         type: "POST",
@@ -14,7 +14,6 @@ function LoadDefault(TYPE) {
         dataType: "json",
         data:
         {
-            YHID: getUrlParam("YHID"),
             YHXXID: $("#input_yhxxid").val()
         },
         success: function (xml) {
@@ -37,11 +36,11 @@ function LoadDefault(TYPE) {
         }
     });
 }
-
+//返回消息管理列表
 function Back() {
-    window.location.href = getRootPath() + "/Business/XXGL/XXGL?YHID=" + getUrlParam("YHID");
+    window.location.href = getRootPath() + "/Business/XXGL/XXGL";
 }
-
+//上一条消息明细
 function Up() {
     $.ajax({
         type: "POST",
@@ -49,7 +48,6 @@ function Up() {
         dataType: "json",
         data:
         {
-            YHID: getUrlParam("YHID"),
             YHXXID: $("#input_yhxxid").val()
         },
         success: function (xml) {
@@ -72,7 +70,7 @@ function Up() {
         }
     });
 }
-
+//下一条消息明细
 function Down()
 {
     $.ajax({
@@ -81,7 +79,6 @@ function Down()
         dataType: "json",
         data:
         {
-            YHID: getUrlParam("YHID"),
             YHXXID: $("#input_yhxxid").val()
         },
         success: function (xml) {
@@ -104,7 +101,7 @@ function Down()
         }
     });
 }
-
+//上下翻处理
 function HandleUD(HasUp, HasDown) {
     if (HasUp === 0){
         $("#span_main_info_head_syt").css("display", "none");

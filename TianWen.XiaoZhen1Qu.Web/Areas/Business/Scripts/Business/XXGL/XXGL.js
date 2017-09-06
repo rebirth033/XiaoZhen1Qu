@@ -41,7 +41,6 @@ function LoadDefault(TYPE, PageIndex) {
         dataType: "json",
         data:
         {
-            YHID: getUrlParam("YHID"),
             TYPE: TYPE,
             PageSize: 10,
             PageIndex: PageIndex
