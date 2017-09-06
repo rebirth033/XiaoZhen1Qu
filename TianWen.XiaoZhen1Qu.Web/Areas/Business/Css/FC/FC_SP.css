@@ -1,0 +1,496 @@
+﻿body {
+    width: 100%;
+    height: 100%;
+    font-family: 微软雅黑;
+}
+
+.divFWCZ {
+    width: 900px;
+    text-align: left;
+    padding-top: 2px;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    height: 62px;
+    position: relative;
+    display: block;
+}
+
+.divLeft {
+    color: gray;
+    text-align: right;
+    margin-left: 100px;
+    display: inline;
+    font-size: 14px;
+}
+
+.divRight {
+    display: inline;
+    margin-left: 30px;
+    position: relative;
+}
+
+.labelFWCZ {
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.iFWCZ {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    border: none !important;
+}
+
+.spanFWQK {
+    display: inline-block;
+    width: 105px;
+    height: 30px;
+    text-align: center;
+    margin-top: 4px;
+}
+
+.divFWQKArrow {
+    background-image: url(../images/arrow_down.png);
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.inputFWLX {
+    width: 100px;
+    margin-top: 1px;
+    border: none;
+    height: 30px;
+    text-align: center;
+}
+
+.spanFWLX {
+    border: 1px solid #cccccc;
+    display: inline-block;
+    width: 128px;
+    height: 34px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.spanFWLXOut {
+    display: inline-block;
+    width: 128px;
+    height: 34px;
+}
+
+.spanFWLXIn {
+    border: 1px solid #cccccc;
+    display: inline-block;
+    width: 128px;
+    height: 34px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.divdropdown {
+    float: left;
+    width: 129px;
+}
+
+.uldropdown {
+    border-radius: 4px;
+    text-align: center;
+    width: 128px;
+    display: inline-block;
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    padding-left: 0px;
+    height: 171px;
+}
+
+.lidropdown {
+    height: 34px;
+    text-align: left;
+    display: block;
+    padding-left: 6px;
+    line-height: 34px;
+    font-size: 14px;
+    cursor: pointer;
+    color: #999999;
+    background: #FFFFFF;
+}
+
+    .lidropdown:hover {
+        background: #ececec;
+        color: #333333;
+    }
+
+.required {
+    color: #F2272D;
+    display: inline-block;
+    width: 20px;
+    height: 36px;
+    font-family: "宋体", "SimSun";
+}
+
+.liFWPZ {
+    display: inline-block;
+    width: 105px;
+    height: 30px;
+    text-align: left;
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+.ulFWPZ {
+    display: inline-block;
+    padding-left: 0;
+}
+
+.divSplit {
+    width: 900px;
+    text-align: center;
+    padding-top: 2px;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    height: 70px;
+    position: relative;
+}
+
+.spanSplit {
+    font-size: 18px;
+    margin-bottom: 5px;
+    line-height: 40px;
+    display: block;
+    color: #333333;
+}
+
+.emSplit {
+    width: 900px;
+    height: 1px;
+    float: left;
+    background: #cccccc;
+}
+
+.inputLXRXX {
+    width: 472px;
+    padding: 6px 12px;
+    color: #999999;
+}
+
+.SRK:focus {
+    border: 1px solid #5bc0de;
+    color: #333333 !important;
+}
+
+.ui-state-active {
+    background: #5bc0de !important;
+    border: 1px solid #5bc0de !important;
+}
+
+.ui-datepicker {
+    width: 400px !important;
+}
+
+.file {
+    float: left;
+    width: 195px;
+    height: 145px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.divUploadOut {
+    width: 195px;
+    height: 145px;
+    display: inline-block;
+    border: 1px solid #cccccc;
+    background-image: url(../images/upload_small2.png);
+}
+
+.Warn {
+    font-size: 14px;
+    color: #fd634f;
+    margin-left: 215px;
+    z-index: 999;
+    position: relative;
+    width: 180px;
+}
+
+.Info {
+    font-size: 14px;
+    color: #5bc0de;
+    margin-left: 215px;
+    z-index: 999;
+    position: relative;
+    width: 180px;
+}
+
+.imgTip {
+    width: 18px;
+    height: 18px;
+    margin-right: 2px;
+}
+
+.liImg {
+    display: inline-block;
+    width: 130px;
+    height: 100px;
+    position: relative;
+    float: left;
+    margin-right: 10px;
+}
+
+.divImg {
+    width: 130px;
+    height: 100px;
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 20px;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: move;
+}
+
+.toolbar_wrap {
+    width: 130px;
+    height: 100px;
+    cursor: move;
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 0;
+}
+
+    .toolbar_wrap:hover {
+        display: block;
+        width: 130px;
+        height: 100px;
+        cursor: move;
+    }
+
+.opacity {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 20px;
+    background-color: #000;
+    opacity: 0.3;
+    z-index: 900;
+}
+
+.toolbar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 20px;
+    z-index: 901;
+    cursor: default;
+}
+
+.edit {
+    background-image: url(../images/edit.png);
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    text-decoration: none;
+    right: 22px;
+    top: 0;
+    cursor: pointer;
+}
+
+    .edit:active {
+        background-image: url(../images/edit_select.png);
+    }
+
+
+.delete {
+    background-image: url(../images/delete.png);
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    text-decoration: none;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+    .delete:active {
+        background-image: url(../images/delete_select.png);
+    }
+
+#editImgWindow {
+    display: none;
+    border-radius: 4px;
+    width: 936px;
+    height: 562px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1000;
+    background: #fff;
+    margin-top: -290px;
+    margin-left: -467px;
+}
+
+#editDZWindow {
+    display: none;
+    border-radius: 4px;
+    width: 936px;
+    height: 562px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1000;
+    background: #fff;
+    margin-top: -290px;
+    margin-left: -467px;
+}
+
+#editImgHead {
+    width: 100%;
+    height: 65px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 14px;
+    cursor: default;
+}
+
+    #editImgHead span {
+        font-size: 16px;
+        font-weight: 700;
+        position: absolute;
+        top: 20px;
+        left: 25px;
+    }
+
+    #editImgHead div {
+        height: 17px;
+        width: 17px;
+        position: absolute;
+        right: 25px;
+        top: 25px;
+        background-image: url(../images/close.png);
+        cursor: pointer;
+    }
+
+#canvasFrame {
+    z-index: 1001;
+    position: absolute;
+    left: 75.5px;
+    top: 56px;
+    width: 785px;
+    height: 435px;
+    background-color: #E1E1E1;
+}
+
+#canvas {
+    left: 0px;
+    top: 0px;
+    position: absolute;
+}
+
+#toolBar {
+    position: absolute;
+    left: 76px;
+    top: 495px;
+    width: 785px;
+    height: 60px;
+}
+
+#editToolBar {
+    position: absolute;
+    left: 50%;
+    margin-left: -90px;
+}
+
+.editToolButton {
+    height: 60px;
+    width: 60px;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    color: gray;
+}
+
+    .editToolButton span {
+        display: inline-block;
+        position: absolute;
+        bottom: 3px;
+        left: 15px;
+    }
+
+.editButtonIcon {
+    height: 27px;
+    width: 27px;
+    position: absolute;
+    left: 17px;
+    top: 5px;
+}
+
+.div_shadow {
+    display: none;
+    background-color: #000;
+    opacity: 0.5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+}
+
+.span_xzdz {
+    color: #31b0d5;
+    cursor: pointer;
+}
+
+    .span_xzdz:hover {
+        color: #ff6a00;
+    }
+
+.span_xzdz_img {
+    background-image: url(../images/expand_blue.png);
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+:-ms-input-placeholder.input_dtss {
+    color: #999;
+}
+
+.btn_dtss {
+    background-image: url(../images/bddt_search.png);
+    width: 42px;
+    height: 34px;
+    display: inline-block;
+    border: none;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+    .btn_dtss:hover {
+        background-image: url(../images/bddt_search_hover.png);
+    }
+
+.input_dtss {
+    border: 1px solid #cccccc;
+    border-right: none;
+    display: inline-block;
+    height: 34px;
+    font-size: 14px;
+    width: 320px;
+    padding-left: 12px;
+    float: left;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}

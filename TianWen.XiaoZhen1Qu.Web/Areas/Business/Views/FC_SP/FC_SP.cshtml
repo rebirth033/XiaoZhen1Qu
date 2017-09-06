@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = "FC_DZF";
+    ViewBag.Title = "FC_SP";
     Layout = "~/Areas/Business/Views/Shared/_ListLayout.cshtml";
 }
 
@@ -9,13 +9,10 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title></title>
-    <link href="@Url.Content("~/Areas/Business/Css/FC/FC_DZF.css")" rel="stylesheet" />
-    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/FC/FC_DZF.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/FC/FC_DZFYZ.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/FC/FC_DZFZP.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/jquery-ui-1.12.1.custom/jquery-ui.min.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/jquery-ui-1.12.1.custom/jquery.ui.datepicker-zh-CN.js")"></script>
-    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=134db1b9cf1f1f2b4427210932b34dcb"></script>
+    <link href="@Url.Content("~/Areas/Business/Css/FC/FC_SP.css")" rel="stylesheet" />
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/FC/FC_SP.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/FC/FC_SPYZ.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/FC/FC_SPZP.js")"></script>
 </head>
 <body>
     <div>
@@ -25,7 +22,8 @@
                     <td class="headtd">
                         <div style="width: 900px;">
                             <div class="divstep" id="divLBXZ">
-                                <span class="spanstep" id="spanLBXZ"></span><span id="spanCXLB" style="color: #5bc0de; cursor: pointer; font-size: 12px; margin-left: 2px">重选类别</span>
+                                <span class="spanstep" id="spanLBXZ"></span>
+                                <span id="spanCXLB" style="color: #5bc0de; cursor: pointer; font-size: 12px; margin-left: 2px">重选类别</span>
                                 <em class="emstep" id="emLBXZ"></em>
                             </div>
                             <div class="divstep" id="divTXXX">
@@ -42,19 +40,33 @@
             </table>
         </div>
         <div id="myTabContent" style="margin-left: 15%; padding-bottom: 150px;">
+            <div id="divFL" class="divSplit" style="display: block; text-align: left">
+                <span class="spanSplit">分类与供求</span>
+                <em class="emSplit"></em>
+            </div>
+            <div id="divFL" class="divFWCZ">
+                <div class="divLeft" style="margin-left: 128px;">
+                    <span class="required">*</span>
+                    <span class="spanFWCZ">分类</span>
+                </div>
+                <div class="divRight">
+                    <img class="iFWCZ" id="imgSPZS" /><label class="labelFWCZ">&nbsp;&nbsp;商铺租售&nbsp;&nbsp;</label>
+                    <img class="iFWCZ" id="imgSYZR" /><label class="labelFWCZ">&nbsp;&nbsp;生意转让</label>
+                </div>
+            </div>
+            <div id="divGQ" class="divFWCZ">
+                <div class="divLeft" style="margin-left: 128px;">
+                    <span class="required">*</span>
+                    <span class="spanFWCZ">供求</span>
+                </div>
+                <div class="divRight">
+                    <img class="iFWCZ" id="imgCZ" /><label class="labelFWCZ">&nbsp;&nbsp;出租&nbsp;&nbsp;</label>
+                    <img class="iFWCZ" id="imgCS" /><label class="labelFWCZ">&nbsp;&nbsp;出售</label>
+                </div>
+            </div>
             <div id="divJBXX" class="divSplit" style="display: block; text-align: left">
                 <span class="spanSplit">基本信息</span>
                 <em class="emSplit"></em>
-            </div>
-            <div id="divCZFS" class="divFWCZ">
-                <div class="divLeft">
-                    <span class="required">*</span>
-                    <span class="spanFWCZ">出租方式</span>
-                </div>
-                <div class="divRight">
-                    <img class="iFWCZ" id="imgDZF" /><label class="labelFWCZ">&nbsp;&nbsp;短租房&nbsp;&nbsp;</label>
-                    <img class="iFWCZ" id="imgRZF" /><label class="labelFWCZ">&nbsp;&nbsp;日租房</label>
-                </div>
             </div>
             <div id="divLX" class="divFWCZ" style="z-index: 999">
                 <div class="divLeft" style="margin-left: 128px;">
@@ -62,25 +74,63 @@
                     <span class="spanFWCZ">类型</span>
                 </div>
                 <div class="divRight">
-                    <div id="divFWLXText" class="spanFWLXOut SRK" style="border: 1px solid #cccccc; border-radius: 4px; z-index: 997; position: relative;">
+                    <div id="divSPLXText" class="spanFWLXOut SRK" style="border: 1px solid #cccccc; border-radius: 4px; z-index: 997; position: relative;">
                         <div class="spanFWLXIn" style="border: none; margin-top: 6px;">
-                            <span id="spanFWLX" class="spanFWQK spanFontColor" style="margin-top: 0">请选择类型</span>
+                            <span id="spanSPLX" class="spanFWQK spanFontColor" style="margin-top: 0">请选择类型</span>
                             <div class="divFWQKArrow"></div>
                         </div>
-                        <div id="divFWLX" class="divdropdown" style="margin-top: -7px; margin-left: -1px;">
+                        <div id="divSPLX" class="divdropdown" style="margin-top: -7px; margin-left: -1px;">
                         </div>
                     </div>
                 </div>
-                <div class="divLeft" style="margin-left:10px;">
+            </div>
+            <div id="divLSJY" class="divFWCZ" style="z-index: 997;">
+                <div class="divLeft" style="margin-left: 102px;">
                     <span class="required">*</span>
-                    <span class="spanFWCZ">最短租期</span>
+                    <span class="spanFWCZ">历史经营</span>
                 </div>
                 <div class="divRight">
-                    <span id="spanZDZQ" class="spanFWLX SRK" style="display: inline-block;">
-                        <input id="ZDZQ" maxlength="9" column="ZDZQ" class="inputLCFB spanFontColor" type="text" />
-                        <span class="spanFontColor">天</span>
+                    <span id="spanLSJY" class="spanFWLX SRK" style="display: inline-block;width: 322px;">
+                        <input id="LSJY" maxlength="9" column="LSJY" class="inputLCFB spanFontColor" type="text" style="width:320px;text-align:left;padding-left:12px;" />
                     </span>
-                    <div id="divZDZQTip" class="Warn" style="margin-left:471px;"></div>
+                    <div id="divLSJYTip" class="Warn" style="z-index: 996; position: relative;"></div>
+                </div>
+            </div>
+            <div id="divSZQY" class="divFWCZ" style="z-index: 995;">
+                <div class="divLeft" style="margin-left: 102px;">
+                    <span class="required">*</span>
+                    <span class="spanFWCZ">所在区域</span>
+                </div>
+                <div class="divRight">
+                    <div id="divQYText" class="spanFWLXOut SRK" style="border: 1px solid #cccccc; border-radius: 4px; z-index: 997; position: relative;">
+                        <div class="spanFWLXIn" style="border: none; margin-top: 6px;">
+                            <span id="spanQY" class="spanFWQK spanFontColor" style="margin-top: 0">请选择类型</span>
+                            <div class="divFWQKArrow"></div>
+                        </div>
+                        <div id="divQY" class="divdropdown" style="margin-top: -7px; margin-left: -1px;">
+                        </div>
+                    </div>
+                    <div id="divSQText" class="spanFWLXOut SRK" style="border: 1px solid #cccccc; border-radius: 4px; z-index: 997; position: relative;">
+                        <div class="spanFWLXIn" style="border: none; margin-top: 6px;">
+                            <span id="spanSQ" class="spanFWQK spanFontColor" style="margin-top: 0">请选择类型</span>
+                            <div class="divFWQKArrow"></div>
+                        </div>
+                        <div id="divSQ" class="divdropdown" style="margin-top: -7px; margin-left: -1px;">
+                        </div>
+                    </div>
+                    <div id="divSZQYTip" class="Warn" style="z-index: 996; position: relative;"></div>
+                </div>
+            </div>
+            <div id="divDD" class="divFWCZ" style="z-index: 997;">
+                <div class="divLeft" style="margin-left: 128px;">
+                    <span class="required">*</span>
+                    <span class="spanFWCZ">地段</span>
+                </div>
+                <div class="divRight">
+                    <span id="spanDD" class="spanFWLX SRK" style="display: inline-block;width: 322px;">
+                        <input id="DD" maxlength="9" column="DD" class="inputLCFB spanFontColor" type="text" style="width:320px;text-align:left;padding-left:12px;" />
+                    </span>
+                    <div id="divDDip" class="Warn" style="z-index: 996; position: relative;"></div>
                 </div>
             </div>
             <div id="divZJ" class="divFWCZ" style="z-index: 997;">
@@ -103,44 +153,17 @@
                     <div id="divZJTip" class="Warn" style="z-index: 996; position: relative;"></div>
                 </div>
             </div>
-            <div id="divTS" class="divFWCZ" style="z-index: 995; height:45px;margin-bottom:0px;">
+            <div id="divMJ" class="divFWCZ" style="z-index: 997;">
                 <div class="divLeft" style="margin-left: 128px;">
-                    <span class="required">*</span>
-                    <span class="spanFWCZ">特色</span>
-                </div>
-                <div class="divRight">
-                    <span id="spanYZRS" class="spanFWLX SRK" style="display: inline-block;">
-                        <input class="inputLCFB spanFontColor" id="YZRS" maxlength="6" column="YZRS" type="text" style="width:60px;" />
-                        <span class="spanFontColor">人宜租</span>
-                    </span>
-                </div>
-                <div class="divLeft" style="margin-left:10px;">
                     <span class="required">*</span>
                     <span class="spanFWCZ">面积</span>
                 </div>
                 <div class="divRight">
                     <span id="spanMJ" class="spanFWLX SRK" style="display: inline-block;">
-                        <input class="inputLCFB spanFontColor" id="MJ" maxlength="9" column="MJ" type="text" />
-                        <span class="spanFontColor">㎡</span>
+                        <input id="MJ" maxlength="9" column="MJ" class="inputLCFB spanFontColor" type="text" style="width: 124px" />
                     </span>
-                </div>
-            </div>
-            <div class="divFWCZ" style="z-index: 995; height:45px;margin-bottom:0px;">
-                <div class="divLeft" style="margin-left:10px;">
-                </div>
-                <div class="divRight">
-                    <div id="divYZRSTip" class="Warn" style="float:left;"></div>
-                    <div id="divMJTip" class="Warn" style="margin-right: 275px;float:right; margin-left:0px"></div>
-                </div>
-            </div>
-            <div id="divDZ" class="divFWCZ" style="z-index: 994">
-                <div class="divLeft" style="margin-left: 128px;">
-                    <span class="required">*</span>
-                    <span class="spanFWCZ">地址</span>
-                </div>
-                <div class="divRight">
-                    <span class="span_xzdz_img"></span>
-                    <span class="span_xzdz" id="span_xzdz">新增地址</span>
+                    平米
+                    <div id="divMJTip" class="Warn" style="z-index: 996; position: relative;"></div>
                 </div>
             </div>
             <div id="divXXXX" class="divSplit" style="display: block; text-align: left;">

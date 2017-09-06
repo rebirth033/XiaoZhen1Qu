@@ -164,6 +164,7 @@
     <Content Include="Areas\Business\Css\FBCG.css" />
     <Content Include="Areas\Business\Css\FC\FC_DZF.css" />
     <Content Include="Areas\Business\Css\FC\FC_FW.css" />
+    <Content Include="Areas\Business\Css\FC\FC_SP.css" />
     <Content Include="Areas\Business\Css\GRZL\GRZL.css" />
     <Content Include="Areas\Business\Css\GRZL\MMSZ.css" />
     <Content Include="Areas\Business\Css\HBSJ.css" />
@@ -341,6 +342,9 @@
     <Content Include="Areas\Business\Scripts\Business\FC\FC_DZF.js" />
     <Content Include="Areas\Business\Scripts\Business\FC\FC_DZFYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\FC\FC_DZFZP.js" />
+    <Content Include="Areas\Business\Scripts\Business\FC\FC_SP.js" />
+    <Content Include="Areas\Business\Scripts\Business\FC\FC_SPYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\FC\FC_SPZP.js" />
     <Content Include="Areas\Business\Scripts\Business\FWCG\FWCG.js" />
     <Content Include="Areas\Business\Scripts\Business\FC\FC_FW.js" />
     <Content Include="Areas\Business\Scripts\Business\FC\FC_FWYZ.js" />
@@ -696,6 +700,7 @@
     <Compile Include="Areas\Business\Controllers\FBCGController.cs" />
     <Compile Include="Areas\Business\Controllers\FC\FC_DZFController.cs" />
     <Compile Include="Areas\Business\Controllers\FC\FC_FWController.cs" />
+    <Compile Include="Areas\Business\Controllers\FC\FC_SPController.cs" />
     <Compile Include="Areas\Business\Controllers\GRZLController.cs" />
     <Compile Include="Areas\Business\Controllers\HFCZController.cs" />
     <Compile Include="Areas\Business\Controllers\LBXZController.cs" />
@@ -803,6 +808,7 @@
     <Content Include="Areas\Business\Scripts\UEditor\third-party\video-js\font\vjs.eot" />
     <Content Include="Areas\Business\Scripts\UEditor\third-party\video-js\font\vjs.ttf" />
     <Content Include="Areas\Business\Scripts\UEditor\third-party\video-js\font\vjs.woff" />
+    <Content Include="Areas\Business\Views\FC_SP\FC_SP.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
