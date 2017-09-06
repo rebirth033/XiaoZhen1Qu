@@ -5,6 +5,17 @@
     vertical-align: middle;
 }
 
+
+.div_top_left {
+    width: 400px;
+    margin-left: 100px;
+    text-align: left;
+    height: 25px;
+    padding-top: 5px;
+    float: left;
+    font-size:12px;
+}
+
 .div_top_right {
     width: 400px;
     margin-left: 71.3%;
@@ -12,6 +23,21 @@
     height: 25px;
     padding-top: 5px;
 }
+
+.span_dqxzq {
+    color: #ff6a00;
+    cursor: default;
+    margin-right:5px;
+}
+
+.span_qhcs {
+    cursor: pointer;
+}
+
+    .span_qhcs:hover {
+        text-decoration: underline;
+        color: #ff6a00;
+    }
 
 .div_top_right_inner {
     cursor: pointer;

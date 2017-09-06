@@ -48,21 +48,21 @@
 }
 
 .div_top_left {
-        width: 400px;
+    width: 400px;
     margin-left: 100px;
-    text-align: center;
+    text-align: left;
     height: 25px;
     padding-top: 5px;
-    float:left;
+    float: left;
 }
 
 .div_top_right {
-    width: 400px;
-    margin-left: 71.3%;
+    width: 360px;
+    margin-right: 13px;
     text-align: center;
     height: 25px;
     padding-top: 5px;
-    float:right;
+    float: right;
 }
 
 .div_top_right_inner {
@@ -77,4 +77,87 @@
     top: 0;
     left: 0;
     display: none;
+}
+
+.span_dqxzq {
+    color: #ff6a00;
+    cursor: default;
+    margin-right: 5px;
+}
+
+.span_qhcs {
+    cursor: pointer;
+}
+
+    .span_qhcs:hover {
+        text-decoration: underline;
+        color: #ff6a00;
+    }
+
+
+.ul_top_right_yhm {
+    width: 70px;
+    height: 150px;
+    padding-left: 0px;
+    margin-top: 20px;
+}
+
+.li_top_right_yhm {
+    width: 70px;
+    height: 30px;
+    font-size: 12px;
+    text-align: left;
+    background-color: #ffffff;
+    padding: 5px 5px;
+}
+
+    .li_top_right_yhm:hover {
+        background: #ececec;
+        color: #333333;
+    }
+
+.span_top_right {
+    text-decoration: none;
+    color: #666;
+    font-size: 12px;
+    float: left;
+}
+
+    .span_top_right:hover {
+        text-decoration: none;
+        color: #31b0d5;
+        cursor: pointer;
+    }
+
+.span_top_right_split {
+    width: 1px;
+    height: 12px;
+    background: #cccccc;
+    margin: 2px 10px 0 10px;
+    display: inline-block;
+    float: left;
+}
+
+.span_top_right_sjdl {
+    background-image: url(images/cellphone.png);
+    background-size: 100%;
+    width: 12px;
+    height: 21px;
+    margin: -3px 5px 0 5px;
+    display: inline-block;
+    float: left;
+}
+
+.span_top_right_yhm {
+    background-image: url(images/arrow_down.png);
+    width: 12px;
+    height: 18px;
+    margin: 0px 5px 0 5px;
+    float: left;
+}
+
+.span_top_right_yhm_text {
+    margin-left: 5px;
+    color: #31b0d5;
+    font-weight: 700;
 }

@@ -1,5 +1,7 @@
 ﻿$(document).ready(function () {
     LoadDL();
+    $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);
+    $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
 });
 
 function LoadDL() {
@@ -98,4 +100,79 @@ function LoadXL(LBID, LBNAME) {
 
 function FBXX(FBYM, LBID) {
     window.location.href = getRootPath() + "/Business/" + FBYM + "/" + FBYM + "?CLICKID=" + LBID;
+}
+
+//显示用户菜单
+function ShowYHCD() {
+    $("#div_top_right_dropdown_yhm").css("display", "block");
+    $("#span_top_right_yhm_img").css("background-image", 'url(' + getRootPath() + "/Areas/Business/Css/images/arrow_up.png" + ')');
+}
+//隐藏用户菜单
+function HideYHCD() {
+    $("#div_top_right_dropdown_yhm").css("display", "none");
+    $("#span_top_right_yhm_img").css("background-image", 'url(' + getRootPath() + "/Areas/Business/Css/images/arrow_down.png" + ')');
+}
+//显示我的信息
+function ShowWDXX() {
+    $("#liWDXX").css("font-size", "18px").css("font-weight", "700");
+    $("#liWDZH").css("font-size", "16px").css("font-weight", "normal");
+    $("#liWDZJ").css("font-size", "16px").css("font-weight", "normal");
+    $("#liSHGJ").css("font-size", "16px").css("font-weight", "normal");
+    $("#ulWDXX").css("display", "block");
+    $("#ulWDZH").css("display", "block");
+    $("#ulWDZJ").css("display", "block");
+    $("#ulSHGJ").css("display", "block");
+    ToWDFB();
+}
+//显示我的账户
+function ShowWDZH() {
+    $("#liWDXX").css("font-size", "16px").css("font-weight", "normal");
+    $("#liWDZH").css("font-size", "18px").css("font-weight", "700");
+    $("#liWDZJ").css("font-size", "16px").css("font-weight", "normal");
+    $("#liSHGJ").css("font-size", "16px").css("font-weight", "normal");
+    $("#ulWDXX").css("display", "none");
+    $("#ulWDZH").css("display", "block");
+    $("#ulWDZJ").css("display", "block");
+    $("#ulSHGJ").css("display", "block");
+    ToGRZL();
+}
+//显示我的资金
+function ShowWDZJ() {
+    $("#liWDXX").css("font-size", "16px").css("font-weight", "normal");
+    $("#liWDZH").css("font-size", "16px").css("font-weight", "normal");
+    $("#liWDZJ").css("font-size", "18px").css("font-weight", "700");
+    $("#liSHGJ").css("font-size", "16px").css("font-weight", "normal");
+    $("#ulWDXX").css("display", "none");
+    $("#ulWDZH").css("display", "none");
+    $("#ulWDZJ").css("display", "block");
+    $("#ulSHGJ").css("display", "block");
+    ToXJMXCX();
+}
+//显示生活工具
+function ShowSHGJ() {
+    $("#liWDXX").css("font-size", "16px").css("font-weight", "normal");
+    $("#liWDZH").css("font-size", "16px").css("font-weight", "normal");
+    $("#liWDZJ").css("font-size", "16px").css("font-weight", "normal");
+    $("#liSHGJ").css("font-size", "18px").css("font-weight", "700");
+    $("#ulWDXX").css("display", "none");
+    $("#ulWDZH").css("display", "none");
+    $("#ulWDZJ").css("display", "none");
+    $("#ulSHGJ").css("display", "block");
+    ToHFCZ();
+}
+//退出
+function Exit() {
+    window.location.href = getRootPath() + "/Business/YHDLXX/YHDLXX";
+}
+//我的发布
+function ToWDFB() {
+    window.location.href = getRootPath() + "/Business/YHGL/YHGL";
+}
+//个人资料
+function ToGRZL() {
+    window.location.href = getRootPath() + "/Business/YHGL/YHGL";
+}
+//话费充值
+function ToHFCZ() {
+    window.location.href = getRootPath() + "/Business/YHGL/YHGL";
 }
