@@ -9,5 +9,7 @@ namespace TianWen.XiaoZhen1Qu.Interface
         string GetYHZHXXIDByYHID(string YHID);
 
         YHJBXX GetYHJBXXByYHM(string YHM);
+
+        string GetLBQCByLBID(int LBID);
     }
 }

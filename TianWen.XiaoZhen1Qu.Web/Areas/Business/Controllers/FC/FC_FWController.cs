@@ -11,7 +11,6 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
     public class FC_FWController : BaseController
     {
         public IFWCZJBXXBLL FWCZJBXXBLL { get; set; }
-        public IBaseBLL BaseBLL { get; set; }
 
         public ActionResult FC_FW()
         {
@@ -21,25 +20,27 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         public JsonResult LoadCODES()
         {
             string TYPENAME = Request["TYPENAME"];
-            return Json(BaseBLL.LoadCODES(TYPENAME));
+            return Json(FWCZJBXXBLL.LoadCODES(TYPENAME));
         }
 
         public JsonResult FB()
         {
+            YHJBXX yhjbxx = FWCZJBXXBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string fyms = Request["FYMS"];
             string fwzp = Request["FWZP"];
             JCXX jcxx = JsonHelper.ConvertJsonToObject<JCXX>(json);
-            jcxx.YHID = "2718ced3-996d-427d-925d-a08e127cc0b8";
+            jcxx.YHID = yhjbxx.YHID;
             jcxx.LLCS = 0;
             jcxx.STATUS = 1;
             jcxx.ZXGXSJ = DateTime.Now;
             jcxx.CJSJ = DateTime.Now;
             jcxx.LXDZ = "福州市";
-            FWCZJBXX yhjbxx = JsonHelper.ConvertJsonToObject<FWCZJBXX>(json);
-            yhjbxx.FYMS = fyms;
+            jcxx.DH = Session["XZQ"].ToString() + "-" + FWCZJBXXBLL.GetLBQCByLBID(jcxx.LBID);
+            FWCZJBXX fwczjbxx = JsonHelper.ConvertJsonToObject<FWCZJBXX>(json);
+            fwczjbxx.FYMS = fyms;
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = FWCZJBXXBLL.SaveFWCZJBXX(jcxx, yhjbxx, photos);
+            object result = FWCZJBXXBLL.SaveFWCZJBXX(jcxx, fwczjbxx, photos);
             return Json(result);
         }
 

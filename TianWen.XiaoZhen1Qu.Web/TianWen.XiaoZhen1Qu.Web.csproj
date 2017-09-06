@@ -160,6 +160,7 @@
     <Content Include="Areas\Business\Css\BZZX\BZZX_SY_ZDJS.css" />
     <Content Include="Areas\Business\Css\BZZX\BZZX_SY_ZHMM.css" />
     <Content Include="Areas\Business\Css\BZZX\BZZX_WZJY.css" />
+    <Content Include="Areas\Business\Css\Common\XZQ.css" />
     <Content Include="Areas\Business\Css\FBCG.css" />
     <Content Include="Areas\Business\Css\FC\FC_DZF.css" />
     <Content Include="Areas\Business\Css\FC\FC_FW.css" />
@@ -336,6 +337,7 @@
     <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_WZJYZP.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\Common.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\Regular.js" />
+    <Content Include="Areas\Business\Scripts\Business\Common\XZQ.js" />
     <Content Include="Areas\Business\Scripts\Business\FC\FC_DZF.js" />
     <Content Include="Areas\Business\Scripts\Business\FC\FC_DZFYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\FC\FC_DZFZP.js" />

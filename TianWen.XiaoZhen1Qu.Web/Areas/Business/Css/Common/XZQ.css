@@ -1,0 +1,15 @@
+﻿.span_xzq {
+    display: inline-block;
+    width: 130px;
+    height: 30px;
+    text-align: center;
+    padding-top: 3px;
+    cursor: pointer;
+    float: left;
+}
+
+    .span_xzq:hover {
+        background-color: #5bc0de;
+        color: #fff;
+        font-weight: 700;
+    }

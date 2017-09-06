@@ -32,5 +32,11 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             object result = CommonBLL.GetDistrictBySuperCode(SupserCode);
             return Json(result);
         }
+
+        public JsonResult QHXZQ()
+        {
+            Session["XZQ"] = Request["XZQ"];
+            return Json(new { Result = EnResultType.Success });
+        }
     }
 }
