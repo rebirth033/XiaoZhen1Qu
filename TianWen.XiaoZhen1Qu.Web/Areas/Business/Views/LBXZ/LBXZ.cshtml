@@ -14,45 +14,74 @@
 </head>
 
 <body style="width: 100%; height: 100%;">
-<div style="width: 1440px; text-align: center;">
-    <div id="divLBHead" style="margin-left: 18%; margin-top: 20px;">
-        <table class="table" style="width: 100%; text-align: center;">
-            <tr>
-                <td class="headtd">
-                    <div style="width: 900px;">
-                        <div class="divstep" id="divXZDL">
-                            <span class="spanstep" id="spanXZDL">1.选择大类</span>
-                            <em class="emstep" id="emXZDL"></em>
-                        </div>
-                        <div class="divstep" id="divXZXL">
-                            <span class="spanstep" id="spanXZXL">2.选择小类</span>
-                            <em class="emstep" id="emXZXL"></em>
-                        </div>
-                        <div class="divstep" id="divFBXX">
-                            <span class="spanstep" id="spanFBXX">3.发布信息</span>
-                            <em class="emstep" id="emFBXX"></em>
-                        </div>
+    <div>
+        <div id="divTop" class="div_top">
+            <div class="div"></div>
+            <div class="div_top_right">
+                <span class="span_top_right">
+                    信息小镇首页
+                </span>
+                <span class="span_top_right_split"></span>
+                <div class="div_top_right_inner">
+                    <span class="span_top_right_sjdl"></span>
+                    <span class="span_top_right">
+                        手机登录
+                    </span>
+                </div>
+                <span class="span_top_right_split"></span>
+                <div class="div_top_right_inner" id="div_top_right_inner_yhm">
+                    <span class="span_top_right span_top_right_yhm_text" id="span_top_right_yhm_text">@ViewData["YHM"]</span>
+                    <span class="span_top_right_yhm" id="span_top_right_yhm_img"></span>
+                    <div class="div_top_right_dropdown_yhm" id="div_top_right_dropdown_yhm">
+                        <ul class="ul_top_right_yhm">
+                            <li class="li_top_right_yhm" onclick="ShowWDXX()">我的信息</li>
+                            <li class="li_top_right_yhm" onclick="ShowWDZH()">我的账户</li>
+                            <li class="li_top_right_yhm" onclick="ShowWDZJ()">我的资金</li>
+                            <li class="li_top_right_yhm" onclick="ShowSHGJ()">生活工具</li>
+                            <li class="li_top_right_yhm" onclick="Exit()">退出</li>
+                        </ul>
                     </div>
-                </td>
-            </tr>
-        </table>
+                </div>
+            </div>
+        </div>
+        <div id="divLBHead" style="margin-left: 15%;">
+            <table class="table" style="width: 100%; text-align: center;">
+                <tr>
+                    <td class="headtd">
+                        <div style="width: 900px;">
+                            <div class="divstep" id="divXZDL">
+                                <span class="spanstep" id="spanXZDL">1.选择大类</span>
+                                <em class="emstep" id="emXZDL"></em>
+                            </div>
+                            <div class="divstep" id="divXZXL">
+                                <span class="spanstep" id="spanXZXL">2.选择小类</span>
+                                <em class="emstep" id="emXZXL"></em>
+                            </div>
+                            <div class="divstep" id="divFBXX">
+                                <span class="spanstep" id="spanFBXX">3.发布信息</span>
+                                <em class="emstep" id="emFBXX"></em>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="myTabContent" style="margin-left: 15%;">
+            <div id="divDL" class="divLB" style="display: block; ">
+                <div id="divDLText" class="DLText">1.选择大类</div>
+                <img style="width: 20px; height: 28px; float: left;" src="@Url.Content("~/Areas/Business/Css/images/righttip.png")" />
+            </div>
+            <div id="divFirst" style="display: block; width: 900px; padding-top: 50px;">
+                <table id="tableDL" class="table" style="width: 900px;"></table>
+            </div>
+            <div id="divXL" class="divLB" style="display: none; ">
+                <div id="divXLText" class="DLText">2.选择小类</div>
+                <img style="width: 20px; height: 28px; float: left;" src="@Url.Content("~/Areas/Business/Css/images/righttip.png")" />
+            </div>
+            <div id="divSecond" style="display: block; width: 900px; padding-top: 50px; ">
+                <table id="tableXL" class="table" style="width: 900px;"></table>
+            </div>
+        </div>
     </div>
-    <div id="myTabContent" style="margin-left: 18%;">
-        <div id="divDL" class="divLB" style="display: block; ">
-            <div id="divDLText" class="DLText">1.选择大类</div>
-            <img style="width: 20px; height: 28px; float: left;" src="@Url.Content("~/Areas/Business/Css/images/righttip.png")"/>
-        </div>
-        <div id="divFirst" style="display: block; width: 900px; padding-top: 50px;">
-            <table id="tableDL" class="table" style="width: 900px;"></table>
-        </div>
-        <div id="divXL" class="divLB" style="display: none; ">
-            <div id="divXLText" class="DLText">2.选择小类</div>
-            <img style="width: 20px; height: 28px; float: left;" src="@Url.Content("~/Areas/Business/Css/images/righttip.png")"/>
-        </div>
-        <div id="divSecond" style="display: block; width: 900px; padding-top: 50px; ">
-            <table id="tableXL" class="table" style="width: 900px;"></table>
-        </div>
-    </div>
-</div>
 </body>
 </html>

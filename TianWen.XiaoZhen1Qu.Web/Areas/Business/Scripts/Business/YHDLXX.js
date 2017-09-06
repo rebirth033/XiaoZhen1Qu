@@ -14,6 +14,14 @@ $(document).ready(function () {
     $("#liSJDL").bind("click", Showcellphone);
     $("#liMMDL").bind("click", Showusername);
     $("#aWJMM").attr("href", getRootPath() + "/Business/ZHMM/ZHMM");
+    $("#username input").keydown(function (e) {
+        var curKey = e.which;
+        if (curKey == 13) MMDL();
+    });
+    $("#cellphone input").keydown(function (e) {
+        var curKey = e.which;
+        if (curKey == 13) SJDL();
+    });
 });
 
 function Showcellphone() {
