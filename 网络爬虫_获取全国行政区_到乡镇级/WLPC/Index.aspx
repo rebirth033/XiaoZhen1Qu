@@ -9,67 +9,129 @@
     <script src="Scripts/jquery-1.9.1.min.js"></script>
     <script type="text/javascript">
 
-        function JS() {
-            GetXQXX(3, "jinshana", "金山");
-        }
-        function GL() {
-            GetXQXX(13, "guloue", "鼓楼");
-        }
-        function TJ() {
-            GetXQXX(5, "taijiang", "台江");
-        }
-        function JA() {
-            GetXQXX(7, "jinana", "晋安");
-        }
-        function CS() {
-            GetXQXX(4, "cangshan", "仓山");
-        }
-        function MW() {
-            GetXQXX(2, "mawei", "马尾");
-        }
-        function MH() {
-            GetXQXX(2, "minhou", "闽侯");
-        }
-        function ZBXS() {
-            GetXQXX(5, "zhoubianxianshib", "周边县市");
-        }
+        //北京
+        function GetBJXZQ() { GetXZQXX("beijing"); }
+        //天津
+        function GetTJXZQ() { GetXZQXX("tianjin"); }
+        //上海
+        function GetSHJXZQ() { GetXZQXX("shanghai"); }
+        //重庆
+        function GetCQXZQ() { GetXZQXX("hainan"); }
 
-        function GetXQXX(size, hz, area) {
+        //吉林
+        function GetJLXZQ() { GetXZQXX("jilin"); }
+        //辽宁
+        function GetLNXZQ() { GetXZQXX("liaoning"); }
+        //黑龙江
+        function GetHLJXZQ() { GetXZQXX("heilongjiang"); }
+
+        //河北
+        function GetHBXZQ() { GetXZQXX("hebei"); }
+        //山西
+        function GetSXXZQ() { GetXZQXX("shanxisheng"); }
+        //内蒙
+        function GetNMXZQ() { GetXZQXX("neimenggu"); }
+        //山东
+        function GetSDXZQ() { GetXZQXX("shandong"); }
+
+        //江苏
+        function GetJSXZQ() { GetXZQXX("jiangsu"); }
+        //浙江
+        function GetZJXZQ() { GetXZQXX("zhejiangsheng"); }
+        //安徽
+        function GetAHXZQ() { GetXZQXX("anhui"); }
+        //福建
+        function GetFJXZQ() { GetXZQXX("fujian"); }
+        //江西
+        function GetJXXZQ() { GetXZQXX("jiangxi"); }
+
+        //河南
+        function GetHNXZQ() { GetXZQXX("henan"); }
+        //湖北
+        function GetHuBXZQ() { GetXZQXX("hubei"); }
+        //湖南
+        function GetHUNXZQ() { GetXZQXX("hunan"); }
+        //广东
+        function GetGDXZQ() { GetXZQXX("guangdong"); }
+        //广西
+        function GetGXXZQ() { GetXZQXX("guangxi"); }
+        //海南
+        function GetHaiNXZQ() { GetXZQXX("hainan"); }
+        //陕西
+        function GetShanXXZQ() { GetXZQXX("shanxi"); }
+        //甘肃
+        function GetGSXZQ() { GetXZQXX("hainan"); }
+        //青海
+        function GetQHXZQ() { GetXZQXX("hainan"); }
+        //宁夏
+        function GetNXXZQ() { GetXZQXX("hainan"); }
+        //新疆
+        function GetXJXZQ() { GetXZQXX("hainan"); }
+        //四川
+        function GetSCXZQ() { GetXZQXX("sichuan"); }
+        //贵州
+        function GetGZXZQ() { GetXZQXX("guizhou"); }
+        //云南
+        function GetYNXZQ() { GetXZQXX("yunnan"); }
+        //西藏
+        function GetCQXZQ() { GetXZQXX("Tibet"); }
+
+        function GetXZQXX(xzq) {
             var url = "";
-            for (var i = 1; i <= size; i++) {
-                url = "https://www.anjuke.com/fz/cm/" + hz + "/p" + i;
-                $.ajax({
-                    url: "Ashx/GetXQXX.ashx",
-                    type: "POST",
-                    async: false,
-                    dataType: "json",
-                    data: {
-                        lianjie: url,
-                        page: i,
-                        area: area
-                    },
-                    success: function (data) {
-                        //alert(data.responseText);
-                    },
-                    error: function (data) {
-                        //alert(data.responseText);
-                    }
-                });
-            }
+            url = "http://www.tcmap.com.cn/" + xzq + "/";
+            $.ajax({
+                url: "Ashx/GetXZQXX.ashx",
+                type: "POST",
+                async: false,
+                dataType: "json",
+                data: {
+                    url: url,
+                    xzq: xzq
+                },
+                success: function (data) {
+                    //alert(data.responseText);
+                },
+                error: function (data) {
+                    //alert(data.responseText);
+                }
+            });
         }
 
     </script>
 </head>
 <body>
     <form id="form1" runat="server">
-        <input type="button" value="金山" onclick="JS()" />
-        <input type="button" value="鼓楼" onclick="GL()" />
-        <input type="button" value="台江" onclick="TJ()" />
-        <input type="button" value="晋安" onclick="JA()" />
-        <input type="button" value="仓山" onclick="CS()" />
-        <input type="button" value="马尾" onclick="MW()" />
-        <input type="button" value="闽侯" onclick="MH()" />
-        <input type="button" value="周边县市" onclick="ZBXS()" />
+        <input type="button" value="获取北京" onclick="GetBJXZQ()" />
+        <input type="button" value="获取天津" onclick="GetTJXZQ()" />
+        <input type="button" value="获取上海" onclick="GetSHJXZQ()" />
+        <input type="button" value="获取重庆" onclick="GetCQXZQ()" />
+        <input type="button" value="获取吉林" onclick="GetJLXZQ()" />
+        <input type="button" value="获取辽宁" onclick="GetLNXZQ()" />
+        <input type="button" value="获取黑龙" onclick="GetHLJXZQ()" />
+        <input type="button" value="获取河北" onclick="GetHBXZQ()" />
+        <input type="button" value="获取山西" onclick="GetSXXZQ()" />
+        <input type="button" value="获取内蒙" onclick="GetNMXZQ()" />
+        <input type="button" value="获取山东" onclick="GetSDXZQ()" />
+        <input type="button" value="获取江苏" onclick="GetJSXZQ()" />
+        <input type="button" value="获取浙江" onclick="GetZJXZQ()" />
+        <input type="button" value="获取安徽" onclick="GetAHXZQ()" />
+        <input type="button" value="获取福建" onclick="GetFJXZQ()" />
+        <input type="button" value="获取江西" onclick="GetJXXZQ()" />
+        <input type="button" value="获取河南" onclick="GetHNXZQ()" />
+        <input type="button" value="获取湖北" onclick="GetHuBXZQ()" />
+        <input type="button" value="获取湖南" onclick="GetHUNXZQ()" />
+        <input type="button" value="获取广东" onclick="GetGDXZQ()" />
+        <input type="button" value="获取广西" onclick="GetGXXZQ()" />
+        <input type="button" value="获取海南" onclick="GetHaiNXZQ()" />
+        <input type="button" value="获取陕西" onclick="GetShanXXZQ()" />
+        <input type="button" value="获取甘肃" onclick="GetGSXZQ()" />
+        <input type="button" value="获取青海" onclick="GetQHXZQ()" />
+        <input type="button" value="获取宁夏" onclick="GetNXXZQ()" />
+        <input type="button" value="获取新疆" onclick="GetXJXZQ()" />
+        <input type="button" value="获取四川" onclick="GetSCXZQ()" />
+        <input type="button" value="获取贵州" onclick="GetGZXZQ()" />
+        <input type="button" value="获取云南" onclick="GetYNXZQ()" />
+        <input type="button" value="获取西藏" onclick="GetCQXZQ()" />
     </form>
 </body>
 </html>
