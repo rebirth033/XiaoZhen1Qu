@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width" />
     <title></title>
     <link href="@Url.Content("~/Areas/Business/Css/FC/FC_FW.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Areas/Business/Css/Common/Top.css" )" rel="stylesheet" />
     <link href="@Url.Content("~/Areas/Business/Scripts/jquery-ui-1.12.1.custom/jquery-ui.min.css")" rel="stylesheet" />
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/FC/FC_FW.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/FC/FC_FWYZ.js")"></script>
@@ -19,6 +20,41 @@
 </head>
 <body>
     <div class="div_body">
+        <div id="divTop" class="div_top">
+            <div class="div_top_left">
+                <span class="span_dqxzq" id="span_content_info_xzq">@ViewData["XZQ"]</span>
+                [<span class="span_qhcs" id="span_content_info_qhcs">切换城市</span>]
+            </div>
+            <div id="div_XZQ" class="div_dropdown">
+
+            </div>
+            <div class="div_top_right">
+                <span class="span_top_right">
+                    信息小镇首页
+                </span>
+                <span class="span_top_right_split"></span>
+                <div class="div_top_right_inner">
+                    <span class="span_top_right_sjdl"></span>
+                    <span class="span_top_right">
+                        手机登录
+                    </span>
+                </div>
+                <span class="span_top_right_split"></span>
+                <div class="div_top_right_inner" id="div_top_right_inner_yhm">
+                    <span class="span_top_right span_top_right_yhm_text" id="span_top_right_yhm_text">@ViewData["YHM"]</span>
+                    <span class="span_top_right_yhm" id="span_top_right_yhm_img"></span>
+                    <div class="div_top_right_dropdown_yhm" id="div_top_right_dropdown_yhm">
+                        <ul class="ul_top_right_yhm">
+                            <li class="li_top_right_yhm" onclick="ShowWDXX()">我的信息</li>
+                            <li class="li_top_right_yhm" onclick="ShowWDZH()">我的账户</li>
+                            <li class="li_top_right_yhm" onclick="ShowWDZJ()">我的资金</li>
+                            <li class="li_top_right_yhm" onclick="ShowSHGJ()">生活工具</li>
+                            <li class="li_top_right_yhm" onclick="Exit()">退出</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="div_head" id="divLBHead">
             <table class="table">
                 <tr>

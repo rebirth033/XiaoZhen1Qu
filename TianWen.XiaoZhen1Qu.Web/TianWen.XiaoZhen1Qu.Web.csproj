@@ -160,6 +160,7 @@
     <Content Include="Areas\Business\Css\BZZX\BZZX_SY_ZDJS.css" />
     <Content Include="Areas\Business\Css\BZZX\BZZX_SY_ZHMM.css" />
     <Content Include="Areas\Business\Css\BZZX\BZZX_WZJY.css" />
+    <Content Include="Areas\Business\Css\Common\Top.css" />
     <Content Include="Areas\Business\Css\Common\XZQ.css" />
     <Content Include="Areas\Business\Css\FBCG.css" />
     <Content Include="Areas\Business\Css\FC\FC_DZF.css" />

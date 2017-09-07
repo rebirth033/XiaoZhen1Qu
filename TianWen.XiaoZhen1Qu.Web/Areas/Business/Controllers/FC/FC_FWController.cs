@@ -14,6 +14,8 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public ActionResult FC_FW()
         {
+            ViewData["XZQ"] = Session["XZQ"];
+            ViewData["YHM"] = Session["YHM"];
             return View();
         }
 
