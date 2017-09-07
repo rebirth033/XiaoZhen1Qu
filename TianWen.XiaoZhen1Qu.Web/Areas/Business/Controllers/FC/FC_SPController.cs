@@ -22,5 +22,10 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         {
             return Json(FC_SPBLL.LoadQYBySuperName(Session["XZQ"].ToString()));
         }
+
+        public JsonResult LoadSQ()
+        {
+            return Json(FC_SPBLL.LoadSQByQY(Request["QY"].ToString()));
+        }
     }
 }

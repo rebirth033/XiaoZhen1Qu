@@ -13,7 +13,6 @@ $(document).ready(function () {
     $("#FYMS").bind("blur", FYMSBlur);
     $("#inputUpload").bind("change", Upload);
     $("#btnClose").bind("click", CloseWindow);
-    $("#span_xzdz").bind("click", OpenXZDZ);
     $("#div_dz_close").bind("click", CloseWindow);
     $("#span_content_info_qhcs").bind("click", LoadXZQByGrade);
     $("body").bind("click", CloseXZQ);
@@ -21,11 +20,12 @@ $(document).ready(function () {
     LoadTXXX();
     BindHover("SPLX");
     BindHover("QY");
+    BindHover("SQ");
     LoadSPLX();
     LoadQY();
     LoadZJDW();
     LoadDefault();
-    LoadFC_DZFJBXX();
+    LoadFC_SPJBXX();
     //FYMSSetDefault();
 });
 //房屋描述框focus
@@ -50,46 +50,6 @@ function LoadDefault() {
     $("#imgSYZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
     $("#imgCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
     $("#imgCS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
-//打开新增地址
-function OpenXZDZ() {
-    $("#shadow").css("display", "block");
-    $("#editDZWindow").css("display", "block");
-    var map = new BMap.Map("container");//创建地图实例
-    map.centerAndZoom("福州市", 11);//创建点坐标,地图初始化
-    map.enableScrollWheelZoom(true);//允许鼠标滑轮放大缩小 
-    map.enableContinuousZoom(true);//允许惯性拖拽
-    map.addControl(new BMap.NavigationControl({ isOpen: true, anchor: BMAP_ANCHOR_BOTTOM_LEFT }));  //添加默认缩放平移控件,右上角打开
-    map.addControl(new BMap.OverviewMapControl({ isOpen: true, anchor: BMAP_ANCHOR_BOTTOM_RIGHT })); //添加默认缩略地图控件,右下角打开
-    map.addControl(new BMap.MapTypeControl());//添加卫星控件
-
-    $("#input_dtss").keydown(function (e) {
-        var curKey = e.which;
-        if (curKey == 13) {
-            searchByStationName(map);
-            return false;
-        }
-    });
-    $("#btn_dtss").click(function () { searchByStationName(map); });
-    $("#btn_savedz").click(function () { SaveDZ(); });
-}
-
-function SaveDZ() {
-    CloseWindow();
-}
-//地址定位
-function searchByStationName(map) {
-    map.clearOverlays();//清空原来的标注
-    var keyword = document.getElementById("input_dtss").value;
-    var localSearch = new BMap.LocalSearch(map);
-    localSearch.enableAutoViewport(); //允许自动调节窗体大小
-    localSearch.setSearchCompleteCallback(function (searchResult) {
-        var poi = searchResult.getPoi(0);
-        map.centerAndZoom(poi.point, 13);
-        var marker = new BMap.Marker(new BMap.Point(poi.point.lng, poi.point.lat));  // 创建标注，为要查询的地址对应的经纬度
-        map.addOverlay(marker);
-    });
-    localSearch.search(keyword);
 }
 //加载图形信息
 function LoadTXXX() {
@@ -152,7 +112,7 @@ function LoadSPLX() {
             if (xml.Result === 1) {
                 var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectSPLX(this)'>" + xml.list[i].CODENAME + "</li>";
+                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"SPLX\")'>" + xml.list[i].CODENAME + "</li>";
                 }
                 html += "</ul>";
                 $("#divSPLX").html(html);
@@ -178,11 +138,37 @@ function LoadQY() {
             if (xml.Result === 1) {
                 var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectQY(this)'>" + RTrim(RTrim(RTrim(xml.list[i].NAME, '市'), '区'),'县') + "</li>";
+                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"QY\")'>" + RTrim(RTrim(RTrim(xml.list[i].NAME, '市'), '区'), '县') + "</li>";
                 }
                 html += "</ul>";
                 $("#divQY").html(html);
                 $("#divQY").css("display", "none");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//加载商圈
+function LoadSQ(QY) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/FC_SP/LoadSQ",
+        dataType: "json",
+        data:
+        {
+            QY: QY
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"SQ\")'>" + RTrimStr(xml.list[i].NAME, '街道,镇,林场,管理处') + "</li>";
+                }
+                html += "</ul>";
+                $("#divSQ").html(html);
+                $("#divSQ").css("display", "none");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -245,22 +231,12 @@ function BindHover(type) {
         LeaveStyle(type);
     });
 }
-
-function SelectSPLX(obj) {
-    $("#spanSPLX").html(obj.innerHTML);
-    $("#divSPLX").css("display", "none");
-}
-
-function SelectZJDW(obj) {
-    $("#spanZJDW").html(obj.innerHTML);
-    $("#divZJDW").css("display", "none");
-}
-
-function SelectFWPZ(obj) {
-    if ($(obj).css("color") === "rgb(51, 51, 51)")
-        $(obj).css("color", "#5bc0de");
-    else
-        $(obj).css("color", "#333333");
+//选择下拉框
+function SelectDropdown(obj, type) {
+    $("#span" + type).html(obj.innerHTML);
+    $("#div" + type).css("display", "none");
+    if (type === "QY")
+        LoadSQ(obj.innerHTML);
 }
 
 function GetDX(type) {
@@ -282,25 +258,25 @@ function SetDX(type, value) {
     return result.substr(0, result.length - 1);
 }
 
-function GetCZFS() {
-    if ($("#imgZTCZ").css("background-position") === "-67px -57px")
+function GetFL() {
+    if ($("#imgSPCZ").css("background-position") === "-67px -57px")
         return "0";
     else
         return "1";
 }
 
-function SetCZFS(CZFS) {
-    if (CZFS === 0) {
-        $("#imgZTCZ").css("background-position", "-67px -57px");
-        $("#imgDJCZ").css("background-position", "-67px 0px");
+function SetFL(SPCZ) {
+    if (SPCZ === 0) {
+        $("#imgSPCZ").css("background-position", "-67px -57px");
+        $("#imgSYZR").css("background-position", "-67px 0px");
     }
     else {
-        $("#imgZTCZ").css("background-position", "-67px 0px");
-        $("#imgDJCZ").css("background-position", "-67px -57px");
+        $("#imgSPCZ").css("background-position", "-67px 0px");
+        $("#imgSYZR").css("background-position", "-67px -57px");
     }
 }
-
-function LoadFC_DZFJBXX() {
+//加载房产_商铺基本信息
+function LoadFC_SPJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/FC_DZF/LoadFC_DZFJBXX",
@@ -333,15 +309,15 @@ function LoadFC_DZFJBXX() {
         }
     });
 }
-
+//鼠标经过
 function MouseOver() {
     isleave = false;
 }
-
+//鼠标离开
 function MouseLeave() {
     isleave = true;
 }
-
+//发布
 function FB() {
     if (AllValidate() === false) return;
     var jsonObj = new JsonDB("myTabContent");

@@ -51,6 +51,19 @@ function RTrim(str, char) {
         return str;
 }
 
+//移除字串末尾指定字符串
+function RTrimStr(str, strchar) {
+    var arr = strchar.split(',');
+    var value = str;
+    for (var i = 0; i < arr.length; i++) {
+        if (str.indexOf(arr[i]) !== -1) {
+            value = str.substring(0, str.length - arr[i].length);
+            break;
+        }
+    }
+    return value;
+}
+
 //将字符串内容倒序输出
 function reverseStr(olds) {
     var ss = "";
@@ -68,7 +81,7 @@ function getQueryString(name) {
         return unescape(r[2]);
     return null;
 }
- 
+
 //方法:Array.remove(dx) 功能:删除数组元素. 参数:dx删除元素的下标. 返回:在原数组上修改数组 
 Array.prototype.remove = function (dx) {
     if (isNaN(dx) || dx > this.length) { return false; }
