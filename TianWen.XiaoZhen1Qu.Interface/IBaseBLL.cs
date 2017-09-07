@@ -6,6 +6,8 @@ namespace TianWen.XiaoZhen1Qu.Interface
     {
         object LoadCODES(string TYPENAME);
 
+        object LoadQYBySuperName(string SUPERNAME);
+
         string GetYHZHXXIDByYHID(string YHID);
 
         YHJBXX GetYHJBXXByYHM(string YHM);

@@ -11,13 +11,15 @@
     <title></title>
     <link href="@Url.Content("~/Areas/Business/Css/FC/FC_SP.css")" rel="stylesheet" />
     <link href="@Url.Content("~/Areas/Business/Css/Common/Top.css" )" rel="stylesheet" />
+    <link href="@Url.Content("~/Areas/Business/Css/Common/XZQ.css" )" rel="stylesheet" />
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/Common/XZQ.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/FC/FC_SP.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/FC/FC_SPYZ.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/FC/FC_SPZP.js")"></script>
 </head>
 <body>
     <div>
-        <div id="divTop" class="div_top">
+        <div id="divTop" class="div_top" style="z-index: 1002; position:relative;">
             <div class="div_top_left">
                 <span class="span_dqxzq" id="span_content_info_xzq">@ViewData["XZQ"]</span>
                 [<span class="span_qhcs" id="span_content_info_qhcs">切换城市</span>]
@@ -52,7 +54,7 @@
                 </div>
             </div>
         </div>
-        <div id="divLBHead" style="margin-left: 15%; margin-top: 20px;">
+        <div id="divLBHead" style="margin-left: 15%; margin-top: 20px;z-index: 1001;position:relative;">
             <table class="table" style="width: 100%; text-align: center;">
                 <tr>
                     <td class="headtd">
@@ -120,7 +122,7 @@
                     </div>
                 </div>
             </div>
-            <div id="divLSJY" class="divFWCZ" style="z-index: 997;">
+            <div id="divLSJY" class="divFWCZ" style="z-index: 998;">
                 <div class="divLeft" style="margin-left: 102px;">
                     <span class="required">*</span>
                     <span class="spanFWCZ">历史经营</span>
@@ -132,7 +134,7 @@
                     <div id="divLSJYTip" class="Warn" style="z-index: 996; position: relative;"></div>
                 </div>
             </div>
-            <div id="divSZQY" class="divFWCZ" style="z-index: 995;">
+            <div id="divSZQY" class="divFWCZ" style="z-index: 997;">
                 <div class="divLeft" style="margin-left: 102px;">
                     <span class="required">*</span>
                     <span class="spanFWCZ">所在区域</span>
@@ -157,7 +159,7 @@
                     <div id="divSZQYTip" class="Warn" style="z-index: 996; position: relative;"></div>
                 </div>
             </div>
-            <div id="divDD" class="divFWCZ" style="z-index: 997;">
+            <div id="divDD" class="divFWCZ" style="z-index: 996;">
                 <div class="divLeft" style="margin-left: 128px;">
                     <span class="required">*</span>
                     <span class="spanFWCZ">地段</span>
@@ -169,7 +171,7 @@
                     <div id="divDDip" class="Warn" style="z-index: 996; position: relative;"></div>
                 </div>
             </div>
-            <div id="divZJ" class="divFWCZ" style="z-index: 997;">
+            <div id="divZJ" class="divFWCZ" style="z-index: 995;">
                 <div class="divLeft" style="margin-left: 128px;">
                     <span class="required">*</span>
                     <span class="spanFWCZ">租金</span>
@@ -189,7 +191,7 @@
                     <div id="divZJTip" class="Warn" style="z-index: 996; position: relative;"></div>
                 </div>
             </div>
-            <div id="divMJ" class="divFWCZ" style="z-index: 997;">
+            <div id="divMJ" class="divFWCZ" style="z-index: 994;">
                 <div class="divLeft" style="margin-left: 128px;">
                     <span class="required">*</span>
                     <span class="spanFWCZ">面积</span>

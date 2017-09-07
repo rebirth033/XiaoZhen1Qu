@@ -378,14 +378,3 @@
     margin-top: 19px;
     cursor: pointer;
 }
-
-.div_dropdown {
-    width: 522px;
-    height: 242px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    position: absolute;
-    top: 25px;
-    left: 100px;
-    display: none;
-}

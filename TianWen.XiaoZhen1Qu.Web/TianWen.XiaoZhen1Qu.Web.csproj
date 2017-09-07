@@ -810,6 +810,7 @@
     <Content Include="Areas\Business\Scripts\UEditor\third-party\video-js\font\vjs.ttf" />
     <Content Include="Areas\Business\Scripts\UEditor\third-party\video-js\font\vjs.woff" />
     <Content Include="Areas\Business\Views\FC_SP\FC_SP.cshtml" />
+    <Content Include="ClassDiagram1.cd" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

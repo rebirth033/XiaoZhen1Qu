@@ -15,10 +15,14 @@ $(document).ready(function () {
     $("#btnClose").bind("click", CloseWindow);
     $("#span_xzdz").bind("click", OpenXZDZ);
     $("#div_dz_close").bind("click", CloseWindow);
+    $("#span_content_info_qhcs").bind("click", LoadXZQByGrade);
+    $("body").bind("click", CloseXZQ);
 
     LoadTXXX();
-    BindHover();
+    BindHover("SPLX");
+    BindHover("QY");
     LoadSPLX();
+    LoadQY();
     LoadZJDW();
     LoadDefault();
     LoadFC_DZFJBXX();
@@ -160,6 +164,32 @@ function LoadSPLX() {
         }
     });
 }
+//加载区域
+function LoadQY() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/FC_SP/LoadQY",
+        dataType: "json",
+        data:
+        {
+            
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='lidropdown' onclick='SelectQY(this)'>" + RTrim(RTrim(RTrim(xml.list[i].NAME, '市'), '区'),'县') + "</li>";
+                }
+                html += "</ul>";
+                $("#divQY").html(html);
+                $("#divQY").css("display", "none");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
 //加载租金单位
 function LoadZJDW() {
     $.ajax({
@@ -199,20 +229,20 @@ function LeaveStyle(name) {
     $("#span" + name).css("color", "#999999");
 }
 
-function BindHover() {
-    $("#divSPLXText").hover(function () {
-        $("#divSPLX").css("display", "block");
-        HoverStyle("SPLX");
+function BindHover(type) {
+    $("#div" + type + "Text").hover(function () {
+        $("#div" + type).css("display", "block");
+        HoverStyle(type);
     }, function () {
-        $("#divSPLX").css("display", "none");
-        LeaveStyle("SPLX");
+        $("#div" + type).css("display", "none");
+        LeaveStyle(type);
     });
-    $("#divSPLX").hover(function () {
-        $("#divSPLX").css("display", "block");
-        HoverStyle("SPLX");
+    $("#div" + type).hover(function () {
+        $("#div" + type).css("display", "block");
+        HoverStyle(type);
     }, function () {
-        $("#divSPLX").css("display", "none");
-        LeaveStyle("SPLX");
+        $("#div" + type).css("display", "none");
+        LeaveStyle(type);
     });
 }
 

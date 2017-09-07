@@ -13,6 +13,8 @@ $(document).ready(function () {
     $("#btnClose").bind("click", CloseWindow);
     $("#span_xzdz").bind("click", OpenXZDZ);
     $("#div_dz_close").bind("click", CloseWindow);
+    $("#span_content_info_qhcs").bind("click", LoadXZQByGrade);
+    $("body").bind("click", CloseXZQ);
 
     LoadTXXX();
     BindHover();

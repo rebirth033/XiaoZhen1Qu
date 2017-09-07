@@ -11,7 +11,9 @@
     <title></title>
     <link href="@Url.Content("~/Areas/Business/Css/FC/FC_FW.css")" rel="stylesheet" />
     <link href="@Url.Content("~/Areas/Business/Css/Common/Top.css" )" rel="stylesheet" />
+    <link href="@Url.Content("~/Areas/Business/Css/Common/XZQ.css" )" rel="stylesheet" />
     <link href="@Url.Content("~/Areas/Business/Scripts/jquery-ui-1.12.1.custom/jquery-ui.min.css")" rel="stylesheet" />
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/Common/XZQ.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/FC/FC_FW.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/FC/FC_FWYZ.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/FC/FC_FWZP.js")"></script>
@@ -20,7 +22,7 @@
 </head>
 <body>
     <div class="div_body">
-        <div id="divTop" class="div_top">
+        <div id="divTop" class="div_top" style="z-index: 1002; position:relative;">
             <div class="div_top_left">
                 <span class="span_dqxzq" id="span_content_info_xzq">@ViewData["XZQ"]</span>
                 [<span class="span_qhcs" id="span_content_info_qhcs">切换城市</span>]
@@ -55,7 +57,7 @@
                 </div>
             </div>
         </div>
-        <div class="div_head" id="divLBHead">
+        <div class="div_head" id="divLBHead" style="z-index: 1001; position:relative;">
             <table class="table">
                 <tr>
                     <td>

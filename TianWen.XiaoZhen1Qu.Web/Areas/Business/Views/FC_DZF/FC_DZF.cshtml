@@ -11,6 +11,8 @@
     <title></title>
     <link href="@Url.Content("~/Areas/Business/Css/FC/FC_DZF.css")" rel="stylesheet" />
     <link href="@Url.Content("~/Areas/Business/Css/Common/Top.css" )" rel="stylesheet" />
+    <link href="@Url.Content("~/Areas/Business/Css/Common/XZQ.css" )" rel="stylesheet" />
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/Common/XZQ.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/FC/FC_DZF.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/FC/FC_DZFYZ.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/FC/FC_DZFZP.js")"></script>
@@ -20,7 +22,7 @@
 </head>
 <body>
     <div>
-        <div id="divTop" class="div_top">
+        <div id="divTop" class="div_top" style="z-index: 1002; position:relative;">
             <div class="div_top_left">
                 <span class="span_dqxzq" id="span_content_info_xzq">@ViewData["XZQ"]</span>
                 [<span class="span_qhcs" id="span_content_info_qhcs">切换城市</span>]
@@ -55,7 +57,7 @@
                 </div>
             </div>
         </div>
-        <div id="divLBHead" style="margin-left: 15%; margin-top: 20px;">
+        <div id="divLBHead" style="margin-left: 15%; margin-top: 20px;z-index: 1001; position:relative;">
             <table class="table" style="width: 100%; text-align: center;">
                 <tr>
                     <td class="headtd">

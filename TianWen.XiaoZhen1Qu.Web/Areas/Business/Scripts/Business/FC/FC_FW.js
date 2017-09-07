@@ -16,6 +16,8 @@ $(document).ready(function () {
     $("#KRZSJ").datepicker({ minDate: 0 });
     $("#inputUpload").bind("change", Upload);
     $("#btnClose").bind("click", CloseWindow);
+    $("#span_content_info_qhcs").bind("click", LoadXZQByGrade);
+    $("body").bind("click", CloseXZQ);
 
     BindHover();
     LoadTXXX();

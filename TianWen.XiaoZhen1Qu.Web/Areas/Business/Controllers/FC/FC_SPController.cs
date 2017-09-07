@@ -17,5 +17,10 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             ViewData["YHM"] = Session["YHM"];
             return View();
         }
+
+        public JsonResult LoadQY()
+        {
+            return Json(FC_SPBLL.LoadQYBySuperName(Session["XZQ"].ToString()));
+        }
     }
 }
