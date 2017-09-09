@@ -60,13 +60,13 @@
         //陕西
         function GetShanXXZQ() { GetXZQXX("shanxi"); }
         //甘肃
-        function GetGSXZQ() { GetXZQXX("hainan"); }
+        function GetGSXZQ() { GetXZQXX("gansusheng"); }
         //青海
-        function GetQHXZQ() { GetXZQXX("hainan"); }
+        function GetQHXZQ() { GetXZQXX("qinghai"); }
         //宁夏
-        function GetNXXZQ() { GetXZQXX("hainan"); }
+        function GetNXXZQ() { GetXZQXX("ningxia"); }
         //新疆
-        function GetXJXZQ() { GetXZQXX("hainan"); }
+        function GetXJXZQ() { GetXZQXX("xinjiang"); }
         //四川
         function GetSCXZQ() { GetXZQXX("sichuan"); }
         //贵州
