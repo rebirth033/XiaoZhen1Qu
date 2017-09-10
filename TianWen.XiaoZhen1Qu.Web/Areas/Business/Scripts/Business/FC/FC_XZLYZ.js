@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
-    $("#LSJY").bind("blur", ValidateLSJY);
-    $("#LSJY").bind("focus", InfoLSJY);
+    $("#LPMC").bind("blur", ValidateLPMC);
+    $("#LPMC").bind("focus", InfoLPMC);
     $("#DD").bind("blur", ValidateDD);
     $("#DD").bind("focus", InfoDD);
     $("#ZJ").bind("blur", ValidateZJ);
@@ -16,8 +16,8 @@
     $("#LXDH").bind("blur", ValidateLXDH);
     $("#LXDH").bind("focus", InfoLXDH);
 });
-//验证历史经营
-function ValidateLSJY() {
+//验证楼盘名称
+function ValidateLPMC() {
     if ($("#LSJY").val() === "" || $("#LSJY").val() === null) {
         $("#divLSJYTip").css("display", "block");
         $("#divLSJYTip").attr("class", "Warn");

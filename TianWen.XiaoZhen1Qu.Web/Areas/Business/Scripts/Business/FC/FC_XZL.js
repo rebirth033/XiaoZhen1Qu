@@ -24,15 +24,17 @@ $(document).ready(function () {
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
 
     LoadTXXX();
-    BindHover("SPLX");
-    BindHover("QY");
-    BindHover("SQ");
-    BindHover("ZJDW");
-    LoadSPLX();
+    LoadXZLLX();
+    LoadKZCGS();
     LoadQY();
     LoadZJDW();
     LoadDefault();
     LoadFC_SPJBXX();
+    BindHover("XZLLX");
+    BindHover("KZCGS");
+    BindHover("QY");
+    BindHover("SQ");
+    BindHover("ZJDW");
     //FYMSSetDefault();
 });
 //显示用户菜单
@@ -68,7 +70,7 @@ function LoadDefault() {
     $("#imgCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
     $("#imgCS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
 }
-//加载图形信息
+//加载类别信息
 function LoadTXXX() {
     $("#spanTXXX").css("color", "#5bc0de");
     $("#emTXXX").css("background", "#5bc0de");
@@ -119,25 +121,51 @@ function CSSelect() {
     $("#divZJ").css("display", "none");
     $("#divSJ").css("display", "block");
 }
-//加载商铺类型
-function LoadSPLX() {
+//加载写字楼类型
+function LoadXZLLX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/FC_FW/LoadCODES",
         dataType: "json",
         data:
         {
-            TYPENAME: "商铺类型"
+            TYPENAME: "写字楼类型"
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
+                var html = "<ul class='uldropdown' style='overflow-y: none;height:70px;'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"SPLX\")'>" + xml.list[i].CODENAME + "</li>";
+                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"XZLLX\")'>" + xml.list[i].CODENAME + "</li>";
                 }
                 html += "</ul>";
-                $("#divSPLX").html(html);
-                $("#divSPLX").css("display", "none");
+                $("#divXZLLX").html(html);
+                $("#divXZLLX").css("display", "none");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//加载可否注册公司
+function LoadKZCGS() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/FC_FW/LoadCODES",
+        dataType: "json",
+        data:
+        {
+            TYPENAME: "可注册公司"
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='uldropdown' style='overflow-y: scroll; height:70px;'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"KZCGS\")'>" + xml.list[i].CODENAME + "</li>";
+                }
+                html += "</ul>";
+                $("#divKZCGS").html(html);
+                $("#divKZCGS").css("display", "none");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
