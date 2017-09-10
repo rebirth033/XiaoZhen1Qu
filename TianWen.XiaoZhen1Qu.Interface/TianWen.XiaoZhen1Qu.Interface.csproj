@@ -52,6 +52,7 @@
     <Compile Include="IDAO.cs" />
     <Compile Include="IFC_DZFBLL.cs" />
     <Compile Include="IFC_SPBLL.cs" />
+    <Compile Include="IFC_XZLBLL.cs" />
     <Compile Include="IFWCZJBXXBLL.cs" />
     <Compile Include="IHFCZBLL.cs" />
     <Compile Include="ILBXXBLL.cs" />

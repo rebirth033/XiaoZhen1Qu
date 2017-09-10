@@ -53,6 +53,11 @@
       <ref object="FC_SPBLL"/>
     </property>
   </object>
+  <object id="FC_XZLController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.FC_XZLController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="FC_XZLBLL">
+      <ref object="FC_XZLBLL"/>
+    </property>
+  </object>
   <object id="FBCGController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.FBCGController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
   </object>
   <object id="CommonController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.CommonController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
