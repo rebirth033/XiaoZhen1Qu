@@ -57,6 +57,7 @@
     <Compile Include="Maps\DISTRICT_Map.cs" />
     <Compile Include="Maps\DJJDJL_Map.cs" />
     <Compile Include="Maps\FC_DZFJBXX_Map.cs" />
+    <Compile Include="Maps\FC_SPJBXX_Map.cs" />
     <Compile Include="Maps\FWCZJBXX_Map.cs" />
     <Compile Include="Maps\JCXX_Map.cs" />
     <Compile Include="Maps\PHOTOS_Map.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="Models\DJJDJL.cs" />
     <Compile Include="Models\EncryptionHelper.cs" />
     <Compile Include="Models\FC_DZFJBXX.cs" />
+    <Compile Include="Models\FC_SPJBXX.cs" />
     <Compile Include="Models\FWCZJBXX.cs" />
     <Compile Include="Models\JCXX.cs" />
     <Compile Include="Models\PHOTOS.cs" />

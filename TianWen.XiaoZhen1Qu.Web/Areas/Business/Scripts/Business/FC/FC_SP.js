@@ -20,6 +20,8 @@ $(document).ready(function () {
     $("#div_dz_close").bind("click", CloseWindow);
     $("#span_content_info_qhcs").bind("click", LoadXZQByGrade);
     $("body").bind("click", CloseXZQ);
+    $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);
+    $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
 
     LoadTXXX();
     BindHover("SPLX");
@@ -33,6 +35,16 @@ $(document).ready(function () {
     LoadFC_SPJBXX();
     //FYMSSetDefault();
 });
+//显示用户菜单
+function ShowYHCD() {
+    $("#div_top_right_dropdown_yhm").css("display", "block");
+    $("#span_top_right_yhm_img").css("background-image", 'url(' + getRootPath() + "/Areas/Business/Css/images/arrow_up.png" + ')');
+}
+//隐藏用户菜单
+function HideYHCD() {
+    $("#div_top_right_dropdown_yhm").css("display", "none");
+    $("#span_top_right_yhm_img").css("background-image", 'url(' + getRootPath() + "/Areas/Business/Css/images/arrow_down.png" + ')');
+}
 //房屋描述框focus
 function FYMSFocus() {
     $("#FYMS").css("color", "#333333");
@@ -245,47 +257,67 @@ function SelectDropdown(obj, type) {
 }
 //获取分类
 function GetFL() {
-    if ($("#imgSPCZ").css("background-position") === "-67px -57px")
+    if ($("#imgSPZS").css("background-position") === "-67px -57px")
         return "0";
     else
         return "1";
 }
 //设置分类
-function SetFL(SPCZ) {
-    if (SPCZ === 0) {
-        $("#imgSPCZ").css("background-position", "-67px -57px");
+function SetFL(spzs) {
+    if (spzs === 0) {
+        $("#imgSPZS").css("background-position", "-67px -57px");
         $("#imgSYZR").css("background-position", "-67px 0px");
     }
     else {
-        $("#imgSPCZ").css("background-position", "-67px 0px");
+        $("#imgSPZS").css("background-position", "-67px 0px");
         $("#imgSYZR").css("background-position", "-67px -57px");
+    }
+}
+//获取供求
+function GetGQ() {
+    if ($("#imgSPZS").css("background-position") === "-67px -57px")
+        return "0";
+    else
+        return "1";
+}
+//设置供求
+function SetGQ(cz) {
+    if (cz === 0) {
+        $("#imgCZ").css("background-position", "-67px -57px");
+        $("#imgCS").css("background-position", "-67px 0px");
+    }
+    else {
+        $("#imgCZ").css("background-position", "-67px 0px");
+        $("#imgCS").css("background-position", "-67px -57px");
     }
 }
 //加载房产_商铺基本信息
 function LoadFC_SPJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC_DZF/LoadFC_DZFJBXX",
+        url: getRootPath() + "/Business/FC_SP/LoadFC_SPJBXX",
         dataType: "json",
         data:
         {
-            FC_DZFJBXXID: getUrlParam("FC_DZFJBXXID")
+            FC_SPJBXXID: getUrlParam("FC_SPJBXXID")
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var jsonObj = new JsonDB("myTabContent");
-                jsonObj.DisplayFromJson("myTabContent", xml.Value.FC_DZFJBXX);
+                jsonObj.DisplayFromJson("myTabContent", xml.Value.FC_SPJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
-                $("#FC_DZFJBXXID").val(xml.Value.FC_DZFJBXX.FC_DZFJBXXID);
+                $("#FC_SPJBXXID").val(xml.Value.FC_SPJBXX.FC_SPJBXXID);
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
-                    ue.setContent(xml.Value.FC_DZFJBXX.FYMS);
+                    ue.setContent(xml.Value.FC_SPJBXX.BCMS);
                 });
                 //SetCZFS(xml.Value.FWCZXX.CZFS);
-                $("#spanFWLX").html(xml.Value.FC_DZFJBXX.FWLX);
-                $("#spanZJDW").html(xml.Value.FC_DZFJBXX.ZJDW);
-                $("#JYGZ").html(xml.Value.FC_DZFJBXX.JYGZ);
+                $("#spanSPLX").html(xml.Value.FC_SPJBXX.SPLX);
+                $("#spanQY").html(xml.Value.FC_SPJBXX.QY);
+                $("#spanSQ").html(xml.Value.FC_SPJBXX.SQ);
+                $("#spanZJDW").html(xml.Value.FC_SPJBXX.ZJDW);
+                $("#JYGZ").html(xml.Value.FC_SPJBXX.JYGZ);
                 LoadPhotos(xml.Value.Photos);
                 return;
             }
@@ -309,38 +341,32 @@ function FB() {
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
-    obj = jsonObj.AddJson(obj, "FWLX", "'" + $("#spanFWLX").html() + "'");
+    obj = jsonObj.AddJson(obj, "SPLX", "'" + $("#spanSPLX").html() + "'");
+    obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
+    obj = jsonObj.AddJson(obj, "SQ", "'" + $("#spanSQ").html() + "'");
     obj = jsonObj.AddJson(obj, "ZJDW", "'" + $("#spanZJDW").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
+    obj = jsonObj.AddJson(obj, "FL", "'" + GetFL() + "'");
+    obj = jsonObj.AddJson(obj, "GQ", "'" + GetGQ() + "'");
 
-    if (getUrlParam("FC_DZFJBXXID") !== null)
-        obj = jsonObj.AddJson(obj, "FC_DZFJBXXID", "'" + getUrlParam("FC_DZFJBXXID") + "'");
+    if (getUrlParam("FC_SPJBXXID") !== null)
+        obj = jsonObj.AddJson(obj, "FC_SPJBXXID", "'" + getUrlParam("FC_SPJBXXID") + "'");
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC_DZF/FB",
+        url: getRootPath() + "/Business/FC_SP/FB",
         dataType: "json",
         data:
         {
             Json: jsonObj.JsonToString(obj),
-            FYMS: ue.getContent(),
-            FWZP: GetPhotoUrls(),
-            JYGZ: $("#JYGZ").val()
+            BCMS: ue.getContent(),
+            FWZP: GetPhotoUrls()
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
             } else {
-                if (xml.Type === 1) {
-                    $("#YZM").css("border-color", "#F2272D");
-                    $("#YZMInfo").css("color", "#F2272D");
-                    $("#YZMInfo").html(xml.Message);
-                }
-                if (xml.Type === 2) {
-                    $("#YHM").css("border-color", "#F2272D");
-                    $("#YHMInfo").css("color", "#F2272D");
-                    $("#YHMInfo").html(xml.Message);
-                }
+
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
