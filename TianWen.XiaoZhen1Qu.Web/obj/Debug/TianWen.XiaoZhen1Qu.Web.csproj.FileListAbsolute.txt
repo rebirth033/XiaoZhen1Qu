@@ -216,3 +216,5 @@ D:\福建天问信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\Ne
 D:\福建天问信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\obj\Debug\TianWen.XiaoZhen1Qu.Web.csprojResolveAssemblyReference.cache
 D:\福建天问信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\obj\Debug\TianWen.XiaoZhen1Qu.Web.dll
 D:\福建天问信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\obj\Debug\TianWen.XiaoZhen1Qu.Web.pdb
+D:\福建天问信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\System.Web.WebPages.dll
+D:\福建天问信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\System.Web.WebPages.Razor.dll

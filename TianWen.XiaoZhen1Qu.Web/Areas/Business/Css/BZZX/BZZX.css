@@ -84,7 +84,9 @@
     color: #333;
     padding-top: 15px;
     font-family: Microsoft YaHei, SimHei, Arial, Helvetica, sans-serif;
-    margin-top: 20px;
+    bottom: 0;
+    width: 100%;
+    position: absolute;
     background-color: #000;
     opacity: 0.5;
     color: #fff;
