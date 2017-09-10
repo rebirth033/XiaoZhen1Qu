@@ -5,6 +5,8 @@
     $("#DD").bind("focus", InfoDD);
     $("#ZJ").bind("blur", ValidateZJ);
     $("#ZJ").bind("focus", InfoZJ);
+    $("#SJ").bind("blur", ValidateSJ);
+    $("#SJ").bind("focus", InfoSJ);
     $("#MJ").bind("blur", ValidateMJ);
     $("#MJ").bind("focus", InfoMJ);
     $("#BT").bind("blur", ValidateBT);
@@ -60,6 +62,28 @@ function ValidateZJ() {
             $("#divZJTip").attr("class", "Warn");
             $("#divZJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />租金请填写整数');
             $("#spanZJ").css("border-color", "#fd634f");
+            return false;
+        }
+    }
+}
+//验证售价
+function ValidateSJ() {
+    if ($("#SJ").val() === "" || $("#SJ").val() === null) {
+        $("#divSJTip").css("display", "block");
+        $("#divSJTip").attr("class", "Warn");
+        $("#divSJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写售价啦');
+        $("#spanSJ").css("border-color", "#fd634f");
+        return false;
+    } else {
+        if (ValidateNumber($("#SJ").val()) && $("#SJ").val() !== "0") {
+            $("#divSJTip").css("display", "none");
+            $("#spanSJ").css("border-color", "#cccccc");
+            return true;
+        } else {
+            $("#divSJTip").css("display", "block");
+            $("#divSJTip").attr("class", "Warn");
+            $("#divSJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />售价请填写整数');
+            $("#spanSJ").css("border-color", "#fd634f");
             return false;
         }
     }
@@ -159,10 +183,17 @@ function ValidateLXDH() {
 }
 //验证所有
 function AllValidate() {
-    if (ValidateLSJY() & ValidateDD() & ValidateZJ() & ValidateMJ() & ValidateBT() & ValidateFWZP() & ValidateLXR() & ValidateLXDH())
-        return true;
-    else
-        return false;
+    if ($("#imgCZ").attr("src").indexOf("blue") !== -1) {
+        if (ValidateLSJY() & ValidateDD() & ValidateZJ() & ValidateMJ() & ValidateBT() & ValidateFWZP() & ValidateLXR() & ValidateLXDH())
+            return true;
+        else
+            return false;
+    } else {
+        if (ValidateLSJY() & ValidateDD() & ValidateSJ() & ValidateMJ() & ValidateBT() & ValidateFWZP() & ValidateLXR() & ValidateLXDH())
+            return true;
+        else
+            return false;
+    }
 }
 //提示历史经营
 function InfoLSJY() {
@@ -183,6 +214,12 @@ function InfoZJ() {
     $("#divZJTip").css("display", "block");
     $("#divZJTip").attr("class", "Info");
     $("#divZJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数，面议则填0');
+}
+//提示租金
+function InfoSJ() {
+    $("#divSJTip").css("display", "block");
+    $("#divSJTip").attr("class", "Info");
+    $("#divSJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数，面议则填0');
 }
 //提示面积
 function InfoMJ() {
