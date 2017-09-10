@@ -1,4 +1,9 @@
 ﻿$(document).ready(function () {
+    $(".div_left_menu").css("margin-left", (document.documentElement.clientWidth - 1084) / 2);
+    $(".div_head_left").css("margin-left", (document.documentElement.clientWidth - 1084) / 2);
+    $(".div_top_left").css("margin-left", (document.documentElement.clientWidth - 1084) / 2);
+    $(".div_top_right").css("margin-right", (document.documentElement.clientWidth - 1084) / 2);
+    $(".span_fbxx").css("margin-right", (document.documentElement.clientWidth - 1084) / 2);
     $("#liWDXX").bind("click", ShowWDXX);
     $("#liWDZH").bind("click", ShowWDZH);
     $("#liWDZJ").bind("click", ShowWDZJ);

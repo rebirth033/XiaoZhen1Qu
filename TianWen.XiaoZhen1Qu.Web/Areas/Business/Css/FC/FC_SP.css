@@ -4,6 +4,12 @@
     font-family: 微软雅黑;
 }
 
+.div_head {
+    margin-top: 20px;
+    z-index: 1001;
+    position:relative;
+}
+
 .divFWCZ {
     width: 900px;
     text-align: left;

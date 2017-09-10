@@ -1,6 +1,10 @@
 ﻿var isleave = true;
 var ue = UE.getEditor('FYMS');
 $(document).ready(function () {
+    $(".div_top_left").css("margin-left", (document.documentElement.clientWidth - 1084) / 2);
+    $(".div_top_right").css("margin-right", (document.documentElement.clientWidth - 1084) / 2);
+    $(".div_head").css("margin-left", (document.documentElement.clientWidth - 1084) / 2);
+    $(".div_content").css("margin-left", (document.documentElement.clientWidth - 1084) / 2);
     $("#spanCXLB").bind("click", CXLB);
     $("#imgSPZS").bind("click", SPZSSelect);
     $("#imgSYZR").bind("click", SYZRSelect);
