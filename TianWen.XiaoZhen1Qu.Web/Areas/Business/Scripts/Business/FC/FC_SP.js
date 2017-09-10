@@ -109,11 +109,15 @@ function SYZRSelect() {
 function CZSelect() {
     $("#imgCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
     $("#imgCS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+    $("#divZJ").css("display", "block");
+    $("#divSJ").css("display", "none");
 }
 //选择出售
 function CSSelect() {
     $("#imgCS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
     $("#imgCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+    $("#divZJ").css("display", "none");
+    $("#divSJ").css("display", "block");
 }
 //加载商铺类型
 function LoadSPLX() {
@@ -275,20 +279,24 @@ function SetFL(spzs) {
 }
 //获取供求
 function GetGQ() {
-    if ($("#imgSPZS").css("background-position") === "-67px -57px")
+    if ($("#imgCZ").attr("src").indexOf("blue") !== -1)
         return "0";
     else
         return "1";
 }
 //设置供求
-function SetGQ(cz) {
-    if (cz === 0) {
-        $("#imgCZ").css("background-position", "-67px -57px");
-        $("#imgCS").css("background-position", "-67px 0px");
+function SetGQ(gq) {
+    if (gq === 0) {
+        $("#imgCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+        $("#imgCS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+        $("#divZJ").css("display", "block");
+        $("#divSJ").css("display", "none");
     }
     else {
-        $("#imgCZ").css("background-position", "-67px 0px");
-        $("#imgCS").css("background-position", "-67px -57px");
+        $("#imgCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+        $("#imgCS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+        $("#divZJ").css("display", "none");
+        $("#divSJ").css("display", "block");
     }
 }
 //加载房产_商铺基本信息
@@ -312,7 +320,7 @@ function LoadFC_SPJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.FC_SPJBXX.BCMS);
                 });
-                //SetCZFS(xml.Value.FWCZXX.CZFS);
+                SetGQ(xml.Value.FC_SPJBXX.GQ);
                 $("#spanSPLX").html(xml.Value.FC_SPJBXX.SPLX);
                 $("#spanQY").html(xml.Value.FC_SPJBXX.QY);
                 $("#spanSQ").html(xml.Value.FC_SPJBXX.SQ);

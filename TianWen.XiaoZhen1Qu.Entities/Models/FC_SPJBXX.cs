@@ -71,6 +71,12 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual int ZJ { get; set; }
 
         /// <summary>
+        /// 售价
+        /// </summary>
+        [Property]
+        public virtual int SJ { get; set; }
+
+        /// <summary>
         /// 租金单位
         /// </summary>
         [Property]
