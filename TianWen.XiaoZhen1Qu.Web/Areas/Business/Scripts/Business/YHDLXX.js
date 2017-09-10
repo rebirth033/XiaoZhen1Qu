@@ -16,12 +16,14 @@ $(document).ready(function () {
     $("#aWJMM").attr("href", getRootPath() + "/Business/ZHMM/ZHMM");
     $("#username input").keydown(function (e) {
         var curKey = e.which;
-        if (curKey == 13) MMDL();
+        if (curKey === 13) MMDL();
     });
     $("#cellphone input").keydown(function (e) {
         var curKey = e.which;
-        if (curKey == 13) SJDL();
+        if (curKey === 13) SJDL();
     });
+    $("body").css("height", document.documentElement.clientHeight);
+    $(".div_body").css("height", document.documentElement.clientHeight * 0.807);
 });
 
 function Showcellphone() {
