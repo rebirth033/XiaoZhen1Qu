@@ -195,6 +195,8 @@ D:\福建天问信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\Sy
 D:\福建天问信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\System.Web.Mvc.dll
 D:\福建天问信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\System.Web.Razor.dll
 D:\福建天问信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\System.Web.Webpages.Deployment.dll
+D:\福建天问信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\System.Web.WebPages.dll
+D:\福建天问信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\System.Web.WebPages.Razor.dll
 D:\福建天问信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\TianWen.Business.Framework.dll
 D:\福建天问信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\TianWen.Framework.dll
 D:\福建天问信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\TianWen.Nhibernate.dll
@@ -216,5 +218,3 @@ D:\福建天问信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\Ne
 D:\福建天问信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\obj\Debug\TianWen.XiaoZhen1Qu.Web.csprojResolveAssemblyReference.cache
 D:\福建天问信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\obj\Debug\TianWen.XiaoZhen1Qu.Web.dll
 D:\福建天问信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\obj\Debug\TianWen.XiaoZhen1Qu.Web.pdb
-D:\福建天问信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\System.Web.WebPages.dll
-D:\福建天问信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\System.Web.WebPages.Razor.dll

@@ -25,6 +25,7 @@ $(document).ready(function () {
     BindHover("SPLX");
     BindHover("QY");
     BindHover("SQ");
+    BindHover("ZJDW");
     LoadSPLX();
     LoadQY();
     LoadZJDW();
@@ -136,7 +137,7 @@ function LoadQY() {
         dataType: "json",
         data:
         {
-            
+
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -194,7 +195,7 @@ function LoadZJDW() {
             if (xml.Result === 1) {
                 var html = "<ul class='uldropdown' style='overflow-y: none;height:70px;margin-left:-1px;'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectZJDW(this)'>" + xml.list[i].CODENAME + "</li>";
+                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"ZJDW\")'>" + xml.list[i].CODENAME + "</li>";
                 }
                 html += "</ul>";
                 $("#divZJDW").html(html);
@@ -218,7 +219,7 @@ function LeaveStyle(name) {
     $("#div" + name).find("ul").css("border-left", "1px solid #cccccc").css("border-right", "1px solid #cccccc").css("border-bottom", "1px solid #cccccc");
     $("#span" + name).css("color", "#999999");
 }
-
+//绑定下拉框鼠标盘旋样式
 function BindHover(type) {
     $("#div" + type + "Text").hover(function () {
         $("#div" + type).css("display", "block");
@@ -242,33 +243,14 @@ function SelectDropdown(obj, type) {
     if (type === "QY")
         LoadSQ(obj.innerHTML);
 }
-
-function GetDX(type) {
-    var result = "";
-    $("#div" + type + "Text").find("li").each(function (i) {
-        if ($(this).css("color") !== "rgb(51, 51, 51)")
-            result += i + ",";
-    });
-    return result.substr(0, result.length - 1);
-}
-
-function SetDX(type, value) {
-    var result = "";
-    var values = value.split(',');
-    $("#div" + type + "Text").find("li").each(function (i) {
-        if (values.contains(i))
-            $(this).css("color", "#5bc0de");
-    });
-    return result.substr(0, result.length - 1);
-}
-
+//获取分类
 function GetFL() {
     if ($("#imgSPCZ").css("background-position") === "-67px -57px")
         return "0";
     else
         return "1";
 }
-
+//设置分类
 function SetFL(SPCZ) {
     if (SPCZ === 0) {
         $("#imgSPCZ").css("background-position", "-67px -57px");
