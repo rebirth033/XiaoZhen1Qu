@@ -1,0 +1,67 @@
+-- Create table
+create table ES_SJSM_ESSJ
+(
+  es_sjsm_essjjbxxid VARCHAR2(50) not null,
+  jcxxid             VARCHAR2(50),
+  gq                 NUMBER(1),
+  sjpp               VARCHAR2(20),
+  sjxh               VARCHAR2(20),
+  syqk               NUMBER(1),
+  zrjg               NUMBER(8),
+  tsbq               VARCHAR2(50),
+  bcms               VARCHAR2(4000),
+  jyqy               VARCHAR2(20),
+  jydd               VARCHAR2(20)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table ES_SJSM_ESSJ
+  is '二手_手机数码_二手手机信息';
+-- Add comments to the columns 
+comment on column ES_SJSM_ESSJ.es_sjsm_essjjbxxid
+  is '主键';
+comment on column ES_SJSM_ESSJ.jcxxid
+  is '基础信息ID';
+comment on column ES_SJSM_ESSJ.gq
+  is '供求';
+comment on column ES_SJSM_ESSJ.sjpp
+  is '手机品牌';
+comment on column ES_SJSM_ESSJ.sjxh
+  is '手机型号';
+comment on column ES_SJSM_ESSJ.syqk
+  is '使用情况';
+comment on column ES_SJSM_ESSJ.zrjg
+  is '转让价格';
+comment on column ES_SJSM_ESSJ.tsbq
+  is '特色标签';
+comment on column ES_SJSM_ESSJ.bcms
+  is '补充描述';
+comment on column ES_SJSM_ESSJ.jyqy
+  is '交易区域';
+comment on column ES_SJSM_ESSJ.jydd
+  is '交易地段';
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table ES_SJSM_ESSJ
+  add primary key (ES_SJSM_ESSJJBXXID)
+  using index 
+  tablespace USERS
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );

@@ -162,7 +162,9 @@
     <Content Include="Areas\Business\Css\BZZX\BZZX_WZJY.css" />
     <Content Include="Areas\Business\Css\Common\Top.css" />
     <Content Include="Areas\Business\Css\Common\XZQ.css" />
+    <Content Include="Areas\Business\Css\ES\ES_SJSM_ESSJ.css" />
     <Content Include="Areas\Business\Css\FBCG.css" />
+    <Content Include="Areas\Business\Css\FC\FC_CKCFTDCW.css" />
     <Content Include="Areas\Business\Css\FC\FC_DZF.css" />
     <Content Include="Areas\Business\Css\FC\FC_FW.css" />
     <Content Include="Areas\Business\Css\FC\FC_SP.css" />
@@ -341,19 +343,20 @@
     <Content Include="Areas\Business\Scripts\Business\Common\Common.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\Regular.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\XZQ.js" />
+    <Content Include="Areas\Business\Scripts\Business\ES\ES_SJSM_ESSJ.js" />
+    <Content Include="Areas\Business\Scripts\Business\ES\ES_SJSM_ESSJYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\ES\ES_SJSM_ESSJZP.js" />
+    <Content Include="Areas\Business\Scripts\Business\FC\FC_CKCFTDCW.js" />
+    <Content Include="Areas\Business\Scripts\Business\FC\FC_CKCFTDCWYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\FC\FC_DZF.js" />
     <Content Include="Areas\Business\Scripts\Business\FC\FC_DZFYZ.js" />
-    <Content Include="Areas\Business\Scripts\Business\FC\FC_DZFZP.js" />
     <Content Include="Areas\Business\Scripts\Business\FC\FC_SP.js" />
     <Content Include="Areas\Business\Scripts\Business\FC\FC_SPYZ.js" />
-    <Content Include="Areas\Business\Scripts\Business\FC\FC_SPZP.js" />
     <Content Include="Areas\Business\Scripts\Business\FC\FC_XZL.js" />
     <Content Include="Areas\Business\Scripts\Business\FC\FC_XZLYZ.js" />
-    <Content Include="Areas\Business\Scripts\Business\FC\FC_XZLZP.js" />
     <Content Include="Areas\Business\Scripts\Business\FWCG\FWCG.js" />
     <Content Include="Areas\Business\Scripts\Business\FC\FC_FW.js" />
     <Content Include="Areas\Business\Scripts\Business\FC\FC_FWYZ.js" />
-    <Content Include="Areas\Business\Scripts\Business\FC\FC_FWZP.js" />
     <Content Include="Areas\Business\Scripts\Business\GRZL\GRZL.js" />
     <Content Include="Areas\Business\Scripts\Business\GRZL\MMSZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HBSJ.js" />
@@ -361,6 +364,7 @@
     <Content Include="Areas\Business\Scripts\Business\HFCZ\ZFFS.js" />
     <Content Include="Areas\Business\Scripts\Business\LBXZ.js" />
     <Content Include="Areas\Business\Scripts\Business\PageJson.js" />
+    <Content Include="Areas\Business\Scripts\Business\Public_TP.js" />
     <Content Include="Areas\Business\Scripts\Business\RZGL\RZGL.js" />
     <Content Include="Areas\Business\Scripts\Business\WDFB.js" />
     <Content Include="Areas\Business\Scripts\Business\WDSC.js" />
@@ -702,7 +706,9 @@
     <Compile Include="Areas\Business\Controllers\BZZX\BZZXController.cs" />
     <Compile Include="Areas\Business\Controllers\BZZX\WZYJController.cs" />
     <Compile Include="Areas\Business\Controllers\CommonController.cs" />
+    <Compile Include="Areas\Business\Controllers\ES\FC_SJSM_ESSJController.cs" />
     <Compile Include="Areas\Business\Controllers\FBCGController.cs" />
+    <Compile Include="Areas\Business\Controllers\FC\FC_CKCFTDCWController.cs" />
     <Compile Include="Areas\Business\Controllers\FC\FC_DZFController.cs" />
     <Compile Include="Areas\Business\Controllers\FC\FC_FWController.cs" />
     <Compile Include="Areas\Business\Controllers\FC\FC_SPController.cs" />
@@ -816,6 +822,8 @@
     <Content Include="Areas\Business\Scripts\UEditor\third-party\video-js\font\vjs.woff" />
     <Content Include="Areas\Business\Views\FC_SP\FC_SP.cshtml" />
     <Content Include="Areas\Business\Views\FC_XZL\FC_XZL.cshtml" />
+    <Content Include="Areas\Business\Views\FC_CKCFTDCW\FC_CKCFTDCW.cshtml" />
+    <Content Include="Areas\Business\Views\ES_SJSM_ESSJ\ES_SJSM_ESSJ.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

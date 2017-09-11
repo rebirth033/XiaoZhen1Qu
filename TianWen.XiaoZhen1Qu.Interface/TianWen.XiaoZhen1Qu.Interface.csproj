@@ -50,6 +50,8 @@
     <Compile Include="IBZZXBLL.cs" />
     <Compile Include="ICommonBLL.cs" />
     <Compile Include="IDAO.cs" />
+    <Compile Include="IES_SJSM_ESSJBLL.cs" />
+    <Compile Include="IFC_CKCFTDCWBLL.cs" />
     <Compile Include="IFC_DZFBLL.cs" />
     <Compile Include="IFC_SPBLL.cs" />
     <Compile Include="IFC_XZLBLL.cs" />
