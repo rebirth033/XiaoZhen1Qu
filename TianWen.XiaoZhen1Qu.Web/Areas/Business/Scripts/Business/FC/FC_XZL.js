@@ -27,7 +27,7 @@ $(document).ready(function () {
     LoadQY();
     LoadZJDW();
     LoadDefault();
-    LoadFC_SPJBXX();
+    LoadFC_XZLJBXX();
     BindHover("XZLLX");
     BindHover("KZCGS");
     BindHover("QY");
@@ -165,7 +165,7 @@ function LoadKZCGS() {
 function LoadQY() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC_SP/LoadQY",
+        url: getRootPath() + "/Business/Common/LoadQY",
         dataType: "json",
         data:
         {
@@ -191,7 +191,7 @@ function LoadQY() {
 function LoadSQ(QY) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC_SP/LoadSQ",
+        url: getRootPath() + "/Business/Common/LoadSQ",
         dataType: "json",
         data:
         {
@@ -279,25 +279,6 @@ function SelectQY(obj, type, code) {
     $("#div" + type).css("display", "none");
     LoadSQ(code);
 }
-
-//获取分类
-function GetFL() {
-    if ($("#imgSPZS").css("background-position") === "-67px -57px")
-        return "0";
-    else
-        return "1";
-}
-//设置分类
-function SetFL(spzs) {
-    if (spzs === 0) {
-        $("#imgSPZS").css("background-position", "-67px -57px");
-        $("#imgSYZR").css("background-position", "-67px 0px");
-    }
-    else {
-        $("#imgSPZS").css("background-position", "-67px 0px");
-        $("#imgSYZR").css("background-position", "-67px -57px");
-    }
-}
 //获取供求
 function GetGQ() {
     if ($("#imgCZ").attr("src").indexOf("blue") !== -1)
@@ -320,11 +301,11 @@ function SetGQ(gq) {
         $("#divSJ").css("display", "block");
     }
 }
-//加载房产_商铺基本信息
-function LoadFC_SPJBXX() {
+//加载房产_写字楼基本信息
+function LoadFC_XZLJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC_SP/LoadFC_SPJBXX",
+        url: getRootPath() + "/Business/FC_SP/LoadFC_XZLJBXX",
         dataType: "json",
         data:
         {
@@ -346,7 +327,6 @@ function LoadFC_SPJBXX() {
                 $("#spanQY").html(xml.Value.FC_SPJBXX.QY);
                 $("#spanSQ").html(xml.Value.FC_SPJBXX.SQ);
                 $("#spanZJDW").html(xml.Value.FC_SPJBXX.ZJDW);
-                $("#JYGZ").html(xml.Value.FC_SPJBXX.JYGZ);
                 LoadPhotos(xml.Value.Photos);
                 return;
             }
@@ -370,20 +350,20 @@ function FB() {
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
-    obj = jsonObj.AddJson(obj, "SPLX", "'" + $("#spanSPLX").html() + "'");
+    obj = jsonObj.AddJson(obj, "XZLLX", "'" + $("#spanXZLLX").html() + "'");
+    obj = jsonObj.AddJson(obj, "KZCGS", "'" + $("#spanKZCGS").html() + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "SQ", "'" + $("#spanSQ").html() + "'");
     obj = jsonObj.AddJson(obj, "ZJDW", "'" + $("#spanZJDW").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "FL", "'" + GetFL() + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetGQ() + "'");
 
-    if (getUrlParam("FC_SPJBXXID") !== null)
-        obj = jsonObj.AddJson(obj, "FC_SPJBXXID", "'" + getUrlParam("FC_SPJBXXID") + "'");
+    if (getUrlParam("FC_XZLJBXXID") !== null)
+        obj = jsonObj.AddJson(obj, "FC_XZLJBXXID", "'" + getUrlParam("FC_XZLJBXXID") + "'");
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC_SP/FB",
+        url: getRootPath() + "/Business/FC_XZL/FB",
         dataType: "json",
         data:
         {

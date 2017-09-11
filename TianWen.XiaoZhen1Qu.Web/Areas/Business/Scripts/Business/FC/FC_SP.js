@@ -68,7 +68,7 @@ function LoadDefault() {
     $("#imgCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
     $("#imgCS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
 }
-//加载图形信息
+//加载类别信息
 function LoadTXXX() {
     $("#spanTXXX").css("color", "#5bc0de");
     $("#emTXXX").css("background", "#5bc0de");
@@ -149,7 +149,7 @@ function LoadSPLX() {
 function LoadQY() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC_SP/LoadQY",
+        url: getRootPath() + "/Business/Common/LoadQY",
         dataType: "json",
         data:
         {
@@ -175,7 +175,7 @@ function LoadQY() {
 function LoadSQ(QY) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC_SP/LoadSQ",
+        url: getRootPath() + "/Business/Common/LoadSQ",
         dataType: "json",
         data:
         {

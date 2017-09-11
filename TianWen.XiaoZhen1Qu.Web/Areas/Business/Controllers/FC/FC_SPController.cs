@@ -40,16 +40,6 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return Json(result);
         }
 
-        public JsonResult LoadQY()
-        {
-            return Json(FC_SPBLL.LoadQYBySuperName(Session["XZQ"].ToString()));
-        }
-
-        public JsonResult LoadSQ()
-        {
-            return Json(FC_SPBLL.LoadSQByQY(Request["QY"].ToString()));
-        }
-
         public JsonResult LoadFC_SPJBXX()
         {
             string FC_SPJBXXID = Request["FC_SPJBXXID"];

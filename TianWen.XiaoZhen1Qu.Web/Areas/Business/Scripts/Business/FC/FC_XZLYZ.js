@@ -18,15 +18,15 @@
 });
 //验证楼盘名称
 function ValidateLPMC() {
-    if ($("#LSJY").val() === "" || $("#LSJY").val() === null) {
-        $("#divLSJYTip").css("display", "block");
-        $("#divLSJYTip").attr("class", "Warn");
-        $("#divLSJYTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写历史经营啦');
-        $("#spanLSJY").css("border-color", "#fd634f");
+    if ($("#LPMC").val() === "" || $("#LPMC").val() === null) {
+        $("#divLPMCTip").css("display", "block");
+        $("#divLPMCTip").attr("class", "Warn");
+        $("#divLPMCTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写楼盘名称啦');
+        $("#spanLPMC").css("border-color", "#fd634f");
         return false;
     } else {
-        $("#divLSJYTip").css("display", "none");
-        $("#spanLSJY").css("border-color", "#cccccc");
+        $("#divLPMCTip").css("display", "none");
+        $("#spanLPMC").css("border-color", "#cccccc");
         return true;
     }
 }

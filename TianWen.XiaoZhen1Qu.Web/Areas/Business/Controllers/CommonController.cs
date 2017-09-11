@@ -38,5 +38,15 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             Session["XZQ"] = Request["XZQ"];
             return Json(new { Result = EnResultType.Success });
         }
+
+        public JsonResult LoadQY()
+        {
+            return Json(CommonBLL.LoadQYBySuperName(Session["XZQ"].ToString()));
+        }
+
+        public JsonResult LoadSQ()
+        {
+            return Json(CommonBLL.LoadSQByQY(Request["QY"].ToString()));
+        }
     }
 }

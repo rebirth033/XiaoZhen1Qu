@@ -18,26 +18,33 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return View();
         }
 
-        //[ValidateInput(false)]
-        //public JsonResult FB()
-        //{
-        //    YHJBXX yhjbxx = FC_SPBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
-        //    string json = Request["Json"];
-        //    string bcms = Request["BCMS"];
-        //    string fwzp = Request["FWZP"];
-        //    JCXX jcxx = JsonHelper.ConvertJsonToObject<JCXX>(json);
-        //    jcxx.YHID = yhjbxx.YHID;
-        //    jcxx.LLCS = 0;
-        //    jcxx.STATUS = 1;
-        //    jcxx.ZXGXSJ = DateTime.Now;
-        //    jcxx.CJSJ = DateTime.Now;
-        //    jcxx.LXDZ = yhjbxx.TXDZ;
-        //    jcxx.DH = Session["XZQ"] + "-" + FC_SPBLL.GetLBQCByLBID(jcxx.LBID);
-        //    FC_SPJBXX spjbxx = JsonHelper.ConvertJsonToObject<FC_SPJBXX>(json);
-        //    spjbxx.BCMS = bcms;
-        //    List<PHOTOS> photos = GetTP(fwzp);
-        //    object result = FC_SPBLL.SaveSPJBXX(jcxx, spjbxx, photos);
-        //    return Json(result);
-        //}
+        [ValidateInput(false)]
+        public JsonResult FB()
+        {
+            YHJBXX yhjbxx = FC_XZLBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            string json = Request["Json"];
+            string bcms = Request["BCMS"];
+            string fwzp = Request["FWZP"];
+            JCXX jcxx = JsonHelper.ConvertJsonToObject<JCXX>(json);
+            jcxx.YHID = yhjbxx.YHID;
+            jcxx.LLCS = 0;
+            jcxx.STATUS = 1;
+            jcxx.ZXGXSJ = DateTime.Now;
+            jcxx.CJSJ = DateTime.Now;
+            jcxx.LXDZ = yhjbxx.TXDZ;
+            jcxx.DH = Session["XZQ"] + "-" + FC_XZLBLL.GetLBQCByLBID(jcxx.LBID);
+            FC_XZLJBXX xzljbxx = JsonHelper.ConvertJsonToObject<FC_XZLJBXX>(json);
+            xzljbxx.BCMS = bcms;
+            List<PHOTOS> photos = GetTP(fwzp);
+            object result = FC_XZLBLL.SaveXZLJBXX(jcxx, xzljbxx, photos);
+            return Json(result);
+        }
+
+        public JsonResult LoadFC_XZLJBXX()
+        {
+            string FC_SPJBXXID = Request["FC_SPJBXXID"];
+            object result = FC_XZLBLL.LoadFC_XZLJBXX(FC_SPJBXXID);
+            return Json(result);
+        }
     }
 }
