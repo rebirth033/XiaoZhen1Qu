@@ -4,7 +4,6 @@ using System.Web.Mvc;
 using CommonClassLib.Helper;
 using TianWen.XiaoZhen1Qu.Entities.Models;
 using TianWen.XiaoZhen1Qu.Interface;
-using TianWen.XiaoZhen1Qu.Web.Areas.Business.Common;
 
 namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 {
@@ -17,12 +16,6 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             ViewData["XZQ"] = Session["XZQ"];
             ViewData["YHM"] = Session["YHM"];
             return View();
-        }
-
-        public JsonResult LoadCODES()
-        {
-            string TYPENAME = Request["TYPENAME"];
-            return Json(FWCZJBXXBLL.LoadCODES(TYPENAME));
         }
 
         public JsonResult FB()

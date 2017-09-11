@@ -130,7 +130,7 @@ function RZFSelect() {
 function LoadFWLX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC_FW/LoadCODES",
+        url: getRootPath() + "/Business/Common/LoadCODES",
         dataType: "json",
         data:
         {
@@ -156,7 +156,7 @@ function LoadFWLX() {
 function LoadZJDW() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC_FW/LoadCODES",
+        url: getRootPath() + "/Business/Common/LoadCODES",
         dataType: "json",
         data:
         {

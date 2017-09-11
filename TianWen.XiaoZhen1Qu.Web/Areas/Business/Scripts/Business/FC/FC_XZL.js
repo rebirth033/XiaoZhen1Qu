@@ -113,7 +113,7 @@ function CSSelect() {
 function LoadXZLLX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC_FW/LoadCODES",
+        url: getRootPath() + "/Business/Common/LoadCODES",
         dataType: "json",
         data:
         {
@@ -139,7 +139,7 @@ function LoadXZLLX() {
 function LoadKZCGS() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC_FW/LoadCODES",
+        url: getRootPath() + "/Business/Common/LoadCODES",
         dataType: "json",
         data:
         {
@@ -217,7 +217,7 @@ function LoadSQ(QY) {
 function LoadZJDW() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC_FW/LoadCODES",
+        url: getRootPath() + "/Business/Common/LoadCODES",
         dataType: "json",
         data:
         {
@@ -273,7 +273,7 @@ function SelectDropdown(obj, type) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
 }
-
+//选择区域下拉框
 function SelectQY(obj, type, code) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");

@@ -33,6 +33,12 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return Json(result);
         }
 
+        public JsonResult LoadCODES()
+        {
+            string TYPENAME = Request["TYPENAME"];
+            return Json(CommonBLL.LoadCODES(TYPENAME));
+        }
+
         public JsonResult QHXZQ()
         {
             Session["XZQ"] = Request["XZQ"];

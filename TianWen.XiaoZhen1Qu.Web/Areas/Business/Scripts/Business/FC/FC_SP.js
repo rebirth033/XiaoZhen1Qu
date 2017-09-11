@@ -123,7 +123,7 @@ function CSSelect() {
 function LoadSPLX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC_FW/LoadCODES",
+        url: getRootPath() + "/Business/Common/LoadCODES",
         dataType: "json",
         data:
         {
@@ -159,7 +159,7 @@ function LoadQY() {
             if (xml.Result === 1) {
                 var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"QY\")'>" + RTrim(RTrim(RTrim(xml.list[i].NAME, '市'), '区'), '县') + "</li>";
+                    html += "<li class='lidropdown' onclick='SelectQY(this,\"QY\",\"" + xml.list[i].CODE + "\")'>" + RTrim(RTrim(RTrim(xml.list[i].NAME, '市'), '区'), '县') + "</li>";
                 }
                 html += "</ul>";
                 $("#divQY").html(html);
@@ -201,7 +201,7 @@ function LoadSQ(QY) {
 function LoadZJDW() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC_FW/LoadCODES",
+        url: getRootPath() + "/Business/Common/LoadCODES",
         dataType: "json",
         data:
         {
@@ -258,6 +258,12 @@ function SelectDropdown(obj, type) {
     $("#div" + type).css("display", "none");
     if (type === "QY")
         LoadSQ(obj.innerHTML);
+}
+//选择区域下拉框
+function SelectQY(obj, type, code) {
+    $("#span" + type).html(obj.innerHTML);
+    $("#div" + type).css("display", "none");
+    LoadSQ(code);
 }
 //获取分类
 function GetFL() {

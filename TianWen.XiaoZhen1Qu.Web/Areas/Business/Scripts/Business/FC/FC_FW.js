@@ -294,7 +294,7 @@ function GetStartIndexBySZM(pyszm, sqmc) {
 function LoadFWCX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC_FW/LoadCODES",
+        url: getRootPath() + "/Business/Common/LoadCODES",
         dataType: "json",
         data:
         {
@@ -320,7 +320,7 @@ function LoadFWCX() {
 function LoadZXQK() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC_FW/LoadCODES",
+        url: getRootPath() + "/Business/Common/LoadCODES",
         dataType: "json",
         data:
         {
@@ -346,7 +346,7 @@ function LoadZXQK() {
 function LoadZZLX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC_FW/LoadCODES",
+        url: getRootPath() + "/Business/Common/LoadCODES",
         dataType: "json",
         data:
         {
@@ -372,7 +372,7 @@ function LoadZZLX() {
 function LoadYFFS() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC_FW/LoadCODES",
+        url: getRootPath() + "/Business/Common/LoadCODES",
         dataType: "json",
         data:
         {
@@ -398,7 +398,7 @@ function LoadYFFS() {
 function LoadBHFY() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC_FW/LoadCODES",
+        url: getRootPath() + "/Business/Common/LoadCODES",
         dataType: "json",
         data:
         {
@@ -427,7 +427,7 @@ function LoadBHFY() {
 function LoadFWPZ() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC_FW/LoadCODES",
+        url: getRootPath() + "/Business/Common/LoadCODES",
         dataType: "json",
         data:
         {
@@ -456,7 +456,7 @@ function LoadFWPZ() {
 function LoadFWLD() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC_FW/LoadCODES",
+        url: getRootPath() + "/Business/Common/LoadCODES",
         dataType: "json",
         data:
         {
@@ -485,7 +485,7 @@ function LoadFWLD() {
 function LoadCZYQ() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC_FW/LoadCODES",
+        url: getRootPath() + "/Business/Common/LoadCODES",
         dataType: "json",
         data:
         {
