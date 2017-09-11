@@ -305,28 +305,29 @@ function SetGQ(gq) {
 function LoadFC_XZLJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC_SP/LoadFC_XZLJBXX",
+        url: getRootPath() + "/Business/FC_XZL/LoadFC_XZLJBXX",
         dataType: "json",
         data:
         {
-            FC_SPJBXXID: getUrlParam("FC_SPJBXXID")
+            FC_XZLJBXXID: getUrlParam("FC_XZLJBXXID")
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var jsonObj = new JsonDB("myTabContent");
-                jsonObj.DisplayFromJson("myTabContent", xml.Value.FC_SPJBXX);
+                jsonObj.DisplayFromJson("myTabContent", xml.Value.FC_XZLJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
-                $("#FC_SPJBXXID").val(xml.Value.FC_SPJBXX.FC_SPJBXXID);
+                $("#FC_XZLJBXXID").val(xml.Value.FC_XZLJBXX.FC_XZLJBXXID);
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
-                    ue.setContent(xml.Value.FC_SPJBXX.BCMS);
+                    ue.setContent(xml.Value.FC_XZLJBXX.BCMS);
                 });
-                SetGQ(xml.Value.FC_SPJBXX.GQ);
-                $("#spanSPLX").html(xml.Value.FC_SPJBXX.SPLX);
-                $("#spanQY").html(xml.Value.FC_SPJBXX.QY);
-                $("#spanSQ").html(xml.Value.FC_SPJBXX.SQ);
-                $("#spanZJDW").html(xml.Value.FC_SPJBXX.ZJDW);
+                SetGQ(xml.Value.FC_XZLJBXX.GQ);
+                $("#spanXZLLX").html(xml.Value.FC_XZLJBXX.XZLLX);
+                $("#spanKZCGS").html(xml.Value.FC_XZLJBXX.KZCGS);
+                $("#spanQY").html(xml.Value.FC_XZLJBXX.QY);
+                $("#spanSQ").html(xml.Value.FC_XZLJBXX.SQ);
+                $("#spanZJDW").html(xml.Value.FC_XZLJBXX.ZJDW);
                 LoadPhotos(xml.Value.Photos);
                 return;
             }

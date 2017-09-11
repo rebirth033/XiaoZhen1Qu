@@ -42,8 +42,8 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public JsonResult LoadFC_XZLJBXX()
         {
-            string FC_SPJBXXID = Request["FC_SPJBXXID"];
-            object result = FC_XZLBLL.LoadFC_XZLJBXX(FC_SPJBXXID);
+            string FC_XZLJBXXID = Request["FC_XZLJBXXID"];
+            object result = FC_XZLBLL.LoadFC_XZLJBXX(FC_XZLJBXXID);
             return Json(result);
         }
     }

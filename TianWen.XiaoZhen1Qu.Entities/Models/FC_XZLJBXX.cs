@@ -32,7 +32,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// 可注册公司
         /// </summary>
         [Property]
-        public virtual int KZCGS { get; set; }
+        public virtual string KZCGS { get; set; }
 
         /// <summary>
         /// 写字楼类型
