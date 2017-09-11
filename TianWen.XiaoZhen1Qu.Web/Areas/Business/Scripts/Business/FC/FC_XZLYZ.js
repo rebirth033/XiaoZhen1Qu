@@ -195,12 +195,12 @@ function AllValidate() {
             return false;
     }
 }
-//提示历史经营
-function InfoLSJY() {
-    $("#divLSJYTip").css("display", "block");
-    $("#divLSJYTip").attr("class", "Info");
-    $("#divLSJYTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />不超过30字，不能填写电话、QQ、邮箱等联系方式或特殊符号');
-    $("#LSJY").css("border-color", "#5bc0de");
+//提示楼盘名称
+function InfoLPMC() {
+    $("#divLPMCTip").css("display", "block");
+    $("#divLPMCTip").attr("class", "Info");
+    $("#divLPMCTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />不超过30字，不能填写电话、QQ、邮箱等联系方式或特殊符号');
+    $("#LPMC").css("border-color", "#5bc0de");
 }
 //提示地段
 function InfoDD() {

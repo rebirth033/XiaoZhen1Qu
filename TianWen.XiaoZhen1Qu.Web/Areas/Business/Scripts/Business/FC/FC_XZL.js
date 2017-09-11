@@ -6,8 +6,6 @@ $(document).ready(function () {
     $(".div_head").css("margin-left", (document.documentElement.clientWidth - 900) / 2);
     $(".div_content").css("margin-left", (document.documentElement.clientWidth - 900) / 2);
     $("#spanCXLB").bind("click", CXLB);
-    $("#imgSPZS").bind("click", SPZSSelect);
-    $("#imgSYZR").bind("click", SYZRSelect);
     $("#imgCZ").bind("click", CZSelect);
     $("#imgCS").bind("click", CSSelect);
     $("#divUploadOut").bind("mouseover", GetUploadCss);
@@ -97,16 +95,6 @@ function LoadTXXX() {
 function CXLB() {
     window.location.href = getRootPath() + "/Business/LBXZ/LBXZ";
 }
-//选择商铺租售
-function SPZSSelect() {
-    $("#imgSPZS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgSYZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
-//选择生意转让
-function SYZRSelect() {
-    $("#imgSPZS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    $("#imgSYZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-}
 //选择出租
 function CZSelect() {
     $("#imgCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
@@ -187,7 +175,7 @@ function LoadQY() {
             if (xml.Result === 1) {
                 var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"QY\")'>" + RTrim(RTrim(RTrim(xml.list[i].NAME, '市'), '区'), '县') + "</li>";
+                    html += "<li class='lidropdown' onclick='SelectQY(this,\"QY\",\"" + xml.list[i].CODE + "\")'>" + RTrim(RTrim(RTrim(xml.list[i].NAME, '市'), '区'), '县') + "</li>";
                 }
                 html += "</ul>";
                 $("#divQY").html(html);
@@ -284,9 +272,14 @@ function BindHover(type) {
 function SelectDropdown(obj, type) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-    if (type === "QY")
-        LoadSQ(obj.innerHTML);
 }
+
+function SelectQY(obj, type, code) {
+    $("#span" + type).html(obj.innerHTML);
+    $("#div" + type).css("display", "none");
+    LoadSQ(code);
+}
+
 //获取分类
 function GetFL() {
     if ($("#imgSPZS").css("background-position") === "-67px -57px")

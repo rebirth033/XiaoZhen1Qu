@@ -48,7 +48,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
         {
             try
             {
-                IList<DISTRICT> list = DAO.Repository.GetObjectList<DISTRICT>(String.Format("FROM DISTRICT WHERE SUPERNAME like '%{0}%' ORDER BY CODE", QY));
+                IList<DISTRICT> list = DAO.Repository.GetObjectList<DISTRICT>(String.Format("FROM DISTRICT WHERE SUPERCODE like '%{0}%' ORDER BY CODE", QY));
                 return new { Result = EnResultType.Success, list = list };
             }
             catch (Exception ex)
