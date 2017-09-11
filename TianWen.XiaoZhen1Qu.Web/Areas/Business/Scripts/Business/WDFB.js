@@ -40,12 +40,14 @@ function LoadDefault(TYPE, PageIndex) {
         {
             YHID: getUrlParam("YHID"),
             TYPE: TYPE,
-            PageSize: 5,
+            PageSize: 4,
             PageIndex: PageIndex
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 $("#div_main_info").html('');
+                LoadPage(xml.PageCount);
+                $("#span_main_info_head_gjt").html(xml.TotalCount);
                 for (var i = 0; i < xml.list.length; i++) {
                     LoadInfo(xml.list[i]);
                 }
@@ -201,4 +203,21 @@ function LoadByActive() {
         if ($("#" + this.id).css("color") === "rgb(91, 192, 222)")
             LoadDefault($("#" + this.id).parent()[0].id);
     });
+}
+
+function LoadPage(PageCount) {
+    var index = parseInt(currentIndex);
+    $("#div_main_info_bottom_fy").html('');
+    if (index > 1) {
+        $("#div_main_info_bottom_fy").append('<a onclick="LoadDefault(\'' + "divZJFBXX" + '\',\'' + (index - 1) + '\')" class="a_main_info_bottom_fy">上一页</a>');
+    }
+    for (var i = 1; i <= PageCount; i++) {
+        if (i === index)
+            $("#div_main_info_bottom_fy").append('<a onclick="LoadDefault(\'' + "divZJFBXX" + '\',\'' + i + '\')" class="a_main_info_bottom_fy a_main_info_bottom_fy_current">' + i + '</a>');
+        else
+            $("#div_main_info_bottom_fy").append('<a onclick="LoadDefault(\'' + "divZJFBXX" + '\',\'' + i + '\')" class="a_main_info_bottom_fy">' + i + '</a>');
+    }
+    if (index < PageCount) {
+        $("#div_main_info_bottom_fy").append('<a onclick="LoadDefault(\'' + "divZJFBXX" + '\',\'' + (index + 1) + '\')" class="a_main_info_bottom_fy">下一页</a>');
+    }
 }
