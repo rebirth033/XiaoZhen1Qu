@@ -1,17 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using NHibernate.Mapping.Attributes;
+﻿using NHibernate.Mapping.Attributes;
 
 namespace TianWen.XiaoZhen1Qu.Entities.Models
 {
     public class DISTRICT
     {
-        public DISTRICT()
-        {
-
-        }
 
         /// <summary>
         /// 行政区编码

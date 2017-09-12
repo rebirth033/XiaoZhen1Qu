@@ -162,6 +162,7 @@
     <Content Include="Areas\Business\Css\BZZX\BZZX_WZJY.css" />
     <Content Include="Areas\Business\Css\Common\Top.css" />
     <Content Include="Areas\Business\Css\Common\XZQ.css" />
+    <Content Include="Areas\Business\Css\ES\ES_SJSM_BJBDN.css" />
     <Content Include="Areas\Business\Css\ES\ES_SJSM_ESSJ.css" />
     <Content Include="Areas\Business\Css\FBCG.css" />
     <Content Include="Areas\Business\Css\FC\FC_CKCFTDCW.css" />
@@ -343,9 +344,10 @@
     <Content Include="Areas\Business\Scripts\Business\Common\Common.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\Regular.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\XZQ.js" />
+    <Content Include="Areas\Business\Scripts\Business\ES\ES_SJSM_BJBDN.js" />
+    <Content Include="Areas\Business\Scripts\Business\ES\ES_SJSM_BJBDNYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\ES\ES_SJSM_ESSJ.js" />
     <Content Include="Areas\Business\Scripts\Business\ES\ES_SJSM_ESSJYZ.js" />
-    <Content Include="Areas\Business\Scripts\Business\ES\ES_SJSM_ESSJZP.js" />
     <Content Include="Areas\Business\Scripts\Business\FC\FC_CKCFTDCW.js" />
     <Content Include="Areas\Business\Scripts\Business\FC\FC_CKCFTDCWYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\FC\FC_DZF.js" />
@@ -706,6 +708,7 @@
     <Compile Include="Areas\Business\Controllers\BZZX\BZZXController.cs" />
     <Compile Include="Areas\Business\Controllers\BZZX\WZYJController.cs" />
     <Compile Include="Areas\Business\Controllers\CommonController.cs" />
+    <Compile Include="Areas\Business\Controllers\ES\FC_SJSM_BJBDNController.cs" />
     <Compile Include="Areas\Business\Controllers\ES\FC_SJSM_ESSJController.cs" />
     <Compile Include="Areas\Business\Controllers\FBCGController.cs" />
     <Compile Include="Areas\Business\Controllers\FC\FC_CKCFTDCWController.cs" />
@@ -824,6 +827,7 @@
     <Content Include="Areas\Business\Views\FC_XZL\FC_XZL.cshtml" />
     <Content Include="Areas\Business\Views\FC_CKCFTDCW\FC_CKCFTDCW.cshtml" />
     <Content Include="Areas\Business\Views\ES_SJSM_ESSJ\ES_SJSM_ESSJ.cshtml" />
+    <Content Include="Areas\Business\Views\ES_SJSM_BJBDN\ES_SJSM_BJBDN.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

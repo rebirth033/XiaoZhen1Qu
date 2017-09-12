@@ -2,7 +2,7 @@
 
 namespace TianWen.XiaoZhen1Qu.Entities.Models
 {
-    public class CODES
+    public class CODES_PHONE
     {
         /// <summary>
         /// 用户ID
@@ -39,5 +39,6 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// </summary>
         [Property]
         public virtual int PARENTID { get; set; }
+
     }
 }

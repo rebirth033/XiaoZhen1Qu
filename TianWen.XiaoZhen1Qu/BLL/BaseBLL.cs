@@ -30,6 +30,34 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
+        public object LoadCODES_PHONE(string TYPENAME)
+        {
+            try
+            {
+                IList<CODES_PHONE> list = DAO.Repository.GetObjectList<CODES_PHONE>(String.Format("FROM CODES_PHONE WHERE TYPENAME='{0}' ORDER BY CODEORDER", TYPENAME));
+                return new { Result = EnResultType.Success, list = list };
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("error", ex.Message);
+                return new { Result = EnResultType.Failed, Message = "加载失败" };
+            }
+        }
+
+        public object LoadCODES_COMPUTER(string TYPENAME)
+        {
+            try
+            {
+                IList<CODES_COMPUTER> list = DAO.Repository.GetObjectList<CODES_COMPUTER>(String.Format("FROM CODES_COMPUTER WHERE TYPENAME='{0}' ORDER BY CODEORDER", TYPENAME));
+                return new { Result = EnResultType.Success, list = list };
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("error", ex.Message);
+                return new { Result = EnResultType.Failed, Message = "加载失败" };
+            }
+        }
+
         public object LoadQYBySuperName(string SUPERNAME)
         {
             try
@@ -63,7 +91,21 @@ namespace TianWen.XiaoZhen1Qu.BLL
         {
             try
             {
-                IList<CODES> list = DAO.Repository.GetObjectList<CODES>(String.Format("FROM CODES WHERE PARENTID like '%{0}%' ORDER BY CODEORDER", SJPP));
+                IList<CODES_PHONE> list = DAO.Repository.GetObjectList<CODES_PHONE>(String.Format("FROM CODES_PHONE WHERE PARENTID like '%{0}%' ORDER BY CODEORDER", SJPP));
+                return new { Result = EnResultType.Success, list = list };
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("error", ex.Message);
+                return new { Result = EnResultType.Failed, Message = "加载失败" };
+            }
+        }
+
+        public object LoadBJBXHByBJBPP(string BJBPP)
+        {
+            try
+            {
+                IList<CODES_COMPUTER> list = DAO.Repository.GetObjectList<CODES_COMPUTER>(String.Format("FROM CODES_COMPUTER WHERE PARENTID like '%{0}%' ORDER BY CODEORDER", BJBPP));
                 return new { Result = EnResultType.Success, list = list };
             }
             catch (Exception ex)

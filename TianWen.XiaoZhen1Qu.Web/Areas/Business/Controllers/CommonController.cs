@@ -39,6 +39,18 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return Json(CommonBLL.LoadCODES(TYPENAME));
         }
 
+        public JsonResult LoadCODES_PHONE()
+        {
+            string TYPENAME = Request["TYPENAME"];
+            return Json(CommonBLL.LoadCODES_PHONE(TYPENAME));
+        }
+
+        public JsonResult LoadCODES_COMPUTER()
+        {
+            string TYPENAME = Request["TYPENAME"];
+            return Json(CommonBLL.LoadCODES_COMPUTER(TYPENAME));
+        }
+
         public JsonResult QHXZQ()
         {
             Session["XZQ"] = Request["XZQ"];
@@ -58,6 +70,11 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         public JsonResult LoadSJXH()
         {
             return Json(CommonBLL.LoadSJXHBySJPP(Request["SJPP"]));
+        }
+
+        public JsonResult LoadBJBXH()
+        {
+            return Json(CommonBLL.LoadBJBXHByBJBPP(Request["BJBPP"]));
         }
     }
 }

@@ -6,11 +6,17 @@ namespace TianWen.XiaoZhen1Qu.Interface
     {
         object LoadCODES(string TYPENAME);
 
+        object LoadCODES_PHONE(string TYPENAME);
+
+        object LoadCODES_COMPUTER(string TYPENAME); 
+
         object LoadQYBySuperName(string SUPERNAME);
 
         object LoadSQByQY(string QY);
 
         object LoadSJXHBySJPP(string SJPP);
+        
+        object LoadBJBXHByBJBPP(string BJBPP);
 
         string GetYHZHXXIDByYHID(string YHID);
 
