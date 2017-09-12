@@ -1,0 +1,74 @@
+-- Create table
+create table FC_XZLJBXX
+(
+  fc_xzljbxxid VARCHAR2(50) not null,
+  jcxxid       VARCHAR2(50),
+  gq           NUMBER(1),
+  kzcgs        VARCHAR2(10),
+  lpmc         VARCHAR2(100),
+  qy           VARCHAR2(20),
+  sq           VARCHAR2(20),
+  dd           VARCHAR2(100),
+  zj           NUMBER(8),
+  zjdw         VARCHAR2(10),
+  mj           NUMBER(8),
+  bcms         VARCHAR2(4000),
+  xzllx        VARCHAR2(50),
+  sj           NUMBER(8)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 16
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table FC_XZLJBXX
+  is '房产_写字楼基本信息';
+-- Add comments to the columns 
+comment on column FC_XZLJBXX.fc_xzljbxxid
+  is '主键';
+comment on column FC_XZLJBXX.jcxxid
+  is '基础信息ID';
+comment on column FC_XZLJBXX.gq
+  is '供求';
+comment on column FC_XZLJBXX.kzcgs
+  is '可注册公司';
+comment on column FC_XZLJBXX.lpmc
+  is '楼盘名称';
+comment on column FC_XZLJBXX.qy
+  is '区域';
+comment on column FC_XZLJBXX.sq
+  is '商圈';
+comment on column FC_XZLJBXX.dd
+  is '地段';
+comment on column FC_XZLJBXX.zj
+  is '租金';
+comment on column FC_XZLJBXX.zjdw
+  is '租金单位';
+comment on column FC_XZLJBXX.mj
+  is '面积';
+comment on column FC_XZLJBXX.bcms
+  is '补充描述';
+comment on column FC_XZLJBXX.xzllx
+  is '写字楼类型';
+comment on column FC_XZLJBXX.sj
+  is '售价';
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table FC_XZLJBXX
+  add primary key (FC_XZLJBXXID)
+  using index 
+  tablespace USERS
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    minextents 1
+    maxextents unlimited
+  );
