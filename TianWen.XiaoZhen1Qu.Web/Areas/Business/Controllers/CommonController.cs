@@ -52,7 +52,12 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public JsonResult LoadSQ()
         {
-            return Json(CommonBLL.LoadSQByQY(Request["QY"].ToString()));
+            return Json(CommonBLL.LoadSQByQY(Request["QY"]));
+        }
+
+        public JsonResult LoadSJXH()
+        {
+            return Json(CommonBLL.LoadSJXHBySJPP(Request["SJPP"]));
         }
     }
 }

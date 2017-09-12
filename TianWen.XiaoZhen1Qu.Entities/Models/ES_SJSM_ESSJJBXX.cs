@@ -47,10 +47,10 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual int SYQK { get; set; }
 
         /// <summary>
-        /// 转让价格
+        /// 价格
         /// </summary>
         [Property]
-        public virtual int ZRJG { get; set; }
+        public virtual string JG { get; set; }
 
         /// <summary>
         /// 特色标签

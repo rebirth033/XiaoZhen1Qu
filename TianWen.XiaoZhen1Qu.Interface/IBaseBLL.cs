@@ -10,6 +10,8 @@ namespace TianWen.XiaoZhen1Qu.Interface
 
         object LoadSQByQY(string QY);
 
+        object LoadSJXHBySJPP(string SJPP);
+
         string GetYHZHXXIDByYHID(string YHID);
 
         YHJBXX GetYHJBXXByYHM(string YHM);

@@ -7,7 +7,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Maps
     {
         public ES_SJSM_ESSJJBXX_Map()
         {
-            Table("FC_CKCFTDCWJBXX");
+            Table("ES_SJSM_ESSJJBXX");
             #region 属性
             Id(x => x.ES_SJSM_ESSJJBXXID, "ES_SJSM_ESSJJBXXID").GeneratedBy.Assigned().CustomType("AnsiString");
             Map(x => x.JCXXID, "JCXXID");
@@ -15,7 +15,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Maps
             Map(x => x.SJPP, "SJPP");
             Map(x => x.SJXH, "SJXH");
             Map(x => x.SYQK, "SYQK");
-            Map(x => x.ZRJG, "ZRJG");
+            Map(x => x.JG, "JG");
             Map(x => x.TSBQ, "TSBQ");
             Map(x => x.BCMS, "BCMS");
             Map(x => x.JYQY, "JYQY");

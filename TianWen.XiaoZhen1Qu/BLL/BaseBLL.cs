@@ -59,6 +59,20 @@ namespace TianWen.XiaoZhen1Qu.BLL
 
         }
 
+        public object LoadSJXHBySJPP(string SJPP)
+        {
+            try
+            {
+                IList<CODES> list = DAO.Repository.GetObjectList<CODES>(String.Format("FROM CODES WHERE PARENTID like '%{0}%' ORDER BY CODEORDER", SJPP));
+                return new { Result = EnResultType.Success, list = list };
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("error", ex.Message);
+                return new { Result = EnResultType.Failed, Message = "加载失败" };
+            }
+        }
+
         //根据用户ID获取用户账户ID
         public string GetYHZHXXIDByYHID(string YHID)
         {
