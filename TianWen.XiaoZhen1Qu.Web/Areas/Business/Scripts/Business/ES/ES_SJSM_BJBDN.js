@@ -26,12 +26,14 @@ $(document).ready(function () {
     LoadTXXX();
     LoadBJBLB();
     LoadBJBPP();
+    LoadXJ();
     LoadQY();
     LoadDefault();
     //LoadES_SJSM_BJBDNJBXX();
     BindHover("LB");
     BindHover("BJBPP");
     BindHover("BJBXH");
+    BindHover("XJ");
     BindHover("QY");
     BindHover("SQ");
 });
@@ -179,13 +181,39 @@ function LoadBJBXH(BJBPP) {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;height:340px;'>";
+                var html = "<ul class='uldropdown' style='overflow-y: scroll;height:340px;width:200px'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='lidropdown' onclick='SelectDropdown(this,\"BJBXH\")'>" + xml.list[i].CODENAME + "</li>";
                 }
                 html += "</ul>";
                 $("#divBJBXH").html(html);
                 $("#divBJBXH").css("display", "none");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//加载笔记本新旧
+function LoadXJ() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadCODES",
+        dataType: "json",
+        data:
+        {
+            TYPENAME: "新旧程度"
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"XJ\")'>" + xml.list[i].CODENAME + "</li>";
+                }
+                html += "</ul>";
+                $("#divXJ").html(html);
+                $("#divXJ").css("display", "none");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
