@@ -295,7 +295,7 @@ function LoadFC_CKCFTDCWJBXX() {
                     ue.setContent(xml.Value.FC_CKCFTDCWJBXX.BCMS);
                 });
                 SetGQ(xml.Value.FC_CKCFTDCWJBXX.GQ);
-                $("#spanCKCFTDCWLX").html(xml.Value.FC_CKCFTDCWJBXX.CKCFTDCWLX);
+                $("#spanCKCFTDCWLX").html(xml.Value.FC_CKCFTDCWJBXX.LX);
                 $("#spanKZCGS").html(xml.Value.FC_CKCFTDCWJBXX.KZCGS);
                 $("#spanQY").html(xml.Value.FC_CKCFTDCWJBXX.QY);
                 $("#spanSQ").html(xml.Value.FC_CKCFTDCWJBXX.SQ);
@@ -323,7 +323,7 @@ function FB() {
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
-    obj = jsonObj.AddJson(obj, "CKCFTDCWLX", "'" + $("#spanCKCFTDCWLX").html() + "'");
+    obj = jsonObj.AddJson(obj, "LX", "'" + $("#spanCKCFTDCWLX").html() + "'");
     obj = jsonObj.AddJson(obj, "KZCGS", "'" + $("#spanKZCGS").html() + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "SQ", "'" + $("#spanSQ").html() + "'");

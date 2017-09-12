@@ -178,14 +178,14 @@ function ValidateZJ() {
         $("#spanZJ").css("border-color", "#fd634f");
         return false;
     } else {
-        if (ValidateNumber($("#ZJ").val()) && $("#ZJ").val() !== "0") {
+        if (ValidateNumber($("#ZJ").val())) {
             $("#divZJTip").css("display", "none");
             $("#spanZJ").css("border-color", "#cccccc");
             return true;
         } else {
             $("#divZJTip").css("display", "block");
             $("#divZJTip").attr("class", "Warn");
-            $("#divZJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />租金请填写整数');
+            $("#divZJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />租金请填写整数，面议则填0');
             $("#spanZJ").css("border-color", "#fd634f");
             return false;
         }

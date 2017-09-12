@@ -53,14 +53,14 @@ function ValidateZJ() {
         $("#spanZJ").css("border-color", "#fd634f");
         return false;
     } else {
-        if (ValidateNumber($("#ZJ").val()) && $("#ZJ").val() !== "0") {
+        if (ValidateNumber($("#ZJ").val())) {
             $("#divZJTip").css("display", "none");
             $("#spanZJ").css("border-color", "#cccccc");
             return true;
         } else {
             $("#divZJTip").css("display", "block");
             $("#divZJTip").attr("class", "Warn");
-            $("#divZJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />租金请填写整数');
+            $("#divZJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />租金请填写整数，面议则填0');
             $("#spanZJ").css("border-color", "#fd634f");
             return false;
         }
@@ -82,7 +82,7 @@ function ValidateSJ() {
         } else {
             $("#divSJTip").css("display", "block");
             $("#divSJTip").attr("class", "Warn");
-            $("#divSJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />售价请填写整数');
+            $("#divSJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />售价请填写整数，面议则填0');
             $("#spanSJ").css("border-color", "#fd634f");
             return false;
         }
@@ -97,7 +97,7 @@ function ValidateMJ() {
         $("#spanMJ").css("border-color", "#fd634f");
         return false;
     } else {
-        if (ValidateNumber($("#ZJ").val()) && $("#ZJ").val() !== "0") {
+        if (ValidateNumber($("#ZJ").val())) {
             $("#divMJTip").css("display", "none");
             $("#spanMJ").css("border-color", "#cccccc");
             return true;
@@ -213,13 +213,13 @@ function InfoDD() {
 function InfoZJ() {
     $("#divZJTip").css("display", "block");
     $("#divZJTip").attr("class", "Info");
-    $("#divZJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数，面议则填0');
+    $("#divZJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数');
 }
 //提示租金
 function InfoSJ() {
     $("#divSJTip").css("display", "block");
     $("#divSJTip").attr("class", "Info");
-    $("#divSJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数，面议则填0');
+    $("#divSJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数');
 }
 //提示面积
 function InfoMJ() {
