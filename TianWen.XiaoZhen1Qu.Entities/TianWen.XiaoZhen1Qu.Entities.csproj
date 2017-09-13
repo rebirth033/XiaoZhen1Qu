@@ -59,6 +59,7 @@
     <Compile Include="Maps\CODES_PHONE_Map.cs" />
     <Compile Include="Maps\DISTRICT_Map.cs" />
     <Compile Include="Maps\DJJDJL_Map.cs" />
+    <Compile Include="Maps\ES_JDJJBG_ESJDJBXX_Map.cs" />
     <Compile Include="Maps\ES_SJSM_BJBDNJBXX_Map.cs" />
     <Compile Include="Maps\ES_SJSM_ESSJJBXX_Map.cs" />
     <Compile Include="Maps\ES_SJSM_PBDNJBXX_Map.cs" />

@@ -1,0 +1,73 @@
+-- Create table
+create table ES_JDJJBG_ESJDJBXX
+(
+  es_jdjjbg_esjdjbxxid VARCHAR2(50) not null,
+  jcxxid               VARCHAR2(50),
+  gq                   NUMBER(1),
+  bcms                 VARCHAR2(4000),
+  jyqy                 VARCHAR2(20),
+  jydd                 VARCHAR2(20),
+  lb                   VARCHAR2(20),
+  xj                   VARCHAR2(20),
+  jg                   VARCHAR2(20),
+  xl                   VARCHAR2(20),
+  dspmcc               VARCHAR2(20),
+  dspp                 VARCHAR2(20),
+  xyjpp                VARCHAR2(20),
+  ktpp                 VARCHAR2(20),
+  ktbpds               VARCHAR2(20),
+  ktgl                 VARCHAR2(20),
+  bxpp                 VARCHAR2(20),
+  bgpp                 VARCHAR2(20)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 16K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table ES_JDJJBG_ESJDJBXX
+  is '二手_家电家具办公_二手家电';
+-- Add comments to the columns 
+comment on column ES_JDJJBG_ESJDJBXX.es_jdjjbg_esjdjbxxid
+  is '二手家电基本信息ID';
+comment on column ES_JDJJBG_ESJDJBXX.jcxxid
+  is '基础信息ID';
+comment on column ES_JDJJBG_ESJDJBXX.gq
+  is '供求';
+comment on column ES_JDJJBG_ESJDJBXX.bcms
+  is '补充描述';
+comment on column ES_JDJJBG_ESJDJBXX.jyqy
+  is '交易区域';
+comment on column ES_JDJJBG_ESJDJBXX.jydd
+  is '交易地段';
+comment on column ES_JDJJBG_ESJDJBXX.lb
+  is '类别';
+comment on column ES_JDJJBG_ESJDJBXX.xj
+  is '新旧';
+comment on column ES_JDJJBG_ESJDJBXX.jg
+  is '价格';
+comment on column ES_JDJJBG_ESJDJBXX.xl
+  is '小类';
+comment on column ES_JDJJBG_ESJDJBXX.dspmcc
+  is '电视屏幕尺寸';
+comment on column ES_JDJJBG_ESJDJBXX.dspp
+  is '电视品牌';
+comment on column ES_JDJJBG_ESJDJBXX.xyjpp
+  is '洗衣机品牌';
+comment on column ES_JDJJBG_ESJDJBXX.ktpp
+  is '空调品牌';
+comment on column ES_JDJJBG_ESJDJBXX.ktbpds
+  is '空调变频定速';
+comment on column ES_JDJJBG_ESJDJBXX.ktgl
+  is '空调功率';
+comment on column ES_JDJJBG_ESJDJBXX.bxpp
+  is '冰箱品牌';
+comment on column ES_JDJJBG_ESJDJBXX.bgpp
+  is '冰柜品牌';

@@ -157,6 +157,32 @@ function LoadESJDXL(type) {
         }
     });
 }
+//加载二手家电详细参数
+function LoadXXCS(id, type) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadCODES_JDJJBG",
+        dataType: "json",
+        data:
+        {
+            TYPENAME: type
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"" + id + "\")'>" + xml.list[i].CODENAME + "</li>";
+                }
+                html += "</ul>";
+                $("#div" + id).html(html);
+                $("#div" + id).css("display", "none");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
 //加载二手家电新旧
 function LoadXJ() {
     $.ajax({
@@ -277,18 +303,66 @@ function SelectLB(obj, type) {
 }
 //判断类别
 function PDLB(LB) {
-    if (LB === "台式机") {
-        $("#divESJDXXCS").css("display", "");
-        $("#divESJDXXCS_2").css("display", "");
-        $("#divXLText").css("display", "none");
+    if (LB === "电视机") {
+        $("#divDSXXCS").css("display", "");
+        $("#divXYJXXCS").css("display", "none");
+        $("#divKTXXCS").css("display", "none");
+        $("#divBXXXCS").css("display", "none");
+        $("#divBGXXCS").css("display", "none");
+        LoadXXCS("DSPMCC", "电视屏幕尺寸");
+        LoadXXCS("DSPP", "电视品牌");
+        BindHover("DSPMCC");
+        BindHover("DSPP");
+    }
+    else if (LB === "洗衣机") {
+        $("#divDSXXCS").css("display", "none");
+        $("#divXYJXXCS").css("display", "");
+        $("#divKTXXCS").css("display", "none");
+        $("#divBXXXCS").css("display", "none");
+        $("#divBGXXCS").css("display", "none");
+        LoadXXCS("XYJPP", "洗衣机品牌");
+        BindHover("XYJPP");
+    }
+    else if (LB === "空调") {
+        $("#divDSXXCS").css("display", "none");
+        $("#divXYJXXCS").css("display", "none");
+        $("#divKTXXCS").css("display", "");
+        $("#divBXXXCS").css("display", "none");
+        $("#divBGXXCS").css("display", "none");
+        LoadXXCS("KTPP", "空调品牌");
+        LoadXXCS("BPDS", "变频定速");
+        LoadXXCS("KTGL", "空调功率");
+        BindHover("KTPP");
+        BindHover("BPDS");
+        BindHover("KTGL");
+    }
+    else if (LB === "冰箱") {
+        $("#divDSXXCS").css("display", "none");
+        $("#divXYJXXCS").css("display", "none");
+        $("#divKTXXCS").css("display", "none");
+        $("#divBXXXCS").css("display", "");
+        $("#divBGXXCS").css("display", "none");
+        LoadXXCS("BXPP", "冰箱品牌");
+        BindHover("BXPP");
+    }
+    else if (LB === "冰柜") {
+        $("#divDSXXCS").css("display", "none");
+        $("#divXYJXXCS").css("display", "none");
+        $("#divKTXXCS").css("display", "none");
+        $("#divBXXXCS").css("display", "none");
+        $("#divBGXXCS").css("display", "");
+        LoadXXCS("BGPP", "冰柜品牌");
+        BindHover("BGPP");
     }
     else {
-        $("#divESJDXXCS").css("display", "none");
-        $("#divESJDXXCS_2").css("display", "none");
-        $("#divXLText").css("display", "");
-        LoadESJDXL(LB);
-        BindHover("XL");
+        $("#divDSXXCS").css("display", "none");
+        $("#divXYJXXCS").css("display", "none");
+        $("#divKTXXCS").css("display", "none");
+        $("#divBXXXCS").css("display", "none");
+        $("#divBGXXCS").css("display", "none");
     }
+    LoadESJDXL(LB);
+    BindHover("XL");
 }
 
 //选择区域下拉框
@@ -348,12 +422,14 @@ function LoadES_JDJJBG_ESJDJBXX() {
                 $("#spanQY").html(xml.Value.ES_JDJJBG_ESJDJBXX.JYQY);
                 $("#spanSQ").html(xml.Value.ES_JDJJBG_ESJDJBXX.JYDD);
 
-                $("#spanCPUPP").html(xml.Value.ES_JDJJBG_ESJDJBXX.CPUPP);
-                $("#spanCPUHS").html(xml.Value.ES_JDJJBG_ESJDJBXX.CPUHS);
-                $("#spanNC").html(xml.Value.ES_JDJJBG_ESJDJBXX.NC);
-                $("#spanYP").html(xml.Value.ES_JDJJBG_ESJDJBXX.YP);
-                $("#spanPMCC").html(xml.Value.ES_JDJJBG_ESJDJBXX.PMCC);
-                $("#spanXK").html(xml.Value.ES_JDJJBG_ESJDJBXX.XK);
+                $("#spanDSPMCC").html(xml.Value.ES_JDJJBG_ESJDJBXX.DSPMCC);
+                $("#spanDSPP").html(xml.Value.ES_JDJJBG_ESJDJBXX.DSPP);
+                $("#spanXYJPP").html(xml.Value.ES_JDJJBG_ESJDJBXX.XYJPP);
+                $("#spanKTPP").html(xml.Value.ES_JDJJBG_ESJDJBXX.KTPP);
+                $("#spanKTBPDS").html(xml.Value.ES_JDJJBG_ESJDJBXX.KTBPDS);
+                $("#spanKTGL").html(xml.Value.ES_JDJJBG_ESJDJBXX.KTGL);
+                $("#spanBXPP").html(xml.Value.ES_JDJJBG_ESJDJBXX.BXPP);
+                $("#spanBGPP").html(xml.Value.ES_JDJJBG_ESJDJBXX.BGPP);
 
                 LoadPhotos(xml.Value.Photos);
                 PDLB(xml.Value.ES_JDJJBG_ESJDJBXX.LB);
@@ -388,12 +464,14 @@ function FB() {
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetGQ() + "'");
 
-    obj = jsonObj.AddJson(obj, "CPUPP", "'" + $("#spanCPUPP").html() + "'");
-    obj = jsonObj.AddJson(obj, "CPUHS", "'" + $("#spanCPUHS").html() + "'");
-    obj = jsonObj.AddJson(obj, "NC", "'" + $("#spanNC").html() + "'");
-    obj = jsonObj.AddJson(obj, "YP", "'" + $("#spanYP").html() + "'");
-    obj = jsonObj.AddJson(obj, "PMCC", "'" + $("#spanPMCC").html() + "'");
-    obj = jsonObj.AddJson(obj, "XK", "'" + $("#spanXK").html() + "'");
+    obj = jsonObj.AddJson(obj, "DSPMCC", "'" + $("#spanDSPMCC").html() + "'");
+    obj = jsonObj.AddJson(obj, "DSPP", "'" + $("#spanDSPP").html() + "'");
+    obj = jsonObj.AddJson(obj, "XYJPP", "'" + $("#spanXYJPP").html() + "'");
+    obj = jsonObj.AddJson(obj, "KTPP", "'" + $("#spanKTPP").html() + "'");
+    obj = jsonObj.AddJson(obj, "KTBPDS", "'" + $("#spanKTBPDS").html() + "'");
+    obj = jsonObj.AddJson(obj, "KTGL", "'" + $("#spanKTGL").html() + "'");
+    obj = jsonObj.AddJson(obj, "BXPP", "'" + $("#spanBXPP").html() + "'");
+    obj = jsonObj.AddJson(obj, "BGPP", "'" + $("#spanBGPP").html() + "'");
 
     if (getUrlParam("ES_JDJJBG_ESJDJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "ES_JDJJBG_ESJDJBXXID", "'" + getUrlParam("ES_JDJJBG_ESJDJBXXID") + "'");
