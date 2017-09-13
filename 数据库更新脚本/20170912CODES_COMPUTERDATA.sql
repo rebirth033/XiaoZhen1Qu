@@ -2,6 +2,93 @@ prompt Importing table codes_computer...
 set feedback off
 set define off
 insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (170, '笔记本型号', 'P700系列', '9', 9, 13);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (171, '笔记本型号', 'R700系列', '10', 10, 13);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (172, '笔记本型号', 'X500系列', '11', 11, 13);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (173, '笔记本型号', 'Z830系列', '12', 12, 13);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (174, '笔记本型号', '其他系列', '13', 13, 13);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (175, '笔记本型号', 'A400系列', '1', 1, 14);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (176, '笔记本型号', 'E400系列', '2', 2, 14);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (177, '笔记本型号', 'R410系列', '3', 3, 14);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (178, '笔记本型号', 'R430系列', '4', 4, 14);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (179, '笔记本型号', 'T400IG系列', '5', 5, 14);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (180, '笔记本型号', '其他系列', '6', 6, 14);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (181, '笔记本型号', 'A300系列', '1', 1, 15);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (182, '笔记本型号', 'A400系列', '2', 2, 15);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (183, '笔记本型号', 'A460系列', '3', 3, 15);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (184, '笔记本型号', 'A460P系列', '4', 4, 15);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (185, '笔记本型号', 'A470系列', '5', 5, 15);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (186, '笔记本型号', 'A560P系列', '6', 6, 15);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (187, '笔记本型号', 'K480P系列', '7', 7, 15);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (188, '笔记本型号', 'K580P系列', '8', 8, 15);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (189, '笔记本型号', '其他系列', '9', 9, 15);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (190, '笔记本型号', 'C600系列', '1', 1, 16);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (191, '笔记本型号', 'T68系列', '2', 2, 16);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (192, '笔记本型号', 'VM系列', '3', 3, 16);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (193, '笔记本型号', '简爱7系列', '4', 4, 16);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (194, '笔记本型号', '简爱7G系列', '5', 5, 16);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (195, '笔记本型号', '其他系列', '6', 6, 16);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (196, '笔记本型号', 'K40系列', '1', 1, 17);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (197, '笔记本型号', 'K41H系列', '2', 2, 17);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (198, '笔记本型号', 'K465系列', '3', 3, 17);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (1, '笔记本类别', '笔记本', '1', 1, null);
 
 insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
@@ -506,91 +593,61 @@ insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PA
 values (169, '笔记本型号', 'M300系列', '8', 8, 13);
 
 insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (170, '笔记本型号', 'P700系列', '9', 9, 13);
+values (241, '内存', '1G以下', '1', 1, null);
 
 insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (171, '笔记本型号', 'R700系列', '10', 10, 13);
+values (242, '内存', '1G', '2', 2, null);
 
 insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (172, '笔记本型号', 'X500系列', '11', 11, 13);
+values (243, '内存', '2G', '3', 3, null);
 
 insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (173, '笔记本型号', 'Z830系列', '12', 12, 13);
+values (244, '内存', '3G', '4', 4, null);
 
 insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (174, '笔记本型号', '其他系列', '13', 13, 13);
+values (245, '内存', '4G', '5', 5, null);
 
 insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (175, '笔记本型号', 'A400系列', '1', 1, 14);
+values (246, '内存', '4G以上', '6', 6, null);
 
 insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (176, '笔记本型号', 'E400系列', '2', 2, 14);
+values (338, '平板类别', '平板电脑', '1', 1, null);
 
 insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (177, '笔记本型号', 'R410系列', '3', 3, 14);
+values (339, '平板类别', '平板电脑配件', '2', 2, null);
 
 insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (178, '笔记本型号', 'R430系列', '4', 4, 14);
+values (360, 'MP3/MP4', 'iPod', '1', 1, 342);
 
 insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (179, '笔记本型号', 'T400IG系列', '5', 5, 14);
+values (361, 'MP3/MP4', 'MP3', '2', 2, 342);
 
 insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (180, '笔记本型号', '其他系列', '6', 6, 14);
+values (362, 'MP3/MP4', 'MP4', '3', 3, 342);
 
 insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (181, '笔记本型号', 'A300系列', '1', 1, 15);
+values (363, 'MP3/MP4', '其它', '4', 4, 342);
 
 insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (182, '笔记本型号', 'A400系列', '2', 2, 15);
+values (375, '智能设备', '智能手表', '1', 1, 346);
 
 insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (183, '笔记本型号', 'A460系列', '3', 3, 15);
+values (376, '智能设备', '智能手环', '2', 2, 346);
 
 insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (184, '笔记本型号', 'A460P系列', '4', 4, 15);
+values (377, '智能设备', '其它智能设备', '3', 3, 346);
 
 insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (185, '笔记本型号', 'A470系列', '5', 5, 15);
+values (396, '服务器', '台式服务器', '1', 1, 389);
 
 insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (186, '笔记本型号', 'A560P系列', '6', 6, 15);
+values (397, '服务器', '机架式服务器', '2', 2, 389);
 
 insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (187, '笔记本型号', 'K480P系列', '7', 7, 15);
+values (398, '服务器', '机柜式服务器', '3', 3, 389);
 
 insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (188, '笔记本型号', 'K580P系列', '8', 8, 15);
-
-insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (189, '笔记本型号', '其他系列', '9', 9, 15);
-
-insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (190, '笔记本型号', 'C600系列', '1', 1, 16);
-
-insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (191, '笔记本型号', 'T68系列', '2', 2, 16);
-
-insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (192, '笔记本型号', 'VM系列', '3', 3, 16);
-
-insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (193, '笔记本型号', '简爱7系列', '4', 4, 16);
-
-insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (194, '笔记本型号', '简爱7G系列', '5', 5, 16);
-
-insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (195, '笔记本型号', '其他系列', '6', 6, 16);
-
-insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (196, '笔记本型号', 'K40系列', '1', 1, 17);
-
-insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (197, '笔记本型号', 'K41H系列', '2', 2, 17);
-
-insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (198, '笔记本型号', 'K465系列', '3', 3, 17);
+values (399, '服务器', '其他服务器', '4', 4, 389);
 
 insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (199, '笔记本型号', 'K46A系列', '4', 4, 17);
@@ -717,5 +774,506 @@ values (239, '显卡', '独立显卡', '2', 2, null);
 
 insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (240, '显卡', '双显卡', '3', 3, null);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (247, '平板品牌', 'iPad', '1', 1, null);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (248, '平板品牌', '三星', '2', 2, null);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (294, '平板型号', 'E700R', '1', 1, 251);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (250, '平板品牌', '联想/ThinkPad', '4', 4, null);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (251, '平板品牌', '爱国者', '5', 5, null);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (252, '平板品牌', 'E人E本', '6', 6, null);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (253, '平板品牌', '纽曼', '7', 7, null);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (254, '平板品牌', '华为', '8', 8, null);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (255, '平板品牌', '宏基', '9', 9, null);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (256, '平板品牌', '华硕', '10', 10, null);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (257, '平板品牌', '戴尔', '11', 11, null);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (258, '平板品牌', '微软', '12', 12, null);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (259, '平板品牌', '其他品牌', '13', 13, null);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (287, '平板型号', 'A1', '1', 1, 250);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (288, '平板型号', 'A2107', '1', 1, 250);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (289, '平板型号', 'K1', '1', 1, 250);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (290, '平板型号', 'Y1011', '1', 1, 250);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (291, '平板型号', 'Tablet', '1', 1, 250);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (292, '平板型号', '其他', '1', 1, 250);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (293, '平板型号', 'E700', '1', 1, 251);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (295, '平板型号', 'G1', '1', 1, 251);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (296, '平板型号', 'M710', '1', 1, 251);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (297, '平板型号', 'M718', '1', 1, 251);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (298, '平板型号', 'M801', '1', 1, 251);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (299, '平板型号', 'N700', '1', 1, 251);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (300, '平板型号', 'Z5', '1', 1, 251);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (301, '平板型号', '其他', '1', 1, 251);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (307, '平板型号', 'K9', '1', 1, 253);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (308, '平板型号', 'K97', '1', 1, 253);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (309, '平板型号', 'M7', '1', 1, 253);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (310, '平板型号', 'N10', '1', 1, 253);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (311, '平板型号', 'NP711', '1', 1, 253);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (312, '平板型号', 'NP715', '1', 1, 253);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (313, '平板型号', 'NP8000', '1', 1, 253);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (314, '平板型号', 'NP900', '1', 1, 253);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (315, '平板型号', 'P7', '1', 1, 253);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (316, '平板型号', 'P9', '1', 1, 253);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (317, '平板型号', 'P10', '1', 1, 253);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (318, '平板型号', 'T7', '1', 1, 253);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (319, '平板型号', 'T9', '1', 1, 253);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (320, '平板型号', '其他', '1', 1, 253);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (321, '平板型号', 'MediaPad', '1', 1, 254);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (322, '平板型号', 'S7', '1', 1, 254);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (340, '数码产品类别', '相机/配件', '1', 1, null);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (341, '数码产品类别', '数码摄像机', '2', 2, null);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (342, '数码产品类别', 'MP3/MP4', '3', 3, null);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (343, '数码产品类别', '游戏机', '4', 4, null);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (344, '数码产品类别', '电子书/kindle', '5', 5, null);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (345, '数码产品类别', '耳机耳麦', '6', 6, null);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (346, '数码产品类别', '智能设备', '7', 7, null);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (347, '数码产品类别', '其他数码', '8', 8, null);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (348, '数码产品类别', '数码回收', '9', 9, null);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (271, '平板型号', 'P1000', '1', 1, 248);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (272, '平板型号', 'P1010', '1', 1, 248);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (273, '平板型号', 'P3100', '1', 1, 248);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (274, '平板型号', 'P3110', '1', 1, 248);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (275, '平板型号', 'P5100', '1', 1, 248);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (276, '平板型号', 'P5110', '1', 1, 248);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (277, '平板型号', 'P6200', '1', 1, 248);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (278, '平板型号', 'P6210', '1', 1, 248);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (279, '平板型号', 'P6800', '1', 1, 248);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (280, '平板型号', 'P7300', '1', 1, 248);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (281, '平板型号', 'P7310', '1', 1, 248);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (282, '平板型号', 'P739', '1', 1, 248);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (283, '平板型号', 'P7500', '1', 1, 248);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (284, '平板型号', 'P7510', '1', 1, 248);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (285, '平板型号', 'N8000', '1', 1, 248);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (286, '平板型号', '其他', '1', 1, 248);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (302, '平板型号', 'T1', '1', 1, 252);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (303, '平板型号', 'T2', '1', 1, 252);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (304, '平板型号', 'T3', '1', 1, 252);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (305, '平板型号', 'T4', '1', 1, 252);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (306, '平板型号', '其它', '1', 1, 252);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (323, '平板型号', 'A100', '1', 1, 255);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (324, '平板型号', 'A500', '1', 1, 255);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (325, '平板型号', 'A700', '1', 1, 255);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (326, '平板型号', 'W500', '1', 1, 255);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (327, '平板型号', '其它', '1', 1, 255);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (364, '游戏机', 'PSP', '1', 1, 343);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (365, '游戏机', 'PSV', '2', 2, 343);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (366, '游戏机', 'NDS', '3', 3, 343);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (367, '游戏机', '3DS', '4', 4, 343);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (368, '游戏机', 'Xbox', '5', 5, 343);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (369, '游戏机', 'PS3', '6', 6, 343);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (370, '游戏机', 'PS2', '7', 7, 343);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (371, '游戏机', 'GBA', '8', 8, 343);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (372, '游戏机', 'WII', '9', 9, 343);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (373, '游戏机', '游戏机配件', '10', 10, 343);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (374, '游戏机', '其他', '11', 11, 343);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (378, '其他数码', '数码相框', '1', 1, 347);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (379, '其他数码', '录音笔', '2', 2, 347);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (380, '其他数码', '音响', '3', 3, 347);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (381, '其他数码', 'GPS导航仪', '4', 4, 347);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (382, '其他数码', '电子辞典', '5', 5, 347);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (383, '其他数码', '学习机', '6', 6, 347);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (384, '其他数码', '复读机', '7', 7, 347);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (385, '其他数码', '掌上电脑', '8', 8, 347);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (386, '其他数码', '行车记录仪', '9', 9, 347);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (387, '其他数码', '其他数码产品', '10', 10, 347);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (388, '台式机/配件', '台式机', '1', 1, null);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (389, '台式机/配件', '服务器', '2', 2, null);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (390, '台式机/配件', '硬件', '3', 3, null);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (391, '台式机/配件', '外设产品', '4', 4, null);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (392, '台式机/配件', '网络设备', '5', 5, null);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (393, '台式机/配件', '上网套餐', '6', 6, null);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (394, '台式机/配件', '其他', '7', 7, null);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (395, '台式机/配件', '电脑回收', '8', 8, null);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (328, '平板型号', 'TF101', '1', 1, 256);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (329, '平板型号', 'TF201', '1', 1, 256);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (330, '平板型号', 'Streak 5', '1', 1, 257);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (331, '平板型号', 'Streak 7', '1', 1, 257);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (332, '平板型号', 'Streak 10', '1', 1, 257);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (333, '平板型号', 'Latitude ST', '1', 1, 257);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (334, '平板型号', '其他', '1', 1, 257);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (335, '平板型号', 'surface1', '1', 1, 258);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (336, '平板型号', 'surface2', '1', 1, 258);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (337, '平板型号', 'surface3', '1', 1, 258);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (349, '相机/配件', '单反相机', '1', 1, 340);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (350, '相机/配件', '数码相机', '2', 2, 340);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (351, '相机/配件', '微单相机', '3', 3, 340);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (352, '相机/配件', '其他相机', '4', 4, 340);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (353, '相机/配件', '镜头', '5', 5, 340);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (354, '相机/配件', '闪光灯', '6', 6, 340);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (355, '相机/配件', '脚架/云台', '7', 7, 340);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (260, '平板型号', 'iPad Air', '1', 1, 247);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (261, '平板型号', 'iPad Air2', '1', 1, 247);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (262, '平板型号', 'iPad mini', '1', 1, 247);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (263, '平板型号', 'iPad mini2', '1', 1, 247);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (264, '平板型号', 'iPad mini3', '1', 1, 247);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (265, '平板型号', 'iPad mini4', '1', 1, 247);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (266, '平板型号', 'iPad Pro', '1', 1, 247);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (267, '平板型号', 'iPad4', '1', 1, 247);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (268, '平板型号', 'iPad3', '1', 1, 247);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (269, '平板型号', 'iPad2', '1', 1, 247);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (270, '平板型号', 'iPad1', '1', 1, 247);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (356, '相机/配件', '存储卡/读卡器', '8', 8, 340);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (357, '相机/配件', '相机电池/电源', '9', 9, 340);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (358, '相机/配件', '相机包', '10', 10, 340);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (359, '相机/配件', '其他相机配件', '11', 11, 340);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (400, '硬件', 'cpu', '1', 1, 390);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (401, '硬件', '硬盘', '2', 2, 390);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (402, '硬件', '内存条', '3', 3, 390);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (403, '硬件', '显卡', '4', 4, 390);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (404, '硬件', '主板', '5', 5, 390);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (405, '硬件', '显示器', '6', 6, 390);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (406, '硬件', '光驱/刻录机', '7', 7, 390);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (407, '硬件', '散热器', '8', 8, 390);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (408, '硬件', '机箱', '9', 9, 390);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (409, '硬件', '电源', '10', 10, 390);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (410, '硬件', '其他', '11', 11, 390);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (411, '外设产品', 'UPS电源', '1', 1, 391);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (412, '外设产品', '耳机/耳麦', '2', 2, 391);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (413, '外设产品', '摄像头', '3', 3, 391);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (414, '外设产品', '音箱', '4', 4, 391);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (415, '外设产品', 'U盘', '5', 5, 391);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (416, '外设产品', '鼠标', '6', 6, 391);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (417, '外设产品', '键盘', '7', 7, 391);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (418, '外设产品', '鼠标垫', '8', 8, 391);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (419, '外设产品', '手写板', '9', 9, 391);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (420, '外设产品', '其他外设', '10', 10, 391);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (421, '网络设备', '网卡', '1', 1, 392);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (422, '网络设备', '路由器', '2', 2, 392);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (423, '网络设备', '无线路由器', '3', 3, 392);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (424, '网络设备', '交换机', '4', 4, 392);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (425, '网络设备', '网线', '5', 5, 392);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (426, '网络设备', '调制解调器', '6', 6, 392);
+
+insert into codes_computer (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (427, '网络设备', '其他网络设备', '7', 7, 392);
 
 prompt Done.

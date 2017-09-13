@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Web.Mvc;
-using CommonClassLib.Helper;
+﻿using System.Web.Mvc;
 using TianWen.XiaoZhen1Qu.Entities.Models;
 using TianWen.XiaoZhen1Qu.Interface;
-using TianWen.XiaoZhen1Qu.Web.Areas.Business.Common;
 
 namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 {
@@ -50,6 +46,12 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             string TYPENAME = Request["TYPENAME"];
             return Json(CommonBLL.LoadCODES_COMPUTER(TYPENAME));
         }
+
+        public JsonResult LoadCODES_JDJJBG()
+        {
+            string TYPENAME = Request["TYPENAME"];
+            return Json(CommonBLL.LoadCODES_JDJJBG(TYPENAME));
+        } 
 
         public JsonResult QHXZQ()
         {

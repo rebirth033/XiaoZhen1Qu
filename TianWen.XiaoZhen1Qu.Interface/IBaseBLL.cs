@@ -8,7 +8,9 @@ namespace TianWen.XiaoZhen1Qu.Interface
 
         object LoadCODES_PHONE(string TYPENAME);
 
-        object LoadCODES_COMPUTER(string TYPENAME); 
+        object LoadCODES_COMPUTER(string TYPENAME);
+
+        object LoadCODES_JDJJBG(string TYPENAME); 
 
         object LoadQYBySuperName(string SUPERNAME);
 
