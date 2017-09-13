@@ -163,6 +163,7 @@
     <Content Include="Areas\Business\Css\Common\Top.css" />
     <Content Include="Areas\Business\Css\Common\XZQ.css" />
     <Content Include="Areas\Business\Css\ES\ES_JDJJBG_ESJD.css" />
+    <Content Include="Areas\Business\Css\ES\ES_JDJJBG_ESJJ.css" />
     <Content Include="Areas\Business\Css\ES\ES_SJSM_BJBDN.css" />
     <Content Include="Areas\Business\Css\ES\ES_SJSM_ESSJ.css" />
     <Content Include="Areas\Business\Css\ES\ES_SJSM_PBDN.css" />
@@ -350,6 +351,8 @@
     <Content Include="Areas\Business\Scripts\Business\Common\XZQ.js" />
     <Content Include="Areas\Business\Scripts\Business\ES\ES_JDJJBG_ESJD.js" />
     <Content Include="Areas\Business\Scripts\Business\ES\ES_JDJJBG_ESJDYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\ES\ES_JDJJBG_ESJJ.js" />
+    <Content Include="Areas\Business\Scripts\Business\ES\ES_JDJJBG_ESJJYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\ES\ES_SJSM_BJBDN.js" />
     <Content Include="Areas\Business\Scripts\Business\ES\ES_SJSM_BJBDNYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\ES\ES_SJSM_ESSJ.js" />
@@ -721,6 +724,7 @@
     <Compile Include="Areas\Business\Controllers\BZZX\WZYJController.cs" />
     <Compile Include="Areas\Business\Controllers\CommonController.cs" />
     <Compile Include="Areas\Business\Controllers\ES\ES_JDJJBG_ESJDController.cs" />
+    <Compile Include="Areas\Business\Controllers\ES\ES_JDJJBG_ESJJController.cs" />
     <Compile Include="Areas\Business\Controllers\ES\ES_SJSM_BJBDNController.cs" />
     <Compile Include="Areas\Business\Controllers\ES\ES_SJSM_ESSJController.cs" />
     <Compile Include="Areas\Business\Controllers\ES\ES_SJSM_PBDNController.cs" />
@@ -848,6 +852,7 @@
     <Content Include="Areas\Business\Views\ES_SJSM_SMCP\ES_SJSM_SMCP.cshtml" />
     <Content Include="Areas\Business\Views\ES_SJSM_TSJ\ES_SJSM_TSJ.cshtml" />
     <Content Include="Areas\Business\Views\ES_JDJJBG_ESJD\ES_JDJJBG_ESJD.cshtml" />
+    <Content Include="Areas\Business\Views\ES_JDJJBG_ESJJ\ES_JDJJBG_ESJJ.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

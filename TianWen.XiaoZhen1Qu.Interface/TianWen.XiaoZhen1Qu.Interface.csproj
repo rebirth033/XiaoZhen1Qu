@@ -51,6 +51,7 @@
     <Compile Include="ICommonBLL.cs" />
     <Compile Include="IDAO.cs" />
     <Compile Include="IES_JDJJBG_ESJDBLL.cs" />
+    <Compile Include="IES_JDJJBG_ESJJBLL.cs" />
     <Compile Include="IES_SJSM_BJBDNBLL.cs" />
     <Compile Include="IES_SJSM_ESSJBLL.cs" />
     <Compile Include="IES_SJSM_PBDNBLL.cs" />

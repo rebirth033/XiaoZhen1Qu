@@ -2,6 +2,261 @@ prompt Importing table codes_jdjjbg...
 set feedback off
 set define off
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1, '二手家电', '电视机', '1', 1, null);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (2, '二手家电', '洗衣机', '2', 2, null);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (3, '二手家电', '空调', '3', 3, null);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (4, '二手家电', '冰箱', '4', 4, null);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (5, '二手家电', '冰柜', '5', 5, null);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (6, '二手家电', '影音家电', '6', 6, null);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (7, '二手家电', '生活家电', '7', 7, null);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (8, '二手家电', '厨卫家电', '8', 8, null);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (9, '二手家电', '其他家电', '9', 9, null);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (10, '二手家电', '家电回收', '10', 10, null);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (11, '电视机', '液晶电视', '1', 1, 1);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (12, '电视机', 'LED电视', '2', 2, 1);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (13, '电视机', '智能电视', '3', 3, 1);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (14, '电视机', '其它电视', '4', 4, 1);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (15, '洗衣机', '全自动洗衣机', '1', 1, 2);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (16, '洗衣机', '滚筒洗衣机', '2', 2, 2);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (17, '洗衣机', '双缸洗衣机', '3', 3, 2);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (18, '洗衣机', '迷你洗衣机', '4', 4, 2);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (19, '洗衣机', '其他洗衣机', '5', 5, 2);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (20, '空调', '柜式空调', '1', 1, 3);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (21, '空调', '壁挂式空调', '2', 2, 3);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (22, '空调', '中央空调', '3', 3, 3);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (23, '空调', '移动空调', '4', 4, 3);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (24, '空调', '其他空调', '5', 5, 3);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (25, '冰箱', '双门冰箱', '1', 1, 4);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (26, '冰箱', '对开门冰箱', '2', 2, 4);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (27, '冰箱', '三门冰箱', '3', 3, 4);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (28, '冰箱', '单门冰箱', '4', 4, 4);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (29, '冰箱', '多门冰箱', '5', 5, 4);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (30, '冰箱', '迷你冰箱', '6', 6, 4);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (31, '冰箱', '其他冰箱', '7', 7, 4);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (32, '冰柜', '立式冰柜', '1', 1, 5);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (33, '冰柜', '卧式冰柜', '2', 2, 5);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (34, '冰柜', '展示柜', '3', 3, 5);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (35, '冰柜', '超市冰柜', '4', 4, 5);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (36, '冰柜', '工业冰柜', '5', 5, 5);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (37, '冰柜', '其他冰柜', '6', 6, 5);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (38, '影音家电', '功放', '1', 1, 6);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (39, '影音家电', '音响', '2', 2, 6);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (40, '影音家电', '音箱', '3', 3, 6);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (41, '影音家电', '家庭影院', '4', 4, 6);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (42, '影音家电', 'DVD播放机', '5', 5, 6);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (43, '影音家电', '收音机', '6', 6, 6);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (44, '影音家电', '机顶盒/播放器', '7', 7, 6);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (45, '影音家电', '其他影音家电', '8', 8, 6);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (46, '生活家电', '饮水机', '1', 1, 7);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (47, '生活家电', '净水器', '2', 2, 7);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (48, '生活家电', '电暖气', '3', 3, 7);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (49, '生活家电', '加湿器', '4', 4, 7);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (50, '生活家电', '空气净化器', '5', 5, 7);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (51, '生活家电', '空调扇', '6', 6, 7);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (52, '生活家电', '电风扇', '7', 7, 7);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (53, '生活家电', '吸尘器', '8', 8, 7);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (54, '生活家电', '挂烫机', '9', 9, 7);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (55, '生活家电', '电熨斗', '10', 10, 7);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (56, '生活家电', '烘干机/干衣机', '11', 11, 7);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (57, '生活家电', '除湿机', '12', 12, 7);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (58, '生活家电', '剃须刀', '13', 13, 7);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (59, '生活家电', '脱毛器', '14', 14, 7);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (60, '生活家电', '电吹风', '15', 15, 7);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (61, '生活家电', '其他生活家电', '16', 16, 7);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (62, '厨卫家电', '热水器', '1', 1, 8);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (63, '厨卫家电', '浴霸', '2', 2, 8);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (64, '厨卫家电', '油烟机', '3', 3, 8);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (65, '厨卫家电', '燃气灶', '4', 4, 8);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (66, '厨卫家电', '微波炉', '5', 5, 8);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (67, '厨卫家电', '电烤箱', '6', 6, 8);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (68, '厨卫家电', '电磁炉', '7', 7, 8);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (69, '厨卫家电', '电饭煲', '8', 8, 8);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (70, '厨卫家电', '电压力锅', '9', 9, 8);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (71, '厨卫家电', '电饼铛', '10', 10, 8);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (72, '厨卫家电', '消毒柜', '11', 11, 8);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (73, '厨卫家电', '电热水壶', '12', 12, 8);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (74, '厨卫家电', '咖啡机', '13', 13, 8);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (75, '厨卫家电', '榨汁机', '14', 14, 8);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (76, '厨卫家电', '豆浆机', '15', 15, 8);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (77, '厨卫家电', '面包机', '16', 16, 8);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (78, '厨卫家电', '酸奶机', '17', 17, 8);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (79, '厨卫家电', '多士炉/烤面包机', '18', 18, 8);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (80, '厨卫家电', '电火锅', '19', 19, 8);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (81, '厨卫家电', '搅拌机', '20', 20, 8);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (82, '厨卫家电', '食品加工机', '21', 21, 8);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (83, '厨卫家电', '炖煮锅/砂锅', '22', 22, 8);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (84, '厨卫家电', '蒸/煮蛋器', '23', 23, 8);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (85, '厨卫家电', '其他厨卫电器', '24', 24, 8);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (86, '电视屏幕尺寸', '14寸', '1', 1, null);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
@@ -179,6 +434,27 @@ insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARE
 values (144, '空调品牌', '其他品牌', '16', 16, null);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (145, '变频定速', '变频', '1', 1, null);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (146, '变频定速', '定速', '2', 2, null);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (147, '空调功率', '1P', '1', 1, null);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (148, '空调功率', '1.5P', '2', 2, null);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (149, '空调功率', '2P', '3', 3, null);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (150, '空调功率', '2.5P', '4', 4, null);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (151, '空调功率', '3P及以上', '5', 5, null);
+
+insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (152, '冰箱品牌', '新飞', '1', 1, null);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
@@ -251,279 +527,249 @@ insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARE
 values (175, '冰柜品牌', '其他品牌', '8', 8, null);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (15, '洗衣机', '全自动洗衣机', '1', 1, 2);
+values (176, '二手家具', '床', '1', 1, 2);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (16, '洗衣机', '滚筒洗衣机', '2', 2, 2);
+values (177, '二手家具', '床垫', '1', 1, 2);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (17, '洗衣机', '双缸洗衣机', '3', 3, 2);
+values (178, '二手家具', '柜子', '1', 1, 2);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (18, '洗衣机', '迷你洗衣机', '4', 4, 2);
+values (179, '二手家具', '架子', '1', 1, 2);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (19, '洗衣机', '其他洗衣机', '5', 5, 2);
+values (180, '二手家具', '桌子', '1', 1, 2);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (20, '空调', '柜式空调', '1', 1, 3);
+values (181, '二手家具', '椅子/凳', '1', 1, 2);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (21, '空调', '壁挂式空调', '2', 2, 3);
+values (182, '二手家具', '沙发', '1', 1, 2);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (22, '空调', '中央空调', '3', 3, 3);
+values (183, '二手家具', '茶几', '1', 1, 2);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (23, '空调', '移动空调', '4', 4, 3);
+values (184, '二手家具', '办公家具', '1', 1, 2);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (24, '空调', '其他空调', '5', 5, 3);
+values (185, '二手家具', '其他家具', '1', 1, 2);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (25, '冰箱', '双门冰箱', '1', 1, 4);
+values (186, '二手家具', '家具回收', '1', 1, 2);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (26, '冰箱', '对开门冰箱', '2', 2, 4);
+values (187, '床', '单人床', '1', 1, 176);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (27, '冰箱', '三门冰箱', '3', 3, 4);
+values (188, '床', '双人床', '2', 2, 176);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (28, '冰箱', '单门冰箱', '4', 4, 4);
+values (189, '床', '双层床', '3', 3, 176);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (29, '冰箱', '多门冰箱', '5', 5, 4);
+values (190, '床', '折叠床', '4', 4, 176);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (30, '冰箱', '迷你冰箱', '6', 6, 4);
+values (191, '床', '儿童床', '5', 5, 176);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (31, '冰箱', '其他冰箱', '7', 7, 4);
+values (192, '床', '充气床', '6', 6, 176);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (32, '冰柜', '立式冰柜', '1', 1, 5);
+values (193, '床', '子母床', '7', 7, 176);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (33, '冰柜', '卧式冰柜', '2', 2, 5);
+values (194, '床', '其他', '8', 8, 176);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (34, '冰柜', '展示柜', '3', 3, 5);
+values (195, '床垫', '单人床垫', '1', 1, 177);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (35, '冰柜', '超市冰柜', '4', 4, 5);
+values (196, '床垫', '双人床垫', '2', 2, 177);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (36, '冰柜', '工业冰柜', '5', 5, 5);
+values (197, '床垫', '儿童床垫', '3', 3, 177);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (37, '冰柜', '其他冰柜', '6', 6, 5);
+values (198, '床垫', '其他床垫', '4', 4, 177);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (38, '影音家电', '功放', '1', 1, 6);
+values (199, '柜子', '衣柜', '1', 1, 178);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (39, '影音家电', '音响', '2', 2, 6);
+values (200, '柜子', '简易衣柜', '2', 2, 178);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (40, '影音家电', '音箱', '3', 3, 6);
+values (201, '柜子', '电视柜', '3', 3, 178);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (41, '影音家电', '家庭影院', '4', 4, 6);
+values (202, '柜子', '书柜', '4', 4, 178);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (42, '影音家电', 'DVD播放机', '5', 5, 6);
+values (203, '柜子', '鞋柜', '5', 5, 178);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (43, '影音家电', '收音机', '6', 6, 6);
+values (204, '柜子', '床头柜', '6', 6, 178);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (44, '影音家电', '机顶盒/播放器', '7', 7, 6);
+values (205, '柜子', '橱柜', '7', 7, 178);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (45, '影音家电', '其他影音家电', '8', 8, 6);
+values (206, '柜子', '储物柜', '8', 8, 178);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (46, '生活家电', '饮水机', '1', 1, 7);
+values (207, '柜子', '酒柜', '9', 9, 178);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (47, '生活家电', '净水器', '2', 2, 7);
+values (208, '柜子', '商用展柜', '10', 10, 178);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (48, '生活家电', '电暖气', '3', 3, 7);
+values (209, '柜子', '更衣柜', '11', 11, 178);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (49, '生活家电', '加湿器', '4', 4, 7);
+values (210, '柜子', '柜台', '12', 12, 178);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (50, '生活家电', '空气净化器', '5', 5, 7);
+values (211, '柜子', '斗柜', '13', 13, 178);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (51, '生活家电', '空调扇', '6', 6, 7);
+values (212, '柜子', '展柜', '14', 14, 178);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (52, '生活家电', '电风扇', '7', 7, 7);
+values (213, '柜子', '其他', '15', 15, 178);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (53, '生活家电', '吸尘器', '8', 8, 7);
+values (214, '架子', '书架', '1', 1, 179);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (54, '生活家电', '挂烫机', '9', 9, 7);
+values (215, '架子', '鞋架', '2', 2, 179);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (55, '生活家电', '电熨斗', '10', 10, 7);
+values (216, '架子', '衣架', '3', 3, 179);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (56, '生活家电', '烘干机/干衣机', '11', 11, 7);
+values (217, '架子', '置物架', '4', 4, 179);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (57, '生活家电', '除湿机', '12', 12, 7);
+values (218, '架子', '衣帽架', '5', 5, 179);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (58, '生活家电', '剃须刀', '13', 13, 7);
+values (219, '架子', '晾衣架', '6', 6, 179);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (59, '生活家电', '脱毛器', '14', 14, 7);
+values (220, '架子', '书报架', '7', 7, 179);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (60, '生活家电', '电吹风', '15', 15, 7);
+values (221, '架子', '毛巾架', '8', 8, 179);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (61, '生活家电', '其他生活家电', '16', 16, 7);
+values (222, '架子', '其他', '9', 9, 179);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (11, '电视机', '液晶电视', '1', 1, 1);
+values (223, '桌子', '电脑桌', '1', 1, 180);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (12, '电视机', 'LED电视', '2', 2, 1);
+values (224, '桌子', '餐桌', '2', 2, 180);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (13, '电视机', '智能电视', '3', 3, 1);
+values (225, '桌子', '写字台', '3', 3, 180);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (14, '电视机', '其它电视', '4', 4, 1);
+values (226, '桌子', '梳妆台', '4', 4, 180);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1, '二手家电', '电视机', '1', 1, null);
+values (227, '桌子', '折叠桌', '5', 5, 180);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (2, '二手家电', '洗衣机', '2', 2, null);
+values (228, '桌子', '书桌', '6', 6, 180);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (3, '二手家电', '空调', '3', 3, null);
+values (229, '桌子', '吧台', '7', 7, 180);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (4, '二手家电', '冰箱', '4', 4, null);
+values (230, '桌子', '学习桌', '8', 8, 180);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (5, '二手家电', '冰柜', '5', 5, null);
+values (231, '桌子', '其他', '9', 9, 180);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (6, '二手家电', '影音家电', '6', 6, null);
+values (232, '椅子/凳', '电脑椅', '1', 1, 181);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (7, '二手家电', '生活家电', '7', 7, null);
+values (233, '椅子/凳', '餐椅', '2', 2, 181);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (8, '二手家电', '厨卫家电', '8', 8, null);
+values (234, '椅子/凳', '藤椅', '3', 3, 181);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (9, '二手家电', '其他家电', '9', 9, null);
+values (235, '椅子/凳', '摇椅', '4', 4, 181);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (10, '二手家电', '家电回收', '10', 10, null);
+values (236, '椅子/凳', '躺椅', '5', 5, 181);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (62, '厨卫家电', '热水器', '1', 1, 8);
+values (237, '椅子/凳', '转椅', '6', 6, 181);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (63, '厨卫家电', '浴霸', '2', 2, 8);
+values (238, '椅子/凳', '折叠椅', '7', 7, 181);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (64, '厨卫家电', '油烟机', '3', 3, 8);
+values (239, '椅子/凳', '凳子', '8', 8, 181);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (65, '厨卫家电', '燃气灶', '4', 4, 8);
+values (240, '椅子/凳', '扶手椅', '9', 9, 181);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (66, '厨卫家电', '微波炉', '5', 5, 8);
+values (241, '椅子/凳', '太师椅', '10', 10, 181);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (67, '厨卫家电', '电烤箱', '6', 6, 8);
+values (242, '椅子/凳', '其他', '11', 11, 181);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (68, '厨卫家电', '电磁炉', '7', 7, 8);
+values (243, '沙发', '单张沙发', '1', 1, 182);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (69, '厨卫家电', '电饭煲', '8', 8, 8);
+values (244, '沙发', '组合沙发', '2', 2, 182);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (70, '厨卫家电', '电压力锅', '9', 9, 8);
+values (245, '沙发', '沙发床', '3', 3, 182);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (71, '厨卫家电', '电饼铛', '10', 10, 8);
+values (246, '沙发', '其他', '4', 4, 182);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (72, '厨卫家电', '消毒柜', '11', 11, 8);
+values (247, '床尺寸', '1m*1.9m', '1', 1, null);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (73, '厨卫家电', '电热水壶', '12', 12, 8);
+values (248, '床尺寸', '1m*2m', '2', 2, null);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (74, '厨卫家电', '咖啡机', '13', 13, 8);
+values (249, '床尺寸', '1.2m*1.9m', '3', 3, null);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (75, '厨卫家电', '榨汁机', '14', 14, 8);
+values (250, '床尺寸', '1.2m*2m', '4', 4, null);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (76, '厨卫家电', '豆浆机', '15', 15, 8);
+values (251, '床尺寸', '1.35m*1.9m', '5', 5, null);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (77, '厨卫家电', '面包机', '16', 16, 8);
+values (252, '床尺寸', '1.35m*2m', '6', 6, null);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (78, '厨卫家电', '酸奶机', '17', 17, 8);
+values (253, '床尺寸', '1.5m*1.9m', '7', 7, null);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (79, '厨卫家电', '多士炉/烤面包机', '18', 18, 8);
+values (254, '床尺寸', '1.5m*2m', '8', 8, null);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (80, '厨卫家电', '电火锅', '19', 19, 8);
+values (255, '床尺寸', '1.8m*1.9m', '9', 9, null);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (81, '厨卫家电', '搅拌机', '20', 20, 8);
+values (256, '床尺寸', '1.8m*2m', '10', 10, null);
 
 insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (82, '厨卫家电', '食品加工机', '21', 21, 8);
-
-insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (83, '厨卫家电', '炖煮锅/砂锅', '22', 22, 8);
-
-insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (84, '厨卫家电', '蒸/煮蛋器', '23', 23, 8);
-
-insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (85, '厨卫家电', '其他厨卫电器', '24', 24, 8);
-
-insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (145, '变频定速', '变频', '1', 1, null);
-
-insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (146, '变频定速', '定速', '2', 2, null);
-
-insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (147, '空调功率', '1P', '1', 1, null);
-
-insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (148, '空调功率', '1.5P', '2', 2, null);
-
-insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (149, '空调功率', '2P', '3', 3, null);
-
-insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (150, '空调功率', '2.5P', '4', 4, null);
-
-insert into codes_jdjjbg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (151, '空调功率', '3P及以上', '5', 5, null);
+values (257, '床尺寸', '其他尺寸', '11', 11, null);
 
 prompt Done.

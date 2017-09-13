@@ -93,6 +93,11 @@
       <ref object="ES_JDJJBG_ESJDBLL"/>
     </property>
   </object>
+  <object id="ES_JDJJBG_ESJJController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.ES_JDJJBG_ESJJController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="ES_JDJJBG_ESJJBLL">
+      <ref object="ES_JDJJBG_ESJJBLL"/>
+    </property>
+  </object>
   <object id="FBCGController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.FBCGController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
   </object>
   <object id="CommonController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.CommonController,TianWen.XiaoZhen1Qu.Web" singleton="false" >

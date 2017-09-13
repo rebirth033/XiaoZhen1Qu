@@ -60,6 +60,7 @@
     <Compile Include="Maps\DISTRICT_Map.cs" />
     <Compile Include="Maps\DJJDJL_Map.cs" />
     <Compile Include="Maps\ES_JDJJBG_ESJDJBXX_Map.cs" />
+    <Compile Include="Maps\ES_JDJJBG_ESJJJBXX_Map.cs" />
     <Compile Include="Maps\ES_SJSM_BJBDNJBXX_Map.cs" />
     <Compile Include="Maps\ES_SJSM_ESSJJBXX_Map.cs" />
     <Compile Include="Maps\ES_SJSM_PBDNJBXX_Map.cs" />
@@ -90,6 +91,7 @@
     <Compile Include="Models\DJJDJL.cs" />
     <Compile Include="Models\EncryptionHelper.cs" />
     <Compile Include="Models\ES_JDJJBG_ESJDJBXX.cs" />
+    <Compile Include="Models\ES_JDJJBG_ESJJJBXX.cs" />
     <Compile Include="Models\ES_SJSM_BJBDNJBXX.cs" />
     <Compile Include="Models\ES_SJSM_ESSJJBXX.cs" />
     <Compile Include="Models\ES_SJSM_PBDNJBXX.cs" />
