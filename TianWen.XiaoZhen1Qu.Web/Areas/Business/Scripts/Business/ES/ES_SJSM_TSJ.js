@@ -22,17 +22,30 @@ $(document).ready(function () {
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
 
     LoadTXXX();
-    LoadSMCPLB();
+    LoadTSJLB();
     LoadXJ();
     LoadQY();
     LoadDefault();
-    LoadES_SJSM_SMCPJBXX();
+    LoadES_SJSM_TSJJBXX();
     BindHover("LB");
     BindHover("PBPP");
     BindHover("PBXH");
     BindHover("XJ");
     BindHover("QY");
     BindHover("SQ");
+
+    LoadCPUPP();
+    LoadCPUHS();
+    LoadNC();
+    LoadYP();
+    LoadPMCC();
+    LoadXK();
+    BindHover("CPUPP");
+    BindHover("CPUHS");
+    BindHover("NC");
+    BindHover("YP");
+    BindHover("PMCC");
+    BindHover("XK");
 });
 //显示用户菜单
 function ShowYHCD() {
@@ -44,15 +57,15 @@ function HideYHCD() {
     $("#div_top_right_dropdown_yhm").css("display", "none");
     $("#span_top_right_yhm_img").css("background-image", 'url(' + getRootPath() + "/Areas/Business/Css/images/arrow_down.png" + ')');
 }
-//房屋描述框focus
+//描述框focus
 function FYMSFocus() {
     $("#FYMS").css("color", "#333333");
 }
-//房屋描述框blur
+//描述框blur
 function FYMSBlur() {
     $("#FYMS").css("color", "#999999");
 }
-//房屋描述框设默认文本
+//描述框设默认文本
 function FYMSSetDefault() {
     var fyms = "1.房屋特征：\r\n\r\n2.周边配套：\r\n\r\n3.房东心态：";
     $("#FYMS").html(fyms);
@@ -104,15 +117,15 @@ function SJHSSelect() {
     $("#imgSJHS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
     $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
 }
-//加载数码产品类别
-function LoadSMCPLB() {
+//加载台式机/配件类别
+function LoadTSJLB() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/Common/LoadCODES_COMPUTER",
         dataType: "json",
         data:
         {
-            TYPENAME: "数码产品类别"
+            TYPENAME: "台式机/配件"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -130,8 +143,8 @@ function LoadSMCPLB() {
         }
     });
 }
-//加载数码产品小类
-function LoadSMCPXL(type) {
+//加载台式机/配件小类
+function LoadTSJXL(type) {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/Common/LoadCODES_COMPUTER",
@@ -144,7 +157,7 @@ function LoadSMCPXL(type) {
             if (xml.Result === 1) {
                 var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectLB(this,\"XL\")'>" + xml.list[i].CODENAME + "</li>";
+                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"XL\")'>" + xml.list[i].CODENAME + "</li>";
                 }
                 html += "</ul>";
                 $("#divXL").html(html);
@@ -156,7 +169,163 @@ function LoadSMCPXL(type) {
         }
     });
 }
-//加载数码产品新旧
+//加载CPU品牌
+function LoadCPUPP() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadCODES_COMPUTER",
+        dataType: "json",
+        data:
+        {
+            TYPENAME: "CPU品牌"
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"CPUPP\")'>" + xml.list[i].CODENAME + "</li>";
+                }
+                html += "</ul>";
+                $("#divCPUPP").html(html);
+                $("#divCPUPP").css("display", "none");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//加载CPU核数
+function LoadCPUHS() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadCODES_COMPUTER",
+        dataType: "json",
+        data:
+        {
+            TYPENAME: "CPU核数"
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"CPUHS\")'>" + xml.list[i].CODENAME + "</li>";
+                }
+                html += "</ul>";
+                $("#divCPUHS").html(html);
+                $("#divCPUHS").css("display", "none");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//加载内存
+function LoadNC() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadCODES_COMPUTER",
+        dataType: "json",
+        data:
+        {
+            TYPENAME: "内存"
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"NC\")'>" + xml.list[i].CODENAME + "</li>";
+                }
+                html += "</ul>";
+                $("#divNC").html(html);
+                $("#divNC").css("display", "none");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//加载硬盘
+function LoadYP() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadCODES_COMPUTER",
+        dataType: "json",
+        data:
+        {
+            TYPENAME: "硬盘"
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"YP\")'>" + xml.list[i].CODENAME + "</li>";
+                }
+                html += "</ul>";
+                $("#divYP").html(html);
+                $("#divYP").css("display", "none");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//加载屏幕尺寸
+function LoadPMCC() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadCODES_COMPUTER",
+        dataType: "json",
+        data:
+        {
+            TYPENAME: "屏幕尺寸"
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"PMCC\")'>" + xml.list[i].CODENAME + "</li>";
+                }
+                html += "</ul>";
+                $("#divPMCC").html(html);
+                $("#divPMCC").css("display", "none");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//加载显卡
+function LoadXK() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadCODES_COMPUTER",
+        dataType: "json",
+        data:
+        {
+            TYPENAME: "显卡"
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"XK\")'>" + xml.list[i].CODENAME + "</li>";
+                }
+                html += "</ul>";
+                $("#divXK").html(html);
+                $("#divXK").css("display", "none");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//加载台式机/配件新旧
 function LoadXJ() {
     $.ajax({
         type: "POST",
@@ -276,8 +445,18 @@ function SelectLB(obj, type) {
 }
 //判断类别
 function PDLB(LB) {
-    LoadSMCPXL(LB);
-    BindHover("XL");
+    if (LB === "台式机") {
+        $("#divTSJXXCS").css("display", "");
+        $("#divTSJXXCS_2").css("display", "");
+        $("#divXLText").css("display", "none");
+    }
+    else {
+        $("#divTSJXXCS").css("display", "none");
+        $("#divTSJXXCS_2").css("display", "none");
+        $("#divXLText").css("display", "");
+        LoadTSJXL(LB);
+        BindHover("XL");
+    }
 }
 
 //选择区域下拉框
@@ -286,7 +465,7 @@ function SelectQY(obj, type, code) {
     $("#div" + type).css("display", "none");
     LoadSQ(code);
 }
-//选择数码产品品牌
+//选择台式机/配件品牌
 function SelectPBPP(obj, type, code) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
@@ -310,35 +489,43 @@ function SetGQ(gq) {
         $("#imgSJHS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
     }
 }
-//加载二手_手机数码_数码产品基本信息
-function LoadES_SJSM_SMCPJBXX() {
+//加载二手_手机数码_台式机/配件基本信息
+function LoadES_SJSM_TSJJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/ES_SJSM_SMCP/LoadES_SJSM_SMCPJBXX",
+        url: getRootPath() + "/Business/ES_SJSM_TSJ/LoadES_SJSM_TSJJBXX",
         dataType: "json",
         data:
         {
-            ES_SJSM_SMCPJBXXID: getUrlParam("ES_SJSM_SMCPJBXXID")
+            ES_SJSM_TSJJBXXID: getUrlParam("ES_SJSM_TSJJBXXID")
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var jsonObj = new JsonDB("myTabContent");
-                jsonObj.DisplayFromJson("myTabContent", xml.Value.ES_SJSM_SMCPJBXX);
+                jsonObj.DisplayFromJson("myTabContent", xml.Value.ES_SJSM_TSJJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
-                $("#ES_SJSM_SMCPJBXXID").val(xml.Value.ES_SJSM_SMCPJBXX.ES_SJSM_SMCPJBXXID);
+                $("#ES_SJSM_TSJJBXXID").val(xml.Value.ES_SJSM_TSJJBXX.ES_SJSM_TSJJBXXID);
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
-                    ue.setContent(xml.Value.ES_SJSM_SMCPJBXX.BCMS);
+                    ue.setContent(xml.Value.ES_SJSM_TSJJBXX.BCMS);
                 });
-                SetGQ(xml.Value.ES_SJSM_SMCPJBXX.GQ);
-                $("#spanLB").html(xml.Value.ES_SJSM_SMCPJBXX.LB);
-                $("#spanXJ").html(xml.Value.ES_SJSM_SMCPJBXX.XJ);
-                $("#spanQY").html(xml.Value.ES_SJSM_SMCPJBXX.JYQY);
-                $("#spanSQ").html(xml.Value.ES_SJSM_SMCPJBXX.JYDD);
+                SetGQ(xml.Value.ES_SJSM_TSJJBXX.GQ);
+                $("#spanLB").html(xml.Value.ES_SJSM_TSJJBXX.LB);
+                $("#spanXJ").html(xml.Value.ES_SJSM_TSJJBXX.XJ);
+                $("#spanQY").html(xml.Value.ES_SJSM_TSJJBXX.JYQY);
+                $("#spanSQ").html(xml.Value.ES_SJSM_TSJJBXX.JYDD);
+
+                $("#spanCPUPP").html(xml.Value.ES_SJSM_TSJJBXX.CPUPP);
+                $("#spanCPUHS").html(xml.Value.ES_SJSM_TSJJBXX.CPUHS);
+                $("#spanNC").html(xml.Value.ES_SJSM_TSJJBXX.NC);
+                $("#spanYP").html(xml.Value.ES_SJSM_TSJJBXX.YP);
+                $("#spanPMCC").html(xml.Value.ES_SJSM_TSJJBXX.PMCC);
+                $("#spanXK").html(xml.Value.ES_SJSM_TSJJBXX.XK);
+
                 LoadPhotos(xml.Value.Photos);
-                PDLB(xml.Value.ES_SJSM_SMCPJBXX.LB);
-                $("#spanXL").html(xml.Value.ES_SJSM_SMCPJBXX.XL);
+                PDLB(xml.Value.ES_SJSM_TSJJBXX.LB);
+                $("#spanXL").html(xml.Value.ES_SJSM_TSJJBXX.XL);
                 return;
             }
         },
@@ -369,12 +556,19 @@ function FB() {
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetGQ() + "'");
 
-    if (getUrlParam("ES_SJSM_SMCPJBXXID") !== null)
-        obj = jsonObj.AddJson(obj, "ES_SJSM_SMCPJBXXID", "'" + getUrlParam("ES_SJSM_SMCPJBXXID") + "'");
+    obj = jsonObj.AddJson(obj, "CPUPP", "'" + $("#spanCPUPP").html() + "'");
+    obj = jsonObj.AddJson(obj, "CPUHS", "'" + $("#spanCPUHS").html() + "'");
+    obj = jsonObj.AddJson(obj, "NC", "'" + $("#spanNC").html() + "'");
+    obj = jsonObj.AddJson(obj, "YP", "'" + $("#spanYP").html() + "'");
+    obj = jsonObj.AddJson(obj, "PMCC", "'" + $("#spanPMCC").html() + "'");
+    obj = jsonObj.AddJson(obj, "XK", "'" + $("#spanXK").html() + "'");
+
+    if (getUrlParam("ES_SJSM_TSJJBXXID") !== null)
+        obj = jsonObj.AddJson(obj, "ES_SJSM_TSJJBXXID", "'" + getUrlParam("ES_SJSM_TSJJBXXID") + "'");
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/ES_SJSM_SMCP/FB",
+        url: getRootPath() + "/Business/ES_SJSM_TSJ/FB",
         dataType: "json",
         data:
         {

@@ -142,9 +142,9 @@ function ShowMYSJHM() {
     $("#tr_xxbh").css("display", "none");
     BindWTMS();
 }
-//其它信息冒用
+//其他信息冒用
 function ShowQTXXMY() {
-    $("#span_step_text_second").html("请选择具体问题：<span class=\"span_second_lx\">[其它信息冒用]</span>");
+    $("#span_step_text_second").html("请选择具体问题：<span class=\"span_second_lx\">[其他信息冒用]</span>");
     $("#div_qtxxmy").css("display", "block");
     $("#div_qtxxmy .span_wtjj_inner").bind("click", SelectJTWT);
 }

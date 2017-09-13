@@ -115,7 +115,7 @@ function LoadCKCFTDCWLX() {
         dataType: "json",
         data:
         {
-            TYPENAME: "不动产其它类型"
+            TYPENAME: "不动产其他类型"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -193,7 +193,7 @@ function LoadZJDW() {
         dataType: "json",
         data:
         {
-            TYPENAME: "不动产其它类型租金单位"
+            TYPENAME: "不动产其他类型租金单位"
         },
         success: function (xml) {
             if (xml.Result === 1) {

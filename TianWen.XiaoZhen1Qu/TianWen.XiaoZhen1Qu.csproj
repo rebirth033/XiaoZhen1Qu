@@ -58,6 +58,7 @@
     <Compile Include="BLL\ES_SJSM_ESSJBLL.cs" />
     <Compile Include="BLL\ES_SJSM_PBDNBLL.cs" />
     <Compile Include="BLL\ES_SJSM_SMCPBLL.cs" />
+    <Compile Include="BLL\ES_SJSM_TSJBLL.cs" />
     <Compile Include="BLL\FC_CKCFTDCWBLL.cs" />
     <Compile Include="BLL\FC_DZFBLL.cs" />
     <Compile Include="BLL\FC_SPBLL.cs" />

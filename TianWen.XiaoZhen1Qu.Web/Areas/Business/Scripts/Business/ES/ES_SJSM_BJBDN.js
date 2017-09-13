@@ -25,29 +25,30 @@ $(document).ready(function () {
     LoadBJBLB();
     LoadPJ();
     LoadBJBPP();
-    LoadCPUPP();
-    LoadCPUHS();
-    LoadNC();
-    LoadYP();
-    LoadPMCC();
-    LoadXK();
     LoadXJ();
     LoadQY();
     LoadDefault();
     LoadES_SJSM_BJBDNJBXX();
     BindHover("LB");
     BindHover("BJBPP");
+    BindHover("XL");
+    BindHover("BJBXH");
+    BindHover("XJ");
+    BindHover("QY");
+    BindHover("SQ");
+
+    LoadCPUPP();
+    LoadCPUHS();
+    LoadNC();
+    LoadYP();
+    LoadPMCC();
+    LoadXK();
     BindHover("CPUPP");
     BindHover("CPUHS");
     BindHover("NC");
     BindHover("YP");
     BindHover("PMCC");
     BindHover("XK");
-    BindHover("XL");
-    BindHover("BJBXH");
-    BindHover("XJ");
-    BindHover("QY");
-    BindHover("SQ");
 });
 //显示用户菜单
 function ShowYHCD() {
@@ -569,15 +570,17 @@ function LoadES_SJSM_BJBDNJBXX() {
                 $("#spanLB").html(xml.Value.ES_SJSM_BJBDNJBXX.LB);
                 $("#spanBJBPP").html(xml.Value.ES_SJSM_BJBDNJBXX.BJBPP);
                 $("#spanBJBXH").html(xml.Value.ES_SJSM_BJBDNJBXX.BJBXH);
+                $("#spanXJ").html(xml.Value.ES_SJSM_BJBDNJBXX.XJ);
+                $("#spanQY").html(xml.Value.ES_SJSM_BJBDNJBXX.JYQY);
+                $("#spanSQ").html(xml.Value.ES_SJSM_BJBDNJBXX.JYDD);
+
                 $("#spanCPUPP").html(xml.Value.ES_SJSM_BJBDNJBXX.CPUPP);
                 $("#spanCPUHS").html(xml.Value.ES_SJSM_BJBDNJBXX.CPUHS);
                 $("#spanNC").html(xml.Value.ES_SJSM_BJBDNJBXX.NC);
                 $("#spanYP").html(xml.Value.ES_SJSM_BJBDNJBXX.YP);
                 $("#spanPMCC").html(xml.Value.ES_SJSM_BJBDNJBXX.PMCC);
                 $("#spanXK").html(xml.Value.ES_SJSM_BJBDNJBXX.XK);
-                $("#spanXJ").html(xml.Value.ES_SJSM_BJBDNJBXX.XJ);
-                $("#spanQY").html(xml.Value.ES_SJSM_BJBDNJBXX.JYQY);
-                $("#spanSQ").html(xml.Value.ES_SJSM_BJBDNJBXX.JYDD);
+
                 LoadPhotos(xml.Value.Photos);
                 PDLB(xml.Value.ES_SJSM_BJBDNJBXX.LB);
                 $("#spanXL").html(xml.Value.ES_SJSM_BJBDNJBXX.XL);
@@ -607,17 +610,18 @@ function FB() {
     obj = jsonObj.AddJson(obj, "XL", "'" + $("#spanXL").html() + "'");
     obj = jsonObj.AddJson(obj, "BJBPP", "'" + $("#spanBJBPP").html() + "'");
     obj = jsonObj.AddJson(obj, "BJBXH", "'" + $("#spanBJBXH").html() + "'");
+    obj = jsonObj.AddJson(obj, "XJ", "'" + $("#spanXJ").html() + "'");
+    obj = jsonObj.AddJson(obj, "JYQY", "'" + $("#spanQY").html() + "'");
+    obj = jsonObj.AddJson(obj, "JYDD", "'" + $("#spanSQ").html() + "'");
+    obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
+    obj = jsonObj.AddJson(obj, "GQ", "'" + GetGQ() + "'");
+
     obj = jsonObj.AddJson(obj, "CPUPP", "'" + $("#spanCPUPP").html() + "'");
     obj = jsonObj.AddJson(obj, "CPUHS", "'" + $("#spanCPUHS").html() + "'");
     obj = jsonObj.AddJson(obj, "NC", "'" + $("#spanNC").html() + "'");
     obj = jsonObj.AddJson(obj, "YP", "'" + $("#spanYP").html() + "'");
     obj = jsonObj.AddJson(obj, "PMCC", "'" + $("#spanPMCC").html() + "'");
     obj = jsonObj.AddJson(obj, "XK", "'" + $("#spanXK").html() + "'");
-    obj = jsonObj.AddJson(obj, "XJ", "'" + $("#spanXJ").html() + "'");
-    obj = jsonObj.AddJson(obj, "JYQY", "'" + $("#spanQY").html() + "'");
-    obj = jsonObj.AddJson(obj, "JYDD", "'" + $("#spanSQ").html() + "'");
-    obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "GQ", "'" + GetGQ() + "'");
 
     if (getUrlParam("ES_SJSM_BJBDNJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "ES_SJSM_BJBDNJBXXID", "'" + getUrlParam("ES_SJSM_BJBDNJBXXID") + "'");
