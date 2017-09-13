@@ -18,6 +18,8 @@ namespace TianWen.XiaoZhen1Qu.Interface
         
         object LoadBJBXHByBJBPP(string BJBPP);
 
+        object LoadPBXHByPBPP(string PBPP);
+
         string GetYHZHXXIDByYHID(string YHID);
 
         YHJBXX GetYHJBXXByYHM(string YHM);

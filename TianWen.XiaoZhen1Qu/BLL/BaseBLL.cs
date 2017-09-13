@@ -1,12 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NHibernate;
 using TianWen.Framework.Log;
-using TianWen.Nhibernate;
 using TianWen.XiaoZhen1Qu.Entities.Models;
 using TianWen.XiaoZhen1Qu.Interface;
 
@@ -106,6 +101,20 @@ namespace TianWen.XiaoZhen1Qu.BLL
             try
             {
                 IList<CODES_COMPUTER> list = DAO.Repository.GetObjectList<CODES_COMPUTER>(String.Format("FROM CODES_COMPUTER WHERE PARENTID like '%{0}%' ORDER BY CODEORDER", BJBPP));
+                return new { Result = EnResultType.Success, list = list };
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("error", ex.Message);
+                return new { Result = EnResultType.Failed, Message = "加载失败" };
+            }
+        }
+
+        public object LoadPBXHByPBPP(string PBPP)
+        {
+            try
+            {
+                IList<CODES_COMPUTER> list = DAO.Repository.GetObjectList<CODES_COMPUTER>(String.Format("FROM CODES_COMPUTER WHERE PARENTID like '%{0}%' ORDER BY CODEORDER", PBPP));
                 return new { Result = EnResultType.Success, list = list };
             }
             catch (Exception ex)

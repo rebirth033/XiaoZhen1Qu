@@ -76,5 +76,10 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         {
             return Json(CommonBLL.LoadBJBXHByBJBPP(Request["BJBPP"]));
         }
+
+        public JsonResult LoadPBXH()
+        {
+            return Json(CommonBLL.LoadPBXHByPBPP(Request["PBPP"]));
+        }
     }
 }
