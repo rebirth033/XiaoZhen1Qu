@@ -8,8 +8,6 @@ $(document).ready(function () {
     $("#spanCXLB").bind("click", CXLB);
     $("#imgSJZR").bind("click", SJZRSelect);
     $("#imgSJHS").bind("click", SJHSSelect);
-    $("#imgSYG").bind("click", SYGSelect);
-    $("#imgQXWCF").bind("click", QXWCFSelect);
     $("#divUploadOut").bind("mouseover", GetUploadCss);
     $("#divUploadOut").bind("mouseleave", LeaveUploadCss);
     $("#btnFB").bind("click", FB);
@@ -36,7 +34,7 @@ $(document).ready(function () {
     LoadXJ();
     LoadQY();
     LoadDefault();
-    //LoadES_SJSM_BJBDNJBXX();
+    LoadES_SJSM_BJBDNJBXX();
     BindHover("LB");
     BindHover("BJBPP");
     BindHover("CPUPP");
@@ -120,16 +118,6 @@ function SJZRSelect() {
 function SJHSSelect() {
     $("#imgSJHS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
     $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
-//使用过
-function SYGSelect() {
-    $("#imgSYG").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgQXWCF").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
-//全新未拆封
-function QXWCFSelect() {
-    $("#imgQXWCF").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgSYG").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
 }
 //加载笔记本类别
 function LoadBJBLB() {
@@ -507,7 +495,11 @@ function SelectDropdown(obj, type) {
 function SelectLB(obj, type) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-    if (obj.innerHTML.indexOf("配件") !== -1) {
+    PDLB(obj.innerHTML);
+}
+//判断类别
+function PDLB(LB) {
+    if (LB.indexOf("配件") !== -1) {
         $("#divXLText").css("display", "");
         $("#divBJBPPText").css("display", "none");
         $("#divBJBXHText").css("display", "none");
@@ -521,6 +513,7 @@ function SelectLB(obj, type) {
         $("#divBJBXXCS_2").css("display", "");
     }
 }
+
 //选择区域下拉框
 function SelectQY(obj, type, code) {
     $("#span" + type).html(obj.innerHTML);
@@ -551,24 +544,6 @@ function SetGQ(gq) {
         $("#imgSJHS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
     }
 }
-//获取使用情况
-function GetSYQK() {
-    if ($("#imgSYG").attr("src").indexOf("blue") !== -1)
-        return "0";
-    else
-        return "1";
-}
-//设置使用情况
-function SetSYQK(gq) {
-    if (gq === 0) {
-        $("#imgSYG").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-        $("#imgQXWCF").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    }
-    else {
-        $("#imgSYG").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-        $("#imgQXWCF").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    }
-}
 //加载二手_手机数码_二手手机基本信息
 function LoadES_SJSM_BJBDNJBXX() {
     $.ajax({
@@ -591,11 +566,21 @@ function LoadES_SJSM_BJBDNJBXX() {
                     ue.setContent(xml.Value.ES_SJSM_BJBDNJBXX.BCMS);
                 });
                 SetGQ(xml.Value.ES_SJSM_BJBDNJBXX.GQ);
+                $("#spanLB").html(xml.Value.ES_SJSM_BJBDNJBXX.LB);
+                $("#spanBJBPP").html(xml.Value.ES_SJSM_BJBDNJBXX.BJBPP);
+                $("#spanBJBXH").html(xml.Value.ES_SJSM_BJBDNJBXX.BJBXH);
+                $("#spanCPUPP").html(xml.Value.ES_SJSM_BJBDNJBXX.CPUPP);
+                $("#spanCPUHS").html(xml.Value.ES_SJSM_BJBDNJBXX.CPUHS);
+                $("#spanNC").html(xml.Value.ES_SJSM_BJBDNJBXX.NC);
+                $("#spanYP").html(xml.Value.ES_SJSM_BJBDNJBXX.YP);
+                $("#spanPMCC").html(xml.Value.ES_SJSM_BJBDNJBXX.PMCC);
+                $("#spanXK").html(xml.Value.ES_SJSM_BJBDNJBXX.XK);
+                $("#spanXJ").html(xml.Value.ES_SJSM_BJBDNJBXX.XJ);
                 $("#spanQY").html(xml.Value.ES_SJSM_BJBDNJBXX.JYQY);
                 $("#spanSQ").html(xml.Value.ES_SJSM_BJBDNJBXX.JYDD);
-                $("#spanSJPP").html(xml.Value.ES_SJSM_BJBDNJBXX.SJPP);
-                $("#spanSJXH").html(xml.Value.ES_SJSM_BJBDNJBXX.SJXH);
                 LoadPhotos(xml.Value.Photos);
+                PDLB(xml.Value.ES_SJSM_BJBDNJBXX.LB);
+                $("#spanXL").html(xml.Value.ES_SJSM_BJBDNJBXX.XL);
                 return;
             }
         },
@@ -618,13 +603,21 @@ function FB() {
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
-    obj = jsonObj.AddJson(obj, "SJPP", "'" + $("#spanSJPP").html() + "'");
-    obj = jsonObj.AddJson(obj, "SJXH", "'" + $("#spanSJXH").html() + "'");
+    obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
+    obj = jsonObj.AddJson(obj, "XL", "'" + $("#spanXL").html() + "'");
+    obj = jsonObj.AddJson(obj, "BJBPP", "'" + $("#spanBJBPP").html() + "'");
+    obj = jsonObj.AddJson(obj, "BJBXH", "'" + $("#spanBJBXH").html() + "'");
+    obj = jsonObj.AddJson(obj, "CPUPP", "'" + $("#spanCPUPP").html() + "'");
+    obj = jsonObj.AddJson(obj, "CPUHS", "'" + $("#spanCPUHS").html() + "'");
+    obj = jsonObj.AddJson(obj, "NC", "'" + $("#spanNC").html() + "'");
+    obj = jsonObj.AddJson(obj, "YP", "'" + $("#spanYP").html() + "'");
+    obj = jsonObj.AddJson(obj, "PMCC", "'" + $("#spanPMCC").html() + "'");
+    obj = jsonObj.AddJson(obj, "XK", "'" + $("#spanXK").html() + "'");
+    obj = jsonObj.AddJson(obj, "XJ", "'" + $("#spanXJ").html() + "'");
     obj = jsonObj.AddJson(obj, "JYQY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "JYDD", "'" + $("#spanSQ").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetGQ() + "'");
-    obj = jsonObj.AddJson(obj, "SYQK", "'" + GetSYQK() + "'");
 
     if (getUrlParam("ES_SJSM_BJBDNJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "ES_SJSM_BJBDNJBXXID", "'" + getUrlParam("ES_SJSM_BJBDNJBXXID") + "'");
