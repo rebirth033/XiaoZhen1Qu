@@ -162,9 +162,11 @@
     <Content Include="Areas\Business\Css\BZZX\BZZX_WZJY.css" />
     <Content Include="Areas\Business\Css\Common\Top.css" />
     <Content Include="Areas\Business\Css\Common\XZQ.css" />
+    <Content Include="Areas\Business\Css\ES\ES_JDJJBG_BGSB.css" />
     <Content Include="Areas\Business\Css\ES\ES_JDJJBG_ESJD.css" />
     <Content Include="Areas\Business\Css\ES\ES_JDJJBG_ESJJ.css" />
     <Content Include="Areas\Business\Css\ES\ES_JDJJBG_JJRY.css" />
+    <Content Include="Areas\Business\Css\ES\ES_MYFZMR_MYETYPWJ.css" />
     <Content Include="Areas\Business\Css\ES\ES_SJSM_BJBDN.css" />
     <Content Include="Areas\Business\Css\ES\ES_SJSM_ESSJ.css" />
     <Content Include="Areas\Business\Css\ES\ES_SJSM_PBDN.css" />
@@ -350,12 +352,16 @@
     <Content Include="Areas\Business\Scripts\Business\Common\Common.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\Regular.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\XZQ.js" />
+    <Content Include="Areas\Business\Scripts\Business\ES\ES_JDJJBG_BGSB.js" />
+    <Content Include="Areas\Business\Scripts\Business\ES\ES_JDJJBG_BGSBYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\ES\ES_JDJJBG_ESJD.js" />
     <Content Include="Areas\Business\Scripts\Business\ES\ES_JDJJBG_ESJDYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\ES\ES_JDJJBG_ESJJ.js" />
     <Content Include="Areas\Business\Scripts\Business\ES\ES_JDJJBG_ESJJYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\ES\ES_JDJJBG_JJRY.js" />
     <Content Include="Areas\Business\Scripts\Business\ES\ES_JDJJBG_JJRYYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\ES\ES_MYFZMR_MYETYPWJ.js" />
+    <Content Include="Areas\Business\Scripts\Business\ES\ES_MYFZMR_MYETYPWJYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\ES\ES_SJSM_BJBDN.js" />
     <Content Include="Areas\Business\Scripts\Business\ES\ES_SJSM_BJBDNYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\ES\ES_SJSM_ESSJ.js" />
@@ -730,6 +736,7 @@
     <Compile Include="Areas\Business\Controllers\ES\ES_JDJJBG_ESJDController.cs" />
     <Compile Include="Areas\Business\Controllers\ES\ES_JDJJBG_ESJJController.cs" />
     <Compile Include="Areas\Business\Controllers\ES\ES_JDJJBG_JJRYController.cs" />
+    <Compile Include="Areas\Business\Controllers\ES\ES_MYFZMR_MYETYPWJController.cs" />
     <Compile Include="Areas\Business\Controllers\ES\ES_SJSM_BJBDNController.cs" />
     <Compile Include="Areas\Business\Controllers\ES\ES_SJSM_ESSJController.cs" />
     <Compile Include="Areas\Business\Controllers\ES\ES_SJSM_PBDNController.cs" />
@@ -860,6 +867,7 @@
     <Content Include="Areas\Business\Views\ES_JDJJBG_ESJJ\ES_JDJJBG_ESJJ.cshtml" />
     <Content Include="Areas\Business\Views\ES_JDJJBG_JJRY\ES_JDJJBG_JJRY.cshtml" />
     <Content Include="Areas\Business\Views\ES_JDJJBG_BGSB\ES_JDJJBG_BGSB.cshtml" />
+    <Content Include="Areas\Business\Views\ES_MYFZMR_MYETYPWJ\ES_MYFZMR_MYETYPWJ.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
