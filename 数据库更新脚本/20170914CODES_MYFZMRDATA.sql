@@ -232,4 +232,529 @@ values (76, '孕妈用品', '包/背婴带', '8', 8, 9);
 insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (77, '孕妈用品', '其他孕妈用品', '9', 9, 9);
 
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (78, '服装/鞋帽/箱包', '服装', '1', 1, null);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (79, '服装/鞋帽/箱包', '鞋', '2', 2, null);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (80, '服装/鞋帽/箱包', '箱包', '3', 3, null);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (81, '服装/鞋帽/箱包', '配饰', '4', 4, null);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (82, '服装/鞋帽/箱包', '首饰', '5', 5, null);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (83, '服装/鞋帽/箱包', '手表', '6', 6, null);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (84, '服装', 'T恤', '1', 1, 78);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (85, '服装', '衬衫', '2', 2, 78);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (86, '服装', '裙子/连衣裙', '3', 3, 78);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (87, '服装', '短裤', '4', 4, 78);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (88, '服装', '西装', '5', 5, 78);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (89, '服装', '毛衣', '6', 6, 78);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (90, '服装', '羽绒服/棉衣', '7', 7, 78);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (91, '服装', '内衣', '8', 8, 78);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (92, '服装', '婚纱', '9', 9, 78);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (93, '服装', '礼服', '10', 10, 78);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (94, '服装', '童装', '11', 11, 78);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (95, '服装', '皮衣/皮草', '12', 12, 78);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (96, '服装', '运动服', '13', 13, 78);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (97, '服装', '夹克', '14', 14, 78);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (98, '服装', '风衣', '15', 15, 78);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (99, '服装', '卫衣', '16', 16, 78);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (100, '服装', '牛仔裤', '17', 17, 78);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (101, '服装', '西裤', '18', 18, 78);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (102, '服装', '休闲裤', '19', 19, 78);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (103, '服装', '运动裤', '20', 20, 78);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (104, '服装', '打底裤', '21', 21, 78);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (105, '服装', '其他外套', '22', 22, 78);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (106, '服装', '其他裤子', '23', 23, 78);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (107, '服装', '其他服装', '24', 24, 78);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (108, '鞋', '休闲鞋', '1', 1, 79);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (109, '鞋', '运动鞋', '2', 2, 79);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (110, '鞋', '帆布鞋', '3', 3, 79);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (111, '鞋', '高跟鞋', '4', 4, 79);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (112, '鞋', '板鞋', '5', 5, 79);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (113, '鞋', '皮鞋', '6', 6, 79);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (114, '鞋', '靴子', '7', 7, 79);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (115, '鞋', '凉鞋', '8', 8, 79);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (116, '鞋', '拖鞋', '9', 9, 79);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (117, '鞋', '婚鞋', '10', 10, 79);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (118, '鞋', '登山鞋', '11', 11, 79);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (119, '鞋', '雪地靴', '12', 12, 79);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (120, '鞋', '其他', '13', 13, 79);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (121, '箱包', '单肩包', '1', 1, 80);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (122, '箱包', '双肩包', '2', 2, 80);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (123, '箱包', '书包', '3', 3, 80);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (124, '箱包', '公文包', '4', 4, 80);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (125, '箱包', '钱包', '5', 5, 80);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (126, '箱包', '旅行包', '6', 6, 80);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (127, '箱包', '拉杆箱', '7', 7, 80);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (128, '箱包', '电脑包', '8', 8, 80);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (129, '箱包', '化妆包', '9', 9, 80);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (130, '箱包', '手提包', '10', 10, 80);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (131, '箱包', '登山包', '11', 11, 80);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (132, '箱包', '皮包', '12', 12, 80);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (133, '箱包', '其他', '13', 13, 80);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (134, '配饰', '眼镜', '1', 1, 81);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (135, '配饰', '帽子', '2', 2, 81);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (136, '配饰', '领带', '3', 3, 81);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (137, '配饰', '围巾', '4', 4, 81);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (138, '配饰', '手套', '5', 5, 81);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (139, '配饰', '腰带', '6', 6, 81);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (140, '配饰', '袜子', '7', 7, 81);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (141, '配饰', '其他', '8', 8, 81);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (142, '首饰', '项链', '1', 1, 82);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (143, '首饰', '吊坠', '2', 2, 82);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (144, '首饰', '耳饰', '3', 3, 82);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (145, '首饰', '手链', '4', 4, 82);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (146, '首饰', '戒指', '5', 5, 82);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (147, '首饰', '手镯', '6', 6, 82);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (148, '首饰', '发饰', '7', 7, 82);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (149, '首饰', '假发', '8', 8, 82);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (150, '首饰', '其他', '9', 9, 82);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (151, '手表', '浪琴', '1', 1, 83);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (152, '手表', '卡西欧', '2', 2, 83);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (153, '手表', '天梭', '3', 3, 83);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (154, '手表', '欧米茄', '4', 4, 83);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (155, '手表', '劳力士', '5', 5, 83);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (156, '手表', '斯沃琪', '6', 6, 83);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (157, '手表', '卡地亚', '7', 7, 83);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (158, '手表', '西铁城', '8', 8, 83);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (159, '手表', '海鸥', '9', 9, 83);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (160, '手表', '罗西尼', '10', 10, 83);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (161, '手表', '精工', '11', 11, 83);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (162, '手表', '飞亚达', '12', 12, 83);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (163, '手表', '依波', '13', 13, 83);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (164, '手表', '其他', '14', 14, 83);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (165, '服装尺寸', 'XS', '1', 1, null);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (166, '服装尺寸', 'S', '2', 2, null);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (167, '服装尺寸', 'M', '3', 3, null);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (168, '服装尺寸', 'L', '4', 4, null);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (169, '服装尺寸', 'XL', '5', 5, null);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (170, '服装尺寸', 'XXL', '6', 6, null);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (171, '服装尺寸', 'XXXL', '7', 7, null);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (172, '服装尺寸', '均码', '8', 8, null);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (173, '鞋尺寸', '34', '1', 1, null);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (174, '鞋尺寸', '35', '2', 2, null);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (175, '鞋尺寸', '36', '3', 3, null);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (176, '鞋尺寸', '37', '4', 4, null);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (177, '鞋尺寸', '38', '5', 5, null);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (178, '鞋尺寸', '39', '6', 6, null);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (179, '鞋尺寸', '40', '7', 7, null);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (180, '鞋尺寸', '41', '8', 8, null);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (181, '鞋尺寸', '42', '9', 9, null);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (182, '鞋尺寸', '43', '10', 10, null);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (183, '鞋尺寸', '44', '11', 11, null);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (184, '鞋尺寸', '45', '12', 12, null);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (185, '鞋尺寸', '46', '13', 13, null);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (186, '美容/保健', '彩妆', '1', 1, null);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (187, '美容/保健', '面部护肤', '2', 2, null);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (188, '美容/保健', '美容工具', '3', 3, null);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (189, '美容/保健', '美容设施', '4', 4, null);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (190, '美容/保健', '纤体/美体', '5', 5, null);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (191, '美容/保健', '香水', '6', 6, null);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (192, '美容/保健', '美发', '7', 7, null);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (193, '美容/保健', '美甲', '8', 8, null);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (194, '美容/保健', '保健食品', '9', 9, null);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (195, '美容/保健', '保健器械', '10', 10, null);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (196, '美容/保健', '其他美容用品', '11', 11, null);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (197, '彩妆', '隔离霜', '1', 1, 186);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (198, '彩妆', '粉底液', '2', 2, 186);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (199, '彩妆', '粉饼', '3', 3, 186);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (200, '彩妆', '睫毛膏', '4', 4, 186);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (201, '彩妆', '眼影', '5', 5, 186);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (202, '彩妆', '口红', '6', 6, 186);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (203, '彩妆', '腮红', '7', 7, 186);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (204, '彩妆', '眼线', '8', 8, 186);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (205, '彩妆', '眉笔', '9', 9, 186);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (206, '彩妆', '其他彩妆', '10', 10, 186);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (207, '面部护肤', '洁面', '1', 1, 187);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (208, '面部护肤', '化妆水/爽肤水', '2', 2, 187);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (209, '面部护肤', '乳液', '3', 3, 187);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (210, '面部护肤', '面霜', '4', 4, 187);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (211, '面部护肤', '精华', '5', 5, 187);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (212, '面部护肤', '面膜', '6', 6, 187);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (213, '面部护肤', '眼部护理', '7', 7, 187);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (214, '面部护肤', '精油', '8', 8, 187);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (215, '面部护肤', '其他护肤', '9', 9, 187);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (216, '美容工具', '卷发工具', '1', 1, 188);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (217, '美容工具', '化妆粉扑', '2', 2, 188);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (218, '美容工具', '化妆刷', '3', 3, 188);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (219, '美容工具', '睫毛夹', '4', 4, 188);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (220, '美容工具', '修眉刀', '5', 5, 188);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (221, '美容工具', '女用剃刀', '6', 6, 188);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (222, '美容工具', '化妆棉', '7', 7, 188);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (223, '美容工具', '打泡网', '8', 8, 188);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (224, '美容工具', '吸油面纸', '9', 9, 188);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (225, '美容工具', '其他美容工具', '10', 10, 188);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (226, '美容设施', '美容床', '1', 1, 189);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (227, '美容设施', '按摩床', '2', 2, 189);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (228, '美容设施', '美甲沙发', '3', 3, 189);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (229, '美容设施', '足疗沙发', '4', 4, 189);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (230, '美容设施', '美容推车', '5', 5, 189);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (231, '美容设施', '其他美容设施', '6', 6, 189);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (232, '美发', '洗发', '1', 1, 192);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (233, '美发', '护发', '2', 2, 192);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (234, '美发', '美发造型', '3', 3, 192);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (235, '美发', '染发', '4', 4, 192);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (236, '美发', '其他美发用品', '5', 5, 192);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (237, '美甲', '指甲油', '1', 1, 193);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (238, '美甲', '护甲油', '2', 2, 193);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (239, '美甲', '洗甲水', '3', 3, 193);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (240, '美甲', '其他美甲用品', '4', 4, 193);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (241, '保健器械', '按摩枕/靠垫', '1', 1, 195);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (242, '保健器械', '按摩棒/锤', '2', 2, 195);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (243, '保健器械', '按摩披肩', '3', 3, 195);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (244, '保健器械', '按摩椅', '4', 4, 195);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (245, '保健器械', '按摩足疗机', '5', 5, 195);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (246, '保健器械', '足浴盆', '6', 6, 195);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (247, '保健器械', '拔罐器', '7', 7, 195);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (248, '保健器械', '刮痧片/板', '8', 8, 195);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (249, '保健器械', '保健护具', '9', 9, 195);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (250, '保健器械', '血糖仪', '10', 10, 195);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (251, '保健器械', '血压计', '11', 11, 195);
+
+insert into codes_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (252, '保健器械', '其他保健用品', '12', 12, 195);
+
 prompt Done.
