@@ -41,52 +41,16 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string XL { get; set; }
 
         /// <summary>
-        /// 电视屏幕尺寸
+        /// 床尺寸
         /// </summary>
         [Property]
-        public virtual string DSPMCC { get; set; }
+        public virtual string CCC { get; set; }
 
         /// <summary>
-        /// 电视品牌
+        /// 床垫尺寸
         /// </summary>
         [Property]
-        public virtual string DSPP { get; set; }
-
-        /// <summary>
-        /// 洗衣机品牌
-        /// </summary>
-        [Property]
-        public virtual string XYJPP { get; set; }
-
-        /// <summary>
-        /// 空调品牌
-        /// </summary>
-        [Property]
-        public virtual string KTPP { get; set; }
-
-        /// <summary>
-        /// 空调变频定速
-        /// </summary>
-        [Property]
-        public virtual string KTBPDS { get; set; }
-
-        /// <summary>
-        /// 空调功率
-        /// </summary>
-        [Property]
-        public virtual string KTGL { get; set; }
-
-        /// <summary>
-        /// 冰箱品牌
-        /// </summary>
-        [Property]
-        public virtual string BXPP { get; set; }
-
-        /// <summary>
-        /// 冰柜品牌
-        /// </summary>
-        [Property]
-        public virtual string BGPP { get; set; }
+        public virtual string CDCC { get; set; }
 
         /// <summary>
         /// 新旧
