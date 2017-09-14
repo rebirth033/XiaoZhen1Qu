@@ -56,6 +56,7 @@
     <Compile Include="BLL\CommonBLL.cs" />
     <Compile Include="BLL\ES_JDJJBG_ESJDBLL.cs" />
     <Compile Include="BLL\ES_JDJJBG_ESJJBLL.cs" />
+    <Compile Include="BLL\ES_JDJJBG_JJRYBLL.cs" />
     <Compile Include="BLL\ES_SJSM_BJBDNBLL.cs" />
     <Compile Include="BLL\ES_SJSM_ESSJBLL.cs" />
     <Compile Include="BLL\ES_SJSM_PBDNBLL.cs" />
