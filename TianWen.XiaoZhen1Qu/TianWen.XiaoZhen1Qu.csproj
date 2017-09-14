@@ -59,6 +59,7 @@
     <Compile Include="BLL\ES_JDJJBG_ESJJBLL.cs" />
     <Compile Include="BLL\ES_JDJJBG_JJRYBLL.cs" />
     <Compile Include="BLL\ES_MYFZMR_FZXMXBBLL.cs" />
+    <Compile Include="BLL\ES_MYFZMR_MRBJBLL.cs" />
     <Compile Include="BLL\ES_MYFZMR_MYETYPWJBLL.cs" />
     <Compile Include="BLL\ES_SJSM_BJBDNBLL.cs" />
     <Compile Include="BLL\ES_SJSM_ESSJBLL.cs" />
