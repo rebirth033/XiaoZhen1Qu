@@ -64,6 +64,7 @@
     <Compile Include="Maps\ES_JDJJBG_ESJDJBXX_Map.cs" />
     <Compile Include="Maps\ES_JDJJBG_ESJJJBXX_Map.cs" />
     <Compile Include="Maps\ES_JDJJBG_JJRYJBXX_Map.cs" />
+    <Compile Include="Maps\ES_MYFZMR_FZXMXBJBXX_Map.cs" />
     <Compile Include="Maps\ES_MYFZMR_MYETYPWJJBXX_Map.cs" />
     <Compile Include="Maps\ES_SJSM_BJBDNJBXX_Map.cs" />
     <Compile Include="Maps\ES_SJSM_ESSJJBXX_Map.cs" />

@@ -127,7 +127,7 @@ function LoadFZXMXBLB() {
         }
     });
 }
-//加载家居日用小类
+//加载母婴/服装/美容小类
 function LoadFZXMXBXL(type) {
     $.ajax({
         type: "POST",
@@ -153,11 +153,11 @@ function LoadFZXMXBXL(type) {
         }
     });
 }
-//加载家居日用详细参数
+//加载母婴/服装/美容详细参数
 function LoadXXCS(id, type) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_JDJJBG",
+        url: getRootPath() + "/Business/Common/LoadCODES_MYFZMR",
         dataType: "json",
         data:
         {
@@ -179,7 +179,7 @@ function LoadXXCS(id, type) {
         }
     });
 }
-//加载家居日用新旧
+//加载母婴/服装/美容新旧
 function LoadXJ() {
     $.ajax({
         type: "POST",
@@ -299,21 +299,21 @@ function SelectLB(obj, type) {
 }
 //判断类别
 function PDLB(LB) {
-    if (LB === "床") {
-        $("#divCXXCS").css("display", "");
-        $("#divCDXXCS").css("display", "none");
-        LoadXXCS("CCC", "床尺寸");
-        BindHover("CCC");
+    if (LB === "服装") {
+        $("#divFZXXCS").css("display", "");
+        $("#divXXXCS").css("display", "none");
+        LoadXXCS("FZCC", "服装尺寸");
+        BindHover("FZCC");
     }
-    else if (LB === "床垫") {
-        $("#divCXXCS").css("display", "none");
-        $("#divCDXXCS").css("display", "");
-        LoadXXCS("CDCC", "床尺寸");
-        BindHover("CDCC");
+    else if (LB === "鞋") {
+        $("#divFZXXCS").css("display", "none");
+        $("#divXXXCS").css("display", "");
+        LoadXXCS("XCC", "鞋尺寸");
+        BindHover("XCC");
     }
     else {
-        $("#divCXXCS").css("display", "none");
-        $("#divCDXXCS").css("display", "none");
+        $("#divFZXXCS").css("display", "none");
+        $("#divXXXCS").css("display", "none");
     }
     LoadFZXMXBXL(LB);
     BindHover("XL");
@@ -325,7 +325,7 @@ function SelectQY(obj, type, code) {
     $("#div" + type).css("display", "none");
     LoadSQ(code);
 }
-//选择家居日用品牌
+//选择母婴/服装/美容品牌
 function SelectPBPP(obj, type, code) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
@@ -349,7 +349,7 @@ function SetGQ(gq) {
         $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
     }
 }
-//加载二手_手机数码_家居日用基本信息
+//加载二手_手机数码_母婴/服装/美容基本信息
 function LoadES_MYFZMR_FZXMXBJBXX() {
     $.ajax({
         type: "POST",

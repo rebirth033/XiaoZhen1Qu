@@ -113,6 +113,11 @@
       <ref object="ES_MYFZMR_MYETYPWJBLL"/>
     </property>
   </object>
+  <object id="ES_MYFZMR_FZXMXBController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.ES_MYFZMR_FZXMXBController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="ES_MYFZMR_FZXMXBBLL">
+      <ref object="ES_MYFZMR_FZXMXBBLL"/>
+    </property>
+  </object>
   <object id="FBCGController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.FBCGController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
   </object>
   <object id="CommonController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.CommonController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
