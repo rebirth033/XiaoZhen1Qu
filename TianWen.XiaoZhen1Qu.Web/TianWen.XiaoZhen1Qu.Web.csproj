@@ -726,6 +726,7 @@
     <Compile Include="Areas\Business\Controllers\BZZX\BZZXController.cs" />
     <Compile Include="Areas\Business\Controllers\BZZX\WZYJController.cs" />
     <Compile Include="Areas\Business\Controllers\CommonController.cs" />
+    <Compile Include="Areas\Business\Controllers\ES\ES_JDJJBG_BGSBController.cs" />
     <Compile Include="Areas\Business\Controllers\ES\ES_JDJJBG_ESJDController.cs" />
     <Compile Include="Areas\Business\Controllers\ES\ES_JDJJBG_ESJJController.cs" />
     <Compile Include="Areas\Business\Controllers\ES\ES_JDJJBG_JJRYController.cs" />
@@ -858,6 +859,7 @@
     <Content Include="Areas\Business\Views\ES_JDJJBG_ESJD\ES_JDJJBG_ESJD.cshtml" />
     <Content Include="Areas\Business\Views\ES_JDJJBG_ESJJ\ES_JDJJBG_ESJJ.cshtml" />
     <Content Include="Areas\Business\Views\ES_JDJJBG_JJRY\ES_JDJJBG_JJRY.cshtml" />
+    <Content Include="Areas\Business\Views\ES_JDJJBG_BGSB\ES_JDJJBG_BGSB.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
