@@ -99,6 +99,7 @@
     <Compile Include="Models\ES_JDJJBG_ESJDJBXX.cs" />
     <Compile Include="Models\ES_JDJJBG_ESJJJBXX.cs" />
     <Compile Include="Models\ES_JDJJBG_JJRYJBXX.cs" />
+    <Compile Include="Models\ES_MYFZMR_FZXMXBJBXX.cs" />
     <Compile Include="Models\ES_MYFZMR_MYETYPWJJBXX.cs" />
     <Compile Include="Models\ES_SJSM_BJBDNJBXX.cs" />
     <Compile Include="Models\ES_SJSM_ESSJJBXX.cs" />
