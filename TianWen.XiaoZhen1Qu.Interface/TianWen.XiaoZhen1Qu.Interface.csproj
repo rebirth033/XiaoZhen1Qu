@@ -62,6 +62,7 @@
     <Compile Include="IES_SJSM_PBDNBLL.cs" />
     <Compile Include="IES_SJSM_SMCPBLL.cs" />
     <Compile Include="IES_SJSM_TSJBLL.cs" />
+    <Compile Include="IES_WHYL_TSYXRJBLL.cs" />
     <Compile Include="IES_WHYL_WTHWYQBLL.cs" />
     <Compile Include="IES_WHYL_YSPSCPBLL.cs" />
     <Compile Include="IFC_CKCFTDCWBLL.cs" />

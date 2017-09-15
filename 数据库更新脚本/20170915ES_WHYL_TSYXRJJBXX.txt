@@ -1,0 +1,48 @@
+-- Create table
+create table ES_WHYL_TSYXRJJBXX
+(
+  es_whyl_TSYXRJjbxxid VARCHAR2(50) not null,
+  jcxxid               VARCHAR2(50),
+  gq                   NUMBER(1),
+  jyqy                 VARCHAR2(20),
+  jydd                 VARCHAR2(20),
+  lb                   VARCHAR2(20),
+  xj                   VARCHAR2(20),
+  jg                   VARCHAR2(20),
+  xl                   VARCHAR2(20),
+  bcms                 VARCHAR2(4000)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 16
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table ES_WHYL_TSYXRJJBXX
+  is '二手_文化娱乐_图书/音像/软件';
+-- Add comments to the columns 
+comment on column ES_WHYL_TSYXRJJBXX.es_whyl_TSYXRJjbxxid
+  is '图书/音像/软件基本信息ID';
+comment on column ES_WHYL_TSYXRJJBXX.jcxxid
+  is '基础信息ID';
+comment on column ES_WHYL_TSYXRJJBXX.gq
+  is '供求';
+comment on column ES_WHYL_TSYXRJJBXX.jyqy
+  is '交易区域';
+comment on column ES_WHYL_TSYXRJJBXX.jydd
+  is '交易地段';
+comment on column ES_WHYL_TSYXRJJBXX.lb
+  is '类别';
+comment on column ES_WHYL_TSYXRJJBXX.xj
+  is '新旧';
+comment on column ES_WHYL_TSYXRJJBXX.jg
+  is '价格';
+comment on column ES_WHYL_TSYXRJJBXX.xl
+  is '小类';
+comment on column ES_WHYL_TSYXRJJBXX.bcms
+  is '补充描述';
