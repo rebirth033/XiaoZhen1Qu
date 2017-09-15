@@ -29,9 +29,11 @@ $(document).ready(function () {
     LoadES_WHYL_WYXNWPJBXX();
     BindHover("LB");
     BindHover("XJ");
+    BindHover("XL");
     BindHover("QY");
     BindHover("SQ");
     LoadYXBQ();
+    LoadYXMC("divRMYX");
 
 });
 //加载游戏标签
@@ -48,12 +50,10 @@ function LoadYXBQ() {
 
     $(".divstep_yx").bind("mouseover", YXBQActive);
 }
-
 //游戏标签切换
 function YXBQActive() {
     LoadYXMC(this.id);
 }
-
 //加载游戏名称
 function LoadYXMC(SZM) {
     $.ajax({
@@ -69,7 +69,7 @@ function LoadYXMC(SZM) {
             if (xml.Result === 1) {
                 var html = "";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += '<span class="span_yxmc" onclick="YXCZ(\'' + xml.list[i].YXMC + '\')">' + xml.list[i].YXMC + '</span>';
+                    html += '<span class="span_yxmc" onclick="YXXZ(\'' + xml.list[i].YXMC + '\')">' + xml.list[i].YXMC + '</span>';
                 }
                 if (xml.list.length === 0)
                     html += '<span class="span_yxmc">该字母下暂无游戏</span>';
@@ -81,6 +81,12 @@ function LoadYXMC(SZM) {
         }
     });
 }
+//选择游戏名称
+function YXXZ(YXMC) {
+    $("#spanXL").html(YXMC);
+    $("#divXL").css("display", "none");
+}
+
 //显示用户菜单
 function ShowYHCD() {
     $("#div_top_right_dropdown_yhm").css("display", "block");
@@ -168,32 +174,6 @@ function LoadWYXNWPLB() {
                 html += "</ul>";
                 $("#divLB").html(html);
                 $("#divLB").css("display", "none");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载网游/虚拟物品小类
-function LoadWYXNWPXL(type) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_WHYL",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: type
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"XL\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divXL").html(html);
-                $("#divXL").css("display", "none");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -343,28 +323,6 @@ function SelectDropdown(obj, type) {
 function SelectLB(obj, type) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-    PDLB(obj.innerHTML);
-}
-//判断类别
-function PDLB(LB) {
-    if (LB === "服装") {
-        $("#divFZXXCS").css("display", "");
-        $("#divXXXCS").css("display", "none");
-        LoadXXCS("FZCC", "服装尺寸");
-        BindHover("FZCC");
-    }
-    else if (LB === "鞋") {
-        $("#divFZXXCS").css("display", "none");
-        $("#divXXXCS").css("display", "");
-        LoadXXCS("XCC", "鞋尺寸");
-        BindHover("XCC");
-    }
-    else {
-        $("#divFZXXCS").css("display", "none");
-        $("#divXXXCS").css("display", "none");
-    }
-    LoadWYXNWPXL(LB);
-    BindHover("XL");
 }
 
 //选择区域下拉框
@@ -421,17 +379,9 @@ function LoadES_WHYL_WYXNWPJBXX() {
                 SetGQ(xml.Value.ES_WHYL_WYXNWPJBXX.GQ);
                 $("#spanLB").html(xml.Value.ES_WHYL_WYXNWPJBXX.LB);
                 $("#spanXJ").html(xml.Value.ES_WHYL_WYXNWPJBXX.XJ);
+                $("#spanXL").html(xml.Value.ES_WHYL_WYXNWPJBXX.XL);
                 $("#spanQY").html(xml.Value.ES_WHYL_WYXNWPJBXX.JYQY);
                 $("#spanSQ").html(xml.Value.ES_WHYL_WYXNWPJBXX.JYDD);
-
-                $("#spanDSPMCC").html(xml.Value.ES_WHYL_WYXNWPJBXX.DSPMCC);
-                $("#spanDSPP").html(xml.Value.ES_WHYL_WYXNWPJBXX.DSPP);
-                $("#spanXYJPP").html(xml.Value.ES_WHYL_WYXNWPJBXX.XYJPP);
-                $("#spanKTPP").html(xml.Value.ES_WHYL_WYXNWPJBXX.KTPP);
-                $("#spanKTBPDS").html(xml.Value.ES_WHYL_WYXNWPJBXX.KTBPDS);
-                $("#spanKTGL").html(xml.Value.ES_WHYL_WYXNWPJBXX.KTGL);
-                $("#spanBXPP").html(xml.Value.ES_WHYL_WYXNWPJBXX.BXPP);
-                $("#spanBGPP").html(xml.Value.ES_WHYL_WYXNWPJBXX.BGPP);
 
                 LoadPhotos(xml.Value.Photos);
                 PDLB(xml.Value.ES_WHYL_WYXNWPJBXX.LB);

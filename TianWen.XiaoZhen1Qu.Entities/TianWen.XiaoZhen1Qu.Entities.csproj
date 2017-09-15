@@ -75,6 +75,7 @@
     <Compile Include="Maps\ES_SJSM_TSJJBXX_Map.cs" />
     <Compile Include="Maps\ES_WHYL_TSYXRJJBXX_Map.cs" />
     <Compile Include="Maps\ES_WHYL_WTHWYQJBXX_Map.cs" />
+    <Compile Include="Maps\ES_WHYL_WYXNWPJBXX_Map.cs" />
     <Compile Include="Maps\ES_WHYL_YSPSCPJBXX_Map.cs" />
     <Compile Include="Maps\FC_CKCFTDCWJBXX_Map.cs" />
     <Compile Include="Maps\FC_DZFJBXX_Map.cs" />

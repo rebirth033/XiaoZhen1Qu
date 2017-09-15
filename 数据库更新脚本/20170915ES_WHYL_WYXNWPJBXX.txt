@@ -1,0 +1,45 @@
+-- Create table
+create table ES_WHYL_WYXNWPJBXX
+(
+  es_whyl_wyxnwpjbxxid VARCHAR2(50) not null,
+  jcxxid               VARCHAR2(50),
+  gq                   NUMBER(1),
+  jyqy                 VARCHAR2(20),
+  jydd                 VARCHAR2(20),
+  lb                   VARCHAR2(20),
+  jg                   VARCHAR2(20),
+  xl                   VARCHAR2(20),
+  bcms                 VARCHAR2(4000)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 16K
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table ES_WHYL_WYXNWPJBXX
+  is '二手_文化娱乐_网游/虚拟物品';
+-- Add comments to the columns 
+comment on column ES_WHYL_WYXNWPJBXX.es_whyl_wyxnwpjbxxid
+  is '网游/虚拟物品基本信息ID';
+comment on column ES_WHYL_WYXNWPJBXX.jcxxid
+  is '基础信息ID';
+comment on column ES_WHYL_WYXNWPJBXX.gq
+  is '供求';
+comment on column ES_WHYL_WYXNWPJBXX.jyqy
+  is '交易区域';
+comment on column ES_WHYL_WYXNWPJBXX.jydd
+  is '交易地段';
+comment on column ES_WHYL_WYXNWPJBXX.lb
+  is '类别';
+comment on column ES_WHYL_WYXNWPJBXX.jg
+  is '价格';
+comment on column ES_WHYL_WYXNWPJBXX.xl
+  is '小类';
+comment on column ES_WHYL_WYXNWPJBXX.bcms
+  is '补充描述';
