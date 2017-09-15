@@ -174,6 +174,7 @@
     <Content Include="Areas\Business\Css\ES\ES_SJSM_PBDN.css" />
     <Content Include="Areas\Business\Css\ES\ES_SJSM_SMCP.css" />
     <Content Include="Areas\Business\Css\ES\ES_SJSM_TSJ.css" />
+    <Content Include="Areas\Business\Css\ES\ES_WHYL_WTHWYQ.css" />
     <Content Include="Areas\Business\Css\ES\ES_WHYL_YSPSCP.css" />
     <Content Include="Areas\Business\Css\FBCG.css" />
     <Content Include="Areas\Business\Css\FC\FC_CKCFTDCW.css" />
@@ -379,6 +380,8 @@
     <Content Include="Areas\Business\Scripts\Business\ES\ES_SJSM_SMCPYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\ES\ES_SJSM_TSJ.js" />
     <Content Include="Areas\Business\Scripts\Business\ES\ES_SJSM_TSJYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\ES\ES_WHYL_WTHWYQ.js" />
+    <Content Include="Areas\Business\Scripts\Business\ES\ES_WHYL_WTHWYQYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\ES\ES_WHYL_YSPSCP.js" />
     <Content Include="Areas\Business\Scripts\Business\ES\ES_WHYL_YSPSCPYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\FC\FC_CKCFTDCW.js" />
@@ -753,6 +756,7 @@
     <Compile Include="Areas\Business\Controllers\ES\ES_SJSM_PBDNController.cs" />
     <Compile Include="Areas\Business\Controllers\ES\ES_SJSM_SMCPController.cs" />
     <Compile Include="Areas\Business\Controllers\ES\ES_SJSM_TSJController.cs" />
+    <Compile Include="Areas\Business\Controllers\ES\ES_WHYL_WTHWYQController.cs" />
     <Compile Include="Areas\Business\Controllers\ES\ES_WHYL_YSPSCPController.cs" />
     <Compile Include="Areas\Business\Controllers\FBCGController.cs" />
     <Compile Include="Areas\Business\Controllers\FC\FC_CKCFTDCWController.cs" />
@@ -883,6 +887,7 @@
     <Content Include="Areas\Business\Views\ES_MYFZMR_FZXMXB\ES_MYFZMR_FZXMXB.cshtml" />
     <Content Include="Areas\Business\Views\ES_MYFZMR_MRBJ\ES_MYFZMR_MRBJ.cshtml" />
     <Content Include="Areas\Business\Views\ES_WHYL_YSPSCP\ES_WHYL_YSPSCP.cshtml" />
+    <Content Include="Areas\Business\Views\ES_WHYL_WTHWYQ\ES_WHYL_WTHWYQ.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

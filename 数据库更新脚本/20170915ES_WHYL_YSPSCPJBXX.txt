@@ -1,0 +1,45 @@
+-- Create table
+create table ES_WHYL_YSPSCPJBXX
+(
+  es_whyl_yspscpjbxxid VARCHAR2(50) not null,
+  jcxxid               VARCHAR2(50),
+  gq                   NUMBER(1),
+  bcms                 VARCHAR2(4000),
+  jyqy                 VARCHAR2(20),
+  jydd                 VARCHAR2(20),
+  lb                   VARCHAR2(20),
+  jg                   VARCHAR2(20),
+  xl                   VARCHAR2(20)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 16
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table ES_WHYL_YSPSCPJBXX
+  is '二手_文化娱乐_艺术品/收藏品';
+-- Add comments to the columns 
+comment on column ES_WHYL_YSPSCPJBXX.es_whyl_yspscpjbxxid
+  is '艺术品/收藏品基本信息ID';
+comment on column ES_WHYL_YSPSCPJBXX.jcxxid
+  is '基础信息ID';
+comment on column ES_WHYL_YSPSCPJBXX.gq
+  is '供求';
+comment on column ES_WHYL_YSPSCPJBXX.bcms
+  is '补充描述';
+comment on column ES_WHYL_YSPSCPJBXX.jyqy
+  is '交易区域';
+comment on column ES_WHYL_YSPSCPJBXX.jydd
+  is '交易地段';
+comment on column ES_WHYL_YSPSCPJBXX.lb
+  is '类别';
+comment on column ES_WHYL_YSPSCPJBXX.jg
+  is '价格';
+comment on column ES_WHYL_YSPSCPJBXX.xl
+  is '小类';
