@@ -757,6 +757,7 @@
     <Compile Include="Areas\Business\Controllers\ES\ES_MYFZMR_FZXMXBController.cs" />
     <Compile Include="Areas\Business\Controllers\ES\ES_MYFZMR_MRBJController.cs" />
     <Compile Include="Areas\Business\Controllers\ES\ES_MYFZMR_MYETYPWJController.cs" />
+    <Compile Include="Areas\Business\Controllers\ES\ES_QT_ESSBJBXXController.cs" />
     <Compile Include="Areas\Business\Controllers\ES\ES_SJSM_BJBDNController.cs" />
     <Compile Include="Areas\Business\Controllers\ES\ES_SJSM_ESSJController.cs" />
     <Compile Include="Areas\Business\Controllers\ES\ES_SJSM_PBDNController.cs" />
