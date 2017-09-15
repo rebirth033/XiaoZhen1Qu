@@ -103,7 +103,6 @@ function LoadYXMC(SZM) {
 
         }
     });
-    
 }
 //加载热门游戏
 function LoadRMYX() {

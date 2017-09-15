@@ -490,4 +490,28 @@ values (162, '音像', '黑胶唱片', '4', 4, 145);
 insert into codes_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (163, '音像', '其他', '5', 5, 145);
 
+insert into codes_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (164, '网游/虚拟物品', '游戏账号', '1', 1, null);
+
+insert into codes_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (165, '网游/虚拟物品', '游戏点卡', '2', 2, null);
+
+insert into codes_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (166, '网游/虚拟物品', '游戏币', '3', 3, null);
+
+insert into codes_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (167, '网游/虚拟物品', '游戏装备', '4', 4, null);
+
+insert into codes_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (168, '网游/虚拟物品', '游戏代练', '5', 5, null);
+
+insert into codes_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (169, '网游/虚拟物品', '游戏工具', '6', 6, null);
+
+insert into codes_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (170, '网游/虚拟物品', '充值卡', '7', 7, null);
+
+insert into codes_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (171, '网游/虚拟物品', '网络服务', '8', 8, null);
+
 prompt Done.
