@@ -138,6 +138,11 @@
       <ref object="ES_WHYL_TSYXRJBLL"/>
     </property>
   </object>
+  <object id="ES_WHYL_WYXNWPController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.ES_WHYL_WYXNWPController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="ES_WHYL_WYXNWPBLL">
+      <ref object="ES_WHYL_WYXNWPBLL"/>
+    </property>
+  </object>
   <object id="FBCGController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.FBCGController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
   </object>
   <object id="CommonController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.CommonController,TianWen.XiaoZhen1Qu.Web" singleton="false" >

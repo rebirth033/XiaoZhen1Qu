@@ -116,6 +116,7 @@
     <Compile Include="Models\ES_SJSM_TSJJBXX.cs" />
     <Compile Include="Models\ES_WHYL_TSYXRJJBXX.cs" />
     <Compile Include="Models\ES_WHYL_WTHWYQJBXX.cs" />
+    <Compile Include="Models\ES_WHYL_WYXNWPJBXX.cs" />
     <Compile Include="Models\ES_WHYL_YSPSCPJBXX.cs" />
     <Compile Include="Models\FC_CKCFTDCWJBXX.cs" />
     <Compile Include="Models\FC_DZFJBXX.cs" />
