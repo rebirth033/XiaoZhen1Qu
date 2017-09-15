@@ -50,7 +50,7 @@
 
 .spanFWQK {
     display: inline-block;
-    width: 105px;
+    width: 120px;
     height: 30px;
     text-align: center;
     margin-top: 4px;
@@ -83,14 +83,18 @@
 
 .spanFWLXOut {
     display: inline-block;
-    width: 128px;
+    width: 150px;
     height: 34px;
+    border: 1px solid #cccccc; 
+    border-radius: 4px; 
+    z-index: 997; 
+    position: relative;
 }
 
 .spanFWLXIn {
     border: 1px solid #cccccc;
     display: inline-block;
-    width: 128px;
+    width: 150px;
     height: 34px;
     border-radius: 4px;
     font-size: 14px;
@@ -98,13 +102,13 @@
 
 .divdropdown {
     float: left;
-    width: 129px;
+    width: 150px;
 }
 
 .uldropdown {
     border-radius: 4px;
     text-align: center;
-    width: 128px;
+    width: 150px;
     display: inline-block;
     border-left: 1px solid #cccccc;
     border-right: 1px solid #cccccc;

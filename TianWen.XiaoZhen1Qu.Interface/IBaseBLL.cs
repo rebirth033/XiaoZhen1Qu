@@ -12,7 +12,9 @@ namespace TianWen.XiaoZhen1Qu.Interface
 
         object LoadCODES_JDJJBG(string TYPENAME);
 
-        object LoadCODES_MYFZMR(string TYPENAME); 
+        object LoadCODES_MYFZMR(string TYPENAME);
+
+        object LoadCODES_WHYL(string TYPENAME);
 
         object LoadQYBySuperName(string SUPERNAME);
 

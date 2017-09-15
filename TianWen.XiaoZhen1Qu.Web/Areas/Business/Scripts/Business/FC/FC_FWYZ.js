@@ -75,7 +75,7 @@ function ValidateFWLX_T() {
         } else {
             $("#divFWLXTip").css("display", "block");
             $("#divFWLXTip").attr("class", "Warn");
-            $("#divFWLXTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />厅请填写整数');
+            $("#divFWLXTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />厅请填写整数，面议则填0');
             $("#spanT").css("border-color", "#fd634f");
             return false;
         }
@@ -97,7 +97,7 @@ function ValidateFWLX_W() {
         } else {
             $("#divFWLXTip").css("display", "block");
             $("#divFWLXTip").attr("class", "Warn");
-            $("#divFWLXTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />卫请填写整数');
+            $("#divFWLXTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />卫请填写整数，面议则填0');
             $("#spanW").css("border-color", "#fd634f");
             return false;
         }

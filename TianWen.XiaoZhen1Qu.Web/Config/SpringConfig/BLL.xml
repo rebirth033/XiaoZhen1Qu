@@ -105,6 +105,11 @@
       <ref object="DAOBase"/>
     </property>
   </object>
+  <object id="ES_WHYL_YSPSCPBLL" type="TianWen.XiaoZhen1Qu.BLL.ES_WHYL_YSPSCPBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
   <object id="WDFBBLL" type="TianWen.XiaoZhen1Qu.BLL.WDFBBLL,TianWen.XiaoZhen1Qu">
     <property name="DAO">
       <ref object="DAOBase"/>

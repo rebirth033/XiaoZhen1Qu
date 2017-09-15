@@ -104,7 +104,7 @@ function ValidateMJ() {
         } else {
             $("#divMJTip").css("display", "inline-block");
             $("#divMJTip").attr("class", "Warn");
-            $("#divMJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />面积请填写整数');
+            $("#divMJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />面积请填写整数，面议则填0');
             $("#spanMJ").css("border-color", "#fd634f");
             return false;
         }
@@ -225,7 +225,7 @@ function InfoSJ() {
 function InfoMJ() {
     $("#divMJTip").css("display", "inline-block");
     $("#divMJTip").attr("class", "Info");
-    $("#divMJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数');
+    $("#divMJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数，面议则填0');
 }
 //提示标题
 function InfoBT() {

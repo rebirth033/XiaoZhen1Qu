@@ -123,6 +123,11 @@
       <ref object="ES_MYFZMR_MRBJBLL"/>
     </property>
   </object>
+  <object id="ES_WHYL_YSPSCPController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.ES_WHYL_YSPSCPController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="ES_WHYL_YSPSCPBLL">
+      <ref object="ES_WHYL_YSPSCPBLL"/>
+    </property>
+  </object>
   <object id="FBCGController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.FBCGController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
   </object>
   <object id="CommonController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.CommonController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
