@@ -18,6 +18,10 @@ namespace TianWen.XiaoZhen1Qu.Interface
 
         object LoadCODES_QTES(string TYPENAME);
 
+        object LoadGCQXJBXX(string GCQX);
+
+        object LoadGCQXXH(string PPID); 
+
         object LoadQYBySuperName(string SUPERNAME);
 
         object LoadSQByQY(string QY);

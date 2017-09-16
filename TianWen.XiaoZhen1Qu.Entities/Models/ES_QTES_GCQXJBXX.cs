@@ -11,7 +11,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         }
 
         /// <summary>
-        /// 其它二手信息ID
+        /// 工程器械信息ID
         /// </summary>
         [Id]
         public virtual string ES_QTES_GCQXJBXXID { get; set; }

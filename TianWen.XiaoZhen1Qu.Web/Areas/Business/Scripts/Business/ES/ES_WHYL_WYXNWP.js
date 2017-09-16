@@ -47,7 +47,6 @@ function LoadYXBQ() {
             html += '<div class="divstep_yx" id="div' + arrayObj[i] + '"><span class="spanstep_yx" id="span' + arrayObj[i] + '">' + arrayObj[i] + '</span><em class="emstep_yx" id="em' + arrayObj[i] + '"></em></div>';
     }
     $("#div_content_yxbq").html(html);
-
     $(".divstep_yx").bind("mouseover", YXBQActive);
 }
 //游戏标签切换

@@ -8,7 +8,7 @@ create table CODES_QTES
   codeorder NUMBER(3),
   parentid  NUMBER(12)
 )
-tablespace YDBP
+tablespace USERS
   pctfree 10
   initrans 1
   maxtrans 255

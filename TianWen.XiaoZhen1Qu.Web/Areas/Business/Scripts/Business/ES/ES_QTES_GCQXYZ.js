@@ -1,6 +1,8 @@
 ﻿$(document).ready(function () {
     $("#JG").bind("blur", ValidateJG);
     $("#JG").bind("focus", InfoJG);
+    $("#DW").bind("blur", ValidateDW);
+    $("#DW").bind("focus", InfoDW);
     $("#BT").bind("blur", ValidateBT);
     $("#BT").bind("focus", InfoBT);
     $("#LXR").bind("blur", ValidateLXR);
@@ -27,6 +29,28 @@ function ValidateJG() {
             $("#divJGTip").attr("class", "Warn");
             $("#divJGTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />价格请填写整数，面议则填0');
             $("#spanJG").css("border-color", "#fd634f");
+            return false;
+        }
+    }
+}
+//验证吨位
+function ValidateDW() {
+    if ($("#DW").val() === "" || $("#DW").val() === null) {
+        $("#divDWTip").css("display", "block");
+        $("#divDWTip").attr("class", "Warn");
+        $("#divDWTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写吨位啦');
+        $("#spanDW").css("border-color", "#fd634f");
+        return false;
+    } else {
+        if (ValidateNumber($("#DW").val())) {
+            $("#divDWTip").css("display", "none");
+            $("#spanDW").css("border-color", "#cccccc");
+            return true;
+        } else {
+            $("#divDWTip").css("display", "block");
+            $("#divDWTip").attr("class", "Warn");
+            $("#divDWTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />吨位请填写整数');
+            $("#spanDW").css("border-color", "#fd634f");
             return false;
         }
     }
@@ -114,6 +138,12 @@ function InfoJG() {
     $("#divJGTip").css("display", "inline-block");
     $("#divJGTip").attr("class", "Info");
     $("#divJGTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数，面议则填0');
+}
+//提示吨位
+function InfoDW() {
+    $("#divDWTip").css("display", "inline-block");
+    $("#divDWTip").attr("class", "Info");
+    $("#divDWTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写吨位，只能是正整数');
 }
 //提示标题
 function InfoBT() {

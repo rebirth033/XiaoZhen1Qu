@@ -20,6 +20,7 @@ $(document).ready(function () {
     $("body").bind("click", CloseXZQ);
     $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
+    $("#spanPP").bind("click", function (){ $("#divPP").css("display", ""); });
 
     LoadTXXX();
     LoadGCQXLB();
@@ -27,49 +28,46 @@ $(document).ready(function () {
     LoadQY();
     LoadDefault();
     LoadES_QTES_GCQXJBXX();
+    LoadPP();
+    LoadPPMC("divA");
     BindHover("LB");
     BindHover("XJ");
+    BindHover("XL");
     BindHover("QY");
     BindHover("SQ");
-
 });
 //加载品牌标签
-function LoadYXBQ() {
-    var arrayObj = new Array('RMYX', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
+function LoadPP() {
+    var arrayObj = new Array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
     var html = "";
     for (var i = 0; i < arrayObj.length; i++) {
-        if (i === 0)
-            html += '<div class="divstep_yx" id="div' + arrayObj[i] + '" style="width:62px;"><span class="spanstep_yx" id="span' + arrayObj[i] + '">' + "热门" + '</span><em class="emstep_yx" id="em' + arrayObj[i] + '"></em></div>';
-        else
             html += '<div class="divstep_yx" id="div' + arrayObj[i] + '"><span class="spanstep_yx" id="span' + arrayObj[i] + '">' + arrayObj[i] + '</span><em class="emstep_yx" id="em' + arrayObj[i] + '"></em></div>';
     }
     $("#div_content_yxbq").html(html);
-
-    $(".divstep_yx").bind("mouseover", YXBQActive);
+    $(".divstep_yx").bind("click", YXBQActive);
 }
 //品牌标签切换
 function YXBQActive() {
-    LoadYXMC(this.id);
+    LoadPPMC(this.id);
 }
 //加载品牌名称
-function LoadYXMC(SZM) {
+function LoadPPMC(GCQX) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/YXCZ/LoadGCQXJBXX",
+        url: getRootPath() + "/Business/Common/LoadGCQXJBXX",
         dataType: "json",
         data:
         {
-            YHID: getUrlParam("YHID"),
-            SZM: SZM.split("div")[1]
+            GCQX: GCQX.split("div")[1]
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var html = "";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += '<span class="span_yxmc" onclick="YXXZ(\'' + xml.list[i].YXMC + '\')">' + xml.list[i].YXMC + '</span>';
+                    html += '<span class="span_yxmc" onclick="PPXZ(\'' + xml.list[i].CODENAME + '\',\'' + xml.list[i].CODEID + '\')">' + xml.list[i].CODENAME + '</span>';
                 }
                 if (xml.list.length === 0)
-                    html += '<span class="span_yxmc">该字母下暂无游戏</span>';
+                    html += '<span class="span_yxmc" style=\"width:200px;text-align:left;margin-left:14px;\">该字母下暂无游戏</span>';
                 $("#div_content_yxmc").html(html);
             }
         },
@@ -79,9 +77,10 @@ function LoadYXMC(SZM) {
     });
 }
 //选择品牌名称
-function YXXZ(YXMC) {
-    $("#spanXL").html(YXMC);
-    $("#divXL").css("display", "none");
+function PPXZ(PPMC, PPID) {
+    $("#spanPP").html(PPMC);
+    $("#divPP").css("display", "none");
+    LoadXH(PPID);
 }
 //显示用户菜单
 function ShowYHCD() {
@@ -177,77 +176,25 @@ function LoadGCQXLB() {
         }
     });
 }
-//加载工程器械小类
-function LoadGCQXXL(type) {
+//加载型号
+function LoadXH(PPID) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_QTES",
+        url: getRootPath() + "/Business/Common/LoadGCQXXH",
         dataType: "json",
         data:
         {
-            TYPENAME: type
+            PPID: PPID
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"XL\")'>" + xml.list[i].CODENAME + "</li>";
+                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"XH\")'>" + xml.list[i].CODENAME + "</li>";
                 }
                 html += "</ul>";
-                $("#divXL").html(html);
-                $("#divXL").css("display", "none");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载工程器械详细参数
-function LoadXXCS(id, type) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_QT",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: type
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"" + id + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#div" + id).html(html);
-                $("#div" + id).css("display", "none");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载工程器械新旧
-function LoadXJ() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "新旧程度"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"XJ\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divXJ").html(html);
-                $("#divXJ").css("display", "none");
+                $("#divXH").html(html);
+                $("#divXH").css("display", "none");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
