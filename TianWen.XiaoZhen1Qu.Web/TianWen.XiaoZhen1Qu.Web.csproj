@@ -169,6 +169,7 @@
     <Content Include="Areas\Business\Css\ES\ES_MYFZMR_FZXMXB.css" />
     <Content Include="Areas\Business\Css\ES\ES_MYFZMR_MRBJ.css" />
     <Content Include="Areas\Business\Css\ES\ES_MYFZMR_MYETYPWJ.css" />
+    <Content Include="Areas\Business\Css\ES\ES_QTES_ESSB.css" />
     <Content Include="Areas\Business\Css\ES\ES_SJSM_BJBDN.css" />
     <Content Include="Areas\Business\Css\ES\ES_SJSM_ESSJ.css" />
     <Content Include="Areas\Business\Css\ES\ES_SJSM_PBDN.css" />
@@ -372,6 +373,8 @@
     <Content Include="Areas\Business\Scripts\Business\ES\ES_MYFZMR_MRBJYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\ES\ES_MYFZMR_MYETYPWJ.js" />
     <Content Include="Areas\Business\Scripts\Business\ES\ES_MYFZMR_MYETYPWJYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\ES\ES_QTES_ESSB.js" />
+    <Content Include="Areas\Business\Scripts\Business\ES\ES_QTES_ESSBYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\ES\ES_SJSM_BJBDN.js" />
     <Content Include="Areas\Business\Scripts\Business\ES\ES_SJSM_BJBDNYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\ES\ES_SJSM_ESSJ.js" />
@@ -757,7 +760,7 @@
     <Compile Include="Areas\Business\Controllers\ES\ES_MYFZMR_FZXMXBController.cs" />
     <Compile Include="Areas\Business\Controllers\ES\ES_MYFZMR_MRBJController.cs" />
     <Compile Include="Areas\Business\Controllers\ES\ES_MYFZMR_MYETYPWJController.cs" />
-    <Compile Include="Areas\Business\Controllers\ES\ES_QT_ESSBJBXXController.cs" />
+    <Compile Include="Areas\Business\Controllers\ES\ES_QTES_ESSBJBXXController.cs" />
     <Compile Include="Areas\Business\Controllers\ES\ES_SJSM_BJBDNController.cs" />
     <Compile Include="Areas\Business\Controllers\ES\ES_SJSM_ESSJController.cs" />
     <Compile Include="Areas\Business\Controllers\ES\ES_SJSM_PBDNController.cs" />
@@ -899,6 +902,7 @@
     <Content Include="Areas\Business\Views\ES_WHYL_WTHWYQ\ES_WHYL_WTHWYQ.cshtml" />
     <Content Include="Areas\Business\Views\ES_WHYL_TSYXRJ\ES_WHYL_TSYXRJ.cshtml" />
     <Content Include="Areas\Business\Views\ES_WHYL_WYXNWP\ES_WHYL_WYXNWP.cshtml" />
+    <Content Include="Areas\Business\Views\ES_QTES_ESSB\ES_QTES_ESSB.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

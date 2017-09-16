@@ -7,11 +7,11 @@ using TianWen.XiaoZhen1Qu.Interface;
 
 namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 {
-    public class ES_QT_ESSBController : BaseController
+    public class ES_QTES_ESSBController : BaseController
     {
-        public IES_QT_ESSBBLL ES_QT_ESSBBLL { get; set; }
+        public IES_QTES_ESSBBLL ES_QTES_ESSBBLL { get; set; }
 
-        public ActionResult ES_QT_ESSB()
+        public ActionResult ES_QTES_ESSB()
         {
             ViewData["XZQ"] = Session["XZQ"];
             ViewData["YHM"] = Session["YHM"];
@@ -21,7 +21,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         [ValidateInput(false)]
         public JsonResult FB()
         {
-            YHJBXX yhjbxx = ES_QT_ESSBBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX yhjbxx = ES_QTES_ESSBBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
@@ -32,18 +32,18 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             jcxx.ZXGXSJ = DateTime.Now;
             jcxx.CJSJ = DateTime.Now;
             jcxx.LXDZ = yhjbxx.TXDZ;
-            jcxx.DH = Session["XZQ"] + "-" + ES_QT_ESSBBLL.GetLBQCByLBID(jcxx.LBID);
-            ES_QT_ESSBJBXX ES_QT_ESSBjbxx = JsonHelper.ConvertJsonToObject<ES_QT_ESSBJBXX>(json);
-            ES_QT_ESSBjbxx.BCMS = bcms;
+            jcxx.DH = Session["XZQ"] + "-" + ES_QTES_ESSBBLL.GetLBQCByLBID(jcxx.LBID);
+            ES_QTES_ESSBJBXX ES_QTES_ESSBJBXX = JsonHelper.ConvertJsonToObject<ES_QTES_ESSBJBXX>(json);
+            ES_QTES_ESSBJBXX.BCMS = bcms;
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = ES_QT_ESSBBLL.SaveES_QT_ESSBJBXX(jcxx, ES_QT_ESSBjbxx, photos);
+            object result = ES_QTES_ESSBBLL.SaveES_QTES_ESSBJBXX(jcxx, ES_QTES_ESSBJBXX, photos);
             return Json(result);
         }
 
-        public JsonResult LoadES_QT_ESSBJBXX()
+        public JsonResult LoadES_QTES_ESSBJBXX()
         {
-            string ES_QT_ESSBJBXXID = Request["ES_QT_ESSBJBXXID"];
-            object result = ES_QT_ESSBBLL.LoadES_QT_ESSBJBXX(ES_QT_ESSBJBXXID);
+            string ES_QTES_ESSBJBXXID = Request["ES_QTES_ESSBJBXXID"];
+            object result = ES_QTES_ESSBBLL.LoadES_QTES_ESSBJBXX(ES_QTES_ESSBJBXXID);
             return Json(result);
         }
     }

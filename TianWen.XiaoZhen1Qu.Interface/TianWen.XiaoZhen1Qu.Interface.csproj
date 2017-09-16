@@ -57,6 +57,7 @@
     <Compile Include="IES_MYFZMR_FZXMXBBLL.cs" />
     <Compile Include="IES_MYFZMR_MRBJBLL.cs" />
     <Compile Include="IES_MYFZMR_MYETYPWJBLL.cs" />
+    <Compile Include="IES_QT_ESSBBLL.cs" />
     <Compile Include="IES_SJSM_BJBDNBLL.cs" />
     <Compile Include="IES_SJSM_ESSJBLL.cs" />
     <Compile Include="IES_SJSM_PBDNBLL.cs" />

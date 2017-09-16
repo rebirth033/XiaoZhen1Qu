@@ -16,6 +16,8 @@ namespace TianWen.XiaoZhen1Qu.Interface
 
         object LoadCODES_WHYL(string TYPENAME);
 
+        object LoadCODES_QTES(string TYPENAME);
+
         object LoadQYBySuperName(string SUPERNAME);
 
         object LoadSQByQY(string QY);
