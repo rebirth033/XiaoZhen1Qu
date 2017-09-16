@@ -22,17 +22,67 @@ $(document).ready(function () {
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
 
     LoadTXXX();
-    LoadESSBLB();
+    LoadGCQXLB();
     LoadXJ();
     LoadQY();
     LoadDefault();
-    LoadES_QTES_ESSBJBXX();
+    LoadES_QTES_GCQXJBXX();
     BindHover("LB");
     BindHover("XJ");
     BindHover("QY");
     BindHover("SQ");
 
 });
+//加载品牌标签
+function LoadYXBQ() {
+    var arrayObj = new Array('RMYX', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
+    var html = "";
+    for (var i = 0; i < arrayObj.length; i++) {
+        if (i === 0)
+            html += '<div class="divstep_yx" id="div' + arrayObj[i] + '" style="width:62px;"><span class="spanstep_yx" id="span' + arrayObj[i] + '">' + "热门" + '</span><em class="emstep_yx" id="em' + arrayObj[i] + '"></em></div>';
+        else
+            html += '<div class="divstep_yx" id="div' + arrayObj[i] + '"><span class="spanstep_yx" id="span' + arrayObj[i] + '">' + arrayObj[i] + '</span><em class="emstep_yx" id="em' + arrayObj[i] + '"></em></div>';
+    }
+    $("#div_content_yxbq").html(html);
+
+    $(".divstep_yx").bind("mouseover", YXBQActive);
+}
+//品牌标签切换
+function YXBQActive() {
+    LoadYXMC(this.id);
+}
+//加载品牌名称
+function LoadYXMC(SZM) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/YXCZ/LoadGCQXJBXX",
+        dataType: "json",
+        data:
+        {
+            YHID: getUrlParam("YHID"),
+            SZM: SZM.split("div")[1]
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += '<span class="span_yxmc" onclick="YXXZ(\'' + xml.list[i].YXMC + '\')">' + xml.list[i].YXMC + '</span>';
+                }
+                if (xml.list.length === 0)
+                    html += '<span class="span_yxmc">该字母下暂无游戏</span>';
+                $("#div_content_yxmc").html(html);
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//选择品牌名称
+function YXXZ(YXMC) {
+    $("#spanXL").html(YXMC);
+    $("#divXL").css("display", "none");
+}
 //显示用户菜单
 function ShowYHCD() {
     $("#div_top_right_dropdown_yhm").css("display", "block");
@@ -101,15 +151,15 @@ function SJZRSelect() {
     $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
     $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
 }
-//加载二手设备类别
-function LoadESSBLB() {
+//加载工程器械类别
+function LoadGCQXLB() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/Common/LoadCODES_QTES",
         dataType: "json",
         data:
         {
-            TYPENAME: "二手设备"
+            TYPENAME: "工程器械"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -127,8 +177,8 @@ function LoadESSBLB() {
         }
     });
 }
-//加载二手设备小类
-function LoadESSBXL(type) {
+//加载工程器械小类
+function LoadGCQXXL(type) {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/Common/LoadCODES_QTES",
@@ -153,7 +203,7 @@ function LoadESSBXL(type) {
         }
     });
 }
-//加载二手设备详细参数
+//加载工程器械详细参数
 function LoadXXCS(id, type) {
     $.ajax({
         type: "POST",
@@ -179,7 +229,7 @@ function LoadXXCS(id, type) {
         }
     });
 }
-//加载二手设备新旧
+//加载工程器械新旧
 function LoadXJ() {
     $.ajax({
         type: "POST",
@@ -299,7 +349,7 @@ function SelectLB(obj, type) {
 }
 //判断类别
 function PDLB(LB) {
-    LoadESSBXL(LB);
+    LoadGCQXXL(LB);
     BindHover("XL");
 }
 
@@ -309,7 +359,7 @@ function SelectQY(obj, type, code) {
     $("#div" + type).css("display", "none");
     LoadSQ(code);
 }
-//选择二手设备品牌
+//选择工程器械品牌
 function SelectPBPP(obj, type, code) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
@@ -333,36 +383,45 @@ function SetGQ(gq) {
         $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
     }
 }
-//加载二手_手机数码_二手设备基本信息
-function LoadES_QTES_ESSBJBXX() {
+//加载二手_手机数码_工程器械基本信息
+function LoadES_QTES_GCQXJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/ES_QTES_ESSB/LoadES_QTES_ESSBJBXX",
+        url: getRootPath() + "/Business/ES_QTES_GCQX/LoadES_QTES_GCQXJBXX",
         dataType: "json",
         data:
         {
-            ES_QTES_ESSBJBXXID: getUrlParam("ES_QTES_ESSBJBXXID")
+            ES_QTES_GCQXJBXXID: getUrlParam("ES_QTES_GCQXJBXXID")
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var jsonObj = new JsonDB("myTabContent");
-                jsonObj.DisplayFromJson("myTabContent", xml.Value.ES_QTES_ESSBJBXX);
+                jsonObj.DisplayFromJson("myTabContent", xml.Value.ES_QTES_GCQXJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
-                $("#ES_QTES_ESSBJBXXID").val(xml.Value.ES_QTES_ESSBJBXX.ES_QTES_ESSBJBXXID);
+                $("#ES_QTES_GCQXJBXXID").val(xml.Value.ES_QTES_GCQXJBXX.ES_QTES_GCQXJBXXID);
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
-                    ue.setContent(xml.Value.ES_QTES_ESSBJBXX.BCMS);
+                    ue.setContent(xml.Value.ES_QTES_GCQXJBXX.BCMS);
                 });
-                SetGQ(xml.Value.ES_QTES_ESSBJBXX.GQ);
-                $("#spanLB").html(xml.Value.ES_QTES_ESSBJBXX.LB);
-                $("#spanXJ").html(xml.Value.ES_QTES_ESSBJBXX.XJ);
-                $("#spanQY").html(xml.Value.ES_QTES_ESSBJBXX.JYQY);
-                $("#spanSQ").html(xml.Value.ES_QTES_ESSBJBXX.JYDD);
+                SetGQ(xml.Value.ES_QTES_GCQXJBXX.GQ);
+                $("#spanLB").html(xml.Value.ES_QTES_GCQXJBXX.LB);
+                $("#spanXJ").html(xml.Value.ES_QTES_GCQXJBXX.XJ);
+                $("#spanQY").html(xml.Value.ES_QTES_GCQXJBXX.JYQY);
+                $("#spanSQ").html(xml.Value.ES_QTES_GCQXJBXX.JYDD);
+
+                $("#spanDSPMCC").html(xml.Value.ES_QTES_GCQXJBXX.DSPMCC);
+                $("#spanDSPP").html(xml.Value.ES_QTES_GCQXJBXX.DSPP);
+                $("#spanXYJPP").html(xml.Value.ES_QTES_GCQXJBXX.XYJPP);
+                $("#spanKTPP").html(xml.Value.ES_QTES_GCQXJBXX.KTPP);
+                $("#spanKTBPDS").html(xml.Value.ES_QTES_GCQXJBXX.KTBPDS);
+                $("#spanKTGL").html(xml.Value.ES_QTES_GCQXJBXX.KTGL);
+                $("#spanBXPP").html(xml.Value.ES_QTES_GCQXJBXX.BXPP);
+                $("#spanBGPP").html(xml.Value.ES_QTES_GCQXJBXX.BGPP);
 
                 LoadPhotos(xml.Value.Photos);
-                PDLB(xml.Value.ES_QTES_ESSBJBXX.LB);
-                $("#spanXL").html(xml.Value.ES_QTES_ESSBJBXX.XL);
+                PDLB(xml.Value.ES_QTES_GCQXJBXX.LB);
+                $("#spanXL").html(xml.Value.ES_QTES_GCQXJBXX.XL);
                 return;
             }
         },
@@ -393,21 +452,12 @@ function FB() {
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetGQ() + "'");
 
-    obj = jsonObj.AddJson(obj, "DSPMCC", "'" + $("#spanDSPMCC").html() + "'");
-    obj = jsonObj.AddJson(obj, "DSPP", "'" + $("#spanDSPP").html() + "'");
-    obj = jsonObj.AddJson(obj, "XYJPP", "'" + $("#spanXYJPP").html() + "'");
-    obj = jsonObj.AddJson(obj, "KTPP", "'" + $("#spanKTPP").html() + "'");
-    obj = jsonObj.AddJson(obj, "KTBPDS", "'" + $("#spanKTBPDS").html() + "'");
-    obj = jsonObj.AddJson(obj, "KTGL", "'" + $("#spanKTGL").html() + "'");
-    obj = jsonObj.AddJson(obj, "BXPP", "'" + $("#spanBXPP").html() + "'");
-    obj = jsonObj.AddJson(obj, "BGPP", "'" + $("#spanBGPP").html() + "'");
-
-    if (getUrlParam("ES_QTES_ESSBJBXXID") !== null)
-        obj = jsonObj.AddJson(obj, "ES_QTES_ESSBJBXXID", "'" + getUrlParam("ES_QTES_ESSBJBXXID") + "'");
+    if (getUrlParam("ES_QTES_GCQXJBXXID") !== null)
+        obj = jsonObj.AddJson(obj, "ES_QTES_GCQXJBXXID", "'" + getUrlParam("ES_QTES_GCQXJBXXID") + "'");
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/ES_QTES_ESSB/FB",
+        url: getRootPath() + "/Business/ES_QTES_GCQX/FB",
         dataType: "json",
         data:
         {
