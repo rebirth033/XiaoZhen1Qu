@@ -61,7 +61,8 @@
     <Compile Include="BLL\ES_MYFZMR_FZXMXBBLL.cs" />
     <Compile Include="BLL\ES_MYFZMR_MRBJBLL.cs" />
     <Compile Include="BLL\ES_MYFZMR_MYETYPWJBLL.cs" />
-    <Compile Include="BLL\ES_QT_ESSBBLL.cs" />
+    <Compile Include="BLL\ES_QTES_CRYPBLL.cs" />
+    <Compile Include="BLL\ES_QTES_ESSBBLL.cs" />
     <Compile Include="BLL\ES_SJSM_BJBDNBLL.cs" />
     <Compile Include="BLL\ES_SJSM_ESSJBLL.cs" />
     <Compile Include="BLL\ES_SJSM_PBDNBLL.cs" />
