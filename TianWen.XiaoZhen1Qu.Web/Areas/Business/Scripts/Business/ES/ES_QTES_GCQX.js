@@ -20,19 +20,17 @@ $(document).ready(function () {
     $("body").bind("click", CloseXZQ);
     $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
-    $("#spanPP").bind("click", function (){ $("#divPP").css("display", ""); });
 
     LoadTXXX();
     LoadGCQXLB();
-    LoadXJ();
     LoadQY();
     LoadDefault();
     LoadES_QTES_GCQXJBXX();
     LoadPP();
     LoadPPMC("divA");
     BindHover("LB");
-    BindHover("XJ");
-    BindHover("XL");
+    BindHover("PP");
+    BindHover("XH");
     BindHover("QY");
     BindHover("SQ");
 });
@@ -79,7 +77,7 @@ function LoadPPMC(GCQX) {
 //选择品牌名称
 function PPXZ(PPMC, PPID) {
     $("#spanPP").html(PPMC);
-    $("#divPP").css("display", "none");
+    $(".div_xzk").css("display", "none");
     LoadXH(PPID);
 }
 //显示用户菜单
@@ -164,7 +162,7 @@ function LoadGCQXLB() {
             if (xml.Result === 1) {
                 var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectLB(this,\"LB\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
+                    html += "<li class='lidropdown' onclick='SelectPP(this,\"LB\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
                 }
                 html += "</ul>";
                 $("#divLB").html(html);
@@ -188,7 +186,7 @@ function LoadXH(PPID) {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
+                var html = "<ul class='uldropdown' style='overflow-y: scroll; width:200px;'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='lidropdown' onclick='SelectDropdown(this,\"XH\")'>" + xml.list[i].CODENAME + "</li>";
                 }
@@ -289,14 +287,14 @@ function SelectDropdown(obj, type) {
     $("#div" + type).css("display", "none");
 }
 //选择类别下拉框
-function SelectLB(obj, type) {
+function SelectPP(obj, type) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-    PDLB(obj.innerHTML);
+    //PDLB(obj.innerHTML);
 }
 //判断类别
 function PDLB(LB) {
-    LoadGCQXXL(LB);
+    LoadPP(LB);
     BindHover("XL");
 }
 
@@ -330,7 +328,7 @@ function SetGQ(gq) {
         $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
     }
 }
-//加载二手_手机数码_工程器械基本信息
+//加载二手_其他二手_工程器械基本信息
 function LoadES_QTES_GCQXJBXX() {
     $.ajax({
         type: "POST",

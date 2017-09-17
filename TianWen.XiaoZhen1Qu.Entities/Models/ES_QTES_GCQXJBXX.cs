@@ -35,18 +35,6 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string LB { get; set; }
 
         /// <summary>
-        /// 小类
-        /// </summary>
-        [Property]
-        public virtual string XL { get; set; }
-
-        /// <summary>
-        /// 新旧
-        /// </summary>
-        [Property]
-        public virtual string XJ { get; set; }
-
-        /// <summary>
         /// 价格
         /// </summary>
         [Property]
@@ -59,15 +47,51 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string BCMS { get; set; }
 
         /// <summary>
-        /// 交易区域
+        /// 品牌
         /// </summary>
         [Property]
-        public virtual string JYQY { get; set; }
+        public virtual string PP { get; set; }
 
         /// <summary>
-        /// 交易地段
+        /// 型号
         /// </summary>
         [Property]
-        public virtual string JYDD { get; set; }
+        public virtual string XH { get; set; }
+
+        /// <summary>
+        /// 吨位
+        /// </summary>
+        [Property]
+        public virtual string DW { get; set; }
+
+        /// <summary>
+        /// 出厂年限
+        /// </summary>
+        [Property]
+        public virtual string CCNX { get; set; }
+
+        /// <summary>
+        /// 使用时间
+        /// </summary>
+        [Property]
+        public virtual string SYSJ { get; set; }
+
+        /// <summary>
+        /// 所在省
+        /// </summary>
+        [Property]
+        public virtual string SZSHENG { get; set; }
+
+        /// <summary>
+        /// 所在市
+        /// </summary>
+        [Property]
+        public virtual string SZSHI { get; set; }
+
+        /// <summary>
+        /// 所在乡镇
+        /// </summary>
+        [Property]
+        public virtual string SZXZ { get; set; }
     }
 }
