@@ -1,0 +1,61 @@
+-- Create table
+create table ES_QTES_GCQXJBXX
+(
+  es_qtes_gcqxjbxxid VARCHAR2(50) not null,
+  jcxxid             VARCHAR2(50),
+  gq                 NUMBER(1),
+  bcms               VARCHAR2(4000),
+  lb                 VARCHAR2(20),
+  jg                 VARCHAR2(20),
+  pp                 VARCHAR2(20),
+  xh                 VARCHAR2(20),
+  dw                 VARCHAR2(20),
+  ccnx               VARCHAR2(20),
+  sysj               VARCHAR2(20),
+  szsheng            VARCHAR2(20),
+  szshi              VARCHAR2(20),
+  szxz               VARCHAR2(20)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 16K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table ES_QTES_GCQXJBXX
+  is '二手_其他二手_工程器械';
+-- Add comments to the columns 
+comment on column ES_QTES_GCQXJBXX.es_qtes_gcqxjbxxid
+  is '工程器械基本信息ID';
+comment on column ES_QTES_GCQXJBXX.jcxxid
+  is '基础信息ID';
+comment on column ES_QTES_GCQXJBXX.gq
+  is '供求';
+comment on column ES_QTES_GCQXJBXX.bcms
+  is '补充描述';
+comment on column ES_QTES_GCQXJBXX.lb
+  is '类别';
+comment on column ES_QTES_GCQXJBXX.jg
+  is '价格';
+comment on column ES_QTES_GCQXJBXX.pp
+  is '品牌';
+comment on column ES_QTES_GCQXJBXX.xh
+  is '型号';
+comment on column ES_QTES_GCQXJBXX.dw
+  is '吨位';
+comment on column ES_QTES_GCQXJBXX.ccnx
+  is '出厂年限';
+comment on column ES_QTES_GCQXJBXX.sysj
+  is '使用时间';
+comment on column ES_QTES_GCQXJBXX.szsheng
+  is '所在省';
+comment on column ES_QTES_GCQXJBXX.szshi
+  is '所在市';
+comment on column ES_QTES_GCQXJBXX.szxz
+  is '所在乡镇';

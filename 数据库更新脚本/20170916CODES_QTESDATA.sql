@@ -401,546 +401,558 @@ insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENT
 values (134, '工程器械', '配件', '12', 12, null);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (135, '挖掘机', '奥泰', '1', 1, 123);
+values (135, '挖掘机', '奥泰', 'A', 1, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (136, '挖掘机', '阿特拉斯*中国', '1', 1, 123);
+values (136, '挖掘机', '阿特拉斯*中国', 'A', 2, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (137, '挖掘机', '奥力信', '1', 1, 123);
+values (137, '挖掘机', '奥力信', 'A', 3, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (138, '挖掘机', '奥邦', '1', 1, 123);
+values (138, '挖掘机', '奥邦', 'A', 4, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (139, '挖掘机', '奥泰重工', '1', 1, 123);
+values (139, '挖掘机', '奥泰重工', 'A', 5, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (140, '挖掘机', '邦立重机', '1', 1, 123);
+values (140, '挖掘机', '邦立重机', 'B', 1, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (141, '挖掘机', '宝鼎', '1', 1, 123);
+values (141, '挖掘机', '宝鼎', 'B', 2, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (142, '挖掘机', '北车重工', '1', 1, 123);
+values (142, '挖掘机', '北车重工', 'B', 3, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (143, '挖掘机', '北京长城恩信', '1', 1, 123);
+values (143, '挖掘机', '北京长城恩信', 'B', 4, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (144, '挖掘机', '贝尔', '1', 1, 123);
+values (144, '挖掘机', '贝尔', 'B', 5, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (145, '挖掘机', '八达重工', '1', 1, 123);
+values (145, '挖掘机', '八达重工', 'B', 6, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (146, '挖掘机', '朝工', '1', 1, 123);
+values (146, '挖掘机', '朝工', 'C', 1, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (147, '挖掘机', '朝工机械', '1', 1, 123);
+values (147, '挖掘机', '朝工机械', 'C', 2, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (148, '挖掘机', '斗山', '1', 1, 123);
+values (148, '挖掘机', '斗山', 'D', 1, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (149, '挖掘机', '鼎盛重工', '1', 1, 123);
+values (149, '挖掘机', '鼎盛重工', 'D', 2, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (150, '挖掘机', '德尔重工', '1', 1, 123);
+values (150, '挖掘机', '德尔重工', 'D', 3, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (151, '挖掘机', '道胜', '1', 1, 123);
+values (151, '挖掘机', '道胜', 'D', 4, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (152, '挖掘机', '德力', '1', 1, 123);
+values (152, '挖掘机', '德力', 'D', 5, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (153, '挖掘机', '大信重工', '1', 1, 123);
+values (153, '挖掘机', '大信重工', 'D', 6, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (154, '挖掘机', '鼎盛天工', '1', 1, 123);
+values (154, '挖掘机', '鼎盛天工', 'D', 7, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (155, '挖掘机', '德州宝鼎', '1', 1, 123);
+values (155, '挖掘机', '德州宝鼎', 'D', 8, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (156, '挖掘机', '大城东力', '1', 1, 123);
+values (156, '挖掘机', '大城东力', 'D', 9, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (157, '挖掘机', '鼎诚', '1', 1, 123);
+values (157, '挖掘机', '鼎诚', 'D', 10, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (158, '挖掘机', '富亿机械', '1', 1, 123);
+values (158, '挖掘机', '富亿机械', 'F', 1, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (159, '挖掘机', '抚挖', '1', 1, 123);
+values (159, '挖掘机', '抚挖', 'F', 2, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (160, '挖掘机', '福工', '1', 1, 123);
+values (160, '挖掘机', '福工', 'F', 3, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (161, '挖掘机', '福建拖拉机', '1', 1, 123);
+values (161, '挖掘机', '福建拖拉机', 'F', 4, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (162, '挖掘机', '抚挖重工', '1', 1, 123);
+values (162, '挖掘机', '抚挖重工', 'F', 5, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (163, '挖掘机', '福工机械', '1', 1, 123);
+values (163, '挖掘机', '福工机械', 'F', 6, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (164, '挖掘机', '国机重工', '1', 1, 123);
+values (164, '挖掘机', '国机重工', 'G', 1, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (165, '挖掘机', '格瑞德', '1', 1, 123);
+values (165, '挖掘机', '格瑞德', 'G', 2, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (166, '挖掘机', '盖尔', '1', 1, 123);
+values (166, '挖掘机', '盖尔', 'G', 3, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (167, '挖掘机', '合矿', '1', 1, 123);
+values (167, '挖掘机', '合矿', 'H', 1, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (168, '挖掘机', '海斗', '1', 1, 123);
+values (168, '挖掘机', '海斗', 'H', 2, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (169, '挖掘机', '华力重工', '1', 1, 123);
+values (169, '挖掘机', '华力重工', 'H', 3, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (170, '挖掘机', '华鑫重工', '1', 1, 123);
+values (170, '挖掘机', '华鑫重工', 'H', 4, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (171, '挖掘机', '恒特', '1', 1, 123);
+values (171, '挖掘机', '恒特', 'H', 5, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (172, '挖掘机', '恒天九五', '1', 1, 123);
+values (172, '挖掘机', '恒天九五', 'H', 6, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (173, '挖掘机', '杭重机械', '1', 1, 123);
+values (173, '挖掘机', '杭重机械', 'H', 7, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (174, '挖掘机', '浣熊', '1', 1, 123);
+values (174, '挖掘机', '浣熊', 'H', 8, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (175, '挖掘机', '恒岳重工', '1', 1, 123);
+values (175, '挖掘机', '恒岳重工', 'H', 9, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (176, '挖掘机', '华南重工', '1', 1, 123);
+values (176, '挖掘机', '华南重工', 'H', 10, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (177, '挖掘机', '合肥振宇', '1', 1, 123);
+values (177, '挖掘机', '合肥振宇', 'H', 11, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (178, '挖掘机', '悍牛', '1', 1, 123);
+values (178, '挖掘机', '悍牛', 'H', 12, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (179, '挖掘机', '华夏山工', '1', 1, 123);
+values (179, '挖掘机', '华夏山工', 'H', 13, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (180, '挖掘机', '华山重工', '1', 1, 123);
+values (180, '挖掘机', '华山重工', 'H', 14, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (181, '挖掘机', '恒特重工', '1', 1, 123);
+values (181, '挖掘机', '恒特重工', 'H', 15, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (182, '挖掘机', '鸿达建工', '1', 1, 123);
+values (182, '挖掘机', '鸿达建工', 'H', 16, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (183, '挖掘机', '悍山', '1', 1, 123);
+values (183, '挖掘机', '悍山', 'H', 17, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (184, '挖掘机', '恒辉重工', '1', 1, 123);
+values (184, '挖掘机', '恒辉重工', 'H', 18, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (185, '挖掘机', 'JCB', '1', 1, 123);
+values (185, '挖掘机', 'JCB', 'J', 1, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (186, '挖掘机', '江麓', '1', 1, 123);
+values (186, '挖掘机', '江麓', 'J', 2, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (187, '挖掘机', '劲工', '1', 1, 123);
+values (187, '挖掘机', '劲工', 'J', 3, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (188, '挖掘机', '久保田', '1', 1, 123);
+values (188, '挖掘机', '久保田', 'J', 4, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (189, '挖掘机', '巨超重工', '1', 1, 123);
+values (189, '挖掘机', '巨超重工', 'J', 5, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (190, '挖掘机', '京城长野', '1', 1, 123);
+values (190, '挖掘机', '京城长野', 'J', 6, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (191, '挖掘机', '晋工', '1', 1, 123);
+values (191, '挖掘机', '晋工', 'J', 7, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (192, '挖掘机', '嘉和重工', '1', 1, 123);
+values (192, '挖掘机', '嘉和重工', 'J', 8, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (193, '挖掘机', '建德机械', '1', 1, 123);
+values (193, '挖掘机', '建德机械', 'J', 9, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (194, '挖掘机', '加藤', '1', 1, 123);
+values (194, '挖掘机', '加藤', 'J', 10, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (195, '挖掘机', '杰西博', '1', 1, 123);
+values (195, '挖掘机', '杰西博', 'J', 11, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (196, '挖掘机', '江淮重工', '1', 1, 123);
+values (196, '挖掘机', '江淮重工', 'J', 12, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (197, '挖掘机', '江麓机电', '1', 1, 123);
+values (197, '挖掘机', '江麓机电', 'J', 13, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (198, '挖掘机', '巨猛', '1', 1, 123);
+values (198, '挖掘机', '巨猛', 'J', 14, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (199, '挖掘机', '巨超集团', '1', 1, 123);
+values (199, '挖掘机', '巨超集团', 'J', 15, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (200, '挖掘机', '军联', '1', 1, 123);
+values (200, '挖掘机', '军联', 'J', 16, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (201, '挖掘机', '卡特彼勒', '1', 1, 123);
+values (201, '挖掘机', '卡特彼勒', 'K', 1, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (202, '挖掘机', '开元智富', '1', 1, 123);
+values (202, '挖掘机', '开元智富', 'K', 2, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (203, '挖掘机', '开普动力', '1', 1, 123);
+values (203, '挖掘机', '开普动力', 'K', 3, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (204, '挖掘机', '卡特重工', '1', 1, 123);
+values (204, '挖掘机', '卡特重工', 'K', 4, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (205, '挖掘机', '凯斯', '1', 1, 123);
+values (205, '挖掘机', '凯斯', 'K', 5, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (206, '挖掘机', '开普', '1', 1, 123);
+values (206, '挖掘机', '开普', 'K', 6, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (207, '挖掘机', '柳工', '1', 1, 123);
+values (207, '挖掘机', '柳工', 'L', 1, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (208, '挖掘机', '雷沃重工', '1', 1, 123);
+values (208, '挖掘机', '雷沃重工', 'L', 2, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (209, '挖掘机', '龙工', '1', 1, 123);
+values (209, '挖掘机', '龙工', 'L', 3, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (210, '挖掘机', '利勃海尔', '1', 1, 123);
+values (210, '挖掘机', '利勃海尔', 'L', 4, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (211, '挖掘机', '力士德', '1', 1, 123);
+values (211, '挖掘机', '力士德', 'L', 5, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (212, '挖掘机', '雷沃', '1', 1, 123);
+values (212, '挖掘机', '雷沃', 'L', 6, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (213, '挖掘机', '鲁牛重工', '1', 1, 123);
+values (213, '挖掘机', '鲁牛重工', 'L', 7, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (214, '挖掘机', '洛阳路通', '1', 1, 123);
+values (214, '挖掘机', '洛阳路通', 'L', 8, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (215, '挖掘机', '雷道机械', '1', 1, 123);
+values (215, '挖掘机', '雷道机械', 'L', 9, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (216, '挖掘机', '洛建', '1', 1, 123);
+values (216, '挖掘机', '洛建', 'L', 10, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (217, '挖掘机', '雷乔曼机械', '1', 1, 123);
+values (217, '挖掘机', '雷乔曼机械', 'L', 11, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (218, '挖掘机', '灵升机械', '1', 1, 123);
+values (218, '挖掘机', '灵升机械', 'L', 12, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (219, '挖掘机', '雷沃重工', '1', 1, 123);
+values (219, '挖掘机', '雷沃重工', 'L', 13, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (220, '挖掘机', '闽工', '1', 1, 123);
+values (220, '挖掘机', '闽工', 'M', 1, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (221, '挖掘机', '美国威猛', '1', 1, 123);
+values (221, '挖掘机', '美国威猛', 'M', 2, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (222, '挖掘机', '农友', '1', 1, 123);
+values (222, '挖掘机', '农友', 'N', 1, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (223, '挖掘机', '南车北京时代', '1', 1, 123);
+values (223, '挖掘机', '南车北京时代', 'N', 2, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (224, '挖掘机', '宁工股份', '1', 1, 123);
+values (224, '挖掘机', '宁工股份', 'N', 3, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (225, '挖掘机', '南特', '1', 1, 123);
+values (225, '挖掘机', '南特', 'N', 4, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (226, '挖掘机', '南特机械', '1', 1, 123);
+values (226, '挖掘机', '南特机械', 'N', 5, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (227, '挖掘机', '宁工重机', '1', 1, 123);
+values (227, '挖掘机', '宁工重机', 'N', 6, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (228, '挖掘机', '普什重机', '1', 1, 123);
+values (228, '挖掘机', '普什重机', 'P', 1, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (229, '挖掘机', '彭浦', '1', 1, 123);
+values (229, '挖掘机', '彭浦', 'P', 2, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (230, '挖掘机', '泉州鑫豪', '1', 1, 123);
+values (230, '挖掘机', '泉州鑫豪', 'Q', 1, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (231, '挖掘机', '七天阳', '1', 1, 123);
+values (231, '挖掘机', '七天阳', 'Q', 2, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (232, '挖掘机', '勤牛', '1', 1, 123);
+values (232, '挖掘机', '勤牛', 'Q', 3, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (233, '挖掘机', '奇瑞迪凯重科', '1', 1, 123);
+values (233, '挖掘机', '奇瑞迪凯重科', 'Q', 4, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (234, '挖掘机', '青州神娃', '1', 1, 123);
+values (234, '挖掘机', '青州神娃', 'Q', 5, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (235, '挖掘机', '其它品牌挖掘机', '1', 1, 123);
+values (235, '挖掘机', '其它品牌挖掘机', 'Q', 6, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (236, '挖掘机', '日立', '1', 1, 123);
+values (236, '挖掘机', '日立', 'R', 1, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (237, '挖掘机', '熔盛机械', '1', 1, 123);
+values (237, '挖掘机', '熔盛机械', 'R', 2, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (238, '挖掘机', '瑞德路业', '1', 1, 123);
+values (238, '挖掘机', '瑞德路业', 'R', 3, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (239, '挖掘机', '三一', '1', 1, 123);
+values (239, '挖掘机', '三一', 'S', 1, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (240, '挖掘机', '山东临工', '1', 1, 123);
+values (240, '挖掘机', '山东临工', 'S', 2, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (241, '挖掘机', '厦工', '1', 1, 123);
+values (241, '挖掘机', '厦工', 'S', 3, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (242, '挖掘机', '神钢', '1', 1, 123);
+values (242, '挖掘机', '神钢', 'S', 4, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (243, '挖掘机', '山猫', '1', 1, 123);
+values (243, '挖掘机', '山猫', 'S', 5, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (244, '挖掘机', '神娃机械', '1', 1, 123);
+values (244, '挖掘机', '神娃机械', 'S', 6, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (245, '挖掘机', '山重建机', '1', 1, 123);
+values (245, '挖掘机', '山重建机', 'S', 7, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (246, '挖掘机', '山河智能', '1', 1, 123);
+values (246, '挖掘机', '山河智能', 'S', 8, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (247, '挖掘机', '厦装', '1', 1, 123);
+values (247, '挖掘机', '厦装', 'S', 9, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (248, '挖掘机', '石川岛', '1', 1, 123);
+values (248, '挖掘机', '石川岛', 'S', 10, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (249, '挖掘机', '上海彭浦', '1', 1, 123);
+values (249, '挖掘机', '上海彭浦', 'S', 11, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (250, '挖掘机', '山猛机械', '1', 1, 123);
+values (250, '挖掘机', '山猛机械', 'S', 12, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (251, '挖掘机', '上力重工', '1', 1, 123);
+values (251, '挖掘机', '上力重工', 'S', 13, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (252, '挖掘机', '三一重工', '1', 1, 123);
+values (252, '挖掘机', '三一重工', 'S', 14, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (253, '挖掘机', '山中建机', '1', 1, 123);
+values (253, '挖掘机', '山中建机', 'S', 15, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (254, '挖掘机', '山东常林', '1', 1, 123);
+values (254, '挖掘机', '山东常林', 'S', 16, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (255, '挖掘机', '山东力士', '1', 1, 123);
+values (255, '挖掘机', '山东力士', 'S', 17, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (256, '挖掘机', '山鼎重工', '1', 1, 123);
+values (256, '挖掘机', '山鼎重工', 'S', 18, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (257, '挖掘机', '山东勇马', '1', 1, 123);
+values (257, '挖掘机', '山东勇马', 'S', 19, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (258, '挖掘机', '森田重机', '1', 1, 123);
+values (258, '挖掘机', '森田重机', 'S', 20, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (259, '挖掘机', '山东中际', '1', 1, 123);
+values (259, '挖掘机', '山东中际', 'S', 21, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (260, '挖掘机', '山东众合', '1', 1, 123);
+values (260, '挖掘机', '山东众合', 'S', 22, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (261, '挖掘机', '沭工', '1', 1, 123);
+values (261, '挖掘机', '沭工', 'S', 23, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (262, '挖掘机', '山推', '1', 1, 123);
+values (262, '挖掘机', '山推', 'S', 24, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (263, '挖掘机', '山特重工', '1', 1, 123);
+values (263, '挖掘机', '山特重工', 'S', 25, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (264, '挖掘机', '铁力士', '1', 1, 123);
+values (264, '挖掘机', '铁力士', 'T', 1, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (265, '挖掘机', '特雷克斯', '1', 1, 123);
+values (265, '挖掘机', '特雷克斯', 'T', 2, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (266, '挖掘机', '泰安现代重工', '1', 1, 123);
+values (266, '挖掘机', '泰安现代重工', 'T', 3, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (267, '挖掘机', '沃尔沃', '1', 1, 123);
+values (267, '挖掘机', '沃尔沃', 'W', 1, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (268, '挖掘机', '沃得重工', '1', 1, 123);
+values (268, '挖掘机', '沃得重工', 'W', 2, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (269, '挖掘机', '沃尔华', '1', 1, 123);
+values (269, '挖掘机', '沃尔华', 'W', 3, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (270, '挖掘机', '威克诺森', '1', 1, 123);
+values (270, '挖掘机', '威克诺森', 'W', 4, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (271, '挖掘机', '徐工', '1', 1, 123);
+values (271, '挖掘机', '徐工', 'X', 1, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (272, '挖掘机', '小松', '1', 1, 123);
+values (272, '挖掘机', '小松', 'X', 2, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (273, '挖掘机', '徐挖', '1', 1, 123);
+values (273, '挖掘机', '徐挖', 'X', 3, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (274, '挖掘机', '犀牛重工', '1', 1, 123);
+values (274, '挖掘机', '犀牛重工', 'X', 4, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (275, '挖掘机', '小橋', '1', 1, 123);
+values (275, '挖掘机', '小橋', 'X', 5, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (276, '挖掘机', '现代', '1', 1, 123);
+values (276, '挖掘机', '现代', 'X', 6, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (277, '挖掘机', '新源机械', '1', 1, 123);
+values (277, '挖掘机', '新源机械', 'X', 7, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (278, '挖掘机', '宣工', '1', 1, 123);
+values (278, '挖掘机', '宣工', 'X', 8, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (279, '挖掘机', '新天和', '1', 1, 123);
+values (279, '挖掘机', '新天和', 'X', 9, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (280, '挖掘机', '信锐重工', '1', 1, 123);
+values (280, '挖掘机', '信锐重工', 'X', 10, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (281, '挖掘机', '新源', '1', 1, 123);
+values (281, '挖掘机', '新源', 'X', 11, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (282, '挖掘机', '小桥', '1', 1, 123);
+values (282, '挖掘机', '小桥', 'X', 12, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (283, '挖掘机', '徐威重科', '1', 1, 123);
+values (283, '挖掘机', '徐威重科', 'X', 13, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (284, '挖掘机', '徐州东德', '1', 1, 123);
+values (284, '挖掘机', '徐州东德', 'X', 14, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (285, '挖掘机', '新筑股份', '1', 1, 123);
+values (285, '挖掘机', '新筑股份', 'X', 15, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (286, '挖掘机', '原装日立', '1', 1, 123);
+values (286, '挖掘机', '原装日立', 'Y', 1, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (287, '挖掘机', '玉柴', '1', 1, 123);
+values (287, '挖掘机', '玉柴', 'Y', 2, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (288, '挖掘机', '永工', '1', 1, 123);
+values (288, '挖掘机', '永工', 'Y', 3, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (289, '挖掘机', '洋马', '1', 1, 123);
+values (289, '挖掘机', '洋马', 'Y', 4, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (290, '挖掘机', '原装神钢', '1', 1, 123);
+values (290, '挖掘机', '原装神钢', 'Y', 5, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (291, '挖掘机', '愚公机械', '1', 1, 123);
+values (291, '挖掘机', '愚公机械', 'Y', 6, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (292, '挖掘机', '宜工', '1', 1, 123);
+values (292, '挖掘机', '宜工', 'Y', 7, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (293, '挖掘机', '约翰迪尔', '1', 1, 123);
+values (293, '挖掘机', '约翰迪尔', 'Y', 8, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (294, '挖掘机', '烟工', '1', 1, 123);
+values (294, '挖掘机', '烟工', 'Y', 9, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (295, '挖掘机', '忆辉', '1', 1, 123);
+values (295, '挖掘机', '忆辉', 'Y', 10, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (296, '挖掘机', '驭工机械', '1', 1, 123);
+values (296, '挖掘机', '驭工机械', 'Y', 11, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (297, '挖掘机', '移山', '1', 1, 123);
+values (297, '挖掘机', '移山', 'Y', 12, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (298, '挖掘机', '野牛', '1', 1, 123);
+values (298, '挖掘机', '野牛', 'Y', 13, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (299, '挖掘机', '宜春工程', '1', 1, 123);
+values (299, '挖掘机', '宜春工程', 'Y', 14, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (300, '挖掘机', '驭工', '1', 1, 123);
+values (300, '挖掘机', '驭工', 'Y', 15, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (301, '挖掘机', '愚公机械', '1', 1, 123);
+values (301, '挖掘机', '愚公机械', 'Y', 16, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (301, '挖掘机', '愚公机械', '1', 1, 123);
+values (301, '挖掘机', '愚公机械', 'Y', 17, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (302, '挖掘机', '远大机械', '1', 1, 123);
+values (302, '挖掘机', '远大机械', 'Y', 18, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (303, '挖掘机', '远山机械', '1', 1, 123);
+values (303, '挖掘机', '远山机械', 'Y', 19, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (304, '挖掘机', '一拖', '1', 1, 123);
+values (304, '挖掘机', '一拖', 'Y', 20, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (305, '挖掘机', '中联重科', '1', 1, 123);
+values (305, '挖掘机', '中联重科', 'Z', 1, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (306, '挖掘机', '竹内', '1', 1, 123);
+values (306, '挖掘机', '竹内', 'Z', 2, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (307, '挖掘机', '住友', '1', 1, 123);
+values (307, '挖掘机', '住友', 'Z', 3, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (308, '挖掘机', '詹阳动力', '1', 1, 123);
+values (308, '挖掘机', '詹阳动力', 'Z', 4, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (309, '挖掘机', '浙江军联', '1', 1, 123);
+values (309, '挖掘机', '浙江军联', 'Z', 5, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (310, '挖掘机', '早山重工', '1', 1, 123);
+values (310, '挖掘机', '早山重工', 'Z', 6, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (311, '挖掘机', '重庆勤牛', '1', 1, 123);
+values (311, '挖掘机', '重庆勤牛', 'Z', 7, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (312, '挖掘机', '中国北车', '1', 1, 123);
+values (312, '挖掘机', '中国北车', 'Z', 8, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (313, '挖掘机', '正泰机械', '1', 1, 123);
+values (313, '挖掘机', '正泰机械', 'Z', 9, 123);
 
 insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (314, '挖掘机', '中国重汽海斗', '1', 1, 123);
+values (314, '挖掘机', '中国重汽海斗', 'Z', 10, 123);
+
+insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (315, '奥泰', 'AT180E-9', null, 1, 135);
+
+insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (316, '奥泰', 'AT60E-9', null, 2, 135);
+
+insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (317, '奥泰', 'AT80E-9', null, 3, 135);
+
+insert into codes_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (318, '奥泰', 'AT150E-9', null, 4, 135);
 
 prompt Done.

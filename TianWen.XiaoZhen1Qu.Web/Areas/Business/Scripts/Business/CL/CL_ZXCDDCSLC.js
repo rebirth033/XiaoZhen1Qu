@@ -22,64 +22,17 @@ $(document).ready(function () {
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
 
     LoadTXXX();
-    LoadGCQXLB();
+    LoadZXCDDCSLCLB();
+    LoadXJ();
     LoadQY();
     LoadDefault();
-    LoadES_QTES_GCQXJBXX();
-    LoadPP();
-    LoadPPMC("divA");
+    LoadCL_ZXCDDCSLCJBXX();
     BindHover("LB");
-    BindHover("PP");
-    BindHover("XH");
+    BindHover("XJ");
     BindHover("QY");
     BindHover("SQ");
-});
-//加载品牌标签
-function LoadPP() {
-    var arrayObj = new Array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
-    var html = "";
-    for (var i = 0; i < arrayObj.length; i++) {
-            html += '<div class="divstep_yx" id="div' + arrayObj[i] + '"><span class="spanstep_yx" id="span' + arrayObj[i] + '">' + arrayObj[i] + '</span><em class="emstep_yx" id="em' + arrayObj[i] + '"></em></div>';
-    }
-    $("#div_content_yxbq").html(html);
-    $(".divstep_yx").bind("click", YXBQActive);
-}
-//品牌标签切换
-function YXBQActive() {
-    LoadPPMC(this.id);
-}
-//加载品牌名称
-function LoadPPMC(GCQX) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadGCQXJBXX",
-        dataType: "json",
-        data:
-        {
-            GCQX: GCQX.split("div")[1]
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += '<span class="span_yxmc" onclick="PPXZ(\'' + xml.list[i].CODENAME + '\',\'' + xml.list[i].CODEID + '\')">' + xml.list[i].CODENAME + '</span>';
-                }
-                if (xml.list.length === 0)
-                    html += '<span class="span_yxmc" style=\"width:200px;text-align:left;margin-left:14px;\">该字母下暂无游戏</span>';
-                $("#div_content_yxmc").html(html);
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
-        }
-    });
-}
-//选择品牌名称
-function PPXZ(PPMC, PPID) {
-    $("#spanPP").html(PPMC);
-    $(".div_xzk").css("display", "none");
-    LoadXH(PPID);
-}
+});
 //显示用户菜单
 function ShowYHCD() {
     $("#div_top_right_dropdown_yhm").css("display", "block");
@@ -148,21 +101,21 @@ function SJZRSelect() {
     $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
     $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
 }
-//加载工程器械类别
-function LoadGCQXLB() {
+//加载自行车/电动车/三轮车类别
+function LoadZXCDDCSLCLB() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_QTES",
+        url: getRootPath() + "/Business/Common/LoadCODCL",
         dataType: "json",
         data:
         {
-            TYPENAME: "工程器械"
+            TYPENAME: "自行车/电动车/三轮车"
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectPP(this,\"LB\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
+                    html += "<li class='lidropdown' onclick='SelectLB(this,\"LB\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
                 }
                 html += "</ul>";
                 $("#divLB").html(html);
@@ -174,25 +127,77 @@ function LoadGCQXLB() {
         }
     });
 }
-//加载型号
-function LoadXH(PPID) {
+//加载自行车/电动车/三轮车小类
+function LoadZXCDDCSLCXL(type) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadGCQXXH",
+        url: getRootPath() + "/Business/Common/LoadCODCL",
         dataType: "json",
         data:
         {
-            PPID: PPID
+            TYPENAME: type
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll; width:200px;'>";
+                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"XH\")'>" + xml.list[i].CODENAME + "</li>";
+                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"XL\")'>" + xml.list[i].CODENAME + "</li>";
                 }
                 html += "</ul>";
-                $("#divXH").html(html);
-                $("#divXH").css("display", "none");
+                $("#divXL").html(html);
+                $("#divXL").css("display", "none");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//加载自行车/电动车/三轮车详细参数
+function LoadXXCS(id, type) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadCODCL",
+        dataType: "json",
+        data:
+        {
+            TYPENAME: type
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"" + id + "\")'>" + xml.list[i].CODENAME + "</li>";
+                }
+                html += "</ul>";
+                $("#div" + id).html(html);
+                $("#div" + id).css("display", "none");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//加载自行车/电动车/三轮车新旧
+function LoadXJ() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadCODES",
+        dataType: "json",
+        data:
+        {
+            TYPENAME: "新旧程度"
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"XJ\")'>" + xml.list[i].CODENAME + "</li>";
+                }
+                html += "</ul>";
+                $("#divXJ").html(html);
+                $("#divXJ").css("display", "none");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -287,14 +292,30 @@ function SelectDropdown(obj, type) {
     $("#div" + type).css("display", "none");
 }
 //选择类别下拉框
-function SelectPP(obj, type) {
+function SelectLB(obj, type) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-    //PDLB(obj.innerHTML);
+    PDLB(obj.innerHTML);
 }
 //判断类别
 function PDLB(LB) {
-    LoadPP(LB);
+    if (LB === "床") {
+        $("#divCXXCS").css("display", "");
+        $("#divCDXXCS").css("display", "none");
+        LoadXXCS("CCC", "床尺寸");
+        BindHover("CCC");
+    }
+    else if (LB === "床垫") {
+        $("#divCXXCS").css("display", "none");
+        $("#divCDXXCS").css("display", "");
+        LoadXXCS("CDCC", "床尺寸");
+        BindHover("CDCC");
+    }
+    else {
+        $("#divCXXCS").css("display", "none");
+        $("#divCDXXCS").css("display", "none");
+    }
+    LoadZXCDDCSLCXL(LB);
     BindHover("XL");
 }
 
@@ -304,7 +325,7 @@ function SelectQY(obj, type, code) {
     $("#div" + type).css("display", "none");
     LoadSQ(code);
 }
-//选择工程器械品牌
+//选择自行车/电动车/三轮车品牌
 function SelectPBPP(obj, type, code) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
@@ -328,34 +349,45 @@ function SetGQ(gq) {
         $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
     }
 }
-//加载二手_其他二手_工程器械基本信息
-function LoadES_QTES_GCQXJBXX() {
+//加载车辆_自行车/电动车/三轮车基本信息
+function LoadCL_ZXCDDCSLCJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/ES_QTES_GCQX/LoadES_QTES_GCQXJBXX",
+        url: getRootPath() + "/Business/CL_ZXCDDCSLC/LoadCL_ZXCDDCSLCJBXX",
         dataType: "json",
         data:
         {
-            ES_QTES_GCQXJBXXID: getUrlParam("ES_QTES_GCQXJBXXID")
+            CL_ZXCDDCSLCJBXXID: getUrlParam("CL_ZXCDDCSLCJBXXID")
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var jsonObj = new JsonDB("myTabContent");
-                jsonObj.DisplayFromJson("myTabContent", xml.Value.ES_QTES_GCQXJBXX);
+                jsonObj.DisplayFromJson("myTabContent", xml.Value.CL_ZXCDDCSLCJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
-                $("#ES_QTES_GCQXJBXXID").val(xml.Value.ES_QTES_GCQXJBXX.ES_QTES_GCQXJBXXID);
+                $("#CL_ZXCDDCSLCJBXXID").val(xml.Value.CL_ZXCDDCSLCJBXX.CL_ZXCDDCSLCJBXXID);
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
-                    ue.setContent(xml.Value.ES_QTES_GCQXJBXX.BCMS);
+                    ue.setContent(xml.Value.CL_ZXCDDCSLCJBXX.BCMS);
                 });
-                SetGQ(xml.Value.ES_QTES_GCQXJBXX.GQ);
-                $("#spanLB").html(xml.Value.ES_QTES_GCQXJBXX.LB);
-                $("#spanPP").html(xml.Value.ES_QTES_GCQXJBXX.PP);
-                $("#spanXH").html(xml.Value.ES_QTES_GCQXJBXX.XH);
+                SetGQ(xml.Value.CL_ZXCDDCSLCJBXX.GQ);
+                $("#spanLB").html(xml.Value.CL_ZXCDDCSLCJBXX.LB);
+                $("#spanXJ").html(xml.Value.CL_ZXCDDCSLCJBXX.XJ);
+                $("#spanQY").html(xml.Value.CL_ZXCDDCSLCJBXX.JYQY);
+                $("#spanSQ").html(xml.Value.CL_ZXCDDCSLCJBXX.JYDD);
+
+                $("#spanDSPMCC").html(xml.Value.CL_ZXCDDCSLCJBXX.DSPMCC);
+                $("#spanDSPP").html(xml.Value.CL_ZXCDDCSLCJBXX.DSPP);
+                $("#spanXYJPP").html(xml.Value.CL_ZXCDDCSLCJBXX.XYJPP);
+                $("#spanKTPP").html(xml.Value.CL_ZXCDDCSLCJBXX.KTPP);
+                $("#spanKTBPDS").html(xml.Value.CL_ZXCDDCSLCJBXX.KTBPDS);
+                $("#spanKTGL").html(xml.Value.CL_ZXCDDCSLCJBXX.KTGL);
+                $("#spanBXPP").html(xml.Value.CL_ZXCDDCSLCJBXX.BXPP);
+                $("#spanBGPP").html(xml.Value.CL_ZXCDDCSLCJBXX.BGPP);
 
                 LoadPhotos(xml.Value.Photos);
-                PDLB(xml.Value.ES_QTES_GCQXJBXX.LB);
+                PDLB(xml.Value.CL_ZXCDDCSLCJBXX.LB);
+                $("#spanXL").html(xml.Value.CL_ZXCDDCSLCJBXX.XL);
                 return;
             }
         },
@@ -379,19 +411,19 @@ function FB() {
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
-    obj = jsonObj.AddJson(obj, "PP", "'" + $("#spanPP").html() + "'");
-    obj = jsonObj.AddJson(obj, "XH", "'" + $("#spanXH").html() + "'");
+    obj = jsonObj.AddJson(obj, "XL", "'" + $("#spanXL").html() + "'");
+    obj = jsonObj.AddJson(obj, "XJ", "'" + $("#spanXJ").html() + "'");
     obj = jsonObj.AddJson(obj, "JYQY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "JYDD", "'" + $("#spanSQ").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetGQ() + "'");
 
-    if (getUrlParam("ES_QTES_GCQXJBXXID") !== null)
-        obj = jsonObj.AddJson(obj, "ES_QTES_GCQXJBXXID", "'" + getUrlParam("ES_QTES_GCQXJBXXID") + "'");
+    if (getUrlParam("CL_ZXCDDCSLCJBXXID") !== null)
+        obj = jsonObj.AddJson(obj, "CL_ZXCDDCSLCJBXXID", "'" + getUrlParam("CL_ZXCDDCSLCJBXXID") + "'");
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/ES_QTES_GCQX/FB",
+        url: getRootPath() + "/Business/CL_ZXCDDCSLC/FB",
         dataType: "json",
         data:
         {

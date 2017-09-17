@@ -158,6 +158,11 @@
       <ref object="ES_QTES_GCQXBLL"/>
     </property>
   </object>
+  <object id="CL_ZXCDDCSLCController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.CL_ZXCDDCSLCController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="ES_QTES_GCQXBLL">
+      <ref object="ES_QTES_GCQXBLL"/>
+    </property>
+  </object>
   <object id="FBCGController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.FBCGController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
   </object>
   <object id="CommonController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.CommonController,TianWen.XiaoZhen1Qu.Web" singleton="false" >

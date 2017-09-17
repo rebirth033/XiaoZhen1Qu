@@ -108,6 +108,7 @@
     <Compile Include="Models\DISTRICT.cs" />
     <Compile Include="Models\DJJDJL.cs" />
     <Compile Include="Models\EncryptionHelper.cs" />
+    <Compile Include="Models\ES_CL_ZXCDDCSLCJBXX.cs" />
     <Compile Include="Models\ES_JDJJBG_BGSBJBXX.cs" />
     <Compile Include="Models\ES_JDJJBG_ESJDJBXX.cs" />
     <Compile Include="Models\ES_JDJJBG_ESJJJBXX.cs" />
