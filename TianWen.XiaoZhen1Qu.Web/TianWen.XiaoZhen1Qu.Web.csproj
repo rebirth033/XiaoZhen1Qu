@@ -160,6 +160,7 @@
     <Content Include="Areas\Business\Css\BZZX\BZZX_SY_ZDJS.css" />
     <Content Include="Areas\Business\Css\BZZX\BZZX_SY_ZHMM.css" />
     <Content Include="Areas\Business\Css\BZZX\BZZX_WZJY.css" />
+    <Content Include="Areas\Business\Css\CL\CL_MTC.css" />
     <Content Include="Areas\Business\Css\CL\CL_ZXCDDCSLC.css" />
     <Content Include="Areas\Business\Css\Common\Top.css" />
     <Content Include="Areas\Business\Css\Common\XZQ.css" />
@@ -359,6 +360,8 @@
     <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_SY_ZHMM.js" />
     <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_WZJY.js" />
     <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_WZJYZP.js" />
+    <Content Include="Areas\Business\Scripts\Business\CL\CL_MTC.js" />
+    <Content Include="Areas\Business\Scripts\Business\CL\CL_MTCYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\CL\CL_ZXCDDCSLC.js" />
     <Content Include="Areas\Business\Scripts\Business\CL\CL_ZXCDDCSLCYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\Common.js" />
@@ -728,9 +731,11 @@
     <Content Include="Areas\Business\Scripts\UEditor\ueditor.js" />
     <Content Include="Areas\Business\Scripts\UEditor\ueditor.parse.min.js" />
     <Content Include="Areas\Business\Scripts\underscore.min.js" />
-    <Content Include="Config\SpringConfig\BLL.xml" />
-    <Content Include="Config\SpringConfig\Controllers.xml" />
+    <Content Include="Config\SpringConfig\BLLGY.xml" />
+    <Content Include="Config\SpringConfig\ControllersCL.xml" />
+    <Content Include="Config\SpringConfig\ControllersGY.xml" />
     <Content Include="Config\SpringConfig\DAO.xml" />
+    <Content Include="Config\SpringConfig\BLLES.xml" />
     <Content Include="Global.asax" />
     <Content Include="hibernate.cfg.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -761,6 +766,7 @@
     <Compile Include="Areas\Business\Common\QRCodeHelper.cs" />
     <Compile Include="Areas\Business\Controllers\BZZX\BZZXController.cs" />
     <Compile Include="Areas\Business\Controllers\BZZX\WZYJController.cs" />
+    <Compile Include="Areas\Business\Controllers\CL\CL_MTCController.cs" />
     <Compile Include="Areas\Business\Controllers\CL\CL_ZXCDDCSLCController.cs" />
     <Compile Include="Areas\Business\Controllers\CommonController.cs" />
     <Compile Include="Areas\Business\Controllers\ES\ES_JDJJBG_BGSBController.cs" />
@@ -811,6 +817,9 @@
     <Compile Include="Areas\Business\Scripts\UEditor\net\App_Code\NotSupportedHandler.cs" />
     <Compile Include="Areas\Business\Scripts\UEditor\net\App_Code\PathFormater.cs" />
     <Compile Include="Areas\Business\Scripts\UEditor\net\App_Code\UploadHandler.cs" />
+    <Content Include="Config\SpringConfig\ControllersES.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -918,6 +927,10 @@
     <Content Include="Areas\Business\Views\ES_QTES_CRYP\ES_QTES_CRYP.cshtml" />
     <Content Include="Areas\Business\Views\ES_QTES_GCQX\ES_QTES_GCQX.cshtml" />
     <Content Include="Areas\Business\Views\CL_ZXCDDCSLC\CL_ZXCDDCSLC.cshtml" />
+    <Content Include="Areas\Business\Views\CL_MTC\CL_MTC.cshtml" />
+    <Content Include="Config\SpringConfig\BLLCL.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
