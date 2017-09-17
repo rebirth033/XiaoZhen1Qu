@@ -1,6 +1,8 @@
 ﻿$(document).ready(function () {
     $("#JG").bind("blur", ValidateJG);
     $("#JG").bind("focus", InfoJG);
+    $("#SYNX").bind("blur", ValidateSYNX);
+    $("#SYNX").bind("focus", InfoSYNX);
     $("#BT").bind("blur", ValidateBT);
     $("#BT").bind("focus", InfoBT);
     $("#LXR").bind("blur", ValidateLXR);
@@ -8,7 +10,6 @@
     $("#LXDH").bind("blur", ValidateLXDH);
     $("#LXDH").bind("focus", InfoLXDH);
 });
-
 //验证售价
 function ValidateJG() {
     if ($("#JG").val() === "" || $("#JG").val() === null) {
@@ -31,6 +32,28 @@ function ValidateJG() {
         }
     }
 }
+//验证使用年限
+function ValidateSYNX() {
+    if ($("#SYNX").val() === "" || $("#SYNX").val() === null) {
+        $("#divSYNXTip").css("display", "block");
+        $("#divSYNXTip").attr("class", "Warn");
+        $("#divSYNXTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写使用年限啦');
+        $("#spanSYNX").css("border-color", "#fd634f");
+        return false;
+    } else {
+        if (ValidateNumber($("#SYNX").val())) {
+            $("#divSYNXTip").css("display", "none");
+            $("#spanSYNX").css("border-color", "#cccccc");
+            return true;
+        } else {
+            $("#divSYNXTip").css("display", "block");
+            $("#divSYNXTip").attr("class", "Warn");
+            $("#divSYNXTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />使用年限请填写整数');
+            $("#spanSYNX").css("border-color", "#fd634f");
+            return false;
+        }
+    }
+} 
 //验证标题
 function ValidateBT() {
     if ($("#BT").val() === "" || $("#BT").val() === null) {
@@ -114,6 +137,12 @@ function InfoJG() {
     $("#divJGTip").css("display", "inline-block");
     $("#divJGTip").attr("class", "Info");
     $("#divJGTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数，面议则填0');
+}
+//提示使用年限
+function InfoSYNX() {
+    $("#divSYNXTip").css("display", "inline-block");
+    $("#divSYNXTip").attr("class", "Info");
+    $("#divSYNXTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数');
 }
 //提示标题
 function InfoBT() {

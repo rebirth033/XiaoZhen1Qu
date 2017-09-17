@@ -105,7 +105,7 @@ function SJZRSelect() {
 function LoadZXCDDCSLCLB() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODCL",
+        url: getRootPath() + "/Business/Common/LoadCODES_CL",
         dataType: "json",
         data:
         {
@@ -131,7 +131,7 @@ function LoadZXCDDCSLCLB() {
 function LoadZXCDDCSLCXL(type) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODCL",
+        url: getRootPath() + "/Business/Common/LoadCODES_CL",
         dataType: "json",
         data:
         {
@@ -157,7 +157,7 @@ function LoadZXCDDCSLCXL(type) {
 function LoadXXCS(id, type) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODCL",
+        url: getRootPath() + "/Business/Common/LoadCODES_CL",
         dataType: "json",
         data:
         {
@@ -299,21 +299,27 @@ function SelectLB(obj, type) {
 }
 //判断类别
 function PDLB(LB) {
-    if (LB === "床") {
-        $("#divCXXCS").css("display", "");
-        $("#divCDXXCS").css("display", "none");
-        LoadXXCS("CCC", "床尺寸");
-        BindHover("CCC");
+    if (LB === "自行车") {
+        $("#divZXCXXCS").css("display", "");
+        $("#divDDCXXCS").css("display", "none");
+        LoadXXCS("ZXCPP", "自行车品牌");
+        BindHover("ZXCPP");
+        LoadXXCS("CC", "自行车尺寸");
+        BindHover("CC");
     }
-    else if (LB === "床垫") {
-        $("#divCXXCS").css("display", "none");
-        $("#divCDXXCS").css("display", "");
-        LoadXXCS("CDCC", "床尺寸");
-        BindHover("CDCC");
+    else if (LB === "电动车") {
+        $("#divZXCXXCS").css("display", "none");
+        $("#divDDCXXCS").css("display", "");
+        LoadXXCS("DDCPP", "电动车品牌");
+        BindHover("DDCPP");
+        LoadXXCS("DCDY", "电池电压");
+        BindHover("DCDY");
+        LoadXXCS("DCRL", "电池容量");
+        BindHover("DCRL");
     }
     else {
-        $("#divCXXCS").css("display", "none");
-        $("#divCDXXCS").css("display", "none");
+        $("#divZXCXXCS").css("display", "none");
+        $("#divDDCXXCS").css("display", "none");
     }
     LoadZXCDDCSLCXL(LB);
     BindHover("XL");
@@ -375,15 +381,11 @@ function LoadCL_ZXCDDCSLCJBXX() {
                 $("#spanXJ").html(xml.Value.CL_ZXCDDCSLCJBXX.XJ);
                 $("#spanQY").html(xml.Value.CL_ZXCDDCSLCJBXX.JYQY);
                 $("#spanSQ").html(xml.Value.CL_ZXCDDCSLCJBXX.JYDD);
-
-                $("#spanDSPMCC").html(xml.Value.CL_ZXCDDCSLCJBXX.DSPMCC);
-                $("#spanDSPP").html(xml.Value.CL_ZXCDDCSLCJBXX.DSPP);
-                $("#spanXYJPP").html(xml.Value.CL_ZXCDDCSLCJBXX.XYJPP);
-                $("#spanKTPP").html(xml.Value.CL_ZXCDDCSLCJBXX.KTPP);
-                $("#spanKTBPDS").html(xml.Value.CL_ZXCDDCSLCJBXX.KTBPDS);
-                $("#spanKTGL").html(xml.Value.CL_ZXCDDCSLCJBXX.KTGL);
-                $("#spanBXPP").html(xml.Value.CL_ZXCDDCSLCJBXX.BXPP);
-                $("#spanBGPP").html(xml.Value.CL_ZXCDDCSLCJBXX.BGPP);
+                $("#spanDDCPP").html(xml.Value.CL_ZXCDDCSLCJBXX.DDCPP);
+                $("#spanZXCPP").html(xml.Value.CL_ZXCDDCSLCJBXX.ZXCPP);
+                $("#spanCC").html(xml.Value.CL_ZXCDDCSLCJBXX.CC);
+                $("#spanDCDY").html(xml.Value.CL_ZXCDDCSLCJBXX.DCDY);
+                $("#spanDCRL").html(xml.Value.CL_ZXCDDCSLCJBXX.DCRL);
 
                 LoadPhotos(xml.Value.Photos);
                 PDLB(xml.Value.CL_ZXCDDCSLCJBXX.LB);
@@ -413,6 +415,11 @@ function FB() {
     obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
     obj = jsonObj.AddJson(obj, "XL", "'" + $("#spanXL").html() + "'");
     obj = jsonObj.AddJson(obj, "XJ", "'" + $("#spanXJ").html() + "'");
+    obj = jsonObj.AddJson(obj, "DDCPP", "'" + $("#spanDDCPP").html() + "'");
+    obj = jsonObj.AddJson(obj, "ZXCPP", "'" + $("#spanZXCPP").html() + "'");
+    obj = jsonObj.AddJson(obj, "CC", "'" + $("#spanCC").html() + "'");
+    obj = jsonObj.AddJson(obj, "DCDY", "'" + $("#spanDCDY").html() + "'");
+    obj = jsonObj.AddJson(obj, "DCRL", "'" + $("#spanDCRL").html() + "'");
     obj = jsonObj.AddJson(obj, "JYQY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "JYDD", "'" + $("#spanSQ").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");

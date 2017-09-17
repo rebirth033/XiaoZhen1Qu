@@ -53,6 +53,8 @@
   <ItemGroup>
     <Compile Include="Common\Common.cs" />
     <Compile Include="Enum\XXLB.cs" />
+    <Compile Include="Maps\CL_ZXCDDCSLCJBXX_Map.cs" />
+    <Compile Include="Maps\CODES_CL_Map.cs" />
     <Compile Include="Maps\CODES_COMPUTER_Map.cs" />
     <Compile Include="Maps\CODES_JDJJBG_Map.cs" />
     <Compile Include="Maps\CODES_Map.cs" />
@@ -99,6 +101,7 @@
     <Compile Include="Maps\YXJBXX_Map.cs" />
     <Compile Include="Maps\ZDDLXX_Map.cs" />
     <Compile Include="Models\CODES.cs" />
+    <Compile Include="Models\CODES_CL.cs" />
     <Compile Include="Models\CODES_COMPUTER.cs" />
     <Compile Include="Models\CODES_JDJJBG.cs" />
     <Compile Include="Models\CODES_MYFZMR.cs" />
@@ -108,7 +111,7 @@
     <Compile Include="Models\DISTRICT.cs" />
     <Compile Include="Models\DJJDJL.cs" />
     <Compile Include="Models\EncryptionHelper.cs" />
-    <Compile Include="Models\ES_CL_ZXCDDCSLCJBXX.cs" />
+    <Compile Include="Models\CL_ZXCDDCSLCJBXX.cs" />
     <Compile Include="Models\ES_JDJJBG_BGSBJBXX.cs" />
     <Compile Include="Models\ES_JDJJBG_ESJDJBXX.cs" />
     <Compile Include="Models\ES_JDJJBG_ESJJJBXX.cs" />

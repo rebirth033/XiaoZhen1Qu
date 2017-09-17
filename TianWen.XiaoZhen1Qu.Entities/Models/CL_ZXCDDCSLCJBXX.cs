@@ -41,6 +41,42 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string XL { get; set; }
 
         /// <summary>
+        /// 电动车品牌
+        /// </summary>
+        [Property]
+        public virtual string DDCPP { get; set; }
+
+        /// <summary>
+        /// 自行车品牌
+        /// </summary>
+        [Property]
+        public virtual string ZXCPP { get; set; }
+
+        /// <summary>
+        /// 尺寸
+        /// </summary>
+        [Property]
+        public virtual string CC { get; set; }
+
+        /// <summary>
+        /// 电池电压
+        /// </summary>
+        [Property]
+        public virtual string DCDY { get; set; }
+
+        /// <summary>
+        /// 电池容量
+        /// </summary>
+        [Property]
+        public virtual string DCRL { get; set; }
+
+        /// <summary>
+        /// 使用年限
+        /// </summary>
+        [Property]
+        public virtual string SYNX { get; set; }
+
+        /// <summary>
         /// 新旧
         /// </summary>
         [Property]
