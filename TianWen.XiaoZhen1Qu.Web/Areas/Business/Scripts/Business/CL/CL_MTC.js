@@ -8,6 +8,8 @@ $(document).ready(function () {
     $("#spanCXLB").bind("click", CXLB);
     $("#imgGRZR").bind("click", GRZRSelect);
     $("#imgSJZR").bind("click", SJZRSelect);
+    $("#imgXCWXS").bind("click", XCWXSSelect);
+    $("#imgYXS").bind("click", YXSSelect);
     $("#divUploadOut").bind("mouseover", GetUploadCss);
     $("#divUploadOut").bind("mouseleave", LeaveUploadCss);
     $("#btnFB").bind("click", FB);
@@ -23,17 +25,16 @@ $(document).ready(function () {
 
     LoadTXXX();
     LoadMTCLB();
-    LoadXJ();
+    LoadGCSJ();
     LoadMTCPP();
     LoadQY();
     LoadDefault();
     LoadCL_MTCJBXX();
     BindHover("LB");
-    BindHover("XJ");
+    BindHover("GCSJ");
     BindHover("PP");
     BindHover("QY");
     BindHover("SQ");
-
 });
 //显示用户菜单
 function ShowYHCD() {
@@ -65,6 +66,8 @@ function LoadDefault() {
     });
     $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
     $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+    $("#imgXCWXS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+    $("#imgYXS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
 }
 //加载图形信息
 function LoadTXXX() {
@@ -102,6 +105,20 @@ function GRZRSelect() {
 function SJZRSelect() {
     $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
     $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+}
+//新车未行使
+function XCWXSSelect() {
+    $("#imgXCWXS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+    $("#imgYXS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+    $("#divMTCGCSJ").css("display", "none");
+    $("#divGLS").css("display", "none");
+}
+//已行使
+function YXSSelect() {
+    $("#imgXCWXS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+    $("#imgYXS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+    $("#divMTCGCSJ").css("display", "");
+    $("#divGLS").css("display", "");
 }
 //加载摩托车类别
 function LoadMTCLB() {
@@ -207,25 +224,25 @@ function LoadXXCS(id, type) {
         }
     });
 }
-//加载摩托车新旧
-function LoadXJ() {
+//加载摩托车购车时间
+function LoadGCSJ() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES",
+        url: getRootPath() + "/Business/Common/LoadCODES_CL",
         dataType: "json",
         data:
         {
-            TYPENAME: "新旧程度"
+            TYPENAME: "购车时间"
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"XJ\")'>" + xml.list[i].CODENAME + "</li>";
+                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"GCSJ\")'>" + xml.list[i].CODENAME + "</li>";
                 }
                 html += "</ul>";
-                $("#divXJ").html(html);
-                $("#divXJ").css("display", "none");
+                $("#divGCSJ").html(html);
+                $("#divGCSJ").css("display", "none");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -346,7 +363,6 @@ function PDLB(LB) {
     LoadMTCXL(LB);
     BindHover("XL");
 }
-
 //选择区域下拉框
 function SelectQY(obj, type, code) {
     $("#span" + type).html(obj.innerHTML);
@@ -377,6 +393,28 @@ function SetGQ(gq) {
         $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
     }
 }
+//获取行驶里程
+function GetXSLC() {
+    if ($("#imgXCWXS").attr("src").indexOf("blue") !== -1)
+        return "0";
+    else
+        return "1";
+}
+//设置行驶里程
+function SetXSLC(xslc) {
+    if (xslc === 0) {
+        $("#imgXCWXS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+        $("#imgYXS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+        $("#divMTCGCSJ").css("display", "none");
+        $("#divGLS").css("display", "none");
+    }
+    else {
+        $("#imgXCWXS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+        $("#imgYXS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+        $("#divMTCGCSJ").css("display", "");
+        $("#divGLS").css("display", "");
+    }
+}
 //加载车辆_摩托车基本信息
 function LoadCL_MTCJBXX() {
     $.ajax({
@@ -399,8 +437,10 @@ function LoadCL_MTCJBXX() {
                     ue.setContent(xml.Value.CL_MTCJBXX.BCMS);
                 });
                 SetGQ(xml.Value.CL_MTCJBXX.GQ);
+                SetXSLC(xml.Value.CL_MTCJBXX.XSLC);
                 $("#spanLB").html(xml.Value.CL_MTCJBXX.LB);
-                $("#spanXJ").html(xml.Value.CL_MTCJBXX.XJ);
+                $("#spanPP").html(xml.Value.CL_MTCJBXX.PP);
+                $("#spanGCSJ").html(xml.Value.CL_MTCJBXX.GCSJ);
                 $("#spanQY").html(xml.Value.CL_MTCJBXX.JYQY);
                 $("#spanSQ").html(xml.Value.CL_MTCJBXX.JYDD);
 
@@ -430,21 +470,13 @@ function FB() {
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
-    obj = jsonObj.AddJson(obj, "XL", "'" + $("#spanXL").html() + "'");
-    obj = jsonObj.AddJson(obj, "XJ", "'" + $("#spanXJ").html() + "'");
+    obj = jsonObj.AddJson(obj, "PP", "'" + $("#spanPP").html() + "'");
+    obj = jsonObj.AddJson(obj, "GCSJ", "'" + $("#spanGCSJ").html() + "'");
     obj = jsonObj.AddJson(obj, "JYQY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "JYDD", "'" + $("#spanSQ").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetGQ() + "'");
-
-    obj = jsonObj.AddJson(obj, "DSPMCC", "'" + $("#spanDSPMCC").html() + "'");
-    obj = jsonObj.AddJson(obj, "DSPP", "'" + $("#spanDSPP").html() + "'");
-    obj = jsonObj.AddJson(obj, "XYJPP", "'" + $("#spanXYJPP").html() + "'");
-    obj = jsonObj.AddJson(obj, "KTPP", "'" + $("#spanKTPP").html() + "'");
-    obj = jsonObj.AddJson(obj, "KTBPDS", "'" + $("#spanKTBPDS").html() + "'");
-    obj = jsonObj.AddJson(obj, "KTGL", "'" + $("#spanKTGL").html() + "'");
-    obj = jsonObj.AddJson(obj, "BXPP", "'" + $("#spanBXPP").html() + "'");
-    obj = jsonObj.AddJson(obj, "BGPP", "'" + $("#spanBGPP").html() + "'");
+    obj = jsonObj.AddJson(obj, "XSLC", "'" + GetXSLC() + "'");
 
     if (getUrlParam("CL_MTCJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "CL_MTCJBXXID", "'" + getUrlParam("CL_MTCJBXXID") + "'");

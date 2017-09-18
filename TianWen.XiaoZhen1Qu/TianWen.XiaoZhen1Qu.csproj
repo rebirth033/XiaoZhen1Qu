@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="BLL\BaseBLL.cs" />
     <Compile Include="BLL\BZZXBLL.cs" />
+    <Compile Include="BLL\CL_HCBLL.cs" />
     <Compile Include="BLL\CL_MTCBLL.cs" />
     <Compile Include="BLL\CommonBLL.cs" />
     <Compile Include="BLL\CL_ZXCDDCSLCBLL.cs" />

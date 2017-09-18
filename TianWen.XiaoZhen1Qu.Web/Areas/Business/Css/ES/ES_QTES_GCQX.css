@@ -505,20 +505,6 @@
     border-bottom-left-radius: 4px;
 }
 
-.input_content {
-    width: 451px;
-    cursor: default;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    height: 34px;
-    padding: 4px 12px;
-    display: inline-block;
-}
-
-:-ms-input-placeholder.input_content {
-    color: #999;
-}
-
 .div_xzk {
     margin-top: -7px;
     margin-left: -1px;
@@ -601,4 +587,18 @@
 .span_yxmc:hover {
     color: #ff6100;
     font-weight: 700;
+}
+
+.input_content {
+    width: 451px;
+    cursor: default;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 34px;
+    padding: 4px 12px;
+    display: inline-block;
+}
+
+:-ms-input-placeholder.input_content {
+    color: #999;
 }

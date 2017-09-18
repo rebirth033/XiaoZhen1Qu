@@ -22,6 +22,8 @@ namespace TianWen.XiaoZhen1Qu.Interface
 
         object LoadGCQXJBXX(string GCQX);
 
+        object LoadHCJBXX(string HC);
+
         object LoadGCQXXH(string PPID); 
 
         object LoadQYBySuperName(string SUPERNAME);

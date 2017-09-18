@@ -1,0 +1,54 @@
+-- Create table
+create table CL_MTCJBXX
+(
+  cl_mtcjbxxid VARCHAR2(50) not null,
+  jcxxid       VARCHAR2(50),
+  gq           NUMBER(1),
+  bcms         VARCHAR2(4000),
+  jyqy         VARCHAR2(20),
+  jydd         VARCHAR2(20),
+  lb           VARCHAR2(20),
+  jg           VARCHAR2(20),
+  pp           VARCHAR2(20),
+  xslc         NUMBER(1),
+  gls          VARCHAR2(20),
+  gcsj         VARCHAR2(20)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 16
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table CL_MTCJBXX
+  is '车辆_摩托车';
+-- Add comments to the columns 
+comment on column CL_MTCJBXX.cl_mtcjbxxid
+  is '摩托车基本信息ID';
+comment on column CL_MTCJBXX.jcxxid
+  is '基础信息ID';
+comment on column CL_MTCJBXX.gq
+  is '供求';
+comment on column CL_MTCJBXX.bcms
+  is '补充描述';
+comment on column CL_MTCJBXX.jyqy
+  is '交易区域';
+comment on column CL_MTCJBXX.jydd
+  is '交易地段';
+comment on column CL_MTCJBXX.lb
+  is '类别';
+comment on column CL_MTCJBXX.jg
+  is '价格';
+comment on column CL_MTCJBXX.pp
+  is '品牌';
+comment on column CL_MTCJBXX.xslc
+  is '行使里程';
+comment on column CL_MTCJBXX.gls
+  is '公里数';
+comment on column CL_MTCJBXX.gcsj
+  is '购车时间';
