@@ -35,52 +35,28 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string LB { get; set; }
 
         /// <summary>
-        /// 小类
+        /// 品牌
         /// </summary>
         [Property]
-        public virtual string XL { get; set; }
+        public virtual string PP { get; set; }
 
         /// <summary>
-        /// 电动车品牌
+        /// 行驶里程
         /// </summary>
         [Property]
-        public virtual string DDCPP { get; set; }
+        public virtual int XSLC { get; set; }
 
         /// <summary>
-        /// 自行车品牌
+        /// 公里数
         /// </summary>
         [Property]
-        public virtual string ZXCPP { get; set; }
+        public virtual string GLS { get; set; }
 
         /// <summary>
-        /// 尺寸
+        /// 购车时间
         /// </summary>
         [Property]
-        public virtual string CC { get; set; }
-
-        /// <summary>
-        /// 电池电压
-        /// </summary>
-        [Property]
-        public virtual string DCDY { get; set; }
-
-        /// <summary>
-        /// 电池容量
-        /// </summary>
-        [Property]
-        public virtual string DCRL { get; set; }
-
-        /// <summary>
-        /// 使用年限
-        /// </summary>
-        [Property]
-        public virtual string SYNX { get; set; }
-
-        /// <summary>
-        /// 新旧
-        /// </summary>
-        [Property]
-        public virtual string XJ { get; set; }
+        public virtual string GCSJ { get; set; }
 
         /// <summary>
         /// 价格

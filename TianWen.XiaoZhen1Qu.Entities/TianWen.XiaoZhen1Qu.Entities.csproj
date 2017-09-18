@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="Common\Common.cs" />
     <Compile Include="Enum\XXLB.cs" />
+    <Compile Include="Maps\CL_MTCJBXX_Map.cs" />
     <Compile Include="Maps\CL_ZXCDDCSLCJBXX_Map.cs" />
     <Compile Include="Maps\CODES_CL_Map.cs" />
     <Compile Include="Maps\CODES_COMPUTER_Map.cs" />
