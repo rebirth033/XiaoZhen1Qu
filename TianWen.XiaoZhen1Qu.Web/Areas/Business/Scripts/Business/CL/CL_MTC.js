@@ -8,6 +8,8 @@ $(document).ready(function () {
     $("#spanCXLB").bind("click", CXLB);
     $("#imgGRZR").bind("click", GRZRSelect);
     $("#imgSJZR").bind("click", SJZRSelect);
+    $("#imgXCWXS").bind("click", XCWXSSelect);
+    $("#imgYXS").bind("click", YXSSelect);
     $("#divUploadOut").bind("mouseover", GetUploadCss);
     $("#divUploadOut").bind("mouseleave", LeaveUploadCss);
     $("#btnFB").bind("click", FB);
@@ -65,6 +67,8 @@ function LoadDefault() {
     });
     $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
     $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+    $("#imgXCWXS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+    $("#imgYXS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
 }
 //加载图形信息
 function LoadTXXX() {
@@ -102,6 +106,20 @@ function GRZRSelect() {
 function SJZRSelect() {
     $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
     $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+}
+//新车未行使
+function XCWXSSelect() {
+    $("#imgXCWXS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+    $("#imgYXS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+    $("#divMTCGCSJ").css("display", "none");
+    $("#divGLS").css("display", "none");
+}
+//已行使
+function YXSSelect() {
+    $("#imgXCWXS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+    $("#imgYXS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+    $("#divMTCGCSJ").css("display", "");
+    $("#divGLS").css("display", "");
 }
 //加载摩托车类别
 function LoadMTCLB() {
