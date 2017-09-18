@@ -160,6 +160,7 @@
     <Content Include="Areas\Business\Css\BZZX\BZZX_SY_ZDJS.css" />
     <Content Include="Areas\Business\Css\BZZX\BZZX_SY_ZHMM.css" />
     <Content Include="Areas\Business\Css\BZZX\BZZX_WZJY.css" />
+    <Content Include="Areas\Business\Css\CL\CL_HC.css" />
     <Content Include="Areas\Business\Css\CL\CL_MTC.css" />
     <Content Include="Areas\Business\Css\CL\CL_ZXCDDCSLC.css" />
     <Content Include="Areas\Business\Css\Common\Top.css" />
@@ -360,6 +361,8 @@
     <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_SY_ZHMM.js" />
     <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_WZJY.js" />
     <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_WZJYZP.js" />
+    <Content Include="Areas\Business\Scripts\Business\CL\CL_HC.js" />
+    <Content Include="Areas\Business\Scripts\Business\CL\CL_HCYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\CL\CL_MTC.js" />
     <Content Include="Areas\Business\Scripts\Business\CL\CL_MTCYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\CL\CL_ZXCDDCSLC.js" />
@@ -766,6 +769,7 @@
     <Compile Include="Areas\Business\Common\QRCodeHelper.cs" />
     <Compile Include="Areas\Business\Controllers\BZZX\BZZXController.cs" />
     <Compile Include="Areas\Business\Controllers\BZZX\WZYJController.cs" />
+    <Compile Include="Areas\Business\Controllers\CL\CL_HCController.cs" />
     <Compile Include="Areas\Business\Controllers\CL\CL_MTCController.cs" />
     <Compile Include="Areas\Business\Controllers\CL\CL_ZXCDDCSLCController.cs" />
     <Compile Include="Areas\Business\Controllers\CommonController.cs" />
@@ -931,6 +935,7 @@
     <Content Include="Config\SpringConfig\BLLCL.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Areas\Business\Views\CL_HC\CL_HC.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

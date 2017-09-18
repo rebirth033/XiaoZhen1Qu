@@ -7,7 +7,7 @@
 .div_head {
     margin-top: 20px;
     z-index: 1001;
-    position: relative;
+    position:relative;
 }
 
 .divFWCZ {
@@ -85,9 +85,9 @@
     display: inline-block;
     width: 150px;
     height: 34px;
-    border: 1px solid #cccccc;
-    border-radius: 4px;
-    z-index: 997;
+    border: 1px solid #cccccc; 
+    border-radius: 4px; 
+    z-index: 997; 
     position: relative;
 }
 
@@ -504,6 +504,7 @@
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
 }
+
 
 .div_xzk {
     margin-top: -7px;

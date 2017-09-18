@@ -10,4 +10,9 @@
       <ref object="CL_MTCBLL"/>
     </property>
   </object>
+  <object id="CL_HCController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.CL_HCController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="CL_HCBLL">
+      <ref object="CL_HCBLL"/>
+    </property>
+  </object>
 </objects>
