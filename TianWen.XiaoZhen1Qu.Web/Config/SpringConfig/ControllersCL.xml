@@ -15,4 +15,9 @@
       <ref object="CL_HCBLL"/>
     </property>
   </object>
+  <object id="CL_GCCController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.CL_GCCController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="CL_GCCBLL">
+      <ref object="CL_GCCBLL"/>
+    </property>
+  </object>
 </objects>

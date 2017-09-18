@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="Common\Common.cs" />
     <Compile Include="Enum\XXLB.cs" />
+    <Compile Include="Maps\CL_GCCJBXX_Map.cs" />
     <Compile Include="Maps\CL_HCJBXX_Map.cs" />
     <Compile Include="Maps\CL_MTCJBXX_Map.cs" />
     <Compile Include="Maps\CL_ZXCDDCSLCJBXX_Map.cs" />
@@ -102,6 +103,7 @@
     <Compile Include="Maps\YHZHXX_Map.cs" />
     <Compile Include="Maps\YXJBXX_Map.cs" />
     <Compile Include="Maps\ZDDLXX_Map.cs" />
+    <Compile Include="Models\CL_GCCJBXX.cs" />
     <Compile Include="Models\CL_HCJBXX.cs" />
     <Compile Include="Models\CL_MTCJBXX.cs" />
     <Compile Include="Models\CODES.cs" />

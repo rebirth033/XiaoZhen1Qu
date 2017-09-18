@@ -1,0 +1,58 @@
+-- Create table
+create table CL_HCJBXX
+(
+  cl_hcjbxxid VARCHAR2(50) not null,
+  jcxxid      VARCHAR2(50),
+  gq          NUMBER(1),
+  bcms        VARCHAR2(4000),
+  jyqy        VARCHAR2(20),
+  jydd        VARCHAR2(20),
+  lb          VARCHAR2(20),
+  jg          VARCHAR2(20),
+  pp          VARCHAR2(20),
+  xslc        VARCHAR2(20),
+  ccyf        VARCHAR2(20),
+  edzz        VARCHAR2(20),
+  ccnx        VARCHAR2(20)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 16K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table CL_HCJBXX
+  is '车辆_货车';
+-- Add comments to the columns 
+comment on column CL_HCJBXX.cl_hcjbxxid
+  is '货车基本信息ID';
+comment on column CL_HCJBXX.jcxxid
+  is '基础信息ID';
+comment on column CL_HCJBXX.gq
+  is '供求';
+comment on column CL_HCJBXX.bcms
+  is '补充描述';
+comment on column CL_HCJBXX.jyqy
+  is '交易区域';
+comment on column CL_HCJBXX.jydd
+  is '交易地段';
+comment on column CL_HCJBXX.lb
+  is '类别';
+comment on column CL_HCJBXX.jg
+  is '价格';
+comment on column CL_HCJBXX.pp
+  is '品牌';
+comment on column CL_HCJBXX.xslc
+  is '行驶里程';
+comment on column CL_HCJBXX.ccyf
+  is '出厂月份';
+comment on column CL_HCJBXX.edzz
+  is '额定载重';
+comment on column CL_HCJBXX.ccnx
+  is '出厂年限';

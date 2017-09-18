@@ -449,315 +449,663 @@ insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID
 values (149, '货车', '封闭货车', '5', 5, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (150, '货车品牌', '北奔重卡', '1', 1, 2);
+values (150, '货车品牌', '北奔重卡', 'RM', 1, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (151, '货车品牌', '奔驰', '1', 1, 2);
+values (151, '货车品牌', '奔驰', 'RM', 2, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (152, '货车品牌', '长安跨越', '1', 1, 2);
+values (152, '货车品牌', '长安跨越', 'RM', 3, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (153, '货车品牌', '东风多利卡', '1', 1, 2);
+values (153, '货车品牌', '东风多利卡', 'RM', 4, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (154, '货车品牌', '东风商用车', '1', 1, 2);
+values (154, '货车品牌', '东风商用车', 'RM', 5, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (155, '货车品牌', '福田欧曼', '1', 1, 2);
+values (155, '货车品牌', '福田欧曼', 'RM', 6, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (156, '货车品牌', '福田欧马可', '1', 1, 2);
+values (156, '货车品牌', '福田欧马可', 'RM', 7, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (157, '货车品牌', '福田奥铃', '1', 1, 2);
+values (157, '货车品牌', '福田奥铃', 'RM', 8, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (158, '货车品牌', '江淮格尔发', '1', 1, 2);
+values (158, '货车品牌', '江淮格尔发', 'RM', 9, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (159, '货车品牌', '南骏汽车', '1', 1, 2);
+values (159, '货车品牌', '南骏汽车', 'RM', 10, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (160, '货车品牌', '庆铃', '1', 1, 2);
+values (160, '货车品牌', '庆铃', 'RM', 11, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (161, '货车品牌', '陕汽重卡', '1', 1, 2);
+values (161, '货车品牌', '陕汽重卡', 'RM', 12, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (162, '货车品牌', '一汽解放', '1', 1, 2);
+values (162, '货车品牌', '一汽解放', 'RM', 13, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (163, '货车品牌', '重汽汕德卡', '1', 1, 2);
+values (163, '货车品牌', '重汽汕德卡', 'RM', 14, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (164, '货车品牌', '奥驰汽车', '1', 1, 2);
+values (164, '货车品牌', '奥驰汽车', 'A', 15, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (165, '货车品牌', '比亚迪', '1', 1, 2);
+values (165, '货车品牌', '比亚迪', 'B', 16, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (166, '货车品牌', '北京牌', '1', 1, 2);
+values (166, '货车品牌', '北京牌', 'B', 17, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (167, '货车品牌', '奔驰', '1', 1, 2);
+values (167, '货车品牌', '奔驰', 'B', 18, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (168, '货车品牌', '铂骏', '1', 1, 2);
+values (168, '货车品牌', '铂骏', 'B', 19, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (169, '货车品牌', '北奔重卡', '1', 1, 2);
+values (169, '货车品牌', '北奔重卡', 'B', 20, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (170, '货车品牌', '昌河', '1', 1, 2);
+values (170, '货车品牌', '昌河', 'C', 21, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (171, '货车品牌', '长征汽车', '1', 1, 2);
+values (171, '货车品牌', '长征汽车', 'C', 22, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (172, '货车品牌', '川交汽车', '1', 1, 2);
+values (172, '货车品牌', '川交汽车', 'C', 23, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (173, '货车品牌', '长安星卡', '1', 1, 2);
+values (173, '货车品牌', '长安星卡', 'C', 24, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (174, '货车品牌', '长安商用车', '1', 1, 2);
+values (174, '货车品牌', '长安商用车', 'C', 25, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (175, '货车品牌', '长安跨越', '1', 1, 2);
+values (175, '货车品牌', '长安跨越', 'C', 26, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (176, '货车品牌', '东风创普', '1', 1, 2);
+values (176, '货车品牌', '东风创普', 'D', 27, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (177, '货车品牌', '东风股份', '1', 1, 2);
+values (177, '货车品牌', '东风股份', 'D', 28, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (178, '货车品牌', '大运轻卡', '1', 1, 2);
+values (178, '货车品牌', '大运轻卡', 'D', 29, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (179, '货车品牌', '东风电动轻卡', '1', 1, 2);
+values (179, '货车品牌', '东风电动轻卡', 'D', 30, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (180, '货车品牌', '东风特商', '1', 1, 2);
+values (180, '货车品牌', '东风特商', 'D', 31, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (181, '货车品牌', '东风南充', '1', 1, 2);
+values (181, '货车品牌', '东风南充', 'D', 32, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (182, '货车品牌', '东风凯普特', '1', 1, 2);
+values (182, '货车品牌', '东风凯普特', 'D', 33, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (183, '货车品牌', '达夫/DAF', '1', 1, 2);
+values (183, '货车品牌', '达夫/DAF', 'D', 34, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (184, '货车品牌', '东风商用车', '1', 1, 2);
+values (184, '货车品牌', '东风商用车', 'D', 35, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (185, '货车品牌', '东风柳汽', '1', 1, 2);
+values (185, '货车品牌', '东风柳汽', 'D', 36, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (186, '货车品牌', '东风捍蓝', '1', 1, 2);
+values (186, '货车品牌', '东风捍蓝', 'D', 37, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (187, '货车品牌', '大运重卡', '1', 1, 2);
+values (187, '货车品牌', '大运重卡', 'D', 38, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (188, '货车品牌', '东风福瑞卡(全新)', '1', 1, 2);
+values (188, '货车品牌', '东风福瑞卡(全新)', 'D', 39, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (189, '货车品牌', '东风多利卡', '1', 1, 2);
+values (189, '货车品牌', '东风多利卡', 'D', 40, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (190, '货车品牌', '缔途汽车', '1', 1, 2);
+values (190, '货车品牌', '缔途汽车', 'D', 41, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (191, '货车品牌', '东风小霸王', '1', 1, 2);
+values (191, '货车品牌', '东风小霸王', 'D', 42, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (192, '货车品牌', '东风专底', '1', 1, 2);
+values (192, '货车品牌', '东风专底', 'D', 43, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (193, '货车品牌', '东风小康', '1', 1, 2);
+values (193, '货车品牌', '东风小康', 'D', 44, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (194, '货车品牌', '东风神宇', '1', 1, 2);
+values (194, '货车品牌', '东风神宇', 'D', 45, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (195, '货车品牌', '福田欧马可', '1', 1, 2);
+values (195, '货车品牌', '福田欧马可', 'F', 46, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (196, '货车品牌', '福田奥铃', '1', 1, 2);
+values (196, '货车品牌', '福田奥铃', 'F', 47, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (197, '货车品牌', '福田', '1', 1, 2);
+values (197, '货车品牌', '福田', 'F', 48, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (198, '货车品牌', '福田欧曼', '1', 1, 2);
+values (198, '货车品牌', '福田欧曼', 'F', 49, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (199, '货车品牌', '福田瑞沃', '1', 1, 2);
+values (199, '货车品牌', '福田瑞沃', 'F', 50, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (200, '货车品牌', '广汽日野', '1', 1, 2);
+values (200, '货车品牌', '广汽日野', 'G', 51, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (201, '货车品牌', '广汽吉奥', '1', 1, 2);
+values (201, '货车品牌', '广汽吉奥', 'G', 52, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (202, '货车品牌', '哈飞', '1', 1, 2);
+values (202, '货车品牌', '哈飞', 'H', 53, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (203, '货车品牌', '湖北大运', '1', 1, 2);
+values (203, '货车品牌', '湖北大运', 'H', 54, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (204, '货车品牌', '华菱', '1', 1, 2);
+values (204, '货车品牌', '华菱', 'H', 55, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (205, '货车品牌', '江淮格尔发', '1', 1, 2);
+values (205, '货车品牌', '江淮格尔发', 'J', 56, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (206, '货车品牌', '江淮帅铃', '1', 1, 2);
+values (206, '货车品牌', '江淮帅铃', 'J', 57, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (207, '货车品牌', '江淮骏铃', '1', 1, 2);
+values (207, '货车品牌', '江淮骏铃', 'J', 58, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (208, '货车品牌', '江淮康铃', '1', 1, 2);
+values (208, '货车品牌', '江淮康铃', 'J', 59, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (209, '货车品牌', '江淮星锐', '1', 1, 2);
+values (209, '货车品牌', '江淮星锐', 'J', 60, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (210, '货车品牌', '金杯', '1', 1, 2);
+values (210, '货车品牌', '金杯', 'J', 61, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (211, '货车品牌', '江铃汽车', '1', 1, 2);
+values (211, '货车品牌', '江铃汽车', 'J', 62, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (212, '货车品牌', '开瑞绿卡', '1', 1, 2);
+values (212, '货车品牌', '开瑞绿卡', 'K', 63, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (213, '货车品牌', '凯马', '1', 1, 2);
+values (213, '货车品牌', '凯马', 'K', 64, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (214, '货车品牌', '开瑞', '1', 1, 2);
+values (214, '货车品牌', '开瑞', 'K', 65, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (215, '货车品牌', '力帆骏马', '1', 1, 2);
+values (215, '货车品牌', '力帆骏马', 'L', 66, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (216, '货车品牌', '联合卡车', '1', 1, 2);
+values (216, '货车品牌', '联合卡车', 'L', 67, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (217, '货车品牌', '曼', '1', 1, 2);
+values (217, '货车品牌', '曼', 'M', 68, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (218, '货车品牌', '南京依维柯', '1', 1, 2);
+values (218, '货车品牌', '南京依维柯', 'N', 69, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (219, '货车品牌', '南汽(畅达牌)', '1', 1, 2);
+values (219, '货车品牌', '南汽(畅达牌)', 'N', 70, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (220, '货车品牌', '南骏汽车', '1', 1, 2);
+values (220, '货车品牌', '南骏汽车', 'N', 71, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (221, '货车品牌', '庆铃', '1', 1, 2);
+values (221, '货车品牌', '庆铃', 'Q', 72, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (222, '货车品牌', '青岛解放', '1', 1, 2);
+values (222, '货车品牌', '青岛解放', 'Q', 73, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (223, '货车品牌', '陕汽商用车', '1', 1, 2);
+values (223, '货车品牌', '陕汽商用车', 'S', 74, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (224, '货车品牌', '时代汽车', '1', 1, 2);
+values (224, '货车品牌', '时代汽车', 'S', 75, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (225, '货车品牌', '时风', '1', 1, 2);
+values (225, '货车品牌', '时风', 'S', 76, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (226, '货车品牌', '上汽红岩', '1', 1, 2);
+values (226, '货车品牌', '上汽红岩', 'S', 77, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (227, '货车品牌', '斯堪尼亚', '1', 1, 2);
+values (227, '货车品牌', '斯堪尼亚', 'S', 78, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (228, '货车品牌', '陕汽重卡', '1', 1, 2);
+values (228, '货车品牌', '陕汽重卡', 'S', 79, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (229, '货车品牌', '四川现代', '1', 1, 2);
+values (229, '货车品牌', '四川现代', 'S', 80, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (230, '货车品牌', '上汽跃进', '1', 1, 2);
+values (230, '货车品牌', '上汽跃进', 'S', 81, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (231, '货车品牌', '时骏', '1', 1, 2);
+values (231, '货车品牌', '时骏', 'S', 82, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (232, '货车品牌', '三环十通', '1', 1, 2);
+values (232, '货车品牌', '三环十通', 'S', 83, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (233, '货车品牌', '唐骏', '1', 1, 2);
+values (233, '货车品牌', '唐骏', 'T', 84, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (234, '货车品牌', '沃尔沃', '1', 1, 2);
+values (234, '货车品牌', '沃尔沃', 'W', 85, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (235, '货车品牌', '五菱', '1', 1, 2);
+values (235, '货车品牌', '五菱', 'W', 86, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (236, '货车品牌', '五十铃', '1', 1, 2);
+values (236, '货车品牌', '五十铃', 'W', 87, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (237, '货车品牌', '徐工重卡', '1', 1, 2);
+values (237, '货车品牌', '徐工重卡', 'X', 88, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (238, '货车品牌', '一汽解放轻卡', '1', 1, 2);
+values (238, '货车品牌', '一汽解放轻卡', 'Y', 89, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (239, '货车品牌', '一拖重卡', '1', 1, 2);
+values (239, '货车品牌', '一拖重卡', 'Y', 90, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (240, '货车品牌', '一汽柳特', '1', 1, 2);
+values (240, '货车品牌', '一汽柳特', 'Y', 91, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (241, '货车品牌', '一汽解放', '1', 1, 2);
+values (241, '货车品牌', '一汽解放', 'Y', 92, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (242, '货车品牌', '依维柯', '1', 1, 2);
+values (242, '货车品牌', '依维柯', 'Y', 93, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (243, '货车品牌', '一汽红塔', '1', 1, 2);
+values (243, '货车品牌', '一汽红塔', 'Y', 94, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (244, '货车品牌', '远程汽车', '1', 1, 2);
+values (244, '货车品牌', '远程汽车', 'Y', 95, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (245, '货车品牌', '一汽凌源', '1', 1, 2);
+values (245, '货车品牌', '一汽凌源', 'Y', 96, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (246, '货车品牌', '一汽吉林', '1', 1, 2);
+values (246, '货车品牌', '一汽吉林', 'Y', 97, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (247, '货车品牌', '重汽汕德卡', '1', 1, 2);
+values (247, '货车品牌', '重汽汕德卡', 'Z', 98, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (248, '货车品牌', '重汽斯太尔', '1', 1, 2);
+values (248, '货车品牌', '重汽斯太尔', 'Z', 99, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (249, '货车品牌', '重汽豪瀚', '1', 1, 2);
+values (249, '货车品牌', '重汽豪瀚', 'Z', 100, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (250, '货车品牌', '重汽豪沃(HOWO)', '1', 1, 2);
+values (250, '货车品牌', '重汽豪沃(HOWO)', 'Z', 101, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (251, '货车品牌', '重汽王牌', '1', 1, 2);
+values (251, '货车品牌', '重汽王牌', 'Z', 102, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (252, '货车品牌', '重汽豪曼', '1', 1, 2);
+values (252, '货车品牌', '重汽豪曼', 'Z', 103, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (253, '货车品牌', '重汽HOWO轻卡', '1', 1, 2);
+values (253, '货车品牌', '重汽HOWO轻卡', 'Z', 104, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (254, '出厂年限', '2017年', '1', 1, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (255, '出厂年限', '2016年', '2', 2, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (256, '出厂年限', '2015年', '3', 3, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (257, '出厂年限', '2014年', '4', 4, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (258, '出厂年限', '2013年', '5', 5, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (259, '出厂年限', '2012年', '6', 6, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (260, '出厂年限', '2011年', '7', 7, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (261, '出厂年限', '2010年', '8', 8, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (262, '出厂年限', '2009年', '9', 9, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (263, '出厂年限', '2008年', '10', 10, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (264, '出厂年限', '2007年', '11', 11, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (265, '出厂年限', '2006年', '12', 12, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (266, '出厂年限', '2005年', '13', 13, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (267, '出厂年限', '2004年', '14', 14, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (268, '出厂年限', '2003年', '15', 15, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (269, '出厂年限', '2002年', '16', 16, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (270, '出厂年限', '2001年', '17', 17, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (271, '出厂年限', '2000年', '18', 18, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (272, '出厂年限', '2000年以前', '19', 19, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (273, '出厂月份', '1月', '1', 1, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (274, '出厂月份', '2月', '2', 2, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (275, '出厂月份', '3月', '3', 3, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (276, '出厂月份', '4月', '4', 4, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (277, '出厂月份', '5月', '5', 5, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (278, '出厂月份', '6月', '6', 6, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (279, '出厂月份', '7月', '7', 7, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (280, '出厂月份', '8月', '8', 8, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (281, '出厂月份', '9月', '9', 9, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (282, '出厂月份', '10月', '10', 10, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (283, '出厂月份', '11月', '11', 11, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (284, '出厂月份', '12月', '12', 12, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (285, '工程车', '挖掘机', 'RM', 1, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (286, '工程车', '装载机', 'RM', 1, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (287, '工程车', '起重机', 'RM', 1, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (288, '工程车', '压路机', 'RM', 1, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (289, '工程车', '推土机', 'RM', 1, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (290, '工程车', '平地机', 'RM', 1, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (291, '工程车', '叉车', 'RM', 1, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (292, '工程车', '油罐车', 'RM', 1, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (293, '工程车', '工程自卸车', 'RM', 1, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (294, '工程车', '拖车', 'RM', 1, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (295, '工程车', '农用车', 'RM', 1, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (296, '工程车', '高空作业车', 'RM', 1, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (297, '工程车', '混凝土泵车', 'RM', 1, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (298, '工程车', '爆破器材运输车', 'B', 1, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (299, '工程车', '叉车', 'C', 1, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (300, '工程车', '车载泵', 'C', 2, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (301, '工程车', '除雪车', 'C', 3, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (302, '工程车', '铲斗', 'C', 4, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (303, '工程车', '铲运机', 'C', 5, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (304, '工程车', '长螺旋钻机', 'C', 6, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (305, '工程车', '粉粒物料车', 'F', 1, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (306, '工程车', '高空作业车', 'G', 1, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (307, '工程车', '混凝土泵车', 'H', 1, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (308, '工程车', '化工液体运输车', 'H', 2, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (309, '工程车', '滑移装载机', 'H', 3, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (310, '工程车', '混凝土湿喷机', 'H', 4, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (311, '工程车', '搅拌运输车', 'J', 1, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (312, '工程车', '搅拌机', 'J', 2, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (313, '工程车', '加油车', 'J', 3, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (314, '工程车', '教练车', 'J', 4, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (315, '工程车', '铰接式卡车', 'J', 5, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (316, '工程车', '掘进机', 'J', 6, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (317, '工程车', '静力压桩机', 'J', 7, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (318, '工程车', '空气压缩机', 'K', 1, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (319, '工程车', '流动售货车', 'L', 1, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (320, '工程车', '冷藏车', 'L', 2, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (321, '工程车', '垃圾车', 'L', 3, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (322, '工程车', '沥青鏾布车', 'L', 4, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (323, '工程车', 'LED宣传车', 'L', 5, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (324, '工程车', '两头忙', 'L', 6, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (325, '工程车', '路面冷再生机', 'L', 7, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (326, '工程车', '连续墙抓斗', 'L', 8, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (327, '工程车', '锚杆钻机', 'M', 1, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (328, '工程车', '农用车', 'N', 1, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (329, '工程车', '平地机', 'P', 1, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (330, '工程车', '平板运输车', 'P', 2, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (331, '工程车', '破碎机', 'P', 3, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (332, '工程车', '起重机', 'Q', 1, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (333, '工程车', '其他车辆', 'Q', 2, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (334, '工程车', '清障车', 'Q', 3, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (335, '工程车', '清洗车', 'Q', 4, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (336, '工程车', '潜孔钻机', 'Q', 5, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (337, '工程车', '强夯机', 'Q', 6, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (338, '工程车', '热再生设备', 'R', 1, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (339, '工程车', '水泥罐车', 'S', 1, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (340, '工程车', '洒水车', 'S', 2, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (341, '工程车', '湿地挖掘机', 'S', 3, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (342, '工程车', '扫路车', 'S', 4, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (343, '工程车', '随车吊', 'S', 5, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (344, '工程车', '松土器', 'S', 6, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (345, '工程车', '市政环卫车', 'S', 7, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (346, '工程车', '水平定向钻', 'S', 8, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (347, '工程车', '伸缩臂叉车', 'S', 9, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (348, '工程车', '施工升降机', 'S', 10, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (349, '工程车', '推土机', 'T', 1, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (350, '工程车', '拖车', 'T', 2, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (351, '工程车', '摊铺机', 'T', 3, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (352, '工程车', '挖掘机', 'W', 1, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (353, '工程车', '稳定土拌合机', 'W', 2, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (354, '工程车', '危险品车', 'W', 3, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (355, '工程车', '吸污车', 'X', 1, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (356, '工程车', '消防车', 'X', 2, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (357, '工程车', '铣刨机', 'X', 3, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (358, '工程车', '旋挖钻机', 'X', 4, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (359, '工程车', '吸粪车', 'X', 5, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (360, '工程车', '压路机', 'Y', 1, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (361, '工程车', '油罐车', 'Y', 2, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (362, '工程车', '液压破碎锤', 'Y', 3, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (363, '工程车', '液化气体运输车', 'Y', 4, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (364, '工程车', '装载机', 'Z', 1, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (365, '工程车', '振动夯', 'Z', 2, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (366, '工程车', '凿岩机', 'Z', 3, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (367, '工程车', '抓钳器', 'Z', 4, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (368, '工程车', '抓木器', 'Z', 5, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (369, '工程车', '凿岩台车', 'Z', 7, null);
 
 prompt Done.

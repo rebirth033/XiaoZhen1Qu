@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="IBaseBLL.cs" />
     <Compile Include="IBZZXBLL.cs" />
+    <Compile Include="ICL_GCCBLL.cs" />
     <Compile Include="ICL_HCBLL.cs" />
     <Compile Include="ICL_MTCBLL.cs" />
     <Compile Include="ICommonBLL.cs" />
