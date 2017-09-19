@@ -198,3 +198,52 @@ function HideYHCD() {
     $("#div_top_right_dropdown_yhm").css("display", "none");
     $("#span_top_right_yhm_img").css("background-image", 'url(' + getRootPath() + "/Areas/Business/Css/images/arrow_down.png" + ')');
 }
+//重选类别
+function CXLB() {
+    window.location.href = getRootPath() + "/Business/LBXZ/LBXZ";
+}
+//选择下拉框
+function SelectDropdown(obj, type) {
+    $("#span" + type).html(obj.innerHTML);
+    $("#div" + type).css("display", "none");
+}
+//关闭
+function Close(id) {
+    $("#div" + id).css("display", "none");
+    LeaveStyle(id);
+}
+//鼠标点击样式
+function ActiveStyle(name) {
+    $("#div" + name + "Text").css("border-top", "1px solid #5bc0de").css("border-right", "1px solid #5bc0de").css("border-left", "1px solid #5bc0de").css("border-bottom", "1px solid #5bc0de");
+    $("#div" + name).find("ul").css("border-left", "1px solid #5bc0de").css("border-right", "1px solid #5bc0de").css("border-bottom", "1px solid #5bc0de");
+    $("#span" + name).css("color", "#333333");
+}
+//鼠标离开样式
+function LeaveStyle(name) {
+    $("#div" + name + "Text").css("border-top", "1px solid #cccccc").css("border-right", "1px solid #cccccc").css("border-left", "1px solid #cccccc").css("border-bottom", "1px solid #cccccc");
+    $("#div" + name).find("ul").css("border-left", "1px solid #cccccc").css("border-right", "1px solid #cccccc").css("border-bottom", "1px solid #cccccc");
+    $("#span" + name).css("color", "#999999");
+}
+//加载填写信息
+function LoadTXXX() {
+    $("#spanTXXX").css("color", "#5bc0de");
+    $("#emTXXX").css("background", "#5bc0de");
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/LBXZ/LoadLBByID",
+        dataType: "json",
+        data:
+        {
+            LBID: getUrlParam("CLICKID")
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                if (xml.list.length > 0)
+                    $("#spanLBXZ").html("1." + xml.list[0].LBNAME);
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}

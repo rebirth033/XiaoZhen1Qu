@@ -19,7 +19,7 @@ $(document).ready(function () {
     $("#btnClose").bind("click", CloseWindow);
     $("#div_dz_close").bind("click", CloseWindow);
     $("#span_content_info_qhcs").bind("click", LoadXZQByGrade);
-    $("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });
+    $("body").bind("click", function () { Close("_XZQ"); Close("LB"); Close("PP"); Close("QY"); Close("DD"); });
     $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
 
@@ -29,11 +29,11 @@ $(document).ready(function () {
     LoadMTCPP();
     LoadDefault();
     LoadCL_MTCJBXX();
-    BindHover("LB");
-    BindHover("GCSJ");
-    BindHover("PP");
-    BindHover("QY");
-    BindHover("SQ");
+    BindClick("LB");
+    BindClick("GCSJ");
+    BindClick("PP");
+    BindClick("QY");
+    BindClick("SQ");
 });
 //描述框focus
 function FYMSFocus() {
@@ -127,7 +127,8 @@ function LoadMTCLB() {
                 }
                 html += "</ul>";
                 $("#divLB").html(html);
-                $("#divLB").css("display", "none");
+                $("#divLB").css("display", "block");
+                ActiveStyle("LB");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -153,59 +154,8 @@ function LoadMTCPP() {
                 }
                 html += "</ul>";
                 $("#divPP").html(html);
-                $("#divPP").css("display", "none");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载摩托车小类
-function LoadMTCXL(type) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_CL",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: type
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"XL\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divXL").html(html);
-                $("#divXL").css("display", "none");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载摩托车详细参数
-function LoadXXCS(id, type) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_CL",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: type
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"" + id + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#div" + id).html(html);
-                $("#div" + id).css("display", "none");
+                $("#divPP").css("display", "block");
+                ActiveStyle("PP");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -231,7 +181,8 @@ function LoadGCSJ() {
                 }
                 html += "</ul>";
                 $("#divGCSJ").html(html);
-                $("#divGCSJ").css("display", "none");
+                $("#divGCSJ").css("display", "block");
+                ActiveStyle("GCSJ");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -239,85 +190,27 @@ function LoadGCSJ() {
         }
     });
 }
-//加载区域
-function LoadQY() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadQY",
-        dataType: "json",
-        data:
-        {
-
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectQY(this,\"QY\",\"" + xml.list[i].CODE + "\")'>" + RTrim(RTrim(RTrim(xml.list[i].NAME, '市'), '区'), '县') + "</li>";
-                }
-                html += "</ul>";
-                $("#divQY").html(html);
-                $("#divQY").css("display", "none");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
+//绑定下拉框鼠标点击样式
+function BindClick(type) {
+    $("#div" + type + "Span").click(function () {
+        if (type === "LB") {
+            LoadMTCLB();
         }
-    });
-}
-//加载地段
-function LoadSQ(QY) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadSQ",
-        dataType: "json",
-        data:
-        {
-            QY: QY
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"SQ\")'>" + RTrimStr(xml.list[i].NAME, '街道,镇,林场,管理处') + "</li>";
-                }
-                html += "</ul>";
-                $("#divSQ").html(html);
-                $("#divSQ").css("display", "none");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
+        if (type === "PP") {
+            LoadMTCPP();
         }
-    });
-}
-//鼠标盘旋样式
-function HoverStyle(name) {
-    $("#div" + name + "Text").css("border-top", "1px solid #5bc0de").css("border-right", "1px solid #5bc0de").css("border-left", "1px solid #5bc0de").css("border-bottom", "1px solid #5bc0de");
-    $("#div" + name).find("ul").css("border-left", "1px solid #5bc0de").css("border-right", "1px solid #5bc0de").css("border-bottom", "1px solid #5bc0de");
-    $("#span" + name).css("color", "#333333");
-}
-//鼠标离开样式
-function LeaveStyle(name) {
-    $("#div" + name + "Text").css("border-top", "1px solid #cccccc").css("border-right", "1px solid #cccccc").css("border-left", "1px solid #cccccc").css("border-bottom", "1px solid #cccccc");
-    $("#div" + name).find("ul").css("border-left", "1px solid #cccccc").css("border-right", "1px solid #cccccc").css("border-bottom", "1px solid #cccccc");
-    $("#span" + name).css("color", "#999999");
-}
-//绑定下拉框鼠标盘旋样式
-function BindHover(type) {
-    $("#div" + type + "Text").hover(function () {
-        $("#div" + type).css("display", "block");
-        HoverStyle(type);
-    }, function () {
-        $("#div" + type).css("display", "none");
-        LeaveStyle(type);
-    });
-    $("#div" + type).hover(function () {
-        $("#div" + type).css("display", "block");
-        HoverStyle(type);
-    }, function () {
-        $("#div" + type).css("display", "none");
-        LeaveStyle(type);
+        if (type === "CCNX") {
+            LoadCCNX();
+        }
+        if (type === "CCYF") {
+            LoadCCYF();
+        }
+        if (type === "QY") {
+            LoadQY();
+        }
+        if (type === "DD") {
+            LoadDD($("#QYCode").val());
+        }
     });
 }
 //选择下拉框
@@ -329,34 +222,6 @@ function SelectDropdown(obj, type) {
 function SelectLB(obj, type) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-    PDLB(obj.innerHTML);
-}
-//判断类别
-function PDLB(LB) {
-    if (LB === "床") {
-        $("#divCXXCS").css("display", "");
-        $("#divCDXXCS").css("display", "none");
-        LoadXXCS("CCC", "床尺寸");
-        BindHover("CCC");
-    }
-    else if (LB === "床垫") {
-        $("#divCXXCS").css("display", "none");
-        $("#divCDXXCS").css("display", "");
-        LoadXXCS("CDCC", "床尺寸");
-        BindHover("CDCC");
-    }
-    else {
-        $("#divCXXCS").css("display", "none");
-        $("#divCDXXCS").css("display", "none");
-    }
-    LoadMTCXL(LB);
-    BindHover("XL");
-}
-//选择区域下拉框
-function SelectQY(obj, type, code) {
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
-    LoadSQ(code);
 }
 //选择摩托车品牌
 function SelectPBPP(obj, type, code) {
@@ -431,11 +296,11 @@ function LoadCL_MTCJBXX() {
                 $("#spanPP").html(xml.Value.CL_MTCJBXX.PP);
                 $("#spanGCSJ").html(xml.Value.CL_MTCJBXX.GCSJ);
                 $("#spanQY").html(xml.Value.CL_MTCJBXX.JYQY);
-                $("#spanSQ").html(xml.Value.CL_MTCJBXX.JYDD);
+                $("#spanDD").html(xml.Value.CL_MTCJBXX.JYDD);
+                $("#spanXL").html(xml.Value.CL_MTCJBXX.XL);
 
                 LoadPhotos(xml.Value.Photos);
                 PDLB(xml.Value.CL_MTCJBXX.LB);
-                $("#spanXL").html(xml.Value.CL_MTCJBXX.XL);
                 return;
             }
         },
@@ -443,14 +308,6 @@ function LoadCL_MTCJBXX() {
 
         }
     });
-}
-//鼠标经过
-function MouseOver() {
-    isleave = false;
-}
-//鼠标离开
-function MouseLeave() {
-    isleave = true;
 }
 //发布
 function FB() {

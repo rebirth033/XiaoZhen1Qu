@@ -19,8 +19,8 @@ $(document).ready(function () {
     $("#div_dz_close").bind("click", CloseWindow);
     $("#span_content_info_qGCCs").bind("click", LoadXZQByGrade);
     $("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });
-    $("#div_top_right_inner_yhm").bind("mouseover", ShowYGCCD);
-    $("#div_top_right_inner_yhm").bind("mouseleave", HideYGCCD);
+    $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);
+    $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
     LoadTXXX();
     LoadDefault();
     LoadCL_GCCJBXX();

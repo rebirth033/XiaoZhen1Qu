@@ -17,32 +17,21 @@ $(document).ready(function () {
     $("#btnClose").bind("click", CloseWindow);
     $("#div_dz_close").bind("click", CloseWindow);
     $("#span_content_info_qhcs").bind("click", LoadXZQByGrade);
-    $("body").bind("click", CloseXZQ);
+    $("body").bind("click", function () { Close("_XZQ"); Close("LB"); Close("XL"); Close("DCDY"); Close("DCRL"); Close("CC"); Close("XJ"); Close("QY"); Close("DD"); });
     $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
 
     LoadTXXX();
     LoadZXCDDCSLCLB();
     LoadXJ();
-    LoadQY();
     LoadDefault();
     LoadCL_ZXCDDCSLCJBXX();
-    BindHover("LB");
-    BindHover("XJ");
-    BindHover("QY");
-    BindHover("SQ");
+    BindClick("LB");
+    BindClick("XJ");
+    BindClick("QY");
+    BindClick("DD");
 
 });
-//显示用户菜单
-function ShowYHCD() {
-    $("#div_top_right_dropdown_yhm").css("display", "block");
-    $("#span_top_right_yhm_img").css("background-image", 'url(' + getRootPath() + "/Areas/Business/Css/images/arrow_up.png" + ')');
-}
-//隐藏用户菜单
-function HideYHCD() {
-    $("#div_top_right_dropdown_yhm").css("display", "none");
-    $("#span_top_right_yhm_img").css("background-image", 'url(' + getRootPath() + "/Areas/Business/Css/images/arrow_down.png" + ')');
-}
 //描述框focus
 function FYMSFocus() {
     $("#FYMS").css("color", "#333333");
@@ -87,10 +76,6 @@ function LoadTXXX() {
         }
     });
 }
-//重选类别
-function CXLB() {
-    window.location.href = getRootPath() + "/Business/LBXZ/LBXZ";
-}
 //选择个人转让
 function GRZRSelect() {
     $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
@@ -119,7 +104,8 @@ function LoadZXCDDCSLCLB() {
                 }
                 html += "</ul>";
                 $("#divLB").html(html);
-                $("#divLB").css("display", "none");
+                $("#divLB").css("display", "block");
+                ActiveStyle("LB");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -145,7 +131,8 @@ function LoadZXCDDCSLCXL(type) {
                 }
                 html += "</ul>";
                 $("#divXL").html(html);
-                $("#divXL").css("display", "none");
+                $("#divXL").css("display", "block");
+                ActiveStyle("XL");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -171,7 +158,8 @@ function LoadXXCS(id, type) {
                 }
                 html += "</ul>";
                 $("#div" + id).html(html);
-                $("#div" + id).css("display", "none");
+                $("#div" + id).css("display", "block");
+                ActiveStyle(id);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -197,93 +185,13 @@ function LoadXJ() {
                 }
                 html += "</ul>";
                 $("#divXJ").html(html);
-                $("#divXJ").css("display", "none");
+                $("#divXJ").css("display", "block");
+                ActiveStyle("XJ");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
         }
-    });
-}
-//加载区域
-function LoadQY() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadQY",
-        dataType: "json",
-        data:
-        {
-
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectQY(this,\"QY\",\"" + xml.list[i].CODE + "\")'>" + RTrim(RTrim(RTrim(xml.list[i].NAME, '市'), '区'), '县') + "</li>";
-                }
-                html += "</ul>";
-                $("#divQY").html(html);
-                $("#divQY").css("display", "none");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载地段
-function LoadSQ(QY) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadSQ",
-        dataType: "json",
-        data:
-        {
-            QY: QY
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"SQ\")'>" + RTrimStr(xml.list[i].NAME, '街道,镇,林场,管理处') + "</li>";
-                }
-                html += "</ul>";
-                $("#divSQ").html(html);
-                $("#divSQ").css("display", "none");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//鼠标盘旋样式
-function HoverStyle(name) {
-    $("#div" + name + "Text").css("border-top", "1px solid #5bc0de").css("border-right", "1px solid #5bc0de").css("border-left", "1px solid #5bc0de").css("border-bottom", "1px solid #5bc0de");
-    $("#div" + name).find("ul").css("border-left", "1px solid #5bc0de").css("border-right", "1px solid #5bc0de").css("border-bottom", "1px solid #5bc0de");
-    $("#span" + name).css("color", "#333333");
-}
-//鼠标离开样式
-function LeaveStyle(name) {
-    $("#div" + name + "Text").css("border-top", "1px solid #cccccc").css("border-right", "1px solid #cccccc").css("border-left", "1px solid #cccccc").css("border-bottom", "1px solid #cccccc");
-    $("#div" + name).find("ul").css("border-left", "1px solid #cccccc").css("border-right", "1px solid #cccccc").css("border-bottom", "1px solid #cccccc");
-    $("#span" + name).css("color", "#999999");
-}
-//绑定下拉框鼠标盘旋样式
-function BindHover(type) {
-    $("#div" + type + "Text").hover(function () {
-        $("#div" + type).css("display", "block");
-        HoverStyle(type);
-    }, function () {
-        $("#div" + type).css("display", "none");
-        LeaveStyle(type);
-    });
-    $("#div" + type).hover(function () {
-        $("#div" + type).css("display", "block");
-        HoverStyle(type);
-    }, function () {
-        $("#div" + type).css("display", "none");
-        LeaveStyle(type);
     });
 }
 //选择下拉框
@@ -303,33 +211,49 @@ function PDLB(LB) {
         $("#divZXCXXCS").css("display", "");
         $("#divDDCXXCS").css("display", "none");
         LoadXXCS("ZXCPP", "自行车品牌");
-        BindHover("ZXCPP");
+        BindClick("ZXCPP");
         LoadXXCS("CC", "自行车尺寸");
-        BindHover("CC");
+        BindClick("CC");
     }
     else if (LB === "电动车") {
         $("#divZXCXXCS").css("display", "none");
         $("#divDDCXXCS").css("display", "");
         LoadXXCS("DDCPP", "电动车品牌");
-        BindHover("DDCPP");
+        BindClick("DDCPP");
         LoadXXCS("DCDY", "电池电压");
-        BindHover("DCDY");
+        BindClick("DCDY");
         LoadXXCS("DCRL", "电池容量");
-        BindHover("DCRL");
+        BindClick("DCRL");
     }
     else {
         $("#divZXCXXCS").css("display", "none");
         $("#divDDCXXCS").css("display", "none");
     }
     LoadZXCDDCSLCXL(LB);
-    BindHover("XL");
+    BindClick("XL");
 }
-
+//绑定下拉框鼠标点击样式
+function BindClick(type) {
+    $("#div" + type + "Span").click(function () {
+        if (type === "LB") {
+            LoadZXCDDCSLCLB();
+        }
+        if (type === "XJ") {
+            LoadXJ();
+        }
+        if (type === "QY") {
+            LoadQY();
+        }
+        if (type === "DD") {
+            LoadDD($("#QYCode").val());
+        }
+    });
+}
 //选择区域下拉框
 function SelectQY(obj, type, code) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-    LoadSQ(code);
+    LoadDD(code);
 }
 //选择自行车/电动车/三轮车品牌
 function SelectPBPP(obj, type, code) {
@@ -397,14 +321,6 @@ function LoadCL_ZXCDDCSLCJBXX() {
 
         }
     });
-}
-//鼠标经过
-function MouseOver() {
-    isleave = false;
-}
-//鼠标离开
-function MouseLeave() {
-    isleave = true;
 }
 //发布
 function FB() {
