@@ -15,15 +15,15 @@ $(document).ready(function () {
     $("#btnClose").bind("click", CloseWindow);
     $("#div_dz_close").bind("click", CloseWindow);
     $("#span_content_info_qhcs").bind("click", LoadXZQByGrade);
-    $("body").bind("click", CloseXZQ);
+    $("body").bind("click", function () { Close("_XZQ"); Close("LB"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });
     $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
 
     LoadTXXX();
-    LoadPP();
     LoadDefault();
     LoadCL_HCJBXX();
     BindClick("LB");
+    BindClick("PP");
     BindClick("CCNX");
     BindClick("CCYF");
     BindClick("QY");
@@ -32,7 +32,7 @@ $(document).ready(function () {
 });
 //加载品牌标签
 function LoadPP() {
-    var arrayObj = new Array('RMYX', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
+    var arrayObj = new Array('RM', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
     var html = "";
     for (var i = 0; i < arrayObj.length; i++) {
         if (i === 0)
@@ -66,6 +66,7 @@ function LoadPPMC(HC) {
                 if (xml.list.length === 0)
                     html += '<span class="span_yxmc" style=\"width:200px;text-align:left;margin-left:14px;\">该字母下暂无游戏</span>';
                 $("#div_content_yxmc").html(html);
+                $("#divPP").css("display", "block");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -77,16 +78,6 @@ function LoadPPMC(HC) {
 function PPXZ(PPMC, PPID) {
     $("#spanPP").html(PPMC);
     $(".div_xzk").css("display", "none");
-}
-//显示用户菜单
-function ShowYHCD() {
-    $("#div_top_right_dropdown_yhm").css("display", "block");
-    $("#span_top_right_yhm_img").css("background-image", 'url(' + getRootPath() + "/Areas/Business/Css/images/arrow_up.png" + ')');
-}
-//隐藏用户菜单
-function HideYHCD() {
-    $("#div_top_right_dropdown_yhm").css("display", "none");
-    $("#span_top_right_yhm_img").css("background-image", 'url(' + getRootPath() + "/Areas/Business/Css/images/arrow_down.png" + ')');
 }
 //描述框focus
 function FYMSFocus() {
@@ -157,6 +148,7 @@ function LoadHCLB() {
                 html += "</ul>";
                 $("#divLB").html(html);
                 $("#divLB").css("display", "block");
+                ActiveStyle("LB");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -182,7 +174,8 @@ function LoadCCNX() {
                 }
                 html += "</ul>";
                 $("#divCCNX").html(html);
-                $("#divCCNX").css("display", "none");
+                $("#divCCNX").css("display", "block");
+                ActiveStyle("CCNX");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -208,77 +201,14 @@ function LoadCCYF() {
                 }
                 html += "</ul>";
                 $("#divCCYF").html(html);
-                $("#divCCYF").css("display", "none");
+                $("#divCCYF").css("display", "block");
+                ActiveStyle("CCYF");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
         }
     });
-}
-//加载区域
-function LoadQY() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadQY",
-        dataType: "json",
-        data:
-        {
-
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectQY(this,\"QY\",\"" + xml.list[i].CODE + "\")'>" + RTrim(RTrim(RTrim(xml.list[i].NAME, '市'), '区'), '县') + "</li>";
-                }
-                html += "</ul>";
-                $("#divQY").html(html);
-                $("#divQY").css("display", "none");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载地段
-function LoadSQ(QY) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadSQ",
-        dataType: "json",
-        data:
-        {
-            QY: QY
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"SQ\")'>" + RTrimStr(xml.list[i].NAME, '街道,镇,林场,管理处') + "</li>";
-                }
-                html += "</ul>";
-                $("#divSQ").html(html);
-                $("#divSQ").css("display", "none");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//鼠标盘旋样式
-function HoverStyle(name) {
-    $("#div" + name + "Text").css("border-top", "1px solid #5bc0de").css("border-right", "1px solid #5bc0de").css("border-left", "1px solid #5bc0de").css("border-bottom", "1px solid #5bc0de");
-    $("#div" + name).find("ul").css("border-left", "1px solid #5bc0de").css("border-right", "1px solid #5bc0de").css("border-bottom", "1px solid #5bc0de");
-    $("#span" + name).css("color", "#333333");
-}
-//鼠标离开样式
-function LeaveStyle(name) {
-    $("#div" + name + "Text").css("border-top", "1px solid #cccccc").css("border-right", "1px solid #cccccc").css("border-left", "1px solid #cccccc").css("border-bottom", "1px solid #cccccc");
-    $("#div" + name).find("ul").css("border-left", "1px solid #cccccc").css("border-right", "1px solid #cccccc").css("border-bottom", "1px solid #cccccc");
-    $("#span" + name).css("color", "#999999");
 }
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
@@ -288,7 +218,7 @@ function BindClick(type) {
         }
         if (type === "PP") {
             LoadPP();
-            LoadPPMC("挖掘机品牌", "divRM");
+            LoadPPMC("divRM");
         }
         if (type === "CCNX") {
             LoadCCNX();
@@ -313,12 +243,6 @@ function SelectDropdown(obj, type) {
 function SelectLB(obj, type) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-}
-//选择区域下拉框
-function SelectQY(obj, type, code) {
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
-    LoadSQ(code);
 }
 //选择货车品牌
 function SelectPBPP(obj, type, code) {
@@ -363,14 +287,6 @@ function LoadCL_HCJBXX() {
 
         }
     });
-}
-//鼠标经过
-function MouseOver() {
-    isleave = false;
-}
-//鼠标离开
-function MouseLeave() {
-    isleave = true;
 }
 //发布
 function FB() {

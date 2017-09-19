@@ -187,3 +187,14 @@ function GetPhotoUrls() {
     });
     return RTrim(photourls, ",");
 }
+
+//显示用户菜单
+function ShowYHCD() {
+    $("#div_top_right_dropdown_yhm").css("display", "block");
+    $("#span_top_right_yhm_img").css("background-image", 'url(' + getRootPath() + "/Areas/Business/Css/images/arrow_up.png" + ')');
+}
+//隐藏用户菜单
+function HideYHCD() {
+    $("#div_top_right_dropdown_yhm").css("display", "none");
+    $("#span_top_right_yhm_img").css("background-image", 'url(' + getRootPath() + "/Areas/Business/Css/images/arrow_down.png" + ')');
+}

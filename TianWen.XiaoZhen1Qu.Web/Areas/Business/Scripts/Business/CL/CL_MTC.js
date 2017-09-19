@@ -19,7 +19,7 @@ $(document).ready(function () {
     $("#btnClose").bind("click", CloseWindow);
     $("#div_dz_close").bind("click", CloseWindow);
     $("#span_content_info_qhcs").bind("click", LoadXZQByGrade);
-    $("body").bind("click", CloseXZQ);
+    $("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });
     $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
 
@@ -27,7 +27,6 @@ $(document).ready(function () {
     LoadMTCLB();
     LoadGCSJ();
     LoadMTCPP();
-    LoadQY();
     LoadDefault();
     LoadCL_MTCJBXX();
     BindHover("LB");
@@ -36,16 +35,6 @@ $(document).ready(function () {
     BindHover("QY");
     BindHover("SQ");
 });
-//显示用户菜单
-function ShowYHCD() {
-    $("#div_top_right_dropdown_yhm").css("display", "block");
-    $("#span_top_right_yhm_img").css("background-image", 'url(' + getRootPath() + "/Areas/Business/Css/images/arrow_up.png" + ')');
-}
-//隐藏用户菜单
-function HideYHCD() {
-    $("#div_top_right_dropdown_yhm").css("display", "none");
-    $("#span_top_right_yhm_img").css("background-image", 'url(' + getRootPath() + "/Areas/Business/Css/images/arrow_down.png" + ')');
-}
 //描述框focus
 function FYMSFocus() {
     $("#FYMS").css("color", "#333333");

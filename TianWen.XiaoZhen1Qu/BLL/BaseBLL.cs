@@ -212,7 +212,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
         {
             try
             {
-                IList<CODES_CL> list = DAO.Repository.GetObjectList<CODES_CL>(String.Format("FROM CODES_CL WHERE TYPENAME = '货车' AND CODEVALUE like '%{0}%' ORDER BY CODEORDER", HC));
+                IList<CODES_CL> list = DAO.Repository.GetObjectList<CODES_CL>(String.Format("FROM CODES_CL WHERE TYPENAME = '货车品牌' AND CODEVALUE like '%{0}%' ORDER BY CODEORDER", HC));
                 return new { Result = EnResultType.Success, list = list };
             }
             catch (Exception ex)

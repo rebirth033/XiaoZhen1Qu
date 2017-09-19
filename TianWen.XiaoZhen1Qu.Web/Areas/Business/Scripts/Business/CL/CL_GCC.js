@@ -139,16 +139,6 @@ function PPXZ(PPMC, PPID) {
     $("#spanPP").html(PPMC);
     $("#divPP").css("display", "none");
 }
-//显示用户菜单
-function ShowYGCCD() {
-    $("#div_top_right_dropdown_yhm").css("display", "block");
-    $("#span_top_right_yhm_img").css("background-image", 'url(' + getRootPath() + "/Areas/Business/Css/images/arrow_up.png" + ')');
-}
-//隐藏用户菜单
-function HideYGCCD() {
-    $("#div_top_right_dropdown_yhm").css("display", "none");
-    $("#span_top_right_yhm_img").css("background-image", 'url(' + getRootPath() + "/Areas/Business/Css/images/arrow_down.png" + ')');
-}
 //描述框focus
 function FYMSFocus() {
     $("#FYMS").css("color", "#333333");
