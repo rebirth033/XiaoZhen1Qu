@@ -77,3 +77,64 @@ function GetCitys(CODE) {
 function CloseXZQ() {
     $("#div_XZQ").css("display", "none");
 }
+//加载区域
+function LoadQY() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadQY",
+        dataType: "json",
+        data:
+        {
+
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='lidropdown' onclick='SelectQY(this,\"QY\",\"" + xml.list[i].CODE + "\")'>" + RTrim(RTrim(RTrim(xml.list[i].NAME, '市'), '区'), '县') + "</li>";
+                }
+                html += "</ul>";
+                $("#divQY").html(html);
+                $("#divQY").css("display", "block");
+                ActiveStyle("QY");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//加载地段
+function LoadDD(QY) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadSQ",
+        dataType: "json",
+        data:
+        {
+            QY: QY
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"DD\")'>" + RTrimStr(xml.list[i].NAME, '街道,镇,林场,管理处') + "</li>";
+                }
+                html += "</ul>";
+                $("#divDD").html(html);
+                $("#divDD").css("display", "block");
+                ActiveStyle("DD");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//选择区域下拉框
+function SelectQY(obj, type, code) {
+    $("#QYCode").val(code);
+    $("#span" + type).html(obj.innerHTML);
+    $("#div" + type).css("display", "none");
+    LoadDD(code);
+}

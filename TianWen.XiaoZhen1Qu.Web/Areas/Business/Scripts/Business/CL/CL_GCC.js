@@ -19,17 +19,18 @@ $(document).ready(function () {
     $("#div_dz_close").bind("click", CloseWindow);
     $("#span_content_info_qGCCs").bind("click", LoadXZQByGrade);
     $("body").bind("click", CloseXZQ);
-    $("body").bind("click", CloseCX);
+    $("body").bind("click", function () { Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });
     $("#div_top_right_inner_yhm").bind("mouseover", ShowYGCCD);
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYGCCD);
     LoadTXXX();
-    LoadQY();
     LoadDefault();
     LoadCL_GCCJBXX();
     BindClick("CX");
+    BindClick("CCNX");
+    BindClick("CCYF");
     BindClick("QY");
-    BindClick("SQ");
-    LoadPPMC("挖掘机品牌","divRM");
+    BindClick("DD");
+    LoadPPMC("挖掘机品牌", "divRM");
 });
 //加载工程车车型标签
 function LoadGCC() {
@@ -85,11 +86,9 @@ function GCCXZ(CXMC, CXID) {
 function PDCX(CXMC) {
     if (CXMC === "挖掘机") {
         $("#divGCCPP").css("display", "");
-        BindHover("PP");
-        LoadPP();
-        LoadPPMC("挖掘机品牌", "divRM");
+        BindClick("PP");
     }
-    
+
 }
 //加载品牌标签
 function LoadPP() {
@@ -128,6 +127,7 @@ function LoadPPMC(GCCLX, GCCBQ) {
                 if (xml.list.length === 0)
                     html += '<span class="span_yxmc" style=\"width:200px;text-align:left;margin-left:14px;\">该字母下暂无游戏</span>';
                 $("#div_content_yxmc").html(html);
+                $("#divPP").css("display", "block");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -261,7 +261,8 @@ function LoadCCNX() {
                 }
                 html += "</ul>";
                 $("#divCCNX").html(html);
-                $("#divCCNX").css("display", "none");
+                $("#divCCNX").css("display", "block");
+                ActiveStyle("CCNX");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -287,83 +288,38 @@ function LoadCCYF() {
                 }
                 html += "</ul>";
                 $("#divCCYF").html(html);
-                $("#divCCYF").css("display", "none");
+                $("#divCCYF").css("display", "block");
+                ActiveStyle("CCYF");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
         }
     });
-}
-//加载区域
-function LoadQY() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadQY",
-        dataType: "json",
-        data:
-        {
-
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectQY(this,\"QY\",\"" + xml.list[i].CODE + "\")'>" + RTrim(RTrim(RTrim(xml.list[i].NAME, '市'), '区'), '县') + "</li>";
-                }
-                html += "</ul>";
-                $("#divQY").html(html);
-                $("#divQY").css("display", "none");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载地段
-function LoadSQ(QY) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadSQ",
-        dataType: "json",
-        data:
-        {
-            QY: QY
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"SQ\")'>" + RTrimStr(xml.list[i].NAME, '街道,镇,林场,管理处') + "</li>";
-                }
-                html += "</ul>";
-                $("#divSQ").html(html);
-                $("#divSQ").css("display", "none");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//鼠标盘旋样式
-function HoverStyle(name) {
-    $("#div" + name + "Text").css("border-top", "1px solid #5bc0de").css("border-right", "1px solid #5bc0de").css("border-left", "1px solid #5bc0de").css("border-bottom", "1px solid #5bc0de");
-    $("#div" + name).find("ul").css("border-left", "1px solid #5bc0de").css("border-right", "1px solid #5bc0de").css("border-bottom", "1px solid #5bc0de");
-    $("#span" + name).css("color", "#333333");
-}
-//鼠标离开样式
-function LeaveStyle(name) {
-    $("#div" + name + "Text").css("border-top", "1px solid #cccccc").css("border-right", "1px solid #cccccc").css("border-left", "1px solid #cccccc").css("border-bottom", "1px solid #cccccc");
-    $("#div" + name).find("ul").css("border-left", "1px solid #cccccc").css("border-right", "1px solid #cccccc").css("border-bottom", "1px solid #cccccc");
-    $("#span" + name).css("color", "#999999");
 }
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
-        LoadGCC();
-        LoadGCCMC("divRM");
+        if (type === "CX") {
+            LoadGCC();
+            LoadGCCMC("divRM");
+        }
+        if (type === "PP") {
+            LoadPP();
+            LoadPPMC("挖掘机品牌", "divRM");
+        }
+        if (type === "CCNX") {
+            LoadCCNX();
+        }
+        if (type === "CCYF") {
+            LoadCCYF();
+        }
+        if (type === "QY") {
+            LoadQY();
+        }
+        if (type === "DD") {
+            LoadDD($("#QYCode").val());
+        }
     });
 }
 //选择下拉框
@@ -375,12 +331,6 @@ function SelectDropdown(obj, type) {
 function SelectLB(obj, type) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-}
-//选择区域下拉框
-function SelectQY(obj, type, code) {
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
-    LoadSQ(code);
 }
 //选择工程车品牌
 function SelectPBPP(obj, type, code) {
@@ -421,14 +371,6 @@ function LoadCL_GCCJBXX() {
         }
     });
 }
-//鼠标经过
-function MouseOver() {
-    isleave = false;
-}
-//鼠标离开
-function MouseLeave() {
-    isleave = true;
-}
 //发布
 function FB() {
     if (AllValidate() === false) return;
@@ -468,7 +410,8 @@ function FB() {
         }
     });
 }
-//关闭车型
-function CloseCX() {
-    $("#divCX").css("display", "none");
+//关闭
+function Close(id) {
+    $("#div" + id).css("display", "none");
+    LeaveStyle(id);
 }

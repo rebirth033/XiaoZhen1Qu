@@ -22,19 +22,16 @@ $(document).ready(function () {
     LoadTXXX();
     LoadHCLB();
     LoadPP();
-    LoadCCNX();
-    LoadCCYF();
-    LoadQY();
     LoadDefault();
     LoadCL_HCJBXX();
     LoadPPMC("divRM");
     BindHover("LB");
+    BindClick("CCNX");
+    BindClick("CCYF");
+    BindClick("QY");
+    BindClick("DD");
     BindHover("GCSJ");
     BindHover("PP");
-    BindHover("CCNX");
-    BindHover("CCYF");
-    BindHover("QY");
-    BindHover("SQ");
 });
 //加载品牌标签
 function LoadPP() {
