@@ -1108,4 +1108,547 @@ values (368, '工程车', '抓木器', 'Z', 5, null);
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (369, '工程车', '凿岩台车', 'Z', 7, null);
 
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (370, '挖掘机品牌', '奥泰', 'A', 1, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (371, '挖掘机品牌', '阿特拉斯*中国', 'A', 2, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (372, '挖掘机品牌', '奥力信', 'A', 3, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (373, '挖掘机品牌', '奥邦', 'A', 4, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (374, '挖掘机品牌', '奥泰重工', 'A', 5, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (375, '挖掘机品牌', '邦立重机', 'B', 1, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (376, '挖掘机品牌', '宝鼎', 'B', 2, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (377, '挖掘机品牌', '北车重工', 'B', 3, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (378, '挖掘机品牌', '北京长城恩信', 'B', 4, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (379, '挖掘机品牌', '贝尔', 'B', 5, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (380, '挖掘机品牌', '八达重工', 'B', 6, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (381, '挖掘机品牌', '朝工', 'C', 1, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (382, '挖掘机品牌', '朝工机械', 'C', 2, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (383, '挖掘机品牌', '斗山', 'D', 1, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (384, '挖掘机品牌', '鼎盛重工', 'D', 2, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (385, '挖掘机品牌', '德尔重工', 'D', 3, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (386, '挖掘机品牌', '道胜', 'D', 4, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (387, '挖掘机品牌', '德力', 'D', 5, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (388, '挖掘机品牌', '大信重工', 'D', 6, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (389, '挖掘机品牌', '鼎盛天工', 'D', 7, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (390, '挖掘机品牌', '德州宝鼎', 'D', 8, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (391, '挖掘机品牌', '大城东力', 'D', 9, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (392, '挖掘机品牌', '鼎诚', 'D', 10, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (393, '挖掘机品牌', '富亿机械', 'F', 1, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (394, '挖掘机品牌', '抚挖', 'F', 2, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (395, '挖掘机品牌', '福工', 'F', 3, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (396, '挖掘机品牌', '福建拖拉机', 'F', 4, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (397, '挖掘机品牌', '抚挖重工', 'F', 5, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (398, '挖掘机品牌', '福工机械', 'F', 6, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (399, '挖掘机品牌', '国机重工', 'G', 1, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (400, '挖掘机品牌', '格瑞德', 'G', 2, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (401, '挖掘机品牌', '盖尔', 'G', 3, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (402, '挖掘机品牌', '合矿', 'H', 1, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (403, '挖掘机品牌', '海斗', 'H', 2, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (404, '挖掘机品牌', '华力重工', 'H', 3, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (405, '挖掘机品牌', '华鑫重工', 'H', 4, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (406, '挖掘机品牌', '恒特', 'H', 5, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (407, '挖掘机品牌', '恒天九五', 'H', 6, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (408, '挖掘机品牌', '杭重机械', 'H', 7, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (409, '挖掘机品牌', '浣熊', 'H', 8, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (410, '挖掘机品牌', '恒岳重工', 'H', 9, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (411, '挖掘机品牌', '华南重工', 'H', 10, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (412, '挖掘机品牌', '合肥振宇', 'H', 11, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (413, '挖掘机品牌', '悍牛', 'H', 12, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (414, '挖掘机品牌', '华夏山工', 'H', 13, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (415, '挖掘机品牌', '华山重工', 'H', 14, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (416, '挖掘机品牌', '恒特重工', 'H', 15, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (417, '挖掘机品牌', '鸿达建工', 'H', 16, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (418, '挖掘机品牌', '悍山', 'H', 17, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (419, '挖掘机品牌', '恒辉重工', 'H', 18, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (420, '挖掘机品牌', 'JCB', 'J', 1, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (421, '挖掘机品牌', '江麓', 'J', 2, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (422, '挖掘机品牌', '劲工', 'J', 3, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (423, '挖掘机品牌', '久保田', 'J', 4, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (424, '挖掘机品牌', '巨超重工', 'J', 5, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (425, '挖掘机品牌', '京城长野', 'J', 6, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (426, '挖掘机品牌', '晋工', 'J', 7, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (427, '挖掘机品牌', '嘉和重工', 'J', 8, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (428, '挖掘机品牌', '建德机械', 'J', 9, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (429, '挖掘机品牌', '加藤', 'J', 10, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (430, '挖掘机品牌', '杰西博', 'J', 11, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (431, '挖掘机品牌', '江淮重工', 'J', 12, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (432, '挖掘机品牌', '江麓机电', 'J', 13, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (433, '挖掘机品牌', '巨猛', 'J', 14, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (434, '挖掘机品牌', '巨超集团', 'J', 15, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (435, '挖掘机品牌', '军联', 'J', 16, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (436, '挖掘机品牌', '卡特彼勒', 'K', 1, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (437, '挖掘机品牌', '开元智富', 'K', 2, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (438, '挖掘机品牌', '开普动力', 'K', 3, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (439, '挖掘机品牌', '卡特重工', 'K', 4, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (440, '挖掘机品牌', '凯斯', 'K', 5, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (441, '挖掘机品牌', '开普', 'K', 6, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (442, '挖掘机品牌', '柳工', 'L', 1, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (443, '挖掘机品牌', '雷沃重工', 'L', 2, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (444, '挖掘机品牌', '龙工', 'L', 3, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (445, '挖掘机品牌', '利勃海尔', 'L', 4, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (446, '挖掘机品牌', '力士德', 'L', 5, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (447, '挖掘机品牌', '雷沃', 'L', 6, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (448, '挖掘机品牌', '鲁牛重工', 'L', 7, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (449, '挖掘机品牌', '洛阳路通', 'L', 8, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (450, '挖掘机品牌', '雷道机械', 'L', 9, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (451, '挖掘机品牌', '洛建', 'L', 10, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (452, '挖掘机品牌', '雷乔曼机械', 'L', 11, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (453, '挖掘机品牌', '灵升机械', 'L', 12, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (454, '挖掘机品牌', '雷沃重工', 'L', 13, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (455, '挖掘机品牌', '闽工', 'M', 1, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (456, '挖掘机品牌', '美国威猛', 'M', 2, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (457, '挖掘机品牌', '农友', 'N', 1, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (458, '挖掘机品牌', '南车北京时代', 'N', 2, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (459, '挖掘机品牌', '宁工股份', 'N', 3, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (460, '挖掘机品牌', '南特', 'N', 4, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (461, '挖掘机品牌', '南特机械', 'N', 5, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (462, '挖掘机品牌', '宁工重机', 'N', 6, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (463, '挖掘机品牌', '普什重机', 'P', 1, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (464, '挖掘机品牌', '彭浦', 'P', 2, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (465, '挖掘机品牌', '泉州鑫豪', 'Q', 1, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (466, '挖掘机品牌', '七天阳', 'Q', 2, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (467, '挖掘机品牌', '勤牛', 'Q', 3, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (468, '挖掘机品牌', '奇瑞迪凯重科', 'Q', 4, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (469, '挖掘机品牌', '青州神娃', 'Q', 5, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (470, '挖掘机品牌', '其它品牌挖掘机', 'Q', 6, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (471, '挖掘机品牌', '日立', 'R', 1, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (472, '挖掘机品牌', '熔盛机械', 'R', 2, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (473, '挖掘机品牌', '瑞德路业', 'R', 3, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (474, '挖掘机品牌', '三一', 'S', 1, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (475, '挖掘机品牌', '山东临工', 'S', 2, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (476, '挖掘机品牌', '厦工', 'S', 3, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (477, '挖掘机品牌', '神钢', 'S', 4, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (478, '挖掘机品牌', '山猫', 'S', 5, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (479, '挖掘机品牌', '神娃机械', 'S', 6, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (480, '挖掘机品牌', '山重建机', 'S', 7, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (481, '挖掘机品牌', '山河智能', 'S', 8, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (482, '挖掘机品牌', '厦装', 'S', 9, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (483, '挖掘机品牌', '石川岛', 'S', 10, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (484, '挖掘机品牌', '上海彭浦', 'S', 11, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (485, '挖掘机品牌', '山猛机械', 'S', 12, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (486, '挖掘机品牌', '上力重工', 'S', 13, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (487, '挖掘机品牌', '三一重工', 'S', 14, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (488, '挖掘机品牌', '山中建机', 'S', 15, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (489, '挖掘机品牌', '山东常林', 'S', 16, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (490, '挖掘机品牌', '山东力士', 'S', 17, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (491, '挖掘机品牌', '山鼎重工', 'S', 18, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (492, '挖掘机品牌', '山东勇马', 'S', 19, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (493, '挖掘机品牌', '森田重机', 'S', 20, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (494, '挖掘机品牌', '山东中际', 'S', 21, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (495, '挖掘机品牌', '山东众合', 'S', 22, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (496, '挖掘机品牌', '沭工', 'S', 23, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (497, '挖掘机品牌', '山推', 'S', 24, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (498, '挖掘机品牌', '山特重工', 'S', 25, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (499, '挖掘机品牌', '铁力士', 'T', 1, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (500, '挖掘机品牌', '特雷克斯', 'T', 2, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (501, '挖掘机品牌', '泰安现代重工', 'T', 3, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (502, '挖掘机品牌', '沃尔沃', 'T', 4, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (503, '挖掘机品牌', '沃得重工', 'T', 5, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (504, '挖掘机品牌', '沃尔华', 'T', 6, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (505, '挖掘机品牌', '威克诺森', 'W', 1, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (506, '挖掘机品牌', '徐工', 'X', 1, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (507, '挖掘机品牌', '小松', 'X', 2, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (508, '挖掘机品牌', '徐挖', 'X', 3, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (509, '挖掘机品牌', '犀牛重工', 'X', 4, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (510, '挖掘机品牌', '小橋', 'X', 5, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (511, '挖掘机品牌', '现代', 'X', 6, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (512, '挖掘机品牌', '新源机械', 'X', 7, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (513, '挖掘机品牌', '宣工', 'X', 8, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (514, '挖掘机品牌', '新天和', 'X', 9, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (515, '挖掘机品牌', '信锐重工', 'X', 10, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (516, '挖掘机品牌', '新源', 'X', 11, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (517, '挖掘机品牌', '小桥', 'X', 12, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (518, '挖掘机品牌', '徐威重科', 'X', 13, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (519, '挖掘机品牌', '徐州东德', 'X', 14, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (520, '挖掘机品牌', '新筑股份', 'X', 15, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (521, '挖掘机品牌', '原装日立', 'Y', 1, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (522, '挖掘机品牌', '玉柴', 'Y', 2, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (523, '挖掘机品牌', '永工', 'Y', 3, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (524, '挖掘机品牌', '洋马', 'Y', 4, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (525, '挖掘机品牌', '原装神钢', 'Y', 5, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (526, '挖掘机品牌', '愚公机械', 'Y', 6, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (527, '挖掘机品牌', '宜工', 'Y', 7, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (528, '挖掘机品牌', '约翰迪尔', 'Y', 8, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (529, '挖掘机品牌', '烟工', 'Y', 9, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (530, '挖掘机品牌', '忆辉', 'Y', 10, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (531, '挖掘机品牌', '驭工机械', 'Y', 11, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (532, '挖掘机品牌', '移山', 'Y', 12, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (533, '挖掘机品牌', '野牛', 'Y', 13, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (534, '挖掘机品牌', '宜春工程', 'Y', 14, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (535, '挖掘机品牌', '驭工', 'Y', 15, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (536, '挖掘机品牌', '愚公机械', 'Y', 16, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (537, '挖掘机品牌', '愚公机械', 'Y', 17, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (538, '挖掘机品牌', '远大机械', 'Y', 18, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (539, '挖掘机品牌', '远山机械', 'Y', 19, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (540, '挖掘机品牌', '一拖', 'Y', 20, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (541, '挖掘机品牌', '中联重科', 'Y', 21, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (542, '挖掘机品牌', '竹内', 'Z', 1, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (543, '挖掘机品牌', '住友', 'Z', 2, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (544, '挖掘机品牌', '詹阳动力', 'Z', 3, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (545, '挖掘机品牌', '浙江军联', 'Z', 4, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (546, '挖掘机品牌', '早山重工', 'Z', 5, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (547, '挖掘机品牌', '重庆勤牛', 'Z', 6, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (548, '挖掘机品牌', '中国北车', 'Z', 7, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (549, '挖掘机品牌', '正泰机械', 'Z', 8, 285);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (550, '挖掘机品牌', '中国重汽海斗', 'Z', 9, 285);
+
 prompt Done.

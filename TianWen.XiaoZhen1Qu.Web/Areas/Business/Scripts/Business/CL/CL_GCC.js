@@ -18,8 +18,7 @@ $(document).ready(function () {
     $("#btnClose").bind("click", CloseWindow);
     $("#div_dz_close").bind("click", CloseWindow);
     $("#span_content_info_qGCCs").bind("click", LoadXZQByGrade);
-    $("body").bind("click", CloseXZQ);
-    $("body").bind("click", function () { Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });
+    $("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });
     $("#div_top_right_inner_yhm").bind("mouseover", ShowYGCCD);
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYGCCD);
     LoadTXXX();
@@ -409,9 +408,4 @@ function FB() {
 
         }
     });
-}
-//关闭
-function Close(id) {
-    $("#div" + id).css("display", "none");
-    LeaveStyle(id);
 }

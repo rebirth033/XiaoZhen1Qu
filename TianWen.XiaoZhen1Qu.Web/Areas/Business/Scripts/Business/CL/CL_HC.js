@@ -20,18 +20,15 @@ $(document).ready(function () {
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
 
     LoadTXXX();
-    LoadHCLB();
     LoadPP();
     LoadDefault();
     LoadCL_HCJBXX();
-    LoadPPMC("divRM");
-    BindHover("LB");
+    BindClick("LB");
     BindClick("CCNX");
     BindClick("CCYF");
     BindClick("QY");
     BindClick("DD");
-    BindHover("GCSJ");
-    BindHover("PP");
+    BindClick("GCSJ");
 });
 //加载品牌标签
 function LoadPP() {
@@ -159,7 +156,7 @@ function LoadHCLB() {
                 }
                 html += "</ul>";
                 $("#divLB").html(html);
-                $("#divLB").css("display", "none");
+                $("#divLB").css("display", "block");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -283,21 +280,28 @@ function LeaveStyle(name) {
     $("#div" + name).find("ul").css("border-left", "1px solid #cccccc").css("border-right", "1px solid #cccccc").css("border-bottom", "1px solid #cccccc");
     $("#span" + name).css("color", "#999999");
 }
-//绑定下拉框鼠标盘旋样式
-function BindHover(type) {
-    $("#div" + type + "Text").hover(function () {
-        $("#div" + type).css("display", "block");
-        HoverStyle(type);
-    }, function () {
-        $("#div" + type).css("display", "none");
-        LeaveStyle(type);
-    });
-    $("#div" + type).hover(function () {
-        $("#div" + type).css("display", "block");
-        HoverStyle(type);
-    }, function () {
-        $("#div" + type).css("display", "none");
-        LeaveStyle(type);
+//绑定下拉框鼠标点击样式
+function BindClick(type) {
+    $("#div" + type + "Span").click(function () {
+        if (type === "LB") {
+            LoadHCLB();
+        }
+        if (type === "PP") {
+            LoadPP();
+            LoadPPMC("挖掘机品牌", "divRM");
+        }
+        if (type === "CCNX") {
+            LoadCCNX();
+        }
+        if (type === "CCYF") {
+            LoadCCYF();
+        }
+        if (type === "QY") {
+            LoadQY();
+        }
+        if (type === "DD") {
+            LoadDD($("#QYCode").val());
+        }
     });
 }
 //选择下拉框
