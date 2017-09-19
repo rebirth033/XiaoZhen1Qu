@@ -212,7 +212,35 @@ namespace TianWen.XiaoZhen1Qu.BLL
         {
             try
             {
-                IList<CODES_CL> list = DAO.Repository.GetObjectList<CODES_CL>(String.Format("FROM CODES_CL WHERE CODEVALUE like '%{0}%' ORDER BY CODEORDER", HC));
+                IList<CODES_CL> list = DAO.Repository.GetObjectList<CODES_CL>(String.Format("FROM CODES_CL WHERE TYPENAME = '货车' AND CODEVALUE like '%{0}%' ORDER BY CODEORDER", HC));
+                return new { Result = EnResultType.Success, list = list };
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("error", ex.Message);
+                return new { Result = EnResultType.Failed, Message = "加载失败" };
+            }
+        }
+
+        public object LoadGCCJBXX(string GCC)
+        {
+            try
+            {
+                IList<CODES_CL> list = DAO.Repository.GetObjectList<CODES_CL>(String.Format("FROM CODES_CL WHERE TYPENAME = '工程车' AND CODEVALUE like '%{0}%' ORDER BY CODEORDER", GCC));
+                return new { Result = EnResultType.Success, list = list };
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("error", ex.Message);
+                return new { Result = EnResultType.Failed, Message = "加载失败" };
+            }
+        }
+
+        public object LoadGCCPPXX(string GCCLX, string GCCBQ)
+        {
+            try
+            {
+                IList<CODES_CL> list = DAO.Repository.GetObjectList<CODES_CL>(String.Format("FROM CODES_CL WHERE TYPENAME = '{0}' AND CODEVALUE like '%{1}%' ORDER BY CODEORDER", GCCLX, GCCBQ));
                 return new { Result = EnResultType.Success, list = list };
             }
             catch (Exception ex)

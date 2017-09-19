@@ -78,27 +78,52 @@
             </table>
         </div>
         <div id="myTabContent" class="div_content">
+            <div id="divLeiBXZ" class="divSplit" style="display: block; text-align: left">
+                <span class="spanSplit">类别选择</span>
+                <em class="emSplit"></em>
+            </div>
+            <div id="divLB" class="divFWCZ">
+                <div class="divLeft" style="margin-left: 128px;">
+                    <span class="required">*</span>
+                    <span class="spanFWCZ">类别</span>
+                </div>
+                <div class="divRight">
+                    <img class="iFWCZ" id="imgCLMM" /><label class="labelFWCZ">&nbsp;&nbsp;车辆买卖</label>
+                    <img class="iFWCZ" id="imgPJ"/><label class="labelFWCZ">&nbsp;&nbsp;配件&nbsp;&nbsp;</label>
+                    <img class="iFWCZ" id="imgWXBY" /><label class="labelFWCZ">&nbsp;&nbsp;维修/保养&nbsp;&nbsp;</label>
+                </div>
+            </div>
             <div id="divJBXX" class="divSplit" style="display: block; text-align: left">
                 <span class="spanSplit">基本信息</span>
                 <em class="emSplit"></em>
             </div>
-            <div id="divGCCLB" class="divFWCZ" style="z-index: 999">
+            <div id="divGCCCX" class="divFWCZ" style="z-index: 999">
                 <div class="divLeft" style="margin-left: 128px;">
                     <span class="required">*</span>
                     <span class="spanFWCZ">车型</span>
                 </div>
                 <div class="divRight">
-                    <div id="divLBText" class="spanFWLXOut SRK" style="position: relative;">
-                        <div class="spanFWLXIn" style="border: none; margin-top: 6px;">
-                            <span id="spanLB" class="spanFWQK spanFontColor" style="margin-top: 0">请选择类别</span>
+                    <div id="divCXText" class="spanFWLXOut SRK" style="position: relative;">
+                        <div id="divCXSpan" class="spanFWLXIn" style="border: none; margin-top: 6px;">
+                            <span id="spanCX" class="spanFWQK spanFontColor" style="margin-top: 0">请选择车型</span>
                             <div class="divFWQKArrow"></div>
                         </div>
-                        <div id="divLB" class="divdropdown" style="margin-top: -7px; margin-left: -1px;">
+                        <div id="divCX" class="div_xzk" style="display: none;">
+                            <div class="div_xzk_head">
+                                <input class="input_content" type="text" placeholder="输入名称快速搜索" style="cursor: text" />
+                                <input class="btn btn-info" type="button" value="快速搜索" />
+                            </div>
+                            <div class="div_xzk_body">
+                                <div class="div_content_yxmc" id="div_content_gccmc">
+                                </div>
+                                <div class="div_content_yxbq" id="div_content_gccbq">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="divGCCPP" class="divFWCZ" style="z-index: 998">
+            <div id="divGCCPP" class="divFWCZ" style="z-index: 998; display: none">
                 <div class="divLeft" style="margin-left: 128px;">
                     <span class="required">*</span>
                     <span class="spanFWCZ">品牌</span>
@@ -147,32 +172,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div id="divEDZZ" class="divFWCZ" style="z-index: 995;">
-                <div class="divLeft" style="margin-left: 101px;">
-                    <span class="required">*</span>
-                    <span class="spanFWCZ">额定载重</span>
-                </div>
-                <div class="divRight">
-                    <span id="spanEDZZ" class="spanFWLX SRK" style="display: inline-block;">
-                        <input class="inputLCFB spanFontColor" id="EDZZ" maxlength="9" column="EDZZ" type="text" style="width: 118px" />
-                        <span class="spanFontColor">吨</span>
-                    </span>
-                </div>
-                <div id="divEDZZTip" class="Warn" style="z-index: 994; position: relative;"></div>
-            </div>
-            <div id="divXSLC" class="divFWCZ" style="z-index: 995;">
-                <div class="divLeft" style="margin-left: 101px;">
-                    <span class="required">*</span>
-                    <span class="spanFWCZ">行驶里程</span>
-                </div>
-                <div class="divRight">
-                    <span id="spanXSLC" class="spanFWLX SRK" style="display: inline-block;">
-                        <input class="inputLCFB spanFontColor" id="XSLC" maxlength="9" column="XSLC" type="text" style="width: 90px" />
-                        <span class="spanFontColor">万公里</span>
-                    </span>
-                </div>
-                <div id="divXSLCTip" class="Warn" style="z-index: 994; position: relative;"></div>
             </div>
             <div id="divJG" class="divFWCZ" style="z-index: 995;">
                 <div class="divLeft" style="margin-left: 101px;">
@@ -231,7 +230,7 @@
                     <span id="spanFYMS" style="vertical-align: top">补充描述</span>
                 </div>
                 <div class="divRight">
-                    <script id="FYMS" type="text/plain" style="width:594px;height:200px;display:inline-block;">
+                    <script id="FYMS" type="text/plain" style="width: 594px; height: 200px; display: inline-block;">
                     </script>
                     <div id="divFYMSTip" class="Warn"></div>
                 </div>

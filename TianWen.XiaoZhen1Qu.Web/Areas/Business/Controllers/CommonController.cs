@@ -118,6 +118,16 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return Json(CommonBLL.LoadHCJBXX(Request["HC"]));
         }
 
+        public JsonResult LoadGCCJBXX()
+        {
+            return Json(CommonBLL.LoadGCCJBXX(Request["GCC"]));
+        }
+
+        public JsonResult LoadGCCPPXX()
+        {
+            return Json(CommonBLL.LoadGCCPPXX(Request["GCCLX"], Request["GCCBQ"]));
+        }
+
         public JsonResult LoadGCQXXH()
         {
             return Json(CommonBLL.LoadGCQXXH(Request["PPID"]));
