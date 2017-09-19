@@ -101,14 +101,14 @@ function LoadQY() {
     });
 }
 //加载地段
-function LoadDD(QY) {
+function LoadDD() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/Common/LoadSQ",
         dataType: "json",
         data:
         {
-            QY: QY
+            QY: $("#QYCode").val()
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -132,5 +132,5 @@ function SelectQY(obj, type, code) {
     $("#QYCode").val(code);
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-    LoadDD(code);
+    LoadDD();
 }

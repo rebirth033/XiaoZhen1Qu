@@ -194,11 +194,6 @@ function LoadXJ() {
         }
     });
 }
-//选择下拉框
-function SelectDropdown(obj, type) {
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
-}
 //选择类别下拉框
 function SelectLB(obj, type) {
     $("#span" + type).html(obj.innerHTML);
@@ -248,12 +243,6 @@ function BindClick(type) {
             LoadDD($("#QYCode").val());
         }
     });
-}
-//选择区域下拉框
-function SelectQY(obj, type, code) {
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
-    LoadDD(code);
 }
 //选择自行车/电动车/三轮车品牌
 function SelectPBPP(obj, type, code) {
@@ -310,10 +299,10 @@ function LoadCL_ZXCDDCSLCJBXX() {
                 $("#spanCC").html(xml.Value.CL_ZXCDDCSLCJBXX.CC);
                 $("#spanDCDY").html(xml.Value.CL_ZXCDDCSLCJBXX.DCDY);
                 $("#spanDCRL").html(xml.Value.CL_ZXCDDCSLCJBXX.DCRL);
-
+                $("#spanXL").html(xml.Value.CL_ZXCDDCSLCJBXX.XL);
                 LoadPhotos(xml.Value.Photos);
                 PDLB(xml.Value.CL_ZXCDDCSLCJBXX.LB);
-                $("#spanXL").html(xml.Value.CL_ZXCDDCSLCJBXX.XL);
+                
                 return;
             }
         },
