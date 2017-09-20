@@ -60,7 +60,7 @@
     <Compile Include="Maps\CODES_CL_Map.cs" />
     <Compile Include="Maps\CODES_COMPUTER_Map.cs" />
     <Compile Include="Maps\CODES_JDJJBG_Map.cs" />
-    <Compile Include="Maps\CODES_Map.cs" />
+    <Compile Include="Maps\CODES_FC_Map.cs" />
     <Compile Include="Maps\CODES_MYFZMR_Map.cs" />
     <Compile Include="Maps\CODES_PHONE_Map.cs" />
     <Compile Include="Maps\CODES_QTES_Map.cs" />
@@ -106,7 +106,7 @@
     <Compile Include="Models\CL_GCCJBXX.cs" />
     <Compile Include="Models\CL_HCJBXX.cs" />
     <Compile Include="Models\CL_MTCJBXX.cs" />
-    <Compile Include="Models\CODES.cs" />
+    <Compile Include="Models\CODES_FC.cs" />
     <Compile Include="Models\CODES_CL.cs" />
     <Compile Include="Models\CODES_COMPUTER.cs" />
     <Compile Include="Models\CODES_JDJJBG.cs" />

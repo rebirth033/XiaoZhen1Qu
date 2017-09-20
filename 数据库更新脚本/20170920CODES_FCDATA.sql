@@ -287,21 +287,72 @@ insert into codes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (95, '可注册公司', '否', '0', 0, null);
 
 insert into codes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (96, '不动产其它类型', '仓库', '1', 1, null);
+values (96, '不动产其他类型', '仓库', '1', 1, null);
 
 insert into codes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (97, '不动产其它类型', '厂房', '2', 2, null);
+values (97, '不动产其他类型', '厂房', '2', 2, null);
 
 insert into codes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (98, '不动产其它类型', '土地', '3', 3, null);
+values (98, '不动产其他类型', '土地', '3', 3, null);
 
 insert into codes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (99, '不动产其它类型', '车位', '4', 4, null);
+values (99, '不动产其他类型', '车位', '4', 4, null);
 
 insert into codes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (100, '不动产其它类型租金单位', '元/㎡/天', '1', 1, null);
+values (100, '不动产其他类型租单位', '元/㎡/天', '1', 1, null);
 
 insert into codes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (101, '不动产其它类型租金单位', '元/月', '2', 2, null);
+values (101, '不动产其他类型租单位', '元/月', '2', 2, null);
+
+insert into codes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (102, '新旧程度', '全新', '1', 1, null);
+
+insert into codes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (103, '新旧程度', '95成新', '2', 2, null);
+
+insert into codes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (104, '新旧程度', '9成新', '3', 3, null);
+
+insert into codes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (105, '新旧程度', '8成新', '4', 4, null);
+
+insert into codes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (106, '新旧程度', '7成新及以下', '5', 5, null);
+
+insert into codes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (107, '笔记本配件', '笔记本包', '1', 1, null);
+
+insert into codes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (108, '笔记本配件', '笔记本电源', '2', 2, null);
+
+insert into codes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (109, '笔记本配件', '笔记本电池', '3', 3, null);
+
+insert into codes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (110, '笔记本配件', '支架/散热垫', '4', 4, null);
+
+insert into codes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (111, '笔记本配件', '笔记本内存', '5', 5, null);
+
+insert into codes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (112, '笔记本配件', '笔记本硬盘', '6', 6, null);
+
+insert into codes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (113, '笔记本配件', '其他配件', '7', 7, null);
+
+insert into codes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (114, '平板电脑配件', '保护套', '1', 1, null);
+
+insert into codes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (115, '平板电脑配件', '底座/支架', '2', 2, null);
+
+insert into codes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (116, '平板电脑配件', '数据线/转接线', '3', 3, null);
+
+insert into codes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (117, '平板电脑配件', '平板电脑包', '4', 4, null);
+
+insert into codes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (118, '平板电脑配件', '其他配件', '5', 5, null);
 
 prompt Done.

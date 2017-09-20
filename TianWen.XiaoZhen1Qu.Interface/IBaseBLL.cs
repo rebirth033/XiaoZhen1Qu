@@ -4,7 +4,7 @@ namespace TianWen.XiaoZhen1Qu.Interface
 {
     public interface IBaseBLL
     {
-        object LoadCODES(string TYPENAME);
+        object LoadCODES_FC(string TYPENAME);
 
         object LoadCODES_PHONE(string TYPENAME);
 

@@ -11,11 +11,11 @@ namespace TianWen.XiaoZhen1Qu.BLL
     {
         public IDAO DAO { set; get; }
 
-        public object LoadCODES(string TYPENAME)
+        public object LoadCODES_FC(string TYPENAME)
         {
             try
             {
-                IList<CODES> list = DAO.Repository.GetObjectList<CODES>(String.Format("FROM CODES WHERE TYPENAME='{0}' ORDER BY CODEORDER", TYPENAME));
+                IList<CODES_FC> list = DAO.Repository.GetObjectList<CODES_FC>(String.Format("FROM CODES_FC WHERE TYPENAME='{0}' ORDER BY CODEORDER", TYPENAME));
                 return new { Result = EnResultType.Success, list = list };
             }
             catch (Exception ex)

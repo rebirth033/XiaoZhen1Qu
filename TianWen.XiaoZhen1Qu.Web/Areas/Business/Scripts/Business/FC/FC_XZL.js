@@ -113,7 +113,7 @@ function CSSelect() {
 function LoadXZLLX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES",
+        url: getRootPath() + "/Business/Common/LoadCODES_FC",
         dataType: "json",
         data:
         {
@@ -139,7 +139,7 @@ function LoadXZLLX() {
 function LoadKZCGS() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES",
+        url: getRootPath() + "/Business/Common/LoadCODES_FC",
         dataType: "json",
         data:
         {
@@ -217,7 +217,7 @@ function LoadSQ(QY) {
 function LoadZJDW() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES",
+        url: getRootPath() + "/Business/Common/LoadCODES_FC",
         dataType: "json",
         data:
         {

@@ -92,14 +92,14 @@
                     <img class="iFWCZ" id="imgSJHS" /><label class="labelFWCZ">&nbsp;&nbsp;商家回收&nbsp;&nbsp;</label>
                 </div>
             </div>
-            <div id="divLB" class="divFWCZ" style="z-index: 999">
+            <div id="divSJLB" class="divFWCZ" style="z-index: 999">
                 <div class="divLeft" style="margin-left: 60px;">
                     <span class="required">*</span>
                     <span class="spanFWCZ">手机品牌与型号</span>
                 </div>
                 <div class="divRight">
                     <div id="divSJPPText" class="spanFWLXOut SRK" style="border: 1px solid #cccccc; border-radius: 4px; z-index: 997; position: relative;">
-                        <div class="spanFWLXIn" style="border: none; margin-top: 6px;">
+                        <div id="divSJPPSpan" class="spanFWLXIn" style="border: none; margin-top: 6px;">
                             <span id="spanSJPP" class="spanFWQK spanFontColor" style="margin-top: 0">请选择品牌</span>
                             <div class="divFWQKArrow"></div>
                         </div>
@@ -107,7 +107,7 @@
                         </div>
                     </div>
                     <div id="divSJXHText" class="spanFWLXOut SRK" style="border: 1px solid #cccccc; border-radius: 4px; z-index: 997; position: relative;">
-                        <div class="spanFWLXIn" style="border: none; margin-top: 6px;">
+                        <div id="divSJXHSpan" class="spanFWLXIn" style="border: none; margin-top: 6px;">
                             <span id="spanSJXH" class="spanFWQK spanFontColor" style="margin-top: 0">请选择型号</span>
                             <div class="divFWQKArrow"></div>
                         </div>
@@ -147,19 +147,20 @@
                 </div>
                 <div class="divRight">
                     <div id="divQYText" class="spanFWLXOut SRK" style="border: 1px solid #cccccc; border-radius: 4px; z-index: 997; position: relative;">
-                        <div class="spanFWLXIn" style="border: none; margin-top: 6px;">
+                        <div id="divQYSpan" class="spanFWLXIn" style="border: none; margin-top: 6px;">
+                            <input type="hidden" id="QYCode" />
                             <span id="spanQY" class="spanFWQK spanFontColor" style="margin-top: 0">请选择区域</span>
                             <div class="divFWQKArrow"></div>
                         </div>
                         <div id="divQY" class="divdropdown" style="margin-top: -7px; margin-left: -1px;">
                         </div>
                     </div>
-                    <div id="divSQText" class="spanFWLXOut SRK" style="border: 1px solid #cccccc; border-radius: 4px; z-index: 997; position: relative;">
-                        <div class="spanFWLXIn" style="border: none; margin-top: 6px;">
-                            <span id="spanSQ" class="spanFWQK spanFontColor" style="margin-top: 0">请选择地段</span>
+                    <div id="divDDText" class="spanFWLXOut SRK" style="border: 1px solid #cccccc; border-radius: 4px; z-index: 997; position: relative;">
+                        <div id="divDDSpan" class="spanFWLXIn" style="border: none; margin-top: 6px;">
+                            <span id="spanDD" class="spanFWQK spanFontColor" style="margin-top: 0">请选择地段</span>
                             <div class="divFWQKArrow"></div>
                         </div>
-                        <div id="divSQ" class="divdropdown" style="margin-top: -7px; margin-left: -1px;">
+                        <div id="divDD" class="divdropdown" style="margin-top: -7px; margin-left: -1px;">
                         </div>
                     </div>
                 </div>

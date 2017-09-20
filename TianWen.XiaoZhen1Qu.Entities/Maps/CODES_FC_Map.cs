@@ -3,11 +3,11 @@ using TianWen.XiaoZhen1Qu.Entities.Models;
 
 namespace TianWen.XiaoZhen1Qu.Entities.Maps
 {
-    public class CODES_Map : ClassMap<CODES>
+    public class CODES_FC_Map : ClassMap<CODES_FC>
     {
-        public CODES_Map()
+        public CODES_FC_Map()
         {
-            Table("CODES");
+            Table("CODES_FC");
             #region 属性
             Id(x => x.CODEID, "CODEID").GeneratedBy.Assigned().CustomType("System.Int32");
             Map(x => x.TYPENAME, "TYPENAME");

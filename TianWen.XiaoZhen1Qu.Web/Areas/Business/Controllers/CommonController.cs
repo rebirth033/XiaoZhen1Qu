@@ -29,10 +29,10 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return Json(result);
         }
 
-        public JsonResult LoadCODES()
+        public JsonResult LoadCODES_FC()
         {
             string TYPENAME = Request["TYPENAME"];
-            return Json(CommonBLL.LoadCODES(TYPENAME));
+            return Json(CommonBLL.LoadCODES_FC(TYPENAME));
         }
 
         public JsonResult LoadCODES_PHONE()
