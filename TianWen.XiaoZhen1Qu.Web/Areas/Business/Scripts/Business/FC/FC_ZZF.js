@@ -21,15 +21,17 @@ $(document).ready(function () {
     $("#inputUpload").bind("change", Upload);
     $("#btnClose").bind("click", CloseWindow);
     $("#span_content_info_qhcs").bind("click", LoadXZQByGrade);
-    $("body").bind("click", CloseXZQ);
+    $("body").bind("click", function () { Close("_XZQ"); Close("LB"); Close("XL"); Close("XJ"); Close("QY"); Close("SQ"); });
 
-    BindHover();
-    LoadTXXX();
-    LoadFWCX();
-    LoadZXQK();
-    LoadZZLX();
-    LoadYFFS();
+    BindClick("FWCX");
+    BindClick("ZXQK");
+    BindClick("ZZLX");
+    BindClick("YFFS");
     LoadBHFY();
+    LoadFWPZ();
+    LoadFWLD();
+    LoadCZYQ();
+    LoadTXXX();
     LoadDefault();
     FYMSSetDefault();
 });
@@ -81,49 +83,22 @@ function FWLXYLCFBBlur() {
     if ($(this)[0].id === "PFM")
         $("#spanPFM").css("border", "1px solid #cccccc");
 }
-
+//加载默认
 function LoadDefault() {
     $("#imgZTCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
     $("#imgDJCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
 }
-
-function LoadTXXX() {
-    $("#spanTXXX").css("color", "#5bc0de");
-    $("#emTXXX").css("background", "#5bc0de");
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/LBXZ/LoadLBByID",
-        dataType: "json",
-        data:
-        {
-            LBID: getUrlParam("CLICKID")
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                if (xml.list.length > 0)
-                    $("#spanLBXZ").html("1." + xml.list[0].LBNAME);
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-
-function CXLB() {
-    window.location.href = getRootPath() + "/Business/LBXZ/LBXZ";
-}
-
+//选择整套出租
 function ZTCZSelect() {
     $("#imgZTCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
     $("#imgDJCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
 }
-
+//选择单间出租
 function DJCZSelect() {
     $("#imgZTCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
     $("#imgDJCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
 }
-
+//加载小区名称
 function LoadXQMC() {
     if (event.keyCode === 40) {//按下
         var lis = $("#divXQMClist").find("li");
@@ -173,12 +148,11 @@ function LoadXQMC() {
     else
         LoadXQJBXXSByPY(XQMC);
 }
-
 //根据汉字获取小区信息
 function LoadXQJBXXSByHZ(XQMC) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC_FW/LoadXQJBXXSByHZ",
+        url: getRootPath() + "/Business/FC_ZZF/LoadXQJBXXSByHZ",
         dataType: "json",
         data:
         {
@@ -212,7 +186,7 @@ function LoadXQJBXXSByHZ(XQMC) {
 function LoadXQJBXXSByPY(XQMC) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC_FW/LoadXQJBXXSByPY",
+        url: getRootPath() + "/Business/FC_ZZF/LoadXQJBXXSByPY",
         dataType: "json",
         data:
         {
@@ -267,7 +241,7 @@ function LoadXQJBXXSByPY(XQMC) {
         }
     });
 }
-
+//获取开始索引
 function GetStartIndex(pys, sqmc) {
     var index = 0;
     for (var j = 0; j < pys.length; j++) {
@@ -286,11 +260,28 @@ function GetStartIndex(pys, sqmc) {
     }
     return index;
 }
-
+//根据首字母获取开始索引
 function GetStartIndexBySZM(pyszm, sqmc) {
     return pyszm.indexOf(sqmc);
 }
-
+//绑定下拉框鼠标点击样式
+function BindClick(type) {
+    $("#div" + type + "Span").click(function () {
+        if (type === "FWCX") {
+            LoadFWCX();
+        }
+        if (type === "ZXQK") {
+            LoadZXQK();
+        }
+        if (type === "ZZLX") {
+            LoadZZLX();
+        }
+        if (type === "YFFS") {
+            LoadYFFS();
+        }
+    });
+}
+//加载房屋朝向
 function LoadFWCX() {
     $.ajax({
         type: "POST",
@@ -308,7 +299,8 @@ function LoadFWCX() {
                 }
                 html += "</ul>";
                 $("#divFWCX").html(html);
-                $("#divFWCX").css("display", "none");
+                $("#divFWCX").css("display", "block");
+                ActiveStyle("FWCX");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -316,7 +308,7 @@ function LoadFWCX() {
         }
     });
 }
-
+//加载装修情况
 function LoadZXQK() {
     $.ajax({
         type: "POST",
@@ -328,13 +320,14 @@ function LoadZXQK() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='height: 171px;'>";//<li class='lidropdown'>请选择装修情况</li>
+                var html = "<ul class='uldropdown' style='height: 171px;'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='lidropdown' onclick='SelectZXQK(this)'>" + xml.list[i].CODENAME + "</li>";
                 }
                 html += "</ul>";
                 $("#divZXQK").html(html);
-                $("#divZXQK").css("display", "none");
+                $("#divZXQK").css("display", "block");
+                ActiveStyle("ZXQK");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -342,7 +335,7 @@ function LoadZXQK() {
         }
     });
 }
-
+//加载住宅类型
 function LoadZZLX() {
     $.ajax({
         type: "POST",
@@ -354,13 +347,14 @@ function LoadZZLX() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";//<li class='lidropdown'>请选择住宅类型</li>
+                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='lidropdown' onclick='SelectZZLX(this)'>" + xml.list[i].CODENAME + "</li>";
                 }
                 html += "</ul>";
                 $("#divZZLX").html(html);
-                $("#divZZLX").css("display", "none");
+                $("#divZZLX").css("display", "block");
+                ActiveStyle("ZZLX");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -368,7 +362,7 @@ function LoadZZLX() {
         }
     });
 }
-
+//加载押付方式
 function LoadYFFS() {
     $.ajax({
         type: "POST",
@@ -380,13 +374,14 @@ function LoadYFFS() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";//<li class='lidropdown'>请选择住宅类型</li>
+                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='lidropdown' onclick='SelectYFFS(this)'>" + xml.list[i].CODENAME + "</li>";
                 }
                 html += "</ul>";
                 $("#divYFFS").html(html);
-                $("#divYFFS").css("display", "none");
+                $("#divYFFS").css("display", "block");
+                ActiveStyle("YFFS");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -394,7 +389,7 @@ function LoadYFFS() {
         }
     });
 }
-
+//加载包含费用
 function LoadBHFY() {
     $.ajax({
         type: "POST",
@@ -423,7 +418,7 @@ function LoadBHFY() {
         }
     });
 }
-
+//加载房屋配置
 function LoadFWPZ() {
     $.ajax({
         type: "POST",
@@ -452,7 +447,7 @@ function LoadFWPZ() {
         }
     });
 }
-
+//加载房屋亮点
 function LoadFWLD() {
     $.ajax({
         type: "POST",
@@ -481,7 +476,7 @@ function LoadFWLD() {
         }
     });
 }
-
+//加载出租要求
 function LoadCZYQ() {
     $.ajax({
         type: "POST",
@@ -503,85 +498,14 @@ function LoadCZYQ() {
                 html += "</ul>";
                 $("#divCZYQText").html(html);
             }
-            LoadFWCZXX();
+            LoadFC_ZZFXX();
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
         }
     });
 }
-
-function HoverStyle(name) {
-    $("#div" + name + "Text").css("border-top", "1px solid #5bc0de").css("border-right", "1px solid #5bc0de").css("border-left", "1px solid #5bc0de").css("border-bottom", "1px solid #5bc0de");
-    $("#div" + name).find("ul").css("border-left", "1px solid #5bc0de").css("border-right", "1px solid #5bc0de").css("border-bottom", "1px solid #5bc0de");
-    $("#span" + name).css("color", "#333333");
-}
-
-function LeaveStyle(name) {
-    $("#div" + name + "Text").css("border-top", "1px solid #cccccc").css("border-right", "1px solid #cccccc").css("border-left", "1px solid #cccccc").css("border-bottom", "1px solid #cccccc");
-    $("#div" + name).find("ul").css("border-left", "1px solid #cccccc").css("border-right", "1px solid #cccccc").css("border-bottom", "1px solid #cccccc");
-    $("#span" + name).css("color", "#999999");
-}
-
-function BindHover() {
-    $("#divFWCXText").hover(function () {
-        $("#divFWCX").css("display", "block");
-        HoverStyle("FWCX");
-    }, function () {
-        $("#divFWCX").css("display", "none");
-        LeaveStyle("FWCX");
-    });
-    $("#divFWCX").hover(function () {
-        $("#divFWCX").css("display", "block");
-        HoverStyle("FWCX");
-    }, function () {
-        $("#divFWCX").css("display", "none");
-        LeaveStyle("FWCX");
-    });
-    $("#divZXQKText").hover(function () {
-        $("#divZXQK").css("display", "block");
-        HoverStyle("ZXQK");
-    }, function () {
-        $("#divZXQK").css("display", "none");
-        LeaveStyle("ZXQK");
-    });
-    $("#divZXQK").hover(function () {
-        $("#divZXQK").css("display", "block");
-        HoverStyle("ZXQK");
-    }, function () {
-        $("#divZXQK").css("display", "none");
-        LeaveStyle("ZXQK");
-    });
-    $("#divZZLXText").hover(function () {
-        $("#divZZLX").css("display", "block");
-        HoverStyle("ZZLX");
-    }, function () {
-        $("#divZZLX").css("display", "none");
-        LeaveStyle("ZZLX");
-    });
-    $("#divZZLX").hover(function () {
-        $("#divZZLX").css("display", "block");
-        HoverStyle("ZZLX");
-    }, function () {
-        $("#divZZLX").css("display", "none");
-        LeaveStyle("ZZLX");
-    });
-    $("#divYFFSText").hover(function () {
-        $("#divYFFS").css("display", "block");
-        HoverStyle("YFFS");
-    }, function () {
-        $("#divYFFS").css("display", "none");
-        LeaveStyle("YFFS");
-    });
-    $("#divYFFS").hover(function () {
-        $("#divYFFS").css("display", "block");
-        HoverStyle("YFFS");
-    }, function () {
-        $("#divYFFS").css("display", "none");
-        LeaveStyle("YFFS");
-    });
-}
-
+//选择小区名称
 function SelectXQMC(obj) {
     var html = "";
     for (var i = 0; i < $(obj).find("span").length - 1; i++) {
@@ -591,34 +515,34 @@ function SelectXQMC(obj) {
     $("#divXQMClist").css("display", "none");
     isleave = true;
 }
-
+//选择房屋朝向
 function SelectFWCX(obj) {
     $("#spanFWCX").html(obj.innerHTML);
     $("#divFWCX").css("display", "none");
 }
-
+//选择装修情况
 function SelectZXQK(obj) {
     $("#spanZXQK").html(obj.innerHTML);
     $("#divZXQK").css("display", "none");
 }
-
+//选择住宅类型
 function SelectZZLX(obj) {
     $("#spanZZLX").html(obj.innerHTML);
     $("#divZZLX").css("display", "none");
 }
-
+//选择押付方式
 function SelectYFFS(obj) {
     $("#spanYFFS").html(obj.innerHTML);
     $("#divYFFS").css("display", "none");
 }
-
+//选择房屋配置
 function SelectFWPZ(obj) {
     if ($(obj).css("color") === "rgb(51, 51, 51)")
         $(obj).css("color", "#5bc0de");
     else
         $(obj).css("color", "#333333");
 }
-
+//获取单选
 function GetDX(type) {
     var result = "";
     $("#div" + type + "Text").find("li").each(function (i) {
@@ -627,7 +551,7 @@ function GetDX(type) {
     });
     return result.substr(0, result.length - 1);
 }
-
+//设置单选
 function SetDX(type, value) {
     var result = "";
     var values = value.split(',');
@@ -637,14 +561,14 @@ function SetDX(type, value) {
     });
     return result.substr(0, result.length - 1);
 }
-
+//获取出租方式
 function GetCZFS() {
     if ($("#imgZTCZ").css("background-position") === "-67px -57px")
         return "0";
     else
         return "1";
 }
-
+//设置出租方式
 function SetCZFS(CZFS) {
     if (CZFS === 0) {
         $("#imgZTCZ").css("background-position", "-67px -57px");
@@ -655,38 +579,38 @@ function SetCZFS(CZFS) {
         $("#imgDJCZ").css("background-position", "-67px -57px");
     }
 }
-
-function LoadFWCZXX() {
+//加载
+function LoadFC_ZZFXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC_FW/LoadFWCZXX",
+        url: getRootPath() + "/Business/FC_ZZF/LoadFC_ZZFXX",
         dataType: "json",
         data:
         {
-            FWCZJBXXID: getUrlParam("FWCZJBXXID")
+            FC_ZZFJBXXID: getUrlParam("FC_ZZFJBXXID")
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var jsonObj = new JsonDB("myTabContent");
-                jsonObj.DisplayFromJson("myTabContent", xml.Value.FWCZXX);
+                jsonObj.DisplayFromJson("myTabContent", xml.Value.FC_ZZFXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
-                $("#FWCZJBXXID").val(xml.Value.FWCZXX.FWCZJBXXID);
-                if (xml.Value.FWCZXX.ZJYBHFY !== null)
-                    SetDX("BHFY", xml.Value.FWCZXX.ZJYBHFY);
-                if (xml.Value.FWCZXX.FWPZ !== null)
-                    SetDX("FWPZ", xml.Value.FWCZXX.FWPZ);
-                if (xml.Value.FWCZXX.FWLD !== null)
-                    SetDX("FWLD", xml.Value.FWCZXX.FWLD);
-                if (xml.Value.FWCZXX.CZYQ !== null)
-                    SetDX("CZYQ", xml.Value.FWCZXX.CZYQ);
-                SetCZFS(xml.Value.FWCZXX.CZFS);
-                $("#spanFWCX").html(xml.Value.FWCZXX.CX);
-                $("#spanZXQK").html(xml.Value.FWCZXX.ZXQK);
-                $("#spanZZLX").html(xml.Value.FWCZXX.ZZLX);
-                $("#spanYFFS").html(xml.Value.FWCZXX.YFFS);
-                $("#FYMS").html(xml.Value.FWCZXX.FYMS);
-                if (xml.Value.FWCZXX.KRZSJ.ToString("yyyy-MM-dd") !== "1-1-1")
-                    $("#KRZSJ").val(xml.Value.FWCZXX.KRZSJ.ToString("yyyy-MM-dd"));
+                $("#FC_ZZFJBXXID").val(xml.Value.FC_ZZFJBXX.FC_ZZFJBXXID);
+                if (xml.Value.FC_ZZFJBXX.ZJYBHFY !== null)
+                    SetDX("BHFY", xml.Value.FC_ZZFJBXX.ZJYBHFY);
+                if (xml.Value.FC_ZZFJBXX.FWPZ !== null)
+                    SetDX("FWPZ", xml.Value.FC_ZZFJBXX.FWPZ);
+                if (xml.Value.FC_ZZFJBXX.FWLD !== null)
+                    SetDX("FWLD", xml.Value.FC_ZZFJBXX.FWLD);
+                if (xml.Value.FC_ZZFJBXX.CZYQ !== null)
+                    SetDX("CZYQ", xml.Value.FC_ZZFJBXX.CZYQ);
+                SetCZFS(xml.Value.FC_ZZFJBXX.CZFS);
+                $("#spanFWCX").html(xml.Value.FC_ZZFJBXX.CX);
+                $("#spanZXQK").html(xml.Value.FC_ZZFJBXX.ZXQK);
+                $("#spanZZLX").html(xml.Value.FC_ZZFJBXX.ZZLX);
+                $("#spanYFFS").html(xml.Value.FC_ZZFJBXX.YFFS);
+                $("#FYMS").html(xml.Value.FC_ZZFJBXX.FYMS);
+                if (xml.Value.FC_ZZFJBXX.KRZSJ.ToString("yyyy-MM-dd") !== "1-1-1")
+                    $("#KRZSJ").val(xml.Value.FC_ZZFJBXX.KRZSJ.ToString("yyyy-MM-dd"));
                 LoadPhotos(xml.Value.Photos);
                 return;
             }
@@ -696,15 +620,7 @@ function LoadFWCZXX() {
         }
     });
 }
-
-function MouseOver() {
-    isleave = false;
-}
-
-function MouseLeave() {
-    isleave = true;
-}
-
+//发布
 function FB() {
     if (AllValidate() === false) return;
     var jsonObj = new JsonDB("myTabContent");
@@ -722,12 +638,12 @@ function FB() {
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     if ($("#KRZSJ").val() !== "")
         obj = jsonObj.AddJson(obj, "KRZSJ", "'" + $("#KRZSJ").val() + "'");
-    if (getUrlParam("FWCZJBXXID") !== null)
-        obj = jsonObj.AddJson(obj, "FWCZJBXXID", "'" + getUrlParam("FWCZJBXXID") + "'");
+    if (getUrlParam("FC_ZZFJBXXID") !== null)
+        obj = jsonObj.AddJson(obj, "FC_ZZFJBXXID", "'" + getUrlParam("FC_ZZFJBXXID") + "'");
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC_FW/FB",
+        url: getRootPath() + "/Business/FC_ZZF/FB",
         dataType: "json",
         data:
         {

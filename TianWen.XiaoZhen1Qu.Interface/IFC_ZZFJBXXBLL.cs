@@ -3,13 +3,13 @@ using TianWen.XiaoZhen1Qu.Entities.Models;
 
 namespace TianWen.XiaoZhen1Qu.Interface
 {
-    public interface IFWCZJBXXBLL : IBaseBLL
+    public interface IFC_ZZFJBXXBLL : IBaseBLL
     {
         IDAO DAO { get; set; }
 
-        object SaveFWCZJBXX(JCXX jcxx, FWCZJBXX fwczjbxx, List<PHOTOS> photos);
+        object SaveFC_ZZFJBXX(JCXX jcxx, FC_ZZFJBXX FC_ZZFjbxx, List<PHOTOS> photos);
 
-        object LoadFWCZXX(string FWCZJBXXID);
+        object LoadFC_ZZFXX(string FC_ZZFJBXXID);
 
         object LoadXQJBXXSByHZ(string XQMC);
 

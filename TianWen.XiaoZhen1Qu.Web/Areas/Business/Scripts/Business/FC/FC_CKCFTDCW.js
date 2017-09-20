@@ -110,7 +110,6 @@ function LoadCKCFTDCWLX() {
         }
     });
 }
-
 //加载区域
 function LoadQY() {
     $.ajax({

@@ -141,7 +141,7 @@
     <Compile Include="Models\FC_DZFJBXX.cs" />
     <Compile Include="Models\FC_SPJBXX.cs" />
     <Compile Include="Models\FC_XZLJBXX.cs" />
-    <Compile Include="Models\FWCZJBXX.cs" />
+    <Compile Include="Models\FC_ZZFJBXX.cs" />
     <Compile Include="Models\JCXX.cs" />
     <Compile Include="Models\PHOTOS.cs" />
     <Compile Include="Models\PublicType.cs" />

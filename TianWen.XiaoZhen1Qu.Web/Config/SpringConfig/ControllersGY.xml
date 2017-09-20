@@ -38,9 +38,9 @@
       <ref object="LBXXBLL"/>
     </property>
   </object>
-  <object id="FC_FWController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.FC_FWController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
-    <property name="FWCZJBXXBLL">
-      <ref object="FWCZJBXXBLL"/>
+  <object id="FC_ZZFController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.FC_ZZFController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="FC_ZZFJBXXBLL">
+      <ref object="FC_ZZFJBXXBLL"/>
     </property>
   </object>
   <object id="FC_DZFController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.FC_DZFController,TianWen.XiaoZhen1Qu.Web" singleton="false" >

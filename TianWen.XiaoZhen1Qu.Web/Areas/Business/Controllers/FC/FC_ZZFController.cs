@@ -7,11 +7,11 @@ using TianWen.XiaoZhen1Qu.Interface;
 
 namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 {
-    public class FC_FWController : BaseController
+    public class FC_ZZFController : BaseController
     {
-        public IFWCZJBXXBLL FWCZJBXXBLL { get; set; }
+        public IFC_ZZFJBXXBLL FC_ZZFJBXXBLL { get; set; }
 
-        public ActionResult FC_FW()
+        public ActionResult FC_ZZF()
         {
             ViewData["XZQ"] = Session["XZQ"];
             ViewData["YHM"] = Session["YHM"];
@@ -20,7 +20,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public JsonResult FB()
         {
-            YHJBXX yhjbxx = FWCZJBXXBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX yhjbxx = FC_ZZFJBXXBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string fyms = Request["FYMS"];
             string fwzp = Request["FWZP"];
@@ -31,31 +31,31 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             jcxx.ZXGXSJ = DateTime.Now;
             jcxx.CJSJ = DateTime.Now;
             jcxx.LXDZ = "福州市";
-            jcxx.DH = Session["XZQ"].ToString() + "-" + FWCZJBXXBLL.GetLBQCByLBID(jcxx.LBID);
-            FWCZJBXX fwczjbxx = JsonHelper.ConvertJsonToObject<FWCZJBXX>(json);
-            fwczjbxx.FYMS = fyms;
+            jcxx.DH = Session["XZQ"].ToString() + "-" + FC_ZZFJBXXBLL.GetLBQCByLBID(jcxx.LBID);
+            FC_ZZFJBXX FC_ZZFjbxx = JsonHelper.ConvertJsonToObject<FC_ZZFJBXX>(json);
+            FC_ZZFjbxx.FYMS = fyms;
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = FWCZJBXXBLL.SaveFWCZJBXX(jcxx, fwczjbxx, photos);
+            object result = FC_ZZFJBXXBLL.SaveFC_ZZFJBXX(jcxx, FC_ZZFjbxx, photos);
             return Json(result);
         }
 
-        public JsonResult LoadFWCZXX()
+        public JsonResult LoadFC_ZZFXX()
         {
-            string FWCZJBXXID = Request["FWCZJBXXID"];
-            object result = FWCZJBXXBLL.LoadFWCZXX(FWCZJBXXID);
+            string FC_ZZFJBXXID = Request["FC_ZZFJBXXID"];
+            object result = FC_ZZFJBXXBLL.LoadFC_ZZFXX(FC_ZZFJBXXID);
             return Json(result);
         }
 
         public JsonResult LoadXQJBXXSByHZ()
         {
             string XQMC = Request["XQMC"];
-            return Json(FWCZJBXXBLL.LoadXQJBXXSByHZ(XQMC));
+            return Json(FC_ZZFJBXXBLL.LoadXQJBXXSByHZ(XQMC));
         }
 
         public JsonResult LoadXQJBXXSByPY()
         {
             string XQMC = Request["XQMC"];
-            return Json(FWCZJBXXBLL.LoadXQJBXXSByPY(XQMC));
+            return Json(FC_ZZFJBXXBLL.LoadXQJBXXSByPY(XQMC));
         }
     }
 }

@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = "FC_FW";
+    ViewBag.Title = "FC_ZZF";
     Layout = "~/Areas/Business/Views/Shared/_ListLayout.cshtml";
 }
 
@@ -9,13 +9,13 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title></title>
-    <link href="@Url.Content("~/Areas/Business/Css/FC/FC_FW.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Areas/Business/Css/FC/FC_ZZF.css")" rel="stylesheet" />
     <link href="@Url.Content("~/Areas/Business/Css/Common/Top.css" )" rel="stylesheet" />
     <link href="@Url.Content("~/Areas/Business/Css/Common/XZQ.css" )" rel="stylesheet" />
     <link href="@Url.Content("~/Areas/Business/Scripts/jquery-ui-1.12.1.custom/jquery-ui.min.css")" rel="stylesheet" />
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/Common/XZQ.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/FC/FC_FW.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/FC/FC_FWYZ.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/FC/FC_ZZF.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/FC/FC_ZZFYZ.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/Public_TP.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/jquery-ui-1.12.1.custom/jquery-ui.min.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/jquery-ui-1.12.1.custom/jquery.ui.datepicker-zh-CN.js")"></script>
@@ -143,24 +143,24 @@
                     <span class="spanFWCZ">房屋情况</span>
                 </div>
                 <div class="divRight">
-                    <div class="spanFWLXOut">
-                        <div id="divFWCXText" class="spanFWLXIn SRK">
+                    <div id="divFWCXText" class="spanFWLXOut">
+                        <div id="divFWCXSpan" class="spanFWLXIn SRK">
                             <span id="spanFWCX" column="CX" class="spanFWQK spanFontColor">南北</span>
                             <div class="divFWQKArrow"></div>
                         </div>
                         <div id="divFWCX" class="divdropdown">
                         </div>
                     </div>
-                    <div class="spanFWLXOut">
-                        <div id="divZXQKText" class="spanFWLXIn SRK">
+                    <div id="divZXQKText" class="spanFWLXOut">
+                        <div id="divZXQKSpan" class="spanFWLXIn SRK">
                             <span id="spanZXQK" column="ZXQK" class="spanFWQK spanFontColor">简单装修</span>
                             <div class="divFWQKArrow"></div>
                         </div>
                         <div id="divZXQK" class="divdropdown">
                         </div>
                     </div>
-                    <div class="spanFWLXOut">
-                        <div id="divZZLXText" class="spanFWLXIn SRK">
+                    <div id="divZZLXText" class="spanFWLXOut">
+                        <div id="divZZLXSpan" class="spanFWLXIn SRK">
                             <span id="spanZZLX" column="ZZLX" class="spanFWQK spanFontColor">普通住宅</span>
                             <div class="divFWQKArrow"></div>
                         </div>
@@ -199,7 +199,7 @@
                         <span class="spanFontColor">元/月</span>
                     </span>
                     <div id="divYFFSText" class="spanFWLXOut SRK" style="border: 1px solid #cccccc; border-radius: 4px; z-index: 997; position: relative;">
-                        <div class="spanFWLXIn" style="border: none; margin-top: 6px;">
+                        <div id="divYFFSSpan" class="spanFWLXIn" style="border: none; margin-top: 6px;">
                             <span id="spanYFFS" column="YFFS" class="spanFWQK spanFontColor" style="margin-top: 0">押一付一</span>
                             <div class="divFWQKArrow"></div>
                         </div>

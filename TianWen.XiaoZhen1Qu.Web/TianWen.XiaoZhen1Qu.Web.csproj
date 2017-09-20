@@ -188,7 +188,7 @@
     <Content Include="Areas\Business\Css\FBCG.css" />
     <Content Include="Areas\Business\Css\FC\FC_CKCFTDCW.css" />
     <Content Include="Areas\Business\Css\FC\FC_DZF.css" />
-    <Content Include="Areas\Business\Css\FC\FC_FW.css" />
+    <Content Include="Areas\Business\Css\FC\FC_ZZF.css" />
     <Content Include="Areas\Business\Css\FC\FC_SP.css" />
     <Content Include="Areas\Business\Css\FC\FC_XZL.css" />
     <Content Include="Areas\Business\Css\GRZL\GRZL.css" />
@@ -420,8 +420,8 @@
     <Content Include="Areas\Business\Scripts\Business\FC\FC_XZL.js" />
     <Content Include="Areas\Business\Scripts\Business\FC\FC_XZLYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\FWCG\FWCG.js" />
-    <Content Include="Areas\Business\Scripts\Business\FC\FC_FW.js" />
-    <Content Include="Areas\Business\Scripts\Business\FC\FC_FWYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\FC\FC_ZZF.js" />
+    <Content Include="Areas\Business\Scripts\Business\FC\FC_ZZFYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\GRZL\GRZL.js" />
     <Content Include="Areas\Business\Scripts\Business\GRZL\MMSZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HBSJ.js" />
@@ -799,7 +799,7 @@
     <Compile Include="Areas\Business\Controllers\FBCGController.cs" />
     <Compile Include="Areas\Business\Controllers\FC\FC_CKCFTDCWController.cs" />
     <Compile Include="Areas\Business\Controllers\FC\FC_DZFController.cs" />
-    <Compile Include="Areas\Business\Controllers\FC\FC_FWController.cs" />
+    <Compile Include="Areas\Business\Controllers\FC\FC_ZZFController.cs" />
     <Compile Include="Areas\Business\Controllers\FC\FC_SPController.cs" />
     <Compile Include="Areas\Business\Controllers\FC\FC_XZLController.cs" />
     <Compile Include="Areas\Business\Controllers\GRZLController.cs" />
@@ -858,7 +858,7 @@
     <Content Include="Areas\Business\Views\ZHMM\ZHMM.cshtml" />
     <Content Include="Areas\Business\Views\WDFB\WDFB.cshtml" />
     <Content Include="Areas\Business\Views\LBXZ\LBXZ.cshtml" />
-    <Content Include="Areas\Business\Views\FC_FW\FC_FW.cshtml" />
+    <Content Include="Areas\Business\Views\FC_ZZF\FC_ZZF.cshtml" />
     <Content Include="Areas\Business\Scripts\jquery-ui-1.12.1.custom\package.json" />
     <Content Include="Areas\Business\Scripts\jquery-ui-1.12.1.custom\jquery.ui.datepicker-zh-CN.js" />
     <Content Include="Areas\Business\Ashx\SavePhotos.ashx" />

@@ -14,7 +14,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Ashx
     /// </summary>
     public class SavePhotos : IHttpHandler, System.Web.SessionState.IRequiresSessionState
     {
-        IFWCZJBXXBLL FWCZJBXXBLL = SpringHelper.GetSpringObject<IFWCZJBXXBLL>("FWCZJBXXBLL");
+        IFC_ZZFJBXXBLL FWCZJBXXBLL = SpringHelper.GetSpringObject<IFC_ZZFJBXXBLL>("FWCZJBXXBLL");
 
         public void ProcessRequest(HttpContext context)
         {

@@ -3,13 +3,13 @@ using TianWen.XiaoZhen1Qu.Entities.Models;
 
 namespace TianWen.XiaoZhen1Qu.Entities.Maps
 {
-    public class FWCZJBXX_Map : ClassMap<FWCZJBXX>
+    public class FC_ZZFJBXX_Map : ClassMap<FC_ZZFJBXX>
     {
-        public FWCZJBXX_Map()
+        public FC_ZZFJBXX_Map()
         {
-            Table("FWCZJBXX");
+            Table("FC_ZZFJBXX");
             #region 属性
-            Id(x => x.FWCZJBXXID, "FWCZJBXXID").GeneratedBy.Assigned().CustomType("AnsiString");
+            Id(x => x.FC_ZZFJBXXID, "FC_ZZFJBXXID").GeneratedBy.Assigned().CustomType("AnsiString");
             Map(x => x.JCXXID, "JCXXID");
             Map(x => x.CZFS, "CZFS");
             Map(x => x.XQMC, "XQMC");

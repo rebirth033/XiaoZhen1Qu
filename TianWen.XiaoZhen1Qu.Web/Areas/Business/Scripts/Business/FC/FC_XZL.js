@@ -17,34 +17,19 @@ $(document).ready(function () {
     $("#btnClose").bind("click", CloseWindow);
     $("#div_dz_close").bind("click", CloseWindow);
     $("#span_content_info_qhcs").bind("click", LoadXZQByGrade);
-    $("body").bind("click", CloseXZQ);
+    $("body").bind("click", function () { Close("_XZQ"); Close("LB"); Close("XL"); Close("XJ"); Close("QY"); Close("DD"); });
     $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
 
     LoadTXXX();
-    LoadXZLLX();
-    LoadKZCGS();
-    LoadQY();
-    LoadZJDW();
     LoadDefault();
     LoadFC_XZLJBXX();
-    BindHover("XZLLX");
-    BindHover("KZCGS");
-    BindHover("QY");
-    BindHover("SQ");
-    BindHover("ZJDW");
-    //FYMSSetDefault();
+    BindClick("XZLLX");
+    BindClick("KZCGS");
+    BindClick("QY");
+    BindClick("SQ");
+    BindClick("ZJDW");
 });
-//显示用户菜单
-function ShowYHCD() {
-    $("#div_top_right_dropdown_yhm").css("display", "block");
-    $("#span_top_right_yhm_img").css("background-image", 'url(' + getRootPath() + "/Areas/Business/Css/images/arrow_up.png" + ')');
-}
-//隐藏用户菜单
-function HideYHCD() {
-    $("#div_top_right_dropdown_yhm").css("display", "none");
-    $("#span_top_right_yhm_img").css("background-image", 'url(' + getRootPath() + "/Areas/Business/Css/images/arrow_down.png" + ')');
-}
 //房屋描述框focus
 function FYMSFocus() {
     $("#FYMS").css("color", "#333333");
@@ -68,33 +53,6 @@ function LoadDefault() {
     $("#imgCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
     $("#imgCS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
 }
-//加载类别信息
-function LoadTXXX() {
-    $("#spanTXXX").css("color", "#5bc0de");
-    $("#emTXXX").css("background", "#5bc0de");
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/LBXZ/LoadLBByID",
-        dataType: "json",
-        data:
-        {
-            LBID: getUrlParam("CLICKID")
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                if (xml.list.length > 0)
-                    $("#spanLBXZ").html("1." + xml.list[0].LBNAME);
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//重选类别
-function CXLB() {
-    window.location.href = getRootPath() + "/Business/LBXZ/LBXZ";
-}
 //选择出租
 function CZSelect() {
     $("#imgCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
@@ -108,6 +66,26 @@ function CSSelect() {
     $("#imgCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
     $("#divZJ").css("display", "none");
     $("#divSJ").css("display", "block");
+}
+//绑定下拉框鼠标点击样式
+function BindClick(type) {
+    $("#div" + type + "Span").click(function () {
+        if (type === "XZLLX") {
+            LoadXZLLX();
+        }
+        if (type === "KZCGS") {
+            LoadKZCGS();
+        }
+        if (type === "ZJDW") {
+            LoadZJDW();
+        }
+        if (type === "QY") {
+            LoadQY();
+        }
+        if (type === "SQ") {
+            LoadSQ();
+        }
+    });
 }
 //加载写字楼类型
 function LoadXZLLX() {
@@ -127,7 +105,8 @@ function LoadXZLLX() {
                 }
                 html += "</ul>";
                 $("#divXZLLX").html(html);
-                $("#divXZLLX").css("display", "none");
+                $("#divXZLLX").css("display", "block");
+                ActiveStyle("XZLLX");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -153,7 +132,8 @@ function LoadKZCGS() {
                 }
                 html += "</ul>";
                 $("#divKZCGS").html(html);
-                $("#divKZCGS").css("display", "none");
+                $("#divKZCGS").css("display", "block");
+                ActiveStyle("KZCGS");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -179,7 +159,8 @@ function LoadQY() {
                 }
                 html += "</ul>";
                 $("#divQY").html(html);
-                $("#divQY").css("display", "none");
+                $("#divQY").css("display", "block");
+                ActiveStyle("QY");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -205,7 +186,8 @@ function LoadSQ(QY) {
                 }
                 html += "</ul>";
                 $("#divSQ").html(html);
-                $("#divSQ").css("display", "none");
+                $("#divSQ").css("display", "block");
+                ActiveStyle("SQ");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -231,7 +213,8 @@ function LoadZJDW() {
                 }
                 html += "</ul>";
                 $("#divZJDW").html(html);
-                $("#divZJDW").css("display", "none");
+                $("#divZJDW").css("display", "block");
+                ActiveStyle("ZJDW");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -239,42 +222,9 @@ function LoadZJDW() {
         }
     });
 }
-//鼠标盘旋样式
-function HoverStyle(name) {
-    $("#div" + name + "Text").css("border-top", "1px solid #5bc0de").css("border-right", "1px solid #5bc0de").css("border-left", "1px solid #5bc0de").css("border-bottom", "1px solid #5bc0de");
-    $("#div" + name).find("ul").css("border-left", "1px solid #5bc0de").css("border-right", "1px solid #5bc0de").css("border-bottom", "1px solid #5bc0de");
-    $("#span" + name).css("color", "#333333");
-}
-//鼠标离开样式
-function LeaveStyle(name) {
-    $("#div" + name + "Text").css("border-top", "1px solid #cccccc").css("border-right", "1px solid #cccccc").css("border-left", "1px solid #cccccc").css("border-bottom", "1px solid #cccccc");
-    $("#div" + name).find("ul").css("border-left", "1px solid #cccccc").css("border-right", "1px solid #cccccc").css("border-bottom", "1px solid #cccccc");
-    $("#span" + name).css("color", "#999999");
-}
-//绑定下拉框鼠标盘旋样式
-function BindHover(type) {
-    $("#div" + type + "Text").hover(function () {
-        $("#div" + type).css("display", "block");
-        HoverStyle(type);
-    }, function () {
-        $("#div" + type).css("display", "none");
-        LeaveStyle(type);
-    });
-    $("#div" + type).hover(function () {
-        $("#div" + type).css("display", "block");
-        HoverStyle(type);
-    }, function () {
-        $("#div" + type).css("display", "none");
-        LeaveStyle(type);
-    });
-}
-//选择下拉框
-function SelectDropdown(obj, type) {
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
-}
 //选择区域下拉框
 function SelectQY(obj, type, code) {
+    $("#QYCode").val(code);
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
     LoadSQ(code);
@@ -329,21 +279,12 @@ function LoadFC_XZLJBXX() {
                 $("#spanSQ").html(xml.Value.FC_XZLJBXX.SQ);
                 $("#spanZJDW").html(xml.Value.FC_XZLJBXX.ZJDW);
                 LoadPhotos(xml.Value.Photos);
-                return;
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
         }
     });
-}
-//鼠标经过
-function MouseOver() {
-    isleave = false;
-}
-//鼠标离开
-function MouseLeave() {
-    isleave = true;
 }
 //发布
 function FB() {

@@ -81,7 +81,7 @@
     <Compile Include="BLL\FC_DZFBLL.cs" />
     <Compile Include="BLL\FC_SPBLL.cs" />
     <Compile Include="BLL\FC_XZLBLL.cs" />
-    <Compile Include="BLL\FWCZJBXXBLL.cs" />
+    <Compile Include="BLL\FC_ZZFJBXXBLL.cs" />
     <Compile Include="BLL\HFCZBLL.cs" />
     <Compile Include="BLL\LBXXBLL.cs" />
     <Compile Include="BLL\RZGLBLL.cs" />
