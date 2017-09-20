@@ -114,7 +114,7 @@ function BindClick(type) {
 function LoadTSJLB() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_COMPUTER",
+        url: getRootPath() + "/Business/Common/LoadCODES_ES_SJSM",
         dataType: "json",
         data:
         {
@@ -141,7 +141,7 @@ function LoadTSJLB() {
 function LoadTSJXL(type) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_COMPUTER",
+        url: getRootPath() + "/Business/Common/LoadCODES_ES_SJSM",
         dataType: "json",
         data:
         {
@@ -168,7 +168,7 @@ function LoadTSJXL(type) {
 function LoadCPUPP() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_COMPUTER",
+        url: getRootPath() + "/Business/Common/LoadCODES_ES_SJSM",
         dataType: "json",
         data:
         {
@@ -195,7 +195,7 @@ function LoadCPUPP() {
 function LoadCPUHS() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_COMPUTER",
+        url: getRootPath() + "/Business/Common/LoadCODES_ES_SJSM",
         dataType: "json",
         data:
         {
@@ -222,7 +222,7 @@ function LoadCPUHS() {
 function LoadNC() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_COMPUTER",
+        url: getRootPath() + "/Business/Common/LoadCODES_ES_SJSM",
         dataType: "json",
         data:
         {
@@ -249,7 +249,7 @@ function LoadNC() {
 function LoadYP() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_COMPUTER",
+        url: getRootPath() + "/Business/Common/LoadCODES_ES_SJSM",
         dataType: "json",
         data:
         {
@@ -276,7 +276,7 @@ function LoadYP() {
 function LoadPMCC() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_COMPUTER",
+        url: getRootPath() + "/Business/Common/LoadCODES_ES_SJSM",
         dataType: "json",
         data:
         {
@@ -303,7 +303,7 @@ function LoadPMCC() {
 function LoadXK() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_COMPUTER",
+        url: getRootPath() + "/Business/Common/LoadCODES_ES_SJSM",
         dataType: "json",
         data:
         {

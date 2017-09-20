@@ -152,7 +152,7 @@ function SJZRSelect() {
 function LoadGCQXLB() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_QTES",
+        url: getRootPath() + "/Business/Common/LoadCODES_ES_QTES",
         dataType: "json",
         data:
         {

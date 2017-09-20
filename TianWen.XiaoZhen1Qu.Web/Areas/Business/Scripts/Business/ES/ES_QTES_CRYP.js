@@ -65,7 +65,7 @@ function SJZRSelect() {
 function LoadCRYPLB() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_QTES",
+        url: getRootPath() + "/Business/Common/LoadCODES_ES_QTES",
         dataType: "json",
         data:
         {
@@ -92,7 +92,7 @@ function LoadCRYPLB() {
 function LoadCRYPXL(type) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_QTES",
+        url: getRootPath() + "/Business/Common/LoadCODES_ES_QTES",
         dataType: "json",
         data:
         {

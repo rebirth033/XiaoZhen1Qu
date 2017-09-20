@@ -2,7 +2,7 @@
 
 namespace TianWen.XiaoZhen1Qu.Entities.Models
 {
-    public class CODES_MYFZMR
+    public class CODES_ES_MYFZMR
     {
         /// <summary>
         /// 用户ID

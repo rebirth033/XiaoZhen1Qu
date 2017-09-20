@@ -89,7 +89,7 @@ function BindClick(type) {
 function LoadSMCPLB() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_COMPUTER",
+        url: getRootPath() + "/Business/Common/LoadCODES_ES_SJSM",
         dataType: "json",
         data:
         {
@@ -116,7 +116,7 @@ function LoadSMCPLB() {
 function LoadSMCPXL(type) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_COMPUTER",
+        url: getRootPath() + "/Business/Common/LoadCODES_ES_SJSM",
         dataType: "json",
         data:
         {

@@ -88,7 +88,7 @@ function BindClick(type) {
 function LoadESJJLB() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_JDJJBG",
+        url: getRootPath() + "/Business/Common/LoadCODES_ES_JDJJBG",
         dataType: "json",
         data:
         {
@@ -115,7 +115,7 @@ function LoadESJJLB() {
 function LoadESJJXL(type) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_JDJJBG",
+        url: getRootPath() + "/Business/Common/LoadCODES_ES_JDJJBG",
         dataType: "json",
         data:
         {
@@ -142,7 +142,7 @@ function LoadESJJXL(type) {
 function LoadXXCS(id, type) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_JDJJBG",
+        url: getRootPath() + "/Business/Common/LoadCODES_ES_JDJJBG",
         dataType: "json",
         data:
         {

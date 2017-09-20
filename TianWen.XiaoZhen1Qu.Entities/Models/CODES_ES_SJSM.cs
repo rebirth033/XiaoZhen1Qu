@@ -2,7 +2,7 @@
 
 namespace TianWen.XiaoZhen1Qu.Entities.Models
 {
-    public class CODES_PHONE
+    public class CODES_ES_SJSM
     {
         /// <summary>
         /// 用户ID

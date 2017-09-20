@@ -65,7 +65,7 @@ function SJZRSelect() {
 function LoadTSYXRJLB() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_WHYL",
+        url: getRootPath() + "/Business/Common/LoadCODES_ES_WHYL",
         dataType: "json",
         data:
         {
@@ -91,7 +91,7 @@ function LoadTSYXRJLB() {
 function LoadTSYXRJXL(type) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_WHYL",
+        url: getRootPath() + "/Business/Common/LoadCODES_ES_WHYL",
         dataType: "json",
         data:
         {
@@ -117,7 +117,7 @@ function LoadTSYXRJXL(type) {
 function LoadXXCS(id, type) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_WHYL",
+        url: getRootPath() + "/Business/Common/LoadCODES_ES_WHYL",
         dataType: "json",
         data:
         {

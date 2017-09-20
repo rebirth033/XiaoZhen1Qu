@@ -102,7 +102,7 @@ function BindClick(type) {
         if (type === "XK") {
             LoadXK();
         }
-        if (type === "PJ") {
+        if (type === "XL") {
             LoadPJ();
         }
         if (type === "XJ") {
@@ -120,7 +120,7 @@ function BindClick(type) {
 function LoadBJBLB() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_COMPUTER",
+        url: getRootPath() + "/Business/Common/LoadCODES_ES_SJSM",
         dataType: "json",
         data:
         {
@@ -147,7 +147,7 @@ function LoadBJBLB() {
 function LoadBJBPP() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_COMPUTER",
+        url: getRootPath() + "/Business/Common/LoadCODES_ES_SJSM",
         dataType: "json",
         data:
         {
@@ -201,7 +201,7 @@ function LoadBJBXH(BJBPP) {
 function LoadCPUPP() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_COMPUTER",
+        url: getRootPath() + "/Business/Common/LoadCODES_ES_SJSM",
         dataType: "json",
         data:
         {
@@ -228,7 +228,7 @@ function LoadCPUPP() {
 function LoadCPUHS() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_COMPUTER",
+        url: getRootPath() + "/Business/Common/LoadCODES_ES_SJSM",
         dataType: "json",
         data:
         {
@@ -255,7 +255,7 @@ function LoadCPUHS() {
 function LoadNC() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_COMPUTER",
+        url: getRootPath() + "/Business/Common/LoadCODES_ES_SJSM",
         dataType: "json",
         data:
         {
@@ -282,7 +282,7 @@ function LoadNC() {
 function LoadYP() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_COMPUTER",
+        url: getRootPath() + "/Business/Common/LoadCODES_ES_SJSM",
         dataType: "json",
         data:
         {
@@ -309,7 +309,7 @@ function LoadYP() {
 function LoadPMCC() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_COMPUTER",
+        url: getRootPath() + "/Business/Common/LoadCODES_ES_SJSM",
         dataType: "json",
         data:
         {
@@ -336,7 +336,7 @@ function LoadPMCC() {
 function LoadXK() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_COMPUTER",
+        url: getRootPath() + "/Business/Common/LoadCODES_ES_SJSM",
         dataType: "json",
         data:
         {
@@ -363,7 +363,7 @@ function LoadXK() {
 function LoadXJ() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES",
+        url: getRootPath() + "/Business/Common/LoadCODES_ES_SJSM",
         dataType: "json",
         data:
         {
@@ -390,7 +390,7 @@ function LoadXJ() {
 function LoadPJ() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES",
+        url: getRootPath() + "/Business/Common/LoadCODES_ES_SJSM",
         dataType: "json",
         data:
         {

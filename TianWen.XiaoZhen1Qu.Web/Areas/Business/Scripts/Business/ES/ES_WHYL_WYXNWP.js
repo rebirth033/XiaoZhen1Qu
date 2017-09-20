@@ -117,7 +117,7 @@ function SJZRSelect() {
 function LoadWYXNWPLB() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_WHYL",
+        url: getRootPath() + "/Business/Common/LoadCODES_ES_WHYL",
         dataType: "json",
         data:
         {
@@ -143,7 +143,7 @@ function LoadWYXNWPLB() {
 function LoadXXCS(id, type) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_WHYL",
+        url: getRootPath() + "/Business/Common/LoadCODES_ES_WHYL",
         dataType: "json",
         data:
         {

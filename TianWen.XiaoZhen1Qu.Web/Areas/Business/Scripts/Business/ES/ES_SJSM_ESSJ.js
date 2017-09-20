@@ -95,7 +95,7 @@ function BindClick(type) {
 function LoadSJPP() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_PHONE",
+        url: getRootPath() + "/Business/Common/LoadCODES_ES_SJSM",
         dataType: "json",
         data:
         {

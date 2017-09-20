@@ -35,40 +35,34 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return Json(CommonBLL.LoadCODES_FC(TYPENAME));
         }
 
-        public JsonResult LoadCODES_PHONE()
+        public JsonResult LoadCODES_ES_SJSM()
         {
             string TYPENAME = Request["TYPENAME"];
-            return Json(CommonBLL.LoadCODES_PHONE(TYPENAME));
+            return Json(CommonBLL.LoadCODES_ES_SJSM(TYPENAME));
+        }
+        
+        public JsonResult LoadCODES_ES_JDJJBG()
+        {
+            string TYPENAME = Request["TYPENAME"];
+            return Json(CommonBLL.LoadCODES_ES_JDJJBG(TYPENAME));
         }
 
-        public JsonResult LoadCODES_COMPUTER()
+        public JsonResult LoadCODES_ES_MYFZMR()
         {
             string TYPENAME = Request["TYPENAME"];
-            return Json(CommonBLL.LoadCODES_COMPUTER(TYPENAME));
+            return Json(CommonBLL.LoadCODES_ES_MYFZMR(TYPENAME));
         }
 
-        public JsonResult LoadCODES_JDJJBG()
+        public JsonResult LoadCODES_ES_WHYL()
         {
             string TYPENAME = Request["TYPENAME"];
-            return Json(CommonBLL.LoadCODES_JDJJBG(TYPENAME));
+            return Json(CommonBLL.LoadCODES_ES_WHYL(TYPENAME));
         }
 
-        public JsonResult LoadCODES_MYFZMR()
+        public JsonResult LoadCODES_ES_QTES()
         {
             string TYPENAME = Request["TYPENAME"];
-            return Json(CommonBLL.LoadCODES_MYFZMR(TYPENAME));
-        }
-
-        public JsonResult LoadCODES_WHYL()
-        {
-            string TYPENAME = Request["TYPENAME"];
-            return Json(CommonBLL.LoadCODES_WHYL(TYPENAME));
-        }
-
-        public JsonResult LoadCODES_QTES()
-        {
-            string TYPENAME = Request["TYPENAME"];
-            return Json(CommonBLL.LoadCODES_QTES(TYPENAME));
+            return Json(CommonBLL.LoadCODES_ES_QTES(TYPENAME));
         }
 
         public JsonResult LoadCODES_CL()

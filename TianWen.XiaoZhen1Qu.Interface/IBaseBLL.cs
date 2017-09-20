@@ -6,17 +6,15 @@ namespace TianWen.XiaoZhen1Qu.Interface
     {
         object LoadCODES_FC(string TYPENAME);
 
-        object LoadCODES_PHONE(string TYPENAME);
+        object LoadCODES_ES_SJSM(string TYPENAME);
 
-        object LoadCODES_COMPUTER(string TYPENAME);
+        object LoadCODES_ES_JDJJBG(string TYPENAME);
 
-        object LoadCODES_JDJJBG(string TYPENAME);
+        object LoadCODES_ES_MYFZMR(string TYPENAME);
 
-        object LoadCODES_MYFZMR(string TYPENAME);
+        object LoadCODES_ES_WHYL(string TYPENAME);
 
-        object LoadCODES_WHYL(string TYPENAME);
-
-        object LoadCODES_QTES(string TYPENAME);
+        object LoadCODES_ES_QTES(string TYPENAME);
 
         object LoadCODES_CL(string TYPENAME); 
 

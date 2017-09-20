@@ -2,7 +2,7 @@
 
 namespace TianWen.XiaoZhen1Qu.Entities.Models
 {
-    public class CODES_JDJJBG
+    public class CODES_ES_JDJJBG
     {
         /// <summary>
         /// 用户ID

@@ -81,7 +81,7 @@ function BindClick(type) {
         if (type === "XJ") {
             LoadXJ();
         }
-        if (type === "PJ") {
+        if (type === "XL") {
             LoadPJ();
         }
         if (type === "QY") {
@@ -96,7 +96,7 @@ function BindClick(type) {
 function LoadPBLB() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_COMPUTER",
+        url: getRootPath() + "/Business/Common/LoadCODES_ES_SJSM",
         dataType: "json",
         data:
         {
@@ -122,7 +122,7 @@ function LoadPBLB() {
 function LoadPBPP() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_COMPUTER",
+        url: getRootPath() + "/Business/Common/LoadCODES_ES_SJSM",
         dataType: "json",
         data:
         {
@@ -145,15 +145,15 @@ function LoadPBPP() {
     });
 }
 //加载平板型号
-function LoadPBXH(PBPP) {
+function LoadPBXH() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/Common/LoadPBXH",
         dataType: "json",
         data:
         {
-            PBPP: PBPP
-        },
+            PBPP: $("#PPID").val()
+},
         success: function (xml) {
             if (xml.Result === 1) {
                 var html = "<ul class='uldropdown' style='overflow-y: scroll;height:340px;width:200px'>";
@@ -174,7 +174,7 @@ function LoadPBXH(PBPP) {
 function LoadXJ() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES",
+        url: getRootPath() + "/Business/Common/LoadCODES_ES_SJSM",
         dataType: "json",
         data:
         {
@@ -200,7 +200,7 @@ function LoadXJ() {
 function LoadPJ() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES",
+        url: getRootPath() + "/Business/Common/LoadCODES_ES_SJSM",
         dataType: "json",
         data:
         {
@@ -248,7 +248,7 @@ function PDLB(LB) {
 function SelectPBPP(obj, type, code) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-    LoadPBXH(code);
+    $("#PPID").val(code);
 }
 //获取供求
 function GetGQ() {

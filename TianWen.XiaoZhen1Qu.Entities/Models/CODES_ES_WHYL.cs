@@ -2,7 +2,7 @@
 
 namespace TianWen.XiaoZhen1Qu.Entities.Models
 {
-    public class CODES_WHYL
+    public class CODES_ES_WHYL
     {
         /// <summary>
         /// 用户ID

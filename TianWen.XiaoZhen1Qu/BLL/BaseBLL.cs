@@ -25,11 +25,11 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
-        public object LoadCODES_PHONE(string TYPENAME)
+        public object LoadCODES_ES_SJSM(string TYPENAME)
         {
             try
             {
-                IList<CODES_PHONE> list = DAO.Repository.GetObjectList<CODES_PHONE>(String.Format("FROM CODES_PHONE WHERE TYPENAME='{0}' ORDER BY CODEORDER", TYPENAME));
+                IList<CODES_ES_SJSM> list = DAO.Repository.GetObjectList<CODES_ES_SJSM>(String.Format("FROM CODES_ES_SJSM WHERE TYPENAME='{0}' ORDER BY CODEORDER", TYPENAME));
                 return new { Result = EnResultType.Success, list = list };
             }
             catch (Exception ex)
@@ -39,11 +39,11 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
-        public object LoadCODES_COMPUTER(string TYPENAME)
+        public object LoadCODES_ES_JDJJBG(string TYPENAME)
         {
             try
             {
-                IList<CODES_COMPUTER> list = DAO.Repository.GetObjectList<CODES_COMPUTER>(String.Format("FROM CODES_COMPUTER WHERE TYPENAME='{0}' ORDER BY CODEORDER", TYPENAME));
+                IList<CODES_ES_JDJJBG> list = DAO.Repository.GetObjectList<CODES_ES_JDJJBG>(String.Format("FROM CODES_ES_JDJJBG WHERE TYPENAME='{0}' ORDER BY CODEORDER", TYPENAME));
                 return new { Result = EnResultType.Success, list = list };
             }
             catch (Exception ex)
@@ -53,11 +53,11 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
-        public object LoadCODES_JDJJBG(string TYPENAME)
+        public object LoadCODES_ES_MYFZMR(string TYPENAME)
         {
             try
             {
-                IList<CODES_JDJJBG> list = DAO.Repository.GetObjectList<CODES_JDJJBG>(String.Format("FROM CODES_JDJJBG WHERE TYPENAME='{0}' ORDER BY CODEORDER", TYPENAME));
+                IList<CODES_ES_MYFZMR> list = DAO.Repository.GetObjectList<CODES_ES_MYFZMR>(String.Format("FROM CODES_ES_MYFZMR WHERE TYPENAME='{0}' ORDER BY CODEORDER", TYPENAME));
                 return new { Result = EnResultType.Success, list = list };
             }
             catch (Exception ex)
@@ -67,11 +67,11 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
-        public object LoadCODES_MYFZMR(string TYPENAME)
+        public object LoadCODES_ES_WHYL(string TYPENAME)
         {
             try
             {
-                IList<CODES_MYFZMR> list = DAO.Repository.GetObjectList<CODES_MYFZMR>(String.Format("FROM CODES_MYFZMR WHERE TYPENAME='{0}' ORDER BY CODEORDER", TYPENAME));
+                IList<CODES_ES_WHYL> list = DAO.Repository.GetObjectList<CODES_ES_WHYL>(String.Format("FROM CODES_ES_WHYL WHERE TYPENAME='{0}' ORDER BY CODEORDER", TYPENAME));
                 return new { Result = EnResultType.Success, list = list };
             }
             catch (Exception ex)
@@ -81,25 +81,11 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
-        public object LoadCODES_WHYL(string TYPENAME)
+        public object LoadCODES_ES_QTES(string TYPENAME)
         {
             try
             {
-                IList<CODES_WHYL> list = DAO.Repository.GetObjectList<CODES_WHYL>(String.Format("FROM CODES_WHYL WHERE TYPENAME='{0}' ORDER BY CODEORDER", TYPENAME));
-                return new { Result = EnResultType.Success, list = list };
-            }
-            catch (Exception ex)
-            {
-                LoggerManager.Error("error", ex.Message);
-                return new { Result = EnResultType.Failed, Message = "加载失败" };
-            }
-        }
-
-        public object LoadCODES_QTES(string TYPENAME)
-        {
-            try
-            {
-                IList<CODES_QTES> list = DAO.Repository.GetObjectList<CODES_QTES>(String.Format("FROM CODES_QTES WHERE TYPENAME='{0}' ORDER BY CODEORDER", TYPENAME));
+                IList<CODES_ES_QTES> list = DAO.Repository.GetObjectList<CODES_ES_QTES>(String.Format("FROM CODES_ES_QTES WHERE TYPENAME='{0}' ORDER BY CODEORDER", TYPENAME));
                 return new { Result = EnResultType.Success, list = list };
             }
             catch (Exception ex)
@@ -156,7 +142,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
         {
             try
             {
-                IList<CODES_PHONE> list = DAO.Repository.GetObjectList<CODES_PHONE>(String.Format("FROM CODES_PHONE WHERE PARENTID like '%{0}%' ORDER BY CODEORDER", SJPP));
+                IList<CODES_ES_SJSM> list = DAO.Repository.GetObjectList<CODES_ES_SJSM>(String.Format("FROM CODES_ES_SJSM WHERE PARENTID like '%{0}%' ORDER BY CODEORDER", SJPP));
                 return new { Result = EnResultType.Success, list = list };
             }
             catch (Exception ex)
@@ -170,7 +156,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
         {
             try
             {
-                IList<CODES_COMPUTER> list = DAO.Repository.GetObjectList<CODES_COMPUTER>(String.Format("FROM CODES_COMPUTER WHERE PARENTID like '%{0}%' ORDER BY CODEORDER", BJBPP));
+                IList<CODES_ES_SJSM> list = DAO.Repository.GetObjectList<CODES_ES_SJSM>(String.Format("FROM CODES_ES_SJSM WHERE PARENTID like '%{0}%' ORDER BY CODEORDER", BJBPP));
                 return new { Result = EnResultType.Success, list = list };
             }
             catch (Exception ex)
@@ -184,7 +170,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
         {
             try
             {
-                IList<CODES_COMPUTER> list = DAO.Repository.GetObjectList<CODES_COMPUTER>(String.Format("FROM CODES_COMPUTER WHERE PARENTID like '%{0}%' ORDER BY CODEORDER", PBPP));
+                IList<CODES_ES_SJSM> list = DAO.Repository.GetObjectList<CODES_ES_SJSM>(String.Format("FROM CODES_ES_SJSM WHERE PARENTID like '%{0}%' ORDER BY CODEORDER", PBPP));
                 return new { Result = EnResultType.Success, list = list };
             }
             catch (Exception ex)
@@ -198,7 +184,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
         {
             try
             {
-                IList<CODES_QTES> list = DAO.Repository.GetObjectList<CODES_QTES>(String.Format("FROM CODES_QTES WHERE CODEVALUE like '%{0}%' ORDER BY CODEORDER", GCQX));
+                IList<CODES_ES_QTES> list = DAO.Repository.GetObjectList<CODES_ES_QTES>(String.Format("FROM CODES_ES_QTES WHERE CODEVALUE like '%{0}%' ORDER BY CODEORDER", GCQX));
                 return new { Result = EnResultType.Success, list = list };
             }
             catch (Exception ex)
@@ -254,7 +240,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
         {
             try
             {
-                IList<CODES_QTES> list = DAO.Repository.GetObjectList<CODES_QTES>(String.Format("FROM CODES_QTES WHERE PARENTID like '%{0}%' ORDER BY CODEORDER", PPID));
+                IList<CODES_ES_QTES> list = DAO.Repository.GetObjectList<CODES_ES_QTES>(String.Format("FROM CODES_ES_QTES WHERE PARENTID like '%{0}%' ORDER BY CODEORDER", PPID));
                 return new { Result = EnResultType.Success, list = list };
             }
             catch (Exception ex)
