@@ -62,6 +62,26 @@ function SJZRSelect() {
     $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
     $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
 }
+//绑定下拉框鼠标点击样式
+function BindClick(type) {
+    $("#div" + type + "Span").click(function () {
+        if (type === "LB") {
+            LoadFZXMXBLB();
+        }
+        if (type === "XL") {
+            LoadFZXMXBXL();
+        }
+        if (type === "XJ") {
+            LoadXJ();
+        }
+        if (type === "QY") {
+            LoadQY();
+        }
+        if (type === "DD") {
+            LoadDD($("#QYCode").val());
+        }
+    });
+}
 //加载服装/鞋帽/箱包类别
 function LoadFZXMXBLB() {
     $.ajax({
@@ -170,26 +190,6 @@ function LoadXJ() {
         }
     });
 }
-//绑定下拉框鼠标点击样式
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadFZXMXBLB();
-        }
-        if (type === "XL") {
-            LoadFZXMXBXL();
-        }
-        if (type === "XJ") {
-            LoadXJ();
-        }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
-    });
-}
 //选择类别下拉框
 function SelectLB(obj, type) {
     $("#span" + type).html(obj.innerHTML);
@@ -266,7 +266,8 @@ function LoadES_MYFZMR_FZXMXBJBXX() {
                 $("#spanLB").html(xml.Value.ES_MYFZMR_FZXMXBJBXX.LB);
                 $("#spanXJ").html(xml.Value.ES_MYFZMR_FZXMXBJBXX.XJ);
                 $("#spanQY").html(xml.Value.ES_MYFZMR_FZXMXBJBXX.JYQY);
-                $("#spanSQ").html(xml.Value.ES_MYFZMR_FZXMXBJBXX.JYDD);
+                $("#spanDD").html(xml.Value.ES_MYFZMR_FZXMXBJBXX.JYDD);
+                $("#spanXL").html(xml.Value.ES_MYFZMR_FZXMXBJBXX.XL);
 
                 $("#spanDSPMCC").html(xml.Value.ES_MYFZMR_FZXMXBJBXX.DSPMCC);
                 $("#spanDSPP").html(xml.Value.ES_MYFZMR_FZXMXBJBXX.DSPP);
@@ -279,22 +280,12 @@ function LoadES_MYFZMR_FZXMXBJBXX() {
 
                 LoadPhotos(xml.Value.Photos);
                 PDLB(xml.Value.ES_MYFZMR_FZXMXBJBXX.LB);
-                $("#spanXL").html(xml.Value.ES_MYFZMR_FZXMXBJBXX.XL);
-                return;
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
         }
     });
-}
-//鼠标经过
-function MouseOver() {
-    isleave = false;
-}
-//鼠标离开
-function MouseLeave() {
-    isleave = true;
 }
 //发布
 function FB() {
@@ -306,7 +297,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "XL", "'" + $("#spanXL").html() + "'");
     obj = jsonObj.AddJson(obj, "XJ", "'" + $("#spanXJ").html() + "'");
     obj = jsonObj.AddJson(obj, "JYQY", "'" + $("#spanQY").html() + "'");
-    obj = jsonObj.AddJson(obj, "JYDD", "'" + $("#spanSQ").html() + "'");
+    obj = jsonObj.AddJson(obj, "JYDD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetGQ() + "'");
 
