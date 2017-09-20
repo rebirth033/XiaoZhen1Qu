@@ -17,32 +17,20 @@ $(document).ready(function () {
     $("#btnClose").bind("click", CloseWindow);
     $("#div_dz_close").bind("click", CloseWindow);
     $("#span_content_info_qhcs").bind("click", LoadXZQByGrade);
-    $("body").bind("click", CloseXZQ);
+    $("body").bind("click", function () { Close("_XZQ"); Close("LB"); Close("XL"); Close("XJ"); Close("QY"); Close("DD"); });
     $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
 
     LoadTXXX();
     LoadMYETYPWJLB();
-    LoadXJ();
-    LoadQY();
     LoadDefault();
     LoadES_MYFZMR_MYETYPWJJBXX();
-    BindHover("LB");
-    BindHover("XJ");
-    BindHover("QY");
-    BindHover("SQ");
+    BindClick("LB");
+    BindClick("XJ");
+    BindClick("QY");
+    BindClick("DD");
 
 });
-//显示用户菜单
-function ShowYHCD() {
-    $("#div_top_right_dropdown_yhm").css("display", "block");
-    $("#span_top_right_yhm_img").css("background-image", 'url(' + getRootPath() + "/Areas/Business/Css/images/arrow_up.png" + ')');
-}
-//隐藏用户菜单
-function HideYHCD() {
-    $("#div_top_right_dropdown_yhm").css("display", "none");
-    $("#span_top_right_yhm_img").css("background-image", 'url(' + getRootPath() + "/Areas/Business/Css/images/arrow_down.png" + ')');
-}
 //描述框focus
 function FYMSFocus() {
     $("#FYMS").css("color", "#333333");
@@ -64,33 +52,6 @@ function LoadDefault() {
     $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
     $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
 }
-//加载图形信息
-function LoadTXXX() {
-    $("#spanTXXX").css("color", "#5bc0de");
-    $("#emTXXX").css("background", "#5bc0de");
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/LBXZ/LoadLBByID",
-        dataType: "json",
-        data:
-        {
-            LBID: getUrlParam("CLICKID")
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                if (xml.list.length > 0)
-                    $("#spanLBXZ").html("1." + xml.list[0].LBNAME);
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//重选类别
-function CXLB() {
-    window.location.href = getRootPath() + "/Business/LBXZ/LBXZ";
-}
 //选择个人转让
 function GRZRSelect() {
     $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
@@ -100,6 +61,26 @@ function GRZRSelect() {
 function SJZRSelect() {
     $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
     $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+}
+//绑定下拉框鼠标点击样式
+function BindClick(type) {
+    $("#div" + type + "Span").click(function () {
+        if (type === "LB") {
+            LoadMYETYPWJLB();
+        }
+        if (type === "XL") {
+            LoadMYETYPWJXL();
+        }
+        if (type === "XJ") {
+            LoadXJ();
+        }
+        if (type === "QY") {
+            LoadQY();
+        }
+        if (type === "DD") {
+            LoadDD($("#QYCode").val());
+        }
+    });
 }
 //加载母婴/儿童用品/玩具类别
 function LoadMYETYPWJLB() {
@@ -119,7 +100,8 @@ function LoadMYETYPWJLB() {
                 }
                 html += "</ul>";
                 $("#divLB").html(html);
-                $("#divLB").css("display", "none");
+                $("#divLB").css("display", "block");
+                ActiveStyle("LB");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -145,7 +127,8 @@ function LoadMYETYPWJXL(type) {
                 }
                 html += "</ul>";
                 $("#divXL").html(html);
-                $("#divXL").css("display", "none");
+                $("#divXL").css("display", "block");
+                ActiveStyle("XL");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -171,7 +154,8 @@ function LoadXXCS(id, type) {
                 }
                 html += "</ul>";
                 $("#div" + id).html(html);
-                $("#div" + id).css("display", "none");
+                $("#div" + id).css("display", "block");
+                ActiveStyle(id);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -197,99 +181,14 @@ function LoadXJ() {
                 }
                 html += "</ul>";
                 $("#divXJ").html(html);
-                $("#divXJ").css("display", "none");
+                $("#divXJ").css("display", "block");
+                ActiveStyle("XJ");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
         }
     });
-}
-//加载区域
-function LoadQY() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadQY",
-        dataType: "json",
-        data:
-        {
-
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectQY(this,\"QY\",\"" + xml.list[i].CODE + "\")'>" + RTrim(RTrim(RTrim(xml.list[i].NAME, '市'), '区'), '县') + "</li>";
-                }
-                html += "</ul>";
-                $("#divQY").html(html);
-                $("#divQY").css("display", "none");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载地段
-function LoadSQ(QY) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadSQ",
-        dataType: "json",
-        data:
-        {
-            QY: QY
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"SQ\")'>" + RTrimStr(xml.list[i].NAME, '街道,镇,林场,管理处') + "</li>";
-                }
-                html += "</ul>";
-                $("#divSQ").html(html);
-                $("#divSQ").css("display", "none");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//鼠标盘旋样式
-function HoverStyle(name) {
-    $("#div" + name + "Text").css("border-top", "1px solid #5bc0de").css("border-right", "1px solid #5bc0de").css("border-left", "1px solid #5bc0de").css("border-bottom", "1px solid #5bc0de");
-    $("#div" + name).find("ul").css("border-left", "1px solid #5bc0de").css("border-right", "1px solid #5bc0de").css("border-bottom", "1px solid #5bc0de");
-    $("#span" + name).css("color", "#333333");
-}
-//鼠标离开样式
-function LeaveStyle(name) {
-    $("#div" + name + "Text").css("border-top", "1px solid #cccccc").css("border-right", "1px solid #cccccc").css("border-left", "1px solid #cccccc").css("border-bottom", "1px solid #cccccc");
-    $("#div" + name).find("ul").css("border-left", "1px solid #cccccc").css("border-right", "1px solid #cccccc").css("border-bottom", "1px solid #cccccc");
-    $("#span" + name).css("color", "#999999");
-}
-//绑定下拉框鼠标盘旋样式
-function BindHover(type) {
-    $("#div" + type + "Text").hover(function () {
-        $("#div" + type).css("display", "block");
-        HoverStyle(type);
-    }, function () {
-        $("#div" + type).css("display", "none");
-        LeaveStyle(type);
-    });
-    $("#div" + type).hover(function () {
-        $("#div" + type).css("display", "block");
-        HoverStyle(type);
-    }, function () {
-        $("#div" + type).css("display", "none");
-        LeaveStyle(type);
-    });
-}
-//选择下拉框
-function SelectDropdown(obj, type) {
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
 }
 //选择类别下拉框
 function SelectLB(obj, type) {
@@ -299,31 +198,8 @@ function SelectLB(obj, type) {
 }
 //判断类别
 function PDLB(LB) {
-    if (LB === "床") {
-        $("#divCXXCS").css("display", "");
-        $("#divCDXXCS").css("display", "none");
-        LoadXXCS("CCC", "床尺寸");
-        BindHover("CCC");
-    }
-    else if (LB === "床垫") {
-        $("#divCXXCS").css("display", "none");
-        $("#divCDXXCS").css("display", "");
-        LoadXXCS("CDCC", "床尺寸");
-        BindHover("CDCC");
-    }
-    else {
-        $("#divCXXCS").css("display", "none");
-        $("#divCDXXCS").css("display", "none");
-    }
     LoadMYETYPWJXL(LB);
     BindHover("XL");
-}
-
-//选择区域下拉框
-function SelectQY(obj, type, code) {
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
-    LoadSQ(code);
 }
 //选择家居日用品牌
 function SelectPBPP(obj, type, code) {
@@ -375,19 +251,9 @@ function LoadES_MYFZMR_MYETYPWJJBXX() {
                 $("#spanXJ").html(xml.Value.ES_MYFZMR_MYETYPWJJBXX.XJ);
                 $("#spanQY").html(xml.Value.ES_MYFZMR_MYETYPWJJBXX.JYQY);
                 $("#spanSQ").html(xml.Value.ES_MYFZMR_MYETYPWJJBXX.JYDD);
-
-                $("#spanDSPMCC").html(xml.Value.ES_MYFZMR_MYETYPWJJBXX.DSPMCC);
-                $("#spanDSPP").html(xml.Value.ES_MYFZMR_MYETYPWJJBXX.DSPP);
-                $("#spanXYJPP").html(xml.Value.ES_MYFZMR_MYETYPWJJBXX.XYJPP);
-                $("#spanKTPP").html(xml.Value.ES_MYFZMR_MYETYPWJJBXX.KTPP);
-                $("#spanKTBPDS").html(xml.Value.ES_MYFZMR_MYETYPWJJBXX.KTBPDS);
-                $("#spanKTGL").html(xml.Value.ES_MYFZMR_MYETYPWJJBXX.KTGL);
-                $("#spanBXPP").html(xml.Value.ES_MYFZMR_MYETYPWJJBXX.BXPP);
-                $("#spanBGPP").html(xml.Value.ES_MYFZMR_MYETYPWJJBXX.BGPP);
-
+                $("#spanXL").html(xml.Value.ES_MYFZMR_MYETYPWJJBXX.XL);
                 LoadPhotos(xml.Value.Photos);
                 PDLB(xml.Value.ES_MYFZMR_MYETYPWJJBXX.LB);
-                $("#spanXL").html(xml.Value.ES_MYFZMR_MYETYPWJJBXX.XL);
                 return;
             }
         },
@@ -395,14 +261,6 @@ function LoadES_MYFZMR_MYETYPWJJBXX() {
 
         }
     });
-}
-//鼠标经过
-function MouseOver() {
-    isleave = false;
-}
-//鼠标离开
-function MouseLeave() {
-    isleave = true;
 }
 //发布
 function FB() {
@@ -417,15 +275,6 @@ function FB() {
     obj = jsonObj.AddJson(obj, "JYDD", "'" + $("#spanSQ").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetGQ() + "'");
-
-    obj = jsonObj.AddJson(obj, "DSPMCC", "'" + $("#spanDSPMCC").html() + "'");
-    obj = jsonObj.AddJson(obj, "DSPP", "'" + $("#spanDSPP").html() + "'");
-    obj = jsonObj.AddJson(obj, "XYJPP", "'" + $("#spanXYJPP").html() + "'");
-    obj = jsonObj.AddJson(obj, "KTPP", "'" + $("#spanKTPP").html() + "'");
-    obj = jsonObj.AddJson(obj, "KTBPDS", "'" + $("#spanKTBPDS").html() + "'");
-    obj = jsonObj.AddJson(obj, "KTGL", "'" + $("#spanKTGL").html() + "'");
-    obj = jsonObj.AddJson(obj, "BXPP", "'" + $("#spanBXPP").html() + "'");
-    obj = jsonObj.AddJson(obj, "BGPP", "'" + $("#spanBGPP").html() + "'");
 
     if (getUrlParam("ES_MYFZMR_MYETYPWJJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "ES_MYFZMR_MYETYPWJJBXXID", "'" + getUrlParam("ES_MYFZMR_MYETYPWJJBXXID") + "'");
