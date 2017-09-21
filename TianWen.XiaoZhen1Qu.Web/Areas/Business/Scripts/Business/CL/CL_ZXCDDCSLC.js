@@ -284,7 +284,6 @@ function LoadCL_ZXCDDCSLCJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.CL_ZXCDDCSLCJBXX.BCMS);
                 });
-                SetGQ(xml.Value.CL_ZXCDDCSLCJBXX.GQ);
                 $("#spanLB").html(xml.Value.CL_ZXCDDCSLCJBXX.LB);
                 $("#spanXJ").html(xml.Value.CL_ZXCDDCSLCJBXX.XJ);
                 $("#spanQY").html(xml.Value.CL_ZXCDDCSLCJBXX.JYQY);
@@ -297,8 +296,7 @@ function LoadCL_ZXCDDCSLCJBXX() {
                 $("#spanXL").html(xml.Value.CL_ZXCDDCSLCJBXX.XL);
                 LoadPhotos(xml.Value.Photos);
                 PDLB(xml.Value.CL_ZXCDDCSLCJBXX.LB);
-                
-                return;
+                SetGQ(xml.Value.CL_ZXCDDCSLCJBXX.GQ);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

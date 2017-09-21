@@ -1,0 +1,75 @@
+-- Create table
+create table CL_KCJBXX
+(
+  cl_kcjbxxid VARCHAR2(50) not null,
+  jcxxid      VARCHAR2(50),
+  bcms        VARCHAR2(4000),
+  clys        VARCHAR2(20),
+  spnf        VARCHAR2(20),
+  spyf        VARCHAR2(20),
+  jg          VARCHAR2(20),
+  pp          VARCHAR2(20),
+  sgms        VARCHAR2(20),
+  njdqnf      VARCHAR2(20),
+  njdqyf      VARCHAR2(20),
+  jqxdqnf     VARCHAR2(20),
+  cx          VARCHAR2(20),
+  sfdqby      INTEGER,
+  ywzdsg      INTEGER,
+  jqxdqyf     VARCHAR2(20),
+  syxdqnf     VARCHAR2(20),
+  syxdqyf     VARCHAR2(20),
+  xslc        VARCHAR2(20)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 16
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table CL_KCJBXX
+  is '车辆_客车';
+-- Add comments to the columns 
+comment on column CL_KCJBXX.cl_kcjbxxid
+  is '客车基本信息ID';
+comment on column CL_KCJBXX.jcxxid
+  is '基础信息ID';
+comment on column CL_KCJBXX.bcms
+  is '补充描述';
+comment on column CL_KCJBXX.clys
+  is '车辆颜色';
+comment on column CL_KCJBXX.spnf
+  is '上牌年份';
+comment on column CL_KCJBXX.spyf
+  is '上牌月份';
+comment on column CL_KCJBXX.jg
+  is '价格';
+comment on column CL_KCJBXX.pp
+  is '品牌';
+comment on column CL_KCJBXX.sgms
+  is '事故描述';
+comment on column CL_KCJBXX.njdqnf
+  is '年检到期年份';
+comment on column CL_KCJBXX.njdqyf
+  is '年检到期月份';
+comment on column CL_KCJBXX.jqxdqnf
+  is '交强险到期年份';
+comment on column CL_KCJBXX.cx
+  is '车系';
+comment on column CL_KCJBXX.sfdqby
+  is '是否定期保养';
+comment on column CL_KCJBXX.ywzdsg
+  is '有无重大事故';
+comment on column CL_KCJBXX.jqxdqyf
+  is '交强险到期月份';
+comment on column CL_KCJBXX.syxdqnf
+  is '商业险到期年份';
+comment on column CL_KCJBXX.syxdqyf
+  is '商业险到期月份';
+comment on column CL_KCJBXX.xslc
+  is '行驶里程';

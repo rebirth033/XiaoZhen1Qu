@@ -22,10 +22,14 @@ $(document).ready(function () {
     LoadCL_KCJBXX();
     LoadCYLS();
     BindClick("PP");
-    BindClick("CCNX");
-    BindClick("CCYF");
-    BindClick("QY");
-    BindClick("DD");
+    BindClick("SPNF");
+    BindClick("SPYF");
+    BindClick("NJDQNF");
+    BindClick("NJDQYF");
+    BindClick("JQXDQNF");
+    BindClick("JQXDQYF");
+    BindClick("SYXDQNF");
+    BindClick("SYXDQYF");
 });
 //加载品牌标签
 function LoadPP() {
@@ -120,6 +124,42 @@ function WSelect() {
     $("#imgY").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
     $("#imgW").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
 }
+//获取是否定期保养
+function GetSFDQBY() {
+    if ($("#imgS").attr("src").indexOf("blue") !== -1)
+        return "0";
+    else
+        return "1";
+}
+//设置是否定期保养
+function SetSFDQBY(SFDQBY) {
+    if (SFDQBY === 0) {
+        $("#imgS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+        $("#imgF").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+    }
+    else {
+        $("#imgS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+        $("#imgF").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+    }
+}
+//获取有无重大事故
+function GetYWZDSG() {
+    if ($("#imgY").attr("src").indexOf("blue") !== -1)
+        return "0";
+    else
+        return "1";
+}
+//设置有无重大事故
+function SetYWZDSG(YWZDSG) {
+    if (YWZDSG === 0) {
+        $("#imgY").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+        $("#imgW").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+    }
+    else {
+        $("#imgY").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+        $("#imgW").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+    }
+}
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
@@ -130,17 +170,11 @@ function BindClick(type) {
         if (type === "CX") {
             LoadKCCX();
         }
-        if (type === "CCNX") {
-            LoadCCNX();
+        if (type.indexOf("NF") !== -1) {
+            LoadNF(type);
         }
-        if (type === "CCYF") {
-            LoadCCYF();
-        }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
+        if (type.indexOf("YF") !== -1) {
+            LoadYF(type);
         }
     });
 }
@@ -171,7 +205,7 @@ function LoadKCCX() {
     });
 }
 //加载出厂年限
-function LoadCCNX() {
+function LoadNF(ID) {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/Common/LoadCODES_CL",
@@ -184,12 +218,12 @@ function LoadCCNX() {
             if (xml.Result === 1) {
                 var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectLB(this,\"CCNX\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
+                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"" + ID + "\")'>" + xml.list[i].CODENAME + "</li>";
                 }
                 html += "</ul>";
-                $("#divCCNX").html(html);
-                $("#divCCNX").css("display", "block");
-                ActiveStyle("CCNX");
+                $("#div" + ID).html(html);
+                $("#div" + ID).css("display", "block");
+                ActiveStyle(ID);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -198,7 +232,7 @@ function LoadCCNX() {
     });
 }
 //加载出厂月份
-function LoadCCYF() {
+function LoadYF(ID) {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/Common/LoadCODES_CL",
@@ -211,12 +245,12 @@ function LoadCCYF() {
             if (xml.Result === 1) {
                 var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectLB(this,\"CCYF\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
+                    html += "<li class='lidropdown' onclick='SelectLB(this,\"" + ID + "\")'>" + xml.list[i].CODENAME + "</li>";
                 }
                 html += "</ul>";
-                $("#divCCYF").html(html);
-                $("#divCCYF").css("display", "block");
-                ActiveStyle("CCYF");
+                $("#div" + ID).html(html);
+                $("#div" + ID).css("display", "block");
+                ActiveStyle(ID);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -255,7 +289,6 @@ function ActiveCLYS() {
     });
     $(this).css("background-color", "#87B53B");
 }
-
 //加载车辆_客车基本信息
 function LoadCL_KCJBXX() {
     $.ajax({
@@ -277,14 +310,19 @@ function LoadCL_KCJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.CL_KCJBXX.BCMS);
                 });
-                $("#spanQY").html(xml.Value.CL_KCJBXX.JYQY);
-                $("#spanDD").html(xml.Value.CL_KCJBXX.JYDD);
-                $("#spanXL").html(xml.Value.CL_KCJBXX.XL);
-                $("#spanCX").html(xml.Value.CL_KCJBXX.LB);
-                $("#spanCCNX").html(xml.Value.CL_KCJBXX.CCNX);
-                $("#spanCCYF").html(xml.Value.CL_KCJBXX.CCYF);
+                $("#spanPP").html(xml.Value.CL_KCJBXX.PP);
+                $("#spanCX").html(xml.Value.CL_KCJBXX.CX);
+                $("#spanSPNF").html(xml.Value.CL_KCJBXX.SPNF);
+                $("#spanSPYF").html(xml.Value.CL_KCJBXX.SPYF);
+                $("#spanNJDQNF").html(xml.Value.CL_KCJBXX.NJDQNF);
+                $("#spanNJDQYF").html(xml.Value.CL_KCJBXX.NJDQYF);
+                $("#spanJQXDQNF").html(xml.Value.CL_KCJBXX.JQXDQNF);
+                $("#spanJQXDQYF").html(xml.Value.CL_KCJBXX.JQXDQYF);
+                $("#spanSYXDQNF").html(xml.Value.CL_KCJBXX.SYXDQNF);
+                $("#spanSYXDQYF").html(xml.Value.CL_KCJBXX.SYXDQYF);
                 LoadPhotos(xml.Value.Photos);
-                return;
+                SetSFDQBY(xml.Value.CL_KCJBXX.SFDQBY);
+                SetYWZDSG(xml.Value.CL_KCJBXX.YWZDSG);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -298,12 +336,18 @@ function FB() {
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
-    obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanCX").html() + "'");
     obj = jsonObj.AddJson(obj, "PP", "'" + $("#spanPP").html() + "'");
-    obj = jsonObj.AddJson(obj, "CCNX", "'" + $("#spanCCNX").html() + "'");
-    obj = jsonObj.AddJson(obj, "CCYF", "'" + $("#spanCCYF").html() + "'");
-    obj = jsonObj.AddJson(obj, "JYQY", "'" + $("#spanQY").html() + "'");
-    obj = jsonObj.AddJson(obj, "JYDD", "'" + $("#spanDD").html() + "'");
+    obj = jsonObj.AddJson(obj, "CX", "'" + $("#spanCX").html() + "'");
+    obj = jsonObj.AddJson(obj, "SPNF", "'" + $("#spanSPNF").html() + "'");
+    obj = jsonObj.AddJson(obj, "SPYF", "'" + $("#spanSPYF").html() + "'");
+    obj = jsonObj.AddJson(obj, "NJDQNF", "'" + $("#spanNJDQNF").html() + "'");
+    obj = jsonObj.AddJson(obj, "NJDQYF", "'" + $("#spanNJDQYF").html() + "'");
+    obj = jsonObj.AddJson(obj, "JQXDQNF", "'" + $("#spanJQXDQNF").html() + "'");
+    obj = jsonObj.AddJson(obj, "JQXDQYF", "'" + $("#spanJQXDQYF").html() + "'");
+    obj = jsonObj.AddJson(obj, "SYXDQNF", "'" + $("#spanSYXDQNF").html() + "'");
+    obj = jsonObj.AddJson(obj, "SYXDQYF", "'" + $("#spanSYXDQYF").html() + "'");
+    obj = jsonObj.AddJson(obj, "SFDQBY", "'" + GetSFDQBY() + "'");
+    obj = jsonObj.AddJson(obj, "YWZDSG", "'" + GetYWZDSG() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
 
     if (getUrlParam("CL_KCJBXXID") !== null)
