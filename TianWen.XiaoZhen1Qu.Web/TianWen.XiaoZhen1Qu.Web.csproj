@@ -371,6 +371,7 @@
     <Content Include="Areas\Business\Scripts\Business\CL\CL_ZXCDDCSLC.js" />
     <Content Include="Areas\Business\Scripts\Business\CL\CL_ZXCDDCSLCYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\Common.js" />
+    <Content Include="Areas\Business\Scripts\Business\Common\HTFB_Common.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\Regular.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\XZQ.js" />
     <Content Include="Areas\Business\Scripts\Business\ES\ES_JDJJBG_BGSB.js" />
@@ -941,6 +942,7 @@
     </Content>
     <Content Include="Areas\Business\Views\CL_HC\CL_HC.cshtml" />
     <Content Include="Areas\Business\Views\CL_GCC\CL_GCC.cshtml" />
+    <Content Include="Areas\Business\Views\Shared\HTFBLayout.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
