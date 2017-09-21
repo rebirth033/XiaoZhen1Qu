@@ -54,7 +54,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 catch (Exception ex)
                 {
                     transaction.Rollback();
-                    LoggerManager.Error("FWCZJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                    LoggerManager.Error("FC_ZZFJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
                     return new
                     {
                         Result = EnResultType.Failed,

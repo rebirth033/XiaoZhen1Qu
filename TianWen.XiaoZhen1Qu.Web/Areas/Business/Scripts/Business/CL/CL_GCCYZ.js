@@ -12,50 +12,6 @@
     $("#LXDH").bind("blur", ValidateLXDH);
     $("#LXDH").bind("focus", InfoLXDH);
 });
-//验证额定载重
-function ValidateEDZZ() {
-    if ($("#EDZZ").val() === "" || $("#EDZZ").val() === null) {
-        $("#divEDZZTip").css("display", "block");
-        $("#divEDZZTip").attr("class", "Warn");
-        $("#divEDZZTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写额定载重啦');
-        $("#spanEDZZ").css("border-color", "#fd634f");
-        return false;
-    } else {
-        if (ValidateDecimal($("#EDZZ").val())) {
-            $("#divEDZZTip").css("display", "none");
-            $("#spanEDZZ").css("border-color", "#cccccc");
-            return true;
-        } else {
-            $("#divEDZZTip").css("display", "block");
-            $("#divEDZZTip").attr("class", "Warn");
-            $("#divEDZZTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />额定载重请填写数字');
-            $("#spanEDZZ").css("border-color", "#fd634f");
-            return false;
-        }
-    }
-}
-//验证行驶里程
-function ValidateXSLC() {
-    if ($("#XSLC").val() === "" || $("#XSLC").val() === null) {
-        $("#divXSLCTip").css("display", "block");
-        $("#divXSLCTip").attr("class", "Warn");
-        $("#divXSLCTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写行驶里程啦');
-        $("#spanXSLC").css("border-color", "#fd634f");
-        return false;
-    } else {
-        if (ValidateDecimal($("#XSLC").val())) {
-            $("#divXSLCTip").css("display", "none");
-            $("#spanXSLC").css("border-color", "#cccccc");
-            return true;
-        } else {
-            $("#divXSLCTip").css("display", "block");
-            $("#divXSLCTip").attr("class", "Warn");
-            $("#divXSLCTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />行驶里程请填写数字');
-            $("#spanXSLC").css("border-color", "#fd634f");
-            return false;
-        }
-    }
-}
 //验证售价
 function ValidateJG() {
     if ($("#JG").val() === "" || $("#JG").val() === null) {
@@ -151,22 +107,10 @@ function ValidateLXDH() {
 }
 //验证所有
 function AllValidate() {
-    if (ValidateEDZZ() & ValidateXSLC() & ValidateJG() & ValidateBT() & ValidateFWZP() & ValidateLXR() & ValidateLXDH())
+    if (ValidateJG() & ValidateBT() & ValidateFWZP() & ValidateLXR() & ValidateLXDH())
         return true;
     else
         return false;
-}
-//提示额定载重
-function InfoEDZZ() {
-    $("#divEDZZTip").css("display", "inline-block");
-    $("#divEDZZTip").attr("class", "Info");
-    $("#divEDZZTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写数字');
-}
-//提示行驶里程
-function InfoXSLC() {
-    $("#divXSLCTip").css("display", "inline-block");
-    $("#divXSLCTip").attr("class", "Info");
-    $("#divXSLCTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写数字');
 }
 //提示价格
 function InfoJG() {

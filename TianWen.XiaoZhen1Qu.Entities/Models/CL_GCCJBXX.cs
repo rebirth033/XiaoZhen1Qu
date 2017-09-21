@@ -41,10 +41,16 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string PP { get; set; }
 
         /// <summary>
-        /// 行驶里程
+        /// 吨位
         /// </summary>
         [Property]
-        public virtual string XSLC { get; set; }
+        public virtual string DW { get; set; }
+
+        /// <summary>
+        /// 小时数
+        /// </summary>
+        [Property]
+        public virtual string XSS { get; set; }
 
         /// <summary>
         /// 出厂年限
@@ -57,12 +63,6 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// </summary>
         [Property]
         public virtual string CCYF { get; set; }
-
-        /// <summary>
-        /// 额定载重
-        /// </summary>
-        [Property]
-        public virtual string EDZZ { get; set; }
 
         /// <summary>
         /// 价格
