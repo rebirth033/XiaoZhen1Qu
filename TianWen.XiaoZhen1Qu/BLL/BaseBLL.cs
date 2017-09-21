@@ -109,6 +109,20 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
+        public object LoadCODES_CW(string TYPENAME)
+        {
+            try
+            {
+                IList<CODES_CW> list = DAO.Repository.GetObjectList<CODES_CW>(String.Format("FROM CODES_CW WHERE TYPENAME='{0}' ORDER BY CODEORDER", TYPENAME));
+                return new { Result = EnResultType.Success, list = list };
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("error", ex.Message);
+                return new { Result = EnResultType.Failed, Message = "加载失败" };
+            }
+        }
+
         public object LoadQYBySuperName(string SUPERNAME)
         {
             try
@@ -269,6 +283,20 @@ namespace TianWen.XiaoZhen1Qu.BLL
             try
             {
                 IList<CODES_ES_QTES> list = DAO.Repository.GetObjectList<CODES_ES_QTES>(String.Format("FROM CODES_ES_QTES WHERE PARENTID like '%{0}%' ORDER BY CODEORDER", PPID));
+                return new { Result = EnResultType.Success, list = list };
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("error", ex.Message);
+                return new { Result = EnResultType.Failed, Message = "加载失败" };
+            }
+        }
+
+        public object LoadCWPZXX(string CWBQ)
+        {
+            try
+            {
+                IList<CODES_CW> list = DAO.Repository.GetObjectList<CODES_CW>(String.Format("FROM CODES_CW WHERE CODEVALUE like '%{0}%' ORDER BY CODEORDER", CWBQ));
                 return new { Result = EnResultType.Success, list = list };
             }
             catch (Exception ex)

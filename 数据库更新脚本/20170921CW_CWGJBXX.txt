@@ -1,0 +1,58 @@
+-- Create table
+create table CW_CWGJBXX
+(
+  cw_cwgjbxxid VARCHAR2(50) not null,
+  jcxxid       VARCHAR2(50),
+  bcms         VARCHAR2(4000),
+  pz           VARCHAR2(20),
+  nl           VARCHAR2(20),
+  nldw         VARCHAR2(20),
+  xb           VARCHAR2(20),
+  ms           VARCHAR2(20),
+  qcqk         INTEGER,
+  ymqk         VARCHAR2(20),
+  ymzl         VARCHAR2(20),
+  spkg         INTEGER,
+  sf           INTEGER
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 16K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table CW_CWGJBXX
+  is '宠物_宠物狗';
+-- Add comments to the columns 
+comment on column CW_CWGJBXX.cw_cwgjbxxid
+  is '宠物狗基本信息ID';
+comment on column CW_CWGJBXX.jcxxid
+  is '基础信息ID';
+comment on column CW_CWGJBXX.bcms
+  is '补充描述';
+comment on column CW_CWGJBXX.pz
+  is '品种';
+comment on column CW_CWGJBXX.nl
+  is '年龄';
+comment on column CW_CWGJBXX.nldw
+  is '年龄单位';
+comment on column CW_CWGJBXX.xb
+  is '价格';
+comment on column CW_CWGJBXX.ms
+  is '毛色';
+comment on column CW_CWGJBXX.qcqk
+  is '驱虫情况';
+comment on column CW_CWGJBXX.ymqk
+  is '疫苗情况';
+comment on column CW_CWGJBXX.ymzl
+  is '疫苗种类';
+comment on column CW_CWGJBXX.spkg
+  is '视频看狗';
+comment on column CW_CWGJBXX.sf
+  is '身份';

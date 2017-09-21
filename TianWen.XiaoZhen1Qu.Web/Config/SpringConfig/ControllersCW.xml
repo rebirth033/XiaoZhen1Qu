@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects  xmlns="http://www.springframework.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.net http://www.springframework.net/xsd/spring-objects.xsd">
+  <object id="CW_CWGController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.CW_CWGController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="CW_CWGBLL">
+      <ref object="CW_CWGBLL"/>
+    </property>
+  </object>
+</objects>

@@ -16,7 +16,9 @@ namespace TianWen.XiaoZhen1Qu.Interface
 
         object LoadCODES_ES_QTES(string TYPENAME);
 
-        object LoadCODES_CL(string TYPENAME); 
+        object LoadCODES_CL(string TYPENAME);
+
+        object LoadCODES_CW(string TYPENAME);
 
         object LoadGCQXJBXX(string GCQX);
 
@@ -30,7 +32,9 @@ namespace TianWen.XiaoZhen1Qu.Interface
 
         object LoadKCCXXX(string PPID);
 
-        object LoadGCQXXH(string PPID); 
+        object LoadGCQXXH(string PPID);
+
+        object LoadCWPZXX(string CWBQ);
 
         object LoadQYBySuperName(string SUPERNAME);
 

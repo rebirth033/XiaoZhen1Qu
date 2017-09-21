@@ -53,6 +53,7 @@
     <Compile Include="ICL_KCBLL.cs" />
     <Compile Include="ICL_MTCBLL.cs" />
     <Compile Include="ICommonBLL.cs" />
+    <Compile Include="ICW_CWGBLL.cs" />
     <Compile Include="IDAO.cs" />
     <Compile Include="ICL_ZXCDDCSLCBLL.cs" />
     <Compile Include="IES_JDJJBG_BGSBBLL.cs" />

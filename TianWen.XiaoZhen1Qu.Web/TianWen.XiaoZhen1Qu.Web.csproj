@@ -167,6 +167,7 @@
     <Content Include="Areas\Business\Css\CL\CL_ZXCDDCSLC.css" />
     <Content Include="Areas\Business\Css\Common\Top.css" />
     <Content Include="Areas\Business\Css\Common\XZQ.css" />
+    <Content Include="Areas\Business\Css\CW\CW_CWG.css" />
     <Content Include="Areas\Business\Css\ES\ES_JDJJBG_BGSB.css" />
     <Content Include="Areas\Business\Css\ES\ES_JDJJBG_ESJD.css" />
     <Content Include="Areas\Business\Css\ES\ES_JDJJBG_ESJJ.css" />
@@ -377,6 +378,8 @@
     <Content Include="Areas\Business\Scripts\Business\Common\HTFB_Common.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\Regular.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\XZQ.js" />
+    <Content Include="Areas\Business\Scripts\Business\CW\CW_CWG.js" />
+    <Content Include="Areas\Business\Scripts\Business\CW\CW_CWGYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\ES\ES_JDJJBG_BGSB.js" />
     <Content Include="Areas\Business\Scripts\Business\ES\ES_JDJJBG_BGSBYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\ES\ES_JDJJBG_ESJD.js" />
@@ -782,6 +785,7 @@
     <Compile Include="Areas\Business\Controllers\CL\CL_MTCController.cs" />
     <Compile Include="Areas\Business\Controllers\CL\CL_ZXCDDCSLCController.cs" />
     <Compile Include="Areas\Business\Controllers\CommonController.cs" />
+    <Compile Include="Areas\Business\Controllers\CW\CW_CWGController.cs" />
     <Compile Include="Areas\Business\Controllers\ES\ES_JDJJBG_BGSBController.cs" />
     <Compile Include="Areas\Business\Controllers\ES\ES_JDJJBG_ESJDController.cs" />
     <Compile Include="Areas\Business\Controllers\ES\ES_JDJJBG_ESJJController.cs" />
@@ -831,6 +835,12 @@
     <Compile Include="Areas\Business\Scripts\UEditor\net\App_Code\PathFormater.cs" />
     <Compile Include="Areas\Business\Scripts\UEditor\net\App_Code\UploadHandler.cs" />
     <Content Include="Config\SpringConfig\ControllersES.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Config\SpringConfig\ControllersCW.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Config\SpringConfig\BLLCW.xml">
       <SubType>Designer</SubType>
     </Content>
     <Compile Include="Global.asax.cs">
@@ -948,6 +958,7 @@
     <Content Include="Areas\Business\Views\CL_GCC\CL_GCC.cshtml" />
     <Content Include="Areas\Business\Views\Shared\HTFBLayout.cshtml" />
     <Content Include="Areas\Business\Views\CL_KC\CL_KC.cshtml" />
+    <Content Include="Areas\Business\Views\CW_CWG\CW_CWG.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
