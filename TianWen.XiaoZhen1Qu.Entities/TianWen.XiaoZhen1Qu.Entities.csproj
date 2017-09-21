@@ -55,6 +55,7 @@
     <Compile Include="Enum\XXLB.cs" />
     <Compile Include="Maps\CL_GCCJBXX_Map.cs" />
     <Compile Include="Maps\CL_HCJBXX_Map.cs" />
+    <Compile Include="Maps\CL_KCJBXX_Map.cs" />
     <Compile Include="Maps\CL_MTCJBXX_Map.cs" />
     <Compile Include="Maps\CL_ZXCDDCSLCJBXX_Map.cs" />
     <Compile Include="Maps\CODES_CL_Map.cs" />
@@ -104,6 +105,7 @@
     <Compile Include="Maps\ZDDLXX_Map.cs" />
     <Compile Include="Models\CL_GCCJBXX.cs" />
     <Compile Include="Models\CL_HCJBXX.cs" />
+    <Compile Include="Models\CL_KCJBXX.cs" />
     <Compile Include="Models\CL_MTCJBXX.cs" />
     <Compile Include="Models\CODES_FC.cs" />
     <Compile Include="Models\CODES_CL.cs" />
