@@ -41,7 +41,7 @@ function LoadDL() {
 }
 
 function LoadXL(LBID, LBNAME) {
-    $("#spanXZDL").css("color", "#cccccc");
+    $("#spanXZDL").css("color", "#333333");
     $("#emXZDL").css("background", "#cccccc");
     $("#spanXZXL").css("color", "#5bc0de");
     $("#emXZXL").css("background", "#5bc0de");

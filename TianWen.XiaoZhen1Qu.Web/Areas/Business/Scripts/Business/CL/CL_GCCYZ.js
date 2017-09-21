@@ -1,10 +1,6 @@
 ﻿$(document).ready(function () {
     $("#JG").bind("blur", ValidateJG);
     $("#JG").bind("focus", InfoJG);
-    $("#EDZZ").bind("blur", ValidateEDZZ);
-    $("#EDZZ").bind("focus", InfoEDZZ);
-    $("#XSLC").bind("blur", ValidateXSLC);
-    $("#XSLC").bind("focus", InfoXSLC);
     $("#BT").bind("blur", ValidateBT);
     $("#BT").bind("focus", InfoBT);
     $("#LXR").bind("blur", ValidateLXR);
