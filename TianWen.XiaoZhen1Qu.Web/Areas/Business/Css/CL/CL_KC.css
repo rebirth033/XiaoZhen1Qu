@@ -605,28 +605,32 @@
 }
 
 .div_clys {
-    width: 60px;
-    height: 30px;
+    width: 70px;
+    height: 35px;
     border: 1px solid #cccccc;
     display: inline-block;
     padding: 5px 6px;
+    border-radius: 4px;
+    position: relative;
+    margin-right: 10px;
 }
 
     .div_clys:hover {
-        border-color: #31b0d5;
+        background-color: #87B53B;
         cursor: pointer;
     }
 
 .span_clys_left {
-    width: 16px;
-    height: 16px;
-    background-color: #000000;
+    width: 18px;
+    height: 18px;
     display: inline-block;
+    border: 1px solid #cccccc;
 }
 
 .span_clys_right {
     display: inline-block;
-    right: 15px;
-    bottom: 2px;
+    left: 34px;
+    bottom: 10px;
     position: absolute;
+    font-size: 14px;
 }
