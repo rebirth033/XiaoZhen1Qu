@@ -1,0 +1,36 @@
+-- Create table
+create table CW_CWMJBXX
+(
+  cw_cwmjbxxid VARCHAR2(50) not null,
+  jcxxid       VARCHAR2(50),
+  bcms         VARCHAR2(4000),
+  pz           VARCHAR2(20),
+  gq           INTEGER,
+  jg           VARCHAR2(20)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 16
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table CW_CWMJBXX
+  is '宠物_宠物猫';
+-- Add comments to the columns 
+comment on column CW_CWMJBXX.cw_cwmjbxxid
+  is '宠物猫基本信息ID';
+comment on column CW_CWMJBXX.jcxxid
+  is '基础信息ID';
+comment on column CW_CWMJBXX.bcms
+  is '补充描述';
+comment on column CW_CWMJBXX.pz
+  is '品种';
+comment on column CW_CWMJBXX.gq
+  is '供求';
+comment on column CW_CWMJBXX.jg
+  is '价格';

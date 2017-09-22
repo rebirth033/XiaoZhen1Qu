@@ -55,6 +55,7 @@
     <Compile Include="ICommonBLL.cs" />
     <Compile Include="ICW_CWGBLL.cs" />
     <Compile Include="ICW_CWMBLL.cs" />
+    <Compile Include="ICW_CWZSLYBLL.cs" />
     <Compile Include="ICW_HNYCBLL.cs" />
     <Compile Include="IDAO.cs" />
     <Compile Include="ICL_ZXCDDCSLCBLL.cs" />
