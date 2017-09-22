@@ -67,6 +67,8 @@
     <Compile Include="Maps\CODES_ES_QTES_Map.cs" />
     <Compile Include="Maps\CODES_ES_WHYL_Map.cs" />
     <Compile Include="Maps\CW_CWGJBXX_Map.cs" />
+    <Compile Include="Maps\CW_CWMJBXX_Map.cs" />
+    <Compile Include="Maps\CW_HNYCJBXX_Map.cs" />
     <Compile Include="Maps\DISTRICT_Map.cs" />
     <Compile Include="Maps\DJJDJL_Map.cs" />
     <Compile Include="Maps\ES_JDJJBG_BGSBJBXX_Map.cs" />
@@ -118,6 +120,8 @@
     <Compile Include="Models\CODES_ES_QTES.cs" />
     <Compile Include="Models\CODES_ES_WHYL.cs" />
     <Compile Include="Models\CW_CWGJBXX.cs" />
+    <Compile Include="Models\CW_CWMJBXX.cs" />
+    <Compile Include="Models\CW_HNYCJBXX.cs" />
     <Compile Include="Models\DISTRICT.cs" />
     <Compile Include="Models\DJJDJL.cs" />
     <Compile Include="Models\EncryptionHelper.cs" />

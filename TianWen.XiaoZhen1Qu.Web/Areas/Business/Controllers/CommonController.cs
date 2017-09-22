@@ -147,5 +147,10 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         {
             return Json(CommonBLL.LoadCWPZXX(Request["CWG"]));
         }
+
+        public JsonResult LoadHNCYXX()
+        {
+            return Json(CommonBLL.LoadHNCYXX(Request["PZID"]));
+        }
     }
 }

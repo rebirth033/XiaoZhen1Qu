@@ -5,4 +5,14 @@
       <ref object="CW_CWGBLL"/>
     </property>
   </object>
+  <object id="CW_CWMController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.CW_CWMController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="CW_CWMBLL">
+      <ref object="CW_CWMBLL"/>
+    </property>
+  </object>
+  <object id="CW_HNYCController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.CW_HNYCController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="CW_HNYCBLL">
+      <ref object="CW_HNYCBLL"/>
+    </property>
+  </object>
 </objects>
