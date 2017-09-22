@@ -68,6 +68,7 @@
     <Compile Include="Maps\CODES_ES_WHYL_Map.cs" />
     <Compile Include="Maps\CW_CWGJBXX_Map.cs" />
     <Compile Include="Maps\CW_CWMJBXX_Map.cs" />
+    <Compile Include="Maps\CW_CWYPSPJBXX_Map.cs" />
     <Compile Include="Maps\CW_CWZSLYJBXX_Map.cs" />
     <Compile Include="Maps\CW_HNYCJBXX_Map.cs" />
     <Compile Include="Maps\DISTRICT_Map.cs" />

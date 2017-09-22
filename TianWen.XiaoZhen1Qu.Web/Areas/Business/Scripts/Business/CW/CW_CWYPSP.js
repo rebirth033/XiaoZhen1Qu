@@ -19,6 +19,7 @@ $(document).ready(function () {
     LoadDefault();
     LoadCW_CWYPSPJBXX();
     BindClick("LB");
+    BindClick("XJ");
 });
 //描述框focus
 function FYMSFocus() {
@@ -129,17 +130,17 @@ function LoadXJ() {
         dataType: "json",
         data:
         {
-            TYPENAME: "宠物用品/食品"
+            TYPENAME: "新旧"
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectLB(this,\"LB\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
+                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"XJ\")'>" + xml.list[i].CODENAME + "</li>";
                 }
                 html += "</ul>";
-                $("#divLB").html(html);
-                $("#divLB").css("display", "block");
+                $("#divXJ").html(html);
+                $("#divXJ").css("display", "block");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -163,16 +164,19 @@ function BindClick(type) {
         if (type === "XL") {
             LoadXL();
         }
+        if (type === "XJ") {
+            LoadXJ();
+        }
     });
 }
 //判断类别
 function PDLB(LB) {
-    if (LB === "狗粮") {
-        $("#divXLText").css("display", "none");
-    }
-    else if (LB === "狗用品") {
+    if (LB === "狗用品" || LB === "猫用品") {
         $("#divXLText").css("display", "");
         BindClick("XL");
+    }
+    else {
+        $("#divXLText").css("display", "none");
     }
 }
 //加载宠物_宠物用品/食品基本信息
@@ -197,6 +201,7 @@ function LoadCW_CWYPSPJBXX() {
                     ue.setContent(xml.Value.CW_CWYPSPJBXX.BCMS);
                 });
                 $("#spanLB").html(xml.Value.CW_CWYPSPJBXX.LB);
+                $("#spanXJ").html(xml.Value.CW_CWYPSPJBXX.XJ);
                 SetGQ(xml.Value.CW_CWYPSPJBXX.GQ);
                 LoadPhotos(xml.Value.Photos);
             }

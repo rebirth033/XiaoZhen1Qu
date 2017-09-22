@@ -11,7 +11,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         }
 
         /// <summary>
-        /// 宠物猫信息ID
+        /// 宠物用品/食品信息ID
         /// </summary>
         [Id]
         public virtual string CW_CWYPSPJBXXID { get; set; }
@@ -27,6 +27,30 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// </summary>
         [Property]
         public virtual int GQ { get; set; }
+
+        /// <summary>
+        /// 类别
+        /// </summary>
+        [Property]
+        public virtual string LB { get; set; }
+
+        /// <summary>
+        /// 小类
+        /// </summary>
+        [Property]
+        public virtual string XL { get; set; }
+
+        /// <summary>
+        /// 新旧
+        /// </summary>
+        [Property]
+        public virtual string XJ { get; set; }
+
+        /// <summary>
+        /// 价格
+        /// </summary>
+        [Property]
+        public virtual string JG { get; set; }
 
         /// <summary>
         /// 补充描述
