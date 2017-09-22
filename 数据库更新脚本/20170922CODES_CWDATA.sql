@@ -313,4 +313,238 @@ values (103, '疫苗种类', '国产疫苗', '5', 5, null);
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (104, '疫苗种类', '其他', '6', 6, null);
 
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (105, '宠物猫', '短毛猫', '1', 1, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (106, '宠物猫', '加菲猫', '2', 2, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (107, '宠物猫', '蓝猫', '3', 3, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (108, '宠物猫', '折耳猫', '4', 4, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (109, '宠物猫', '暹罗猫', '5', 5, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (110, '宠物猫', '布偶猫', '6', 6, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (111, '宠物猫', '豹猫', '7', 7, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (112, '宠物猫', '波斯猫', '8', 8, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (113, '宠物猫', '金吉拉猫', '9', 9, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (114, '宠物猫', '卷毛猫', '10', 10, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (115, '宠物猫', '无毛猫', '11', 11, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (116, '宠物猫', '其他', '12', 12, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (117, '花鸟鱼虫', '观赏鱼', '1', 1, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (118, '花鸟鱼虫', '玩赏鸟', '2', 2, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (119, '花鸟鱼虫', '奇石盆景', '3', 3, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (120, '花鸟鱼虫', '其他小宠', '4', 4, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (121, '观赏鱼', '锦鲤', '1', 1, 117);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (122, '观赏鱼', '七彩神仙', '2', 2, 117);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (123, '观赏鱼', '接吻鱼', '3', 3, 117);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (124, '观赏鱼', '罗汉鱼', '4', 4, 117);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (125, '观赏鱼', '孔雀鱼', '5', 5, 117);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (126, '观赏鱼', '龙鱼', '6', 6, 117);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (127, '观赏鱼', '红鲫鱼', '7', 7, 117);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (128, '观赏鱼', '中国金鱼', '8', 8, 117);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (129, '观赏鱼', '鹦鹉鱼', '9', 9, 117);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (130, '观赏鱼', '清道夫', '10', 10, 117);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (131, '观赏鱼', '地图鱼', '11', 11, 117);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (132, '观赏鱼', '招财鱼', '12', 12, 117);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (133, '观赏鱼', '宝莲灯鱼', '13', 13, 117);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (134, '观赏鱼', '鲷鱼', '14', 14, 117);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (135, '玩赏鸟', '鹦鹉', '1', 1, 118);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (136, '玩赏鸟', '文鸟', '2', 2, 118);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (137, '玩赏鸟', '白玉鸟', '3', 3, 118);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (138, '玩赏鸟', '八哥', '4', 4, 118);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (139, '玩赏鸟', '珍珠鸟', '5', 5, 118);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (140, '玩赏鸟', '鹩哥', '6', 6, 118);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (141, '玩赏鸟', '画眉', '7', 7, 118);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (142, '玩赏鸟', '杜鹃', '8', 8, 118);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (143, '玩赏鸟', '鸽子', '9', 9, 118);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (144, '奇石盆景', '根雕', '1', 1, 119);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (145, '奇石盆景', '奇石', '2', 2, 119);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (146, '奇石盆景', '盆景', '3', 3, 119);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (147, '其他小宠', '兔子', '1', 1, 120);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (148, '其他小宠', '龟', '2', 2, 120);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (149, '其他小宠', '仓鼠', '3', 3, 120);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (151, '其他小宠', '荷兰猪', '4', 4, 120);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (152, '其他小宠', '蟋蟀', '5', 5, 120);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (153, '其他小宠', '蜗牛', '6', 6, 120);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (154, '其他小宠', '螃蟹', '7', 7, 120);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (155, '其他小宠', '蛙', '8', 8, 120);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (156, '其他小宠', '松鼠', '9', 9, 120);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (157, '其他小宠', '龙猫', '10', 10, 120);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (158, '宠物用品/食品', '狗粮', '1', 1, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (159, '宠物用品/食品', '狗用品', '2', 2, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (160, '宠物用品/食品', '猫粮', '3', 3, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (161, '宠物用品/食品', '猫用品', '4', 4, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (162, '宠物用品/食品', '鱼缸', '5', 5, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (163, '宠物用品/食品', '其他宠物用品', '6', 6, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (164, '狗用品', '狗窝/笼子', '1', 1, 159);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (165, '狗用品', '牵引带/链', '2', 2, 159);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (166, '狗用品', '洗护用品', '3', 3, 159);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (167, '狗用品', '狗狗厕所', '4', 4, 159);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (168, '狗用品', '狗狗玩具', '5', 5, 159);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (169, '狗用品', '狗狗服饰', '6', 6, 159);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (170, '狗用品', '其他狗狗用品', '7', 7, 159);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (171, '猫用品', '猫窝/笼子', '1', 1, 161);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (172, '猫用品', '猫砂', '2', 2, 161);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (173, '猫用品', '猫厕所', '3', 3, 161);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (174, '猫用品', '猫玩具', '4', 4, 161);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (175, '猫用品', '猫服饰', '5', 5, 161);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (176, '猫用品', '其他猫用品', '6', 6, 161);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (177, '新旧', '全新', '1', 1, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (178, '新旧', '99成新', '2', 2, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (179, '新旧', '95成新', '3', 3, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (180, '新旧', '9成新', '4', 4, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (181, '新旧', '8成新', '5', 5, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (182, '新旧', '7成新', '6', 6, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (183, '新旧', '6成以下', '7', 7, null);
+
 prompt Done.

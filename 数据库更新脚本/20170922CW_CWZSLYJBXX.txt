@@ -1,0 +1,30 @@
+-- Create table
+create table CW_CWZSLYJBXX
+(
+  cw_cwzslyjbxxid VARCHAR2(50) not null,
+  jcxxid          VARCHAR2(50),
+  bcms            VARCHAR2(4000),
+  gq              INTEGER
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 16
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table CW_CWZSLYJBXX
+  is '宠物_宠物赠送领养';
+-- Add comments to the columns 
+comment on column CW_CWZSLYJBXX.cw_cwzslyjbxxid
+  is '宠物赠送领养基本信息ID';
+comment on column CW_CWZSLYJBXX.jcxxid
+  is '基础信息ID';
+comment on column CW_CWZSLYJBXX.bcms
+  is '补充描述';
+comment on column CW_CWZSLYJBXX.gq
+  is '供求';
