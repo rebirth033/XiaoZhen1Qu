@@ -166,7 +166,7 @@ function LoadCW_HNYCJBXX() {
                     ue.setContent(xml.Value.CW_HNYCJBXX.BCMS);
                 });
                 $("#spanPZ").html(xml.Value.CW_HNYCJBXX.PZ);
-                SetGQ(xml.Value.CL_KCJBXX.GQ);
+                SetGQ(xml.Value.CW_HNYCJBXX.GQ);
                 LoadPhotos(xml.Value.Photos);
             }
         },

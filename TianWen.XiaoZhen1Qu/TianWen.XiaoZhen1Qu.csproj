@@ -61,6 +61,7 @@
     <Compile Include="BLL\CL_ZXCDDCSLCBLL.cs" />
     <Compile Include="BLL\CW_CWGBLL.cs" />
     <Compile Include="BLL\CW_CWMBLL.cs" />
+    <Compile Include="BLL\CW_CWYPSPBLL.cs" />
     <Compile Include="BLL\CW_CWZSLYBLL.cs" />
     <Compile Include="BLL\CW_HNYCBLL.cs" />
     <Compile Include="BLL\ES_JDJJBG_BGSBBLL.cs" />

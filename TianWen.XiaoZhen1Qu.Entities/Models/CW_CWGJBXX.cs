@@ -34,6 +34,13 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         [Property]
         public virtual string PZ { get; set; }
 
+
+        /// <summary>
+        /// 价格
+        /// </summary>
+        [Property]
+        public virtual string JG { get; set; }
+
         /// <summary>
         /// 年龄
         /// </summary>

@@ -94,7 +94,7 @@ function LoadCW_CWZSLYJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.CW_CWZSLYJBXX.BCMS);
                 });
-                SetGQ(xml.Value.CL_KCJBXX.GQ);
+                SetGQ(xml.Value.CW_CWZSLYJBXX.GQ);
                 LoadPhotos(xml.Value.Photos);
             }
         },

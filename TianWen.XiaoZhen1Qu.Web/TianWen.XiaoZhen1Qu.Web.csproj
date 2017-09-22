@@ -169,6 +169,7 @@
     <Content Include="Areas\Business\Css\Common\XZQ.css" />
     <Content Include="Areas\Business\Css\CW\CW_CWG.css" />
     <Content Include="Areas\Business\Css\CW\CW_CWM.css" />
+    <Content Include="Areas\Business\Css\CW\CW_CWYPSP.css" />
     <Content Include="Areas\Business\Css\CW\CW_CWZSLY.css" />
     <Content Include="Areas\Business\Css\CW\CW_HNYC.css" />
     <Content Include="Areas\Business\Css\ES\ES_JDJJBG_BGSB.css" />
@@ -385,6 +386,8 @@
     <Content Include="Areas\Business\Scripts\Business\CW\CW_CWGYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\CW\CW_CWM.js" />
     <Content Include="Areas\Business\Scripts\Business\CW\CW_CWMYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\CW\CW_CWYPSP.js" />
+    <Content Include="Areas\Business\Scripts\Business\CW\CW_CWYPSPYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\CW\CW_CWZSLY.js" />
     <Content Include="Areas\Business\Scripts\Business\CW\CW_CWZSLYYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\CW\CW_HNYC.js" />
@@ -796,6 +799,7 @@
     <Compile Include="Areas\Business\Controllers\CommonController.cs" />
     <Compile Include="Areas\Business\Controllers\CW\CW_CWGController.cs" />
     <Compile Include="Areas\Business\Controllers\CW\CW_CWMController.cs" />
+    <Compile Include="Areas\Business\Controllers\CW\CW_CWYPSPController.cs" />
     <Compile Include="Areas\Business\Controllers\CW\CW_HNYCController.cs" />
     <Compile Include="Areas\Business\Controllers\CW\CW_CWZSLYController.cs" />
     <Compile Include="Areas\Business\Controllers\ES\ES_JDJJBG_BGSBController.cs" />
@@ -974,6 +978,7 @@
     <Content Include="Areas\Business\Views\CW_CWM\CW_CWM.cshtml" />
     <Content Include="Areas\Business\Views\CW_HNYC\CW_HNYC.cshtml" />
     <Content Include="Areas\Business\Views\CW_CWZSLY\CW_CWZSLY.cshtml" />
+    <Content Include="Areas\Business\Views\CW_CWYPSP\CW_CWYPSP.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

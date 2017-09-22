@@ -20,4 +20,9 @@
       <ref object="CW_CWZSLYBLL"/>
     </property>
   </object>
+  <object id="CW_CWYPSPController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.CW_CWYPSPController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="CW_CWYPSPBLL">
+      <ref object="CW_CWYPSPBLL"/>
+    </property>
+  </object>
 </objects>

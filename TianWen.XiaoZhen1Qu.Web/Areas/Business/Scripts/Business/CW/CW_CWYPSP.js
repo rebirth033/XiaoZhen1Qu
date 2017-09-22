@@ -4,21 +4,21 @@ $(document).ready(function () {
     $("#divUploadOut").bind("mouseover", GetUploadCss);
     $("#divUploadOut").bind("mouseleave", LeaveUploadCss);
     $("#imgZR").bind("click", ZRSelect);
-    $("#imgGQ").bind("click", QGSelect);
+    $("#imgQG").bind("click", QGSelect);
     $("#btnFB").bind("click", FB);
     $("#FYMS").bind("focus", FYMSFocus);
     $("#FYMS").bind("blur", FYMSBlur);
     $("#inputUpload").bind("change", Upload);
     $("#btnClose").bind("click", CloseWindow);
     $("#div_dz_close").bind("click", CloseWindow);
-    $("#span_content_info_qCWMs").bind("click", LoadXZQByGrade);
+    $("#span_content_info_qCWYPSPs").bind("click", LoadXZQByGrade);
     $("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });
     $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
     LoadTXXX();
     LoadDefault();
-    LoadCW_CWMJBXX();
-    BindClick("PZ");
+    LoadCW_CWYPSPJBXX();
+    BindClick("LB");
 });
 //描述框focus
 function FYMSFocus() {
@@ -69,25 +69,25 @@ function SetGQ(GQ) {
         $("#imgQG").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
     }
 }
-//加载品种
-function LoadPZ() {
+//加载类别
+function LoadLB() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/Common/LoadCODES_CW",
         dataType: "json",
         data:
         {
-            TYPENAME: "宠物猫"
+            TYPENAME: "宠物用品/食品"
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"PZ\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
+                    html += "<li class='lidropdown' onclick='SelectLB(this,\"LB\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
                 }
                 html += "</ul>";
-                $("#divPZ").html(html);
-                $("#divPZ").css("display", "block");
+                $("#divLB").html(html);
+                $("#divLB").css("display", "block");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -95,42 +95,109 @@ function LoadPZ() {
         }
     });
 }
-//绑定下拉框鼠标点击样式
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        if (type === "PZ") {
-            LoadPZ();
+//加载小类
+function LoadXL() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadCWYPSPXX",
+        dataType: "json",
+        data:
+        {
+            LBID: $("#LBID").val()
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"XL\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
+                }
+                html += "</ul>";
+                $("#divXL").html(html);
+                $("#divXL").css("display", "block");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//加载新旧
+function LoadXJ() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadCODES_CW",
+        dataType: "json",
+        data:
+        {
+            TYPENAME: "宠物用品/食品"
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='lidropdown' onclick='SelectLB(this,\"LB\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
+                }
+                html += "</ul>";
+                $("#divLB").html(html);
+                $("#divLB").css("display", "block");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
         }
     });
 }
 //选择类别下拉框
-function SelectLB(obj, type) {
+function SelectLB(obj, type, id) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
+    $("#LBID").val(id);
+    PDLB(obj.innerHTML);
 }
-//加载宠物_宠物猫基本信息
-function LoadCW_CWMJBXX() {
+//绑定下拉框鼠标点击样式
+function BindClick(type) {
+    $("#div" + type + "Span").click(function () {
+        if (type === "LB") {
+            LoadLB();
+        }
+        if (type === "XL") {
+            LoadXL();
+        }
+    });
+}
+//判断类别
+function PDLB(LB) {
+    if (LB === "狗粮") {
+        $("#divXLText").css("display", "none");
+    }
+    else if (LB === "狗用品") {
+        $("#divXLText").css("display", "");
+        BindClick("XL");
+    }
+}
+//加载宠物_宠物用品/食品基本信息
+function LoadCW_CWYPSPJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/CW_CWM/LoadCW_CWMJBXX",
+        url: getRootPath() + "/Business/CW_CWYPSP/LoadCW_CWYPSPJBXX",
         dataType: "json",
         data:
         {
-            CW_CWMJBXXID: getUrlParam("CW_CWMJBXXID")
+            CW_CWYPSPJBXXID: getUrlParam("CW_CWYPSPJBXXID")
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var jsonObj = new JsonDB("myTabContent");
-                jsonObj.DisplayFromJson("myTabContent", xml.Value.CW_CWMJBXX);
+                jsonObj.DisplayFromJson("myTabContent", xml.Value.CW_CWYPSPJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
-                $("#CW_CWMJBXXID").val(xml.Value.CW_CWMJBXX.CW_CWMJBXXID);
+                $("#CW_CWYPSPJBXXID").val(xml.Value.CW_CWYPSPJBXX.CW_CWYPSPJBXXID);
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
-                    ue.setContent(xml.Value.CW_CWMJBXX.BCMS);
+                    ue.setContent(xml.Value.CW_CWYPSPJBXX.BCMS);
                 });
-                $("#spanPZ").html(xml.Value.CW_CWMJBXX.PZ);
-                SetGQ(xml.Value.CW_CWMJBXX.GQ);
+                $("#spanLB").html(xml.Value.CW_CWYPSPJBXX.LB);
+                SetGQ(xml.Value.CW_CWYPSPJBXX.GQ);
                 LoadPhotos(xml.Value.Photos);
             }
         },
@@ -145,16 +212,18 @@ function FB() {
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
-    obj = jsonObj.AddJson(obj, "PZ", "'" + $("#spanPZ").html() + "'");
+    obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
+    obj = jsonObj.AddJson(obj, "XL", "'" + $("#spanXL").html() + "'");
+    obj = jsonObj.AddJson(obj, "XJ", "'" + $("#spanXJ").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetGQ() + "'");
 
-    if (getUrlParam("CW_CWMJBXXID") !== null)
-        obj = jsonObj.AddJson(obj, "CW_CWMJBXXID", "'" + getUrlParam("CW_CWMJBXXID") + "'");
+    if (getUrlParam("CW_CWYPSPJBXXID") !== null)
+        obj = jsonObj.AddJson(obj, "CW_CWYPSPJBXXID", "'" + getUrlParam("CW_CWYPSPJBXXID") + "'");
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/CW_CWM/FB",
+        url: getRootPath() + "/Business/CW_CWYPSP/FB",
         dataType: "json",
         data:
         {

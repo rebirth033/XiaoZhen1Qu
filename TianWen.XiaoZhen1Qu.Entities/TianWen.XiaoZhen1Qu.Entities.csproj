@@ -122,6 +122,7 @@
     <Compile Include="Models\CODES_ES_WHYL.cs" />
     <Compile Include="Models\CW_CWGJBXX.cs" />
     <Compile Include="Models\CW_CWMJBXX.cs" />
+    <Compile Include="Models\CW_CWYPSPJBXX.cs" />
     <Compile Include="Models\CW_CWZSLYJBXX.cs" />
     <Compile Include="Models\CW_HNYCJBXX.cs" />
     <Compile Include="Models\DISTRICT.cs" />

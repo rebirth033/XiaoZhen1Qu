@@ -353,9 +353,9 @@ function LoadCW_CWGJBXX() {
                 $("#spanXB").html(xml.Value.CW_CWGJBXX.XB);
                 $("#spanYMQK").html(xml.Value.CW_CWGJBXX.YMQK);
                 $("#spanYMZL").html(xml.Value.CW_CWGJBXX.YMZL);
-                SetSF(xml.Value.CL_KCJBXX.SF);
-                SetQCQK(xml.Value.CL_KCJBXX.QCQK);
-                SetSPKG(xml.Value.CL_KCJBXX.SPKG);
+                SetSF(xml.Value.CW_CWGJBXX.SF);
+                SetQCQK(xml.Value.CW_CWGJBXX.QCQK);
+                SetSPKG(xml.Value.CW_CWGJBXX.SPKG);
                 LoadPhotos(xml.Value.Photos);
             }
         },

@@ -34,6 +34,8 @@ namespace TianWen.XiaoZhen1Qu.Interface
 
         object LoadHNCYXX(string PZID);
 
+        object LoadCWYPSPXX(string LBID);
+
         object LoadGCQXXH(string PPID);
 
         object LoadCWPZXX(string CWBQ);
