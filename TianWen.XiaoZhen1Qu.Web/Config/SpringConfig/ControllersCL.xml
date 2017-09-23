@@ -25,4 +25,9 @@
       <ref object="CL_KCBLL"/>
     </property>
   </object>
+  <object id="CL_JCController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.CL_JCController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="CL_JCBLL">
+      <ref object="CL_JCBLL"/>
+    </property>
+  </object>
 </objects>

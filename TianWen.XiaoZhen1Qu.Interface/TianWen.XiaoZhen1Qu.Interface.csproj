@@ -50,9 +50,11 @@
     <Compile Include="IBZZXBLL.cs" />
     <Compile Include="ICL_GCCBLL.cs" />
     <Compile Include="ICL_HCBLL.cs" />
+    <Compile Include="ICL_JCBLL.cs" />
     <Compile Include="ICL_KCBLL.cs" />
     <Compile Include="ICL_MTCBLL.cs" />
     <Compile Include="ICommonBLL.cs" />
+    <Compile Include="ICW_CWFWBLL.cs" />
     <Compile Include="ICW_CWGBLL.cs" />
     <Compile Include="ICW_CWMBLL.cs" />
     <Compile Include="ICW_CWYPSPBLL.cs" />

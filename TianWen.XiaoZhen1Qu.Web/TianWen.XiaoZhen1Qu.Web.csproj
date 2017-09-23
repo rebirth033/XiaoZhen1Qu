@@ -162,11 +162,13 @@
     <Content Include="Areas\Business\Css\BZZX\BZZX_WZJY.css" />
     <Content Include="Areas\Business\Css\CL\CL_GCC.css" />
     <Content Include="Areas\Business\Css\CL\CL_HC.css" />
+    <Content Include="Areas\Business\Css\CL\CL_JC.css" />
     <Content Include="Areas\Business\Css\CL\CL_KC.css" />
     <Content Include="Areas\Business\Css\CL\CL_MTC.css" />
     <Content Include="Areas\Business\Css\CL\CL_ZXCDDCSLC.css" />
     <Content Include="Areas\Business\Css\Common\Top.css" />
     <Content Include="Areas\Business\Css\Common\XZQ.css" />
+    <Content Include="Areas\Business\Css\CW\CW_CWFW.css" />
     <Content Include="Areas\Business\Css\CW\CW_CWG.css" />
     <Content Include="Areas\Business\Css\CW\CW_CWM.css" />
     <Content Include="Areas\Business\Css\CW\CW_CWYPSP.css" />
@@ -372,6 +374,8 @@
     <Content Include="Areas\Business\Scripts\Business\CL\CL_GCCYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\CL\CL_HC.js" />
     <Content Include="Areas\Business\Scripts\Business\CL\CL_HCYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\CL\CL_JC.js" />
+    <Content Include="Areas\Business\Scripts\Business\CL\CL_JCYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\CL\CL_KC.js" />
     <Content Include="Areas\Business\Scripts\Business\CL\CL_KCYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\CL\CL_MTC.js" />
@@ -382,6 +386,8 @@
     <Content Include="Areas\Business\Scripts\Business\Common\HTFB_Common.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\Regular.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\XZQ.js" />
+    <Content Include="Areas\Business\Scripts\Business\CW\CW_CWFW.js" />
+    <Content Include="Areas\Business\Scripts\Business\CW\CW_CWFWYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\CW\CW_CWG.js" />
     <Content Include="Areas\Business\Scripts\Business\CW\CW_CWGYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\CW\CW_CWM.js" />
@@ -793,10 +799,12 @@
     <Compile Include="Areas\Business\Controllers\BZZX\WZYJController.cs" />
     <Compile Include="Areas\Business\Controllers\CL\CL_GCCController.cs" />
     <Compile Include="Areas\Business\Controllers\CL\CL_HCController.cs" />
+    <Compile Include="Areas\Business\Controllers\CL\CL_JCController.cs" />
     <Compile Include="Areas\Business\Controllers\CL\CL_KCController.cs" />
     <Compile Include="Areas\Business\Controllers\CL\CL_MTCController.cs" />
     <Compile Include="Areas\Business\Controllers\CL\CL_ZXCDDCSLCController.cs" />
     <Compile Include="Areas\Business\Controllers\CommonController.cs" />
+    <Compile Include="Areas\Business\Controllers\CW\CW_CWFWController.cs" />
     <Compile Include="Areas\Business\Controllers\CW\CW_CWGController.cs" />
     <Compile Include="Areas\Business\Controllers\CW\CW_CWMController.cs" />
     <Compile Include="Areas\Business\Controllers\CW\CW_CWYPSPController.cs" />
@@ -979,6 +987,8 @@
     <Content Include="Areas\Business\Views\CW_HNYC\CW_HNYC.cshtml" />
     <Content Include="Areas\Business\Views\CW_CWZSLY\CW_CWZSLY.cshtml" />
     <Content Include="Areas\Business\Views\CW_CWYPSP\CW_CWYPSP.cshtml" />
+    <Content Include="Areas\Business\Views\CW_CWFW\CW_CWFW.cshtml" />
+    <Content Include="Areas\Business\Views\CL_JC\CL_JC.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
