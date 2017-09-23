@@ -63,7 +63,7 @@ function LoadYXMC(SZM) {
                     html += '<span class="span_yxmc" onclick="YXXZ(\'' + xml.list[i].YXMC + '\')">' + xml.list[i].YXMC + '</span>';
                 }
                 if (xml.list.length === 0)
-                    html += '<span class="span_yxmc">该字母下暂无游戏</span>';
+                    html += '<span class="span_yxmc">该字母下暂无数据</span>';
                 $("#div_content_yxmc").html(html);
             }
         },

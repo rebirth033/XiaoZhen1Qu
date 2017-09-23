@@ -60,7 +60,7 @@ function LoadGCCMC(GCC) {
                     html += '<span class="span_yxmc" onclick="GCCXZ(\'' + xml.list[i].CODENAME + '\',\'' + xml.list[i].CODEID + '\')">' + xml.list[i].CODENAME + '</span>';
                 }
                 if (xml.list.length === 0)
-                    html += '<span class="span_yxmc" style=\"width:200px;text-align:left;margin-left:14px;\">该字母下暂无游戏</span>';
+                    html += '<span class="span_yxmc" style=\"width:200px;text-align:left;margin-left:14px;\">该字母下暂无数据</span>';
                 $("#div_content_gccmc").html(html);
                 $("#divCX").css("display", "block");
             }
@@ -119,7 +119,7 @@ function LoadPPMC(GCCLX, GCCBQ) {
                     html += '<span class="span_yxmc" onclick="PPXZ(\'' + xml.list[i].CODENAME + '\',\'' + xml.list[i].CODEID + '\')">' + xml.list[i].CODENAME + '</span>';
                 }
                 if (xml.list.length === 0)
-                    html += '<span class="span_yxmc" style=\"width:200px;text-align:left;margin-left:14px;\">该字母下暂无游戏</span>';
+                    html += '<span class="span_yxmc" style=\"width:200px;text-align:left;margin-left:14px;\">该字母下暂无数据</span>';
                 $("#div_content_yxmc").html(html);
                 $("#divPP").css("display", "block");
             }

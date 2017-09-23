@@ -29,12 +29,6 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string PP { get; set; }
 
         /// <summary>
-        /// 车系
-        /// </summary>
-        [Property]
-        public virtual string CX { get; set; }
-
-        /// <summary>
         /// 车辆颜色
         /// </summary>
         [Property]
@@ -53,22 +47,10 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string SPYF { get; set; }
 
         /// <summary>
-        /// 是否定期保养
+        /// 是否定期4S店保养
         /// </summary>
         [Property]
         public virtual int SFDQBY { get; set; }
-
-        /// <summary>
-        /// 有无重大事故
-        /// </summary>
-        [Property]
-        public virtual int YWZDSG { get; set; }
-
-        /// <summary>
-        /// 事故描述
-        /// </summary>
-        [Property]
-        public virtual string SGMS { get; set; }
 
         /// <summary>
         /// 年检到期年份
@@ -123,5 +105,59 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// </summary>
         [Property]
         public virtual string BCMS { get; set; }
+
+        /// <summary>
+        /// 车架号
+        /// </summary>
+        [Property]
+        public virtual string CJH { get; set; }
+
+        /// <summary>
+        /// 包含过户费用
+        /// </summary>
+        [Property]
+        public virtual int BHGHFY { get; set; }
+
+        /// <summary>
+        /// 支持分期付款
+        /// </summary>
+        [Property]
+        public virtual int ZCFQFK { get; set; }
+
+        /// <summary>
+        /// 牌照所在省份
+        /// </summary>
+        [Property]
+        public virtual string PZSZSF { get; set; }
+
+        /// <summary>
+        /// 牌照所在城市
+        /// </summary>
+        [Property]
+        public virtual string PZSZCS { get; set; }
+
+        /// <summary>
+        /// 车辆是否有抵押
+        /// </summary>
+        [Property]
+        public virtual int SFYDY { get; set; }
+
+        /// <summary>
+        /// 车辆加装配置
+        /// </summary>
+        [Property]
+        public virtual string CLJZPZ { get; set; }
+
+        /// <summary>
+        /// 过户次数
+        /// </summary>
+        [Property]
+        public virtual string GHCS { get; set; }
+
+        /// <summary>
+        /// 看车地址
+        /// </summary>
+        [Property]
+        public virtual string KCDZ { get; set; }
     }
 }

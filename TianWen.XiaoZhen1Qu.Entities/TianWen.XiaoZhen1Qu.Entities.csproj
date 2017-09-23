@@ -59,6 +59,7 @@
     <Compile Include="Maps\CL_KCJBXX_Map.cs" />
     <Compile Include="Maps\CL_MTCJBXX_Map.cs" />
     <Compile Include="Maps\CL_ZXCDDCSLCJBXX_Map.cs" />
+    <Compile Include="Maps\CODES_CL_JC_Map.cs" />
     <Compile Include="Maps\CODES_CL_Map.cs" />
     <Compile Include="Maps\CODES_CW_Map.cs" />
     <Compile Include="Maps\CODES_ES_JDJJBG_Map.cs" />
@@ -116,6 +117,7 @@
     <Compile Include="Models\CL_JCJBXX.cs" />
     <Compile Include="Models\CL_KCJBXX.cs" />
     <Compile Include="Models\CL_MTCJBXX.cs" />
+    <Compile Include="Models\CODES_CL_JC.cs" />
     <Compile Include="Models\CODES_CW.cs" />
     <Compile Include="Models\CODES_FC.cs" />
     <Compile Include="Models\CODES_CL.cs" />

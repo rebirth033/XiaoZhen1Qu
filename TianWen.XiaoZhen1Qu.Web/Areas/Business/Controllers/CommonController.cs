@@ -24,8 +24,8 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public JsonResult GetDistrictBySuperCode()
         {
-            string SupserCode = Request["SupserCode"];
-            object result = CommonBLL.GetDistrictBySuperCode(SupserCode);
+            string SuperCode = Request["SuperCode"];
+            object result = CommonBLL.GetDistrictBySuperCode(SuperCode);
             return Json(result);
         }
 
@@ -137,6 +137,12 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         {
             return Json(CommonBLL.LoadKCPPXX(Request["KCLX"], Request["KCBQ"]));
         }
+
+        public JsonResult LoadJCPPXX()
+        {
+            return Json(CommonBLL.LoadJCPPXX(Request["JCLX"], Request["JCBQ"]));
+        }
+        
 
         public JsonResult LoadKCCXXX()
         {

@@ -62,7 +62,7 @@ function LoadCWGPZ(CWG) {
                     html += '<span class="span_yxmc" onclick="CWGXZ(\'' + xml.list[i].CODENAME + '\',\'' + xml.list[i].CODEID + '\')">' + xml.list[i].CODENAME + '</span>';
                 }
                 if (xml.list.length === 0)
-                    html += '<span class="span_yxmc" style=\"width:200px;text-align:left;margin-left:14px;\">该字母下暂无游戏</span>';
+                    html += '<span class="span_yxmc" style=\"width:200px;text-align:left;margin-left:14px;\">该字母下暂无数据</span>';
                 $("#div_content_cwgmc").html(html);
                 $("#divPZ").css("display", "block");
             }

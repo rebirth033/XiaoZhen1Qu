@@ -264,6 +264,20 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
+        public object LoadJCPPXX(string JCLX, string JCBQ)
+        {
+            try
+            {
+                IList<CODES_CL_JC> list = DAO.Repository.GetObjectList<CODES_CL_JC>(String.Format("FROM CODES_CL_JC WHERE TYPENAME = '{0}' AND CODEVALUE like '%{1}%' ORDER BY CODEORDER", JCLX, JCBQ));
+                return new { Result = EnResultType.Success, list = list };
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("error", ex.Message);
+                return new { Result = EnResultType.Failed, Message = "加载失败" };
+            }
+        }
+        
         public object LoadKCCXXX(string PPID)
         {
             try

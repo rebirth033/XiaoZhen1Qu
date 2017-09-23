@@ -5,8 +5,6 @@ $(document).ready(function () {
     $("#divUploadOut").bind("mouseleave", LeaveUploadCss);
     $("#imgS").bind("click", SSelect);
     $("#imgF").bind("click", FSelect);
-    $("#imgY").bind("click", YSelect);
-    $("#imgW").bind("click", WSelect);
     $("#btnFB").bind("click", FB);
     $("#FYMS").bind("focus", FYMSFocus);
     $("#FYMS").bind("blur", FYMSBlur);
@@ -22,6 +20,7 @@ $(document).ready(function () {
     LoadCL_JCJBXX();
     LoadCYLS();
     BindClick("PP");
+    BindClick("GHCS");
     BindClick("SPNF");
     BindClick("SPYF");
     BindClick("NJDQNF");
@@ -30,6 +29,7 @@ $(document).ready(function () {
     BindClick("JQXDQYF");
     BindClick("SYXDQNF");
     BindClick("SYXDQYF");
+    BindClick("PZSZSF");
 });
 //加载品牌标签
 function LoadPP() {
@@ -42,22 +42,22 @@ function LoadPP() {
             html += '<div class="divstep_yx" id="div' + arrayObj[i] + '"><span class="spanstep_yx" id="span' + arrayObj[i] + '">' + arrayObj[i] + '</span><em class="emstep_yx" id="em' + arrayObj[i] + '"></em></div>';
     }
     $("#div_content_yxbq").html(html);
-    $(".divstep_yx").bind("click", KCBQActive);
+    $(".divstep_yx").bind("click", JCBQActive);
 }
 //品牌标签切换
-function KCBQActive() {
+function JCBQActive() {
     LoadPPMC("轿车品牌", this.id);
 }
 //加载品牌名称
-function LoadPPMC(KCLX, KCBQ) {
+function LoadPPMC(JCLX, JCBQ) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadKCPPXX",
+        url: getRootPath() + "/Business/Common/LoadJCPPXX",
         dataType: "json",
         data:
         {
-            KCLX: KCLX,
-            KCBQ: KCBQ.split("div")[1]
+            JCLX: JCLX,
+            JCBQ: JCBQ.split("div")[1]
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -66,7 +66,7 @@ function LoadPPMC(KCLX, KCBQ) {
                     html += '<span class="span_yxmc" onclick="PPXZ(\'' + xml.list[i].CODENAME + '\',\'' + xml.list[i].CODEID + '\')">' + xml.list[i].CODENAME + '</span>';
                 }
                 if (xml.list.length === 0)
-                    html += '<span class="span_yxmc" style=\"width:200px;text-align:left;margin-left:14px;\">该字母下暂无游戏</span>';
+                    html += '<span class="span_yxmc" style=\"width:200px;text-align:left;margin-left:14px;\">该字母下暂无数据</span>';
                 $("#div_content_yxmc").html(html);
                 $("#divPP").css("display", "block");
             }
@@ -104,8 +104,6 @@ function LoadDefault() {
     });
     $("#imgS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
     $("#imgF").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    $("#imgW").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgY").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
 }
 //选择是
 function SSelect() {
@@ -116,16 +114,6 @@ function SSelect() {
 function FSelect() {
     $("#imgS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
     $("#imgF").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-}
-//选择有
-function YSelect() {
-    $("#imgY").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgW").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
-//选择无
-function WSelect() {
-    $("#imgY").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    $("#imgW").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
 }
 //获取是否定期保养
 function GetSFDQBY() {
@@ -145,24 +133,6 @@ function SetSFDQBY(SFDQBY) {
         $("#imgF").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
     }
 }
-//获取有无重大事故
-function GetYWZDSG() {
-    if ($("#imgY").attr("src").indexOf("blue") !== -1)
-        return "0";
-    else
-        return "1";
-}
-//设置有无重大事故
-function SetYWZDSG(YWZDSG) {
-    if (YWZDSG === 0) {
-        $("#imgY").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-        $("#imgW").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    }
-    else {
-        $("#imgY").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-        $("#imgW").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    }
-}
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
@@ -179,27 +149,88 @@ function BindClick(type) {
         if (type.indexOf("YF") !== -1) {
             LoadYF(type);
         }
+        if (type.indexOf("GHCS") !== -1) {
+            LoadGHCS(type);
+        }
+        if (type.indexOf("PZSZSF") !== -1) {
+            LoadPZSZSF(type);
+        }
+        if (type.indexOf("PZSZCS") !== -1) {
+            LoadPZSZCS(type);
+        } 
     });
 }
-//加载轿车车系
-function LoadKCCX() {
+//加载牌照所在省份
+function LoadPZSZSF() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadKCCXXX",
+        url: getRootPath() + "/Business/Common/GetDistrictByGrade",
         dataType: "json",
         data:
         {
-            PPID: $("#PPID").val()
+            Grade: "省级"
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"CX\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
+                    html += "<li class='lidropdown' onclick='SelectPZSZSF(this,\"PZSZSF\",\"" + xml.list[i].CODE + "\")'>" + RTrim(RTrim(xml.list[i].NAME, '市'),'省') + "</li>";
                 }
                 html += "</ul>";
-                $("#divCX").html(html);
-                $("#divCX").css("display", "block");
+                $("#divPZSZSF").html(html);
+                $("#divPZSZSF").css("display", "block");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//加载牌照所在城市
+function LoadPZSZCS() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/GetDistrictBySuperCode",
+        dataType: "json",
+        data:
+        {
+            SuperCode: $("#SPSF").val()
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"PZSZCS\",\"" + xml.list[i].CODE + "\")'>" + xml.list[i].NAME + "</li>";
+                }
+                html += "</ul>";
+                $("#divPZSZCS").html(html);
+                $("#divPZSZCS").css("display", "block");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//加载过户次数
+function LoadGHCS() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadCODES_CL",
+        dataType: "json",
+        data:
+        {
+            TYPENAME: "过户次数"
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"GHCS\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
+                }
+                html += "</ul>";
+                $("#divGHCS").html(html);
+                $("#divGHCS").css("display", "block");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -278,15 +309,17 @@ function LoadCYLS() {
     }
     $(".div_clys").bind("click", ActiveCLYS);
 }
-//选择下拉框
-function SelectDropdown(obj, type) {
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
-}
 //选择类别下拉框
 function SelectLB(obj, type) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
+}
+//选择上牌省份
+function SelectPZSZSF(obj, type, code) {
+    $("#SPSF").val(code);
+    $("#spanPZSZSF").html(obj.innerHTML);
+    $("#divPZSZSF").css("display", "none");
+    BindClick("PZSZCS");
 }
 //选择车辆颜色
 function ActiveCLYS() {
@@ -326,9 +359,11 @@ function LoadCL_JCJBXX() {
                 $("#spanJQXDQYF").html(xml.Value.CL_JCJBXX.JQXDQYF);
                 $("#spanSYXDQNF").html(xml.Value.CL_JCJBXX.SYXDQNF);
                 $("#spanSYXDQYF").html(xml.Value.CL_JCJBXX.SYXDQYF);
+                $("#spanPZSZSF").html(xml.Value.CL_JCJBXX.PZSZSF);
+                $("#spanPZSZCS").html(xml.Value.CL_JCJBXX.PZSZCS);
+                $("#spanGHCS").html(xml.Value.CL_JCJBXX.GHCS);
                 LoadPhotos(xml.Value.Photos);
                 SetSFDQBY(xml.Value.CL_JCJBXX.SFDQBY);
-                SetYWZDSG(xml.Value.CL_JCJBXX.YWZDSG);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -352,8 +387,10 @@ function FB() {
     obj = jsonObj.AddJson(obj, "JQXDQYF", "'" + $("#spanJQXDQYF").html() + "'");
     obj = jsonObj.AddJson(obj, "SYXDQNF", "'" + $("#spanSYXDQNF").html() + "'");
     obj = jsonObj.AddJson(obj, "SYXDQYF", "'" + $("#spanSYXDQYF").html() + "'");
+    obj = jsonObj.AddJson(obj, "PZSZSF", "'" + $("#spanPZSZSF").html() + "'");
+    obj = jsonObj.AddJson(obj, "PZSZCS", "'" + $("#spanPZSZCS").html() + "'");
+    obj = jsonObj.AddJson(obj, "GHCS", "'" + $("#spanGHCS").html() + "'");
     obj = jsonObj.AddJson(obj, "SFDQBY", "'" + GetSFDQBY() + "'");
-    obj = jsonObj.AddJson(obj, "YWZDSG", "'" + GetYWZDSG() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
 
     if (getUrlParam("CL_JCJBXXID") !== null)

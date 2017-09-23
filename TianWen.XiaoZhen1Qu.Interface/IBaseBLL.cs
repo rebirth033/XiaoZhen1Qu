@@ -30,6 +30,8 @@ namespace TianWen.XiaoZhen1Qu.Interface
 
         object LoadKCPPXX(string KCLX, string KCBQ);
 
+        object LoadJCPPXX(string JCLX, string JCBQ);
+
         object LoadKCCXXX(string PPID);
 
         object LoadHNCYXX(string PZID);
