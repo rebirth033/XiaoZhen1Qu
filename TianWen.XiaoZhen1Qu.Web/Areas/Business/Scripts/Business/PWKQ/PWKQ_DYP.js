@@ -1,0 +1,305 @@
+﻿var isleave = true;
+var ue = UE.getEditor('FYMS');
+$(document).ready(function () {
+    $("#imgGRZR").bind("click", GRZRSelect);
+    $("#imgSJZR").bind("click", SJZRSelect);
+    $("#divUploadOut").bind("mouseover", GetUploadCss);
+    $("#divUploadOut").bind("mouseleave", LeaveUploadCss);
+    $("#btnFB").bind("click", FB);
+    $("#FYMS").bind("focus", FYMSFocus);
+    $("#FYMS").bind("blur", FYMSBlur);
+    $("#inputUpload").bind("change", Upload);
+    $("#btnClose").bind("click", CloseWindow);
+    $("#div_dz_close").bind("click", CloseWindow);
+    $("#span_content_info_qhcs").bind("click", LoadXZQByGrade);
+    $("body").bind("click", function () { Close("_XZQ"); Close("LB"); Close("XL"); Close("XJ"); Close("QY"); Close("DD"); });
+    $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);
+    $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
+
+    LoadTXXX();
+    LoadBGSBLB();
+    LoadDefault();
+    LoadPWKQ_DYPJBXX();
+    BindClick("LB");
+    BindClick("XJ");
+    BindClick("QY");
+    BindClick("DD");
+});
+//描述框focus
+function FYMSFocus() {
+    $("#FYMS").css("color", "#333333");
+}
+//描述框blur
+function FYMSBlur() {
+    $("#FYMS").css("color", "#999999");
+}
+//描述框设默认文本
+function FYMSSetDefault() {
+    var fyms = "1.房屋特征：\r\n\r\n2.周边配套：\r\n\r\n3.房东心态：";
+    $("#FYMS").html(fyms);
+}
+//加载默认
+function LoadDefault() {
+    ue.ready(function () {
+        ue.setHeight(200);
+    });
+    $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+    $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+}
+//选择个人转让
+function GRZRSelect() {
+    $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+    $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+}
+//选择商家转让
+function SJZRSelect() {
+    $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+    $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+}
+//绑定下拉框鼠标点击样式
+function BindClick(type) {
+    $("#div" + type + "Span").click(function () {
+        if (type === "LB") {
+            LoadBGSBLB();
+        }
+        if (type === "XL") {
+            LoadBGSBXL();
+        }
+        if (type === "XJ") {
+            LoadXJ();
+        }
+        if (type === "QY") {
+            LoadQY();
+        }
+        if (type === "DD") {
+            LoadDD($("#QYCode").val());
+        }
+    });
+}
+//加载办公用品/设备类别
+function LoadBGSBLB() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadCODES_PWKQ",
+        dataType: "json",
+        data:
+        {
+            TYPENAME: "办公用品/设备"
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='lidropdown' onclick='SelectLB(this,\"LB\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
+                }
+                html += "</ul>";
+                $("#divLB").html(html);
+                $("#divLB").css("display", "block");
+                ActiveStyle("LB");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//加载家居日用小类
+function LoadBGSBXL(type) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadCODES_PWKQ",
+        dataType: "json",
+        data:
+        {
+            TYPENAME: type
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"XL\")'>" + xml.list[i].CODENAME + "</li>";
+                }
+                html += "</ul>";
+                $("#divXL").html(html);
+                $("#divXL").css("display", "block");
+                ActiveStyle("XL");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//加载家居日用详细参数
+function LoadXXCS(id, type) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadCODES_PWKQ",
+        dataType: "json",
+        data:
+        {
+            TYPENAME: type
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"" + id + "\")'>" + xml.list[i].CODENAME + "</li>";
+                }
+                html += "</ul>";
+                $("#div" + id).html(html);
+                $("#div" + id).css("display", "block");
+                ActiveStyle(id);
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//加载家居日用新旧
+function LoadXJ() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadCODES",
+        dataType: "json",
+        data:
+        {
+            TYPENAME: "新旧程度"
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"XJ\")'>" + xml.list[i].CODENAME + "</li>";
+                }
+                html += "</ul>";
+                $("#divXJ").html(html);
+                $("#divXJ").css("display", "block");
+                ActiveStyle("XJ");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//选择类别下拉框
+function SelectLB(obj, type) {
+    $("#span" + type).html(obj.innerHTML);
+    $("#div" + type).css("display", "none");
+    PDLB(obj.innerHTML);
+}
+//判断类别
+function PDLB(LB) {
+    LoadBGSBXL(LB);
+    BindHover("XL");
+}
+//选择家居日用品牌
+function SelectPBPP(obj, type, code) {
+    $("#span" + type).html(obj.innerHTML);
+    $("#div" + type).css("display", "none");
+    LoadPBXH(code);
+}
+//获取供求
+function GetGQ() {
+    if ($("#imgGRZR").attr("src").indexOf("blue") !== -1)
+        return "0";
+    else
+        return "1";
+}
+//设置供求
+function SetGQ(gq) {
+    if (gq === 0) {
+        $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+        $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+    }
+    else {
+        $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+        $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+    }
+}
+//加载二手_手机数码_家居日用基本信息
+function LoadPWKQ_DYPJBXX() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/PWKQ_DYP/LoadPWKQ_DYPJBXX",
+        dataType: "json",
+        data:
+        {
+            PWKQ_DYPJBXXID: getUrlParam("PWKQ_DYPJBXXID")
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var jsonObj = new JsonDB("myTabContent");
+                jsonObj.DisplayFromJson("myTabContent", xml.Value.PWKQ_DYPJBXX);
+                jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
+                $("#PWKQ_DYPJBXXID").val(xml.Value.PWKQ_DYPJBXX.PWKQ_DYPJBXXID);
+                //设置编辑器的内容
+                ue.ready(function () {
+                    ue.setHeight(200);
+                    ue.setContent(xml.Value.PWKQ_DYPJBXX.BCMS);
+                });
+                SetGQ(xml.Value.PWKQ_DYPJBXX.GQ);
+                $("#spanLB").html(xml.Value.PWKQ_DYPJBXX.LB);
+                $("#spanXJ").html(xml.Value.PWKQ_DYPJBXX.XJ);
+                $("#spanQY").html(xml.Value.PWKQ_DYPJBXX.JYQY);
+                $("#spanDD").html(xml.Value.PWKQ_DYPJBXX.JYDD);
+                $("#spanXL").html(xml.Value.PWKQ_DYPJBXX.XL);
+                LoadPhotos(xml.Value.Photos);
+                PDLB(xml.Value.PWKQ_DYPJBXX.LB);
+                return;
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//鼠标经过
+function MouseOver() {
+    isleave = false;
+}
+//鼠标离开
+function MouseLeave() {
+    isleave = true;
+}
+//发布
+function FB() {
+    if (AllValidate() === false) return;
+    var jsonObj = new JsonDB("myTabContent");
+    var obj = jsonObj.GetJsonObject();
+    //手动添加如下字段
+    obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
+    obj = jsonObj.AddJson(obj, "XL", "'" + $("#spanXL").html() + "'");
+    obj = jsonObj.AddJson(obj, "XJ", "'" + $("#spanXJ").html() + "'");
+    obj = jsonObj.AddJson(obj, "JYQY", "'" + $("#spanQY").html() + "'");
+    obj = jsonObj.AddJson(obj, "JYDD", "'" + $("#spanSQ").html() + "'");
+    obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
+    obj = jsonObj.AddJson(obj, "GQ", "'" + GetGQ() + "'");
+
+    if (getUrlParam("PWKQ_DYPJBXXID") !== null)
+        obj = jsonObj.AddJson(obj, "PWKQ_DYPJBXXID", "'" + getUrlParam("PWKQ_DYPJBXXID") + "'");
+
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/PWKQ_DYP/FB",
+        dataType: "json",
+        data:
+        {
+            Json: jsonObj.JsonToString(obj),
+            BCMS: ue.getContent(),
+            FWZP: GetPhotoUrls()
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                window.location.href = getRootPath() + "/Business/FBCG/FBCG";
+            } else {
+
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}

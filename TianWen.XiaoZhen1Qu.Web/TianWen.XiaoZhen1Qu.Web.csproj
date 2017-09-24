@@ -325,6 +325,7 @@
     <Content Include="Areas\Business\Css\images\zmsmrz.png" />
     <Content Include="Areas\Business\Css\LBXZ.css" />
     <Content Include="Areas\Business\Css\PageCommon.css" />
+    <Content Include="Areas\Business\Css\PWKQ\PWKQ_DYP.css" />
     <Content Include="Areas\Business\Css\RZGL\RZGL.css" />
     <Content Include="Areas\Business\Css\WDFB.css" />
     <Content Include="Areas\Business\Css\WDSC.css" />
@@ -455,6 +456,8 @@
     <Content Include="Areas\Business\Scripts\Business\LBXZ.js" />
     <Content Include="Areas\Business\Scripts\Business\PageJson.js" />
     <Content Include="Areas\Business\Scripts\Business\Public_TP.js" />
+    <Content Include="Areas\Business\Scripts\Business\PWKQ\PWKQ_DYP.js" />
+    <Content Include="Areas\Business\Scripts\Business\PWKQ\PWKQ_DYPYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\RZGL\RZGL.js" />
     <Content Include="Areas\Business\Scripts\Business\WDFB.js" />
     <Content Include="Areas\Business\Scripts\Business\WDSC.js" />
@@ -762,9 +765,13 @@
     <Content Include="Areas\Business\Scripts\UEditor\ueditor.js" />
     <Content Include="Areas\Business\Scripts\UEditor\ueditor.parse.min.js" />
     <Content Include="Areas\Business\Scripts\underscore.min.js" />
+    <Content Include="Config\SpringConfig\BLLPWKQ.xml" />
     <Content Include="Config\SpringConfig\BLLGY.xml" />
     <Content Include="Config\SpringConfig\ControllersCL.xml" />
     <Content Include="Config\SpringConfig\ControllersGY.xml" />
+    <Content Include="Config\SpringConfig\ControllersPWKQ.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Config\SpringConfig\DAO.xml" />
     <Content Include="Config\SpringConfig\BLLES.xml" />
     <Content Include="Global.asax" />
@@ -838,6 +845,7 @@
     <Compile Include="Areas\Business\Controllers\GRZLController.cs" />
     <Compile Include="Areas\Business\Controllers\HFCZController.cs" />
     <Compile Include="Areas\Business\Controllers\LBXZController.cs" />
+    <Compile Include="Areas\Business\Controllers\PWKQ\PWKQ_DYPController.cs" />
     <Compile Include="Areas\Business\Controllers\RZGLController.cs" />
     <Compile Include="Areas\Business\Controllers\WDFBController.cs" />
     <Compile Include="Areas\Business\Controllers\WDSCController.cs" />
@@ -989,6 +997,7 @@
     <Content Include="Areas\Business\Views\CW_CWYPSP\CW_CWYPSP.cshtml" />
     <Content Include="Areas\Business\Views\CW_CWFW\CW_CWFW.cshtml" />
     <Content Include="Areas\Business\Views\CL_JC\CL_JC.cshtml" />
+    <Content Include="Areas\Business\Views\PWKQ_DYP\PWKQ_DYP.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

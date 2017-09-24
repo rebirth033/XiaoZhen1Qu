@@ -7,12 +7,12 @@
   </object>
   <object id="YHJBXXBLL" type="TianWen.XiaoZhen1Qu.BLL.YHJBXXBLL,TianWen.XiaoZhen1Qu">
     <property name="DAO">
-      <ref object="YHJBXXDAO"/>
+      <ref object="DAOBase"/>
     </property>
   </object>
   <object id="YHDLXXBLL" type="TianWen.XiaoZhen1Qu.BLL.YHDLXXBLL,TianWen.XiaoZhen1Qu">
     <property name="DAO">
-      <ref object="YHDLXXDAO"/>
+      <ref object="DAOBase"/>
     </property>
   </object>
   <object id="LBXXBLL" type="TianWen.XiaoZhen1Qu.BLL.LBXXBLL,TianWen.XiaoZhen1Qu">

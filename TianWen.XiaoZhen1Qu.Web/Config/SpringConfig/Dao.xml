@@ -8,18 +8,6 @@
       <ref object="RepositoryWeb"/>
     </property>
   </object>
-
-  <object id="YHJBXXDAO" type="TianWen.XiaoZhen1Qu.DAO.YHJBXXDAO,TianWen.XiaoZhen1Qu" singleton="false">
-    <property name="Repository">
-      <ref object="RepositoryWeb"/>
-    </property>
-  </object>
-
-  <object id="YHDLXXDAO" type="TianWen.XiaoZhen1Qu.DAO.YHDLXXDAO,TianWen.XiaoZhen1Qu" singleton="false">
-    <property name="Repository">
-      <ref object="RepositoryWeb"/>
-    </property>
-  </object>
 </objects>
 
 
