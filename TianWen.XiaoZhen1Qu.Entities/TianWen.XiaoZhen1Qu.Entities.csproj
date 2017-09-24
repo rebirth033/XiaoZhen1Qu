@@ -104,7 +104,10 @@
     <Compile Include="Maps\JCXX_Map.cs" />
     <Compile Include="Maps\PHOTOS_Map.cs" />
     <Compile Include="Maps\PWKQ\PWKQ_DYPJBXX_Map.cs" />
+    <Compile Include="Maps\PWKQ\PWKQ_QTKQJBXX_Map.cs" />
+    <Compile Include="Maps\PWKQ\PWKQ_XFKGWQJBXX_Map.cs" />
     <Compile Include="Maps\PWKQ\PWKQ_YCMPJBXX_Map.cs" />
+    <Compile Include="Maps\PWKQ\PWKQ_YLYJDPJBXX_Map.cs" />
     <Compile Include="Maps\SZMX_Map.cs" />
     <Compile Include="Maps\WZJY_Map.cs" />
     <Compile Include="Maps\XQJBXX_Map.cs" />
@@ -168,7 +171,10 @@
     <Compile Include="Models\PHOTOS.cs" />
     <Compile Include="Models\PublicType.cs" />
     <Compile Include="Models\PWKQ\PWKQ_DYPJBXX.cs" />
+    <Compile Include="Models\PWKQ\PWKQ_QTKQJBXX.cs" />
+    <Compile Include="Models\PWKQ\PWKQ_XFKGWQJBXX.cs" />
     <Compile Include="Models\PWKQ\PWKQ_YCMPJBXX.cs" />
+    <Compile Include="Models\PWKQ\PWKQ_YLYJDPJBXX.cs" />
     <Compile Include="Models\SZMX.cs" />
     <Compile Include="Models\WZYJ.cs" />
     <Compile Include="Models\XQJBXX.cs" />

@@ -326,7 +326,10 @@
     <Content Include="Areas\Business\Css\LBXZ.css" />
     <Content Include="Areas\Business\Css\PageCommon.css" />
     <Content Include="Areas\Business\Css\PWKQ\PWKQ_DYP.css" />
+    <Content Include="Areas\Business\Css\PWKQ\PWKQ_QTKQ.css" />
+    <Content Include="Areas\Business\Css\PWKQ\PWKQ_XFKGWQ.css" />
     <Content Include="Areas\Business\Css\PWKQ\PWKQ_YCMP.css" />
+    <Content Include="Areas\Business\Css\PWKQ\PWKQ_YLYJDP.css" />
     <Content Include="Areas\Business\Css\RZGL\RZGL.css" />
     <Content Include="Areas\Business\Css\WDFB.css" />
     <Content Include="Areas\Business\Css\WDSC.css" />
@@ -459,8 +462,14 @@
     <Content Include="Areas\Business\Scripts\Business\Public_TP.js" />
     <Content Include="Areas\Business\Scripts\Business\PWKQ\PWKQ_DYP.js" />
     <Content Include="Areas\Business\Scripts\Business\PWKQ\PWKQ_DYPYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\PWKQ\PWKQ_QTKQ.js" />
+    <Content Include="Areas\Business\Scripts\Business\PWKQ\PWKQ_QTKQYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\PWKQ\PWKQ_XFKGWQ.js" />
+    <Content Include="Areas\Business\Scripts\Business\PWKQ\PWKQ_XFKGWQYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\PWKQ\PWKQ_YCMP.js" />
     <Content Include="Areas\Business\Scripts\Business\PWKQ\PWKQ_YCMPYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\PWKQ\PWKQ_YLYJDP.js" />
+    <Content Include="Areas\Business\Scripts\Business\PWKQ\PWKQ_YLYJDPYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\RZGL\RZGL.js" />
     <Content Include="Areas\Business\Scripts\Business\WDFB.js" />
     <Content Include="Areas\Business\Scripts\Business\WDSC.js" />
@@ -849,7 +858,10 @@
     <Compile Include="Areas\Business\Controllers\HFCZController.cs" />
     <Compile Include="Areas\Business\Controllers\LBXZController.cs" />
     <Compile Include="Areas\Business\Controllers\PWKQ\PWKQ_DYPController.cs" />
+    <Compile Include="Areas\Business\Controllers\PWKQ\PWKQ_QTKQController.cs" />
+    <Compile Include="Areas\Business\Controllers\PWKQ\PWKQ_XFKGWQController.cs" />
     <Compile Include="Areas\Business\Controllers\PWKQ\PWKQ_YCMPController.cs" />
+    <Compile Include="Areas\Business\Controllers\PWKQ\PWKQ_YLYJDPController.cs" />
     <Compile Include="Areas\Business\Controllers\RZGLController.cs" />
     <Compile Include="Areas\Business\Controllers\WDFBController.cs" />
     <Compile Include="Areas\Business\Controllers\WDSCController.cs" />
@@ -1003,6 +1015,9 @@
     <Content Include="Areas\Business\Views\CL_JC\CL_JC.cshtml" />
     <Content Include="Areas\Business\Views\PWKQ_DYP\PWKQ_DYP.cshtml" />
     <Content Include="Areas\Business\Views\PWKQ_YCMP\PWKQ_YCMP.cshtml" />
+    <Content Include="Areas\Business\Views\PWKQ_YLYJDP\PWKQ_YLYJDP.cshtml" />
+    <Content Include="Areas\Business\Views\PWKQ_XFKGWQ\PWKQ_XFKGWQ.cshtml" />
+    <Content Include="Areas\Business\Views\PWKQ_QTKQ\PWKQ_QTKQ.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

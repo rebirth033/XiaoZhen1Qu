@@ -3,7 +3,7 @@ var ue = UE.getEditor('FYMS');
 $(document).ready(function () {
     $("#imgZR").bind("click", ZRSelect);
     $("#imgQG").bind("click", QGSelect);
-    $("#YXQZ").datepicker({ minDate: 0 });
+    $("#SJ").datepicker({ minDate: 0 });
     $("#btnFB").bind("click", FB);
     $("#FYMS").bind("focus", FYMSFocus);
     $("#FYMS").bind("blur", FYMSBlur);
@@ -14,7 +14,7 @@ $(document).ready(function () {
 
     LoadTXXX();
     LoadDefault();
-    LoadPWKQ_DYPJBXX();
+    LoadPWKQ_YCMPJBXX();
     BindClick("LB");
     BindClick("XJ");
     BindClick("QY");
@@ -111,32 +111,32 @@ function SetGQ(gq) {
     }
 }
 //加载票务卡券_电影票基本信息
-function LoadPWKQ_DYPJBXX() {
+function LoadPWKQ_YCMPJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/PWKQ_DYP/LoadPWKQ_DYPJBXX",
+        url: getRootPath() + "/Business/PWKQ_YCMP/LoadPWKQ_YCMPJBXX",
         dataType: "json",
         data:
         {
-            PWKQ_DYPJBXXID: getUrlParam("PWKQ_DYPJBXXID")
+            PWKQ_YCMPJBXXID: getUrlParam("PWKQ_YCMPJBXXID")
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var jsonObj = new JsonDB("myTabContent");
-                jsonObj.DisplayFromJson("myTabContent", xml.Value.PWKQ_DYPJBXX);
+                jsonObj.DisplayFromJson("myTabContent", xml.Value.PWKQ_YCMPJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
-                $("#PWKQ_DYPJBXXID").val(xml.Value.PWKQ_DYPJBXX.PWKQ_DYPJBXXID);
+                $("#PWKQ_YCMPJBXXID").val(xml.Value.PWKQ_YCMPJBXX.PWKQ_YCMPJBXXID);
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
-                    ue.setContent(xml.Value.PWKQ_DYPJBXX.BCMS);
+                    ue.setContent(xml.Value.PWKQ_YCMPJBXX.BCMS);
                 });
-                SetGQ(xml.Value.PWKQ_DYPJBXX.GQ);
-                $("#spanLB").html(xml.Value.PWKQ_DYPJBXX.LB);
-                $("#spanQY").html(xml.Value.PWKQ_DYPJBXX.JYQY);
-                $("#spanDD").html(xml.Value.PWKQ_DYPJBXX.JYDD);
-                if (xml.Value.PWKQ_DYPJBXX.YXQZ.ToString("yyyy-MM-dd") !== "1-1-1")
-                    $("#YXQZ").val(xml.Value.PWKQ_DYPJBXX.YXQZ.ToString("yyyy-MM-dd"));
+                SetGQ(xml.Value.PWKQ_YCMPJBXX.GQ);
+                $("#spanLB").html(xml.Value.PWKQ_YCMPJBXX.LB);
+                $("#spanQY").html(xml.Value.PWKQ_YCMPJBXX.JYQY);
+                $("#spanDD").html(xml.Value.PWKQ_YCMPJBXX.JYDD);
+                if (xml.Value.PWKQ_YCMPJBXX.SJ.ToString("yyyy-MM-dd") !== "1-1-1")
+                    $("#SJ").val(xml.Value.PWKQ_YCMPJBXX.SJ.ToString("yyyy-MM-dd"));
                 return;
             }
         },
@@ -157,14 +157,14 @@ function FB() {
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetGQ() + "'");
 
-    if ($("#YXQZ").val() !== "")
-        obj = jsonObj.AddJson(obj, "YXQZ", "'" + $("#YXQZ").val() + "'");
-    if (getUrlParam("PWKQ_DYPJBXXID") !== null)
-        obj = jsonObj.AddJson(obj, "PWKQ_DYPJBXXID", "'" + getUrlParam("PWKQ_DYPJBXXID") + "'");
+    if ($("#SJ").val() !== "")
+        obj = jsonObj.AddJson(obj, "SJ", "'" + $("#SJ").val() + "'");
+    if (getUrlParam("PWKQ_YCMPJBXXID") !== null)
+        obj = jsonObj.AddJson(obj, "PWKQ_YCMPJBXXID", "'" + getUrlParam("PWKQ_YCMPJBXXID") + "'");
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/PWKQ_DYP/FB",
+        url: getRootPath() + "/Business/PWKQ_YCMP/FB",
         dataType: "json",
         data:
         {

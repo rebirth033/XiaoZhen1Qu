@@ -32,13 +32,19 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// 类别
         /// </summary>
         [Property]
-        public virtual int LB { get; set; }
+        public virtual string LB { get; set; }
 
         /// <summary>
         /// 价格
         /// </summary>
         [Property]
         public virtual string JG { get; set; }
+
+        /// <summary>
+        /// 原价
+        /// </summary>
+        [Property]
+        public virtual string YJ { get; set; }
 
         /// <summary>
         /// 补充描述
@@ -59,15 +65,15 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string JYDD { get; set; }
 
         /// <summary>
-        /// 影院
+        /// 场馆
         /// </summary>
         [Property]
-        public virtual string YY { get; set; }
+        public virtual string CG { get; set; }
 
         /// <summary>
-        /// 有效期至
+        /// 时间
         /// </summary>
         [Property]
-        public virtual DateTime YXQZ { get; set; }
+        public virtual DateTime SJ { get; set; }
     }
 }

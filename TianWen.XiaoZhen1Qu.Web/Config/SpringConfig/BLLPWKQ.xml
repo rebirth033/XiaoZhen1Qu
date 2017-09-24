@@ -10,4 +10,19 @@
       <ref object="DAOBase"/>
     </property>
   </object>
+  <object id="PWKQ_YLYJDPBLL" type="TianWen.XiaoZhen1Qu.BLL.PWKQ_YLYJDPBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="PWKQ_XFKGWQBLL" type="TianWen.XiaoZhen1Qu.BLL.PWKQ_XFKGWQBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="PWKQ_QTKQBLL" type="TianWen.XiaoZhen1Qu.BLL.PWKQ_QTKQBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
 </objects>

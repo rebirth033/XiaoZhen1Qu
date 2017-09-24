@@ -10,4 +10,19 @@
       <ref object="PWKQ_YCMPBLL"/>
     </property>
   </object>
+  <object id="PWKQ_YLYJDPController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.PWKQ_YLYJDPController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="PWKQ_YLYJDPBLL">
+      <ref object="PWKQ_YLYJDPBLL"/>
+    </property>
+  </object>
+  <object id="PWKQ_XFKGWQController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.PWKQ_XFKGWQController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="PWKQ_XFKGWQBLL">
+      <ref object="PWKQ_XFKGWQBLL"/>
+    </property>
+  </object>
+  <object id="PWKQ_QTKQController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.PWKQ_QTKQController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="PWKQ_QTKQBLL">
+      <ref object="PWKQ_QTKQBLL"/>
+    </property>
+  </object>
 </objects>

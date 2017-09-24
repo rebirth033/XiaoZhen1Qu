@@ -101,7 +101,10 @@
     <Compile Include="IZHBDBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PWKQ\IPWKQ_DYPBLL.cs" />
+    <Compile Include="PWKQ\IPWKQ_QTKQBLL.cs" />
+    <Compile Include="PWKQ\IPWKQ_XFKGWQBLL.cs" />
     <Compile Include="PWKQ\IPWKQ_YCMPZLBLL.cs" />
+    <Compile Include="PWKQ\IPWKQ_YLYJDPBLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TianWen.XiaoZhen1Qu.Entities\TianWen.XiaoZhen1Qu.Entities.csproj">
