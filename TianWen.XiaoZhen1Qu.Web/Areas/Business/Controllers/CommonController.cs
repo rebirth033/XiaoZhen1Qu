@@ -77,6 +77,12 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return Json(CommonBLL.LoadCODES_CW(TYPENAME));
         }
 
+        public JsonResult LoadCODES_PWKQ()
+        {
+            string TYPENAME = Request["TYPENAME"];
+            return Json(CommonBLL.LoadCODES_PWKQ(TYPENAME));
+        }
+
         public JsonResult QHXZQ()
         {
             Session["XZQ"] = Request["XZQ"];

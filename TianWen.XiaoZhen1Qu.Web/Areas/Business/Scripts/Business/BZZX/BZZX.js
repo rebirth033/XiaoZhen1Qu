@@ -2,7 +2,7 @@
     $("#span_head_nav_info_sy").bind("click", ToSY);
     $("#span_head_nav_info_lxkf").bind("click", ToLXKF);
     $("#span_head_nav_info_wzjy").bind("click", ToWZJY);
-    ToWZJY();
+    ToSY();
     $("#btnClose").bind("click", CloseWindow);
 });
 

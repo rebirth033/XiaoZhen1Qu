@@ -5,4 +5,9 @@
       <ref object="DAOBase"/>
     </property>
   </object>
+  <object id="PWKQ_YCMPBLL" type="TianWen.XiaoZhen1Qu.BLL.PWKQ_YCMPBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
 </objects>

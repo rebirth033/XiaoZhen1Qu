@@ -20,6 +20,8 @@ namespace TianWen.XiaoZhen1Qu.Interface
 
         object LoadCODES_CW(string TYPENAME);
 
+        object LoadCODES_PWKQ(string TYPENAME);
+
         object LoadGCQXJBXX(string GCQX);
 
         object LoadHCJBXX(string HC);

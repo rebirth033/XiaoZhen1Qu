@@ -92,7 +92,8 @@
     <Compile Include="BLL\FC\FC_ZZFJBXXBLL.cs" />
     <Compile Include="BLL\HFCZBLL.cs" />
     <Compile Include="BLL\LBXXBLL.cs" />
-    <Compile Include="BLL\PWKQ_DYPBLL.cs" />
+    <Compile Include="BLL\PWKQ\PWKQ_DYPBLL.cs" />
+    <Compile Include="BLL\PWKQ\PWKQ_YCMPBLL.cs" />
     <Compile Include="BLL\RZGLBLL.cs" />
     <Compile Include="BLL\WDFBBLL.cs" />
     <Compile Include="BLL\WDSCBLL.cs" />

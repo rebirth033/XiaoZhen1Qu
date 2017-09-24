@@ -1,23 +1,21 @@
 ﻿var isleave = true;
 var ue = UE.getEditor('FYMS');
 $(document).ready(function () {
-    $("#imgGRZR").bind("click", GRZRSelect);
-    $("#imgSJZR").bind("click", SJZRSelect);
-    $("#divUploadOut").bind("mouseover", GetUploadCss);
-    $("#divUploadOut").bind("mouseleave", LeaveUploadCss);
+    $("#imgZR").bind("click", ZRSelect);
+    $("#imgQG").bind("click", QGSelect);
+    $("#imgDHQ").bind("click", DHQSelect);
+    $("#imgDYK").bind("click", DYKSelect);
+    $("#imgDZQ").bind("click", DZQSelect);
+    $("#YXQZ").datepicker({ minDate: 0 });
     $("#btnFB").bind("click", FB);
     $("#FYMS").bind("focus", FYMSFocus);
     $("#FYMS").bind("blur", FYMSBlur);
-    $("#inputUpload").bind("change", Upload);
-    $("#btnClose").bind("click", CloseWindow);
-    $("#div_dz_close").bind("click", CloseWindow);
     $("#span_content_info_qhcs").bind("click", LoadXZQByGrade);
     $("body").bind("click", function () { Close("_XZQ"); Close("LB"); Close("XL"); Close("XJ"); Close("QY"); Close("DD"); });
     $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
 
     LoadTXXX();
-    LoadBGSBLB();
     LoadDefault();
     LoadPWKQ_DYPJBXX();
     BindClick("LB");
@@ -43,31 +41,43 @@ function LoadDefault() {
     ue.ready(function () {
         ue.setHeight(200);
     });
-    $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+    $("#imgZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+    $("#imgQG").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+    $("#imgDHQ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+    $("#imgDYK").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+    $("#imgDZQ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
 }
-//选择个人转让
-function GRZRSelect() {
-    $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+//选择转让
+function ZRSelect() {
+    $("#imgZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+    $("#imgQG").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
 }
-//选择商家转让
-function SJZRSelect() {
-    $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+//选择求购
+function QGSelect() {
+    $("#imgZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+    $("#imgQG").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+}
+//选择兑换券
+function DHQSelect() {
+    $("#imgDHQ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+    $("#imgDYK").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+    $("#imgDZQ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+}
+//选择电影卡
+function DYKSelect() {
+    $("#imgDHQ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+    $("#imgDYK").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+    $("#imgDZQ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+}
+//选择电子券
+function DZQSelect() {
+    $("#imgDHQ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+    $("#imgDYK").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+    $("#imgDZQ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
 }
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadBGSBLB();
-        }
-        if (type === "XL") {
-            LoadBGSBXL();
-        }
-        if (type === "XJ") {
-            LoadXJ();
-        }
         if (type === "QY") {
             LoadQY();
         }
@@ -76,61 +86,7 @@ function BindClick(type) {
         }
     });
 }
-//加载办公用品/设备类别
-function LoadBGSBLB() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_PWKQ",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "办公用品/设备"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectLB(this,\"LB\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divLB").html(html);
-                $("#divLB").css("display", "block");
-                ActiveStyle("LB");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载家居日用小类
-function LoadBGSBXL(type) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_PWKQ",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: type
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"XL\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divXL").html(html);
-                $("#divXL").css("display", "block");
-                ActiveStyle("XL");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载家居日用详细参数
+//加载电影票详细参数
 function LoadXXCS(id, type) {
     $.ajax({
         type: "POST",
@@ -157,53 +113,9 @@ function LoadXXCS(id, type) {
         }
     });
 }
-//加载家居日用新旧
-function LoadXJ() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "新旧程度"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"XJ\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divXJ").html(html);
-                $("#divXJ").css("display", "block");
-                ActiveStyle("XJ");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//选择类别下拉框
-function SelectLB(obj, type) {
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
-    PDLB(obj.innerHTML);
-}
-//判断类别
-function PDLB(LB) {
-    LoadBGSBXL(LB);
-    BindHover("XL");
-}
-//选择家居日用品牌
-function SelectPBPP(obj, type, code) {
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
-    LoadPBXH(code);
-}
 //获取供求
 function GetGQ() {
-    if ($("#imgGRZR").attr("src").indexOf("blue") !== -1)
+    if ($("#imgZR").attr("src").indexOf("blue") !== -1)
         return "0";
     else
         return "1";
@@ -211,15 +123,43 @@ function GetGQ() {
 //设置供求
 function SetGQ(gq) {
     if (gq === 0) {
-        $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-        $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+        $("#imgZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+        $("#imgQG").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
     }
     else {
-        $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-        $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+        $("#imgZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+        $("#imgQG").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
     }
 }
-//加载二手_手机数码_家居日用基本信息
+//获取类别
+function GetLB() {
+    if ($("#imgDHQ").attr("src").indexOf("blue") !== -1)
+        return "0";
+    if ($("#imgDYK").attr("src").indexOf("blue") !== -1)
+        return "1";
+    if ($("#imgDZQ").attr("src").indexOf("blue") !== -1)
+        return "2";
+}
+//设置类别
+function SetLB(lb) {
+    if (lb === 0) {
+        $("#imgDHQ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+        $("#imgDYK").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+        $("#imgDZQ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+    }
+    if (lb === 1) {
+        $("#imgDHQ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+        $("#imgDYK").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+        $("#imgDZQ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+    }
+    if (lb === 2) {
+        $("#imgDHQ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+        $("#imgDYK").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+        $("#imgDZQ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+    }
+}
+
+//加载票务卡券_电影票基本信息
 function LoadPWKQ_DYPJBXX() {
     $.ajax({
         type: "POST",
@@ -241,13 +181,14 @@ function LoadPWKQ_DYPJBXX() {
                     ue.setContent(xml.Value.PWKQ_DYPJBXX.BCMS);
                 });
                 SetGQ(xml.Value.PWKQ_DYPJBXX.GQ);
+                SetLB(xml.Value.PWKQ_DYPJBXX.LB);
                 $("#spanLB").html(xml.Value.PWKQ_DYPJBXX.LB);
                 $("#spanXJ").html(xml.Value.PWKQ_DYPJBXX.XJ);
                 $("#spanQY").html(xml.Value.PWKQ_DYPJBXX.JYQY);
                 $("#spanDD").html(xml.Value.PWKQ_DYPJBXX.JYDD);
                 $("#spanXL").html(xml.Value.PWKQ_DYPJBXX.XL);
-                LoadPhotos(xml.Value.Photos);
-                PDLB(xml.Value.PWKQ_DYPJBXX.LB);
+                if (xml.Value.PWKQ_DYPJBXX.YXQZ.ToString("yyyy-MM-dd") !== "1-1-1")
+                    $("#YXQZ").val(xml.Value.PWKQ_DYPJBXX.YXQZ.ToString("yyyy-MM-dd"));
                 return;
             }
         },
@@ -255,14 +196,6 @@ function LoadPWKQ_DYPJBXX() {
 
         }
     });
-}
-//鼠标经过
-function MouseOver() {
-    isleave = false;
-}
-//鼠标离开
-function MouseLeave() {
-    isleave = true;
 }
 //发布
 function FB() {
@@ -274,10 +207,13 @@ function FB() {
     obj = jsonObj.AddJson(obj, "XL", "'" + $("#spanXL").html() + "'");
     obj = jsonObj.AddJson(obj, "XJ", "'" + $("#spanXJ").html() + "'");
     obj = jsonObj.AddJson(obj, "JYQY", "'" + $("#spanQY").html() + "'");
-    obj = jsonObj.AddJson(obj, "JYDD", "'" + $("#spanSQ").html() + "'");
+    obj = jsonObj.AddJson(obj, "JYDD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetGQ() + "'");
+    obj = jsonObj.AddJson(obj, "LB", "'" + GetLB() + "'");
 
+    if ($("#YXQZ").val() !== "")
+        obj = jsonObj.AddJson(obj, "YXQZ", "'" + $("#YXQZ").val() + "'");
     if (getUrlParam("PWKQ_DYPJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "PWKQ_DYPJBXXID", "'" + getUrlParam("PWKQ_DYPJBXXID") + "'");
 
@@ -288,8 +224,7 @@ function FB() {
         data:
         {
             Json: jsonObj.JsonToString(obj),
-            BCMS: ue.getContent(),
-            FWZP: GetPhotoUrls()
+            BCMS: ue.getContent()
         },
         success: function (xml) {
             if (xml.Result === 1) {

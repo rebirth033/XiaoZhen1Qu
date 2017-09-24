@@ -24,7 +24,6 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             YHJBXX yhjbxx = PWKQ_DYPBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
-            string fwzp = Request["FWZP"];
             JCXX jcxx = JsonHelper.ConvertJsonToObject<JCXX>(json);
             jcxx.YHID = yhjbxx.YHID;
             jcxx.LLCS = 0;
@@ -35,8 +34,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             jcxx.DH = Session["XZQ"] + "-" + PWKQ_DYPBLL.GetLBQCByLBID(jcxx.LBID);
             PWKQ_DYPJBXX PWKQ_DYPjbxx = JsonHelper.ConvertJsonToObject<PWKQ_DYPJBXX>(json);
             PWKQ_DYPjbxx.BCMS = bcms;
-            List<PHOTOS> photos = GetTP(fwzp);
-            object result = PWKQ_DYPBLL.SavePWKQ_DYPJBXX(jcxx, PWKQ_DYPjbxx, photos);
+            object result = PWKQ_DYPBLL.SavePWKQ_DYPJBXX(jcxx, PWKQ_DYPjbxx);
             return Json(result);
         }
 

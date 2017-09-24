@@ -11,7 +11,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         }
 
         /// <summary>
-        /// 票务卡券_电影票信息ID
+        /// 电影票信息ID
         /// </summary>
         [Id]
         public virtual string PWKQ_DYPJBXXID { get; set; }
@@ -32,13 +32,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// 类别
         /// </summary>
         [Property]
-        public virtual string LB { get; set; }
-
-        /// <summary>
-        /// 小类
-        /// </summary>
-        [Property]
-        public virtual string XL { get; set; }
+        public virtual int LB { get; set; }
 
         /// <summary>
         /// 价格
@@ -63,5 +57,17 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// </summary>
         [Property]
         public virtual string JYDD { get; set; }
+
+        /// <summary>
+        /// 影院
+        /// </summary>
+        [Property]
+        public virtual string YY { get; set; }
+
+        /// <summary>
+        /// 有效期至
+        /// </summary>
+        [Property]
+        public virtual DateTime YXQZ { get; set; }
     }
 }

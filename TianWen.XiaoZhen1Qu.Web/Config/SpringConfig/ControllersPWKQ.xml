@@ -5,4 +5,9 @@
       <ref object="PWKQ_DYPBLL"/>
     </property>
   </object>
+  <object id="PWKQ_YCMPController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.PWKQ_YCMPController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="PWKQ_YCMPBLL">
+      <ref object="PWKQ_YCMPBLL"/>
+    </property>
+  </object>
 </objects>
