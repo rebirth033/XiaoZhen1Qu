@@ -151,6 +151,20 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
+        public object LoadCODES_XXYL(string TYPENAME)
+        {
+            try
+            {
+                IList<CODES_XXYL> list = DAO.Repository.GetObjectList<CODES_XXYL>(String.Format("FROM CODES_XXYL WHERE TYPENAME='{0}' ORDER BY CODEORDER", TYPENAME));
+                return new { Result = EnResultType.Success, list = list };
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("error", ex.Message);
+                return new { Result = EnResultType.Failed, Message = "加载失败" };
+            }
+        }
+
         public object LoadQYBySuperName(string SUPERNAME)
         {
             try
