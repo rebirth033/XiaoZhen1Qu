@@ -51,7 +51,7 @@ function LoadLB() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll; height:342px;'>";
+                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='lidropdown' onclick='SelectDropdown(this,\"LB\")'>" + xml.list[i].CODENAME + "</li>";
                 }

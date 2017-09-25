@@ -10,4 +10,19 @@
       <ref object="XXYL_YDJBBLL"/>
     </property>
   </object>
+  <object id="XXYL_HWController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.XXYL_HWController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="XXYL_HWBLL">
+      <ref object="XXYL_HWBLL"/>
+    </property>
+  </object>
+  <object id="XXYL_XYWQController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.XXYL_XYWQController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="XXYL_XYWQBLL">
+      <ref object="XXYL_XYWQBLL"/>
+    </property>
+  </object>
+  <object id="XXYL_ZLAMController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.XXYL_ZLAMController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="XXYL_ZLAMBLL">
+      <ref object="XXYL_ZLAMBLL"/>
+    </property>
+  </object>
 </objects>

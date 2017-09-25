@@ -341,8 +341,11 @@
     <Content Include="Areas\Business\Css\WZCX\WZCX.css" />
     <Content Include="Areas\Business\Css\XXGL\XXGL.css" />
     <Content Include="Areas\Business\Css\XXGL\XXGLMX.css" />
+    <Content Include="Areas\Business\Css\XXYL\XXYL_HW.css" />
+    <Content Include="Areas\Business\Css\XXYL\XXYL_XYWQ.css" />
     <Content Include="Areas\Business\Css\XXYL\XXYL_YDJB.css" />
     <Content Include="Areas\Business\Css\XXYL\XXYL_YDJS.css" />
+    <Content Include="Areas\Business\Css\XXYL\XXYL_ZLAM.css" />
     <Content Include="Areas\Business\Css\YHDLXX.css" />
     <Content Include="Areas\Business\Css\YHGL.css" />
     <Content Include="Areas\Business\Css\YXCZ\YXCZ.css" />
@@ -489,10 +492,16 @@
     <Content Include="Areas\Business\Scripts\Business\WZCX\WZCX.js" />
     <Content Include="Areas\Business\Scripts\Business\XXGL\XXGL.js" />
     <Content Include="Areas\Business\Scripts\Business\XXGL\XXGLMX.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXYL\XXYL_HW.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXYL\XXYL_HWYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXYL\XXYL_XYWQ.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXYL\XXYL_XYWQYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\XXYL\XXYL_YDJB.js" />
     <Content Include="Areas\Business\Scripts\Business\XXYL\XXYL_YDJBYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\XXYL\XXYL_YDJS.js" />
     <Content Include="Areas\Business\Scripts\Business\XXYL\XXYL_YDJSYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXYL\XXYL_ZLAM.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXYL\XXYL_ZLAMYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\YHDLXX.js" />
     <Content Include="Areas\Business\Scripts\Business\YHGL.js" />
     <Content Include="Areas\Business\Scripts\Business\YHJBXX.js" />
@@ -892,8 +901,11 @@
     <Compile Include="Areas\Business\Controllers\WDXJController.cs" />
     <Compile Include="Areas\Business\Controllers\WZCXController.cs" />
     <Compile Include="Areas\Business\Controllers\XXGLController.cs" />
+    <Compile Include="Areas\Business\Controllers\XXYL\XXYL_HWController.cs" />
+    <Compile Include="Areas\Business\Controllers\XXYL\XXYL_XYWQController.cs" />
     <Compile Include="Areas\Business\Controllers\XXYL\XXYL_YDJBController.cs" />
     <Compile Include="Areas\Business\Controllers\XXYL\XXYL_YDJSController.cs" />
+    <Compile Include="Areas\Business\Controllers\XXYL\XXYL_ZLAMController.cs" />
     <Compile Include="Areas\Business\Controllers\YHDLXXController.cs" />
     <Compile Include="Areas\Business\Controllers\YHGLController.cs" />
     <Compile Include="Areas\Business\Controllers\YHJBXXController.cs" />
@@ -1049,6 +1061,9 @@
     <Content Include="Areas\Business\Views\CY_WM\CY_WM.cshtml" />
     <Content Include="Areas\Business\Views\XXYL_YDJS\XXYL_YDJS.cshtml" />
     <Content Include="Areas\Business\Views\XXYL_YDJB\XXYL_YDJB.cshtml" />
+    <Content Include="Areas\Business\Views\XXYL_HW\XXYL_HW.cshtml" />
+    <Content Include="Areas\Business\Views\XXYL_XYWQ\XXYL_XYWQ.cshtml" />
+    <Content Include="Areas\Business\Views\XXYL_ZLAM\XXYL_ZLAM.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
