@@ -14,7 +14,7 @@ $(document).ready(function () {
     $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
     LoadTXXX();
-    LoadMSLB();
+    LoadWMLB();
     LoadDefault();
     BindClick("LB");
     BindClick("QY");
@@ -40,28 +40,28 @@ function LoadDefault() {
     });
 }
 //加载美食类别
-function LoadMSLB() {
+function LoadWMLB() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/Common/LoadCODES_CY",
         dataType: "json",
         data:
         {
-            TYPENAME: "美食"
+            TYPENAME: "外卖"
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liFWPZ' onclick='SelectMSLB(this)'><img class='img_MSLB'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    html += "<li class='liFWPZ' onclick='SelectWMLB(this)'><img class='img_WMLB'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i === 5 || i === 11 || i === 17 || i === 23 || i === 29) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
                 }
                 html += "</ul>";
-                $("#divMSLBText").html(html);
-                $(".img_MSLB").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-                LoadCY_MSJBXX();
+                $("#divWMLBText").html(html);
+                $(".img_WMLB").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                LoadCY_WMJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -70,7 +70,7 @@ function LoadMSLB() {
     });
 }
 //选择房屋配置
-function SelectMSLB(obj) {
+function SelectWMLB(obj) {
     if ($(obj).find("img").attr("src").indexOf("blue") !== -1)
         $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
     else
@@ -90,30 +90,30 @@ function BindClick(type) {
         }
     });
 }
-//加载宠物_宠物服务基本信息
-function LoadCY_MSJBXX() {
+//加载餐饮_快餐/团膳基本信息
+function LoadCY_WMJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/CY_MS/LoadCY_MSJBXX",
+        url: getRootPath() + "/Business/CY_WM/LoadCY_WMJBXX",
         dataType: "json",
         data:
         {
-            CY_MSJBXXID: getUrlParam("CY_MSJBXXID")
+            CY_WMJBXXID: getUrlParam("CY_WMJBXXID")
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var jsonObj = new JsonDB("myTabContent");
-                jsonObj.DisplayFromJson("myTabContent", xml.Value.CY_MSJBXX);
+                jsonObj.DisplayFromJson("myTabContent", xml.Value.CY_WMJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
-                $("#CY_MSJBXXID").val(xml.Value.CY_MSJBXX.CY_MSJBXXID);
+                $("#CY_WMJBXXID").val(xml.Value.CY_WMJBXX.CY_WMJBXXID);
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
-                    ue.setContent(xml.Value.CY_MSJBXX.BCMS);
+                    ue.setContent(xml.Value.CY_WMJBXX.BCMS);
                 });
-                SetMSLB(xml.Value.CY_MSJBXX.LB);
-                $("#spanQY").html(xml.Value.CY_MSJBXX.JYQY);
-                $("#spanDD").html(xml.Value.CY_MSJBXX.JYDD);
+                SetWMLB(xml.Value.CY_WMJBXX.LB);
+                $("#spanQY").html(xml.Value.CY_WMJBXX.JYQY);
+                $("#spanDD").html(xml.Value.CY_WMJBXX.JYDD);
                 LoadPhotos(xml.Value.Photos);
             }
         },
@@ -123,16 +123,16 @@ function LoadCY_MSJBXX() {
     });
 }
 //获取美食类别
-function GetMSLB() {
-    var mslb = "";
+function GetWMLB() {
+    var WMLB = "";
     $(".liFWPZ").each(function () {
         if ($(this).find("img").attr("src").indexOf("blue") !== -1)
-            mslb += $(this).find("label")[0].innerHTML + ",";
+            WMLB += $(this).find("label")[0].innerHTML + ",";
     });
-    return RTrim(mslb, ',');
+    return RTrim(WMLB, ',');
 }
 //设置美食类别
-function SetMSLB(lbs) {
+function SetWMLB(lbs) {
     var lbarray = lbs.split(',');
     for (var i = 0; i < lbarray.length; i++) {
         $(".liFWPZ").each(function () {
@@ -140,7 +140,7 @@ function SetMSLB(lbs) {
                 $(this).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
         });
     }
-    
+
 }
 //发布
 function FB() {
@@ -152,14 +152,14 @@ function FB() {
     obj = jsonObj.AddJson(obj, "JYQY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "JYDD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "LB", "'" + GetMSLB() + "'");
+    obj = jsonObj.AddJson(obj, "LB", "'" + GetWMLB() + "'");
 
-    if (getUrlParam("CY_MSJBXXID") !== null)
-        obj = jsonObj.AddJson(obj, "CY_MSJBXXID", "'" + getUrlParam("CY_MSJBXXID") + "'");
+    if (getUrlParam("CY_WMJBXXID") !== null)
+        obj = jsonObj.AddJson(obj, "CY_WMJBXXID", "'" + getUrlParam("CY_WMJBXXID") + "'");
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/CY_MS/FB",
+        url: getRootPath() + "/Business/CY_WM/FB",
         dataType: "json",
         data:
         {

@@ -10,4 +10,9 @@
       <ref object="CY_KCTSBLL"/>
     </property>
   </object>
+  <object id="CY_WMController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.CY_WMController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="CY_WMBLL">
+      <ref object="CY_WMBLL"/>
+    </property>
+  </object>
 </objects>

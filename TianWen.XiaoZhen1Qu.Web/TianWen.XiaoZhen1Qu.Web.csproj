@@ -176,6 +176,7 @@
     <Content Include="Areas\Business\Css\CW\CW_HNYC.css" />
     <Content Include="Areas\Business\Css\CY\CY_KCTS.css" />
     <Content Include="Areas\Business\Css\CY\CY_MS.css" />
+    <Content Include="Areas\Business\Css\CY\CY_WM.css" />
     <Content Include="Areas\Business\Css\ES\ES_JDJJBG_BGSB.css" />
     <Content Include="Areas\Business\Css\ES\ES_JDJJBG_ESJD.css" />
     <Content Include="Areas\Business\Css\ES\ES_JDJJBG_ESJJ.css" />
@@ -409,6 +410,8 @@
     <Content Include="Areas\Business\Scripts\Business\CY\CY_KCTSYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\CY\CY_MS.js" />
     <Content Include="Areas\Business\Scripts\Business\CY\CY_MSYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\CY\CY_WM.js" />
+    <Content Include="Areas\Business\Scripts\Business\CY\CY_WMYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\ES\ES_JDJJBG_BGSB.js" />
     <Content Include="Areas\Business\Scripts\Business\ES\ES_JDJJBG_BGSBYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\ES\ES_JDJJBG_ESJD.js" />
@@ -841,6 +844,7 @@
     <Compile Include="Areas\Business\Controllers\CW\CW_CWZSLYController.cs" />
     <Compile Include="Areas\Business\Controllers\CY\CY_KCTSController.cs" />
     <Compile Include="Areas\Business\Controllers\CY\CY_MSController.cs" />
+    <Compile Include="Areas\Business\Controllers\CY\CY_WMController.cs" />
     <Compile Include="Areas\Business\Controllers\ES\ES_JDJJBG_BGSBController.cs" />
     <Compile Include="Areas\Business\Controllers\ES\ES_JDJJBG_ESJDController.cs" />
     <Compile Include="Areas\Business\Controllers\ES\ES_JDJJBG_ESJJController.cs" />
@@ -1032,6 +1036,7 @@
     <Content Include="Areas\Business\Views\PWKQ_QTKQ\PWKQ_QTKQ.cshtml" />
     <Content Include="Areas\Business\Views\CY_MS\CY_MS.cshtml" />
     <Content Include="Areas\Business\Views\CY_KCTS\CY_KCTS.cshtml" />
+    <Content Include="Areas\Business\Views\CY_WM\CY_WM.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

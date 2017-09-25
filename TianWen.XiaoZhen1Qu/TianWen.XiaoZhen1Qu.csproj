@@ -68,6 +68,7 @@
     <Compile Include="BLL\CW\CW_HNYCBLL.cs" />
     <Compile Include="BLL\CY\CY_KCTSBLL.cs" />
     <Compile Include="BLL\CY\CY_MSBLL.cs" />
+    <Compile Include="BLL\CY\CY_WMBLL.cs" />
     <Compile Include="BLL\ES\ES_JDJJBG_BGSBBLL.cs" />
     <Compile Include="BLL\ES\ES_JDJJBG_ESJDBLL.cs" />
     <Compile Include="BLL\ES\ES_JDJJBG_ESJJBLL.cs" />
