@@ -256,14 +256,6 @@ function LoadES_JDJJBG_BGSBJBXX() {
         }
     });
 }
-//鼠标经过
-function MouseOver() {
-    isleave = false;
-}
-//鼠标离开
-function MouseLeave() {
-    isleave = true;
-}
 //发布
 function FB() {
     if (AllValidate() === false) return;
