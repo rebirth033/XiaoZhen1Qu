@@ -21,13 +21,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// </summary>
         [Property]
         public virtual string JCXXID { get; set; }
-
-        /// <summary>
-        /// 类别
-        /// </summary>
-        [Property]
-        public virtual string LB { get; set; }
-
+        
         /// <summary>
         /// 补充描述
         /// </summary>

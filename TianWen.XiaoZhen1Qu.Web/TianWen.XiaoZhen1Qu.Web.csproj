@@ -342,6 +342,8 @@
     <Content Include="Areas\Business\Css\XXGL\XXGL.css" />
     <Content Include="Areas\Business\Css\XXGL\XXGLMX.css" />
     <Content Include="Areas\Business\Css\XXYL\XXYL_HW.css" />
+    <Content Include="Areas\Business\Css\XXYL\XXYL_QPZY.css" />
+    <Content Include="Areas\Business\Css\XXYL\XXYL_TQT.css" />
     <Content Include="Areas\Business\Css\XXYL\XXYL_XYWQ.css" />
     <Content Include="Areas\Business\Css\XXYL\XXYL_YDJB.css" />
     <Content Include="Areas\Business\Css\XXYL\XXYL_YDJS.css" />
@@ -494,6 +496,10 @@
     <Content Include="Areas\Business\Scripts\Business\XXGL\XXGLMX.js" />
     <Content Include="Areas\Business\Scripts\Business\XXYL\XXYL_HW.js" />
     <Content Include="Areas\Business\Scripts\Business\XXYL\XXYL_HWYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXYL\XXYL_QPZY.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXYL\XXYL_QPZYYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXYL\XXYL_TQT.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXYL\XXYL_TQTYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\XXYL\XXYL_XYWQ.js" />
     <Content Include="Areas\Business\Scripts\Business\XXYL\XXYL_XYWQYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\XXYL\XXYL_YDJB.js" />
@@ -902,6 +908,8 @@
     <Compile Include="Areas\Business\Controllers\WZCXController.cs" />
     <Compile Include="Areas\Business\Controllers\XXGLController.cs" />
     <Compile Include="Areas\Business\Controllers\XXYL\XXYL_HWController.cs" />
+    <Compile Include="Areas\Business\Controllers\XXYL\XXYL_QPZYController.cs" />
+    <Compile Include="Areas\Business\Controllers\XXYL\XXYL_TQTController.cs" />
     <Compile Include="Areas\Business\Controllers\XXYL\XXYL_XYWQController.cs" />
     <Compile Include="Areas\Business\Controllers\XXYL\XXYL_YDJBController.cs" />
     <Compile Include="Areas\Business\Controllers\XXYL\XXYL_YDJSController.cs" />
@@ -1064,6 +1072,8 @@
     <Content Include="Areas\Business\Views\XXYL_HW\XXYL_HW.cshtml" />
     <Content Include="Areas\Business\Views\XXYL_XYWQ\XXYL_XYWQ.cshtml" />
     <Content Include="Areas\Business\Views\XXYL_ZLAM\XXYL_ZLAM.cshtml" />
+    <Content Include="Areas\Business\Views\XXYL_TQT\XXYL_TQT.cshtml" />
+    <Content Include="Areas\Business\Views\XXYL_QPZY\XXYL_QPZY.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -118,6 +118,8 @@
     <Compile Include="Maps\XQJBXX_Map.cs" />
     <Compile Include="Maps\XXLB_Map.cs" />
     <Compile Include="Maps\XXYL\XXYL_HWJBXX_Map.cs" />
+    <Compile Include="Maps\XXYL\XXYL_QPZYJBXX_Map.cs" />
+    <Compile Include="Maps\XXYL\XXYL_TQTJBXX_Map.cs" />
     <Compile Include="Maps\XXYL\XXYL_XYWQJBXX_Map.cs" />
     <Compile Include="Maps\XXYL\XXYL_YDJBJBXX_Map.cs" />
     <Compile Include="Maps\XXYL\XXYL_YDJSJBXX_Map.cs" />
@@ -195,6 +197,8 @@
     <Compile Include="Models\XQJBXX.cs" />
     <Compile Include="Models\XXLB.cs" />
     <Compile Include="Models\XXYL\XXYL_HWJBXX.cs" />
+    <Compile Include="Models\XXYL\XXYL_QPZYJBXX.cs" />
+    <Compile Include="Models\XXYL\XXYL_TQTJBXX.cs" />
     <Compile Include="Models\XXYL\XXYL_XYWQJBXX.cs" />
     <Compile Include="Models\XXYL\XXYL_YDJBJBXX.cs" />
     <Compile Include="Models\XXYL\XXYL_YDJSJBXX.cs" />

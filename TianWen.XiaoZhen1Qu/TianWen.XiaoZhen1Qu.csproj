@@ -108,6 +108,8 @@
     <Compile Include="BLL\WZYJBLL.cs" />
     <Compile Include="BLL\XXGLBLL.cs" />
     <Compile Include="BLL\XXYL\XXYL_HWBLL.cs" />
+    <Compile Include="BLL\XXYL\XXYL_QPZYBLL.cs" />
+    <Compile Include="BLL\XXYL\XXYL_TQTBLL.cs" />
     <Compile Include="BLL\XXYL\XXYL_XYWQBLL.cs" />
     <Compile Include="BLL\XXYL\XXYL_YDJBBLL.cs" />
     <Compile Include="BLL\XXYL\XXYL_YDJSBLL.cs" />
