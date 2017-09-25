@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CY\ICY_KCTSBLL.cs" />
     <Compile Include="CY\ICY_MSBLL.cs" />
     <Compile Include="IBaseBLL.cs" />
     <Compile Include="IBZZXBLL.cs" />

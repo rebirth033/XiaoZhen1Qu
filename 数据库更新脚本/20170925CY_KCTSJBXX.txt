@@ -1,0 +1,63 @@
+-- Create table
+create table CY_KCTSJBXX
+(
+  cy_kctsjbxxid VARCHAR2(50) not null,
+  jcxxid        VARCHAR2(50),
+  bcms          VARCHAR2(4000),
+  rjxf          VARCHAR2(20),
+  lb            VARCHAR2(500),
+  tjc           VARCHAR2(200),
+  yykssj_h      VARCHAR2(20),
+  yykssj_m      VARCHAR2(20),
+  yyjssj_h      VARCHAR2(20),
+  yyjssj_m      VARCHAR2(20),
+  jtxx          VARCHAR2(200),
+  jyqy          VARCHAR2(20),
+  jydd          VARCHAR2(20),
+  jyjtdz        VARCHAR2(200),
+  fwqy          VARCHAR2(200)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 16
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table CY_KCTSJBXX
+  is '餐饮_快餐团膳';
+-- Add comments to the columns 
+comment on column CY_KCTSJBXX.cy_kctsjbxxid
+  is '快餐团膳基本信息ID';
+comment on column CY_KCTSJBXX.jcxxid
+  is '基础信息ID';
+comment on column CY_KCTSJBXX.bcms
+  is '补充描述';
+comment on column CY_KCTSJBXX.rjxf
+  is '人均消费';
+comment on column CY_KCTSJBXX.lb
+  is '类别';
+comment on column CY_KCTSJBXX.tjc
+  is '推荐菜';
+comment on column CY_KCTSJBXX.yykssj_h
+  is '营业开始时间_时';
+comment on column CY_KCTSJBXX.yykssj_m
+  is '营业开始时间_分';
+comment on column CY_KCTSJBXX.yyjssj_h
+  is '营业结束时间_时';
+comment on column CY_KCTSJBXX.yyjssj_m
+  is '营业结束时间_分';
+comment on column CY_KCTSJBXX.jtxx
+  is '交通信息';
+comment on column CY_KCTSJBXX.jyqy
+  is '交易区域';
+comment on column CY_KCTSJBXX.jydd
+  is '交易地段';
+comment on column CY_KCTSJBXX.jyjtdz
+  is '交易具体地址';
+comment on column CY_KCTSJBXX.fwqy
+  is '服务区域';
