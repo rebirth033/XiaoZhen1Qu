@@ -105,8 +105,9 @@
     <Compile Include="BLL\WDSCBLL.cs" />
     <Compile Include="BLL\WDXJBLL.cs" />
     <Compile Include="BLL\WZCXBLL.cs" />
-    <Compile Include="BLL\WZYJBLL.cs" />
+    <Compile Include="BLL\BZZX_WZJYBLL.cs" />
     <Compile Include="BLL\XXGLBLL.cs" />
+    <Compile Include="BLL\XXYL\XXYL_DIYSGFBLL.cs" />
     <Compile Include="BLL\XXYL\XXYL_HWBLL.cs" />
     <Compile Include="BLL\XXYL\XXYL_QPZYBLL.cs" />
     <Compile Include="BLL\XXYL\XXYL_TQTBLL.cs" />

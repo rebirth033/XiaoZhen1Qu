@@ -15,7 +15,7 @@ create table JCXX
   status NUMBER(2),
   lbid   NUMBER(8)
 )
-tablespace XIAOZHEN
+tablespace USERS
   pctfree 10
   initrans 1
   maxtrans 255

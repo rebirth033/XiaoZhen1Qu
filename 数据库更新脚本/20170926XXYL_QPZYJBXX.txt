@@ -1,0 +1,39 @@
+-- Create table
+create table XXYL_QPZYJBXX
+(
+  xxyl_qpzyjbxxid VARCHAR2(50) not null,
+  jcxxid          VARCHAR2(50),
+  bcms            VARCHAR2(4000),
+  lb              VARCHAR2(500),
+  qy              VARCHAR2(20),
+  dd              VARCHAR2(20),
+  jtdz            VARCHAR2(200)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table XXYL_QPZYJBXX
+  is '休闲娱乐_棋牌桌游';
+-- Add comments to the columns 
+comment on column XXYL_QPZYJBXX.xxyl_qpzyjbxxid
+  is '棋牌桌游基本信息ID';
+comment on column XXYL_QPZYJBXX.jcxxid
+  is '基础信息ID';
+comment on column XXYL_QPZYJBXX.bcms
+  is '补充描述';
+comment on column XXYL_QPZYJBXX.lb
+  is '类别';
+comment on column XXYL_QPZYJBXX.qy
+  is '区域';
+comment on column XXYL_QPZYJBXX.dd
+  is '地段';
+comment on column XXYL_QPZYJBXX.jtdz
+  is '具体地址';

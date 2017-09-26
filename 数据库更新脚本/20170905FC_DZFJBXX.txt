@@ -12,7 +12,7 @@ create table FC_DZFJBXX
   czfs         NUMBER(1),
   fyms         VARCHAR2(4000)
 )
-tablespace XIAOZHEN1QU
+tablespace USERS
   pctfree 10
   initrans 1
   maxtrans 255

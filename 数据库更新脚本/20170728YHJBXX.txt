@@ -20,7 +20,7 @@ create table YHJBXX
   wb      VARCHAR2(100),
   wx      VARCHAR2(100)
 )
-tablespace XIAOZHEN
+tablespace USERS
   pctfree 10
   initrans 1
   maxtrans 255

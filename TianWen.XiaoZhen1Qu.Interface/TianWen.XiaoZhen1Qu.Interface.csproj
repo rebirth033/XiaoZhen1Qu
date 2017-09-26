@@ -96,7 +96,7 @@
     <Compile Include="IWDSCBLL.cs" />
     <Compile Include="IWDXJBLL.cs" />
     <Compile Include="IWZCXBLL.cs" />
-    <Compile Include="IWZYJBLL.cs" />
+    <Compile Include="IBZZX_WZJYBLL.cs" />
     <Compile Include="IXXGLBLL.cs" />
     <Compile Include="IYHDLXXBLL.cs" />
     <Compile Include="IYHJBXXBLL.cs" />
@@ -108,6 +108,7 @@
     <Compile Include="PWKQ\IPWKQ_XFKGWQBLL.cs" />
     <Compile Include="PWKQ\IPWKQ_YCMPZLBLL.cs" />
     <Compile Include="PWKQ\IPWKQ_YLYJDPBLL.cs" />
+    <Compile Include="XXYL\IXXYL_DIYSGFBLL.cs" />
     <Compile Include="XXYL\IXXYL_HWBLL.cs" />
     <Compile Include="XXYL\IXXYL_QPZYBLL.cs" />
     <Compile Include="XXYL\IXXYL_TQTBLL.cs" />

@@ -35,4 +35,9 @@
       <ref object="XXYL_QPZYBLL"/>
     </property>
   </object>
+  <object id="XXYL_DIYSGFController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.XXYL_DIYSGFController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="XXYL_DIYSGFBLL">
+      <ref object="XXYL_DIYSGFBLL"/>
+    </property>
+  </object>
 </objects>

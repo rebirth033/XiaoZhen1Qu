@@ -123,9 +123,9 @@
       <ref object="WDXJBLL"/>
     </property>
   </object>
-  <object id="WZYJController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.WZYJController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
-    <property name="WZYJBLL">
-      <ref object="WZYJBLL"/>
+  <object id="BZZX_WZJYController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.BZZX_WZJYController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="BZZX_WZJYBLL">
+      <ref object="BZZX_WZJYBLL"/>
     </property>
   </object>
 </objects>
