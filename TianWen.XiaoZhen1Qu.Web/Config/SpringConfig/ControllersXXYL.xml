@@ -40,4 +40,9 @@
       <ref object="XXYL_DIYSGFBLL"/>
     </property>
   </object>
+  <object id="XXYL_HPGController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.XXYL_HPGController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="XXYL_HPGBLL">
+      <ref object="XXYL_HPGBLL"/>
+    </property>
+  </object>
 </objects>

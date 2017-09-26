@@ -40,4 +40,9 @@
       <ref object="DAOBase"/>
     </property>
   </object>
+  <object id="XXYL_HPGBLL" type="TianWen.XiaoZhen1Qu.BLL.XXYL_HPGBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
 </objects>

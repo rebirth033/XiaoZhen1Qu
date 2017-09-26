@@ -109,6 +109,7 @@
     <Compile Include="PWKQ\IPWKQ_YCMPZLBLL.cs" />
     <Compile Include="PWKQ\IPWKQ_YLYJDPBLL.cs" />
     <Compile Include="XXYL\IXXYL_DIYSGFBLL.cs" />
+    <Compile Include="XXYL\IXXYL_HPGBLL.cs" />
     <Compile Include="XXYL\IXXYL_HWBLL.cs" />
     <Compile Include="XXYL\IXXYL_QPZYBLL.cs" />
     <Compile Include="XXYL\IXXYL_TQTBLL.cs" />

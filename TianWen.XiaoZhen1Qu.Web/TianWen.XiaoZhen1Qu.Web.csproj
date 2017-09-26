@@ -342,6 +342,7 @@
     <Content Include="Areas\Business\Css\XXGL\XXGL.css" />
     <Content Include="Areas\Business\Css\XXGL\XXGLMX.css" />
     <Content Include="Areas\Business\Css\XXYL\XXYL_DIYSGF.css" />
+    <Content Include="Areas\Business\Css\XXYL\XXYL_HPG.css" />
     <Content Include="Areas\Business\Css\XXYL\XXYL_HW.css" />
     <Content Include="Areas\Business\Css\XXYL\XXYL_QPZY.css" />
     <Content Include="Areas\Business\Css\XXYL\XXYL_TQT.css" />
@@ -497,6 +498,8 @@
     <Content Include="Areas\Business\Scripts\Business\XXGL\XXGLMX.js" />
     <Content Include="Areas\Business\Scripts\Business\XXYL\XXYL_DIYSGF.js" />
     <Content Include="Areas\Business\Scripts\Business\XXYL\XXYL_DIYSGFYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXYL\XXYL_HPG.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXYL\XXYL_HPGYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\XXYL\XXYL_HW.js" />
     <Content Include="Areas\Business\Scripts\Business\XXYL\XXYL_HWYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\XXYL\XXYL_QPZY.js" />
@@ -911,6 +914,7 @@
     <Compile Include="Areas\Business\Controllers\WZCXController.cs" />
     <Compile Include="Areas\Business\Controllers\XXGLController.cs" />
     <Compile Include="Areas\Business\Controllers\XXYL\XXYL_DIYSGFController.cs" />
+    <Compile Include="Areas\Business\Controllers\XXYL\XXYL_HPGController.cs" />
     <Compile Include="Areas\Business\Controllers\XXYL\XXYL_HWController.cs" />
     <Compile Include="Areas\Business\Controllers\XXYL\XXYL_QPZYController.cs" />
     <Compile Include="Areas\Business\Controllers\XXYL\XXYL_TQTController.cs" />
@@ -1079,6 +1083,7 @@
     <Content Include="Areas\Business\Views\XXYL_TQT\XXYL_TQT.cshtml" />
     <Content Include="Areas\Business\Views\XXYL_QPZY\XXYL_QPZY.cshtml" />
     <Content Include="Areas\Business\Views\XXYL_DIYSGF\XXYL_DIYSGF.cshtml" />
+    <Content Include="Areas\Business\Views\XXYL_HPG\XXYL_HPG.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
