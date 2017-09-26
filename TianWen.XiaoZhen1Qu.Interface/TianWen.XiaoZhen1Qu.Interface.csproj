@@ -102,6 +102,12 @@
     <Compile Include="IYHJBXXBLL.cs" />
     <Compile Include="IYXCZBLL.cs" />
     <Compile Include="IZHBDBLL.cs" />
+    <Compile Include="LR\ILR_MFHFBLL.cs" />
+    <Compile Include="LR\ILR_MJBLL.cs" />
+    <Compile Include="LR\ILR_MRHFBLL.cs" />
+    <Compile Include="LR\ILR_MTSSBLL.cs" />
+    <Compile Include="LR\ILR_SPABLL.cs" />
+    <Compile Include="LR\ILR_WDBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PWKQ\IPWKQ_DYPBLL.cs" />
     <Compile Include="PWKQ\IPWKQ_QTKQBLL.cs" />

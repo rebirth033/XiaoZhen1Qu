@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects  xmlns="http://www.springframework.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.net http://www.springframework.net/xsd/spring-objects.xsd">
+  <object id="LR_MTSSBLL" type="TianWen.XiaoZhen1Qu.BLL.LR_MTSSBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="LR_MRHFBLL" type="TianWen.XiaoZhen1Qu.BLL.LR_MRHFBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="LR_SPABLL" type="TianWen.XiaoZhen1Qu.BLL.LR_SPABLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="LR_WDBLL" type="TianWen.XiaoZhen1Qu.BLL.LR_WDBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="LR_MFHFBLL" type="TianWen.XiaoZhen1Qu.BLL.LR_MFHFBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="LR_MJBLL" type="TianWen.XiaoZhen1Qu.BLL.LR_MJBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+</objects>

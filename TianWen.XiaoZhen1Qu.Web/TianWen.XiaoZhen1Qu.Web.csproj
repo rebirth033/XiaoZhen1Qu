@@ -327,6 +327,12 @@
     <Content Include="Areas\Business\Css\images\zffs_zfb.png" />
     <Content Include="Areas\Business\Css\images\zmsmrz.png" />
     <Content Include="Areas\Business\Css\LBXZ.css" />
+    <Content Include="Areas\Business\Css\LR\LR_MFHF.css" />
+    <Content Include="Areas\Business\Css\LR\LR_MJ.css" />
+    <Content Include="Areas\Business\Css\LR\LR_MRHF.css" />
+    <Content Include="Areas\Business\Css\LR\LR_MTSS.css" />
+    <Content Include="Areas\Business\Css\LR\LR_SPA.css" />
+    <Content Include="Areas\Business\Css\LR\LR_WD.css" />
     <Content Include="Areas\Business\Css\PageCommon.css" />
     <Content Include="Areas\Business\Css\PWKQ\PWKQ_DYP.css" />
     <Content Include="Areas\Business\Css\PWKQ\PWKQ_QTKQ.css" />
@@ -476,6 +482,18 @@
     <Content Include="Areas\Business\Scripts\Business\HFCZ\HFCZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HFCZ\ZFFS.js" />
     <Content Include="Areas\Business\Scripts\Business\LBXZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\LR\LR_MFHF.js" />
+    <Content Include="Areas\Business\Scripts\Business\LR\LR_MFHFYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\LR\LR_MJ.js" />
+    <Content Include="Areas\Business\Scripts\Business\LR\LR_MJYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\LR\LR_MRHF.js" />
+    <Content Include="Areas\Business\Scripts\Business\LR\LR_MRHFYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\LR\LR_MTSS.js" />
+    <Content Include="Areas\Business\Scripts\Business\LR\LR_MTSSYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\LR\LR_SPA.js" />
+    <Content Include="Areas\Business\Scripts\Business\LR\LR_SPAYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\LR\LR_WD.js" />
+    <Content Include="Areas\Business\Scripts\Business\LR\LR_WDYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\PageJson.js" />
     <Content Include="Areas\Business\Scripts\Business\Public_TP.js" />
     <Content Include="Areas\Business\Scripts\Business\PWKQ\PWKQ_DYP.js" />
@@ -813,12 +831,16 @@
     <Content Include="Areas\Business\Scripts\UEditor\ueditor.js" />
     <Content Include="Areas\Business\Scripts\UEditor\ueditor.parse.min.js" />
     <Content Include="Areas\Business\Scripts\underscore.min.js" />
+    <Content Include="Config\SpringConfig\BLLLR.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Config\SpringConfig\BLLCY.xml">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Config\SpringConfig\BLLXXYL.xml" />
     <Content Include="Config\SpringConfig\BLLPWKQ.xml" />
     <Content Include="Config\SpringConfig\BLLGY.xml" />
+    <Content Include="Config\SpringConfig\ControllersLR.xml" />
     <Content Include="Config\SpringConfig\ControllersXXYL.xml" />
     <Content Include="Config\SpringConfig\ControllersCY.xml" />
     <Content Include="Config\SpringConfig\ControllersCL.xml" />
@@ -902,6 +924,12 @@
     <Compile Include="Areas\Business\Controllers\GRZLController.cs" />
     <Compile Include="Areas\Business\Controllers\HFCZController.cs" />
     <Compile Include="Areas\Business\Controllers\LBXZController.cs" />
+    <Compile Include="Areas\Business\Controllers\LR\LR_MFHFController.cs" />
+    <Compile Include="Areas\Business\Controllers\LR\LR_MJController.cs" />
+    <Compile Include="Areas\Business\Controllers\LR\LR_MRHFController.cs" />
+    <Compile Include="Areas\Business\Controllers\LR\LR_MTSSController.cs" />
+    <Compile Include="Areas\Business\Controllers\LR\LR_SPAController.cs" />
+    <Compile Include="Areas\Business\Controllers\LR\LR_WDController.cs" />
     <Compile Include="Areas\Business\Controllers\PWKQ\PWKQ_DYPController.cs" />
     <Compile Include="Areas\Business\Controllers\PWKQ\PWKQ_QTKQController.cs" />
     <Compile Include="Areas\Business\Controllers\PWKQ\PWKQ_XFKGWQController.cs" />
@@ -1084,6 +1112,12 @@
     <Content Include="Areas\Business\Views\XXYL_QPZY\XXYL_QPZY.cshtml" />
     <Content Include="Areas\Business\Views\XXYL_DIYSGF\XXYL_DIYSGF.cshtml" />
     <Content Include="Areas\Business\Views\XXYL_HPG\XXYL_HPG.cshtml" />
+    <Content Include="Areas\Business\Views\LR_MTSS\LR_MTSS.cshtml" />
+    <Content Include="Areas\Business\Views\LR_MRHF\LR_MRHF.cshtml" />
+    <Content Include="Areas\Business\Views\LR_SPA\LR_SPA.cshtml" />
+    <Content Include="Areas\Business\Views\LR_WD\LR_WD.cshtml" />
+    <Content Include="Areas\Business\Views\LR_MFHF\LR_MFHF.cshtml" />
+    <Content Include="Areas\Business\Views\LR_MJ\LR_MJ.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -1,0 +1,39 @@
+-- Create table
+create table LR_MJJBXX
+(
+  lr_mjjbxxid VARCHAR2(50) not null,
+  jcxxid      VARCHAR2(50),
+  bcms        VARCHAR2(4000),
+  lb          VARCHAR2(20),
+  qy          VARCHAR2(20),
+  dd          VARCHAR2(20),
+  jtdz        VARCHAR2(200)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 16
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table LR_MJJBXX
+  is '美体瘦身_美甲';
+-- Add comments to the columns 
+comment on column LR_MJJBXX.lr_mjjbxxid
+  is '美甲基本信息ID';
+comment on column LR_MJJBXX.jcxxid
+  is '基础信息ID';
+comment on column LR_MJJBXX.bcms
+  is '补充描述';
+comment on column LR_MJJBXX.lb
+  is '类别';
+comment on column LR_MJJBXX.qy
+  is '区域';
+comment on column LR_MJJBXX.dd
+  is '地段';
+comment on column LR_MJJBXX.jtdz
+  is '具体地址';

@@ -69,6 +69,7 @@
     <Compile Include="Maps\CODES\CODES_ES_SJSM_Map.cs" />
     <Compile Include="Maps\CODES\CODES_ES_QTES_Map.cs" />
     <Compile Include="Maps\CODES\CODES_ES_WHYL_Map.cs" />
+    <Compile Include="Maps\CODES\CODES_LR_Map.cs" />
     <Compile Include="Maps\CODES\CODES_PWKQ_Map.cs" />
     <Compile Include="Maps\CODES\CODES_XXYL_Map.cs" />
     <Compile Include="Maps\CW\CW_CWFWJBXX_Map.cs" />
@@ -107,6 +108,12 @@
     <Compile Include="Maps\FC\FC_XZLJBXX_Map.cs" />
     <Compile Include="Maps\FWCZJBXX_Map.cs" />
     <Compile Include="Maps\JCXX_Map.cs" />
+    <Compile Include="Maps\LR\LR_MFHFJBXX_Map.cs" />
+    <Compile Include="Maps\LR\LR_MJJBXX_Map.cs" />
+    <Compile Include="Maps\LR\LR_MRHFJBXX_Map.cs" />
+    <Compile Include="Maps\LR\LR_MTSSJBXX_Map.cs" />
+    <Compile Include="Maps\LR\LR_SPAJBXX_Map.cs" />
+    <Compile Include="Maps\LR\LR_WDJBXX_Map.cs" />
     <Compile Include="Maps\PHOTOS_Map.cs" />
     <Compile Include="Maps\PWKQ\PWKQ_DYPJBXX_Map.cs" />
     <Compile Include="Maps\PWKQ\PWKQ_QTKQJBXX_Map.cs" />
@@ -147,6 +154,7 @@
     <Compile Include="Models\CODES\CODES_ES_SJSM.cs" />
     <Compile Include="Models\CODES\CODES_ES_QTES.cs" />
     <Compile Include="Models\CODES\CODES_ES_WHYL.cs" />
+    <Compile Include="Models\CODES\CODES_LR.cs" />
     <Compile Include="Models\CODES\CODES_PWKQ.cs" />
     <Compile Include="Models\CODES\CODES_XXYL.cs" />
     <Compile Include="Models\CW\CW_CWFWJBXX.cs" />
@@ -187,6 +195,12 @@
     <Compile Include="Models\FC\FC_XZLJBXX.cs" />
     <Compile Include="Models\FC\FC_ZZFJBXX.cs" />
     <Compile Include="Models\JCXX.cs" />
+    <Compile Include="Models\LR\LR_MFHFJBXX.cs" />
+    <Compile Include="Models\LR\LR_MJJBXX.cs" />
+    <Compile Include="Models\LR\LR_MRHFJBXX.cs" />
+    <Compile Include="Models\LR\LR_MTSSJBXX.cs" />
+    <Compile Include="Models\LR\LR_SPAJBXX.cs" />
+    <Compile Include="Models\LR\LR_WDJBXX.cs" />
     <Compile Include="Models\PHOTOS.cs" />
     <Compile Include="Models\PublicType.cs" />
     <Compile Include="Models\PWKQ\PWKQ_DYPJBXX.cs" />

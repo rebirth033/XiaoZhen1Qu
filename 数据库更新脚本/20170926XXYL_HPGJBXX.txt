@@ -1,0 +1,48 @@
+-- Create table
+create table XXYL_HPGJBXX
+(
+  xxyl_hpgjbxxid VARCHAR2(50) not null,
+  jcxxid         VARCHAR2(50),
+  bcms           VARCHAR2(4000),
+  snsb           VARCHAR2(500),
+  qy             VARCHAR2(20),
+  dd             VARCHAR2(20),
+  jtdz           VARCHAR2(200),
+  krnrs          VARCHAR2(20),
+  cdmj           VARCHAR2(20),
+  jg             VARCHAR2(20)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 16
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table XXYL_HPGJBXX
+  is '休闲娱乐_轰趴馆';
+-- Add comments to the columns 
+comment on column XXYL_HPGJBXX.xxyl_hpgjbxxid
+  is '轰趴馆基本信息ID';
+comment on column XXYL_HPGJBXX.jcxxid
+  is '基础信息ID';
+comment on column XXYL_HPGJBXX.bcms
+  is '补充描述';
+comment on column XXYL_HPGJBXX.snsb
+  is '室内设备';
+comment on column XXYL_HPGJBXX.qy
+  is '区域';
+comment on column XXYL_HPGJBXX.dd
+  is '地段';
+comment on column XXYL_HPGJBXX.jtdz
+  is '具体地址';
+comment on column XXYL_HPGJBXX.krnrs
+  is '可容纳人数';
+comment on column XXYL_HPGJBXX.cdmj
+  is '场地面积';
+comment on column XXYL_HPGJBXX.jg
+  is '价格';
