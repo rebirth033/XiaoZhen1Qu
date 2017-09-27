@@ -76,5 +76,24 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 };
             }
         }
+        
+        //根据行政区编码获取省内同级行政区
+        public object GetDistrictTJByXZQDM(string XZQDM)
+        {
+            try
+            {
+                List<DISTRICT> districts = DAO.GetObjectList<DISTRICT>(string.Format("FROM DISTRICT WHERE SuperCode = '{0}' ORDER BY CODE", XZQDM.Substring(0,2) + "0000")).ToList();
+                return new { Result = EnResultType.Success, list = districts };
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("CommonBLL", "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                return new
+                {
+                    Result = EnResultType.Failed,
+                    Message = "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!"
+                };
+            }
+        }
     }
 }

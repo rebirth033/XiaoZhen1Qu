@@ -76,6 +76,25 @@ function SelectMJLB(obj) {
     else
         $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
 }
+//获取美甲类别
+function GetMJLB() {
+    var MJLB = "";
+    $(".liFWPZ").each(function () {
+        if ($(this).find("img").attr("src").indexOf("blue") !== -1)
+            MJLB += $(this).find("label")[0].innerHTML + ",";
+    });
+    return RTrim(MJLB, ',');
+}
+//设置美甲类别
+function SetMJLB(lbs) {
+    var lbarray = lbs.split(',');
+    for (var i = 0; i < lbarray.length; i++) {
+        $(".liFWPZ").each(function () {
+            if ($(this).find("label")[0].innerHTML.indexOf(lbarray[i]) !== -1)
+                $(this).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
+        });
+    }
+}
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
@@ -121,25 +140,6 @@ function LoadLR_MJJBXX() {
 
         }
     });
-}
-//获取美甲类别
-function GetMJLB() {
-    var MJLB = "";
-    $(".liFWPZ").each(function () {
-        if ($(this).find("img").attr("src").indexOf("blue") !== -1)
-            MJLB += $(this).find("label")[0].innerHTML + ",";
-    });
-    return RTrim(MJLB, ',');
-}
-//设置美甲类别
-function SetMJLB(lbs) {
-    var lbarray = lbs.split(',');
-    for (var i = 0; i < lbarray.length; i++) {
-        $(".liFWPZ").each(function () {
-            if ($(this).find("label")[0].innerHTML.indexOf(lbarray[i]) !== -1)
-                $(this).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-        });
-    }
 }
 //发布
 function FB() {

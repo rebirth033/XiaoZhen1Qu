@@ -13,5 +13,7 @@ namespace TianWen.XiaoZhen1Qu.Interface
         object GetDistrictByGrade(string Grade);
 
         object GetDistrictBySuperCode(string SuperCode);
+
+        object GetDistrictTJByXZQDM(string XZQDM);
     }
 }

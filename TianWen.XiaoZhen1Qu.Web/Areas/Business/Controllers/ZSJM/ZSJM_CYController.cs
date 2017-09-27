@@ -14,6 +14,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         public ActionResult ZSJM_CY()
         {
             ViewData["XZQ"] = Session["XZQ"];
+            ViewData["XZQDM"] = Session["XZQDM"];
             ViewData["YHM"] = Session["YHM"];
             return View();
         }

@@ -37,6 +37,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
                     YHJBXX yhjbxx = YHDLXXBLL.AddUserBySJ(Request["SJ"]);
                     Session["YHM"] = yhjbxx.YHM;
                     Session["XZQ"] = "福州";
+                    Session["XZQDM"] = "350100";
                     return Json(new { Result = EnResultType.Success, Message = "登录成功", YHID = yhjbxx.YHID });
                 }
                 else
@@ -65,6 +66,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
                 {
                     Session["YHM"] = YHM;
                     Session["XZQ"] = "福州";
+                    Session["XZQDM"] = "350100";
                 }
                 return Json(result);
             }
@@ -75,6 +77,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
                 {
                     Session["YHM"] = YHM;
                     Session["XZQ"] = "福州";
+                    Session["XZQDM"] = "350100";
                 }
                 return Json(result);
             }

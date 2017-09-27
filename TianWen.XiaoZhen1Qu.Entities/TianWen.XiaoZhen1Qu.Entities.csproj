@@ -72,6 +72,7 @@
     <Compile Include="Maps\CODES\CODES_LR_Map.cs" />
     <Compile Include="Maps\CODES\CODES_PWKQ_Map.cs" />
     <Compile Include="Maps\CODES\CODES_XXYL_Map.cs" />
+    <Compile Include="Maps\CODES\CODES_ZSJM_Map.cs" />
     <Compile Include="Maps\CW\CW_CWFWJBXX_Map.cs" />
     <Compile Include="Maps\CW\CW_CWGJBXX_Map.cs" />
     <Compile Include="Maps\CW\CW_CWMJBXX_Map.cs" />
@@ -143,6 +144,7 @@
     <Compile Include="Maps\YHZHXX_Map.cs" />
     <Compile Include="Maps\YXJBXX_Map.cs" />
     <Compile Include="Maps\ZDDLXX_Map.cs" />
+    <Compile Include="Maps\ZSJM\ZSJM_CYJBXX_Map.cs" />
     <Compile Include="Models\CL\CL_GCCJBXX.cs" />
     <Compile Include="Models\CL\CL_HCJBXX.cs" />
     <Compile Include="Models\CL\CL_JCJBXX.cs" />
@@ -161,6 +163,7 @@
     <Compile Include="Models\CODES\CODES_LR.cs" />
     <Compile Include="Models\CODES\CODES_PWKQ.cs" />
     <Compile Include="Models\CODES\CODES_XXYL.cs" />
+    <Compile Include="Models\CODES\CODES_ZSJM.cs" />
     <Compile Include="Models\CW\CW_CWFWJBXX.cs" />
     <Compile Include="Models\CW\CW_CWGJBXX.cs" />
     <Compile Include="Models\CW\CW_CWMJBXX.cs" />
@@ -235,6 +238,7 @@
     <Compile Include="Models\YHZHXX.cs" />
     <Compile Include="Models\YXJBXX.cs" />
     <Compile Include="Models\ZDDLXX.cs" />
+    <Compile Include="Models\ZSJM\ZSJM_CYJBXX.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

@@ -29,6 +29,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return Json(result);
         }
 
+        public JsonResult GetDistrictTJByXZQDM()
+        {
+            string XZQDM = Request["XZQDM"];
+            object result = CommonBLL.GetDistrictTJByXZQDM(XZQDM);
+            return Json(result);
+        }
+
         public JsonResult LoadCODES_FC()
         {
             string TYPENAME = Request["TYPENAME"];
@@ -99,6 +106,12 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         {
             string TYPENAME = Request["TYPENAME"];
             return Json(CommonBLL.LoadCODES_LR(TYPENAME));
+        }
+
+        public JsonResult LoadCODES_ZSJM()
+        {
+            string TYPENAME = Request["TYPENAME"];
+            return Json(CommonBLL.LoadCODES_ZSJM(TYPENAME));
         }
 
         public JsonResult QHXZQ()
