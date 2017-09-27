@@ -145,6 +145,7 @@
     <Compile Include="Maps\YXJBXX_Map.cs" />
     <Compile Include="Maps\ZDDLXX_Map.cs" />
     <Compile Include="Maps\ZSJM\ZSJM_CYJBXX_Map.cs" />
+    <Compile Include="Maps\ZSJM\ZSJM_FZXBJBXX_Map.cs" />
     <Compile Include="Models\CL\CL_GCCJBXX.cs" />
     <Compile Include="Models\CL\CL_HCJBXX.cs" />
     <Compile Include="Models\CL\CL_JCJBXX.cs" />

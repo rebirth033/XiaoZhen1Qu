@@ -11,7 +11,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         }
 
         /// <summary>
-        /// 招商加盟_餐饮信息ID
+        /// 招商加盟_服装鞋包信息ID
         /// </summary>
         [Id]
         public virtual string ZSJM_FZXBJBXXID { get; set; }
