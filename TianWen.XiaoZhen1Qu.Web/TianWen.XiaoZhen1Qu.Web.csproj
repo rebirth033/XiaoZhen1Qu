@@ -980,6 +980,7 @@
     <Compile Include="Areas\Business\Controllers\ZHBDController.cs" />
     <Compile Include="Areas\Business\Controllers\ZHMMController.cs" />
     <Compile Include="Areas\Business\Controllers\ZSJM\ZSJM_CYController.cs" />
+    <Compile Include="Areas\Business\Controllers\ZSJM\ZSJM_FZXBController.cs" />
     <Compile Include="Areas\Business\Scripts\UEditor\net\App_Code\Config.cs" />
     <Compile Include="Areas\Business\Scripts\UEditor\net\App_Code\ConfigHandler.cs" />
     <Compile Include="Areas\Business\Scripts\UEditor\net\App_Code\CrawlerHandler.cs" />

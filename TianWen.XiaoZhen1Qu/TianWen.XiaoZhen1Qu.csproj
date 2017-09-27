@@ -131,6 +131,7 @@
     <Compile Include="BLL\YXCZBLL.cs" />
     <Compile Include="BLL\ZHBDBLL.cs" />
     <Compile Include="BLL\ZSJM\ZSJM_CYBLL.cs" />
+    <Compile Include="BLL\ZSJM\ZSJM_FZXBBLL.cs" />
     <Compile Include="DAO\DAOBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

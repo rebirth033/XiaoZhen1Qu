@@ -44,7 +44,7 @@ function LoadDefault() {
     });
 }
 //加载餐饮类别
-function LoadDropdown(type,id) {
+function LoadDropdown(type, id) {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/Common/LoadCODES_ZSJM",
@@ -109,7 +109,7 @@ function LoadZSDQ() {
         data:
         {
             XZQDM: $("#input_XZQDM").val()
-},
+        },
         success: function (xml) {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
@@ -119,6 +119,10 @@ function LoadZSDQ() {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
                 }
+                if (parseInt(xml.list.length % 6) === 0)
+                    $("#divZSDQ").css("height", parseInt(xml.list.length / 6) * 45 + "px");
+                else
+                    $("#divZSDQ").css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
                 html += "</ul>";
                 $("#divZSDQText").html(html);
                 $(".img_ZSDQ").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");

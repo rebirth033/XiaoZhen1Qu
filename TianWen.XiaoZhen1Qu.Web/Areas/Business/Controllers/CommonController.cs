@@ -117,6 +117,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         public JsonResult QHXZQ()
         {
             Session["XZQ"] = Request["XZQ"];
+            Session["XZQDM"] = Request["XZQDM"];
             return Json(new { Result = EnResultType.Success });
         }
 

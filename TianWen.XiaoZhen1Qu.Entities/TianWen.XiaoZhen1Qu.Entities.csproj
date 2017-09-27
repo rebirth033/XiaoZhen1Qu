@@ -239,6 +239,7 @@
     <Compile Include="Models\YXJBXX.cs" />
     <Compile Include="Models\ZDDLXX.cs" />
     <Compile Include="Models\ZSJM\ZSJM_CYJBXX.cs" />
+    <Compile Include="Models\ZSJM\ZSJM_FZXBJBXX.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

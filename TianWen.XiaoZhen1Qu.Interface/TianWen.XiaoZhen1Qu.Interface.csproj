@@ -128,6 +128,7 @@
     <Compile Include="XXYL\IXXYL_YDJSBLL.cs" />
     <Compile Include="XXYL\IXXYL_ZLAMBLL.cs" />
     <Compile Include="ZSJM\IZSJM_CYBLL.cs" />
+    <Compile Include="ZSJM\IZSJM_FZXBBLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TianWen.XiaoZhen1Qu.Entities\TianWen.XiaoZhen1Qu.Entities.csproj">
