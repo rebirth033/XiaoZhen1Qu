@@ -201,5 +201,10 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         {
             return Json(CommonBLL.LoadCWYPSPXX(Request["LBID"]));
         }
+
+        public JsonResult LoadJXXX()
+        {
+            return Json(CommonBLL.LoadJXXX(Request["JXID"]));
+        }
     }
 }

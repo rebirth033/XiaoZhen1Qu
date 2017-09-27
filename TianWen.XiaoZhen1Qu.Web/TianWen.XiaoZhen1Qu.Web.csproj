@@ -371,6 +371,8 @@
     <Content Include="Areas\Business\Css\ZHMM.css" />
     <Content Include="Areas\Business\Css\ZSJM\ZSJM_CY.css" />
     <Content Include="Areas\Business\Css\ZSJM\ZSJM_FZXB.css" />
+    <Content Include="Areas\Business\Css\ZSJM\ZSJM_JC.css" />
+    <Content Include="Areas\Business\Css\ZSJM\ZSJM_JX.css" />
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\css\bootstrap-theme.css" />
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\css\bootstrap-theme.min.css" />
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\css\bootstrap.css" />
@@ -560,6 +562,10 @@
     <Content Include="Areas\Business\Scripts\Business\ZSJM\ZSJM_CYYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\ZSJM\ZSJM_FZXB.js" />
     <Content Include="Areas\Business\Scripts\Business\ZSJM\ZSJM_FZXBYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\ZSJM\ZSJM_JC.js" />
+    <Content Include="Areas\Business\Scripts\Business\ZSJM\ZSJM_JCYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\ZSJM\ZSJM_JX.js" />
+    <Content Include="Areas\Business\Scripts\Business\ZSJM\ZSJM_JXYZ.js" />
     <Content Include="Areas\Business\Scripts\jquery-1.9.1.min.js" />
     <Content Include="Areas\Business\Scripts\jquery-ui-1.12.1.custom\AUTHORS.txt" />
     <Content Include="Areas\Business\Scripts\jquery-ui-1.12.1.custom\external\jquery\jquery.js" />
@@ -984,6 +990,8 @@
     <Compile Include="Areas\Business\Controllers\ZHMMController.cs" />
     <Compile Include="Areas\Business\Controllers\ZSJM\ZSJM_CYController.cs" />
     <Compile Include="Areas\Business\Controllers\ZSJM\ZSJM_FZXBController.cs" />
+    <Compile Include="Areas\Business\Controllers\ZSJM\ZSJM_JCController.cs" />
+    <Compile Include="Areas\Business\Controllers\ZSJM\ZSJM_JXController.cs" />
     <Compile Include="Areas\Business\Scripts\UEditor\net\App_Code\Config.cs" />
     <Compile Include="Areas\Business\Scripts\UEditor\net\App_Code\ConfigHandler.cs" />
     <Compile Include="Areas\Business\Scripts\UEditor\net\App_Code\CrawlerHandler.cs" />
@@ -1152,6 +1160,8 @@
     <Content Include="Areas\Business\Views\LR_YJ\LR_YJ.cshtml" />
     <Content Include="Areas\Business\Views\ZSJM_CY\ZSJM_CY.cshtml" />
     <Content Include="Areas\Business\Views\ZSJM_FZXB\ZSJM_FZXB.cshtml" />
+    <Content Include="Areas\Business\Views\ZSJM_JC\ZSJM_JC.cshtml" />
+    <Content Include="Areas\Business\Views\ZSJM_JX\ZSJM_JX.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

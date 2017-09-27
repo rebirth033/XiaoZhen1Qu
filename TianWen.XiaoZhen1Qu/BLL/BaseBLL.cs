@@ -362,6 +362,20 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
+        public object LoadJXXX(string JXID)
+        {
+            try
+            {
+                IList<CODES_ZSJM> list = DAO.Repository.GetObjectList<CODES_ZSJM>(String.Format("FROM CODES_ZSJM WHERE PARENTID = '{0}' ORDER BY CODEORDER", JXID));
+                return new { Result = EnResultType.Success, list = list };
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("error", ex.Message);
+                return new { Result = EnResultType.Failed, Message = "加载失败" };
+            }
+        }
+
         public object LoadHNCYXX(string PZID)
         {
             try

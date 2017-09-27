@@ -10,4 +10,14 @@
       <ref object="ZSJM_FZXBBLL"/>
     </property>
   </object>
+  <object id="ZSJM_JCController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.ZSJM_JCController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="ZSJM_JCBLL">
+      <ref object="ZSJM_JCBLL"/>
+    </property>
+  </object>
+  <object id="ZSJM_JXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.ZSJM_JXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="ZSJM_JXBLL">
+      <ref object="ZSJM_JXBLL"/>
+    </property>
+  </object>
 </objects>
