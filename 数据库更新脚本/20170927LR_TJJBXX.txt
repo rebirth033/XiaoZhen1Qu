@@ -1,0 +1,36 @@
+-- Create table
+create table LR_TJJBXX
+(
+  lr_tjjbxxid VARCHAR2(50) not null,
+  jcxxid      VARCHAR2(50),
+  bcms        VARCHAR2(4000),
+  qy          VARCHAR2(20),
+  dd          VARCHAR2(20),
+  jtdz        VARCHAR2(200)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 16
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table LR_TJJBXX
+  is '美体瘦身_体检';
+-- Add comments to the columns 
+comment on column LR_TJJBXX.lr_tjjbxxid
+  is '体检基本信息ID';
+comment on column LR_TJJBXX.jcxxid
+  is '基础信息ID';
+comment on column LR_TJJBXX.bcms
+  is '补充描述';
+comment on column LR_TJJBXX.qy
+  is '区域';
+comment on column LR_TJJBXX.dd
+  is '地段';
+comment on column LR_TJJBXX.jtdz
+  is '具体地址';

@@ -30,4 +30,24 @@
       <ref object="LR_MJBLL"/>
     </property>
   </object>
+  <object id="LR_WSController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.LR_WSController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="LR_WSBLL">
+      <ref object="LR_WSBLL"/>
+    </property>
+  </object>
+  <object id="LR_KQHLController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.LR_KQHLController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="LR_KQHLBLL">
+      <ref object="LR_KQHLBLL"/>
+    </property>
+  </object>
+  <object id="LR_TJController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.LR_TJController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="LR_TJBLL">
+      <ref object="LR_TJBLL"/>
+    </property>
+  </object>
+  <object id="LR_YJController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.LR_YJController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="LR_YJBLL">
+      <ref object="LR_YJBLL"/>
+    </property>
+  </object>
 </objects>

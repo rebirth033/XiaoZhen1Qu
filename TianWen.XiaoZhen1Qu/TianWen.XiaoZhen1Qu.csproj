@@ -95,12 +95,16 @@
     <Compile Include="BLL\FC\FC_ZZFJBXXBLL.cs" />
     <Compile Include="BLL\HFCZBLL.cs" />
     <Compile Include="BLL\LBXXBLL.cs" />
+    <Compile Include="BLL\LR\LR_KQHLBLL.cs" />
     <Compile Include="BLL\LR\LR_MFHFBLL.cs" />
     <Compile Include="BLL\LR\LR_MJBLL.cs" />
     <Compile Include="BLL\LR\LR_MRHFBLL.cs" />
     <Compile Include="BLL\LR\LR_MTSSBLL.cs" />
     <Compile Include="BLL\LR\LR_SPABLL.cs" />
+    <Compile Include="BLL\LR\LR_TJBLL.cs" />
     <Compile Include="BLL\LR\LR_WDBLL.cs" />
+    <Compile Include="BLL\LR\LR_WSBLL.cs" />
+    <Compile Include="BLL\LR\LR_YJBLL.cs" />
     <Compile Include="BLL\PWKQ\PWKQ_DYPBLL.cs" />
     <Compile Include="BLL\PWKQ\PWKQ_QTKQBLL.cs" />
     <Compile Include="BLL\PWKQ\PWKQ_XFKGWQBLL.cs" />

@@ -30,4 +30,24 @@
       <ref object="DAOBase"/>
     </property>
   </object>
+  <object id="LR_WSBLL" type="TianWen.XiaoZhen1Qu.BLL.LR_WSBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="LR_KQHLBLL" type="TianWen.XiaoZhen1Qu.BLL.LR_KQHLBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="LR_TJBLL" type="TianWen.XiaoZhen1Qu.BLL.LR_TJBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="LR_YJBLL" type="TianWen.XiaoZhen1Qu.BLL.LR_YJBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
 </objects>
