@@ -15,7 +15,7 @@ $(document).ready(function () {
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
     LoadTXXX();
     LoadDefault();
-    BindClick("CYLB");
+    BindClick("LB");
     BindClick("PPLS");
     BindClick("TZJE");
     BindClick("QGFDS");
@@ -164,7 +164,7 @@ function SelectZSDQ(obj) {
         $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
 }
 //获取招商地区
-function GetSHRQ() {
+function GetZSDQ() {
     var ZSDQ = "";
     $(".liZSDQ").each(function () {
         if ($(this).find("img").attr("src").indexOf("blue") !== -1)
@@ -173,7 +173,7 @@ function GetSHRQ() {
     return RTrim(ZSDQ, ',');
 }
 //设置招商地区
-function SetSHRQ(lbs) {
+function SetZSDQ(lbs) {
     var lbarray = lbs.split(',');
     for (var i = 0; i < lbarray.length; i++) {
         $(".liZSDQ").each(function () {
@@ -185,8 +185,8 @@ function SetSHRQ(lbs) {
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
-        if (type === "CYLB") {
-            LoadDropdown("餐饮", "CYLB");
+        if (type === "LB") {
+            LoadDropdown("餐饮", "LB");
         }
         if (type === "PPLS") {
             LoadDropdown("品牌历史", "PPLS");
@@ -232,7 +232,13 @@ function LoadZSJM_CYJBXX() {
                 $("#spanLB").html(xml.Value.ZSJM_CYJBXX.LB);
                 $("#spanQY").html(xml.Value.ZSJM_CYJBXX.QY);
                 $("#spanDD").html(xml.Value.ZSJM_CYJBXX.DD);
+                $("#spanPPLS").html(xml.Value.ZSJM_CYJBXX.PPLS);
+                $("#spanTZJE").html(xml.Value.ZSJM_CYJBXX.TZJE);
+                $("#spanQGFDS").html(xml.Value.ZSJM_CYJBXX.QGFDS);
+                $("#spanDDMJ").html(xml.Value.ZSJM_CYJBXX.DDMJ);
                 LoadPhotos(xml.Value.Photos);
+                SetSHRQ(xml.Value.ZSJM_CYJBXX.SHRQ);
+                SetZSDQ(xml.Value.ZSJM_CYJBXX.ZSDQ);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -247,8 +253,13 @@ function FB() {
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
-    obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
-    obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
+    obj = jsonObj.AddJson(obj, "PPLS", "'" + $("#spanPPLS").html() + "'");
+    obj = jsonObj.AddJson(obj, "TZJE", "'" + $("#spanTZJE").html() + "'");
+    obj = jsonObj.AddJson(obj, "QGFDS", "'" + $("#spanQGFDS").html() + "'");
+    obj = jsonObj.AddJson(obj, "DDMJ", "'" + $("#spanDDMJ").html() + "'");
+    obj = jsonObj.AddJson(obj, "SHRQ", "'" + GetSHRQ() + "'");
+    obj = jsonObj.AddJson(obj, "ZSDQ", "'" + GetZSDQ() + "'");
+
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
 
     if (getUrlParam("ZSJM_CYJBXXID") !== null)
