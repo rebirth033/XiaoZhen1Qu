@@ -69,5 +69,7 @@ namespace TianWen.XiaoZhen1Qu.Interface
         YHJBXX GetYHJBXXByYHM(string YHM);
 
         string GetLBQCByLBID(int LBID);
+
+        object LoadMRBJXX(string name);
     }
 }

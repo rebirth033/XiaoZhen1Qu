@@ -138,11 +138,12 @@ function LoadZSDQ() {
 function SelectLB(obj, type, codeid) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-    PDLB(codeid);
+    PDLB(obj.innerHTML,codeid);
 }
 //判断类别
-function PDLB(codeid) {
-    LoadJXXL(codeid);
+function PDLB(name, codeid) {
+    if (name.indexOf("机械") !== -1)
+        LoadJXXL(codeid);
 }
 //加载机械小类
 function LoadJXXL(codeid) {
@@ -166,10 +167,12 @@ function LoadJXXL(codeid) {
                 html += "</ul>";
                 $("#divJXXLText").html(html);
                 $(".img_JXXL").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-                if (xml.list.length > 6)
-                    $("#divJXXL").css("height", "90px");
+
+                if (parseInt(xml.list.length % 6) === 0)
+                    $("#divJXXL").css("height", parseInt(xml.list.length / 6) * 45 + "px");
                 else
-                    $("#divJXXL").css("height", "45px");
+                    $("#divJXXL").css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
+
                 $("#divJXXL").css("display", "");
             }
         },
