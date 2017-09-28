@@ -377,6 +377,9 @@
     <Content Include="Areas\Business\Css\ZSJM\ZSJM_JYPX.css" />
     <Content Include="Areas\Business\Css\ZSJM\ZSJM_LPXSP.css" />
     <Content Include="Areas\Business\Css\ZSJM\ZSJM_MRBJ.css" />
+    <Content Include="Areas\Business\Css\ZSJM\ZSJM_NY.css" />
+    <Content Include="Areas\Business\Css\ZSJM\ZSJM_QCFW.css" />
+    <Content Include="Areas\Business\Css\ZSJM\ZSJM_WLFW.css" />
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\css\bootstrap-theme.css" />
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\css\bootstrap-theme.min.css" />
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\css\bootstrap.css" />
@@ -578,6 +581,12 @@
     <Content Include="Areas\Business\Scripts\Business\ZSJM\ZSJM_LPXSPYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\ZSJM\ZSJM_MRBJ.js" />
     <Content Include="Areas\Business\Scripts\Business\ZSJM\ZSJM_MRBJYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\ZSJM\ZSJM_NY.js" />
+    <Content Include="Areas\Business\Scripts\Business\ZSJM\ZSJM_NYYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\ZSJM\ZSJM_QCFW.js" />
+    <Content Include="Areas\Business\Scripts\Business\ZSJM\ZSJM_QCFWYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\ZSJM\ZSJM_WLFW.js" />
+    <Content Include="Areas\Business\Scripts\Business\ZSJM\ZSJM_WLFWYZ.js" />
     <Content Include="Areas\Business\Scripts\jquery-1.9.1.min.js" />
     <Content Include="Areas\Business\Scripts\jquery-ui-1.12.1.custom\AUTHORS.txt" />
     <Content Include="Areas\Business\Scripts\jquery-ui-1.12.1.custom\external\jquery\jquery.js" />
@@ -1008,6 +1017,9 @@
     <Compile Include="Areas\Business\Controllers\ZSJM\ZSJM_JYPXController.cs" />
     <Compile Include="Areas\Business\Controllers\ZSJM\ZSJM_LPXSPController.cs" />
     <Compile Include="Areas\Business\Controllers\ZSJM\ZSJM_MRBJController.cs" />
+    <Compile Include="Areas\Business\Controllers\ZSJM\ZSJM_NYController.cs" />
+    <Compile Include="Areas\Business\Controllers\ZSJM\ZSJM_QCFWController.cs" />
+    <Compile Include="Areas\Business\Controllers\ZSJM\ZSJM_WLFWController.cs" />
     <Compile Include="Areas\Business\Scripts\UEditor\net\App_Code\Config.cs" />
     <Compile Include="Areas\Business\Scripts\UEditor\net\App_Code\ConfigHandler.cs" />
     <Compile Include="Areas\Business\Scripts\UEditor\net\App_Code\CrawlerHandler.cs" />
@@ -1031,7 +1043,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\web.config" />
     <Content Include="packages.config" />
     <Content Include="Areas\Business\Views\YHJBXX\YHJBXX.cshtml" />
     <Content Include="Config\log4net.Config" />
@@ -1182,6 +1193,9 @@
     <Content Include="Areas\Business\Views\ZSJM_LPXSP\ZSJM_LPXSP.cshtml" />
     <Content Include="Areas\Business\Views\ZSJM_JJHB\ZSJM_JJHB.cshtml" />
     <Content Include="Areas\Business\Views\ZSJM_JYPX\ZSJM_JYPX.cshtml" />
+    <Content Include="Areas\Business\Views\ZSJM_QCFW\ZSJM_QCFW.cshtml" />
+    <Content Include="Areas\Business\Views\ZSJM_WLFW\ZSJM_WLFW.cshtml" />
+    <Content Include="Areas\Business\Views\ZSJM_NY\ZSJM_NY.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -1194,8 +1208,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Business\Photos\" />
     <Folder Include="Areas\Business\QRCode\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TianWen.XiaoZhen1Qu.Entities\TianWen.XiaoZhen1Qu.Entities.csproj">

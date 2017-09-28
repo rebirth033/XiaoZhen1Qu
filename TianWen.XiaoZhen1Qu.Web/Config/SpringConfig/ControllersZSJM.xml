@@ -40,4 +40,19 @@
       <ref object="ZSJM_JYPXBLL"/>
     </property>
   </object>
+  <object id="ZSJM_QCFWController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.ZSJM_QCFWController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="ZSJM_QCFWBLL">
+      <ref object="ZSJM_QCFWBLL"/>
+    </property>
+  </object>
+  <object id="ZSJM_WLFWController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.ZSJM_WLFWController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="ZSJM_WLFWBLL">
+      <ref object="ZSJM_WLFWBLL"/>
+    </property>
+  </object>
+  <object id="ZSJM_NYController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.ZSJM_NYController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="ZSJM_NYBLL">
+      <ref object="ZSJM_NYBLL"/>
+    </property>
+  </object>
 </objects>

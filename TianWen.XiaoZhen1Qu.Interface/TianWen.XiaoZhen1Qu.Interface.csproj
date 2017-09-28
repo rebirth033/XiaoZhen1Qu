@@ -135,6 +135,9 @@
     <Compile Include="ZSJM\IZSJM_JYPXBLL.cs" />
     <Compile Include="ZSJM\IZSJM_LPXSPBLL.cs" />
     <Compile Include="ZSJM\IZSJM_MRBJBLL.cs" />
+    <Compile Include="ZSJM\IZSJM_NYBLL.cs" />
+    <Compile Include="ZSJM\IZSJM_QCFWBLL.cs" />
+    <Compile Include="ZSJM\IZSJM_WLFWBLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TianWen.XiaoZhen1Qu.Entities\TianWen.XiaoZhen1Qu.Entities.csproj">
