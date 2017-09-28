@@ -70,6 +70,7 @@
     <Compile Include="Maps\CODES\CODES_ES_QTES_Map.cs" />
     <Compile Include="Maps\CODES\CODES_ES_WHYL_Map.cs" />
     <Compile Include="Maps\CODES\CODES_LR_Map.cs" />
+    <Compile Include="Maps\CODES\CODES_PFCG_Map.cs" />
     <Compile Include="Maps\CODES\CODES_PWKQ_Map.cs" />
     <Compile Include="Maps\CODES\CODES_XXYL_Map.cs" />
     <Compile Include="Maps\CODES\CODES_ZSJM_Map.cs" />
@@ -119,6 +120,7 @@
     <Compile Include="Maps\LR\LR_WDJBXX_Map.cs" />
     <Compile Include="Maps\LR\LR_WSJBXX_Map.cs" />
     <Compile Include="Maps\LR\LR_YJJBXX_Map.cs" />
+    <Compile Include="Maps\PFCG\PFCG_SP_Map.cs" />
     <Compile Include="Maps\PHOTOS_Map.cs" />
     <Compile Include="Maps\PWKQ\PWKQ_DYPJBXX_Map.cs" />
     <Compile Include="Maps\PWKQ\PWKQ_QTKQJBXX_Map.cs" />
@@ -174,6 +176,7 @@
     <Compile Include="Models\CODES\CODES_ES_QTES.cs" />
     <Compile Include="Models\CODES\CODES_ES_WHYL.cs" />
     <Compile Include="Models\CODES\CODES_LR.cs" />
+    <Compile Include="Models\CODES\CODES_PFCG.cs" />
     <Compile Include="Models\CODES\CODES_PWKQ.cs" />
     <Compile Include="Models\CODES\CODES_XXYL.cs" />
     <Compile Include="Models\CODES\CODES_ZSJM.cs" />
@@ -225,6 +228,7 @@
     <Compile Include="Models\LR\LR_WDJBXX.cs" />
     <Compile Include="Models\LR\LR_WSJBXX.cs" />
     <Compile Include="Models\LR\LR_YJJBXX.cs" />
+    <Compile Include="Models\PFCG\PFCG_SPJBXX.cs" />
     <Compile Include="Models\PHOTOS.cs" />
     <Compile Include="Models\PublicType.cs" />
     <Compile Include="Models\PWKQ\PWKQ_DYPJBXX.cs" />
