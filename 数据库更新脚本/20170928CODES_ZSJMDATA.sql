@@ -442,4 +442,421 @@ values (146, '礼品', '商务礼品', '6', 6, 126);
 insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (147, '礼品', '婚庆礼品', '7', 7, 126);
 
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (148, '工艺品', '雕塑', '1', 1, 127);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (149, '工艺品', '陶瓷', '2', 2, 127);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (150, '工艺品', '炭雕', '3', 3, 127);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (151, '工艺品', '油画', '4', 4, 127);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (152, '珠宝玉器', '水晶', '1', 1, 129);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (153, '珠宝玉器', '琥珀', '2', 2, 129);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (154, '珠宝玉器', '玉器', '3', 3, 129);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (155, '家居环保', '家饰摆件', '1', 1, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (156, '家居环保', '家纺床品', '2', 2, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (157, '家居环保', '窗帘布艺', '3', 3, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (158, '家居环保', '家具', '4', 4, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (159, '家居环保', '清洁环保', '5', 5, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (160, '家居环保', '厨具餐具', '6', 6, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (161, '家居环保', '家用电器', '7', 7, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (162, '家居环保', '日用品', '8', 8, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (163, '家纺床品', '床垫', '1', 1, 156);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (164, '家纺床品', '四件套', '2', 2, 156);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (165, '家纺床品', '凉席', '3', 3, 156);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (166, '窗帘布艺', '窗帘', '1', 1, 157);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (167, '窗帘布艺', '纱窗', '2', 2, 157);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (167, '家具', '小家电', '1', 1, 158);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (168, '家具', '茶几', '1', 1, 158);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (168, '窗帘布艺', '蚊帐', '3', 3, 157);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (169, '家具', '沙发', '2', 2, 158);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (170, '家具', '电脑桌椅', '3', 3, 158);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (171, '家具', '衣柜', '4', 4, 158);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (172, '家具', '壁画', '5', 5, 158);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (173, '家具', '电视柜', '6', 6, 158);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (174, '家具', '自动洗衣机', '7', 7, 158);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (175, '家具', '茶具', '8', 8, 158);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (176, '家具', '太阳能空调', '9', 9, 158);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (177, '家具', '书架', '10', 10, 158);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (178, '家具', '咖啡机', '11', 11, 158);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (179, '清洁环保', '饮水机', '1', 1, 159);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (180, '清洁环保', '清洁环卫用品', '2', 2, 159);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (181, '清洁环保', '空气净化', '3', 3, 159);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (182, '清洁环保', '环保清洁柜 ', '4', 4, 159);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (183, '清洁环保', '节能产品', '5', 5, 159);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (184, '清洁环保', '净水器', '6', 6, 159);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (185, '清洁环保', '净水设备', '7', 7, 159);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (186, '教育培训', '教育机构', '1', 1, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (187, '教育培训', '儿童乐园', '2', 2, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (188, '教育机构', '幼儿园', '1', 1, 186);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (189, '教育机构', '培训', '2', 2, 186);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (190, '教育机构', '远程教育', '3', 3, 186);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (191, '教育机构', '网络教育', '4', 4, 186);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (192, '教育机构', '早教机构', '5', 5, 186);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (193, '教育机构', '午托班', '6', 6, 186);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (194, '教育机构', '家教辅导', '7', 7, 186);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (195, '教育机构', '益智教育', '8', 8, 186);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (196, '教育机构', '托管', '9', 9, 186);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (197, '汽车服务', '汽车装饰', '1', 1, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (198, '汽车服务', '汽车维修', '2', 2, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (199, '汽车服务', '汽车美容', '3', 3, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (200, '汽车服务', '洗车', '4', 4, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (201, '汽车服务', '汽车用品', '5', 5, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (202, '汽车服务', '电动车', '6', 6, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (203, '汽车服务', '汽车租赁/买卖', '7', 7, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (204, '汽车维修', '轮胎翻新', '1', 1, 198);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (205, '汽车维修', '汽车改造', '2', 2, 198);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (206, '汽车维修', '发动机清洗', '3', 3, 198);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (207, '汽车美容', '汽车贴膜', '1', 1, 199);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (208, '汽车美容', '汽车保养', '2', 2, 199);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (209, '汽车美容', '汽车打蜡', '3', 3, 199);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (210, '汽车美容', '汽车隔音', '4', 4, 199);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (211, '汽车美容', '汽车封釉', '5', 5, 199);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (212, '汽车用品', '音响', '1', 1, 201);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (213, '汽车用品', '汽车灯具', '2', 2, 201);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (214, '汽车用品', '轮胎', '3', 3, 201);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (215, '汽车用品', '自动洗车器', '4', 4, 201);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (216, '汽车用品', '发动机', '5', 5, 201);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (217, '汽车租赁/买卖', '二手车', '1', 1, 203);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (218, '汽车租赁/买卖', '租车', '2', 2, 203);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (219, '网络服务', '网吧', '1', 1, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (220, '网络服务', '网站代理', '2', 2, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (221, '网络服务', '自助建站', '3', 3, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (222, '网络服务', '淘宝代理', '4', 4, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (223, '网站代理', '网上开店', '1', 1, 220);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (224, '网站代理', '网站运营', '2', 2, 220);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (225, '网站代理', '广告联盟', '3', 3, 220);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (226, '农业', '种植养殖', '1', 1, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (227, '农业', '农业用具', '2', 2, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (228, '农业', '渔具', '3', 3, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (229, '种植养殖', '果品', '1', 1, 226);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (230, '种植养殖', '花木', '2', 2, 226);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (231, '种植养殖', '食用菌', '3', 3, 226);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (232, '种植养殖', '养猪', '4', 4, 226);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (233, '种植养殖', '养鸡', '5', 5, 226);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (234, '种植养殖', '种菜', '6', 6, 226);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (235, '特色', '移动通讯', '1', 1, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (236, '特色', '数码电子', '2', 2, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (237, '特色', '其他', '3', 3, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (238, '特色', '技术转让', '4', 4, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (239, '特色', '生意转让', '5', 5, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (240, '特色', '商铺招商', '6', 6, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (241, '生活服务', '快递物流', '1', 1, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (242, '生活服务', '旅游/票务', '2', 2, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (243, '生活服务', '干洗', '3', 3, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (244, '生活服务', '皮革/奢饰品护理', '4', 4, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (245, '生活服务', '家政服务', '5', 5, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (246, '生活服务', '酒店', '6', 6, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (247, '生活服务', '零售业', '7', 7, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (248, '生活服务', '婚庆', '8', 8, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (249, '生活服务', '娱乐场所', '9', 9, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (250, '快递物流', '快递', '1', 1, 241);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (251, '快递物流', '物流', '2', 2, 241);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (252, '旅游/票务', '旅行社', '1', 1, 242);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (253, '旅游/票务', '机票', '2', 2, 242);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (254, '旅游/票务', '火车票', '3', 3, 242);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (255, '零售业', '超市', '1', 1, 247);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (256, '零售业', '便利店', '2', 2, 247);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (257, '零售业', '两元店', '3', 3, 247);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (258, '零售业', '干果店', '4', 4, 247);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (259, '零售业', '花店', '5', 5, 247);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (260, '文体/母婴/儿童', '文体用品', '1', 1, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (261, '文体/母婴/儿童', '文具加工', '2', 2, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (262, '文体/母婴/儿童', '母婴儿童用品', '3', 3, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (263, '文体用品', '电子书', '1', 1, 260);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (264, '文体用品', '书包', '2', 2, 260);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (265, '文体用品', '点读机', '3', 3, 260);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (266, '文体用品', '文具', '4', 4, 260);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (267, '文体用品', '点读笔', '5', 5, 260);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (268, '文体用品', '动漫店', '6', 6, 260);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (269, '文体用品', '书吧书店', '7', 7, 260);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (270, '文体用品', '办公用品', '8', 8, 260);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (271, '文体用品', '胎教产品', '9', 9, 260);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (272, '文体用品', '软件书籍', '10', 10, 260);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (273, '母婴儿童用品', '奶粉', '1', 1, 262);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (274, '母婴儿童用品', '玩具', '2', 2, 262);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (275, '母婴儿童用品', '婴儿床', '3', 3, 262);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (276, '母婴儿童用品', '孕妇装', '4', 4, 262);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (277, '母婴儿童用品', '婴儿车', '5', 5, 262);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (278, '母婴儿童用品', '滑板车', '6', 6, 262);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (279, '母婴儿童用品', '母婴营养品', '7', 7, 262);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (280, '母婴儿童用品', '纸尿裤', '8', 8, 262);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (281, '母婴儿童用品', '儿童电动车', '9', 9, 262);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (282, '母婴儿童用品', '婴儿装', '10', 10, 262);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (283, '母婴儿童用品', '孕婴用品', '11', 11, 262);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (284, '母婴儿童用品', '孕婴食品', '12', 12, 262);
+
 prompt Done.

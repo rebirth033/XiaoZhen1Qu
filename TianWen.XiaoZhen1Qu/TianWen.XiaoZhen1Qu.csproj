@@ -140,7 +140,10 @@
     <Compile Include="BLL\ZSJM\ZSJM_MRBJBLL.cs" />
     <Compile Include="BLL\ZSJM\ZSJM_NYBLL.cs" />
     <Compile Include="BLL\ZSJM\ZSJM_QCFWBLL.cs" />
+    <Compile Include="BLL\ZSJM\ZSJM_SHFWBLL.cs" />
+    <Compile Include="BLL\ZSJM\ZSJM_TSBLL.cs" />
     <Compile Include="BLL\ZSJM\ZSJM_WLFWBLL.cs" />
+    <Compile Include="BLL\ZSJM\ZSJM_WTMYETBLL.cs" />
     <Compile Include="DAO\DAOBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
