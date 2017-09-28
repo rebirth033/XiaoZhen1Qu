@@ -372,7 +372,9 @@
     <Content Include="Areas\Business\Css\ZSJM\ZSJM_CY.css" />
     <Content Include="Areas\Business\Css\ZSJM\ZSJM_FZXB.css" />
     <Content Include="Areas\Business\Css\ZSJM\ZSJM_JC.css" />
+    <Content Include="Areas\Business\Css\ZSJM\ZSJM_JJHB.css" />
     <Content Include="Areas\Business\Css\ZSJM\ZSJM_JX.css" />
+    <Content Include="Areas\Business\Css\ZSJM\ZSJM_JYPX.css" />
     <Content Include="Areas\Business\Css\ZSJM\ZSJM_LPXSP.css" />
     <Content Include="Areas\Business\Css\ZSJM\ZSJM_MRBJ.css" />
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\css\bootstrap-theme.css" />
@@ -566,8 +568,12 @@
     <Content Include="Areas\Business\Scripts\Business\ZSJM\ZSJM_FZXBYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\ZSJM\ZSJM_JC.js" />
     <Content Include="Areas\Business\Scripts\Business\ZSJM\ZSJM_JCYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\ZSJM\ZSJM_JJHB.js" />
+    <Content Include="Areas\Business\Scripts\Business\ZSJM\ZSJM_JJHBYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\ZSJM\ZSJM_JX.js" />
     <Content Include="Areas\Business\Scripts\Business\ZSJM\ZSJM_JXYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\ZSJM\ZSJM_JYPX.js" />
+    <Content Include="Areas\Business\Scripts\Business\ZSJM\ZSJM_JYPXYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\ZSJM\ZSJM_LPXSP.js" />
     <Content Include="Areas\Business\Scripts\Business\ZSJM\ZSJM_LPXSPYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\ZSJM\ZSJM_MRBJ.js" />
@@ -997,7 +1003,9 @@
     <Compile Include="Areas\Business\Controllers\ZSJM\ZSJM_CYController.cs" />
     <Compile Include="Areas\Business\Controllers\ZSJM\ZSJM_FZXBController.cs" />
     <Compile Include="Areas\Business\Controllers\ZSJM\ZSJM_JCController.cs" />
+    <Compile Include="Areas\Business\Controllers\ZSJM\ZSJM_JJHBController.cs" />
     <Compile Include="Areas\Business\Controllers\ZSJM\ZSJM_JXController.cs" />
+    <Compile Include="Areas\Business\Controllers\ZSJM\ZSJM_JYPXController.cs" />
     <Compile Include="Areas\Business\Controllers\ZSJM\ZSJM_LPXSPController.cs" />
     <Compile Include="Areas\Business\Controllers\ZSJM\ZSJM_MRBJController.cs" />
     <Compile Include="Areas\Business\Scripts\UEditor\net\App_Code\Config.cs" />
@@ -1172,6 +1180,8 @@
     <Content Include="Areas\Business\Views\ZSJM_JX\ZSJM_JX.cshtml" />
     <Content Include="Areas\Business\Views\ZSJM_MRBJ\ZSJM_MRBJ.cshtml" />
     <Content Include="Areas\Business\Views\ZSJM_LPXSP\ZSJM_LPXSP.cshtml" />
+    <Content Include="Areas\Business\Views\ZSJM_JJHB\ZSJM_JJHB.cshtml" />
+    <Content Include="Areas\Business\Views\ZSJM_JYPX\ZSJM_JYPX.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

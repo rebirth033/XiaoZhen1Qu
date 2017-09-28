@@ -1,0 +1,57 @@
+-- Create table
+create table ZSJM_LPXSPJBXX
+(
+  zsjm_lpxspjbxxid VARCHAR2(50) not null,
+  jcxxid           VARCHAR2(50),
+  bcms             VARCHAR2(4000),
+  lb               VARCHAR2(20),
+  xl               VARCHAR2(100),
+  ppmc             VARCHAR2(200),
+  ppls             VARCHAR2(20),
+  tzje             VARCHAR2(20),
+  qgfds            VARCHAR2(20),
+  ddmj             VARCHAR2(20),
+  shrq             VARCHAR2(200),
+  ppms             VARCHAR2(100),
+  zsdq             VARCHAR2(200)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 16
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table ZSJM_LPXSPJBXX
+  is '招商加盟_礼品/小商品';
+-- Add comments to the columns 
+comment on column ZSJM_LPXSPJBXX.zsjm_lpxspjbxxid
+  is '礼品/小商品基本信息ID';
+comment on column ZSJM_LPXSPJBXX.jcxxid
+  is '基础信息ID';
+comment on column ZSJM_LPXSPJBXX.bcms
+  is '补充描述';
+comment on column ZSJM_LPXSPJBXX.lb
+  is '类别';
+comment on column ZSJM_LPXSPJBXX.xl
+  is '小类';
+comment on column ZSJM_LPXSPJBXX.ppmc
+  is '品牌名称';
+comment on column ZSJM_LPXSPJBXX.ppls
+  is '品牌历史';
+comment on column ZSJM_LPXSPJBXX.tzje
+  is '投资金额';
+comment on column ZSJM_LPXSPJBXX.qgfds
+  is '全国分店数';
+comment on column ZSJM_LPXSPJBXX.ddmj
+  is '单店面积';
+comment on column ZSJM_LPXSPJBXX.shrq
+  is '适合人群';
+comment on column ZSJM_LPXSPJBXX.ppms
+  is '品牌描述';
+comment on column ZSJM_LPXSPJBXX.zsdq
+  is '招商地区';
