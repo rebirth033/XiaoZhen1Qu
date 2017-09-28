@@ -25,4 +25,9 @@
       <ref object="ZSJM_MRBJBLL"/>
     </property>
   </object>
+  <object id="ZSJM_LPXSPController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.ZSJM_LPXSPController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="ZSJM_LPXSPBLL">
+      <ref object="ZSJM_LPXSPBLL"/>
+    </property>
+  </object>
 </objects>

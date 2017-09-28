@@ -71,5 +71,7 @@ namespace TianWen.XiaoZhen1Qu.Interface
         string GetLBQCByLBID(int LBID);
 
         object LoadMRBJXX(string name);
+
+        object LoadLPXSPXX(string name);
     }
 }

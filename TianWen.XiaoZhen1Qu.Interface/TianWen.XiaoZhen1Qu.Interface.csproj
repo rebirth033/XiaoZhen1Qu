@@ -131,6 +131,7 @@
     <Compile Include="ZSJM\IZSJM_FZXBBLL.cs" />
     <Compile Include="ZSJM\IZSJM_JCBLL.cs" />
     <Compile Include="ZSJM\IZSJM_JXBLL.cs" />
+    <Compile Include="ZSJM\IZSJM_LPXSPBLL.cs" />
     <Compile Include="ZSJM\IZSJM_MRBJBLL.cs" />
   </ItemGroup>
   <ItemGroup>

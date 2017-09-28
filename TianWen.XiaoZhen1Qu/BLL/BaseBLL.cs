@@ -376,25 +376,6 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
-        public object LoadMRBJXX(string name)
-        {
-            try
-            {
-                IList<CODES_ZSJM> listmrbjxx = new List<CODES_ZSJM>();
-                IList<CODES_ZSJM> list = DAO.Repository.GetObjectList<CODES_ZSJM>(String.Format("FROM CODES_ZSJM WHERE CODENAME = '{0}' ORDER BY CODEORDER", name));
-                if (list.Count > 0)
-                {
-                    listmrbjxx = DAO.Repository.GetObjectList<CODES_ZSJM>(String.Format("FROM CODES_ZSJM WHERE PARENTID = '{0}' ORDER BY CODEORDER", list.FirstOrDefault().CODEID));
-                }
-                return new { Result = EnResultType.Success, list = listmrbjxx };
-            }
-            catch (Exception ex)
-            {
-                LoggerManager.Error("error", ex.Message);
-                return new { Result = EnResultType.Failed, Message = "加载失败" };
-            }
-        }
-
         public object LoadHNCYXX(string PZID)
         {
             try
@@ -501,6 +482,44 @@ namespace TianWen.XiaoZhen1Qu.BLL
             XXLB xl = DAO.Repository.GetObjectById<XXLB>(LBID);
             XXLB dl = DAO.Repository.GetObjectById<XXLB>(xl.PARENTID);
             return dl.LBNAME + "-" + xl.LBNAME;
+        }
+
+        public object LoadMRBJXX(string name)
+        {
+            try
+            {
+                IList<CODES_ZSJM> listmrbjxx = new List<CODES_ZSJM>();
+                IList<CODES_ZSJM> list = DAO.Repository.GetObjectList<CODES_ZSJM>(String.Format("FROM CODES_ZSJM WHERE CODENAME = '{0}' ORDER BY CODEORDER", name));
+                if (list.Count > 0)
+                {
+                    listmrbjxx = DAO.Repository.GetObjectList<CODES_ZSJM>(String.Format("FROM CODES_ZSJM WHERE PARENTID = '{0}' ORDER BY CODEORDER", list.FirstOrDefault().CODEID));
+                }
+                return new { Result = EnResultType.Success, list = listmrbjxx };
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("error", ex.Message);
+                return new { Result = EnResultType.Failed, Message = "加载失败" };
+            }
+        }
+
+        public object LoadLPXSPXX(string name)
+        {
+            try
+            {
+                IList<CODES_ZSJM> listmrbjxx = new List<CODES_ZSJM>();
+                IList<CODES_ZSJM> list = DAO.Repository.GetObjectList<CODES_ZSJM>(String.Format("FROM CODES_ZSJM WHERE CODENAME = '{0}' ORDER BY CODEORDER", name));
+                if (list.Count > 0)
+                {
+                    listmrbjxx = DAO.Repository.GetObjectList<CODES_ZSJM>(String.Format("FROM CODES_ZSJM WHERE PARENTID = '{0}' ORDER BY CODEORDER", list.FirstOrDefault().CODEID));
+                }
+                return new { Result = EnResultType.Success, list = listmrbjxx };
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("error", ex.Message);
+                return new { Result = EnResultType.Failed, Message = "加载失败" };
+            }
         }
     }
 
