@@ -14,7 +14,7 @@ $(document).ready(function () {
     $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
     LoadTXXX();
-    LoadPFCG_FZBLJBXX();
+    LoadFZBLLB();
     LoadDefault();
     BindClick("LB");
     BindClick("QY");
@@ -40,7 +40,7 @@ function LoadDefault() {
     });
 }
 //加载纺织/布料类别
-function LoadLB() {
+function LoadFZBLLB() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/Common/LoadCODES_PFCG",
@@ -51,14 +51,17 @@ function LoadLB() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
+                var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectLB(this,\"LB\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
+                    html += "<li class='liFWPZ' onclick='SelectFZBLLB(this)'><img class='img_FZBLLB'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    if (i === 5 || i === 11 || i === 17 || i === 23 || i === 29) {
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
+                    }
                 }
                 html += "</ul>";
-                $("#divLB").html(html);
-                $("#divLB").css("display", "block");
-                ActiveStyle("LB");
+                $("#divFZBLLBText").html(html);
+                $(".img_FZBLLB").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                LoadPFCG_FZBLJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -66,54 +69,18 @@ function LoadLB() {
         }
     });
 }
-//加载小类
-function LoadXL() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadLPXX",
-        dataType: "json",
-        data:
-        {
-            LBID: $("#LBID").val()
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"XL\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divXL").html(html);
-                $("#divXL").css("display", "block");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//选择类别下拉框
-function SelectLB(obj, type, id) {
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
-    $("#LBID").val(id);
-    if (obj.innerHTML === "发饰") {
-        $("#divXLText").css("display", "none");
-    }
-    else {
-        $("#spanXL").html("请选择小类");
-        BindClick("XL");
-        $("#divXLText").css("display", "");
-    }
+//选择房屋配置
+function SelectFZBLLB(obj) {
+    if ($(obj).find("img").attr("src").indexOf("blue") !== -1)
+        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+    else
+        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
 }
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
             LoadLB();
-        }
-        if (type === "XL") {
-            LoadXL();
         }
         if (type === "QY") {
             LoadQY();
@@ -123,7 +90,7 @@ function BindClick(type) {
         }
     });
 }
-//加载批发采购_纺织/布料基本信息
+//加载休闲娱乐_纺织/布料基本信息
 function LoadPFCG_FZBLJBXX() {
     $.ajax({
         type: "POST",
@@ -144,12 +111,10 @@ function LoadPFCG_FZBLJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.PFCG_FZBLJBXX.BCMS);
                 });
-                $("#spanLB").html(xml.Value.PFCG_FZBLJBXX.LB);
-                $("#spanXL").html(xml.Value.PFCG_FZBLJBXX.XL);
+                SetFZBLLB(xml.Value.PFCG_FZBLJBXX.LB);
                 $("#spanQY").html(xml.Value.PFCG_FZBLJBXX.QY);
                 $("#spanDD").html(xml.Value.PFCG_FZBLJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
-                $("#divXLText").css("display", "");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -157,17 +122,36 @@ function LoadPFCG_FZBLJBXX() {
         }
     });
 }
+//获取纺织/布料类别
+function GetFZBLLB() {
+    var FZBLLB = "";
+    $(".liFWPZ").each(function () {
+        if ($(this).find("img").attr("src").indexOf("blue") !== -1)
+            FZBLLB += $(this).find("label")[0].innerHTML + ",";
+    });
+    return RTrim(FZBLLB, ',');
+}
+//设置纺织/布料类别
+function SetFZBLLB(lbs) {
+    var lbarray = lbs.split(',');
+    for (var i = 0; i < lbarray.length; i++) {
+        $(".liFWPZ").each(function () {
+            if ($(this).find("label")[0].innerHTML.indexOf(lbarray[i]) !== -1)
+                $(this).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
+        });
+    }
+
+}
 //发布
 function FB() {
     if (AllValidate() === false) return;
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
-    obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
-    obj = jsonObj.AddJson(obj, "XL", "'" + $("#spanXL").html() + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
+    obj = jsonObj.AddJson(obj, "LB", "'" + GetFZBLLB() + "'");
 
     if (getUrlParam("PFCG_FZBLJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "PFCG_FZBLJBXXID", "'" + getUrlParam("PFCG_FZBLJBXXID") + "'");

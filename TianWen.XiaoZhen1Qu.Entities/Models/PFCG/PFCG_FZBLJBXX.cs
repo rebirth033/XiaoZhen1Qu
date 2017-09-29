@@ -29,18 +29,6 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string LB { get; set; }
 
         /// <summary>
-        /// 小类
-        /// </summary>
-        [Property]
-        public virtual string XL { get; set; }
-
-        /// <summary>
-        /// 方式
-        /// </summary>
-        [Property]
-        public virtual string FS { get; set; }
-
-        /// <summary>
         /// 补充描述
         /// </summary>
         [Property]

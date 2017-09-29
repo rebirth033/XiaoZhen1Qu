@@ -1,7 +1,7 @@
 -- Create table
-create table PFCG_FSXMJBXX
+create table PFCG_XBSPJBXX
 (
-  pfcg_fsxmjbxxid VARCHAR2(50) not null,
+  pfcg_XBSPjbxxid VARCHAR2(50) not null,
   jcxxid          VARCHAR2(50),
   bcms            VARCHAR2(4000),
   lb              VARCHAR2(20),
@@ -22,24 +22,24 @@ tablespace USERS
     maxextents unlimited
   );
 -- Add comments to the table 
-comment on table PFCG_FSXMJBXX
-  is '批发采购_服饰鞋帽';
+comment on table PFCG_XBSPJBXX
+  is '批发采购_箱包/饰品';
 -- Add comments to the columns 
-comment on column PFCG_FSXMJBXX.pfcg_fsxmjbxxid
-  is '服饰鞋帽基本信息ID';
-comment on column PFCG_FSXMJBXX.jcxxid
+comment on column PFCG_XBSPJBXX.pfcg_XBSPjbxxid
+  is '箱包/饰品基本信息ID';
+comment on column PFCG_XBSPJBXX.jcxxid
   is '基础信息ID';
-comment on column PFCG_FSXMJBXX.bcms
+comment on column PFCG_XBSPJBXX.bcms
   is '补充描述';
-comment on column PFCG_FSXMJBXX.lb
+comment on column PFCG_XBSPJBXX.lb
   is '类别';
-comment on column PFCG_FSXMJBXX.fs
+comment on column PFCG_XBSPJBXX.fs
   is '方式';
-comment on column PFCG_FSXMJBXX.qy
+comment on column PFCG_XBSPJBXX.qy
   is '区域';
-comment on column PFCG_FSXMJBXX.dd
+comment on column PFCG_XBSPJBXX.dd
   is '地段';
-comment on column PFCG_FSXMJBXX.jtdz
+comment on column PFCG_XBSPJBXX.jtdz
   is '具体地址';
-comment on column PFCG_FSXMJBXX.xl
+comment on column PFCG_XBSPJBXX.xl
   is '小类';
