@@ -105,8 +105,16 @@
     <Compile Include="BLL\LR\LR_WDBLL.cs" />
     <Compile Include="BLL\LR\LR_WSBLL.cs" />
     <Compile Include="BLL\LR\LR_YJBLL.cs" />
+    <Compile Include="BLL\PFCG\PFCG_AFSBBLL.cs" />
+    <Compile Include="BLL\PFCG\PFCG_FSXMBLL.cs" />
+    <Compile Include="BLL\PFCG\PFCG_FZBLBLL.cs" />
+    <Compile Include="BLL\PFCG\PFCG_HZPBLL.cs" />
     <Compile Include="BLL\PFCG\PFCG_LPBLL.cs" />
+    <Compile Include="BLL\PFCG\PFCG_MYWJBLL.cs" />
+    <Compile Include="BLL\PFCG\PFCG_SJSMBLL.cs" />
     <Compile Include="BLL\PFCG\PFCG_SPBLL.cs" />
+    <Compile Include="BLL\PFCG\PFCG_XBSPBLL.cs" />
+    <Compile Include="BLL\PFCG\PFCG_HWYDBLL.cs" />
     <Compile Include="BLL\PWKQ\PWKQ_DYPBLL.cs" />
     <Compile Include="BLL\PWKQ\PWKQ_QTKQBLL.cs" />
     <Compile Include="BLL\PWKQ\PWKQ_XFKGWQBLL.cs" />

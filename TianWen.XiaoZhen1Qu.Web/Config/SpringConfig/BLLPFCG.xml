@@ -5,4 +5,44 @@
       <ref object="DAOBase"/>
     </property>
   </object>
+  <object id="PFCG_LPBLL" type="TianWen.XiaoZhen1Qu.BLL.PFCG_LPBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="PFCG_FSXMBLL" type="TianWen.XiaoZhen1Qu.BLL.PFCG_FSXMBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="PFCG_XBSPBLL" type="TianWen.XiaoZhen1Qu.BLL.PFCG_XBSPBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="PFCG_SJSMBLL" type="TianWen.XiaoZhen1Qu.BLL.PFCG_SJSMBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="PFCG_MYWJBLL" type="TianWen.XiaoZhen1Qu.BLL.PFCG_MYWJBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="PFCG_HWYDBLL" type="TianWen.XiaoZhen1Qu.BLL.PFCG_HWYDBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="PFCG_HZPBLL" type="TianWen.XiaoZhen1Qu.BLL.PFCG_HZPBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="PFCG_AFSBBLL" type="TianWen.XiaoZhen1Qu.BLL.PFCG_AFSBBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
 </objects>

@@ -5,4 +5,44 @@
       <ref object="PFCG_SPBLL"/>
     </property>
   </object>
+  <object id="PFCG_LPController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.PFCG_LPController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="PFCG_LPBLL">
+      <ref object="PFCG_LPBLL"/>
+    </property>
+  </object>
+  <object id="PFCG_FSXMController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.PFCG_FSXMController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="PFCG_FSXMBLL">
+      <ref object="PFCG_FSXMBLL"/>
+    </property>
+  </object>
+  <object id="PFCG_XBSPController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.PFCG_XBSPController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="PFCG_XBSPBLL">
+      <ref object="PFCG_XBSPBLL"/>
+    </property>
+  </object>
+  <object id="PFCG_SJSMController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.PFCG_SJSMController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="PFCG_SJSMBLL">
+      <ref object="PFCG_SJSMBLL"/>
+    </property>
+  </object>
+  <object id="PFCG_MYWJController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.PFCG_MYWJController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="PFCG_MYWJBLL">
+      <ref object="PFCG_MYWJBLL"/>
+    </property>
+  </object>
+  <object id="PFCG_HWYDController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.PFCG_HWYDController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="PFCG_HWYDBLL">
+      <ref object="PFCG_HWYDBLL"/>
+    </property>
+  </object>
+  <object id="PFCG_HZPController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.PFCG_HZPController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="PFCG_HZPBLL">
+      <ref object="PFCG_HZPBLL"/>
+    </property>
+  </object>
+  <object id="PFCG_AFSBController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.PFCG_AFSBController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="PFCG_AFSBBLL">
+      <ref object="PFCG_AFSBBLL"/>
+    </property>
+  </object>
 </objects>
