@@ -1033,6 +1033,7 @@
     <Compile Include="Areas\Business\Controllers\LR\LR_WSController.cs" />
     <Compile Include="Areas\Business\Controllers\LR\LR_YJController.cs" />
     <Compile Include="Areas\Business\Controllers\PFCG\PFCG_AFSBController.cs" />
+    <Compile Include="Areas\Business\Controllers\PFCG\PFCG_DGDLController.cs" />
     <Compile Include="Areas\Business\Controllers\PFCG\PFCG_FSXMController.cs" />
     <Compile Include="Areas\Business\Controllers\PFCG\PFCG_FZBLController.cs" />
     <Compile Include="Areas\Business\Controllers\PFCG\PFCG_HXPController.cs" />

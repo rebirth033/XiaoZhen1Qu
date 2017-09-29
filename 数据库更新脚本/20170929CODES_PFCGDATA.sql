@@ -1381,4 +1381,61 @@ values (459, '劳保用品', '安全网', '10', 10, 438);
 insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (460, '劳保用品', '软梯/逃生梯', '11', 11, 438);
 
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (461, '纺织/布料', '天然纺织原料', '1', 1, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (462, '纺织/布料', '化学纤维', '2', 2, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (463, '纺织/布料', '坯布', '3', 3, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (464, '纺织/布料', '纱线', '4', 4, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (465, '纺织/布料', '布料/面料', '5', 5, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (466, '纺织/布料', '纺织辅料', '6', 6, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (467, '商超设备', '货架', '1', 1, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (468, '商超设备', '购物车', '2', 2, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (469, '商超设备', '花车/促销台', '3', 3, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (470, '商超设备', '购物篮', '4', 4, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (471, '商超设备', '收银台', '5', 5, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (472, '商超设备', '展柜', '6', 6, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (473, '商超设备', '存包柜', '7', 7, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (474, '化学品', '油墨', '1', 1, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (475, '化学品', '无机颜料', '2', 2, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (476, '化学品', '胶粘剂', '3', 3, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (477, '化学品', '涂料助剂', '4', 4, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (478, '化学品', '润滑油', '5', 5, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (479, '化学品', '合成材料助剂', '6', 6, null);
+
 prompt Done.
