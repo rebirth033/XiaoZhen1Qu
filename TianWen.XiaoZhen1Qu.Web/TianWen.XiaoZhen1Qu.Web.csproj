@@ -338,6 +338,7 @@
     <Content Include="Areas\Business\Css\LR\LR_WS.css" />
     <Content Include="Areas\Business\Css\LR\LR_YJ.css" />
     <Content Include="Areas\Business\Css\PageCommon.css" />
+    <Content Include="Areas\Business\Css\PFCG\PFCG_FSXM.css" />
     <Content Include="Areas\Business\Css\PFCG\PFCG_LP.css" />
     <Content Include="Areas\Business\Css\PFCG\PFCG_SP.css" />
     <Content Include="Areas\Business\Css\PWKQ\PWKQ_DYP.css" />
@@ -523,6 +524,8 @@
     <Content Include="Areas\Business\Scripts\Business\LR\LR_YJ.js" />
     <Content Include="Areas\Business\Scripts\Business\LR\LR_YJYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\PageJson.js" />
+    <Content Include="Areas\Business\Scripts\Business\PFCG\PFCG_FSXM.js" />
+    <Content Include="Areas\Business\Scripts\Business\PFCG\PFCG_FSXMYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\PFCG\PFCG_LP.js" />
     <Content Include="Areas\Business\Scripts\Business\PFCG\PFCG_LPYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\PFCG\PFCG_SP.js" />
@@ -1002,6 +1005,7 @@
     <Compile Include="Areas\Business\Controllers\LR\LR_WDController.cs" />
     <Compile Include="Areas\Business\Controllers\LR\LR_WSController.cs" />
     <Compile Include="Areas\Business\Controllers\LR\LR_YJController.cs" />
+    <Compile Include="Areas\Business\Controllers\PFCG\PFCG_FSXMController.cs" />
     <Compile Include="Areas\Business\Controllers\PFCG\PFCG_LPController.cs" />
     <Compile Include="Areas\Business\Controllers\PFCG\PFCG_SPController.cs" />
     <Compile Include="Areas\Business\Controllers\PWKQ\PWKQ_DYPController.cs" />
@@ -1225,6 +1229,7 @@
     <Content Include="Areas\Business\Views\ZSJM_WTMYET\ZSJM_WTMYET.cshtml" />
     <Content Include="Areas\Business\Views\PFCG_SP\PFCG_SP.cshtml" />
     <Content Include="Areas\Business\Views\PFCG_LP\PFCG_LP.cshtml" />
+    <Content Include="Areas\Business\Views\PFCG_FSXM\PFCG_FSXM.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

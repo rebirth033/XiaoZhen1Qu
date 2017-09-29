@@ -14,7 +14,7 @@ $(document).ready(function () {
     $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
     LoadTXXX();
-    LoadPFCG_LPJBXX();
+    LoadPFCG_FSXMJBXX();
     LoadDefault();
     BindClick("LB");
     BindClick("QY");
@@ -39,7 +39,7 @@ function LoadDefault() {
         ue.setHeight(200);
     });
 }
-//加载礼品类别
+//加载服饰鞋帽类别
 function LoadLB() {
     $.ajax({
         type: "POST",
@@ -47,7 +47,7 @@ function LoadLB() {
         dataType: "json",
         data:
         {
-            TYPENAME: "礼品"
+            TYPENAME: "服饰鞋帽"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -117,32 +117,33 @@ function BindClick(type) {
         }
     });
 }
-//加载批发采购_礼品基本信息
-function LoadPFCG_LPJBXX() {
+//加载批发采购_服饰鞋帽基本信息
+function LoadPFCG_FSXMJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/PFCG_LP/LoadPFCG_LPJBXX",
+        url: getRootPath() + "/Business/PFCG_FSXM/LoadPFCG_FSXMJBXX",
         dataType: "json",
         data:
         {
-            PFCG_LPJBXXID: getUrlParam("PFCG_LPJBXXID")
+            PFCG_FSXMJBXXID: getUrlParam("PFCG_FSXMJBXXID")
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var jsonObj = new JsonDB("myTabContent");
-                jsonObj.DisplayFromJson("myTabContent", xml.Value.PFCG_LPJBXX);
+                jsonObj.DisplayFromJson("myTabContent", xml.Value.PFCG_FSXMJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
-                $("#PFCG_LPJBXXID").val(xml.Value.PFCG_LPJBXX.PFCG_LPJBXXID);
+                $("#PFCG_FSXMJBXXID").val(xml.Value.PFCG_FSXMJBXX.PFCG_FSXMJBXXID);
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
-                    ue.setContent(xml.Value.PFCG_LPJBXX.BCMS);
+                    ue.setContent(xml.Value.PFCG_FSXMJBXX.BCMS);
                 });
-                $("#spanLB").html(xml.Value.PFCG_LPJBXX.LB);
-                $("#spanXL").html(xml.Value.PFCG_LPJBXX.XL);
-                $("#spanQY").html(xml.Value.PFCG_LPJBXX.QY);
-                $("#spanDD").html(xml.Value.PFCG_LPJBXX.DD);
+                $("#spanLB").html(xml.Value.PFCG_FSXMJBXX.LB);
+                $("#spanXL").html(xml.Value.PFCG_FSXMJBXX.XL);
+                $("#spanQY").html(xml.Value.PFCG_FSXMJBXX.QY);
+                $("#spanDD").html(xml.Value.PFCG_FSXMJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
+                $("#divXLText").css("display", "");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -162,12 +163,12 @@ function FB() {
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
 
-    if (getUrlParam("PFCG_LPJBXXID") !== null)
-        obj = jsonObj.AddJson(obj, "PFCG_LPJBXXID", "'" + getUrlParam("PFCG_LPJBXXID") + "'");
+    if (getUrlParam("PFCG_FSXMJBXXID") !== null)
+        obj = jsonObj.AddJson(obj, "PFCG_FSXMJBXXID", "'" + getUrlParam("PFCG_FSXMJBXXID") + "'");
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/PFCG_LP/FB",
+        url: getRootPath() + "/Business/PFCG_FSXM/FB",
         dataType: "json",
         data:
         {
