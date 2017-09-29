@@ -114,7 +114,9 @@
     <Compile Include="LR\ILR_YJBLL.cs" />
     <Compile Include="PFCG\IPFCG_FSXMBLL.cs" />
     <Compile Include="PFCG\IPFCG_LPBLL.cs" />
+    <Compile Include="PFCG\IPFCG_SJSMBLL.cs" />
     <Compile Include="PFCG\IPFCG_SPBLL.cs" />
+    <Compile Include="PFCG\IPFCG_XBSPBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PWKQ\IPWKQ_DYPBLL.cs" />
     <Compile Include="PWKQ\IPWKQ_QTKQBLL.cs" />
