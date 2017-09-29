@@ -115,9 +115,11 @@
     <Compile Include="PFCG\IPFCG_AFSBBLL.cs" />
     <Compile Include="PFCG\IPFCG_FSXMBLL.cs" />
     <Compile Include="PFCG\IPFCG_FZBLBLL.cs" />
+    <Compile Include="PFCG\IPFCG_HXPBLL.cs" />
     <Compile Include="PFCG\IPFCG_HZPBLL.cs" />
     <Compile Include="PFCG\IPFCG_LPBLL.cs" />
     <Compile Include="PFCG\IPFCG_MYWJBLL.cs" />
+    <Compile Include="PFCG\IPFCG_SCSBBLL.cs" />
     <Compile Include="PFCG\IPFCG_SJSMBLL.cs" />
     <Compile Include="PFCG\IPFCG_SPBLL.cs" />
     <Compile Include="PFCG\IPFCG_XBSPBLL.cs" />

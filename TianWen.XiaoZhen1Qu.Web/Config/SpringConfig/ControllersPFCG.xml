@@ -50,4 +50,14 @@
       <ref object="PFCG_FZBLBLL"/>
     </property>
   </object>
+  <object id="PFCG_SCSBController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.PFCG_SCSBController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="PFCG_SCSBBLL">
+      <ref object="PFCG_SCSBBLL"/>
+    </property>
+  </object>
+  <object id="PFCG_HXPController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.PFCG_HXPController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="PFCG_HXPBLL">
+      <ref object="PFCG_HXPBLL"/>
+    </property>
+  </object>
 </objects>

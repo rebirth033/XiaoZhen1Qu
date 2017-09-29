@@ -341,9 +341,11 @@
     <Content Include="Areas\Business\Css\PFCG\PFCG_AFSB.css" />
     <Content Include="Areas\Business\Css\PFCG\PFCG_FSXM.css" />
     <Content Include="Areas\Business\Css\PFCG\PFCG_FZBL.css" />
+    <Content Include="Areas\Business\Css\PFCG\PFCG_HXP.css" />
     <Content Include="Areas\Business\Css\PFCG\PFCG_HZP.css" />
     <Content Include="Areas\Business\Css\PFCG\PFCG_LP.css" />
     <Content Include="Areas\Business\Css\PFCG\PFCG_MYWJ.css" />
+    <Content Include="Areas\Business\Css\PFCG\PFCG_SCSB.css" />
     <Content Include="Areas\Business\Css\PFCG\PFCG_SJSM.css" />
     <Content Include="Areas\Business\Css\PFCG\PFCG_SP.css" />
     <Content Include="Areas\Business\Css\PFCG\PFCG_XBSP.css" />
@@ -537,12 +539,16 @@
     <Content Include="Areas\Business\Scripts\Business\PFCG\PFCG_FSXMYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\PFCG\PFCG_FZBL.js" />
     <Content Include="Areas\Business\Scripts\Business\PFCG\PFCG_FZBLYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\PFCG\PFCG_HXP.js" />
+    <Content Include="Areas\Business\Scripts\Business\PFCG\PFCG_HXPYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\PFCG\PFCG_HZP.js" />
     <Content Include="Areas\Business\Scripts\Business\PFCG\PFCG_HZPYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\PFCG\PFCG_LP.js" />
     <Content Include="Areas\Business\Scripts\Business\PFCG\PFCG_LPYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\PFCG\PFCG_MYWJ.js" />
     <Content Include="Areas\Business\Scripts\Business\PFCG\PFCG_MYWJYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\PFCG\PFCG_SCSB.js" />
+    <Content Include="Areas\Business\Scripts\Business\PFCG\PFCG_SCSBYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\PFCG\PFCG_SJSM.js" />
     <Content Include="Areas\Business\Scripts\Business\PFCG\PFCG_SJSMYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\PFCG\PFCG_SP.js" />
@@ -1029,9 +1035,11 @@
     <Compile Include="Areas\Business\Controllers\PFCG\PFCG_AFSBController.cs" />
     <Compile Include="Areas\Business\Controllers\PFCG\PFCG_FSXMController.cs" />
     <Compile Include="Areas\Business\Controllers\PFCG\PFCG_FZBLController.cs" />
+    <Compile Include="Areas\Business\Controllers\PFCG\PFCG_HXPController.cs" />
     <Compile Include="Areas\Business\Controllers\PFCG\PFCG_HZPController.cs" />
     <Compile Include="Areas\Business\Controllers\PFCG\PFCG_LPController.cs" />
     <Compile Include="Areas\Business\Controllers\PFCG\PFCG_MYWJController.cs" />
+    <Compile Include="Areas\Business\Controllers\PFCG\PFCG_SCSBController.cs" />
     <Compile Include="Areas\Business\Controllers\PFCG\PFCG_SJSMController.cs" />
     <Compile Include="Areas\Business\Controllers\PFCG\PFCG_SPController.cs" />
     <Compile Include="Areas\Business\Controllers\PFCG\PFCG_XBSPController.cs" />
@@ -1265,6 +1273,8 @@
     <Content Include="Areas\Business\Views\PFCG_HZP\PFCG_HZP.cshtml" />
     <Content Include="Areas\Business\Views\PFCG_AFSB\PFCG_AFSB.cshtml" />
     <Content Include="Areas\Business\Views\PFCG_FZBL\PFCG_FZBL.cshtml" />
+    <Content Include="Areas\Business\Views\PFCG_SCSB\PFCG_SCSB.cshtml" />
+    <Content Include="Areas\Business\Views\PFCG_HXP\PFCG_HXP.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
