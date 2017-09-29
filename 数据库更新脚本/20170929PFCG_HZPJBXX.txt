@@ -1,0 +1,45 @@
+-- Create table
+create table PFCG_HZPJBXX
+(
+  pfcg_hzpjbxxid VARCHAR2(50) not null,
+  jcxxid         VARCHAR2(50),
+  bcms           VARCHAR2(4000),
+  lb             VARCHAR2(20),
+  fs             VARCHAR2(20),
+  qy             VARCHAR2(20),
+  dd             VARCHAR2(20),
+  jtdz           VARCHAR2(200),
+  xl             VARCHAR2(20)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 16
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table PFCG_HZPJBXX
+  is '批发采购_化妆品';
+-- Add comments to the columns 
+comment on column PFCG_HZPJBXX.pfcg_hzpjbxxid
+  is '化妆品基本信息ID';
+comment on column PFCG_HZPJBXX.jcxxid
+  is '基础信息ID';
+comment on column PFCG_HZPJBXX.bcms
+  is '补充描述';
+comment on column PFCG_HZPJBXX.lb
+  is '类别';
+comment on column PFCG_HZPJBXX.fs
+  is '方式';
+comment on column PFCG_HZPJBXX.qy
+  is '区域';
+comment on column PFCG_HZPJBXX.dd
+  is '地段';
+comment on column PFCG_HZPJBXX.jtdz
+  is '具体地址';
+comment on column PFCG_HZPJBXX.xl
+  is '小类';

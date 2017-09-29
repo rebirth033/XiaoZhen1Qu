@@ -35,4 +35,9 @@
       <ref object="PFCG_HWYDBLL"/>
     </property>
   </object>
+  <object id="PFCG_HZPController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.PFCG_HZPController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="PFCG_HZPBLL">
+      <ref object="PFCG_HZPBLL"/>
+    </property>
+  </object>
 </objects>
