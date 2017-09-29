@@ -99,9 +99,9 @@
     <Reference Include="System.Web.Razor">
       <HintPath>..\GlobalBin\System.Web.Razor.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="System.Web.Webpages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\Assemblies\System.Web.WebPages.dll</HintPath>
+      <HintPath>..\GlobalBin\System.Web.Webpages.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Webpages.Deployment">
       <HintPath>..\GlobalBin\System.Web.Webpages.Deployment.dll</HintPath>
@@ -338,6 +338,7 @@
     <Content Include="Areas\Business\Css\LR\LR_WS.css" />
     <Content Include="Areas\Business\Css\LR\LR_YJ.css" />
     <Content Include="Areas\Business\Css\PageCommon.css" />
+    <Content Include="Areas\Business\Css\PFCG\PFCG_LP.css" />
     <Content Include="Areas\Business\Css\PFCG\PFCG_SP.css" />
     <Content Include="Areas\Business\Css\PWKQ\PWKQ_DYP.css" />
     <Content Include="Areas\Business\Css\PWKQ\PWKQ_QTKQ.css" />
@@ -522,6 +523,8 @@
     <Content Include="Areas\Business\Scripts\Business\LR\LR_YJ.js" />
     <Content Include="Areas\Business\Scripts\Business\LR\LR_YJYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\PageJson.js" />
+    <Content Include="Areas\Business\Scripts\Business\PFCG\PFCG_LP.js" />
+    <Content Include="Areas\Business\Scripts\Business\PFCG\PFCG_LPYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\PFCG\PFCG_SP.js" />
     <Content Include="Areas\Business\Scripts\Business\PFCG\PFCG_SPYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\Public_TP.js" />
@@ -1221,6 +1224,7 @@
     <Content Include="Areas\Business\Views\ZSJM_SHFW\ZSJM_SHFW.cshtml" />
     <Content Include="Areas\Business\Views\ZSJM_WTMYET\ZSJM_WTMYET.cshtml" />
     <Content Include="Areas\Business\Views\PFCG_SP\PFCG_SP.cshtml" />
+    <Content Include="Areas\Business\Views\PFCG_LP\PFCG_LP.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

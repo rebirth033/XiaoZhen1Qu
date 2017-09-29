@@ -5,4 +5,9 @@
       <ref object="PFCG_SPBLL"/>
     </property>
   </object>
+  <object id="PFCG_LPController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.PFCG_LPController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="PFCG_LPBLL">
+      <ref object="PFCG_LPBLL"/>
+    </property>
+  </object>
 </objects>

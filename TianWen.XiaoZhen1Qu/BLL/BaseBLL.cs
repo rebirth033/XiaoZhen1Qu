@@ -432,6 +432,20 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
+        public object LoadLPXX(string LPID)
+        {
+            try
+            {
+                IList<CODES_PFCG> list = DAO.Repository.GetObjectList<CODES_PFCG>(String.Format("FROM CODES_PFCG WHERE PARENTID like '%{0}%' ORDER BY CODEORDER", LPID));
+                return new { Result = EnResultType.Success, list = list };
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("error", ex.Message);
+                return new { Result = EnResultType.Failed, Message = "加载失败" };
+            }
+        }
+
         public object LoadCWPZXX(string CWBQ)
         {
             try
