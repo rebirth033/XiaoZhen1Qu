@@ -105,6 +105,7 @@
     <Compile Include="BLL\LR\LR_WDBLL.cs" />
     <Compile Include="BLL\LR\LR_WSBLL.cs" />
     <Compile Include="BLL\LR\LR_YJBLL.cs" />
+    <Compile Include="BLL\PFCG\PFCG_AFSBBLL.cs" />
     <Compile Include="BLL\PFCG\PFCG_FSXMBLL.cs" />
     <Compile Include="BLL\PFCG\PFCG_HZPBLL.cs" />
     <Compile Include="BLL\PFCG\PFCG_LPBLL.cs" />

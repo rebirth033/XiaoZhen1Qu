@@ -1198,4 +1198,187 @@ values (398, '男士', '剃须套装', '8', 8, 346);
 insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (399, '男士', '男士bb霜', '9', 9, 346);
 
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (400, '美发用品', '洗发水', '1', 1, 347);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (401, '美发用品', '护发素', '2', 2, 347);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (402, '美发用品', '洗护套装', '3', 3, 347);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (403, '美发用品', '免洗护发素', '4', 4, 347);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (404, '美发用品', '发膜/倒膜', '5', 5, 347);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (405, '美发用品', '发泥/发蜡', '6', 6, 347);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (406, '美发用品', '弹力素', '7', 7, 347);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (407, '美发用品', '蓬蓬粉', '8', 8, 347);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (408, '美发用品', '染发膏', '9', 9, 347);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (409, '美发用品', '摩丝', '10', 10, 347);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (410, '美发用品', '定型啫喱', '11', 11, 347);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (411, '美发用品', '电卷发棒', '12', 12, 347);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (412, '假发', '假发套', '1', 1, 348);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (413, '假发', '假发钢梳', '2', 2, 348);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (414, '假发', '假发支架', '3', 3, 348);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (415, '假发', '发网', '4', 4, 348);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (416, '化妆工具', '化妆套刷', '1', 1, 349);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (417, '化妆工具', '面膜纸', '2', 2, 349);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (418, '化妆工具', '化妆棉', '3', 3, 349);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (419, '化妆工具', '假睫毛', '4', 4, 349);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (420, '化妆工具', '睫毛夹', '5', 5, 349);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (421, '化妆工具', '化妆粉扑', '6', 6, 349);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (422, '化妆工具', '化妆包', '7', 7, 349);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (423, '化妆工具', '化妆箱', '8', 8, 349);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (424, '化妆工具', '化妆镜', '9', 9, 349);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (425, '化妆工具', '化妆刷', '10', 10, 349);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (426, '化妆工具', '瘦身按摩', '11', 11, 349);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (427, '化妆工具', '化妆海绵', '12', 12, 349);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (428, '精油芳疗', '花水/纯露', '1', 1, 350);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (429, '精油芳疗', '凝胶', '2', 2, 350);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (430, '精油芳疗', '单方精油', '3', 3, 350);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (431, '精油芳疗', '复方精油', '4', 4, 350);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (432, '精油芳疗', '身体按摩油', '5', 5, 350);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (433, '精油芳疗', '面油', '6', 6, 350);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (434, '精油芳疗', '乳液', '7', 7, 350);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (435, '精油芳疗', '面霜', '8', 9, 350);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (436, '安防设备', '消防报警设备', '1', 1, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (437, '安防设备', '交通安全设备', '2', 2, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (438, '安防设备', '劳保用品', '3', 3, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (439, '消防报警设备', '灭火器', '1', 1, 436);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (440, '消防报警设备', '防火设备', '2', 2, 436);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (441, '消防报警设备', '报警器', '3', 3, 436);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (442, '交通安全设备', '路障', '1', 1, 437);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (443, '交通安全设备', '护栏', '2', 2, 437);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (444, '交通安全设备', '防撞设施', '3', 3, 437);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (445, '交通安全设备', '减速带', '4', 4, 437);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (446, '交通安全设备', '安全服装', '5', 5, 437);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (447, '交通安全设备', '安全标志', '6', 6, 437);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (448, '交通安全设备', '反光材料', '7', 7, 437);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (449, '交通安全设备', '道钉', '8', 8, 437);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (450, '劳保用品', '防护手套', '1', 1, 438);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (451, '劳保用品', '防护口罩', '2', 2, 438);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (452, '劳保用品', '防护鞋', '3', 3, 438);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (453, '劳保用品', '防护面罩面具', '4', 4, 438);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (454, '劳保用品', '防护服', '5', 5, 438);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (455, '劳保用品', '防护眼镜眼罩', '6', 6, 438);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (456, '劳保用品', '防护帽', '7', 7, 438);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (457, '劳保用品', '安全带/安全绳', '8', 8, 438);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (458, '劳保用品', '防护耳塞耳罩', '9', 9, 438);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (459, '劳保用品', '安全网', '10', 10, 438);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (460, '劳保用品', '软梯/逃生梯', '11', 11, 438);
+
 prompt Done.

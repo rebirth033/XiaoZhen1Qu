@@ -40,4 +40,9 @@
       <ref object="PFCG_HZPBLL"/>
     </property>
   </object>
+  <object id="PFCG_AFSBController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.PFCG_AFSBController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="PFCG_AFSBBLL">
+      <ref object="PFCG_AFSBBLL"/>
+    </property>
+  </object>
 </objects>
