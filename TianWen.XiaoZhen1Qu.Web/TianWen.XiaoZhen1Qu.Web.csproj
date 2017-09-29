@@ -340,6 +340,7 @@
     <Content Include="Areas\Business\Css\PageCommon.css" />
     <Content Include="Areas\Business\Css\PFCG\PFCG_FSXM.css" />
     <Content Include="Areas\Business\Css\PFCG\PFCG_LP.css" />
+    <Content Include="Areas\Business\Css\PFCG\PFCG_MYWJ.css" />
     <Content Include="Areas\Business\Css\PFCG\PFCG_SJSM.css" />
     <Content Include="Areas\Business\Css\PFCG\PFCG_SP.css" />
     <Content Include="Areas\Business\Css\PFCG\PFCG_XBSP.css" />
@@ -530,6 +531,8 @@
     <Content Include="Areas\Business\Scripts\Business\PFCG\PFCG_FSXMYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\PFCG\PFCG_LP.js" />
     <Content Include="Areas\Business\Scripts\Business\PFCG\PFCG_LPYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\PFCG\PFCG_MYWJ.js" />
+    <Content Include="Areas\Business\Scripts\Business\PFCG\PFCG_MYWJYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\PFCG\PFCG_SJSM.js" />
     <Content Include="Areas\Business\Scripts\Business\PFCG\PFCG_SJSMYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\PFCG\PFCG_SP.js" />
@@ -1013,6 +1016,7 @@
     <Compile Include="Areas\Business\Controllers\LR\LR_YJController.cs" />
     <Compile Include="Areas\Business\Controllers\PFCG\PFCG_FSXMController.cs" />
     <Compile Include="Areas\Business\Controllers\PFCG\PFCG_LPController.cs" />
+    <Compile Include="Areas\Business\Controllers\PFCG\PFCG_MYWJController.cs" />
     <Compile Include="Areas\Business\Controllers\PFCG\PFCG_SJSMController.cs" />
     <Compile Include="Areas\Business\Controllers\PFCG\PFCG_SPController.cs" />
     <Compile Include="Areas\Business\Controllers\PFCG\PFCG_XBSPController.cs" />
@@ -1240,6 +1244,7 @@
     <Content Include="Areas\Business\Views\PFCG_FSXM\PFCG_FSXM.cshtml" />
     <Content Include="Areas\Business\Views\PFCG_XBSP\PFCG_XBSP.cshtml" />
     <Content Include="Areas\Business\Views\PFCG_SJSM\PFCG_SJSM.cshtml" />
+    <Content Include="Areas\Business\Views\PFCG_MYWJ\PFCG_MYWJ.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
