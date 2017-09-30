@@ -121,13 +121,16 @@
     <Compile Include="PFCG\IPFCG_FZBLBLL.cs" />
     <Compile Include="PFCG\IPFCG_HXPBLL.cs" />
     <Compile Include="PFCG\IPFCG_HZPBLL.cs" />
+    <Compile Include="PFCG\IPFCG_KQBLL.cs" />
     <Compile Include="PFCG\IPFCG_LPBLL.cs" />
     <Compile Include="PFCG\IPFCG_MYWJBLL.cs" />
     <Compile Include="PFCG\IPFCG_SCSBBLL.cs" />
     <Compile Include="PFCG\IPFCG_SJSMBLL.cs" />
     <Compile Include="PFCG\IPFCG_SPBLL.cs" />
+    <Compile Include="PFCG\IPFCG_TSBLL.cs" />
     <Compile Include="PFCG\IPFCG_XBSPBLL.cs" />
     <Compile Include="PFCG\IPFCG_HWYDBLL.cs" />
+    <Compile Include="PFCG\IPFCG_YXBLL.cs" />
     <Compile Include="PFCG\IPFCG_YBYQBLL.cs" />
     <Compile Include="PFCG\IPFCG_YCLBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

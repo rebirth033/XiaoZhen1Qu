@@ -90,4 +90,19 @@
       <ref object="DAOBase"/>
     </property>
   </object>
+  <object id="PFCG_YXBLL" type="TianWen.XiaoZhen1Qu.BLL.PFCG_YXBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="PFCG_TSBLL" type="TianWen.XiaoZhen1Qu.BLL.PFCG_TSBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="PFCG_KQBLL" type="TianWen.XiaoZhen1Qu.BLL.PFCG_KQBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
 </objects>

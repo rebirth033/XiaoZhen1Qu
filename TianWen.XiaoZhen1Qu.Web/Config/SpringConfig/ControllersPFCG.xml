@@ -90,4 +90,19 @@
       <ref object="PFCG_BZBLL"/>
     </property>
   </object>
+  <object id="PFCG_YXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.PFCG_YXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="PFCG_YXBLL">
+      <ref object="PFCG_YXBLL"/>
+    </property>
+  </object>
+  <object id="PFCG_TSController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.PFCG_TSController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="PFCG_TSBLL">
+      <ref object="PFCG_TSBLL"/>
+    </property>
+  </object>
+  <object id="PFCG_KQController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.PFCG_KQController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="PFCG_KQBLL">
+      <ref object="PFCG_KQBLL"/>
+    </property>
+  </object>
 </objects>
