@@ -1438,4 +1438,340 @@ values (478, '化学品', '润滑油', '5', 5, null);
 insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (479, '化学品', '合成材料助剂', '6', 6, null);
 
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (480, '电工电料', '电线电缆', '1', 1, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (481, '电工电料', '继电器', '2', 2, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (482, '电工电料', '电源电池', '3', 3, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (483, '电工电料', '绝缘材料', '4', 4, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (484, '电工电料', '电热膜', '5', 5, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (485, '电子元器件', '集成电路/IC', '1', 1, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (486, '电子元器件', '二极管/三极管', '2', 2, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (487, '电子元器件', '连接器', '3', 3, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (488, '电子元器件', '电阻电容电感', '4', 4, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (489, '电子元器件', '保险元器件', '5', 5, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (490, '电子元器件', '变压器', '6', 6, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (491, '电子元器件', '传感器', '7', 7, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (492, '仪表仪器', '光学仪器', '1', 1, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (493, '仪表仪器', '温湿度仪表', '2', 2, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (494, '仪表仪器', '电工仪表', '3', 3, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (495, '仪表仪器', '车用仪表', '4', 4, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (496, '仪表仪器', '量具', '5', 5, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (497, '仪表仪器', '分析仪器', '6', 6, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (498, '仪表仪器', '色谱仪', '7', 7, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (499, '仪表仪器', '衡器', '8', 8, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (500, '仪表仪器', '试验机', '9', 9, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (501, '仪表仪器', '电子测量仪器', '10', 10, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (502, '光学仪器', '放大镜', '1', 1, 492);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (503, '光学仪器', '显微镜', '2', 2, 492);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (504, '光学仪器', '望远镜', '3', 3, 492);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (505, '光学仪器', '棱镜/透镜', '4', 4, 492);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (506, '光学仪器', '光谱仪/光度计', '5', 5, 492);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (507, '光学仪器', '投影仪', '6', 6, 492);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (508, '温湿度仪表', '温度控制器', '1', 1, 493);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (509, '温湿度仪表', '温湿度计', '2', 2, 493);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (510, '温湿度仪表', '红外测温仪', '3', 3, 493);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (511, '温湿度仪表', '热电偶', '4', 4, 493);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (512, '电工仪表', '万用表', '1', 1, 494);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (513, '电工仪表', '电能仪表', '2', 2, 494);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (514, '电工仪表', '电压测量仪表', '3', 3, 494);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (515, '电工仪表', '电阻测量仪表', '4', 4, 494);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (516, '电工仪表', '电流测量仪表', '5', 5, 494);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (517, '电工仪表', '功率测量仪表', '6', 6, 494);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (518, '量具', '卷尺', '1', 1, 496);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (519, '量具', '量规', '2', 2, 496);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (520, '量具', '游标卡尺', '3', 3, 496);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (521, '量具', '数显卡尺', '4', 4, 496);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (522, '量具', '千分尺', '5', 5, 496);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (523, '量具', '水平尺', '6', 6, 496);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (524, '灯具照明', '白炽灯', '1', 1, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (525, '灯具照明', 'LED灯具', '2', 2, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (526, '灯具照明', '气体放电灯', '3', 3, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (527, '灯具照明', '室外照明灯', '4', 4, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (528, '灯具照明', '专用灯具', '5', 5, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (529, '灯具照明', '指示灯具', '6', 6, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (530, '灯具照明', '电光源材料', '7', 7, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (531, '灯具照明', '冷光源', '8', 8, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (532, '灯具照明', '插头插座', '9', 9, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (533, '灯具照明', '灯具配件', '10', 10, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (534, '专用灯具', '舞台灯具', '1', 1, 528);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (535, '专用灯具', '工矿灯具', '2', 2, 528);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (536, '专用灯具', '防爆灯具', '3', 3, 528);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (537, '专用灯具', '广告灯', '4', 4, 528);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (538, '专用灯具', '摄影灯具', '5', 5, 528);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (539, '专用灯具', '水下灯具', '6', 6, 528);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (540, '专用灯具', '红外灯具', '7', 7, 528);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (541, '专用灯具', '灭蚊灯', '8', 8, 528);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (542, '专用灯具', '机床灯具', '9', 9, 528);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (543, '专用灯具', '医疗灯具', '10', 10, 528);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (544, '专用灯具', '运动场馆灯具', '11', 11, 528);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (545, '原材料', '冶金', '1', 1, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (546, '原材料', '化工原料', '2', 2, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (547, '原材料', '橡胶制品', '3', 3, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (548, '冶金', '钢材', '1', 1, 545);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (549, '冶金', '不锈钢', '2', 2, 545);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (550, '冶金', '有色金属', '3', 3, 545);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (551, '冶金', '钢铁原料', '4', 4, 545);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (552, '冶金', '磁性材料', '5', 5, 545);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (553, '冶金', '优特钢', '6', 6, 545);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (554, '冶金', '金属丝网', '7', 7, 545);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (555, '冶金', '炉料/废金属', '8', 8, 545);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (556, '冶金', '非金属矿产', '9', 9, 545);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (557, '橡胶制品', '塑料管', '1', 1, 547);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (558, '橡胶制品', '硅胶制品', '2', 2, 547);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (559, '橡胶制品', '密封件', '3', 3, 547);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (560, '橡胶制品', '板材', '4', 4, 547);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (561, '橡胶制品', '零配件', '5', 5, 547);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (562, '橡胶制品', '亚克力制品', '6', 6, 547);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (563, '包装类别', '纸类包装', '1', 1, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (564, '包装类别', '布类包装', '2', 2, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (565, '包装类别', '金属包装', '3', 3, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (566, '包装类别', '玻璃包装', '4', 4, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (567, '包装类别', '木质包装', '5', 5, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (568, '包装类别', '塑料包装', '6', 6, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (569, '包装类别', '胶带', '7', 7, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (570, '包装用途', '礼品包装', '1', 1, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (571, '包装用途', '食品包装', '2', 2, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (572, '包装用途', '服饰包装', '3', 3, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (573, '包装用途', '玩具包装', '4', 4, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (574, '包装用途', '电子元器件包装', '5', 5, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (575, '包装用途', '医药包装', '6', 6, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (576, '包装用途', '化妆品包装', '7', 7, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (577, '包装用途', '仪器包装', '8', 8, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (578, '包装用途', '香烟包装', '9', 9, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (579, '包装用途', '五金包装', '10', 10, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (580, '包装用途', '酒水包装', '11', 11, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (581, '包装用途', '茶叶包装', '12', 12, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (582, '包装用途', '数码包装', '13', 13, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (583, '包装用途', '果蔬包装', '14', 14, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (584, '卡券', '油卡', '1', 1, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (585, '卡券', '礼品卡', '2', 2, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (586, '卡券', '充值卡', '3', 3, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (587, '机械加工', '钣金加工', '1', 1, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (588, '机械加工', '模具加工', '2', 2, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (589, '机械加工', '管件加工', '3', 3, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (590, '机械加工', '数控机床加工', '4', 4, null);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (591, '机械加工', '五金加工', '5', 5, null);
+
 prompt Done.

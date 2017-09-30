@@ -1,5 +1,5 @@
 -- Create table
-create table CODES_WHYL
+create table CODES_CL_JC
 (
   codeid    NUMBER(12) not null,
   typename  VARCHAR2(60),
@@ -14,20 +14,20 @@ tablespace USERS
   maxtrans 255
   storage
   (
-    initial 16
+    initial 64
     minextents 1
     maxextents unlimited
   );
 -- Add comments to the columns 
-comment on column CODES_WHYL.codeid
+comment on column CODES_CL_JC.codeid
   is '主键';
-comment on column CODES_WHYL.typename
+comment on column CODES_CL_JC.typename
   is '类型';
-comment on column CODES_WHYL.codename
+comment on column CODES_CL_JC.codename
   is '名称';
-comment on column CODES_WHYL.codevalue
+comment on column CODES_CL_JC.codevalue
   is '值';
-comment on column CODES_WHYL.codeorder
+comment on column CODES_CL_JC.codeorder
   is '排序';
-comment on column CODES_WHYL.parentid
+comment on column CODES_CL_JC.parentid
   is '父级ID';
