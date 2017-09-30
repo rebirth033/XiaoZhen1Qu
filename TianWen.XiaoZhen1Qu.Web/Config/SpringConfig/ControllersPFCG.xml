@@ -65,4 +65,14 @@
       <ref object="PFCG_DGDLBLL"/>
     </property>
   </object>
+  <object id="PFCG_DZYQJController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.PFCG_DZYQJController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="PFCG_DZYQJBLL">
+      <ref object="PFCG_DZYQJBLL"/>
+    </property>
+  </object>
+  <object id="PFCG_YBYQController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.PFCG_YBYQController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="PFCG_YBYQBLL">
+      <ref object="PFCG_YBYQBLL"/>
+    </property>
+  </object>
 </objects>

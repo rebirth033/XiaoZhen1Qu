@@ -1,0 +1,45 @@
+-- Create table
+create table PFCG_YBYQJBXX
+(
+  PFCG_YBYQjbxxid VARCHAR2(50) not null,
+  jcxxid        VARCHAR2(50),
+  bcms          VARCHAR2(4000),
+  lb            VARCHAR2(20),
+  fs            VARCHAR2(20),
+  qy            VARCHAR2(20),
+  dd            VARCHAR2(20),
+  jtdz          VARCHAR2(200),
+  xl            VARCHAR2(20)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 16
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table PFCG_YBYQJBXX
+  is '批发采购_仪表仪器';
+-- Add comments to the columns 
+comment on column PFCG_YBYQJBXX.PFCG_YBYQjbxxid
+  is '仪表仪器基本信息ID';
+comment on column PFCG_YBYQJBXX.jcxxid
+  is '基础信息ID';
+comment on column PFCG_YBYQJBXX.bcms
+  is '补充描述';
+comment on column PFCG_YBYQJBXX.lb
+  is '类别';
+comment on column PFCG_YBYQJBXX.fs
+  is '方式';
+comment on column PFCG_YBYQJBXX.qy
+  is '区域';
+comment on column PFCG_YBYQJBXX.dd
+  is '地段';
+comment on column PFCG_YBYQJBXX.jtdz
+  is '具体地址';
+comment on column PFCG_YBYQJBXX.xl
+  is '小类';

@@ -26,7 +26,7 @@ insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
 values (9, '大类', '招商加盟', 9, 0, null, null);
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (10, '大类', '批发采购', 10, null, null, null);
+values (10, '大类', '批发采购', 10, 0, null, null);
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
 values (11, '大类', '求职/招聘', 11, null, null, null);
@@ -77,7 +77,7 @@ insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
 values (61, '小类', '轿车', 1, 3, 'CL_JC', 'CL_JCJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (85, '小类', '演出门票', 2, 5, 'PWKQ_YCMP', 'PWKQ_YCMPJBXX');
+values (62, '小类', '工程车', 5, 3, 'CL_GCC', 'CL_GCCJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
 values (64, '小类', '自行车/电动车/三轮车', 2, 3, 'CL_ZXCDDCSLC', 'CL_ZXCDDCSLCJBXX');
@@ -98,6 +98,9 @@ insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
 values (74, '小类', '宠物猫', 2, 4, 'CW_CWM', 'CW_CWMJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
+values (75, '小类', '花鸟鱼虫', 3, 4, 'CW_HNYC', 'CW_HNYCJBXX');
+
+insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
 values (78, '小类', '宠物赠送/领养', 5, 4, 'CW_CWZSLY', 'CW_CWZSLYJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
@@ -114,6 +117,12 @@ values (83, '小类', '消费卡/购物券', 4, 5, 'PWKQ_XFKGWQ', 'PWKQ_XFKGWQJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
 values (84, '小类', '其他卡券', 5, 5, 'PWKQ_QTKQ', 'PWKQ_QTKQJBXX');
+
+insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
+values (85, '小类', '演出门票', 2, 5, 'PWKQ_YCMP', 'PWKQ_YCMPJBXX');
+
+insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
+values (86, '小类', '游乐园/景点票', 3, 5, 'PWKQ_YLYJDP', 'PWKQ_YLYJDPJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
 values (96, '小类', '生活服务', 1, 12, null, null);
@@ -377,70 +386,70 @@ insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
 values (223, '小类', '体检', 10, 214, 'LR_TJ', 'LR_TJJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (224, '小类', '食品', 1, 10, null, null);
+values (224, '小类', '食品', 1, 10, 'PFCG_SP', 'PFCG_SPJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (225, '小类', '礼品', 2, 10, null, null);
+values (225, '小类', '礼品', 2, 10, 'PFCG_LP', 'PFCG_LPJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (226, '小类', '服饰鞋帽', 3, 10, null, null);
+values (226, '小类', '服饰鞋帽', 3, 10, 'PFCG_FSXM', 'PFCG_FSXMJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (227, '小类', '箱包/饰品', 4, 10, null, null);
+values (227, '小类', '箱包/饰品', 4, 10, 'PFCG_XBSP', 'PFCG_XBSPJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (228, '小类', '手机数码', 5, 10, null, null);
+values (228, '小类', '手机数码', 5, 10, 'PFCG_SJSM', 'PFCG_SJSMJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (229, '小类', '母婴玩具', 6, 10, null, null);
+values (229, '小类', '母婴玩具', 6, 10, 'PFCG_MYWJ', 'PFCG_MYWJJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (230, '小类', '户外运动', 7, 10, null, null);
+values (230, '小类', '户外运动', 7, 10, 'PFCG_HWYD', 'PFCG_HWYDJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (231, '小类', '化妆品', 8, 10, null, null);
+values (231, '小类', '化妆品', 8, 10, 'PFCG_HZP', 'PFCG_HZPJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (232, '小类', '安防设备', 9, 10, null, null);
+values (232, '小类', '安防设备', 9, 10, 'PFCG_AFSB', 'PFCG_AFSBJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (233, '小类', '纺织/布料', 10, 10, null, null);
+values (233, '小类', '纺织/布料', 10, 10, 'PFCG_FZBL', 'PFCG_FZBLJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (234, '小类', '商超设备', 11, 10, null, null);
+values (234, '小类', '商超设备', 11, 10, 'PFCG_SCSB', 'PFCG_SCSBJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (235, '小类', '化学品', 12, 10, null, null);
+values (235, '小类', '化学品', 12, 10, 'PFCG_HXP', 'PFCG_HXPJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (236, '小类', '电工电料', 13, 10, null, null);
+values (236, '小类', '电工电料', 13, 10, 'PFCG_DGDL', 'PFCG_DGDLJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (237, '小类', '电子元器件', 14, 10, null, null);
+values (237, '小类', '电子元器件', 14, 10, 'PFCG_DZYQJ', 'PFCG_DZYQJJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (238, '小类', '仪表仪器', 15, 10, null, null);
+values (238, '小类', '仪表仪器', 15, 10, 'PFCG_YBYQ', 'PFCG_YBYQJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (239, '小类', '灯具照明', 16, 10, null, null);
+values (239, '小类', '灯具照明', 16, 10, 'PFCG_DJZM', 'PFCG_DJZMJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (240, '小类', '原材料', 17, 10, null, null);
+values (240, '小类', '原材料', 17, 10, 'PFCG_YCL', 'PFCG_YCLJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (241, '小类', '包装', 18, 10, null, null);
+values (241, '小类', '包装', 18, 10, 'PFCG_BZ', 'PFCG_BZJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (242, '小类', '音像', 19, 10, null, null);
+values (242, '小类', '音像', 19, 10, 'PFCG_YX', 'PFCG_YXJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (243, '小类', '图书', 20, 10, null, null);
+values (243, '小类', '图书', 20, 10, 'PFCG_TS', 'PFCG_TSJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (244, '小类', '卡券', 21, 10, null, null);
+values (244, '小类', '卡券', 21, 10, 'PFCG_KQ', 'PFCG_KQJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (245, '小类', '机械加工', 22, 10, null, null);
+values (245, '小类', '机械加工', 22, 10, 'PFCG_JXJG', 'PFCG_JXJGJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
 values (246, '小类', '旅行社', 1, 15, null, null);
@@ -657,15 +666,6 @@ values (328, '小类', '短租房/日租房', 3, 1, 'FC_DZF', 'FC_DZFJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
 values (329, '小类', '二手房', 4, 1, null, null);
-
-insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (62, '小类', '工程车', 5, 3, 'CL_GCC', 'CL_GCCJBXX');
-
-insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (86, '小类', '游乐园/景点票', 3, 5, 'PWKQ_YLYJDP', 'PWKQ_YLYJDPJBXX');
-
-insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (75, '小类', '花鸟鱼虫', 3, 4, 'CW_HNYC', 'CW_HNYCJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
 values (330, '小类', '瑜伽', 5, 214, 'LR_YJ', 'LR_YJJBXX');

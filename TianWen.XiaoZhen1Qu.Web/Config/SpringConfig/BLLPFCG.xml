@@ -65,4 +65,14 @@
       <ref object="DAOBase"/>
     </property>
   </object>
+  <object id="PFCG_DZYQJBLL" type="TianWen.XiaoZhen1Qu.BLL.PFCG_DZYQJBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="PFCG_YBYQBLL" type="TianWen.XiaoZhen1Qu.BLL.PFCG_YBYQBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
 </objects>
