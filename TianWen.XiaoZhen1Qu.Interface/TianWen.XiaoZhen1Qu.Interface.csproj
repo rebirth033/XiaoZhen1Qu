@@ -113,6 +113,7 @@
     <Compile Include="LR\ILR_WSBLL.cs" />
     <Compile Include="LR\ILR_YJBLL.cs" />
     <Compile Include="PFCG\IPFCG_AFSBBLL.cs" />
+    <Compile Include="PFCG\IPFCG_DGDLBLL.cs" />
     <Compile Include="PFCG\IPFCG_FSXMBLL.cs" />
     <Compile Include="PFCG\IPFCG_FZBLBLL.cs" />
     <Compile Include="PFCG\IPFCG_HXPBLL.cs" />

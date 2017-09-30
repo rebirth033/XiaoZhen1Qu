@@ -60,4 +60,9 @@
       <ref object="PFCG_HXPBLL"/>
     </property>
   </object>
+  <object id="PFCG_DGDLController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.PFCG_DGDLController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="PFCG_DGDLBLL">
+      <ref object="PFCG_DGDLBLL"/>
+    </property>
+  </object>
 </objects>
