@@ -53,7 +53,7 @@ function LoadBZLB() {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liFWPZ' onclick='SelectBZLB(this)'><img class='img_BZLB'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    html += "<li class='liBZLB' onclick='SelectBZLB(this)'><img class='img_BZLB'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i === 4 || i === 9 || i === 14 || i === 19 || i === 24) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
@@ -87,7 +87,7 @@ function LoadBZYT() {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liFWPZ' onclick='SelectBZLB(this)'><img class='img_BZYT'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    html += "<li class='liBZYT' onclick='SelectBZLB(this)'><img class='img_BZYT'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i === 4 || i === 9 || i === 14 || i === 19 || i === 24) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
@@ -107,7 +107,7 @@ function LoadBZYT() {
         }
     });
 }
-//选择房屋配置
+//选择包装类别/用途
 function SelectBZLB(obj) {
     if ($(obj).find("img").attr("src").indexOf("blue") !== -1)
         $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
@@ -150,6 +150,7 @@ function LoadPFCG_BZJBXX() {
                     ue.setContent(xml.Value.PFCG_BZJBXX.BCMS);
                 });
                 SetBZLB(xml.Value.PFCG_BZJBXX.LB);
+                SetBZYT(xml.Value.PFCG_BZJBXX.YT);
                 $("#spanQY").html(xml.Value.PFCG_BZJBXX.QY);
                 $("#spanDD").html(xml.Value.PFCG_BZJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
@@ -163,7 +164,7 @@ function LoadPFCG_BZJBXX() {
 //获取包装类别
 function GetBZLB() {
     var BZLB = "";
-    $(".liFWPZ").each(function () {
+    $(".liBZLB").each(function () {
         if ($(this).find("img").attr("src").indexOf("blue") !== -1)
             BZLB += $(this).find("label")[0].innerHTML + ",";
     });
@@ -173,12 +174,30 @@ function GetBZLB() {
 function SetBZLB(lbs) {
     var lbarray = lbs.split(',');
     for (var i = 0; i < lbarray.length; i++) {
-        $(".liFWPZ").each(function () {
+        $(".liBZLB").each(function () {
             if ($(this).find("label")[0].innerHTML.indexOf(lbarray[i]) !== -1)
                 $(this).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
         });
     }
-
+}
+//获取包装用途
+function GetBZYT() {
+    var BZYT = "";
+    $(".liBZYT").each(function () {
+        if ($(this).find("img").attr("src").indexOf("blue") !== -1)
+            BZYT += $(this).find("label")[0].innerHTML + ",";
+    });
+    return RTrim(BZYT, ',');
+}
+//设置包装用途
+function SetBZYT(lbs) {
+    var lbarray = lbs.split(',');
+    for (var i = 0; i < lbarray.length; i++) {
+        $(".liBZYT").each(function () {
+            if ($(this).find("label")[0].innerHTML.indexOf(lbarray[i]) !== -1)
+                $(this).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
+        });
+    }
 }
 //发布
 function FB() {
@@ -190,6 +209,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "LB", "'" + GetBZLB() + "'");
+    obj = jsonObj.AddJson(obj, "YT", "'" + GetBZYT() + "'");
 
     if (getUrlParam("PFCG_BZJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "PFCG_BZJBXXID", "'" + getUrlParam("PFCG_BZJBXXID") + "'");

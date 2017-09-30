@@ -121,6 +121,7 @@
     <Compile Include="Maps\LR\LR_WSJBXX_Map.cs" />
     <Compile Include="Maps\LR\LR_YJJBXX_Map.cs" />
     <Compile Include="Maps\PFCG\PFCG_AFSBJBXX_Map.cs" />
+    <Compile Include="Maps\PFCG\PFCG_BZJBXX_Map.cs" />
     <Compile Include="Maps\PFCG\PFCG_DGDLJBXX_Map.cs" />
     <Compile Include="Maps\PFCG\PFCG_DJZMJBXX_Map.cs" />
     <Compile Include="Maps\PFCG\PFCG_DZYQJJBXX_Map.cs" />
