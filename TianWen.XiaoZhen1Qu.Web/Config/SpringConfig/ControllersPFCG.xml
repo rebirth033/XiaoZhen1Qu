@@ -80,4 +80,9 @@
       <ref object="PFCG_DJZMBLL"/>
     </property>
   </object>
+  <object id="PFCG_YCLController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.PFCG_YCLController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="PFCG_YCLBLL">
+      <ref object="PFCG_YCLBLL"/>
+    </property>
+  </object>
 </objects>
