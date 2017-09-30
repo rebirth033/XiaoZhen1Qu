@@ -75,4 +75,9 @@
       <ref object="PFCG_YBYQBLL"/>
     </property>
   </object>
+  <object id="PFCG_DJZMController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.PFCG_DJZMController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="PFCG_DJZMBLL">
+      <ref object="PFCG_DJZMBLL"/>
+    </property>
+  </object>
 </objects>
