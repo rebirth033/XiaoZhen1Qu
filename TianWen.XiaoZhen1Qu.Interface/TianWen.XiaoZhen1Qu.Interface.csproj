@@ -140,6 +140,7 @@
     <Compile Include="PWKQ\IPWKQ_XFKGWQBLL.cs" />
     <Compile Include="PWKQ\IPWKQ_YCMPZLBLL.cs" />
     <Compile Include="PWKQ\IPWKQ_YLYJDPBLL.cs" />
+    <Compile Include="QZZP\IQZZP_QZZPBLL.cs" />
     <Compile Include="XXYL\IXXYL_DIYSGFBLL.cs" />
     <Compile Include="XXYL\IXXYL_HPGBLL.cs" />
     <Compile Include="XXYL\IXXYL_HWBLL.cs" />
