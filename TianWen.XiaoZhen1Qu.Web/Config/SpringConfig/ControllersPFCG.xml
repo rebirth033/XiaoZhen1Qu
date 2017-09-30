@@ -105,4 +105,9 @@
       <ref object="PFCG_KQBLL"/>
     </property>
   </object>
+  <object id="PFCG_JXJGController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.PFCG_JXJGController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="PFCG_JXJGBLL">
+      <ref object="PFCG_JXJGBLL"/>
+    </property>
+  </object>
 </objects>

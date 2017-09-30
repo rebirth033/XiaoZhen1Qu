@@ -121,6 +121,7 @@
     <Compile Include="PFCG\IPFCG_FZBLBLL.cs" />
     <Compile Include="PFCG\IPFCG_HXPBLL.cs" />
     <Compile Include="PFCG\IPFCG_HZPBLL.cs" />
+    <Compile Include="PFCG\IPFCG_JXJGBLL.cs" />
     <Compile Include="PFCG\IPFCG_KQBLL.cs" />
     <Compile Include="PFCG\IPFCG_LPBLL.cs" />
     <Compile Include="PFCG\IPFCG_MYWJBLL.cs" />

@@ -114,6 +114,7 @@
     <Compile Include="BLL\PFCG\PFCG_FZBLBLL.cs" />
     <Compile Include="BLL\PFCG\PFCG_HXPBLL.cs" />
     <Compile Include="BLL\PFCG\PFCG_HZPBLL.cs" />
+    <Compile Include="BLL\PFCG\PFCG_JXJGBLL.cs" />
     <Compile Include="BLL\PFCG\PFCG_KQBLL.cs" />
     <Compile Include="BLL\PFCG\PFCG_LPBLL.cs" />
     <Compile Include="BLL\PFCG\PFCG_MYWJBLL.cs" />

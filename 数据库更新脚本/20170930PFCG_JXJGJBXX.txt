@@ -1,7 +1,7 @@
 -- Create table
-create table PFCG_KQJBXX
+create table PFCG_JXJGJBXX
 (
-  pfcg_kqjbxxid VARCHAR2(50) not null,
+  PFCG_JXJGjbxxid VARCHAR2(50) not null,
   jcxxid        VARCHAR2(50),
   bcms          VARCHAR2(4000),
   qy            VARCHAR2(20),
@@ -20,20 +20,20 @@ tablespace USERS
     maxextents unlimited
   );
 -- Add comments to the table 
-comment on table PFCG_KQJBXX
-  is '批发采购_卡券';
+comment on table PFCG_JXJGJBXX
+  is '批发采购_机械加工';
 -- Add comments to the columns 
-comment on column PFCG_KQJBXX.pfcg_kqjbxxid
-  is '卡券基本信息ID';
-comment on column PFCG_KQJBXX.jcxxid
+comment on column PFCG_JXJGJBXX.PFCG_JXJGjbxxid
+  is '机械加工基本信息ID';
+comment on column PFCG_JXJGJBXX.jcxxid
   is '基础信息ID';
-comment on column PFCG_KQJBXX.bcms
+comment on column PFCG_JXJGJBXX.bcms
   is '补充描述';
-comment on column PFCG_KQJBXX.qy
+comment on column PFCG_JXJGJBXX.qy
   is '区域';
-comment on column PFCG_KQJBXX.dd
+comment on column PFCG_JXJGJBXX.dd
   is '地段';
-comment on column PFCG_KQJBXX.jtdz
+comment on column PFCG_JXJGJBXX.jtdz
   is '具体地址';
-comment on column PFCG_KQJBXX.lb
+comment on column PFCG_JXJGJBXX.lb
   is '类别';

@@ -337,6 +337,7 @@
     <Content Include="Areas\Business\Css\LR\LR_WD.css" />
     <Content Include="Areas\Business\Css\LR\LR_WS.css" />
     <Content Include="Areas\Business\Css\LR\LR_YJ.css" />
+    <Content Include="Areas\Business\Css\PFCG\PFCG_JXJG.css" />
     <Content Include="Areas\Business\Css\PFCG\PFCG_KQ.css" />
     <Content Include="Areas\Business\Css\PFCG\PFCG_TS.css" />
     <Content Include="Areas\Business\Css\PageCommon.css" />
@@ -560,6 +561,8 @@
     <Content Include="Areas\Business\Scripts\Business\PFCG\PFCG_HXPYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\PFCG\PFCG_HZP.js" />
     <Content Include="Areas\Business\Scripts\Business\PFCG\PFCG_HZPYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\PFCG\PFCG_JXJG.js" />
+    <Content Include="Areas\Business\Scripts\Business\PFCG\PFCG_JXJGYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\PFCG\PFCG_KQ.js" />
     <Content Include="Areas\Business\Scripts\Business\PFCG\PFCG_KQYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\PFCG\PFCG_LP.js" />
@@ -1068,6 +1071,7 @@
     <Compile Include="Areas\Business\Controllers\PFCG\PFCG_FZBLController.cs" />
     <Compile Include="Areas\Business\Controllers\PFCG\PFCG_HXPController.cs" />
     <Compile Include="Areas\Business\Controllers\PFCG\PFCG_HZPController.cs" />
+    <Compile Include="Areas\Business\Controllers\PFCG\PFCG_JXJGController.cs" />
     <Compile Include="Areas\Business\Controllers\PFCG\PFCG_KQController.cs" />
     <Compile Include="Areas\Business\Controllers\PFCG\PFCG_LPController.cs" />
     <Compile Include="Areas\Business\Controllers\PFCG\PFCG_MYWJController.cs" />
@@ -1320,6 +1324,7 @@
     <Content Include="Areas\Business\Views\PFCG_YX\PFCG_YX.cshtml" />
     <Content Include="Areas\Business\Views\PFCG_TS\PFCG_TS.cshtml" />
     <Content Include="Areas\Business\Views\PFCG_KQ\PFCG_KQ.cshtml" />
+    <Content Include="Areas\Business\Views\PFCG_JXJG\PFCG_JXJG.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -1329,7 +1334,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Areas\Business\Photos\" />
     <Folder Include="Areas\Business\QRCode\" />
   </ItemGroup>
@@ -1346,9 +1350,6 @@
       <Project>{bea8b61a-659c-4e61-9325-845a9d91ec85}</Project>
       <Name>TianWen.XiaoZhen1Qu</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
