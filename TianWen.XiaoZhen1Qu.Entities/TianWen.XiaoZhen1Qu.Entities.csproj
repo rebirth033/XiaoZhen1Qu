@@ -245,6 +245,7 @@
     <Compile Include="Models\LR\LR_WSJBXX.cs" />
     <Compile Include="Models\LR\LR_YJJBXX.cs" />
     <Compile Include="Models\PFCG\PFCG_AFSBJBXX.cs" />
+    <Compile Include="Models\PFCG\PFCG_BZJBXX.cs" />
     <Compile Include="Models\PFCG\PFCG_DGDLJBXX.cs" />
     <Compile Include="Models\PFCG\PFCG_DJZMJBXX.cs" />
     <Compile Include="Models\PFCG\PFCG_DZYQJJBXX.cs" />
