@@ -23,45 +23,51 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string JCXXID { get; set; }
 
         /// <summary>
-        /// 类别
+        /// 职位名称
         /// </summary>
         [Property]
-        public virtual string LB { get; set; }
+        public virtual string ZWMC { get; set; }
 
         /// <summary>
-        /// 小类
+        /// 职位类别
         /// </summary>
         [Property]
-        public virtual string XL { get; set; }
+        public virtual string ZWLB { get; set; }
 
         /// <summary>
-        /// 方式
+        /// 招聘人数
         /// </summary>
         [Property]
-        public virtual string FS { get; set; }
+        public virtual string ZPRS { get; set; }
+
+        /// <summary>
+        /// 每月薪资
+        /// </summary>
+        [Property]
+        public virtual string MYXZ { get; set; }
+
+        /// <summary>
+        /// 职位福利
+        /// </summary>
+        [Property]
+        public virtual string ZWFL { get; set; }
+
+        /// <summary>
+        /// 学历要求
+        /// </summary>
+        [Property]
+        public virtual string XLYQ { get; set; }
+
+        /// <summary>
+        /// 工作年限
+        /// </summary>
+        [Property]
+        public virtual string GZNX { get; set; }
 
         /// <summary>
         /// 补充描述
         /// </summary>
         [Property]
         public virtual string BCMS { get; set; }
-
-        /// <summary>
-        /// 区域
-        /// </summary>
-        [Property]
-        public virtual string QY { get; set; }
-
-        /// <summary>
-        /// 地段
-        /// </summary>
-        [Property]
-        public virtual string DD { get; set; }
-
-        /// <summary>
-        /// 具体地址
-        /// </summary>
-        [Property]
-        public virtual string JTDZ { get; set; }
     }
 }

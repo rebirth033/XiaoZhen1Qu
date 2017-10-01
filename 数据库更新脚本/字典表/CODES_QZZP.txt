@@ -14,7 +14,8 @@ tablespace USERS
   maxtrans 255
   storage
   (
-    initial 64
+    initial 64K
+    next 1M
     minextents 1
     maxextents unlimited
   );

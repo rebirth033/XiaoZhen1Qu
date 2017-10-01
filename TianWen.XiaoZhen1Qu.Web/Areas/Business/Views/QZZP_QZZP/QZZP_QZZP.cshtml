@@ -80,151 +80,106 @@
         </div>
         <div id="myTabContent" class="div_content">
             <div id="divJBXX" class="divSplit" style="display: block; text-align: left">
-                <span class="spanSplit">基本信息</span>
+                <span class="spanSplit">职位信息</span>
                 <em class="emSplit"></em>
             </div>
-            <div id="divCYLB" class="divFWCZ" style="z-index: 999;">
-                <div class="divLeft" style="margin-left: 128px;">
+            <div id="divZWMC" class="divFWCZ" style="margin-top: 22px; z-index: 998;">
+                <div class="divLeft">
                     <span class="required">*</span>
-                    <span class="spanFWCZ">类别</span>
+                    <span id="spanPPMC">职位名称</span>
                 </div>
                 <div class="divRight">
-                    <div id="divLBText" class="spanFWLXOut SRK" style="position: relative;">
-                        <div id="divLBSpan" class="spanFWLXIn" style="border: none; margin-top: 6px;">
-                            <span id="spanLB" class="spanFWQK spanFontColor" style="margin-top: 0">请选择类别</span>
+                    <input id="ZWMC" maxlength="50" column="ZWMC" class="spanFWLX SRK" style="width: 594px; padding: 6px 12px;" type="text" placeholder="请输入职位名称" />
+                    <div id="divZWMCTip"></div>
+                </div>
+            </div>
+            <div id="divZWLB" class="divFWCZ" style="margin-top: 22px; z-index: 998;">
+                <div class="divLeft">
+                    <span class="required">*</span>
+                    <span id="spanZWLB">职位类别</span>
+                </div>
+                <div class="divRight">
+                    <input id="ZWLB" maxlength="50" column="ZWLB" class="spanFWLX SRK" style="width: 594px; padding: 6px 12px;" type="text" placeholder="请输入职位类别" />
+                    <div id="divZWLBTip"></div>
+                </div>
+            </div>
+            <div id="divZPRS" class="divFWCZ" style="margin-top: 22px; z-index: 998;">
+                <div class="divLeft">
+                    <span class="required">*</span>
+                    <span class="spanFWCZ">招聘人数</span>
+                </div>
+                <div class="divRight">
+                    <span id="spanZPRS" class="spanFWLX SRK" style="display: inline-block; width: 150px;">
+                        <input class="inputLCFB spanFontColor" id="ZPRS" maxlength="9" column="ZPRS" type="text" style="width: 120px" />
+                        <span class="spanFontColor">元</span>
+                    </span>
+                    <div id="divZPRSTip"></div>
+                </div>
+            </div>
+            <div id="divZPMYXZ" class="divFWCZ" style="z-index: 997;">
+                <div class="divLeft">
+                    <span class="required">*</span>
+                    <span class="spanFWCZ">每月薪资</span>
+                </div>
+                <div class="divRight">
+                    <div id="divMYXZText" class="spanFWLXOut SRK" style="position: relative;">
+                        <div id="divMYXZSpan" class="spanFWLXIn" style="border: none; margin-top: 6px;">
+                            <span id="spanMYXZ" class="spanFWQK spanFontColor" style="margin-top: 0">请选择每月薪资</span>
                             <div class="divFWQKArrow"></div>
                         </div>
-                        <div id="divLB" class="divdropdown" style="margin-top: -7px; margin-left: -1px;">
+                        <div id="divMYXZ" class="divdropdown" style="margin-top: -7px; margin-left: -1px;">
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="divQZZPXL" class="divFWCZ" style="z-index: 996; display: none;">
-                <div class="divLeft" style="margin-left: 128px;">
+            <div id="divZWFL" class="divFWCZ" style="z-index: 994;">
+                <div class="divLeft">
                     <span class="required">&nbsp;</span>
-                    <span id="spanQZZPXL">小类</span>
+                    <span id="spanZWFL">职位福利</span>
                 </div>
-                <div id="divQZZPXLText" class="divRight" style="position: relative;">
+                <div id="divZWFLText" class="divRight" style="position: relative;">
                 </div>
             </div>
-            <div id="divPPMC" class="divFWCZ" style="margin-top: 22px; z-index: 998; ">
+            <div id="divZPXLYQ" class="divFWCZ" style="z-index: 996;">
                 <div class="divLeft">
                     <span class="required">*</span>
-                    <span id="spanPPMC">品牌名称</span>
+                    <span class="spanFWCZ">学历要求</span>
                 </div>
                 <div class="divRight">
-                    <input id="PPMC" maxlength="50" column="PPMC" class="spanFWLX SRK" style="width: 594px; padding: 6px 12px;" type="text" placeholder="填写真实的品牌名称可以提升搜索流量，增加品牌曝光" />
-                    <div id="divPPMCTip"></div>
-                </div>
-            </div>
-            <div id="divCYPPLS" class="divFWCZ" style="z-index: 997;">
-                <div class="divLeft">
-                    <span class="required">&nbsp;</span>
-                    <span class="spanFWCZ">品牌历史</span>
-                </div>
-                <div class="divRight">
-                    <div id="divPPLSText" class="spanFWLXOut SRK" style="position: relative;">
-                        <div id="divPPLSSpan" class="spanFWLXIn" style="border: none; margin-top: 6px;">
-                            <span id="spanPPLS" class="spanFWQK spanFontColor" style="margin-top: 0">请选择品牌历史</span>
+                    <div id="divXLYQText" class="spanFWLXOut SRK" style="position: relative;">
+                        <div id="divXLYQSpan" class="spanFWLXIn" style="border: none; margin-top: 6px;">
+                            <span id="spanXLYQ" class="spanFWQK spanFontColor" style="margin-top: 0">请选择学历要求</span>
                             <div class="divFWQKArrow"></div>
                         </div>
-                        <div id="divPPLS" class="divdropdown" style="margin-top: -7px; margin-left: -1px;">
+                        <div id="divXLYQ" class="divdropdown" style="margin-top: -7px; margin-left: -1px;">
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="divCYTZJE" class="divFWCZ" style="z-index: 996;">
+            <div id="divZPGZNX" class="divFWCZ" style="z-index: 995;">
                 <div class="divLeft">
                     <span class="required">*</span>
-                    <span class="spanFWCZ">投资金额</span>
+                    <span class="spanFWCZ">工作年限</span>
                 </div>
                 <div class="divRight">
-                    <div id="divTZJEText" class="spanFWLXOut SRK" style="position: relative;">
-                        <div id="divTZJESpan" class="spanFWLXIn" style="border: none; margin-top: 6px;">
-                            <span id="spanTZJE" class="spanFWQK spanFontColor" style="margin-top: 0">请选择投资金额</span>
+                    <div id="divGZNXText" class="spanFWLXOut SRK" style="position: relative;">
+                        <div id="divGZNXSpan" class="spanFWLXIn" style="border: none; margin-top: 6px;">
+                            <span id="spanGZNX" class="spanFWQK spanFontColor" style="margin-top: 0">请选择工作年限</span>
                             <div class="divFWQKArrow"></div>
                         </div>
-                        <div id="divTZJE" class="divdropdown" style="margin-top: -7px; margin-left: -1px;">
+                        <div id="divGZNX" class="divdropdown" style="margin-top: -7px; margin-left: -1px;">
                         </div>
                     </div>
-                </div>
-            </div>
-            <div id="divCYQGFDS" class="divFWCZ" style="z-index: 995;">
-                <div class="divLeft" style="margin-left: 85px;">
-                    <span class="required">&nbsp;</span>
-                    <span class="spanFWCZ">全国分店数</span>
-                </div>
-                <div class="divRight">
-                    <div id="divQGFDSText" class="spanFWLXOut SRK" style="position: relative;">
-                        <div id="divQGFDSSpan" class="spanFWLXIn" style="border: none; margin-top: 6px;">
-                            <span id="spanQGFDS" class="spanFWQK spanFontColor" style="margin-top: 0">请选择全国分店数</span>
-                            <div class="divFWQKArrow"></div>
-                        </div>
-                        <div id="divQGFDS" class="divdropdown" style="margin-top: -7px; margin-left: -1px;">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="divCYDDMJ" class="divFWCZ" style="z-index: 994;">
-                <div class="divLeft">
-                    <span class="required">&nbsp;</span>
-                    <span class="spanFWCZ">单店面积</span>
-                </div>
-                <div class="divRight">
-                    <div id="divDDMJText" class="spanFWLXOut SRK" style="position: relative;">
-                        <div id="divDDMJSpan" class="spanFWLXIn" style="border: none; margin-top: 6px;">
-                            <span id="spanDDMJ" class="spanFWQK spanFontColor" style="margin-top: 0">请选择单店面积</span>
-                            <div class="divFWQKArrow"></div>
-                        </div>
-                        <div id="divDDMJ" class="divdropdown" style="margin-top: -7px; margin-left: -1px;">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="divSHRQ" class="divFWCZ" style="z-index: 993;">
-                <div class="divLeft">
-                    <span class="required">&nbsp;</span>
-                    <span id="spanSHRQ">适合人群</span>
-                </div>
-                <div id="divSHRQText" class="divRight" style="position: relative;">
-                </div>
-            </div>
-            <div id="divBT" class="divFWCZ" style="margin-top: 22px; z-index: 993;">
-                <div class="divLeft" style="margin-left: 128px;">
-                    <span class="required">*</span>
-                    <span id="spanBT">标题</span>
-                </div>
-                <div class="divRight">
-                    <input id="BT" maxlength="50" column="BT" class="spanFWLX SRK" style="width: 594px; padding: 6px 12px;" type="text" placeholder="吸引人的标题可让更多的人看您的信息喔" />
-                    <div id="divBTTip"></div>
-                </div>
-            </div>
-            <div id="divPPMS" class="divFWCZ" style="margin-top: 22px; z-index: 993;">
-                <div class="divLeft">
-                    <span class="required">&nbsp;</span>
-                    <span id="spanPPMS">品牌描述</span>
-                </div>
-                <div class="divRight">
-                    <input id="PPMS" maxlength="50" column="PPMS" class="spanFWLX SRK" style="width: 594px; padding: 6px 12px;" type="text" placeholder="用于列表展示，可填写加盟品牌的特点和优势，不超过30字" />
-                    <div id="divPPMSTip"></div>
-                </div>
-            </div>
-            <div id="divZSDQ" class="divFWCZ" style="z-index: 993;">
-                <div class="divLeft">
-                    <span class="required">*</span>
-                    <span id="spanZSDQ">招商地区</span>
-                </div>
-                <div id="divZSDQText" class="divRight" style="position: relative;">
                 </div>
             </div>
             <div id="divXXXX" class="divSplit" style="display: block; text-align: left;">
-                <span class="spanSplit">加盟项目描述</span>
+                <span class="spanSplit">职位描述</span>
                 <em class="emSplit"></em>
             </div>
-            <div id="divFYMS" class="divFWCZ" style="height: 253px; position: relative; z-index: 998;">
+            <div id="divFYMS" class="divFWCZ" style="height: 253px; position: relative; z-index: 994;">
                 <div class="divLeft" style="height: 170px; vertical-align: top;">
                     <span class="required" style="vertical-align: top">*</span>
-                    <span id="spanFYMS" style="vertical-align: top">服务介绍</span>
+                    <span id="spanFYMS" style="vertical-align: top">职位描述</span>
                 </div>
                 <div class="divRight">
                     <script id="FYMS" type="text/plain" style="width:594px;height:200px;display:inline-block;">

@@ -15,14 +15,10 @@ $(document).ready(function () {
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
     LoadTXXX();
     LoadDefault();
-    BindClick("LB");
-    BindClick("PPLS");
-    BindClick("TZJE");
-    BindClick("QGFDS");
-    BindClick("DDMJ");
-    BindClick("QY");
-    BindClick("DD");
-    LoadSHRQ();
+    BindClick("MYXZ");
+    BindClick("XLYQ");
+    BindClick("GZNX");
+    LoadZWFL();
 });
 //描述框focus
 function FYMSFocus() {
@@ -43,6 +39,26 @@ function LoadDefault() {
         ue.setHeight(200);
     });
 }
+//绑定下拉框鼠标点击样式
+function BindClick(type) {
+    $("#div" + type + "Span").click(function () {
+        if (type === "MYXZ") {
+            LoadDropdown("每月薪资", "MYXZ");
+        }
+        if (type === "XLYQ") {
+            LoadDropdown("学历要求", "XLYQ");
+        }
+        if (type === "GZNX") {
+            LoadDropdown("工作年限", "GZNX");
+        }
+        if (type === "QY") {
+            LoadQY();
+        }
+        if (type === "DD") {
+            LoadDD($("#QYCode").val());
+        }
+    });
+}
 //加载全职招聘类别
 function LoadDropdown(type, id) {
     $.ajax({
@@ -57,7 +73,7 @@ function LoadDropdown(type, id) {
             if (xml.Result === 1) {
                 var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectLB(this,\"" + id + "\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
+                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"" + id + "\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
                 }
                 html += "</ul>";
                 $("#div" + id).html(html);
@@ -70,149 +86,32 @@ function LoadDropdown(type, id) {
         }
     });
 }
-//加载适合人群
-function LoadSHRQ() {
+//加载职位福利
+function LoadZWFL() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/Common/LoadCODES_QZZP",
         dataType: "json",
         data:
         {
-            TYPENAME: "适合人群"
+            TYPENAME: "职位福利"
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liSHRQ' onclick='SelectSHRQ(this)'><img class='img_SHRQ'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i === 5 || i === 11 || i === 17 || i === 23 || i === 29) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
-                    }
-                }
-                html += "</ul>";
-                $("#divSHRQText").html(html);
-                $(".img_SHRQ").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-                LoadZSDQ();
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载招商地区
-function LoadZSDQ() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/GetDistrictTJByXZQDM",
-        dataType: "json",
-        data:
-        {
-            XZQDM: $("#input_XZQDM").val()
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='ulFWPZ'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liZSDQ' onclick='SelectZSDQ(this)'><img class='img_ZSDQ'/><label style='font-weight:normal;'>" + xml.list[i].NAME + "</label></li>";
+                    html += "<li class='liZWFL' onclick='SelectZWFL(this)'><img class='img_ZWFL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i === 5 || i === 11 || i === 17 || i === 23 || i === 29) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 6) === 0)
-                    $("#divZSDQ").css("height", parseInt(xml.list.length / 6) * 45 + "px");
+                    $("#divZWFL").css("height", parseInt(xml.list.length / 6) * 45 + "px");
                 else
-                    $("#divZSDQ").css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
+                    $("#divZWFL").css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
                 html += "</ul>";
-                $("#divZSDQText").html(html);
-                $(".img_ZSDQ").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-                LoadQZZP_QZZPJBXX();
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//选择类别下拉框
-function SelectLB(obj, type, codeid) {
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
-    PDLB(obj.innerHTML, codeid);
-}
-//判断类别
-function PDLB(name, codeid) {
-    if (name.indexOf("文体用品") !== -1 || name.indexOf("母婴儿童用品") !== -1)
-        LoadQZZPXL(codeid);
-    if (name.indexOf("文具加工") !== -1)
-        $("#divQZZPXL").css("display", "none");
-}
-//加载全职招聘小类
-function LoadQZZPXL(codeid) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadJXXX",
-        dataType: "json",
-        data:
-        {
-            JXID: codeid
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='ulFWPZ'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liQZZPXL' onclick='SelectQZZPXL(this)'><img class='img_QZZPXL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i === 5 || i === 11 || i === 17 || i === 23 || i === 29) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
-                    }
-                }
-                html += "</ul>";
-                $("#divQZZPXLText").html(html);
-                $(".img_QZZPXL").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-
-                if (parseInt(xml.list.length % 6) === 0)
-                    $("#divQZZPXL").css("height", parseInt(xml.list.length / 6) * 45 + "px");
-                else
-                    $("#divQZZPXL").css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
-
-                $("#divQZZPXL").css("display", "");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载全职招聘小类
-function LoadQZZPXLByName(name, xl) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadQZZPXX",
-        dataType: "json",
-        data:
-        {
-            name: name
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='ulFWPZ'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liQZZPXL' onclick='SelectQZZPXL(this)'><img class='img_QZZPXL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i === 5 || i === 11 || i === 17 || i === 23 || i === 29) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
-                    }
-                }
-                html += "</ul>";
-                $("#divQZZPXLText").html(html);
-                $(".img_QZZPXL").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-
-                if (parseInt(xml.list.length % 6) === 0)
-                    $("#divQZZPXL").css("height", parseInt(xml.list.length / 6) * 45 + "px");
-                else
-                    $("#divQZZPXL").css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
-
-                $("#divQZZPXL").css("display", "");
-                SetQZZPXL(xl);
+                $("#divZWFLText").html(html);
+                $(".img_ZWFL").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -221,111 +120,39 @@ function LoadQZZPXLByName(name, xl) {
     });
 }
 //选择全职招聘小类
-function SelectQZZPXL(obj) {
+function SelectZWFL(obj) {
     if ($(obj).find("img").attr("src").indexOf("blue") !== -1)
         $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
     else
         $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
 }
-//获取全职招聘小类
-function GetQZZPXL() {
-    var QZZPXL = "";
-    $(".liQZZPXL").each(function () {
-        if ($(this).find("img").attr("src").indexOf("blue") !== -1)
-            QZZPXL += $(this).find("label")[0].innerHTML + ",";
-    });
-    return RTrim(QZZPXL, ',');
-}
-//设置全职招聘小类
-function SetQZZPXL(lbs) {
-    var lbarray = lbs.split(',');
-    for (var i = 0; i < lbarray.length; i++) {
-        $(".liQZZPXL").each(function () {
-            if ($(this).find("label")[0].innerHTML.indexOf(lbarray[i]) !== -1)
-                $(this).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-        });
-    }
-    $("#divQZZPXL").css("display", "");
-}
-//选择适合人群
-function SelectSHRQ(obj) {
+//选择职位福利
+function SelectZWFL(obj) {
     if ($(obj).find("img").attr("src").indexOf("blue") !== -1)
         $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
     else
         $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
 }
-//获取适合人群
-function GetSHRQ() {
-    var SHRQ = "";
-    $(".liSHRQ").each(function () {
+//获取职位福利
+function GetZWFL() {
+    var ZWFL = "";
+    $(".liZWFL").each(function () {
         if ($(this).find("img").attr("src").indexOf("blue") !== -1)
-            SHRQ += $(this).find("label")[0].innerHTML + ",";
+            ZWFL += $(this).find("label")[0].innerHTML + ",";
     });
-    return RTrim(SHRQ, ',');
+    return RTrim(ZWFL, ',');
 }
-//设置适合人群
-function SetSHRQ(lbs) {
+//设置职位福利
+function SetZWFL(lbs) {
     if (lbs !== "" && lbs !== null) {
         var lbarray = lbs.split(',');
         for (var i = 0; i < lbarray.length; i++) {
-            $(".liSHRQ").each(function () {
+            $(".liZWFL").each(function () {
                 if ($(this).find("label")[0].innerHTML.indexOf(lbarray[i]) !== -1)
                     $(this).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
             });
         }
     }
-}
-//选择招商地区
-function SelectZSDQ(obj) {
-    if ($(obj).find("img").attr("src").indexOf("blue") !== -1)
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-    else
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-}
-//获取招商地区
-function GetZSDQ() {
-    var ZSDQ = "";
-    $(".liZSDQ").each(function () {
-        if ($(this).find("img").attr("src").indexOf("blue") !== -1)
-            ZSDQ += $(this).find("label")[0].innerHTML + ",";
-    });
-    return RTrim(ZSDQ, ',');
-}
-//设置招商地区
-function SetZSDQ(lbs) {
-    var lbarray = lbs.split(',');
-    for (var i = 0; i < lbarray.length; i++) {
-        $(".liZSDQ").each(function () {
-            if ($(this).find("label")[0].innerHTML.indexOf(lbarray[i]) !== -1)
-                $(this).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-        });
-    }
-}
-//绑定下拉框鼠标点击样式
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadDropdown("全职招聘", "LB");
-        }
-        if (type === "PPLS") {
-            LoadDropdown("品牌历史", "PPLS");
-        }
-        if (type === "TZJE") {
-            LoadDropdown("投资金额", "TZJE");
-        }
-        if (type === "QGFDS") {
-            LoadDropdown("全国分店数", "QGFDS");
-        }
-        if (type === "DDMJ") {
-            LoadDropdown("单店面积", "DDMJ");
-        }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
-    });
 }
 //加载求职招聘_全职招聘基本信息
 function LoadQZZP_QZZPJBXX() {
@@ -351,16 +178,8 @@ function LoadQZZP_QZZPJBXX() {
                 $("#spanLB").html(xml.Value.QZZP_QZZPJBXX.LB);
                 $("#spanQY").html(xml.Value.QZZP_QZZPJBXX.QY);
                 $("#spanDD").html(xml.Value.QZZP_QZZPJBXX.DD);
-                $("#spanPPLS").html(xml.Value.QZZP_QZZPJBXX.PPLS);
-                $("#spanTZJE").html(xml.Value.QZZP_QZZPJBXX.TZJE);
-                $("#spanQGFDS").html(xml.Value.QZZP_QZZPJBXX.QGFDS);
-                $("#spanDDMJ").html(xml.Value.QZZP_QZZPJBXX.DDMJ);
                 LoadPhotos(xml.Value.Photos);
-                SetSHRQ(xml.Value.QZZP_QZZPJBXX.SHRQ);
-                SetZSDQ(xml.Value.QZZP_QZZPJBXX.ZSDQ);
-                if (xml.Value.QZZP_QZZPJBXX.LB.indexOf("文体用品") !== -1 || xml.Value.QZZP_QZZPJBXX.LB.indexOf("母婴儿童用品") !== -1) {
-                    LoadQZZPXLByName(xml.Value.QZZP_QZZPJBXX.LB, xml.Value.QZZP_QZZPJBXX.XL);
-                }
+                SetZWFL(xml.Value.QZZP_QZZPJBXX.ZWFL);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -379,9 +198,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "TZJE", "'" + $("#spanTZJE").html() + "'");
     obj = jsonObj.AddJson(obj, "QGFDS", "'" + $("#spanQGFDS").html() + "'");
     obj = jsonObj.AddJson(obj, "DDMJ", "'" + $("#spanDDMJ").html() + "'");
-    obj = jsonObj.AddJson(obj, "SHRQ", "'" + GetSHRQ() + "'");
-    obj = jsonObj.AddJson(obj, "ZSDQ", "'" + GetZSDQ() + "'");
-    obj = jsonObj.AddJson(obj, "XL", "'" + GetQZZPXL() + "'");
+    obj = jsonObj.AddJson(obj, "QZZP", "'" + GetZWFL() + "'");
 
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
 

@@ -120,6 +120,12 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return Json(CommonBLL.LoadCODES_PFCG(TYPENAME));
         }
 
+        public JsonResult LoadCODES_QZZP()
+        {
+            string TYPENAME = Request["TYPENAME"];
+            return Json(CommonBLL.LoadCODES_QZZP(TYPENAME));
+        }
+
         public JsonResult QHXZQ()
         {
             Session["XZQ"] = Request["XZQ"];
