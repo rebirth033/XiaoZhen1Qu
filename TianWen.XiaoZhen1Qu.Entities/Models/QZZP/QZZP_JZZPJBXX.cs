@@ -23,10 +23,10 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string JCXXID { get; set; }
 
         /// <summary>
-        /// 职位类别
+        /// 兼职类别
         /// </summary>
         [Property]
-        public virtual string ZWLB { get; set; }
+        public virtual string JZLB { get; set; }
 
         /// <summary>
         /// 招聘人数
@@ -35,33 +35,81 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string ZPRS { get; set; }
 
         /// <summary>
-        /// 每月薪资
+        /// 兼职时间
         /// </summary>
         [Property]
-        public virtual string MYXZ { get; set; }
+        public virtual string JZSJ { get; set; }
 
         /// <summary>
-        /// 职位福利
+        /// 兼职有效期
         /// </summary>
         [Property]
-        public virtual string ZWFL { get; set; }
+        public virtual int JZYXQ { get; set; }
 
         /// <summary>
-        /// 学历要求
+        /// 短期兼职开始时间
         /// </summary>
         [Property]
-        public virtual string XLYQ { get; set; }
+        public virtual DateTime DQJZKSSJ { get; set; }
 
         /// <summary>
-        /// 工作年限
+        /// 短期兼职结束时间
         /// </summary>
         [Property]
-        public virtual string GZNX { get; set; }
+        public virtual DateTime DQJZJSSJ { get; set; }
 
         /// <summary>
         /// 补充描述
         /// </summary>
         [Property]
         public virtual string BCMS { get; set; }
+
+        /// <summary>
+        /// 薪资水平
+        /// </summary>
+        [Property]
+        public virtual string XZSP { get; set; }
+
+        /// <summary>
+        /// 薪资水平单位
+        /// </summary>
+        [Property]
+        public virtual string XZSPDW { get; set; }
+
+        /// <summary>
+        /// 薪资结算
+        /// </summary>
+        [Property]
+        public virtual string XZJS { get; set; }
+
+        /// <summary>
+        /// 简历接收邮箱
+        /// </summary>
+        [Property]
+        public virtual string JLJSYX { get; set; }
+
+        /// <summary>
+        /// 工作城市
+        /// </summary>
+        [Property]
+        public virtual string GZCS { get; set; }
+
+        /// <summary>
+        /// 工作区域
+        /// </summary>
+        [Property]
+        public virtual string QY { get; set; }
+
+        /// <summary>
+        /// 工作地段
+        /// </summary>
+        [Property]
+        public virtual string DD { get; set; }
+
+        /// <summary>
+        /// 详细地址
+        /// </summary>
+        [Property]
+        public virtual string XXDZ { get; set; }
     }
 }
