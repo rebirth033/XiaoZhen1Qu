@@ -11,6 +11,8 @@ $(document).ready(function () {
     $("#inputUpload").bind("change", Upload);
     $("#btnClose").bind("click", CloseWindow);
     $("#div_dz_close").bind("click", CloseWindow);
+    $("#DQJZKSSJ").datepicker({ minDate: 0 });
+    $("#DQJZJSSJ").datepicker({ minDate: 0 });
     $("#span_content_info_qCWFWs").bind("click", LoadXZQByGrade);
     $("body").bind("click", function () { Close("_XZQ"); Close("JZLB"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });
     $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);
@@ -20,7 +22,7 @@ $(document).ready(function () {
     BindClick("JZLB");
     BindClick("XZSPDW");
     BindClick("XZJS");
-    LoadZWFL();
+    LoadQZZP_JZZPJBXX();
 });
 //显示职位类别
 function ShowJZLBThird() {
@@ -59,11 +61,33 @@ function LoadDefault() {
 function DQZPSelect() {
     $("#imgDQZP").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
     $("#imgCQZP").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+    $("#divDQJZSJ").css("display", "");
 }
 //选择长期招聘
 function CQZPSelect() {
     $("#imgDQZP").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
     $("#imgCQZP").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+    $("#divDQJZSJ").css("display", "none");
+}
+//获取兼职有效期
+function GetJZYXQ() {
+    if ($("#imgDQZP").attr("src").indexOf("blue") !== -1)
+        return "0";
+    else
+        return "1";
+}
+//设置兼职有效期
+function SetJZYXQ(JZYXQ) {
+    if (JZYXQ === 0) {
+        $("#imgDQZP").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+        $("#imgCQZP").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+        $("#divDQJZSJ").css("display", "");
+    }
+    else {
+        $("#imgDQZP").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+        $("#imgCQZP").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+        $("#divDQJZSJ").css("display", "none");
+    }
 }
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
@@ -224,11 +248,15 @@ function LoadQZZP_JZZPJBXX() {
                     ue.setContent(xml.Value.QZZP_JZZPJBXX.BCMS);
                 });
                 $("#spanJZLB").html(xml.Value.QZZP_JZZPJBXX.JZLB);
-                $("#spanMYXZ").html(xml.Value.QZZP_JZZPJBXX.MYXZ);
-                $("#spanXLYQ").html(xml.Value.QZZP_JZZPJBXX.XLYQ);
-                $("#spanGZNX").html(xml.Value.QZZP_JZZPJBXX.GZNX);
+                $("#spanXZSPDW").html(xml.Value.QZZP_JZZPJBXX.XZSPDW);
+                $("#spanXZJS").html(xml.Value.QZZP_JZZPJBXX.XZJS);
+                $("#spanJZYXQ").html(xml.Value.QZZP_JZZPJBXX.JZYXQ);
                 LoadPhotos(xml.Value.Photos);
-                SetZWFL(xml.Value.QZZP_JZZPJBXX.ZWFL);
+                SetJZYXQ(xml.Value.QZZP_JZZPJBXX.JZYXQ);
+                if (xml.Value.QZZP_JZZPJBXX.DQJZKSSJ.ToString("yyyy-MM-dd") !== "1-1-1")
+                    $("#DQJZKSSJ").val(xml.Value.QZZP_JZZPJBXX.DQJZKSSJ.ToString("yyyy-MM-dd"));
+                if (xml.Value.QZZP_JZZPJBXX.DQJZJSSJ.ToString("yyyy-MM-dd") !== "1-1-1")
+                    $("#DQJZJSSJ").val(xml.Value.QZZP_JZZPJBXX.DQJZJSSJ.ToString("yyyy-MM-dd"));
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -243,13 +271,14 @@ function FB() {
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "JZLB", "'" + $("#spanJZLB").html() + "'");
-    obj = jsonObj.AddJson(obj, "MYXZ", "'" + $("#spanMYXZ").html() + "'");
-    obj = jsonObj.AddJson(obj, "XLYQ", "'" + $("#spanXLYQ").html() + "'");
-    obj = jsonObj.AddJson(obj, "GZNX", "'" + $("#spanGZNX").html() + "'");
-    obj = jsonObj.AddJson(obj, "ZWFL", "'" + GetZWFL() + "'");
-
+    obj = jsonObj.AddJson(obj, "XZSPDW", "'" + $("#spanXZSPDW").html() + "'");
+    obj = jsonObj.AddJson(obj, "XZJS", "'" + $("#spanXZJS").html() + "'");
+    obj = jsonObj.AddJson(obj, "JZYXQ", "'" + GetJZYXQ() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-
+    if ($("#DQJZKSSJ").val() !== "")
+        obj = jsonObj.AddJson(obj, "DQJZKSSJ", "'" + $("#DQJZKSSJ").val() + "'");
+    if ($("#DQJZJSSJ").val() !== "")
+        obj = jsonObj.AddJson(obj, "DQJZJSSJ", "'" + $("#DQJZJSSJ").val() + "'");
     if (getUrlParam("QZZP_JZZPJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "QZZP_JZZPJBXXID", "'" + getUrlParam("QZZP_JZZPJBXXID") + "'");
 

@@ -16,6 +16,10 @@
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/QZZP/QZZP_JZZP.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/QZZP/QZZP_JZZPYZ.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/Public_TP.js")"></script>
+
+    <link href="@Url.Content("~/Areas/Business/Scripts/jquery-ui-1.12.1.custom/jquery-ui.min.css")" rel="stylesheet" />
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/jquery-ui-1.12.1.custom/jquery-ui.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/jquery-ui-1.12.1.custom/jquery.ui.datepicker-zh-CN.js")"></script>
 </head>
 <body>
     <div>
@@ -124,16 +128,26 @@
                 </div>
             </div>
             <div id="divJZYXQ" class="divFWCZ">
-                <div class="divLeft">
+                <div class="divLeft" style="margin-left: 87px;">
                     <span class="required">*</span>
                     <span class="spanFWCZ">兼职有效期</span>
                 </div>
                 <div class="divRight">
-                    <img class="iFWCZ" id="imgDQZP" /><label class="labelFWCZ">&nbsp;&nbsp;短期招聘&nbsp;&nbsp;</label>
-                    <img class="iFWCZ" id="imgCQZP" /><label class="labelFWCZ">&nbsp;&nbsp;长期招聘</label>
+                    <img class="iFWCZ" id="imgDQZP"/><label class="labelFWCZ">&nbsp;&nbsp;短期招聘&nbsp;&nbsp;</label>
+                    <img class="iFWCZ" id="imgCQZP"/><label class="labelFWCZ">&nbsp;&nbsp;长期招聘</label>
                 </div>
             </div>
-            <div id="divZPXZSP" class="divFWCZ" style="z-index: 997;">
+            <div id="divDQJZSJ" class="divFWCZ" style="z-index: 997">
+                <div class="divLeft" style="margin-left: 72px;">
+                    <span class="required">*</span>
+                    <span id="spanDQJZSJ">短期兼职时间</span>
+                </div>
+                <div class="divRight">
+                    <input id="DQJZKSSJ" readonly="readonly" class="spanFWLX inputLXRXX SRK" type="text" style="width: 150px;" placeholder="开始时间"/>
+                    <input id="DQJZJSSJ" readonly="readonly" class="spanFWLX inputLXRXX SRK" type="text" style="width: 150px;" placeholder="结束时间" />
+                </div>
+            </div>
+            <div id="divZPXZSP" class="divFWCZ" style="z-index: 996;">
                 <div class="divLeft">
                     <span class="required">*</span>
                     <span class="spanFWCZ">薪资水平</span>
@@ -150,10 +164,10 @@
                     </div>
                 </div>
             </div>
-            <div id="divZPXZJS" class="divFWCZ" style="z-index: 997;">
+            <div id="divZPXZJS" class="divFWCZ" style="z-index: 995;">
                 <div class="divLeft">
                     <span class="required">*</span>
-                    <span class="spanFWCZ">薪资水平</span>
+                    <span class="spanFWCZ">薪资结算</span>
                 </div>
                 <div class="divRight">
                     <div id="divXZJSText" class="spanFWLXOut SRK" style="position: relative;">
