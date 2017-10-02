@@ -20,18 +20,6 @@ function ValidateBT() {
         return true;
     }
 }
-//验证照片
-function ValidateFWZP() {
-    if ($("#divImgs1").find("img").length === 0) {
-        $("#divFWZPTip").css("display", "block");
-        $("#divFWZPTip").attr("class", "Warn");
-        $("#divFWZPTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记选择照片啦');
-        return false;
-    } else {
-        $("#divFWZPTip").css("display", "none");
-        return true;
-    }
-}
 //验证联系人
 function ValidateLXR() {
     if ($("#LXR").val() === "" || $("#LXR").val() === null) {
@@ -79,7 +67,7 @@ function ValidateLXDH() {
 }
 //验证所有
 function AllValidate() {
-    if (ValidateBT() & ValidateFWZP() & ValidateLXR() & ValidateLXDH())
+    if (ValidateBT() & ValidateLXR() & ValidateLXDH())
         return true;
     else
         return false;

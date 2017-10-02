@@ -22,6 +22,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return Json(result);
         }
 
+        public JsonResult GetDistrictByShortName()
+        {
+            string Grade = Request["ShortName"];
+            object result = CommonBLL.GetDistrictByShortName(Grade);
+            return Json(result);
+        }
+
         public JsonResult GetDistrictBySuperCode()
         {
             string SuperCode = Request["SuperCode"];

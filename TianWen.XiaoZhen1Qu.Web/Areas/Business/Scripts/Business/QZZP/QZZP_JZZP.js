@@ -17,6 +17,7 @@ $(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); Close("JZLB"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });
     $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
+    $("td").bind("click", SelectJZSJ);
     LoadTXXX();
     LoadDefault();
     LoadQZZP_JZZPJBXX();
@@ -27,7 +28,16 @@ $(document).ready(function () {
     BindClick("QY");
     BindClick("DD");
 });
-//加载品牌标签
+//选择兼职时间
+function SelectJZSJ() {
+    $(this).find(".img_jzsj").each(function () {
+        if($(this).attr("src").indexOf("blue") !== -1)
+            $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+        else
+            $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
+    });
+}
+//加载工作城市标签
 function LoadGZCSBQ() {
     var arrayObj = new Array('RM', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
     var html = "";
@@ -40,31 +50,30 @@ function LoadGZCSBQ() {
     $("#div_content_yxbq").html(html);
     $(".divstep_yx").bind("click", JCBQActive);
 }
-//品牌标签切换
+//工作城市标签切换
 function JCBQActive() {
-    LoadGZCS("热门城市", this.id);
+    LoadGZCS("A", this.id);
 }
-//加载品牌名称
+//加载工作城市名称
 function LoadGZCS(JCLX, JCBQ) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadJCPPXX",
+        url: getRootPath() + "/Business/Common/GetDistrictByShortName",
         dataType: "json",
         data:
         {
-            JCLX: JCLX,
-            JCBQ: JCBQ.split("div")[1]
+            ShortName: JCBQ.split("div")[1]
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var html = "";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += '<span class="span_yxmc" onclick="PPXZ(\'' + xml.list[i].CODENAME + '\',\'' + xml.list[i].CODEID + '\')">' + xml.list[i].CODENAME + '</span>';
+                    html += '<span class="span_yxmc" onclick="GZCSXZ(\'' + xml.list[i].NAME + '\',\'' + xml.list[i].CODE + '\')">' + xml.list[i].NAME + '</span>';
                 }
                 if (xml.list.length === 0)
                     html += '<span class="span_yxmc" style=\"width:200px;text-align:left;margin-left:14px;\">该字母下暂无数据</span>';
                 $("#div_content_yxmc").html(html);
-                $("#divPP").css("display", "block");
+                $("#divGZCS").css("display", "block");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -72,13 +81,11 @@ function LoadGZCS(JCLX, JCBQ) {
         }
     });
 }
-//选择品牌名称
-function PPXZ(PPMC, PPID) {
-    $("#PPID").val(PPID);
-    $("#spanPP").html(PPMC);
-    $("#divPP").css("display", "none");
-    $("#divCXText").css("display", "");
-    BindClick("CX");
+//选择工作城市名称
+function GZCSXZ(GZCSMC, GZCSID) {
+    $("#CityName").val(GZCSMC);
+    $("#spanGZCS").html(GZCSMC);
+    $("#divGZCS").css("display", "none");
 }
 //显示职位类别
 function ShowJZLBThird() {
@@ -112,6 +119,9 @@ function LoadDefault() {
     });
     $("#imgDQZP").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
     $("#imgCQZP").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+    $(".img_jzsj").each(function () {
+        $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+    });
 }
 //选择短期招聘
 function DQZPSelect() {
@@ -165,7 +175,7 @@ function BindClick(type) {
         }
         if (type === "GZCS") {
             LoadGZCSBQ();
-            LoadGZCS("轿车品牌", "divRM");
+            LoadGZCS("A", "divA");
         }
     });
 }
@@ -299,7 +309,7 @@ function LoadQY() {
         dataType: "json",
         data:
         {
-            XZQ: "福州市"
+            XZQ:$("#CityName").val()
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -377,6 +387,9 @@ function LoadQZZP_JZZPJBXX() {
                 $("#spanXZSPDW").html(xml.Value.QZZP_JZZPJBXX.XZSPDW);
                 $("#spanXZJS").html(xml.Value.QZZP_JZZPJBXX.XZJS);
                 $("#spanJZYXQ").html(xml.Value.QZZP_JZZPJBXX.JZYXQ);
+                $("#spanGZCS").html(xml.Value.QZZP_JZZPJBXX.GZCS);
+                $("#spanQY").html(xml.Value.QZZP_JZZPJBXX.QY);
+                $("#spanDD").html(xml.Value.QZZP_JZZPJBXX.DD);
                 SetJZYXQ(xml.Value.QZZP_JZZPJBXX.JZYXQ);
                 if (xml.Value.QZZP_JZZPJBXX.DQJZKSSJ.ToString("yyyy-MM-dd") !== "1-1-1")
                     $("#DQJZKSSJ").val(xml.Value.QZZP_JZZPJBXX.DQJZKSSJ.ToString("yyyy-MM-dd"));
@@ -398,6 +411,9 @@ function FB() {
     obj = jsonObj.AddJson(obj, "JZLB", "'" + $("#spanJZLB").html() + "'");
     obj = jsonObj.AddJson(obj, "XZSPDW", "'" + $("#spanXZSPDW").html() + "'");
     obj = jsonObj.AddJson(obj, "XZJS", "'" + $("#spanXZJS").html() + "'");
+    obj = jsonObj.AddJson(obj, "GZCS", "'" + $("#spanGZCS").html() + "'");
+    obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
+    obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "JZYXQ", "'" + GetJZYXQ() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     if ($("#DQJZKSSJ").val() !== "")
