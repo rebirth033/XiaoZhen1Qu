@@ -5,4 +5,9 @@
       <ref object="QZZP_QZZPBLL"/>
     </property>
   </object>
+  <object id="QZZP_JZZPController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.QZZP_JZZPController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="QZZP_JZZPBLL">
+      <ref object="QZZP_JZZPBLL"/>
+    </property>
+  </object>
 </objects>
