@@ -233,5 +233,11 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         {
             return Json(CommonBLL.LoadLPXSPXX(Request["name"]));
         }
+
+        public JsonResult LoadZWLBXX()
+        {
+            return Json(CommonBLL.LoadZWLBXX(Request["TYPENAME"]));
+        }
+        
     }
 }

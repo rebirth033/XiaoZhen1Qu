@@ -79,5 +79,7 @@ namespace TianWen.XiaoZhen1Qu.Interface
         object LoadMRBJXX(string name);
 
         object LoadLPXSPXX(string name);
+
+        object LoadZWLBXX(string typename);
     }
 }

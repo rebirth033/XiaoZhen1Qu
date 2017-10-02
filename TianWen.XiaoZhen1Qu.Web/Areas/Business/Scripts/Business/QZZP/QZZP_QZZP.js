@@ -10,7 +10,7 @@ $(document).ready(function () {
     $("#btnClose").bind("click", CloseWindow);
     $("#div_dz_close").bind("click", CloseWindow);
     $("#span_content_info_qCWFWs").bind("click", LoadXZQByGrade);
-    $("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });
+    $("body").bind("click", function () { Close("_XZQ"); Close("ZWLB"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });
     $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
     LoadTXXX();
@@ -18,8 +18,21 @@ $(document).ready(function () {
     BindClick("MYXZ");
     BindClick("XLYQ");
     BindClick("GZNX");
+    BindClick("ZWLB");
     LoadZWFL();
 });
+//显示职位类别
+function ShowZWLBThird() {
+    $(this).find(".div_zwlb_third").each(function () {
+        $(this).css("display", "block");
+    });
+}
+//隐藏职位类别
+function HideZWLBThird() {
+    $(this).find(".div_zwlb_third").each(function () {
+        $(this).css("display", "none");
+    });
+} 
 //描述框focus
 function FYMSFocus() {
     $("#FYMS").css("color", "#333333");
@@ -51,14 +64,56 @@ function BindClick(type) {
         if (type === "GZNX") {
             LoadDropdown("工作年限", "GZNX");
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
+        if (type === "ZWLB") {
+            LoadZWLB();
         }
     });
 }
+//加载职位类别
+function LoadZWLB() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadZWLBXX",
+        dataType: "json",
+        data:
+        {
+            TYPENAME: "职位类别"
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += '<div class="div_zwlb_first"><span class="span_zwlb_first">' + xml.list[i].CODENAME + '</span><em class="em_zwlb_split"></em></div><div class="div_zwlb_second">';
+                    for (var j = 0; j < xml.list[i].childs.length; j++) {
+                        html += '<div class="div_zwlb_second_inner"><span class="span_zwlb_second">' + xml.list[i].childs[j].CODENAME + '</span><img class="img_zwlb_second_inner"/>';
+                        html += '<div class="div_zwlb_third">';
+                        for (var k = 0; k < xml.list[i].childs[j].childs.length; k++) {
+                            html += '<span class="span_zwlb_third">' + xml.list[i].childs[j].childs[k].CODENAME + '</span>';
+                        }
+                        html += '</div></div>';
+                    }
+                    html += '</div>';
+                }
+                $("#divZWLB").html(html);
+                $(".div_zwlb_second:eq(0)").css("height", "60px");
+                $("#divZWLB").css("display", "");
+                $(".div_zwlb_second_inner").bind("mouseover", ShowZWLBThird);
+                $(".div_zwlb_second_inner").bind("mouseleave", HideZWLBThird);
+                $(".span_zwlb_third").bind("click", SelectZWLB);
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//选择职位类别
+function SelectZWLB() {
+    $("#spanZWLB").html($(this)[0].innerHTML);
+    $("#divZWLB").css("display", "none");
+    $("#BT").val($(this)[0].innerHTML);
+}
+
 //加载全职招聘类别
 function LoadDropdown(type, id) {
     $.ajax({
@@ -176,7 +231,7 @@ function LoadQZZP_QZZPJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.QZZP_QZZPJBXX.BCMS);
                 });
-                $("#spanLB").html(xml.Value.QZZP_QZZPJBXX.LB);
+                $("#spanZWLB").html(xml.Value.QZZP_QZZPJBXX.ZWLB);
                 $("#spanMYXZ").html(xml.Value.QZZP_QZZPJBXX.MYXZ);
                 $("#spanXLYQ").html(xml.Value.QZZP_QZZPJBXX.XLYQ);
                 $("#spanGZNX").html(xml.Value.QZZP_QZZPJBXX.GZNX);
@@ -195,7 +250,7 @@ function FB() {
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
-    obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
+    obj = jsonObj.AddJson(obj, "ZWLB", "'" + $("#spanZWLB").html() + "'");
     obj = jsonObj.AddJson(obj, "MYXZ", "'" + $("#spanMYXZ").html() + "'");
     obj = jsonObj.AddJson(obj, "XLYQ", "'" + $("#spanXLYQ").html() + "'");
     obj = jsonObj.AddJson(obj, "GZNX", "'" + $("#spanGZNX").html() + "'");
