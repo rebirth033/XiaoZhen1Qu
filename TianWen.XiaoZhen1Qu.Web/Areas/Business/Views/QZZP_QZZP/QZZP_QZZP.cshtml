@@ -83,7 +83,7 @@
                 <span class="spanSplit">职位信息</span>
                 <em class="emSplit"></em>
             </div>
-            <div id="divZWMC" class="divFWCZ" style="margin-top: 22px; z-index: 998;">
+            <div id="divZWMC" class="divFWCZ" style="margin-top: 22px; z-index: 999;">
                 <div class="divLeft">
                     <span class="required">*</span>
                     <span id="spanPPMC">职位名称</span>
@@ -93,14 +93,24 @@
                     <div id="divZWMCTip"></div>
                 </div>
             </div>
-            <div id="divZWLB" class="divFWCZ" style="margin-top: 22px; z-index: 998;">
+            <div id="divZPZWLB" class="divFWCZ" style="margin-top: 22px; z-index: 999;">
                 <div class="divLeft">
                     <span class="required">*</span>
-                    <span id="spanZWLB">职位类别</span>
+                    <span class="spanFWCZ">职位类别</span>
                 </div>
                 <div class="divRight">
-                    <input id="ZWLB" maxlength="50" column="ZWLB" class="spanFWLX SRK" style="width: 594px; padding: 6px 12px;" type="text" placeholder="请输入职位类别" />
-                    <div id="divZWLBTip"></div>
+                    <div id="divZWLBText" class="spanFWLXOut SRK" style="position: relative;">
+                        <div id="divPPSpan" class="spanFWLXIn" style="border: none; margin-top: 6px;">
+                            <input type="hidden" id="ZWLBID" />
+                            <span id="spanZWLB" class="spanFWQK spanFontColor" style="margin-top: 0">请选择职位类别</span>
+                            <div class="divFWQKArrow"></div>
+                        </div>
+                        <div id="divZWLB" class="div_xzk">
+                            <table class="table_xzk">
+                                
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="divZPRS" class="divFWCZ" style="margin-top: 22px; z-index: 998;">
@@ -111,7 +121,7 @@
                 <div class="divRight">
                     <span id="spanZPRS" class="spanFWLX SRK" style="display: inline-block; width: 150px;">
                         <input class="inputLCFB spanFontColor" id="ZPRS" maxlength="9" column="ZPRS" type="text" style="width: 120px" />
-                        <span class="spanFontColor">元</span>
+                        <span class="spanFontColor">人</span>
                     </span>
                     <div id="divZPRSTip"></div>
                 </div>

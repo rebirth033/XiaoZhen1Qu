@@ -112,6 +112,7 @@ function LoadZWFL() {
                 html += "</ul>";
                 $("#divZWFLText").html(html);
                 $(".img_ZWFL").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                LoadQZZP_QZZPJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -176,8 +177,9 @@ function LoadQZZP_QZZPJBXX() {
                     ue.setContent(xml.Value.QZZP_QZZPJBXX.BCMS);
                 });
                 $("#spanLB").html(xml.Value.QZZP_QZZPJBXX.LB);
-                $("#spanQY").html(xml.Value.QZZP_QZZPJBXX.QY);
-                $("#spanDD").html(xml.Value.QZZP_QZZPJBXX.DD);
+                $("#spanMYXZ").html(xml.Value.QZZP_QZZPJBXX.MYXZ);
+                $("#spanXLYQ").html(xml.Value.QZZP_QZZPJBXX.XLYQ);
+                $("#spanGZNX").html(xml.Value.QZZP_QZZPJBXX.GZNX);
                 LoadPhotos(xml.Value.Photos);
                 SetZWFL(xml.Value.QZZP_QZZPJBXX.ZWFL);
             }
@@ -194,11 +196,10 @@ function FB() {
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
-    obj = jsonObj.AddJson(obj, "PPLS", "'" + $("#spanPPLS").html() + "'");
-    obj = jsonObj.AddJson(obj, "TZJE", "'" + $("#spanTZJE").html() + "'");
-    obj = jsonObj.AddJson(obj, "QGFDS", "'" + $("#spanQGFDS").html() + "'");
-    obj = jsonObj.AddJson(obj, "DDMJ", "'" + $("#spanDDMJ").html() + "'");
-    obj = jsonObj.AddJson(obj, "QZZP", "'" + GetZWFL() + "'");
+    obj = jsonObj.AddJson(obj, "MYXZ", "'" + $("#spanMYXZ").html() + "'");
+    obj = jsonObj.AddJson(obj, "XLYQ", "'" + $("#spanXLYQ").html() + "'");
+    obj = jsonObj.AddJson(obj, "GZNX", "'" + $("#spanGZNX").html() + "'");
+    obj = jsonObj.AddJson(obj, "ZWFL", "'" + GetZWFL() + "'");
 
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
 
