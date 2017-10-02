@@ -138,6 +138,11 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return Json(CommonBLL.LoadQYBySuperName(Session["XZQ"].ToString()));
         }
 
+        public JsonResult LoadQYByXZQ()
+        {
+            return Json(CommonBLL.LoadQYBySuperName(Request["XZQ"].ToString()));
+        }
+
         public JsonResult LoadSQ()
         {
             return Json(CommonBLL.LoadSQByQY(Request["QY"]));

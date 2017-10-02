@@ -12,9 +12,8 @@ namespace TianWen.XiaoZhen1Qu.BLL
 {
     public class QZZP_JZZPBLL : BaseBLL, IQZZP_JZZPBLL
     {
-        public object SaveQZZP_JZZPJBXX(JCXX jcxx, QZZP_JZZPJBXX QZZP_JZZPJBXX, List<PHOTOS> photos)
+        public object SaveQZZP_JZZPJBXX(JCXX jcxx, QZZP_JZZPJBXX QZZP_JZZPJBXX)
         {
-            string[] photoNames = photos.Select(x => x.PHOTONAME).ToArray();
             DirectoryInfo TheFolder = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory + "/Areas/Business/Photos/");
             FileInfo[] fileinfos = TheFolder.GetFiles();
             DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM QZZP_JZZPJBXX WHERE QZZP_JZZPJBXXID='{0}'", QZZP_JZZPJBXX.QZZP_JZZPJBXXID));
@@ -25,31 +24,6 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 {
                     try
                     {
-                        if (photos.Count > 0)
-                        {
-                            //照片全删全插
-                            List<PHOTOS> old_photos = DAO.GetObjectList<PHOTOS>(string.Format("FROM PHOTOS WHERE JCXXID='{0}'", dt.Rows[0]["JCXXID"])).ToList();
-                            foreach (var obj in old_photos)
-                            {
-                                DAO.Remove(obj);
-                            }
-                        }
-                        foreach (var obj in photos)
-                        {
-                            obj.JCXXID = dt.Rows[0]["JCXXID"].ToString();
-                            DAO.Save(obj);
-                        }
-
-                        if (photos.Count > 0)
-                        {
-                            //删除多余照片文件
-                            foreach (FileInfo fileobj in fileinfos)
-                            {
-                                if (!photoNames.Contains(fileobj.Name))
-                                    File.Delete(AppDomain.CurrentDomain.BaseDirectory + "/Areas/Business/Photos/" + fileobj.Name);
-                            }
-                        }
-
                         QZZP_JZZPJBXX.JCXXID = dt.Rows[0]["JCXXID"].ToString();
                         jcxx.JCXXID = dt.Rows[0]["JCXXID"].ToString();
                         DAO.Update(jcxx);
@@ -79,17 +53,6 @@ namespace TianWen.XiaoZhen1Qu.BLL
                         QZZP_JZZPJBXX.JCXXID = jcxx.JCXXID;
                         DAO.Save(jcxx);
                         DAO.Save(QZZP_JZZPJBXX);
-                        //照片全删全插
-                        List<PHOTOS> old_photos = DAO.GetObjectList<PHOTOS>(string.Format("FROM PHOTOS WHERE JCXXID='{0}'", QZZP_JZZPJBXX.JCXXID)).ToList();
-                        foreach (var obj in old_photos)
-                        {
-                            DAO.Remove(obj);
-                        }
-                        foreach (var obj in photos)
-                        {
-                            obj.JCXXID = QZZP_JZZPJBXX.JCXXID;
-                            DAO.Save(obj);
-                        }
                         transaction.Commit();
                         return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, QZZP_JZZPJBXXID = QZZP_JZZPJBXX.QZZP_JZZPJBXXID } };
                     }
@@ -116,7 +79,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 if (QZZP_JZZPJBXX != null)
                 {
                     JCXX jcxx = GetJCXXByID(QZZP_JZZPJBXX.JCXXID);
-                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { QZZP_JZZPJBXX = QZZP_JZZPJBXX, JCXX = jcxx, Photos = GetPhtosByJCXXID(QZZP_JZZPJBXX.JCXXID) } };
+                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { QZZP_JZZPJBXX = QZZP_JZZPJBXX, JCXX = jcxx} };
                 }
                 else
                 {

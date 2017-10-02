@@ -19,11 +19,67 @@ $(document).ready(function () {
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
     LoadTXXX();
     LoadDefault();
+    LoadQZZP_JZZPJBXX();
     BindClick("JZLB");
     BindClick("XZSPDW");
     BindClick("XZJS");
-    LoadQZZP_JZZPJBXX();
+    BindClick("GZCS");
+    BindClick("QY");
+    BindClick("DD");
 });
+//加载品牌标签
+function LoadGZCSBQ() {
+    var arrayObj = new Array('RM', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
+    var html = "";
+    for (var i = 0; i < arrayObj.length; i++) {
+        if (i === 0)
+            html += '<div class="divstep_yx" id="div' + arrayObj[i] + '" style="width:62px;"><span class="spanstep_yx" id="span' + arrayObj[i] + '">' + "热门" + '</span><em class="emstep_yx" id="em' + arrayObj[i] + '"></em></div>';
+        else
+            html += '<div class="divstep_yx" id="div' + arrayObj[i] + '"><span class="spanstep_yx" id="span' + arrayObj[i] + '">' + arrayObj[i] + '</span><em class="emstep_yx" id="em' + arrayObj[i] + '"></em></div>';
+    }
+    $("#div_content_yxbq").html(html);
+    $(".divstep_yx").bind("click", JCBQActive);
+}
+//品牌标签切换
+function JCBQActive() {
+    LoadGZCS("热门城市", this.id);
+}
+//加载品牌名称
+function LoadGZCS(JCLX, JCBQ) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadJCPPXX",
+        dataType: "json",
+        data:
+        {
+            JCLX: JCLX,
+            JCBQ: JCBQ.split("div")[1]
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += '<span class="span_yxmc" onclick="PPXZ(\'' + xml.list[i].CODENAME + '\',\'' + xml.list[i].CODEID + '\')">' + xml.list[i].CODENAME + '</span>';
+                }
+                if (xml.list.length === 0)
+                    html += '<span class="span_yxmc" style=\"width:200px;text-align:left;margin-left:14px;\">该字母下暂无数据</span>';
+                $("#div_content_yxmc").html(html);
+                $("#divPP").css("display", "block");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//选择品牌名称
+function PPXZ(PPMC, PPID) {
+    $("#PPID").val(PPID);
+    $("#spanPP").html(PPMC);
+    $("#divPP").css("display", "none");
+    $("#divCXText").css("display", "");
+    BindClick("CX");
+}
 //显示职位类别
 function ShowJZLBThird() {
     $(this).find(".div_JZLB_third").each(function () {
@@ -101,6 +157,16 @@ function BindClick(type) {
         if (type === "JZLB") {
             LoadJZLB();
         }
+        if (type === "QY") {
+            LoadQY();
+        }
+        if (type === "DD") {
+            LoadDD($("#QYCode").val());
+        }
+        if (type === "GZCS") {
+            LoadGZCSBQ();
+            LoadGZCS("轿车品牌", "divRM");
+        }
     });
 }
 //加载兼职类别
@@ -136,7 +202,6 @@ function SelectJZLB() {
     $("#divJZLB").css("display", "none");
     $("#BT").val($(this)[0].innerHTML);
 }
-
 //加载兼职招聘类别
 function LoadDropdown(type, id) {
     $.ajax({
@@ -226,6 +291,67 @@ function SetZWFL(lbs) {
         }
     }
 }
+//加载区域
+function LoadQY() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadQYByXZQ",
+        dataType: "json",
+        data:
+        {
+            XZQ: "福州市"
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='lidropdown' onclick='SelectQY(this,\"QY\",\"" + xml.list[i].CODE + "\")'>" + RTrim(RTrim(RTrim(xml.list[i].NAME, '市'), '区'), '县') + "</li>";
+                }
+                html += "</ul>";
+                $("#divQY").html(html);
+                $("#divQY").css("display", "block");
+                ActiveStyle("QY");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//加载地段
+function LoadDD() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadSQ",
+        dataType: "json",
+        data:
+        {
+            QY: $("#QYCode").val()
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"DD\")'>" + RTrimStr(xml.list[i].NAME, '街道,镇,林场,管理处') + "</li>";
+                }
+                html += "</ul>";
+                $("#divDD").html(html);
+                $("#divDD").css("display", "block");
+                ActiveStyle("DD");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//选择区域下拉框
+function SelectQY(obj, type, code) {
+    $("#QYCode").val(code);
+    $("#span" + type).html(obj.innerHTML);
+    $("#div" + type).css("display", "none");
+    LoadDD();
+}
 //加载求职招聘_兼职招聘基本信息
 function LoadQZZP_JZZPJBXX() {
     $.ajax({
@@ -251,7 +377,6 @@ function LoadQZZP_JZZPJBXX() {
                 $("#spanXZSPDW").html(xml.Value.QZZP_JZZPJBXX.XZSPDW);
                 $("#spanXZJS").html(xml.Value.QZZP_JZZPJBXX.XZJS);
                 $("#spanJZYXQ").html(xml.Value.QZZP_JZZPJBXX.JZYXQ);
-                LoadPhotos(xml.Value.Photos);
                 SetJZYXQ(xml.Value.QZZP_JZZPJBXX.JZYXQ);
                 if (xml.Value.QZZP_JZZPJBXX.DQJZKSSJ.ToString("yyyy-MM-dd") !== "1-1-1")
                     $("#DQJZKSSJ").val(xml.Value.QZZP_JZZPJBXX.DQJZKSSJ.ToString("yyyy-MM-dd"));
@@ -289,8 +414,7 @@ function FB() {
         data:
         {
             Json: jsonObj.JsonToString(obj),
-            BCMS: ue.getContent(),
-            FWZP: GetPhotoUrls()
+            BCMS: ue.getContent()
         },
         success: function (xml) {
             if (xml.Result === 1) {
