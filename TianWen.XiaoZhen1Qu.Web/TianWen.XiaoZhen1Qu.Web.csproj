@@ -368,6 +368,7 @@
     <Content Include="Areas\Business\Css\QZZP\QZZP_JZZP.css" />
     <Content Include="Areas\Business\Css\QZZP\QZZP_QZZP.css" />
     <Content Include="Areas\Business\Css\RZGL\RZGL.css" />
+    <Content Include="Areas\Business\Css\SHFW\SHFW_SHFW_BJ.css" />
     <Content Include="Areas\Business\Css\WDFB.css" />
     <Content Include="Areas\Business\Css\WDSC.css" />
     <Content Include="Areas\Business\Css\WDXJ\WDXJ_CZ.css" />
@@ -605,6 +606,8 @@
     <Content Include="Areas\Business\Scripts\Business\QZZP\QZZP_QZZP.js" />
     <Content Include="Areas\Business\Scripts\Business\QZZP\QZZP_QZZPYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\RZGL\RZGL.js" />
+    <Content Include="Areas\Business\Scripts\Business\SHFW\SHFW_SHFW_BJ.js" />
+    <Content Include="Areas\Business\Scripts\Business\SHFW\SHFW_SHFW_BJYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\WDFB.js" />
     <Content Include="Areas\Business\Scripts\Business\WDSC.js" />
     <Content Include="Areas\Business\Scripts\Business\WDXJ\WDXJ_CZ.js" />
@@ -963,6 +966,9 @@
     <Content Include="Config\SpringConfig\BLLQZZP.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Config\SpringConfig\BLLSHFW.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Config\SpringConfig\BLLZSJM.xml">
       <SubType>Designer</SubType>
     </Content>
@@ -977,6 +983,7 @@
     <Content Include="Config\SpringConfig\BLLGY.xml" />
     <Content Include="Config\SpringConfig\ControllersPFCG.xml" />
     <Content Include="Config\SpringConfig\ControllersQZZP.xml" />
+    <Content Include="Config\SpringConfig\ControllersSHFW.xml" />
     <Content Include="Config\SpringConfig\ControllersZSJM.xml" />
     <Content Include="Config\SpringConfig\ControllersLR.xml" />
     <Content Include="Config\SpringConfig\ControllersXXYL.xml" />
@@ -1102,6 +1109,7 @@
     <Compile Include="Areas\Business\Controllers\QZZP\QZZP_JZZPController.cs" />
     <Compile Include="Areas\Business\Controllers\QZZP\QZZP_QZZPController.cs" />
     <Compile Include="Areas\Business\Controllers\RZGLController.cs" />
+    <Compile Include="Areas\Business\Controllers\SHFW\SHFW_SHFW_BJController.cs" />
     <Compile Include="Areas\Business\Controllers\WDFBController.cs" />
     <Compile Include="Areas\Business\Controllers\WDSCController.cs" />
     <Compile Include="Areas\Business\Controllers\WDXJController.cs" />
@@ -1339,6 +1347,7 @@
     <Content Include="Areas\Business\Views\PFCG_JXJG\PFCG_JXJG.cshtml" />
     <Content Include="Areas\Business\Views\QZZP_QZZP\QZZP_QZZP.cshtml" />
     <Content Include="Areas\Business\Views\QZZP_JZZP\QZZP_JZZP.cshtml" />
+    <Content Include="Areas\Business\Views\SHFW_SHFW_BJ\SHFW_SHFW_BJ.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

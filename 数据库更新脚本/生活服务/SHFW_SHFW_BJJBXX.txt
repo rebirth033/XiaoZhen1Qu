@@ -1,0 +1,43 @@
+-- Create table
+create table SHFW_SHFW_BJJBXX
+(
+  shfw_shfw_bjjbxxid VARCHAR2(50) not null,
+  jcxxid             VARCHAR2(50),
+  bcms               VARCHAR2(4000),
+  lb                 VARCHAR2(20),
+  qy                 VARCHAR2(20),
+  dd                 VARCHAR2(20),
+  jtdz               VARCHAR2(200),
+  fwqy               VARCHAR2(200)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table SHFW_SHFW_BJJBXX
+  is '生活服务_生活服务_搬家';
+-- Add comments to the columns 
+comment on column SHFW_SHFW_BJJBXX.shfw_shfw_bjjbxxid
+  is '搬家基本信息ID';
+comment on column SHFW_SHFW_BJJBXX.jcxxid
+  is '基础信息ID';
+comment on column SHFW_SHFW_BJJBXX.bcms
+  is '补充描述';
+comment on column SHFW_SHFW_BJJBXX.lb
+  is '类别';
+comment on column SHFW_SHFW_BJJBXX.qy
+  is '区域';
+comment on column SHFW_SHFW_BJJBXX.dd
+  is '地段';
+comment on column SHFW_SHFW_BJJBXX.jtdz
+  is '具体地址';
+comment on column SHFW_SHFW_BJJBXX.fwqy
+  is '服务区域';

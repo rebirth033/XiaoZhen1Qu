@@ -220,7 +220,21 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 return new { Result = EnResultType.Failed, Message = "加载失败" };
             }
         }
-        
+
+        public object LoadCODES_SHFW(string TYPENAME)
+        {
+            try
+            {
+                IList<CODES_SHFW> list = DAO.Repository.GetObjectList<CODES_SHFW>(String.Format("FROM CODES_SHFW WHERE TYPENAME='{0}' ORDER BY CODEORDER", TYPENAME));
+                return new { Result = EnResultType.Success, list = list };
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("error", ex.Message);
+                return new { Result = EnResultType.Failed, Message = "加载失败" };
+            }
+        }
+
         public object LoadQYBySuperName(string SUPERNAME)
         {
             try
