@@ -65,7 +65,6 @@ function LoadXL(LBID, LBNAME) {
                         for (var j = 0; j < xml.list[i].XXLBS.length; j++) {
                             if (j === 5) {
                                 trhtml = "<tr class=\"trXL\"><td class=\"LBFirst\"></td>";
-                                continue;
                             }
                             trhtml += "<td class=\"LB\" onclick=\"FBXX('" + xml.list[i].XXLBS[j].FBYM + "','" + xml.list[i].XXLBS[j].LBID + "')\">" + xml.list[i].XXLBS[j].LBNAME + "</td>";
                             if (j === 4 && j !== (xml.list[i].XXLBS.length - 1)) {
