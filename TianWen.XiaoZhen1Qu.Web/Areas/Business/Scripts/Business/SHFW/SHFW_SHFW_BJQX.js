@@ -18,7 +18,7 @@ $(document).ready(function () {
     BindClick("LB");
     BindClick("QY");
     BindClick("DD");
-    LoadSHFW_SHFW_SHPSJBXX();
+    LoadSHFW_SHFW_BJQXJBXX();
 });
 //描述框focus
 function FYMSFocus() {
@@ -39,7 +39,7 @@ function LoadDefault() {
         ue.setHeight(200);
     });
 }
-//加载生活配送类别
+//加载保洁清洗类别
 function LoadLB() {
     $.ajax({
         type: "POST",
@@ -47,7 +47,7 @@ function LoadLB() {
         dataType: "json",
         data:
         {
-            TYPENAME: "生活配送"
+            TYPENAME: "保洁清洗"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -154,34 +154,34 @@ function BindClick(type) {
         }
     });
 }
-//加载生活服务_生活配送基本信息
-function LoadSHFW_SHFW_SHPSJBXX() {
+//加载生活服务_保洁清洗基本信息
+function LoadSHFW_SHFW_BJQXJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SHFW_SHFW_SHPS/LoadSHFW_SHFW_SHPSJBXX",
+        url: getRootPath() + "/Business/SHFW_SHFW_BJQX/LoadSHFW_SHFW_BJQXJBXX",
         dataType: "json",
         data:
         {
-            SHFW_SHFW_SHPSJBXXID: getUrlParam("SHFW_SHFW_SHPSJBXXID")
+            SHFW_SHFW_BJQXJBXXID: getUrlParam("SHFW_SHFW_BJQXJBXXID")
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var jsonObj = new JsonDB("myTabContent");
-                jsonObj.DisplayFromJson("myTabContent", xml.Value.SHFW_SHFW_SHPSJBXX);
+                jsonObj.DisplayFromJson("myTabContent", xml.Value.SHFW_SHFW_BJQXJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
-                $("#SHFW_SHFW_SHPSJBXXID").val(xml.Value.SHFW_SHFW_SHPSJBXX.SHFW_SHFW_SHPSJBXXID);
+                $("#SHFW_SHFW_BJQXJBXXID").val(xml.Value.SHFW_SHFW_BJQXJBXX.SHFW_SHFW_BJQXJBXXID);
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
-                    ue.setContent(xml.Value.SHFW_SHFW_SHPSJBXX.BCMS);
+                    ue.setContent(xml.Value.SHFW_SHFW_BJQXJBXX.BCMS);
                 });
-                $("#spanLB").html(xml.Value.SHFW_SHFW_SHPSJBXX.LB);
-                $("#spanQY").html(xml.Value.SHFW_SHFW_SHPSJBXX.QY);
-                $("#spanDD").html(xml.Value.SHFW_SHFW_SHPSJBXX.DD);
+                $("#spanLB").html(xml.Value.SHFW_SHFW_BJQXJBXX.LB);
+                $("#spanQY").html(xml.Value.SHFW_SHFW_BJQXJBXX.QY);
+                $("#spanDD").html(xml.Value.SHFW_SHFW_BJQXJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
-                if (xml.Value.SHFW_SHFW_SHPSJBXX.LB.indexOf("空气净化") !== -1 || xml.Value.SHFW_SHFW_SHPSJBXX.LB.indexOf("开荒保洁") !== -1 || xml.Value.SHFW_SHFW_SHPSJBXX.LB.indexOf("物业保洁") !== -1 || xml.Value.SHFW_SHFW_SHPSJBXX.LB.indexOf("沙发清洗") !== -1 || xml.Value.SHFW_SHFW_SHPSJBXX.LB.indexOf("地毯清洗") !== -1
-                    || xml.Value.SHFW_SHFW_SHPSJBXX.LB.indexOf("地板打蜡") !== -1 || xml.Value.SHFW_SHFW_SHPSJBXX.LB.indexOf("石材翻新/养护") !== -1 || xml.Value.SHFW_SHFW_SHPSJBXX.LB.indexOf("除虫除蚁") !== -1 || xml.Value.SHFW_SHFW_SHPSJBXX.LB.indexOf("高空清洗") !== -1) {
-                    LoadXL(xml.Value.SHFW_SHFW_SHPSJBXX.LB, xml.Value.SHFW_SHFW_SHPSJBXX.XL);
+                if (xml.Value.SHFW_SHFW_BJQXJBXX.LB.indexOf("空气净化") !== -1 || xml.Value.SHFW_SHFW_BJQXJBXX.LB.indexOf("开荒保洁") !== -1 || xml.Value.SHFW_SHFW_BJQXJBXX.LB.indexOf("物业保洁") !== -1 || xml.Value.SHFW_SHFW_BJQXJBXX.LB.indexOf("沙发清洗") !== -1 || xml.Value.SHFW_SHFW_BJQXJBXX.LB.indexOf("地毯清洗") !== -1
+                    || xml.Value.SHFW_SHFW_BJQXJBXX.LB.indexOf("地板打蜡") !== -1 || xml.Value.SHFW_SHFW_BJQXJBXX.LB.indexOf("石材翻新/养护") !== -1 || xml.Value.SHFW_SHFW_BJQXJBXX.LB.indexOf("除虫除蚁") !== -1 || xml.Value.SHFW_SHFW_BJQXJBXX.LB.indexOf("高空清洗") !== -1) {
+                    LoadXL(xml.Value.SHFW_SHFW_BJQXJBXX.LB, xml.Value.SHFW_SHFW_BJQXJBXX.XL);
                 }
             }
         },
@@ -202,12 +202,12 @@ function FB() {
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "XL", "'" + GetXL() + "'");
 
-    if (getUrlParam("SHFW_SHFW_SHPSJBXXID") !== null)
-        obj = jsonObj.AddJson(obj, "SHFW_SHFW_SHPSJBXXID", "'" + getUrlParam("SHFW_SHFW_SHPSJBXXID") + "'");
+    if (getUrlParam("SHFW_SHFW_BJQXJBXXID") !== null)
+        obj = jsonObj.AddJson(obj, "SHFW_SHFW_BJQXJBXXID", "'" + getUrlParam("SHFW_SHFW_BJQXJBXXID") + "'");
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SHFW_SHFW_SHPS/FB",
+        url: getRootPath() + "/Business/SHFW_SHFW_BJQX/FB",
         dataType: "json",
         data:
         {
