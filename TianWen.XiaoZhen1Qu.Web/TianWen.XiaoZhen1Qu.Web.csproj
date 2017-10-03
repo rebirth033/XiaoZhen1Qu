@@ -372,6 +372,7 @@
     <Content Include="Areas\Business\Css\SHFW\SHFW_SHFW_BJQX.css" />
     <Content Include="Areas\Business\Css\SHFW\SHFW_SHFW_BMYS.css" />
     <Content Include="Areas\Business\Css\SHFW\SHFW_SHFW_BZMD.css" />
+    <Content Include="Areas\Business\Css\SHFW\SHFW_SHFW_DNWX.css" />
     <Content Include="Areas\Business\Css\SHFW\SHFW_SHFW_GDSTQL.css" />
     <Content Include="Areas\Business\Css\SHFW\SHFW_SHFW_JDWX.css" />
     <Content Include="Areas\Business\Css\SHFW\SHFW_SHFW_KSHSXS.css" />
@@ -621,6 +622,8 @@
     <Content Include="Areas\Business\Scripts\Business\SHFW\SHFW_SHFW_BMYSYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\SHFW\SHFW_SHFW_BZMD.js" />
     <Content Include="Areas\Business\Scripts\Business\SHFW\SHFW_SHFW_BZMDYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\SHFW\SHFW_SHFW_DNWX.js" />
+    <Content Include="Areas\Business\Scripts\Business\SHFW\SHFW_SHFW_DNWXYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\SHFW\SHFW_SHFW_GDSTQL.js" />
     <Content Include="Areas\Business\Scripts\Business\SHFW\SHFW_SHFW_GDSTQLYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\SHFW\SHFW_SHFW_JDWX.js" />
@@ -1134,6 +1137,7 @@
     <Compile Include="Areas\Business\Controllers\SHFW\SHFW_SHFW_BJQXController.cs" />
     <Compile Include="Areas\Business\Controllers\SHFW\SHFW_SHFW_BMYSController.cs" />
     <Compile Include="Areas\Business\Controllers\SHFW\SHFW_SHFW_BZMDController.cs" />
+    <Compile Include="Areas\Business\Controllers\SHFW\SHFW_SHFW_DNWXController.cs" />
     <Compile Include="Areas\Business\Controllers\SHFW\SHFW_SHFW_GDSTQLController.cs" />
     <Compile Include="Areas\Business\Controllers\SHFW\SHFW_SHFW_JDWXController.cs" />
     <Compile Include="Areas\Business\Controllers\SHFW\SHFW_SHFW_KSHSXSController.cs" />
@@ -1383,6 +1387,7 @@
     <Content Include="Areas\Business\Views\SHFW_SHFW_GDSTQL\SHFW_SHFW_GDSTQL.cshtml" />
     <Content Include="Areas\Business\Views\SHFW_SHFW_BZMD\SHFW_SHFW_BZMD.cshtml" />
     <Content Include="Areas\Business\Views\SHFW_SHFW_JDWX\SHFW_SHFW_JDWX.cshtml" />
+    <Content Include="Areas\Business\Views\SHFW_SHFW_DNWX\SHFW_SHFW_DNWX.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
