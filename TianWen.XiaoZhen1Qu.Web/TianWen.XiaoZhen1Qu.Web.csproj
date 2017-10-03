@@ -369,6 +369,8 @@
     <Content Include="Areas\Business\Css\QZZP\QZZP_QZZP.css" />
     <Content Include="Areas\Business\Css\RZGL\RZGL.css" />
     <Content Include="Areas\Business\Css\SHFW\SHFW_SHFW_BJ.css" />
+    <Content Include="Areas\Business\Css\SHFW\SHFW_SHFW_BJQX.css" />
+    <Content Include="Areas\Business\Css\SHFW\SHFW_SHFW_BMYS.css" />
     <Content Include="Areas\Business\Css\WDFB.css" />
     <Content Include="Areas\Business\Css\WDSC.css" />
     <Content Include="Areas\Business\Css\WDXJ\WDXJ_CZ.css" />
@@ -607,7 +609,11 @@
     <Content Include="Areas\Business\Scripts\Business\QZZP\QZZP_QZZPYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\RZGL\RZGL.js" />
     <Content Include="Areas\Business\Scripts\Business\SHFW\SHFW_SHFW_BJ.js" />
+    <Content Include="Areas\Business\Scripts\Business\SHFW\SHFW_SHFW_BJQX.js" />
+    <Content Include="Areas\Business\Scripts\Business\SHFW\SHFW_SHFW_BJQXYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\SHFW\SHFW_SHFW_BJYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\SHFW\SHFW_SHFW_BMYS.js" />
+    <Content Include="Areas\Business\Scripts\Business\SHFW\SHFW_SHFW_BMYSYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\WDFB.js" />
     <Content Include="Areas\Business\Scripts\Business\WDSC.js" />
     <Content Include="Areas\Business\Scripts\Business\WDXJ\WDXJ_CZ.js" />
@@ -1110,6 +1116,8 @@
     <Compile Include="Areas\Business\Controllers\QZZP\QZZP_QZZPController.cs" />
     <Compile Include="Areas\Business\Controllers\RZGLController.cs" />
     <Compile Include="Areas\Business\Controllers\SHFW\SHFW_SHFW_BJController.cs" />
+    <Compile Include="Areas\Business\Controllers\SHFW\SHFW_SHFW_BJQXController.cs" />
+    <Compile Include="Areas\Business\Controllers\SHFW\SHFW_SHFW_BMYSController.cs" />
     <Compile Include="Areas\Business\Controllers\WDFBController.cs" />
     <Compile Include="Areas\Business\Controllers\WDSCController.cs" />
     <Compile Include="Areas\Business\Controllers\WDXJController.cs" />
@@ -1348,6 +1356,8 @@
     <Content Include="Areas\Business\Views\QZZP_QZZP\QZZP_QZZP.cshtml" />
     <Content Include="Areas\Business\Views\QZZP_JZZP\QZZP_JZZP.cshtml" />
     <Content Include="Areas\Business\Views\SHFW_SHFW_BJ\SHFW_SHFW_BJ.cshtml" />
+    <Content Include="Areas\Business\Views\SHFW_SHFW_BMYS\SHFW_SHFW_BMYS.cshtml" />
+    <Content Include="Areas\Business\Views\SHFW_SHFW_BJQX\SHFW_SHFW_BJQX.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

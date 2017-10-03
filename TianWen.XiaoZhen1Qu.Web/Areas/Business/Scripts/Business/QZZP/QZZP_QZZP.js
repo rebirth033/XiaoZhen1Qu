@@ -175,13 +175,6 @@ function LoadZWFL() {
         }
     });
 }
-//选择全职招聘小类
-function SelectZWFL(obj) {
-    if ($(obj).find("img").attr("src").indexOf("blue") !== -1)
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-    else
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-}
 //选择职位福利
 function SelectZWFL(obj) {
     if ($(obj).find("img").attr("src").indexOf("blue") !== -1)
