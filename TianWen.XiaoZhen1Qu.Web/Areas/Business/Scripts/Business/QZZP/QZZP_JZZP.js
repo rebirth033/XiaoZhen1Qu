@@ -155,6 +155,22 @@ function SetJZYXQ(JZYXQ) {
         $("#divDQJZSJ").css("display", "none");
     }
 }
+//获取兼职时间
+function GetJZSJ() {
+    var jzsj = "";
+    $(".img_jzsj").each(function() {
+       if($(this).attr("src").indexOf("blue")!== -1)
+        jzsj += this.id + ",";
+    });
+    return RTrim(jzsj, ',');
+}
+//设置兼职时间
+function SetJZSJ(jzsj) {
+    $(".img_jzsj").each(function () {
+        if (jzsj.indexOf(this.id) !== -1)
+            $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
+    });
+}
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
@@ -391,6 +407,7 @@ function LoadQZZP_JZZPJBXX() {
                 $("#spanQY").html(xml.Value.QZZP_JZZPJBXX.QY);
                 $("#spanDD").html(xml.Value.QZZP_JZZPJBXX.DD);
                 SetJZYXQ(xml.Value.QZZP_JZZPJBXX.JZYXQ);
+                SetJZSJ(xml.Value.QZZP_JZZPJBXX.JZSJ);
                 if (xml.Value.QZZP_JZZPJBXX.DQJZKSSJ.ToString("yyyy-MM-dd") !== "1-1-1")
                     $("#DQJZKSSJ").val(xml.Value.QZZP_JZZPJBXX.DQJZKSSJ.ToString("yyyy-MM-dd"));
                 if (xml.Value.QZZP_JZZPJBXX.DQJZJSSJ.ToString("yyyy-MM-dd") !== "1-1-1")
@@ -415,6 +432,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "JZYXQ", "'" + GetJZYXQ() + "'");
+    obj = jsonObj.AddJson(obj, "JZSJ", "'" + GetJZSJ() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     if ($("#DQJZKSSJ").val() !== "")
         obj = jsonObj.AddJson(obj, "DQJZKSSJ", "'" + $("#DQJZKSSJ").val() + "'");
