@@ -25,6 +25,11 @@
       <ref object="SHFW_SHFW_SHPSBLL"/>
     </property>
   </object>
+  <object id="SHFW_SHFW_QMFSSMController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SHFW_SHFW_QMFSSMController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="SHFW_SHFW_QMFSSMBLL">
+      <ref object="SHFW_SHFW_QMFSSMBLL"/>
+    </property>
+  </object>
   <object id="SHFW_SHFW_GDSTQLController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SHFW_SHFW_GDSTQLController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="SHFW_SHFW_GDSTQLBLL">
       <ref object="SHFW_SHFW_GDSTQLBLL"/>
@@ -35,24 +40,29 @@
       <ref object="SHFW_SHFW_BZMDBLL"/>
     </property>
   </object>
-  <object id="SHFW_SHFW_JDWXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SHFW_SHFW_JDWXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
-    <property name="SHFW_SHFW_JDWXBLL">
-      <ref object="SHFW_SHFW_JDWXBLL"/>
+  <object id="SHFW_WXFW_JDWXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SHFW_WXFW_JDWXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="SHFW_WXFW_JDWXBLL">
+      <ref object="SHFW_WXFW_JDWXBLL"/>
     </property>
   </object>
-  <object id="SHFW_SHFW_DNWXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SHFW_SHFW_DNWXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
-    <property name="SHFW_SHFW_DNWXBLL">
-      <ref object="SHFW_SHFW_DNWXBLL"/>
+  <object id="SHFW_WXFW_DNWXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SHFW_WXFW_DNWXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="SHFW_WXFW_DNWXBLL">
+      <ref object="SHFW_WXFW_DNWXBLL"/>
     </property>
   </object>
-  <object id="SHFW_SHFW_FWWXDKController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SHFW_SHFW_FWWXDKController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
-    <property name="SHFW_SHFW_FWWXDKBLL">
-      <ref object="SHFW_SHFW_FWWXDKBLL"/>
+  <object id="SHFW_WXFW_FWWXDKController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SHFW_WXFW_FWWXDKController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="SHFW_WXFW_FWWXDKBLL">
+      <ref object="SHFW_WXFW_FWWXDKBLL"/>
     </property>
   </object>
-  <object id="SHFW_SHFW_JJWXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SHFW_SHFW_JJWXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
-    <property name="SHFW_SHFW_JJWXBLL">
-      <ref object="SHFW_SHFW_JJWXBLL"/>
+  <object id="SHFW_WXFW_JJWXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SHFW_WXFW_JJWXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="SHFW_WXFW_JJWXBLL">
+      <ref object="SHFW_WXFW_JJWXBLL"/>
+    </property>
+  </object>
+  <object id="SHFW_WXFW_SJSMWXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SHFW_WXFW_SJSMWXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="SHFW_WXFW_SJSMWXBLL">
+      <ref object="SHFW_WXFW_SJSMWXBLL"/>
     </property>
   </object>
 </objects>

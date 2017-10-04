@@ -25,6 +25,11 @@
       <ref object="DAOBase"/>
     </property>
   </object>
+  <object id="SHFW_SHFW_QMFSSMBLL" type="TianWen.XiaoZhen1Qu.BLL.SHFW_SHFW_QMFSSMBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
   <object id="SHFW_SHFW_GDSTQLBLL" type="TianWen.XiaoZhen1Qu.BLL.SHFW_SHFW_GDSTQLBLL,TianWen.XiaoZhen1Qu">
     <property name="DAO">
       <ref object="DAOBase"/>
@@ -35,22 +40,27 @@
       <ref object="DAOBase"/>
     </property>
   </object>
-  <object id="SHFW_SHFW_JDWXBLL" type="TianWen.XiaoZhen1Qu.BLL.SHFW_SHFW_JDWXBLL,TianWen.XiaoZhen1Qu">
+  <object id="SHFW_WXFW_JDWXBLL" type="TianWen.XiaoZhen1Qu.BLL.SHFW_WXFW_JDWXBLL,TianWen.XiaoZhen1Qu">
     <property name="DAO">
       <ref object="DAOBase"/>
     </property>
   </object>
-  <object id="SHFW_SHFW_DNWXBLL" type="TianWen.XiaoZhen1Qu.BLL.SHFW_SHFW_DNWXBLL,TianWen.XiaoZhen1Qu">
+  <object id="SHFW_WXFW_DNWXBLL" type="TianWen.XiaoZhen1Qu.BLL.SHFW_WXFW_DNWXBLL,TianWen.XiaoZhen1Qu">
     <property name="DAO">
       <ref object="DAOBase"/>
     </property>
   </object>
-  <object id="SHFW_SHFW_FWWXDKBLL" type="TianWen.XiaoZhen1Qu.BLL.SHFW_SHFW_FWWXDKBLL,TianWen.XiaoZhen1Qu">
+  <object id="SHFW_WXFW_FWWXDKBLL" type="TianWen.XiaoZhen1Qu.BLL.SHFW_WXFW_FWWXDKBLL,TianWen.XiaoZhen1Qu">
     <property name="DAO">
       <ref object="DAOBase"/>
     </property>
   </object>
-  <object id="SHFW_SHFW_JJWXBLL" type="TianWen.XiaoZhen1Qu.BLL.SHFW_SHFW_JJWXBLL,TianWen.XiaoZhen1Qu">
+  <object id="SHFW_WXFW_JJWXBLL" type="TianWen.XiaoZhen1Qu.BLL.SHFW_WXFW_JJWXBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SHFW_WXFW_SJSMWXBLL" type="TianWen.XiaoZhen1Qu.BLL.SHFW_WXFW_SJSMWXBLL,TianWen.XiaoZhen1Qu">
     <property name="DAO">
       <ref object="DAOBase"/>
     </property>
