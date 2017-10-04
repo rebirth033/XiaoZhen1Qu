@@ -135,6 +135,7 @@
     <Compile Include="BLL\QZZP\QZZP_JZZPBLL.cs" />
     <Compile Include="BLL\QZZP\QZZP_QZZPBLL.cs" />
     <Compile Include="BLL\RZGLBLL.cs" />
+    <Compile Include="BLL\SHFW\SHFW_CLFW_ZCBLL.cs" />
     <Compile Include="BLL\SHFW\SHFW_SHFW_BJBLL.cs" />
     <Compile Include="BLL\SHFW\SHFW_SHFW_BJQXBLL.cs" />
     <Compile Include="BLL\SHFW\SHFW_SHFW_BMYSBLL.cs" />

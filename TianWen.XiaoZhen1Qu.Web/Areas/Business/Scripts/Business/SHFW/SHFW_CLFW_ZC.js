@@ -18,7 +18,7 @@ $(document).ready(function () {
     BindClick("LB");
     BindClick("QY");
     BindClick("DD");
-    LoadSHFW_WXFW_SJSMWXJBXX();
+    LoadSHFW_CLFW_ZCJBXX();
 });
 //描述框focus
 function FYMSFocus() {
@@ -39,7 +39,7 @@ function LoadDefault() {
         ue.setHeight(200);
     });
 }
-//加载手机/数码维修类别
+//加载租车类别
 function LoadLB() {
     $.ajax({
         type: "POST",
@@ -47,7 +47,7 @@ function LoadLB() {
         dataType: "json",
         data:
         {
-            TYPENAME: "手机/数码维修"
+            TYPENAME: "租车"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -154,34 +154,35 @@ function BindClick(type) {
         }
     });
 }
-//加载生活服务_手机/数码维修基本信息
-function LoadSHFW_WXFW_SJSMWXJBXX() {
+//加载生活服务_租车基本信息
+function LoadSHFW_CLFW_ZCJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SHFW_WXFW_SJSMWX/LoadSHFW_WXFW_SJSMWXJBXX",
+        url: getRootPath() + "/Business/SHFW_CLFW_ZC/LoadSHFW_CLFW_ZCJBXX",
         dataType: "json",
         data:
         {
-            SHFW_WXFW_SJSMWXJBXXID: getUrlParam("SHFW_WXFW_SJSMWXJBXXID")
+            SHFW_CLFW_ZCJBXXID: getUrlParam("SHFW_CLFW_ZCJBXXID")
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var jsonObj = new JsonDB("myTabContent");
-                jsonObj.DisplayFromJson("myTabContent", xml.Value.SHFW_WXFW_SJSMWXJBXX);
+                jsonObj.DisplayFromJson("myTabContent", xml.Value.SHFW_CLFW_ZCJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
-                $("#SHFW_WXFW_SJSMWXJBXXID").val(xml.Value.SHFW_WXFW_SJSMWXJBXX.SHFW_WXFW_SJSMWXJBXXID);
+                $("#SHFW_CLFW_ZCJBXXID").val(xml.Value.SHFW_CLFW_ZCJBXX.SHFW_CLFW_ZCJBXXID);
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
-                    ue.setContent(xml.Value.SHFW_WXFW_SJSMWXJBXX.BCMS);
+                    ue.setContent(xml.Value.SHFW_CLFW_ZCJBXX.BCMS);
                 });
-                $("#spanLB").html(xml.Value.SHFW_WXFW_SJSMWXJBXX.LB);
-                $("#spanQY").html(xml.Value.SHFW_WXFW_SJSMWXJBXX.QY);
-                $("#spanDD").html(xml.Value.SHFW_WXFW_SJSMWXJBXX.DD);
+                $("#spanLB").html(xml.Value.SHFW_CLFW_ZCJBXX.LB);
+                $("#spanQY").html(xml.Value.SHFW_CLFW_ZCJBXX.QY);
+                $("#spanDD").html(xml.Value.SHFW_CLFW_ZCJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
-                if (xml.Value.SHFW_WXFW_SJSMWXJBXX.LB.indexOf("手机维修") !== -1 || xml.Value.SHFW_WXFW_SJSMWXJBXX.LB.indexOf("数码相机维修") !== -1 || xml.Value.SHFW_WXFW_SJSMWXJBXX.LB.indexOf("摄像机维修") !== -1
-                    || xml.Value.SHFW_WXFW_SJSMWXJBXX.LB.indexOf("单反相机/单反配件") !== -1 || xml.Value.SHFW_WXFW_SJSMWXJBXX.LB.indexOf("单电/微单相机") !== -1) {
-                    LoadXL(xml.Value.SHFW_WXFW_SJSMWXJBXX.LB, xml.Value.SHFW_WXFW_SJSMWXJBXX.XL);
+                if (xml.Value.SHFW_CLFW_ZCJBXX.LB.indexOf("大巴(30座以上)") !== -1 || xml.Value.SHFW_CLFW_ZCJBXX.LB.indexOf("中巴(30座以下)") !== -1 || xml.Value.SHFW_CLFW_ZCJBXX.LB.indexOf("面包车") !== -1
+                    || xml.Value.SHFW_CLFW_ZCJBXX.LB.indexOf("MPV(商务车)") !== -1 || xml.Value.SHFW_CLFW_ZCJBXX.LB.indexOf("豪华轿车") !== -1 || xml.Value.SHFW_CLFW_ZCJBXX.LB.indexOf("普通轿车") !== -1
+                    || xml.Value.SHFW_CLFW_ZCJBXX.LB.indexOf("跑车") !== -1 || xml.Value.SHFW_CLFW_ZCJBXX.LB.indexOf("SUV(越野车)") !== -1) {
+                    LoadXL(xml.Value.SHFW_CLFW_ZCJBXX.LB, xml.Value.SHFW_CLFW_ZCJBXX.XL);
                 }
             }
         },
@@ -202,12 +203,12 @@ function FB() {
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "XL", "'" + GetXL() + "'");
 
-    if (getUrlParam("SHFW_WXFW_SJSMWXJBXXID") !== null)
-        obj = jsonObj.AddJson(obj, "SHFW_WXFW_SJSMWXJBXXID", "'" + getUrlParam("SHFW_WXFW_SJSMWXJBXXID") + "'");
+    if (getUrlParam("SHFW_CLFW_ZCJBXXID") !== null)
+        obj = jsonObj.AddJson(obj, "SHFW_CLFW_ZCJBXXID", "'" + getUrlParam("SHFW_CLFW_ZCJBXXID") + "'");
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SHFW_WXFW_SJSMWX/FB",
+        url: getRootPath() + "/Business/SHFW_CLFW_ZC/FB",
         dataType: "json",
         data:
         {

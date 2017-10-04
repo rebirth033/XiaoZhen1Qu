@@ -368,6 +368,7 @@
     <Content Include="Areas\Business\Css\QZZP\QZZP_JZZP.css" />
     <Content Include="Areas\Business\Css\QZZP\QZZP_QZZP.css" />
     <Content Include="Areas\Business\Css\RZGL\RZGL.css" />
+    <Content Include="Areas\Business\Css\SHFW\SHFW_CLFW_ZC.css" />
     <Content Include="Areas\Business\Css\SHFW\SHFW_SHFW_BJ.css" />
     <Content Include="Areas\Business\Css\SHFW\SHFW_SHFW_BJQX.css" />
     <Content Include="Areas\Business\Css\SHFW\SHFW_SHFW_BMYS.css" />
@@ -618,6 +619,8 @@
     <Content Include="Areas\Business\Scripts\Business\QZZP\QZZP_QZZP.js" />
     <Content Include="Areas\Business\Scripts\Business\QZZP\QZZP_QZZPYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\RZGL\RZGL.js" />
+    <Content Include="Areas\Business\Scripts\Business\SHFW\SHFW_CLFW_ZC.js" />
+    <Content Include="Areas\Business\Scripts\Business\SHFW\SHFW_CLFW_ZCYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\SHFW\SHFW_SHFW_BJ.js" />
     <Content Include="Areas\Business\Scripts\Business\SHFW\SHFW_SHFW_BJQX.js" />
     <Content Include="Areas\Business\Scripts\Business\SHFW\SHFW_SHFW_BJQXYZ.js" />
@@ -1145,6 +1148,7 @@
     <Compile Include="Areas\Business\Controllers\QZZP\QZZP_JZZPController.cs" />
     <Compile Include="Areas\Business\Controllers\QZZP\QZZP_QZZPController.cs" />
     <Compile Include="Areas\Business\Controllers\RZGLController.cs" />
+    <Compile Include="Areas\Business\Controllers\SHFW\SHFW_CLFW_ZCController.cs" />
     <Compile Include="Areas\Business\Controllers\SHFW\SHFW_SHFW_BJController.cs" />
     <Compile Include="Areas\Business\Controllers\SHFW\SHFW_SHFW_BJQXController.cs" />
     <Compile Include="Areas\Business\Controllers\SHFW\SHFW_SHFW_BMYSController.cs" />
@@ -1408,6 +1412,7 @@
     <Content Include="Areas\Business\Views\SHFW_WXFW_JJWX\SHFW_WXFW_JJWX.cshtml" />
     <Content Include="Areas\Business\Views\SHFW_WXFW_SJSMWX\SHFW_WXFW_SJSMWX.cshtml" />
     <Content Include="Areas\Business\Views\SHFW_SHFW_QMFSSM\SHFW_SHFW_QMFSSM.cshtml" />
+    <Content Include="Areas\Business\Views\SHFW_CLFW_ZC\SHFW_CLFW_ZC.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
