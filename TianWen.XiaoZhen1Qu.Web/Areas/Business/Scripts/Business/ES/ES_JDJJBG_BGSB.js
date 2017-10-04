@@ -56,6 +56,24 @@ function SJZRSelect() {
     $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
     $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
 }
+//获取供求
+function GetGQ() {
+    if ($("#imgGRZR").attr("src").indexOf("blue") !== -1)
+        return "0";
+    else
+        return "1";
+}
+//设置供求
+function SetGQ(gq) {
+    if (gq === 0) {
+        $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+        $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+    }
+    else {
+        $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+        $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+    }
+}
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
@@ -200,24 +218,6 @@ function SelectPBPP(obj, type, code) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
     LoadPBXH(code);
-}
-//获取供求
-function GetGQ() {
-    if ($("#imgGRZR").attr("src").indexOf("blue") !== -1)
-        return "0";
-    else
-        return "1";
-}
-//设置供求
-function SetGQ(gq) {
-    if (gq === 0) {
-        $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-        $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    }
-    else {
-        $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-        $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    }
 }
 //加载二手_手机数码_家居日用基本信息
 function LoadES_JDJJBG_BGSBJBXX() {

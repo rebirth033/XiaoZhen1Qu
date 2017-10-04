@@ -75,4 +75,9 @@
       <ref object="SHFW_CLFW_DJSJWPBLL"/>
     </property>
   </object>
+  <object id="SHFW_CLFW_JXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SHFW_CLFW_JXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="SHFW_CLFW_JXBLL">
+      <ref object="SHFW_CLFW_JXBLL"/>
+    </property>
+  </object>
 </objects>
