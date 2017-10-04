@@ -1,0 +1,37 @@
+-- Create table
+create table SHFW_CLFW_DJSJWPJBXX
+(
+  shfw_clfw_djsjwpjbxxid VARCHAR2(50) not null,
+  jcxxid                 VARCHAR2(50),
+  bcms                   VARCHAR2(4000),
+  lb                     VARCHAR2(200),
+  jg                     VARCHAR2(20),
+  fwqy                   VARCHAR2(200)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table SHFW_CLFW_DJSJWPJBXX
+  is '生活服务_车辆服务_代驾/司机外派';
+-- Add comments to the columns 
+comment on column SHFW_CLFW_DJSJWPJBXX.shfw_clfw_djsjwpjbxxid
+  is '车辆服务_代驾/司机外派基本信息ID';
+comment on column SHFW_CLFW_DJSJWPJBXX.jcxxid
+  is '基础信息ID';
+comment on column SHFW_CLFW_DJSJWPJBXX.bcms
+  is '补充描述';
+comment on column SHFW_CLFW_DJSJWPJBXX.lb
+  is '类别';
+comment on column SHFW_CLFW_DJSJWPJBXX.jg
+  is '价格';
+comment on column SHFW_CLFW_DJSJWPJBXX.fwqy
+  is '服务区域';
