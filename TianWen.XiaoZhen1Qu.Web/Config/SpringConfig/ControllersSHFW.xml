@@ -90,4 +90,9 @@
       <ref object="SHFW_CLFW_QCWXBYBLL"/>
     </property>
   </object>
+  <object id="SHFW_CLFW_GHSPNJYCController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SHFW_CLFW_GHSPNJYCController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="SHFW_CLFW_GHSPNJYCBLL">
+      <ref object="SHFW_CLFW_GHSPNJYCBLL"/>
+    </property>
+  </object>
 </objects>
