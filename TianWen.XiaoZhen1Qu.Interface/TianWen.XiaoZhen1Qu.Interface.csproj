@@ -150,6 +150,7 @@
     <Compile Include="SHFW\ISHFW_SHFW_FWWXDKBLL.cs" />
     <Compile Include="SHFW\ISHFW_SHFW_GDSTQLBLL.cs" />
     <Compile Include="SHFW\ISHFW_SHFW_JDWXBLL.cs" />
+    <Compile Include="SHFW\ISHFW_SHFW_JJWXBLL.cs" />
     <Compile Include="SHFW\ISHFW_SHFW_KSHSXSBLL.cs" />
     <Compile Include="SHFW\ISHFW_SHFW_SHPSBLL.cs" />
     <Compile Include="XXYL\IXXYL_DIYSGFBLL.cs" />

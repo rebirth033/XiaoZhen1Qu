@@ -143,6 +143,7 @@
     <Compile Include="BLL\SHFW\SHFW_SHFW_FWWXDKBLL.cs" />
     <Compile Include="BLL\SHFW\SHFW_SHFW_GDSTQLBLL.cs" />
     <Compile Include="BLL\SHFW\SHFW_SHFW_JDWXBLL.cs" />
+    <Compile Include="BLL\SHFW\SHFW_SHFW_JJWXBLL.cs" />
     <Compile Include="BLL\SHFW\SHFW_SHFW_KSHSXSBLL.cs" />
     <Compile Include="BLL\SHFW\SHFW_SHFW_SHPSBLL.cs" />
     <Compile Include="BLL\WDFBBLL.cs" />
