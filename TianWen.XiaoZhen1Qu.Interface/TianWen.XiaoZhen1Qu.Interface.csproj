@@ -144,6 +144,8 @@
     <Compile Include="QZZP\IQZZP_QZZPBLL.cs" />
     <Compile Include="SHFW\ISHFW_CLFW_DJSJWPBLL.cs" />
     <Compile Include="SHFW\ISHFW_CLFW_JXBLL.cs" />
+    <Compile Include="SHFW\ISHFW_CLFW_QCPLBLL.cs" />
+    <Compile Include="SHFW\ISHFW_CLFW_QCWXBYBLL.cs" />
     <Compile Include="SHFW\ISHFW_CLFW_ZCBLL.cs" />
     <Compile Include="SHFW\ISHFW_SHFW_BJBLL.cs" />
     <Compile Include="SHFW\ISHFW_SHFW_BJQXBLL.cs" />

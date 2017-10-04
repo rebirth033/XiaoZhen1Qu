@@ -1,0 +1,43 @@
+-- Create table
+create table SHFW_CLFW_QCPLJBXX
+(
+  shfw_clfw_qcpljbxxid VARCHAR2(50) not null,
+  jcxxid               VARCHAR2(50),
+  bcms                 VARCHAR2(4000),
+  jg                   VARCHAR2(200),
+  fwqy                 VARCHAR2(200),
+  qy                   VARCHAR2(20),
+  dd                   VARCHAR2(20),
+  jtdz                 VARCHAR2(100)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table SHFW_CLFW_QCPLJBXX
+  is '生活服务_车辆服务_汽车陪练';
+-- Add comments to the columns 
+comment on column SHFW_CLFW_QCPLJBXX.shfw_clfw_qcpljbxxid
+  is '车辆服务_汽车陪练基本信息ID';
+comment on column SHFW_CLFW_QCPLJBXX.jcxxid
+  is '基础信息ID';
+comment on column SHFW_CLFW_QCPLJBXX.bcms
+  is '补充描述';
+comment on column SHFW_CLFW_QCPLJBXX.jg
+  is '价格';
+comment on column SHFW_CLFW_QCPLJBXX.fwqy
+  is '服务区域';
+comment on column SHFW_CLFW_QCPLJBXX.qy
+  is '区域';
+comment on column SHFW_CLFW_QCPLJBXX.dd
+  is '地段';
+comment on column SHFW_CLFW_QCPLJBXX.jtdz
+  is '具体地址';

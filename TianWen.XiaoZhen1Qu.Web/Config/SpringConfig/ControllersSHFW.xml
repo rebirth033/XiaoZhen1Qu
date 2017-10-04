@@ -80,4 +80,14 @@
       <ref object="SHFW_CLFW_JXBLL"/>
     </property>
   </object>
+  <object id="SHFW_CLFW_QCPLController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SHFW_CLFW_QCPLController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="SHFW_CLFW_QCPLBLL">
+      <ref object="SHFW_CLFW_QCPLBLL"/>
+    </property>
+  </object>
+  <object id="SHFW_CLFW_QCWXBYController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SHFW_CLFW_QCWXBYController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="SHFW_CLFW_QCWXBYBLL">
+      <ref object="SHFW_CLFW_QCWXBYBLL"/>
+    </property>
+  </object>
 </objects>
