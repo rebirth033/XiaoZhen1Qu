@@ -260,6 +260,6 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         public JsonResult LoadBJQXXX()
         {
             return Json(CommonBLL.LoadBJQXXX(Request["LBID"]));
-        }        
+        }
     }
 }

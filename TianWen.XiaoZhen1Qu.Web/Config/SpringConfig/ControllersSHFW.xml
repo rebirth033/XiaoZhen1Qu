@@ -45,4 +45,9 @@
       <ref object="SHFW_SHFW_DNWXBLL"/>
     </property>
   </object>
+  <object id="SHFW_SHFW_FWWXDKController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SHFW_SHFW_FWWXDKController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="SHFW_SHFW_FWWXDKBLL">
+      <ref object="SHFW_SHFW_FWWXDKBLL"/>
+    </property>
+  </object>
 </objects>
