@@ -263,9 +263,9 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return Json(CommonBLL.LoadZWLBXX(Request["TYPENAME"]));
         }
 
-        public JsonResult LoadBJQXXX()
+        public JsonResult LoadSWFWXX()
         {
-            return Json(CommonBLL.LoadBJQXXX(Request["LBID"]));
+            return Json(CommonBLL.LoadSWFWXX(Request["LBID"]));
         }
     }
 }

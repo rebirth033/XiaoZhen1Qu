@@ -474,6 +474,20 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
+        public object LoadSWFWXX(string LBID)
+        {
+            try
+            {
+                IList<CODES_SWFW> list = DAO.Repository.GetObjectList<CODES_SWFW>(String.Format("FROM CODES_SWFW WHERE PARENTID = '{0}' ORDER BY CODEORDER", LBID));
+                return new { Result = EnResultType.Success, list = list };
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("error", ex.Message);
+                return new { Result = EnResultType.Failed, Message = "加载失败" };
+            }
+        }
+
         public object LoadGCQXXH(string PPID)
         {
             try
