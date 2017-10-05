@@ -1,0 +1,52 @@
+-- Create table
+create table SWFW_FLZXJBXX
+(
+  swfw_flzxjbxxid VARCHAR2(50) not null,
+  jcxxid          VARCHAR2(50),
+  bcms            VARCHAR2(4000),
+  lb              VARCHAR2(200),
+  qy              VARCHAR2(20),
+  dd              VARCHAR2(20),
+  jtdz            VARCHAR2(200),
+  fwqy            VARCHAR2(200),
+  ly              INTEGER,
+  zyzh            VARCHAR2(200),
+  zyjg            VARCHAR2(200)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table SWFW_FLZXJBXX
+  is '商务服务_法律咨询';
+-- Add comments to the columns 
+comment on column SWFW_FLZXJBXX.swfw_flzxjbxxid
+  is '法律咨询基本信息ID';
+comment on column SWFW_FLZXJBXX.jcxxid
+  is '基础信息ID';
+comment on column SWFW_FLZXJBXX.bcms
+  is '补充描述';
+comment on column SWFW_FLZXJBXX.lb
+  is '类别';
+comment on column SWFW_FLZXJBXX.qy
+  is '区域';
+comment on column SWFW_FLZXJBXX.dd
+  is '地段';
+comment on column SWFW_FLZXJBXX.jtdz
+  is '具体地址';
+comment on column SWFW_FLZXJBXX.fwqy
+  is '服务区域';
+comment on column SWFW_FLZXJBXX.ly
+  is '来源';
+comment on column SWFW_FLZXJBXX.zyzh
+  is '执业证号';
+comment on column SWFW_FLZXJBXX.zyjg
+  is '执业机构';

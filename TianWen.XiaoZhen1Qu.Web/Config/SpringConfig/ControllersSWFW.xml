@@ -10,4 +10,9 @@
       <ref object="SWFW_SBZLBLL"/>
     </property>
   </object>
+  <object id="SWFW_FLZXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SWFW_FLZXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="SWFW_FLZXBLL">
+      <ref object="SWFW_FLZXBLL"/>
+    </property>
+  </object>
 </objects>
