@@ -1,0 +1,37 @@
+-- Create table
+create table CODES_SWFW
+(
+  codeid    NUMBER(12) not null,
+  typename  VARCHAR2(60),
+  codename  VARCHAR2(60),
+  codevalue VARCHAR2(120),
+  codeorder NUMBER(3),
+  parentid  NUMBER(12)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table CODES_SWFW
+  is '字典表_商务服务';
+-- Add comments to the columns 
+comment on column CODES_SWFW.codeid
+  is '主键';
+comment on column CODES_SWFW.typename
+  is '类型';
+comment on column CODES_SWFW.codename
+  is '名称';
+comment on column CODES_SWFW.codevalue
+  is '值';
+comment on column CODES_SWFW.codeorder
+  is '排序';
+comment on column CODES_SWFW.parentid
+  is '父级ID';

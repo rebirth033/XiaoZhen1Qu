@@ -1,0 +1,61 @@
+-- Create table
+create table SWFW_PHZPJBXX
+(
+  swfw_phzpjbxxid VARCHAR2(50) not null,
+  jcxxid          VARCHAR2(50),
+  bcms            VARCHAR2(4000),
+  lb              VARCHAR2(200),
+  qy              VARCHAR2(20),
+  dd              VARCHAR2(20),
+  jtdz            VARCHAR2(200),
+  fwqy            VARCHAR2(200),
+  cz              VARCHAR2(20),
+  yt              VARCHAR2(20),
+  gn              VARCHAR2(20),
+  xl              VARCHAR2(200),
+  gy              VARCHAR2(20),
+  sffg            VARCHAR2(20)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table SWFW_PHZPJBXX
+  is '商务服务_喷绘招牌';
+-- Add comments to the columns 
+comment on column SWFW_PHZPJBXX.swfw_phzpjbxxid
+  is '喷绘招牌基本信息ID';
+comment on column SWFW_PHZPJBXX.jcxxid
+  is '基础信息ID';
+comment on column SWFW_PHZPJBXX.bcms
+  is '补充描述';
+comment on column SWFW_PHZPJBXX.lb
+  is '类别';
+comment on column SWFW_PHZPJBXX.qy
+  is '区域';
+comment on column SWFW_PHZPJBXX.dd
+  is '地段';
+comment on column SWFW_PHZPJBXX.jtdz
+  is '具体地址';
+comment on column SWFW_PHZPJBXX.fwqy
+  is '服务区域';
+comment on column SWFW_PHZPJBXX.cz
+  is '材质';
+comment on column SWFW_PHZPJBXX.yt
+  is '用途';
+comment on column SWFW_PHZPJBXX.gn
+  is '功能';
+comment on column SWFW_PHZPJBXX.xl
+  is '小类';
+comment on column SWFW_PHZPJBXX.gy
+  is '工艺';
+comment on column SWFW_PHZPJBXX.sffg
+  is '是否发光';
