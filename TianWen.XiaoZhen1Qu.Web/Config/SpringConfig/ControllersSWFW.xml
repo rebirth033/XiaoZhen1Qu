@@ -25,4 +25,9 @@
       <ref object="SWFW_BXBLL"/>
     </property>
   </object>
+  <object id="SWFW_TZDBController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SWFW_TZDBController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="SWFW_TZDBBLL">
+      <ref object="SWFW_TZDBBLL"/>
+    </property>
+  </object>
 </objects>

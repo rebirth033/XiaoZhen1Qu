@@ -394,6 +394,7 @@
     <Content Include="Areas\Business\Css\SWFW\SWFW_FLZX.css" />
     <Content Include="Areas\Business\Css\SWFW\SWFW_GSZC.css" />
     <Content Include="Areas\Business\Css\SWFW\SWFW_SBZL.css" />
+    <Content Include="Areas\Business\Css\SWFW\SWFW_TZDB.css" />
     <Content Include="Areas\Business\Css\WDFB.css" />
     <Content Include="Areas\Business\Css\WDSC.css" />
     <Content Include="Areas\Business\Css\WDXJ\WDXJ_CZ.css" />
@@ -683,6 +684,8 @@
     <Content Include="Areas\Business\Scripts\Business\SWFW\SWFW_GSZCYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\SWFW\SWFW_SBZL.js" />
     <Content Include="Areas\Business\Scripts\Business\SWFW\SWFW_SBZLYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\SWFW\SWFW_TZDB.js" />
+    <Content Include="Areas\Business\Scripts\Business\SWFW\SWFW_TZDBYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\WDFB.js" />
     <Content Include="Areas\Business\Scripts\Business\WDSC.js" />
     <Content Include="Areas\Business\Scripts\Business\WDXJ\WDXJ_CZ.js" />
@@ -1212,6 +1215,7 @@
     <Compile Include="Areas\Business\Controllers\SWFW\SWFW_FLZXController.cs" />
     <Compile Include="Areas\Business\Controllers\SWFW\SWFW_GSZCController.cs" />
     <Compile Include="Areas\Business\Controllers\SWFW\SWFW_SBZLController.cs" />
+    <Compile Include="Areas\Business\Controllers\SWFW\SWFW_TZDBController.cs" />
     <Compile Include="Areas\Business\Controllers\WDFBController.cs" />
     <Compile Include="Areas\Business\Controllers\WDSCController.cs" />
     <Compile Include="Areas\Business\Controllers\WDXJController.cs" />
@@ -1475,6 +1479,7 @@
     <Content Include="Areas\Business\Views\SWFW_FLZX\SWFW_FLZX.cshtml" />
     <Content Include="Areas\Business\Views\SWFW_CWKJPG\SWFW_CWKJPG.cshtml" />
     <Content Include="Areas\Business\Views\SWFW_BX\SWFW_BX.cshtml" />
+    <Content Include="Areas\Business\Views\SWFW_TZDB\SWFW_TZDB.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
