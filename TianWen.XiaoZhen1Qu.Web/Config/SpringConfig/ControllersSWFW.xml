@@ -30,4 +30,9 @@
       <ref object="SWFW_TZDBBLL"/>
     </property>
   </object>
+  <object id="SWFW_YSBZController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SWFW_YSBZController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="SWFW_YSBZBLL">
+      <ref object="SWFW_YSBZBLL"/>
+    </property>
+  </object>
 </objects>
