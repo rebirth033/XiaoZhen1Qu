@@ -5,4 +5,9 @@
       <ref object="SWFW_GSZCBLL"/>
     </property>
   </object>
+  <object id="SWFW_SBZLController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SWFW_SBZLController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="SWFW_SBZLBLL">
+      <ref object="SWFW_SBZLBLL"/>
+    </property>
+  </object>
 </objects>

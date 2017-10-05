@@ -1,10 +1,10 @@
 ﻿var isleave = true;
 var ue = UE.getEditor('FYMS');
 $(document).ready(function () {
-    $("#divUploadOut").bind("mouseover", GetUploadCss);
-    $("#divUploadOut").bind("mouseleave", LeaveUploadCss);
     $("#imgSMFW").bind("click", SMFWSelect);
     $("#imgDDFW").bind("click", DDFWSelect);
+    $("#divUploadOut").bind("mouseover", GetUploadCss);
+    $("#divUploadOut").bind("mouseleave", LeaveUploadCss);
     $("#btnFB").bind("click", FB);
     $("#FYMS").bind("focus", FYMSFocus);
     $("#FYMS").bind("blur", FYMSBlur);
@@ -20,7 +20,7 @@ $(document).ready(function () {
     BindClick("LB");
     BindClick("QY");
     BindClick("DD");
-    LoadSHFW_SHFW_BZMDJBXX();
+    LoadSWFW_SBZLJBXX();
 });
 //描述框focus
 function FYMSFocus() {
@@ -71,15 +71,15 @@ function SetSFSM(sfsm) {
         $("#imgDDFW").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
     }
 }
-//加载殡葬/墓地类别
+//加载商标专利类别
 function LoadLB() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_SHFW",
+        url: getRootPath() + "/Business/Common/LoadCODES_SWFW",
         dataType: "json",
         data:
         {
-            TYPENAME: "殡葬/墓地"
+            TYPENAME: "商标专利"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -109,7 +109,7 @@ function SelectLB(obj, type, id) {
 function LoadXL(lbmc, xl) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_SHFW",
+        url: getRootPath() + "/Business/Common/LoadCODES_SWFW",
         dataType: "json",
         data:
         {
@@ -186,35 +186,33 @@ function BindClick(type) {
         }
     });
 }
-//加载生活服务_殡葬/墓地基本信息
-function LoadSHFW_SHFW_BZMDJBXX() {
+//加载商务服务_商标专利基本信息
+function LoadSWFW_SBZLJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SHFW_SHFW_BZMD/LoadSHFW_SHFW_BZMDJBXX",
+        url: getRootPath() + "/Business/SWFW_SBZL/LoadSWFW_SBZLJBXX",
         dataType: "json",
         data:
         {
-            SHFW_SHFW_BZMDJBXXID: getUrlParam("SHFW_SHFW_BZMDJBXXID")
+            SWFW_SBZLJBXXID: getUrlParam("SWFW_SBZLJBXXID")
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var jsonObj = new JsonDB("myTabContent");
-                jsonObj.DisplayFromJson("myTabContent", xml.Value.SHFW_SHFW_BZMDJBXX);
+                jsonObj.DisplayFromJson("myTabContent", xml.Value.SWFW_SBZLJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
-                $("#SHFW_SHFW_BZMDJBXXID").val(xml.Value.SHFW_SHFW_BZMDJBXX.SHFW_SHFW_BZMDJBXXID);
+                $("#SWFW_SBZLJBXXID").val(xml.Value.SWFW_SBZLJBXX.SWFW_SBZLJBXXID);
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
-                    ue.setContent(xml.Value.SHFW_SHFW_BZMDJBXX.BCMS);
+                    ue.setContent(xml.Value.SWFW_SBZLJBXX.BCMS);
                 });
-                $("#spanLB").html(xml.Value.SHFW_SHFW_BZMDJBXX.LB);
-                $("#spanQY").html(xml.Value.SHFW_SHFW_BZMDJBXX.QY);
-                $("#spanDD").html(xml.Value.SHFW_SHFW_BZMDJBXX.DD);
-                SetSFSM(xml.Value.SHFW_SHFW_BZMDJBXX.SFSM);
+                $("#spanLB").html(xml.Value.SWFW_SBZLJBXX.LB);
+                $("#spanQY").html(xml.Value.SWFW_SBZLJBXX.QY);
+                $("#spanDD").html(xml.Value.SWFW_SBZLJBXX.DD);
+                SetSFSM(xml.Value.SWFW_SBZLJBXX.SFSM);
                 LoadPhotos(xml.Value.Photos);
-                if (xml.Value.SHFW_SHFW_BZMDJBXX.LB.indexOf("殡葬用品") !== -1 || xml.Value.SHFW_SHFW_BZMDJBXX.LB.indexOf("殡仪馆/殡葬服务") !== -1) {
-                    LoadXL(xml.Value.SHFW_SHFW_BZMDJBXX.LB, xml.Value.SHFW_SHFW_BZMDJBXX.XL);
-                }
+                LoadXL(xml.Value.SWFW_SBZLJBXX.LB, xml.Value.SWFW_SBZLJBXX.XL);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -235,12 +233,12 @@ function FB() {
     obj = jsonObj.AddJson(obj, "XL", "'" + GetXL() + "'");
     obj = jsonObj.AddJson(obj, "SFSM", "'" + GetSFSM() + "'");
 
-    if (getUrlParam("SHFW_SHFW_BZMDJBXXID") !== null)
-        obj = jsonObj.AddJson(obj, "SHFW_SHFW_BZMDJBXXID", "'" + getUrlParam("SHFW_SHFW_BZMDJBXXID") + "'");
+    if (getUrlParam("SWFW_SBZLJBXXID") !== null)
+        obj = jsonObj.AddJson(obj, "SWFW_SBZLJBXXID", "'" + getUrlParam("SWFW_SBZLJBXXID") + "'");
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SHFW_SHFW_BZMD/FB",
+        url: getRootPath() + "/Business/SWFW_SBZL/FB",
         dataType: "json",
         data:
         {
