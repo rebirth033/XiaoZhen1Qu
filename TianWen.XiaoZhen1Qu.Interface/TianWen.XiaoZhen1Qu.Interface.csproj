@@ -163,6 +163,7 @@
     <Compile Include="SHFW\ISHFW_SHFW_QMFSSMBLL.cs" />
     <Compile Include="SHFW\ISHFW_SHFW_SHPSBLL.cs" />
     <Compile Include="SHFW\ISHFW_WXFW_SJSMWXBLL.cs" />
+    <Compile Include="SWFW\ISWFW_GSZCBLL.cs" />
     <Compile Include="XXYL\IXXYL_DIYSGFBLL.cs" />
     <Compile Include="XXYL\IXXYL_HPGBLL.cs" />
     <Compile Include="XXYL\IXXYL_HWBLL.cs" />

@@ -2060,25 +2060,25 @@ insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENT
 values (686, '洗车方式', '无水洗车', '5', 5, null);
 
 insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (687, '打蜡品牌', '龟牌', '1', 1, null);
+values (687, '打蜡', '龟牌', '1', 1, 669);
 
 insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (688, '打蜡品牌', '3M', '2', 2, null);
+values (688, '打蜡', '3M', '2', 2, 669);
 
 insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (689, '打蜡品牌', '美光', '3', 3, null);
+values (689, '打蜡', '美光', '3', 3, 669);
 
 insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (690, '打蜡品牌', '霍尼韦尔', '4', 4, null);
+values (690, '打蜡', '霍尼韦尔', '4', 4, 669);
 
 insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (691, '打蜡品牌', 'SONAX', '5', 5, null);
+values (691, '打蜡', 'SONAX', '5', 5, 669);
 
 insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (692, '打蜡品牌', '优尼卡', '6', 6, null);
+values (692, '打蜡', '优尼卡', '6', 6, 669);
 
 insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (693, '打蜡品牌', '车爵仕', '7', 7, null);
+values (693, '打蜡', '车爵仕', '7', 7, 669);
 
 insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (694, '打蜡品种', '普通蜡', '1', 1, null);
@@ -2096,93 +2096,258 @@ insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENT
 values (698, '打蜡品种', '白金蜡', '5', 5, null);
 
 insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (699, '镀膜品牌', '3M', '1', 1, null);
+values (699, '镀膜', '3M', '1', 1, 670);
 
 insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (700, '镀膜品牌', '阿米卡', '2', 2, null);
+values (700, '镀膜', '阿米卡', '2', 2, 670);
 
 insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (701, '镀膜品牌', 'PIKA PIKA', '3', 3, null);
+values (701, '镀膜', 'PIKA PIKA', '3', 3, 670);
 
 insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (702, '镀膜品牌', '霍尼韦尔', '4', 4, null);
+values (702, '镀膜', '霍尼韦尔', '4', 4, 670);
 
 insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (703, '镀膜品牌', '洗车王国', '5', 5, null);
+values (703, '镀膜', '洗车王国', '5', 5, 670);
 
 insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (704, '镀膜品牌', '美光', '6', 6, null);
+values (704, '镀膜', '美光', '6', 6, 670);
 
 insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (705, '镀膜品牌', '龟牌', '7', 7, null);
+values (705, '镀膜', '龟牌', '7', 7, 670);
 
 insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (706, '镀膜品牌', '丹盟客', '8', 8, null);
+values (706, '镀膜', '丹盟客', '8', 8, 670);
 
 insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (707, '镀膜品牌', 'SONAX', '9', 9, null);
+values (707, '镀膜', 'SONAX', '9', 9, 670);
 
 insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (708, '镀膜品牌', '钻甲', '10', 10, null);
+values (708, '镀膜', '钻甲', '10', 10, 670);
 
 insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (709, '镀膜品牌', '3D', '11', 11, null);
+values (709, '镀膜', '3D', '11', 11, 670);
 
 insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (710, '镀膜品牌', '伍尔特', '12', 12, null);
+values (710, '镀膜', '伍尔特', '12', 12, 670);
 
 insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (711, '镀膜品牌', 'F1;K', '13', 13, null);
+values (711, '镀膜', 'F1;K', '13', 13, 670);
 
 insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (712, '镀膜品牌', '爱克', '14', 14, null);
+values (712, '镀膜', '爱克', '14', 14, 670);
 
 insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (713, '镀膜品牌', '车爵仕', '15', 15, null);
+values (713, '镀膜', '车爵仕', '15', 15, 670);
 
 insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (714, '镀膜品牌', '奇嘉', '16', 16, null);
+values (714, '镀膜', '奇嘉', '16', 16, 670);
 
 insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (715, '镀膜品牌', '华车粧', '17', 17, null);
+values (715, '镀膜', '华车粧', '17', 17, 670);
 
 insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (716, '镀膜品牌', '优尼卡', '18', 18, null);
+values (716, '镀膜', '优尼卡', '18', 18, 670);
 
 insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (717, '镀膜品牌', '美鹰', '19', 19, null);
+values (717, '镀膜', '美鹰', '19', 19, 670);
 
 insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (718, '镀膜品牌', '老鹰头', '20', 20, null);
+values (718, '镀膜', '老鹰头', '20', 20, 670);
 
 insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (719, '镀膜品牌', '德国雅科美', '21', 21, null);
+values (719, '镀膜', '德国雅科美', '21', 21, 670);
 
 insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (720, '镀膜品牌', '魔术', '22', 22, null);
+values (720, '镀膜', '魔术', '22', 22, 670);
 
 insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (721, '镀膜品牌', '奥辉', '23', 23, null);
+values (721, '镀膜', '奥辉', '23', 23, 670);
 
 insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (722, '镀膜品牌', '水晶', '24', 24, null);
+values (722, '镀膜', '水晶', '24', 24, 670);
 
 insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (723, '镀膜品牌', '美国力魔', '25', 25, null);
+values (723, '镀膜', '美国力魔', '25', 25, 670);
 
 insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (724, '镀膜品牌', '喷仕宝', '26', 26, null);
+values (724, '镀膜', '喷仕宝', '26', 26, 670);
 
 insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (725, '镀膜品牌', '瓷晶', '27', 27, null);
+values (725, '镀膜', '瓷晶', '27', 27, 670);
 
 insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (726, '镀膜品牌', '钻石之盟', '28', 28, null);
+values (726, '镀膜', '钻石之盟', '28', 28, 670);
 
 insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (727, '镀膜品牌', '帕卡', '29', 29, null);
+values (727, '镀膜', '帕卡', '29', 29, 670);
 
 insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (728, '镀膜品牌', '速达', '30', 30, null);
+values (728, '镀膜', '速达', '30', 30, 670);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (729, '封釉', '3M', '1', 1, 671);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (730, '封釉', '3D', '2', 2, 671);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (731, '封釉', '美光', '3', 3, 671);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (732, '封釉', '美国格耐', '4', 4, 671);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (733, '封釉', '美鹰', '5', 5, 671);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (734, '封釉', '霍尼韦尔', '6', 6, 671);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (735, '封釉', '龟博士', '7', 7, 671);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (736, '封釉', '龟牌', '8', 8, 671);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (737, '封釉', '车爵仕', '9', 9, 671);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (738, '封釉', '尼尔森', '10', 10, 671);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (739, '封釉', '魔术', '11', 11, 671);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (740, '封釉', '晶亮', '12', 12, 671);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (741, '封釉', 'MOC', '13', 13, 671);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (742, '玻璃贴膜', '3M', '1', 1, 673);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (743, '玻璃贴膜', '龙膜', '2', 2, 673);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (744, '玻璃贴膜', '雷朋', '3', 3, 673);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (745, '玻璃贴膜', '强生', '4', 4, 673);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (746, '玻璃贴膜', '先锋', '5', 5, 673);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (747, '玻璃贴膜', '美国USL', '6', 6, 673);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (748, '玻璃贴膜', '量子', '7', 7, 673);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (749, '玻璃贴膜', '尊爵', '8', 8, 673);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (750, '玻璃贴膜', '纳米光学膜', '9', 9, 673);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (751, '玻璃贴膜', '福瑞达', '10', 10, 673);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (752, '玻璃贴膜', '优玛', '11', 11, 673);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (753, '贴膜范围', '全车', '1', 1, null);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (754, '贴膜范围', '前档', '2', 2, null);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (755, '贴膜范围', '后档', '3', 3, null);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (756, '贴膜范围', '侧窗', '4', 4, null);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (757, '座椅包真皮', '龙椅', '1', 1, 674);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (758, '座椅包真皮', '史耐德', '2', 2, 674);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (759, '座椅包真皮', '福丽嘉', '3', 3, 674);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (760, '座椅包真皮', '车心意', '4', 4, 674);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (761, '座椅包真皮', '腾达庆红', '5', 5, 674);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (762, '底盘装甲', '3M', '1', 1, 676);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (763, '底盘装甲', '德国汉高', '2', 2, 676);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (764, '底盘装甲', '雅科美', '3', 3, 676);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (765, '底盘装甲', '大能', '4', 4, 676);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (766, '底盘装甲', '霍尼韦尔', '5', 5, 676);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (767, '底盘装甲', '车爵士', '6', 6, 676);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (768, '汽车改装/防护', '外观改装', '1', 1, null);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (769, '汽车改装/防护', '性能提升', '2', 2, null);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (770, '汽车改装/防护', 'DVD导航', '3', 3, null);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (771, '汽车改装/防护', '隔音', '4', 4, null);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (772, '汽车改装/防护', '内饰改装', '5', 5, null);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (773, '汽车改装/防护', '音响改装', '6', 6, null);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (774, '汽车改装/防护', '防盗系统', '7', 7, null);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (775, '汽车改装/防护', '灯光改装', '8', 8, null);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (776, '外观改装', '包围改装', '1', 1, 768);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (777, '外观改装', '轮毂', '2', 2, 768);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (778, '外观改装', '车身改色', '3', 3, 768);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (779, '外观改装', '尾翼改装', '4', 4, 768);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (780, '性能提升', 'ECU升级', '1', 1, 769);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (781, '性能提升', '刹车', '2', 2, 769);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (782, '性能提升', '轮胎', '3', 3, 769);
+
+insert into codes_shfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (783, '性能提升', '悬挂', '4', 4, 769);
 
 prompt Done.

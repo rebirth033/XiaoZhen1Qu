@@ -74,6 +74,7 @@
     <Compile Include="Maps\CODES\CODES_PWKQ_Map.cs" />
     <Compile Include="Maps\CODES\CODES_QZZP_Map.cs" />
     <Compile Include="Maps\CODES\CODES_SHFW_Map.cs" />
+    <Compile Include="Maps\CODES\CODES_SWFW_Map.cs" />
     <Compile Include="Maps\CODES\CODES_XXYL_Map.cs" />
     <Compile Include="Maps\CODES\CODES_ZSJM_Map.cs" />
     <Compile Include="Maps\CW\CW_CWFWJBXX_Map.cs" />
@@ -173,6 +174,7 @@
     <Compile Include="Maps\SHFW\SHFW_SHFW_QMFSSMJBXX_Map.cs" />
     <Compile Include="Maps\SHFW\SHFW_SHFW_SHPSJBXX_Map.cs" />
     <Compile Include="Maps\SHFW\SHFW_WXFW_SJSMWXJBXX_Map.cs" />
+    <Compile Include="Maps\SWFW\SWFW_GSZCJBXX_Map.cs" />
     <Compile Include="Maps\SZMX_Map.cs" />
     <Compile Include="Maps\BZZX\BZZX_WZJY_Map.cs" />
     <Compile Include="Maps\XQJBXX_Map.cs" />
@@ -226,6 +228,7 @@
     <Compile Include="Models\CODES\CODES_PWKQ.cs" />
     <Compile Include="Models\CODES\CODES_QZZP.cs" />
     <Compile Include="Models\CODES\CODES_SHFW.cs" />
+    <Compile Include="Models\CODES\CODES_SWFW.cs" />
     <Compile Include="Models\CODES\CODES_XXYL.cs" />
     <Compile Include="Models\CODES\CODES_ZSJM.cs" />
     <Compile Include="Models\CW\CW_CWFWJBXX.cs" />
@@ -328,6 +331,7 @@
     <Compile Include="Models\SHFW\SHFW_SHFW_QMFSSMJBXX.cs" />
     <Compile Include="Models\SHFW\SHFW_SHFW_SHPSJBXX.cs" />
     <Compile Include="Models\SHFW\SHFW_WXFW_SJSMWXJBXX.cs" />
+    <Compile Include="Models\SWFW\SWFW_GSZCJBXX.cs" />
     <Compile Include="Models\SZMX.cs" />
     <Compile Include="Models\BZZX\WZYJ.cs" />
     <Compile Include="Models\XQJBXX.cs" />
