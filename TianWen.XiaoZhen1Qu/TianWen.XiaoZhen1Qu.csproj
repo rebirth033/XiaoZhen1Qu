@@ -138,6 +138,7 @@
     <Compile Include="BLL\SHFW\SHFW_CLFW_DJSJWPBLL.cs" />
     <Compile Include="BLL\SHFW\SHFW_CLFW_GHSPNJYCBLL.cs" />
     <Compile Include="BLL\SHFW\SHFW_CLFW_JXBLL.cs" />
+    <Compile Include="BLL\SHFW\SHFW_CLFW_QCGZFHBLL.cs" />
     <Compile Include="BLL\SHFW\SHFW_CLFW_QCMRZSBLL.cs" />
     <Compile Include="BLL\SHFW\SHFW_CLFW_QCPLBLL.cs" />
     <Compile Include="BLL\SHFW\SHFW_CLFW_QCWXBYBLL.cs" />
