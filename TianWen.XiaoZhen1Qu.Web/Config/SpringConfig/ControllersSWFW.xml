@@ -15,4 +15,9 @@
       <ref object="SWFW_FLZXBLL"/>
     </property>
   </object>
+  <object id="SWFW_CWKJPGController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SWFW_CWKJPGController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="SWFW_CWKJPGBLL">
+      <ref object="SWFW_CWKJPGBLL"/>
+    </property>
+  </object>
 </objects>
