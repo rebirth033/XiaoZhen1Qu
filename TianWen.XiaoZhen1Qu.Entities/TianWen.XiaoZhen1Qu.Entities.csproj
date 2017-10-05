@@ -155,6 +155,7 @@
     <Compile Include="Maps\SHFW\SHFW_CLFW_DJSJWPJBXX_Map.cs" />
     <Compile Include="Maps\SHFW\SHFW_CLFW_GHSPNJYCJBXX_Map.cs" />
     <Compile Include="Maps\SHFW\SHFW_CLFW_JXJBXX_Map.cs" />
+    <Compile Include="Maps\SHFW\SHFW_CLFW_QCMRZSJBXX_Map.cs" />
     <Compile Include="Maps\SHFW\SHFW_CLFW_QCPLJBXX_Map.cs" />
     <Compile Include="Maps\SHFW\SHFW_CLFW_QCWXBYJBXX_Map.cs" />
     <Compile Include="Maps\SHFW\SHFW_CLFW_ZCJBXX_Map.cs" />
@@ -308,6 +309,7 @@
     <Compile Include="Models\SHFW\SHFW_CLFW_DJSJWPJBXX.cs" />
     <Compile Include="Models\SHFW\SHFW_CLFW_GHSPNJYCJBXX.cs" />
     <Compile Include="Models\SHFW\SHFW_CLFW_JXJBXX.cs" />
+    <Compile Include="Models\SHFW\SHFW_CLFW_QCMRZSJBXX.cs" />
     <Compile Include="Models\SHFW\SHFW_CLFW_QCPLJBXX.cs" />
     <Compile Include="Models\SHFW\SHFW_CLFW_QCWXBYJBXX.cs" />
     <Compile Include="Models\SHFW\SHFW_CLFW_ZCJBXX.cs" />
