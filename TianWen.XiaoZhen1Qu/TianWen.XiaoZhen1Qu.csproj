@@ -161,11 +161,14 @@
     <Compile Include="BLL\SWFW\SWFW_FLZXBLL.cs" />
     <Compile Include="BLL\SWFW\SWFW_GGCMBLL.cs" />
     <Compile Include="BLL\SWFW\SWFW_GSZCBLL.cs" />
+    <Compile Include="BLL\SWFW\SWFW_LPDZBLL.cs" />
     <Compile Include="BLL\SWFW\SWFW_PHZPBLL.cs" />
     <Compile Include="BLL\SWFW\SWFW_SBZLBLL.cs" />
     <Compile Include="BLL\SWFW\SWFW_SJCHBLL.cs" />
     <Compile Include="BLL\SWFW\SWFW_TZDBBLL.cs" />
     <Compile Include="BLL\SWFW\SWFW_YSBZBLL.cs" />
+    <Compile Include="BLL\SWFW\SWFW_ZHFWBLL.cs" />
+    <Compile Include="BLL\SWFW\SWFW_ZKBLL.cs" />
     <Compile Include="BLL\WDFBBLL.cs" />
     <Compile Include="BLL\WDSCBLL.cs" />
     <Compile Include="BLL\WDXJBLL.cs" />

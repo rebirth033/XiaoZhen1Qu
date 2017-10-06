@@ -50,4 +50,19 @@
       <ref object="SWFW_GGCMBLL"/>
     </property>
   </object>
+  <object id="SWFW_ZHFWController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SWFW_ZHFWController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="SWFW_ZHFWBLL">
+      <ref object="SWFW_ZHFWBLL"/>
+    </property>
+  </object>
+  <object id="SWFW_LPDZController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SWFW_LPDZController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="SWFW_LPDZBLL">
+      <ref object="SWFW_LPDZBLL"/>
+    </property>
+  </object>
+  <object id="SWFW_ZKController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SWFW_ZKController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="SWFW_ZKBLL">
+      <ref object="SWFW_ZKBLL"/>
+    </property>
+  </object>
 </objects>

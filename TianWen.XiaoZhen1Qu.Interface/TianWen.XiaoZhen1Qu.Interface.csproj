@@ -168,11 +168,14 @@
     <Compile Include="SWFW\ISWFW_FLZXBLL.cs" />
     <Compile Include="SWFW\ISWFW_GGCMBLL.cs" />
     <Compile Include="SWFW\ISWFW_GSZCBLL.cs" />
+    <Compile Include="SWFW\ISWFW_LPDZBLL.cs" />
     <Compile Include="SWFW\ISWFW_PHZPBLL.cs" />
     <Compile Include="SWFW\ISWFW_SBZLBLL.cs" />
     <Compile Include="SWFW\ISWFW_SJCHBLL.cs" />
     <Compile Include="SWFW\ISWFW_TZDBBLL.cs" />
     <Compile Include="SWFW\ISWFW_YSBZBLL.cs" />
+    <Compile Include="SWFW\ISWFW_ZHFWBLL.cs" />
+    <Compile Include="SWFW\ISWFW_ZKBLL.cs" />
     <Compile Include="XXYL\IXXYL_DIYSGFBLL.cs" />
     <Compile Include="XXYL\IXXYL_HPGBLL.cs" />
     <Compile Include="XXYL\IXXYL_HWBLL.cs" />

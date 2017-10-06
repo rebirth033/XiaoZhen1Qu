@@ -50,4 +50,19 @@
       <ref object="DAOBase"/>
     </property>
   </object>
+  <object id="SWFW_ZHFWBLL" type="TianWen.XiaoZhen1Qu.BLL.SWFW_ZHFWBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SWFW_LPDZBLL" type="TianWen.XiaoZhen1Qu.BLL.SWFW_LPDZBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SWFW_ZKBLL" type="TianWen.XiaoZhen1Qu.BLL.SWFW_ZKBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
 </objects>

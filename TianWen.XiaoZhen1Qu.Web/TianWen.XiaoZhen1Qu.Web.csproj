@@ -394,11 +394,14 @@
     <Content Include="Areas\Business\Css\SWFW\SWFW_FLZX.css" />
     <Content Include="Areas\Business\Css\SWFW\SWFW_GGCM.css" />
     <Content Include="Areas\Business\Css\SWFW\SWFW_GSZC.css" />
+    <Content Include="Areas\Business\Css\SWFW\SWFW_LPDZ.css" />
     <Content Include="Areas\Business\Css\SWFW\SWFW_PHZP.css" />
     <Content Include="Areas\Business\Css\SWFW\SWFW_SBZL.css" />
     <Content Include="Areas\Business\Css\SWFW\SWFW_SJCH.css" />
     <Content Include="Areas\Business\Css\SWFW\SWFW_TZDB.css" />
     <Content Include="Areas\Business\Css\SWFW\SWFW_YSBZ.css" />
+    <Content Include="Areas\Business\Css\SWFW\SWFW_ZHFW.css" />
+    <Content Include="Areas\Business\Css\SWFW\SWFW_ZK.css" />
     <Content Include="Areas\Business\Css\WDFB.css" />
     <Content Include="Areas\Business\Css\WDSC.css" />
     <Content Include="Areas\Business\Css\WDXJ\WDXJ_CZ.css" />
@@ -688,6 +691,8 @@
     <Content Include="Areas\Business\Scripts\Business\SWFW\SWFW_GGCMYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\SWFW\SWFW_GSZC.js" />
     <Content Include="Areas\Business\Scripts\Business\SWFW\SWFW_GSZCYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\SWFW\SWFW_LPDZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\SWFW\SWFW_LPDZYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\SWFW\SWFW_PHZP.js" />
     <Content Include="Areas\Business\Scripts\Business\SWFW\SWFW_PHZPYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\SWFW\SWFW_SBZL.js" />
@@ -698,6 +703,10 @@
     <Content Include="Areas\Business\Scripts\Business\SWFW\SWFW_TZDBYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\SWFW\SWFW_YSBZ.js" />
     <Content Include="Areas\Business\Scripts\Business\SWFW\SWFW_YSBZYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\SWFW\SWFW_ZHFW.js" />
+    <Content Include="Areas\Business\Scripts\Business\SWFW\SWFW_ZHFWYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\SWFW\SWFW_ZK.js" />
+    <Content Include="Areas\Business\Scripts\Business\SWFW\SWFW_ZKYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\WDFB.js" />
     <Content Include="Areas\Business\Scripts\Business\WDSC.js" />
     <Content Include="Areas\Business\Scripts\Business\WDXJ\WDXJ_CZ.js" />
@@ -1227,11 +1236,14 @@
     <Compile Include="Areas\Business\Controllers\SWFW\SWFW_FLZXController.cs" />
     <Compile Include="Areas\Business\Controllers\SWFW\SWFW_GGCMController.cs" />
     <Compile Include="Areas\Business\Controllers\SWFW\SWFW_GSZCController.cs" />
+    <Compile Include="Areas\Business\Controllers\SWFW\SWFW_LPDZController.cs" />
     <Compile Include="Areas\Business\Controllers\SWFW\SWFW_PHZPController.cs" />
     <Compile Include="Areas\Business\Controllers\SWFW\SWFW_SBZLController.cs" />
     <Compile Include="Areas\Business\Controllers\SWFW\SWFW_SJCHController.cs" />
     <Compile Include="Areas\Business\Controllers\SWFW\SWFW_TZDBController.cs" />
     <Compile Include="Areas\Business\Controllers\SWFW\SWFW_YSBZController.cs" />
+    <Compile Include="Areas\Business\Controllers\SWFW\SWFW_ZHFWController.cs" />
+    <Compile Include="Areas\Business\Controllers\SWFW\SWFW_ZKController.cs" />
     <Compile Include="Areas\Business\Controllers\WDFBController.cs" />
     <Compile Include="Areas\Business\Controllers\WDSCController.cs" />
     <Compile Include="Areas\Business\Controllers\WDXJController.cs" />
@@ -1500,6 +1512,9 @@
     <Content Include="Areas\Business\Views\SWFW_PHZP\SWFW_PHZP.cshtml" />
     <Content Include="Areas\Business\Views\SWFW_SJCH\SWFW_SJCH.cshtml" />
     <Content Include="Areas\Business\Views\SWFW_GGCM\SWFW_GGCM.cshtml" />
+    <Content Include="Areas\Business\Views\SWFW_ZHFW\SWFW_ZHFW.cshtml" />
+    <Content Include="Areas\Business\Views\SWFW_LPDZ\SWFW_LPDZ.cshtml" />
+    <Content Include="Areas\Business\Views\SWFW_ZK\SWFW_ZK.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
