@@ -269,21 +269,21 @@ function LoadWJLX() {
         dataType: "json",
         data:
         {
-            TYPENAME: "专业领域"
+            TYPENAME: "文件类型"
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='liWJLX' onclick='SelectWJLX(this)'><img class='img_WJLX'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i === 6 || i === 13 || i === 20 || i === 27) {
+                    if (i === 4 || i === 9 || i === 14 || i === 19) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
                 }
-                if (parseInt(xml.list.length % 7) === 0)
-                    $("#divWJLX").css("height", parseInt(xml.list.length / 7) * 45 + "px");
+                if (parseInt(xml.list.length % 5) === 0)
+                    $("#divWJLX").css("height", parseInt(xml.list.length / 5) * 45 + "px");
                 else
-                    $("#divWJLX").css("height", (parseInt(xml.list.length / 7) + 1) * 45 + "px");
+                    $("#divWJLX").css("height", (parseInt(xml.list.length / 5) + 1) * 45 + "px");
                 html += "</ul>";
                 $("#divWJLXText").html(html);
                 $(".img_WJLX").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
