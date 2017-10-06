@@ -1,0 +1,70 @@
+-- Create table
+create table SWFW_HYZXJBXX
+(
+  swfw_hyzxjbxxid VARCHAR2(50) not null,
+  jcxxid          VARCHAR2(50),
+  bcms            VARCHAR2(4000),
+  qy              VARCHAR2(20),
+  dd              VARCHAR2(20),
+  ysfw            INTEGER,
+  ddd             VARCHAR2(200),
+  hytd            INTEGER,
+  sfwf            INTEGER,
+  ywzz            INTEGER,
+  bc              INTEGER,
+  tzsj            VARCHAR2(20),
+  zhfs            VARCHAR2(200),
+  hwzl            VARCHAR2(200),
+  fwys            VARCHAR2(200),
+  ysjg            VARCHAR2(20),
+  ysjgdw          VARCHAR2(20)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table SWFW_HYZXJBXX
+  is '商务服务_货运专线';
+-- Add comments to the columns 
+comment on column SWFW_HYZXJBXX.swfw_hyzxjbxxid
+  is '货运专线基本信息ID';
+comment on column SWFW_HYZXJBXX.jcxxid
+  is '基础信息ID';
+comment on column SWFW_HYZXJBXX.bcms
+  is '补充描述';
+comment on column SWFW_HYZXJBXX.qy
+  is '区域';
+comment on column SWFW_HYZXJBXX.dd
+  is '地段';
+comment on column SWFW_HYZXJBXX.ysfw
+  is '运送范围';
+comment on column SWFW_HYZXJBXX.ddd
+  is '到达地';
+comment on column SWFW_HYZXJBXX.hytd
+  is '货运通道';
+comment on column SWFW_HYZXJBXX.sfwf
+  is '是否往返';
+comment on column SWFW_HYZXJBXX.ywzz
+  is '有无中转';
+comment on column SWFW_HYZXJBXX.bc
+  is '班次';
+comment on column SWFW_HYZXJBXX.tzsj
+  is '途中时间';
+comment on column SWFW_HYZXJBXX.zhfs
+  is '组货方式';
+comment on column SWFW_HYZXJBXX.hwzl
+  is '货物种类';
+comment on column SWFW_HYZXJBXX.fwys
+  is '服务延伸';
+comment on column SWFW_HYZXJBXX.ysjg
+  is '运输价格';
+comment on column SWFW_HYZXJBXX.ysjgdw
+  is '运输价格单位';

@@ -90,4 +90,14 @@
       <ref object="SWFW_FYSJBLL"/>
     </property>
   </object>
+  <object id="SWFW_HYWLController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SWFW_HYWLController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="SWFW_HYWLBLL">
+      <ref object="SWFW_HYWLBLL"/>
+    </property>
+  </object>
+  <object id="SWFW_HYZXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SWFW_HYZXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="SWFW_HYZXBLL">
+      <ref object="SWFW_HYZXBLL"/>
+    </property>
+  </object>
 </objects>
