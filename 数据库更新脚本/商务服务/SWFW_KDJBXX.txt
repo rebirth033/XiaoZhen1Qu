@@ -1,0 +1,50 @@
+-- Create table
+create table SWFW_KDJBXX
+(
+  SWFW_KDjbxxid VARCHAR2(50) not null,
+  jcxxid          VARCHAR2(50),
+  bcms            VARCHAR2(4000),
+  lb              VARCHAR2(20),
+  qy              VARCHAR2(20),
+  dd              VARCHAR2(20),
+  jtdz            VARCHAR2(200),
+  fwqy            VARCHAR2(200),
+  xl              VARCHAR2(200),
+  yykssj_h    VARCHAR2(20),
+  yykssj_m    VARCHAR2(20),
+  yyjssj_h    VARCHAR2(20),
+  yyjssj_m    VARCHAR2(20)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table SWFW_KDJBXX
+  is '商务服务_快递';
+-- Add comments to the columns 
+comment on column SWFW_KDJBXX.SWFW_KDjbxxid
+  is '快递基本信息ID';
+comment on column SWFW_KDJBXX.jcxxid
+  is '基础信息ID';
+comment on column SWFW_KDJBXX.bcms
+  is '补充描述';
+comment on column SWFW_KDJBXX.lb
+  is '类别';
+comment on column SWFW_KDJBXX.qy
+  is '区域';
+comment on column SWFW_KDJBXX.dd
+  is '地段';
+comment on column SWFW_KDJBXX.jtdz
+  is '具体地址';
+comment on column SWFW_KDJBXX.fwqy
+  is '服务区域';
+comment on column SWFW_KDJBXX.xl
+  is '小类';

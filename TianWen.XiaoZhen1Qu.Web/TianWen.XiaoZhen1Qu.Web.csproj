@@ -394,6 +394,7 @@
     <Content Include="Areas\Business\Css\SWFW\SWFW_FLZX.css" />
     <Content Include="Areas\Business\Css\SWFW\SWFW_GGCM.css" />
     <Content Include="Areas\Business\Css\SWFW\SWFW_GSZC.css" />
+    <Content Include="Areas\Business\Css\SWFW\SWFW_KD.css" />
     <Content Include="Areas\Business\Css\SWFW\SWFW_LPDZ.css" />
     <Content Include="Areas\Business\Css\SWFW\SWFW_PHZP.css" />
     <Content Include="Areas\Business\Css\SWFW\SWFW_SBZL.css" />
@@ -404,6 +405,7 @@
     <Content Include="Areas\Business\Css\SWFW\SWFW_YSBZ.css" />
     <Content Include="Areas\Business\Css\SWFW\SWFW_ZHFW.css" />
     <Content Include="Areas\Business\Css\SWFW\SWFW_ZK.css" />
+    <Content Include="Areas\Business\Css\SWFW\SWFW_ZXFW.css" />
     <Content Include="Areas\Business\Css\WDFB.css" />
     <Content Include="Areas\Business\Css\WDSC.css" />
     <Content Include="Areas\Business\Css\WDXJ\WDXJ_CZ.css" />
@@ -683,6 +685,10 @@
     <Content Include="Areas\Business\Scripts\Business\SHFW\SHFW_SHFW_SHPSYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\SHFW\SHFW_WXFW_SJSMWX.js" />
     <Content Include="Areas\Business\Scripts\Business\SHFW\SHFW_WXFW_SJSMWXYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\SWFW\SWFW_KD.js" />
+    <Content Include="Areas\Business\Scripts\Business\SWFW\SWFW_KDYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\SWFW\SWFW_ZXFW.js" />
+    <Content Include="Areas\Business\Scripts\Business\SWFW\SWFW_ZXFWYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\SWFW\SWFW_BX.js" />
     <Content Include="Areas\Business\Scripts\Business\SWFW\SWFW_BXYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\SWFW\SWFW_CWKJPG.js" />
@@ -1242,6 +1248,7 @@
     <Compile Include="Areas\Business\Controllers\SWFW\SWFW_FLZXController.cs" />
     <Compile Include="Areas\Business\Controllers\SWFW\SWFW_GGCMController.cs" />
     <Compile Include="Areas\Business\Controllers\SWFW\SWFW_GSZCController.cs" />
+    <Compile Include="Areas\Business\Controllers\SWFW\SWFW_KDController.cs" />
     <Compile Include="Areas\Business\Controllers\SWFW\SWFW_LPDZController.cs" />
     <Compile Include="Areas\Business\Controllers\SWFW\SWFW_PHZPController.cs" />
     <Compile Include="Areas\Business\Controllers\SWFW\SWFW_SBZLController.cs" />
@@ -1252,6 +1259,7 @@
     <Compile Include="Areas\Business\Controllers\SWFW\SWFW_YSBZController.cs" />
     <Compile Include="Areas\Business\Controllers\SWFW\SWFW_ZHFWController.cs" />
     <Compile Include="Areas\Business\Controllers\SWFW\SWFW_ZKController.cs" />
+    <Compile Include="Areas\Business\Controllers\SWFW\SWFW_ZXFWController.cs" />
     <Compile Include="Areas\Business\Controllers\WDFBController.cs" />
     <Compile Include="Areas\Business\Controllers\WDSCController.cs" />
     <Compile Include="Areas\Business\Controllers\WDXJController.cs" />
@@ -1525,6 +1533,8 @@
     <Content Include="Areas\Business\Views\SWFW_ZK\SWFW_ZK.cshtml" />
     <Content Include="Areas\Business\Views\SWFW_WLBXWH\SWFW_WLBXWH.cshtml" />
     <Content Include="Areas\Business\Views\SWFW_WZJSTG\SWFW_WZJSTG.cshtml" />
+    <Content Include="Areas\Business\Views\SWFW_ZXFW\SWFW_ZXFW.cshtml" />
+    <Content Include="Areas\Business\Views\SWFW_KD\SWFW_KD.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
