@@ -65,4 +65,14 @@
       <ref object="SWFW_ZKBLL"/>
     </property>
   </object>
+  <object id="SWFW_WLBXWHController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SWFW_WLBXWHController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="SWFW_WLBXWHBLL">
+      <ref object="SWFW_WLBXWHBLL"/>
+    </property>
+  </object>
+  <object id="SWFW_WZJSTGController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SWFW_WZJSTGController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="SWFW_WZJSTGBLL">
+      <ref object="SWFW_WZJSTGBLL"/>
+    </property>
+  </object>
 </objects>
