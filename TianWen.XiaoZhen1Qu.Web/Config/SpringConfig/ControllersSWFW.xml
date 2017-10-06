@@ -85,4 +85,9 @@
       <ref object="SWFW_KDBLL"/>
     </property>
   </object>
+  <object id="SWFW_FYSJController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SWFW_FYSJController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="SWFW_FYSJBLL">
+      <ref object="SWFW_FYSJBLL"/>
+    </property>
+  </object>
 </objects>

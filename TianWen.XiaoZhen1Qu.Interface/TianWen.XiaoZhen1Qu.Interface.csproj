@@ -166,6 +166,7 @@
     <Compile Include="SWFW\ISWFW_BXBLL.cs" />
     <Compile Include="SWFW\ISWFW_CWKJPGBLL.cs" />
     <Compile Include="SWFW\ISWFW_FLZXBLL.cs" />
+    <Compile Include="SWFW\ISWFW_FYSJBLL.cs" />
     <Compile Include="SWFW\ISWFW_GGCMBLL.cs" />
     <Compile Include="SWFW\ISWFW_GSZCBLL.cs" />
     <Compile Include="SWFW\ISWFW_KDBLL.cs" />
