@@ -1,8 +1,7 @@
 ﻿var isleave = true;
 var ue = UE.getEditor('FYMS');
 $(document).ready(function () {
-    $("#imgGNHYZX").bind("click", GNHYZXSelect);
-    $("#imgGJHYZX").bind("click", GJHYZXSelect);
+    $(".div_radio").bind("click", RadioSelect);
     $("#divUploadOut").bind("mouseover", GetUploadCss);
     $("#divUploadOut").bind("mouseleave", LeaveUploadCss);
     $("#btnFB").bind("click", FB);
@@ -16,10 +15,11 @@ $(document).ready(function () {
     $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
     LoadTXXX();
-    LoadHYZXLB();
+    LoadZHFS();
     LoadDefault();
     BindClick("QY");
     BindClick("DD");
+    BindClick("YSJGDW");
 });
 //描述框focus
 function FYMSFocus() {
@@ -41,99 +41,38 @@ function LoadDefault() {
     });
     $(".iFWCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
 }
-//选择国内货运专线
-function GNHYZXSelect() {
-    $("#imgGNHYZX").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgGJHYZX").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
-//选择国际货运专线
-function GJHYZXSelect() {
-    $("#imgGNHYZX").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    $("#imgGJHYZX").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-}
-//获取供求
-function GetGQ() {
-    if ($("#imgGRZR").attr("src").indexOf("blue") !== -1)
-        return "0";
-    else
-        return "1";
-}
-//设置供求
-function SetGQ(gq) {
-    if (gq === 0) {
-        $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-        $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    }
-    else {
-        $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-        $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    }
-}
-//加载货运专线类别
-function LoadHYZXLB() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_SWFW",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "货运专线"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='ulFWPZ'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liHYZXLB' onclick='SelectHYZXLB(this)'><img class='img_HYZXLB'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i === 3 || i === 7 || i === 11 || i === 15 || i === 19) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
-                    }
-                }
-                if (parseInt(xml.list.length % 4) === 0)
-                    $("#divHYZXLB").css("height", parseInt(xml.list.length / 4) * 45 + "px");
-                else
-                    $("#divHYZXLB").css("height", (parseInt(xml.list.length / 4) + 1) * 45 + "px");
-                html += "</ul>";
-                $("#divHYZXLBText").html(html);
-                $(".img_HYZXLB").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-                LoadSWFW_HYZXJBXX();
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
+//选择单选
+function RadioSelect() {
+    $(this).parent().find("img").each(function () {
+        $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+    });
+    $(this).find("img").each(function () {
+        $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
     });
 }
-//选择货运专线
-function SelectHYZXLB(obj) {
-    if ($(obj).find("img").attr("src").indexOf("blue") !== -1)
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-    else
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-}
-//获取货运专线类别
-function GetHYZXLB() {
-    var HYZXLB = "";
-    $(".liHYZXLB").each(function () {
-        if ($(this).find("img").attr("src").indexOf("blue") !== -1)
-            HYZXLB += $(this).find("label")[0].innerHTML + ",";
+//获取单选
+function GetDX(type) {
+    var value = "";
+    $("#div" + type).find("img").each(function () {
+        if ($(this).attr("src").indexOf("blue") !== -1)
+            value = $(this).parent().find("label")[0].innerHTML;
     });
-    return RTrim(HYZXLB, ',');
+    return value;
 }
-//设置货运专线类别
-function SetHYZXLB(lbs) {
-    var lbarray = lbs.split(',');
-    for (var i = 0; i < lbarray.length; i++) {
-        $(".liHYZXLB").each(function () {
-            if ($(this).find("label")[0].innerHTML.indexOf(lbarray[i]) !== -1)
-                $(this).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-        });
-    }
+//设置单选
+function SetDX(type, value) {
+    $("#div" + type).find("label").each(function () {
+        if ($(this)[0].innerHTML === value)
+            $(this).parent().find("img").each(function () {
+                $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+            });
+    });
 }
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadLB();
+        if (type === "YSJGDW") {
+            LoadYSJGDW();
         }
         if (type === "QY") {
             LoadQY();
@@ -142,6 +81,161 @@ function BindClick(type) {
             LoadDD($("#QYCode").val());
         }
     });
+}
+//加载运输价格单位
+function LoadYSJGDW() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadCODES_SWFW",
+        dataType: "json",
+        data:
+        {
+            TYPENAME: "运输价格单位"
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"YSJGDW\")'>" + xml.list[i].CODENAME + "</li>";
+                }
+                html += "</ul>";
+                $("#divYSJGDW").html(html);
+                $("#divYSJGDW").css("display", "block");
+                ActiveStyle("YSJGDW");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//加载组货方式
+function LoadZHFS() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadCODES_SWFW",
+        dataType: "json",
+        data:
+        {
+            TYPENAME: "组货方式"
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='ulFWPZ'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='liZHFS' onclick='SelectDuoX(this)'><img class='img_ZHFS'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    if (i === 3 || i === 7 || i === 11 || i === 15 || i === 19) {
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
+                    }
+                }
+                if (parseInt(xml.list.length % 4) === 0)
+                    $("#divZHFS").css("height", parseInt(xml.list.length / 4) * 45 + "px");
+                else
+                    $("#divZHFS").css("height", (parseInt(xml.list.length / 4) + 1) * 45 + "px");
+                html += "</ul>";
+                $("#divZHFSText").html(html);
+                $(".img_ZHFS").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                LoadHWZL();
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//加载货物种类
+function LoadHWZL() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadCODES_SWFW",
+        dataType: "json",
+        data:
+        {
+            TYPENAME: "货物种类"
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='ulFWPZ'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='liHWZL' onclick='SelectDuoX(this)'><img class='img_HWZL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    if (i === 3 || i === 7 || i === 11 || i === 15 || i === 19) {
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
+                    }
+                }
+                if (parseInt(xml.list.length % 4) === 0)
+                    $("#divHWZL").css("height", parseInt(xml.list.length / 4) * 45 + "px");
+                else
+                    $("#divHWZL").css("height", (parseInt(xml.list.length / 4) + 1) * 45 + "px");
+                html += "</ul>";
+                $("#divHWZLText").html(html);
+                $(".img_HWZL").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                LoadFWYS();
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//加载服务延伸
+function LoadFWYS() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadCODES_SWFW",
+        dataType: "json",
+        data:
+        {
+            TYPENAME: "服务延伸"
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='ulFWPZ'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='liFWYS' onclick='SelectDuoX(this)'><img class='img_FWYS'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    if (i === 3 || i === 7 || i === 11 || i === 15 || i === 19) {
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
+                    }
+                }
+                if (parseInt(xml.list.length % 4) === 0)
+                    $("#divFWYS").css("height", parseInt(xml.list.length / 4) * 45 + "px");
+                else
+                    $("#divFWYS").css("height", (parseInt(xml.list.length / 4) + 1) * 45 + "px");
+                html += "</ul>";
+                $("#divFWYSText").html(html);
+                $(".img_FWYS").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                LoadSWFW_HYZXJBXX();
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//选择多选
+function SelectDuoX(obj) {
+    if ($(obj).find("img").attr("src").indexOf("blue") !== -1)
+        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+    else
+        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
+}
+//获取多选
+function GetDuoX(type) {
+    var value = "";
+    $(".li" + type).each(function () {
+        if ($(this).find("img").attr("src").indexOf("blue") !== -1)
+            value += $(this).find("label")[0].innerHTML + ",";
+    });
+    return RTrim(value, ',');
+}
+//设置多选
+function SetDuoX(type, lbs) {
+    var lbarray = lbs.split(',');
+    for (var i = 0; i < lbarray.length; i++) {
+        $(".li" + type).each(function () {
+            if ($(this).find("label")[0].innerHTML.indexOf(lbarray[i]) !== -1)
+                $(this).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
+        });
+    }
 }
 //加载商务服务_货运专线基本信息
 function LoadSWFW_HYZXJBXX() {
@@ -164,9 +258,17 @@ function LoadSWFW_HYZXJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.SWFW_HYZXJBXX.BCMS);
                 });
-                SetHYZXLB(xml.Value.SWFW_HYZXJBXX.LB);
                 $("#spanQY").html(xml.Value.SWFW_HYZXJBXX.QY);
                 $("#spanDD").html(xml.Value.SWFW_HYZXJBXX.DD);
+                $("#spanYSDWJG").html(xml.Value.SWFW_HYZXJBXX.YSDWJG);
+                SetDX("YSFW", xml.Value.SWFW_HYZXJBXX.YSFW);
+                SetDX("HYTD", xml.Value.SWFW_HYZXJBXX.HYTD);
+                SetDX("SFWF", xml.Value.SWFW_HYZXJBXX.SFWF);
+                SetDX("YWZZ", xml.Value.SWFW_HYZXJBXX.YWZZ);
+                SetDX("BC", xml.Value.SWFW_HYZXJBXX.BC);
+                SetDuoX("ZHFS", xml.Value.SWFW_HYZXJBXX.ZHFS);
+                SetDuoX("HWZL", xml.Value.SWFW_HYZXJBXX.HWZL);
+                SetDuoX("FWYS", xml.Value.SWFW_HYZXJBXX.FWYS);
                 LoadPhotos(xml.Value.Photos);
             }
         },
@@ -181,10 +283,19 @@ function FB() {
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
+    obj = jsonObj.AddJson(obj, "BT", "'" + $("#spanQY").html() + "至" + $("#DDD").val() + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
+    obj = jsonObj.AddJson(obj, "YSJGDW", "'" + $("#spanYSJGDW").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "LB", "'" + GetHYZXLB() + "'");
+    obj = jsonObj.AddJson(obj, "YSFW", "'" + GetDX("YSFW") + "'");
+    obj = jsonObj.AddJson(obj, "HYTD", "'" + GetDX("HYTD") + "'");
+    obj = jsonObj.AddJson(obj, "SFWF", "'" + GetDX("SFWF") + "'");
+    obj = jsonObj.AddJson(obj, "YWZZ", "'" + GetDX("YWZZ") + "'");
+    obj = jsonObj.AddJson(obj, "BC", "'" + GetDX("BC") + "'");
+    obj = jsonObj.AddJson(obj, "ZHFS", "'" + GetDuoX("ZHFS") + "'");
+    obj = jsonObj.AddJson(obj, "HWZL", "'" + GetDuoX("HWZL") + "'");
+    obj = jsonObj.AddJson(obj, "FWYS", "'" + GetDuoX("FWYS") + "'");
 
     if (getUrlParam("SWFW_HYZXJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "SWFW_HYZXJBXXID", "'" + getUrlParam("SWFW_HYZXJBXXID") + "'");

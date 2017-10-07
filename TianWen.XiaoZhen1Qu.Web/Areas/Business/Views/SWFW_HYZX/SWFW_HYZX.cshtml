@@ -88,11 +88,15 @@
                     <span class="spanFWCZ">运送范围</span>
                 </div>
                 <div class="divRight">
-                    <img class="iFWCZ" id="imgGNHYZX"/><label class="labelFWCZ">&nbsp;&nbsp;国内货运专线&nbsp;&nbsp;</label>
-                    <img class="iFWCZ" id="imgGJHYZX"/><label class="labelFWCZ">&nbsp;&nbsp;国际货运专线&nbsp;&nbsp;</label>
+                    <div id="div_ysfw_gnhyzx" class="div_radio">
+                        <img class="iFWCZ" id="img_ysfw_gnhyzx" /><label class="labelFWCZ">国内货运专线</label>
+                    </div>
+                    <div id="div_ysfw_gjhyzx" class="div_radio">
+                        <img class="iFWCZ" id="img_ysfw_gjhyzx" /><label class="labelFWCZ">国际货运专线</label>
+                    </div>
                 </div>
             </div>
-            <div id="divCFD" class="divFWCZ" style="z-index: 991;">
+            <div id="divCFD" class="divFWCZ" style="z-index: 999;">
                 <div class="divLeft" style="margin-left: 114px;">
                     <span class="required">*</span>
                     <span class="spanFWCZ">出发地</span>
@@ -100,7 +104,7 @@
                 <div class="divRight">
                     <div id="divQYText" class="spanFWLXOut SRK" style="border: 1px solid #cccccc; border-radius: 4px; z-index: 997; position: relative;">
                         <div id="divQYSpan" class="spanFWLXIn" style="border: none; margin-top: 6px;">
-                            <input type="hidden" id="QYCode"/>
+                            <input type="hidden" id="QYCode" />
                             <span id="spanQY" class="spanFWQK spanFontColor" style="margin-top: 0">请选择区域</span>
                             <div class="divFWQKArrow"></div>
                         </div>
@@ -117,13 +121,13 @@
                     </div>
                 </div>
             </div>
-            <div id="divDDD" class="divFWCZ" style="z-index: 990">
+            <div id="divDDD" class="divFWCZ" style="z-index: 998">
                 <div class="divLeft" style="margin-left: 114px;">
                     <span class="required">*</span>
                     <span id="spanDDD">到达地</span>
                 </div>
                 <div class="divRight">
-                    <input id="DDD" column="DDD" class="spanFWLX inputLXRXX SRK" type="text" placeholder="请输入到达地"/>
+                    <input id="DDD" column="DDD" class="spanFWLX inputLXRXX SRK" type="text" placeholder="请输入到达地" />
                     <div id="divDDDTip"></div>
                 </div>
             </div>
@@ -133,11 +137,21 @@
                     <span class="spanFWCZ">货运通道</span>
                 </div>
                 <div class="divRight">
-                    <div id="div_hytd_gl" class="div_radio"><img class="iFWCZ" id="img_hytd_gl" /><label class="labelFWCZ">&nbsp;&nbsp;公路&nbsp;&nbsp;</label></div>
-                    <img class="iFWCZ" id="img_hytd_tl"/><label class="labelFWCZ">&nbsp;&nbsp;铁路&nbsp;&nbsp;</label>
-                    <img class="iFWCZ" id="img_hytd_hk"/><label class="labelFWCZ">&nbsp;&nbsp;航空&nbsp;&nbsp;</label>
-                    <img class="iFWCZ" id="img_hytd_hey"/><label class="labelFWCZ">&nbsp;&nbsp;河运&nbsp;&nbsp;</label>
-                    <img class="iFWCZ" id="img_hytd_haiy" /><label class="labelFWCZ">&nbsp;&nbsp;海运&nbsp;&nbsp;</label>
+                    <div id="div_hytd_gl" class="div_radio">
+                        <img class="iFWCZ" id="img_hytd_gl" /><label class="labelFWCZ">公路</label>
+                    </div>
+                    <div id="div_hytd_tl" class="div_radio">
+                        <img class="iFWCZ" id="img_hytd_tl" /><label class="labelFWCZ">铁路</label>
+                    </div>
+                    <div id="div_hytd_hk" class="div_radio">
+                        <img class="iFWCZ" id="img_hytd_hk" /><label class="labelFWCZ">航空</label>
+                    </div>
+                    <div id="div_hytd_hey" class="div_radio">
+                        <img class="iFWCZ" id="img_hytd_hey" /><label class="labelFWCZ">河运</label>
+                    </div>
+                    <div id="div_hytd_haiy" class="div_radio">
+                        <img class="iFWCZ" id="img_hytd_haiy" /><label class="labelFWCZ">海运</label>
+                    </div>
                 </div>
             </div>
             <div id="divSFWF" class="divFWCZ">
@@ -146,8 +160,12 @@
                     <span class="spanFWCZ">是否往返</span>
                 </div>
                 <div class="divRight">
-                    <img class="iFWCZ" id="img_sfwf_dx"/><label class="labelFWCZ">&nbsp;&nbsp;单向&nbsp;&nbsp;</label>
-                    <img class="iFWCZ" id="img_sfwf_sx"/><label class="labelFWCZ">&nbsp;&nbsp;双向&nbsp;&nbsp;</label>
+                    <div id="div_sfwf_dx" class="div_radio">
+                        <img class="iFWCZ" id="img_sfwf_dx" /><label class="labelFWCZ">单向</label>
+                    </div>
+                    <div id="div_sfwf_sx" class="div_radio">
+                        <img class="iFWCZ" id="img_sfwf_sx" /><label class="labelFWCZ">双向</label>
+                    </div>
                 </div>
             </div>
             <div id="divYWZZ" class="divFWCZ">
@@ -156,9 +174,15 @@
                     <span class="spanFWCZ">有无中转</span>
                 </div>
                 <div class="divRight">
-                    <img class="iFWCZ" id="img_ywzz_zd"/><label class="labelFWCZ">&nbsp;&nbsp;直达&nbsp;&nbsp;</label>
-                    <img class="iFWCZ" id="img_ywzz_yzz"/><label class="labelFWCZ">&nbsp;&nbsp;有中转&nbsp;&nbsp;</label>
-                    <img class="iFWCZ" id="img_ywzz_ly" /><label class="labelFWCZ">&nbsp;&nbsp;联运&nbsp;&nbsp;</label>
+                    <div id="div_ywyz_zd" class="div_radio">
+                        <img class="iFWCZ" id="img_ywzz_zd" /><label class="labelFWCZ">直达</label>
+                    </div>
+                    <div id="div_ywyz_yzz" class="div_radio">
+                        <img class="iFWCZ" id="img_ywzz_yzz" /><label class="labelFWCZ">有中转</label>
+                    </div>
+                    <div id="div_ywyz_ly" class="div_radio">
+                        <img class="iFWCZ" id="img_ywzz_ly" /><label class="labelFWCZ">联运</label>
+                    </div>
                 </div>
             </div>
             <div id="divBC" class="divFWCZ">
@@ -167,23 +191,71 @@
                     <span class="spanFWCZ">班次</span>
                 </div>
                 <div class="divRight">
-                    <img class="iFWCZ" id="img_bc_gdbc" /><label class="labelFWCZ">&nbsp;&nbsp;固定班次&nbsp;&nbsp;</label>
-                    <img class="iFWCZ" id="img_bc_bgdbc" /><label class="labelFWCZ">&nbsp;&nbsp;不固定班次&nbsp;&nbsp;</label>
+                    <div id="div_bc_gdbc" class="div_radio">
+                        <img class="iFWCZ" id="img_bc_gdbc" /><label class="labelFWCZ">固定班次</label>
+                    </div>
+                    <div id="div_bc_bgdbc" class="div_radio">
+                        <img class="iFWCZ" id="img_bc_bgdbc" /><label class="labelFWCZ">不固定班次</label>
+                    </div>
                 </div>
             </div>
-            <div id="divHYZXLB" class="divFWCZ" style="z-index: 996;">
-                <div class="divLeft" style="margin-left: 128px;">
+            <div id="divTZSJ" class="divFWCZ" style="z-index: 990">
+                <div class="divLeft">
                     <span class="required">*</span>
-                    <span id="spanHYZXLB">类别</span>
+                    <span id="spanTZSJ">途中时间</span>
                 </div>
-                <div id="divHYZXLBText" class="divRight" style="position: relative;">
+                <div class="divRight">
+                    <input id="TZSJ" column="TZSJ" class="spanFWLX inputLXRXX SRK" type="text" placeholder="请输入途中时间" />
+                    <div id="divTZSJTip"></div>
                 </div>
             </div>
-            <div id="divXXXX" class="divSplit" style="display: block; text-align: left;">
+            <div id="divZHFS" class="divFWCZ" style="z-index: 997;">
+                <div class="divLeft">
+                    <span class="required">*</span>
+                    <span id="spanZHFS">组货方式</span>
+                </div>
+                <div id="divZHFSText" class="divRight" style="position: relative;">
+                </div>
+            </div>
+            <div id="divHWZL" class="divFWCZ" style="z-index: 996;">
+                <div class="divLeft">
+                    <span class="required">*</span>
+                    <span id="spanHWZL">货物种类</span>
+                </div>
+                <div id="divHWZLText" class="divRight" style="position: relative;">
+                </div>
+            </div>
+            <div id="divFWYS" class="divFWCZ" style="z-index: 995;">
+                <div class="divLeft">
+                    <span class="required">*</span>
+                    <span id="spanFWYS">服务延伸</span>
+                </div>
+                <div id="divFWYSText" class="divRight" style="position: relative;">
+                </div>
+            </div>
+            <div id="divYSJG" class="divFWCZ" style="z-index: 994">
+                <div class="divLeft">
+                    <span class="required">*</span>
+                    <span id="spanYSJG">运输价格</span>
+                </div>
+                <div class="divRight">
+                    <input id="YSJG" column="YSJG" class="spanFWLX inputLXRXX SRK" type="text" placeholder="请输入运输价格" style="width: 150px;" />
+                    <div id="divYSJGDWText" class="spanFWLXOut SRK" style="border: 1px solid #cccccc; border-radius: 4px; z-index: 997; position: relative;">
+                        <div id="divYSJGDWSpan" class="spanFWLXIn" style="border: none; margin-top: 6px;">
+                            <span id="spanYSJGDW" class="spanFWQK spanFontColor" style="margin-top: 0">元/吨</span>
+                            <div class="divFWQKArrow"></div>
+                        </div>
+                        <div id="divYSJGDW" class="divdropdown" style="margin-top: -7px; margin-left: -1px;">
+                        </div>
+                    </div>
+                    <div id="divYSJGTip"></div>
+                </div>
+            </div>
+            <div id="divXXXX" class="divSplit" style="display: block; text-align: left; z-index: 993;">
                 <span class="spanSplit">特色描述</span>
                 <em class="emSplit"></em>
             </div>
-            <div id="divFYMS" class="divFWCZ" style="height: 253px;">
+            <div id="divFYMS" class="divFWCZ" style="height: 253px; z-index: 992;">
                 <div class="divLeft" style="height: 170px; vertical-align: top;">
                     <span class="required" style="vertical-align: top">*</span>
                     <span id="spanFYMS" style="vertical-align: top">服务介绍</span>

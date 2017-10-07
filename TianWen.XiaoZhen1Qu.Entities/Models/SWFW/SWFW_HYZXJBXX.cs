@@ -26,7 +26,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// 运送范围
         /// </summary>
         [Property]
-        public virtual int YSFW { get; set; }
+        public virtual string YSFW { get; set; }
 
         /// <summary>
         /// 出发地区域
@@ -50,25 +50,25 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// 货运通道
         /// </summary>
         [Property]
-        public virtual int HYTD { get; set; }
+        public virtual string HYTD { get; set; }
 
         /// <summary>
         /// 是否往返
         /// </summary>
         [Property]
-        public virtual int SFWF { get; set; }
+        public virtual string SFWF { get; set; }
 
         /// <summary>
         /// 有无中转
         /// </summary>
         [Property]
-        public virtual int YWZZ { get; set; }
+        public virtual string YWZZ { get; set; }
 
         /// <summary>
         /// 班次
         /// </summary>
         [Property]
-        public virtual int BC { get; set; }
+        public virtual string BC { get; set; }
 
         /// <summary>
         /// 途中时间
