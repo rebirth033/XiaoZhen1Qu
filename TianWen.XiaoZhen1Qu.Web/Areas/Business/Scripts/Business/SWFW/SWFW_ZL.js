@@ -1,8 +1,6 @@
 ﻿var isleave = true;
 var ue = UE.getEditor('FYMS');
 $(document).ready(function () {
-    $("#imgSMFW").bind("click", SMFWSelect);
-    $("#imgDDFW").bind("click", DDFWSelect);
     $("#divUploadOut").bind("mouseover", GetUploadCss);
     $("#divUploadOut").bind("mouseleave", LeaveUploadCss);
     $("#btnFB").bind("click", FB);
@@ -37,41 +35,12 @@ function FYMSSetDefault() {
 }
 //加载默认
 function LoadDefault() {
-    ue.ready(function () {
+    ue.ready(function() {
         ue.setHeight(200);
     });
-    $("#imgSMFW").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgDDFW").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
 }
-//选择上门服务
-function SMFWSelect() {
-    $("#imgSMFW").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgDDFW").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
-//选择到店服务
-function DDFWSelect() {
-    $("#imgSMFW").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    $("#imgDDFW").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-}
-//获取是否上门
-function GetSFSM() {
-    if ($("#imgSMFW").attr("src").indexOf("blue") !== -1)
-        return "0";
-    else
-        return "1";
-}
-//设置是否上门
-function SetSFSM(sfsm) {
-    if (sfsm === 0) {
-        $("#imgSMFW").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-        $("#imgDDFW").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    }
-    else {
-        $("#imgSMFW").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-        $("#imgDDFW").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    }
-}
-//加载商标专利类别
+
+//加载租赁类别
 function LoadLB() {
     $.ajax({
         type: "POST",
@@ -79,7 +48,7 @@ function LoadLB() {
         dataType: "json",
         data:
         {
-            TYPENAME: "商标专利"
+            TYPENAME: "租赁"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -120,14 +89,14 @@ function LoadXL(lbmc, xl) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='liXL' onclick='SelectXL(this)'><img class='img_XL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i === 5 || i === 11 || i === 17 || i === 23 || i === 29) {
+                    if (i === 3 || i === 7 || i === 11 || i === 15) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
                 }
-                if (parseInt(xml.list.length % 6) === 0)
-                    $("#divXL").css("height", parseInt(xml.list.length / 6) * 45 + "px");
+                if (parseInt(xml.list.length % 4) === 0)
+                    $("#divXL").css("height", parseInt(xml.list.length / 4) * 45 + "px");
                 else
-                    $("#divXL").css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
+                    $("#divXL").css("height", (parseInt(xml.list.length / 4) + 1) * 45 + "px");
                 html += "</ul>";
                 $("#divXLText").html(html);
                 $(".img_XL").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
@@ -186,7 +155,7 @@ function BindClick(type) {
         }
     });
 }
-//加载商务服务_商标专利基本信息
+//加载商务服务_租赁基本信息
 function LoadSWFW_ZLJBXX() {
     $.ajax({
         type: "POST",
@@ -210,7 +179,6 @@ function LoadSWFW_ZLJBXX() {
                 $("#spanLB").html(xml.Value.SWFW_ZLJBXX.LB);
                 $("#spanQY").html(xml.Value.SWFW_ZLJBXX.QY);
                 $("#spanDD").html(xml.Value.SWFW_ZLJBXX.DD);
-                SetSFSM(xml.Value.SWFW_ZLJBXX.SFSM);
                 LoadPhotos(xml.Value.Photos);
                 LoadXL(xml.Value.SWFW_ZLJBXX.LB, xml.Value.SWFW_ZLJBXX.XL);
             }
@@ -231,7 +199,6 @@ function FB() {
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "XL", "'" + GetXL() + "'");
-    obj = jsonObj.AddJson(obj, "SFSM", "'" + GetSFSM() + "'");
 
     if (getUrlParam("SWFW_ZLJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "SWFW_ZLJBXXID", "'" + getUrlParam("SWFW_ZLJBXXID") + "'");

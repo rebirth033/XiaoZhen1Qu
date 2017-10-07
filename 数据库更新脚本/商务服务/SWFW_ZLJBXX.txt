@@ -9,7 +9,7 @@ create table SWFW_ZLJBXX
   dd            VARCHAR2(20),
   jtdz          VARCHAR2(200),
   fwqy          VARCHAR2(200),
-  xl            VARCHAR2(20)
+  xl            VARCHAR2(200)
 )
 tablespace USERS
   pctfree 10
