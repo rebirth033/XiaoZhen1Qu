@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects  xmlns="http://www.springframework.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.net http://www.springframework.net/xsd/spring-objects.xsd">
+  <object id="JYPX_ZXXFDBController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.JYPX_ZXXFDBController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="JYPX_ZXXFDBBLL">
+      <ref object="JYPX_ZXXFDBBLL"/>
+    </property>
+  </object>
+  <object id="JYPX_JJGRController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.JYPX_JJGRController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="JYPX_JJGRBLL">
+      <ref object="JYPX_JJGRBLL"/>
+    </property>
+  </object>
+</objects>

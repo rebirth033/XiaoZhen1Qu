@@ -1,0 +1,52 @@
+-- Create table
+create table JYPX_ZXXFDBJBXX
+(
+  jypx_zxxfdbjbxxid VARCHAR2(50) not null,
+  jcxxid            VARCHAR2(50),
+  bcms              VARCHAR2(4000),
+  lb                VARCHAR2(200),
+  qy                VARCHAR2(20),
+  dd                VARCHAR2(20),
+  jtdz              VARCHAR2(200),
+  fwqy              VARCHAR2(200),
+  xl                VARCHAR2(200),
+  zxxfdb            VARCHAR2(200),
+  skxs              VARCHAR2(200)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table JYPX_ZXXFDBJBXX
+  is '教育培训_中小学辅导班';
+-- Add comments to the columns 
+comment on column JYPX_ZXXFDBJBXX.jypx_zxxfdbjbxxid
+  is '中小学辅导班基本信息ID';
+comment on column JYPX_ZXXFDBJBXX.jcxxid
+  is '基础信息ID';
+comment on column JYPX_ZXXFDBJBXX.bcms
+  is '补充描述';
+comment on column JYPX_ZXXFDBJBXX.lb
+  is '类别';
+comment on column JYPX_ZXXFDBJBXX.qy
+  is '区域';
+comment on column JYPX_ZXXFDBJBXX.dd
+  is '地段';
+comment on column JYPX_ZXXFDBJBXX.jtdz
+  is '具体地址';
+comment on column JYPX_ZXXFDBJBXX.fwqy
+  is '服务区域';
+comment on column JYPX_ZXXFDBJBXX.xl
+  is '小类';
+comment on column JYPX_ZXXFDBJBXX.zxxfdb
+  is '中小学辅导班';
+comment on column JYPX_ZXXFDBJBXX.skxs
+  is '授课形式';
