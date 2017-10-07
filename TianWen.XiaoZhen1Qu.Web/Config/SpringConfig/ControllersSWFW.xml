@@ -110,4 +110,19 @@
       <ref object="SWFW_ZLBLL"/>
     </property>
   </object>
+  <object id="SWFW_DBQZQZController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SWFW_DBQZQZController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="SWFW_DBQZQZBLL">
+      <ref object="SWFW_DBQZQZBLL"/>
+    </property>
+  </object>
+  <object id="SWFW_JZWXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SWFW_JZWXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="SWFW_JZWXBLL">
+      <ref object="SWFW_JZWXBLL"/>
+    </property>
+  </object>
+  <object id="SWFW_JXSBWXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SWFW_JXSBWXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="SWFW_JXSBWXBLL">
+      <ref object="SWFW_JXSBWXBLL"/>
+    </property>
+  </object>
 </objects>

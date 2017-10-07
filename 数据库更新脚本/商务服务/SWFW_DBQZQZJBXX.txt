@@ -1,0 +1,49 @@
+-- Create table
+create table SWFW_DBQZQZJBXX
+(
+  swfw_dbqzqzjbxxid VARCHAR2(50) not null,
+  jcxxid            VARCHAR2(50),
+  bcms              VARCHAR2(4000),
+  lb                VARCHAR2(200),
+  qy                VARCHAR2(20),
+  dd                VARCHAR2(20),
+  jtdz              VARCHAR2(200),
+  fwqy              VARCHAR2(200),
+  grtt              VARCHAR2(20),
+  gj                VARCHAR2(200)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table SWFW_DBQZQZJBXX
+  is '商务服务_代办签证/签注';
+-- Add comments to the columns 
+comment on column SWFW_DBQZQZJBXX.swfw_dbqzqzjbxxid
+  is '代办签证/签注基本信息ID';
+comment on column SWFW_DBQZQZJBXX.jcxxid
+  is '基础信息ID';
+comment on column SWFW_DBQZQZJBXX.bcms
+  is '补充描述';
+comment on column SWFW_DBQZQZJBXX.lb
+  is '类别';
+comment on column SWFW_DBQZQZJBXX.qy
+  is '区域';
+comment on column SWFW_DBQZQZJBXX.dd
+  is '地段';
+comment on column SWFW_DBQZQZJBXX.jtdz
+  is '具体地址';
+comment on column SWFW_DBQZQZJBXX.fwqy
+  is '服务区域';
+comment on column SWFW_DBQZQZJBXX.grtt
+  is '个人/团体';
+comment on column SWFW_DBQZQZJBXX.gj
+  is '国家';
