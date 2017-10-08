@@ -23,28 +23,46 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string JCXXID { get; set; }
 
         /// <summary>
-        /// 语种
+        /// 姓名
         /// </summary>
         [Property]
-        public virtual string YZ { get; set; }
+        public virtual string XM { get; set; }
 
         /// <summary>
-        /// 小类
+        /// 身份
         /// </summary>
         [Property]
-        public virtual string XL { get; set; }
+        public virtual string SF { get; set; }
 
         /// <summary>
-        /// 专项
+        /// 教学科目
         /// </summary>
         [Property]
-        public virtual string ZX { get; set; }
+        public virtual string JXKM { get; set; }
 
         /// <summary>
-        /// 级别
+        /// 级别水平
         /// </summary>
         [Property]
-        public virtual string JB { get; set; }
+        public virtual string JBSP { get; set; }
+
+        /// <summary>
+        /// 家教经验
+        /// </summary>
+        [Property]
+        public virtual string JJJY { get; set; }
+
+        /// <summary>
+        /// 期望时薪_起
+        /// </summary>
+        [Property]
+        public virtual string QWSX_Q { get; set; }
+
+        /// <summary>
+        /// 期望时薪_止
+        /// </summary>
+        [Property]
+        public virtual string QWSX_Z { get; set; }
 
         /// <summary>
         /// 服务区域

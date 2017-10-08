@@ -92,46 +92,105 @@
                     <div id="divBTTip"></div>
                 </div>
             </div>
-            <div id="divLPLB" class="divFWCZ" style="z-index: 999">
+            <div id="divXM" class="divFWCZ" style="margin-top: 22px;">
                 <div class="divLeft" style="margin-left: 128px;">
                     <span class="required">*</span>
-                    <span class="spanFWCZ">类别</span>
+                    <span id="spanXM">姓名</span>
                 </div>
                 <div class="divRight">
-                    <div id="divLBText" class="spanFWLXOut SRK" style="position: relative;">
-                        <div id="divLBSpan" class="spanFWLXIn" style="border: none; margin-top: 6px;">
-                            <input type="hidden" id="LBID" />
-                            <span id="spanLB" class="spanFWQK spanFontColor" style="margin-top: 0">请选择类别</span>
-                            <div class="divFWQKArrow"></div>
-                        </div>
-                        <div id="divLB" class="divdropdown" style="margin-top: -7px; margin-left: -1px;">
-                        </div>
+                    <input id="XM" maxlength="50" column="XM" class="spanFWLX SRK" style="padding: 6px 12px; width: 150px; color: #999999" type="text" placeholder="请输入姓名" />
+                    <div id="divXMTip"></div>
+                </div>
+            </div>
+            <div id="divXB" class="divFWCZ">
+                <div class="divLeft" style="margin-left: 128px;">
+                    <span class="required">*</span>
+                    <span class="spanFWCZ">性别</span>
+                </div>
+                <div class="divRight">
+                    <div id="div_xb_nan" class="div_radio">
+                        <img class="iFWCZ" id="img_xb_nan" /><label class="labelFWCZ">男</label>
+                    </div>
+                    <div id="div_xb_nv" class="div_radio">
+                        <img class="iFWCZ" id="img_xb_nv" /><label class="labelFWCZ">女</label>
                     </div>
                 </div>
             </div>
-            <div id="divXL" class="divFWCZ" style="z-index: 998; display: none;">
+            <div id="divSF" class="divFWCZ">
                 <div class="divLeft" style="margin-left: 128px;">
                     <span class="required">*</span>
-                    <span id="spanXL">小类</span>
+                    <span class="spanFWCZ">身份</span>
                 </div>
-                <div id="divXLText" class="divRight" style="position: relative;">
+                <div class="divRight">
+                    <div id="div_sf_dxs" class="div_radio">
+                        <img class="iFWCZ" id="img_ysfw_dxs" /><label class="labelFWCZ">大学生</label>
+                    </div>
+                    <div id="div_sf_zxjs" class="div_radio">
+                        <img class="iFWCZ" id="img_sf_zxjs" /><label class="labelFWCZ">专业教师</label>
+                    </div>
+                    <div id="div_sf_zzjs" class="div_radio">
+                        <img class="iFWCZ" id="img_sf_zzjs" /><label class="labelFWCZ">外教</label>
+                    </div>
+                    <div id="div_sf_wj" class="div_radio">
+                        <img class="iFWCZ" id="img_sf_wj" /><label class="labelFWCZ">其他</label>
+                    </div>
                 </div>
             </div>
-            <div id="divSKXS" class="divFWCZ" style="z-index: 997;">
+            <div id="divJJJY" class="divFWCZ">
                 <div class="divLeft">
                     <span class="required">*</span>
-                    <span id="spanSKXS">授课形式</span>
+                    <span class="spanFWCZ">家教经验</span>
                 </div>
-                <div id="divSKXSText" class="divRight" style="position: relative;">
+                <div class="divRight">
+                    <div id="div_jjjy_y" class="div_radio">
+                        <img class="iFWCZ" id="img_jjjy_y" /><label class="labelFWCZ">有</label>
+                    </div>
+                    <div id="div_jjjy_w" class="div_radio">
+                        <img class="iFWCZ" id="img_jjjy_w" /><label class="labelFWCZ">无</label>
+                    </div>
+                </div>
+            </div>
+            <div id="divFDJD" class="divFWCZ" style="z-index: 997;">
+                <div class="divLeft">
+                    <span class="required">*</span>
+                    <span id="spanFDJD">辅导阶段</span>
+                </div>
+                <div id="divFDJDText" class="divRight" style="position: relative;">
+                </div>
+            </div>
+            <div id="divFDKM" class="divFWCZ" style="z-index: 997;">
+                <div class="divLeft">
+                    <span class="required">*</span>
+                    <span id="spanFDKM">辅导科目</span>
+                </div>
+                <div id="divFDKMText" class="divRight" style="position: relative;">
+                </div>
+            </div>
+            <div id="divQWSX" class="divFWCZ" style="margin-top: 22px;">
+                <div class="divLeft">
+                    <span class="required">*</span>
+                    <span id="spanQWSX">期望时薪</span>
+                </div>
+                <div class="divRight">
+                    <span id="spanQWSX_Q" class="spanFWLX SRK" style="display: inline-block; width: 150px;">
+                        <input class="inputLCFB spanFontColor" id="QWSX_Q" maxlength="9" column="QWSX_Q" type="text" style="width: 100px" />
+                        <span class="spanFontColor">元/时</span>
+                    </span>
+                    -
+                    <span id="spanQWSX_Z" class="spanFWLX SRK" style="display: inline-block; width: 150px;">
+                        <input class="inputLCFB spanFontColor" id="QWSX_Z" maxlength="9" column="QWSX_Q" type="text" style="width: 100px" />
+                        <span class="spanFontColor">元/时</span>
+                    </span>
+                    <div id="divQWSXTip"></div>
                 </div>
             </div>
             <div id="divFWQY" class="divFWCZ" style="z-index: 996">
                 <div class="divLeft">
                     <span class="required">*</span>
-                    <span id="spanFWQY">服务区域</span>
+                    <span id="spanFWQY">辅导区域</span>
                 </div>
                 <div class="divRight">
-                    <input id="FWQY" column="FWQY" class="spanFWLX inputLXRXX SRK" type="text" placeholder="请输入服务区域" />
+                    <input id="FWQY" column="FWQY" class="spanFWLX inputLXRXX SRK" type="text" placeholder="请输入辅导区域" />
                     <div id="divFWQYTip"></div>
                 </div>
             </div>

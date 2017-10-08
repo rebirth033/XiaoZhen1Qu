@@ -19,6 +19,9 @@ $(document).ready(function () {
     BindClick("JXKM");
     BindClick("QY");
     BindClick("DD");
+    LoadDuoX("辅导阶段", "FDJD");
+    LoadDuoX("辅导科目", "FDKM");
+    LoadJYPX_YYPXJSJBXX();
 });
 //描述框focus
 function FYMSFocus() {
@@ -88,6 +91,45 @@ function BindClick(type) {
         }
     });
 }
+//加载多选
+function LoadDuoX(type, id) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadCODES_JYPX",
+        dataType: "json",
+        data:
+        {
+            TYPENAME: type
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='ulFWPZ'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='li" + id + "' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    if (i === 3 || i === 7 || i === 11) {
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
+                    }
+                }
+                if (parseInt(xml.list.length % 4) === 0)
+                    $("#div" + id).css("height", parseInt(xml.list.length / 4) * 45 + "px");
+                else
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 4) + 1) * 45 + "px");
+                html += "</ul>";
+                $("#div" + id + "Text").html(html);
+                $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                if (xml.list.length === 0)
+                    $("#div" + id).css("display", "none");
+                else
+                    $("#div" + id).css("display", "");
+                if (type === "辅导科目")
+                    LoadJYPX_YYPXJSJBXX();
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
 //加载商务服务_语言培训教师基本信息
 function LoadJYPX_YYPXJSJBXX() {
     $.ajax({
@@ -109,13 +151,12 @@ function LoadJYPX_YYPXJSJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.JYPX_YYPXJSJBXX.BCMS);
                 });
-                $("#spanYZ").html(xml.Value.JYPX_YYPXJSJBXX.YZ);
+                $("#spanJXKM").html(xml.Value.JYPX_YYPXJSJBXX.JXKM);
                 $("#spanQY").html(xml.Value.JYPX_YYPXJSJBXX.QY);
                 $("#spanDD").html(xml.Value.JYPX_YYPXJSJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
-                LoadXL(xml.Value.JYPX_YYPXJSJBXX.YZ, xml.Value.JYPX_YYPXJSJBXX.XL);
-                SetDuoX("ZX", xml.Value.JYPX_YYPXJSJBXX.ZX);
-                SetDuoX("JB", xml.Value.JYPX_YYPXJSJBXX.JB);
+                SetDX("SF", xml.Value.JYPX_YYPXJSJBXX.SF);
+                SetDX("JJJY", xml.Value.JYPX_YYPXJSJBXX.JJJY);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -129,13 +170,12 @@ function FB() {
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
-    obj = jsonObj.AddJson(obj, "YZ", "'" + $("#spanYZ").html() + "'");
+    obj = jsonObj.AddJson(obj, "JXKM", "'" + $("#spanJXKM").html() + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "XL", "'" + GetDuoX("XL") + "'");
-    obj = jsonObj.AddJson(obj, "ZX", "'" + GetDuoX("ZX") + "'");
-    obj = jsonObj.AddJson(obj, "JB", "'" + GetDuoX("JB") + "'");
+    obj = jsonObj.AddJson(obj, "SF", "'" + GetDX("SF") + "'");
+    obj = jsonObj.AddJson(obj, "JJJY", "'" + GetDX("JJJY") + "'");
 
     if (getUrlParam("JYPX_YYPXJSJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "JYPX_YYPXJSJBXXID", "'" + getUrlParam("JYPX_YYPXJSJBXXID") + "'");
