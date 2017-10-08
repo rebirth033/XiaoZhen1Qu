@@ -1,0 +1,49 @@
+-- Create table
+create table JYPX_ZXXYDYJBXX
+(
+  jypx_zxxydyjbxxid VARCHAR2(50) not null,
+  jcxxid            VARCHAR2(50),
+  bcms              VARCHAR2(4000),
+  lb                VARCHAR2(20),
+  qy                VARCHAR2(20),
+  dd                VARCHAR2(20),
+  jtdz              VARCHAR2(200),
+  fwqy              VARCHAR2(200),
+  xl                VARCHAR2(200),
+  xf                VARCHAR2(20)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table JYPX_ZXXYDYJBXX
+  is '教育培训_中小学一对一';
+-- Add comments to the columns 
+comment on column JYPX_ZXXYDYJBXX.jypx_zxxydyjbxxid
+  is '中小学一对一基本信息ID';
+comment on column JYPX_ZXXYDYJBXX.jcxxid
+  is '基础信息ID';
+comment on column JYPX_ZXXYDYJBXX.bcms
+  is '补充描述';
+comment on column JYPX_ZXXYDYJBXX.lb
+  is '类别';
+comment on column JYPX_ZXXYDYJBXX.qy
+  is '区域';
+comment on column JYPX_ZXXYDYJBXX.dd
+  is '地段';
+comment on column JYPX_ZXXYDYJBXX.jtdz
+  is '具体地址';
+comment on column JYPX_ZXXYDYJBXX.fwqy
+  is '服务区域';
+comment on column JYPX_ZXXYDYJBXX.xl
+  is '小类';
+comment on column JYPX_ZXXYDYJBXX.xf
+  is '学费';
