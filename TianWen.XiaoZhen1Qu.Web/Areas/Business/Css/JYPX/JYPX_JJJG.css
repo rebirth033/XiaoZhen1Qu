@@ -36,11 +36,24 @@
     position: relative;
 }
 
+.labelFWCZ {
+    font-weight: normal;
+    font-size: 14px;
+}
+
 .iFWCZ {
     width: 18px;
     height: 18px;
     cursor: pointer;
     border: none !important;
+}
+
+.img_KCTSLB {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    border: none !important;
+    margin-right: 5px;
 }
 
 .spanFWQK {
@@ -500,7 +513,7 @@
     border-bottom-left-radius: 4px;
 }
 
-.img_ZHFS {
+.img_FDKM {
     width: 16px;
     height: 16px;
     cursor: pointer;
@@ -508,7 +521,7 @@
     margin-right: 5px;
 }
 
-.liZHFS {
+.liFDKM {
     display: inline-block;
     width: 150px;
     height: 30px;
@@ -517,7 +530,7 @@
     cursor: pointer;
 }
 
-.img_HWZL {
+.img_FDJD {
     width: 16px;
     height: 16px;
     cursor: pointer;
@@ -525,24 +538,7 @@
     margin-right: 5px;
 }
 
-.liHWZL {
-    display: inline-block;
-    width: 150px;
-    height: 30px;
-    text-align: left;
-    margin-top: 4px;
-    cursor: pointer;
-}
-
-.img_FWYS {
-    width: 16px;
-    height: 16px;
-    cursor: pointer;
-    border: none !important;
-    margin-right: 5px;
-}
-
-.liFWYS {
+.liFDJD {
     display: inline-block;
     width: 150px;
     height: 30px;

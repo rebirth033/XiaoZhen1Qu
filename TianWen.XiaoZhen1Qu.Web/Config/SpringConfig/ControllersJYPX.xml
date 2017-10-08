@@ -10,4 +10,9 @@
       <ref object="JYPX_JJGRBLL"/>
     </property>
   </object>
+  <object id="JYPX_JJJGController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.JYPX_JJJGController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="JYPX_JJJGBLL">
+      <ref object="JYPX_JJJGBLL"/>
+    </property>
+  </object>
 </objects>

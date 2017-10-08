@@ -327,6 +327,7 @@
     <Content Include="Areas\Business\Css\images\zffs_zfb.png" />
     <Content Include="Areas\Business\Css\images\zmsmrz.png" />
     <Content Include="Areas\Business\Css\JYPX\JYPX_JJGR.css" />
+    <Content Include="Areas\Business\Css\JYPX\JYPX_JJJG.css" />
     <Content Include="Areas\Business\Css\JYPX\JYPX_ZXXFDB.css" />
     <Content Include="Areas\Business\Css\LBXZ.css" />
     <Content Include="Areas\Business\Css\LR\LR_KQHL.css" />
@@ -495,8 +496,10 @@
     <Content Include="Areas\Business\Scripts\Business\CL\CL_MTCYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\CL\CL_ZXCDDCSLC.js" />
     <Content Include="Areas\Business\Scripts\Business\CL\CL_ZXCDDCSLCYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\Common\Check.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\Common.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\HTFB_Common.js" />
+    <Content Include="Areas\Business\Scripts\Business\Common\Radio.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\Regular.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\XZQ.js" />
     <Content Include="Areas\Business\Scripts\Business\CW\CW_CWFW.js" />
@@ -573,6 +576,8 @@
     <Content Include="Areas\Business\Scripts\Business\HFCZ\ZFFS.js" />
     <Content Include="Areas\Business\Scripts\Business\JYPX\JYPX_JJGR.js" />
     <Content Include="Areas\Business\Scripts\Business\JYPX\JYPX_JJGRYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\JYPX\JYPX_JJJG.js" />
+    <Content Include="Areas\Business\Scripts\Business\JYPX\JYPX_JJJGYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\JYPX\JYPX_ZXXFDB.js" />
     <Content Include="Areas\Business\Scripts\Business\JYPX\JYPX_ZXXFDBYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\LBXZ.js" />
@@ -1216,6 +1221,7 @@
     <Compile Include="Areas\Business\Controllers\GRZLController.cs" />
     <Compile Include="Areas\Business\Controllers\HFCZController.cs" />
     <Compile Include="Areas\Business\Controllers\JYPX\JYPX_JJGRController.cs" />
+    <Compile Include="Areas\Business\Controllers\JYPX\JYPX_JJJGController.cs" />
     <Compile Include="Areas\Business\Controllers\JYPX\JYPX_ZXXFDBController.cs" />
     <Compile Include="Areas\Business\Controllers\LBXZController.cs" />
     <Compile Include="Areas\Business\Controllers\LR\LR_KQHLController.cs" />
@@ -1589,6 +1595,7 @@
     <Content Include="Areas\Business\Views\SWFW_DBQZQZ\SWFW_DBQZQZ.cshtml" />
     <Content Include="Areas\Business\Views\JYPX_ZXXFDB\JYPX_ZXXFDB.cshtml" />
     <Content Include="Areas\Business\Views\JYPX_JJGR\JYPX_JJGR.cshtml" />
+    <Content Include="Areas\Business\Views\JYPX_JJJG\JYPX_JJJG.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
