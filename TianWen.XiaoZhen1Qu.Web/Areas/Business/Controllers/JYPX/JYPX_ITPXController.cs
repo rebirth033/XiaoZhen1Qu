@@ -7,11 +7,11 @@ using TianWen.XiaoZhen1Qu.Interface;
 
 namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 {
-    public class JYPX_TYPXController : BaseController
+    public class JYPX_ITPXController : BaseController
     {
-        public IJYPX_TYPXBLL JYPX_TYPXBLL { get; set; }
+        public IJYPX_ITPXBLL JYPX_ITPXBLL { get; set; }
 
-        public ActionResult JYPX_TYPX()
+        public ActionResult JYPX_ITPX()
         {
             ViewData["XZQ"] = Session["XZQ"];
             ViewData["YHM"] = Session["YHM"];
@@ -21,7 +21,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         [ValidateInput(false)]
         public JsonResult FB()
         {
-            YHJBXX yhjbxx = JYPX_TYPXBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX yhjbxx = JYPX_ITPXBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
@@ -32,18 +32,18 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             jcxx.ZXGXSJ = DateTime.Now;
             jcxx.CJSJ = DateTime.Now;
             jcxx.LXDZ = yhjbxx.TXDZ;
-            jcxx.DH = Session["XZQ"] + "-" + JYPX_TYPXBLL.GetLBQCByLBID(jcxx.LBID);
-            JYPX_TYPXJBXX JYPX_TYPXjbxx = JsonHelper.ConvertJsonToObject<JYPX_TYPXJBXX>(json);
-            JYPX_TYPXjbxx.BCMS = bcms;
+            jcxx.DH = Session["XZQ"] + "-" + JYPX_ITPXBLL.GetLBQCByLBID(jcxx.LBID);
+            JYPX_ITPXJBXX JYPX_ITPXjbxx = JsonHelper.ConvertJsonToObject<JYPX_ITPXJBXX>(json);
+            JYPX_ITPXjbxx.BCMS = bcms;
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = JYPX_TYPXBLL.SaveJYPX_TYPXJBXX(jcxx, JYPX_TYPXjbxx, photos);
+            object result = JYPX_ITPXBLL.SaveJYPX_ITPXJBXX(jcxx, JYPX_ITPXjbxx, photos);
             return Json(result);
         }
 
-        public JsonResult LoadJYPX_TYPXJBXX()
+        public JsonResult LoadJYPX_ITPXJBXX()
         {
-            string JYPX_TYPXJBXXID = Request["JYPX_TYPXJBXXID"];
-            object result = JYPX_TYPXBLL.LoadJYPX_TYPXJBXX(JYPX_TYPXJBXXID);
+            string JYPX_ITPXJBXXID = Request["JYPX_ITPXJBXXID"];
+            object result = JYPX_ITPXBLL.LoadJYPX_ITPXJBXX(JYPX_ITPXJBXXID);
             return Json(result);
         }
     }
