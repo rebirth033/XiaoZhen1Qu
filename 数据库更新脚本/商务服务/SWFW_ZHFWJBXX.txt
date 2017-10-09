@@ -1,0 +1,45 @@
+-- Create table
+create table SWFW_ZHFWJBXX
+(
+  swfw_zhfwjbxxid VARCHAR2(50) not null,
+  jcxxid          VARCHAR2(50),
+  bcms            VARCHAR2(4000),
+  lb              VARCHAR2(20),
+  qy              VARCHAR2(20),
+  dd              VARCHAR2(20),
+  jtdz            VARCHAR2(200),
+  fwqy            VARCHAR2(200),
+  xl              VARCHAR2(200)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table SWFW_ZHFWJBXX
+  is '商务服务_展会服务';
+-- Add comments to the columns 
+comment on column SWFW_ZHFWJBXX.swfw_zhfwjbxxid
+  is '展会服务基本信息ID';
+comment on column SWFW_ZHFWJBXX.jcxxid
+  is '基础信息ID';
+comment on column SWFW_ZHFWJBXX.bcms
+  is '补充描述';
+comment on column SWFW_ZHFWJBXX.lb
+  is '类别';
+comment on column SWFW_ZHFWJBXX.qy
+  is '区域';
+comment on column SWFW_ZHFWJBXX.dd
+  is '地段';
+comment on column SWFW_ZHFWJBXX.jtdz
+  is '具体地址';
+comment on column SWFW_ZHFWJBXX.fwqy
+  is '服务区域';
+comment on column SWFW_ZHFWJBXX.xl
+  is '小类';
