@@ -11,7 +11,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         }
 
         /// <summary>
-        /// 教育培训_中小学辅导班信息ID
+        /// 教育培训_家教个人信息ID
         /// </summary>
         [Id]
         public virtual string JYPX_JJGRJBXXID { get; set; }
@@ -23,22 +23,52 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string JCXXID { get; set; }
 
         /// <summary>
-        /// 类别
+        /// 姓名
         /// </summary>
         [Property]
-        public virtual string LB { get; set; }
+        public virtual string XM { get; set; }
 
         /// <summary>
-        /// 小类
+        /// 性别
         /// </summary>
         [Property]
-        public virtual string XL { get; set; }
+        public virtual string XB { get; set; }
 
         /// <summary>
-        /// 授课形式
+        /// 身份
         /// </summary>
         [Property]
-        public virtual string SKXS { get; set; }
+        public virtual string SF { get; set; }
+
+        /// <summary>
+        /// 家教经验
+        /// </summary>
+        [Property]
+        public virtual string JJJY { get; set; }
+
+        /// <summary>
+        /// 辅导阶段
+        /// </summary>
+        [Property]
+        public virtual string FDJD { get; set; }
+
+        /// <summary>
+        /// 辅导科目
+        /// </summary>
+        [Property]
+        public virtual string FDKM { get; set; }
+
+        /// <summary>
+        /// 期望时薪_起
+        /// </summary>
+        [Property]
+        public virtual string QWSX_Q { get; set; }
+
+        /// <summary>
+        /// 期望时薪_止
+        /// </summary>
+        [Property]
+        public virtual string QWSX_Z { get; set; }
 
         /// <summary>
         /// 服务区域
