@@ -122,6 +122,7 @@
     <Compile Include="Maps\JYPX\JYPX_TYPXJBXX_Map.cs" />
     <Compile Include="Maps\JYPX\JYPX_XLJYJBXX_Map.cs" />
     <Compile Include="Maps\JYPX\JYPX_YSPXJBXX_Map.cs" />
+    <Compile Include="Maps\JYPX\JYPX_YYEJYJBXX_Map.cs" />
     <Compile Include="Maps\JYPX\JYPX_YYPXJGJBXX_Map.cs" />
     <Compile Include="Maps\JYPX\JYPX_YYPXJSJBXX_Map.cs" />
     <Compile Include="Maps\JYPX\JYPX_ZXXFDBJBXX_Map.cs" />
@@ -316,6 +317,7 @@
     <Compile Include="Models\JYPX\JYPX_TYPXJBXX.cs" />
     <Compile Include="Models\JYPX\JYPX_XLJYJBXX.cs" />
     <Compile Include="Models\JYPX\JYPX_YSPXJBXX.cs" />
+    <Compile Include="Models\JYPX\JYPX_YYEJYJBXX.cs" />
     <Compile Include="Models\JYPX\JYPX_YYPXJGJBXX.cs" />
     <Compile Include="Models\JYPX\JYPX_YYPXJSJBXX.cs" />
     <Compile Include="Models\JYPX\JYPX_ZXXFDBJBXX.cs" />

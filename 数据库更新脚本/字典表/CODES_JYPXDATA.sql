@@ -1810,4 +1810,265 @@ values (628, 'IT培训形式', '工作日班', '4', 4, null);
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (629, 'IT培训形式', '寒暑假班', '5', 5, null);
 
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (630, '设计培训', '室内设计', '1', 1, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (631, '设计培训', '平面设计', '2', 2, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (632, '设计培训', '服装设计', '3', 3, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (633, '设计培训', '网页设计', '4', 4, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (634, '设计培训', '广告设计', '5', 5, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (635, '设计培训', '景观设计', '6', 6, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (636, '设计培训', '色彩搭配', '7', 7, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (637, '设计培训', '包装设计', '8', 8, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (638, '设计培训', '家具设计', '9', 9, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (639, '设计培训', '模具设计', '10', 10, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (640, '设计培训', '园林设计', '11', 11, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (641, '设计培训', '形象设计', '12', 12, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (642, '设计培训', '会展设计', '13', 13, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (643, '设计培训', '动漫设计', '14', 14, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (644, '设计培训', '珠宝鉴定', '15', 15, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (645, '设计培训', '装饰装潢设计', '16', 16, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (646, '设计培训', '其它设计', '17', 17, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (647, '平面设计', 'Photoshop', '1', 1, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (648, '平面设计', 'CAD', '2', 2, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (649, '平面设计', 'Illustrator', '3', 3, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (650, '平面设计', 'Coredraw', '4', 4, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (651, '设计培训形式', '脱产班', '1', 1, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (652, '设计培训形式', '周末班', '2', 2, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (653, '设计培训形式', '网络班', '3', 3, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (654, '设计培训形式', '工作日班', '4', 4, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (655, '管理培训', '管理技能', '1', 1, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (656, '管理培训', '职业素养', '2', 2, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (657, '管理培训', '人力行政', '3', 3, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (658, '管理培训', '生产管理', '4', 4, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (659, '管理培训', '财务管理', '5', 5, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (660, '管理培训', '营销销售', '6', 6, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (661, '管理培训', '物流供应链', '7', 7, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (662, '管理培训', '酒店管理', '8', 8, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (663, '管理培训', '工程管理', '9', 9, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (664, '管理培训', '素质拓展', '10', 10, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (665, '管理培训', '总裁研修', '11', 11, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (667, '管理技能', '领导力', '1', 1, 655);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (668, '管理技能', '项目管理', '2', 2, 655);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (669, '管理技能', '战略管理', '3', 3, 655);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (670, '管理技能', '时间管理', '4', 4, 655);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (671, '管理技能', '危机管理', '5', 5, 655);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (672, '管理技能', '企业文化', '6', 6, 655);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (673, '职业素养', '礼仪', '1', 1, 656);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (674, '职业素养', '沟通表达', '2', 2, 656);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (675, '职业素养', '职业规划', '3', 3, 656);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (676, '职业素养', '办公软件', '4', 4, 656);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (677, '人力行政', '薪酬设计', '1', 1, 657);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (678, '人力行政', '招聘面试', '2', 2, 657);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (679, '人力行政', '绩效管理', '3', 3, 657);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (680, '人力行政', '行政工作', '4', 4, 657);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (681, '人力行政', '培训体系', '5', 5, 657);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (682, '人力行政', '劳动关系', '6', 6, 657);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (683, '人力行政', 'EAP', '7', 7, 657);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (684, '生产管理', '质量管理', '1', 1, 658);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (685, '生产管理', '设备管理', '2', 2, 658);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (686, '生产管理', '安全管理', '3', 3, 658);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (687, '生产管理', '现场管理', '4', 4, 658);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (688, '生产管理', '车间管理', '5', 5, 658);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (689, '生产管理', 'PMC', '6', 6, 658);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (690, '生产管理', 'TPM', '7', 7, 658);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (691, '生产管理', '6S(5S)', '8', 8, 658);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (692, '生产管理', 'SPC', '9', 9, 658);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (693, '财务管理', '高管研修', '1', 1, 659);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (694, '财务管理', '非财人员培训', '2', 2, 659);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (695, '财务管理', '预算管理', '3', 3, 659);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (696, '财务管理', '成本管理', '4', 4, 659);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (697, '财务管理', '内部控制', '5', 5, 659);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (698, '财务管理', '现金管理', '6', 6, 659);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (699, '财务管理', '投融资', '7', 7, 659);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (700, '财务管理', '会计准则', '8', 8, 659);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (701, '财务管理', '税务管理', '9', 9, 659);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (702, '财务管理', '信用管理', '10', 10, 659);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (703, '财务管理', '财务工具', '11', 11, 659);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (704, '营销销售', '销售技能', '1', 1, 660);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (705, '营销销售', '市场调研', '2', 2, 660);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (706, '营销销售', '营销策划', '3', 3, 660);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (707, '营销销售', '网络营销', '4', 4, 660);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (708, '营销销售', '大客户营销', '5', 5, 660);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (709, '营销销售', '客服培训', '6', 6, 660);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (710, '营销销售', '售后服务', '7', 7, 660);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (711, '营销销售', '商务谈判', '8', 8, 660);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (712, '物流供应链', '物流管理', '1', 1, 661);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (713, '物流供应链', '供应链管理', '2', 2, 661);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (714, '物流供应链', '采购管理', '3', 3, 661);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (715, '物流供应链', '仓储管理', '4', 4, 661);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (716, '场地', '企业内部', '1', 1, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (717, '场地', '外部场地', '2', 2, null);
+
 prompt Done.
