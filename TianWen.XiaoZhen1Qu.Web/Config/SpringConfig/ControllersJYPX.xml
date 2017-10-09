@@ -30,4 +30,9 @@
       <ref object="JYPX_YYPXJSBLL"/>
     </property>
   </object>
+  <object id="JYPX_ZYJNPXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.JYPX_ZYJNPXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="JYPX_ZYJNPXBLL">
+      <ref object="JYPX_ZYJNPXBLL"/>
+    </property>
+  </object>
 </objects>

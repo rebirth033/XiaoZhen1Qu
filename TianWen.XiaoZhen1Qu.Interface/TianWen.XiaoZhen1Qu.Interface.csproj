@@ -108,6 +108,7 @@
     <Compile Include="JYPX\IJYPX_YYPXJSBLL.cs" />
     <Compile Include="JYPX\IJYPX_ZXXFDBBLL.cs" />
     <Compile Include="JYPX\IJYPX_ZXXYDYBLL.cs" />
+    <Compile Include="JYPX\IJYPX_ZYJNPXBLL.cs" />
     <Compile Include="LR\ILR_KQHLBLL.cs" />
     <Compile Include="LR\ILR_MFHFBLL.cs" />
     <Compile Include="LR\ILR_MJBLL.cs" />
