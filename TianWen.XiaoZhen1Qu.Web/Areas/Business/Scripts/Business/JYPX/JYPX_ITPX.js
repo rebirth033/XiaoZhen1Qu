@@ -18,7 +18,7 @@ $(document).ready(function () {
     BindClick("LB");
     BindClick("QY");
     BindClick("DD");
-    LoadDuoX("体育培训对象", "DX");
+    LoadDuoX("IT培训形式", "XS");
 });
 //描述框focus
 function FYMSFocus() {
@@ -69,8 +69,8 @@ function LoadDuoX(type, id) {
                     $("#div" + id).css("display", "none");
                 else
                     $("#div" + id).css("display", "");
-                if (type === "体育培训对象")
-                    LoadJYPX_TYPXJBXX();
+                if (type === "IT培训形式")
+                    LoadJYPX_ITPXJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -78,7 +78,7 @@ function LoadDuoX(type, id) {
         }
     });
 }
-//加载体育培训类别
+//加载IT培训类别
 function LoadLB() {
     $.ajax({
         type: "POST",
@@ -86,7 +86,7 @@ function LoadLB() {
         dataType: "json",
         data:
         {
-            TYPENAME: "体育培训"
+            TYPENAME: "IT培训"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -195,33 +195,33 @@ function BindClick(type) {
         }
     });
 }
-//加载商务服务_体育培训基本信息
-function LoadJYPX_TYPXJBXX() {
+//加载商务服务_IT培训基本信息
+function LoadJYPX_ITPXJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/JYPX_TYPX/LoadJYPX_TYPXJBXX",
+        url: getRootPath() + "/Business/JYPX_ITPX/LoadJYPX_ITPXJBXX",
         dataType: "json",
         data:
         {
-            JYPX_TYPXJBXXID: getUrlParam("JYPX_TYPXJBXXID")
+            JYPX_ITPXJBXXID: getUrlParam("JYPX_ITPXJBXXID")
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var jsonObj = new JsonDB("myTabContent");
-                jsonObj.DisplayFromJson("myTabContent", xml.Value.JYPX_TYPXJBXX);
+                jsonObj.DisplayFromJson("myTabContent", xml.Value.JYPX_ITPXJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
-                $("#JYPX_TYPXJBXXID").val(xml.Value.JYPX_TYPXJBXX.JYPX_TYPXJBXXID);
+                $("#JYPX_ITPXJBXXID").val(xml.Value.JYPX_ITPXJBXX.JYPX_ITPXJBXXID);
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
-                    ue.setContent(xml.Value.JYPX_TYPXJBXX.BCMS);
+                    ue.setContent(xml.Value.JYPX_ITPXJBXX.BCMS);
                 });
-                $("#spanLB").html(xml.Value.JYPX_TYPXJBXX.LB);
-                $("#spanQY").html(xml.Value.JYPX_TYPXJBXX.QY);
-                $("#spanDD").html(xml.Value.JYPX_TYPXJBXX.DD);
+                $("#spanLB").html(xml.Value.JYPX_ITPXJBXX.LB);
+                $("#spanQY").html(xml.Value.JYPX_ITPXJBXX.QY);
+                $("#spanDD").html(xml.Value.JYPX_ITPXJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
-                LoadXL(xml.Value.JYPX_TYPXJBXX.LB, xml.Value.JYPX_TYPXJBXX.XL);
-                SetDuoX("DX", xml.Value.JYPX_TYPXJBXX.DX);
+                LoadXL(xml.Value.JYPX_ITPXJBXX.LB, xml.Value.JYPX_ITPXJBXX.XL);
+                SetDuoX("XS", xml.Value.JYPX_ITPXJBXX.XS);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -240,14 +240,14 @@ function FB() {
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "XL", "'" + GetDuoX("XL") + "'");
-    obj = jsonObj.AddJson(obj, "DX", "'" + GetDuoX("DX") + "'");
+    obj = jsonObj.AddJson(obj, "XS", "'" + GetDuoX("XS") + "'");
 
-    if (getUrlParam("JYPX_TYPXJBXXID") !== null)
-        obj = jsonObj.AddJson(obj, "JYPX_TYPXJBXXID", "'" + getUrlParam("JYPX_TYPXJBXXID") + "'");
+    if (getUrlParam("JYPX_ITPXJBXXID") !== null)
+        obj = jsonObj.AddJson(obj, "JYPX_ITPXJBXXID", "'" + getUrlParam("JYPX_ITPXJBXXID") + "'");
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/JYPX_TYPX/FB",
+        url: getRootPath() + "/Business/JYPX_ITPX/FB",
         dataType: "json",
         data:
         {

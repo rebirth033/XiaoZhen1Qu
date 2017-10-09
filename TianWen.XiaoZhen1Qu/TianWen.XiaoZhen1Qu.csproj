@@ -94,9 +94,11 @@
     <Compile Include="BLL\FC\FC_XZLBLL.cs" />
     <Compile Include="BLL\FC\FC_ZZFJBXXBLL.cs" />
     <Compile Include="BLL\HFCZBLL.cs" />
+    <Compile Include="BLL\JYPX\JYPX_GLPXBLL.cs" />
     <Compile Include="BLL\JYPX\JYPX_ITPXBLL.cs" />
     <Compile Include="BLL\JYPX\JYPX_JJGRBLL.cs" />
     <Compile Include="BLL\JYPX\JYPX_JJJGBLL.cs" />
+    <Compile Include="BLL\JYPX\JYPX_SJPXBLL.cs" />
     <Compile Include="BLL\JYPX\JYPX_TYPXBLL.cs" />
     <Compile Include="BLL\JYPX\JYPX_XLJYBLL.cs" />
     <Compile Include="BLL\JYPX\JYPX_YSPXBLL.cs" />

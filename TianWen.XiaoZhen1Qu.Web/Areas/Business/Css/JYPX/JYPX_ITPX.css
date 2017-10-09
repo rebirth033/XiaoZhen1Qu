@@ -513,7 +513,7 @@
     border-bottom-left-radius: 4px;
 }
 
-.img_XL,.img_DX {
+.img_XL,.img_XS {
     width: 16px;
     height: 16px;
     cursor: pointer;
@@ -521,7 +521,7 @@
     margin-right: 5px;
 }
 
-.liXL,.liDX {
+.liXL,.liXS {
     display: inline-block;
     width: 150px;
     height: 30px;

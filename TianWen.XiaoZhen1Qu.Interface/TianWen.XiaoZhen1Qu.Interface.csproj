@@ -102,9 +102,11 @@
     <Compile Include="IYHJBXXBLL.cs" />
     <Compile Include="IYXCZBLL.cs" />
     <Compile Include="IZHBDBLL.cs" />
+    <Compile Include="JYPX\IJYPX_GLPXBLL.cs" />
     <Compile Include="JYPX\IJYPX_ITPXBLL.cs" />
     <Compile Include="JYPX\IJYPX_JJGRBLL.cs" />
     <Compile Include="JYPX\IJYPX_JJJGBLL.cs" />
+    <Compile Include="JYPX\IJYPX_SJPXBLL.cs" />
     <Compile Include="JYPX\IJYPX_TYPXBLL.cs" />
     <Compile Include="JYPX\IJYPX_XLJYBLL.cs" />
     <Compile Include="JYPX\IJYPX_YSPXBLL.cs" />
