@@ -513,7 +513,7 @@
     border-bottom-left-radius: 4px;
 }
 
-.img_XL {
+.img_XL,.img_XS,.img_ZQ {
     width: 16px;
     height: 16px;
     cursor: pointer;
@@ -521,24 +521,7 @@
     margin-right: 5px;
 }
 
-.liXL {
-    display: inline-block;
-    width: 150px;
-    height: 30px;
-    text-align: left;
-    margin-top: 4px;
-    cursor: pointer;
-}
-
-.img_SKXS {
-    width: 16px;
-    height: 16px;
-    cursor: pointer;
-    border: none !important;
-    margin-right: 5px;
-}
-
-.liSKXS {
+.liXL,.liXS,.liZQ {
     display: inline-block;
     width: 150px;
     height: 30px;

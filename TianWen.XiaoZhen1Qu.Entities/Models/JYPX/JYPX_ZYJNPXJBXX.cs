@@ -35,10 +35,16 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string XL { get; set; }
 
         /// <summary>
-        /// 授课形式
+        /// 形式
         /// </summary>
         [Property]
-        public virtual string SKXS { get; set; }
+        public virtual string XS { get; set; }
+
+        /// <summary>
+        /// 周期
+        /// </summary>
+        [Property]
+        public virtual string ZQ { get; set; }
 
         /// <summary>
         /// 服务区域

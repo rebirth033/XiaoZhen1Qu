@@ -1,8 +1,6 @@
 ﻿var isleave = true;
 var ue = UE.getEditor('FYMS');
 $(document).ready(function () {
-    $("#imgSMFW").bind("click", SMFWSelect);
-    $("#imgDDFW").bind("click", DDFWSelect);
     $("#divUploadOut").bind("mouseover", GetUploadCss);
     $("#divUploadOut").bind("mouseleave", LeaveUploadCss);
     $("#btnFB").bind("click", FB);
@@ -20,7 +18,7 @@ $(document).ready(function () {
     BindClick("LB");
     BindClick("QY");
     BindClick("DD");
-    LoadSKXS();
+    LoadDuoX("形式", "XS");
 });
 //描述框focus
 function FYMSFocus() {
@@ -40,18 +38,47 @@ function LoadDefault() {
     ue.ready(function () {
         ue.setHeight(200);
     });
-    $("#imgSMFW").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgDDFW").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
 }
-//选择上门服务
-function SMFWSelect() {
-    $("#imgSMFW").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgDDFW").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
-//选择到店服务
-function DDFWSelect() {
-    $("#imgSMFW").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    $("#imgDDFW").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+//加载多选
+function LoadDuoX(type, id) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadCODES_JYPX",
+        dataType: "json",
+        data:
+        {
+            TYPENAME: type
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='ulFWPZ'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='li" + id + "' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    if (i === 3 || i === 7 || i === 11) {
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
+                    }
+                }
+                if (parseInt(xml.list.length % 4) === 0)
+                    $("#div" + id).css("height", parseInt(xml.list.length / 4) * 45 + "px");
+                else
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 4) + 1) * 45 + "px");
+                html += "</ul>";
+                $("#div" + id + "Text").html(html);
+                $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                if (xml.list.length === 0)
+                    $("#div" + id).css("display", "none");
+                else
+                    $("#div" + id).css("display", "");
+                if (type === "周期")
+                    LoadJYPX_ZYJNPXJBXX();
+                if (type === "形式")
+                    LoadDuoX("周期", "ZQ");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
 }
 //加载职业技能培训类别
 function LoadLB() {
@@ -156,72 +183,6 @@ function SetXL(lbs) {
         }
     }
 }
-//加载卡型
-function LoadSKXS() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_JYPX",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "授课形式"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='ulFWPZ'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liSKXS' onclick='SelectSKXS(this)'><img class='img_SKXS'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i === 3 || i === 7 || i === 11) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
-                    }
-                }
-                if (parseInt(xml.list.length % 4) === 0)
-                    $("#divSKXS").css("height", parseInt(xml.list.length / 4) * 45 + "px");
-                else
-                    $("#divSKXS").css("height", (parseInt(xml.list.length / 4) + 1) * 45 + "px");
-                html += "</ul>";
-                $("#divSKXSText").html(html);
-                $(".img_SKXS").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-                if (xml.list.length === 0)
-                    $("#divSKXS").css("display", "none");
-                else
-                    $("#divSKXS").css("display", "");
-                LoadJYPX_ZYJNPXJBXX();
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//选择卡型
-function SelectSKXS(obj) {
-    if ($(obj).find("img").attr("src").indexOf("blue") !== -1)
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-    else
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-}
-//获取卡型
-function GetSKXS() {
-    var SKXS = "";
-    $(".liSKXS").each(function () {
-        if ($(this).find("img").attr("src").indexOf("blue") !== -1)
-            SKXS += $(this).find("label")[0].innerHTML + ",";
-    });
-    return RTrim(SKXS, ',');
-}
-//设置卡型
-function SetSKXS(lbs) {
-    if (lbs !== "" && lbs !== null) {
-        var lbarray = lbs.split(',');
-        for (var i = 0; i < lbarray.length; i++) {
-            $(".liSKXS").each(function () {
-                if ($(this).find("label")[0].innerHTML.indexOf(lbarray[i]) !== -1)
-                    $(this).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-            });
-        }
-    }
-}
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
@@ -262,7 +223,8 @@ function LoadJYPX_ZYJNPXJBXX() {
                 $("#spanDD").html(xml.Value.JYPX_ZYJNPXJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
                 LoadXL(xml.Value.JYPX_ZYJNPXJBXX.LB, xml.Value.JYPX_ZYJNPXJBXX.XL);
-                SetSKXS(xml.Value.JYPX_ZYJNPXJBXX.SKXS);
+                SetDuoX("XS", xml.Value.JYPX_ZYJNPXJBXX.XS);
+                SetDuoX("ZQ", xml.Value.JYPX_ZYJNPXJBXX.ZQ);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -280,8 +242,9 @@ function FB() {
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "XL", "'" + GetXL() + "'");
-    obj = jsonObj.AddJson(obj, "SKXS", "'" + GetSKXS() + "'");
+    obj = jsonObj.AddJson(obj, "XL", "'" + GetDuoX("XL") + "'");
+    obj = jsonObj.AddJson(obj, "XS", "'" + GetDuoX("XS") + "'");
+    obj = jsonObj.AddJson(obj, "ZQ", "'" + GetDuoX("ZQ") + "'");
 
     if (getUrlParam("JYPX_ZYJNPXJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "JYPX_ZYJNPXJBXXID", "'" + getUrlParam("JYPX_ZYJNPXJBXXID") + "'");
