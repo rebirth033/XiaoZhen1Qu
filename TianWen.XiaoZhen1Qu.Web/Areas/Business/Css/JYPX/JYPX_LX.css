@@ -39,8 +39,6 @@
 .labelFWCZ {
     font-weight: normal;
     font-size: 14px;
-    margin-left: 10px;
-    margin-right: 10px;
 }
 
 .iFWCZ {
@@ -48,6 +46,14 @@
     height: 18px;
     cursor: pointer;
     border: none !important;
+}
+
+.img_KCTSLB {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    border: none !important;
+    margin-right: 5px;
 }
 
 .spanFWQK {
@@ -507,8 +513,7 @@
     border-bottom-left-radius: 4px;
 }
 
-
-.img_JXSBWXLB {
+.img_XL,.img_SQXL {
     width: 16px;
     height: 16px;
     cursor: pointer;
@@ -516,19 +521,15 @@
     margin-right: 5px;
 }
 
-.liJXSBWXLB {
+.liXL,.liSQXL {
     display: inline-block;
-    width: 150px;
+    width: 105px;
     height: 30px;
     text-align: left;
     margin-top: 4px;
     cursor: pointer;
 }
 
-.div_radio {
-    cursor: pointer;
-    display: inline-block;
-}
 
 .div_xzk {
     margin-top: -7px;
