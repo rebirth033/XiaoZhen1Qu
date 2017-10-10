@@ -513,7 +513,7 @@
     border-bottom-left-radius: 4px;
 }
 
-.img_XL,.img_CD {
+.img_XL,.img_FWLX,.img_BXXZ {
     width: 16px;
     height: 16px;
     cursor: pointer;
@@ -521,9 +521,9 @@
     margin-right: 5px;
 }
 
-.liXL,.liCD {
+.liXL,.liFWLX,.liBXXZ {
     display: inline-block;
-    width: 150px;
+    width: 105px;
     height: 30px;
     text-align: left;
     margin-top: 4px;

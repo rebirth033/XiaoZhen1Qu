@@ -18,7 +18,7 @@ $(document).ready(function () {
     BindClick("LB");
     BindClick("QY");
     BindClick("DD");
-    LoadDuoX("场地", "CD");
+    LoadDuoX("服务类型", "FWLX");
 });
 //描述框focus
 function FYMSFocus() {
@@ -69,7 +69,9 @@ function LoadDuoX(type, id) {
                     $("#div" + id).css("display", "none");
                 else
                     $("#div" + id).css("display", "");
-                if (type === "场地")
+                if (type === "服务类型")
+                    LoadDuoX("办学性质", "BXXZ");
+                if (type === "办学性质")
                     LoadJYPX_YYEJYJBXX();
             }
         },
@@ -90,7 +92,7 @@ function LoadLB() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll; height:341px;'>";
+                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='lidropdown' onclick='SelectLB(this,\"LB\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
                 }
@@ -144,8 +146,6 @@ function LoadXL(lbmc, xl) {
                     $("#divXL").css("display", "");
                 if (xl !== "" && xl !== null && xl !== undefined)
                     SetXL(xl);
-                if (lbmc === "品牌策划推广")
-                    $(".liXL").css("width", "200px");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -221,8 +221,10 @@ function LoadJYPX_YYEJYJBXX() {
                 $("#spanDD").html(xml.Value.JYPX_YYEJYJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
                 LoadXL(xml.Value.JYPX_YYEJYJBXX.LB, xml.Value.JYPX_YYEJYJBXX.XL);
-                if (xml.Value.JYPX_YYEJYJBXX.CD !== null)
-                    SetDuoX("CD", xml.Value.JYPX_YYEJYJBXX.CD);
+                if (xml.Value.JYPX_YYEJYJBXX.FWLX !== null)
+                    SetDuoX("FWLX", xml.Value.JYPX_YYEJYJBXX.FWLX);
+                if (xml.Value.JYPX_YYEJYJBXX.BXXZ !== null)
+                    SetDuoX("BXXZ", xml.Value.JYPX_YYEJYJBXX.BXXZ);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -241,7 +243,8 @@ function FB() {
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "XL", "'" + GetDuoX("XL") + "'");
-    obj = jsonObj.AddJson(obj, "CD", "'" + GetDuoX("CD") + "'");
+    obj = jsonObj.AddJson(obj, "FWLX", "'" + GetDuoX("FWLX") + "'");
+    obj = jsonObj.AddJson(obj, "BXXZ", "'" + GetDuoX("BXXZ") + "'");
 
     if (getUrlParam("JYPX_YYEJYJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "JYPX_YYEJYJBXXID", "'" + getUrlParam("JYPX_YYEJYJBXXID") + "'");

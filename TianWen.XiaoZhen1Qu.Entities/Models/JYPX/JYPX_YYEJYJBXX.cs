@@ -47,16 +47,28 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string RTTJ { get; set; }
 
         /// <summary>
-        /// 营业时间_起
+        /// 营业开始时间_时
         /// </summary>
         [Property]
-        public virtual string YYSJ_Q { get; set; }
+        public virtual string YYKSSJ_H { get; set; }
 
         /// <summary>
-        /// 营业时间_止
+        /// 营业开始时间_分
         /// </summary>
         [Property]
-        public virtual string YYSJ_Z { get; set; }
+        public virtual string YYKSSJ_M { get; set; }
+
+        /// <summary>
+        /// 营业结束时间_时
+        /// </summary>
+        [Property]
+        public virtual string YYJSSJ_H { get; set; }
+
+        /// <summary>
+        /// 营业结束时间_分
+        /// </summary>
+        [Property]
+        public virtual string YYJSSJ_M { get; set; }
 
         /// <summary>
         /// 服务区域
