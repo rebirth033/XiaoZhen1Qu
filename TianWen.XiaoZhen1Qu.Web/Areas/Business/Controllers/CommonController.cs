@@ -288,5 +288,10 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         {
             return Json(CommonBLL.LoadLXGJXX(Request["GJBQ"]));
         }
+
+        public JsonResult LoadBYYXXX()
+        {
+            return Json(CommonBLL.LoadBYYXXX(Request["BYYXBQ"]));
+        }
     }
 }

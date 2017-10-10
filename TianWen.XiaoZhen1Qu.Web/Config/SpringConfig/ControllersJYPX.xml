@@ -45,6 +45,11 @@
       <ref object="JYPX_YSPXBLL"/>
     </property>
   </object>
+  <object id="JYPX_YSPXJSController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.JYPX_YSPXJSController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="JYPX_YSPXJSBLL">
+      <ref object="JYPX_YSPXJSBLL"/>
+    </property>
+  </object>
   <object id="JYPX_TYPXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.JYPX_TYPXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="JYPX_TYPXBLL">
       <ref object="JYPX_TYPXBLL"/>

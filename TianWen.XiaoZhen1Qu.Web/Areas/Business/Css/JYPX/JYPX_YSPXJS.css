@@ -513,7 +513,7 @@
     border-bottom-left-radius: 4px;
 }
 
-.img_YMLB {
+.img_XL, .img_ZX, .img_JB {
     width: 16px;
     height: 16px;
     cursor: pointer;
@@ -521,14 +521,15 @@
     margin-right: 5px;
 }
 
-.liYMLB {
+.liXL, .liZX, .liJB {
     display: inline-block;
-    width: 105px;
+    width: 150px;
     height: 30px;
     text-align: left;
     margin-top: 4px;
     cursor: pointer;
 }
+
 
 .div_xzk {
     margin-top: -7px;
