@@ -545,25 +545,25 @@ insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
 values (244, '小类', '卡券', 21, 10, 'PFCG_KQ', 'PFCG_KQJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (246, '小类', '旅行社', 1, 15, null, null);
+values (246, '小类', '旅行社', 1, 15, 'LYJD_LXS', 'LYJD_LXSJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (247, '小类', '国内游', 2, 15, null, null);
+values (247, '小类', '国内游', 2, 15, 'LYJD_GNY', 'LYJD_GNYJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (248, '小类', '周边游', 3, 15, null, null);
+values (248, '小类', '周边游', 3, 15, 'LYJD_ZBY', 'LYJD_ZBYJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (249, '小类', '出境游', 4, 15, null, null);
+values (249, '小类', '出境游', 4, 15, 'LYJD_CJY', 'LYJD_CJYJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (250, '小类', '酒店预订/住宿', 5, 15, null, null);
+values (250, '小类', '酒店预订/住宿', 5, 15, 'LYJD_JDYDZS', 'LYJD_JDYDZSJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (251, '小类', '机票', 6, 15, null, null);
+values (251, '小类', '机票', 6, 15, 'LYJD_JP', 'LYJD_JPJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (252, '小类', '导游/当地人', 7, 15, null, null);
+values (252, '小类', '导游/当地人', 7, 15, 'LYJD_DYDDR', 'LYJD_DYDDRJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
 values (253, '小类', '家装服务', 1, 16, null, null);
