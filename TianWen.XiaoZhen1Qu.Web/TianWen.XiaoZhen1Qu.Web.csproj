@@ -356,6 +356,7 @@
     <Content Include="Areas\Business\Css\LR\LR_WD.css" />
     <Content Include="Areas\Business\Css\LR\LR_WS.css" />
     <Content Include="Areas\Business\Css\LR\LR_YJ.css" />
+    <Content Include="Areas\Business\Css\LYJD\LYJD_LXS.css" />
     <Content Include="Areas\Business\Css\PFCG\PFCG_JXJG.css" />
     <Content Include="Areas\Business\Css\PFCG\PFCG_KQ.css" />
     <Content Include="Areas\Business\Css\PFCG\PFCG_TS.css" />
@@ -649,6 +650,8 @@
     <Content Include="Areas\Business\Scripts\Business\LR\LR_WSYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\LR\LR_YJ.js" />
     <Content Include="Areas\Business\Scripts\Business\LR\LR_YJYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\LYJD\LYJD_LXS.js" />
+    <Content Include="Areas\Business\Scripts\Business\LYJD\LYJD_LXSYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\PageJson.js" />
     <Content Include="Areas\Business\Scripts\Business\PFCG\PFCG_AFSB.js" />
     <Content Include="Areas\Business\Scripts\Business\PFCG\PFCG_AFSBYZ.js" />
