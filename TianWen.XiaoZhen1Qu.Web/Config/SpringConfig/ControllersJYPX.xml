@@ -85,4 +85,9 @@
       <ref object="JYPX_YMBLL"/>
     </property>
   </object>
+  <object id="JYPX_TYJLController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.JYPX_TYJLController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="JYPX_TYJLBLL">
+      <ref object="JYPX_TYJLBLL"/>
+    </property>
+  </object>
 </objects>

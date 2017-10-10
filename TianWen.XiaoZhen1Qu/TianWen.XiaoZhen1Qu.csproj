@@ -100,6 +100,7 @@
     <Compile Include="BLL\JYPX\JYPX_JJJGBLL.cs" />
     <Compile Include="BLL\JYPX\JYPX_LXBLL.cs" />
     <Compile Include="BLL\JYPX\JYPX_SJPXBLL.cs" />
+    <Compile Include="BLL\JYPX\JYPX_TYJLBLL.cs" />
     <Compile Include="BLL\JYPX\JYPX_TYPXBLL.cs" />
     <Compile Include="BLL\JYPX\JYPX_XLJYBLL.cs" />
     <Compile Include="BLL\JYPX\JYPX_YMBLL.cs" />
