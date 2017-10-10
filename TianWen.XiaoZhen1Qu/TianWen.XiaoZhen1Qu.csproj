@@ -124,6 +124,7 @@
     <Compile Include="BLL\LR\LR_WDBLL.cs" />
     <Compile Include="BLL\LR\LR_WSBLL.cs" />
     <Compile Include="BLL\LR\LR_YJBLL.cs" />
+    <Compile Include="BLL\LYJD\LYJD_LXSBLL.cs" />
     <Compile Include="BLL\PFCG\PFCG_AFSBBLL.cs" />
     <Compile Include="BLL\PFCG\PFCG_BZBLL.cs" />
     <Compile Include="BLL\PFCG\PFCG_DGDLBLL.cs" />

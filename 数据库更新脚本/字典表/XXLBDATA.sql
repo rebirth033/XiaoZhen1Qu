@@ -38,55 +38,52 @@ insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
 values (309, '小类', '设计策划', 9, 13, 'SWFW_SJCH', 'SWFW_SJCHJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (310, '小类', '广告传媒', null, 13, null, null);
+values (310, '小类', '广告传媒', 10, 13, 'SWFW_GGCM', 'SWFW_GGCMJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (311, '小类', '展会服务', null, 13, null, null);
+values (311, '小类', '展会服务', 11, 13, 'SWFW_ZHFW', 'SWFW_ZHFWJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (312, '小类', '礼品定制', null, 13, null, null);
+values (312, '小类', '礼品定制', 12, 13, 'SWFW_LPDZ', 'SWFW_LPDZJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (313, '小类', '制卡', null, 13, null, null);
+values (313, '小类', '制卡', 13, 13, 'SWFW_ZK', 'SWFW_ZKJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (314, '小类', '翻译/速记', null, 13, null, null);
+values (314, '小类', '翻译/速记', 14, 13, 'SWFW_FYSJ', 'SWFW_FYSJJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (315, '小类', '网络布线/维护', null, 13, null, null);
+values (315, '小类', '网络布线/维护', 15, 13, 'SWFW_WLBXWH', 'SWFW_WLBXWHJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (316, '小类', '网站建设/推广', null, 13, null, null);
+values (316, '小类', '网站建设/推广', 16, 13, 'SWFW_WZJSTG', 'SWFW_WZJSTGJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (317, '小类', '咨询', null, 13, null, null);
+values (317, '小类', '咨询服务', 17, 13, 'SWFW_ZXFW', 'SWFW_ZXFWJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (318, '小类', '起名/风水/算命', null, 13, null, null);
+values (319, '小类', '快递', 18, 13, 'SWFW_KD', 'SWFW_KDJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (319, '小类', '快递', null, 13, null, null);
+values (320, '小类', '货运物流', 19, 13, 'SWFW_HYWL', 'SWFW_HYWLJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (320, '小类', '货运物流', null, 13, null, null);
+values (321, '小类', '货运专线', 20, 13, 'SWFW_HYZX', 'SWFW_HYZXJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (321, '小类', '货运专线', null, 13, null, null);
+values (322, '小类', '办公设备维修', 21, 13, 'SWFW_BGSBWX', 'SWFW_BGSBWXJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (322, '小类', '办公设备维修', null, 13, null, null);
+values (323, '小类', '租赁', 22, 13, 'SWFW_ZL', 'SWFW_ZLJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (323, '小类', '租赁', null, 13, null, null);
+values (324, '小类', '代办签证/签注', 23, 13, 'SWFW_DBQZQZ', 'SWFW_DBQZQZJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (324, '小类', '代办签证/签注', null, 13, null, null);
+values (325, '小类', '建筑维修', 24, 13, 'SWFW_JZWX', 'SWFW_JZWXJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (325, '小类', '建筑维修', null, 13, null, null);
-
-insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (326, '小类', '机械设备维修', null, 13, null, null);
+values (326, '小类', '机械设备维修', 25, 13, 'SWFW_JXSBWX', 'SWFW_JXSBWXJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
 values (328, '小类', '短租房/日租房', 3, 1, 'FC_DZF', 'FC_DZFJBXX');
@@ -126,6 +123,21 @@ values (245, '小类', '机械加工', 22, 10, 'PFCG_JXJG', 'PFCG_JXJGJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
 values (205, '小类', '全职招聘', 1, 11, 'QZZP_QZZP', 'QZZP_QZZPJBXX');
+
+insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
+values (270, '小类', '设计培训', 14, 14, 'JYPX_SJPX', 'JYPX_SJPXJBXX');
+
+insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
+values (271, '小类', '管理培训', 15, 14, 'JYPX_GLPX', 'JYPX_GLPXJBXX');
+
+insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
+values (273, '小类', '留学', 17, 14, 'JYPX_LX', 'JYPX_LXJBXX');
+
+insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
+values (275, '小类', '艺术培训教师', 8, 14, 'JYPX_YSPXJS', 'JYPX_YSPXJSJBXX');
+
+insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
+values (277, '小类', '拼班拼课', 19, 14, 'JYPX_PBPK', 'JYPX_PBPKJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
 values (123, '小类', '汽车美容装饰', 7, 99, 'SHFW_CLFW_QCMRZS', 'SHFW_CLFW_QCMRZSJBXX');
@@ -170,7 +182,7 @@ insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
 values (13, '大类', '商务服务', 13, 0, null, null);
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (14, '大类', '教育培训', 14, null, null, null);
+values (14, '大类', '教育培训', 14, 0, null, null);
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
 values (15, '大类', '旅游酒店', 15, null, null, null);
@@ -264,9 +276,6 @@ values (103, '小类', '月嫂/保姆', 2, 96, 'SHFW_SHFW_BMYS', 'SHFW_SHFW_BMYSJBXX')
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
 values (104, '小类', '保洁清洗', 3, 96, 'SHFW_SHFW_BJQX', 'SHFW_SHFW_BJQXJBXX');
-
-insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (105, '小类', '快递/物流/货运', 4, 96, null, null);
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
 values (106, '小类', '开锁/换锁/修锁', 5, 96, 'SHFW_SHFW_KSHSXS', 'SHFW_SHFW_KSHSXSJBXX');
@@ -575,61 +584,46 @@ insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
 values (258, '小类', '家纺家饰', 6, 16, null, null);
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (259, '小类', '中小学辅导班', 1, 14, null, null);
+values (259, '小类', '中小学辅导班', 1, 14, 'JYPX_ZXXFDB', 'JYPX_ZXXFDBJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (260, '小类', '家教个人', 2, 14, null, null);
+values (260, '小类', '家教个人', 4, 14, 'JYPX_JJGR', 'JYPX_JJGRJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (261, '小类', '家教机构', 3, 14, null, null);
+values (261, '小类', '家教机构', 3, 14, 'JYPX_JJJG', 'JYPX_JJJGJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (262, '小类', '中小学一对一', 4, 14, null, null);
+values (262, '小类', '中小学一对一', 2, 14, 'JYPX_ZXXYDY', 'JYPX_ZXXYDYJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (263, '小类', '语言培训机构', 5, 14, null, null);
+values (263, '小类', '语言培训', 5, 14, 'JYPX_YYPXJG', 'JYPX_YYPXJGJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (264, '小类', '语言培训教师', 6, 14, null, null);
+values (264, '小类', '语言培训教师', 6, 14, 'JYPX_YYPXJS', 'JYPX_YYPXJSJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (265, '小类', '职业技能培训', 7, 14, null, null);
+values (265, '小类', '职业技能培训', 9, 14, 'JYPX_ZYJNPX', 'JYPX_ZYJNPXJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (266, '小类', '学历教育', 8, 14, null, null);
+values (266, '小类', '学历教育', 12, 14, 'JYPX_XLJY', 'JYPX_XLJYJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (267, '小类', '艺术培训', 9, 14, null, null);
+values (267, '小类', '艺术培训', 7, 14, 'JYPX_YSPX', 'JYPX_YSPXJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (268, '小类', '体育培训', 10, 14, null, null);
+values (268, '小类', '体育培训', 10, 14, 'JYPX_TYPX', 'JYPX_TYPXJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (269, '小类', 'IT培训', 11, 14, null, null);
+values (269, '小类', 'IT培训', 13, 14, 'JYPX_ITPX', 'JYPX_ITPXJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (270, '小类', '设计培训', 12, 14, null, null);
+values (272, '小类', '婴幼儿教育', 16, 14, 'JYPX_YYEJY', 'JYPX_YYEJYJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (271, '小类', '管理培训', 13, 14, null, null);
+values (274, '小类', '移民', 18, 14, 'JYPX_YM', 'JYPX_YMJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (272, '小类', '婴幼儿教育', 14, 14, null, null);
-
-insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (273, '小类', '留学', 15, 14, null, null);
-
-insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (274, '小类', '移民', 16, 14, null, null);
-
-insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (275, '小类', '艺术家教', 17, 14, null, null);
-
-insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (276, '小类', '体育教练', 18, 14, null, null);
-
-insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (277, '小类', '拼班拼课', 19, 14, null, null);
+values (276, '小类', '体育教练', 11, 14, 'JYPX_TYJL', 'JYPX_TYJLJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
 values (278, '小类', '园林花卉', 1, 18, null, null);
