@@ -1,0 +1,67 @@
+﻿using System;
+using NHibernate.Mapping.Attributes;
+
+namespace TianWen.XiaoZhen1Qu.Entities.Models
+{
+    public class LYJD_JDZSYDJBXX
+    {
+        public LYJD_JDZSYDJBXX()
+        {
+            LYJD_JDZSYDJBXXID = Guid.NewGuid().ToString("N");
+        }
+
+        /// <summary>
+        /// 旅游酒店_酒店住宿预订信息ID
+        /// </summary>
+        [Id]
+        public virtual string LYJD_JDZSYDJBXXID { get; set; }
+
+        /// <summary>
+        /// 基础信息ID
+        /// </summary>
+        [Property]
+        public virtual string JCXXID { get; set; }
+
+        /// <summary>
+        /// 类别
+        /// </summary>
+        [Property]
+        public virtual string LB { get; set; }
+
+        /// <summary>
+        /// 小类
+        /// </summary>
+        [Property]
+        public virtual string XL { get; set; }
+
+        /// <summary>
+        /// 价格
+        /// </summary>
+        [Property]
+        public virtual string JG { get; set; }
+
+        /// <summary>
+        /// 区域
+        /// </summary>
+        [Property]
+        public virtual string QY { get; set; }
+
+        /// <summary>
+        /// 地段
+        /// </summary>
+        [Property]
+        public virtual string DD { get; set; }
+
+        /// <summary>
+        /// 具体地址
+        /// </summary>
+        [Property]
+        public virtual string JTDZ { get; set; }
+
+        /// <summary>
+        /// 服务介绍
+        /// </summary>
+        [Property]
+        public virtual string FWJS { get; set; }
+    }
+}

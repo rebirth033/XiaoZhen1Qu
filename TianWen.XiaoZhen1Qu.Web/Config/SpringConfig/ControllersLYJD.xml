@@ -15,4 +15,14 @@
       <ref object="LYJD_ZBYBLL"/>
     </property>
   </object>
+  <object id="LYJD_CJYController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.LYJD_CJYController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="LYJD_CJYBLL">
+      <ref object="LYJD_CJYBLL"/>
+    </property>
+  </object>
+  <object id="LYJD_JDZSYDController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.LYJD_JDZSYDController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="LYJD_JDZSYDBLL">
+      <ref object="LYJD_JDZSYDBLL"/>
+    </property>
+  </object>
 </objects>
