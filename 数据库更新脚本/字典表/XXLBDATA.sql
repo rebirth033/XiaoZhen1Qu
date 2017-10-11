@@ -185,7 +185,7 @@ insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
 values (14, '大类', '教育培训', 14, 0, null, null);
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (15, '大类', '旅游酒店', 15, null, null, null);
+values (15, '大类', '旅游酒店', 15, 0, null, null);
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
 values (16, '大类', '装修建材', 16, null, null, null);
@@ -557,7 +557,7 @@ insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
 values (249, '小类', '出境游', 4, 15, 'LYJD_CJY', 'LYJD_CJYJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (250, '小类', '酒店预订/住宿', 5, 15, 'LYJD_JDYDZS', 'LYJD_JDYDZSJBXX');
+values (250, '小类', '酒店/住宿预订', 5, 15, 'LYJD_JDZSYD', 'LYJD_JDZSYDJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
 values (251, '小类', '机票', 6, 15, 'LYJD_JP', 'LYJD_JPJBXX');

@@ -134,6 +134,7 @@
     <Compile Include="LYJD\ILYJD_CJYBLL.cs" />
     <Compile Include="LYJD\ILYJD_GNYBLL.cs" />
     <Compile Include="LYJD\ILYJD_JDZSYDBLL.cs" />
+    <Compile Include="LYJD\ILYJD_JPBLL.cs" />
     <Compile Include="LYJD\ILYJD_LXSBLL.cs" />
     <Compile Include="LYJD\ILYJD_ZBYBLL.cs" />
     <Compile Include="PFCG\IPFCG_AFSBBLL.cs" />

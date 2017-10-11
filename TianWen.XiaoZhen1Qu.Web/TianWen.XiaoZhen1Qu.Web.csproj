@@ -1320,6 +1320,7 @@
     <Compile Include="Areas\Business\Controllers\LYJD\LYJD_CJYController.cs" />
     <Compile Include="Areas\Business\Controllers\LYJD\LYJD_GNYController.cs" />
     <Compile Include="Areas\Business\Controllers\LYJD\LYJD_JDZSYDController.cs" />
+    <Compile Include="Areas\Business\Controllers\LYJD\LYJD_JPController.cs" />
     <Compile Include="Areas\Business\Controllers\LYJD\LYJD_LXSController.cs" />
     <Compile Include="Areas\Business\Controllers\LYJD\LYJD_ZBYController.cs" />
     <Compile Include="Areas\Business\Controllers\PFCG\PFCG_AFSBController.cs" />
@@ -1705,6 +1706,7 @@
     <Content Include="Areas\Business\Views\LYJD_ZBY\LYJD_ZBY.cshtml" />
     <Content Include="Areas\Business\Views\LYJD_CJY\LYJD_CJY.cshtml" />
     <Content Include="Areas\Business\Views\LYJD_JDZSYD\LYJD_JDZSYD.cshtml" />
+    <Content Include="Areas\Business\Views\LYJD_JP\LYJD_JP.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
