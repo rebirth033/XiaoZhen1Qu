@@ -132,6 +132,7 @@
     <Compile Include="LR\ILR_WSBLL.cs" />
     <Compile Include="LR\ILR_YJBLL.cs" />
     <Compile Include="LYJD\ILYJD_CJYBLL.cs" />
+    <Compile Include="LYJD\ILYJD_DYDDRBLL.cs" />
     <Compile Include="LYJD\ILYJD_GNYBLL.cs" />
     <Compile Include="LYJD\ILYJD_JDZSYDBLL.cs" />
     <Compile Include="LYJD\ILYJD_JPBLL.cs" />
@@ -236,6 +237,7 @@
     <Compile Include="ZSJM\IZSJM_TSBLL.cs" />
     <Compile Include="ZSJM\IZSJM_WLFWBLL.cs" />
     <Compile Include="ZSJM\IZSJM_WTMYETBLL.cs" />
+    <Compile Include="ZXJC\IZXJC_JZFWBLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TianWen.XiaoZhen1Qu.Entities\TianWen.XiaoZhen1Qu.Entities.csproj">

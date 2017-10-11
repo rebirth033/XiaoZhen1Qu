@@ -125,6 +125,7 @@
     <Compile Include="BLL\LR\LR_WSBLL.cs" />
     <Compile Include="BLL\LR\LR_YJBLL.cs" />
     <Compile Include="BLL\LYJD\LYJD_CJYBLL.cs" />
+    <Compile Include="BLL\LYJD\LYJD_DYDDRBLL.cs" />
     <Compile Include="BLL\LYJD\LYJD_GNYBLL.cs" />
     <Compile Include="BLL\LYJD\LYJD_JDZSYDBLL.cs" />
     <Compile Include="BLL\LYJD\LYJD_JPBLL.cs" />
@@ -239,6 +240,7 @@
     <Compile Include="BLL\ZSJM\ZSJM_TSBLL.cs" />
     <Compile Include="BLL\ZSJM\ZSJM_WLFWBLL.cs" />
     <Compile Include="BLL\ZSJM\ZSJM_WTMYETBLL.cs" />
+    <Compile Include="BLL\ZXJC\ZXJC_JZFWBLL.cs" />
     <Compile Include="DAO\DAOBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

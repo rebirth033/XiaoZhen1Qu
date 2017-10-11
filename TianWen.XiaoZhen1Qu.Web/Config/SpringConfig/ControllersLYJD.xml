@@ -30,4 +30,9 @@
       <ref object="LYJD_JPBLL"/>
     </property>
   </object>
+  <object id="LYJD_DYDDRController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.LYJD_DYDDRController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="LYJD_DYDDRBLL">
+      <ref object="LYJD_DYDDRBLL"/>
+    </property>
+  </object>
 </objects>

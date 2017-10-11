@@ -1,0 +1,61 @@
+-- Create table
+create table LYJD_DYDDRJBXX
+(
+  lyjd_dyddrjbxxid VARCHAR2(50) not null,
+  jcxxid           VARCHAR2(50),
+  bcms             VARCHAR2(4000),
+  xm               VARCHAR2(20),
+  qy               VARCHAR2(20),
+  dd               VARCHAR2(20),
+  jtdz             VARCHAR2(200),
+  fwqy             VARCHAR2(200),
+  xb               VARCHAR2(20),
+  dylx             VARCHAR2(200),
+  dyyz             VARCHAR2(200),
+  nl               VARCHAR2(20),
+  xl               VARCHAR2(20),
+  dtjy             VARCHAR2(20)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 16K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table LYJD_DYDDRJBXX
+  is '旅游酒店_导游/当地人';
+-- Add comments to the columns 
+comment on column LYJD_DYDDRJBXX.lyjd_dyddrjbxxid
+  is '导游/当地人基本信息ID';
+comment on column LYJD_DYDDRJBXX.jcxxid
+  is '基础信息ID';
+comment on column LYJD_DYDDRJBXX.bcms
+  is '补充描述';
+comment on column LYJD_DYDDRJBXX.xm
+  is '姓名';
+comment on column LYJD_DYDDRJBXX.qy
+  is '区域';
+comment on column LYJD_DYDDRJBXX.dd
+  is '地段';
+comment on column LYJD_DYDDRJBXX.jtdz
+  is '具体地址';
+comment on column LYJD_DYDDRJBXX.fwqy
+  is '服务区域';
+comment on column LYJD_DYDDRJBXX.xb
+  is '性别';
+comment on column LYJD_DYDDRJBXX.dylx
+  is '导游类型';
+comment on column LYJD_DYDDRJBXX.dyyz
+  is '导游语种';
+comment on column LYJD_DYDDRJBXX.nl
+  is '年龄';
+comment on column LYJD_DYDDRJBXX.xl
+  is '学历 ';
+comment on column LYJD_DYDDRJBXX.dtjy
+  is '带团经验';

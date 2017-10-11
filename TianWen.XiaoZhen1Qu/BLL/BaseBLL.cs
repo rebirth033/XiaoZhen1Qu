@@ -277,6 +277,20 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
+        public object LoadCODES_ZXJC(string TYPENAME)
+        {
+            try
+            {
+                IList<CODES_ZXJC> list = DAO.Repository.GetObjectList<CODES_ZXJC>(String.Format("FROM CODES_ZXJC WHERE TYPENAME='{0}' ORDER BY CODEORDER", TYPENAME));
+                return new { Result = EnResultType.Success, list = list };
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("error", ex.Message);
+                return new { Result = EnResultType.Failed, Message = "加载失败" };
+            }
+        }
+
         public object LoadQYBySuperName(string SUPERNAME)
         {
             try
@@ -507,6 +521,20 @@ namespace TianWen.XiaoZhen1Qu.BLL
             try
             {
                 IList<CODES_SWFW> list = DAO.Repository.GetObjectList<CODES_SWFW>(String.Format("FROM CODES_SWFW WHERE PARENTID = '{0}' ORDER BY CODEORDER", LBID));
+                return new { Result = EnResultType.Success, list = list };
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("error", ex.Message);
+                return new { Result = EnResultType.Failed, Message = "加载失败" };
+            }
+        }
+
+        public object LoadJZFWXX(string LBID)
+        {
+            try
+            {
+                IList<CODES_ZXJC> list = DAO.Repository.GetObjectList<CODES_ZXJC>(String.Format("FROM CODES_ZXJC WHERE PARENTID = '{0}' ORDER BY CODEORDER", LBID));
                 return new { Result = EnResultType.Success, list = list };
             }
             catch (Exception ex)

@@ -223,4 +223,106 @@ values (73, '星级酒店', '四星级', '2', 2, null);
 insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (74, '星级酒店', '五星级', '3', 3, null);
 
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (75, '机票', '国际机票', '1', 1, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (76, '机票', '国内机票', '2', 2, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (77, '导游类型', '专职导游', '1', 1, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (78, '导游类型', '兼职导游', '2', 2, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (79, '导游类型', '大学生导游', '3', 3, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (80, '导游类型', '本地土著向导', '4', 4, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (81, '导游学历', '初中', '1', 1, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (82, '导游学历', '高中', '2', 2, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (83, '导游学历', '中专', '3', 3, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (84, '导游学历', '大专', '4', 4, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (85, '导游学历', '本科', '5', 5, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (86, '导游学历', '硕士', '6', 6, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (87, '导游学历', '博士', '7', 7, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (88, '导游语种', '汉语', '1', 1, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (89, '导游语种', '英语', '2', 2, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (90, '导游语种', '韩语', '3', 3, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (91, '导游语种', '日语', '4', 4, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (92, '导游语种', '法语', '5', 5, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (93, '导游语种', '德语', '6', 6, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (94, '导游语种', '俄语', '7', 7, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (95, '导游语种', '葡萄牙语', '8', 8, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (96, '导游语种', '西班牙语', '9', 9, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (97, '导游语种', '阿拉伯语', '10', 10, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (98, '导游语种', '越南语', '11', 11, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (99, '导游语种', '闽南语', '12', 12, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (100, '导游语种', '粤语', '13', 13, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (101, '导游语种', '上海话', '14', 14, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (102, '导游语种', '维语', '15', 15, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (103, '带团经验', '无经验', '1', 1, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (104, '带团经验', '1年以下', '2', 2, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (105, '带团经验', '1-3年', '3', 3, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (106, '带团经验', '3-5年', '4', 4, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (107, '带团经验', '5-10年', '5', 5, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (108, '带团经验', '10年以上', '6', 6, null);
+
 prompt Done.
