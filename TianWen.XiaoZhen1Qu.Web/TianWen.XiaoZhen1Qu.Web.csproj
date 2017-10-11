@@ -359,6 +359,7 @@
     <Content Include="Areas\Business\Css\LYJD\LYJD_CJY.css" />
     <Content Include="Areas\Business\Css\LYJD\LYJD_GNY.css" />
     <Content Include="Areas\Business\Css\LYJD\LYJD_JDZSYD.css" />
+    <Content Include="Areas\Business\Css\LYJD\LYJD_JP.css" />
     <Content Include="Areas\Business\Css\LYJD\LYJD_LXS.css" />
     <Content Include="Areas\Business\Css\LYJD\LYJD_ZBY.css" />
     <Content Include="Areas\Business\Css\PFCG\PFCG_JXJG.css" />
@@ -660,6 +661,8 @@
     <Content Include="Areas\Business\Scripts\Business\LYJD\LYJD_GNYYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\LYJD\LYJD_JDZSYD.js" />
     <Content Include="Areas\Business\Scripts\Business\LYJD\LYJD_JDZSYDYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\LYJD\LYJD_JP.js" />
+    <Content Include="Areas\Business\Scripts\Business\LYJD\LYJD_JPYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\LYJD\LYJD_LXS.js" />
     <Content Include="Areas\Business\Scripts\Business\LYJD\LYJD_LXSYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\LYJD\LYJD_ZBY.js" />

@@ -25,4 +25,9 @@
       <ref object="LYJD_JDZSYDBLL"/>
     </property>
   </object>
+  <object id="LYJD_JPController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.LYJD_JPController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="LYJD_JPBLL">
+      <ref object="LYJD_JPBLL"/>
+    </property>
+  </object>
 </objects>

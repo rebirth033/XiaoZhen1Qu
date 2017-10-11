@@ -1,0 +1,46 @@
+-- Create table
+create table LYJD_JPJBXX
+(
+  lyjd_jpjbxxid VARCHAR2(50) not null,
+  jcxxid        VARCHAR2(50),
+  fwjs          VARCHAR2(4000),
+  qy            VARCHAR2(20),
+  dd            VARCHAR2(20),
+  jtdz          VARCHAR2(200),
+  lb            VARCHAR2(20),
+  xl            VARCHAR2(200),
+  fwqy          VARCHAR2(200)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 16K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table LYJD_JPJBXX
+  is '旅游酒店_机票';
+-- Add comments to the columns 
+comment on column LYJD_JPJBXX.lyjd_jpjbxxid
+  is '机票基本信息ID';
+comment on column LYJD_JPJBXX.jcxxid
+  is '基础信息ID';
+comment on column LYJD_JPJBXX.fwjs
+  is '服务介绍';
+comment on column LYJD_JPJBXX.qy
+  is '区域';
+comment on column LYJD_JPJBXX.dd
+  is '地段';
+comment on column LYJD_JPJBXX.jtdz
+  is '具体地址';
+comment on column LYJD_JPJBXX.lb
+  is '类别';
+comment on column LYJD_JPJBXX.xl
+  is '小类';
+comment on column LYJD_JPJBXX.fwqy
+  is '服务区域';

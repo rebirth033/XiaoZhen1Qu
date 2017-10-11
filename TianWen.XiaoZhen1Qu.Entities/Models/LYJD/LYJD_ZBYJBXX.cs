@@ -11,7 +11,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         }
 
         /// <summary>
-        /// 旅游酒店_国内游信息ID
+        /// 旅游酒店_周边游信息ID
         /// </summary>
         [Id]
         public virtual string LYJD_ZBYJBXXID { get; set; }
