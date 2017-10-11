@@ -5,9 +5,14 @@
       <ref object="LYJD_LXSBLL"/>
     </property>
   </object>
-    <object id="LYJD_GNYController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.LYJD_GNYController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+  <object id="LYJD_GNYController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.LYJD_GNYController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="LYJD_GNYBLL">
       <ref object="LYJD_GNYBLL"/>
+    </property>
+  </object>
+  <object id="LYJD_ZBYController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.LYJD_ZBYController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="LYJD_ZBYBLL">
+      <ref object="LYJD_ZBYBLL"/>
     </property>
   </object>
 </objects>

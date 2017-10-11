@@ -1,0 +1,57 @@
+-- Create table
+create table LYJD_ZBYJBXX
+(
+  lyjd_zbyjbxxid VARCHAR2(50) not null,
+  jcxxid         VARCHAR2(50),
+  cyfs           VARCHAR2(200),
+  qy             VARCHAR2(20),
+  dd             VARCHAR2(20),
+  jtdz           VARCHAR2(200),
+  ywxm           VARCHAR2(200),
+  shrq           VARCHAR2(200),
+  xcts_r         VARCHAR2(20),
+  msj            VARCHAR2(20),
+  yhj_cr         VARCHAR2(20),
+  yhj_et         VARCHAR2(20),
+  fwjs           VARCHAR2(4000)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 16
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table LYJD_ZBYJBXX
+  is '旅游酒店_周边游';
+-- Add comments to the columns 
+comment on column LYJD_ZBYJBXX.lyjd_zbyjbxxid
+  is '周边游基本信息ID';
+comment on column LYJD_ZBYJBXX.jcxxid
+  is '基础信息ID';
+comment on column LYJD_ZBYJBXX.cyfs
+  is '出游方式';
+comment on column LYJD_ZBYJBXX.qy
+  is '区域';
+comment on column LYJD_ZBYJBXX.dd
+  is '地段';
+comment on column LYJD_ZBYJBXX.jtdz
+  is '具体地址';
+comment on column LYJD_ZBYJBXX.ywxm
+  is '游玩项目';
+comment on column LYJD_ZBYJBXX.shrq
+  is '适合人群';
+comment on column LYJD_ZBYJBXX.xcts_r
+  is '行程天数';
+comment on column LYJD_ZBYJBXX.msj
+  is '门市价';
+comment on column LYJD_ZBYJBXX.yhj_cr
+  is '优惠价_成人';
+comment on column LYJD_ZBYJBXX.yhj_et
+  is '优惠价_儿童';
+comment on column LYJD_ZBYJBXX.fwjs
+  is '服务介绍';
