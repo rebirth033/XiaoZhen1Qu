@@ -1,0 +1,75 @@
+-- Create table
+create table LYJD_GNYJBXX
+(
+  lyjd_gnyjbxxid VARCHAR2(50) not null,
+  jcxxid         VARCHAR2(50),
+  xlts           VARCHAR2(4000),
+  qy             VARCHAR2(20),
+  dd             VARCHAR2(20),
+  jtdz           VARCHAR2(200),
+  cyfs           VARCHAR2(20),
+  ftrq           VARCHAR2(20),
+  wfjt_q         VARCHAR2(20),
+  wfjt_h         VARCHAR2(20),
+  xcts_r         VARCHAR2(20),
+  xcts_w         VARCHAR2(20),
+  xcap           VARCHAR2(4000),
+  ydxz           VARCHAR2(4000),
+  msj            VARCHAR2(20),
+  yhj_cr         VARCHAR2(20),
+  yhj_et         VARCHAR2(20),
+  fybh           VARCHAR2(4000),
+  zfxm           VARCHAR2(4000)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 16
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table LYJD_GNYJBXX
+  is '旅游酒店_国内游';
+-- Add comments to the columns 
+comment on column LYJD_GNYJBXX.lyjd_gnyjbxxid
+  is '国内游基本信息ID';
+comment on column LYJD_GNYJBXX.jcxxid
+  is '基础信息ID';
+comment on column LYJD_GNYJBXX.xlts
+  is '线路特色';
+comment on column LYJD_GNYJBXX.qy
+  is '区域';
+comment on column LYJD_GNYJBXX.dd
+  is '地段';
+comment on column LYJD_GNYJBXX.jtdz
+  is '具体地址';
+comment on column LYJD_GNYJBXX.cyfs
+  is '出游方式 ';
+comment on column LYJD_GNYJBXX.ftrq
+  is '发团日期';
+comment on column LYJD_GNYJBXX.wfjt_q
+  is '往返交通_去';
+comment on column LYJD_GNYJBXX.wfjt_h
+  is '往返交通_回';
+comment on column LYJD_GNYJBXX.xcts_r
+  is '行程天数_日';
+comment on column LYJD_GNYJBXX.xcts_w
+  is '行程天数_晚';
+comment on column LYJD_GNYJBXX.xcap
+  is '行程安排';
+comment on column LYJD_GNYJBXX.ydxz
+  is '预定须知';
+comment on column LYJD_GNYJBXX.msj
+  is '门市价';
+comment on column LYJD_GNYJBXX.yhj_cr
+  is '优惠价_成人';
+comment on column LYJD_GNYJBXX.yhj_et
+  is '优惠价_儿童';
+comment on column LYJD_GNYJBXX.fybh
+  is '费用包含';
+comment on column LYJD_GNYJBXX.zfxm
+  is '自费项目';
