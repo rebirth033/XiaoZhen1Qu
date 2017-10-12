@@ -207,6 +207,7 @@
     <Content Include="Areas\Business\Css\HBSJ.css" />
     <Content Include="Areas\Business\Css\HFCZ\HFCZ.css" />
     <Content Include="Areas\Business\Css\HFCZ\ZFFS.css" />
+    <Content Include="Areas\Business\Css\HQSY\HQSY_HQGS.css" />
     <Content Include="Areas\Business\Css\images\arrow_down.png" />
     <Content Include="Areas\Business\Css\images\arrow_down_big.png" />
     <Content Include="Areas\Business\Css\images\arrow_up.png" />
@@ -482,6 +483,7 @@
     <Content Include="Areas\Business\Css\ZXJC\ZXJC_FWGZ.css" />
     <Content Include="Areas\Business\Css\ZXJC\ZXJC_GZFW.css" />
     <Content Include="Areas\Business\Css\ZXJC\ZXJC_JC.css" />
+    <Content Include="Areas\Business\Css\ZXJC\ZXJC_JFJS.css" />
     <Content Include="Areas\Business\Css\ZXJC\ZXJC_JJ.css" />
     <Content Include="Areas\Business\Css\ZXJC\ZXJC_JZFW.css" />
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\css\bootstrap-theme.css" />
@@ -601,6 +603,8 @@
     <Content Include="Areas\Business\Scripts\Business\GRZL\MMSZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HBSJ.js" />
     <Content Include="Areas\Business\Scripts\Business\HFCZ\HFCZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\HQSY\HQSY_HQGS.js" />
+    <Content Include="Areas\Business\Scripts\Business\HQSY\HQSY_HQGSYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\JYPX\JYPX_GLPX.js" />
     <Content Include="Areas\Business\Scripts\Business\JYPX\JYPX_GLPXYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\JYPX\JYPX_ITPX.js" />
@@ -897,6 +901,8 @@
     <Content Include="Areas\Business\Scripts\Business\ZXJC\ZXJC_GZFWYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\ZXJC\ZXJC_JC.js" />
     <Content Include="Areas\Business\Scripts\Business\ZXJC\ZXJC_JCYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\ZXJC\ZXJC_JFJS.js" />
+    <Content Include="Areas\Business\Scripts\Business\ZXJC\ZXJC_JFJSYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\ZXJC\ZXJC_JJ.js" />
     <Content Include="Areas\Business\Scripts\Business\ZXJC\ZXJC_JJYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\ZXJC\ZXJC_JZFW.js" />
@@ -1190,6 +1196,9 @@
     <Content Include="Areas\Business\Scripts\UEditor\ueditor.js" />
     <Content Include="Areas\Business\Scripts\UEditor\ueditor.parse.min.js" />
     <Content Include="Areas\Business\Scripts\underscore.min.js" />
+    <Content Include="Config\SpringConfig\BLLHQSY.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Config\SpringConfig\BLLZXJC.xml">
       <SubType>Designer</SubType>
     </Content>
@@ -1221,6 +1230,7 @@
     <Content Include="Config\SpringConfig\BLLXXYL.xml" />
     <Content Include="Config\SpringConfig\BLLPWKQ.xml" />
     <Content Include="Config\SpringConfig\BLLGY.xml" />
+    <Content Include="Config\SpringConfig\ControllersHQSY.xml" />
     <Content Include="Config\SpringConfig\ControllersZXJC.xml" />
     <Content Include="Config\SpringConfig\ControllersPFCG.xml" />
     <Content Include="Config\SpringConfig\ControllersQZZP.xml" />
@@ -1312,6 +1322,7 @@
     <Compile Include="Areas\Business\Controllers\FC\FC_XZLController.cs" />
     <Compile Include="Areas\Business\Controllers\GRZLController.cs" />
     <Compile Include="Areas\Business\Controllers\HFCZController.cs" />
+    <Compile Include="Areas\Business\Controllers\HQSY\HQSY_HQGSController.cs" />
     <Compile Include="Areas\Business\Controllers\JYPX\JYPX_GLPXController.cs" />
     <Compile Include="Areas\Business\Controllers\JYPX\JYPX_JJGRController.cs" />
     <Compile Include="Areas\Business\Controllers\JYPX\JYPX_JJJGController.cs" />
@@ -1746,6 +1757,7 @@
     <Content Include="Areas\Business\Views\ZXJC_JC\ZXJC_JC.cshtml" />
     <Content Include="Areas\Business\Views\ZXJC_JJ\ZXJC_JJ.cshtml" />
     <Content Include="Areas\Business\Views\ZXJC_JFJS\ZXJC_JFJS.cshtml" />
+    <Content Include="Areas\Business\Views\HQSY_HQGS\HQSY_HQGS.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

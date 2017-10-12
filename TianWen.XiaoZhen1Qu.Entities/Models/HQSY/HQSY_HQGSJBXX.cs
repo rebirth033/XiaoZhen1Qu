@@ -23,16 +23,10 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string JCXXID { get; set; }
 
         /// <summary>
-        /// 类别
+        /// 提供服务
         /// </summary>
         [Property]
-        public virtual string LB { get; set; }
-
-        /// <summary>
-        /// 小类
-        /// </summary>
-        [Property]
-        public virtual string XL { get; set; }
+        public virtual string TGFW { get; set; }
 
         /// <summary>
         /// 服务区域
