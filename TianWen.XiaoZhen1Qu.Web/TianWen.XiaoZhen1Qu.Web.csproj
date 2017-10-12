@@ -479,6 +479,8 @@
     <Content Include="Areas\Business\Css\ZSJM\ZSJM_TS.css" />
     <Content Include="Areas\Business\Css\ZSJM\ZSJM_WLFW.css" />
     <Content Include="Areas\Business\Css\ZSJM\ZSJM_WTMYET.css" />
+    <Content Include="Areas\Business\Css\ZXJC\ZXJC_FWGZ.css" />
+    <Content Include="Areas\Business\Css\ZXJC\ZXJC_GZFW.css" />
     <Content Include="Areas\Business\Css\ZXJC\ZXJC_JZFW.css" />
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\css\bootstrap-theme.css" />
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\css\bootstrap-theme.min.css" />
@@ -887,6 +889,10 @@
     <Content Include="Areas\Business\Scripts\Business\ZSJM\ZSJM_WLFWYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\ZSJM\ZSJM_WTMYET.js" />
     <Content Include="Areas\Business\Scripts\Business\ZSJM\ZSJM_WTMYETYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\ZXJC\ZXJC_FWGZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\ZXJC\ZXJC_FWGZYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\ZXJC\ZXJC_GZFW.js" />
+    <Content Include="Areas\Business\Scripts\Business\ZXJC\ZXJC_GZFWYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\ZXJC\ZXJC_JZFW.js" />
     <Content Include="Areas\Business\Scripts\Business\ZXJC\ZXJC_JZFWYZ.js" />
     <Content Include="Areas\Business\Scripts\jquery-1.9.1.min.js" />
@@ -1447,6 +1453,8 @@
     <Compile Include="Areas\Business\Controllers\ZSJM\ZSJM_TSController.cs" />
     <Compile Include="Areas\Business\Controllers\ZSJM\ZSJM_WLFWController.cs" />
     <Compile Include="Areas\Business\Controllers\ZSJM\ZSJM_WTMYETController.cs" />
+    <Compile Include="Areas\Business\Controllers\ZXJC\ZXJC_FWGZController.cs" />
+    <Compile Include="Areas\Business\Controllers\ZXJC\ZXJC_GZFWController.cs" />
     <Compile Include="Areas\Business\Controllers\ZXJC\ZXJC_JZFWController.cs" />
     <Compile Include="Areas\Business\Scripts\UEditor\net\App_Code\Config.cs" />
     <Compile Include="Areas\Business\Scripts\UEditor\net\App_Code\ConfigHandler.cs" />
@@ -1724,6 +1732,8 @@
     <Content Include="Areas\Business\Views\LYJD_JP\LYJD_JP.cshtml" />
     <Content Include="Areas\Business\Views\LYJD_DYDDR\LYJD_DYDDR.cshtml" />
     <Content Include="Areas\Business\Views\ZXJC_JZFW\ZXJC_JZFW.cshtml" />
+    <Content Include="Areas\Business\Views\ZXJC_GZFW\ZXJC_GZFW.cshtml" />
+    <Content Include="Areas\Business\Views\ZXJC_FWGZ\ZXJC_FWGZ.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

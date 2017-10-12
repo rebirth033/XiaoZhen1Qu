@@ -1,0 +1,45 @@
+-- Create table
+create table ZXJC_GZFWJBXX
+(
+  zxjc_gzfwjbxxid VARCHAR2(50) not null,
+  jcxxid          VARCHAR2(50),
+  bcms            VARCHAR2(4000),
+  lb              VARCHAR2(20),
+  qy              VARCHAR2(20),
+  dd              VARCHAR2(20),
+  jtdz            VARCHAR2(200),
+  fwqy            VARCHAR2(200),
+  xl              VARCHAR2(20)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 16
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table ZXJC_GZFWJBXX
+  is '装修建材_工装服务';
+-- Add comments to the columns 
+comment on column ZXJC_GZFWJBXX.zxjc_gzfwjbxxid
+  is '工装服务基本信息ID';
+comment on column ZXJC_GZFWJBXX.jcxxid
+  is '基础信息ID';
+comment on column ZXJC_GZFWJBXX.bcms
+  is '补充描述';
+comment on column ZXJC_GZFWJBXX.lb
+  is '类别';
+comment on column ZXJC_GZFWJBXX.qy
+  is '区域';
+comment on column ZXJC_GZFWJBXX.dd
+  is '地段';
+comment on column ZXJC_GZFWJBXX.jtdz
+  is '具体地址';
+comment on column ZXJC_GZFWJBXX.fwqy
+  is '服务区域';
+comment on column ZXJC_GZFWJBXX.xl
+  is '小类';

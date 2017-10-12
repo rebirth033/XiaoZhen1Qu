@@ -5,4 +5,14 @@
       <ref object="ZXJC_JZFWBLL"/>
     </property>
   </object>
+  <object id="ZXJC_GZFWController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.ZXJC_GZFWController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="ZXJC_GZFWBLL">
+      <ref object="ZXJC_GZFWBLL"/>
+    </property>
+  </object>
+  <object id="ZXJC_FWGZController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.ZXJC_FWGZController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="ZXJC_FWGZBLL">
+      <ref object="ZXJC_FWGZBLL"/>
+    </property>
+  </object>
 </objects>
