@@ -43,7 +43,7 @@ function LoadDefault() {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadDropdown("建材", "LB");
+            LoadDropdown("家具", "LB");
         }
         if (type === "XL") {
             LoadXL();
@@ -56,7 +56,7 @@ function BindClick(type) {
         }
     });
 }
-//加载建材类别
+//加载家具类别
 function LoadDropdown(type, id) {
     $.ajax({
         type: "POST",
@@ -92,7 +92,7 @@ function SelectLB(obj, type, lbid) {
 }
 //判断类别
 function PDLB(lbmc) {
-    if (lbmc !== "") {
+    if (lbmc !== "床" && lbmc !== "床垫" && lbmc !== "沙发") {
         $("#spanXL").html("请选择小类");
         $("#divXLText").css("display", "");
         $("#divXL").css("display", "none");
@@ -129,7 +129,7 @@ function LoadXL(type) {
         }
     });
 }
-//加载装修建材_家具基本信息
+//加载装修家具_家具基本信息
 function LoadZXJC_JJJBXX() {
     $.ajax({
         type: "POST",
