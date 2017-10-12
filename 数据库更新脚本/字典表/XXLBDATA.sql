@@ -188,7 +188,7 @@ insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
 values (15, '大类', '旅游酒店', 15, 0, null, null);
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (16, '大类', '装修建材', 16, null, null, null);
+values (16, '大类', '装修建材', 16, 0, null, null);
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
 values (17, '大类', '婚庆摄影', 17, null, null, null);
@@ -431,9 +431,6 @@ insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
 values (198, '小类', '艺术品/收藏品', 1, 29, 'ES_WHYL_YSPSCP', 'ES_WHYL_YSPSCPJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (199, '小类', '文体/户外/乐器', 2, 29, 'ES_WHYL_WTHWYQ', 'ES_WHYL_WTHWYQJBXX');
-
-insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
 values (200, '小类', '图书/音像/软件', 3, 29, 'ES_WHYL_TSYXRJ', 'ES_WHYL_TSYXRJJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
@@ -566,22 +563,22 @@ insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
 values (252, '小类', '导游/当地人', 7, 15, 'LYJD_DYDDR', 'LYJD_DYDDRJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (253, '小类', '家装服务', 1, 16, null, null);
+values (253, '小类', '家装服务', 1, 16, 'ZXJC_JZFW', 'ZXJC_JZFWJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (254, '小类', '工装服务', 2, 16, null, null);
+values (254, '小类', '工装服务', 2, 16, 'ZXJC_GZFW', 'ZXJC_GZFWJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (255, '小类', '建房/翻建改造', 3, 16, null, null);
+values (255, '小类', '房屋改造', 3, 16, 'ZXJC_FWGZ', 'ZXJC_FWGZJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (256, '小类', '建材', 4, 16, null, null);
+values (256, '小类', '建材', 4, 16, 'ZXJC_JC', 'ZXJC_JCJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (257, '小类', '家具', 5, 16, null, null);
+values (257, '小类', '家具', 5, 16, 'ZXJC_JJ', 'ZXJC_JJJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (258, '小类', '家纺家饰', 6, 16, null, null);
+values (258, '小类', '家纺家饰', 6, 16, 'ZXJC_JFJS', 'ZXJC_JFJSJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
 values (259, '小类', '中小学辅导班', 1, 14, 'JYPX_ZXXFDB', 'JYPX_ZXXFDBJBXX');
@@ -651,5 +648,8 @@ values (285, '小类', '农机具/设备', 8, 18, null, null);
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
 values (286, '小类', '农产品加工/代理', 9, 18, null, null);
+
+insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
+values (199, '小类', '文体/户外/乐器', 2, 29, 'ES_WHYL_WTHWYQ', 'ES_WHYL_WTHWYQJBXX');
 
 prompt Done.
