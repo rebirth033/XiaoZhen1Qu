@@ -25,4 +25,9 @@
       <ref object="ZXJC_JJBLL"/>
     </property>
   </object>
+  <object id="ZXJC_JFJSController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.ZXJC_JFJSController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="ZXJC_JFJSBLL">
+      <ref object="ZXJC_JFJSBLL"/>
+    </property>
+  </object>
 </objects>
