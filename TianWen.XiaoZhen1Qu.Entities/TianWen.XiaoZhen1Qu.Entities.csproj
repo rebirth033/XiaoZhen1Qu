@@ -264,6 +264,8 @@
     <Compile Include="Maps\ZSJM\ZSJM_WTMYETJBXX_Map.cs" />
     <Compile Include="Maps\ZXJC\ZXJC_FWGZJBXX_Map.cs" />
     <Compile Include="Maps\ZXJC\ZXJC_GZFWJBXX_Map.cs" />
+    <Compile Include="Maps\ZXJC\ZXJC_JCJBXX_Map.cs" />
+    <Compile Include="Maps\ZXJC\ZXJC_JJJBXX_Map.cs" />
     <Compile Include="Maps\ZXJC\ZXJC_JZFWJBXX_Map.cs" />
     <Compile Include="Models\CL\CL_GCCJBXX.cs" />
     <Compile Include="Models\CL\CL_HCJBXX.cs" />
@@ -478,6 +480,8 @@
     <Compile Include="Models\ZSJM\ZSJM_WTMYETJBXX.cs" />
     <Compile Include="Models\ZXJC\ZXJC_FWGZJBXX.cs" />
     <Compile Include="Models\ZXJC\ZXJC_GZFWJBXX.cs" />
+    <Compile Include="Models\ZXJC\ZXJC_JCJBXX.cs" />
+    <Compile Include="Models\ZXJC\ZXJC_JJJBXX.cs" />
     <Compile Include="Models\ZXJC\ZXJC_JZFWJBXX.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

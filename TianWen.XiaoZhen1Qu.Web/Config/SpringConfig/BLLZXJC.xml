@@ -15,4 +15,14 @@
       <ref object="DAOBase"/>
     </property>
   </object>
+  <object id="ZXJC_JCBLL" type="TianWen.XiaoZhen1Qu.BLL.ZXJC_JCBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="ZXJC_JJBLL" type="TianWen.XiaoZhen1Qu.BLL.ZXJC_JJBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
 </objects>
