@@ -1462,6 +1462,7 @@
     <Compile Include="Areas\Business\Controllers\ZXJC\ZXJC_FWGZController.cs" />
     <Compile Include="Areas\Business\Controllers\ZXJC\ZXJC_GZFWController.cs" />
     <Compile Include="Areas\Business\Controllers\ZXJC\ZXJC_JCController.cs" />
+    <Compile Include="Areas\Business\Controllers\ZXJC\ZXJC_JFJSController.cs" />
     <Compile Include="Areas\Business\Controllers\ZXJC\ZXJC_JJController.cs" />
     <Compile Include="Areas\Business\Controllers\ZXJC\ZXJC_JZFWController.cs" />
     <Compile Include="Areas\Business\Scripts\UEditor\net\App_Code\Config.cs" />
@@ -1744,6 +1745,7 @@
     <Content Include="Areas\Business\Views\ZXJC_FWGZ\ZXJC_FWGZ.cshtml" />
     <Content Include="Areas\Business\Views\ZXJC_JC\ZXJC_JC.cshtml" />
     <Content Include="Areas\Business\Views\ZXJC_JJ\ZXJC_JJ.cshtml" />
+    <Content Include="Areas\Business\Views\ZXJC_JFJS\ZXJC_JFJS.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

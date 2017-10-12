@@ -243,6 +243,7 @@
     <Compile Include="BLL\ZXJC\ZXJC_FWGZBLL.cs" />
     <Compile Include="BLL\ZXJC\ZXJC_GZFWBLL.cs" />
     <Compile Include="BLL\ZXJC\ZXJC_JCBLL.cs" />
+    <Compile Include="BLL\ZXJC\ZXJC_JFJSBLL.cs" />
     <Compile Include="BLL\ZXJC\ZXJC_JJBLL.cs" />
     <Compile Include="BLL\ZXJC\ZXJC_JZFWBLL.cs" />
     <Compile Include="DAO\DAOBase.cs" />

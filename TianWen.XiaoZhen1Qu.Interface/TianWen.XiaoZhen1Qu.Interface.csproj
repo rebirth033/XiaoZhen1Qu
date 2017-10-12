@@ -240,6 +240,7 @@
     <Compile Include="ZXJC\IZXJC_FWGZBLL.cs" />
     <Compile Include="ZXJC\IZXJC_GZFWBLL.cs" />
     <Compile Include="ZXJC\IZXJC_JCBLL.cs" />
+    <Compile Include="ZXJC\IZXJC_JFJSBLL.cs" />
     <Compile Include="ZXJC\IZXJC_JJBLL.cs" />
     <Compile Include="ZXJC\IZXJC_JZFWBLL.cs" />
   </ItemGroup>

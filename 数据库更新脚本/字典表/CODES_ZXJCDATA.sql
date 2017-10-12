@@ -1153,4 +1153,220 @@ values (383, '商业/办公家具', '医疗家具', '12', 12, 276);
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (384, '商业/办公家具', '殡葬业家具', '13', 13, 276);
 
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (385, '家纺家饰', '床上用品', '1', 1, null);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (386, '家纺家饰', '布艺软饰', '2', 2, null);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (387, '家纺家饰', '帘类', '3', 3, null);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (388, '家纺家饰', '毯类', '4', 4, null);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (389, '家纺家饰', '垫类', '5', 5, null);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (390, '家纺家饰', '家居摆挂饰', '6', 6, null);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (391, '家纺家饰', '相框/画片', '7', 7, null);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (392, '家纺家饰', '贴饰壁饰', '8', 8, null);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (393, '家纺家饰', '工艺饰品', '9', 9, null);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (394, '床上用品', '床单', '1', 1, 385);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (395, '床上用品', '被套', '2', 2, 385);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (396, '床上用品', '枕头', '3', 3, 385);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (397, '床上用品', '被子', '4', 4, 385);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (398, '床上用品', '床席', '5', 5, 385);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (399, '床上用品', '蚊帐/床幔', '6', 6, 385);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (400, '床上用品', '床品套件', '7', 7, 385);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (401, '床上用品', '枕套', '8', 8, 385);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (402, '布艺软饰', '床头套/软包', '1', 1, 386);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (403, '布艺软饰', '布料/面料', '2', 2, 386);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (404, '布艺软饰', '餐桌布艺', '3', 3, 386);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (405, '布艺软饰', '沙发套/防尘罩', '4', 4, 386);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (406, '布艺软饰', '毛巾家纺', '5', 5, 386);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (407, '帘类', '窗帘', '1', 1, 387);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (408, '帘类', '门帘', '2', 2, 387);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (409, '帘类', '挂帘', '3', 3, 387);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (410, '帘类', '百叶帘/折帘', '4', 4, 387);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (411, '帘类', '卷帘', '5', 5, 387);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (412, '帘类', '线帘', '6', 6, 387);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (413, '帘类', '浴帘', '7', 7, 387);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (414, '帘类', '珠帘', '8', 8, 387);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (415, '帘类', '配件', '9', 9, 387);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (416, '毯类', '地毯', '1', 1, 388);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (417, '毯类', '挂毯', '2', 2, 388);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (418, '毯类', '壁毯', '3', 3, 388);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (419, '毯类', '毛毯', '4', 4, 388);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (420, '毯类', '绒毯', '5', 5, 388);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (421, '垫类', '地垫', '1', 1, 389);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (422, '垫类', '坐垫/靠垫', '2', 2, 389);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (423, '垫类', '椅垫', '3', 3, 389);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (424, '垫类', '沙发垫', '4', 4, 389);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (425, '垫类', '飘窗垫', '5', 5, 389);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (426, '垫类', '抱枕', '6', 6, 389);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (427, '垫类', '蒲团', '7', 7, 389);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (428, '垫类', '马桶垫', '8', 8, 389);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (429, '家居摆挂饰', '花瓶/装饰器皿', '1', 1, 390);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (430, '家居摆挂饰', '装饰架/装饰搁板', '2', 2, 390);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (431, '家居摆挂饰', '装饰挂牌', '3', 3, 390);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (432, '家居摆挂饰', '装饰挂钩', '4', 4, 390);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (433, '家居摆挂饰', '竹炭包', '5', 5, 390);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (434, '家居摆挂饰', '饰品盒', '6', 6, 390);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (435, '家居摆挂饰', '收纳盒', '7', 7, 390);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (436, '家居摆挂饰', '烟灰缸', '8', 8, 390);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (437, '家居摆挂饰', '果盘/托盘', '9', 9, 390);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (438, '家居摆挂饰', '钟表', '10', 10, 390);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (439, '相框/画片', '有框装饰画', '1', 1, 391);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (440, '相框/画片', '无框装饰画', '2', 2, 391);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (441, '相框/画片', '版画', '3', 3, 391);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (442, '相框/画片', '国画', '4', 4, 391);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (443, '相框/画片', '油画', '5', 5, 391);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (444, '相框/画片', '相框', '6', 6, 391);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (445, '相框/画片', '照片墙', '7', 7, 391);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (446, '贴饰壁饰', '冰箱贴', '1', 1, 392);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (447, '贴饰壁饰', '瓷砖/玻璃贴', '2', 2, 392);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (448, '贴饰壁饰', '电脑贴', '3', 3, 392);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (449, '贴饰壁饰', '开关贴', '4', 4, 392);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (450, '贴饰壁饰', '马桶贴', '5', 5, 392);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (451, '贴饰壁饰', '墙贴', '6', 6, 392);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (452, '工艺饰品', '陶瓷工艺品', '1', 1, 393);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (453, '工艺饰品', '金属工艺品', '2', 2, 393);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (454, '工艺饰品', '布艺工艺品', '3', 3, 393);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (455, '工艺饰品', '编织工艺品', '4', 4, 393);
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (456, '工艺饰品', '雕刻工艺品', '5', 5, 393);
+
 prompt Done.
