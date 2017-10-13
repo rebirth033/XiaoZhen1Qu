@@ -309,6 +309,13 @@ function LoadCYLS() {
     }
     $(".div_clys").bind("click", ActiveCLYS);
 }
+//选择车辆颜色
+function ActiveCLYS() {
+    $(".div_clys").each(function () {
+        $(this).css("background-color", "#ffffff;");
+    });
+    $(this).css("background-color", "#87B53B");
+}
 //选择类别下拉框
 function SelectLB(obj, type) {
     $("#span" + type).html(obj.innerHTML);
@@ -320,13 +327,6 @@ function SelectPZSZSF(obj, type, code) {
     $("#spanPZSZSF").html(obj.innerHTML);
     $("#divPZSZSF").css("display", "none");
     BindClick("PZSZCS");
-}
-//选择车辆颜色
-function ActiveCLYS() {
-    $(".div_clys").each(function () {
-        $(this).css("background-color", "#ffffff;");
-    });
-    $(this).css("background-color", "#87B53B");
 }
 //加载车辆_轿车基本信息
 function LoadCL_JCJBXX() {

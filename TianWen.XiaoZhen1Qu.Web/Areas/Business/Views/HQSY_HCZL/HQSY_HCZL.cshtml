@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = "教育培训_留学";
+    ViewBag.Title = "HQSY_HCZL";
     Layout = "~/Areas/Business/Views/Shared/HTFBLayout.cshtml";
 }
 
@@ -9,12 +9,12 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title></title>
-    <link href="@Url.Content("~/Areas/Business/Css/JYPX/JYPX_LX.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Areas/Business/Css/HQSY/HQSY_HCZL.css")" rel="stylesheet" />
     <link href="@Url.Content("~/Areas/Business/Css/Common/Top.css" )" rel="stylesheet" />
     <link href="@Url.Content("~/Areas/Business/Css/Common/XZQ.css" )" rel="stylesheet" />
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/Common/XZQ.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/JYPX/JYPX_LX.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/JYPX/JYPX_LXYZ.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/HQSY/HQSY_HCZL.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/HQSY/HQSY_HCZLYZ.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/Public_TP.js")"></script>
 </head>
 <body>
@@ -79,7 +79,7 @@
         </div>
         <div id="myTabContent" class="div_content">
             <div id="divJBXX" class="divSplit" style="display: block; text-align: left">
-                <span class="spanSplit">服务详情</span>
+                <span class="spanSplit">基本信息</span>
                 <em class="emSplit"></em>
             </div>
             <div id="divBT" class="divFWCZ" style="margin-top: 22px;">
@@ -88,42 +88,117 @@
                     <span id="spanBT">标题</span>
                 </div>
                 <div class="divRight">
-                    <input id="BT" maxlength="50" column="BT" class="spanFWLX SRK" style="width: 594px; padding: 6px 12px; color: #999999" type="text" placeholder="吸引人的标题可让更多的人看您的信息喔" />
+                    <input id="BT" maxlength="50" column="BT" class="spanFWLX SRK" style="width: 472px; padding: 6px 12px; color: #999999" type="text" placeholder="吸引人的标题可让更多的人看您的信息喔" />
                     <div id="divBTTip"></div>
                 </div>
             </div>
-            <div id="divDBQZQZGJ" class="divFWCZ" style="z-index: 998">
-                <div class="divLeft" style="margin-left: 128px;">
+            <div id="divTCCZ" class="divFWCZ">
+                <div class="divLeft">
                     <span class="required">*</span>
-                    <span class="spanFWCZ">国家</span>
+                    <span class="spanFWCZ">套餐出租</span>
                 </div>
                 <div class="divRight">
-                    <div id="divGJText" class="spanFWLXOut SRK" style="position: relative;">
-                        <div id="divGJSpan" class="spanFWLXIn" style="border: none; margin-top: 6px;">
-                            <span id="spanGJ" class="spanFWQK spanFontColor" style="margin-top: 0">请选择国家</span>
+                    <div class="div_radio" id="div_tccz_s">
+                        <img class="iFWCZ" id="img_tccz_s" /><label class="labelFWCZ">是</label>
+                    </div>
+                    <div class="div_radio" id="div_tccz_f">
+                        <img class="iFWCZ" id="img_tccz_f" /><label class="labelFWCZ">否</label>
+                    </div>
+                </div>
+            </div>
+            <div id="divHCZLTCPP" class="divFWCZ" style="z-index: 998">
+                <div class="divLeft">
+                    <span class="required">*</span>
+                    <span class="spanFWCZ">头车品牌</span>
+                </div>
+                <div class="divRight">
+                    <div id="divTCPPText" class="spanFWLXOut SRK" style="position: relative;">
+                        <div id="divTCPPSpan" class="spanFWLXIn" style="border: none; margin-top: 6px;">
+                            <span id="spanTCPP" class="spanFWQK spanFontColor" style="margin-top: 0">请选择头车品牌</span>
                             <div class="divFWQKArrow"></div>
                         </div>
-                        <div id="divGJ" class="div_xzk" style="display: none;">
+                        <div id="divTCPP" class="div_xzk" style="display: none;">
                             <div class="div_xzk_head">
                                 <input class="input_content" type="text" placeholder="输入名称快速搜索" style="cursor: text" />
                                 <input class="btn btn-info" type="button" value="快速搜索" />
                             </div>
                             <div class="div_xzk_body">
-                                <div class="div_content_yxmc" id="div_content_yxmc">
+                                <div class="div_content_yxmc" id="div_content_tcmc">
                                 </div>
-                                <div class="div_content_yxbq" id="div_content_yxbq">
+                                <div class="div_content_yxbq" id="div_content_tcbq">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="divSQXL" class="divFWCZ" style="z-index: 997;">
+            <div id="divTCYS" class="divFWCZ" style="z-index: 997">
+                <div class="divLeft" style="margin-left: 101px;">
+                    <span class="required">*</span>
+                    <span class="spanFWCZ">头车颜色</span>
+                </div>
+                <div class="divRight" id="div_tcys_right">
+                </div>
+            </div>
+            <div id="divTCYS2" class="divFWCZ" style="z-index: 996">
+                <div class="divLeft" style="margin-left: 177px;">
+                    <span class="spanFWCZ">&nbsp;</span>
+                </div>
+                <div class="divRight" id="div_tcys_right2">
+                </div>
+            </div>
+            <div id="divGCSL" class="divFWCZ" style="z-index: 985;">
                 <div class="divLeft">
                     <span class="required">*</span>
-                    <span id="spanSQXL">申请学历</span>
+                    <span class="spanFWCZ">跟车数量</span>
                 </div>
-                <div id="divSQXLText" class="divRight" style="position: relative;">
+                <div class="divRight">
+                    <span id="spanGCSL" class="spanFWLX SRK" style="display: inline-block; width: 150px;">
+                        <input class="inputLCFB spanFontColor" id="GCSL" maxlength="9" column="GCSL" type="text" style="width: 120px" />
+                        <span class="spanFontColor">辆</span>
+                    </span>
+                </div>
+                <div id="divGCSLTip" class="Warn" style="z-index: 990; position: relative;"></div>
+            </div>
+            <div id="divHCZLGCPP" class="divFWCZ" style="z-index: 998">
+                <div class="divLeft">
+                    <span class="required">*</span>
+                    <span class="spanFWCZ">跟车品牌</span>
+                </div>
+                <div class="divRight">
+                    <div id="divGCPPText" class="spanFWLXOut SRK" style="position: relative;">
+                        <div id="divGCPPSpan" class="spanFWLXIn" style="border: none; margin-top: 6px;">
+                            <span id="spanGCPP" class="spanFWQK spanFontColor" style="margin-top: 0">请选择跟车品牌</span>
+                            <div class="divFWQKArrow"></div>
+                        </div>
+                        <div id="divGCPP" class="div_xzk" style="display: none;">
+                            <div class="div_xzk_head">
+                                <input class="input_content" type="text" placeholder="输入名称快速搜索" style="cursor: text" />
+                                <input class="btn btn-info" type="button" value="快速搜索" />
+                            </div>
+                            <div class="div_xzk_body">
+                                <div class="div_content_yxmc" id="div_content_gcmc">
+                                </div>
+                                <div class="div_content_yxbq" id="div_content_gcbq">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="divGCYS" class="divFWCZ" style="z-index: 997">
+                <div class="divLeft" style="margin-left: 101px;">
+                    <span class="required">*</span>
+                    <span class="spanFWCZ">跟车颜色</span>
+                </div>
+                <div class="divRight" id="div_gcys_right">
+                </div>
+            </div>
+            <div id="divGCYS2" class="divFWCZ" style="z-index: 996">
+                <div class="divLeft" style="margin-left: 177px;">
+                    <span class="spanFWCZ">&nbsp;</span>
+                </div>
+                <div class="divRight" id="div_gcys_right2">
                 </div>
             </div>
             <div id="divFWQY" class="divFWCZ" style="z-index: 996">
@@ -136,7 +211,11 @@
                     <div id="divFWQYTip"></div>
                 </div>
             </div>
-            <div id="divFYMS" class="divFWCZ" style="height: 253px; position: relative; z-index: 997;">
+            <div id="divXXXX" class="divSplit" style="display: block; text-align: left;">
+                <span class="spanSplit">特色描述</span>
+                <em class="emSplit"></em>
+            </div>
+            <div id="divFYMS" class="divFWCZ" style="height: 253px; position: relative; z-index: 996;">
                 <div class="divLeft" style="height: 170px; vertical-align: top;">
                     <span class="required" style="vertical-align: top">*</span>
                     <span id="spanFYMS" style="vertical-align: top">服务介绍</span>

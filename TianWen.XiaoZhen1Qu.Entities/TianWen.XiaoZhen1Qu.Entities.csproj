@@ -335,6 +335,7 @@
     <Compile Include="Models\FC\FC_SPJBXX.cs" />
     <Compile Include="Models\FC\FC_XZLJBXX.cs" />
     <Compile Include="Models\FC\FC_ZZFJBXX.cs" />
+    <Compile Include="Models\HQSY\HQSY_HCZLJBXX.cs" />
     <Compile Include="Models\HQSY\HQSY_HQGSJBXX.cs" />
     <Compile Include="Models\JCXX.cs" />
     <Compile Include="Models\JYPX\JYPX_GLPXJBXX.cs" />

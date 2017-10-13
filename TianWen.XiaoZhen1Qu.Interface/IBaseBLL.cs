@@ -107,5 +107,7 @@ namespace TianWen.XiaoZhen1Qu.Interface
         object LoadBYYXXX(string BYYXBQ);
 
         object LoadJZFWXX(string LBID);
+
+        object LoadHCPPXX(string HCPPBQ);
     }
 }
