@@ -1,0 +1,51 @@
+-- Create table
+create table HQSY_CZZXJBXX
+(
+  hqsy_czzxjbxxid VARCHAR2(50) not null,
+  jcxxid          VARCHAR2(50),
+  bcms            VARCHAR2(4000),
+  hzlx            VARCHAR2(200),
+  qy              VARCHAR2(20),
+  dd              VARCHAR2(20),
+  jtdz            VARCHAR2(200),
+  fwqy            VARCHAR2(200),
+  hzxl            VARCHAR2(20),
+  fwxs            VARCHAR2(20),
+  jg              VARCHAR2(20)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 16
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table HQSY_CZZXJBXX
+  is '婚庆摄影_彩妆造型';
+-- Add comments to the columns 
+comment on column HQSY_CZZXJBXX.hqsy_czzxjbxxid
+  is '彩妆造型基本信息ID';
+comment on column HQSY_CZZXJBXX.jcxxid
+  is '基础信息ID';
+comment on column HQSY_CZZXJBXX.bcms
+  is '补充描述';
+comment on column HQSY_CZZXJBXX.hzlx
+  is '化妆类型';
+comment on column HQSY_CZZXJBXX.qy
+  is '区域';
+comment on column HQSY_CZZXJBXX.dd
+  is '地段';
+comment on column HQSY_CZZXJBXX.jtdz
+  is '具体地址';
+comment on column HQSY_CZZXJBXX.fwqy
+  is '服务区域';
+comment on column HQSY_CZZXJBXX.hzxl
+  is '化妆小类';
+comment on column HQSY_CZZXJBXX.fwxs
+  is '服务形式';
+comment on column HQSY_CZZXJBXX.jg
+  is '价格';

@@ -49,6 +49,7 @@
     <Compile Include="CY\ICY_KCTSBLL.cs" />
     <Compile Include="CY\ICY_MSBLL.cs" />
     <Compile Include="CY\ICY_WMBLL.cs" />
+    <Compile Include="HQSY\IHQSY_CZZXBLL.cs" />
     <Compile Include="HQSY\IHQSY_HCZLBLL.cs" />
     <Compile Include="HQSY\IHQSY_HQGSBLL.cs" />
     <Compile Include="HQSY\IHQSY_HYJDBLL.cs" />
