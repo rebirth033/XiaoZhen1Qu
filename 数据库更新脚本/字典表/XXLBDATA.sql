@@ -191,7 +191,7 @@ insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
 values (16, '大类', '装修建材', 16, 0, null, null);
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (17, '大类', '婚庆摄影', 17, null, null, null);
+values (17, '大类', '婚庆摄影', 17, 0, null, null);
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
 values (18, '大类', '农林牧副渔', 18, null, null, null);
@@ -464,10 +464,10 @@ insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
 values (208, '小类', '婚庆公司', 1, 17, 'HQSY_HQGS', 'HQSY_HQGSJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (209, '小类', '摄影/摄像', 10, 17, 'HQSY_SYSX', 'HQSY_SYSXJBXX');
+values (209, '小类', '摄影/摄像', 24, 13, 'SWFW_SYSX', 'SWFW_SYSXJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (210, '小类', '礼仪庆典', 11, 17, 'HQSY_LYQD', 'HQSY_LYQDJBXX');
+values (210, '小类', '礼仪庆典', 25, 13, 'SWFW_LYQD', 'SWFW_LYQDJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
 values (211, '小类', '美食', 1, 7, 'CY_MS', 'CY_MSJBXX');
@@ -675,5 +675,8 @@ values (337, '小类', '婚纱礼服', 8, 17, 'HQSY_HSLF', 'HQSY_HSLFJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
 values (338, '小类', '珠宝首饰', 9, 17, 'HQSY_ZBSS', 'HQSY_ZBSSJBXX');
+
+insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
+values (339, '小类', '婚纱摄影', 10, 17, 'HQSY_HSSY', 'HQSY_HSSYJBXX');
 
 prompt Done.
