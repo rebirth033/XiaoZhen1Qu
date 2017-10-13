@@ -23,10 +23,64 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string JCXXID { get; set; }
 
         /// <summary>
-        /// 提供服务
+        /// 套餐出租
         /// </summary>
         [Property]
-        public virtual string TGFW { get; set; }
+        public virtual string TCCZ { get; set; }
+
+        /// <summary>
+        /// 头车品牌
+        /// </summary>
+        [Property]
+        public virtual string TCPP { get; set; }
+
+        /// <summary>
+        /// 头车颜色
+        /// </summary>
+        [Property]
+        public virtual string TCYS { get; set; }
+
+        /// <summary>
+        /// 跟车数量
+        /// </summary>
+        [Property]
+        public virtual string GCSL { get; set; }
+
+        /// <summary>
+        /// 跟车品牌
+        /// </summary>
+        [Property]
+        public virtual string GCPP { get; set; }
+
+        /// <summary>
+        /// 跟车颜色
+        /// </summary>
+        [Property]
+        public virtual string GCYS { get; set; }
+
+        /// <summary>
+        /// 免费提供车花 
+        /// </summary>
+        [Property]
+        public virtual string MFTGCH { get; set; }
+
+        /// <summary>
+        /// 价内时间 
+        /// </summary>
+        [Property]
+        public virtual string JNSJ { get; set; }
+
+        /// <summary>
+        /// 价内公里数
+        /// </summary>
+        [Property]
+        public virtual string JNGLS { get; set; }
+
+        /// <summary>
+        /// 价格 
+        /// </summary>
+        [Property]
+        public virtual string JG { get; set; }
 
         /// <summary>
         /// 服务区域

@@ -631,7 +631,7 @@
 }
 
 
-.div_clys {
+.div_tcys, .div_gcys {
     width: 70px;
     height: 35px;
     border: 1px solid #cccccc;
@@ -642,19 +642,24 @@
     margin-right: 10px;
 }
 
-    .div_clys:hover {
+    .div_tcys:hover {
         background-color: #87B53B;
         cursor: pointer;
     }
 
-.span_clys_left {
+    .div_gcys:hover {
+        background-color: #87B53B;
+        cursor: pointer;
+    }
+
+.span_tcys_left, .span_gcys_left {
     width: 18px;
     height: 18px;
     display: inline-block;
     border: 1px solid #cccccc;
 }
 
-.span_clys_right {
+.span_tcys_right,.span_gcys_right {
     display: inline-block;
     left: 34px;
     bottom: 10px;

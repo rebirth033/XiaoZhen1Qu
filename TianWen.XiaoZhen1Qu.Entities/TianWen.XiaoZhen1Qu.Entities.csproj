@@ -117,6 +117,7 @@
     <Compile Include="Maps\FC\FC_SPJBXX_Map.cs" />
     <Compile Include="Maps\FC\FC_XZLJBXX_Map.cs" />
     <Compile Include="Maps\FWCZJBXX_Map.cs" />
+    <Compile Include="Maps\HQSY\HQSY_HCZLJBXX_Map.cs" />
     <Compile Include="Maps\HQSY\HQSY_HQGSJBXX_Map.cs" />
     <Compile Include="Maps\JCXX_Map.cs" />
     <Compile Include="Maps\JYPX\JYPX_GLPXJBXX_Map.cs" />
