@@ -52,7 +52,9 @@
     <Compile Include="HQSY\IHQSY_CZZXBLL.cs" />
     <Compile Include="HQSY\IHQSY_HCZLBLL.cs" />
     <Compile Include="HQSY\IHQSY_HQGSBLL.cs" />
+    <Compile Include="HQSY\IHQSY_HQYPBLL.cs" />
     <Compile Include="HQSY\IHQSY_HYJDBLL.cs" />
+    <Compile Include="HQSY\IHQSY_SYBLL.cs" />
     <Compile Include="IBaseBLL.cs" />
     <Compile Include="IBZZXBLL.cs" />
     <Compile Include="CL\ICL_GCCBLL.cs" />

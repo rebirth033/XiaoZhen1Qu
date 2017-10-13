@@ -20,4 +20,14 @@
       <ref object="HQSY_CZZXBLL"/>
     </property>
   </object>
+  <object id="HQSY_HQYPController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.HQSY_HQYPController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="HQSY_HQYPBLL">
+      <ref object="HQSY_HQYPBLL"/>
+    </property>
+  </object>
+  <object id="HQSY_SYController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.HQSY_SYController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="HQSY_SYBLL">
+      <ref object="HQSY_SYBLL"/>
+    </property>
+  </object>
 </objects>

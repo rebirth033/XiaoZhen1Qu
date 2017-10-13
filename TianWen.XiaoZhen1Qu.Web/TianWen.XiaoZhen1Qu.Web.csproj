@@ -210,7 +210,9 @@
     <Content Include="Areas\Business\Css\HQSY\HQSY_CZZX.css" />
     <Content Include="Areas\Business\Css\HQSY\HQSY_HCZL.css" />
     <Content Include="Areas\Business\Css\HQSY\HQSY_HQGS.css" />
+    <Content Include="Areas\Business\Css\HQSY\HQSY_HQYP.css" />
     <Content Include="Areas\Business\Css\HQSY\HQSY_HYJD.css" />
+    <Content Include="Areas\Business\Css\HQSY\HQSY_SY.css" />
     <Content Include="Areas\Business\Css\images\arrow_down.png" />
     <Content Include="Areas\Business\Css\images\arrow_down_big.png" />
     <Content Include="Areas\Business\Css\images\arrow_up.png" />
@@ -612,8 +614,12 @@
     <Content Include="Areas\Business\Scripts\Business\HQSY\HQSY_HCZLYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HQSY\HQSY_HQGS.js" />
     <Content Include="Areas\Business\Scripts\Business\HQSY\HQSY_HQGSYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\HQSY\HQSY_HQYP.js" />
+    <Content Include="Areas\Business\Scripts\Business\HQSY\HQSY_HQYPYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HQSY\HQSY_HYJD.js" />
     <Content Include="Areas\Business\Scripts\Business\HQSY\HQSY_HYJDYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\HQSY\HQSY_SY.js" />
+    <Content Include="Areas\Business\Scripts\Business\HQSY\HQSY_SYYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\JYPX\JYPX_GLPX.js" />
     <Content Include="Areas\Business\Scripts\Business\JYPX\JYPX_GLPXYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\JYPX\JYPX_ITPX.js" />
@@ -1334,7 +1340,9 @@
     <Compile Include="Areas\Business\Controllers\HQSY\HQSY_CZZXController.cs" />
     <Compile Include="Areas\Business\Controllers\HQSY\HQSY_HCZLController.cs" />
     <Compile Include="Areas\Business\Controllers\HQSY\HQSY_HQGSController.cs" />
+    <Compile Include="Areas\Business\Controllers\HQSY\HQSY_HQYPController.cs" />
     <Compile Include="Areas\Business\Controllers\HQSY\HQSY_HYJDController.cs" />
+    <Compile Include="Areas\Business\Controllers\HQSY\HQSY_SYController.cs" />
     <Compile Include="Areas\Business\Controllers\JYPX\JYPX_GLPXController.cs" />
     <Compile Include="Areas\Business\Controllers\JYPX\JYPX_JJGRController.cs" />
     <Compile Include="Areas\Business\Controllers\JYPX\JYPX_JJJGController.cs" />
@@ -1773,6 +1781,8 @@
     <Content Include="Areas\Business\Views\HQSY_HCZL\HQSY_HCZL.cshtml" />
     <Content Include="Areas\Business\Views\HQSY_HYJD\HQSY_HYJD.cshtml" />
     <Content Include="Areas\Business\Views\HQSY_CZZX\HQSY_CZZX.cshtml" />
+    <Content Include="Areas\Business\Views\HQSY_HQYP\HQSY_HQYP.cshtml" />
+    <Content Include="Areas\Business\Views\HQSY_SY\HQSY_SY.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -1,0 +1,51 @@
+-- Create table
+create table HQSY_SYJBXX
+(
+  hqsy_syjbxxid VARCHAR2(50) not null,
+  jcxxid        VARCHAR2(50),
+  bcms          VARCHAR2(4000),
+  syxb          VARCHAR2(200),
+  qy            VARCHAR2(20),
+  dd            VARCHAR2(20),
+  jtdz          VARCHAR2(200),
+  fwqy          VARCHAR2(200),
+  zcfg          VARCHAR2(20),
+  cysj          VARCHAR2(20),
+  jg            VARCHAR2(20)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 16
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table HQSY_SYJBXX
+  is '婚庆摄影_司仪';
+-- Add comments to the columns 
+comment on column HQSY_SYJBXX.hqsy_syjbxxid
+  is '司仪基本信息ID';
+comment on column HQSY_SYJBXX.jcxxid
+  is '基础信息ID';
+comment on column HQSY_SYJBXX.bcms
+  is '补充描述';
+comment on column HQSY_SYJBXX.syxb
+  is '司仪性别';
+comment on column HQSY_SYJBXX.qy
+  is '区域';
+comment on column HQSY_SYJBXX.dd
+  is '地段';
+comment on column HQSY_SYJBXX.jtdz
+  is '具体地址';
+comment on column HQSY_SYJBXX.fwqy
+  is '服务区域';
+comment on column HQSY_SYJBXX.zcfg
+  is '主持风格';
+comment on column HQSY_SYJBXX.cysj
+  is '从业时间';
+comment on column HQSY_SYJBXX.jg
+  is '价格';
