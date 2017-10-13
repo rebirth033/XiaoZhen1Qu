@@ -149,10 +149,14 @@ function LoadHQSY_HSLFJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.HQSY_HSLFJBXX.BCMS);
                 });
-                $("#spanGPLX").html(xml.Value.HQSY_HSLFJBXX.GPLX);
+                $("#spanYS").html(xml.Value.HQSY_HSLFJBXX.YS);
+                $("#spanLX").html(xml.Value.HQSY_HSLFJBXX.LX);
+                $("#spanCZ").html(xml.Value.HQSY_HSLFJBXX.CZ);
                 $("#spanQY").html(xml.Value.HQSY_HSLFJBXX.QY);
                 $("#spanDD").html(xml.Value.HQSY_HSLFJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
+                SetDX("FG", xml.Value.HQSY_HSLFJBXX.FG);
+                SetDX("KS", xml.Value.HQSY_HSLFJBXX.KS);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -168,8 +172,12 @@ function FB() {
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "YS", "'" + $("#spanYS").html() + "'");
+    obj = jsonObj.AddJson(obj, "LX", "'" + $("#spanLX").html() + "'");
+    obj = jsonObj.AddJson(obj, "CZ", "'" + $("#spanCZ").html() + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
+    obj = jsonObj.AddJson(obj, "FG", "'" + GetDX("FG") + "'");
+    obj = jsonObj.AddJson(obj, "KS", "'" + GetDX("KS") + "'");
 
     if (getUrlParam("HQSY_HSLFJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "HQSY_HSLFJBXXID", "'" + getUrlParam("HQSY_HSLFJBXXID") + "'");

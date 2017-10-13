@@ -215,6 +215,7 @@
     <Content Include="Areas\Business\Css\HQSY\HQSY_HSLF.css" />
     <Content Include="Areas\Business\Css\HQSY\HQSY_HYJD.css" />
     <Content Include="Areas\Business\Css\HQSY\HQSY_SY.css" />
+    <Content Include="Areas\Business\Css\HQSY\HQSY_ZBSS.css" />
     <Content Include="Areas\Business\Css\images\arrow_down.png" />
     <Content Include="Areas\Business\Css\images\arrow_down_big.png" />
     <Content Include="Areas\Business\Css\images\arrow_up.png" />
@@ -626,6 +627,8 @@
     <Content Include="Areas\Business\Scripts\Business\HQSY\HQSY_HYJDYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HQSY\HQSY_SY.js" />
     <Content Include="Areas\Business\Scripts\Business\HQSY\HQSY_SYYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\HQSY\HQSY_ZBSS.js" />
+    <Content Include="Areas\Business\Scripts\Business\HQSY\HQSY_ZBSSYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\JYPX\JYPX_GLPX.js" />
     <Content Include="Areas\Business\Scripts\Business\JYPX\JYPX_GLPXYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\JYPX\JYPX_ITPX.js" />
@@ -1351,6 +1354,7 @@
     <Compile Include="Areas\Business\Controllers\HQSY\HQSY_HSLFController.cs" />
     <Compile Include="Areas\Business\Controllers\HQSY\HQSY_HYJDController.cs" />
     <Compile Include="Areas\Business\Controllers\HQSY\HQSY_SYController.cs" />
+    <Compile Include="Areas\Business\Controllers\HQSY\HQSY_ZBSSController.cs" />
     <Compile Include="Areas\Business\Controllers\JYPX\JYPX_GLPXController.cs" />
     <Compile Include="Areas\Business\Controllers\JYPX\JYPX_JJGRController.cs" />
     <Compile Include="Areas\Business\Controllers\JYPX\JYPX_JJJGController.cs" />
@@ -1793,6 +1797,7 @@
     <Content Include="Areas\Business\Views\HQSY_SY\HQSY_SY.cshtml" />
     <Content Include="Areas\Business\Views\HQSY_HLGP\HQSY_HLGP.cshtml" />
     <Content Include="Areas\Business\Views\HQSY_HSLF\HQSY_HSLF.cshtml" />
+    <Content Include="Areas\Business\Views\HQSY_ZBSS\HQSY_ZBSS.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

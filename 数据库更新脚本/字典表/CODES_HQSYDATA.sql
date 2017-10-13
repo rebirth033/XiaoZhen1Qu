@@ -592,4 +592,37 @@ values (216, '婚车品牌', '中兴', 'Z', 112, null);
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (217, '婚车品牌', '中顺', 'Z', 113, null);
 
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (218, '珠宝首饰', '女戒', '1', 1, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (219, '珠宝首饰', '男戒', '2', 2, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (220, '珠宝首饰', '对戒', '3', 3, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (221, '珠宝首饰', '裸钻', '4', 4, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (222, '珠宝首饰', '耳环', '5', 5, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (223, '珠宝首饰', '耳钉', '6', 6, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (224, '珠宝首饰', '手链', '7', 7, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (225, '珠宝首饰', '手镯', '8', 8, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (226, '珠宝首饰', '项链', '9', 9, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (227, '珠宝首饰', '吊坠', '10', 10, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (228, '珠宝首饰', '胸针', '11', 11, null);
+
 prompt Done.

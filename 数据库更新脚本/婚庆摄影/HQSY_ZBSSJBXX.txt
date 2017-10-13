@@ -1,0 +1,46 @@
+-- Create table
+create table HQSY_ZBSSJBXX
+(
+  hqsy_zbssjbxxid VARCHAR2(50) not null,
+  jcxxid          VARCHAR2(50),
+  bcms            VARCHAR2(4000),
+  lb              VARCHAR2(20),
+  qy              VARCHAR2(20),
+  dd              VARCHAR2(20),
+  jtdz            VARCHAR2(200),
+  fwqy            VARCHAR2(200),
+  jg              VARCHAR2(20)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table HQSY_ZBSSJBXX
+  is '婚庆摄影_珠宝首饰';
+-- Add comments to the columns 
+comment on column HQSY_ZBSSJBXX.hqsy_zbssjbxxid
+  is '珠宝首饰基本信息ID';
+comment on column HQSY_ZBSSJBXX.jcxxid
+  is '基础信息ID';
+comment on column HQSY_ZBSSJBXX.bcms
+  is '补充描述';
+comment on column HQSY_ZBSSJBXX.lb
+  is '类别';
+comment on column HQSY_ZBSSJBXX.qy
+  is '区域';
+comment on column HQSY_ZBSSJBXX.dd
+  is '地段';
+comment on column HQSY_ZBSSJBXX.jtdz
+  is '具体地址';
+comment on column HQSY_ZBSSJBXX.fwqy
+  is '服务区域';
+comment on column HQSY_ZBSSJBXX.jg
+  is '价格';

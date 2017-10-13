@@ -57,6 +57,7 @@
     <Compile Include="HQSY\IHQSY_HSLFBLL.cs" />
     <Compile Include="HQSY\IHQSY_HYJDBLL.cs" />
     <Compile Include="HQSY\IHQSY_SYBLL.cs" />
+    <Compile Include="HQSY\IHQSY_ZBSSBLL.cs" />
     <Compile Include="IBaseBLL.cs" />
     <Compile Include="IBZZXBLL.cs" />
     <Compile Include="CL\ICL_GCCBLL.cs" />
