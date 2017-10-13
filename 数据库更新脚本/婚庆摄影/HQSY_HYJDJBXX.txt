@@ -1,0 +1,54 @@
+-- Create table
+create table HQSY_HYJDJBXX
+(
+  hqsy_hyjdjbxxid VARCHAR2(50) not null,
+  jcxxid          VARCHAR2(50),
+  bcms            VARCHAR2(4000),
+  hllx            VARCHAR2(200),
+  qy              VARCHAR2(20),
+  dd              VARCHAR2(20),
+  jtdz            VARCHAR2(200),
+  fwqy            VARCHAR2(200),
+  jdlx            VARCHAR2(20),
+  jdxj            VARCHAR2(20),
+  rnzs            VARCHAR2(20),
+  jg              VARCHAR2(20)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 16
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table HQSY_HYJDJBXX
+  is '婚庆摄影_婚宴酒店';
+-- Add comments to the columns 
+comment on column HQSY_HYJDJBXX.hqsy_hyjdjbxxid
+  is '婚宴酒店基本信息ID';
+comment on column HQSY_HYJDJBXX.jcxxid
+  is '基础信息ID';
+comment on column HQSY_HYJDJBXX.bcms
+  is '补充描述';
+comment on column HQSY_HYJDJBXX.hllx
+  is '婚礼类型';
+comment on column HQSY_HYJDJBXX.qy
+  is '区域';
+comment on column HQSY_HYJDJBXX.dd
+  is '地段';
+comment on column HQSY_HYJDJBXX.jtdz
+  is '具体地址';
+comment on column HQSY_HYJDJBXX.fwqy
+  is '服务区域';
+comment on column HQSY_HYJDJBXX.jdlx
+  is '酒店类型';
+comment on column HQSY_HYJDJBXX.jdxj
+  is '酒店星级 ';
+comment on column HQSY_HYJDJBXX.rnzs
+  is '容纳桌数 ';
+comment on column HQSY_HYJDJBXX.jg
+  is '价格';

@@ -10,4 +10,9 @@
       <ref object="HQSY_HCZLBLL"/>
     </property>
   </object>
+  <object id="HQSY_HYJDController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.HQSY_HYJDController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="HQSY_HYJDBLL">
+      <ref object="HQSY_HYJDBLL"/>
+    </property>
+  </object>
 </objects>
