@@ -30,4 +30,9 @@
       <ref object="HQSY_SYBLL"/>
     </property>
   </object>
+  <object id="HQSY_HLGPController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.HQSY_HLGPController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="HQSY_HLGPBLL">
+      <ref object="HQSY_HLGPBLL"/>
+    </property>
+  </object>
 </objects>

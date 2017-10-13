@@ -96,6 +96,7 @@
     <Compile Include="BLL\HFCZBLL.cs" />
     <Compile Include="BLL\HQSY\HQSY_CZZXBLL.cs" />
     <Compile Include="BLL\HQSY\HQSY_HCZLBLL.cs" />
+    <Compile Include="BLL\HQSY\HQSY_HLGPBLL.cs" />
     <Compile Include="BLL\HQSY\HQSY_HQGSBLL.cs" />
     <Compile Include="BLL\HQSY\HQSY_HQYPBLL.cs" />
     <Compile Include="BLL\HQSY\HQSY_HYJDBLL.cs" />

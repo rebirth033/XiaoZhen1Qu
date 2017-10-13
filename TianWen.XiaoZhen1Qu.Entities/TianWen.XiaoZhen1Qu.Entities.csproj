@@ -119,6 +119,7 @@
     <Compile Include="Maps\FWCZJBXX_Map.cs" />
     <Compile Include="Maps\HQSY\HQSY_CZZXJBXX_Map.cs" />
     <Compile Include="Maps\HQSY\HQSY_HCZLJBXX_Map.cs" />
+    <Compile Include="Maps\HQSY\HQSY_HLGPJBXX_Map.cs" />
     <Compile Include="Maps\HQSY\HQSY_HQGSJBXX_Map.cs" />
     <Compile Include="Maps\HQSY\HQSY_HQYPJBXX_Map.cs" />
     <Compile Include="Maps\HQSY\HQSY_HYJDJBXX_Map.cs" />
@@ -342,6 +343,7 @@
     <Compile Include="Models\FC\FC_ZZFJBXX.cs" />
     <Compile Include="Models\HQSY\HQSY_CZZXJBXX.cs" />
     <Compile Include="Models\HQSY\HQSY_HCZLJBXX.cs" />
+    <Compile Include="Models\HQSY\HQSY_HLGPJBXX.cs" />
     <Compile Include="Models\HQSY\HQSY_HQGSJBXX.cs" />
     <Compile Include="Models\HQSY\HQSY_HQYPJBXX.cs" />
     <Compile Include="Models\HQSY\HQSY_HYJDJBXX.cs" />

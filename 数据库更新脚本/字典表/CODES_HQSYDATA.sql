@@ -47,24 +47,6 @@ insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENT
 values (15, '婚庆公司', '婚礼跟妆', '6', 6, null);
 
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (16, '套餐出租', '是', '1', 1, null);
-
-insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (17, '套餐出租', '否', '2', 2, null);
-
-insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (18, '免费提供车花', '是', '1', 1, null);
-
-insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (19, '免费提供车花', '否', '2', 2, null);
-
-insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (20, '有无头车', '有', '1', 1, null);
-
-insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (21, '有无头车', '无', '2', 2, null);
-
-insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (22, '婚礼类型', '室内婚礼', '1', 1, null);
 
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
@@ -87,30 +69,6 @@ values (28, '酒店星级', '四星级', '2', 2, null);
 
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (29, '酒店星级', '五星级', '3', 3, null);
-
-insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (30, '化妆类型', '新娘妆', '1', 1, null);
-
-insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (31, '化妆类型', '宴会/主持人妆', '2', 2, null);
-
-insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (32, '化妆类型', '年会/演出妆', '3', 3, null);
-
-insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (33, '化妆类型', '杂志广告妆', '4', 4, null);
-
-insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (34, '新娘妆', '早妆', '1', 1, null);
-
-insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (35, '新娘妆', '全程跟妆', '2', 2, null);
-
-insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (36, '服务形式', '上门', '1', 1, null);
-
-insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (37, '服务形式', '到店', '2', 2, null);
 
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (38, '婚庆用品', '请柬', '1', 1, 5);
@@ -162,24 +120,6 @@ values (53, '婚庆用品', '席位卡', '16', 16, 5);
 
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (54, '婚庆用品', '其他', '17', 17, 5);
-
-insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (55, '司仪性别', '男', '1', 1, null);
-
-insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (56, '司仪性别', '女', '2', 2, null);
-
-insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (57, '主持风格', '幽默', '1', 1, null);
-
-insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (58, '主持风格', '稳重', '2', 2, null);
-
-insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (59, '主持风格', '开朗', '3', 3, null);
-
-insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (60, '主持风格', '激情', '4', 4, null);
 
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (61, '从业时间', '1年以下', '1', 1, null);
@@ -312,5 +252,344 @@ values (103, '婚纱礼服款式', '修身型', '3', 3, null);
 
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (104, '婚纱礼服款式', '蓬裙型', '4', 4, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (105, '婚车品牌', '奥迪', 'A', 1, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (106, '婚车品牌', '阿斯顿·马丁', 'A', 2, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (107, '婚车品牌', '阿尔法·罗密欧', 'A', 3, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (108, '婚车品牌', '安驰', 'A', 4, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (109, '婚车品牌', '奥克斯', 'A', 5, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (110, '婚车品牌', '宝马', 'B', 6, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (111, '婚车品牌', '奔驰', 'B', 7, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (112, '婚车品牌', '宾利', 'B', 8, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (113, '婚车品牌', '本田', 'B', 9, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (114, '婚车品牌', '保时捷', 'B', 10, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (115, '婚车品牌', '比亚迪', 'B', 11, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (116, '婚车品牌', '别克', 'B', 12, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (117, '婚车品牌', '奔腾', 'B', 13, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (118, '婚车品牌', '标致', 'B', 14, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (119, '婚车品牌', '布嘉迪', 'B', 15, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (120, '婚车品牌', '北汽', 'B', 16, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (121, '婚车品牌', '宝龙汽车', 'B', 17, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (122, '婚车品牌', '北京汽车', 'B', 18, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (123, '婚车品牌', '宝骏', 'B', 19, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (124, '婚车品牌', '长安(轿车)', 'C', 20, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (125, '婚车品牌', '长城', 'C', 21, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (126, '婚车品牌', '大众', 'D', 22, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (127, '婚车品牌', '东南', 'D', 23, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (128, '婚车品牌', '道奇', 'D', 24, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (129, '婚车品牌', '帝豪', 'D', 25, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (130, '婚车品牌', '大发', 'D', 26, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (131, '婚车品牌', '大迪汽车', 'D', 27, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (132, '婚车品牌', '大宇', 'D', 28, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (133, '婚车品牌', '大通', 'D', 29, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (134, '婚车品牌', '法拉利', 'F', 30, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (135, '婚车品牌', '丰田', 'F', 31, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (136, '婚车品牌', '福特', 'F', 32, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (137, '婚车品牌', '菲亚特', 'F', 33, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (138, '婚车品牌', '福田', 'F', 34, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (139, '婚车品牌', '风行', 'F', 35, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (140, '婚车品牌', 'GMC', 'G', 36, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (141, '婚车品牌', '光冈', 'G', 37, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (142, '婚车品牌', '贵州云雀', 'G', 38, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (143, '婚车品牌', '广汽', 'G', 39, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (144, '婚车品牌', '悍马', 'H', 40, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (145, '婚车品牌', '红旗', 'H', 41, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (146, '婚车品牌', '华普', 'H', 42, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (147, '婚车品牌', '哈飞', 'H', 43, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (148, '婚车品牌', '华泰', 'H', 44, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (149, '婚车品牌', '捷豹', 'J', 45, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (150, '婚车品牌', '精灵smart', 'J', 46, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (151, '婚车品牌', '江淮', 'J', 47, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (152, '婚车品牌', '吉普Jeep', 'J', 48, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (153, '婚车品牌', '吉利', 'J', 49, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (154, '婚车品牌', '江铃汽车', 'J', 50, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (155, '婚车品牌', '江南汽车', 'J', 51, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (156, '婚车品牌', '九龙', 'J', 52, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (157, '婚车品牌', '吉林通田', 'J', 53, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (158, '婚车品牌', '克莱斯勒', 'K', 54, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (159, '婚车品牌', '凯迪拉克', 'K', 55, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (160, '婚车品牌', '柯尼赛格', 'K', 56, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (161, '婚车品牌', '开瑞', 'K', 57, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (162, '婚车品牌', '兰博基尼', 'L', 58, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (163, '婚车品牌', '劳斯莱斯', 'L', 59, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (164, '婚车品牌', '路虎', 'L', 60, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (165, '婚车品牌', '林肯', 'L', 61, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (166, '婚车品牌', '雷克萨斯', 'L', 62, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (167, '婚车品牌', '力帆', 'L', 63, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (168, '婚车品牌', '路特斯', 'L', 64, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (169, '婚车品牌', '雷诺', 'L', 65, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (170, '婚车品牌', '铃木', 'L', 66, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (171, '婚车品牌', '陆风', 'L', 67, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (172, '婚车品牌', '莲花汽车', 'L', 68, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (173, '婚车品牌', '罗孚', 'L', 69, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (174, '婚车品牌', '蓝旗亚', 'L', 70, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (175, '婚车品牌', '理念', 'L', 71, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (176, '婚车品牌', '马自达', 'M', 72, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (177, '婚车品牌', '玛莎拉蒂', 'M', 73, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (178, '婚车品牌', 'MINI', 'M', 74, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (179, '婚车品牌', '迈巴赫', 'M', 75, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (180, '婚车品牌', 'MG', 'M', 76, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (181, '婚车品牌', '纳智捷', 'N', 77, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (182, '婚车品牌', '讴歌', 'O', 78, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (183, '婚车品牌', '欧宝', 'O', 79, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (184, '婚车品牌', '欧朗', 'O', 80, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (185, '婚车品牌', '帕加尼', 'P', 81, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (186, '婚车品牌', '庞蒂亚克', 'P', 82, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (187, '婚车品牌', '奇瑞', 'Q', 83, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (188, '婚车品牌', '起亚', 'Q', 84, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (189, '婚车品牌', '庆铃', 'Q', 85, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (190, '婚车品牌', '启辰', 'Q', 86, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (191, '婚车品牌', '日产', 'R', 87, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (192, '婚车品牌', '荣威', 'R', 88, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (193, '婚车品牌', '三菱', 'S', 89, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (194, '婚车品牌', '萨博', 'S', 90, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (195, '婚车品牌', '世爵', 'S', 91, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (196, '婚车品牌', '斯巴鲁', 'S', 92, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (197, '婚车品牌', '斯柯达', 'S', 93, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (198, '婚车品牌', '双环', 'S', 94, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (199, '婚车品牌', '上海汇众', 'S', 95, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (200, '婚车品牌', '上汽仪征', 'S', 96, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (201, '婚车品牌', 'SPIRRA', 'S', 97, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (202, '婚车品牌', '沃尔沃', 'W', 98, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (203, '婚车品牌', '威麟', 'W', 99, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (204, '婚车品牌', '威兹曼', 'W', 100, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (205, '婚车品牌', '五菱', 'W', 101, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (206, '婚车品牌', '现代', 'X', 102, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (207, '婚车品牌', '雪佛兰', 'X', 103, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (208, '婚车品牌', '雪铁龙', 'X', 104, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (209, '婚车品牌', '夏利', 'X', 105, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (210, '婚车品牌', '西亚特', 'X', 106, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (211, '婚车品牌', '西安奥拓', 'X', 107, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (212, '婚车品牌', '英菲尼迪', 'Y', 108, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (213, '婚车品牌', '英伦', 'Y', 109, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (214, '婚车品牌', '一汽', 'Y', 110, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (215, '婚车品牌', '中华', 'Z', 111, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (216, '婚车品牌', '中兴', 'Z', 112, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (217, '婚车品牌', '中顺', 'Z', 113, null);
 
 prompt Done.
