@@ -2527,4 +2527,133 @@ values (842, '国家', '印度', 'Y', 9, null);
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (843, '国家', '智利', 'Z', 1, null);
 
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (844, '摄影摄像类别', '写真/艺术照', '1', 1, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (845, '摄影摄像类别', '儿童摄影', '2', 2, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (846, '摄影摄像类别', '商业摄影', '3', 3, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (847, '摄影摄像类别', '摄像录像', '4', 4, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (848, '摄影摄像类别', '彩扩冲印', '5', 5, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (849, '摄影摄像类别', '相框相册制作', '6', 6, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (850, '摄影摄像类别', '证件照', '7', 7, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (851, '拍摄风格', '韩式', '1', 1, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (852, '拍摄风格', '欧式', '2', 2, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (853, '拍摄风格', '中式', '3', 3, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (854, '拍摄风格', '古典', '4', 4, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (855, '拍摄风格', '浪漫', '5', 5, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (856, '拍摄风格', '清纯', '6', 6, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (857, '拍摄风格', '性感', '7', 7, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (858, '拍摄风格', '另类', '8', 8, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (859, '拍摄风格', '怀旧', '9', 9, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (860, '年龄段', '1岁以下', '1', 1, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (861, '年龄段', '1岁到3岁', '2', 2, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (862, '年龄段', '3岁到8岁', '3', 3, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (863, '年龄段', '8岁到12岁', '4', 4, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (864, '年龄段', '12岁以上', '5', 5, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (865, '礼仪庆典', '庆典公司', '1', 1, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (866, '礼仪庆典', '演出表演', '2', 2, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (867, '礼仪庆典', '场地布置', '3', 3, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (868, '礼仪庆典', '展览展会', '4', 4, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (869, '礼仪庆典', '活动策划', '5', 5, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (870, '礼仪庆典', '礼仪模特', '6', 6, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (871, '演出表演', '魔术表演', '1', 1, 866);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (872, '演出表演', '舞龙醒狮', '2', 2, 866);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (873, '演出表演', '民俗杂技', '3', 3, 866);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (874, '演出表演', '沙画表演', '4', 4, 866);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (875, '演出表演', '武术/跆拳道表演', '5', 5, 866);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (876, '演出表演', '茶艺表演', '6', 6, 866);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (877, '演出表演', '舞蹈表演', '7', 7, 866);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (878, '演出表演', '歌手/乐队演出', '8', 8, 866);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (879, '演出表演', '器乐表演', '9', 9, 866);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (880, '演出表演', '曲艺表演', '10', 10, 866);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (881, '演出表演', '威风锣鼓', '11', 11, 866);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (882, '演出表演', '人体彩绘/活体雕塑', '12', 12, 866);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (883, '活动策划', '发布会', '1', 1, 869);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (884, '活动策划', '奠基仪式', '2', 2, 869);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (885, '活动策划', '企业年会', '3', 3, 869);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (886, '活动策划', '生日寿宴', '4', 4, 869);
+
 prompt Done.
