@@ -2147,147 +2147,2082 @@ insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PAREN
 values (715, '花卉', '紫玫瑰', 'Z', 399, 2);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (716, '竹类', '斑竹', '1', 1, 3);
+values (716, '竹类', '斑竹', 'B', 1, 3);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (717, '竹类', '百合竹', '1', 2, 3);
+values (717, '竹类', '百合竹', 'B', 2, 3);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (718, '竹类', '八月竹', '1', 3, 3);
+values (718, '竹类', '八月竹', 'B', 3, 3);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (719, '竹类', '茶杆竹', '1', 4, 3);
+values (719, '竹类', '茶杆竹', 'C', 4, 3);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (720, '竹类', '慈孝竹', '1', 5, 3);
+values (720, '竹类', '慈孝竹', 'C', 5, 3);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (721, '竹类', '淡竹', '1', 6, 3);
+values (721, '竹类', '淡竹', 'D', 6, 3);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (722, '竹类', '富贵竹', '1', 7, 3);
+values (722, '竹类', '富贵竹', 'F', 7, 3);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (723, '竹类', '凤尾竹', '1', 8, 3);
+values (723, '竹类', '凤尾竹', 'F', 8, 3);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (724, '竹类', '富贵竹笼', '1', 9, 3);
+values (724, '竹类', '富贵竹笼', 'F', 9, 3);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (725, '竹类', '方竹', '1', 10, 3);
+values (725, '竹类', '方竹', 'F', 10, 3);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (726, '竹类', '菲白竹', '1', 11, 3);
+values (726, '竹类', '菲白竹', 'F', 11, 3);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (727, '竹类', '菲黄竹', '1', 12, 3);
+values (727, '竹类', '菲黄竹', 'F', 12, 3);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (728, '竹类', '佛肚竹', '1', 13, 3);
+values (728, '竹类', '佛肚竹', 'F', 13, 3);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (729, '竹类', '龟背竹', '1', 14, 3);
+values (729, '竹类', '龟背竹', 'G', 14, 3);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (730, '竹类', '观音竹', '1', 15, 3);
+values (730, '竹类', '观音竹', 'G', 15, 3);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (731, '竹类', '刚竹', '1', 16, 3);
+values (731, '竹类', '刚竹', 'G', 16, 3);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (732, '竹类', '花叶芦竹', '1', 17, 3);
+values (732, '竹类', '花叶芦竹', 'H', 17, 3);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (733, '竹类', '红竹', '1', 18, 3);
+values (733, '竹类', '红竹', 'H', 18, 3);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (734, '竹类', '红秆绿线', '1', 19, 3);
+values (734, '竹类', '红秆绿线', 'H', 19, 3);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (735, '竹类', '皇帝菊', '1', 20, 3);
+values (735, '竹类', '皇帝菊', 'H', 20, 3);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (736, '竹类', '黄杆金竹', '1', 21, 3);
+values (736, '竹类', '黄杆金竹', 'H', 21, 3);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (737, '竹类', '黄杆乌哺', '1', 22, 3);
+values (737, '竹类', '黄杆乌哺', 'H', 22, 3);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (738, '竹类', '黄金碧玉', '1', 23, 3);
+values (738, '竹类', '黄金碧玉', 'H', 23, 3);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (739, '竹类', '夹竹桃', '1', 24, 3);
+values (739, '竹类', '夹竹桃', 'J', 24, 3);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (740, '竹类', '箭竹', '1', 25, 3);
+values (740, '竹类', '箭竹', 'J', 25, 3);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (741, '竹类', '鸡毛竹', '1', 26, 3);
+values (741, '竹类', '鸡毛竹', 'J', 26, 3);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (742, '竹类', '罗汉竹', '1', 27, 3);
+values (742, '竹类', '罗汉竹', 'L', 27, 3);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (743, '竹类', '芦竹', '1', 28, 3);
+values (743, '竹类', '芦竹', 'L', 28, 3);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (744, '竹类', '绿竹', '1', 29, 3);
+values (744, '竹类', '绿竹', 'L', 29, 3);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (745, '竹类', '毛竹', '1', 30, 3);
+values (745, '竹类', '毛竹', 'M', 30, 3);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (746, '竹类', '猫眼竹芋', '1', 31, 3);
+values (746, '竹类', '猫眼竹芋', 'M', 31, 3);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (747, '竹类', '马甲竹', '1', 32, 3);
+values (747, '竹类', '马甲竹', 'M', 32, 3);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (748, '竹类', '美女石竹', '1', 33, 3);
+values (748, '竹类', '美女石竹', 'M', 33, 3);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (749, '竹类', '米筛竹', '1', 34, 3);
+values (749, '竹类', '米筛竹', 'M', 34, 3);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (750, '竹类', '南天竹', '1', 35, 3);
+values (750, '竹类', '南天竹', 'N', 35, 3);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (751, '竹类', '楠竹', '1', 36, 3);
+values (751, '竹类', '楠竹', 'N', 36, 3);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (752, '竹类', '青皮竹', '1', 37, 3);
+values (752, '竹类', '青皮竹', 'Q', 37, 3);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (753, '竹类', '箬竹', '1', 38, 3);
+values (753, '竹类', '箬竹', 'Q', 38, 3);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (754, '竹类', '水竹', '1', 39, 3);
+values (754, '竹类', '水竹', 'S', 39, 3);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (755, '竹类', '四季竹', '1', 40, 3);
+values (755, '竹类', '四季竹', 'S', 40, 3);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (756, '竹类', '石绿竹', '1', 41, 3);
+values (756, '竹类', '石绿竹', 'S', 41, 3);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (757, '竹类', '四方竹', '1', 42, 3);
+values (757, '竹类', '四方竹', 'S', 42, 3);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (758, '竹类', '文竹', '1', 43, 3);
+values (758, '竹类', '文竹', 'S', 43, 3);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (759, '竹类', '紫竹', '1', 44, 3);
+values (759, '竹类', '紫竹', 'Z', 44, 3);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (760, '竹类', '竹柳', '1', 45, 3);
+values (760, '竹类', '竹柳', 'Z', 45, 3);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (761, '竹类', '棕竹', '1', 46, 3);
+values (761, '竹类', '棕竹', 'Z', 46, 3);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (762, '竹类', '竹柏', '1', 47, 3);
+values (762, '竹类', '竹柏', 'Z', 47, 3);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (763, '竹类', '早园竹', '1', 48, 3);
+values (763, '竹类', '早园竹', 'Z', 48, 3);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (764, '草坪/草坪草种', '百慕大草', 'B', 1, 4);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (765, '草坪/草坪草种', '钝叶草', 'C', 2, 4);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (766, '草坪/草坪草种', '地毯草', 'D', 3, 4);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (767, '草坪/草坪草种', '狗牙根', 'G', 4, 4);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (768, '草坪/草坪草种', '格兰马草', 'G', 5, 4);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (769, '草坪/草坪草种', '狗牙根草', 'G', 6, 4);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (770, '草坪/草坪草种', '黑麦草', 'H', 7, 4);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (771, '草坪/草坪草种', '结缕草', 'J', 8, 4);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (772, '草坪/草坪草种', '剪股颖', 'J', 9, 4);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (773, '草坪/草坪草种', '假俭草', 'J', 10, 4);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (774, '草坪/草坪草种', '马尼拉草', 'M', 11, 4);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (775, '草坪/草坪草种', '马蹄金草', 'M', 12, 4);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (776, '草坪/草坪草种', '美洲雀稗', 'M', 13, 4);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (777, '草坪/草坪草种', '铺地狼', 'P', 14, 4);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (778, '草坪/草坪草种', '人造草坪', 'R', 15, 4);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (779, '草坪/草坪草种', '天堂草', 'T', 16, 4);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (780, '草坪/草坪草种', '午夜2号', 'W', 17, 4);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (781, '草坪/草坪草种', '细叶结缕草', 'X', 18, 4);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (782, '草坪/草坪草种', '野牛草', 'Y', 19, 4);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (783, '草坪/草坪草种', '早熟禾', 'Z', 20, 4);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (784, '副产品树脂/胶', '阿拉伯胶', 'A', 1, 5);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (785, '副产品树脂/胶', '果胶', 'G', 2, 5);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (786, '副产品树脂/胶', '松脂', 'S', 3, 5);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (787, '副产品树脂/胶', '生漆', 'S', 4, 5);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (788, '副产品树脂/胶', '橡胶', 'X', 5, 5);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (789, '副产品树脂/胶', '烟胶片', 'Y', 6, 5);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (790, '藤蔓植物', '暗消藤', 'A', 1, 6);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (791, '藤蔓植物', '凹萼木鳖', 'A', 2, 6);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (792, '藤蔓植物', '凹萼清风藤', 'A', 3, 6);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (793, '藤蔓植物', '薜荔', 'B', 4, 6);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (794, '藤蔓植物', '大血藤', 'D', 5, 6);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (795, '藤蔓植物', '扶芳藤', 'F', 6, 6);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (796, '藤蔓植物', '鸽仔豆', 'G', 7, 6);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (797, '藤蔓植物', '鹤顶兰', 'H', 8, 6);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (798, '藤蔓植物', '花叶辟荔', 'H', 9, 6);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (799, '藤蔓植物', '花叶蔓', 'H', 10, 6);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (800, '藤蔓植物', '金银花', 'J', 11, 6);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (801, '藤蔓植物', '绿宝石', 'L', 12, 6);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (802, '藤蔓植物', '凌霄', 'L', 13, 6);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (803, '藤蔓植物', '马鞍藤', 'M', 14, 6);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (804, '藤蔓植物', '美国地锦', 'M', 15, 6);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (805, '藤蔓植物', '那藤', 'N', 16, 6);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (806, '藤蔓植物', '爬山虎', 'P', 17, 6);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (807, '藤蔓植物', '蔷薇', 'Q', 18, 6);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (808, '藤蔓植物', '荨麻科', 'S', 19, 6);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (809, '藤蔓植物', '三叶木通', 'S', 20, 6);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (810, '藤蔓植物', '三叶地锦', 'S', 21, 6);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (811, '藤蔓植物', '五叶木通', 'W', 22, 6);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (812, '藤蔓植物', '五月瓜藤', 'W', 23, 6);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (813, '藤蔓植物', '五叶地锦', 'W', 24, 6);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (814, '藤蔓植物', '西番莲', 'X', 25, 6);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (815, '藤蔓植物', '相思豆', 'X', 26, 6);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (816, '藤蔓植物', '小叶扶芳藤', 'X', 27, 6);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (817, '藤蔓植物', '油麻藤', 'Y', 28, 6);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (818, '藤蔓植物', '鹰爪枫', 'Y', 29, 6);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (819, '藤蔓植物', '紫藤', 'Z', 30, 6);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (820, '盆景', '观花盆景', 'G', 1, 7);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (821, '盆景', '观叶盆景', 'G', 2, 7);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (822, '盆景', '观果盆景', 'G', 3, 7);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (823, '盆景', '松柏盆景', 'S', 4, 7);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (824, '盆景', '山石盆景', 'S', 5, 7);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (825, '盆景', '杂木盆景', 'Z', 6, 7);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (826, '园林设施', '标牌指示', 'B', 1, 8);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (827, '园林设施', '灯杆灯具', 'D', 2, 8);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (828, '园林设施', '仿生音箱', 'F', 3, 8);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (829, '园林设施', '假山', 'J', 4, 8);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (830, '园林设施', '奇石', 'Q', 5, 8);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (831, '园林设施', '亭台楼阁', 'T', 6, 8);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (832, '园林设施', '桌椅', 'Z', 7, 8);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (833, '林业产品', '桉树叶', 'A', 1, 9);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (834, '林业产品', '黄柏', 'H', 2, 9);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (835, '林业产品', '葵叶', 'K', 3, 9);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (836, '林业产品', '柳条', 'L', 4, 9);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (837, '林业产品', '柠条', 'N', 5, 9);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (838, '林业产品', '桑条', 'S', 6, 9);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (839, '林业产品', '藤条', 'T', 7, 9);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (840, '林业产品', '天然软木', 'T', 8, 9);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (841, '林业产品', '椰棕丝', 'Y', 9, 9);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (842, '林业产品', '竹粉', 'Z', 10, 9);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (843, '林业产品', '竹笋片', 'Z', 11, 9);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (844, '林业产品', '棕叶', 'Z', 12, 9);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (845, '农作物', '粮油作物', '1', 1, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (846, '农作物', '食用菌', '2', 2, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (847, '农作物', '蔬菜', '3', 3, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (848, '农作物', '水果', '4', 4, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (849, '农作物', '坚果/干果', '5', 5, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (850, '农作物', '棉麻丝', '6', 6, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (851, '农作物', '毛茶', '7', 7, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (852, '农作物', '植物中药材', '8', 8, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (853, '农作物', '香料原料', '9', 9, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (854, '农作物', '饮料原料', '10', 10, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (855, '粮油作物', '兵豆', '1', 1, 845);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (856, '粮油作物', '蓖麻', '2', 2, 845);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (857, '粮油作物', '赤豆', '3', 3, 845);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (858, '粮油作物', '豆类', '4', 4, 845);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (859, '粮油作物', '稻谷', '5', 5, 845);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (860, '粮油作物', '大麦', '6', 6, 845);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (861, '粮油作物', '大豆', '7', 7, 845);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (862, '粮油作物', '谷类', '8', 8, 845);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (863, '粮油作物', '高粱', '9', 9, 845);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (864, '粮油作物', '谷子', '10', 10, 845);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (865, '粮油作物', '花生', '11', 11, 845);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (866, '粮油作物', '红薯', '12', 12, 845);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (867, '粮油作物', '黑豆', '13', 13, 845);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (868, '粮油作物', '红腰豆', '14', 14, 845);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (869, '粮油作物', '花豆', '15', 15, 845);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (870, '粮油作物', '江豆', '16', 16, 845);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (871, '粮油作物', '藜豆', '17', 17, 845);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (872, '粮油作物', '绿豆', '18', 18, 845);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (873, '粮油作物', '麦类', '19', 19, 845);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (874, '粮油作物', '马铃薯', '20', 20, 845);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (875, '粮油作物', '木薯', '21', 21, 845);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (876, '粮油作物', '眉豆', '22', 22, 845);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (877, '粮油作物', '棉籽', '23', 23, 845);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (878, '粮油作物', '薯类', '24', 24, 845);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (879, '粮油作物', '树豆', '25', 25, 845);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (880, '粮油作物', '苏子', '26', 26, 845);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (881, '粮油作物', '豌豆', '27', 27, 845);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (882, '粮油作物', '小麦', '28', 28, 845);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (883, '粮油作物', '雪莲果', '29', 29, 845);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (884, '粮油作物', '向日葵籽', '30', 30, 845);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (885, '粮油作物', '玉米', '31', 31, 845);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (886, '粮油作物', '油菜籽', '32', 32, 845);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (887, '粮油作物', '燕麦', '33', 33, 845);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (888, '粮油作物', '芋头', '34', 34, 845);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (889, '粮油作物', '洋姜', '35', 35, 845);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (890, '粮油作物', '鹰嘴豆', '36', 36, 845);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (891, '粮油作物', '云豆', '37', 37, 845);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (892, '粮油作物', '油用亚麻', '38', 38, 845);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (893, '粮油作物', '油用大麻', '39', 39, 845);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (894, '粮油作物', '芝麻', '40', 40, 845);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (895, '食用菌', '阿魏菇', '1', 1, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (896, '食用菌', '白灵菇', '2', 2, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (897, '食用菌', '白剥管菌', '3', 3, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (898, '食用菌', '白参', '4', 4, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (899, '食用菌', '白葱菌', '5', 5, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (900, '食用菌', '白桦茸', '6', 6, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (901, '食用菌', '白金针菇', '7', 7, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (902, '食用菌', '白落伞', '8', 8, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (903, '食用菌', '白木耳', '9', 9, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (904, '食用菌', '白乳牛肝', '10', 10, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (905, '食用菌', '白玉菇', '11', 11, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (906, '食用菌', '斑褐孔菌', '12', 12, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (907, '食用菌', '鲍鱼菇', '13', 13, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (908, '食用菌', '北风菌', '14', 14, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (909, '食用菌', '茶树菇', '15', 15, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (910, '食用菌', '草菇', '16', 16, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (911, '食用菌', '橙盖伞', '17', 17, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (912, '食用菌', '虫草', '18', 18, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (913, '食用菌', '虫草花', '19', 19, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (914, '食用菌', '慈菇', '20', 20, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (915, '食用菌', '大杯菇', '21', 21, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (916, '食用菌', '大杯香菇', '22', 22, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (917, '食用菌', '大斗菇', '23', 23, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (918, '食用菌', '大红菌', '24', 24, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (919, '食用菌', '大球盖菇', '25', 25, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (920, '食用菌', '东方栓菌', '26', 26, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (921, '食用菌', '鹅蛋菌', '27', 27, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (922, '食用菌', '凤尾菇', '28', 28, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (923, '食用菌', '茯苓', '29', 29, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (924, '食用菌', '干巴菌', '30', 30, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (925, '食用菌', '古口蘑', '31', 31, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (926, '食用菌', '谷熟菌', '32', 32, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (927, '食用菌', '海鲜菇', '33', 33, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (928, '食用菌', '荷叶离褶伞', '34', 34, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (929, '食用菌', '褐蘑菇', '35', 35, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (930, '食用菌', '黑虎掌', '36', 36, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (931, '食用菌', '黑喇叭', '37', 37, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (932, '食用菌', '黑牡丹', '38', 38, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (933, '食用菌', '黑木耳', '39', 39, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (934, '食用菌', '黑牛肝', '40', 40, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (935, '食用菌', '红蘑', '41', 41, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (936, '食用菌', '红平菇', '42', 42, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (937, '食用菌', '红乳牛肝菌', '43', 43, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (938, '食用菌', '红缘层孔菌', '44', 44, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (939, '食用菌', '猴头菇', '45', 45, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (940, '食用菌', '虎掌菌', '46', 46, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (941, '食用菌', '花菇', '47', 47, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (942, '食用菌', '滑子菇', '48', 48, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (943, '食用菌', '黄金针菇', '49', 49, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (944, '食用菌', '黄落伞', '50', 50, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (945, '食用菌', '黄牛肝菌', '51', 51, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (946, '食用菌', '灰树花', '52', 52, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (947, '食用菌', '鸡腿菇', '53', 53, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (948, '食用菌', '金针菇', '54', 54, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (949, '食用菌', '鸡枞菌', '55', 55, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (950, '食用菌', '鸡冠菌', '56', 56, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (951, '食用菌', '鸡油菇', '57', 57, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (952, '食用菌', '鸡油菌', '58', 58, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (953, '食用菌', '姬菇', '59', 59, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (954, '食用菌', '姬松茸', '60', 60, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (955, '食用菌', '剪柄花菇', '61', 61, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (956, '食用菌', '金耳', '62', 62, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (957, '食用菌', '金福菇', '63', 63, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (958, '食用菌', '孔菌', '64', 64, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (959, '食用菌', '苦白蹄', '65', 65, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (960, '食用菌', '块菌', '66', 66, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (961, '食用菌', '喇叭菌', '67', 67, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (962, '食用菌', '老人头', '68', 68, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (963, '食用菌', '灵芝', '69', 69, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (964, '食用菌', '灵芝角', '70', 70, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (965, '食用菌', '灵芝片', '71', 71, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (966, '食用菌', '硫磺菌', '72', 72, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (967, '食用菌', '鹿茸菇', '73', 73, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (968, '食用菌', '萝伞菌', '74', 74, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (969, '食用菌', '蘑菇', '75', 75, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (970, '食用菌', '木耳', '76', 76, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (971, '食用菌', '马蹄菇', '77', 77, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (972, '食用菌', '毛木耳', '78', 78, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (973, '食用菌', '梅花菌', '79', 79, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (974, '食用菌', '美味牛肝', '80', 80, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (975, '食用菌', '美味足', '81', 81, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (976, '食用菌', '蜜环菌', '82', 82, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (977, '食用菌', '牡丹菇', '83', 83, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (978, '食用菌', '牛肝菌', '84', 84, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (979, '食用菌', '奶浆菌', '85', 85, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (980, '食用菌', '牛舌菌', '86', 86, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (981, '食用菌', '平菇', '87', 87, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (982, '食用菌', '泡质盘菌', '88', 88, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (983, '食用菌', '平盖灵芝', '89', 89, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (984, '食用菌', '荞面菌', '90', 90, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (985, '食用菌', '青杆菌', '91', 91, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (986, '食用菌', '青头菌', '92', 92, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (987, '食用菌', '圈白蘑', '93', 93, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (988, '食用菌', '青冈菌', '94', 94, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (989, '食用菌', '人工元蘑', '95', 95, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (990, '食用菌', '肉蘑', '96', 96, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (991, '食用菌', '松茸', '97', 97, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (992, '食用菌', '伞菌', '98', 98, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (993, '食用菌', '桑黄', '99', 99, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (994, '食用菌', '桑黄菌', '100', 100, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (995, '食用菌', '珊瑚菌', '101', 101, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (996, '食用菌', '双孢菇', '102', 102, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (997, '食用菌', '松蘑', '103', 103, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (998, '食用菌', '松乳菇', '104', 104, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (999, '食用菌', '松针层孔菌', '105', 105, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1000, '食用菌', '天麻', '106', 106, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1001, '食用菌', '香菇', '107', 107, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1002, '食用菌', '香乳菇', '108', 108, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1003, '食用菌', '香魏磨', '109', 109, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1004, '食用菌', '小红菌', '110', 110, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1005, '食用菌', '小黄蘑', '111', 111, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1006, '食用菌', '蟹味菇', '112', 112, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1007, '食用菌', '杏鲍菇', '113', 113, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1008, '食用菌', '熊掌菇', '114', 114, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1009, '食用菌', '秀珍菇', '115', 115, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1010, '食用菌', '绣球菌', '116', 116, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1011, '食用菌', '雪茸', '117', 117, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1012, '食用菌', '银耳', '118', 118, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1013, '食用菌', '羊肚菌', '119', 119, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1014, '食用菌', '杨树菇', '120', 120, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1015, '食用菌', '野生元蘑', '121', 121, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1016, '食用菌', '银白离褶伞', '122', 122, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1017, '食用菌', '银盘蘑菇', '123', 123, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1018, '食用菌', '银丝香菇', '124', 124, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1019, '食用菌', '榆耳', '125', 125, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1020, '食用菌', '榆黄菇', '126', 126, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1021, '食用菌', '榆黄蘑', '127', 127, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1022, '食用菌', '元蘑', '128', 128, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1023, '食用菌', '云耳', '129', 129, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1024, '食用菌', '竹荪', '130', 130, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1025, '食用菌', '长根菇', '131', 131, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1026, '食用菌', '珍珠菇', '132', 132, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1027, '食用菌', '真姬菇', '133', 133, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1028, '食用菌', '榛蘑', '134', 134, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1029, '食用菌', '猪肚菇', '135', 135, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1030, '食用菌', '猪苓', '136', 136, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1031, '食用菌', '猪苓菌', '137', 137, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1032, '食用菌', '竹荪蛋', '138', 138, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1033, '食用菌', '竹荪胎', '139', 139, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1034, '食用菌', '紫丁香蘑', '140', 140, 846);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1035, '蔬菜', '菠菜', '1', 1, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1036, '蔬菜', '白菜', '2', 2, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1037, '蔬菜', '宝塔菜', '3', 3, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1038, '蔬菜', '抱子甘蓝', '4', 4, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1039, '蔬菜', '扁豆角', '5', 5, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1040, '蔬菜', '白菜芽', '6', 6, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1041, '蔬菜', '碧玉笋', '7', 7, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1042, '蔬菜', '菜瓜', '8', 8, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1043, '蔬菜', '菜心', '9', 9, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1044, '蔬菜', '春菜', '10', 10, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1045, '蔬菜', '菜豆', '11', 11, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1046, '蔬菜', '菜用大豆', '12', 12, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1047, '蔬菜', '蚕豆', '13', 13, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1048, '蔬菜', '菜苜蓿', '14', 14, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1049, '蔬菜', '莼菜', '15', 15, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1050, '蔬菜', '菜蓟', '16', 16, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1051, '蔬菜', '车前草', '17', 17, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1052, '蔬菜', '蚕豆芽', '18', 18, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1053, '蔬菜', '草芽', '19', 19, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1054, '蔬菜', '大蒜', '20', 20, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1055, '蔬菜', '大葱', '21', 21, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1056, '蔬菜', '豆角', '22', 22, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1057, '蔬菜', '冬瓜', '23', 23, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1058, '蔬菜', '地瓜', '24', 24, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1059, '蔬菜', '大头菜', '25', 25, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1060, '蔬菜', '刀芭豆', '26', 26, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1061, '蔬菜', '刀豆', '27', 27, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1062, '蔬菜', '多花菜豆', '28', 28, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1063, '蔬菜', '豆瓣菜', '29', 29, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1064, '蔬菜', '独行菜芽', '30', 30, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1065, '蔬菜', '蛾眉豆', '31', 31, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1066, '蔬菜', '番茄', '32', 32, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1067, '蔬菜', '分葱', '33', 33, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1068, '蔬菜', '番杏', '34', 34, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1069, '蔬菜', '佛手瓜', '35', 35, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1070, '蔬菜', '发菜', '36', 36, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1071, '蔬菜', '佛手瓜稍', '37', 37, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1072, '蔬菜', '根菾菜', '38', 38, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1073, '蔬菜', '根芹菜', '39', 39, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1074, '蔬菜', '葛', '40', 40, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1075, '蔬菜', '鬼子姜', '41', 41, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1076, '蔬菜', '黄瓜', '42', 42, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1077, '蔬菜', '胡萝卜', '43', 43, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1078, '蔬菜', '胡葱', '44', 44, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1079, '蔬菜', '花菜', '45', 45, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1080, '蔬菜', '海红豆', '46', 46, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1081, '蔬菜', '荷兰豆', '47', 47, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1082, '蔬菜', '虎爪豆', '48', 48, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1083, '蔬菜', '蒿子秆', '49', 49, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1084, '蔬菜', '茴香', '50', 50, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1085, '蔬菜', '瓠瓜', '51', 51, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1086, '蔬菜', '黄花菜', '52', 52, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1087, '蔬菜', '黄秋葵', '53', 53, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1088, '蔬菜', '黄豆芽', '54', 54, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1089, '蔬菜', '黑豆芽', '55', 55, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1090, '蔬菜', '红豆芽', '56', 56, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1091, '蔬菜', '红小豆苗', '57', 57, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1092, '蔬菜', '花生芽', '58', 58, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1093, '蔬菜', '胡椒芽', '59', 59, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1094, '蔬菜', '胡麻芽', '60', 60, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1095, '蔬菜', '花椒脑', '61', 61, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1096, '蔬菜', '韭菜', '62', 62, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1097, '蔬菜', '姜', '63', 63, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1098, '蔬菜', '蕉芋', '64', 64, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1099, '蔬菜', '韭葱', '65', 65, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1100, '蔬菜', '茎芥', '66', 66, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1101, '蔬菜', '卷心菜', '67', 67, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1102, '蔬菜', '芥蓝', '68', 68, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1103, '蔬菜', '豇豆', '69', 69, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1104, '蔬菜', '菊苣', '70', 70, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1105, '蔬菜', '菊花脑', '71', 71, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1106, '蔬菜', '节瓜', '72', 72, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1107, '蔬菜', '茭白', '73', 73, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1108, '蔬菜', '桔梗菜', '74', 74, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1109, '蔬菜', '蕨菜', '75', 75, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1110, '蔬菜', '芥菜芽', '76', 76, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1111, '蔬菜', '芥蓝芽', '77', 77, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1112, '蔬菜', '荠菜', '78', 78, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1113, '蔬菜', '苦瓜', '79', 79, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1114, '蔬菜', '苦菜', '80', 80, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1115, '蔬菜', '空心菜', '81', 81, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1116, '蔬菜', '葵菜', '82', 82, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1117, '蔬菜', '苦苣', '83', 83, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1118, '蔬菜', '苦苣芽', '84', 84, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1119, '蔬菜', '萝卜', '85', 85, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1120, '蔬菜', '莲藕', '86', 86, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1121, '蔬菜', '绿豆芽', '87', 87, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1122, '蔬菜', '凉薯', '88', 88, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1123, '蔬菜', '楼子葱', '89', 89, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1124, '蔬菜', '罗勒菜', '90', 90, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1125, '蔬菜', '辣椒', '91', 91, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1126, '蔬菜', '菱', '92', 92, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1127, '蔬菜', '芦笋', '93', 93, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1128, '蔬菜', '辣根', '94', 94, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1129, '蔬菜', '芦蒿', '95', 95, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1130, '蔬菜', '萝卜芽', '96', 96, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1131, '蔬菜', '辣椒尖', '97', 97, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1132, '蔬菜', '美洲防风', '98', 98, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1133, '蔬菜', '魔芋', '99', 99, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1134, '蔬菜', '毛豆', '100', 100, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1135, '蔬菜', '梅豆角', '101', 101, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1136, '蔬菜', '木耳菜', '102', 102, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1137, '蔬菜', '马齿苋', '103', 103, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1138, '蔬菜', '马兰', '104', 104, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1139, '蔬菜', '苜蓿芽', '105', 105, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1140, '蔬菜', '南瓜', '106', 106, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1141, '蔬菜', '牛蒡', '107', 107, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1142, '蔬菜', '嫩玉米', '108', 108, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1143, '蔬菜', '糯玉米', '109', 109, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1144, '蔬菜', '婆罗门参', '110', 110, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1145, '蔬菜', '蒲公英', '111', 111, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1146, '蔬菜', '蒲菜', '112', 112, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1147, '蔬菜', '茄子', '113', 113, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1148, '蔬菜', '青蒜苗', '114', 114, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1149, '蔬菜', '球茎甘蓝', '115', 115, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1150, '蔬菜', '芹菜', '116', 116, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1151, '蔬菜', '青椒', '117', 117, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1152, '蔬菜', '芡实菜', '118', 118, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1153, '蔬菜', '青豆芽', '119', 119, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1154, '蔬菜', '荞麦芽', '120', 120, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1155, '蔬菜', '蘘荷', '121', 121, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1156, '蔬菜', '生菜', '122', 122, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1157, '蔬菜', '丝瓜', '123', 123, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1158, '蔬菜', '山葵', '124', 124, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1159, '蔬菜', '山药', '125', 125, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1160, '蔬菜', '蒜苔', '126', 126, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1161, '蔬菜', '蒜黄', '127', 127, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1162, '蔬菜', '山扁豆', '128', 128, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1163, '蔬菜', '四季豆', '129', 129, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1164, '蔬菜', '四棱豆', '130', 130, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1165, '蔬菜', '食用薄荷', '131', 131, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1166, '蔬菜', '莳萝', '132', 132, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1167, '蔬菜', '笋瓜', '133', 133, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1168, '蔬菜', '蛇瓜', '134', 134, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1169, '蔬菜', '酸浆', '135', 135, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1170, '蔬菜', '水芹菜', '136', 136, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1171, '蔬菜', '食用百合', '137', 137, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1172, '蔬菜', '食用大黄', '138', 138, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1173, '蔬菜', '食用菊', '139', 139, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1174, '蔬菜', '菘蓝芽', '140', 140, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1175, '蔬菜', '沙芥芽', '141', 141, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1176, '蔬菜', '水芹芽', '142', 142, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1177, '蔬菜', '土豆', '143', 143, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1178, '蔬菜', '薹菜', '144', 144, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1179, '蔬菜', '薹芥', '145', 145, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1180, '蔬菜', '茼蒿', '146', 146, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1181, '蔬菜', '甜玉米', '147', 147, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1182, '蔬菜', '芜菁', '148', 148, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1183, '蔬菜', '芜菁甘蓝', '149', 149, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1184, '蔬菜', '蕹菜', '150', 150, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1185, '蔬菜', '乌塌菜', '151', 151, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1186, '蔬菜', '莴苣', '152', 152, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1187, '蔬菜', '薇菜', '153', 153, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1188, '蔬菜', '豌豆苗', '154', 154, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1189, '蔬菜', '蕹菜芽', '155', 155, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1190, '蔬菜', '豌豆尖', '156', 156, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1191, '蔬菜', '香芋', '157', 157, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1192, '蔬菜', '细香葱', '158', 158, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1193, '蔬菜', '雪里红', '159', 159, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1194, '蔬菜', '西兰花', '160', 160, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1195, '蔬菜', '苋菜', '161', 161, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1196, '蔬菜', '香菜', '162', 162, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1197, '蔬菜', '香芹菜', '163', 163, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1198, '蔬菜', '西葫芦', '164', 164, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1199, '蔬菜', '香椿', '165', 165, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1200, '蔬菜', '小扁豆芽', '166', 166, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1201, '蔬菜', '香椿苗', '167', 167, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1202, '蔬菜', '向日葵芽', '168', 168, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1203, '蔬菜', '小麦苗', '169', 169, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1204, '蔬菜', '油麦菜', '170', 170, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1205, '蔬菜', '洋葱', '171', 171, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1206, '蔬菜', '羽衣甘蓝', '172', 172, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1207, '蔬菜', '油豆角', '173', 173, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1208, '蔬菜', '叶菾菜', '174', 174, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1209, '蔬菜', '榆钱菠菜', '175', 175, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1210, '蔬菜', '鸭儿芹', '176', 176, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1211, '蔬菜', '鱼腥草', '177', 177, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1212, '蔬菜', '越瓜', '178', 178, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1213, '蔬菜', '玉米笋', '179', 179, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1214, '蔬菜', '芽球菊苣', '180', 180, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1215, '蔬菜', '长豇豆', '181', 181, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1216, '蔬菜', '紫菜薹', '182', 182, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1217, '蔬菜', '猪耳朵豆角', '183', 183, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1218, '蔬菜', '紫扁豆', '184', 184, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1219, '蔬菜', '紫背天葵', '185', 185, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1220, '蔬菜', '紫苏', '186', 186, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1221, '蔬菜', '珍珠菜', '187', 187, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1222, '蔬菜', '竹笋', '188', 188, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1223, '蔬菜', '紫苏芽', '189', 189, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1224, '蔬菜', '芝麻芽', '190', 190, 847);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1225, '水果', '菠萝', '1', 1, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1226, '水果', '芭蕉', '2', 2, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1227, '水果', '白果', '3', 3, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1228, '水果', '白兰瓜', '4', 4, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1229, '水果', '荸荠', '5', 5, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1230, '水果', '扁桃', '6', 6, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1231, '水果', '槟榔子', '7', 7, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1232, '水果', '菠萝蜜', '8', 8, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1233, '水果', '菠萝莓', '9', 9, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1234, '水果', '草莓', '10', 10, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1235, '水果', '橙子', '11', 11, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1236, '水果', '臭李子', '12', 12, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1237, '水果', '脆枣', '13', 13, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1238, '水果', '砀山梨', '14', 14, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1239, '水果', '灯笼果', '15', 15, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1240, '水果', '东方草莓', '16', 16, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1241, '水果', '冻秋梨', '17', 17, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1242, '水果', '鳄梨', '18', 18, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1243, '水果', '番石榴', '19', 19, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1244, '水果', '凤梨', '20', 20, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1245, '水果', '番荔枝', '21', 21, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1246, '水果', '桂圆', '22', 22, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1247, '水果', '甘蔗', '23', 23, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1248, '水果', '柑桔', '24', 24, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1249, '水果', '橄榄', '25', 25, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1250, '水果', '干梅子', '26', 26, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1251, '水果', '高粱果', '27', 27, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1252, '水果', '菇茑', '28', 28, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1253, '水果', '国光', '29', 29, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1254, '水果', '哈密瓜', '30', 30, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1255, '水果', '海棠果', '31', 31, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1256, '水果', '黑李子', '32', 32, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1257, '水果', '黑玫瑰葡萄', '33', 33, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1258, '水果', '黑莓', '34', 34, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1259, '水果', '黑美人西瓜', '35', 35, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1260, '水果', '黑亚伦', '36', 36, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1261, '水果', '黑樱桃', '37', 37, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1262, '水果', '胡桃', '38', 38, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1263, '水果', '华莱士瓜', '39', 39, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1264, '水果', '黄冠梨', '40', 40, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1265, '水果', '黄绿苹果', '41', 41, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1266, '水果', '火龙果', '42', 42, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1267, '水果', '红毛丹', '43', 43, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1268, '水果', '鸡蛋果', '44', 44, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1269, '水果', '鸡蛋芒', '45', 45, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1270, '水果', '金橘', '46', 46, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1271, '水果', '橘子', '47', 47, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1272, '水果', '可可果', '48', 48, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1273, '水果', '梨', '49', 49, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1274, '水果', '荔枝', '50', 50, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1275, '水果', '龙眼', '51', 51, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1276, '水果', '蓝梅', '52', 52, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1277, '水果', '李杏', '53', 53, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1278, '水果', '李子', '54', 54, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1279, '水果', '菱角', '55', 55, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1280, '水果', '榴莲', '56', 56, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1281, '水果', '柳丁', '57', 57, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1282, '水果', '罗汉果', '58', 58, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1283, '水果', '绿苹果', '59', 59, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1284, '水果', '芒果', '60', 60, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1285, '水果', '木瓜', '61', 61, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1286, '水果', '毛荔枝', '62', 62, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1287, '水果', '毛桃', '63', 63, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1288, '水果', '密枣', '64', 64, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1289, '水果', '柠檬', '65', 65, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1290, '水果', '奶葡萄', '66', 66, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1291, '水果', '南果梨', '67', 67, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1292, '水果', '苹果', '68', 68, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1293, '水果', '葡萄', '69', 69, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1294, '水果', '蟠桃', '70', 70, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1295, '水果', '枇杷果', '71', 71, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1296, '水果', '葡萄柚', '72', 72, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1297, '水果', '奇异果/猕猴桃', '73', 73, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1298, '水果', '脐橙', '74', 74, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1299, '水果', '青梅', '75', 75, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1300, '水果', '青蛇果', '76', 76, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1301, '水果', '人参果', '77', 77, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1302, '水果', '石榴', '78', 78, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1303, '水果', '桑椹', '79', 79, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1304, '水果', '沙果', '80', 80, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1305, '水果', '沙糖桔', '81', 81, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1306, '水果', '沙枣', '82', 82, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1307, '水果', '山核桃', '83', 83, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1308, '水果', '山梅', '84', 84, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1309, '水果', '山楂', '85', 85, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1310, '水果', '山楂果', '86', 86, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1311, '水果', '山竹', '87', 87, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1312, '水果', '蛇果', '88', 88, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1313, '水果', '蛇皮果', '89', 89, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1314, '水果', '圣女果', '90', 90, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1315, '水果', '柿子', '91', 91, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1316, '水果', '水蜜桃', '92', 92, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1317, '水果', '粟子', '93', 93, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1318, '水果', '酸橙', '94', 94, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1319, '水果', '酸莓', '95', 95, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1320, '水果', '桃', '96', 96, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1321, '水果', '甜橙', '97', 97, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1322, '水果', '甜瓜', '98', 98, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1323, '水果', '桃子', '99', 99, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1324, '水果', '提子', '100', 100, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1325, '水果', '甜柑', '101', 101, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1326, '水果', '甜心果', '102', 102, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1327, '水果', '文旦', '103', 103, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1328, '水果', '乌饭果', '104', 104, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1329, '水果', '无核小葡萄', '105', 105, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1330, '水果', '无花果', '106', 106, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1331, '水果', '杏', '107', 107, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1332, '水果', '香蕉', '108', 108, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1333, '水果', '西瓜', '109', 109, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1334, '水果', '西红柿', '110', 110, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1335, '水果', '西梅', '111', 111, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1336, '水果', '西洋李子', '112', 112, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1337, '水果', '西柚', '113', 113, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1338, '水果', '鲜荔枝', '114', 114, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1339, '水果', '香瓜', '115', 115, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1340, '水果', '香梨', '116', 116, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1341, '水果', '小西瓜', '117', 117, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1342, '水果', '雪梨', '118', 118, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1343, '水果', '椰子', '119', 119, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1344, '水果', '鸭梨', '120', 120, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1345, '水果', '羊奶果', '121', 121, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1346, '水果', '羊奶子', '122', 122, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1347, '水果', '杨梅', '123', 123, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1348, '水果', '杨桃', '124', 124, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1349, '水果', '洋蒲桃', '125', 125, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1350, '水果', '椰色果', '126', 126, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1351, '水果', '椰枣', '127', 127, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1352, '水果', '银杏果', '128', 128, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1353, '水果', '樱桃', '129', 129, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1354, '水果', '油桃', '130', 130, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1355, '水果', '柚子', '131', 131, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1356, '水果', '枣', '132', 132, 848);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1357, '坚果/干果', '板栗', '1', 1, 849);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1358, '坚果/干果', '碧根果', '2', 2, 849);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1359, '坚果/干果', '巴西坚果', '3', 3, 849);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1360, '坚果/干果', '巴旦木', '4', 4, 849);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1361, '坚果/干果', '白果干', '5', 5, 849);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1362, '坚果/干果', '瓜子', '6', 6, 849);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1363, '坚果/干果', '核桃', '7', 7, 849);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1364, '坚果/干果', '红枣', '8', 8, 849);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1365, '坚果/干果', '花生仁', '9', 9, 849);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1366, '坚果/干果', '开心果', '10', 10, 849);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1367, '坚果/干果', '莲子', '11', 11, 849);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1368, '坚果/干果', '兰花豆', '12', 12, 849);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1369, '坚果/干果', '罗汉干果', '13', 13, 849);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1370, '坚果/干果', '梅子', '14', 14, 849);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1371, '坚果/干果', '南瓜子', '15', 15, 849);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1372, '坚果/干果', '葡萄干', '16', 16, 849);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1373, '坚果/干果', '青豆', '17', 17, 849);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1374, '坚果/干果', '松子', '18', 18, 849);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1375, '坚果/干果', '无花果干', '19', 19, 849);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1376, '坚果/干果', '杏仁', '20', 20, 849);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1377, '坚果/干果', '夏威夷果', '21', 21, 849);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1378, '坚果/干果', '香榧果', '22', 22, 849);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1379, '坚果/干果', '腰果', '23', 23, 849);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1380, '坚果/干果', '榛子', '24', 24, 849);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1381, '棉麻丝', '蚕丝', '1', 1, 850);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1382, '棉麻丝', '棉花/棉纤维', '2', 2, 850);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1383, '棉麻丝', '麻类/麻纤维', '3', 3, 850);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1384, '毛茶', '白茶', '1', 1, 851);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1385, '毛茶', '果味茶', '2', 2, 851);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1386, '毛茶', '红茶', '3', 3, 851);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1387, '毛茶', '黄茶', '4', 4, 851);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1388, '毛茶', '黑茶', '5', 5, 851);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1389, '毛茶', '花茶', '6', 6, 851);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1390, '毛茶', '绿茶', '7', 7, 851);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1391, '毛茶', '乌龙茶', '8', 8, 851);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1392, '植物中药材', '白芷', '1', 1, 852);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1393, '植物中药材', '柴胡', '2', 2, 852);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1394, '植物中药材', '当归', '3', 3, 852);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1395, '植物中药材', '冬虫夏草', '4', 4, 852);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1396, '植物中药材', '枸杞', '5', 5, 852);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1397, '植物中药材', '甘草', '6', 6, 852);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1398, '植物中药材', '红花', '7', 7, 852);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1399, '植物中药材', '人参', '8', 8, 852);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1400, '香料原料', '八角/大料/大茴香', '1', 1, 853);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1401, '香料原料', '薄荷油', '2', 2, 853);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1402, '香料原料', '丁香', '3', 3, 853);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1403, '香料原料', '桂皮', '4', 4, 853);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1404, '香料原料', '花椒', '5', 5, 853);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1405, '香料原料', '胡椒', '6', 6, 853);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1406, '香料原料', '小茴香', '7', 7, 853);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1407, '饮料原料', '咖啡豆', '1', 1, 854);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1408, '饮料原料', '可可豆', '2', 2, 854);
 
 prompt Done.

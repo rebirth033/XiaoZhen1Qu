@@ -5,7 +5,7 @@ create table CODES_NLMFY
   typename  VARCHAR2(60),
   codename  VARCHAR2(60),
   codevalue VARCHAR2(120),
-  codeorder NUMBER(3),
+  codeorder NUMBER(10),
   parentid  NUMBER(12)
 )
 tablespace USERS
