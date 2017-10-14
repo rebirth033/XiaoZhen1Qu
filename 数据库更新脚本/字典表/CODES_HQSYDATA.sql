@@ -625,4 +625,31 @@ values (227, '珠宝首饰', '吊坠', '10', 10, null);
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (228, '珠宝首饰', '胸针', '11', 11, null);
 
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (229, '拍摄风格', '韩式', '1', 1, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (230, '拍摄风格', '欧式', '2', 2, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (231, '拍摄风格', '中式', '3', 3, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (232, '拍摄风格', '古典', '4', 4, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (233, '拍摄风格', '浪漫', '5', 5, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (234, '拍摄风格', '清纯', '6', 6, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (235, '拍摄风格', '性感', '7', 7, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (236, '拍摄风格', '另类', '8', 8, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (237, '拍摄风格', '怀旧', '9', 9, null);
+
 prompt Done.

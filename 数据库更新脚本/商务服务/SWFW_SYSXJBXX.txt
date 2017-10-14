@@ -1,0 +1,96 @@
+-- Create table
+create table SWFW_SYSXJBXX
+(
+  swfw_sysxjbxxid VARCHAR2(50) not null,
+  jcxxid          VARCHAR2(50),
+  bcms            VARCHAR2(4000),
+  qy              VARCHAR2(20),
+  dd              VARCHAR2(20),
+  jtdz            VARCHAR2(200),
+  fwqy            VARCHAR2(200),
+  lb              VARCHAR2(20),
+  ylgzs           VARCHAR2(20),
+  xzlx            VARCHAR2(20),
+  psdd            VARCHAR2(20),
+  psfg            VARCHAR2(20),
+  fzts            VARCHAR2(20),
+  fzpssf          VARCHAR2(20),
+  txdps           VARCHAR2(20),
+  txjxjrcs        VARCHAR2(20),
+  jxkpzs          VARCHAR2(20),
+  dpzs            VARCHAR2(20),
+  jpsf            VARCHAR2(20),
+  jdsf            VARCHAR2(20),
+  txxcsl          VARCHAR2(20),
+  txbjsl          VARCHAR2(20),
+  jg              VARCHAR2(20),
+  nld             VARCHAR2(20),
+  sylx            VARCHAR2(20),
+  sllx            VARCHAR2(20)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 16K
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table SWFW_SYSXJBXX
+  is '商务服务_摄影摄像';
+-- Add comments to the columns 
+comment on column SWFW_SYSXJBXX.swfw_sysxjbxxid
+  is '摄影摄像基本信息ID';
+comment on column SWFW_SYSXJBXX.jcxxid
+  is '基础信息ID';
+comment on column SWFW_SYSXJBXX.bcms
+  is '补充描述';
+comment on column SWFW_SYSXJBXX.qy
+  is '区域';
+comment on column SWFW_SYSXJBXX.dd
+  is '地段';
+comment on column SWFW_SYSXJBXX.jtdz
+  is '具体地址';
+comment on column SWFW_SYSXJBXX.fwqy
+  is '服务区域';
+comment on column SWFW_SYSXJBXX.lb
+  is '类别';
+comment on column SWFW_SYSXJBXX.ylgzs
+  is '影楼/工作室';
+comment on column SWFW_SYSXJBXX.xzlx
+  is '写真类型';
+comment on column SWFW_SYSXJBXX.psdd
+  is '拍摄地点';
+comment on column SWFW_SYSXJBXX.psfg
+  is '拍摄风格';
+comment on column SWFW_SYSXJBXX.fzts
+  is '服装套数';
+comment on column SWFW_SYSXJBXX.fzpssf
+  is '服装配饰收费';
+comment on column SWFW_SYSXJBXX.txdps
+  is '套系底片数';
+comment on column SWFW_SYSXJBXX.txjxjrcs
+  is '套系精修及入册数';
+comment on column SWFW_SYSXJBXX.jxkpzs
+  is '精修刻盘赠送';
+comment on column SWFW_SYSXJBXX.dpzs
+  is '底片赠送';
+comment on column SWFW_SYSXJBXX.jpsf
+  is '加片收费';
+comment on column SWFW_SYSXJBXX.jdsf
+  is '加底收费';
+comment on column SWFW_SYSXJBXX.txxcsl
+  is '套系相册数量';
+comment on column SWFW_SYSXJBXX.txbjsl
+  is '套系摆件数量';
+comment on column SWFW_SYSXJBXX.jg
+  is '价格';
+comment on column SWFW_SYSXJBXX.nld
+  is '年龄段';
+comment on column SWFW_SYSXJBXX.sylx
+  is '摄影类型';
+comment on column SWFW_SYSXJBXX.sllx
+  is '摄录类型';

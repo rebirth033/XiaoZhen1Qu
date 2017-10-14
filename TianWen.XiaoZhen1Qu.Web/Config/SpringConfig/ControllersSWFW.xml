@@ -125,4 +125,9 @@
       <ref object="SWFW_JXSBWXBLL"/>
     </property>
   </object>
+  <object id="SWFW_SYSXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SWFW_SYSXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="SWFW_SYSXBLL">
+      <ref object="SWFW_SYSXBLL"/>
+    </property>
+  </object>
 </objects>
