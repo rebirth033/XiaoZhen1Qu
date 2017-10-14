@@ -141,6 +141,7 @@
     <Compile Include="BLL\LYJD\LYJD_JPBLL.cs" />
     <Compile Include="BLL\LYJD\LYJD_LXSBLL.cs" />
     <Compile Include="BLL\LYJD\LYJD_ZBYBLL.cs" />
+    <Compile Include="BLL\NLMFY\NLMFY_YLHHBLL.cs" />
     <Compile Include="BLL\PFCG\PFCG_AFSBBLL.cs" />
     <Compile Include="BLL\PFCG\PFCG_BZBLL.cs" />
     <Compile Include="BLL\PFCG\PFCG_DGDLBLL.cs" />

@@ -46,6 +46,8 @@ namespace TianWen.XiaoZhen1Qu.Interface
 
         object LoadCODES_HQSY(string TYPENAME);
 
+        object LoadCODES_NLMFY(string TYPENAME);
+
         object LoadGCQXJBXX(string GCQX);
 
         object LoadHCJBXX(string HC);
@@ -109,5 +111,9 @@ namespace TianWen.XiaoZhen1Qu.Interface
         object LoadJZFWXX(string LBID);
 
         object LoadHCPPXX(string HCPPBQ);
+
+        object LoadByParentID(string LBID, string TBName);
+
+        object LoadYLHHXX(string HCPPBQ);
     }
 }

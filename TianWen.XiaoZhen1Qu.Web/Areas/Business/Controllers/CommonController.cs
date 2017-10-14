@@ -169,6 +169,12 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return Json(CommonBLL.LoadCODES_HQSY(TYPENAME));
         }
 
+        public JsonResult LoadCODES_NLMFY()
+        {
+            string TYPENAME = Request["TYPENAME"];
+            return Json(CommonBLL.LoadCODES_NLMFY(TYPENAME));
+        }
+
         public JsonResult QHXZQ()
         {
             Session["XZQ"] = Request["XZQ"];
@@ -320,6 +326,16 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         public JsonResult LoadHCPPXX()
         {
             return Json(CommonBLL.LoadHCPPXX(Request["HCPPBQ"]));
+        }
+
+        public JsonResult LoadByParentID()
+        {
+            return Json(CommonBLL.LoadByParentID(Request["LBID"], Request["TBName"]));
+        }
+
+        public JsonResult LoadYLHHXX()
+        {
+            return Json(CommonBLL.LoadYLHHXX(Request["HCPPBQ"]));
         }
         
     }

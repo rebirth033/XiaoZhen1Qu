@@ -305,6 +305,20 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
+        public object LoadCODES_NLMFY(string TYPENAME)
+        {
+            try
+            {
+                IList<CODES_NLMFY> list = DAO.Repository.GetObjectList<CODES_NLMFY>(String.Format("FROM CODES_NLMFY WHERE TYPENAME='{0}' ORDER BY CODEORDER", TYPENAME));
+                return new { Result = EnResultType.Success, list = list };
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("error", ex.Message);
+                return new { Result = EnResultType.Failed, Message = "加载失败" };
+            }
+        }
+
         public object LoadQYBySuperName(string SUPERNAME)
         {
             try
@@ -459,7 +473,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 return new { Result = EnResultType.Failed, Message = "加载失败" };
             }
         }
-        
+
         public object LoadKCCXXX(string PPID)
         {
             try
@@ -558,6 +572,21 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
+        public object LoadByParentID(string LBID, string TBName)
+        {
+            try
+            {
+                if (TBName == "CODES_NLMFY")
+                    return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_NLMFY>(String.Format("FROM CODES_NLMFY WHERE PARENTID = '{0}' ORDER BY CODEORDER", LBID)) };
+                return new { Result = EnResultType.Failed, Message = "表名未找到" };
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("error", ex.Message);
+                return new { Result = EnResultType.Failed, Message = "加载失败" };
+            }
+        }
+
         public object LoadYZXX(string YZBQ)
         {
             try
@@ -619,6 +648,20 @@ namespace TianWen.XiaoZhen1Qu.BLL
             try
             {
                 IList<CODES_HQSY> list = DAO.Repository.GetObjectList<CODES_HQSY>(String.Format("FROM CODES_HQSY WHERE CODEVALUE = '{0}' ORDER BY CODEORDER", HCPPBQ));
+                return new { Result = EnResultType.Success, list = list };
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("error", ex.Message);
+                return new { Result = EnResultType.Failed, Message = "加载失败" };
+            }
+        }
+
+        public object LoadYLHHXX(string HCPPBQ)
+        {
+            try
+            {
+                IList<CODES_NLMFY> list = DAO.Repository.GetObjectList<CODES_NLMFY>(String.Format("FROM CODES_NLMFY WHERE CODEVALUE = '{0}' ORDER BY CODEORDER", HCPPBQ));
                 return new { Result = EnResultType.Success, list = list };
             }
             catch (Exception ex)

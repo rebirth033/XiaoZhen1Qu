@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects  xmlns="http://www.springframework.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.net http://www.springframework.net/xsd/spring-objects.xsd">
+  <object id="NLMFY_YLHHController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.NLMFY_YLHHController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="NLMFY_YLHHBLL">
+      <ref object="NLMFY_YLHHBLL"/>
+    </property>
+  </object>
+</objects>
