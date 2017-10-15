@@ -5,4 +5,9 @@
       <ref object="NLMFY_YLHHBLL"/>
     </property>
   </object>
+  <object id="NLMFY_NZWController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.NLMFY_NZWController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="NLMFY_NZWBLL">
+      <ref object="NLMFY_NZWBLL"/>
+    </property>
+  </object>
 </objects>

@@ -15,7 +15,7 @@ $(document).ready(function () {
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
     LoadTXXX();
     LoadDefault();
-    LoadNLMFY_YLHHJBXX();
+    LoadNLMFY_NZWJBXX();
     BindClick("LB");
     BindClick("QY");
     BindClick("DD");
@@ -43,7 +43,7 @@ function LoadDefault() {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadDropdown("园林花卉", "LB");
+            LoadDropdown("农作物", "LB");
         }
         if (type === "XL") {
             LoadXL();
@@ -57,7 +57,7 @@ function BindClick(type) {
         }
     });
 }
-//加载园林花卉类别
+//加载农作物类别
 function LoadDropdown(type, id) {
     $.ajax({
         type: "POST",
@@ -104,7 +104,7 @@ function LoadXL() {
 }
 //小类标签切换
 function JCBQActive() {
-    LoadXLMC("小类", this.id);
+    LoadXLMC($("#spanLB").html(), this.id);
 }
 //加载小类名称
 function LoadXLMC(JCLX, JCBQ) {
@@ -114,6 +114,7 @@ function LoadXLMC(JCLX, JCBQ) {
         dataType: "json",
         data:
         {
+            TYPE: JCLX,
             HCPPBQ: JCBQ.split("div")[1]
         },
         success: function (xml) {
@@ -138,31 +139,31 @@ function XLXZ(XLMC, XLID) {
     $("#spanXL").html(XLMC);
     $("#divXL").css("display", "none");
 }
-//加载农林牧副渔_园林花卉基本信息
-function LoadNLMFY_YLHHJBXX() {
+//加载农林牧副渔_农作物基本信息
+function LoadNLMFY_NZWJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/NLMFY_YLHH/LoadNLMFY_YLHHJBXX",
+        url: getRootPath() + "/Business/NLMFY_NZW/LoadNLMFY_NZWJBXX",
         dataType: "json",
         data:
         {
-            NLMFY_YLHHJBXXID: getUrlParam("NLMFY_YLHHJBXXID")
+            NLMFY_NZWJBXXID: getUrlParam("NLMFY_NZWJBXXID")
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var jsonObj = new JsonDB("myTabContent");
-                jsonObj.DisplayFromJson("myTabContent", xml.Value.NLMFY_YLHHJBXX);
+                jsonObj.DisplayFromJson("myTabContent", xml.Value.NLMFY_NZWJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
-                $("#NLMFY_YLHHJBXXID").val(xml.Value.NLMFY_YLHHJBXX.NLMFY_YLHHJBXXID);
+                $("#NLMFY_NZWJBXXID").val(xml.Value.NLMFY_NZWJBXX.NLMFY_NZWJBXXID);
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
-                    ue.setContent(xml.Value.NLMFY_YLHHJBXX.BCMS);
+                    ue.setContent(xml.Value.NLMFY_NZWJBXX.BCMS);
                 });
-                $("#spanLB").html(xml.Value.NLMFY_YLHHJBXX.LB);
-                $("#spanXL").html(xml.Value.NLMFY_YLHHJBXX.XL);
-                $("#spanQY").html(xml.Value.NLMFY_YLHHJBXX.QY);
-                $("#spanDD").html(xml.Value.NLMFY_YLHHJBXX.DD);
+                $("#spanLB").html(xml.Value.NLMFY_NZWJBXX.LB);
+                $("#spanXL").html(xml.Value.NLMFY_NZWJBXX.XL);
+                $("#spanQY").html(xml.Value.NLMFY_NZWJBXX.QY);
+                $("#spanDD").html(xml.Value.NLMFY_NZWJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
             }
         },
@@ -183,12 +184,12 @@ function FB() {
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
 
-    if (getUrlParam("NLMFY_YLHHJBXXID") !== null)
-        obj = jsonObj.AddJson(obj, "NLMFY_YLHHJBXXID", "'" + getUrlParam("NLMFY_YLHHJBXXID") + "'");
+    if (getUrlParam("NLMFY_NZWJBXXID") !== null)
+        obj = jsonObj.AddJson(obj, "NLMFY_NZWJBXXID", "'" + getUrlParam("NLMFY_NZWJBXXID") + "'");
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/NLMFY_YLHH/FB",
+        url: getRootPath() + "/Business/NLMFY_NZW/FB",
         dataType: "json",
         data:
         {

@@ -114,6 +114,6 @@ namespace TianWen.XiaoZhen1Qu.Interface
 
         object LoadByParentID(string LBID, string TBName);
 
-        object LoadYLHHXX(string HCPPBQ);
+        object LoadYLHHXX(string HCPPBQ, string TYPE);
     }
 }

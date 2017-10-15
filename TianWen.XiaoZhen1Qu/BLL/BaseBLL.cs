@@ -657,11 +657,11 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
-        public object LoadYLHHXX(string HCPPBQ)
+        public object LoadYLHHXX(string HCPPBQ, string TYPE)
         {
             try
             {
-                IList<CODES_NLMFY> list = DAO.Repository.GetObjectList<CODES_NLMFY>(String.Format("FROM CODES_NLMFY WHERE CODEVALUE = '{0}' ORDER BY CODEORDER", HCPPBQ));
+                IList<CODES_NLMFY> list = DAO.Repository.GetObjectList<CODES_NLMFY>(String.Format("FROM CODES_NLMFY WHERE CODEVALUE = '{0}' AND TYPENAME = '{1}' ORDER BY CODEORDER", HCPPBQ, TYPE));
                 return new { Result = EnResultType.Success, list = list };
             }
             catch (Exception ex)

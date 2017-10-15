@@ -335,7 +335,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public JsonResult LoadYLHHXX()
         {
-            return Json(CommonBLL.LoadYLHHXX(Request["HCPPBQ"]));
+            return Json(CommonBLL.LoadYLHHXX(Request["HCPPBQ"], Request["TYPE"]));
         }
         
     }
