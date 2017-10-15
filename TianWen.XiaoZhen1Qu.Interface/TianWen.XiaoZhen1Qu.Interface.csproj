@@ -151,6 +151,7 @@
     <Compile Include="NLMFY\INLMFY_CQYZBLL.cs" />
     <Compile Include="NLMFY\INLMFY_DZWZMBLL.cs" />
     <Compile Include="NLMFY\INLMFY_FLNYBLL.cs" />
+    <Compile Include="NLMFY\INLMFY_NCPJGBLL.cs" />
     <Compile Include="NLMFY\INLMFY_NJJSBBLL.cs" />
     <Compile Include="NLMFY\INLMFY_NZWBLL.cs" />
     <Compile Include="NLMFY\INLMFY_SCBLL.cs" />

@@ -376,6 +376,7 @@
     <Content Include="Areas\Business\Css\NLMFY\NLMFY_CQYZ.css" />
     <Content Include="Areas\Business\Css\NLMFY\NLMFY_DZWZM.css" />
     <Content Include="Areas\Business\Css\NLMFY\NLMFY_FLNY.css" />
+    <Content Include="Areas\Business\Css\NLMFY\NLMFY_NCPJG.css" />
     <Content Include="Areas\Business\Css\NLMFY\NLMFY_NJJSB.css" />
     <Content Include="Areas\Business\Css\NLMFY\NLMFY_NZW.css" />
     <Content Include="Areas\Business\Css\NLMFY\NLMFY_SC.css" />
@@ -722,6 +723,8 @@
     <Content Include="Areas\Business\Scripts\Business\NLMFY\NLMFY_DZWZMYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\NLMFY\NLMFY_FLNY.js" />
     <Content Include="Areas\Business\Scripts\Business\NLMFY\NLMFY_FLNYYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\NLMFY\NLMFY_NCPJG.js" />
+    <Content Include="Areas\Business\Scripts\Business\NLMFY\NLMFY_NCPJGYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\NLMFY\NLMFY_NJJSB.js" />
     <Content Include="Areas\Business\Scripts\Business\NLMFY\NLMFY_NJJSBYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\NLMFY\NLMFY_NZW.js" />
@@ -1433,6 +1436,7 @@
     <Compile Include="Areas\Business\Controllers\NLMFY\NLMFY_CQYZController.cs" />
     <Compile Include="Areas\Business\Controllers\NLMFY\NLMFY_DZWZMController.cs" />
     <Compile Include="Areas\Business\Controllers\NLMFY\NLMFY_FLNYController.cs" />
+    <Compile Include="Areas\Business\Controllers\NLMFY\NLMFY_NCPJGController.cs" />
     <Compile Include="Areas\Business\Controllers\NLMFY\NLMFY_NJJSBController.cs" />
     <Compile Include="Areas\Business\Controllers\NLMFY\NLMFY_NZWController.cs" />
     <Compile Include="Areas\Business\Controllers\NLMFY\NLMFY_SCController.cs" />
@@ -1857,6 +1861,7 @@
     <Content Include="Areas\Business\Views\NLMFY_FLNY\NLMFY_FLNY.cshtml" />
     <Content Include="Areas\Business\Views\NLMFY_SLSY\NLMFY_SLSY.cshtml" />
     <Content Include="Areas\Business\Views\NLMFY_NJJSB\NLMFY_NJJSB.cshtml" />
+    <Content Include="Areas\Business\Views\NLMFY_NCPJG\NLMFY_NCPJG.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

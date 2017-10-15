@@ -144,6 +144,7 @@
     <Compile Include="BLL\NLMFY\NLMFY_CQYZBLL.cs" />
     <Compile Include="BLL\NLMFY\NLMFY_DZWZMBLL.cs" />
     <Compile Include="BLL\NLMFY\NLMFY_FLNYBLL.cs" />
+    <Compile Include="BLL\NLMFY\NLMFY_NCPJGBLL.cs" />
     <Compile Include="BLL\NLMFY\NLMFY_NJJSBBLL.cs" />
     <Compile Include="BLL\NLMFY\NLMFY_NZWBLL.cs" />
     <Compile Include="BLL\NLMFY\NLMFY_SCBLL.cs" />
