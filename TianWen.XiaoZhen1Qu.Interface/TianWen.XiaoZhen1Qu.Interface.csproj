@@ -148,8 +148,10 @@
     <Compile Include="LYJD\ILYJD_JPBLL.cs" />
     <Compile Include="LYJD\ILYJD_LXSBLL.cs" />
     <Compile Include="LYJD\ILYJD_ZBYBLL.cs" />
+    <Compile Include="NLMFY\INLMFY_CQYZBLL.cs" />
     <Compile Include="NLMFY\INLMFY_DZWZMBLL.cs" />
     <Compile Include="NLMFY\INLMFY_NZWBLL.cs" />
+    <Compile Include="NLMFY\INLMFY_SCBLL.cs" />
     <Compile Include="NLMFY\INLMFY_YLHHBLL.cs" />
     <Compile Include="PFCG\IPFCG_AFSBBLL.cs" />
     <Compile Include="PFCG\IPFCG_BZBLL.cs" />

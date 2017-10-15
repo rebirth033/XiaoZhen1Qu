@@ -104,7 +104,7 @@ function LoadXL() {
 }
 //小类标签切换
 function JCBQActive() {
-    LoadXLMC("小类", this.id);
+    LoadXLMC($("#spanLB").html(), this.id);
 }
 //加载小类名称
 function LoadXLMC(JCLX, JCBQ) {
@@ -114,6 +114,7 @@ function LoadXLMC(JCLX, JCBQ) {
         dataType: "json",
         data:
         {
+            TYPE: JCLX,
             HCPPBQ: JCBQ.split("div")[1]
         },
         success: function (xml) {

@@ -15,4 +15,14 @@
       <ref object="NLMFY_DZWZMBLL"/>
     </property>
   </object>
+  <object id="NLMFY_CQYZController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.NLMFY_CQYZController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="NLMFY_CQYZBLL">
+      <ref object="NLMFY_CQYZBLL"/>
+    </property>
+  </object>
+  <object id="NLMFY_SCController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.NLMFY_SCController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="NLMFY_SCBLL">
+      <ref object="NLMFY_SCBLL"/>
+    </property>
+  </object>
 </objects>
