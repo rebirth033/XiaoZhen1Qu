@@ -5341,4 +5341,532 @@ values (1779, '肥料/农药', '叶面肥', '23', 23, null);
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (1780, '肥料/农药', '营养液肥', '24', 24, null);
 
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1781, '饲料/兽药', '饼粕', '1', 1, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1782, '饲料/兽药', '麸皮', '2', 2, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1783, '饲料/兽药', '干草', '3', 3, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1784, '饲料/兽药', '浓缩饲料', '4', 4, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1785, '饲料/兽药', '配合饲料', '5', 5, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1786, '饲料/兽药', '青贮饲料', '6', 6, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1787, '饲料/兽药', '饲料昆虫', '7', 7, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1788, '饲料/兽药', '鱼粉', '8', 8, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1789, '饲料/兽药', '动物生长调节剂', '9', 9, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1790, '饲料/兽药', '抗氧化剂', '10', 10, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1791, '饲料/兽药', '营养物质添加剂', '11', 11, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1792, '饲料/兽药', '兽用杀虫剂', '12', 12, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1793, '饲料/兽药', '兽用杀菌剂', '13', 13, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1794, '饲料/兽药', '兽用疫苗', '14', 14, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1795, '饲料/兽药', '驴饲料', '15', 15, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1796, '饲料/兽药', '马饲料', '16', 16, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1797, '饲料/兽药', '虾饲料', '17', 17, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1798, '饲料/兽药', '蟹饲料', '18', 18, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1799, '饲料/兽药', '牛饲料', '19', 19, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1800, '饲料/兽药', '羊饲料', '20', 20, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1801, '饲料/兽药', '鸡饲料', '21', 21, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1802, '饲料/兽药', '鸭饲料', '22', 22, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1803, '饲料/兽药', '鹅饲料', '23', 23, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1804, '饲料/兽药', '鸽子饲料', '24', 24, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1805, '饲料/兽药', '鱼饲料', '25', 25, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1806, '农机具/设备', '土壤耕整机械', '1', 1, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1807, '农机具/设备', '排灌机械', '2', 2, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1808, '农机具/设备', '种植机械', '3', 3, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1809, '农机具/设备', '施肥/肥料机械', '4', 4, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1810, '农机具/设备', '收获机械', '5', 5, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1811, '农机具/设备', '植保机械', '6', 6, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1812, '农机具/设备', '茶叶机械', '7', 7, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1813, '农机具/设备', '粮油机械', '8', 8, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1814, '农机具/设备', '果蔬机械', '9', 9, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1815, '农机具/设备', '饲料机械', '10', 10, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1816, '农机具/设备', '畜牧饲养机械', '11', 11, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1817, '农机具/设备', '棉花机械', '12', 12, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1818, '农机具/设备', '动力输送机械', '13', 13, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1819, '农机具/设备', '农机配件', '14', 14, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1820, '土壤耕整机械', '翻转犁', 'F', 1, 1806);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1821, '土壤耕整机械', '铧式犁', 'H', 2, 1806);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1822, '土壤耕整机械', '开沟起垄机', 'K', 3, 1806);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1823, '土壤耕整机械', '联合整地机', 'L', 4, 1806);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1824, '土壤耕整机械', '灭茬机', 'M', 5, 1806);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1825, '土壤耕整机械', '平地机', 'P', 6, 1806);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1826, '土壤耕整机械', '松土机', 'S', 7, 1806);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1827, '土壤耕整机械', '挖坑机', 'W', 8, 1806);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1828, '土壤耕整机械', '旋耕机', 'X', 9, 1806);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1829, '土壤耕整机械', '圆盘犁', 'Y', 10, 1806);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1830, '排灌机械', '出水口阀', 'C', 1, 1807);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1831, '排灌机械', '滴灌系列', 'D', 2, 1807);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1832, '排灌机械', '过滤器', 'G', 3, 1807);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1833, '排灌机械', '喷灌系列', 'P', 4, 1807);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1834, '排灌机械', 'PE管材管件', 'P', 5, 1807);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1835, '排灌机械', 'PVC管材管件', 'P', 6, 1807);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1836, '排灌机械', '微喷系列', 'W', 7, 1807);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1837, '排灌机械', '温室大棚系列', 'W', 8, 1807);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1838, '种植机械', '播种机', 'B', 1, 1808);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1839, '种植机械', '插秧机', 'C', 2, 1808);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1840, '种植机械', '地膜机', 'D', 3, 1808);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1841, '种植机械', '食用菌生产机械', 'S', 4, 1808);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1842, '种植机械', '条播机', 'T', 5, 1808);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1843, '种植机械', '穴播机', 'X', 6, 1808);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1844, '种植机械', '移栽机', 'Y', 7, 1808);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1845, '种植机械', '栽植机', 'Z', 8, 1808);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1846, '施肥/肥料机械', '定量包装', 'D', 1, 1809);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1847, '施肥/肥料机械', '粉碎设备', 'F', 2, 1809);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1848, '施肥/肥料机械', '肥料生产线', 'F', 3, 1809);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1849, '施肥/肥料机械', '干燥设备', 'G', 4, 1809);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1850, '施肥/肥料机械', '混合搅拌', 'H', 5, 1809);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1851, '施肥/肥料机械', '冷却设备', 'L', 6, 1809);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1852, '施肥/肥料机械', '筛分设备', 'S', 7, 1809);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1853, '施肥/肥料机械', '追肥机', 'Z', 8, 1809);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1854, '施肥/肥料机械', '制粒设备', 'Z', 9, 1809);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1855, '收获机械', '剥壳机', 'B', 1, 1810);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1856, '收获机械', '仓储设备', 'C', 2, 1810);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1857, '收获机械', '打捆机', 'D', 3, 1810);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1858, '收获机械', '干燥机械', 'G', 4, 1810);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1859, '收获机械', '清选机', 'Q', 5, 1810);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1860, '收获机械', '收割机', 'S', 6, 1810);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1861, '收获机械', '收获机', 'S', 7, 1810);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1862, '收获机械', '脱粒机', 'T', 8, 1810);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1863, '收获机械', '摘果机', 'Z', 9, 1810);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1864, '收获机械', '种子加工机', 'Z', 10, 1810);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1865, '植保机械', '除草机', 'C', 1, 1811);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1866, '植保机械', '割草机', 'G', 2, 1811);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1867, '植保机械', '剪草机', 'J', 3, 1811);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1868, '植保机械', '绿篱机', 'L', 4, 1811);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1869, '植保机械', '培土机', 'P', 5, 1811);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1870, '植保机械', '喷雾器', 'P', 6, 1811);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1871, '植保机械', '喷粉机', 'P', 7, 1811);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1872, '植保机械', '烟雾机', 'Y', 8, 1811);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1873, '植保机械', '中耕机', 'Z', 9, 1811);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1874, '茶叶机械', '包揉机', 'B', 1, 1812);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1875, '茶叶机械', '采茶机', 'C', 2, 1812);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1876, '茶叶机械', '炒茶机', 'C', 3, 1812);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1877, '茶叶机械', '烘干机', 'H', 4, 1812);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1878, '茶叶机械', '拣梗机', 'L', 5, 1812);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1879, '茶叶机械', '理条机', 'L', 6, 1812);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1880, '茶叶机械', '切茶机', 'Q', 7, 1812);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1881, '茶叶机械', '揉捻机', 'R', 8, 1812);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1882, '茶叶机械', '杀青机', 'S', 9, 1812);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1883, '茶叶机械', '提香机', 'T', 10, 1812);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1884, '茶叶机械', '真空包装机', 'Z', 11, 1812);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1885, '粮油机械', '分级筛', 'F', 1, 1813);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1886, '粮油机械', '谷糙分离机', 'G', 2, 1813);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1887, '粮油机械', '精炼设备', 'J', 3, 1813);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1888, '粮油机械', '浸出设备', 'J', 4, 1813);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1889, '粮油机械', '碾米机', 'N', 5, 1813);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1890, '粮油机械', '抛光机', 'P', 6, 1813);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1891, '粮油机械', '去石机', 'Q', 7, 1813);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1892, '粮油机械', '吸粮机', 'X', 8, 1813);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1893, '粮油机械', '预榨机', 'Y', 9, 1813);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1894, '粮油机械', '榨油机', 'Z', 10, 1813);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1895, '果蔬机械', '分级机', 'F', 1, 1814);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1896, '果蔬机械', '果袋机', 'G', 2, 1814);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1897, '果蔬机械', '果蔬打浆机', 'G', 3, 1814);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1898, '果蔬机械', '果蔬破碎机', 'G', 4, 1814);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1899, '果蔬机械', '果蔬清洗机', 'G', 5, 1814);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1900, '果蔬机械', '果蔬榨汁机', 'G', 6, 1814);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1901, '果蔬机械', '去核机', 'Q', 7, 1814);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1902, '果蔬机械', '去皮机', 'Q', 8, 1814);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1903, '果蔬机械', '选果机', 'X', 9, 1814);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1904, '果蔬机械', '预煮机', 'Y', 10, 1814);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1905, '饲料机械', '包装配料', 'B', 1, 1815);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1906, '饲料机械', '除尘清理', 'C', 2, 1815);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1907, '饲料机械', '粉碎机', 'F', 3, 1815);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1908, '饲料机械', '分级设备', 'F', 4, 1815);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1909, '饲料机械', '干燥机', 'G', 5, 1815);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1910, '饲料机械', '混合机', 'H', 6, 1815);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1911, '饲料机械', '冷却喷涂', 'L', 7, 1815);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1912, '饲料机械', '膨化机', 'P', 8, 1815);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1913, '饲料机械', '饲料成套设备', 'S', 9, 1815);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1914, '饲料机械', '制粒机', 'Z', 10, 1815);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1915, '畜牧饲养机械', '孵化设备', 'F', 1, 1816);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1916, '畜牧饲养机械', '风机系列', 'F', 2, 1816);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1917, '畜牧饲养机械', '供暖设备', 'G', 3, 1816);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1918, '畜牧饲养机械', '水产养殖设备', 'S', 4, 1816);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1919, '畜牧饲养机械', '屠宰设备', 'T', 5, 1816);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1920, '畜牧饲养机械', '养鸡设备', 'Y', 6, 1816);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1921, '畜牧饲养机械', '养猪设备', 'Y', 7, 1816);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1922, '畜牧饲养机械', '抓捕设备', 'Z', 8, 1816);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1923, '棉花机械', '弹花机', 'T', 1, 1817);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1924, '棉花机械', '棉花打包机', 'M', 2, 1817);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1925, '棉花机械', '清弹机', 'Q', 3, 1817);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1926, '棉花机械', '梳理机', 'S', 4, 1817);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1927, '棉花机械', '提绒机组', 'T', 5, 1817);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1928, '棉花机械', '轧花机', 'Z', 6, 1817);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1929, '动力输送机械', '柴油机', 'C', 1, 1818);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1930, '动力输送机械', '叉车', 'C', 2, 1818);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1931, '动力输送机械', '发动机', 'F', 3, 1818);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1932, '动力输送机械', '给料机', 'J', 4, 1818);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1933, '动力输送机械', '汽油机', 'Q', 5, 1818);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1934, '动力输送机械', '升降台', 'S', 6, 1818);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1935, '动力输送机械', '输送机', 'S', 7, 1818);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1936, '动力输送机械', '拖拉机', 'T', 8, 1818);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1937, '动力输送机械', '提升机', 'T', 9, 1818);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1938, '动力输送机械', '装卸车', 'Z', 10, 1818);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1939, '动力输送机械', '装载机', 'Z', 11, 1818);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1940, '农机配件', '插秧机配件', 'C', 1, 1819);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1941, '农机配件', '割草机配件', 'G', 2, 1819);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1942, '农机配件', '农用车配件', 'N', 3, 1819);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1943, '农机配件', '农业仪器', 'N', 4, 1819);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1944, '农机配件', '收获机配件', 'S', 5, 1819);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1945, '农机配件', '拖拉机配件', 'T', 6, 1819);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1946, '农机配件', '微耕机配件', 'W', 7, 1819);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1947, '农机配件', '旋耕机配件', 'X', 8, 1819);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1948, '农产品加工', '食品加工', '1', 1, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1949, '农产品加工', '饮料加工', '2', 2, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1950, '农产品加工', '烟草加工', '3', 3, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1951, '农产品加工', '纺织', '4', 4, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1952, '农产品加工', '皮革毛皮羽绒加工', '5', 5, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1953, '农产品加工', '木材加工', '6', 6, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1954, '农产品加工', '家具制造', '7', 7, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1955, '农产品加工', '造纸', '8', 8, null);
+
+insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1956, '农产品加工', '橡胶制品加工', '9', 9, null);
+
 prompt Done.
