@@ -3,18 +3,18 @@ using NHibernate.Mapping.Attributes;
 
 namespace TianWen.XiaoZhen1Qu.Entities.Models
 {
-    public class NLMFY_YLHHJBXX
+    public class NLMFY_DZWZMJBXX
     {
-        public NLMFY_YLHHJBXX()
+        public NLMFY_DZWZMJBXX()
         {
-            NLMFY_YLHHJBXXID = Guid.NewGuid().ToString("N");
+            NLMFY_DZWZMJBXXID = Guid.NewGuid().ToString("N");
         }
 
         /// <summary>
-        /// 农林牧副渔_园林花卉信息ID
+        /// 农林牧副渔_动植物种苗信息ID
         /// </summary>
         [Id]
-        public virtual string NLMFY_YLHHJBXXID { get; set; }
+        public virtual string NLMFY_DZWZMJBXXID { get; set; }
 
         /// <summary>
         /// 基础信息ID
