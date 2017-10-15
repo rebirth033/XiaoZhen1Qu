@@ -25,4 +25,19 @@
       <ref object="NLMFY_SCBLL"/>
     </property>
   </object>
+  <object id="NLMFY_FLNYController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.NLMFY_FLNYController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="NLMFY_FLNYBLL">
+      <ref object="NLMFY_FLNYBLL"/>
+    </property>
+  </object>
+  <object id="NLMFY_SLSYController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.NLMFY_SLSYController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="NLMFY_SLSYBLL">
+      <ref object="NLMFY_SLSYBLL"/>
+    </property>
+  </object>
+  <object id="NLMFY_NJJSBController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.NLMFY_NJJSBController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="NLMFY_NJJSBBLL">
+      <ref object="NLMFY_NJJSBBLL"/>
+    </property>
+  </object>
 </objects>

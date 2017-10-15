@@ -167,8 +167,11 @@
     <Compile Include="Maps\LYJD\LYJD_ZBYJBXX_Map.cs" />
     <Compile Include="Maps\NLMFY\NLMFY_CQYZJBXX_Map.cs" />
     <Compile Include="Maps\NLMFY\NLMFY_DZWZMJBXX_Map.cs" />
+    <Compile Include="Maps\NLMFY\NLMFY_FLNYJBXX_Map.cs" />
+    <Compile Include="Maps\NLMFY\NLMFY_NJJSBJBXX_Map.cs" />
     <Compile Include="Maps\NLMFY\NLMFY_NZWJBXX_Map.cs" />
     <Compile Include="Maps\NLMFY\NLMFY_SCJBXX_Map.cs" />
+    <Compile Include="Maps\NLMFY\NLMFY_SLSYJBXX_Map.cs" />
     <Compile Include="Maps\NLMFY\NLMFY_YLHHJBXX_Map.cs" />
     <Compile Include="Maps\PFCG\PFCG_AFSBJBXX_Map.cs" />
     <Compile Include="Maps\PFCG\PFCG_BZJBXX_Map.cs" />
@@ -402,8 +405,11 @@
     <Compile Include="Models\LYJD\LYJD_ZBYJBXX.cs" />
     <Compile Include="Models\NLMFY\NLMFY_CQYZJBXX.cs" />
     <Compile Include="Models\NLMFY\NLMFY_DZWZMJBXX.cs" />
+    <Compile Include="Models\NLMFY\NLMFY_FLNYJBXX.cs" />
+    <Compile Include="Models\NLMFY\NLMFY_NJJSBJBXX.cs" />
     <Compile Include="Models\NLMFY\NLMFY_NZWJBXX.cs" />
     <Compile Include="Models\NLMFY\NLMFY_SCJBXX.cs" />
+    <Compile Include="Models\NLMFY\NLMFY_SLSYJBXX.cs" />
     <Compile Include="Models\NLMFY\NLMFY_YLHHJBXX.cs" />
     <Compile Include="Models\PFCG\PFCG_AFSBJBXX.cs" />
     <Compile Include="Models\PFCG\PFCG_BZJBXX.cs" />

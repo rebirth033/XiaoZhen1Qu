@@ -143,8 +143,11 @@
     <Compile Include="BLL\LYJD\LYJD_ZBYBLL.cs" />
     <Compile Include="BLL\NLMFY\NLMFY_CQYZBLL.cs" />
     <Compile Include="BLL\NLMFY\NLMFY_DZWZMBLL.cs" />
+    <Compile Include="BLL\NLMFY\NLMFY_FLNYBLL.cs" />
+    <Compile Include="BLL\NLMFY\NLMFY_NJJSBBLL.cs" />
     <Compile Include="BLL\NLMFY\NLMFY_NZWBLL.cs" />
     <Compile Include="BLL\NLMFY\NLMFY_SCBLL.cs" />
+    <Compile Include="BLL\NLMFY\NLMFY_SLSYBLL.cs" />
     <Compile Include="BLL\NLMFY\NLMFY_YLHHBLL.cs" />
     <Compile Include="BLL\PFCG\PFCG_AFSBBLL.cs" />
     <Compile Include="BLL\PFCG\PFCG_BZBLL.cs" />

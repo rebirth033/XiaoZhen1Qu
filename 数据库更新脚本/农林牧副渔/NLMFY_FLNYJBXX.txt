@@ -1,0 +1,46 @@
+-- Create table
+create table NLMFY_FLNYJBXX
+(
+  NLMFY_FLNYjbxxid VARCHAR2(50) not null,
+  jcxxid        VARCHAR2(50),
+  bcms          VARCHAR2(4000),
+  lb            VARCHAR2(20),
+  qy            VARCHAR2(20),
+  dd            VARCHAR2(20),
+  jtdz          VARCHAR2(200),
+  fwqy          VARCHAR2(200),
+  xl            VARCHAR2(20)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table NLMFY_FLNYJBXX
+  is '农林牧副渔_肥料农药';
+-- Add comments to the columns 
+comment on column NLMFY_FLNYJBXX.NLMFY_FLNYjbxxid
+  is '肥料农药基本信息ID';
+comment on column NLMFY_FLNYJBXX.jcxxid
+  is '基础信息ID';
+comment on column NLMFY_FLNYJBXX.bcms
+  is '补充描述';
+comment on column NLMFY_FLNYJBXX.lb
+  is '类别';
+comment on column NLMFY_FLNYJBXX.qy
+  is '区域';
+comment on column NLMFY_FLNYJBXX.dd
+  is '地段';
+comment on column NLMFY_FLNYJBXX.jtdz
+  is '具体地址';
+comment on column NLMFY_FLNYJBXX.fwqy
+  is '服务区域';
+comment on column NLMFY_FLNYJBXX.xl
+  is '小类';

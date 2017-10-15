@@ -375,8 +375,11 @@
     <Content Include="Areas\Business\Css\LYJD\LYJD_ZBY.css" />
     <Content Include="Areas\Business\Css\NLMFY\NLMFY_CQYZ.css" />
     <Content Include="Areas\Business\Css\NLMFY\NLMFY_DZWZM.css" />
+    <Content Include="Areas\Business\Css\NLMFY\NLMFY_FLNY.css" />
+    <Content Include="Areas\Business\Css\NLMFY\NLMFY_NJJSB.css" />
     <Content Include="Areas\Business\Css\NLMFY\NLMFY_NZW.css" />
     <Content Include="Areas\Business\Css\NLMFY\NLMFY_SC.css" />
+    <Content Include="Areas\Business\Css\NLMFY\NLMFY_SLSY.css" />
     <Content Include="Areas\Business\Css\NLMFY\NLMFY_YLHH.css" />
     <Content Include="Areas\Business\Css\PFCG\PFCG_JXJG.css" />
     <Content Include="Areas\Business\Css\PFCG\PFCG_KQ.css" />
@@ -717,10 +720,16 @@
     <Content Include="Areas\Business\Scripts\Business\NLMFY\NLMFY_CQYZYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\NLMFY\NLMFY_DZWZM.js" />
     <Content Include="Areas\Business\Scripts\Business\NLMFY\NLMFY_DZWZMYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\NLMFY\NLMFY_FLNY.js" />
+    <Content Include="Areas\Business\Scripts\Business\NLMFY\NLMFY_FLNYYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\NLMFY\NLMFY_NJJSB.js" />
+    <Content Include="Areas\Business\Scripts\Business\NLMFY\NLMFY_NJJSBYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\NLMFY\NLMFY_NZW.js" />
     <Content Include="Areas\Business\Scripts\Business\NLMFY\NLMFY_NZWYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\NLMFY\NLMFY_SC.js" />
     <Content Include="Areas\Business\Scripts\Business\NLMFY\NLMFY_SCYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\NLMFY\NLMFY_SLSY.js" />
+    <Content Include="Areas\Business\Scripts\Business\NLMFY\NLMFY_SLSYYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\NLMFY\NLMFY_YLHH.js" />
     <Content Include="Areas\Business\Scripts\Business\NLMFY\NLMFY_YLHHYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\PageJson.js" />
@@ -1423,8 +1432,11 @@
     <Compile Include="Areas\Business\Controllers\LYJD\LYJD_ZBYController.cs" />
     <Compile Include="Areas\Business\Controllers\NLMFY\NLMFY_CQYZController.cs" />
     <Compile Include="Areas\Business\Controllers\NLMFY\NLMFY_DZWZMController.cs" />
+    <Compile Include="Areas\Business\Controllers\NLMFY\NLMFY_FLNYController.cs" />
+    <Compile Include="Areas\Business\Controllers\NLMFY\NLMFY_NJJSBController.cs" />
     <Compile Include="Areas\Business\Controllers\NLMFY\NLMFY_NZWController.cs" />
     <Compile Include="Areas\Business\Controllers\NLMFY\NLMFY_SCController.cs" />
+    <Compile Include="Areas\Business\Controllers\NLMFY\NLMFY_SLSYController.cs" />
     <Compile Include="Areas\Business\Controllers\NLMFY\NLMFY_YLHHController.cs" />
     <Compile Include="Areas\Business\Controllers\PFCG\PFCG_AFSBController.cs" />
     <Compile Include="Areas\Business\Controllers\PFCG\PFCG_BZController.cs" />
@@ -1842,6 +1854,9 @@
     <Content Include="Areas\Business\Views\NLMFY_DZWZM\NLMFY_DZWZM.cshtml" />
     <Content Include="Areas\Business\Views\NLMFY_CQYZ\NLMFY_CQYZ.cshtml" />
     <Content Include="Areas\Business\Views\NLMFY_SC\NLMFY_SC.cshtml" />
+    <Content Include="Areas\Business\Views\NLMFY_FLNY\NLMFY_FLNY.cshtml" />
+    <Content Include="Areas\Business\Views\NLMFY_SLSY\NLMFY_SLSY.cshtml" />
+    <Content Include="Areas\Business\Views\NLMFY_NJJSB\NLMFY_NJJSB.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

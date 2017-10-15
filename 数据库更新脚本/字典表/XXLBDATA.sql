@@ -194,7 +194,7 @@ insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
 values (17, '大类', '婚庆摄影', 17, 0, null, null);
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (18, '大类', '农林牧副渔', 18, null, null, null);
+values (18, '大类', '农林牧副渔', 18, 0, null, null);
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
 values (19, '小类', '整租房/合租房', 1, 1, 'FC_ZZF', 'FC_ZZFJBXX');
@@ -638,31 +638,31 @@ insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
 values (276, '小类', '体育教练', 11, 14, 'JYPX_TYJL', 'JYPX_TYJLJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (278, '小类', '园林花卉', 1, 18, null, null);
+values (278, '小类', '园林花卉', 1, 18, 'NLMFY_YLHH', 'NLMFY_YLHHJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (279, '小类', '农作物', 2, 18, null, null);
+values (279, '小类', '农作物', 2, 18, 'NLMFY_NZW', 'NLMFY_NZWJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (280, '小类', '动植物种苗', 3, 18, null, null);
+values (280, '小类', '动植物种苗', 3, 18, 'NLMFY_DZWZM', 'NLMFY_DZWZMJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (281, '小类', '畜禽养殖', 4, 18, null, null);
+values (281, '小类', '畜禽养殖', 4, 18, 'NLMFY_CQYZ', 'NLMFY_CQYZJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (282, '小类', '水产', 5, 18, null, null);
+values (282, '小类', '水产', 5, 18, 'NLMFY_SC', 'NLMFY_SCJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (283, '小类', '农药/肥料', 6, 18, null, null);
+values (283, '小类', '肥料/农药', 6, 18, 'NLMFY_FLNY', 'NLMFY_FLNYJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (284, '小类', '饲料/兽药', 7, 18, null, null);
+values (284, '小类', '饲料/兽药', 7, 18, 'NLMFY_SLSY', 'NLMFY_SLSYJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (285, '小类', '农机具/设备', 8, 18, null, null);
+values (285, '小类', '农机具/设备', 8, 18, 'NLMFY_NJJSB', 'NLMFY_NJJSBJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
-values (286, '小类', '农产品加工/代理', 9, 18, null, null);
+values (286, '小类', '农产品加工', 9, 18, 'NLMFY_NCPJG', 'NLMFY_NCPJGJBXX');
 
 insert into xxlb (LBID, LBLX, LBNAME, LBORDER, PARENTID, FBYM, FBTABLE)
 values (199, '小类', '文体/户外/乐器', 2, 29, 'ES_WHYL_WTHWYQ', 'ES_WHYL_WTHWYQJBXX');
