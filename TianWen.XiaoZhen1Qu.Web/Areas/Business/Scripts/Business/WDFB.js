@@ -56,7 +56,7 @@ function LoadDefault(TYPE, PageIndex) {
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-            
+
         }
     });
 }
@@ -211,12 +211,24 @@ function LoadPage(PageCount) {
     if (index > 1) {
         $("#div_main_info_bottom_fy").append('<a onclick="LoadDefault(\'' + "divZJFBXX" + '\',\'' + (index - 1) + '\')" class="a_main_info_bottom_fy">上一页</a>');
     }
+
     for (var i = 1; i <= PageCount; i++) {
         if (i === index)
             $("#div_main_info_bottom_fy").append('<a onclick="LoadDefault(\'' + "divZJFBXX" + '\',\'' + i + '\')" class="a_main_info_bottom_fy a_main_info_bottom_fy_current">' + i + '</a>');
         else
-            $("#div_main_info_bottom_fy").append('<a onclick="LoadDefault(\'' + "divZJFBXX" + '\',\'' + i + '\')" class="a_main_info_bottom_fy">' + i + '</a>');
+        {
+            if (i >= index - 4 && i <= index + 4) {
+                $("#div_main_info_bottom_fy").append('<a onclick="LoadDefault(\'' + "divZJFBXX" + '\',\'' + i + '\')" class="a_main_info_bottom_fy">' + i + '</a>');
+            }
+        }
     }
+
+    if (PageCount > 10) {
+        $("#div_main_info_bottom_fy").append("...");
+        $("#div_main_info_bottom_fy").append('<a onclick="LoadDefault(\'' + "divZJFBXX" + '\',\'' + PageCount - 1 + '\')" class="a_main_info_bottom_fy">' + parseInt(PageCount)-1 + '</a>');
+        $("#div_main_info_bottom_fy").append('<a onclick="LoadDefault(\'' + "divZJFBXX" + '\',\'' + PageCount + '\')" class="a_main_info_bottom_fy">' + PageCount + '</a>');
+    }
+
     if (index < PageCount) {
         $("#div_main_info_bottom_fy").append('<a onclick="LoadDefault(\'' + "divZJFBXX" + '\',\'' + (index + 1) + '\')" class="a_main_info_bottom_fy">下一页</a>');
     }
