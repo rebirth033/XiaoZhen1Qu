@@ -735,7 +735,7 @@
     <Content Include="Areas\Business\Scripts\Business\NLMFY\NLMFY_SLSYYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\NLMFY\NLMFY_YLHH.js" />
     <Content Include="Areas\Business\Scripts\Business\NLMFY\NLMFY_YLHHYZ.js" />
-    <Content Include="Areas\Business\Scripts\Business\PageJson.js" />
+    <Content Include="Areas\Business\Scripts\Business\Common\PageJson.js" />
     <Content Include="Areas\Business\Scripts\Business\PFCG\PFCG_AFSB.js" />
     <Content Include="Areas\Business\Scripts\Business\PFCG\PFCG_AFSBYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\PFCG\PFCG_BZ.js" />
@@ -780,7 +780,7 @@
     <Content Include="Areas\Business\Scripts\Business\PFCG\PFCG_YCLYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\PFCG\PFCG_YX.js" />
     <Content Include="Areas\Business\Scripts\Business\PFCG\PFCG_YXYZ.js" />
-    <Content Include="Areas\Business\Scripts\Business\Public_TP.js" />
+    <Content Include="Areas\Business\Scripts\Business\Common\Public_TP.js" />
     <Content Include="Areas\Business\Scripts\Business\PWKQ\PWKQ_DYP.js" />
     <Content Include="Areas\Business\Scripts\Business\PWKQ\PWKQ_DYPYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\PWKQ\PWKQ_QTKQ.js" />
