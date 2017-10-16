@@ -892,8 +892,8 @@
     <Content Include="Areas\Business\Scripts\Business\SWFW\SWFW_ZHFWYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\SWFW\SWFW_ZK.js" />
     <Content Include="Areas\Business\Scripts\Business\SWFW\SWFW_ZKYZ.js" />
-    <Content Include="Areas\Business\Scripts\Business\WDFB.js" />
-    <Content Include="Areas\Business\Scripts\Business\WDSC.js" />
+    <Content Include="Areas\Business\Scripts\Business\YHGL\WDFB.js" />
+    <Content Include="Areas\Business\Scripts\Business\YHGL\WDSC.js" />
     <Content Include="Areas\Business\Scripts\Business\WDXJ\WDXJ_CZ.js" />
     <Content Include="Areas\Business\Scripts\Business\WDXJ\WDXJ_MXCX.js" />
     <Content Include="Areas\Business\Scripts\Business\WZCX\WZCX.js" />
@@ -918,10 +918,10 @@
     <Content Include="Areas\Business\Scripts\Business\XXYL\XXYL_ZLAM.js" />
     <Content Include="Areas\Business\Scripts\Business\XXYL\XXYL_ZLAMYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\YHDLXX.js" />
-    <Content Include="Areas\Business\Scripts\Business\YHGL.js" />
+    <Content Include="Areas\Business\Scripts\Business\YHGL\YHGL.js" />
     <Content Include="Areas\Business\Scripts\Business\YHJBXX.js" />
     <Content Include="Areas\Business\Scripts\Business\YXCZ\YXCZ.js" />
-    <Content Include="Areas\Business\Scripts\Business\YXYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\YHGL\YXYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\YXYZCG.js" />
     <Content Include="Areas\Business\Scripts\Business\ZHBD\WBBD.js" />
     <Content Include="Areas\Business\Scripts\Business\ZHBD\WXBD.js" />
