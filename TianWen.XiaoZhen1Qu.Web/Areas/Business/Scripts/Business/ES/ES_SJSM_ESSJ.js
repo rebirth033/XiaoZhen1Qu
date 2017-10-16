@@ -117,11 +117,12 @@ function LoadSJPP() {
 function LoadSJXH(SJPP) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadSJXH",
+        url: getRootPath() + "/Business/Common/LoadByParentID",
         dataType: "json",
         data:
         {
-            SJPP: SJPP
+            ParentID: SJPP,
+            TBName: "CODES_ES_SJSM"
         },
         success: function (xml) {
             if (xml.Result === 1) {

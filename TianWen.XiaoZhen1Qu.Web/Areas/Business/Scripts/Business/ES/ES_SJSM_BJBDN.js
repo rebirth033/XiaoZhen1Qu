@@ -169,11 +169,12 @@ function LoadBJBPP() {
 function LoadBJBXH(BJBPP) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadBJBXH",
+        url: getRootPath() + "/Business/Common/LoadByParentID",
         dataType: "json",
         data:
         {
-            BJBPP: BJBPP
+            ParentID: BJBPP,
+            TBName: "CODES_ES_SJSM"
         },
         success: function (xml) {
             if (xml.Result === 1) {

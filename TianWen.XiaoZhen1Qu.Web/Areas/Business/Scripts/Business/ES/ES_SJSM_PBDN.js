@@ -143,12 +143,13 @@ function LoadPBPP() {
 function LoadPBXH() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadPBXH",
+        url: getRootPath() + "/Business/Common/LoadByParentID",
         dataType: "json",
         data:
         {
-            PBPP: $("#PPID").val()
-},
+            ParentID: $("#PPID").val(),
+            TBName: "CODES_ES_SJSM"
+        },
         success: function (xml) {
             if (xml.Result === 1) {
                 var html = "<ul class='uldropdown' style='overflow-y: scroll;height:340px;width:200px'>";

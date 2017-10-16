@@ -80,12 +80,6 @@ namespace TianWen.XiaoZhen1Qu.Interface
 
         object LoadSQByQY(string QY);
 
-        object LoadSJXHBySJPP(string SJPP);
-        
-        object LoadBJBXHByBJBPP(string BJBPP);
-
-        object LoadPBXHByPBPP(string PBPP);
-
         string GetYHZHXXIDByYHID(string YHID);
 
         YHJBXX GetYHJBXXByYHM(string YHM);
@@ -112,7 +106,7 @@ namespace TianWen.XiaoZhen1Qu.Interface
 
         object LoadHCPPXX(string HCPPBQ);
 
-        object LoadByParentID(string LBID, string TBName);
+        object LoadByParentID(string ParentID, string TBName);
 
         object LoadYLHHXX(string HCPPBQ, string TYPE);
     }
