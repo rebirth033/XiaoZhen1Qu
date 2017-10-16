@@ -7,6 +7,8 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
     public class CommonController : BaseController
     {
         public ICommonBLL CommonBLL { get; set; }
+
+        //根据基础信息ID和类别ID获取
         public JsonResult GetIDByJCXXIDAndLBID()
         {
             string LBID = Request["LBID"];
@@ -14,33 +16,40 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             object result = CommonBLL.GetIDByJCXXIDAndLBID(JCXXID, LBID);
             return Json(result);
         }
-
+        //根据行政区级别获取行政区
         public JsonResult GetDistrictByGrade()
         {
             string Grade = Request["Grade"];
             object result = CommonBLL.GetDistrictByGrade(Grade);
             return Json(result);
         }
-
+        //根据行政区简称获取行政区
         public JsonResult GetDistrictByShortName()
         {
             string Grade = Request["ShortName"];
             object result = CommonBLL.GetDistrictByShortName(Grade);
             return Json(result);
         }
-
+        //获取父级行政区
         public JsonResult GetDistrictBySuperCode()
         {
             string SuperCode = Request["SuperCode"];
             object result = CommonBLL.GetDistrictBySuperCode(SuperCode);
             return Json(result);
         }
-
+        //根据行政区编码获取省内同级行政区
         public JsonResult GetDistrictTJByXZQDM()
         {
             string XZQDM = Request["XZQDM"];
             object result = CommonBLL.GetDistrictTJByXZQDM(XZQDM);
             return Json(result);
+        }
+        //切换行政区
+        public JsonResult QHXZQ()
+        {
+            Session["XZQ"] = Request["XZQ"];
+            Session["XZQDM"] = Request["XZQDM"];
+            return Json(new { Result = EnResultType.Success });
         }
 
         public JsonResult LoadCODES_FC()
@@ -54,7 +63,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             string TYPENAME = Request["TYPENAME"];
             return Json(CommonBLL.LoadCODES_ES_SJSM(TYPENAME));
         }
-        
+
         public JsonResult LoadCODES_ES_JDJJBG()
         {
             string TYPENAME = Request["TYPENAME"];
@@ -175,23 +184,11 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return Json(CommonBLL.LoadCODES_NLMFY(TYPENAME));
         }
 
-        public JsonResult QHXZQ()
-        {
-            Session["XZQ"] = Request["XZQ"];
-            Session["XZQDM"] = Request["XZQDM"];
-            return Json(new { Result = EnResultType.Success });
-        }
-
         public JsonResult LoadQY()
         {
             return Json(CommonBLL.LoadQYBySuperName(Session["XZQ"].ToString()));
         }
-
-        public JsonResult LoadQYByXZQ()
-        {
-            return Json(CommonBLL.LoadQYBySuperName(Request["XZQ"].ToString()));
-        }
-
+        
         public JsonResult LoadSQ()
         {
             return Json(CommonBLL.LoadSQByQY(Request["QY"]));
@@ -251,7 +248,6 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         {
             return Json(CommonBLL.LoadJCPPXX(Request["JCLX"], Request["JCBQ"]));
         }
-        
 
         public JsonResult LoadKCCXXX()
         {

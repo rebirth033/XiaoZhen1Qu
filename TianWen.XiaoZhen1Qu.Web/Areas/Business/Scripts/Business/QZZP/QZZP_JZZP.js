@@ -321,7 +321,7 @@ function SetZWFL(lbs) {
 function LoadQY() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadQYByXZQ",
+        url: getRootPath() + "/Business/Common/LoadQY",
         dataType: "json",
         data:
         {
