@@ -43,42 +43,16 @@ function LoadDefault() {
         ue.setHeight(200);
     });
 }
-//加载文体/母婴/儿童类别
-function LoadDropdown(type, id) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_ZSJM",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: type
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectLB(this,\"" + id + "\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#div" + id).html(html);
-                $("#div" + id).css("display", "block");
-                ActiveStyle(id);
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
 //加载适合人群
 function LoadSHRQ() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_ZSJM",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "适合人群"
+            TYPENAME: "适合人群",
+            TBName: "CODES_ZSJM"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -305,19 +279,19 @@ function SetZSDQ(lbs) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadDropdown("文体/母婴/儿童", "LB");
+            LoadCODESByTYPENAME("文体/母婴/儿童", "LB", "CODES_ZSJM");
         }
         if (type === "PPLS") {
-            LoadDropdown("品牌历史", "PPLS");
+            LoadCODESByTYPENAME("品牌历史", "PPLS", "CODES_ZSJM");
         }
         if (type === "TZJE") {
-            LoadDropdown("投资金额", "TZJE");
+            LoadCODESByTYPENAME("投资金额", "TZJE", "CODES_ZSJM");
         }
         if (type === "QGFDS") {
-            LoadDropdown("全国分店数", "QGFDS");
+            LoadCODESByTYPENAME("全国分店数", "QGFDS", "CODES_ZSJM");
         }
         if (type === "DDMJ") {
-            LoadDropdown("单店面积", "DDMJ");
+            LoadCODESByTYPENAME("单店面积", "DDMJ", "CODES_ZSJM");
         }
         if (type === "QY") {
             LoadQY();

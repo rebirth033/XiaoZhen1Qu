@@ -43,11 +43,12 @@ function LoadDefault() {
 function LoadMFHFLB() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_LR",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "美发护发"
+            TYPENAME: "美发护发",
+            TBName: "CODES_LR"
         },
         success: function (xml) {
             if (xml.Result === 1) {

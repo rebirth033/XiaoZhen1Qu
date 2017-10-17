@@ -40,6 +40,8 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_CW>(String.Format("FROM CODES_CW WHERE TYPENAME = '{0}' ORDER BY CODEORDER", TYPENAME)) };
                 if (TBName == "CODES_CY")
                     return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_CY>(String.Format("FROM CODES_CY WHERE TYPENAME = '{0}' ORDER BY CODEORDER", TYPENAME)) };
+                if (TBName == "CODES_LR")
+                    return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_LR>(String.Format("FROM CODES_LR WHERE TYPENAME = '{0}' ORDER BY CODEORDER", TYPENAME)) };
                 if (TBName == "CODES_XXYL")
                     return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_XXYL>(String.Format("FROM CODES_XXYL WHERE TYPENAME = '{0}' ORDER BY CODEORDER", TYPENAME)) };
                 if (TBName == "CODES_ZXJC")
@@ -64,36 +66,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 return new { Result = EnResultType.Failed, Message = "加载失败" };
             }
         }
-
-
-
-        public object LoadCODES_LR(string TYPENAME)
-        {
-            try
-            {
-                IList<CODES_LR> list = DAO.Repository.GetObjectList<CODES_LR>(String.Format("FROM CODES_LR WHERE TYPENAME='{0}' ORDER BY CODEORDER", TYPENAME));
-                return new { Result = EnResultType.Success, list = list };
-            }
-            catch (Exception ex)
-            {
-                LoggerManager.Error("error", ex.Message);
-                return new { Result = EnResultType.Failed, Message = "加载失败" };
-            }
-        }
-
-        public object LoadCODES_ZSJM(string TYPENAME)
-        {
-            try
-            {
-                IList<CODES_ZSJM> list = DAO.Repository.GetObjectList<CODES_ZSJM>(String.Format("FROM CODES_ZSJM WHERE TYPENAME='{0}' ORDER BY CODEORDER", TYPENAME));
-                return new { Result = EnResultType.Success, list = list };
-            }
-            catch (Exception ex)
-            {
-                LoggerManager.Error("error", ex.Message);
-                return new { Result = EnResultType.Failed, Message = "加载失败" };
-            }
-        }
+        
 
         public object LoadCODES_PFCG(string TYPENAME)
         {

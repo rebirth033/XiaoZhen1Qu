@@ -43,42 +43,16 @@ function LoadDefault() {
         ue.setHeight(200);
     });
 }
-//加载机械类别
-function LoadDropdown(type, id) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_ZSJM",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: type
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectLB(this,\"" + id + "\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#div" + id).html(html);
-                $("#div" + id).css("display", "block");
-                ActiveStyle(id);
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
 //加载适合人群
 function LoadSHRQ() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_ZSJM",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "适合人群"
+            TYPENAME: "适合人群",
+            TBName: "CODES_ZSJM"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -142,45 +116,10 @@ function SelectLB(obj, type, codeid) {
 }
 //判断类别
 function PDLB(name, codeid) {
-    if (name.indexOf("机械") !== -1)
-        LoadJXXL(codeid);
+    
+        
 }
-//加载机械小类
-function LoadJXXL(codeid) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadJXXX",
-        dataType: "json",
-        data:
-        {
-            JXID: codeid
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='ulFWPZ'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liJXXL' onclick='SelectJXXL(this)'><img class='img_JXXL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i === 5 || i === 11 || i === 17 || i === 23 || i === 29) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
-                    }
-                }
-                html += "</ul>";
-                $("#divJXXLText").html(html);
-                $(".img_JXXL").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
 
-                if (parseInt(xml.list.length % 6) === 0)
-                    $("#divJXXL").css("height", parseInt(xml.list.length / 6) * 45 + "px");
-                else
-                    $("#divJXXL").css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
-
-                $("#divJXXL").css("display", "");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
 //选择机械小类
 function SelectJXXL(obj) {
     if ($(obj).find("img").attr("src").indexOf("blue") !== -1)
@@ -263,19 +202,19 @@ function SetZSDQ(lbs) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadDropdown("机械", "LB");
+            LoadCODESByTYPENAME("机械", "LB", "CODES_ZSJM");
         }
         if (type === "PPLS") {
-            LoadDropdown("品牌历史", "PPLS");
+            LoadCODESByTYPENAME("品牌历史", "PPLS", "CODES_ZSJM");
         }
         if (type === "TZJE") {
-            LoadDropdown("投资金额", "TZJE");
+            LoadCODESByTYPENAME("投资金额", "TZJE", "CODES_ZSJM");
         }
         if (type === "QGFDS") {
-            LoadDropdown("全国分店数", "QGFDS");
+            LoadCODESByTYPENAME("全国分店数", "QGFDS", "CODES_ZSJM");
         }
         if (type === "DDMJ") {
-            LoadDropdown("单店面积", "DDMJ");
+            LoadCODESByTYPENAME("单店面积", "DDMJ", "CODES_ZSJM");
         }
         if (type === "QY") {
             LoadQY();
