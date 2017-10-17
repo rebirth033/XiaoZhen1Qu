@@ -39,33 +39,6 @@ function LoadDefault() {
         ue.setHeight(200);
     });
 }
-//加载家具维修类别
-function LoadLB() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_SHFW",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "家具维修"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectLB(this,\"LB\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divLB").html(html);
-                $("#divLB").css("display", "block");
-                ActiveStyle("LB");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
 //选择类别下拉框
 function SelectLB(obj, type, id) {
     $("#span" + type).html(obj.innerHTML);
@@ -75,11 +48,12 @@ function SelectLB(obj, type, id) {
 function LoadXL() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadBJQXXX",
+        url: getRootPath() + "/Business/Common/LoadByParentID",
         dataType: "json",
         data:
         {
-            LBID: $("#LBID").val()
+            ParentID: $("#LBID").val(),
+            TBName:"CODES_SHFW"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -102,7 +76,7 @@ function LoadXL() {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadLB();
+            LoadCODESByTYPENAME("家具维修", "LB", "CODES_SHFW");
         }
         if (type === "XL") {
             LoadXL();

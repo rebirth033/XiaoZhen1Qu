@@ -74,11 +74,12 @@ function SetSFSM(sfsm) {
 function LoadCWKJPGLB() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_SWFW",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "财务会计/评估"
+            TYPENAME: "财务会计/评估",
+            TBName: "CODES_SWFW"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -133,9 +134,6 @@ function SetCWKJPGLB(lbs) {
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadLB();
-        }
         if (type === "QY") {
             LoadQY();
         }

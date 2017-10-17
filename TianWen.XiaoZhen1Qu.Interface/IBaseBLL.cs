@@ -5,8 +5,7 @@ namespace TianWen.XiaoZhen1Qu.Interface
     public interface IBaseBLL
     {
         
-
-        object LoadCODES_SHFW(string TYPENAME);
+        
 
         object LoadCODES_SWFW(string TYPENAME);
 

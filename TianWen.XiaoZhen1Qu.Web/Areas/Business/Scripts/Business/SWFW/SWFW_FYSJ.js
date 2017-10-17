@@ -47,10 +47,7 @@ function LoadYZ() {
     var arrayObj = new Array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
     var html = "";
     for (var i = 0; i < arrayObj.length; i++) {
-        if (i === 0)
-            html += '<div class="divstep_yx" id="div' + arrayObj[i] + '" style="width:62px;"><span class="spanstep_yx" id="span' + arrayObj[i] + '">' + "热门" + '</span><em class="emstep_yx" id="em' + arrayObj[i] + '"></em></div>';
-        else
-            html += '<div class="divstep_yx" id="div' + arrayObj[i] + '"><span class="spanstep_yx" id="span' + arrayObj[i] + '">' + arrayObj[i] + '</span><em class="emstep_yx" id="em' + arrayObj[i] + '"></em></div>';
+        html += '<div class="divstep_yx" id="div' + arrayObj[i] + '"><span class="spanstep_yx" id="span' + arrayObj[i] + '">' + arrayObj[i] + '</span><em class="emstep_yx" id="em' + arrayObj[i] + '"></em></div>';
     }
     $("#div_content_yxbq").html(html);
     $(".divstep_yx").bind("click", JCBQActive);
@@ -94,33 +91,6 @@ function YZXZ(YZMC, YZID) {
     $("#spanYZ").html(YZMC);
     $("#divYZ").css("display", "none");
 }
-//加载翻译/速记类别
-function LoadLB() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_SWFW",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "翻译/速记"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectLB(this,\"LB\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divLB").html(html);
-                $("#divLB").css("display", "block");
-                ActiveStyle("LB");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
 //选择类别下拉框
 function SelectLB(obj, type, id) {
     $("#span" + type).html(obj.innerHTML);
@@ -132,11 +102,12 @@ function SelectLB(obj, type, id) {
 function LoadXL(lbmc, xl) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_SWFW",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: lbmc
+            TYPENAME: lbmc,
+            TBName: "CODES_SWFW"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -201,11 +172,12 @@ function SetXL(lbs) {
 function LoadZYLY() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_SWFW",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "专业领域"
+            TYPENAME: "专业领域",
+            TBName: "CODES_SWFW"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -267,11 +239,12 @@ function SetZYLY(lbs) {
 function LoadWJLX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_SWFW",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "文件类型"
+            TYPENAME: "文件类型",
+            TBName: "CODES_SWFW"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -333,7 +306,7 @@ function SetWJLX(lbs) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadLB();
+            LoadCODESByTYPENAME("翻译/速记", "LB", "CODES_SWFW");
         }
         if (type === "YZ") {
             LoadYZ();
