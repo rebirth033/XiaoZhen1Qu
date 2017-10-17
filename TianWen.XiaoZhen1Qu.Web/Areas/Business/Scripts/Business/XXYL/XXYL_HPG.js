@@ -44,11 +44,12 @@ function LoadDefault() {
 function LoadSNSBLB() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_XXYL",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "室内设备"
+            TYPENAME: "室内设备",
+            TBName: "CODES_XXYL"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -70,33 +71,6 @@ function LoadSNSBLB() {
         }
     });
 }
-//加载可容纳人数
-function LoadKRNRS() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_XXYL",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "可容纳人数"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"KRNRS\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divKRNRS").html(html);
-                $("#divKRNRS").css("display", "block");
-                ActiveStyle("KRNRS");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
 //选择房屋配置
 function SelectSNSBLB(obj) {
     if ($(obj).find("img").attr("src").indexOf("blue") !== -1)
@@ -108,11 +82,11 @@ function SelectSNSBLB(obj) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadLB();
+            LoadSNSBLB();
         }
         if (type === "KRNRS") {
-            LoadKRNRS();
-        } 
+            LoadCODESByTYPENAME("可容纳人数", "KRNRS", "CODES_XXYL");
+        }
         if (type === "QY") {
             LoadQY();
         }

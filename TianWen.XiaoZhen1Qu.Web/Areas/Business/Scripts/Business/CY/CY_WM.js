@@ -43,11 +43,12 @@ function LoadDefault() {
 function LoadWMLB() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_CY",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "外卖"
+            TYPENAME: "外卖",
+            TBName: "CODES_CY"
         },
         success: function (xml) {
             if (xml.Result === 1) {

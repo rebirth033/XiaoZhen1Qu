@@ -39,33 +39,6 @@ function LoadDefault() {
         ue.setHeight(200);
     });
 }
-//加载棋牌桌游类别
-function LoadLB() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_XXYL",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "棋牌桌游"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"LB\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divLB").html(html);
-                $("#divLB").css("display", "block");
-                ActiveStyle("LB");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
 //选择房屋配置
 function SelectHWLB(obj) {
     if ($(obj).find("img").attr("src").indexOf("blue") !== -1)
@@ -77,7 +50,7 @@ function SelectHWLB(obj) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadLB();
+            LoadCODESByTYPENAME("棋牌桌游", "LB", "CODES_XXYL");
         }
         if (type === "QY") {
             LoadQY();

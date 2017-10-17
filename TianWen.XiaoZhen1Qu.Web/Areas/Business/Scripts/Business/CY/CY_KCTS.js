@@ -43,11 +43,12 @@ function LoadDefault() {
 function LoadKCTSLB() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_CY",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "快餐/团膳"
+            TYPENAME: "快餐/团膳",
+            TBName: "CODES_CY"
         },
         success: function (xml) {
             if (xml.Result === 1) {

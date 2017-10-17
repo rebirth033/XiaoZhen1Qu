@@ -234,11 +234,6 @@ function SelectDropdown(obj, type) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
 }
-//选择类别下拉框
-function SelectLB(obj, type) {
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
-}
 //选择工程车品牌
 function SelectPBPP(obj, type, code) {
     $("#span" + type).html(obj.innerHTML);

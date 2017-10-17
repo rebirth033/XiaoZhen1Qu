@@ -43,11 +43,12 @@ function LoadDefault() {
 function LoadMSLB() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_CY",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "美食"
+            TYPENAME: "美食",
+            TBName: "CODES_CY"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -140,7 +141,7 @@ function SetMSLB(lbs) {
                 $(this).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
         });
     }
-    
+
 }
 //发布
 function FB() {

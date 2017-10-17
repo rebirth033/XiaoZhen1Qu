@@ -43,11 +43,12 @@ function LoadDefault() {
 function LoadZLAMLB() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_XXYL",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "足疗按摩"
+            TYPENAME: "足疗按摩",
+            TBName: "CODES_XXYL"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -68,13 +69,6 @@ function LoadZLAMLB() {
 
         }
     });
-}
-//选择房屋配置
-function SelectZLAMLB(obj) {
-    if ($(obj).find("img").attr("src").indexOf("blue") !== -1)
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-    else
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
 }
 //绑定下拉框鼠标点击样式
 function BindClick(type) {

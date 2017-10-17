@@ -5,7 +5,7 @@
     $(".div_content").css("margin-left", (document.documentElement.clientWidth - 900) / 2);
     $("#spanCXLB").bind("click", CXLB);
 });
-
+//根据TYPENAME获取字典表
 function LoadCODESByTYPENAME(type, id, table) {
     $.ajax({
         type: "POST",
@@ -32,4 +32,9 @@ function LoadCODESByTYPENAME(type, id, table) {
 
         }
     });
+}
+//选择类别下拉框
+function SelectLB(obj, type) {
+    $("#span" + type).html(obj.innerHTML);
+    $("#div" + type).css("display", "none");
 }
