@@ -48,17 +48,6 @@ namespace TianWen.XiaoZhen1Qu.Interface
 
         object LoadCODES_NLMFY(string TYPENAME);
 
-        object LoadGCQXJBXX(string GCQX);
-
-        object LoadHCJBXX(string HC);
-
-        object LoadGCCJBXX(string GCC);
-
-        object LoadGCCPPXX(string GCCLX, string GCCBP);
-
-        object LoadKCPPXX(string KCLX, string KCBQ);
-
-        object LoadJCPPXX(string JCLX, string JCBQ);
 
         object LoadBJQXXX(string LBID);
 
@@ -74,17 +63,10 @@ namespace TianWen.XiaoZhen1Qu.Interface
 
         string GetLBQCByLBID(int LBID);
 
-        object LoadMRBJXX(string name);
-
-        object LoadLPXSPXX(string name);
 
         object LoadZWLBXX(string typename);
 
-        object LoadYZXX(string YZBQ);
 
-        object LoadGJXX(string GJBQ);
-
-        object LoadLXGJXX(string GJBQ);
 
         object LoadBYYXXX(string BYYXBQ);
 
@@ -92,6 +74,8 @@ namespace TianWen.XiaoZhen1Qu.Interface
         object LoadHCPPXX(string HCPPBQ);
 
         object LoadByParentID(string ParentID, string TBName);
+
+        object LoadByCodeValueAndTypeName(string CODEVALUE, string TYPENAME, string TBName);
 
         object LoadYLHHXX(string HCPPBQ, string TYPE);
     }

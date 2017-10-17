@@ -198,69 +198,14 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return Json(CommonBLL.LoadSQByQY(Request["QY"]));
         }
 
-        public JsonResult LoadGCQXJBXX()
+        public JsonResult LoadByCodeValueAndTypeName()
         {
-            return Json(CommonBLL.LoadGCQXJBXX(Request["GCQX"]));
-        }
-
-        public JsonResult LoadHCJBXX()
-        {
-            return Json(CommonBLL.LoadHCJBXX(Request["HC"]));
-        }
-
-        public JsonResult LoadGCCJBXX()
-        {
-            return Json(CommonBLL.LoadGCCJBXX(Request["GCC"]));
-        }
-
-        public JsonResult LoadGCCPPXX()
-        {
-            return Json(CommonBLL.LoadGCCPPXX(Request["GCCLX"], Request["GCCBQ"]));
-        }
-
-        public JsonResult LoadKCPPXX()
-        {
-            return Json(CommonBLL.LoadKCPPXX(Request["KCLX"], Request["KCBQ"]));
-        }
-
-        public JsonResult LoadJCPPXX()
-        {
-            return Json(CommonBLL.LoadJCPPXX(Request["JCLX"], Request["JCBQ"]));
-        }
-
-        public JsonResult LoadCWPZXX()
-        {
-            return Json(CommonBLL.LoadCWPZXX(Request["CWG"]));
-        }
-
-        public JsonResult LoadMRBJXX()
-        {
-            return Json(CommonBLL.LoadMRBJXX(Request["name"]));
-        }
-
-        public JsonResult LoadLPXSPXX()
-        {
-            return Json(CommonBLL.LoadLPXSPXX(Request["name"]));
+            return Json(CommonBLL.LoadByCodeValueAndTypeName(Request["CODEVALUE"], Request["TYPENAME"], Request["TBName"]));
         }
 
         public JsonResult LoadZWLBXX()
         {
             return Json(CommonBLL.LoadZWLBXX(Request["TYPENAME"]));
-        }
-
-        public JsonResult LoadYZXX()
-        {
-            return Json(CommonBLL.LoadYZXX(Request["YZBQ"]));
-        }
-
-        public JsonResult LoadGJXX()
-        {
-            return Json(CommonBLL.LoadGJXX(Request["GJBQ"]));
-        }
-
-        public JsonResult LoadLXGJXX()
-        {
-            return Json(CommonBLL.LoadLXGJXX(Request["GJBQ"]));
         }
 
         public JsonResult LoadBYYXXX()

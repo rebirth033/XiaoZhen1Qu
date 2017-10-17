@@ -149,11 +149,12 @@ function PDLB(name, codeid) {
 function LoadMRBJXL(codeid) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadJXXX",
+        url: getRootPath() + "/Business/Common/LoadByParentID",
         dataType: "json",
         data:
         {
-            JXID: codeid
+            ParentID: codeid,
+            TBName: "CODES_ZSJM"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -174,43 +175,6 @@ function LoadMRBJXL(codeid) {
                     $("#divMRBJXL").css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
 
                 $("#divMRBJXL").css("display", "");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载美容保健小类
-function LoadMRBJXLByName(name, xl) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadMRBJXX",
-        dataType: "json",
-        data:
-        {
-            name: name
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='ulFWPZ'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liMRBJXL' onclick='SelectMRBJXL(this)'><img class='img_MRBJXL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i === 5 || i === 11 || i === 17 || i === 23 || i === 29) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
-                    }
-                }
-                html += "</ul>";
-                $("#divMRBJXLText").html(html);
-                $(".img_MRBJXL").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-
-                if (parseInt(xml.list.length % 6) === 0)
-                    $("#divMRBJXL").css("height", parseInt(xml.list.length / 6) * 45 + "px");
-                else
-                    $("#divMRBJXL").css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
-
-                $("#divMRBJXL").css("display", "");
-                SetMRBJXL(xl);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -356,7 +320,7 @@ function LoadZSJM_MRBJJBXX() {
                 LoadPhotos(xml.Value.Photos);
                 SetSHRQ(xml.Value.ZSJM_MRBJJBXX.SHRQ);
                 SetZSDQ(xml.Value.ZSJM_MRBJJBXX.ZSDQ);
-                if (xml.Value.ZSJM_MRBJJBXX.LB.indexOf("化妆品") !== -1 || xml.Value.ZSJM_MRBJJBXX.LB.indexOf("美容SPA") !== -1 || xml.Value.ZSJM_MRBJJBXX.LB.indexOf("养生保健") !== -1){
+                if (xml.Value.ZSJM_MRBJJBXX.LB.indexOf("化妆品") !== -1 || xml.Value.ZSJM_MRBJJBXX.LB.indexOf("美容SPA") !== -1 || xml.Value.ZSJM_MRBJJBXX.LB.indexOf("养生保健") !== -1) {
                     LoadMRBJXLByName(xml.Value.ZSJM_MRBJJBXX.LB, xml.Value.ZSJM_MRBJJBXX.XL);
                 }
             }

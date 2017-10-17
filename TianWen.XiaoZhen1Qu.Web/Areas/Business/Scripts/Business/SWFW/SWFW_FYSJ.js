@@ -63,11 +63,13 @@ function JCBQActive() {
 function LoadYZMC(JCLX, JCBQ) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadYZXX",
+        url: getRootPath() + "/Business/Common/LoadByCodeValueAndTypeName",
         dataType: "json",
         data:
         {
-            YZBQ: JCBQ.split("div")[1]
+            CODEVALUE: JCBQ.split("div")[1],
+            TYPENAME: "语种",
+            TBName: "CODES_SWFW"
         },
         success: function (xml) {
             if (xml.Result === 1) {

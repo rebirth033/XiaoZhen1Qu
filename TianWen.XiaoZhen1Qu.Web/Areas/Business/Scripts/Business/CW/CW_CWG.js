@@ -49,11 +49,13 @@ function CWGBQActive() {
 function LoadCWGPZ(CWG) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCWPZXX",
+        url: getRootPath() + "/Business/Common/LoadByCodeValueAndTypeName",
         dataType: "json",
         data:
         {
-            CWG: CWG.split("div")[1]
+            CODEVALUE: CWG.split("div")[1],
+            TYPENAME: "宠物狗",
+            TBName: "CODES_CW"
         },
         success: function (xml) {
             if (xml.Result === 1) {

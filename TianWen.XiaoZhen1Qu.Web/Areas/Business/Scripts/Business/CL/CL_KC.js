@@ -49,12 +49,13 @@ function KCBQActive() {
 function LoadPPMC(KCLX, KCBQ) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadKCPPXX",
+        url: getRootPath() + "/Business/Common/LoadByCodeValueAndTypeName",
         dataType: "json",
         data:
         {
-            KCLX: KCLX,
-            KCBQ: KCBQ.split("div")[1]
+            CODEVALUE: KCBQ.split("div")[1],
+            TYPENAME: "客车品牌",
+            TBName: "CODES_CL"
         },
         success: function (xml) {
             if (xml.Result === 1) {

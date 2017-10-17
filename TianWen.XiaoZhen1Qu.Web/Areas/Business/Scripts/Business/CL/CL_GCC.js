@@ -47,11 +47,13 @@ function GCCBQActive() {
 function LoadGCCMC(GCC) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadGCCJBXX",
+        url: getRootPath() + "/Business/Common/LoadByCodeValueAndTypeName",
         dataType: "json",
         data:
         {
-            GCC: GCC.split("div")[1]
+            CODEVALUE: GCC.split("div")[1],
+            TYPENAME: "工程车",
+            TBName: "CODES_CL"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -105,12 +107,13 @@ function YXBQActive() {
 function LoadPPMC(GCCLX, GCCBQ) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadGCCPPXX",
+        url: getRootPath() + "/Business/Common/LoadByCodeValueAndTypeName",
         dataType: "json",
         data:
         {
-            GCCLX: GCCLX,
-            GCCBQ: GCCBQ.split("div")[1]
+            CODEVALUE: GCCBQ.split("div")[1],
+            TYPENAME: "挖掘机品牌",
+            TBName: "CODES_CL"
         },
         success: function (xml) {
             if (xml.Result === 1) {

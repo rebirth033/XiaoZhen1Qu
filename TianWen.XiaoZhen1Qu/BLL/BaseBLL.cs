@@ -347,89 +347,6 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
-        public object LoadGCQXJBXX(string GCQX)
-        {
-            try
-            {
-                IList<CODES_ES_QTES> list = DAO.Repository.GetObjectList<CODES_ES_QTES>(String.Format("FROM CODES_ES_QTES WHERE CODEVALUE like '%{0}%' ORDER BY CODEORDER", GCQX));
-                return new { Result = EnResultType.Success, list = list };
-            }
-            catch (Exception ex)
-            {
-                LoggerManager.Error("error", ex.Message);
-                return new { Result = EnResultType.Failed, Message = "加载失败" };
-            }
-        }
-
-        public object LoadHCJBXX(string HC)
-        {
-            try
-            {
-                IList<CODES_CL> list = DAO.Repository.GetObjectList<CODES_CL>(String.Format("FROM CODES_CL WHERE TYPENAME = '货车品牌' AND CODEVALUE like '%{0}%' ORDER BY CODEORDER", HC));
-                return new { Result = EnResultType.Success, list = list };
-            }
-            catch (Exception ex)
-            {
-                LoggerManager.Error("error", ex.Message);
-                return new { Result = EnResultType.Failed, Message = "加载失败" };
-            }
-        }
-
-        public object LoadGCCJBXX(string GCC)
-        {
-            try
-            {
-                IList<CODES_CL> list = DAO.Repository.GetObjectList<CODES_CL>(String.Format("FROM CODES_CL WHERE TYPENAME = '工程车' AND CODEVALUE like '%{0}%' ORDER BY CODEORDER", GCC));
-                return new { Result = EnResultType.Success, list = list };
-            }
-            catch (Exception ex)
-            {
-                LoggerManager.Error("error", ex.Message);
-                return new { Result = EnResultType.Failed, Message = "加载失败" };
-            }
-        }
-
-        public object LoadGCCPPXX(string GCCLX, string GCCBQ)
-        {
-            try
-            {
-                IList<CODES_CL> list = DAO.Repository.GetObjectList<CODES_CL>(String.Format("FROM CODES_CL WHERE TYPENAME = '{0}' AND CODEVALUE like '%{1}%' ORDER BY CODEORDER", GCCLX, GCCBQ));
-                return new { Result = EnResultType.Success, list = list };
-            }
-            catch (Exception ex)
-            {
-                LoggerManager.Error("error", ex.Message);
-                return new { Result = EnResultType.Failed, Message = "加载失败" };
-            }
-        }
-
-        public object LoadKCPPXX(string KCLX, string KCBQ)
-        {
-            try
-            {
-                IList<CODES_CL> list = DAO.Repository.GetObjectList<CODES_CL>(String.Format("FROM CODES_CL WHERE TYPENAME = '{0}' AND CODEVALUE like '%{1}%' ORDER BY CODEORDER", KCLX, KCBQ));
-                return new { Result = EnResultType.Success, list = list };
-            }
-            catch (Exception ex)
-            {
-                LoggerManager.Error("error", ex.Message);
-                return new { Result = EnResultType.Failed, Message = "加载失败" };
-            }
-        }
-
-        public object LoadJCPPXX(string JCLX, string JCBQ)
-        {
-            try
-            {
-                IList<CODES_CL_JC> list = DAO.Repository.GetObjectList<CODES_CL_JC>(String.Format("FROM CODES_CL_JC WHERE TYPENAME = '{0}' AND CODEVALUE like '%{1}%' ORDER BY CODEORDER", JCLX, JCBQ));
-                return new { Result = EnResultType.Success, list = list };
-            }
-            catch (Exception ex)
-            {
-                LoggerManager.Error("error", ex.Message);
-                return new { Result = EnResultType.Failed, Message = "加载失败" };
-            }
-        }
 
         public object LoadBJQXXX(string LBID)
         {
@@ -474,12 +391,33 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
-        public object LoadYZXX(string YZBQ)
+        public object LoadByCodeValueAndTypeName(string CODEVALUE, string TYPENAME, string TBName)
         {
             try
             {
-                IList<CODES_SWFW> list = DAO.Repository.GetObjectList<CODES_SWFW>(String.Format("FROM CODES_SWFW WHERE CODEVALUE = '{0}' ORDER BY CODEORDER", YZBQ));
-                return new { Result = EnResultType.Success, list = list };
+                if (TBName == "CODES_ES_SJSM")
+                    return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_ES_SJSM>(String.Format("FROM CODES_ES_SJSM WHERE CODEVALUE = '{0}' AND TYPENAME = '{1}' ORDER BY CODEORDER", CODEVALUE, TYPENAME)) };
+                if (TBName == "CODES_ES_QTES")
+                    return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_ES_QTES>(String.Format("FROM CODES_ES_QTES WHERE CODEVALUE = '{0}' AND TYPENAME = '{1}' ORDER BY CODEORDER", CODEVALUE, TYPENAME)) };
+                if (TBName == "CODES_PFCG")
+                    return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_PFCG>(String.Format("FROM CODES_PFCG WHERE CODEVALUE = '{0}' AND TYPENAME = '{1}' ORDER BY CODEORDER", CODEVALUE, TYPENAME)) };
+                if (TBName == "CODES_CL")
+                    return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_CL>(String.Format("FROM CODES_CL WHERE CODEVALUE = '{0}' AND TYPENAME = '{1}' ORDER BY CODEORDER", CODEVALUE, TYPENAME)) };
+                if (TBName == "CODES_CL_JC")
+                    return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_CL_JC>(String.Format("FROM CODES_CL_JC WHERE CODEVALUE = '{0}' AND TYPENAME = '{1}' ORDER BY CODEORDER", CODEVALUE, TYPENAME)) };
+                if (TBName == "CODES_CW")
+                    return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_CW>(String.Format("FROM CODES_CW WHERE CODEVALUE = '{0}' AND TYPENAME = '{1}' ORDER BY CODEORDER", CODEVALUE, TYPENAME)) };
+                if (TBName == "CODES_ZXJC")
+                    return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_ZXJC>(String.Format("FROM CODES_ZXJC WHERE CODEVALUE = '{0}' AND TYPENAME = '{1}' ORDER BY CODEORDER", CODEVALUE, TYPENAME)) };
+                if (TBName == "CODES_ZSJM")
+                    return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_ZSJM>(String.Format("FROM CODES_ZSJM WHERE CODEVALUE = '{0}' AND TYPENAME = '{1}' ORDER BY CODEORDER", CODEVALUE, TYPENAME)) };
+                if (TBName == "CODES_SWFW")
+                    return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_SWFW>(String.Format("FROM CODES_SWFW WHERE CODEVALUE = '{0}' AND TYPENAME = '{1}' ORDER BY CODEORDER", CODEVALUE, TYPENAME)) };
+                if (TBName == "CODES_JYPX")
+                    return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_JYPX>(String.Format("FROM CODES_JYPX WHERE CODEVALUE = '{0}' AND TYPENAME = '{1}' ORDER BY CODEORDER", CODEVALUE, TYPENAME)) };
+                if (TBName == "CODES_NLMFY")
+                    return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_NLMFY>(String.Format("FROM CODES_NLMFY WHERE CODEVALUE = '{0}' AND TYPENAME = '{1}' ORDER BY CODEORDER", CODEVALUE, TYPENAME)) };
+                return new { Result = EnResultType.Failed, Message = "表名未找到" };
             }
             catch (Exception ex)
             {
@@ -487,34 +425,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 return new { Result = EnResultType.Failed, Message = "加载失败" };
             }
         }
-
-        public object LoadGJXX(string GJBQ)
-        {
-            try
-            {
-                IList<CODES_SWFW> list = DAO.Repository.GetObjectList<CODES_SWFW>(String.Format("FROM CODES_SWFW WHERE CODEVALUE = '{0}' ORDER BY CODEORDER", GJBQ));
-                return new { Result = EnResultType.Success, list = list };
-            }
-            catch (Exception ex)
-            {
-                LoggerManager.Error("error", ex.Message);
-                return new { Result = EnResultType.Failed, Message = "加载失败" };
-            }
-        }
-
-        public object LoadLXGJXX(string GJBQ)
-        {
-            try
-            {
-                IList<CODES_JYPX> list = DAO.Repository.GetObjectList<CODES_JYPX>(String.Format("FROM CODES_JYPX WHERE CODEVALUE = '{0}' ORDER BY CODEORDER", GJBQ));
-                return new { Result = EnResultType.Success, list = list };
-            }
-            catch (Exception ex)
-            {
-                LoggerManager.Error("error", ex.Message);
-                return new { Result = EnResultType.Failed, Message = "加载失败" };
-            }
-        }
+        
 
         public object LoadBYYXXX(string BYYXBQ)
         {
@@ -622,44 +533,6 @@ namespace TianWen.XiaoZhen1Qu.BLL
             XXLB xl = DAO.Repository.GetObjectById<XXLB>(LBID);
             XXLB dl = DAO.Repository.GetObjectById<XXLB>(xl.PARENTID);
             return dl.LBNAME + "-" + xl.LBNAME;
-        }
-
-        public object LoadMRBJXX(string name)
-        {
-            try
-            {
-                IList<CODES_ZSJM> listmrbjxx = new List<CODES_ZSJM>();
-                IList<CODES_ZSJM> list = DAO.Repository.GetObjectList<CODES_ZSJM>(String.Format("FROM CODES_ZSJM WHERE CODENAME = '{0}' ORDER BY CODEORDER", name));
-                if (list.Count > 0)
-                {
-                    listmrbjxx = DAO.Repository.GetObjectList<CODES_ZSJM>(String.Format("FROM CODES_ZSJM WHERE PARENTID = '{0}' ORDER BY CODEORDER", list.FirstOrDefault().CODEID));
-                }
-                return new { Result = EnResultType.Success, list = listmrbjxx };
-            }
-            catch (Exception ex)
-            {
-                LoggerManager.Error("error", ex.Message);
-                return new { Result = EnResultType.Failed, Message = "加载失败" };
-            }
-        }
-
-        public object LoadLPXSPXX(string name)
-        {
-            try
-            {
-                IList<CODES_ZSJM> listmrbjxx = new List<CODES_ZSJM>();
-                IList<CODES_ZSJM> list = DAO.Repository.GetObjectList<CODES_ZSJM>(String.Format("FROM CODES_ZSJM WHERE CODENAME = '{0}' ORDER BY CODEORDER", name));
-                if (list.Count > 0)
-                {
-                    listmrbjxx = DAO.Repository.GetObjectList<CODES_ZSJM>(String.Format("FROM CODES_ZSJM WHERE PARENTID = '{0}' ORDER BY CODEORDER", list.FirstOrDefault().CODEID));
-                }
-                return new { Result = EnResultType.Success, list = listmrbjxx };
-            }
-            catch (Exception ex)
-            {
-                LoggerManager.Error("error", ex.Message);
-                return new { Result = EnResultType.Failed, Message = "加载失败" };
-            }
         }
 
         public object LoadZWLBXX(string typename)

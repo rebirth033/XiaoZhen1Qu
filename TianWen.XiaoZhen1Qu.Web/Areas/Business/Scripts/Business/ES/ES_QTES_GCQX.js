@@ -47,11 +47,13 @@ function YXBQActive() {
 function LoadPPMC(GCQX) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadGCQXJBXX",
+        url: getRootPath() + "/Business/Common/LoadByCodeValueAndTypeName",
         dataType: "json",
         data:
         {
-            GCQX: GCQX.split("div")[1]
+            CODEVALUE: GCQX.split("div")[1],
+            TYPENAME: "工程器械",
+            TBName: "CODES_ES_QTES"
         },
         success: function (xml) {
             if (xml.Result === 1) {

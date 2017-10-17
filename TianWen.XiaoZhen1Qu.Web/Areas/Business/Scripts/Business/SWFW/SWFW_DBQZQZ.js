@@ -47,9 +47,7 @@ function LoadGJ() {
     var arrayObj = new Array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
     var html = "";
     for (var i = 0; i < arrayObj.length; i++) {
-        if (i === 0)
-            html += '<div class="divstep_yx" id="div' + arrayObj[i] + '" style="width:62px;"><span class="spanstep_yx" id="span' + arrayObj[i] + '">' + "热门" + '</span><em class="emstep_yx" id="em' + arrayObj[i] + '"></em></div>';
-        else
+
             html += '<div class="divstep_yx" id="div' + arrayObj[i] + '"><span class="spanstep_yx" id="span' + arrayObj[i] + '">' + arrayObj[i] + '</span><em class="emstep_yx" id="em' + arrayObj[i] + '"></em></div>';
     }
     $("#div_content_yxbq").html(html);
@@ -60,14 +58,16 @@ function JCBQActive() {
     LoadGJMC("国家", this.id);
 }
 //加载国家名称
-function LoadGJMC(JCLX, JCBQ) {
+function LoadGJMC(JCLX, GJBQ) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadGJXX",
+        url: getRootPath() + "/Business/Common/LoadByCodeValueAndTypeName",
         dataType: "json",
         data:
         {
-            GJBQ: JCBQ.split("div")[1]
+            CODEVALUE: GJBQ.split("div")[1],
+            TYPENAME: "国家",
+            TBName: "CODES_SWFW"
         },
         success: function (xml) {
             if (xml.Result === 1) {

@@ -52,12 +52,13 @@ function JCBQActive() {
 function LoadPPMC(JCLX, JCBQ) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadJCPPXX",
+        url: getRootPath() + "/Business/Common/LoadByCodeValueAndTypeName",
         dataType: "json",
         data:
         {
-            JCLX: JCLX,
-            JCBQ: JCBQ.split("div")[1]
+            CODEVALUE: JCBQ.split("div")[1],
+            TYPENAME: "轿车品牌",
+            TBName: "CODES_CL_JC"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -157,7 +158,7 @@ function BindClick(type) {
         }
         if (type.indexOf("PZSZCS") !== -1) {
             LoadPZSZCS(type);
-        } 
+        }
     });
 }
 //加载牌照所在省份
@@ -174,7 +175,7 @@ function LoadPZSZSF() {
             if (xml.Result === 1) {
                 var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectPZSZSF(this,\"PZSZSF\",\"" + xml.list[i].CODE + "\")'>" + RTrim(RTrim(xml.list[i].NAME, '市'),'省') + "</li>";
+                    html += "<li class='lidropdown' onclick='SelectPZSZSF(this,\"PZSZSF\",\"" + xml.list[i].CODE + "\")'>" + RTrim(RTrim(xml.list[i].NAME, '市'), '省') + "</li>";
                 }
                 html += "</ul>";
                 $("#divPZSZSF").html(html);

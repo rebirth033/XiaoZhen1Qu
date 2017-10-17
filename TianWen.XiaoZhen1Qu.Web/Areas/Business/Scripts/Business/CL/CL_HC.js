@@ -46,11 +46,13 @@ function YXBQActive() {
 function LoadPPMC(HC) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadHCJBXX",
+        url: getRootPath() + "/Business/Common/LoadByCodeValueAndTypeName",
         dataType: "json",
         data:
         {
-            HC: HC.split("div")[1]
+            CODEVALUE: HC.split("div")[1],
+            TYPENAME: "货车品牌",
+            TBName: "CODES_CL"
         },
         success: function (xml) {
             if (xml.Result === 1) {
