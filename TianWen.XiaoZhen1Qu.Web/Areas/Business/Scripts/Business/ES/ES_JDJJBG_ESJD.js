@@ -17,7 +17,6 @@ $(document).ready(function () {
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
 
     LoadTXXX();
-    LoadESJDLB();
     LoadDefault();
     LoadES_JDJJBG_ESJDJBXX();
     BindClick("LB");
@@ -65,127 +64,19 @@ function SJHSSelect() {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadESJDLB();
+            LoadCODESByTYPENAME("二手家电", "LB", "CODES_ES_JDJJBG");
         }
         if (type === "XL") {
-            LoadFZXMXBXL();
+            LoadCODESByTYPENAME($("#spanLB").html(), "XL", "CODES_ES_JDJJBG");
         }
         if (type === "XJ") {
-            LoadXJ();
+            LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM");
         }
         if (type === "QY") {
             LoadQY();
         }
         if (type === "DD") {
             LoadDD($("#QYCode").val());
-        }
-    });
-}
-//加载二手家电类别
-function LoadESJDLB() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_ES_JDJJBG",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "二手家电"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;height:340px;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectLB(this,\"LB\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divLB").html(html);
-                $("#divLB").css("display", "block");
-                ActiveStyle("LB");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载二手家电小类
-function LoadESJDXL(type) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_ES_JDJJBG",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: type
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"XL\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divXL").html(html);
-                $("#divXL").css("display", "block");
-                ActiveStyle("XL");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载二手家电详细参数
-function LoadXXCS(id, type) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_ES_JDJJBG",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: type
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"" + id + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#div" + id).html(html);
-                $("#div" + id).css("display", "block");
-                ActiveStyle(id);
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载二手家电新旧
-function LoadXJ() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "新旧程度"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"XJ\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divXJ").html(html);
-                $("#divXJ").css("display", "block");
-                ActiveStyle("XJ");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
         }
     });
 }
@@ -203,8 +94,8 @@ function PDLB(LB) {
         $("#divKTXXCS").css("display", "none");
         $("#divBXXXCS").css("display", "none");
         $("#divBGXXCS").css("display", "none");
-        LoadXXCS("DSPMCC", "电视屏幕尺寸");
-        LoadXXCS("DSPP", "电视品牌");
+        LoadCODESByTYPENAME("电视屏幕尺寸", "DSPMCC", "CODES_ES_JDJJBG");
+        LoadCODESByTYPENAME("电视品牌", "DSPP", "CODES_ES_JDJJBG");
         BindClick("DSPMCC");
         BindClick("DSPP");
     }
@@ -214,7 +105,7 @@ function PDLB(LB) {
         $("#divKTXXCS").css("display", "none");
         $("#divBXXXCS").css("display", "none");
         $("#divBGXXCS").css("display", "none");
-        LoadXXCS("XYJPP", "洗衣机品牌");
+        LoadCODESByTYPENAME("洗衣机品牌", "XYJPP", "CODES_ES_JDJJBG");
         BindClick("XYJPP");
     }
     else if (LB === "空调") {
@@ -223,9 +114,9 @@ function PDLB(LB) {
         $("#divKTXXCS").css("display", "");
         $("#divBXXXCS").css("display", "none");
         $("#divBGXXCS").css("display", "none");
-        LoadXXCS("KTPP", "空调品牌");
-        LoadXXCS("BPDS", "变频定速");
-        LoadXXCS("KTGL", "空调功率");
+        LoadCODESByTYPENAME("空调品牌", "KTPP", "CODES_ES_JDJJBG");
+        LoadCODESByTYPENAME("变频定速", "BPDS", "CODES_ES_JDJJBG");
+        LoadCODESByTYPENAME("空调功率", "KTGL", "CODES_ES_JDJJBG");
         BindClick("KTPP");
         BindClick("BPDS");
         BindClick("KTGL");
@@ -236,7 +127,7 @@ function PDLB(LB) {
         $("#divKTXXCS").css("display", "none");
         $("#divBXXXCS").css("display", "");
         $("#divBGXXCS").css("display", "none");
-        LoadXXCS("BXPP", "冰箱品牌");
+        LoadCODESByTYPENAME("冰箱品牌", "BXPP", "CODES_ES_JDJJBG");
         BindClick("BXPP");
     }
     else if (LB === "冰柜") {
@@ -245,7 +136,7 @@ function PDLB(LB) {
         $("#divKTXXCS").css("display", "none");
         $("#divBXXXCS").css("display", "none");
         $("#divBGXXCS").css("display", "");
-        LoadXXCS("BGPP", "冰柜品牌");
+        LoadCODESByTYPENAME("冰柜品牌", "BGPP", "CODES_ES_JDJJBG");
         BindClick("BGPP");
     }
     else {
@@ -255,7 +146,6 @@ function PDLB(LB) {
         $("#divBXXXCS").css("display", "none");
         $("#divBGXXCS").css("display", "none");
     }
-    LoadESJDXL(LB);
     BindClick("XL");
 }
 //选择二手家电品牌

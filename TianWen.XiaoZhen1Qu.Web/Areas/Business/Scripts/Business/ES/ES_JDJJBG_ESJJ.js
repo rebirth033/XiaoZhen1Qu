@@ -17,7 +17,6 @@ $(document).ready(function () {
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
 
     LoadTXXX();
-    LoadESJJLB();
     LoadDefault();
     LoadES_JDJJBG_ESJJJBXX();
     BindClick("LB");
@@ -63,127 +62,19 @@ function SJHSSelect() {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadESJJLB();
+            LoadCODESByTYPENAME("二手家具", "LB", "CODES_ES_JDJJBG");
         }
         if (type === "XL") {
-            LoadESJJXL();
+            LoadCODESByTYPENAME($("#spanLB").html(), "XL", "CODES_ES_JDJJBG");
         }
         if (type === "XJ") {
-            LoadXJ();
+            LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM");
         }
         if (type === "QY") {
             LoadQY();
         }
         if (type === "DD") {
             LoadDD($("#QYCode").val());
-        }
-    });
-}
-//加载二手家具类别
-function LoadESJJLB() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_ES_JDJJBG",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "二手家具"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;height:340px;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectLB(this,\"LB\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divLB").html(html);
-                $("#divLB").css("display", "block");
-                ActiveStyle("LB");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载二手家具小类
-function LoadESJJXL(type) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_ES_JDJJBG",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: type
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"XL\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divXL").html(html);
-                $("#divXL").css("display", "block");
-                ActiveStyle("XL");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载二手家具详细参数
-function LoadXXCS(id, type) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_ES_JDJJBG",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: type
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"" + id + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#div" + id).html(html);
-                $("#div" + id).css("display", "block");
-                ActiveStyle(id);
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载二手家具新旧
-function LoadXJ() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "新旧程度"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"XJ\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divXJ").html(html);
-                $("#divXJ").css("display", "block");
-                ActiveStyle("XJ");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
         }
     });
 }
@@ -198,21 +89,20 @@ function PDLB(LB) {
     if (LB === "床") {
         $("#divCXXCS").css("display", "");
         $("#divCDXXCS").css("display", "none");
-        LoadXXCS("CCC", "床尺寸");
-        BindHover("CCC");
+        LoadCODESByTYPENAME("床尺寸", "CCC", "CODES_ES_JDJJBG");
+        BindClick("CCC");
     }
     else if (LB === "床垫") {
         $("#divCXXCS").css("display", "none");
         $("#divCDXXCS").css("display", "");
-        LoadXXCS("CDCC", "床尺寸");
-        BindHover("CDCC");
+        LoadCODESByTYPENAME("床尺寸", "CDCC", "CODES_ES_JDJJBG");
+        BindClick("CDCC");
     }
     else {
         $("#divCXXCS").css("display", "none");
         $("#divCDXXCS").css("display", "none");
     }
-    LoadESJJXL(LB);
-    BindHover("XL");
+    BindClick("XL");
 }
 //选择二手家具品牌
 function SelectPBPP(obj, type, code) {

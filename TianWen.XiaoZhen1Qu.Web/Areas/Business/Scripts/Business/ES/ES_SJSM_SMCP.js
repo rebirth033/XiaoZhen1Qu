@@ -84,11 +84,12 @@ function BindClick(type) {
 function LoadSMCPLB() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_ES_SJSM",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "数码产品类别"
+            TYPENAME: "数码产品类别",
+            TBName: "CODES_ES_SJSM"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -111,11 +112,12 @@ function LoadSMCPLB() {
 function LoadSMCPXL(type) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_ES_SJSM",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: type
+            TYPENAME: type,
+            TBName: "CODES_ES_SJSM"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -138,11 +140,12 @@ function LoadSMCPXL(type) {
 function LoadXJ() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "新旧程度"
+            TYPENAME: "新旧程度",
+            TBName: "CODES_ES_SJSM"
         },
         success: function (xml) {
             if (xml.Result === 1) {

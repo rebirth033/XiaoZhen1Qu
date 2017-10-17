@@ -5,9 +5,6 @@ namespace TianWen.XiaoZhen1Qu.Interface
     public interface IBaseBLL
     {
 
-        object LoadCODES_ES_SJSM(string TYPENAME);
-
-        object LoadCODES_ES_JDJJBG(string TYPENAME);
 
         object LoadCODES_ES_MYFZMR(string TYPENAME);
 

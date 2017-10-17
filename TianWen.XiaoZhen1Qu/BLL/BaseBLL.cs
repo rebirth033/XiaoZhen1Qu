@@ -20,6 +20,10 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_FC>(String.Format("FROM CODES_FC WHERE TYPENAME = '{0}' ORDER BY CODEORDER", TYPENAME)) };
                 if (TBName == "CODES_ES_SJSM")
                     return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_ES_SJSM>(String.Format("FROM CODES_ES_SJSM WHERE TYPENAME = '{0}' ORDER BY CODEORDER", TYPENAME)) };
+                if (TBName == "CODES_ES_JDJJBG")
+                    return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_ES_JDJJBG>(String.Format("FROM CODES_ES_JDJJBG WHERE TYPENAME = '{0}' ORDER BY CODEORDER", TYPENAME)) };
+                if (TBName == "CODES_ES_MYFZMR")
+                    return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_ES_MYFZMR>(String.Format("FROM CODES_ES_MYFZMR WHERE TYPENAME = '{0}' ORDER BY CODEORDER", TYPENAME)) };
                 if (TBName == "CODES_ES_QTES")
                     return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_ES_QTES>(String.Format("FROM CODES_ES_QTES WHERE TYPENAME = '{0}' ORDER BY CODEORDER", TYPENAME)) };
                 if (TBName == "CODES_PFCG")
@@ -54,33 +58,6 @@ namespace TianWen.XiaoZhen1Qu.BLL
         }
 
 
-        public object LoadCODES_ES_SJSM(string TYPENAME)
-        {
-            try
-            {
-                IList<CODES_ES_SJSM> list = DAO.Repository.GetObjectList<CODES_ES_SJSM>(String.Format("FROM CODES_ES_SJSM WHERE TYPENAME='{0}' ORDER BY CODEORDER", TYPENAME));
-                return new { Result = EnResultType.Success, list = list };
-            }
-            catch (Exception ex)
-            {
-                LoggerManager.Error("error", ex.Message);
-                return new { Result = EnResultType.Failed, Message = "加载失败" };
-            }
-        }
-
-        public object LoadCODES_ES_JDJJBG(string TYPENAME)
-        {
-            try
-            {
-                IList<CODES_ES_JDJJBG> list = DAO.Repository.GetObjectList<CODES_ES_JDJJBG>(String.Format("FROM CODES_ES_JDJJBG WHERE TYPENAME='{0}' ORDER BY CODEORDER", TYPENAME));
-                return new { Result = EnResultType.Success, list = list };
-            }
-            catch (Exception ex)
-            {
-                LoggerManager.Error("error", ex.Message);
-                return new { Result = EnResultType.Failed, Message = "加载失败" };
-            }
-        }
 
         public object LoadCODES_ES_MYFZMR(string TYPENAME)
         {

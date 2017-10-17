@@ -17,7 +17,6 @@ $(document).ready(function () {
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
 
     LoadTXXX();
-    LoadFZXMXBLB();
     LoadDefault();
     LoadES_MYFZMR_FZXMXBJBXX();
     BindClick("LB");
@@ -61,127 +60,19 @@ function SJZRSelect() {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadFZXMXBLB();
+            LoadCODESByTYPENAME("服装/鞋帽/箱包", "LB", "CODES_ES_MYFZMR");
         }
         if (type === "XL") {
-            LoadFZXMXBXL();
+            LoadCODESByTYPENAME($("#spanLB").html(), "XL", "CODES_ES_MYFZMR");
         }
         if (type === "XJ") {
-            LoadXJ();
+            LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM");
         }
         if (type === "QY") {
             LoadQY();
         }
         if (type === "DD") {
             LoadDD($("#QYCode").val());
-        }
-    });
-}
-//加载服装/鞋帽/箱包类别
-function LoadFZXMXBLB() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_ES_MYFZMR",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "服装/鞋帽/箱包"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectLB(this,\"LB\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divLB").html(html);
-                $("#divLB").css("display", "block");
-                ActiveStyle("LB");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载母婴/服装/美容小类
-function LoadFZXMXBXL(type) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_ES_MYFZMR",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: type
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"XL\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divXL").html(html);
-                $("#divXL").css("display", "block");
-                ActiveStyle("XL");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载母婴/服装/美容详细参数
-function LoadXXCS(id, type) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_ES_MYFZMR",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: type
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"" + id + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#div" + id).html(html);
-                $("#div" + id).css("display", "block");
-                ActiveStyle(id);
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载母婴/服装/美容新旧
-function LoadXJ() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "新旧程度"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"XJ\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divXJ").html(html);
-                $("#divXJ").css("display", "block");
-                ActiveStyle("XJ");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
         }
     });
 }
@@ -196,20 +87,19 @@ function PDLB(LB) {
     if (LB === "服装") {
         $("#divFZXXCS").css("display", "");
         $("#divXXXCS").css("display", "none");
-        LoadXXCS("FZCC", "服装尺寸");
-        BindHover("FZCC");
+        LoadCODESByTYPENAME("服装尺寸", "FZCC", "CODES_ES_MYFZMR");
+        BindClick("FZCC");
     }
     else if (LB === "鞋") {
         $("#divFZXXCS").css("display", "none");
         $("#divXXXCS").css("display", "");
-        LoadXXCS("XCC", "鞋尺寸");
-        BindHover("XCC");
+        LoadCODESByTYPENAME("鞋尺寸", "XCC", "CODES_ES_MYFZMR");
+        BindClick("XCC");
     }
     else {
         $("#divFZXXCS").css("display", "none");
         $("#divXXXCS").css("display", "none");
     }
-    LoadFZXMXBXL(LB);
     BindClick("XL");
 }
 //选择母婴/服装/美容品牌

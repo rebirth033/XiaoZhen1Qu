@@ -17,7 +17,6 @@ $(document).ready(function () {
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
 
     LoadTXXX();
-    LoadJJRYLB();
     LoadDefault();
     LoadES_JDJJBG_JJRYJBXX();
     BindClick("LB");
@@ -60,123 +59,19 @@ function SJZRSelect() {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadJJRYLB();
+            LoadCODESByTYPENAME("家居/日用品", "LB", "CODES_ES_JDJJBG");
         }
         if (type === "XL") {
-            LoadJJRYXL();
+            LoadCODESByTYPENAME($("#spanLB").html(), "XL", "CODES_ES_JDJJBG");
         }
         if (type === "XJ") {
-            LoadXJ();
+            LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM");
         }
         if (type === "QY") {
             LoadQY();
         }
         if (type === "DD") {
             LoadDD($("#QYCode").val());
-        }
-    });
-}
-//加载家居/日用品类别
-function LoadJJRYLB() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_ES_JDJJBG",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "家居/日用品"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectLB(this,\"LB\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divLB").html(html);
-                $("#divLB").css("display", "block");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载家居日用小类
-function LoadJJRYXL(type) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_ES_JDJJBG",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: type
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"XL\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divXL").html(html);
-                $("#divXL").css("display", "block");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载家居日用详细参数
-function LoadXXCS(id, type) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_ES_JDJJBG",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: type
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"" + id + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#div" + id).html(html);
-                $("#div" + id).css("display", "block");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载家居日用新旧
-function LoadXJ() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "新旧程度"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"XJ\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divXJ").html(html);
-                $("#divXJ").css("display", "block");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
         }
     });
 }
@@ -191,21 +86,20 @@ function PDLB(LB) {
     if (LB === "床") {
         $("#divCXXCS").css("display", "");
         $("#divCDXXCS").css("display", "none");
-        LoadXXCS("CCC", "床尺寸");
-        BindHover("CCC");
+        LoadCODESByTYPENAME("床尺寸", "CCC", "CODES_ES_JDJJBG");
+        BindClick("CCC");
     }
     else if (LB === "床垫") {
         $("#divCXXCS").css("display", "none");
         $("#divCDXXCS").css("display", "");
-        LoadXXCS("CDCC", "床尺寸");
-        BindHover("CDCC");
+        LoadCODESByTYPENAME("床尺寸", "CDCC", "CODES_ES_JDJJBG");
+        BindClick("CDCC");
     }
     else {
         $("#divCXXCS").css("display", "none");
         $("#divCDXXCS").css("display", "none");
     }
-    LoadJJRYXL(LB);
-    BindHover("XL");
+    BindClick("XL");
 }
 //选择家居日用品牌
 function SelectPBPP(obj, type, code) {

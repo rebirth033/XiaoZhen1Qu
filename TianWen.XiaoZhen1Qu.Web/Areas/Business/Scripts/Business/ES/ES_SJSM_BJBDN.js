@@ -115,11 +115,12 @@ function BindClick(type) {
 function LoadBJBLB() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_ES_SJSM",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "笔记本类别"
+            TYPENAME: "笔记本类别",
+            TBName: "CODES_ES_SJSM"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -142,11 +143,12 @@ function LoadBJBLB() {
 function LoadBJBPP() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_ES_SJSM",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "笔记本品牌"
+            TYPENAME: "笔记本品牌",
+            TBName: "CODES_ES_SJSM"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -197,11 +199,12 @@ function LoadBJBXH(BJBPP) {
 function LoadCPUPP() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_ES_SJSM",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "CPU品牌"
+            TYPENAME: "CPU品牌",
+            TBName: "CODES_ES_SJSM"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -224,11 +227,12 @@ function LoadCPUPP() {
 function LoadCPUHS() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_ES_SJSM",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "CPU核数"
+            TYPENAME: "CPU核数",
+            TBName: "CODES_ES_SJSM"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -251,11 +255,12 @@ function LoadCPUHS() {
 function LoadNC() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_ES_SJSM",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "内存"
+            TYPENAME: "内存",
+            TBName: "CODES_ES_SJSM"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -278,11 +283,12 @@ function LoadNC() {
 function LoadYP() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_ES_SJSM",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "硬盘"
+            TYPENAME: "硬盘",
+            TBName: "CODES_ES_SJSM"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -305,11 +311,12 @@ function LoadYP() {
 function LoadPMCC() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_ES_SJSM",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "屏幕尺寸"
+            TYPENAME: "屏幕尺寸",
+            TBName: "CODES_ES_SJSM"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -332,11 +339,12 @@ function LoadPMCC() {
 function LoadXK() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_ES_SJSM",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "显卡"
+            TYPENAME: "显卡",
+            TBName: "CODES_ES_SJSM"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -359,11 +367,12 @@ function LoadXK() {
 function LoadXJ() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_ES_SJSM",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "新旧程度"
+            TYPENAME: "新旧程度",
+            TBName: "CODES_ES_SJSM"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -386,11 +395,12 @@ function LoadXJ() {
 function LoadPJ() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_ES_SJSM",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "笔记本配件"
+            TYPENAME: "笔记本配件",
+            TBName: "CODES_ES_SJSM"
         },
         success: function (xml) {
             if (xml.Result === 1) {

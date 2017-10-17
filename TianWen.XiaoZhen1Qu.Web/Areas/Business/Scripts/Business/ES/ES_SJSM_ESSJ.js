@@ -90,11 +90,12 @@ function BindClick(type) {
 function LoadSJPP() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_ES_SJSM",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "手机品牌"
+            TYPENAME: "手机品牌",
+    TBName: "CODES_ES_SJSM"
         },
         success: function (xml) {
             if (xml.Result === 1) {

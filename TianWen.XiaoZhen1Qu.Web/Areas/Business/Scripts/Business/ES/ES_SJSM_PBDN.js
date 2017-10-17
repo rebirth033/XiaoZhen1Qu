@@ -91,11 +91,12 @@ function BindClick(type) {
 function LoadPBLB() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_ES_SJSM",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "平板类别"
+            TYPENAME: "平板类别",
+            TBName: "CODES_ES_SJSM"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -117,11 +118,12 @@ function LoadPBLB() {
 function LoadPBPP() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_ES_SJSM",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "平板品牌"
+            TYPENAME: "平板品牌",
+            TBName: "CODES_ES_SJSM"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -170,11 +172,12 @@ function LoadPBXH() {
 function LoadXJ() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_ES_SJSM",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "新旧程度"
+            TYPENAME: "新旧程度",
+            TBName: "CODES_ES_SJSM"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -196,11 +199,12 @@ function LoadXJ() {
 function LoadPJ() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_ES_SJSM",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "平板电脑配件"
+            TYPENAME: "平板电脑配件",
+            TBName: "CODES_ES_SJSM"
         },
         success: function (xml) {
             if (xml.Result === 1) {
