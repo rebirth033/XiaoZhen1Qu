@@ -86,11 +86,12 @@ function BindClick(type) {
 function LoadXZLLX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_FC",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "写字楼类型"
+            TYPENAME: "写字楼类型",
+            TBName: "CODES_FC"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -113,11 +114,12 @@ function LoadXZLLX() {
 function LoadKZCGS() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_FC",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "可注册公司"
+            TYPENAME: "可注册公司",
+            TBName: "CODES_FC"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -194,11 +196,12 @@ function LoadSQ(QY) {
 function LoadZJDW() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_FC",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "租金单位"
+            TYPENAME: "租金单位",
+            TBName: "CODES_FC"
         },
         success: function (xml) {
             if (xml.Result === 1) {

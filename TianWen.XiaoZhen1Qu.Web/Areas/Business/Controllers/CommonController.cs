@@ -54,11 +54,14 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         #region 根据TYPENAME获取字典表
 
-        public JsonResult LoadCODES_FC()
+
+        public JsonResult LoadCODESByTYPENAME()
         {
             string TYPENAME = Request["TYPENAME"];
-            return Json(CommonBLL.LoadCODES_FC(TYPENAME));
+            string TBName = Request["TBName"];
+            return Json(CommonBLL.LoadCODESByTYPENAME(TYPENAME, TBName));
         }
+
 
         public JsonResult LoadCODES_ES_SJSM()
         {

@@ -280,11 +280,12 @@ function BindClick(type) {
 function LoadFWCX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_FC",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "朝向"
+            TYPENAME: "朝向",
+            TBName: "CODES_FC"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -307,11 +308,12 @@ function LoadFWCX() {
 function LoadZXQK() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_FC",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "装修情况"
+            TYPENAME: "装修情况",
+            TBName: "CODES_FC"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -334,11 +336,12 @@ function LoadZXQK() {
 function LoadZZLX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_FC",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "住宅类型"
+            TYPENAME: "住宅类型",
+            TBName: "CODES_FC"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -361,11 +364,12 @@ function LoadZZLX() {
 function LoadYFFS() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_FC",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "押付方式"
+            TYPENAME: "押付方式",
+            TBName: "CODES_FC"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -388,11 +392,12 @@ function LoadYFFS() {
 function LoadBHFY() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_FC",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "包含费用"
+            TYPENAME: "包含费用",
+            TBName: "CODES_FC"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -417,11 +422,12 @@ function LoadBHFY() {
 function LoadFWPZ() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_FC",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "房屋配置"
+            TYPENAME: "房屋配置",
+            TBName: "CODES_FC"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -446,11 +452,12 @@ function LoadFWPZ() {
 function LoadFWLD() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_FC",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "房屋亮点"
+            TYPENAME: "房屋亮点",
+            TBName: "CODES_FC"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -475,11 +482,12 @@ function LoadFWLD() {
 function LoadCZYQ() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_FC",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "出租要求"
+            TYPENAME: "出租要求",
+            TBName: "CODES_FC"
         },
         success: function (xml) {
             if (xml.Result === 1) {

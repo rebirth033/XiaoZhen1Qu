@@ -94,11 +94,12 @@ function BindClick(type) {
 function LoadSPLX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_FC",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "商铺类型"
+            TYPENAME: "商铺类型",
+            TBName: "CODES_FC"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -175,11 +176,12 @@ function LoadSQ(QY) {
 function LoadZJDW() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_FC",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "租金单位"
+            TYPENAME: "租金单位",
+            TBName: "CODES_FC"
         },
         success: function (xml) {
             if (xml.Result === 1) {

@@ -4,7 +4,6 @@ namespace TianWen.XiaoZhen1Qu.Interface
 {
     public interface IBaseBLL
     {
-        object LoadCODES_FC(string TYPENAME);
 
         object LoadCODES_ES_SJSM(string TYPENAME);
 
@@ -51,7 +50,6 @@ namespace TianWen.XiaoZhen1Qu.Interface
 
         object LoadBJQXXX(string LBID);
 
-
         object LoadQYBySuperName(string SUPERNAME);
 
         object LoadSQByQY(string QY);
@@ -63,6 +61,8 @@ namespace TianWen.XiaoZhen1Qu.Interface
         string GetLBQCByLBID(int LBID);
 
         object LoadZWLBXX(string typename);
+
+        object LoadCODESByTYPENAME(string TYPENAME, string TBName);
 
         object LoadByParentID(string ParentID, string TBName);
 
