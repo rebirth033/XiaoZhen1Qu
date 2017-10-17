@@ -84,7 +84,6 @@
     <Compile Include="ES\IES_MYFZMR_MYETYPWJBLL.cs" />
     <Compile Include="ES\IES_QTES_CRYPBLL.cs" />
     <Compile Include="ES\IES_QTES_ESSBBLL.cs" />
-    <Compile Include="ES\IES_QTES_GCQXBLL.cs" />
     <Compile Include="ES\IES_SJSM_BJBDNBLL.cs" />
     <Compile Include="ES\IES_SJSM_ESSJBLL.cs" />
     <Compile Include="ES\IES_SJSM_PBDNBLL.cs" />

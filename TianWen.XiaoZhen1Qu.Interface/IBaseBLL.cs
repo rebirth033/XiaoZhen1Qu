@@ -6,10 +6,6 @@ namespace TianWen.XiaoZhen1Qu.Interface
     {
 
 
-        object LoadCODES_ES_MYFZMR(string TYPENAME);
-
-        object LoadCODES_ES_WHYL(string TYPENAME);
-
         object LoadCODES_ES_QTES(string TYPENAME);
 
         object LoadCODES_CL(string TYPENAME);

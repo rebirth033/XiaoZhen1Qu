@@ -52,9 +52,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return Json(new { Result = EnResultType.Success });
         }
 
-        #region 根据TYPENAME获取字典表
-
-
+        //根据TYPENAME获取字典表
         public JsonResult LoadCODESByTYPENAME()
         {
             string TYPENAME = Request["TYPENAME"];
@@ -62,18 +60,6 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return Json(CommonBLL.LoadCODESByTYPENAME(TYPENAME, TBName));
         }
 
-
-        public JsonResult LoadCODES_ES_MYFZMR()
-        {
-            string TYPENAME = Request["TYPENAME"];
-            return Json(CommonBLL.LoadCODES_ES_MYFZMR(TYPENAME));
-        }
-
-        public JsonResult LoadCODES_ES_WHYL()
-        {
-            string TYPENAME = Request["TYPENAME"];
-            return Json(CommonBLL.LoadCODES_ES_WHYL(TYPENAME));
-        }
 
         public JsonResult LoadCODES_ES_QTES()
         {
@@ -176,8 +162,6 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             string TYPENAME = Request["TYPENAME"];
             return Json(CommonBLL.LoadCODES_NLMFY(TYPENAME));
         }
-
-        #endregion
 
         public JsonResult LoadQY()
         {

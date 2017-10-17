@@ -90,9 +90,4 @@
       <ref object="ES_QTES_CRYPBLL"/>
     </property>
   </object>
-  <object id="ES_QTES_GCQXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.ES_QTES_GCQXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
-    <property name="ES_QTES_GCQXBLL">
-      <ref object="ES_QTES_GCQXBLL"/>
-    </property>
-  </object>
 </objects>
