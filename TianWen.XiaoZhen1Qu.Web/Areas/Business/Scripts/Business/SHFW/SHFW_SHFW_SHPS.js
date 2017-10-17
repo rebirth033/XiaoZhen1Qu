@@ -40,33 +40,6 @@ function LoadDefault() {
         ue.setHeight(200);
     });
 }
-//加载生活配送类别
-function LoadLB() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_SHFW",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "生活配送"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectLB(this,\"LB\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divLB").html(html);
-                $("#divLB").css("display", "block");
-                ActiveStyle("LB");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
 //选择类别下拉框
 function SelectLB(obj, type, id) {
     $("#span" + type).html(obj.innerHTML);
@@ -90,43 +63,16 @@ function PDLB(lbmc) {
         $("#divTZSPP").css("display", "none");
     }
 }
-
-//加载桶装水品牌
-function LoadPP() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_SHFW",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "桶装水品牌"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll; height:341px;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"PP\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divPP").html(html);
-                $("#divPP").css("display", "block");
-                ActiveStyle("PP");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
 //加载小类
 function LoadXL(lbmc, xl) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_SHFW",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: lbmc
+            TYPENAME: lbmc,
+            TBName: "CODES_SHFW"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -189,10 +135,10 @@ function SetXL(lbs) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadLB();
+            LoadCODESByTYPENAME("生活配送", "LB", "CODES_SHFW");
         }
         if (type === "PP") {
-            LoadPP();
+            LoadCODESByTYPENAME("桶装水品牌", "PP", "CODES_SHFW");
         }
         if (type === "QY") {
             LoadQY();

@@ -39,33 +39,6 @@ function LoadDefault() {
         ue.setHeight(200);
     });
 }
-//加载房屋维修/打孔类别
-function LoadLB() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_SHFW",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "房屋维修/打孔"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectLB(this,\"LB\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divLB").html(html);
-                $("#divLB").css("display", "block");
-                ActiveStyle("LB");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
 //选择类别下拉框
 function SelectLB(obj, type, id) {
     $("#span" + type).html(obj.innerHTML);
@@ -85,16 +58,16 @@ function PDLB(lbmc) {
         $("#divXLText").css("display", "none");
     }
 }
-
 //加载小类
 function LoadXL() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadBJQXXX",
+        url: getRootPath() + "/Business/Common/LoadByParentID",
         dataType: "json",
         data:
         {
-            LBID: $("#LBID").val()
+            ParentID: $("#LBID").val(),
+            TBName:"CODES_SHFW"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -117,7 +90,7 @@ function LoadXL() {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadLB();
+            LoadCODESByTYPENAME("房屋维修/打孔", "LB", "CODES_SHFW");
         }
         if (type === "XL") {
             LoadXL();
