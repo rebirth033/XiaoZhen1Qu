@@ -188,110 +188,6 @@ function SetSPKG(SPKG) {
         $("#imgBZC").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
     }
 }
-//加载年龄单位
-function LoadNLDW() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_CW",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "年龄单位"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"NLDW\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divNLDW").html(html);
-                $("#divNLDW").css("display", "block");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载性别
-function LoadXB() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_CW",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "性别"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll; height:103px'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"XB\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divXB").html(html);
-                $("#divXB").css("display", "block");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载疫苗情况
-function LoadYMQK() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_CW",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "疫苗情况"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll; height:137px;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"YMQK\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divYMQK").html(html);
-                $("#divYMQK").css("display", "block");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载疫苗种类
-function LoadYMZL() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_CW",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "疫苗种类"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"YMZL\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divYMZL").html(html);
-                $("#divYMZL").css("display", "block");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
@@ -300,16 +196,16 @@ function BindClick(type) {
             LoadCWGPZ("divRM");
         }
         if (type === "NLDW") {
-            LoadNLDW();
+            LoadCODESByTYPENAME("年龄单位", "NLDW", "CODES_CW");
         }
         if (type === "XB") {
-            LoadXB();
+            LoadCODESByTYPENAME("性别", "XB", "CODES_CW");
         }
         if (type === "YMQK") {
-            LoadYMQK();
+            LoadCODESByTYPENAME("疫苗情况", "YMQK", "CODES_CW");
         }
         if (type === "YMZL") {
-            LoadYMZL();
+            LoadCODESByTYPENAME("疫苗种类", "YMZL", "CODES_CW");
         }
     });
 }

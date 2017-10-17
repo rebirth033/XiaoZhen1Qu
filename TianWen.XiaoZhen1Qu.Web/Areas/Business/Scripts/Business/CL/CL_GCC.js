@@ -204,86 +204,6 @@ function WXBYSelect() {
     $("#imgPJ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
     $("#imgWXBY").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
 }
-//加载工程车车型
-function LoadGCCLB() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_CL",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "工程车"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectCX(this,\"CX\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divCX").html(html);
-                $("#divCX").css("display", "none");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载出厂年限
-function LoadCCNX() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_CL",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "出厂年限"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectLB(this,\"CCNX\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divCCNX").html(html);
-                $("#divCCNX").css("display", "block");
-                ActiveStyle("CCNX");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载出厂月份
-function LoadCCYF() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_CL",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "出厂月份"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectLB(this,\"CCYF\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divCCYF").html(html);
-                $("#divCCYF").css("display", "block");
-                ActiveStyle("CCYF");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
@@ -296,10 +216,10 @@ function BindClick(type) {
             LoadPPMC("挖掘机品牌", "divRM");
         }
         if (type === "CCNX") {
-            LoadCCNX();
+            LoadCODESByTYPENAME("出厂年限", "CCNX", "CODES_CL");
         }
         if (type === "CCYF") {
-            LoadCCYF();
+            LoadCODESByTYPENAME("出厂月份", "CCYF", "CODES_CL");
         }
         if (type === "QY") {
             LoadQY();

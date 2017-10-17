@@ -69,32 +69,6 @@ function SetGQ(GQ) {
         $("#imgQG").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
     }
 }
-//加载品种
-function LoadPZ() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_CW",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "花鸟鱼虫"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectPZ(this,\"PZ\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divPZ").html(html);
-                $("#divPZ").css("display", "block");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
 //加载小类
 function LoadXL() {
     $.ajax({
@@ -123,7 +97,7 @@ function LoadXL() {
     });
 }
 //选择品种下拉框
-function SelectPZ(obj, type, id) {
+function SelectLB(obj, type, id) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
     $("#PZID").val(id);
@@ -133,17 +107,12 @@ function SelectPZ(obj, type, id) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "PZ") {
-            LoadPZ();
+            LoadCODESByTYPENAME("花鸟鱼虫", "PZ", "CODES_CW");
         }
         if (type === "XL") {
             LoadXL();
         }
     });
-}
-//选择类别下拉框
-function SelectLB(obj, type) {
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
 }
 //加载宠物_宠物猫基本信息
 function LoadCW_HNYCJBXX() {

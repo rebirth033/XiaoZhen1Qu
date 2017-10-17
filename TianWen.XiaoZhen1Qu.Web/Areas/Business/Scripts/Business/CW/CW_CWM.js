@@ -69,37 +69,11 @@ function SetGQ(GQ) {
         $("#imgQG").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
     }
 }
-//加载品种
-function LoadPZ() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_CW",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "宠物猫"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"PZ\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divPZ").html(html);
-                $("#divPZ").css("display", "block");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "PZ") {
-            LoadPZ();
+            LoadCODESByTYPENAME("宠物猫", "PZ", "CODES_CW");
         }
     });
 }

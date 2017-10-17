@@ -141,17 +141,14 @@ function BindClick(type) {
             LoadPP();
             LoadPPMC("轿车品牌", "divRM");
         }
-        if (type === "CX") {
-            LoadKCCX();
-        }
         if (type.indexOf("NF") !== -1) {
-            LoadNF(type);
+            LoadCODESByTYPENAME("出厂年限", type, "CODES_CL");
         }
         if (type.indexOf("YF") !== -1) {
-            LoadYF(type);
+            LoadCODESByTYPENAME("出厂月份", type, "CODES_CL");
         }
         if (type.indexOf("GHCS") !== -1) {
-            LoadGHCS(type);
+            LoadCODESByTYPENAME("过户次数", type, "CODES_CL");
         }
         if (type.indexOf("PZSZSF") !== -1) {
             LoadPZSZSF(type);
@@ -206,86 +203,6 @@ function LoadPZSZCS() {
                 html += "</ul>";
                 $("#divPZSZCS").html(html);
                 $("#divPZSZCS").css("display", "block");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载过户次数
-function LoadGHCS() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_CL",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "过户次数"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"GHCS\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divGHCS").html(html);
-                $("#divGHCS").css("display", "block");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载出厂年限
-function LoadNF(ID) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_CL",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "出厂年限"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"" + ID + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#div" + ID).html(html);
-                $("#div" + ID).css("display", "block");
-                ActiveStyle(ID);
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载出厂月份
-function LoadYF(ID) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_CL",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "出厂月份"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectLB(this,\"" + ID + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#div" + ID).html(html);
-                $("#div" + ID).css("display", "block");
-                ActiveStyle(ID);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

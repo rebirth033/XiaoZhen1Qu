@@ -19,9 +19,6 @@ $(document).ready(function () {
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
 
     LoadTXXX();
-    LoadMTCLB();
-    LoadGCSJ();
-    LoadMTCPP();
     LoadDefault();
     LoadCL_MTCJBXX();
     BindClick("LB");
@@ -104,101 +101,23 @@ function YXSSelect() {
     $("#divMTCGCSJ").css("display", "");
     $("#divGLS").css("display", "");
 }
-//加载摩托车类别
-function LoadMTCLB() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_CL",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "摩托车"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectLB(this,\"LB\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divLB").html(html);
-                $("#divLB").css("display", "block");
-                ActiveStyle("LB");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载摩托车品牌
-function LoadMTCPP() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_CL",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "摩托车品牌"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectLB(this,\"PP\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divPP").html(html);
-                $("#divPP").css("display", "block");
-                ActiveStyle("PP");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载摩托车购车时间
-function LoadGCSJ() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_CL",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "购车时间"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"GCSJ\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divGCSJ").html(html);
-                $("#divGCSJ").css("display", "block");
-                ActiveStyle("GCSJ");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadMTCLB();
+            LoadCODESByTYPENAME("摩托车", "LB", "CODES_CL");
         }
         if (type === "PP") {
-            LoadMTCPP();
+            LoadCODESByTYPENAME("摩托车品牌", "PP", "CODES_CL");
+        }
+        if (type === "GCSJ") {
+            LoadCODESByTYPENAME("购车时间", "GCSJ", "CODES_CL");
         }
         if (type === "CCNX") {
-            LoadCCNX();
+            LoadCODESByTYPENAME("出厂年限", "CCNX", "CODES_CL");
         }
         if (type === "CCYF") {
-            LoadCCYF();
+            LoadCODESByTYPENAME("出厂月份", "CCYF", "CODES_CL");
         }
         if (type === "QY") {
             LoadQY();

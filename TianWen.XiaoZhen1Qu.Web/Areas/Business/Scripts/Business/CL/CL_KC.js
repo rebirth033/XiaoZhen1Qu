@@ -172,10 +172,10 @@ function BindClick(type) {
             LoadKCCX();
         }
         if (type.indexOf("NF") !== -1) {
-            LoadNF(type);
+            LoadCODESByTYPENAME("出厂年限", type, "CODES_CL");
         }
         if (type.indexOf("YF") !== -1) {
-            LoadYF(type);
+            LoadCODESByTYPENAME("出厂月份", type, "CODES_CL");
         }
     });
 }
@@ -199,60 +199,6 @@ function LoadKCCX() {
                 html += "</ul>";
                 $("#divCX").html(html);
                 $("#divCX").css("display", "block");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载出厂年限
-function LoadNF(ID) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_CL",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "出厂年限"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"" + ID + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#div" + ID).html(html);
-                $("#div" + ID).css("display", "block");
-                ActiveStyle(ID);
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载出厂月份
-function LoadYF(ID) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_CL",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "出厂月份"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectLB(this,\"" + ID + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#div" + ID).html(html);
-                $("#div" + ID).css("display", "block");
-                ActiveStyle(ID);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

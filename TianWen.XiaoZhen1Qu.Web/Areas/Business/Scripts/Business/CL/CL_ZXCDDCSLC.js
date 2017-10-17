@@ -17,8 +17,6 @@ $(document).ready(function () {
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
 
     LoadTXXX();
-    LoadZXCDDCSLCLB();
-    LoadXJ();
     LoadDefault();
     LoadCL_ZXCDDCSLCJBXX();
     BindClick("LB");
@@ -81,114 +79,6 @@ function SJZRSelect() {
     $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
     $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
 }
-//加载自行车/电动车/三轮车类别
-function LoadZXCDDCSLCLB() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_CL",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "自行车/电动车/三轮车"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectLB(this,\"LB\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divLB").html(html);
-                $("#divLB").css("display", "block");
-                ActiveStyle("LB");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载自行车/电动车/三轮车小类
-function LoadZXCDDCSLCXL(type) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_CL",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: type
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"XL\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divXL").html(html);
-                $("#divXL").css("display", "block");
-                ActiveStyle("XL");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载自行车/电动车/三轮车详细参数
-function LoadXXCS(id, type) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_CL",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: type
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"" + id + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#div" + id).html(html);
-                $("#div" + id).css("display", "block");
-                ActiveStyle(id);
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载自行车/电动车/三轮车新旧
-function LoadXJ() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "新旧程度"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"XJ\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divXJ").html(html);
-                $("#divXJ").css("display", "block");
-                ActiveStyle("XJ");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
 //选择类别下拉框
 function SelectLB(obj, type) {
     $("#span" + type).html(obj.innerHTML);
@@ -200,36 +90,38 @@ function PDLB(LB) {
     if (LB === "自行车") {
         $("#divZXCXXCS").css("display", "");
         $("#divDDCXXCS").css("display", "none");
-        LoadXXCS("ZXCPP", "自行车品牌");
         BindClick("ZXCPP");
-        LoadXXCS("CC", "自行车尺寸");
         BindClick("CC");
+        LoadCODESByTYPENAME("自行车品牌", "ZXCPP", "CODES_CL");
+        LoadCODESByTYPENAME("自行车尺寸", "CC", "CODES_CL");
     }
     else if (LB === "电动车") {
         $("#divZXCXXCS").css("display", "none");
         $("#divDDCXXCS").css("display", "");
-        LoadXXCS("DDCPP", "电动车品牌");
         BindClick("DDCPP");
-        LoadXXCS("DCDY", "电池电压");
         BindClick("DCDY");
-        LoadXXCS("DCRL", "电池容量");
         BindClick("DCRL");
+        LoadCODESByTYPENAME("电动车品牌", "DDCPP", "CODES_CL");
+        LoadCODESByTYPENAME("电池电压", "DCDY", "CODES_CL");
+        LoadCODESByTYPENAME("电池容量", "DCRL", "CODES_CL");
     }
     else {
         $("#divZXCXXCS").css("display", "none");
         $("#divDDCXXCS").css("display", "none");
     }
-    LoadZXCDDCSLCXL(LB);
     BindClick("XL");
 }
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadZXCDDCSLCLB();
+            LoadCODESByTYPENAME("自行车/电动车/三轮车", "LB", "CODES_CL");
+        }
+        if (type === "XL") {
+            LoadCODESByTYPENAME($("#spanLB").html(), "XL", "CODES_CL");
         }
         if (type === "XJ") {
-            LoadXJ();
+            LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM");
         }
         if (type === "QY") {
             LoadQY();

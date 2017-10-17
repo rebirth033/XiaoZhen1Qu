@@ -37,37 +37,16 @@ function LoadDefault() {
         ue.setHeight(200);
     });
 }
-//加载类别
-function LoadLB() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_CW",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "宠物服务"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"LB\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divLB").html(html);
-                $("#divLB").css("display", "block");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
+//选择类别下拉框
+function SelectLB(obj, type) {
+    $("#span" + type).html(obj.innerHTML);
+    $("#div" + type).css("display", "none");
 }
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadLB();
+            LoadCODESByTYPENAME("宠物服务", "LB", "CODES_CW");
         }
     });
 }

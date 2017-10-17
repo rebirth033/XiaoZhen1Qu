@@ -6,12 +6,6 @@ namespace TianWen.XiaoZhen1Qu.Interface
     {
 
 
-        object LoadCODES_ES_QTES(string TYPENAME);
-
-        object LoadCODES_CL(string TYPENAME);
-
-        object LoadCODES_CW(string TYPENAME);
-
         object LoadCODES_PWKQ(string TYPENAME);
 
         object LoadCODES_CY(string TYPENAME);
