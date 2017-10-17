@@ -51,7 +51,6 @@ namespace TianWen.XiaoZhen1Qu.Interface
 
         object LoadBJQXXX(string LBID);
 
-        object LoadCWPZXX(string CWBQ);
 
         object LoadQYBySuperName(string SUPERNAME);
 
@@ -63,20 +62,11 @@ namespace TianWen.XiaoZhen1Qu.Interface
 
         string GetLBQCByLBID(int LBID);
 
-
         object LoadZWLBXX(string typename);
-
-
-
-        object LoadBYYXXX(string BYYXBQ);
-
-
-        object LoadHCPPXX(string HCPPBQ);
 
         object LoadByParentID(string ParentID, string TBName);
 
         object LoadByCodeValueAndTypeName(string CODEVALUE, string TYPENAME, string TBName);
 
-        object LoadYLHHXX(string HCPPBQ, string TYPE);
     }
 }

@@ -197,36 +197,19 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         {
             return Json(CommonBLL.LoadSQByQY(Request["QY"]));
         }
+        public JsonResult LoadZWLBXX()
+        {
+            return Json(CommonBLL.LoadZWLBXX(Request["TYPENAME"]));
+        }
 
         public JsonResult LoadByCodeValueAndTypeName()
         {
             return Json(CommonBLL.LoadByCodeValueAndTypeName(Request["CODEVALUE"], Request["TYPENAME"], Request["TBName"]));
         }
 
-        public JsonResult LoadZWLBXX()
-        {
-            return Json(CommonBLL.LoadZWLBXX(Request["TYPENAME"]));
-        }
-
-        public JsonResult LoadBYYXXX()
-        {
-            return Json(CommonBLL.LoadBYYXXX(Request["BYYXBQ"]));
-        }
-
-        public JsonResult LoadHCPPXX()
-        {
-            return Json(CommonBLL.LoadHCPPXX(Request["HCPPBQ"]));
-        }
-
         public JsonResult LoadByParentID()
         {
             return Json(CommonBLL.LoadByParentID(Request["ParentID"], Request["TBName"]));
         }
-
-        public JsonResult LoadYLHHXX()
-        {
-            return Json(CommonBLL.LoadYLHHXX(Request["HCPPBQ"], Request["TYPE"]));
-        }
-
     }
 }

@@ -60,11 +60,13 @@ function JCBQActive() {
 function LoadBYYXMC(JCLX, JCBQ) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadBYYXXX",
+        url: getRootPath() + "/Business/Common/LoadByCodeValueAndTypeName",
         dataType: "json",
         data:
         {
-            BYYXBQ: JCBQ.split("div")[1]
+            CODEVALUE: JCBQ.split("div")[1],
+            TYPENAME: "学校",
+            TBName: "CODES_JYPX_XX"
         },
         success: function (xml) {
             if (xml.Result === 1) {

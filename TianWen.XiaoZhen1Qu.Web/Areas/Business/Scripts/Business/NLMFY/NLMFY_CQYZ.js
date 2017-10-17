@@ -110,12 +110,13 @@ function JCBQActive() {
 function LoadXLMC(JCLX, JCBQ) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadYLHHXX",
+        url: getRootPath() + "/Business/Common/LoadByCodeValueAndTypeName",
         dataType: "json",
         data:
         {
-            TYPE: JCLX,
-            HCPPBQ: JCBQ.split("div")[1]
+            CODEVALUE: JCBQ.split("div")[1],
+            TYPENAME: JCLX,
+            TBName: "CODES_NLMFY"
         },
         success: function (xml) {
             if (xml.Result === 1) {
