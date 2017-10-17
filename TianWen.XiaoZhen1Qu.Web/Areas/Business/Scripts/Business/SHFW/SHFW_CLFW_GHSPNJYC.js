@@ -16,7 +16,6 @@ $(document).ready(function () {
     LoadTXXX();
     LoadSJSJWPLB();
     LoadDefault();
-    BindClick("LB");
     BindClick("QY");
     BindClick("DD");
 });
@@ -43,11 +42,12 @@ function LoadDefault() {
 function LoadSJSJWPLB() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_SHFW",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "过户/上牌/年检/验车"
+            TYPENAME: "过户/上牌/年检/验车",
+            TBName: "CODES_SHFW"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -98,9 +98,6 @@ function SetSJSJWPLB(lbs) {
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadLB();
-        }
         if (type === "QY") {
             LoadQY();
         }

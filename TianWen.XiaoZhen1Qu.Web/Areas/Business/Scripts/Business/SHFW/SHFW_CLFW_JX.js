@@ -17,11 +17,6 @@ $(document).ready(function () {
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
     LoadTXXX();
     LoadDefault();
-    BindClick("LB");
-    BindClick("PPLS");
-    BindClick("TZJE");
-    BindClick("QGFDS");
-    BindClick("DDMJ");
     BindClick("QY");
     BindClick("DD");
     LoadJZ();
@@ -79,11 +74,12 @@ function SetLB(gq) {
 function LoadJZ() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_SHFW",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "驾照"
+            TYPENAME: "驾照",
+            TBName: "CODES_SHFW"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -113,11 +109,12 @@ function LoadJZ() {
 function LoadBB() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_SHFW",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "班别"
+            TYPENAME: "班别",
+            TBName: "CODES_SHFW"
         },
         success: function (xml) {
             if (xml.Result === 1) {

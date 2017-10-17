@@ -43,11 +43,12 @@ function LoadDefault() {
 function LoadBZLB() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_PFCG",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "包装类别"
+            TYPENAME: "包装类别",
+            TBName: "CODES_PFCG"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -77,11 +78,12 @@ function LoadBZLB() {
 function LoadBZYT() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_PFCG",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "包装用途"
+            TYPENAME: "包装用途",
+            TBName: "CODES_PFCG"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -118,7 +120,7 @@ function SelectBZLB(obj) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadLB();
+            LoadCODESByTYPENAME("包装类别", "LB", "CODES_PFCG");
         }
         if (type === "QY") {
             LoadQY();

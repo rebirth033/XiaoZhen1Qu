@@ -43,55 +43,28 @@ function LoadDefault() {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadDropdown("汽车美容/装饰", "LB");
+            LoadCODESByTYPENAME("汽车美容/装饰", "LB", "CODES_SHFW");
         }
         if (type === "XCDD") {
-            LoadDropdown("洗车地点", "XCDD");
+            LoadCODESByTYPENAME("洗车地点", "XCDD", "CODES_SHFW");
         }
         if (type === "XCFS") {
-            LoadDropdown("洗车方式", "XCFS");
+            LoadCODESByTYPENAME("洗车方式", "XCFS", "CODES_SHFW");
         }
         if (type === "PP") {
-            LoadDropdown($("#spanLB").html(), "PP");
+            LoadCODESByTYPENAME($("#spanLB").html(), "PP", "CODES_SHFW");
         }
         if (type === "PZ") {
-            LoadDropdown("打蜡品种", "PZ");
+            LoadCODESByTYPENAME("打蜡品种", "PZ", "CODES_SHFW");
         }
         if (type === "TMFW") {
-            LoadDropdown("贴膜范围", "TMFW");
+            LoadCODESByTYPENAME("贴膜范围", "TMFW", "CODES_SHFW");
         }
         if (type === "QY") {
             LoadQY();
         }
         if (type === "DD") {
             LoadDD($("#QYCode").val());
-        }
-    });
-}
-//加载汽车美容/装饰类别
-function LoadDropdown(type, id) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_SHFW",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: type
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectLB(this,\"" + id + "\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#div" + id).html(html);
-                $("#div" + id).css("display", "block");
-                ActiveStyle(id);
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
         }
     });
 }

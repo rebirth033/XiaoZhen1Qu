@@ -48,8 +48,12 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_ZXJC>(String.Format("FROM CODES_ZXJC WHERE TYPENAME = '{0}' ORDER BY CODEORDER", TYPENAME)) };
                 if (TBName == "CODES_ZSJM")
                     return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_ZSJM>(String.Format("FROM CODES_ZSJM WHERE TYPENAME = '{0}' ORDER BY CODEORDER", TYPENAME)) };
+                if (TBName == "CODES_QZZP")
+                    return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_QZZP>(String.Format("FROM CODES_QZZP WHERE TYPENAME = '{0}' ORDER BY CODEORDER", TYPENAME)) };
                 if (TBName == "CODES_SWFW")
                     return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_SWFW>(String.Format("FROM CODES_SWFW WHERE TYPENAME = '{0}' ORDER BY CODEORDER", TYPENAME)) };
+                if (TBName == "CODES_SHFW")
+                    return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_SHFW>(String.Format("FROM CODES_SHFW WHERE TYPENAME = '{0}' ORDER BY CODEORDER", TYPENAME)) };
                 if (TBName == "CODES_JYPX")
                     return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_JYPX>(String.Format("FROM CODES_JYPX WHERE TYPENAME = '{0}' ORDER BY CODEORDER", TYPENAME)) };
                 if (TBName == "CODES_JYPX_XX")
@@ -67,35 +71,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
         
-
-        public object LoadCODES_PFCG(string TYPENAME)
-        {
-            try
-            {
-                IList<CODES_PFCG> list = DAO.Repository.GetObjectList<CODES_PFCG>(String.Format("FROM CODES_PFCG WHERE TYPENAME='{0}' ORDER BY CODEORDER", TYPENAME));
-                return new { Result = EnResultType.Success, list = list };
-            }
-            catch (Exception ex)
-            {
-                LoggerManager.Error("error", ex.Message);
-                return new { Result = EnResultType.Failed, Message = "加载失败" };
-            }
-        }
-
-        public object LoadCODES_QZZP(string TYPENAME)
-        {
-            try
-            {
-                IList<CODES_QZZP> list = DAO.Repository.GetObjectList<CODES_QZZP>(String.Format("FROM CODES_QZZP WHERE TYPENAME='{0}' ORDER BY CODEORDER", TYPENAME));
-                return new { Result = EnResultType.Success, list = list };
-            }
-            catch (Exception ex)
-            {
-                LoggerManager.Error("error", ex.Message);
-                return new { Result = EnResultType.Failed, Message = "加载失败" };
-            }
-        }
-
+        
         public object LoadCODES_SHFW(string TYPENAME)
         {
             try
@@ -255,6 +231,8 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_ZSJM>(String.Format("FROM CODES_ZSJM WHERE PARENTID = '{0}' ORDER BY CODEORDER", ParentID)) };
                 if (TBName == "CODES_SWFW")
                     return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_SWFW>(String.Format("FROM CODES_SWFW WHERE PARENTID = '{0}' ORDER BY CODEORDER", ParentID)) };
+                if (TBName == "CODES_SHFW")
+                    return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_SHFW>(String.Format("FROM CODES_SHFW WHERE PARENTID = '{0}' ORDER BY CODEORDER", ParentID)) };
                 if (TBName == "CODES_NLMFY")
                     return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_NLMFY>(String.Format("FROM CODES_NLMFY WHERE PARENTID = '{0}' ORDER BY CODEORDER", ParentID)) };
                 return new { Result = EnResultType.Failed, Message = "表名未找到" };

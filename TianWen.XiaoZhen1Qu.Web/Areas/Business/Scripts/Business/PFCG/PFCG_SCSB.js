@@ -16,7 +16,6 @@ $(document).ready(function () {
     LoadTXXX();
     LoadSCSBLB();
     LoadDefault();
-    BindClick("LB");
     BindClick("QY");
     BindClick("DD");
 });
@@ -43,11 +42,12 @@ function LoadDefault() {
 function LoadSCSBLB() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_PFCG",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "商超设备"
+            TYPENAME: "商超设备",
+            TBName: "CODES_PFCG"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -79,9 +79,6 @@ function SelectSCSBLB(obj) {
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadLB();
-        }
         if (type === "QY") {
             LoadQY();
         }

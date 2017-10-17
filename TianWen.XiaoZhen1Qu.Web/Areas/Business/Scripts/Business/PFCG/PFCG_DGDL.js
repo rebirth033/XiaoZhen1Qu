@@ -43,11 +43,12 @@ function LoadDefault() {
 function LoadDGDLLB() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_PFCG",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "电工电料"
+            TYPENAME: "电工电料",
+            TBName: "CODES_PFCG"
         },
         success: function (xml) {
             if (xml.Result === 1) {

@@ -32,7 +32,7 @@ function HideZWLBThird() {
     $(this).find(".div_zwlb_third").each(function () {
         $(this).css("display", "none");
     });
-} 
+}
 //描述框focus
 function FYMSFocus() {
     $("#FYMS").css("color", "#333333");
@@ -56,13 +56,13 @@ function LoadDefault() {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "MYXZ") {
-            LoadDropdown("每月薪资", "MYXZ");
+            LoadCODESByTYPENAME("每月薪资", "MYXZ", "CODES_QZZP");
         }
         if (type === "XLYQ") {
-            LoadDropdown("学历要求", "XLYQ");
+            LoadCODESByTYPENAME("学历要求", "XLYQ", "CODES_QZZP");
         }
         if (type === "GZNX") {
-            LoadDropdown("工作年限", "GZNX");
+            LoadCODESByTYPENAME("工作年限", "GZNX", "CODES_QZZP");
         }
         if (type === "ZWLB") {
             LoadZWLB();
@@ -113,43 +113,16 @@ function SelectZWLB() {
     $("#divZWLB").css("display", "none");
     $("#BT").val($(this)[0].innerHTML);
 }
-
-//加载全职招聘类别
-function LoadDropdown(type, id) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_QZZP",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: type
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"" + id + "\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#div" + id).html(html);
-                $("#div" + id).css("display", "block");
-                ActiveStyle(id);
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
 //加载职位福利
 function LoadZWFL() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_QZZP",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "职位福利"
+            TYPENAME: "职位福利",
+            TBName: "CODES_QZZP"
         },
         success: function (xml) {
             if (xml.Result === 1) {
