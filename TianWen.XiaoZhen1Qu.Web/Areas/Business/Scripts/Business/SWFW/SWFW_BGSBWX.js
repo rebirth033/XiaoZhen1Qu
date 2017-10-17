@@ -124,7 +124,7 @@ function PDLB(lbmc) {
     if (lbmc === "打印机" || lbmc === "复印机" || lbmc === "传真机" || lbmc === "一体机") {
         $("#spanXL").html("请选择小类");
         $("#divXLText").css("display", "");
-        BindClick("XL"); 
+        BindClick("XL");
     }
     else {
         $("#divXLText").css("display", "none");
@@ -134,11 +134,12 @@ function PDLB(lbmc) {
 function LoadXL(type) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadSWFWXX",
+        url: getRootPath() + "/Business/Common/LoadByParentID",
         dataType: "json",
         data:
         {
-            LBID: $("#LBID").val()
+            ParentID: $("#LBID").val(),
+            TBName: "CODES_SWFW"
         },
         success: function (xml) {
             if (xml.Result === 1) {

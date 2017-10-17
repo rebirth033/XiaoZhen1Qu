@@ -56,23 +56,11 @@ namespace TianWen.XiaoZhen1Qu.Interface
 
         object LoadGCCPPXX(string GCCLX, string GCCBP);
 
-        object LoadLPXX(string LPID);
-
         object LoadKCPPXX(string KCLX, string KCBQ);
 
         object LoadJCPPXX(string JCLX, string JCBQ);
 
-        object LoadKCCXXX(string PPID);
-
-        object LoadJXXX(string JXID);
-
-        object LoadHNCYXX(string PZID);
-
-        object LoadCWYPSPXX(string LBID);
-
         object LoadBJQXXX(string LBID);
-
-        object LoadGCQXXH(string PPID);
 
         object LoadCWPZXX(string CWBQ);
 
@@ -92,8 +80,6 @@ namespace TianWen.XiaoZhen1Qu.Interface
 
         object LoadZWLBXX(string typename);
 
-        object LoadSWFWXX(string LBID);
-
         object LoadYZXX(string YZBQ);
 
         object LoadGJXX(string GJBQ);
@@ -102,7 +88,6 @@ namespace TianWen.XiaoZhen1Qu.Interface
 
         object LoadBYYXXX(string BYYXBQ);
 
-        object LoadJZFWXX(string LBID);
 
         object LoadHCPPXX(string HCPPBQ);
 

@@ -99,18 +99,19 @@ function PDLB(lbmc) {
     }
     else {
         $("#divXLText").css("display", "none");
-        
+
     }
 }
 //加载小类
 function LoadXL(type) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadJZFWXX",
+        url: getRootPath() + "/Business/Common/LoadByParentID",
         dataType: "json",
         data:
         {
-            LBID: $("#LBID").val()
+            ParentID: $("#LBID").val(),
+            TBName: "CODES_ZXJC"
         },
         success: function (xml) {
             if (xml.Result === 1) {

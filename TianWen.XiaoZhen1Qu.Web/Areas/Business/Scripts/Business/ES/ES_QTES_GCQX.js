@@ -34,7 +34,7 @@ function LoadPP() {
     var arrayObj = new Array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
     var html = "";
     for (var i = 0; i < arrayObj.length; i++) {
-            html += '<div class="divstep_yx" id="div' + arrayObj[i] + '"><span class="spanstep_yx" id="span' + arrayObj[i] + '">' + arrayObj[i] + '</span><em class="emstep_yx" id="em' + arrayObj[i] + '"></em></div>';
+        html += '<div class="divstep_yx" id="div' + arrayObj[i] + '"><span class="spanstep_yx" id="span' + arrayObj[i] + '">' + arrayObj[i] + '</span><em class="emstep_yx" id="em' + arrayObj[i] + '"></em></div>';
     }
     $("#div_content_yxbq").html(html);
     $(".divstep_yx").bind("click", YXBQActive);
@@ -173,11 +173,12 @@ function LoadGCQXLB() {
 function LoadXH(PPID) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadGCQXXH",
+        url: getRootPath() + "/Business/Common/LoadByParentID",
         dataType: "json",
         data:
         {
-            PPID: PPID
+            ParentID: PPID,
+            TBName: "CODES_ES_QT"
         },
         success: function (xml) {
             if (xml.Result === 1) {

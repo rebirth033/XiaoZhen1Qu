@@ -218,16 +218,6 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return Json(CommonBLL.LoadGCCPPXX(Request["GCCLX"], Request["GCCBQ"]));
         }
 
-        public JsonResult LoadGCQXXH()
-        {
-            return Json(CommonBLL.LoadGCQXXH(Request["PPID"]));
-        }
-
-        public JsonResult LoadLPXX()
-        {
-            return Json(CommonBLL.LoadLPXX(Request["LBID"]));
-        }
-
         public JsonResult LoadKCPPXX()
         {
             return Json(CommonBLL.LoadKCPPXX(Request["KCLX"], Request["KCBQ"]));
@@ -238,29 +228,9 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return Json(CommonBLL.LoadJCPPXX(Request["JCLX"], Request["JCBQ"]));
         }
 
-        public JsonResult LoadKCCXXX()
-        {
-            return Json(CommonBLL.LoadKCCXXX(Request["PPID"]));
-        }
-
         public JsonResult LoadCWPZXX()
         {
             return Json(CommonBLL.LoadCWPZXX(Request["CWG"]));
-        }
-
-        public JsonResult LoadHNCYXX()
-        {
-            return Json(CommonBLL.LoadHNCYXX(Request["PZID"]));
-        }
-
-        public JsonResult LoadCWYPSPXX()
-        {
-            return Json(CommonBLL.LoadCWYPSPXX(Request["LBID"]));
-        }
-
-        public JsonResult LoadJXXX()
-        {
-            return Json(CommonBLL.LoadJXXX(Request["JXID"]));
         }
 
         public JsonResult LoadMRBJXX()
@@ -276,11 +246,6 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         public JsonResult LoadZWLBXX()
         {
             return Json(CommonBLL.LoadZWLBXX(Request["TYPENAME"]));
-        }
-
-        public JsonResult LoadSWFWXX()
-        {
-            return Json(CommonBLL.LoadSWFWXX(Request["LBID"]));
         }
 
         public JsonResult LoadYZXX()
@@ -301,11 +266,6 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         public JsonResult LoadBYYXXX()
         {
             return Json(CommonBLL.LoadBYYXXX(Request["BYYXBQ"]));
-        }
-
-        public JsonResult LoadJZFWXX()
-        {
-            return Json(CommonBLL.LoadJZFWXX(Request["LBID"]));
         }
 
         public JsonResult LoadHCPPXX()

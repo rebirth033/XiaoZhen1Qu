@@ -151,11 +151,12 @@ function PDLB(name, codeid) {
 function LoadJJHBXL(codeid) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadJXXX",
+        url: getRootPath() + "/Business/Common/LoadByParentID",
         dataType: "json",
         data:
         {
-            JXID: codeid
+            ParentID: codeid,
+            TBName: "CODES_ZSJM"
         },
         success: function (xml) {
             if (xml.Result === 1) {

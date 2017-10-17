@@ -99,11 +99,12 @@ function LoadPZ() {
 function LoadXL() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadHNCYXX",
+        url: getRootPath() + "/Business/Common/LoadByParentID",
         dataType: "json",
         data:
         {
-            PZID: $("#PZID").val()
+            ParentID: $("#PZID").val(),
+            TBName: "CODES_CW"
         },
         success: function (xml) {
             if (xml.Result === 1) {

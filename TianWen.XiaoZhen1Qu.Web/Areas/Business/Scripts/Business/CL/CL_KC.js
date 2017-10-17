@@ -182,11 +182,12 @@ function BindClick(type) {
 function LoadKCCX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadKCCXXX",
+        url: getRootPath() + "/Business/Common/LoadByParentID",
         dataType: "json",
         data:
         {
-            PPID: $("#PPID").val()
+            ParentID: $("#PPID").val(),
+            TBName: "CODES_CL"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -270,8 +271,8 @@ function LoadCYLS() {
         var obj = colors[i].split(':');
         if (i === colors.length - 1)
             $("#div_clys_right2").append('<div class="div_clys"><span class="span_clys_left" style="border:none;"></span><span class="span_clys_right">' + obj[0] + '</span></div>');
-            else
-        $("#div_clys_right2").append('<div class="div_clys"><span class="span_clys_left" style="background-color: ' + obj[0] + '"></span><span class="span_clys_right">' + obj[1] + '</span></div>');
+        else
+            $("#div_clys_right2").append('<div class="div_clys"><span class="span_clys_left" style="background-color: ' + obj[0] + '"></span><span class="span_clys_right">' + obj[1] + '</span></div>');
     }
     $(".div_clys").bind("click", ActiveCLYS);
 }
@@ -287,7 +288,7 @@ function SelectLB(obj, type) {
 }
 //选择车辆颜色
 function ActiveCLYS() {
-    $(".div_clys").each(function() {
+    $(".div_clys").each(function () {
         $(this).css("background-color", "#ffffff;");
     });
     $(this).css("background-color", "#87B53B");

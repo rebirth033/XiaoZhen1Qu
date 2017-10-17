@@ -70,11 +70,12 @@ function LoadLB() {
 function LoadXL() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadLPXX",
+        url: getRootPath() + "/Business/Common/LoadByParentID",
         dataType: "json",
         data:
         {
-            LBID: $("#LBID").val()
+            ParentID: $("#LBID").val(),
+            TBName: "CODES_PFCG"
         },
         success: function (xml) {
             if (xml.Result === 1) {
