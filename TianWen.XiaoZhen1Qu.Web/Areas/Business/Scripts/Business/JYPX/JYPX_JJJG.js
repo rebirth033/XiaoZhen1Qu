@@ -16,7 +16,6 @@ $(document).ready(function () {
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
     LoadTXXX();
     LoadDefault();
-    BindClick("LB");
     BindClick("QY");
     BindClick("DD");
     LoadDuoX("辅导阶段", "FDJD");
@@ -46,11 +45,12 @@ function LoadDefault() {
 function LoadDuoX(type, id) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_JYPX",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: type
+            TYPENAME: type,
+            TBName: "CODES_JYPX"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -84,9 +84,6 @@ function LoadDuoX(type, id) {
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadLB();
-        }
         if (type === "QY") {
             LoadQY();
         }

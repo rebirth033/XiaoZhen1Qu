@@ -43,11 +43,12 @@ function LoadDefault() {
 function LoadDuoX(type, id) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_JYPX",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: type
+            TYPENAME: type,
+            TBName: "CODES_JYPX"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -78,33 +79,6 @@ function LoadDuoX(type, id) {
         }
     });
 }
-//加载管理培训类别
-function LoadLB() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_JYPX",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "管理培训"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll; height:341px;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectLB(this,\"LB\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divLB").html(html);
-                $("#divLB").css("display", "block");
-                ActiveStyle("LB");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
 //选择类别下拉框
 function SelectLB(obj, type, id) {
     $("#span" + type).html(obj.innerHTML);
@@ -116,11 +90,12 @@ function SelectLB(obj, type, id) {
 function LoadXL(lbmc, xl) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_JYPX",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: lbmc
+            TYPENAME: lbmc,
+            TBName: "CODES_JYPX"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -185,7 +160,7 @@ function SetXL(lbs) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadLB();
+            LoadCODESByTYPENAME("管理培训", "LB", "CODES_JYPX");
         }
         if (type === "QY") {
             LoadQY();

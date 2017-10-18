@@ -54,7 +54,7 @@ function LoadBYYX() {
 }
 //毕业院校标签切换
 function JCBQActive() {
-    LoadBYYXMC("毕业院校", this.id);
+    LoadBYYXMC("学校", this.id);
 }
 //加载毕业院校名称
 function LoadBYYXMC(JCLX, JCBQ) {
@@ -90,33 +90,6 @@ function BYYXXZ(BYYXMC, BYYXID) {
     $("#spanBYYX").html(BYYXMC);
     $("#divBYYX").css("display", "none");
 }
-//加载艺术培训教学科目
-function LoadJXKM() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_JYPX",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "艺术培训教学科目"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll; height:341px;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectLB(this,\"JXKM\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divJXKM").html(html);
-                $("#divJXKM").css("display", "block");
-                ActiveStyle("JXKM");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
 //选择类别下拉框
 function SelectLB(obj, type, id) {
     $("#span" + type).html(obj.innerHTML);
@@ -128,7 +101,7 @@ function SelectLB(obj, type, id) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "JXKM") {
-            LoadJXKM();
+            LoadCODESByTYPENAME("艺术培训教学科目", "JXKM", "CODES_JYPX");
         }
         if (type === "BYYX") {
             LoadBYYX();
@@ -146,11 +119,12 @@ function BindClick(type) {
 function LoadDuoX(type, id) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_JYPX",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: type
+            TYPENAME: type,
+            TBName: "CODES_JYPX"
         },
         success: function (xml) {
             if (xml.Result === 1) {

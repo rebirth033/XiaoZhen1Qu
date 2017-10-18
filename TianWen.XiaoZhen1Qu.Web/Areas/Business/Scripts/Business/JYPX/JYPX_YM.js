@@ -51,17 +51,19 @@ function LoadGJ() {
 }
 //国家标签切换
 function JCBQActive() {
-    LoadGJMC("国家", this.id);
+    LoadGJMC("留学国家", this.id);
 }
 //加载国家名称
 function LoadGJMC(JCLX, JCBQ) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadLXGJXX",
+        url: getRootPath() + "/Business/Common/LoadByCodeValueAndTypeName",
         dataType: "json",
         data:
         {
-            GJBQ: JCBQ.split("div")[1]
+            CODEVALUE: JCBQ.split("div")[1],
+            TYPENAME: JCLX,
+            TBName: "CODES_JYPX"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -89,11 +91,12 @@ function GJXZ(GJMC, GJID) {
 function LoadDuoX(type, id) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_JYPX",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: type
+            TYPENAME: type,
+            TBName: "CODES_YJPX"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -129,7 +132,7 @@ function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "GJ") {
             LoadGJ();
-            LoadGJMC("国家", "divA");
+            LoadGJMC("留学国家", "divA");
         }
         if (type === "QY") {
             LoadQY();

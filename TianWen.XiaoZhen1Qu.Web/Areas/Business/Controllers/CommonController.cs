@@ -60,11 +60,6 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return Json(CommonBLL.LoadCODESByTYPENAME(TYPENAME, TBName));
         }
         
-        public JsonResult LoadCODES_JYPX()
-        {
-            string TYPENAME = Request["TYPENAME"];
-            return Json(CommonBLL.LoadCODES_JYPX(TYPENAME));
-        }
 
         public JsonResult LoadCODES_LYJD()
         {
