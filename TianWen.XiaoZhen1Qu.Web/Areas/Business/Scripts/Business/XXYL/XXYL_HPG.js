@@ -14,7 +14,7 @@ $(document).ready(function () {
     $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
     LoadTXXX();
-    LoadSNSBLB();
+    LoadDuoX("室内设备", "SNSB");
     LoadDefault();
     BindClick("LB");
     BindClick("KRNRS");
@@ -40,29 +40,33 @@ function LoadDefault() {
         ue.setHeight(200);
     });
 }
-//加载轰趴馆类别
-function LoadSNSBLB() {
+//加载多选
+function LoadDuoX(type, id) {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "室内设备",
+            TYPENAME: type,
             TBName: "CODES_XXYL"
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liFWPZ' onclick='SelectSNSBLB(this)'><img class='img_SNSBLB'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    html += "<li class='li" + id + "' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i === 5 || i === 11 || i === 17 || i === 23 || i === 29) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
                 }
+                if (parseInt(xml.list.length % 6) === 0)
+                    $("#div" + id).css("height", parseInt(xml.list.length / 6) * 45 + "px");
+                else
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
                 html += "</ul>";
-                $("#divSNSBLBText").html(html);
-                $(".img_SNSBLB").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $("#div" + id + "Text").html(html);
+                $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 LoadXXYL_HPGJBXX();
             }
         },
@@ -81,9 +85,6 @@ function SelectSNSBLB(obj) {
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadSNSBLB();
-        }
         if (type === "KRNRS") {
             LoadCODESByTYPENAME("可容纳人数", "KRNRS", "CODES_XXYL");
         }
@@ -116,7 +117,8 @@ function LoadXXYL_HPGJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.XXYL_HPGJBXX.BCMS);
                 });
-                SetSNSBLB(xml.Value.XXYL_HPGJBXX.SNSB);
+                if (xml.Value.XXYL_HPGJBXX.SNSB !== null)
+                    SetDuoX("SNSB", xml.Value.XXYL_HPGJBXX.SNSB);
                 $("#spanKRNRS").html(xml.Value.XXYL_HPGJBXX.KRNRS);
                 $("#spanQY").html(xml.Value.XXYL_HPGJBXX.QY);
                 $("#spanDD").html(xml.Value.XXYL_HPGJBXX.DD);
@@ -128,26 +130,6 @@ function LoadXXYL_HPGJBXX() {
         }
     });
 }
-//获取轰趴馆类别
-function GetSNSBLB() {
-    var SNSBLB = "";
-    $(".liFWPZ").each(function () {
-        if ($(this).find("img").attr("src").indexOf("blue") !== -1)
-            SNSBLB += $(this).find("label")[0].innerHTML + ",";
-    });
-    return RTrim(SNSBLB, ',');
-}
-//设置轰趴馆类别
-function SetSNSBLB(lbs) {
-    var lbarray = lbs.split(',');
-    for (var i = 0; i < lbarray.length; i++) {
-        $(".liFWPZ").each(function () {
-            if ($(this).find("label")[0].innerHTML.indexOf(lbarray[i]) !== -1)
-                $(this).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-        });
-    }
-
-}
 //发布
 function FB() {
     if (AllValidate() === false) return;
@@ -158,7 +140,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "SNSB", "'" + GetSNSBLB() + "'");
+    obj = jsonObj.AddJson(obj, "SNSB", "'" + GetDuoX("SNSB") + "'");
 
     if (getUrlParam("XXYL_HPGJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "XXYL_HPGJBXXID", "'" + getUrlParam("XXYL_HPGJBXXID") + "'");

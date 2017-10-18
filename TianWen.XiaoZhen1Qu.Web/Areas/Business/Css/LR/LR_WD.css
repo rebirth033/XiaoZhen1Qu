@@ -48,12 +48,21 @@
     border: none !important;
 }
 
-.img_WDYJLB {
+.img_WDLB {
     width: 16px;
     height: 16px;
     cursor: pointer;
     border: none !important;
     margin-right: 5px;
+}
+
+.liWDLB {
+    display: inline-block;
+    width: 105px;
+    height: 30px;
+    text-align: left;
+    margin-top: 4px;
+    cursor: pointer;
 }
 
 .spanFWQK {

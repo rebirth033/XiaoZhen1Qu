@@ -85,26 +85,6 @@ function LoadXXYL_YDJSJBXX() {
         }
     });
 }
-//获取运动健身类别
-function GetYDJSLB() {
-    var YDJSLB = "";
-    $(".liFWPZ").each(function () {
-        if ($(this).find("img").attr("src").indexOf("blue") !== -1)
-            YDJSLB += $(this).find("label")[0].innerHTML + ",";
-    });
-    return RTrim(YDJSLB, ',');
-}
-//设置运动健身类别
-function SetYDJSLB(lbs) {
-    var lbarray = lbs.split(',');
-    for (var i = 0; i < lbarray.length; i++) {
-        $(".liFWPZ").each(function () {
-            if ($(this).find("label")[0].innerHTML.indexOf(lbarray[i]) !== -1)
-                $(this).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-        });
-    }
-
-}
 //发布
 function FB() {
     if (AllValidate() === false) return;

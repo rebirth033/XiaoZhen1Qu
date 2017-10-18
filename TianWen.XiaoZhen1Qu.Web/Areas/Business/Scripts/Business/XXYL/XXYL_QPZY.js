@@ -39,13 +39,6 @@ function LoadDefault() {
         ue.setHeight(200);
     });
 }
-//选择房屋配置
-function SelectHWLB(obj) {
-    if ($(obj).find("img").attr("src").indexOf("blue") !== -1)
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-    else
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-}
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
@@ -92,26 +85,6 @@ function LoadXXYL_QPZYJBXX() {
         }
     });
 }
-//获取棋牌桌游类别
-function GetHWLB() {
-    var HWLB = "";
-    $(".liFWPZ").each(function () {
-        if ($(this).find("img").attr("src").indexOf("blue") !== -1)
-            HWLB += $(this).find("label")[0].innerHTML + ",";
-    });
-    return RTrim(HWLB, ',');
-}
-//设置棋牌桌游类别
-function SetHWLB(lbs) {
-    var lbarray = lbs.split(',');
-    for (var i = 0; i < lbarray.length; i++) {
-        $(".liFWPZ").each(function () {
-            if ($(this).find("label")[0].innerHTML.indexOf(lbarray[i]) !== -1)
-                $(this).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-        });
-    }
-
-}
 //发布
 function FB() {
     if (AllValidate() === false) return;
@@ -122,7 +95,6 @@ function FB() {
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
 
     if (getUrlParam("XXYL_QPZYJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "XXYL_QPZYJBXXID", "'" + getUrlParam("XXYL_QPZYJBXXID") + "'");

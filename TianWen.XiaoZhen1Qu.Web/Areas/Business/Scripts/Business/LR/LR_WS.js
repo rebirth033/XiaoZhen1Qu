@@ -86,7 +86,6 @@ function FB() {
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
-    obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");

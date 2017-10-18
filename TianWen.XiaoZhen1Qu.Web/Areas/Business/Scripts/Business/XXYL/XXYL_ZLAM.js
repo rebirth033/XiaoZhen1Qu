@@ -14,7 +14,7 @@ $(document).ready(function () {
     $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
     LoadTXXX();
-    LoadZLAMLB();
+    LoadDuoX("足疗按摩", "ZLAMLB");
     LoadDefault();
     BindClick("LB");
     BindClick("QY");
@@ -39,30 +39,34 @@ function LoadDefault() {
         ue.setHeight(200);
     });
 }
-//加载足疗按摩类别
-function LoadZLAMLB() {
+//加载多选
+function LoadDuoX(type, id) {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "足疗按摩",
+            TYPENAME: type,
             TBName: "CODES_XXYL"
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liFWPZ' onclick='SelectZLAMLB(this)'><img class='img_ZLAMLB'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    html += "<li class='li" + id + "' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i === 5 || i === 11 || i === 17 || i === 23 || i === 29) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
                 }
+                if (parseInt(xml.list.length % 6) === 0)
+                    $("#div" + id).css("height", parseInt(xml.list.length / 6) * 45 + "px");
+                else
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
                 html += "</ul>";
-                $("#divZLAMLBText").html(html);
-                $(".img_ZLAMLB").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-                LoadXXYL_ZLAMJBXX();
+                $("#div" + id + "Text").html(html);
+                $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                LoadCY_MSJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -73,9 +77,6 @@ function LoadZLAMLB() {
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadLB();
-        }
         if (type === "QY") {
             LoadQY();
         }
@@ -105,7 +106,8 @@ function LoadXXYL_ZLAMJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.XXYL_ZLAMJBXX.BCMS);
                 });
-                SetZLAMLB(xml.Value.XXYL_ZLAMJBXX.LB);
+                if (xml.Value.XXYL_ZLAMJBXX.LB !== null)
+                    SetDuoX("ZLAMLB", xml.Value.XXYL_ZLAMJBXX.LB);
                 $("#spanQY").html(xml.Value.XXYL_ZLAMJBXX.JYQY);
                 $("#spanDD").html(xml.Value.XXYL_ZLAMJBXX.JYDD);
                 LoadPhotos(xml.Value.Photos);
@@ -115,26 +117,6 @@ function LoadXXYL_ZLAMJBXX() {
 
         }
     });
-}
-//获取足疗按摩类别
-function GetZLAMLB() {
-    var ZLAMLB = "";
-    $(".liFWPZ").each(function () {
-        if ($(this).find("img").attr("src").indexOf("blue") !== -1)
-            ZLAMLB += $(this).find("label")[0].innerHTML + ",";
-    });
-    return RTrim(ZLAMLB, ',');
-}
-//设置足疗按摩类别
-function SetZLAMLB(lbs) {
-    var lbarray = lbs.split(',');
-    for (var i = 0; i < lbarray.length; i++) {
-        $(".liFWPZ").each(function () {
-            if ($(this).find("label")[0].innerHTML.indexOf(lbarray[i]) !== -1)
-                $(this).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-        });
-    }
-
 }
 //发布
 function FB() {
@@ -146,7 +128,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "JYQY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "JYDD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "LB", "'" + GetZLAMLB() + "'");
+    obj = jsonObj.AddJson(obj, "LB", "'" + GetDuoX("ZLAMLB") + "'");
 
     if (getUrlParam("XXYL_ZLAMJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "XXYL_ZLAMJBXXID", "'" + getUrlParam("XXYL_ZLAMJBXXID") + "'");

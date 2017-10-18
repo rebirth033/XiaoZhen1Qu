@@ -16,7 +16,6 @@ $(document).ready(function () {
     LoadTXXX();
     LoadXXYL_TQTJBXX();
     LoadDefault();
-    BindClick("LB");
     BindClick("QY");
     BindClick("DD");
 });
@@ -39,19 +38,9 @@ function LoadDefault() {
         ue.setHeight(200);
     });
 }
-//选择房屋配置
-function SelectHWLB(obj) {
-    if ($(obj).find("img").attr("src").indexOf("blue") !== -1)
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-    else
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-}
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadLB();
-        }
         if (type === "QY") {
             LoadQY();
         }

@@ -14,7 +14,7 @@ $(document).ready(function () {
     $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
     LoadTXXX();
-    LoadMRHFLB();
+    LoadDuoX("美容护肤", "MRHFLB");
     LoadDefault();
     BindClick("LB");
     BindClick("QY");
@@ -39,29 +39,33 @@ function LoadDefault() {
         ue.setHeight(200);
     });
 }
-//加载美容护肤类别
-function LoadMRHFLB() {
+//加载多选
+function LoadDuoX(type, id) {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "美容护肤",
+            TYPENAME: type,
             TBName: "CODES_LR"
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liFWPZ' onclick='SelectMRHFLB(this)'><img class='img_MRHFLB'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    html += "<li class='li" + id + "' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i === 5 || i === 11 || i === 17 || i === 23 || i === 29) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
                 }
+                if (parseInt(xml.list.length % 6) === 0)
+                    $("#div" + id).css("height", parseInt(xml.list.length / 6) * 45 + "px");
+                else
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
                 html += "</ul>";
-                $("#divMRHFLBText").html(html);
-                $(".img_MRHFLB").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $("#div" + id + "Text").html(html);
+                $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 LoadLR_MRHFJBXX();
             }
         },
@@ -80,9 +84,6 @@ function SelectMRHFLB(obj) {
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadLB();
-        }
         if (type === "QY") {
             LoadQY();
         }
@@ -112,7 +113,8 @@ function LoadLR_MRHFJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.LR_MRHFJBXX.BCMS);
                 });
-                SetMRHFLB(xml.Value.LR_MRHFJBXX.LB);
+                if (xml.Value.LR_MRHFJBXX.LB !== null)
+                    SetDuoX("MRHFLB", xml.Value.LR_MRHFJBXX.LB);
                 $("#spanQY").html(xml.Value.LR_MRHFJBXX.QY);
                 $("#spanDD").html(xml.Value.LR_MRHFJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
@@ -122,26 +124,6 @@ function LoadLR_MRHFJBXX() {
 
         }
     });
-}
-//获取美容护肤类别
-function GetMRHFLB() {
-    var MRHFLB = "";
-    $(".liFWPZ").each(function () {
-        if ($(this).find("img").attr("src").indexOf("blue") !== -1)
-            MRHFLB += $(this).find("label")[0].innerHTML + ",";
-    });
-    return RTrim(MRHFLB, ',');
-}
-//设置美容护肤类别
-function SetMRHFLB(lbs) {
-    var lbarray = lbs.split(',');
-    for (var i = 0; i < lbarray.length; i++) {
-        $(".liFWPZ").each(function () {
-            if ($(this).find("label")[0].innerHTML.indexOf(lbarray[i]) !== -1)
-                $(this).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-        });
-    }
-
 }
 //发布
 function FB() {
@@ -153,7 +135,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "LB", "'" + GetMRHFLB() + "'");
+    obj = jsonObj.AddJson(obj, "LB", "'" + GetDuoX("MRHFLB") + "'");
 
     if (getUrlParam("LR_MRHFJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "LR_MRHFJBXXID", "'" + getUrlParam("LR_MRHFJBXXID") + "'");

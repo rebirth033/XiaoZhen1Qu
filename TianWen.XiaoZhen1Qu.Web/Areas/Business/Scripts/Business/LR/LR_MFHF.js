@@ -14,7 +14,7 @@ $(document).ready(function () {
     $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
     LoadTXXX();
-    LoadMFHFLB();
+    LoadDuoX("美发护发", "MFHFLB");
     LoadDefault();
     BindClick("LB");
     BindClick("QY");
@@ -39,29 +39,33 @@ function LoadDefault() {
         ue.setHeight(200);
     });
 }
-//加载美发护发类别
-function LoadMFHFLB() {
+//加载多选
+function LoadDuoX(type, id) {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "美发护发",
+            TYPENAME: type,
             TBName: "CODES_LR"
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liFWPZ' onclick='SelectMFHFLB(this)'><img class='img_MFHFLB'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    html += "<li class='li" + id + "' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i === 5 || i === 11 || i === 17 || i === 23 || i === 29) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
                 }
+                if (parseInt(xml.list.length % 6) === 0)
+                    $("#div" + id).css("height", parseInt(xml.list.length / 6) * 45 + "px");
+                else
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
                 html += "</ul>";
-                $("#divMFHFLBText").html(html);
-                $(".img_MFHFLB").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $("#div" + id + "Text").html(html);
+                $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 LoadLR_MFHFJBXX();
             }
         },
@@ -70,19 +74,9 @@ function LoadMFHFLB() {
         }
     });
 }
-//选择美发护发
-function SelectMFHFLB(obj) {
-    if ($(obj).find("img").attr("src").indexOf("blue") !== -1)
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-    else
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-}
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadLB();
-        }
         if (type === "QY") {
             LoadQY();
         }
@@ -112,7 +106,8 @@ function LoadLR_MFHFJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.LR_MFHFJBXX.BCMS);
                 });
-                SetMFHFLB(xml.Value.LR_MFHFJBXX.LB);
+                if (xml.Value.LR_MFHFJBXX.LB !== null)
+                    SetDuoX("MFHFLB", xml.Value.LR_MFHFJBXX.LB);
                 $("#spanQY").html(xml.Value.LR_MFHFJBXX.QY);
                 $("#spanDD").html(xml.Value.LR_MFHFJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
@@ -123,25 +118,6 @@ function LoadLR_MFHFJBXX() {
         }
     });
 }
-//获取美发护发类别
-function GetMFHFLB() {
-    var MFHFLB = "";
-    $(".liFWPZ").each(function () {
-        if ($(this).find("img").attr("src").indexOf("blue") !== -1)
-            MFHFLB += $(this).find("label")[0].innerHTML + ",";
-    });
-    return RTrim(MFHFLB, ',');
-}
-//设置美发护发类别
-function SetMFHFLB(lbs) {
-    var lbarray = lbs.split(',');
-    for (var i = 0; i < lbarray.length; i++) {
-        $(".liFWPZ").each(function () {
-            if ($(this).find("label")[0].innerHTML.indexOf(lbarray[i]) !== -1)
-                $(this).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-        });
-    }
-}
 //发布
 function FB() {
     if (AllValidate() === false) return;
@@ -151,7 +127,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "LB", "'" + GetMFHFLB() + "'");
+    obj = jsonObj.AddJson(obj, "LB", "'" + GetDuoX("MFHFLB") + "'");
 
     if (getUrlParam("LR_MFHFJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "LR_MFHFJBXXID", "'" + getUrlParam("LR_MFHFJBXXID") + "'");
