@@ -1,8 +1,6 @@
 ﻿var isleave = true;
 var ue = UE.getEditor('FYMS');
 $(document).ready(function () {
-    $("#imgGRZR").bind("click", GRZRSelect);
-    $("#imgSJZR").bind("click", SJZRSelect);
     $("#divUploadOut").bind("mouseover", GetUploadCss);
     $("#divUploadOut").bind("mouseleave", LeaveUploadCss);
     $("#btnFB").bind("click", FB);
@@ -42,19 +40,6 @@ function LoadDefault() {
     ue.ready(function () {
         ue.setHeight(200);
     });
-    $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
-
-//选择个人转让
-function GRZRSelect() {
-    $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
-//选择商家转让
-function SJZRSelect() {
-    $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
 }
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
@@ -92,24 +77,6 @@ function SelectPBPP(obj, type, code) {
     $("#div" + type).css("display", "none");
     LoadPBXH(code);
 }
-//获取供求
-function GetGQ() {
-    if ($("#imgGRZR").attr("src").indexOf("blue") !== -1)
-        return "0";
-    else
-        return "1";
-}
-//设置供求
-function SetGQ(gq) {
-    if (gq === 0) {
-        $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-        $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    }
-    else {
-        $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-        $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    }
-}
 //加载二手_手机数码_母婴/服装/美容基本信息
 function LoadES_MYFZMR_MRBJJBXX() {
     $.ajax({
@@ -131,8 +98,10 @@ function LoadES_MYFZMR_MRBJJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.ES_MYFZMR_MRBJJBXX.BCMS);
                 });
-                SetGQ(xml.Value.ES_MYFZMR_MRBJJBXX.GQ);
+                if (xml.Value.ES_SJSM_PBDNJBXX.GQ !== null)
+                    SetDX("GQ", xml.Value.ES_SJSM_PBDNJBXX.GQ);
                 $("#spanLB").html(xml.Value.ES_MYFZMR_MRBJJBXX.LB);
+                $("#spanXL").html(xml.Value.ES_MYFZMR_MRBJJBXX.XL);
                 $("#spanXJ").html(xml.Value.ES_MYFZMR_MRBJJBXX.XJ);
                 $("#spanQY").html(xml.Value.ES_MYFZMR_MRBJJBXX.JYQY);
                 $("#spanSQ").html(xml.Value.ES_MYFZMR_MRBJJBXX.JYDD);
@@ -148,7 +117,7 @@ function LoadES_MYFZMR_MRBJJBXX() {
 
                 LoadPhotos(xml.Value.Photos);
                 PDLB(xml.Value.ES_MYFZMR_MRBJJBXX.LB);
-                $("#spanXL").html(xml.Value.ES_MYFZMR_MRBJJBXX.XL);
+                
                 return;
             }
         },
@@ -169,7 +138,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "JYQY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "JYDD", "'" + $("#spanSQ").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "GQ", "'" + GetGQ() + "'");
+    obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
 
     obj = jsonObj.AddJson(obj, "DSPMCC", "'" + $("#spanDSPMCC").html() + "'");
     obj = jsonObj.AddJson(obj, "DSPP", "'" + $("#spanDSPP").html() + "'");

@@ -1,8 +1,6 @@
 ﻿var isleave = true;
 var ue = UE.getEditor('FYMS');
 $(document).ready(function () {
-    $("#imgSJZR").bind("click", SJZRSelect);
-    $("#imgSJHS").bind("click", SJHSSelect);
     $("#divUploadOut").bind("mouseover", GetUploadCss);
     $("#divUploadOut").bind("mouseleave", LeaveUploadCss);
     $("#btnFB").bind("click", FB);
@@ -45,18 +43,6 @@ function LoadDefault() {
     ue.ready(function () {
         ue.setHeight(200);
     });
-    $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgSJHS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
-//选择商家转让
-function SJZRSelect() {
-    $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgSJHS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
-//选择商家回收
-function SJHSSelect() {
-    $("#imgSJHS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
 }
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
@@ -110,24 +96,6 @@ function SelectPBPP(obj, type, code) {
     $("#div" + type).css("display", "none");
     LoadPBXH(code);
 }
-//获取供求
-function GetGQ() {
-    if ($("#imgSJZR").attr("src").indexOf("blue") !== -1)
-        return "0";
-    else
-        return "1";
-}
-//设置供求
-function SetGQ(gq) {
-    if (gq === 0) {
-        $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-        $("#imgSJHS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    }
-    else {
-        $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-        $("#imgSJHS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    }
-}
 //加载二手_手机数码_二手家具基本信息
 function LoadES_JDJJBG_ESJJJBXX() {
     $.ajax({
@@ -149,7 +117,8 @@ function LoadES_JDJJBG_ESJJJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.ES_JDJJBG_ESJJJBXX.BCMS);
                 });
-                SetGQ(xml.Value.ES_JDJJBG_ESJJJBXX.GQ);
+                if (xml.Value.ES_SJSM_PBDNJBXX.GQ !== null)
+                    SetDX("GQ", xml.Value.ES_SJSM_PBDNJBXX.GQ);
                 $("#spanLB").html(xml.Value.ES_JDJJBG_ESJJJBXX.LB);
                 $("#spanXJ").html(xml.Value.ES_JDJJBG_ESJJJBXX.XJ);
                 $("#spanQY").html(xml.Value.ES_JDJJBG_ESJJJBXX.JYQY);
@@ -176,7 +145,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "JYQY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "JYDD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "GQ", "'" + GetGQ() + "'");
+    obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
 
     if (getUrlParam("ES_JDJJBG_ESJJJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "ES_JDJJBG_ESJJJBXXID", "'" + getUrlParam("ES_JDJJBG_ESJJJBXXID") + "'");

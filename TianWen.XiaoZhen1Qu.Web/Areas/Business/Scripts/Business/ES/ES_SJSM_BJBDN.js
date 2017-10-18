@@ -152,24 +152,6 @@ function SelectBJBPP(obj, type, code) {
     $("#div" + type).css("display", "none");
     LoadBJBXH(code);
 }
-//获取供求
-function GetGQ() {
-    if ($("#imgSJZR").attr("src").indexOf("blue") !== -1)
-        return "0";
-    else
-        return "1";
-}
-//设置供求
-function SetGQ(gq) {
-    if (gq === 0) {
-        $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-        $("#imgSJHS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    }
-    else {
-        $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-        $("#imgSJHS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    }
-}
 //加载二手_手机数码_二手手机基本信息
 function LoadES_SJSM_BJBDNJBXX() {
     $.ajax({
@@ -191,7 +173,8 @@ function LoadES_SJSM_BJBDNJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.ES_SJSM_BJBDNJBXX.BCMS);
                 });
-                SetGQ(xml.Value.ES_SJSM_BJBDNJBXX.GQ);
+                if (xml.Value.ES_SJSM_BJBDNJBXX.GQ !== null)
+                    SetDX("GQ", xml.Value.ES_SJSM_BJBDNJBXX.GQ);
                 $("#spanLB").html(xml.Value.ES_SJSM_BJBDNJBXX.LB);
                 $("#spanBJBPP").html(xml.Value.ES_SJSM_BJBDNJBXX.BJBPP);
                 $("#spanBJBXH").html(xml.Value.ES_SJSM_BJBDNJBXX.BJBXH);
@@ -230,7 +213,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "JYQY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "JYDD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "GQ", "'" + GetGQ() + "'");
+    obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
 
     obj = jsonObj.AddJson(obj, "CPUPP", "'" + $("#spanCPUPP").html() + "'");
     obj = jsonObj.AddJson(obj, "CPUHS", "'" + $("#spanCPUHS").html() + "'");

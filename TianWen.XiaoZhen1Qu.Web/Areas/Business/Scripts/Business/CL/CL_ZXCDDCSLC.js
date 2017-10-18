@@ -1,8 +1,6 @@
 ﻿var isleave = true;
 var ue = UE.getEditor('FYMS');
 $(document).ready(function () {
-    $("#imgGRZR").bind("click", GRZRSelect);
-    $("#imgSJZR").bind("click", SJZRSelect);
     $("#divUploadOut").bind("mouseover", GetUploadCss);
     $("#divUploadOut").bind("mouseleave", LeaveUploadCss);
     $("#btnFB").bind("click", FB);
@@ -43,8 +41,6 @@ function LoadDefault() {
     ue.ready(function () {
         ue.setHeight(200);
     });
-    $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
 }
 //加载图形信息
 function LoadTXXX() {
@@ -68,16 +64,6 @@ function LoadTXXX() {
 
         }
     });
-}
-//选择个人转让
-function GRZRSelect() {
-    $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
-//选择商家转让
-function SJZRSelect() {
-    $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
 }
 //选择类别下拉框
 function SelectLB(obj, type) {
@@ -137,24 +123,6 @@ function SelectPBPP(obj, type, code) {
     $("#div" + type).css("display", "none");
     LoadPBXH(code);
 }
-//获取供求
-function GetGQ() {
-    if ($("#imgGRZR").attr("src").indexOf("blue") !== -1)
-        return "0";
-    else
-        return "1";
-}
-//设置供求
-function SetGQ(gq) {
-    if (gq === 0) {
-        $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-        $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    }
-    else {
-        $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-        $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    }
-}
 //加载车辆_自行车/电动车/三轮车基本信息
 function LoadCL_ZXCDDCSLCJBXX() {
     $.ajax({
@@ -188,7 +156,8 @@ function LoadCL_ZXCDDCSLCJBXX() {
                 $("#spanXL").html(xml.Value.CL_ZXCDDCSLCJBXX.XL);
                 LoadPhotos(xml.Value.Photos);
                 PDLB(xml.Value.CL_ZXCDDCSLCJBXX.LB);
-                SetGQ(xml.Value.CL_ZXCDDCSLCJBXX.GQ);
+                if (xml.Value.ES_SJSM_PBDNJBXX.GQ !== null)
+                    SetDX("GQ", xml.Value.ES_SJSM_PBDNJBXX.GQ);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -213,7 +182,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "JYQY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "JYDD", "'" + $("#spanSQ").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "GQ", "'" + GetGQ() + "'");
+    obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
 
     if (getUrlParam("CL_ZXCDDCSLCJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "CL_ZXCDDCSLCJBXXID", "'" + getUrlParam("CL_ZXCDDCSLCJBXXID") + "'");

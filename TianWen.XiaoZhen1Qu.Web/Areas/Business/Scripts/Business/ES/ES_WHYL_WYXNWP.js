@@ -1,8 +1,6 @@
 ﻿var isleave = true;
 var ue = UE.getEditor('FYMS');
 $(document).ready(function () {
-    $("#imgGRZR").bind("click", GRZRSelect);
-    $("#imgSJZR").bind("click", SJZRSelect);
     $("#divUploadOut").bind("mouseover", GetUploadCss);
     $("#divUploadOut").bind("mouseleave", LeaveUploadCss);
     $("#btnFB").bind("click", FB);
@@ -21,8 +19,8 @@ $(document).ready(function () {
     LoadDefault();
     LoadES_WHYL_WYXNWPJBXX();
     BindClick("LB");
-    BindClick("XJ");
     BindClick("XL");
+    BindClick("XJ");
     BindClick("QY");
     BindClick("DD");
 
@@ -48,12 +46,13 @@ function YXBQActive() {
 function LoadYXMC(SZM) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/YXCZ/LoadYXJBXX",
+        url: getRootPath() + "/Business/YXCZ/LoadByCodeValueAndTypeName",
         dataType: "json",
         data:
         {
-            YHID: getUrlParam("YHID"),
-            SZM: SZM.split("div")[1]
+            CODEVALUE: SZM.split("div")[1],
+            TYPENAME: "游戏",
+            TBName: "CODES_ES_WHYL"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -94,20 +93,7 @@ function LoadDefault() {
     ue.ready(function () {
         ue.setHeight(200);
     });
-    $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
 }
-//选择个人转让
-function GRZRSelect() {
-    $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
-//选择商家转让
-function SJZRSelect() {
-    $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-}
-
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
@@ -115,7 +101,8 @@ function BindClick(type) {
             LoadCODESByTYPENAME("网游/虚拟物品", "LB", "CODES_ES_WHYL");
         }
         if (type === "XL") {
-            
+            LoadYXBQ();
+            LoadYXMC("divA");
         }
         if (type === "XJ") {
             LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM");
@@ -139,24 +126,6 @@ function SelectPBPP(obj, type, code) {
     $("#div" + type).css("display", "none");
     LoadPBXH(code);
 }
-//获取供求
-function GetGQ() {
-    if ($("#imgGRZR").attr("src").indexOf("blue") !== -1)
-        return "0";
-    else
-        return "1";
-}
-//设置供求
-function SetGQ(gq) {
-    if (gq === 0) {
-        $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-        $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    }
-    else {
-        $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-        $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    }
-}
 //加载二手_手机数码_网游/虚拟物品基本信息
 function LoadES_WHYL_WYXNWPJBXX() {
     $.ajax({
@@ -178,7 +147,8 @@ function LoadES_WHYL_WYXNWPJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.ES_WHYL_WYXNWPJBXX.BCMS);
                 });
-                SetGQ(xml.Value.ES_WHYL_WYXNWPJBXX.GQ);
+                if (xml.Value.ES_SJSM_PBDNJBXX.GQ !== null)
+                    SetDX("GQ", xml.Value.ES_SJSM_PBDNJBXX.GQ);
                 $("#spanLB").html(xml.Value.ES_WHYL_WYXNWPJBXX.LB);
                 $("#spanXJ").html(xml.Value.ES_WHYL_WYXNWPJBXX.XJ);
                 $("#spanXL").html(xml.Value.ES_WHYL_WYXNWPJBXX.XL);
@@ -207,7 +177,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "JYQY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "JYDD", "'" + $("#spanSQ").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "GQ", "'" + GetGQ() + "'");
+    obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
 
     if (getUrlParam("ES_WHYL_WYXNWPJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "ES_WHYL_WYXNWPJBXXID", "'" + getUrlParam("ES_WHYL_WYXNWPJBXXID") + "'");

@@ -3,8 +3,6 @@ var ue = UE.getEditor('FYMS');
 $(document).ready(function () {
     $("#divUploadOut").bind("mouseover", GetUploadCss);
     $("#divUploadOut").bind("mouseleave", LeaveUploadCss);
-    $("#imgS").bind("click", SSelect);
-    $("#imgF").bind("click", FSelect);
     $("#btnFB").bind("click", FB);
     $("#FYMS").bind("focus", FYMSFocus);
     $("#FYMS").bind("blur", FYMSBlur);
@@ -103,36 +101,6 @@ function LoadDefault() {
     ue.ready(function () {
         ue.setHeight(200);
     });
-    $("#imgS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgF").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
-//选择是
-function SSelect() {
-    $("#imgS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgF").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
-//选择否
-function FSelect() {
-    $("#imgS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    $("#imgF").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-}
-//获取是否定期保养
-function GetSFDQBY() {
-    if ($("#imgS").attr("src").indexOf("blue") !== -1)
-        return "0";
-    else
-        return "1";
-}
-//设置是否定期保养
-function SetSFDQBY(SFDQBY) {
-    if (SFDQBY === 0) {
-        $("#imgS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-        $("#imgF").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    }
-    else {
-        $("#imgS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-        $("#imgF").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    }
 }
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
@@ -281,7 +249,8 @@ function LoadCL_JCJBXX() {
                 $("#spanPZSZCS").html(xml.Value.CL_JCJBXX.PZSZCS);
                 $("#spanGHCS").html(xml.Value.CL_JCJBXX.GHCS);
                 LoadPhotos(xml.Value.Photos);
-                SetSFDQBY(xml.Value.CL_JCJBXX.SFDQBY);
+                if (xml.Value.CL_JCJBXX.SFDQBY !== null)
+                    SetDX("SFDQBY", xml.Value.CL_JCJBXX.SFDQBY);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -308,7 +277,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "PZSZSF", "'" + $("#spanPZSZSF").html() + "'");
     obj = jsonObj.AddJson(obj, "PZSZCS", "'" + $("#spanPZSZCS").html() + "'");
     obj = jsonObj.AddJson(obj, "GHCS", "'" + $("#spanGHCS").html() + "'");
-    obj = jsonObj.AddJson(obj, "SFDQBY", "'" + GetSFDQBY() + "'");
+    obj = jsonObj.AddJson(obj, "SFDQBY", "'" + GetDX("SFDQBY") + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
 
     if (getUrlParam("CL_JCJBXXID") !== null)
