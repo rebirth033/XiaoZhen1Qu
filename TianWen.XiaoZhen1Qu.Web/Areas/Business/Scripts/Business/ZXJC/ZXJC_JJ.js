@@ -43,7 +43,7 @@ function LoadDefault() {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadDropdown("家具", "LB");
+            LoadCODESByTYPENAME("家具", "LB", "CODES_ZXJC");
         }
         if (type === "XL") {
             LoadXL();
@@ -53,33 +53,6 @@ function BindClick(type) {
         }
         if (type === "DD") {
             LoadDD($("#QYCode").val());
-        }
-    });
-}
-//加载家具类别
-function LoadDropdown(type, id) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_ZXJC",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: type
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectLB(this,\"" + id + "\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#div" + id).html(html);
-                $("#div" + id).css("display", "block");
-                ActiveStyle(id);
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
         }
     });
 }
@@ -106,11 +79,12 @@ function PDLB(lbmc) {
 function LoadXL(type) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadJZFWXX",
+        url: getRootPath() + "/Business/Common/LoadByParentID",
         dataType: "json",
         data:
         {
-            LBID: $("#LBID").val()
+            ParentID: $("#LBID").val(),
+            TBName: "CODES_ZXJC"
         },
         success: function (xml) {
             if (xml.Result === 1) {

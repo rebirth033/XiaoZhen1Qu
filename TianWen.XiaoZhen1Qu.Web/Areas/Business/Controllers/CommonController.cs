@@ -61,24 +61,6 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         }
         
 
-        public JsonResult LoadCODES_LYJD()
-        {
-            string TYPENAME = Request["TYPENAME"];
-            return Json(CommonBLL.LoadCODES_LYJD(TYPENAME));
-        }
-
-        public JsonResult LoadCODES_ZXJC()
-        {
-            string TYPENAME = Request["TYPENAME"];
-            return Json(CommonBLL.LoadCODES_ZXJC(TYPENAME));
-        }
-
-        public JsonResult LoadCODES_HQSY()
-        {
-            string TYPENAME = Request["TYPENAME"];
-            return Json(CommonBLL.LoadCODES_HQSY(TYPENAME));
-        }
-
         public JsonResult LoadCODES_NLMFY()
         {
             string TYPENAME = Request["TYPENAME"];

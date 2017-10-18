@@ -56,52 +56,25 @@ function LoadDefault() {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "CYFS") {
-            LoadDropdown("出游方式", "CYFS");
+            LoadCODESByTYPENAME("出游方式", "CYFS", "CODES_LYJD");
         }
         if (type === "WFJT_Q") {
-            LoadDropdown("往返交通_去", "WFJT_Q");
+            LoadCODESByTYPENAME("往返交通_去", "WFJT_Q", "CODES_LYJD");
         }
         if (type === "WFJT_H") {
-            LoadDropdown("往返交通_回", "WFJT_H");
+            LoadCODESByTYPENAME("往返交通_回", "WFJT_H", "CODES_LYJD");
         }
         if (type === "XCTS_R") {
-            LoadDropdown("行程安排_日", "XCTS_R");
+            LoadCODESByTYPENAME("行程安排_日", "XCTS_R", "CODES_LYJD");
         }
         if (type === "XCTS_W") {
-            LoadDropdown("行程安排_晚", "XCTS_W");
+            LoadCODESByTYPENAME("行程安排_晚", "XCTS_W", "CODES_LYJD");
         }
         if (type === "QY") {
             LoadQY();
         }
         if (type === "DD") {
             LoadDD($("#QYCode").val());
-        }
-    });
-}
-//加载出游方式
-function LoadDropdown(type, id) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_LYJD",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: type
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"" + id + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#div" + id).html(html);
-                $("#div" + id).css("display", "block");
-                ActiveStyle(id);
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
         }
     });
 }

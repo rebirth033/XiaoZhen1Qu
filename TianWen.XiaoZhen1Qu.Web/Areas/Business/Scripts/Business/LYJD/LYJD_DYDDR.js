@@ -42,42 +42,16 @@ function LoadDefault() {
     });
     $(".iFWCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
 }
-//加载出游方式
-function LoadDropdown(type, id) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_LYJD",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: type
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"" + id + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#div" + id).html(html);
-                $("#div" + id).css("display", "block");
-                ActiveStyle(id);
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
 //加载多选
 function LoadDuoX(type, id) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_LYJD",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: type
+            TYPENAME: type,
+            TBName: "CODES_LYJD"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -112,13 +86,13 @@ function LoadDuoX(type, id) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "XL") {
-            LoadDropdown("导游学历", "XL");
+            LoadCODESByTYPENAME("导游学历", "XL", "CODES_LYJD");
         }
         if (type === "DTJY") {
-            LoadDropdown("带团经验", "DTJY");
+            LoadCODESByTYPENAME("带团经验", "DTJY", "CODES_LYJD");
         }
         if (type === "CYFS") {
-            LoadDropdown("出游方式", "CYFS");
+            LoadCODESByTYPENAME("出游方式", "CYFS", "CODES_LYJD");
         }
         if (type === "QY") {
             LoadQY();

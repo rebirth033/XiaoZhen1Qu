@@ -58,6 +58,8 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_JYPX>(String.Format("FROM CODES_JYPX WHERE TYPENAME = '{0}' ORDER BY CODEORDER", TYPENAME)) };
                 if (TBName == "CODES_JYPX_XX")
                     return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_JYPX_XX>(String.Format("FROM CODES_JYPX_XX WHERE TYPENAME = '{0}' ORDER BY CODEORDER", TYPENAME)) };
+                if (TBName == "CODES_LYJD")
+                    return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_LYJD>(String.Format("FROM CODES_LYJD WHERE TYPENAME = '{0}' ORDER BY CODEORDER", TYPENAME)) };
                 if (TBName == "CODES_HQSY")
                     return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_HQSY>(String.Format("FROM CODES_HQSY WHERE TYPENAME = '{0}' ORDER BY CODEORDER", TYPENAME)) };
                 if (TBName == "CODES_NLMFY")
@@ -71,48 +73,6 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
-
-        public object LoadCODES_LYJD(string TYPENAME)
-        {
-            try
-            {
-                IList<CODES_LYJD> list = DAO.Repository.GetObjectList<CODES_LYJD>(String.Format("FROM CODES_LYJD WHERE TYPENAME='{0}' ORDER BY CODEORDER", TYPENAME));
-                return new { Result = EnResultType.Success, list = list };
-            }
-            catch (Exception ex)
-            {
-                LoggerManager.Error("error", ex.Message);
-                return new { Result = EnResultType.Failed, Message = "加载失败" };
-            }
-        }
-
-        public object LoadCODES_ZXJC(string TYPENAME)
-        {
-            try
-            {
-                IList<CODES_ZXJC> list = DAO.Repository.GetObjectList<CODES_ZXJC>(String.Format("FROM CODES_ZXJC WHERE TYPENAME='{0}' ORDER BY CODEORDER", TYPENAME));
-                return new { Result = EnResultType.Success, list = list };
-            }
-            catch (Exception ex)
-            {
-                LoggerManager.Error("error", ex.Message);
-                return new { Result = EnResultType.Failed, Message = "加载失败" };
-            }
-        }
-
-        public object LoadCODES_HQSY(string TYPENAME)
-        {
-            try
-            {
-                IList<CODES_HQSY> list = DAO.Repository.GetObjectList<CODES_HQSY>(String.Format("FROM CODES_HQSY WHERE TYPENAME='{0}' ORDER BY CODEORDER", TYPENAME));
-                return new { Result = EnResultType.Success, list = list };
-            }
-            catch (Exception ex)
-            {
-                LoggerManager.Error("error", ex.Message);
-                return new { Result = EnResultType.Failed, Message = "加载失败" };
-            }
-        }
 
         public object LoadCODES_NLMFY(string TYPENAME)
         {

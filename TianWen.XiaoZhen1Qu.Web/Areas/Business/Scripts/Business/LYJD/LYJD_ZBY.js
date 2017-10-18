@@ -16,13 +16,9 @@ $(document).ready(function () {
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
     LoadTXXX();
     LoadDefault();
-    BindClick("CYFS");
     BindClick("QY");
     BindClick("DD");
-    BindClick("WFJT_Q");
-    BindClick("WFJT_H");
     BindClick("XCTS_R");
-    BindClick("XCTS_W");
     LoadDuoX("游玩项目", "YWXM");
     FYMSSetDefault();
 });
@@ -48,11 +44,12 @@ function LoadDefault() {
 function LoadDuoX(type, id) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_LYJD",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: type
+            TYPENAME: type,
+            TBName: "CODES_LYJD"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -89,40 +86,13 @@ function LoadDuoX(type, id) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "XCTS_R") {
-            LoadDropdown("周边游行程天数", "XCTS_R");
+            LoadCODESByTYPENAME("周边游行程天数", "XCTS_R", "CODES_LYJD");
         }
         if (type === "QY") {
             LoadQY();
         }
         if (type === "DD") {
             LoadDD($("#QYCode").val());
-        }
-    });
-}
-//加载出游方式
-function LoadDropdown(type, id) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_LYJD",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: type
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"" + id + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#div" + id).html(html);
-                $("#div" + id).css("display", "block");
-                ActiveStyle(id);
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
         }
     });
 }

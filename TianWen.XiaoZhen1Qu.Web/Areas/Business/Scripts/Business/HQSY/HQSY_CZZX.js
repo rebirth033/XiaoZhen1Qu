@@ -44,10 +44,10 @@ function LoadDefault() {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "HLLX") {
-            LoadDropdown("婚礼类型", "HLLX");
+            LoadCODESByTYPENAME("婚礼类型", "HLLX", "CODES_HQSY");
         }
         if (type === "JDXJ") {
-            LoadDropdown("酒店星级", "JDXJ");
+            LoadCODESByTYPENAME("酒店星级", "JDXJ", "CODES_HQSY");
         }
         if (type === "XL") {
             LoadXL();
@@ -57,33 +57,6 @@ function BindClick(type) {
         }
         if (type === "DD") {
             LoadDD($("#QYCode").val());
-        }
-    });
-}
-//加载彩妆造型类别
-function LoadDropdown(type, id) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_HQSY",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: type
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectLB(this,\"" + id + "\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#div" + id).html(html);
-                $("#div" + id).css("display", "block");
-                ActiveStyle(id);
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
         }
     });
 }
@@ -97,11 +70,12 @@ function SelectLB(obj, type, lbid) {
 function LoadDuoX(type, id) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_HQSY",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: type
+            TYPENAME: type,
+            TBName: "CODES_ZXJC"
         },
         success: function (xml) {
             if (xml.Result === 1) {

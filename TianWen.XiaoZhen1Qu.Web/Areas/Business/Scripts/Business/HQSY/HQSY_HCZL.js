@@ -191,7 +191,7 @@ function GCPPXZ(GCPPMC, GCPPID) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadDropdown("婚车租赁", "LB");
+            LoadCODESByTYPENAME("婚车租赁", "LB", "CODES_HQSY");
         }
         if (type === "TCPP") {
             LoadTCPP("tc");
@@ -212,33 +212,6 @@ function BindClick(type) {
         }
     });
 }
-//加载婚车租赁类别
-function LoadDropdown(type, id) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_HQSY",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: type
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectLB(this,\"" + id + "\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#div" + id).html(html);
-                $("#div" + id).css("display", "block");
-                ActiveStyle(id);
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
 //选择类别下拉框
 function SelectLB(obj, type, lbid) {
     $("#span" + type).html(obj.innerHTML);
@@ -249,11 +222,12 @@ function SelectLB(obj, type, lbid) {
 function LoadDuoX(type, id) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_HQSY",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: type
+            TYPENAME: type,
+            TBName: "CODES_HQSY"
         },
         success: function (xml) {
             if (xml.Result === 1) {

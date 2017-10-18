@@ -53,33 +53,6 @@ function DDFWSelect() {
     $("#imgSMFW").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
     $("#imgDDFW").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
 }
-//加载酒店/住宿预订类别
-function LoadLB() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_LYJD",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "酒店/住宿预订"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectLB(this,\"LB\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divLB").html(html);
-                $("#divLB").css("display", "block");
-                ActiveStyle("LB");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
 //选择类别下拉框
 function SelectLB(obj, type, id) {
     $("#span" + type).html(obj.innerHTML);
@@ -91,11 +64,12 @@ function SelectLB(obj, type, id) {
 function LoadXL(lbmc, xl) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_LYJD",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: lbmc
+            TYPENAME: lbmc,
+            TBName: "CODES_LYJD"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -160,7 +134,7 @@ function SetXL(lbs) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadLB();
+            LoadCODESByTYPENAME("酒店/住宿预订", "LB", "CODES_LYJD");
         }
         if (type === "QY") {
             LoadQY();
