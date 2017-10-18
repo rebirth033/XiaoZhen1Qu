@@ -1,11 +1,6 @@
 ﻿var isleave = true;
 var ue = UE.getEditor('FYMS');
 $(document).ready(function () {
-    $("#imgZR").bind("click", ZRSelect);
-    $("#imgQG").bind("click", QGSelect);
-    $("#imgDHQ").bind("click", DHQSelect);
-    $("#imgDYK").bind("click", DYKSelect);
-    $("#imgDZQ").bind("click", DZQSelect);
     $("#YXQZ").datepicker({ minDate: 0 });
     $("#btnFB").bind("click", FB);
     $("#FYMS").bind("focus", FYMSFocus);
@@ -39,39 +34,6 @@ function LoadDefault() {
     ue.ready(function () {
         ue.setHeight(200);
     });
-    $("#imgZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgQG").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    $("#imgDHQ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgDYK").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    $("#imgDZQ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
-//选择转让
-function ZRSelect() {
-    $("#imgZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgQG").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
-//选择求购
-function QGSelect() {
-    $("#imgZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    $("#imgQG").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-}
-//选择兑换券
-function DHQSelect() {
-    $("#imgDHQ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgDYK").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    $("#imgDZQ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
-//选择电影卡
-function DYKSelect() {
-    $("#imgDHQ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    $("#imgDYK").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgDZQ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
-//选择电子券
-function DZQSelect() {
-    $("#imgDHQ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    $("#imgDYK").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    $("#imgDZQ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
 }
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
@@ -84,52 +46,6 @@ function BindClick(type) {
         }
     });
 }
-//获取供求
-function GetGQ() {
-    if ($("#imgZR").attr("src").indexOf("blue") !== -1)
-        return "0";
-    else
-        return "1";
-}
-//设置供求
-function SetGQ(gq) {
-    if (gq === 0) {
-        $("#imgZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-        $("#imgQG").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    }
-    else {
-        $("#imgZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-        $("#imgQG").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    }
-}
-//获取类别
-function GetLB() {
-    if ($("#imgDHQ").attr("src").indexOf("blue") !== -1)
-        return "0";
-    if ($("#imgDYK").attr("src").indexOf("blue") !== -1)
-        return "1";
-    if ($("#imgDZQ").attr("src").indexOf("blue") !== -1)
-        return "2";
-}
-//设置类别
-function SetLB(lb) {
-    if (lb === 0) {
-        $("#imgDHQ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-        $("#imgDYK").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-        $("#imgDZQ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    }
-    if (lb === 1) {
-        $("#imgDHQ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-        $("#imgDYK").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-        $("#imgDZQ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    }
-    if (lb === 2) {
-        $("#imgDHQ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-        $("#imgDYK").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-        $("#imgDZQ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    }
-}
-
 //加载票务卡券_电影票基本信息
 function LoadPWKQ_DYPJBXX() {
     $.ajax({
@@ -151,13 +67,12 @@ function LoadPWKQ_DYPJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.PWKQ_DYPJBXX.BCMS);
                 });
-                SetGQ(xml.Value.PWKQ_DYPJBXX.GQ);
-                SetLB(xml.Value.PWKQ_DYPJBXX.LB);
-                $("#spanLB").html(xml.Value.PWKQ_DYPJBXX.LB);
-                $("#spanXJ").html(xml.Value.PWKQ_DYPJBXX.XJ);
+                if (xml.Value.PWKQ_DYPJBXX.GQ !== null)
+                    SetDX("GQ", xml.Value.PWKQ_DYPJBXX.GQ);
+                if (xml.Value.PWKQ_DYPJBXX.LB !== null)
+                    SetDX("LB", xml.Value.PWKQ_DYPJBXX.LB);
                 $("#spanQY").html(xml.Value.PWKQ_DYPJBXX.JYQY);
                 $("#spanDD").html(xml.Value.PWKQ_DYPJBXX.JYDD);
-                $("#spanXL").html(xml.Value.PWKQ_DYPJBXX.XL);
                 if (xml.Value.PWKQ_DYPJBXX.YXQZ.ToString("yyyy-MM-dd") !== "1-1-1")
                     $("#YXQZ").val(xml.Value.PWKQ_DYPJBXX.YXQZ.ToString("yyyy-MM-dd"));
                 return;
@@ -174,14 +89,11 @@ function FB() {
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
-    obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
-    obj = jsonObj.AddJson(obj, "XL", "'" + $("#spanXL").html() + "'");
-    obj = jsonObj.AddJson(obj, "XJ", "'" + $("#spanXJ").html() + "'");
     obj = jsonObj.AddJson(obj, "JYQY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "JYDD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "GQ", "'" + GetGQ() + "'");
-    obj = jsonObj.AddJson(obj, "LB", "'" + GetLB() + "'");
+    obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
+    obj = jsonObj.AddJson(obj, "LB", "'" + GetDX("LB") + "'");
 
     if ($("#YXQZ").val() !== "")
         obj = jsonObj.AddJson(obj, "YXQZ", "'" + $("#YXQZ").val() + "'");

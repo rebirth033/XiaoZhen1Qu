@@ -14,9 +14,8 @@ $(document).ready(function () {
     $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
     LoadTXXX();
-    LoadMSLB();
+    LoadDuoX("美食","MSLB");
     LoadDefault();
-    BindClick("LB");
     BindClick("QY");
     BindClick("DD");
 });
@@ -39,29 +38,33 @@ function LoadDefault() {
         ue.setHeight(200);
     });
 }
-//加载美食类别
-function LoadMSLB() {
+//加载多选
+function LoadDuoX(type, id) {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "美食",
+            TYPENAME: type,
             TBName: "CODES_CY"
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liFWPZ' onclick='SelectMSLB(this)'><img class='img_MSLB'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    html += "<li class='li" + id + "' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i === 5 || i === 11 || i === 17 || i === 23 || i === 29) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
                 }
+                if (parseInt(xml.list.length % 6) === 0)
+                    $("#div" + id).css("height", parseInt(xml.list.length / 6) * 45 + "px");
+                else
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
                 html += "</ul>";
-                $("#divMSLBText").html(html);
-                $(".img_MSLB").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $("#div" + id + "Text").html(html);
+                $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 LoadCY_MSJBXX();
             }
         },
@@ -80,9 +83,6 @@ function SelectMSLB(obj) {
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadLB();
-        }
         if (type === "QY") {
             LoadQY();
         }
@@ -91,7 +91,7 @@ function BindClick(type) {
         }
     });
 }
-//加载宠物_宠物服务基本信息
+//加载餐饮_美食基本信息
 function LoadCY_MSJBXX() {
     $.ajax({
         type: "POST",
@@ -112,7 +112,8 @@ function LoadCY_MSJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.CY_MSJBXX.BCMS);
                 });
-                SetMSLB(xml.Value.CY_MSJBXX.LB);
+                if (xml.Value.CY_MSJBXX.LB !== null)
+                    SetDuoX("MSLB", xml.Value.CY_MSJBXX.LB);
                 $("#spanQY").html(xml.Value.CY_MSJBXX.JYQY);
                 $("#spanDD").html(xml.Value.CY_MSJBXX.JYDD);
                 LoadPhotos(xml.Value.Photos);
@@ -123,37 +124,16 @@ function LoadCY_MSJBXX() {
         }
     });
 }
-//获取美食类别
-function GetMSLB() {
-    var mslb = "";
-    $(".liFWPZ").each(function () {
-        if ($(this).find("img").attr("src").indexOf("blue") !== -1)
-            mslb += $(this).find("label")[0].innerHTML + ",";
-    });
-    return RTrim(mslb, ',');
-}
-//设置美食类别
-function SetMSLB(lbs) {
-    var lbarray = lbs.split(',');
-    for (var i = 0; i < lbarray.length; i++) {
-        $(".liFWPZ").each(function () {
-            if ($(this).find("label")[0].innerHTML.indexOf(lbarray[i]) !== -1)
-                $(this).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-        });
-    }
-
-}
 //发布
 function FB() {
     if (AllValidate() === false) return;
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
-    obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
     obj = jsonObj.AddJson(obj, "JYQY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "JYDD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "LB", "'" + GetMSLB() + "'");
+    obj = jsonObj.AddJson(obj, "LB", "'" + GetDuoX("MSLB") + "'");
 
     if (getUrlParam("CY_MSJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "CY_MSJBXXID", "'" + getUrlParam("CY_MSJBXXID") + "'");

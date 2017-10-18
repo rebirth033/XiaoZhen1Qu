@@ -3,8 +3,6 @@ var ue = UE.getEditor('FYMS');
 $(document).ready(function () {
     $("#divUploadOut").bind("mouseover", GetUploadCss);
     $("#divUploadOut").bind("mouseleave", LeaveUploadCss);
-    $("#imgZR").bind("click", ZRSelect);
-    $("#imgQG").bind("click", QGSelect);
     $("#btnFB").bind("click", FB);
     $("#FYMS").bind("focus", FYMSFocus);
     $("#FYMS").bind("blur", FYMSBlur);
@@ -38,36 +36,6 @@ function LoadDefault() {
     ue.ready(function () {
         ue.setHeight(200);
     });
-    $("#imgZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgQG").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
-//选择转让
-function ZRSelect() {
-    $("#imgZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgQG").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
-//选择求购
-function QGSelect() {
-    $("#imgZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    $("#imgQG").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-}
-//获取供求
-function GetGQ() {
-    if ($("#imgZR").attr("src").indexOf("blue") !== -1)
-        return "0";
-    else
-        return "1";
-}
-//设置供求
-function SetGQ(GQ) {
-    if (GQ === 0) {
-        $("#imgZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-        $("#imgQG").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    }
-    else {
-        $("#imgZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-        $("#imgQG").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    }
 }
 //加载小类
 function LoadXL() {
@@ -114,7 +82,7 @@ function BindClick(type) {
         }
     });
 }
-//加载宠物_宠物猫基本信息
+//加载宠物_花鸟鱼虫基本信息
 function LoadCW_HNYCJBXX() {
     $.ajax({
         type: "POST",
@@ -136,7 +104,8 @@ function LoadCW_HNYCJBXX() {
                     ue.setContent(xml.Value.CW_HNYCJBXX.BCMS);
                 });
                 $("#spanPZ").html(xml.Value.CW_HNYCJBXX.PZ);
-                SetGQ(xml.Value.CW_HNYCJBXX.GQ);
+                if (xml.Value.CW_HNYCJBXX.GQ !== null)
+                    SetDX("GQ", xml.Value.CW_HNYCJBXX.GQ);
                 LoadPhotos(xml.Value.Photos);
             }
         },
@@ -153,7 +122,7 @@ function FB() {
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "PZ", "'" + $("#spanPZ").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "GQ", "'" + GetGQ() + "'");
+    obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
 
     if (getUrlParam("CW_HNYCJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "CW_HNYCJBXXID", "'" + getUrlParam("CW_HNYCJBXXID") + "'");

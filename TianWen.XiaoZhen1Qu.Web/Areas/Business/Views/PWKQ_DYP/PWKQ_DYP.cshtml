@@ -11,7 +11,7 @@
     <title></title>
     <link href="@Url.Content("~/Areas/Business/Css/PWKQ/PWKQ_DYP.css")" rel="stylesheet" />
     <link href="@Url.Content("~/Areas/Business/Css/Common/Top.css" )" rel="stylesheet" />
-    <link href="@Url.Content("~/Areas/Business/Css/Common/XZQ.css")" rel="stylesheet"/>
+    <link href="@Url.Content("~/Areas/Business/Css/Common/XZQ.css")" rel="stylesheet" />
     <link href="@Url.Content("~/Areas/Business/Scripts/jquery-ui-1.12.1.custom/jquery-ui.min.css")" rel="stylesheet" />
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/Common/XZQ.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/PWKQ/PWKQ_DYP.js")"></script>
@@ -90,8 +90,12 @@
                     <span class="spanFWCZ">供求</span>
                 </div>
                 <div class="divRight">
-                    <img class="iFWCZ" id="imgZR" /><label class="labelFWCZ">&nbsp;&nbsp;转让</label>
-                    <img class="iFWCZ" id="imgQG" /><label class="labelFWCZ">&nbsp;&nbsp;求购&nbsp;&nbsp;</label>
+                    <div class="div_radio" id="div_gq_zr">
+                        <img class="iFWCZ" id="img_gq_zr" /><label class="labelFWCZ">转让</label>
+                    </div>
+                    <div class="div_radio" id="div_gq_qg">
+                        <img class="iFWCZ" id="img_gq_qg" /><label class="labelFWCZ">求购</label>
+                    </div>
                 </div>
             </div>
             <div id="divKQLB" class="divFWCZ">
@@ -100,9 +104,15 @@
                     <span class="spanFWCZ">类别</span>
                 </div>
                 <div class="divRight">
-                    <img class="iFWCZ" id="imgDHQ" /><label class="labelFWCZ">&nbsp;&nbsp;兑换券</label>
-                    <img class="iFWCZ" id="imgDYK"/><label class="labelFWCZ">&nbsp;&nbsp;电影卡&nbsp;&nbsp;</label>
-                    <img class="iFWCZ" id="imgDZQ" /><label class="labelFWCZ">&nbsp;&nbsp;电子券/团购券&nbsp;&nbsp;</label>
+                    <div class="div_radio" id="div_lb_dhq">
+                        <img class="iFWCZ" id="img_lb_dhq" /><label class="labelFWCZ">兑换券</label>
+                    </div>
+                    <div class="div_radio" id="div_lb_dyk">
+                        <img class="iFWCZ" id="img_lb_dyk" /><label class="labelFWCZ">电影卡</label>
+                    </div>
+                    <div class="div_radio" id="div_lb_dzq">
+                        <img class="iFWCZ" id="img_lb_dzq" /><label class="labelFWCZ">电子券/团购券</label>
+                    </div>
                 </div>
             </div>
             <div id="divYY" class="divFWCZ" style="z-index: 992;">

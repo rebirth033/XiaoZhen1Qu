@@ -14,7 +14,7 @@ $(document).ready(function () {
     $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
     LoadTXXX();
-    LoadWMLB();
+    LoadDuoX("外卖", "WMLB");
     LoadDefault();
     BindClick("LB");
     BindClick("QY");
@@ -39,29 +39,33 @@ function LoadDefault() {
         ue.setHeight(200);
     });
 }
-//加载美食类别
-function LoadWMLB() {
+//加载多选
+function LoadDuoX(type, id) {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "外卖",
+            TYPENAME: type,
             TBName: "CODES_CY"
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liFWPZ' onclick='SelectWMLB(this)'><img class='img_WMLB'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    html += "<li class='li" + id + "' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i === 5 || i === 11 || i === 17 || i === 23 || i === 29) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
                 }
+                if (parseInt(xml.list.length % 6) === 0)
+                    $("#div" + id).css("height", parseInt(xml.list.length / 6) * 45 + "px");
+                else
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
                 html += "</ul>";
-                $("#divWMLBText").html(html);
-                $(".img_WMLB").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $("#div" + id + "Text").html(html);
+                $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 LoadCY_WMJBXX();
             }
         },
@@ -91,7 +95,7 @@ function BindClick(type) {
         }
     });
 }
-//加载餐饮_快餐/团膳基本信息
+//加载餐饮_外卖基本信息
 function LoadCY_WMJBXX() {
     $.ajax({
         type: "POST",
@@ -112,7 +116,8 @@ function LoadCY_WMJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.CY_WMJBXX.BCMS);
                 });
-                SetWMLB(xml.Value.CY_WMJBXX.LB);
+                if (xml.Value.CY_WMJBXX.WMLB !== null)
+                    SetDuoX("WMLB", xml.Value.CY_WMJBXX.WMLB);
                 $("#spanQY").html(xml.Value.CY_WMJBXX.JYQY);
                 $("#spanDD").html(xml.Value.CY_WMJBXX.JYDD);
                 LoadPhotos(xml.Value.Photos);
@@ -123,37 +128,16 @@ function LoadCY_WMJBXX() {
         }
     });
 }
-//获取美食类别
-function GetWMLB() {
-    var WMLB = "";
-    $(".liFWPZ").each(function () {
-        if ($(this).find("img").attr("src").indexOf("blue") !== -1)
-            WMLB += $(this).find("label")[0].innerHTML + ",";
-    });
-    return RTrim(WMLB, ',');
-}
-//设置美食类别
-function SetWMLB(lbs) {
-    var lbarray = lbs.split(',');
-    for (var i = 0; i < lbarray.length; i++) {
-        $(".liFWPZ").each(function () {
-            if ($(this).find("label")[0].innerHTML.indexOf(lbarray[i]) !== -1)
-                $(this).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-        });
-    }
-
-}
 //发布
 function FB() {
     if (AllValidate() === false) return;
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
-    obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
     obj = jsonObj.AddJson(obj, "JYQY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "JYDD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "LB", "'" + GetWMLB() + "'");
+    obj = jsonObj.AddJson(obj, "LB", "'" + GetDuoX("WMLB") + "'");
 
     if (getUrlParam("CY_WMJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "CY_WMJBXXID", "'" + getUrlParam("CY_WMJBXXID") + "'");

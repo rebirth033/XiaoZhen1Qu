@@ -3,8 +3,6 @@ var ue = UE.getEditor('FYMS');
 $(document).ready(function () {
     $("#divUploadOut").bind("mouseover", GetUploadCss);
     $("#divUploadOut").bind("mouseleave", LeaveUploadCss);
-    $("#imgZS").bind("click", ZSSelect);
-    $("#imgLY").bind("click", LYSelect);
     $("#btnFB").bind("click", FB);
     $("#FYMS").bind("focus", FYMSFocus);
     $("#FYMS").bind("blur", FYMSBlur);
@@ -37,36 +35,6 @@ function LoadDefault() {
     ue.ready(function () {
         ue.setHeight(200);
     });
-    $("#imgZS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgLY").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
-//选择赠送
-function ZSSelect() {
-    $("#imgZS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgLY").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
-//选择领养
-function LYSelect() {
-    $("#imgZS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    $("#imgLY").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-}
-//获取供求
-function GetGQ() {
-    if ($("#imgZS").attr("src").indexOf("blue") !== -1)
-        return "0";
-    else
-        return "1";
-}
-//设置供求
-function SetGQ(GQ) {
-    if (GQ === 0) {
-        $("#imgZS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-        $("#imgLY").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    }
-    else {
-        $("#imgZS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-        $("#imgLY").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    }
 }
 //选择类别下拉框
 function SelectLB(obj, type) {
@@ -94,7 +62,8 @@ function LoadCW_CWZSLYJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.CW_CWZSLYJBXX.BCMS);
                 });
-                SetGQ(xml.Value.CW_CWZSLYJBXX.GQ);
+                if (xml.Value.CW_CWZSLYJBXX.GQ !== null)
+                    SetDX("GQ", xml.Value.CW_CWZSLYJBXX.GQ);
                 LoadPhotos(xml.Value.Photos);
             }
         },
@@ -110,7 +79,7 @@ function FB() {
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "GQ", "'" + GetGQ() + "'");
+    obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
 
     if (getUrlParam("CW_CWZSLYJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "CW_CWZSLYJBXXID", "'" + getUrlParam("CW_CWZSLYJBXXID") + "'");

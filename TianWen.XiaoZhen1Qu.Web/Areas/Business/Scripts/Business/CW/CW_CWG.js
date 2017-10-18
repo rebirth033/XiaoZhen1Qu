@@ -3,12 +3,6 @@ var ue = UE.getEditor('FYMS');
 $(document).ready(function () {
     $("#divUploadOut").bind("mouseover", GetUploadCss);
     $("#divUploadOut").bind("mouseleave", LeaveUploadCss);
-    $("#imgGRZR").bind("click", GRZRSelect);
-    $("#imgSJZR").bind("click", SJZRSelect);
-    $("#imgYQC").bind("click", YQCSelect);
-    $("#imgWQC").bind("click", WQCSelect);
-    $("#imgZC").bind("click", ZCSelect);
-    $("#imgBZC").bind("click", BZCSelect);
     $("#btnFB").bind("click", FB);
     $("#FYMS").bind("focus", FYMSFocus);
     $("#FYMS").bind("blur", FYMSBlur);
@@ -97,96 +91,6 @@ function LoadDefault() {
     ue.ready(function () {
         ue.setHeight(200);
     });
-    $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    $("#imgYQC").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgWQC").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    $("#imgZC").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgBZC").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
-//选择个人转让
-function GRZRSelect() {
-    $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
-//选择商家转让
-function SJZRSelect() {
-    $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-}
-//选择已驱虫
-function YQCSelect() {
-    $("#imgYQC").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgWQC").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
-//选择未驱虫
-function WQCSelect() {
-    $("#imgYQC").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    $("#imgWQC").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-}
-//选择支持
-function ZCSelect() {
-    $("#imgZC").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgBZC").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
-//选择不支持
-function BZCSelect() {
-    $("#imgZC").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    $("#imgBZC").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-}
-//获取身份
-function GetSF() {
-    if ($("#imgGRZR").attr("src").indexOf("blue") !== -1)
-        return "0";
-    else
-        return "1";
-}
-//设置身份
-function SetSF(SFDQBY) {
-    if (SFDQBY === 0) {
-        $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-        $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    }
-    else {
-        $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-        $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    }
-}
-//获取驱虫情况
-function GetQCQK() {
-    if ($("#imgYQC").attr("src").indexOf("blue") !== -1)
-        return "0";
-    else
-        return "1";
-}
-//设置驱虫情况
-function SetQCQK(QCQK) {
-    if (QCQK === 0) {
-        $("#imgYQC").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-        $("#imgWQC").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    }
-    else {
-        $("#imgYQC").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-        $("#imgWQC").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    }
-}
-//获取视频看狗
-function GetSPKG() {
-    if ($("#imgZC").attr("src").indexOf("blue") !== -1)
-        return "0";
-    else
-        return "1";
-}
-//设置视频看狗
-function SetSPKG(SPKG) {
-    if (SPKG === 0) {
-        $("#imgZC").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-        $("#imgBZC").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    }
-    else {
-        $("#imgZC").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-        $("#imgBZC").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    }
 }
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
@@ -208,11 +112,6 @@ function BindClick(type) {
             LoadCODESByTYPENAME("疫苗种类", "YMZL", "CODES_CW");
         }
     });
-}
-//选择下拉框
-function SelectDropdown(obj, type) {
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
 }
 //选择类别下拉框
 function SelectLB(obj, type) {
@@ -251,9 +150,12 @@ function LoadCW_CWGJBXX() {
                 $("#spanXB").html(xml.Value.CW_CWGJBXX.XB);
                 $("#spanYMQK").html(xml.Value.CW_CWGJBXX.YMQK);
                 $("#spanYMZL").html(xml.Value.CW_CWGJBXX.YMZL);
-                SetSF(xml.Value.CW_CWGJBXX.SF);
-                SetQCQK(xml.Value.CW_CWGJBXX.QCQK);
-                SetSPKG(xml.Value.CW_CWGJBXX.SPKG);
+                if (xml.Value.CW_CWGJBXX.SF !== null)
+                    SetDX("SF", xml.Value.CW_CWGJBXX.SF);
+                if (xml.Value.CW_CWGJBXX.QCQK !== null)
+                    SetDX("QCQK", xml.Value.CW_CWGJBXX.QCQK);
+                if (xml.Value.CW_CWGJBXX.SPKG !== null)
+                    SetDX("SPKG", xml.Value.CW_CWGJBXX.SPKG);
                 LoadPhotos(xml.Value.Photos);
             }
         },
@@ -274,9 +176,9 @@ function FB() {
     obj = jsonObj.AddJson(obj, "YMQK", "'" + $("#spanYMQK").html() + "'");
     obj = jsonObj.AddJson(obj, "YMZL", "'" + $("#spanYMZL").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "SF", "'" + GetSF() + "'");
-    obj = jsonObj.AddJson(obj, "QCQK", "'" + GetQCQK() + "'");
-    obj = jsonObj.AddJson(obj, "SPKG", "'" + GetSPKG() + "'");
+    obj = jsonObj.AddJson(obj, "SF", "'" + GetDX("SF") + "'");
+    obj = jsonObj.AddJson(obj, "QCQK", "'" + GetDX("QCQK") + "'");
+    obj = jsonObj.AddJson(obj, "SPKG", "'" + GetDX("SPKG") + "'");
 
     if (getUrlParam("CW_CWGJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "CW_CWGJBXXID", "'" + getUrlParam("CW_CWGJBXXID") + "'");

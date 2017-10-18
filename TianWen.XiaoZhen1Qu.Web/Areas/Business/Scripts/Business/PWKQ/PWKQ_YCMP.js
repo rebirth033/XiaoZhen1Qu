@@ -1,8 +1,6 @@
 ﻿var isleave = true;
 var ue = UE.getEditor('FYMS');
 $(document).ready(function () {
-    $("#imgZR").bind("click", ZRSelect);
-    $("#imgQG").bind("click", QGSelect);
     $("#SJ").datepicker({ minDate: 0 });
     $("#btnFB").bind("click", FB);
     $("#FYMS").bind("focus", FYMSFocus);
@@ -38,18 +36,6 @@ function LoadDefault() {
     ue.ready(function () {
         ue.setHeight(200);
     });
-    $("#imgZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgQG").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
-//选择转让
-function ZRSelect() {
-    $("#imgZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgQG").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
-//选择求购
-function QGSelect() {
-    $("#imgZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    $("#imgQG").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
 }
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
@@ -64,24 +50,6 @@ function BindClick(type) {
             LoadDD($("#QYCode").val());
         }
     });
-}
-//获取供求
-function GetGQ() {
-    if ($("#imgZR").attr("src").indexOf("blue") !== -1)
-        return "0";
-    else
-        return "1";
-}
-//设置供求
-function SetGQ(gq) {
-    if (gq === 0) {
-        $("#imgZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-        $("#imgQG").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    }
-    else {
-        $("#imgZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-        $("#imgQG").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    }
 }
 //加载票务卡券_电影票基本信息
 function LoadPWKQ_YCMPJBXX() {
@@ -104,7 +72,8 @@ function LoadPWKQ_YCMPJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.PWKQ_YCMPJBXX.BCMS);
                 });
-                SetGQ(xml.Value.PWKQ_YCMPJBXX.GQ);
+                if (xml.Value.PWKQ_YCMPJBXX.GQ !== null)
+                    SetDX("GQ", xml.Value.PWKQ_YCMPJBXX.GQ);
                 $("#spanLB").html(xml.Value.PWKQ_YCMPJBXX.LB);
                 $("#spanQY").html(xml.Value.PWKQ_YCMPJBXX.JYQY);
                 $("#spanDD").html(xml.Value.PWKQ_YCMPJBXX.JYDD);
@@ -128,7 +97,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "JYQY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "JYDD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "GQ", "'" + GetGQ() + "'");
+    obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
 
     if ($("#SJ").val() !== "")
         obj = jsonObj.AddJson(obj, "SJ", "'" + $("#SJ").val() + "'");
