@@ -26,7 +26,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// 供求
         /// </summary>
         [Property]
-        public virtual int GQ { get; set; }
+        public virtual string GQ { get; set; }
 
         /// <summary>
         /// 手机品牌
@@ -44,7 +44,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// 使用情况
         /// </summary>
         [Property]
-        public virtual int SYQK { get; set; }
+        public virtual string SYQK { get; set; }
 
         /// <summary>
         /// 价格

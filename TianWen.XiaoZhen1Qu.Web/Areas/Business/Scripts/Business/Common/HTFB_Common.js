@@ -4,6 +4,8 @@
     $(".div_head").css("margin-left", (document.documentElement.clientWidth - 900) / 2);
     $(".div_content").css("margin-left", (document.documentElement.clientWidth - 900) / 2);
     $("#spanCXLB").bind("click", CXLB);
+    $(".div_radio").bind("click", RadioSelect);
+    $(".iFWCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
 });
 //根据TYPENAME获取字典表
 function LoadCODESByTYPENAME(type, id, table) {

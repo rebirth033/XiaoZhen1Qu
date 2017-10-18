@@ -3,10 +3,10 @@ create table ES_SJSM_ESSJJBXX
 (
   es_sjsm_essjjbxxid VARCHAR2(50) not null,
   jcxxid             VARCHAR2(50),
-  gq                 NUMBER(1),
+  gq                 VARCHAR2(20),
   sjpp               VARCHAR2(20),
   sjxh               VARCHAR2(20),
-  syqk               NUMBER(1),
+  syqk               VARCHAR2(20),
   jg                 VARCHAR2(20),
   tsbq               VARCHAR2(50),
   bcms               VARCHAR2(4000),

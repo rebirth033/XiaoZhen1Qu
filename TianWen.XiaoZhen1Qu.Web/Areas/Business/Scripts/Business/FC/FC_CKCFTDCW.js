@@ -1,8 +1,9 @@
 ﻿var isleave = true;
 var ue = UE.getEditor('FYMS');
 $(document).ready(function () {
-    $("#imgCZ").bind("click", CZSelect);
-    $("#imgCS").bind("click", CSSelect);
+    $(".div_radio").bind("click", RadioSelect);
+    $("#div_gq_cz").bind("click", CZSelect);
+    $("#div_gq_cs").bind("click", CSSelect);
     $("#divUploadOut").bind("mouseover", GetUploadCss);
     $("#divUploadOut").bind("mouseleave", LeaveUploadCss);
     $("#btnFB").bind("click", FB);
@@ -42,22 +43,15 @@ function LoadDefault() {
     ue.ready(function () {
         ue.setHeight(200);
     });
-    $("#imgSPZS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgSYZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    $("#imgCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgCS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+    $(".iFWCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
 }
 //选择出租
 function CZSelect() {
-    $("#imgCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgCS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
     $("#divZJ").css("display", "block");
     $("#divSJ").css("display", "none");
 }
 //选择出售
 function CSSelect() {
-    $("#imgCS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
     $("#divZJ").css("display", "none");
     $("#divSJ").css("display", "block");
 }
@@ -106,66 +100,11 @@ function LoadCKCFTDCWLX() {
         }
     });
 }
-//加载区域
-function LoadQY() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadQY",
-        dataType: "json",
-        data:
-        {
-
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectQY(this,\"QY\",\"" + xml.list[i].CODE + "\")'>" + RTrim(RTrim(RTrim(xml.list[i].NAME, '市'), '区'), '县') + "</li>";
-                }
-                html += "</ul>";
-                $("#divQY").html(html);
-                $("#divQY").css("display", "block");
-                ActiveStyle("QY");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载地段
-function LoadSQ() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadSQ",
-        dataType: "json",
-        data:
-        {
-            QY: $("#QYCode").val()
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"SQ\")'>" + RTrimStr(xml.list[i].NAME, '街道,镇,林场,管理处') + "</li>";
-                }
-                html += "</ul>";
-                $("#divSQ").html(html);
-                $("#divSQ").css("display", "block");
-                ActiveStyle("SQ");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
 //选择区域下拉框
 function SelectQY(obj, type, code) {
     $("#QYCode").val(code);
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-    LoadSQ();
 }
 //加载租金单位
 function LoadZJDW() {
@@ -195,24 +134,13 @@ function LoadZJDW() {
         }
     });
 }
-//获取供求
-function GetGQ() {
-    if ($("#imgCZ").attr("src").indexOf("blue") !== -1)
-        return "0";
-    else
-        return "1";
-}
 //设置供求
 function SetGQ(gq) {
     if (gq === 0) {
-        $("#imgCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-        $("#imgCS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
         $("#divZJ").css("display", "block");
         $("#divSJ").css("display", "none");
     }
     else {
-        $("#imgCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-        $("#imgCS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
         $("#divZJ").css("display", "none");
         $("#divSJ").css("display", "block");
     }
@@ -238,7 +166,8 @@ function LoadFC_CKCFTDCWJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.FC_CKCFTDCWJBXX.BCMS);
                 });
-                SetGQ(xml.Value.FC_CKCFTDCWJBXX.GQ);
+                if (xml.Value.FC_CKCFTDCWJBXX.GQ !== null)
+                    SetDX("GQ", xml.Value.FC_CKCFTDCWJBXX.GQ);
                 $("#spanCKCFTDCWLX").html(xml.Value.FC_CKCFTDCWJBXX.LX);
                 $("#spanKZCGS").html(xml.Value.FC_CKCFTDCWJBXX.KZCGS);
                 $("#spanQY").html(xml.Value.FC_CKCFTDCWJBXX.QY);
@@ -264,7 +193,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "SQ", "'" + $("#spanSQ").html() + "'");
     obj = jsonObj.AddJson(obj, "ZJDW", "'" + $("#spanZJDW").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "GQ", "'" + GetGQ() + "'");
+    obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
 
     if (getUrlParam("FC_CKCFTDCWJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "FC_CKCFTDCWJBXXID", "'" + getUrlParam("FC_CKCFTDCWJBXXID") + "'");

@@ -1,10 +1,6 @@
 ﻿var isleave = true;
 var ue = UE.getEditor('FYMS');
 $(document).ready(function () {
-    $("#imgSJZR").bind("click", SJZRSelect);
-    $("#imgSJHS").bind("click", SJHSSelect);
-    $("#imgSYG").bind("click", SYGSelect);
-    $("#imgQXWCF").bind("click", QXWCFSelect);
     $("#divUploadOut").bind("mouseover", GetUploadCss);
     $("#divUploadOut").bind("mouseleave", LeaveUploadCss);
     $("#btnFB").bind("click", FB);
@@ -44,30 +40,6 @@ function LoadDefault() {
     ue.ready(function () {
         ue.setHeight(200);
     });
-    $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgSJHS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    $("#imgSYG").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgQXWCF").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
-//选择商家转让
-function SJZRSelect() {
-    $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgSJHS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
-//选择商家回收
-function SJHSSelect() {
-    $("#imgSJHS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
-//使用过
-function SYGSelect(parameters) {
-    $("#imgSYG").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgQXWCF").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
-//全新未拆封
-function QXWCFSelect(parameters) {
-    $("#imgQXWCF").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgSYG").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
 }
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
@@ -95,7 +67,7 @@ function LoadSJPP() {
         data:
         {
             TYPENAME: "手机品牌",
-    TBName: "CODES_ES_SJSM"
+            TBName: "CODES_ES_SJSM"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -148,42 +120,6 @@ function SelectSJPP(obj, type, code) {
     $("#div" + type).css("display", "none");
     LoadSJXH(code);
 }
-//获取供求
-function GetGQ() {
-    if ($("#imgSJZR").attr("src").indexOf("blue") !== -1)
-        return "0";
-    else
-        return "1";
-}
-//设置供求
-function SetGQ(gq) {
-    if (gq === 0) {
-        $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-        $("#imgSJHS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    }
-    else {
-        $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-        $("#imgSJHS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    }
-}
-//获取使用情况
-function GetSYQK() {
-    if ($("#imgSYG").attr("src").indexOf("blue") !== -1)
-        return "0";
-    else
-        return "1";
-}
-//设置使用情况
-function SetSYQK(gq) {
-    if (gq === 0) {
-        $("#imgSYG").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-        $("#imgQXWCF").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    }
-    else {
-        $("#imgSYG").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-        $("#imgQXWCF").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    }
-}
 //加载二手_手机数码_二手手机基本信息
 function LoadES_SJSM_ESSJJBXX() {
     $.ajax({
@@ -205,9 +141,12 @@ function LoadES_SJSM_ESSJJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.ES_SJSM_ESSJJBXX.BCMS);
                 });
-                SetGQ(xml.Value.ES_SJSM_ESSJJBXX.GQ);
+                if (xml.Value.ES_SJSM_ESSJJBXX.GQ !== null)
+                    SetDX("GQ", xml.Value.ES_SJSM_ESSJJBXX.GQ);
+                if (xml.Value.ES_SJSM_ESSJJBXX.SYQK !== null)
+                    SetDX("SYQK", xml.Value.ES_SJSM_ESSJJBXX.SYQK);
                 $("#spanQY").html(xml.Value.ES_SJSM_ESSJJBXX.JYQY);
-                $("#spanSQ").html(xml.Value.ES_SJSM_ESSJJBXX.JYDD);
+                $("#spanDD").html(xml.Value.ES_SJSM_ESSJJBXX.JYDD);
                 $("#spanSJPP").html(xml.Value.ES_SJSM_ESSJJBXX.SJPP);
                 $("#spanSJXH").html(xml.Value.ES_SJSM_ESSJJBXX.SJXH);
                 LoadPhotos(xml.Value.Photos);
@@ -219,14 +158,6 @@ function LoadES_SJSM_ESSJJBXX() {
         }
     });
 }
-//鼠标经过
-function MouseOver() {
-    isleave = false;
-}
-//鼠标离开
-function MouseLeave() {
-    isleave = true;
-}
 //发布
 function FB() {
     if (AllValidate() === false) return;
@@ -236,10 +167,10 @@ function FB() {
     obj = jsonObj.AddJson(obj, "SJPP", "'" + $("#spanSJPP").html() + "'");
     obj = jsonObj.AddJson(obj, "SJXH", "'" + $("#spanSJXH").html() + "'");
     obj = jsonObj.AddJson(obj, "JYQY", "'" + $("#spanQY").html() + "'");
-    obj = jsonObj.AddJson(obj, "JYDD", "'" + $("#spanSQ").html() + "'");
+    obj = jsonObj.AddJson(obj, "JYDD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "GQ", "'" + GetGQ() + "'");
-    obj = jsonObj.AddJson(obj, "SYQK", "'" + GetSYQK() + "'");
+    obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
+    obj = jsonObj.AddJson(obj, "SYQK", "'" + GetDX("SYQK") + "'");
 
     if (getUrlParam("ES_SJSM_ESSJJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "ES_SJSM_ESSJJBXXID", "'" + getUrlParam("ES_SJSM_ESSJJBXXID") + "'");
