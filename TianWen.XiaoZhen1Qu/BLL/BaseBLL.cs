@@ -11,7 +11,6 @@ namespace TianWen.XiaoZhen1Qu.BLL
     {
         public IDAO DAO { set; get; }
 
-
         public object LoadCODESByTYPENAME(string TYPENAME, string TBName)
         {
             try
@@ -101,7 +100,6 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
-
         public object LoadBJQXXX(string LBID)
         {
             try
@@ -185,7 +183,6 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 return new { Result = EnResultType.Failed, Message = "加载失败" };
             }
         }
-        
 
         //根据用户ID获取用户账户ID
         public string GetYHZHXXIDByYHID(string YHID)

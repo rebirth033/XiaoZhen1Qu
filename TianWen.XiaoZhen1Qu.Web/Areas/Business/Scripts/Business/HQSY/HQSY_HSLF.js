@@ -129,8 +129,10 @@ function LoadHQSY_HSLFJBXX() {
                 $("#spanQY").html(xml.Value.HQSY_HSLFJBXX.QY);
                 $("#spanDD").html(xml.Value.HQSY_HSLFJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
-                SetDX("FG", xml.Value.HQSY_HSLFJBXX.FG);
-                SetDX("KS", xml.Value.HQSY_HSLFJBXX.KS);
+                if (xml.Value.HQSY_HSLFJBXX.FG !== null)
+                    SetDX("FG", xml.Value.HQSY_HSLFJBXX.FG);
+                if (xml.Value.HQSY_HSLFJBXX.KS !== null)
+                    SetDX("KS", xml.Value.HQSY_HSLFJBXX.KS);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

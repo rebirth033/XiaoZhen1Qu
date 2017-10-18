@@ -1,8 +1,8 @@
 ﻿var isleave = true;
+var ue = UE.getEditor('FYMS');
 $(document).ready(function () {
+    $(".div_radio").bind("click", RadioSelect);
     $("#XQMC").bind("keyup", LoadXQMC);
-    $("#imgZTCZ").bind("click", ZTCZSelect);
-    $("#imgDJCZ").bind("click", DJCZSelect);
     $("#divUploadOut").bind("mouseover", GetUploadCss);
     $("#divUploadOut").bind("mouseleave", LeaveUploadCss);
     $("#btnFB").bind("click", FB);
@@ -80,18 +80,8 @@ function FWLXYLCFBBlur() {
 }
 //加载默认
 function LoadDefault() {
-    $("#imgZTCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgDJCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
-//选择整套出租
-function ZTCZSelect() {
-    $("#imgZTCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgDJCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
-//选择单间出租
-function DJCZSelect() {
-    $("#imgZTCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    $("#imgDJCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+    ue.ready(function () { ue.setHeight(200); });
+    $(".iFWCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
 }
 //加载小区名称
 function LoadXQMC() {
@@ -546,7 +536,7 @@ function SelectFWPZ(obj) {
         $(obj).css("color", "#333333");
 }
 //获取单选
-function GetDX(type) {
+function GetDX2(type) {
     var result = "";
     $("#div" + type + "Text").find("li").each(function (i) {
         if ($(this).css("color") !== "rgb(51, 51, 51)")
@@ -555,7 +545,7 @@ function GetDX(type) {
     return result.substr(0, result.length - 1);
 }
 //设置单选
-function SetDX(type, value) {
+function SetDX2(type, value) {
     var result = "";
     var values = value.split(',');
     $("#div" + type + "Text").find("li").each(function (i) {
@@ -563,24 +553,6 @@ function SetDX(type, value) {
             $(this).css("color", "#5bc0de");
     });
     return result.substr(0, result.length - 1);
-}
-//获取出租方式
-function GetCZFS() {
-    if ($("#imgZTCZ").css("background-position") === "-67px -57px")
-        return "0";
-    else
-        return "1";
-}
-//设置出租方式
-function SetCZFS(CZFS) {
-    if (CZFS === 0) {
-        $("#imgZTCZ").css("background-position", "-67px -57px");
-        $("#imgDJCZ").css("background-position", "-67px 0px");
-    }
-    else {
-        $("#imgZTCZ").css("background-position", "-67px 0px");
-        $("#imgDJCZ").css("background-position", "-67px -57px");
-    }
 }
 //加载
 function LoadFC_ZZFXX() {
@@ -599,14 +571,15 @@ function LoadFC_ZZFXX() {
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
                 $("#FC_ZZFJBXXID").val(xml.Value.FC_ZZFJBXX.FC_ZZFJBXXID);
                 if (xml.Value.FC_ZZFJBXX.ZJYBHFY !== null)
-                    SetDX("BHFY", xml.Value.FC_ZZFJBXX.ZJYBHFY);
+                    SetDX2("BHFY", xml.Value.FC_ZZFJBXX.ZJYBHFY);
                 if (xml.Value.FC_ZZFJBXX.FWPZ !== null)
-                    SetDX("FWPZ", xml.Value.FC_ZZFJBXX.FWPZ);
+                    SetDX2("FWPZ", xml.Value.FC_ZZFJBXX.FWPZ);
                 if (xml.Value.FC_ZZFJBXX.FWLD !== null)
-                    SetDX("FWLD", xml.Value.FC_ZZFJBXX.FWLD);
+                    SetDX2("FWLD", xml.Value.FC_ZZFJBXX.FWLD);
                 if (xml.Value.FC_ZZFJBXX.CZYQ !== null)
-                    SetDX("CZYQ", xml.Value.FC_ZZFJBXX.CZYQ);
-                SetCZFS(xml.Value.FC_ZZFJBXX.CZFS);
+                    SetDX2("CZYQ", xml.Value.FC_ZZFJBXX.CZYQ);
+                if (xml.Value.FC_ZZFJBXX.CZFS !== null)
+                    SetDX("FG", xml.Value.FC_ZZFJBXX.CZFS);
                 $("#spanFWCX").html(xml.Value.FC_ZZFJBXX.CX);
                 $("#spanZXQK").html(xml.Value.FC_ZZFJBXX.ZXQK);
                 $("#spanZZLX").html(xml.Value.FC_ZZFJBXX.ZZLX);
@@ -633,11 +606,11 @@ function FB() {
     obj = jsonObj.AddJson(obj, "ZXQK", "'" + $("#spanZXQK").html() + "'");
     obj = jsonObj.AddJson(obj, "ZZLX", "'" + $("#spanZZLX").html() + "'");
     obj = jsonObj.AddJson(obj, "YFFS", "'" + $("#spanYFFS").html() + "'");
-    obj = jsonObj.AddJson(obj, "ZJYBHFY", "'" + GetDX("BHFY") + "'");
-    obj = jsonObj.AddJson(obj, "FWPZ", "'" + GetDX("FWPZ") + "'");
-    obj = jsonObj.AddJson(obj, "FWLD", "'" + GetDX("FWLD") + "'");
-    obj = jsonObj.AddJson(obj, "CZYQ", "'" + GetDX("CZYQ") + "'");
-    obj = jsonObj.AddJson(obj, "CZFS", "'" + GetCZFS() + "'");
+    obj = jsonObj.AddJson(obj, "ZJYBHFY", "'" + GetDX2("BHFY") + "'");
+    obj = jsonObj.AddJson(obj, "FWPZ", "'" + GetDX2("FWPZ") + "'");
+    obj = jsonObj.AddJson(obj, "FWLD", "'" + GetDX2("FWLD") + "'");
+    obj = jsonObj.AddJson(obj, "CZYQ", "'" + GetDX2("CZYQ") + "'");
+    obj = jsonObj.AddJson(obj, "CZFS", "'" + GetDX("CZFS") + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     if ($("#KRZSJ").val() !== "")
         obj = jsonObj.AddJson(obj, "KRZSJ", "'" + $("#KRZSJ").val() + "'");

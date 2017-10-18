@@ -1,8 +1,7 @@
 ﻿var isleave = true;
 var ue = UE.getEditor('FYMS');
 $(document).ready(function () {
-    $("#imgDZF").bind("click", DZFSelect);
-    $("#imgRZF").bind("click", RZFSelect);
+    $(".div_radio").bind("click", RadioSelect);
     $("#divUploadOut").bind("mouseover", GetUploadCss);
     $("#divUploadOut").bind("mouseleave", LeaveUploadCss);
     $("#btnFB").bind("click", FB);
@@ -39,8 +38,7 @@ function LoadDefault() {
     ue.ready(function () {
         ue.setHeight(200);
     });
-    $("#imgDZF").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgRZF").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+    $(".iFWCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
 }
 //打开新增地址
 function OpenXZDZ() {
@@ -81,16 +79,6 @@ function searchByStationName(map) {
         map.addOverlay(marker);
     });
     localSearch.search(keyword);
-}
-//选择短租房
-function DZFSelect() {
-    $("#imgDZF").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgRZF").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
-//选择日租房
-function RZFSelect() {
-    $("#imgDZF").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    $("#imgRZF").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
 }
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
@@ -165,43 +153,6 @@ function LoadZJDW() {
         }
     });
 }
-//获取单选
-function GetDX(type) {
-    var result = "";
-    $("#div" + type + "Text").find("li").each(function (i) {
-        if ($(this).css("color") !== "rgb(51, 51, 51)")
-            result += i + ",";
-    });
-    return result.substr(0, result.length - 1);
-}
-//设置单选
-function SetDX(type, value) {
-    var result = "";
-    var values = value.split(',');
-    $("#div" + type + "Text").find("li").each(function (i) {
-        if (values.contains(i))
-            $(this).css("color", "#5bc0de");
-    });
-    return result.substr(0, result.length - 1);
-}
-//获取出租方式
-function GetCZFS() {
-    if ($("#imgZTCZ").css("background-position") === "-67px -57px")
-        return "0";
-    else
-        return "1";
-}
-//设置出租方式
-function SetCZFS(CZFS) {
-    if (CZFS === 0) {
-        $("#imgZTCZ").css("background-position", "-67px -57px");
-        $("#imgDJCZ").css("background-position", "-67px 0px");
-    }
-    else {
-        $("#imgZTCZ").css("background-position", "-67px 0px");
-        $("#imgDJCZ").css("background-position", "-67px -57px");
-    }
-}
 //加载短租房基本信息
 function LoadFC_DZFJBXX() {
     $.ajax({
@@ -223,7 +174,8 @@ function LoadFC_DZFJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.FC_DZFJBXX.FYMS);
                 });
-                //SetCZFS(xml.Value.FWCZXX.CZFS);
+                if (xml.Value.FC_DZFJBXX.CZFS !== null)
+                    SetDX("CZFS", xml.Value.FC_DZFJBXX.CZFS);
                 $("#spanFWLX").html(xml.Value.FC_DZFJBXX.FWLX);
                 $("#spanZJDW").html(xml.Value.FC_DZFJBXX.ZJDW);
                 $("#JYGZ").html(xml.Value.FC_DZFJBXX.JYGZ);
@@ -243,6 +195,7 @@ function FB() {
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "FWLX", "'" + $("#spanFWLX").html() + "'");
     obj = jsonObj.AddJson(obj, "ZJDW", "'" + $("#spanZJDW").html() + "'");
+    obj = jsonObj.AddJson(obj, "CZFS", "'" + GetDX("CZFS") + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
 
     if (getUrlParam("FC_DZFJBXXID") !== null)

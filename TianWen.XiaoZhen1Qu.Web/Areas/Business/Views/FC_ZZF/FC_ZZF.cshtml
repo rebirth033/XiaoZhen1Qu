@@ -15,7 +15,7 @@
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/Common/XZQ.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/FC/FC_ZZF.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/FC/FC_ZZFYZ.js")"></script>
-    
+
 
     <link href="@Url.Content("~/Areas/Business/Scripts/jquery-ui-1.12.1.custom/jquery-ui.min.css")" rel="stylesheet" />
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/jquery-ui-1.12.1.custom/jquery-ui.min.js")"></script>
@@ -81,7 +81,7 @@
                 </tr>
             </table>
         </div>
-        <div id="myTabContent"  class="div_content">
+        <div id="myTabContent" class="div_content">
             <div id="divJBXX" class="divSplit" style="display: block; text-align: left">
                 <span class="spanSplit">基本信息</span>
                 <em class="emSplit"></em>
@@ -92,8 +92,12 @@
                     <span class="spanFWCZ">出租方式</span>
                 </div>
                 <div class="divRight">
-                    <img class="iFWCZ" id="imgZTCZ" /><label class="labelFWCZ">&nbsp;&nbsp;整套出租&nbsp;&nbsp;</label>
-                    <img class="iFWCZ" id="imgDJCZ" /><label class="labelFWCZ">&nbsp;&nbsp;单间出租</label>
+                    <div class="div_radio" id="div_czfs_ztcz">
+                        <img class="iFWCZ" id="img_czfs_ztcz" /><label class="labelFWCZ">整套出租</label>
+                    </div>
+                    <div class="div_radio" id="div_czfs_lm">
+                        <img class="iFWCZ" id="img_czfs_djcz" /><label class="labelFWCZ">单间出租</label>
+                    </div>
                 </div>
             </div>
             <div id="divXQMC" class="divFWCZ" style="z-index: 1000">
@@ -256,13 +260,15 @@
                     <div id="divBTTip"></div>
                 </div>
             </div>
-            <div id="divFYMS" class="divFWCZ" style="height: 170px;">
+            <div id="divFYMS" class="divFWCZ" style="height: 253px; position: relative; z-index: 991;">
                 <div class="divLeft" style="height: 170px; vertical-align: top;">
                     <span class="required" style="vertical-align: top">*</span>
-                    <span id="spanFYMS" style="vertical-align: top">房源描述</span>
+                    <span id="spanFYMS" style="vertical-align: top">服务介绍</span>
                 </div>
                 <div class="divRight">
-                    <textarea id="FYMS" class="spanFWLX SRK" style="width: 594px; height: 170px; padding: 6px 12px; color: #999999"></textarea>
+                    <script id="FYMS" type="text/plain" style="width:594px;height:200px;display:inline-block;">
+                    </script>
+                    <div id="divFYMSTip" class="Warn"></div>
                 </div>
             </div>
             <div id="divFWZP" class="divFWCZ">
