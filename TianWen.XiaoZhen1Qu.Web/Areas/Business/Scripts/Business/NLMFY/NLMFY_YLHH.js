@@ -43,7 +43,7 @@ function LoadDefault() {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadDropdown("园林花卉", "LB");
+            LoadCODESByTYPENAME("园林花卉", "LB", "CODES_NLMFY");
         }
         if (type === "XL") {
             LoadXL();
@@ -57,33 +57,6 @@ function BindClick(type) {
         }
     });
 }
-//加载园林花卉类别
-function LoadDropdown(type, id) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_NLMFY",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: type
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectLB(this,\"" + id + "\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#div" + id).html(html);
-                $("#div" + id).css("display", "block");
-                ActiveStyle(id);
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
 //选择类别下拉框
 function SelectLB(obj, type, lbid) {
     $("#span" + type).html(obj.innerHTML);
@@ -91,7 +64,6 @@ function SelectLB(obj, type, lbid) {
     $("#LBID").val(lbid);
     BindClick("XL");
 }
-
 //加载小类标签
 function LoadXL() {
     var arrayObj = new Array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
@@ -110,12 +82,13 @@ function JCBQActive() {
 function LoadXLMC(JCLX, JCBQ) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadYLHHXX",
+        url: getRootPath() + "/Business/Common/LoadByCodeValueAndTypeName",
         dataType: "json",
         data:
         {
-            TYPE: JCLX,
-            HCPPBQ: JCBQ.split("div")[1]
+            TYPENAME: JCLX,
+            CODEVALUE: JCBQ.split("div")[1],
+            TBName: "CODES_NLMFY"
         },
         success: function (xml) {
             if (xml.Result === 1) {

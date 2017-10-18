@@ -51,7 +51,6 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             Session["XZQDM"] = Request["XZQDM"];
             return Json(new { Result = EnResultType.Success });
         }
-
         //根据TYPENAME获取字典表
         public JsonResult LoadCODESByTYPENAME()
         {
@@ -59,33 +58,27 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             string TBName = Request["TBName"];
             return Json(CommonBLL.LoadCODESByTYPENAME(TYPENAME, TBName));
         }
-        
-
-        public JsonResult LoadCODES_NLMFY()
-        {
-            string TYPENAME = Request["TYPENAME"];
-            return Json(CommonBLL.LoadCODES_NLMFY(TYPENAME));
-        }
-
+        //加载区域
         public JsonResult LoadQY()
         {
             return Json(CommonBLL.LoadQYBySuperName(Session["XZQ"].ToString()));
         }
-
+        //加载商圈
         public JsonResult LoadSQ()
         {
             return Json(CommonBLL.LoadSQByQY(Request["QY"]));
         }
+        //加载职位类别信息
         public JsonResult LoadZWLBXX()
         {
             return Json(CommonBLL.LoadZWLBXX(Request["TYPENAME"]));
         }
-
+        //根据CODEVALUE和TYPENAME加载字典表
         public JsonResult LoadByCodeValueAndTypeName()
         {
             return Json(CommonBLL.LoadByCodeValueAndTypeName(Request["CODEVALUE"], Request["TYPENAME"], Request["TBName"]));
         }
-
+        //根据PARENTID加载字典表
         public JsonResult LoadByParentID()
         {
             return Json(CommonBLL.LoadByParentID(Request["ParentID"], Request["TBName"]));

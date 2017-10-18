@@ -4,12 +4,6 @@ namespace TianWen.XiaoZhen1Qu.Interface
 {
     public interface IBaseBLL
     {
-        
-        
-
-        object LoadCODES_NLMFY(string TYPENAME);
-
-
         object LoadBJQXXX(string LBID);
 
         object LoadQYBySuperName(string SUPERNAME);

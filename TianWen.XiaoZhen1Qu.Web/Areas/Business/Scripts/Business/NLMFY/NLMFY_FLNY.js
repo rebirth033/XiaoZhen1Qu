@@ -43,7 +43,7 @@ function LoadDefault() {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadDropdown("肥料/农药", "LB");
+            LoadCODESByTYPENAME("肥料/农药", "LB", "CODES_NLMFY");
         }
         if (type === "XL") {
             LoadXL();
@@ -54,33 +54,6 @@ function BindClick(type) {
         }
         if (type === "DD") {
             LoadDD($("#QYCode").val());
-        }
-    });
-}
-//加载肥料/农药类别
-function LoadDropdown(type, id) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_NLMFY",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: type
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll; height:341px;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectLB(this,\"" + id + "\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#div" + id).html(html);
-                $("#div" + id).css("display", "block");
-                ActiveStyle(id);
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
         }
     });
 }
@@ -110,12 +83,13 @@ function JCBQActive() {
 function LoadXLMC(JCLX, JCBQ) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadYLHHXX",
+        url: getRootPath() + "/Business/Common/LoadByCodeValueAndTypeName",
         dataType: "json",
         data:
         {
-            TYPE: JCLX,
-            HCPPBQ: JCBQ.split("div")[1]
+            TYPENAME: JCLX,
+            CODEVALUE: JCBQ.split("div")[1],
+            TBName: "CODES_NLMFY"
         },
         success: function (xml) {
             if (xml.Result === 1) {
