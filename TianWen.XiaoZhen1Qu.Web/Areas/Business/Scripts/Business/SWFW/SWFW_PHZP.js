@@ -75,49 +75,22 @@ function SetSFSM(sfsm) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadLB("喷绘招牌", "LB");
+            LoadCODESByTYPENAME("喷绘招牌", "LB", "CODES_SWFW");
         }
         if (type === "CZ") {
-            LoadQTLB("灯箱/招牌材质", "CZ");
+            LoadCODESByTYPENAME("灯箱/招牌材质", "CZ", "CODES_SWFW");
         }
         if (type === "GY") {
-            LoadQTLB("灯箱/招牌工艺", "GY");
+            LoadCODESByTYPENAME("灯箱/招牌工艺", "GY", "CODES_SWFW");
         }
         if (type === "SFFG") {
-            LoadQTLB("是否发光", "SFFG");
+            LoadCODESByTYPENAME("是否发光", "SFFG", "CODES_SWFW");
         }
         if (type === "QY") {
             LoadQY();
         }
         if (type === "DD") {
             LoadDD($("#QYCode").val());
-        }
-    });
-}
-//加载喷绘招牌类别
-function LoadLB(type, id) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_SWFW",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: type
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectLB(this,\"" + id + "\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#div" + id).html(html);
-                $("#div" + id).css("display", "block");
-                ActiveStyle(id);
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
         }
     });
 }
@@ -160,42 +133,16 @@ function PDLB(lbmc, xl) {
         $("#divPHZPSFFG").css("display", "none");
     }
 }
-//加载喷绘招牌类别
-function LoadQTLB(type, id) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_SWFW",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: type
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"" + id + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#div" + id).html(html);
-                $("#div" + id).css("display", "block");
-                ActiveStyle(id);
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
 //加载小类
 function LoadXL(lbmc, xl) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_SWFW",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: lbmc
+            TYPENAME: lbmc,
+            TBName: "CODES_SWFW"
         },
         success: function (xml) {
             if (xml.Result === 1) {

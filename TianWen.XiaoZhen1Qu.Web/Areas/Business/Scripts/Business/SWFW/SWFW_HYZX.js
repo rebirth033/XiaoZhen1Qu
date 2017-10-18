@@ -45,7 +45,7 @@ function LoadDefault() {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "YSJGDW") {
-            LoadYSJGDW();
+            LoadCODESByTYPENAME("运输价格单位", "YSJGDW", "CODES_SWFW");
         }
         if (type === "QY") {
             LoadQY();
@@ -55,42 +55,16 @@ function BindClick(type) {
         }
     });
 }
-//加载运输价格单位
-function LoadYSJGDW() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_SWFW",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "运输价格单位"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"YSJGDW\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divYSJGDW").html(html);
-                $("#divYSJGDW").css("display", "block");
-                ActiveStyle("YSJGDW");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
 //加载组货方式
 function LoadZHFS() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_SWFW",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "组货方式"
+            TYPENAME: "组货方式",
+            TBName: "CODES_SWFW"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -120,11 +94,12 @@ function LoadZHFS() {
 function LoadHWZL() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_SWFW",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "货物种类"
+            TYPENAME: "货物种类",
+            TBName: "CODES_SWFW"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -154,11 +129,12 @@ function LoadHWZL() {
 function LoadFWYS() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODES_SWFW",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "服务延伸"
+            TYPENAME: "服务延伸",
+            TBName: "CODES_SWFW"
         },
         success: function (xml) {
             if (xml.Result === 1) {
