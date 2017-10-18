@@ -94,10 +94,6 @@ function LoadDefault() {
     ue.ready(function () {
         ue.setHeight(200);
     });
-    $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    $("#imgXCWXS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgYXS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
 }
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
@@ -161,6 +157,7 @@ function LoadCL_HCJBXX() {
                     ue.setContent(xml.Value.CL_HCJBXX.BCMS);
                 });
                 $("#spanLB").html(xml.Value.CL_HCJBXX.LB);
+                $("#spanXL").html(xml.Value.CL_HCJBXX.XL);
                 $("#spanPP").html(xml.Value.CL_HCJBXX.PP);
                 $("#spanCCNX").html(xml.Value.CL_HCJBXX.CCNX);
                 $("#spanCCYF").html(xml.Value.CL_HCJBXX.CCYF);
@@ -168,7 +165,6 @@ function LoadCL_HCJBXX() {
                 $("#spanSQ").html(xml.Value.CL_HCJBXX.JYDD);
 
                 LoadPhotos(xml.Value.Photos);
-                $("#spanXL").html(xml.Value.CL_HCJBXX.XL);
                 return;
             }
         },

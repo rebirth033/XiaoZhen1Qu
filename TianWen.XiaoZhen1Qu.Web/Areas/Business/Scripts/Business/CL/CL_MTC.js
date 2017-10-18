@@ -1,10 +1,6 @@
 ﻿var isleave = true;
 var ue = UE.getEditor('FYMS');
 $(document).ready(function () {
-    $("#imgGRZR").bind("click", GRZRSelect);
-    $("#imgSJZR").bind("click", SJZRSelect);
-    $("#imgXCWXS").bind("click", XCWXSSelect);
-    $("#imgYXS").bind("click", YXSSelect);
     $("#divUploadOut").bind("mouseover", GetUploadCss);
     $("#divUploadOut").bind("mouseleave", LeaveUploadCss);
     $("#btnFB").bind("click", FB);
@@ -45,10 +41,6 @@ function LoadDefault() {
     ue.ready(function () {
         ue.setHeight(200);
     });
-    $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    $("#imgXCWXS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgYXS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
 }
 //加载图形信息
 function LoadTXXX() {
@@ -77,30 +69,7 @@ function LoadTXXX() {
 function CXLB() {
     window.location.href = getRootPath() + "/Business/LBXZ/LBXZ";
 }
-//选择个人转让
-function GRZRSelect() {
-    $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
-//选择商家转让
-function SJZRSelect() {
-    $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-}
-//新车未行使
-function XCWXSSelect() {
-    $("#imgXCWXS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgYXS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    $("#divMTCGCSJ").css("display", "none");
-    $("#divGLS").css("display", "none");
-}
-//已行使
-function YXSSelect() {
-    $("#imgXCWXS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    $("#imgYXS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#divMTCGCSJ").css("display", "");
-    $("#divGLS").css("display", "");
-}
+
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
@@ -143,42 +112,13 @@ function SelectPBPP(obj, type, code) {
     $("#div" + type).css("display", "none");
     LoadPBXH(code);
 }
-//获取供求
-function GetGQ() {
-    if ($("#imgGRZR").attr("src").indexOf("blue") !== -1)
-        return "0";
-    else
-        return "1";
-}
-//设置供求
-function SetGQ(gq) {
-    if (gq === 0) {
-        $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-        $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    }
-    else {
-        $("#imgGRZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-        $("#imgSJZR").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    }
-}
-//获取行驶里程
-function GetXSLC() {
-    if ($("#imgXCWXS").attr("src").indexOf("blue") !== -1)
-        return "0";
-    else
-        return "1";
-}
 //设置行驶里程
 function SetXSLC(xslc) {
     if (xslc === 0) {
-        $("#imgXCWXS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-        $("#imgYXS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
         $("#divMTCGCSJ").css("display", "none");
         $("#divGLS").css("display", "none");
     }
     else {
-        $("#imgXCWXS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-        $("#imgYXS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
         $("#divMTCGCSJ").css("display", "");
         $("#divGLS").css("display", "");
     }
@@ -204,7 +144,10 @@ function LoadCL_MTCJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.CL_MTCJBXX.BCMS);
                 });
-                SetGQ(xml.Value.CL_MTCJBXX.GQ);
+                if (xml.Value.CL_MTCJBXX.GQ !== null)
+                    SetDX("GQ", xml.Value.CL_MTCJBXX.GQ);
+                if (xml.Value.CL_MTCJBXX.XSLC !== null)
+                    SetDX("GQ", xml.Value.CL_MTCJBXX.XSLC);
                 SetXSLC(xml.Value.CL_MTCJBXX.XSLC);
                 $("#spanLB").html(xml.Value.CL_MTCJBXX.LB);
                 $("#spanPP").html(xml.Value.CL_MTCJBXX.PP);
@@ -235,8 +178,8 @@ function FB() {
     obj = jsonObj.AddJson(obj, "JYQY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "JYDD", "'" + $("#spanSQ").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "GQ", "'" + GetGQ() + "'");
-    obj = jsonObj.AddJson(obj, "XSLC", "'" + GetXSLC() + "'");
+    obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
+    obj = jsonObj.AddJson(obj, "XSLC", "'" + GetDX("XSLC") + "'");
 
     if (getUrlParam("CL_MTCJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "CL_MTCJBXXID", "'" + getUrlParam("CL_MTCJBXXID") + "'");

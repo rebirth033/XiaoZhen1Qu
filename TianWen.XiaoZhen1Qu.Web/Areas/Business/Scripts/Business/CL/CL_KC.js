@@ -3,10 +3,6 @@ var ue = UE.getEditor('FYMS');
 $(document).ready(function () {
     $("#divUploadOut").bind("mouseover", GetUploadCss);
     $("#divUploadOut").bind("mouseleave", LeaveUploadCss);
-    $("#imgS").bind("click", SSelect);
-    $("#imgF").bind("click", FSelect);
-    $("#imgY").bind("click", YSelect);
-    $("#imgW").bind("click", WSelect);
     $("#btnFB").bind("click", FB);
     $("#FYMS").bind("focus", FYMSFocus);
     $("#FYMS").bind("blur", FYMSBlur);
@@ -100,66 +96,6 @@ function LoadDefault() {
     ue.ready(function () {
         ue.setHeight(200);
     });
-    $("#imgS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgF").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    $("#imgW").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgY").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
-//选择是
-function SSelect() {
-    $("#imgS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgF").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
-//选择否
-function FSelect() {
-    $("#imgS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    $("#imgF").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-}
-//选择有
-function YSelect() {
-    $("#imgY").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgW").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
-//选择无
-function WSelect() {
-    $("#imgY").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    $("#imgW").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-}
-//获取是否定期保养
-function GetSFDQBY() {
-    if ($("#imgS").attr("src").indexOf("blue") !== -1)
-        return "0";
-    else
-        return "1";
-}
-//设置是否定期保养
-function SetSFDQBY(SFDQBY) {
-    if (SFDQBY === 0) {
-        $("#imgS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-        $("#imgF").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    }
-    else {
-        $("#imgS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-        $("#imgF").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    }
-}
-//获取有无重大事故
-function GetYWZDSG() {
-    if ($("#imgY").attr("src").indexOf("blue") !== -1)
-        return "0";
-    else
-        return "1";
-}
-//设置有无重大事故
-function SetYWZDSG(YWZDSG) {
-    if (YWZDSG === 0) {
-        $("#imgY").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-        $("#imgW").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    }
-    else {
-        $("#imgY").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-        $("#imgW").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    }
 }
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
@@ -272,8 +208,10 @@ function LoadCL_KCJBXX() {
                 $("#spanSYXDQNF").html(xml.Value.CL_KCJBXX.SYXDQNF);
                 $("#spanSYXDQYF").html(xml.Value.CL_KCJBXX.SYXDQYF);
                 LoadPhotos(xml.Value.Photos);
-                SetSFDQBY(xml.Value.CL_KCJBXX.SFDQBY);
-                SetYWZDSG(xml.Value.CL_KCJBXX.YWZDSG);
+                if (xml.Value.CL_KCJBXX.SFDQBY !== null)
+                    SetDX("SFDQBY", xml.Value.CL_KCJBXX.SFDQBY);
+                if (xml.Value.CL_KCJBXX.YWZDSG !== null)
+                    SetDX("YWZDSG", xml.Value.CL_KCJBXX.YWZDSG);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -297,8 +235,8 @@ function FB() {
     obj = jsonObj.AddJson(obj, "JQXDQYF", "'" + $("#spanJQXDQYF").html() + "'");
     obj = jsonObj.AddJson(obj, "SYXDQNF", "'" + $("#spanSYXDQNF").html() + "'");
     obj = jsonObj.AddJson(obj, "SYXDQYF", "'" + $("#spanSYXDQYF").html() + "'");
-    obj = jsonObj.AddJson(obj, "SFDQBY", "'" + GetSFDQBY() + "'");
-    obj = jsonObj.AddJson(obj, "YWZDSG", "'" + GetYWZDSG() + "'");
+    obj = jsonObj.AddJson(obj, "SFDQBY", "'" + GetDX("SFDQBY") + "'");
+    obj = jsonObj.AddJson(obj, "YWZDSG", "'" + GetDX("YWZDSG") + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
 
     if (getUrlParam("CL_KCJBXXID") !== null)

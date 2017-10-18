@@ -3,9 +3,6 @@ var ue = UE.getEditor('FYMS');
 $(document).ready(function () {
     $("#divUploadOut").bind("mouseover", GetUploadCss);
     $("#divUploadOut").bind("mouseleave", LeaveUploadCss);
-    $("#imgCLMM").bind("click", CLMMSelect);
-    $("#imgPJ").bind("click", PJSelect);
-    $("#imgWXBY").bind("click", WXBYSelect);
     $("#btnFB").bind("click", FB);
     $("#FYMS").bind("focus", FYMSFocus);
     $("#FYMS").bind("blur", FYMSBlur);
@@ -16,7 +13,7 @@ $(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });
     $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
-    LoadTXXX();
+
     LoadDefault();
     LoadCL_GCCJBXX();
     BindClick("CX");
@@ -84,7 +81,6 @@ function PDCX(CXMC) {
         $("#divGCCPP").css("display", "");
         BindClick("PP");
     }
-
 }
 //加载品牌标签
 function LoadPP() {
@@ -155,54 +151,6 @@ function LoadDefault() {
     ue.ready(function () {
         ue.setHeight(200);
     });
-    $("#imgCLMM").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgPJ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    $("#imgWXBY").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
-//加载图形信息
-function LoadTXXX() {
-    $("#spanTXXX").css("color", "#5bc0de");
-    $("#emTXXX").css("background", "#5bc0de");
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/LBXZ/LoadLBByID",
-        dataType: "json",
-        data:
-        {
-            LBID: getUrlParam("CLICKID")
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                if (xml.list.length > 0)
-                    $("#spanLBXZ").html("1." + xml.list[0].LBNAME);
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//重选类别
-function CXLB() {
-    window.location.href = getRootPath() + "/Business/LBXZ/LBXZ";
-}
-//选择车辆买卖
-function CLMMSelect() {
-    $("#imgCLMM").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgPJ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    $("#imgWXBY").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
-//选择配件
-function PJSelect() {
-    $("#imgCLMM").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    $("#imgPJ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgWXBY").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
-//选择维修保养
-function WXBYSelect() {
-    $("#imgCLMM").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    $("#imgPJ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    $("#imgWXBY").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
 }
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
@@ -261,10 +209,12 @@ function LoadCL_GCCJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.CL_GCCJBXX.BCMS);
                 });
+                if (xml.Value.CL_GCCJBXX.LB !== null)
+                    SetDX("LB", xml.Value.CL_GCCJBXX.LB);
                 $("#spanQY").html(xml.Value.CL_GCCJBXX.JYQY);
                 $("#spanDD").html(xml.Value.CL_GCCJBXX.JYDD);
                 $("#spanXL").html(xml.Value.CL_GCCJBXX.XL);
-                $("#spanCX").html(xml.Value.CL_GCCJBXX.LB);
+                $("#spanCX").html(xml.Value.CL_GCCJBXX.CX);
                 $("#spanCCNX").html(xml.Value.CL_GCCJBXX.CCNX);
                 $("#spanCCYF").html(xml.Value.CL_GCCJBXX.CCYF);
                 LoadPhotos(xml.Value.Photos);
@@ -282,13 +232,14 @@ function FB() {
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
-    obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanCX").html() + "'");
+    obj = jsonObj.AddJson(obj, "CX", "'" + $("#spanCX").html() + "'");
     obj = jsonObj.AddJson(obj, "PP", "'" + $("#spanPP").html() + "'");
     obj = jsonObj.AddJson(obj, "CCNX", "'" + $("#spanCCNX").html() + "'");
     obj = jsonObj.AddJson(obj, "CCYF", "'" + $("#spanCCYF").html() + "'");
     obj = jsonObj.AddJson(obj, "JYQY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "JYDD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
+    obj = jsonObj.AddJson(obj, "LB", "'" + GetDX("LB") + "'");
 
     if (getUrlParam("CL_GCCJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "CL_GCCJBXXID", "'" + getUrlParam("CL_GCCJBXXID") + "'");

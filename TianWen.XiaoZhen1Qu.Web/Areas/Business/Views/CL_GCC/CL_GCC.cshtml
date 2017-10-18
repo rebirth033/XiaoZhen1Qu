@@ -87,9 +87,15 @@
                     <span class="spanFWCZ">类别</span>
                 </div>
                 <div class="divRight">
-                    <img class="iFWCZ" id="imgCLMM" /><label class="labelFWCZ">&nbsp;&nbsp;车辆买卖</label>
-                    <img class="iFWCZ" id="imgPJ"/><label class="labelFWCZ">&nbsp;&nbsp;配件&nbsp;&nbsp;</label>
-                    <img class="iFWCZ" id="imgWXBY" /><label class="labelFWCZ">&nbsp;&nbsp;维修/保养&nbsp;&nbsp;</label>
+                    <div class="div_radio" id="div_lb_clmm">
+                        <img class="iFWCZ" id="img_lb_clmm" /><label class="labelFWCZ">车辆买卖</label>
+                    </div>
+                    <div class="div_radio" id="div_lb_pj">
+                        <img class="iFWCZ" id="img_lb_pj" /><label class="labelFWCZ">配件</label>
+                    </div>
+                    <div class="div_radio" id="div_lb_wxby">
+                        <img class="iFWCZ" id="img_lb_wxby" /><label class="labelFWCZ">维修/保养</label>
+                    </div>
                 </div>
             </div>
             <div id="divJBXX" class="divSplit" style="display: block; text-align: left">
@@ -122,45 +128,45 @@
                     </div>
                 </div>
             </div>
-        <div id="divGCCPP" class="divFWCZ" style="z-index: 998; display: none">
-            <div class="divLeft" style="margin-left: 128px;">
-                <span class="required">*</span>
-                <span class="spanFWCZ">品牌</span>
-            </div>
-            <div class="divRight">
-                <div id="divPPText" class="spanFWLXOut SRK" style="position: relative;">
-                    <div id="divPPSpan" class="spanFWLXIn" style="border: none; margin-top: 6px;">
-                        <span id="spanPP" class="spanFWQK spanFontColor" style="margin-top: 0">请选择品牌</span>
-                        <div class="divFWQKArrow"></div>
-                    </div>
-                    <div id="divPP" class="div_xzk" style="display: none;">
-                        <div class="div_xzk_head">
-                            <input class="input_content" type="text" placeholder="输入名称快速搜索" style="cursor: text"/>
-                            <input class="btn btn-info" type="button" value="快速搜索"/>
+            <div id="divGCCPP" class="divFWCZ" style="z-index: 998; display: none">
+                <div class="divLeft" style="margin-left: 128px;">
+                    <span class="required">*</span>
+                    <span class="spanFWCZ">品牌</span>
+                </div>
+                <div class="divRight">
+                    <div id="divPPText" class="spanFWLXOut SRK" style="position: relative;">
+                        <div id="divPPSpan" class="spanFWLXIn" style="border: none; margin-top: 6px;">
+                            <span id="spanPP" class="spanFWQK spanFontColor" style="margin-top: 0">请选择品牌</span>
+                            <div class="divFWQKArrow"></div>
                         </div>
-                        <div class="div_xzk_body">
-                            <div class="div_content_yxmc" id="div_content_yxmc">
+                        <div id="divPP" class="div_xzk" style="display: none;">
+                            <div class="div_xzk_head">
+                                <input class="input_content" type="text" placeholder="输入名称快速搜索" style="cursor: text" />
+                                <input class="btn btn-info" type="button" value="快速搜索" />
                             </div>
-                            <div class="div_content_yxbq" id="div_content_yxbq">
+                            <div class="div_xzk_body">
+                                <div class="div_content_yxmc" id="div_content_yxmc">
+                                </div>
+                                <div class="div_content_yxbq" id="div_content_yxbq">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="divDW" class="divFWCZ" style="z-index: 995;">
-            <div class="divLeft" style="margin-left: 128px;">
-                <span class="required">*</span>
-                <span class="spanFWCZ">吨位</span>
+            <div id="divDW" class="divFWCZ" style="z-index: 995;">
+                <div class="divLeft" style="margin-left: 128px;">
+                    <span class="required">*</span>
+                    <span class="spanFWCZ">吨位</span>
+                </div>
+                <div class="divRight">
+                    <span id="spanDW" class="spanFWLX SRK" style="display: inline-block;">
+                        <input class="inputLCFB spanFontColor" id="DW" maxlength="9" column="DW" type="text" style="width: 100px" />
+                        <span class="spanFontColor" style="margin-left: 15px;">吨</span>
+                    </span>
+                </div>
+                <div id="divDWTip" class="Warn" style="z-index: 994; position: relative;"></div>
             </div>
-            <div class="divRight">
-                <span id="spanDW" class="spanFWLX SRK" style="display: inline-block;">
-                    <input class="inputLCFB spanFontColor" id="DW" maxlength="9" column="DW" type="text" style="width: 100px" />
-                    <span class="spanFontColor" style="margin-left: 15px;">吨</span>
-                </span>
-            </div>
-            <div id="divDWTip" class="Warn" style="z-index: 994; position: relative;"></div>
-        </div>
             <div id="divXSS" class="divFWCZ" style="z-index: 995;">
                 <div class="divLeft" style="margin-left: 114px;">
                     <span class="required">*</span>
@@ -219,7 +225,7 @@
                 <div class="divRight">
                     <div id="divQYText" class="spanFWLXOut SRK" style="border: 1px solid #cccccc; border-radius: 4px; z-index: 997; position: relative;">
                         <div id="divQYSpan" class="spanFWLXIn" style="border: none; margin-top: 6px;">
-                            <input type="hidden" id="QYCode"/>
+                            <input type="hidden" id="QYCode" />
                             <span id="spanQY" class="spanFWQK spanFontColor" style="margin-top: 0">请选择区域</span>
                             <div class="divFWQKArrow"></div>
                         </div>
