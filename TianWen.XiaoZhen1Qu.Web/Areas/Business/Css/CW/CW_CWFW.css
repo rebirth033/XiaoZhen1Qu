@@ -1,24 +1,4 @@
-﻿.div_head {
-    margin-top: 20px;
-    z-index: 1001;
-    position:relative;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+﻿
 
 .span_spaninput {
     border: 1px solid #cccccc;
@@ -28,9 +8,6 @@
     border-radius: 4px;
     font-size: 14px;
 }
-
-
-
 
 
 .uldropdown {

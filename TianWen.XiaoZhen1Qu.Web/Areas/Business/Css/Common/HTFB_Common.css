@@ -62,14 +62,15 @@
 
 .div_select_out {
     display: inline-block;
-    width: 128px;
+    width: 150px;
     height: 34px;
+    border-radius: 4px;
 }
 
 .div_select_in {
     border: 1px solid #cccccc;
     display: inline-block;
-    width: 128px;
+    width: 150px;
     height: 34px;
     border-radius: 4px;
     font-size: 14px;
@@ -77,12 +78,12 @@
 
 .div_select_dropdown {
     float: left;
-    width: 129px;
+    width: 150px;
 }
 
 .span_select {
     display: inline-block;
-    width: 105px;
+    width: 120px;
     height: 30px;
     text-align: center;
     margin-top: 4px;
@@ -97,7 +98,7 @@
 }
 
 .input_spaninput {
-    width: 100px;
+    width: 120px;
     margin-top: 1px;
     border: none;
     height: 30px;
@@ -107,7 +108,7 @@
 .span_spaninput {
     border: 1px solid #cccccc;
     display: inline-block;
-    width: 128px;
+    width: 150px;
     height: 34px;
     border-radius: 4px;
     font-size: 14px;

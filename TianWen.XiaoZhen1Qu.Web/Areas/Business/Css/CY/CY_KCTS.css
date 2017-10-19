@@ -1,39 +1,4 @@
-﻿.div_head {
-    margin-top: 20px;
-    z-index: 1001;
-    position: relative;
-}
-
-.div_row {
-    width: 900px;
-    text-align: left;
-    padding-top: 2px;
-    font-size: 14px;
-    margin-left: 10px;
-    margin-bottom: 10px;
-    height: 62px;
-    position: relative;
-    display: block;
-}
-
-.div_row_left {
-    color: gray;
-    text-align: right;
-    margin-left: 100px;
-    display: inline;
-    font-size: 14px;
-}
-
-.div_row_right {
-    display: inline;
-    margin-left: 30px;
-    position: relative;
-}
-
-
-
-
-
+﻿
 .img_KCTSLB {
     width: 16px;
     height: 16px;
@@ -50,16 +15,6 @@
     margin-top: 4px;
     cursor: pointer;
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
