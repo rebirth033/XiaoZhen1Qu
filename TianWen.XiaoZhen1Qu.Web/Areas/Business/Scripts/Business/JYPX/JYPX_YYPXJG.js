@@ -61,7 +61,7 @@ function LoadXL(lbmc, xl) {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liXL' onclick='SelectXL(this)'><img class='img_XL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    html += "<li class='liXL' onclick='SelectDuoX(this)'><img class='img_XL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i % 4 === 3) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
@@ -78,41 +78,13 @@ function LoadXL(lbmc, xl) {
                 else
                     $("#divXL").css("display", "");
                 if (xl !== "" && xl !== null && xl !== undefined)
-                    SetXL(xl);
+                    SetDuoX("XL", xl);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
         }
     });
-}
-//选择小类
-function SelectXL(obj) {
-    if ($(obj).find("img").attr("src").indexOf("blue") !== -1)
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-    else
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-}
-//获取小类
-function GetXL() {
-    var XL = "";
-    $(".liXL").each(function () {
-        if ($(this).find("img").attr("src").indexOf("blue") !== -1)
-            XL += $(this).find("label")[0].innerHTML + ",";
-    });
-    return RTrim(XL, ',');
-}
-//设置小类
-function SetXL(lbs) {
-    if (lbs !== "" && lbs !== null) {
-        var lbarray = lbs.split(',');
-        for (var i = 0; i < lbarray.length; i++) {
-            $(".liXL").each(function () {
-                if ($(this).find("label")[0].innerHTML.indexOf(lbarray[i]) !== -1)
-                    $(this).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-            });
-        }
-    }
 }
 //加载多选
 function LoadDuoX(type, id) {

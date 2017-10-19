@@ -53,7 +53,7 @@ function LoadHYWLLB() {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liHYWLLB' onclick='SelectHYWLLB(this)'><img class='img_HYWLLB'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    html += "<li class='liHYWLLB' onclick='SelectDuoX(this)'><img class='img_HYWLLB'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i === 3 || i === 7 || i === 11 || i === 15 || i === 19) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
@@ -72,32 +72,6 @@ function LoadHYWLLB() {
 
         }
     });
-}
-//选择货运物流
-function SelectHYWLLB(obj) {
-    if ($(obj).find("img").attr("src").indexOf("blue") !== -1)
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-    else
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-}
-//获取货运物流类别
-function GetHYWLLB() {
-    var HYWLLB = "";
-    $(".liHYWLLB").each(function () {
-        if ($(this).find("img").attr("src").indexOf("blue") !== -1)
-            HYWLLB += $(this).find("label")[0].innerHTML + ",";
-    });
-    return RTrim(HYWLLB, ',');
-}
-//设置货运物流类别
-function SetHYWLLB(lbs) {
-    var lbarray = lbs.split(',');
-    for (var i = 0; i < lbarray.length; i++) {
-        $(".liHYWLLB").each(function () {
-            if ($(this).find("label")[0].innerHTML.indexOf(lbarray[i]) !== -1)
-                $(this).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-        });
-    }
 }
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
@@ -131,7 +105,7 @@ function LoadSWFW_HYWLJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.SWFW_HYWLJBXX.BCMS);
                 });
-                SetHYWLLB(xml.Value.SWFW_HYWLJBXX.LB);
+                SetDuoX("HYWLLB", xml.Value.SWFW_HYWLJBXX.LB);
                 $("#spanQY").html(xml.Value.SWFW_HYWLJBXX.QY);
                 $("#spanDD").html(xml.Value.SWFW_HYWLJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
@@ -151,7 +125,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "LB", "'" + GetHYWLLB() + "'");
+    obj = jsonObj.AddJson(obj, "LB", "'" + GetDuoX("HYWLLB") + "'");
 
     if (getUrlParam("SWFW_HYWLJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "SWFW_HYWLJBXXID", "'" + getUrlParam("SWFW_HYWLJBXXID") + "'");

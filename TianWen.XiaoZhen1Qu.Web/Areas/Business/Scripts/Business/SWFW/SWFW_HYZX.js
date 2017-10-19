@@ -39,7 +39,6 @@ function LoadDefault() {
     ue.ready(function () {
         ue.setHeight(200);
     });
-    $(".iFWCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
 }
 //绑定下拉框鼠标点击样式
 function BindClick(type) {

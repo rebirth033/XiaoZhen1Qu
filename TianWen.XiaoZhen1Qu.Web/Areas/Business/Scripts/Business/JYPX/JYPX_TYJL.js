@@ -1,7 +1,6 @@
 ﻿var isleave = true;
 var ue = UE.getEditor('FYMS');
 $(document).ready(function () {
-    $(".div_radio").bind("click", RadioSelect);
     $("#divUploadOut").bind("mouseover", GetUploadCss);
     $("#divUploadOut").bind("mouseleave", LeaveUploadCss);
     $("#btnFB").bind("click", FB);
@@ -39,7 +38,6 @@ function LoadDefault() {
     ue.ready(function () {
         ue.setHeight(200);
     });
-    $(".iFWCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
 }
 //选择类别下拉框
 function SelectLB(obj, type, id) {

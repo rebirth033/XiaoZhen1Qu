@@ -39,8 +39,6 @@ function LoadDefault() {
     ue.ready(function () {
         ue.setHeight(200);
     });
-    $("#imgSMFW").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgDDFW").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
 }
 //加载语种标签
 function LoadYZ() {
@@ -113,7 +111,7 @@ function LoadXL(lbmc, xl) {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liXL' onclick='SelectXL(this)'><img class='img_XL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    html += "<li class='liXL' onclick='SelectDuoX(this)'><img class='img_XL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i === 3 || i === 7 || i === 11) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
@@ -130,7 +128,7 @@ function LoadXL(lbmc, xl) {
                 else
                     $("#divXL").css("display", "");
                 if (xl !== "" && xl !== null && xl !== undefined)
-                    SetXL(xl);
+                    SetDuoX("XL", xl);
                 if (lbmc === "品牌策划推广")
                     $(".liXL").css("width", "200px");
             }
@@ -139,34 +137,6 @@ function LoadXL(lbmc, xl) {
 
         }
     });
-}
-//选择小类
-function SelectXL(obj) {
-    if ($(obj).find("img").attr("src").indexOf("blue") !== -1)
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-    else
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-}
-//获取小类
-function GetXL() {
-    var XL = "";
-    $(".liXL").each(function () {
-        if ($(this).find("img").attr("src").indexOf("blue") !== -1)
-            XL += $(this).find("label")[0].innerHTML + ",";
-    });
-    return RTrim(XL, ',');
-}
-//设置小类
-function SetXL(lbs) {
-    if (lbs !== "" && lbs !== null) {
-        var lbarray = lbs.split(',');
-        for (var i = 0; i < lbarray.length; i++) {
-            $(".liXL").each(function () {
-                if ($(this).find("label")[0].innerHTML.indexOf(lbarray[i]) !== -1)
-                    $(this).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-            });
-        }
-    }
 }
 //加载专业领域
 function LoadZYLY() {
@@ -183,7 +153,7 @@ function LoadZYLY() {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liZYLY' onclick='SelectZYLY(this)'><img class='img_ZYLY'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    html += "<li class='liZYLY' onclick='SelectDuoX(this)'><img class='img_ZYLY'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i === 6 || i === 13 || i === 20 || i === 27) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
@@ -207,34 +177,6 @@ function LoadZYLY() {
         }
     });
 }
-//选择专业领域
-function SelectZYLY(obj) {
-    if ($(obj).find("img").attr("src").indexOf("blue") !== -1)
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-    else
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-}
-//获取专业领域
-function GetZYLY() {
-    var ZYLY = "";
-    $(".liZYLY").each(function () {
-        if ($(this).find("img").attr("src").indexOf("blue") !== -1)
-            ZYLY += $(this).find("label")[0].innerHTML + ",";
-    });
-    return RTrim(ZYLY, ',');
-}
-//设置专业领域
-function SetZYLY(lbs) {
-    if (lbs !== "" && lbs !== null) {
-        var lbarray = lbs.split(',');
-        for (var i = 0; i < lbarray.length; i++) {
-            $(".liZYLY").each(function () {
-                if ($(this).find("label")[0].innerHTML.indexOf(lbarray[i]) !== -1)
-                    $(this).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-            });
-        }
-    }
-}
 //加载文件类型
 function LoadWJLX() {
     $.ajax({
@@ -250,7 +192,7 @@ function LoadWJLX() {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liWJLX' onclick='SelectWJLX(this)'><img class='img_WJLX'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    html += "<li class='liWJLX' onclick='SelectDuoX(this)'><img class='img_WJLX'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i === 4 || i === 9 || i === 14 || i === 19) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
@@ -273,34 +215,6 @@ function LoadWJLX() {
 
         }
     });
-}
-//选择文件类型
-function SelectWJLX(obj) {
-    if ($(obj).find("img").attr("src").indexOf("blue") !== -1)
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-    else
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-}
-//获取文件类型
-function GetWJLX() {
-    var WJLX = "";
-    $(".liWJLX").each(function () {
-        if ($(this).find("img").attr("src").indexOf("blue") !== -1)
-            WJLX += $(this).find("label")[0].innerHTML + ",";
-    });
-    return RTrim(WJLX, ',');
-}
-//设置文件类型
-function SetWJLX(lbs) {
-    if (lbs !== "" && lbs !== null) {
-        var lbarray = lbs.split(',');
-        for (var i = 0; i < lbarray.length; i++) {
-            $(".liWJLX").each(function () {
-                if ($(this).find("label")[0].innerHTML.indexOf(lbarray[i]) !== -1)
-                    $(this).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-            });
-        }
-    }
 }
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
@@ -347,8 +261,8 @@ function LoadSWFW_FYSJJBXX() {
                 $("#spanDD").html(xml.Value.SWFW_FYSJJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
                 LoadXL(xml.Value.SWFW_FYSJJBXX.LB, xml.Value.SWFW_FYSJJBXX.XL);
-                SetZYLY(xml.Value.SWFW_FYSJJBXX.ZYLY);
-                SetWJLX(xml.Value.SWFW_FYSJJBXX.WJLX);
+                SetDuoX("ZYLY", xml.Value.SWFW_FYSJJBXX.ZYLY);
+                SetDuoX("WJLX", xml.Value.SWFW_FYSJJBXX.WJLX);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -368,8 +282,8 @@ function FB() {
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "XL", "'" + GetXL() + "'");
-    obj = jsonObj.AddJson(obj, "ZYLY", "'" + GetZYLY() + "'");
-    obj = jsonObj.AddJson(obj, "WJLX", "'" + GetWJLX() + "'");
+    obj = jsonObj.AddJson(obj, "ZYLY", "'" + GetDuoX("ZYLY") + "'");
+    obj = jsonObj.AddJson(obj, "WJLX", "'" + GetDuoX("WJLX") + "'");
 
     if (getUrlParam("SWFW_FYSJJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "SWFW_FYSJJBXXID", "'" + getUrlParam("SWFW_FYSJJBXXID") + "'");

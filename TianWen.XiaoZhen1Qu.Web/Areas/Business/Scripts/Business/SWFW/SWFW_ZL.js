@@ -61,7 +61,7 @@ function LoadXL(lbmc, xl) {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liXL' onclick='SelectXL(this)'><img class='img_XL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    html += "<li class='liXL' onclick='SelectDuoX(this)'><img class='img_XL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i === 3 || i === 7 || i === 11 || i === 15) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
@@ -77,42 +77,14 @@ function LoadXL(lbmc, xl) {
                     $("#divXL").css("display", "none");
                 else
                     $("#divXL").css("display", "");
-                if (xl !== "" && xl !== null)
-                    SetXL(xl);
+                if (xl !== "" && xl !== null && xl !== undefined)
+                    SetDuoX("XL", xl);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
         }
     });
-}
-//选择小类
-function SelectXL(obj) {
-    if ($(obj).find("img").attr("src").indexOf("blue") !== -1)
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-    else
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-}
-//获取小类
-function GetXL() {
-    var XL = "";
-    $(".liXL").each(function () {
-        if ($(this).find("img").attr("src").indexOf("blue") !== -1)
-            XL += $(this).find("label")[0].innerHTML + ",";
-    });
-    return RTrim(XL, ',');
-}
-//设置小类
-function SetXL(lbs) {
-    if (lbs !== "" && lbs !== null) {
-        var lbarray = lbs.split(',');
-        for (var i = 0; i < lbarray.length; i++) {
-            $(".liXL").each(function () {
-                if ($(this).find("label")[0].innerHTML.indexOf(lbarray[i]) !== -1)
-                    $(this).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-            });
-        }
-    }
 }
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
@@ -143,12 +115,12 @@ function LoadSWFW_ZLJBXX() {
                 var jsonObj = new JsonDB("myTabContent");
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.SWFW_ZLJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
-                $("#SWFW_ZLJBXXID").val(xml.Value.SWFW_ZLJBXX.SWFW_ZLJBXXID);
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.SWFW_ZLJBXX.BCMS);
                 });
+                $("#SWFW_ZLJBXXID").val(xml.Value.SWFW_ZLJBXX.SWFW_ZLJBXXID);
                 $("#spanLB").html(xml.Value.SWFW_ZLJBXX.LB);
                 $("#spanQY").html(xml.Value.SWFW_ZLJBXX.QY);
                 $("#spanDD").html(xml.Value.SWFW_ZLJBXX.DD);
@@ -171,7 +143,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "XL", "'" + GetXL() + "'");
+    obj = jsonObj.AddJson(obj, "XL", "'" + GetDuoX("XL") + "'");
 
     if (getUrlParam("SWFW_ZLJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "SWFW_ZLJBXXID", "'" + getUrlParam("SWFW_ZLJBXXID") + "'");

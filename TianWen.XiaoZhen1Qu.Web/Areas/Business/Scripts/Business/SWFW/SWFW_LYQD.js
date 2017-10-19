@@ -69,9 +69,10 @@ function PDLB(lbmc) {
         $("#divXLText").css("display", "none");
     }
     else {
+        BindClick("XL");
         $("#spanXL").html("请选择小类");
         $("#divXLText").css("display", "");
-        BindClick("XL");
+        $("#divXL").css("display", "none");
     }
 }
 //加载小类

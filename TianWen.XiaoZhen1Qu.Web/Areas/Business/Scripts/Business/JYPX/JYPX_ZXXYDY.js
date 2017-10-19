@@ -1,8 +1,6 @@
 ﻿var isleave = true;
 var ue = UE.getEditor('FYMS');
 $(document).ready(function () {
-    $("#imgSMFW").bind("click", SMFWSelect);
-    $("#imgDDFW").bind("click", DDFWSelect);
     $("#divUploadOut").bind("mouseover", GetUploadCss);
     $("#divUploadOut").bind("mouseleave", LeaveUploadCss);
     $("#btnFB").bind("click", FB);
@@ -40,18 +38,6 @@ function LoadDefault() {
     ue.ready(function () {
         ue.setHeight(200);
     });
-    $("#imgSMFW").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgDDFW").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
-//选择上门服务
-function SMFWSelect() {
-    $("#imgSMFW").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgDDFW").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
-//选择到店服务
-function DDFWSelect() {
-    $("#imgSMFW").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    $("#imgDDFW").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
 }
 //选择类别下拉框
 function SelectLB(obj, type, id) {
@@ -75,7 +61,7 @@ function LoadXL(lbmc, xl) {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liXL' onclick='SelectXL(this)'><img class='img_XL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    html += "<li class='liXL' onclick='SelectDuoX(this)'><img class='img_XL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i === 3 || i === 7 || i === 11) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
@@ -92,7 +78,7 @@ function LoadXL(lbmc, xl) {
                 else
                     $("#divXL").css("display", "");
                 if (xl !== "" && xl !== null && xl !== undefined)
-                    SetXL(xl);
+                    SetDuoX("XL", xl);
                 if (lbmc === "品牌策划推广")
                     $(".liXL").css("width", "200px");
             }
@@ -101,34 +87,6 @@ function LoadXL(lbmc, xl) {
 
         }
     });
-}
-//选择小类
-function SelectXL(obj) {
-    if ($(obj).find("img").attr("src").indexOf("blue") !== -1)
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-    else
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-}
-//获取小类
-function GetXL() {
-    var XL = "";
-    $(".liXL").each(function () {
-        if ($(this).find("img").attr("src").indexOf("blue") !== -1)
-            XL += $(this).find("label")[0].innerHTML + ",";
-    });
-    return RTrim(XL, ',');
-}
-//设置小类
-function SetXL(lbs) {
-    if (lbs !== "" && lbs !== null) {
-        var lbarray = lbs.split(',');
-        for (var i = 0; i < lbarray.length; i++) {
-            $(".liXL").each(function () {
-                if ($(this).find("label")[0].innerHTML.indexOf(lbarray[i]) !== -1)
-                    $(this).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-            });
-        }
-    }
 }
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
@@ -187,7 +145,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "XL", "'" + GetXL() + "'");
+    obj = jsonObj.AddJson(obj, "XL", "'" + GetDuoX("XL") + "'");
 
     if (getUrlParam("JYPX_ZXXYDYJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "JYPX_ZXXYDYJBXXID", "'" + getUrlParam("JYPX_ZXXYDYJBXXID") + "'");

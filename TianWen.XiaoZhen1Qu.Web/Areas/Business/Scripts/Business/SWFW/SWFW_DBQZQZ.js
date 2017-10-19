@@ -1,7 +1,6 @@
 ﻿var isleave = true;
 var ue = UE.getEditor('FYMS');
 $(document).ready(function () {
-    $(".div_radio").bind("click", RadioSelect);
     $("#divUploadOut").bind("mouseover", GetUploadCss);
     $("#divUploadOut").bind("mouseleave", LeaveUploadCss);
     $("#btnFB").bind("click", FB);
@@ -40,7 +39,6 @@ function LoadDefault() {
     ue.ready(function () {
         ue.setHeight(200);
     });
-    $(".iFWCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
 }
 //加载国家标签
 function LoadGJ() {
@@ -90,33 +88,6 @@ function LoadGJMC(JCLX, GJBQ) {
 function GJXZ(GJMC, GJID) {
     $("#spanGJ").html(GJMC);
     $("#divGJ").css("display", "none");
-}
-//选择单选
-function RadioSelect() {
-    $(this).parent().find("img").each(function () {
-        $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    });
-    $(this).find("img").each(function () {
-        $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    });
-}
-//获取单选
-function GetDX(type) {
-    var value = "";
-    $("#div" + type).find("img").each(function () {
-        if ($(this).attr("src").indexOf("blue") !== -1)
-            value = $(this).parent().find("label")[0].innerHTML;
-    });
-    return value;
-}
-//设置单选
-function SetDX(type, value) {
-    $("#div" + type).find("label").each(function () {
-        if ($(this)[0].innerHTML === value)
-            $(this).parent().find("img").each(function () {
-                $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-            });
-    });
 }
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
