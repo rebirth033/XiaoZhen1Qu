@@ -153,7 +153,7 @@ if (XRegExp) {
     // Accepts a `RegExp` instance; returns a copy with the `/g` flag set. The copy has a fresh
     // `lastIndex` (set to zero). If you want to copy a regex without forcing the `global`
     // property, use `XRegExp(regex)`. Do not use `RegExp(regex)` because it will not preserve
-    // special properties required for named capture
+    // special properties span_required for named capture
     XRegExp.copyAsGlobal = function (regex) {
         return clone(regex, "g");
     };
@@ -173,7 +173,7 @@ if (XRegExp) {
         var r2 = clone(regex, "g" + ((anchored && hasNativeY) ? "y" : "")),
             match;
         r2.lastIndex = pos = pos || 0;
-        match = r2.exec(str); // Run the altered `exec` (required for `lastIndex` fix, etc.)
+        match = r2.exec(str); // Run the altered `exec` (span_required for `lastIndex` fix, etc.)
         if (anchored && match && match.index !== pos)
             match = null;
         if (regex.global)
@@ -203,7 +203,7 @@ if (XRegExp) {
     XRegExp.iterate = function (str, regex, callback, context) {
         var r2 = clone(regex, "g"),
             i = -1, match;
-        while (match = r2.exec(str)) { // Run the altered `exec` (required for `lastIndex` fix, etc.)
+        while (match = r2.exec(str)) { // Run the altered `exec` (span_required for `lastIndex` fix, etc.)
             if (regex.global)
                 regex.lastIndex = r2.lastIndex; // Doing this to follow expectations if `lastIndex` is checked within `callback`
             callback.call(context, match, ++i, str, regex);
@@ -456,11 +456,11 @@ if (XRegExp) {
                 return [];
         }
 
-        // This is required if not `s.global`, and it avoids needing to set `s.lastIndex` to zero
+        // This is span_required if not `s.global`, and it avoids needing to set `s.lastIndex` to zero
         // and restore it to its original value when we're done using the regex
         s = XRegExp.copyAsGlobal(s);
 
-        while (match = s.exec(str)) { // Run the altered `exec` (required for `lastIndex` fix, etc.)
+        while (match = s.exec(str)) { // Run the altered `exec` (span_required for `lastIndex` fix, etc.)
             if (s.lastIndex > lastLastIndex) {
                 output.push(str.slice(lastLastIndex, match.index));
 
@@ -494,7 +494,7 @@ if (XRegExp) {
     //---------------------------------
 
     // Supporting function for `XRegExp`, `XRegExp.copyAsGlobal`, etc. Returns a copy of a `RegExp`
-    // instance with a fresh `lastIndex` (set to zero), preserving properties required for named
+    // instance with a fresh `lastIndex` (set to zero), preserving properties span_required for named
     // capture. Also allows adding new flags in the process of copying the regex
     function clone (regex, additionalFlags) {
         if (!XRegExp.isRegExp(regex))
@@ -575,7 +575,7 @@ if (XRegExp) {
     );
 
     // Capturing group (match the opening parenthesis only).
-    // Required for support of named capturing groups
+    // span_required for support of named capturing groups
     XRegExp.addToken(
         /\((?!\?)/,
         function () {
@@ -688,7 +688,7 @@ if (typeof(SyntaxHighlighter) == 'undefined') var SyntaxHighlighter = function()
              * Pads line numbers. Possible values are:
              *
              *   false - don't pad line numbers.
-             *   true  - automaticaly pad numbers with minimum required number of leading zeroes.
+             *   true  - automaticaly pad numbers with minimum span_required number of leading zeroes.
              *   [int] - length up to which pad line numbers.
              */
             'pad-line-numbers' : false,

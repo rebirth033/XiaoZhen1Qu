@@ -188,7 +188,7 @@
     margin-left: 10px;
 }
 
-.required {
+.span_required {
     color: #F2272D;
     display: inline-block;
     width: 20px;

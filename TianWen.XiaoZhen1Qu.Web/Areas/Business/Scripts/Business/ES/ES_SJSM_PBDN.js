@@ -84,9 +84,9 @@ function LoadPBXH() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;height:340px;width:200px'>";
+                var html = "<ul class='ul_select' style='overflow-y: scroll;height:340px;width:200px'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"PBXH\")'>" + xml.list[i].CODENAME + "</li>";
+                    html += "<li class='li_select' onclick='SelectDropdown(this,\"PBXH\")'>" + xml.list[i].CODENAME + "</li>";
                 }
                 html += "</ul>";
                 $("#divPBXH").html(html);

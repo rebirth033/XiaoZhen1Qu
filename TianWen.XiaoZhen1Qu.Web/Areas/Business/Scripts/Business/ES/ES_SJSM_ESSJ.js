@@ -71,9 +71,9 @@ function LoadSJPP() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;height:340px;'>";
+                var html = "<ul class='ul_select' style='overflow-y: scroll;height:340px;'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectSJPP(this,\"SJPP\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
+                    html += "<li class='li_select' onclick='SelectSJPP(this,\"SJPP\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
                 }
                 html += "</ul>";
                 $("#divSJPP").html(html);
@@ -99,9 +99,9 @@ function LoadSJXH(SJPP) {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;height:340px;'>";
+                var html = "<ul class='ul_select' style='overflow-y: scroll;height:340px;'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"SJXH\")'>" + xml.list[i].CODENAME + "</li>";
+                    html += "<li class='li_select' onclick='SelectDropdown(this,\"SJXH\")'>" + xml.list[i].CODENAME + "</li>";
                 }
                 html += "</ul>";
                 $("#divSJXH").html(html);

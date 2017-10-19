@@ -3200,22 +3200,22 @@
             <param name="reader">The reader.</param>
             <returns>An instance of <see cref="T:Newtonsoft.Json.Linq.JRaw"/> with the content of the reader's current token.</returns>
         </member>
-        <member name="T:Newtonsoft.Json.Required">
+        <member name="T:Newtonsoft.Json.span_required">
             <summary>
-            Indicating whether a property is required.
+            Indicating whether a property is span_required.
             </summary>
         </member>
-        <member name="F:Newtonsoft.Json.Required.Default">
+        <member name="F:Newtonsoft.Json.span_required.Default">
             <summary>
-            The property is not required. The default state.
+            The property is not span_required. The default state.
             </summary>
         </member>
-        <member name="F:Newtonsoft.Json.Required.AllowNull">
+        <member name="F:Newtonsoft.Json.span_required.AllowNull">
             <summary>
             The property must be defined in JSON but can be a null value.
             </summary>
         </member>
-        <member name="F:Newtonsoft.Json.Required.Always">
+        <member name="F:Newtonsoft.Json.span_required.Always">
             <summary>
             The property must be defined in JSON and cannot be a null value.
             </summary>
@@ -3596,12 +3596,12 @@
             </summary>
             <value>The member serialization.</value>
         </member>
-        <member name="P:Newtonsoft.Json.JsonObjectAttribute.ItemRequired">
+        <member name="P:Newtonsoft.Json.JsonObjectAttribute.Itemspan_required">
             <summary>
-            Gets or sets a value that indicates whether the object's properties are required.
+            Gets or sets a value that indicates whether the object's properties are span_required.
             </summary>
             <value>
-            	A value indicating whether the object's properties are required.
+            	A value indicating whether the object's properties are span_required.
             </value>
         </member>
         <member name="T:Newtonsoft.Json.JsonSerializerSettings">
@@ -4221,12 +4221,12 @@
             </summary>
             <value>The numeric order of serialization or deserialization.</value>
         </member>
-        <member name="P:Newtonsoft.Json.JsonPropertyAttribute.Required">
+        <member name="P:Newtonsoft.Json.JsonPropertyAttribute.span_required">
             <summary>
-            Gets or sets a value indicating whether this property is required.
+            Gets or sets a value indicating whether this property is span_required.
             </summary>
             <value>
-            	A value indicating whether this property is required.
+            	A value indicating whether this property is span_required.
             </value>
         </member>
         <member name="P:Newtonsoft.Json.JsonPropertyAttribute.PropertyName">
@@ -7469,11 +7469,11 @@
             </summary>
             <value>The default value.</value>
         </member>
-        <member name="P:Newtonsoft.Json.Serialization.JsonProperty.Required">
+        <member name="P:Newtonsoft.Json.Serialization.JsonProperty.span_required">
             <summary>
-            Gets or sets a value indicating whether this <see cref="T:Newtonsoft.Json.Serialization.JsonProperty"/> is required.
+            Gets or sets a value indicating whether this <see cref="T:Newtonsoft.Json.Serialization.JsonProperty"/> is span_required.
             </summary>
-            <value>A value indicating whether this <see cref="T:Newtonsoft.Json.Serialization.JsonProperty"/> is required.</value>
+            <value>A value indicating whether this <see cref="T:Newtonsoft.Json.Serialization.JsonProperty"/> is span_required.</value>
         </member>
         <member name="P:Newtonsoft.Json.Serialization.JsonProperty.IsReference">
             <summary>
@@ -7721,9 +7721,9 @@
             Gets or sets the title.
             </summary>
         </member>
-        <member name="P:Newtonsoft.Json.Schema.JsonSchema.Required">
+        <member name="P:Newtonsoft.Json.Schema.JsonSchema.span_required">
             <summary>
-            Gets or sets whether the object is required.
+            Gets or sets whether the object is span_required.
             </summary>
         </member>
         <member name="P:Newtonsoft.Json.Schema.JsonSchema.ReadOnly">
@@ -7873,9 +7873,9 @@
         </member>
         <member name="P:Newtonsoft.Json.Schema.JsonSchema.Requires">
             <summary>
-            Gets or sets the required property if this property is present.
+            Gets or sets the span_required property if this property is present.
             </summary>
-            <value>The required property if this property is present.</value>
+            <value>The span_required property if this property is present.</value>
         </member>
         <member name="P:Newtonsoft.Json.Schema.JsonSchema.Enum">
             <summary>
@@ -8022,12 +8022,12 @@
             </summary>
             <value>The member object serialization.</value>
         </member>
-        <member name="P:Newtonsoft.Json.Serialization.JsonObjectContract.ItemRequired">
+        <member name="P:Newtonsoft.Json.Serialization.JsonObjectContract.Itemspan_required">
             <summary>
-            Gets or sets a value that indicates whether the object's properties are required.
+            Gets or sets a value that indicates whether the object's properties are span_required.
             </summary>
             <value>
-            	A value indicating whether the object's properties are required.
+            	A value indicating whether the object's properties are span_required.
             </value>
         </member>
         <member name="P:Newtonsoft.Json.Serialization.JsonObjectContract.Properties">
@@ -8038,7 +8038,7 @@
         </member>
         <member name="P:Newtonsoft.Json.Serialization.JsonObjectContract.ConstructorParameters">
             <summary>
-            Gets the constructor parameters required for any non-default constructor
+            Gets the constructor parameters span_required for any non-default constructor
             </summary>
         </member>
         <member name="P:Newtonsoft.Json.Serialization.JsonObjectContract.OverrideConstructor">

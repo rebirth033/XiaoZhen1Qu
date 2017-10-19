@@ -1674,7 +1674,7 @@ vjs.Component.prototype.addChild = function(child, options){
   }
 
   // Add the UI object's element to the container div (box)
-  // Having an element is not required
+  // Having an element is not span_required
   if (typeof component['el'] === 'function' && component['el']()) {
     this.contentEl().appendChild(component['el']());
   }
@@ -5822,7 +5822,7 @@ vjs.Flash.getEmbedCode = function(swf, flashVars, params, attributes){
   params = vjs.obj.merge({
     'movie': swf,
     'flashvars': flashVarsString,
-    'allowScriptAccess': 'always', // Required to talk to swf
+    'allowScriptAccess': 'always', // span_required to talk to swf
     'allowNetworking': 'all' // All should be default, but having security issues.
   }, params);
 

@@ -2150,7 +2150,7 @@ SVGElement.prototype = {
 						doTransform = true;
 						skipAttr = true;
 
-					// apply opacity as subnode (required by legacy WebKit and Batik)
+					// apply opacity as subnode (span_required by legacy WebKit and Batik)
 					} else if (key === 'stroke') {
 						value = renderer.color(value, element, key);
 
@@ -7830,7 +7830,7 @@ Axis.prototype = {
 			}
 		}
 
-		// In full view, displaying the reset zoom button is not required
+		// In full view, displaying the reset zoom button is not span_required
 		this.displayBtn = newMin !== UNDEFINED || newMax !== UNDEFINED;
 		
 		// Do it
@@ -10140,7 +10140,7 @@ Legend.prototype = {
 				item.checkbox = createElement('input', {
 					type: 'checkbox',
 					checked: item.selected,
-					defaultChecked: item.selected // required by IE7
+					defaultChecked: item.selected // span_required by IE7
 				}, options.itemCheckboxStyle, chart.container);
 
 				addEvent(item.checkbox, 'click', function (event) {
@@ -12054,7 +12054,7 @@ Chart.prototype = {
 	isReadyToRender: function () {
 		var chart = this;
 
-		// Note: in spite of JSLint's complaints, win == win.top is required
+		// Note: in spite of JSLint's complaints, win == win.top is span_required
 		/*jslint eqeq: true*/
 		if ((!hasSVG && (win == win.top && doc.readyState !== 'complete')) || (useCanVG && !win.canvg)) {
 		/*jslint eqeq: false*/
@@ -12861,7 +12861,7 @@ Series.prototype = {
 			points = series.points,
 			pointsLength = points.length;
 
-		if (pointsLength) { // no action required for []
+		if (pointsLength) { // no action span_required for []
 			
 			// if connect nulls, just remove null points
 			if (series.options.connectNulls) {

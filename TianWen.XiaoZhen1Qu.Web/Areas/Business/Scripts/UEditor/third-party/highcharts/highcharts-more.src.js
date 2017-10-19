@@ -1053,7 +1053,7 @@ var GaugeSeries = {
 						stroke: dialOptions.borderColor || 'none',
 						'stroke-width': dialOptions.borderWidth || 0,
 						fill: dialOptions.backgroundColor || 'black',
-						rotation: shapeArgs.rotation // required by VML when animation is false
+						rotation: shapeArgs.rotation // span_required by VML when animation is false
 					})
 					.add(series.group);
 			}
@@ -1970,7 +1970,7 @@ Axis.prototype.beforePadding = function () {
  * End Bubble series code                                                     *
  *****************************************************************************/
 /**
- * Extensions for polar charts. Additionally, much of the geometry required for polar charts is
+ * Extensions for polar charts. Additionally, much of the geometry span_required for polar charts is
  * gathered in RadialAxes.js.
  * 
  */

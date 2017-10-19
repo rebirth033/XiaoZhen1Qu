@@ -71,7 +71,7 @@
     cursor: text;
 }
 
-.required {
+.span_required {
     color: #fd634f;
     display: inline-block;
     width: 20px;

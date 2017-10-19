@@ -145,7 +145,7 @@ function LoadXQJBXXSByHZ(XQMC) {
         },
         success: function (xml) {
             if (xml.Result === 1 && xml.list.length > 0) {
-                var html = "<ul id='ulXQMC' onmouseover='MouseOver()' onmouseleave='MouseLeave()' class='uldropdown' style='height: " + (xml.list.length * 34.5) + "px;width:594px;background-color:#ffffff'>";
+                var html = "<ul id='ulXQMC' onmouseover='MouseOver()' onmouseleave='MouseLeave()' class='ul_select' style='height: " + (xml.list.length * 34.5) + "px;width:594px;background-color:#ffffff'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     var index = xml.list[i].XQMC.indexOf(XQMC);
                     var xqmclength = XQMC.length;
@@ -155,7 +155,7 @@ function LoadXQJBXXSByHZ(XQMC) {
                     else {
                         xqmchtml = "<span style='color:#333333'>" + xml.list[i].XQMC.substr(0, index) + "</span>" + "<span style='color:#333333;font-weight:bolder;'>" + xml.list[i].XQMC.substr(index, xqmclength) + "</span>" + "<span style='color:#333333'>" + xml.list[i].XQMC.substr(index + xqmclength, xml.list[i].XQMC.length - index - xqmclength) + "</span>";
                     }
-                    html += "<li class='lidropdown' onmouseover='UnbindBlur(this)' onclick='SelectXQMC(this)'>" + xqmchtml + "&nbsp;&nbsp;<span style='color:#999999;font-size:12px;'>" + (xml.list[i].XQDZ === null ? "" : xml.list[i].XQDZ) + "</span>" + "</li>";
+                    html += "<li class='li_select' onmouseover='UnbindBlur(this)' onclick='SelectXQMC(this)'>" + xqmchtml + "&nbsp;&nbsp;<span style='color:#999999;font-size:12px;'>" + (xml.list[i].XQDZ === null ? "" : xml.list[i].XQDZ) + "</span>" + "</li>";
                 }
                 html += "</ul>";
                 $("#divXQMClist").html(html);
@@ -179,7 +179,7 @@ function LoadXQJBXXSByPY(XQMC) {
         },
         success: function (xml) {
             if (xml.Result === 1 && xml.list.length > 0) {
-                var html = "<ul id='ulXQMC' onmouseover='MouseOver()' onmouseleave='MouseLeave()' class='uldropdown' style='height: " + (xml.list.length * 34.5) + "px;width:594px;background-color:#ffffff'>";
+                var html = "<ul id='ulXQMC' onmouseover='MouseOver()' onmouseleave='MouseLeave()' class='ul_select' style='height: " + (xml.list.length * 34.5) + "px;width:594px;background-color:#ffffff'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     var index = 0;
                     var pys = xml.list[i].XQMCPY.split(' ');
@@ -214,7 +214,7 @@ function LoadXQJBXXSByPY(XQMC) {
                     else {
                         xqmchtml = "<span style='color:#333333'>" + xml.list[i].XQMC.substr(0, index) + "</span>" + "<span style='color:#333333;font-weight:bolder;'>" + xml.list[i].XQMC.substr(index, getlength) + "</span>" + "<span style='color:#333333'>" + xml.list[i].XQMC.substr(index + getlength, xml.list[i].XQMC.length - index - getlength) + "</span>";
                     }
-                    html += "<li class='lidropdown' onclick='SelectXQMC(this)'>" + xqmchtml + "&nbsp;&nbsp;<span style='color:#999999;font-size:12px;'>" + (xml.list[i].XQDZ === null ? "" : xml.list[i].XQDZ) + "</span>" + "</li>";
+                    html += "<li class='li_select' onclick='SelectXQMC(this)'>" + xqmchtml + "&nbsp;&nbsp;<span style='color:#999999;font-size:12px;'>" + (xml.list[i].XQDZ === null ? "" : xml.list[i].XQDZ) + "</span>" + "</li>";
                 }
                 html += "</ul>";
                 $("#divXQMClist").html(html);
@@ -279,9 +279,9 @@ function LoadFWCX() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";//<li class='lidropdown'>请选择朝向</li>
+                var html = "<ul class='ul_select' style='overflow-y: scroll;'>";//<li class='li_select'>请选择朝向</li>
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectFWCX(this)'>" + xml.list[i].CODENAME + "</li>";
+                    html += "<li class='li_select' onclick='SelectFWCX(this)'>" + xml.list[i].CODENAME + "</li>";
                 }
                 html += "</ul>";
                 $("#divFWCX").html(html);
@@ -307,9 +307,9 @@ function LoadZXQK() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='height: 171px;'>";
+                var html = "<ul class='ul_select' style='height: 171px;'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectZXQK(this)'>" + xml.list[i].CODENAME + "</li>";
+                    html += "<li class='li_select' onclick='SelectZXQK(this)'>" + xml.list[i].CODENAME + "</li>";
                 }
                 html += "</ul>";
                 $("#divZXQK").html(html);
@@ -335,9 +335,9 @@ function LoadZZLX() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
+                var html = "<ul class='ul_select' style='overflow-y: scroll;'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectZZLX(this)'>" + xml.list[i].CODENAME + "</li>";
+                    html += "<li class='li_select' onclick='SelectZZLX(this)'>" + xml.list[i].CODENAME + "</li>";
                 }
                 html += "</ul>";
                 $("#divZZLX").html(html);
@@ -363,9 +363,9 @@ function LoadYFFS() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
+                var html = "<ul class='ul_select' style='overflow-y: scroll;'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectYFFS(this)'>" + xml.list[i].CODENAME + "</li>";
+                    html += "<li class='li_select' onclick='SelectYFFS(this)'>" + xml.list[i].CODENAME + "</li>";
                 }
                 html += "</ul>";
                 $("#divYFFS").html(html);

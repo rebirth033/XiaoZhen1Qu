@@ -2073,9 +2073,9 @@ if (typeof jQuery === 'undefined') {
   // ====================
 
   var Tab = function (element) {
-    // jscs:disable requireDollarBeforejQueryAssignment
+    // jscs:disable span_requiredollarBeforejQueryAssignment
     this.element = $(element)
-    // jscs:enable requireDollarBeforejQueryAssignment
+    // jscs:enable span_requiredollarBeforejQueryAssignment
   }
 
   Tab.VERSION = '3.3.7'

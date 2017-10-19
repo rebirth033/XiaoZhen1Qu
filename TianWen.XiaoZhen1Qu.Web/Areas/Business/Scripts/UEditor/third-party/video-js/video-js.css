@@ -615,7 +615,7 @@ easily in the skin designer. http://designer.videojs.com/
   box-shadow: 0 0 1em #ffffff;
 }
 /*
-REQUIRED STYLES (be careful overriding)
+span_required STYLES (be careful overriding)
 ================================================================================
 When loading the player, the video tag is replaced with a DIV,
 that will hold the video tag or object tag for other playback methods.

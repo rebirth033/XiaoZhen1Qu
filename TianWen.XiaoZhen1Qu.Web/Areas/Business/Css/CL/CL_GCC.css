@@ -31,42 +31,7 @@
 
 
 
-.uldropdown {
-    border-radius: 4px;
-    text-align: center;
-    width: 150px;
-    display: inline-block;
-    border-left: 1px solid #cccccc;
-    border-right: 1px solid #cccccc;
-    border-bottom: 1px solid #cccccc;
-    padding-left: 0px;
-    height: 171px;
-}
 
-.lidropdown {
-    height: 34px;
-    text-align: left;
-    display: block;
-    padding-left: 6px;
-    line-height: 34px;
-    font-size: 14px;
-    cursor: pointer;
-    color: #999999;
-    background: #FFFFFF;
-}
-
-    .lidropdown:hover {
-        background: #ececec;
-        color: #333333;
-    }
-
-.required {
-    color: #F2272D;
-    display: inline-block;
-    width: 20px;
-    height: 36px;
-    font-family: "宋体", "SimSun";
-}
 
 .liFWPZ {
     display: inline-block;

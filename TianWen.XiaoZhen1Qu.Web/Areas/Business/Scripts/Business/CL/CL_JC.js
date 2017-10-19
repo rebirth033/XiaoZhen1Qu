@@ -138,9 +138,9 @@ function LoadPZSZSF() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
+                var html = "<ul class='ul_select' style='overflow-y: scroll;'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectPZSZSF(this,\"PZSZSF\",\"" + xml.list[i].CODE + "\")'>" + RTrim(RTrim(xml.list[i].NAME, '市'), '省') + "</li>";
+                    html += "<li class='li_select' onclick='SelectPZSZSF(this,\"PZSZSF\",\"" + xml.list[i].CODE + "\")'>" + RTrim(RTrim(xml.list[i].NAME, '市'), '省') + "</li>";
                 }
                 html += "</ul>";
                 $("#divPZSZSF").html(html);
@@ -164,9 +164,9 @@ function LoadPZSZCS() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
+                var html = "<ul class='ul_select' style='overflow-y: scroll;'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"PZSZCS\",\"" + xml.list[i].CODE + "\")'>" + xml.list[i].NAME + "</li>";
+                    html += "<li class='li_select' onclick='SelectDropdown(this,\"PZSZCS\",\"" + xml.list[i].CODE + "\")'>" + xml.list[i].NAME + "</li>";
                 }
                 html += "</ul>";
                 $("#divPZSZCS").html(html);
