@@ -102,9 +102,7 @@
     cursor: text;
 }
 
-    :-ms-input-placeholder.input_content {
-        color: #999;
-    }
+    
 
 
 .div_body_split {

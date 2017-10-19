@@ -49,21 +49,21 @@ function LoadYXBQ() {
     var html = "";
     for (var i = 0; i < arrayObj.length; i++) {
         if(i === 0)
-            html += '<div class="divstep_yx" id="div' + arrayObj[i] + '" style="width:94px;"><span class="spanstep_yx" id="span' + arrayObj[i] + '">' + "热门游戏" + '</span><em class="emstep_yx" style="width:94px;" id="em' + arrayObj[i] + '"></em></div>';
+            html += '<div class="div_bqss_content_bq" id="div' + arrayObj[i] + '" style="width:94px;"><span class="span_bqss_content_bq" id="span' + arrayObj[i] + '">' + "热门游戏" + '</span><em class="em_bqss_content_bq" style="width:94px;" id="em' + arrayObj[i] + '"></em></div>';
         else
-            html += '<div class="divstep_yx" id="div' + arrayObj[i] + '"><span class="spanstep_yx" id="span' + arrayObj[i] + '">' + arrayObj[i] + '</span><em class="emstep_yx" id="em' + arrayObj[i] + '"></em></div>';
+            html += '<div class="div_bqss_content_bq" id="div' + arrayObj[i] + '"><span class="span_bqss_content_bq" id="span' + arrayObj[i] + '">' + arrayObj[i] + '</span><em class="em_bqss_content_bq" id="em' + arrayObj[i] + '"></em></div>';
     }
-    $("#div_content_yxbq").html(html);
+    $("#div_bqss_body_bq").html(html);
 
-    $(".divstep_yx").bind("mouseover", YXBQActive);
+    $(".div_bqss_content_bq").bind("mouseover", YXBQActive);
 }
 //游戏标签切换
 function YXBQActive() {
-    $("#div_content_yxbq").find("span").each(function () {
+    $("#div_bqss_body_bq").find("span").each(function () {
         $(this).css("color", "#cccccc");
         $(this).css("font-weight", "normal");
     });
-    $("#div_content_yxbq").find("em").each(function () {
+    $("#div_bqss_body_bq").find("em").each(function () {
         $(this).css("height", "1px");
         $(this).css("background-color", "#cccccc");
     });
@@ -92,11 +92,11 @@ function LoadYXMC(SZM) {
             if (xml.Result === 1) {
                 var html = "";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += '<span class="span_yxmc" onclick="YXCZ(\'' + xml.list[i].YXMC + '\')">' + xml.list[i].YXMC + '</span>';
+                    html += '<span class="span_mc" onclick="YXCZ(\'' + xml.list[i].YXMC + '\')">' + xml.list[i].YXMC + '</span>';
                 }
                 if (xml.list.length === 0)
-                    html += '<span class="span_yxmc">该字母下暂无数据</span>';
-                $("#div_content_yxmc").html(html);
+                    html += '<span class="span_mc">该字母下暂无数据</span>';
+                $("#div_bqss_body_mc").html(html);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

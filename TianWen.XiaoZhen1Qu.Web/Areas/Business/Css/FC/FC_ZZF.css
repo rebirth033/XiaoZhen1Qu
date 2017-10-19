@@ -8,36 +8,18 @@
 
 
 
-.liFWPZ {
-    display: inline-block;
-    width: 105px;
-    height: 30px;
-    text-align: left;
-    margin-top: 4px;
-    cursor: pointer;
-}
-
-.ulFWPZ {
-    display: inline-block;
-    padding-left: 0;
-}
 
 
 
 
-.SRK:focus {
-    border: 1px solid #5bc0de;
-    color: #333333 !important;
-}
 
-.ui-state-active {
-    background: #5bc0de !important;
-    border: 1px solid #5bc0de !important;
-}
 
-.ui-datepicker {
-    width: 400px !important;
-}
+
+
+
+
+
+
 
 
 

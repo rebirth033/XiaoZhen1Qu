@@ -32,19 +32,6 @@
 
 
 
-.liFWPZ {
-    display: inline-block;
-    width: 105px;
-    height: 30px;
-    text-align: left;
-    margin-top: 4px;
-    cursor: pointer;
-}
-
-.ulFWPZ {
-    display: inline-block;
-    padding-left: 0;
-}
 
 
 
@@ -52,70 +39,29 @@
 
 
 
-.SRK:focus {
-    border: 1px solid #5bc0de;
-    color: #333333 !important;
-}
-
-.ui-state-active {
-    background: #5bc0de !important;
-    border: 1px solid #5bc0de !important;
-}
-
-.ui-datepicker {
-    width: 400px !important;
-}
 
 
 
 
 
-.span_xzdz {
-    color: #31b0d5;
-    cursor: pointer;
-}
 
-    .span_xzdz:hover {
-        color: #ff6a00;
-    }
 
-.span_xzdz_img {
-    background-image: url(../images/expand_blue.png);
-    background-repeat: no-repeat;
-    vertical-align: middle;
-    width: 16px;
-    height: 16px;
-    display: inline-block;
-    cursor: pointer;
-}
 
-:-ms-input-placeholder.input_dtss {
-    color: #999;
-}
 
-.btn_dtss {
-    background-image: url(../images/bddt_search.png);
-    width: 42px;
-    height: 34px;
-    display: inline-block;
-    border: none;
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-}
 
-    .btn_dtss:hover {
-        background-image: url(../images/bddt_search_hover.png);
-    }
 
-.input_dtss {
-    border: 1px solid #cccccc;
-    border-right: none;
-    display: inline-block;
-    height: 34px;
-    font-size: 14px;
-    width: 320px;
-    padding-left: 12px;
-    float: left;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

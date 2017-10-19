@@ -44,10 +44,10 @@ function LoadGJ() {
     var arrayObj = new Array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
     var html = "";
     for (var i = 0; i < arrayObj.length; i++) {
-        html += '<div class="divstep_yx" id="div' + arrayObj[i] + '"><span class="spanstep_yx" id="span' + arrayObj[i] + '">' + arrayObj[i] + '</span><em class="emstep_yx" id="em' + arrayObj[i] + '"></em></div>';
+        html += '<div class="div_bqss_content_bq" id="div' + arrayObj[i] + '"><span class="span_bqss_content_bq" id="span' + arrayObj[i] + '">' + arrayObj[i] + '</span><em class="em_bqss_content_bq" id="em' + arrayObj[i] + '"></em></div>';
     }
-    $("#div_content_yxbq").html(html);
-    $(".divstep_yx").bind("click", JCBQActive);
+    $("#div_bqss_body_bq").html(html);
+    $(".div_bqss_content_bq").bind("click", JCBQActive);
 }
 //国家标签切换
 function JCBQActive() {
@@ -69,11 +69,11 @@ function LoadGJMC(JCLX, GJBQ) {
             if (xml.Result === 1) {
                 var html = "";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += '<span class="span_yxmc" onclick="GJXZ(\'' + xml.list[i].CODENAME + '\',\'' + xml.list[i].CODEID + '\')">' + xml.list[i].CODENAME + '</span>';
+                    html += '<span class="span_mc" onclick="GJXZ(\'' + xml.list[i].CODENAME + '\',\'' + xml.list[i].CODEID + '\')">' + xml.list[i].CODENAME + '</span>';
                 }
                 if (xml.list.length === 0)
-                    html += '<span class="span_yxmc" style=\"width:200px;text-align:left;margin-left:14px;\">该字母下暂无数据</span>';
-                $("#div_content_yxmc").html(html);
+                    html += '<span class="span_mc" style=\"width:200px;text-align:left;margin-left:14px;\">该字母下暂无数据</span>';
+                $("#div_bqss_body_mc").html(html);
                 $("#divGJ").css("display", "block");
             }
         },

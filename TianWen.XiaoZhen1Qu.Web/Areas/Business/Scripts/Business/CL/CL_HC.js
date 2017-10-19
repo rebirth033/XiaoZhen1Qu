@@ -30,12 +30,12 @@ function LoadPP() {
     var html = "";
     for (var i = 0; i < arrayObj.length; i++) {
         if (i === 0)
-            html += '<div class="divstep_yx" id="div' + arrayObj[i] + '" style="width:62px;"><span class="spanstep_yx" id="span' + arrayObj[i] + '">' + "热门" + '</span><em class="emstep_yx" id="em' + arrayObj[i] + '"></em></div>';
+            html += '<div class="div_bqss_content_bq" id="div' + arrayObj[i] + '" style="width:62px;"><span class="span_bqss_content_bq" id="span' + arrayObj[i] + '">' + "热门" + '</span><em class="em_bqss_content_bq" id="em' + arrayObj[i] + '"></em></div>';
         else
-            html += '<div class="divstep_yx" id="div' + arrayObj[i] + '"><span class="spanstep_yx" id="span' + arrayObj[i] + '">' + arrayObj[i] + '</span><em class="emstep_yx" id="em' + arrayObj[i] + '"></em></div>';
+            html += '<div class="div_bqss_content_bq" id="div' + arrayObj[i] + '"><span class="span_bqss_content_bq" id="span' + arrayObj[i] + '">' + arrayObj[i] + '</span><em class="em_bqss_content_bq" id="em' + arrayObj[i] + '"></em></div>';
     }
-    $("#div_content_yxbq").html(html);
-    $(".divstep_yx").bind("click", YXBQActive);
+    $("#div_bqss_body_bq").html(html);
+    $(".div_bqss_content_bq").bind("click", YXBQActive);
 }
 //品牌标签切换
 function YXBQActive() {
@@ -57,11 +57,11 @@ function LoadPPMC(HC) {
             if (xml.Result === 1) {
                 var html = "";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += '<span class="span_yxmc" onclick="PPXZ(\'' + xml.list[i].CODENAME + '\',\'' + xml.list[i].CODEID + '\')">' + xml.list[i].CODENAME + '</span>';
+                    html += '<span class="span_mc" onclick="PPXZ(\'' + xml.list[i].CODENAME + '\',\'' + xml.list[i].CODEID + '\')">' + xml.list[i].CODENAME + '</span>';
                 }
                 if (xml.list.length === 0)
-                    html += '<span class="span_yxmc" style=\"width:200px;text-align:left;margin-left:14px;\">该字母下暂无数据</span>';
-                $("#div_content_yxmc").html(html);
+                    html += '<span class="span_mc" style=\"width:200px;text-align:left;margin-left:14px;\">该字母下暂无数据</span>';
+                $("#div_bqss_body_mc").html(html);
                 $("#divPP").css("display", "block");
             }
         },
@@ -73,7 +73,7 @@ function LoadPPMC(HC) {
 //选择品牌名称
 function PPXZ(PPMC, PPID) {
     $("#spanPP").html(PPMC);
-    $(".div_xzk").css("display", "none");
+    $(".div_bqss").css("display", "none");
 }
 //描述框focus
 function FYMSFocus() {

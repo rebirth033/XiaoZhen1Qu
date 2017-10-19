@@ -58,9 +58,7 @@
     cursor: text;
 }
 
-    :-ms-input-placeholder.input_content {
-        color: #999;
-    }
+    
 
 .input_content_label {
     width: 400px;
