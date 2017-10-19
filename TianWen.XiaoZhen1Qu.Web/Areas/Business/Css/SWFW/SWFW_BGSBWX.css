@@ -31,29 +31,9 @@
 
 
 
-.span_spaninputOut {
-    display: inline-block;
-    width: 150px;
-    height: 34px;
-    border: 1px solid #cccccc;
-    border-radius: 4px;
-    z-index: 997;
-    position: relative;
-}
 
-.span_spaninputIn {
-    border: 1px solid #cccccc;
-    display: inline-block;
-    width: 150px;
-    height: 34px;
-    border-radius: 4px;
-    font-size: 14px;
-}
 
-.divdropdown {
-    float: left;
-    width: 150px;
-}
+
 
 .uldropdown {
     border-radius: 4px;

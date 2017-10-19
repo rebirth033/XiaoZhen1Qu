@@ -5,42 +5,7 @@
 
 
 
-.input_spaninput {
-    width: 100px;
-    margin-top: 1px;
-    border: none;
-    height: 30px;
-    text-align: center;
-}
 
-.span_spaninput {
-    border: 1px solid #cccccc;
-    display: inline-block;
-    width: 128px;
-    height: 34px;
-    border-radius: 4px;
-    font-size: 14px;
-}
-
-.span_spaninputOut {
-    display: inline-block;
-    width: 128px;
-    height: 34px;
-}
-
-.span_spaninputIn {
-    border: 1px solid #cccccc;
-    display: inline-block;
-    width: 128px;
-    height: 34px;
-    border-radius: 4px;
-    font-size: 14px;
-}
-
-.divdropdown {
-    float: left;
-    width: 129px;
-}
 
 .uldropdown {
     border-radius: 4px;

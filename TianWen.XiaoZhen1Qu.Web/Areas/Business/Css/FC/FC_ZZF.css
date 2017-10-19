@@ -8,28 +8,6 @@
 
 
 
-
-
-.span_spaninputOut {
-    display: inline-block;
-    width: 128px;
-    height: 34px;
-}
-
-.span_spaninputIn {
-    border: 1px solid #cccccc;
-    display: inline-block;
-    width: 128px;
-    height: 34px;
-    border-radius: 4px;
-    font-size: 14px;
-}
-
-.divdropdown {
-    float: left;
-    width: 129px;
-}
-
 .uldropdown {
     border-radius: 4px;
     text-align: center;

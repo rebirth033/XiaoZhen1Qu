@@ -60,6 +60,26 @@
     border: none !important;
 }
 
+.div_select_out {
+    display: inline-block;
+    width: 128px;
+    height: 34px;
+}
+
+.div_select_in {
+    border: 1px solid #cccccc;
+    display: inline-block;
+    width: 128px;
+    height: 34px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.div_select_dropdown {
+    float: left;
+    width: 129px;
+}
+
 .span_select {
     display: inline-block;
     width: 105px;
@@ -91,4 +111,8 @@
     height: 34px;
     border-radius: 4px;
     font-size: 14px;
+}
+
+.spaninput_fontcolor {
+    color: #333333;
 }

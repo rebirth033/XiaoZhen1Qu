@@ -162,18 +162,6 @@ li {
     width: 120px;
 }
 
-.spanFontColor {
-    color: #333333;
-}
-
-.input_spaninput {
-    margin-top: 1px; 
-    border: none; 
-    height: 30px; 
-    text-align: center;
-    width: 100px;
-}
-
 /*清除谷歌浏览器下的 search 叉号*/
 /*input::-webkit-search-cancel-button{
   display: none;
