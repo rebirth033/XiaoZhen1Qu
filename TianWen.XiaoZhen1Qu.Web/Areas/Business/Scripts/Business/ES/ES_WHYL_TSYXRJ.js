@@ -11,10 +11,10 @@ $(document).ready(function () {
     $("#div_dz_close").bind("click", CloseWindow);
     $("#span_content_info_qhcs").bind("click", LoadXZQByGrade);
     $("body").bind("click", function () { Close("_XZQ"); Close("LB"); Close("XL"); Close("XJ"); Close("QY"); Close("DD"); });
-    $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);
-    $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
 
-    LoadTXXX();
+
+
+
     LoadDefault();
     LoadES_WHYL_TSYXRJJBXX();
     BindClick("LB");

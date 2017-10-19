@@ -35,6 +35,7 @@
     $("#div_body_image_qqtx").bind("click", QQBD);
     $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
+
     $("#span_fbxx").bind("click", OpenLBXZ);
     if (getUrlParam("Show") === "WDZJ")
         ShowWDZJ();
@@ -51,6 +52,10 @@ function ShowYHCD() {
 function HideYHCD() {
     $("#div_top_right_dropdown_yhm").css("display", "none");
     $("#span_top_right_yhm_img").css("background-image", 'url(' + getRootPath() + "/Areas/Business/Css/images/arrow_down.png" + ')');
+}
+//退出
+function Exit() {
+    window.location.href = getRootPath() + "/Business/YHDLXX/YHDLXX";
 }
 //自动登录
 function AutoLogin() {
@@ -299,8 +304,4 @@ function QQBD() {
             }
         });
     });
-}
-//退出
-function Exit() {
-    window.location.href = getRootPath() + "/Business/YHDLXX/YHDLXX";
 }

@@ -13,10 +13,10 @@ $(document).ready(function () {
     $("#DQJZJSSJ").datepicker({ minDate: 0 });
     $("#span_content_info_qCWFWs").bind("click", LoadXZQByGrade);
     $("body").bind("click", function () { Close("_XZQ"); Close("JZLB"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });
-    $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);
-    $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
+
+
     $("td").bind("click", SelectJZSJ);
-    LoadTXXX();
+
     LoadDefault();
     LoadQZZP_JZZPJBXX();
     BindClick("JZLB");

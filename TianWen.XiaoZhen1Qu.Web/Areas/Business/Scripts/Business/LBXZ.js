@@ -4,8 +4,8 @@
     $(".div_head").css("margin-left", (document.documentElement.clientWidth - 900) / 2);
     $(".div_content").css("margin-left", (document.documentElement.clientWidth - 900) / 2);
     LoadDL();
-    $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);
-    $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
+
+
 });
 
 function LoadDL() {

@@ -6,6 +6,8 @@
     $("#spanCXLB").bind("click", CXLB);
     $(".div_radio").bind("click", RadioSelect);
     $(".iFWCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+    $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);
+    $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
 
     LoadTXXX();
 });
@@ -68,4 +70,19 @@ function LoadTXXX() {
 //重选类别
 function CXLB() {
     window.location.href = getRootPath() + "/Business/LBXZ/LBXZ";
+}
+
+//显示用户菜单
+function ShowYHCD() {
+    $("#div_top_right_dropdown_yhm").css("display", "block");
+    $("#span_top_right_yhm_img").css("background-image", 'url(' + getRootPath() + "/Areas/Business/Css/images/arrow_up.png" + ')');
+}
+//隐藏用户菜单
+function HideYHCD() {
+    $("#div_top_right_dropdown_yhm").css("display", "none");
+    $("#span_top_right_yhm_img").css("background-image", 'url(' + getRootPath() + "/Areas/Business/Css/images/arrow_down.png" + ')');
+}
+//退出
+function Exit() {
+    window.location.href = getRootPath() + "/Business/YHDLXX/YHDLXX";
 }
