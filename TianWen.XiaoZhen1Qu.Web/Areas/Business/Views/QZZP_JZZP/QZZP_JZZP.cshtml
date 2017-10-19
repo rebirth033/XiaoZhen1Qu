@@ -10,9 +10,9 @@
     <meta name="viewport" content="width=device-width" />
     <title></title>
     <link href="@Url.Content("~/Areas/Business/Css/QZZP/QZZP_JZZP.css")" rel="stylesheet" />
-    <link href="@Url.Content("~/Areas/Business/Css/Common/Top.css" )" rel="stylesheet" />
-    <link href="@Url.Content("~/Areas/Business/Css/Common/XZQ.css" )" rel="stylesheet" />
-    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/Common/XZQ.js")"></script>
+   
+
+    
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/QZZP/QZZP_JZZP.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/QZZP/QZZP_JZZPYZ.js")"></script>
 
@@ -87,22 +87,22 @@
                 <span class="spanSplit">职位信息</span>
                 <em class="emSplit"></em>
             </div>
-            <div id="divZWMC" class="divFWCZ" style="margin-top: 22px; z-index: 1001;">
-                <div class="divLeft">
+            <div id="divZWMC" class="div_row" style="margin-top: 22px; z-index: 1001;">
+                <div class="div_row_left">
                     <span class="required">*</span>
                     <span id="spanPPMC">兼职名称</span>
                 </div>
-                <div class="divRight">
+                <div class="div_row_right">
                     <input id="BT" maxlength="50" column="BT" class="spanFWLX SRK" style="width: 300px; padding: 6px 12px;" type="text" placeholder="请输入职位名称" />
                     <div id="divZWMCTip"></div>
                 </div>
             </div>
-            <div id="divZPJZLB" class="divFWCZ" style="margin-top: 22px; z-index: 1000;">
-                <div class="divLeft">
+            <div id="divZPJZLB" class="div_row" style="margin-top: 22px; z-index: 1000;">
+                <div class="div_row_left">
                     <span class="required">*</span>
                     <span class="spanFWCZ">兼职类别</span>
                 </div>
-                <div class="divRight">
+                <div class="div_row_right">
                     <div id="divJZLBText" class="spanFWLXOut SRK" style="position: relative;">
                         <div id="divJZLBSpan" class="spanFWLXIn" style="border: none; margin-top: 6px;">
                             <input type="hidden" id="JZLBID" />
@@ -114,12 +114,12 @@
                     </div>
                 </div>
             </div>
-            <div id="divZPRS" class="divFWCZ" style="margin-top: 22px; z-index: 999;">
-                <div class="divLeft">
+            <div id="divZPRS" class="div_row" style="margin-top: 22px; z-index: 999;">
+                <div class="div_row_left">
                     <span class="required">*</span>
                     <span class="spanFWCZ">招聘人数</span>
                 </div>
-                <div class="divRight">
+                <div class="div_row_right">
                     <span id="spanZPRS" class="spanFWLX SRK" style="display: inline-block; width: 150px;">
                         <input class="inputLCFB spanFontColor" id="ZPRS" maxlength="9" column="ZPRS" type="text" style="width: 120px" />
                         <span class="spanFontColor">人</span>
@@ -127,12 +127,12 @@
                     <div id="divZPRSTip"></div>
                 </div>
             </div>
-            <div id="divJZSJ" class="divFWCZ" style="margin-top: 22px; z-index: 998; height: 200px;">
-                <div class="divLeft" style="vertical-align: top;">
+            <div id="divJZSJ" class="div_row" style="margin-top: 22px; z-index: 998; height: 200px;">
+                <div class="div_row_left" style="vertical-align: top;">
                     <span class="required">*</span>
                     <span class="spanFWCZ">兼职时间</span>
                 </div>
-                <div class="divRight">
+                <div class="div_row_right">
                     <table class="table_jzsj">
                         <thead><tr><th>&nbsp;</th><th>星期一</th><th>星期二</th><th>星期三</th><th>星期四</th><th>星期五</th><th>星期六</th><th>星期天</th></tr></thead>
                         <tbody>
@@ -144,12 +144,12 @@
                     <div id="divJZSJTip"></div>
                 </div>
             </div>
-            <div id="divJZYXQ" class="divFWCZ">
-                <div class="divLeft" style="margin-left: 87px;">
+            <div id="divJZYXQ" class="div_row">
+                <div class="div_row_left" style="margin-left: 87px;">
                     <span class="required">*</span>
                     <span class="spanFWCZ">兼职有效期</span>
                 </div>
-                <div class="divRight">
+                <div class="div_row_right">
                     <div class="div_radio" id="div_jzyxq_dqzp">
                         <img class="iFWCZ" id="img_jzyxq_dqzp" /><label class="labelFWCZ">短期招聘</label>
                     </div>
@@ -158,22 +158,22 @@
                     </div>
                 </div>
             </div>
-            <div id="divDQJZSJ" class="divFWCZ" style="z-index: 997">
-                <div class="divLeft" style="margin-left: 72px;">
+            <div id="divDQJZSJ" class="div_row" style="z-index: 997">
+                <div class="div_row_left" style="margin-left: 72px;">
                     <span class="required">*</span>
                     <span id="spanDQJZSJ">短期兼职时间</span>
                 </div>
-                <div class="divRight">
+                <div class="div_row_right">
                     <input id="DQJZKSSJ" readonly="readonly" class="spanFWLX inputLXRXX SRK" type="text" style="width: 150px;" placeholder="开始时间" />
                     <input id="DQJZJSSJ" readonly="readonly" class="spanFWLX inputLXRXX SRK" type="text" style="width: 150px;" placeholder="结束时间" />
                 </div>
             </div>
-            <div id="divZPXZSP" class="divFWCZ" style="z-index: 996;">
-                <div class="divLeft">
+            <div id="divZPXZSP" class="div_row" style="z-index: 996;">
+                <div class="div_row_left">
                     <span class="required">*</span>
                     <span class="spanFWCZ">薪资水平</span>
                 </div>
-                <div class="divRight">
+                <div class="div_row_right">
                     <input id="XZSP" maxlength="9" column="XZSP" class="spanFWLX SRK" style="width: 150px; padding: 6px 12px;" type="text" placeholder="请输入薪资水平" />
                     <div id="divXZSPDWText" class="spanFWLXOut SRK" style="position: relative;">
                         <div id="divXZSPDWSpan" class="spanFWLXIn" style="border: none; margin-top: 6px;">
@@ -185,12 +185,12 @@
                     </div>
                 </div>
             </div>
-            <div id="divZPXZJS" class="divFWCZ" style="z-index: 995;">
-                <div class="divLeft">
+            <div id="divZPXZJS" class="div_row" style="z-index: 995;">
+                <div class="div_row_left">
                     <span class="required">*</span>
                     <span class="spanFWCZ">薪资结算</span>
                 </div>
-                <div class="divRight">
+                <div class="div_row_right">
                     <div id="divXZJSText" class="spanFWLXOut SRK" style="position: relative;">
                         <div id="divXZJSSpan" class="spanFWLXIn" style="border: none; margin-top: 6px;">
                             <span id="spanXZJS" class="spanFWQK spanFontColor" style="margin-top: 0">请选择</span>
@@ -205,12 +205,12 @@
                 <span class="spanSplit">兼职内容</span>
                 <em class="emSplit"></em>
             </div>
-            <div id="divFYMS" class="divFWCZ" style="height: 253px; position: relative; z-index: 994;">
-                <div class="divLeft" style="height: 170px; vertical-align: top;">
+            <div id="divFYMS" class="div_row" style="height: 253px; position: relative; z-index: 994;">
+                <div class="div_row_left" style="height: 170px; vertical-align: top;">
                     <span class="required" style="vertical-align: top">*</span>
                     <span id="spanFYMS" style="vertical-align: top">兼职内容</span>
                 </div>
-                <div class="divRight">
+                <div class="div_row_right">
                     <script id="FYMS" type="text/plain" style="width:594px;height:200px;display:inline-block;">
                     </script>
                     <div id="divFYMSTip" class="Warn"></div>
@@ -220,41 +220,41 @@
                 <span class="spanSplit">联系人信息</span>
                 <em class="emSplit"></em>
             </div>
-            <div id="divLXR" class="divFWCZ" style="z-index: 990">
-                <div class="divLeft" style="margin-left: 114px;">
+            <div id="divLXR" class="div_row" style="z-index: 990">
+                <div class="div_row_left" style="margin-left: 114px;">
                     <span class="required">*</span>
                     <span id="spanLXDH">联系人</span>
                 </div>
-                <div class="divRight">
+                <div class="div_row_right">
                     <input id="LXR" column="LXR" class="spanFWLX inputLXRXX SRK" type="text" placeholder="请输入联系人" />
                     <div id="divLXRTip"></div>
                 </div>
             </div>
-            <div id="divLXDH" class="divFWCZ" style="z-index: 989">
-                <div class="divLeft">
+            <div id="divLXDH" class="div_row" style="z-index: 989">
+                <div class="div_row_left">
                     <span class="required">*</span>
                     <span id="spanLXDH">联系电话</span>
                 </div>
-                <div class="divRight">
+                <div class="div_row_right">
                     <input id="LXDH" maxlength="11" column="LXDH" class="spanFWLX inputLXRXX SRK" type="text" placeholder="请输入联系电话" />
                     <div id="divLXDHTip"></div>
                 </div>
             </div>
-            <div id="divJLJSYX" class="divFWCZ" style="margin-top: -12px;" style="z-index: 988">
-                <div class="divLeft" style="margin-left: 71px;">
+            <div id="divJLJSYX" class="div_row" style="margin-top: -12px;" style="z-index: 988">
+                <div class="div_row_left" style="margin-left: 71px;">
                     <span class="required"></span>
                     <span id="spanJLJSYX">简历接收邮箱</span>
                 </div>
-                <div class="divRight">
+                <div class="div_row_right">
                     <input id="JLJSYX" column="JLJSYX" class="spanFWLX inputLXRXX SRK" type="text" placeholder="请输入邮箱" />
                 </div>
             </div>
-            <div id="divZPGZCS" class="divFWCZ" style="z-index: 987;">
-                <div class="divLeft">
+            <div id="divZPGZCS" class="div_row" style="z-index: 987;">
+                <div class="div_row_left">
                     <span class="required">&nbsp;</span>
                     <span>工作城市</span>
                 </div>
-                <div class="divRight">
+                <div class="div_row_right">
                     <div id="divGZCSText" class="spanFWLXOut SRK" style="border: 1px solid #cccccc; border-radius: 4px; z-index: 997; position: relative;">
                         <div id="divGZCSSpan" class="spanFWLXIn" style="border: none; margin-top: 6px;">
                             <input type="hidden" id="CityName" />
@@ -276,12 +276,12 @@
                     </div>
                 </div>
             </div>
-            <div id="divZPDD" class="divFWCZ" style="z-index: 986;">
-                <div class="divLeft">
+            <div id="divZPDD" class="div_row" style="z-index: 986;">
+                <div class="div_row_left">
                     <span class="required">&nbsp;</span>
                     <span class="spanFWCZ">工作区域</span>
                 </div>
-                <div class="divRight">
+                <div class="div_row_right">
                     <div id="divQYText" class="spanFWLXOut SRK" style="border: 1px solid #cccccc; border-radius: 4px; z-index: 997; position: relative;">
                         <div id="divQYSpan" class="spanFWLXIn" style="border: none; margin-top: 6px;">
                             <input type="hidden" id="QYCode" />
@@ -301,21 +301,21 @@
                     </div>
                 </div>
             </div>
-            <div id="divXXDZ" class="divFWCZ" style="margin-top: -12px;" style="z-index: 985">
-                <div class="divLeft">
+            <div id="divXXDZ" class="div_row" style="margin-top: -12px;" style="z-index: 985">
+                <div class="div_row_left">
                     <span class="required"></span>
                     <span id="spanXXDZ">详细地址</span>
                 </div>
-                <div class="divRight">
+                <div class="div_row_right">
                     <input column="XXDZ" class="spanFWLX inputLXRXX SRK" type="text" placeholder="请输入详细地址" />
                 </div>
             </div>
-            <div id="divQQ" class="divFWCZ" style="margin-top: -12px;" style="z-index: 985">
-                <div class="divLeft" style="margin-left: 133px;">
+            <div id="divQQ" class="div_row" style="margin-top: -12px;" style="z-index: 985">
+                <div class="div_row_left" style="margin-left: 133px;">
                     <span class="required"></span>
                     <span id="spanQQ">QQ</span>
                 </div>
-                <div class="divRight">
+                <div class="div_row_right">
                     <input column="QQ" class="spanFWLX inputLXRXX SRK" type="text" placeholder="请输入QQ" />
                 </div>
             </div>

@@ -10,9 +10,9 @@
     <meta name="viewport" content="width=device-width" />
     <title></title>
     <link href="@Url.Content("~/Areas/Business/Css/CW/CW_CWG.css")" rel="stylesheet" />
-    <link href="@Url.Content("~/Areas/Business/Css/Common/Top.css" )" rel="stylesheet" />
-    <link href="@Url.Content("~/Areas/Business/Css/Common/XZQ.css" )" rel="stylesheet" />
-    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/Common/XZQ.js")"></script>
+   
+
+    
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/CW/CW_CWG.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/CW/CW_CWGYZ.js")"></script>
 </head>
@@ -81,12 +81,12 @@
                 <span class="spanSplit">基本信息</span>
                 <em class="emSplit"></em>
             </div>
-            <div id="divGQ" class="divFWCZ">
-                <div class="divLeft" style="margin-left: 128px;">
+            <div id="divGQ" class="div_row">
+                <div class="div_row_left" style="margin-left: 128px;">
                     <span class="required">*</span>
                     <span class="spanFWCZ">身份</span>
                 </div>
-                <div class="divRight">
+                <div class="div_row_right">
                     <div class="div_radio" id="div_sf_grzr">
                         <img class="iFWCZ" id="img_sf_grzr" /><label class="labelFWCZ">个人转让</label>
                     </div>
@@ -95,12 +95,12 @@
                     </div>
                 </div>
             </div>
-            <div id="divCWGPZ" class="divFWCZ" style="z-index: 999">
-                <div class="divLeft" style="margin-left: 128px;">
+            <div id="divCWGPZ" class="div_row" style="z-index: 999">
+                <div class="div_row_left" style="margin-left: 128px;">
                     <span class="required">*</span>
                     <span class="spanFWCZ">品种</span>
                 </div>
-                <div class="divRight">
+                <div class="div_row_right">
                     <div id="divPZText" class="spanFWLXOut SRK" style="position: relative;">
                         <div id="divPZSpan" class="spanFWLXIn" style="border: none; margin-top: 6px;">
                             <span id="spanPZ" class="spanFWQK spanFontColor" style="margin-top: 0">请选择品种</span>
@@ -121,12 +121,12 @@
                     </div>
                 </div>
             </div>
-            <div id="divJG" class="divFWCZ" style="z-index: 998;">
-                <div class="divLeft" style="margin-left: 128px;">
+            <div id="divJG" class="div_row" style="z-index: 998;">
+                <div class="div_row_left" style="margin-left: 128px;">
                     <span class="required">*</span>
                     <span class="spanFWCZ">价格</span>
                 </div>
-                <div class="divRight">
+                <div class="div_row_right">
                     <span id="spanJG" class="spanFWLX SRK" style="display: inline-block;">
                         <input class="inputLCFB spanFontColor" id="JG" maxlength="9" column="JG" type="text" style="width: 100px" />
                         <span class="spanFontColor">元/只</span>
@@ -134,12 +134,12 @@
                 </div>
                 <div id="divJGTip" class="Warn" style="z-index: 998; position: relative;"></div>
             </div>
-            <div id="divNL" class="divFWCZ" style="z-index: 997">
-                <div class="divLeft" style="margin-left: 128px;">
+            <div id="divNL" class="div_row" style="z-index: 997">
+                <div class="div_row_left" style="margin-left: 128px;">
                     <span class="required">*</span>
                     <span class="spanFWCZ">年龄</span>
                 </div>
-                <div class="divRight">
+                <div class="div_row_right">
                     <span id="spanNL" class="spanFWLX SRK" style="display: inline-block;">
                         <input id="NL" maxlength="9" column="NL" class="inputLCFB spanFontColor" type="text" style="width: 146px" />
                     </span>
@@ -154,12 +154,12 @@
                     <div id="divNLTip" class="Warn" style="z-index: 997; position: relative;"></div>
                 </div>
             </div>
-            <div id="divCWGXB" class="divFWCZ" style="z-index: 996">
-                <div class="divLeft" style="margin-left: 128px;">
+            <div id="divCWGXB" class="div_row" style="z-index: 996">
+                <div class="div_row_left" style="margin-left: 128px;">
                     <span class="required">*</span>
                     <span class="spanFWCZ">性别</span>
                 </div>
-                <div class="divRight">
+                <div class="div_row_right">
                     <div id="divXBText" class="spanFWLXOut SRK" style="border: 1px solid #cccccc; border-radius: 4px; z-index: 997; position: relative;">
                         <div id="divXBSpan" class="spanFWLXIn" style="border: none; margin-top: 6px;">
                             <span id="spanXB" column="XB" class="spanFWQK spanFontColor" style="margin-top: 0">请选择</span>
@@ -171,24 +171,24 @@
                     <div id="divXBTip" class="Warn" style="z-index: 996;"></div>
                 </div>
             </div>
-            <div id="divCWGMS" class="divFWCZ" style="z-index: 995">
-                <div class="divLeft" style="margin-left: 128px;">
+            <div id="divCWGMS" class="div_row" style="z-index: 995">
+                <div class="div_row_left" style="margin-left: 128px;">
                     <span class="required">&nbsp;</span>
                     <span class="spanFWCZ">毛色</span>
                 </div>
-                <div class="divRight">
+                <div class="div_row_right">
                     <span id="spanMS" class="spanFWLX SRK" style="display: inline-block;">
                         <input id="MS" maxlength="9" column="MS" class="inputLCFB spanFontColor" type="text" style="width: 146px" />
                     </span>
                     <div id="divMSTip" class="Warn" style="z-index: 995;"></div>
                 </div>
             </div>
-            <div id="divQCQK" class="divFWCZ" style="z-index: 994;">
-                <div class="divLeft" style="margin-left: 100px;">
+            <div id="divQCQK" class="div_row" style="z-index: 994;">
+                <div class="div_row_left" style="margin-left: 100px;">
                     <span class="required">*</span>
                     <span class="spanFWCZ">驱虫情况</span>
                 </div>
-                <div class="divRight">
+                <div class="div_row_right">
                     <div class="div_radio" id="div_qcqk_yqc">
                         <img class="iFWCZ" id="img_qcqk_yqc" /><label class="labelFWCZ">已驱虫</label>
                     </div>
@@ -197,12 +197,12 @@
                     </div>
                 </div>
             </div>
-            <div id="divCWGYMQK" class="divFWCZ" style="z-index: 993;">
-                <div class="divLeft" style="margin-left: 101px;">
+            <div id="divCWGYMQK" class="div_row" style="z-index: 993;">
+                <div class="div_row_left" style="margin-left: 101px;">
                     <span class="required">*</span>
                     <span class="spanFWCZ">疫苗情况</span>
                 </div>
-                <div class="divRight">
+                <div class="div_row_right">
                     <div id="divYMQKText" class="spanFWLXOut SRK" style="border: 1px solid #cccccc; border-radius: 4px; z-index: 997; position: relative;">
                         <div id="divYMQKSpan" class="spanFWLXIn" style="border: none; margin-top: 6px;">
                             <input type="hidden" id="QYCode" />
@@ -222,12 +222,12 @@
                     </div>
                 </div>
             </div>
-            <div id="divQQSPKG" class="divFWCZ">
-                <div class="divLeft" style="margin-left: 78px;">
+            <div id="divQQSPKG" class="div_row">
+                <div class="div_row_left" style="margin-left: 78px;">
                     <span class="required">*</span>
                     <span class="spanFWCZ">QQ视频看狗</span>
                 </div>
-                <div class="divRight">
+                <div class="div_row_right">
                     <div class="div_radio" id="div_spkg_zc">
                         <img class="iFWCZ" id="img_spkg_zc" /><label class="labelFWCZ">支持</label>
                     </div>
@@ -240,33 +240,33 @@
                 <span class="spanSplit">详细信息</span>
                 <em class="emSplit"></em>
             </div>
-            <div id="divFYBT" class="divFWCZ" style="margin-top: 22px;">
-                <div class="divLeft" style="margin-left: 128px;">
+            <div id="divFYBT" class="div_row" style="margin-top: 22px;">
+                <div class="div_row_left" style="margin-left: 128px;">
                     <span class="required">*</span>
                     <span id="spanFYBT">标题</span>
                 </div>
-                <div class="divRight">
+                <div class="div_row_right">
                     <input id="BT" maxlength="50" column="BT" class="spanFWLX SRK" style="width: 594px; padding: 6px 12px; color: #999999" type="text" placeholder="吸引人的标题可让更多的人看您的信息喔" />
                     <div id="divBTTip"></div>
                 </div>
             </div>
-            <div id="divFYMS" class="divFWCZ" style="height: 253px;">
-                <div class="divLeft" style="height: 170px; vertical-align: top;">
+            <div id="divFYMS" class="div_row" style="height: 253px;">
+                <div class="div_row_left" style="height: 170px; vertical-align: top;">
                     <span class="required" style="vertical-align: top">*</span>
                     <span id="spanFYMS" style="vertical-align: top">补充描述</span>
                 </div>
-                <div class="divRight">
+                <div class="div_row_right">
                     <script id="FYMS" type="text/plain" style="width:594px;height:200px;display:inline-block;">
                     </script>
                     <div id="divFYMSTip" class="Warn"></div>
                 </div>
             </div>
-            <div id="divFWZP" class="divFWCZ">
-                <div class="divLeft" style="height: 170px; vertical-align: top;">
+            <div id="divFWZP" class="div_row">
+                <div class="div_row_left" style="height: 170px; vertical-align: top;">
                     <span class="required" style="vertical-align: top">*</span>
                     <span id="spanFWZP" style="vertical-align: top">上传照片</span>
                 </div>
-                <div class="divRight">
+                <div class="div_row_right">
                     <div id="divUploadOut" class="divUploadOut">
                         <form action="" enctype="multipart/form-data" id="myform" method="post">
                             <input id="inputUpload" unselectable="on" type="file" multiple="multiple" class="file" />
@@ -278,19 +278,19 @@
                     <div id="divFWZPTip" style="margin-top: 10px; margin-left: 210px;"></div>
                 </div>
             </div>
-            <div id="divFWZPValue" class="divFWCZ" style="display: none; text-align: left; margin-top: 140px;">
-                <div class="divLeft" style="height: 170px; vertical-align: top;">
+            <div id="divFWZPValue" class="div_row" style="display: none; text-align: left; margin-top: 140px;">
+                <div class="div_row_left" style="height: 170px; vertical-align: top;">
                     <span class="required"></span>
                     <span id="spanFWZP" style="width: 56px; display: inline-block;"></span>
                 </div>
-                <div id="divImgs1" class="divRight" style="display: inline-block; width: 670px;">
+                <div id="divImgs1" class="div_row_right" style="display: inline-block; width: 670px;">
                     <ul id="ulImgs1" class="ulImgs" style="padding-left: 0px;"></ul>
                 </div>
-                <div class="divLeft" style="height: 170px; vertical-align: top;">
+                <div class="div_row_left" style="height: 170px; vertical-align: top;">
                     <span class="required"></span>
                     <span id="spanFWZP" style="width: 56px; display: inline-block;"></span>
                 </div>
-                <div id="divImgs2" class="divRight" style="display: inline-block; width: 670px;">
+                <div id="divImgs2" class="div_row_right" style="display: inline-block; width: 670px;">
                     <ul id="ulImgs2" class="ulImgs" style="padding-left: 0px;"></ul>
                 </div>
             </div>
@@ -298,32 +298,32 @@
                 <span class="spanSplit">联系人信息</span>
                 <em class="emSplit"></em>
             </div>
-            <div id="divLXR" class="divFWCZ" style="z-index: 993">
-                <div class="divLeft" style="margin-left: 114px;">
+            <div id="divLXR" class="div_row" style="z-index: 993">
+                <div class="div_row_left" style="margin-left: 114px;">
                     <span class="required">*</span>
                     <span id="spanLXDH">联系人</span>
                 </div>
-                <div class="divRight">
+                <div class="div_row_right">
                     <input id="LXR" column="LXR" class="spanFWLX inputLXRXX SRK" type="text" placeholder="请输入联系人" />
                     <div id="divLXRTip"></div>
                 </div>
             </div>
-            <div id="divLXDH" class="divFWCZ" style="z-index: 993">
-                <div class="divLeft">
+            <div id="divLXDH" class="div_row" style="z-index: 993">
+                <div class="div_row_left">
                     <span class="required">*</span>
                     <span id="spanLXDH">联系电话</span>
                 </div>
-                <div class="divRight">
+                <div class="div_row_right">
                     <input id="LXDH" maxlength="11" column="LXDH" class="spanFWLX inputLXRXX SRK" type="text" placeholder="请输入联系电话" />
                     <div id="divLXDHTip"></div>
                 </div>
             </div>
-            <div id="divQQ" class="divFWCZ" style="margin-top: -12px;" style="z-index: 993">
-                <div class="divLeft" style="margin-left: 133px;">
+            <div id="divQQ" class="div_row" style="margin-top: -12px;" style="z-index: 993">
+                <div class="div_row_left" style="margin-left: 133px;">
                     <span class="required"></span>
                     <span id="spanQQ">QQ</span>
                 </div>
-                <div class="divRight">
+                <div class="div_row_right">
                     <input column="QQ" class="spanFWLX inputLXRXX SRK" type="text" placeholder="请输入QQ" />
                 </div>
             </div>

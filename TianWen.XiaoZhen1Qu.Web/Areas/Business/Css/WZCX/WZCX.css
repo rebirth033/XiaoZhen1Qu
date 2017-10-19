@@ -62,7 +62,7 @@
         text-decoration: underline;
     }
 
-.divLeft {
+.div_row_left {
     color: gray;
     text-align: right;
     margin-left: 30px;
@@ -71,7 +71,7 @@
     font-size: 14px;
 }
 
-.divRight {
+.div_row_right {
     display: inline-block;
     margin-left: 15px;
     position: relative;

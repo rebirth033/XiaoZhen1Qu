@@ -1,28 +1,12 @@
-﻿body {
-    width: 100%;
-    height: 100%;
-    font-family: 微软雅黑;
-}
-
-.div_head {
+﻿.div_head {
     margin-top: 20px;
     z-index: 1001;
     position: relative;
 }
 
-.divFWCZ {
-    width: 900px;
-    text-align: left;
-    padding-top: 2px;
-    font-size: 15px;
-    margin-left: 10px;
-    margin-bottom: 10px;
-    height: 62px;
-    position: relative;
-    display: block;
-}
 
-.divLeft {
+
+.div_row_left {
     color: gray;
     text-align: right;
     margin-left: 100px;
@@ -30,7 +14,7 @@
     font-size: 14px;
 }
 
-.divRight {
+.div_row_right {
     display: inline;
     margin-left: 30px;
     position: relative;

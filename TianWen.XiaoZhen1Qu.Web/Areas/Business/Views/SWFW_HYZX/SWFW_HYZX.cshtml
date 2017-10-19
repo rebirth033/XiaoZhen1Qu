@@ -10,9 +10,9 @@
     <meta name="viewport" content="width=device-width" />
     <title></title>
     <link href="@Url.Content("~/Areas/Business/Css/SWFW/SWFW_HYZX.css")" rel="stylesheet" />
-    <link href="@Url.Content("~/Areas/Business/Css/Common/Top.css" )" rel="stylesheet" />
-    <link href="@Url.Content("~/Areas/Business/Css/Common/XZQ.css" )" rel="stylesheet" />
-    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/Common/XZQ.js")"></script>
+   
+
+    
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/SWFW/SWFW_HYZX.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/SWFW/SWFW_HYZXYZ.js")"></script>
     
@@ -82,12 +82,12 @@
                 <span class="spanSplit">基本信息</span>
                 <em class="emSplit"></em>
             </div>
-            <div id="divYSFW" class="divFWCZ">
-                <div class="divLeft">
+            <div id="divYSFW" class="div_row">
+                <div class="div_row_left">
                     <span class="required">*</span>
                     <span class="spanFWCZ">运送范围</span>
                 </div>
-                <div class="divRight">
+                <div class="div_row_right">
                     <div id="div_ysfw_gnhyzx" class="div_radio">
                         <img class="iFWCZ" id="img_ysfw_gnhyzx" /><label class="labelFWCZ">国内货运专线</label>
                     </div>
@@ -96,12 +96,12 @@
                     </div>
                 </div>
             </div>
-            <div id="divCFD" class="divFWCZ" style="z-index: 999;">
-                <div class="divLeft" style="margin-left: 114px;">
+            <div id="divCFD" class="div_row" style="z-index: 999;">
+                <div class="div_row_left" style="margin-left: 114px;">
                     <span class="required">*</span>
                     <span class="spanFWCZ">出发地</span>
                 </div>
-                <div class="divRight">
+                <div class="div_row_right">
                     <div id="divQYText" class="spanFWLXOut SRK" style="border: 1px solid #cccccc; border-radius: 4px; z-index: 997; position: relative;">
                         <div id="divQYSpan" class="spanFWLXIn" style="border: none; margin-top: 6px;">
                             <input type="hidden" id="QYCode" />
@@ -121,22 +121,22 @@
                     </div>
                 </div>
             </div>
-            <div id="divDDD" class="divFWCZ" style="z-index: 998">
-                <div class="divLeft" style="margin-left: 114px;">
+            <div id="divDDD" class="div_row" style="z-index: 998">
+                <div class="div_row_left" style="margin-left: 114px;">
                     <span class="required">*</span>
                     <span id="spanDDD">到达地</span>
                 </div>
-                <div class="divRight">
+                <div class="div_row_right">
                     <input id="DDD" column="DDD" class="spanFWLX inputLXRXX SRK" type="text" placeholder="请输入到达地" />
                     <div id="divDDDTip"></div>
                 </div>
             </div>
-            <div id="divHYTD" class="divFWCZ">
-                <div class="divLeft">
+            <div id="divHYTD" class="div_row">
+                <div class="div_row_left">
                     <span class="required">*</span>
                     <span class="spanFWCZ">货运通道</span>
                 </div>
-                <div class="divRight">
+                <div class="div_row_right">
                     <div id="div_hytd_gl" class="div_radio">
                         <img class="iFWCZ" id="img_hytd_gl" /><label class="labelFWCZ">公路</label>
                     </div>
@@ -154,12 +154,12 @@
                     </div>
                 </div>
             </div>
-            <div id="divSFWF" class="divFWCZ">
-                <div class="divLeft">
+            <div id="divSFWF" class="div_row">
+                <div class="div_row_left">
                     <span class="required">*</span>
                     <span class="spanFWCZ">是否往返</span>
                 </div>
-                <div class="divRight">
+                <div class="div_row_right">
                     <div id="div_sfwf_dx" class="div_radio">
                         <img class="iFWCZ" id="img_sfwf_dx" /><label class="labelFWCZ">单向</label>
                     </div>
@@ -168,12 +168,12 @@
                     </div>
                 </div>
             </div>
-            <div id="divYWZZ" class="divFWCZ">
-                <div class="divLeft">
+            <div id="divYWZZ" class="div_row">
+                <div class="div_row_left">
                     <span class="required">*</span>
                     <span class="spanFWCZ">有无中转</span>
                 </div>
-                <div class="divRight">
+                <div class="div_row_right">
                     <div id="div_ywyz_zd" class="div_radio">
                         <img class="iFWCZ" id="img_ywzz_zd" /><label class="labelFWCZ">直达</label>
                     </div>
@@ -185,12 +185,12 @@
                     </div>
                 </div>
             </div>
-            <div id="divBC" class="divFWCZ">
-                <div class="divLeft" style="margin-left: 128px;">
+            <div id="divBC" class="div_row">
+                <div class="div_row_left" style="margin-left: 128px;">
                     <span class="required">*</span>
                     <span class="spanFWCZ">班次</span>
                 </div>
-                <div class="divRight">
+                <div class="div_row_right">
                     <div id="div_bc_gdbc" class="div_radio">
                         <img class="iFWCZ" id="img_bc_gdbc" /><label class="labelFWCZ">固定班次</label>
                     </div>
@@ -199,46 +199,46 @@
                     </div>
                 </div>
             </div>
-            <div id="divTZSJ" class="divFWCZ" style="z-index: 990">
-                <div class="divLeft">
+            <div id="divTZSJ" class="div_row" style="z-index: 990">
+                <div class="div_row_left">
                     <span class="required">*</span>
                     <span id="spanTZSJ">途中时间</span>
                 </div>
-                <div class="divRight">
+                <div class="div_row_right">
                     <input id="TZSJ" column="TZSJ" class="spanFWLX inputLXRXX SRK" type="text" placeholder="请输入途中时间" />
                     <div id="divTZSJTip"></div>
                 </div>
             </div>
-            <div id="divZHFS" class="divFWCZ" style="z-index: 997;">
-                <div class="divLeft">
+            <div id="divZHFS" class="div_row" style="z-index: 997;">
+                <div class="div_row_left">
                     <span class="required">*</span>
                     <span id="spanZHFS">组货方式</span>
                 </div>
-                <div id="divZHFSText" class="divRight" style="position: relative;">
+                <div id="divZHFSText" class="div_row_right" style="position: relative;">
                 </div>
             </div>
-            <div id="divHWZL" class="divFWCZ" style="z-index: 996;">
-                <div class="divLeft">
+            <div id="divHWZL" class="div_row" style="z-index: 996;">
+                <div class="div_row_left">
                     <span class="required">*</span>
                     <span id="spanHWZL">货物种类</span>
                 </div>
-                <div id="divHWZLText" class="divRight" style="position: relative;">
+                <div id="divHWZLText" class="div_row_right" style="position: relative;">
                 </div>
             </div>
-            <div id="divFWYS" class="divFWCZ" style="z-index: 995;">
-                <div class="divLeft">
+            <div id="divFWYS" class="div_row" style="z-index: 995;">
+                <div class="div_row_left">
                     <span class="required">*</span>
                     <span id="spanFWYS">服务延伸</span>
                 </div>
-                <div id="divFWYSText" class="divRight" style="position: relative;">
+                <div id="divFWYSText" class="div_row_right" style="position: relative;">
                 </div>
             </div>
-            <div id="divYSJG" class="divFWCZ" style="z-index: 994">
-                <div class="divLeft">
+            <div id="divYSJG" class="div_row" style="z-index: 994">
+                <div class="div_row_left">
                     <span class="required">*</span>
                     <span id="spanYSJG">运输价格</span>
                 </div>
-                <div class="divRight">
+                <div class="div_row_right">
                     <input id="YSJG" column="YSJG" class="spanFWLX inputLXRXX SRK" type="text" placeholder="请输入运输价格" style="width: 150px;" />
                     <div id="divYSJGDWText" class="spanFWLXOut SRK" style="border: 1px solid #cccccc; border-radius: 4px; z-index: 997; position: relative;">
                         <div id="divYSJGDWSpan" class="spanFWLXIn" style="border: none; margin-top: 6px;">
@@ -255,23 +255,23 @@
                 <span class="spanSplit">特色描述</span>
                 <em class="emSplit"></em>
             </div>
-            <div id="divFYMS" class="divFWCZ" style="height: 253px; z-index: 992;">
-                <div class="divLeft" style="height: 170px; vertical-align: top;">
+            <div id="divFYMS" class="div_row" style="height: 253px; z-index: 992;">
+                <div class="div_row_left" style="height: 170px; vertical-align: top;">
                     <span class="required" style="vertical-align: top">*</span>
                     <span id="spanFYMS" style="vertical-align: top">服务介绍</span>
                 </div>
-                <div class="divRight">
+                <div class="div_row_right">
                     <script id="FYMS" type="text/plain" style="width:594px;height:200px;display:inline-block;">
                     </script>
                     <div id="divFYMSTip" class="Warn"></div>
                 </div>
             </div>
-            <div id="divFWZP" class="divFWCZ">
-                <div class="divLeft" style="height: 170px; vertical-align: top;">
+            <div id="divFWZP" class="div_row">
+                <div class="div_row_left" style="height: 170px; vertical-align: top;">
                     <span class="required" style="vertical-align: top">*</span>
                     <span id="spanFWZP" style="vertical-align: top">上传照片</span>
                 </div>
-                <div class="divRight">
+                <div class="div_row_right">
                     <div id="divUploadOut" class="divUploadOut">
                         <form action="" enctype="multipart/form-data" id="myform" method="post">
                             <input id="inputUpload" unselectable="on" type="file" multiple="multiple" class="file" />
@@ -283,19 +283,19 @@
                     <div id="divFWZPTip" style="margin-top: 10px; margin-left: 210px;"></div>
                 </div>
             </div>
-            <div id="divFWZPValue" class="divFWCZ" style="display: none; text-align: left; margin-top: 140px;">
-                <div class="divLeft" style="height: 170px; vertical-align: top;">
+            <div id="divFWZPValue" class="div_row" style="display: none; text-align: left; margin-top: 140px;">
+                <div class="div_row_left" style="height: 170px; vertical-align: top;">
                     <span class="required"></span>
                     <span id="spanFWZP" style="width: 56px; display: inline-block;"></span>
                 </div>
-                <div id="divImgs1" class="divRight" style="display: inline-block; width: 670px;">
+                <div id="divImgs1" class="div_row_right" style="display: inline-block; width: 670px;">
                     <ul id="ulImgs1" class="ulImgs" style="padding-left: 0px;"></ul>
                 </div>
-                <div class="divLeft" style="height: 170px; vertical-align: top;">
+                <div class="div_row_left" style="height: 170px; vertical-align: top;">
                     <span class="required"></span>
                     <span id="spanFWZP" style="width: 56px; display: inline-block;"></span>
                 </div>
-                <div id="divImgs2" class="divRight" style="display: inline-block; width: 670px;">
+                <div id="divImgs2" class="div_row_right" style="display: inline-block; width: 670px;">
                     <ul id="ulImgs2" class="ulImgs" style="padding-left: 0px;"></ul>
                 </div>
             </div>
@@ -303,32 +303,32 @@
                 <span class="spanSplit">联系人信息</span>
                 <em class="emSplit"></em>
             </div>
-            <div id="divLXR" class="divFWCZ" style="z-index: 990">
-                <div class="divLeft" style="margin-left: 114px;">
+            <div id="divLXR" class="div_row" style="z-index: 990">
+                <div class="div_row_left" style="margin-left: 114px;">
                     <span class="required">*</span>
                     <span id="spanLXDH">联系人</span>
                 </div>
-                <div class="divRight">
+                <div class="div_row_right">
                     <input id="LXR" column="LXR" class="spanFWLX inputLXRXX SRK" type="text" placeholder="请输入联系人" />
                     <div id="divLXRTip"></div>
                 </div>
             </div>
-            <div id="divLXDH" class="divFWCZ" style="z-index: 989">
-                <div class="divLeft">
+            <div id="divLXDH" class="div_row" style="z-index: 989">
+                <div class="div_row_left">
                     <span class="required">*</span>
                     <span id="spanLXDH">联系电话</span>
                 </div>
-                <div class="divRight">
+                <div class="div_row_right">
                     <input id="LXDH" maxlength="11" column="LXDH" class="spanFWLX inputLXRXX SRK" type="text" placeholder="请输入联系电话" />
                     <div id="divLXDHTip"></div>
                 </div>
             </div>
-            <div id="divQQ" class="divFWCZ" style="margin-top: -12px;" style="z-index: 988">
-                <div class="divLeft" style="margin-left: 133px;">
+            <div id="divQQ" class="div_row" style="margin-top: -12px;" style="z-index: 988">
+                <div class="div_row_left" style="margin-left: 133px;">
                     <span class="required"></span>
                     <span id="spanQQ">QQ</span>
                 </div>
-                <div class="divRight">
+                <div class="div_row_right">
                     <input column="QQ" class="spanFWLX inputLXRXX SRK" type="text" placeholder="请输入QQ" />
                 </div>
             </div>
