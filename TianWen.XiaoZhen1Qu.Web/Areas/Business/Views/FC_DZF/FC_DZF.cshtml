@@ -10,9 +10,9 @@
     <meta name="viewport" content="width=device-width" />
     <title></title>
     <link href="@Url.Content("~/Areas/Business/Css/FC/FC_DZF.css")" rel="stylesheet" />
-   
 
-    
+
+
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/FC/FC_DZF.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/FC/FC_DZFYZ.js")"></script>
 
@@ -113,7 +113,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="div_row_left" style="margin-left:10px;">
+            </div>
+            <div id="divZDZQ" class="div_row" style="z-index: 998">
+                <div class="div_row_left">
                     <span class="span_required">*</span>
                     <span class="spanFWCZ">最短租期</span>
                 </div>
@@ -122,7 +124,7 @@
                         <input id="ZDZQ" maxlength="9" column="ZDZQ" class="input_spaninput spaninput_fontcolor" type="text" />
                         <span class="spaninput_fontcolor">天</span>
                     </span>
-                    <div id="divZDZQTip" class="Warn" style="margin-left:471px;"></div>
+                    <div id="divZDZQTip" class="Warn"></div>
                 </div>
             </div>
             <div id="divZJ" class="div_row" style="z-index: 997;">
@@ -145,18 +147,21 @@
                     <div id="divZJTip" class="Warn" style="z-index: 996; position: relative;"></div>
                 </div>
             </div>
-            <div id="divTS" class="div_row" style="z-index: 995; height:45px;margin-bottom:0px;">
+            <div id="divTS" class="div_row" style="z-index: 995; ">
                 <div class="div_row_left" style="margin-left: 128px;">
                     <span class="span_required">*</span>
                     <span class="spanFWCZ">特色</span>
                 </div>
                 <div class="div_row_right">
                     <span id="spanYZRS" class="span_spaninput SRK" style="display: inline-block;">
-                        <input class="input_spaninput spaninput_fontcolor" id="YZRS" maxlength="6" column="YZRS" type="text" style="width:60px;" />
+                        <input class="input_spaninput spaninput_fontcolor" id="YZRS" maxlength="6" column="YZRS" type="text" style="width: 90px;" />
                         <span class="spaninput_fontcolor">人宜租</span>
                     </span>
+                    <div id="divYZRSTip" class="Warn"></div>
                 </div>
-                <div class="div_row_left" style="margin-left:10px;">
+            </div>
+            <div id="divMJ" class="div_row" style="z-index: 995;">
+                <div class="div_row_left" style="margin-left: 128px;">
                     <span class="span_required">*</span>
                     <span class="spanFWCZ">面积</span>
                 </div>
@@ -165,14 +170,7 @@
                         <input class="input_spaninput spaninput_fontcolor" id="MJ" maxlength="9" column="MJ" type="text" />
                         <span class="spaninput_fontcolor">㎡</span>
                     </span>
-                </div>
-            </div>
-            <div class="div_row" style="z-index: 995; height:45px;margin-bottom:0px;">
-                <div class="div_row_left" style="margin-left:10px;">
-                </div>
-                <div class="div_row_right">
-                    <div id="divYZRSTip" class="Warn" style="float:left;"></div>
-                    <div id="divMJTip" class="Warn" style="margin-right: 275px;float:right; margin-left:0px"></div>
+                    <div id="divMJTip" class="Warn"></div>
                 </div>
             </div>
             <div id="divDZ" class="div_row" style="z-index: 994">
@@ -317,7 +315,7 @@
         </div>
         <input type="button" id="btnSavePhoto" class="btn btn-info" style="height: 34px; width:69px; position:absolute;bottom:14px;right:77px;" value="保&nbsp;&nbsp;存" />
     </div>
-    <div id="editDZWindow">
+    <div id="editDZWindow" style="display: none;">
         <div id="editImgHead">
             <span>新增地址</span>
             <div id="div_dz_close"></div>
