@@ -1,7 +1,6 @@
 ﻿var isleave = true;
 var ue = UE.getEditor('FYMS');
 $(document).ready(function () {
-    $(".div_radio").bind("click", RadioSelect);
     $("#divUploadOut").bind("mouseover", GetUploadCss);
     $("#divUploadOut").bind("mouseleave", LeaveUploadCss);
     $("#btnFB").bind("click", FB);
@@ -43,7 +42,6 @@ function LoadDefault() {
     ue.ready(function () {
         ue.setHeight(200);
     });
-    $(".iFWCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
 }
 //加载头车颜色
 function LoadTCYS() {
@@ -159,11 +157,13 @@ function GCBQActive() {
 function LoadGCPPMC(JCLX, JCBQ) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadHCPPXX",
+        url: getRootPath() + "/Business/Common/LoadByCodeValueAndTypeName",
         dataType: "json",
         data:
         {
-            HCPPBQ: JCBQ.split("div")[1]
+            CODEVALUE: JCBQ.split("div")[1],
+            TYPENAME: "婚车品牌",
+            TBName: "CODES_HQSY"
         },
         success: function (xml) {
             if (xml.Result === 1) {

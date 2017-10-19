@@ -96,7 +96,7 @@ function LoadDuoX(type, id) {
         data:
         {
             TYPENAME: type,
-            TBName: "CODES_YJPX"
+            TBName: "CODES_JYPX"
         },
         success: function (xml) {
             if (xml.Result === 1) {

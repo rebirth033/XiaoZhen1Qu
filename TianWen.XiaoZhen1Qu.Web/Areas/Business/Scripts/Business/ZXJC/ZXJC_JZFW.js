@@ -72,11 +72,10 @@ function PDLB(lbmc) {
     }
     else {
         $("#divXLText").css("display", "none");
-
     }
 }
 //加载小类
-function LoadXL(type) {
+function LoadXL() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/Common/LoadByParentID",

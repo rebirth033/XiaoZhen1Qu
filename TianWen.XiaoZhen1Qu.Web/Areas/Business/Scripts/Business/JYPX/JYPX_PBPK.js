@@ -1,7 +1,6 @@
 ﻿var isleave = true;
 var ue = UE.getEditor('FYMS');
 $(document).ready(function () {
-    $(".div_radio").bind("click", RadioSelect);
     $("#divUploadOut").bind("mouseover", GetUploadCss);
     $("#divUploadOut").bind("mouseleave", LeaveUploadCss);
     $("#btnFB").bind("click", FB);
@@ -39,7 +38,6 @@ function LoadDefault() {
     ue.ready(function () {
         ue.setHeight(200);
     });
-    $(".iFWCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
 }
 //加载多选
 function LoadDuoX(type, id) {
@@ -131,7 +129,6 @@ function LoadJYPX_PBPKJBXX() {
                 SetDX("SF", xml.Value.JYPX_PBPKJBXX.SF);
                 SetDX("CD", xml.Value.JYPX_PBPKJBXX.CD);
                 SetDX("PBRS", xml.Value.JYPX_PBPKJBXX.PBRS);
-
                 SetDuoX("FDKM", xml.Value.JYPX_PBPKJBXX.FDKM);
                 SetDuoX("FDJD", xml.Value.JYPX_PBPKJBXX.FDJD);
             }
@@ -153,10 +150,8 @@ function FB() {
     obj = jsonObj.AddJson(obj, "SF", "'" + GetDX("SF") + "'");
     obj = jsonObj.AddJson(obj, "CD", "'" + GetDX("CD") + "'");
     obj = jsonObj.AddJson(obj, "PBRS", "'" + GetDX("PBRS") + "'");
-
     obj = jsonObj.AddJson(obj, "FDKM", "'" + GetDuoX("FDKM") + "'");
     obj = jsonObj.AddJson(obj, "FDJD", "'" + GetDuoX("FDJD") + "'");
-
 
     if (getUrlParam("JYPX_PBPKJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "JYPX_PBPKJBXXID", "'" + getUrlParam("JYPX_PBPKJBXXID") + "'");

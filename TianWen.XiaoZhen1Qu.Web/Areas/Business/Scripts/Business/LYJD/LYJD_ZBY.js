@@ -1,7 +1,6 @@
 ﻿var isleave = true;
 var fwjs = UE.getEditor('FWJS');
 $(document).ready(function () {
-    $(".div_radio").bind("click", RadioSelect);
     $("#divUploadOut").bind("mouseover", GetUploadCss);
     $("#divUploadOut").bind("mouseleave", LeaveUploadCss);
     $("#btnFB").bind("click", FB);
@@ -38,7 +37,6 @@ function FYMSSetDefault() {
 //加载默认
 function LoadDefault() {
     fwjs.ready(function () { fwjs.setHeight(200); });
-    $(".iFWCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
 }
 //加载多选
 function LoadDuoX(type, id) {

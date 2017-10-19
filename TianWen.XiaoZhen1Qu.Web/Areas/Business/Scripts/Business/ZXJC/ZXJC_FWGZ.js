@@ -66,9 +66,10 @@ function SelectLB(obj, type, lbid) {
 //判断类别
 function PDLB(lbmc) {
     if (lbmc === "房屋改造" || lbmc === "活动房定制") {
+        BindClick("XL");
         $("#spanXL").html("请选择小类");
         $("#divXLText").css("display", "");
-        BindClick("XL");
+        $("#divXL").css("display", "none");
     }
     else {
         $("#divXLText").css("display", "none");

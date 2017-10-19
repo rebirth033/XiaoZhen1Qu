@@ -5,7 +5,6 @@ var ydxz = UE.getEditor('YDXZ');
 var fybh = UE.getEditor('FYBH');
 var zfxm = UE.getEditor('ZFXM');
 $(document).ready(function () {
-    $(".div_radio").bind("click", RadioSelect);
     $("#divUploadOut").bind("mouseover", GetUploadCss);
     $("#divUploadOut").bind("mouseleave", LeaveUploadCss);
     $("#btnFB").bind("click", FB);
@@ -50,7 +49,6 @@ function LoadDefault() {
     ydxz.ready(function () { ydxz.setHeight(100); });
     fybh.ready(function () { fybh.setHeight(100); });
     zfxm.ready(function () { zfxm.setHeight(100); });
-    $(".iFWCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
 }
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
