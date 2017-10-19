@@ -3,8 +3,8 @@ var ue = UE.getEditor('FYMS');
 $(document).ready(function () {
     $(".div_radio").bind("click", RadioSelect);
     $("#XQMC").bind("keyup", LoadXQMC);
-    $("#divUploadOut").bind("mouseover", GetUploadCss);
-    $("#divUploadOut").bind("mouseleave", LeaveUploadCss);
+    $("#div_upload").bind("mouseover", GetUploadCss);
+    $("#div_upload").bind("mouseleave", LeaveUploadCss);
     $("#btnFB").bind("click", FB);
     $(".input_spaninput").bind("focus", FWLXYLCFBFocus);
     $(".input_spaninput").bind("blur", FWLXYLCFBBlur);

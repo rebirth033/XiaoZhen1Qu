@@ -10,7 +10,7 @@
     position: relative;
 }
 
-.divSplit {
+.div_split {
     width: 900px;
     display: block;
     text-align: left;
@@ -181,4 +181,20 @@
     width: 472px;
     padding: 6px 12px;
     color: #999999;
+}
+
+.Warn {
+    font-size: 14px;
+    color: #fd634f;
+    margin-left: 220px;
+    z-index: 999;
+    position: relative;
+}
+
+.Info {
+    font-size: 14px;
+    color: #5bc0de;
+    margin-left: 220px;
+    z-index: 999;
+    position: relative;
 }

@@ -96,65 +96,17 @@
     width: 400px !important;
 }
 
-.file {
-    float: left;
-    width: 195px;
-    height: 145px;
-    opacity: 0;
-    cursor: pointer;
-}
 
-.divUploadOut {
-    width: 195px;
-    height: 145px;
-    display: inline-block;
-    border: 1px solid #cccccc;
-    background-image: url(../images/upload_small2.png);
-}
 
-.Warn {
-    font-size: 14px;
-    color: #fd634f;
-    margin-left: 215px;
-    z-index: 999;
-    position: relative;
-    width: 500px;
-}
 
-.Info {
-    font-size: 14px;
-    color: #5bc0de;
-    margin-left: 215px;
-    z-index: 999;
-    position: relative;
-    width: 500px;
-}
 
-.imgTip {
-    width: 18px;
-    height: 18px;
-    margin-right: 2px;
-}
 
-.liImg {
-    display: inline-block;
-    width: 130px;
-    height: 100px;
-    position: relative;
-    float: left;
-    margin-right: 10px;
-}
 
-.divImg {
-    width: 130px;
-    height: 100px;
-    display: inline-block;
-    margin-right: 10px;
-    margin-top: 20px;
-    border-radius: 4px;
-    overflow: hidden;
-    cursor: move;
-}
+
+
+
+
+
 
 .span_xzdz {
     color: #31b0d5;

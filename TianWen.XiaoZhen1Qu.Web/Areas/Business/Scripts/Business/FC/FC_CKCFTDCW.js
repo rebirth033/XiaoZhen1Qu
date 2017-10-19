@@ -4,8 +4,8 @@ $(document).ready(function () {
     $(".div_radio").bind("click", RadioSelect);
     $("#div_gq_cz").bind("click", CZSelect);
     $("#div_gq_cs").bind("click", CSSelect);
-    $("#divUploadOut").bind("mouseover", GetUploadCss);
-    $("#divUploadOut").bind("mouseleave", LeaveUploadCss);
+    $("#div_upload").bind("mouseover", GetUploadCss);
+    $("#div_upload").bind("mouseleave", LeaveUploadCss);
     $("#btnFB").bind("click", FB);
     $("#FYMS").bind("focus", FYMSFocus);
     $("#FYMS").bind("blur", FYMSBlur);

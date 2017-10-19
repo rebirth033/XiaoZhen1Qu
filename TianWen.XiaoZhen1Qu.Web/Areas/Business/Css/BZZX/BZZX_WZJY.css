@@ -196,7 +196,7 @@
     font-family: "宋体", "SimSun";
 }
 
-.divUploadOut {
+.div_upload {
     width: 48px;
     height: 40px;
     display: inline-block;
@@ -220,7 +220,7 @@
     margin-right: 2px;
 }
 
-.liImg {
+.li_img {
     display: inline-block;
     width: 130px;
     height: 100px;
@@ -239,7 +239,7 @@
     cursor: move;
 }
 
-.toolbar_wrap {
+.div_toolbar_wrap {
     width: 130px;
     height: 100px;
     cursor: move;
@@ -248,7 +248,7 @@
     left: 0;
 }
 
-    .toolbar_wrap:hover {
+    .div_toolbar_wrap:hover {
         display: block;
         width: 130px;
         height: 100px;

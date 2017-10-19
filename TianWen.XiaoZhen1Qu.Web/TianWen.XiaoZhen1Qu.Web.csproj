@@ -167,6 +167,7 @@
     <Content Include="Areas\Business\Css\CL\CL_MTC.css" />
     <Content Include="Areas\Business\Css\CL\CL_ZXCDDCSLC.css" />
     <Content Include="Areas\Business\Css\Common\HTFB_Common.css" />
+    <Content Include="Areas\Business\Css\Common\Img.css" />
     <Content Include="Areas\Business\Css\Common\Top.css" />
     <Content Include="Areas\Business\Css\Common\XZQ.css" />
     <Content Include="Areas\Business\Css\CW\CW_CWFW.css" />

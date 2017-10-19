@@ -1,9 +1,9 @@
 ﻿function GetUploadCss() {
-    $("#divUploadOut").css("border-color", "#5bc0de");
+    $("#div_upload").css("border-color", "#5bc0de");
 }
 
 function LeaveUploadCss() {
-    $("#divUploadOut").css("border-color", "#cccccc");
+    $("#div_upload").css("border-color", "#cccccc");
 }
 
 function LoadPhotos(photos) {
@@ -13,9 +13,9 @@ function LoadPhotos(photos) {
             $("#divLXRXX").css("margin-top", "300px");
         for (var i = 0; i < photos.length; i++) {
             if (i > 3)
-                $("#ulImgs2").append("<li draggable='true' class='liImg'><img id='ulImgs2_" + (i + 1) + "' src='" + photos[i].PHOTOURL + "' class='divImg' /><div class='toolbar_wrap'><div class='opacity'></div><div class='toolbar'><a class='edit'></a><a class='delete'></a></div></div></li>");
+                $("#ulImgs2").append("<li draggable='true' class='li_img'><img id='ulImgs2_" + (i + 1) + "' src='" + photos[i].PHOTOURL + "' class='divImg' /><div class='div_toolbar_wrap'><div class='opacity'></div><div class='toolbar'><a class='edit'></a><a class='delete'></a></div></div></li>");
             else
-                $("#ulImgs1").append("<li draggable='true' class='liImg'><img id='ulImgs1_" + (i + 1) + "' src='" + photos[i].PHOTOURL + "' class='divImg' /><div class='toolbar_wrap'><div class='opacity'></div><div class='toolbar'><a class='edit'></a><a class='delete'></a></div></div></li>");
+                $("#ulImgs1").append("<li draggable='true' class='li_img'><img id='ulImgs1_" + (i + 1) + "' src='" + photos[i].PHOTOURL + "' class='divImg' /><div class='div_toolbar_wrap'><div class='opacity'></div><div class='toolbar'><a class='edit'></a><a class='delete'></a></div></div></li>");
         }
         BindToolBar();
     }
@@ -32,7 +32,7 @@ function BindMouseHover() {
         $(this).bind("mouseover", function () {
             $(this).next().css("display", "block");
         });
-        $("#ulImgs1").find(".toolbar_wrap").each(function () {
+        $("#ulImgs1").find(".div_toolbar_wrap").each(function () {
             $(this).bind("mouseleave", function () {
                 $(this).css("display", "none");
             });
@@ -42,7 +42,7 @@ function BindMouseHover() {
         $(this).bind("mouseover", function () {
             $(this).next().css("display", "block");
         });
-        $("#ulImgs2").find(".toolbar_wrap").each(function () {
+        $("#ulImgs2").find(".div_toolbar_wrap").each(function () {
             $(this).bind("mouseleave", function () {
                 $(this).css("display", "none");
             });
@@ -197,12 +197,12 @@ function Upload() {
 function uploadComplete(evt) {
     var imagepath = getRootPath() + "/Areas/Business/Photos/" + evt.target.responseText;
     if ($("#ulImgs1").find("img").length < 4) {
-        $("#ulImgs1").append("<li draggable='true' class='liImg'><img src='" + imagepath + "' class='divImg' /><div class='toolbar_wrap'><div class='opacity'></div><div class='toolbar'><a class='edit'></a><a class='delete'></a></div></div></li>");
+        $("#ulImgs1").append("<li draggable='true' class='li_img'><img src='" + imagepath + "' class='divImg' /><div class='div_toolbar_wrap'><div class='opacity'></div><div class='toolbar'><a class='edit'></a><a class='delete'></a></div></div></li>");
 
     }
     else {
         $("#divLXRXX").css("margin-top", "300px");
-        $("#ulImgs2").append("<li draggable='true' class='liImg'><img src='" + imagepath + "' class='divImg' /><div class='toolbar_wrap'><div class='opacity'></div><div class='toolbar'><a class='edit'></a><a class='delete'></a></div></div></li>");
+        $("#ulImgs2").append("<li draggable='true' class='li_img'><img src='" + imagepath + "' class='divImg' /><div class='div_toolbar_wrap'><div class='opacity'></div><div class='toolbar'><a class='edit'></a><a class='delete'></a></div></div></li>");
     }
     ControlUpload();
     ValidateFWZP();
@@ -211,10 +211,10 @@ function uploadComplete(evt) {
 
 function ControlUpload() {
     if ($("#ulImgs2").find("img").length === 4) {
-        $("#divUploadOut").css("background-color", "#ececec");
+        $("#div_upload").css("background-color", "#ececec");
         $("#inputUpload").attr("disabled", "disabled");
     } else {
-        $("#divUploadOut").css("background-color", "#fff");
+        $("#div_upload").css("background-color", "#fff");
         $("#inputUpload").removeAttr("disabled");
     }
 }

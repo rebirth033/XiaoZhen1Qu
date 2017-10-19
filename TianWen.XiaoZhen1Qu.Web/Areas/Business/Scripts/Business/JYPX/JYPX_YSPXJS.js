@@ -2,8 +2,8 @@
 var ue = UE.getEditor('FYMS');
 $(document).ready(function () {
     $(".div_radio").bind("click", RadioSelect);
-    $("#divUploadOut").bind("mouseover", GetUploadCss);
-    $("#divUploadOut").bind("mouseleave", LeaveUploadCss);
+    $("#div_upload").bind("mouseover", GetUploadCss);
+    $("#div_upload").bind("mouseleave", LeaveUploadCss);
     $("#btnFB").bind("click", FB);
     $("#FYMS").bind("focus", FYMSFocus);
     $("#FYMS").bind("blur", FYMSBlur);
