@@ -11,8 +11,30 @@
 }
 
 .divSplit {
-    display: block; 
-    text-align: left
+    width: 900px;
+    display: block;
+    text-align: left;
+    padding-top: 2px;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    height: 70px;
+    position: relative;
+}
+
+.span_split {
+    font-size: 18px;
+    margin-bottom: 5px;
+    line-height: 40px;
+    display: block;
+    color: #333333;
+}
+
+.em_split {
+    width: 900px;
+    height: 1px;
+    float: left;
+    background: #cccccc;
 }
 
 .div_row {
@@ -153,4 +175,10 @@
     width: 20px;
     height: 36px;
     font-family: "宋体", "SimSun";
+}
+
+.input_input {
+    width: 472px;
+    padding: 6px 12px;
+    color: #999999;
 }

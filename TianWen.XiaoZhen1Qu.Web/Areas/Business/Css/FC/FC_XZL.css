@@ -40,37 +40,11 @@
     padding-left: 0;
 }
 
-.divSplit {
-    width: 900px;
-    text-align: center;
-    padding-top: 2px;
-    font-size: 15px;
-    margin-left: 10px;
-    margin-bottom: 10px;
-    height: 70px;
-    position: relative;
-}
 
-.spanSplit {
-    font-size: 18px;
-    margin-bottom: 5px;
-    line-height: 40px;
-    display: block;
-    color: #333333;
-}
 
-.emSplit {
-    width: 900px;
-    height: 1px;
-    float: left;
-    background: #cccccc;
-}
 
-.inputLXRXX {
-    width: 472px;
-    padding: 6px 12px;
-    color: #999999;
-}
+
+
 
 .SRK:focus {
     border: 1px solid #5bc0de;
