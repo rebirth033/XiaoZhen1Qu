@@ -53,7 +53,7 @@ function LoadGSZCLB() {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liGSZCLB' onclick='SelectGSZCLB(this)'><img class='img_GSZCLB'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    html += "<li class='liGSZCLB' onclick='SelectDuoX(this)'><img class='img_GSZCLB'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i === 3 || i === 7 || i === 11 || i === 15 || i === 19) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
@@ -72,32 +72,6 @@ function LoadGSZCLB() {
 
         }
     });
-}
-//选择工商注册
-function SelectGSZCLB(obj) {
-    if ($(obj).find("img").attr("src").indexOf("blue") !== -1)
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-    else
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-}
-//获取工商注册类别
-function GetGSZCLB() {
-    var GSZCLB = "";
-    $(".liGSZCLB").each(function () {
-        if ($(this).find("img").attr("src").indexOf("blue") !== -1)
-            GSZCLB += $(this).find("label")[0].innerHTML + ",";
-    });
-    return RTrim(GSZCLB, ',');
-}
-//设置工商注册类别
-function SetGSZCLB(lbs) {
-    var lbarray = lbs.split(',');
-    for (var i = 0; i < lbarray.length; i++) {
-        $(".liGSZCLB").each(function () {
-            if ($(this).find("label")[0].innerHTML.indexOf(lbarray[i]) !== -1)
-                $(this).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-        });
-    }
 }
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
@@ -131,7 +105,7 @@ function LoadSWFW_GSZCJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.SWFW_GSZCJBXX.BCMS);
                 });
-                SetGSZCLB(xml.Value.SWFW_GSZCJBXX.LB);
+                SetDuoX("GSZCLB", xml.Value.SWFW_GSZCJBXX.LB);
                 $("#spanQY").html(xml.Value.SWFW_GSZCJBXX.QY);
                 $("#spanDD").html(xml.Value.SWFW_GSZCJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
@@ -151,7 +125,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "LB", "'" + GetGSZCLB() + "'");
+    obj = jsonObj.AddJson(obj, "LB", "'" + GetDuoX("GSZCLB") + "'");
 
     if (getUrlParam("SWFW_GSZCJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "SWFW_GSZCJBXXID", "'" + getUrlParam("SWFW_GSZCJBXXID") + "'");

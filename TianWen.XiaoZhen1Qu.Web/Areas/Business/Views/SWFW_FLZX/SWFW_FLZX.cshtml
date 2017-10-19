@@ -15,7 +15,7 @@
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/Common/XZQ.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/SWFW/SWFW_FLZX.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/SWFW/SWFW_FLZXYZ.js")"></script>
-    
+
 </head>
 <body>
     <div>
@@ -98,8 +98,12 @@
                     <span class="spanFWCZ">来源</span>
                 </div>
                 <div class="divRight">
-                    <img class="iFWCZ" id="imgLS" /><label class="labelFWCZ">&nbsp;&nbsp;律师</label>
-                    <img class="iFWCZ" id="imgLSSWS" /><label class="labelFWCZ">&nbsp;&nbsp;律师事务所&nbsp;&nbsp;</label>
+                    <div class="div_radio" id="div_ly_ls">
+                        <img class="iFWCZ" id="img_ly_ls" /><label class="labelFWCZ">律师</label>
+                    </div>
+                    <div class="div_radio" id="div_ly_lssws">
+                        <img class="iFWCZ" id="img_ly_lssws" /><label class="labelFWCZ">律师事务所</label>
+                    </div>
                 </div>
             </div>
             <div id="divFLZXLB" class="divFWCZ" style="z-index: 996;">
@@ -116,7 +120,7 @@
                     <span id="spanZYZH">执业证号</span>
                 </div>
                 <div class="divRight">
-                    <input id="ZYZH" maxlength="50" column="ZYZH" class="spanFWLX SRK" style="width: 594px; padding: 6px 12px; color: #999999" type="text" placeholder="吸引人的标题可让更多的人看您的信息喔"/>
+                    <input id="ZYZH" maxlength="50" column="ZYZH" class="spanFWLX SRK" style="width: 594px; padding: 6px 12px; color: #999999" type="text" placeholder="吸引人的标题可让更多的人看您的信息喔" />
                     <div id="divZYZHTip"></div>
                 </div>
             </div>

@@ -1,8 +1,6 @@
 ﻿var isleave = true;
 var ue = UE.getEditor('FYMS');
 $(document).ready(function () {
-    $("#imgJXZS").bind("click", JXZSSelect);
-    $("#imgJLZS").bind("click", JLZSSelect);
     $("#divUploadOut").bind("mouseover", GetUploadCss);
     $("#divUploadOut").bind("mouseleave", LeaveUploadCss);
     $("#btnFB").bind("click", FB);
@@ -39,36 +37,6 @@ function LoadDefault() {
     ue.ready(function () {
         ue.setHeight(200);
     });
-    $("#imgJXZS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgJLZS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
-//选择驾校招生
-function JXZSSelect() {
-    $("#imgJXZS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgJLZS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
-//选择教练招生
-function JLZSSelect() {
-    $("#imgJXZS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    $("#imgJLZS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-}
-//获取类别
-function GetLB() {
-    if ($("#imgJXZS").attr("src").indexOf("blue") !== -1)
-        return "0";
-    else
-        return "1";
-}
-//设置类别
-function SetLB(gq) {
-    if (gq === 0) {
-        $("#imgJXZS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-        $("#imgJLZS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    }
-    else {
-        $("#imgJXZS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-        $("#imgJLZS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    }
 }
 //加载驾照
 function LoadJZ() {
@@ -85,7 +53,7 @@ function LoadJZ() {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liJZ' onclick='SelectJZ(this)'><img class='img_JZ'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    html += "<li class='liJZ' onclick='SelectDuoX(this)'><img class='img_JZ'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i === 2 || i === 5 || i === 8 || i === 11 || i === 14) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
@@ -120,7 +88,7 @@ function LoadBB() {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liBB' onclick='SelectJZ(this)'><img class='img_BB'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    html += "<li class='liBB' onclick='SelectDuoX(this)'><img class='img_BB'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i === 3 || i === 7 || i === 11 || i === 15 || i === 19) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
@@ -139,58 +107,6 @@ function LoadBB() {
 
         }
     });
-}
-//选择驾照
-function SelectJZ(obj) {
-    if ($(obj).find("img").attr("src").indexOf("blue") !== -1)
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-    else
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-}
-//获取驾照
-function GetJZ() {
-    var JZ = "";
-    $(".liJZ").each(function () {
-        if ($(this).find("img").attr("src").indexOf("blue") !== -1)
-            JZ += $(this).find("label")[0].innerHTML + ",";
-    });
-    return RTrim(JZ, ',');
-}
-//设置驾照
-function SetJZ(lbs) {
-    var lbarray = lbs.split(',');
-    for (var i = 0; i < lbarray.length; i++) {
-        $(".liJZ").each(function () {
-            if ($(this).find("label")[0].innerHTML.indexOf(lbarray[i]) !== -1)
-                $(this).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-        });
-    }
-}
-//选择班别
-function SelectBB(obj) {
-    if ($(obj).find("img").attr("src").indexOf("blue") !== -1)
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-    else
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-}
-//获取班别
-function GetBB() {
-    var BB = "";
-    $(".liBB").each(function () {
-        if ($(this).find("img").attr("src").indexOf("blue") !== -1)
-            BB += $(this).find("label")[0].innerHTML + ",";
-    });
-    return RTrim(BB, ',');
-}
-//设置班别
-function SetBB(lbs) {
-    var lbarray = lbs.split(',');
-    for (var i = 0; i < lbarray.length; i++) {
-        $(".liBB").each(function () {
-            if ($(this).find("label")[0].innerHTML.indexOf(lbarray[i]) !== -1)
-                $(this).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-        });
-    }
 }
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
@@ -227,9 +143,9 @@ function LoadSHFW_CLFW_JXJBXX() {
                 $("#spanQY").html(xml.Value.SHFW_CLFW_JXJBXX.QY);
                 $("#spanDD").html(xml.Value.SHFW_CLFW_JXJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
-                SetLB(xml.Value.SHFW_CLFW_JXJBXX.LB);
-                SetJZ(xml.Value.SHFW_CLFW_JXJBXX.JZ);
-                SetBB(xml.Value.SHFW_CLFW_JXJBXX.BB);
+                SetDX("LB", xml.Value.SHFW_CLFW_JXJBXX.LB);
+                SetDuoX("JZ", xml.Value.SHFW_CLFW_JXJBXX.JZ);
+                SetDuoX("BB", xml.Value.SHFW_CLFW_JXJBXX.BB);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -245,9 +161,9 @@ function FB() {
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
-    obj = jsonObj.AddJson(obj, "LB", "'" + GetLB() + "'");
-    obj = jsonObj.AddJson(obj, "JZ", "'" + GetJZ() + "'");
-    obj = jsonObj.AddJson(obj, "BB", "'" + GetBB() + "'");
+    obj = jsonObj.AddJson(obj, "LB", "'" + GetDX("LB") + "'");
+    obj = jsonObj.AddJson(obj, "JZ", "'" + GetDuoX("JZ") + "'");
+    obj = jsonObj.AddJson(obj, "BB", "'" + GetDuoX("BB") + "'");
 
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
 

@@ -45,14 +45,14 @@ function SelectLB(obj, type, id) {
     $("#div" + type).css("display", "none");
     $("#LBID").val(id);
     PDLB(obj.innerHTML);
-
 }
 //判断类别
 function PDLB(lbmc) {
     if (lbmc === "卫浴/洁具维修" || lbmc === "水管/水龙头维修" || lbmc === "粉刷/防腐") {
+        BindClick("XL");
         $("#spanXL").html("请选择小类");
         $("#divXLText").css("display", "");
-        BindClick("XL");
+        $("#divXL").css("display", "none");
     }
     else {
         $("#divXLText").css("display", "none");

@@ -1,10 +1,10 @@
 ﻿var isleave = true;
 var ue = UE.getEditor('FYMS');
 $(document).ready(function () {
-    $("#imgLS").bind("click", LSSelect);
-    $("#imgLSSWS").bind("click", LSSWSSelect);
     $("#divUploadOut").bind("mouseover", GetUploadCss);
     $("#divUploadOut").bind("mouseleave", LeaveUploadCss);
+    $("#div_ly_ls").bind("click", LSSelect);
+    $("#div_ly_lssws").bind("click", LSSWSSelect);
     $("#btnFB").bind("click", FB);
     $("#FYMS").bind("focus", FYMSFocus);
     $("#FYMS").bind("blur", FYMSBlur);
@@ -39,40 +39,16 @@ function LoadDefault() {
     ue.ready(function () {
         ue.setHeight(200);
     });
-    $("#imgLS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgLSSWS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
 }
 //选择律师
 function LSSelect() {
-    $("#imgLS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgLSSWS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
     $("#divZYZH").css("display", "");
     $("#divZYJG").css("display", "");
 }
 //选择律师事务所
 function LSSWSSelect() {
-    $("#imgLS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    $("#imgLSSWS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
     $("#divZYZH").css("display", "none");
     $("#divZYJG").css("display", "none");
-}
-//获取来源
-function GetLY() {
-    if ($("#imgLS").attr("src").indexOf("blue") !== -1)
-        return "0";
-    else
-        return "1";
-}
-//设置来源
-function SetLY(sfsm) {
-    if (sfsm === 0) {
-        $("#imgLS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-        $("#imgLSSWS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    }
-    else {
-        $("#imgLS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-        $("#imgLSSWS").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    }
 }
 //加载法律咨询类别
 function LoadFLZXLB() {
@@ -89,7 +65,7 @@ function LoadFLZXLB() {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liFLZXLB' onclick='SelectFLZXLB(this)'><img class='img_FLZXLB'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    html += "<li class='liFLZXLB' onclick='SelectDuoX(this)'><img class='img_FLZXLB'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i === 3 || i === 7 || i === 11 || i === 15 || i === 19) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
@@ -108,32 +84,6 @@ function LoadFLZXLB() {
 
         }
     });
-}
-//选择法律咨询
-function SelectFLZXLB(obj) {
-    if ($(obj).find("img").attr("src").indexOf("blue") !== -1)
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-    else
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-}
-//获取法律咨询类别
-function GetFLZXLB() {
-    var FLZXLB = "";
-    $(".liFLZXLB").each(function () {
-        if ($(this).find("img").attr("src").indexOf("blue") !== -1)
-            FLZXLB += $(this).find("label")[0].innerHTML + ",";
-    });
-    return RTrim(FLZXLB, ',');
-}
-//设置法律咨询类别
-function SetFLZXLB(lbs) {
-    var lbarray = lbs.split(',');
-    for (var i = 0; i < lbarray.length; i++) {
-        $(".liFLZXLB").each(function () {
-            if ($(this).find("label")[0].innerHTML.indexOf(lbarray[i]) !== -1)
-                $(this).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-        });
-    }
 }
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
@@ -167,8 +117,8 @@ function LoadSWFW_FLZXJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.SWFW_FLZXJBXX.BCMS);
                 });
-                SetFLZXLB(xml.Value.SWFW_FLZXJBXX.LB);
-                SetLY(xml.Value.SWFW_FLZXJBXX.LY);
+                SetDuoX("FLZXLB", xml.Value.SWFW_FLZXJBXX.LB);
+                SetDX("LY", xml.Value.SWFW_FLZXJBXX.LY);
                 $("#spanQY").html(xml.Value.SWFW_FLZXJBXX.QY);
                 $("#spanDD").html(xml.Value.SWFW_FLZXJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
@@ -188,8 +138,8 @@ function FB() {
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "LB", "'" + GetFLZXLB() + "'");
-    obj = jsonObj.AddJson(obj, "LY", "'" + GetLY() + "'");
+    obj = jsonObj.AddJson(obj, "LB", "'" + GetDuoX("FLZXLB") + "'");
+    obj = jsonObj.AddJson(obj, "LY", "'" + GetDX("LY") + "'");
 
     if (getUrlParam("SWFW_FLZXJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "SWFW_FLZXJBXXID", "'" + getUrlParam("SWFW_FLZXJBXXID") + "'");
