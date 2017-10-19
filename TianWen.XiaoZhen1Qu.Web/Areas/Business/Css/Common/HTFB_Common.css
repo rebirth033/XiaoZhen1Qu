@@ -7,7 +7,12 @@
 .div_head {
     margin-top: 20px;
     z-index: 1001;
-    position:relative;
+    position: relative;
+}
+
+.divSplit {
+    display: block; 
+    text-align: left
 }
 
 .div_row {
@@ -37,12 +42,15 @@
 }
 
 .div_radio {
-    
+    cursor: pointer;
+    display: inline-block;
 }
 
 .label_radio {
     font-weight: normal;
     font-size: 14px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .img_radio {
@@ -66,4 +74,21 @@
     height: 16px;
     display: inline-block;
     vertical-align: middle;
+}
+
+.input_spaninput {
+    width: 100px;
+    margin-top: 1px;
+    border: none;
+    height: 30px;
+    text-align: center;
+}
+
+.span_spaninput {
+    border: 1px solid #cccccc;
+    display: inline-block;
+    width: 128px;
+    height: 34px;
+    border-radius: 4px;
+    font-size: 14px;
 }

@@ -385,7 +385,7 @@
     <Content Include="Areas\Business\Css\PFCG\PFCG_JXJG.css" />
     <Content Include="Areas\Business\Css\PFCG\PFCG_KQ.css" />
     <Content Include="Areas\Business\Css\PFCG\PFCG_TS.css" />
-    <Content Include="Areas\Business\Css\PageCommon.css" />
+    <Content Include="Areas\Business\Css\Common\PageCommon.css" />
     <Content Include="Areas\Business\Css\PFCG\PFCG_AFSB.css" />
     <Content Include="Areas\Business\Css\PFCG\PFCG_BZ.css" />
     <Content Include="Areas\Business\Css\PFCG\PFCG_DGDL.css" />

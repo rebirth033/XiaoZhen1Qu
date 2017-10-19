@@ -175,7 +175,7 @@ function LoadFC_DZFJBXX() {
                 });
                 if (xml.Value.FC_DZFJBXX.CZFS !== null)
                     SetDX("CZFS", xml.Value.FC_DZFJBXX.CZFS);
-                $("#spanFWLX").html(xml.Value.FC_DZFJBXX.FWLX);
+                $("#span_spaninput").html(xml.Value.FC_DZFJBXX.FWLX);
                 $("#spanZJDW").html(xml.Value.FC_DZFJBXX.ZJDW);
                 $("#JYGZ").html(xml.Value.FC_DZFJBXX.JYGZ);
                 LoadPhotos(xml.Value.Photos);
@@ -192,7 +192,7 @@ function FB() {
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
-    obj = jsonObj.AddJson(obj, "FWLX", "'" + $("#spanFWLX").html() + "'");
+    obj = jsonObj.AddJson(obj, "FWLX", "'" + $("#span_spaninput").html() + "'");
     obj = jsonObj.AddJson(obj, "ZJDW", "'" + $("#spanZJDW").html() + "'");
     obj = jsonObj.AddJson(obj, "CZFS", "'" + GetDX("CZFS") + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");

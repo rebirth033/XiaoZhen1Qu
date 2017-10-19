@@ -101,7 +101,7 @@
         color: #ff6100;
     }
 
-.inputFWLX {
+.input_spaninput {
     width: 100px;
     border: none;
     height: 24px;
@@ -109,7 +109,7 @@
     float: left;
 }
 
-.spanFWLX {
+.span_spaninput {
     border: 1px solid #cccccc;
     display: inline-block;
     width: 128px;

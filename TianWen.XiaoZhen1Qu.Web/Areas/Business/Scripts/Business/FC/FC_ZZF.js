@@ -6,10 +6,10 @@ $(document).ready(function () {
     $("#divUploadOut").bind("mouseover", GetUploadCss);
     $("#divUploadOut").bind("mouseleave", LeaveUploadCss);
     $("#btnFB").bind("click", FB);
-    $(".inputLCFB").bind("focus", FWLXYLCFBFocus);
-    $(".inputLCFB").bind("blur", FWLXYLCFBBlur);
-    $(".inputFWLX").bind("focus", FWLXYLCFBFocus);
-    $(".inputFWLX").bind("blur", FWLXYLCFBBlur);
+    $(".input_spaninput").bind("focus", FWLXYLCFBFocus);
+    $(".input_spaninput").bind("blur", FWLXYLCFBBlur);
+    $(".input_spaninput").bind("focus", FWLXYLCFBFocus);
+    $(".input_spaninput").bind("blur", FWLXYLCFBBlur);
     $("#FYMS").bind("focus", FYMSFocus);
     $("#FYMS").bind("blur", FYMSBlur);
     $("#KRZSJ").datepicker({ minDate: 0 });

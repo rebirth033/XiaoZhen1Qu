@@ -13,15 +13,9 @@
 
 
 
-.inputFWLX {
-    width: 100px;
-    margin-top: 1px;
-    border: none;
-    height: 30px;
-    text-align: center;
-}
 
-.spanFWLX {
+
+.span_spaninput {
     border: 1px solid #cccccc;
     display: inline-block;
     width: 150px;
@@ -30,7 +24,7 @@
     font-size: 14px;
 }
 
-.spanFWLXOut {
+.span_spaninputOut {
     display: inline-block;
     width: 150px;
     height: 34px;
@@ -40,7 +34,7 @@
     position: relative;
 }
 
-.spanFWLXIn {
+.span_spaninputIn {
     border: 1px solid #cccccc;
     display: inline-block;
     width: 150px;

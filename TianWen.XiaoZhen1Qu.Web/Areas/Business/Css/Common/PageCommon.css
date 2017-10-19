@@ -166,11 +166,7 @@ li {
     color: #333333;
 }
 
-/*.spanFontColor:focus {
-    color: #333333;
-}*/
-
-.inputLCFB {
+.input_spaninput {
     margin-top: 1px; 
     border: none; 
     height: 30px; 
@@ -185,16 +181,4 @@ li {
 /*清除IE下的 search 叉号*/
 input[type=text]::-ms-clear{
   display: none;
-}
-
-.div_radio {
-    cursor: pointer;
-    display: inline-block;
-}
-
-.label_radio {
-    font-weight: normal;
-    font-size: 14px;
-    margin-left: 10px;
-    margin-right: 10px;
 }
