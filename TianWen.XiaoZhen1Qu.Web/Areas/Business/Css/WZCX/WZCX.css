@@ -77,7 +77,7 @@
     position: relative;
 }
 
-.divFWQKArrow {
+.span_select_arrow {
     background-image: url(../images/arrow_down_big.png);
     background-repeat: no-repeat;
     width: 16px;

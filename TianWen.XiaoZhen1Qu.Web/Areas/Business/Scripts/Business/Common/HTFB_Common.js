@@ -5,7 +5,7 @@
     $(".div_content").css("margin-left", (document.documentElement.clientWidth - 900) / 2);
     $("#spanCXLB").bind("click", CXLB);
     $(".div_radio").bind("click", RadioSelect);
-    $(".iFWCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+    $(".img_radio").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
     $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
 

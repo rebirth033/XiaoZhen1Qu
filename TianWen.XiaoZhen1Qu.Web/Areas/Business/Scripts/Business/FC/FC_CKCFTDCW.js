@@ -43,7 +43,7 @@ function LoadDefault() {
     ue.ready(function () {
         ue.setHeight(200);
     });
-    $(".iFWCZ").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+    $(".img_radio").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
 }
 //选择出租
 function CZSelect() {

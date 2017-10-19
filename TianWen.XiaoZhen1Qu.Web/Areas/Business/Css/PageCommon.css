@@ -192,7 +192,7 @@ input[type=text]::-ms-clear{
     display: inline-block;
 }
 
-.labelFWCZ {
+.label_radio {
     font-weight: normal;
     font-size: 14px;
     margin-left: 10px;
