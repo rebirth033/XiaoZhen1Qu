@@ -19,7 +19,7 @@ $(document).ready(function () {
     BindClick("XLYQ");
     BindClick("GZNX");
     BindClick("ZWLB");
-    LoadZWFL();
+    LoadDuoX("职位福利", "ZWFL");
 });
 //显示职位类别
 function ShowZWLBThird() {
@@ -113,33 +113,33 @@ function SelectZWLB() {
     $("#divZWLB").css("display", "none");
     $("#BT").val($(this)[0].innerHTML);
 }
-//加载职位福利
-function LoadZWFL() {
+//加载多选
+function LoadDuoX(type, id) {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "职位福利",
+            TYPENAME: type,
             TBName: "CODES_QZZP"
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liZWFL' onclick='SelectZWFL(this)'><img class='img_ZWFL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i === 5 || i === 11 || i === 17 || i === 23 || i === 29) {
+                    html += "<li class='li" + id + "' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    if (i === 4 || i === 9 || i === 14 || i === 19 || i === 24) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
                 }
-                if (parseInt(xml.list.length % 6) === 0)
-                    $("#divZWFL").css("height", parseInt(xml.list.length / 6) * 45 + "px");
+                if (parseInt(xml.list.length % 5) === 0)
+                    $("#div" + id).css("height", parseInt(xml.list.length / 5) * 45 + "px");
                 else
-                    $("#divZWFL").css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 5) + 1) * 45 + "px");
                 html += "</ul>";
-                $("#divZWFLText").html(html);
-                $(".img_ZWFL").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $("#div" + id + "Text").html(html);
+                $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 LoadQZZP_QZZPJBXX();
             }
         },
@@ -147,34 +147,6 @@ function LoadZWFL() {
 
         }
     });
-}
-//选择职位福利
-function SelectZWFL(obj) {
-    if ($(obj).find("img").attr("src").indexOf("blue") !== -1)
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-    else
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-}
-//获取职位福利
-function GetZWFL() {
-    var ZWFL = "";
-    $(".liZWFL").each(function () {
-        if ($(this).find("img").attr("src").indexOf("blue") !== -1)
-            ZWFL += $(this).find("label")[0].innerHTML + ",";
-    });
-    return RTrim(ZWFL, ',');
-}
-//设置职位福利
-function SetZWFL(lbs) {
-    if (lbs !== "" && lbs !== null) {
-        var lbarray = lbs.split(',');
-        for (var i = 0; i < lbarray.length; i++) {
-            $(".liZWFL").each(function () {
-                if ($(this).find("label")[0].innerHTML.indexOf(lbarray[i]) !== -1)
-                    $(this).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-            });
-        }
-    }
 }
 //加载求职招聘_全职招聘基本信息
 function LoadQZZP_QZZPJBXX() {
@@ -202,7 +174,7 @@ function LoadQZZP_QZZPJBXX() {
                 $("#spanXLYQ").html(xml.Value.QZZP_QZZPJBXX.XLYQ);
                 $("#spanGZNX").html(xml.Value.QZZP_QZZPJBXX.GZNX);
                 LoadPhotos(xml.Value.Photos);
-                SetZWFL(xml.Value.QZZP_QZZPJBXX.ZWFL);
+                SetDuoX("ZWFL", xml.Value.QZZP_QZZPJBXX.ZWFL);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -220,7 +192,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "MYXZ", "'" + $("#spanMYXZ").html() + "'");
     obj = jsonObj.AddJson(obj, "XLYQ", "'" + $("#spanXLYQ").html() + "'");
     obj = jsonObj.AddJson(obj, "GZNX", "'" + $("#spanGZNX").html() + "'");
-    obj = jsonObj.AddJson(obj, "ZWFL", "'" + GetZWFL() + "'");
+    obj = jsonObj.AddJson(obj, "ZWFL", "'" + GetDuoX("ZWFL") + "'");
 
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
 

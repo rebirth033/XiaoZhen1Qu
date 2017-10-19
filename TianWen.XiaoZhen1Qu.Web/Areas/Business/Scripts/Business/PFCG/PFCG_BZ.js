@@ -14,7 +14,7 @@ $(document).ready(function () {
     $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
     LoadTXXX();
-    LoadBZLB();
+    LoadDuoX("包装类别", "BZLB");
     LoadDefault();
     BindClick("LB");
     BindClick("QY");
@@ -39,82 +39,43 @@ function LoadDefault() {
         ue.setHeight(200);
     });
 }
-//加载包装类别
-function LoadBZLB() {
+//加载多选
+function LoadDuoX(type, id) {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "包装类别",
+            TYPENAME: type,
             TBName: "CODES_PFCG"
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liBZLB' onclick='SelectBZLB(this)'><img class='img_BZLB'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    html += "<li class='li" + id + "' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i === 4 || i === 9 || i === 14 || i === 19 || i === 24) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
                 }
-                if (parseInt(xml.list.length % 6) === 0)
-                    $("#divBZLB").css("height", parseInt(xml.list.length / 6) * 45 + "px");
+                if (parseInt(xml.list.length % 5) === 0)
+                    $("#div" + id).css("height", parseInt(xml.list.length / 5) * 45 + "px");
                 else
-                    $("#divBZLB").css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 5) + 1) * 45 + "px");
                 html += "</ul>";
-                $("#divBZLBText").html(html);
-                $(".img_BZLB").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-                LoadBZYT();
+                $("#div" + id + "Text").html(html);
+                $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                if (type === "包装类别")
+                    LoadDuoX("包装用途", "BZYT");
+                if (type === "包装用途")
+                    LoadPFCG_DZYQJJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
         }
     });
-}
-//加载包装用途
-function LoadBZYT() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "包装用途",
-            TBName: "CODES_PFCG"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='ulFWPZ'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liBZYT' onclick='SelectBZLB(this)'><img class='img_BZYT'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i === 4 || i === 9 || i === 14 || i === 19 || i === 24) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
-                    }
-                }
-                if (parseInt(xml.list.length % 6) === 0)
-                    $("#divBZYT").css("height", parseInt(xml.list.length / 6) * 45 + "px");
-                else
-                    $("#divBZYT").css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
-                html += "</ul>";
-                $("#divBZYTText").html(html);
-                $(".img_BZYT").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-                LoadPFCG_BZJBXX();
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//选择包装类别/用途
-function SelectBZLB(obj) {
-    if ($(obj).find("img").attr("src").indexOf("blue") !== -1)
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-    else
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
 }
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
@@ -151,8 +112,8 @@ function LoadPFCG_BZJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.PFCG_BZJBXX.BCMS);
                 });
-                SetBZLB(xml.Value.PFCG_BZJBXX.LB);
-                SetBZYT(xml.Value.PFCG_BZJBXX.YT);
+                SetDuoX("BZLB", xml.Value.PFCG_BZJBXX.LB);
+                SetDuoX("BZYT", xml.Value.PFCG_BZJBXX.YT);
                 $("#spanQY").html(xml.Value.PFCG_BZJBXX.QY);
                 $("#spanDD").html(xml.Value.PFCG_BZJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
@@ -163,44 +124,6 @@ function LoadPFCG_BZJBXX() {
         }
     });
 }
-//获取包装类别
-function GetBZLB() {
-    var BZLB = "";
-    $(".liBZLB").each(function () {
-        if ($(this).find("img").attr("src").indexOf("blue") !== -1)
-            BZLB += $(this).find("label")[0].innerHTML + ",";
-    });
-    return RTrim(BZLB, ',');
-}
-//设置包装类别
-function SetBZLB(lbs) {
-    var lbarray = lbs.split(',');
-    for (var i = 0; i < lbarray.length; i++) {
-        $(".liBZLB").each(function () {
-            if ($(this).find("label")[0].innerHTML.indexOf(lbarray[i]) !== -1)
-                $(this).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-        });
-    }
-}
-//获取包装用途
-function GetBZYT() {
-    var BZYT = "";
-    $(".liBZYT").each(function () {
-        if ($(this).find("img").attr("src").indexOf("blue") !== -1)
-            BZYT += $(this).find("label")[0].innerHTML + ",";
-    });
-    return RTrim(BZYT, ',');
-}
-//设置包装用途
-function SetBZYT(lbs) {
-    var lbarray = lbs.split(',');
-    for (var i = 0; i < lbarray.length; i++) {
-        $(".liBZYT").each(function () {
-            if ($(this).find("label")[0].innerHTML.indexOf(lbarray[i]) !== -1)
-                $(this).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-        });
-    }
-}
 //发布
 function FB() {
     if (AllValidate() === false) return;
@@ -210,8 +133,8 @@ function FB() {
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "LB", "'" + GetBZLB() + "'");
-    obj = jsonObj.AddJson(obj, "YT", "'" + GetBZYT() + "'");
+    obj = jsonObj.AddJson(obj, "LB", "'" + GetDuoX("BZLB") + "'");
+    obj = jsonObj.AddJson(obj, "YT", "'" + GetDuoX("BZYT") + "'");
 
     if (getUrlParam("PFCG_BZJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "PFCG_BZJBXXID", "'" + getUrlParam("PFCG_BZJBXXID") + "'");

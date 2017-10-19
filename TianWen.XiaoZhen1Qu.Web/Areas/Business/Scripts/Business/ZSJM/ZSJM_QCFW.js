@@ -22,7 +22,7 @@ $(document).ready(function () {
     BindClick("DDMJ");
     BindClick("QY");
     BindClick("DD");
-    LoadSHRQ();
+    LoadDuoX("适合人群", "SHRQ");
 });
 //描述框focus
 function FYMSFocus() {
@@ -43,29 +43,33 @@ function LoadDefault() {
         ue.setHeight(200);
     });
 }
-//加载适合人群
-function LoadSHRQ() {
+//加载多选
+function LoadDuoX(type, id) {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "适合人群",
+            TYPENAME: type,
             TBName: "CODES_ZSJM"
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liSHRQ' onclick='SelectSHRQ(this)'><img class='img_SHRQ'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    html += "<li class='li" + id + "' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i === 5 || i === 11 || i === 17 || i === 23 || i === 29) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
                 }
+                if (parseInt(xml.list.length % 6) === 0)
+                    $("#div" + id).css("height", parseInt(xml.list.length / 6) * 45 + "px");
+                else
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
                 html += "</ul>";
-                $("#divSHRQText").html(html);
-                $(".img_SHRQ").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $("#div" + id + "Text").html(html);
+                $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 LoadZSDQ();
             }
         },
@@ -88,7 +92,7 @@ function LoadZSDQ() {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liZSDQ' onclick='SelectZSDQ(this)'><img class='img_ZSDQ'/><label style='font-weight:normal;'>" + xml.list[i].NAME + "</label></li>";
+                    html += "<li class='liZSDQ' onclick='SelectDuoX(this)'><img class='img_ZSDQ'/><label style='font-weight:normal;'>" + xml.list[i].NAME + "</label></li>";
                     if (i === 5 || i === 11 || i === 17 || i === 23 || i === 29) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
@@ -125,17 +129,18 @@ function PDLB(name, codeid) {
 function LoadQCFWXL(codeid) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadJXXX",
+        url: getRootPath() + "/Business/Common/LoadByParentID",
         dataType: "json",
         data:
         {
-            JXID: codeid
+            ParentID: codeid,
+            TBName: "CODES_ZSJM"
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liQCFWXL' onclick='SelectQCFWXL(this)'><img class='img_QCFWXL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    html += "<li class='liQCFWXL' onclick='SelectDuoX(this)'><img class='img_QCFWXL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i === 5 || i === 11 || i === 17 || i === 23 || i === 29) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
@@ -186,94 +191,13 @@ function LoadQCFWXLByName(name, xl) {
                     $("#divQCFWXL").css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
 
                 $("#divQCFWXL").css("display", "");
-                SetQCFWXL(xl);
+                SetDuoX("QCFWXL", xl);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
         }
     });
-}
-//选择汽车服务小类
-function SelectQCFWXL(obj) {
-    if ($(obj).find("img").attr("src").indexOf("blue") !== -1)
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-    else
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-}
-//获取汽车服务小类
-function GetQCFWXL() {
-    var QCFWXL = "";
-    $(".liQCFWXL").each(function () {
-        if ($(this).find("img").attr("src").indexOf("blue") !== -1)
-            QCFWXL += $(this).find("label")[0].innerHTML + ",";
-    });
-    return RTrim(QCFWXL, ',');
-}
-//设置汽车服务小类
-function SetQCFWXL(lbs) {
-    var lbarray = lbs.split(',');
-    for (var i = 0; i < lbarray.length; i++) {
-        $(".liQCFWXL").each(function () {
-            if ($(this).find("label")[0].innerHTML.indexOf(lbarray[i]) !== -1)
-                $(this).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-        });
-    }
-    $("#divQCFWXL").css("display", "");
-}
-//选择适合人群
-function SelectSHRQ(obj) {
-    if ($(obj).find("img").attr("src").indexOf("blue") !== -1)
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-    else
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-}
-//获取适合人群
-function GetSHRQ() {
-    var SHRQ = "";
-    $(".liSHRQ").each(function () {
-        if ($(this).find("img").attr("src").indexOf("blue") !== -1)
-            SHRQ += $(this).find("label")[0].innerHTML + ",";
-    });
-    return RTrim(SHRQ, ',');
-}
-//设置适合人群
-function SetSHRQ(lbs) {
-    if (lbs !== "" && lbs !== null) {
-        var lbarray = lbs.split(',');
-        for (var i = 0; i < lbarray.length; i++) {
-            $(".liSHRQ").each(function () {
-                if ($(this).find("label")[0].innerHTML.indexOf(lbarray[i]) !== -1)
-                    $(this).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-            });
-        }
-    }
-}
-//选择招商地区
-function SelectZSDQ(obj) {
-    if ($(obj).find("img").attr("src").indexOf("blue") !== -1)
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-    else
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-}
-//获取招商地区
-function GetZSDQ() {
-    var ZSDQ = "";
-    $(".liZSDQ").each(function () {
-        if ($(this).find("img").attr("src").indexOf("blue") !== -1)
-            ZSDQ += $(this).find("label")[0].innerHTML + ",";
-    });
-    return RTrim(ZSDQ, ',');
-}
-//设置招商地区
-function SetZSDQ(lbs) {
-    var lbarray = lbs.split(',');
-    for (var i = 0; i < lbarray.length; i++) {
-        $(".liZSDQ").each(function () {
-            if ($(this).find("label")[0].innerHTML.indexOf(lbarray[i]) !== -1)
-                $(this).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-        });
-    }
 }
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
@@ -330,8 +254,10 @@ function LoadZSJM_QCFWJBXX() {
                 $("#spanQGFDS").html(xml.Value.ZSJM_QCFWJBXX.QGFDS);
                 $("#spanDDMJ").html(xml.Value.ZSJM_QCFWJBXX.DDMJ);
                 LoadPhotos(xml.Value.Photos);
-                SetSHRQ(xml.Value.ZSJM_QCFWJBXX.SHRQ);
-                SetZSDQ(xml.Value.ZSJM_QCFWJBXX.ZSDQ);
+                if (xml.Value.ZSJM_QCFWJBXX.SHRQ !== null)
+                    SetDuoX("SHRQ", xml.Value.ZSJM_QCFWJBXX.SHRQ);
+                if (xml.Value.ZSJM_QCFWJBXX.ZSDQ !== null)
+                    SetDuoX("ZSDQ", xml.Value.ZSJM_QCFWJBXX.ZSDQ);
                 if (xml.Value.ZSJM_QCFWJBXX.LB.indexOf("汽车维修") !== -1 || xml.Value.ZSJM_QCFWJBXX.LB.indexOf("汽车美容") !== -1 || xml.Value.ZSJM_QCFWJBXX.LB.indexOf("汽车用品") !== -1 || xml.Value.ZSJM_QCFWJBXX.LB.indexOf("汽车租赁/买卖") !== -1) {
                     LoadQCFWXLByName(xml.Value.ZSJM_QCFWJBXX.LB, xml.Value.ZSJM_QCFWJBXX.XL);
                 }
@@ -353,9 +279,9 @@ function FB() {
     obj = jsonObj.AddJson(obj, "TZJE", "'" + $("#spanTZJE").html() + "'");
     obj = jsonObj.AddJson(obj, "QGFDS", "'" + $("#spanQGFDS").html() + "'");
     obj = jsonObj.AddJson(obj, "DDMJ", "'" + $("#spanDDMJ").html() + "'");
-    obj = jsonObj.AddJson(obj, "SHRQ", "'" + GetSHRQ() + "'");
-    obj = jsonObj.AddJson(obj, "ZSDQ", "'" + GetZSDQ() + "'");
-    obj = jsonObj.AddJson(obj, "XL", "'" + GetQCFWXL() + "'");
+    obj = jsonObj.AddJson(obj, "SHRQ", "'" + GetDuoX("SHRQ") + "'");
+    obj = jsonObj.AddJson(obj, "ZSDQ", "'" + GetDuoX("ZSDQ") + "'");
+    obj = jsonObj.AddJson(obj, "XL", "'" + GetDuoX("JYPXXL") + "'");
 
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
 

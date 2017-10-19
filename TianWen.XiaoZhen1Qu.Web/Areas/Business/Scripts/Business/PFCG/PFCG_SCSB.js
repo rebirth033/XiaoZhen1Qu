@@ -14,7 +14,7 @@ $(document).ready(function () {
     $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
     LoadTXXX();
-    LoadSCSBLB();
+    LoadDuoX("商超设备", "SCSBLB");
     LoadDefault();
     BindClick("QY");
     BindClick("DD");
@@ -38,29 +38,33 @@ function LoadDefault() {
         ue.setHeight(200);
     });
 }
-//加载商超设备类别
-function LoadSCSBLB() {
+//加载多选
+function LoadDuoX(type, id) {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "商超设备",
+            TYPENAME: type,
             TBName: "CODES_PFCG"
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liFWPZ' onclick='SelectSCSBLB(this)'><img class='img_SCSBLB'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    html += "<li class='li" + id + "' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i === 5 || i === 11 || i === 17 || i === 23 || i === 29) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
                 }
+                if (parseInt(xml.list.length % 6) === 0)
+                    $("#div" + id).css("height", parseInt(xml.list.length / 6) * 45 + "px");
+                else
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
                 html += "</ul>";
-                $("#divSCSBLBText").html(html);
-                $(".img_SCSBLB").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $("#div" + id + "Text").html(html);
+                $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 LoadPFCG_SCSBJBXX();
             }
         },
@@ -68,13 +72,6 @@ function LoadSCSBLB() {
 
         }
     });
-}
-//选择房屋配置
-function SelectSCSBLB(obj) {
-    if ($(obj).find("img").attr("src").indexOf("blue") !== -1)
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-    else
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
 }
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
@@ -108,7 +105,7 @@ function LoadPFCG_SCSBJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.PFCG_SCSBJBXX.BCMS);
                 });
-                SetSCSBLB(xml.Value.PFCG_SCSBJBXX.LB);
+                SetDuoX("SCSBLB", xml.Value.PFCG_SCSBJBXX.LB);
                 $("#spanQY").html(xml.Value.PFCG_SCSBJBXX.QY);
                 $("#spanDD").html(xml.Value.PFCG_SCSBJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
@@ -119,26 +116,6 @@ function LoadPFCG_SCSBJBXX() {
         }
     });
 }
-//获取商超设备类别
-function GetSCSBLB() {
-    var SCSBLB = "";
-    $(".liFWPZ").each(function () {
-        if ($(this).find("img").attr("src").indexOf("blue") !== -1)
-            SCSBLB += $(this).find("label")[0].innerHTML + ",";
-    });
-    return RTrim(SCSBLB, ',');
-}
-//设置商超设备类别
-function SetSCSBLB(lbs) {
-    var lbarray = lbs.split(',');
-    for (var i = 0; i < lbarray.length; i++) {
-        $(".liFWPZ").each(function () {
-            if ($(this).find("label")[0].innerHTML.indexOf(lbarray[i]) !== -1)
-                $(this).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-        });
-    }
-
-}
 //发布
 function FB() {
     if (AllValidate() === false) return;
@@ -148,7 +125,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "LB", "'" + GetSCSBLB() + "'");
+    obj = jsonObj.AddJson(obj, "LB", "'" + GetDuoX("SCSBLB") + "'");
 
     if (getUrlParam("PFCG_SCSBJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "PFCG_SCSBJBXXID", "'" + getUrlParam("PFCG_SCSBJBXXID") + "'");

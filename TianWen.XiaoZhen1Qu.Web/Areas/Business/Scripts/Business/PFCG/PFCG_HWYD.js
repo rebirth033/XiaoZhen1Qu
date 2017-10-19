@@ -54,7 +54,7 @@ function LoadXL() {
             if (xml.Result === 1) {
                 var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"XL\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
+                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"XL\")'>" + xml.list[i].CODENAME + "</li>";
                 }
                 html += "</ul>";
                 $("#divXL").html(html);
@@ -75,9 +75,10 @@ function SelectLB(obj, type, id) {
         $("#divXLText").css("display", "none");
     }
     else {
-        $("#spanXL").html("请选择小类");
         BindClick("XL");
+        $("#spanXL").html("请选择小类");
         $("#divXLText").css("display", "");
+        $("#divXL").css("display", "none");
     }
 }
 //绑定下拉框鼠标点击样式

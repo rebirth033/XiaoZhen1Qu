@@ -3,8 +3,6 @@ var ue = UE.getEditor('FYMS');
 $(document).ready(function () {
     $("#divUploadOut").bind("mouseover", GetUploadCss);
     $("#divUploadOut").bind("mouseleave", LeaveUploadCss);
-    $("#imgDQZP").bind("click", DQZPSelect);
-    $("#imgCQZP").bind("click", CQZPSelect);
     $("#btnFB").bind("click", FB);
     $("#FYMS").bind("focus", FYMSFocus);
     $("#FYMS").bind("blur", FYMSBlur);
@@ -117,41 +115,16 @@ function LoadDefault() {
     ue.ready(function () {
         ue.setHeight(200);
     });
-    $("#imgDQZP").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgCQZP").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
     $(".img_jzsj").each(function () {
         $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
     });
 }
-//选择短期招聘
-function DQZPSelect() {
-    $("#imgDQZP").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#imgCQZP").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    $("#divDQJZSJ").css("display", "");
-}
-//选择长期招聘
-function CQZPSelect() {
-    $("#imgDQZP").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-    $("#imgCQZP").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-    $("#divDQJZSJ").css("display", "none");
-}
-//获取兼职有效期
-function GetJZYXQ() {
-    if ($("#imgDQZP").attr("src").indexOf("blue") !== -1)
-        return "0";
-    else
-        return "1";
-}
 //设置兼职有效期
 function SetJZYXQ(JZYXQ) {
     if (JZYXQ === 0) {
-        $("#imgDQZP").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-        $("#imgCQZP").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
         $("#divDQJZSJ").css("display", "");
     }
     else {
-        $("#imgDQZP").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-        $("#imgCQZP").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
         $("#divDQJZSJ").css("display", "none");
     }
 }
@@ -229,60 +202,6 @@ function SelectJZLB() {
     $("#divJZLB").css("display", "none");
     $("#BT").val($(this)[0].innerHTML);
 }
-//加载区域
-function LoadQY() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadQY",
-        dataType: "json",
-        data:
-        {
-            XZQ: $("#CityName").val()
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectQY(this,\"QY\",\"" + xml.list[i].CODE + "\")'>" + RTrim(RTrim(RTrim(xml.list[i].NAME, '市'), '区'), '县') + "</li>";
-                }
-                html += "</ul>";
-                $("#divQY").html(html);
-                $("#divQY").css("display", "block");
-                ActiveStyle("QY");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载地段
-function LoadDD() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadSQ",
-        dataType: "json",
-        data:
-        {
-            QY: $("#QYCode").val()
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='uldropdown' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='lidropdown' onclick='SelectDropdown(this,\"DD\")'>" + RTrimStr(xml.list[i].NAME, '街道,镇,林场,管理处') + "</li>";
-                }
-                html += "</ul>";
-                $("#divDD").html(html);
-                $("#divDD").css("display", "block");
-                ActiveStyle("DD");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
 //选择区域下拉框
 function SelectQY(obj, type, code) {
     $("#QYCode").val(code);
@@ -318,7 +237,7 @@ function LoadQZZP_JZZPJBXX() {
                 $("#spanGZCS").html(xml.Value.QZZP_JZZPJBXX.GZCS);
                 $("#spanQY").html(xml.Value.QZZP_JZZPJBXX.QY);
                 $("#spanDD").html(xml.Value.QZZP_JZZPJBXX.DD);
-                SetJZYXQ(xml.Value.QZZP_JZZPJBXX.JZYXQ);
+                SetDX("JZYXQ", xml.Value.QZZP_JZZPJBXX.JZYXQ);
                 SetJZSJ(xml.Value.QZZP_JZZPJBXX.JZSJ);
                 if (xml.Value.QZZP_JZZPJBXX.DQJZKSSJ.ToString("yyyy-MM-dd") !== "1-1-1")
                     $("#DQJZKSSJ").val(xml.Value.QZZP_JZZPJBXX.DQJZKSSJ.ToString("yyyy-MM-dd"));
@@ -343,7 +262,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "GZCS", "'" + $("#spanGZCS").html() + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
-    obj = jsonObj.AddJson(obj, "JZYXQ", "'" + GetJZYXQ() + "'");
+    obj = jsonObj.AddJson(obj, "JZYXQ", "'" + GetDX("JZYXQ") + "'");
     obj = jsonObj.AddJson(obj, "JZSJ", "'" + GetJZSJ() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     if ($("#DQJZKSSJ").val() !== "")

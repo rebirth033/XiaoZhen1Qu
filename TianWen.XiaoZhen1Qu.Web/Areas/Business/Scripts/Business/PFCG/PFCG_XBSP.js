@@ -78,6 +78,7 @@ function SelectLB(obj, type, id) {
         $("#spanXL").html("请选择小类");
         BindClick("XL");
         $("#divXLText").css("display", "");
+        $("#divXL").css("display", "none");
     }
 }
 //绑定下拉框鼠标点击样式

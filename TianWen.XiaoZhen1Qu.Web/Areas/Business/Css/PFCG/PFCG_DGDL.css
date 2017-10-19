@@ -56,6 +56,16 @@
     margin-right: 5px;
 }
 
+.liDGDLLB{
+    display: inline-block;
+    width: 105px;
+    height: 30px;
+    text-align: left;
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+
 .spanFWQK {
     display: inline-block;
     width: 120px;

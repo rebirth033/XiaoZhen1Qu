@@ -22,7 +22,7 @@ $(document).ready(function () {
     BindClick("DDMJ");
     BindClick("QY");
     BindClick("DD");
-    LoadSHRQ();
+    LoadDuoX("适合人群", "SHRQ");
 });
 //描述框focus
 function FYMSFocus() {
@@ -43,29 +43,33 @@ function LoadDefault() {
         ue.setHeight(200);
     });
 }
-//加载适合人群
-function LoadSHRQ() {
+//加载多选
+function LoadDuoX(type, id) {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "适合人群",
+            TYPENAME: type,
             TBName: "CODES_ZSJM"
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liSHRQ' onclick='SelectSHRQ(this)'><img class='img_SHRQ'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    html += "<li class='li" + id + "' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i === 5 || i === 11 || i === 17 || i === 23 || i === 29) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
                 }
+                if (parseInt(xml.list.length % 6) === 0)
+                    $("#div" + id).css("height", parseInt(xml.list.length / 6) * 45 + "px");
+                else
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
                 html += "</ul>";
-                $("#divSHRQText").html(html);
-                $(".img_SHRQ").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $("#div" + id + "Text").html(html);
+                $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 LoadZSDQ();
             }
         },
@@ -88,7 +92,7 @@ function LoadZSDQ() {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liZSDQ' onclick='SelectZSDQ(this)'><img class='img_ZSDQ'/><label style='font-weight:normal;'>" + xml.list[i].NAME + "</label></li>";
+                    html += "<li class='liZSDQ' onclick='SelectDuoX(this)'><img class='img_ZSDQ'/><label style='font-weight:normal;'>" + xml.list[i].NAME + "</label></li>";
                     if (i === 5 || i === 11 || i === 17 || i === 23 || i === 29) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
@@ -136,7 +140,7 @@ function LoadJJHBXL(codeid) {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liJJHBXL' onclick='SelectJJHBXL(this)'><img class='img_JJHBXL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    html += "<li class='liJJHBXL' onclick='SelectDuoX(this)'><img class='img_JJHBXL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i === 5 || i === 11 || i === 17 || i === 23 || i === 29) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
@@ -157,87 +161,6 @@ function LoadJJHBXL(codeid) {
 
         }
     });
-}
-//选择家居环保小类
-function SelectJJHBXL(obj) {
-    if ($(obj).find("img").attr("src").indexOf("blue") !== -1)
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-    else
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-}
-//获取家居环保小类
-function GetJJHBXL() {
-    var JJHBXL = "";
-    $(".liJJHBXL").each(function () {
-        if ($(this).find("img").attr("src").indexOf("blue") !== -1)
-            JJHBXL += $(this).find("label")[0].innerHTML + ",";
-    });
-    return RTrim(JJHBXL, ',');
-}
-//设置家居环保小类
-function SetJJHBXL(lbs) {
-    var lbarray = lbs.split(',');
-    for (var i = 0; i < lbarray.length; i++) {
-        $(".liJJHBXL").each(function () {
-            if ($(this).find("label")[0].innerHTML.indexOf(lbarray[i]) !== -1)
-                $(this).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-        });
-    }
-    $("#divJJHBXL").css("display", "");
-}
-//选择适合人群
-function SelectSHRQ(obj) {
-    if ($(obj).find("img").attr("src").indexOf("blue") !== -1)
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-    else
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-}
-//获取适合人群
-function GetSHRQ() {
-    var SHRQ = "";
-    $(".liSHRQ").each(function () {
-        if ($(this).find("img").attr("src").indexOf("blue") !== -1)
-            SHRQ += $(this).find("label")[0].innerHTML + ",";
-    });
-    return RTrim(SHRQ, ',');
-}
-//设置适合人群
-function SetSHRQ(lbs) {
-    if (lbs !== "" && lbs !== null) {
-        var lbarray = lbs.split(',');
-        for (var i = 0; i < lbarray.length; i++) {
-            $(".liSHRQ").each(function () {
-                if ($(this).find("label")[0].innerHTML.indexOf(lbarray[i]) !== -1)
-                    $(this).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-            });
-        }
-    }
-}
-//选择招商地区
-function SelectZSDQ(obj) {
-    if ($(obj).find("img").attr("src").indexOf("blue") !== -1)
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-    else
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-}
-//获取招商地区
-function GetZSDQ() {
-    var ZSDQ = "";
-    $(".liZSDQ").each(function () {
-        if ($(this).find("img").attr("src").indexOf("blue") !== -1)
-            ZSDQ += $(this).find("label")[0].innerHTML + ",";
-    });
-    return RTrim(ZSDQ, ',');
-}
-//设置招商地区
-function SetZSDQ(lbs) {
-    var lbarray = lbs.split(',');
-    for (var i = 0; i < lbarray.length; i++) {
-        $(".liZSDQ").each(function () {
-            if ($(this).find("label")[0].innerHTML.indexOf(lbarray[i]) !== -1)
-                $(this).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-        });
-    }
 }
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
@@ -294,8 +217,10 @@ function LoadZSJM_JJHBJBXX() {
                 $("#spanQGFDS").html(xml.Value.ZSJM_JJHBJBXX.QGFDS);
                 $("#spanDDMJ").html(xml.Value.ZSJM_JJHBJBXX.DDMJ);
                 LoadPhotos(xml.Value.Photos);
-                SetSHRQ(xml.Value.ZSJM_JJHBJBXX.SHRQ);
-                SetZSDQ(xml.Value.ZSJM_JJHBJBXX.ZSDQ);
+                if (xml.Value.ZSJM_JJHBJBXX.SHRQ !== null)
+                    SetDuoX("SHRQ", xml.Value.ZSJM_JJHBJBXX.SHRQ);
+                if (xml.Value.ZSJM_JJHBJBXX.ZSDQ !== null)
+                    SetDuoX("ZSDQ", xml.Value.ZSJM_JJHBJBXX.ZSDQ);
                 if (xml.Value.ZSJM_JJHBJBXX.LB.indexOf("家纺床品") !== -1 || xml.Value.ZSJM_JJHBJBXX.LB.indexOf("窗帘布艺") !== -1 || xml.Value.ZSJM_JJHBJBXX.LB.indexOf("家具") !== -1 || xml.Value.ZSJM_JJHBJBXX.LB.indexOf("清洁环保") !== -1) {
                     LoadJJHBXLByName(xml.Value.ZSJM_JJHBJBXX.LB, xml.Value.ZSJM_JJHBJBXX.XL);
                 }
@@ -317,9 +242,9 @@ function FB() {
     obj = jsonObj.AddJson(obj, "TZJE", "'" + $("#spanTZJE").html() + "'");
     obj = jsonObj.AddJson(obj, "QGFDS", "'" + $("#spanQGFDS").html() + "'");
     obj = jsonObj.AddJson(obj, "DDMJ", "'" + $("#spanDDMJ").html() + "'");
-    obj = jsonObj.AddJson(obj, "SHRQ", "'" + GetSHRQ() + "'");
-    obj = jsonObj.AddJson(obj, "ZSDQ", "'" + GetZSDQ() + "'");
-    obj = jsonObj.AddJson(obj, "XL", "'" + GetJJHBXL() + "'");
+    obj = jsonObj.AddJson(obj, "SHRQ", "'" + GetDuoX("SHRQ") + "'");
+    obj = jsonObj.AddJson(obj, "ZSDQ", "'" + GetDuoX("ZSDQ") + "'");
+    obj = jsonObj.AddJson(obj, "XL", "'" + GetDuoX("LPXSPXL") + "'");
 
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
 

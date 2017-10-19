@@ -73,6 +73,7 @@ function SelectLB(obj, type, id) {
     $("#LBID").val(id);
     BindClick("XL");
     $("#divXLText").css("display", "");
+    $("#divXL").css("display", "none");
 }
 //绑定下拉框鼠标点击样式
 function BindClick(type) {

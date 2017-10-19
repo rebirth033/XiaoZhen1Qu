@@ -14,7 +14,7 @@ $(document).ready(function () {
     $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
     LoadTXXX();
-    LoadDZYQJLB();
+    LoadDuoX("电子元器件", "DZYQJLB");
     LoadDefault();
     BindClick("QY");
     BindClick("DD");
@@ -38,29 +38,33 @@ function LoadDefault() {
         ue.setHeight(200);
     });
 }
-//加载电子元器件类别
-function LoadDZYQJLB() {
+//加载多选
+function LoadDuoX(type, id) {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "电子元器件",
+            TYPENAME: type,
             TBName: "CODES_PFCG"
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liFWPZ' onclick='SelectDZYQJLB(this)'><img class='img_DZYQJLB'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i === 4 || i === 11 || i === 17 || i === 23 || i === 29) {
+                    html += "<li class='li" + id + "' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    if (i === 4 || i === 9 || i === 14 || i === 19 || i === 24) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
                 }
+                if (parseInt(xml.list.length % 5) === 0)
+                    $("#div" + id).css("height", parseInt(xml.list.length / 5) * 45 + "px");
+                else
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 5) + 1) * 45 + "px");
                 html += "</ul>";
-                $("#divDZYQJLBText").html(html);
-                $(".img_DZYQJLB").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $("#div" + id + "Text").html(html);
+                $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 LoadPFCG_DZYQJJBXX();
             }
         },
@@ -68,13 +72,6 @@ function LoadDZYQJLB() {
 
         }
     });
-}
-//选择房屋配置
-function SelectDZYQJLB(obj) {
-    if ($(obj).find("img").attr("src").indexOf("blue") !== -1)
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-    else
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
 }
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
@@ -108,7 +105,7 @@ function LoadPFCG_DZYQJJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.PFCG_DZYQJJBXX.BCMS);
                 });
-                SetDZYQJLB(xml.Value.PFCG_DZYQJJBXX.LB);
+                SetDuoX("DZYQJLB", xml.Value.PFCG_DZYQJJBXX.LB);
                 $("#spanQY").html(xml.Value.PFCG_DZYQJJBXX.QY);
                 $("#spanDD").html(xml.Value.PFCG_DZYQJJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
@@ -119,26 +116,6 @@ function LoadPFCG_DZYQJJBXX() {
         }
     });
 }
-//获取电子元器件类别
-function GetDZYQJLB() {
-    var DZYQJLB = "";
-    $(".liFWPZ").each(function () {
-        if ($(this).find("img").attr("src").indexOf("blue") !== -1)
-            DZYQJLB += $(this).find("label")[0].innerHTML + ",";
-    });
-    return RTrim(DZYQJLB, ',');
-}
-//设置电子元器件类别
-function SetDZYQJLB(lbs) {
-    var lbarray = lbs.split(',');
-    for (var i = 0; i < lbarray.length; i++) {
-        $(".liFWPZ").each(function () {
-            if ($(this).find("label")[0].innerHTML.indexOf(lbarray[i]) !== -1)
-                $(this).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-        });
-    }
-
-}
 //发布
 function FB() {
     if (AllValidate() === false) return;
@@ -148,7 +125,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "LB", "'" + GetDZYQJLB() + "'");
+    obj = jsonObj.AddJson(obj, "LB", "'" + GetDuoX("DZYQJLB") + "'");
 
     if (getUrlParam("PFCG_DZYQJJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "PFCG_DZYQJJBXXID", "'" + getUrlParam("PFCG_DZYQJJBXXID") + "'");
