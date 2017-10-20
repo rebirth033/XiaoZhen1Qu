@@ -33,7 +33,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             jcxx.LXDZ = "福州市";
             jcxx.DH = Session["XZQ"].ToString() + "-" + FC_ZZFJBXXBLL.GetLBQCByLBID(jcxx.LBID);
             FC_ZZFJBXX FC_ZZFjbxx = JsonHelper.ConvertJsonToObject<FC_ZZFJBXX>(json);
-            FC_ZZFjbxx.FYMS = fyms;
+            FC_ZZFjbxx.BCMS = BinaryHelper.StringToBinary(fyms);
             List<PHOTOS> photos = GetTP(fwzp);
             object result = FC_ZZFJBXXBLL.SaveFC_ZZFJBXX(jcxx, FC_ZZFjbxx, photos);
             return Json(result);

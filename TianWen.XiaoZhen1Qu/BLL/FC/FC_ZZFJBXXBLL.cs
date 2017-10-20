@@ -13,98 +13,38 @@ namespace TianWen.XiaoZhen1Qu.BLL
     public class FC_ZZFJBXXBLL : BaseBLL, IFC_ZZFJBXXBLL
     {
         //保存房屋出租基本信息
-        public object SaveFC_ZZFJBXX(JCXX jcxx, FC_ZZFJBXX FC_ZZFjbxx, List<PHOTOS> photos)
+        public object SaveFC_ZZFJBXX(JCXX jcxx, FC_ZZFJBXX FC_ZZFJBXX, List<PHOTOS> photos)
         {
-            string[] photoNames = photos.Select(x => x.PHOTONAME).ToArray();
-            DirectoryInfo TheFolder = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory + "/Areas/Business/Photos/");
-            FileInfo[] fileinfos = TheFolder.GetFiles();
-            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM FC_ZZFJBXX WHERE FC_ZZFJBXXID='{0}'", FC_ZZFjbxx.FC_ZZFJBXXID));
-
-            if (dt.Rows.Count > 0)
+            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM FC_ZZFJBXX WHERE FC_ZZFJBXXID='{0}'", FC_ZZFJBXX.FC_ZZFJBXXID));
+            using (ITransaction transaction = DAO.BeginTransaction())
             {
-                using (ITransaction transaction = DAO.BeginTransaction())
+                try
                 {
-                    try
+                    if (dt.Rows.Count > 0)
                     {
-                        if (photos.Count > 0)
-                        {
-                            //照片全删全插
-                            List<PHOTOS> old_photos = DAO.GetObjectList<PHOTOS>(string.Format("FROM PHOTOS WHERE JCXXID='{0}'", dt.Rows[0]["JCXXID"])).ToList();
-                            foreach (var obj in old_photos)
-                            {
-                                DAO.Remove(obj);
-                            }
-                        }
-                        foreach (var obj in photos)
-                        {
-                            obj.JCXXID = dt.Rows[0]["JCXXID"].ToString();
-                            DAO.Save(obj);
-                        }
-
-                        if (photos.Count > 0)
-                        {
-                            //删除多余照片文件
-                            foreach (FileInfo fileobj in fileinfos)
-                            {
-                                if (!photoNames.Contains(fileobj.Name))
-                                    File.Delete(AppDomain.CurrentDomain.BaseDirectory + "/Areas/Business/Photos/" + fileobj.Name);
-                            }
-                        }
-
-                        FC_ZZFjbxx.JCXXID = dt.Rows[0]["JCXXID"].ToString();
+                        SavePhotos(photos, dt.Rows[0]["JCXXID"].ToString());
+                        FC_ZZFJBXX.JCXXID = dt.Rows[0]["JCXXID"].ToString();
                         jcxx.JCXXID = dt.Rows[0]["JCXXID"].ToString();
                         DAO.Update(jcxx);
-                        DAO.Update(FC_ZZFjbxx);
+                        DAO.Update(FC_ZZFJBXX);
                         transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, FC_ZZFJBXXID = FC_ZZFjbxx.FC_ZZFJBXXID } };
+                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, FC_ZZFJBXXID = FC_ZZFJBXX.FC_ZZFJBXXID } };
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        transaction.Rollback();
-                        LoggerManager.Error("FC_ZZFJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
-                        return new
-                        {
-                            Result = EnResultType.Failed,
-                            Message = "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!",
-                            Type = 3
-                        };
+                        SavePhotos(photos, jcxx.JCXXID);
+                        FC_ZZFJBXX.JCXXID = jcxx.JCXXID;
+                        DAO.Save(jcxx);
+                        DAO.Save(FC_ZZFJBXX);
+                        transaction.Commit();
+                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, FC_ZZFJBXXID = FC_ZZFJBXX.FC_ZZFJBXXID } };
                     }
                 }
-            }
-            else
-            {
-                using (ITransaction transaction = DAO.BeginTransaction())
+                catch (Exception ex)
                 {
-                    try
-                    {
-                        FC_ZZFjbxx.JCXXID = jcxx.JCXXID;
-                        DAO.Save(jcxx);
-                        DAO.Save(FC_ZZFjbxx);
-                        //照片全删全插
-                        List<PHOTOS> old_photos = DAO.GetObjectList<PHOTOS>(string.Format("FROM PHOTOS WHERE JCXXID='{0}'", FC_ZZFjbxx.JCXXID)).ToList();
-                        foreach (var obj in old_photos)
-                        {
-                            DAO.Remove(obj);
-                        }
-                        foreach (var obj in photos)
-                        {
-                            obj.JCXXID = FC_ZZFjbxx.JCXXID;
-                            DAO.Save(obj);
-                        }
-                        transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, FC_ZZFJBXXID = FC_ZZFjbxx.FC_ZZFJBXXID } };
-                    }
-                    catch (Exception ex)
-                    {
-                        transaction.Rollback();
-                        LoggerManager.Error("FC_ZZFJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
-                        return new
-                        {
-                            Result = EnResultType.Failed,
-                            Message = "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!",
-                            Type = 3
-                        };
-                    }
+                    transaction.Rollback();
+                    LoggerManager.Error("FC_ZZFJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                    return new { Result = EnResultType.Failed, Message = "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!", Type = 3 };
                 }
             }
         }
@@ -113,11 +53,11 @@ namespace TianWen.XiaoZhen1Qu.BLL
         {
             try
             {
-                FC_ZZFJBXX yhjbxx = DAO.GetObjectByID<FC_ZZFJBXX>(FC_ZZFJBXXID);
-                if (yhjbxx != null)
+                FC_ZZFJBXX FC_ZZFJBXX = DAO.GetObjectByID<FC_ZZFJBXX>(FC_ZZFJBXXID);
+                if (FC_ZZFJBXX != null)
                 {
-                    JCXX jcxx = GetJCXXByID(yhjbxx.JCXXID);
-                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { FC_ZZFXX = yhjbxx, JCXX = jcxx, Photos = GetPhtosByJCXXID(yhjbxx.JCXXID) } };
+                    JCXX jcxx = GetJCXXByID(FC_ZZFJBXX.JCXXID);
+                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { FC_ZZFXX = FC_ZZFJBXX, BCMSString = BinaryHelper.BinaryToString(FC_ZZFJBXX.BCMS), JCXX = jcxx, Photos = GetPhtosByJCXXID(FC_ZZFJBXX.JCXXID) } };
                 }
                 else
                 {

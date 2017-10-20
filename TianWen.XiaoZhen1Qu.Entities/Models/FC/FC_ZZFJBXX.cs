@@ -116,7 +116,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// 房源描述
         /// </summary>
         [Property]
-        public virtual string FYMS { get; set; }
+        public virtual byte[] BCMS { get; set; }
         /// <summary>
         /// 可入住时间
         /// </summary>

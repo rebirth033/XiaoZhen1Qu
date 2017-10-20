@@ -107,17 +107,10 @@ function ValidateMJ() {
 
 //验证所有
 function AllValidate() {
-    if ($("#imgCZ").attr("src").indexOf("blue") !== -1) {
-        if (ValidateLPMC() & ValidateDD() & ValidateZJ() & ValidateMJ() & ValidateBT() & ValidateFWZP() & ValidateLXR() & ValidateLXDH())
-            return true;
-        else
-            return false;
-    } else {
-        if (ValidateLPMC() & ValidateDD() & ValidateSJ() & ValidateMJ() & ValidateBT() & ValidateFWZP() & ValidateLXR() & ValidateLXDH())
-            return true;
-        else
-            return false;
-    }
+    if (ValidateLPMC() & ValidateDD() & ValidateZJ() & ValidateMJ() & ValidateBT() & ValidateFWZP() & ValidateLXR() & ValidateLXDH())
+        return true;
+    else
+        return false;
 }
 //提示楼盘名称
 function InfoLPMC() {

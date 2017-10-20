@@ -15,42 +15,14 @@ namespace TianWen.XiaoZhen1Qu.BLL
     {
         public object SaveES_SJSM_ESSJJBXX(JCXX jcxx, ES_SJSM_ESSJJBXX ES_SJSM_ESSJJBXX, List<PHOTOS> photos)
         {
-            string[] photoNames = photos.Select(x => x.PHOTONAME).ToArray();
-            DirectoryInfo TheFolder = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory + "/Areas/Business/Photos/");
-            FileInfo[] fileinfos = TheFolder.GetFiles();
             DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM ES_SJSM_ESSJJBXX WHERE ES_SJSM_ESSJJBXXID='{0}'", ES_SJSM_ESSJJBXX.ES_SJSM_ESSJJBXXID));
-
-            if (dt.Rows.Count > 0)
+            using (ITransaction transaction = DAO.BeginTransaction())
             {
-                using (ITransaction transaction = DAO.BeginTransaction())
+                try
                 {
-                    try
+                    if (dt.Rows.Count > 0)
                     {
-                        if (photos.Count > 0)
-                        {
-                            //照片全删全插
-                            List<PHOTOS> old_photos = DAO.GetObjectList<PHOTOS>(string.Format("FROM PHOTOS WHERE JCXXID='{0}'", dt.Rows[0]["JCXXID"])).ToList();
-                            foreach (var obj in old_photos)
-                            {
-                                DAO.Remove(obj);
-                            }
-                        }
-                        foreach (var obj in photos)
-                        {
-                            obj.JCXXID = dt.Rows[0]["JCXXID"].ToString();
-                            DAO.Save(obj);
-                        }
-
-                        if (photos.Count > 0)
-                        {
-                            //删除多余照片文件
-                            foreach (FileInfo fileobj in fileinfos)
-                            {
-                                if (!photoNames.Contains(fileobj.Name))
-                                    File.Delete(AppDomain.CurrentDomain.BaseDirectory + "/Areas/Business/Photos/" + fileobj.Name);
-                            }
-                        }
-
+                        SavePhotos(photos, dt.Rows[0]["JCXXID"].ToString());
                         ES_SJSM_ESSJJBXX.JCXXID = dt.Rows[0]["JCXXID"].ToString();
                         jcxx.JCXXID = dt.Rows[0]["JCXXID"].ToString();
                         DAO.Update(jcxx);
@@ -58,53 +30,21 @@ namespace TianWen.XiaoZhen1Qu.BLL
                         transaction.Commit();
                         return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, ES_SJSM_ESSJJBXXID = ES_SJSM_ESSJJBXX.ES_SJSM_ESSJJBXXID } };
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        transaction.Rollback();
-                        LoggerManager.Error("ES_SJSM_ESSJJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
-                        return new
-                        {
-                            Result = EnResultType.Failed,
-                            Message = "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!",
-                            Type = 3
-                        };
-                    }
-                }
-            }
-            else
-            {
-                using (ITransaction transaction = DAO.BeginTransaction())
-                {
-                    try
-                    {
+                        SavePhotos(photos, jcxx.JCXXID);
                         ES_SJSM_ESSJJBXX.JCXXID = jcxx.JCXXID;
                         DAO.Save(jcxx);
                         DAO.Save(ES_SJSM_ESSJJBXX);
-                        //照片全删全插
-                        List<PHOTOS> old_photos = DAO.GetObjectList<PHOTOS>(string.Format("FROM PHOTOS WHERE JCXXID='{0}'", ES_SJSM_ESSJJBXX.JCXXID)).ToList();
-                        foreach (var obj in old_photos)
-                        {
-                            DAO.Remove(obj);
-                        }
-                        foreach (var obj in photos)
-                        {
-                            obj.JCXXID = ES_SJSM_ESSJJBXX.JCXXID;
-                            DAO.Save(obj);
-                        }
                         transaction.Commit();
                         return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, ES_SJSM_ESSJJBXXID = ES_SJSM_ESSJJBXX.ES_SJSM_ESSJJBXXID } };
                     }
-                    catch (Exception ex)
-                    {
-                        transaction.Rollback();
-                        LoggerManager.Error("ES_SJSM_ESSJJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
-                        return new
-                        {
-                            Result = EnResultType.Failed,
-                            Message = "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!",
-                            Type = 3
-                        };
-                    }
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    LoggerManager.Error("ES_SJSM_ESSJJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                    return new { Result = EnResultType.Failed, Message = "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!", Type = 3 };
                 }
             }
         }
@@ -117,7 +57,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 if (ES_SJSM_ESSJJBXX != null)
                 {
                     JCXX jcxx = GetJCXXByID(ES_SJSM_ESSJJBXX.JCXXID);
-                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { ES_SJSM_ESSJJBXX = ES_SJSM_ESSJJBXX, JCXX = jcxx, Photos = GetPhtosByJCXXID(ES_SJSM_ESSJJBXX.JCXXID) } };
+                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { ES_SJSM_ESSJJBXX = ES_SJSM_ESSJJBXX, BCMSString = BinaryHelper.BinaryToString(ES_SJSM_ESSJJBXX.BCMS), JCXX = jcxx, Photos = GetPhtosByJCXXID(ES_SJSM_ESSJJBXX.JCXXID) } };
                 }
                 else
                 {

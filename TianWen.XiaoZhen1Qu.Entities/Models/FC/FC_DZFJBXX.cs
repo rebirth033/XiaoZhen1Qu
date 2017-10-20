@@ -32,7 +32,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// 最短租期
         /// </summary>
         [Property]
-        public virtual int ZDZQ { get; set; }
+        public virtual string ZDZQ { get; set; }
 
         /// <summary>
         /// 租金
@@ -44,13 +44,13 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// 宜租人数
         /// </summary>
         [Property]
-        public virtual int YZRS { get; set; }
+        public virtual string YZRS { get; set; }
 
         /// <summary>
         /// 面积
         /// </summary>
         [Property]
-        public virtual int MJ { get; set; }
+        public virtual string MJ { get; set; }
 
         /// <summary>
         /// 地址
@@ -62,7 +62,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// 出租方式
         /// </summary>
         [Property]
-        public virtual int CZFS { get; set; }
+        public virtual string CZFS { get; set; }
 
         /// <summary>
         /// 交易规则
@@ -71,9 +71,9 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string JYGZ { get; set; }
 
         /// <summary>
-        /// 房源描述
+        /// 补充描述
         /// </summary>
         [Property]
-        public virtual string FYMS { get; set; }
+        public virtual Byte[] BCMS { get; set; }
     }
 }
