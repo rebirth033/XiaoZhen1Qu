@@ -6,6 +6,13 @@
     $("#XSLC").bind("blur", ValidateXSLC);
     $("#XSLC").bind("focus", InfoXSLC);
 });
+//验证所有
+function AllValidate() {
+    if (ValidateEDZZ() & ValidateXSLC() & ValidateJG() & ValidateBT() & ValidateFWZP() & ValidateLXR() & ValidateLXDH())
+        return true;
+    else
+        return false;
+}
 //验证额定载重
 function ValidateEDZZ() {
     if ($("#EDZZ").val() === "" || $("#EDZZ").val() === null) {
@@ -71,14 +78,6 @@ function ValidateJG() {
             return false;
         }
     }
-}
-
-//验证所有
-function AllValidate() {
-    if (ValidateEDZZ() & ValidateXSLC() & ValidateJG() & ValidateBT() & ValidateFWZP() & ValidateLXR() & ValidateLXDH())
-        return true;
-    else
-        return false;
 }
 //提示额定载重
 function InfoEDZZ() {

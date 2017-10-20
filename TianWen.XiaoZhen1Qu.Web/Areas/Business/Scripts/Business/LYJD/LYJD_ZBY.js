@@ -1,8 +1,8 @@
 ﻿var isleave = true;
 var fwjs = UE.getEditor('FWJS');
 $(document).ready(function () {
-    $("#div_upload").bind("mouseover", GetUploadCss);
-    $("#div_upload").bind("mouseleave", LeaveUploadCss);
+    
+    
     $("#btnFB").bind("click", FB);
     $("#XCAP").bind("focus", XCAPFocus);
     $("#XCAP").bind("blur", XCAPBlur);

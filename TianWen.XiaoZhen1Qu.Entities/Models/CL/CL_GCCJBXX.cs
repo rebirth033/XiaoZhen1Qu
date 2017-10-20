@@ -23,16 +23,16 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string JCXXID { get; set; }
 
         /// <summary>
-        /// 供求
-        /// </summary>
-        [Property]
-        public virtual int GQ { get; set; }
-
-        /// <summary>
         /// 类别
         /// </summary>
         [Property]
         public virtual string LB { get; set; }
+
+        /// <summary>
+        /// 车型
+        /// </summary>
+        [Property]
+        public virtual string CX { get; set; }
 
         /// <summary>
         /// 品牌

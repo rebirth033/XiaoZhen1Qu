@@ -1,8 +1,8 @@
 ﻿var isleave = true;
 var ue = UE.getEditor('FYMS');
 $(document).ready(function () {
-    $("#div_upload").bind("mouseover", GetUploadCss);
-    $("#div_upload").bind("mouseleave", LeaveUploadCss);
+    
+    
     $("#btnFB").bind("click", FB);
     $("#FYMS").bind("focus", FYMSFocus);
     $("#FYMS").bind("blur", FYMSBlur);
@@ -11,8 +11,6 @@ $(document).ready(function () {
     $("#div_dz_close").bind("click", CloseWindow);
     $("#span_content_info_qhcs").bind("click", LoadXZQByGrade);
     $("body").bind("click", function () { Close("_XZQ"); Close("LB"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });
-
-
 
     LoadDefault();
     LoadCL_HCJBXX();

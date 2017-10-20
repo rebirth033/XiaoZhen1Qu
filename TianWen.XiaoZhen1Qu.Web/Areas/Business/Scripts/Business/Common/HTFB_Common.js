@@ -8,6 +8,9 @@
     $(".img_radio").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
     $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
+    
+    $("#div_upload").bind("mouseover", GetUploadCss);
+    $("#div_upload").bind("mouseleave", LeaveUploadCss);
 
     LoadTXXX();
 });

@@ -4,6 +4,13 @@
     $("#JG").bind("blur", ValidateJG);
     $("#JG").bind("focus", InfoJG);
 });
+//验证所有
+function AllValidate() {
+    if (ValidateJG() & ValidateBT() & ValidateFWZP() & ValidateLXR() & ValidateLXDH())
+        return true;
+    else
+        return false;
+}
 //验证售价
 function ValidateXSLC() {
     if ($("#XSLC").val() === "" || $("#XSLC").val() === null) {
@@ -47,14 +54,6 @@ function ValidateJG() {
             return false;
         }
     }
-}
-
-//验证所有
-function AllValidate() {
-    if (ValidateJG() & ValidateBT() & ValidateFWZP() & ValidateLXR() & ValidateLXDH())
-        return true;
-    else
-        return false;
 }
 //行驶里程
 function InfoXSLC() {

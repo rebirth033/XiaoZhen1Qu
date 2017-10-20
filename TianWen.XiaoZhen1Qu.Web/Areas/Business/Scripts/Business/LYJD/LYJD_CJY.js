@@ -5,8 +5,8 @@ var ydxz = UE.getEditor('YDXZ');
 var fybh = UE.getEditor('FYBH');
 var zfxm = UE.getEditor('ZFXM');
 $(document).ready(function () {
-    $("#div_upload").bind("mouseover", GetUploadCss);
-    $("#div_upload").bind("mouseleave", LeaveUploadCss);
+    
+    
     $("#btnFB").bind("click", FB);
     $("#XCAP").bind("focus", XCAPFocus);
     $("#XCAP").bind("blur", XCAPBlur);

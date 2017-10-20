@@ -23,6 +23,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// <returns></returns>
         public static string BinaryToString(byte[] data)
         {
+            if (data == null) return string.Empty;
             return Encoding.Unicode.GetString(data, 0, data.Length);
         }
     }

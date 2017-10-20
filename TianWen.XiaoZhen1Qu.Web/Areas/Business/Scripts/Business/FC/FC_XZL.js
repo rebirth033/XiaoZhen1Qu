@@ -3,8 +3,8 @@ var ue = UE.getEditor('FYMS');
 $(document).ready(function () {
     $("#div_gq_cz").bind("click", CZSelect);
     $("#div_gq_cs").bind("click", CSSelect);
-    $("#div_upload").bind("mouseover", GetUploadCss);
-    $("#div_upload").bind("mouseleave", LeaveUploadCss);
+    
+    
     $("#btnFB").bind("click", FB);
     $("#FYMS").bind("focus", FYMSFocus);
     $("#FYMS").bind("blur", FYMSBlur);

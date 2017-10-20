@@ -1,8 +1,8 @@
 ﻿var isleave = true;
 var ue = UE.getEditor('FYMS');
 $(document).ready(function () {
-    $("#div_upload").bind("mouseover", GetUploadCss);
-    $("#div_upload").bind("mouseleave", LeaveUploadCss);
+    
+    
     $("#div_ly_ls").bind("click", LSSelect);
     $("#div_ly_lssws").bind("click", LSSWSSelect);
     $("#btnFB").bind("click", FB);

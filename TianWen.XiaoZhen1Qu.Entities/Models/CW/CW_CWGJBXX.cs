@@ -26,7 +26,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// 身份
         /// </summary>
         [Property]
-        public virtual int SF { get; set; }
+        public virtual string SF { get; set; }
 
         /// <summary>
         /// 品种
@@ -69,7 +69,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// 驱虫情况
         /// </summary>
         [Property]
-        public virtual int QCQK { get; set; }
+        public virtual string QCQK { get; set; }
 
         /// <summary>
         /// 疫苗情况
@@ -87,7 +87,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// 视频看狗
         /// </summary>
         [Property]
-        public virtual int SPKG { get; set; }
+        public virtual string SPKG { get; set; }
 
         /// <summary>
         /// 补充描述
