@@ -16,12 +16,6 @@
     $("#GJC").bind("focus", InfoLCFB_GJC);
     $("#ZJ").bind("blur", ValidateZJ);
     $("#ZJ").bind("focus", InfoZJ);
-    $("#BT").bind("blur", ValidateBT);
-    $("#BT").bind("focus", InfoBT);
-    $("#LXR").bind("blur", ValidateLXR);
-    $("#LXR").bind("focus", InfoLXR);
-    $("#LXDH").bind("blur", ValidateLXDH);
-    $("#LXDH").bind("focus", InfoLXDH);
 });
 
 function ValidateXQMC() {
@@ -192,31 +186,9 @@ function ValidateZJ() {
     }
 }
 
-function ValidateBT() {
-    if ($("#BT").val() === "" || $("#BT").val() === null) {
-        $("#divBTTip").css("display", "block");
-        $("#divBTTip").attr("class", "Warn");
-        $("#divBTTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写标题啦');
-        $("#BT").css("border-color", "#fd634f");
-        return false;
-    } else {
-        $("#divBTTip").css("display", "none");
-        $("#BT").css("border-color", "#cccccc");
-        return true;
-    }
-}
 
-function ValidateFWZP() {
-    if ($("#divImgs1").find("img").length === 0) {
-        $("#divFWZPTip").css("display", "block");
-        $("#divFWZPTip").attr("class", "Warn");
-        $("#divFWZPTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记选择照片啦');
-        return false;
-    } else {
-        $("#divFWZPTip").css("display", "none");
-        return true;
-    }
-}
+
+
 
 
 function ValidateLXR() {

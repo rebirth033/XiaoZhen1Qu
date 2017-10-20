@@ -552,6 +552,7 @@
     <Content Include="Areas\Business\Scripts\Business\Common\HTFB_Common.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\Radio.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\Regular.js" />
+    <Content Include="Areas\Business\Scripts\Business\Common\Validate.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\XZQ.js" />
     <Content Include="Areas\Business\Scripts\Business\CW\CW_CWFW.js" />
     <Content Include="Areas\Business\Scripts\Business\CW\CW_CWFWYZ.js" />
