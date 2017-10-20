@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using TianWen.Framework.Log;
 using TianWen.XiaoZhen1Qu.Entities.Models;
@@ -247,6 +248,37 @@ namespace TianWen.XiaoZhen1Qu.BLL
             {
                 LoggerManager.Error("error", ex.Message);
                 return new { Result = EnResultType.Failed, Message = "加载失败" };
+            }
+        }
+
+        public void SavePhotos(List<PHOTOS> photos, string JCXXID)
+        {
+            string[] photoNames = photos.Select(x => x.PHOTONAME).ToArray();
+            DirectoryInfo TheFolder = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory + "/Areas/Business/Photos/");
+            FileInfo[] fileinfos = TheFolder.GetFiles();
+            if (photos.Count > 0)
+            {
+                //照片全删全插
+                List<PHOTOS> old_photos = DAO.GetObjectList<PHOTOS>(string.Format("FROM PHOTOS WHERE JCXXID='{0}'", JCXXID)).ToList();
+                foreach (var obj in old_photos)
+                {
+                    DAO.Remove(obj);
+                }
+            }
+            foreach (var obj in photos)
+            {
+                obj.JCXXID = JCXXID;
+                DAO.Save(obj);
+            }
+
+            if (photos.Count > 0)
+            {
+                //删除多余照片文件
+                foreach (FileInfo fileobj in fileinfos)
+                {
+                    if (!photoNames.Contains(fileobj.Name))
+                        File.Delete(AppDomain.CurrentDomain.BaseDirectory + "/Areas/Business/Photos/" + fileobj.Name);
+                }
             }
         }
     }
