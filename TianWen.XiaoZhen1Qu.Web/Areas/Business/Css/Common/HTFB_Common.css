@@ -129,7 +129,7 @@
     border-right: 1px solid #cccccc;
     border-bottom: 1px solid #cccccc;
     padding-left: 0px;
-    height: 205px;
+    height: 341px;
 }
 
 .li_select {
@@ -181,7 +181,10 @@
 .input_input {
     width: 472px;
     padding: 6px 12px;
-    color: #999999;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 14px;
+    height: 34px;
 }
 
 .Warn {

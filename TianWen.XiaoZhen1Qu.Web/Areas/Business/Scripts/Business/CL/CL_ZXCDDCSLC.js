@@ -12,9 +12,6 @@ $(document).ready(function () {
     $("#span_content_info_qhcs").bind("click", LoadXZQByGrade);
     $("body").bind("click", function () { Close("_XZQ"); Close("LB"); Close("XL"); Close("DCDY"); Close("DCRL"); Close("CC"); Close("XJ"); Close("QY"); Close("DD"); });
 
-
-
-
     LoadDefault();
     LoadCL_ZXCDDCSLCJBXX();
     BindClick("LB");
@@ -40,29 +37,6 @@ function FYMSSetDefault() {
 function LoadDefault() {
     ue.ready(function () {
         ue.setHeight(200);
-    });
-}
-//加载图形信息
-function LoadTXXX() {
-    $("#spanTXXX").css("color", "#5bc0de");
-    $("#emTXXX").css("background", "#5bc0de");
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/LBXZ/LoadLBByID",
-        dataType: "json",
-        data:
-        {
-            LBID: getUrlParam("CLICKID")
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                if (xml.list.length > 0)
-                    $("#spanLBXZ").html("1." + xml.list[0].LBNAME);
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
     });
 }
 //选择类别下拉框

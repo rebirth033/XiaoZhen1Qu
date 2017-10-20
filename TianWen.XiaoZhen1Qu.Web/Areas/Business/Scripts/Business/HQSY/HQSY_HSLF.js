@@ -12,8 +12,6 @@ $(document).ready(function () {
     $("#span_content_info_qCWFWs").bind("click", LoadXZQByGrade);
     $("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });
 
-
-
     LoadDefault();
     BindClick("YS");
     BindClick("LX");
