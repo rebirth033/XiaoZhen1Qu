@@ -4,8 +4,6 @@ namespace TianWen.XiaoZhen1Qu.Interface
 {
     public interface IBaseBLL
     {
-        object LoadBJQXXX(string LBID);
-
         object LoadQYBySuperName(string SUPERNAME);
 
         object LoadSQByQY(string QY);
