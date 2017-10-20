@@ -1,65 +1,8 @@
-﻿
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.Warn {
-    font-size: 14px;
-    color: #fd634f;
-    margin-left: 215px;
-    z-index: 999;
-    position: relative;
-    width: 180px;
+﻿.img_BHFY {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    border: none !important;
+    margin-right: 5px;
 }
-
-.Info {
-    font-size: 14px;
-    color: #5bc0de;
-    margin-left: 215px;
-    z-index: 999;
-    position: relative;
-    width: 180px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

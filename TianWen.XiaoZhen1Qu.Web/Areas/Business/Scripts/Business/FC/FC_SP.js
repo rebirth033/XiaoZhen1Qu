@@ -1,9 +1,6 @@
 ﻿var isleave = true;
 var ue = UE.getEditor('FYMS');
 $(document).ready(function () {
-    $(".div_radio").bind("click", RadioSelect);
-    $("#div_gq_cz").bind("click", CZSelect);
-    $("#div_gq_cs").bind("click", CSSelect);
     $("#div_upload").bind("mouseover", GetUploadCss);
     $("#div_upload").bind("mouseleave", LeaveUploadCss);
     $("#btnFB").bind("click", FB);
@@ -19,7 +16,7 @@ $(document).ready(function () {
     LoadFC_SPJBXX();
     BindClick("SPLX");
     BindClick("QY");
-    BindClick("SQ");
+    BindClick("DD");
     BindClick("ZJDW");
 });
 //房屋描述框focus
@@ -40,97 +37,23 @@ function LoadDefault() {
     ue.ready(function () {
         ue.setHeight(200);
     });
-    $(".img_radio").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
-//选择出租
-function CZSelect() {
-    $("#divZJ").css("display", "block");
-    $("#divSJ").css("display", "none");
-}
-//选择出售
-function CSSelect() {
-    $("#divZJ").css("display", "none");
-    $("#divSJ").css("display", "block");
 }
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "SPLX") {
-            LoadSPLX();
+            LoadCODESByTYPENAME("商铺类型", "SPLX", "CODES_FC");
         }
         if (type === "ZJDW") {
-            LoadZJDW();
+            LoadCODESByTYPENAME("租金单位", "ZJDW", "CODES_FC");
         }
         if (type === "QY") {
             LoadQY();
         }
-        if (type === "SQ") {
-            LoadSQ();
+        if (type === "DD") {
+            LoadDD($("#QYCode").val());
         }
     });
-}
-//加载商铺类型
-function LoadSPLX() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "商铺类型",
-            TBName: "CODES_FC"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='ul_select' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='li_select' onclick='SelectDropdown(this,\"SPLX\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divSPLX").html(html);
-                $("#divSPLX").css("display", "block");
-                ActiveStyle("SPLX");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载租金单位
-function LoadZJDW() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "租金单位",
-            TBName: "CODES_FC"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='ul_select' style='overflow-y: none;height:70px;margin-left:-1px;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='li_select' onclick='SelectDropdown(this,\"ZJDW\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divZJDW").html(html);
-                $("#divZJDW").css("display", "block");
-                ActiveStyle("ZJDW");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//选择区域下拉框
-function SelectQY(obj, type, code) {
-    $("#QYCode").val(code);
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
-    LoadSQ(code);
 }
 //设置供求
 function SetGQ(gq) {

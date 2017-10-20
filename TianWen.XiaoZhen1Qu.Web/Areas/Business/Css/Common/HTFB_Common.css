@@ -91,12 +91,12 @@
 }
 
 .div_select_in {
-    border: 1px solid #cccccc;
     display: inline-block;
     width: 150px;
     height: 34px;
     border-radius: 4px;
     font-size: 14px;
+    border: none;
 }
 
 .div_select_dropdown {
@@ -378,4 +378,21 @@
     float: left;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
+}
+
+.ulFWPZ img {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    border: none !important;
+    margin-right: 5px;
+}
+
+.ulFWPZ li {
+    display: inline-block;
+    width: 105px;
+    height: 30px;
+    text-align: left;
+    margin-top: 4px;
+    cursor: pointer;
 }

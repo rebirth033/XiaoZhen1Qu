@@ -1,15 +1,10 @@
 ﻿var isleave = true;
 var ue = UE.getEditor('FYMS');
 $(document).ready(function () {
-    $(".div_radio").bind("click", RadioSelect);
     $("#XQMC").bind("keyup", LoadXQMC);
-    $("#div_upload").bind("mouseover", GetUploadCss);
-    $("#div_upload").bind("mouseleave", LeaveUploadCss);
+    //$("#div_upload").bind("mouseover", GetUploadCss);
+    //$("#div_upload").bind("mouseleave", LeaveUploadCss);
     $("#btnFB").bind("click", FB);
-    $(".input_spaninput").bind("focus", FWLXYLCFBFocus);
-    $(".input_spaninput").bind("blur", FWLXYLCFBBlur);
-    $(".input_spaninput").bind("focus", FWLXYLCFBFocus);
-    $(".input_spaninput").bind("blur", FWLXYLCFBBlur);
     $("#FYMS").bind("focus", FYMSFocus);
     $("#FYMS").bind("blur", FYMSBlur);
     $("#KRZSJ").datepicker({ minDate: 0 });
@@ -22,10 +17,7 @@ $(document).ready(function () {
     BindClick("ZXQK");
     BindClick("ZZLX");
     BindClick("YFFS");
-    LoadBHFY();
-    LoadFWPZ();
-    LoadFWLD();
-    LoadCZYQ();
+    LoadDuoX("包含费用", "BHFY");
 
     LoadDefault();
     FYMSSetDefault();
@@ -44,44 +36,9 @@ function FYMSSetDefault() {
     $("#FYMS").html(fyms);
 }
 
-function FWLXYLCFBFocus() {
-    if ($(this)[0].id === "C")
-        $("#spanC").css("border", "1px solid #5bc0de");
-    if ($(this)[0].id === "GJC")
-        $("#spanGJC").css("border", "1px solid #5bc0de");
-    if ($(this)[0].id === "ZJ")
-        $("#spanZJ").css("border", "1px solid #5bc0de");
-    if ($(this)[0].id === "S")
-        $("#spanS").css("border", "1px solid #5bc0de");
-    if ($(this)[0].id === "T")
-        $("#spanT").css("border", "1px solid #5bc0de");
-    if ($(this)[0].id === "W")
-        $("#spanW").css("border", "1px solid #5bc0de");
-    if ($(this)[0].id === "PFM")
-        $("#spanPFM").css("border", "1px solid #5bc0de");
-
-}
-
-function FWLXYLCFBBlur() {
-    if ($(this)[0].id === "C")
-        $("#spanC").css("border", "1px solid #cccccc");
-    if ($(this)[0].id === "GJC")
-        $("#spanGJC").css("border", "1px solid #cccccc");
-    if ($(this)[0].id === "ZJ")
-        $("#spanZJ").css("border", "1px solid #cccccc");
-    if ($(this)[0].id === "S")
-        $("#spanS").css("border", "1px solid #cccccc");
-    if ($(this)[0].id === "T")
-        $("#spanT").css("border", "1px solid #cccccc");
-    if ($(this)[0].id === "W")
-        $("#spanW").css("border", "1px solid #cccccc");
-    if ($(this)[0].id === "PFM")
-        $("#spanPFM").css("border", "1px solid #cccccc");
-}
 //加载默认
 function LoadDefault() {
     ue.ready(function () { ue.setHeight(200); });
-    $(".img_radio").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
 }
 //加载小区名称
 function LoadXQMC() {
@@ -253,245 +210,59 @@ function GetStartIndexBySZM(pyszm, sqmc) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "FWCX") {
-            LoadFWCX();
+            LoadCODESByTYPENAME("朝向", "FWCX", "CODES_FC");
         }
         if (type === "ZXQK") {
-            LoadZXQK();
+            LoadCODESByTYPENAME("装修情况", "ZXQK", "CODES_FC");
         }
         if (type === "ZZLX") {
-            LoadZZLX();
+            LoadCODESByTYPENAME("住宅类型", "ZZLX", "CODES_FC");
         }
         if (type === "YFFS") {
-            LoadYFFS();
+            LoadCODESByTYPENAME("押付方式", "YFFS", "CODES_FC");
         }
     });
 }
-//加载房屋朝向
-function LoadFWCX() {
+//加载多选
+function LoadDuoX(type, id) {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "朝向",
-            TBName: "CODES_FC"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='ul_select' style='overflow-y: scroll;'>";//<li class='li_select'>请选择朝向</li>
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='li_select' onclick='SelectFWCX(this)'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divFWCX").html(html);
-                $("#divFWCX").css("display", "block");
-                ActiveStyle("FWCX");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载装修情况
-function LoadZXQK() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "装修情况",
-            TBName: "CODES_FC"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='ul_select' style='height: 171px;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='li_select' onclick='SelectZXQK(this)'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divZXQK").html(html);
-                $("#divZXQK").css("display", "block");
-                ActiveStyle("ZXQK");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载住宅类型
-function LoadZZLX() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "住宅类型",
-            TBName: "CODES_FC"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='ul_select' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='li_select' onclick='SelectZZLX(this)'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divZZLX").html(html);
-                $("#divZZLX").css("display", "block");
-                ActiveStyle("ZZLX");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载押付方式
-function LoadYFFS() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "押付方式",
-            TBName: "CODES_FC"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='ul_select' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='li_select' onclick='SelectYFFS(this)'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divYFFS").html(html);
-                $("#divYFFS").css("display", "block");
-                ActiveStyle("YFFS");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载包含费用
-function LoadBHFY() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "包含费用",
+            TYPENAME: type,
             TBName: "CODES_FC"
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liFWPZ' onclick='SelectFWPZ(this)'>" + xml.list[i].CODENAME + "</li>";
-                    if (i === 5 || i === 11) {
+                    html += "<li class='li" + id + "' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    if (i === 4 || i === 9 || i === 14 || i === 19) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
                 }
+                if (parseInt(xml.list.length % 5) === 0)
+                    $("#div" + id).css("height", parseInt(xml.list.length / 5) * 45 + "px");
+                else
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 5) + 1) * 45 + "px");
                 html += "</ul>";
-                $("#divBHFYText").html(html);
+                $("#div" + id + "Text").html(html);
+                $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                if (xml.list.length === 0)
+                    $("#div" + id).css("display", "none");
+                else
+                    $("#div" + id).css("display", "");
+                if (type === "包含费用")
+                    LoadDuoX("房屋配置", "FWPZ");
+                if (type === "房屋配置")
+                    LoadDuoX("房屋亮点", "FWLD");
+                if (type === "房屋亮点")
+                    LoadDuoX("出租要求", "CZYQ");
+                if (type === "出租要求")
+                    LoadJYPX_JJJGJBXX();
             }
-            LoadFWPZ();
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载房屋配置
-function LoadFWPZ() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "房屋配置",
-            TBName: "CODES_FC"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='ulFWPZ'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liFWPZ' onclick='SelectFWPZ(this)'>" + xml.list[i].CODENAME + "</li>";
-                    if (i === 5 || i === 11) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
-                    }
-                }
-                html += "</ul>";
-                $("#divFWPZText").html(html);
-            }
-            LoadFWLD();
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载房屋亮点
-function LoadFWLD() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "房屋亮点",
-            TBName: "CODES_FC"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='ulFWPZ'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liFWPZ' onclick='SelectFWPZ(this)'>" + xml.list[i].CODENAME + "</li>";
-                    if (i === 5 || i === 11) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
-                    }
-                }
-                html += "</ul>";
-                $("#divFWLDText").html(html);
-            }
-            LoadCZYQ();
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载出租要求
-function LoadCZYQ() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "出租要求",
-            TBName: "CODES_FC"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='ulFWPZ'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liFWPZ' onclick='SelectFWPZ(this)'>" + xml.list[i].CODENAME + "</li>";
-                    if (i === 5 || i === 11) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
-                    }
-                }
-                html += "</ul>";
-                $("#divCZYQText").html(html);
-            }
-            LoadFC_ZZFXX();
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
@@ -507,52 +278,6 @@ function SelectXQMC(obj) {
     $("#XQMC").val(html);
     $("#divXQMClist").css("display", "none");
     isleave = true;
-}
-//选择房屋朝向
-function SelectFWCX(obj) {
-    $("#spanFWCX").html(obj.innerHTML);
-    $("#divFWCX").css("display", "none");
-}
-//选择装修情况
-function SelectZXQK(obj) {
-    $("#spanZXQK").html(obj.innerHTML);
-    $("#divZXQK").css("display", "none");
-}
-//选择住宅类型
-function SelectZZLX(obj) {
-    $("#spanZZLX").html(obj.innerHTML);
-    $("#divZZLX").css("display", "none");
-}
-//选择押付方式
-function SelectYFFS(obj) {
-    $("#spanYFFS").html(obj.innerHTML);
-    $("#divYFFS").css("display", "none");
-}
-//选择房屋配置
-function SelectFWPZ(obj) {
-    if ($(obj).css("color") === "rgb(51, 51, 51)")
-        $(obj).css("color", "#5bc0de");
-    else
-        $(obj).css("color", "#333333");
-}
-//获取单选
-function GetDX2(type) {
-    var result = "";
-    $("#div" + type + "Text").find("li").each(function (i) {
-        if ($(this).css("color") !== "rgb(51, 51, 51)")
-            result += i + ",";
-    });
-    return result.substr(0, result.length - 1);
-}
-//设置单选
-function SetDX2(type, value) {
-    var result = "";
-    var values = value.split(',');
-    $("#div" + type + "Text").find("li").each(function (i) {
-        if (values.contains(i))
-            $(this).css("color", "#5bc0de");
-    });
-    return result.substr(0, result.length - 1);
 }
 //加载
 function LoadFC_ZZFXX() {
@@ -571,15 +296,15 @@ function LoadFC_ZZFXX() {
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
                 $("#FC_ZZFJBXXID").val(xml.Value.FC_ZZFJBXX.FC_ZZFJBXXID);
                 if (xml.Value.FC_ZZFJBXX.ZJYBHFY !== null)
-                    SetDX2("BHFY", xml.Value.FC_ZZFJBXX.ZJYBHFY);
+                    SetDuoX("BHFY", xml.Value.FC_ZZFJBXX.ZJYBHFY);
                 if (xml.Value.FC_ZZFJBXX.FWPZ !== null)
-                    SetDX2("FWPZ", xml.Value.FC_ZZFJBXX.FWPZ);
+                    SetDuoX("FWPZ", xml.Value.FC_ZZFJBXX.FWPZ);
                 if (xml.Value.FC_ZZFJBXX.FWLD !== null)
-                    SetDX2("FWLD", xml.Value.FC_ZZFJBXX.FWLD);
+                    SetDuoX("FWLD", xml.Value.FC_ZZFJBXX.FWLD);
                 if (xml.Value.FC_ZZFJBXX.CZYQ !== null)
-                    SetDX2("CZYQ", xml.Value.FC_ZZFJBXX.CZYQ);
+                    SetDuoX("CZYQ", xml.Value.FC_ZZFJBXX.CZYQ);
                 if (xml.Value.FC_ZZFJBXX.CZFS !== null)
-                    SetDX("FG", xml.Value.FC_ZZFJBXX.CZFS);
+                    SetDX("CZFS", xml.Value.FC_ZZFJBXX.CZFS);
                 $("#spanFWCX").html(xml.Value.FC_ZZFJBXX.CX);
                 $("#spanZXQK").html(xml.Value.FC_ZZFJBXX.ZXQK);
                 $("#spanZZLX").html(xml.Value.FC_ZZFJBXX.ZZLX);
@@ -606,10 +331,10 @@ function FB() {
     obj = jsonObj.AddJson(obj, "ZXQK", "'" + $("#spanZXQK").html() + "'");
     obj = jsonObj.AddJson(obj, "ZZLX", "'" + $("#spanZZLX").html() + "'");
     obj = jsonObj.AddJson(obj, "YFFS", "'" + $("#spanYFFS").html() + "'");
-    obj = jsonObj.AddJson(obj, "ZJYBHFY", "'" + GetDX2("BHFY") + "'");
-    obj = jsonObj.AddJson(obj, "FWPZ", "'" + GetDX2("FWPZ") + "'");
-    obj = jsonObj.AddJson(obj, "FWLD", "'" + GetDX2("FWLD") + "'");
-    obj = jsonObj.AddJson(obj, "CZYQ", "'" + GetDX2("CZYQ") + "'");
+    obj = jsonObj.AddJson(obj, "ZJYBHFY", "'" + GetDuoX("BHFY") + "'");
+    obj = jsonObj.AddJson(obj, "FWPZ", "'" + GetDuoX("FWPZ") + "'");
+    obj = jsonObj.AddJson(obj, "FWLD", "'" + GetDuoX("FWLD") + "'");
+    obj = jsonObj.AddJson(obj, "CZYQ", "'" + GetDuoX("CZYQ") + "'");
     obj = jsonObj.AddJson(obj, "CZFS", "'" + GetDX("CZFS") + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     if ($("#KRZSJ").val() !== "")
