@@ -34,7 +34,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             jcxx.LXDZ = yhjbxx.TXDZ;
             jcxx.DH = Session["XZQ"] + "-" + FC_XZLBLL.GetLBQCByLBID(jcxx.LBID);
             FC_XZLJBXX xzljbxx = JsonHelper.ConvertJsonToObject<FC_XZLJBXX>(json);
-            xzljbxx.BCMS = bcms;
+            xzljbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
             object result = FC_XZLBLL.SaveXZLJBXX(jcxx, xzljbxx, photos);
             return Json(result);

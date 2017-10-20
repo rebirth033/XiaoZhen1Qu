@@ -112,7 +112,7 @@ function LoadPFCG_YBYQJBXX() {
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
-                    ue.setContent(xml.Value.PFCG_YBYQJBXX.BCMS);
+                    ue.setContent(xml.Value.BCMSString);
                 });
                 $("#spanLB").html(xml.Value.PFCG_YBYQJBXX.LB);
                 $("#spanXL").html(xml.Value.PFCG_YBYQJBXX.XL);

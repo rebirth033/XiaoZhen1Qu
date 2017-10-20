@@ -110,7 +110,7 @@ function LoadPFCG_BZJBXX() {
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
-                    ue.setContent(xml.Value.PFCG_BZJBXX.BCMS);
+                    ue.setContent(xml.Value.BCMSString);
                 });
                 SetDuoX("BZLB", xml.Value.PFCG_BZJBXX.LB);
                 SetDuoX("BZYT", xml.Value.PFCG_BZJBXX.YT);

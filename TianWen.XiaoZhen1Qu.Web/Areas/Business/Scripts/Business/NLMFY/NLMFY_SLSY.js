@@ -132,7 +132,7 @@ function LoadNLMFY_SLSYJBXX() {
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
-                    ue.setContent(xml.Value.NLMFY_SLSYJBXX.BCMS);
+                    ue.setContent(xml.Value.BCMSString);
                 });
                 $("#spanLB").html(xml.Value.NLMFY_SLSYJBXX.LB);
                 $("#spanXL").html(xml.Value.NLMFY_SLSYJBXX.XL);

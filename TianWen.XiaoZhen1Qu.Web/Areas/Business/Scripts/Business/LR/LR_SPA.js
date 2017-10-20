@@ -111,7 +111,7 @@ function LoadLR_SPAJBXX() {
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
-                    ue.setContent(xml.Value.LR_SPAJBXX.BCMS);
+                    ue.setContent(xml.Value.BCMSString);
                 });
                 if (xml.Value.LR_SPAJBXX.LB !== null)
                     SetDuoX("SPALB", xml.Value.LR_SPAJBXX.LB);

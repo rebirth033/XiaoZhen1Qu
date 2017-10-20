@@ -33,7 +33,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             jcxx.LXDZ = yhjbxx.TXDZ;
             jcxx.DH = Session["XZQ"] + "-" + PWKQ_QTKQBLL.GetLBQCByLBID(jcxx.LBID);
             PWKQ_QTKQJBXX PWKQ_QTKQjbxx = JsonHelper.ConvertJsonToObject<PWKQ_QTKQJBXX>(json);
-            PWKQ_QTKQjbxx.BCMS = bcms;
+            PWKQ_QTKQjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             object result = PWKQ_QTKQBLL.SavePWKQ_QTKQJBXX(jcxx, PWKQ_QTKQjbxx);
             return Json(result);
         }

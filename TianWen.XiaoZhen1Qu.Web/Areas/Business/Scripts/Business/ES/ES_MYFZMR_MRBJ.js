@@ -95,7 +95,7 @@ function LoadES_MYFZMR_MRBJJBXX() {
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
-                    ue.setContent(xml.Value.ES_MYFZMR_MRBJJBXX.BCMS);
+                    ue.setContent(xml.Value.BCMSString);
                 });
                 if (xml.Value.ES_SJSM_PBDNJBXX.GQ !== null)
                     SetDX("GQ", xml.Value.ES_SJSM_PBDNJBXX.GQ);

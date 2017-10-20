@@ -463,6 +463,7 @@
     <Compile Include="Models\SHFW\SHFW_SHFW_QMFSSMJBXX.cs" />
     <Compile Include="Models\SHFW\SHFW_SHFW_SHPSJBXX.cs" />
     <Compile Include="Models\SHFW\SHFW_WXFW_SJSMWXJBXX.cs" />
+    <Compile Include="Models\BinaryHelper.cs" />
     <Compile Include="Models\SWFW\SWFW_BGSBWXJBXX.cs" />
     <Compile Include="Models\SWFW\SWFW_BXJBXX.cs" />
     <Compile Include="Models\SWFW\SWFW_CWKJPGJBXX.cs" />

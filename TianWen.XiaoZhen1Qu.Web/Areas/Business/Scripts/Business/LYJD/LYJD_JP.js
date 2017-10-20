@@ -119,7 +119,7 @@ function LoadLYJD_JPJBXX() {
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
-                    ue.setContent(xml.Value.LYJD_JPJBXX.FWJS);
+                    ue.setContent(xml.Value.BCMSString);
                 });
                 $("#spanLB").html(xml.Value.LYJD_JPJBXX.LB);
                 $("#spanQY").html(xml.Value.LYJD_JPJBXX.QY);

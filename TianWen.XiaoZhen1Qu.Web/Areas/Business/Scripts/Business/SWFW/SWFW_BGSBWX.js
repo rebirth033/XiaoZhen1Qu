@@ -121,7 +121,7 @@ function LoadSWFW_BGSBWXJBXX() {
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
-                    ue.setContent(xml.Value.SWFW_BGSBWXJBXX.BCMS);
+                    ue.setContent(xml.Value.BCMSString);
                 });
                 PDLB(xml.Value.SWFW_BGSBWXJBXX.LB);
                 $("#spanLB").html(xml.Value.SWFW_BGSBWXJBXX.LB);

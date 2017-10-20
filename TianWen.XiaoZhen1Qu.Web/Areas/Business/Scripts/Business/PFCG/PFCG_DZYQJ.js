@@ -103,7 +103,7 @@ function LoadPFCG_DZYQJJBXX() {
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
-                    ue.setContent(xml.Value.PFCG_DZYQJJBXX.BCMS);
+                    ue.setContent(xml.Value.BCMSString);
                 });
                 SetDuoX("DZYQJLB", xml.Value.PFCG_DZYQJJBXX.LB);
                 $("#spanQY").html(xml.Value.PFCG_DZYQJJBXX.QY);

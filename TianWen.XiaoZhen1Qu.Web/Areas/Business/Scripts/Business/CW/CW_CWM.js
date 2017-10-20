@@ -69,7 +69,7 @@ function LoadCW_CWMJBXX() {
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
-                    ue.setContent(xml.Value.CW_CWMJBXX.BCMS);
+                    ue.setContent(xml.Value.BCMSString);
                 });
                 $("#spanPZ").html(xml.Value.CW_CWMJBXX.PZ);
                 if (xml.Value.CW_CWMJBXX.GQ !== null)

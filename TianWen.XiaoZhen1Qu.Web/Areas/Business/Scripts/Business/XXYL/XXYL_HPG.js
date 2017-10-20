@@ -115,7 +115,7 @@ function LoadXXYL_HPGJBXX() {
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
-                    ue.setContent(xml.Value.XXYL_HPGJBXX.BCMS);
+                    ue.setContent(xml.Value.BCMSString);
                 });
                 if (xml.Value.XXYL_HPGJBXX.SNSB !== null)
                     SetDuoX("SNSB", xml.Value.XXYL_HPGJBXX.SNSB);

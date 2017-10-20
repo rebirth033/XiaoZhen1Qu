@@ -68,7 +68,7 @@ function LoadPFCG_TSJBXX() {
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
-                    ue.setContent(xml.Value.PFCG_TSJBXX.BCMS);
+                    ue.setContent(xml.Value.BCMSString);
                 });
                 $("#spanQY").html(xml.Value.PFCG_TSJBXX.QY);
                 $("#spanDD").html(xml.Value.PFCG_TSJBXX.DD);

@@ -60,7 +60,7 @@ function LoadCW_CWZSLYJBXX() {
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
-                    ue.setContent(xml.Value.CW_CWZSLYJBXX.BCMS);
+                    ue.setContent(xml.Value.BCMSString);
                 });
                 if (xml.Value.CW_CWZSLYJBXX.GQ !== null)
                     SetDX("GQ", xml.Value.CW_CWZSLYJBXX.GQ);

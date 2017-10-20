@@ -104,7 +104,7 @@ function LoadXXYL_ZLAMJBXX() {
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
-                    ue.setContent(xml.Value.XXYL_ZLAMJBXX.BCMS);
+                    ue.setContent(xml.Value.BCMSString);
                 });
                 if (xml.Value.XXYL_ZLAMJBXX.LB !== null)
                     SetDuoX("ZLAMLB", xml.Value.XXYL_ZLAMJBXX.LB);

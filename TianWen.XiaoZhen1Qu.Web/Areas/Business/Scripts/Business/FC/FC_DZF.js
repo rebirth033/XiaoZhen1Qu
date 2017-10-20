@@ -171,7 +171,7 @@ function LoadFC_DZFJBXX() {
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
-                    ue.setContent(xml.Value.FC_DZFJBXX.FYMS);
+                    ue.setContent(xml.Value.BCMSString);
                 });
                 if (xml.Value.FC_DZFJBXX.CZFS !== null)
                     SetDX("CZFS", xml.Value.FC_DZFJBXX.CZFS);

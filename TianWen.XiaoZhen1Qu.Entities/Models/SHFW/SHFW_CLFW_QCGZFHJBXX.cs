@@ -50,7 +50,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// 补充描述
         /// </summary>
         [Property]
-        public virtual string BCMS { get; set; }
+        public virtual Byte[] BCMS { get; set; }
 
         /// <summary>
         /// 区域

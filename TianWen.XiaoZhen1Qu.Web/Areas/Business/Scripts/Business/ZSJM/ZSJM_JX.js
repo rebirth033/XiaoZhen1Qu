@@ -163,7 +163,7 @@ function LoadZSJM_JXJBXX() {
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
-                    ue.setContent(xml.Value.ZSJM_JXJBXX.BCMS);
+                    ue.setContent(xml.Value.BCMSString);
                 });
                 $("#spanLB").html(xml.Value.ZSJM_JXJBXX.LB);
                 $("#spanQY").html(xml.Value.ZSJM_JXJBXX.QY);

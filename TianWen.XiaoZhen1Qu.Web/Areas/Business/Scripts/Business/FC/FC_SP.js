@@ -85,7 +85,7 @@ function LoadFC_SPJBXX() {
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
-                    ue.setContent(xml.Value.FC_SPJBXX.BCMS);
+                    ue.setContent(xml.Value.BCMSString);
                 });
                 if (xml.Value.FC_SPJBXX.GQ !== null)
                     SetDX("GQ", xml.Value.FC_SPJBXX.GQ);

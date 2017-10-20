@@ -10,7 +10,6 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 {
     public class BaseController : Controller
     {
-
         public List<PHOTOS> GetTP(string fwzp)
         {
             List<PHOTOS> photos = new List<PHOTOS>();

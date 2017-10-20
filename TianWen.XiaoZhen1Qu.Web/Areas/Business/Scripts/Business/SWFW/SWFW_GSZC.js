@@ -12,8 +12,6 @@ $(document).ready(function () {
     $("#span_content_info_qCWFWs").bind("click", LoadXZQByGrade);
     $("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });
 
-
-
     LoadGSZCLB();
     LoadDefault();
     BindClick("QY");
@@ -103,7 +101,7 @@ function LoadSWFW_GSZCJBXX() {
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
-                    ue.setContent(xml.Value.SWFW_GSZCJBXX.BCMS);
+                    ue.setContent(xml.Value.BCMSString);
                 });
                 SetDuoX("GSZCLB", xml.Value.SWFW_GSZCJBXX.LB);
                 $("#spanQY").html(xml.Value.SWFW_GSZCJBXX.QY);

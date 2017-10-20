@@ -103,7 +103,7 @@ function LoadSWFW_JXSBWXJBXX() {
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
-                    ue.setContent(xml.Value.SWFW_JXSBWXJBXX.BCMS);
+                    ue.setContent(xml.Value.BCMSString);
                 });
                 SetDuoX("JXSBWXLB", xml.Value.SWFW_JXSBWXJBXX.LB);
                 $("#spanQY").html(xml.Value.SWFW_JXSBWXJBXX.QY);

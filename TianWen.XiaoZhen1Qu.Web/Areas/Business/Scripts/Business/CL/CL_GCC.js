@@ -207,7 +207,7 @@ function LoadCL_GCCJBXX() {
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
-                    ue.setContent(xml.Value.CL_GCCJBXX.BCMS);
+                    ue.setContent(xml.Value.BCMSString);
                 });
                 if (xml.Value.CL_GCCJBXX.LB !== null)
                     SetDX("LB", xml.Value.CL_GCCJBXX.LB);

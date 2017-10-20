@@ -228,7 +228,7 @@ function LoadQZZP_JZZPJBXX() {
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
-                    ue.setContent(xml.Value.QZZP_JZZPJBXX.BCMS);
+                    ue.setContent(xml.Value.BCMSString);
                 });
                 $("#spanJZLB").html(xml.Value.QZZP_JZZPJBXX.JZLB);
                 $("#spanXZSPDW").html(xml.Value.QZZP_JZZPJBXX.XZSPDW);

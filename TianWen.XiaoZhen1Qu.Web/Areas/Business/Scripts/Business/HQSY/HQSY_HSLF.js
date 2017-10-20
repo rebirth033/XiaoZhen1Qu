@@ -117,7 +117,7 @@ function LoadHQSY_HSLFJBXX() {
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
-                    ue.setContent(xml.Value.HQSY_HSLFJBXX.BCMS);
+                    ue.setContent(xml.Value.BCMSString);
                 });
                 $("#spanYS").html(xml.Value.HQSY_HSLFJBXX.YS);
                 $("#spanLX").html(xml.Value.HQSY_HSLFJBXX.LX);

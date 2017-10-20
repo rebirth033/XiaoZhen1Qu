@@ -109,7 +109,7 @@ function LoadJYPX_JJGRJBXX() {
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
-                    ue.setContent(xml.Value.JYPX_JJGRJBXX.BCMS);
+                    ue.setContent(xml.Value.BCMSString);
                 });
                 $("#spanQY").html(xml.Value.JYPX_JJGRJBXX.QY);
                 $("#spanDD").html(xml.Value.JYPX_JJGRJBXX.DD);

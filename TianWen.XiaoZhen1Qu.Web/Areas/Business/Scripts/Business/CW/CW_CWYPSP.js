@@ -115,7 +115,7 @@ function LoadCW_CWYPSPJBXX() {
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
-                    ue.setContent(xml.Value.CW_CWYPSPJBXX.BCMS);
+                    ue.setContent(xml.Value.BCMSString);
                 });
                 $("#spanLB").html(xml.Value.CW_CWYPSPJBXX.LB);
                 $("#spanXJ").html(xml.Value.CW_CWYPSPJBXX.XJ);

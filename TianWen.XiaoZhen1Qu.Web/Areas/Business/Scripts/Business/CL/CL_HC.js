@@ -153,7 +153,7 @@ function LoadCL_HCJBXX() {
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
-                    ue.setContent(xml.Value.CL_HCJBXX.BCMS);
+                    ue.setContent(xml.Value.BCMSString);
                 });
                 $("#spanLB").html(xml.Value.CL_HCJBXX.LB);
                 $("#spanXL").html(xml.Value.CL_HCJBXX.XL);

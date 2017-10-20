@@ -34,7 +34,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             jcxx.LXDZ = yhjbxx.TXDZ;
             jcxx.DH = Session["XZQ"] + "-" + PFCG_SJSMBLL.GetLBQCByLBID(jcxx.LBID);
             PFCG_SJSMJBXX PFCG_SJSMjbxx = JsonHelper.ConvertJsonToObject<PFCG_SJSMJBXX>(json);
-            PFCG_SJSMjbxx.BCMS = bcms;
+            PFCG_SJSMjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
             object result = PFCG_SJSMBLL.SavePFCG_SJSMJBXX(jcxx, PFCG_SJSMjbxx, photos);
             return Json(result);

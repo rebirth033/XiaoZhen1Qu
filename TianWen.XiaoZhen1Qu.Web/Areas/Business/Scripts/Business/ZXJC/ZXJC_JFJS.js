@@ -122,7 +122,7 @@ function LoadZXJC_JFJSJBXX() {
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
-                    ue.setContent(xml.Value.ZXJC_JFJSJBXX.BCMS);
+                    ue.setContent(xml.Value.BCMSString);
                 });
                 PDLB(xml.Value.ZXJC_JFJSJBXX.LB);
                 $("#spanLB").html(xml.Value.ZXJC_JFJSJBXX.LB);

@@ -68,7 +68,7 @@ function LoadLR_WSJBXX() {
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
-                    ue.setContent(xml.Value.LR_WSJBXX.BCMS);
+                    ue.setContent(xml.Value.BCMSString);
                 });
                 $("#spanQY").html(xml.Value.LR_WSJBXX.QY);
                 $("#spanDD").html(xml.Value.LR_WSJBXX.DD);

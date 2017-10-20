@@ -122,7 +122,7 @@ function LoadSWFW_GGCMJBXX() {
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
-                    ue.setContent(xml.Value.SWFW_GGCMJBXX.BCMS);
+                    ue.setContent(xml.Value.BCMSString);
                 });
                 $("#spanLB").html(xml.Value.SWFW_GGCMJBXX.LB);
                 $("#spanQY").html(xml.Value.SWFW_GGCMJBXX.QY);

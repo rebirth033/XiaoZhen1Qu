@@ -111,7 +111,7 @@ function LoadLR_MRHFJBXX() {
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
-                    ue.setContent(xml.Value.LR_MRHFJBXX.BCMS);
+                    ue.setContent(xml.Value.BCMSString);
                 });
                 if (xml.Value.LR_MRHFJBXX.LB !== null)
                     SetDuoX("MRHFLB", xml.Value.LR_MRHFJBXX.LB);
