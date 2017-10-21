@@ -1,12 +1,7 @@
 ﻿var isleave = true;
 var ue = UE.getEditor('BCMS');
 $(document).ready(function () {
-    $("#YXQZ").datepicker({ minDate: 0 });
-    $("#btnFB").bind("click", FB);
-    $("#BCMS").bind("focus", BCMSFocus);
-    $("#BCMS").bind("blur", BCMSBlur);
-    
-    $("body").bind("click", function () { Close("_XZQ"); Close("LB"); Close("XL"); Close("XJ"); Close("QY"); Close("DD"); });
+    $("#YXQZ").datepicker({ minDate: 0 });$("body").bind("click", function () { Close("_XZQ"); Close("LB"); Close("XL"); Close("XJ"); Close("QY"); Close("DD"); });
 
 
 
@@ -17,19 +12,6 @@ $(document).ready(function () {
     BindClick("QY");
     BindClick("DD");
 });
-//描述框focus
-function BCMSFocus() {
-    $("#BCMS").css("color", "#333333");
-}
-//描述框blur
-function BCMSBlur() {
-    $("#BCMS").css("color", "#999999");
-}
-//描述框设默认文本
-function BCMSSetDefault() {
-    var BCMS = "1.房屋特征：\r\n\r\n2.周边配套：\r\n\r\n3.房东心态：";
-    $("#BCMS").html(BCMS);
-}
 //加载默认
 function LoadDefault() {
     ue.ready(function () {

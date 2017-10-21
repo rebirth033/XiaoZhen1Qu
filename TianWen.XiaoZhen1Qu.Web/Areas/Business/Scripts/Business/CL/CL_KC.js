@@ -2,16 +2,7 @@
 var ue = UE.getEditor('BCMS');
 $(document).ready(function () {
     
-    
-    $("#btnFB").bind("click", FB);
-    $("#BCMS").bind("focus", BCMSFocus);
-    $("#BCMS").bind("blur", BCMSBlur);
-    $("#inputUpload").bind("change", Upload);
-    $("#btnClose").bind("click", CloseWindow);
-    $("#div_dz_close").bind("click", CloseWindow);
-    $("#span_content_info_qKCs").bind("click", LoadXZQByGrade);
     $("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });
-
     LoadDefault();
     LoadCL_KCJBXX();
     LoadCYLS();
@@ -75,19 +66,6 @@ function PPXZ(PPMC, PPID) {
     $("#divPP").css("display", "none");
     $("#divCXText").css("display", "");
     BindClick("CX");
-}
-//描述框focus
-function BCMSFocus() {
-    $("#BCMS").css("color", "#333333");
-}
-//描述框blur
-function BCMSBlur() {
-    $("#BCMS").css("color", "#999999");
-}
-//描述框设默认文本
-function BCMSSetDefault() {
-    var BCMS = "1.房屋特征：\r\n\r\n2.周边配套：\r\n\r\n3.房东心态：";
-    $("#BCMS").html(BCMS);
 }
 //加载默认
 function LoadDefault() {

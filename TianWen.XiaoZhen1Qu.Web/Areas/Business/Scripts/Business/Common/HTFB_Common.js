@@ -10,6 +10,9 @@
     $("#div_upload").bind("mouseover", GetUploadCss);
     $("#div_upload").bind("mouseleave", LeaveUploadCss);
     $("#spanCXLB").bind("click", CXLB);
+    $("#btnFB").bind("click", FB);
+    $("#span_content_info_qCWFWs").bind("click", LoadXZQByGrade);
+    
 
     LoadTXXX();
 });

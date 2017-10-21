@@ -1,15 +1,7 @@
 ﻿var isleave = true;
 var ue = UE.getEditor('BCMS');
 $(document).ready(function () {
-    $("#btnFB").bind("click", FB);
-    $("#BCMS").bind("focus", BCMSFocus);
-    $("#BCMS").bind("blur", BCMSBlur);
-    $("#inputUpload").bind("change", Upload);
-    $("#btnClose").bind("click", CloseWindow);
-    $("#div_dz_close").bind("click", CloseWindow);
-    $("#span_content_info_qGCCs").bind("click", LoadXZQByGrade);
     $("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });
-
     LoadDefault();
     LoadCL_GCCJBXX();
     BindClick("CX");

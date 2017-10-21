@@ -1,11 +1,7 @@
 ﻿var ue = UE.getEditor('BCMS');
 $(document).ready(function () {
-    $("#XQMC").bind("keyup", LoadXQMC);
-    $("#btnFB").bind("click", FB);
-    $("#BCMS").bind("focus", BCMSFocus);
-    $("#BCMS").bind("blur", BCMSBlur);
-    $("#KRZSJ").datepicker({ minDate: 0 });
-    $("#inputUpload").bind("change", Upload);
+    $("#XQMC").bind("keyup", LoadXQMC);$("#KRZSJ").datepicker({ minDate: 0 });
+    
     $("body").bind("click", function () { Close("_XZQ"); Close("QY"); Close("SQ");});
 
     BindClick("FWCX");

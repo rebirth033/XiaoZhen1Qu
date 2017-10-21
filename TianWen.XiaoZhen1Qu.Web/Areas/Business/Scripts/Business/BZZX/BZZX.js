@@ -3,7 +3,7 @@
     $("#span_head_nav_info_lxkf").bind("click", ToLXKF);
     $("#span_head_nav_info_wzjy").bind("click", ToWZJY);
     ToSY();
-    $("#btnClose").bind("click", CloseWindow);
+    
 });
 
 //帮助中心_首页

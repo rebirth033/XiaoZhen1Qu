@@ -3,12 +3,6 @@ var ue = UE.getEditor('BCMS');
 $(document).ready(function () {
     
     
-    $("#btnFB").bind("click", FB);
-    $("#BCMS").bind("focus", BCMSFocus);
-    $("#BCMS").bind("blur", BCMSBlur);
-    $("#inputUpload").bind("change", Upload);
-    $("#btnClose").bind("click", CloseWindow);
-    $("#div_dz_close").bind("click", CloseWindow);
     
     $("body").bind("click", function () { Close("_XZQ"); Close("LB"); Close("XL"); Close("XJ"); Close("QY"); Close("DD"); });
 

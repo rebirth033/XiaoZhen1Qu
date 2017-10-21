@@ -1,15 +1,11 @@
 ﻿var isleave = true;
 var fwjs = UE.getEditor('FWJS');
-$(document).ready(function () {
-    
-    
-    $("#btnFB").bind("click", FB);
-    $("#XCAP").bind("focus", XCAPFocus);
+$(document).ready(function () {$("#XCAP").bind("focus", XCAPFocus);
     $("#XCAP").bind("blur", XCAPBlur);
-    $("#inputUpload").bind("change", Upload);
-    $("#btnClose").bind("click", CloseWindow);
-    $("#div_dz_close").bind("click", CloseWindow);
-    $("#span_content_info_qCWFWs").bind("click", LoadXZQByGrade);
+    
+    
+    
+    
     $("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });
 
 
