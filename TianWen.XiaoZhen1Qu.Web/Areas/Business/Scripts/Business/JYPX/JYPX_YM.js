@@ -1,11 +1,11 @@
 ﻿var isleave = true;
-var ue = UE.getEditor('FYMS');
+var ue = UE.getEditor('BCMS');
 $(document).ready(function () {
     
     
     $("#btnFB").bind("click", FB);
-    $("#FYMS").bind("focus", FYMSFocus);
-    $("#FYMS").bind("blur", FYMSBlur);
+    $("#BCMS").bind("focus", BCMSFocus);
+    $("#BCMS").bind("blur", BCMSBlur);
     $("#inputUpload").bind("change", Upload);
     $("#btnClose").bind("click", CloseWindow);
     $("#div_dz_close").bind("click", CloseWindow);
@@ -21,17 +21,17 @@ $(document).ready(function () {
     LoadDuoX("移民类别", "YMLB");
 });
 //描述框focus
-function FYMSFocus() {
-    $("#FYMS").css("color", "#333333");
+function BCMSFocus() {
+    $("#BCMS").css("color", "#333333");
 }
 //描述框blur
-function FYMSBlur() {
-    $("#FYMS").css("color", "#999999");
+function BCMSBlur() {
+    $("#BCMS").css("color", "#999999");
 }
 //描述框设默认文本
-function FYMSSetDefault() {
-    var fyms = "1.房屋特征：\r\n\r\n2.周边配套：\r\n\r\n3.房东心态：";
-    $("#FYMS").html(fyms);
+function BCMSSetDefault() {
+    var BCMS = "1.房屋特征：\r\n\r\n2.周边配套：\r\n\r\n3.房东心态：";
+    $("#BCMS").html(BCMS);
 }
 //加载默认
 function LoadDefault() {

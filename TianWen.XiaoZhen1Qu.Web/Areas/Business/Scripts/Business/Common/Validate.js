@@ -90,6 +90,7 @@ function InfoLXR() {
     $("#divLXRTip").css("display", "block");
     $("#divLXRTip").attr("class", "Info");
     $("#divLXRTip").html('');
+    $("#divLXRTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请输入联系人');
     $("#LXR").css("border-color", "#5bc0de");
 }
 //提示联系电话
@@ -147,6 +148,18 @@ function ValidateSelect(idout, idin, message) {
         bool = true;
     }
     return bool;
+}
+//验证补充描述
+function ValidateBCMS(id, message) {
+    if (ue.getContent() === "" || ue.getContent() === null) {
+        $("#div" + id + "Tip").css("display", "block");
+        $("#div" + id + "Tip").attr("class", "Warn");
+        $("#div" + id + "Tip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />' + message);
+        return false;
+    } else {
+        $("#div" + id + "Tip").css("display", "none");
+        return true;
+    }
 }
 //验证共有
 function ValidateCommon() {

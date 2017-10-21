@@ -194,6 +194,7 @@
     color: #fd634f;
     margin-left: 220px;
     position: relative;
+    display: block;
 }
 
 .Info {

@@ -1,12 +1,9 @@
 ﻿var isleave = true;
-var ue = UE.getEditor('FYMS');
+var ue = UE.getEditor('BCMS');
 $(document).ready(function () {
-    $(".div_radio").bind("click", RadioSelect);
-    
-    
     $("#btnFB").bind("click", FB);
-    $("#FYMS").bind("focus", FYMSFocus);
-    $("#FYMS").bind("blur", FYMSBlur);
+    $("#BCMS").bind("focus", BCMSFocus);
+    $("#BCMS").bind("blur", BCMSBlur);
     $("#inputUpload").bind("change", Upload);
     $("#btnClose").bind("click", CloseWindow);
     $("#span_xzdz").bind("click", OpenXZDZ);
@@ -20,17 +17,17 @@ $(document).ready(function () {
     LoadFC_DZFJBXX();
 });
 //房屋描述框focus
-function FYMSFocus() {
-    $("#FYMS").css("color", "#333333");
+function BCMSFocus() {
+    $("#BCMS").css("color", "#333333");
 }
 //房屋描述框blur
-function FYMSBlur() {
-    $("#FYMS").css("color", "#999999");
+function BCMSBlur() {
+    $("#BCMS").css("color", "#999999");
 }
 //房屋描述框设默认文本
-function FYMSSetDefault() {
-    var fyms = "1.房屋特征：\r\n\r\n2.周边配套：\r\n\r\n3.房东心态：";
-    $("#FYMS").html(fyms);
+function BCMSSetDefault() {
+    var BCMS = "1.房屋特征：\r\n\r\n2.周边配套：\r\n\r\n3.房东心态：";
+    $("#BCMS").html(BCMS);
 }
 //加载默认
 function LoadDefault() {
@@ -188,7 +185,7 @@ function LoadFC_DZFJBXX() {
 }
 //发布
 function FB() {
-    if (AllValidate() === false) return;
+    if (ValidateAll() === false) return;
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
@@ -207,7 +204,7 @@ function FB() {
         data:
         {
             Json: jsonObj.JsonToString(obj),
-            FYMS: ue.getContent(),
+            BCMS: ue.getContent(),
             FWZP: GetPhotoUrls(),
             JYGZ: $("#JYGZ").val()
         },

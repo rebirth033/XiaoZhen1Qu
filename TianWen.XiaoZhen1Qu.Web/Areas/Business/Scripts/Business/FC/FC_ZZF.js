@@ -1,9 +1,9 @@
-﻿var ue = UE.getEditor('FYMS');
+﻿var ue = UE.getEditor('BCMS');
 $(document).ready(function () {
     $("#XQMC").bind("keyup", LoadXQMC);
     $("#btnFB").bind("click", FB);
-    $("#FYMS").bind("focus", FYMSFocus);
-    $("#FYMS").bind("blur", FYMSBlur);
+    $("#BCMS").bind("focus", BCMSFocus);
+    $("#BCMS").bind("blur", BCMSBlur);
     $("#KRZSJ").datepicker({ minDate: 0 });
     $("#inputUpload").bind("change", Upload);
     $("body").bind("click", function () { Close("_XZQ"); Close("QY"); Close("SQ");});
@@ -15,20 +15,20 @@ $(document).ready(function () {
     LoadDuoX("包含费用", "BHFY");
 
     LoadDefault();
-    FYMSSetDefault();
+    BCMSSetDefault();
 });
 
-function FYMSFocus() {
-    $("#FYMS").css("color", "#333333");
+function BCMSFocus() {
+    $("#BCMS").css("color", "#333333");
 }
 
-function FYMSBlur() {
-    $("#FYMS").css("color", "#999999");
+function BCMSBlur() {
+    $("#BCMS").css("color", "#999999");
 }
 
-function FYMSSetDefault() {
-    var fyms = "1.房屋特征：\r\n\r\n2.周边配套：\r\n\r\n3.房东心态：";
-    $("#FYMS").html(fyms);
+function BCMSSetDefault() {
+    var BCMS = "1.房屋特征：\r\n\r\n2.周边配套：\r\n\r\n3.房东心态：";
+    $("#BCMS").html(BCMS);
 }
 //加载默认
 function LoadDefault() {

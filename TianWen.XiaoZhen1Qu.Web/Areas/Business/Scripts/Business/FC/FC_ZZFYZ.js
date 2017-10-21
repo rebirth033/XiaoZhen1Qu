@@ -46,7 +46,8 @@ function ValidateFWZJ() {
 }
 //验证所有
 function ValidateAll() {
-    if (ValidateRadio("CZFS", "忘记填写出租方式啦") 
+    if (ValidateRadio("CZFS", "忘记填写出租方式啦")
+        & ValidateBCMS("BCMS", "忘记填写房源描述啦") 
         & ValidateFWQK()
         & ValidateXQMC()
         & ValidateFWLX()

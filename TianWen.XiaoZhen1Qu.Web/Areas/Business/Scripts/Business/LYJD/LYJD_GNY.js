@@ -27,7 +27,7 @@ $(document).ready(function () {
     BindClick("XCTS_R");
     BindClick("XCTS_W");
     LoadLYJD_GNYJBXX();
-    FYMSSetDefault();
+    BCMSSetDefault();
 });
 //描述框focus
 function XCAPFocus() {
@@ -38,7 +38,7 @@ function XCAPBlur() {
     $("#XCAP").css("color", "#999999");
 }
 //描述框设默认文本
-function FYMSSetDefault() {
+function BCMSSetDefault() {
     var xcap = '<span style="color: gray;font-size:12px;">请详细描述游玩的行程安排，包含住宿、用餐、游玩景点、费用说明、注意事项等，认真填写游玩描述会达到双倍的效果</span>';
     $("#XCAP").html(xcap);
 }
