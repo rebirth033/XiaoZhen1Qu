@@ -43,7 +43,10 @@ function FWQKValidate() {
 function AllValidate() {
     if (ValidateRadio("CZFS", "忘记填写出租方式啦")
         & FWQKValidate() 
-        & ValidateXQMC() & FWLXValidate() & LCFBValidate() & ValidateZJ() & ValidateBT() & ValidateFWZP() & ValidateLXR() & ValidateLXDH())
+        & ValidateXQMC()
+        & FWLXValidate()
+        & LCFBValidate()
+        & ValidateZJ() & ValidateBT() & ValidateFWZP() & ValidateLXR() & ValidateLXDH())
         return true;
     else
         return false;
