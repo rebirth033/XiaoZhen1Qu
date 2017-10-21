@@ -268,42 +268,42 @@ function InfoFWLX_S() {
     $("#divFWLXTip").css("display", "block");
     $("#divFWLXTip").attr("class", "Info");
     $("#divFWLXTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />填写整数，不能是0');
-    //$("#spanS").css("border-color", "#5bc0de");
+    $("#spanS").css("border-color", "#5bc0de");
 }
 
 function InfoFWLX_T() {
     $("#divFWLXTip").css("display", "block");
     $("#divFWLXTip").attr("class", "Info");
     $("#divFWLXTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />填写整数，没有请填0');
-    //$("#spanT").css("border-color", "#5bc0de");
+    $("#spanT").css("border-color", "#5bc0de");
 }
 
 function InfoFWLX_W() {
     $("#divFWLXTip").css("display", "block");
     $("#divFWLXTip").attr("class", "Info");
     $("#divFWLXTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />填写整数，没有请填0');
-    //$("#spanW").css("border-color", "#5bc0de");
+    $("#spanW").css("border-color", "#5bc0de");
 }
 
 function InfoFWLX_PFM() {
     $("#divFWLXTip").css("display", "block");
     $("#divFWLXTip").attr("class", "Info");
     $("#divFWLXTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />填写整数，不能是0');
-    //$("#spanPFM").css("border-color", "#5bc0de");
+    $("#spanPFM").css("border-color", "#5bc0de");
 }
 
 function InfoLCFB_C() {
     $("#divLCFBTip").css("display", "block");
     $("#divLCFBTip").attr("class", "Info");
     $("#divLCFBTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />填写整数，地下室用负数填写，不能为0');
-    //$("#spanC").css("border-color", "#5bc0de");
+    $("#spanC").css("border-color", "#5bc0de");
 }
 
 function InfoLCFB_GJC() {
     $("#divLCFBTip").css("display", "block");
     $("#divLCFBTip").attr("class", "Info");
     $("#divLCFBTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />填写整数，不能为0');
-    //$("#spanGJC").css("border-color", "#5bc0de");
+    $("#spanGJC").css("border-color", "#5bc0de");
 }
 
 function InfoZJ() {
