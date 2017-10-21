@@ -18,11 +18,12 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return View();
         }
 
+        [ValidateInput(false)]
         public JsonResult FB()
         {
             YHJBXX yhjbxx = FC_ZZFJBXXBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
-            string fyms = Request["FYMS"];
+            string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
             JCXX jcxx = JsonHelper.ConvertJsonToObject<JCXX>(json);
             jcxx.YHID = yhjbxx.YHID;
@@ -33,7 +34,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             jcxx.LXDZ = "福州市";
             jcxx.DH = Session["XZQ"].ToString() + "-" + FC_ZZFJBXXBLL.GetLBQCByLBID(jcxx.LBID);
             FC_ZZFJBXX FC_ZZFjbxx = JsonHelper.ConvertJsonToObject<FC_ZZFJBXX>(json);
-            FC_ZZFjbxx.BCMS = BinaryHelper.StringToBinary(fyms);
+            FC_ZZFjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
             object result = FC_ZZFJBXXBLL.SaveFC_ZZFJBXX(jcxx, FC_ZZFjbxx, photos);
             return Json(result);

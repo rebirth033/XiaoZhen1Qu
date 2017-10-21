@@ -26,7 +26,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// 出租方式
         /// </summary>
         [Property]
-        public virtual int CZFS { get; set; }
+        public virtual string CZFS { get; set; }
 
         /// <summary>
         /// 小区名称
@@ -38,25 +38,25 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// 室
         /// </summary>
         [Property]
-        public virtual int S { get; set; }
+        public virtual string S { get; set; }
 
         /// <summary>
         /// 厅
         /// </summary>
         [Property]
-        public virtual int T { get; set; }
+        public virtual string T { get; set; }
 
         /// <summary>
         /// 卫
         /// </summary>
         [Property]
-        public virtual int W { get; set; }
+        public virtual string W { get; set; }
 
         /// <summary>
         /// 平方米
         /// </summary>
         [Property]
-        public virtual int PFM { get; set; }
+        public virtual string PFM { get; set; }
         /// <summary>
         /// 朝向
         /// </summary>
@@ -76,12 +76,12 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// 层
         /// </summary>
         [Property]
-        public virtual int C { get; set; }
+        public virtual string C { get; set; }
         /// <summary>
         /// 共几层
         /// </summary>
         [Property]
-        public virtual int GJC { get; set; }
+        public virtual string GJC { get; set; }
         /// <summary>
         /// 租金
         /// </summary>

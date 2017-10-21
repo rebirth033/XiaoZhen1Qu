@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    $("#span_content_info_qhcs").bind("click", LoadXZQByGrade);
+    
     $("#divCPHText").bind("click", LoadSJXZQJC);
     $("#divCPHSZMText").bind("click", LoadCPHSZM);
     $("body").bind("click", CloseXZQ);

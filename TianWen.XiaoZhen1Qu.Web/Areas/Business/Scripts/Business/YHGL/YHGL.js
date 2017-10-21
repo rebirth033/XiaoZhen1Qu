@@ -41,7 +41,7 @@
         ShowWDZJ();
     else
         ShowWDXX();
-    $("#span_content_info_qhcs").bind("click", LoadXZQByGrade);
+    
 });
 //显示用户菜单
 function ShowYHCD() {

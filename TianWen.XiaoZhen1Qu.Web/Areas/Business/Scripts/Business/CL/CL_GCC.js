@@ -1,8 +1,6 @@
 ﻿var isleave = true;
 var ue = UE.getEditor('FYMS');
 $(document).ready(function () {
-    
-    
     $("#btnFB").bind("click", FB);
     $("#FYMS").bind("focus", FYMSFocus);
     $("#FYMS").bind("blur", FYMSBlur);

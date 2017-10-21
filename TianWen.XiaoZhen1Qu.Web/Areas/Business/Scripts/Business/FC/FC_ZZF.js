@@ -1,17 +1,12 @@
-﻿var isleave = true;
-var ue = UE.getEditor('FYMS');
+﻿var ue = UE.getEditor('FYMS');
 $(document).ready(function () {
     $("#XQMC").bind("keyup", LoadXQMC);
-    //
-    //
     $("#btnFB").bind("click", FB);
     $("#FYMS").bind("focus", FYMSFocus);
     $("#FYMS").bind("blur", FYMSBlur);
     $("#KRZSJ").datepicker({ minDate: 0 });
     $("#inputUpload").bind("change", Upload);
-    $("#btnClose").bind("click", CloseWindow);
-    $("#span_content_info_qhcs").bind("click", LoadXZQByGrade);
-    $("body").bind("click", function () { Close("_XZQ"); Close("LB"); Close("XL"); Close("XJ"); Close("QY"); Close("SQ"); });
+    $("body").bind("click", function () { Close("_XZQ"); Close("QY"); Close("SQ"); });
 
     BindClick("FWCX");
     BindClick("ZXQK");
@@ -35,7 +30,6 @@ function FYMSSetDefault() {
     var fyms = "1.房屋特征：\r\n\r\n2.周边配套：\r\n\r\n3.房东心态：";
     $("#FYMS").html(fyms);
 }
-
 //加载默认
 function LoadDefault() {
     ue.ready(function () { ue.setHeight(200); });
@@ -102,7 +96,7 @@ function LoadXQJBXXSByHZ(XQMC) {
         },
         success: function (xml) {
             if (xml.Result === 1 && xml.list.length > 0) {
-                var html = "<ul id='ulXQMC' onmouseover='MouseOver()' onmouseleave='MouseLeave()' class='ul_select' style='height: " + (xml.list.length * 34.5) + "px;width:594px;background-color:#ffffff'>";
+                var html = "<ul id='ulXQMC' class='ul_select' style='height:" + (xml.list.length * 34.5) + "px;width:594px;background-color:#ffffff'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     var index = xml.list[i].XQMC.indexOf(XQMC);
                     var xqmclength = XQMC.length;
@@ -112,7 +106,7 @@ function LoadXQJBXXSByHZ(XQMC) {
                     else {
                         xqmchtml = "<span style='color:#333333'>" + xml.list[i].XQMC.substr(0, index) + "</span>" + "<span style='color:#333333;font-weight:bolder;'>" + xml.list[i].XQMC.substr(index, xqmclength) + "</span>" + "<span style='color:#333333'>" + xml.list[i].XQMC.substr(index + xqmclength, xml.list[i].XQMC.length - index - xqmclength) + "</span>";
                     }
-                    html += "<li class='li_select' onmouseover='UnbindBlur(this)' onclick='SelectXQMC(this)'>" + xqmchtml + "&nbsp;&nbsp;<span style='color:#999999;font-size:12px;'>" + (xml.list[i].XQDZ === null ? "" : xml.list[i].XQDZ) + "</span>" + "</li>";
+                    html += "<li class='li_select' onclick='SelectXQMC(this)'>" + xqmchtml + "&nbsp;&nbsp;<span style='color:#999999;font-size:12px;'>" + (xml.list[i].XQDZ === null ? "" : xml.list[i].XQDZ) + "</span>" + "</li>";
                 }
                 html += "</ul>";
                 $("#divXQMClist").html(html);
@@ -136,7 +130,7 @@ function LoadXQJBXXSByPY(XQMC) {
         },
         success: function (xml) {
             if (xml.Result === 1 && xml.list.length > 0) {
-                var html = "<ul id='ulXQMC' onmouseover='MouseOver()' onmouseleave='MouseLeave()' class='ul_select' style='height: " + (xml.list.length * 34.5) + "px;width:594px;background-color:#ffffff'>";
+                var html = "<ul id='ulXQMC' class='ul_select' style='height: " + (xml.list.length * 34.5) + "px;width:594px;background-color:#ffffff'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     var index = 0;
                     var pys = xml.list[i].XQMCPY.split(' ');
@@ -261,7 +255,7 @@ function LoadDuoX(type, id) {
                 if (type === "房屋亮点")
                     LoadDuoX("出租要求", "CZYQ");
                 if (type === "出租要求")
-                    LoadJYPX_JJJGJBXX();
+                    LoadFC_ZZFXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -277,7 +271,6 @@ function SelectXQMC(obj) {
     }
     $("#XQMC").val(html);
     $("#divXQMClist").css("display", "none");
-    isleave = true;
 }
 //加载
 function LoadFC_ZZFXX() {
@@ -292,9 +285,8 @@ function LoadFC_ZZFXX() {
         success: function (xml) {
             if (xml.Result === 1) {
                 var jsonObj = new JsonDB("myTabContent");
-                jsonObj.DisplayFromJson("myTabContent", xml.Value.FC_ZZFXX);
+                jsonObj.DisplayFromJson("myTabContent", xml.Value.FC_ZZFJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
-                $("#FC_ZZFJBXXID").val(xml.Value.FC_ZZFJBXX.FC_ZZFJBXXID);
                 if (xml.Value.FC_ZZFJBXX.ZJYBHFY !== null)
                     SetDuoX("BHFY", xml.Value.FC_ZZFJBXX.ZJYBHFY);
                 if (xml.Value.FC_ZZFJBXX.FWPZ !== null)
@@ -309,7 +301,8 @@ function LoadFC_ZZFXX() {
                 $("#spanZXQK").html(xml.Value.FC_ZZFJBXX.ZXQK);
                 $("#spanZZLX").html(xml.Value.FC_ZZFJBXX.ZZLX);
                 $("#spanYFFS").html(xml.Value.FC_ZZFJBXX.YFFS);
-                $("#FYMS").html(xml.Value.FC_ZZFJBXX.FYMS);
+                //设置编辑器的内容
+                ue.ready(function () { ue.setHeight(200); ue.setContent(xml.Value.BCMSString); });
                 if (xml.Value.FC_ZZFJBXX.KRZSJ.ToString("yyyy-MM-dd") !== "1-1-1")
                     $("#KRZSJ").val(xml.Value.FC_ZZFJBXX.KRZSJ.ToString("yyyy-MM-dd"));
                 LoadPhotos(xml.Value.Photos);
@@ -349,7 +342,7 @@ function FB() {
         data:
         {
             Json: jsonObj.JsonToString(obj),
-            FYMS: $("#FYMS").html(),
+            BCMS: ue.getContent(),
             FWZP: GetPhotoUrls()
         },
         success: function (xml) {

@@ -9,7 +9,7 @@ $(document).ready(function () {
     $("#inputUpload").bind("change", Upload);
     $("#btnClose").bind("click", CloseWindow);
     $("#div_dz_close").bind("click", CloseWindow);
-    $("#span_content_info_qhcs").bind("click", LoadXZQByGrade);
+    
     $("body").bind("click", function () { Close("_XZQ"); Close("LB"); Close("XL"); Close("DCDY"); Close("DCRL"); Close("CC"); Close("XJ"); Close("QY"); Close("DD"); });
 
     LoadDefault();

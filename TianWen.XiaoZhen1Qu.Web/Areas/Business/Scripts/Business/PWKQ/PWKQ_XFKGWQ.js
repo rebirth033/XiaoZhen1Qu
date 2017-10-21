@@ -5,7 +5,7 @@ $(document).ready(function () {
     $("#btnFB").bind("click", FB);
     $("#FYMS").bind("focus", FYMSFocus);
     $("#FYMS").bind("blur", FYMSBlur);
-    $("#span_content_info_qhcs").bind("click", LoadXZQByGrade);
+    
     $("body").bind("click", function () { Close("_XZQ"); Close("LB"); Close("XL"); Close("XJ"); Close("QY"); Close("DD"); });
 
 
