@@ -1,14 +1,12 @@
-﻿var isleave = true;
-var ue = UE.getEditor('BCMS');
+﻿
 $(document).ready(function () {
     $("#div_gq_cz").bind("click", CZSelect);
     $("#div_gq_cs").bind("click", CSSelect);
     
     
-    
     $("body").bind("click", function () { Close("_XZQ"); Close("LB"); Close("XL"); Close("XJ"); Close("QY"); Close("DD"); });
 
-    LoadDefault();
+    
     LoadFC_XZLJBXX();
     BindClick("XZLLX");
     BindClick("KZCGS");
@@ -29,12 +27,7 @@ function BCMSSetDefault() {
     var BCMS = "1.房屋特征：\r\n\r\n2.周边配套：\r\n\r\n3.房东心态：";
     $("#BCMS").html(BCMS);
 }
-//加载默认
-function LoadDefault() {
-    ue.ready(function () {
-        ue.setHeight(200);
-    });
-}
+
 //选择出租
 function CZSelect() {
     $("#divZJ").css("display", "block");

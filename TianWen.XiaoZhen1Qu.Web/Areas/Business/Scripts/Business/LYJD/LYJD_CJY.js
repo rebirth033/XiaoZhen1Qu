@@ -5,17 +5,7 @@ var ydxz = UE.getEditor('YDXZ');
 var fybh = UE.getEditor('FYBH');
 var zfxm = UE.getEditor('ZFXM');
 $(document).ready(function () {$("#XCAP").bind("focus", XCAPFocus);
-    $("#XCAP").bind("blur", XCAPBlur);
-    
-    
-    
-    
-    $("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });
-
-
-
-    LoadDefault();
-    BindClick("CYFS");
+    $("#XCAP").bind("blur", XCAPBlur);$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });BindClick("CYFS");
     BindClick("QY");
     BindClick("DD");
     BindClick("WFJT_Q");

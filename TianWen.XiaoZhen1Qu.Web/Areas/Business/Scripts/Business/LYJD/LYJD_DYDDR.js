@@ -1,26 +1,11 @@
-﻿var isleave = true;
-var ue = UE.getEditor('BCMS');
-$(document).ready(function () {
-    
-    
-    
-    $("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });
-
-
-
-    LoadDefault();
-    BindClick("XL");
+﻿
+$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });BindClick("XL");
     BindClick("DTJY");
     BindClick("QY");
     BindClick("DD");
     LoadDuoX("导游语种", "DYYZ");
 });
-//加载默认
-function LoadDefault() {
-    ue.ready(function () {
-        ue.setHeight(200);
-    });
-}
+
 //加载多选
 function LoadDuoX(type, id) {
     $.ajax({

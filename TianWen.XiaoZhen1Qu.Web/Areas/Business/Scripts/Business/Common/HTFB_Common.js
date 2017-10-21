@@ -1,4 +1,5 @@
-﻿$(document).ready(function () {
+﻿var ue = UE.getEditor('BCMS');
+$(document).ready(function () {
     $(".div_top_left").css("margin-left", (document.documentElement.clientWidth - 900) / 2);
     $(".div_top_right").css("margin-right", (document.documentElement.clientWidth - 900) / 2);
     $(".div_head").css("margin-left", (document.documentElement.clientWidth - 900) / 2);
@@ -12,10 +13,14 @@
     $("#spanCXLB").bind("click", CXLB);
     $("#btnFB").bind("click", FB);
     $("#span_content_info_qCWFWs").bind("click", LoadXZQByGrade);
-    
 
+    LoadDefault();
     LoadTXXX();
 });
+//加载默认
+function LoadDefault() {
+    ue.ready(function () { ue.setHeight(200); });
+}
 //根据TYPENAME获取字典表
 function LoadCODESByTYPENAME(type, id, table) {
     $.ajax({

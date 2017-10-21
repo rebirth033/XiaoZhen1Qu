@@ -1,24 +1,18 @@
-﻿var isleave = true;
-var ue = UE.getEditor('BCMS');
+﻿
 $(document).ready(function () {
     $("#YXQZ").datepicker({ minDate: 0 });$("body").bind("click", function () { Close("_XZQ"); Close("LB"); Close("XL"); Close("XJ"); Close("QY"); Close("DD"); });
 
 
 
 
-    LoadDefault();
+    
     LoadPWKQ_QTKQJBXX();
     BindClick("LB");
     BindClick("XJ");
     BindClick("QY");
     BindClick("DD");
 });
-//加载默认
-function LoadDefault() {
-    ue.ready(function () {
-        ue.setHeight(200);
-    });
-}
+
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {

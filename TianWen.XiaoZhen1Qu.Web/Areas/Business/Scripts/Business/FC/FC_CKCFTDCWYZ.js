@@ -107,7 +107,7 @@ function ValidateMJ() {
 
 //验证所有
 function AllValidate() {
-    if (ValidateLPMC() & ValidateDD() & ValidateZJ() & ValidateMJ() & ValidateBT() & ValidateFWZP() & ValidateLXR() & ValidateLXDH())
+    if (ValidateLPMC() & ValidateDD() & ValidateZJ() & ValidateMJ() & ValidateBT() & ValidateZP() & ValidateLXR() & ValidateLXDH())
         return true;
     else
         return false;

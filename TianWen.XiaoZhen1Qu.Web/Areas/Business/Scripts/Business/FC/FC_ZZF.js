@@ -10,7 +10,7 @@ $(document).ready(function () {
     BindClick("YFFS");
     LoadDuoX("包含费用", "BHFY");
 
-    LoadDefault();
+    
     BCMSSetDefault();
 });
 
@@ -26,10 +26,7 @@ function BCMSSetDefault() {
     var BCMS = "1.房屋特征：\r\n\r\n2.周边配套：\r\n\r\n3.房东心态：";
     $("#BCMS").html(BCMS);
 }
-//加载默认
-function LoadDefault() {
-    ue.ready(function () { ue.setHeight(200); });
-}
+
 //加载小区名称
 function LoadXQMC() {
     if (event.keyCode === 40) {//按下

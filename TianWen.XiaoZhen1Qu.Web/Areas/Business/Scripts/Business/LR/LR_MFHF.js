@@ -1,25 +1,12 @@
-﻿var isleave = true;
-var ue = UE.getEditor('BCMS');
+﻿
 $(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); }); LoadDuoX("美发护发", "MFHFLB");
     
-    
-    
-    $("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });
-
-
-
-    LoadDuoX("美发护发", "MFHFLB");
-    LoadDefault();
     BindClick("LB");
     BindClick("QY");
     BindClick("DD");
 });
-//加载默认
-function LoadDefault() {
-    ue.ready(function () {
-        ue.setHeight(200);
-    });
-}
+
 //加载多选
 function LoadDuoX(type, id) {
     $.ajax({

@@ -1,9 +1,5 @@
-﻿var isleave = true;
-var ue = UE.getEditor('BCMS');
-$(document).ready(function () {
-    $("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });
-    LoadDefault();
-    LoadCW_CWYPSPJBXX();
+﻿
+$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });LoadCW_CWYPSPJBXX();
     BindClick("LB");
     BindClick("XJ");
 });
@@ -20,12 +16,7 @@ function BCMSSetDefault() {
     var BCMS = "1.房屋特征：\r\n\r\n2.周边配套：\r\n\r\n3.房东心态：";
     $("#BCMS").html(BCMS);
 }
-//加载默认
-function LoadDefault() {
-    ue.ready(function () {
-        ue.setHeight(200);
-    });
-}
+
 //加载小类
 function LoadXL() {
     $.ajax({

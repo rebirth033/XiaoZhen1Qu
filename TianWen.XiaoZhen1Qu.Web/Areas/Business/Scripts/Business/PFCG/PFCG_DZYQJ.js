@@ -1,24 +1,10 @@
-﻿var isleave = true;
-var ue = UE.getEditor('BCMS');
-$(document).ready(function () {
+﻿
+$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });LoadDuoX("电子元器件", "DZYQJLB");
     
-    
-    
-    $("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });
-
-
-
-    LoadDuoX("电子元器件", "DZYQJLB");
-    LoadDefault();
     BindClick("QY");
     BindClick("DD");
 });
-//加载默认
-function LoadDefault() {
-    ue.ready(function () {
-        ue.setHeight(200);
-    });
-}
+
 //加载多选
 function LoadDuoX(type, id) {
     $.ajax({

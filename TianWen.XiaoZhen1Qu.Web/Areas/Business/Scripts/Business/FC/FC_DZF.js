@@ -1,15 +1,12 @@
-﻿var isleave = true;
-var ue = UE.getEditor('BCMS');
+﻿
 $(document).ready(function () {
-    
     $("#span_xzdz").bind("click", OpenXZDZ);
-    
     
     $("body").bind("click", function () { Close("_XZQ"); Close("LB"); Close("XL"); Close("XJ"); Close("QY"); Close("SQ"); });
 
     BindClick("FWLX");
     BindClick("ZJDW");
-    LoadDefault();
+    
     LoadFC_DZFJBXX();
 });
 //房屋描述框focus

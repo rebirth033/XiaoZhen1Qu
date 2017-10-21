@@ -108,12 +108,12 @@ function ValidateMJ() {
 //验证所有
 function AllValidate() {
     if ($("#imgCZ").attr("src").indexOf("blue") !== -1) {
-        if (ValidateLSJY() & ValidateDD() & ValidateZJ() & ValidateMJ() & ValidateBT() & ValidateFWZP() & ValidateLXR() & ValidateLXDH())
+        if (ValidateLSJY() & ValidateDD() & ValidateZJ() & ValidateMJ() & ValidateBT() & ValidateZP() & ValidateLXR() & ValidateLXDH())
             return true;
         else
             return false;
     } else {
-        if (ValidateLSJY() & ValidateDD() & ValidateSJ() & ValidateMJ() & ValidateBT() & ValidateFWZP() & ValidateLXR() & ValidateLXDH())
+        if (ValidateLSJY() & ValidateDD() & ValidateSJ() & ValidateMJ() & ValidateBT() & ValidateZP() & ValidateLXR() & ValidateLXDH())
             return true;
         else
             return false;

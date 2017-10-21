@@ -1,5 +1,4 @@
-﻿var isleave = true;
-var ue = UE.getEditor('BCMS');
+﻿
 $(document).ready(function () {
     
     
@@ -9,18 +8,13 @@ $(document).ready(function () {
 
 
 
-    LoadDefault();
+    
     LoadES_WHYL_YSPSCPJBXX();
     BindClick("LB");
     BindClick("QY");
     BindClick("DD");
 });
-//加载默认
-function LoadDefault() {
-    ue.ready(function () {
-        ue.setHeight(200);
-    });
-}
+
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {

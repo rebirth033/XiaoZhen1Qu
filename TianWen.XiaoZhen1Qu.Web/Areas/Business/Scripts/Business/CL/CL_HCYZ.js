@@ -8,7 +8,7 @@
 });
 //验证所有
 function AllValidate() {
-    if (ValidateEDZZ() & ValidateXSLC() & ValidateJG() & ValidateBT() & ValidateFWZP() & ValidateLXR() & ValidateLXDH())
+    if (ValidateEDZZ() & ValidateXSLC() & ValidateJG() & ValidateBT() & ValidateZP() & ValidateLXR() & ValidateLXDH())
         return true;
     else
         return false;

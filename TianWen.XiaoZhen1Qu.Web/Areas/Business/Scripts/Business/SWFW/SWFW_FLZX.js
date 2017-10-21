@@ -1,28 +1,14 @@
-﻿var isleave = true;
-var ue = UE.getEditor('BCMS');
+﻿
 $(document).ready(function () {
     
     
     $("#div_ly_ls").bind("click", LSSelect);
-    $("#div_ly_lssws").bind("click", LSSWSSelect);
+    $("#div_ly_lssws").bind("click", LSSWSSelect);$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });LoadFLZXLB();
     
-    
-    
-    $("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });
-
-
-
-    LoadFLZXLB();
-    LoadDefault();
     BindClick("QY");
     BindClick("DD");
 });
-//加载默认
-function LoadDefault() {
-    ue.ready(function () {
-        ue.setHeight(200);
-    });
-}
+
 //选择律师
 function LSSelect() {
     $("#divZYZH").css("display", "");

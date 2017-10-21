@@ -51,7 +51,7 @@ function ValidateSYNX() {
 
 //验证所有
 function AllValidate() {
-    if (ValidateJG() & ValidateBT() & ValidateFWZP() & ValidateLXR() & ValidateLXDH())
+    if (ValidateJG() & ValidateBT() & ValidateZP() & ValidateLXR() & ValidateLXDH())
         return true;
     else
         return false;

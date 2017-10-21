@@ -1,5 +1,4 @@
-﻿var isleave = true;
-var ue = UE.getEditor('BCMS');
+﻿
 $(document).ready(function () {
     
     
@@ -11,7 +10,7 @@ $(document).ready(function () {
 
     $("td").bind("click", SelectJZSJ);
 
-    LoadDefault();
+    
     LoadQZZP_JZZPJBXX();
     BindClick("JZLB");
     BindClick("XZSPDW");

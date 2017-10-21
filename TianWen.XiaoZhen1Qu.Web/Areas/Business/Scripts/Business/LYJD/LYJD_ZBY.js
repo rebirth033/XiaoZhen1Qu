@@ -1,17 +1,7 @@
 ﻿var isleave = true;
 var fwjs = UE.getEditor('FWJS');
 $(document).ready(function () {$("#XCAP").bind("focus", XCAPFocus);
-    $("#XCAP").bind("blur", XCAPBlur);
-    
-    
-    
-    
-    $("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });
-
-
-
-    LoadDefault();
-    BindClick("QY");
+    $("#XCAP").bind("blur", XCAPBlur);$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });BindClick("QY");
     BindClick("DD");
     BindClick("XCTS_R");
     LoadDuoX("游玩项目", "YWXM");

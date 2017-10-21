@@ -1,5 +1,4 @@
-﻿var isleave = true;
-var ue = UE.getEditor('BCMS');
+﻿
 $(document).ready(function () {
     
     
@@ -9,7 +8,7 @@ $(document).ready(function () {
 
 
 
-    LoadDefault();
+    
     LoadES_SJSM_PBDNJBXX();
     BindClick("LB");
     BindClick("PBPP");
@@ -32,12 +31,7 @@ function BCMSSetDefault() {
     var BCMS = "1.房屋特征：\r\n\r\n2.周边配套：\r\n\r\n3.房东心态：";
     $("#BCMS").html(BCMS);
 }
-//加载默认
-function LoadDefault() {
-    ue.ready(function () {
-        ue.setHeight(200);
-    });
-}
+
 
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
