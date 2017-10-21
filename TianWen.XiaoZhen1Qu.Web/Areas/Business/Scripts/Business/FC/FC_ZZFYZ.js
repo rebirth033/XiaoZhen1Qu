@@ -41,12 +41,12 @@ function ValidateLCFB() {
 //验证房屋租金
 function ValidateFWZJ() {
     if (!ValidateZJ()) return false;
-    if (!ValidateSelect("ZJ", "YFFS", "请选择押付方式")()) return false;
+    if (!ValidateSelect("ZJ", "YFFS", "请选择押付方式")) return false;
     return true;
 }
 //验证所有
 function ValidateAll() {
-    if (ValidateRadio("CZFS", "忘记填写出租方式啦")
+    if (ValidateRadio("CZFS", "忘记填写出租方式啦") 
         & ValidateFWQK()
         & ValidateXQMC()
         & ValidateFWLX()

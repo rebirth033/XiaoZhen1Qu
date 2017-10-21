@@ -115,6 +115,23 @@ function ValidateRadio(id, message) {
     }
     return bool;
 }
+//验证多选框
+function ValidateCheck(id, message) {
+    var bool = false;
+    $("#div" + id).find("img").each(function () {
+        if ($(this).attr("src").indexOf("blue") !== -1) {
+            $("#div" + id + "Tip").css("display", "none");
+            bool = true;
+        }
+    });
+    if (!bool) {
+        $("#div" + id + "Tip").css("display", "block");
+        $("#div" + id + "Tip").css("margin-top", "-10px");
+        $("#div" + id + "Tip").attr("class", "Warn");
+        $("#div" + id + "Tip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />' + message + '');
+    }
+    return bool;
+}
 //验证下拉框
 function ValidateSelect(idout, idin, message) {
     var bool = false;
