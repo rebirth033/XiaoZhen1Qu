@@ -6,7 +6,7 @@ $(document).ready(function () {
     $("#FYMS").bind("blur", FYMSBlur);
     $("#KRZSJ").datepicker({ minDate: 0 });
     $("#inputUpload").bind("change", Upload);
-    $("body").bind("click", function () { Close("_XZQ"); Close("QY"); Close("SQ"); });
+    $("body").bind("click", function () { Close("_XZQ"); Close("QY"); Close("SQ");});
 
     BindClick("FWCX");
     BindClick("ZXQK");
@@ -316,7 +316,7 @@ function LoadFC_ZZFXX() {
 }
 //发布
 function FB() {
-    if (AllValidate() === false) return;
+    if (ValidateAll() === false) return;
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段

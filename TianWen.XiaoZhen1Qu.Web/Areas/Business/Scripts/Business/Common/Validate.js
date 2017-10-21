@@ -22,14 +22,14 @@ function ValidateBT() {
     }
 }
 //验证照片
-function ValidateFWZP() {
+function ValidateZP() {
     if ($("#divImgs1").find("img").length === 0) {
-        $("#divFWZPTip").css("display", "block");
-        $("#divFWZPTip").attr("class", "Warn");
-        $("#divFWZPTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记选择照片啦');
+        $("#divTPTip").css("display", "block");
+        $("#divTPTip").attr("class", "Warn");
+        $("#divTPTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记上传照片啦');
         return false;
     } else {
-        $("#divFWZPTip").css("display", "none");
+        $("#divTPTip").css("display", "none");
         return true;
     }
 }
@@ -99,7 +99,7 @@ function InfoLXDH() {
     $("#divLXDHTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请输入手机号');
     $("#LXDH").css("border-color", "#5bc0de");
 }
-
+//验证单选框
 function ValidateRadio(id, message) {
     var bool = false;
     $("#div" + id).find("img").each(function () {
@@ -115,17 +115,26 @@ function ValidateRadio(id, message) {
     }
     return bool;
 }
-
+//验证下拉框
 function ValidateSelect(idout, idin, message) {
     var bool = false;
     if ($("#span" + idin).html().indexOf("请选择") !== -1) {
+        $("#div" + idin + "Text").css("border-color", "#fd634f");
         $("#div" + idout + "Tip").css("display", "block");
         $("#div" + idout + "Tip").attr("class", "Warn");
         $("#div" + idout + "Tip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />' + message + '');
     }
     else {
+        $("#div" + idin + "Text").css("border-color", "#cccccc");
         $("#div" + idout + "Tip").css("display", "none");
         bool = true;
     }
     return bool;
+}
+//验证共有
+function ValidateCommon() {
+    if (ValidateBT() & ValidateZP() & ValidateLXR() & ValidateLXDH())
+        return true;
+    else
+        return false;
 }
