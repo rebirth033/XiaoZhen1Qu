@@ -14,42 +14,14 @@ namespace TianWen.XiaoZhen1Qu.BLL
     {
         public object SaveSHFW_SHFW_BZMDJBXX(JCXX jcxx, SHFW_SHFW_BZMDJBXX SHFW_SHFW_BZMDJBXX, List<PHOTOS> photos)
         {
-            string[] photoNames = photos.Select(x => x.PHOTONAME).ToArray();
-            DirectoryInfo TheFolder = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory + "/Areas/Business/Photos/");
-            FileInfo[] fileinfos = TheFolder.GetFiles();
             DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM SHFW_SHFW_BZMDJBXX WHERE SHFW_SHFW_BZMDJBXXID='{0}'", SHFW_SHFW_BZMDJBXX.SHFW_SHFW_BZMDJBXXID));
-
-            if (dt.Rows.Count > 0)
+            using (ITransaction transaction = DAO.BeginTransaction())
             {
-                using (ITransaction transaction = DAO.BeginTransaction())
+                try
                 {
-                    try
+                    if (dt.Rows.Count > 0)
                     {
-                        if (photos.Count > 0)
-                        {
-                            //照片全删全插
-                            List<PHOTOS> old_photos = DAO.GetObjectList<PHOTOS>(string.Format("FROM PHOTOS WHERE JCXXID='{0}'", dt.Rows[0]["JCXXID"])).ToList();
-                            foreach (var obj in old_photos)
-                            {
-                                DAO.Remove(obj);
-                            }
-                        }
-                        foreach (var obj in photos)
-                        {
-                            obj.JCXXID = dt.Rows[0]["JCXXID"].ToString();
-                            DAO.Save(obj);
-                        }
-
-                        if (photos.Count > 0)
-                        {
-                            //删除多余照片文件
-                            foreach (FileInfo fileobj in fileinfos)
-                            {
-                                if (!photoNames.Contains(fileobj.Name))
-                                    File.Delete(AppDomain.CurrentDomain.BaseDirectory + "/Areas/Business/Photos/" + fileobj.Name);
-                            }
-                        }
-
+                        SavePhotos(photos, dt.Rows[0]["JCXXID"].ToString());
                         SHFW_SHFW_BZMDJBXX.JCXXID = dt.Rows[0]["JCXXID"].ToString();
                         jcxx.JCXXID = dt.Rows[0]["JCXXID"].ToString();
                         DAO.Update(jcxx);
@@ -57,53 +29,21 @@ namespace TianWen.XiaoZhen1Qu.BLL
                         transaction.Commit();
                         return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, SHFW_SHFW_BZMDJBXXID = SHFW_SHFW_BZMDJBXX.SHFW_SHFW_BZMDJBXXID } };
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        transaction.Rollback();
-                        LoggerManager.Error("SHFW_SHFW_BZMDJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
-                        return new
-                        {
-                            Result = EnResultType.Failed,
-                            Message = "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!",
-                            Type = 3
-                        };
-                    }
-                }
-            }
-            else
-            {
-                using (ITransaction transaction = DAO.BeginTransaction())
-                {
-                    try
-                    {
+                        SavePhotos(photos, jcxx.JCXXID);
                         SHFW_SHFW_BZMDJBXX.JCXXID = jcxx.JCXXID;
                         DAO.Save(jcxx);
                         DAO.Save(SHFW_SHFW_BZMDJBXX);
-                        //照片全删全插
-                        List<PHOTOS> old_photos = DAO.GetObjectList<PHOTOS>(string.Format("FROM PHOTOS WHERE JCXXID='{0}'", SHFW_SHFW_BZMDJBXX.JCXXID)).ToList();
-                        foreach (var obj in old_photos)
-                        {
-                            DAO.Remove(obj);
-                        }
-                        foreach (var obj in photos)
-                        {
-                            obj.JCXXID = SHFW_SHFW_BZMDJBXX.JCXXID;
-                            DAO.Save(obj);
-                        }
                         transaction.Commit();
                         return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, SHFW_SHFW_BZMDJBXXID = SHFW_SHFW_BZMDJBXX.SHFW_SHFW_BZMDJBXXID } };
                     }
-                    catch (Exception ex)
-                    {
-                        transaction.Rollback();
-                        LoggerManager.Error("SHFW_SHFW_BZMDJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
-                        return new
-                        {
-                            Result = EnResultType.Failed,
-                            Message = "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!",
-                            Type = 3
-                        };
-                    }
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    LoggerManager.Error("SHFW_SHFW_BZMDJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                    return new { Result = EnResultType.Failed, Message = "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!", Type = 3 };
                 }
             }
         }
@@ -116,7 +56,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 if (SHFW_SHFW_BZMDJBXX != null)
                 {
                     JCXX jcxx = GetJCXXByID(SHFW_SHFW_BZMDJBXX.JCXXID);
-                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { SHFW_SHFW_BZMDJBXX = SHFW_SHFW_BZMDJBXX, JCXX = jcxx, Photos = GetPhtosByJCXXID(SHFW_SHFW_BZMDJBXX.JCXXID) } };
+                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { SHFW_SHFW_BZMDJBXX = SHFW_SHFW_BZMDJBXX, BCMSString = BinaryHelper.BinaryToString(SHFW_SHFW_BZMDJBXX.BCMS), JCXX = jcxx, Photos = GetPhtosByJCXXID(SHFW_SHFW_BZMDJBXX.JCXXID) } };
                 }
                 else
                 {

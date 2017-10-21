@@ -14,42 +14,14 @@ namespace TianWen.XiaoZhen1Qu.BLL
     {
         public object SaveSWFW_JXSBWXJBXX(JCXX jcxx, SWFW_JXSBWXJBXX SWFW_JXSBWXJBXX, List<PHOTOS> photos)
         {
-            string[] photoNames = photos.Select(x => x.PHOTONAME).ToArray();
-            DirectoryInfo TheFolder = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory + "/Areas/Business/Photos/");
-            FileInfo[] fileinfos = TheFolder.GetFiles();
             DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM SWFW_JXSBWXJBXX WHERE SWFW_JXSBWXJBXXID='{0}'", SWFW_JXSBWXJBXX.SWFW_JXSBWXJBXXID));
-
-            if (dt.Rows.Count > 0)
+            using (ITransaction transaction = DAO.BeginTransaction())
             {
-                using (ITransaction transaction = DAO.BeginTransaction())
+                try
                 {
-                    try
+                    if (dt.Rows.Count > 0)
                     {
-                        if (photos.Count > 0)
-                        {
-                            //照片全删全插
-                            List<PHOTOS> old_photos = DAO.GetObjectList<PHOTOS>(string.Format("FROM PHOTOS WHERE JCXXID='{0}'", dt.Rows[0]["JCXXID"])).ToList();
-                            foreach (var obj in old_photos)
-                            {
-                                DAO.Remove(obj);
-                            }
-                        }
-                        foreach (var obj in photos)
-                        {
-                            obj.JCXXID = dt.Rows[0]["JCXXID"].ToString();
-                            DAO.Save(obj);
-                        }
-
-                        if (photos.Count > 0)
-                        {
-                            //删除多余照片文件
-                            foreach (FileInfo fileobj in fileinfos)
-                            {
-                                if (!photoNames.Contains(fileobj.Name))
-                                    File.Delete(AppDomain.CurrentDomain.BaseDirectory + "/Areas/Business/Photos/" + fileobj.Name);
-                            }
-                        }
-
+                        SavePhotos(photos, dt.Rows[0]["JCXXID"].ToString());
                         SWFW_JXSBWXJBXX.JCXXID = dt.Rows[0]["JCXXID"].ToString();
                         jcxx.JCXXID = dt.Rows[0]["JCXXID"].ToString();
                         DAO.Update(jcxx);
@@ -57,53 +29,21 @@ namespace TianWen.XiaoZhen1Qu.BLL
                         transaction.Commit();
                         return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, SWFW_JXSBWXJBXXID = SWFW_JXSBWXJBXX.SWFW_JXSBWXJBXXID } };
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        transaction.Rollback();
-                        LoggerManager.Error("SWFW_JXSBWXJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
-                        return new
-                        {
-                            Result = EnResultType.Failed,
-                            Message = "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!",
-                            Type = 3
-                        };
-                    }
-                }
-            }
-            else
-            {
-                using (ITransaction transaction = DAO.BeginTransaction())
-                {
-                    try
-                    {
+                        SavePhotos(photos, jcxx.JCXXID);
                         SWFW_JXSBWXJBXX.JCXXID = jcxx.JCXXID;
                         DAO.Save(jcxx);
                         DAO.Save(SWFW_JXSBWXJBXX);
-                        //照片全删全插
-                        List<PHOTOS> old_photos = DAO.GetObjectList<PHOTOS>(string.Format("FROM PHOTOS WHERE JCXXID='{0}'", SWFW_JXSBWXJBXX.JCXXID)).ToList();
-                        foreach (var obj in old_photos)
-                        {
-                            DAO.Remove(obj);
-                        }
-                        foreach (var obj in photos)
-                        {
-                            obj.JCXXID = SWFW_JXSBWXJBXX.JCXXID;
-                            DAO.Save(obj);
-                        }
                         transaction.Commit();
                         return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, SWFW_JXSBWXJBXXID = SWFW_JXSBWXJBXX.SWFW_JXSBWXJBXXID } };
                     }
-                    catch (Exception ex)
-                    {
-                        transaction.Rollback();
-                        LoggerManager.Error("SWFW_JXSBWXJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
-                        return new
-                        {
-                            Result = EnResultType.Failed,
-                            Message = "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!",
-                            Type = 3
-                        };
-                    }
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    LoggerManager.Error("SWFW_JXSBWXJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                    return new { Result = EnResultType.Failed, Message = "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!", Type = 3 };
                 }
             }
         }
@@ -116,7 +56,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 if (SWFW_JXSBWXJBXX != null)
                 {
                     JCXX jcxx = GetJCXXByID(SWFW_JXSBWXJBXX.JCXXID);
-                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { SWFW_JXSBWXJBXX = SWFW_JXSBWXJBXX, JCXX = jcxx, Photos = GetPhtosByJCXXID(SWFW_JXSBWXJBXX.JCXXID) } };
+                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { SWFW_JXSBWXJBXX = SWFW_JXSBWXJBXX, BCMSString = BinaryHelper.BinaryToString(SWFW_JXSBWXJBXX.BCMS), JCXX = jcxx, Photos = GetPhtosByJCXXID(SWFW_JXSBWXJBXX.JCXXID) } };
                 }
                 else
                 {
