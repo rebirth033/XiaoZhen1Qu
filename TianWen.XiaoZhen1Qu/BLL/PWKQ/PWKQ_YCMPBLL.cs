@@ -14,15 +14,12 @@ namespace TianWen.XiaoZhen1Qu.BLL
     {
         public object SavePWKQ_YCMPJBXX(JCXX jcxx, PWKQ_YCMPJBXX PWKQ_YCMPJBXX)
         {
-            DirectoryInfo TheFolder = new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory + "/Areas/Business/Photos/");
-            FileInfo[] fileinfos = TheFolder.GetFiles();
             DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM PWKQ_YCMPJBXX WHERE PWKQ_YCMPJBXXID='{0}'", PWKQ_YCMPJBXX.PWKQ_YCMPJBXXID));
-
-            if (dt.Rows.Count > 0)
+            using (ITransaction transaction = DAO.BeginTransaction())
             {
-                using (ITransaction transaction = DAO.BeginTransaction())
+                try
                 {
-                    try
+                    if (dt.Rows.Count > 0)
                     {
                         PWKQ_YCMPJBXX.JCXXID = dt.Rows[0]["JCXXID"].ToString();
                         jcxx.JCXXID = dt.Rows[0]["JCXXID"].ToString();
@@ -31,24 +28,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                         transaction.Commit();
                         return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, PWKQ_YCMPJBXXID = PWKQ_YCMPJBXX.PWKQ_YCMPJBXXID } };
                     }
-                    catch (Exception ex)
-                    {
-                        transaction.Rollback();
-                        LoggerManager.Error("PWKQ_YCMPJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
-                        return new
-                        {
-                            Result = EnResultType.Failed,
-                            Message = "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!",
-                            Type = 3
-                        };
-                    }
-                }
-            }
-            else
-            {
-                using (ITransaction transaction = DAO.BeginTransaction())
-                {
-                    try
+                    else
                     {
                         PWKQ_YCMPJBXX.JCXXID = jcxx.JCXXID;
                         DAO.Save(jcxx);
@@ -56,17 +36,12 @@ namespace TianWen.XiaoZhen1Qu.BLL
                         transaction.Commit();
                         return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, PWKQ_YCMPJBXXID = PWKQ_YCMPJBXX.PWKQ_YCMPJBXXID } };
                     }
-                    catch (Exception ex)
-                    {
-                        transaction.Rollback();
-                        LoggerManager.Error("PWKQ_YCMPJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
-                        return new
-                        {
-                            Result = EnResultType.Failed,
-                            Message = "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!",
-                            Type = 3
-                        };
-                    }
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    LoggerManager.Error("PWKQ_YCMPJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                    return new { Result = EnResultType.Failed, Message = "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!", Type = 3 };
                 }
             }
         }
@@ -79,7 +54,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 if (PWKQ_YCMPJBXX != null)
                 {
                     JCXX jcxx = GetJCXXByID(PWKQ_YCMPJBXX.JCXXID);
-                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { PWKQ_YCMPJBXX = PWKQ_YCMPJBXX, JCXX = jcxx, Photos = GetPhtosByJCXXID(PWKQ_YCMPJBXX.JCXXID) } };
+                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { PWKQ_YCMPJBXX = PWKQ_YCMPJBXX, BCMSString = BinaryHelper.BinaryToString(PWKQ_YCMPJBXX.BCMS), JCXX = jcxx, Photos = GetPhtosByJCXXID(PWKQ_YCMPJBXX.JCXXID) } };
                 }
                 else
                 {

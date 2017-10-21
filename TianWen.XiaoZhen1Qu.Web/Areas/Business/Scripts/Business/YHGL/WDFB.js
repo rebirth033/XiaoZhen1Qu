@@ -38,7 +38,6 @@ function LoadDefault(TYPE, PageIndex) {
         dataType: "json",
         data:
         {
-            YHID: getUrlParam("YHID"),
             TYPE: TYPE,
             PageSize: 4,
             PageIndex: PageIndex
@@ -201,7 +200,7 @@ function Update(JCXXID, LBID) {
 function LoadByActive() {
     $(".spanstep").each(function (i) {
         if ($("#" + this.id).css("color") === "rgb(91, 192, 222)")
-            LoadDefault($("#" + this.id).parent()[0].id);
+            LoadDefault($("#" + this.id).parent()[0].id, currentIndex);
     });
 }
 
