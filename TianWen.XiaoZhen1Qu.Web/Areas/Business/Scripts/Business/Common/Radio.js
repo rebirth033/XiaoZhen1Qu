@@ -1,9 +1,9 @@
 ﻿//选择单选
 function RadioSelect() {
-    $(this).parent().find("img").each(function () {
+    $(this).parent().find(".img_radio").each(function () {
         $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
     });
-    $(this).find("img").each(function () {
+    $(this).find(".img_radio").each(function () {
         $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
     });
 }

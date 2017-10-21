@@ -1,4 +1,5 @@
 ﻿$(document).ready(function () {
+    $("#divCZFS").find(".div_radio").bind("click", function () { ValidateRadio("CZFS", "忘记填写出租方式啦"); });
     $("#XQMC").bind("blur", ValidateXQMC);
     $("#XQMC").bind("blur", HideXQMCList);
     $("#XQMC").bind("focus", InfoXQMC);
@@ -17,6 +18,36 @@
     $("#ZJ").bind("blur", ValidateZJ);
     $("#ZJ").bind("focus", InfoZJ);
 });
+
+function FWLXValidate() {
+    if (!ValidateFWLX_S()) return false;
+    if (!ValidateFWLX_T()) return false;
+    if (!ValidateFWLX_W()) return false;
+    if (!ValidateFWLX_PFM()) return false;
+    return true;
+}
+
+function LCFBValidate() {
+    if (!ValidateLCFB_C()) return false;
+    if (!ValidateLCFB_GJC()) return false;
+    return true;
+}
+
+function FWQKValidate() {
+    if (!ValidateSelect("FWQK", "FWCX", "请选择房屋朝向")) return false;
+    if (!ValidateSelect("FWQK", "ZXQK", "请选择装修情况")) return false;
+    if (!ValidateSelect("FWQK", "ZZLX", "请选择住宅类型")) return false;
+    return true;
+}
+
+function AllValidate() {
+    if (ValidateRadio("CZFS", "忘记填写出租方式啦")
+        & FWQKValidate() 
+        & ValidateXQMC() & FWLXValidate() & LCFBValidate() & ValidateZJ() & ValidateBT() & ValidateFWZP() & ValidateLXR() & ValidateLXDH())
+        return true;
+    else
+        return false;
+}
 
 function ValidateXQMC() {
     if ($("#XQMC").val() === "" || $("#XQMC").val() === null) {
@@ -184,77 +215,6 @@ function ValidateZJ() {
             return false;
         }
     }
-}
-
-
-
-
-
-
-function ValidateLXR() {
-    if ($("#LXR").val() === "" || $("#LXR").val() === null) {
-        $("#divLXRTip").css("display", "block");
-        $("#divLXRTip").attr("class", "Warn");
-        $("#divLXRTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写联系人啦');
-        $("#LXR").css("border-color", "#fd634f");
-        return false;
-    } else {
-        $("#divLXRTip").css("display", "none");
-        $("#LXR").css("border-color", "#cccccc");
-        return true;
-    }
-}
-
-function ValidateLXDH() {
-    if ($("#LXDH").val() === "" || $("#LXDH").val() === null) {
-        $("#divLXDHTip").css("display", "block");
-        $("#divLXDHTip").attr("class", "Warn");
-        $("#divLXDHTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写联系电话啦');
-        $("#LXDH").css("border-color", "#fd634f");
-        return false;
-    } else {
-        if ($("#LXDH").val().length !== 11) {
-            $("#divLXDHTip").css("display", "block");
-            $("#divLXDHTip").attr("class", "Warn");
-            $("#divLXDHTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />手机号位数不对');
-            $("#LXDH").css("border-color", "#fd634f");
-            return false;
-            
-        } else {
-            if (!ValidateCellPhone($("#LXDH").val())) {
-                $("#divLXDHTip").css("display", "block");
-                $("#divLXDHTip").attr("class", "Warn");
-                $("#divLXDHTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />手机号格式不对');
-                $("#LXDH").css("border-color", "#fd634f");
-                return false;
-            } else {
-                $("#divLXDHTip").css("display", "none");
-                $("#LXDH").css("border-color", "#cccccc");
-                return true;
-            }
-        }
-    }
-} 
-
-function FWLXValidate() {
-    if (!ValidateFWLX_S()) return false;
-    if (!ValidateFWLX_T()) return false;
-    if (!ValidateFWLX_W()) return false;
-    if (!ValidateFWLX_PFM()) return false;
-    return true;
-}
-
-function LCFBValidate() {
-    if (!ValidateLCFB_C()) return false;
-    if (!ValidateLCFB_GJC()) return false;
-    return true;
-}
-
-function AllValidate() {
-    if (ValidateXQMC() & FWLXValidate() & LCFBValidate() & ValidateZJ() & ValidateBT() & ValidateFWZP() & ValidateLXR() & ValidateLXDH())
-        return true;
-    else
-        return false;
 }
 
 function InfoXQMC() {

@@ -3,9 +3,10 @@
     $(".div_top_right").css("margin-right", (document.documentElement.clientWidth - 1000) / 2);
     $(".div_head").css("margin-left", (document.documentElement.clientWidth - 900) / 2);
     $(".div_content").css("margin-left", (document.documentElement.clientWidth - 900) / 2);
+    $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);
+    $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
+
     LoadDL();
-
-
 });
 
 function LoadDL() {

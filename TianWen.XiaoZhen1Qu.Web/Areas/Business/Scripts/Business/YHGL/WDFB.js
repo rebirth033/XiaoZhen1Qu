@@ -233,7 +233,7 @@ function LoadPage(PageCount) {
             }
         }
     }
-    if (index >= PageCount - 4) {
+    if (index >= PageCount - 4 && PageCount > 4) {
         for (var i = 1; i <= PageCount; i++) {
             if (i === index)
                 $("#div_main_info_bottom_fy").append('<a onclick="LoadDefault(\'' + "divZJFBXX" + '\',\'' + i + '\')" class="a_main_info_bottom_fy a_main_info_bottom_fy_current">' + i + '</a>');

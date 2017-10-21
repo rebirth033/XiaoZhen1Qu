@@ -99,3 +99,33 @@ function InfoLXDH() {
     $("#divLXDHTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请输入手机号');
     $("#LXDH").css("border-color", "#5bc0de");
 }
+
+function ValidateRadio(id, message) {
+    var bool = false;
+    $("#div" + id).find("img").each(function () {
+        if ($(this).attr("src").indexOf("blue") !== -1) {
+            $("#div" + id + "Tip").css("display", "none");
+            bool = true;
+        }
+    });
+    if (!bool) {
+        $("#div" + id + "Tip").css("display", "block");
+        $("#div" + id + "Tip").attr("class", "Warn");
+        $("#div" + id + "Tip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />' + message + '');
+    }
+    return bool;
+}
+
+function ValidateSelect(idout, idin, message) {
+    var bool = false;
+    if ($("#span" + idin).html().indexOf("请选择") !== -1) {
+        $("#div" + idout + "Tip").css("display", "block");
+        $("#div" + idout + "Tip").attr("class", "Warn");
+        $("#div" + idout + "Tip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />' + message + '');
+    }
+    else {
+        $("#div" + idout + "Tip").css("display", "none");
+        bool = true;
+    }
+    return bool;
+}

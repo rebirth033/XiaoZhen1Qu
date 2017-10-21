@@ -3,14 +3,13 @@
     $(".div_top_right").css("margin-right", (document.documentElement.clientWidth - 900) / 2);
     $(".div_head").css("margin-left", (document.documentElement.clientWidth - 900) / 2);
     $(".div_content").css("margin-left", (document.documentElement.clientWidth - 900) / 2);
-    $("#spanCXLB").bind("click", CXLB);
     $(".div_radio").bind("click", RadioSelect);
     $(".img_radio").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
     $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
-    
     $("#div_upload").bind("mouseover", GetUploadCss);
     $("#div_upload").bind("mouseleave", LeaveUploadCss);
+    $("#spanCXLB").bind("click", CXLB);
 
     LoadTXXX();
 });
@@ -50,7 +49,6 @@ function SelectLB(obj, type) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
 }
-
 //退出
 function Exit() {
     window.location.href = getRootPath() + "/Business/YHDLXX/YHDLXX";
