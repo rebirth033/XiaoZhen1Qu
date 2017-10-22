@@ -172,7 +172,7 @@ function SavePhoto(obj) {
     });
 }
 //上传照片
-function Upload() {
+function UploadZP() {
     $("#divFWZPValue").css("display", "block");
     var f = $(this).get(0).files[0];
     var reader = new FileReader();
@@ -212,10 +212,10 @@ function uploadComplete(evt) {
 function ControlUpload() {
     if ($("#ulImgs2").find("img").length === 4) {
         $("#div_upload").css("background-color", "#ececec");
-        $("#inputUpload").attr("disabled", "disabled");
+        $("#input_upload").attr("disabled", "disabled");
     } else {
         $("#div_upload").css("background-color", "#fff");
-        $("#inputUpload").removeAttr("disabled");
+        $("#input_upload").removeAttr("disabled");
     }
 }
 

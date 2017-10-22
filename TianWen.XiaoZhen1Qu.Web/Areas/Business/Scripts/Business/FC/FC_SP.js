@@ -1,25 +1,12 @@
-﻿
-$(document).ready(function () {
+﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); Close("LB"); Close("XL"); Close("XJ"); Close("QY"); Close("SQ"); });
+    $("#divGQ").find(".div_radio").bind("click", GetGQ);
     LoadFC_SPJBXX();
     BindClick("SPLX");
     BindClick("QY");
-    BindClick("DD");
+    BindClick("SQ");
     BindClick("ZJDW");
 });
-//房屋描述框focus
-function BCMSFocus() {
-    $("#BCMS").css("color", "#333333");
-}
-//房屋描述框blur
-function BCMSBlur() {
-    $("#BCMS").css("color", "#999999");
-}
-//房屋描述框设默认文本
-function BCMSSetDefault() {
-    var BCMS = "1.房屋特征：\r\n\r\n2.周边配套：\r\n\r\n3.房东心态：";
-    $("#BCMS").html(BCMS);
-}
 
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
@@ -33,14 +20,14 @@ function BindClick(type) {
         if (type === "QY") {
             LoadQY();
         }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
+        if (type === "SQ") {
+            LoadSQ($("#QYCode").val());
         }
     });
 }
 //设置供求
 function SetGQ(gq) {
-    if (gq === 0) {
+    if (gq !== "出售") {
         $("#divZJ").css("display", "block");
         $("#divSJ").css("display", "none");
     }
@@ -48,6 +35,84 @@ function SetGQ(gq) {
         $("#divZJ").css("display", "none");
         $("#divSJ").css("display", "block");
     }
+}
+//获取供求
+function GetGQ() {
+    var value = "";
+    $("#divGQ").find("img").each(function () {
+        if ($(this).attr("src").indexOf("blue") !== -1)
+            value = $(this).parent().find("label")[0].innerHTML;
+    });
+    if (value !== "出售") {
+        $("#divZJ").css("display", "block");
+        $("#divSJ").css("display", "none");
+    } else {
+        $("#divZJ").css("display", "none");
+        $("#divSJ").css("display", "block");
+    }
+    return value;
+}
+//加载区域
+function LoadQY() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadQY",
+        dataType: "json",
+        data:
+        {
+
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='ul_select' style='overflow-y: scroll;'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='li_select' onclick='SelectQY(this,\"QY\",\"" + xml.list[i].CODE + "\")'>" + RTrim(RTrim(RTrim(xml.list[i].NAME, '市'), '区'), '县') + "</li>";
+                }
+                html += "</ul>";
+                $("#divQY").html(html);
+                $("#divQY").css("display", "block");
+                ActiveStyle("QY");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//加载商圈
+function LoadSQ() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadSQ",
+        dataType: "json",
+        data:
+        {
+            QY: $("#QYCode").val()
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='ul_select' style='overflow-y: scroll;'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='li_select' onclick='SelectDropdown(this,\"SQ\")'>" + RTrimStr(xml.list[i].NAME, '街道,镇,林场,管理处') + "</li>";
+                }
+                html += "</ul>";
+                $("#divSQ").html(html);
+                $("#divSQ").css("display", "block");
+                ActiveStyle("SQ");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//选择区域下拉框
+function SelectQY(obj, type, code) {
+    $("#QYCode").val(code);
+    $("#span" + type).html(obj.innerHTML);
+    $("#div" + type).css("display", "none");
+    $("#spanSQ").html("请选择商圈");
+    BindClick("SQ");
 }
 //加载房产_商铺基本信息
 function LoadFC_SPJBXX() {
@@ -79,6 +144,7 @@ function LoadFC_SPJBXX() {
                 $("#spanSQ").html(xml.Value.FC_SPJBXX.SQ);
                 $("#spanZJDW").html(xml.Value.FC_SPJBXX.ZJDW);
                 $("#JYGZ").html(xml.Value.FC_SPJBXX.JYGZ);
+                SetGQ(xml.Value.FC_SPJBXX.GQ);
                 LoadPhotos(xml.Value.Photos);
             }
         },

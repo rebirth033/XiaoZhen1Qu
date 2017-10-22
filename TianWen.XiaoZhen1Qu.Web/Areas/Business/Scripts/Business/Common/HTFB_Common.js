@@ -10,6 +10,7 @@ $(document).ready(function () {
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
     $("#div_upload").bind("mouseover", GetUploadCss);
     $("#div_upload").bind("mouseleave", LeaveUploadCss);
+    $("#input_upload").bind("change", UploadZP);
     $("#spanCXLB").bind("click", CXLB);
     $("#btnFB").bind("click", FB);
     $("#span_content_info_qCWFWs").bind("click", LoadXZQByGrade);
