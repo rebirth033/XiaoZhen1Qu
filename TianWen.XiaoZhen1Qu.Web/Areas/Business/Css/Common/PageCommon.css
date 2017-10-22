@@ -158,6 +158,11 @@ li {
     cursor: pointer;
 }
 
+.headtd {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
 .liRightHead {
     width: 120px;
 }

@@ -1,9 +1,9 @@
 ﻿var ue = UE.getEditor('BCMS');
 $(document).ready(function () {
-    $(".div_top_left").css("margin-left", (document.documentElement.clientWidth - 900) / 2);
-    $(".div_top_right").css("margin-right", (document.documentElement.clientWidth - 900) / 2);
-    $(".div_head").css("margin-left", (document.documentElement.clientWidth - 900) / 2);
-    $(".div_content").css("margin-left", (document.documentElement.clientWidth - 900) / 2);
+    $(".div_top_left").css("margin-left", (document.documentElement.clientWidth - 940) / 2);
+    $(".div_top_right").css("margin-right", (document.documentElement.clientWidth - 940) / 2);
+    $(".div_head").css("margin-left", (document.documentElement.clientWidth - 940) / 2);
+    $(".div_content").css("margin-left", (document.documentElement.clientWidth - 940) / 2);
     $(".div_radio").bind("click", RadioSelect);
     $(".img_radio").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
     $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);

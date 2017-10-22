@@ -1,33 +1,11 @@
-﻿
-$(document).ready(function () {
-    $("#div_gq_cz").bind("click", CZSelect);
-    $("#div_gq_cs").bind("click", CSSelect);
-    
-    
+﻿$(document).ready(function () {
+    $("#divGQ").find(".div_radio").bind("click", GetGQ);
     $("body").bind("click", function () { Close("_XZQ"); Close("LB"); Close("XL"); Close("XJ"); Close("QY"); Close("DD"); });
-
-    
     LoadFC_XZLJBXX();
-    BindClick("XZLLX");
-    BindClick("KZCGS");
     BindClick("QY");
     BindClick("SQ");
     BindClick("ZJDW");
 });
-//房屋描述框focus
-function BCMSFocus() {
-    $("#BCMS").css("color", "#333333");
-}
-//房屋描述框blur
-function BCMSBlur() {
-    $("#BCMS").css("color", "#999999");
-}
-//房屋描述框设默认文本
-function BCMSSetDefault() {
-    var BCMS = "1.房屋特征：\r\n\r\n2.周边配套：\r\n\r\n3.房东心态：";
-    $("#BCMS").html(BCMS);
-}
-
 //选择出租
 function CZSelect() {
     $("#divZJ").css("display", "block");
@@ -41,104 +19,14 @@ function CSSelect() {
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
-        if (type === "XZLLX") {
-            LoadXZLLX();
-        }
-        if (type === "KZCGS") {
-            LoadKZCGS();
-        }
         if (type === "ZJDW") {
-            LoadZJDW();
+            LoadCODESByTYPENAME("租金单位", "ZJDW", "CODES_FC");
         }
         if (type === "QY") {
             LoadQY();
         }
         if (type === "SQ") {
             LoadSQ();
-        }
-    });
-}
-//加载写字楼类型
-function LoadXZLLX() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "写字楼类型",
-            TBName: "CODES_FC"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='ul_select' style='overflow-y: none;height:70px;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='li_select' onclick='SelectDropdown(this,\"XZLLX\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divXZLLX").html(html);
-                $("#divXZLLX").css("display", "block");
-                ActiveStyle("XZLLX");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载可否注册公司
-function LoadKZCGS() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "可注册公司",
-            TBName: "CODES_FC"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='ul_select' style='overflow-y: scroll; height:70px;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='li_select' onclick='SelectDropdown(this,\"KZCGS\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divKZCGS").html(html);
-                $("#divKZCGS").css("display", "block");
-                ActiveStyle("KZCGS");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载租金单位
-function LoadZJDW() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "租金单位",
-            TBName: "CODES_FC"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='ul_select' style='overflow-y: none;height:70px;margin-left:-1px;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='li_select' onclick='SelectDropdown(this,\"ZJDW\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divZJDW").html(html);
-                $("#divZJDW").css("display", "block");
-                ActiveStyle("ZJDW");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
         }
     });
 }
@@ -151,7 +39,7 @@ function SelectQY(obj, type, code) {
 }
 //设置供求
 function SetGQ(gq) {
-    if (gq === 0) {
+    if (gq !== "出售") {
         $("#divZJ").css("display", "block");
         $("#divSJ").css("display", "none");
     }
@@ -159,6 +47,22 @@ function SetGQ(gq) {
         $("#divZJ").css("display", "none");
         $("#divSJ").css("display", "block");
     }
+}
+//获取供求
+function GetGQ() {
+    var value = "";
+    $("#divGQ").find("img").each(function () {
+        if ($(this).attr("src").indexOf("blue") !== -1)
+            value = $(this).parent().find("label")[0].innerHTML;
+    });
+    if (value !== "出售") {
+        $("#divZJ").css("display", "block");
+        $("#divSJ").css("display", "none");
+    } else {
+        $("#divZJ").css("display", "none");
+        $("#divSJ").css("display", "block");
+    }
+    return value;
 }
 //加载房产_写字楼基本信息
 function LoadFC_XZLJBXX() {
@@ -198,7 +102,7 @@ function LoadFC_XZLJBXX() {
 }
 //发布
 function FB() {
-    if (AllValidate() === false) return;
+    if (ValidateAll() === false) return;
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段

@@ -52,7 +52,7 @@
             </div>
         </div>
         <div id="divLBHead" class="div_head">
-            <table class="table" style="width: 100%; text-align: center;">
+            <table class="table_head" style="width: 100%; text-align: center;">
                 <tr>
                     <td class="headtd">
                         <div style="width: 900px;">
@@ -86,12 +86,13 @@
                 </div>
                 <div class="div_row_right">
                     <div class="div_radio" id="div_gq_cz">
-                        <img class="img_radio" id="img_gq_cz" /><label class="label_radio">出租</label>
+                        <img class="img_radio" id="img_gq_cz"/><label class="label_radio">出租</label>
                     </div>
                     <div class="div_radio" id="div_gq_cs">
-                        <img class="img_radio" id="img_gq_cs" /><label class="label_radio">出售</label>
+                        <img class="img_radio" id="img_gq_cs"/><label class="label_radio">出售</label>
                     </div>
                 </div>
+                <div id="divGQTip" class="Warn" style="z-index: 996; position: relative;"></div>
             </div>
             <div id="divLX" class="div_row" style="z-index: 999">
                 <div class="div_row_left" style="margin-left: 128px;">
@@ -99,31 +100,29 @@
                     <span class="spanFWCZ">类型</span>
                 </div>
                 <div class="div_row_right">
-                    <div id="divXZLLXText" class="div_select_out SRK" style="border: 1px solid #cccccc; border-radius: 4px; z-index: 997; position: relative;">
-                        <div id="divXZLLXSpan" class="div_select_in" style="border: none; margin-top: 6px;">
-                            <span id="spanXZLLX" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择类型</span>
-                            <div class="span_select_arrow"></div>
-                        </div>
-                        <div id="divXZLLX" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px; height: 69px">
-                        </div>
+                    <div class="div_radio" id="div_lx_xzl">
+                        <img class="img_radio" id="img_lx_xzl" /><label class="label_radio">写字楼</label>
+                    </div>
+                    <div class="div_radio" id="div_lx_swzx">
+                        <img class="img_radio" id="img_gq_swzx" /><label class="label_radio">商务中心</label>
                     </div>
                 </div>
+                <div id="divLXTip" class="Warn" style="z-index: 996; position: relative;"></div>
             </div>
-            <div id="divZCGS" class="div_row" style="z-index: 998">
+            <div id="divKZCGS" class="div_row" style="z-index: 998">
                 <div class="div_row_left" style="margin-left: 86px;">
                     <span class="span_required">*</span>
                     <span class="spanFWCZ">可注册公司</span>
                 </div>
                 <div class="div_row_right">
-                    <div id="divKZCGSText" class="div_select_out SRK" style="border: 1px solid #cccccc; border-radius: 4px; z-index: 997; position: relative;">
-                        <div id="divKZCGSSpan" class="div_select_in" style="border: none; margin-top: 6px;">
-                            <span id="spanKZCGS" class="span_select spaninput_fontcolor" style="margin-top: 0">否</span>
-                            <div class="span_select_arrow"></div>
-                        </div>
-                        <div id="divKZCGS" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
-                        </div>
+                    <div class="div_radio" id="div_kzcgs_s">
+                        <img class="img_radio" id="img_kzcgs_s"/><label class="label_radio">是</label>
+                    </div>
+                    <div class="div_radio" id="div_kzcgs_f">
+                        <img class="img_radio" id="img_kzcgs_f"/><label class="label_radio">否</label>
                     </div>
                 </div>
+                <div id="divKZCGSTip" class="Warn" style="z-index: 996; position: relative;"></div>
             </div>
             <div id="divJBXX" class="div_split" style="display: block; text-align: left">
                 <span class="span_split">基本信息</span>
@@ -206,7 +205,7 @@
                 </div>
                 <div class="div_row_right">
                     <span id="spanSJ" class="span_spaninput SRK" style="display: inline-block;">
-                        <input class="input_spaninput spaninput_fontcolor" id="SJ" maxlength="9" column="SJ" type="text" style="width: 80px" />
+                        <input class="input_spaninput spaninput_fontcolor" id="SJ" maxlength="9" column="SJ" type="text" style="width: 100px" />
                         <span class="spaninput_fontcolor">万元</span>
                     </span>
                 </div>

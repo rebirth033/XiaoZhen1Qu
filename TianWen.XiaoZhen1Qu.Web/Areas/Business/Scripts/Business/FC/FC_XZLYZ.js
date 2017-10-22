@@ -1,4 +1,7 @@
 ﻿$(document).ready(function () {
+    $("#divGQ").find(".div_radio").bind("click", function () { ValidateRadio("GQ", "忘记选择供求啦"); });
+    $("#divLX").find(".div_radio").bind("click", function () { ValidateRadio("LX", "忘记选择类型啦"); });
+    $("#divKZCGS").find(".div_radio").bind("click", function () { ValidateRadio("KZCGS", "忘记选择可注册公司啦"); });
     $("#LPMC").bind("blur", ValidateLPMC);
     $("#LPMC").bind("focus", InfoLPMC);
     $("#DD").bind("blur", ValidateDD);
@@ -10,6 +13,36 @@
     $("#MJ").bind("blur", ValidateMJ);
     $("#MJ").bind("focus", InfoMJ);
 });
+//验证所有
+function ValidateAll() {
+    if (GetGQ() !== "出售") {
+        if (ValidateRadio("GQ", "忘记选择供求啦")
+            & ValidateRadio("LX", "忘记选择类型啦")
+            & ValidateRadio("KZCGS", "忘记选择可注册公司啦")
+            & ValidateBCMS("BCMS", "忘记填写补充描述啦")
+            & ValidateLPMC()
+            & ValidateDD()
+            & ValidateZJ()
+            & ValidateMJ()
+            & ValidateCommon())
+            return true;
+        else
+            return false;
+    } else {
+        if (ValidateRadio("GQ", "忘记选择供求啦")
+            & ValidateRadio("LX", "忘记选择类型啦")
+            & ValidateRadio("KZCGS", "忘记选择可注册公司啦")
+            & ValidateBCMS("BCMS", "忘记填写补充描述啦")
+            & ValidateLPMC()
+            & ValidateDD()
+            & ValidateSJ()
+            & ValidateMJ()
+            & ValidateCommon())
+            return true;
+        else
+            return false;
+    }
+}
 //验证楼盘名称
 function ValidateLPMC() {
     if ($("#LPMC").val() === "" || $("#LPMC").val() === null) {
@@ -85,7 +118,7 @@ function ValidateSJ() {
 //验证面积
 function ValidateMJ() {
     if ($("#MJ").val() === "" || $("#MJ").val() === null) {
-        $("#divMJTip").css("display", "inline-block");
+        $("#divMJTip").css("display", "block");
         $("#divMJTip").attr("class", "Warn");
         $("#divMJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写面积啦');
         $("#spanMJ").css("border-color", "#fd634f");
@@ -96,27 +129,12 @@ function ValidateMJ() {
             $("#spanMJ").css("border-color", "#cccccc");
             return true;
         } else {
-            $("#divMJTip").css("display", "inline-block");
+            $("#divMJTip").css("display", "block");
             $("#divMJTip").attr("class", "Warn");
             $("#divMJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />面积请填写整数，面议则填0');
             $("#spanMJ").css("border-color", "#fd634f");
             return false;
         }
-    }
-}
-
-//验证所有
-function AllValidate() {
-    if ($("#imgCZ").attr("src").indexOf("blue") !== -1) {
-        if (ValidateLPMC() & ValidateDD() & ValidateZJ() & ValidateMJ() & ValidateBT() & ValidateZP() & ValidateLXR() & ValidateLXDH())
-            return true;
-        else
-            return false;
-    } else {
-        if (ValidateLPMC() & ValidateDD() & ValidateSJ() & ValidateMJ() & ValidateBT() & ValidateZP() & ValidateLXR() & ValidateLXDH())
-            return true;
-        else
-            return false;
     }
 }
 //提示楼盘名称
@@ -138,16 +156,19 @@ function InfoZJ() {
     $("#divZJTip").css("display", "block");
     $("#divZJTip").attr("class", "Info");
     $("#divZJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数，面议则填0');
+    $("#spanZJ").css("border-color", "#5bc0de");
 }
-//提示租金
+//提示售价
 function InfoSJ() {
     $("#divSJTip").css("display", "block");
     $("#divSJTip").attr("class", "Info");
     $("#divSJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数，面议则填0');
+    $("#spanSJ").css("border-color", "#5bc0de");
 }
 //提示面积
 function InfoMJ() {
-    $("#divMJTip").css("display", "inline-block");
+    $("#divMJTip").css("display", "block");
     $("#divMJTip").attr("class", "Info");
     $("#divMJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数，面议则填0');
+    $("#spanMJ").css("border-color", "#5bc0de");
 }
