@@ -152,7 +152,8 @@ function LoadFC_CKCFTDCWJBXX() {
                 });
                 if (xml.Value.FC_CKCFTDCWJBXX.GQ !== null)
                     SetDX("GQ", xml.Value.FC_CKCFTDCWJBXX.GQ);
-                $("#spanCKCFTDCWLX").html(xml.Value.FC_CKCFTDCWJBXX.LX);
+                if (xml.Value.FC_CKCFTDCWJBXX.LX !== null)
+                    SetDX("LX", xml.Value.FC_CKCFTDCWJBXX.LX);
                 $("#spanKZCGS").html(xml.Value.FC_CKCFTDCWJBXX.KZCGS);
                 $("#spanQY").html(xml.Value.FC_CKCFTDCWJBXX.QY);
                 $("#spanSQ").html(xml.Value.FC_CKCFTDCWJBXX.SQ);
@@ -171,13 +172,13 @@ function FB() {
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
-    obj = jsonObj.AddJson(obj, "LX", "'" + $("#spanCKCFTDCWLX").html() + "'");
     obj = jsonObj.AddJson(obj, "KZCGS", "'" + $("#spanKZCGS").html() + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "SQ", "'" + $("#spanSQ").html() + "'");
     obj = jsonObj.AddJson(obj, "ZJDW", "'" + $("#spanZJDW").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
+    obj = jsonObj.AddJson(obj, "LX", "'" + GetDX("LX") + "'");
 
     if (getUrlParam("FC_CKCFTDCWJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "FC_CKCFTDCWJBXXID", "'" + getUrlParam("FC_CKCFTDCWJBXXID") + "'");
