@@ -1,14 +1,5 @@
-﻿
-$(document).ready(function () {
-    
-    
-    
-    $("body").bind("click", function () { Close("_XZQ"); Close("LB"); Close("XL"); Close("XJ"); Close("QY"); Close("DD"); });
-
-
-
-
-    
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
     LoadES_SJSM_ESSJJBXX();
     BindClick("SJPP");
     BindClick("SJXH");
@@ -33,7 +24,7 @@ function BCMSSetDefault() {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "SJPP") {
-            LoadSJPP();
+            LoadCODESByTYPENAME("手机品牌", "SJPP", "CODES_ES_SJSM");
         }
         if (type === "SJXH") {
             LoadSJXH();
@@ -46,43 +37,15 @@ function BindClick(type) {
         }
     });
 }
-//加载手机品牌
-function LoadSJPP() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "手机品牌",
-            TBName: "CODES_ES_SJSM"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='ul_select' style='overflow-y: scroll;height:340px;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='li_select' onclick='SelectSJPP(this,\"SJPP\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divSJPP").html(html);
-                $("#divSJPP").css("display", "block");
-                ActiveStyle("SJPP");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
 //加载手机型号
-function LoadSJXH(SJPP) {
+function LoadSJXH() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/Common/LoadByParentID",
         dataType: "json",
         data:
         {
-            ParentID: SJPP,
+            ParentID: $("#PPID").val(),
             TBName: "CODES_ES_SJSM"
         },
         success: function (xml) {
@@ -103,10 +66,11 @@ function LoadSJXH(SJPP) {
     });
 }
 //选择区域下拉框
-function SelectSJPP(obj, type, code) {
+function SelectLB(obj, type, code) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-    LoadSJXH(code);
+    $("#PPID").val(code);
+    BindClick("SJXH");
 }
 //加载二手_手机数码_二手手机基本信息
 function LoadES_SJSM_ESSJJBXX() {
@@ -148,7 +112,7 @@ function LoadES_SJSM_ESSJJBXX() {
 }
 //发布
 function FB() {
-    if (AllValidate() === false) return;
+    if (ValidateAll() === false) return;
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
