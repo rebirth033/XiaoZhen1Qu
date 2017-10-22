@@ -50,6 +50,7 @@ function LoadQY() {
                 $("#divQY").html(html);
                 $("#divQY").css("display", "block");
                 ActiveStyle("QY");
+                Bind("SZQY", "QY", "");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

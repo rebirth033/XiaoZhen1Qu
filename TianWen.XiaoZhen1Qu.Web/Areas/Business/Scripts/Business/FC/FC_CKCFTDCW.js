@@ -1,39 +1,13 @@
-﻿
-$(document).ready(function () {
-    
+﻿$(document).ready(function () {
     $("#div_gq_cz").bind("click", CZSelect);
     $("#div_gq_cs").bind("click", CSSelect);
-    
     $("body").bind("click", function() { Close("_XZQ"); });
-
-
-    
     LoadFC_CKCFTDCWJBXX();
     BindClick("CKCFTDCWLX");
     BindClick("QY");
     BindClick("SQ");
     BindClick("ZJDW");
 });
-//房屋描述框focus
-function BCMSFocus() {
-    $("#BCMS").css("color", "#333333");
-}
-//房屋描述框blur
-function BCMSBlur() {
-    $("#BCMS").css("color", "#999999");
-}
-//房屋描述框设默认文本
-function BCMSSetDefault() {
-    var BCMS = "1.房屋特征：\r\n\r\n2.周边配套：\r\n\r\n3.房东心态：";
-    $("#BCMS").html(BCMS);
-}
-//加载默认
-function LoadDefault() {
-    ue.ready(function () {
-        ue.setHeight(200);
-    });
-    $(".img_radio").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
 //选择出租
 function CZSelect() {
     $("#divZJ").css("display", "block");
@@ -47,11 +21,8 @@ function CSSelect() {
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
-        if (type === "CKCFTDCWLX") {
-            LoadCKCFTDCWLX();
-        }
         if (type === "ZJDW") {
-            LoadZJDW();
+            LoadCODESByTYPENAME("租金单位", "ZJDW", "CODES_FC");
         }
         if (type === "QY") {
             LoadQY();
@@ -61,27 +32,61 @@ function BindClick(type) {
         }
     });
 }
-//加载类型
-function LoadCKCFTDCWLX() {
+//选择区域下拉框
+function SelectQY(obj, type, code) {
+    $("#QYCode").val(code);
+    $("#span" + type).html(obj.innerHTML);
+    $("#div" + type).css("display", "none");
+}
+//加载区域
+function LoadQY() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
+        url: getRootPath() + "/Business/Common/LoadQY",
         dataType: "json",
         data:
         {
-            TYPENAME: "不动产其他类型",
-            TBName: "CODES_FC"
+
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                var html = "<ul class='ul_select' style='overflow-y: none;height:138px;'>";
+                var html = "<ul class='ul_select' style='overflow-y: scroll;'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='li_select' onclick='SelectDropdown(this,\"CKCFTDCWLX\")'>" + xml.list[i].CODENAME + "</li>";
+                    html += "<li class='li_select' onclick='SelectQY(this,\"QY\",\"" + xml.list[i].CODE + "\")'>" + RTrim(RTrim(RTrim(xml.list[i].NAME, '市'), '区'), '县') + "</li>";
                 }
                 html += "</ul>";
-                $("#divCKCFTDCWLX").html(html);
-                $("#divCKCFTDCWLX").css("display", "block");
-                ActiveStyle("CKCFTDCWLX");
+                $("#divQY").html(html);
+                $("#divQY").css("display", "block");
+                ActiveStyle("QY");
+                Bind("SZQY", "QY", "");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//加载商圈
+function LoadSQ() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadSQ",
+        dataType: "json",
+        data:
+        {
+            QY: $("#QYCode").val()
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='ul_select' style='overflow-y: scroll;'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='li_select' onclick='SelectDropdown(this,\"SQ\")'>" + RTrimStr(xml.list[i].NAME, '街道,镇,林场,管理处') + "</li>";
+                }
+                html += "</ul>";
+                $("#divSQ").html(html);
+                $("#divSQ").css("display", "block");
+                ActiveStyle("SQ");
+                Bind("SZQY", "SQ", "");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -94,38 +99,12 @@ function SelectQY(obj, type, code) {
     $("#QYCode").val(code);
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-}
-//加载租金单位
-function LoadZJDW() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "不动产其他类型租金单位",
-            TBName: "CODES_FC"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='ul_select' style='overflow-y: none;height:70px;margin-left:-1px;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='li_select' onclick='SelectDropdown(this,\"ZJDW\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divZJDW").html(html);
-                $("#divZJDW").css("display", "block");
-                ActiveStyle("ZJDW");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
+    $("#spanSQ").html("请选择商圈");
+    BindClick("SQ");
 }
 //设置供求
 function SetGQ(gq) {
-    if (gq === 0) {
+    if (gq !== "出售") {
         $("#divZJ").css("display", "block");
         $("#divSJ").css("display", "none");
     }
@@ -133,6 +112,22 @@ function SetGQ(gq) {
         $("#divZJ").css("display", "none");
         $("#divSJ").css("display", "block");
     }
+}
+//获取供求
+function GetGQ() {
+    var value = "";
+    $("#divGQ").find("img").each(function () {
+        if ($(this).attr("src").indexOf("blue") !== -1)
+            value = $(this).parent().find("label")[0].innerHTML;
+    });
+    if (value !== "出售") {
+        $("#divZJ").css("display", "block");
+        $("#divSJ").css("display", "none");
+    } else {
+        $("#divZJ").css("display", "none");
+        $("#divSJ").css("display", "block");
+    }
+    return value;
 }
 //加载房产_写字楼基本信息
 function LoadFC_CKCFTDCWJBXX() {
@@ -172,7 +167,7 @@ function LoadFC_CKCFTDCWJBXX() {
 }
 //发布
 function FB() {
-    if (AllValidate() === false) return;
+    if (ValidateAll() === false) return;
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
