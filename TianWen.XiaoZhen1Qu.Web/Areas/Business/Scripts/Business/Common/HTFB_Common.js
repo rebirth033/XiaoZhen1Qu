@@ -23,7 +23,7 @@ function LoadDefault() {
     ue.ready(function () { ue.setHeight(200); });
 }
 //根据TYPENAME获取字典表
-function LoadCODESByTYPENAME(type, id, table) {
+function LoadCODESByTYPENAME(type, id, table, callback, idout, idin, message) {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
@@ -46,6 +46,7 @@ function LoadCODESByTYPENAME(type, id, table) {
                 $("#div" + id).html(html);
                 $("#div" + id).css("display", "block");
                 ActiveStyle(id);
+                callback(idout, idin, message);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -61,4 +62,8 @@ function SelectLB(obj, type) {
 //退出
 function Exit() {
     window.location.href = getRootPath() + "/Business/YHDLXX/YHDLXX";
+}
+//绑定下拉框
+function Bind(idout, idin, message) {
+    $("#div" + idout).find(".li_select").bind("click", function () { ValidateSelect(idout, idin, message); });
 }
