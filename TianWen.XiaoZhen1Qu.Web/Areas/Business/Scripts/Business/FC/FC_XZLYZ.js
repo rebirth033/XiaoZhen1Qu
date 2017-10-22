@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     $("#divGQ").find(".div_radio").bind("click", function () { ValidateRadio("GQ", "忘记选择供求啦"); });
-    $("#divLX").find(".div_radio").bind("click", function () { ValidateRadio("LX", "忘记选择类型啦"); });
+    $("#divXZLLX").find(".div_radio").bind("click", function () { ValidateRadio("XZLLX", "忘记选择类型啦"); });
     $("#divKZCGS").find(".div_radio").bind("click", function () { ValidateRadio("KZCGS", "忘记选择可注册公司啦"); });
     $("#LPMC").bind("blur", ValidateLPMC);
     $("#LPMC").bind("focus", InfoLPMC);
@@ -17,9 +17,10 @@
 function ValidateAll() {
     if (GetGQ() !== "出售") {
         if (ValidateRadio("GQ", "忘记选择供求啦")
-            & ValidateRadio("LX", "忘记选择类型啦")
+            & ValidateRadio("XZLLX", "忘记选择类型啦")
             & ValidateRadio("KZCGS", "忘记选择可注册公司啦")
             & ValidateBCMS("BCMS", "忘记填写补充描述啦")
+            & ValidateSZQY()
             & ValidateLPMC()
             & ValidateDD()
             & ValidateZJ()
@@ -30,9 +31,10 @@ function ValidateAll() {
             return false;
     } else {
         if (ValidateRadio("GQ", "忘记选择供求啦")
-            & ValidateRadio("LX", "忘记选择类型啦")
+            & ValidateRadio("XZLLX", "忘记选择类型啦")
             & ValidateRadio("KZCGS", "忘记选择可注册公司啦")
             & ValidateBCMS("BCMS", "忘记填写补充描述啦")
+            & ValidateSZQY()
             & ValidateLPMC()
             & ValidateDD()
             & ValidateSJ()

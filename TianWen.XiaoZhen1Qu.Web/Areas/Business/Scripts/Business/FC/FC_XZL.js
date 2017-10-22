@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     $("#divGQ").find(".div_radio").bind("click", GetGQ);
-    $("body").bind("click", function () { Close("_XZQ"); Close("LB"); Close("XL"); Close("XJ"); Close("QY"); Close("DD"); });
+    $("body").bind("click", function() { Close("_XZQ"); });
     LoadFC_XZLJBXX();
     BindClick("QY");
     BindClick("SQ");
@@ -26,7 +26,61 @@ function BindClick(type) {
             LoadQY();
         }
         if (type === "SQ") {
-            LoadSQ();
+            LoadSQ($("#QYCode").val());
+        }
+    });
+}
+//加载区域
+function LoadQY() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadQY",
+        dataType: "json",
+        data:
+        {
+
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='ul_select' style='overflow-y: scroll;'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='li_select' onclick='SelectQY(this,\"QY\",\"" + xml.list[i].CODE + "\")'>" + RTrim(RTrim(RTrim(xml.list[i].NAME, '市'), '区'), '县') + "</li>";
+                }
+                html += "</ul>";
+                $("#divQY").html(html);
+                $("#divQY").css("display", "block");
+                ActiveStyle("QY");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//加载商圈
+function LoadSQ() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadSQ",
+        dataType: "json",
+        data:
+        {
+            QY: $("#QYCode").val()
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='ul_select' style='overflow-y: scroll;'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='li_select' onclick='SelectDropdown(this,\"SQ\")'>" + RTrimStr(xml.list[i].NAME, '街道,镇,林场,管理处') + "</li>";
+                }
+                html += "</ul>";
+                $("#divSQ").html(html);
+                $("#divSQ").css("display", "block");
+                ActiveStyle("SQ");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
         }
     });
 }
@@ -35,7 +89,8 @@ function SelectQY(obj, type, code) {
     $("#QYCode").val(code);
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-    LoadSQ(code);
+    $("#spanSQ").html("请选择商圈");
+    BindClick("SQ");
 }
 //设置供求
 function SetGQ(gq) {
@@ -87,8 +142,10 @@ function LoadFC_XZLJBXX() {
                 });
                 if (xml.Value.FC_XZLJBXX.GQ !== null)
                     SetDX("GQ", xml.Value.FC_XZLJBXX.GQ);
-                $("#spanXZLLX").html(xml.Value.FC_XZLJBXX.XZLLX);
-                $("#spanKZCGS").html(xml.Value.FC_XZLJBXX.KZCGS);
+                if (xml.Value.FC_XZLJBXX.XZLLX !== null)
+                    SetDX("XZLLX", xml.Value.FC_XZLJBXX.XZLLX);
+                if (xml.Value.FC_XZLJBXX.KZCGS !== null)
+                    SetDX("KZCGS", xml.Value.FC_XZLJBXX.KZCGS);
                 $("#spanQY").html(xml.Value.FC_XZLJBXX.QY);
                 $("#spanSQ").html(xml.Value.FC_XZLJBXX.SQ);
                 $("#spanZJDW").html(xml.Value.FC_XZLJBXX.ZJDW);
@@ -106,13 +163,13 @@ function FB() {
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
-    obj = jsonObj.AddJson(obj, "XZLLX", "'" + $("#spanXZLLX").html() + "'");
-    obj = jsonObj.AddJson(obj, "KZCGS", "'" + $("#spanKZCGS").html() + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "SQ", "'" + $("#spanSQ").html() + "'");
     obj = jsonObj.AddJson(obj, "ZJDW", "'" + $("#spanZJDW").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
+    obj = jsonObj.AddJson(obj, "XZLLX", "'" + GetDX("XZLLX") + "'");
+    obj = jsonObj.AddJson(obj, "KZCGS", "'" + GetDX("KZCGS") + "'");
 
     if (getUrlParam("FC_XZLJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "FC_XZLJBXXID", "'" + getUrlParam("FC_XZLJBXXID") + "'");

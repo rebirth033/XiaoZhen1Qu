@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    $("body").bind("click", function () { Close("_XZQ"); Close("LB"); Close("XL"); Close("XJ"); Close("QY"); Close("SQ"); });
+    $("body").bind("click", function() { Close("_XZQ"); });
     $("#divGQ").find(".div_radio").bind("click", GetGQ);
     LoadFC_SPJBXX();
     BindClick("SPLX");
@@ -156,7 +156,7 @@ function LoadFC_SPJBXX() {
 }
 //发布
 function FB() {
-    if (AllValidate() === false) return;
+    if (ValidateAll() === false) return;
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段

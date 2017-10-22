@@ -13,12 +13,13 @@
     $("#MJ").bind("focus", InfoMJ);
 });
 //验证所有
-function AllValidate() {
+function ValidateAll() {
     if (GetGQ() !== "出售") {
         if (ValidateRadio("FL", "忘记选择分类啦")
             & ValidateRadio("GQ", "忘记选择供求啦")
             & ValidateSelect("LX", "SPLX", "请选择商铺类型")
             & ValidateBCMS("BCMS", "忘记填写补充描述啦")
+            & ValidateSZQY()
             & ValidateLSJY()
             & ValidateDD()
             & ValidateZJ()
@@ -32,6 +33,7 @@ function AllValidate() {
             & ValidateRadio("GQ", "忘记选择供求啦")
             & ValidateSelect("LX", "SPLX", "请选择商铺类型")
             & ValidateBCMS("BCMS", "忘记填写补充描述啦")
+            & ValidateSZQY()
             & ValidateLSJY()
             & ValidateDD()
             & ValidateSJ()

@@ -4,7 +4,7 @@ $(document).ready(function () {
     $("#div_gq_cz").bind("click", CZSelect);
     $("#div_gq_cs").bind("click", CSSelect);
     
-    $("body").bind("click", function () { Close("_XZQ"); Close("LB"); Close("XL"); Close("XJ"); Close("QY"); Close("SQ"); });
+    $("body").bind("click", function() { Close("_XZQ"); });
 
 
     

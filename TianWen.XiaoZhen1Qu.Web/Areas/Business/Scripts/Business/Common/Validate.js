@@ -168,3 +168,9 @@ function ValidateCommon() {
     else
         return false;
 }
+//验证所在区域
+function ValidateSZQY() {
+    if (!ValidateSelect("SZQY", "QY", "请选择区域")) return false;
+    if (!ValidateSelect("SZQY", "SQ", "请选择商圈")) return false;
+    return true;
+}
