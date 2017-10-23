@@ -1,14 +1,5 @@
-﻿
-$(document).ready(function () {
-    
-    
-    
+﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ");});
-
-
-
-
-    
     LoadES_MYFZMR_FZXMXBJBXX();
     BindClick("LB");
     BindClick("XJ");
@@ -21,13 +12,19 @@ $(document).ready(function () {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("服装/鞋帽/箱包", "LB", "CODES_ES_MYFZMR");
+            LoadCODESByTYPENAME("服装/鞋帽/箱包", "LB", "CODES_ES_MYFZMR", Bind, "FZXMXBLB", "LB", "");
         }
         if (type === "XL") {
-            LoadCODESByTYPENAME($("#spanLB").html(), "XL", "CODES_ES_MYFZMR");
+            LoadCODESByTYPENAME($("#spanLB").html(), "XL", "CODES_ES_MYFZMR", Bind, "FZXMXBLB", "XL", "");
+        }
+        if (type === "FZCC") {
+            LoadCODESByTYPENAME("服装尺寸", "FZCC", "CODES_ES_MYFZMR");
+        }
+        if (type === "XCC") {
+            LoadCODESByTYPENAME("鞋尺寸", "XCC", "CODES_ES_MYFZMR");
         }
         if (type === "XJ") {
-            LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM");
+            LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM", Bind, "XJCD", "XJ", "");
         }
         if (type === "QY") {
             LoadQY();
@@ -41,6 +38,7 @@ function BindClick(type) {
 function SelectLB(obj, type) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
+    if(type === "LB")
     PDLB(obj.innerHTML);
 }
 //判断类别
@@ -48,13 +46,11 @@ function PDLB(LB) {
     if (LB === "服装") {
         $("#divFZXXCS").css("display", "");
         $("#divXXXCS").css("display", "none");
-        LoadCODESByTYPENAME("服装尺寸", "FZCC", "CODES_ES_MYFZMR");
         BindClick("FZCC");
     }
     else if (LB === "鞋") {
         $("#divFZXXCS").css("display", "none");
         $("#divXXXCS").css("display", "");
-        LoadCODESByTYPENAME("鞋尺寸", "XCC", "CODES_ES_MYFZMR");
         BindClick("XCC");
     }
     else {
@@ -90,22 +86,15 @@ function LoadES_MYFZMR_FZXMXBJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.BCMSString);
                 });
-                if (xml.Value.ES_SJSM_PBDNJBXX.GQ !== null)
-                    SetDX("GQ", xml.Value.ES_SJSM_PBDNJBXX.GQ);
+                if (xml.Value.ES_MYFZMR_FZXMXBJBXX.GQ !== null)
+                    SetDX("GQ", xml.Value.ES_MYFZMR_FZXMXBJBXX.GQ);
                 $("#spanLB").html(xml.Value.ES_MYFZMR_FZXMXBJBXX.LB);
                 $("#spanXJ").html(xml.Value.ES_MYFZMR_FZXMXBJBXX.XJ);
                 $("#spanQY").html(xml.Value.ES_MYFZMR_FZXMXBJBXX.QY);
                 $("#spanDD").html(xml.Value.ES_MYFZMR_FZXMXBJBXX.DD);
                 $("#spanXL").html(xml.Value.ES_MYFZMR_FZXMXBJBXX.XL);
-
-                $("#spanDSPMCC").html(xml.Value.ES_MYFZMR_FZXMXBJBXX.DSPMCC);
-                $("#spanDSPP").html(xml.Value.ES_MYFZMR_FZXMXBJBXX.DSPP);
-                $("#spanXYJPP").html(xml.Value.ES_MYFZMR_FZXMXBJBXX.XYJPP);
-                $("#spanKTPP").html(xml.Value.ES_MYFZMR_FZXMXBJBXX.KTPP);
-                $("#spanKTBPDS").html(xml.Value.ES_MYFZMR_FZXMXBJBXX.KTBPDS);
-                $("#spanKTGL").html(xml.Value.ES_MYFZMR_FZXMXBJBXX.KTGL);
-                $("#spanBXPP").html(xml.Value.ES_MYFZMR_FZXMXBJBXX.BXPP);
-                $("#spanBGPP").html(xml.Value.ES_MYFZMR_FZXMXBJBXX.BGPP);
+                $("#spanXCC").html(xml.Value.ES_MYFZMR_FZXMXBJBXX.XCC);
+                $("#spanFZCC").html(xml.Value.ES_MYFZMR_FZXMXBJBXX.FZCC);
 
                 LoadPhotos(xml.Value.Photos);
                 PDLB(xml.Value.ES_MYFZMR_FZXMXBJBXX.LB);
@@ -127,17 +116,11 @@ function FB() {
     obj = jsonObj.AddJson(obj, "XJ", "'" + $("#spanXJ").html() + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
+    obj = jsonObj.AddJson(obj, "XCC", "'" + $("#spanXCC").html() + "'");
+    obj = jsonObj.AddJson(obj, "FZCC", "'" + $("#spanFZCC").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
 
-    obj = jsonObj.AddJson(obj, "DSPMCC", "'" + $("#spanDSPMCC").html() + "'");
-    obj = jsonObj.AddJson(obj, "DSPP", "'" + $("#spanDSPP").html() + "'");
-    obj = jsonObj.AddJson(obj, "XYJPP", "'" + $("#spanXYJPP").html() + "'");
-    obj = jsonObj.AddJson(obj, "KTPP", "'" + $("#spanKTPP").html() + "'");
-    obj = jsonObj.AddJson(obj, "KTBPDS", "'" + $("#spanKTBPDS").html() + "'");
-    obj = jsonObj.AddJson(obj, "KTGL", "'" + $("#spanKTGL").html() + "'");
-    obj = jsonObj.AddJson(obj, "BXPP", "'" + $("#spanBXPP").html() + "'");
-    obj = jsonObj.AddJson(obj, "BGPP", "'" + $("#spanBGPP").html() + "'");
 
     if (getUrlParam("ES_MYFZMR_FZXMXBJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "ES_MYFZMR_FZXMXBJBXXID", "'" + getUrlParam("ES_MYFZMR_FZXMXBJBXXID") + "'");

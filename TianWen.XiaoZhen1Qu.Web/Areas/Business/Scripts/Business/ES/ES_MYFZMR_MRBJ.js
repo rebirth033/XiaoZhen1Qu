@@ -1,13 +1,5 @@
-﻿
-$(document).ready(function () {
-    
-    
-    
+﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ");});
-
-
-
-    
     LoadES_MYFZMR_MRBJJBXX();
     BindClick("LB");
     BindClick("XJ");
@@ -19,13 +11,13 @@ $(document).ready(function () {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("美容/保健", "LB", "CODES_ES_MYFZMR");
+            LoadCODESByTYPENAME("美容/保健", "LB", "CODES_ES_MYFZMR", Bind, "MRBJLB", "LB", "");
         }
         if (type === "XL") {
-            LoadCODESByTYPENAME($("#spanLB").html(), "XL", "CODES_ES_MYFZMR");
+            LoadCODESByTYPENAME($("#spanLB").html(), "XL", "CODES_ES_MYFZMR", Bind, "MRBJLB", "XL", "");
         }
         if (type === "XJ") {
-            LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM");
+            LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM", Bind, "XJCD", "XJ", "");
         }
         if (type === "QY") {
             LoadQY();
@@ -39,10 +31,6 @@ function BindClick(type) {
 function SelectLB(obj, type) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-    PDLB(obj.innerHTML);
-}
-//判断类别
-function PDLB(LB) {
     BindClick("XL");
 }
 //选择母婴/服装/美容品牌
@@ -72,25 +60,15 @@ function LoadES_MYFZMR_MRBJJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.BCMSString);
                 });
-                if (xml.Value.ES_SJSM_PBDNJBXX.GQ !== null)
-                    SetDX("GQ", xml.Value.ES_SJSM_PBDNJBXX.GQ);
+                if (xml.Value.ES_MYFZMR_MRBJJBXX.GQ !== null)
+                    SetDX("GQ", xml.Value.ES_MYFZMR_MRBJJBXX.GQ);
                 $("#spanLB").html(xml.Value.ES_MYFZMR_MRBJJBXX.LB);
                 $("#spanXL").html(xml.Value.ES_MYFZMR_MRBJJBXX.XL);
                 $("#spanXJ").html(xml.Value.ES_MYFZMR_MRBJJBXX.XJ);
                 $("#spanQY").html(xml.Value.ES_MYFZMR_MRBJJBXX.QY);
-                $("#spanSQ").html(xml.Value.ES_MYFZMR_MRBJJBXX.DD);
-
-                $("#spanDSPMCC").html(xml.Value.ES_MYFZMR_MRBJJBXX.DSPMCC);
-                $("#spanDSPP").html(xml.Value.ES_MYFZMR_MRBJJBXX.DSPP);
-                $("#spanXYJPP").html(xml.Value.ES_MYFZMR_MRBJJBXX.XYJPP);
-                $("#spanKTPP").html(xml.Value.ES_MYFZMR_MRBJJBXX.KTPP);
-                $("#spanKTBPDS").html(xml.Value.ES_MYFZMR_MRBJJBXX.KTBPDS);
-                $("#spanKTGL").html(xml.Value.ES_MYFZMR_MRBJJBXX.KTGL);
-                $("#spanBXPP").html(xml.Value.ES_MYFZMR_MRBJJBXX.BXPP);
-                $("#spanBGPP").html(xml.Value.ES_MYFZMR_MRBJJBXX.BGPP);
+                $("#spanDD").html(xml.Value.ES_MYFZMR_MRBJJBXX.DD);
 
                 LoadPhotos(xml.Value.Photos);
-                PDLB(xml.Value.ES_MYFZMR_MRBJJBXX.LB);
                 
                 return;
             }
@@ -110,18 +88,9 @@ function FB() {
     obj = jsonObj.AddJson(obj, "XL", "'" + $("#spanXL").html() + "'");
     obj = jsonObj.AddJson(obj, "XJ", "'" + $("#spanXJ").html() + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
-    obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanSQ").html() + "'");
+    obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
-
-    obj = jsonObj.AddJson(obj, "DSPMCC", "'" + $("#spanDSPMCC").html() + "'");
-    obj = jsonObj.AddJson(obj, "DSPP", "'" + $("#spanDSPP").html() + "'");
-    obj = jsonObj.AddJson(obj, "XYJPP", "'" + $("#spanXYJPP").html() + "'");
-    obj = jsonObj.AddJson(obj, "KTPP", "'" + $("#spanKTPP").html() + "'");
-    obj = jsonObj.AddJson(obj, "KTBPDS", "'" + $("#spanKTBPDS").html() + "'");
-    obj = jsonObj.AddJson(obj, "KTGL", "'" + $("#spanKTGL").html() + "'");
-    obj = jsonObj.AddJson(obj, "BXPP", "'" + $("#spanBXPP").html() + "'");
-    obj = jsonObj.AddJson(obj, "BGPP", "'" + $("#spanBGPP").html() + "'");
 
     if (getUrlParam("ES_MYFZMR_MRBJJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "ES_MYFZMR_MRBJJBXXID", "'" + getUrlParam("ES_MYFZMR_MRBJJBXXID") + "'");

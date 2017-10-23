@@ -47,7 +47,7 @@ function ValidateJG() {
 }
 //提示价格
 function InfoJG() {
-    $("#divJGTip").css("display", "inline-block");
+    $("#divJGTip").css("display", "block");
     $("#divJGTip").attr("class", "Info");
     $("#divJGTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数，面议则填0');
     $("#spanJG").css("border-color", "#5bc0de");

@@ -41,6 +41,18 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string XL { get; set; }
 
         /// <summary>
+        /// 鞋尺寸
+        /// </summary>
+        [Property]
+        public virtual string XCC { get; set; }
+
+        /// <summary>
+        /// 服装尺寸
+        /// </summary>
+        [Property]
+        public virtual string FZCC { get; set; }
+
+        /// <summary>
         /// 新旧
         /// </summary>
         [Property]
