@@ -1,14 +1,5 @@
-﻿
-$(document).ready(function () {
-    
-    
-    
-    $("body").bind("click", function () { Close("_XZQ");});
-
-
-
-
-    
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
     LoadES_SJSM_TSJJBXX();
     BindClick("LB");
     BindClick("PBPP");
@@ -29,10 +20,10 @@ $(document).ready(function () {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("台式机/配件","LB","CODES_ES_SJSM");
+            LoadCODESByTYPENAME("台式机/配件", "LB", "CODES_ES_SJSM", Bind, "TSJLB", "LB", "");
         }
         if (type === "XL") {
-            LoadCODESByTYPENAME($("#spanLB").html(), "XL", "CODES_ES_SJSM");
+            LoadCODESByTYPENAME($("#spanLB").html(), "XL", "CODES_ES_SJSM", Bind, "TSJLB", "XL", "");
         }
         if (type === "CPUPP") {
             LoadCODESByTYPENAME("CPU品牌", "CPUPP", "CODES_ES_SJSM");
@@ -53,7 +44,7 @@ function BindClick(type) {
             LoadCODESByTYPENAME("显卡", "XK", "CODES_ES_SJSM");
         }
         if (type === "XJ") {
-            LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM");
+            LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM", Bind, "XJCD", "XJ", "");
         }
         if (type === "QY") {
             LoadQY();
@@ -67,7 +58,8 @@ function BindClick(type) {
 function SelectLB(obj, type) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-    PDLB(obj.innerHTML);
+    if (type === "LB")
+        PDLB(obj.innerHTML);
 }
 //判断类别
 function PDLB(LB) {
@@ -110,8 +102,8 @@ function LoadES_SJSM_TSJJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.BCMSString);
                 });
-                if (xml.Value.ES_SJSM_PBDNJBXX.GQ !== null)
-                    SetDX("GQ", xml.Value.ES_SJSM_PBDNJBXX.GQ);
+                if (xml.Value.ES_SJSM_TSJJBXX.GQ !== null)
+                    SetDX("GQ", xml.Value.ES_SJSM_TSJJBXX.GQ);
                 $("#spanLB").html(xml.Value.ES_SJSM_TSJJBXX.LB);
                 $("#spanXJ").html(xml.Value.ES_SJSM_TSJJBXX.XJ);
                 $("#spanQY").html(xml.Value.ES_SJSM_TSJJBXX.QY);
