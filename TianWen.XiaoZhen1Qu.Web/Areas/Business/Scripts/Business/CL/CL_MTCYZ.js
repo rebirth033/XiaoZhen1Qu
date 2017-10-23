@@ -1,9 +1,37 @@
 ﻿$(document).ready(function () {
+    $("#divGQ").find(".div_radio").bind("click", function () { ValidateRadio("GQ", "忘记选择供求啦"); });
+    $("#divXSQK").find(".div_radio").bind("click", function () { ValidateRadio("XSQK", "忘记选择行驶情况啦"); });
     $("#GLS").bind("blur", ValidateGLS);
     $("#GLS").bind("focus", InfoGLS);
     $("#JG").bind("blur", ValidateJG);
     $("#JG").bind("focus", InfoJG);
 });
+//验证所有
+function ValidateAll() {
+    if (GetGQ() !== "已行使") {
+        if (ValidateRadio("GQ", "忘记选择供求啦")
+            & ValidateRadio("XSQK", "忘记选择行驶情况啦")
+            & ValidateBCMS("BCMS", "忘记填写补充描述啦")
+            & ValidateSZQY()
+            & ValidateJG()
+            & ValidateCommon())
+            return true;
+        else
+            return false;
+    } else {
+        if (ValidateRadio("GQ", "忘记选择供求啦")
+            & ValidateRadio("XSQK", "忘记选择行驶情况啦")
+            & ValidateSelect("GCSJ", "忘记选择购车时间啦")
+            & ValidateBCMS("BCMS", "忘记填写补充描述啦")
+            & ValidateSZQY()
+            & ValidateJG()
+            & ValidateGLS()
+            & ValidateCommon())
+            return true;
+        else
+            return false;
+    }
+}
 //验证公里数
 function ValidateGLS() {
     if ($("#GLS").val() === "" || $("#GLS").val() === null) {
@@ -25,36 +53,6 @@ function ValidateGLS() {
             return false;
         }
     }
-}
-//验证售价
-function ValidateJG() {
-    if ($("#JG").val() === "" || $("#JG").val() === null) {
-        $("#divJGTip").css("display", "block");
-        $("#divJGTip").attr("class", "Warn");
-        $("#divJGTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写价格啦');
-        $("#spanJG").css("border-color", "#fd634f");
-        return false;
-    } else {
-        if (ValidateNumber($("#JG").val())) {
-            $("#divJGTip").css("display", "none");
-            $("#spanJG").css("border-color", "#cccccc");
-            return true;
-        } else {
-            $("#divJGTip").css("display", "block");
-            $("#divJGTip").attr("class", "Warn");
-            $("#divJGTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />价格请填写整数，面议则填0');
-            $("#spanJG").css("border-color", "#fd634f");
-            return false;
-        }
-    }
-}
-
-//验证所有
-function ValidateAll() {
-    if (ValidateJG() & ValidateBT() & ValidateZP() & ValidateLXR() & ValidateLXDH())
-        return true;
-    else
-        return false;
 }
 //提示公里数
 function InfoGLS() {

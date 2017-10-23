@@ -1,14 +1,11 @@
 家里导出
-expdp c##infotownlet/infotownlet@localhost/orcl direcotry=data_pump_dir dumpfile=xxxz.dmp version=10.2.0.1.0
+expdp c##infotownlet/infotownlet@localhost/orcl directory=data_pump_dir dumpfile=xxxz.dmp version=10.2.0.1.0
 公司导入
-impdp c##infotownlet/infotownlet@10.0.6.1/orcl direcotry=dumpdir dumpfile=xxxz.dmp full=y
+impdp c##infotownlet/infotownlet@10.0.6.1/orcl directory=dumpdir dumpfile=xxxz.dmp full=y
 
 
 公司导出
 expdp c##infotownlet/infotownlet@10.0.6.1/orcl directory=dumpdir dumpfile=xxxz.dmp version=10.2.0.1.0
 家里导入
-<<<<<<< HEAD
 impdp c##infotownlet/infotownlet@localhost/orcl directory=data_pump_dir dumpfile=xxxz.dmp full=y
-=======
-impdp c##infotownlet/infotownlet@localhost/orcl direcotry=data_pump_dir dumpfile=xxxz.dmp full=y
->>>>>>> 84b4f13d5bac0b2fc1853acf379b5fbebabeeab6
+

@@ -1,7 +1,6 @@
-﻿
-$(document).ready(function () {
-    $("body").bind("click", function () { Close("_XZQ"); Close("LB"); Close("PP"); Close("QY"); Close("DD"); });
-    
+﻿$(document).ready(function () {
+    $("#divXSQK").find(".div_radio").bind("click", GetXSQK);
+    $("body").bind("click", function () { Close("_XZQ"); });
     LoadCL_MTCJBXX();
     BindClick("LB");
     BindClick("GCSJ");
@@ -9,10 +8,6 @@ $(document).ready(function () {
     BindClick("QY");
     BindClick("SQ");
 });
-
-
-
-
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
@@ -39,6 +34,33 @@ function BindClick(type) {
         }
     });
 }
+//设置行驶情况
+function SetXSQK(XSQK) {
+    if (XSQK !== "已行使") {
+        $("#divMTCGCSJ").css("display", "none");
+        $("#divGLS").css("display", "none");
+    }
+    else {
+        $("#divMTCGCSJ").css("display", "");
+        $("#divGLS").css("display", "");
+    }
+}
+//获取行驶情况
+function GetXSQK() {
+    var value = "";
+    $("#divXSQK").find("img").each(function () {
+        if ($(this).attr("src").indexOf("blue") !== -1)
+            value = $(this).parent().find("label")[0].innerHTML;
+    });
+    if (value !== "已行使") {
+        $("#divMTCGCSJ").css("display", "none");
+        $("#divGLS").css("display", "none");
+    } else {
+        $("#divMTCGCSJ").css("display", "");
+        $("#divGLS").css("display", "");
+    }
+    return value;
+}
 //选择下拉框
 function SelectDropdown(obj, type) {
     $("#span" + type).html(obj.innerHTML);
@@ -54,17 +76,6 @@ function SelectPBPP(obj, type, code) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
     LoadPBXH(code);
-}
-//设置行驶里程
-function SetXSLC(xslc) {
-    if (xslc === 0) {
-        $("#divMTCGCSJ").css("display", "none");
-        $("#divGLS").css("display", "none");
-    }
-    else {
-        $("#divMTCGCSJ").css("display", "");
-        $("#divGLS").css("display", "");
-    }
 }
 //加载车辆_摩托车基本信息
 function LoadCL_MTCJBXX() {

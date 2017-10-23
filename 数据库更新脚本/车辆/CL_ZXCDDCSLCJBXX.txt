@@ -4,7 +4,6 @@ create table CL_ZXCDDCSLCJBXX
   cl_zxcddcslcjbxxid VARCHAR2(50) not null,
   jcxxid             VARCHAR2(50),
   gq                 VARCHAR2(20),
-  bcms               blob,
   jyqy               VARCHAR2(20),
   jydd               VARCHAR2(20),
   lb                 VARCHAR2(20),
@@ -16,7 +15,10 @@ create table CL_ZXCDDCSLCJBXX
   dcdy               VARCHAR2(20),
   dcrl               VARCHAR2(20),
   synx               VARCHAR2(20),
-  zxcpp              VARCHAR2(20)
+  zxcpp              VARCHAR2(20),
+  bcms               BLOB,
+  qy                 VARCHAR2(20),
+  dd                 VARCHAR2(20)
 )
 tablespace USERS
   pctfree 10
@@ -24,7 +26,7 @@ tablespace USERS
   maxtrans 255
   storage
   (
-    initial 16K
+    initial 64K
     next 1M
     minextents 1
     maxextents unlimited
@@ -39,8 +41,6 @@ comment on column CL_ZXCDDCSLCJBXX.jcxxid
   is '基础信息ID';
 comment on column CL_ZXCDDCSLCJBXX.gq
   is '供求';
-comment on column CL_ZXCDDCSLCJBXX.bcms
-  is '补充描述';
 comment on column CL_ZXCDDCSLCJBXX.jyqy
   is '交易区域';
 comment on column CL_ZXCDDCSLCJBXX.jydd
@@ -65,3 +65,9 @@ comment on column CL_ZXCDDCSLCJBXX.synx
   is '使用年限';
 comment on column CL_ZXCDDCSLCJBXX.zxcpp
   is '自行车品牌';
+comment on column CL_ZXCDDCSLCJBXX.bcms
+  is '补充描述';
+comment on column CL_ZXCDDCSLCJBXX.qy
+  is '区域';
+comment on column CL_ZXCDDCSLCJBXX.dd
+  is '地段';

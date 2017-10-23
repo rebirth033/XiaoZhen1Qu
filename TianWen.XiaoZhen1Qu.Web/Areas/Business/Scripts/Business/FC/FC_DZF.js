@@ -1,33 +1,16 @@
-﻿
-$(document).ready(function () {
+﻿$(document).ready(function () {
     $("#span_xzdz").bind("click", OpenXZDZ);
-    
     $("body").bind("click", function() { Close("_XZQ"); });
-
     BindClick("FWLX");
     BindClick("ZJDW");
-    
     LoadFC_DZFJBXX();
 });
-//房屋描述框focus
-function BCMSFocus() {
-    $("#BCMS").css("color", "#333333");
-}
-//房屋描述框blur
-function BCMSBlur() {
-    $("#BCMS").css("color", "#999999");
-}
-//房屋描述框设默认文本
-function BCMSSetDefault() {
-    var BCMS = "1.房屋特征：\r\n\r\n2.周边配套：\r\n\r\n3.房东心态：";
-    $("#BCMS").html(BCMS);
-}
+
 //加载默认
 function LoadDefault() {
     ue.ready(function () {
         ue.setHeight(200);
     });
-    $(".img_radio").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
 }
 //打开新增地址
 function OpenXZDZ() {

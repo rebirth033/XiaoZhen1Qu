@@ -1,4 +1,5 @@
 ﻿$(document).ready(function () {
+    $("#divGQ").find(".div_radio").bind("click", function () { ValidateRadio("GQ", "忘记选择供求啦"); });
     $("#JG").bind("blur", ValidateJG);
     $("#JG").bind("focus", InfoJG);
     $("#SYNX").bind("blur", ValidateSYNX);
@@ -16,6 +17,7 @@ function ValidateAll() {
         & ValidateZXCDDCSLCLB()
         & ValidateSelect("XJCD", "XJ", "请选择新旧")
         & ValidateBCMS("BCMS", "忘记填写补充描述啦")
+        & ValidateSYNX()
         & ValidateSZQY()
         & ValidateJG()
         & ValidateCommon())

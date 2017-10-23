@@ -6,10 +6,46 @@
     BindClick("QY");
     BindClick("DD");
 });
+//绑定下拉框鼠标点击样式
+function BindClick(type) {
+    $("#div" + type + "Span").click(function () {
+        if (type === "LB") {
+            LoadCODESByTYPENAME("自行车/电动车/三轮车", "LB", "CODES_CL", Bind, "ZXCDDCSLCLB", "LB", "");
+        }
+        if (type === "XL") {
+            LoadCODESByTYPENAME($("#spanLB").html(), "XL", "CODES_CL", Bind, "ZXCDDCSLCLB", "XL", "");
+        }
+        if (type === "XJ") {
+            LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM", Bind, "XJCD", "XJ", "");
+        }
+        if (type === "ZXCPP") {
+            LoadCODESByTYPENAME("自行车品牌", "ZXCPP", "CODES_CL");
+        }
+        if (type === "CC") {
+            LoadCODESByTYPENAME("自行车尺寸", "CC", "CODES_CL");
+        }
+        if (type === "DDCPP") {
+            LoadCODESByTYPENAME("电动车品牌", "DDCPP", "CODES_CL");
+        }
+        if (type === "DCDY") {
+            LoadCODESByTYPENAME("电池电压", "DCDY", "CODES_CL");
+        }
+        if (type === "DCRL") {
+            LoadCODESByTYPENAME("电池容量", "DCRL", "CODES_CL");
+        }
+        if (type === "QY") {
+            LoadQY();
+        }
+        if (type === "DD") {
+            LoadDD($("#QYCode").val());
+        }
+    });
+}
 //选择类别下拉框
 function SelectLB(obj, type) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
+    if(type === "LB")
     PDLB(obj.innerHTML);
 }
 //判断类别
@@ -19,8 +55,6 @@ function PDLB(LB) {
         $("#divDDCXXCS").css("display", "none");
         BindClick("ZXCPP");
         BindClick("CC");
-        LoadCODESByTYPENAME("自行车品牌", "ZXCPP", "CODES_CL");
-        LoadCODESByTYPENAME("自行车尺寸", "CC", "CODES_CL");
     }
     else if (LB === "电动车") {
         $("#divZXCXXCS").css("display", "none");
@@ -28,35 +62,12 @@ function PDLB(LB) {
         BindClick("DDCPP");
         BindClick("DCDY");
         BindClick("DCRL");
-        LoadCODESByTYPENAME("电动车品牌", "DDCPP", "CODES_CL");
-        LoadCODESByTYPENAME("电池电压", "DCDY", "CODES_CL");
-        LoadCODESByTYPENAME("电池容量", "DCRL", "CODES_CL");
     }
     else {
         $("#divZXCXXCS").css("display", "none");
         $("#divDDCXXCS").css("display", "none");
     }
     BindClick("XL");
-}
-//绑定下拉框鼠标点击样式
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadCODESByTYPENAME("自行车/电动车/三轮车", "LB", "CODES_CL");
-        }
-        if (type === "XL") {
-            LoadCODESByTYPENAME($("#spanLB").html(), "XL", "CODES_CL");
-        }
-        if (type === "XJ") {
-            LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM");
-        }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
-    });
 }
 //选择自行车/电动车/三轮车品牌
 function SelectPBPP(obj, type, code) {
@@ -88,7 +99,7 @@ function LoadCL_ZXCDDCSLCJBXX() {
                 $("#spanLB").html(xml.Value.CL_ZXCDDCSLCJBXX.LB);
                 $("#spanXJ").html(xml.Value.CL_ZXCDDCSLCJBXX.XJ);
                 $("#spanQY").html(xml.Value.CL_ZXCDDCSLCJBXX.QY);
-                $("#spanSQ").html(xml.Value.CL_ZXCDDCSLCJBXX.DD);
+                $("#spanDD").html(xml.Value.CL_ZXCDDCSLCJBXX.DD);
                 $("#spanDDCPP").html(xml.Value.CL_ZXCDDCSLCJBXX.DDCPP);
                 $("#spanZXCPP").html(xml.Value.CL_ZXCDDCSLCJBXX.ZXCPP);
                 $("#spanCC").html(xml.Value.CL_ZXCDDCSLCJBXX.CC);
@@ -97,8 +108,8 @@ function LoadCL_ZXCDDCSLCJBXX() {
                 $("#spanXL").html(xml.Value.CL_ZXCDDCSLCJBXX.XL);
                 LoadPhotos(xml.Value.Photos);
                 PDLB(xml.Value.CL_ZXCDDCSLCJBXX.LB);
-                if (xml.Value.ES_SJSM_PBDNJBXX.GQ !== null)
-                    SetDX("GQ", xml.Value.ES_SJSM_PBDNJBXX.GQ);
+                if (xml.Value.CL_ZXCDDCSLCJBXX.GQ !== null)
+                    SetDX("GQ", xml.Value.CL_ZXCDDCSLCJBXX.GQ);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -121,7 +132,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "DCDY", "'" + $("#spanDCDY").html() + "'");
     obj = jsonObj.AddJson(obj, "DCRL", "'" + $("#spanDCRL").html() + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
-    obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanSQ").html() + "'");
+    obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
 
