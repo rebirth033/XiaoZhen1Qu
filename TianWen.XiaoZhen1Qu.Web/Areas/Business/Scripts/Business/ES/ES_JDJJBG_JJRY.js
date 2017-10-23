@@ -1,32 +1,22 @@
-﻿
-$(document).ready(function () {
-    
-    
-    
-    $("body").bind("click", function () { Close("_XZQ");});
-
-
-
-
-    
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
     LoadES_JDJJBG_JJRYJBXX();
     BindClick("LB");
     BindClick("XJ");
     BindClick("QY");
     BindClick("DD");
 });
-
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("家居/日用品", "LB", "CODES_ES_JDJJBG");
+            LoadCODESByTYPENAME("家居/日用品", "LB", "CODES_ES_JDJJBG", Bind, "JJRYLB", "LB", "");
         }
         if (type === "XL") {
-            LoadCODESByTYPENAME($("#spanLB").html(), "XL", "CODES_ES_JDJJBG");
+            LoadCODESByTYPENAME($("#spanLB").html(), "XL", "CODES_ES_JDJJBG", Bind, "JJRYLB", "XL", "");
         }
         if (type === "XJ") {
-            LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM");
+            LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM", Bind, "XJCD", "XJ", "");
         }
         if (type === "QY") {
             LoadQY();
@@ -40,26 +30,6 @@ function BindClick(type) {
 function SelectLB(obj, type) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-    PDLB(obj.innerHTML);
-}
-//判断类别
-function PDLB(LB) {
-    if (LB === "床") {
-        $("#divCXXCS").css("display", "");
-        $("#divCDXXCS").css("display", "none");
-        LoadCODESByTYPENAME("床尺寸", "CCC", "CODES_ES_JDJJBG");
-        BindClick("CCC");
-    }
-    else if (LB === "床垫") {
-        $("#divCXXCS").css("display", "none");
-        $("#divCDXXCS").css("display", "");
-        LoadCODESByTYPENAME("床尺寸", "CDCC", "CODES_ES_JDJJBG");
-        BindClick("CDCC");
-    }
-    else {
-        $("#divCXXCS").css("display", "none");
-        $("#divCDXXCS").css("display", "none");
-    }
     BindClick("XL");
 }
 //选择家居日用品牌
@@ -89,16 +59,15 @@ function LoadES_JDJJBG_JJRYJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.BCMSString);
                 });
-                if (xml.Value.ES_SJSM_PBDNJBXX.GQ !== null)
-                    SetDX("GQ", xml.Value.ES_SJSM_PBDNJBXX.GQ);
+                if (xml.Value.ES_JDJJBG_JJRYJBXX.GQ !== null)
+                    SetDX("GQ", xml.Value.ES_JDJJBG_JJRYJBXX.GQ);
                 $("#spanLB").html(xml.Value.ES_JDJJBG_JJRYJBXX.LB);
+                $("#spanXL").html(xml.Value.ES_JDJJBG_JJRYJBXX.XL);
                 $("#spanXJ").html(xml.Value.ES_JDJJBG_JJRYJBXX.XJ);
                 $("#spanQY").html(xml.Value.ES_JDJJBG_JJRYJBXX.QY);
-                $("#spanSQ").html(xml.Value.ES_JDJJBG_JJRYJBXX.DD);
+                $("#spanDD").html(xml.Value.ES_JDJJBG_JJRYJBXX.DD);
 
                 LoadPhotos(xml.Value.Photos);
-                PDLB(xml.Value.ES_JDJJBG_JJRYJBXX.LB);
-                $("#spanXL").html(xml.Value.ES_JDJJBG_JJRYJBXX.XL);
                 return;
             }
         },
@@ -117,7 +86,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "XL", "'" + $("#spanXL").html() + "'");
     obj = jsonObj.AddJson(obj, "XJ", "'" + $("#spanXJ").html() + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
-    obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanSQ").html() + "'");
+    obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
 
