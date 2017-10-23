@@ -1,15 +1,5 @@
-﻿
-$(document).ready(function () {
-    
-    
-    
-    $("body").bind("click", function () { Close("_XZQ");});
-
-
-
-
-
-    
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
     LoadES_WHYL_WYXNWPJBXX();
     BindClick("LB");
     BindClick("XL");
@@ -20,16 +10,13 @@ $(document).ready(function () {
 });
 //加载游戏标签
 function LoadYXBQ() {
-    var arrayObj = new Array('RMYX', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
+    var arrayObj = new Array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
     var html = "";
     for (var i = 0; i < arrayObj.length; i++) {
-        if (i === 0)
-            html += '<div class="div_bqss_content_bq" id="div' + arrayObj[i] + '" style="width:62px;"><span class="span_bqss_content_bq" id="span' + arrayObj[i] + '">' + "热门" + '</span><em class="em_bqss_content_bq" id="em' + arrayObj[i] + '"></em></div>';
-        else
-            html += '<div class="div_bqss_content_bq" id="div' + arrayObj[i] + '"><span class="span_bqss_content_bq" id="span' + arrayObj[i] + '">' + arrayObj[i] + '</span><em class="em_bqss_content_bq" id="em' + arrayObj[i] + '"></em></div>';
+        html += '<div class="div_bqss_content_bq" id="div' + arrayObj[i] + '"><span class="span_bqss_content_bq" id="span' + arrayObj[i] + '">' + arrayObj[i] + '</span><em class="em_bqss_content_bq" id="em' + arrayObj[i] + '"></em></div>';
     }
     $("#div_bqss_body_bq").html(html);
-    $(".div_bqss_content_bq").bind("mouseover", YXBQActive);
+    $(".div_bqss_content_bq").bind("click", YXBQActive);
 }
 //游戏标签切换
 function YXBQActive() {
@@ -39,7 +26,7 @@ function YXBQActive() {
 function LoadYXMC(SZM) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/YXCZ/LoadByCodeValueAndTypeName",
+        url: getRootPath() + "/Business/Common/LoadByCodeValueAndTypeName",
         dataType: "json",
         data:
         {
@@ -51,11 +38,12 @@ function LoadYXMC(SZM) {
             if (xml.Result === 1) {
                 var html = "";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += '<span class="span_mc" onclick="YXXZ(\'' + xml.list[i].YXMC + '\')">' + xml.list[i].YXMC + '</span>';
+                    html += '<span class="span_mc" onclick="YXXZ(\'' + xml.list[i].CODENAME + '\')">' + xml.list[i].CODENAME + '</span>';
                 }
                 if (xml.list.length === 0)
                     html += '<span class="span_mc">该字母下暂无数据</span>';
                 $("#div_bqss_body_mc").html(html);
+                $("#divXL").css("display", "block");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -68,19 +56,18 @@ function YXXZ(YXMC) {
     $("#spanXL").html(YXMC);
     $("#divXL").css("display", "none");
 }
-
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("网游/虚拟物品", "LB", "CODES_ES_WHYL");
+            LoadCODESByTYPENAME("网游/虚拟物品", "LB", "CODES_ES_WHYL", Bind, "WYXNWPLB", "LB", "");
         }
         if (type === "XL") {
             LoadYXBQ();
             LoadYXMC("divA");
         }
         if (type === "XJ") {
-            LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM");
+            LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM", Bind, "XJCD", "XJ", "");
         }
         if (type === "QY") {
             LoadQY();
@@ -122,16 +109,15 @@ function LoadES_WHYL_WYXNWPJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.BCMSString);
                 });
-                if (xml.Value.ES_SJSM_PBDNJBXX.GQ !== null)
-                    SetDX("GQ", xml.Value.ES_SJSM_PBDNJBXX.GQ);
+                if (xml.Value.ES_WHYL_WYXNWPJBXX.GQ !== null)
+                    SetDX("GQ", xml.Value.ES_WHYL_WYXNWPJBXX.GQ);
                 $("#spanLB").html(xml.Value.ES_WHYL_WYXNWPJBXX.LB);
                 $("#spanXJ").html(xml.Value.ES_WHYL_WYXNWPJBXX.XJ);
                 $("#spanXL").html(xml.Value.ES_WHYL_WYXNWPJBXX.XL);
                 $("#spanQY").html(xml.Value.ES_WHYL_WYXNWPJBXX.QY);
-                $("#spanSQ").html(xml.Value.ES_WHYL_WYXNWPJBXX.DD);
+                $("#spanDD").html(xml.Value.ES_WHYL_WYXNWPJBXX.DD);
                 $("#spanXL").html(xml.Value.ES_WHYL_WYXNWPJBXX.XL);
                 LoadPhotos(xml.Value.Photos);
-                PDLB(xml.Value.ES_WHYL_WYXNWPJBXX.LB);
                 return;
             }
         },
@@ -150,7 +136,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "XL", "'" + $("#spanXL").html() + "'");
     obj = jsonObj.AddJson(obj, "XJ", "'" + $("#spanXJ").html() + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
-    obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanSQ").html() + "'");
+    obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
 

@@ -53,6 +53,8 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_ES_SJSM>(String.Format("FROM CODES_ES_SJSM WHERE CODEVALUE = '{0}' AND TYPENAME = '{1}' ORDER BY CODEORDER", CODEVALUE, TYPENAME)) };
                 if (TBName == "CODES_ES_QTES")
                     return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_ES_QTES>(String.Format("FROM CODES_ES_QTES WHERE CODEVALUE = '{0}' AND TYPENAME = '{1}' ORDER BY CODEORDER", CODEVALUE, TYPENAME)) };
+                if (TBName == "CODES_ES_WHYL")
+                    return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_ES_WHYL>(String.Format("FROM CODES_ES_WHYL WHERE CODEVALUE = '{0}' AND TYPENAME = '{1}' ORDER BY CODEORDER", CODEVALUE, TYPENAME)) };
                 if (TBName == "CODES_PFCG")
                     return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_PFCG>(String.Format("FROM CODES_PFCG WHERE CODEVALUE = '{0}' AND TYPENAME = '{1}' ORDER BY CODEORDER", CODEVALUE, TYPENAME)) };
                 if (TBName == "CODES_CL")
