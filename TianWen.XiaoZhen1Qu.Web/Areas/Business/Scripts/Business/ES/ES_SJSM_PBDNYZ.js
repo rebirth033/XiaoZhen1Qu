@@ -1,8 +1,28 @@
 ﻿$(document).ready(function () {
+    $("#divGQ").find(".div_radio").bind("click", function () { ValidateRadio("GQ", "忘记选择供求啦"); });
     $("#JG").bind("blur", ValidateJG);
     $("#JG").bind("focus", InfoJG);
 });
-
+//验证平板类别
+function ValidatePBLB() {
+    if (!ValidateSelect("PBLB", "LB", "请选择类别")) return false;
+    if (!ValidateSelect("PBLB", "PBPP", "请选择平板品牌")) return false;
+    if (!ValidateSelect("PBLB", "PBXH", "请选择平板型号")) return false;
+    return true;
+}
+//验证所有
+function ValidateAll() {
+    if (ValidateRadio("GQ", "忘记选择供求啦")
+        & ValidatePBLB()
+        & ValidateSelect("XJCD", "XJ", "请选择新旧")
+        & ValidateBCMS("BCMS", "忘记填写补充描述啦")
+        & ValidateSZQY()
+        & ValidateJG()
+        & ValidateCommon())
+        return true;
+    else
+        return false;
+}
 //验证售价
 function ValidateJG() {
     if ($("#JG").val() === "" || $("#JG").val() === null) {
@@ -24,14 +44,6 @@ function ValidateJG() {
             return false;
         }
     }
-}
-
-//验证所有
-function AllValidate() {
-    if (ValidateJG() & ValidateBT() & ValidateZP() & ValidateLXR() & ValidateLXDH())
-        return true;
-    else
-        return false;
 }
 //提示价格
 function InfoJG() {
