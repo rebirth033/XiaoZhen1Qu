@@ -1,14 +1,5 @@
-﻿
-$(document).ready(function () {
-    
-    
-    
+﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ");});
-
-
-
-
-    
     LoadES_JDJJBG_ESJJJBXX();
     BindClick("LB");
     BindClick("PBPP");
@@ -18,18 +9,23 @@ $(document).ready(function () {
     BindClick("DD");
 
 });
-
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("二手家具", "LB", "CODES_ES_JDJJBG");
+            LoadCODESByTYPENAME("二手家具", "LB", "CODES_ES_JDJJBG", Bind, "ESJJLB", "LB", "");
         }
         if (type === "XL") {
-            LoadCODESByTYPENAME($("#spanLB").html(), "XL", "CODES_ES_JDJJBG");
+            LoadCODESByTYPENAME($("#spanLB").html(), "XL", "CODES_ES_JDJJBG", Bind, "ESJJLB", "XL", "");
         }
         if (type === "XJ") {
-            LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM");
+            LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM", Bind, "XJCD", "XJ", "");
+        }
+        if (type === "CCC") {
+            LoadCODESByTYPENAME("床尺寸", "CCC", "CODES_ES_JDJJBG");
+        }
+        if (type === "CDCC") {
+            LoadCODESByTYPENAME("床尺寸", "CDCC", "CODES_ES_JDJJBG");
         }
         if (type === "QY") {
             LoadQY();
@@ -43,6 +39,7 @@ function BindClick(type) {
 function SelectLB(obj, type) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
+    if(type === "LB")
     PDLB(obj.innerHTML);
 }
 //判断类别
@@ -50,13 +47,11 @@ function PDLB(LB) {
     if (LB === "床") {
         $("#divCXXCS").css("display", "");
         $("#divCDXXCS").css("display", "none");
-        LoadCODESByTYPENAME("床尺寸", "CCC", "CODES_ES_JDJJBG");
         BindClick("CCC");
     }
     else if (LB === "床垫") {
         $("#divCXXCS").css("display", "none");
         $("#divCDXXCS").css("display", "");
-        LoadCODESByTYPENAME("床尺寸", "CDCC", "CODES_ES_JDJJBG");
         BindClick("CDCC");
     }
     else {
@@ -92,9 +87,11 @@ function LoadES_JDJJBG_ESJJJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.BCMSString);
                 });
-                if (xml.Value.ES_SJSM_PBDNJBXX.GQ !== null)
-                    SetDX("GQ", xml.Value.ES_SJSM_PBDNJBXX.GQ);
+                if (xml.Value.ES_JDJJBG_ESJJJBXX.GQ !== null)
+                    SetDX("GQ", xml.Value.ES_JDJJBG_ESJJJBXX.GQ);
                 $("#spanLB").html(xml.Value.ES_JDJJBG_ESJJJBXX.LB);
+                $("#spanCCC").html(xml.Value.ES_JDJJBG_ESJJJBXX.CCC);
+                $("#spanCDCC").html(xml.Value.ES_JDJJBG_ESJJJBXX.CDCC);
                 $("#spanXJ").html(xml.Value.ES_JDJJBG_ESJJJBXX.XJ);
                 $("#spanQY").html(xml.Value.ES_JDJJBG_ESJJJBXX.QY);
                 $("#spanDD").html(xml.Value.ES_JDJJBG_ESJJJBXX.DD);
@@ -116,6 +113,8 @@ function FB() {
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
     obj = jsonObj.AddJson(obj, "XL", "'" + $("#spanXL").html() + "'");
+    obj = jsonObj.AddJson(obj, "CCC", "'" + $("#spanCCC").html() + "'");
+    obj = jsonObj.AddJson(obj, "CDCC", "'" + $("#spanCDCC").html() + "'");
     obj = jsonObj.AddJson(obj, "XJ", "'" + $("#spanXJ").html() + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
