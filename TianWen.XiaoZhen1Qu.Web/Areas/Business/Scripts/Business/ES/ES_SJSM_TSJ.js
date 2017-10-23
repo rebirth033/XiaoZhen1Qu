@@ -1,14 +1,5 @@
-﻿
-$(document).ready(function () {
-    
-    
-    
-    $("body").bind("click", function () { Close("_XZQ"); Close("LB"); Close("XL"); Close("XJ"); Close("QY"); Close("DD"); });
-
-
-
-
-    
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
     LoadES_SJSM_TSJJBXX();
     BindClick("LB");
     BindClick("PBPP");
@@ -29,10 +20,10 @@ $(document).ready(function () {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("台式机/配件","LB","CODES_ES_SJSM");
+            LoadCODESByTYPENAME("台式机/配件", "LB", "CODES_ES_SJSM", Bind, "TSJLB", "LB", "");
         }
         if (type === "XL") {
-            LoadCODESByTYPENAME($("#spanLB").html(), "XL", "CODES_ES_SJSM");
+            LoadCODESByTYPENAME($("#spanLB").html(), "XL", "CODES_ES_SJSM", Bind, "TSJLB", "XL", "");
         }
         if (type === "CPUPP") {
             LoadCODESByTYPENAME("CPU品牌", "CPUPP", "CODES_ES_SJSM");
@@ -53,7 +44,7 @@ function BindClick(type) {
             LoadCODESByTYPENAME("显卡", "XK", "CODES_ES_SJSM");
         }
         if (type === "XJ") {
-            LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM");
+            LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM", Bind, "XJCD", "XJ", "");
         }
         if (type === "QY") {
             LoadQY();
@@ -67,7 +58,8 @@ function BindClick(type) {
 function SelectLB(obj, type) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-    PDLB(obj.innerHTML);
+    if (type === "LB")
+        PDLB(obj.innerHTML);
 }
 //判断类别
 function PDLB(LB) {
@@ -110,12 +102,12 @@ function LoadES_SJSM_TSJJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.BCMSString);
                 });
-                if (xml.Value.ES_SJSM_PBDNJBXX.GQ !== null)
-                    SetDX("GQ", xml.Value.ES_SJSM_PBDNJBXX.GQ);
+                if (xml.Value.ES_SJSM_TSJJBXX.GQ !== null)
+                    SetDX("GQ", xml.Value.ES_SJSM_TSJJBXX.GQ);
                 $("#spanLB").html(xml.Value.ES_SJSM_TSJJBXX.LB);
                 $("#spanXJ").html(xml.Value.ES_SJSM_TSJJBXX.XJ);
-                $("#spanQY").html(xml.Value.ES_SJSM_TSJJBXX.JYQY);
-                $("#spanDD").html(xml.Value.ES_SJSM_TSJJBXX.JYDD);
+                $("#spanQY").html(xml.Value.ES_SJSM_TSJJBXX.QY);
+                $("#spanDD").html(xml.Value.ES_SJSM_TSJJBXX.DD);
                 $("#spanXL").html(xml.Value.ES_SJSM_TSJJBXX.XL);
 
                 $("#spanCPUPP").html(xml.Value.ES_SJSM_TSJJBXX.CPUPP);
@@ -136,15 +128,15 @@ function LoadES_SJSM_TSJJBXX() {
 }
 //发布
 function FB() {
-    if (AllValidate() === false) return;
+    if (ValidateAll() === false) return;
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
     obj = jsonObj.AddJson(obj, "XL", "'" + $("#spanXL").html() + "'");
     obj = jsonObj.AddJson(obj, "XJ", "'" + $("#spanXJ").html() + "'");
-    obj = jsonObj.AddJson(obj, "JYQY", "'" + $("#spanQY").html() + "'");
-    obj = jsonObj.AddJson(obj, "JYDD", "'" + $("#spanDD").html() + "'");
+    obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
+    obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
 

@@ -26,7 +26,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// 供求
         /// </summary>
         [Property]
-        public virtual int GQ { get; set; }
+        public virtual string GQ { get; set; }
 
         /// <summary>
         /// 类别
@@ -39,6 +39,18 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// </summary>
         [Property]
         public virtual string XL { get; set; }
+
+        /// <summary>
+        /// 鞋尺寸
+        /// </summary>
+        [Property]
+        public virtual string XCC { get; set; }
+
+        /// <summary>
+        /// 服装尺寸
+        /// </summary>
+        [Property]
+        public virtual string FZCC { get; set; }
 
         /// <summary>
         /// 新旧
@@ -62,12 +74,12 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// 交易区域
         /// </summary>
         [Property]
-        public virtual string JYQY { get; set; }
+        public virtual string QY { get; set; }
 
         /// <summary>
         /// 交易地段
         /// </summary>
         [Property]
-        public virtual string JYDD { get; set; }
+        public virtual string DD { get; set; }
     }
 }

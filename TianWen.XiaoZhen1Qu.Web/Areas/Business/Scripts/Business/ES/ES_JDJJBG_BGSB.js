@@ -1,9 +1,5 @@
-﻿
-$(document).ready(function () {
-    
-    
-    $("body").bind("click", function () { Close("_XZQ"); Close("LB"); Close("XL"); Close("XJ"); Close("QY"); Close("DD"); });
-    
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ");});
     LoadES_JDJJBG_BGSBJBXX();
     BindClick("LB");
     BindClick("XJ");
@@ -15,13 +11,13 @@ $(document).ready(function () {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("办公用品/设备", "LB", "CODES_ES_JDJJBG");
+            LoadCODESByTYPENAME("办公用品/设备", "LB", "CODES_ES_JDJJBG", Bind, "BGSBLB", "LB", "");
         }
         if (type === "XL") {
-            LoadCODESByTYPENAME($("#spanLB").html(), "XL", "CODES_ES_JDJJBG");
+            LoadCODESByTYPENAME($("#spanLB").html(), "XL", "CODES_ES_JDJJBG", Bind, "BGSBLB", "XL", "");
         }
         if (type === "XJ") {
-            LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM");
+            LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM", Bind, "XJCD", "XJ", "");
         }
         if (type === "QY") {
             LoadQY();
@@ -64,15 +60,14 @@ function LoadES_JDJJBG_BGSBJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.BCMSString);
                 });
-                if (xml.Value.ES_SJSM_PBDNJBXX.GQ !== null)
-                    SetDX("GQ", xml.Value.ES_SJSM_PBDNJBXX.GQ);
+                if (xml.Value.ES_JDJJBG_BGSBJBXX.GQ !== null)
+                    SetDX("GQ", xml.Value.ES_JDJJBG_BGSBJBXX.GQ);
                 $("#spanLB").html(xml.Value.ES_JDJJBG_BGSBJBXX.LB);
                 $("#spanXJ").html(xml.Value.ES_JDJJBG_BGSBJBXX.XJ);
-                $("#spanQY").html(xml.Value.ES_JDJJBG_BGSBJBXX.JYQY);
-                $("#spanDD").html(xml.Value.ES_JDJJBG_BGSBJBXX.JYDD);
+                $("#spanQY").html(xml.Value.ES_JDJJBG_BGSBJBXX.QY);
+                $("#spanDD").html(xml.Value.ES_JDJJBG_BGSBJBXX.DD);
                 $("#spanXL").html(xml.Value.ES_JDJJBG_BGSBJBXX.XL);
                 LoadPhotos(xml.Value.Photos);
-                PDLB(xml.Value.ES_JDJJBG_BGSBJBXX.LB);
                 return;
             }
         },
@@ -83,15 +78,15 @@ function LoadES_JDJJBG_BGSBJBXX() {
 }
 //发布
 function FB() {
-    if (AllValidate() === false) return;
+    if (ValidateAll() === false) return;
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
     obj = jsonObj.AddJson(obj, "XL", "'" + $("#spanXL").html() + "'");
     obj = jsonObj.AddJson(obj, "XJ", "'" + $("#spanXJ").html() + "'");
-    obj = jsonObj.AddJson(obj, "JYQY", "'" + $("#spanQY").html() + "'");
-    obj = jsonObj.AddJson(obj, "JYDD", "'" + $("#spanSQ").html() + "'");
+    obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
+    obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
 

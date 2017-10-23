@@ -1,14 +1,5 @@
-﻿
-$(document).ready(function () {
-    
-    
-    
-    $("body").bind("click", function () { Close("_XZQ"); Close("LB"); Close("XL"); Close("XJ"); Close("QY"); Close("DD"); });
-
-
-
-
-    
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ");});
     LoadES_SJSM_SMCPJBXX();
     BindClick("LB");
     BindClick("PBPP");
@@ -17,31 +8,17 @@ $(document).ready(function () {
     BindClick("QY");
     BindClick("SQ");
 });
-//房屋描述框focus
-function BCMSFocus() {
-    $("#BCMS").css("color", "#333333");
-}
-//房屋描述框blur
-function BCMSBlur() {
-    $("#BCMS").css("color", "#999999");
-}
-//房屋描述框设默认文本
-function BCMSSetDefault() {
-    var BCMS = "1.房屋特征：\r\n\r\n2.周边配套：\r\n\r\n3.房东心态：";
-    $("#BCMS").html(BCMS);
-}
-
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("数码产品类别", "LB", "CODES_ES_SJSM");
+            LoadCODESByTYPENAME("数码产品类别", "LB", "CODES_ES_SJSM", Bind, "SMCPLB", "LB", "");
         }
         if (type === "XL") {
             LoadSMCPXL();
         }
         if (type === "XJ") {
-            LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM");
+            LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM", Bind, "XJCD", "XJ", "");
         }
         if (type === "QY") {
             LoadQY();
@@ -52,7 +29,7 @@ function BindClick(type) {
     });
 }
 //加载数码产品小类
-function LoadSMCPXL(type) {
+function LoadSMCPXL() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/Common/LoadByParentID",
@@ -117,8 +94,8 @@ function LoadES_SJSM_SMCPJBXX() {
                     SetDX("GQ", xml.Value.ES_SJSM_SMCPJBXX.GQ);
                 $("#spanLB").html(xml.Value.ES_SJSM_SMCPJBXX.LB);
                 $("#spanXJ").html(xml.Value.ES_SJSM_SMCPJBXX.XJ);
-                $("#spanQY").html(xml.Value.ES_SJSM_SMCPJBXX.JYQY);
-                $("#spanDD").html(xml.Value.ES_SJSM_SMCPJBXX.JYDD);
+                $("#spanQY").html(xml.Value.ES_SJSM_SMCPJBXX.QY);
+                $("#spanDD").html(xml.Value.ES_SJSM_SMCPJBXX.DD);
                 $("#spanXL").html(xml.Value.ES_SJSM_SMCPJBXX.XL);
                 LoadPhotos(xml.Value.Photos);
                 PDLB(xml.Value.ES_SJSM_SMCPJBXX.LB);
@@ -131,15 +108,15 @@ function LoadES_SJSM_SMCPJBXX() {
 }
 //发布
 function FB() {
-    if (AllValidate() === false) return;
+    if (ValidateAll() === false) return;
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
     obj = jsonObj.AddJson(obj, "XL", "'" + $("#spanXL").html() + "'");
     obj = jsonObj.AddJson(obj, "XJ", "'" + $("#spanXJ").html() + "'");
-    obj = jsonObj.AddJson(obj, "JYQY", "'" + $("#spanQY").html() + "'");
-    obj = jsonObj.AddJson(obj, "JYDD", "'" + $("#spanDD").html() + "'");
+    obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
+    obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
 

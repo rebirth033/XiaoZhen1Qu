@@ -44,13 +44,13 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// 交易区域
         /// </summary>
         [Property]
-        public virtual string JYQY { get; set; }
+        public virtual string QY { get; set; }
 
         /// <summary>
         /// 交易地段
         /// </summary>
         [Property]
-        public virtual string JYDD { get; set; }
+        public virtual string DD { get; set; }
 
         /// <summary>
         /// 交易具体地址

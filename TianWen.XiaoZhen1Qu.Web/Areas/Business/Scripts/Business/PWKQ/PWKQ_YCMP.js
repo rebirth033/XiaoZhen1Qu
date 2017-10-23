@@ -1,6 +1,6 @@
 ﻿
 $(document).ready(function () {
-    $("#SJ").datepicker({ minDate: 0 });$("body").bind("click", function () { Close("_XZQ"); Close("LB"); Close("XL"); Close("XJ"); Close("QY"); Close("DD"); });
+    $("#SJ").datepicker({ minDate: 0 });$("body").bind("click", function () { Close("_XZQ");});
 
 
 
@@ -51,8 +51,8 @@ function LoadPWKQ_YCMPJBXX() {
                 if (xml.Value.PWKQ_YCMPJBXX.GQ !== null)
                     SetDX("GQ", xml.Value.PWKQ_YCMPJBXX.GQ);
                 $("#spanLB").html(xml.Value.PWKQ_YCMPJBXX.LB);
-                $("#spanQY").html(xml.Value.PWKQ_YCMPJBXX.JYQY);
-                $("#spanDD").html(xml.Value.PWKQ_YCMPJBXX.JYDD);
+                $("#spanQY").html(xml.Value.PWKQ_YCMPJBXX.QY);
+                $("#spanDD").html(xml.Value.PWKQ_YCMPJBXX.DD);
                 if (xml.Value.PWKQ_YCMPJBXX.SJ.ToString("yyyy-MM-dd") !== "1-1-1")
                     $("#SJ").val(xml.Value.PWKQ_YCMPJBXX.SJ.ToString("yyyy-MM-dd"));
                 return;
@@ -65,13 +65,13 @@ function LoadPWKQ_YCMPJBXX() {
 }
 //发布
 function FB() {
-    if (AllValidate() === false) return;
+    if (ValidateAll() === false) return;
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
-    obj = jsonObj.AddJson(obj, "JYQY", "'" + $("#spanQY").html() + "'");
-    obj = jsonObj.AddJson(obj, "JYDD", "'" + $("#spanDD").html() + "'");
+    obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
+    obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
 

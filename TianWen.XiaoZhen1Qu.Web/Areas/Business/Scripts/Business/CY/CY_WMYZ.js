@@ -26,7 +26,7 @@ function ValidateRJXF() {
 }
 
 //验证所有
-function AllValidate() {
+function ValidateAll() {
     if (ValidateRJXF() & ValidateBT() & ValidateZP() & ValidateLXR() & ValidateLXDH())
         return true;
     else

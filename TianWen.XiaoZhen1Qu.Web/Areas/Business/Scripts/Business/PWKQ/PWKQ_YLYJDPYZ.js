@@ -28,7 +28,7 @@ function ValidateJG() {
 //验证标题
 
 //验证所有
-function AllValidate() {
+function ValidateAll() {
     if (ValidateJG() & ValidateBT() & ValidateLXR() & ValidateLXDH())
         return true;
     else
@@ -36,7 +36,7 @@ function AllValidate() {
 }
 //提示价格
 function InfoJG() {
-    $("#divJGTip").css("display", "inline-block");
+    $("#divJGTip").css("display", "block");
     $("#divJGTip").attr("class", "Info");
     $("#divJGTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数，面议则填0');
 }

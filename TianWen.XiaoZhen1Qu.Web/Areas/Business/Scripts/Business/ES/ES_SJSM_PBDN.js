@@ -1,14 +1,5 @@
-﻿
-$(document).ready(function () {
-    
-    
-    
-    $("body").bind("click", function () { Close("_XZQ"); Close("LB"); Close("XL"); Close("XJ"); Close("QY"); Close("DD"); });
-
-
-
-
-    
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ");});
     LoadES_SJSM_PBDNJBXX();
     BindClick("LB");
     BindClick("PBPP");
@@ -18,38 +9,24 @@ $(document).ready(function () {
     BindClick("QY");
     BindClick("SQ");
 });
-//房屋描述框focus
-function BCMSFocus() {
-    $("#BCMS").css("color", "#333333");
-}
-//房屋描述框blur
-function BCMSBlur() {
-    $("#BCMS").css("color", "#999999");
-}
-//房屋描述框设默认文本
-function BCMSSetDefault() {
-    var BCMS = "1.房屋特征：\r\n\r\n2.周边配套：\r\n\r\n3.房东心态：";
-    $("#BCMS").html(BCMS);
-}
-
 
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("平板类别", "LB", "CODES_ES_SJSM");
+            LoadCODESByTYPENAME("平板类别", "LB", "CODES_ES_SJSM", Bind, "PBLB", "LB", "");
         }
         if (type === "PBPP") {
-            LoadCODESByTYPENAME("平板品牌", "PBPP", "CODES_ES_SJSM");
+            LoadCODESByTYPENAME("平板品牌", "PBPP", "CODES_ES_SJSM", Bind, "PBLB", "PBPP", "");
         }
         if (type === "PBXH") {
             LoadPBXH();
         }
         if (type === "XJ") {
-            LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM");
+            LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM", Bind, "XJCD", "XJ", "");
         }
         if (type === "XL") {
-            LoadCODESByTYPENAME("平板电脑配件", "XL", "CODES_ES_SJSM");
+            LoadCODESByTYPENAME("平板电脑配件", "XL", "CODES_ES_SJSM", Bind, "PBLB", "XL", "");
         }
         if (type === "QY") {
             LoadQY();
@@ -141,12 +118,13 @@ function LoadES_SJSM_PBDNJBXX() {
                 $("#spanLB").html(xml.Value.ES_SJSM_PBDNJBXX.LB);
                 $("#spanPBPP").html(xml.Value.ES_SJSM_PBDNJBXX.PBPP);
                 $("#spanPBXH").html(xml.Value.ES_SJSM_PBDNJBXX.PBXH);
+                $("#spanXL").html(xml.Value.ES_SJSM_PBDNJBXX.XL);
                 $("#spanXJ").html(xml.Value.ES_SJSM_PBDNJBXX.XJ);
-                $("#spanQY").html(xml.Value.ES_SJSM_PBDNJBXX.JYQY);
-                $("#spanSQ").html(xml.Value.ES_SJSM_PBDNJBXX.JYDD);
+                $("#spanQY").html(xml.Value.ES_SJSM_PBDNJBXX.QY);
+                $("#spanDD").html(xml.Value.ES_SJSM_PBDNJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
                 PDLB(xml.Value.ES_SJSM_PBDNJBXX.LB);
-                $("#spanXL").html(xml.Value.ES_SJSM_PBDNJBXX.XL);
+                
                 return;
             }
         },
@@ -157,7 +135,7 @@ function LoadES_SJSM_PBDNJBXX() {
 }
 //发布
 function FB() {
-    if (AllValidate() === false) return;
+    if (ValidateAll() === false) return;
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
@@ -165,15 +143,9 @@ function FB() {
     obj = jsonObj.AddJson(obj, "XL", "'" + $("#spanXL").html() + "'");
     obj = jsonObj.AddJson(obj, "PBPP", "'" + $("#spanPBPP").html() + "'");
     obj = jsonObj.AddJson(obj, "PBXH", "'" + $("#spanPBXH").html() + "'");
-    obj = jsonObj.AddJson(obj, "CPUPP", "'" + $("#spanCPUPP").html() + "'");
-    obj = jsonObj.AddJson(obj, "CPUHS", "'" + $("#spanCPUHS").html() + "'");
-    obj = jsonObj.AddJson(obj, "NC", "'" + $("#spanNC").html() + "'");
-    obj = jsonObj.AddJson(obj, "YP", "'" + $("#spanYP").html() + "'");
-    obj = jsonObj.AddJson(obj, "PMCC", "'" + $("#spanPMCC").html() + "'");
-    obj = jsonObj.AddJson(obj, "XK", "'" + $("#spanXK").html() + "'");
     obj = jsonObj.AddJson(obj, "XJ", "'" + $("#spanXJ").html() + "'");
-    obj = jsonObj.AddJson(obj, "JYQY", "'" + $("#spanQY").html() + "'");
-    obj = jsonObj.AddJson(obj, "JYDD", "'" + $("#spanSQ").html() + "'");
+    obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
+    obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
 
