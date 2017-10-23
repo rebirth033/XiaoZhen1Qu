@@ -3,9 +3,9 @@ create table CW_HNYCJBXX
 (
   cw_hnycjbxxid VARCHAR2(50) not null,
   jcxxid        VARCHAR2(50),
-  bcms          VARCHAR2(4000),
+  bcms          blob,
   pz            VARCHAR2(20),
-  gq            INTEGER,
+  gq            VARCHAR2(20),
   jg            VARCHAR2(20),
   xl            VARCHAR2(20)
 )

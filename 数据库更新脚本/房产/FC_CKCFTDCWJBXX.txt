@@ -3,16 +3,16 @@ create table FC_CKCFTDCWJBXX
 (
   fc_ckcftdcwjbxxid VARCHAR2(50) not null,
   jcxxid      VARCHAR2(50),
-  gq          NUMBER(1),
-  lx        VARCHAR2(50),
+  gq          VARCHAR2(20),
+  lx          VARCHAR2(50),
   qy          VARCHAR2(20),
   sq          VARCHAR2(20),
   dd          VARCHAR2(100),
-  zj          NUMBER(8),
+  zj          VARCHAR2(20),
   zjdw        VARCHAR2(10),
-  mj          NUMBER(8),
-  bcms        VARCHAR2(4000),
-  sj          NUMBER(8)
+  mj          VARCHAR2(20),
+  bcms        blob;
+  sj          VARCHAR2(20),
 )
 tablespace USERS
   pctfree 10

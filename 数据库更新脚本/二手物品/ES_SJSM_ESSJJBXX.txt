@@ -9,7 +9,7 @@ create table ES_SJSM_ESSJJBXX
   syqk               VARCHAR2(20),
   jg                 VARCHAR2(20),
   tsbq               VARCHAR2(50),
-  bcms               VARCHAR2(4000),
+  bcms               blob,
   jyqy               VARCHAR2(20),
   jydd               VARCHAR2(20)
 )

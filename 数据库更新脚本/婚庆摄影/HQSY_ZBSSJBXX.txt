@@ -3,7 +3,7 @@ create table HQSY_ZBSSJBXX
 (
   hqsy_zbssjbxxid VARCHAR2(50) not null,
   jcxxid          VARCHAR2(50),
-  bcms            VARCHAR2(4000),
+  bcms            blob,
   lb              VARCHAR2(20),
   qy              VARCHAR2(20),
   dd              VARCHAR2(20),

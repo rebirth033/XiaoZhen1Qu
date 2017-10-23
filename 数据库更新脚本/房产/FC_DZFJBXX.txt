@@ -4,13 +4,13 @@ create table FC_DZFJBXX
   fc_dzfjbxxid VARCHAR2(50) not null,
   jcxxid       VARCHAR2(50),
   fwlx         VARCHAR2(20),
-  zdzq         NUMBER(6),
-  zj           NUMBER(8),
-  yzrs         NUMBER(6),
-  mj           NUMBER(8),
+  zdzq         VARCHAR2(20),
+  zj           VARCHAR2(20),
+  yzrs         VARCHAR2(20),
+  mj           VARCHAR2(20),
   dz           VARCHAR2(200),
-  czfs         NUMBER(1),
-  fyms         VARCHAR2(4000)
+  czfs         VARCHAR2(20),
+  bcms         blob;
 )
 tablespace USERS
   pctfree 10

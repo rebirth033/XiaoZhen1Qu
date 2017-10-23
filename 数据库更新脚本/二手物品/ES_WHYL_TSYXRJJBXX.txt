@@ -3,14 +3,14 @@ create table ES_WHYL_TSYXRJJBXX
 (
   es_whyl_TSYXRJjbxxid VARCHAR2(50) not null,
   jcxxid               VARCHAR2(50),
-  gq                   NUMBER(1),
+  gq                   VARCHAR2(20),
   jyqy                 VARCHAR2(20),
   jydd                 VARCHAR2(20),
   lb                   VARCHAR2(20),
   xj                   VARCHAR2(20),
   jg                   VARCHAR2(20),
   xl                   VARCHAR2(20),
-  bcms                 VARCHAR2(4000)
+  bcms                 blob
 )
 tablespace USERS
   pctfree 10

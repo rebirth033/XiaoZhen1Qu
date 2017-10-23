@@ -3,18 +3,18 @@ create table FC_XZLJBXX
 (
   fc_xzljbxxid VARCHAR2(50) not null,
   jcxxid       VARCHAR2(50),
-  gq           NUMBER(1),
+  gq           VARCHAR2(20),
   kzcgs        VARCHAR2(10),
   lpmc         VARCHAR2(100),
   qy           VARCHAR2(20),
   sq           VARCHAR2(20),
   dd           VARCHAR2(100),
-  zj           NUMBER(8),
+  zj           VARCHAR2(20),
   zjdw         VARCHAR2(10),
-  mj           NUMBER(8),
-  bcms         VARCHAR2(4000),
+  mj           VARCHAR2(20),
+  bcms         blob,
   xzllx        VARCHAR2(50),
-  sj           NUMBER(8)
+  sj           VARCHAR2(20)
 )
 tablespace USERS
   pctfree 10

@@ -3,17 +3,17 @@ create table CW_CWGJBXX
 (
   cw_cwgjbxxid VARCHAR2(50) not null,
   jcxxid       VARCHAR2(50),
-  bcms         VARCHAR2(4000),
+  bcms         blob,
   pz           VARCHAR2(20),
   nl           VARCHAR2(20),
   nldw         VARCHAR2(20),
   xb           VARCHAR2(20),
   ms           VARCHAR2(20),
-  qcqk         INTEGER,
+  qcqk         VARCHAR2(20),
   ymqk         VARCHAR2(20),
   ymzl         VARCHAR2(20),
-  spkg         INTEGER,
-  sf           INTEGER
+  spkg         VARCHAR2(20),
+  sf           VARCHAR2(20),
 )
 tablespace USERS
   pctfree 10

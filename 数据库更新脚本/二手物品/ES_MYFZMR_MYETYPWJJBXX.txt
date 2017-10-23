@@ -3,8 +3,8 @@ create table ES_MYFZMR_MYETYPWJJBXX
 (
   es_myfzmr_myetypwjjbxxid VARCHAR2(50) not null,
   jcxxid                   VARCHAR2(50),
-  gq                       NUMBER(1),
-  bcms                     VARCHAR2(4000),
+  gq                       VARCHAR2(20),
+  bcms                     blob;
   jyqy                     VARCHAR2(20),
   jydd                     VARCHAR2(20),
   lb                       VARCHAR2(20),

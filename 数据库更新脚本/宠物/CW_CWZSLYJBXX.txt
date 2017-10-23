@@ -3,8 +3,8 @@ create table CW_CWZSLYJBXX
 (
   cw_cwzslyjbxxid VARCHAR2(50) not null,
   jcxxid          VARCHAR2(50),
-  bcms            VARCHAR2(4000),
-  gq              INTEGER
+  bcms            blob,
+  gq              VARCHAR2(20),
 )
 tablespace USERS
   pctfree 10

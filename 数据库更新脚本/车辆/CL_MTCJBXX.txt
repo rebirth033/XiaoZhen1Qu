@@ -3,14 +3,14 @@ create table CL_MTCJBXX
 (
   cl_mtcjbxxid VARCHAR2(50) not null,
   jcxxid       VARCHAR2(50),
-  gq           NUMBER(1),
-  bcms         VARCHAR2(4000),
+  gq           VARCHAR2(20),
+  bcms         blob,
   jyqy         VARCHAR2(20),
   jydd         VARCHAR2(20),
   lb           VARCHAR2(20),
   jg           VARCHAR2(20),
   pp           VARCHAR2(20),
-  xslc         NUMBER(1),
+  xslc         VARCHAR2(20),
   gls          VARCHAR2(20),
   gcsj         VARCHAR2(20)
 )

@@ -3,8 +3,8 @@ create table CW_CWYPSPJBXX
 (
   cw_cwypspjbxxid VARCHAR2(50) not null,
   jcxxid          VARCHAR2(50),
-  bcms            VARCHAR2(4000),
-  gq              INTEGER,
+  bcms            blob,
+  gq              VARCHAR2(20),
   lb              VARCHAR2(20),
   xl              VARCHAR2(20),
   xj              VARCHAR2(20),

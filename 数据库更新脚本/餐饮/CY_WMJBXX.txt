@@ -3,7 +3,7 @@ create table CY_WMJBXX
 (
   cy_wmjbxxid VARCHAR2(50) not null,
   jcxxid      VARCHAR2(50),
-  bcms        VARCHAR2(4000),
+  bcms        blob,
   rjxf        VARCHAR2(20),
   lb          VARCHAR2(500),
   tjc         VARCHAR2(200),

@@ -3,7 +3,7 @@ create table CW_CWFWJBXX
 (
   cw_cwfwjbxxid VARCHAR2(50) not null,
   jcxxid        VARCHAR2(50),
-  bcms          VARCHAR2(4000),
+  bcms          blob,
   lb            VARCHAR2(20),
   jg            VARCHAR2(20)
 )

@@ -3,7 +3,7 @@ create table ES_SJSM_BJBDNJBXX
 (
   es_sjsm_bjbdnjbxxid VARCHAR2(50) not null,
   jcxxid              VARCHAR2(50),
-  gq                  NUMBER(1),
+  gq                  VARCHAR2(20),
   bjbpp               VARCHAR2(20),
   bjbxh               VARCHAR2(20),
   cpupp               VARCHAR2(20),
@@ -12,7 +12,7 @@ create table ES_SJSM_BJBDNJBXX
   yp                  VARCHAR2(20),
   pmcc                VARCHAR2(20),
   xk                  VARCHAR2(20),
-  bcms                VARCHAR2(4000),
+  bcms                blob,
   jyqy                VARCHAR2(20),
   jydd                VARCHAR2(20),
   lb                  VARCHAR2(20),
