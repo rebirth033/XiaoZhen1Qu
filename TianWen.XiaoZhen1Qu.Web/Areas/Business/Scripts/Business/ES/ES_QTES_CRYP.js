@@ -1,39 +1,25 @@
-﻿
-$(document).ready(function () {
-    
-    
-    
-    $("body").bind("click", function () { Close("_XZQ"); Close("LB"); Close("QY"); Close("DD"); });
-
-
-
-
-    
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
     LoadES_QTES_CRYPJBXX();
     BindClick("LB");
     BindClick("QY");
     BindClick("DD");
-
 });
 
 //选择类别下拉框
 function SelectLB(obj, type) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-    PDLB(obj.innerHTML);
-}
-//判断类别
-function PDLB(LB) {
     BindClick("XL");
 }
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("成人用品", "LB", "CODES_ES_QTES");
+            LoadCODESByTYPENAME("成人用品", "LB", "CODES_ES_QTES", Bind, "CRYPLB", "LB", "");
         }
         if (type === "XL") {
-            LoadCODESByTYPENAME($("#spanLB").html(), "XL", "CODES_ES_QTES");
+            LoadCODESByTYPENAME($("#spanLB").html(), "XL", "CODES_ES_QTES", Bind, "CRYPLB", "XL", "");
         }
         if (type === "QY") {
             LoadQY();
@@ -70,11 +56,11 @@ function LoadES_QTES_CRYPJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.BCMSString);
                 });
-                if (xml.Value.ES_SJSM_PBDNJBXX.GQ !== null)
-                    SetDX("GQ", xml.Value.ES_SJSM_PBDNJBXX.GQ);
+                if (xml.Value.ES_QTES_CRYPJBXX.GQ !== null)
+                    SetDX("GQ", xml.Value.ES_QTES_CRYPJBXX.GQ);
                 $("#spanLB").html(xml.Value.ES_QTES_CRYPJBXX.LB);
                 $("#spanQY").html(xml.Value.ES_QTES_CRYPJBXX.QY);
-                $("#spanSQ").html(xml.Value.ES_QTES_CRYPJBXX.DD);
+                $("#spanDD").html(xml.Value.ES_QTES_CRYPJBXX.DD);
                 $("#spanXL").html(xml.Value.ES_QTES_CRYPJBXX.XL);
                 LoadPhotos(xml.Value.Photos);
                 PDLB(xml.Value.ES_QTES_CRYPJBXX.LB);
@@ -95,7 +81,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
     obj = jsonObj.AddJson(obj, "XL", "'" + $("#spanXL").html() + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
-    obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanSQ").html() + "'");
+    obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
 

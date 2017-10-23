@@ -10,9 +10,9 @@
     <meta name="viewport" content="width=device-width" />
     <title></title>
     <link href="@Url.Content("~/Areas/Business/Css/CL/CL_JC.css")" rel="stylesheet" />
-   
 
-    
+
+
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/CL/CL_JC.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/CL/CL_JCYZ.js")"></script>
 </head>
@@ -127,6 +127,7 @@
                         </div>
                     </div>
                 </div>
+                <div id="divJCPPTip" class="Warn" style="z-index: 996; position: relative;"></div>
             </div>
             <div id="divCLYS" class="div_row" style="z-index: 998">
                 <div class="div_row_left" style="margin-left: 101px;">
@@ -142,6 +143,7 @@
                 </div>
                 <div class="div_row_right" id="div_clys_right2">
                 </div>
+                <div id="divCLYS2Tip" class="Warn" style="z-index: 996; position: relative;"></div>
             </div>
             <div id="divSCSPSJ" class="div_row" style="z-index: 996;">
                 <div class="div_row_left" style="margin-left: 72px;">
@@ -166,10 +168,11 @@
                         </div>
                     </div>
                 </div>
+                <div id="divSCSPSJTip" class="Warn" style="z-index: 996; position: relative;"></div>
             </div>
             <div id="divSFDQBY" class="div_row" style="z-index: 995;">
                 <div class="div_row_left" style="margin-left: 56px;">
-                    <span class="span_required">*</span>
+                    <span class="span_required">&nbsp;</span>
                     <span class="spanFWCZ">是否定期4S保养</span>
                 </div>
                 <div class="div_row_right">
@@ -183,7 +186,7 @@
             </div>
             <div id="divPZSZD" class="div_row" style="z-index: 994;">
                 <div class="div_row_left" style="margin-left: 87px;">
-                    <span class="span_required">*</span>
+                    <span class="span_required">&nbsp;</span>
                     <span class="spanFWCZ">牌照所在地</span>
                 </div>
                 <div class="div_row_right">
@@ -208,7 +211,7 @@
             </div>
             <div id="divCLGHCS" class="div_row" style="z-index: 993;">
                 <div class="div_row_left" style="margin-left: 101px;">
-                    <span class="span_required">*</span>
+                    <span class="span_required">&nbsp;</span>
                     <span class="spanFWCZ">过户次数</span>
                 </div>
                 <div class="div_row_right">
@@ -224,7 +227,7 @@
             </div>
             <div id="divNJDQ" class="div_row" style="z-index: 992;">
                 <div class="div_row_left" style="margin-left: 101px;">
-                    <span class="span_required">*</span>
+                    <span class="span_required">&nbsp;</span>
                     <span class="spanFWCZ">年检到期</span>
                 </div>
                 <div class="div_row_right">
@@ -248,7 +251,7 @@
             </div>
             <div id="divJQXDQ" class="div_row" style="z-index: 991;">
                 <div class="div_row_left" style="margin-left: 86px;">
-                    <span class="span_required">*</span>
+                    <span class="span_required">&nbsp;</span>
                     <span class="spanFWCZ">交强险到期</span>
                 </div>
                 <div class="div_row_right">
@@ -272,7 +275,7 @@
             </div>
             <div id="divSYXDQ" class="div_row" style="z-index: 990;">
                 <div class="div_row_left" style="margin-left: 86px;">
-                    <span class="span_required">*</span>
+                    <span class="span_required">&nbsp;</span>
                     <span class="spanFWCZ">商业险到期</span>
                 </div>
                 <div class="div_row_right">
@@ -314,11 +317,21 @@
                 </div>
                 <div class="div_row_right">
                     <span id="spanJG" class="span_spaninput SRK" style="display: inline-block;">
-                        <input class="input_spaninput spaninput_fontcolor" id="JG" maxlength="9" column="JG" type="text" style="width: 120px" />
+                        <input class="input_spaninput spaninput_fontcolor" id="JG" maxlength="9" column="JG" type="text" style="width: 100px" />
                         <span class="spaninput_fontcolor">万元</span>
                     </span>
                 </div>
                 <div id="divJGTip" class="Warn" style="z-index: 990; position: relative;"></div>
+            </div>
+            <div id="divKCDZ" class="div_row" style="z-index: 988;">
+                <div class="div_row_left" style="margin-left: 101px;">
+                    <span class="span_required">*</span>
+                    <span class="spanFWCZ">看车地址</span>
+                </div>
+                <div class="div_row_right">
+                    <input class="input_input" id="KCDZ" maxlength="9" column="KCDZ" type="text" />
+                </div>
+                <div id="divKCDZTip" class="Warn" style="z-index: 990; position: relative;"></div>
             </div>
             <div id="divXXXX" class="div_split" style="display: block; text-align: left;">
                 <span class="span_split">详细信息</span>
@@ -388,7 +401,7 @@
                     <span id="spanLXDH">联系人</span>
                 </div>
                 <div class="div_row_right">
-                    <input id="LXR" column="LXR" class="span_spaninput input_input SRK" type="text" placeholder="请输入联系人" />
+                    <input id="LXR" column="LXR" class="input_input SRK" type="text" placeholder="请输入联系人" />
                     <div id="divLXRTip"></div>
                 </div>
             </div>
@@ -398,7 +411,7 @@
                     <span id="spanLXDH">联系电话</span>
                 </div>
                 <div class="div_row_right">
-                    <input id="LXDH" maxlength="11" column="LXDH" class="span_spaninput input_input SRK" type="text" placeholder="请输入联系电话" />
+                    <input id="LXDH" maxlength="11" column="LXDH" class="input_input SRK" type="text" placeholder="请输入联系电话" />
                     <div id="divLXDHTip"></div>
                 </div>
             </div>
@@ -408,7 +421,7 @@
                     <span id="spanQQ">QQ</span>
                 </div>
                 <div class="div_row_right">
-                    <input column="QQ" class="span_spaninput input_input SRK" type="text" placeholder="请输入QQ" />
+                    <input column="QQ" class="input_input SRK" type="text" placeholder="请输入QQ" />
                 </div>
             </div>
             <div id="divFB" class="div_split" style="display: block; text-align: center; margin-top: 40px;">

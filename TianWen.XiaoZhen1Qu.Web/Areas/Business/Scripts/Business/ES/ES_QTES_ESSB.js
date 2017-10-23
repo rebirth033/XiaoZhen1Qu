@@ -1,33 +1,22 @@
-﻿
-$(document).ready(function () {
-    
-    
-    
-    $("body").bind("click", function () { Close("_XZQ"); Close("LB"); Close("XL");Close("XJ"); Close("QY"); Close("DD"); });
-
-
-
-
-    
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
     LoadES_QTES_ESSBJBXX();
     BindClick("LB");
     BindClick("XJ");
     BindClick("QY");
     BindClick("DD");
-
 });
-
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("二手设备", "LB", "CODES_ES_QTES");
+            LoadCODESByTYPENAME("二手设备", "LB", "CODES_ES_QTES", Bind, "ESSBLB", "LB", "");
         }
         if (type === "XL") {
-            LoadCODESByTYPENAME($("#spanLB").html(), "XL", "CODES_ES_QTES");
+            LoadCODESByTYPENAME($("#spanLB").html(), "XL", "CODES_ES_QTES", Bind, "ESSBLB", "XL", "");
         }
         if (type === "XJ") {
-            LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM");
+            LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM", Bind, "XJCD", "XJ", "");
         }
         if (type === "QY") {
             LoadQY();
@@ -41,12 +30,8 @@ function BindClick(type) {
 function SelectLB(obj, type, lbcode) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-    PDLB(obj.innerHTML);
-    $("#LBCode").val(obj.innerHTML);
-}
-//判断类别
-function PDLB(LB) {
     BindClick("XL");
+    $("#LBCode").val(obj.innerHTML);
 }
 //选择二手设备品牌
 function SelectPBPP(obj, type, code) {
@@ -75,15 +60,14 @@ function LoadES_QTES_ESSBJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.BCMSString);
                 });
-                if (xml.Value.ES_SJSM_PBDNJBXX.GQ !== null)
-                    SetDX("GQ", xml.Value.ES_SJSM_PBDNJBXX.GQ);
+                if (xml.Value.ES_QTES_ESSBJBXX.GQ !== null)
+                    SetDX("GQ", xml.Value.ES_QTES_ESSBJBXX.GQ);
                 $("#spanLB").html(xml.Value.ES_QTES_ESSBJBXX.LB);
                 $("#spanXJ").html(xml.Value.ES_QTES_ESSBJBXX.XJ);
                 $("#spanQY").html(xml.Value.ES_QTES_ESSBJBXX.QY);
-                $("#spanSQ").html(xml.Value.ES_QTES_ESSBJBXX.DD);
+                $("#spanDD").html(xml.Value.ES_QTES_ESSBJBXX.DD);
 
                 LoadPhotos(xml.Value.Photos);
-                PDLB(xml.Value.ES_QTES_ESSBJBXX.LB);
                 $("#spanXL").html(xml.Value.ES_QTES_ESSBJBXX.XL);
                 return;
             }
