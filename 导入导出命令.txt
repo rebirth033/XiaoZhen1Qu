@@ -1,1 +1,2 @@
-imp c##infotownlet/infotownlet@10.0.6.1.orcl direcotry=dumpfir dumpfile=xxxz.dmp full=y
+impdp c##infotownlet/infotownlet@10.0.6.1/orcl direcotry=dumpfir dumpfile=xxxz.dmp full=y
+expdp c##infotownlet/infotownlet@localhost/orcl direcotry=data_pump_dir dumpfile=xxxz.dmp
