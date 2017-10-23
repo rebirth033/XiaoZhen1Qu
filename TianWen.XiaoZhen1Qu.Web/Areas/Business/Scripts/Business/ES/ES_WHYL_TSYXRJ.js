@@ -1,33 +1,23 @@
-﻿
-$(document).ready(function () {
-    
-    
-    
+﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ");});
-
-
-
-
-    
     LoadES_WHYL_TSYXRJJBXX();
     BindClick("LB");
     BindClick("XJ");
     BindClick("QY");
     BindClick("DD");
-
 });
 
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("图书/音像/软件", "LB", "CODES_ES_WHYL");
+            LoadCODESByTYPENAME("图书/音像/软件", "LB", "CODES_ES_WHYL", Bind, "TSYXRJLB", "LB", "");
         }
         if (type === "XL") {
-            LoadCODESByTYPENAME($("#spanLB").html(), "XL", "CODES_ES_WHYL");
+            LoadCODESByTYPENAME($("#spanLB").html(), "XL", "CODES_ES_WHYL", Bind, "TSYXRJLB", "XL", "");
         }
         if (type === "XJ") {
-            LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM");
+            LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM", Bind, "XJCD", "XJ", "");
         }
         if (type === "QY") {
             LoadQY();
@@ -41,10 +31,6 @@ function BindClick(type) {
 function SelectLB(obj, type) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-    PDLB(obj.innerHTML);
-}
-//判断类别
-function PDLB(LB) {
     BindClick("XL");
 }
 //选择图书/音像/软件品牌
@@ -74,25 +60,15 @@ function LoadES_WHYL_TSYXRJJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.BCMSString);
                 });
-                if (xml.Value.ES_SJSM_PBDNJBXX.GQ !== null)
-                    SetDX("GQ", xml.Value.ES_SJSM_PBDNJBXX.GQ);
+                if (xml.Value.ES_WHYL_TSYXRJJBXX.GQ !== null)
+                    SetDX("GQ", xml.Value.ES_WHYL_TSYXRJJBXX.GQ);
                 $("#spanLB").html(xml.Value.ES_WHYL_TSYXRJJBXX.LB);
+                $("#spanXL").html(xml.Value.ES_WHYL_TSYXRJJBXX.XL);
                 $("#spanXJ").html(xml.Value.ES_WHYL_TSYXRJJBXX.XJ);
                 $("#spanQY").html(xml.Value.ES_WHYL_TSYXRJJBXX.QY);
-                $("#spanSQ").html(xml.Value.ES_WHYL_TSYXRJJBXX.DD);
+                $("#spanDD").html(xml.Value.ES_WHYL_TSYXRJJBXX.DD);
 
-                $("#spanDSPMCC").html(xml.Value.ES_WHYL_TSYXRJJBXX.DSPMCC);
-                $("#spanDSPP").html(xml.Value.ES_WHYL_TSYXRJJBXX.DSPP);
-                $("#spanXYJPP").html(xml.Value.ES_WHYL_TSYXRJJBXX.XYJPP);
-                $("#spanKTPP").html(xml.Value.ES_WHYL_TSYXRJJBXX.KTPP);
-                $("#spanKTBPDS").html(xml.Value.ES_WHYL_TSYXRJJBXX.KTBPDS);
-                $("#spanKTGL").html(xml.Value.ES_WHYL_TSYXRJJBXX.KTGL);
-                $("#spanBXPP").html(xml.Value.ES_WHYL_TSYXRJJBXX.BXPP);
-                $("#spanBGPP").html(xml.Value.ES_WHYL_TSYXRJJBXX.BGPP);
-
-                LoadPhotos(xml.Value.Photos);
-                PDLB(xml.Value.ES_WHYL_TSYXRJJBXX.LB);
-                $("#spanXL").html(xml.Value.ES_WHYL_TSYXRJJBXX.XL);
+                LoadPhotos(xml.Value.Photos);                
                 return;
             }
         },
@@ -111,18 +87,9 @@ function FB() {
     obj = jsonObj.AddJson(obj, "XL", "'" + $("#spanXL").html() + "'");
     obj = jsonObj.AddJson(obj, "XJ", "'" + $("#spanXJ").html() + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
-    obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanSQ").html() + "'");
+    obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
-
-    obj = jsonObj.AddJson(obj, "DSPMCC", "'" + $("#spanDSPMCC").html() + "'");
-    obj = jsonObj.AddJson(obj, "DSPP", "'" + $("#spanDSPP").html() + "'");
-    obj = jsonObj.AddJson(obj, "XYJPP", "'" + $("#spanXYJPP").html() + "'");
-    obj = jsonObj.AddJson(obj, "KTPP", "'" + $("#spanKTPP").html() + "'");
-    obj = jsonObj.AddJson(obj, "KTBPDS", "'" + $("#spanKTBPDS").html() + "'");
-    obj = jsonObj.AddJson(obj, "KTGL", "'" + $("#spanKTGL").html() + "'");
-    obj = jsonObj.AddJson(obj, "BXPP", "'" + $("#spanBXPP").html() + "'");
-    obj = jsonObj.AddJson(obj, "BGPP", "'" + $("#spanBGPP").html() + "'");
 
     if (getUrlParam("ES_WHYL_TSYXRJJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "ES_WHYL_TSYXRJJBXXID", "'" + getUrlParam("ES_WHYL_TSYXRJJBXXID") + "'");
