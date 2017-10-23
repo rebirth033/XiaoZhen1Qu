@@ -142,8 +142,8 @@ function LoadCL_HCJBXX() {
                 $("#spanPP").html(xml.Value.CL_HCJBXX.PP);
                 $("#spanCCNX").html(xml.Value.CL_HCJBXX.CCNX);
                 $("#spanCCYF").html(xml.Value.CL_HCJBXX.CCYF);
-                $("#spanQY").html(xml.Value.CL_HCJBXX.JYQY);
-                $("#spanSQ").html(xml.Value.CL_HCJBXX.JYDD);
+                $("#spanQY").html(xml.Value.CL_HCJBXX.QY);
+                $("#spanSQ").html(xml.Value.CL_HCJBXX.DD);
 
                 LoadPhotos(xml.Value.Photos);
                 return;
@@ -164,8 +164,8 @@ function FB() {
     obj = jsonObj.AddJson(obj, "PP", "'" + $("#spanPP").html() + "'");
     obj = jsonObj.AddJson(obj, "CCNX", "'" + $("#spanCCNX").html() + "'");
     obj = jsonObj.AddJson(obj, "CCYF", "'" + $("#spanCCYF").html() + "'");
-    obj = jsonObj.AddJson(obj, "JYQY", "'" + $("#spanQY").html() + "'");
-    obj = jsonObj.AddJson(obj, "JYDD", "'" + $("#spanSQ").html() + "'");
+    obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
+    obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanSQ").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
 
     if (getUrlParam("CL_HCJBXXID") !== null)

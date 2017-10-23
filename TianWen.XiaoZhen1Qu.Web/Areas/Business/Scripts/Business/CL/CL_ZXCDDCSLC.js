@@ -104,8 +104,8 @@ function LoadCL_ZXCDDCSLCJBXX() {
                 });
                 $("#spanLB").html(xml.Value.CL_ZXCDDCSLCJBXX.LB);
                 $("#spanXJ").html(xml.Value.CL_ZXCDDCSLCJBXX.XJ);
-                $("#spanQY").html(xml.Value.CL_ZXCDDCSLCJBXX.JYQY);
-                $("#spanSQ").html(xml.Value.CL_ZXCDDCSLCJBXX.JYDD);
+                $("#spanQY").html(xml.Value.CL_ZXCDDCSLCJBXX.QY);
+                $("#spanSQ").html(xml.Value.CL_ZXCDDCSLCJBXX.DD);
                 $("#spanDDCPP").html(xml.Value.CL_ZXCDDCSLCJBXX.DDCPP);
                 $("#spanZXCPP").html(xml.Value.CL_ZXCDDCSLCJBXX.ZXCPP);
                 $("#spanCC").html(xml.Value.CL_ZXCDDCSLCJBXX.CC);
@@ -137,8 +137,8 @@ function FB() {
     obj = jsonObj.AddJson(obj, "CC", "'" + $("#spanCC").html() + "'");
     obj = jsonObj.AddJson(obj, "DCDY", "'" + $("#spanDCDY").html() + "'");
     obj = jsonObj.AddJson(obj, "DCRL", "'" + $("#spanDCRL").html() + "'");
-    obj = jsonObj.AddJson(obj, "JYQY", "'" + $("#spanQY").html() + "'");
-    obj = jsonObj.AddJson(obj, "JYDD", "'" + $("#spanSQ").html() + "'");
+    obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
+    obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanSQ").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
 

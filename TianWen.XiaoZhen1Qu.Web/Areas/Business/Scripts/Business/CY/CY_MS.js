@@ -74,8 +74,8 @@ function LoadCY_MSJBXX() {
                 });
                 if (xml.Value.CY_MSJBXX.LB !== null)
                     SetDuoX("MSLB", xml.Value.CY_MSJBXX.LB);
-                $("#spanQY").html(xml.Value.CY_MSJBXX.JYQY);
-                $("#spanDD").html(xml.Value.CY_MSJBXX.JYDD);
+                $("#spanQY").html(xml.Value.CY_MSJBXX.QY);
+                $("#spanDD").html(xml.Value.CY_MSJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
             }
         },
@@ -90,8 +90,8 @@ function FB() {
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
-    obj = jsonObj.AddJson(obj, "JYQY", "'" + $("#spanQY").html() + "'");
-    obj = jsonObj.AddJson(obj, "JYDD", "'" + $("#spanDD").html() + "'");
+    obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
+    obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "LB", "'" + GetDuoX("MSLB") + "'");
 

@@ -6,19 +6,6 @@
     BindClick("QY");
     BindClick("DD");
 });
-//房屋描述框focus
-function BCMSFocus() {
-    $("#BCMS").css("color", "#333333");
-}
-//房屋描述框blur
-function BCMSBlur() {
-    $("#BCMS").css("color", "#999999");
-}
-//房屋描述框设默认文本
-function BCMSSetDefault() {
-    var BCMS = "1.房屋特征：\r\n\r\n2.周边配套：\r\n\r\n3.房东心态：";
-    $("#BCMS").html(BCMS);
-}
 
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
@@ -97,8 +84,8 @@ function LoadES_SJSM_ESSJJBXX() {
                     SetDX("GQ", xml.Value.ES_SJSM_ESSJJBXX.GQ);
                 if (xml.Value.ES_SJSM_ESSJJBXX.SYQK !== null)
                     SetDX("SYQK", xml.Value.ES_SJSM_ESSJJBXX.SYQK);
-                $("#spanQY").html(xml.Value.ES_SJSM_ESSJJBXX.JYQY);
-                $("#spanDD").html(xml.Value.ES_SJSM_ESSJJBXX.JYDD);
+                $("#spanQY").html(xml.Value.ES_SJSM_ESSJJBXX.QY);
+                $("#spanDD").html(xml.Value.ES_SJSM_ESSJJBXX.DD);
                 $("#spanSJPP").html(xml.Value.ES_SJSM_ESSJJBXX.SJPP);
                 $("#spanSJXH").html(xml.Value.ES_SJSM_ESSJJBXX.SJXH);
                 LoadPhotos(xml.Value.Photos);
@@ -118,8 +105,8 @@ function FB() {
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "SJPP", "'" + $("#spanSJPP").html() + "'");
     obj = jsonObj.AddJson(obj, "SJXH", "'" + $("#spanSJXH").html() + "'");
-    obj = jsonObj.AddJson(obj, "JYQY", "'" + $("#spanQY").html() + "'");
-    obj = jsonObj.AddJson(obj, "JYDD", "'" + $("#spanDD").html() + "'");
+    obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
+    obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
     obj = jsonObj.AddJson(obj, "SYQK", "'" + GetDX("SYQK") + "'");

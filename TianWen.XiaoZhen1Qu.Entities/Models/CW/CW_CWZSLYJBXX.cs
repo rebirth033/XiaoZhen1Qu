@@ -26,7 +26,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// 供求
         /// </summary>
         [Property]
-        public virtual int GQ { get; set; }
+        public virtual string GQ { get; set; }
 
         /// <summary>
         /// 补充描述

@@ -3,7 +3,7 @@ $(document).ready(function () {
     
     
     
-    $("body").bind("click", function () { Close("_XZQ"); Close("LB"); Close("XL"); Close("XJ"); Close("QY"); Close("DD"); });
+    $("body").bind("click", function () { Close("_XZQ");});
 
 
 
@@ -75,8 +75,8 @@ function LoadES_WHYL_YSPSCPJBXX() {
                 if (xml.Value.ES_SJSM_PBDNJBXX.GQ !== null)
                     SetDX("GQ", xml.Value.ES_SJSM_PBDNJBXX.GQ);
                 $("#spanLB").html(xml.Value.ES_WHYL_YSPSCPJBXX.LB);
-                $("#spanQY").html(xml.Value.ES_WHYL_YSPSCPJBXX.JYQY);
-                $("#spanSQ").html(xml.Value.ES_WHYL_YSPSCPJBXX.JYDD);
+                $("#spanQY").html(xml.Value.ES_WHYL_YSPSCPJBXX.QY);
+                $("#spanSQ").html(xml.Value.ES_WHYL_YSPSCPJBXX.DD);
                 $("#spanXL").html(xml.Value.ES_WHYL_YSPSCPJBXX.XL);
                 LoadPhotos(xml.Value.Photos);
                 PDLB(xml.Value.ES_WHYL_YSPSCPJBXX.LB);
@@ -96,8 +96,8 @@ function FB() {
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
     obj = jsonObj.AddJson(obj, "XL", "'" + $("#spanXL").html() + "'");
-    obj = jsonObj.AddJson(obj, "JYQY", "'" + $("#spanQY").html() + "'");
-    obj = jsonObj.AddJson(obj, "JYDD", "'" + $("#spanSQ").html() + "'");
+    obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
+    obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanSQ").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
 

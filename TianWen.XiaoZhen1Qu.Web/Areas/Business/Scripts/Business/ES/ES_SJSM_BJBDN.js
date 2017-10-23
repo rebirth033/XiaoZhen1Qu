@@ -1,15 +1,7 @@
-﻿
-$(document).ready(function () {
-    
-    
-    
-    $("body").bind("click", function () { Close("_XZQ"); Close("LB"); Close("XL"); Close("XJ"); Close("QY"); Close("DD"); });
-
-
-
-
-    
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ");});
     LoadES_SJSM_BJBDNJBXX();
+
     BindClick("LB");
     BindClick("BJBPP");
     BindClick("XL");
@@ -17,7 +9,6 @@ $(document).ready(function () {
     BindClick("XJ");
     BindClick("QY");
     BindClick("SQ");
-
     BindClick("CPUPP");
     BindClick("CPUHS");
     BindClick("NC");
@@ -25,28 +16,14 @@ $(document).ready(function () {
     BindClick("PMCC");
     BindClick("XK");
 });
-//房屋描述框focus
-function BCMSFocus() {
-    $("#BCMS").css("color", "#333333");
-}
-//房屋描述框blur
-function BCMSBlur() {
-    $("#BCMS").css("color", "#999999");
-}
-//房屋描述框设默认文本
-function BCMSSetDefault() {
-    var BCMS = "1.房屋特征：\r\n\r\n2.周边配套：\r\n\r\n3.房东心态：";
-    $("#BCMS").html(BCMS);
-}
-
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("笔记本类别", "LB", "CODES_ES_SJSM");
+            LoadCODESByTYPENAME("笔记本类别", "LB", "CODES_ES_SJSM", Bind, "BJBLB", "LB", "");
         }
         if (type === "BJBPP") {
-            LoadCODESByTYPENAME("笔记本品牌", "BJBPP", "CODES_ES_SJSM");
+            LoadCODESByTYPENAME("笔记本品牌", "BJBPP", "CODES_ES_SJSM", Bind, "BJBLB", "BJBPP", "");
         }
         if (type === "BJBXH") {
             LoadBJBXH();
@@ -73,7 +50,7 @@ function BindClick(type) {
             LoadCODESByTYPENAME("笔记本配件", "XL", "CODES_ES_SJSM");
         }
         if (type === "XJ") {
-            LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM");
+            LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM", Bind, "XJCD", "XJ", "");
         }
         if (type === "QY") {
             LoadQY();
@@ -167,8 +144,8 @@ function LoadES_SJSM_BJBDNJBXX() {
                 $("#spanBJBPP").html(xml.Value.ES_SJSM_BJBDNJBXX.BJBPP);
                 $("#spanBJBXH").html(xml.Value.ES_SJSM_BJBDNJBXX.BJBXH);
                 $("#spanXJ").html(xml.Value.ES_SJSM_BJBDNJBXX.XJ);
-                $("#spanQY").html(xml.Value.ES_SJSM_BJBDNJBXX.JYQY);
-                $("#spanDD").html(xml.Value.ES_SJSM_BJBDNJBXX.JYDD);
+                $("#spanQY").html(xml.Value.ES_SJSM_BJBDNJBXX.QY);
+                $("#spanDD").html(xml.Value.ES_SJSM_BJBDNJBXX.DD);
                 $("#spanXL").html(xml.Value.ES_SJSM_BJBDNJBXX.XL);
 
                 $("#spanCPUPP").html(xml.Value.ES_SJSM_BJBDNJBXX.CPUPP);
@@ -189,7 +166,7 @@ function LoadES_SJSM_BJBDNJBXX() {
 }
 //发布
 function FB() {
-    if (AllValidate() === false) return;
+    if (ValidateAll() === false) return;
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
@@ -198,8 +175,8 @@ function FB() {
     obj = jsonObj.AddJson(obj, "BJBPP", "'" + $("#spanBJBPP").html() + "'");
     obj = jsonObj.AddJson(obj, "BJBXH", "'" + $("#spanBJBXH").html() + "'");
     obj = jsonObj.AddJson(obj, "XJ", "'" + $("#spanXJ").html() + "'");
-    obj = jsonObj.AddJson(obj, "JYQY", "'" + $("#spanQY").html() + "'");
-    obj = jsonObj.AddJson(obj, "JYDD", "'" + $("#spanDD").html() + "'");
+    obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
+    obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
 

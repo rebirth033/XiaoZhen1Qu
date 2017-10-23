@@ -1,14 +1,5 @@
-﻿
-$(document).ready(function () {
-    
-    
-    
-    $("body").bind("click", function () { Close("_XZQ"); Close("LB"); Close("XL"); Close("XJ"); Close("QY"); Close("DD"); });
-
-
-
-
-    
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ");});
     LoadES_SJSM_PBDNJBXX();
     BindClick("LB");
     BindClick("PBPP");
@@ -18,20 +9,6 @@ $(document).ready(function () {
     BindClick("QY");
     BindClick("SQ");
 });
-//房屋描述框focus
-function BCMSFocus() {
-    $("#BCMS").css("color", "#333333");
-}
-//房屋描述框blur
-function BCMSBlur() {
-    $("#BCMS").css("color", "#999999");
-}
-//房屋描述框设默认文本
-function BCMSSetDefault() {
-    var BCMS = "1.房屋特征：\r\n\r\n2.周边配套：\r\n\r\n3.房东心态：";
-    $("#BCMS").html(BCMS);
-}
-
 
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
@@ -142,8 +119,8 @@ function LoadES_SJSM_PBDNJBXX() {
                 $("#spanPBPP").html(xml.Value.ES_SJSM_PBDNJBXX.PBPP);
                 $("#spanPBXH").html(xml.Value.ES_SJSM_PBDNJBXX.PBXH);
                 $("#spanXJ").html(xml.Value.ES_SJSM_PBDNJBXX.XJ);
-                $("#spanQY").html(xml.Value.ES_SJSM_PBDNJBXX.JYQY);
-                $("#spanSQ").html(xml.Value.ES_SJSM_PBDNJBXX.JYDD);
+                $("#spanQY").html(xml.Value.ES_SJSM_PBDNJBXX.QY);
+                $("#spanSQ").html(xml.Value.ES_SJSM_PBDNJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
                 PDLB(xml.Value.ES_SJSM_PBDNJBXX.LB);
                 $("#spanXL").html(xml.Value.ES_SJSM_PBDNJBXX.XL);
@@ -172,8 +149,8 @@ function FB() {
     obj = jsonObj.AddJson(obj, "PMCC", "'" + $("#spanPMCC").html() + "'");
     obj = jsonObj.AddJson(obj, "XK", "'" + $("#spanXK").html() + "'");
     obj = jsonObj.AddJson(obj, "XJ", "'" + $("#spanXJ").html() + "'");
-    obj = jsonObj.AddJson(obj, "JYQY", "'" + $("#spanQY").html() + "'");
-    obj = jsonObj.AddJson(obj, "JYDD", "'" + $("#spanSQ").html() + "'");
+    obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
+    obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanSQ").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
 

@@ -12,7 +12,7 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "SPLX") {
-            LoadCODESByTYPENAME("商铺类型", "SPLX", "CODES_FC", Bind, "LX", "SPLX", "请选择商铺类型");
+            LoadCODESByTYPENAME("商铺类型", "SPLX", "CODES_FC", Bind, "LX", "SPLX", "");
 
         }
         if (type === "ZJDW") {

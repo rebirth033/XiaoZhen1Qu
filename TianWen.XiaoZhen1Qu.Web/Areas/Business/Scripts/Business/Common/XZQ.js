@@ -1,4 +1,4 @@
-﻿$(document).ready(function() {
+﻿$(document).ready(function () {
     $("#span_content_info_qhcs").bind("click", LoadXZQByGrade);
 });
 
@@ -23,7 +23,7 @@ function SelectXZQ(NAME, CODE) {
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
         }
     });
-   
+
 }
 //根据级别获取行政区
 function LoadXZQByGrade() {
@@ -99,6 +99,7 @@ function LoadQY() {
                 $("#divQY").html(html);
                 $("#divQY").css("display", "block");
                 ActiveStyle("QY");
+                Bind("SZQY", "QY", "");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -126,6 +127,7 @@ function LoadDD() {
                 $("#divDD").html(html);
                 $("#divDD").css("display", "block");
                 ActiveStyle("DD");
+                Bind("SZQY", "DD", "");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

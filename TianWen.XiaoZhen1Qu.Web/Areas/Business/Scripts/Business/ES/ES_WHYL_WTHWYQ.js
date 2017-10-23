@@ -3,7 +3,7 @@ $(document).ready(function () {
     
     
     
-    $("body").bind("click", function () { Close("_XZQ"); Close("LB"); Close("XL"); Close("XJ"); Close("QY"); Close("DD"); });
+    $("body").bind("click", function () { Close("_XZQ");});
 
 
 
@@ -77,8 +77,8 @@ function LoadES_WHYL_WTHWYQJBXX() {
                     SetDX("GQ", xml.Value.ES_SJSM_PBDNJBXX.GQ);
                 $("#spanLB").html(xml.Value.ES_WHYL_WTHWYQJBXX.LB);
                 $("#spanXJ").html(xml.Value.ES_WHYL_WTHWYQJBXX.XJ);
-                $("#spanQY").html(xml.Value.ES_WHYL_WTHWYQJBXX.JYQY);
-                $("#spanSQ").html(xml.Value.ES_WHYL_WTHWYQJBXX.JYDD);
+                $("#spanQY").html(xml.Value.ES_WHYL_WTHWYQJBXX.QY);
+                $("#spanSQ").html(xml.Value.ES_WHYL_WTHWYQJBXX.DD);
 
                 $("#spanDSPMCC").html(xml.Value.ES_WHYL_WTHWYQJBXX.DSPMCC);
                 $("#spanDSPP").html(xml.Value.ES_WHYL_WTHWYQJBXX.DSPP);
@@ -109,8 +109,8 @@ function FB() {
     obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
     obj = jsonObj.AddJson(obj, "XL", "'" + $("#spanXL").html() + "'");
     obj = jsonObj.AddJson(obj, "XJ", "'" + $("#spanXJ").html() + "'");
-    obj = jsonObj.AddJson(obj, "JYQY", "'" + $("#spanQY").html() + "'");
-    obj = jsonObj.AddJson(obj, "JYDD", "'" + $("#spanSQ").html() + "'");
+    obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
+    obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanSQ").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
 

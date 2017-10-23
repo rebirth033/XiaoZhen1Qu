@@ -17,8 +17,8 @@ namespace TianWen.XiaoZhen1Qu.Entities.Maps
             Map(x => x.XJ, "XJ");
             Map(x => x.JG, "JG");
             Map(x => x.BCMS, "BCMS");
-            Map(x => x.JYQY, "JYQY");
-            Map(x => x.JYDD, "JYDD");
+            Map(x => x.QY, "QY");
+            Map(x => x.DD, "DD");
             Map(x => x.CCC, "CCC");
             Map(x => x.CDCC, "CDCC");
             #endregion

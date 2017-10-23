@@ -1,6 +1,6 @@
 ﻿
 $(document).ready(function () {
-    $("#YXQZ").datepicker({ minDate: 0 });$("body").bind("click", function () { Close("_XZQ"); Close("LB"); Close("XL"); Close("XJ"); Close("QY"); Close("DD"); });
+    $("#YXQZ").datepicker({ minDate: 0 });$("body").bind("click", function () { Close("_XZQ");});
 
 
 
@@ -50,8 +50,8 @@ function LoadPWKQ_YLYJDPJBXX() {
                 if (xml.Value.PWKQ_YLYJDPJBXX.GQ !== null)
                     SetDX("GQ", xml.Value.PWKQ_YLYJDPJBXX.GQ);
                 $("#spanLB").html(xml.Value.PWKQ_YLYJDPJBXX.LB);
-                $("#spanQY").html(xml.Value.PWKQ_YLYJDPJBXX.JYQY);
-                $("#spanDD").html(xml.Value.PWKQ_YLYJDPJBXX.JYDD);
+                $("#spanQY").html(xml.Value.PWKQ_YLYJDPJBXX.QY);
+                $("#spanDD").html(xml.Value.PWKQ_YLYJDPJBXX.DD);
                 if (xml.Value.PWKQ_YLYJDPJBXX.YXQZ.ToString("yyyy-MM-dd") !== "1-1-1")
                     $("#YXQZ").val(xml.Value.PWKQ_YLYJDPJBXX.YXQZ.ToString("yyyy-MM-dd"));
                 return;
@@ -69,8 +69,8 @@ function FB() {
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
-    obj = jsonObj.AddJson(obj, "JYQY", "'" + $("#spanQY").html() + "'");
-    obj = jsonObj.AddJson(obj, "JYDD", "'" + $("#spanDD").html() + "'");
+    obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
+    obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
 
