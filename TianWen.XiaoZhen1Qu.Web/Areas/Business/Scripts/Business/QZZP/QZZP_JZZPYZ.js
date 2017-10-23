@@ -4,7 +4,7 @@
 //验证标题
 
 //验证所有
-function AllValidate() {
+function ValidateAll() {
     if (ValidateBT() & ValidateLXR() & ValidateLXDH())
         return true;
     else

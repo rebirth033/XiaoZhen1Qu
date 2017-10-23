@@ -27,7 +27,7 @@ function ValidateJG() {
 }
 
 //验证所有
-function AllValidate() {
+function ValidateAll() {
     if (ValidateJG() & ValidateBT() & ValidateZP() & ValidateLXR() & ValidateLXDH())
         return true;
     else

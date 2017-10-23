@@ -107,7 +107,7 @@ function LoadCY_KCTSJBXX() {
 }
 //发布
 function FB() {
-    if (AllValidate() === false) return;
+    if (ValidateAll() === false) return;
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段

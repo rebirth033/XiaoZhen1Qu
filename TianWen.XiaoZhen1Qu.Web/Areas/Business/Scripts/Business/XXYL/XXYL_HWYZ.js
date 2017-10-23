@@ -3,7 +3,7 @@
 });
 
 //验证所有
-function AllValidate() {
+function ValidateAll() {
     if (ValidateBT() & ValidateZP() & ValidateLXR() & ValidateLXDH())
         return true;
     else

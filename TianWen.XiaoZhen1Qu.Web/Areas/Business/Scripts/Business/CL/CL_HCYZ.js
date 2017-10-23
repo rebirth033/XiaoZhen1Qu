@@ -7,7 +7,7 @@
     $("#XSLC").bind("focus", InfoXSLC);
 });
 //验证所有
-function AllValidate() {
+function ValidateAll() {
     if (ValidateEDZZ() & ValidateXSLC() & ValidateJG() & ValidateBT() & ValidateZP() & ValidateLXR() & ValidateLXDH())
         return true;
     else
