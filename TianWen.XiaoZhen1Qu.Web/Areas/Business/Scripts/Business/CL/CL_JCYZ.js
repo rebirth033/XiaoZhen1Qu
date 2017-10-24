@@ -47,7 +47,6 @@ function ValidateXSLC() {
         }
     }
 }
-
 //验证看车地址
 function ValidateKCDZ() {
     if ($("#KCDZ").val() === "" || $("#KCDZ").val() === null) {
@@ -62,7 +61,6 @@ function ValidateKCDZ() {
         return true;
     }
 }
-
 //验证车辆颜色
 function ValidateCLYS() {
     if ($("#KCDZ").val() === "" || $("#KCDZ").val() === null) {
@@ -77,14 +75,12 @@ function ValidateCLYS() {
         return true;
     }
 }
-
 //行驶里程
 function InfoXSLC() {
     $("#divXSLCTip").css("display", "block");
     $("#divXSLCTip").attr("class", "Info");
     $("#divXSLCTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写行驶里程');
 }
-
 //看车地址
 function InfoKCDZ() {
     $("#divKCDZTip").css("display", "block");

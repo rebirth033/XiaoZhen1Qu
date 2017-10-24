@@ -75,6 +75,9 @@ function BindClick(type) {
             LoadPP();
             LoadPPMC("轿车品牌", "divRM");
         }
+        if (type === "CX") {
+            LoadCX();
+        }
         if (type.indexOf("NF") !== -1) {
             LoadCODESByTYPENAME("出厂年限", type, "CODES_CL");
         }
@@ -89,6 +92,33 @@ function BindClick(type) {
         }
         if (type.indexOf("PZSZCS") !== -1) {
             LoadPZSZCS(type);
+        }
+    });
+}
+//加载轿车车系
+function LoadCX() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadByParentID",
+        dataType: "json",
+        data:
+        {
+            ParentID: $("#PPID").val(),
+            TBName: "CODES_CL_JC"
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='ul_select' style='overflow-y: scroll;'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='li_select' onclick='SelectDropdown(this,\"CX\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
+                }
+                html += "</ul>";
+                $("#divCX").html(html);
+                $("#divCX").css("display", "block");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
         }
     });
 }
