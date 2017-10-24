@@ -5,6 +5,7 @@
     $("#LXR").bind("focus", InfoLXR);
     $("#LXDH").bind("blur", ValidateLXDH);
     $("#LXDH").bind("focus", InfoLXDH);
+    $("#BCMS").bind("focus", InfoBCMS);
 });
 
 //验证标题
@@ -128,6 +129,12 @@ function InfoJG() {
     $("#divJGTip").attr("class", "Info");
     $("#divJGTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数，面议则填0');
     $("#spanJG").css("border-color", "#5bc0de");
+}
+//提示补充描述
+function InfoBCMS() {
+    $("#divBCMSTip").css("display", "block");
+    $("#divBCMSTip").attr("class", "Info");
+    $("#divBCMSTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写补充描述');
 }
 //验证单选框
 function ValidateRadio(id, message) {

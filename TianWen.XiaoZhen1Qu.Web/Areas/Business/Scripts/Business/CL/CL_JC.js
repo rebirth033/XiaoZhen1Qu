@@ -79,10 +79,16 @@ function BindClick(type) {
             LoadCX();
         }
         if (type.indexOf("NF") !== -1) {
-            LoadCODESByTYPENAME("出厂年限", type, "CODES_CL");
+            if (type === "SPNF")
+                LoadCODESByTYPENAME("出厂年限", type, "CODES_CL", Bind, "SCSPSJ", "SPNF", "");
+            else
+                LoadCODESByTYPENAME("出厂年限", type, "CODES_CL");
         }
         if (type.indexOf("YF") !== -1) {
-            LoadCODESByTYPENAME("出厂月份", type, "CODES_CL");
+            if (type === "SPYF")
+                LoadCODESByTYPENAME("出厂月份", type, "CODES_CL", Bind, "SCSPSJ", "SPYF", "");
+            else
+                LoadCODESByTYPENAME("出厂月份", type, "CODES_CL");
         }
         if (type.indexOf("GHCS") !== -1) {
             LoadCODESByTYPENAME("过户次数", type, "CODES_CL");
@@ -118,6 +124,7 @@ function LoadCX() {
                 html += "</ul>";
                 $("#divCX").html(html);
                 $("#divCX").css("display", "block");
+                Bind("JCPP", "CX", "");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

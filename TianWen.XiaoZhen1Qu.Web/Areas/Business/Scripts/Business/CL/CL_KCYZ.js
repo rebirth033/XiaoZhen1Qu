@@ -26,19 +26,11 @@ function ValidateXSLC() {
         }
     }
 }
-
-
-//验证所有
-function ValidateAll() {
-    if (ValidateJG() & ValidateBT() & ValidateZP() & ValidateLXR() & ValidateLXDH())
-        return true;
-    else
-        return false;
-}
 //行驶里程
 function InfoXSLC() {
     $("#divXSLCTip").css("display", "block");
     $("#divXSLCTip").attr("class", "Info");
     $("#divXSLCTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写行驶里程');
+    $("#spanXSLC").css("border-color", "#5bc0de");
 }
 
