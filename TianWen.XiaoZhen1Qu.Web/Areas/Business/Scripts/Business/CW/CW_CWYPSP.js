@@ -1,22 +1,9 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });LoadCW_CWYPSPJBXX();
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    LoadCW_CWYPSPJBXX();
     BindClick("LB");
     BindClick("XJ");
 });
-//描述框focus
-function BCMSFocus() {
-    $("#BCMS").css("color", "#333333");
-}
-//描述框blur
-function BCMSBlur() {
-    $("#BCMS").css("color", "#999999");
-}
-//描述框设默认文本
-function BCMSSetDefault() {
-    var BCMS = "1.房屋特征：\r\n\r\n2.周边配套：\r\n\r\n3.房东心态：";
-    $("#BCMS").html(BCMS);
-}
-
 //加载小类
 function LoadXL() {
     $.ajax({
@@ -55,13 +42,13 @@ function SelectLB(obj, type, id) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("宠物用品/食品", "LB", "CODES_CW");
+            LoadCODESByTYPENAME("宠物用品/食品", "LB", "CODES_CW", Bind, "CWYPSPLB", "LB", "");
         }
         if (type === "XL") {
             LoadXL();
         }
         if (type === "XJ") {
-            LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM");
+            LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM", Bind, "XJCD", "XJ", "");
         }
     });
 }
@@ -97,6 +84,8 @@ function LoadCW_CWYPSPJBXX() {
                     ue.setContent(xml.Value.BCMSString);
                 });
                 $("#spanLB").html(xml.Value.CW_CWYPSPJBXX.LB);
+                PDLB(xml.Value.CW_CWYPSPJBXX.LB);
+                $("#spanXL").html(xml.Value.CW_CWYPSPJBXX.XL);
                 $("#spanXJ").html(xml.Value.CW_CWYPSPJBXX.XJ);
                 if (xml.Value.CW_CWYPSPJBXX.GQ !== null)
                     SetDX("GQ", xml.Value.CW_CWYPSPJBXX.GQ);
