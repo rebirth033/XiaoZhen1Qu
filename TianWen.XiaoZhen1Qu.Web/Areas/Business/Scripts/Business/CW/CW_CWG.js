@@ -1,5 +1,6 @@
 ﻿$(document).ready(function () {
-    $("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); }); LoadCW_CWGJBXX();
+    $("body").bind("click", function () { Close("_XZQ"); });
+    LoadCW_CWGJBXX();
     BindClick("PZ");
     BindClick("NLDW");
     BindClick("XB");
@@ -57,7 +58,6 @@ function CWGXZ(CXMC, CXID) {
     $("#spanPZ").html(CXMC);
     $("#divPZ").css("display", "none");
 }
-
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
@@ -66,16 +66,16 @@ function BindClick(type) {
             LoadCWGPZ("divRM");
         }
         if (type === "NLDW") {
-            LoadCODESByTYPENAME("年龄单位", "NLDW", "CODES_CW");
+            LoadCODESByTYPENAME("年龄单位", "NLDW", "CODES_CW", Bind, "CWGNL", "NLDW", "");
         }
         if (type === "XB") {
-            LoadCODESByTYPENAME("性别", "XB", "CODES_CW");
+            LoadCODESByTYPENAME("性别", "XB", "CODES_CW", Bind, "CWGXB", "XB", "");
         }
         if (type === "YMQK") {
-            LoadCODESByTYPENAME("疫苗情况", "YMQK", "CODES_CW");
+            LoadCODESByTYPENAME("疫苗情况", "YMQK", "CODES_CW", Bind, "CWGYMQK", "YMQK", "");
         }
         if (type === "YMZL") {
-            LoadCODESByTYPENAME("疫苗种类", "YMZL", "CODES_CW");
+            LoadCODESByTYPENAME("疫苗种类", "YMZL", "CODES_CW", Bind, "CWGYMQK", "YMZL", "");
         }
     });
 }
@@ -117,7 +117,7 @@ function LoadCW_CWGJBXX() {
                 $("#spanYMQK").html(xml.Value.CW_CWGJBXX.YMQK);
                 $("#spanYMZL").html(xml.Value.CW_CWGJBXX.YMZL);
                 if (xml.Value.CW_CWGJBXX.SF !== null)
-                    SetDX("SF", xml.Value.CW_CWGJBXX.SF);
+                    SetDX("GQ", xml.Value.CW_CWGJBXX.SF);
                 if (xml.Value.CW_CWGJBXX.QCQK !== null)
                     SetDX("QCQK", xml.Value.CW_CWGJBXX.QCQK);
                 if (xml.Value.CW_CWGJBXX.SPKG !== null)
@@ -142,7 +142,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "YMQK", "'" + $("#spanYMQK").html() + "'");
     obj = jsonObj.AddJson(obj, "YMZL", "'" + $("#spanYMZL").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "SF", "'" + GetDX("SF") + "'");
+    obj = jsonObj.AddJson(obj, "SF", "'" + GetDX("GQ") + "'");
     obj = jsonObj.AddJson(obj, "QCQK", "'" + GetDX("QCQK") + "'");
     obj = jsonObj.AddJson(obj, "SPKG", "'" + GetDX("SPKG") + "'");
 
