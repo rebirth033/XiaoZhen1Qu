@@ -29,6 +29,11 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string PP { get; set; }
 
         /// <summary>
+        /// 车系
+        /// </summary>
+        [Property]
+        public virtual string CX { get; set; }
+        /// <summary>
         /// 车辆颜色
         /// </summary>
         [Property]
@@ -50,7 +55,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// 是否定期4S店保养
         /// </summary>
         [Property]
-        public virtual int SFDQBY { get; set; }
+        public virtual string SFDQBY { get; set; }
 
         /// <summary>
         /// 年检到期年份
@@ -116,13 +121,13 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// 包含过户费用
         /// </summary>
         [Property]
-        public virtual int BHGHFY { get; set; }
+        public virtual string BHGHFY { get; set; }
 
         /// <summary>
         /// 支持分期付款
         /// </summary>
         [Property]
-        public virtual int ZCFQFK { get; set; }
+        public virtual string ZCFQFK { get; set; }
 
         /// <summary>
         /// 牌照所在省份
@@ -140,7 +145,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// 车辆是否有抵押
         /// </summary>
         [Property]
-        public virtual int SFYDY { get; set; }
+        public virtual string SFYDY { get; set; }
 
         /// <summary>
         /// 车辆加装配置

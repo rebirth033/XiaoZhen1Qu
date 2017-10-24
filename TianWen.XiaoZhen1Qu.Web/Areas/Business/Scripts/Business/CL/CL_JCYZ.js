@@ -14,8 +14,7 @@ function ValidateSCSPSJ() {
 }
 //验证所有
 function ValidateAll() {
-    if (ValidateRadio("GQ", "忘记选择供求啦")
-        & ValidateSCSPSJ()
+    if (ValidateSCSPSJ()
         & ValidateBCMS("BCMS", "忘记填写补充描述啦")
         & ValidateXSLC()
         & ValidateKCDZ()
