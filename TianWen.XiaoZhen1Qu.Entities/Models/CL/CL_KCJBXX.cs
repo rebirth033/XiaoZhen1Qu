@@ -56,13 +56,13 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// 是否定期保养
         /// </summary>
         [Property]
-        public virtual int SFDQBY { get; set; }
+        public virtual string SFDQBY { get; set; }
 
         /// <summary>
         /// 有无重大事故
         /// </summary>
         [Property]
-        public virtual int YWZDSG { get; set; }
+        public virtual string YWZDSG { get; set; }
 
         /// <summary>
         /// 事故描述

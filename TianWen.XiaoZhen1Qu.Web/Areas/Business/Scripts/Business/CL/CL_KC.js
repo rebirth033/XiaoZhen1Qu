@@ -63,7 +63,6 @@ function PPXZ(PPMC, PPID) {
     $("#divCXText").css("display", "");
     BindClick("CX");
 }
-
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
@@ -75,10 +74,16 @@ function BindClick(type) {
             LoadKCCX();
         }
         if (type.indexOf("NF") !== -1) {
-            LoadCODESByTYPENAME("出厂年限", type, "CODES_CL");
+            if (type === "SPNF")
+                LoadCODESByTYPENAME("出厂年限", type, "CODES_CL", Bind, "SCSPSJ", "SPNF", "");
+            else
+                LoadCODESByTYPENAME("出厂年限", type, "CODES_CL");
         }
         if (type.indexOf("YF") !== -1) {
-            LoadCODESByTYPENAME("出厂月份", type, "CODES_CL");
+            if (type === "SPYF")
+                LoadCODESByTYPENAME("出厂月份", type, "CODES_CL", Bind, "SCSPSJ", "SPYF", "");
+            else
+                LoadCODESByTYPENAME("出厂月份", type, "CODES_CL");
         }
     });
 }
@@ -95,7 +100,10 @@ function LoadKCCX() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                var html = "<ul class='ul_select' style='overflow-y: scroll;'>";
+                var height = 341;
+                if (xml.list.length < 10)
+                    height = parseInt(xml.list.length * 34) + 1;
+                var html = "<ul class='ul_select' style='overflow-y: scroll; height:" + height + "px'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='li_select' onclick='SelectDropdown(this,\"CX\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
                 }
@@ -143,6 +151,22 @@ function ActiveCLYS() {
     });
     $(this).css("background-color", "#87B53B");
 }
+//获取车辆颜色
+function GetCLYS() {
+    var value = "";
+    $(".div_clys").each(function () {
+        if ($(this).css("background-color") === "rgb(135, 181, 59)")
+            value = $(this).find(".span_clys_right")[0].innerHTML;
+    });
+    return value;
+}
+//设置车辆颜色
+function SetCLYS(clys) {
+    $(".div_clys").each(function () {
+        if ($(this).find(".span_clys_right")[0].innerHTML === clys)
+            $(this).css("background-color", "#87B53B");
+    });
+}
 //加载车辆_客车基本信息
 function LoadCL_KCJBXX() {
     $.ajax({
@@ -175,6 +199,8 @@ function LoadCL_KCJBXX() {
                 $("#spanSYXDQNF").html(xml.Value.CL_KCJBXX.SYXDQNF);
                 $("#spanSYXDQYF").html(xml.Value.CL_KCJBXX.SYXDQYF);
                 LoadPhotos(xml.Value.Photos);
+                if (xml.Value.CL_KCJBXX.CLYS !== null)
+                    SetCLYS(xml.Value.CL_KCJBXX.CLYS);
                 if (xml.Value.CL_KCJBXX.SFDQBY !== null)
                     SetDX("SFDQBY", xml.Value.CL_KCJBXX.SFDQBY);
                 if (xml.Value.CL_KCJBXX.YWZDSG !== null)
@@ -194,6 +220,7 @@ function FB() {
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "PP", "'" + $("#spanPP").html() + "'");
     obj = jsonObj.AddJson(obj, "CX", "'" + $("#spanCX").html() + "'");
+    obj = jsonObj.AddJson(obj, "CLYS", "'" + GetCLYS() + "'");
     obj = jsonObj.AddJson(obj, "SPNF", "'" + $("#spanSPNF").html() + "'");
     obj = jsonObj.AddJson(obj, "SPYF", "'" + $("#spanSPYF").html() + "'");
     obj = jsonObj.AddJson(obj, "NJDQNF", "'" + $("#spanNJDQNF").html() + "'");

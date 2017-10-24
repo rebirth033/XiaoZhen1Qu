@@ -213,7 +213,7 @@ function GetCLYS() {
 //设置车辆颜色
 function SetCLYS(clys) {
     $(".div_clys").each(function () {
-        if ($(this).find(".span_clys_right")[0].innerHTML.indexOf(clys) !== -1)
+        if ($(this).find(".span_clys_right")[0].innerHTML === clys)
             $(this).css("background-color", "#87B53B");
     });
 }
