@@ -1,11 +1,6 @@
-﻿
-$(document).ready(function () {
-    $("#YXQZ").datepicker({ minDate: 0 });$("body").bind("click", function () { Close("_XZQ");});
-
-
-
-
-    
+﻿$(document).ready(function () {
+    $("#YXQZ").datepicker({ minDate: 0 });
+    $("body").bind("click", function () { Close("_XZQ"); });
     LoadPWKQ_YLYJDPJBXX();
     BindClick("LB");
     BindClick("QY");
@@ -16,7 +11,7 @@ $(document).ready(function () {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("游乐园/景点票", "LB", "CODES_PWKQ");
+            LoadCODESByTYPENAME("游乐园/景点票", "LB", "CODES_PWKQ", Bind, "YLYJDPLB", "LB", "");
         }
         if (type === "QY") {
             LoadQY();

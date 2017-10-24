@@ -1,11 +1,6 @@
-﻿
-$(document).ready(function () {
-    $("#YXQZ").datepicker({ minDate: 0 });$("body").bind("click", function () { Close("_XZQ");});
-
-
-
-
-    
+﻿$(document).ready(function () {
+    $("#YXQZ").datepicker({ minDate: 0 });
+    $("body").bind("click", function () { Close("_XZQ"); });
     LoadPWKQ_XFKGWQJBXX();
     BindClick("LB");
     BindClick("QY");
@@ -16,7 +11,7 @@ $(document).ready(function () {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("消费卡/购物券", "LB", "CODES_PWKQ");
+            LoadCODESByTYPENAME("消费卡/购物券", "LB", "CODES_PWKQ", Bind, "XFKGWQLB", "LB", "");
         }
         if (type === "QY") {
             LoadQY();
