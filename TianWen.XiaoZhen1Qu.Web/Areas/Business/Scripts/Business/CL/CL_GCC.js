@@ -1,12 +1,11 @@
-﻿
-$(document).ready(function () {
-    $("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); }); LoadCL_GCCJBXX();
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    LoadCL_GCCJBXX();
     BindClick("CX");
     BindClick("CCNX");
     BindClick("CCYF");
     BindClick("QY");
     BindClick("DD");
-    LoadPPMC("挖掘机品牌", "divRM");
 });
 //加载工程车车型标签
 function LoadGCC() {
@@ -118,20 +117,6 @@ function PPXZ(PPMC, PPID) {
     $("#spanPP").html(PPMC);
     $("#divPP").css("display", "none");
 }
-//描述框focus
-function BCMSFocus() {
-    $("#BCMS").css("color", "#333333");
-}
-//描述框blur
-function BCMSBlur() {
-    $("#BCMS").css("color", "#999999");
-}
-//描述框设默认文本
-function BCMSSetDefault() {
-    var BCMS = "1.房屋特征：\r\n\r\n2.周边配套：\r\n\r\n3.房东心态：";
-    $("#BCMS").html(BCMS);
-}
-
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
@@ -144,10 +129,10 @@ function BindClick(type) {
             LoadPPMC("挖掘机品牌", "divRM");
         }
         if (type === "CCNX") {
-            LoadCODESByTYPENAME("出厂年限", "CCNX", "CODES_CL");
+            LoadCODESByTYPENAME("出厂年限", "CCNX", "CODES_CL", Bind, "GCCCCNX", "CCNX", "");
         }
         if (type === "CCYF") {
-            LoadCODESByTYPENAME("出厂月份", "CCYF", "CODES_CL");
+            LoadCODESByTYPENAME("出厂月份", "CCYF", "CODES_CL", Bind, "GCCCCNX", "CCYF", "");
         }
         if (type === "QY") {
             LoadQY();
@@ -156,11 +141,6 @@ function BindClick(type) {
             LoadDD($("#QYCode").val());
         }
     });
-}
-//选择下拉框
-function SelectDropdown(obj, type) {
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
 }
 //选择工程车品牌
 function SelectPBPP(obj, type, code) {
@@ -190,14 +170,16 @@ function LoadCL_GCCJBXX() {
                     ue.setContent(xml.Value.BCMSString);
                 });
                 if (xml.Value.CL_GCCJBXX.LB !== null)
-                    SetDX("LB", xml.Value.CL_GCCJBXX.LB);
+                    SetDX("GCCLB", xml.Value.CL_GCCJBXX.LB);
                 $("#spanQY").html(xml.Value.CL_GCCJBXX.QY);
                 $("#spanDD").html(xml.Value.CL_GCCJBXX.DD);
                 $("#spanXL").html(xml.Value.CL_GCCJBXX.XL);
                 $("#spanCX").html(xml.Value.CL_GCCJBXX.CX);
+                $("#spanPP").html(xml.Value.CL_GCCJBXX.PP);
                 $("#spanCCNX").html(xml.Value.CL_GCCJBXX.CCNX);
                 $("#spanCCYF").html(xml.Value.CL_GCCJBXX.CCYF);
                 LoadPhotos(xml.Value.Photos);
+                PDCX(xml.Value.CL_GCCJBXX.CX);
                 return;
             }
         },
@@ -219,7 +201,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "LB", "'" + GetDX("LB") + "'");
+    obj = jsonObj.AddJson(obj, "LB", "'" + GetDX("GCCLB") + "'");
 
     if (getUrlParam("CL_GCCJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "CL_GCCJBXXID", "'" + getUrlParam("CL_GCCJBXXID") + "'");

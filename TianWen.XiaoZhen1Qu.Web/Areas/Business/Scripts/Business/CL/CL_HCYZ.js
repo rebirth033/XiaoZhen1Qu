@@ -6,9 +6,23 @@
     $("#XSLC").bind("blur", ValidateXSLC);
     $("#XSLC").bind("focus", InfoXSLC);
 });
+//验证出厂年限
+function ValidateHCCCNX() {
+    if (!ValidateSelect("HCCCNX", "CCNX", "请选择出厂年份")) return false;
+    if (!ValidateSelect("HCCCNX", "CCYF", "请选择出厂月份")) return false;
+    return true;
+}
 //验证所有
 function ValidateAll() {
-    if (ValidateEDZZ() & ValidateXSLC() & ValidateJG() & ValidateBT() & ValidateZP() & ValidateLXR() & ValidateLXDH())
+    if (ValidateSelect("HCLB", "LB", "忘记选择车型啦")
+           & ValidateSelect("HCPP", "PP", "忘记选择品牌啦")
+           & ValidateHCCCNX()
+           & ValidateEDZZ()
+           & ValidateXSLC()
+           & ValidateBCMS("BCMS", "忘记填写补充描述啦")
+           & ValidateSZQY()
+           & ValidateJG()
+           & ValidateCommon())
         return true;
     else
         return false;
@@ -57,17 +71,18 @@ function ValidateXSLC() {
         }
     }
 }
-
 //提示额定载重
 function InfoEDZZ() {
-    $("#divEDZZTip").css("display", "inline-block");
+    $("#divEDZZTip").css("display", "block");
     $("#divEDZZTip").attr("class", "Info");
     $("#divEDZZTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写数字');
+    $("#spanEDZZ").css("border-color", "#5bc0de");
 }
 //提示行驶里程
 function InfoXSLC() {
-    $("#divXSLCTip").css("display", "inline-block");
+    $("#divXSLCTip").css("display", "block");
     $("#divXSLCTip").attr("class", "Info");
     $("#divXSLCTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写数字');
+    $("#spanXSLC").css("border-color", "#5bc0de");
 }
 
