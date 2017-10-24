@@ -1,8 +1,22 @@
 ﻿$(document).ready(function () {
     $("#RJXF").bind("blur", ValidateRJXF);
     $("#RJXF").bind("focus", InfoRJXF);
+    $("#FWQY").bind("blur", ValidateFWQY);
+    $("#FWQY").bind("focus", InfoFWQY);
 });
-//验证售价
+//验证所有
+function ValidateAll() {
+    if (ValidateCheck("KCTSLB", "忘记选择类别啦")
+        & ValidateRJXF()
+        & ValidateFWQY()
+        & ValidateBCMS("BCMS", "忘记填写补充描述啦")
+        & ValidateXXDZ()
+        & ValidateCommon())
+        return true;
+    else
+        return false;
+}
+//验证人均消费
 function ValidateRJXF() {
     if ($("#RJXF").val() === "" || $("#RJXF").val() === null) {
         $("#divRJXFTip").css("display", "block");
@@ -24,17 +38,31 @@ function ValidateRJXF() {
         }
     }
 }
-
-//验证所有
-function ValidateAll() {
-    if (ValidateRJXF() & ValidateBT() & ValidateZP() & ValidateLXR() & ValidateLXDH())
-        return true;
-    else
+//验证服务区域 
+function ValidateFWQY() {
+    if ($("#FWQY").val() === "" || $("#FWQY").val() === null) {
+        $("#divFWQYTip").css("display", "block");
+        $("#divFWQYTip").attr("class", "Warn");
+        $("#divFWQYTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写服务区域啦');
+        $("#FWQY").css("border-color", "#fd634f");
         return false;
+    } else {
+        $("#divFWQYTip").css("display", "none");
+        $("#FWQY").css("border-color", "#cccccc");
+        return true;
+    }
 }
-//提示价格
+//提示人均消费
 function InfoRJXF() {
     $("#divRJXFTip").css("display", "block");
     $("#divRJXFTip").attr("class", "Info");
     $("#divRJXFTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数，面议则填0');
+    $("#spanRJXF").css("border-color", "#5bc0de");
+}
+//提示服务区域
+function InfoFWQY() {
+    $("#divFWQYTip").css("display", "block");
+    $("#divFWQYTip").attr("class", "Info");
+    $("#divFWQYTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数，面议则填0');
+    $("#FWQY").css("border-color", "#5bc0de");
 }

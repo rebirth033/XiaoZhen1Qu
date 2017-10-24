@@ -1,10 +1,9 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });LoadDuoX("美食","MSLB");
-    
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    LoadDuoX("美食", "MSLB");
     BindClick("QY");
     BindClick("DD");
 });
-
 //加载多选
 function LoadDuoX(type, id) {
     $.ajax({
@@ -32,6 +31,7 @@ function LoadDuoX(type, id) {
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".liMSLB").bind("click", function () { ValidateCheck("MSLB", "忘记选择类别啦"); });
                 LoadCY_MSJBXX();
             }
         },

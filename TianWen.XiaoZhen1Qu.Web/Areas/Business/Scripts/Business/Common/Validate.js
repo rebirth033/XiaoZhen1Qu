@@ -197,6 +197,18 @@ function ValidateBCMS(id, message) {
         return true;
     }
 }
+//验证具体地址
+function ValidateJTDZ() {
+    if ($("#JTDZ").val() === "" || $("#JTDZ").val() === null) {
+        $("#divSZQYTip").css("display", "block");
+        $("#divSZQYTip").attr("class", "Warn");
+        $("#divSZQYTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写具体地址啦');
+        return false;
+    } else {
+        $("#divSZQYTip").css("display", "none");
+        return true;
+    }
+}
 //验证共有
 function ValidateCommon() {
     if (ValidateBT() & ValidateZP() & ValidateLXR() & ValidateLXDH())
@@ -208,5 +220,12 @@ function ValidateCommon() {
 function ValidateSZQY() {
     if (!ValidateSelect("SZQY", "QY", "请选择区域")) return false;
     if (!ValidateSelect("SZQY", "DD", "请选择地段")) return false;
+    return true;
+}
+//验证详细地址
+function ValidateXXDZ() {
+    if (!ValidateSelect("SZQY", "QY", "请选择区域")) return false;
+    if (!ValidateSelect("SZQY", "DD", "请选择地段")) return false;
+    if (!ValidateJTDZ()) return false;
     return true;
 }
