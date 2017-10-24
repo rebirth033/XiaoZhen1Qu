@@ -1,7 +1,5 @@
-﻿
-$(document).ready(function () {
-    $("body").bind("click", function () { Close("_XZQ"); Close("LB"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });
-    
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
     LoadCL_HCJBXX();
     BindClick("LB");
     BindClick("PP");
@@ -62,35 +60,21 @@ function PPXZ(PPMC, PPID) {
     $("#spanPP").html(PPMC);
     $(".div_bqss").css("display", "none");
 }
-//描述框focus
-function BCMSFocus() {
-    $("#BCMS").css("color", "#333333");
-}
-//描述框blur
-function BCMSBlur() {
-    $("#BCMS").css("color", "#999999");
-}
-//描述框设默认文本
-function BCMSSetDefault() {
-    var BCMS = "1.房屋特征：\r\n\r\n2.周边配套：\r\n\r\n3.房东心态：";
-    $("#BCMS").html(BCMS);
-}
-
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("货车", "LB", "CODES_CL");
+            LoadCODESByTYPENAME("货车", "LB", "CODES_CL", Bind, "HCLB", "LB", "");
         }
         if (type === "PP") {
             LoadPP();
             LoadPPMC("divRM");
         }
         if (type === "CCNX") {
-            LoadCODESByTYPENAME("出厂年限", "CCNX", "CODES_CL");
+            LoadCODESByTYPENAME("出厂年限", "CCNX", "CODES_CL", Bind, "HCCCNX", "CCNX", "");
         }
         if (type === "CCYF") {
-            LoadCODESByTYPENAME("出厂月份", "CCYF", "CODES_CL");
+            LoadCODESByTYPENAME("出厂月份", "CCYF", "CODES_CL", Bind, "HCCCYF", "CCYF", "");
         }
         if (type === "QY") {
             LoadQY();
@@ -99,11 +83,6 @@ function BindClick(type) {
             LoadDD($("#QYCode").val());
         }
     });
-}
-//选择下拉框
-function SelectDropdown(obj, type) {
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
 }
 //选择类别下拉框
 function SelectLB(obj, type) {
@@ -143,7 +122,7 @@ function LoadCL_HCJBXX() {
                 $("#spanCCNX").html(xml.Value.CL_HCJBXX.CCNX);
                 $("#spanCCYF").html(xml.Value.CL_HCJBXX.CCYF);
                 $("#spanQY").html(xml.Value.CL_HCJBXX.QY);
-                $("#spanSQ").html(xml.Value.CL_HCJBXX.DD);
+                $("#spanDD").html(xml.Value.CL_HCJBXX.DD);
 
                 LoadPhotos(xml.Value.Photos);
                 return;
@@ -165,7 +144,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "CCNX", "'" + $("#spanCCNX").html() + "'");
     obj = jsonObj.AddJson(obj, "CCYF", "'" + $("#spanCCYF").html() + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
-    obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanSQ").html() + "'");
+    obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
 
     if (getUrlParam("CL_HCJBXXID") !== null)

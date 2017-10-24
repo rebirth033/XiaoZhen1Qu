@@ -1,4 +1,5 @@
 ﻿$(document).ready(function () {
+    $(".div_clys").bind("click", function () { ValidateCLYS(); });
     $("#XSLC").bind("blur", ValidateXSLC);
     $("#XSLC").bind("focus", InfoXSLC);
     $("#KCDZ").bind("blur", ValidateKCDZ);
@@ -7,14 +8,21 @@
     $("#JG").bind("focus", InfoJG);
 });
 //验证轿车
-function ValidateSCSPSJ() {
+function ValidateJCPP() {
     if (!ValidateSelect("JCPP", "PP", "请选择品牌")) return false;
     if (!ValidateSelect("JCPP", "CX", "请选择车型")) return false;
     return true;
 }
+//验证轿车
+function ValidateSCSPSJ() {
+    if (!ValidateSelect("SCSPSJ", "SPNF", "请选择上牌年份")) return false;
+    if (!ValidateSelect("SCSPSJ", "SPYF", "请选择上牌月份")) return false;
+    return true;
+}
 //验证所有
 function ValidateAll() {
-    if (ValidateRadio("GQ", "忘记选择供求啦")
+    if (ValidateJCPP()
+        & ValidateCLYS()
         & ValidateSCSPSJ()
         & ValidateBCMS("BCMS", "忘记填写补充描述啦")
         & ValidateXSLC()
@@ -47,13 +55,12 @@ function ValidateXSLC() {
         }
     }
 }
-
 //验证看车地址
 function ValidateKCDZ() {
     if ($("#KCDZ").val() === "" || $("#KCDZ").val() === null) {
         $("#divKCDZTip").css("display", "block");
         $("#divKCDZTip").attr("class", "Warn");
-        $("#divKCDZTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填看车地址啦');
+        $("#divKCDZTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写看车地址啦');
         $("#KCDZ").css("border-color", "#fd634f");
         return false;
     } else {
@@ -62,33 +69,35 @@ function ValidateKCDZ() {
         return true;
     }
 }
-
 //验证车辆颜色
 function ValidateCLYS() {
-    if ($("#KCDZ").val() === "" || $("#KCDZ").val() === null) {
-        $("#divKCDZTip").css("display", "block");
-        $("#divKCDZTip").attr("class", "Warn");
-        $("#divKCDZTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填看车地址啦');
-        $("#KCDZ").css("border-color", "#fd634f");
+    var value = "";
+    $(".div_clys").each(function () {
+        if ($(this).css("background-color") === "rgb(135, 181, 59)")
+            value = $(this).find(".span_clys_right")[0].innerHTML;
+    });
+    if (value === "") {
+        $("#divCLYSTip").css("display", "block");
+        $("#divCLYSTip").attr("class", "Warn");
+        $("#divCLYSTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记选择车辆颜色啦');
         return false;
     } else {
-        $("#divKCDZTip").css("display", "none");
-        $("#KCDZ").css("border-color", "#cccccc");
+        $("#divCLYSTip").css("display", "none");
         return true;
     }
 }
-
 //行驶里程
 function InfoXSLC() {
     $("#divXSLCTip").css("display", "block");
     $("#divXSLCTip").attr("class", "Info");
     $("#divXSLCTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写行驶里程');
+    $("#spanXSLC").css("border-color", "#5bc0de");
 }
-
 //看车地址
 function InfoKCDZ() {
     $("#divKCDZTip").css("display", "block");
     $("#divKCDZTip").attr("class", "Info");
     $("#divKCDZTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写看车地址');
+    $("#KCDZ").css("border-color", "#5bc0de");
 }
 

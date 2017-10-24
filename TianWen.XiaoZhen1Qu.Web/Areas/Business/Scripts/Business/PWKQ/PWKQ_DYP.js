@@ -1,16 +1,10 @@
-﻿
-$(document).ready(function () {
-    $("#YXQZ").datepicker({ minDate: 0 });$("body").bind("click", function () { Close("_XZQ");});
-
-
-
-
-    
+﻿$(document).ready(function () {
+    $("#YXQZ").datepicker({ minDate: 0 });
+    $("body").bind("click", function () { Close("_XZQ"); });
     LoadPWKQ_DYPJBXX();
     BindClick("QY");
     BindClick("DD");
 });
-
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
@@ -46,7 +40,7 @@ function LoadPWKQ_DYPJBXX() {
                 if (xml.Value.PWKQ_DYPJBXX.GQ !== null)
                     SetDX("GQ", xml.Value.PWKQ_DYPJBXX.GQ);
                 if (xml.Value.PWKQ_DYPJBXX.LB !== null)
-                    SetDX("LB", xml.Value.PWKQ_DYPJBXX.LB);
+                    SetDX("KQLB", xml.Value.PWKQ_DYPJBXX.LB);
                 $("#spanQY").html(xml.Value.PWKQ_DYPJBXX.QY);
                 $("#spanDD").html(xml.Value.PWKQ_DYPJBXX.DD);
                 if (xml.Value.PWKQ_DYPJBXX.YXQZ.ToString("yyyy-MM-dd") !== "1-1-1")
@@ -69,7 +63,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
-    obj = jsonObj.AddJson(obj, "LB", "'" + GetDX("LB") + "'");
+    obj = jsonObj.AddJson(obj, "LB", "'" + GetDX("KQLB") + "'");
 
     if ($("#YXQZ").val() !== "")
         obj = jsonObj.AddJson(obj, "YXQZ", "'" + $("#YXQZ").val() + "'");

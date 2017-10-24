@@ -547,4 +547,34 @@ values (182, '新旧', '7成新', '6', 6, null);
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (183, '新旧', '6成以下', '7', 7, null);
 
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (184, '宠物服务', '宠物医院', '1', 1, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (185, '宠物服务', '宠物寄养', '2', 2, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (186, '宠物服务', '宠物美容', '3', 3, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (187, '宠物服务', '宠物训练', '4', 4, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (188, '宠物服务', '宠物托运', '5', 5, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (189, '宠物服务', '宠物配种', '6', 6, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (190, '宠物服务', '宠物殡葬', '7', 7, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (191, '宠物服务', '宠物摄影', '8', 8, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (192, '宠物服务', '水族服务', '9', 9, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (193, '宠物服务', '其他宠物服务', '10', 10, null);
+
 prompt Done.

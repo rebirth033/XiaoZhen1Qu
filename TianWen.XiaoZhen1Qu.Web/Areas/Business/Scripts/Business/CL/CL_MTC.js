@@ -12,19 +12,13 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("摩托车", "LB", "CODES_CL");
+            LoadCODESByTYPENAME("摩托车", "LB", "CODES_CL", Bind, "MTCLB", "LB", "");
         }
         if (type === "PP") {
-            LoadCODESByTYPENAME("摩托车品牌", "PP", "CODES_CL");
+            LoadCODESByTYPENAME("摩托车品牌", "PP", "CODES_CL", Bind, "MTCPP", "PP", "");
         }
         if (type === "GCSJ") {
-            LoadCODESByTYPENAME("购车时间", "GCSJ", "CODES_CL");
-        }
-        if (type === "CCNX") {
-            LoadCODESByTYPENAME("出厂年限", "CCNX", "CODES_CL");
-        }
-        if (type === "CCYF") {
-            LoadCODESByTYPENAME("出厂月份", "CCYF", "CODES_CL");
+            LoadCODESByTYPENAME("购车时间", "GCSJ", "CODES_CL", Bind, "MTCGCSJ", "GCSJ", "");
         }
         if (type === "QY") {
             LoadQY();
@@ -61,11 +55,6 @@ function GetXSQK() {
     }
     return value;
 }
-//选择下拉框
-function SelectDropdown(obj, type) {
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
-}
 //选择类别下拉框
 function SelectLB(obj, type) {
     $("#span" + type).html(obj.innerHTML);
@@ -101,8 +90,8 @@ function LoadCL_MTCJBXX() {
                 if (xml.Value.CL_MTCJBXX.GQ !== null)
                     SetDX("GQ", xml.Value.CL_MTCJBXX.GQ);
                 if (xml.Value.CL_MTCJBXX.XSLC !== null)
-                    SetDX("GQ", xml.Value.CL_MTCJBXX.XSLC);
-                SetXSLC(xml.Value.CL_MTCJBXX.XSLC);
+                    SetDX("XSQK", xml.Value.CL_MTCJBXX.XSLC);
+                SetXSQK(xml.Value.CL_MTCJBXX.XSLC);
                 $("#spanLB").html(xml.Value.CL_MTCJBXX.LB);
                 $("#spanPP").html(xml.Value.CL_MTCJBXX.PP);
                 $("#spanGCSJ").html(xml.Value.CL_MTCJBXX.GCSJ);
@@ -111,7 +100,6 @@ function LoadCL_MTCJBXX() {
                 $("#spanXL").html(xml.Value.CL_MTCJBXX.XL);
 
                 LoadPhotos(xml.Value.Photos);
-                PDLB(xml.Value.CL_MTCJBXX.LB);
                 return;
             }
         },
@@ -130,10 +118,10 @@ function FB() {
     obj = jsonObj.AddJson(obj, "PP", "'" + $("#spanPP").html() + "'");
     obj = jsonObj.AddJson(obj, "GCSJ", "'" + $("#spanGCSJ").html() + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
-    obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanSQ").html() + "'");
+    obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
-    obj = jsonObj.AddJson(obj, "XSLC", "'" + GetDX("XSLC") + "'");
+    obj = jsonObj.AddJson(obj, "XSLC", "'" + GetDX("XSQK") + "'");
 
     if (getUrlParam("CL_MTCJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "CL_MTCJBXXID", "'" + getUrlParam("CL_MTCJBXXID") + "'");

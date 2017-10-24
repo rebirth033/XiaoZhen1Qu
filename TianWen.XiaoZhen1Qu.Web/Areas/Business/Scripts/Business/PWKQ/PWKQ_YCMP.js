@@ -1,11 +1,6 @@
-﻿
-$(document).ready(function () {
-    $("#SJ").datepicker({ minDate: 0 });$("body").bind("click", function () { Close("_XZQ");});
-
-
-
-
-    
+﻿$(document).ready(function () {
+    $("#SJ").datepicker({ minDate: 0 });
+    $("body").bind("click", function () { Close("_XZQ"); });
     LoadPWKQ_YCMPJBXX();
     BindClick("LB");
     BindClick("XJ");
@@ -17,7 +12,7 @@ $(document).ready(function () {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("演出门票", "LB", "CODES_PWKQ");
+            LoadCODESByTYPENAME("演出门票", "LB", "CODES_PWKQ", Bind, "YCMPLB", "LB", "");
         }
         if (type === "QY") {
             LoadQY();

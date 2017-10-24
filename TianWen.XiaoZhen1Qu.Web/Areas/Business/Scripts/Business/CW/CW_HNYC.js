@@ -1,8 +1,8 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });LoadCW_HNYCJBXX();
-    BindClick("PZ");
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    LoadCW_HNYCJBXX();
+    BindClick("LB");
 });
-
 //加载小类
 function LoadXL() {
     $.ajax({
@@ -11,7 +11,7 @@ function LoadXL() {
         dataType: "json",
         data:
         {
-            ParentID: $("#PZID").val(),
+            ParentID: $("#LBID").val(),
             TBName: "CODES_CW"
         },
         success: function (xml) {
@@ -23,6 +23,7 @@ function LoadXL() {
                 html += "</ul>";
                 $("#divXL").html(html);
                 $("#divXL").css("display", "block");
+                Bind("HNYCLB", "XL", "");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -34,14 +35,14 @@ function LoadXL() {
 function SelectLB(obj, type, id) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-    $("#PZID").val(id);
+    $("#LBID").val(id);
     BindClick("XL");
 }
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
-        if (type === "PZ") {
-            LoadCODESByTYPENAME("花鸟鱼虫", "PZ", "CODES_CW");
+        if (type === "LB") {
+            LoadCODESByTYPENAME("花鸟鱼虫", "LB", "CODES_CW", Bind, "HNYCLB", "LB", "");
         }
         if (type === "XL") {
             LoadXL();
@@ -69,7 +70,7 @@ function LoadCW_HNYCJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.BCMSString);
                 });
-                $("#spanPZ").html(xml.Value.CW_HNYCJBXX.PZ);
+                $("#spanLB").html(xml.Value.CW_HNYCJBXX.PZ);
                 if (xml.Value.CW_HNYCJBXX.GQ !== null)
                     SetDX("GQ", xml.Value.CW_HNYCJBXX.GQ);
                 LoadPhotos(xml.Value.Photos);
@@ -86,7 +87,7 @@ function FB() {
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
-    obj = jsonObj.AddJson(obj, "PZ", "'" + $("#spanPZ").html() + "'");
+    obj = jsonObj.AddJson(obj, "PZ", "'" + $("#spanLB").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
 

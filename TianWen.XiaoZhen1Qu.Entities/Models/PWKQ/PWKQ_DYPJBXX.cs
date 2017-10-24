@@ -32,7 +32,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// 类别
         /// </summary>
         [Property]
-        public virtual int LB { get; set; }
+        public virtual string LB{ get; set; }
 
         /// <summary>
         /// 价格
