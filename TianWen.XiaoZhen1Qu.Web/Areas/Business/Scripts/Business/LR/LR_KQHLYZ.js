@@ -3,7 +3,7 @@
 });
 //验证所有
 function ValidateAll() {
-    if (ValidateCheck("KQHLLB", "忘记选择类别啦")
+    if (ValidateSelect("KQHLLB", "LB", "忘记选择类别啦")
         & ValidateBCMS("BCMS", "忘记填写补充描述啦")
         & ValidateFWQY()
         & ValidateXXDZ()
