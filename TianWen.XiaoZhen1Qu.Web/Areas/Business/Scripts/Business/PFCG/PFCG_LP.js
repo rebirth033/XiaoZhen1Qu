@@ -9,7 +9,7 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("礼品", "LB", "CODES_PFCG", Bind, "LPLB", "LB", "");
+            LoadCODESByTYPENAME("礼品", "LB", "CODES_PFCG", Bind, "OUTLB", "LB", "");
         }
         if (type === "XL") {
             LoadXL();
@@ -45,7 +45,7 @@ function LoadXL() {
                 html += "</ul>";
                 $("#divXL").html(html);
                 $("#divXL").css("display", "block");
-                Bind("LPLB", "XL", "");
+                Bind("OUTLB", "XL", "");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
