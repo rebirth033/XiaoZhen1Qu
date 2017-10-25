@@ -1,16 +1,15 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });LoadPFCG_SJSMJBXX();
-    
+﻿$(document).ready(function () {
+    $("body").bind("click", function() { Close("_XZQ"); });
+    LoadPFCG_SJSMJBXX();
     BindClick("LB");
     BindClick("QY");
     BindClick("DD");
 });
-
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("手机数码", "LB", "CODES_PFCG");
+            LoadCODESByTYPENAME("手机数码", "LB", "CODES_PFCG", Bind, "OUTLB", "LB", "");
         }
         if (type === "QY") {
             LoadQY();
