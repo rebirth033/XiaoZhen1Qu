@@ -36,7 +36,7 @@ function LoadDuoX(type, id) {
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-                $(".liJXXL").bind("click", function () { ValidateCheck("JXXL", "忘记选择小类啦"); });
+                $(".liJJHBXL").bind("click", function () { ValidateCheck("JJHBXL", "忘记选择小类啦"); });
                 LoadZSDQ();
             }
         },
@@ -71,6 +71,7 @@ function LoadZSDQ() {
                 html += "</ul>";
                 $("#divZSDQText").html(html);
                 $(".img_ZSDQ").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".liZSDQ").bind("click", function () { ValidateCheck("ZSDQ", "忘记选择招商地区啦"); });
                 LoadZSJM_JJHBJBXX();
             }
         },
@@ -83,7 +84,8 @@ function LoadZSDQ() {
 function SelectLB(obj, type, codeid) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-    PDLB(obj.innerHTML, codeid);
+    if (type === "LB")
+        PDLB(obj.innerHTML, codeid);
 }
 //判断类别
 function PDLB(name, codeid) {
@@ -136,13 +138,13 @@ function LoadJJHBXL(codeid) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("家居环保", "LB", "CODES_ZSJM");
+            LoadCODESByTYPENAME("家居环保", "LB", "CODES_ZSJM", Bind, "JJHBLB", "LB", "");
         }
         if (type === "PPLS") {
             LoadCODESByTYPENAME("品牌历史", "PPLS", "CODES_ZSJM");
         }
         if (type === "TZJE") {
-            LoadCODESByTYPENAME("投资金额", "TZJE", "CODES_ZSJM");
+            LoadCODESByTYPENAME("投资金额", "TZJE", "CODES_ZSJM", Bind, "JJHBTZJE", "TZJE", "");
         }
         if (type === "QGFDS") {
             LoadCODESByTYPENAME("全国分店数", "QGFDS", "CODES_ZSJM");

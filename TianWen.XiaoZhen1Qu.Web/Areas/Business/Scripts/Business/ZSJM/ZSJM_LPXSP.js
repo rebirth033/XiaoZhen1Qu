@@ -84,7 +84,8 @@ function LoadZSDQ() {
 function SelectLB(obj, type, codeid) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-    PDLB(obj.innerHTML, codeid);
+    if (type === "LB")
+        PDLB(obj.innerHTML, codeid);
 }
 //判断类别
 function PDLB(name, codeid) {

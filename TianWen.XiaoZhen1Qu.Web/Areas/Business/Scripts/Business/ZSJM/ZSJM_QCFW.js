@@ -1,5 +1,6 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });BindClick("LB");
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    BindClick("LB");
     BindClick("PPLS");
     BindClick("TZJE");
     BindClick("QGFDS");
@@ -8,7 +9,6 @@ $(document).ready(function () {$("body").bind("click", function () { Close("_XZQ
     BindClick("DD");
     LoadDuoX("适合人群", "SHRQ");
 });
-
 //加载多选
 function LoadDuoX(type, id) {
     $.ajax({
@@ -25,17 +25,18 @@ function LoadDuoX(type, id) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='li" + id + "' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i === 5 || i === 11 || i === 17 || i === 23 || i === 29) {
+                    if (i % 6 === 5) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 6) === 0)
-                    $("#div" + id).css("height", parseInt(xml.list.length / 6) * 45 + "px");
+                    $("#div" + id).css("height", parseInt(xml.list.length / 6) * 60 + "px");
                 else
-                    $("#div" + id).css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 6) + 1) * 60 + "px");
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".liQCFWXL").bind("click", function () { ValidateCheck("QCFWXL", "忘记选择小类啦"); });
                 LoadZSDQ();
             }
         },
@@ -70,6 +71,7 @@ function LoadZSDQ() {
                 html += "</ul>";
                 $("#divZSDQText").html(html);
                 $(".img_ZSDQ").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".liZSDQ").bind("click", function () { ValidateCheck("ZSDQ", "忘记选择招商地区啦"); });
                 LoadZSJM_QCFWJBXX();
             }
         },
@@ -82,100 +84,30 @@ function LoadZSDQ() {
 function SelectLB(obj, type, codeid) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-    PDLB(obj.innerHTML, codeid);
+    if (type === "LB")
+        PDLB(obj.innerHTML, codeid);
 }
 //判断类别
 function PDLB(name, codeid) {
-    if (name.indexOf("汽车维修") !== -1 || name.indexOf("汽车美容") !== -1 || name.indexOf("汽车用品") !== -1 || name.indexOf("汽车租赁/买卖") !== -1)
-        LoadQCFWXL(codeid);
-    if (name.indexOf("汽车装饰") !== -1 || name.indexOf("电动车") !== -1 || name.indexOf("洗车") !== -1)
+    if (name.indexOf("汽车维修") !== -1 || name.indexOf("汽车美容") !== -1 || name.indexOf("汽车用品") !== -1 || name.indexOf("汽车租赁/买卖") !== -1) {
+        $("#divQCFWXL").css("display", "");
+        LoadDuoX(name, "QCFWXL");
+    }
+    else {
         $("#divQCFWXL").css("display", "none");
-}
-//加载汽车服务小类
-function LoadQCFWXL(codeid) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadByParentID",
-        dataType: "json",
-        data:
-        {
-            ParentID: codeid,
-            TBName: "CODES_ZSJM"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='ulFWPZ'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liQCFWXL' onclick='SelectDuoX(this)'><img class='img_QCFWXL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i === 5 || i === 11 || i === 17 || i === 23 || i === 29) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
-                    }
-                }
-                html += "</ul>";
-                $("#divQCFWXLText").html(html);
-                $(".img_QCFWXL").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-
-                if (parseInt(xml.list.length % 6) === 0)
-                    $("#divQCFWXL").css("height", parseInt(xml.list.length / 6) * 45 + "px");
-                else
-                    $("#divQCFWXL").css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
-
-                $("#divQCFWXL").css("display", "");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载汽车服务小类
-function LoadQCFWXLByName(name, xl) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadLPXSPXX",
-        dataType: "json",
-        data:
-        {
-            name: name
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='ulFWPZ'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liQCFWXL' onclick='SelectQCFWXL(this)'><img class='img_QCFWXL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i === 5 || i === 11 || i === 17 || i === 23 || i === 29) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
-                    }
-                }
-                html += "</ul>";
-                $("#divQCFWXLText").html(html);
-                $(".img_QCFWXL").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-
-                if (parseInt(xml.list.length % 6) === 0)
-                    $("#divQCFWXL").css("height", parseInt(xml.list.length / 6) * 45 + "px");
-                else
-                    $("#divQCFWXL").css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
-
-                $("#divQCFWXL").css("display", "");
-                SetDuoX("QCFWXL", xl);
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
+    }
 }
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("汽车服务", "LB", "CODES_ZSJM");
+            LoadCODESByTYPENAME("汽车服务", "LB", "CODES_ZSJM", Bind, "QCFWLB", "LB", "");
         }
         if (type === "PPLS") {
             LoadCODESByTYPENAME("品牌历史", "PPLS", "CODES_ZSJM");
         }
         if (type === "TZJE") {
-            LoadCODESByTYPENAME("投资金额", "TZJE", "CODES_ZSJM");
+            LoadCODESByTYPENAME("投资金额", "TZJE", "CODES_ZSJM", Bind, "QCFWTZJE", "TZJE", "");
         }
         if (type === "QGFDS") {
             LoadCODESByTYPENAME("全国分店数", "QGFDS", "CODES_ZSJM");
