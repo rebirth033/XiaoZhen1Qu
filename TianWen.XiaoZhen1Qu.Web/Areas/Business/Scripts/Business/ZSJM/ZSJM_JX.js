@@ -1,5 +1,6 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });BindClick("LB");
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    BindClick("LB");
     BindClick("PPLS");
     BindClick("TZJE");
     BindClick("QGFDS");
@@ -8,7 +9,6 @@ $(document).ready(function () {$("body").bind("click", function () { Close("_XZQ
     BindClick("DD");
     LoadDuoX("适合人群", "SHRQ");
 });
-
 //加载多选
 function LoadDuoX(type, id) {
     $.ajax({
@@ -30,12 +30,13 @@ function LoadDuoX(type, id) {
                     }
                 }
                 if (parseInt(xml.list.length % 6) === 0)
-                    $("#div" + id).css("height", parseInt(xml.list.length / 6) * 45 + "px");
+                    $("#div" + id).css("height", parseInt(xml.list.length / 6) * 60 + "px");
                 else
-                    $("#div" + id).css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 6) + 1) * 60 + "px");
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".liJXXL").bind("click", function () { ValidateCheck("JXXL", "忘记选择小类啦"); });
                 LoadZSDQ();
             }
         },
@@ -70,6 +71,7 @@ function LoadZSDQ() {
                 html += "</ul>";
                 $("#divZSDQText").html(html);
                 $(".img_ZSDQ").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".liZSDQ").bind("click", function () { ValidateCheck("ZSDQ", "忘记选择招商地区啦"); });
                 LoadZSJM_JXJBXX();
             }
         },
@@ -82,19 +84,20 @@ function LoadZSDQ() {
 function SelectLB(obj, type, codeid) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-    PDLB(obj.innerHTML,codeid);
+    $("#divJXXL").css("display", "");
+    LoadDuoX(obj.innerHTML, "JXXL");
 }
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("机械", "LB", "CODES_ZSJM");
+            LoadCODESByTYPENAME("机械", "LB", "CODES_ZSJM", Bind, "JXLB", "LB", "");
         }
         if (type === "PPLS") {
             LoadCODESByTYPENAME("品牌历史", "PPLS", "CODES_ZSJM");
         }
         if (type === "TZJE") {
-            LoadCODESByTYPENAME("投资金额", "TZJE", "CODES_ZSJM");
+            LoadCODESByTYPENAME("投资金额", "TZJE", "CODES_ZSJM", Bind, "JXTZJE", "TZJE", "");
         }
         if (type === "QGFDS") {
             LoadCODESByTYPENAME("全国分店数", "QGFDS", "CODES_ZSJM");
