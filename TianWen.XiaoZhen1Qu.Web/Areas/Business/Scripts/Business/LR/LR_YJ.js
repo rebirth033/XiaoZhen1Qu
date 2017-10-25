@@ -1,6 +1,6 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });LoadDuoX("瑜伽", "YJLB");
-    
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    LoadDuoX("瑜伽", "YJLB");
     BindClick("LB");
     BindClick("QY");
     BindClick("DD");
@@ -33,6 +33,7 @@ function LoadDuoX(type, id) {
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".liYJLB").bind("click", function () { ValidateCheck("YJLB", "忘记选择类别啦"); });
                 LoadLR_YJJBXX();
             }
         },

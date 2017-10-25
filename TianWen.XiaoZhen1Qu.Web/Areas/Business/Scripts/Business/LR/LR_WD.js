@@ -1,6 +1,6 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });LoadDuoX("舞蹈", "WDLB");
-    
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    LoadDuoX("舞蹈", "WDLB");
     BindClick("LB");
     BindClick("QY");
     BindClick("DD");
@@ -33,6 +33,7 @@ function LoadDuoX(type, id) {
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".liWDLB").bind("click", function () { ValidateCheck("WDLB", "忘记选择类别啦"); });
                 LoadLR_WDJBXX();
             }
         },
