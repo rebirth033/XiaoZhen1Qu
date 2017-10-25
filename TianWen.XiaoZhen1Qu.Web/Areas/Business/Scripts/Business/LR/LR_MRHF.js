@@ -1,7 +1,6 @@
-﻿
-$(document).ready(function () {
-    $("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); }); LoadDuoX("美容护肤", "MRHFLB");
-    
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    LoadDuoX("美容护肤", "MRHFLB");
     BindClick("LB");
     BindClick("QY");
     BindClick("DD");
@@ -34,6 +33,7 @@ function LoadDuoX(type, id) {
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".liMRHFLB").bind("click", function () { ValidateCheck("MRHFLB", "忘记选择类别啦"); });
                 LoadLR_MRHFJBXX();
             }
         },
@@ -41,13 +41,6 @@ function LoadDuoX(type, id) {
 
         }
     });
-}
-//选择房屋配置
-function SelectMRHFLB(obj) {
-    if ($(obj).find("img").attr("src").indexOf("blue") !== -1)
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-    else
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
 }
 //绑定下拉框鼠标点击样式
 function BindClick(type) {

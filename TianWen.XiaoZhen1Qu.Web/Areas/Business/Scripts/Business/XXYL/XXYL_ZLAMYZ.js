@@ -1,6 +1,5 @@
 ﻿$(document).ready(function () {
-    $("#FWQY").bind("blur", ValidateFWQY);
-    $("#FWQY").bind("focus", InfoFWQY);
+
 });
 //验证所有
 function ValidateAll() {

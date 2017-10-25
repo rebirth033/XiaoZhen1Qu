@@ -1,7 +1,6 @@
-﻿
-$(document).ready(function () {
-    $("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); }); LoadLR_MTSSJBXX();
-    
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    LoadLR_MTSSJBXX();
     BindClick("LB");
     BindClick("QY");
     BindClick("DD");
@@ -11,7 +10,8 @@ $(document).ready(function () {
 function SelectLB(obj, type) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-    PDLB(obj.innerHTML);
+    if (type === "LB")
+        PDLB(obj.innerHTML);
 }
 //判断类别
 function PDLB(LB) {
@@ -26,10 +26,10 @@ function PDLB(LB) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("美体瘦身", "LB", "CODES_LR");
+            LoadCODESByTYPENAME("美体瘦身", "LB", "CODES_LR", Bind, "MTSSLB", "LB", "");
         }
         if (type === "FS") {
-            LoadCODESByTYPENAME("减肥方式", "FS", "CODES_LR");
+            LoadCODESByTYPENAME("减肥方式", "FS", "CODES_LR", Bind, "JFFS", "FS", "");
         }
         if (type === "QY") {
             LoadQY();
