@@ -1,6 +1,6 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });LoadDuoX("足疗按摩", "ZLAMLB");
-    
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    LoadDuoX("足疗按摩", "ZLAMLB");
     BindClick("LB");
     BindClick("QY");
     BindClick("DD");
@@ -27,13 +27,14 @@ function LoadDuoX(type, id) {
                     }
                 }
                 if (parseInt(xml.list.length % 6) === 0)
-                    $("#div" + id).css("height", parseInt(xml.list.length / 6) * 45 + "px");
+                    $("#div" + id).css("height", parseInt(xml.list.length / 6) * 60 + "px");
                 else
-                    $("#div" + id).css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 6) + 1) * 60 + "px");
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-                LoadCY_MSJBXX();
+                $(".liZLAMLB").bind("click", function () { ValidateCheck("ZLAMLB", "忘记选择类别啦"); });
+                LoadXXYL_ZLAMJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

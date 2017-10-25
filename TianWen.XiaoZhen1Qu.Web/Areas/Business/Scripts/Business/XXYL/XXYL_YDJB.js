@@ -1,6 +1,6 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });LoadXXYL_YDJBJBXX();
-    
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    LoadXXYL_YDJBJBXX();
     BindClick("LB");
     BindClick("QY");
     BindClick("DD");
@@ -10,7 +10,7 @@ $(document).ready(function () {$("body").bind("click", function () { Close("_XZQ
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("夜店酒吧", "LB", "CODES_XXYL");
+            LoadCODESByTYPENAME("夜店酒吧", "LB", "CODES_XXYL", Bind, "YDJBLB", "LB", "");
         }
         if (type === "QY") {
             LoadQY();

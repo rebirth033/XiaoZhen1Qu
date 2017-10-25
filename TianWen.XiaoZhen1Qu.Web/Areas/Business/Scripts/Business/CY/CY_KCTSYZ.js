@@ -38,31 +38,10 @@ function ValidateRJXF() {
         }
     }
 }
-//验证服务区域 
-function ValidateFWQY() {
-    if ($("#FWQY").val() === "" || $("#FWQY").val() === null) {
-        $("#divFWQYTip").css("display", "block");
-        $("#divFWQYTip").attr("class", "Warn");
-        $("#divFWQYTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写服务区域啦');
-        $("#FWQY").css("border-color", "#fd634f");
-        return false;
-    } else {
-        $("#divFWQYTip").css("display", "none");
-        $("#FWQY").css("border-color", "#cccccc");
-        return true;
-    }
-}
 //提示人均消费
 function InfoRJXF() {
     $("#divRJXFTip").css("display", "block");
     $("#divRJXFTip").attr("class", "Info");
     $("#divRJXFTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数，面议则填0');
     $("#spanRJXF").css("border-color", "#5bc0de");
-}
-//提示服务区域
-function InfoFWQY() {
-    $("#divFWQYTip").css("display", "block");
-    $("#divFWQYTip").attr("class", "Info");
-    $("#divFWQYTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数，面议则填0');
-    $("#FWQY").css("border-color", "#5bc0de");
 }
