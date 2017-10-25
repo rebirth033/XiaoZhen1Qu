@@ -6,6 +6,10 @@
     $("#LXDH").bind("blur", ValidateLXDH);
     $("#LXDH").bind("focus", InfoLXDH);
     $("#BCMS").bind("focus", InfoBCMS);
+    $("#JTDZ").bind("blur", ValidateJTDZ);
+    $("#JTDZ").bind("focus", InfoJTDZ);
+    $("#JG").bind("blur", ValidateJG);
+    $("#JG").bind("focus", InfoJG);
 });
 
 //验证标题
@@ -123,6 +127,7 @@ function ValidateJTDZ() {
         return false;
     } else {
         $("#divSZQYTip").css("display", "none");
+        $("#JTDZ").css("border-color", "#cccccc");
         return true;
     }
 }
@@ -250,4 +255,11 @@ function InfoFWQY() {
     $("#divFWQYTip").attr("class", "Info");
     $("#divFWQYTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写服务区域');
     $("#FWQY").css("border-color", "#5bc0de");
+}
+//提示具体地址
+function InfoJTDZ() {
+    $("#divSZQYTip").css("display", "block");
+    $("#divSZQYTip").attr("class", "Info");
+    $("#divSZQYTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写具体地址');
+    $("#JTDZ").css("border-color", "#5bc0de");
 }
