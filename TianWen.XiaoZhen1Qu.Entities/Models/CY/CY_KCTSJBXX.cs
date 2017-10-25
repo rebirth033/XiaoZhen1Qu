@@ -56,7 +56,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// 交易具体地址
         /// </summary>
         [Property]
-        public virtual string JYJTDZ { get; set; }
+        public virtual string JTDZ { get; set; }
 
         /// <summary>
         /// 推荐菜

@@ -1,24 +1,10 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });LoadDuoX("快餐/团膳", "KCTSLB");
-    
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    LoadDuoX("快餐/团膳", "KCTSLB");
     BindClick("LB");
     BindClick("QY");
     BindClick("DD");
 });
-//描述框focus
-function BCMSFocus() {
-    $("#BCMS").css("color", "#333333");
-}
-//描述框blur
-function BCMSBlur() {
-    $("#BCMS").css("color", "#999999");
-}
-//描述框设默认文本
-function BCMSSetDefault() {
-    var BCMS = "1.房屋特征：\r\n\r\n2.周边配套：\r\n\r\n3.房东心态：";
-    $("#BCMS").html(BCMS);
-}
-
 //加载多选
 function LoadDuoX(type, id) {
     $.ajax({
@@ -40,12 +26,13 @@ function LoadDuoX(type, id) {
                     }
                 }
                 if (parseInt(xml.list.length % 6) === 0)
-                    $("#div" + id).css("height", parseInt(xml.list.length / 6) * 45 + "px");
+                    $("#div" + id).css("height", parseInt(xml.list.length / 6) * 60 + "px");
                 else
-                    $("#div" + id).css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 6) + 1) * 60 + "px");
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".liKCTSLB").bind("click", function () { ValidateCheck("KCTSLB", "忘记选择类别啦"); });
                 LoadCY_KCTSJBXX();
             }
         },
@@ -53,13 +40,6 @@ function LoadDuoX(type, id) {
 
         }
     });
-}
-//选择房屋配置
-function SelectKCTSLB(obj) {
-    if ($(obj).find("img").attr("src").indexOf("blue") !== -1)
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-    else
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
 }
 //绑定下拉框鼠标点击样式
 function BindClick(type) {

@@ -1,11 +1,6 @@
-﻿
-$(document).ready(function () {
-    $("#YXQZ").datepicker({ minDate: 0 });$("body").bind("click", function () { Close("_XZQ");});
-
-
-
-
-    
+﻿$(document).ready(function () {
+    $("#YXQZ").datepicker({ minDate: 0 });
+    $("body").bind("click", function () { Close("_XZQ"); });
     LoadPWKQ_QTKQJBXX();
     BindClick("LB");
     BindClick("XJ");
@@ -16,9 +11,6 @@ $(document).ready(function () {
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadLB();
-        }
         if (type === "QY") {
             LoadQY();
         }

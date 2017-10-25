@@ -2,7 +2,18 @@
     $("#RJXF").bind("blur", ValidateRJXF);
     $("#RJXF").bind("focus", InfoRJXF);
 });
-//验证售价
+//验证所有
+function ValidateAll() {
+    if (ValidateCheck("MSLB", "忘记选择类别啦")
+        & ValidateRJXF()
+        & ValidateBCMS("BCMS", "忘记填写补充描述啦")
+        & ValidateXXDZ()
+        & ValidateCommon())
+        return true;
+    else
+        return false;
+}
+//验证人均消费
 function ValidateRJXF() {
     if ($("#RJXF").val() === "" || $("#RJXF").val() === null) {
         $("#divRJXFTip").css("display", "block");
@@ -24,17 +35,10 @@ function ValidateRJXF() {
         }
     }
 }
-
-//验证所有
-function ValidateAll() {
-    if (ValidateRJXF() & ValidateBT() & ValidateZP() & ValidateLXR() & ValidateLXDH())
-        return true;
-    else
-        return false;
-}
-//提示价格
+//提示人均消费
 function InfoRJXF() {
     $("#divRJXFTip").css("display", "block");
     $("#divRJXFTip").attr("class", "Info");
     $("#divRJXFTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数，面议则填0');
+    $("#spanRJXF").css("border-color", "#5bc0de");
 }
