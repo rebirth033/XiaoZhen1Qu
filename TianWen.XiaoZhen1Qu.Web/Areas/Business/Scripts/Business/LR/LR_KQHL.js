@@ -1,7 +1,6 @@
-﻿
-$(document).ready(function () {
-    $("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); }); LoadLR_KQHLJBXX();
-    
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    LoadLR_KQHLJBXX();
     BindClick("LB");
     BindClick("QY");
     BindClick("DD");
@@ -11,7 +10,7 @@ $(document).ready(function () {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("口腔护理", "LB", "CODES_LR");
+            LoadCODESByTYPENAME("口腔护理", "LB", "CODES_LR", Bind, "KQHLLB", "LB", "");
         }
         if (type === "QY") {
             LoadQY();

@@ -1,5 +1,6 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });BindClick("LB");
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    BindClick("LB");
     BindClick("PPLS");
     BindClick("TZJE");
     BindClick("QGFDS");
@@ -8,7 +9,6 @@ $(document).ready(function () {$("body").bind("click", function () { Close("_XZQ
     BindClick("DD");
     LoadDuoX("适合人群", "SHRQ");
 });
-
 //加载多选
 function LoadDuoX(type, id) {
     $.ajax({
@@ -24,18 +24,19 @@ function LoadDuoX(type, id) {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='li" + id + "' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i === 5 || i === 11 || i === 17 || i === 23 || i === 29) {
+                    html += "<li class='li" + id + "' style='width:120px' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    if (i % 5 === 4) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
                 }
-                if (parseInt(xml.list.length % 6) === 0)
-                    $("#div" + id).css("height", parseInt(xml.list.length / 6) * 45 + "px");
+                if (parseInt(xml.list.length % 5) === 0)
+                    $("#div" + id).css("height", parseInt(xml.list.length / 5) * 60 + "px");
                 else
-                    $("#div" + id).css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 5) + 1) * 60 + "px");
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".liJJHBXL").bind("click", function () { ValidateCheck("JJHBXL", "忘记选择小类啦"); });
                 LoadZSDQ();
             }
         },
@@ -59,7 +60,7 @@ function LoadZSDQ() {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='liZSDQ' onclick='SelectDuoX(this)'><img class='img_ZSDQ'/><label style='font-weight:normal;'>" + xml.list[i].NAME + "</label></li>";
-                    if (i === 5 || i === 11 || i === 17 || i === 23 || i === 29) {
+                    if (i % 6 === 5) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
                 }
@@ -70,6 +71,7 @@ function LoadZSDQ() {
                 html += "</ul>";
                 $("#divZSDQText").html(html);
                 $(".img_ZSDQ").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".liZSDQ").bind("click", function () { ValidateCheck("ZSDQ", "忘记选择招商地区啦"); });
                 LoadZSJM_JJHBJBXX();
             }
         },
@@ -82,14 +84,18 @@ function LoadZSDQ() {
 function SelectLB(obj, type, codeid) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-    PDLB(obj.innerHTML, codeid);
+    if (type === "LB")
+        PDLB(obj.innerHTML, codeid);
 }
 //判断类别
 function PDLB(name, codeid) {
-    if ((name.indexOf("家纺床品") !== -1 || name.indexOf("窗帘布艺") !== -1 || name.indexOf("家具") !== -1 || name.indexOf("清洁环保") !== -1))
-        LoadJJHBXL(codeid);
-    else
+    if ((name.indexOf("家纺床品") !== -1 || name.indexOf("窗帘布艺") !== -1 || name.indexOf("家具") !== -1 || name.indexOf("清洁环保") !== -1)) {
+        $("#divJJHBXL").css("display", "");
+        LoadDuoX(name, "JJHBXL");
+    }
+    else {
         $("#divJJHBXL").css("display", "none");
+    }
 }
 //加载家居环保小类
 function LoadJJHBXL(codeid) {
@@ -132,13 +138,13 @@ function LoadJJHBXL(codeid) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("家居环保", "LB", "CODES_ZSJM");
+            LoadCODESByTYPENAME("家居环保", "LB", "CODES_ZSJM", Bind, "JJHBLB", "LB", "");
         }
         if (type === "PPLS") {
             LoadCODESByTYPENAME("品牌历史", "PPLS", "CODES_ZSJM");
         }
         if (type === "TZJE") {
-            LoadCODESByTYPENAME("投资金额", "TZJE", "CODES_ZSJM");
+            LoadCODESByTYPENAME("投资金额", "TZJE", "CODES_ZSJM", Bind, "JJHBTZJE", "TZJE", "");
         }
         if (type === "QGFDS") {
             LoadCODESByTYPENAME("全国分店数", "QGFDS", "CODES_ZSJM");

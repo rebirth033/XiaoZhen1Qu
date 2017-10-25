@@ -1,6 +1,6 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });LoadXXYL_DIYSGFJBXX();
-    
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    LoadXXYL_DIYSGFJBXX();
     BindClick("LB");
     BindClick("QY");
     BindClick("DD");
@@ -10,7 +10,7 @@ $(document).ready(function () {$("body").bind("click", function () { Close("_XZQ
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("DIY手工坊", "LB", "CODES_XXYL");
+            LoadCODESByTYPENAME("DIY手工坊", "LB", "CODES_XXYL", Bind, "DIYSGFLB", "LB", "");
         }
         if (type === "QY") {
             LoadQY();

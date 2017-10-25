@@ -1,12 +1,10 @@
-﻿
-$(document).ready(function () {
-    $("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); }); LoadDuoX("美发护发", "MFHFLB");
-    
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    LoadDuoX("美发护发", "MFHFLB");
     BindClick("LB");
     BindClick("QY");
     BindClick("DD");
 });
-
 //加载多选
 function LoadDuoX(type, id) {
     $.ajax({
@@ -23,7 +21,7 @@ function LoadDuoX(type, id) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='li" + id + "' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i === 5 || i === 11 || i === 17 || i === 23 || i === 29) {
+                    if (i === 3 || i === 7) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
                 }
@@ -34,6 +32,7 @@ function LoadDuoX(type, id) {
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".liMFHFLB").bind("click", function () { ValidateCheck("MFHFLB", "忘记选择类别啦"); });
                 LoadLR_MFHFJBXX();
             }
         },

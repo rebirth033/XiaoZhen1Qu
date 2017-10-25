@@ -1,21 +1,15 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });LoadPFCG_SPJBXX();
-    
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    LoadPFCG_SPJBXX();
     BindClick("LB");
     BindClick("QY");
     BindClick("DD");
 });
-
-//选择类别下拉框
-function SelectLB(obj, type) {
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
-}
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("食品", "LB", "CODES_PFCG");
+            LoadCODESByTYPENAME("食品", "LB", "CODES_PFCG", Bind, "SPLB", "LB", "");
         }
         if (type === "QY") {
             LoadQY();

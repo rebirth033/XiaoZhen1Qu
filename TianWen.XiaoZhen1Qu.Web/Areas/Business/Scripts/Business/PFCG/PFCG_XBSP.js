@@ -1,11 +1,10 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });LoadPFCG_XBSPJBXX();
-    
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    LoadPFCG_XBSPJBXX();
     BindClick("LB");
     BindClick("QY");
     BindClick("DD");
 });
-
 //加载小类
 function LoadXL() {
     $.ajax({
@@ -19,13 +18,17 @@ function LoadXL() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                var html = "<ul class='ul_select' style='overflow-y: scroll;'>";
+                var height = 341;
+                if (xml.list.length < 10)
+                    height = parseInt(xml.list.length * 34) + 1;
+                var html = "<ul class='ul_select' style='overflow-y: scroll; height:" + height + "px'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='li_select' onclick='SelectDropdown(this,\"XL\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
                 }
                 html += "</ul>";
                 $("#divXL").html(html);
                 $("#divXL").css("display", "block");
+                Bind("OUTLB", "XL", "");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -52,7 +55,7 @@ function SelectLB(obj, type, id) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("箱包/饰品", "LB", "CODES_PFCG");
+            LoadCODESByTYPENAME("箱包/饰品", "LB", "CODES_PFCG", Bind, "OUTLB", "LB", "");
         }
         if (type === "XL") {
             LoadXL();

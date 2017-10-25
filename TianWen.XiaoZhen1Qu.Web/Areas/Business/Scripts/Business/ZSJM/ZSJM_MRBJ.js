@@ -1,5 +1,6 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });BindClick("LB");
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    BindClick("LB");
     BindClick("PPLS");
     BindClick("TZJE");
     BindClick("QGFDS");
@@ -8,7 +9,6 @@ $(document).ready(function () {$("body").bind("click", function () { Close("_XZQ
     BindClick("DD");
     LoadDuoX("适合人群", "SHRQ");
 });
-
 //加载多选
 function LoadDuoX(type, id) {
     $.ajax({
@@ -30,12 +30,13 @@ function LoadDuoX(type, id) {
                     }
                 }
                 if (parseInt(xml.list.length % 6) === 0)
-                    $("#div" + id).css("height", parseInt(xml.list.length / 6) * 45 + "px");
+                    $("#div" + id).css("height", parseInt(xml.list.length / 6) * 60 + "px");
                 else
-                    $("#div" + id).css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 6) + 1) * 60 + "px");
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".liMRBJXL").bind("click", function () { ValidateCheck("MRBJXL", "忘记选择小类啦"); });
                 LoadZSDQ();
             }
         },
@@ -70,6 +71,7 @@ function LoadZSDQ() {
                 html += "</ul>";
                 $("#divZSDQText").html(html);
                 $(".img_ZSDQ").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".liZSDQ").bind("click", function () { ValidateCheck("ZSDQ", "忘记选择招商地区啦"); });
                 LoadZSJM_MRBJJBXX();
             }
         },
@@ -82,61 +84,30 @@ function LoadZSDQ() {
 function SelectLB(obj, type, codeid) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-    PDLB(obj.innerHTML, codeid);
+    if (type === "LB")
+        PDLB(obj.innerHTML, codeid);
 }
 //判断类别
 function PDLB(name, codeid) {
-    if (name.indexOf("化妆品") !== -1 || name.indexOf("美容SPA") !== -1 || name.indexOf("养生保健") !== -1)
-        LoadMRBJXL(codeid);
-}
-//加载美容保健小类
-function LoadMRBJXL(codeid) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadByParentID",
-        dataType: "json",
-        data:
-        {
-            ParentID: codeid,
-            TBName: "CODES_ZSJM"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='ulFWPZ'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liMRBJXL' onclick='SelectDuoX(this)'><img class='img_MRBJXL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i === 5 || i === 11 || i === 17 || i === 23 || i === 29) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
-                    }
-                }
-                html += "</ul>";
-                $("#divMRBJXLText").html(html);
-                $(".img_MRBJXL").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-
-                if (parseInt(xml.list.length % 6) === 0)
-                    $("#divMRBJXL").css("height", parseInt(xml.list.length / 6) * 45 + "px");
-                else
-                    $("#divMRBJXL").css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
-
-                $("#divMRBJXL").css("display", "");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
+    if (name.indexOf("化妆品") !== -1 || name.indexOf("美容SPA") !== -1 || name.indexOf("养生保健") !== -1) {
+        $("#divMRBJXL").css("display", "");
+        LoadDuoX(name, "MRBJXL");
+    }
+    else {
+        $("#divMRBJXL").css("display", "none");
+    }
 }
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("美容保健", "LB", "CODES_ZSJM");
+            LoadCODESByTYPENAME("美容保健", "LB", "CODES_ZSJM", Bind, "MRBJLB", "LB", "");
         }
         if (type === "PPLS") {
             LoadCODESByTYPENAME("品牌历史", "PPLS", "CODES_ZSJM");
         }
         if (type === "TZJE") {
-            LoadCODESByTYPENAME("投资金额", "TZJE", "CODES_ZSJM");
+            LoadCODESByTYPENAME("投资金额", "TZJE", "CODES_ZSJM", Bind, "MRBJTZJE", "TZJE", "");
         }
         if (type === "QGFDS") {
             LoadCODESByTYPENAME("全国分店数", "QGFDS", "CODES_ZSJM");

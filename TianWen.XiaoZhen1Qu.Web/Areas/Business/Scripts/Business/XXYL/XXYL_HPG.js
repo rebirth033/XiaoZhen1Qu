@@ -1,12 +1,11 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });LoadDuoX("室内设备", "SNSB");
-    
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    LoadDuoX("室内设备", "SNSB");
     BindClick("LB");
     BindClick("KRNRS");
     BindClick("QY");
     BindClick("DD");
 });
-
 //加载多选
 function LoadDuoX(type, id) {
     $.ajax({
@@ -23,7 +22,7 @@ function LoadDuoX(type, id) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='li" + id + "' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i === 5 || i === 11 || i === 17 || i === 23 || i === 29) {
+                    if (i === 3 || i === 7) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
                 }
@@ -34,6 +33,7 @@ function LoadDuoX(type, id) {
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".liSNSB").bind("click", function () { ValidateCheck("SNSB", "忘记选择室内设备啦"); });
                 LoadXXYL_HPGJBXX();
             }
         },
@@ -42,18 +42,11 @@ function LoadDuoX(type, id) {
         }
     });
 }
-//选择房屋配置
-function SelectSNSBLB(obj) {
-    if ($(obj).find("img").attr("src").indexOf("blue") !== -1)
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-    else
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
-}
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "KRNRS") {
-            LoadCODESByTYPENAME("可容纳人数", "KRNRS", "CODES_XXYL");
+            LoadCODESByTYPENAME("可容纳人数", "KRNRS", "CODES_XXYL", Bind, "HPGKRNRS", "KRNRS", "");
         }
         if (type === "QY") {
             LoadQY();

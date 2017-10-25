@@ -1,5 +1,6 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });BindClick("LB");
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    BindClick("LB");
     BindClick("PPLS");
     BindClick("TZJE");
     BindClick("QGFDS");
@@ -8,7 +9,6 @@ $(document).ready(function () {$("body").bind("click", function () { Close("_XZQ
     BindClick("DD");
     LoadDuoX("适合人群", "SHRQ");
 });
-
 //加载多选
 function LoadDuoX(type, id) {
     $.ajax({
@@ -25,7 +25,7 @@ function LoadDuoX(type, id) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='li" + id + "' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i === 5 || i === 11 || i === 17 || i === 23 || i === 29) {
+                    if (i % 6 === 5) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
                 }
@@ -36,6 +36,7 @@ function LoadDuoX(type, id) {
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".liSHFWXL").bind("click", function () { ValidateCheck("SHFWXL", "忘记选择小类啦"); });
                 LoadZSDQ();
             }
         },
@@ -59,7 +60,7 @@ function LoadZSDQ() {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='liZSDQ' onclick='SelectDuoX(this)'><img class='img_ZSDQ'/><label style='font-weight:normal;'>" + xml.list[i].NAME + "</label></li>";
-                    if (i === 5 || i === 11 || i === 17 || i === 23 || i === 29) {
+                    if (i % 6 === 5) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
                 }
@@ -70,6 +71,7 @@ function LoadZSDQ() {
                 html += "</ul>";
                 $("#divZSDQText").html(html);
                 $(".img_ZSDQ").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".liZSDQ").bind("click", function () { ValidateCheck("ZSDQ", "忘记选择招商地区啦"); });
                 LoadZSJM_SHFWJBXX();
             }
         },
@@ -78,58 +80,8 @@ function LoadZSDQ() {
         }
     });
 }
-//选择类别下拉框
-function SelectLB(obj, type, codeid) {
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
-    PDLB(obj.innerHTML, codeid);
-}
-//判断类别
-function PDLB(name, codeid) {
-    if (name.indexOf("快递物流") !== -1 || name.indexOf("旅游/票务") !== -1 || name.indexOf("零售业") !== -1)
-        LoadSHFWXL(codeid);
-    if (name.indexOf("干洗") !== -1 || name.indexOf("皮革/奢饰品护理") !== -1 || name.indexOf("家政服务") !== -1 || name.indexOf("酒店") !== -1 || name.indexOf("婚庆") !== -1 || name.indexOf("娱乐场所") !== -1)
-        $("#divSHFWXL").css("display", "none");
-}
 //加载生活服务小类
-function LoadSHFWXL(codeid) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadByParentID",
-        dataType: "json",
-        data:
-        {
-            ParentID: codeid,
-            TBName: "CODES_ZSJM"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='ulFWPZ'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liSHFWXL' onclick='SelectDuoX(this)'><img class='img_SHFWXL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i === 5 || i === 11 || i === 17 || i === 23 || i === 29) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
-                    }
-                }
-                html += "</ul>";
-                $("#divSHFWXLText").html(html);
-                $(".img_SHFWXL").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-
-                if (parseInt(xml.list.length % 6) === 0)
-                    $("#divSHFWXL").css("height", parseInt(xml.list.length / 6) * 45 + "px");
-                else
-                    $("#divSHFWXL").css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
-
-                $("#divSHFWXL").css("display", "");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载生活服务小类
-function LoadSHFWXLByName(name, xl) {
+function LoadXLByTypeName(id, name, xl) {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
@@ -143,22 +95,22 @@ function LoadSHFWXLByName(name, xl) {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liSHFWXL' onclick='SelectDuoX(this)'><img class='img_SHFWXL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    html += "<li class='li" + id + "XL' onclick='SelectDuoX(this)'><img class='img_" + id + "XL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i === 5 || i === 11 || i === 17 || i === 23 || i === 29) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
                 }
                 html += "</ul>";
-                $("#divSHFWXLText").html(html);
-                $(".img_SHFWXL").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $("#div" + id + "XLText").html(html);
+                $(".img_" + id + "XL").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
 
                 if (parseInt(xml.list.length % 6) === 0)
-                    $("#divSHFWXL").css("height", parseInt(xml.list.length / 6) * 45 + "px");
+                    $("#div" + id + "XL").css("height", parseInt(xml.list.length / 6) * 45 + "px");
                 else
-                    $("#divSHFWXL").css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
+                    $("#div" + id + "XL").css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
 
-                $("#divSHFWXL").css("display", "");
-                SetDuoX("SHFWXL");
+                $("#div" + id + "XL").css("display", "");
+                SetDuoX(id + "XL", xl);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -166,17 +118,34 @@ function LoadSHFWXLByName(name, xl) {
         }
     });
 }
+//选择类别下拉框
+function SelectLB(obj, type, codeid) {
+    $("#span" + type).html(obj.innerHTML);
+    $("#div" + type).css("display", "none");
+    if (type === "LB")
+        PDLB(obj.innerHTML, codeid);
+}
+//判断类别
+function PDLB(name, codeid) {
+    if (name.indexOf("快递物流") !== -1 || name.indexOf("旅游/票务") !== -1 || name.indexOf("零售业") !== -1) {
+        $("#divSHFWXL").css("display", "");
+        LoadDuoX(name, "SHFWXL");
+    }
+    else {
+        $("#divSHFWXL").css("display", "none");
+    }
+}
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("生活服务", "LB", "CODES_ZSJM");
+            LoadCODESByTYPENAME("生活服务", "LB", "CODES_ZSJM", Bind, "SHFWLB", "LB", "");
         }
         if (type === "PPLS") {
             LoadCODESByTYPENAME("品牌历史", "PPLS", "CODES_ZSJM");
         }
         if (type === "TZJE") {
-            LoadCODESByTYPENAME("投资金额", "TZJE", "CODES_ZSJM");
+            LoadCODESByTYPENAME("投资金额", "TZJE", "CODES_ZSJM", Bind, "SHFWTZJE", "TZJE", "");
         }
         if (type === "QGFDS") {
             LoadCODESByTYPENAME("全国分店数", "QGFDS", "CODES_ZSJM");
@@ -226,7 +195,7 @@ function LoadZSJM_SHFWJBXX() {
                 if (xml.Value.ZSJM_SHFWJBXX.ZSDQ !== null)
                     SetDuoX("ZSDQ", xml.Value.ZSJM_SHFWJBXX.ZSDQ);
                 if (xml.Value.ZSJM_SHFWJBXX.LB.indexOf("快递物流") !== -1 || xml.Value.ZSJM_SHFWJBXX.LB.indexOf("旅游/票务") !== -1 || xml.Value.ZSJM_SHFWJBXX.LB.indexOf("零售业") !== -1) {
-                    LoadSHFWXLByName(xml.Value.ZSJM_SHFWJBXX.LB, xml.Value.ZSJM_SHFWJBXX.XL);
+                    LoadXLByTypeName("SHFW", xml.Value.ZSJM_SHFWJBXX.LB, xml.Value.ZSJM_SHFWJBXX.XL);
                 }
             }
         },
