@@ -9,7 +9,6 @@
     BindClick("DD");
     LoadDuoX("适合人群", "SHRQ");
 });
-
 //加载多选
 function LoadDuoX(type, id) {
     $.ajax({
@@ -92,6 +91,9 @@ function PDLB(name, codeid) {
     if (name.indexOf("化妆品") !== -1 || name.indexOf("美容SPA") !== -1 || name.indexOf("养生保健") !== -1) {
         $("#divMRBJXL").css("display", "");
         LoadDuoX(name, "MRBJXL");
+    }
+    else {
+        $("#divMRBJXL").css("display", "none");
     }
 }
 //绑定下拉框鼠标点击样式
