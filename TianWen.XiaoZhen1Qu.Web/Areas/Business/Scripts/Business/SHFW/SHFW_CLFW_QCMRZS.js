@@ -9,22 +9,22 @@ $(document).ready(function () {$("body").bind("click", function () { Close("_XZQ
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("汽车美容/装饰", "LB", "CODES_SHFW");
+            LoadCODESByTYPENAME("汽车美容/装饰", "LB", "CODES_SHFW", Bind, "OUTLB", "LB", "");
         }
         if (type === "XCDD") {
-            LoadCODESByTYPENAME("洗车地点", "XCDD", "CODES_SHFW");
+            LoadCODESByTYPENAME("洗车地点", "XCDD", "CODES_SHFW", Bind, "QCMRZSXCDD", "XCDD", "");
         }
         if (type === "XCFS") {
-            LoadCODESByTYPENAME("洗车方式", "XCFS", "CODES_SHFW");
+            LoadCODESByTYPENAME("洗车方式", "XCFS", "CODES_SHFW", Bind, "QCMRZSXCFS", "XCFS", "");
         }
         if (type === "PP") {
-            LoadCODESByTYPENAME($("#spanLB").html(), "PP", "CODES_SHFW");
+            LoadCODESByTYPENAME($("#spanLB").html(), "PP", "CODES_SHFW", Bind, "QCMRZSPP", "PP", "");
         }
         if (type === "PZ") {
-            LoadCODESByTYPENAME("打蜡品种", "PZ", "CODES_SHFW");
+            LoadCODESByTYPENAME("打蜡品种", "PZ", "CODES_SHFW", Bind, "QCMRZSPZ", "PZ", "");
         }
         if (type === "TMFW") {
-            LoadCODESByTYPENAME("贴膜范围", "TMFW", "CODES_SHFW");
+            LoadCODESByTYPENAME("贴膜范围", "TMFW", "CODES_SHFW", Bind, "QCMRZSTMFW", "TMFW", "");
         }
         if (type === "QY") {
             LoadQY();

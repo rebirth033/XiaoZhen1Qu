@@ -1,9 +1,9 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });BindClick("QY");
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    BindClick("QY");
     BindClick("DD");
     LoadJZ();
 });
-
 //加载驾照
 function LoadJZ() {
     $.ajax({
@@ -19,18 +19,20 @@ function LoadJZ() {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liJZ' onclick='SelectDuoX(this)'><img class='img_JZ'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i === 2 || i === 5 || i === 8 || i === 11 || i === 14) {
+                    html += "<li class='liJZ' style='width:220px;' onclick='SelectDuoX(this)'><img class='img_JZ'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    if (i % 3 === 2) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 3) === 0)
-                    $("#divJZ").css("height", parseInt(xml.list.length / 3) * 45 + "px");
+                    $("#divJZ").css("height", parseInt(xml.list.length / 3) * 50 + "px");
                 else
-                    $("#divJZ").css("height", (parseInt(xml.list.length / 3) + 1) * 45 + "px");
+                    $("#divJZ").css("height", (parseInt(xml.list.length / 3) + 1) * 50 + "px");
                 html += "</ul>";
                 $("#divJZText").html(html);
                 $(".img_JZ").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".liJZ").bind("click", function () { ValidateCheck("JZ", "忘记选择驾照啦"); });
+                $(".liJZ:last").css("width", "300px");
                 LoadBB();
             }
         },
@@ -54,18 +56,19 @@ function LoadBB() {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liBB' onclick='SelectDuoX(this)'><img class='img_BB'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i === 3 || i === 7 || i === 11 || i === 15 || i === 19) {
+                    html += "<li class='liBB' style='width:150px;' onclick='SelectDuoX(this)'><img class='img_BB'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    if (i % 4 === 3) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 4) === 0)
-                    $("#divBB").css("height", parseInt(xml.list.length / 4) * 45 + "px");
+                    $("#divBB").css("height", parseInt(xml.list.length / 4) * 60 + "px");
                 else
-                    $("#divBB").css("height", (parseInt(xml.list.length / 4) + 1) * 45 + "px");
+                    $("#divBB").css("height", (parseInt(xml.list.length / 4) + 1) * 60 + "px");
                 html += "</ul>";
                 $("#divBBText").html(html);
                 $(".img_BB").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".liBB").bind("click", function () { ValidateCheck("BB", "忘记选择班别啦"); });
                 LoadSHFW_CLFW_JXJBXX();
             }
         },
@@ -109,7 +112,7 @@ function LoadSHFW_CLFW_JXJBXX() {
                 $("#spanQY").html(xml.Value.SHFW_CLFW_JXJBXX.QY);
                 $("#spanDD").html(xml.Value.SHFW_CLFW_JXJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
-                SetDX("LB", xml.Value.SHFW_CLFW_JXJBXX.LB);
+                SetDX("OUTLB", xml.Value.SHFW_CLFW_JXJBXX.LB);
                 SetDuoX("JZ", xml.Value.SHFW_CLFW_JXJBXX.JZ);
                 SetDuoX("BB", xml.Value.SHFW_CLFW_JXJBXX.BB);
             }
@@ -127,7 +130,7 @@ function FB() {
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
-    obj = jsonObj.AddJson(obj, "LB", "'" + GetDX("LB") + "'");
+    obj = jsonObj.AddJson(obj, "LB", "'" + GetDX("OUTLB") + "'");
     obj = jsonObj.AddJson(obj, "JZ", "'" + GetDuoX("JZ") + "'");
     obj = jsonObj.AddJson(obj, "BB", "'" + GetDuoX("BB") + "'");
 

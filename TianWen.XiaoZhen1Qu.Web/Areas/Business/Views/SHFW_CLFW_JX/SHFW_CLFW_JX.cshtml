@@ -89,19 +89,20 @@
                     <div id="divBTTip"></div>
                 </div>
             </div>
-            <div id="divLB" class="div_row">
+            <div id="divOUTLB" class="div_row">
                 <div class="div_row_left" style="margin-left: 128px;">
                     <span class="span_required">*</span>
                     <span class="spanFWCZ">类别</span>
                 </div>
                 <div class="div_row_right">
                     <div class="div_radio" id="div_lb_jxzs">
-                        <img class="img_radio" id="img_lb_jxzs" /><label class="label_radio">驾校招生</label>
+                        <img class="img_radio" id="img_lb_jxzs"/><label class="label_radio">驾校招生</label>
                     </div>
                     <div class="div_radio" id="div_lb_jlzs">
-                        <img class="img_radio" id="img_lb_jlzs" /><label class="label_radio">教练招生</label>
+                        <img class="img_radio" id="img_lb_jlzs"/><label class="label_radio">教练招生</label>
                     </div>
                 </div>
+                <div id="divOUTLBTip"></div>
             </div>
             <div id="divJZ" class="div_row" style="z-index: 993;">
                 <div class="div_row_left" style="margin-left: 128px;">
@@ -110,6 +111,7 @@
                 </div>
                 <div id="divJZText" class="div_row_right" style="position: relative;">
                 </div>
+                <div id="divJZTip"></div>
             </div>
             <div id="divBB" class="div_row" style="z-index: 993;">
                 <div class="div_row_left" style="margin-left: 128px;">
@@ -118,6 +120,7 @@
                 </div>
                 <div id="divBBText" class="div_row_right" style="position: relative;">
                 </div>
+                <div id="divBBTip"></div>
             </div>
             <div id="divXXXX" class="div_split" style="display: block; text-align: left;">
                 <span class="span_split">服务描述</span>
@@ -177,16 +180,16 @@
                     <span class="spanFWCZ">详细地址</span>
                 </div>
                 <div class="div_row_right">
-                    <div id="divQYText" class="div_select_out SRK" style="z-index: 997; ">
+                    <div id="divQYText" class="div_select_out SRK" style="z-index: 997;">
                         <div id="divQYSpan" class="div_select_in" style="border: none; margin-top: 6px;">
-                            <input type="hidden" id="QYCode" />
+                            <input type="hidden" id="QYCode"/>
                             <span id="spanQY" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择区域</span>
                             <div class="span_select_arrow"></div>
                         </div>
                         <div id="divQY" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
                         </div>
                     </div>
-                    <div id="divDDText" class="div_select_out SRK" style="z-index: 997; ">
+                    <div id="divDDText" class="div_select_out SRK" style="z-index: 997;">
                         <div id="divDDSpan" class="div_select_in" style="border: none; margin-top: 6px;">
                             <span id="spanDD" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择地段</span>
                             <div class="span_select_arrow"></div>
@@ -194,8 +197,9 @@
                         <div id="divDD" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
                         </div>
                     </div>
-                    <input id="JTDZ" column="JTDZ" class="span_spaninput input_input SRK" type="text" placeholder="请填写具体地址" style="width: 300px" />
+                    <input id="JTDZ" column="JTDZ" class="span_spaninput input_input SRK" type="text" placeholder="请填写具体地址" style="width: 300px"/>
                 </div>
+                <div id="divSZQYTip"></div>
             </div>
             <div id="divLXR" class="div_row" style="z-index: 990">
                 <div class="div_row_left" style="margin-left: 114px;">

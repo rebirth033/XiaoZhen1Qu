@@ -1,5 +1,6 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });LoadSHFW_CLFW_QCWXBYJBXX();
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    LoadSHFW_CLFW_QCWXBYJBXX();
     BindClick("LB");
     BindClick("QY");
     BindClick("DD");
@@ -9,7 +10,7 @@ $(document).ready(function () {$("body").bind("click", function () { Close("_XZQ
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("汽车维修/保养", "LB", "CODES_SHFW");
+            LoadCODESByTYPENAME("汽车维修/保养", "LB", "CODES_SHFW", Bind, "OUTLB", "LB", "");
         }
         if (type === "QY") {
             LoadQY();
