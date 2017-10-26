@@ -1,9 +1,6 @@
-﻿
-
-:-ms-input-placeholder {
+﻿:-ms-input-placeholder {
     color: #999;
 }
-
 
 .div_bqss {
     margin-top: -7px;
@@ -15,6 +12,7 @@
     box-shadow: 0px 0px 8px #888;
     border-radius: 4px;
     padding: 6px 10px;
+    float: left;
 }
 
 .span_jzlb {
@@ -28,9 +26,9 @@
     cursor: pointer;
 }
 
-.span_jzlb:hover {
-    color: #fd634f;
-}
+    .span_jzlb:hover {
+        color: #fd634f;
+    }
 
 
 .div_gzcs_xzk {
@@ -50,25 +48,25 @@
     font-weight: normal;
 }
 
-.table_jzsj th {
-    background-color: #f4f4f4;
-    border: 1px solid #d9d9d9;
-    text-align: center;
-    width: 62px;
-    height: 44px;
-}
+    .table_jzsj th {
+        background-color: #f4f4f4;
+        border: 1px solid #d9d9d9;
+        text-align: center;
+        width: 62px;
+        height: 44px;
+    }
 
-.table_jzsj td {
-    border: 1px solid #d9d9d9 !important;
-    text-align: center;    
-    width: 62px;
-    height: 44px;
-    cursor: pointer;
-}
+    .table_jzsj td {
+        border: 1px solid #d9d9d9 !important;
+        text-align: center;
+        width: 62px;
+        height: 44px;
+        cursor: pointer;
+    }
 
-.table_jzsj td:hover {
-    background-color: rgba(91, 192, 222,0.2);
-}
+        .table_jzsj td:hover {
+            background-color: rgba(91, 192, 222,0.2);
+        }
 
 .img_jzsj {
     width: 16px;

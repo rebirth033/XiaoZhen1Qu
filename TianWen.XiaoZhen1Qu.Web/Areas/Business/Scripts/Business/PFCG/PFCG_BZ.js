@@ -1,11 +1,10 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });LoadDuoX("包装类别", "BZLB");
-    
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    LoadDuoX("包装类别", "BZLB");
     BindClick("LB");
     BindClick("QY");
     BindClick("DD");
 });
-
 //加载多选
 function LoadDuoX(type, id) {
     $.ajax({
@@ -33,10 +32,11 @@ function LoadDuoX(type, id) {
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".liBZLB").bind("click", function () { ValidateCheck("BZLB", "忘记选择类别啦"); });
                 if (type === "包装类别")
                     LoadDuoX("包装用途", "BZYT");
                 if (type === "包装用途")
-                    LoadPFCG_DZYQJJBXX();
+                    LoadPFCG_BZJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -47,9 +47,6 @@ function LoadDuoX(type, id) {
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadCODESByTYPENAME("包装类别", "LB", "CODES_PFCG");
-        }
         if (type === "QY") {
             LoadQY();
         }

@@ -1,11 +1,10 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });LoadPFCG_YBYQJBXX();
-    
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    LoadPFCG_YBYQJBXX();
     BindClick("LB");
     BindClick("QY");
     BindClick("DD");
 });
-
 //加载小类
 function LoadXL() {
     $.ajax({
@@ -26,6 +25,7 @@ function LoadXL() {
                 html += "</ul>";
                 $("#divXL").html(html);
                 $("#divXL").css("display", "block");
+                Bind("OUTLB", "XL", "");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -47,7 +47,7 @@ function SelectLB(obj, type, id) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("仪表仪器", "LB", "CODES_PFCG");
+            LoadCODESByTYPENAME("仪表仪器", "LB", "CODES_PFCG", Bind, "OUTLB", "LB", "");
         }
         if (type === "XL") {
             LoadXL();

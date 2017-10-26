@@ -44,7 +44,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// 兼职有效期
         /// </summary>
         [Property]
-        public virtual int JZYXQ { get; set; }
+        public virtual string JZYXQ { get; set; }
 
         /// <summary>
         /// 短期兼职开始时间
@@ -65,16 +65,16 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual Byte[] BCMS { get; set; }
 
         /// <summary>
-        /// 薪资水平
+        /// 薪资
         /// </summary>
         [Property]
-        public virtual string XZSP { get; set; }
+        public virtual string XZ { get; set; }
 
         /// <summary>
-        /// 薪资水平单位
+        /// 薪资单位
         /// </summary>
         [Property]
-        public virtual string XZSPDW { get; set; }
+        public virtual string XZDW { get; set; }
 
         /// <summary>
         /// 薪资结算

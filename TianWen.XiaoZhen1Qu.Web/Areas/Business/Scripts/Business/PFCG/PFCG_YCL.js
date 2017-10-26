@@ -1,11 +1,10 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });LoadPFCG_YCLJBXX();
-    
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    LoadPFCG_YCLJBXX();
     BindClick("LB");
     BindClick("QY");
     BindClick("DD");
 });
-
 //加载小类
 function LoadXL() {
     $.ajax({
@@ -26,6 +25,7 @@ function LoadXL() {
                 html += "</ul>";
                 $("#divXL").html(html);
                 $("#divXL").css("display", "block");
+                Bind("OUTLB", "XL", "");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -39,15 +39,18 @@ function SelectLB(obj, type, id) {
     $("#div" + type).css("display", "none");
     $("#LBID").val(id);
     BindClick("XL");
-    $("#spanXL").html("请选择小类");
-    $("#divXLText").css("display", "");
-    $("#divXL").css("display", "none");
+    if (obj.innerHTML === "冶金" || obj.innerHTML === "橡胶制品") {
+        $("#spanXL").html("请选择小类");
+        $("#divXLText").css("display", "");
+    } else {
+        $("#divXLText").css("display", "none");
+    }
 }
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("原材料", "LB", "CODES_PFCG");
+            LoadCODESByTYPENAME("原材料", "LB", "CODES_PFCG", Bind, "OUTLB", "LB", "");
         }
         if (type === "XL") {
             LoadXL();
@@ -82,6 +85,12 @@ function LoadPFCG_YCLJBXX() {
                     ue.setContent(xml.Value.BCMSString);
                 });
                 $("#spanLB").html(xml.Value.PFCG_YCLJBXX.LB);
+                if (xml.Value.PFCG_YCLJBXX.LB === "冶金" || xml.Value.PFCG_YCLJBXX.LB === "橡胶制品") {
+                    $("#spanXL").html("请选择小类");
+                    $("#divXLText").css("display", "");
+                } else {
+                    $("#divXLText").css("display", "none");
+                }
                 $("#spanXL").html(xml.Value.PFCG_YCLJBXX.XL);
                 $("#spanQY").html(xml.Value.PFCG_YCLJBXX.QY);
                 $("#spanDD").html(xml.Value.PFCG_YCLJBXX.DD);

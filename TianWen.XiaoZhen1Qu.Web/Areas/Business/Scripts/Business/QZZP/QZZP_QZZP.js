@@ -1,13 +1,5 @@
-﻿
-$(document).ready(function () {
-    
-    
-    
-    $("body").bind("click", function () { Close("_XZQ"); Close("ZWLB"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });
-
-
-
-    
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
     BindClick("MYXZ");
     BindClick("XLYQ");
     BindClick("GZNX");
@@ -26,18 +18,17 @@ function HideZWLBThird() {
         $(this).css("display", "none");
     });
 }
-
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "MYXZ") {
-            LoadCODESByTYPENAME("每月薪资", "MYXZ", "CODES_QZZP");
+            LoadCODESByTYPENAME("每月薪资", "MYXZ", "CODES_QZZP", Bind, "ZPMYXZ", "MYXZ", "");
         }
         if (type === "XLYQ") {
-            LoadCODESByTYPENAME("学历要求", "XLYQ", "CODES_QZZP");
+            LoadCODESByTYPENAME("学历要求", "XLYQ", "CODES_QZZP", Bind, "ZPXLYQ", "XLYQ", "");
         }
         if (type === "GZNX") {
-            LoadCODESByTYPENAME("工作年限", "GZNX", "CODES_QZZP");
+            LoadCODESByTYPENAME("工作年限", "GZNX", "CODES_QZZP", Bind, "ZPGZNX", "GZNX", "");
         }
         if (type === "ZWLB") {
             LoadZWLB();
@@ -87,6 +78,7 @@ function SelectZWLB() {
     $("#spanZWLB").html($(this)[0].innerHTML);
     $("#divZWLB").css("display", "none");
     $("#BT").val($(this)[0].innerHTML);
+    ValidateSelect("ZPZWLB", "ZWLB", "忘记选择职位类别啦");
 }
 //加载多选
 function LoadDuoX(type, id) {
