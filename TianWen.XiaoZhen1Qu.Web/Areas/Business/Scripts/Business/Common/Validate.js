@@ -10,6 +10,8 @@
     $("#JTDZ").bind("focus", InfoJTDZ);
     $("#JG").bind("blur", ValidateJG);
     $("#JG").bind("focus", InfoJG);
+    $("#FWQY").bind("blur", ValidateFWQY);
+    $("#FWQY").bind("focus", InfoFWQY);
 });
 
 //验证标题
