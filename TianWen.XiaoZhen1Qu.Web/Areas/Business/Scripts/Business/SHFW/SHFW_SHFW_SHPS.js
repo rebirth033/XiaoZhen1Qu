@@ -1,5 +1,6 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });BindClick("LB");
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    BindClick("LB");
     BindClick("PP");
     BindClick("QY");
     BindClick("DD");
@@ -10,6 +11,7 @@ $(document).ready(function () {$("body").bind("click", function () { Close("_XZQ
 function SelectLB(obj, type, id) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
+    if(type === "LB")
     PDLB(obj.innerHTML);
 
 }
@@ -45,17 +47,18 @@ function LoadXL(lbmc, xl) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='liXL' onclick='SelectDuoX(this)'><img class='img_XL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i === 5 || i === 11 || i === 17 || i === 23 || i === 29) {
+                    if (i % 6 === 5) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 6) === 0)
-                    $("#divXL").css("height", parseInt(xml.list.length / 6) * 45 + "px");
+                    $("#divXL").css("height", parseInt(xml.list.length / 6) * 60 + "px");
                 else
-                    $("#divXL").css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
+                    $("#divXL").css("height", (parseInt(xml.list.length / 6) + 1) * 60 + "px");
                 html += "</ul>";
                 $("#divXLText").html(html);
                 $(".img_XL").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".liXL").bind("click", function () { ValidateCheck("XL", "忘记选择小类啦"); });
                 if (xml.list.length === 0)
                     $("#divXL").css("display", "none");
                 else
@@ -73,10 +76,10 @@ function LoadXL(lbmc, xl) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("生活配送", "LB", "CODES_SHFW");
+            LoadCODESByTYPENAME("生活配送", "LB", "CODES_SHFW", Bind, "OUTLB", "LB", "");
         }
         if (type === "PP") {
-            LoadCODESByTYPENAME("桶装水品牌", "PP", "CODES_SHFW");
+            LoadCODESByTYPENAME("桶装水品牌", "PP", "CODES_SHFW", Bind, "TZSPP", "PP", "");
         }
         if (type === "QY") {
             LoadQY();
@@ -114,6 +117,10 @@ function LoadSHFW_SHFW_SHPSJBXX() {
                 if (xml.Value.SHFW_SHFW_SHPSJBXX.LB.indexOf("跑腿服务") !== -1) {
                     LoadXL(xml.Value.SHFW_SHFW_SHPSJBXX.LB, xml.Value.SHFW_SHFW_SHPSJBXX.XL);
                 }
+                if (xml.Value.SHFW_SHFW_SHPSJBXX.LB.indexOf("桶装水") !== -1) {
+                    $("#divTZSPP").css("display", "");
+                    $("#spanPP").html(xml.Value.SHFW_SHFW_SHPSJBXX.PP);
+                }
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -128,6 +135,7 @@ function FB() {
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
+    obj = jsonObj.AddJson(obj, "PP", "'" + $("#spanPP").html() + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");

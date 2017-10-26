@@ -1,6 +1,6 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });LoadSHFW_SHFW_KSHSXSJBXX();
-    
+﻿$(document).ready(function () {
+    $("body").bind("click", function() { Close("_XZQ"); });
+    LoadSHFW_SHFW_KSHSXSJBXX();
     BindClick("QY");
     BindClick("DD");
 });
