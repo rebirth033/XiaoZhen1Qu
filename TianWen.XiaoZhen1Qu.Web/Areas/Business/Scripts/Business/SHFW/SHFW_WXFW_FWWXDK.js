@@ -48,7 +48,7 @@ function LoadXL() {
                 html += "</ul>";
                 $("#divXL").html(html);
                 $("#divXL").css("display", "");
-                $(".liXL").bind("click", function () { ValidateCheck("XL", "忘记选择小类啦"); });
+                Bind("OUTLB", "XL", "");
                 ActiveStyle("XL");
             }
         },
@@ -100,8 +100,9 @@ function LoadSHFW_WXFW_FWWXDKJBXX() {
                 $("#spanDD").html(xml.Value.SHFW_WXFW_FWWXDKJBXX.DD);
                 $("#spanXL").html(xml.Value.SHFW_WXFW_FWWXDKJBXX.XL);
                 LoadPhotos(xml.Value.Photos);
-                if (xml.Value.SHFW_WXFW_FWWXDKJBXX.LB.indexOf("跑腿服务") !== -1) {
-                    LoadXL(xml.Value.SHFW_WXFW_FWWXDKJBXX.LB, xml.Value.SHFW_WXFW_FWWXDKJBXX.XL);
+                if (xml.Value.SHFW_WXFW_FWWXDKJBXX.LB.indexOf("卫浴/洁具维修") !== -1 || xml.Value.SHFW_WXFW_FWWXDKJBXX.LB.indexOf("水管/水龙头维修") !== -1 || xml.Value.SHFW_WXFW_FWWXDKJBXX.LB.indexOf("粉刷/防腐") !== -1) {
+                    $("#divXLText").css("display", "");
+                    $("#spanXL").html(xml.Value.SHFW_WXFW_FWWXDKJBXX.XL);
                 }
             }
         },
