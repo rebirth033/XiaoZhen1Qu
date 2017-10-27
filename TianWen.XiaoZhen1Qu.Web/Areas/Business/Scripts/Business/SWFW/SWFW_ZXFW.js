@@ -1,16 +1,14 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });BindClick("LB");
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    BindClick("LB");
     BindClick("QY");
     BindClick("DD");
     LoadSWFW_ZXFWJBXX();
 });
-
 //选择类别下拉框
 function SelectLB(obj, type, id) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-    LoadXL($("#spanLB").html());
-    $("#divXL").css("display", "");
 }
 //加载小类
 function LoadXL(lbmc, xl) {
@@ -58,7 +56,7 @@ function LoadXL(lbmc, xl) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("咨询服务", "LB", "CODES_SWFW");
+            LoadCODESByTYPENAME("咨询服务", "LB", "CODES_SWFW", Bind, "OUTLB", "LB", "");
         }
         if (type === "QY") {
             LoadQY();

@@ -1,16 +1,25 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });BindClick("LB");
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    BindClick("LB");
     BindClick("QY");
     BindClick("DD");
     LoadSWFW_TZDBJBXX();
 });
-
 //选择类别下拉框
 function SelectLB(obj, type, id) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-    LoadXL($("#spanLB").html());
-    $("#divXL").css("display", "");
+    PDLB(obj.innerHTML);
+}
+//判断类别
+function PDLB(lb) {
+    if (lb === "担保" || lb === "典当行" || lb === "贷款") {
+        LoadXL($("#spanLB").html());
+        $("#divXL").css("display", "");
+    }
+    else {
+        $("#divXL").css("display", "none");
+    }
 }
 //加载小类
 function LoadXL(lbmc, xl) {
@@ -33,12 +42,13 @@ function LoadXL(lbmc, xl) {
                     }
                 }
                 if (parseInt(xml.list.length % 6) === 0)
-                    $("#divXL").css("height", parseInt(xml.list.length / 6) * 45 + "px");
+                    $("#divXL").css("height", parseInt(xml.list.length / 6) * 60 + "px");
                 else
-                    $("#divXL").css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
+                    $("#divXL").css("height", (parseInt(xml.list.length / 6) + 1) * 60 + "px");
                 html += "</ul>";
                 $("#divXLText").html(html);
                 $(".img_XL").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".liXL").bind("click", function () { ValidateCheck("XL", "忘记选择类别啦"); });
                 if (xml.list.length === 0)
                     $("#divXL").css("display", "none");
                 else
@@ -56,7 +66,7 @@ function LoadXL(lbmc, xl) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("投资担保", "LB", "CODES_SWFW");
+            LoadCODESByTYPENAME("投资担保", "LB", "CODES_SWFW", Bind, "OUTLB", "LB");
         }
         if (type === "QY") {
             LoadQY();

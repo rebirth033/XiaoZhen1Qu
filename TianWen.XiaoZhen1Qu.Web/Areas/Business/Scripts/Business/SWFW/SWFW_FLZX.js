@@ -1,14 +1,11 @@
-﻿
-$(document).ready(function () {
-    
-    
+﻿$(document).ready(function () {
     $("#div_ly_ls").bind("click", LSSelect);
-    $("#div_ly_lssws").bind("click", LSSWSSelect);$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });LoadFLZXLB();
-    
+    $("#div_ly_lssws").bind("click", LSSWSSelect);
+    $("body").bind("click", function () { Close("_XZQ"); });
+    LoadFLZXLB();
     BindClick("QY");
     BindClick("DD");
 });
-
 //选择律师
 function LSSelect() {
     $("#divZYZH").css("display", "");
@@ -34,18 +31,19 @@ function LoadFLZXLB() {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liFLZXLB' onclick='SelectDuoX(this)'><img class='img_FLZXLB'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i === 3 || i === 7 || i === 11 || i === 15 || i === 19) {
+                    html += "<li class='liFLZXLB' style='width:120px;' onclick='SelectDuoX(this)'><img class='img_FLZXLB'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    if (i % 4 === 3) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 4) === 0)
-                    $("#divFLZXLB").css("height", parseInt(xml.list.length / 4) * 45 + "px");
+                    $("#divFLZXLB").css("height", parseInt(xml.list.length / 4) * 50 + "px");
                 else
-                    $("#divFLZXLB").css("height", (parseInt(xml.list.length / 4) + 1) * 45 + "px");
+                    $("#divFLZXLB").css("height", (parseInt(xml.list.length / 4) + 1) * 50 + "px");
                 html += "</ul>";
                 $("#divFLZXLBText").html(html);
                 $(".img_FLZXLB").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".liFLZXLB").bind("click", function () { ValidateCheck("FLZXLB", "忘记选择类别啦"); });
                 LoadSWFW_FLZXJBXX();
             }
         },

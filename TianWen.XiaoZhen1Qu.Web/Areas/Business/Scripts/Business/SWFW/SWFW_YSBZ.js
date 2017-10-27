@@ -1,5 +1,6 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });BindClick("LB");
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ");});
+    BindClick("LB");
     BindClick("QY");
     BindClick("DD");
     LoadGY();
@@ -9,7 +10,7 @@ $(document).ready(function () {$("body").bind("click", function () { Close("_XZQ
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("印刷包装", "LB", "CODES_SWFW");
+            LoadCODESByTYPENAME("印刷包装", "LB", "CODES_SWFW", Bind, "OUTLB", "LB", "");
         }
         if (type === "CZ") {
             LoadCODESByTYPENAME("材质", "CZ", "CODES_SWFW");
@@ -80,12 +81,13 @@ function LoadXL(lbmc, xl) {
                     }
                 }
                 if (parseInt(xml.list.length % 6) === 0)
-                    $("#divXL").css("height", parseInt(xml.list.length / 5) * 45 + "px");
+                    $("#divXL").css("height", parseInt(xml.list.length / 5) * 60 + "px");
                 else
-                    $("#divXL").css("height", (parseInt(xml.list.length / 5) + 1) * 45 + "px");
+                    $("#divXL").css("height", (parseInt(xml.list.length / 5) + 1) * 60 + "px");
                 html += "</ul>";
                 $("#divXLText").html(html);
                 $(".img_XL").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".liXL").bind("click", function () { ValidateCheck("XL", "忘记选择类别啦"); });
                 if (xml.list.length === 0)
                     $("#divXL").css("display", "none");
                 else

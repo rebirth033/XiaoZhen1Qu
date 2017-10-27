@@ -1,11 +1,11 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });BindClick("LB");
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    BindClick("LB");
     BindClick("QY");
     BindClick("DD");
     BindClick("YZ");
     LoadZYLY();
 });
-
 //加载语种标签
 function LoadYZ() {
     var arrayObj = new Array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
@@ -54,13 +54,23 @@ function YZXZ(YZMC, YZID) {
     $("#PPID").val(YZID);
     $("#spanYZ").html(YZMC);
     $("#divYZ").css("display", "none");
+    ValidateSelect("FYSJYZ", "YZ", "");
 }
 //选择类别下拉框
 function SelectLB(obj, type, id) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-    LoadXL($("#spanLB").html());
-    $("#divXL").css("display", "");
+    PDLB(obj.innerHTML);
+}
+//判断类别
+function PDLB(lb) {
+    if (lb === "口译" || lb === "本地化" || lb === "速记") {
+        LoadXL($("#spanLB").html());
+        $("#divXL").css("display", "");
+    }
+    else {
+        $("#divXL").css("display", "none");
+    }
 }
 //加载小类
 function LoadXL(lbmc, xl) {
@@ -77,18 +87,19 @@ function LoadXL(lbmc, xl) {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liXL' onclick='SelectDuoX(this)'><img class='img_XL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    html += "<li class='liXL' style='width:140px;' onclick='SelectDuoX(this)'><img class='img_XL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i === 3 || i === 7 || i === 11) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 4) === 0)
-                    $("#divXL").css("height", parseInt(xml.list.length / 4) * 45 + "px");
+                    $("#divXL").css("height", parseInt(xml.list.length / 4) * 60 + "px");
                 else
-                    $("#divXL").css("height", (parseInt(xml.list.length / 4) + 1) * 45 + "px");
+                    $("#divXL").css("height", (parseInt(xml.list.length / 4) + 1) * 60 + "px");
                 html += "</ul>";
                 $("#divXLText").html(html);
                 $(".img_XL").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".liXL").bind("click", function () { ValidateCheck("XL", "忘记选择类别啦"); });
                 if (xml.list.length === 0)
                     $("#divXL").css("display", "none");
                 else
@@ -120,14 +131,14 @@ function LoadZYLY() {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='liZYLY' onclick='SelectDuoX(this)'><img class='img_ZYLY'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i === 6 || i === 13 || i === 20 || i === 27) {
+                    if (i % 6 === 5) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
                 }
-                if (parseInt(xml.list.length % 7) === 0)
-                    $("#divZYLY").css("height", parseInt(xml.list.length / 7) * 45 + "px");
+                if (parseInt(xml.list.length % 6) === 0)
+                    $("#divZYLY").css("height", parseInt(xml.list.length / 6) * 45 + "px");
                 else
-                    $("#divZYLY").css("height", (parseInt(xml.list.length / 7) + 1) * 45 + "px");
+                    $("#divZYLY").css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
                 html += "</ul>";
                 $("#divZYLYText").html(html);
                 $(".img_ZYLY").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
@@ -158,8 +169,8 @@ function LoadWJLX() {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liWJLX' onclick='SelectDuoX(this)'><img class='img_WJLX'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i === 4 || i === 9 || i === 14 || i === 19) {
+                    html += "<li class='liWJLX' style='width:120px;' onclick='SelectDuoX(this)'><img class='img_WJLX'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    if (i % 5 === 4) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
                 }
@@ -186,7 +197,7 @@ function LoadWJLX() {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("翻译/速记", "LB", "CODES_SWFW");
+            LoadCODESByTYPENAME("翻译/速记", "LB", "CODES_SWFW", Bind, "OUTLB", "LB", "");
         }
         if (type === "YZ") {
             LoadYZ();
@@ -247,7 +258,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "XL", "'" + GetXL() + "'");
+    obj = jsonObj.AddJson(obj, "XL", "'" + GetDuoX("XL") + "'");
     obj = jsonObj.AddJson(obj, "ZYLY", "'" + GetDuoX("ZYLY") + "'");
     obj = jsonObj.AddJson(obj, "WJLX", "'" + GetDuoX("WJLX") + "'");
 
