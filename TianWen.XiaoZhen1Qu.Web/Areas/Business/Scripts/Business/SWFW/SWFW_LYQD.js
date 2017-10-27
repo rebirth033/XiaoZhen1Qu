@@ -1,5 +1,6 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });LoadSWFW_LYQDJBXX();
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    LoadSWFW_LYQDJBXX();
     BindClick("LB");
     BindClick("QY");
     BindClick("DD");
@@ -9,7 +10,7 @@ $(document).ready(function () {$("body").bind("click", function () { Close("_XZQ
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("礼仪庆典", "LB", "CODES_SWFW");
+            LoadCODESByTYPENAME("礼仪庆典", "LB", "CODES_SWFW", Bind, "OUTLB", "LB", "");
         }
         if (type === "XL") {
             LoadXL();
@@ -61,6 +62,7 @@ function LoadXL(type) {
                 html += "</ul>";
                 $("#divXL").html(html);
                 $("#divXL").css("display", "block");
+                Bind("OUTLB", "XL", "");
                 ActiveStyle("XL");
             }
         },
