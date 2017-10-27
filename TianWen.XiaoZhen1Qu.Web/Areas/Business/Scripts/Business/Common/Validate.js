@@ -85,7 +85,7 @@ function ValidateLXDH() {
         }
     }
 }
-//验证售价
+//验证价格
 function ValidateJG() {
     if ($("#JG").val() === "" || $("#JG").val() === null) {
         $("#divJGTip").css("display", "block");
