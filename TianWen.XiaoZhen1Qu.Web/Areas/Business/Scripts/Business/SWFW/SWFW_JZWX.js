@@ -1,10 +1,9 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });LoadJZWXLB();
-    
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    LoadJZWXLB();
     BindClick("QY");
     BindClick("DD");
 });
-
 //加载建筑维修类别
 function LoadJZWXLB() {
     $.ajax({
@@ -20,18 +19,19 @@ function LoadJZWXLB() {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liJZWXLB' onclick='SelectDuoX(this)'><img class='img_JZWXLB'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i === 3 || i === 7 || i === 11 || i === 15 || i === 19) {
+                    html += "<li class='liJZWXLB' style='width:140px;' onclick='SelectDuoX(this)'><img class='img_JZWXLB'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    if (i % 4 === 3) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 4) === 0)
-                    $("#divJZWXLB").css("height", parseInt(xml.list.length / 4) * 45 + "px");
+                    $("#divJZWXLB").css("height", parseInt(xml.list.length / 4) * 50 + "px");
                 else
-                    $("#divJZWXLB").css("height", (parseInt(xml.list.length / 4) + 1) * 45 + "px");
+                    $("#divJZWXLB").css("height", (parseInt(xml.list.length / 4) + 1) * 50 + "px");
                 html += "</ul>";
                 $("#divJZWXLBText").html(html);
                 $(".img_JZWXLB").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".liJZWXLB").bind("click", function () { ValidateCheck("JZWXLB", "忘记选择类别啦"); });
                 LoadSWFW_JZWXJBXX();
             }
         },
