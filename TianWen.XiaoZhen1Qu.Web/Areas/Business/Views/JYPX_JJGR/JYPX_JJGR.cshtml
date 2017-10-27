@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = "JYPXJYPX_JJGR";
+    ViewBag.Title = "JYPX_JJGR";
     Layout = "~/Areas/Business/Views/Shared/HTFBLayout.cshtml";
 }
 
@@ -95,9 +95,9 @@
                     <span id="spanXM">姓名</span>
                 </div>
                 <div class="div_row_right">
-                    <input id="XM" maxlength="50" column="XM" class="span_spaninput SRK" style="padding: 6px 12px; width: 150px; color: #999999" type="text" placeholder="请输入姓名" />
-                    <div id="divXMTip"></div>
+                    <input id="XM" maxlength="50" column="XM" class="span_spaninput SRK" style="padding: 6px 12px; width: 150px; color: #999999" type="text" placeholder="请输入姓名"/>
                 </div>
+                <div id="divXMTip"></div>
             </div>
             <div id="divXB" class="div_row">
                 <div class="div_row_left" style="margin-left: 128px;">
@@ -106,12 +106,13 @@
                 </div>
                 <div class="div_row_right">
                     <div id="div_xb_nan" class="div_radio">
-                        <img class="img_radio" id="img_xb_nan" /><label class="label_radio">男</label>
+                        <img class="img_radio" id="img_xb_nan"/><label class="label_radio">男</label>
                     </div>
                     <div id="div_xb_nv" class="div_radio">
-                        <img class="img_radio" id="img_xb_nv" /><label class="label_radio">女</label>
+                        <img class="img_radio" id="img_xb_nv"/><label class="label_radio">女</label>
                     </div>
                 </div>
+                <div id="divXBTip"></div>
             </div>
             <div id="divSF" class="div_row">
                 <div class="div_row_left" style="margin-left: 128px;">
@@ -120,18 +121,19 @@
                 </div>
                 <div class="div_row_right">
                     <div id="div_sf_dxs" class="div_radio">
-                        <img class="img_radio" id="img_ysfw_dxs" /><label class="label_radio">大学生</label>
+                        <img class="img_radio" id="img_ysfw_dxs"/><label class="label_radio">大学生</label>
                     </div>
                     <div id="div_sf_zxjs" class="div_radio">
-                        <img class="img_radio" id="img_sf_zxjs" /><label class="label_radio">专业教师</label>
+                        <img class="img_radio" id="img_sf_zxjs"/><label class="label_radio">专业教师</label>
                     </div>
                     <div id="div_sf_zzjs" class="div_radio">
-                        <img class="img_radio" id="img_sf_zzjs" /><label class="label_radio">外教</label>
+                        <img class="img_radio" id="img_sf_zzjs"/><label class="label_radio">外教</label>
                     </div>
                     <div id="div_sf_wj" class="div_radio">
-                        <img class="img_radio" id="img_sf_wj" /><label class="label_radio">其他</label>
+                        <img class="img_radio" id="img_sf_wj"/><label class="label_radio">其他</label>
                     </div>
                 </div>
+                <div id="divSFTip"></div>
             </div>
             <div id="divJJJY" class="div_row">
                 <div class="div_row_left">
@@ -140,12 +142,13 @@
                 </div>
                 <div class="div_row_right">
                     <div id="div_jjjy_y" class="div_radio">
-                        <img class="img_radio" id="img_jjjy_y" /><label class="label_radio">有</label>
+                        <img class="img_radio" id="img_jjjy_y"/><label class="label_radio">有</label>
                     </div>
                     <div id="div_jjjy_w" class="div_radio">
-                        <img class="img_radio" id="img_jjjy_w" /><label class="label_radio">无</label>
+                        <img class="img_radio" id="img_jjjy_w"/><label class="label_radio">无</label>
                     </div>
                 </div>
+                <div id="divJJJYTip"></div>
             </div>
             <div id="divFDJD" class="div_row" style="z-index: 997;">
                 <div class="div_row_left">
@@ -154,6 +157,7 @@
                 </div>
                 <div id="divFDJDText" class="div_row_right" style="position: relative;">
                 </div>
+                <div id="divFDJDTip"></div>
             </div>
             <div id="divFDKM" class="div_row" style="z-index: 997;">
                 <div class="div_row_left">
@@ -162,6 +166,7 @@
                 </div>
                 <div id="divFDKMText" class="div_row_right" style="position: relative;">
                 </div>
+                <div id="divFDKMTip"></div>
             </div>
             <div id="divQWSX" class="div_row" style="margin-top: 22px;">
                 <div class="div_row_left">
@@ -245,16 +250,16 @@
                     <span class="spanFWCZ">详细地址</span>
                 </div>
                 <div class="div_row_right">
-                    <div id="divQYText" class="div_select_out SRK" style="z-index: 997; ">
+                    <div id="divQYText" class="div_select_out SRK" style="z-index: 997;">
                         <div id="divQYSpan" class="div_select_in" style="border: none; margin-top: 6px;">
-                            <input type="hidden" id="QYCode" />
+                            <input type="hidden" id="QYCode"/>
                             <span id="spanQY" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择区域</span>
                             <div class="span_select_arrow"></div>
                         </div>
                         <div id="divQY" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
                         </div>
                     </div>
-                    <div id="divDDText" class="div_select_out SRK" style="z-index: 997; ">
+                    <div id="divDDText" class="div_select_out SRK" style="z-index: 997;">
                         <div id="divDDSpan" class="div_select_in" style="border: none; margin-top: 6px;">
                             <span id="spanDD" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择地段</span>
                             <div class="span_select_arrow"></div>
@@ -262,8 +267,9 @@
                         <div id="divDD" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
                         </div>
                     </div>
-                    <input id="JTDZ" column="JTDZ" class="span_spaninput input_input SRK" type="text" placeholder="请填写具体地址" style="width: 300px" />
+                    <input id="JTDZ" column="JTDZ" class="span_spaninput input_input SRK" type="text" placeholder="请填写具体地址" style="width: 300px"/>
                 </div>
+                <div id="divSZQYTip"></div>
             </div>
             <div id="divLXR" class="div_row" style="z-index: 990">
                 <div class="div_row_left" style="margin-left: 114px;">

@@ -1,17 +1,11 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });BindClick("JXKM");
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    BindClick("JXKM");
     BindClick("BYYX");
     BindClick("QY");
     BindClick("DD");
     LoadJYPX_YSPXJSJBXX();
 });
-//加载默认
-function LoadDefault() {
-    ue.ready(function () {
-        ue.setHeight(200);
-    });
-    $(".img_radio").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
-}
 //加载毕业院校标签
 function LoadBYYX() {
     var arrayObj = new Array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
