@@ -1,30 +1,15 @@
-﻿var isleave = true;
-var ue = UE.getEditor('FWJS');
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });BindClick("LB");
+﻿var ue = UE.getEditor('BCMS');
+$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    BindClick("LB");
     BindClick("QY");
     BindClick("DD");
     LoadLYJD_JPJBXX();
 });
-//描述框focus
-function BCMSFocus() {
-    $("#FWJS").css("color", "#333333");
-}
-//描述框blur
-function BCMSBlur() {
-    $("#FWJS").css("color", "#999999");
-}
-//描述框设默认文本
-function BCMSSetDefault() {
-    var BCMS = "1.房屋特征：\r\n\r\n2.周边配套：\r\n\r\n3.房东心态：";
-    $("#FWJS").html(BCMS);
-}
-
 //选择类别下拉框
 function SelectLB(obj, type, id) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-    LoadXL($("#spanLB").html());
-    $("#divXL").css("display", "");
 }
 //加载小类
 function LoadXL(lbmc, xl) {
@@ -70,7 +55,7 @@ function LoadXL(lbmc, xl) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("机票", "LB", "CODES_LYJD");
+            LoadCODESByTYPENAME("机票", "LB", "CODES_LYJD", Bind, "OUTLB", "LB", "");
         }
         if (type === "QY") {
             LoadQY();
@@ -135,7 +120,7 @@ function FB() {
         data:
         {
             Json: jsonObj.JsonToString(obj),
-            FWJS: ue.getContent(),
+            BCMS: ue.getContent(),
             FWZP: GetPhotoUrls()
         },
         success: function (xml) {

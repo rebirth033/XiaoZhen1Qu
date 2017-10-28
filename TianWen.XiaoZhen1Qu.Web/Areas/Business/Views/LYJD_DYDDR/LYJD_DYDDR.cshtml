@@ -105,12 +105,13 @@
                 </div>
                 <div class="div_row_right">
                     <div id="div_xb_nan" class="div_radio">
-                        <img class="img_radio" id="img_xb_nan" /><label class="label_radio">男</label>
+                        <img class="img_radio" id="img_xb_nan"/><label class="label_radio">男</label>
                     </div>
                     <div id="div_xb_nv" class="div_radio">
-                        <img class="img_radio" id="img_xb_nv" /><label class="label_radio">女</label>
+                        <img class="img_radio" id="img_xb_nv"/><label class="label_radio">女</label>
                     </div>
                 </div>
+                <div id="divXBTip" class="Warn"></div>
             </div>
             <div id="divNL" class="div_row" style="margin-top: 22px;">
                 <div class="div_row_left" style="margin-left: 128px;">
@@ -133,18 +134,19 @@
                 </div>
                 <div class="div_row_right">
                     <div id="div_dylx_zzdy" class="div_radio">
-                        <img class="img_radio" id="img_dylx_zzdy" /><label class="label_radio">专职导游</label>
+                        <img class="img_radio" id="img_dylx_zzdy"/><label class="label_radio">专职导游</label>
                     </div>
                     <div id="div_dylx_jzdy" class="div_radio">
-                        <img class="img_radio" id="img_dylx_jzdy" /><label class="label_radio">兼职导游</label>
+                        <img class="img_radio" id="img_dylx_jzdy"/><label class="label_radio">兼职导游</label>
                     </div>
                     <div id="div_dylx_dxsdy" class="div_radio">
-                        <img class="img_radio" id="img_dylx_dxsdy" /><label class="label_radio">大学生导游</label>
+                        <img class="img_radio" id="img_dylx_dxsdy"/><label class="label_radio">大学生导游</label>
                     </div>
                     <div id="div_dylx_bdtzxd" class="div_radio">
-                        <img class="img_radio" id="img_dylx_bdtzxd" /><label class="label_radio">本地土著向导</label>
+                        <img class="img_radio" id="img_dylx_bdtzxd"/><label class="label_radio">本地土著向导</label>
                     </div>
                 </div>
+                <div id="divDYLXTip" class="Warn"></div>
             </div>
             <div id="divDYYZ" class="div_row" style="z-index: 997;">
                 <div class="div_row_left">
@@ -153,6 +155,7 @@
                 </div>
                 <div id="divDYYZText" class="div_row_right" style="position: relative;">
                 </div>
+                <div id="divDYYZTip" class="Warn"></div>
             </div>
             <div id="divDYDDRXL" class="div_row" style="z-index: 996">
                 <div class="div_row_left" style="margin-left: 128px;">
@@ -169,6 +172,7 @@
                         </div>
                     </div>
                 </div>
+                <div id="divDYDDRXLTip" class="Warn"></div>
             </div>
             <div id="divDYDDRDTJY" class="div_row" style="z-index: 995">
                 <div class="div_row_left">
@@ -185,6 +189,7 @@
                         </div>
                     </div>
                 </div>
+                <div id="divDYDDRDTJYTip" class="Warn"></div>
             </div>
             <div id="divFWQY" class="div_row" style="z-index: 994">
                 <div class="div_row_left">
@@ -250,16 +255,16 @@
                     <span class="spanFWCZ">详细地址</span>
                 </div>
                 <div class="div_row_right">
-                    <div id="divQYText" class="div_select_out SRK" style="z-index: 997; ">
+                    <div id="divQYText" class="div_select_out SRK" style="z-index: 997;">
                         <div id="divQYSpan" class="div_select_in" style="border: none; margin-top: 6px;">
-                            <input type="hidden" id="QYCode" />
+                            <input type="hidden" id="QYCode"/>
                             <span id="spanQY" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择区域</span>
                             <div class="span_select_arrow"></div>
                         </div>
                         <div id="divQY" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
                         </div>
                     </div>
-                    <div id="divDDText" class="div_select_out SRK" style="z-index: 997; ">
+                    <div id="divDDText" class="div_select_out SRK" style="z-index: 997;">
                         <div id="divDDSpan" class="div_select_in" style="border: none; margin-top: 6px;">
                             <span id="spanDD" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择地段</span>
                             <div class="span_select_arrow"></div>
@@ -267,8 +272,9 @@
                         <div id="divDD" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
                         </div>
                     </div>
-                    <input id="JTDZ" column="JTDZ" class="span_spaninput input_input SRK" type="text" placeholder="请填写具体地址" style="width: 300px" />
+                    <input id="JTDZ" column="JTDZ" class="span_spaninput input_input SRK" type="text" placeholder="请填写具体地址" style="width: 300px"/>
                 </div>
+                <div id="divSZQYTip" class="Warn"></div>
             </div>
             <div id="divLXR" class="div_row" style="z-index: 990">
                 <div class="div_row_left" style="margin-left: 114px;">

@@ -62,6 +62,6 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// 服务介绍
         /// </summary>
         [Property]
-        public virtual string FWJS { get; set; }
+        public virtual Byte[] BCMS { get; set; }
     }
 }

@@ -56,7 +56,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 if (LYJD_JPJBXX != null)
                 {
                     JCXX jcxx = GetJCXXByID(LYJD_JPJBXX.JCXXID);
-                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { LYJD_JPJBXX = LYJD_JPJBXX, JCXX = jcxx, Photos = GetPhtosByJCXXID(LYJD_JPJBXX.JCXXID) } };
+                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { LYJD_JPJBXX = LYJD_JPJBXX, JCXX = jcxx, BCMSString = BinaryHelper.BinaryToString(LYJD_JPJBXX.BCMS), Photos = GetPhtosByJCXXID(LYJD_JPJBXX.JCXXID) } };
                 }
                 else
                 {
