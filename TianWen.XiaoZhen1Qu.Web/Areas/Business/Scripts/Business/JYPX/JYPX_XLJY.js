@@ -1,10 +1,10 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });BindClick("LB");
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    BindClick("LB");
     BindClick("QY");
     BindClick("DD");
     LoadDuoX("形式", "XS");
 });
-
 //加载多选
 function LoadDuoX(type, id) {
     $.ajax({
@@ -26,12 +26,13 @@ function LoadDuoX(type, id) {
                     }
                 }
                 if (parseInt(xml.list.length % 4) === 0)
-                    $("#div" + id).css("height", parseInt(xml.list.length / 4) * 45 + "px");
+                    $("#div" + id).css("height", parseInt(xml.list.length / 4) * 60 + "px");
                 else
-                    $("#div" + id).css("height", (parseInt(xml.list.length / 4) + 1) * 45 + "px");
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 4) + 1) * 60 + "px");
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".li" + id).bind("click", function () { ValidateCheck(id, "忘记选择" + type + "啦"); });
                 if (xml.list.length === 0)
                     $("#div" + id).css("display", "none");
                 else
@@ -44,13 +45,6 @@ function LoadDuoX(type, id) {
 
         }
     });
-}
-//选择类别下拉框
-function SelectLB(obj, type, id) {
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
-    LoadXL($("#spanLB").html());
-    $("#divXL").css("display", "");
 }
 //加载小类
 function LoadXL(lbmc, xl) {
@@ -85,8 +79,6 @@ function LoadXL(lbmc, xl) {
                     $("#divXL").css("display", "");
                 if (xl !== "" && xl !== null && xl !== undefined)
                     SetDuoX("XL", xl);
-                if (lbmc === "品牌策划推广")
-                    $(".liXL").css("width", "200px");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -98,7 +90,7 @@ function LoadXL(lbmc, xl) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("学历教育", "LB", "CODES_JYPX");
+            LoadCODESByTYPENAME("学历教育", "LB", "CODES_JYPX", Bind, "OUTLB", "LB", "");
         }
         if (type === "QY") {
             LoadQY();

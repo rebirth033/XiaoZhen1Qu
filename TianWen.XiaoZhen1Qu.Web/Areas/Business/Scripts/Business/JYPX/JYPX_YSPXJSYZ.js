@@ -4,9 +4,9 @@
     $("#divJJJY").find(".div_radio").bind("click", function () { ValidateRadio("JJJY", ""); });
     $("#XM").bind("blur", function () { ValidateInput("XM", "姓名"); });
     $("#XM").bind("focus", function () { InfoInput("XM", "请填写姓名"); });
-    $("#JL").bind("blur", function () { ValidateInput("JL", "级别水平"); });
+    $("#JL").bind("blur", function () { ValidateInput("JL", "教龄"); });
     $("#JL").bind("focus", function () { InfoInput("JL", "请填写教龄"); });
-    $("#JBSP").bind("blur", function () { ValidateInput("JBSP", "教龄"); });
+    $("#JBSP").bind("blur", function () { ValidateInput("JBSP", "级别水平"); });
     $("#JBSP").bind("focus", function () { InfoInput("JBSP", "请填写级别水平"); });
     $("#QWSX_Q").bind("blur", function () { ValidateInput("QWSX_Q", "期望时薪_起", "QWSX"); });
     $("#QWSX_Q").bind("focus", function () { InfoSpanInput("QWSX_Q", "期望时薪_起", "QWSX"); });

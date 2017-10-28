@@ -1,22 +1,15 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });BindClick("JXKM");
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    BindClick("JXKM");
     BindClick("QY");
     BindClick("DD");
     LoadJYPX_TYJLJBXX();
 });
-
-//选择类别下拉框
-function SelectLB(obj, type, id) {
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
-    LoadXL($("#spanYZ").html());
-    $("#divXL").css("display", "");
-}
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "JXKM") {
-            LoadCODESByTYPENAME("体育培训教学科目", "JXKM", "CODES_JYPX");
+            LoadCODESByTYPENAME("体育培训", "JXKM", "CODES_JYPX", Bind, "TYJLJXKM", "JXKM", "");
         }
         if (type === "QY") {
             LoadQY();

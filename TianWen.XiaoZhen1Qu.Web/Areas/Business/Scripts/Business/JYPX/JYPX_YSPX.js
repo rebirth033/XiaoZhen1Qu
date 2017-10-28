@@ -32,7 +32,7 @@ function LoadDuoX(type, id) {
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-                $(".liDX").bind("click", function () { ValidateCheck("DX", "忘记选择小类啦"); });
+                $(".li" + id).bind("click", function () { ValidateCheck(id, "忘记选择" + type + "啦"); });
                 if (xml.list.length === 0)
                     $("#div" + id).css("display", "none");
                 else

@@ -1,10 +1,10 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });BindClick("JXKM");
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    BindClick("JXKM");
     BindClick("QY");
     BindClick("DD");
     LoadDuoX("辅导阶段", "FDJD");
 });
-
 //加载多选
 function LoadDuoX(type, id) {
     $.ajax({
@@ -21,17 +21,18 @@ function LoadDuoX(type, id) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='li" + id + "' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i === 3 || i === 7 || i === 11) {
+                    if (i % 5 === 4) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
                 }
-                if (parseInt(xml.list.length % 4) === 0)
-                    $("#div" + id).css("height", parseInt(xml.list.length / 4) * 45 + "px");
+                if (parseInt(xml.list.length % 5) === 0)
+                    $("#div" + id).css("height", parseInt(xml.list.length / 5) * 50 + "px");
                 else
-                    $("#div" + id).css("height", (parseInt(xml.list.length / 4) + 1) * 45 + "px");
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 5) + 1) * 50 + "px");
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".li" + id).bind("click", function () { ValidateCheck(id, "忘记选择" + type + "啦"); });
                 if (xml.list.length === 0)
                     $("#div" + id).css("display", "none");
                 else
