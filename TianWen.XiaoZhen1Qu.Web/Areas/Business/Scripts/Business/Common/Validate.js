@@ -280,7 +280,7 @@ function InfoJTDZ() {
     $("#divSZQYTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写具体地址');
     $("#JTDZ").css("border-color", "#5bc0de");
 }
-//提示标题
+//提示span输入框
 function InfoSpanInput(id, message, outid) {
     if (outid === "" || outid === null || outid === undefined)
         outid = id;
@@ -288,4 +288,13 @@ function InfoSpanInput(id, message, outid) {
     $("#div" + outid + "Tip").attr("class", "Info");
     $("#div" + outid + "Tip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />' + message);
     $("#span" + id).css("border-color", "#5bc0de");
+}
+//提示输入框
+function InfoInput(id, message, outid) {
+    if (outid === "" || outid === null || outid === undefined)
+        outid = id;
+    $("#div" + outid + "Tip").css("display", "block");
+    $("#div" + outid + "Tip").attr("class", "Info");
+    $("#div" + outid + "Tip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />' + message);
+    $("#" + id).css("border-color", "#5bc0de");
 }
