@@ -1,29 +1,11 @@
-﻿var isleave = true;
-var fwjs = UE.getEditor('FWJS');
-$(document).ready(function () {$("#XCAP").bind("focus", XCAPFocus);
-    $("#XCAP").bind("blur", XCAPBlur);$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });BindClick("QY");
+﻿var fwjs = UE.getEditor('BCMS');
+$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    BindClick("QY");
     BindClick("DD");
     BindClick("XCTS_R");
     LoadDuoX("游玩项目", "YWXM");
-    BCMSSetDefault();
 });
-//描述框focus
-function XCAPFocus() {
-    $("#XCAP").html("");
-}
-//描述框blur
-function XCAPBlur() {
-    $("#XCAP").css("color", "#999999");
-}
-//描述框设默认文本
-function BCMSSetDefault() {
-    var xcap = '<span style="color: gray;font-size:12px;">请详细描述游玩的行程安排，包含住宿、用餐、游玩景点、费用说明、注意事项等，认真填写游玩描述会达到双倍的效果</span>';
-    $("#XCAP").html(xcap);
-}
-//加载默认
-function LoadDefault() {
-    fwjs.ready(function () { fwjs.setHeight(200); });
-}
 //加载多选
 function LoadDuoX(type, id) {
     $.ajax({
@@ -45,12 +27,13 @@ function LoadDuoX(type, id) {
                     }
                 }
                 if (parseInt(xml.list.length % 6) === 0)
-                    $("#div" + id).css("height", parseInt(xml.list.length / 6) * 45 + "px");
+                    $("#div" + id).css("height", parseInt(xml.list.length / 6) * 50 + "px");
                 else
-                    $("#div" + id).css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 6) + 1) * 50 + "px");
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".li" + id).bind("click", function () { ValidateCheck(id, "忘记选择" + type + "啦"); });
                 if (xml.list.length === 0)
                     $("#div" + id).css("display", "none");
                 else
@@ -69,9 +52,6 @@ function LoadDuoX(type, id) {
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
-        if (type === "XCTS_R") {
-            LoadCODESByTYPENAME("周边游行程天数", "XCTS_R", "CODES_LYJD");
-        }
         if (type === "QY") {
             LoadQY();
         }

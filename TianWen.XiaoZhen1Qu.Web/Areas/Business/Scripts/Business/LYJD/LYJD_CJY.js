@@ -1,11 +1,11 @@
-﻿var isleave = true;
-var xlts = UE.getEditor('XLTS');
+﻿var xlts = UE.getEditor('XLTS');
 var xcap = UE.getEditor('XCAP');
 var ydxz = UE.getEditor('YDXZ');
 var fybh = UE.getEditor('FYBH');
 var zfxm = UE.getEditor('ZFXM');
-$(document).ready(function () {$("#XCAP").bind("focus", XCAPFocus);
-    $("#XCAP").bind("blur", XCAPBlur);$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });BindClick("CYFS");
+$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    BindClick("CYFS");
     BindClick("QY");
     BindClick("DD");
     BindClick("WFJT_Q");
@@ -15,18 +15,10 @@ $(document).ready(function () {$("#XCAP").bind("focus", XCAPFocus);
     LoadLYJD_CJYJBXX();
     BCMSSetDefault();
 });
-//描述框focus
-function XCAPFocus() {
-    $("#XCAP").html("");
-}
-//描述框blur
-function XCAPBlur() {
-    $("#XCAP").css("color", "#999999");
-}
 //描述框设默认文本
 function BCMSSetDefault() {
-    var xcap = '<span style="color: gray;font-size:12px;">请详细描述游玩的行程安排，包含住宿、用餐、游玩景点、费用说明、注意事项等，认真填写游玩描述会达到双倍的效果</span>';
-    $("#XCAP").html(xcap);
+    //var xcap = '<span style="color: gray;font-size:12px;">请详细描述游玩的行程安排，包含住宿、用餐、游玩景点、费用说明、注意事项等，认真填写游玩描述会达到双倍的效果</span>';
+    //$("#XCAP").html(xcap);
 }
 //加载默认
 function LoadDefault() {
@@ -40,19 +32,19 @@ function LoadDefault() {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "CYFS") {
-            LoadCODESByTYPENAME("出游方式", "CYFS", "CODES_LYJD");
+            LoadCODESByTYPENAME("出游方式", "CYFS", "CODES_LYJD", Bind, "CJYCYFS", "CYFS", "");
         }
         if (type === "WFJT_Q") {
-            LoadCODESByTYPENAME("往返交通_去", "WFJT_Q", "CODES_LYJD");
+            LoadCODESByTYPENAME("往返交通_去", "WFJT_Q", "CODES_LYJD", Bind, "WFJT", "WFJT_Q", "");
         }
         if (type === "WFJT_H") {
-            LoadCODESByTYPENAME("往返交通_回", "WFJT_H", "CODES_LYJD");
+            LoadCODESByTYPENAME("往返交通_回", "WFJT_H", "CODES_LYJD", Bind, "WFJT", "WFJT_H", "");
         }
         if (type === "XCTS_R") {
-            LoadCODESByTYPENAME("行程安排_日", "XCTS_R", "CODES_LYJD");
+            LoadCODESByTYPENAME("行程安排_日", "XCTS_R", "CODES_LYJD", Bind, "XCTS", "XCTS_R", "");
         }
         if (type === "XCTS_W") {
-            LoadCODESByTYPENAME("行程安排_晚", "XCTS_W", "CODES_LYJD");
+            LoadCODESByTYPENAME("行程安排_晚", "XCTS_W", "CODES_LYJD", Bind, "XCTS", "XCTS_W", "");
         }
         if (type === "QY") {
             LoadQY();

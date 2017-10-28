@@ -1,5 +1,11 @@
 ﻿$(document).ready(function () {
     $("#divFTRQ").find(".div_radio").bind("click", function () { ValidateRadio("FTRQ", ""); });
+    $("#MSJ").bind("blur", function () { ValidateSpanInput("MSJ", "门市价"); });
+    $("#MSJ").bind("focus", function () { InfoSpanInput("MSJ", "请填写门市价"); });
+    $("#YHJ_CR").bind("blur", function () { ValidateSpanInput("YHJ_CR", "优惠价_成人", "YHJ"); });
+    $("#YHJ_CR").bind("focus", function () { InfoSpanInput("YHJ_CR", "请填写优惠价_成人", "YHJ"); });
+    $("#YHJ_ET").bind("blur", function () { ValidateSpanInput("YHJ_ET", "优惠价_儿童", "YHJ"); });
+    $("#YHJ_ET").bind("focus", function () { InfoSpanInput("YHJ_ET", "请填写优惠价_儿童", "YHJ"); });
 });
 //验证往返交通
 function ValidateWFJT() {

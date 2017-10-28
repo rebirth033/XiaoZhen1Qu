@@ -101,6 +101,7 @@
                         <img class="img_radio" id="img_cyfs_gty" /><label class="label_radio">跟团游</label>
                     </div>
                 </div>
+                <div id="divCYFSTip" class="Warn"></div>
             </div>
             <div id="divYWXM" class="div_row" style="z-index: 998;">
                 <div class="div_row_left">
@@ -109,6 +110,7 @@
                 </div>
                 <div id="divYWXMText" class="div_row_right" style="position: relative;">
                 </div>
+                <div id="divYWXMTip" class="Warn"></div>
             </div>
             <div id="divSHRQ" class="div_row" style="z-index: 998;">
                 <div class="div_row_left">
@@ -117,22 +119,28 @@
                 </div>
                 <div id="divSHRQText" class="div_row_right" style="position: relative;">
                 </div>
+                <div id="divSHRQTip" class="Warn"></div>
             </div>
-            <div id="divZBYXCTS" class="div_row" style="z-index: 993">
+            <div id="divXCTS" class="div_row" style="z-index: 993">
                 <div class="div_row_left">
                     <span class="span_required">*</span>
                     <span class="spanFWCZ">行程天数</span>
                 </div>
                 <div class="div_row_right">
-                    <div id="divXCTS_RText" class="div_select_out SRK" style="position: relative;">
-                        <div id="divXCTS_RSpan" class="div_select_in" style="border: none; margin-top: 6px;">
-                            <span id="spanXCTS_R" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择</span>
-                            <div class="span_select_arrow"></div>
-                        </div>
-                        <div id="divXCTS_R" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
-                        </div>
+                    <div id="div_xcts_yry" class="div_radio">
+                        <img class="img_radio" id="img_xcts_yry" /><label class="label_radio">一日游</label>
+                    </div>
+                    <div id="div_xcts_ery" class="div_radio">
+                        <img class="img_radio" id="img_xcts_ery" /><label class="label_radio">二日游</label>
+                    </div>
+                    <div id="div_xcts_sry" class="div_radio">
+                        <img class="img_radio" id="img_xcts_sry" /><label class="label_radio">三日游</label>
+                    </div>
+                    <div id="div_xcts_siry" class="div_radio">
+                        <img class="img_radio" id="img_xcts_siry" /><label class="label_radio">四日游</label>
                     </div>
                 </div>
+                <div id="divXCTSTip" class="Warn"></div>
             </div>
             <div id="divFWZP" class="div_row" style="z-index: 990">
                 <div class="div_row_left" style="height: 170px; vertical-align: top;">
@@ -182,7 +190,7 @@
                         <span class="spaninput_fontcolor">元/人</span>
                     </span>
                 </div>
-                <div id="divMSJTip" class="Warn" style="z-index: 992; position: relative;"></div>
+                <div id="divMSJTip" class="Warn"></div>
             </div>
             <div id="divYHJ" class="div_row" style="z-index: 992;">
                 <div class="div_row_left" style="margin-left: 114px;">
@@ -195,7 +203,7 @@
                         <input class="input_spaninput spaninput_fontcolor" id="YHJ_CR" maxlength="5" column="YHJ_CR" type="text" style="width: 50px" />
                         <span class="spaninput_fontcolor">元/人</span>
                     </span>
-                    <span id="spanYHJ" class="span_spaninput SRK" style="display: inline-block; width: 150px;">
+                    <span id="spanYHJ_ET" class="span_spaninput SRK" style="display: inline-block; width: 150px;">
                         <span class="spaninput_fontcolor" style="margin-left: 10px;">儿童</span>
                         <input class="input_spaninput spaninput_fontcolor" id="YHJ_ET" maxlength="5" column="YHJ_ET" type="text" style="width: 50px" />
                         <span class="spaninput_fontcolor">元/人</span>
@@ -203,15 +211,15 @@
                 </div>
                 <div id="divYHJTip" class="Warn" style="z-index: 992; position: relative;"></div>
             </div>
-            <div id="divFWJS" class="div_row" style="height: 253px;">
+            <div id="divBCMS" class="div_row" style="height: 253px;">
                 <div class="div_row_left" style="height: 170px; vertical-align: top;">
                     <span class="span_required" style="vertical-align: top">*</span>
-                    <span id="spanFWJS" style="vertical-align: top">服务介绍</span>
+                    <span id="spanBCMS" style="vertical-align: top">服务介绍</span>
                 </div>
                 <div class="div_row_right">
-                    <script id="FWJS" type="text/plain" style="width:594px;height:200px;display:inline-block;">
+                    <script id="BCMS" type="text/plain" style="width:594px;height:200px;display:inline-block;">
                     </script>
-                    <div id="divFWJSTip" class="Warn"></div>
+                    <div id="divBCMSTip" class="Warn"></div>
                 </div>
             </div>
             <div id="divLXRXX" class="div_split" style="display: block; text-align: left;">
@@ -224,7 +232,7 @@
                     <span class="spanFWCZ">详细地址</span>
                 </div>
                 <div class="div_row_right">
-                    <div id="divQYText" class="div_select_out SRK" style="z-index: 997; ">
+                    <div id="divQYText" class="div_select_out SRK" style="z-index: 997;">
                         <div id="divQYSpan" class="div_select_in" style="border: none; margin-top: 6px;">
                             <input type="hidden" id="QYCode" />
                             <span id="spanQY" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择区域</span>
@@ -233,7 +241,7 @@
                         <div id="divQY" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
                         </div>
                     </div>
-                    <div id="divDDText" class="div_select_out SRK" style="z-index: 997; ">
+                    <div id="divDDText" class="div_select_out SRK" style="z-index: 997;">
                         <div id="divDDSpan" class="div_select_in" style="border: none; margin-top: 6px;">
                             <span id="spanDD" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择地段</span>
                             <div class="span_select_arrow"></div>
@@ -243,6 +251,7 @@
                     </div>
                     <input id="JTDZ" column="JTDZ" class="span_spaninput input_input SRK" type="text" placeholder="请填写具体地址" style="width: 300px" />
                 </div>
+                <div id="divSZQYTip" class="Warn"></div>
             </div>
             <div id="divLXR" class="div_row" style="z-index: 990">
                 <div class="div_row_left" style="margin-left: 114px;">
