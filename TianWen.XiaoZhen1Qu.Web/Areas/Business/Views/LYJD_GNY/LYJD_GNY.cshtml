@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = "JYPXLYJD_GNY";
+    ViewBag.Title = "LYJD_GNY";
     Layout = "~/Areas/Business/Views/Shared/HTFBLayout.cshtml";
 }
 
@@ -114,6 +114,7 @@
                         </div>
                     </div>
                 </div>
+                <div id="divGNYCYFSTip"></div>
             </div>
             <div id="divFTRQ" class="div_row" style="z-index: 995">
                 <div class="div_row_left">
@@ -122,14 +123,15 @@
                 </div>
                 <div class="div_row_right">
                     <div id="div_ftrq_ttft" class="div_radio">
-                        <img class="img_radio" id="img_ftrq_ttft" /><label class="label_radio">天天发团</label>
+                        <img class="img_radio" id="img_ftrq_ttft"/><label class="label_radio">天天发团</label>
                     </div>
                     <div id="div_ftrq_xzrq" class="div_radio">
-                        <img class="img_radio" id="img_ftrq_xzrq" /><label class="label_radio">选择日期</label>
+                        <img class="img_radio" id="img_ftrq_xzrq"/><label class="label_radio">选择日期</label>
                     </div>
                 </div>
+                <div id="divFTRQTip"></div>
             </div>
-            <div id="divGNYWFJT" class="div_row" style="z-index: 994">
+            <div id="divWFJT" class="div_row" style="z-index: 994">
                 <div class="div_row_left">
                     <span class="span_required">*</span>
                     <span class="spanFWCZ">往返交通</span>
@@ -153,8 +155,9 @@
                         </div>
                     </div>
                 </div>
+                <div id="divWFJTTip"></div>
             </div>
-            <div id="divGNYXCTS" class="div_row" style="z-index: 993">
+            <div id="divXCTS" class="div_row" style="z-index: 993">
                 <div class="div_row_left">
                     <span class="span_required">*</span>
                     <span class="spanFWCZ">行程天数</span>
@@ -178,6 +181,7 @@
                         </div>
                     </div>
                 </div>
+                <div id="divXCTSTip"></div>
             </div>
             <div id="divXCAP" class="div_row" style="height: 253px; position: relative; z-index: 992;">
                 <div class="div_row_left" style="height: 170px; vertical-align: top;">
@@ -249,7 +253,7 @@
                         <span class="spaninput_fontcolor">元/人</span>
                     </span>
                 </div>
-                <div id="divMSJTip" class="Warn" style="z-index: 992; position: relative;"></div>
+                <div id="divMSJTip" class="Warn"></div>
             </div>
             <div id="divYHJ" class="div_row" style="z-index: 992;">
                 <div class="div_row_left" style="margin-left: 114px;">
@@ -268,7 +272,7 @@
                         <span class="spaninput_fontcolor">元/人</span>
                     </span>
                 </div>
-                <div id="divYHJTip" class="Warn" style="z-index: 992; position: relative;"></div>
+                <div id="divYHJTip" class="Warn"></div>
             </div>
             <div id="divFYBH" class="div_row" style="height: 153px; position: relative; z-index: 992;">
                 <div class="div_row_left" style="height: 170px; vertical-align: top;">
@@ -302,16 +306,16 @@
                     <span class="spanFWCZ">详细地址</span>
                 </div>
                 <div class="div_row_right">
-                    <div id="divQYText" class="div_select_out SRK" style="z-index: 997; ">
+                    <div id="divQYText" class="div_select_out SRK" style="z-index: 997;">
                         <div id="divQYSpan" class="div_select_in" style="border: none; margin-top: 6px;">
-                            <input type="hidden" id="QYCode" />
+                            <input type="hidden" id="QYCode"/>
                             <span id="spanQY" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择区域</span>
                             <div class="span_select_arrow"></div>
                         </div>
                         <div id="divQY" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
                         </div>
                     </div>
-                    <div id="divDDText" class="div_select_out SRK" style="z-index: 997; ">
+                    <div id="divDDText" class="div_select_out SRK" style="z-index: 997;">
                         <div id="divDDSpan" class="div_select_in" style="border: none; margin-top: 6px;">
                             <span id="spanDD" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择地段</span>
                             <div class="span_select_arrow"></div>
@@ -319,8 +323,9 @@
                         <div id="divDD" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
                         </div>
                     </div>
-                    <input id="JTDZ" column="JTDZ" class="span_spaninput input_input SRK" type="text" placeholder="请填写具体地址" style="width: 300px" />
+                    <input id="JTDZ" column="JTDZ" class="span_spaninput input_input SRK" type="text" placeholder="请填写具体地址" style="width: 300px"/>
                 </div>
+                <div id="divSZQYTip"></div>
             </div>
             <div id="divLXR" class="div_row" style="z-index: 990">
                 <div class="div_row_left" style="margin-left: 114px;">

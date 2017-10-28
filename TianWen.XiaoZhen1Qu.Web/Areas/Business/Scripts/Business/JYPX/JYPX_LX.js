@@ -2,7 +2,7 @@
     $("body").bind("click", function () { Close("_XZQ"); });
     BindClick("GJ");
     BindClick("QY");
-    BindClick("DD");
+    BindClick("DD"); 
     LoadDuoX("申请学历", "SQXL");
 });
 //加载国家标签

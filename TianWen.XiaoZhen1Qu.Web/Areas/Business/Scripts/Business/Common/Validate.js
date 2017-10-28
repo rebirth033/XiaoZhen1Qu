@@ -146,6 +146,22 @@ function ValidateFWQY() {
         return true;
     }
 }
+//验证span输入框
+function ValidateSpanInput(id, value, outid) {
+    if (outid === "" || outid === null || outid === undefined)
+        outid = id;
+    if ($("#" + id).val() === "" || $("#" + id).val() === null) {
+        $("#div" + outid + "Tip").css("display", "block");
+        $("#div" + outid + "Tip").attr("class", "Warn");
+        $("#div" + outid + "Tip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写' + value + '啦');
+        $("#span" + id).css("border-color", "#fd634f");
+        return false;
+    } else {
+        $("#div" + outid + "Tip").css("display", "none");
+        $("#span" + id).css("border-color", "#cccccc");
+        return true;
+    }
+}
 //验证输入框
 function ValidateInput(id, value, outid) {
     if (outid === "" || outid === null || outid === undefined)
