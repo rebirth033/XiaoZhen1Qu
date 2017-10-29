@@ -1,5 +1,6 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });LoadNLMFY_FLNYJBXX();
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    LoadNLMFY_FLNYJBXX();
     BindClick("LB");
     BindClick("QY");
     BindClick("DD");
@@ -9,7 +10,7 @@ $(document).ready(function () {$("body").bind("click", function () { Close("_XZQ
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("肥料/农药", "LB", "CODES_NLMFY");
+            LoadCODESByTYPENAME("肥料/农药", "LB", "CODES_NLMFY", Bind, "OUTLB", "LB", "");
         }
         if (type === "XL") {
             LoadXL();
