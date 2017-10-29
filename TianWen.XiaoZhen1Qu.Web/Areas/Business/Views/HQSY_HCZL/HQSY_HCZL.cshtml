@@ -95,12 +95,13 @@
                 </div>
                 <div class="div_row_right">
                     <div class="div_radio" id="div_tccz_s">
-                        <img class="img_radio" id="img_tccz_s" /><label class="label_radio">是</label>
+                        <img class="img_radio" id="img_tccz_s"/><label class="label_radio">是</label>
                     </div>
                     <div class="div_radio" id="div_tccz_f">
-                        <img class="img_radio" id="img_tccz_f" /><label class="label_radio">否</label>
+                        <img class="img_radio" id="img_tccz_f"/><label class="label_radio">否</label>
                     </div>
                 </div>
+                <div id="divTCCZTip"></div>
             </div>
             <div id="divHCZLTCPP" class="div_row" style="z-index: 998">
                 <div class="div_row_left">
@@ -108,15 +109,15 @@
                     <span class="spanFWCZ">头车品牌</span>
                 </div>
                 <div class="div_row_right">
-                    <div id="divTCPPText" class="div_select_out SRK" style="position: relative;">
+                    <div id="divTCPPText" class="div_select_out SRK" style="position: relative;z-index: 997">
                         <div id="divTCPPSpan" class="div_select_in" style="border: none; margin-top: 6px;">
                             <span id="spanTCPP" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择头车品牌</span>
                             <div class="span_select_arrow"></div>
                         </div>
                         <div id="divTCPP" class="div_bqss" style="display: none;">
                             <div class="div_bqss_head">
-                                <input class="input_content" type="text" placeholder="输入名称快速搜索" style="cursor: text" />
-                                <input class="btn btn-info" type="button" value="快速搜索" />
+                                <input class="input_content" type="text" placeholder="输入名称快速搜索" style="cursor: text"/>
+                                <input class="btn btn-info" type="button" value="快速搜索"/>
                             </div>
                             <div class="div_bqss_body">
                                 <div class="div_bqss_body_mc" id="div_content_tcmc">
@@ -127,6 +128,7 @@
                         </div>
                     </div>
                 </div>
+                <div id="divHCZLTCPPTip" style="z-index: 996;"></div>
             </div>
             <div id="divTCYS" class="div_row" style="z-index: 997">
                 <div class="div_row_left" style="margin-left: 101px;">
@@ -142,6 +144,7 @@
                 </div>
                 <div class="div_row_right" id="div_tcys_right2">
                 </div>
+                <div id="divTCYSTip"></div>
             </div>
             <div id="divGCSL" class="div_row" style="z-index: 995;">
                 <div class="div_row_left">
@@ -162,15 +165,15 @@
                     <span class="spanFWCZ">跟车品牌</span>
                 </div>
                 <div class="div_row_right">
-                    <div id="divGCPPText" class="div_select_out SRK" style="position: relative;">
+                    <div id="divGCPPText" class="div_select_out SRK" style="position: relative; z-index: 994;">
                         <div id="divGCPPSpan" class="div_select_in" style="border: none; margin-top: 6px;">
                             <span id="spanGCPP" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择跟车品牌</span>
                             <div class="span_select_arrow"></div>
                         </div>
                         <div id="divGCPP" class="div_bqss" style="display: none;">
                             <div class="div_bqss_head">
-                                <input class="input_content" type="text" placeholder="输入名称快速搜索" style="cursor: text" />
-                                <input class="btn btn-info" type="button" value="快速搜索" />
+                                <input class="input_content" type="text" placeholder="输入名称快速搜索" style="cursor: text"/>
+                                <input class="btn btn-info" type="button" value="快速搜索"/>
                             </div>
                             <div class="div_bqss_body">
                                 <div class="div_bqss_body_mc" id="div_content_gcmc">
@@ -181,6 +184,7 @@
                         </div>
                     </div>
                 </div>
+                <div id="divHCZLGCPPTip" style="z-index: 993"></div>
             </div>
             <div id="divGCYS" class="div_row" style="z-index: 993">
                 <div class="div_row_left" style="margin-left: 101px;">
@@ -196,6 +200,7 @@
                 </div>
                 <div class="div_row_right" id="div_gcys_right2">
                 </div>
+                <div id="divGCYSTip"></div>
             </div>
             <div id="divMFTGCH" class="div_row">
                 <div class="div_row_left" style="margin-left: 72px;">
@@ -204,12 +209,13 @@
                 </div>
                 <div class="div_row_right">
                     <div class="div_radio" id="div_mftgch_s">
-                        <img class="img_radio" id="img_mftgch_s" /><label class="label_radio">是</label>
+                        <img class="img_radio" id="img_mftgch_s"/><label class="label_radio">是</label>
                     </div>
                     <div class="div_radio" id="div_mftgch_f">
-                        <img class="img_radio" id="img_mftgch_f" /><label class="label_radio">否</label>
+                        <img class="img_radio" id="img_mftgch_f"/><label class="label_radio">否</label>
                     </div>
                 </div>
+                <div id="divMFTGCHTip"></div>
             </div>
             <div id="divJNSJ" class="div_row" style="z-index: 991;">
                 <div class="div_row_left">
@@ -318,16 +324,16 @@
                     <span class="spanFWCZ">详细地址</span>
                 </div>
                 <div class="div_row_right">
-                    <div id="divQYText" class="div_select_out SRK" style="z-index: 997; ">
+                    <div id="divQYText" class="div_select_out SRK" style="z-index: 997;">
                         <div id="divQYSpan" class="div_select_in" style="border: none; margin-top: 6px;">
-                            <input type="hidden" id="QYCode" />
+                            <input type="hidden" id="QYCode"/>
                             <span id="spanQY" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择区域</span>
                             <div class="span_select_arrow"></div>
                         </div>
                         <div id="divQY" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
                         </div>
                     </div>
-                    <div id="divDDText" class="div_select_out SRK" style="z-index: 997; ">
+                    <div id="divDDText" class="div_select_out SRK" style="z-index: 997;">
                         <div id="divDDSpan" class="div_select_in" style="border: none; margin-top: 6px;">
                             <span id="spanDD" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择地段</span>
                             <div class="span_select_arrow"></div>
@@ -335,8 +341,9 @@
                         <div id="divDD" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
                         </div>
                     </div>
-                    <input id="JTDZ" column="JTDZ" class="span_spaninput input_input SRK" type="text" placeholder="请填写具体地址" style="width: 300px" />
+                    <input id="JTDZ" column="JTDZ" class="span_spaninput input_input SRK" type="text" placeholder="请填写具体地址" style="width: 300px"/>
                 </div>
+                <div id="divSZQYTip"></div>
             </div>
             <div id="divLXR" class="div_row" style="z-index: 990">
                 <div class="div_row_left" style="margin-left: 114px;">
