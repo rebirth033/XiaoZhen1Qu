@@ -1,5 +1,6 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });BindClick("LX");
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    BindClick("LX");
     BindClick("QY");
     BindClick("DD");
     LoadHQSY_HQYPJBXX();
@@ -9,7 +10,7 @@ $(document).ready(function () {$("body").bind("click", function () { Close("_XZQ
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LX") {
-            LoadCODESByTYPENAME("婚庆用品", "LX", "CODES_HQSY");
+            LoadCODESByTYPENAME("婚庆用品", "LX", "CODES_HQSY", Bind, "OUTLB", "LX", "");
         }
         if (type === "XL") {
             LoadXL();

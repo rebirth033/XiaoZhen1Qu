@@ -158,9 +158,6 @@ function GCPPXZ(GCPPMC, GCPPID) {
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadCODESByTYPENAME("婚车租赁", "LB", "CODES_HQSY");
-        }
         if (type === "TCPP") {
             LoadTCPP("tc");
             LoadTCPPMC("婚车品牌", "divA");
