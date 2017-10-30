@@ -1,8 +1,56 @@
-﻿.div_head {
-    background-color: #ffffff;
+﻿body {
     width: 100%;
-    height: 80px;
-    vertical-align: middle;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: #eeeff1;
+}
+
+.div_head {
+    background-color: #ffffff;
+    width: 1200px;
+    height: 100px;
+    padding-top: 10px;
+}
+
+.div_head_nav {
+    background-color: #ffffff;
+    width: 1200px;
+    height: 39px;
+}
+
+.ul_head_nav {
+    height: 39px;
+    display: block;
+    padding: 0;
+    width: 100%;
+    border-bottom: 2px solid #5bc0de;
+}
+
+.li_head_nav {
+    background: #ffffff;
+    text-align: center;
+    color: #5bc0de;
+    height: 37px;
+    font-size: 16px;
+    font-weight: 700;
+    float: left;
+    display: inline-block;
+    padding: 6px 20px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    
+}
+
+.span_head_nav {
+    cursor: pointer;
+}
+
+.i_head_nav {
+    background-image: url(images/head_nav_down.png);
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-left: 5px;
 }
 
 .div_head_left {
@@ -54,11 +102,6 @@
     display: inline;
     margin-left: 30px;
     cursor: pointer;
-}
-
-.div_split {
-    width: 100%;
-    height: 30px;
 }
 
 .div_body_text {
@@ -120,15 +163,21 @@
     text-align: center;
 }
 
+.div_head_right_ss {
+    display: inline-block;
+    width: 600px;
+    height: 80px;
+    float: left;
+    margin-left: 200px;
+}
+
 .span_spaninput_out {
     border: none;
-    display: inline-block;
+    display: block;
     width: 500px;
     height: 40px;
     font-size: 14px;
     margin-top: 10px;
-    margin-left: 100px;
-    float: left;
 }
 
 .span_spaninput_in {
@@ -143,6 +192,17 @@
 .spaninput_fontcolor {
     color: #333333;
 }
+
+.span_head_right_ss {
+    font-size: 12px;
+    color: #999;
+    cursor: pointer;
+    margin-left: 4px;
+}
+
+    .span_head_right_ss:hover {
+        color: #ef6100;
+    }
 
 .span_ss {
     width: 90px;
@@ -169,12 +229,12 @@
     text-align: center;
     cursor: pointer;
     margin-top: 10px;
-    margin-left: 100px;
+    margin-left: 10px;
 }
 
-.span_fbxx:hover {
-    background: #31b0d5;
-}
+    .span_fbxx:hover {
+        background: #31b0d5;
+    }
 
 :-ms-input-placeholder.span_spaninput_in {
     color: #999;
