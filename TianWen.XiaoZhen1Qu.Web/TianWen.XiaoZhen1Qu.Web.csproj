@@ -295,7 +295,6 @@
     <Content Include="Areas\Business\Css\images\system_photo2.jpg" />
     <Content Include="Areas\Business\Css\images\system_photo3.jpg" />
     <Content Include="Areas\Business\Css\images\system_photo4.jpg" />
-    <Content Include="Areas\Business\Css\images\test.jpg" />
     <Content Include="Areas\Business\Css\images\three-blue.png" />
     <Content Include="Areas\Business\Css\images\three-gray.png" />
     <Content Include="Areas\Business\Css\images\two-blue.png" />
