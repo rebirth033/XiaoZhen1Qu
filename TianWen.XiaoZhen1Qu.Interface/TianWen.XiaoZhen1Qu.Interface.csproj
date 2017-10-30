@@ -101,6 +101,7 @@
     <Compile Include="IHFCZBLL.cs" />
     <Compile Include="ILBXXBLL.cs" />
     <Compile Include="IRZGLBLL.cs" />
+    <Compile Include="ISYBLL.cs" />
     <Compile Include="IWDFBBLL.cs" />
     <Compile Include="IWDSCBLL.cs" />
     <Compile Include="IWDXJBLL.cs" />

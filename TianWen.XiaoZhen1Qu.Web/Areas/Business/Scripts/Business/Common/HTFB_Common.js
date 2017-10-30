@@ -14,6 +14,7 @@ $(document).ready(function () {
     $("#spanCXLB").bind("click", CXLB);
     $("#btnFB").bind("click", FB);
     $("#span_content_info_qCWFWs").bind("click", LoadXZQByGrade);
+    $("#btnClose").bind("click", CloseWindow);
 
     LoadDefault();
     LoadTXXX();
@@ -59,6 +60,11 @@ function SelectLB(obj, type) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
 }
+//选择下拉框
+function SelectDropdown(obj, type) {
+    $("#span" + type).html(obj.innerHTML);
+    $("#div" + type).css("display", "none");
+}
 //退出
 function Exit() {
     window.location.href = getRootPath() + "/Business/YHDLXX/YHDLXX";
@@ -66,4 +72,14 @@ function Exit() {
 //绑定下拉框
 function Bind(idout, idin, message) {
     $("#div" + idout).find(".li_select").bind("click", function () { ValidateSelect(idout, idin, message); });
+}
+//鼠标点击样式
+function ActiveStyle(name) {
+    $("#div" + name + "Text").css("border-top", "1px solid #5bc0de").css("border-right", "1px solid #5bc0de").css("border-left", "1px solid #5bc0de").css("border-bottom", "1px solid #5bc0de");
+    $("#div" + name).find("ul").css("border-left", "1px solid #5bc0de").css("border-right", "1px solid #5bc0de").css("border-bottom", "1px solid #5bc0de");
+}
+//鼠标离开样式
+function LeaveStyle(name) {
+    $("#div" + name + "Text").css("border-top", "1px solid #cccccc").css("border-right", "1px solid #cccccc").css("border-left", "1px solid #cccccc").css("border-bottom", "1px solid #cccccc");
+    $("#div" + name).find("ul").css("border-left", "1px solid #cccccc").css("border-right", "1px solid #cccccc").css("border-bottom", "1px solid #cccccc");
 }

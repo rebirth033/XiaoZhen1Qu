@@ -295,7 +295,6 @@
     <Content Include="Areas\Business\Css\images\system_photo2.jpg" />
     <Content Include="Areas\Business\Css\images\system_photo3.jpg" />
     <Content Include="Areas\Business\Css\images\system_photo4.jpg" />
-    <Content Include="Areas\Business\Css\images\test.jpg" />
     <Content Include="Areas\Business\Css\images\three-blue.png" />
     <Content Include="Areas\Business\Css\images\three-gray.png" />
     <Content Include="Areas\Business\Css\images\two-blue.png" />
@@ -462,6 +461,7 @@
     <Content Include="Areas\Business\Css\SWFW\SWFW_ZK.css" />
     <Content Include="Areas\Business\Css\SWFW\SWFW_ZL.css" />
     <Content Include="Areas\Business\Css\SWFW\SWFW_ZXFW.css" />
+    <Content Include="Areas\Business\Css\SY.css" />
     <Content Include="Areas\Business\Css\WDFB.css" />
     <Content Include="Areas\Business\Css\WDSC.css" />
     <Content Include="Areas\Business\Css\WDXJ\WDXJ_CZ.css" />
@@ -892,6 +892,7 @@
     <Content Include="Areas\Business\Scripts\Business\SWFW\SWFW_ZHFWYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\SWFW\SWFW_ZK.js" />
     <Content Include="Areas\Business\Scripts\Business\SWFW\SWFW_ZKYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\SY.js" />
     <Content Include="Areas\Business\Scripts\Business\YHGL\WDFB.js" />
     <Content Include="Areas\Business\Scripts\Business\YHGL\WDSC.js" />
     <Content Include="Areas\Business\Scripts\Business\WDXJ\WDXJ_CZ.js" />
@@ -1519,6 +1520,7 @@
     <Compile Include="Areas\Business\Controllers\SWFW\SWFW_ZKController.cs" />
     <Compile Include="Areas\Business\Controllers\SWFW\SWFW_ZLController.cs" />
     <Compile Include="Areas\Business\Controllers\SWFW\SWFW_ZXFWController.cs" />
+    <Compile Include="Areas\Business\Controllers\SYController.cs" />
     <Compile Include="Areas\Business\Controllers\WDFBController.cs" />
     <Compile Include="Areas\Business\Controllers\WDSCController.cs" />
     <Compile Include="Areas\Business\Controllers\WDXJController.cs" />
@@ -1860,6 +1862,7 @@
     <Content Include="Areas\Business\Views\NLMFY_SLSY\NLMFY_SLSY.cshtml" />
     <Content Include="Areas\Business\Views\NLMFY_NJJSB\NLMFY_NJJSB.cshtml" />
     <Content Include="Areas\Business\Views\NLMFY_NCPJG\NLMFY_NCPJG.cshtml" />
+    <Content Include="Areas\Business\Views\SY\SY.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

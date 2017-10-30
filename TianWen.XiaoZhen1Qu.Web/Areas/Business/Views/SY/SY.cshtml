@@ -1,0 +1,186 @@
+﻿@{
+    ViewBag.Title = "信息小镇_首页";
+    Layout = "~/Areas/Business/Views/Shared/_ListLayout.cshtml";
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link href="@Url.Content("~/Areas/Business/Css/SY.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Areas/Business/Css/Common/Top.css" )" rel="stylesheet" />
+    <link href="@Url.Content("~/Areas/Business/Css/Common/XZQ.css" )" rel="stylesheet" />
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/SY.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/Common/XZQ.js")"></script>
+</head>
+<body>
+    <div id="divTop" class="div_top">
+        <div class="div_top_left">
+            <span class="span_dqxzq" id="span_content_info_xzq">@ViewData["XZQ"]</span>
+            [<span class="span_qhcs" id="span_content_info_qhcs">切换城市</span>]
+        </div>
+        <div id="div_XZQ" class="div_dropdown">
+        </div>
+        <div class="div_top_right">
+            <span class="span_top_right">
+                登录/注册
+            </span>
+            <span class="span_top_right_split"></span>
+            <span class="span_top_right">
+                个人中心
+            </span>
+            <span class="span_top_right_split"></span>
+            <span class="span_top_right">
+                帮助中心
+            </span>
+        </div>
+    </div>
+    <div id="divHead" class="div_head">
+        <div class="div_head_left">
+            <img class="img_head_left_logo" src="@Url.Content("~/Areas/Business/Css/images/logo_blue.png")" />
+        </div>
+        <div class="div_head_right">
+            <div class="div_head_right_ss">
+                <span id="spanXSLC" class="span_spaninput_out SRK">
+                    <input class="span_spaninput_in spaninput_fontcolor" id="SS" type="text" placeholder="找房子,找工作,找服务," />
+                    <span class="span_ss">搜索</span>
+                </span>
+                <span class="span_head_right_ss">租房子</span>
+                <span class="span_head_right_ss">二手车</span>
+                <span class="span_head_right_ss">兼职</span>
+                <span class="span_head_right_ss">装修服务</span>
+                <span class="span_head_right_ss">旅游度假</span>
+                <span class="span_head_right_ss">居民搬家</span>
+                <span class="span_head_right_ss">演出表演</span>
+                <span class="span_head_right_ss">运动健身</span>
+            </div>
+            <span class="span_fbxx" id="span_fbxx">免费发布信息</span>
+        </div>
+    </div>
+    <div id="divNav" class="div_head_nav">
+        <ul class="ul_head_nav">
+            <li id="li_head_sy" class="li_head_nav" style="width: 80px;"><span class="span_head_nav">首页</span></li>
+            <li id="li_head_xzapp" class="li_head_nav"><span class="span_head_nav">小镇APP</span><i class="i_head_nav"></i></li>
+            <li id="li_head_xzgzh" class="li_head_nav"><span class="span_head_nav">小镇公众号</span><i class="i_head_nav"></i></li>
+            <li id="li_head_xcx" class="li_head_nav"><span class="span_head_nav">小程序</span><i class="i_head_nav"></i></li>
+            <li id="li_head_xztm" class="li_head_nav"><span class="span_head_nav">小镇特卖</span></li>
+            <li id="li_head_xzjr" class="li_head_nav"><span class="span_head_nav">小镇金融</span></li>
+            <li id="li_head_xzgy" class="li_head_nav"><span class="span_head_nav">小镇公益</span></li>
+            <li id="li_head_xzfc" class="li_head_nav"><span class="span_head_nav">小镇房产</span></li>
+            <li id="li_head_xzesc" class="li_head_nav"><span class="span_head_nav">二手车</span></li>
+            <li id="li_head_xztg" class="li_head_nav"><span class="span_head_nav">小镇推广</span><i class="i_head_nav"></i></li>
+            <li id="li_head_viphy" class="li_head_nav"><span class="span_head_nav">VIP会员</span><i class="i_head_nav"></i></li>
+        </ul>
+    </div>
+    <div id="div_Body" class="div_body">
+        <div class="div_body_top">
+            <div class="div_body_top_left">
+                <ul class="ul_body_top_left">
+                    <li class="li_body_top_left">
+                        <p class="p_body_top_left">
+                            <img class="i_body_top_left" src="@Url.Content("~/Areas/Business/Css/images/body_top_zp.png")" />
+                        </p>
+                        <p class="p_body_top_left p_body_top_left_dl">招聘</p>
+                        <p class="p_body_top_left">
+                            <span class="span_body_top_left span_body_top_left_xl">全职</span>
+                            <span class="span_body_top_left">/</span> 
+                            <span class="span_body_top_left span_body_top_left_xl">兼职</span>
+                        </p>
+                    </li>
+                    <li class="li_body_top_left">
+                        <p class="p_body_top_left">
+                            <img class="i_body_top_left" src="@Url.Content("~/Areas/Business/Css/images/body_top_esc.png")"/>
+                        </p>
+                        <p class="p_body_top_left p_body_top_left_dl">二手车</p>
+                        <p class="p_body_top_left">
+                            <span class="span_body_top_left span_body_top_left_xl">家用</span>
+                            <span class="span_body_top_left">/</span>
+                            <span class="span_body_top_left span_body_top_left_xl">商用</span>
+                        </p>
+                    </li>
+                    <li class="li_body_top_left">
+                        <p class="p_body_top_left">
+                            <img class="i_body_top_left" src="@Url.Content("~/Areas/Business/Css/images/body_top_fc.png")"/>
+                        </p>
+                        <p class="p_body_top_left p_body_top_left_dl">房产</p>
+                        <p class="p_body_top_left">
+                            <span class="span_body_top_left span_body_top_left_xl">租房</span>
+                            <span class="span_body_top_left">/</span>
+                            <span class="span_body_top_left span_body_top_left_xl">买房</span>
+                        </p>
+                    </li>
+                    <li class="li_body_top_left">
+                        <p class="p_body_top_left">
+                            <img class="i_body_top_left" src="@Url.Content("~/Areas/Business/Css/images/body_top_cw.png")"/>
+                        </p>
+                        <p class="p_body_top_left p_body_top_left_dl">宠物</p>
+                        <p class="p_body_top_left">
+                            <span class="span_body_top_left span_body_top_left_xl">狗</span>
+                            <span class="span_body_top_left">/</span>
+                            <span class="span_body_top_left span_body_top_left_xl">猫</span>
+                            <span class="span_body_top_left">/</span>
+                            <span class="span_body_top_left span_body_top_left_xl">鱼</span>
+                        </p>
+                    </li>
+                    <li class="li_body_top_left">
+                        <p class="p_body_top_left">
+                            <img class="i_body_top_left" src="@Url.Content("~/Areas/Business/Css/images/body_top_essc.png")"/>
+                        </p>
+                        <p class="p_body_top_left p_body_top_left_dl">二手市场</p>
+                        <p class="p_body_top_left">
+                            <span class="span_body_top_left span_body_top_left_xl">手机</span>
+                            <span class="span_body_top_left">/</span>
+                            <span class="span_body_top_left span_body_top_left_xl">家电</span>
+                            <span class="span_body_top_left">/</span>
+                            <span class="span_body_top_left span_body_top_left_xl">回收</span>
+                        </p>
+                    </li>
+                    <li class="li_body_top_left">
+                        <p class="p_body_top_left">
+                            <img class="i_body_top_left" src="@Url.Content("~/Areas/Business/Css/images/body_top_shfw.png")"/>
+                        </p>
+                        <p class="p_body_top_left p_body_top_left_dl">生活服务</p>
+                        <p class="p_body_top_left">
+                            <span class="span_body_top_left span_body_top_left_xl">搬家</span>
+                            <span class="span_body_top_left">/</span>
+                            <span class="span_body_top_left span_body_top_left_xl">保姆</span>
+                            <span class="span_body_top_left">/</span>
+                            <span class="span_body_top_left span_body_top_left_xl">家教</span>
+                        </p>
+                    </li>
+                    <li class="li_body_top_left">
+                        <p class="p_body_top_left">
+                            <img class="i_body_top_left" src="@Url.Content("~/Areas/Business/Css/images/body_top_swfw.png")" />
+                        </p>
+                        <p class="p_body_top_left p_body_top_left_dl">商务服务</p>
+                        <p class="p_body_top_left">
+                            <span class="span_body_top_left span_body_top_left_xl">工商</span>
+                            <span class="span_body_top_left">/</span>
+                            <span class="span_body_top_left span_body_top_left_xl">加盟</span>
+                            <span class="span_body_top_left">/</span>
+                            <span class="span_body_top_left span_body_top_left_xl">租赁</span>
+                        </p>
+                    </li> 
+                    <li class="li_body_top_left">
+                        <p class="p_body_top_left">
+                            <img class="i_body_top_left" src="@Url.Content("~/Areas/Business/Css/images/body_top_jypx.png")" />
+                        </p>
+                        <p class="p_body_top_left p_body_top_left_dl">教育培训</p>
+                        <p class="p_body_top_left">
+                            <span class="span_body_top_left span_body_top_left_xl">语言</span>
+                            <span class="span_body_top_left">/</span>
+                            <span class="span_body_top_left span_body_top_left_xl">艺术</span>
+                            <span class="span_body_top_left">/</span>
+                            <span class="span_body_top_left span_body_top_left_xl">技能</span>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="div_body_top_right">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

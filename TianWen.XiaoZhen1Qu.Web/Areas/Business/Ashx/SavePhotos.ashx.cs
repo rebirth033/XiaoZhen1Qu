@@ -24,7 +24,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Ashx
             else
                 context.Response.Write(SavePhoto(context));
         }
-
+        //保存照片
         public string SavePhoto(HttpContext context)
         {
             try
@@ -48,7 +48,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Ashx
             }
             return string.Empty;
         }
-
+        //照片处理
         public string ResizeImg(Stream ImgFile, int maxWidth, int maxHeight, string ydid)
         {
             string RootDir = HttpContext.Current.Server.MapPath(HttpContext.Current.Request.ApplicationPath);//获取程序根目录
@@ -68,7 +68,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Ashx
             //设置高质量插值法
             gbmPhoto.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.High;
 
-            Color color = Color.FromArgb(255, 250, 255, 249);    //背景透明
+            Color color = Color.FromArgb(255, 250, 255, 249);//背景透明
 
             gbmPhoto.FillRectangle(new SolidBrush(color), new Rectangle(0, 0, iWidth, iHeight));
 
@@ -87,7 +87,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Ashx
 
             return ydid + "/" + fileName;
         }
-
+        //保存照片文件
         public string SavePhoto64(HttpContext context)
         {
             YHJBXX yhjbxx = FC_ZZFJBXXBLL.GetYHJBXXByYHM(context.Session["YHM"].ToString());
