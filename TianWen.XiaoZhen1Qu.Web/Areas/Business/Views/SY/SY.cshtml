@@ -1,0 +1,56 @@
+﻿@{
+    ViewBag.Title = "信息小镇_首页";
+    Layout = "~/Areas/Business/Views/Shared/_ListLayout.cshtml";
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link href="@Url.Content("~/Areas/Business/Css/SY.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Areas/Business/Css/Common/Top.css" )" rel="stylesheet" />
+    <link href="@Url.Content("~/Areas/Business/Css/Common/XZQ.css" )" rel="stylesheet" />
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/SY.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/Common/XZQ.js")"></script>
+</head>
+<body style="width: 100%; height: 100%; overflow-x:hidden; background-color: #eeeff1;">
+    <div id="divTop" class="div_top">
+        <div class="div_top_left">
+            <span class="span_dqxzq" id="span_content_info_xzq">@ViewData["XZQ"]</span>
+            [<span class="span_qhcs" id="span_content_info_qhcs">切换城市</span>]
+        </div>
+        <div id="div_XZQ" class="div_dropdown">
+
+        </div>
+        <div class="div_top_right">
+            <span class="span_top_right">
+                登录/注册
+            </span>
+            <span class="span_top_right_split"></span>
+            <span class="span_top_right">
+                个人中心
+            </span>
+            <span class="span_top_right_split"></span>
+            <span class="span_top_right">
+                帮助中心
+            </span>
+        </div>
+    </div>
+    <div id="divHead" class="div_head">
+        <div class="div_head_left">
+            <img class="img_head_left" src="@Url.Content("~/Areas/Business/Css/images/logo_blue.png")" />
+            <span class="span_head_left">infotownlet.com</span>
+        </div>
+        <div class="div_head_right">
+            <div class="div_head_right_ss">
+                <span id="spanXSLC" class="span_spaninput_out SRK">
+                    <input class="span_spaninput_in spaninput_fontcolor" id="SS" type="text" placeholder="找房子,找工作,找服务," />
+                    <span class="span_ss">搜索</span>
+                </span>
+            </div>
+            <span class="span_fbxx" id="span_fbxx">免费发布信息</span>
+        </div>
+    </div>
+</body>
+</html>

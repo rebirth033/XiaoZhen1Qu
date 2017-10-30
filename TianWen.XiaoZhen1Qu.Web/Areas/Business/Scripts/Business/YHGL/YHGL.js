@@ -18,6 +18,7 @@
     $("#spanHFCZ").bind("click", ToHFCZ);
     $("#spanYXCZ").bind("click", ToYXCZ);
     $("#spanWZCX").bind("click", ToWZCX);
+    $("#span_top_right_sy").bind("click", OpenSY);
     $("#spanBZZX").bind("click", OpenBZZX);
     $("#spanXJMXCX").bind("click", ToXJMXCX);
     $("#spanXJCZ").bind("click", ToXJCZ);
@@ -41,7 +42,7 @@
         ShowWDZJ();
     else
         ShowWDXX();
-    
+
 });
 //显示用户菜单
 function ShowYHCD() {
@@ -94,6 +95,10 @@ function LiFocus() {
 function ToWDFB() {
     $("#iframeright").attr("src", getRootPath() + "/Business/WDFB/WDFB");
 }
+//我的发布
+function ToWDFB() {
+    $("#iframeright").attr("src", getRootPath() + "/Business/WDFB/WDFB");
+}
 //我的收藏
 function ToWDSC() {
     $("#iframeright").attr("src", getRootPath() + "/Business/WDSC/WDSC");
@@ -137,6 +142,10 @@ function ToYXCZ() {
 //违章查询
 function ToWZCX() {
     $("#iframeright").attr("src", getRootPath() + "/Business/WZCX/WZCX");
+}
+//首页
+function OpenSY() {
+    window.open(getRootPath() + "/Business/SY/SY");
 }
 //帮助中心
 function OpenBZZX() {

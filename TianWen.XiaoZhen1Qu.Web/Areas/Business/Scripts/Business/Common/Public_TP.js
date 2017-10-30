@@ -66,9 +66,9 @@ function BindUlImgEdit() {
             img.onload = function () //确保图片已经加载完毕  
             {
                 cxt.clearRect(0, 0, c.width, c.height);
-                var left = (c.width - img.width) / 2;
-                var top = (c.height - img.height) / 2;
-                cxt.drawImage(img, left, top, img.width, img.height);
+                var left = (c.width - img.width * 10) / 2;
+                var top = (c.height - img.height * 10) / 2;
+                cxt.drawImage(img, left, top, img.width * 10, img.height * 10);
                 $("#rotate").bind("click", { src: img.src }, Rotate);
                 $("#btnSavePhoto").bind("click", { src: img.src, id: id }, SavePhoto);
             }
