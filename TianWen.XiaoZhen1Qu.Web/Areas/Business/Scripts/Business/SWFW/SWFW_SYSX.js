@@ -1,5 +1,6 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });BindClick("LB");
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    BindClick("LB");
     BindClick("NLD");
     BindClick("PSFG");
     BindClick("LX");
@@ -8,18 +9,17 @@ $(document).ready(function () {$("body").bind("click", function () { Close("_XZQ
     BindClick("DD");
     LoadSWFW_SYSXJBXX();
 });
-
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("摄影摄像类别", "LB", "CODES_SWFW");
+            LoadCODESByTYPENAME("摄影摄像类别", "LB", "CODES_SWFW", Bind, "OUTLB", "LB", "");
         }
         if (type === "NLD") {
-            LoadCODESByTYPENAME("年龄段", "NLD", "CODES_SWFW");
+            LoadCODESByTYPENAME("年龄段", "NLD", "CODES_SWFW", Bind, "SYSXNLD", "NLD", "");
         }
         if (type === "PSFG") {
-            LoadCODESByTYPENAME("拍摄风格", "PSFG", "CODES_SWFW");
+            LoadCODESByTYPENAME("拍摄风格", "PSFG", "CODES_SWFW", Bind, "SYSXPSFG", "PSFG", "");
         }
         if (type === "QY") {
             LoadQY();

@@ -1,15 +1,10 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });BindClick("LB");
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    BindClick("LB");
     BindClick("QY");
     BindClick("DD");
     LoadSHFW_WXFW_JJWXJBXX();
 });
-
-//选择类别下拉框
-function SelectLB(obj, type, id) {
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
-}
 //加载小类
 function LoadXL() {
     $.ajax({
@@ -30,6 +25,7 @@ function LoadXL() {
                 html += "</ul>";
                 $("#divXL").html(html);
                 $("#divXL").css("display", "");
+                Bind("OUTLB", "XL", "");
                 ActiveStyle("XL");
             }
         },
@@ -42,7 +38,7 @@ function LoadXL() {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("家具维修", "LB", "CODES_SHFW");
+            LoadCODESByTYPENAME("家具维修", "LB", "CODES_SHFW", Bind, "OUTLB", "LB", "");
         }
         if (type === "XL") {
             LoadXL();

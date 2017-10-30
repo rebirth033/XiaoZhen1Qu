@@ -32,7 +32,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// 来源
         /// </summary>
         [Property]
-        public virtual int SFSM { get; set; }
+        public virtual string SFSM { get; set; }
 
         /// <summary>
         /// 服务区域

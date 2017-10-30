@@ -1,10 +1,9 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });LoadJXSBWXLB();
-    
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    LoadJXSBWXLB();
     BindClick("QY");
     BindClick("DD");
 });
-
 //加载机械设备维修类别
 function LoadJXSBWXLB() {
     $.ajax({
@@ -20,18 +19,19 @@ function LoadJXSBWXLB() {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liJXSBWXLB' onclick='SelectDuoX(this)'><img class='img_JXSBWXLB'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i === 3 || i === 7 || i === 11 || i === 15 || i === 19) {
+                    html += "<li class='liJXSBWXLB' style='width:150px' onclick='SelectDuoX(this)'><img class='img_JXSBWXLB'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    if (i % 4 === 3) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 4) === 0)
-                    $("#divJXSBWXLB").css("height", parseInt(xml.list.length / 4) * 45 + "px");
+                    $("#divJXSBWXLB").css("height", parseInt(xml.list.length / 4) * 60 + "px");
                 else
-                    $("#divJXSBWXLB").css("height", (parseInt(xml.list.length / 4) + 1) * 45 + "px");
+                    $("#divJXSBWXLB").css("height", (parseInt(xml.list.length / 4) + 1) * 60 + "px");
                 html += "</ul>";
                 $("#divJXSBWXLBText").html(html);
                 $(".img_JXSBWXLB").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".liJXSBWXLB").bind("click", function () { ValidateCheck("JXSBWXLB", "忘记选择类别啦"); });
                 LoadSWFW_JXSBWXJBXX();
             }
         },

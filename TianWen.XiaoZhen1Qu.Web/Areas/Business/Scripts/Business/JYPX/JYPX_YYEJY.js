@@ -1,10 +1,10 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });BindClick("LB");
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    BindClick("LB");
     BindClick("QY");
     BindClick("DD");
     LoadDuoX("服务类型", "FWLX");
 });
-
 //加载多选
 function LoadDuoX(type, id) {
     $.ajax({
@@ -20,25 +20,24 @@ function LoadDuoX(type, id) {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='li" + id + "' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    html += "<li class='li" + id + "' style='width:75px;' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i === 3 || i === 7 || i === 11) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 4) === 0)
-                    $("#div" + id).css("height", parseInt(xml.list.length / 4) * 45 + "px");
+                    $("#div" + id).css("height", parseInt(xml.list.length / 4) * 60 + "px");
                 else
-                    $("#div" + id).css("height", (parseInt(xml.list.length / 4) + 1) * 45 + "px");
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 4) + 1) * 60 + "px");
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".li" + id).bind("click", function () { ValidateCheck(id, "忘记选择" + type + "啦"); });
                 if (xml.list.length === 0)
                     $("#div" + id).css("display", "none");
                 else
                     $("#div" + id).css("display", "");
                 if (type === "服务类型")
-                    LoadDuoX("办学性质", "BXXZ");
-                if (type === "办学性质")
                     LoadJYPX_YYEJYJBXX();
             }
         },
@@ -51,8 +50,6 @@ function LoadDuoX(type, id) {
 function SelectLB(obj, type, id) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-    LoadXL($("#spanLB").html());
-    $("#divXL").css("display", "");
 }
 //加载小类
 function LoadXL(lbmc, xl) {
@@ -98,7 +95,7 @@ function LoadXL(lbmc, xl) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("婴幼儿教育", "LB", "CODES_JYPX");
+            LoadCODESByTYPENAME("婴幼儿教育", "LB", "CODES_JYPX", Bind, "OUTLB", "LB", "");
         }
         if (type === "QY") {
             LoadQY();
@@ -137,7 +134,7 @@ function LoadJYPX_YYEJYJBXX() {
                 if (xml.Value.JYPX_YYEJYJBXX.FWLX !== null)
                     SetDuoX("FWLX", xml.Value.JYPX_YYEJYJBXX.FWLX);
                 if (xml.Value.JYPX_YYEJYJBXX.BXXZ !== null)
-                    SetDuoX("BXXZ", xml.Value.JYPX_YYEJYJBXX.BXXZ);
+                    SetDX("BXXZ", xml.Value.JYPX_YYEJYJBXX.BXXZ);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -157,7 +154,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "XL", "'" + GetDuoX("XL") + "'");
     obj = jsonObj.AddJson(obj, "FWLX", "'" + GetDuoX("FWLX") + "'");
-    obj = jsonObj.AddJson(obj, "BXXZ", "'" + GetDuoX("BXXZ") + "'");
+    obj = jsonObj.AddJson(obj, "BXXZ", "'" + GetDX("BXXZ") + "'");
 
     if (getUrlParam("JYPX_YYEJYJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "JYPX_YYEJYJBXXID", "'" + getUrlParam("JYPX_YYEJYJBXXID") + "'");

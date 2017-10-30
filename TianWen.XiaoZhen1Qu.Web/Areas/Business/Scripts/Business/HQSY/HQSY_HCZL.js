@@ -1,5 +1,6 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });BindClick("LB");
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    BindClick("LB");
     BindClick("TCPP");
     BindClick("GCPP");
     BindClick("QY");
@@ -8,7 +9,6 @@ $(document).ready(function () {$("body").bind("click", function () { Close("_XZQ
     LoadGCYS();
     LoadDuoX("婚车租赁", "TGFW");
 });
-
 //加载头车颜色
 function LoadTCYS() {
     var colors = new Array("black:黑", "red:红", "white:白", "rgb(230, 230, 230):银", "rgb(214, 214, 214):灰", "rgb(51, 153, 255):蓝", "rgb(255, 255, 0):黄", "rgb(153, 102, 0):棕");
@@ -104,6 +104,7 @@ function LoadTCPPMC(JCLX, JCBQ) {
 function TCPPXZ(TCPPMC, TCPPID) {
     $("#spanTCPP").html(TCPPMC);
     $("#divTCPP").css("display", "none");
+    ValidateSelect("HCZLTCPP", "TCPP", "忘记选择头车品牌啦");
 }
 //加载跟车品牌标签
 function LoadGCPP(type) {
@@ -152,13 +153,11 @@ function LoadGCPPMC(JCLX, JCBQ) {
 function GCPPXZ(GCPPMC, GCPPID) {
     $("#spanGCPP").html(GCPPMC);
     $("#divGCPP").css("display", "none");
+    ValidateSelect("HCZLGCPP", "GCPP", "忘记选择跟车品牌啦");
 }
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadCODESByTYPENAME("婚车租赁", "LB", "CODES_HQSY");
-        }
         if (type === "TCPP") {
             LoadTCPP("tc");
             LoadTCPPMC("婚车品牌", "divA");

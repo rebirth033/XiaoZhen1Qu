@@ -1,10 +1,10 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });BindClick("LB");
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    BindClick("LB");
     BindClick("QY");
     BindClick("DD");
     LoadSKXS();
 });
-
 //选择类别下拉框
 function SelectLB(obj, type, id) {
     $("#span" + type).html(obj.innerHTML);
@@ -27,26 +27,25 @@ function LoadXL(lbmc, xl) {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liXL' onclick='SelectDuoX(this)'><img class='img_XL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    html += "<li class='liXL' style='width:140px;' onclick='SelectDuoX(this)'><img class='img_XL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i === 3 || i === 7 || i === 11) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 4) === 0)
-                    $("#divXL").css("height", parseInt(xml.list.length / 4) * 45 + "px");
+                    $("#divXL").css("height", parseInt(xml.list.length / 4) * 50 + "px");
                 else
-                    $("#divXL").css("height", (parseInt(xml.list.length / 4) + 1) * 45 + "px");
+                    $("#divXL").css("height", (parseInt(xml.list.length / 4) + 1) * 50 + "px");
                 html += "</ul>";
                 $("#divXLText").html(html);
                 $(".img_XL").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".liXL").bind("click", function () { ValidateCheck("XL", "忘记选择小类啦"); });
                 if (xml.list.length === 0)
                     $("#divXL").css("display", "none");
                 else
                     $("#divXL").css("display", "");
                 if (xl !== "" && xl !== null && xl !== undefined)
                     SetDuoX("XL", xl);
-                if (lbmc === "品牌策划推广")
-                    $(".liXL").css("width", "200px");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -54,7 +53,7 @@ function LoadXL(lbmc, xl) {
         }
     });
 }
-//加载卡型
+//加载授课形式
 function LoadSKXS() {
     $.ajax({
         type: "POST",
@@ -75,12 +74,13 @@ function LoadSKXS() {
                     }
                 }
                 if (parseInt(xml.list.length % 4) === 0)
-                    $("#divSKXS").css("height", parseInt(xml.list.length / 4) * 45 + "px");
+                    $("#divSKXS").css("height", parseInt(xml.list.length / 4) * 60 + "px");
                 else
-                    $("#divSKXS").css("height", (parseInt(xml.list.length / 4) + 1) * 45 + "px");
+                    $("#divSKXS").css("height", (parseInt(xml.list.length / 4) + 1) * 60 + "px");
                 html += "</ul>";
                 $("#divSKXSText").html(html);
                 $(".img_SKXS").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".liSKXS").bind("click", function () { ValidateCheck("SKXS", "忘记选择授课形式啦"); });
                 if (xml.list.length === 0)
                     $("#divSKXS").css("display", "none");
                 else
@@ -97,7 +97,7 @@ function LoadSKXS() {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("中小学辅导班", "LB", "CODES_JYPX");
+            LoadCODESByTYPENAME("中小学辅导班", "LB", "CODES_JYPX", Bind, "OUTLB", "LB");
         }
         if (type === "QY") {
             LoadQY();
@@ -151,7 +151,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "XL", "'" + GetXL() + "'");
+    obj = jsonObj.AddJson(obj, "XL", "'" + GetDuoX("XL") + "'");
     obj = jsonObj.AddJson(obj, "SKXS", "'" + GetDuoX("SKXS") + "'");
 
     if (getUrlParam("JYPX_ZXXFDBJBXXID") !== null)

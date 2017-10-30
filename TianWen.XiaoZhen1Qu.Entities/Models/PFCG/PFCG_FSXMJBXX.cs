@@ -33,13 +33,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// </summary>
         [Property]
         public virtual string XL { get; set; }
-
-        /// <summary>
-        /// 方式
-        /// </summary>
-        [Property]
-        public virtual string FS { get; set; }
-
+        
         /// <summary>
         /// 补充描述
         /// </summary>

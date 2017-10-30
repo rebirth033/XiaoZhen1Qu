@@ -1,12 +1,12 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });BindClick("JXKM");
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    BindClick("JXKM");
     BindClick("QY");
     BindClick("DD");
     LoadDuoX("辅导阶段", "FDJD");
     LoadDuoX("辅导科目", "FDKM");
     LoadJYPX_YYPXJSJBXX();
 });
-
 //选择类别下拉框
 function SelectLB(obj, type, id) {
     $("#span" + type).html(obj.innerHTML);
@@ -18,7 +18,7 @@ function SelectLB(obj, type, id) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "JXKM") {
-            LoadCODESByTYPENAME("语言培训教学科目", "JXKM", "CODES_JYPX");
+            LoadCODESByTYPENAME("教学科目", "JXKM", "CODES_JYPX", Bind, "YYPXJSJXKM", "JXKM", "");
         }
         if (type === "QY") {
             LoadQY();

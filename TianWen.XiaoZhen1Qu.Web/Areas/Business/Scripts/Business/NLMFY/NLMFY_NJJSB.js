@@ -1,5 +1,6 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });LoadNLMFY_NJJSBJBXX();
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    LoadNLMFY_NJJSBJBXX();
     BindClick("LB");
     BindClick("QY");
     BindClick("DD");
@@ -9,7 +10,7 @@ $(document).ready(function () {$("body").bind("click", function () { Close("_XZQ
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("农机具/设备", "LB", "CODES_NLMFY");
+            LoadCODESByTYPENAME("农机具/设备", "LB", "CODES_NLMFY", Bind, "OUTLB", "LB", "");
         }
         if (type === "XL") {
             LoadXL();
@@ -78,6 +79,7 @@ function LoadXLMC(JCLX, JCBQ) {
 function XLXZ(XLMC, XLID) {
     $("#spanXL").html(XLMC);
     $("#divXL").css("display", "none");
+    ValidateSelect("NJJSBXL", "XL", "忘记选择小类啦");
 }
 //加载农林牧副渔_农机具/设备基本信息
 function LoadNLMFY_NJJSBJBXX() {

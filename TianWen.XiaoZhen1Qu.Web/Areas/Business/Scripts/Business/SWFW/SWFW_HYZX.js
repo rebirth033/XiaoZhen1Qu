@@ -1,16 +1,15 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });LoadZHFS();
-    
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    LoadZHFS();
     BindClick("QY");
     BindClick("DD");
     BindClick("YSJGDW");
 });
-
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "YSJGDW") {
-            LoadCODESByTYPENAME("运输价格单位", "YSJGDW", "CODES_SWFW");
+            LoadCODESByTYPENAME("运输价格单位", "YSJGDW", "CODES_SWFW", Bind, "YSJG", "YSJGDW", "");
         }
         if (type === "QY") {
             LoadQY();
@@ -36,17 +35,18 @@ function LoadZHFS() {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='liZHFS' onclick='SelectDuoX(this)'><img class='img_ZHFS'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i === 3 || i === 7 || i === 11 || i === 15 || i === 19) {
+                    if (i % 4 === 3) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 4) === 0)
-                    $("#divZHFS").css("height", parseInt(xml.list.length / 4) * 45 + "px");
+                    $("#divZHFS").css("height", parseInt(xml.list.length / 4) * 50 + "px");
                 else
-                    $("#divZHFS").css("height", (parseInt(xml.list.length / 4) + 1) * 45 + "px");
+                    $("#divZHFS").css("height", (parseInt(xml.list.length / 4) + 1) * 50 + "px");
                 html += "</ul>";
                 $("#divZHFSText").html(html);
                 $(".img_ZHFS").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".liZHFS").bind("click", function () { ValidateCheck("ZHFS", "忘记选择组货方式啦"); });
                 LoadHWZL();
             }
         },
@@ -71,17 +71,18 @@ function LoadHWZL() {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='liHWZL' onclick='SelectDuoX(this)'><img class='img_HWZL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i === 3 || i === 7 || i === 11 || i === 15 || i === 19) {
+                    if (i % 4 === 3) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 4) === 0)
-                    $("#divHWZL").css("height", parseInt(xml.list.length / 4) * 45 + "px");
+                    $("#divHWZL").css("height", parseInt(xml.list.length / 4) * 50 + "px");
                 else
-                    $("#divHWZL").css("height", (parseInt(xml.list.length / 4) + 1) * 45 + "px");
+                    $("#divHWZL").css("height", (parseInt(xml.list.length / 4) + 1) * 50 + "px");
                 html += "</ul>";
                 $("#divHWZLText").html(html);
                 $(".img_HWZL").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".liHWZL").bind("click", function () { ValidateCheck("HWZL", "忘记选择货物种类啦"); });
                 LoadFWYS();
             }
         },
@@ -106,17 +107,18 @@ function LoadFWYS() {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='liFWYS' onclick='SelectDuoX(this)'><img class='img_FWYS'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i === 3 || i === 7 || i === 11 || i === 15 || i === 19) {
+                    if (i % 4 === 3) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 4) === 0)
-                    $("#divFWYS").css("height", parseInt(xml.list.length / 4) * 45 + "px");
+                    $("#divFWYS").css("height", parseInt(xml.list.length / 4) * 60 + "px");
                 else
-                    $("#divFWYS").css("height", (parseInt(xml.list.length / 4) + 1) * 45 + "px");
+                    $("#divFWYS").css("height", (parseInt(xml.list.length / 4) + 1) * 60 + "px");
                 html += "</ul>";
                 $("#divFWYSText").html(html);
                 $(".img_FWYS").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".liFWYS").bind("click", function () { ValidateCheck("FWYS", "忘记选择服务延伸啦"); });
                 LoadSWFW_HYZXJBXX();
             }
         },

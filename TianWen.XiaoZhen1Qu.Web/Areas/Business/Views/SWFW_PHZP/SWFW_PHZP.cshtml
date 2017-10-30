@@ -88,7 +88,7 @@
                     <div id="divBTTip"></div>
                 </div>
             </div>
-            <div id="divPHZPLB" class="div_row" style="z-index: 999">
+            <div id="divOUTLB" class="div_row" style="z-index: 999">
                 <div class="div_row_left" style="margin-left: 128px;">
                     <span class="span_required">*</span>
                     <span class="spanFWCZ">类别</span>
@@ -104,48 +104,18 @@
                         </div>
                     </div>
                 </div>
+                <div id="divOUTLBTip"></div>
             </div>
-        <div id="divXL" class="div_row" style="z-index: 998; display: none;">
-            <div class="div_row_left" style="margin-left: 128px;">
-                <span class="span_required">*</span>
-                <span id="spanXL">小类</span>
-            </div>
-            <div id="divXLText" class="div_row_right" style="position: relative;">
-            </div>
-        </div>
-        <div id="divPHZPYT" class="div_row" style="z-index: 997; display: none;">
-            <div class="div_row_left" style="margin-left: 128px;">
-                <span class="span_required">*</span>
-                <span class="spanFWCZ">用途</span>
-            </div>
-            <div class="div_row_right">
-                <div id="divYTText" class="div_select_out SRK" style="position: relative;">
-                    <div id="divYTSpan" class="div_select_in" style="border: none; margin-top: 6px;">
-                        <span id="spanYT" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择用途</span>
-                        <div class="span_select_arrow"></div>
-                    </div>
-                    <div id="divYT" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
-                    </div>
-                </div>
-            </div>
-        </div>
-            <div id="divPHZPGN" class="div_row" style="z-index: 996; display: none;">
+            <div id="divXL" class="div_row" style="z-index: 998; display: none;">
                 <div class="div_row_left" style="margin-left: 128px;">
                     <span class="span_required">*</span>
-                    <span class="spanFWCZ">功能</span>
+                    <span id="spanXL">小类</span>
                 </div>
-                <div class="div_row_right">
-                    <div id="divGNText" class="div_select_out SRK" style="position: relative;">
-                        <div id="divGNSpan" class="div_select_in" style="border: none; margin-top: 6px;">
-                            <span id="spanGN" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择功能</span>
-                            <div class="span_select_arrow"></div>
-                        </div>
-                        <div id="divGN" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
-                        </div>
-                    </div>
+                <div id="divXLText" class="div_row_right" style="position: relative;">
                 </div>
+                <div id="divXLTip"></div>
             </div>
-            <div id="divPHZPCZ" class="div_row" style="z-index: 995; display: none;">
+            <div id="divPHZPCZ" class="div_row" style="z-index: 997; display: none;">
                 <div class="div_row_left" style="margin-left: 128px;">
                     <span class="span_required">*</span>
                     <span class="spanFWCZ">材质</span>
@@ -160,8 +130,9 @@
                         </div>
                     </div>
                 </div>
+                <div id="divPHZPCZTip"></div>
             </div>
-            <div id="divPHZPGY" class="div_row" style="z-index: 994; display: none;">
+            <div id="divPHZPGY" class="div_row" style="z-index: 996; display: none;">
                 <div class="div_row_left" style="margin-left: 128px;">
                     <span class="span_required">*</span>
                     <span class="spanFWCZ">工艺</span>
@@ -176,8 +147,9 @@
                         </div>
                     </div>
                 </div>
+                <div id="divPHZPGYTip"></div>
             </div>
-            <div id="divPHZPSFFG" class="div_row" style="z-index: 993; display: none;">
+            <div id="divPHZPSFFG" class="div_row" style="z-index: 995; display: none;">
                 <div class="div_row_left">
                     <span class="span_required">*</span>
                     <span class="spanFWCZ">是否发光</span>
@@ -192,6 +164,41 @@
                         </div>
                     </div>
                 </div>
+                <div id="divPHZPSFFGTip"></div>
+            </div>
+            <div id="divPHZPYT" class="div_row" style="z-index: 994; display: none;">
+                <div class="div_row_left" style="margin-left: 128px;">
+                    <span class="span_required">*</span>
+                    <span class="spanFWCZ">用途</span>
+                </div>
+                <div class="div_row_right">
+                    <div id="divYTText" class="div_select_out SRK" style="position: relative;">
+                        <div id="divYTSpan" class="div_select_in" style="border: none; margin-top: 6px;">
+                            <span id="spanYT" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择用途</span>
+                            <div class="span_select_arrow"></div>
+                        </div>
+                        <div id="divYT" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
+                        </div>
+                    </div>
+                </div>
+                <div id="divPHZPYTTip"></div>
+            </div>
+            <div id="divPHZPGN" class="div_row" style="z-index: 993; display: none;">
+                <div class="div_row_left" style="margin-left: 128px;">
+                    <span class="span_required">*</span>
+                    <span class="spanFWCZ">功能</span>
+                </div>
+                <div class="div_row_right">
+                    <div id="divGNText" class="div_select_out SRK" style="position: relative;">
+                        <div id="divGNSpan" class="div_select_in" style="border: none; margin-top: 6px;">
+                            <span id="spanGN" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择功能</span>
+                            <div class="span_select_arrow"></div>
+                        </div>
+                        <div id="divGN" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
+                        </div>
+                    </div>
+                </div>
+                <div id="divPHZPGNTip"></div>
             </div>
             <div id="divFWQY" class="div_row" style="z-index: 992">
                 <div class="div_row_left">
@@ -261,16 +268,16 @@
                     <span class="spanFWCZ">详细地址</span>
                 </div>
                 <div class="div_row_right">
-                    <div id="divQYText" class="div_select_out SRK" style="z-index: 997; ">
+                    <div id="divQYText" class="div_select_out SRK" style="z-index: 997;">
                         <div id="divQYSpan" class="div_select_in" style="border: none; margin-top: 6px;">
-                            <input type="hidden" id="QYCode" />
+                            <input type="hidden" id="QYCode"/>
                             <span id="spanQY" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择区域</span>
                             <div class="span_select_arrow"></div>
                         </div>
                         <div id="divQY" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
                         </div>
                     </div>
-                    <div id="divDDText" class="div_select_out SRK" style="z-index: 997; ">
+                    <div id="divDDText" class="div_select_out SRK" style="z-index: 997;">
                         <div id="divDDSpan" class="div_select_in" style="border: none; margin-top: 6px;">
                             <span id="spanDD" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择地段</span>
                             <div class="span_select_arrow"></div>
@@ -278,8 +285,9 @@
                         <div id="divDD" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
                         </div>
                     </div>
-                    <input id="JTDZ" column="JTDZ" class="span_spaninput input_input SRK" type="text" placeholder="请填写具体地址" style="width: 300px" />
+                    <input id="JTDZ" column="JTDZ" class="span_spaninput input_input SRK" type="text" placeholder="请填写具体地址" style="width: 300px"/>
                 </div>
+                <div id="divSZQYTip"></div>
             </div>
             <div id="divLXR" class="div_row" style="z-index: 990">
                 <div class="div_row_left" style="margin-left: 114px;">

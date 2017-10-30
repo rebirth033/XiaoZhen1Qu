@@ -1,10 +1,10 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });BindClick("LB");
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    BindClick("LB");
     BindClick("QY");
     BindClick("DD");
     LoadSHFW_SHFW_GDSTQLJBXX();
 });
-
 //选择类别下拉框
 function SelectLB(obj, type, id) {
     $("#span" + type).html(obj.innerHTML);
@@ -27,24 +27,25 @@ function LoadXL(lbmc, xl) {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liXL' onclick='SelectDuoX(this)'><img class='img_XL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i === 5 || i === 11 || i === 17 || i === 23 || i === 29) {
+                    html += "<li class='liXL' style='width:140px;' onclick='SelectDuoX(this)'><img class='img_XL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    if (i % 4 === 3) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
                 }
-                if (parseInt(xml.list.length % 6) === 0)
-                    $("#divXL").css("height", parseInt(xml.list.length / 6) * 45 + "px");
+                if (parseInt(xml.list.length % 4) === 0)
+                    $("#divXL").css("height", parseInt(xml.list.length / 4) * 60 + "px");
                 else
-                    $("#divXL").css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
+                    $("#divXL").css("height", (parseInt(xml.list.length / 4) + 1) * 60 + "px");
                 html += "</ul>";
                 $("#divXLText").html(html);
                 $(".img_XL").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".liXL").bind("click", function () { ValidateCheck("XL", "忘记选择小类啦"); });
                 if (xml.list.length === 0)
                     $("#divXL").css("display", "none");
                 else
                     $("#divXL").css("display", "");
-                if (xl !== "" && xl !== null)
-                    SetXL(xl);
+                if (xl !== "" && xl !== null && xl !== undefined)
+                    SetDuoX("XL", xl);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -56,7 +57,7 @@ function LoadXL(lbmc, xl) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("管道疏通/清理", "LB", "CODES_SHFW");
+            LoadCODESByTYPENAME("管道疏通/清理", "LB", "CODES_SHFW", Bind, "OUTLB", "LB", "");
         }
         if (type === "QY") {
             LoadQY();
@@ -91,8 +92,7 @@ function LoadSHFW_SHFW_GDSTQLJBXX() {
                 $("#spanQY").html(xml.Value.SHFW_SHFW_GDSTQLJBXX.QY);
                 $("#spanDD").html(xml.Value.SHFW_SHFW_GDSTQLJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
-                if (xml.Value.SHFW_SHFW_GDSTQLJBXX.LB.indexOf("空气净化") !== -1 || xml.Value.SHFW_SHFW_GDSTQLJBXX.LB.indexOf("开荒保洁") !== -1 || xml.Value.SHFW_SHFW_GDSTQLJBXX.LB.indexOf("物业保洁") !== -1 || xml.Value.SHFW_SHFW_GDSTQLJBXX.LB.indexOf("沙发清洗") !== -1 || xml.Value.SHFW_SHFW_GDSTQLJBXX.LB.indexOf("地毯清洗") !== -1
-                    || xml.Value.SHFW_SHFW_GDSTQLJBXX.LB.indexOf("地板打蜡") !== -1 || xml.Value.SHFW_SHFW_GDSTQLJBXX.LB.indexOf("石材翻新/养护") !== -1 || xml.Value.SHFW_SHFW_GDSTQLJBXX.LB.indexOf("除虫除蚁") !== -1 || xml.Value.SHFW_SHFW_GDSTQLJBXX.LB.indexOf("高空清洗") !== -1) {
+                if (xml.Value.SHFW_SHFW_GDSTQLJBXX.LB.indexOf("下水道疏通") !== -1 || xml.Value.SHFW_SHFW_GDSTQLJBXX.LB.indexOf("化粪池清理") !== -1 || xml.Value.SHFW_SHFW_GDSTQLJBXX.LB.indexOf("打捞") !== -1 || xml.Value.SHFW_SHFW_GDSTQLJBXX.LB.indexOf("工业管道安装／改造") !== -1 ) {
                     LoadXL(xml.Value.SHFW_SHFW_GDSTQLJBXX.LB, xml.Value.SHFW_SHFW_GDSTQLJBXX.XL);
                 }
             }

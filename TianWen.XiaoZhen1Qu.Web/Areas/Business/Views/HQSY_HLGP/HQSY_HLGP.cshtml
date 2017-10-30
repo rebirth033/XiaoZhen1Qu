@@ -94,7 +94,7 @@
                     <span class="spanFWCZ">跟拍类型</span>
                 </div>
                 <div class="div_row_right">
-                    <div id="divGPLXText" class="div_select_out SRK" style="position: relative;">
+                    <div id="divGPLXText" class="div_select_out SRK" style="">
                         <div id="divGPLXSpan" class="div_select_in" style="border: none; margin-top: 6px;">
                             <span id="spanGPLX" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择跟拍类型</span>
                             <div class="span_select_arrow"></div>
@@ -103,6 +103,7 @@
                         </div>
                     </div>
                 </div>
+                <div id="divHLGPGPLXTip"></div>
             </div>
             <div id="divSYSRS" class="div_row" style="z-index: 995;">
                 <div class="div_row_left" style="margin-left: 86px;">
@@ -115,7 +116,7 @@
                         <span class="spaninput_fontcolor">人</span>
                     </span>
                 </div>
-                <div id="divSYSRSTip" class="Warn" style="z-index: 995; position: relative;"></div>
+                <div id="divSYSRSTip" class="Warn" style="z-index: 995; "></div>
             </div>
             <div id="divGPSJ" class="div_row" style="z-index: 995;">
                 <div class="div_row_left">
@@ -128,7 +129,7 @@
                         <span class="spaninput_fontcolor">小时</span>
                     </span>
                 </div>
-                <div id="divGPSJTip" class="Warn" style="z-index: 995; position: relative;"></div>
+                <div id="divGPSJTip" class="Warn" style="z-index: 995; "></div>
             </div>
             <div id="divSLQC" class="div_row" style="z-index: 995;">
                 <div class="div_row_left">
@@ -136,10 +137,9 @@
                     <span class="spanFWCZ">摄录器材</span>
                 </div>
                 <div class="div_row_right">
-                    <input id="SLQC" maxlength="50" column="SLQC" class="span_spaninput SRK" style="width: 472px; padding: 6px 12px; color: #999999" type="text" placeholder="吸引人的标题可让更多的人看您的信息喔" />
-                    <div id="divSLQCTip"></div>
+                    <input id="SLQC" maxlength="50" column="SLQC" class="input_input SRK"  type="text" />
                 </div>
-                <div id="divSLQCTip" class="Warn" style="z-index: 995; position: relative;"></div>
+                <div id="divSLQCTip" class="Warn" style="z-index: 995; "></div>
             </div>
             <div id="divSLCP" class="div_row" style="z-index: 995;">
                 <div class="div_row_left">
@@ -147,10 +147,10 @@
                     <span class="spanFWCZ">摄录成品</span>
                 </div>
                 <div class="div_row_right">
-                    <input id="SLCP" maxlength="50" column="SLCP" class="span_spaninput SRK" style="width: 472px; padding: 6px 12px; color: #999999" type="text" placeholder="吸引人的标题可让更多的人看您的信息喔" />
+                    <input id="SLCP" maxlength="50" column="SLCP" class="input_input SRK" type="text" />
                     <div id="divSLCPTip"></div>
                 </div>
-                <div id="divSQCPTip" class="Warn" style="z-index: 995; position: relative;"></div>
+                <div id="divSQCPTip" class="Warn" style="z-index: 995; "></div>
             </div>
             <div id="divJG" class="div_row" style="z-index: 995;">
                 <div class="div_row_left" style="margin-left: 128px;">
@@ -163,7 +163,7 @@
                         <span class="spaninput_fontcolor">元</span>
                     </span>
                 </div>
-                <div id="divJGTip" class="Warn" style="z-index: 995; position: relative;"></div>
+                <div id="divJGTip" class="Warn" style="z-index: 995; "></div>
             </div>
             <div id="divFWQY" class="div_row" style="z-index: 994">
                 <div class="div_row_left">
@@ -179,7 +179,7 @@
                 <span class="span_split">特色描述</span>
                 <em class="em_split"></em>
             </div>
-            <div id="divBCMS" class="div_row" style="height: 253px; position: relative; z-index: 993;">
+            <div id="divBCMS" class="div_row" style="height: 253px;  z-index: 993;">
                 <div class="div_row_left" style="height: 170px; vertical-align: top;">
                     <span class="span_required" style="vertical-align: top">*</span>
                     <span id="spanBCMS" style="vertical-align: top">服务介绍</span>
@@ -233,16 +233,16 @@
                     <span class="spanFWCZ">详细地址</span>
                 </div>
                 <div class="div_row_right">
-                    <div id="divQYText" class="div_select_out SRK" style="z-index: 997; ">
+                    <div id="divQYText" class="div_select_out SRK" style="z-index: 997;">
                         <div id="divQYSpan" class="div_select_in" style="border: none; margin-top: 6px;">
-                            <input type="hidden" id="QYCode" />
+                            <input type="hidden" id="QYCode"/>
                             <span id="spanQY" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择区域</span>
                             <div class="span_select_arrow"></div>
                         </div>
                         <div id="divQY" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
                         </div>
                     </div>
-                    <div id="divDDText" class="div_select_out SRK" style="z-index: 997; ">
+                    <div id="divDDText" class="div_select_out SRK" style="z-index: 997;">
                         <div id="divDDSpan" class="div_select_in" style="border: none; margin-top: 6px;">
                             <span id="spanDD" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择地段</span>
                             <div class="span_select_arrow"></div>
@@ -250,8 +250,9 @@
                         <div id="divDD" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
                         </div>
                     </div>
-                    <input id="JTDZ" column="JTDZ" class="span_spaninput input_input SRK" type="text" placeholder="请填写具体地址" style="width: 300px" />
+                    <input id="JTDZ" column="JTDZ" class="span_spaninput input_input SRK" type="text" placeholder="请填写具体地址" style="width: 300px"/>
                 </div>
+                <div id="divSZQYTip" class="Warn" style="z-index: 995; "></div>
             </div>
             <div id="divLXR" class="div_row" style="z-index: 990">
                 <div class="div_row_left" style="margin-left: 114px;">

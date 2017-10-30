@@ -1,10 +1,9 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });LoadCWKJPGLB();
-    
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    LoadCWKJPGLB();
     BindClick("QY");
     BindClick("DD");
 });
-
 //加载财务会计/评估类别
 function LoadCWKJPGLB() {
     $.ajax({
@@ -21,17 +20,18 @@ function LoadCWKJPGLB() {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='liCWKJPGLB' onclick='SelectDuoX(this)'><img class='img_CWKJPGLB'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i === 5 || i === 11) {
+                    if (i % 4 === 3) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
                 }
-                if (parseInt(xml.list.length % 6) === 0)
-                    $("#divCWKJPGLB").css("height", parseInt(xml.list.length / 6) * 45 + "px");
+                if (parseInt(xml.list.length % 4) === 0)
+                    $("#divCWKJPGLB").css("height", parseInt(xml.list.length / 4) * 60 + "px");
                 else
-                    $("#divCWKJPGLB").css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
+                    $("#divCWKJPGLB").css("height", (parseInt(xml.list.length / 4) + 1) * 60 + "px");
                 html += "</ul>";
                 $("#divCWKJPGLBText").html(html);
                 $(".img_CWKJPGLB").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".liCWKJPGLB").bind("click", function () { ValidateCheck("CWKJPGLB", "忘记选择类别啦"); });
                 LoadSWFW_CWKJPGJBXX();
             }
         },

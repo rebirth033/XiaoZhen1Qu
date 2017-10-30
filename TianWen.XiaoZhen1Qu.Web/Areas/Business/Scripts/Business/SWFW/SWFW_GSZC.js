@@ -1,10 +1,9 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });LoadGSZCLB();
-    
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    LoadGSZCLB();
     BindClick("QY");
     BindClick("DD");
 });
-
 //加载工商注册类别
 function LoadGSZCLB() {
     $.ajax({
@@ -26,12 +25,13 @@ function LoadGSZCLB() {
                     }
                 }
                 if (parseInt(xml.list.length % 4) === 0)
-                    $("#divGSZCLB").css("height", parseInt(xml.list.length / 4) * 45 + "px");
+                    $("#divGSZCLB").css("height", parseInt(xml.list.length / 4) * 50 + "px");
                 else
-                    $("#divGSZCLB").css("height", (parseInt(xml.list.length / 4) + 1) * 45 + "px");
+                    $("#divGSZCLB").css("height", (parseInt(xml.list.length / 4) + 1) * 50 + "px");
                 html += "</ul>";
                 $("#divGSZCLBText").html(html);
                 $(".img_GSZCLB").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".liGSZCLB").bind("click", function () { ValidateCheck("GSZCLB", "忘记选择类别啦"); });
                 LoadSWFW_GSZCJBXX();
             }
         },

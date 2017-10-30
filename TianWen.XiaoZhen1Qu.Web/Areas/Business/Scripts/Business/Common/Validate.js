@@ -10,8 +10,9 @@
     $("#JTDZ").bind("focus", InfoJTDZ);
     $("#JG").bind("blur", ValidateJG);
     $("#JG").bind("focus", InfoJG);
+    $("#FWQY").bind("blur", ValidateFWQY);
+    $("#FWQY").bind("focus", InfoFWQY);
 });
-
 //验证标题
 function ValidateBT() {
     if ($("#BT").val() === "" || $("#BT").val() === null) {
@@ -83,7 +84,7 @@ function ValidateLXDH() {
         }
     }
 }
-//验证售价
+//验证价格
 function ValidateJG() {
     if ($("#JG").val() === "" || $("#JG").val() === null) {
         $("#divJGTip").css("display", "block");
@@ -142,6 +143,38 @@ function ValidateFWQY() {
     } else {
         $("#divFWQYTip").css("display", "none");
         $("#FWQY").css("border-color", "#cccccc");
+        return true;
+    }
+}
+//验证span输入框
+function ValidateSpanInput(id, value, outid) {
+    if (outid === "" || outid === null || outid === undefined)
+        outid = id;
+    if ($("#" + id).val() === "" || $("#" + id).val() === null) {
+        $("#div" + outid + "Tip").css("display", "block");
+        $("#div" + outid + "Tip").attr("class", "Warn");
+        $("#div" + outid + "Tip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写' + value + '啦');
+        $("#span" + id).css("border-color", "#fd634f");
+        return false;
+    } else {
+        $("#div" + outid + "Tip").css("display", "none");
+        $("#span" + id).css("border-color", "#cccccc");
+        return true;
+    }
+}
+//验证输入框
+function ValidateInput(id, value, outid) {
+    if (outid === "" || outid === null || outid === undefined)
+        outid = id;
+    if ($("#" + id).val() === "" || $("#" + id).val() === null) {
+        $("#div" + outid + "Tip").css("display", "block");
+        $("#div" + outid + "Tip").attr("class", "Warn");
+        $("#div" + outid + "Tip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写' + value + '啦');
+        $("#" + id).css("border-color", "#fd634f");
+        return false;
+    } else {
+        $("#div" + outid + "Tip").css("display", "none");
+        $("#" + id).css("border-color", "#cccccc");
         return true;
     }
 }
@@ -262,4 +295,22 @@ function InfoJTDZ() {
     $("#divSZQYTip").attr("class", "Info");
     $("#divSZQYTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写具体地址');
     $("#JTDZ").css("border-color", "#5bc0de");
+}
+//提示span输入框
+function InfoSpanInput(id, message, outid) {
+    if (outid === "" || outid === null || outid === undefined)
+        outid = id;
+    $("#div" + outid + "Tip").css("display", "block");
+    $("#div" + outid + "Tip").attr("class", "Info");
+    $("#div" + outid + "Tip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />' + message);
+    $("#span" + id).css("border-color", "#5bc0de");
+}
+//提示输入框
+function InfoInput(id, message, outid) {
+    if (outid === "" || outid === null || outid === undefined)
+        outid = id;
+    $("#div" + outid + "Tip").css("display", "block");
+    $("#div" + outid + "Tip").attr("class", "Info");
+    $("#div" + outid + "Tip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />' + message);
+    $("#" + id).css("border-color", "#5bc0de");
 }

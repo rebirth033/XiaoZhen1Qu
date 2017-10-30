@@ -68,6 +68,6 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// 是否上门
         /// </summary>
         [Property]
-        public virtual int SFSM { get; set; }
+        public virtual string SFSM { get; set; }
     }
 }

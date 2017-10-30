@@ -1,5 +1,6 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });LoadSWFW_BGSBWXJBXX();
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    LoadSWFW_BGSBWXJBXX();
     BindClick("LB");
     BindClick("QY");
     BindClick("DD");
@@ -9,7 +10,7 @@ $(document).ready(function () {$("body").bind("click", function () { Close("_XZQ
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("办公设备维修", "LB", "CODES_SWFW");
+            LoadCODESByTYPENAME("办公设备维修", "LB", "CODES_SWFW", Bind, "OUTLB", "LB", "");
         }
         if (type === "XL") {
             LoadXL();
@@ -60,6 +61,7 @@ function LoadXL() {
                 html += "</ul>";
                 $("#divXL").html(html);
                 $("#divXL").css("display", "block");
+                Bind("OUTLB", "XL", "");
                 ActiveStyle("XL");
             }
         },

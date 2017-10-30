@@ -1,15 +1,15 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });LoadNLMFY_NZWJBXX();
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    LoadNLMFY_NZWJBXX();
     BindClick("LB");
     BindClick("QY");
     BindClick("DD");
 });
-
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("农作物", "LB", "CODES_NLMFY");
+            LoadCODESByTYPENAME("农作物", "LB", "CODES_NLMFY", Bind, "OUTLB", "LB", "");
         }
         if (type === "XL") {
             LoadXL();
@@ -30,7 +30,6 @@ function SelectLB(obj, type, lbid) {
     $("#LBID").val(lbid);
     BindClick("XL");
 }
-
 //加载小类标签
 function LoadXL() {
     var arrayObj = new Array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
@@ -78,6 +77,7 @@ function LoadXLMC(JCLX, JCBQ) {
 function XLXZ(XLMC, XLID) {
     $("#spanXL").html(XLMC);
     $("#divXL").css("display", "none");
+    ValidateSelect("NZWXL", "XL", "忘记选择小类啦");
 }
 //加载农林牧副渔_农作物基本信息
 function LoadNLMFY_NZWJBXX() {

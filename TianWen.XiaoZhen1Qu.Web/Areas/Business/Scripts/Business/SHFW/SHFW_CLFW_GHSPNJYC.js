@@ -1,12 +1,11 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });LoadSJSJWPLB();
-    
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    LoadGHSPNJYC();
     BindClick("QY");
     BindClick("DD");
 });
-
 //加载过户/上牌/年检/验车类别
-function LoadSJSJWPLB() {
+function LoadGHSPNJYC() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
@@ -20,14 +19,19 @@ function LoadSJSJWPLB() {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liFWPZ' onclick='SelectDuoX(this)'><img class='img_SJSJWPLB'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i === 5 || i === 11 || i === 17 || i === 23 || i === 29) {
+                    html += "<li class='liOUTLB' onclick='SelectDuoX(this)'><img class='img_GHSPNJYC'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    if (i % 4 === 3) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
                 }
+                if (parseInt(xml.list.length % 4) === 0)
+                    $("#divOUTLB").css("height", parseInt(xml.list.length / 4) * 60 + "px");
+                else
+                    $("#divOUTLB").css("height", (parseInt(xml.list.length / 4) + 1) * 60 + "px");
                 html += "</ul>";
-                $("#divSJSJWPLBText").html(html);
-                $(".img_SJSJWPLB").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $("#divOUTLBText").html(html);
+                $(".img_GHSPNJYC").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".liOUTLB").bind("click", function () { ValidateCheck("OUTLB", "忘记选择类别啦"); });
                 LoadSHFW_CLFW_GHSPNJYCJBXX();
             }
         },
@@ -68,7 +72,8 @@ function LoadSHFW_CLFW_GHSPNJYCJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.BCMSString);
                 });
-                SetDuoX("SJSJWPLB", xml.Value.SHFW_CLFW_GHSPNJYCJBXX.LB);
+                if (xml.Value.SHFW_CLFW_GHSPNJYCJBXX.LB !== "" && xml.Value.SHFW_CLFW_GHSPNJYCJBXX.LB !== null)
+                SetDuoX("OUTLB", xml.Value.SHFW_CLFW_GHSPNJYCJBXX.LB);
                 $("#spanQY").html(xml.Value.SHFW_CLFW_GHSPNJYCJBXX.QY);
                 $("#spanDD").html(xml.Value.SHFW_CLFW_GHSPNJYCJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
@@ -88,7 +93,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "LB", "'" + GetDuoX("SJSJWPLB") + "'");
+    obj = jsonObj.AddJson(obj, "LB", "'" + GetDuoX("OUTLB") + "'");
 
     if (getUrlParam("SHFW_CLFW_GHSPNJYCJBXXID") !== null)
         obj = jsonObj.AddJson(obj, "SHFW_CLFW_GHSPNJYCJBXXID", "'" + getUrlParam("SHFW_CLFW_GHSPNJYCJBXXID") + "'");

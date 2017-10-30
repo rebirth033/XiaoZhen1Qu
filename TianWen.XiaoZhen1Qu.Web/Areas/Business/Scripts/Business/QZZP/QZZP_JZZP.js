@@ -1,19 +1,11 @@
-﻿
-$(document).ready(function () {
-    
-    
+﻿$(document).ready(function () {
     $("#DQJZKSSJ").datepicker({ minDate: 0 });
     $("#DQJZJSSJ").datepicker({ minDate: 0 });
-    
-    $("body").bind("click", function () { Close("_XZQ"); Close("JZLB"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });
-
-
+    $("body").bind("click", function () { Close("_XZQ"); });
     $("td").bind("click", SelectJZSJ);
-
-    
     LoadQZZP_JZZPJBXX();
     BindClick("JZLB");
-    BindClick("XZSPDW");
+    BindClick("XZDW");
     BindClick("XZJS");
     BindClick("GZCS");
     BindClick("QY");
@@ -127,11 +119,11 @@ function SetJZSJ(jzsj) {
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
-        if (type === "XZSPDW") {
-            LoadCODESByTYPENAME("薪资水平单位", "XZSPDW", "CODES_QZZP");
+        if (type === "XZDW") {
+            LoadCODESByTYPENAME("薪资水平单位", "XZDW", "CODES_QZZP", Bind, "ZPXZSP", "XZDW", "");
         }
         if (type === "XZJS") {
-            LoadCODESByTYPENAME("薪资结算", "XZJS", "CODES_QZZP");
+            LoadCODESByTYPENAME("薪资结算", "XZJS", "CODES_QZZP", Bind, "ZPXZJS", "XZJS", "");
         }
         if (type === "JZLB") {
             LoadJZLB();
@@ -181,6 +173,7 @@ function SelectJZLB() {
     $("#spanJZLB").html($(this)[0].innerHTML);
     $("#divJZLB").css("display", "none");
     $("#BT").val($(this)[0].innerHTML);
+    ValidateSelect("ZPJZLB", "JZLB", "忘记选择兼职类别啦");
 }
 //选择区域下拉框
 function SelectQY(obj, type, code) {
@@ -211,13 +204,12 @@ function LoadQZZP_JZZPJBXX() {
                     ue.setContent(xml.Value.BCMSString);
                 });
                 $("#spanJZLB").html(xml.Value.QZZP_JZZPJBXX.JZLB);
-                $("#spanXZSPDW").html(xml.Value.QZZP_JZZPJBXX.XZSPDW);
+                $("#spanXZDW").html(xml.Value.QZZP_JZZPJBXX.XZDW);
                 $("#spanXZJS").html(xml.Value.QZZP_JZZPJBXX.XZJS);
-                $("#spanJZYXQ").html(xml.Value.QZZP_JZZPJBXX.JZYXQ);
                 $("#spanGZCS").html(xml.Value.QZZP_JZZPJBXX.GZCS);
                 $("#spanQY").html(xml.Value.QZZP_JZZPJBXX.QY);
                 $("#spanDD").html(xml.Value.QZZP_JZZPJBXX.DD);
-                SetDX("JZYXQ", xml.Value.QZZP_JZZPJBXX.JZYXQ);
+                SetDX("ZPJZYXQ", xml.Value.QZZP_JZZPJBXX.JZYXQ);
                 SetJZSJ(xml.Value.QZZP_JZZPJBXX.JZSJ);
                 if (xml.Value.QZZP_JZZPJBXX.DQJZKSSJ.ToString("yyyy-MM-dd") !== "1-1-1")
                     $("#DQJZKSSJ").val(xml.Value.QZZP_JZZPJBXX.DQJZKSSJ.ToString("yyyy-MM-dd"));
@@ -237,12 +229,12 @@ function FB() {
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "JZLB", "'" + $("#spanJZLB").html() + "'");
-    obj = jsonObj.AddJson(obj, "XZSPDW", "'" + $("#spanXZSPDW").html() + "'");
+    obj = jsonObj.AddJson(obj, "XZDW", "'" + $("#spanXZDW").html() + "'");
     obj = jsonObj.AddJson(obj, "XZJS", "'" + $("#spanXZJS").html() + "'");
     obj = jsonObj.AddJson(obj, "GZCS", "'" + $("#spanGZCS").html() + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
-    obj = jsonObj.AddJson(obj, "JZYXQ", "'" + GetDX("JZYXQ") + "'");
+    obj = jsonObj.AddJson(obj, "JZYXQ", "'" + GetDX("ZPJZYXQ") + "'");
     obj = jsonObj.AddJson(obj, "JZSJ", "'" + GetJZSJ() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     if ($("#DQJZKSSJ").val() !== "")

@@ -1,19 +1,19 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });BindClick("HLLX");
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    BindClick("HLLX");
     BindClick("JDXJ");
     BindClick("QY");
     BindClick("DD");
     LoadHQSY_HYJDJBXX();
 });
-
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "HLLX") {
-            LoadCODESByTYPENAME("婚礼类型", "HLLX", "CODES_HQSY");
+            LoadCODESByTYPENAME("婚礼类型", "HLLX", "CODES_HQSY", Bind, "HYJDHLLX", "HLLX", "");
         }
         if (type === "JDXJ") {
-            LoadCODESByTYPENAME("酒店星级", "JDXJ", "CODES_HQSY");
+            LoadCODESByTYPENAME("酒店星级", "JDXJ", "CODES_HQSY", Bind, "HYJDJDXJ", "JDXJ", "");
         }
         if (type === "XL") {
             LoadXL();
@@ -31,41 +31,6 @@ function SelectLB(obj, type, lbid) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
     $("#LBID").val(lbid);
-}
-//加载多选
-function LoadDuoX(type, id) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: type,
-            TBName: "CODES_HQSY"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='ulFWPZ'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='li" + id + "' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i === 3 || i === 7 || i === 11) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
-                    }
-                }
-                if (parseInt(xml.list.length % 4) === 0)
-                    $("#div" + id).css("height", parseInt(xml.list.length / 4) * 45 + "px");
-                else
-                    $("#div" + id).css("height", (parseInt(xml.list.length / 4) + 1) * 45 + "px");
-                html += "</ul>";
-                $("#div" + id + "Text").html(html);
-                $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-                LoadHQSY_HYJDJBXX();
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
 }
 //加载婚庆摄影_婚宴酒店基本信息
 function LoadHQSY_HYJDJBXX() {

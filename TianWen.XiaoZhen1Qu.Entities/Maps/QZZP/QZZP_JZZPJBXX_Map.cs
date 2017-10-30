@@ -18,8 +18,8 @@ namespace TianWen.XiaoZhen1Qu.Entities.Maps
             Map(x => x.DQJZKSSJ, "DQJZKSSJ");
             Map(x => x.DQJZJSSJ, "DQJZJSSJ");
             Map(x => x.BCMS, "BCMS");
-            Map(x => x.XZSP, "XZSP");
-            Map(x => x.XZSPDW, "XZSPDW");
+            Map(x => x.XZ, "XZ");
+            Map(x => x.XZDW, "XZDW");
             Map(x => x.XZJS, "XZJS");
             Map(x => x.JLJSYX, "JLJSYX");
             Map(x => x.GZCS, "GZCS");

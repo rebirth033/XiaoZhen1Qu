@@ -1,11 +1,10 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });LoadPFCG_DJZMJBXX();
-    
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    LoadPFCG_DJZMJBXX();
     BindClick("LB");
     BindClick("QY");
     BindClick("DD");
 });
-
 //加载小类
 function LoadXL() {
     $.ajax({
@@ -26,6 +25,7 @@ function LoadXL() {
                 html += "</ul>";
                 $("#divXL").html(html);
                 $("#divXL").css("display", "block");
+                Bind("OUTLB", "XL", "");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -38,16 +38,19 @@ function SelectLB(obj, type, id) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
     $("#LBID").val(id);
-    BindClick("XL");
-    $("#spanXL").html("请选择小类");
-    $("#divXLText").css("display", "");
-    $("#divXL").css("display", "none");
+    if (obj.innerHTML === "专用灯具") {
+        BindClick("XL");
+        $("#spanXL").html("请选择小类");
+        $("#divXLText").css("display", "");
+    } else {
+        $("#divXLText").css("display", "none");
+    }
 }
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("灯具照明", "LB", "CODES_PFCG");
+            LoadCODESByTYPENAME("灯具照明", "LB", "CODES_PFCG", Bind, "OUTLB", "LB", "");
         }
         if (type === "XL") {
             LoadXL();

@@ -1,16 +1,15 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });LoadSHFW_SHFW_BMYSJBXX();
-    
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    LoadSHFW_SHFW_BMYSJBXX();
     BindClick("LB");
     BindClick("QY");
     BindClick("DD");
 });
-
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("月嫂/保姆", "LB", "CODES_SHFW");
+            LoadCODESByTYPENAME("月嫂/保姆", "LB", "CODES_SHFW", Bind, "OUTLB", "LB", "");
         }
         if (type === "QY") {
             LoadQY();

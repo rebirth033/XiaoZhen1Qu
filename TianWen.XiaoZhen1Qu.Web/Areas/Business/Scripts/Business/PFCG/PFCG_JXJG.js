@@ -1,21 +1,15 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });LoadPFCG_JXJGJBXX();
-    
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    LoadPFCG_JXJGJBXX();
     BindClick("LB");
     BindClick("QY");
     BindClick("DD");
 });
-
-//选择类别下拉框
-function SelectLB(obj, type, id) {
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
-}
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("机械加工", "LB", "CODES_PFCG");
+            LoadCODESByTYPENAME("机械加工", "LB", "CODES_PFCG", Bind, "OUTLB", "LB", "");
         }
         if (type === "QY") {
             LoadQY();

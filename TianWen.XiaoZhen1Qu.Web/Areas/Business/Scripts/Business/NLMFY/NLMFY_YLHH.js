@@ -1,15 +1,15 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });LoadNLMFY_YLHHJBXX();
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    LoadNLMFY_YLHHJBXX();
     BindClick("LB");
     BindClick("QY");
     BindClick("DD");
 });
-
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("园林花卉", "LB", "CODES_NLMFY");
+            LoadCODESByTYPENAME("园林花卉", "LB", "CODES_NLMFY", Bind, "OUTLB", "LB", "");
         }
         if (type === "XL") {
             LoadXL();
@@ -77,6 +77,7 @@ function LoadXLMC(JCLX, JCBQ) {
 function XLXZ(XLMC, XLID) {
     $("#spanXL").html(XLMC);
     $("#divXL").css("display", "none");
+    ValidateSelect("YLHHXL", "XL", "忘记选择小类啦");
 }
 //加载农林牧副渔_园林花卉基本信息
 function LoadNLMFY_YLHHJBXX() {

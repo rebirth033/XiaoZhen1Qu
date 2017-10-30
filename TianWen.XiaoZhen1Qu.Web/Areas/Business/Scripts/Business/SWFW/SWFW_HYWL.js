@@ -1,10 +1,9 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });LoadHYWLLB();
-    
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    LoadHYWLLB();
     BindClick("QY");
     BindClick("DD");
 });
-
 //加载货运物流类别
 function LoadHYWLLB() {
     $.ajax({
@@ -21,17 +20,18 @@ function LoadHYWLLB() {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='liHYWLLB' onclick='SelectDuoX(this)'><img class='img_HYWLLB'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i === 3 || i === 7 || i === 11 || i === 15 || i === 19) {
+                    if (i % 4 === 3) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 4) === 0)
-                    $("#divHYWLLB").css("height", parseInt(xml.list.length / 4) * 45 + "px");
+                    $("#divHYWLLB").css("height", parseInt(xml.list.length / 4) * 60 + "px");
                 else
-                    $("#divHYWLLB").css("height", (parseInt(xml.list.length / 4) + 1) * 45 + "px");
+                    $("#divHYWLLB").css("height", (parseInt(xml.list.length / 4) + 1) * 60 + "px");
                 html += "</ul>";
                 $("#divHYWLLBText").html(html);
                 $(".img_HYWLLB").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".liHYWLLB").bind("click", function () { ValidateCheck("HYWLLB", "忘记选择类别啦"); });
                 LoadSWFW_HYWLJBXX();
             }
         },

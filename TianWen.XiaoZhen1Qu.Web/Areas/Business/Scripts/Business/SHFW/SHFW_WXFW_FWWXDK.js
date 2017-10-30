@@ -1,5 +1,6 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });BindClick("LB");
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    BindClick("LB");
     BindClick("QY");
     BindClick("DD");
     LoadSHFW_WXFW_FWWXDKJBXX();
@@ -37,13 +38,17 @@ function LoadXL() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                var html = "<ul class='ul_select' style='overflow-y: scroll;'>";
+                var height = 341;
+                if (xml.list.length < 10)
+                    height = parseInt(xml.list.length * 34) + 1;
+                var html = "<ul class='ul_select' style='overflow-y: scroll; height:" + height + "px'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='li_select' onclick='SelectDropdown(this,\"XL\")'>" + xml.list[i].CODENAME + "</li>";
                 }
                 html += "</ul>";
                 $("#divXL").html(html);
                 $("#divXL").css("display", "");
+                Bind("OUTLB", "XL", "");
                 ActiveStyle("XL");
             }
         },
@@ -56,7 +61,7 @@ function LoadXL() {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("房屋维修/打孔", "LB", "CODES_SHFW");
+            LoadCODESByTYPENAME("房屋维修/打孔", "LB", "CODES_SHFW", Bind, "OUTLB", "LB", "");
         }
         if (type === "XL") {
             LoadXL();
@@ -95,8 +100,9 @@ function LoadSHFW_WXFW_FWWXDKJBXX() {
                 $("#spanDD").html(xml.Value.SHFW_WXFW_FWWXDKJBXX.DD);
                 $("#spanXL").html(xml.Value.SHFW_WXFW_FWWXDKJBXX.XL);
                 LoadPhotos(xml.Value.Photos);
-                if (xml.Value.SHFW_WXFW_FWWXDKJBXX.LB.indexOf("跑腿服务") !== -1) {
-                    LoadXL(xml.Value.SHFW_WXFW_FWWXDKJBXX.LB, xml.Value.SHFW_WXFW_FWWXDKJBXX.XL);
+                if (xml.Value.SHFW_WXFW_FWWXDKJBXX.LB.indexOf("卫浴/洁具维修") !== -1 || xml.Value.SHFW_WXFW_FWWXDKJBXX.LB.indexOf("水管/水龙头维修") !== -1 || xml.Value.SHFW_WXFW_FWWXDKJBXX.LB.indexOf("粉刷/防腐") !== -1) {
+                    $("#divXLText").css("display", "");
+                    $("#spanXL").html(xml.Value.SHFW_WXFW_FWWXDKJBXX.XL);
                 }
             }
         },
