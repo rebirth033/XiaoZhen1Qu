@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using TianWen.XiaoZhen1Qu.Entities.Models;
 using TianWen.XiaoZhen1Qu.Interface;
 
 namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
@@ -16,6 +17,11 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             ViewData["XZQ"] = "福州";
             ViewData["YHM"] = Session["YHM"];
             return View();
+        }
+
+        public JsonResult LoadZXFBXX()
+        {
+            return Json(SYBLL.LoadZXFBXX());
         }
     }
 }

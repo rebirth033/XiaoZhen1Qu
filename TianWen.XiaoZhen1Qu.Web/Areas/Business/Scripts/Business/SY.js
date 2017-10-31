@@ -9,26 +9,28 @@ $(document).ready(function () {
     $(".img_head_left_logo").css("margin-left", "20px");
     $("#li_head_sy").css("background", "#5bc0de").css("color", "#ffffff");
 
+    LoadZXFBXX();
+});
 
+function ZXFBLB() {
     var e = $("#ul_body_top_right_zxfb")[0];
     var transitionEvent = whichTransitionEvent();
     transitionEvent && e.addEventListener(transitionEvent, function () {
-        if (temp === 3) {
+        if (temp === 5) {
             $("#ul_body_top_right_zxfb").css("transform", "translate3d(0px, 0px, 0px)").css("transition-duration", "0ms");
         }
     });
 
     setInterval(function () {
-        if (curIndex < 3) {
+        if (curIndex < 5) {
             changeTo(curIndex);
             curIndex++;
         } else {
             changeTo(curIndex);
             curIndex = 1;
         }
-        //changeTo(curIndex);
     }, 2500);
-});
+}
 
 function changeTo(num) {
     var height = parseInt(num) * 60;
@@ -36,20 +38,39 @@ function changeTo(num) {
     $("#ul_body_top_right_zxfb").css("transform", "translate3d(0px, -" + height + "px, 0px)").css("transition-duration", "500ms");
 }
 
-function whichTransitionEvent() {
-    var t;
-    var el = document.createElement('fakeelement');
-    var transitions = {
-        'transition': 'transitionend',
-        'OTransition': 'oTransitionEnd',
-        'MozTransition': 'transitionend',
-        'WebkitTransition': 'webkitTransitionEnd',
-        'MsTransition': 'msTransitionEnd'
-    }
+function LoadZXFBXX() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/SY/LoadZXFBXX",
+        dataType: "json",
+        data:
+        {
 
-    for (t in transitions) {
-        if (el.style[t] !== undefined) {
-            return transitions[t];
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                $("#div_main_info").html('');
+                for (var i = 0; i < xml.list.length; i++) {
+                    LoadInfo(xml.list[i]);
+                }
+                LoadInfo(xml.list[0]);
+                ZXFBLB();
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
         }
-    }
+    });
+}
+
+function LoadInfo(obj) {
+    var html = "";
+    html += ('<li class="li_body_top_right_zxfb">');
+    html += ('<img class="img_body_top_right_zxfb" src="'+getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random()+'" />');
+    html += ('<div class="div_body_top_right_zxfb">');
+    html += ('<span class="span_body_top_right_zxfb">'+obj.BT+'</span>');
+    html += ('<span class="span_body_top_right_zxfb_sj">' + obj.CJSJ.ToString("yyyy-MM-dd hh:mm:ss") + '</span>');
+    html += ('</div>');
+    html += ('</li>');
+    $("#ul_body_top_right_zxfb").append(html);
 }

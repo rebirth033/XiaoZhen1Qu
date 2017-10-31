@@ -230,3 +230,21 @@ function LoadTXXX() {
         }
     });
 }
+//Transition结束监听事件
+function whichTransitionEvent() {
+    var t;
+    var el = document.createElement('fakeelement');
+    var transitions = {
+        'transition': 'transitionend',
+        'OTransition': 'oTransitionEnd',
+        'MozTransition': 'transitionend',
+        'WebkitTransition': 'webkitTransitionEnd',
+        'MsTransition': 'msTransitionEnd'
+    }
+
+    for (t in transitions) {
+        if (el.style[t] !== undefined) {
+            return transitions[t];
+        }
+    }
+}
