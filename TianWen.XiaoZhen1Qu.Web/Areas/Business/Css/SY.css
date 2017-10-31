@@ -41,6 +41,17 @@
 .div_body .div_body_top .div_body_top_right .div_body_top_right_zxfb .ul_body_top_right_zxfb .li_body_top_right_zxfb .div_body_top_right_zxfb .span_body_top_right_zxfb:hover{ color: #ef6100;text-decoration: underline;cursor: pointer;}
 .div_body .div_body_top .div_body_top_right .div_body_top_right_zxfb .ul_body_top_right_zxfb .li_body_top_right_zxfb .div_body_top_right_zxfb .span_body_top_right_zxfb_sj{ color: #999999;font-size: 12px;display: block;margin-top: 5px;}
 
+/*首页_主体_中部*/
+.div_body .div_body_middle{ width: 1200px;overflow-x: hidden;}
+.div_body .div_body_middle .div_body_middle_left{ width: 930px;height: 1200px;margin-top: 10px;display: inline-block;float: left;background: #eeeff1;padding: 10px 0px;}
+.div_body .div_body_middle .div_body_middle_left .div_body_middle_left_section { width: 326px;display: block; background: #ffffff;padding: 10px 20px;}
+.div_body .div_body_middle .div_body_middle_left .div_body_middle_left_section .p_body_middle_left_title{font-size: 18px;font-weight: 700;border-bottom: 1px solid #cccccc;display: block;height: 40px;color: #5bc0de;}
+.div_body .div_body_middle .div_body_middle_left .div_body_middle_left_section .p_body_middle_left_title_small{font-size: 12px;color: #999999;display: block;height: 25px;}
+.div_body .div_body_middle .div_body_middle_left .div_body_middle_left_section .ul_body_middle_left_section{display: block;padding: 0;}
+.div_body .div_body_middle .div_body_middle_left .div_body_middle_left_section .ul_body_middle_left_section .li_body_middle_left_section{display: inline-block;margin-right: 10px;height: 30px;font-size: 14px;float: left;}
+.div_body .div_body_middle .div_body_middle_left .div_body_middle_left_section .ul_body_middle_left_section .li_body_middle_left_section:hover{ cursor: pointer;color: #ef6100;text-decoration: underline;}
+.div_body .div_body_middle .div_body_middle_left .div_body_middle_left_section .ul_body_middle_left_section .li_body_middle_left_section_active{color: #5bc0de;}
+
 .div_bottom {border-top: 1px solid #cccccc;display: block;text-align: center;height: 100px;color: #333;padding-top: 15px;font-family: Microsoft YaHei, SimHei, Arial, Helvetica, sans-serif;margin-top: 20px;background-color: #000;opacity: 0.5;color: #fff;line-height: 34px;}
 
 .span_div_bottom_inner {font-size: 14px;font-family: "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", tahoma, arial, simhei;}
