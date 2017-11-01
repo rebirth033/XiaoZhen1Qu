@@ -75,6 +75,7 @@
 .div_body .div_body_bottom .div_body_bottom_section .ul_body_bottom_section{ padding: 0;}
 .div_body .div_body_bottom .div_body_bottom_section .ul_body_bottom_section .li_body_bottom_section{ width: 80px;height: 60px;float: left;margin-top: 10px;}
 .div_body .div_body_bottom .div_body_bottom_section .ul_body_bottom_section .li_body_bottom_section .p_li_body_bottom_section{ text-align: center;font-size: 13px;color: #999999;}
+.div_body .div_body_bottom .div_body_bottom_section .ul_body_bottom_section .li_body_bottom_section .p_li_body_bottom_section:hover{ cursor: pointer;color: #ef6100;text-decoration: underline;}
 .div_body .div_body_bottom .div_body_bottom_section .ul_body_bottom_section .li_body_bottom_section .p_li_body_bottom_section .img_li_body_bottom_section{ width: 28px;height: 28px;display: block;margin-left: 25px;}
 .active{color: #ef6100;}
 .reduce{ color: #999999;}
