@@ -77,7 +77,7 @@ function LoadXL() {
 function LoadSWFW_KDJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SWFW_KD/LoadSWFW_KDJBXX",
+        url: getRootPath() + "/Business/SWFW/LoadSWFW_KDJBXX",
         dataType: "json",
         data:
         {
@@ -124,7 +124,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SWFW_KD/FB",
+        url: getRootPath() + "/Business/SWFW/FBSWFW_KDJBXX",
         dataType: "json",
         data:
         {

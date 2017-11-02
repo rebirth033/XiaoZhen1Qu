@@ -178,7 +178,7 @@ function LoadDuoX(type, id) {
 function LoadSWFW_SYSXJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SWFW_SYSX/LoadSWFW_SYSXJBXX",
+        url: getRootPath() + "/Business/SWFW/LoadSWFW_SYSXJBXX",
         dataType: "json",
         data:
         {
@@ -257,7 +257,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SWFW_SYSX/FB",
+        url: getRootPath() + "/Business/SWFW/FBSWFW_SYSXJBXX",
         dataType: "json",
         data:
         {

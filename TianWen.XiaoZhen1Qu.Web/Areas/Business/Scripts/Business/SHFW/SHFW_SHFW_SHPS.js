@@ -93,7 +93,7 @@ function BindClick(type) {
 function LoadSHFW_SHFW_SHPSJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SHFW_SHFW_SHPS/LoadSHFW_SHFW_SHPSJBXX",
+        url: getRootPath() + "/Business/SHFW/LoadSHFW_SHFW_SHPSJBXX",
         dataType: "json",
         data:
         {
@@ -146,7 +146,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SHFW_SHFW_SHPS/FB",
+        url: getRootPath() + "/Business/SHFW/FBSHFW_SHFW_SHPSJBXX",
         dataType: "json",
         data:
         {

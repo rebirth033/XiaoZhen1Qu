@@ -1,10 +1,10 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });BindClick("LB");
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    BindClick("LB");
     BindClick("QY");
     BindClick("DD");
     LoadSHFW_CLFW_ZCJBXX();
 });
-
 //选择类别下拉框
 function SelectLB(obj, type, id) {
     $("#span" + type).html(obj.innerHTML);
@@ -80,7 +80,7 @@ function BindClick(type) {
 function LoadSHFW_CLFW_ZCJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SHFW_CLFW_ZC/LoadSHFW_CLFW_ZCJBXX",
+        url: getRootPath() + "/Business/SHFW/LoadSHFW_CLFW_ZCJBXX",
         dataType: "json",
         data:
         {
@@ -130,7 +130,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SHFW_CLFW_ZC/FB",
+        url: getRootPath() + "/Business/SHFW/FBSHFW_CLFW_ZCJBXX",
         dataType: "json",
         data:
         {

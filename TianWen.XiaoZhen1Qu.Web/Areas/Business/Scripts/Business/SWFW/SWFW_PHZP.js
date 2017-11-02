@@ -123,7 +123,7 @@ function LoadXL(lbmc, xl) {
 function LoadSWFW_PHZPJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SWFW_PHZP/LoadSWFW_PHZPJBXX",
+        url: getRootPath() + "/Business/SWFW/LoadSWFW_PHZPJBXX",
         dataType: "json",
         data:
         {
@@ -179,7 +179,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SWFW_PHZP/FB",
+        url: getRootPath() + "/Business/SWFW/FBSWFW_PHZPJBXX",
         dataType: "json",
         data:
         {

@@ -77,7 +77,7 @@ function LoadXL() {
 function LoadSHFW_CLFW_QCGZFHJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SHFW_CLFW_QCGZFH/LoadSHFW_CLFW_QCGZFHJBXX",
+        url: getRootPath() + "/Business/SHFW/LoadSHFW_CLFW_QCGZFHJBXX",
         dataType: "json",
         data:
         {
@@ -124,7 +124,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SHFW_CLFW_QCGZFH/FB",
+        url: getRootPath() + "/Business/SHFW/FBSHFW_CLFW_QCGZFHJBXX",
         dataType: "json",
         data:
         {

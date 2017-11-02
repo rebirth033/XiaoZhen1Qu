@@ -1,136 +1,84 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <objects  xmlns="http://www.springframework.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.net http://www.springframework.net/xsd/spring-objects.xsd">
-  <object id="SWFW_GSZCController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SWFW_GSZCController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+  <object id="SWFWController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SWFWController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="SWFW_GSZCBLL">
       <ref object="SWFW_GSZCBLL"/>
     </property>
-  </object>
-  <object id="SWFW_SBZLController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SWFW_SBZLController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="SWFW_SBZLBLL">
       <ref object="SWFW_SBZLBLL"/>
     </property>
-  </object>
-  <object id="SWFW_FLZXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SWFW_FLZXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="SWFW_FLZXBLL">
       <ref object="SWFW_FLZXBLL"/>
     </property>
-  </object>
-  <object id="SWFW_CWKJPGController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SWFW_CWKJPGController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="SWFW_CWKJPGBLL">
       <ref object="SWFW_CWKJPGBLL"/>
     </property>
-  </object>
-  <object id="SWFW_BXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SWFW_BXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="SWFW_BXBLL">
       <ref object="SWFW_BXBLL"/>
     </property>
-  </object>
-  <object id="SWFW_TZDBController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SWFW_TZDBController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="SWFW_TZDBBLL">
       <ref object="SWFW_TZDBBLL"/>
     </property>
-  </object>
-  <object id="SWFW_YSBZController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SWFW_YSBZController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="SWFW_YSBZBLL">
       <ref object="SWFW_YSBZBLL"/>
     </property>
-  </object>
-  <object id="SWFW_PHZPController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SWFW_PHZPController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="SWFW_PHZPBLL">
       <ref object="SWFW_PHZPBLL"/>
     </property>
-  </object>
-  <object id="SWFW_SJCHController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SWFW_SJCHController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="SWFW_SJCHBLL">
       <ref object="SWFW_SJCHBLL"/>
     </property>
-  </object>
-  <object id="SWFW_GGCMController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SWFW_GGCMController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="SWFW_GGCMBLL">
       <ref object="SWFW_GGCMBLL"/>
     </property>
-  </object>
-  <object id="SWFW_ZHFWController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SWFW_ZHFWController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="SWFW_ZHFWBLL">
       <ref object="SWFW_ZHFWBLL"/>
     </property>
-  </object>
-  <object id="SWFW_LPDZController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SWFW_LPDZController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="SWFW_LPDZBLL">
       <ref object="SWFW_LPDZBLL"/>
     </property>
-  </object>
-  <object id="SWFW_ZKController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SWFW_ZKController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="SWFW_ZKBLL">
       <ref object="SWFW_ZKBLL"/>
     </property>
-  </object>
-  <object id="SWFW_WLBXWHController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SWFW_WLBXWHController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="SWFW_WLBXWHBLL">
       <ref object="SWFW_WLBXWHBLL"/>
     </property>
-  </object>
-  <object id="SWFW_WZJSTGController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SWFW_WZJSTGController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="SWFW_WZJSTGBLL">
       <ref object="SWFW_WZJSTGBLL"/>
     </property>
-  </object>
-  <object id="SWFW_ZXFWController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SWFW_ZXFWController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="SWFW_ZXFWBLL">
       <ref object="SWFW_ZXFWBLL"/>
     </property>
-  </object>
-  <object id="SWFW_KDController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SWFW_KDController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="SWFW_KDBLL">
       <ref object="SWFW_KDBLL"/>
     </property>
-  </object>
-  <object id="SWFW_FYSJController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SWFW_FYSJController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="SWFW_FYSJBLL">
       <ref object="SWFW_FYSJBLL"/>
     </property>
-  </object>
-  <object id="SWFW_HYWLController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SWFW_HYWLController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="SWFW_HYWLBLL">
       <ref object="SWFW_HYWLBLL"/>
     </property>
-  </object>
-  <object id="SWFW_HYZXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SWFW_HYZXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="SWFW_HYZXBLL">
       <ref object="SWFW_HYZXBLL"/>
     </property>
-  </object>
-  <object id="SWFW_BGSBWXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SWFW_BGSBWXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="SWFW_BGSBWXBLL">
       <ref object="SWFW_BGSBWXBLL"/>
     </property>
-  </object>
-  <object id="SWFW_ZLController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SWFW_ZLController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="SWFW_ZLBLL">
       <ref object="SWFW_ZLBLL"/>
     </property>
-  </object>
-  <object id="SWFW_DBQZQZController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SWFW_DBQZQZController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="SWFW_DBQZQZBLL">
       <ref object="SWFW_DBQZQZBLL"/>
     </property>
-  </object>
-  <object id="SWFW_JZWXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SWFW_JZWXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="SWFW_JZWXBLL">
       <ref object="SWFW_JZWXBLL"/>
     </property>
-  </object>
-  <object id="SWFW_JXSBWXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SWFW_JXSBWXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="SWFW_JXSBWXBLL">
       <ref object="SWFW_JXSBWXBLL"/>
     </property>
-  </object>
-  <object id="SWFW_SYSXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SWFW_SYSXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="SWFW_SYSXBLL">
       <ref object="SWFW_SYSXBLL"/>
     </property>
-  </object>
-  <object id="SWFW_LYQDController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SWFW_LYQDController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="SWFW_LYQDBLL">
       <ref object="SWFW_LYQDBLL"/>
     </property>
