@@ -31,7 +31,7 @@ function SelectLB(obj, type, lbid) {
 function LoadHQSY_HSSYJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/HQSY_HSSY/LoadHQSY_HSSYJBXX",
+        url: getRootPath() + "/Business/HQSY/LoadHQSY_HSSYJBXX",
         dataType: "json",
         data:
         {
@@ -97,7 +97,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/HQSY_HSSY/FB",
+        url: getRootPath() + "/Business/HQSY/FBHQSY_HSSYJBXX",
         dataType: "json",
         data:
         {

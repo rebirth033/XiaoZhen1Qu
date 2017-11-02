@@ -121,7 +121,7 @@ function BindClick(type) {
 function LoadJYPX_TYPXJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/JYPX_TYPX/LoadJYPX_TYPXJBXX",
+        url: getRootPath() + "/Business/JYPX/LoadJYPX_TYPXJBXX",
         dataType: "json",
         data:
         {
@@ -169,7 +169,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/JYPX_TYPX/FB",
+        url: getRootPath() + "/Business/JYPX/FBJYPX_TYJLJBXX",
         dataType: "json",
         data:
         {

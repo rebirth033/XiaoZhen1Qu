@@ -62,7 +62,7 @@ function LoadDuoX(type, id) {
 function LoadHQSY_HQGSJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/HQSY_HQGS/LoadHQSY_HQGSJBXX",
+        url: getRootPath() + "/Business/HQSY/LoadHQSY_HQGSJBXX",
         dataType: "json",
         data:
         {
@@ -107,7 +107,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/HQSY_HQGS/FB",
+        url: getRootPath() + "/Business/HQSY/FBHQSY_HQGSJBXX",
         dataType: "json",
         data:
         {

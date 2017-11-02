@@ -258,7 +258,7 @@ function SetGCYS(type, ys) {
 function LoadHQSY_HCZLJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/HQSY_HCZL/LoadHQSY_HCZLJBXX",
+        url: getRootPath() + "/Business/HQSY/LoadHQSY_HCZLJBXX",
         dataType: "json",
         data:
         {
@@ -316,7 +316,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/HQSY_HCZL/FB",
+        url: getRootPath() + "/Business/HQSY/FBHQSY_HCZLJBXX",
         dataType: "json",
         data:
         {

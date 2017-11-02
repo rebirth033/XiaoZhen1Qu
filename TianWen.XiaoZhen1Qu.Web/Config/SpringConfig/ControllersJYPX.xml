@@ -1,96 +1,60 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <objects  xmlns="http://www.springframework.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.net http://www.springframework.net/xsd/spring-objects.xsd">
-  <object id="JYPX_ZXXFDBController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.JYPX_ZXXFDBController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+  <object id="JYPXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.JYPXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="JYPX_ZXXFDBBLL">
       <ref object="JYPX_ZXXFDBBLL"/>
     </property>
-  </object>
-  <object id="JYPX_JJGRController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.JYPX_JJGRController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="JYPX_JJGRBLL">
       <ref object="JYPX_JJGRBLL"/>
     </property>
-  </object>
-  <object id="JYPX_JJJGController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.JYPX_JJJGController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="JYPX_JJJGBLL">
       <ref object="JYPX_JJJGBLL"/>
     </property>
-  </object>
-  <object id="JYPX_ZXXYDYController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.JYPX_ZXXYDYController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="JYPX_ZXXYDYBLL">
       <ref object="JYPX_ZXXYDYBLL"/>
     </property>
-  </object>
-  <object id="JYPX_YYPXJGController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.JYPX_YYPXJGController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="JYPX_YYPXJGBLL">
       <ref object="JYPX_YYPXJGBLL"/>
     </property>
-  </object>
-  <object id="JYPX_YYPXJSController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.JYPX_YYPXJSController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="JYPX_YYPXJSBLL">
       <ref object="JYPX_YYPXJSBLL"/>
     </property>
-  </object>
-  <object id="JYPX_ZYJNPXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.JYPX_ZYJNPXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="JYPX_ZYJNPXBLL">
       <ref object="JYPX_ZYJNPXBLL"/>
     </property>
-  </object>
-  <object id="JYPX_XLJYController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.JYPX_XLJYController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="JYPX_XLJYBLL">
       <ref object="JYPX_XLJYBLL"/>
     </property>
-  </object>
-  <object id="JYPX_YSPXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.JYPX_YSPXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="JYPX_YSPXBLL">
       <ref object="JYPX_YSPXBLL"/>
     </property>
-  </object>
-  <object id="JYPX_YSPXJSController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.JYPX_YSPXJSController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="JYPX_YSPXJSBLL">
       <ref object="JYPX_YSPXJSBLL"/>
     </property>
-  </object>
-  <object id="JYPX_TYPXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.JYPX_TYPXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="JYPX_TYPXBLL">
       <ref object="JYPX_TYPXBLL"/>
     </property>
-  </object>
-  <object id="JYPX_ITPXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.JYPX_ITPXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="JYPX_ITPXBLL">
       <ref object="JYPX_ITPXBLL"/>
     </property>
-  </object>
-  <object id="JYPX_SJPXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.JYPX_SJPXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="JYPX_SJPXBLL">
       <ref object="JYPX_SJPXBLL"/>
     </property>
-  </object>
-  <object id="JYPX_GLPXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.JYPX_GLPXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="JYPX_GLPXBLL">
       <ref object="JYPX_GLPXBLL"/>
     </property>
-  </object>
-  <object id="JYPX_YYEJYController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.JYPX_YYEJYController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="JYPX_YYEJYBLL">
       <ref object="JYPX_YYEJYBLL"/>
     </property>
-  </object>
-    <object id="JYPX_LXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.JYPX_LXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="JYPX_LXBLL">
       <ref object="JYPX_LXBLL"/>
     </property>
-  </object>
-  <object id="JYPX_YMController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.JYPX_YMController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="JYPX_YMBLL">
       <ref object="JYPX_YMBLL"/>
     </property>
-  </object>
-  <object id="JYPX_TYJLController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.JYPX_TYJLController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="JYPX_TYJLBLL">
       <ref object="JYPX_TYJLBLL"/>
     </property>
-  </object>
-  <object id="JYPX_PBPKController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.JYPX_PBPKController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="JYPX_PBPKBLL">
       <ref object="JYPX_PBPKBLL"/>
     </property>

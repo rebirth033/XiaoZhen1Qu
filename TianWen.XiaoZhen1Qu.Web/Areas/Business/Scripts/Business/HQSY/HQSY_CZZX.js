@@ -1,11 +1,11 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });BindClick("HLLX");
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    BindClick("HLLX");
     BindClick("JDXJ");
     BindClick("QY");
     BindClick("DD");
     LoadHQSY_CZZXJBXX();
 });
-
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
@@ -71,7 +71,7 @@ function LoadDuoX(type, id) {
 function LoadHQSY_CZZXJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/HQSY_CZZX/LoadHQSY_CZZXJBXX",
+        url: getRootPath() + "/Business/HQSY/LoadHQSY_CZZXJBXX",
         dataType: "json",
         data:
         {
@@ -122,7 +122,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/HQSY_CZZX/FB",
+        url: getRootPath() + "/Business/HQSY/FBHQSY_CZZXJBXX",
         dataType: "json",
         data:
         {

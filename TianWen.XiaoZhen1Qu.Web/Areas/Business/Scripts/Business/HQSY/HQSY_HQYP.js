@@ -5,7 +5,6 @@
     BindClick("DD");
     LoadHQSY_HQYPJBXX();
 });
-
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
@@ -68,7 +67,7 @@ function LoadDuoX(type, id) {
 function LoadHQSY_HQYPJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/HQSY_HQYP/LoadHQSY_HQYPJBXX",
+        url: getRootPath() + "/Business/HQSY/LoadHQSY_HQYPJBXX",
         dataType: "json",
         data:
         {
@@ -112,7 +111,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/HQSY_HQYP/FB",
+        url: getRootPath() + "/Business/HQSY/FBHQSY_HQYPJBXX",
         dataType: "json",
         data:
         {
