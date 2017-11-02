@@ -1381,12 +1381,6 @@
     <Compile Include="Areas\Business\Common\QRCodeHelper.cs" />
     <Compile Include="Areas\Business\Controllers\BZZX\BZZXController.cs" />
     <Compile Include="Areas\Business\Controllers\BZZX\BZZX_WZJYController.cs" />
-    <Compile Include="Areas\Business\Controllers\CL\CL_GCCController.cs" />
-    <Compile Include="Areas\Business\Controllers\CL\CL_HCController.cs" />
-    <Compile Include="Areas\Business\Controllers\CL\CL_JCController.cs" />
-    <Compile Include="Areas\Business\Controllers\CL\CL_KCController.cs" />
-    <Compile Include="Areas\Business\Controllers\CL\CL_MTCController.cs" />
-    <Compile Include="Areas\Business\Controllers\CL\CL_ZXCDDCSLCController.cs" />
     <Compile Include="Areas\Business\Controllers\CommonController.cs" />
     <Compile Include="Areas\Business\Controllers\CW\CW_CWFWController.cs" />
     <Compile Include="Areas\Business\Controllers\CW\CW_CWGController.cs" />
@@ -1433,6 +1427,7 @@
     <Compile Include="Areas\Business\Controllers\HQSY\HQSY_HYJDController.cs" />
     <Compile Include="Areas\Business\Controllers\HQSY\HQSY_SYController.cs" />
     <Compile Include="Areas\Business\Controllers\HQSY\HQSY_ZBSSController.cs" />
+    <Compile Include="Areas\Business\Controllers\HTFB\CLController.cs" />
     <Compile Include="Areas\Business\Controllers\JYPX\JYPX_GLPXController.cs" />
     <Compile Include="Areas\Business\Controllers\JYPX\JYPX_JJGRController.cs" />
     <Compile Include="Areas\Business\Controllers\JYPX\JYPX_JJJGController.cs" />
@@ -1722,22 +1717,22 @@
     <Content Include="Areas\Business\Views\ES_WHYL_WYXNWP\ES_WHYL_WYXNWP.cshtml" />
     <Content Include="Areas\Business\Views\ES_QTES_ESSB\ES_QTES_ESSB.cshtml" />
     <Content Include="Areas\Business\Views\ES_QTES_CRYP\ES_QTES_CRYP.cshtml" />
-    <Content Include="Areas\Business\Views\CL_ZXCDDCSLC\CL_ZXCDDCSLC.cshtml" />
-    <Content Include="Areas\Business\Views\CL_MTC\CL_MTC.cshtml" />
+    <Content Include="Areas\Business\Views\CL\CL_ZXCDDCSLC.cshtml" />
+    <Content Include="Areas\Business\Views\CL\CL_MTC.cshtml" />
     <Content Include="Config\SpringConfig\BLLCL.xml">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Areas\Business\Views\CL_HC\CL_HC.cshtml" />
-    <Content Include="Areas\Business\Views\CL_GCC\CL_GCC.cshtml" />
+    <Content Include="Areas\Business\Views\CL\CL_HC.cshtml" />
+    <Content Include="Areas\Business\Views\CL\CL_GCC.cshtml" />
     <Content Include="Areas\Business\Views\Shared\HTFBLayout.cshtml" />
-    <Content Include="Areas\Business\Views\CL_KC\CL_KC.cshtml" />
+    <Content Include="Areas\Business\Views\CL\CL_KC.cshtml" />
     <Content Include="Areas\Business\Views\CW_CWG\CW_CWG.cshtml" />
     <Content Include="Areas\Business\Views\CW_CWM\CW_CWM.cshtml" />
     <Content Include="Areas\Business\Views\CW_HNYC\CW_HNYC.cshtml" />
     <Content Include="Areas\Business\Views\CW_CWZSLY\CW_CWZSLY.cshtml" />
     <Content Include="Areas\Business\Views\CW_CWYPSP\CW_CWYPSP.cshtml" />
     <Content Include="Areas\Business\Views\CW_CWFW\CW_CWFW.cshtml" />
-    <Content Include="Areas\Business\Views\CL_JC\CL_JC.cshtml" />
+    <Content Include="Areas\Business\Views\CL\CL_JC.cshtml" />
     <Content Include="Areas\Business\Views\PWKQ_DYP\PWKQ_DYP.cshtml" />
     <Content Include="Areas\Business\Views\PWKQ_YCMP\PWKQ_YCMP.cshtml" />
     <Content Include="Areas\Business\Views\PWKQ_YLYJDP\PWKQ_YLYJDP.cshtml" />

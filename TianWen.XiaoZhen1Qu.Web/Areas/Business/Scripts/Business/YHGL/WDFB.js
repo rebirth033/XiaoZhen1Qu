@@ -188,7 +188,7 @@ function Update(JCXXID, LBID) {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                window.open(getRootPath() + "/Business/" + xml.Value.FBYM + "/" + xml.Value.FBYM + "?" + xml.Value.Key + "=" + xml.Value.Value + "&CLICKID=" + xml.Value.LBID);
+                window.open(getRootPath() + "/Business/" + xml.Value.FBYM.split('_')[0] + "/" + xml.Value.FBYM + "?" + xml.Value.Key + "=" + xml.Value.Value + "&CLICKID=" + xml.Value.LBID);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

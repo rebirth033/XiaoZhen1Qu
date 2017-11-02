@@ -70,7 +70,7 @@ function SelectPBPP(obj, type, code) {
 function LoadCL_MTCJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/CL_MTC/LoadCL_MTCJBXX",
+        url: getRootPath() + "/Business/CL/LoadCL_MTCJBXX",
         dataType: "json",
         data:
         {
@@ -128,7 +128,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/CL_MTC/FB",
+        url: getRootPath() + "/Business/CL/FBCL_MTCJBXX",
         dataType: "json",
         data:
         {

@@ -240,7 +240,7 @@ function SelectPZSZSF(obj, type, code) {
 function LoadCL_JCJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/CL_JC/LoadCL_JCJBXX",
+        url: getRootPath() + "/Business/CL/LoadCL_JCJBXX",
         dataType: "json",
         data:
         {
@@ -310,7 +310,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/CL_JC/FB",
+        url: getRootPath() + "/Business/CL/FBCL_JCJBXX",
         dataType: "json",
         data:
         {

@@ -1,33 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <objects  xmlns="http://www.springframework.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.net http://www.springframework.net/xsd/spring-objects.xsd">
-  <object id="CL_ZXCDDCSLCController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.CL_ZXCDDCSLCController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
-    <property name="CL_ZXCDDCSLCBLL">
-      <ref object="CL_ZXCDDCSLCBLL"/>
+  <object id="CLController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.CLController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+      <property name="CL_GCCBLL">
+      <ref object="CL_GCCBLL"/>
     </property>
-  </object>
-  <object id="CL_MTCController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.CL_MTCController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
-    <property name="CL_MTCBLL">
-      <ref object="CL_MTCBLL"/>
-    </property>
-  </object>
-  <object id="CL_HCController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.CL_HCController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="CL_HCBLL">
       <ref object="CL_HCBLL"/>
     </property>
-  </object>
-  <object id="CL_GCCController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.CL_GCCController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
-    <property name="CL_GCCBLL">
-      <ref object="CL_GCCBLL"/>
+    <property name="CL_JCBLL">
+      <ref object="CL_JCBLL"/>
     </property>
-  </object>
-  <object id="CL_KCController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.CL_KCController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="CL_KCBLL">
       <ref object="CL_KCBLL"/>
     </property>
-  </object>
-  <object id="CL_JCController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.CL_JCController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
-    <property name="CL_JCBLL">
-      <ref object="CL_JCBLL"/>
+    <property name="CL_MTCBLL">
+      <ref object="CL_MTCBLL"/>
+    </property>
+    <property name="CL_ZXCDDCSLCBLL">
+      <ref object="CL_ZXCDDCSLCBLL"/>
     </property>
   </object>
 </objects>

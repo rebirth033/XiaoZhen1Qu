@@ -152,7 +152,7 @@ function SelectPBPP(obj, type, code) {
 function LoadCL_GCCJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/CL_GCC/LoadCL_GCCJBXX",
+        url: getRootPath() + "/Business/CL/LoadCL_GCCJBXX",
         dataType: "json",
         data:
         {
@@ -208,7 +208,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/CL_GCC/FB",
+        url: getRootPath() + "/Business/CL/FBCL_GCCJBXX",
         dataType: "json",
         data:
         {

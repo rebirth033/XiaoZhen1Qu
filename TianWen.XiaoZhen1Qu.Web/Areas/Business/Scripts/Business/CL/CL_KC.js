@@ -171,7 +171,7 @@ function SetCLYS(clys) {
 function LoadCL_KCJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/CL_KC/LoadCL_KCJBXX",
+        url: getRootPath() + "/Business/CL/LoadCL_KCJBXX",
         dataType: "json",
         data:
         {
@@ -238,7 +238,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/CL_KC/FB",
+        url: getRootPath() + "/Business/CL/FBCL_KCJBXX",
         dataType: "json",
         data:
         {

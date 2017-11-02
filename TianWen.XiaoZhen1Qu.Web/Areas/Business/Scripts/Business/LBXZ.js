@@ -104,7 +104,7 @@ function LoadXL(LBID, LBNAME) {
 }
 
 function FBXX(FBYM, LBID) {
-    window.location.href = getRootPath() + "/Business/" + FBYM + "/" + FBYM + "?CLICKID=" + LBID;
+    window.location.href = getRootPath() + "/Business/" + FBYM.split('_')[0] + "/" + FBYM + "?CLICKID=" + LBID;
 }
 
 //显示用户菜单
