@@ -1911,6 +1911,7 @@
   <ItemGroup>
     <Folder Include="Areas\Business\Photos\" />
     <Folder Include="Areas\Business\QRCode\" />
+    <Folder Include="Areas\Business\Views\SSY\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TianWen.XiaoZhen1Qu.Entities\TianWen.XiaoZhen1Qu.Entities.csproj">
