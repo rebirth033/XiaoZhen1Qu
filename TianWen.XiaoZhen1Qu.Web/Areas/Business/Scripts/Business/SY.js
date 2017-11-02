@@ -10,7 +10,8 @@ $(document).ready(function () {
     $(".div_bottom").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
     $(".img_head_left_logo").css("margin-left", "20px");
     $("#li_head_sy").css("background", "#5bc0de").css("color", "#ffffff");
-
+    $("#span_fbxx").bind("click", OpenLBXZ);
+    
     LoadZXFBXX();
 });
 
@@ -75,4 +76,9 @@ function LoadInfo(obj) {
     html += ('</div>');
     html += ('</li>');
     $("#ul_body_top_right_zxfb").append(html);
+}
+
+//类别选择
+function OpenLBXZ() {
+    window.open(getRootPath() + "/Business/LBXZ/LBXZ");
 }

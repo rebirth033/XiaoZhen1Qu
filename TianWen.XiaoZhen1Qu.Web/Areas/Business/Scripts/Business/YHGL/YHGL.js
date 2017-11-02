@@ -36,8 +36,8 @@
     $("#div_body_image_qqtx").bind("click", QQBD);
     $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
-
     $("#span_fbxx").bind("click", OpenLBXZ);
+
     if (getUrlParam("Show") === "WDZJ")
         ShowWDZJ();
     else

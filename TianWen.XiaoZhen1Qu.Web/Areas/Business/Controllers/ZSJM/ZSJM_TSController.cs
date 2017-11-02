@@ -26,14 +26,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
-            JCXX jcxx = JsonHelper.ConvertJsonToObject<JCXX>(json);
-            jcxx.YHID = yhjbxx.YHID;
-            jcxx.LLCS = 0;
-            jcxx.STATUS = 1;
-            jcxx.ZXGXSJ = DateTime.Now;
-            jcxx.CJSJ = DateTime.Now;
-            jcxx.LXDZ = yhjbxx.TXDZ;
-            jcxx.DH = Session["XZQ"] + "-" + ZSJM_TSBLL.GetLBQCByLBID(jcxx.LBID);
+            JCXX jcxx = CreateJCXX(yhjbxx, json);
             ZSJM_TSJBXX ZSJM_TSjbxx = JsonHelper.ConvertJsonToObject<ZSJM_TSJBXX>(json);
             ZSJM_TSjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);

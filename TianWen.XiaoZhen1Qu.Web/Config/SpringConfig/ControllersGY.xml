@@ -43,31 +43,6 @@
       <ref object="LBXXBLL"/>
     </property>
   </object>
-  <object id="FC_ZZFController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.FC_ZZFController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
-    <property name="FC_ZZFJBXXBLL">
-      <ref object="FC_ZZFJBXXBLL"/>
-    </property>
-  </object>
-  <object id="FC_DZFController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.FC_DZFController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
-    <property name="FC_DZFBLL">
-      <ref object="FC_DZFBLL"/>
-    </property>
-  </object>
-  <object id="FC_SPController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.FC_SPController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
-    <property name="FC_SPBLL">
-      <ref object="FC_SPBLL"/>
-    </property>
-  </object>
-  <object id="FC_XZLController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.FC_XZLController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
-    <property name="FC_XZLBLL">
-      <ref object="FC_XZLBLL"/>
-    </property>
-  </object>
-  <object id="FC_CKCFTDCWController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.FC_CKCFTDCWController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
-    <property name="FC_CKCFTDCWBLL">
-      <ref object="FC_CKCFTDCWBLL"/>
-    </property>
-  </object>
   <object id="FBCGController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.FBCGController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
   </object>
   <object id="CommonController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.CommonController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
@@ -134,4 +109,3 @@
     </property>
   </object>
 </objects>
-

@@ -24,14 +24,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             YHJBXX yhjbxx = PWKQ_DYPBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
-            JCXX jcxx = JsonHelper.ConvertJsonToObject<JCXX>(json);
-            jcxx.YHID = yhjbxx.YHID;
-            jcxx.LLCS = 0;
-            jcxx.STATUS = 1;
-            jcxx.ZXGXSJ = DateTime.Now;
-            jcxx.CJSJ = DateTime.Now;
-            jcxx.LXDZ = yhjbxx.TXDZ;
-            jcxx.DH = Session["XZQ"] + "-" + PWKQ_DYPBLL.GetLBQCByLBID(jcxx.LBID);
+            JCXX jcxx = CreateJCXX(yhjbxx, json);
             PWKQ_DYPJBXX PWKQ_DYPjbxx = JsonHelper.ConvertJsonToObject<PWKQ_DYPJBXX>(json);
             PWKQ_DYPjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             object result = PWKQ_DYPBLL.SavePWKQ_DYPJBXX(jcxx, PWKQ_DYPjbxx);
