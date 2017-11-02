@@ -126,7 +126,7 @@ function BindClick(type) {
 function LoadZSJM_NYJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/ZSJM_NY/LoadZSJM_NYJBXX",
+        url: getRootPath() + "/Business/ZSJM/LoadZSJM_NYJBXX",
         dataType: "json",
         data:
         {
@@ -187,7 +187,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/ZSJM_NY/FB",
+        url: getRootPath() + "/Business/ZSJM/FBZSJM_NYJBXX",
         dataType: "json",
         data:
         {

@@ -186,7 +186,7 @@ function SelectQY(obj, type, code) {
 function LoadQZZP_JZZPJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/QZZP_JZZP/LoadQZZP_JZZPJBXX",
+        url: getRootPath() + "/Business/QZZP/LoadQZZP_JZZPJBXX",
         dataType: "json",
         data:
         {
@@ -246,7 +246,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/QZZP_JZZP/FB",
+        url: getRootPath() + "/Business/QZZP/FBQZZP_JZZPJBXX",
         dataType: "json",
         data:
         {

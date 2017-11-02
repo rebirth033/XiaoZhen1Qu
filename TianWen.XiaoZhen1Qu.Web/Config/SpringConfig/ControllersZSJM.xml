@@ -1,71 +1,45 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <objects  xmlns="http://www.springframework.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.net http://www.springframework.net/xsd/spring-objects.xsd">
-  <object id="ZSJM_CYController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.ZSJM_CYController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+  <object id="ZSJMController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.ZSJMController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="ZSJM_CYBLL">
       <ref object="ZSJM_CYBLL"/>
     </property>
-  </object>
-  <object id="ZSJM_FZXBController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.ZSJM_FZXBController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="ZSJM_FZXBBLL">
       <ref object="ZSJM_FZXBBLL"/>
     </property>
-  </object>
-  <object id="ZSJM_JCController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.ZSJM_JCController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="ZSJM_JCBLL">
       <ref object="ZSJM_JCBLL"/>
     </property>
-  </object>
-  <object id="ZSJM_JXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.ZSJM_JXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="ZSJM_JXBLL">
       <ref object="ZSJM_JXBLL"/>
     </property>
-  </object>
-  <object id="ZSJM_MRBJController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.ZSJM_MRBJController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="ZSJM_MRBJBLL">
       <ref object="ZSJM_MRBJBLL"/>
     </property>
-  </object>
-  <object id="ZSJM_LPXSPController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.ZSJM_LPXSPController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="ZSJM_LPXSPBLL">
       <ref object="ZSJM_LPXSPBLL"/>
     </property>
-  </object>
-  <object id="ZSJM_JJHBController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.ZSJM_JJHBController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="ZSJM_JJHBBLL">
       <ref object="ZSJM_JJHBBLL"/>
     </property>
-  </object>
-  <object id="ZSJM_JYPXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.ZSJM_JYPXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="ZSJM_JYPXBLL">
       <ref object="ZSJM_JYPXBLL"/>
     </property>
-  </object>
-  <object id="ZSJM_QCFWController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.ZSJM_QCFWController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="ZSJM_QCFWBLL">
       <ref object="ZSJM_QCFWBLL"/>
     </property>
-  </object>
-  <object id="ZSJM_WLFWController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.ZSJM_WLFWController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="ZSJM_WLFWBLL">
       <ref object="ZSJM_WLFWBLL"/>
     </property>
-  </object>
-  <object id="ZSJM_NYController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.ZSJM_NYController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="ZSJM_NYBLL">
       <ref object="ZSJM_NYBLL"/>
     </property>
-  </object>
-  <object id="ZSJM_TSController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.ZSJM_TSController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="ZSJM_TSBLL">
       <ref object="ZSJM_TSBLL"/>
     </property>
-  </object>
-  <object id="ZSJM_SHFWController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.ZSJM_SHFWController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="ZSJM_SHFWBLL">
       <ref object="ZSJM_SHFWBLL"/>
     </property>
-  </object>
-  <object id="ZSJM_WTMYETController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.ZSJM_WTMYETController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="ZSJM_WTMYETBLL">
       <ref object="ZSJM_WTMYETBLL"/>
     </property>

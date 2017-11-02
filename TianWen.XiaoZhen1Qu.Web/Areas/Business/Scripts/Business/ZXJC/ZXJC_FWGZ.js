@@ -77,7 +77,7 @@ function LoadXL(type) {
 function LoadZXJC_FWGZJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/ZXJC_FWGZ/LoadZXJC_FWGZJBXX",
+        url: getRootPath() + "/Business/ZXJC/LoadZXJC_FWGZJBXX",
         dataType: "json",
         data:
         {
@@ -124,7 +124,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/ZXJC_FWGZ/FB",
+        url: getRootPath() + "/Business/ZXJC/FBZXJC_FWGZJBXX",
         dataType: "json",
         data:
         {

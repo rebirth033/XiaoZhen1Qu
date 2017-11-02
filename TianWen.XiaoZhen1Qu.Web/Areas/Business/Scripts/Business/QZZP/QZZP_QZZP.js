@@ -119,7 +119,7 @@ function LoadDuoX(type, id) {
 function LoadQZZP_QZZPJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/QZZP_QZZP/LoadQZZP_QZZPJBXX",
+        url: getRootPath() + "/Business/QZZP/LoadQZZP_QZZPJBXX",
         dataType: "json",
         data:
         {
@@ -168,7 +168,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/QZZP_QZZP/FB",
+        url: getRootPath() + "/Business/QZZP/FBQZZP_QZZPJBXX",
         dataType: "json",
         data:
         {

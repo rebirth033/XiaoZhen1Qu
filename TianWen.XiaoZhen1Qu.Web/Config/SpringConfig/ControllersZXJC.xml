@@ -1,31 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <objects  xmlns="http://www.springframework.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.net http://www.springframework.net/xsd/spring-objects.xsd">
-  <object id="ZXJC_JZFWController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.ZXJC_JZFWController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+  <object id="ZXJCController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.ZXJCController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="ZXJC_JZFWBLL">
       <ref object="ZXJC_JZFWBLL"/>
     </property>
-  </object>
-  <object id="ZXJC_GZFWController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.ZXJC_GZFWController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="ZXJC_GZFWBLL">
       <ref object="ZXJC_GZFWBLL"/>
     </property>
-  </object>
-  <object id="ZXJC_FWGZController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.ZXJC_FWGZController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="ZXJC_FWGZBLL">
       <ref object="ZXJC_FWGZBLL"/>
     </property>
-  </object>
-  <object id="ZXJC_JCController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.ZXJC_JCController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="ZXJC_JCBLL">
       <ref object="ZXJC_JCBLL"/>
     </property>
-  </object>
-  <object id="ZXJC_JJController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.ZXJC_JJController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="ZXJC_JJBLL">
       <ref object="ZXJC_JJBLL"/>
     </property>
-  </object>
-  <object id="ZXJC_JFJSController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.ZXJC_JFJSController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="ZXJC_JFJSBLL">
       <ref object="ZXJC_JFJSBLL"/>
     </property>

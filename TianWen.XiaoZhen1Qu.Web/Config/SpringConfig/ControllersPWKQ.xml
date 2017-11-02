@@ -1,26 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <objects  xmlns="http://www.springframework.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.net http://www.springframework.net/xsd/spring-objects.xsd">
-  <object id="PWKQ_DYPController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.PWKQ_DYPController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+  <object id="PWKQController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.PWKQController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="PWKQ_DYPBLL">
       <ref object="PWKQ_DYPBLL"/>
     </property>
-  </object>
-  <object id="PWKQ_YCMPController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.PWKQ_YCMPController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="PWKQ_YCMPBLL">
       <ref object="PWKQ_YCMPBLL"/>
     </property>
-  </object>
-  <object id="PWKQ_YLYJDPController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.PWKQ_YLYJDPController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="PWKQ_YLYJDPBLL">
       <ref object="PWKQ_YLYJDPBLL"/>
     </property>
-  </object>
-  <object id="PWKQ_XFKGWQController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.PWKQ_XFKGWQController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="PWKQ_XFKGWQBLL">
       <ref object="PWKQ_XFKGWQBLL"/>
     </property>
-  </object>
-  <object id="PWKQ_QTKQController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.PWKQ_QTKQController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="PWKQ_QTKQBLL">
       <ref object="PWKQ_QTKQBLL"/>
     </property>
