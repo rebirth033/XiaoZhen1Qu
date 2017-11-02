@@ -24,7 +24,7 @@ function SelectLB(obj, type) {
 function LoadCW_CWZSLYJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/CW_CWZSLY/LoadCW_CWZSLYJBXX",
+        url: getRootPath() + "/Business/CW/LoadCW_CWZSLYJBXX",
         dataType: "json",
         data:
         {
@@ -65,7 +65,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/CW_CWZSLY/FB",
+        url: getRootPath() + "/Business/CW/FBCW_CWZSLYJBXX",
         dataType: "json",
         data:
         {

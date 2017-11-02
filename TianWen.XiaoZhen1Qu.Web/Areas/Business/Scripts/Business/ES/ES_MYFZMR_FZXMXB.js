@@ -5,7 +5,6 @@
     BindClick("XJ");
     BindClick("QY");
     BindClick("DD");
-
 });
 
 //绑定下拉框鼠标点击样式
@@ -69,7 +68,7 @@ function SelectPBPP(obj, type, code) {
 function LoadES_MYFZMR_FZXMXBJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/ES_MYFZMR_FZXMXB/LoadES_MYFZMR_FZXMXBJBXX",
+        url: getRootPath() + "/Business/ES/LoadES_MYFZMR_FZXMXBJBXX",
         dataType: "json",
         data:
         {
@@ -127,7 +126,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/ES_MYFZMR_FZXMXB/FB",
+        url: getRootPath() + "/Business/ES/FBES_MYFZMR_FZXMXBJBXX",
         dataType: "json",
         data:
         {

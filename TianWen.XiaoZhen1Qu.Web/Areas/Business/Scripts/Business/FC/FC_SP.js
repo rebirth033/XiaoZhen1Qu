@@ -119,7 +119,7 @@ function SelectQY(obj, type, code) {
 function LoadFC_SPJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC_SP/LoadFC_SPJBXX",
+        url: getRootPath() + "/Business/FC/LoadFC_SPJBXX",
         dataType: "json",
         data:
         {
@@ -173,7 +173,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC_SP/FB",
+        url: getRootPath() + "/Business/FC/FBFC_SPJBXX",
         dataType: "json",
         data:
         {

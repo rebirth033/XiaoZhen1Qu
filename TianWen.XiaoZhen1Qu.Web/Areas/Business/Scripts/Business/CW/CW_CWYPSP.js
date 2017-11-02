@@ -66,7 +66,7 @@ function PDLB(LB) {
 function LoadCW_CWYPSPJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/CW_CWYPSP/LoadCW_CWYPSPJBXX",
+        url: getRootPath() + "/Business/CW/LoadCW_CWYPSPJBXX",
         dataType: "json",
         data:
         {
@@ -114,7 +114,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/CW_CWYPSP/FB",
+        url: getRootPath() + "/Business/CW/FBCW_CWYPSPJBXX",
         dataType: "json",
         data:
         {

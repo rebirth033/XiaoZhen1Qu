@@ -15,7 +15,7 @@ function BindClick(type) {
 function LoadCW_CWFWJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/CW_CWFW/LoadCW_CWFWJBXX",
+        url: getRootPath() + "/Business/CW/LoadCW_CWFWJBXX",
         dataType: "json",
         data:
         {
@@ -55,7 +55,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/CW_CWFW/FB",
+        url: getRootPath() + "/Business/CW/FBCW_CWFWJBXX",
         dataType: "json",
         data:
         {

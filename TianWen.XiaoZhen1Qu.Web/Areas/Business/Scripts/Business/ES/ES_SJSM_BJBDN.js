@@ -121,7 +121,7 @@ function SelectBJBPP(obj, type, code) {
 function LoadES_SJSM_BJBDNJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/ES_SJSM_BJBDN/LoadES_SJSM_BJBDNJBXX",
+        url: getRootPath() + "/Business/ES/LoadES_SJSM_BJBDNJBXX",
         dataType: "json",
         data:
         {
@@ -192,7 +192,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/ES_SJSM_BJBDN/FB",
+        url: getRootPath() + "/Business/ES/FBES_SJSM_BJBDNJBXX",
         dataType: "json",
         data:
         {

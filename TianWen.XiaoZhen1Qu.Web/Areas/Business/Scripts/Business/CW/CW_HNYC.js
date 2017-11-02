@@ -53,7 +53,7 @@ function BindClick(type) {
 function LoadCW_HNYCJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/CW_HNYC/LoadCW_HNYCJBXX",
+        url: getRootPath() + "/Business/CW/LoadCW_HNYCJBXX",
         dataType: "json",
         data:
         {
@@ -96,7 +96,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/CW_HNYC/FB",
+        url: getRootPath() + "/Business/CW/FBCW_HNYCJBXX",
         dataType: "json",
         data:
         {

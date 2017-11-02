@@ -43,7 +43,7 @@ function SelectPBPP(obj, type, code) {
 function LoadES_MYFZMR_MRBJJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/ES_MYFZMR_MRBJ/LoadES_MYFZMR_MRBJJBXX",
+        url: getRootPath() + "/Business/ES/LoadES_MYFZMR_MRBJJBXX",
         dataType: "json",
         data:
         {
@@ -97,7 +97,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/ES_MYFZMR_MRBJ/FB",
+        url: getRootPath() + "/Business/ES/FBES_MYFZMR_MRBJJBXX",
         dataType: "json",
         data:
         {

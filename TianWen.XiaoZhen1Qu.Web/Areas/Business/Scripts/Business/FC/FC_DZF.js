@@ -129,7 +129,7 @@ function LoadZJDW() {
 function LoadFC_DZFJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC_DZF/LoadFC_DZFJBXX",
+        url: getRootPath() + "/Business/FC/LoadFC_DZFJBXX",
         dataType: "json",
         data:
         {
@@ -175,7 +175,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC_DZF/FB",
+        url: getRootPath() + "/Business/FC/FBFC_DZFJBXX",
         dataType: "json",
         data:
         {

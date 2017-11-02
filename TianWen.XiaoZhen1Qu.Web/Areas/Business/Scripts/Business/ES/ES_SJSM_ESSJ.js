@@ -63,7 +63,7 @@ function SelectLB(obj, type, code) {
 function LoadES_SJSM_ESSJJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/ES_SJSM_ESSJ/LoadES_SJSM_ESSJJBXX",
+        url: getRootPath() + "/Business/ES/LoadES_SJSM_ESSJJBXX",
         dataType: "json",
         data:
         {
@@ -116,7 +116,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/ES_SJSM_ESSJ/FB",
+        url: getRootPath() + "/Business/ES/FBES_SJSM_ESSJJBXX",
         dataType: "json",
         data:
         {

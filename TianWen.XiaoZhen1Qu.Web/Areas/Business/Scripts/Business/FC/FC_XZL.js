@@ -124,7 +124,7 @@ function GetGQ() {
 function LoadFC_XZLJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC_XZL/LoadFC_XZLJBXX",
+        url: getRootPath() + "/Business/FC/LoadFC_XZLJBXX",
         dataType: "json",
         data:
         {
@@ -177,7 +177,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC_XZL/FB",
+        url: getRootPath() + "/Business/FC/FBFC_XZLJBXX",
         dataType: "json",
         data:
         {

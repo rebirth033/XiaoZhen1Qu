@@ -7,7 +7,7 @@ using CommonClassLib.Helper;
 using TianWen.XiaoZhen1Qu.Entities.Models;
 using TianWen.XiaoZhen1Qu.Interface;
 
-namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.HTFB
+namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 {
     public class ESController : BaseController
     {

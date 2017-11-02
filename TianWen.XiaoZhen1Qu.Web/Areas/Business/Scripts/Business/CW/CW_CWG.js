@@ -94,7 +94,7 @@ function SelectPBPP(obj, type, code) {
 function LoadCW_CWGJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/CW_CWG/LoadCW_CWGJBXX",
+        url: getRootPath() + "/Business/CW/LoadCW_CWGJBXX",
         dataType: "json",
         data:
         {
@@ -151,7 +151,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/CW_CWG/FB",
+        url: getRootPath() + "/Business/CW/FBCW_CWGJBXX",
         dataType: "json",
         data:
         {

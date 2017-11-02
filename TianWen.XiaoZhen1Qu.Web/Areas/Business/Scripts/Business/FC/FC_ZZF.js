@@ -1,16 +1,13 @@
 ﻿var ue = UE.getEditor('BCMS');
 $(document).ready(function () {
-    $("#XQMC").bind("keyup", LoadXQMC);$("#KRZSJ").datepicker({ minDate: 0 });
-    
+    $("#XQMC").bind("keyup", LoadXQMC);
+    $("#KRZSJ").datepicker({ minDate: 0 });
     $("body").bind("click", function () { Close("_XZQ"); Close("QY"); Close("SQ");});
-
     BindClick("FWCX");
     BindClick("ZXQK");
     BindClick("ZZLX");
     BindClick("YFFS");
     LoadDuoX("包含费用", "BHFY");
-
-    
     BCMSSetDefault();
 });
 
@@ -269,7 +266,7 @@ function SelectXQMC(obj) {
 function LoadFC_ZZFXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC_ZZF/LoadFC_ZZFXX",
+        url: getRootPath() + "/Business/FC/LoadFC_ZZFJBXX",
         dataType: "json",
         data:
         {
@@ -330,7 +327,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC_ZZF/FB",
+        url: getRootPath() + "/Business/FC/FBFC_ZZFJBXX",
         dataType: "json",
         data:
         {

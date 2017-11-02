@@ -1,16 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <objects  xmlns="http://www.springframework.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.net http://www.springframework.net/xsd/spring-objects.xsd">
-  <object id="CY_MSController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.CY_MSController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+  <object id="CYController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.CYController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="CY_MSBLL">
       <ref object="CY_MSBLL"/>
     </property>
-  </object>
-  <object id="CY_KCTSController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.CY_KCTSController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="CY_KCTSBLL">
       <ref object="CY_KCTSBLL"/>
     </property>
-  </object>
-  <object id="CY_WMController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.CY_WMController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="CY_WMBLL">
       <ref object="CY_WMBLL"/>
     </property>

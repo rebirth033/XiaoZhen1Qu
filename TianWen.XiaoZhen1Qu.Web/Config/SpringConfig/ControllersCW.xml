@@ -1,31 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <objects  xmlns="http://www.springframework.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.net http://www.springframework.net/xsd/spring-objects.xsd">
-  <object id="CW_CWGController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.CW_CWGController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+  <object id="CWController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.CWController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="CW_CWGBLL">
       <ref object="CW_CWGBLL"/>
     </property>
-  </object>
-  <object id="CW_CWMController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.CW_CWMController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="CW_CWMBLL">
       <ref object="CW_CWMBLL"/>
     </property>
-  </object>
-  <object id="CW_HNYCController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.CW_HNYCController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="CW_HNYCBLL">
       <ref object="CW_HNYCBLL"/>
     </property>
-  </object>
-  <object id="CW_CWYPSPController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.CW_CWYPSPController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="CW_CWYPSPBLL">
       <ref object="CW_CWYPSPBLL"/>
     </property>
-  </object>
-  <object id="CW_CWZSLYController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.CW_CWZSLYController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="CW_CWZSLYBLL">
       <ref object="CW_CWZSLYBLL"/>
     </property>
-  </object>
-  <object id="CW_CWFWController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.CW_CWFWController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="CW_CWFWBLL">
       <ref object="CW_CWFWBLL"/>
     </property>
