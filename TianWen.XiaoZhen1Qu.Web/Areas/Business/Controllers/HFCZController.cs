@@ -11,6 +11,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
     public class HFCZController : BaseController
     {
         public IHFCZBLL HFCZBLL { get; set; }
+
         public ActionResult HFCZ()
         {
             return View();

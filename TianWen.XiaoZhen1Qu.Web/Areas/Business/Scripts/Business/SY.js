@@ -11,7 +11,9 @@ $(document).ready(function () {
     $(".img_head_left_logo").css("margin-left", "20px");
     $("#li_head_sy").css("background", "#5bc0de").css("color", "#ffffff");
     $("#span_fbxx").bind("click", OpenLBXZ);
-    
+    $("#liFWCZ").bind("click", OpenFWCZ);
+
+
     LoadZXFBXX();
 });
 
@@ -19,13 +21,13 @@ function ZXFBLB() {
     var e = $("#ul_body_top_right_zxfb")[0];
     var transitionEvent = whichTransitionEvent();
     transitionEvent && e.addEventListener(transitionEvent, function () {
-        if (temp === 5) {
+        if (temp === 10) {
             $("#ul_body_top_right_zxfb").css("transform", "translate3d(0px, 0px, 0px)").css("transition-duration", "0ms");
         }
     });
 
     setInterval(function () {
-        if (curIndex < 5) {
+        if (curIndex < 10) {
             changeTo(curIndex);
             curIndex++;
         } else {
@@ -53,7 +55,7 @@ function LoadZXFBXX() {
         success: function (xml) {
             if (xml.Result === 1) {
                 $("#div_main_info").html('');
-                for (var i = 0; i < xml.list.length; i++) {
+                for (var i = 0; i < 10; i++) {
                     LoadInfo(xml.list[i]);
                 }
                 LoadInfo(xml.list[0]);
@@ -81,4 +83,9 @@ function LoadInfo(obj) {
 //类别选择
 function OpenLBXZ() {
     window.open(getRootPath() + "/Business/LBXZ/LBXZ");
+}
+
+//打开房屋出租
+function OpenFWCZ() {
+    window.open(getRootPath() + "/Business/FCCX/FCCX_ZZF");
 }
