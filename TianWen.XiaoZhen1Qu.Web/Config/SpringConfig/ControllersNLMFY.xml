@@ -1,46 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <objects  xmlns="http://www.springframework.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.net http://www.springframework.net/xsd/spring-objects.xsd">
-  <object id="NLMFY_YLHHController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.NLMFY_YLHHController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+  <object id="NLMFYController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.NLMFYController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="NLMFY_YLHHBLL">
       <ref object="NLMFY_YLHHBLL"/>
     </property>
-  </object>
-  <object id="NLMFY_NZWController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.NLMFY_NZWController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="NLMFY_NZWBLL">
       <ref object="NLMFY_NZWBLL"/>
     </property>
-  </object>
-  <object id="NLMFY_DZWZMController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.NLMFY_DZWZMController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="NLMFY_DZWZMBLL">
       <ref object="NLMFY_DZWZMBLL"/>
     </property>
-  </object>
-  <object id="NLMFY_CQYZController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.NLMFY_CQYZController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="NLMFY_CQYZBLL">
       <ref object="NLMFY_CQYZBLL"/>
     </property>
-  </object>
-  <object id="NLMFY_SCController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.NLMFY_SCController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="NLMFY_SCBLL">
       <ref object="NLMFY_SCBLL"/>
     </property>
-  </object>
-  <object id="NLMFY_FLNYController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.NLMFY_FLNYController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="NLMFY_FLNYBLL">
       <ref object="NLMFY_FLNYBLL"/>
     </property>
-  </object>
-  <object id="NLMFY_SLSYController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.NLMFY_SLSYController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="NLMFY_SLSYBLL">
       <ref object="NLMFY_SLSYBLL"/>
     </property>
-  </object>
-  <object id="NLMFY_NJJSBController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.NLMFY_NJJSBController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="NLMFY_NJJSBBLL">
       <ref object="NLMFY_NJJSBBLL"/>
     </property>
-  </object>
-  <object id="NLMFY_NCPJGController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.NLMFY_NCPJGController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="NLMFY_NCPJGBLL">
       <ref object="NLMFY_NCPJGBLL"/>
     </property>

@@ -1,51 +1,33 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <objects  xmlns="http://www.springframework.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.net http://www.springframework.net/xsd/spring-objects.xsd">
-  <object id="LR_MTSSController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.LR_MTSSController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+  <object id="LRController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.LRController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="LR_MTSSBLL">
       <ref object="LR_MTSSBLL"/>
     </property>
-  </object>
-  <object id="LR_MRHFController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.LR_MRHFController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="LR_MRHFBLL">
       <ref object="LR_MRHFBLL"/>
     </property>
-  </object>
-  <object id="LR_SPAController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.LR_SPAController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="LR_SPABLL">
       <ref object="LR_SPABLL"/>
     </property>
-  </object>
-  <object id="LR_WDController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.LR_WDController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="LR_WDBLL">
       <ref object="LR_WDBLL"/>
     </property>
-  </object>
-  <object id="LR_MFHFController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.LR_MFHFController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="LR_MFHFBLL">
       <ref object="LR_MFHFBLL"/>
     </property>
-  </object>
-  <object id="LR_MJController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.LR_MJController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="LR_MJBLL">
       <ref object="LR_MJBLL"/>
     </property>
-  </object>
-  <object id="LR_WSController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.LR_WSController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="LR_WSBLL">
       <ref object="LR_WSBLL"/>
     </property>
-  </object>
-  <object id="LR_KQHLController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.LR_KQHLController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="LR_KQHLBLL">
       <ref object="LR_KQHLBLL"/>
     </property>
-  </object>
-  <object id="LR_TJController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.LR_TJController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="LR_TJBLL">
       <ref object="LR_TJBLL"/>
     </property>
-  </object>
-  <object id="LR_YJController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.LR_YJController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="LR_YJBLL">
       <ref object="LR_YJBLL"/>
     </property>

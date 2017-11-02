@@ -67,7 +67,7 @@ function SelectLB(obj, type, id) {
 function LoadPFCG_LPJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/PFCG_LP/LoadPFCG_LPJBXX",
+        url: getRootPath() + "/Business/PFCG/LoadPFCG_LPJBXX",
         dataType: "json",
         data:
         {
@@ -114,7 +114,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/PFCG_LP/FB",
+        url: getRootPath() + "/Business/PFCG/FBPFCG_LPJBXX",
         dataType: "json",
         data:
         {

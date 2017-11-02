@@ -5,7 +5,6 @@
     BindClick("QY");
     BindClick("DD");
 });
-
 //选择类别下拉框
 function SelectLB(obj, type) {
     $("#span" + type).html(obj.innerHTML);
@@ -43,7 +42,7 @@ function BindClick(type) {
 function LoadLR_MTSSJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/LR_MTSS/LoadLR_MTSSJBXX",
+        url: getRootPath() + "/Business/LR/LoadLR_MTSSJBXX",
         dataType: "json",
         data:
         {
@@ -87,7 +86,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/LR_MTSS/FB",
+        url: getRootPath() + "/Business/LR/FBLR_MTSSJBXX",
         dataType: "json",
         data:
         {

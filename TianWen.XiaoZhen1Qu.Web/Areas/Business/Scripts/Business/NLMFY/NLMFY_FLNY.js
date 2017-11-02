@@ -84,7 +84,7 @@ function XLXZ(XLMC, XLID) {
 function LoadNLMFY_FLNYJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/NLMFY_FLNY/LoadNLMFY_FLNYJBXX",
+        url: getRootPath() + "/Business/NLMFY/LoadNLMFY_FLNYJBXX",
         dataType: "json",
         data:
         {
@@ -130,7 +130,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/NLMFY_FLNY/FB",
+        url: getRootPath() + "/Business/NLMFY/FBNLMFY_FLNYJBXX",
         dataType: "json",
         data:
         {

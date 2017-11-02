@@ -5,7 +5,6 @@
     BindClick("QY");
     BindClick("DD");
 });
-
 //加载多选
 function LoadDuoX(type, id) {
     $.ajax({
@@ -57,7 +56,7 @@ function BindClick(type) {
 function LoadLR_SPAJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/LR_SPA/LoadLR_SPAJBXX",
+        url: getRootPath() + "/Business/LR/LoadLR_SPAJBXX",
         dataType: "json",
         data:
         {
@@ -103,7 +102,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/LR_SPA/FB",
+        url: getRootPath() + "/Business/LR/FBLR_SPAJBXX",
         dataType: "json",
         data:
         {

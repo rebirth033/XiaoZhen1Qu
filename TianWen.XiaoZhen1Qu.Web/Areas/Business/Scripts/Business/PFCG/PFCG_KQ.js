@@ -23,7 +23,7 @@ function BindClick(type) {
 function LoadPFCG_KQJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/PFCG_KQ/LoadPFCG_KQJBXX",
+        url: getRootPath() + "/Business/PFCG/LoadPFCG_KQJBXX",
         dataType: "json",
         data:
         {
@@ -67,7 +67,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/PFCG_KQ/FB",
+        url: getRootPath() + "/Business/PFCG/FBPFCG_KQJBXX",
         dataType: "json",
         data:
         {

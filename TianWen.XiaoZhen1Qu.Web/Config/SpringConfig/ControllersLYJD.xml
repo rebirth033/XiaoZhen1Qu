@@ -1,36 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <objects  xmlns="http://www.springframework.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.net http://www.springframework.net/xsd/spring-objects.xsd">
-  <object id="LYJD_LXSController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.LYJD_LXSController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+  <object id="LYJDController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.LYJDController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="LYJD_LXSBLL">
       <ref object="LYJD_LXSBLL"/>
     </property>
-  </object>
-  <object id="LYJD_GNYController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.LYJD_GNYController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="LYJD_GNYBLL">
       <ref object="LYJD_GNYBLL"/>
     </property>
-  </object>
-  <object id="LYJD_ZBYController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.LYJD_ZBYController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="LYJD_ZBYBLL">
       <ref object="LYJD_ZBYBLL"/>
     </property>
-  </object>
-  <object id="LYJD_CJYController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.LYJD_CJYController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="LYJD_CJYBLL">
       <ref object="LYJD_CJYBLL"/>
     </property>
-  </object>
-  <object id="LYJD_JDZSYDController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.LYJD_JDZSYDController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="LYJD_JDZSYDBLL">
       <ref object="LYJD_JDZSYDBLL"/>
     </property>
-  </object>
-  <object id="LYJD_JPController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.LYJD_JPController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="LYJD_JPBLL">
       <ref object="LYJD_JPBLL"/>
     </property>
-  </object>
-  <object id="LYJD_DYDDRController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.LYJD_DYDDRController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="LYJD_DYDDRBLL">
       <ref object="LYJD_DYDDRBLL"/>
     </property>
