@@ -74,11 +74,11 @@ function LoadBody(TYPE, PageIndex) {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                //$("#ul_body_left").html('');
+                $("#ul_body_left").html('');
                 LoadPage(xml.PageCount);
-                //for (var i = 0; i < xml.list.length; i++) {
-                    //LoadInfo(xml.list[0]);
-                //}
+                for (var i = 0; i < xml.list.length; i++) {
+                    LoadInfo(xml.list[i]);
+                }
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -90,19 +90,14 @@ function LoadBody(TYPE, PageIndex) {
 function LoadInfo(obj) {
     var html = "";
     html += ('<li class="li_body_left">');
-    html += ('<div class="div_new_info">');
-    html += ('<div class="div_new_info_body">');
-    html += ('<div class="div_new_info_body_left">');
-    html += ('<div class="div_new_info_body_left_inner">');
-    html += ('<div class="div_new_info_body_left_inner_img">');
-    if (obj.PHOTOS.length > 0)
-        html += ('<img class="img_new_info_body_left" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    else
-        html += ('<img class="img_new_info_body_left" />');
+    html += ('<div class="div_li_body_left_left">');
+    html += ('<img class="img_li_body_left" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('</div>');
-    html += ('<div class="div_new_info_body_left_inner_info">');
-    html += ('<span class="span_new_info_body_left_bt">' + obj.BT + '</span>');
-    html += ('<span class="span_new_info_body_left_rq">' + obj.CJSJ.ToString("yyyy-MM-dd hh:mm:ss") + '</span>');
+    html += ('<div class="div_li_body_left_center">');
+    html += ('<p class="p_li_body_left_center_bt">' + obj.BT + '</p>');
+    html += ('<p class="p_li_body_left_center_cs">整套出租 / 1室1厅1卫 / 42平米 / 精装修 / 南北 / 低层[共30层]</p>');
+    html += ('<p class="p_li_body_left_center_dz">金诺大厦 [鼓楼-温泉-华林路281号] 11月2日</p>');
+    html += ('</div>');
     html += ('</li>');
     $("#ul_body_left").append(html);
 }
