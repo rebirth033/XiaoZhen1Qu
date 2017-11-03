@@ -1,5 +1,5 @@
 ﻿@{
-    Layout = "~/Areas/Business/Views/Shared/_Layout.cshtml";
+    Layout = "~/Areas/Business/Views/Shared/Root.cshtml";
 }
 @section Section_Head {
     <link href=@Url.Content("~/Areas/Business/Scripts/bootstrap-3.3.7/css/bootstrap.min.css") rel="stylesheet" />
@@ -12,6 +12,8 @@
     <script src=@Url.Content("~/Areas/Business/Scripts/Business/Common/Regular.js")></script>
     <script src=@Url.Content("~/Areas/Business/Scripts/Business/Common/PageJson.js")></script>
     <script src="@Url.Content("~/Areas/Business/Scripts/Business/Common/XZQ.js")"></script>
+    <script src="@Url.Content("~/Areas/Business/Scripts/Business/Common/Top.js")"></script>
+    <script src="@Url.Content("~/Areas/Business/Scripts/Business/Common/Head.js")"></script>
     @RenderSection("Section_Head", false)
 }
 @section Section_Body {

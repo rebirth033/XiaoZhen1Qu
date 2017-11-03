@@ -1,9 +1,6 @@
 ﻿var curIndex = 1; //当前index
 var temp = 0;
 $(document).ready(function () {
-    $(".div_top_left").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
-    $(".div_top_right").css("margin-right", (document.documentElement.clientWidth - 1200) / 2);
-    $(".div_head").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
     $(".div_head_nav").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
     $(".div_body").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
     $(".div_foot").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
@@ -11,10 +8,6 @@ $(document).ready(function () {
     $(".img_head_left_logo").css("margin-left", "20px");
     $("#li_head_sy").css("background", "#5bc0de").css("color", "#ffffff");
     $("#span_fbxx").bind("click", OpenLBXZ);
-    $("#span_dl").bind("click", OpenDL);
-    $("#span_zc").bind("click", OpenZC);
-    $("#span_grzx").bind("click", OpenGRZX);
-    $("#span_bzzx").bind("click", OpenBZZX);
     $("#li_fwcz").bind("click", OpenFWCZ);
 
     LoadZXFBXX();
@@ -78,23 +71,6 @@ function LoadInfo(obj) {
     html += ('</div>');
     html += ('</li>');
     $("#ul_body_top_right_zxfb").append(html);
-}
-
-//登录
-function OpenDL() {
-    window.open(getRootPath() + "/Business/YHDLXX/YHDLXX");
-}
-//注册
-function OpenZC() {
-    window.open(getRootPath() + "/Business/YHJBXX/YHJBXX");
-}
-//个人中心
-function OpenGRZX() {
-    window.open(getRootPath() + "/Business/YHDLXX/YHDLXX");
-}
-//帮助中心
-function OpenBZZX() {
-    window.open(getRootPath() + "/Business/BZZX/BZZX");
 }
 //类别选择
 function OpenLBXZ() {

@@ -13,6 +13,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public ActionResult FCCX_ZZF()
         {
+            GetSession();
             return View();
         }
     }

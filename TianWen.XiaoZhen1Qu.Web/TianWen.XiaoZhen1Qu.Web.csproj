@@ -573,6 +573,8 @@
     <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_SY_ZHMM.js" />
     <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_WZJY.js" />
     <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_WZJYZP.js" />
+    <Content Include="Areas\Business\Scripts\Business\Common\Head.js" />
+    <Content Include="Areas\Business\Scripts\Business\Common\Top.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\FCCX\FCCX_ZZF.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\CL\CL_GCC.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\CL\CL_GCCYZ.js" />
@@ -1455,7 +1457,7 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Areas\Business\Views\Web.config" />
-    <Content Include="Areas\Business\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Business\Views\Shared\Root.cshtml" />
     <Content Include="Areas\Business\Views\Shared\QTCXLB.cshtml" />
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\css\bootstrap-theme.css.map" />
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\css\bootstrap-theme.min.css.map" />
@@ -1553,7 +1555,7 @@
     </Content>
     <Content Include="Areas\Business\Views\CL\CL_HC.cshtml" />
     <Content Include="Areas\Business\Views\CL\CL_GCC.cshtml" />
-    <Content Include="Areas\Business\Views\Shared\HTFBLayout.cshtml" />
+    <Content Include="Areas\Business\Views\Shared\HTFB.cshtml" />
     <Content Include="Areas\Business\Views\CL\CL_KC.cshtml" />
     <Content Include="Areas\Business\Views\CW\CW_CWG.cshtml" />
     <Content Include="Areas\Business\Views\CW\CW_CWM.cshtml" />
@@ -1729,6 +1731,7 @@
     <Content Include="Areas\Business\Views\SY\SY.cshtml" />
     <Content Include="Config\SpringConfig\ControllersFC.xml" />
     <Content Include="Areas\Business\Views\FCCX\FCCX_ZZF.cshtml" />
+    <Content Include="Areas\Business\Views\Shared\Other.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

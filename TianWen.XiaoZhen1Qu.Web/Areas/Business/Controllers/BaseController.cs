@@ -11,6 +11,15 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
     {
         public static IRepository DataFactory = DbFactory.Instance.GetRepository();
 
+        public void GetSession()
+        {
+            if (Session["XZQ"] == null)
+                ViewData["XZQ"] = "福州";
+            else
+                ViewData["XZQ"] = Session["XZQ"];
+            ViewData["YHM"] = Session["YHM"];
+        }
+
         public List<PHOTOS> GetTP(string fwzp)
         {
             List<PHOTOS> photos = new List<PHOTOS>();

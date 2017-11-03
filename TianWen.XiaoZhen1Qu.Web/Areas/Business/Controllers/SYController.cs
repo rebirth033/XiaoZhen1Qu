@@ -13,9 +13,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         public ISYBLL SYBLL { get; set; }
         public ActionResult SY()
         {
-            //ViewData["XZQ"] = Session["XZQ"];
-            ViewData["XZQ"] = "福州";
-            ViewData["YHM"] = Session["YHM"];
+            GetSession();
             return View();
         }
 
