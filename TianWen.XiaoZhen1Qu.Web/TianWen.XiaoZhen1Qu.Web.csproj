@@ -1456,7 +1456,7 @@
     </Content>
     <Content Include="Areas\Business\Views\Web.config" />
     <Content Include="Areas\Business\Views\Shared\_Layout.cshtml" />
-    <Content Include="Areas\Business\Views\Shared\_ListLayout.cshtml" />
+    <Content Include="Areas\Business\Views\Shared\QTCXLB.cshtml" />
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\css\bootstrap-theme.css.map" />
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\css\bootstrap-theme.min.css.map" />
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\css\bootstrap.css.map" />
