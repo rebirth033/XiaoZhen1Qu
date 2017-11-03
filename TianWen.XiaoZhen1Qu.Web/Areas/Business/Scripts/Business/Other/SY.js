@@ -31,7 +31,7 @@ function ZXFBLB() {
         }
     }, 2500);
 }
-
+//消息切换
 function changeTo(num) {
     var height = parseInt(num) * 60;
     temp = num;

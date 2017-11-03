@@ -1,5 +1,4 @@
 ﻿var count = 60;
-
 $(document).ready(function () {
     $("#SJDL").bind("click", SJDL);
     $("#MMDL").bind("click", MMDL);
@@ -172,7 +171,7 @@ function SJDL() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                window.location.href = getRootPath() + "/Business/YHGL/YHGL?YHID=" + xml.YHID;
+                window.location.href = getRootPath() + "/Business/HTGL/HTGL?YHID=" + xml.YHID;
             } else {
                 $("#YZM").css("border-color", "#F2272D");
                 $("#YZMInfo").css("color", "#F2272D");
@@ -199,7 +198,7 @@ function MMDL() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                window.location.href = getRootPath() + "/Business/YHGL/YHGL"
+                window.location.href = getRootPath() + "/Business/HTGL/HTGL";
             } else {
                 if (xml.Type === 1) {
                     $("#YHM").css("border-color", "#F2272D");

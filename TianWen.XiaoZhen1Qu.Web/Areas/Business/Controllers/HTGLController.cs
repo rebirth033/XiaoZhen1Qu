@@ -4,11 +4,11 @@ using TianWen.XiaoZhen1Qu.Web.Areas.Business.Common;
 
 namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 {
-    public class YHGLController : BaseController
+    public class HTGLController : BaseController
     {
         public IYHDLXXBLL YHDLXXBLL { get; set; }
 
-        public ActionResult YHGL()
+        public ActionResult HTGL()
         {
             ViewData["XZQ"] = Session["XZQ"];
             ViewData["YHM"] = Session["YHM"];
