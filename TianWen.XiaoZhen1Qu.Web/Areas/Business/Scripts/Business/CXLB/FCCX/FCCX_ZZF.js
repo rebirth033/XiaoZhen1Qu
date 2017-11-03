@@ -8,7 +8,7 @@ $(document).ready(function () {
     $(".div_body").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
 
     $("#li_condition_head_qyzf").css("background-color", "#ffffff");
-    $(".li_body_head:eq(0)").css("border-bottom", "2px solid #5bc0de").css("color", "#5bc0de").css("font-weight","700");
+    $(".li_body_head:eq(0)").css("border-bottom", "2px solid #5bc0de").css("color", "#5bc0de").css("font-weight", "700");
     BindConditionNav();
     BindBodyNav();
     LoadFCCXCondition();
@@ -17,7 +17,7 @@ $(document).ready(function () {
 //搬定查询条件导航
 function BindConditionNav() {
     $(".li_condition_head").bind("click", function () {
-        $(".li_condition_head").each(function() {
+        $(".li_condition_head").each(function () {
             $(this).css("background-color", "#eeeff1");
         });
         $(this).css("background-color", "#ffffff");
@@ -52,7 +52,7 @@ function LoadCondition(array) {
             html += '<li class="li_condigion_body_first">' + array[i] + '</li>';
         else if (i === 1)
             html += '<li class="li_condigion_body active">' + array[i] + '</li>';
-        else 
+        else
             html += '<li class="li_condigion_body">' + array[i] + '</li>';
     }
     html += '</ul>';
@@ -95,8 +95,8 @@ function LoadInfo(obj) {
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
     html += ('<p class="p_li_body_left_center_bt">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_left_center_cs">整套出租 / 1室1厅1卫 / 42平米 / 精装修 / 南北 / 低层[共30层]</p>');
-    html += ('<p class="p_li_body_left_center_dz">金诺大厦 [鼓楼-温泉-华林路281号] 11月2日</p>');
+    html += ('<p class="p_li_body_left_center_cs">' + obj.CZFS + ' / ' + obj.S + '室' + obj.T + '厅' + obj.W + '卫 / ' + obj.PFM + '平米 / ' + obj.ZXQK + ' / ' + obj.CX + ' / ' + obj.C + '[共' + obj.GJC + '层]</p>');
+    html += ('<p class="p_li_body_left_center_dz">'+obj.XQMC+' [鼓楼-温泉-华林路281号] '+obj.ZXGXSJ.ToString("MM月dd日")+'</p>');
     html += ('</div>');
     html += ('</li>');
     $("#ul_body_left").append(html);

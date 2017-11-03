@@ -531,6 +531,7 @@
     <Compile Include="Models\ZXJC\ZXJC_JJJBXX.cs" />
     <Compile Include="Models\ZXJC\ZXJC_JZFWJBXX.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\FC\FC_ZZFView.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

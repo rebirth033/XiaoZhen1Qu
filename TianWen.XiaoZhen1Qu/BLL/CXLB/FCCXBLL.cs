@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
+using CommonClassLib.Helper;
 using TianWen.Framework.Log;
 using TianWen.XiaoZhen1Qu.Entities.Models;
+using TianWen.XiaoZhen1Qu.Entities.ViewModels.FC;
 using TianWen.XiaoZhen1Qu.Interface.CXLB;
 
 namespace TianWen.XiaoZhen1Qu.BLL
@@ -14,12 +17,13 @@ namespace TianWen.XiaoZhen1Qu.BLL
         {
             try
             {
-                IList<JCXX> list = new List<JCXX>();
+                DataTable dt = new DataTable();
                 if (TYPE == "FC")//房产
                 {
-                    list = DAO.Repository.GetObjectList<JCXX>(String.Format("FROM JCXX WHERE LBID =19 ORDER BY ZXGXSJ DESC"));
+                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,fc_zzfjbxx b where a.jcxxid = b.jcxxid order by zxgxsj desc");
                 }
-
+                List<FC_ZZFView> list = ConvertHelper.DataTableToList<FC_ZZFView>(dt);
+                
                 int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                 int TotalCount = list.Count;
                 var WDCountlist = from p in list.Where(p => p.STATUS == 0) select p;
