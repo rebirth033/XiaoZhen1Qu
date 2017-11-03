@@ -32,10 +32,17 @@
 .div_condition .div_condigion_body .ul_condigion_body{ padding: 0;width: 1110px;height: 100%;}
 .div_condition .div_condigion_body .ul_condigion_body .li_condigion_body_first{ font-weight: 700;color: #999999;float: left;font-size: 13px;display: inline-block;width: 80px;height: 100%;padding-left: 20px;}
 .div_condition .div_condigion_body .ul_condigion_body .li_condigion_body{ float: left;display: inline-block;width: auto;height: 100%;margin-right: 20px;font-size: 12px;}
-.div_condition .div_condigion_body .ul_condigion_body .li_condigion_body:hover{ cursor: pointer;color: #5bc0de;}
+.div_condition .div_condigion_body .ul_condigion_body .li_condigion_body:hover{ cursor: pointer;color: #5bc0de;text-decoration: underline;}
 .div_condition .div_condigion_body .ul_condigion_body .active{ color: #5bc0de;}
-
-.div_condition_select{background-color: #ffffff;display: block;width: 1200px;height: 40px;border-bottom: 1px solid #cccccc;border-right: 1px solid #cccccc;border-left: 1px solid #cccccc;}
+.div_condition_select{background-color: #ffffff;display: block;width: 1200px;height: 40px;border-bottom: 1px solid #cccccc;border-right: 1px solid #cccccc;border-left: 1px solid #cccccc;padding-top: 8px;}
 .div_condition_select .ul_condition_select{display: block;width: 100%;height: 40px;padding: 0;}
-.div_condition_select .ul_condition_select .li_condigion_select_first{ font-weight: 700;color: #999999;float: left;font-size: 13px;display: inline-block;width: 80px;height: 100%;padding-left: 20px;}
-.div_condition_select .ul_condition_select .li_condigion_select{ float: left;display: inline-block;width: auto;height: 100%;margin-right: 20px;font-size: 12px;}
+.div_condition_select .ul_condition_select .li_condition_select_first{ font-weight: 700;color: #999999;float: left;font-size: 13px;display: inline-block;width: 80px;height: 100%;padding-left: 20px;}
+.div_condition_select .ul_condition_select .li_condition_select{ float: left;display: inline-block;margin-top: -4px;width: auto;margin-right: 20px;font-size: 12px;border: 1px solid #cccccc;padding: 6px;}
+.div_condition_select .ul_condition_select .li_condition_select:hover{ cursor: pointer;background-color: #eeeff1;}
+.div_condition_select .ul_condition_select .li_condition_select em{ margin-left: 10px;color: #999999;}
+
+.div_body{display: block;width: 1200px;height: 1800px;margin-top: 20px;background-color: #ffffff;}
+.div_body .ul_body_head {height: 40px;display: block;padding: 0;width: 100%;border-bottom: 2px solid #cccccc;}
+.div_body .ul_body_head .li_body_head {text-align: center;color: #999999;height: 40px;font-size: 16px;font-weight: 700;float: left;display: inline-block;padding: 6px 20px;}
+.div_body .ul_body_head .li_body_head:hover{ cursor: pointer;}
+.div_body .div_body_left{display: block;width: 980px;height: 1800px;}

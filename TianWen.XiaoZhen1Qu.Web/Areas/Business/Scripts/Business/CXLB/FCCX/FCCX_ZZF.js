@@ -4,18 +4,30 @@
     $(".div_nav").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
     $(".div_condition").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
     $(".div_condition_select").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
+    $(".div_body").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
 
     $("#li_condition_head_qyzf").css("background-color", "#ffffff");
-    BindConditionLi();
+    $(".li_body_head:eq(0)").css("border-bottom", "2px solid #5bc0de").css("color", "#5bc0de");
+    BindConditionNav();
+    BindBodyNav();
     LoadFCCX();
 });
 
-function BindConditionLi() {
+function BindConditionNav() {
     $(".li_condition_head").bind("click", function () {
         $(".li_condition_head").each(function() {
             $(this).css("background-color", "#eeeff1");
         });
         $(this).css("background-color", "#ffffff");
+    });
+}
+
+function BindBodyNav() {
+    $(".li_body_head").bind("click", function () {
+        $(".li_body_head").each(function () {
+            $(this).css("border-bottom", "2px solid #cccccc").css("color", "#999999");
+        });
+        $(this).css("border-bottom", "2px solid #5bc0de").css("color", "#5bc0de");
     });
 }
 
