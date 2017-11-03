@@ -16,5 +16,10 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             GetSession();
             return View();
         }
+
+        public JsonResult LoadFCCX()
+        {
+            return Json(FCCXBLL.LoadFCCX(Request["TYPE"], Request["PageIndex"], Request["PageSize"]));
+        }
     }
 }
