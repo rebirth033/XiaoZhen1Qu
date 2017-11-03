@@ -11,12 +11,15 @@ $(document).ready(function () {
     $(".img_head_left_logo").css("margin-left", "20px");
     $("#li_head_sy").css("background", "#5bc0de").css("color", "#ffffff");
     $("#span_fbxx").bind("click", OpenLBXZ);
-    $("#liFWCZ").bind("click", OpenFWCZ);
-
+    $("#span_dl").bind("click", OpenDL);
+    $("#span_zc").bind("click", OpenZC);
+    $("#span_grzx").bind("click", OpenGRZX);
+    $("#span_bzzx").bind("click", OpenBZZX);
+    $("#li_fwcz").bind("click", OpenFWCZ);
 
     LoadZXFBXX();
 });
-
+//最新发布列表
 function ZXFBLB() {
     var e = $("#ul_body_top_right_zxfb")[0];
     var transitionEvent = whichTransitionEvent();
@@ -25,7 +28,6 @@ function ZXFBLB() {
             $("#ul_body_top_right_zxfb").css("transform", "translate3d(0px, 0px, 0px)").css("transition-duration", "0ms");
         }
     });
-
     setInterval(function () {
         if (curIndex < 10) {
             changeTo(curIndex);
@@ -42,15 +44,13 @@ function changeTo(num) {
     temp = num;
     $("#ul_body_top_right_zxfb").css("transform", "translate3d(0px, -" + height + "px, 0px)").css("transition-duration", "500ms");
 }
-
+//加载最新发布信息
 function LoadZXFBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/SY/LoadZXFBXX",
         dataType: "json",
-        data:
-        {
-
+        data: {
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -67,24 +67,39 @@ function LoadZXFBXX() {
         }
     });
 }
-
+//加载最新发布信息单条
 function LoadInfo(obj) {
     var html = "";
     html += ('<li class="li_body_top_right_zxfb">');
-    html += ('<img class="img_body_top_right_zxfb" src="'+getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random()+'" />');
+    html += ('<img class="img_body_top_right_zxfb" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<div class="div_body_top_right_zxfb">');
-    html += ('<span class="span_body_top_right_zxfb">'+obj.BT+'</span>');
+    html += ('<span class="span_body_top_right_zxfb">' + obj.BT + '</span>');
     html += ('<span class="span_body_top_right_zxfb_sj">' + obj.CJSJ.ToString("yyyy-MM-dd hh:mm:ss") + '</span>');
     html += ('</div>');
     html += ('</li>');
     $("#ul_body_top_right_zxfb").append(html);
 }
 
+//登录
+function OpenDL() {
+    window.open(getRootPath() + "/Business/YHDLXX/YHDLXX");
+}
+//注册
+function OpenZC() {
+    window.open(getRootPath() + "/Business/YHJBXX/YHJBXX");
+}
+//个人中心
+function OpenGRZX() {
+    window.open(getRootPath() + "/Business/YHDLXX/YHDLXX");
+}
+//帮助中心
+function OpenBZZX() {
+    window.open(getRootPath() + "/Business/BZZX/BZZX");
+}
 //类别选择
 function OpenLBXZ() {
     window.open(getRootPath() + "/Business/LBXZ/LBXZ");
 }
-
 //打开房屋出租
 function OpenFWCZ() {
     window.open(getRootPath() + "/Business/FCCX/FCCX_ZZF");

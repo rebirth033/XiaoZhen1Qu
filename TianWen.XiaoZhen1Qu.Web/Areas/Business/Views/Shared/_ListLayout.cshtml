@@ -4,14 +4,18 @@
 @section Section_Head {
     <link href=@Url.Content("~/Areas/Business/Scripts/bootstrap-3.3.7/css/bootstrap.min.css") rel="stylesheet" />
     <link href=@Url.Content("~/Areas/Business/Css/Common/PageCommon.css") rel="stylesheet" />
+    <link href="@Url.Content("~/Areas/Business/Css/Common/Top.css" )" rel="stylesheet" />
+    <link href="@Url.Content("~/Areas/Business/Css/Common/XZQ.css" )" rel="stylesheet" />
     <script src=@Url.Content("~/Areas/Business/Scripts/bootstrap-3.3.7/js/bootstrap.min.js")></script>
     <script src=@Url.Content("~/Areas/Business/Scripts/underscore.min.js")></script>
-    <script src=@Url.Content("~/Areas/Business/Scripts/Business/HTFB/Common/Common.js")></script>
-    <script src=@Url.Content("~/Areas/Business/Scripts/Business/HTFB/Common/Regular.js")></script>
-    <script src=@Url.Content("~/Areas/Business/Scripts/Business/HTFB/Common/PageJson.js")></script>
+    <script src=@Url.Content("~/Areas/Business/Scripts/Business/Common/Common.js")></script>
+    <script src=@Url.Content("~/Areas/Business/Scripts/Business/Common/Regular.js")></script>
+    <script src=@Url.Content("~/Areas/Business/Scripts/Business/Common/PageJson.js")></script>
+    <script src="@Url.Content("~/Areas/Business/Scripts/Business/Common/XZQ.js")"></script>
     @RenderSection("Section_Head", false)
 }
 @section Section_Body {
+
     @RenderSection("Section_Body", false)
 }
 @RenderBody()
