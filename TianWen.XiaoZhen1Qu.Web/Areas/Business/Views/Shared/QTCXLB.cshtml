@@ -5,7 +5,8 @@
     <link href=@Url.Content("~/Areas/Business/Scripts/bootstrap-3.3.7/css/bootstrap.min.css") rel="stylesheet" />
     <link href=@Url.Content("~/Areas/Business/Css/Common/PageCommon.css") rel="stylesheet" />
     <link href="@Url.Content("~/Areas/Business/Css/Common/Top.css" )" rel="stylesheet" />
-    <link href="@Url.Content("~/Areas/Business/Css/Common/XZQ.css" )" rel="stylesheet" />
+    <link href="@Url.Content("~/Areas/Business/Css/Common/XZQ.css")" rel="stylesheet"/>
+    <link href="@Url.Content("~/Areas/Business/Css/Common/Head.css" )" rel="stylesheet" />
     <script src=@Url.Content("~/Areas/Business/Scripts/bootstrap-3.3.7/js/bootstrap.min.js")></script>
     <script src=@Url.Content("~/Areas/Business/Scripts/underscore.min.js")></script>
     <script src=@Url.Content("~/Areas/Business/Scripts/Business/Common/Common.js")></script>
@@ -40,6 +41,28 @@
             <span id="span_bzzx" class="span_top_right">
                 帮助中心
             </span>
+        </div>
+    </div>
+    <div id="divHead" class="div_head">
+        <div class="div_head_left">
+            <img class="img_head_left_logo" src="@Url.Content("~/Areas/Business/Css/images/logo_blue.png")" />
+        </div>
+        <div class="div_head_right">
+            <div class="div_head_right_ss">
+                <span id="spanXSLC" class="span_spaninput_out SRK">
+                    <input class="span_spaninput_in" id="SS" type="text" placeholder="找房子,找工作,找服务," />
+                    <span class="span_ss">搜索</span>
+                </span>
+                <span class="span_head_right_ss">租房子</span>
+                <span class="span_head_right_ss">二手车</span>
+                <span class="span_head_right_ss">兼职</span>
+                <span class="span_head_right_ss">装修服务</span>
+                <span class="span_head_right_ss">旅游度假</span>
+                <span class="span_head_right_ss">居民搬家</span>
+                <span class="span_head_right_ss">演出表演</span>
+                <span class="span_head_right_ss">运动健身</span>
+            </div>
+            <span class="span_fbxx" id="span_fbxx">免费发布信息</span>
         </div>
     </div>
     @RenderSection("Section_Body", false)

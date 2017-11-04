@@ -78,5 +78,5 @@ function OpenLBXZ() {
 }
 //打开房屋出租
 function OpenFWCZ() {
-    window.open(getRootPath() + "/Business/FCCX/FCCX_ZZF");
+    window.open(getRootPath() + "/Business/FCCX/FCCX_ZZF?LBID=19");
 }

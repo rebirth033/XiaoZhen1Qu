@@ -1,34 +1,5 @@
 ﻿body {width: 100%;height: 100%;overflow-x: hidden;background-color: #eeeff1;}
 
-/*首页_头部*/
-.div_head {background-color: #ffffff;width: 1200px;height: 100px;padding-top: 10px;}
-
-/*首页_头部_左侧*/
-.div_head_left {float: left;width: 120px;margin-top: 5px;}
-.div_head_left .img_head_left_logo {width: 100%;text-align: center;color: white;font-size: 25px;float: left;width: 155px;height: 55px;}
-
-/*首页_头部_右侧*/
-.div_head_right {float: right;width: 1080px;margin-top: 5px;}
-.div_head_right .ul_head_right {width: 450px;height: 80px;display: block;float: left;margin-top: 20px;vertical-align: middle;}
-.div_head_right .ul_head_right .li_head_right {width: 130px;color: white;height: 40px;font-size: 16px;display: inline;margin-left: 30px;cursor: pointer;}
-.div_head_right .div_head_right_ss {display: inline-block;width: 600px;height: 80px;float: left;margin-left: 200px;}
-.div_head_right .div_head_right_ss .span_spaninput_out {border: none;display: block;width: 500px;height: 40px;font-size: 14px;margin-top: 10px;}
-.div_head_right .div_head_right_ss .span_spaninput_out .span_spaninput_in {border: 1px solid #5bc0de;display: inline-block;width: 410px;height: 40px;font-size: 14px;padding: 6px 12px;}
-
-.div_head_right .div_head_right_ss .span_head_right_ss {font-size: 12px;color: #999;cursor: pointer;margin-left: 4px;}
-.div_head_right .div_head_right_ss .span_head_right_ss:hover {color: #ef6100;}
-.div_head_right .div_head_right_ss .span_spaninput_out .span_ss {width: 90px;height: 40px;background: #5bc0de;float: right;display: inline-block;color: #fff;font-size: 16px;padding: 6px 26px;cursor: pointer;}
-.div_head_right .span_fbxx {width: 180px;border: 1px solid #5bc0de;height: 40px;background: #5bc0de;float: left;display: inline-block;color: #fff;font-size: 16px;padding-top: 6px;text-align: center;cursor: pointer;margin-top: 10px;margin-left: 10px;}
-.div_head_right .span_fbxx:hover {background: #31b0d5;}
-
-
-/*首页_头部导航*/
-.div_head_nav {background-color: #ffffff;width: 1200px;height: 39px;}
-.div_head_nav .ul_head_nav {height: 39px;display: block;padding: 0;width: 100%;border-bottom: 2px solid #5bc0de;}
-.div_head_nav .ul_head_nav .li_head_nav {background: #ffffff;text-align: center;color: #5bc0de;height: 37px;font-size: 16px;font-weight: 700;float: left;display: inline-block;padding: 6px 20px;border-top-left-radius: 4px;border-top-right-radius: 4px;}
-.div_head_nav .ul_head_nav .li_head_nav .span_head_nav {cursor: pointer;}
-.div_head_nav .ul_head_nav .li_head_nav .i_head_nav {background-image: url(images/head_nav_down.png);display: inline-block;width: 14px;height: 14px;margin-left: 5px;}
-
 /*首页_主体_上部*/
 .div_body .div_body_top{ width: 1200px;overflow-x: hidden;}
 .div_body .div_body_top .div_body_top_left{ width: 896px;height: 140px;margin-top: 10px;display: inline-block;float: left;background: #ffffff;padding: 10px 0px;}
