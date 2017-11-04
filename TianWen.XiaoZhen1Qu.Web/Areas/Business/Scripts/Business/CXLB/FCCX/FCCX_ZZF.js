@@ -15,6 +15,10 @@ $(document).ready(function () {
     LoadFCCXCondition();
     LoadBody("FC", currentIndex);;
 });
+//类别选择
+function OpenLBXZ() {
+    window.open(getRootPath() + "/Business/LBXZ/LBXZ");
+}
 //搬定查询条件导航
 function BindConditionNav() {
     $(".li_condition_head").bind("click", function () {

@@ -22,6 +22,9 @@ $(document).ready(function () {
 //加载默认
 function LoadDefault() {
     ue.ready(function () { ue.setHeight(200); });
+    if ($("#span_top_right_yhm_text").html() === "") {
+        $("#shadow").css("display", "block");
+    }
 }
 //根据TYPENAME获取字典表
 function LoadCODESByTYPENAME(type, id, table, callback, idout, idin, message) {
