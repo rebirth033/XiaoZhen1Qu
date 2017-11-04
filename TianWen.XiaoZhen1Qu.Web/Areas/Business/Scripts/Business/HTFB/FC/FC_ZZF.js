@@ -78,7 +78,7 @@ function LoadXQMC() {
 function LoadXQJBXXSByHZ(XQMC) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC_ZZF/LoadXQJBXXSByHZ",
+        url: getRootPath() + "/Business/FC/LoadXQJBXXSByHZ",
         dataType: "json",
         data:
         {
@@ -112,7 +112,7 @@ function LoadXQJBXXSByHZ(XQMC) {
 function LoadXQJBXXSByPY(XQMC) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC_ZZF/LoadXQJBXXSByPY",
+        url: getRootPath() + "/Business/FC/LoadXQJBXXSByPY",
         dataType: "json",
         data:
         {
@@ -255,11 +255,9 @@ function LoadDuoX(type, id) {
 }
 //选择小区名称
 function SelectXQMC(obj) {
-    var html = "";
-    for (var i = 0; i < $(obj).find("span").length - 1; i++) {
-        html += $(obj).find("span")[i].innerHTML;
-    }
-    $("#XQMC").val(html);
+    var array = obj.innerText.split(' ');
+    $("#XQMC").val(array[0]);
+    $("#XQDZ").val(array[2]);
     $("#divXQMClist").css("display", "none");
 }
 //加载

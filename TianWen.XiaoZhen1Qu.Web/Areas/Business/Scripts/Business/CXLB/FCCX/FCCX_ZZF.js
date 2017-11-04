@@ -96,7 +96,10 @@ function LoadInfo(obj) {
     html += ('<div class="div_li_body_left_center">');
     html += ('<p class="p_li_body_left_center_bt">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_left_center_cs">' + obj.CZFS + ' / ' + obj.S + '室' + obj.T + '厅' + obj.W + '卫 / ' + obj.PFM + '平米 / ' + obj.ZXQK + ' / ' + obj.CX + ' / ' + obj.C + '[共' + obj.GJC + '层]</p>');
-    html += ('<p class="p_li_body_left_center_dz">'+obj.XQMC+' [鼓楼-温泉-华林路281号] '+obj.ZXGXSJ.ToString("MM月dd日")+'</p>');
+    html += ('<p class="p_li_body_left_center_dz">' + obj.XQMC + ' [' + obj.XQDZ + '] ' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
+    html += ('</div>');
+    html += ('<div class="div_li_body_left_right">');
+    html += ('<p class="p_li_body_left_right"><span class="span_zj">' + obj.ZJ + '</span>元/月</p>');
     html += ('</div>');
     html += ('</li>');
     $("#ul_body_left").append(html);

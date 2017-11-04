@@ -1,27 +1,28 @@
 -- Create table
 create table FC_ZZFJBXX
 (
-  FC_ZZFjbxxid VARCHAR2(50) not null,
-  jcxxid     VARCHAR2(50),
-  czfs       VARCHAR2(20),
-  xqmc       VARCHAR2(100),
-  s          VARCHAR2(20),
-  t          VARCHAR2(20),
-  w          VARCHAR2(20),
-  pfm        VARCHAR2(20),
-  cx         VARCHAR2(20),
-  zxqk       VARCHAR2(20),
-  zzlx       VARCHAR2(20),
-  c          VARCHAR2(20),
-  gjc        VARCHAR2(20),
-  zj         VARCHAR2(20),
-  yffs       VARCHAR2(20),
-  zjybhfy    VARCHAR2(200),
-  fwpz       VARCHAR2(200),
-  fwld       VARCHAR2(200),
-  czyq       VARCHAR2(200),
-  fyms       blob,
-  krzsj      DATE
+  fc_zzfjbxxid VARCHAR2(50) not null,
+  jcxxid       VARCHAR2(50),
+  czfs         VARCHAR2(20),
+  xqmc         VARCHAR2(200),
+  s            VARCHAR2(20),
+  t            VARCHAR2(20),
+  w            VARCHAR2(20),
+  pfm          VARCHAR2(20),
+  cx           VARCHAR2(20),
+  zxqk         VARCHAR2(20),
+  zzlx         VARCHAR2(20),
+  c            VARCHAR2(20),
+  gjc          VARCHAR2(20),
+  zj           VARCHAR2(20),
+  yffs         VARCHAR2(20),
+  zjybhfy      VARCHAR2(200),
+  fwpz         VARCHAR2(200),
+  fwld         VARCHAR2(200),
+  czyq         VARCHAR2(200),
+  krzsj        DATE,
+  bcms         BLOB,
+  xqdz         VARCHAR2(200)
 )
 tablespace USERS
   pctfree 10
@@ -29,7 +30,8 @@ tablespace USERS
   maxtrans 255
   storage
   (
-    initial 64
+    initial 64K
+    next 1M
     minextents 1
     maxextents unlimited
   );
@@ -37,7 +39,7 @@ tablespace USERS
 comment on table FC_ZZFJBXX
   is '房产_整租房基本信息';
 -- Add comments to the columns 
-comment on column FC_ZZFJBXX.FC_ZZFjbxxid
+comment on column FC_ZZFJBXX.fc_zzfjbxxid
   is '房产_整租房ID';
 comment on column FC_ZZFJBXX.jcxxid
   is '基础信息ID';
@@ -75,10 +77,12 @@ comment on column FC_ZZFJBXX.fwld
   is '房屋亮点';
 comment on column FC_ZZFJBXX.czyq
   is '出租要求';
-comment on column FC_ZZFJBXX.fyms
-  is '房源描述';
 comment on column FC_ZZFJBXX.krzsj
   is '可入住时间';
+comment on column FC_ZZFJBXX.bcms
+  is '补充描述';
+comment on column FC_ZZFJBXX.xqdz
+  is '小区地址';
 -- Create/Recreate primary, unique and foreign key constraints 
 alter table FC_ZZFJBXX
   add primary key (FC_ZZFJBXXID)
@@ -90,6 +94,7 @@ alter table FC_ZZFJBXX
   storage
   (
     initial 64K
+    next 1M
     minextents 1
     maxextents unlimited
   );

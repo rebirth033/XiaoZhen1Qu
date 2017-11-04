@@ -14,9 +14,14 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         public void GetSession()
         {
             if (Session["XZQ"] == null)
+            {
                 ViewData["XZQ"] = "福州";
+                Session["XZQ"] = "福州";
+            }
             else
+            {
                 ViewData["XZQ"] = Session["XZQ"];
+            }
             ViewData["YHM"] = Session["YHM"];
         }
 
