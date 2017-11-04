@@ -15,7 +15,7 @@
       <ref object="DAOBase"/>
     </property>
   </object>
-  <object id="YHDLXXBLL" type="TianWen.XiaoZhen1Qu.BLL.YHDLXXBLL,TianWen.XiaoZhen1Qu">
+  <object id="YHDLBLL" type="TianWen.XiaoZhen1Qu.BLL.YHDLBLL,TianWen.XiaoZhen1Qu">
     <property name="DAO">
       <ref object="DAOBase"/>
     </property>

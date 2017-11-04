@@ -6,7 +6,7 @@ using TianWen.XiaoZhen1Qu.Interface;
 
 namespace TianWen.XiaoZhen1Qu.BLL
 {
-    public class YHDLXXBLL : BaseBLL, IYHDLXXBLL
+    public class YHDLBLL : BaseBLL, IYHDLBLL
     {
         public object CheckLogin(string YHM, string MM, string SessionID)
         {

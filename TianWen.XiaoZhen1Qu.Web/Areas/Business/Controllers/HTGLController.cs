@@ -6,7 +6,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 {
     public class HTGLController : BaseController
     {
-        public IYHDLXXBLL YHDLXXBLL { get; set; }
+        public IYHDLBLL YHDLXXBLL { get; set; }
 
         public ActionResult HTGL()
         {

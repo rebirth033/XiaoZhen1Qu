@@ -8,12 +8,12 @@ using TianWen.XiaoZhen1Qu.Interface;
 
 namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 {
-    public class YHDLXXController : BaseController
+    public class YHDLController : BaseController
     {
         public IYHJBXXBLL YHJBXXBLL { get; set; }
-        public IYHDLXXBLL YHDLXXBLL { get; set; }
+        public IYHDLBLL YHDLBLL { get; set; }
 
-        public ActionResult YHDLXX()
+        public ActionResult YHDL()
         {
             return View();
         }
@@ -34,7 +34,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
                 string checkcode = Session["CheckCode"].ToString();
                 if (YZM == checkcode)
                 {
-                    YHJBXX yhjbxx = YHDLXXBLL.AddUserBySJ(Request["SJ"]);
+                    YHJBXX yhjbxx = YHDLBLL.AddUserBySJ(Request["SJ"]);
                     Session["YHM"] = yhjbxx.YHM;
                     Session["XZQ"] = "福州";
                     Session["XZQDM"] = "350100";
@@ -61,7 +61,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
                 ckSessionid.Expires = DateTime.Now.AddDays(14);
                 Response.Cookies.Add(ckUsername);
                 Response.Cookies.Add(ckSessionid);
-                object result = YHDLXXBLL.CheckLogin(YHM, MM, Session.SessionID);
+                object result = YHDLBLL.CheckLogin(YHM, MM, Session.SessionID);
                 if (Json(result).Data.ToString().Contains("登录成功"))
                 {
                     Session["YHM"] = YHM;
@@ -72,7 +72,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             }
             else
             {
-                object result = YHDLXXBLL.CheckLogin(YHM, MM, string.Empty);
+                object result = YHDLBLL.CheckLogin(YHM, MM, string.Empty);
                 if (Json(result).Data.ToString().Contains("登录成功"))
                 {
                     Session["YHM"] = YHM;
