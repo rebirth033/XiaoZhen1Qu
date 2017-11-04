@@ -9,6 +9,7 @@ $(document).ready(function () {
 
     $("#li_condition_head_qyzf").css("background-color", "#ffffff");
     $(".li_body_head:eq(0)").css("border-bottom", "2px solid #5bc0de").css("color", "#5bc0de").css("font-weight", "700");
+    $("#span_fbxx").bind("click", OpenLBXZ);
     BindConditionNav();
     BindBodyNav();
     LoadFCCXCondition();

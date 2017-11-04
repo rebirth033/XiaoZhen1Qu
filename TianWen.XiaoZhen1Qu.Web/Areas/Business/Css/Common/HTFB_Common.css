@@ -23,6 +23,12 @@
 .table_head {
     margin-bottom: 0 !important;
 }
+.span_cxlb {
+    color: #5bc0de;
+    cursor: pointer;
+    font-size: 12px;
+    margin-left: 2px;
+}
 
 .div_content {
     width: 940px;
@@ -423,4 +429,14 @@
     text-align: left;
     margin-top: 4px;
     cursor: pointer;
+}
+
+.div_shadow {
+    display: none;
+    background-color: #000;
+    opacity: 0.5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
 }
