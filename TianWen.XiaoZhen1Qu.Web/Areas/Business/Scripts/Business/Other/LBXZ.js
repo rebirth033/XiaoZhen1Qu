@@ -167,17 +167,17 @@ function ShowSHGJ() {
 }
 //退出
 function Exit() {
-    window.location.href = getRootPath() + "/Business/YHDLXX/YHDLXX";
+    window.location.href = getRootPath() + "/Business/YHDL/YHDL";
 }
 //我的发布
 function ToWDFB() {
-    window.location.href = getRootPath() + "/Business/YHGL/YHGL";
+    window.location.href = getRootPath() + "/Business/HTGL/HTGL";
 }
 //个人资料
 function ToGRZL() {
-    window.location.href = getRootPath() + "/Business/YHGL/YHGL";
+    window.location.href = getRootPath() + "/Business/HTGL/HTGL";
 }
 //话费充值
 function ToHFCZ() {
-    window.location.href = getRootPath() + "/Business/YHGL/YHGL";
+    window.location.href = getRootPath() + "/Business/HTGL/HTGL";
 }

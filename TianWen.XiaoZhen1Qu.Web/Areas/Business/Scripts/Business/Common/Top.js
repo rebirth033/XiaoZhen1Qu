@@ -8,7 +8,7 @@
 });
 //登录
 function OpenDL() {
-    window.open(getRootPath() + "/Business/YHDLXX/YHDLXX");
+    window.open(getRootPath() + "/Business/YHDL/YHDL");
 }
 //注册
 function OpenZC() {
@@ -16,7 +16,7 @@ function OpenZC() {
 }
 //个人中心
 function OpenGRZX() {
-    window.open(getRootPath() + "/Business/YHDLXX/YHDLXX");
+    window.open(getRootPath() + "/Business/HTGL/HTGL");
 }
 //帮助中心
 function OpenBZZX() {

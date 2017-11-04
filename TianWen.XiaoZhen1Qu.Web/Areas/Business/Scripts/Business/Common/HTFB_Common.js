@@ -4,6 +4,7 @@ $(document).ready(function () {
     $(".div_top_right").css("margin-right", (document.documentElement.clientWidth - 940) / 2);
     $(".div_head").css("margin-left", (document.documentElement.clientWidth - 940) / 2);
     $(".div_content").css("margin-left", (document.documentElement.clientWidth - 940) / 2);
+    $(".div_body_yhdl").css("margin-left", (document.documentElement.clientWidth - 460) / 2);
     $(".div_radio").bind("click", RadioSelect);
     $(".img_radio").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
     $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);
@@ -23,7 +24,8 @@ $(document).ready(function () {
 function LoadDefault() {
     ue.ready(function () { ue.setHeight(200); });
     if ($("#span_top_right_yhm_text").html() === "") {
-        $("#shadow").css("display", "block");
+        $(".div_shadow").css("display", "block");
+        $(".div_body_yhdl").css("display", "block");
     }
 }
 //根据TYPENAME获取字典表
@@ -70,7 +72,7 @@ function SelectDropdown(obj, type) {
 }
 //退出
 function Exit() {
-    window.location.href = getRootPath() + "/Business/YHDLXX/YHDLXX";
+    window.location.href = getRootPath() + "/Business/YHDL/YHDL";
 }
 //绑定下拉框
 function Bind(idout, idin, message) {

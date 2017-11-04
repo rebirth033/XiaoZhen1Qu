@@ -162,7 +162,7 @@ function SJDL() {
     if (SJDLValidate() === false) return;
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/YHDLXX/SJLogin",
+        url: getRootPath() + "/Business/YHDL/SJLogin",
         dataType: "json",
         data:
         {
@@ -171,7 +171,8 @@ function SJDL() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                window.location.href = getRootPath() + "/Business/HTGL/HTGL?YHID=" + xml.YHID;
+                //window.location.href = getRootPath() + "/Business/HTGL/HTGL";
+                window.location.reload();
             } else {
                 $("#YZM").css("border-color", "#F2272D");
                 $("#YZMInfo").css("color", "#F2272D");
@@ -179,7 +180,7 @@ function SJDL() {
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-            _masker.CloseMasker(false, errorThrown);
+
         }
     });
 }
@@ -188,7 +189,7 @@ function MMDL() {
     if (MMDLValidate() === false) return;
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/YHDLXX/MMLogin",
+        url: getRootPath() + "/Business/YHDL/MMLogin",
         dataType: "json",
         data:
         {
@@ -198,7 +199,8 @@ function MMDL() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                window.location.href = getRootPath() + "/Business/HTGL/HTGL";
+                //window.location.href = getRootPath() + "/Business/HTGL/HTGL";
+                window.location.reload();
             } else {
                 if (xml.Type === 1) {
                     $("#YHM").css("border-color", "#F2272D");
@@ -213,7 +215,7 @@ function MMDL() {
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-            _masker.CloseMasker(false, errorThrown);
+
         }
     });
 }

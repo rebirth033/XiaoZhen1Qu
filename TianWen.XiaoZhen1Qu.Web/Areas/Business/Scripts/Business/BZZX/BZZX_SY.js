@@ -73,7 +73,7 @@ function OpenZHMM() {
 }
 
 function OpenZHYECZ() {
-    window.open(getRootPath() + "/Business/YHGL/YHGL?YHID=" + getUrlParam("YHID") + "&Show=WDZJ");
+    window.open(getRootPath() + "/Business/HTGL/HTGL?YHID=" + getUrlParam("YHID") + "&Show=WDZJ");
 }
 
 function OpenDHMYCX() {

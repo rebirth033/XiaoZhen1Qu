@@ -25,5 +25,5 @@ function GenerateQRCode() {
 }
 
 function ToYHGL() {
-    window.location.href = getRootPath() + "/Business/YHGL/YHGL?YHID=" + getUrlParam("YHID");
+    window.location.href = getRootPath() + "/Business/HTGL/HTGL?YHID=" + getUrlParam("YHID");
 }

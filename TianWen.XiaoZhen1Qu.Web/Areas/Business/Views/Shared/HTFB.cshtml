@@ -14,6 +14,7 @@
     <script src="@Url.Content("~/Areas/Business/Scripts/Business/Common/XZQ.js")"></script>
     <script src="@Url.Content("~/Areas/Business/Scripts/Business/Common/Top.js")"></script>
     <script src="@Url.Content("~/Areas/Business/Scripts/Business/Common/LBHead.js")"></script>
+    <script src="@Url.Content("~/Areas/Business/Scripts/Business/Other/YHDL.js")"></script>
     <script src=@Url.Content("~/Areas/Business/Scripts/Business/Common/Public_TP.js")></script>
     <script src=@Url.Content("~/Areas/Business/Scripts/Business/Common/Regular.js")></script>
     <script src=@Url.Content("~/Areas/Business/Scripts/Business/Common/Radio.js")></script>
@@ -114,64 +115,79 @@
         </div>
         <input type="button" id="btnSavePhoto" class="btn btn-info" style="height: 34px; width: 69px; position: absolute; bottom: 14px; right: 77px;" value="保&nbsp;&nbsp;存" />
     </div>
-    <div id="myTabContent" class="tab-content">
-        <div id="username" style="display: block">
-            <table class="table" style="width: 600px;">
-                <tr>
-                    <td>
-                        <input type="text" class="form-control input_text" id="YHM" column="YHM" placeholder="请输入用户名">
-                    </td>
-                </tr>
-                <tr>
-                    <td class="Info" id="YHMInfo"></td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="password" class="form-control input_text" id="MM" column="MM" placeholder="请输入登录密码">
-                    </td>
-                </tr>
-                <tr>
-                    <td class="Info" id="MMInfo"></td>
-                </tr>
-                <tr>
-                    <td style="text-align: left">
-                        <input id="checkMMSFZDDL" type="checkbox" />
-                        <span class="spanZDDD">下次自动登录</span>
-                        <a id="aWJMM">忘记密码</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type="button" class="btn btn-info input_text" id="MMDL" value="登录" /></td>
-                </tr>
-            </table>
-        </div>
-        <div id="cellphone" style="display: none">
-            <table class="table" style="width: 600px;">
-                <tr>
-                    <td id="tdSJ">
-                        <input class="form-control input_text" id="SJ" maxlength="11" type="text" style="width: 266px;" column="SJ" placeholder="请输入手机号">
-                        <input type="button" class="btn btn-info" id="btnHQYZM" value="获取验证码" />
-                    </td>
-                </tr>
-                <tr>
-                    <td class="Info" id="SJInfo"></td>
-                </tr>
-                <tr>
-                    <td><input type="text" class="form-control input_text" id="YZM" column="YZM" placeholder="请输入验证码"></td>
-                </tr>
-                <tr>
-                    <td class="Info" id="YZMInfo"></td>
-                </tr>
-                <tr>
-                    <td style="text-align: left">
-                        <input id="checkSJSFZDDL" type="checkbox" />
-                        <span class="spanZDDD">下次自动登录</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type="button" class="btn btn-info input_text" id="SJDL" value="登录" /></td>
-                </tr>
-            </table>
+    <div class="div_body_yhdl">
+        <table class="table" style="width: 300px;">
+            <tr>
+                <td class="headtd"><span class="title">欢迎来到信息小镇</span></td>
+            </tr>
+            <tr>
+                <td>
+                    <ul id="myTab" class="nav nav-tabs" style="width: 390px">
+                        <li id="liMMDL" style="width: 195px" class="active"><a href="#username" data-toggle="tab">用户名密码登录</a></li>
+                        <li id="liSJDL" style="width: 195px;"><a href="#cellphone" data-toggle="tab">手机验证码登录</a></li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+        <div id="myTabContent" class="tab-content">
+            <div id="username" style="display: block">
+                <table class="table" style="width: 600px;">
+                    <tr>
+                        <td>
+                            <input type="text" class="form-control input_text" id="YHM" column="YHM" placeholder="请输入用户名">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="Info" id="YHMInfo"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="password" class="form-control input_text" id="MM" column="MM" placeholder="请输入登录密码">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="Info" id="MMInfo"></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left">
+                            <input id="checkMMSFZDDL" type="checkbox" />
+                            <span class="spanZDDD">下次自动登录</span>
+                            <a id="aWJMM">忘记密码</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" class="btn btn-info input_text" id="MMDL" value="登录" /></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="cellphone" style="display: none">
+                <table class="table" style="width: 600px;">
+                    <tr>
+                        <td id="tdSJ">
+                            <input class="form-control input_text" id="SJ" maxlength="11" type="text" style="width: 266px;" column="SJ" placeholder="请输入手机号">
+                            <input type="button" class="btn btn-info" id="btnHQYZM" value="获取验证码" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="Info" id="SJInfo"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" class="form-control input_text" id="YZM" column="YZM" placeholder="请输入验证码"></td>
+                    </tr>
+                    <tr>
+                        <td class="Info" id="YZMInfo"></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left">
+                            <input id="checkSJSFZDDL" type="checkbox" />
+                            <span class="spanZDDD">下次自动登录</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" class="btn btn-info input_text" id="SJDL" value="登录" /></td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </div>
 }

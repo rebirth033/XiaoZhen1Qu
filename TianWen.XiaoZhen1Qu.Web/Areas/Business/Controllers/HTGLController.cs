@@ -6,7 +6,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 {
     public class HTGLController : BaseController
     {
-        public IYHDLBLL YHDLXXBLL { get; set; }
+        public IYHDLBLL YHDLBLL { get; set; }
 
         public ActionResult HTGL()
         {
@@ -28,7 +28,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
                 sessionID = Request.Cookies["sessionID"].Value;
             }
 
-            return Json(YHDLXXBLL.AutoLogin(username, sessionID));
+            return Json(YHDLBLL.AutoLogin(username, sessionID));
 
         }
     }

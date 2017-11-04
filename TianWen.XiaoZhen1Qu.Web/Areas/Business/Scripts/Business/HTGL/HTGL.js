@@ -56,7 +56,7 @@ function HideYHCD() {
 }
 //退出
 function Exit() {
-    window.location.href = getRootPath() + "/Business/YHDLXX/YHDLXX";
+    window.location.href = getRootPath() + "/Business/YHDL/YHDL";
 }
 //自动登录
 function AutoLogin() {
@@ -72,7 +72,7 @@ function AutoLogin() {
             if (xml.Result === 1) {
                 alert("登录成功");
             } else {
-                window.location.href = getRootPath() + "/Business/YHDLXX/YHDLXX";
+                window.location.href = getRootPath() + "/Business/YHDL/YHDL";
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
