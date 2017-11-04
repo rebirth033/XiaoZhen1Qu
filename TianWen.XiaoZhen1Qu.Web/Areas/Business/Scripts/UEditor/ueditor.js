@@ -1,21 +1,21 @@
 ﻿function isFocus(e) {
     alert(UE.getEditor('BCMS').isFocus());
-    UE.dom.domUtils.preventDefault(e)
+    UE.dom.domUtils.preventDefault(e);
 }
 function setblur(e) {
     UE.getEditor('BCMS').blur();
-    UE.dom.domUtils.preventDefault(e)
+    UE.dom.domUtils.preventDefault(e);
 }
 function insertHtml() {
     var value = prompt('插入html代码', '');
-    UE.getEditor('BCMS').execCommand('insertHtml', value)
+    UE.getEditor('BCMS').execCommand('insertHtml', value);
 }
 function createEditor() {
     enableBtn();
     UE.getEditor('BCMS');
 }
 function getAllHtml() {
-    alert(UE.getEditor('BCMS').getAllHtml())
+    alert(UE.getEditor('BCMS').getAllHtml());
 }
 function getContent() {
     var arr = [];
@@ -50,7 +50,7 @@ function getText() {
     var range = UE.getEditor('BCMS').selection.getRange();
     range.select();
     var txt = UE.getEditor('BCMS').selection.getText();
-    alert(txt)
+    alert(txt);
 }
 function getContentTxt() {
     var arr = [];
@@ -96,5 +96,5 @@ function getLocalData() {
 }
 function clearLocalData() {
     UE.getEditor('BCMS').execCommand("clearlocaldata");
-    alert("已清空草稿箱")
+    alert("已清空草稿箱");
 }
