@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
     $("#spanWCFB").css("color", "#5bc0de");
     $("#emWCFB").css("background", "#5bc0de");
-    $("#btnGLXX").bind("click", ToYHGL);
+    $("#btnGLXX").bind("click", ToHTGL);
     GenerateQRCode();
 });
 
@@ -24,6 +24,6 @@ function GenerateQRCode() {
     });
 }
 
-function ToYHGL() {
+function ToHTGL() {
     window.location.href = getRootPath() + "/Business/HTGL/HTGL?YHID=" + getUrlParam("YHID");
 }
