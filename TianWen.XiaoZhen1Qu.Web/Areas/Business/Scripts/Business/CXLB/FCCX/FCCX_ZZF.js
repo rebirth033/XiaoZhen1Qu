@@ -19,6 +19,29 @@ $(document).ready(function () {
 function OpenLBXZ() {
     window.open(getRootPath() + "/Business/LBXZ/LBXZ");
 }
+//选择条件
+function SelectCondition() {
+    $(this).parent().find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $(this).addClass("li_condition_body_active");
+
+    $(".div_condition_select").css("display", "block");
+
+    for (var i = 0; i < $(this).parent().find(".li_condition_body").length; i++) {
+        for (var j = 0; j < $("#ul_condition_select").find(".li_condition_select").length; j++) {
+            if ($("#ul_condition_select").find(".li_condition_select")[j].innerHTML.indexOf($(this).parent().find(".li_condition_body")[i].innerHTML) !== -1)
+                $("#ul_condition_select li:eq(" + (j + 1) + ")").remove();
+        }
+    }
+
+    $("#ul_condition_select").append('<li class="li_condition_select"><span>' + $(this).html() + '</span><em>x</em></li>');
+    //$("#ul_condition_select li").each(function (index) {
+    //    $(this).click(function() {
+    //        $("#ul_condition_select li:eq(" + index + ")").remove();
+    //    });
+    //});
+}
 //搬定查询条件导航
 function BindConditionNav() {
     $(".li_condition_head").bind("click", function () {
@@ -37,28 +60,28 @@ function BindBodyNav() {
         $(this).css("border-bottom", "2px solid #5bc0de").css("color", "#5bc0de").css("font-weight", "700");
     });
 }
-
 //加载房产查询条件
 function LoadFCCXCondition() {
     var dqs = "地区,不限,全福州,鼓楼,台江,晋安,仓山,闽侯,福清,马尾,长乐,连江,平潭,罗源,闽清,永泰,全福建,全中国".split(',');
-    var zjs = "租金,不限,500-1000元,1000-1500元,1500-2000元,2000-3000元,3000-4000元,4000元以上".split(',');
+    var zjs = "租金,不限,500元以下,500-1000元,1000-1500元,1500-2000元,2000-3000元,3000-4000元,4000元以上".split(',');
     var zflx = "租房类型,不限,整套出租,单间出租,精品公寓,床位出租".split(',');
-    LoadCondition(dqs);
-    LoadCondition(zjs);
-    LoadCondition(zflx);
+    LoadCondition(dqs, "DQ");
+    LoadCondition(zjs, "ZJ");
+    LoadCondition(zflx, "CZFS");
+    $(".li_condition_body").bind("click", SelectCondition);
 }
 //加载查询条件
-function LoadCondition(array) {
+function LoadCondition(array, type) {
     var html = "";
-    html += '<div class="div_condigion_body">';
-    html += '<ul class="ul_condigion_body">';
+    html += '<div class="div_condition_body">';
+    html += '<ul id="ul_condition_body_' + type + '" class="ul_condition_body">';
     for (var i = 0; i < array.length; i++) {
         if (i === 0)
-            html += '<li class="li_condigion_body_first">' + array[i] + '</li>';
+            html += '<li class="li_condition_body_first">' + array[i] + '</li>';
         else if (i === 1)
-            html += '<li class="li_condigion_body active">' + array[i] + '</li>';
+            html += '<li class="li_condition_body li_condition_body_active">' + array[i] + '</li>';
         else
-            html += '<li class="li_condigion_body">' + array[i] + '</li>';
+            html += '<li class="li_condition_body">' + array[i] + '</li>';
     }
     html += '</ul>';
     html += '</div>';
@@ -67,6 +90,9 @@ function LoadCondition(array) {
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
+    var jsonObj = new JsonDB("divConditionSelect");
+    var obj = jsonObj.GetJsonObject();
+    obj = jsonObj.AddJson(obj, "DQ", "'" + Get + "'");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/FCCX/LoadFCXX",
@@ -74,6 +100,7 @@ function LoadBody(TYPE, PageIndex) {
         data:
         {
             TYPE: TYPE,
+            Condition: jsonObj.JsonToString(obj),
             PageSize: 20,
             PageIndex: PageIndex
         },
