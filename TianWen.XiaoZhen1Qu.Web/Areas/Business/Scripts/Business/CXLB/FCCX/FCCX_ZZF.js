@@ -13,34 +13,11 @@ $(document).ready(function () {
     BindConditionNav();
     BindBodyNav();
     LoadFCCXCondition();
-    LoadBody("FC", currentIndex);;
+    LoadBody("FC", currentIndex);
 });
 //类别选择
 function OpenLBXZ() {
     window.open(getRootPath() + "/Business/LBXZ/LBXZ");
-}
-//选择条件
-function SelectCondition() {
-    $(this).parent().find(".li_condition_body").each(function () {
-        $(this).removeClass("li_condition_body_active");
-    });
-    $(this).addClass("li_condition_body_active");
-
-    $(".div_condition_select").css("display", "block");
-
-    for (var i = 0; i < $(this).parent().find(".li_condition_body").length; i++) {
-        for (var j = 0; j < $("#ul_condition_select").find(".li_condition_select").length; j++) {
-            if ($("#ul_condition_select").find(".li_condition_select")[j].innerHTML.indexOf($(this).parent().find(".li_condition_body")[i].innerHTML) !== -1)
-                $("#ul_condition_select li:eq(" + (j + 1) + ")").remove();
-        }
-    }
-
-    $("#ul_condition_select").append('<li class="li_condition_select"><span>' + $(this).html() + '</span><em>x</em></li>');
-    //$("#ul_condition_select li").each(function (index) {
-    //    $(this).click(function() {
-    //        $("#ul_condition_select li:eq(" + index + ")").remove();
-    //    });
-    //});
 }
 //搬定查询条件导航
 function BindConditionNav() {
@@ -68,7 +45,38 @@ function LoadFCCXCondition() {
     LoadCondition(dqs, "DQ");
     LoadCondition(zjs, "ZJ");
     LoadCondition(zflx, "CZFS");
-    $(".li_condition_body").bind("click", SelectCondition);
+    $("#ul_condition_body_DQ").find(".li_condition_body").bind("click", SelectCondition);
+    $("#ul_condition_body_ZJ").find(".li_condition_body").bind("click", SelectCondition);
+    $("#ul_condition_body_CZFS").find(".li_condition_body").bind("click", SelectCondition);
+}
+//选择条件
+function SelectCondition() {
+    $(this).parent().find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $(this).addClass("li_condition_body_active");
+    $(".div_condition_select").css("display", "block");
+    $("#ul_condition_select").html('<li class="li_condition_select_first">筛选条件</li>');
+    $(".li_condition_body").each(function() {
+        if ($(this).css("color") === "rgb(91, 192, 222)" && $(this).html() !== "不限") {
+            $("#ul_condition_select").append('<li onclick="DeleteSelect(this)" class="li_condition_select"><span>' + $(this).html() + '</span><em>x</em></li>');
+        }
+    });
+   
+    LoadBody("FC", currentIndex);
+}
+//绑定选择条件删除事件
+function DeleteSelect(obj) {
+    var select = obj.innerHTML;
+    $(obj).css("display", "none");
+    $(".li_condition_body").each(function () {
+        if (select.indexOf($(this).html()) !== -1)
+        $(this).parent().find(".li_condition_body").each(function(index) {
+            if (index === 0) $(this).addClass("li_condition_body_active");
+            else $(this).removeClass("li_condition_body_active");
+        });
+    });
+    LoadBody("FC", currentIndex);
 }
 //加载查询条件
 function LoadCondition(array, type) {
@@ -87,12 +95,19 @@ function LoadCondition(array, type) {
     html += '</div>';
     $("#divCondition").append(html);
 }
+//获取查询条件
+function GetCondition(type) {
+    var value = "";
+    $("#ul_condition_body_" + type).find(".li_condition_body").each(function () {
+        if ($(this).css("color") === 'rgb(91, 192, 222)')
+            value = $(this).html();
+    });
+    return value;
+}
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var jsonObj = new JsonDB("divConditionSelect");
-    var obj = jsonObj.GetJsonObject();
-    obj = jsonObj.AddJson(obj, "DQ", "'" + Get + "'");
+    var condition = "DQ:" + GetCondition("DQ") + ",ZJ:" + GetCondition("ZJ") + ",CZFS:" + GetCondition("CZFS");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/FCCX/LoadFCXX",
@@ -100,7 +115,7 @@ function LoadBody(TYPE, PageIndex) {
         data:
         {
             TYPE: TYPE,
-            Condition: jsonObj.JsonToString(obj),
+            Condition: condition,
             PageSize: 20,
             PageIndex: PageIndex
         },
