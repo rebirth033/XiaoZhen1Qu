@@ -1,0 +1,998 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects  xmlns="http://www.springframework.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.net http://www.springframework.net/xsd/spring-objects.xsd">
+  <object id="CL_ZXCDDCSLCBLL" type="TianWen.XiaoZhen1Qu.BLL.CL_ZXCDDCSLCBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="CL_MTCBLL" type="TianWen.XiaoZhen1Qu.BLL.CL_MTCBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="CL_HCBLL" type="TianWen.XiaoZhen1Qu.BLL.CL_HCBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="CL_GCCBLL" type="TianWen.XiaoZhen1Qu.BLL.CL_GCCBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="CL_KCBLL" type="TianWen.XiaoZhen1Qu.BLL.CL_KCBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="CL_JCBLL" type="TianWen.XiaoZhen1Qu.BLL.CL_JCBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="CW_CWGBLL" type="TianWen.XiaoZhen1Qu.BLL.CW_CWGBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="CW_CWMBLL" type="TianWen.XiaoZhen1Qu.BLL.CW_CWMBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="CW_HNYCBLL" type="TianWen.XiaoZhen1Qu.BLL.CW_HNYCBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="CW_CWZSLYBLL" type="TianWen.XiaoZhen1Qu.BLL.CW_CWZSLYBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="CW_CWYPSPBLL" type="TianWen.XiaoZhen1Qu.BLL.CW_CWYPSPBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="CW_CWFWBLL" type="TianWen.XiaoZhen1Qu.BLL.CW_CWFWBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="CY_MSBLL" type="TianWen.XiaoZhen1Qu.BLL.CY_MSBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="CY_KCTSBLL" type="TianWen.XiaoZhen1Qu.BLL.CY_KCTSBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="CY_WMBLL" type="TianWen.XiaoZhen1Qu.BLL.CY_WMBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="ES_SJSM_ESSJBLL" type="TianWen.XiaoZhen1Qu.BLL.ES_SJSM_ESSJBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="ES_SJSM_BJBDNBLL" type="TianWen.XiaoZhen1Qu.BLL.ES_SJSM_BJBDNBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="ES_SJSM_PBDNBLL" type="TianWen.XiaoZhen1Qu.BLL.ES_SJSM_PBDNBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="ES_SJSM_SMCPBLL" type="TianWen.XiaoZhen1Qu.BLL.ES_SJSM_SMCPBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="ES_SJSM_TSJBLL" type="TianWen.XiaoZhen1Qu.BLL.ES_SJSM_TSJBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="ES_JDJJBG_ESJDBLL" type="TianWen.XiaoZhen1Qu.BLL.ES_JDJJBG_ESJDBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="ES_JDJJBG_ESJJBLL" type="TianWen.XiaoZhen1Qu.BLL.ES_JDJJBG_ESJJBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="ES_JDJJBG_JJRYBLL" type="TianWen.XiaoZhen1Qu.BLL.ES_JDJJBG_JJRYBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="ES_JDJJBG_BGSBBLL" type="TianWen.XiaoZhen1Qu.BLL.ES_JDJJBG_BGSBBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="ES_MYFZMR_MYETYPWJBLL" type="TianWen.XiaoZhen1Qu.BLL.ES_MYFZMR_MYETYPWJBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="ES_MYFZMR_FZXMXBBLL" type="TianWen.XiaoZhen1Qu.BLL.ES_MYFZMR_FZXMXBBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="ES_MYFZMR_MRBJBLL" type="TianWen.XiaoZhen1Qu.BLL.ES_MYFZMR_MRBJBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="ES_WHYL_YSPSCPBLL" type="TianWen.XiaoZhen1Qu.BLL.ES_WHYL_YSPSCPBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="ES_WHYL_WTHWYQBLL" type="TianWen.XiaoZhen1Qu.BLL.ES_WHYL_WTHWYQBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="ES_WHYL_TSYXRJBLL" type="TianWen.XiaoZhen1Qu.BLL.ES_WHYL_TSYXRJBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="ES_WHYL_WYXNWPBLL" type="TianWen.XiaoZhen1Qu.BLL.ES_WHYL_WYXNWPBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="ES_QTES_ESSBBLL" type="TianWen.XiaoZhen1Qu.BLL.ES_QTES_ESSBBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="ES_QTES_CRYPBLL" type="TianWen.XiaoZhen1Qu.BLL.ES_QTES_CRYPBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="FC_ZZFJBXXBLL" type="TianWen.XiaoZhen1Qu.BLL.FC_ZZFJBXXBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="FC_DZFBLL" type="TianWen.XiaoZhen1Qu.BLL.FC_DZFBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="FC_SPBLL" type="TianWen.XiaoZhen1Qu.BLL.FC_SPBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="FC_XZLBLL" type="TianWen.XiaoZhen1Qu.BLL.FC_XZLBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="FC_CKCFTDCWBLL" type="TianWen.XiaoZhen1Qu.BLL.FC_CKCFTDCWBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="HQSY_HQGSBLL" type="TianWen.XiaoZhen1Qu.BLL.HQSY_HQGSBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="HQSY_HCZLBLL" type="TianWen.XiaoZhen1Qu.BLL.HQSY_HCZLBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="HQSY_HYJDBLL" type="TianWen.XiaoZhen1Qu.BLL.HQSY_HYJDBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="HQSY_CZZXBLL" type="TianWen.XiaoZhen1Qu.BLL.HQSY_CZZXBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="HQSY_HQYPBLL" type="TianWen.XiaoZhen1Qu.BLL.HQSY_HQYPBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="HQSY_SYBLL" type="TianWen.XiaoZhen1Qu.BLL.HQSY_SYBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="HQSY_HLGPBLL" type="TianWen.XiaoZhen1Qu.BLL.HQSY_HLGPBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="HQSY_HSLFBLL" type="TianWen.XiaoZhen1Qu.BLL.HQSY_HSLFBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="HQSY_ZBSSBLL" type="TianWen.XiaoZhen1Qu.BLL.HQSY_ZBSSBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="HQSY_HSSYBLL" type="TianWen.XiaoZhen1Qu.BLL.HQSY_HSSYBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="JYPX_ZXXFDBBLL" type="TianWen.XiaoZhen1Qu.BLL.JYPX_ZXXFDBBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="JYPX_JJGRBLL" type="TianWen.XiaoZhen1Qu.BLL.JYPX_JJGRBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="JYPX_JJJGBLL" type="TianWen.XiaoZhen1Qu.BLL.JYPX_JJJGBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="JYPX_ZXXYDYBLL" type="TianWen.XiaoZhen1Qu.BLL.JYPX_ZXXYDYBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="JYPX_YYPXJGBLL" type="TianWen.XiaoZhen1Qu.BLL.JYPX_YYPXJGBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="JYPX_YYPXJSBLL" type="TianWen.XiaoZhen1Qu.BLL.JYPX_YYPXJSBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="JYPX_ZYJNPXBLL" type="TianWen.XiaoZhen1Qu.BLL.JYPX_ZYJNPXBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="JYPX_XLJYBLL" type="TianWen.XiaoZhen1Qu.BLL.JYPX_XLJYBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="JYPX_YSPXBLL" type="TianWen.XiaoZhen1Qu.BLL.JYPX_YSPXBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="JYPX_YSPXJSBLL" type="TianWen.XiaoZhen1Qu.BLL.JYPX_YSPXJSBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="JYPX_TYPXBLL" type="TianWen.XiaoZhen1Qu.BLL.JYPX_TYPXBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="JYPX_ITPXBLL" type="TianWen.XiaoZhen1Qu.BLL.JYPX_ITPXBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="JYPX_SJPXBLL" type="TianWen.XiaoZhen1Qu.BLL.JYPX_SJPXBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="JYPX_GLPXBLL" type="TianWen.XiaoZhen1Qu.BLL.JYPX_GLPXBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="JYPX_YYEJYBLL" type="TianWen.XiaoZhen1Qu.BLL.JYPX_YYEJYBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="JYPX_LXBLL" type="TianWen.XiaoZhen1Qu.BLL.JYPX_LXBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="JYPX_YMBLL" type="TianWen.XiaoZhen1Qu.BLL.JYPX_YMBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="JYPX_TYJLBLL" type="TianWen.XiaoZhen1Qu.BLL.JYPX_TYJLBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="JYPX_PBPKBLL" type="TianWen.XiaoZhen1Qu.BLL.JYPX_PBPKBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="LR_MTSSBLL" type="TianWen.XiaoZhen1Qu.BLL.LR_MTSSBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="LR_MRHFBLL" type="TianWen.XiaoZhen1Qu.BLL.LR_MRHFBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="LR_SPABLL" type="TianWen.XiaoZhen1Qu.BLL.LR_SPABLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="LR_WDBLL" type="TianWen.XiaoZhen1Qu.BLL.LR_WDBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="LR_MFHFBLL" type="TianWen.XiaoZhen1Qu.BLL.LR_MFHFBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="LR_MJBLL" type="TianWen.XiaoZhen1Qu.BLL.LR_MJBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="LR_WSBLL" type="TianWen.XiaoZhen1Qu.BLL.LR_WSBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="LR_KQHLBLL" type="TianWen.XiaoZhen1Qu.BLL.LR_KQHLBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="LR_TJBLL" type="TianWen.XiaoZhen1Qu.BLL.LR_TJBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="LR_YJBLL" type="TianWen.XiaoZhen1Qu.BLL.LR_YJBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="LYJD_LXSBLL" type="TianWen.XiaoZhen1Qu.BLL.LYJD_LXSBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="LYJD_GNYBLL" type="TianWen.XiaoZhen1Qu.BLL.LYJD_GNYBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="LYJD_ZBYBLL" type="TianWen.XiaoZhen1Qu.BLL.LYJD_ZBYBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="LYJD_CJYBLL" type="TianWen.XiaoZhen1Qu.BLL.LYJD_CJYBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="LYJD_JDZSYDBLL" type="TianWen.XiaoZhen1Qu.BLL.LYJD_JDZSYDBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="LYJD_JPBLL" type="TianWen.XiaoZhen1Qu.BLL.LYJD_JPBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="LYJD_DYDDRBLL" type="TianWen.XiaoZhen1Qu.BLL.LYJD_DYDDRBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="NLMFY_YLHHBLL" type="TianWen.XiaoZhen1Qu.BLL.NLMFY_YLHHBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="NLMFY_NZWBLL" type="TianWen.XiaoZhen1Qu.BLL.NLMFY_NZWBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="NLMFY_DZWZMBLL" type="TianWen.XiaoZhen1Qu.BLL.NLMFY_DZWZMBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="NLMFY_CQYZBLL" type="TianWen.XiaoZhen1Qu.BLL.NLMFY_CQYZBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="NLMFY_SCBLL" type="TianWen.XiaoZhen1Qu.BLL.NLMFY_SCBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="NLMFY_FLNYBLL" type="TianWen.XiaoZhen1Qu.BLL.NLMFY_FLNYBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="NLMFY_SLSYBLL" type="TianWen.XiaoZhen1Qu.BLL.NLMFY_SLSYBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="NLMFY_NJJSBBLL" type="TianWen.XiaoZhen1Qu.BLL.NLMFY_NJJSBBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="NLMFY_NCPJGBLL" type="TianWen.XiaoZhen1Qu.BLL.NLMFY_NCPJGBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="PFCG_SPBLL" type="TianWen.XiaoZhen1Qu.BLL.PFCG_SPBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="PFCG_LPBLL" type="TianWen.XiaoZhen1Qu.BLL.PFCG_LPBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="PFCG_FSXMBLL" type="TianWen.XiaoZhen1Qu.BLL.PFCG_FSXMBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="PFCG_XBSPBLL" type="TianWen.XiaoZhen1Qu.BLL.PFCG_XBSPBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="PFCG_SJSMBLL" type="TianWen.XiaoZhen1Qu.BLL.PFCG_SJSMBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="PFCG_MYWJBLL" type="TianWen.XiaoZhen1Qu.BLL.PFCG_MYWJBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="PFCG_HWYDBLL" type="TianWen.XiaoZhen1Qu.BLL.PFCG_HWYDBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="PFCG_HZPBLL" type="TianWen.XiaoZhen1Qu.BLL.PFCG_HZPBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="PFCG_AFSBBLL" type="TianWen.XiaoZhen1Qu.BLL.PFCG_AFSBBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="PFCG_FZBLBLL" type="TianWen.XiaoZhen1Qu.BLL.PFCG_FZBLBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="PFCG_SCSBBLL" type="TianWen.XiaoZhen1Qu.BLL.PFCG_SCSBBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="PFCG_HXPBLL" type="TianWen.XiaoZhen1Qu.BLL.PFCG_HXPBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="PFCG_DGDLBLL" type="TianWen.XiaoZhen1Qu.BLL.PFCG_DGDLBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="PFCG_DZYQJBLL" type="TianWen.XiaoZhen1Qu.BLL.PFCG_DZYQJBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="PFCG_YBYQBLL" type="TianWen.XiaoZhen1Qu.BLL.PFCG_YBYQBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="PFCG_DJZMBLL" type="TianWen.XiaoZhen1Qu.BLL.PFCG_DJZMBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="PFCG_YCLBLL" type="TianWen.XiaoZhen1Qu.BLL.PFCG_YCLBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="PFCG_BZBLL" type="TianWen.XiaoZhen1Qu.BLL.PFCG_BZBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="PFCG_YXBLL" type="TianWen.XiaoZhen1Qu.BLL.PFCG_YXBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="PFCG_TSBLL" type="TianWen.XiaoZhen1Qu.BLL.PFCG_TSBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="PFCG_KQBLL" type="TianWen.XiaoZhen1Qu.BLL.PFCG_KQBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="PFCG_JXJGBLL" type="TianWen.XiaoZhen1Qu.BLL.PFCG_JXJGBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="PWKQ_DYPBLL" type="TianWen.XiaoZhen1Qu.BLL.PWKQ_DYPBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="PWKQ_YCMPBLL" type="TianWen.XiaoZhen1Qu.BLL.PWKQ_YCMPBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="PWKQ_YLYJDPBLL" type="TianWen.XiaoZhen1Qu.BLL.PWKQ_YLYJDPBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="PWKQ_XFKGWQBLL" type="TianWen.XiaoZhen1Qu.BLL.PWKQ_XFKGWQBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="PWKQ_QTKQBLL" type="TianWen.XiaoZhen1Qu.BLL.PWKQ_QTKQBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="QZZP_QZZPBLL" type="TianWen.XiaoZhen1Qu.BLL.QZZP_QZZPBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="QZZP_JZZPBLL" type="TianWen.XiaoZhen1Qu.BLL.QZZP_JZZPBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SHFW_SHFW_BJBLL" type="TianWen.XiaoZhen1Qu.BLL.SHFW_SHFW_BJBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SHFW_SHFW_BMYSBLL" type="TianWen.XiaoZhen1Qu.BLL.SHFW_SHFW_BMYSBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SHFW_SHFW_BJQXBLL" type="TianWen.XiaoZhen1Qu.BLL.SHFW_SHFW_BJQXBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SHFW_SHFW_KSHSXSBLL" type="TianWen.XiaoZhen1Qu.BLL.SHFW_SHFW_KSHSXSBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SHFW_SHFW_SHPSBLL" type="TianWen.XiaoZhen1Qu.BLL.SHFW_SHFW_SHPSBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SHFW_SHFW_QMFSSMBLL" type="TianWen.XiaoZhen1Qu.BLL.SHFW_SHFW_QMFSSMBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SHFW_SHFW_GDSTQLBLL" type="TianWen.XiaoZhen1Qu.BLL.SHFW_SHFW_GDSTQLBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SHFW_SHFW_BZMDBLL" type="TianWen.XiaoZhen1Qu.BLL.SHFW_SHFW_BZMDBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SHFW_WXFW_JDWXBLL" type="TianWen.XiaoZhen1Qu.BLL.SHFW_WXFW_JDWXBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SHFW_WXFW_DNWXBLL" type="TianWen.XiaoZhen1Qu.BLL.SHFW_WXFW_DNWXBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SHFW_WXFW_FWWXDKBLL" type="TianWen.XiaoZhen1Qu.BLL.SHFW_WXFW_FWWXDKBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SHFW_WXFW_JJWXBLL" type="TianWen.XiaoZhen1Qu.BLL.SHFW_WXFW_JJWXBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SHFW_WXFW_SJSMWXBLL" type="TianWen.XiaoZhen1Qu.BLL.SHFW_WXFW_SJSMWXBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SHFW_CLFW_ZCBLL" type="TianWen.XiaoZhen1Qu.BLL.SHFW_CLFW_ZCBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SHFW_CLFW_DJSJWPBLL" type="TianWen.XiaoZhen1Qu.BLL.SHFW_CLFW_DJSJWPBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SHFW_CLFW_JXBLL" type="TianWen.XiaoZhen1Qu.BLL.SHFW_CLFW_JXBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SHFW_CLFW_QCPLBLL" type="TianWen.XiaoZhen1Qu.BLL.SHFW_CLFW_QCPLBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SHFW_CLFW_QCWXBYBLL" type="TianWen.XiaoZhen1Qu.BLL.SHFW_CLFW_QCWXBYBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SHFW_CLFW_GHSPNJYCBLL" type="TianWen.XiaoZhen1Qu.BLL.SHFW_CLFW_GHSPNJYCBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SHFW_CLFW_QCMRZSBLL" type="TianWen.XiaoZhen1Qu.BLL.SHFW_CLFW_QCMRZSBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SHFW_CLFW_QCGZFHBLL" type="TianWen.XiaoZhen1Qu.BLL.SHFW_CLFW_QCGZFHBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SWFW_GSZCBLL" type="TianWen.XiaoZhen1Qu.BLL.SWFW_GSZCBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SWFW_SBZLBLL" type="TianWen.XiaoZhen1Qu.BLL.SWFW_SBZLBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SWFW_FLZXBLL" type="TianWen.XiaoZhen1Qu.BLL.SWFW_FLZXBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SWFW_CWKJPGBLL" type="TianWen.XiaoZhen1Qu.BLL.SWFW_CWKJPGBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SWFW_BXBLL" type="TianWen.XiaoZhen1Qu.BLL.SWFW_BXBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SWFW_TZDBBLL" type="TianWen.XiaoZhen1Qu.BLL.SWFW_TZDBBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SWFW_YSBZBLL" type="TianWen.XiaoZhen1Qu.BLL.SWFW_YSBZBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SWFW_PHZPBLL" type="TianWen.XiaoZhen1Qu.BLL.SWFW_PHZPBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SWFW_SJCHBLL" type="TianWen.XiaoZhen1Qu.BLL.SWFW_SJCHBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SWFW_GGCMBLL" type="TianWen.XiaoZhen1Qu.BLL.SWFW_GGCMBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SWFW_ZHFWBLL" type="TianWen.XiaoZhen1Qu.BLL.SWFW_ZHFWBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SWFW_LPDZBLL" type="TianWen.XiaoZhen1Qu.BLL.SWFW_LPDZBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SWFW_ZKBLL" type="TianWen.XiaoZhen1Qu.BLL.SWFW_ZKBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SWFW_WLBXWHBLL" type="TianWen.XiaoZhen1Qu.BLL.SWFW_WLBXWHBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SWFW_WZJSTGBLL" type="TianWen.XiaoZhen1Qu.BLL.SWFW_WZJSTGBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SWFW_ZXFWBLL" type="TianWen.XiaoZhen1Qu.BLL.SWFW_ZXFWBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SWFW_KDBLL" type="TianWen.XiaoZhen1Qu.BLL.SWFW_KDBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SWFW_FYSJBLL" type="TianWen.XiaoZhen1Qu.BLL.SWFW_FYSJBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SWFW_HYWLBLL" type="TianWen.XiaoZhen1Qu.BLL.SWFW_HYWLBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SWFW_HYZXBLL" type="TianWen.XiaoZhen1Qu.BLL.SWFW_HYZXBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SWFW_BGSBWXBLL" type="TianWen.XiaoZhen1Qu.BLL.SWFW_BGSBWXBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SWFW_ZLBLL" type="TianWen.XiaoZhen1Qu.BLL.SWFW_ZLBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SWFW_DBQZQZBLL" type="TianWen.XiaoZhen1Qu.BLL.SWFW_DBQZQZBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SWFW_JZWXBLL" type="TianWen.XiaoZhen1Qu.BLL.SWFW_JZWXBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SWFW_JXSBWXBLL" type="TianWen.XiaoZhen1Qu.BLL.SWFW_JXSBWXBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SWFW_SYSXBLL" type="TianWen.XiaoZhen1Qu.BLL.SWFW_SYSXBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SWFW_LYQDBLL" type="TianWen.XiaoZhen1Qu.BLL.SWFW_LYQDBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="XXYL_YDJSBLL" type="TianWen.XiaoZhen1Qu.BLL.XXYL_YDJSBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="XXYL_YDJBBLL" type="TianWen.XiaoZhen1Qu.BLL.XXYL_YDJBBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="XXYL_HWBLL" type="TianWen.XiaoZhen1Qu.BLL.XXYL_HWBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="XXYL_XYWQBLL" type="TianWen.XiaoZhen1Qu.BLL.XXYL_XYWQBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="XXYL_ZLAMBLL" type="TianWen.XiaoZhen1Qu.BLL.XXYL_ZLAMBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="XXYL_TQTBLL" type="TianWen.XiaoZhen1Qu.BLL.XXYL_TQTBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="XXYL_QPZYBLL" type="TianWen.XiaoZhen1Qu.BLL.XXYL_QPZYBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="XXYL_DIYSGFBLL" type="TianWen.XiaoZhen1Qu.BLL.XXYL_DIYSGFBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="XXYL_HPGBLL" type="TianWen.XiaoZhen1Qu.BLL.XXYL_HPGBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="ZSJM_CYBLL" type="TianWen.XiaoZhen1Qu.BLL.ZSJM_CYBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="ZSJM_FZXBBLL" type="TianWen.XiaoZhen1Qu.BLL.ZSJM_FZXBBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="ZSJM_JCBLL" type="TianWen.XiaoZhen1Qu.BLL.ZSJM_JCBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="ZSJM_JXBLL" type="TianWen.XiaoZhen1Qu.BLL.ZSJM_JXBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="ZSJM_MRBJBLL" type="TianWen.XiaoZhen1Qu.BLL.ZSJM_MRBJBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="ZSJM_LPXSPBLL" type="TianWen.XiaoZhen1Qu.BLL.ZSJM_LPXSPBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="ZSJM_JJHBBLL" type="TianWen.XiaoZhen1Qu.BLL.ZSJM_JJHBBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="ZSJM_JYPXBLL" type="TianWen.XiaoZhen1Qu.BLL.ZSJM_JYPXBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="ZSJM_QCFWBLL" type="TianWen.XiaoZhen1Qu.BLL.ZSJM_QCFWBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="ZSJM_WLFWBLL" type="TianWen.XiaoZhen1Qu.BLL.ZSJM_WLFWBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="ZSJM_NYBLL" type="TianWen.XiaoZhen1Qu.BLL.ZSJM_NYBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="ZSJM_TSBLL" type="TianWen.XiaoZhen1Qu.BLL.ZSJM_TSBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="ZSJM_SHFWBLL" type="TianWen.XiaoZhen1Qu.BLL.ZSJM_SHFWBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="ZSJM_WTMYETBLL" type="TianWen.XiaoZhen1Qu.BLL.ZSJM_WTMYETBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="ZXJC_JZFWBLL" type="TianWen.XiaoZhen1Qu.BLL.ZXJC_JZFWBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="ZXJC_GZFWBLL" type="TianWen.XiaoZhen1Qu.BLL.ZXJC_GZFWBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="ZXJC_FWGZBLL" type="TianWen.XiaoZhen1Qu.BLL.ZXJC_FWGZBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="ZXJC_JCBLL" type="TianWen.XiaoZhen1Qu.BLL.ZXJC_JCBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="ZXJC_JJBLL" type="TianWen.XiaoZhen1Qu.BLL.ZXJC_JJBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="ZXJC_JFJSBLL" type="TianWen.XiaoZhen1Qu.BLL.ZXJC_JFJSBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+</objects>

@@ -205,8 +205,8 @@
     <Content Include="Areas\Business\Css\HTFB\FC\FC_ZZF.css" />
     <Content Include="Areas\Business\Css\HTFB\FC\FC_SP.css" />
     <Content Include="Areas\Business\Css\HTFB\FC\FC_XZL.css" />
-    <Content Include="Areas\Business\Css\GRZL\GRZL.css" />
-    <Content Include="Areas\Business\Css\GRZL\MMSZ.css" />
+    <Content Include="Areas\Business\Css\HTGL\WDZH\GRZL.css" />
+    <Content Include="Areas\Business\Css\HTGL\WDZH\MMSZ.css" />
     <Content Include="Areas\Business\Css\HTGL\WDZH\HBSJ.css" />
     <Content Include="Areas\Business\Css\HTGL\SHGJ\HFCZ.css" />
     <Content Include="Areas\Business\Css\HTGL\SHGJ\ZFFS.css" />
@@ -451,7 +451,7 @@
     <Content Include="Areas\Business\Css\HTFB\PWKQ\PWKQ_YLYJDP.css" />
     <Content Include="Areas\Business\Css\HTFB\QZZP\QZZP_JZZP.css" />
     <Content Include="Areas\Business\Css\HTFB\QZZP\QZZP_QZZP.css" />
-    <Content Include="Areas\Business\Css\RZGL\RZGL.css" />
+    <Content Include="Areas\Business\Css\HTGL\WDZH\RZGL.css" />
     <Content Include="Areas\Business\Css\HTFB\SHFW\SHFW_CLFW_DJSJWP.css" />
     <Content Include="Areas\Business\Css\HTFB\SHFW\SHFW_CLFW_GHSPNJYC.css" />
     <Content Include="Areas\Business\Css\HTFB\SHFW\SHFW_CLFW_JX.css" />
@@ -506,8 +506,8 @@
     <Content Include="Areas\Business\Css\HTGL\WDZJ\WDXJ_CZ.css" />
     <Content Include="Areas\Business\Css\HTGL\WDZJ\WDXJ_MXCX.css" />
     <Content Include="Areas\Business\Css\HTGL\SHGJ\WZCX.css" />
-    <Content Include="Areas\Business\Css\XXGL\XXGL.css" />
-    <Content Include="Areas\Business\Css\XXGL\XXGLMX.css" />
+    <Content Include="Areas\Business\Css\HTGL\WDZH\XXGL.css" />
+    <Content Include="Areas\Business\Css\HTGL\WDZH\XXGLMX.css" />
     <Content Include="Areas\Business\Css\HTFB\XXYL\XXYL_DIYSGF.css" />
     <Content Include="Areas\Business\Css\HTFB\XXYL\XXYL_HPG.css" />
     <Content Include="Areas\Business\Css\HTFB\XXYL\XXYL_HW.css" />
@@ -519,12 +519,13 @@
     <Content Include="Areas\Business\Css\HTFB\XXYL\XXYL_ZLAM.css" />
     <Content Include="Areas\Business\Css\Other\YHDL.css" />
     <Content Include="Areas\Business\Css\HTGL\HTGL.css" />
-    <Content Include="Areas\Business\Css\YXCZ\YXCZ.css" />
+    <Content Include="Areas\Business\Css\XXXX\FCXX.css" />
+    <Content Include="Areas\Business\Css\HTGL\SHGJ\YXCZ.css" />
     <Content Include="Areas\Business\Css\HTGL\WDZH\YXYZ.css" />
     <Content Include="Areas\Business\Css\HTGL\WDZH\YXYZCG.css" />
-    <Content Include="Areas\Business\Css\ZHBD\WBBD.css" />
-    <Content Include="Areas\Business\Css\ZHBD\WXBD.css" />
-    <Content Include="Areas\Business\Css\ZHBD\ZHBD.css" />
+    <Content Include="Areas\Business\Css\HTGL\WDZH\WBBD.css" />
+    <Content Include="Areas\Business\Css\HTGL\WDZH\WXBD.css" />
+    <Content Include="Areas\Business\Css\HTGL\WDZH\ZHBD.css" />
     <Content Include="Areas\Business\Css\HTGL\WDZH\ZHMM.css" />
     <Content Include="Areas\Business\Css\HTFB\ZSJM\ZSJM_CY.css" />
     <Content Include="Areas\Business\Css\HTFB\ZSJM\ZSJM_FZXB.css" />
@@ -659,11 +660,11 @@
     <Content Include="Areas\Business\Scripts\Business\HTFB\FC\FC_SPYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\FC\FC_XZL.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\FC\FC_XZLYZ.js" />
-    <Content Include="Areas\Business\Scripts\Business\FWCG\FWCG.js" />
+    <Content Include="Areas\Business\Scripts\Business\Other\FBCG.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\FC\FC_ZZF.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\FC\FC_ZZFYZ.js" />
-    <Content Include="Areas\Business\Scripts\Business\GRZL\GRZL.js" />
-    <Content Include="Areas\Business\Scripts\Business\GRZL\MMSZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\HTGL\WDZH\GRZL.js" />
+    <Content Include="Areas\Business\Scripts\Business\HTGL\WDZH\MMSZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HTGL\WDZH\HBSJ.js" />
     <Content Include="Areas\Business\Scripts\Business\HTGL\SHGJ\HFCZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\HQSY\HQSY_CZZX.js" />
@@ -964,12 +965,13 @@
     <Content Include="Areas\Business\Scripts\Business\Other\YHDL.js" />
     <Content Include="Areas\Business\Scripts\Business\HTGL\HTGL.js" />
     <Content Include="Areas\Business\Scripts\Business\Other\YHZC.js" />
-    <Content Include="Areas\Business\Scripts\Business\YXCZ\YXCZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\FCXX\FCXX_ZZF.js" />
+    <Content Include="Areas\Business\Scripts\Business\HTGL\SHGJ\YXCZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HTGL\WDZH\YXYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HTGL\WDZH\YXYZCG.js" />
-    <Content Include="Areas\Business\Scripts\Business\ZHBD\WBBD.js" />
-    <Content Include="Areas\Business\Scripts\Business\ZHBD\WXBD.js" />
-    <Content Include="Areas\Business\Scripts\Business\ZHBD\ZHBD.js" />
+    <Content Include="Areas\Business\Scripts\Business\HTGL\WDZH\WBBD.js" />
+    <Content Include="Areas\Business\Scripts\Business\HTGL\WDZH\WXBD.js" />
+    <Content Include="Areas\Business\Scripts\Business\HTGL\WDZH\ZHBD.js" />
     <Content Include="Areas\Business\Scripts\Business\HTGL\WDZH\ZHMM.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\ZSJM\ZSJM_CY.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\ZSJM\ZSJM_CYYZ.js" />
@@ -1300,65 +1302,14 @@
     <Content Include="Areas\Business\Scripts\UEditor\ueditor.js" />
     <Content Include="Areas\Business\Scripts\UEditor\ueditor.parse.min.js" />
     <Content Include="Areas\Business\Scripts\underscore.min.js" />
+    <Content Include="Config\SpringConfig\BLLXXXX.xml" />
     <Content Include="Config\SpringConfig\BLLCXLB.xml" />
-    <Content Include="Config\SpringConfig\BLLHQSY.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Config\SpringConfig\BLLNLMFY.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Config\SpringConfig\BLLZXJC.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Config\SpringConfig\BLLPFCG.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Config\SpringConfig\BLLQZZP.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Config\SpringConfig\BLLLYJD.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Config\SpringConfig\BLLSHFW.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Config\SpringConfig\BLLSWFW.xml" />
-    <Content Include="Config\SpringConfig\BLLJYPX.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Config\SpringConfig\BLLZSJM.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Config\SpringConfig\BLLLR.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Config\SpringConfig\BLLCY.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Config\SpringConfig\BLLXXYL.xml" />
-    <Content Include="Config\SpringConfig\BLLPWKQ.xml" />
     <Content Include="Config\SpringConfig\BLLGY.xml" />
+    <Content Include="Config\SpringConfig\ControllersXXXX.xml" />
     <Content Include="Config\SpringConfig\ControllersCXLB.xml" />
-    <Content Include="Config\SpringConfig\ControllersHQSY.xml" />
-    <Content Include="Config\SpringConfig\ControllersNLMFY.xml" />
-    <Content Include="Config\SpringConfig\ControllersZXJC.xml" />
-    <Content Include="Config\SpringConfig\ControllersPFCG.xml" />
-    <Content Include="Config\SpringConfig\ControllersQZZP.xml" />
-    <Content Include="Config\SpringConfig\ControllersSHFW.xml" />
-    <Content Include="Config\SpringConfig\ControllersSWFW.xml" />
-    <Content Include="Config\SpringConfig\ControllersJYPX.xml" />
-    <Content Include="Config\SpringConfig\ControllersLYJD.xml" />
-    <Content Include="Config\SpringConfig\ControllersZSJM.xml" />
-    <Content Include="Config\SpringConfig\ControllersLR.xml" />
-    <Content Include="Config\SpringConfig\ControllersXXYL.xml" />
-    <Content Include="Config\SpringConfig\ControllersCY.xml" />
-    <Content Include="Config\SpringConfig\ControllersCL.xml" />
+    <Content Include="Config\SpringConfig\ControllersHTFB.xml" />
     <Content Include="Config\SpringConfig\ControllersGY.xml" />
-    <Content Include="Config\SpringConfig\ControllersPWKQ.xml">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="Config\SpringConfig\DAO.xml" />
-    <Content Include="Config\SpringConfig\BLLES.xml" />
     <Content Include="Global.asax" />
     <Content Include="hibernate.cfg.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -1420,6 +1371,7 @@
     <Compile Include="Areas\Business\Controllers\WDXJController.cs" />
     <Compile Include="Areas\Business\Controllers\WZCXController.cs" />
     <Compile Include="Areas\Business\Controllers\XXGLController.cs" />
+    <Compile Include="Areas\Business\Controllers\XXXX\FCXXController.cs" />
     <Compile Include="Areas\Business\Controllers\YHDLController.cs" />
     <Compile Include="Areas\Business\Controllers\HTGLController.cs" />
     <Compile Include="Areas\Business\Controllers\YHJBXXController.cs" />
@@ -1434,18 +1386,6 @@
     <Compile Include="Areas\Business\Scripts\UEditor\net\App_Code\NotSupportedHandler.cs" />
     <Compile Include="Areas\Business\Scripts\UEditor\net\App_Code\PathFormater.cs" />
     <Compile Include="Areas\Business\Scripts\UEditor\net\App_Code\UploadHandler.cs" />
-    <Content Include="Config\SpringConfig\ControllersES.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Config\SpringConfig\ControllersCW.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Config\SpringConfig\BLLCW.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Config\SpringConfig\BLLFC.xml">
-      <SubType>Designer</SubType>
-    </Content>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -1552,7 +1492,7 @@
     <Content Include="Areas\Business\Views\ES\ES_QTES_CRYP.cshtml" />
     <Content Include="Areas\Business\Views\CL\CL_ZXCDDCSLC.cshtml" />
     <Content Include="Areas\Business\Views\CL\CL_MTC.cshtml" />
-    <Content Include="Config\SpringConfig\BLLCL.xml">
+    <Content Include="Config\SpringConfig\BLLHTFB.xml">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Areas\Business\Views\CL\CL_HC.cshtml" />
@@ -1731,9 +1671,9 @@
     <Content Include="Areas\Business\Views\NLMFY\NLMFY_NJJSB.cshtml" />
     <Content Include="Areas\Business\Views\NLMFY\NLMFY_NCPJG.cshtml" />
     <Content Include="Areas\Business\Views\SY\SY.cshtml" />
-    <Content Include="Config\SpringConfig\ControllersFC.xml" />
     <Content Include="Areas\Business\Views\FCCX\FCCX_ZZF.cshtml" />
     <Content Include="Areas\Business\Views\Shared\Other.cshtml" />
+    <Content Include="Areas\Business\Views\FCXX\FCXX_ZZF.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

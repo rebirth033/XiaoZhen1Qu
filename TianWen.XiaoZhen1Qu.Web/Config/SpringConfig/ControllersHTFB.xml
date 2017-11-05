@@ -1,0 +1,636 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects  xmlns="http://www.springframework.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.net http://www.springframework.net/xsd/spring-objects.xsd">
+  <object id="CLController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.CLController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+      <property name="CL_GCCBLL">
+      <ref object="CL_GCCBLL"/>
+    </property>
+    <property name="CL_HCBLL">
+      <ref object="CL_HCBLL"/>
+    </property>
+    <property name="CL_JCBLL">
+      <ref object="CL_JCBLL"/>
+    </property>
+    <property name="CL_KCBLL">
+      <ref object="CL_KCBLL"/>
+    </property>
+    <property name="CL_MTCBLL">
+      <ref object="CL_MTCBLL"/>
+    </property>
+    <property name="CL_ZXCDDCSLCBLL">
+      <ref object="CL_ZXCDDCSLCBLL"/>
+    </property>
+  </object>
+  <object id="CWController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.CWController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="CW_CWGBLL">
+      <ref object="CW_CWGBLL"/>
+    </property>
+    <property name="CW_CWMBLL">
+      <ref object="CW_CWMBLL"/>
+    </property>
+    <property name="CW_HNYCBLL">
+      <ref object="CW_HNYCBLL"/>
+    </property>
+    <property name="CW_CWYPSPBLL">
+      <ref object="CW_CWYPSPBLL"/>
+    </property>
+    <property name="CW_CWZSLYBLL">
+      <ref object="CW_CWZSLYBLL"/>
+    </property>
+    <property name="CW_CWFWBLL">
+      <ref object="CW_CWFWBLL"/>
+    </property>
+  </object>
+  <object id="CYController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.CYController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="CY_MSBLL">
+      <ref object="CY_MSBLL"/>
+    </property>
+    <property name="CY_KCTSBLL">
+      <ref object="CY_KCTSBLL"/>
+    </property>
+    <property name="CY_WMBLL">
+      <ref object="CY_WMBLL"/>
+    </property>
+  </object>
+  <object id="ESController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.ESController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="ES_SJSM_ESSJBLL">
+      <ref object="ES_SJSM_ESSJBLL"/>
+    </property>
+    <property name="ES_SJSM_BJBDNBLL">
+      <ref object="ES_SJSM_BJBDNBLL"/>
+    </property>
+    <property name="ES_SJSM_PBDNBLL">
+      <ref object="ES_SJSM_PBDNBLL"/>
+    </property>
+    <property name="ES_SJSM_SMCPBLL">
+      <ref object="ES_SJSM_SMCPBLL"/>
+    </property>
+    <property name="ES_SJSM_TSJBLL">
+      <ref object="ES_SJSM_TSJBLL"/>
+    </property>
+    <property name="ES_JDJJBG_ESJDBLL">
+      <ref object="ES_JDJJBG_ESJDBLL"/>
+    </property>
+    <property name="ES_JDJJBG_ESJJBLL">
+      <ref object="ES_JDJJBG_ESJJBLL"/>
+    </property>
+    <property name="ES_JDJJBG_JJRYBLL">
+      <ref object="ES_JDJJBG_JJRYBLL"/>
+    </property>
+    <property name="ES_JDJJBG_BGSBBLL">
+      <ref object="ES_JDJJBG_BGSBBLL"/>
+    </property>
+    <property name="ES_MYFZMR_MYETYPWJBLL">
+      <ref object="ES_MYFZMR_MYETYPWJBLL"/>
+    </property>
+    <property name="ES_MYFZMR_FZXMXBBLL">
+      <ref object="ES_MYFZMR_FZXMXBBLL"/>
+    </property>
+    <property name="ES_MYFZMR_MRBJBLL">
+      <ref object="ES_MYFZMR_MRBJBLL"/>
+    </property>
+    <property name="ES_WHYL_YSPSCPBLL">
+      <ref object="ES_WHYL_YSPSCPBLL"/>
+    </property>
+    <property name="ES_WHYL_WTHWYQBLL">
+      <ref object="ES_WHYL_WTHWYQBLL"/>
+    </property>
+    <property name="ES_WHYL_TSYXRJBLL">
+      <ref object="ES_WHYL_TSYXRJBLL"/>
+    </property>
+    <property name="ES_WHYL_WYXNWPBLL">
+      <ref object="ES_WHYL_WYXNWPBLL"/>
+    </property>
+    <property name="ES_QTES_ESSBBLL">
+      <ref object="ES_QTES_ESSBBLL"/>
+    </property>
+    <property name="ES_QTES_CRYPBLL">
+      <ref object="ES_QTES_CRYPBLL"/>
+    </property>
+  </object>
+  <object id="FCController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.FCController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="FC_ZZFJBXXBLL">
+      <ref object="FC_ZZFJBXXBLL"/>
+    </property>
+    <property name="FC_DZFBLL">
+      <ref object="FC_DZFBLL"/>
+    </property>
+    <property name="FC_SPBLL">
+      <ref object="FC_SPBLL"/>
+    </property>
+    <property name="FC_XZLBLL">
+      <ref object="FC_XZLBLL"/>
+    </property>
+    <property name="FC_CKCFTDCWBLL">
+      <ref object="FC_CKCFTDCWBLL"/>
+    </property>
+  </object>
+  <object id="HQSYController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.HQSYController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="HQSY_HQGSBLL">
+      <ref object="HQSY_HQGSBLL"/>
+    </property>
+    <property name="HQSY_HCZLBLL">
+      <ref object="HQSY_HCZLBLL"/>
+    </property>
+    <property name="HQSY_HYJDBLL">
+      <ref object="HQSY_HYJDBLL"/>
+    </property>
+    <property name="HQSY_CZZXBLL">
+      <ref object="HQSY_CZZXBLL"/>
+    </property>
+    <property name="HQSY_HQYPBLL">
+      <ref object="HQSY_HQYPBLL"/>
+    </property>
+    <property name="HQSY_SYBLL">
+      <ref object="HQSY_SYBLL"/>
+    </property>
+    <property name="HQSY_HLGPBLL">
+      <ref object="HQSY_HLGPBLL"/>
+    </property>
+    <property name="HQSY_HSLFBLL">
+      <ref object="HQSY_HSLFBLL"/>
+    </property>
+    <property name="HQSY_ZBSSBLL">
+      <ref object="HQSY_ZBSSBLL"/>
+    </property>
+    <property name="HQSY_HSSYBLL">
+      <ref object="HQSY_HSSYBLL"/>
+    </property>
+  </object>
+  <object id="JYPXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.JYPXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="JYPX_ZXXFDBBLL">
+      <ref object="JYPX_ZXXFDBBLL"/>
+    </property>
+    <property name="JYPX_JJGRBLL">
+      <ref object="JYPX_JJGRBLL"/>
+    </property>
+    <property name="JYPX_JJJGBLL">
+      <ref object="JYPX_JJJGBLL"/>
+    </property>
+    <property name="JYPX_ZXXYDYBLL">
+      <ref object="JYPX_ZXXYDYBLL"/>
+    </property>
+    <property name="JYPX_YYPXJGBLL">
+      <ref object="JYPX_YYPXJGBLL"/>
+    </property>
+    <property name="JYPX_YYPXJSBLL">
+      <ref object="JYPX_YYPXJSBLL"/>
+    </property>
+    <property name="JYPX_ZYJNPXBLL">
+      <ref object="JYPX_ZYJNPXBLL"/>
+    </property>
+    <property name="JYPX_XLJYBLL">
+      <ref object="JYPX_XLJYBLL"/>
+    </property>
+    <property name="JYPX_YSPXBLL">
+      <ref object="JYPX_YSPXBLL"/>
+    </property>
+    <property name="JYPX_YSPXJSBLL">
+      <ref object="JYPX_YSPXJSBLL"/>
+    </property>
+    <property name="JYPX_TYPXBLL">
+      <ref object="JYPX_TYPXBLL"/>
+    </property>
+    <property name="JYPX_ITPXBLL">
+      <ref object="JYPX_ITPXBLL"/>
+    </property>
+    <property name="JYPX_SJPXBLL">
+      <ref object="JYPX_SJPXBLL"/>
+    </property>
+    <property name="JYPX_GLPXBLL">
+      <ref object="JYPX_GLPXBLL"/>
+    </property>
+    <property name="JYPX_YYEJYBLL">
+      <ref object="JYPX_YYEJYBLL"/>
+    </property>
+    <property name="JYPX_LXBLL">
+      <ref object="JYPX_LXBLL"/>
+    </property>
+    <property name="JYPX_YMBLL">
+      <ref object="JYPX_YMBLL"/>
+    </property>
+    <property name="JYPX_TYJLBLL">
+      <ref object="JYPX_TYJLBLL"/>
+    </property>
+    <property name="JYPX_PBPKBLL">
+      <ref object="JYPX_PBPKBLL"/>
+    </property>
+  </object>
+  <object id="LRController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.LRController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="LR_MTSSBLL">
+      <ref object="LR_MTSSBLL"/>
+    </property>
+    <property name="LR_MRHFBLL">
+      <ref object="LR_MRHFBLL"/>
+    </property>
+    <property name="LR_SPABLL">
+      <ref object="LR_SPABLL"/>
+    </property>
+    <property name="LR_WDBLL">
+      <ref object="LR_WDBLL"/>
+    </property>
+    <property name="LR_MFHFBLL">
+      <ref object="LR_MFHFBLL"/>
+    </property>
+    <property name="LR_MJBLL">
+      <ref object="LR_MJBLL"/>
+    </property>
+    <property name="LR_WSBLL">
+      <ref object="LR_WSBLL"/>
+    </property>
+    <property name="LR_KQHLBLL">
+      <ref object="LR_KQHLBLL"/>
+    </property>
+    <property name="LR_TJBLL">
+      <ref object="LR_TJBLL"/>
+    </property>
+    <property name="LR_YJBLL">
+      <ref object="LR_YJBLL"/>
+    </property>
+  </object>
+  <object id="LYJDController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.LYJDController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="LYJD_LXSBLL">
+      <ref object="LYJD_LXSBLL"/>
+    </property>
+    <property name="LYJD_GNYBLL">
+      <ref object="LYJD_GNYBLL"/>
+    </property>
+    <property name="LYJD_ZBYBLL">
+      <ref object="LYJD_ZBYBLL"/>
+    </property>
+    <property name="LYJD_CJYBLL">
+      <ref object="LYJD_CJYBLL"/>
+    </property>
+    <property name="LYJD_JDZSYDBLL">
+      <ref object="LYJD_JDZSYDBLL"/>
+    </property>
+    <property name="LYJD_JPBLL">
+      <ref object="LYJD_JPBLL"/>
+    </property>
+    <property name="LYJD_DYDDRBLL">
+      <ref object="LYJD_DYDDRBLL"/>
+    </property>
+  </object>
+  <object id="NLMFYController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.NLMFYController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="NLMFY_YLHHBLL">
+      <ref object="NLMFY_YLHHBLL"/>
+    </property>
+    <property name="NLMFY_NZWBLL">
+      <ref object="NLMFY_NZWBLL"/>
+    </property>
+    <property name="NLMFY_DZWZMBLL">
+      <ref object="NLMFY_DZWZMBLL"/>
+    </property>
+    <property name="NLMFY_CQYZBLL">
+      <ref object="NLMFY_CQYZBLL"/>
+    </property>
+    <property name="NLMFY_SCBLL">
+      <ref object="NLMFY_SCBLL"/>
+    </property>
+    <property name="NLMFY_FLNYBLL">
+      <ref object="NLMFY_FLNYBLL"/>
+    </property>
+    <property name="NLMFY_SLSYBLL">
+      <ref object="NLMFY_SLSYBLL"/>
+    </property>
+    <property name="NLMFY_NJJSBBLL">
+      <ref object="NLMFY_NJJSBBLL"/>
+    </property>
+    <property name="NLMFY_NCPJGBLL">
+      <ref object="NLMFY_NCPJGBLL"/>
+    </property>
+  </object>
+  <object id="PFCGController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.PFCGController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="PFCG_SPBLL">
+      <ref object="PFCG_SPBLL"/>
+    </property>
+    <property name="PFCG_LPBLL">
+      <ref object="PFCG_LPBLL"/>
+    </property>
+    <property name="PFCG_FSXMBLL">
+      <ref object="PFCG_FSXMBLL"/>
+    </property>
+    <property name="PFCG_XBSPBLL">
+      <ref object="PFCG_XBSPBLL"/>
+    </property>
+    <property name="PFCG_SJSMBLL">
+      <ref object="PFCG_SJSMBLL"/>
+    </property>
+    <property name="PFCG_MYWJBLL">
+      <ref object="PFCG_MYWJBLL"/>
+    </property>
+    <property name="PFCG_HWYDBLL">
+      <ref object="PFCG_HWYDBLL"/>
+    </property>
+    <property name="PFCG_HZPBLL">
+      <ref object="PFCG_HZPBLL"/>
+    </property>
+    <property name="PFCG_AFSBBLL">
+      <ref object="PFCG_AFSBBLL"/>
+    </property>
+    <property name="PFCG_FZBLBLL">
+      <ref object="PFCG_FZBLBLL"/>
+    </property>
+    <property name="PFCG_SCSBBLL">
+      <ref object="PFCG_SCSBBLL"/>
+    </property>
+    <property name="PFCG_HXPBLL">
+      <ref object="PFCG_HXPBLL"/>
+    </property>
+    <property name="PFCG_DGDLBLL">
+      <ref object="PFCG_DGDLBLL"/>
+    </property>
+    <property name="PFCG_DZYQJBLL">
+      <ref object="PFCG_DZYQJBLL"/>
+    </property>
+    <property name="PFCG_YBYQBLL">
+      <ref object="PFCG_YBYQBLL"/>
+    </property>
+    <property name="PFCG_DJZMBLL">
+      <ref object="PFCG_DJZMBLL"/>
+    </property>
+    <property name="PFCG_YCLBLL">
+      <ref object="PFCG_YCLBLL"/>
+    </property>
+    <property name="PFCG_BZBLL">
+      <ref object="PFCG_BZBLL"/>
+    </property>
+    <property name="PFCG_YXBLL">
+      <ref object="PFCG_YXBLL"/>
+    </property>
+    <property name="PFCG_TSBLL">
+      <ref object="PFCG_TSBLL"/>
+    </property>
+    <property name="PFCG_KQBLL">
+      <ref object="PFCG_KQBLL"/>
+    </property>
+    <property name="PFCG_JXJGBLL">
+      <ref object="PFCG_JXJGBLL"/>
+    </property>
+  </object>
+  <object id="PWKQController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.PWKQController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="PWKQ_DYPBLL">
+      <ref object="PWKQ_DYPBLL"/>
+    </property>
+    <property name="PWKQ_YCMPBLL">
+      <ref object="PWKQ_YCMPBLL"/>
+    </property>
+    <property name="PWKQ_YLYJDPBLL">
+      <ref object="PWKQ_YLYJDPBLL"/>
+    </property>
+    <property name="PWKQ_XFKGWQBLL">
+      <ref object="PWKQ_XFKGWQBLL"/>
+    </property>
+    <property name="PWKQ_QTKQBLL">
+      <ref object="PWKQ_QTKQBLL"/>
+    </property>
+  </object>
+  <object id="QZZPController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.QZZPController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="QZZP_QZZPBLL">
+      <ref object="QZZP_QZZPBLL"/>
+    </property>
+    <property name="QZZP_JZZPBLL">
+      <ref object="QZZP_JZZPBLL"/>
+    </property>
+  </object>
+  <object id="SHFWController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SHFWController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="SHFW_SHFW_BJBLL">
+      <ref object="SHFW_SHFW_BJBLL"/>
+    </property>
+    <property name="SHFW_SHFW_BMYSBLL">
+      <ref object="SHFW_SHFW_BMYSBLL"/>
+    </property>
+    <property name="SHFW_SHFW_BJQXBLL">
+      <ref object="SHFW_SHFW_BJQXBLL"/>
+    </property>
+    <property name="SHFW_SHFW_KSHSXSBLL">
+      <ref object="SHFW_SHFW_KSHSXSBLL"/>
+    </property>
+    <property name="SHFW_SHFW_SHPSBLL">
+      <ref object="SHFW_SHFW_SHPSBLL"/>
+    </property>
+    <property name="SHFW_SHFW_QMFSSMBLL">
+      <ref object="SHFW_SHFW_QMFSSMBLL"/>
+    </property>
+    <property name="SHFW_SHFW_GDSTQLBLL">
+      <ref object="SHFW_SHFW_GDSTQLBLL"/>
+    </property>
+    <property name="SHFW_SHFW_BZMDBLL">
+      <ref object="SHFW_SHFW_BZMDBLL"/>
+    </property>
+    <property name="SHFW_WXFW_JDWXBLL">
+      <ref object="SHFW_WXFW_JDWXBLL"/>
+    </property>
+    <property name="SHFW_WXFW_DNWXBLL">
+      <ref object="SHFW_WXFW_DNWXBLL"/>
+    </property>
+    <property name="SHFW_WXFW_FWWXDKBLL">
+      <ref object="SHFW_WXFW_FWWXDKBLL"/>
+    </property>
+    <property name="SHFW_WXFW_JJWXBLL">
+      <ref object="SHFW_WXFW_JJWXBLL"/>
+    </property>
+    <property name="SHFW_WXFW_SJSMWXBLL">
+      <ref object="SHFW_WXFW_SJSMWXBLL"/>
+    </property>
+    <property name="SHFW_CLFW_ZCBLL">
+      <ref object="SHFW_CLFW_ZCBLL"/>
+    </property>
+    <property name="SHFW_CLFW_DJSJWPBLL">
+      <ref object="SHFW_CLFW_DJSJWPBLL"/>
+    </property>
+    <property name="SHFW_CLFW_JXBLL">
+      <ref object="SHFW_CLFW_JXBLL"/>
+    </property>
+    <property name="SHFW_CLFW_QCPLBLL">
+      <ref object="SHFW_CLFW_QCPLBLL"/>
+    </property>
+    <property name="SHFW_CLFW_QCWXBYBLL">
+      <ref object="SHFW_CLFW_QCWXBYBLL"/>
+    </property>
+    <property name="SHFW_CLFW_GHSPNJYCBLL">
+      <ref object="SHFW_CLFW_GHSPNJYCBLL"/>
+    </property>
+    <property name="SHFW_CLFW_QCMRZSBLL">
+      <ref object="SHFW_CLFW_QCMRZSBLL"/>
+    </property>
+    <property name="SHFW_CLFW_QCGZFHBLL">
+      <ref object="SHFW_CLFW_QCGZFHBLL"/>
+    </property>
+  </object>
+  <object id="SWFWController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SWFWController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="SWFW_GSZCBLL">
+      <ref object="SWFW_GSZCBLL"/>
+    </property>
+    <property name="SWFW_SBZLBLL">
+      <ref object="SWFW_SBZLBLL"/>
+    </property>
+    <property name="SWFW_FLZXBLL">
+      <ref object="SWFW_FLZXBLL"/>
+    </property>
+    <property name="SWFW_CWKJPGBLL">
+      <ref object="SWFW_CWKJPGBLL"/>
+    </property>
+    <property name="SWFW_BXBLL">
+      <ref object="SWFW_BXBLL"/>
+    </property>
+    <property name="SWFW_TZDBBLL">
+      <ref object="SWFW_TZDBBLL"/>
+    </property>
+    <property name="SWFW_YSBZBLL">
+      <ref object="SWFW_YSBZBLL"/>
+    </property>
+    <property name="SWFW_PHZPBLL">
+      <ref object="SWFW_PHZPBLL"/>
+    </property>
+    <property name="SWFW_SJCHBLL">
+      <ref object="SWFW_SJCHBLL"/>
+    </property>
+    <property name="SWFW_GGCMBLL">
+      <ref object="SWFW_GGCMBLL"/>
+    </property>
+    <property name="SWFW_ZHFWBLL">
+      <ref object="SWFW_ZHFWBLL"/>
+    </property>
+    <property name="SWFW_LPDZBLL">
+      <ref object="SWFW_LPDZBLL"/>
+    </property>
+    <property name="SWFW_ZKBLL">
+      <ref object="SWFW_ZKBLL"/>
+    </property>
+    <property name="SWFW_WLBXWHBLL">
+      <ref object="SWFW_WLBXWHBLL"/>
+    </property>
+    <property name="SWFW_WZJSTGBLL">
+      <ref object="SWFW_WZJSTGBLL"/>
+    </property>
+    <property name="SWFW_ZXFWBLL">
+      <ref object="SWFW_ZXFWBLL"/>
+    </property>
+    <property name="SWFW_KDBLL">
+      <ref object="SWFW_KDBLL"/>
+    </property>
+    <property name="SWFW_FYSJBLL">
+      <ref object="SWFW_FYSJBLL"/>
+    </property>
+    <property name="SWFW_HYWLBLL">
+      <ref object="SWFW_HYWLBLL"/>
+    </property>
+    <property name="SWFW_HYZXBLL">
+      <ref object="SWFW_HYZXBLL"/>
+    </property>
+    <property name="SWFW_BGSBWXBLL">
+      <ref object="SWFW_BGSBWXBLL"/>
+    </property>
+    <property name="SWFW_ZLBLL">
+      <ref object="SWFW_ZLBLL"/>
+    </property>
+    <property name="SWFW_DBQZQZBLL">
+      <ref object="SWFW_DBQZQZBLL"/>
+    </property>
+    <property name="SWFW_JZWXBLL">
+      <ref object="SWFW_JZWXBLL"/>
+    </property>
+    <property name="SWFW_JXSBWXBLL">
+      <ref object="SWFW_JXSBWXBLL"/>
+    </property>
+    <property name="SWFW_SYSXBLL">
+      <ref object="SWFW_SYSXBLL"/>
+    </property>
+    <property name="SWFW_LYQDBLL">
+      <ref object="SWFW_LYQDBLL"/>
+    </property>
+  </object>
+  <object id="XXYLController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.XXYLController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="XXYL_YDJSBLL">
+      <ref object="XXYL_YDJSBLL"/>
+    </property>
+    <property name="XXYL_YDJBBLL">
+      <ref object="XXYL_YDJBBLL"/>
+    </property>
+    <property name="XXYL_HWBLL">
+      <ref object="XXYL_HWBLL"/>
+    </property>
+    <property name="XXYL_XYWQBLL">
+      <ref object="XXYL_XYWQBLL"/>
+    </property>
+    <property name="XXYL_ZLAMBLL">
+      <ref object="XXYL_ZLAMBLL"/>
+    </property>
+    <property name="XXYL_TQTBLL">
+      <ref object="XXYL_TQTBLL"/>
+    </property>
+    <property name="XXYL_QPZYBLL">
+      <ref object="XXYL_QPZYBLL"/>
+    </property>
+    <property name="XXYL_DIYSGFBLL">
+      <ref object="XXYL_DIYSGFBLL"/>
+    </property>
+    <property name="XXYL_HPGBLL">
+      <ref object="XXYL_HPGBLL"/>
+    </property>
+  </object>
+  <object id="ZSJMController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.ZSJMController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="ZSJM_CYBLL">
+      <ref object="ZSJM_CYBLL"/>
+    </property>
+    <property name="ZSJM_FZXBBLL">
+      <ref object="ZSJM_FZXBBLL"/>
+    </property>
+    <property name="ZSJM_JCBLL">
+      <ref object="ZSJM_JCBLL"/>
+    </property>
+    <property name="ZSJM_JXBLL">
+      <ref object="ZSJM_JXBLL"/>
+    </property>
+    <property name="ZSJM_MRBJBLL">
+      <ref object="ZSJM_MRBJBLL"/>
+    </property>
+    <property name="ZSJM_LPXSPBLL">
+      <ref object="ZSJM_LPXSPBLL"/>
+    </property>
+    <property name="ZSJM_JJHBBLL">
+      <ref object="ZSJM_JJHBBLL"/>
+    </property>
+    <property name="ZSJM_JYPXBLL">
+      <ref object="ZSJM_JYPXBLL"/>
+    </property>
+    <property name="ZSJM_QCFWBLL">
+      <ref object="ZSJM_QCFWBLL"/>
+    </property>
+    <property name="ZSJM_WLFWBLL">
+      <ref object="ZSJM_WLFWBLL"/>
+    </property>
+    <property name="ZSJM_NYBLL">
+      <ref object="ZSJM_NYBLL"/>
+    </property>
+    <property name="ZSJM_TSBLL">
+      <ref object="ZSJM_TSBLL"/>
+    </property>
+    <property name="ZSJM_SHFWBLL">
+      <ref object="ZSJM_SHFWBLL"/>
+    </property>
+    <property name="ZSJM_WTMYETBLL">
+      <ref object="ZSJM_WTMYETBLL"/>
+    </property>
+  </object>
+  <object id="ZXJCController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.ZXJCController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="ZXJC_JZFWBLL">
+      <ref object="ZXJC_JZFWBLL"/>
+    </property>
+    <property name="ZXJC_GZFWBLL">
+      <ref object="ZXJC_GZFWBLL"/>
+    </property>
+    <property name="ZXJC_FWGZBLL">
+      <ref object="ZXJC_FWGZBLL"/>
+    </property>
+    <property name="ZXJC_JCBLL">
+      <ref object="ZXJC_JCBLL"/>
+    </property>
+    <property name="ZXJC_JJBLL">
+      <ref object="ZXJC_JJBLL"/>
+    </property>
+    <property name="ZXJC_JFJSBLL">
+      <ref object="ZXJC_JFJSBLL"/>
+    </property>
+  </object>
+</objects>

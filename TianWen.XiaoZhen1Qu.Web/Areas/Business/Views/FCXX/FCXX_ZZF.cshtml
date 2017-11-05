@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "信息小镇_房产详细信息";
+    Layout = "~/Areas/Business/Views/Shared/QTCXLB.cshtml";
+}
+@section Section_Head {
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link href="@Url.Content("~/Areas/Business/Css/XXXX/FCXX.css")" rel="stylesheet" />
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/XXXX/FCXX/FCXX_ZZF.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/Common/XZQ.js")"></script>
+}
+@section Section_Body {
+    <div id="divNav" class="div_nav">
+        <ul class="ul_nav">
+            <li class="li_nav_font">信息小镇</li>
+            <li class="li_nav_split">></li>
+            <li class="li_nav_font">@ViewData["XZQ"]房产信息</li>
+            <li class="li_nav_split">></li>
+            <li class="li_nav_font">@ViewData["XZQ"]整租房</li>
+        </ul>
+    </div>
+}
