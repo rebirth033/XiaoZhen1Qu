@@ -150,6 +150,7 @@ function LoadInfo(obj) {
     html += ('<li class="li_body_left">');
     html += ('<div class="div_li_body_left_left">');
     html += ('<img class="img_li_body_left" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
+    html += ('<div class="div_img_li_body_left_count"><span>' + obj.PHOTOS.length + '图</span></div>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
     html += ('<p class="p_li_body_left_center_bt">' + obj.BT + '</p>');
@@ -234,14 +235,14 @@ function LoadHot(TYPE) {
         }
     });
 }
-
+//加载热门单条信息
 function LoadHotInfo(obj) {
     var html = "";
     html += ('<li class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_right_xq">晋安 / 塔头 / 洋下新村</p>');
-    html += ('<p class="p_li_body_right_cs">2室 54平</p>');
-    html += ('<p class="p_li_body_right_jg">1250元/月</p>');
+    html += ('<p class="p_li_body_right_xq">' + obj.XQDZ.split('-')[0] + ' / ' + obj.XQDZ.split('-')[1] + ' / ' + obj.XQMC + '</p>');
+    html += ('<p class="p_li_body_right_cs">' + obj.S + '室 ' + obj.PFM + '平</p>');
+    html += ('<p class="p_li_body_right_jg">' + obj.ZJ + '元/月</p>');
     html += ('</li>');
     $("#ul_body_right").append(html);
 }
