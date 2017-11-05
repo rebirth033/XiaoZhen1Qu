@@ -13,17 +13,17 @@ namespace TianWen.XiaoZhen1Qu.BLL
 {
     public class FCCXBLL : BaseBLL, IFCCXBLL
     {
-        public object LoadFCXX(string TYPE, string PageIndex, string PageSize)
+        public object LoadFCXX(string TYPE, string Condition, string PageIndex, string PageSize)
         {
             try
             {
                 DataTable dt = new DataTable();
                 if (TYPE == "FC")//房产
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,fc_zzfjbxx b where a.jcxxid = b.jcxxid order by zxgxsj desc");
+                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,fc_zzfjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + " order by zxgxsj desc");
                 }
                 List<FC_ZZFView> list = ConvertHelper.DataTableToList<FC_ZZFView>(dt);
-                
+
                 int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                 int TotalCount = list.Count;
                 var WDCountlist = from p in list.Where(p => p.STATUS == 0) select p;
@@ -45,6 +45,28 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 LoggerManager.Error("error", ex.Message);
                 return new { Result = EnResultType.Failed, Message = "加载失败" };
             }
+        }
+
+        public string GetConditin(string Condition)
+        {
+            StringBuilder condition = new StringBuilder();
+            string[] conditions = Condition.Split(',');
+            for (int i = 0; i < conditions.Count(); i++)
+            {
+                string[] array = conditions[i].Split(':');
+                if (array[1] != "不限")
+                {
+                    if (array[0] == "租金")
+                    {
+
+                    }
+                    else
+                    {
+                        condition.AppendFormat(" and {0} = '{1}'", array[0], array[1]);
+                    }
+                }
+            }
+            return condition.ToString();
         }
     }
 }

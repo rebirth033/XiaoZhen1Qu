@@ -7,6 +7,6 @@ namespace TianWen.XiaoZhen1Qu.Interface.CXLB
 {
     public interface IFCCXBLL : IBaseBLL
     {
-        object LoadFCXX(string TYPE, string PageIndex, string PageSize);
+        object LoadFCXX(string TYPE, string Condition, string PageIndex, string PageSize);
     }
 }

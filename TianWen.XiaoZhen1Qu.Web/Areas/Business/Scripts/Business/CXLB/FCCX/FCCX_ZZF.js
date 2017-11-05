@@ -76,6 +76,8 @@ function DeleteSelect(obj) {
             else $(this).removeClass("li_condition_body_active");
         });
     });
+    if (HasCondition() === "")
+        $("#divConditionSelect").css("display", "none");
     LoadBody("FC", currentIndex);
 }
 //加载查询条件
@@ -104,6 +106,16 @@ function GetCondition(type) {
     });
     return value;
 }
+//是否有条件
+function HasCondition() {
+    var condition = "";
+    $(".li_condition_body").each(function() {
+        if ($(this).html() !== "不限" && $(this).css("color") === "rgb(91, 192, 222)")
+            condition += $(this).html();
+    });
+    return condition;
+}
+
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
