@@ -14,6 +14,7 @@ $(document).ready(function () {
     BindBodyNav();
     LoadFCCXCondition();
     LoadBody("FC", currentIndex);
+    LoadHot("FC");
 });
 //类别选择
 function OpenLBXZ() {
@@ -57,12 +58,11 @@ function SelectCondition() {
     $(this).addClass("li_condition_body_active");
     $(".div_condition_select").css("display", "block");
     $("#ul_condition_select").html('<li class="li_condition_select_first">筛选条件</li>');
-    $(".li_condition_body").each(function() {
+    $(".li_condition_body").each(function () {
         if ($(this).css("color") === "rgb(91, 192, 222)" && $(this).html() !== "不限") {
             $("#ul_condition_select").append('<li onclick="DeleteSelect(this)" class="li_condition_select"><span>' + $(this).html() + '</span><em>x</em></li>');
         }
     });
-   
     LoadBody("FC", currentIndex);
 }
 //绑定选择条件删除事件
@@ -71,10 +71,10 @@ function DeleteSelect(obj) {
     $(obj).css("display", "none");
     $(".li_condition_body").each(function () {
         if (select.indexOf($(this).html()) !== -1)
-        $(this).parent().find(".li_condition_body").each(function(index) {
-            if (index === 0) $(this).addClass("li_condition_body_active");
-            else $(this).removeClass("li_condition_body_active");
-        });
+            $(this).parent().find(".li_condition_body").each(function (index) {
+                if (index === 0) $(this).addClass("li_condition_body_active");
+                else $(this).removeClass("li_condition_body_active");
+            });
     });
     if (HasCondition() === "")
         $("#divConditionSelect").css("display", "none");
@@ -109,13 +109,12 @@ function GetCondition(type) {
 //是否有条件
 function HasCondition() {
     var condition = "";
-    $(".li_condition_body").each(function() {
+    $(".li_condition_body").each(function () {
         if ($(this).html() !== "不限" && $(this).css("color") === "rgb(91, 192, 222)")
             condition += $(this).html();
     });
     return condition;
 }
-
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
@@ -128,7 +127,7 @@ function LoadBody(TYPE, PageIndex) {
         {
             TYPE: TYPE,
             Condition: condition,
-            PageSize: 20,
+            PageSize: 5,
             PageIndex: PageIndex
         },
         success: function (xml) {
@@ -145,7 +144,7 @@ function LoadBody(TYPE, PageIndex) {
         }
     });
 }
-
+//加载单条信息
 function LoadInfo(obj) {
     var html = "";
     html += ('<li class="li_body_left">');
@@ -163,7 +162,7 @@ function LoadInfo(obj) {
     html += ('</li>');
     $("#ul_body_left").append(html);
 }
-
+//加载分页
 function LoadPage(PageCount) {
     var index = parseInt(currentIndex);
     $("#div_main_info_bottom_fy").html('');
@@ -208,4 +207,41 @@ function LoadPage(PageCount) {
         $("#div_main_info_bottom_fy").append('<a onclick="LoadDefault(\'' + "divZJFBXX" + '\',\'' + (index + 1) + '\')" class="a_main_info_bottom_fy">下一页</a>');
         $("#div_main_info_bottom_fy").append('<a onclick="LoadDefault(\'' + "divZJFBXX" + '\',\'' + PageCount + '\')" class="a_main_info_bottom_fy">尾页</a>');
     }
+}
+//加载热门推荐
+function LoadHot(TYPE) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/FCCX/LoadFCXX",
+        dataType: "json",
+        data:
+        {
+            TYPE: TYPE,
+            Condition: "STATUS:1",
+            PageSize: 5,
+            PageIndex: 1
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                $("#ul_body_right").html('');
+                for (var i = 0; i < xml.list.length; i++) {
+                    LoadHotInfo(xml.list[i]);
+                }
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+
+function LoadHotInfo(obj) {
+    var html = "";
+    html += ('<li class="li_body_right">');
+    html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
+    html += ('<p class="p_li_body_right_xq">晋安 / 塔头 / 洋下新村</p>');
+    html += ('<p class="p_li_body_right_cs">2室 54平</p>');
+    html += ('<p class="p_li_body_right_jg">1250元/月</p>');
+    html += ('</li>');
+    $("#ul_body_right").append(html);
 }
