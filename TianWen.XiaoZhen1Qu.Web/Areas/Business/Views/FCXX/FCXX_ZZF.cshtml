@@ -8,6 +8,7 @@
     <link href="@Url.Content("~/Areas/Business/Css/XXXX/FCXX.css")" rel="stylesheet" />
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/XXXX/FCXX/FCXX_ZZF.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/Common/XZQ.js")"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=134db1b9cf1f1f2b4427210932b34dcb"></script>
 }
 @section Section_Body {
     <div id="divNav" class="div_nav">
@@ -261,7 +262,14 @@
                         <span class="span_body_left_body_xqxx_right">25%（绿化率适中）</span>
                     </li>
                 </ul>
-                <div class="div_body_left_body_xqxx_dtxx"></div>
+                <div id="div_body_left_body_xqxx_dtxx" class="div_body_left_body_xqxx_dtxx">
+                    <p class="p_body_left_body_xqxx_dtxx">小区地图</p>
+                    <div style="width: 780px; height: 300px; border: 1px solid gray" id="container"></div>
+                </div>
+            </div>
+            <div class="div_body_left_body_gxq">
+                <p class="p_body_left_body_gxq">您可能感兴趣</p>
+
             </div>
             <div class="div_body_right">
 
