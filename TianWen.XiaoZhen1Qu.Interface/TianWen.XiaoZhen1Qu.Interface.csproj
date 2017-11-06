@@ -265,7 +265,6 @@
     <Compile Include="HTFB\ZXJC\IZXJC_JFJSBLL.cs" />
     <Compile Include="HTFB\ZXJC\IZXJC_JJBLL.cs" />
     <Compile Include="HTFB\ZXJC\IZXJC_JZFWBLL.cs" />
-    <Compile Include="XXXX\IFCXXBLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TianWen.XiaoZhen1Qu.Entities\TianWen.XiaoZhen1Qu.Entities.csproj">

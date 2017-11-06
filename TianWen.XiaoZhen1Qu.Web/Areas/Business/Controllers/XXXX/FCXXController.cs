@@ -9,11 +9,16 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 {
     public class FCXXController : BaseController
     {
-        public IFCXXBLL FCXXBLL { get; set; }
+        public IFCCXBLL FCCXBLL { get; set; }
 
         public ActionResult FCXX_ZZF()
         {
             return View();
+        }
+
+        public JsonResult LoadFCXX()
+        {
+            return Json(FCCXBLL.LoadFCXX(Request["TYPE"], Request["FCXXID"]));
         }
     }
 }

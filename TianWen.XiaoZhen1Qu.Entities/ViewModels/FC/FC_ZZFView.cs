@@ -22,6 +22,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.ViewModels.FC
         public string XQDZ { get; set; }
         public DateTime ZXGXSJ { get; set; }
         public string ZJ { get; set; }
+        public string FC_ZZFJBXXID { get; set; }
         public string JCXXID { get; set; }
         public string YHID { get; set; }
         public decimal STATUS { get; set; }

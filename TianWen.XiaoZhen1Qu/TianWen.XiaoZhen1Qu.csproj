@@ -250,7 +250,6 @@
     <Compile Include="BLL\HTFB\XXYL\XXYL_YDJBBLL.cs" />
     <Compile Include="BLL\HTFB\XXYL\XXYL_YDJSBLL.cs" />
     <Compile Include="BLL\HTFB\XXYL\XXYL_ZLAMBLL.cs" />
-    <Compile Include="BLL\XXXX\FCXXBLL.cs" />
     <Compile Include="BLL\YHDLBLL.cs" />
     <Compile Include="BLL\YHJBXXBLL.cs" />
     <Compile Include="BLL\YXCZBLL.cs" />

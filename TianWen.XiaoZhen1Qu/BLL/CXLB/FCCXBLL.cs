@@ -7,7 +7,7 @@ using CommonClassLib.Helper;
 using TianWen.Framework.Log;
 using TianWen.XiaoZhen1Qu.Entities.Models;
 using TianWen.XiaoZhen1Qu.Entities.ViewModels.FC;
-using TianWen.XiaoZhen1Qu.Interface.CXLB;
+using TianWen.XiaoZhen1Qu.Interface;
 
 namespace TianWen.XiaoZhen1Qu.BLL
 {
@@ -82,6 +82,31 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
             }
             return condition.ToString();
+        }
+
+        //加载房产信息
+        public object LoadFCXX(string TYPE, string FCXXID)
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                if (TYPE == "FC")//房产
+                {
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,fc_zzfjbxx b where a.jcxxid = b.jcxxid and fc_zzfjbxxid = '{0}' order by zxgxsj desc", FCXXID));
+                }
+                List<FC_ZZFView> list = ConvertHelper.DataTableToList<FC_ZZFView>(dt);
+                
+                foreach (var jcxx in list)
+                {
+                    jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
+                }
+                return new { Result = EnResultType.Success, list = list};
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("error", ex.Message);
+                return new { Result = EnResultType.Failed, Message = "加载失败" };
+            }
         }
     }
 }

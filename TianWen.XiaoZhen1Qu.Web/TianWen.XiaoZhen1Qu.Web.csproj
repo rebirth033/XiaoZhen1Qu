@@ -1302,7 +1302,6 @@
     <Content Include="Areas\Business\Scripts\UEditor\ueditor.js" />
     <Content Include="Areas\Business\Scripts\UEditor\ueditor.parse.min.js" />
     <Content Include="Areas\Business\Scripts\underscore.min.js" />
-    <Content Include="Config\SpringConfig\BLLXXXX.xml" />
     <Content Include="Config\SpringConfig\BLLCXLB.xml" />
     <Content Include="Config\SpringConfig\BLLGY.xml" />
     <Content Include="Config\SpringConfig\ControllersXXXX.xml" />
