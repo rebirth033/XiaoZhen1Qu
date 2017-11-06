@@ -1,11 +1,10 @@
 ﻿$(document).ready(function () {
     $("#span_xzdz").bind("click", OpenXZDZ);
-    $("body").bind("click", function() { Close("_XZQ"); });
+    $("body").bind("click", function () { Close("_XZQ"); });
     BindClick("FWLX");
     BindClick("ZJDW");
     LoadFC_DZFJBXX();
 });
-
 //加载默认
 function LoadDefault() {
     ue.ready(function () {
