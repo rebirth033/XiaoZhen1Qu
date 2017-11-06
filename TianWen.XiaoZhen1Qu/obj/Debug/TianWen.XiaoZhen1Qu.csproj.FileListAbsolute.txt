@@ -109,3 +109,5 @@ D:\福建天问信息技术有限公司\源代码\TianWen.XiaoZhen1Qu\obj\Debug\
 D:\福建天问信息技术有限公司\源代码\TianWen.XiaoZhen1Qu\obj\Debug\TianWen.XiaoZhen1Qu.pdb
 D:\福建天问信息技术有限公司\源代码\TianWen.XiaoZhen1Qu\bin\Debug\CommonClassLib.dll
 D:\福建天问信息技术有限公司\源代码\TianWen.XiaoZhen1Qu\bin\Debug\Newtonsoft.Json.dll
+F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu\bin\Debug\CommonClassLib.dll
+F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu\bin\Debug\Newtonsoft.Json.dll
