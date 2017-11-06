@@ -59,5 +59,9 @@
 .div_body .div_body_left .div_body_left_body_fyxq .div_body_left_body_fyxq_xx .li_body_left_body_fyxq_xx{ width: 360px;height: 260px;margin-right: 10px;margin-bottom: 10px;float: left;}
 .div_body .div_body_left .div_body_left_body_fyxq .div_body_left_body_fyxq_xx .img_body_left_body_fyxq_xx{ width: 360px;height: 260px;}
 
+.div_body .div_body_left .div_body_left_body_xqxx{ height: 500px;}
+.div_body .div_body_left .div_body_left_body_xqxx .p_body_left_body_xqxx{ font-size: 18px;font-weight: 700;height: 60px;border-bottom: 1px solid #cccccc;}
+.div_body .div_body_left .div_body_left_body_xqxx .ul_body_left_body_xqxx {}
+.div_body .div_body_left .div_body_left_body_xqxx .ul_body_left_body_xqxx .li_body_left_body_xqxx { width: 400px;float: left;}
 
 .div_body .div_body_right{float: left;display: inline-block;border-radius: 2px;width: 300px;height: 1000px;margin-left: 20px;}
