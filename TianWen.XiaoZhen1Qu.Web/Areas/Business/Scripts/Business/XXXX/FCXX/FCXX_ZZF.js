@@ -24,6 +24,8 @@ function LoadDefault() {
                 LoadXQXX(xml.list[0]);
                 LoadDTXX();
                 LoadCNXH("FC");
+                LoadGRXX(xml.grxxlist[0]);
+                LoadJJRTJFY("FC");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -290,6 +292,66 @@ function LoadJPTJInfo(obj) {
     html += ('<p class="p_li_body_left_body_jptj_xq">' + obj.XQDZ.split('-')[0] + ' / ' + obj.XQDZ.split('-')[1] + ' / ' + obj.XQMC + '</p>');
     html += ('<p class="p_li_body_left_body_jptj_cs">' + obj.S + '室 ' + obj.PFM + '平</p>');
     html += ('<p class="p_li_body_left_body_jptj_jg">' + obj.ZJ + '元/月</p>');
+    html += ('</li>');
+    return html;
+}
+//加载个人信息
+function LoadGRXX(grxx) {
+    var html = "";
+    html += ('<div class="div_body_right_grxx">');
+    html += ('<img class="img_div_body_right_grxx" src="http://localhost/infotownlet/Areas/Business/Photos/2718ced3-996d-427d-925d-a08e127cc0b8/GRZL/TX.jpg?j=0.3236891655295969" />');
+    html += ('<p class="p_div_body_right_yhm">' + grxx.YHM+ '</p>');
+    html += ('<p class="p_div_body_right_zcsj">注册时间：'+grxx.SQRQ+'</p>');
+    html += ('<div class="div_div_body_right_yyzz">');
+    html += ('<div class="div_div_div_body_right_yyzz"><i class="i_div_div_body_right_yyzz_sfz"></i><span>身份证</span></div>');
+    html += ('<div class="div_div_div_body_right_yyzz"><i class="i_div_div_body_right_yyzz_yyzz"></i><span>营业执照</span></div>');
+    html += ('<div class="div_div_div_body_right_yyzz"><i class="i_div_div_body_right_yyzz_zmxy"></i><span>芝麻信用</span></div>');
+    html += ('</div>');
+    html += ('<div class="div_div_body_right_ckxy">查看TA的信用记录</div>');
+    html += ('</div>');
+    $("#div_body_right").append(html);
+}
+//加载该经纪人推荐房源
+function LoadJJRTJFY(TYPE) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/FCCX/LoadFCXX",
+        dataType: "json",
+        data:
+        {
+            TYPE: TYPE,
+            Condition: "STATUS:1",
+            PageSize: 4,
+            PageIndex: 1
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "";
+                html += ('<div class="div_body_right_jjrtj">');
+                html += ('<p class="p_body_right_jjrtj">该经纪人推荐房源</p>');
+                html += ('<ul id="ul_body_right_jjrtj" class="ul_body_right_jjrtj">');
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += LoadJJRTJFYInfo(xml.list[i]);
+                }
+                html += ('</ul>');
+                html += ('</div>');
+                $("#div_body_right").append(html);
+                LoadJPTJ("FC");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//加载该经纪人推荐房源单条信息
+function LoadJJRTJFYInfo(obj) {
+    var html = "";
+    html += ('<li class="li_body_right_jjrtj">');
+    html += ('<img class="img_li_body_right_jjrtj" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
+    html += ('<p class="p_li_body_left_right_xq">' + obj.XQDZ.split('-')[0] + ' / ' + obj.XQDZ.split('-')[1] + ' / ' + obj.XQMC + '</p>');
+    html += ('<p class="p_li_body_right_cs">' + obj.S + '室 ' + obj.PFM + '平</p>');
+    html += ('<p class="p_li_body_right_jjrtj_jg">' + obj.ZJ + '元/月</p>');
     html += ('</li>');
     return html;
 }

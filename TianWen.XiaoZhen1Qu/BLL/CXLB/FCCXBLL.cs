@@ -7,6 +7,7 @@ using CommonClassLib.Helper;
 using TianWen.Framework.Log;
 using TianWen.XiaoZhen1Qu.Entities.Models;
 using TianWen.XiaoZhen1Qu.Entities.ViewModels.FC;
+using TianWen.XiaoZhen1Qu.Entities.ViewModels.GY;
 using TianWen.XiaoZhen1Qu.Interface;
 
 namespace TianWen.XiaoZhen1Qu.BLL
@@ -94,12 +95,17 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.*,x.* from jcxx a,fc_zzfjbxx b  left join xqjbxx x on b.xqmc = x.xqmc where a.jcxxid = b.jcxxid and fc_zzfjbxxid = '{0}'  order by zxgxsj desc", FCXXID));
                 }
                 List<FC_ZZFView> list = ConvertHelper.DataTableToList<FC_ZZFView>(dt);
-                
+
                 foreach (var jcxx in list)
                 {
                     jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
                 }
-                return new { Result = EnResultType.Success, list = list, BCMSString = BinaryHelper.BinaryToString(list[0].BCMS) };
+                
+                dt = DAO.Repository.GetDataTable(string.Format("select * from yhjbxx y where y.yhid = '{0}'", list[0].YHID));
+                
+                List<GRXXView> grxxlist = ConvertHelper.DataTableToList<GRXXView>(dt);
+                
+                return new { Result = EnResultType.Success, list = list, BCMSString = BinaryHelper.BinaryToString(list[0].BCMS), grxxlist = grxxlist };
             }
             catch (Exception ex)
             {
