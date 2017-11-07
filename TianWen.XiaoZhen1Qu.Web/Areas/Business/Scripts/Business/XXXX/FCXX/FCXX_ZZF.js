@@ -147,27 +147,33 @@ function LoadFYXQ(obj, BCMSString) {
     for (var i = 0; i < fwldarray.length; i++) {
         html += ('<span class="span_body_left_body_fyxq_xx_right_fwld">' + fwldarray[i] + '</span>');
     }
-
     html += ('</div>');
     html += ('</div>');
-
-    html += ('<div class="div_body_left_body_fyxq_xx" style="height: 280px;">');
+    html += ('<div class="div_body_left_body_fyxq_xx">');
     html += ('<div class="div_body_left_body_fyxq_xx_left">房源描述</div>');
     html += ('<div class="div_body_left_body_fyxq_xx_right fyms">');
     html += (BCMSString);
     html += ('</div>');
     html += ('</div>');
-    html += ('<div class="div_body_left_body_fyxq_xx">');
+    html += ('<div id="div_body_left_body_fyxq_xx" class="div_body_left_body_fyxq_xx" style="height:800px;overflow:hidden;">');
     html += ('<ul class="ul_body_left_body_fyxq_xx">');
     for (var i = 0; i < obj.PHOTOS.length; i++) {
         html += ('<li class="li_body_left_body_fyxq_xx">');
         html += ('<img class="img_body_left_body_fyxq_xx" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[i].PHOTONAME + "?j=" + Math.random() + '" />');
         html += ('</li>');
     }
+    html += ('</ul>');
     html += ('</div>');
+    html += ('<div id="div_body_left_body_fyxq_zk" onclick="ToggleImg()" class="div_body_left_body_fyxq_zk">展开更多图片 共（7）张</div>');
     html += ('</div>');
+    
     $("#div_body_left").append(html);
 }
+//伸缩图片
+function ToggleImg() {
+    $("#div_body_left_body_fyxq_xx").css("overflow", "visible").css("height","1070px");
+}
+
 //加载小区信息
 function LoadXQXX(obj) {
     var html = "";
