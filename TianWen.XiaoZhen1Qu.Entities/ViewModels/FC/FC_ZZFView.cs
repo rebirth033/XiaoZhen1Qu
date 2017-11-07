@@ -18,8 +18,13 @@ namespace TianWen.XiaoZhen1Qu.Entities.ViewModels.FC
         public string CX { get; set; }
         public string C { get; set; }
         public string GJC { get; set; }
+        public string YFFS { get; set; }
+        public string FWPZ { get; set; }
+        public string FWLD { get; set; }
+        public byte[] BCMS { get; set; }
         public string XQMC { get; set; }
         public string XQDZ { get; set; }
+        public string LXDH { get; set; }
         public DateTime ZXGXSJ { get; set; }
         public string ZJ { get; set; }
         public string FC_ZZFJBXXID { get; set; }

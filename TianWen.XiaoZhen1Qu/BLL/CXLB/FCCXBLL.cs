@@ -24,7 +24,6 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,fc_zzfjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + " order by zxgxsj desc");
                 }
                 List<FC_ZZFView> list = ConvertHelper.DataTableToList<FC_ZZFView>(dt);
-
                 int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                 int TotalCount = list.Count;
                 var WDCountlist = from p in list.Where(p => p.STATUS == 0) select p;
@@ -100,7 +99,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 {
                     jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
                 }
-                return new { Result = EnResultType.Success, list = list};
+                return new { Result = EnResultType.Success, list = list, BCMSString = BinaryHelper.BinaryToString(list[0].BCMS) };
             }
             catch (Exception ex)
             {
