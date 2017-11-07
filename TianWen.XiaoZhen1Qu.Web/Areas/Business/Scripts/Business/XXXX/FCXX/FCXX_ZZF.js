@@ -18,9 +18,12 @@ function LoadDefault() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
+                HandlerTPXX();
                 LoadJBXX(xml.list[0]);
                 LoadFYXQ(xml.list[0], xml.BCMSString);
-                HandlerTPXX();
+                LoadXQXX(xml.list[0]);
+                LoadDTXX();
+                LoadCNXH();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -139,6 +142,60 @@ function LoadFYXQ(obj, BCMSString) {
     html += ('</div>');
     $("#div_body_left").append(html);
 }
+//加载小区信息
+function LoadXQXX(obj) {
+    var html = "";
+    html += ('<div class="div_body_left_body_xqxx">');
+    html += ('<p class="p_body_left_body_xqxx">小区信息</p>');
+    html += ('<ul class="ul_body_left_body_xqxx">');
+    html += ('<li class="li_body_left_body_xqxx">');
+    html += ('<span class="span_body_left_body_xqxx_left">小区名：</span>');
+    html += ('<span class="span_body_left_body_xqxx_right">' + obj.XQMC + '</span>');
+    html += ('</li>');
+    html += ('<li class="li_body_left_body_xqxx">');
+    html += ('<span class="span_body_left_body_xqxx_left">开发商：</span>');
+    html += ('<span class="span_body_left_body_xqxx_right">' + obj.KFS + '</span>');
+    html += ('</li>');
+    html += ('<li class="li_body_left_body_xqxx">');
+    html += ('<span class="span_body_left_body_xqxx_left">物业公司：</span>');
+    html += ('<span class="span_body_left_body_xqxx_right">' + obj.WYGS + '</span>');
+    html += ('</li>');
+    html += ('<li class="li_body_left_body_xqxx">');
+    html += ('<span class="span_body_left_body_xqxx_left">物业类型：</span>');
+    html += ('<span class="span_body_left_body_xqxx_right">' + obj.WYLX + '</span>');
+    html += ('</li>');
+    html += ('<li class="li_body_left_body_xqxx">');
+    html += ('<span class="span_body_left_body_xqxx_left">总建面积：</span>');
+    html += ('<span class="span_body_left_body_xqxx_right">' + obj.ZJMJ + '（大型小区）</span>');
+    html += ('</li>');
+    html += ('<li class="li_body_left_body_xqxx">');
+    html += ('<span class="span_body_left_body_xqxx_left">总户数：</span>');
+    html += ('<span class="span_body_left_body_xqxx_right">' + obj.ZHS + '</span>');
+    html += ('</li>');
+    html += ('<li class="li_body_left_body_xqxx">');
+    html += ('<span class="span_body_left_body_xqxx_left">建筑年代：</span>');
+    html += ('<span class="span_body_left_body_xqxx_right">' + obj.JZND + '</span>');
+    html += ('</li>');
+    html += ('<li class="li_body_left_body_xqxx">');
+    html += ('<span class="span_body_left_body_xqxx_left">容积率：</span>');
+    html += ('<span class="span_body_left_body_xqxx_right">' + obj.RJL + '</span>');
+    html += ('</li>');
+    html += ('<li class="li_body_left_body_xqxx">');
+    html += ('<span class="span_body_left_body_xqxx_left">停车位：</span>');
+    html += ('<span class="span_body_left_body_xqxx_right">' + obj.TCW + '</span>');
+    html += ('</li>');
+    html += ('<li class="li_body_left_body_xqxx">');
+    html += ('<span class="span_body_left_body_xqxx_left">绿化率：</span>');
+    html += ('<span class="span_body_left_body_xqxx_right">' + obj.LHL + '（绿化率适中）</span>');
+    html += ('</li>');
+    html += ('</ul>');
+    html += ('<div id="div_body_left_body_xqxx_dtxx" class="div_body_left_body_xqxx_dtxx">');
+    html += ('<p class="p_body_left_body_xqxx_dtxx">小区地图</p>');
+    html += ('<div style="width: 780px; height: 300px; border: 1px solid gray" id="container"></div>');
+    html += ('</div>');
+    html += ('</div>');
+    $("#div_body_left").append(html);
+}
 //加载地图信息
 function LoadDTXX() {
     var map = new BMap.Map("container");//创建地图实例
@@ -149,3 +206,17 @@ function LoadDTXX() {
     map.addControl(new BMap.OverviewMapControl({ isOpen: true, anchor: BMAP_ANCHOR_BOTTOM_RIGHT })); //添加默认缩略地图控件,右下角打开
     map.addControl(new BMap.MapTypeControl());//添加卫星控件
 }
+//加载猜你喜欢
+function LoadCNXH() {
+    var html = "";
+    html += ('<div class="div_body_left_body_gxq">');
+    html += ('<p class="p_body_left_body_gxq">猜你喜欢</p>');
+    html += ('</div>');
+    html += ('<div class="div_body_right">');
+    html += ('</div>');
+    $("#div_body_left").append(html);
+}
+
+
+
+

@@ -8,7 +8,18 @@ namespace TianWen.XiaoZhen1Qu.Entities.ViewModels.FC
 {
     public class FC_ZZFView
     {
+        //基础信息
+        public string JCXXID { get; set; }
         public string BT { get; set; }
+        public string YHID { get; set; }
+        public decimal STATUS { get; set; }
+        public string XQDZ { get; set; }
+        public string LXDH { get; set; }
+        public DateTime ZXGXSJ { get; set; }
+        public byte[] BCMS { get; set; }
+        //房产信息
+        public string FC_ZZFJBXXID { get; set; }
+        public string ZJ { get; set; }
         public string CZFS { get; set; }
         public string S { get; set; }
         public string T { get; set; }
@@ -21,16 +32,20 @@ namespace TianWen.XiaoZhen1Qu.Entities.ViewModels.FC
         public string YFFS { get; set; }
         public string FWPZ { get; set; }
         public string FWLD { get; set; }
-        public byte[] BCMS { get; set; }
+        //小区信息
         public string XQMC { get; set; }
-        public string XQDZ { get; set; }
-        public string LXDH { get; set; }
-        public DateTime ZXGXSJ { get; set; }
-        public string ZJ { get; set; }
-        public string FC_ZZFJBXXID { get; set; }
-        public string JCXXID { get; set; }
-        public string YHID { get; set; }
-        public decimal STATUS { get; set; }
+        public string KFS { get; set; }
+        public string WYGS { get; set; }
+        public string WYLX { get; set; }
+        public string ZJMJ { get; set; }
+        public string ZHS { get; set; }
+        public string JZND { get; set; }
+        public string RJL { get; set; }
+        public string TCW { get; set; }
+        public string LHL { get; set; }
+        //图片
         public IList<PHOTOS> PHOTOS { get; set; }
+
+
     }
 }

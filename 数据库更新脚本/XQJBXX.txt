@@ -1,0 +1,80 @@
+-- Create table
+create table XQJBXX
+(
+  xqjbxxid  INTEGER not null,
+  xqmc      VARCHAR2(100),
+  xqdz      VARCHAR2(200),
+  xqmcpy    VARCHAR2(300),
+  xqmcpyqkg VARCHAR2(300),
+  xqmcpyszm VARCHAR2(100),
+  area      VARCHAR2(100),
+  page      INTEGER,
+  wylx      VARCHAR2(30),
+  zjmj      VARCHAR2(30),
+  zhs       VARCHAR2(30),
+  jznd      VARCHAR2(30),
+  rjl       VARCHAR2(30),
+  tcw       VARCHAR2(30),
+  lhl       VARCHAR2(30),
+  kfs       VARCHAR2(100),
+  wygs      VARCHAR2(100)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 512K
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the columns 
+comment on column XQJBXX.xqjbxxid
+  is 'ID';
+comment on column XQJBXX.xqmc
+  is '小区名称';
+comment on column XQJBXX.xqdz
+  is '小区地址';
+comment on column XQJBXX.xqmcpy
+  is '小区名称拼音';
+comment on column XQJBXX.xqmcpyqkg
+  is '小区名称拼音去空格';
+comment on column XQJBXX.xqmcpyszm
+  is '小区名称拼音首字母';
+comment on column XQJBXX.area
+  is '小区所在县市';
+comment on column XQJBXX.page
+  is '所在页';
+comment on column XQJBXX.wylx
+  is '物业类型';
+comment on column XQJBXX.zjmj
+  is '总建面积';
+comment on column XQJBXX.zhs
+  is '总户数';
+comment on column XQJBXX.jznd
+  is '建筑年代';
+comment on column XQJBXX.rjl
+  is '容积率';
+comment on column XQJBXX.tcw
+  is '停车位';
+comment on column XQJBXX.lhl
+  is '绿化率';
+comment on column XQJBXX.kfs
+  is '开发商';
+comment on column XQJBXX.wygs
+  is '物业公司';
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table XQJBXX
+  add primary key (XQJBXXID)
+  using index 
+  tablespace USERS
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 128K
+    minextents 1
+    maxextents unlimited
+  );

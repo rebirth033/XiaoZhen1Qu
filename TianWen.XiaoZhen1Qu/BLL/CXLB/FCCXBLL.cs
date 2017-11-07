@@ -91,7 +91,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 DataTable dt = new DataTable();
                 if (TYPE == "FC")//房产
                 {
-                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,fc_zzfjbxx b where a.jcxxid = b.jcxxid and fc_zzfjbxxid = '{0}' order by zxgxsj desc", FCXXID));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.*,x.* from jcxx a,fc_zzfjbxx b  left join xqjbxx x on b.xqmc = x.xqmc where a.jcxxid = b.jcxxid and fc_zzfjbxxid = '{0}'  order by zxgxsj desc", FCXXID));
                 }
                 List<FC_ZZFView> list = ConvertHelper.DataTableToList<FC_ZZFView>(dt);
                 
