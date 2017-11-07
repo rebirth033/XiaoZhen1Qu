@@ -18,7 +18,6 @@ function LoadDefault() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                HandlerTPXX();
                 LoadJBXX(xml.list[0]);
                 LoadFYXQ(xml.list[0], xml.BCMSString);
                 LoadXQXX(xml.list[0]);
@@ -33,15 +32,6 @@ function LoadDefault() {
         }
     });
 }
-//处理图片信息
-function HandlerTPXX() {
-    $(".div_img_body_left_body_left_list_tp:eq(0)").each(function () { $(this).css("background-color", "rgba(0,0,0,0)") });
-    $(".li_body_left_body_left_list_tp").bind("click", function () {
-        $("#img_body_left_body_left_show").attr("src", $(this).find("img")[0].src);
-
-    });
-
-}
 //加载基本信息
 function LoadJBXX(obj) {
     var html = "";
@@ -52,7 +42,8 @@ function LoadJBXX(obj) {
     html += ('<div class="div_body_left_body">');
     html += ('<div class="div_body_left_body_left">');
     html += ('<img id="img_body_left_body_left_show" class="img_body_left_body_left_show" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<span class="div_body_left_body_left_list_an" style="margin-right: 10px;"><</span>');
+    html += ('<span onclick="LeftImg()" class="div_body_left_body_left_list_an" style="margin-right: 10px;"><</span>');
+    html += ('<div class="div_body_left_body_left_list">');
     html += ('<ul class="ul_body_left_body_left_list">');
     for (var i = 0; i < obj.PHOTOS.length; i++) {
         html += ('<li class="li_body_left_body_left_list_tp">');
@@ -61,7 +52,8 @@ function LoadJBXX(obj) {
         html += ('</li>');
     }
     html += ('</ul>');
-    html += ('<span class="div_body_left_body_left_list_an">></span>');
+    html += ('</div>');
+    html += ('<span onclick="RightImg()" class="div_body_left_body_left_list_an">></span>');
     html += ('</div>');
     html += ('<div class="div_body_left_body_right">');
     html += ('<p class="p_body_left_body_right_first">');
@@ -98,6 +90,25 @@ function LoadJBXX(obj) {
     html += ('</div>');
     html += ('</div>');
     $("#div_body_left").append(html);
+    HandlerTPXX();
+}
+//处理图片信息
+function HandlerTPXX() {
+    $(".div_img_body_left_body_left_list_tp:eq(0)").each(function () { $(this).css("background-color", "rgba(0,0,0,0)") });
+    $(".li_body_left_body_left_list_tp").bind("click", function () {
+        $("#img_body_left_body_left_show").attr("src", $(this).find("img")[0].src);
+        $(".div_img_body_left_body_left_list_tp").css("background-color", "rgba(0,0,0,0.5)");
+        $(this).find(".div_img_body_left_body_left_list_tp").css("background-color", "rgba(0,0,0,0)");
+    });
+
+}
+//图片左侧切换
+function LeftImg() {
+    
+}
+//图片右侧切换
+function RightImg() {
+
 }
 //加载房源详情
 function LoadFYXQ(obj, BCMSString) {
@@ -336,6 +347,8 @@ function LoadJJRTJFY(TYPE) {
                 html += ('</ul>');
                 html += ('</div>');
                 $("#div_body_right").append(html);
+                $(".li_body_right_jjrtj").bind("mouseover", function () { $(this).find(".p_li_body_right_jjrtj_xq").css("color", "#5bc0de"); });
+                $(".li_body_right_jjrtj").bind("mouseleave", function () { $(this).find(".p_li_body_right_jjrtj_xq").css("color", "#333333"); });
                 LoadXGLM();
             }
         },
