@@ -53,7 +53,7 @@ function LoadJBXX(obj) {
     }
     html += ('</ul>');
     html += ('</div>');
-    html += ('<span onclick="RightImg()" class="div_body_left_body_left_list_an">></span>');
+    html += ('<span onclick="RightImg(' + obj.PHOTOS.length + ')" class="div_body_left_body_left_list_an">></span>');
     html += ('</div>');
     html += ('<div class="div_body_left_body_right">');
     html += ('<p class="p_body_left_body_right_first">');
@@ -102,19 +102,26 @@ function HandlerTPXX() {
     });
 
 }
+var right = 0;
 //图片左侧切换
 function LeftImg() {
-    right -= 1;
-    $("#ul_body_left_body_left_list").css("transform", "translate3d(-" + right * 100 + "px, 0px, 0px)").css("transition-duration", "500ms");
-    
+    if (right > 0) {
+        right -= 1;
+        $("#ul_body_left_body_left_list").css("transform", "translate3d(-" + right * 100 + "px, 0px, 0px)").css("transition-duration", "500ms");
+        $("#ul_body_left_body_left_list").find(".div_img_body_left_body_left_list_tp").css("background-color", "rgba(0,0,0,0.5)");
+        $("#ul_body_left_body_left_list").find(".li_body_left_body_left_list_tp:eq(" + right + ")").find(".div_img_body_left_body_left_list_tp").css("background-color", "rgba(0,0,0,0)");
+        $("#img_body_left_body_left_show").attr("src", $("#ul_body_left_body_left_list").find(".li_body_left_body_left_list_tp:eq(" + right + ")").find("img")[0].src);
+    }
 }
-
-var right = 1;
 //图片右侧切换
-function RightImg() {
-    
-    $("#ul_body_left_body_left_list").css("transform", "translate3d(-" + right * 100 + "px, 0px, 0px)").css("transition-duration", "500ms");
-    right += 1;
+function RightImg(length) {
+    if (right < length-1) {
+        right += 1;
+        $("#ul_body_left_body_left_list").css("transform", "translate3d(-" + right * 100 + "px, 0px, 0px)").css("transition-duration", "500ms");
+        $("#ul_body_left_body_left_list").find(".div_img_body_left_body_left_list_tp").css("background-color", "rgba(0,0,0,0.5)");
+        $("#ul_body_left_body_left_list").find(".li_body_left_body_left_list_tp:eq(" + right + ")").find(".div_img_body_left_body_left_list_tp").css("background-color", "rgba(0,0,0,0)");
+        $("#img_body_left_body_left_show").attr("src", $("#ul_body_left_body_left_list").find(".li_body_left_body_left_list_tp:eq(" + right + ")").find("img")[0].src);
+    }
 }
 //加载房源详情
 function LoadFYXQ(obj, BCMSString) {
@@ -317,8 +324,8 @@ function LoadGRXX(grxx) {
     var html = "";
     html += ('<div class="div_body_right_grxx">');
     html += ('<img class="img_div_body_right_grxx" src="http://localhost/infotownlet/Areas/Business/Photos/2718ced3-996d-427d-925d-a08e127cc0b8/GRZL/TX.jpg?j=0.3236891655295969" />');
-    html += ('<p class="p_div_body_right_yhm">' + grxx.YHM+ '</p>');
-    html += ('<p class="p_div_body_right_zcsj">注册时间：'+grxx.SQRQ.ToString("yyyy年MM月dd日")+'</p>');
+    html += ('<p class="p_div_body_right_yhm">' + grxx.YHM + '</p>');
+    html += ('<p class="p_div_body_right_zcsj">注册时间：' + grxx.SQRQ.ToString("yyyy年MM月dd日") + '</p>');
     html += ('<div class="div_div_body_right_yyzz">');
     html += ('<div class="div_div_div_body_right_yyzz"><i class="i_div_div_body_right_yyzz_sfz"></i><span>身份证</span></div>');
     html += ('<div class="div_div_div_body_right_yyzz"><i class="i_div_div_body_right_yyzz_yyzz"></i><span>营业执照</span></div>');
