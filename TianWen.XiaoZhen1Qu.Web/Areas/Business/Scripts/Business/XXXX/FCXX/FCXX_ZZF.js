@@ -301,7 +301,7 @@ function LoadGRXX(grxx) {
     html += ('<div class="div_body_right_grxx">');
     html += ('<img class="img_div_body_right_grxx" src="http://localhost/infotownlet/Areas/Business/Photos/2718ced3-996d-427d-925d-a08e127cc0b8/GRZL/TX.jpg?j=0.3236891655295969" />');
     html += ('<p class="p_div_body_right_yhm">' + grxx.YHM+ '</p>');
-    html += ('<p class="p_div_body_right_zcsj">注册时间：'+grxx.SQRQ+'</p>');
+    html += ('<p class="p_div_body_right_zcsj">注册时间：'+grxx.SQRQ.ToString("yyyy年MM月dd日")+'</p>');
     html += ('<div class="div_div_body_right_yyzz">');
     html += ('<div class="div_div_div_body_right_yyzz"><i class="i_div_div_body_right_yyzz_sfz"></i><span>身份证</span></div>');
     html += ('<div class="div_div_div_body_right_yyzz"><i class="i_div_div_body_right_yyzz_yyzz"></i><span>营业执照</span></div>');
@@ -336,6 +336,7 @@ function LoadJJRTJFY(TYPE) {
                 html += ('</ul>');
                 html += ('</div>');
                 $("#div_body_right").append(html);
+                LoadXGLM();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -362,6 +363,13 @@ function LoadXGLM() {
     var html = "";
     html += ('<div class="div_body_right_xglm">');
     html += ('<p class="p_body_right_xglm">相关类目</p>');
+    html += ('<ul id="ul_body_right_xglm" class="ul_body_right_xglm">');
+    for (var i = 0; i < list.length; i++) {
+        html += '<li class="li_body_right_xglm">' + list[i] + '</li>';
+    }
+    html += ('<em class="em_body_right_xglm"></em>');
+    html += ('</ul>');
+    list = "福州酒店宾馆,福州医药保健,福州电子通讯,福州服饰鞋包,福州汽修美容,福州家居建材".split(",");
     html += ('<ul id="ul_body_right_xglm" class="ul_body_right_xglm">');
     for (var i = 0; i < list.length; i++) {
         html += '<li class="li_body_right_xglm">' + list[i] + '</li>';
