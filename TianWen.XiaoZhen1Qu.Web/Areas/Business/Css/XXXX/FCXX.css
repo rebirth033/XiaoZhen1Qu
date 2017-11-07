@@ -103,12 +103,18 @@
 .div_body .div_body_right .div_body_right_grxx .div_div_body_right_ckxy{ width: 260px;height: 34px;padding: 6px 12px;color: #333;margin-top: 30px;background-color: rgba(238,239,241,0.2);border: 1px solid #cccccc;border-radius: 2px;}
 .div_body .div_body_right .div_body_right_grxx .div_div_body_right_ckxy:hover{ cursor: pointer;background-color: rgba(238,239,241,0.8);}
 /*首页_主体_右部_该经纪人推荐*/
-.div_body .div_body_right .div_body_right_jjrtj{ width: 100%;height: 600px;border-radius: 2px;background-color: #ffffff;border: 1px solid #cccccc;padding: 20px;}
+.div_body .div_body_right .div_body_right_jjrtj{ width: 100%;height: 500px;border-radius: 2px;background-color: #ffffff;border: 1px solid #cccccc;padding: 20px;}
 .div_body .div_body_right .div_body_right_jjrtj .p_body_right_jjrtj{ font-size: 18px;height: 35px;border-bottom: 1px solid #cccccc;}
-.div_body .div_body_right .ul_body_right_jjrtj{ padding: 0;}
-.div_body .div_body_right .ul_body_right_jjrtj .li_body_right_jjrtj{width: 258px;height: 210px;border: 1px solid #e6e6e6;padding: 8px;display: block;margin-bottom: 10px;}
-.div_body .div_body_right .ul_body_right_jjrtj .li_body_right_jjrtj:hover{ cursor: pointer;}
-.div_body .div_body_right .ul_body_right_jjrtj .li_body_right_jjrtj .img_li_body_right_jjrtj{ height: 120px;width: 100%;margin-bottom: 10px;}
-.div_body .div_body_right .ul_body_right_jjrtj .li_body_right_jjrtj .p_li_body_left_right_xq{ width: 100%;height: 20px;display: block;margin-bottom: 2px;font-size: 12px;}
-.div_body .div_body_right .ul_body_right_jjrtj .li_body_right_jjrtj .p_li_body_right_cs{ width: 100%;height: 20px;display: block;color: #999999;margin-bottom: 2px;font-size: 13px;}
-.div_body .div_body_right .ul_body_right_jjrtj .li_body_right_jjrtj .p_li_body_right_jjrtj_jg{width: 100%;height: 20px;display: block;color: #ef6100;font-size: 16px;margin-bottom: 2px;}
+.div_body .div_body_right .ul_body_right_jjrtj{ padding: 0;height: 180px;width: 280px;}
+.div_body .div_body_right .ul_body_right_jjrtj .li_body_right_jjrtj{ width: 100%;display: block;height: 70px;margin-bottom: 15px;}
+.div_body .div_body_right .ul_body_right_jjrtj .li_body_right_jjrtj .img_li_body_right_jjrtj{ width: 70px;height: 70px;display: inline-block;float: left; }
+.div_body .div_body_right .ul_body_right_jjrtj .li_body_right_jjrtj .div_li_body_right_jjrtj{ width: 200px;height: 70px;display: inline-block;float: right; }
+.div_body .div_body_right .ul_body_right_jjrtj .li_body_right_jjrtj .div_li_body_right_jjrtj .p_li_body_right_jjrtj_xq{ width: 210px;font-size: 12px;}
+.div_body .div_body_right .ul_body_right_jjrtj .li_body_right_jjrtj .div_li_body_right_jjrtj .p_li_body_right_jjrtj_cs{ font-size: 12px;display: block;font-size: 12px;color: #999999}
+.div_body .div_body_right .ul_body_right_jjrtj .li_body_right_jjrtj .div_li_body_right_jjrtj .p_li_body_right_jjrtj_jg{ color: #ef6100;font-size: 12px;display: block;}
+
+.div_body .div_body_right .div_body_right_xglm{ width: 100%;height: 500px;border-radius: 2px;background-color: #ffffff;border: 1px solid #cccccc;padding: 20px;}
+.div_body .div_body_right .div_body_right_xglm .p_body_right_xglm{ font-size: 18px;height: 35px;border-bottom: 1px solid #cccccc;}
+.div_body .div_body_right .ul_body_right_xglm{ padding: 0;height: 180px;width: 280px;}
+.div_body .div_body_right .ul_body_right_xglm .li_body_right_jjrtj{ width: 100%;display: block;height: 70px;margin-bottom: 15px;}
+.div_body .div_body_right .ul_body_right_xglm .li_body_right_jjrtj .img_li_body_right_jjrtj{ width: 70px;height: 70px;display: inline-block;float: left; }

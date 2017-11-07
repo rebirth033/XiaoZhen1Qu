@@ -321,7 +321,7 @@ function LoadJJRTJFY(TYPE) {
         {
             TYPE: TYPE,
             Condition: "STATUS:1",
-            PageSize: 4,
+            PageSize: 5,
             PageIndex: 1
         },
         success: function (xml) {
@@ -336,7 +336,6 @@ function LoadJJRTJFY(TYPE) {
                 html += ('</ul>');
                 html += ('</div>');
                 $("#div_body_right").append(html);
-                LoadJPTJ("FC");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -349,9 +348,25 @@ function LoadJJRTJFYInfo(obj) {
     var html = "";
     html += ('<li class="li_body_right_jjrtj">');
     html += ('<img class="img_li_body_right_jjrtj" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_left_right_xq">' + obj.XQDZ.split('-')[0] + ' / ' + obj.XQDZ.split('-')[1] + ' / ' + obj.XQMC + '</p>');
-    html += ('<p class="p_li_body_right_cs">' + obj.S + '室 ' + obj.PFM + '平</p>');
+    html += ('<div class="div_li_body_right_jjrtj">');
+    html += ('<p class="p_li_body_right_jjrtj_xq">' + obj.XQDZ.split('-')[0] + ' / ' + obj.XQDZ.split('-')[1] + ' / ' + obj.XQMC + '</p>');
+    html += ('<p class="p_li_body_right_jjrtj_cs">' + obj.S + '室 ' + obj.PFM + '平</p>');
     html += ('<p class="p_li_body_right_jjrtj_jg">' + obj.ZJ + '元/月</p>');
+    html += ('</div>');
     html += ('</li>');
     return html;
+}
+//加载相关类目
+function LoadXGLM() {
+    var list = "福州日租/短租,福州二手房出售,福州新房出售,福州租房/出租,福州找室友,福州写字楼出租".split(",");
+    var html = "";
+    html += ('<div class="div_body_right_xglm">');
+    html += ('<p class="p_body_right_xglm">相关类目</p>');
+    html += ('<ul id="ul_body_right_xglm" class="ul_body_right_xglm">');
+    for (var i = 0; i < list.length; i++) {
+        html += '<li class="li_body_right_xglm">' + list[i] + '</li>';
+    }
+    html += ('</ul>');
+    html += ('</div>');
+    $("#div_body_right").append(html);
 }
