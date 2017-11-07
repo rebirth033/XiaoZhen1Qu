@@ -23,7 +23,7 @@ function LoadDefault() {
                 LoadFYXQ(xml.list[0], xml.BCMSString);
                 LoadXQXX(xml.list[0]);
                 LoadDTXX();
-                LoadCNXH();
+                LoadCNXH("FC");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -207,16 +207,89 @@ function LoadDTXX() {
     map.addControl(new BMap.MapTypeControl());//添加卫星控件
 }
 //加载猜你喜欢
-function LoadCNXH() {
-    var html = "";
-    html += ('<div class="div_body_left_body_gxq">');
-    html += ('<p class="p_body_left_body_gxq">猜你喜欢</p>');
-    html += ('</div>');
-    html += ('<div class="div_body_right">');
-    html += ('</div>');
-    $("#div_body_left").append(html);
+function LoadCNXH(TYPE) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/FCCX/LoadFCXX",
+        dataType: "json",
+        data:
+        {
+            TYPE: TYPE,
+            Condition: "STATUS:1",
+            PageSize: 4,
+            PageIndex: 1
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "";
+                html += ('<div class="div_body_left_body_cnxh">');
+                html += ('<p class="p_body_left_body_cnxh">猜你喜欢</p>');
+                html += ('<ul id="ul_body_left_body_cnxh" class="ul_body_left_body_cnxh">');
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += LoadCNXHInfo(xml.list[i]);
+                }
+                html += ('</ul>');
+                html += ('</div>');
+                $("#div_body_left").append(html);
+                LoadJPTJ("FC");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
 }
+//加载猜你喜欢单条信息
+function LoadCNXHInfo(obj) {
+    var html = "";
+    html += ('<li class="li_body_left_body_cnxh">');
+    html += ('<img class="img_li_body_left_body_cnxh" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
+    html += ('<p class="p_li_body_left_body_cnxh_xq">' + obj.XQDZ.split('-')[0] + ' / ' + obj.XQDZ.split('-')[1] + ' / ' + obj.XQMC + '</p>');
+    html += ('<p class="p_li_body_left_body_cnxh_cs">' + obj.S + '室 ' + obj.PFM + '平</p>');
+    html += ('<p class="p_li_body_left_body_cnxh_jg">' + obj.ZJ + '元/月</p>');
+    html += ('</li>');
+    return html;
+}
+//加载精品推荐
+function LoadJPTJ(TYPE) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/FCCX/LoadFCXX",
+        dataType: "json",
+        data:
+        {
+            TYPE: TYPE,
+            Condition: "STATUS:1",
+            PageSize: 4,
+            PageIndex: 1
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "";
+                html += ('<div class="div_body_left_body_jptj">');
+                html += ('<p class="p_body_left_body_jptj">精品推荐</p>');
+                html += ('<ul id="ul_body_left_body_jptj" class="ul_body_left_body_jptj">');
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += LoadJPTJInfo(xml.list[i]);
+                }
+                html += ('</ul>');
+                html += ('</div>');
+                $("#div_body_left").append(html);
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
-
-
-
+        }
+    });
+}
+//加载精品推荐单条信息
+function LoadJPTJInfo(obj) {
+    var html = "";
+    html += ('<li class="li_body_left_body_jptj">');
+    html += ('<img class="img_li_body_left_body_jptj" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
+    html += ('<p class="p_li_body_left_body_jptj_xq">' + obj.XQDZ.split('-')[0] + ' / ' + obj.XQDZ.split('-')[1] + ' / ' + obj.XQMC + '</p>');
+    html += ('<p class="p_li_body_left_body_jptj_cs">' + obj.S + '室 ' + obj.PFM + '平</p>');
+    html += ('<p class="p_li_body_left_body_jptj_jg">' + obj.ZJ + '元/月</p>');
+    html += ('</li>');
+    return html;
+}
