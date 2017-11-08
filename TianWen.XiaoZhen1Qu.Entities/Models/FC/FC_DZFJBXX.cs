@@ -59,12 +59,6 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string DZ { get; set; }
 
         /// <summary>
-        /// 出租方式
-        /// </summary>
-        [Property]
-        public virtual string CZFS { get; set; }
-
-        /// <summary>
         /// 交易规则
         /// </summary>
         [Property]

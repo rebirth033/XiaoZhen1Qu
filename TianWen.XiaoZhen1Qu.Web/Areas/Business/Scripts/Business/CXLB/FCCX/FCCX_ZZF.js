@@ -39,11 +39,12 @@ function BindBodyNav() {
 }
 //加载房产查询条件
 function LoadFCCXCondition() {
-    var dqs = "地区,不限,全福州,鼓楼,台江,晋安,仓山,闽侯,福清,马尾,长乐,连江,平潭,罗源,闽清,永泰,全福建,全中国".split(',');
+    var dqs = "地区,不限,鼓楼,台江,晋安,仓山,闽侯,福清,马尾,长乐,连江,平潭,罗源,闽清,永泰".split(',');
     var zjs = "租金,不限,500元以下,500-1000元,1000-1500元,1500-2000元,2000-3000元,3000-4000元,4000元以上".split(',');
     var zflx = "租房类型,不限,整套出租,单间出租,精品公寓,床位出租".split(',');
     LoadCondition(dqs, "DQ");
     LoadCondition(zjs, "ZJ");
+    $("#ul_condition_body_ZJ").append("<li><input id='input_zj_q' class='input_zj' type='text' /><span class='span_zj'>元</span> - <input class='input_zj' id='input_zj_z' type='text' /><span class='span_zj'>元</span></li>");
     LoadCondition(zflx, "CZFS");
     $("#ul_condition_body_DQ").find(".li_condition_body").bind("click", SelectCondition);
     $("#ul_condition_body_ZJ").find(".li_condition_body").bind("click", SelectCondition);
@@ -117,7 +118,7 @@ function HasCondition() {
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = "DQ:" + GetCondition("DQ") + ",ZJ:" + GetCondition("ZJ") + ",CZFS:" + GetCondition("CZFS");
+    var condition = "AREA:" + GetCondition("DQ") + ",ZJ:" + GetCondition("ZJ") + ",CZFS:" + GetCondition("CZFS");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/FCCX/LoadFCXX",

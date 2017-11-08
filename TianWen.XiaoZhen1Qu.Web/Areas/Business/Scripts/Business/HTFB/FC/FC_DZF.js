@@ -81,7 +81,10 @@ function LoadFWLX() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                var html = "<ul class='ul_select' style='overflow-y: scroll;'>";
+                var height = 341;
+                if (xml.list.length < 10)
+                    height = parseInt(xml.list.length * 34) + 1;
+                var html = "<ul class='ul_select' style='overflow-y: scroll; height:" + height + "px'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='li_select' onclick='SelectDropdown(this,\"FWLX\")'>" + xml.list[i].CODENAME + "</li>";
                 }
@@ -145,8 +148,6 @@ function LoadFC_DZFJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.BCMSString);
                 });
-                if (xml.Value.FC_DZFJBXX.CZFS !== null)
-                    SetDX("CZFS", xml.Value.FC_DZFJBXX.CZFS);
                 $("#span_spaninput").html(xml.Value.FC_DZFJBXX.FWLX);
                 $("#spanZJDW").html(xml.Value.FC_DZFJBXX.ZJDW);
                 $("#JYGZ").html(xml.Value.FC_DZFJBXX.JYGZ);
@@ -166,7 +167,6 @@ function FB() {
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "FWLX", "'" + $("#span_spaninput").html() + "'");
     obj = jsonObj.AddJson(obj, "ZJDW", "'" + $("#spanZJDW").html() + "'");
-    obj = jsonObj.AddJson(obj, "CZFS", "'" + GetDX("CZFS") + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
 
     if (getUrlParam("FC_DZFJBXXID") !== null)

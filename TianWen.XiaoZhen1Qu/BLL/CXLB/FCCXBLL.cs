@@ -22,7 +22,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 DataTable dt = new DataTable();
                 if (TYPE == "FC")//房产
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,fc_zzfjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + " order by zxgxsj desc");
+                    dt = DAO.Repository.GetDataTable("select a.*,b.*,x.* from jcxx a,fc_zzfjbxx b  left join codes_fuzhou_xqjbxx x on b.xqmc = x.xqmc where a.jcxxid = b.jcxxid " + GetConditin(Condition) + " order by zxgxsj desc");
                 }
                 List<FC_ZZFView> list = ConvertHelper.DataTableToList<FC_ZZFView>(dt);
                 int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);

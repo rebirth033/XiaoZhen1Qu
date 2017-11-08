@@ -36,6 +36,8 @@
 .div_condition .div_condition_body .ul_condition_body .li_condition_body{ float: left;display: inline-block;width: auto;height: 100%;margin-right: 20px;font-size: 12px;}
 .div_condition .div_condition_body .ul_condition_body .li_condition_body:hover{ cursor: pointer;color: #5bc0de;text-decoration: underline;}
 .div_condition .div_condition_body .ul_condition_body .li_condition_body_active{color: #5bc0de;}
+.div_condition .div_condition_body .ul_condition_body .input_zj{ width: 60px;margin-right: 5px;}
+.div_condition .div_condition_body .ul_condition_body .span_zj{ font-size: 12px;}
 .div_condition_select{background-color: #ffffff;display: none;width: 1200px;height: 40px;border-bottom: 1px solid #cccccc;border-right: 1px solid #cccccc;border-left: 1px solid #cccccc;padding-top: 8px;}
 .div_condition_select .ul_condition_select{display: block;width: 100%;height: 40px;padding: 0;}
 .div_condition_select .ul_condition_select .li_condition_select_first{ font-weight: 700;color: #999999;float: left;font-size: 13px;display: inline-block;width: 80px;height: 100%;padding-left: 20px;}
