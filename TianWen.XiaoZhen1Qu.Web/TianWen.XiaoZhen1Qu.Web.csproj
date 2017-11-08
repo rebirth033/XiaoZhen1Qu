@@ -1013,6 +1013,7 @@
     <Content Include="Areas\Business\Scripts\Business\HTFB\ZXJC\ZXJC_JJYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\ZXJC\ZXJC_JZFW.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\ZXJC\ZXJC_JZFWYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\Common\XXXX_Common.js" />
     <Content Include="Areas\Business\Scripts\jquery-1.9.1.min.js" />
     <Content Include="Areas\Business\Scripts\jquery-ui-1.12.1.custom\AUTHORS.txt" />
     <Content Include="Areas\Business\Scripts\jquery-ui-1.12.1.custom\external\jquery\jquery.js" />
@@ -1673,6 +1674,7 @@
     <Content Include="Areas\Business\Views\FCCX\FCCX_ZZF.cshtml" />
     <Content Include="Areas\Business\Views\Shared\Other.cshtml" />
     <Content Include="Areas\Business\Views\FCXX\FCXX_ZZF.cshtml" />
+    <Content Include="Areas\Business\Views\Shared\XXXX.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -1684,6 +1686,7 @@
   <ItemGroup>
     <Folder Include="Areas\Business\Photos\" />
     <Folder Include="Areas\Business\QRCode\" />
+    <Folder Include="Areas\Business\Scripts\Business\CXLB\Common\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TianWen.XiaoZhen1Qu.Entities\TianWen.XiaoZhen1Qu.Entities.csproj">
