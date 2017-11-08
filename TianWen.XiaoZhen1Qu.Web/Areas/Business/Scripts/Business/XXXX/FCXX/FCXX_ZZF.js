@@ -1,9 +1,5 @@
 ﻿$(document).ready(function () {
-    $(".div_top_left").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
-    $(".div_top_right").css("margin-right", (document.documentElement.clientWidth - 1200) / 2);
-    $(".div_nav").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
-    $(".div_body").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
-    LoadDefault();
+
 });
 //加载默认
 function LoadDefault() {
@@ -21,7 +17,7 @@ function LoadDefault() {
                 LoadJBXX(xml.list[0]);
                 LoadFYXQ(xml.list[0], xml.BCMSString);
                 LoadXQXX(xml.list[0]);
-                LoadDTXX();
+                LoadDTXX(xml.list[0].XQMC);
                 LoadCNXH("FC");
                 LoadGRXX(xml.grxxlist[0]);
                 LoadJJRTJFY("FC");
@@ -100,7 +96,6 @@ function HandlerTPXX() {
         $(".div_img_body_left_body_left_list_tp").css("background-color", "rgba(0,0,0,0.5)");
         $(this).find(".div_img_body_left_body_left_list_tp").css("background-color", "rgba(0,0,0,0)");
     });
-
 }
 var right = 0;
 //图片左侧切换
@@ -115,7 +110,7 @@ function LeftImg() {
 }
 //图片右侧切换
 function RightImg(length) {
-    if (right < length-1) {
+    if (right < length - 1) {
         right += 1;
         $("#ul_body_left_body_left_list").css("transform", "translate3d(-" + right * 100 + "px, 0px, 0px)").css("transition-duration", "500ms");
         $("#ul_body_left_body_left_list").find(".div_img_body_left_body_left_list_tp").css("background-color", "rgba(0,0,0,0.5)");
@@ -128,34 +123,39 @@ function LoadFYXQ(obj, BCMSString) {
     var html = "";
     html += ('<div class="div_body_left_body_fyxq">');
     html += ('<p class="p_body_left_body_fyxq">房源详情</p>');
-    html += ('<div class="div_body_left_body_fyxq_xx" style="height: 150px;">');
-    html += ('<div class="div_body_left_body_fyxq_xx_left">房屋配置</div>');
-    html += ('<div class="div_body_left_body_fyxq_xx_right" style="width: 600px;">');
-    var fwpzarray = obj.FWPZ.split(',');
-    for (var i = 0; i < fwpzarray.length; i++) {
-        html += ('<span class="span_body_left_body_fyxq_xx_right">');
-        html += ('<img class="img_body_left_body_fyxq_xx_right" src="' + getRootPath() + '/Areas/Business/Css/images/xxxx/fc/xxxx_fc_' + fwpzarray[i] + '.png")" />');
-        html += ('<span class="span_img_body_left_body_fyxq_xx_right">' + fwpzarray[i] + '</span>');
-        html += ('</span>');
-    }
-    html += ('</div>');
-    html += ('</div>');
-    var fwldarray = obj.FWLD.split(',');
     html += ('<div class="div_body_left_body_fyxq_xx">');
-    html += ('<div class="div_body_left_body_fyxq_xx_left">房屋亮点</div>');
-    html += ('<div class="div_body_left_body_fyxq_xx_right">');
-    for (var i = 0; i < fwldarray.length; i++) {
-        html += ('<span class="span_body_left_body_fyxq_xx_right_fwld">' + fwldarray[i] + '</span>');
+    if (obj.FWPZ !== null) {
+        var fwpzarray = obj.FWPZ.split(',');
+        
+        html += ('<div class="div_body_left_body_fyxq_xx_left">房屋配置</div>');
+        html += ('<div class="div_body_left_body_fyxq_xx_right" style="width: 600px;">');
+        for (var i = 0; i < fwpzarray.length; i++) {
+            html += ('<span class="span_body_left_body_fyxq_xx_right">');
+            html += ('<img class="img_body_left_body_fyxq_xx_right" src="' + getRootPath() + '/Areas/Business/Css/images/xxxx/fc/xxxx_fc_' + fwpzarray[i] + '.png")" />');
+            html += ('<span class="span_img_body_left_body_fyxq_xx_right">' + fwpzarray[i] + '</span>');
+            html += ('</span>');
+        }
+        html += ('</div>');
+        html += ('</div>');
     }
-    html += ('</div>');
-    html += ('</div>');
+    if (obj.FWLD !== null) {
+        var fwldarray = obj.FWLD.split(',');
+        html += ('<div class="div_body_left_body_fyxq_xx">');
+        html += ('<div class="div_body_left_body_fyxq_xx_left">房屋亮点</div>');
+        html += ('<div class="div_body_left_body_fyxq_xx_right">');
+        for (var i = 0; i < fwldarray.length; i++) {
+            html += ('<span class="span_body_left_body_fyxq_xx_right_fwld">' + fwldarray[i] + '</span>');
+        }
+        html += ('</div>');
+        html += ('</div>');
+    }
     html += ('<div class="div_body_left_body_fyxq_xx">');
     html += ('<div class="div_body_left_body_fyxq_xx_left">房源描述</div>');
     html += ('<div class="div_body_left_body_fyxq_xx_right fyms">');
     html += (BCMSString);
     html += ('</div>');
     html += ('</div>');
-    html += ('<div id="div_body_left_body_fyxq_xx" class="div_body_left_body_fyxq_xx" style="height:800px;overflow:hidden;">');
+    html += ('<div id="div_body_left_body_fyxq_xx" class="div_body_left_body_fyxq_xx" style="overflow:hidden;">');
     html += ('<ul class="ul_body_left_body_fyxq_xx">');
     for (var i = 0; i < obj.PHOTOS.length; i++) {
         html += ('<li class="li_body_left_body_fyxq_xx">');
@@ -164,14 +164,24 @@ function LoadFYXQ(obj, BCMSString) {
     }
     html += ('</ul>');
     html += ('</div>');
-    html += ('<div id="div_body_left_body_fyxq_zk" onclick="ToggleImg()" class="div_body_left_body_fyxq_zk">展开更多图片 共（7）张</div>');
+
+    html += ('<div id="div_body_left_body_fyxq_zk" onclick="ToggleImg(' + obj.PHOTOS.length + ')" class="div_body_left_body_fyxq_zk">展开更多图片 共（' + obj.PHOTOS.length + '）张</div>');
     html += ('</div>');
-    
     $("#div_body_left").append(html);
+    if (obj.PHOTOS.length > 4) {
+        $("#div_body_left_body_fyxq_xx").css("height", "530px");
+        $("#div_body_left_body_fyxq_zk").css("display", "block");
+    }
 }
 //伸缩图片
-function ToggleImg() {
-    $("#div_body_left_body_fyxq_xx").css("overflow", "visible").css("height","1070px");
+function ToggleImg(length) {
+    if ($("#div_body_left_body_fyxq_zk").html().indexOf("展开") !== -1) {
+        $("#div_body_left_body_fyxq_xx").css("overflow", "visible").css("height", "auto");
+        $("#div_body_left_body_fyxq_zk").html("收起更多图片 共（" + length + "）张");
+    } else {
+        $("#div_body_left_body_fyxq_xx").css("overflow", "hidden").css("height", "530px");
+        $("#div_body_left_body_fyxq_zk").html("展开更多图片 共（" + length + "）张");
+    }
 }
 //加载小区信息
 function LoadXQXX(obj) {
@@ -181,61 +191,74 @@ function LoadXQXX(obj) {
     html += ('<ul class="ul_body_left_body_xqxx">');
     html += ('<li class="li_body_left_body_xqxx">');
     html += ('<span class="span_body_left_body_xqxx_left">小区名：</span>');
-    html += ('<span class="span_body_left_body_xqxx_right">' + obj.XQMC + '</span>');
+    html += ('<span class="span_body_left_body_xqxx_right">' + obj.XQMC === null ? "" : obj.XQMC + '</span>');
     html += ('</li>');
     html += ('<li class="li_body_left_body_xqxx">');
     html += ('<span class="span_body_left_body_xqxx_left">开发商：</span>');
-    html += ('<span class="span_body_left_body_xqxx_right">' + obj.KFS + '</span>');
+    html += ('<span class="span_body_left_body_xqxx_right">' + (obj.KFS === null ? "" : obj.KFS) + '</span>');
     html += ('</li>');
     html += ('<li class="li_body_left_body_xqxx">');
     html += ('<span class="span_body_left_body_xqxx_left">物业公司：</span>');
-    html += ('<span class="span_body_left_body_xqxx_right">' + obj.WYGS + '</span>');
+    html += ('<span class="span_body_left_body_xqxx_right">' + (obj.WYGS === null ? "" : obj.WYGS) + '</span>');
     html += ('</li>');
     html += ('<li class="li_body_left_body_xqxx">');
     html += ('<span class="span_body_left_body_xqxx_left">物业类型：</span>');
-    html += ('<span class="span_body_left_body_xqxx_right">' + obj.WYLX + '</span>');
+    html += ('<span class="span_body_left_body_xqxx_right">' + (obj.WYLX === null ? "" : obj.WYLX) + '</span>');
     html += ('</li>');
     html += ('<li class="li_body_left_body_xqxx">');
     html += ('<span class="span_body_left_body_xqxx_left">总建面积：</span>');
-    html += ('<span class="span_body_left_body_xqxx_right">' + obj.ZJMJ + '（大型小区）</span>');
+    html += ('<span class="span_body_left_body_xqxx_right">' + (obj.ZJMJ === null ? "" : obj.ZJMJ) + '</span>');
     html += ('</li>');
     html += ('<li class="li_body_left_body_xqxx">');
     html += ('<span class="span_body_left_body_xqxx_left">总户数：</span>');
-    html += ('<span class="span_body_left_body_xqxx_right">' + obj.ZHS + '</span>');
+    html += ('<span class="span_body_left_body_xqxx_right">' + (obj.ZHS === null ? "" : obj.ZHS) + '</span>');
     html += ('</li>');
     html += ('<li class="li_body_left_body_xqxx">');
     html += ('<span class="span_body_left_body_xqxx_left">建筑年代：</span>');
-    html += ('<span class="span_body_left_body_xqxx_right">' + obj.JZND + '</span>');
+    html += ('<span class="span_body_left_body_xqxx_right">' + (obj.JZND === null ? "" : obj.JZND) + '</span>');
     html += ('</li>');
     html += ('<li class="li_body_left_body_xqxx">');
     html += ('<span class="span_body_left_body_xqxx_left">容积率：</span>');
-    html += ('<span class="span_body_left_body_xqxx_right">' + obj.RJL + '</span>');
+    html += ('<span class="span_body_left_body_xqxx_right">' + (obj.RJL === null ? "" : obj.RJL)  + '</span>');
     html += ('</li>');
     html += ('<li class="li_body_left_body_xqxx">');
     html += ('<span class="span_body_left_body_xqxx_left">停车位：</span>');
-    html += ('<span class="span_body_left_body_xqxx_right">' + obj.TCW + '</span>');
+    html += ('<span class="span_body_left_body_xqxx_right">' + (obj.TCW === null ? "" : obj.TCW)  + '</span>');
     html += ('</li>');
     html += ('<li class="li_body_left_body_xqxx">');
     html += ('<span class="span_body_left_body_xqxx_left">绿化率：</span>');
-    html += ('<span class="span_body_left_body_xqxx_right">' + obj.LHL + '（绿化率适中）</span>');
+    html += ('<span class="span_body_left_body_xqxx_right">' + (obj.LHL === null ? "" : obj.LHL) + '</span>');
     html += ('</li>');
     html += ('</ul>');
     html += ('<div id="div_body_left_body_xqxx_dtxx" class="div_body_left_body_xqxx_dtxx">');
-    html += ('<p class="p_body_left_body_xqxx_dtxx">小区地图</p>');
+    html += ('<p class="p_body_left_body_xqxx_dtxx">小区地址</p>');
     html += ('<div style="width: 780px; height: 300px; border: 1px solid gray" id="container"></div>');
     html += ('</div>');
     html += ('</div>');
     $("#div_body_left").append(html);
 }
 //加载地图信息
-function LoadDTXX() {
+function LoadDTXX(XQMC) {
     var map = new BMap.Map("container");//创建地图实例
-    map.centerAndZoom("福州市", 11);//创建点坐标,地图初始化
+    map.centerAndZoom("福州市", 15);//创建点坐标,地图初始化
     map.enableScrollWheelZoom(true);//允许鼠标滑轮放大缩小 
     map.enableContinuousZoom(true);//允许惯性拖拽
     map.addControl(new BMap.NavigationControl({ isOpen: true, anchor: BMAP_ANCHOR_BOTTOM_LEFT }));  //添加默认缩放平移控件,右上角打开
     map.addControl(new BMap.OverviewMapControl({ isOpen: true, anchor: BMAP_ANCHOR_BOTTOM_RIGHT })); //添加默认缩略地图控件,右下角打开
-    map.addControl(new BMap.MapTypeControl());//添加卫星控件
+    searchByStationName(map, XQMC);
+};
+//地址定位
+function searchByStationName(map, XQMC) {
+    map.clearOverlays();//清空原来的标注
+    var localSearch = new BMap.LocalSearch(map);
+    localSearch.enableAutoViewport(); //允许自动调节窗体大小
+    localSearch.setSearchCompleteCallback(function (searchResult) {
+        var poi = searchResult.getPoi(0);
+        map.centerAndZoom(poi.point, 13);
+        var marker = new BMap.Marker(new BMap.Point(poi.point.lng, poi.point.lat));  // 创建标注，为要查询的地址对应的经纬度
+        map.addOverlay(marker);
+    });
+    localSearch.search(XQMC);
 }
 //加载猜你喜欢
 function LoadCNXH(TYPE) {
@@ -323,22 +346,6 @@ function LoadJPTJInfo(obj) {
     html += ('<p class="p_li_body_left_body_jptj_jg">' + obj.ZJ + '元/月</p>');
     html += ('</li>');
     return html;
-}
-//加载个人信息
-function LoadGRXX(grxx) {
-    var html = "";
-    html += ('<div class="div_body_right_grxx">');
-    html += ('<img class="img_div_body_right_grxx" src="http://localhost/infotownlet/Areas/Business/Photos/2718ced3-996d-427d-925d-a08e127cc0b8/GRZL/TX.jpg?j=0.3236891655295969" />');
-    html += ('<p class="p_div_body_right_yhm">' + grxx.YHM + '</p>');
-    html += ('<p class="p_div_body_right_zcsj">注册时间：' + grxx.SQRQ.ToString("yyyy年MM月dd日") + '</p>');
-    html += ('<div class="div_div_body_right_yyzz">');
-    html += ('<div class="div_div_div_body_right_yyzz"><i class="i_div_div_body_right_yyzz_sfz"></i><span>身份证</span></div>');
-    html += ('<div class="div_div_div_body_right_yyzz"><i class="i_div_div_body_right_yyzz_yyzz"></i><span>营业执照</span></div>');
-    html += ('<div class="div_div_div_body_right_yyzz"><i class="i_div_div_body_right_yyzz_zmxy"></i><span>芝麻信用</span></div>');
-    html += ('</div>');
-    html += ('<div class="div_div_body_right_ckxy">查看TA的信用记录</div>');
-    html += ('</div>');
-    $("#div_body_right").append(html);
 }
 //加载该经纪人推荐房源
 function LoadJJRTJFY(TYPE) {
