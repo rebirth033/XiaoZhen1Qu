@@ -268,7 +268,7 @@ function LoadFC_ZZFXX() {
         dataType: "json",
         data:
         {
-            FC_ZZFJBXXID: getUrlParam("FC_ZZFJBXXID")
+            ID: getUrlParam("ID")
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -320,8 +320,8 @@ function FB() {
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     if ($("#KRZSJ").val() !== "")
         obj = jsonObj.AddJson(obj, "KRZSJ", "'" + $("#KRZSJ").val() + "'");
-    if (getUrlParam("FC_ZZFJBXXID") !== null)
-        obj = jsonObj.AddJson(obj, "FC_ZZFJBXXID", "'" + getUrlParam("FC_ZZFJBXXID") + "'");
+    if (getUrlParam("ID") !== null)
+        obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");
 
     $.ajax({
         type: "POST",

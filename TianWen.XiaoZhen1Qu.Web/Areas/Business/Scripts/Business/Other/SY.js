@@ -63,7 +63,7 @@ function LoadZXFBXX() {
 //加载最新发布信息单条
 function LoadInfo(obj) {
     var html = "";
-    html += ('<li class="li_body_top_right_zxfb">');
+    html += ('<li onclick="OpenXXXX(' + obj.LBID + ',\'' + obj.JCXXID + '\')" class="li_body_top_right_zxfb">');
     html += ('<img class="img_body_top_right_zxfb" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<div class="div_body_top_right_zxfb">');
     html += ('<span class="span_body_top_right_zxfb">' + obj.BT + '</span>');
@@ -79,4 +79,28 @@ function OpenLBXZ() {
 //打开房屋出租
 function OpenFWCZ() {
     window.open(getRootPath() + "/Business/FCCX/FCCX_ZZF?LBID=19");
+}
+//打开详细页面
+function OpenXXXX(LBID, JCXXID) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/SY/LoadLBByJCXX",
+        dataType: "json",
+        data:
+        {
+            LBID: LBID,
+            JCXXID: JCXXID
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                if (LBID === 19) {
+                    window.open(getRootPath() + "/Business/FCXX/FCXX_ZZF?ID=" + xml.id);
+                }
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+
+        }
+    });
+    
 }

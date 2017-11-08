@@ -18,7 +18,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public JsonResult LoadFCXX()
         {
-            return Json(FCCXBLL.LoadFCXX(Request["TYPE"], Request["FCXXID"]));
+            return Json(FCCXBLL.LoadFCXX(Request["TYPE"], Request["ID"]));
         }
     }
 }

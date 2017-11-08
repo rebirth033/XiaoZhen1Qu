@@ -9,6 +9,6 @@ namespace TianWen.XiaoZhen1Qu.Interface
     {
         object LoadFCXX(string TYPE, string Condition, string PageIndex, string PageSize);
 
-        object LoadFCXX(string TYPE, string FCXXID);
+        object LoadFCXX(string TYPE, string ID);
     }
 }

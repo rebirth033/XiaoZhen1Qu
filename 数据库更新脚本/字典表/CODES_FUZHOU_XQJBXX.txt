@@ -1,5 +1,5 @@
 -- Create table
-create table XQJBXX
+create table CODES_FUZHOU_XQJBXX
 (
   xqjbxxid  INTEGER not null,
   xqmc      VARCHAR2(100),
@@ -7,7 +7,7 @@ create table XQJBXX
   xqmcpy    VARCHAR2(300),
   xqmcpyqkg VARCHAR2(300),
   xqmcpyszm VARCHAR2(100),
-  area      VARCHAR2(100),
+  dq        VARCHAR2(100),
   page      INTEGER,
   wylx      VARCHAR2(30),
   zjmj      VARCHAR2(30),
@@ -25,47 +25,48 @@ tablespace USERS
   maxtrans 255
   storage
   (
-    initial 512K
+    initial 16K
+    next 1M
     minextents 1
     maxextents unlimited
   );
 -- Add comments to the columns 
-comment on column XQJBXX.xqjbxxid
+comment on column CODES_FUZHOU_XQJBXX.xqjbxxid
   is 'ID';
-comment on column XQJBXX.xqmc
+comment on column CODES_FUZHOU_XQJBXX.xqmc
   is '小区名称';
-comment on column XQJBXX.xqdz
+comment on column CODES_FUZHOU_XQJBXX.xqdz
   is '小区地址';
-comment on column XQJBXX.xqmcpy
+comment on column CODES_FUZHOU_XQJBXX.xqmcpy
   is '小区名称拼音';
-comment on column XQJBXX.xqmcpyqkg
+comment on column CODES_FUZHOU_XQJBXX.xqmcpyqkg
   is '小区名称拼音去空格';
-comment on column XQJBXX.xqmcpyszm
+comment on column CODES_FUZHOU_XQJBXX.xqmcpyszm
   is '小区名称拼音首字母';
-comment on column XQJBXX.area
+comment on column CODES_FUZHOU_XQJBXX.dq
   is '小区所在县市';
-comment on column XQJBXX.page
+comment on column CODES_FUZHOU_XQJBXX.page
   is '所在页';
-comment on column XQJBXX.wylx
+comment on column CODES_FUZHOU_XQJBXX.wylx
   is '物业类型';
-comment on column XQJBXX.zjmj
+comment on column CODES_FUZHOU_XQJBXX.zjmj
   is '总建面积';
-comment on column XQJBXX.zhs
+comment on column CODES_FUZHOU_XQJBXX.zhs
   is '总户数';
-comment on column XQJBXX.jznd
+comment on column CODES_FUZHOU_XQJBXX.jznd
   is '建筑年代';
-comment on column XQJBXX.rjl
+comment on column CODES_FUZHOU_XQJBXX.rjl
   is '容积率';
-comment on column XQJBXX.tcw
+comment on column CODES_FUZHOU_XQJBXX.tcw
   is '停车位';
-comment on column XQJBXX.lhl
+comment on column CODES_FUZHOU_XQJBXX.lhl
   is '绿化率';
-comment on column XQJBXX.kfs
+comment on column CODES_FUZHOU_XQJBXX.kfs
   is '开发商';
-comment on column XQJBXX.wygs
+comment on column CODES_FUZHOU_XQJBXX.wygs
   is '物业公司';
 -- Create/Recreate primary, unique and foreign key constraints 
-alter table XQJBXX
+alter table CODES_FUZHOU_XQJBXX
   add primary key (XQJBXXID)
   using index 
   tablespace USERS
@@ -75,6 +76,7 @@ alter table XQJBXX
   storage
   (
     initial 128K
+    next 1M
     minextents 1
     maxextents unlimited
   );

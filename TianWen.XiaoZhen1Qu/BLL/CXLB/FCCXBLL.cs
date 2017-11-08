@@ -85,14 +85,14 @@ namespace TianWen.XiaoZhen1Qu.BLL
         }
 
         //加载房产信息
-        public object LoadFCXX(string TYPE, string FCXXID)
+        public object LoadFCXX(string TYPE, string ID)
         {
             try
             {
                 DataTable dt = new DataTable();
                 if (TYPE == "FC")//房产
                 {
-                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.*,x.* from jcxx a,fc_zzfjbxx b  left join codes_fuzhou_xqjbxx x on b.xqmc = x.xqmc where a.jcxxid = b.jcxxid and fc_zzfjbxxid = '{0}'  order by zxgxsj desc", FCXXID));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.*,x.* from jcxx a,fc_zzfjbxx b  left join codes_fuzhou_xqjbxx x on b.xqmc = x.xqmc where a.jcxxid = b.jcxxid and id = '{0}'  order by zxgxsj desc", ID));
                 }
                 List<FC_ZZFView> list = ConvertHelper.DataTableToList<FC_ZZFView>(dt);
 

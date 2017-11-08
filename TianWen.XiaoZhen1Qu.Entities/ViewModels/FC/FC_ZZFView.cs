@@ -18,7 +18,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.ViewModels.FC
         public DateTime ZXGXSJ { get; set; }
         public byte[] BCMS { get; set; }
         //房产信息
-        public string FC_ZZFJBXXID { get; set; }
+        public string ID { get; set; }
         public string ZJ { get; set; }
         public string CZFS { get; set; }
         public string S { get; set; }
