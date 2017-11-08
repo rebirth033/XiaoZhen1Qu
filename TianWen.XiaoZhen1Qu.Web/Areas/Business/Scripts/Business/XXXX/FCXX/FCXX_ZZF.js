@@ -126,7 +126,7 @@ function LoadFYXQ(obj, BCMSString) {
     html += ('<div class="div_body_left_body_fyxq_xx">');
     if (obj.FWPZ !== null) {
         var fwpzarray = obj.FWPZ.split(',');
-        
+
         html += ('<div class="div_body_left_body_fyxq_xx_left">房屋配置</div>');
         html += ('<div class="div_body_left_body_fyxq_xx_right" style="width: 600px;">');
         for (var i = 0; i < fwpzarray.length; i++) {
@@ -219,11 +219,11 @@ function LoadXQXX(obj) {
     html += ('</li>');
     html += ('<li class="li_body_left_body_xqxx">');
     html += ('<span class="span_body_left_body_xqxx_left">容积率：</span>');
-    html += ('<span class="span_body_left_body_xqxx_right">' + (obj.RJL === null ? "" : obj.RJL)  + '</span>');
+    html += ('<span class="span_body_left_body_xqxx_right">' + (obj.RJL === null ? "" : obj.RJL) + '</span>');
     html += ('</li>');
     html += ('<li class="li_body_left_body_xqxx">');
     html += ('<span class="span_body_left_body_xqxx_left">停车位：</span>');
-    html += ('<span class="span_body_left_body_xqxx_right">' + (obj.TCW === null ? "" : obj.TCW)  + '</span>');
+    html += ('<span class="span_body_left_body_xqxx_right">' + (obj.TCW === null ? "" : obj.TCW) + '</span>');
     html += ('</li>');
     html += ('<li class="li_body_left_body_xqxx">');
     html += ('<span class="span_body_left_body_xqxx_left">绿化率：</span>');
@@ -296,7 +296,7 @@ function LoadCNXH(TYPE) {
 //加载猜你喜欢单条信息
 function LoadCNXHInfo(obj) {
     var html = "";
-    html += ('<li class="li_body_left_body_cnxh">');
+    html += ('<li onclick="OpenXXXX(\'' + obj.FC_ZZFJBXXID + '\')" class="li_body_left_body_cnxh">');
     html += ('<img class="img_li_body_left_body_cnxh" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_left_body_cnxh_xq">' + obj.XQDZ.split('-')[0] + ' / ' + obj.XQDZ.split('-')[1] + ' / ' + obj.XQMC + '</p>');
     html += ('<p class="p_li_body_left_body_cnxh_cs">' + obj.S + '室 ' + obj.PFM + '平</p>');
@@ -415,4 +415,8 @@ function LoadXGLM() {
     html += ('</ul>');
     html += ('</div>');
     $("#div_body_right").append(html);
+}
+//打开详细页面
+function OpenXXXX(FCXXID) {
+    window.open(getRootPath() + "/Business/FCXX/FCXX_ZZF?FCXXID=" + FCXXID);
 }
