@@ -29,7 +29,7 @@ function HeadActive() {
     });
     LoadDefault($(this)[0].id, currentIndex);
 }
-
+//加载用户发布信息
 function LoadDefault(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
     $.ajax({
@@ -59,7 +59,7 @@ function LoadDefault(TYPE, PageIndex) {
         }
     });
 }
-
+//加载用户发布信息单条
 function LoadInfo(obj) {
     var html = "";
     html += ('<ul class="ul_new_info">');
@@ -109,7 +109,7 @@ function LoadInfo(obj) {
     html += ('</ul>');
     $("#div_main_info").append(html);
 }
-
+//没有信息
 function NoInfo(TYPE) {
     if (TYPE === "divZJFBXX") {
         $("#div_main_info").html('<div class="div_no_info">您最近三个月内没有发布信息</div>');
@@ -127,7 +127,7 @@ function NoInfo(TYPE) {
         $("#div_main_info").html('<div class="div_no_info">您没有未显示的信息</div>');
     }
 }
-
+//恢复信息
 function Restore(JCXXID) {
     if (confirm("您确定恢复本条信息吗?")) {
         $.ajax({
@@ -151,7 +151,7 @@ function Restore(JCXXID) {
         });
     }
 }
-
+//删除信息
 function Delete(JCXXID) {
     if (confirm("您确定删除本条信息吗?")) {
         $.ajax({
@@ -175,7 +175,7 @@ function Delete(JCXXID) {
         });
     }
 }
-
+//修改信息
 function Update(JCXXID, LBID) {
     $.ajax({
         type: "POST",
@@ -203,7 +203,7 @@ function LoadByActive() {
             LoadDefault($("#" + this.id).parent()[0].id, currentIndex);
     });
 }
-
+//加载分页
 function LoadPage(PageCount) {
     var index = parseInt(currentIndex);
     $("#div_main_info_bottom_fy").html('');
