@@ -75,14 +75,14 @@ function LoadPFCG_MYWJJBXX() {
         dataType: "json",
         data:
         {
-            PFCG_MYWJJBXXID: getUrlParam("PFCG_MYWJJBXXID")
+            ID: getUrlParam("ID")
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var jsonObj = new JsonDB("myTabContent");
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.PFCG_MYWJJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
-                $("#PFCG_MYWJJBXXID").val(xml.Value.PFCG_MYWJJBXX.PFCG_MYWJJBXXID);
+                $("#ID").val(xml.Value.PFCG_MYWJJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
@@ -113,8 +113,8 @@ function FB() {
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
 
-    if (getUrlParam("PFCG_MYWJJBXXID") !== null)
-        obj = jsonObj.AddJson(obj, "PFCG_MYWJJBXXID", "'" + getUrlParam("PFCG_MYWJJBXXID") + "'");
+    if (getUrlParam("ID") !== null)
+        obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");
 
     $.ajax({
         type: "POST",

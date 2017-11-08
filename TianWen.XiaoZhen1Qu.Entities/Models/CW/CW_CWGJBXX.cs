@@ -7,14 +7,14 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
     {
         public CW_CWGJBXX()
         {
-            CW_CWGJBXXID = Guid.NewGuid().ToString("N");
+            ID = Guid.NewGuid().ToString("N");
         }
 
         /// <summary>
         /// 摩托车信息ID
         /// </summary>
         [Id]
-        public virtual string CW_CWGJBXXID { get; set; }
+        public virtual string ID { get; set; }
 
         /// <summary>
         /// 基础信息ID

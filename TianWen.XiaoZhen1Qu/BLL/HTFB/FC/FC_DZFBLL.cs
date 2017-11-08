@@ -15,7 +15,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
         //保存房屋出租基本信息
         public object SaveDZFJBXX(JCXX jcxx, FC_DZFJBXX FC_DZFJBXX, List<PHOTOS> photos)
         {
-            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM FC_DZFJBXX WHERE FC_DZFJBXXID='{0}'", FC_DZFJBXX.FC_DZFJBXXID));
+            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM FC_DZFJBXX WHERE ID='{0}'", FC_DZFJBXX.ID));
             using (ITransaction transaction = DAO.BeginTransaction())
             {
                 try
@@ -28,7 +28,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                         DAO.Update(jcxx);
                         DAO.Update(FC_DZFJBXX);
                         transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, FC_DZFJBXXID = FC_DZFJBXX.FC_DZFJBXXID } };
+                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, ID = FC_DZFJBXX.ID } };
                     }
                     else
                     {
@@ -37,7 +37,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                         DAO.Save(jcxx);
                         DAO.Save(FC_DZFJBXX);
                         transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, FC_DZFJBXXID = FC_DZFJBXX.FC_DZFJBXXID } };
+                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, ID = FC_DZFJBXX.ID } };
                     }
                 }
                 catch (Exception ex)
@@ -49,11 +49,11 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
         //加载短租房基本信息
-        public object LoadFC_DZFJBXX(string FC_DZFJBXXID)
+        public object LoadFC_DZFJBXX(string ID)
         {
             try
             {
-                FC_DZFJBXX FC_DZFJBXX = DAO.GetObjectByID<FC_DZFJBXX>(FC_DZFJBXXID);
+                FC_DZFJBXX FC_DZFJBXX = DAO.GetObjectByID<FC_DZFJBXX>(ID);
                 if (FC_DZFJBXX != null)
                 {
                     JCXX jcxx = GetJCXXByID(FC_DZFJBXX.JCXXID);

@@ -205,56 +205,56 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public JsonResult LoadXXYL_DIYSGFJBXX()
         {
-            string XXYL_DIYSGFJBXXID = Request["XXYL_DIYSGFJBXXID"];
-            object result = XXYL_DIYSGFBLL.LoadXXYL_DIYSGFJBXX(XXYL_DIYSGFJBXXID);
+            string ID = Request["ID"];
+            object result = XXYL_DIYSGFBLL.LoadXXYL_DIYSGFJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadXXYL_HWJBXX()
         {
-            string XXYL_HWJBXXID = Request["XXYL_HWJBXXID"];
-            object result = XXYL_HWBLL.LoadXXYL_HWJBXX(XXYL_HWJBXXID);
+            string ID = Request["ID"];
+            object result = XXYL_HWBLL.LoadXXYL_HWJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadXXYL_HPGJBXX()
         {
-            string XXYL_HPGJBXXID = Request["XXYL_HPGJBXXID"];
-            object result = XXYL_HPGBLL.LoadXXYL_HPGJBXX(XXYL_HPGJBXXID);
+            string ID = Request["ID"];
+            object result = XXYL_HPGBLL.LoadXXYL_HPGJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadXXYL_TQTJBXX()
         {
-            string XXYL_TQTJBXXID = Request["XXYL_TQTJBXXID"];
-            object result = XXYL_TQTBLL.LoadXXYL_TQTJBXX(XXYL_TQTJBXXID);
+            string ID = Request["ID"];
+            object result = XXYL_TQTBLL.LoadXXYL_TQTJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadXXYL_QPZYJBXX()
         {
-            string XXYL_QPZYJBXXID = Request["XXYL_QPZYJBXXID"];
-            object result = XXYL_QPZYBLL.LoadXXYL_QPZYJBXX(XXYL_QPZYJBXXID);
+            string ID = Request["ID"];
+            object result = XXYL_QPZYBLL.LoadXXYL_QPZYJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadXXYL_XYWQJBXX()
         {
-            string XXYL_XYWQJBXXID = Request["XXYL_XYWQJBXXID"];
-            object result = XXYL_XYWQBLL.LoadXXYL_XYWQJBXX(XXYL_XYWQJBXXID);
+            string ID = Request["ID"];
+            object result = XXYL_XYWQBLL.LoadXXYL_XYWQJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadXXYL_YDJBJBXX()
         {
-            string XXYL_YDJBJBXXID = Request["XXYL_YDJBJBXXID"];
-            object result = XXYL_YDJBBLL.LoadXXYL_YDJBJBXX(XXYL_YDJBJBXXID);
+            string ID = Request["ID"];
+            object result = XXYL_YDJBBLL.LoadXXYL_YDJBJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadXXYL_YDJSJBXX()
         {
-            string XXYL_YDJSJBXXID = Request["XXYL_YDJSJBXXID"];
-            object result = XXYL_YDJSBLL.LoadXXYL_YDJSJBXX(XXYL_YDJSJBXXID);
+            string ID = Request["ID"];
+            object result = XXYL_YDJSBLL.LoadXXYL_YDJSJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadXXYL_ZLAMJBXX()
         {
-            string XXYL_ZLAMJBXXID = Request["XXYL_ZLAMJBXXID"];
-            object result = XXYL_ZLAMBLL.LoadXXYL_ZLAMJBXX(XXYL_ZLAMJBXXID);
+            string ID = Request["ID"];
+            object result = XXYL_ZLAMBLL.LoadXXYL_ZLAMJBXX(ID);
             return Json(result);
         }
     }

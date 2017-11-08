@@ -7,14 +7,14 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
     {
         public LR_WSJBXX()
         {
-            LR_WSJBXXID = Guid.NewGuid().ToString("N");
+            ID = Guid.NewGuid().ToString("N");
         }
 
         /// <summary>
         /// 丽人_纹身信息ID
         /// </summary>
         [Id]
-        public virtual string LR_WSJBXXID { get; set; }
+        public virtual string ID { get; set; }
 
         /// <summary>
         /// 基础信息ID

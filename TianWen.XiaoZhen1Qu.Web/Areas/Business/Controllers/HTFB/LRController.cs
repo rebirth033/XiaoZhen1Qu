@@ -226,62 +226,62 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public JsonResult LoadLR_KQHLJBXX()
         {
-            string LR_KQHLJBXXID = Request["LR_KQHLJBXXID"];
-            object result = LR_KQHLBLL.LoadLR_KQHLJBXX(LR_KQHLJBXXID);
+            string ID = Request["ID"];
+            object result = LR_KQHLBLL.LoadLR_KQHLJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadLR_MFHFJBXX()
         {
-            string LR_MFHFJBXXID = Request["LR_MFHFJBXXID"];
-            object result = LR_MFHFBLL.LoadLR_MFHFJBXX(LR_MFHFJBXXID);
+            string ID = Request["ID"];
+            object result = LR_MFHFBLL.LoadLR_MFHFJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadLR_MJJBXX()
         {
-            string LR_MJJBXXID = Request["LR_MJJBXXID"];
-            object result = LR_MJBLL.LoadLR_MJJBXX(LR_MJJBXXID);
+            string ID = Request["ID"];
+            object result = LR_MJBLL.LoadLR_MJJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadLR_MRHFJBXX()
         {
-            string LR_MRHFJBXXID = Request["LR_MRHFJBXXID"];
-            object result = LR_MRHFBLL.LoadLR_MRHFJBXX(LR_MRHFJBXXID);
+            string ID = Request["ID"];
+            object result = LR_MRHFBLL.LoadLR_MRHFJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadLR_MTSSJBXX()
         {
-            string LR_MTSSJBXXID = Request["LR_MTSSJBXXID"];
-            object result = LR_MTSSBLL.LoadLR_MTSSJBXX(LR_MTSSJBXXID);
+            string ID = Request["ID"];
+            object result = LR_MTSSBLL.LoadLR_MTSSJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadLR_SPAJBXX()
         {
-            string LR_SPAJBXXID = Request["LR_SPAJBXXID"];
-            object result = LR_SPABLL.LoadLR_SPAJBXX(LR_SPAJBXXID);
+            string ID = Request["ID"];
+            object result = LR_SPABLL.LoadLR_SPAJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadLR_TJJBXX()
         {
-            string LR_TJJBXXID = Request["LR_TJJBXXID"];
-            object result = LR_TJBLL.LoadLR_TJJBXX(LR_TJJBXXID);
+            string ID = Request["ID"];
+            object result = LR_TJBLL.LoadLR_TJJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadLR_WDJBXX()
         {
-            string LR_WDJBXXID = Request["LR_WDJBXXID"];
-            object result = LR_WDBLL.LoadLR_WDJBXX(LR_WDJBXXID);
+            string ID = Request["ID"];
+            object result = LR_WDBLL.LoadLR_WDJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadLR_WSJBXX()
         {
-            string LR_WSJBXXID = Request["LR_WSJBXXID"];
-            object result = LR_WSBLL.LoadLR_WSJBXX(LR_WSJBXXID);
+            string ID = Request["ID"];
+            object result = LR_WSBLL.LoadLR_WSJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadLR_YJJBXX()
         {
-            string LR_YJJBXXID = Request["LR_YJJBXXID"];
-            object result = LR_YJBLL.LoadLR_YJJBXX(LR_YJJBXXID);
+            string ID = Request["ID"];
+            object result = LR_YJBLL.LoadLR_YJJBXX(ID);
             return Json(result);
         }
     }

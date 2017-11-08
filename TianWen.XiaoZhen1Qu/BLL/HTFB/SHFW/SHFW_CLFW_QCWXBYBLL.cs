@@ -14,7 +14,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
     {
         public object SaveSHFW_CLFW_QCWXBYJBXX(JCXX jcxx, SHFW_CLFW_QCWXBYJBXX SHFW_CLFW_QCWXBYJBXX, List<PHOTOS> photos)
         {
-            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM SHFW_CLFW_QCWXBYJBXX WHERE SHFW_CLFW_QCWXBYJBXXID='{0}'", SHFW_CLFW_QCWXBYJBXX.SHFW_CLFW_QCWXBYJBXXID));
+            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM SHFW_CLFW_QCWXBYJBXX WHERE ID='{0}'", SHFW_CLFW_QCWXBYJBXX.ID));
             using (ITransaction transaction = DAO.BeginTransaction())
             {
                 try
@@ -27,7 +27,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                         DAO.Update(jcxx);
                         DAO.Update(SHFW_CLFW_QCWXBYJBXX);
                         transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, SHFW_CLFW_QCWXBYJBXXID = SHFW_CLFW_QCWXBYJBXX.SHFW_CLFW_QCWXBYJBXXID } };
+                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, ID = SHFW_CLFW_QCWXBYJBXX.ID } };
                     }
                     else
                     {
@@ -36,7 +36,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                         DAO.Save(jcxx);
                         DAO.Save(SHFW_CLFW_QCWXBYJBXX);
                         transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, SHFW_CLFW_QCWXBYJBXXID = SHFW_CLFW_QCWXBYJBXX.SHFW_CLFW_QCWXBYJBXXID } };
+                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, ID = SHFW_CLFW_QCWXBYJBXX.ID } };
                     }
                 }
                 catch (Exception ex)
@@ -48,11 +48,11 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
-        public object LoadSHFW_CLFW_QCWXBYJBXX(string SHFW_CLFW_QCWXBYJBXXID)
+        public object LoadSHFW_CLFW_QCWXBYJBXX(string ID)
         {
             try
             {
-                SHFW_CLFW_QCWXBYJBXX SHFW_CLFW_QCWXBYJBXX = DAO.GetObjectByID<SHFW_CLFW_QCWXBYJBXX>(SHFW_CLFW_QCWXBYJBXXID);
+                SHFW_CLFW_QCWXBYJBXX SHFW_CLFW_QCWXBYJBXX = DAO.GetObjectByID<SHFW_CLFW_QCWXBYJBXX>(ID);
                 if (SHFW_CLFW_QCWXBYJBXX != null)
                 {
                     JCXX jcxx = GetJCXXByID(SHFW_CLFW_QCWXBYJBXX.JCXXID);

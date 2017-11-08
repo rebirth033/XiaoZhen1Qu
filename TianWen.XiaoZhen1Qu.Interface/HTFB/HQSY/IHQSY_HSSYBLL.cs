@@ -7,6 +7,6 @@ namespace TianWen.XiaoZhen1Qu.Interface
     {
         object SaveHQSY_HSSYJBXX(JCXX jcxx, HQSY_HSSYJBXX dzfjbxx, List<PHOTOS> photos);
 
-        object LoadHQSY_HSSYJBXX(string HQSY_HSSYJBXXID);
+        object LoadHQSY_HSSYJBXX(string ID);
     }
 }

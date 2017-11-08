@@ -57,14 +57,14 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public JsonResult LoadQZZP_JZZPJBXX()
         {
-            string QZZP_JZZPJBXXID = Request["QZZP_JZZPJBXXID"];
-            object result = QZZP_JZZPBLL.LoadQZZP_JZZPJBXX(QZZP_JZZPJBXXID);
+            string ID = Request["ID"];
+            object result = QZZP_JZZPBLL.LoadQZZP_JZZPJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadQZZP_QZZPJBXX()
         {
-            string QZZP_QZZPJBXXID = Request["QZZP_QZZPJBXXID"];
-            object result = QZZP_QZZPBLL.LoadQZZP_QZZPJBXX(QZZP_QZZPJBXXID);
+            string ID = Request["ID"];
+            object result = QZZP_QZZPBLL.LoadQZZP_QZZPJBXX(ID);
             return Json(result);
         }
     }

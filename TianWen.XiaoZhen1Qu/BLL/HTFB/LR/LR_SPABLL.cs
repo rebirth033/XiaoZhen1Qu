@@ -14,7 +14,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
     {
         public object SaveLR_SPAJBXX(JCXX jcxx, LR_SPAJBXX LR_SPAJBXX, List<PHOTOS> photos)
         {
-            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM LR_SPAJBXX WHERE LR_SPAJBXXID='{0}'", LR_SPAJBXX.LR_SPAJBXXID));
+            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM LR_SPAJBXX WHERE ID='{0}'", LR_SPAJBXX.ID));
             using (ITransaction transaction = DAO.BeginTransaction())
             {
                 try
@@ -27,7 +27,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                         DAO.Update(jcxx);
                         DAO.Update(LR_SPAJBXX);
                         transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, LR_SPAJBXXID = LR_SPAJBXX.LR_SPAJBXXID } };
+                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, ID = LR_SPAJBXX.ID } };
                     }
                     else
                     {
@@ -36,7 +36,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                         DAO.Save(jcxx);
                         DAO.Save(LR_SPAJBXX);
                         transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, LR_SPAJBXXID = LR_SPAJBXX.LR_SPAJBXXID } };
+                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, ID = LR_SPAJBXX.ID } };
                     }
                 }
                 catch (Exception ex)
@@ -48,11 +48,11 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
-        public object LoadLR_SPAJBXX(string LR_SPAJBXXID)
+        public object LoadLR_SPAJBXX(string ID)
         {
             try
             {
-                LR_SPAJBXX LR_SPAJBXX = DAO.GetObjectByID<LR_SPAJBXX>(LR_SPAJBXXID);
+                LR_SPAJBXX LR_SPAJBXX = DAO.GetObjectByID<LR_SPAJBXX>(ID);
                 if (LR_SPAJBXX != null)
                 {
                     JCXX jcxx = GetJCXXByID(LR_SPAJBXX.JCXXID);

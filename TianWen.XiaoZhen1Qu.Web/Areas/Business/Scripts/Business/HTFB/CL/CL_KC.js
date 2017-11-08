@@ -175,14 +175,14 @@ function LoadCL_KCJBXX() {
         dataType: "json",
         data:
         {
-            CL_KCJBXXID: getUrlParam("CL_KCJBXXID")
+            ID: getUrlParam("ID")
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var jsonObj = new JsonDB("myTabContent");
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.CL_KCJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
-                $("#CL_KCJBXXID").val(xml.Value.CL_KCJBXX.CL_KCJBXXID);
+                $("#ID").val(xml.Value.CL_KCJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
@@ -233,8 +233,8 @@ function FB() {
     obj = jsonObj.AddJson(obj, "YWZDSG", "'" + GetDX("YWZDSG") + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
 
-    if (getUrlParam("CL_KCJBXXID") !== null)
-        obj = jsonObj.AddJson(obj, "CL_KCJBXXID", "'" + getUrlParam("CL_KCJBXXID") + "'");
+    if (getUrlParam("ID") !== null)
+        obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");
 
     $.ajax({
         type: "POST",

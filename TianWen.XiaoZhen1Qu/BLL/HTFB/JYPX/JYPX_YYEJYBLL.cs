@@ -14,7 +14,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
     {
         public object SaveJYPX_YYEJYJBXX(JCXX jcxx, JYPX_YYEJYJBXX JYPX_YYEJYJBXX, List<PHOTOS> photos)
         {
-            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM JYPX_YYEJYJBXX WHERE JYPX_YYEJYJBXXID='{0}'", JYPX_YYEJYJBXX.JYPX_YYEJYJBXXID));
+            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM JYPX_YYEJYJBXX WHERE ID='{0}'", JYPX_YYEJYJBXX.ID));
             using (ITransaction transaction = DAO.BeginTransaction())
             {
                 try
@@ -27,7 +27,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                         DAO.Update(jcxx);
                         DAO.Update(JYPX_YYEJYJBXX);
                         transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, JYPX_YYEJYJBXXID = JYPX_YYEJYJBXX.JYPX_YYEJYJBXXID } };
+                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, ID = JYPX_YYEJYJBXX.ID } };
                     }
                     else
                     {
@@ -36,7 +36,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                         DAO.Save(jcxx);
                         DAO.Save(JYPX_YYEJYJBXX);
                         transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, JYPX_YYEJYJBXXID = JYPX_YYEJYJBXX.JYPX_YYEJYJBXXID } };
+                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, ID = JYPX_YYEJYJBXX.ID } };
                     }
                 }
                 catch (Exception ex)
@@ -48,11 +48,11 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
-        public object LoadJYPX_YYEJYJBXX(string JYPX_YYEJYJBXXID)
+        public object LoadJYPX_YYEJYJBXX(string ID)
         {
             try
             {
-                JYPX_YYEJYJBXX JYPX_YYEJYJBXX = DAO.GetObjectByID<JYPX_YYEJYJBXX>(JYPX_YYEJYJBXXID);
+                JYPX_YYEJYJBXX JYPX_YYEJYJBXX = DAO.GetObjectByID<JYPX_YYEJYJBXX>(ID);
                 if (JYPX_YYEJYJBXX != null)
                 {
                     JCXX jcxx = GetJCXXByID(JYPX_YYEJYJBXX.JCXXID);

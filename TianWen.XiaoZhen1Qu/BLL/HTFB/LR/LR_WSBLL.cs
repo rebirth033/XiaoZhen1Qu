@@ -14,7 +14,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
     {
         public object SaveLR_WSJBXX(JCXX jcxx, LR_WSJBXX LR_WSJBXX, List<PHOTOS> photos)
         {
-            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM LR_WSJBXX WHERE LR_WSJBXXID='{0}'", LR_WSJBXX.LR_WSJBXXID));
+            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM LR_WSJBXX WHERE ID='{0}'", LR_WSJBXX.ID));
             using (ITransaction transaction = DAO.BeginTransaction())
             {
                 try
@@ -27,7 +27,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                         DAO.Update(jcxx);
                         DAO.Update(LR_WSJBXX);
                         transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, LR_WSJBXXID = LR_WSJBXX.LR_WSJBXXID } };
+                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, ID = LR_WSJBXX.ID } };
                     }
                     else
                     {
@@ -36,7 +36,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                         DAO.Save(jcxx);
                         DAO.Save(LR_WSJBXX);
                         transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, LR_WSJBXXID = LR_WSJBXX.LR_WSJBXXID } };
+                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, ID = LR_WSJBXX.ID } };
                     }
                 }
                 catch (Exception ex)
@@ -48,11 +48,11 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
-        public object LoadLR_WSJBXX(string LR_WSJBXXID)
+        public object LoadLR_WSJBXX(string ID)
         {
             try
             {
-                LR_WSJBXX LR_WSJBXX = DAO.GetObjectByID<LR_WSJBXX>(LR_WSJBXXID);
+                LR_WSJBXX LR_WSJBXX = DAO.GetObjectByID<LR_WSJBXX>(ID);
                 if (LR_WSJBXX != null)
                 {
                     JCXX jcxx = GetJCXXByID(LR_WSJBXX.JCXXID);

@@ -14,7 +14,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
     {
         public object SaveZSJM_CYJBXX(JCXX jcxx, ZSJM_CYJBXX ZSJM_CYJBXX, List<PHOTOS> photos)
         {
-            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM ZSJM_CYJBXX WHERE ZSJM_CYJBXXID='{0}'", ZSJM_CYJBXX.ZSJM_CYJBXXID));
+            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM ZSJM_CYJBXX WHERE ID='{0}'", ZSJM_CYJBXX.ID));
             using (ITransaction transaction = DAO.BeginTransaction())
             {
                 try
@@ -27,7 +27,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                         DAO.Update(jcxx);
                         DAO.Update(ZSJM_CYJBXX);
                         transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, ZSJM_CYJBXXID = ZSJM_CYJBXX.ZSJM_CYJBXXID } };
+                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, ID = ZSJM_CYJBXX.ID } };
                     }
                     else
                     {
@@ -36,7 +36,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                         DAO.Save(jcxx);
                         DAO.Save(ZSJM_CYJBXX);
                         transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, ZSJM_CYJBXXID = ZSJM_CYJBXX.ZSJM_CYJBXXID } };
+                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, ID = ZSJM_CYJBXX.ID } };
                     }
                 }
                 catch (Exception ex)
@@ -48,11 +48,11 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
-        public object LoadZSJM_CYJBXX(string ZSJM_CYJBXXID)
+        public object LoadZSJM_CYJBXX(string ID)
         {
             try
             {
-                ZSJM_CYJBXX ZSJM_CYJBXX = DAO.GetObjectByID<ZSJM_CYJBXX>(ZSJM_CYJBXXID);
+                ZSJM_CYJBXX ZSJM_CYJBXX = DAO.GetObjectByID<ZSJM_CYJBXX>(ID);
                 if (ZSJM_CYJBXX != null)
                 {
                     JCXX jcxx = GetJCXXByID(ZSJM_CYJBXX.JCXXID);

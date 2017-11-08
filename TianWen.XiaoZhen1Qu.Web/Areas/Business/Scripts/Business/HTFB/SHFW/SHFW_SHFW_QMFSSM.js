@@ -75,14 +75,14 @@ function LoadSHFW_SHFW_QMFSSMJBXX() {
         dataType: "json",
         data:
         {
-            SHFW_SHFW_QMFSSMJBXXID: getUrlParam("SHFW_SHFW_QMFSSMJBXXID")
+            ID: getUrlParam("ID")
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var jsonObj = new JsonDB("myTabContent");
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.SHFW_SHFW_QMFSSMJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
-                $("#SHFW_SHFW_QMFSSMJBXXID").val(xml.Value.SHFW_SHFW_QMFSSMJBXX.SHFW_SHFW_QMFSSMJBXXID);
+                $("#ID").val(xml.Value.SHFW_SHFW_QMFSSMJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
@@ -114,8 +114,8 @@ function FB() {
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "XL", "'" + GetDuoX("XL") + "'");
 
-    if (getUrlParam("SHFW_SHFW_QMFSSMJBXXID") !== null)
-        obj = jsonObj.AddJson(obj, "SHFW_SHFW_QMFSSMJBXXID", "'" + getUrlParam("SHFW_SHFW_QMFSSMJBXXID") + "'");
+    if (getUrlParam("ID") !== null)
+        obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");
 
     $.ajax({
         type: "POST",

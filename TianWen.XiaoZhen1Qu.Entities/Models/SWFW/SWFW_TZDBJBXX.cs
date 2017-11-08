@@ -7,14 +7,14 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
     {
         public SWFW_TZDBJBXX()
         {
-            SWFW_TZDBJBXXID = Guid.NewGuid().ToString("N");
+            ID = Guid.NewGuid().ToString("N");
         }
 
         /// <summary>
         /// 商务服务_商标专利信息ID
         /// </summary>
         [Id]
-        public virtual string SWFW_TZDBJBXXID { get; set; }
+        public virtual string ID { get; set; }
 
         /// <summary>
         /// 基础信息ID

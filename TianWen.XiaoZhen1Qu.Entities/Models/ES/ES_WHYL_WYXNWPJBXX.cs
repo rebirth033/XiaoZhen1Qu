@@ -7,14 +7,14 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
     {
         public ES_WHYL_WYXNWPJBXX()
         {
-            ES_WHYL_WYXNWPJBXXID = Guid.NewGuid().ToString("N");
+            ID = Guid.NewGuid().ToString("N");
         }
 
         /// <summary>
         /// 网游/虚拟物品信息ID
         /// </summary>
         [Id]
-        public virtual string ES_WHYL_WYXNWPJBXXID { get; set; }
+        public virtual string ID { get; set; }
 
         /// <summary>
         /// 基础信息ID

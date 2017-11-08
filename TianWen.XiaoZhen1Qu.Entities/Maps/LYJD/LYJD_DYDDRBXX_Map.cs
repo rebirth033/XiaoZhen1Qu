@@ -9,7 +9,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Maps
         {
             Table("LYJD_DYDDRJBXX");
             #region 属性
-            Id(x => x.LYJD_DYDDRJBXXID, "LYJD_DYDDRJBXXID").GeneratedBy.Assigned().CustomType("AnsiString");
+            Id(x => x.ID, "ID").GeneratedBy.Assigned().CustomType("AnsiString");
             Map(x => x.JCXXID, "JCXXID");
             Map(x => x.XM, "XM");
             Map(x => x.XB, "XB");

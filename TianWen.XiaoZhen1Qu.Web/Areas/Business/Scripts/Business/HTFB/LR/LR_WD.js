@@ -60,14 +60,14 @@ function LoadLR_WDJBXX() {
         dataType: "json",
         data:
         {
-            LR_WDJBXXID: getUrlParam("LR_WDJBXXID")
+            ID: getUrlParam("ID")
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var jsonObj = new JsonDB("myTabContent");
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.LR_WDJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
-                $("#LR_WDJBXXID").val(xml.Value.LR_WDJBXX.LR_WDJBXXID);
+                $("#ID").val(xml.Value.LR_WDJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
@@ -96,8 +96,8 @@ function FB() {
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "LB", "'" + GetDuoX("WDLB") + "'");
 
-    if (getUrlParam("LR_WDJBXXID") !== null)
-        obj = jsonObj.AddJson(obj, "LR_WDJBXXID", "'" + getUrlParam("LR_WDJBXXID") + "'");
+    if (getUrlParam("ID") !== null)
+        obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");
 
     $.ajax({
         type: "POST",

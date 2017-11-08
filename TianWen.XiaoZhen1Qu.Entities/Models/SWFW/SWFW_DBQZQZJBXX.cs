@@ -7,14 +7,14 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
     {
         public SWFW_DBQZQZJBXX()
         {
-            SWFW_DBQZQZJBXXID = Guid.NewGuid().ToString("N");
+            ID = Guid.NewGuid().ToString("N");
         }
 
         /// <summary>
         /// 商务服务_代办签证/签注信息ID
         /// </summary>
         [Id]
-        public virtual string SWFW_DBQZQZJBXXID { get; set; }
+        public virtual string ID { get; set; }
 
         /// <summary>
         /// 基础信息ID

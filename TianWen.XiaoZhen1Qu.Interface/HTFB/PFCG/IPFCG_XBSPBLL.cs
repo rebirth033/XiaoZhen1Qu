@@ -7,6 +7,6 @@ namespace TianWen.XiaoZhen1Qu.Interface
     {
         object SavePFCG_XBSPJBXX(JCXX jcxx, PFCG_XBSPJBXX dzfjbxx, List<PHOTOS> photos);
 
-        object LoadPFCG_XBSPJBXX(string PFCG_XBSPJBXXID);
+        object LoadPFCG_XBSPJBXX(string ID);
     }
 }

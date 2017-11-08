@@ -14,7 +14,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
     {
         public object SaveCL_MTCJBXX(JCXX jcxx, CL_MTCJBXX CL_MTCJBXX, List<PHOTOS> photos)
         {
-            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM CL_MTCJBXX WHERE CL_MTCJBXXID='{0}'", CL_MTCJBXX.CL_MTCJBXXID));
+            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM CL_MTCJBXX WHERE ID='{0}'", CL_MTCJBXX.ID));
             using (ITransaction transaction = DAO.BeginTransaction())
             {
                 try
@@ -27,7 +27,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                         DAO.Update(jcxx);
                         DAO.Update(CL_MTCJBXX);
                         transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, CL_MTCJBXXID = CL_MTCJBXX.CL_MTCJBXXID } };
+                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, ID = CL_MTCJBXX.ID } };
                     }
                     else
                     {
@@ -36,7 +36,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                         DAO.Save(jcxx);
                         DAO.Save(CL_MTCJBXX);
                         transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, CL_MTCJBXXID = CL_MTCJBXX.CL_MTCJBXXID } };
+                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, ID = CL_MTCJBXX.ID } };
                     }
                 }
                 catch (Exception ex)
@@ -48,11 +48,11 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
-        public object LoadCL_MTCJBXX(string CL_MTCJBXXID)
+        public object LoadCL_MTCJBXX(string ID)
         {
             try
             {
-                CL_MTCJBXX CL_MTCJBXX = DAO.GetObjectByID<CL_MTCJBXX>(CL_MTCJBXXID);
+                CL_MTCJBXX CL_MTCJBXX = DAO.GetObjectByID<CL_MTCJBXX>(ID);
                 if (CL_MTCJBXX != null)
                 {
                     JCXX jcxx = GetJCXXByID(CL_MTCJBXX.JCXXID);

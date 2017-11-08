@@ -7,14 +7,14 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
     {
         public ES_QTES_CRYPJBXX()
         {
-            ES_QTES_CRYPJBXXID = Guid.NewGuid().ToString("N");
+            ID = Guid.NewGuid().ToString("N");
         }
 
         /// <summary>
         /// 成人用品信息ID
         /// </summary>
         [Id]
-        public virtual string ES_QTES_CRYPJBXXID { get; set; }
+        public virtual string ID { get; set; }
 
         /// <summary>
         /// 基础信息ID

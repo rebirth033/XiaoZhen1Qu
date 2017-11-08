@@ -8,22 +8,7 @@ $(document).ready(function () {
     BindClick("ZZLX");
     BindClick("YFFS");
     LoadDuoX("包含费用", "BHFY");
-    BCMSSetDefault();
 });
-
-function BCMSFocus() {
-    $("#BCMS").css("color", "#333333");
-}
-
-function BCMSBlur() {
-    $("#BCMS").css("color", "#999999");
-}
-
-function BCMSSetDefault() {
-    var BCMS = "1.房屋特征：\r\n\r\n2.周边配套：\r\n\r\n3.房东心态：";
-    $("#BCMS").html(BCMS);
-}
-
 //加载小区名称
 function LoadXQMC() {
     if (event.keyCode === 40) {//按下

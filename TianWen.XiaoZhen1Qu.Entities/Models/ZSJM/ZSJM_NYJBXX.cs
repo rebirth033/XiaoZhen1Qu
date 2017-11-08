@@ -7,14 +7,14 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
     {
         public ZSJM_NYJBXX()
         {
-            ZSJM_NYJBXXID = Guid.NewGuid().ToString("N");
+            ID = Guid.NewGuid().ToString("N");
         }
 
         /// <summary>
         /// 招商加盟_美容保健信息ID
         /// </summary>
         [Id]
-        public virtual string ZSJM_NYJBXXID { get; set; }
+        public virtual string ID { get; set; }
 
         /// <summary>
         /// 基础信息ID

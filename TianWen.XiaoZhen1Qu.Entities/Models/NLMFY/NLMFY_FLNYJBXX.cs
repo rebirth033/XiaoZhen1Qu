@@ -7,14 +7,14 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
     {
         public NLMFY_FLNYJBXX()
         {
-            NLMFY_FLNYJBXXID = Guid.NewGuid().ToString("N");
+            ID = Guid.NewGuid().ToString("N");
         }
 
         /// <summary>
         /// 农林牧副渔_肥料/农药信息ID
         /// </summary>
         [Id]
-        public virtual string NLMFY_FLNYJBXXID { get; set; }
+        public virtual string ID { get; set; }
 
         /// <summary>
         /// 基础信息ID

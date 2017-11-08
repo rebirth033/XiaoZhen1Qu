@@ -479,134 +479,134 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public JsonResult LoadPFCG_AFSBJBXX()
         {
-            string PFCG_AFSBJBXXID = Request["PFCG_AFSBJBXXID"];
-            object result = PFCG_AFSBBLL.LoadPFCG_AFSBJBXX(PFCG_AFSBJBXXID);
+            string ID = Request["ID"];
+            object result = PFCG_AFSBBLL.LoadPFCG_AFSBJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadPFCG_YXBXX()
         {
-            string PFCG_YXJBXXID = Request["PFCG_YXJBXXID"];
-            object result = PFCG_YXBLL.LoadPFCG_YXJBXX(PFCG_YXJBXXID);
+            string ID = Request["ID"];
+            object result = PFCG_YXBLL.LoadPFCG_YXJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadPFCG_BZJBXX()
         {
-            string PFCG_BZJBXXID = Request["PFCG_BZJBXXID"];
-            object result = PFCG_BZBLL.LoadPFCG_BZJBXX(PFCG_BZJBXXID);
+            string ID = Request["ID"];
+            object result = PFCG_BZBLL.LoadPFCG_BZJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadPFCG_DGDLJBXX()
         {
-            string PFCG_DGDLJBXXID = Request["PFCG_DGDLJBXXID"];
-            object result = PFCG_DGDLBLL.LoadPFCG_DGDLJBXX(PFCG_DGDLJBXXID);
+            string ID = Request["ID"];
+            object result = PFCG_DGDLBLL.LoadPFCG_DGDLJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadPFCG_DJZMJBXX()
         {
-            string PFCG_DJZMJBXXID = Request["PFCG_DJZMJBXXID"];
-            object result = PFCG_DJZMBLL.LoadPFCG_DJZMJBXX(PFCG_DJZMJBXXID);
+            string ID = Request["ID"];
+            object result = PFCG_DJZMBLL.LoadPFCG_DJZMJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadPFCG_YCLJBXX()
         {
-            string PFCG_YCLJBXXID = Request["PFCG_YCLJBXXID"];
-            object result = PFCG_YCLBLL.LoadPFCG_YCLJBXX(PFCG_YCLJBXXID);
+            string ID = Request["ID"];
+            object result = PFCG_YCLBLL.LoadPFCG_YCLJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadPFCG_DZYQJJBXX()
         {
-            string PFCG_DZYQJJBXXID = Request["PFCG_DZYQJJBXXID"];
-            object result = PFCG_DZYQJBLL.LoadPFCG_DZYQJJBXX(PFCG_DZYQJJBXXID);
+            string ID = Request["ID"];
+            object result = PFCG_DZYQJBLL.LoadPFCG_DZYQJJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadPFCG_FSXMJBXX()
         {
-            string PFCG_FSXMJBXXID = Request["PFCG_FSXMJBXXID"];
-            object result = PFCG_FSXMBLL.LoadPFCG_FSXMJBXX(PFCG_FSXMJBXXID);
+            string ID = Request["ID"];
+            object result = PFCG_FSXMBLL.LoadPFCG_FSXMJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadPFCG_FZBLJBXX()
         {
-            string PFCG_FZBLJBXXID = Request["PFCG_FZBLJBXXID"];
-            object result = PFCG_FZBLBLL.LoadPFCG_FZBLJBXX(PFCG_FZBLJBXXID);
+            string ID = Request["ID"];
+            object result = PFCG_FZBLBLL.LoadPFCG_FZBLJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadPFCG_HWYDJBXX()
         {
-            string PFCG_HWYDJBXXID = Request["PFCG_HWYDJBXXID"];
-            object result = PFCG_HWYDBLL.LoadPFCG_HWYDJBXX(PFCG_HWYDJBXXID);
+            string ID = Request["ID"];
+            object result = PFCG_HWYDBLL.LoadPFCG_HWYDJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadPFCG_HXPJBXX()
         {
-            string PFCG_HXPJBXXID = Request["PFCG_HXPJBXXID"];
-            object result = PFCG_HXPBLL.LoadPFCG_HXPJBXX(PFCG_HXPJBXXID);
+            string ID = Request["ID"];
+            object result = PFCG_HXPBLL.LoadPFCG_HXPJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadPFCG_HZPJBXX()
         {
-            string PFCG_HZPJBXXID = Request["PFCG_HZPJBXXID"];
-            object result = PFCG_HZPBLL.LoadPFCG_HZPJBXX(PFCG_HZPJBXXID);
+            string ID = Request["ID"];
+            object result = PFCG_HZPBLL.LoadPFCG_HZPJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadPFCG_JXJGJBXX()
         {
-            string PFCG_JXJGJBXXID = Request["PFCG_JXJGJBXXID"];
-            object result = PFCG_JXJGBLL.LoadPFCG_JXJGJBXX(PFCG_JXJGJBXXID);
+            string ID = Request["ID"];
+            object result = PFCG_JXJGBLL.LoadPFCG_JXJGJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadPFCG_KQJBXX()
         {
-            string PFCG_KQJBXXID = Request["PFCG_KQJBXXID"];
-            object result = PFCG_KQBLL.LoadPFCG_KQJBXX(PFCG_KQJBXXID);
+            string ID = Request["ID"];
+            object result = PFCG_KQBLL.LoadPFCG_KQJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadPFCG_LPJBXX()
         {
-            string PFCG_LPJBXXID = Request["PFCG_LPJBXXID"];
-            object result = PFCG_LPBLL.LoadPFCG_LPJBXX(PFCG_LPJBXXID);
+            string ID = Request["ID"];
+            object result = PFCG_LPBLL.LoadPFCG_LPJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadPFCG_MYWJJBXX()
         {
-            string PFCG_MYWJJBXXID = Request["PFCG_MYWJJBXXID"];
-            object result = PFCG_MYWJBLL.LoadPFCG_MYWJJBXX(PFCG_MYWJJBXXID);
+            string ID = Request["ID"];
+            object result = PFCG_MYWJBLL.LoadPFCG_MYWJJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadPFCG_SCSBJBXX()
         {
-            string PFCG_SCSBJBXXID = Request["PFCG_SCSBJBXXID"];
-            object result = PFCG_SCSBBLL.LoadPFCG_SCSBJBXX(PFCG_SCSBJBXXID);
+            string ID = Request["ID"];
+            object result = PFCG_SCSBBLL.LoadPFCG_SCSBJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadPFCG_SJSMJBXX()
         {
-            string PFCG_SJSMJBXXID = Request["PFCG_SJSMJBXXID"];
-            object result = PFCG_SJSMBLL.LoadPFCG_SJSMJBXX(PFCG_SJSMJBXXID);
+            string ID = Request["ID"];
+            object result = PFCG_SJSMBLL.LoadPFCG_SJSMJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadPFCG_SPJBXX()
         {
-            string PFCG_SPJBXXID = Request["PFCG_SPJBXXID"];
-            object result = PFCG_SPBLL.LoadPFCG_SPJBXX(PFCG_SPJBXXID);
+            string ID = Request["ID"];
+            object result = PFCG_SPBLL.LoadPFCG_SPJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadPFCG_TSJBXX()
         {
-            string PFCG_TSJBXXID = Request["PFCG_TSJBXXID"];
-            object result = PFCG_TSBLL.LoadPFCG_TSJBXX(PFCG_TSJBXXID);
+            string ID = Request["ID"];
+            object result = PFCG_TSBLL.LoadPFCG_TSJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadPFCG_XBSPJBXX()
         {
-            string PFCG_XBSPJBXXID = Request["PFCG_XBSPJBXXID"];
-            object result = PFCG_XBSPBLL.LoadPFCG_XBSPJBXX(PFCG_XBSPJBXXID);
+            string ID = Request["ID"];
+            object result = PFCG_XBSPBLL.LoadPFCG_XBSPJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadPFCG_YBYQJBXX()
         {
-            string PFCG_YBYQJBXXID = Request["PFCG_YBYQJBXXID"];
-            object result = PFCG_YBYQBLL.LoadPFCG_YBYQJBXX(PFCG_YBYQJBXXID);
+            string ID = Request["ID"];
+            object result = PFCG_YBYQBLL.LoadPFCG_YBYQJBXX(ID);
             return Json(result);
         }
     }

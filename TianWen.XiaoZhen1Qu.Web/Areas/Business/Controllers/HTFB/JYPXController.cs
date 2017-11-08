@@ -415,116 +415,116 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public JsonResult LoadJYPX_GLPXJBXX()
         {
-            string JYPX_GLPXJBXXID = Request["JYPX_GLPXJBXXID"];
-            object result = JYPX_GLPXBLL.LoadJYPX_GLPXJBXX(JYPX_GLPXJBXXID);
+            string ID = Request["ID"];
+            object result = JYPX_GLPXBLL.LoadJYPX_GLPXJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadJYPX_ITPXJBXX()
         {
-            string JYPX_ITPXJBXXID = Request["JYPX_ITPXJBXXID"];
-            object result = JYPX_ITPXBLL.LoadJYPX_ITPXJBXX(JYPX_ITPXJBXXID);
+            string ID = Request["ID"];
+            object result = JYPX_ITPXBLL.LoadJYPX_ITPXJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadJYPX_JJGRJBXX()
         {
-            string JYPX_JJGRJBXXID = Request["JYPX_JJGRJBXXID"];
-            object result = JYPX_JJGRBLL.LoadJYPX_JJGRJBXX(JYPX_JJGRJBXXID);
+            string ID = Request["ID"];
+            object result = JYPX_JJGRBLL.LoadJYPX_JJGRJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadJYPX_JJJGJBXX()
         {
-            string JYPX_JJJGJBXXID = Request["JYPX_JJJGJBXXID"];
-            object result = JYPX_JJJGBLL.LoadJYPX_JJJGJBXX(JYPX_JJJGJBXXID);
+            string ID = Request["ID"];
+            object result = JYPX_JJJGBLL.LoadJYPX_JJJGJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadJYPX_LXJBXX()
         {
-            string JYPX_LXJBXXID = Request["JYPX_LXJBXXID"];
-            object result = JYPX_LXBLL.LoadJYPX_LXJBXX(JYPX_LXJBXXID);
+            string ID = Request["ID"];
+            object result = JYPX_LXBLL.LoadJYPX_LXJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadJYPX_PBPKJBXX()
         {
-            string JYPX_PBPKJBXXID = Request["JYPX_PBPKJBXXID"];
-            object result = JYPX_PBPKBLL.LoadJYPX_PBPKJBXX(JYPX_PBPKJBXXID);
+            string ID = Request["ID"];
+            object result = JYPX_PBPKBLL.LoadJYPX_PBPKJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadJYPX_SJPXJBXX()
         {
-            string JYPX_SJPXJBXXID = Request["JYPX_SJPXJBXXID"];
-            object result = JYPX_SJPXBLL.LoadJYPX_SJPXJBXX(JYPX_SJPXJBXXID);
+            string ID = Request["ID"];
+            object result = JYPX_SJPXBLL.LoadJYPX_SJPXJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadJYPX_TYJLJBXX()
         {
-            string JYPX_TYJLJBXXID = Request["JYPX_TYJLJBXXID"];
-            object result = JYPX_TYJLBLL.LoadJYPX_TYJLJBXX(JYPX_TYJLJBXXID);
+            string ID = Request["ID"];
+            object result = JYPX_TYJLBLL.LoadJYPX_TYJLJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadJYPX_TYPXJBXX()
         {
-            string JYPX_TYPXJBXXID = Request["JYPX_TYPXJBXXID"];
-            object result = JYPX_TYPXBLL.LoadJYPX_TYPXJBXX(JYPX_TYPXJBXXID);
+            string ID = Request["ID"];
+            object result = JYPX_TYPXBLL.LoadJYPX_TYPXJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadJYPX_XLJYJBXX()
         {
-            string JYPX_XLJYJBXXID = Request["JYPX_XLJYJBXXID"];
-            object result = JYPX_XLJYBLL.LoadJYPX_XLJYJBXX(JYPX_XLJYJBXXID);
+            string ID = Request["ID"];
+            object result = JYPX_XLJYBLL.LoadJYPX_XLJYJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadJYPX_YMJBXX()
         {
-            string JYPX_YMJBXXID = Request["JYPX_YMJBXXID"];
-            object result = JYPX_YMBLL.LoadJYPX_YMJBXX(JYPX_YMJBXXID);
+            string ID = Request["ID"];
+            object result = JYPX_YMBLL.LoadJYPX_YMJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadJYPX_YSPXJBXX()
         {
-            string JYPX_YSPXJBXXID = Request["JYPX_YSPXJBXXID"];
-            object result = JYPX_YSPXBLL.LoadJYPX_YSPXJBXX(JYPX_YSPXJBXXID);
+            string ID = Request["ID"];
+            object result = JYPX_YSPXBLL.LoadJYPX_YSPXJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadJYPX_YSPXJSJBXX()
         {
-            string JYPX_YSPXJSJBXXID = Request["JYPX_YSPXJSJBXXID"];
-            object result = JYPX_YSPXJSBLL.LoadJYPX_YSPXJSJBXX(JYPX_YSPXJSJBXXID);
+            string ID = Request["ID"];
+            object result = JYPX_YSPXJSBLL.LoadJYPX_YSPXJSJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadJYPX_YYEJYJBXX()
         {
-            string JYPX_YYEJYJBXXID = Request["JYPX_YYEJYJBXXID"];
-            object result = JYPX_YYEJYBLL.LoadJYPX_YYEJYJBXX(JYPX_YYEJYJBXXID);
+            string ID = Request["ID"];
+            object result = JYPX_YYEJYBLL.LoadJYPX_YYEJYJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadJYPX_YYPXJGJBXX()
         {
-            string JYPX_YYPXJGJBXXID = Request["JYPX_YYPXJGJBXXID"];
-            object result = JYPX_YYPXJGBLL.LoadJYPX_YYPXJGJBXX(JYPX_YYPXJGJBXXID);
+            string ID = Request["ID"];
+            object result = JYPX_YYPXJGBLL.LoadJYPX_YYPXJGJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadJYPX_YYPXJSJBXX()
         {
-            string JYPX_YYPXJSJBXXID = Request["JYPX_YYPXJSJBXXID"];
-            object result = JYPX_YYPXJSBLL.LoadJYPX_YYPXJSJBXX(JYPX_YYPXJSJBXXID);
+            string ID = Request["ID"];
+            object result = JYPX_YYPXJSBLL.LoadJYPX_YYPXJSJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadJYPX_ZXXFDBJBXX()
         {
-            string JYPX_ZXXFDBJBXXID = Request["JYPX_ZXXFDBJBXXID"];
-            object result = JYPX_ZXXFDBBLL.LoadJYPX_ZXXFDBJBXX(JYPX_ZXXFDBJBXXID);
+            string ID = Request["ID"];
+            object result = JYPX_ZXXFDBBLL.LoadJYPX_ZXXFDBJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadJYPX_ZXXYDYJBXX()
         {
-            string JYPX_ZXXYDYJBXXID = Request["JYPX_ZXXYDYJBXXID"];
-            object result = JYPX_ZXXYDYBLL.LoadJYPX_ZXXYDYJBXX(JYPX_ZXXYDYJBXXID);
+            string ID = Request["ID"];
+            object result = JYPX_ZXXYDYBLL.LoadJYPX_ZXXYDYJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadJYPX_ZYJNPXJBXX()
         {
-            string JYPX_ZYJNPXJBXXID = Request["JYPX_ZYJNPXJBXXID"];
-            object result = JYPX_ZYJNPXBLL.LoadJYPX_ZYJNPXJBXX(JYPX_ZYJNPXJBXXID);
+            string ID = Request["ID"];
+            object result = JYPX_ZYJNPXBLL.LoadJYPX_ZYJNPXJBXX(ID);
             return Json(result);
         }
     }

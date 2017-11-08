@@ -5,12 +5,6 @@
     BindClick("ZJDW");
     LoadFC_DZFJBXX();
 });
-//加载默认
-function LoadDefault() {
-    ue.ready(function () {
-        ue.setHeight(200);
-    });
-}
 //打开新增地址
 function OpenXZDZ() {
     $("#shadow").css("display", "block");
@@ -135,14 +129,14 @@ function LoadFC_DZFJBXX() {
         dataType: "json",
         data:
         {
-            FC_DZFJBXXID: getUrlParam("FC_DZFJBXXID")
+            ID: getUrlParam("ID")
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var jsonObj = new JsonDB("myTabContent");
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.FC_DZFJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
-                $("#FC_DZFJBXXID").val(xml.Value.FC_DZFJBXX.FC_DZFJBXXID);
+                $("#ID").val(xml.Value.FC_DZFJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
@@ -169,8 +163,8 @@ function FB() {
     obj = jsonObj.AddJson(obj, "ZJDW", "'" + $("#spanZJDW").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
 
-    if (getUrlParam("FC_DZFJBXXID") !== null)
-        obj = jsonObj.AddJson(obj, "FC_DZFJBXXID", "'" + getUrlParam("FC_DZFJBXXID") + "'");
+    if (getUrlParam("ID") !== null)
+        obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");
 
     $.ajax({
         type: "POST",

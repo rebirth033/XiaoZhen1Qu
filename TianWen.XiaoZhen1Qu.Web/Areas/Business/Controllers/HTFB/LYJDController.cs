@@ -179,44 +179,44 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public JsonResult LoadLYJD_CJYJBXX()
         {
-            string LYJD_CJYJBXXID = Request["LYJD_CJYJBXXID"];
-            object result = LYJD_CJYBLL.LoadLYJD_CJYJBXX(LYJD_CJYJBXXID);
+            string ID = Request["ID"];
+            object result = LYJD_CJYBLL.LoadLYJD_CJYJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadLYJD_DYDDRJBXX()
         {
-            string LYJD_DYDDRJBXXID = Request["LYJD_DYDDRJBXXID"];
-            object result = LYJD_DYDDRBLL.LoadLYJD_DYDDRJBXX(LYJD_DYDDRJBXXID);
+            string ID = Request["ID"];
+            object result = LYJD_DYDDRBLL.LoadLYJD_DYDDRJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadLYJD_GNYJBXX()
         {
-            string LYJD_GNYJBXXID = Request["LYJD_GNYJBXXID"];
-            object result = LYJD_GNYBLL.LoadLYJD_GNYJBXX(LYJD_GNYJBXXID);
+            string ID = Request["ID"];
+            object result = LYJD_GNYBLL.LoadLYJD_GNYJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadLYJD_JDZSYDJBXX()
         {
-            string LYJD_JDZSYDJBXXID = Request["LYJD_JDZSYDJBXXID"];
-            object result = LYJD_JDZSYDBLL.LoadLYJD_JDZSYDJBXX(LYJD_JDZSYDJBXXID);
+            string ID = Request["ID"];
+            object result = LYJD_JDZSYDBLL.LoadLYJD_JDZSYDJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadLYJD_JPJBXX()
         {
-            string LYJD_JPJBXXID = Request["LYJD_JPJBXXID"];
-            object result = LYJD_JPBLL.LoadLYJD_JPJBXX(LYJD_JPJBXXID);
+            string ID = Request["ID"];
+            object result = LYJD_JPBLL.LoadLYJD_JPJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadLYJD_LXSJBXX()
         {
-            string LYJD_LXSJBXXID = Request["LYJD_LXSJBXXID"];
-            object result = LYJD_LXSBLL.LoadLYJD_LXSJBXX(LYJD_LXSJBXXID);
+            string ID = Request["ID"];
+            object result = LYJD_LXSBLL.LoadLYJD_LXSJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadLYJD_ZBYJBXX()
         {
-            string LYJD_ZBYJBXXID = Request["LYJD_ZBYJBXXID"];
-            object result = LYJD_ZBYBLL.LoadLYJD_ZBYJBXX(LYJD_ZBYJBXXID);
+            string ID = Request["ID"];
+            object result = LYJD_ZBYBLL.LoadLYJD_ZBYJBXX(ID);
             return Json(result);
         }
     }

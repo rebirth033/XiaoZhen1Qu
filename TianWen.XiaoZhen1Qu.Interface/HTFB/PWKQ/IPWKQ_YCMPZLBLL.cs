@@ -7,6 +7,6 @@ namespace TianWen.XiaoZhen1Qu.Interface
     {
         object SavePWKQ_YCMPJBXX(JCXX jcxx, PWKQ_YCMPJBXX dzfjbxx);
 
-        object LoadPWKQ_YCMPJBXX(string PWKQ_YCMPJBXXID);
+        object LoadPWKQ_YCMPJBXX(string ID);
     }
 }

@@ -7,14 +7,14 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
     {
         public LYJD_DYDDRJBXX()
         {
-            LYJD_DYDDRJBXXID = Guid.NewGuid().ToString("N");
+            ID = Guid.NewGuid().ToString("N");
         }
 
         /// <summary>
         /// 旅游酒店_导游/当地人信息ID
         /// </summary>
         [Id]
-        public virtual string LYJD_DYDDRJBXXID { get; set; }
+        public virtual string ID { get; set; }
 
         /// <summary>
         /// 基础信息ID

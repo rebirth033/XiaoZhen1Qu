@@ -14,7 +14,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
     {
         public object SavePFCG_BZJBXX(JCXX jcxx, PFCG_BZJBXX PFCG_BZJBXX, List<PHOTOS> photos)
         {
-            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM PFCG_BZJBXX WHERE PFCG_BZJBXXID='{0}'", PFCG_BZJBXX.PFCG_BZJBXXID));
+            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM PFCG_BZJBXX WHERE ID='{0}'", PFCG_BZJBXX.ID));
             using (ITransaction transaction = DAO.BeginTransaction())
             {
                 try
@@ -27,7 +27,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                         DAO.Update(jcxx);
                         DAO.Update(PFCG_BZJBXX);
                         transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, PFCG_BZJBXXID = PFCG_BZJBXX.PFCG_BZJBXXID } };
+                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, ID = PFCG_BZJBXX.ID } };
                     }
                     else
                     {
@@ -36,7 +36,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                         DAO.Save(jcxx);
                         DAO.Save(PFCG_BZJBXX);
                         transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, PFCG_BZJBXXID = PFCG_BZJBXX.PFCG_BZJBXXID } };
+                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, ID = PFCG_BZJBXX.ID } };
                     }
                 }
                 catch (Exception ex)
@@ -48,11 +48,11 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
-        public object LoadPFCG_BZJBXX(string PFCG_BZJBXXID)
+        public object LoadPFCG_BZJBXX(string ID)
         {
             try
             {
-                PFCG_BZJBXX PFCG_BZJBXX = DAO.GetObjectByID<PFCG_BZJBXX>(PFCG_BZJBXXID);
+                PFCG_BZJBXX PFCG_BZJBXX = DAO.GetObjectByID<PFCG_BZJBXX>(ID);
                 if (PFCG_BZJBXX != null)
                 {
                     JCXX jcxx = GetJCXXByID(PFCG_BZJBXX.JCXXID);

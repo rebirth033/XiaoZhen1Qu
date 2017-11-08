@@ -43,14 +43,14 @@ function LoadES_QTES_CRYPJBXX() {
         dataType: "json",
         data:
         {
-            ES_QTES_CRYPJBXXID: getUrlParam("ES_QTES_CRYPJBXXID")
+            ID: getUrlParam("ID")
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var jsonObj = new JsonDB("myTabContent");
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.ES_QTES_CRYPJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
-                $("#ES_QTES_CRYPJBXXID").val(xml.Value.ES_QTES_CRYPJBXX.ES_QTES_CRYPJBXXID);
+                $("#ID").val(xml.Value.ES_QTES_CRYPJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
@@ -85,8 +85,8 @@ function FB() {
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
 
-    if (getUrlParam("ES_QTES_CRYPJBXXID") !== null)
-        obj = jsonObj.AddJson(obj, "ES_QTES_CRYPJBXXID", "'" + getUrlParam("ES_QTES_CRYPJBXXID") + "'");
+    if (getUrlParam("ID") !== null)
+        obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");
 
     $.ajax({
         type: "POST",

@@ -205,56 +205,56 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public JsonResult LoadNLMFY_CQYZJBXX()
         {
-            string NLMFY_CQYZJBXXID = Request["NLMFY_CQYZJBXXID"];
-            object result = NLMFY_CQYZBLL.LoadNLMFY_CQYZJBXX(NLMFY_CQYZJBXXID);
+            string ID = Request["ID"];
+            object result = NLMFY_CQYZBLL.LoadNLMFY_CQYZJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadNLMFY_DZWZMJBXX()
         {
-            string NLMFY_DZWZMJBXXID = Request["NLMFY_DZWZMJBXXID"];
-            object result = NLMFY_DZWZMBLL.LoadNLMFY_DZWZMJBXX(NLMFY_DZWZMJBXXID);
+            string ID = Request["ID"];
+            object result = NLMFY_DZWZMBLL.LoadNLMFY_DZWZMJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadNLMFY_FLNYJBXX()
         {
-            string NLMFY_FLNYJBXXID = Request["NLMFY_FLNYJBXXID"];
-            object result = NLMFY_FLNYBLL.LoadNLMFY_FLNYJBXX(NLMFY_FLNYJBXXID);
+            string ID = Request["ID"];
+            object result = NLMFY_FLNYBLL.LoadNLMFY_FLNYJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadNLMFY_NCPJGJBXX()
         {
-            string NLMFY_NCPJGJBXXID = Request["NLMFY_NCPJGJBXXID"];
-            object result = NLMFY_NCPJGBLL.LoadNLMFY_NCPJGJBXX(NLMFY_NCPJGJBXXID);
+            string ID = Request["ID"];
+            object result = NLMFY_NCPJGBLL.LoadNLMFY_NCPJGJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadNLMFY_NJJSBJBXX()
         {
-            string NLMFY_NJJSBJBXXID = Request["NLMFY_NJJSBJBXXID"];
-            object result = NLMFY_NJJSBBLL.LoadNLMFY_NJJSBJBXX(NLMFY_NJJSBJBXXID);
+            string ID = Request["ID"];
+            object result = NLMFY_NJJSBBLL.LoadNLMFY_NJJSBJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadNLMFY_NZWJBXX()
         {
-            string NLMFY_NZWJBXXID = Request["NLMFY_NZWJBXXID"];
-            object result = NLMFY_NZWBLL.LoadNLMFY_NZWJBXX(NLMFY_NZWJBXXID);
+            string ID = Request["ID"];
+            object result = NLMFY_NZWBLL.LoadNLMFY_NZWJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadNLMFY_SCJBXX()
         {
-            string NLMFY_SCJBXXID = Request["NLMFY_SCJBXXID"];
-            object result = NLMFY_SCBLL.LoadNLMFY_SCJBXX(NLMFY_SCJBXXID);
+            string ID = Request["ID"];
+            object result = NLMFY_SCBLL.LoadNLMFY_SCJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadNLMFY_SLSYJBXX()
         {
-            string NLMFY_SLSYJBXXID = Request["NLMFY_SLSYJBXXID"];
-            object result = NLMFY_SLSYBLL.LoadNLMFY_SLSYJBXX(NLMFY_SLSYJBXXID);
+            string ID = Request["ID"];
+            object result = NLMFY_SLSYBLL.LoadNLMFY_SLSYJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadNLMFY_YLHHJBXX()
         {
-            string NLMFY_YLHHJBXXID = Request["NLMFY_YLHHJBXXID"];
-            object result = NLMFY_YLHHBLL.LoadNLMFY_YLHHJBXX(NLMFY_YLHHJBXXID);
+            string ID = Request["ID"];
+            object result = NLMFY_YLHHBLL.LoadNLMFY_YLHHJBXX(ID);
             return Json(result);
         }
     }

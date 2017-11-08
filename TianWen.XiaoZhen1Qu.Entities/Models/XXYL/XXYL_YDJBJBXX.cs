@@ -7,14 +7,14 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
     {
         public XXYL_YDJBJBXX()
         {
-            XXYL_YDJBJBXXID = Guid.NewGuid().ToString("N");
+            ID = Guid.NewGuid().ToString("N");
         }
 
         /// <summary>
         /// 休闲娱乐_夜店酒吧信息ID
         /// </summary>
         [Id]
-        public virtual string XXYL_YDJBJBXXID { get; set; }
+        public virtual string ID { get; set; }
 
         /// <summary>
         /// 基础信息ID

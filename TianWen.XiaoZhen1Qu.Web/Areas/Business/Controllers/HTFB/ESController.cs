@@ -394,110 +394,110 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public JsonResult LoadES_JDJJBG_BGSBJBXX()
         {
-            string ES_JDJJBG_BGSBJBXXID = Request["ES_JDJJBG_BGSBJBXXID"];
-            object result = ES_JDJJBG_BGSBBLL.LoadES_JDJJBG_BGSBJBXX(ES_JDJJBG_BGSBJBXXID);
+            string ID = Request["ID"];
+            object result = ES_JDJJBG_BGSBBLL.LoadES_JDJJBG_BGSBJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadES_JDJJBG_ESJDJBXX()
         {
-            string ES_JDJJBG_ESJDJBXXID = Request["ES_JDJJBG_ESJDJBXXID"];
-            object result = ES_JDJJBG_ESJDBLL.LoadES_JDJJBG_ESJDJBXX(ES_JDJJBG_ESJDJBXXID);
+            string ID = Request["ID"];
+            object result = ES_JDJJBG_ESJDBLL.LoadES_JDJJBG_ESJDJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadES_JDJJBG_ESJJJBXX()
         {
-            string ES_JDJJBG_ESJJJBXXID = Request["ES_JDJJBG_ESJJJBXXID"];
-            object result = ES_JDJJBG_ESJJBLL.LoadES_JDJJBG_ESJJJBXX(ES_JDJJBG_ESJJJBXXID);
+            string ID = Request["ID"];
+            object result = ES_JDJJBG_ESJJBLL.LoadES_JDJJBG_ESJJJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadES_JDJJBG_JJRYJBXX()
         {
-            string ES_JDJJBG_JJRYJBXXID = Request["ES_JDJJBG_JJRYJBXXID"];
-            object result = ES_JDJJBG_JJRYBLL.LoadES_JDJJBG_JJRYJBXX(ES_JDJJBG_JJRYJBXXID);
+            string ID = Request["ID"];
+            object result = ES_JDJJBG_JJRYBLL.LoadES_JDJJBG_JJRYJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadES_MYFZMR_FZXMXBJBXX()
         {
-            string ES_MYFZMR_FZXMXBJBXXID = Request["ES_MYFZMR_FZXMXBJBXXID"];
-            object result = ES_MYFZMR_FZXMXBBLL.LoadES_MYFZMR_FZXMXBJBXX(ES_MYFZMR_FZXMXBJBXXID);
+            string ID = Request["ID"];
+            object result = ES_MYFZMR_FZXMXBBLL.LoadES_MYFZMR_FZXMXBJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadES_MYFZMR_MRBJJBXX()
         {
-            string ES_MYFZMR_MRBJJBXXID = Request["ES_MYFZMR_MRBJJBXXID"];
-            object result = ES_MYFZMR_MRBJBLL.LoadES_MYFZMR_MRBJJBXX(ES_MYFZMR_MRBJJBXXID);
+            string ID = Request["ID"];
+            object result = ES_MYFZMR_MRBJBLL.LoadES_MYFZMR_MRBJJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadES_MYFZMR_MYETYPWJJBXX()
         {
-            string ES_MYFZMR_MYETYPWJJBXXID = Request["ES_MYFZMR_MYETYPWJJBXXID"];
-            object result = ES_MYFZMR_MYETYPWJBLL.LoadES_MYFZMR_MYETYPWJJBXX(ES_MYFZMR_MYETYPWJJBXXID);
+            string ID = Request["ID"];
+            object result = ES_MYFZMR_MYETYPWJBLL.LoadES_MYFZMR_MYETYPWJJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadES_QTES_CRYPJBXX()
         {
-            string ES_QTES_CRYPJBXXID = Request["ES_QTES_CRYPJBXXID"];
-            object result = ES_QTES_CRYPBLL.LoadES_QTES_CRYPJBXX(ES_QTES_CRYPJBXXID);
+            string ID = Request["ID"];
+            object result = ES_QTES_CRYPBLL.LoadES_QTES_CRYPJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadES_QTES_ESSBJBXX()
         {
-            string ES_QTES_ESSBJBXXID = Request["ES_QTES_ESSBJBXXID"];
-            object result = ES_QTES_ESSBBLL.LoadES_QTES_ESSBJBXX(ES_QTES_ESSBJBXXID);
+            string ID = Request["ID"];
+            object result = ES_QTES_ESSBBLL.LoadES_QTES_ESSBJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadES_SJSM_BJBDNJBXX()
         {
-            string ES_SJSM_BJBDNJBXXID = Request["ES_SJSM_BJBDNJBXXID"];
-            object result = ES_SJSM_BJBDNBLL.LoadES_SJSM_BJBDNJBXX(ES_SJSM_BJBDNJBXXID);
+            string ID = Request["ID"];
+            object result = ES_SJSM_BJBDNBLL.LoadES_SJSM_BJBDNJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadES_SJSM_ESSJJBXX()
         {
-            string ES_SJSM_ESSJJBXXID = Request["ES_SJSM_ESSJJBXXID"];
-            object result = ES_SJSM_ESSJBLL.LoadES_SJSM_ESSJJBXX(ES_SJSM_ESSJJBXXID);
+            string ID = Request["ID"];
+            object result = ES_SJSM_ESSJBLL.LoadES_SJSM_ESSJJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadES_SJSM_PBDNJBXX()
         {
-            string ES_SJSM_PBDNJBXXID = Request["ES_SJSM_PBDNJBXXID"];
-            object result = ES_SJSM_PBDNBLL.LoadES_SJSM_PBDNJBXX(ES_SJSM_PBDNJBXXID);
+            string ID = Request["ID"];
+            object result = ES_SJSM_PBDNBLL.LoadES_SJSM_PBDNJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadES_SJSM_SMCPJBXX()
         {
-            string ES_SJSM_SMCPJBXXID = Request["ES_SJSM_SMCPJBXXID"];
-            object result = ES_SJSM_SMCPBLL.LoadES_SJSM_SMCPJBXX(ES_SJSM_SMCPJBXXID);
+            string ID = Request["ID"];
+            object result = ES_SJSM_SMCPBLL.LoadES_SJSM_SMCPJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadES_SJSM_TSJJBXX()
         {
-            string ES_SJSM_TSJJBXXID = Request["ES_SJSM_TSJJBXXID"];
-            object result = ES_SJSM_TSJBLL.LoadES_SJSM_TSJJBXX(ES_SJSM_TSJJBXXID);
+            string ID = Request["ID"];
+            object result = ES_SJSM_TSJBLL.LoadES_SJSM_TSJJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadES_WHYL_TSYXRJJBXX()
         {
-            string ES_WHYL_TSYXRJJBXXID = Request["ES_WHYL_TSYXRJJBXXID"];
-            object result = ES_WHYL_TSYXRJBLL.LoadES_WHYL_TSYXRJJBXX(ES_WHYL_TSYXRJJBXXID);
+            string ID = Request["ID"];
+            object result = ES_WHYL_TSYXRJBLL.LoadES_WHYL_TSYXRJJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadES_WHYL_WTHWYQJBXX()
         {
-            string ES_WHYL_WTHWYQJBXXID = Request["ES_WHYL_WTHWYQJBXXID"];
-            object result = ES_WHYL_WTHWYQBLL.LoadES_WHYL_WTHWYQJBXX(ES_WHYL_WTHWYQJBXXID);
+            string ID = Request["ID"];
+            object result = ES_WHYL_WTHWYQBLL.LoadES_WHYL_WTHWYQJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadES_WHYL_WYXNWPJBXX()
         {
-            string ES_WHYL_WYXNWPJBXXID = Request["ES_WHYL_WYXNWPJBXXID"];
-            object result = ES_WHYL_WYXNWPBLL.LoadES_WHYL_WYXNWPJBXX(ES_WHYL_WYXNWPJBXXID);
+            string ID = Request["ID"];
+            object result = ES_WHYL_WYXNWPBLL.LoadES_WHYL_WYXNWPJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadES_WHYL_YSPSCPJBXX()
         {
-            string ES_WHYL_YSPSCPJBXXID = Request["ES_WHYL_YSPSCPJBXXID"];
-            object result = ES_WHYL_YSPSCPBLL.LoadES_WHYL_YSPSCPJBXX(ES_WHYL_YSPSCPJBXXID);
+            string ID = Request["ID"];
+            object result = ES_WHYL_YSPSCPBLL.LoadES_WHYL_YSPSCPJBXX(ID);
             return Json(result);
         }
     }

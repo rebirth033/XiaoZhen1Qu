@@ -7,14 +7,14 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
     {
         public QZZP_QZZPJBXX()
         {
-            QZZP_QZZPJBXXID = Guid.NewGuid().ToString("N");
+            ID = Guid.NewGuid().ToString("N");
         }
 
         /// <summary>
         /// 求职招聘_全职招聘信息ID
         /// </summary>
         [Id]
-        public virtual string QZZP_QZZPJBXXID { get; set; }
+        public virtual string ID { get; set; }
 
         /// <summary>
         /// 基础信息ID
