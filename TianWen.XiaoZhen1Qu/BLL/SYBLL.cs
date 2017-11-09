@@ -53,12 +53,12 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
-        public object LoadSY_ML(string typename, string xzq)
+        public object LoadSY_ML(string xzq)
         {
             try
             {
                 IList<CODES_SY_ML> list = new List<CODES_SY_ML>();
-                list = DAO.Repository.GetObjectList<CODES_SY_ML>(String.Format("FROM CODES_SY_ML WHERE TYPENAME = '{0}' ORDER BY ID", typename));
+                list = DAO.Repository.GetObjectList<CODES_SY_ML>(String.Format("FROM CODES_SY_ML ORDER BY ID"));
                 return new { Result = EnResultType.Success, list = list, xzq = xzq };
             }
             catch (Exception ex)

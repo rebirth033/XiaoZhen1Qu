@@ -29,7 +29,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public JsonResult LoadSY_ML()
         {
-            return Json(SYBLL.LoadSY_ML(Request["TYPENAME"], Session["XZQ"].ToString()));
+            return Json(SYBLL.LoadSY_ML(Session["XZQ"].ToString()));
         }
     }
 }

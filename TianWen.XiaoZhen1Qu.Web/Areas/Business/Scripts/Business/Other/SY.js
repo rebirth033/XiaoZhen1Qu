@@ -12,16 +12,7 @@ $(document).ready(function () {
 });
 //加载默认
 function LoadDefault() {
-    LoadSY_ML("FC");
-    LoadSY_ML("CL");
-    LoadSY_ML_CW("CW");
-    LoadSY_ML("ZP");
-    LoadSY_ML_WXL("JZ");
-    LoadSY_ML_WXL("PX");
-    LoadSY_ML("SHFW");
-    LoadSY_ML_WXL("JY");
-    LoadSY_ML("SWFW");
-    LoadSY_ML("ES");
+    LoadSY_ML();
     LoadZXFBXX();
 }
 //最新发布列表
@@ -108,17 +99,26 @@ function OpenXXXX(LBID, JCXXID) {
     });
 }
 //加载首页_目录
-function LoadSY_ML(typename) {
+function LoadSY_ML() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/SY/LoadSY_ML",
         dataType: "json",
         data: {
-            TYPENAME: typename
+
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                LoadSY_MLInfo(xml.list, xml.xzq, typename);
+                LoadSY_MLInfo(xml.list, xml.xzq, "FC");
+                LoadSY_MLInfo(xml.list, xml.xzq, "CL");
+                LoadSY_ML_CWInfo(xml.list, xml.xzq, "CW");
+                LoadSY_MLInfo(xml.list, xml.xzq, "ZP");
+                LoadSY_ML_WXLInfo(xml.list, xml.xzq, "JZ");
+                LoadSY_ML_WXLInfo(xml.list, xml.xzq, "PX");
+                LoadSY_MLInfo(xml.list, xml.xzq, "SHFW");
+                LoadSY_ML_WXLInfo(xml.list, xml.xzq, "JY");
+                LoadSY_MLInfo(xml.list, xml.xzq, "SWFW");
+                LoadSY_MLInfo(xml.list, xml.xzq, "ES");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -130,11 +130,11 @@ function LoadSY_ML(typename) {
 function LoadSY_MLInfo(list, xzq, typename) {
     var html = "";
     for (var i = 0; i < list.length; i++) {
-        if (list[i].TYPE === "DL")
+        if (list[i].TYPE === "DL" && list[i].TYPENAME === typename)
             html += ('<p class="p_body_middle_left_title">' + xzq + list[i].LBNAME + '</p>');
     }
     for (var i = 0; i < list.length; i++) {
-        if (list[i].TYPE === "XL") {
+        if (list[i].TYPE === "XL" && list[i].TYPENAME === typename) {
             html += ('<p class="p_body_middle_left_title_small">' + list[i].LBNAME + '</p>');
             html += ('<ul class="ul_body_middle_left_section" style="height: ' + GetHeight(list, list[i].ID) + 'px;">');
             for (var j = 0; j < list.length; j++) {
@@ -147,30 +147,11 @@ function LoadSY_MLInfo(list, xzq, typename) {
     }
     $("#div_body_middle_left_" + typename).append(html);
 }
-//加载首页_目录
-function LoadSY_ML_WXL(typename) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/SY/LoadSY_ML",
-        dataType: "json",
-        data: {
-            TYPENAME: typename
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                LoadSY_ML_WXLInfo(xml.list, xml.xzq, typename);
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
 //加载首页_目录详细信息
 function LoadSY_ML_WXLInfo(list, xzq, typename) {
     var html = "";
     for (var i = 0; i < list.length; i++) {
-        if (list[i].TYPE === "DL") {
+        if (list[i].TYPE === "DL" && list[i].TYPENAME === typename) {
             html += ('<p class="p_body_middle_left_title">' + xzq + list[i].LBNAME + '</p>');
             html += ('<ul class="ul_body_middle_left_section" style="height: ' + GetHeight(list, list[i].ID) + 'px;">');
             for (var j = 0; j < list.length; j++) {
@@ -183,34 +164,15 @@ function LoadSY_ML_WXLInfo(list, xzq, typename) {
     }
     $("#div_body_middle_left_" + typename).append(html);
 }
-//加载首页_目录_宠物
-function LoadSY_ML_CW(typename) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/SY/LoadSY_ML",
-        dataType: "json",
-        data: {
-            TYPENAME: typename
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                LoadSY_ML_CWInfo(xml.list, xml.xzq, typename);
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
 //加载首页_目录_宠物详细信息
 function LoadSY_ML_CWInfo(list, xzq, typename) {
     var html = "";
     for (var i = 0; i < list.length; i++) {
-        if (list[i].TYPE === "DL")
+        if (list[i].TYPE === "DL" && list[i].TYPENAME === typename)
             html += ('<p class="p_body_middle_left_title">' + xzq + list[i].LBNAME + '</p>');
     }
     for (var i = 0; i < list.length; i++) {
-        if (list[i].TYPE === "XL") {
+        if (list[i].TYPE === "XL" && list[i].TYPENAME === typename) {
             html += ('<div class="div_body_middle_left_section_fl">');
             html += ('<span class="span_body_middle_left_section_fl_left active" style="height: ' + GetHeight(list, list[i].ID) + 'px;">' + list[i].LBNAME + '</span>');
             var count = 0;
