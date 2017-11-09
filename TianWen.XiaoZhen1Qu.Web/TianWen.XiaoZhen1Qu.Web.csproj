@@ -578,6 +578,8 @@
     <Content Include="Areas\Business\Scripts\Business\Common\Head.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\LBHead.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\Top.js" />
+    <Content Include="Areas\Business\Scripts\Business\CXLB\Common\CXLB_Common.js" />
+    <Content Include="Areas\Business\Scripts\Business\CXLB\FCCX\FCCX_DZF.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\FCCX\FCCX_ZZF.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\CL\CL_GCC.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\CL\CL_GCCYZ.js" />
@@ -1400,7 +1402,7 @@
     </Content>
     <Content Include="Areas\Business\Views\Web.config" />
     <Content Include="Areas\Business\Views\Shared\Root.cshtml" />
-    <Content Include="Areas\Business\Views\Shared\QTCXLB.cshtml" />
+    <Content Include="Areas\Business\Views\Shared\CXLB.cshtml" />
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\css\bootstrap-theme.css.map" />
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\css\bootstrap-theme.min.css.map" />
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\css\bootstrap.css.map" />
@@ -1672,9 +1674,10 @@
     <Content Include="Areas\Business\Views\NLMFY\NLMFY_NCPJG.cshtml" />
     <Content Include="Areas\Business\Views\SY\SY.cshtml" />
     <Content Include="Areas\Business\Views\FCCX\FCCX_ZZF.cshtml" />
-    <Content Include="Areas\Business\Views\Shared\Other.cshtml" />
+    <Content Include="Areas\Business\Views\Shared\QT.cshtml" />
     <Content Include="Areas\Business\Views\FCXX\FCXX_ZZF.cshtml" />
     <Content Include="Areas\Business\Views\Shared\XXXX.cshtml" />
+    <Content Include="Areas\Business\Views\FCCX\FCCX_DZF.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -1686,7 +1689,6 @@
   <ItemGroup>
     <Folder Include="Areas\Business\Photos\" />
     <Folder Include="Areas\Business\QRCode\" />
-    <Folder Include="Areas\Business\Scripts\Business\CXLB\Common\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TianWen.XiaoZhen1Qu.Entities\TianWen.XiaoZhen1Qu.Entities.csproj">

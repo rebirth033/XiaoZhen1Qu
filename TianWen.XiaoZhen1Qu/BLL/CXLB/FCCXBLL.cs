@@ -20,7 +20,11 @@ namespace TianWen.XiaoZhen1Qu.BLL
             try
             {
                 DataTable dt = new DataTable();
-                if (TYPE == "FC")//房产
+                if (TYPE == "FC_ZZF")//房产_整租房
+                {
+                    dt = DAO.Repository.GetDataTable("select a.*,b.*,x.* from jcxx a,fc_zzfjbxx b  left join codes_fuzhou_xqjbxx x on b.xqmc = x.xqmc where a.jcxxid = b.jcxxid " + GetConditin(Condition) + " order by zxgxsj desc");
+                }
+                if (TYPE == "FC_ZZF")//房产_整租房
                 {
                     dt = DAO.Repository.GetDataTable("select a.*,b.*,x.* from jcxx a,fc_zzfjbxx b  left join codes_fuzhou_xqjbxx x on b.xqmc = x.xqmc where a.jcxxid = b.jcxxid " + GetConditin(Condition) + " order by zxgxsj desc");
                 }

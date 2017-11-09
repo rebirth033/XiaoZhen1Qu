@@ -533,6 +533,7 @@
     <Compile Include="Models\ZXJC\ZXJC_JJJBXX.cs" />
     <Compile Include="Models\ZXJC\ZXJC_JZFWJBXX.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\FC\FC_DZFView.cs" />
     <Compile Include="ViewModels\FC\FC_ZZFView.cs" />
     <Compile Include="ViewModels\GY\GRXXView.cs" />
   </ItemGroup>

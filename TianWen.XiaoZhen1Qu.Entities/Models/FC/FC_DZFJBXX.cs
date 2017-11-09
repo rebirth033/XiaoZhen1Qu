@@ -41,6 +41,12 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string ZJ { get; set; }
 
         /// <summary>
+        /// 租金单位
+        /// </summary>
+        [Property]
+        public virtual string ZJDW { get; set; }
+
+        /// <summary>
         /// 宜租人数
         /// </summary>
         [Property]
