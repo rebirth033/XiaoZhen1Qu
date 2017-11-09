@@ -49,5 +49,11 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models.CODES
         /// </summary>
         [Property]
         public virtual string TYPENAME { get; set; }
+
+        /// <summary>
+        /// 条件
+        /// </summary>
+        [Property]
+        public virtual string CONDITION { get; set; }
     }
 }

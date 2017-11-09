@@ -12,8 +12,8 @@ $(document).ready(function () {
     BindConditionNav();
     BindBodyNav();
     LoadFCCXCondition();
-    LoadBody("FC", currentIndex);
     LoadHot("FC");
+    SetCondition();
 });
 //类别选择
 function OpenLBXZ() {
@@ -64,6 +64,25 @@ function SelectCondition() {
         }
     });
     LoadBody("FC", currentIndex);
+}
+//设置条件
+function SetCondition() {
+    $("#ul_condition_body_CZFS").find(".li_condition_body").removeClass("li_condition_body_active");
+    if (getUrlParam("CZFS") === "1") {
+        $("#ul_condition_body_CZFS").find(".li_condition_body:eq(1)").addClass("li_condition_body_active");
+        LoadBody("FC", currentIndex);
+    }
+    if (getUrlParam("CZFS") === "2") {
+        $("#ul_condition_body_CZFS").find(".li_condition_body:eq(2)").addClass("li_condition_body_active");
+        LoadBody("FC", currentIndex);
+    }
+    $(".div_condition_select").css("display", "block");
+    $("#ul_condition_select").html('<li class="li_condition_select_first">筛选条件</li>');
+    $("#ul_condition_body_CZFS").find(".li_condition_body").each(function () {
+        if ($(this).css("color") === "rgb(91, 192, 222)" && $(this).html() !== "不限") {
+            $("#ul_condition_select").append('<li onclick="DeleteSelect(this)" class="li_condition_select"><span>' + $(this).html() + '</span><em>x</em></li>');
+        }
+    });
 }
 //绑定选择条件删除事件
 function DeleteSelect(obj) {

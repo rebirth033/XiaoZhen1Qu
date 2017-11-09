@@ -8,7 +8,6 @@ $(document).ready(function () {
     $(".img_head_left_logo").css("margin-left", "20px");
     $("#li_head_sy").css("background", "#5bc0de").css("color", "#ffffff");
     $("#span_fbxx").bind("click", OpenLBXZ);
-    $("#li_fwcz").bind("click", OpenFWCZ);
 
     LoadDefault();
 });
@@ -90,10 +89,6 @@ function LoadInfo(obj) {
 function OpenLBXZ() {
     window.open(getRootPath() + "/Business/LBXZ/LBXZ");
 }
-//打开房屋出租
-function OpenFWCZ() {
-    window.open(getRootPath() + "/Business/FCCX/FCCX_ZZF?LBID=19");
-}
 //打开详细页面
 function OpenXXXX(LBID, JCXXID) {
     $.ajax({
@@ -149,7 +144,7 @@ function LoadSY_MLInfo(list, xzq, typename) {
             html += ('<ul class="ul_body_middle_left_section" style="height: ' + GetHeight(list, list[i].ID) + 'px;">');
             for (var j = 0; j < list.length; j++) {
                 if (list[j].PARENTID === list[i].ID) {
-                    html += ('<li class="li_body_middle_left_section">' + list[j].LBNAME + '</li>');
+                    html += ('<li onclick="OpenCXLB(' + list[j].LBID + ',\'' + list[j].TYPENAME + '\',\'' + list[j].CONDITION + '\')" class="li_body_middle_left_section">' + list[j].LBNAME + '</li>');
                 }
             }
             html += ('</ul>');
@@ -180,7 +175,7 @@ function LoadSY_ML_WXL(typename) {
 function LoadSY_ML_WXLInfo(list, xzq, typename) {
     var html = "";
     for (var i = 0; i < list.length; i++) {
-        if (list[i].TYPE === "DL"){
+        if (list[i].TYPE === "DL") {
             html += ('<p class="p_body_middle_left_title">' + xzq + list[i].LBNAME + '</p>');
             html += ('<ul class="ul_body_middle_left_section" style="height: ' + GetHeight(list, list[i].ID) + 'px;">');
             for (var j = 0; j < list.length; j++) {
@@ -251,4 +246,9 @@ function GetHeight(list, parentid) {
     if (count % 3 !== 0)
         height += 30;
     return height;
+}
+//打开查询列表
+function OpenCXLB(lbid, typename, condition) {
+    if (typename === "FC")
+        window.open(getRootPath() + "/Business/FCCX/FCCX_ZZF?LBID=" + lbid + "&" + condition);
 }
