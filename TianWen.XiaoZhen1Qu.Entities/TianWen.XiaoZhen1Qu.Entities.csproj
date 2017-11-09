@@ -80,6 +80,7 @@
     <Compile Include="Maps\CODES\CODES_QZZP_Map.cs" />
     <Compile Include="Maps\CODES\CODES_SHFW_Map.cs" />
     <Compile Include="Maps\CODES\CODES_SWFW_Map.cs" />
+    <Compile Include="Maps\CODES\CODES_SY_ML_Map.cs" />
     <Compile Include="Maps\CODES\CODES_XXYL_Map.cs" />
     <Compile Include="Maps\CODES\CODES_ZSJM_Map.cs" />
     <Compile Include="Maps\CODES\CODES_ZXJC_Map.cs" />
@@ -316,6 +317,7 @@
     <Compile Include="Models\CODES\CODES_QZZP.cs" />
     <Compile Include="Models\CODES\CODES_SHFW.cs" />
     <Compile Include="Models\CODES\CODES_SWFW.cs" />
+    <Compile Include="Models\CODES\CODES_SY_ML.cs" />
     <Compile Include="Models\CODES\CODES_XXYL.cs" />
     <Compile Include="Models\CODES\CODES_ZSJM.cs" />
     <Compile Include="Models\CODES\CODES_ZXJC.cs" />

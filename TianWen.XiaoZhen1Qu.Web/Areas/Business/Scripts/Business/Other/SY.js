@@ -11,6 +11,16 @@ $(document).ready(function () {
     $("#li_fwcz").bind("click", OpenFWCZ);
 
     LoadZXFBXX();
+    LoadSY_ML("FC");
+    LoadSY_ML("CL");
+    LoadSY_ML_CW("CW");
+    LoadSY_ML("ZP");
+    LoadSY_ML("JZ");
+    LoadSY_ML("PX");
+    LoadSY_ML("SHFW");
+    LoadSY_ML("JY");
+    LoadSY_ML("SWFW");
+    LoadSY_ML("ES");
 });
 //最新发布列表
 function ZXFBLB() {
@@ -102,5 +112,116 @@ function OpenXXXX(LBID, JCXXID) {
 
         }
     });
-    
+}
+//加载首页_目录
+function LoadSY_ML(typename) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/SY/LoadSY_ML",
+        dataType: "json",
+        data: {
+            TYPENAME: typename
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                LoadSY_MLInfo(xml.list, xml.xzq, typename);
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//加载首页_目录详细信息
+function LoadSY_MLInfo(list, xzq, typename) {
+    var html = "";
+    for (var i = 0; i < list.length; i++) {
+        if (list[i].TYPE === "DL")
+            html += ('<p class="p_body_middle_left_title">' + xzq + list[i].LBNAME + '</p>');
+    }
+    for (var i = 0; i < list.length; i++) {
+        if (list[i].TYPE === "XL") {
+            html += ('<p class="p_body_middle_left_title_small">' + list[i].LBNAME + '</p>');
+            html += ('<ul class="ul_body_middle_left_section" style="height: ' + GetHeight(list, list[i].ID) + 'px;">');
+            for (var j = 0; j < list.length; j++) {
+                if (list[j].PARENTID === list[i].ID) {
+                    html += ('<li class="li_body_middle_left_section">' + list[j].LBNAME + '</li>');
+                }
+            }
+            html += ('</ul>');
+        }
+    }
+    $("#div_body_middle_left_" + typename).append(html);
+}
+//获取高度
+function GetHeight(list, parentid) {
+    var count = 0, height = 0;
+    for (var i = 0; i < list.length; i++) {
+        if (list[i].PARENTID === parentid) {
+            count++;
+        }
+    }
+    height = (count / 3) * 30;
+    if (count % 3 !== 0)
+        height += 30;
+    return height;
+}
+//加载首页_目录_宠物
+function LoadSY_ML_CW(typename) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/SY/LoadSY_ML",
+        dataType: "json",
+        data: {
+            TYPENAME: typename
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                LoadSY_ML_CWInfo(xml.list, xml.xzq, typename);
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//加载首页_目录_宠物详细信息
+function LoadSY_ML_CWInfo(list, xzq, typename) {
+    var html = "";
+    for (var i = 0; i < list.length; i++) {
+        if (list[i].TYPE === "DL")
+            html += ('<p class="p_body_middle_left_title">' + xzq + list[i].LBNAME + '</p>');
+    }
+    for (var i = 0; i < list.length; i++) {
+        if (list[i].TYPE === "XL") {
+            html += ('<div class="div_body_middle_left_section_fl">');
+            html += ('<span class="span_body_middle_left_section_fl_left active" style="height: ' + GetCWHeight(list, list[i].ID) + 'px;">' + list[i].LBNAME + '</span>');
+            var count = 0;
+            for (var j = 0; j < list.length; j++) {
+                if (list[j].PARENTID === list[i].ID) {
+                    count++;
+                    html += ('<span class="span_body_middle_left_section_fl_right">' + list[j].LBNAME + '</span>');
+                    if (count % 3 === 0)
+                        html += ('<br />');
+                    else
+                        html += ('<em class="em_body_middle_left_section_fl_right">/</em>');
+                }
+            }
+            html += ('</div>');
+        }
+    }
+    $("#div_body_middle_left_" + typename).append(html);
+}
+//获取宠物高度
+function GetCWHeight(list, parentid) {
+    var count = 0, height = 0;
+    for (var i = 0; i < list.length; i++) {
+        if (list[i].PARENTID === parentid) {
+            count++;
+        }
+    }
+    height = (count / 3) * 30;
+    if (count % 3 !== 0)
+        height += 30;
+    return height;
 }

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using TianWen.Framework.Log;
 using TianWen.XiaoZhen1Qu.Entities.Models;
+using TianWen.XiaoZhen1Qu.Entities.Models.CODES;
 using TianWen.XiaoZhen1Qu.Interface;
 
 namespace TianWen.XiaoZhen1Qu.BLL
@@ -44,6 +45,21 @@ namespace TianWen.XiaoZhen1Qu.BLL
                             DAO.Repository.ExecuteScalar(string.Format("select id from {0} where jcxxid='{1}'", fbtable,
                                 jcxxid)).ToString()
                     };
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("error", ex.Message);
+                return new { Result = EnResultType.Failed, Message = "加载失败" };
+            }
+        }
+
+        public object LoadSY_ML(string typename, string xzq)
+        {
+            try
+            {
+                IList<CODES_SY_ML> list = new List<CODES_SY_ML>();
+                list = DAO.Repository.GetObjectList<CODES_SY_ML>(String.Format("FROM CODES_SY_ML WHERE TYPENAME = '{0}' ORDER BY ID", typename));
+                return new { Result = EnResultType.Success, list = list, xzq = xzq };
             }
             catch (Exception ex)
             {
