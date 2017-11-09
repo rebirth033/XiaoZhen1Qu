@@ -143,38 +143,38 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         }
         public JsonResult LoadCL_GCCJBXX()
         {
-            string CL_GCCJBXXID = Request["CL_GCCJBXXID"];
-            object result = CL_GCCBLL.LoadCL_GCCJBXX(CL_GCCJBXXID);
+            string ID = Request["ID"];
+            object result = CL_GCCBLL.LoadCL_GCCJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadCL_HCJBXX()
         {
-            string CL_HCJBXXID = Request["CL_HCJBXXID"];
-            object result = CL_HCBLL.LoadCL_HCJBXX(CL_HCJBXXID);
+            string ID = Request["ID"];
+            object result = CL_HCBLL.LoadCL_HCJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadCL_JCJBXX()
         {
-            string CL_JCJBXXID = Request["CL_JCJBXXID"];
-            object result = CL_JCBLL.LoadCL_JCJBXX(CL_JCJBXXID);
+            string ID = Request["ID"];
+            object result = CL_JCBLL.LoadCL_JCJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadCL_KCJBXX()
         {
-            string CL_KCJBXXID = Request["CL_KCJBXXID"];
-            object result = CL_KCBLL.LoadCL_KCJBXX(CL_KCJBXXID);
+            string ID = Request["ID"];
+            object result = CL_KCBLL.LoadCL_KCJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadCL_MTCJBXX()
         {
-            string CL_MTCJBXXID = Request["CL_MTCJBXXID"];
-            object result = CL_MTCBLL.LoadCL_MTCJBXX(CL_MTCJBXXID);
+            string ID = Request["ID"];
+            object result = CL_MTCBLL.LoadCL_MTCJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadCL_ZXCDDCSLCJBXX()
         {
-            string CL_ZXCDDCSLCJBXXID = Request["CL_ZXCDDCSLCJBXXID"];
-            object result = CL_ZXCDDCSLCBLL.LoadCL_ZXCDDCSLCJBXX(CL_ZXCDDCSLCJBXXID);
+            string ID = Request["ID"];
+            object result = CL_ZXCDDCSLCBLL.LoadCL_ZXCDDCSLCJBXX(ID);
             return Json(result);
         }
     }

@@ -7,14 +7,14 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
     {
         public SWFW_HYWLJBXX()
         {
-            SWFW_HYWLJBXXID = Guid.NewGuid().ToString("N");
+            ID = Guid.NewGuid().ToString("N");
         }
 
         /// <summary>
         /// 商务服务_货运物流信息ID
         /// </summary>
         [Id]
-        public virtual string SWFW_HYWLJBXXID { get; set; }
+        public virtual string ID { get; set; }
 
         /// <summary>
         /// 基础信息ID

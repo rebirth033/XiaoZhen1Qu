@@ -8,22 +8,7 @@ $(document).ready(function () {
     BindClick("ZZLX");
     BindClick("YFFS");
     LoadDuoX("包含费用", "BHFY");
-    BCMSSetDefault();
 });
-
-function BCMSFocus() {
-    $("#BCMS").css("color", "#333333");
-}
-
-function BCMSBlur() {
-    $("#BCMS").css("color", "#999999");
-}
-
-function BCMSSetDefault() {
-    var BCMS = "1.房屋特征：\r\n\r\n2.周边配套：\r\n\r\n3.房东心态：";
-    $("#BCMS").html(BCMS);
-}
-
 //加载小区名称
 function LoadXQMC() {
     if (event.keyCode === 40) {//按下
@@ -268,7 +253,7 @@ function LoadFC_ZZFXX() {
         dataType: "json",
         data:
         {
-            FC_ZZFJBXXID: getUrlParam("FC_ZZFJBXXID")
+            ID: getUrlParam("ID")
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -320,8 +305,8 @@ function FB() {
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     if ($("#KRZSJ").val() !== "")
         obj = jsonObj.AddJson(obj, "KRZSJ", "'" + $("#KRZSJ").val() + "'");
-    if (getUrlParam("FC_ZZFJBXXID") !== null)
-        obj = jsonObj.AddJson(obj, "FC_ZZFJBXXID", "'" + getUrlParam("FC_ZZFJBXXID") + "'");
+    if (getUrlParam("ID") !== null)
+        obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");
 
     $.ajax({
         type: "POST",

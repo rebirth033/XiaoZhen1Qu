@@ -1,11 +1,10 @@
 -- Create table
 create table PFCG_SCSBJBXX
 (
-  pfcg_scsbjbxxid VARCHAR2(50) not null,
+  id VARCHAR2(50) not null,
   jcxxid          VARCHAR2(50),
   bcms            VARCHAR2(4000),
   lb              VARCHAR2(20),
-  fs              VARCHAR2(20),
   qy              VARCHAR2(20),
   dd              VARCHAR2(20),
   jtdz            VARCHAR2(200)
@@ -33,8 +32,6 @@ comment on column PFCG_SCSBJBXX.bcms
   is '补充描述';
 comment on column PFCG_SCSBJBXX.lb
   is '类别';
-comment on column PFCG_SCSBJBXX.fs
-  is '方式';
 comment on column PFCG_SCSBJBXX.qy
   is '区域';
 comment on column PFCG_SCSBJBXX.dd

@@ -142,38 +142,38 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public JsonResult LoadZXJC_FWGZJBXX()
         {
-            string ZXJC_FWGZJBXXID = Request["ZXJC_FWGZJBXXID"];
-            object result = ZXJC_FWGZBLL.LoadZXJC_FWGZJBXX(ZXJC_FWGZJBXXID);
+            string ID = Request["ID"];
+            object result = ZXJC_FWGZBLL.LoadZXJC_FWGZJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadZXJC_GZFWJBXX()
         {
-            string ZXJC_GZFWJBXXID = Request["ZXJC_GZFWJBXXID"];
-            object result = ZXJC_GZFWBLL.LoadZXJC_GZFWJBXX(ZXJC_GZFWJBXXID);
+            string ID = Request["ID"];
+            object result = ZXJC_GZFWBLL.LoadZXJC_GZFWJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadZXJC_JCJBXX()
         {
-            string ZXJC_JCJBXXID = Request["ZXJC_JCJBXXID"];
-            object result = ZXJC_JCBLL.LoadZXJC_JCJBXX(ZXJC_JCJBXXID);
+            string ID = Request["ID"];
+            object result = ZXJC_JCBLL.LoadZXJC_JCJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadZXJC_JFJSJBXX()
         {
-            string ZXJC_JFJSJBXXID = Request["ZXJC_JFJSJBXXID"];
-            object result = ZXJC_JFJSBLL.LoadZXJC_JFJSJBXX(ZXJC_JFJSJBXXID);
+            string ID = Request["ID"];
+            object result = ZXJC_JFJSBLL.LoadZXJC_JFJSJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadZXJC_JJJBXX()
         {
-            string ZXJC_JJJBXXID = Request["ZXJC_JJJBXXID"];
-            object result = ZXJC_JJBLL.LoadZXJC_JJJBXX(ZXJC_JJJBXXID);
+            string ID = Request["ID"];
+            object result = ZXJC_JJBLL.LoadZXJC_JJJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadZXJC_JZFWJBXX()
         {
-            string ZXJC_JZFWJBXXID = Request["ZXJC_JZFWJBXXID"];
-            object result = ZXJC_JZFWBLL.LoadZXJC_JZFWJBXX(ZXJC_JZFWJBXXID);
+            string ID = Request["ID"];
+            object result = ZXJC_JZFWBLL.LoadZXJC_JZFWJBXX(ID);
             return Json(result);
         }
     }

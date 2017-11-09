@@ -7,14 +7,14 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
     {
         public ZXJC_FWGZJBXX()
         {
-            ZXJC_FWGZJBXXID = Guid.NewGuid().ToString("N");
+            ID = Guid.NewGuid().ToString("N");
         }
 
         /// <summary>
         /// 装修建材_房屋改造服务ID
         /// </summary>
         [Id]
-        public virtual string ZXJC_FWGZJBXXID { get; set; }
+        public virtual string ID { get; set; }
 
         /// <summary>
         /// 基础信息ID

@@ -7,6 +7,6 @@ namespace TianWen.XiaoZhen1Qu.Interface
     {
         object SaveES_MYFZMR_MRBJJBXX(JCXX jcxx, ES_MYFZMR_MRBJJBXX dzfjbxx, List<PHOTOS> photos);
 
-        object LoadES_MYFZMR_MRBJJBXX(string ES_MYFZMR_MRBJJBXXID);
+        object LoadES_MYFZMR_MRBJJBXX(string ID);
     }
 }

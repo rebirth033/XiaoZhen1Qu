@@ -14,7 +14,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
     {
         public object SaveES_QTES_CRYPJBXX(JCXX jcxx, ES_QTES_CRYPJBXX ES_QTES_CRYPJBXX, List<PHOTOS> photos)
         {
-            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM ES_QTES_CRYPJBXX WHERE ES_QTES_CRYPJBXXID='{0}'", ES_QTES_CRYPJBXX.ES_QTES_CRYPJBXXID));
+            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM ES_QTES_CRYPJBXX WHERE ID='{0}'", ES_QTES_CRYPJBXX.ID));
             using (ITransaction transaction = DAO.BeginTransaction())
             {
                 try
@@ -27,7 +27,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                         DAO.Update(jcxx);
                         DAO.Update(ES_QTES_CRYPJBXX);
                         transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, ES_QTES_CRYPJBXXID = ES_QTES_CRYPJBXX.ES_QTES_CRYPJBXXID } };
+                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, ID = ES_QTES_CRYPJBXX.ID } };
                     }
                     else
                     {
@@ -36,7 +36,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                         DAO.Save(jcxx);
                         DAO.Save(ES_QTES_CRYPJBXX);
                         transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, ES_QTES_CRYPJBXXID = ES_QTES_CRYPJBXX.ES_QTES_CRYPJBXXID } };
+                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, ID = ES_QTES_CRYPJBXX.ID } };
                     }
                 }
                 catch (Exception ex)
@@ -48,11 +48,11 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
-        public object LoadES_QTES_CRYPJBXX(string ES_QTES_CRYPJBXXID)
+        public object LoadES_QTES_CRYPJBXX(string ID)
         {
             try
             {
-                ES_QTES_CRYPJBXX ES_QTES_CRYPJBXX = DAO.GetObjectByID<ES_QTES_CRYPJBXX>(ES_QTES_CRYPJBXXID);
+                ES_QTES_CRYPJBXX ES_QTES_CRYPJBXX = DAO.GetObjectByID<ES_QTES_CRYPJBXX>(ID);
                 if (ES_QTES_CRYPJBXX != null)
                 {
                     JCXX jcxx = GetJCXXByID(ES_QTES_CRYPJBXX.JCXXID);

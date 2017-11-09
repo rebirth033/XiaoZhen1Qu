@@ -79,20 +79,20 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public JsonResult LoadCY_KCTSJBXX()
         {
-            string CY_KCTSJBXXID = Request["CY_KCTSJBXXID"];
-            object result = CY_KCTSBLL.LoadCY_KCTSJBXX(CY_KCTSJBXXID);
+            string ID = Request["ID"];
+            object result = CY_KCTSBLL.LoadCY_KCTSJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadCY_MSJBXX()
         {
-            string CY_MSJBXXID = Request["CY_MSJBXXID"];
-            object result = CY_MSBLL.LoadCY_MSJBXX(CY_MSJBXXID);
+            string ID = Request["ID"];
+            object result = CY_MSBLL.LoadCY_MSJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadCY_WMJBXX()
         {
-            string CY_WMJBXXID = Request["CY_WMJBXXID"];
-            object result = CY_WMBLL.LoadCY_WMJBXX(CY_WMJBXXID);
+            string ID = Request["ID"];
+            object result = CY_WMBLL.LoadCY_WMJBXX(ID);
             return Json(result);
         }
     }

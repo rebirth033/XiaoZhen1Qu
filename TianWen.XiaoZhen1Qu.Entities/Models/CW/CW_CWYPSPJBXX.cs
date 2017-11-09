@@ -7,14 +7,14 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
     {
         public CW_CWYPSPJBXX()
         {
-            CW_CWYPSPJBXXID = Guid.NewGuid().ToString("N");
+            ID = Guid.NewGuid().ToString("N");
         }
 
         /// <summary>
         /// 宠物用品/食品信息ID
         /// </summary>
         [Id]
-        public virtual string CW_CWYPSPJBXXID { get; set; }
+        public virtual string ID { get; set; }
 
         /// <summary>
         /// 基础信息ID

@@ -1,0 +1,20 @@
+-- Create table
+create table CODES_SY_ML
+(
+  id       NUMBER(8) not null,
+  lbid     NUMBER(8),
+  lbname   VARCHAR2(100),
+  lborder  NUMBER(8),
+  parentid NUMBER(8)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 16K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );

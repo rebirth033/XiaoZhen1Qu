@@ -87,14 +87,14 @@ function LoadNLMFY_NZWJBXX() {
         dataType: "json",
         data:
         {
-            NLMFY_NZWJBXXID: getUrlParam("NLMFY_NZWJBXXID")
+            ID: getUrlParam("ID")
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var jsonObj = new JsonDB("myTabContent");
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.NLMFY_NZWJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
-                $("#NLMFY_NZWJBXXID").val(xml.Value.NLMFY_NZWJBXX.NLMFY_NZWJBXXID);
+                $("#ID").val(xml.Value.NLMFY_NZWJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
@@ -124,8 +124,8 @@ function FB() {
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
 
-    if (getUrlParam("NLMFY_NZWJBXXID") !== null)
-        obj = jsonObj.AddJson(obj, "NLMFY_NZWJBXXID", "'" + getUrlParam("NLMFY_NZWJBXXID") + "'");
+    if (getUrlParam("ID") !== null)
+        obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");
 
     $.ajax({
         type: "POST",

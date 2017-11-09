@@ -324,86 +324,86 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public JsonResult LoadZSJM_CYJBXX()
         {
-            string ZSJM_CYJBXXID = Request["ZSJM_CYJBXXID"];
-            object result = ZSJM_CYBLL.LoadZSJM_CYJBXX(ZSJM_CYJBXXID);
+            string ID = Request["ID"];
+            object result = ZSJM_CYBLL.LoadZSJM_CYJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadZSJM_FZXBJBXX()
         {
-            string ZSJM_FZXBJBXXID = Request["ZSJM_FZXBJBXXID"];
-            object result = ZSJM_FZXBBLL.LoadZSJM_FZXBJBXX(ZSJM_FZXBJBXXID);
+            string ID = Request["ID"];
+            object result = ZSJM_FZXBBLL.LoadZSJM_FZXBJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadZSJM_JCJBXX()
         {
-            string ZSJM_JCJBXXID = Request["ZSJM_JCJBXXID"];
-            object result = ZSJM_JCBLL.LoadZSJM_JCJBXX(ZSJM_JCJBXXID);
+            string ID = Request["ID"];
+            object result = ZSJM_JCBLL.LoadZSJM_JCJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadZSJM_JJHBJBXX()
         {
-            string ZSJM_JJHBJBXXID = Request["ZSJM_JJHBJBXXID"];
-            object result = ZSJM_JJHBBLL.LoadZSJM_JJHBJBXX(ZSJM_JJHBJBXXID);
+            string ID = Request["ID"];
+            object result = ZSJM_JJHBBLL.LoadZSJM_JJHBJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadZSJM_JXJBXX()
         {
-            string ZSJM_JXJBXXID = Request["ZSJM_JXJBXXID"];
-            object result = ZSJM_JXBLL.LoadZSJM_JXJBXX(ZSJM_JXJBXXID);
+            string ID = Request["ID"];
+            object result = ZSJM_JXBLL.LoadZSJM_JXJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadZSJM_JYPXJBXX()
         {
-            string ZSJM_JYPXJBXXID = Request["ZSJM_JYPXJBXXID"];
-            object result = ZSJM_JYPXBLL.LoadZSJM_JYPXJBXX(ZSJM_JYPXJBXXID);
+            string ID = Request["ID"];
+            object result = ZSJM_JYPXBLL.LoadZSJM_JYPXJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadZSJM_LPXSPJBXX()
         {
-            string ZSJM_LPXSPJBXXID = Request["ZSJM_LPXSPJBXXID"];
-            object result = ZSJM_LPXSPBLL.LoadZSJM_LPXSPJBXX(ZSJM_LPXSPJBXXID);
+            string ID = Request["ID"];
+            object result = ZSJM_LPXSPBLL.LoadZSJM_LPXSPJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadZSJM_MRBJJBXX()
         {
-            string ZSJM_MRBJJBXXID = Request["ZSJM_MRBJJBXXID"];
-            object result = ZSJM_MRBJBLL.LoadZSJM_MRBJJBXX(ZSJM_MRBJJBXXID);
+            string ID = Request["ID"];
+            object result = ZSJM_MRBJBLL.LoadZSJM_MRBJJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadZSJM_NYJBXX()
         {
-            string ZSJM_NYJBXXID = Request["ZSJM_NYJBXXID"];
-            object result = ZSJM_NYBLL.LoadZSJM_NYJBXX(ZSJM_NYJBXXID);
+            string ID = Request["ID"];
+            object result = ZSJM_NYBLL.LoadZSJM_NYJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadZSJM_QCFWJBXX()
         {
-            string ZSJM_QCFWJBXXID = Request["ZSJM_QCFWJBXXID"];
-            object result = ZSJM_QCFWBLL.LoadZSJM_QCFWJBXX(ZSJM_QCFWJBXXID);
+            string ID = Request["ID"];
+            object result = ZSJM_QCFWBLL.LoadZSJM_QCFWJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadZSJM_SHFWJBXX()
         {
-            string ZSJM_SHFWJBXXID = Request["ZSJM_SHFWJBXXID"];
-            object result = ZSJM_SHFWBLL.LoadZSJM_SHFWJBXX(ZSJM_SHFWJBXXID);
+            string ID = Request["ID"];
+            object result = ZSJM_SHFWBLL.LoadZSJM_SHFWJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadZSJM_TSJBXX()
         {
-            string ZSJM_TSJBXXID = Request["ZSJM_TSJBXXID"];
-            object result = ZSJM_TSBLL.LoadZSJM_TSJBXX(ZSJM_TSJBXXID);
+            string ID = Request["ID"];
+            object result = ZSJM_TSBLL.LoadZSJM_TSJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadZSJM_WLFWJBXX()
         {
-            string ZSJM_WLFWJBXXID = Request["ZSJM_WLFWJBXXID"];
-            object result = ZSJM_WLFWBLL.LoadZSJM_WLFWJBXX(ZSJM_WLFWJBXXID);
+            string ID = Request["ID"];
+            object result = ZSJM_WLFWBLL.LoadZSJM_WLFWJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadZSJM_WTMYETJBXX()
         {
-            string ZSJM_WTMYETJBXXID = Request["ZSJM_WTMYETJBXXID"];
-            object result = ZSJM_WTMYETBLL.LoadZSJM_WTMYETJBXX(ZSJM_WTMYETJBXXID);
+            string ID = Request["ID"];
+            object result = ZSJM_WTMYETBLL.LoadZSJM_WTMYETJBXX(ID);
             return Json(result);
         }
     }

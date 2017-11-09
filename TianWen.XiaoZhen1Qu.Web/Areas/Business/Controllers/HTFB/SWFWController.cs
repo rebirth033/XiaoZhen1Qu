@@ -583,164 +583,164 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public JsonResult LoadSWFW_BGSBWXJBXX()
         {
-            string SWFW_BGSBWXJBXXID = Request["SWFW_BGSBWXJBXXID"];
-            object result = SWFW_BGSBWXBLL.LoadSWFW_BGSBWXJBXX(SWFW_BGSBWXJBXXID);
+            string ID = Request["ID"];
+            object result = SWFW_BGSBWXBLL.LoadSWFW_BGSBWXJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadSWFW_BXJBXX()
         {
-            string SWFW_BXJBXXID = Request["SWFW_BXJBXXID"];
-            object result = SWFW_BXBLL.LoadSWFW_BXJBXX(SWFW_BXJBXXID);
+            string ID = Request["ID"];
+            object result = SWFW_BXBLL.LoadSWFW_BXJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadSWFW_CWKJPGJBXX()
         {
-            string SWFW_CWKJPGJBXXID = Request["SWFW_CWKJPGJBXXID"];
-            object result = SWFW_CWKJPGBLL.LoadSWFW_CWKJPGJBXX(SWFW_CWKJPGJBXXID);
+            string ID = Request["ID"];
+            object result = SWFW_CWKJPGBLL.LoadSWFW_CWKJPGJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadSWFW_DBQZQZJBXX()
         {
-            string SWFW_DBQZQZJBXXID = Request["SWFW_DBQZQZJBXXID"];
-            object result = SWFW_DBQZQZBLL.LoadSWFW_DBQZQZJBXX(SWFW_DBQZQZJBXXID);
+            string ID = Request["ID"];
+            object result = SWFW_DBQZQZBLL.LoadSWFW_DBQZQZJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadSWFW_FLZXJBXX()
         {
-            string SWFW_FLZXJBXXID = Request["SWFW_FLZXJBXXID"];
-            object result = SWFW_FLZXBLL.LoadSWFW_FLZXJBXX(SWFW_FLZXJBXXID);
+            string ID = Request["ID"];
+            object result = SWFW_FLZXBLL.LoadSWFW_FLZXJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadSWFW_FYSJJBXX()
         {
-            string SWFW_FYSJJBXXID = Request["SWFW_FYSJJBXXID"];
-            object result = SWFW_FYSJBLL.LoadSWFW_FYSJJBXX(SWFW_FYSJJBXXID);
+            string ID = Request["ID"];
+            object result = SWFW_FYSJBLL.LoadSWFW_FYSJJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadSWFW_GGCMJBXX()
         {
-            string SWFW_GGCMJBXXID = Request["SWFW_GGCMJBXXID"];
-            object result = SWFW_GGCMBLL.LoadSWFW_GGCMJBXX(SWFW_GGCMJBXXID);
+            string ID = Request["ID"];
+            object result = SWFW_GGCMBLL.LoadSWFW_GGCMJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadSWFW_GSZCJBXX()
         {
-            string SWFW_GSZCJBXXID = Request["SWFW_GSZCJBXXID"];
-            object result = SWFW_GSZCBLL.LoadSWFW_GSZCJBXX(SWFW_GSZCJBXXID);
+            string ID = Request["ID"];
+            object result = SWFW_GSZCBLL.LoadSWFW_GSZCJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadSWFW_HYWLJBXX()
         {
-            string SWFW_HYWLJBXXID = Request["SWFW_HYWLJBXXID"];
-            object result = SWFW_HYWLBLL.LoadSWFW_HYWLJBXX(SWFW_HYWLJBXXID);
+            string ID = Request["ID"];
+            object result = SWFW_HYWLBLL.LoadSWFW_HYWLJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadSWFW_HYZXJBXX()
         {
-            string SWFW_HYZXJBXXID = Request["SWFW_HYZXJBXXID"];
-            object result = SWFW_HYZXBLL.LoadSWFW_HYZXJBXX(SWFW_HYZXJBXXID);
+            string ID = Request["ID"];
+            object result = SWFW_HYZXBLL.LoadSWFW_HYZXJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadSWFW_JXSBWXJBXX()
         {
-            string SWFW_JXSBWXJBXXID = Request["SWFW_JXSBWXJBXXID"];
-            object result = SWFW_JXSBWXBLL.LoadSWFW_JXSBWXJBXX(SWFW_JXSBWXJBXXID);
+            string ID = Request["ID"];
+            object result = SWFW_JXSBWXBLL.LoadSWFW_JXSBWXJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadSWFW_JZWXJBXX()
         {
-            string SWFW_JZWXJBXXID = Request["SWFW_JZWXJBXXID"];
-            object result = SWFW_JZWXBLL.LoadSWFW_JZWXJBXX(SWFW_JZWXJBXXID);
+            string ID = Request["ID"];
+            object result = SWFW_JZWXBLL.LoadSWFW_JZWXJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadSWFW_KDJBXX()
         {
-            string SWFW_KDJBXXID = Request["SWFW_KDJBXXID"];
-            object result = SWFW_KDBLL.LoadSWFW_KDJBXX(SWFW_KDJBXXID);
+            string ID = Request["ID"];
+            object result = SWFW_KDBLL.LoadSWFW_KDJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadSWFW_LPDZJBXX()
         {
-            string SWFW_LPDZJBXXID = Request["SWFW_LPDZJBXXID"];
-            object result = SWFW_LPDZBLL.LoadSWFW_LPDZJBXX(SWFW_LPDZJBXXID);
+            string ID = Request["ID"];
+            object result = SWFW_LPDZBLL.LoadSWFW_LPDZJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadSWFW_LYQDJBXX()
         {
-            string SWFW_LYQDJBXXID = Request["SWFW_LYQDJBXXID"];
-            object result = SWFW_LYQDBLL.LoadSWFW_LYQDJBXX(SWFW_LYQDJBXXID);
+            string ID = Request["ID"];
+            object result = SWFW_LYQDBLL.LoadSWFW_LYQDJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadSWFW_PHZPJBXX()
         {
-            string SWFW_PHZPJBXXID = Request["SWFW_PHZPJBXXID"];
-            object result = SWFW_PHZPBLL.LoadSWFW_PHZPJBXX(SWFW_PHZPJBXXID);
+            string ID = Request["ID"];
+            object result = SWFW_PHZPBLL.LoadSWFW_PHZPJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadSWFW_SBZLJBXX()
         {
-            string SWFW_SBZLJBXXID = Request["SWFW_SBZLJBXXID"];
-            object result = SWFW_SBZLBLL.LoadSWFW_SBZLJBXX(SWFW_SBZLJBXXID);
+            string ID = Request["ID"];
+            object result = SWFW_SBZLBLL.LoadSWFW_SBZLJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadSWFW_SJCHJBXX()
         {
-            string SWFW_SJCHJBXXID = Request["SWFW_SJCHJBXXID"];
-            object result = SWFW_SJCHBLL.LoadSWFW_SJCHJBXX(SWFW_SJCHJBXXID);
+            string ID = Request["ID"];
+            object result = SWFW_SJCHBLL.LoadSWFW_SJCHJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadSWFW_SYSXJBXX()
         {
-            string SWFW_SYSXJBXXID = Request["SWFW_SYSXJBXXID"];
-            object result = SWFW_SYSXBLL.LoadSWFW_SYSXJBXX(SWFW_SYSXJBXXID);
+            string ID = Request["ID"];
+            object result = SWFW_SYSXBLL.LoadSWFW_SYSXJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadSWFW_TZDBJBXX()
         {
-            string SWFW_TZDBJBXXID = Request["SWFW_TZDBJBXXID"];
-            object result = SWFW_TZDBBLL.LoadSWFW_TZDBJBXX(SWFW_TZDBJBXXID);
+            string ID = Request["ID"];
+            object result = SWFW_TZDBBLL.LoadSWFW_TZDBJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadSWFW_WLBXWHJBXX()
         {
-            string SWFW_WLBXWHJBXXID = Request["SWFW_WLBXWHJBXXID"];
-            object result = SWFW_WLBXWHBLL.LoadSWFW_WLBXWHJBXX(SWFW_WLBXWHJBXXID);
+            string ID = Request["ID"];
+            object result = SWFW_WLBXWHBLL.LoadSWFW_WLBXWHJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadSWFW_WZJSTGJBXX()
         {
-            string SWFW_WZJSTGJBXXID = Request["SWFW_WZJSTGJBXXID"];
-            object result = SWFW_WZJSTGBLL.LoadSWFW_WZJSTGJBXX(SWFW_WZJSTGJBXXID);
+            string ID = Request["ID"];
+            object result = SWFW_WZJSTGBLL.LoadSWFW_WZJSTGJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadSWFW_YSBZJBXX()
         {
-            string SWFW_YSBZJBXXID = Request["SWFW_YSBZJBXXID"];
-            object result = SWFW_YSBZBLL.LoadSWFW_YSBZJBXX(SWFW_YSBZJBXXID);
+            string ID = Request["ID"];
+            object result = SWFW_YSBZBLL.LoadSWFW_YSBZJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadSWFW_ZHFWJBXX()
         {
-            string SWFW_ZHFWJBXXID = Request["SWFW_ZHFWJBXXID"];
-            object result = SWFW_ZHFWBLL.LoadSWFW_ZHFWJBXX(SWFW_ZHFWJBXXID);
+            string ID = Request["ID"];
+            object result = SWFW_ZHFWBLL.LoadSWFW_ZHFWJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadSWFW_ZKJBXX()
         {
-            string SWFW_ZKJBXXID = Request["SWFW_ZKJBXXID"];
-            object result = SWFW_ZKBLL.LoadSWFW_ZKJBXX(SWFW_ZKJBXXID);
+            string ID = Request["ID"];
+            object result = SWFW_ZKBLL.LoadSWFW_ZKJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadSWFW_ZLJBXX()
         {
-            string SWFW_ZLJBXXID = Request["SWFW_ZLJBXXID"];
-            object result = SWFW_ZLBLL.LoadSWFW_ZLJBXX(SWFW_ZLJBXXID);
+            string ID = Request["ID"];
+            object result = SWFW_ZLBLL.LoadSWFW_ZLJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadSWFW_ZXFWJBXX()
         {
-            string SWFW_ZXFWJBXXID = Request["SWFW_ZXFWJBXXID"];
-            object result = SWFW_ZXFWBLL.LoadSWFW_ZXFWJBXX(SWFW_ZXFWJBXXID);
+            string ID = Request["ID"];
+            object result = SWFW_ZXFWBLL.LoadSWFW_ZXFWJBXX(ID);
             return Json(result);
         }
     }

@@ -23,7 +23,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     DataTable dt = DAO.GetDataTable(string.Format("SELECT * FROM {0} WHERE JCXXID = '{1}'", xxlbs[0].FBTABLE, JCXXID));
                     if (dt.Rows.Count > 0)
                     {
-                        return new { Result = EnResultType.Success, Message = "获取成功", Value = new { Value = dt.Rows[0][xxlbs[0].FBTABLE + "ID"], Key = xxlbs[0].FBTABLE + "ID", FBYM = xxlbs[0].FBYM, LBID = xxlbs[0].LBID } };
+                        return new { Result = EnResultType.Success, Message = "获取成功", Value = new { Value = dt.Rows[0]["ID"], Key = "ID", FBYM = xxlbs[0].FBYM, LBID = xxlbs[0].LBID } };
                     }
                 }
                 return new { Result = EnResultType.Failed, Message = "不存在" };

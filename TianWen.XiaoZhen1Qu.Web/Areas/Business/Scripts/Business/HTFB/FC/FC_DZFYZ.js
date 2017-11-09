@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-    $("#divCZFS").find(".div_radio").bind("click", function () { ValidateRadio("CZFS", "忘记填写出租方式啦"); });
     $("#ZDZQ").bind("blur", ValidateZDZQ);
     $("#ZDZQ").bind("focus", InfoZDZQ);
     $("#YZRS").bind("blur", ValidateYZRS);
@@ -11,8 +10,7 @@
 });
 //验证所有
 function ValidateAll() {
-    if (ValidateRadio("CZFS", "忘记填写出租方式啦") 
-        & ValidateSelect("FWLX", "FWLX", "请选择房屋类型")
+    if (ValidateSelect("FWLX", "FWLX", "请选择房屋类型")
         & ValidateBCMS("BCMS", "忘记填写房源描述啦") 
         & ValidateZJ()
         & ValidateMJ()

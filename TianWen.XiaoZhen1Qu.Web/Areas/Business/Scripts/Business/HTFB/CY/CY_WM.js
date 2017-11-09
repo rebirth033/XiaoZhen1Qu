@@ -70,14 +70,14 @@ function LoadCY_WMJBXX() {
         dataType: "json",
         data:
         {
-            CY_WMJBXXID: getUrlParam("CY_WMJBXXID")
+            ID: getUrlParam("ID")
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var jsonObj = new JsonDB("myTabContent");
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.CY_WMJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
-                $("#CY_WMJBXXID").val(xml.Value.CY_WMJBXX.CY_WMJBXXID);
+                $("#ID").val(xml.Value.CY_WMJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
@@ -106,8 +106,8 @@ function FB() {
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "LB", "'" + GetDuoX("WMLB") + "'");
 
-    if (getUrlParam("CY_WMJBXXID") !== null)
-        obj = jsonObj.AddJson(obj, "CY_WMJBXXID", "'" + getUrlParam("CY_WMJBXXID") + "'");
+    if (getUrlParam("ID") !== null)
+        obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");
 
     $.ajax({
         type: "POST",

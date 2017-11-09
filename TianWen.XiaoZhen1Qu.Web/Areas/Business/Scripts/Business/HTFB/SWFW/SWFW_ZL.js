@@ -84,7 +84,7 @@ function LoadSWFW_ZLJBXX() {
         dataType: "json",
         data:
         {
-            SWFW_ZLJBXXID: getUrlParam("SWFW_ZLJBXXID")
+            ID: getUrlParam("ID")
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -96,7 +96,7 @@ function LoadSWFW_ZLJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.BCMSString);
                 });
-                $("#SWFW_ZLJBXXID").val(xml.Value.SWFW_ZLJBXX.SWFW_ZLJBXXID);
+                $("#ID").val(xml.Value.SWFW_ZLJBXX.ID);
                 $("#spanLB").html(xml.Value.SWFW_ZLJBXX.LB);
                 $("#spanQY").html(xml.Value.SWFW_ZLJBXX.QY);
                 $("#spanDD").html(xml.Value.SWFW_ZLJBXX.DD);
@@ -121,8 +121,8 @@ function FB() {
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "XL", "'" + GetDuoX("XL") + "'");
 
-    if (getUrlParam("SWFW_ZLJBXXID") !== null)
-        obj = jsonObj.AddJson(obj, "SWFW_ZLJBXXID", "'" + getUrlParam("SWFW_ZLJBXXID") + "'");
+    if (getUrlParam("ID") !== null)
+        obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");
 
     $.ajax({
         type: "POST",

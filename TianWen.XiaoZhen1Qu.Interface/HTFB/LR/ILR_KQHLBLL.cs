@@ -7,6 +7,6 @@ namespace TianWen.XiaoZhen1Qu.Interface
     {
         object SaveLR_KQHLJBXX(JCXX jcxx, LR_KQHLJBXX dzfjbxx, List<PHOTOS> photos);
 
-        object LoadLR_KQHLJBXX(string LR_KQHLJBXXID);
+        object LoadLR_KQHLJBXX(string ID);
     }
 }

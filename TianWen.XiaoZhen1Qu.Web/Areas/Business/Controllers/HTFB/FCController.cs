@@ -123,32 +123,32 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public JsonResult LoadFC_CKCFTDCWJBXX()
         {
-            string FC_CKCFTDCWJBXXID = Request["FC_CKCFTDCWJBXXID"];
-            object result = FC_CKCFTDCWBLL.LoadFC_CKCFTDCWJBXX(FC_CKCFTDCWJBXXID);
+            string ID = Request["ID"];
+            object result = FC_CKCFTDCWBLL.LoadFC_CKCFTDCWJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadFC_DZFJBXX()
         {
-            string FC_DZFJBXXID = Request["FC_DZFJBXXID"];
-            object result = FC_DZFBLL.LoadFC_DZFJBXX(FC_DZFJBXXID);
+            string ID = Request["ID"];
+            object result = FC_DZFBLL.LoadFC_DZFJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadFC_SPJBXX()
         {
-            string FC_SPJBXXID = Request["FC_SPJBXXID"];
-            object result = FC_SPBLL.LoadFC_SPJBXX(FC_SPJBXXID);
+            string ID = Request["ID"];
+            object result = FC_SPBLL.LoadFC_SPJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadFC_XZLJBXX()
         {
-            string FC_XZLJBXXID = Request["FC_XZLJBXXID"];
-            object result = FC_XZLBLL.LoadFC_XZLJBXX(FC_XZLJBXXID);
+            string ID = Request["ID"];
+            object result = FC_XZLBLL.LoadFC_XZLJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadFC_ZZFJBXX()
         {
-            string FC_ZZFJBXXID = Request["FC_ZZFJBXXID"];
-            object result = FC_ZZFJBXXBLL.LoadFC_ZZFXX(FC_ZZFJBXXID);
+            string ID = Request["ID"];
+            object result = FC_ZZFJBXXBLL.LoadFC_ZZFXX(ID);
             return Json(result);
         }
         public JsonResult LoadXQJBXXSByHZ()

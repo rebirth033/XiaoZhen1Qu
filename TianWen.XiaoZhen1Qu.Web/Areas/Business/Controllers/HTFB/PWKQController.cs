@@ -111,32 +111,32 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public JsonResult LoadPWKQ_DYPJBXX()
         {
-            string PWKQ_DYPJBXXID = Request["PWKQ_DYPJBXXID"];
-            object result = PWKQ_DYPBLL.LoadPWKQ_DYPJBXX(PWKQ_DYPJBXXID);
+            string ID = Request["ID"];
+            object result = PWKQ_DYPBLL.LoadPWKQ_DYPJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadPWKQ_QTKQJBXX()
         {
-            string PWKQ_QTKQJBXXID = Request["PWKQ_QTKQJBXXID"];
-            object result = PWKQ_QTKQBLL.LoadPWKQ_QTKQJBXX(PWKQ_QTKQJBXXID);
+            string ID = Request["ID"];
+            object result = PWKQ_QTKQBLL.LoadPWKQ_QTKQJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadPWKQ_XFKGWQJBXX()
         {
-            string PWKQ_XFKGWQJBXXID = Request["PWKQ_XFKGWQJBXXID"];
-            object result = PWKQ_XFKGWQBLL.LoadPWKQ_XFKGWQJBXX(PWKQ_XFKGWQJBXXID);
+            string ID = Request["ID"];
+            object result = PWKQ_XFKGWQBLL.LoadPWKQ_XFKGWQJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadPWKQ_YCMPJBXX()
         {
-            string PWKQ_YCMPJBXXID = Request["PWKQ_YCMPJBXXID"];
-            object result = PWKQ_YCMPBLL.LoadPWKQ_YCMPJBXX(PWKQ_YCMPJBXXID);
+            string ID = Request["ID"];
+            object result = PWKQ_YCMPBLL.LoadPWKQ_YCMPJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadPWKQ_YLYJDPJBXX()
         {
-            string PWKQ_YLYJDPJBXXID = Request["PWKQ_YLYJDPJBXXID"];
-            object result = PWKQ_YLYJDPBLL.LoadPWKQ_YLYJDPJBXX(PWKQ_YLYJDPJBXXID);
+            string ID = Request["ID"];
+            object result = PWKQ_YLYJDPBLL.LoadPWKQ_YLYJDPJBXX(ID);
             return Json(result);
         }
     }

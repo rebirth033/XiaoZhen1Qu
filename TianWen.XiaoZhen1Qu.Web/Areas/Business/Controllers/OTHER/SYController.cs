@@ -21,5 +21,10 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         {
             return Json(SYBLL.LoadZXFBXX());
         }
+
+        public JsonResult LoadLBByJCXX()
+        {
+            return Json(SYBLL.LoadLBByJCXX(Request["LBID"], Request["JCXXID"]));
+        }
     }
 }

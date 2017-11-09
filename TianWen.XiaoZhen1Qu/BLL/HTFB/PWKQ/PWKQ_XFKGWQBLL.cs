@@ -14,7 +14,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
     {
         public object SavePWKQ_XFKGWQJBXX(JCXX jcxx, PWKQ_XFKGWQJBXX PWKQ_XFKGWQJBXX)
         {
-            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM PWKQ_XFKGWQJBXX WHERE PWKQ_XFKGWQJBXXID='{0}'", PWKQ_XFKGWQJBXX.PWKQ_XFKGWQJBXXID));
+            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM PWKQ_XFKGWQJBXX WHERE ID='{0}'", PWKQ_XFKGWQJBXX.ID));
             using (ITransaction transaction = DAO.BeginTransaction())
             {
                 try
@@ -26,7 +26,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                         DAO.Update(jcxx);
                         DAO.Update(PWKQ_XFKGWQJBXX);
                         transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, PWKQ_XFKGWQJBXXID = PWKQ_XFKGWQJBXX.PWKQ_XFKGWQJBXXID } };
+                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, ID = PWKQ_XFKGWQJBXX.ID } };
                     }
                     else
                     {
@@ -34,7 +34,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                         DAO.Save(jcxx);
                         DAO.Save(PWKQ_XFKGWQJBXX);
                         transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, PWKQ_XFKGWQJBXXID = PWKQ_XFKGWQJBXX.PWKQ_XFKGWQJBXXID } };
+                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, ID = PWKQ_XFKGWQJBXX.ID } };
                     }
                 }
                 catch (Exception ex)
@@ -46,11 +46,11 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
-        public object LoadPWKQ_XFKGWQJBXX(string PWKQ_XFKGWQJBXXID)
+        public object LoadPWKQ_XFKGWQJBXX(string ID)
         {
             try
             {
-                PWKQ_XFKGWQJBXX PWKQ_XFKGWQJBXX = DAO.GetObjectByID<PWKQ_XFKGWQJBXX>(PWKQ_XFKGWQJBXXID);
+                PWKQ_XFKGWQJBXX PWKQ_XFKGWQJBXX = DAO.GetObjectByID<PWKQ_XFKGWQJBXX>(ID);
                 if (PWKQ_XFKGWQJBXX != null)
                 {
                     JCXX jcxx = GetJCXXByID(PWKQ_XFKGWQJBXX.JCXXID);

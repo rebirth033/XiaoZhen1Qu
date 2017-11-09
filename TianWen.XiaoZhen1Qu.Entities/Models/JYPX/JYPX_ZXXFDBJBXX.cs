@@ -7,14 +7,14 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
     {
         public JYPX_ZXXFDBJBXX()
         {
-            JYPX_ZXXFDBJBXXID = Guid.NewGuid().ToString("N");
+            ID = Guid.NewGuid().ToString("N");
         }
 
         /// <summary>
         /// 教育培训_中小学辅导班信息ID
         /// </summary>
         [Id]
-        public virtual string JYPX_ZXXFDBJBXXID { get; set; }
+        public virtual string ID { get; set; }
 
         /// <summary>
         /// 基础信息ID

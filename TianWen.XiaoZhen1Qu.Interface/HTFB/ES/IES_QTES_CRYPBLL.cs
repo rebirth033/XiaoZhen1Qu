@@ -7,6 +7,6 @@ namespace TianWen.XiaoZhen1Qu.Interface
     {
         object SaveES_QTES_CRYPJBXX(JCXX jcxx, ES_QTES_CRYPJBXX dzfjbxx, List<PHOTOS> photos);
 
-        object LoadES_QTES_CRYPJBXX(string ES_QTES_CRYPJBXXID);
+        object LoadES_QTES_CRYPJBXX(string ID);
     }
 }

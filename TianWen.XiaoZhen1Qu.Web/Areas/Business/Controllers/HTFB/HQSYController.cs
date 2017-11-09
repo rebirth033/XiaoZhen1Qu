@@ -227,62 +227,62 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public JsonResult LoadHQSY_CZZXJBXX()
         {
-            string HQSY_CZZXJBXXID = Request["HQSY_CZZXJBXXID"];
-            object result = HQSY_CZZXBLL.LoadHQSY_CZZXJBXX(HQSY_CZZXJBXXID);
+            string ID = Request["ID"];
+            object result = HQSY_CZZXBLL.LoadHQSY_CZZXJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadHQSY_HCZLJBXX()
         {
-            string HQSY_HCZLJBXXID = Request["HQSY_HCZLJBXXID"];
-            object result = HQSY_HCZLBLL.LoadHQSY_HCZLJBXX(HQSY_HCZLJBXXID);
+            string ID = Request["ID"];
+            object result = HQSY_HCZLBLL.LoadHQSY_HCZLJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadHQSY_HLGPJBXX()
         {
-            string HQSY_HLGPJBXXID = Request["HQSY_HLGPJBXXID"];
-            object result = HQSY_HLGPBLL.LoadHQSY_HLGPJBXX(HQSY_HLGPJBXXID);
+            string ID = Request["ID"];
+            object result = HQSY_HLGPBLL.LoadHQSY_HLGPJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadHQSY_HQGSJBXX()
         {
-            string HQSY_HQGSJBXXID = Request["HQSY_HQGSJBXXID"];
-            object result = HQSY_HQGSBLL.LoadHQSY_HQGSJBXX(HQSY_HQGSJBXXID);
+            string ID = Request["ID"];
+            object result = HQSY_HQGSBLL.LoadHQSY_HQGSJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadHQSY_HQYPJBXX()
         {
-            string HQSY_HQYPJBXXID = Request["HQSY_HQYPJBXXID"];
-            object result = HQSY_HQYPBLL.LoadHQSY_HQYPJBXX(HQSY_HQYPJBXXID);
+            string ID = Request["ID"];
+            object result = HQSY_HQYPBLL.LoadHQSY_HQYPJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadHQSY_HSLFJBXX()
         {
-            string HQSY_HSLFJBXXID = Request["HQSY_HSLFJBXXID"];
-            object result = HQSY_HSLFBLL.LoadHQSY_HSLFJBXX(HQSY_HSLFJBXXID);
+            string ID = Request["ID"];
+            object result = HQSY_HSLFBLL.LoadHQSY_HSLFJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadHQSY_HSSYJBXX()
         {
-            string HQSY_HSSYJBXXID = Request["HQSY_HSSYJBXXID"];
-            object result = HQSY_HSSYBLL.LoadHQSY_HSSYJBXX(HQSY_HSSYJBXXID);
+            string ID = Request["ID"];
+            object result = HQSY_HSSYBLL.LoadHQSY_HSSYJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadHQSY_HYJDJBXX()
         {
-            string HQSY_HYJDJBXXID = Request["HQSY_HYJDJBXXID"];
-            object result = HQSY_HYJDBLL.LoadHQSY_HYJDJBXX(HQSY_HYJDJBXXID);
+            string ID = Request["ID"];
+            object result = HQSY_HYJDBLL.LoadHQSY_HYJDJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadHQSY_SYJBXX()
         {
-            string HQSY_SYJBXXID = Request["HQSY_SYJBXXID"];
-            object result = HQSY_SYBLL.LoadHQSY_SYJBXX(HQSY_SYJBXXID);
+            string ID = Request["ID"];
+            object result = HQSY_SYBLL.LoadHQSY_SYJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadHQSY_ZBSSJBXX()
         {
-            string HQSY_ZBSSJBXXID = Request["HQSY_ZBSSJBXXID"];
-            object result = HQSY_ZBSSBLL.LoadHQSY_ZBSSJBXX(HQSY_ZBSSJBXXID);
+            string ID = Request["ID"];
+            object result = HQSY_ZBSSBLL.LoadHQSY_ZBSSJBXX(ID);
             return Json(result);
         }
     }

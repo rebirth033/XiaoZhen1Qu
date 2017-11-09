@@ -7,7 +7,10 @@ namespace TianWen.XiaoZhen1Qu.Interface
 {
     public interface ISYBLL : IBaseBLL
     {
-        object LoadZXFBXX();
         IDAO DAO { get; set; }
+
+        object LoadZXFBXX();
+
+        object LoadLBByJCXX(string lbid, string jcxxid);
     }
 }

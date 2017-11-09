@@ -14,7 +14,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
     {
         public object SaveES_MYFZMR_FZXMXBJBXX(JCXX jcxx, ES_MYFZMR_FZXMXBJBXX ES_MYFZMR_FZXMXBJBXX, List<PHOTOS> photos)
         {
-            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM ES_MYFZMR_FZXMXBJBXX WHERE ES_MYFZMR_FZXMXBJBXXID='{0}'", ES_MYFZMR_FZXMXBJBXX.ES_MYFZMR_FZXMXBJBXXID));
+            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM ES_MYFZMR_FZXMXBJBXX WHERE ID='{0}'", ES_MYFZMR_FZXMXBJBXX.ID));
             using (ITransaction transaction = DAO.BeginTransaction())
             {
                 try
@@ -27,7 +27,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                         DAO.Update(jcxx);
                         DAO.Update(ES_MYFZMR_FZXMXBJBXX);
                         transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, ES_MYFZMR_FZXMXBJBXXID = ES_MYFZMR_FZXMXBJBXX.ES_MYFZMR_FZXMXBJBXXID } };
+                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, ID = ES_MYFZMR_FZXMXBJBXX.ID } };
                     }
                     else
                     {
@@ -36,7 +36,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                         DAO.Save(jcxx);
                         DAO.Save(ES_MYFZMR_FZXMXBJBXX);
                         transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, ES_MYFZMR_FZXMXBJBXXID = ES_MYFZMR_FZXMXBJBXX.ES_MYFZMR_FZXMXBJBXXID } };
+                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, ID = ES_MYFZMR_FZXMXBJBXX.ID } };
                     }
                 }
                 catch (Exception ex)
@@ -48,11 +48,11 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
-        public object LoadES_MYFZMR_FZXMXBJBXX(string ES_MYFZMR_FZXMXBJBXXID)
+        public object LoadES_MYFZMR_FZXMXBJBXX(string ID)
         {
             try
             {
-                ES_MYFZMR_FZXMXBJBXX ES_MYFZMR_FZXMXBJBXX = DAO.GetObjectByID<ES_MYFZMR_FZXMXBJBXX>(ES_MYFZMR_FZXMXBJBXXID);
+                ES_MYFZMR_FZXMXBJBXX ES_MYFZMR_FZXMXBJBXX = DAO.GetObjectByID<ES_MYFZMR_FZXMXBJBXX>(ID);
                 if (ES_MYFZMR_FZXMXBJBXX != null)
                 {
                     JCXX jcxx = GetJCXXByID(ES_MYFZMR_FZXMXBJBXX.JCXXID);

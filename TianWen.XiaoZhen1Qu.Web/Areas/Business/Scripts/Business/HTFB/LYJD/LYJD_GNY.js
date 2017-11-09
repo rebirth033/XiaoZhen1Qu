@@ -62,14 +62,14 @@ function LoadLYJD_GNYJBXX() {
         dataType: "json",
         data:
         {
-            LYJD_GNYJBXXID: getUrlParam("LYJD_GNYJBXXID")
+            ID: getUrlParam("ID")
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var jsonObj = new JsonDB("myTabContent");
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.LYJD_GNYJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
-                $("#LYJD_GNYJBXXID").val(xml.Value.LYJD_GNYJBXX.LYJD_GNYJBXXID);
+                $("#ID").val(xml.Value.LYJD_GNYJBXX.ID);
                 //设置编辑器的内容
                 xlts.ready(function () { xlts.setContent(xml.Value.LYJD_GNYJBXX.XLTS); });
                 xcap.ready(function () { xcap.setContent(xml.Value.LYJD_GNYJBXX.XCAP); });
@@ -111,8 +111,8 @@ function FB() {
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "FTRQ", "'" + GetDX("FTRQ") + "'");
 
-    if (getUrlParam("LYJD_GNYJBXXID") !== null)
-        obj = jsonObj.AddJson(obj, "LYJD_GNYJBXXID", "'" + getUrlParam("LYJD_GNYJBXXID") + "'");
+    if (getUrlParam("ID") !== null)
+        obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");
 
     $.ajax({
         type: "POST",

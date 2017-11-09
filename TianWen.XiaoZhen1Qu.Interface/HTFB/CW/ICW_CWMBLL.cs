@@ -7,6 +7,6 @@ namespace TianWen.XiaoZhen1Qu.Interface
     {
         object SaveCW_CWMJBXX(JCXX jcxx, CW_CWMJBXX dzfjbxx, List<PHOTOS> photos);
 
-        object LoadCW_CWMJBXX(string CW_CWMJBXXID);
+        object LoadCW_CWMJBXX(string ID);
     }
 }

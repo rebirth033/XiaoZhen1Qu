@@ -7,14 +7,14 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
     {
         public PFCG_HWYDJBXX()
         {
-            PFCG_HWYDJBXXID = Guid.NewGuid().ToString("N");
+            ID = Guid.NewGuid().ToString("N");
         }
 
         /// <summary>
         /// 批发采购_户外运动信息ID
         /// </summary>
         [Id]
-        public virtual string PFCG_HWYDJBXXID { get; set; }
+        public virtual string ID { get; set; }
 
         /// <summary>
         /// 基础信息ID

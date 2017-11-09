@@ -142,38 +142,38 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public JsonResult LoadCW_CWFWJBXX()
         {
-            string CW_CWFWJBXXID = Request["CW_CWFWJBXXID"];
-            object result = CW_CWFWBLL.LoadCW_CWFWJBXX(CW_CWFWJBXXID);
+            string ID = Request["ID"];
+            object result = CW_CWFWBLL.LoadCW_CWFWJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadCW_CWGJBXX()
         {
-            string CW_CWGJBXXID = Request["CW_CWGJBXXID"];
-            object result = CW_CWGBLL.LoadCW_CWGJBXX(CW_CWGJBXXID);
+            string ID = Request["ID"];
+            object result = CW_CWGBLL.LoadCW_CWGJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadCW_CWMJBXX()
         {
-            string CW_CWMJBXXID = Request["CW_CWMJBXXID"];
-            object result = CW_CWMBLL.LoadCW_CWMJBXX(CW_CWMJBXXID);
+            string ID = Request["ID"];
+            object result = CW_CWMBLL.LoadCW_CWMJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadCW_CWYPSPJBXX()
         {
-            string CW_CWYPSPJBXXID = Request["CW_CWYPSPJBXXID"];
-            object result = CW_CWYPSPBLL.LoadCW_CWYPSPJBXX(CW_CWYPSPJBXXID);
+            string ID = Request["ID"];
+            object result = CW_CWYPSPBLL.LoadCW_CWYPSPJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadCW_CWZSLYJBXX()
         {
-            string CW_CWZSLYJBXXID = Request["CW_CWZSLYJBXXID"];
-            object result = CW_CWZSLYBLL.LoadCW_CWZSLYJBXX(CW_CWZSLYJBXXID);
+            string ID = Request["ID"];
+            object result = CW_CWZSLYBLL.LoadCW_CWZSLYJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadCW_HNYCJBXX()
         {
-            string CW_HNYCJBXXID = Request["CW_HNYCJBXXID"];
-            object result = CW_HNYCBLL.LoadCW_HNYCJBXX(CW_HNYCJBXXID);
+            string ID = Request["ID"];
+            object result = CW_HNYCBLL.LoadCW_HNYCJBXX(ID);
             return Json(result);
         }
     }

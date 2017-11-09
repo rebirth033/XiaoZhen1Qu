@@ -14,7 +14,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
     {
         public object SaveES_WHYL_YSPSCPJBXX(JCXX jcxx, ES_WHYL_YSPSCPJBXX ES_WHYL_YSPSCPJBXX, List<PHOTOS> photos)
         {
-            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM ES_WHYL_YSPSCPJBXX WHERE ES_WHYL_YSPSCPJBXXID='{0}'", ES_WHYL_YSPSCPJBXX.ES_WHYL_YSPSCPJBXXID));
+            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM ES_WHYL_YSPSCPJBXX WHERE ID='{0}'", ES_WHYL_YSPSCPJBXX.ID));
             using (ITransaction transaction = DAO.BeginTransaction())
             {
                 try
@@ -27,7 +27,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                         DAO.Update(jcxx);
                         DAO.Update(ES_WHYL_YSPSCPJBXX);
                         transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, ES_WHYL_YSPSCPJBXXID = ES_WHYL_YSPSCPJBXX.ES_WHYL_YSPSCPJBXXID } };
+                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, ID = ES_WHYL_YSPSCPJBXX.ID } };
                     }
                     else
                     {
@@ -36,7 +36,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                         DAO.Save(jcxx);
                         DAO.Save(ES_WHYL_YSPSCPJBXX);
                         transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, ES_WHYL_YSPSCPJBXXID = ES_WHYL_YSPSCPJBXX.ES_WHYL_YSPSCPJBXXID } };
+                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, ID = ES_WHYL_YSPSCPJBXX.ID } };
                     }
                 }
                 catch (Exception ex)
@@ -48,11 +48,11 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
-        public object LoadES_WHYL_YSPSCPJBXX(string ES_WHYL_YSPSCPJBXXID)
+        public object LoadES_WHYL_YSPSCPJBXX(string ID)
         {
             try
             {
-                ES_WHYL_YSPSCPJBXX ES_WHYL_YSPSCPJBXX = DAO.GetObjectByID<ES_WHYL_YSPSCPJBXX>(ES_WHYL_YSPSCPJBXXID);
+                ES_WHYL_YSPSCPJBXX ES_WHYL_YSPSCPJBXX = DAO.GetObjectByID<ES_WHYL_YSPSCPJBXX>(ID);
                 if (ES_WHYL_YSPSCPJBXX != null)
                 {
                     JCXX jcxx = GetJCXXByID(ES_WHYL_YSPSCPJBXX.JCXXID);
