@@ -49,7 +49,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
         //加载房屋出租基本信息
-        public object LoadFC_ZZFXX(string ID)
+        public object LoadFC_ZZFJBXX(string ID)
         {
             try
             {

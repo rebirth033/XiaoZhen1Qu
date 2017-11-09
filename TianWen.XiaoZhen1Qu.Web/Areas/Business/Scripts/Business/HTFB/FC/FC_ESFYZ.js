@@ -14,8 +14,8 @@
     $("#C").bind("focus", InfoLCFB_C);
     $("#GJC").bind("blur", ValidateLCFB_GJC);
     $("#GJC").bind("focus", InfoLCFB_GJC);
-    $("#ZJ").bind("blur", ValidateZJ);
-    $("#ZJ").bind("focus", InfoZJ);
+    $("#SJ").bind("blur", ValidateSJ);
+    $("#SJ").bind("focus", InfoSJ);
 });
 //验证房屋类型
 function ValidateFWLX() {
@@ -39,20 +39,18 @@ function ValidateLCFB() {
     return true;
 }
 //验证房屋租金
-function ValidateFWZJ() {
-    if (!ValidateZJ()) return false;
-    if (!ValidateSelect("ZJ", "YFFS", "请选择押付方式")) return false;
+function ValidateFWSJ() {
+    if (!ValidateSJ()) return false;
     return true;
 }
 //验证所有
 function ValidateAll() {
-    if (ValidateRadio("CZFS", "忘记填写出租方式啦")
-        & ValidateBCMS("BCMS", "忘记填写房源描述啦")
+    if (ValidateBCMS("BCMS", "忘记填写房源描述啦")
         & ValidateFWQK()
         & ValidateXQMC()
         & ValidateFWLX()
         & ValidateLCFB()
-        & ValidateFWZJ()
+        & ValidateFWSJ()
         & ValidateCommon())
         return true;
     else
@@ -205,23 +203,23 @@ function ValidateLCFB_GJC() {
     }
 }
 
-function ValidateZJ() {
-    if ($("#ZJ").val() === "" || $("#ZJ").val() === null) {
-        $("#divZJTip").css("display", "block");
-        $("#divZJTip").attr("class", "Warn");
-        $("#divZJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写租金啦');
-        $("#spanZJ").css("border-color", "#fd634f");
+function ValidateSJ() {
+    if ($("#SJ").val() === "" || $("#SJ").val() === null) {
+        $("#divSJTip").css("display", "block");
+        $("#divSJTip").attr("class", "Warn");
+        $("#divSJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写售价啦');
+        $("#spanSJ").css("border-color", "#fd634f");
         return false;
     } else {
-        if (ValidateNumber($("#ZJ").val())) {
-            $("#divZJTip").css("display", "none");
-            $("#spanZJ").css("border-color", "#cccccc");
+        if (ValidateNumber($("#SJ").val())) {
+            $("#divSJTip").css("display", "none");
+            $("#spanSJ").css("border-color", "#cccccc");
             return true;
         } else {
-            $("#divZJTip").css("display", "block");
-            $("#divZJTip").attr("class", "Warn");
-            $("#divZJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />租金请填写整数，面议则填0');
-            $("#spanZJ").css("border-color", "#fd634f");
+            $("#divSJTip").css("display", "block");
+            $("#divSJTip").attr("class", "Warn");
+            $("#divSJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />售价请填写整数，面议则填0');
+            $("#spanSJ").css("border-color", "#fd634f");
             return false;
         }
     }
@@ -276,8 +274,9 @@ function InfoLCFB_GJC() {
     $("#spanGJC").css("border-color", "#5bc0de");
 }
 
-function InfoZJ() {
-    $("#divZJTip").css("display", "block");
-    $("#divZJTip").attr("class", "Info");
-    $("#divZJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数，面议则填0');
-}
+function InfoSJ() {
+    $("#divSJTip").css("display", "block");
+    $("#divSJTip").attr("class", "Info");
+    $("#divSJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数，面议则填0');
+    $("#spanSJ").css("border-color", "#5bc0de");
+} 

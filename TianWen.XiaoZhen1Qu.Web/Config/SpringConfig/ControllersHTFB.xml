@@ -111,6 +111,9 @@
     <property name="FC_ZZFBLL">
       <ref object="FC_ZZFBLL"/>
     </property>
+    <property name="FC_ESFBLL">
+      <ref object="FC_ESFBLL"/>
+    </property>
     <property name="FC_DZFBLL">
       <ref object="FC_DZFBLL"/>
     </property>

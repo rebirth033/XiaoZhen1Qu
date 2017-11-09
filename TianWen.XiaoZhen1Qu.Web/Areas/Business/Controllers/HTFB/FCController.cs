@@ -171,7 +171,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         public JsonResult LoadFC_ZZFJBXX()
         {
             string ID = Request["ID"];
-            object result = FC_ZZFBLL.LoadFC_ZZFXX(ID);
+            object result = FC_ZZFBLL.LoadFC_ZZFJBXX(ID);
+            return Json(result);
+        }
+        public JsonResult LoadFC_ESFJBXX()
+        {
+            string ID = Request["ID"];
+            object result = FC_ESFBLL.LoadFC_ESFJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadXQJBXXSByHZ()

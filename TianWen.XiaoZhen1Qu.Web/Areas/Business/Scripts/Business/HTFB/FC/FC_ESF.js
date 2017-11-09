@@ -249,7 +249,7 @@ function SelectXQMC(obj) {
 function LoadFC_ZZFXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC/LoadFC_ZZFJBXX",
+        url: getRootPath() + "/Business/FC/LoadFC_ESFJBXX",
         dataType: "json",
         data:
         {
@@ -258,26 +258,18 @@ function LoadFC_ZZFXX() {
         success: function (xml) {
             if (xml.Result === 1) {
                 var jsonObj = new JsonDB("myTabContent");
-                jsonObj.DisplayFromJson("myTabContent", xml.Value.FC_ZZFJBXX);
+                jsonObj.DisplayFromJson("myTabContent", xml.Value.FC_ESFJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
-                if (xml.Value.FC_ZZFJBXX.ZJYBHFY !== null)
-                    SetDuoX("BHFY", xml.Value.FC_ZZFJBXX.ZJYBHFY);
-                if (xml.Value.FC_ZZFJBXX.FWPZ !== null)
-                    SetDuoX("FWPZ", xml.Value.FC_ZZFJBXX.FWPZ);
-                if (xml.Value.FC_ZZFJBXX.FWLD !== null)
-                    SetDuoX("FWLD", xml.Value.FC_ZZFJBXX.FWLD);
-                if (xml.Value.FC_ZZFJBXX.CZYQ !== null)
-                    SetDuoX("CZYQ", xml.Value.FC_ZZFJBXX.CZYQ);
-                if (xml.Value.FC_ZZFJBXX.CZFS !== null)
-                    SetDX("CZFS", xml.Value.FC_ZZFJBXX.CZFS);
-                $("#spanFWCX").html(xml.Value.FC_ZZFJBXX.CX);
-                $("#spanZXQK").html(xml.Value.FC_ZZFJBXX.ZXQK);
-                $("#spanZZLX").html(xml.Value.FC_ZZFJBXX.ZZLX);
-                $("#spanYFFS").html(xml.Value.FC_ZZFJBXX.YFFS);
+                //if (xml.Value.FC_ESFJBXX.FWLD !== null)
+                //    SetDuoX("FWLD", xml.Value.FC_ESFJBXX.FWLD);
+                $("#spanFWCX").html(xml.Value.FC_ESFJBXX.CX);
+                //$("#spanSJ").html(xml.Value.FC_ESFJBXX.SJ);
+                $("#spanZXQK").html(xml.Value.FC_ESFJBXX.ZXQK);
+                $("#spanZZLX").html(xml.Value.FC_ESFJBXX.ZZLX);
                 //设置编辑器的内容
                 ue.ready(function () { ue.setHeight(200); ue.setContent(xml.Value.BCMSString); });
-                if (xml.Value.FC_ZZFJBXX.KRZSJ.ToString("yyyy-MM-dd") !== "1-1-1")
-                    $("#KRZSJ").val(xml.Value.FC_ZZFJBXX.KRZSJ.ToString("yyyy-MM-dd"));
+                if (xml.Value.FC_ESFJBXX.KRZSJ.ToString("yyyy-MM-dd") !== "1-1-1")
+                    $("#KRZSJ").val(xml.Value.FC_ESFJBXX.KRZSJ.ToString("yyyy-MM-dd"));
                 LoadPhotos(xml.Value.Photos);
                 return;
             }
@@ -296,12 +288,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "CX", "'" + $("#spanFWCX").html() + "'");
     obj = jsonObj.AddJson(obj, "ZXQK", "'" + $("#spanZXQK").html() + "'");
     obj = jsonObj.AddJson(obj, "ZZLX", "'" + $("#spanZZLX").html() + "'");
-    obj = jsonObj.AddJson(obj, "YFFS", "'" + $("#spanYFFS").html() + "'");
-    obj = jsonObj.AddJson(obj, "ZJYBHFY", "'" + GetDuoX("BHFY") + "'");
-    obj = jsonObj.AddJson(obj, "FWPZ", "'" + GetDuoX("FWPZ") + "'");
-    obj = jsonObj.AddJson(obj, "FWLD", "'" + GetDuoX("FWLD") + "'");
-    obj = jsonObj.AddJson(obj, "CZYQ", "'" + GetDuoX("CZYQ") + "'");
-    obj = jsonObj.AddJson(obj, "CZFS", "'" + GetDX("CZFS") + "'");
+    //obj = jsonObj.AddJson(obj, "FWLD", "'" + GetDuoX("FWLD") + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     if ($("#KRZSJ").val() !== "")
         obj = jsonObj.AddJson(obj, "KRZSJ", "'" + $("#KRZSJ").val() + "'");
@@ -310,7 +297,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC/FBFC_ZZFJBXX",
+        url: getRootPath() + "/Business/FC/FBFC_ESFJBXX",
         dataType: "json",
         data:
         {
