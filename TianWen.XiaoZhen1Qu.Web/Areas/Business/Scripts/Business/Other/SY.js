@@ -244,6 +244,8 @@ function GetHeight(list, parentid) {
 }
 //打开查询列表
 function OpenCXLB(lbid, typename, condition) {
-    if (typename === "FC")
+    if (lbid === 19)
         window.open(getRootPath() + "/Business/FCCX/FCCX_ZZF?LBID=" + lbid + "&" + condition);
+    if (lbid === 328)
+        window.open(getRootPath() + "/Business/FCCX/FCCX_DZF?LBID=" + lbid);
 }

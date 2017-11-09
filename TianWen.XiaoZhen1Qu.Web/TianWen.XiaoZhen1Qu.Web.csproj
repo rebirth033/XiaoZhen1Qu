@@ -967,6 +967,7 @@
     <Content Include="Areas\Business\Scripts\Business\Other\YHDL.js" />
     <Content Include="Areas\Business\Scripts\Business\HTGL\HTGL.js" />
     <Content Include="Areas\Business\Scripts\Business\Other\YHZC.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\FCXX\FCXX_DZF.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\FCXX\FCXX_ZZF.js" />
     <Content Include="Areas\Business\Scripts\Business\HTGL\SHGJ\YXCZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HTGL\WDZH\YXYZ.js" />
@@ -1678,6 +1679,7 @@
     <Content Include="Areas\Business\Views\FCXX\FCXX_ZZF.cshtml" />
     <Content Include="Areas\Business\Views\Shared\XXXX.cshtml" />
     <Content Include="Areas\Business\Views\FCCX\FCCX_DZF.cshtml" />
+    <Content Include="Areas\Business\Views\FCXX\FCXX_DZF.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

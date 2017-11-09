@@ -3,7 +3,7 @@ $(document).ready(function () {
     BindConditionNav();
     BindBodyNav();
     LoadFCCXCondition();
-    LoadHot("FC");
+    LoadHot("FC_ZZF");
     SetCondition();
 });
 //搬定查询条件导航
