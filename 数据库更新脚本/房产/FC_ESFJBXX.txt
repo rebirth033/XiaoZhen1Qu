@@ -1,0 +1,85 @@
+-- Create table
+create table FC_ESFJBXX
+(
+  id     VARCHAR2(50) not null,
+  jcxxid VARCHAR2(50),
+  xqmc   VARCHAR2(200),
+  s      VARCHAR2(20),
+  t      VARCHAR2(20),
+  w      VARCHAR2(20),
+  pfm    VARCHAR2(20),
+  cx     VARCHAR2(20),
+  zxqk   VARCHAR2(20),
+  zzlx   VARCHAR2(20),
+  c      VARCHAR2(20),
+  gjc    VARCHAR2(20),
+  sj     VARCHAR2(20),
+  fwld   VARCHAR2(200),
+  krzsj  DATE,
+  bcms   BLOB,
+  xqdz   VARCHAR2(200)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table FC_ESFJBXX
+  is '房产_二手房基本信息';
+-- Add comments to the columns 
+comment on column FC_ESFJBXX.id
+  is 'ID';
+comment on column FC_ESFJBXX.jcxxid
+  is '基础信息ID';
+comment on column FC_ESFJBXX.xqmc
+  is '小区名称';
+comment on column FC_ESFJBXX.s
+  is '室';
+comment on column FC_ESFJBXX.t
+  is '厅';
+comment on column FC_ESFJBXX.w
+  is '卫';
+comment on column FC_ESFJBXX.pfm
+  is '平方米';
+comment on column FC_ESFJBXX.cx
+  is '朝向';
+comment on column FC_ESFJBXX.zxqk
+  is '装修情况';
+comment on column FC_ESFJBXX.zzlx
+  is '住宅类型';
+comment on column FC_ESFJBXX.c
+  is '层';
+comment on column FC_ESFJBXX.gjc
+  is '共几层';
+comment on column FC_ESFJBXX.sj
+  is '售价';
+comment on column FC_ESFJBXX.fwld
+  is '房屋亮点';
+comment on column FC_ESFJBXX.krzsj
+  is '可入住时间';
+comment on column FC_ESFJBXX.bcms
+  is '补充描述';
+comment on column FC_ESFJBXX.xqdz
+  is '小区地址';
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table FC_ESFJBXX
+  add primary key (ID)
+  using index 
+  tablespace USERS
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );

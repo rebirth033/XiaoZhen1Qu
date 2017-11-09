@@ -14,7 +14,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Ashx
     /// </summary>
     public class SavePhotos : IHttpHandler, System.Web.SessionState.IRequiresSessionState
     {
-        IFC_ZZFJBXXBLL FC_ZZFJBXXBLL = SpringHelper.GetSpringObject<IFC_ZZFJBXXBLL>("FC_ZZFJBXXBLL");
+        IFC_ZZFBLL FC_ZZFBLL = SpringHelper.GetSpringObject<IFC_ZZFBLL>("FC_ZZFBLL");
 
         public void ProcessRequest(HttpContext context)
         {
@@ -37,7 +37,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Ashx
                     {
                         int width = Convert.ToInt32(context.Request.Form["width"]);
                         int height = Convert.ToInt32(context.Request.Form["height"]);
-                        YHJBXX yhjbxx = FC_ZZFJBXXBLL.GetYHJBXXByYHM(context.Session["YHM"].ToString());
+                        YHJBXX yhjbxx = FC_ZZFBLL.GetYHJBXXByYHM(context.Session["YHM"].ToString());
                         return ResizeImg(file.InputStream, width, height, yhjbxx.YHID);
                     }
                 }
@@ -90,7 +90,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Ashx
         //保存照片文件
         public string SavePhoto64(HttpContext context)
         {
-            YHJBXX yhjbxx = FC_ZZFJBXXBLL.GetYHJBXXByYHM(context.Session["YHM"].ToString());
+            YHJBXX yhjbxx = FC_ZZFBLL.GetYHJBXXByYHM(context.Session["YHM"].ToString());
             string RootDir = HttpContext.Current.Server.MapPath(HttpContext.Current.Request.ApplicationPath);//获取程序根目录 
             string virtualpath = context.Request["filepath"];
             string filename = virtualpath.Substring(virtualpath.LastIndexOf('/') + 1, virtualpath.Length - virtualpath.LastIndexOf('/') - 1);

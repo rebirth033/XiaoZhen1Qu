@@ -165,7 +165,12 @@
       <ref object="DAOBase"/>
     </property>
   </object>
-  <object id="FC_ZZFJBXXBLL" type="TianWen.XiaoZhen1Qu.BLL.FC_ZZFJBXXBLL,TianWen.XiaoZhen1Qu">
+  <object id="FC_ZZFBLL" type="TianWen.XiaoZhen1Qu.BLL.FC_ZZFBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="FC_ESFBLL" type="TianWen.XiaoZhen1Qu.BLL.FC_ESFBLL,TianWen.XiaoZhen1Qu">
     <property name="DAO">
       <ref object="DAOBase"/>
     </property>

@@ -9,16 +9,15 @@ function LoadDefault() {
         dataType: "json",
         data:
         {
-            TYPE: "FC",
+            TYPE: "FC_DZF",
             ID: getUrlParam("ID")
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 LoadJBXX(xml.list[0]);
-                LoadFYXQ(xml.list[0], xml.BCMSString);
-                LoadXQXX(xml.list[0]);
-                LoadDTXX(xml.list[0].XQMC);
-                LoadCNXH("FC");
+                //LoadFYXQ(xml.list[0], xml.BCMSString);
+                //LoadXQXX(xml.list[0]);
+                //LoadDTXX(xml.list[0].XQMC);
                 LoadGRXX(xml.grxxlist[0]);
                 LoadJJRTJFY("FC");
             }
@@ -54,24 +53,8 @@ function LoadJBXX(obj) {
     html += ('<div class="div_body_left_body_right">');
     html += ('<p class="p_body_left_body_right_first">');
     html += ('<span class="span_body_left_body_right_zj">' + obj.ZJ + '</span><span class="span_body_left_body_right_zjdw">元/月</span>');
-    html += ('<span class="span_body_left_body_right_yffs">' + obj.YFFS + '</span>');
     html += ('</p>');
-    html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">出租方式：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.CZFS + '</span>');
-    html += ('</p>');
-    html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">房屋类型：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.S + '室' + obj.T + '厅' + obj.W + '卫 ' + obj.PFM + '平 ' + obj.ZXQK + '</span>');
-    html += ('</p>');
-    html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">朝向楼层：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.CX + ' ' + obj.C + '层/共' + obj.GJC + '层</span>');
-    html += ('</p>');
-    html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">所在小区：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.XQMC + '</span>');
-    html += ('</p>');
+
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">所属区域：</span>');
     html += ('<span class="span_body_left_body_right_right">滨湖新区 滨湖世纪城</span>');
@@ -259,93 +242,6 @@ function searchByStationName(map, XQMC) {
         map.addOverlay(marker);
     });
     localSearch.search(XQMC);
-}
-//加载猜你喜欢
-function LoadCNXH(TYPE) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/FCCX/LoadFCXX",
-        dataType: "json",
-        data:
-        {
-            TYPE: TYPE,
-            Condition: "STATUS:1",
-            PageSize: 4,
-            PageIndex: 1
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "";
-                html += ('<div class="div_body_left_body_cnxh">');
-                html += ('<p class="p_body_left_body_cnxh">猜你喜欢</p>');
-                html += ('<ul id="ul_body_left_body_cnxh" class="ul_body_left_body_cnxh">');
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += LoadCNXHInfo(xml.list[i]);
-                }
-                html += ('</ul>');
-                html += ('</div>');
-                $("#div_body_left").append(html);
-                LoadJPTJ("FC");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载猜你喜欢单条信息
-function LoadCNXHInfo(obj) {
-    var html = "";
-    html += ('<li onclick="OpenXXXX(\'FC_ZZF\',\'' + obj.ID + '\')" class="li_body_left_body_cnxh">');
-    html += ('<img class="img_li_body_left_body_cnxh" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_left_body_cnxh_xq">' + obj.XQDZ.split('-')[0] + ' / ' + obj.XQDZ.split('-')[1] + ' / ' + obj.XQMC + '</p>');
-    html += ('<p class="p_li_body_left_body_cnxh_cs">' + obj.S + '室 ' + obj.PFM + '平</p>');
-    html += ('<p class="p_li_body_left_body_cnxh_jg">' + obj.ZJ + '元/月</p>');
-    html += ('</li>');
-    return html;
-}
-//加载精品推荐
-function LoadJPTJ(TYPE) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/FCCX/LoadFCXX",
-        dataType: "json",
-        data:
-        {
-            TYPE: TYPE,
-            Condition: "STATUS:1",
-            PageSize: 4,
-            PageIndex: 1
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "";
-                html += ('<div class="div_body_left_body_jptj">');
-                html += ('<p class="p_body_left_body_jptj">精品推荐</p>');
-                html += ('<ul id="ul_body_left_body_jptj" class="ul_body_left_body_jptj">');
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += LoadJPTJInfo(xml.list[i]);
-                }
-                html += ('</ul>');
-                html += ('</div>');
-                $("#div_body_left").append(html);
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载精品推荐单条信息
-function LoadJPTJInfo(obj) {
-    var html = "";
-    html += ('<li onclick="OpenXXXX(\'FC_ZZF\',\'' + obj.ID + '\')" class="li_body_left_body_jptj">');
-    html += ('<img class="img_li_body_left_body_jptj" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_left_body_jptj_xq">' + obj.XQDZ.split('-')[0] + ' / ' + obj.XQDZ.split('-')[1] + ' / ' + obj.XQMC + '</p>');
-    html += ('<p class="p_li_body_left_body_jptj_cs">' + obj.S + '室 ' + obj.PFM + '平</p>');
-    html += ('<p class="p_li_body_left_body_jptj_jg">' + obj.ZJ + '元/月</p>');
-    html += ('</li>');
-    return html;
 }
 //加载该经纪人推荐房源
 function LoadJJRTJFY(TYPE) {

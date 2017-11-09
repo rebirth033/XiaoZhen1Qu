@@ -9,7 +9,7 @@ function LoadDefault() {
         dataType: "json",
         data:
         {
-            TYPE: "FC",
+            TYPE: "FC_ZZF",
             ID: getUrlParam("ID")
         },
         success: function (xml) {

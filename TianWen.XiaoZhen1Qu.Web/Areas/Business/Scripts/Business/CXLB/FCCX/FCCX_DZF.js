@@ -27,15 +27,15 @@ function BindBodyNav() {
 //加载房产查询条件
 function LoadFCCXCondition() {
     var dqs = "地区,不限,鼓楼,台江,晋安,仓山,闽侯,福清,马尾,长乐,连江,平潭,罗源,闽清,永泰".split(',');
-    var zjs = "租金,不限,500元以下,500-1000元,1000-1500元,1500-2000元,2000-3000元,3000-4000元,4000元以上".split(',');
-    var zflx = "租房类型,不限,整套出租,单间出租,精品公寓,床位出租".split(',');
+    var zjs = "租金,不限,100元以下,100-200元,200-300元,300元以上".split(',');
+    var fwlx = "类型,不限,家庭旅馆,酒店式公寓,经济型酒店,宾馆招待所,特色客栈,星级酒店,青年旅社".split(',');
     LoadCondition(dqs, "DQ");
     LoadCondition(zjs, "ZJ");
-    $("#ul_condition_body_ZJ").append("<li><input id='input_zj_q' class='input_zj' type='text' /><span class='span_zj'>元</span> - <input class='input_zj' id='input_zj_z' type='text' /><span class='span_zj'>元</span></li>");
-    LoadCondition(zflx, "CZFS");
+    $("#ul_condition_body_ZJ").append("<li><input id='input_zj_q' class='input_zj' type='text' /><span class='span_zj'></span> - <input class='input_zj' id='input_zj_z' type='text' /><span class='span_zj'>元/天</span></li>");
+    LoadCondition(fwlx, "FWLX");
     $("#ul_condition_body_DQ").find(".li_condition_body").bind("click", SelectCondition);
     $("#ul_condition_body_ZJ").find(".li_condition_body").bind("click", SelectCondition);
-    $("#ul_condition_body_CZFS").find(".li_condition_body").bind("click", SelectCondition);
+    $("#ul_condition_body_FWLX").find(".li_condition_body").bind("click", SelectCondition);
 }
 //选择条件
 function SelectCondition() {
@@ -50,7 +50,7 @@ function SelectCondition() {
             $("#ul_condition_select").append('<li onclick="DeleteSelect(this)" class="li_condition_select"><span>' + $(this).html() + '</span><em>x</em></li>');
         }
     });
-    LoadBody("FC", currentIndex);
+    LoadBody("FC_DZF", currentIndex);
 }
 //绑定选择条件删除事件
 function DeleteSelect(obj) {
@@ -105,7 +105,7 @@ function HasCondition() {
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = "DQ:" + GetCondition("DQ") + ",ZJ:" + GetCondition("ZJ") + ",CZFS:" + GetCondition("CZFS");
+    var condition = "DQ:" + GetCondition("DQ") + ",ZJ:" + GetCondition("ZJ") + ",FWLX:" + GetCondition("FWLX");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/FCCX/LoadFCXX",

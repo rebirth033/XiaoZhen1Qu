@@ -5,7 +5,9 @@ using System.Web;
 using System.Web.Mvc;
 using CommonClassLib.Helper;
 using TianWen.XiaoZhen1Qu.Entities.Models;
+using TianWen.XiaoZhen1Qu.Entities.Models.FC;
 using TianWen.XiaoZhen1Qu.Interface;
+using TianWen.XiaoZhen1Qu.Interface.HTFB.FC;
 
 namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 {
@@ -15,7 +17,8 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         public IFC_DZFBLL FC_DZFBLL { get; set; }
         public IFC_SPBLL FC_SPBLL { get; set; }
         public IFC_XZLBLL FC_XZLBLL { get; set; }
-        public IFC_ZZFJBXXBLL FC_ZZFJBXXBLL { get; set; }
+        public IFC_ZZFBLL FC_ZZFBLL { get; set; }
+        public IFC_ESFBLL FC_ESFBLL { get; set; }
 
         public ActionResult FC_CKCFTDCW()
         {
@@ -42,6 +45,12 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return View();
         }
         public ActionResult FC_ZZF()
+        {
+            ViewData["XZQ"] = Session["XZQ"];
+            ViewData["YHM"] = Session["YHM"];
+            return View();
+        }
+        public ActionResult FC_ESF()
         {
             ViewData["XZQ"] = Session["XZQ"];
             ViewData["YHM"] = Session["YHM"];
@@ -109,7 +118,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         [ValidateInput(false)]
         public JsonResult FBFC_ZZFJBXX()
         {
-            YHJBXX yhjbxx = FC_ZZFJBXXBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX yhjbxx = FC_ZZFBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
@@ -117,7 +126,21 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             FC_ZZFJBXX FC_ZZFjbxx = JsonHelper.ConvertJsonToObject<FC_ZZFJBXX>(json);
             FC_ZZFjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = FC_ZZFJBXXBLL.SaveFC_ZZFJBXX(jcxx, FC_ZZFjbxx, photos);
+            object result = FC_ZZFBLL.SaveFC_ZZFJBXX(jcxx, FC_ZZFjbxx, photos);
+            return Json(result);
+        }
+        [ValidateInput(false)]
+        public JsonResult FBFC_ESFJBXX()
+        {
+            YHJBXX yhjbxx = FC_ESFBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            string json = Request["Json"];
+            string bcms = Request["BCMS"];
+            string fwzp = Request["FWZP"];
+            JCXX jcxx = CreateJCXX(yhjbxx, json);
+            FC_ESFJBXX FC_ESFjbxx = JsonHelper.ConvertJsonToObject<FC_ESFJBXX>(json);
+            FC_ESFjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
+            List<PHOTOS> photos = GetTP(fwzp);
+            object result = FC_ESFBLL.SaveFC_ESFJBXX(jcxx, FC_ESFjbxx, photos);
             return Json(result);
         }
 
@@ -148,19 +171,19 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         public JsonResult LoadFC_ZZFJBXX()
         {
             string ID = Request["ID"];
-            object result = FC_ZZFJBXXBLL.LoadFC_ZZFXX(ID);
+            object result = FC_ZZFBLL.LoadFC_ZZFXX(ID);
             return Json(result);
         }
         public JsonResult LoadXQJBXXSByHZ()
         {
             string XQMC = Request["XQMC"];
-            return Json(FC_ZZFJBXXBLL.LoadXQJBXXSByHZ(XQMC));
+            return Json(FC_ZZFBLL.LoadXQJBXXSByHZ(XQMC));
         }
 
         public JsonResult LoadXQJBXXSByPY()
         {
             string XQMC = Request["XQMC"];
-            return Json(FC_ZZFJBXXBLL.LoadXQJBXXSByPY(XQMC));
+            return Json(FC_ZZFBLL.LoadXQJBXXSByPY(XQMC));
         }
     }
 }

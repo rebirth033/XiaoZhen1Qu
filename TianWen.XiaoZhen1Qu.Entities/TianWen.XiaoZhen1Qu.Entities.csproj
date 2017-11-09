@@ -354,6 +354,7 @@
     <Compile Include="Models\ES\ES_WHYL_YSPSCPJBXX.cs" />
     <Compile Include="Models\FC\FC_CKCFTDCWJBXX.cs" />
     <Compile Include="Models\FC\FC_DZFJBXX.cs" />
+    <Compile Include="Models\FC\FC_ESFJBXX.cs" />
     <Compile Include="Models\FC\FC_SPJBXX.cs" />
     <Compile Include="Models\FC\FC_XZLJBXX.cs" />
     <Compile Include="Models\FC\FC_ZZFJBXX.cs" />

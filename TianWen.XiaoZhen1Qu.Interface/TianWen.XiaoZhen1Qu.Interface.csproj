@@ -50,6 +50,7 @@
     <Compile Include="HTFB\CY\ICY_KCTSBLL.cs" />
     <Compile Include="HTFB\CY\ICY_MSBLL.cs" />
     <Compile Include="HTFB\CY\ICY_WMBLL.cs" />
+    <Compile Include="HTFB\FC\IFC_ESFBLL.cs" />
     <Compile Include="HTFB\HQSY\IHQSY_CZZXBLL.cs" />
     <Compile Include="HTFB\HQSY\IHQSY_HCZLBLL.cs" />
     <Compile Include="HTFB\HQSY\IHQSY_HLGPBLL.cs" />
@@ -98,7 +99,7 @@
     <Compile Include="HTFB\FC\IFC_DZFBLL.cs" />
     <Compile Include="HTFB\FC\IFC_SPBLL.cs" />
     <Compile Include="HTFB\FC\IFC_XZLBLL.cs" />
-    <Compile Include="HTFB\FC\IFC_ZZFJBXXBLL.cs" />
+    <Compile Include="HTFB\FC\IFC_ZZFBLL.cs" />
     <Compile Include="IHFCZBLL.cs" />
     <Compile Include="ILBXXBLL.cs" />
     <Compile Include="IRZGLBLL.cs" />

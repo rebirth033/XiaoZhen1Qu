@@ -6,14 +6,16 @@ using System.IO;
 using NHibernate;
 using TianWen.Framework.Log;
 using TianWen.XiaoZhen1Qu.Entities.Models;
+using TianWen.XiaoZhen1Qu.Entities.Models.FC;
 using TianWen.XiaoZhen1Qu.Interface;
+using TianWen.XiaoZhen1Qu.Interface.HTFB.FC;
 
 namespace TianWen.XiaoZhen1Qu.BLL
 {
-    public class FC_ZZFJBXXBLL : BaseBLL, IFC_ZZFJBXXBLL
+    public class FC_ESFBLL : BaseBLL, IFC_ESFBLL
     {
         //保存房屋出租基本信息
-        public object SaveFC_ZZFJBXX(JCXX jcxx, FC_ZZFJBXX FC_ZZFJBXX, List<PHOTOS> photos)
+        public object SaveFC_ESFJBXX(JCXX jcxx, FC_ESFJBXX FC_ZZFJBXX, List<PHOTOS> photos)
         {
             DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM FC_ZZFJBXX WHERE ID='{0}'", FC_ZZFJBXX.ID));
             using (ITransaction transaction = DAO.BeginTransaction())
@@ -48,16 +50,16 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
             }
         }
-        //加载房屋出租基本信息
-        public object LoadFC_ZZFXX(string ID)
+        //加载二手房基本信息
+        public object LoadFC_ESFJBXX(string ID)
         {
             try
             {
-                FC_ZZFJBXX FC_ZZFJBXX = DAO.GetObjectByID<FC_ZZFJBXX>(ID);
-                if (FC_ZZFJBXX != null)
+                FC_ESFJBXX FC_ESFJBXX = DAO.GetObjectByID<FC_ESFJBXX>(ID);
+                if (FC_ESFJBXX != null)
                 {
-                    JCXX jcxx = GetJCXXByID(FC_ZZFJBXX.JCXXID);
-                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { FC_ZZFJBXX = FC_ZZFJBXX, BCMSString = BinaryHelper.BinaryToString(FC_ZZFJBXX.BCMS), JCXX = jcxx, Photos = GetPhtosByJCXXID(FC_ZZFJBXX.JCXXID) } };
+                    JCXX jcxx = GetJCXXByID(FC_ESFJBXX.JCXXID);
+                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { FC_ESFJBXX = FC_ESFJBXX, BCMSString = BinaryHelper.BinaryToString(FC_ESFJBXX.BCMS), JCXX = jcxx, Photos = GetPhtosByJCXXID(FC_ESFJBXX.JCXXID) } };
                 }
                 else
                 {

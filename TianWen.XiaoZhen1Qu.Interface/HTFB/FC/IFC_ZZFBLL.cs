@@ -3,7 +3,7 @@ using TianWen.XiaoZhen1Qu.Entities.Models;
 
 namespace TianWen.XiaoZhen1Qu.Interface
 {
-    public interface IFC_ZZFJBXXBLL : IBaseBLL
+    public interface IFC_ZZFBLL : IBaseBLL
     {
         IDAO DAO { get; set; }
 

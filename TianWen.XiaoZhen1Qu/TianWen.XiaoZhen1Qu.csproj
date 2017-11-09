@@ -98,7 +98,8 @@
     <Compile Include="BLL\HTFB\FC\FC_DZFBLL.cs" />
     <Compile Include="BLL\HTFB\FC\FC_SPBLL.cs" />
     <Compile Include="BLL\HTFB\FC\FC_XZLBLL.cs" />
-    <Compile Include="BLL\HTFB\FC\FC_ZZFJBXXBLL.cs" />
+    <Compile Include="BLL\HTFB\FC\FC_ESFBLL.cs" />
+    <Compile Include="BLL\HTFB\FC\FC_ZZFBLL.cs" />
     <Compile Include="BLL\HFCZBLL.cs" />
     <Compile Include="BLL\HTFB\HQSY\HQSY_CZZXBLL.cs" />
     <Compile Include="BLL\HTFB\HQSY\HQSY_HCZLBLL.cs" />

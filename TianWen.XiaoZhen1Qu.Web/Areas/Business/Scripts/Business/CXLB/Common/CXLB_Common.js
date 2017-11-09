@@ -22,3 +22,49 @@ function OpenXXXX(TYPE, ID) {
         window.open(getRootPath() + "/Business/FCXX/FCXX_DZF?ID=" + ID);
     }
 }
+//加载分页
+function LoadPage(typename,pagecount) {
+    var index = parseInt(currentIndex);
+    $("#div_main_info_bottom_fy").html('');
+    if (index > 1) {
+        $("#div_main_info_bottom_fy").append('<a onclick="LoadBody(\'' + typename + '\',\'' + 1 + '\')" class="a_main_info_bottom_fy">首页</a>');
+        $("#div_main_info_bottom_fy").append('<a onclick="LoadBody(\'' + typename + '\',\'' + (index - 1) + '\')" class="a_main_info_bottom_fy">上一页</a>');
+    }
+    if (index < 5) {
+        for (var i = 1; i <= pagecount; i++) {
+            if (i === index)
+                $("#div_main_info_bottom_fy").append('<a onclick="LoadBody(\'' + typename + '\',\'' + i + '\')" class="a_main_info_bottom_fy a_main_info_bottom_fy_current">' + i + '</a>');
+            else {
+                if (i <= 9) {
+                    $("#div_main_info_bottom_fy").append('<a onclick="LoadBody(\'' + typename + '\',\'' + i + '\')" class="a_main_info_bottom_fy">' + i + '</a>');
+                }
+            }
+        }
+    }
+    if (index >= 5 && index < pagecount - 4) {
+        for (var i = 1; i <= pagecount; i++) {
+            if (i === index)
+                $("#div_main_info_bottom_fy").append('<a onclick="LoadBody(\'' + typename + '\',\'' + i + '\')" class="a_main_info_bottom_fy a_main_info_bottom_fy_current">' + i + '</a>');
+            else {
+                if (i >= index - 4 && i <= index + 4) {
+                    $("#div_main_info_bottom_fy").append('<a onclick="LoadBody(\'' + typename + '\',\'' + i + '\')" class="a_main_info_bottom_fy">' + i + '</a>');
+                }
+            }
+        }
+    }
+    if (index >= pagecount - 4 && pagecount > 4) {
+        for (var i = 1; i <= pagecount; i++) {
+            if (i === index)
+                $("#div_main_info_bottom_fy").append('<a onclick="LoadBody(\'' + typename + '\',\'' + i + '\')" class="a_main_info_bottom_fy a_main_info_bottom_fy_current">' + i + '</a>');
+            else {
+                if (i > pagecount - 9) {
+                    $("#div_main_info_bottom_fy").append('<a onclick="LoadBody(\'' + typename + '\',\'' + i + '\')" class="a_main_info_bottom_fy">' + i + '</a>');
+                }
+            }
+        }
+    }
+    if (index < pagecount) {
+        $("#div_main_info_bottom_fy").append('<a onclick="LoadBody(\'' + typename + '\',\'' + (index + 1) + '\')" class="a_main_info_bottom_fy">下一页</a>');
+        $("#div_main_info_bottom_fy").append('<a onclick="LoadBody(\'' + typename + '\',\'' + pagecount + '\')" class="a_main_info_bottom_fy">尾页</a>');
+    }
+}

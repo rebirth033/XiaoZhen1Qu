@@ -56,7 +56,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
 
                 return new { Result = EnResultType.Failed };
-                
+
             }
             catch (Exception ex)
             {
@@ -107,22 +107,48 @@ namespace TianWen.XiaoZhen1Qu.BLL
             try
             {
                 DataTable dt = new DataTable();
-                if (TYPE == "FC")//房产
+                if (TYPE == "FC_ZZF") //房产_整租房
                 {
-                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.*,x.* from jcxx a,fc_zzfjbxx b  left join codes_fuzhou_xqjbxx x on b.xqmc = x.xqmc where a.jcxxid = b.jcxxid and id = '{0}'  order by zxgxsj desc", ID));
-                }
-                List<FC_ZZFView> list = ConvertHelper.DataTableToList<FC_ZZFView>(dt);
+                    dt =
+                        DAO.Repository.GetDataTable(
+                            string.Format(
+                                "select a.*,b.*,x.* from jcxx a,fc_zzfjbxx b left join codes_fuzhou_xqjbxx x on b.xqmc = x.xqmc where a.jcxxid = b.jcxxid and id = '{0}'  order by zxgxsj desc",
+                                ID));
+                    List<FC_ZZFView> list = ConvertHelper.DataTableToList<FC_ZZFView>(dt);
 
-                foreach (var jcxx in list)
-                {
-                    jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
+                    foreach (var jcxx in list)
+                    {
+                        jcxx.PHOTOS =
+                            DAO.Repository.GetObjectList<PHOTOS>(
+                                String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
+                    }
+                    DataTable dtgrxx =
+                        DAO.Repository.GetDataTable(string.Format("select * from yhjbxx y where y.yhid = '{0}'",
+                            list[0].YHID));
+                    List<GRXXView> grxxlist = ConvertHelper.DataTableToList<GRXXView>(dtgrxx);
+                    return
+                        new
+                        {
+                            Result = EnResultType.Success,
+                            list = list,
+                            BCMSString = BinaryHelper.BinaryToString(list[0].BCMS),
+                            grxxlist = grxxlist
+                        };
                 }
-                
-                dt = DAO.Repository.GetDataTable(string.Format("select * from yhjbxx y where y.yhid = '{0}'", list[0].YHID));
-                
-                List<GRXXView> grxxlist = ConvertHelper.DataTableToList<GRXXView>(dt);
-                
-                return new { Result = EnResultType.Success, list = list, BCMSString = BinaryHelper.BinaryToString(list[0].BCMS), grxxlist = grxxlist };
+                if (TYPE == "FC_DZF") //房产_短租房
+                {
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,fc_dzfjbxx b where a.jcxxid = b.jcxxid and id = '{0}'  order by zxgxsj desc", ID));
+                    List<FC_DZFView> list = ConvertHelper.DataTableToList<FC_DZFView>(dt);
+
+                    foreach (var jcxx in list)
+                    {
+                        jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
+                    }
+                    DataTable dtgrxx = DAO.Repository.GetDataTable(string.Format("select * from yhjbxx y where y.yhid = '{0}'", list[0].YHID));
+                    List<GRXXView> grxxlist = ConvertHelper.DataTableToList<GRXXView>(dtgrxx);
+                    return new { Result = EnResultType.Success, list = list, BCMSString = BinaryHelper.BinaryToString(list[0].BCMS), grxxlist = grxxlist };
+                }
+                return new { Result = EnResultType.Failed };
             }
             catch (Exception ex)
             {

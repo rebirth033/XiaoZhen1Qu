@@ -108,8 +108,8 @@
     </property>
   </object>
   <object id="FCController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.FCController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
-    <property name="FC_ZZFJBXXBLL">
-      <ref object="FC_ZZFJBXXBLL"/>
+    <property name="FC_ZZFBLL">
+      <ref object="FC_ZZFBLL"/>
     </property>
     <property name="FC_DZFBLL">
       <ref object="FC_DZFBLL"/>
