@@ -10,18 +10,22 @@ $(document).ready(function () {
     $("#span_fbxx").bind("click", OpenLBXZ);
     $("#li_fwcz").bind("click", OpenFWCZ);
 
-    LoadZXFBXX();
+    LoadDefault();
+});
+//加载默认
+function LoadDefault() {
     LoadSY_ML("FC");
     LoadSY_ML("CL");
     LoadSY_ML_CW("CW");
     LoadSY_ML("ZP");
-    LoadSY_ML("JZ");
-    LoadSY_ML("PX");
+    LoadSY_ML_WXL("JZ");
+    LoadSY_ML_WXL("PX");
     LoadSY_ML("SHFW");
-    LoadSY_ML("JY");
+    LoadSY_ML_WXL("JY");
     LoadSY_ML("SWFW");
     LoadSY_ML("ES");
-});
+    LoadZXFBXX();
+}
 //最新发布列表
 function ZXFBLB() {
     var e = $("#ul_body_top_right_zxfb")[0];
@@ -153,18 +157,41 @@ function LoadSY_MLInfo(list, xzq, typename) {
     }
     $("#div_body_middle_left_" + typename).append(html);
 }
-//获取高度
-function GetHeight(list, parentid) {
-    var count = 0, height = 0;
+//加载首页_目录
+function LoadSY_ML_WXL(typename) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/SY/LoadSY_ML",
+        dataType: "json",
+        data: {
+            TYPENAME: typename
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                LoadSY_ML_WXLInfo(xml.list, xml.xzq, typename);
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//加载首页_目录详细信息
+function LoadSY_ML_WXLInfo(list, xzq, typename) {
+    var html = "";
     for (var i = 0; i < list.length; i++) {
-        if (list[i].PARENTID === parentid) {
-            count++;
+        if (list[i].TYPE === "DL"){
+            html += ('<p class="p_body_middle_left_title">' + xzq + list[i].LBNAME + '</p>');
+            html += ('<ul class="ul_body_middle_left_section" style="height: ' + GetHeight(list, list[i].ID) + 'px;">');
+            for (var j = 0; j < list.length; j++) {
+                if (list[j].PARENTID === list[i].ID) {
+                    html += ('<li class="li_body_middle_left_section">' + list[j].LBNAME + '</li>');
+                }
+            }
+            html += ('</ul>');
         }
     }
-    height = (count / 3) * 30;
-    if (count % 3 !== 0)
-        height += 30;
-    return height;
+    $("#div_body_middle_left_" + typename).append(html);
 }
 //加载首页_目录_宠物
 function LoadSY_ML_CW(typename) {
@@ -195,7 +222,7 @@ function LoadSY_ML_CWInfo(list, xzq, typename) {
     for (var i = 0; i < list.length; i++) {
         if (list[i].TYPE === "XL") {
             html += ('<div class="div_body_middle_left_section_fl">');
-            html += ('<span class="span_body_middle_left_section_fl_left active" style="height: ' + GetCWHeight(list, list[i].ID) + 'px;">' + list[i].LBNAME + '</span>');
+            html += ('<span class="span_body_middle_left_section_fl_left active" style="height: ' + GetHeight(list, list[i].ID) + 'px;">' + list[i].LBNAME + '</span>');
             var count = 0;
             for (var j = 0; j < list.length; j++) {
                 if (list[j].PARENTID === list[i].ID) {
@@ -212,8 +239,8 @@ function LoadSY_ML_CWInfo(list, xzq, typename) {
     }
     $("#div_body_middle_left_" + typename).append(html);
 }
-//获取宠物高度
-function GetCWHeight(list, parentid) {
+//获取高度
+function GetHeight(list, parentid) {
     var count = 0, height = 0;
     for (var i = 0; i < list.length; i++) {
         if (list[i].PARENTID === parentid) {
