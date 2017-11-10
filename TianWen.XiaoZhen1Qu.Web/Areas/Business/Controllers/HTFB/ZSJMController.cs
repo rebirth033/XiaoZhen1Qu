@@ -11,20 +11,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 {
     public class ZSJMController : BaseController
     {
-        public IZSJM_CYBLL ZSJM_CYBLL { get; set; }
-        public IZSJM_FZXBBLL ZSJM_FZXBBLL { get; set; }
-        public IZSJM_JCBLL ZSJM_JCBLL { get; set; }
-        public IZSJM_JJHBBLL ZSJM_JJHBBLL { get; set; }
-        public IZSJM_JXBLL ZSJM_JXBLL { get; set; }
-        public IZSJM_JYPXBLL ZSJM_JYPXBLL { get; set; }
-        public IZSJM_LPXSPBLL ZSJM_LPXSPBLL { get; set; }
-        public IZSJM_MRBJBLL ZSJM_MRBJBLL { get; set; }
-        public IZSJM_NYBLL ZSJM_NYBLL { get; set; }
-        public IZSJM_QCFWBLL ZSJM_QCFWBLL { get; set; }
-        public IZSJM_SHFWBLL ZSJM_SHFWBLL { get; set; }
-        public IZSJM_TSBLL ZSJM_TSBLL { get; set; }
-        public IZSJM_WLFWBLL ZSJM_WLFWBLL { get; set; }
-        public IZSJM_WTMYETBLL ZSJM_WTMYETBLL { get; set; }
+        public IZSJM_BLL ZSJM_BLL { get; set; }
 
         public ActionResult ZSJM_CY()
         {
@@ -128,7 +115,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         [ValidateInput(false)]
         public JsonResult FBZSJM_CYJBXX()
         {
-            YHJBXX yhjbxx = ZSJM_CYBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX yhjbxx = ZSJM_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
@@ -136,13 +123,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             ZSJM_CYJBXX ZSJM_CYjbxx = JsonHelper.ConvertJsonToObject<ZSJM_CYJBXX>(json);
             ZSJM_CYjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = ZSJM_CYBLL.SaveZSJM_CYJBXX(jcxx, ZSJM_CYjbxx, photos);
+            object result = ZSJM_BLL.SaveZSJM_CYJBXX(jcxx, ZSJM_CYjbxx, photos);
             return Json(result);
         }
         [ValidateInput(false)]
         public JsonResult FBZSJM_FZXBJBXX()
         {
-            YHJBXX yhjbxx = ZSJM_FZXBBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX yhjbxx = ZSJM_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
@@ -150,13 +137,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             ZSJM_FZXBJBXX ZSJM_FZXBjbxx = JsonHelper.ConvertJsonToObject<ZSJM_FZXBJBXX>(json);
             ZSJM_FZXBjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = ZSJM_FZXBBLL.SaveZSJM_FZXBJBXX(jcxx, ZSJM_FZXBjbxx, photos);
+            object result = ZSJM_BLL.SaveZSJM_FZXBJBXX(jcxx, ZSJM_FZXBjbxx, photos);
             return Json(result);
         }
         [ValidateInput(false)]
         public JsonResult FBZSJM_JCJBXX()
         {
-            YHJBXX yhjbxx = ZSJM_JCBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX yhjbxx = ZSJM_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
@@ -164,13 +151,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             ZSJM_JCJBXX ZSJM_JCjbxx = JsonHelper.ConvertJsonToObject<ZSJM_JCJBXX>(json);
             ZSJM_JCjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = ZSJM_JCBLL.SaveZSJM_JCJBXX(jcxx, ZSJM_JCjbxx, photos);
+            object result = ZSJM_BLL.SaveZSJM_JCJBXX(jcxx, ZSJM_JCjbxx, photos);
             return Json(result);
         }
         [ValidateInput(false)]
         public JsonResult FBZSJM_JJHBJBXX()
         {
-            YHJBXX yhjbxx = ZSJM_JJHBBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX yhjbxx = ZSJM_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
@@ -178,13 +165,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             ZSJM_JJHBJBXX ZSJM_JJHBjbxx = JsonHelper.ConvertJsonToObject<ZSJM_JJHBJBXX>(json);
             ZSJM_JJHBjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = ZSJM_JJHBBLL.SaveZSJM_JJHBJBXX(jcxx, ZSJM_JJHBjbxx, photos);
+            object result = ZSJM_BLL.SaveZSJM_JJHBJBXX(jcxx, ZSJM_JJHBjbxx, photos);
             return Json(result);
         }
         [ValidateInput(false)]
         public JsonResult FBZSJM_JXJBXX()
         {
-            YHJBXX yhjbxx = ZSJM_JXBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX yhjbxx = ZSJM_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
@@ -192,13 +179,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             ZSJM_JXJBXX ZSJM_JXjbxx = JsonHelper.ConvertJsonToObject<ZSJM_JXJBXX>(json);
             ZSJM_JXjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = ZSJM_JXBLL.SaveZSJM_JXJBXX(jcxx, ZSJM_JXjbxx, photos);
+            object result = ZSJM_BLL.SaveZSJM_JXJBXX(jcxx, ZSJM_JXjbxx, photos);
             return Json(result);
         }
         [ValidateInput(false)]
         public JsonResult FBZSJM_JYPXJBXX()
         {
-            YHJBXX yhjbxx = ZSJM_JYPXBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX yhjbxx = ZSJM_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
@@ -206,13 +193,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             ZSJM_JYPXJBXX ZSJM_JYPXjbxx = JsonHelper.ConvertJsonToObject<ZSJM_JYPXJBXX>(json);
             ZSJM_JYPXjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = ZSJM_JYPXBLL.SaveZSJM_JYPXJBXX(jcxx, ZSJM_JYPXjbxx, photos);
+            object result = ZSJM_BLL.SaveZSJM_JYPXJBXX(jcxx, ZSJM_JYPXjbxx, photos);
             return Json(result);
         }
         [ValidateInput(false)]
         public JsonResult FBZSJM_LPXSPJBXX()
         {
-            YHJBXX yhjbxx = ZSJM_LPXSPBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX yhjbxx = ZSJM_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
@@ -220,13 +207,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             ZSJM_LPXSPJBXX ZSJM_LPXSPjbxx = JsonHelper.ConvertJsonToObject<ZSJM_LPXSPJBXX>(json);
             ZSJM_LPXSPjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = ZSJM_LPXSPBLL.SaveZSJM_LPXSPJBXX(jcxx, ZSJM_LPXSPjbxx, photos);
+            object result = ZSJM_BLL.SaveZSJM_LPXSPJBXX(jcxx, ZSJM_LPXSPjbxx, photos);
             return Json(result);
         }
         [ValidateInput(false)]
         public JsonResult FBZSJM_MRBJJBXX()
         {
-            YHJBXX yhjbxx = ZSJM_MRBJBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX yhjbxx = ZSJM_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
@@ -234,13 +221,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             ZSJM_MRBJJBXX ZSJM_MRBJjbxx = JsonHelper.ConvertJsonToObject<ZSJM_MRBJJBXX>(json);
             ZSJM_MRBJjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = ZSJM_MRBJBLL.SaveZSJM_MRBJJBXX(jcxx, ZSJM_MRBJjbxx, photos);
+            object result = ZSJM_BLL.SaveZSJM_MRBJJBXX(jcxx, ZSJM_MRBJjbxx, photos);
             return Json(result);
         }
         [ValidateInput(false)]
         public JsonResult FBZSJM_NYJBXX()
         {
-            YHJBXX yhjbxx = ZSJM_NYBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX yhjbxx = ZSJM_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
@@ -248,13 +235,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             ZSJM_NYJBXX ZSJM_NYjbxx = JsonHelper.ConvertJsonToObject<ZSJM_NYJBXX>(json);
             ZSJM_NYjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = ZSJM_NYBLL.SaveZSJM_NYJBXX(jcxx, ZSJM_NYjbxx, photos);
+            object result = ZSJM_BLL.SaveZSJM_NYJBXX(jcxx, ZSJM_NYjbxx, photos);
             return Json(result);
         }
         [ValidateInput(false)]
         public JsonResult FBZSJM_QCFWJBXX()
         {
-            YHJBXX yhjbxx = ZSJM_QCFWBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX yhjbxx = ZSJM_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
@@ -262,13 +249,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             ZSJM_QCFWJBXX ZSJM_QCFWjbxx = JsonHelper.ConvertJsonToObject<ZSJM_QCFWJBXX>(json);
             ZSJM_QCFWjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = ZSJM_QCFWBLL.SaveZSJM_QCFWJBXX(jcxx, ZSJM_QCFWjbxx, photos);
+            object result = ZSJM_BLL.SaveZSJM_QCFWJBXX(jcxx, ZSJM_QCFWjbxx, photos);
             return Json(result);
         }
         [ValidateInput(false)]
         public JsonResult FBZSJM_SHFWJBXX()
         {
-            YHJBXX yhjbxx = ZSJM_SHFWBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX yhjbxx = ZSJM_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
@@ -276,13 +263,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             ZSJM_SHFWJBXX ZSJM_SHFWjbxx = JsonHelper.ConvertJsonToObject<ZSJM_SHFWJBXX>(json);
             ZSJM_SHFWjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = ZSJM_SHFWBLL.SaveZSJM_SHFWJBXX(jcxx, ZSJM_SHFWjbxx, photos);
+            object result = ZSJM_BLL.SaveZSJM_SHFWJBXX(jcxx, ZSJM_SHFWjbxx, photos);
             return Json(result);
         }
         [ValidateInput(false)]
         public JsonResult FBZSJM_TSJBXX()
         {
-            YHJBXX yhjbxx = ZSJM_TSBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX yhjbxx = ZSJM_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
@@ -290,13 +277,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             ZSJM_TSJBXX ZSJM_TSjbxx = JsonHelper.ConvertJsonToObject<ZSJM_TSJBXX>(json);
             ZSJM_TSjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = ZSJM_TSBLL.SaveZSJM_TSJBXX(jcxx, ZSJM_TSjbxx, photos);
+            object result = ZSJM_BLL.SaveZSJM_TSJBXX(jcxx, ZSJM_TSjbxx, photos);
             return Json(result);
         }
         [ValidateInput(false)]
         public JsonResult FBZSJM_WLFWJBXX()
         {
-            YHJBXX yhjbxx = ZSJM_WLFWBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX yhjbxx = ZSJM_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
@@ -304,13 +291,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             ZSJM_WLFWJBXX ZSJM_WLFWjbxx = JsonHelper.ConvertJsonToObject<ZSJM_WLFWJBXX>(json);
             ZSJM_WLFWjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = ZSJM_WLFWBLL.SaveZSJM_WLFWJBXX(jcxx, ZSJM_WLFWjbxx, photos);
+            object result = ZSJM_BLL.SaveZSJM_WLFWJBXX(jcxx, ZSJM_WLFWjbxx, photos);
             return Json(result);
         }
         [ValidateInput(false)]
         public JsonResult FBZSJM_WTMYETJBXX()
         {
-            YHJBXX yhjbxx = ZSJM_WTMYETBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX yhjbxx = ZSJM_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
@@ -318,92 +305,92 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             ZSJM_WTMYETJBXX ZSJM_WTMYETjbxx = JsonHelper.ConvertJsonToObject<ZSJM_WTMYETJBXX>(json);
             ZSJM_WTMYETjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = ZSJM_WTMYETBLL.SaveZSJM_WTMYETJBXX(jcxx, ZSJM_WTMYETjbxx, photos);
+            object result = ZSJM_BLL.SaveZSJM_WTMYETJBXX(jcxx, ZSJM_WTMYETjbxx, photos);
             return Json(result);
         }
 
         public JsonResult LoadZSJM_CYJBXX()
         {
             string ID = Request["ID"];
-            object result = ZSJM_CYBLL.LoadZSJM_CYJBXX(ID);
+            object result = ZSJM_BLL.LoadZSJM_CYJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadZSJM_FZXBJBXX()
         {
             string ID = Request["ID"];
-            object result = ZSJM_FZXBBLL.LoadZSJM_FZXBJBXX(ID);
+            object result = ZSJM_BLL.LoadZSJM_FZXBJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadZSJM_JCJBXX()
         {
             string ID = Request["ID"];
-            object result = ZSJM_JCBLL.LoadZSJM_JCJBXX(ID);
+            object result = ZSJM_BLL.LoadZSJM_JCJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadZSJM_JJHBJBXX()
         {
             string ID = Request["ID"];
-            object result = ZSJM_JJHBBLL.LoadZSJM_JJHBJBXX(ID);
+            object result = ZSJM_BLL.LoadZSJM_JJHBJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadZSJM_JXJBXX()
         {
             string ID = Request["ID"];
-            object result = ZSJM_JXBLL.LoadZSJM_JXJBXX(ID);
+            object result = ZSJM_BLL.LoadZSJM_JXJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadZSJM_JYPXJBXX()
         {
             string ID = Request["ID"];
-            object result = ZSJM_JYPXBLL.LoadZSJM_JYPXJBXX(ID);
+            object result = ZSJM_BLL.LoadZSJM_JYPXJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadZSJM_LPXSPJBXX()
         {
             string ID = Request["ID"];
-            object result = ZSJM_LPXSPBLL.LoadZSJM_LPXSPJBXX(ID);
+            object result = ZSJM_BLL.LoadZSJM_LPXSPJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadZSJM_MRBJJBXX()
         {
             string ID = Request["ID"];
-            object result = ZSJM_MRBJBLL.LoadZSJM_MRBJJBXX(ID);
+            object result = ZSJM_BLL.LoadZSJM_MRBJJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadZSJM_NYJBXX()
         {
             string ID = Request["ID"];
-            object result = ZSJM_NYBLL.LoadZSJM_NYJBXX(ID);
+            object result = ZSJM_BLL.LoadZSJM_NYJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadZSJM_QCFWJBXX()
         {
             string ID = Request["ID"];
-            object result = ZSJM_QCFWBLL.LoadZSJM_QCFWJBXX(ID);
+            object result = ZSJM_BLL.LoadZSJM_QCFWJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadZSJM_SHFWJBXX()
         {
             string ID = Request["ID"];
-            object result = ZSJM_SHFWBLL.LoadZSJM_SHFWJBXX(ID);
+            object result = ZSJM_BLL.LoadZSJM_SHFWJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadZSJM_TSJBXX()
         {
             string ID = Request["ID"];
-            object result = ZSJM_TSBLL.LoadZSJM_TSJBXX(ID);
+            object result = ZSJM_BLL.LoadZSJM_TSJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadZSJM_WLFWJBXX()
         {
             string ID = Request["ID"];
-            object result = ZSJM_WLFWBLL.LoadZSJM_WLFWJBXX(ID);
+            object result = ZSJM_BLL.LoadZSJM_WLFWJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadZSJM_WTMYETJBXX()
         {
             string ID = Request["ID"];
-            object result = ZSJM_WTMYETBLL.LoadZSJM_WTMYETJBXX(ID);
+            object result = ZSJM_BLL.LoadZSJM_WTMYETJBXX(ID);
             return Json(result);
         }
     }

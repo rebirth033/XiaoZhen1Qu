@@ -1,6 +1,5 @@
 ﻿using FluentNHibernate.Mapping;
 using TianWen.XiaoZhen1Qu.Entities.Models;
-using TianWen.XiaoZhen1Qu.Entities.Models.FC;
 
 namespace TianWen.XiaoZhen1Qu.Entities.Maps
 {

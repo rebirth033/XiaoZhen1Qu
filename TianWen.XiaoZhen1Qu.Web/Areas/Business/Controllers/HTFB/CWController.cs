@@ -5,18 +5,13 @@ using System.Web;
 using System.Web.Mvc;
 using CommonClassLib.Helper;
 using TianWen.XiaoZhen1Qu.Entities.Models;
-using TianWen.XiaoZhen1Qu.Interface;
+using TianWen.XiaoZhen1Qu.Interface.HTFB;
 
 namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 {
     public class CWController : BaseController
     {
-        public ICW_CWFWBLL CW_CWFWBLL { get; set; }
-        public ICW_CWGBLL CW_CWGBLL { get; set; }
-        public ICW_CWMBLL CW_CWMBLL { get; set; }
-        public ICW_CWYPSPBLL CW_CWYPSPBLL { get; set; }
-        public ICW_CWZSLYBLL CW_CWZSLYBLL { get; set; }
-        public ICW_HNYCBLL CW_HNYCBLL { get; set; }
+        public ICW_BLL CW_BLL { get; set; }
 
         public ActionResult CW_CWFW()
         {
@@ -58,7 +53,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         [ValidateInput(false)]
         public JsonResult FBCW_CWFWJBXX()
         {
-            YHJBXX yhjbxx = CW_CWFWBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX yhjbxx = CW_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
@@ -66,13 +61,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             CW_CWFWJBXX CW_CWFWjbxx = JsonHelper.ConvertJsonToObject<CW_CWFWJBXX>(json);
             CW_CWFWjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = CW_CWFWBLL.SaveCW_CWFWJBXX(jcxx, CW_CWFWjbxx, photos);
+            object result = CW_BLL.SaveCW_CWFWJBXX(jcxx, CW_CWFWjbxx, photos);
             return Json(result);
         }
         [ValidateInput(false)]
         public JsonResult FBCW_CWGJBXX()
         {
-            YHJBXX yhjbxx = CW_CWGBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX yhjbxx = CW_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
@@ -80,13 +75,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             CW_CWGJBXX CW_CWGjbxx = JsonHelper.ConvertJsonToObject<CW_CWGJBXX>(json);
             CW_CWGjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = CW_CWGBLL.SaveCW_CWGJBXX(jcxx, CW_CWGjbxx, photos);
+            object result = CW_BLL.SaveCW_CWGJBXX(jcxx, CW_CWGjbxx, photos);
             return Json(result);
         }
         [ValidateInput(false)]
         public JsonResult FBCW_CWMJBXX()
         {
-            YHJBXX yhjbxx = CW_CWMBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX yhjbxx = CW_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
@@ -94,13 +89,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             CW_CWMJBXX CW_CWMjbxx = JsonHelper.ConvertJsonToObject<CW_CWMJBXX>(json);
             CW_CWMjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = CW_CWMBLL.SaveCW_CWMJBXX(jcxx, CW_CWMjbxx, photos);
+            object result = CW_BLL.SaveCW_CWMJBXX(jcxx, CW_CWMjbxx, photos);
             return Json(result);
         }
         [ValidateInput(false)]
         public JsonResult FBCW_CWYPSPJBXX()
         {
-            YHJBXX yhjbxx = CW_CWYPSPBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX yhjbxx = CW_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
@@ -108,13 +103,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             CW_CWYPSPJBXX CW_CWYPSPjbxx = JsonHelper.ConvertJsonToObject<CW_CWYPSPJBXX>(json);
             CW_CWYPSPjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = CW_CWYPSPBLL.SaveCW_CWYPSPJBXX(jcxx, CW_CWYPSPjbxx, photos);
+            object result = CW_BLL.SaveCW_CWYPSPJBXX(jcxx, CW_CWYPSPjbxx, photos);
             return Json(result);
         }
         [ValidateInput(false)]
         public JsonResult FBCW_CWZSLYJBXX()
         {
-            YHJBXX yhjbxx = CW_CWZSLYBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX yhjbxx = CW_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
@@ -122,13 +117,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             CW_CWZSLYJBXX CW_CWZSLYjbxx = JsonHelper.ConvertJsonToObject<CW_CWZSLYJBXX>(json);
             CW_CWZSLYjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = CW_CWZSLYBLL.SaveCW_CWZSLYJBXX(jcxx, CW_CWZSLYjbxx, photos);
+            object result = CW_BLL.SaveCW_CWZSLYJBXX(jcxx, CW_CWZSLYjbxx, photos);
             return Json(result);
         }
         [ValidateInput(false)]
         public JsonResult FBCW_HNYCJBXX()
         {
-            YHJBXX yhjbxx = CW_HNYCBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX yhjbxx = CW_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
@@ -136,44 +131,44 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             CW_HNYCJBXX CW_HNYCjbxx = JsonHelper.ConvertJsonToObject<CW_HNYCJBXX>(json);
             CW_HNYCjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = CW_HNYCBLL.SaveCW_HNYCJBXX(jcxx, CW_HNYCjbxx, photos);
+            object result = CW_BLL.SaveCW_HNYCJBXX(jcxx, CW_HNYCjbxx, photos);
             return Json(result);
         }
 
         public JsonResult LoadCW_CWFWJBXX()
         {
             string ID = Request["ID"];
-            object result = CW_CWFWBLL.LoadCW_CWFWJBXX(ID);
+            object result = CW_BLL.LoadCW_CWFWJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadCW_CWGJBXX()
         {
             string ID = Request["ID"];
-            object result = CW_CWGBLL.LoadCW_CWGJBXX(ID);
+            object result = CW_BLL.LoadCW_CWGJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadCW_CWMJBXX()
         {
             string ID = Request["ID"];
-            object result = CW_CWMBLL.LoadCW_CWMJBXX(ID);
+            object result = CW_BLL.LoadCW_CWMJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadCW_CWYPSPJBXX()
         {
             string ID = Request["ID"];
-            object result = CW_CWYPSPBLL.LoadCW_CWYPSPJBXX(ID);
+            object result = CW_BLL.LoadCW_CWYPSPJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadCW_CWZSLYJBXX()
         {
             string ID = Request["ID"];
-            object result = CW_CWZSLYBLL.LoadCW_CWZSLYJBXX(ID);
+            object result = CW_BLL.LoadCW_CWZSLYJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadCW_HNYCJBXX()
         {
             string ID = Request["ID"];
-            object result = CW_HNYCBLL.LoadCW_HNYCJBXX(ID);
+            object result = CW_BLL.LoadCW_HNYCJBXX(ID);
             return Json(result);
         }
     }

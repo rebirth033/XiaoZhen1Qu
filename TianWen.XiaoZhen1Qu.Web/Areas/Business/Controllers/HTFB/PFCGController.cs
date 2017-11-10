@@ -11,28 +11,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 {
     public class PFCGController : BaseController
     {
-        public IPFCG_AFSBBLL PFCG_AFSBBLL { get; set; }
-        public IPFCG_BZBLL PFCG_BZBLL { get; set; }
-        public IPFCG_DGDLBLL PFCG_DGDLBLL { get; set; }
-        public IPFCG_DJZMBLL PFCG_DJZMBLL { get; set; }
-        public IPFCG_YCLBLL PFCG_YCLBLL { get; set; }
-        public IPFCG_DZYQJBLL PFCG_DZYQJBLL { get; set; }
-        public IPFCG_FSXMBLL PFCG_FSXMBLL { get; set; }
-        public IPFCG_FZBLBLL PFCG_FZBLBLL { get; set; }
-        public IPFCG_HWYDBLL PFCG_HWYDBLL { get; set; }
-        public IPFCG_HXPBLL PFCG_HXPBLL { get; set; }
-        public IPFCG_HZPBLL PFCG_HZPBLL { get; set; }
-        public IPFCG_JXJGBLL PFCG_JXJGBLL { get; set; }
-        public IPFCG_KQBLL PFCG_KQBLL { get; set; }
-        public IPFCG_LPBLL PFCG_LPBLL { get; set; }
-        public IPFCG_MYWJBLL PFCG_MYWJBLL { get; set; }
-        public IPFCG_SCSBBLL PFCG_SCSBBLL { get; set; }
-        public IPFCG_SJSMBLL PFCG_SJSMBLL { get; set; }
-        public IPFCG_SPBLL PFCG_SPBLL { get; set; }
-        public IPFCG_TSBLL PFCG_TSBLL { get; set; }
-        public IPFCG_XBSPBLL PFCG_XBSPBLL { get; set; }
-        public IPFCG_YBYQBLL PFCG_YBYQBLL { get; set; }
-        public IPFCG_YXBLL PFCG_YXBLL { get; set; }
+        public IPFCG_BLL PFCG_BLL { get; set; }
 
         public ActionResult PFCG_AFSB()
         {
@@ -170,7 +149,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         [ValidateInput(false)]
         public JsonResult FBPFCG_AFSBJBXX()
         {
-            YHJBXX yhjbxx = PFCG_AFSBBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX yhjbxx = PFCG_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
@@ -178,13 +157,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             PFCG_AFSBJBXX PFCG_AFSBjbxx = JsonHelper.ConvertJsonToObject<PFCG_AFSBJBXX>(json);
             PFCG_AFSBjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = PFCG_AFSBBLL.SavePFCG_AFSBJBXX(jcxx, PFCG_AFSBjbxx, photos);
+            object result = PFCG_BLL.SavePFCG_AFSBJBXX(jcxx, PFCG_AFSBjbxx, photos);
             return Json(result);
         }
         [ValidateInput(false)]
         public JsonResult FBPFCG_YXJBXX()
         {
-            YHJBXX yhjbxx = PFCG_YXBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX yhjbxx = PFCG_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
@@ -192,13 +171,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             PFCG_YXJBXX PFCG_YXjbxx = JsonHelper.ConvertJsonToObject<PFCG_YXJBXX>(json);
             PFCG_YXjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = PFCG_YXBLL.SavePFCG_YXJBXX(jcxx, PFCG_YXjbxx, photos);
+            object result = PFCG_BLL.SavePFCG_YXJBXX(jcxx, PFCG_YXjbxx, photos);
             return Json(result);
         }
         [ValidateInput(false)]
         public JsonResult FBPFCG_BZJBXX()
         {
-            YHJBXX yhjbxx = PFCG_BZBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX yhjbxx = PFCG_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
@@ -206,13 +185,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             PFCG_BZJBXX PFCG_BZjbxx = JsonHelper.ConvertJsonToObject<PFCG_BZJBXX>(json);
             PFCG_BZjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = PFCG_BZBLL.SavePFCG_BZJBXX(jcxx, PFCG_BZjbxx, photos);
+            object result = PFCG_BLL.SavePFCG_BZJBXX(jcxx, PFCG_BZjbxx, photos);
             return Json(result);
         }
         [ValidateInput(false)]
         public JsonResult FBPFCG_DGDLJBXX()
         {
-            YHJBXX yhjbxx = PFCG_DGDLBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX yhjbxx = PFCG_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
@@ -220,13 +199,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             PFCG_DGDLJBXX PFCG_DGDLjbxx = JsonHelper.ConvertJsonToObject<PFCG_DGDLJBXX>(json);
             PFCG_DGDLjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = PFCG_DGDLBLL.SavePFCG_DGDLJBXX(jcxx, PFCG_DGDLjbxx, photos);
+            object result = PFCG_BLL.SavePFCG_DGDLJBXX(jcxx, PFCG_DGDLjbxx, photos);
             return Json(result);
         }
         [ValidateInput(false)]
         public JsonResult FBPFCG_YCLJBXX()
         {
-            YHJBXX yhjbxx = PFCG_DJZMBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX yhjbxx = PFCG_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
@@ -234,13 +213,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             PFCG_YCLJBXX PFCG_YCLjbxx = JsonHelper.ConvertJsonToObject<PFCG_YCLJBXX>(json);
             PFCG_YCLjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = PFCG_YCLBLL.SavePFCG_YCLJBXX(jcxx, PFCG_YCLjbxx, photos);
+            object result = PFCG_BLL.SavePFCG_YCLJBXX(jcxx, PFCG_YCLjbxx, photos);
             return Json(result);
         }
         [ValidateInput(false)]
         public JsonResult FBPFCG_DJZMJBXX()
         {
-            YHJBXX yhjbxx = PFCG_DJZMBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX yhjbxx = PFCG_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
@@ -248,13 +227,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             PFCG_DJZMJBXX PFCG_DJZMjbxx = JsonHelper.ConvertJsonToObject<PFCG_DJZMJBXX>(json);
             PFCG_DJZMjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = PFCG_DJZMBLL.SavePFCG_DJZMJBXX(jcxx, PFCG_DJZMjbxx, photos);
+            object result = PFCG_BLL.SavePFCG_DJZMJBXX(jcxx, PFCG_DJZMjbxx, photos);
             return Json(result);
         }
         [ValidateInput(false)]
         public JsonResult FBPFCG_DZYQJJBXX()
         {
-            YHJBXX yhjbxx = PFCG_DZYQJBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX yhjbxx = PFCG_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
@@ -262,13 +241,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             PFCG_DZYQJJBXX PFCG_DZYQJjbxx = JsonHelper.ConvertJsonToObject<PFCG_DZYQJJBXX>(json);
             PFCG_DZYQJjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = PFCG_DZYQJBLL.SavePFCG_DZYQJJBXX(jcxx, PFCG_DZYQJjbxx, photos);
+            object result = PFCG_BLL.SavePFCG_DZYQJJBXX(jcxx, PFCG_DZYQJjbxx, photos);
             return Json(result);
         }
         [ValidateInput(false)]
         public JsonResult FBPFCG_FSXMJBXX()
         {
-            YHJBXX yhjbxx = PFCG_FSXMBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX yhjbxx = PFCG_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
@@ -276,13 +255,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             PFCG_FSXMJBXX PFCG_FSXMjbxx = JsonHelper.ConvertJsonToObject<PFCG_FSXMJBXX>(json);
             PFCG_FSXMjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = PFCG_FSXMBLL.SavePFCG_FSXMJBXX(jcxx, PFCG_FSXMjbxx, photos);
+            object result = PFCG_BLL.SavePFCG_FSXMJBXX(jcxx, PFCG_FSXMjbxx, photos);
             return Json(result);
         }
         [ValidateInput(false)]
         public JsonResult FBPFCG_FZBLJBXX()
         {
-            YHJBXX yhjbxx = PFCG_FZBLBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX yhjbxx = PFCG_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
@@ -290,13 +269,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             PFCG_FZBLJBXX PFCG_FZBLjbxx = JsonHelper.ConvertJsonToObject<PFCG_FZBLJBXX>(json);
             PFCG_FZBLjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = PFCG_FZBLBLL.SavePFCG_FZBLJBXX(jcxx, PFCG_FZBLjbxx, photos);
+            object result = PFCG_BLL.SavePFCG_FZBLJBXX(jcxx, PFCG_FZBLjbxx, photos);
             return Json(result);
         }
         [ValidateInput(false)]
         public JsonResult FBPFCG_HWYDJBXX()
         {
-            YHJBXX yhjbxx = PFCG_HWYDBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX yhjbxx = PFCG_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
@@ -304,13 +283,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             PFCG_HWYDJBXX PFCG_HWYDjbxx = JsonHelper.ConvertJsonToObject<PFCG_HWYDJBXX>(json);
             PFCG_HWYDjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = PFCG_HWYDBLL.SavePFCG_HWYDJBXX(jcxx, PFCG_HWYDjbxx, photos);
+            object result = PFCG_BLL.SavePFCG_HWYDJBXX(jcxx, PFCG_HWYDjbxx, photos);
             return Json(result);
         }
         [ValidateInput(false)]
         public JsonResult FBPFCG_HXPJBXX()
         {
-            YHJBXX yhjbxx = PFCG_HXPBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX yhjbxx = PFCG_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
@@ -318,13 +297,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             PFCG_HXPJBXX PFCG_HXPjbxx = JsonHelper.ConvertJsonToObject<PFCG_HXPJBXX>(json);
             PFCG_HXPjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = PFCG_HXPBLL.SavePFCG_HXPJBXX(jcxx, PFCG_HXPjbxx, photos);
+            object result = PFCG_BLL.SavePFCG_HXPJBXX(jcxx, PFCG_HXPjbxx, photos);
             return Json(result);
         }
         [ValidateInput(false)]
         public JsonResult FBPFCG_HZP()
         {
-            YHJBXX yhjbxx = PFCG_HZPBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX yhjbxx = PFCG_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
@@ -332,13 +311,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             PFCG_HZPJBXX PFCG_HZPjbxx = JsonHelper.ConvertJsonToObject<PFCG_HZPJBXX>(json);
             PFCG_HZPjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = PFCG_HZPBLL.SavePFCG_HZPJBXX(jcxx, PFCG_HZPjbxx, photos);
+            object result = PFCG_BLL.SavePFCG_HZPJBXX(jcxx, PFCG_HZPjbxx, photos);
             return Json(result);
         }
         [ValidateInput(false)]
         public JsonResult FBPFCG_JXJGJBXX()
         {
-            YHJBXX yhjbxx = PFCG_JXJGBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX yhjbxx = PFCG_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
@@ -346,13 +325,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             PFCG_JXJGJBXX PFCG_JXJGjbxx = JsonHelper.ConvertJsonToObject<PFCG_JXJGJBXX>(json);
             PFCG_JXJGjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = PFCG_JXJGBLL.SavePFCG_JXJGJBXX(jcxx, PFCG_JXJGjbxx, photos);
+            object result = PFCG_BLL.SavePFCG_JXJGJBXX(jcxx, PFCG_JXJGjbxx, photos);
             return Json(result);
         }
         [ValidateInput(false)]
         public JsonResult FBPFCG_KQJBXX()
         {
-            YHJBXX yhjbxx = PFCG_KQBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX yhjbxx = PFCG_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
@@ -360,13 +339,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             PFCG_KQJBXX PFCG_KQjbxx = JsonHelper.ConvertJsonToObject<PFCG_KQJBXX>(json);
             PFCG_KQjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = PFCG_KQBLL.SavePFCG_KQJBXX(jcxx, PFCG_KQjbxx, photos);
+            object result = PFCG_BLL.SavePFCG_KQJBXX(jcxx, PFCG_KQjbxx, photos);
             return Json(result);
         }
         [ValidateInput(false)]
         public JsonResult FBPFCG_LPJBXX()
         {
-            YHJBXX yhjbxx = PFCG_LPBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX yhjbxx = PFCG_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
@@ -374,13 +353,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             PFCG_LPJBXX PFCG_LPjbxx = JsonHelper.ConvertJsonToObject<PFCG_LPJBXX>(json);
             PFCG_LPjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = PFCG_LPBLL.SavePFCG_LPJBXX(jcxx, PFCG_LPjbxx, photos);
+            object result = PFCG_BLL.SavePFCG_LPJBXX(jcxx, PFCG_LPjbxx, photos);
             return Json(result);
         }
         [ValidateInput(false)]
         public JsonResult FBPFCG_MYWJJBXX()
         {
-            YHJBXX yhjbxx = PFCG_MYWJBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX yhjbxx = PFCG_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
@@ -388,13 +367,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             PFCG_MYWJJBXX PFCG_MYWJjbxx = JsonHelper.ConvertJsonToObject<PFCG_MYWJJBXX>(json);
             PFCG_MYWJjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = PFCG_MYWJBLL.SavePFCG_MYWJJBXX(jcxx, PFCG_MYWJjbxx, photos);
+            object result = PFCG_BLL.SavePFCG_MYWJJBXX(jcxx, PFCG_MYWJjbxx, photos);
             return Json(result);
         }
         [ValidateInput(false)]
         public JsonResult FBPFCG_SCSBJBXX()
         {
-            YHJBXX yhjbxx = PFCG_SCSBBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX yhjbxx = PFCG_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
@@ -402,13 +381,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             PFCG_SCSBJBXX PFCG_SCSBjbxx = JsonHelper.ConvertJsonToObject<PFCG_SCSBJBXX>(json);
             PFCG_SCSBjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = PFCG_SCSBBLL.SavePFCG_SCSBJBXX(jcxx, PFCG_SCSBjbxx, photos);
+            object result = PFCG_BLL.SavePFCG_SCSBJBXX(jcxx, PFCG_SCSBjbxx, photos);
             return Json(result);
         }
         [ValidateInput(false)]
         public JsonResult FBPFCG_SJSMJBXX()
         {
-            YHJBXX yhjbxx = PFCG_SJSMBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX yhjbxx = PFCG_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
@@ -416,13 +395,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             PFCG_SJSMJBXX PFCG_SJSMjbxx = JsonHelper.ConvertJsonToObject<PFCG_SJSMJBXX>(json);
             PFCG_SJSMjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = PFCG_SJSMBLL.SavePFCG_SJSMJBXX(jcxx, PFCG_SJSMjbxx, photos);
+            object result = PFCG_BLL.SavePFCG_SJSMJBXX(jcxx, PFCG_SJSMjbxx, photos);
             return Json(result);
         }
         [ValidateInput(false)]
         public JsonResult FBPFCG_SPJBXX()
         {
-            YHJBXX yhjbxx = PFCG_SPBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX yhjbxx = PFCG_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
@@ -430,13 +409,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             PFCG_SPJBXX PFCG_SPjbxx = JsonHelper.ConvertJsonToObject<PFCG_SPJBXX>(json);
             PFCG_SPjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = PFCG_SPBLL.SavePFCG_SPJBXX(jcxx, PFCG_SPjbxx, photos);
+            object result = PFCG_BLL.SavePFCG_SPJBXX(jcxx, PFCG_SPjbxx, photos);
             return Json(result);
         }
         [ValidateInput(false)]
         public JsonResult FBPFCG_TSBJBXX()
         {
-            YHJBXX yhjbxx = PFCG_TSBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX yhjbxx = PFCG_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
@@ -444,13 +423,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             PFCG_TSJBXX PFCG_TSjbxx = JsonHelper.ConvertJsonToObject<PFCG_TSJBXX>(json);
             PFCG_TSjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = PFCG_TSBLL.SavePFCG_TSJBXX(jcxx, PFCG_TSjbxx, photos);
+            object result = PFCG_BLL.SavePFCG_TSJBXX(jcxx, PFCG_TSjbxx, photos);
             return Json(result);
         }
         [ValidateInput(false)]
         public JsonResult FBPFCG_XBSPJBXX()
         {
-            YHJBXX yhjbxx = PFCG_XBSPBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX yhjbxx = PFCG_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
@@ -458,13 +437,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             PFCG_XBSPJBXX PFCG_XBSPjbxx = JsonHelper.ConvertJsonToObject<PFCG_XBSPJBXX>(json);
             PFCG_XBSPjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = PFCG_XBSPBLL.SavePFCG_XBSPJBXX(jcxx, PFCG_XBSPjbxx, photos);
+            object result = PFCG_BLL.SavePFCG_XBSPJBXX(jcxx, PFCG_XBSPjbxx, photos);
             return Json(result);
         }
         [ValidateInput(false)]
         public JsonResult FBPFCG_YBYQJBXX()
         {
-            YHJBXX yhjbxx = PFCG_YBYQBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            YHJBXX yhjbxx = PFCG_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
@@ -472,7 +451,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             PFCG_YBYQJBXX PFCG_YBYQjbxx = JsonHelper.ConvertJsonToObject<PFCG_YBYQJBXX>(json);
             PFCG_YBYQjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = PFCG_YBYQBLL.SavePFCG_YBYQJBXX(jcxx, PFCG_YBYQjbxx, photos);
+            object result = PFCG_BLL.SavePFCG_YBYQJBXX(jcxx, PFCG_YBYQjbxx, photos);
             return Json(result);
         }
 
@@ -480,133 +459,133 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         public JsonResult LoadPFCG_AFSBJBXX()
         {
             string ID = Request["ID"];
-            object result = PFCG_AFSBBLL.LoadPFCG_AFSBJBXX(ID);
+            object result = PFCG_BLL.LoadPFCG_AFSBJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadPFCG_YXBXX()
         {
             string ID = Request["ID"];
-            object result = PFCG_YXBLL.LoadPFCG_YXJBXX(ID);
+            object result = PFCG_BLL.LoadPFCG_YXJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadPFCG_BZJBXX()
         {
             string ID = Request["ID"];
-            object result = PFCG_BZBLL.LoadPFCG_BZJBXX(ID);
+            object result = PFCG_BLL.LoadPFCG_BZJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadPFCG_DGDLJBXX()
         {
             string ID = Request["ID"];
-            object result = PFCG_DGDLBLL.LoadPFCG_DGDLJBXX(ID);
+            object result = PFCG_BLL.LoadPFCG_DGDLJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadPFCG_DJZMJBXX()
         {
             string ID = Request["ID"];
-            object result = PFCG_DJZMBLL.LoadPFCG_DJZMJBXX(ID);
+            object result = PFCG_BLL.LoadPFCG_DJZMJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadPFCG_YCLJBXX()
         {
             string ID = Request["ID"];
-            object result = PFCG_YCLBLL.LoadPFCG_YCLJBXX(ID);
+            object result = PFCG_BLL.LoadPFCG_YCLJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadPFCG_DZYQJJBXX()
         {
             string ID = Request["ID"];
-            object result = PFCG_DZYQJBLL.LoadPFCG_DZYQJJBXX(ID);
+            object result = PFCG_BLL.LoadPFCG_DZYQJJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadPFCG_FSXMJBXX()
         {
             string ID = Request["ID"];
-            object result = PFCG_FSXMBLL.LoadPFCG_FSXMJBXX(ID);
+            object result = PFCG_BLL.LoadPFCG_FSXMJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadPFCG_FZBLJBXX()
         {
             string ID = Request["ID"];
-            object result = PFCG_FZBLBLL.LoadPFCG_FZBLJBXX(ID);
+            object result = PFCG_BLL.LoadPFCG_FZBLJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadPFCG_HWYDJBXX()
         {
             string ID = Request["ID"];
-            object result = PFCG_HWYDBLL.LoadPFCG_HWYDJBXX(ID);
+            object result = PFCG_BLL.LoadPFCG_HWYDJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadPFCG_HXPJBXX()
         {
             string ID = Request["ID"];
-            object result = PFCG_HXPBLL.LoadPFCG_HXPJBXX(ID);
+            object result = PFCG_BLL.LoadPFCG_HXPJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadPFCG_HZPJBXX()
         {
             string ID = Request["ID"];
-            object result = PFCG_HZPBLL.LoadPFCG_HZPJBXX(ID);
+            object result = PFCG_BLL.LoadPFCG_HZPJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadPFCG_JXJGJBXX()
         {
             string ID = Request["ID"];
-            object result = PFCG_JXJGBLL.LoadPFCG_JXJGJBXX(ID);
+            object result = PFCG_BLL.LoadPFCG_JXJGJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadPFCG_KQJBXX()
         {
             string ID = Request["ID"];
-            object result = PFCG_KQBLL.LoadPFCG_KQJBXX(ID);
+            object result = PFCG_BLL.LoadPFCG_KQJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadPFCG_LPJBXX()
         {
             string ID = Request["ID"];
-            object result = PFCG_LPBLL.LoadPFCG_LPJBXX(ID);
+            object result = PFCG_BLL.LoadPFCG_LPJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadPFCG_MYWJJBXX()
         {
             string ID = Request["ID"];
-            object result = PFCG_MYWJBLL.LoadPFCG_MYWJJBXX(ID);
+            object result = PFCG_BLL.LoadPFCG_MYWJJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadPFCG_SCSBJBXX()
         {
             string ID = Request["ID"];
-            object result = PFCG_SCSBBLL.LoadPFCG_SCSBJBXX(ID);
+            object result = PFCG_BLL.LoadPFCG_SCSBJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadPFCG_SJSMJBXX()
         {
             string ID = Request["ID"];
-            object result = PFCG_SJSMBLL.LoadPFCG_SJSMJBXX(ID);
+            object result = PFCG_BLL.LoadPFCG_SJSMJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadPFCG_SPJBXX()
         {
             string ID = Request["ID"];
-            object result = PFCG_SPBLL.LoadPFCG_SPJBXX(ID);
+            object result = PFCG_BLL.LoadPFCG_SPJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadPFCG_TSJBXX()
         {
             string ID = Request["ID"];
-            object result = PFCG_TSBLL.LoadPFCG_TSJBXX(ID);
+            object result = PFCG_BLL.LoadPFCG_TSJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadPFCG_XBSPJBXX()
         {
             string ID = Request["ID"];
-            object result = PFCG_XBSPBLL.LoadPFCG_XBSPJBXX(ID);
+            object result = PFCG_BLL.LoadPFCG_XBSPJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadPFCG_YBYQJBXX()
         {
             string ID = Request["ID"];
-            object result = PFCG_YBYQBLL.LoadPFCG_YBYQJBXX(ID);
+            object result = PFCG_BLL.LoadPFCG_YBYQJBXX(ID);
             return Json(result);
         }
     }
