@@ -21,6 +21,11 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             GetSession();
             return View();
         }
+        public ActionResult FCCX_ESF()
+        {
+            GetSession();
+            return View();
+        }
 
         public JsonResult LoadFCXX()
         {

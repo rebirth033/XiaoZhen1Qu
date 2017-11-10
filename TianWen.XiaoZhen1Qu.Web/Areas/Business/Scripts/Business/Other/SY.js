@@ -7,7 +7,6 @@ $(document).ready(function () {
     $(".div_bottom").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
     $(".img_head_left_logo").css("margin-left", "20px");
     $("#li_head_sy").css("background", "#5bc0de").css("color", "#ffffff");
-
     LoadDefault();
 });
 //加载默认
@@ -208,6 +207,8 @@ function GetHeight(list, parentid) {
 function OpenCXLB(lbid, typename, condition) {
     if (lbid === 19)
         window.open(getRootPath() + "/Business/FCCX/FCCX_ZZF?LBID=" + lbid + "&" + condition);
+    if (lbid === 21)
+        window.open(getRootPath() + "/Business/FCCX/FCCX_ESF?LBID=" + lbid + "&" + condition);
     if (lbid === 328)
         window.open(getRootPath() + "/Business/FCCX/FCCX_DZF?LBID=" + lbid);
 }

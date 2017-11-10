@@ -520,7 +520,9 @@
     <Content Include="Areas\Business\Css\HTFB\XXYL\XXYL_ZLAM.css" />
     <Content Include="Areas\Business\Css\Other\YHDL.css" />
     <Content Include="Areas\Business\Css\HTGL\HTGL.css" />
+    <Content Include="Areas\Business\Css\XXXX\Common\XXXX_Common.css" />
     <Content Include="Areas\Business\Css\XXXX\FC\FCXX_DZF.css" />
+    <Content Include="Areas\Business\Css\XXXX\FC\FCXX_ESF.css" />
     <Content Include="Areas\Business\Css\XXXX\FC\FCXX_ZZF.css" />
     <Content Include="Areas\Business\Css\HTGL\SHGJ\YXCZ.css" />
     <Content Include="Areas\Business\Css\HTGL\WDZH\YXYZ.css" />
@@ -582,6 +584,7 @@
     <Content Include="Areas\Business\Scripts\Business\Common\Top.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\Common\CXLB_Common.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\FCCX\FCCX_DZF.js" />
+    <Content Include="Areas\Business\Scripts\Business\CXLB\FCCX\FCCX_ESF.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\FCCX\FCCX_ZZF.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\CL\CL_GCC.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\CL\CL_GCCYZ.js" />
@@ -972,6 +975,7 @@
     <Content Include="Areas\Business\Scripts\Business\HTGL\HTGL.js" />
     <Content Include="Areas\Business\Scripts\Business\Other\YHZC.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\FCXX\FCXX_DZF.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\FCXX\FCXX_ESF.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\FCXX\FCXX_ZZF.js" />
     <Content Include="Areas\Business\Scripts\Business\HTGL\SHGJ\YXCZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HTGL\WDZH\YXYZ.js" />
@@ -1685,6 +1689,8 @@
     <Content Include="Areas\Business\Views\FCCX\FCCX_DZF.cshtml" />
     <Content Include="Areas\Business\Views\FCXX\FCXX_DZF.cshtml" />
     <Content Include="Areas\Business\Views\FC\FC_ESF.cshtml" />
+    <Content Include="Areas\Business\Views\FCCX\FCCX_ESF.cshtml" />
+    <Content Include="Areas\Business\Views\FCXX\FCXX_ESF.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
