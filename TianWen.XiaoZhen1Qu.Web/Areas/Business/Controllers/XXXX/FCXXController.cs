@@ -11,15 +11,19 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
     {
         public IFCCXBLL FCCXBLL { get; set; }
 
-        public ActionResult FCXX_ZZF()
+        public ActionResult FC_ZZF()
         {
             return View();
         }
-        public ActionResult FCXX_DZF()
+        public ActionResult FC_DZF()
         {
             return View();
         }
-        public ActionResult FCXX_ESF()
+        public ActionResult FC_ESF()
+        {
+            return View();
+        }
+        public ActionResult FC_SP()
         {
             return View();
         }

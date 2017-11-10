@@ -180,7 +180,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "FC_SP") //房产_商铺
                 {
-                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.*,x.* from jcxx a,fc_spjbxx b where a.jcxxid = b.jcxxid and id = '{0}' order by zxgxsj desc", ID));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,fc_spjbxx b where a.jcxxid = b.jcxxid and id = '{0}' order by zxgxsj desc", ID));
                     List<FC_SPView> list = ConvertHelper.DataTableToList<FC_SPView>(dt);
                     foreach (var jcxx in list)
                     {

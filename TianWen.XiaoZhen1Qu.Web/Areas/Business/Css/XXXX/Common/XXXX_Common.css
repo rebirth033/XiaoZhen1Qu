@@ -28,6 +28,26 @@
 .div_body .div_body_right .div_body_right_grxx .div_div_body_right_yyzz .div_div_div_body_right_yyzz .i_div_div_body_right_yyzz_zmxy{ background: url(../images/xxxx/gy/xxxx_gy_zmxy.png);}
 .div_body .div_body_right .div_body_right_grxx .div_div_body_right_ckxy{ width: 260px;height: 34px;padding: 6px 12px;color: #333;margin-top: 30px;background-color: rgba(238,239,241,0.2);border: 1px solid #cccccc;border-radius: 2px;}
 .div_body .div_body_right .div_body_right_grxx .div_div_body_right_ckxy:hover{ cursor: pointer;background-color: rgba(238,239,241,0.8);}
+/*首页_主体_左部_猜你喜欢*/
+.div_body .div_body_left .div_body_left_body_cnxh{ height: auto;float: left;margin-top: 20px;}
+.div_body .div_body_left .div_body_left_body_cnxh .p_body_left_body_cnxh{ font-size: 18px;font-weight: 700;height: 60px;border-bottom: 1px solid #cccccc;}
+.div_body .div_body_left .ul_body_left_body_cnxh{ padding: 0;}
+.div_body .div_body_left .ul_body_left_body_cnxh .li_body_left_body_cnxh{width: 180px;height: 210px;border: 1px solid #e6e6e6;padding: 8px;float: left;margin-left: 18px;margin-bottom: 10px;}
+.div_body .div_body_left .ul_body_left_body_cnxh .li_body_left_body_cnxh:hover{ cursor: pointer;}
+.div_body .div_body_left .ul_body_left_body_cnxh .li_body_left_body_cnxh .img_li_body_left_body_cnxh{ height: 120px;width: 100%;margin-bottom: 10px;}
+.div_body .div_body_left .ul_body_left_body_cnxh .li_body_left_body_cnxh .p_li_body_left_body_cnxh_xq{ width: 100%;height: 20px;display: block;margin-bottom: 2px;font-size: 12px;}
+.div_body .div_body_left .ul_body_left_body_cnxh .li_body_left_body_cnxh .p_li_body_left_body_cnxh_cs{ width: 100%;height: 20px;display: block;color: #999999;margin-bottom: 2px;font-size: 13px;}
+.div_body .div_body_left .ul_body_left_body_cnxh .li_body_left_body_cnxh .p_li_body_left_body_cnxh_jg{width: 100%;height: 20px;display: block;color: #ef6100;font-size: 16px;margin-bottom: 2px;}
+/*首页_主体_左部_精品推荐*/
+.div_body .div_body_left .div_body_left_body_jptj{ height: auto;float: left;margin-top: 20px;}
+.div_body .div_body_left .div_body_left_body_jptj .p_body_left_body_jptj{ font-size: 18px;font-weight: 700;height: 60px;border-bottom: 1px solid #cccccc;}
+.div_body .div_body_left .ul_body_left_body_jptj{ padding: 0;}
+.div_body .div_body_left .ul_body_left_body_jptj .li_body_left_body_jptj{width: 180px;height: 210px;border: 1px solid #e6e6e6;padding: 8px;float: left;margin-left: 18px;margin-bottom: 10px;}
+.div_body .div_body_left .ul_body_left_body_jptj .li_body_left_body_jptj:hover{ cursor: pointer;}
+.div_body .div_body_left .ul_body_left_body_jptj .li_body_left_body_jptj .img_li_body_left_body_jptj{ height: 120px;width: 100%;margin-bottom: 10px;}
+.div_body .div_body_left .ul_body_left_body_jptj .li_body_left_body_jptj .p_li_body_left_body_jptj_xq{ width: 100%;height: 20px;display: block;margin-bottom: 2px;font-size: 12px;}
+.div_body .div_body_left .ul_body_left_body_jptj .li_body_left_body_jptj .p_li_body_left_body_jptj_cs{ width: 100%;height: 20px;display: block;color: #999999;margin-bottom: 2px;font-size: 13px;}
+.div_body .div_body_left .ul_body_left_body_jptj .li_body_left_body_jptj .p_li_body_left_body_jptj_jg{width: 100%;height: 20px;display: block;color: #ef6100;font-size: 16px;margin-bottom: 2px;}
 /*首页_主体_右部_该经纪人推荐*/
 .div_body .div_body_right .div_body_right_jjrtj{ width: 100%;height: 500px;float: right;margin-bottom: 20px;border-radius: 2px;background-color: #ffffff;border: 1px solid #cccccc;padding: 20px;}
 .div_body .div_body_right .div_body_right_jjrtj .p_body_right_jjrtj{ font-size: 18px;height: 35px;border-bottom: 1px solid #cccccc;}

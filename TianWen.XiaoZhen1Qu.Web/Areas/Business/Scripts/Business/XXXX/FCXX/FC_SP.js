@@ -9,18 +9,18 @@ function LoadDefault() {
         dataType: "json",
         data:
         {
-            TYPE: "FC_ZZF",
+            TYPE: "FC_SP",
             ID: getUrlParam("ID")
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 LoadJBXX(xml.list[0]);
                 LoadFYXQ(xml.list[0], xml.BCMSString);
-                LoadXQXX(xml.list[0]);
-                LoadDTXX(xml.list[0].XQMC);
-                LoadCNXH("FC");
+                LoadSPXX();
+                LoadDTXX(xml.list[0].DZ);
+                LoadCNXH("FC_SP");
                 LoadGRXX(xml.grxxlist[0]);
-                LoadJJRTJFY("FC");
+                LoadJJRTJFY("FC_SP");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -54,31 +54,22 @@ function LoadJBXX(obj) {
     html += ('<div class="div_body_left_body_right">');
     html += ('<p class="p_body_left_body_right_first">');
     html += ('<span class="span_body_left_body_right_zj">' + obj.ZJ + '</span><span class="span_body_left_body_right_zjdw">元/月</span>');
-    html += ('<span class="span_body_left_body_right_yffs">' + obj.YFFS + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">出租方式：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.CZFS + '</span>');
+    html += ('<span class="span_body_left_body_right_left">商铺类型：</span>');
+    html += ('<span class="span_body_left_body_right_right">' + obj.SPLX + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">房屋类型：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.S + '室' + obj.T + '厅' + obj.W + '卫 ' + obj.PFM + '平 ' + obj.ZXQK + '</span>');
+    html += ('<span class="span_body_left_body_right_left">历史经营：</span>');
+    html += ('<span class="span_body_left_body_right_right">' + obj.LSJY + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">朝向楼层：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.CX + ' ' + obj.C + '层/共' + obj.GJC + '层</span>');
+    html += ('<span class="span_body_left_body_right_left">面积：</span>');
+    html += ('<span class="span_body_left_body_right_right">' + obj.MJ + '平米</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">所在小区：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.XQMC + '</span>');
-    html += ('</p>');
-    html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">所属区域：</span>');
-    html += ('<span class="span_body_left_body_right_right">滨湖新区 滨湖世纪城</span>');
-    html += ('</p>');
-    html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">详细地址：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.XQDZ + '</span>');
+    html += ('<span class="span_body_left_body_right_left">具体地址：</span>');
+    html += ('<span class="span_body_left_body_right_right">' + obj.QY + '-' + obj.SQ + '-' + obj.DZ + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right_lxdh">');
     html += ('<img class="img_body_left_body_right_lxdh" src="' + getRootPath() + '/Areas/Business/Css/images/lxdh.png" />' + obj.LXDH);
@@ -124,32 +115,6 @@ function LoadFYXQ(obj, BCMSString) {
     html += ('<div class="div_body_left_body_fyxq">');
     html += ('<p class="p_body_left_body_fyxq">房源详情</p>');
     html += ('<div class="div_body_left_body_fyxq_xx">');
-    if (obj.FWPZ !== null) {
-        var fwpzarray = obj.FWPZ.split(',');
-
-        html += ('<div class="div_body_left_body_fyxq_xx_left">房屋配置</div>');
-        html += ('<div class="div_body_left_body_fyxq_xx_right" style="width: 600px;">');
-        for (var i = 0; i < fwpzarray.length; i++) {
-            html += ('<span class="span_body_left_body_fyxq_xx_right">');
-            html += ('<img class="img_body_left_body_fyxq_xx_right" src="' + getRootPath() + '/Areas/Business/Css/images/xxxx/fc/xxxx_fc_' + fwpzarray[i] + '.png")" />');
-            html += ('<span class="span_img_body_left_body_fyxq_xx_right">' + fwpzarray[i] + '</span>');
-            html += ('</span>');
-        }
-        html += ('</div>');
-        html += ('</div>');
-    }
-    if (obj.FWLD !== null) {
-        var fwldarray = obj.FWLD.split(',');
-        html += ('<div class="div_body_left_body_fyxq_xx">');
-        html += ('<div class="div_body_left_body_fyxq_xx_left">房屋亮点</div>');
-        html += ('<div class="div_body_left_body_fyxq_xx_right">');
-        for (var i = 0; i < fwldarray.length; i++) {
-            html += ('<span class="span_body_left_body_fyxq_xx_right_fwld">' + fwldarray[i] + '</span>');
-        }
-        html += ('</div>');
-        html += ('</div>');
-    }
-    html += ('<div class="div_body_left_body_fyxq_xx">');
     html += ('<div class="div_body_left_body_fyxq_xx_left">房源描述</div>');
     html += ('<div class="div_body_left_body_fyxq_xx_right fyms">');
     html += (BCMSString);
@@ -183,55 +148,12 @@ function ToggleImg(length) {
         $("#div_body_left_body_fyxq_zk").html("展开更多图片 共（" + length + "）张");
     }
 }
-//加载小区信息
-function LoadXQXX(obj) {
+//加载商铺信息
+function LoadSPXX() {
     var html = "";
     html += ('<div class="div_body_left_body_xqxx">');
-    html += ('<p class="p_body_left_body_xqxx">小区信息</p>');
-    html += ('<ul class="ul_body_left_body_xqxx">');
-    html += ('<li class="li_body_left_body_xqxx">');
-    html += ('<span class="span_body_left_body_xqxx_left">小区名：</span>');
-    html += ('<span class="span_body_left_body_xqxx_right">' + obj.XQMC === null ? "" : obj.XQMC + '</span>');
-    html += ('</li>');
-    html += ('<li class="li_body_left_body_xqxx">');
-    html += ('<span class="span_body_left_body_xqxx_left">开发商：</span>');
-    html += ('<span class="span_body_left_body_xqxx_right">' + (obj.KFS === null ? "" : obj.KFS) + '</span>');
-    html += ('</li>');
-    html += ('<li class="li_body_left_body_xqxx">');
-    html += ('<span class="span_body_left_body_xqxx_left">物业公司：</span>');
-    html += ('<span class="span_body_left_body_xqxx_right">' + (obj.WYGS === null ? "" : obj.WYGS) + '</span>');
-    html += ('</li>');
-    html += ('<li class="li_body_left_body_xqxx">');
-    html += ('<span class="span_body_left_body_xqxx_left">物业类型：</span>');
-    html += ('<span class="span_body_left_body_xqxx_right">' + (obj.WYLX === null ? "" : obj.WYLX) + '</span>');
-    html += ('</li>');
-    html += ('<li class="li_body_left_body_xqxx">');
-    html += ('<span class="span_body_left_body_xqxx_left">总建面积：</span>');
-    html += ('<span class="span_body_left_body_xqxx_right">' + (obj.ZJMJ === null ? "" : obj.ZJMJ) + '</span>');
-    html += ('</li>');
-    html += ('<li class="li_body_left_body_xqxx">');
-    html += ('<span class="span_body_left_body_xqxx_left">总户数：</span>');
-    html += ('<span class="span_body_left_body_xqxx_right">' + (obj.ZHS === null ? "" : obj.ZHS) + '</span>');
-    html += ('</li>');
-    html += ('<li class="li_body_left_body_xqxx">');
-    html += ('<span class="span_body_left_body_xqxx_left">建筑年代：</span>');
-    html += ('<span class="span_body_left_body_xqxx_right">' + (obj.JZND === null ? "" : obj.JZND) + '</span>');
-    html += ('</li>');
-    html += ('<li class="li_body_left_body_xqxx">');
-    html += ('<span class="span_body_left_body_xqxx_left">容积率：</span>');
-    html += ('<span class="span_body_left_body_xqxx_right">' + (obj.RJL === null ? "" : obj.RJL) + '</span>');
-    html += ('</li>');
-    html += ('<li class="li_body_left_body_xqxx">');
-    html += ('<span class="span_body_left_body_xqxx_left">停车位：</span>');
-    html += ('<span class="span_body_left_body_xqxx_right">' + (obj.TCW === null ? "" : obj.TCW) + '</span>');
-    html += ('</li>');
-    html += ('<li class="li_body_left_body_xqxx">');
-    html += ('<span class="span_body_left_body_xqxx_left">绿化率：</span>');
-    html += ('<span class="span_body_left_body_xqxx_right">' + (obj.LHL === null ? "" : obj.LHL) + '</span>');
-    html += ('</li>');
-    html += ('</ul>');
     html += ('<div id="div_body_left_body_xqxx_dtxx" class="div_body_left_body_xqxx_dtxx">');
-    html += ('<p class="p_body_left_body_xqxx_dtxx">小区地址</p>');
+    html += ('<p class="p_body_left_body_xqxx_dtxx">商铺地址</p>');
     html += ('<div style="width: 780px; height: 300px; border: 1px solid gray" id="container"></div>');
     html += ('</div>');
     html += ('</div>');
@@ -285,7 +207,7 @@ function LoadCNXH(TYPE) {
                 html += ('</ul>');
                 html += ('</div>');
                 $("#div_body_left").append(html);
-                LoadJPTJ("FC");
+                LoadJPTJ("FC_SP");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -296,11 +218,11 @@ function LoadCNXH(TYPE) {
 //加载猜你喜欢单条信息
 function LoadCNXHInfo(obj) {
     var html = "";
-    html += ('<li onclick="OpenXXXX(\'FC_ZZF\',\'' + obj.ID + '\')" class="li_body_left_body_cnxh">');
+    html += ('<li onclick="OpenXXXX(\'FC_SP\',\'' + obj.ID + '\')" class="li_body_left_body_cnxh">');
     html += ('<img class="img_li_body_left_body_cnxh" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_left_body_cnxh_xq">' + obj.XQDZ.split('-')[0] + ' / ' + obj.XQDZ.split('-')[1] + ' / ' + obj.XQMC + '</p>');
-    html += ('<p class="p_li_body_left_body_cnxh_cs">' + obj.S + '室 ' + obj.PFM + '平</p>');
-    html += ('<p class="p_li_body_left_body_cnxh_jg">' + obj.ZJ + '元/月</p>');
+    html += ('<p class="p_li_body_left_body_cnxh_xq">' + obj.QY + ' / ' + obj.SQ + ' / ' + obj.DZ + '</p>');
+    html += ('<p class="p_li_body_left_body_cnxh_cs">' + obj.MJ + '平</p>');
+    html += ('<p class="p_li_body_left_body_cnxh_jg">' + obj.ZJ + obj.ZJDW + '</p>');
     html += ('</li>');
     return html;
 }
@@ -339,11 +261,11 @@ function LoadJPTJ(TYPE) {
 //加载精品推荐单条信息
 function LoadJPTJInfo(obj) {
     var html = "";
-    html += ('<li onclick="OpenXXXX(\'FC_ZZF\',\'' + obj.ID + '\')" class="li_body_left_body_jptj">');
+    html += ('<li onclick="OpenXXXX(\'FC_SP\',\'' + obj.ID + '\')" class="li_body_left_body_jptj">');
     html += ('<img class="img_li_body_left_body_jptj" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_left_body_jptj_xq">' + obj.XQDZ.split('-')[0] + ' / ' + obj.XQDZ.split('-')[1] + ' / ' + obj.XQMC + '</p>');
-    html += ('<p class="p_li_body_left_body_jptj_cs">' + obj.S + '室 ' + obj.PFM + '平</p>');
-    html += ('<p class="p_li_body_left_body_jptj_jg">' + obj.ZJ + '元/月</p>');
+    html += ('<p class="p_li_body_left_body_jptj_xq">' + obj.QY + ' / ' + obj.SQ + ' / ' + obj.DZ + '</p>');
+    html += ('<p class="p_li_body_left_body_jptj_cs">' + obj.MJ + '平</p>');
+    html += ('<p class="p_li_body_left_body_jptj_jg">' + obj.ZJ + obj.ZJDW + '</p>');
     html += ('</li>');
     return html;
 }
@@ -385,12 +307,12 @@ function LoadJJRTJFY(TYPE) {
 //加载该经纪人推荐房源单条信息
 function LoadJJRTJFYInfo(obj) {
     var html = "";
-    html += ('<li onclick="OpenXXXX(\'FC_ZZF\',\'' + obj.ID + '\')" class="li_body_right_jjrtj">');
+    html += ('<li onclick="OpenXXXX(\'FC_SP\',\'' + obj.ID + '\')" class="li_body_right_jjrtj">');
     html += ('<img class="img_li_body_right_jjrtj" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<div class="div_li_body_right_jjrtj">');
-    html += ('<p class="p_li_body_right_jjrtj_xq">' + obj.XQDZ.split('-')[0] + ' / ' + obj.XQDZ.split('-')[1] + ' / ' + obj.XQMC + '</p>');
-    html += ('<p class="p_li_body_right_jjrtj_cs">' + obj.S + '室 ' + obj.PFM + '平</p>');
-    html += ('<p class="p_li_body_right_jjrtj_jg">' + obj.ZJ + '元/月</p>');
+    html += ('<p class="p_li_body_right_jjrtj_xq">' + obj.QY + ' / ' + obj.SQ + ' / ' + obj.DZ + '</p>');
+    html += ('<p class="p_li_body_right_jjrtj_cs">' + obj.MJ + '平</p>');
+    html += ('<p class="p_li_body_right_jjrtj_jg">' + obj.ZJ + obj.ZJDW + '</p>');
     html += ('</div>');
     html += ('</li>');
     return html;

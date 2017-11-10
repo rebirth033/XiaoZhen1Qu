@@ -88,7 +88,13 @@ function OpenXXXX(LBID, JCXXID) {
         success: function (xml) {
             if (xml.Result === 1) {
                 if (LBID === 19) {
-                    window.open(getRootPath() + "/Business/FCXX/FCXX_ZZF?ID=" + xml.id);
+                    window.open(getRootPath() + "/Business/FCXX/FC_ZZF?ID=" + xml.id);
+                }
+                if (LBID === 20) {
+                    window.open(getRootPath() + "/Business/FCXX/FC_SP?ID=" + xml.id);
+                }
+                if (LBID === 21) {
+                    window.open(getRootPath() + "/Business/FCXX/FC_ESF?ID=" + xml.id);
                 }
             }
         },
@@ -206,11 +212,11 @@ function GetHeight(list, parentid) {
 //打开查询列表
 function OpenCXLB(lbid, typename, condition) {
     if (lbid === 19)
-        window.open(getRootPath() + "/Business/FCCX/FCCX_ZZF?LBID=" + lbid + "&" + condition);
+        window.open(getRootPath() + "/Business/FCCX/FC_ZZF?LBID=" + lbid + "&" + condition);
     if (lbid === 20)
-        window.open(getRootPath() + "/Business/FCCX/FCCX_SP?LBID=" + lbid + "&" + condition);
+        window.open(getRootPath() + "/Business/FCCX/FC_SP?LBID=" + lbid + "&" + condition);
     if (lbid === 21)
-        window.open(getRootPath() + "/Business/FCCX/FCCX_ESF?LBID=" + lbid + "&" + condition);
+        window.open(getRootPath() + "/Business/FCCX/FC_ESF?LBID=" + lbid + "&" + condition);
     if (lbid === 328)
-        window.open(getRootPath() + "/Business/FCCX/FCCX_DZF?LBID=" + lbid);
+        window.open(getRootPath() + "/Business/FCCX/FC_DZF?LBID=" + lbid);
 }
