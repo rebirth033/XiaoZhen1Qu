@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CXLB\IFCCXBLL.cs" />
+    <Compile Include="HTFB\ICL_BLL.cs" />
     <Compile Include="HTFB\CY\ICY_KCTSBLL.cs" />
     <Compile Include="HTFB\CY\ICY_MSBLL.cs" />
     <Compile Include="HTFB\CY\ICY_WMBLL.cs" />
@@ -63,11 +64,6 @@
     <Compile Include="HTFB\HQSY\IHQSY_ZBSSBLL.cs" />
     <Compile Include="IBaseBLL.cs" />
     <Compile Include="IBZZXBLL.cs" />
-    <Compile Include="HTFB\CL\ICL_GCCBLL.cs" />
-    <Compile Include="HTFB\CL\ICL_HCBLL.cs" />
-    <Compile Include="HTFB\CL\ICL_JCBLL.cs" />
-    <Compile Include="HTFB\CL\ICL_KCBLL.cs" />
-    <Compile Include="HTFB\CL\ICL_MTCBLL.cs" />
     <Compile Include="ICommonBLL.cs" />
     <Compile Include="HTFB\CW\ICW_CWFWBLL.cs" />
     <Compile Include="HTFB\CW\ICW_CWGBLL.cs" />
@@ -76,7 +72,6 @@
     <Compile Include="HTFB\CW\ICW_CWZSLYBLL.cs" />
     <Compile Include="HTFB\CW\ICW_HNYCBLL.cs" />
     <Compile Include="IDAO.cs" />
-    <Compile Include="HTFB\CL\ICL_ZXCDDCSLCBLL.cs" />
     <Compile Include="HTFB\ES\IES_JDJJBG_BGSBBLL.cs" />
     <Compile Include="HTFB\ES\IES_JDJJBG_ESJDBLL.cs" />
     <Compile Include="HTFB\ES\IES_JDJJBG_ESJJBLL.cs" />

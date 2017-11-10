@@ -6,8 +6,7 @@ $(document).ready(function () {
     BindClick("FWCX");
     BindClick("ZXQK");
     BindClick("ZZLX");
-    BindClick("YFFS");
-    LoadDuoX("包含费用", "BHFY");
+    LoadFC_ZZFXX();
 });
 //加载小区名称
 function LoadXQMC() {
@@ -187,9 +186,6 @@ function BindClick(type) {
         if (type === "ZZLX") {
             LoadCODESByTYPENAME("住宅类型", "ZZLX", "CODES_FC");
         }
-        if (type === "YFFS") {
-            LoadCODESByTYPENAME("押付方式", "YFFS", "CODES_FC");
-        }
     });
 }
 //加载多选
@@ -290,6 +286,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "ZZLX", "'" + $("#spanZZLX").html() + "'");
     //obj = jsonObj.AddJson(obj, "FWLD", "'" + GetDuoX("FWLD") + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
+    obj = jsonObj.AddJson(obj, "SJ", "'" + $("#SJ").val() + "'");
     if ($("#KRZSJ").val() !== "")
         obj = jsonObj.AddJson(obj, "KRZSJ", "'" + $("#KRZSJ").val() + "'");
     if (getUrlParam("ID") !== null)

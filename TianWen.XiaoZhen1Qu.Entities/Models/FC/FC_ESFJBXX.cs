@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using NHibernate.Mapping.Attributes;
 
-namespace TianWen.XiaoZhen1Qu.Entities.Models.FC
+namespace TianWen.XiaoZhen1Qu.Entities.Models
 {
     public class FC_ESFJBXX
     {

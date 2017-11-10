@@ -59,13 +59,8 @@
   <ItemGroup>
     <Compile Include="BLL\BaseBLL.cs" />
     <Compile Include="BLL\BZZXBLL.cs" />
-    <Compile Include="BLL\HTFB\CL\CL_GCCBLL.cs" />
-    <Compile Include="BLL\HTFB\CL\CL_HCBLL.cs" />
-    <Compile Include="BLL\HTFB\CL\CL_JCBLL.cs" />
-    <Compile Include="BLL\HTFB\CL\CL_KCBLL.cs" />
-    <Compile Include="BLL\HTFB\CL\CL_MTCBLL.cs" />
     <Compile Include="BLL\CommonBLL.cs" />
-    <Compile Include="BLL\HTFB\CL\CL_ZXCDDCSLCBLL.cs" />
+    <Compile Include="BLL\HTFB\CL_BLL.cs" />
     <Compile Include="BLL\HTFB\CW\CW_CWFWBLL.cs" />
     <Compile Include="BLL\HTFB\CW\CW_CWGBLL.cs" />
     <Compile Include="BLL\HTFB\CW\CW_CWMBLL.cs" />
