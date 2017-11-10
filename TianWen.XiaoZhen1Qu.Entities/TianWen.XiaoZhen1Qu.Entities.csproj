@@ -537,6 +537,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\FC\FC_DZFView.cs" />
     <Compile Include="ViewModels\FC\FC_ESFView.cs" />
+    <Compile Include="ViewModels\FC\FC_SPView.cs" />
     <Compile Include="ViewModels\FC\FC_ZZFView.cs" />
     <Compile Include="ViewModels\GY\GRXXView.cs" />
   </ItemGroup>

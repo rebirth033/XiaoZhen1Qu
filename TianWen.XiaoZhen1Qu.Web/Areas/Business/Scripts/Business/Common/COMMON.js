@@ -248,3 +248,16 @@ function whichTransitionEvent() {
         }
     }
 }
+
+//打开详细页面
+function OpenXXXX(TYPE, ID) {
+    if (TYPE === "FC_ZZF") {
+        window.open(getRootPath() + "/Business/FCXX/FCXX_ZZF?ID=" + ID);
+    }
+    if (TYPE === "FC_DZF") {
+        window.open(getRootPath() + "/Business/FCXX/FCXX_DZF?ID=" + ID);
+    }
+    if (TYPE === "FC_ESF") {
+        window.open(getRootPath() + "/Business/FCXX/FCXX_ESF?ID=" + ID);
+    }
+}

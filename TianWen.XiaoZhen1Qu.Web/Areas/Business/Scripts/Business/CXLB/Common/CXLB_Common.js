@@ -13,18 +13,6 @@
 function OpenLBXZ() {
     window.open(getRootPath() + "/Business/LBXZ/LBXZ");
 }
-//打开详细页面
-function OpenXXXX(TYPE, ID) {
-    if (TYPE === "FC_ZZF") {
-        window.open(getRootPath() + "/Business/FCXX/FCXX_ZZF?ID=" + ID);
-    }
-    if (TYPE === "FC_DZF") {
-        window.open(getRootPath() + "/Business/FCXX/FCXX_DZF?ID=" + ID);
-    }
-    if (TYPE === "FC_ESF") {
-        window.open(getRootPath() + "/Business/FCXX/FCXX_ESF?ID=" + ID);
-    }
-}
 //加载分页
 function LoadPage(typename,pagecount) {
     var index = parseInt(currentIndex);

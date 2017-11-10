@@ -59,10 +59,10 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string SQ { get; set; }
 
         /// <summary>
-        /// 地段
+        /// 地址
         /// </summary>
         [Property]
-        public virtual string DD { get; set; }
+        public virtual string DZ { get; set; }
 
         /// <summary>
         /// 租金

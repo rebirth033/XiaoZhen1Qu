@@ -207,6 +207,8 @@ function GetHeight(list, parentid) {
 function OpenCXLB(lbid, typename, condition) {
     if (lbid === 19)
         window.open(getRootPath() + "/Business/FCCX/FCCX_ZZF?LBID=" + lbid + "&" + condition);
+    if (lbid === 20)
+        window.open(getRootPath() + "/Business/FCCX/FCCX_SP?LBID=" + lbid + "&" + condition);
     if (lbid === 21)
         window.open(getRootPath() + "/Business/FCCX/FCCX_ESF?LBID=" + lbid + "&" + condition);
     if (lbid === 328)
