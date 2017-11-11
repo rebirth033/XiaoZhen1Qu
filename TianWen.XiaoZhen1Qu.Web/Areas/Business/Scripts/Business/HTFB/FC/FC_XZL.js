@@ -26,7 +26,7 @@ function BindClick(type) {
             LoadQY();
         }
         if (type === "DD") {
-            LoadSQ($("#QYCode").val());
+            LoadDD($("#QYCode").val());
         }
     });
 }

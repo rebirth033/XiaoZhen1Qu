@@ -5,7 +5,7 @@
     LoadFC_CFCKTDCWJBXX();
     BindClick("CFCKTDCWLX");
     BindClick("QY");
-    BindClick("SQ");
+    BindClick("DD");
     BindClick("ZJDW");
 });
 //选择出租
@@ -27,80 +27,10 @@ function BindClick(type) {
         if (type === "QY") {
             LoadQY();
         }
-        if (type === "SQ") {
-            LoadSQ();
+        if (type === "DD") {
+            LoadDD($("#QYCode").val());
         }
     });
-}
-//选择区域下拉框
-function SelectQY(obj, type, code) {
-    $("#QYCode").val(code);
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
-}
-//加载区域
-function LoadQY() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadQY",
-        dataType: "json",
-        data:
-        {
-
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='ul_select' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='li_select' onclick='SelectQY(this,\"QY\",\"" + xml.list[i].CODE + "\")'>" + RTrim(RTrim(RTrim(xml.list[i].NAME, '市'), '区'), '县') + "</li>";
-                }
-                html += "</ul>";
-                $("#divQY").html(html);
-                $("#divQY").css("display", "block");
-                ActiveStyle("QY");
-                Bind("SZQY", "QY", "");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载商圈
-function LoadSQ() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadSQ",
-        dataType: "json",
-        data:
-        {
-            QY: $("#QYCode").val()
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='ul_select' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='li_select' onclick='SelectDropdown(this,\"SQ\")'>" + RTrimStr(xml.list[i].NAME, '街道,镇,林场,管理处') + "</li>";
-                }
-                html += "</ul>";
-                $("#divSQ").html(html);
-                $("#divSQ").css("display", "block");
-                ActiveStyle("SQ");
-                Bind("SZQY", "SQ", "");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//选择区域下拉框
-function SelectQY(obj, type, code) {
-    $("#QYCode").val(code);
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
-    $("#spanSQ").html("请选择商圈");
-    BindClick("SQ");
 }
 //设置供求
 function SetGQ(gq) {

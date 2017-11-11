@@ -233,4 +233,7 @@ function OpenCXLB(lbid, typename, condition) {
     if (lbid === 2934) {
         window.open(getRootPath() + "/Business/FCCX/FC_CW?LBID=" + lbid);
     }
+    if (lbid === 61) {
+        window.open(getRootPath() + "/Business/CLCX/CL_JC?LBID=" + lbid);
+    }
 }

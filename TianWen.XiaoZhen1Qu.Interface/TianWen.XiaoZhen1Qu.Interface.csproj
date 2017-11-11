@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CXLB\ICLCXBLL.cs" />
     <Compile Include="CXLB\IFCCXBLL.cs" />
     <Compile Include="HTFB\IFC_BLL.cs" />
     <Compile Include="HTFB\ICL_BLL.cs" />

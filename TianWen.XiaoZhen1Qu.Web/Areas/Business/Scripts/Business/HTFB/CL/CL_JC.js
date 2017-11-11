@@ -1,6 +1,5 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
-    LoadCL_JCJBXX();
     LoadCYLS();
     BindClick("PP");
     BindClick("GHCS");
@@ -13,6 +12,7 @@
     BindClick("SYXDQNF");
     BindClick("SYXDQYF");
     BindClick("PZSZSF");
+    LoadDuoX("车辆加装配置", "CLJZPZ");
 });
 //加载品牌标签
 function LoadPP() {
@@ -236,6 +236,41 @@ function SelectPZSZSF(obj, type, code) {
     $("#divPZSZSF").css("display", "none");
     BindClick("PZSZCS");
 }
+//加载多选
+function LoadDuoX(type, id) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
+        dataType: "json",
+        data:
+        {
+            TYPENAME: type,
+            TBName: "CODES_CL"
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='ulFWPZ'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='li" + id + "' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    if (i % 6 === 5) {
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
+                    }
+                }
+                if (parseInt(xml.list.length % 6) === 0)
+                    $("#div" + id).css("height", parseInt(xml.list.length / 6) * 60 + "px");
+                else
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 6) + 1) * 60 + "px");
+                html += "</ul>";
+                $("#div" + id + "Text").html(html);
+                $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                LoadCL_JCJBXX();
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
 //加载车辆_轿车基本信息
 function LoadCL_JCJBXX() {
     $.ajax({
@@ -275,6 +310,8 @@ function LoadCL_JCJBXX() {
                     SetCLYS(xml.Value.CL_JCJBXX.CLYS);
                 if (xml.Value.CL_JCJBXX.SFDQBY !== null)
                     SetDX("SFDQBY", xml.Value.CL_JCJBXX.SFDQBY);
+                if (xml.Value.CL_JCJBXX.SFDQBY !== null)
+                    SetDuoX("CLJZPZ", xml.Value.CL_JCJBXX.CLJZPZ);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -303,6 +340,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "PZSZCS", "'" + $("#spanPZSZCS").html() + "'");
     obj = jsonObj.AddJson(obj, "GHCS", "'" + $("#spanGHCS").html() + "'");
     obj = jsonObj.AddJson(obj, "SFDQBY", "'" + GetDX("SFDQBY") + "'");
+    obj = jsonObj.AddJson(obj, "CLJZPZ", "'" + GetDuoX("CLJZPZ") + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
 
     if (getUrlParam("ID") !== null)

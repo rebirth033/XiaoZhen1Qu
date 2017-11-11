@@ -5,4 +5,9 @@
       <ref object="FCCXBLL"/>
     </property>
   </object>
+  <object id="CLCXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.CLCXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="CLCXBLL">
+      <ref object="CLCXBLL"/>
+    </property>
+  </object>
 </objects>

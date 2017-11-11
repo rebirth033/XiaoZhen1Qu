@@ -201,7 +201,7 @@
     <Content Include="Areas\Business\Css\HTFB\ES\ES_WHYL_YSPSCP.css" />
     <Content Include="Areas\Business\Css\HTFB\FC\FC_ESF.css" />
     <Content Include="Areas\Business\Css\Other\FBCG.css" />
-    <Content Include="Areas\Business\Css\HTFB\FC\FC_CKCFTDCW.css" />
+    <Content Include="Areas\Business\Css\HTFB\FC\FC_CFCKTDCW.css" />
     <Content Include="Areas\Business\Css\HTFB\FC\FC_DZF.css" />
     <Content Include="Areas\Business\Css\HTFB\FC\FC_ZZF.css" />
     <Content Include="Areas\Business\Css\HTFB\FC\FC_SP.css" />
@@ -584,6 +584,7 @@
     <Content Include="Areas\Business\Scripts\Business\Common\Head.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\LBHead.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\Top.js" />
+    <Content Include="Areas\Business\Scripts\Business\CXLB\CLCX\CL_JC.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\Common\CXLB_Common.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\FCCX\FC_DZF.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\FCCX\FC_ESF.js" />
@@ -667,8 +668,8 @@
     <Content Include="Areas\Business\Scripts\Business\HTFB\ES\ES_WHYL_WYXNWPYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\ES\ES_WHYL_YSPSCP.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\ES\ES_WHYL_YSPSCPYZ.js" />
-    <Content Include="Areas\Business\Scripts\Business\HTFB\FC\FC_CKCFTDCW.js" />
-    <Content Include="Areas\Business\Scripts\Business\HTFB\FC\FC_CKCFTDCWYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\HTFB\FC\FC_CFCKTDCW.js" />
+    <Content Include="Areas\Business\Scripts\Business\HTFB\FC\FC_CFCKTDCWYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\FC\FC_DZF.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\FC\FC_DZFYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\FC\FC_ESF.js" />
@@ -1361,6 +1362,7 @@
       <DependentUpon>png.aspx</DependentUpon>
     </Compile>
     <Compile Include="Areas\Business\BusinessAreaRegistration.cs" />
+    <Compile Include="Areas\Business\Controllers\CXLB\CLCXController.cs" />
     <Compile Include="Areas\Business\Controllers\OTHER\BaseController.cs" />
     <Compile Include="Areas\Business\Common\QRCodeHelper.cs" />
     <Compile Include="Areas\Business\Controllers\HTGL\BZZXController.cs" />
@@ -1496,7 +1498,7 @@
     <Content Include="Areas\Business\Scripts\UEditor\third-party\video-js\font\vjs.woff" />
     <Content Include="Areas\Business\Views\FC\FC_SP.cshtml" />
     <Content Include="Areas\Business\Views\FC\FC_XZL.cshtml" />
-    <Content Include="Areas\Business\Views\FC\FC_CKCFTDCW.cshtml" />
+    <Content Include="Areas\Business\Views\FC\FC_CFCKTDCW.cshtml" />
     <Content Include="Areas\Business\Views\ES\ES_SJSM_ESSJ.cshtml" />
     <Content Include="Areas\Business\Views\ES\ES_SJSM_BJBDN.cshtml" />
     <Content Include="Areas\Business\Views\ES\ES_SJSM_PBDN.cshtml" />
@@ -1717,6 +1719,7 @@
     <Content Include="Areas\Business\Views\FCXX\FC_CF.cshtml" />
     <Content Include="Areas\Business\Views\FCXX\FC_CK.cshtml" />
     <Content Include="Areas\Business\Views\FCXX\FC_TD.cshtml" />
+    <Content Include="Areas\Business\Views\CLCX\CL_JC.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

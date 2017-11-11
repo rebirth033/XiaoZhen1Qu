@@ -58,7 +58,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
             try
             {
                 IList<CODES_SY_ML> list = new List<CODES_SY_ML>();
-                list = DAO.Repository.GetObjectList<CODES_SY_ML>(String.Format("FROM CODES_SY_ML ORDER BY ID"));
+                list = DAO.Repository.GetObjectList<CODES_SY_ML>(String.Format("FROM CODES_SY_ML ORDER BY LBORDER,ID"));
                 return new { Result = EnResultType.Success, list = list, xzq = xzq };
             }
             catch (Exception ex)
