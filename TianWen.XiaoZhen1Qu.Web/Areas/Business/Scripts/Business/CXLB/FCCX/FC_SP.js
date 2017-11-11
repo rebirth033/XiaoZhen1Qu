@@ -1,21 +1,26 @@
 ﻿var currentIndex = 1;
 $(document).ready(function () {
     BindConditionNav();
+    $(".li_condition_head:eq(0)").each(function () { $(this).css("background-color", "#ffffff"); });
     BindBodyNav();
-    LoadFCCXCondition();
+    LoadFCCX_SPCZCondition();
     LoadHot("FC_SP");
     LoadBody("FC_SP", currentIndex);
 });
 //搬定查询条件导航
 function BindConditionNav() {
     $(".li_condition_head").bind("click", function () {
-        $(".li_condition_head").each(function () {
+        $(".li_condition_head").each(function (i) {
             $(this).css("background-color", "#eeeff1");
         });
         $(this).css("background-color", "#ffffff");
+        if ($(this).html() === "商铺出租")
+            LoadFCCX_SPCZCondition();
+        else
+            LoadFCCX_SPCSCondition();
     });
 }
-//搬定主体列表导航
+//绑定主体列表导航
 function BindBodyNav() {
     $(".li_body_head").bind("click", function () {
         $(".li_body_head").each(function () {
@@ -24,8 +29,9 @@ function BindBodyNav() {
         $(this).css("border-bottom", "2px solid #5bc0de").css("color", "#5bc0de").css("font-weight", "700");
     });
 }
-//加载房产查询条件
-function LoadFCCXCondition() {
+//加载房产查询_商铺出租条件
+function LoadFCCX_SPCZCondition() {
+    $("#div_condition_body").html('');
     var dq = "地区,不限,鼓楼,台江,晋安,仓山,闽侯,福清,马尾,长乐,连江,平潭,罗源,闽清,永泰".split(',');
     var fl = "分类,不限,美容美发,餐饮美食,超市零售,服饰鞋包,休闲娱乐,生活服务,家居建材,教育培训,电子通讯,汽修美容,酒店宾馆,医药保健,其他".split(',');
     var zj = "租金,不限,2000元/月以下,2000-6000元/月,6000-16000元/月,16000元/月以上".split(',');
@@ -38,6 +44,23 @@ function LoadFCCXCondition() {
     $("#ul_condition_body_DQ").find(".li_condition_body").bind("click", SelectCondition);
     $("#ul_condition_body_FL").find(".li_condition_body").bind("click", SelectCondition);
     $("#ul_condition_body_ZJ").find(".li_condition_body").bind("click", SelectCondition);
+    $("#ul_condition_body_MJ").find(".li_condition_body").bind("click", SelectCondition);
+}
+//加载房产查询_商铺出售条件
+function LoadFCCX_SPCSCondition() {
+    $("#div_condition_body").html('');
+    var dq = "地区,不限,鼓楼,台江,晋安,仓山,闽侯,福清,马尾,长乐,连江,平潭,罗源,闽清,永泰".split(',');
+    var fl = "分类,不限,美容美发,餐饮美食,超市零售,服饰鞋包,休闲娱乐,生活服务,家居建材,教育培训,电子通讯,汽修美容,酒店宾馆,医药保健,其他".split(',');
+    var sj = "售价,不限,50万元以下,50-100万元,100-200万元,100-200万元,200-300万元,300-500万元,500-800万元,800-1000万元,1000万元以上".split(',');
+    var mj = "面积,不限,30平米以下,30-100平米,100-300平米,300平米以上".split(',');
+    LoadCondition(dq, "DQ");
+    LoadCondition(fl, "FL");
+    LoadCondition(sj, "SJ");
+    $("#ul_condition_body_SJ").append("<li><input id='input_sj_q' class='input_sj' type='text' /><span class='span_sj'>元</span> - <input class='input_sj' id='input_sj_z' type='text' /><span class='span_sj'>元</span></li>");
+    LoadCondition(mj, "MJ");
+    $("#ul_condition_body_DQ").find(".li_condition_body").bind("click", SelectCondition);
+    $("#ul_condition_body_FL").find(".li_condition_body").bind("click", SelectCondition);
+    $("#ul_condition_body_SJ").find(".li_condition_body").bind("click", SelectCondition);
     $("#ul_condition_body_MJ").find(".li_condition_body").bind("click", SelectCondition);
 }
 //选择条件
@@ -73,7 +96,6 @@ function DeleteSelect(obj) {
 //加载查询条件
 function LoadCondition(array, type) {
     var html = "";
-    html += '<div class="div_condition_body">';
     html += '<ul id="ul_condition_body_' + type + '" class="ul_condition_body">';
     for (var i = 0; i < array.length; i++) {
         if (i === 0)
@@ -84,14 +106,22 @@ function LoadCondition(array, type) {
             html += '<li class="li_condition_body">' + array[i] + '</li>';
     }
     html += '</ul>';
-    html += '</div>';
-    $("#divCondition").append(html);
+    $("#div_condition_body").append(html);
 }
 //获取查询条件
 function GetCondition(type) {
     var value = "";
     $("#ul_condition_body_" + type).find(".li_condition_body").each(function () {
         if ($(this).css("color") === 'rgb(91, 192, 222)')
+            value = $(this).html();
+    });
+    return value;
+}
+//获取导航查询条件
+function GetNavCondition() {
+    var value = "";
+    $(".li_condition_head").each(function () {
+        if ($(this).css("background-color") === 'rgb(255, 255, 255)')
             value = $(this).html();
     });
     return value;
@@ -108,7 +138,7 @@ function HasCondition() {
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = "DQ:" + GetCondition("DQ") + ",FL:" + GetCondition("FL") + ",ZJ:" + GetCondition("ZJ") + ",MJ:" + GetCondition("MJ");
+    var condition = "DQ:" + GetCondition("DQ") + ",FL:" + GetCondition("FL") + ",ZJ:" + GetCondition("ZJ") + ",MJ:" + GetCondition("MJ") + ",GQ:" + GetNavCondition();
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/FCCX/LoadFCXX",
@@ -145,7 +175,7 @@ function LoadInfo(obj) {
     html += ('<div class="div_li_body_left_center">');
     html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'FC_SP\',\'' + obj.ID + '\')">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_left_center_cs font_size16">' + obj.MJ + '平米</p>');
-    html += ('<p class="p_li_body_left_center_dz font_size16">' + '[' + obj.QY + '-' + obj.SQ + '-' + obj.DZ + '] ' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
+    html += ('<p class="p_li_body_left_center_dz font_size16">' + '[' + obj.QY + '-' + obj.DD + '-' + obj.JTDZ + '] ' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
     html += ('<p class="p_li_body_left_right"><span class="span_zj">' + obj.ZJ + '</span>元/月</p>');
@@ -184,7 +214,7 @@ function LoadHotInfo(obj) {
     var html = "";
     html += ('<li onclick="OpenXXXX(\'FC_SP\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_right_xq">' + obj.QY + ' / ' + obj.SQ + ' / ' + obj.DZ + '</p>');
+    html += ('<p class="p_li_body_right_xq">' + obj.QY + ' / ' + obj.DD + ' / ' + obj.JTDZ + '</p>');
     html += ('<p class="p_li_body_right_cs">' + obj.MJ + '平</p>');
     html += ('<p class="p_li_body_right_jg">' + obj.ZJ + '元/月</p>');
     html += ('</li>');

@@ -53,16 +53,16 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string QY { get; set; }
 
         /// <summary>
-        /// 商圈
+        /// 地段
         /// </summary>
         [Property]
-        public virtual string SQ { get; set; }
+        public virtual string DD { get; set; }
 
         /// <summary>
-        /// 地址
+        /// 具体地址
         /// </summary>
         [Property]
-        public virtual string DZ { get; set; }
+        public virtual string JTDZ { get; set; }
 
         /// <summary>
         /// 租金
@@ -93,5 +93,47 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// </summary>
         [Property]
         public virtual Byte[] BCMS { get; set; }
+
+        /// <summary>
+        /// 面宽
+        /// </summary>
+        [Property]
+        public virtual string MK { get; set; }
+
+        /// <summary>
+        /// 进深
+        /// </summary>
+        [Property]
+        public virtual string JS { get; set; }
+
+        /// <summary>
+        /// 层高
+        /// </summary>
+        [Property]
+        public virtual string CG { get; set; }
+
+        /// <summary>
+        /// 层
+        /// </summary>
+        [Property]
+        public virtual string C { get; set; }
+
+        /// <summary>
+        /// 共几层
+        /// </summary>
+        [Property]
+        public virtual string GJC { get; set; }
+
+        /// <summary>
+        /// 经营行业
+        /// </summary>
+        [Property]
+        public virtual string JYHY { get; set; }
+
+        /// <summary>
+        /// 经营状态
+        /// </summary>
+        [Property]
+        public virtual string JYZT { get; set; }
     }
 }

@@ -29,7 +29,7 @@
 .div_body .div_body_right .div_body_right_grxx .div_div_body_right_ckxy{ width: 260px;height: 34px;padding: 6px 12px;color: #333;margin-top: 30px;background-color: rgba(238,239,241,0.2);border: 1px solid #cccccc;border-radius: 2px;}
 .div_body .div_body_right .div_body_right_grxx .div_div_body_right_ckxy:hover{ cursor: pointer;background-color: rgba(238,239,241,0.8);}
 /*首页_主体_左部_猜你喜欢*/
-.div_body .div_body_left .div_body_left_body_cnxh{ height: auto;float: left;margin-top: 20px;}
+.div_body .div_body_left .div_body_left_body_cnxh{ height: auto;float: left;margin-top: 20px;width: 100%;}
 .div_body .div_body_left .div_body_left_body_cnxh .p_body_left_body_cnxh{ font-size: 18px;font-weight: 700;height: 60px;border-bottom: 1px solid #cccccc;}
 .div_body .div_body_left .ul_body_left_body_cnxh{ padding: 0;}
 .div_body .div_body_left .ul_body_left_body_cnxh .li_body_left_body_cnxh{width: 180px;height: 210px;border: 1px solid #e6e6e6;padding: 8px;float: left;margin-left: 18px;margin-bottom: 10px;}

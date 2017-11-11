@@ -15,15 +15,17 @@
             <li class="li_nav_split">></li>
             <li class="li_nav_font">@ViewData["XZQ"]房产信息</li>
             <li class="li_nav_split">></li>
-            <li class="li_nav_font">@ViewData["XZQ"]整租房</li>
+            <li class="li_nav_font">@ViewData["XZQ"]商铺</li>
         </ul>
     </div>
     <div id="divCondition" class="div_condition">
         <ul class="ul_condition_head">
-            <li id="li_condition_head_qyzf" class="li_condition_head">区域找房</li>
-            <li id="li_condition_head_dtzf" class="li_condition_head">地铁找房</li>
-            <li id="li_condition_head_xqzf" class="li_condition_head">小区找房</li>
+            <li id="li_condition_head_spcz" class="li_condition_head">出租</li>
+            <li id="li_condition_head_dtcs" class="li_condition_head">出售</li>
         </ul>
+        <div id="div_condition_body" class="div_condition_body">
+
+        </div>
     </div>
     <div id="divConditionSelect" class="div_condition_select">
         <ul id="ul_condition_select" class="ul_condition_select">
@@ -32,23 +34,20 @@
     </div>
     <div id="divBody" class="div_body">
         <ul class="ul_body_head">
-            <li class="li_body_head">@ViewData["XZQ"]商铺出租</li>
-            <li class="li_body_head">@ViewData["XZQ"]商铺出售</li>
-            <li class="li_body_head">经纪人</li>
-            <li class="li_body_head">热门推荐</li>
+            <li id="li_body_head_first" class="li_body_head">@ViewData["XZQ"]商铺出租</li>
+            <li class="li_body_head">个人房源</li>
+            <li class="li_body_head">经纪人房源</li>
         </ul>
         <div id="div_body_left" class="div_body_left">
-            <ul id="ul_body_left" class="ul_body_left">
-            </ul>
+            <ul id="ul_body_left" class="ul_body_left"></ul>
             <div class="div_main_info_bottom">
                 <div class="div_main_info_bottom_fy" id="div_main_info_bottom_fy">
                 </div>
             </div>
         </div>
         <div class="div_body_right">
-            <p class="p_div_body_right">热门推荐</p>
-            <ul id="ul_body_right" class="ul_body_right">
-            </ul>
+            <p class="p_div_body_right">小镇精选</p>
+            <ul id="ul_body_right" class="ul_body_right"></ul>
         </div>
     </div>
 }

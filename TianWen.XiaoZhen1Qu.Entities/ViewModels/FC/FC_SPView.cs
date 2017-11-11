@@ -23,22 +23,18 @@ namespace TianWen.XiaoZhen1Qu.Entities.ViewModels.FC
         public string GQ { get; set; }
         public string LSJY { get; set; }
         public string QY { get; set; }
-        public string SQ { get; set; }
-        public string DZ { get; set; }
+        public string DD { get; set; }
+        public string JTDZ { get; set; }
         public string MJ { get; set; }
         public string SPLX { get; set; }
         public string SJ { get; set; }
-        //小区信息
-        public string XQMC { get; set; }
-        public string KFS { get; set; }
-        public string WYGS { get; set; }
-        public string WYLX { get; set; }
-        public string ZJMJ { get; set; }
-        public string ZHS { get; set; }
-        public string JZND { get; set; }
-        public string RJL { get; set; }
-        public string TCW { get; set; }
-        public string LHL { get; set; }
+        public string MK { get; set; }
+        public string JS { get; set; }
+        public string CG { get; set; }
+        public string C { get; set; }
+        public string GJC { get; set; }
+        public string JYHY { get; set; }
+        public string JYZT { get; set; }
         //图片
         public IList<PHOTOS> PHOTOS { get; set; }
     }
