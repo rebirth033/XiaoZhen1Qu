@@ -14,10 +14,13 @@ function BindConditionNav() {
             $(this).css("background-color", "#eeeff1");
         });
         $(this).css("background-color", "#ffffff");
-        if ($(this).html() === "商铺出租")
+        if ($(this).html() === "出租") {
             LoadFCCX_SPCZCondition();
-        else
+            LoadBody("FC_SP", currentIndex);
+        } else {
             LoadFCCX_SPCSCondition();
+            LoadBody("FC_SP", currentIndex);
+        }
     });
 }
 //绑定主体列表导航
@@ -138,7 +141,11 @@ function HasCondition() {
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = "DQ:" + GetCondition("DQ") + ",FL:" + GetCondition("FL") + ",ZJ:" + GetCondition("ZJ") + ",MJ:" + GetCondition("MJ") + ",GQ:" + GetNavCondition();
+    var condition = "DQ:" + GetCondition("DQ") + ",FL:" + GetCondition("FL") + ",MJ:" + GetCondition("MJ") + ",GQ:" + GetNavCondition();
+    if (GetNavCondition() === "出租")
+        condition +=  ",ZJ:" + GetCondition("ZJ");
+    else
+        condition +=  ",SJ:" + GetCondition("SJ");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/FCCX/LoadFCXX",
@@ -155,7 +162,10 @@ function LoadBody(TYPE, PageIndex) {
                 $("#ul_body_left").html('');
                 LoadPage(TYPE, xml.PageCount);
                 for (var i = 0; i < xml.list.length; i++) {
-                    LoadInfo(xml.list[i]);
+                    if (GetNavCondition() === "出租")
+                        LoadCZInfo(xml.list[i]);
+                    else
+                        LoadCSInfo(xml.list[i]);
                 }
             }
         },
@@ -164,8 +174,8 @@ function LoadBody(TYPE, PageIndex) {
         }
     });
 }
-//加载单条信息
-function LoadInfo(obj) {
+//加载出租单条信息
+function LoadCZInfo(obj) {
     var html = "";
     html += ('<li class="li_body_left">');
     html += ('<div class="div_li_body_left_left">');
@@ -179,6 +189,25 @@ function LoadInfo(obj) {
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
     html += ('<p class="p_li_body_left_right"><span class="span_zj">' + obj.ZJ + '</span>元/月</p>');
+    html += ('</div>');
+    html += ('</li>');
+    $("#ul_body_left").append(html);
+}
+//加载出售单条信息
+function LoadCSInfo(obj) {
+    var html = "";
+    html += ('<li class="li_body_left">');
+    html += ('<div class="div_li_body_left_left">');
+    html += ('<img class="img_li_body_left" onclick="OpenXXXX(\'FC_SP\',\'' + obj.ID + '\')" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
+    html += ('<div class="div_img_li_body_left_count"><span>' + obj.PHOTOS.length + '图</span></div>');
+    html += ('</div>');
+    html += ('<div class="div_li_body_left_center">');
+    html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'FC_SP\',\'' + obj.ID + '\')">' + obj.BT + '</p>');
+    html += ('<p class="p_li_body_left_center_cs font_size16">' + obj.MJ + '平米</p>');
+    html += ('<p class="p_li_body_left_center_dz font_size16">' + '[' + obj.QY + '-' + obj.DD + '-' + obj.JTDZ + '] ' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
+    html += ('</div>');
+    html += ('<div class="div_li_body_left_right">');
+    html += ('<p class="p_li_body_left_right"><span class="span_zj">' + obj.SJ + '</span>万元</p>');
     html += ('</div>');
     html += ('</li>');
     $("#ul_body_left").append(html);

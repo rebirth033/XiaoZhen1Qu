@@ -83,6 +83,8 @@ function LoadFC_SPJBXX() {
                     SetDX("GQ", xml.Value.FC_SPJBXX.GQ);
                 if (xml.Value.FC_SPJBXX.FL !== null)
                     SetDX("FL", xml.Value.FC_SPJBXX.FL);
+                if (xml.Value.FC_SPJBXX.JYZT !== null)
+                    SetDX("JYZT", xml.Value.FC_SPJBXX.JYZT);
                 $("#spanSPLX").html(xml.Value.FC_SPJBXX.SPLX);
                 $("#spanJYHY").html(xml.Value.FC_SPJBXX.JYHY);
                 $("#spanQY").html(xml.Value.FC_SPJBXX.QY);
@@ -113,6 +115,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "FL", "'" + GetDX("FL") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
+    obj = jsonObj.AddJson(obj, "JYZT", "'" + GetDX("JYZT") + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");
