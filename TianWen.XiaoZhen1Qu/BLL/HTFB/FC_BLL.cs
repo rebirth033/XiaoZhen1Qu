@@ -11,9 +11,9 @@ namespace TianWen.XiaoZhen1Qu.BLL
     public class FC_BLL : BaseBLL, IFC_BLL
     {
         //保存厂房/仓库/土地/车位基本信息
-        public object SaveCKCFTDCWJBXX(JCXX jcxx, FC_CKCFTDCWJBXX FC_CKCFTDCWJBXX, List<PHOTOS> photos)
+        public object SaveCFCKTDCWJBXX(JCXX jcxx, FC_CFCKTDCWJBXX FC_CFCKTDCWJBXX, List<PHOTOS> photos)
         {
-            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM FC_CKCFTDCWJBXX WHERE ID='{0}'", FC_CKCFTDCWJBXX.ID));
+            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM FC_CFCKTDCWJBXX WHERE ID='{0}'", FC_CFCKTDCWJBXX.ID));
             using (ITransaction transaction = DAO.BeginTransaction())
             {
                 try
@@ -21,42 +21,42 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     if (dt.Rows.Count > 0)
                     {
                         SavePhotos(photos, dt.Rows[0]["JCXXID"].ToString());
-                        FC_CKCFTDCWJBXX.JCXXID = dt.Rows[0]["JCXXID"].ToString();
+                        FC_CFCKTDCWJBXX.JCXXID = dt.Rows[0]["JCXXID"].ToString();
                         jcxx.JCXXID = dt.Rows[0]["JCXXID"].ToString();
                         DAO.Update(jcxx);
-                        DAO.Update(FC_CKCFTDCWJBXX);
+                        DAO.Update(FC_CFCKTDCWJBXX);
                         transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, ID = FC_CKCFTDCWJBXX.ID } };
+                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, ID = FC_CFCKTDCWJBXX.ID } };
                     }
                     else
                     {
                         SavePhotos(photos, jcxx.JCXXID);
-                        FC_CKCFTDCWJBXX.JCXXID = jcxx.JCXXID;
+                        FC_CFCKTDCWJBXX.JCXXID = jcxx.JCXXID;
                         DAO.Save(jcxx);
-                        DAO.Save(FC_CKCFTDCWJBXX);
+                        DAO.Save(FC_CFCKTDCWJBXX);
                         transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, ID = FC_CKCFTDCWJBXX.ID } };
+                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, ID = FC_CFCKTDCWJBXX.ID } };
                     }
                 }
                 catch (Exception ex)
                 {
                     transaction.Rollback();
-                    LoggerManager.Error("FC_CKCFTDCWJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                    LoggerManager.Error("FC_CFCKTDCWJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
                     return new { Result = EnResultType.Failed, Message = "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!", Type = 3 };
                 }
             }
         }
 
         //加载厂房/仓库/土地/车位基本信息
-        public object LoadFC_CKCFTDCWJBXX(string ID)
+        public object LoadFC_CFCKTDCWJBXX(string ID)
         {
             try
             {
-                FC_CKCFTDCWJBXX CKCFTDCWJBXX = DAO.GetObjectByID<FC_CKCFTDCWJBXX>(ID);
-                if (CKCFTDCWJBXX != null)
+                FC_CFCKTDCWJBXX CFCKTDCWJBXX = DAO.GetObjectByID<FC_CFCKTDCWJBXX>(ID);
+                if (CFCKTDCWJBXX != null)
                 {
-                    JCXX jcxx = GetJCXXByID(CKCFTDCWJBXX.JCXXID);
-                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { FC_CKCFTDCWJBXX = CKCFTDCWJBXX, BCMSString = BinaryHelper.BinaryToString(CKCFTDCWJBXX.BCMS), JCXX = jcxx, Photos = GetPhtosByJCXXID(CKCFTDCWJBXX.JCXXID) } };
+                    JCXX jcxx = GetJCXXByID(CFCKTDCWJBXX.JCXXID);
+                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { FC_CFCKTDCWJBXX = CFCKTDCWJBXX, BCMSString = BinaryHelper.BinaryToString(CFCKTDCWJBXX.BCMS), JCXX = jcxx, Photos = GetPhtosByJCXXID(CFCKTDCWJBXX.JCXXID) } };
                 }
                 else
                 {
@@ -66,7 +66,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
             catch (Exception ex)
             {
-                LoggerManager.Error("FC_CKCFTDCWJBXXBLL", "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                LoggerManager.Error("FC_CFCKTDCWJBXXBLL", "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
                 return new
                 {
                     Result = EnResultType.Failed,

@@ -36,6 +36,26 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             GetSession();
             return View();
         }
+        public ActionResult FC_CF()
+        {
+            GetSession();
+            return View();
+        }
+        public ActionResult FC_CK()
+        {
+            GetSession();
+            return View();
+        }
+        public ActionResult FC_TD()
+        {
+            GetSession();
+            return View();
+        }
+        public ActionResult FC_CW()
+        {
+            GetSession();
+            return View();
+        }
 
         public JsonResult LoadFCXX()
         {

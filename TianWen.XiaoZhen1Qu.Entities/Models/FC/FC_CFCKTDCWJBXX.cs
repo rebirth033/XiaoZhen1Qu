@@ -3,9 +3,9 @@ using NHibernate.Mapping.Attributes;
 
 namespace TianWen.XiaoZhen1Qu.Entities.Models
 {
-    public class FC_CKCFTDCWJBXX
+    public class FC_CFCKTDCWJBXX
     {
-        public FC_CKCFTDCWJBXX()
+        public FC_CFCKTDCWJBXX()
         {
             ID = Guid.NewGuid().ToString("N");
         }
@@ -44,13 +44,13 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// 商圈
         /// </summary>
         [Property]
-        public virtual string SQ { get; set; }
+        public virtual string DD { get; set; }
 
         /// <summary>
         /// 地段
         /// </summary>
         [Property]
-        public virtual string DD { get; set; }
+        public virtual string JTDZ { get; set; }
 
         /// <summary>
         /// 租金

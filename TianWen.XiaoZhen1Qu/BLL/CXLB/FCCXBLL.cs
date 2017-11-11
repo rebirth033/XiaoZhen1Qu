@@ -105,6 +105,23 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     }
                     return new { Result = EnResultType.Success, list = listnew, PageCount = PageCount, TotalCount = TotalCount };
                 }
+                if (TYPE == "FC_CF" || TYPE == "FC_CK" || TYPE == "FC_TD" || TYPE == "FC_CW")//房产_厂房/仓库/土地/车位
+                {
+                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,fc_cfcktdcwjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + " order by zxgxsj desc");
+                    List<FC_CFCKTDCWView> list = ConvertHelper.DataTableToList<FC_CFCKTDCWView>(dt);
+                    int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
+                    int TotalCount = list.Count;
+                    var WDCountlist = from p in list.Where(p => p.STATUS == 0) select p;
+                    int WCCount = WDCountlist.Count();
+
+                    var listnew = from p in list.Skip((int.Parse(PageIndex) - 1) * int.Parse(PageSize)).Take(int.Parse(PageSize)) select p;
+
+                    foreach (var jcxx in listnew)
+                    {
+                        jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
+                    }
+                    return new { Result = EnResultType.Success, list = listnew, PageCount = PageCount, TotalCount = TotalCount };
+                }
 
                 return new { Result = EnResultType.Failed };
 
@@ -211,6 +228,18 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 {
                     dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,fc_xzljbxx b where a.jcxxid = b.jcxxid and id = '{0}' order by zxgxsj desc", ID));
                     List<FC_XZLView> list = ConvertHelper.DataTableToList<FC_XZLView>(dt);
+                    foreach (var jcxx in list)
+                    {
+                        jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
+                    }
+                    DataTable dtgrxx = DAO.Repository.GetDataTable(string.Format("select * from yhjbxx y where y.yhid = '{0}'", list[0].YHID));
+                    List<GRXXView> grxxlist = ConvertHelper.DataTableToList<GRXXView>(dtgrxx);
+                    return new { Result = EnResultType.Success, list = list, BCMSString = BinaryHelper.BinaryToString(list[0].BCMS), grxxlist = grxxlist };
+                }
+                if (TYPE == "FC_CF" || TYPE == "FC_CK" || TYPE == "FC_TD" || TYPE == "FC_CW")//房产_厂房/仓库/土地/车位
+                {
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,fc_cfcktdcwjbxx b where a.jcxxid = b.jcxxid and id = '{0}' order by zxgxsj desc", ID));
+                    List<FC_CFCKTDCWView> list = ConvertHelper.DataTableToList<FC_CFCKTDCWView>(dt);
                     foreach (var jcxx in list)
                     {
                         jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));

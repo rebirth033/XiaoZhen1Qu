@@ -4,7 +4,41 @@
     $(".div_nav").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
     $(".div_body").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
     LoadDefault();
+    GetHeadNav();
 });
+//获取头部导航
+function GetHeadNav() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/SY/LoadSY_ML",
+        dataType: "json",
+        data:
+        {
+
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "";
+                html += ('<ul class="ul_nav">');
+                html += ('<li class="li_nav_font">信息小镇</li>');
+                html += ('<li class="li_nav_split">></li>');
+                html += ('<li class="li_nav_font">' + xml.xzq + '房产</li>');
+                html += ('<li class="li_nav_split">></li>');
+                for (var i = 0; i < xml.list.length; i++) {
+                    if (xml.list[i].LBID == getUrlParam("LBID")) {
+                        html += ('<li class="li_nav_font">' + xml.xzq + xml.list[i].LBNAME + '</li>');
+                        $("#li_body_head_first").html(xml.xzq + xml.list[i].LBNAME + "出租");
+                    }
+                }
+                html += ('</ul>');
+                $("#divNav").html(html);
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+
+        }
+    });
+}
 //加载个人信息
 function LoadGRXX(grxx) {
     var html = "";

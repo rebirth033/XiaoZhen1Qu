@@ -2,8 +2,8 @@
     $("#div_gq_cz").bind("click", CZSelect);
     $("#div_gq_cs").bind("click", CSSelect);
     $("body").bind("click", function() { Close("_XZQ"); });
-    LoadFC_CKCFTDCWJBXX();
-    BindClick("CKCFTDCWLX");
+    LoadFC_CFCKTDCWJBXX();
+    BindClick("CFCKTDCWLX");
     BindClick("QY");
     BindClick("SQ");
     BindClick("ZJDW");
@@ -130,10 +130,10 @@ function GetGQ() {
     return value;
 }
 //加载房产_写字楼基本信息
-function LoadFC_CKCFTDCWJBXX() {
+function LoadFC_CFCKTDCWJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC/LoadFC_CKCFTDCWJBXX",
+        url: getRootPath() + "/Business/FC/LoadFC_CFCKTDCWJBXX",
         dataType: "json",
         data:
         {
@@ -142,22 +142,22 @@ function LoadFC_CKCFTDCWJBXX() {
         success: function (xml) {
             if (xml.Result === 1) {
                 var jsonObj = new JsonDB("myTabContent");
-                jsonObj.DisplayFromJson("myTabContent", xml.Value.FC_CKCFTDCWJBXX);
+                jsonObj.DisplayFromJson("myTabContent", xml.Value.FC_CFCKTDCWJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
-                $("#ID").val(xml.Value.FC_CKCFTDCWJBXX.ID);
+                $("#ID").val(xml.Value.FC_CFCKTDCWJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.BCMSString);
                 });
-                if (xml.Value.FC_CKCFTDCWJBXX.GQ !== null)
-                    SetDX("GQ", xml.Value.FC_CKCFTDCWJBXX.GQ);
-                if (xml.Value.FC_CKCFTDCWJBXX.LX !== null)
-                    SetDX("LX", xml.Value.FC_CKCFTDCWJBXX.LX);
-                $("#spanKZCGS").html(xml.Value.FC_CKCFTDCWJBXX.KZCGS);
-                $("#spanQY").html(xml.Value.FC_CKCFTDCWJBXX.QY);
-                $("#spanSQ").html(xml.Value.FC_CKCFTDCWJBXX.SQ);
-                $("#spanZJDW").html(xml.Value.FC_CKCFTDCWJBXX.ZJDW);
+                if (xml.Value.FC_CFCKTDCWJBXX.GQ !== null)
+                    SetDX("GQ", xml.Value.FC_CFCKTDCWJBXX.GQ);
+                if (xml.Value.FC_CFCKTDCWJBXX.LX !== null)
+                    SetDX("LX", xml.Value.FC_CFCKTDCWJBXX.LX);
+                $("#spanKZCGS").html(xml.Value.FC_CFCKTDCWJBXX.KZCGS);
+                $("#spanQY").html(xml.Value.FC_CFCKTDCWJBXX.QY);
+                $("#spanSQ").html(xml.Value.FC_CFCKTDCWJBXX.SQ);
+                $("#spanZJDW").html(xml.Value.FC_CFCKTDCWJBXX.ZJDW);
                 LoadPhotos(xml.Value.Photos);
             }
         },
@@ -185,7 +185,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC/FBFC_CKCFTDCWJBXX",
+        url: getRootPath() + "/Business/FC/FBFC_CFCKTDCWJBXX",
         dataType: "json",
         data:
         {

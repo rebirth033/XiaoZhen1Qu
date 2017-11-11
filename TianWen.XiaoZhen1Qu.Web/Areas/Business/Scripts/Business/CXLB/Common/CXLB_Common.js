@@ -8,7 +8,41 @@
     $("#li_condition_head_qyzf").css("background-color", "#ffffff");
     $(".li_body_head:eq(0)").css("border-bottom", "2px solid #5bc0de").css("color", "#5bc0de").css("font-weight", "700");
     $("#span_fbxx").bind("click", OpenLBXZ);
+    GetHeadNav();
 });
+//获取头部导航
+function GetHeadNav() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/SY/LoadSY_ML",
+        dataType: "json",
+        data:
+        {
+
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "";
+                html += ('<ul class="ul_nav">');
+                html += ('<li class="li_nav_font">信息小镇</li>');
+                html += ('<li class="li_nav_split">></li>');
+                html += ('<li class="li_nav_font">' + xml.xzq + '房产</li>');
+                html += ('<li class="li_nav_split">></li>');
+                for (var i = 0; i < xml.list.length; i++) {
+                    if (xml.list[i].LBID == getUrlParam("LBID")) {
+                        html += ('<li class="li_nav_font">' + xml.xzq + xml.list[i].LBNAME + '</li>');
+                        $("#li_body_head_first").html(xml.xzq + xml.list[i].LBNAME + "出租");
+                    }
+                }
+                html += ('</ul>');
+                $("#divNav").html(html);
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+
+        }
+    });
+}
 //类别选择
 function OpenLBXZ() {
     window.open(getRootPath() + "/Business/LBXZ/LBXZ");
