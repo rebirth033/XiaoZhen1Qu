@@ -214,9 +214,11 @@ function OpenCXLB(lbid, typename, condition) {
     if (lbid === 19)
         window.open(getRootPath() + "/Business/FCCX/FC_ZZF?LBID=" + lbid + "&" + condition);
     if (lbid === 20)
-        window.open(getRootPath() + "/Business/FCCX/FC_SP?LBID=" + lbid + "&" + condition);
+        window.open(getRootPath() + "/Business/FCCX/FC_SP?LBID=" + lbid);
     if (lbid === 21)
-        window.open(getRootPath() + "/Business/FCCX/FC_ESF?LBID=" + lbid + "&" + condition);
+        window.open(getRootPath() + "/Business/FCCX/FC_ESF?LBID=" + lbid);
     if (lbid === 328)
         window.open(getRootPath() + "/Business/FCCX/FC_DZF?LBID=" + lbid);
+    if (lbid === 289)
+        window.open(getRootPath() + "/Business/FCCX/FC_XZL?LBID=" + lbid);
 }

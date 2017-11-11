@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "信息小镇_房产查询";
+    Layout = "~/Areas/Business/Views/Shared/CXLB.cshtml";
+}
+@section Section_Head {
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link href="@Url.Content("~/Areas/Business/Css/CXLB/FCCX.css")" rel="stylesheet" />
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/CXLB/FCCX/FC_XZL.js")"></script>
+}
+@section Section_Body {
+    <div id="divNav" class="div_nav">
+        <ul class="ul_nav">
+            <li class="li_nav_font">信息小镇</li>
+            <li class="li_nav_split">></li>
+            <li class="li_nav_font">@ViewData["XZQ"]房产信息</li>
+            <li class="li_nav_split">></li>
+            <li class="li_nav_font">@ViewData["XZQ"]写字楼</li>
+        </ul>
+    </div>
+    <div id="divCondition" class="div_condition">
+        <ul class="ul_condition_head">
+            <li id="li_condition_head_spcz" class="li_condition_head">出租</li>
+            <li id="li_condition_head_dtcs" class="li_condition_head">出售</li>
+        </ul>
+        <div id="div_condition_body" class="div_condition_body">
+
+        </div>
+    </div>
+    <div id="divConditionSelect" class="div_condition_select">
+        <ul id="ul_condition_select" class="ul_condition_select">
+            <li class="li_condition_select_first">筛选条件</li>
+        </ul>
+    </div>
+    <div id="divBody" class="div_body">
+        <ul class="ul_body_head">
+            <li id="li_body_head_first" class="li_body_head">@ViewData["XZQ"]写字楼出租</li>
+            <li class="li_body_head">个人房源</li>
+            <li class="li_body_head">经纪人房源</li>
+        </ul>
+        <div id="div_body_left" class="div_body_left">
+            <ul id="ul_body_left" class="ul_body_left"></ul>
+            <div class="div_main_info_bottom">
+                <div class="div_main_info_bottom_fy" id="div_main_info_bottom_fy">
+                </div>
+            </div>
+        </div>
+        <div class="div_body_right">
+            <p class="p_div_body_right">小镇精选</p>
+            <ul id="ul_body_right" class="ul_body_right"></ul>
+        </div>
+    </div>
+}

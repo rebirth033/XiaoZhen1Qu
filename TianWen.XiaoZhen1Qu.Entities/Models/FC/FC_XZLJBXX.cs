@@ -56,13 +56,13 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// 商圈
         /// </summary>
         [Property]
-        public virtual string SQ { get; set; }
+        public virtual string DD { get; set; }
 
         /// <summary>
-        /// 地段
+        /// 具体地址
         /// </summary>
         [Property]
-        public virtual string DD { get; set; }
+        public virtual string JTDZ { get; set; }
 
         /// <summary>
         /// 租金
@@ -93,5 +93,29 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// </summary>
         [Property]
         public virtual Byte[] BCMS { get; set; }
+
+        /// <summary>
+        /// 物业费
+        /// </summary>
+        [Property]
+        public virtual string WYF { get; set; }
+
+        /// <summary>
+        /// 签约年限
+        /// </summary>
+        [Property]
+        public virtual string QYNX { get; set; }
+
+        /// <summary>
+        /// 装修格局
+        /// </summary>
+        [Property]
+        public virtual string ZXGJ { get; set; }
+
+        /// <summary>
+        /// 押付方式
+        /// </summary>
+        [Property]
+        public virtual string YFFS { get; set; }
     }
 }

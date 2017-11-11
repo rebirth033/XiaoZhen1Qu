@@ -1,10 +1,10 @@
 ﻿$(document).ready(function () {
     $("#divGQ").find(".div_radio").bind("click", GetGQ);
-    $("body").bind("click", function() { Close("_XZQ"); });
+    $("body").bind("click", function () { Close("_XZQ"); });
     LoadFC_XZLJBXX();
     BindClick("QY");
-    BindClick("SQ");
-    BindClick("ZJDW");
+    BindClick("DD");
+    BindClick("YFFS");
 });
 //选择出租
 function CZSelect() {
@@ -19,79 +19,16 @@ function CSSelect() {
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
-        if (type === "ZJDW") {
-            LoadCODESByTYPENAME("租金单位", "ZJDW", "CODES_FC");
+        if (type === "YFFS") {
+            LoadCODESByTYPENAME("押付方式", "YFFS", "CODES_FC", Bind, "ZJ", "YFFS", "");
         }
         if (type === "QY") {
             LoadQY();
         }
-        if (type === "SQ") {
+        if (type === "DD") {
             LoadSQ($("#QYCode").val());
         }
     });
-}
-//加载区域
-function LoadQY() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadQY",
-        dataType: "json",
-        data:
-        {
-
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='ul_select' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='li_select' onclick='SelectQY(this,\"QY\",\"" + xml.list[i].CODE + "\")'>" + RTrim(RTrim(RTrim(xml.list[i].NAME, '市'), '区'), '县') + "</li>";
-                }
-                html += "</ul>";
-                $("#divQY").html(html);
-                $("#divQY").css("display", "block");
-                ActiveStyle("QY");
-                Bind("SZQY", "QY", "");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载商圈
-function LoadSQ() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadSQ",
-        dataType: "json",
-        data:
-        {
-            QY: $("#QYCode").val()
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='ul_select' style='overflow-y: scroll;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='li_select' onclick='SelectDropdown(this,\"SQ\")'>" + RTrimStr(xml.list[i].NAME, '街道,镇,林场,管理处') + "</li>";
-                }
-                html += "</ul>";
-                $("#divSQ").html(html);
-                $("#divSQ").css("display", "block");
-                ActiveStyle("SQ");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//选择区域下拉框
-function SelectQY(obj, type, code) {
-    $("#QYCode").val(code);
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
-    $("#spanSQ").html("请选择商圈");
-    BindClick("SQ");
 }
 //设置供求
 function SetGQ(gq) {
@@ -148,8 +85,9 @@ function LoadFC_XZLJBXX() {
                 if (xml.Value.FC_XZLJBXX.KZCGS !== null)
                     SetDX("KZCGS", xml.Value.FC_XZLJBXX.KZCGS);
                 $("#spanQY").html(xml.Value.FC_XZLJBXX.QY);
-                $("#spanSQ").html(xml.Value.FC_XZLJBXX.SQ);
+                $("#spanDD").html(xml.Value.FC_XZLJBXX.DD);
                 $("#spanZJDW").html(xml.Value.FC_XZLJBXX.ZJDW);
+                $("#spanYFFS").html(xml.Value.FC_XZLJBXX.YFFS);
                 LoadPhotos(xml.Value.Photos);
             }
         },
@@ -165,8 +103,9 @@ function FB() {
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
-    obj = jsonObj.AddJson(obj, "SQ", "'" + $("#spanSQ").html() + "'");
+    obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "ZJDW", "'" + $("#spanZJDW").html() + "'");
+    obj = jsonObj.AddJson(obj, "YFFS", "'" + $("#spanYFFS").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
     obj = jsonObj.AddJson(obj, "XZLLX", "'" + GetDX("XZLLX") + "'");

@@ -27,6 +27,10 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         {
             return View();
         }
+        public ActionResult FC_XZL()
+        {
+            return View();
+        }
 
         public JsonResult LoadFCXX()
         {
