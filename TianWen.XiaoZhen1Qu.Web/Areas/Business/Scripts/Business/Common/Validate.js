@@ -35,14 +35,14 @@ function ValidateJG() {
         $("#spanJG").css("border-color", "#fd634f");
         return false;
     } else {
-        if (ValidateNumber($("#JG").val())) {
+        if (ValidateDecimal($("#JG").val())) {
             $("#divJGTip").css("display", "none");
             $("#spanJG").css("border-color", "#cccccc");
             return true;
         } else {
             $("#divJGTip").css("display", "block");
             $("#divJGTip").attr("class", "Warn");
-            $("#divJGTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />价格请填写整数，面议则填0');
+            $("#divJGTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />价格请填写数字，保留两位小数，面议则填0');
             $("#spanJG").css("border-color", "#fd634f");
             return false;
         }

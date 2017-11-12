@@ -251,5 +251,5 @@ function whichTransitionEvent() {
 
 //打开详细页面
 function OpenXXXX(TYPE, ID) {
-    window.open(getRootPath() + "/Business/FCXX/" + TYPE + "?ID=" + ID);
+    window.open(getRootPath() + "/Business/" + TYPE.split('_')[0] + "/" + TYPE + "?ID=" + ID);
 }

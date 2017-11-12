@@ -20,7 +20,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
             try
             {
                 DataTable dt = new DataTable();
-                if (TYPE == "FC_ZZF")//房产_整租房
+                if (TYPE == "FCXX_ZZF")//房产_整租房
                 {
                     dt = DAO.Repository.GetDataTable("select a.*,b.*,x.* from jcxx a,fc_zzfjbxx b  left join codes_fuzhou_xqjbxx x on b.xqmc = x.xqmc where a.jcxxid = b.jcxxid " + GetConditin(Condition) + " order by zxgxsj desc");
                     List<FC_ZZFView> list = ConvertHelper.DataTableToList<FC_ZZFView>(dt);
@@ -37,7 +37,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     }
                     return new { Result = EnResultType.Success, list = listnew, PageCount = PageCount, TotalCount = TotalCount };
                 }
-                if (TYPE == "FC_DZF")//房产_短租房
+                if (TYPE == "FCXX_DZF")//房产_短租房
                 {
                     dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,fc_dzfjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + " order by zxgxsj desc");
                     List<FC_DZFView> list = ConvertHelper.DataTableToList<FC_DZFView>(dt);
@@ -54,7 +54,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     }
                     return new { Result = EnResultType.Success, list = listnew, PageCount = PageCount, TotalCount = TotalCount };
                 }
-                if (TYPE == "FC_ESF")//房产_二手房
+                if (TYPE == "FCXX_ESF")//房产_二手房
                 {
                     dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,fc_esfjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + " order by zxgxsj desc");
                     List<FC_ESFView> list = ConvertHelper.DataTableToList<FC_ESFView>(dt);
@@ -71,7 +71,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     }
                     return new { Result = EnResultType.Success, list = listnew, PageCount = PageCount, TotalCount = TotalCount };
                 }
-                if (TYPE == "FC_SP")//房产_商铺
+                if (TYPE == "FCXX_SP")//房产_商铺
                 {
                     dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,fc_spjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + " order by zxgxsj desc");
                     List<FC_SPView> list = ConvertHelper.DataTableToList<FC_SPView>(dt);
@@ -88,7 +88,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     }
                     return new { Result = EnResultType.Success, list = listnew, PageCount = PageCount, TotalCount = TotalCount };
                 }
-                if (TYPE == "FC_XZL")//房产_写字楼
+                if (TYPE == "FCXX_XZL")//房产_写字楼
                 {
                     dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,fc_xzljbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + " order by zxgxsj desc");
                     List<FC_XZLView> list = ConvertHelper.DataTableToList<FC_XZLView>(dt);
@@ -105,7 +105,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     }
                     return new { Result = EnResultType.Success, list = listnew, PageCount = PageCount, TotalCount = TotalCount };
                 }
-                if (TYPE == "FC_CF" || TYPE == "FC_CK" || TYPE == "FC_TD" || TYPE == "FC_CW")//房产_厂房/仓库/土地/车位
+                if (TYPE == "FCXX_CF" || TYPE == "FCXX_CK" || TYPE == "FCXX_TD" || TYPE == "FCXX_CW")//房产_厂房/仓库/土地/车位
                 {
                     dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,fc_cfcktdcwjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + " order by zxgxsj desc");
                     List<FC_CFCKTDCWView> list = ConvertHelper.DataTableToList<FC_CFCKTDCWView>(dt);
@@ -176,7 +176,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
             try
             {
                 DataTable dt = new DataTable();
-                if (TYPE == "FC_ZZF") //房产_整租房
+                if (TYPE == "FCXX_ZZF") //房产_整租房
                 {
                     dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.*,x.* from jcxx a,fc_zzfjbxx b left join codes_fuzhou_xqjbxx x on b.xqmc = x.xqmc where a.jcxxid = b.jcxxid and id = '{0}'  order by zxgxsj desc", ID));
                     List<FC_ZZFView> list = ConvertHelper.DataTableToList<FC_ZZFView>(dt);
@@ -188,7 +188,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     List<GRXXView> grxxlist = ConvertHelper.DataTableToList<GRXXView>(dtgrxx);
                     return new { Result = EnResultType.Success, list = list, BCMSString = BinaryHelper.BinaryToString(list[0].BCMS), grxxlist = grxxlist };
                 }
-                if (TYPE == "FC_DZF") //房产_短租房
+                if (TYPE == "FCXX_DZF") //房产_短租房
                 {
                     dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,fc_dzfjbxx b where a.jcxxid = b.jcxxid and id = '{0}'  order by zxgxsj desc", ID));
                     List<FC_DZFView> list = ConvertHelper.DataTableToList<FC_DZFView>(dt);
@@ -200,7 +200,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     List<GRXXView> grxxlist = ConvertHelper.DataTableToList<GRXXView>(dtgrxx);
                     return new { Result = EnResultType.Success, list = list, BCMSString = BinaryHelper.BinaryToString(list[0].BCMS), grxxlist = grxxlist };
                 }
-                if (TYPE == "FC_ESF") //房产_二手房
+                if (TYPE == "FCXX_ESF") //房产_二手房
                 {
                     dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.*,x.* from jcxx a,fc_esfjbxx b left join codes_fuzhou_xqjbxx x on b.xqmc = x.xqmc where a.jcxxid = b.jcxxid and id = '{0}'  order by zxgxsj desc", ID));
                     List<FC_ESFView> list = ConvertHelper.DataTableToList<FC_ESFView>(dt);
@@ -212,7 +212,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     List<GRXXView> grxxlist = ConvertHelper.DataTableToList<GRXXView>(dtgrxx);
                     return new { Result = EnResultType.Success, list = list, BCMSString = BinaryHelper.BinaryToString(list[0].BCMS), grxxlist = grxxlist };
                 }
-                if (TYPE == "FC_SP") //房产_商铺
+                if (TYPE == "FCXX_SP") //房产_商铺
                 {
                     dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,fc_spjbxx b where a.jcxxid = b.jcxxid and id = '{0}' order by zxgxsj desc", ID));
                     List<FC_SPView> list = ConvertHelper.DataTableToList<FC_SPView>(dt);
@@ -224,7 +224,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     List<GRXXView> grxxlist = ConvertHelper.DataTableToList<GRXXView>(dtgrxx);
                     return new { Result = EnResultType.Success, list = list, BCMSString = BinaryHelper.BinaryToString(list[0].BCMS), grxxlist = grxxlist };
                 }
-                if (TYPE == "FC_XZL") //房产_写字楼
+                if (TYPE == "FCXX_XZL") //房产_写字楼
                 {
                     dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,fc_xzljbxx b where a.jcxxid = b.jcxxid and id = '{0}' order by zxgxsj desc", ID));
                     List<FC_XZLView> list = ConvertHelper.DataTableToList<FC_XZLView>(dt);
@@ -236,7 +236,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     List<GRXXView> grxxlist = ConvertHelper.DataTableToList<GRXXView>(dtgrxx);
                     return new { Result = EnResultType.Success, list = list, BCMSString = BinaryHelper.BinaryToString(list[0].BCMS), grxxlist = grxxlist };
                 }
-                if (TYPE == "FC_CF" || TYPE == "FC_CK" || TYPE == "FC_TD" || TYPE == "FC_CW")//房产_厂房/仓库/土地/车位
+                if (TYPE == "FCXX_CF" || TYPE == "FCXX_CK" || TYPE == "FCXX_TD" || TYPE == "FCXX_CW")//房产_厂房/仓库/土地/车位
                 {
                     dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,fc_cfcktdcwjbxx b where a.jcxxid = b.jcxxid and id = '{0}' order by zxgxsj desc", ID));
                     List<FC_CFCKTDCWView> list = ConvertHelper.DataTableToList<FC_CFCKTDCWView>(dt);

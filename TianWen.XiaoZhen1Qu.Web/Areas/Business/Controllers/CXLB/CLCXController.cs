@@ -11,7 +11,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
     {
         public ICLCXBLL CLCXBLL { get; set; }
 
-        public ActionResult CL_JC()
+        public ActionResult CLCX_JC()
         {
             GetSession();
             return View();

@@ -212,28 +212,28 @@ function GetHeight(list, parentid) {
 //打开查询列表
 function OpenCXLB(lbid, typename, condition) {
     if (lbid === 19)
-        window.open(getRootPath() + "/Business/FCCX/FC_ZZF?LBID=" + lbid + "&" + condition);
+        window.open(getRootPath() + "/Business/FCCX/FCCX_ZZF?LBID=" + lbid + "&" + condition);
     if (lbid === 20)
-        window.open(getRootPath() + "/Business/FCCX/FC_SP?LBID=" + lbid);
+        window.open(getRootPath() + "/Business/FCCX/FCCX_SP?LBID=" + lbid);
     if (lbid === 21)
-        window.open(getRootPath() + "/Business/FCCX/FC_ESF?LBID=" + lbid);
+        window.open(getRootPath() + "/Business/FCCX/FCCX_ESF?LBID=" + lbid);
     if (lbid === 328)
-        window.open(getRootPath() + "/Business/FCCX/FC_DZF?LBID=" + lbid);
+        window.open(getRootPath() + "/Business/FCCX/FCCX_DZF?LBID=" + lbid);
     if (lbid === 289)
-        window.open(getRootPath() + "/Business/FCCX/FC_XZL?LBID=" + lbid);
+        window.open(getRootPath() + "/Business/FCCX/FCCX_XZL?LBID=" + lbid);
     if (lbid === 2931) {
-        window.open(getRootPath() + "/Business/FCCX/FC_CF?LBID=" + lbid);
+        window.open(getRootPath() + "/Business/FCCX/FCCX_CF?LBID=" + lbid);
     }
     if (lbid === 2932) {
-        window.open(getRootPath() + "/Business/FCCX/FC_CK?LBID=" + lbid);
+        window.open(getRootPath() + "/Business/FCCX/FCCX_CK?LBID=" + lbid);
     }
     if (lbid === 2933) {
-        window.open(getRootPath() + "/Business/FCCX/FC_TD?LBID=" + lbid);
+        window.open(getRootPath() + "/Business/FCCX/FCCX_TD?LBID=" + lbid);
     }
     if (lbid === 2934) {
-        window.open(getRootPath() + "/Business/FCCX/FC_CW?LBID=" + lbid);
+        window.open(getRootPath() + "/Business/FCCX/FCCX_CW?LBID=" + lbid);
     }
     if (lbid === 61) {
-        window.open(getRootPath() + "/Business/CLCX/CL_JC?LBID=" + lbid);
+        window.open(getRootPath() + "/Business/CLCX/CLCX_JC?LBID=" + lbid);
     }
 }

@@ -20,9 +20,9 @@ namespace TianWen.XiaoZhen1Qu.BLL
             try
             {
                 DataTable dt = new DataTable();
-                if (TYPE == "CL_JC")//车辆_轿车
+                if (TYPE == "CLXX_JC")//车辆_轿车
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.*,x.* from jcxx a,cl_jcjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + " order by zxgxsj desc");
+                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,cl_jcjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + " order by zxgxsj desc");
                     List<CL_JCView> list = ConvertHelper.DataTableToList<CL_JCView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -91,7 +91,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
             try
             {
                 DataTable dt = new DataTable();
-                if (TYPE == "CL_JC") //车辆_轿车
+                if (TYPE == "CLXX_JC") //车辆_轿车
                 {
                     dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,cl_jcjbxx b where a.jcxxid = b.jcxxid and id = '{0}'  order by zxgxsj desc", ID));
                     List<CL_JCView> list = ConvertHelper.DataTableToList<CL_JCView>(dt);

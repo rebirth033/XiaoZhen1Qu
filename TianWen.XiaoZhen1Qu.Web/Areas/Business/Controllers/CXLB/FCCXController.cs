@@ -11,47 +11,47 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
     {
         public IFCCXBLL FCCXBLL { get; set; }
 
-        public ActionResult FC_ZZF()
+        public ActionResult FCCX_ZZF()
         {
             GetSession();
             return View();
         }
-        public ActionResult FC_DZF()
+        public ActionResult FCCX_DZF()
         {
             GetSession();
             return View();
         }
-        public ActionResult FC_ESF()
+        public ActionResult FCCX_ESF()
         {
             GetSession();
             return View();
         }
-        public ActionResult FC_SP()
+        public ActionResult FCCX_SP()
         {
             GetSession();
             return View();
         }
-        public ActionResult FC_XZL()
+        public ActionResult FCCX_XZL()
         {
             GetSession();
             return View();
         }
-        public ActionResult FC_CF()
+        public ActionResult FCCX_CF()
         {
             GetSession();
             return View();
         }
-        public ActionResult FC_CK()
+        public ActionResult FCCX_CK()
         {
             GetSession();
             return View();
         }
-        public ActionResult FC_TD()
+        public ActionResult FCCX_TD()
         {
             GetSession();
             return View();
         }
-        public ActionResult FC_CW()
+        public ActionResult FCCX_CW()
         {
             GetSession();
             return View();
