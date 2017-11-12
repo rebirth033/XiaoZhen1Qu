@@ -15,7 +15,7 @@ function LoadDefault() {
         success: function (xml) {
             if (xml.Result === 1) {
                 LoadJBXX(xml.list[0]);
-                LoadFYXQ(xml.list[0], xml.BCMSString);
+                LoadXQ(xml.list[0], xml.BCMSString);
                 LoadXQXX(xml.list[0]);
                 LoadDTXX(xml.list[0].XQMC);
                 LoadCNXH("CLXX_JC");
@@ -57,7 +57,7 @@ function LoadJBXX(obj) {
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">表显里程：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.XSLC + '</span>');
+    html += ('<span class="span_body_left_body_right_right">' + obj.XSLC + '万公里</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">首次上牌：</span>');
@@ -118,54 +118,57 @@ function RightImg(length) {
     }
 }
 //加载车辆详情
-function LoadFYXQ(obj, BCMSString) {
+function LoadXQ(obj, BCMSString) {
     var html = "";
-    html += ('<div class="div_body_left_body_fyxq">');
-    html += ('<p class="p_body_left_body_fyxq">车辆详情</p>');
-    html += ('<div class="div_body_left_body_fyxq_xx">');
+    html += ('<div class="div_body_left_body_xq">');
+    html += ('<p class="p_body_left_body_xq">车辆详情</p>');
+    html += ('<div class="div_body_left_body_xq_xx">');
+    html += ('<div class="div_body_left_body_xq_xx_left">基本信息</div>');
+    html += ('<div class="div_body_left_body_xq_xx_right" style="width: 600px;">');
 
-    html += ('<div class="div_body_left_body_fyxq_xx_left">房屋配置</div>');
-    html += ('<div class="div_body_left_body_fyxq_xx_right" style="width: 600px;">');
-    for (var i = 0; i < fwpzarray.length; i++) {
-        html += ('<span class="span_body_left_body_fyxq_xx_right">');
-        html += ('<img class="img_body_left_body_fyxq_xx_right" src="' + getRootPath() + '/Areas/Business/Css/images/xxxx/fc/xxxx_fc_' + fwpzarray[i] + '.png")" />');
-        html += ('<span class="span_img_body_left_body_fyxq_xx_right">' + fwpzarray[i] + '</span>');
-        html += ('</span>');
-    }
+    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_right_left">上牌时间</span><span class="span_body_left_body_xq_xx_right_right">' + obj.SPNF + obj.SPYF + '</span></p>');
+    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_right_left">4S店定期保养</span><span class="span_body_left_body_xq_xx_right_right">' + obj.SFDQBY + '</span></p>');
+
+    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_right_left">表显里程</span><span class="span_body_left_body_xq_xx_right_right">' + obj.XSLC + '万公里</span></p>');
+    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_right_left">年检到期</span><span class="span_body_left_body_xq_xx_right_right">' + (obj.NJDQNF === null ? "未填写" : obj.NJDQNF) + '</span></p>');
+
+    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_right_left">排量</span><span class="span_body_left_body_xq_xx_right_right">' + obj.PL + '</span></p>');
+    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_right_left">商业险到期</span><span class="span_body_left_body_xq_xx_right_right">' + obj.SYXDQ + '</span></p>');
+
     html += ('</div>');
     html += ('</div>');
-    html += ('<div class="div_body_left_body_fyxq_xx">');
-    html += ('<div class="div_body_left_body_fyxq_xx_left">房源描述</div>');
-    html += ('<div class="div_body_left_body_fyxq_xx_right fyms">');
+    html += ('<div class="div_body_left_body_xq_xx">');
+    html += ('<div class="div_body_left_body_xq_xx_left">车辆描述</div>');
+    html += ('<div class="div_body_left_body_xq_xx_right fyms" style="padding-left:32px;">');
     html += (BCMSString);
     html += ('</div>');
     html += ('</div>');
-    html += ('<div id="div_body_left_body_fyxq_xx" class="div_body_left_body_fyxq_xx" style="overflow:hidden;">');
-    html += ('<ul class="ul_body_left_body_fyxq_xx">');
+    html += ('<div id="div_body_left_body_xq_xx" class="div_body_left_body_xq_xx" style="overflow:hidden;">');
+    html += ('<ul class="ul_body_left_body_xq_xx">');
     for (var i = 0; i < obj.PHOTOS.length; i++) {
-        html += ('<li class="li_body_left_body_fyxq_xx">');
-        html += ('<img class="img_body_left_body_fyxq_xx" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[i].PHOTONAME + "?j=" + Math.random() + '" />');
+        html += ('<li class="li_body_left_body_xq_xx">');
+        html += ('<img class="img_body_left_body_xq_xx" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[i].PHOTONAME + "?j=" + Math.random() + '" />');
         html += ('</li>');
     }
     html += ('</ul>');
     html += ('</div>');
 
-    html += ('<div id="div_body_left_body_fyxq_zk" onclick="ToggleImg(' + obj.PHOTOS.length + ')" class="div_body_left_body_fyxq_zk">展开更多图片 共（' + obj.PHOTOS.length + '）张</div>');
+    html += ('<div id="div_body_left_body_xq_zk" onclick="ToggleImg(' + obj.PHOTOS.length + ')" class="div_body_left_body_xq_zk">展开更多图片 共（' + obj.PHOTOS.length + '）张</div>');
     html += ('</div>');
     $("#div_body_left").append(html);
     if (obj.PHOTOS.length > 4) {
-        $("#div_body_left_body_fyxq_xx").css("height", "530px");
-        $("#div_body_left_body_fyxq_zk").css("display", "block");
+        $("#div_body_left_body_xq_xx").css("height", "530px");
+        $("#div_body_left_body_xq_zk").css("display", "block");
     }
 }
 //伸缩图片
 function ToggleImg(length) {
-    if ($("#div_body_left_body_fyxq_zk").html().indexOf("展开") !== -1) {
-        $("#div_body_left_body_fyxq_xx").css("overflow", "visible").css("height", "auto");
-        $("#div_body_left_body_fyxq_zk").html("收起更多图片 共（" + length + "）张");
+    if ($("#div_body_left_body_xq_zk").html().indexOf("展开") !== -1) {
+        $("#div_body_left_body_xq_xx").css("overflow", "visible").css("height", "auto");
+        $("#div_body_left_body_xq_zk").html("收起更多图片 共（" + length + "）张");
     } else {
-        $("#div_body_left_body_fyxq_xx").css("overflow", "hidden").css("height", "530px");
-        $("#div_body_left_body_fyxq_zk").html("展开更多图片 共（" + length + "）张");
+        $("#div_body_left_body_xq_xx").css("overflow", "hidden").css("height", "530px");
+        $("#div_body_left_body_xq_zk").html("展开更多图片 共（" + length + "）张");
     }
 }
 //加载小区信息
