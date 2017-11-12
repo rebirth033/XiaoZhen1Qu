@@ -236,4 +236,7 @@ function OpenCXLB(lbid, typename, condition) {
     if (lbid === 61) {
         window.open(getRootPath() + "/Business/CLCX/CLCX_JC?LBID=" + lbid);
     }
+    if (lbid === 68) {
+        window.open(getRootPath() + "/Business/CLCX/CLCX_HC?LBID=" + lbid);
+    }
 }

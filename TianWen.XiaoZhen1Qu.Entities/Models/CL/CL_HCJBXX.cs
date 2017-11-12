@@ -23,12 +23,6 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string JCXXID { get; set; }
 
         /// <summary>
-        /// 供求
-        /// </summary>
-        [Property]
-        public virtual string GQ { get; set; }
-
-        /// <summary>
         /// 类别
         /// </summary>
         [Property]
@@ -47,10 +41,10 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string XSLC { get; set; }
 
         /// <summary>
-        /// 出厂年限
+        /// 出厂年份
         /// </summary>
         [Property]
-        public virtual string CCNX { get; set; }
+        public virtual string CCNF { get; set; }
 
         /// <summary>
         /// 出厂月份
