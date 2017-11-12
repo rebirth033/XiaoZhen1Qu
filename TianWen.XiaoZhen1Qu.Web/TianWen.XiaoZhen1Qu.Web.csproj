@@ -1401,6 +1401,7 @@
     <Compile Include="Areas\Business\Controllers\HTGL\WDXJController.cs" />
     <Compile Include="Areas\Business\Controllers\HTGL\WZCXController.cs" />
     <Compile Include="Areas\Business\Controllers\HTGL\XXGLController.cs" />
+    <Compile Include="Areas\Business\Controllers\XXXX\CLXXController.cs" />
     <Compile Include="Areas\Business\Controllers\XXXX\FCXXController.cs" />
     <Compile Include="Areas\Business\Controllers\OTHER\YHDLController.cs" />
     <Compile Include="Areas\Business\Controllers\HTGL\HTGLController.cs" />

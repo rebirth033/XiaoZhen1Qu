@@ -53,32 +53,31 @@ function LoadJBXX(obj) {
     html += ('</div>');
     html += ('<div class="div_body_left_body_right">');
     html += ('<p class="p_body_left_body_right_first">');
-    html += ('<span class="span_body_left_body_right_zj">' + obj.ZJ + '</span><span class="span_body_left_body_right_zjdw">元/月</span>');
-    html += ('<span class="span_body_left_body_right_yffs">' + obj.YFFS + '</span>');
+    html += ('<span class="span_body_left_body_right_zj">' + obj.JG + '</span><span class="span_body_left_body_right_zjdw">万元</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">出租方式：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.CZFS + '</span>');
+    html += ('<span class="span_body_left_body_right_left">表显里程：</span>');
+    html += ('<span class="span_body_left_body_right_right">' + obj.XSLC + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">房屋类型：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.S + '室' + obj.T + '厅' + obj.W + '卫 ' + obj.PFM + '平 ' + obj.ZXQK + '</span>');
+    html += ('<span class="span_body_left_body_right_left">首次上牌：</span>');
+    html += ('<span class="span_body_left_body_right_right">' + obj.SPNF + obj.SPYF + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">朝向楼层：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.CX + ' ' + obj.C + '层/共' + obj.GJC + '层</span>');
+    html += ('<span class="span_body_left_body_right_left">排量：</span>');
+    html += ('<span class="span_body_left_body_right_right">1.6L</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">所在小区：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.XQMC + '</span>');
+    html += ('<span class="span_body_left_body_right_left">变速箱：</span>');
+    html += ('<span class="span_body_left_body_right_right">自动</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">所属区域：</span>');
     html += ('<span class="span_body_left_body_right_right">滨湖新区 滨湖世纪城</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">详细地址：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.XQDZ + '</span>');
+    html += ('<span class="span_body_left_body_right_left">看车地址：</span>');
+    html += ('<span class="span_body_left_body_right_right">' + obj.KCDZ + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right_lxdh">');
     html += ('<img class="img_body_left_body_right_lxdh" src="' + getRootPath() + '/Areas/Business/Css/images/lxdh.png" />' + obj.LXDH);
@@ -118,37 +117,23 @@ function RightImg(length) {
         $("#img_body_left_body_left_show").attr("src", $("#ul_body_left_body_left_list").find(".li_body_left_body_left_list_tp:eq(" + right + ")").find("img")[0].src);
     }
 }
-//加载房源详情
+//加载车辆详情
 function LoadFYXQ(obj, BCMSString) {
     var html = "";
     html += ('<div class="div_body_left_body_fyxq">');
-    html += ('<p class="p_body_left_body_fyxq">房源详情</p>');
+    html += ('<p class="p_body_left_body_fyxq">车辆详情</p>');
     html += ('<div class="div_body_left_body_fyxq_xx">');
-    if (obj.FWPZ !== null) {
-        var fwpzarray = obj.FWPZ.split(',');
 
-        html += ('<div class="div_body_left_body_fyxq_xx_left">房屋配置</div>');
-        html += ('<div class="div_body_left_body_fyxq_xx_right" style="width: 600px;">');
-        for (var i = 0; i < fwpzarray.length; i++) {
-            html += ('<span class="span_body_left_body_fyxq_xx_right">');
-            html += ('<img class="img_body_left_body_fyxq_xx_right" src="' + getRootPath() + '/Areas/Business/Css/images/xxxx/fc/xxxx_fc_' + fwpzarray[i] + '.png")" />');
-            html += ('<span class="span_img_body_left_body_fyxq_xx_right">' + fwpzarray[i] + '</span>');
-            html += ('</span>');
-        }
-        html += ('</div>');
-        html += ('</div>');
+    html += ('<div class="div_body_left_body_fyxq_xx_left">房屋配置</div>');
+    html += ('<div class="div_body_left_body_fyxq_xx_right" style="width: 600px;">');
+    for (var i = 0; i < fwpzarray.length; i++) {
+        html += ('<span class="span_body_left_body_fyxq_xx_right">');
+        html += ('<img class="img_body_left_body_fyxq_xx_right" src="' + getRootPath() + '/Areas/Business/Css/images/xxxx/fc/xxxx_fc_' + fwpzarray[i] + '.png")" />');
+        html += ('<span class="span_img_body_left_body_fyxq_xx_right">' + fwpzarray[i] + '</span>');
+        html += ('</span>');
     }
-    if (obj.FWLD !== null) {
-        var fwldarray = obj.FWLD.split(',');
-        html += ('<div class="div_body_left_body_fyxq_xx">');
-        html += ('<div class="div_body_left_body_fyxq_xx_left">房屋亮点</div>');
-        html += ('<div class="div_body_left_body_fyxq_xx_right">');
-        for (var i = 0; i < fwldarray.length; i++) {
-            html += ('<span class="span_body_left_body_fyxq_xx_right_fwld">' + fwldarray[i] + '</span>');
-        }
-        html += ('</div>');
-        html += ('</div>');
-    }
+    html += ('</div>');
+    html += ('</div>');
     html += ('<div class="div_body_left_body_fyxq_xx">');
     html += ('<div class="div_body_left_body_fyxq_xx_left">房源描述</div>');
     html += ('<div class="div_body_left_body_fyxq_xx_right fyms">');
