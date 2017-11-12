@@ -3,7 +3,7 @@ $(document).ready(function () {
     BindConditionNav();
     $(".li_condition_head:eq(0)").each(function () { $(this).css("background-color", "#ffffff"); });
     BindBodyNav();
-    LoadFCCX_SPCZCondition();
+    LoadCL_JCCondition();
     LoadHot("CL_JC");
     LoadBody("CL_JC", currentIndex);
 });
@@ -32,39 +32,20 @@ function BindBodyNav() {
         $(this).css("border-bottom", "2px solid #5bc0de").css("color", "#5bc0de").css("font-weight", "700");
     });
 }
-//加载出租条件
-function LoadFCCX_SPCZCondition() {
+//加载条件
+function LoadCL_JCCondition() {
     $("#div_condition_body").html('');
-    var dq = "地区,不限,鼓楼,台江,晋安,仓山,闽侯,福清,马尾,长乐,连江,平潭,罗源,闽清,永泰".split(',');
-    var fl = "类型,不限,写字楼,商务中心".split(',');
-    var zj = "租金,不限,2000元/月以下,2000-6000元/月,6000-16000元/月,16000元/月以上".split(',');
-    var mj = "面积,不限,100平米以下,100-200平米,200-300平米,300-500平米,500-800平米,800-1000平米,1000-2000平米,2000平米以上".split(',');
-    LoadCondition(dq, "DQ");
-    LoadCondition(zj, "ZJ");
-    $("#ul_condition_body_ZJ").append("<li><input id='input_zj_q' class='input_zj' type='text' /><span class='span_zj'>元</span> - <input class='input_zj' id='input_zj_z' type='text' /><span class='span_zj'>元</span></li>");
-    LoadCondition(mj, "MJ");
-    LoadCondition(fl, "FL");
-    $("#ul_condition_body_DQ").find(".li_condition_body").bind("click", SelectCondition);
-    $("#ul_condition_body_FL").find(".li_condition_body").bind("click", SelectCondition);
-    $("#ul_condition_body_ZJ").find(".li_condition_body").bind("click", SelectCondition);
-    $("#ul_condition_body_MJ").find(".li_condition_body").bind("click", SelectCondition);
-}
-//加载出售条件
-function LoadFCCX_SPCSCondition() {
-    $("#div_condition_body").html('');
-    var dq = "地区,不限,鼓楼,台江,晋安,仓山,闽侯,福清,马尾,长乐,连江,平潭,罗源,闽清,永泰".split(',');
-    var fl = "类型,不限,写字楼,商务中心".split(',');
-    var sj = "售价,不限,200万元以下,200-300万元,300-500万元,500-800万元,800-1200万元,1200-2000万元,2000万元以上".split(',');
-    var mj = "面积,不限,100平米以下,100-200平米,200-300平米,300-500平米,500-800平米,800-1000平米,1000-2000平米,2000平米以上".split(',');
-    LoadCondition(dq, "DQ");
-    LoadCondition(sj, "SJ");
-    $("#ul_condition_body_SJ").append("<li><input id='input_zj_q' class='input_zj' type='text' /><span class='span_zj'>元</span> - <input class='input_zj' id='input_zj_z' type='text' /><span class='span_zj'>元</span></li>");
-    LoadCondition(mj, "MJ");
-    LoadCondition(fl, "FL");
-    $("#ul_condition_body_DQ").find(".li_condition_body").bind("click", SelectCondition);
-    $("#ul_condition_body_FL").find(".li_condition_body").bind("click", SelectCondition);
-    $("#ul_condition_body_SJ").find(".li_condition_body").bind("click", SelectCondition);
-    $("#ul_condition_body_MJ").find(".li_condition_body").bind("click", SelectCondition);
+    var pp = "品牌,不限,大众,本田,别克,丰田,福特,日产,奇瑞,宝马,现代,奥迪,马自达,比亚迪,铃木,雪铁龙,吉利,奔驰".split(',');
+    var cx = "车系,不限,雅阁,奥德赛,飞度,CR-V,思域,锋范经典,艾力绅,杰德,锋范,XR-V,思铂睿,歌诗图,凌派,缤智".split(',');
+    var jg = "价格,不限,4万元以内,4-6万元,6-8万元,8万元以上".split(',');
+    LoadCondition(pp, "PP");
+    LoadCondition(cx, "CX");
+    LoadCondition(jg, "JG");
+    $("#ul_condition_body_JG").append("<li><input id='input_zj_q' class='input_zj' type='text' /><span class='span_zj'>元</span> - <input class='input_zj' id='input_zj_z' type='text' /><span class='span_zj'>元</span></li>");
+
+    $("#ul_condition_body_PP").find(".li_condition_body").bind("click", SelectCondition);
+    $("#ul_condition_body_CX").find(".li_condition_body").bind("click", SelectCondition);
+    $("#ul_condition_body_JG").find(".li_condition_body").bind("click", SelectCondition);
 }
 //选择条件
 function SelectCondition() {
@@ -141,14 +122,10 @@ function HasCondition() {
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = "DQ:" + GetCondition("DQ") + ",FL:" + GetCondition("FL") + ",MJ:" + GetCondition("MJ") + ",GQ:" + GetNavCondition();
-    if (GetNavCondition() === "出租")
-        condition +=  ",ZJ:" + GetCondition("ZJ");
-    else
-        condition +=  ",SJ:" + GetCondition("SJ");
+    var condition = "PP:" + GetCondition("PP") + ",CX:" + GetCondition("CX") + ",JG:" + GetCondition("JG");
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FCCX/LoadFCXX",
+        url: getRootPath() + "/Business/CLCX/LoadCLXX",
         dataType: "json",
         data:
         {
@@ -162,10 +139,7 @@ function LoadBody(TYPE, PageIndex) {
                 $("#ul_body_left").html('');
                 LoadPage(TYPE, xml.PageCount);
                 for (var i = 0; i < xml.list.length; i++) {
-                    if (GetNavCondition() === "出租")
-                        LoadCZInfo(xml.list[i]);
-                    else
-                        LoadCSInfo(xml.list[i]);
+                    LoadCL_JCInfo(xml.list[i]);
                 }
             }
         },
@@ -174,8 +148,8 @@ function LoadBody(TYPE, PageIndex) {
         }
     });
 }
-//加载出租单条信息
-function LoadCZInfo(obj) {
+//加载车辆_轿车信息
+function LoadCL_JCInfo(obj) {
     var html = "";
     html += ('<li class="li_body_left">');
     html += ('<div class="div_li_body_left_left">');
@@ -189,25 +163,6 @@ function LoadCZInfo(obj) {
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
     html += ('<p class="p_li_body_left_right"><span class="span_zj">' + obj.ZJ + '</span>元/月</p>');
-    html += ('</div>');
-    html += ('</li>');
-    $("#ul_body_left").append(html);
-}
-//加载出售单条信息
-function LoadCSInfo(obj) {
-    var html = "";
-    html += ('<li class="li_body_left">');
-    html += ('<div class="div_li_body_left_left">');
-    html += ('<img class="img_li_body_left" onclick="OpenXXXX(\'CL_JC\',\'' + obj.ID + '\')" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<div class="div_img_li_body_left_count"><span>' + obj.PHOTOS.length + '图</span></div>');
-    html += ('</div>');
-    html += ('<div class="div_li_body_left_center">');
-    html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'CL_JC\',\'' + obj.ID + '\')">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_left_center_cs font_size16">' + obj.MJ + '平米</p>');
-    html += ('<p class="p_li_body_left_center_dz font_size16">' + '[' + obj.QY + '-' + obj.DD + '-' + obj.JTDZ + '] ' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
-    html += ('</div>');
-    html += ('<div class="div_li_body_left_right">');
-    html += ('<p class="p_li_body_left_right"><span class="span_zj">' + obj.SJ + '</span>万元</p>');
     html += ('</div>');
     html += ('</li>');
     $("#ul_body_left").append(html);

@@ -17,7 +17,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return View();
         }
 
-        public JsonResult LoadFCXX()
+        public JsonResult LoadCLXX()
         {
             return Json(CLCXBLL.LoadCLXX(Request["TYPE"], Request["Condition"], Request["PageIndex"], Request["PageSize"]));
         }

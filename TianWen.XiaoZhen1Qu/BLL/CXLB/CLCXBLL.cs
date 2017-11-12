@@ -6,7 +6,7 @@ using System.Text;
 using CommonClassLib.Helper;
 using TianWen.Framework.Log;
 using TianWen.XiaoZhen1Qu.Entities.Models;
-using TianWen.XiaoZhen1Qu.Entities.ViewModels.FC;
+using TianWen.XiaoZhen1Qu.Entities.ViewModels.CL;
 using TianWen.XiaoZhen1Qu.Entities.ViewModels.GY;
 using TianWen.XiaoZhen1Qu.Interface;
 
@@ -20,9 +20,9 @@ namespace TianWen.XiaoZhen1Qu.BLL
             try
             {
                 DataTable dt = new DataTable();
-                if (TYPE == "CL_JC")//房产_整租房
+                if (TYPE == "CL_JC")//车辆_轿车
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.*,x.* from jcxx a,CL_JCjbxx b  left join codes_fuzhou_xqjbxx x on b.xqmc = x.xqmc where a.jcxxid = b.jcxxid " + GetConditin(Condition) + " order by zxgxsj desc");
+                    dt = DAO.Repository.GetDataTable("select a.*,b.*,x.* from jcxx a,cl_jcjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + " order by zxgxsj desc");
                     List<CL_JCView> list = ConvertHelper.DataTableToList<CL_JCView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -91,9 +91,9 @@ namespace TianWen.XiaoZhen1Qu.BLL
             try
             {
                 DataTable dt = new DataTable();
-                if (TYPE == "CL_JC") //房产_整租房
+                if (TYPE == "CL_JC") //车辆_轿车
                 {
-                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.*,x.* from jcxx a,CL_JCjbxx b left join codes_fuzhou_xqjbxx x on b.xqmc = x.xqmc where a.jcxxid = b.jcxxid and id = '{0}'  order by zxgxsj desc", ID));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,cl_jcjbxx b where a.jcxxid = b.jcxxid and id = '{0}'  order by zxgxsj desc", ID));
                     List<CL_JCView> list = ConvertHelper.DataTableToList<CL_JCView>(dt);
                     foreach (var jcxx in list)
                     {

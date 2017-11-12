@@ -31,7 +31,7 @@ function GetHeadNav() {
                 for (var i = 0; i < xml.list.length; i++) {
                     if (xml.list[i].LBID == getUrlParam("LBID")) {
                         html += ('<li class="li_nav_font">' + xml.xzq + xml.list[i].LBNAME + '</li>');
-                        $("#li_body_head_first").html(xml.xzq + xml.list[i].LBNAME + "出租");
+                        $("#li_body_head_first").html(xml.xzq + xml.list[i].LBNAME + "");
                     }
                 }
                 html += ('</ul>');

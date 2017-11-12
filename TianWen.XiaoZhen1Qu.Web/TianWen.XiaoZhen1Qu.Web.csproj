@@ -161,6 +161,7 @@
     <Content Include="Areas\Business\Css\BZZX\BZZX_SY_ZHMM.css" />
     <Content Include="Areas\Business\Css\BZZX\BZZX_WZJY.css" />
     <Content Include="Areas\Business\Css\Common\Head.css" />
+    <Content Include="Areas\Business\Css\CXLB\CLCX.css" />
     <Content Include="Areas\Business\Css\CXLB\FCCX.css" />
     <Content Include="Areas\Business\Css\HTFB\CL\CL_GCC.css" />
     <Content Include="Areas\Business\Css\HTFB\CL\CL_HC.css" />
@@ -1720,6 +1721,7 @@
     <Content Include="Areas\Business\Views\FCXX\FC_CK.cshtml" />
     <Content Include="Areas\Business\Views\FCXX\FC_TD.cshtml" />
     <Content Include="Areas\Business\Views\CLCX\CL_JC.cshtml" />
+    <Content Include="Areas\Business\Views\Shared\SY.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
