@@ -19,6 +19,10 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         {
             return View();
         }
+        public ActionResult CLXX_KC()
+        {
+            return View();
+        }
 
         public JsonResult LoadCLXX()
         {

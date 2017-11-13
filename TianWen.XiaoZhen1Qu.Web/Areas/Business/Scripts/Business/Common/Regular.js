@@ -35,9 +35,9 @@ function ValidateNumber(value) {
     return true;
 }
 
-//一到两位小数的正实数验证
+//一到四位小数的正实数验证
 function ValidateDecimal(value) {
-    var zz = /^[0-9]+(.[0-9]{1,2})?$/g;
+    var zz = /^[0-9]+(.[0-9]{1,4})?$/g;
     if (value.length > 0) {
         return zz.test(value);
     }

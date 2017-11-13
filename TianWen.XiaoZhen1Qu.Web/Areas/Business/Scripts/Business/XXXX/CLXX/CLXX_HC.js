@@ -16,8 +16,6 @@ function LoadDefault() {
             if (xml.Result === 1) {
                 LoadJBXX(xml.list[0]);
                 LoadXQ(xml.list[0], xml.BCMSString);
-                LoadXQXX(xml.list[0]);
-                LoadDTXX(xml.list[0].XQMC);
                 LoadCNXH("CLXX_HC");
                 LoadGRXX(xml.grxxlist[0]);
                 LoadJJRTJFY("CLXX_HC");
@@ -32,7 +30,7 @@ function LoadDefault() {
 function LoadJBXX(obj) {
     var html = "";
     html += ('<div class="div_body_left_head">');
-    html += ('<p class="p_div_body_left_head_bt">' + obj.BT + '</p>');
+    html += ('<p class="p_div_body_left_head_bt">' + (obj.BT.length > 30 ? (obj.BT.substr(0, 35) + '...') : obj.BT) + '</p>');
     html += ('<p class="p_div_body_left_head_ll">11月5日 22:36 3次浏览 </p>');
     html += ('</div>');
     html += ('<div class="div_body_left_body">');
@@ -56,28 +54,20 @@ function LoadJBXX(obj) {
     html += ('<span class="span_body_left_body_right_zj">' + obj.JG + '</span><span class="span_body_left_body_right_zjdw">万元</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
+    html += ('<span class="span_body_left_body_right_left">出厂年份：</span>');
+    html += ('<span class="span_body_left_body_right_right">' + obj.CCNF + '</span>');
+    html += ('</p>');
+    html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">表显里程：</span>');
     html += ('<span class="span_body_left_body_right_right">' + obj.XSLC + '万公里</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">首次上牌：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.SPNF + obj.SPYF + '</span>');
-    html += ('</p>');
-    html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">排量：</span>');
-    html += ('<span class="span_body_left_body_right_right">1.6L</span>');
-    html += ('</p>');
-    html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">变速箱：</span>');
-    html += ('<span class="span_body_left_body_right_right">自动</span>');
-    html += ('</p>');
-    html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">所属区域：</span>');
-    html += ('<span class="span_body_left_body_right_right">滨湖新区 滨湖世纪城</span>');
+    html += ('<span class="span_body_left_body_right_left">额定载重：</span>');
+    html += ('<span class="span_body_left_body_right_right">' + obj.EDZZ + '吨</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">看车地址：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.KCDZ + '</span>');
+    html += ('<span class="span_body_left_body_right_right">' + obj.QY + '-' + obj.DD + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right_lxdh">');
     html += ('<img class="img_body_left_body_right_lxdh" src="' + getRootPath() + '/Areas/Business/Css/images/lxdh.png" />' + obj.LXDH);
@@ -126,14 +116,19 @@ function LoadXQ(obj, BCMSString) {
     html += ('<div class="div_body_left_body_xq_xx_left">基本信息</div>');
     html += ('<div class="div_body_left_body_xq_xx_right" style="width: 600px;">');
 
-    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_right_left">上牌时间</span><span class="span_body_left_body_xq_xx_right_right">' + obj.SPNF + obj.SPYF + '</span></p>');
-    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_right_left">4S店定期保养</span><span class="span_body_left_body_xq_xx_right_right">' + obj.SFDQBY + '</span></p>');
+    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_right_left">出厂时间</span><span class="span_body_left_body_xq_xx_right_right">' + obj.CCNF + obj.CCYF + '</span></p>');
+    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_right_left">表显里程</span><span class="span_body_left_body_xq_xx_right_right">' + obj.XSLC + '</span></p>');
 
-    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_right_left">表显里程</span><span class="span_body_left_body_xq_xx_right_right">' + obj.XSLC + '万公里</span></p>');
-    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_right_left">年检到期</span><span class="span_body_left_body_xq_xx_right_right">' + (obj.NJDQNF === null ? "未填写" : obj.NJDQNF) + '</span></p>');
+    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_right_left">马力</span><span class="span_body_left_body_xq_xx_right_right">120匹</span></p>');
+    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_right_left">变速箱档位数</span><span class="span_body_left_body_xq_xx_right_right">5</span></p>');
 
-    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_right_left">排量</span><span class="span_body_left_body_xq_xx_right_right">' + obj.PL + '</span></p>');
-    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_right_left">商业险到期</span><span class="span_body_left_body_xq_xx_right_right">' + obj.SYXDQ + '</span></p>');
+    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_right_left">整车重量</span><span class="span_body_left_body_xq_xx_right_right">4.49吨</span></p>');
+    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_right_left">额定载重</span><span class="span_body_left_body_xq_xx_right_right">' + obj.EDZZ + '吨</span></p>');
+
+    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_right_left">货箱长度</span><span class="span_body_left_body_xq_xx_right_right">4.2米</span></p>');
+    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_right_left">货箱宽度</span><span class="span_body_left_body_xq_xx_right_right">2.1米</span></p>');
+
+    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_right_left">货箱高度</span><span class="span_body_left_body_xq_xx_right_right">2米</span></p>');
 
     html += ('</div>');
     html += ('</div>');
@@ -170,83 +165,6 @@ function ToggleImg(length) {
         $("#div_body_left_body_xq_xx").css("overflow", "hidden").css("height", "530px");
         $("#div_body_left_body_xq_zk").html("展开更多图片 共（" + length + "）张");
     }
-}
-//加载小区信息
-function LoadXQXX(obj) {
-    var html = "";
-    html += ('<div class="div_body_left_body_xqxx">');
-    html += ('<p class="p_body_left_body_xqxx">小区信息</p>');
-    html += ('<ul class="ul_body_left_body_xqxx">');
-    html += ('<li class="li_body_left_body_xqxx">');
-    html += ('<span class="span_body_left_body_xqxx_left">小区名：</span>');
-    html += ('<span class="span_body_left_body_xqxx_right">' + obj.XQMC === null ? "" : obj.XQMC + '</span>');
-    html += ('</li>');
-    html += ('<li class="li_body_left_body_xqxx">');
-    html += ('<span class="span_body_left_body_xqxx_left">开发商：</span>');
-    html += ('<span class="span_body_left_body_xqxx_right">' + (obj.KFS === null ? "" : obj.KFS) + '</span>');
-    html += ('</li>');
-    html += ('<li class="li_body_left_body_xqxx">');
-    html += ('<span class="span_body_left_body_xqxx_left">物业公司：</span>');
-    html += ('<span class="span_body_left_body_xqxx_right">' + (obj.WYGS === null ? "" : obj.WYGS) + '</span>');
-    html += ('</li>');
-    html += ('<li class="li_body_left_body_xqxx">');
-    html += ('<span class="span_body_left_body_xqxx_left">物业类型：</span>');
-    html += ('<span class="span_body_left_body_xqxx_right">' + (obj.WYLX === null ? "" : obj.WYLX) + '</span>');
-    html += ('</li>');
-    html += ('<li class="li_body_left_body_xqxx">');
-    html += ('<span class="span_body_left_body_xqxx_left">总建面积：</span>');
-    html += ('<span class="span_body_left_body_xqxx_right">' + (obj.ZJMJ === null ? "" : obj.ZJMJ) + '</span>');
-    html += ('</li>');
-    html += ('<li class="li_body_left_body_xqxx">');
-    html += ('<span class="span_body_left_body_xqxx_left">总户数：</span>');
-    html += ('<span class="span_body_left_body_xqxx_right">' + (obj.ZHS === null ? "" : obj.ZHS) + '</span>');
-    html += ('</li>');
-    html += ('<li class="li_body_left_body_xqxx">');
-    html += ('<span class="span_body_left_body_xqxx_left">建筑年代：</span>');
-    html += ('<span class="span_body_left_body_xqxx_right">' + (obj.JZND === null ? "" : obj.JZND) + '</span>');
-    html += ('</li>');
-    html += ('<li class="li_body_left_body_xqxx">');
-    html += ('<span class="span_body_left_body_xqxx_left">容积率：</span>');
-    html += ('<span class="span_body_left_body_xqxx_right">' + (obj.RJL === null ? "" : obj.RJL) + '</span>');
-    html += ('</li>');
-    html += ('<li class="li_body_left_body_xqxx">');
-    html += ('<span class="span_body_left_body_xqxx_left">停车位：</span>');
-    html += ('<span class="span_body_left_body_xqxx_right">' + (obj.TCW === null ? "" : obj.TCW) + '</span>');
-    html += ('</li>');
-    html += ('<li class="li_body_left_body_xqxx">');
-    html += ('<span class="span_body_left_body_xqxx_left">绿化率：</span>');
-    html += ('<span class="span_body_left_body_xqxx_right">' + (obj.LHL === null ? "" : obj.LHL) + '</span>');
-    html += ('</li>');
-    html += ('</ul>');
-    html += ('<div id="div_body_left_body_xqxx_dtxx" class="div_body_left_body_xqxx_dtxx">');
-    html += ('<p class="p_body_left_body_xqxx_dtxx">小区地址</p>');
-    html += ('<div style="width: 780px; height: 300px; border: 1px solid gray" id="container"></div>');
-    html += ('</div>');
-    html += ('</div>');
-    $("#div_body_left").append(html);
-}
-//加载地图信息
-function LoadDTXX(XQMC) {
-    var map = new BMap.Map("container");//创建地图实例
-    map.centerAndZoom("福州市", 15);//创建点坐标,地图初始化
-    map.enableScrollWheelZoom(true);//允许鼠标滑轮放大缩小 
-    map.enableContinuousZoom(true);//允许惯性拖拽
-    map.addControl(new BMap.NavigationControl({ isOpen: true, anchor: BMAP_ANCHOR_BOTTOM_LEFT }));  //添加默认缩放平移控件,右上角打开
-    map.addControl(new BMap.OverviewMapControl({ isOpen: true, anchor: BMAP_ANCHOR_BOTTOM_RIGHT })); //添加默认缩略地图控件,右下角打开
-    searchByStationName(map, XQMC);
-};
-//地址定位
-function searchByStationName(map, XQMC) {
-    map.clearOverlays();//清空原来的标注
-    var localSearch = new BMap.LocalSearch(map);
-    localSearch.enableAutoViewport(); //允许自动调节窗体大小
-    localSearch.setSearchCompleteCallback(function (searchResult) {
-        var poi = searchResult.getPoi(0);
-        map.centerAndZoom(poi.point, 13);
-        var marker = new BMap.Marker(new BMap.Point(poi.point.lng, poi.point.lat));  // 创建标注，为要查询的地址对应的经纬度
-        map.addOverlay(marker);
-    });
-    localSearch.search(XQMC);
 }
 //加载猜你喜欢
 function LoadCNXH(TYPE) {

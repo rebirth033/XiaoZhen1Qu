@@ -7,16 +7,16 @@
     $("#XSLC").bind("focus", InfoXSLC);
 });
 //验证出厂年限
-function ValidateHCCCNX() {
-    if (!ValidateSelect("HCCCNX", "CCNX", "请选择出厂年份")) return false;
-    if (!ValidateSelect("HCCCNX", "CCYF", "请选择出厂月份")) return false;
+function ValidateHCCCNF() {
+    if (!ValidateSelect("HCCCNF", "CCNF", "请选择出厂年份")) return false;
+    if (!ValidateSelect("HCCCNF", "CCYF", "请选择出厂月份")) return false;
     return true;
 }
 //验证所有
 function ValidateAll() {
     if (ValidateSelect("HCLB", "LB", "忘记选择车型啦")
            & ValidateSelect("HCPP", "PP", "忘记选择品牌啦")
-           & ValidateHCCCNX()
+           & ValidateHCCCNF()
            & ValidateEDZZ()
            & ValidateXSLC()
            & ValidateBCMS("BCMS", "忘记填写补充描述啦")
@@ -43,7 +43,7 @@ function ValidateEDZZ() {
         } else {
             $("#divEDZZTip").css("display", "block");
             $("#divEDZZTip").attr("class", "Warn");
-            $("#divEDZZTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />额定载重请填写数字');
+            $("#divEDZZTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />额定载重请填写数字,可保留一到四位小数');
             $("#spanEDZZ").css("border-color", "#fd634f");
             return false;
         }

@@ -26,6 +26,8 @@ namespace TianWen.XiaoZhen1Qu.Entities.ViewModels.CL
         public string CCNF { get; set; }
         public string CCYF { get; set; }
         public string EDZZ { get; set; }
+        public string QY { get; set; }
+        public string DD { get; set; }
         //图片
         public IList<PHOTOS> PHOTOS { get; set; }
 

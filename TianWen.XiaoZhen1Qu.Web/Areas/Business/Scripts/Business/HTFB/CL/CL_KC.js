@@ -73,17 +73,29 @@ function BindClick(type) {
         if (type === "CX") {
             LoadKCCX();
         }
-        if (type.indexOf("NF") !== -1) {
-            if (type === "SPNF")
-                LoadCODESByTYPENAME("出厂年限", type, "CODES_CL", Bind, "SCSPSJ", "SPNF", "");
-            else
-                LoadCODESByTYPENAME("出厂年限", type, "CODES_CL");
+        if (type === "SPNF") {
+            LoadCODESByTYPENAME("出厂年份", type, "CODES_CL", Bind, "SCSPSJ", "SPNF", "");
         }
-        if (type.indexOf("YF") !== -1) {
-            if (type === "SPYF")
-                LoadCODESByTYPENAME("出厂月份", type, "CODES_CL", Bind, "SCSPSJ", "SPYF", "");
-            else
-                LoadCODESByTYPENAME("出厂月份", type, "CODES_CL");
+        if (type === "SPYF") {
+            LoadCODESByTYPENAME("出厂月份", type, "CODES_CL", Bind, "SCSPSJ", "SPYF", "");
+        }
+        if (type === "NJDQNF") {
+            LoadCODESByTYPENAME("到期年份", type, "CODES_CL");
+        }
+        if (type === "NJDQYF") {
+            LoadCODESByTYPENAME("出厂月份", type, "CODES_CL");
+        }
+        if (type === "JQXDQNF") {
+            LoadCODESByTYPENAME("到期年份", type, "CODES_CL");
+        }
+        if (type === "JQXDQYF") {
+            LoadCODESByTYPENAME("出厂月份", type, "CODES_CL");
+        }
+        if (type === "SYXDQNF") {
+            LoadCODESByTYPENAME("到期年份", type, "CODES_CL");
+        }
+        if (type === "SYXDQYF") {
+            LoadCODESByTYPENAME("出厂月份", type, "CODES_CL");
         }
     });
 }

@@ -521,6 +521,7 @@
     <Content Include="Areas\Business\Css\HTFB\XXYL\XXYL_ZLAM.css" />
     <Content Include="Areas\Business\Css\Other\YHDL.css" />
     <Content Include="Areas\Business\Css\HTGL\HTGL.css" />
+    <Content Include="Areas\Business\Css\XXXX\CL\CLXX_KC.css" />
     <Content Include="Areas\Business\Css\XXXX\CL\CLXX_HC.css" />
     <Content Include="Areas\Business\Css\XXXX\CL\CLXX_JC.css" />
     <Content Include="Areas\Business\Css\XXXX\Common\XXXX_Common.css" />
@@ -587,6 +588,7 @@
     <Content Include="Areas\Business\Scripts\Business\Common\Head.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\LBHead.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\Top.js" />
+    <Content Include="Areas\Business\Scripts\Business\CXLB\CLCX\CLCX_KC.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\CLCX\CLCX_HC.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\CLCX\CLCX_JC.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\Common\CXLB_Common.js" />
@@ -987,6 +989,7 @@
     <Content Include="Areas\Business\Scripts\Business\Other\YHDL.js" />
     <Content Include="Areas\Business\Scripts\Business\HTGL\HTGL.js" />
     <Content Include="Areas\Business\Scripts\Business\Other\YHZC.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\CLXX\CLXX_KC.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\CLXX\CLXX_HC.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\CLXX\CLXX_JC.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\FCXX\FCXX_DZF.js" />
@@ -1731,6 +1734,8 @@
     <Content Include="Areas\Business\Views\CLXX\CLXX_JC.cshtml" />
     <Content Include="Areas\Business\Views\CLCX\CLCX_HC.cshtml" />
     <Content Include="Areas\Business\Views\CLXX\CLXX_HC.cshtml" />
+    <Content Include="Areas\Business\Views\CLCX\CLCX_KC.cshtml" />
+    <Content Include="Areas\Business\Views\CLXX\CLXX_KC.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -3,7 +3,7 @@
     LoadCL_HCJBXX();
     BindClick("LB");
     BindClick("PP");
-    BindClick("CCNX");
+    BindClick("CCNF");
     BindClick("CCYF");
     BindClick("QY");
     BindClick("DD");
@@ -70,8 +70,8 @@ function BindClick(type) {
             LoadPP();
             LoadPPMC("divRM");
         }
-        if (type === "CCNX") {
-            LoadCODESByTYPENAME("出厂年限", "CCNX", "CODES_CL", Bind, "HCCCNX", "CCNX", "");
+        if (type === "CCNF") {
+            LoadCODESByTYPENAME("出厂年限", "CCNF", "CODES_CL", Bind, "HCCCNF", "CCNF", "");
         }
         if (type === "CCYF") {
             LoadCODESByTYPENAME("出厂月份", "CCYF", "CODES_CL", Bind, "HCCCYF", "CCYF", "");
@@ -119,7 +119,7 @@ function LoadCL_HCJBXX() {
                 $("#spanLB").html(xml.Value.CL_HCJBXX.LB);
                 $("#spanXL").html(xml.Value.CL_HCJBXX.XL);
                 $("#spanPP").html(xml.Value.CL_HCJBXX.PP);
-                $("#spanCCNX").html(xml.Value.CL_HCJBXX.CCNX);
+                $("#spanCCNF").html(xml.Value.CL_HCJBXX.CCNF);
                 $("#spanCCYF").html(xml.Value.CL_HCJBXX.CCYF);
                 $("#spanQY").html(xml.Value.CL_HCJBXX.QY);
                 $("#spanDD").html(xml.Value.CL_HCJBXX.DD);
@@ -141,7 +141,7 @@ function FB() {
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
     obj = jsonObj.AddJson(obj, "PP", "'" + $("#spanPP").html() + "'");
-    obj = jsonObj.AddJson(obj, "CCNX", "'" + $("#spanCCNX").html() + "'");
+    obj = jsonObj.AddJson(obj, "CCNF", "'" + $("#spanCCNF").html() + "'");
     obj = jsonObj.AddJson(obj, "CCYF", "'" + $("#spanCCYF").html() + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
