@@ -61,6 +61,7 @@ function LoadCL_DDCJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.BCMSString);
                 });
+                $("#spanLB").html(xml.Value.CL_DDCJBXX.LB);
                 $("#spanPP").html(xml.Value.CL_DDCJBXX.PP);
                 $("#spanXJ").html(xml.Value.CL_DDCJBXX.XJ);
                 $("#spanQY").html(xml.Value.CL_DDCJBXX.QY);
@@ -83,6 +84,7 @@ function FB() {
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
+    obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
     obj = jsonObj.AddJson(obj, "PP", "'" + $("#spanPP").html() + "'");
     obj = jsonObj.AddJson(obj, "XJ", "'" + $("#spanXJ").html() + "'");
     obj = jsonObj.AddJson(obj, "DCDY", "'" + $("#spanDCDY").html() + "'");

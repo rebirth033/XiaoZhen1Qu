@@ -1577,61 +1577,61 @@ insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID
 values (253, '货车品牌', '重汽HOWO轻卡', 'Z', 104, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (254, '出厂年份', '2017年', '1', 1, null);
+values (254, '出厂年限', '2017年', '1', 1, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (255, '出厂年份', '2016年', '2', 2, null);
+values (255, '出厂年限', '2016年', '2', 2, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (256, '出厂年份', '2015年', '3', 3, null);
+values (256, '出厂年限', '2015年', '3', 3, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (257, '出厂年份', '2014年', '4', 4, null);
+values (257, '出厂年限', '2014年', '4', 4, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (258, '出厂年份', '2013年', '5', 5, null);
+values (258, '出厂年限', '2013年', '5', 5, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (259, '出厂年份', '2012年', '6', 6, null);
+values (259, '出厂年限', '2012年', '6', 6, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (260, '出厂年份', '2011年', '7', 7, null);
+values (260, '出厂年限', '2011年', '7', 7, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (261, '出厂年份', '2010年', '8', 8, null);
+values (261, '出厂年限', '2010年', '8', 8, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (262, '出厂年份', '2009年', '9', 9, null);
+values (262, '出厂年限', '2009年', '9', 9, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (263, '出厂年份', '2008年', '10', 10, null);
+values (263, '出厂年限', '2008年', '10', 10, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (264, '出厂年份', '2007年', '11', 11, null);
+values (264, '出厂年限', '2007年', '11', 11, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (265, '出厂年份', '2006年', '12', 12, null);
+values (265, '出厂年限', '2006年', '12', 12, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (266, '出厂年份', '2005年', '13', 13, null);
+values (266, '出厂年限', '2005年', '13', 13, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (267, '出厂年份', '2004年', '14', 14, null);
+values (267, '出厂年限', '2004年', '14', 14, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (268, '出厂年份', '2003年', '15', 15, null);
+values (268, '出厂年限', '2003年', '15', 15, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (269, '出厂年份', '2002年', '16', 16, null);
+values (269, '出厂年限', '2002年', '16', 16, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (270, '出厂年份', '2001年', '17', 17, null);
+values (270, '出厂年限', '2001年', '17', 17, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (271, '出厂年份', '2000年', '18', 18, null);
+values (271, '出厂年限', '2000年', '18', 18, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (272, '出厂年份', '2000年以前', '19', 19, null);
+values (272, '出厂年限', '2000年以前', '19', 19, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (273, '出厂月份', '1月', '1', 1, null);
@@ -2219,33 +2219,51 @@ insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID
 values (719, '车辆加装配置', '车载冰箱', '14', 14, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (720, '到期年份', '2017', '1', 1, null);
+values (720, '自行车类别', '普通自行车', '1', 1, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (721, '到期年份', '2018', '2', 2, null);
+values (721, '自行车类别', '折叠自行车', '2', 2, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (722, '到期年份', '2019', '3', 3, null);
+values (722, '自行车类别', '山地自行车', '3', 3, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (723, '到期年份', '2020', '4', 4, null);
+values (723, '自行车类别', '公路自行车', '4', 4, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (724, '到期年份', '2021', '5', 5, null);
+values (724, '自行车类别', '迷你自行车', '5', 5, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (725, '到期年份', '2022', '6', 6, null);
+values (725, '自行车类别', '场地/死飞', '6', 6, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (726, '到期年份', '2023', '7', 7, null);
+values (726, '自行车类别', '自行车赛车', '7', 7, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (727, '到期年份', '2024', '8', 8, null);
+values (727, '自行车类别', '自行车骑行装备', '8', 8, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (728, '到期年份', '2025', '9', 9, null);
+values (728, '自行车类别', '自行车配件/工具', '9', 9, null);
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (729, '到期年份', '2026', '10', 10, null);
+values (729, '电动车类别', '电动自行车', '1', 1, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (730, '电动车类别', '电动摩托车', '2', 2, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (731, '电动车类别', '折叠电动车', '3', 3, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (732, '电动车类别', '迷你电动车', '4', 4, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (733, '电动车类别', '助动车', '5', 5, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (734, '电动车类别', '电动观光车', '6', 6, null);
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (735, '电动车类别', '平衡车', '7', 7, null);
 
 prompt Done.

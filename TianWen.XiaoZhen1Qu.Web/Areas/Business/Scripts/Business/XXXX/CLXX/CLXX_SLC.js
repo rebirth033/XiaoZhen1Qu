@@ -9,16 +9,16 @@ function LoadDefault() {
         dataType: "json",
         data:
         {
-            TYPE: "CLXX_MTC",
+            TYPE: "CLXX_SLC",
             ID: getUrlParam("ID")
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 LoadJBXX(xml.list[0]);
                 LoadXQ(xml.list[0], xml.BCMSString);
-                LoadCNXH("CLXX_MTC");
+                LoadCNXH("CLXX_SLC");
                 LoadGRXX(xml.grxxlist[0]);
-                LoadJJRTJFY("CLXX_MTC");
+                LoadJJRTJFY("CLXX_SLC");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -58,22 +58,18 @@ function LoadJBXX(obj) {
     html += ('<span class="span_body_left_body_right_right">' + obj.LB + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">品牌：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.PP + '</span>');
-    html += ('</p>');
-    html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">购车时间：</span>');
     html += ('<span class="span_body_left_body_right_right">' + obj.GCSJ + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">新旧：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.XSLC + obj.GLS + '</span>');
+    html += ('<span class="span_body_left_body_right_right">' + obj.XJ + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">区域：</span>');
     html += ('<span class="span_body_left_body_right_right">' + obj.QY +"-" + obj.DD + '</span>');
     html += ('</p>');
-    html += ('<p class="p_body_left_body_right_lxdh" style="margin-top:78px;">');
+    html += ('<p class="p_body_left_body_right_lxdh" style="margin-top:126px;">');
     html += ('<img class="img_body_left_body_right_lxdh" src="' + getRootPath() + '/Areas/Business/Css/images/lxdh.png" />' + obj.LXDH);
     html += ('</p>');
     html += ('</div>');
@@ -187,7 +183,7 @@ function LoadCNXH(TYPE) {
 //加载猜你喜欢单条信息
 function LoadCNXHInfo(obj) {
     var html = "";
-    html += ('<li onclick="OpenXXXX(\'CLXX_MTC\',\'' + obj.ID + '\')" class="li_body_left_body_cnxh">');
+    html += ('<li onclick="OpenXXXX(\'CLXX_SLC\',\'' + obj.ID + '\')" class="li_body_left_body_cnxh">');
     html += ('<img class="img_li_body_left_body_cnxh" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_left_body_cnxh_xq">' + obj.XQDZ.split('-')[0] + ' / ' + obj.XQDZ.split('-')[1] + ' / ' + obj.XQMC + '</p>');
     html += ('<p class="p_li_body_left_body_cnxh_cs">' + obj.S + '室 ' + obj.PFM + '平</p>');
@@ -230,7 +226,7 @@ function LoadJPTJ(TYPE) {
 //加载精品推荐单条信息
 function LoadJPTJInfo(obj) {
     var html = "";
-    html += ('<li onclick="OpenXXXX(\'CLXX_MTC\',\'' + obj.ID + '\')" class="li_body_left_body_jptj">');
+    html += ('<li onclick="OpenXXXX(\'CLXX_SLC\',\'' + obj.ID + '\')" class="li_body_left_body_jptj">');
     html += ('<img class="img_li_body_left_body_jptj" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_left_body_jptj_xq">' + obj.XQDZ.split('-')[0] + ' / ' + obj.XQDZ.split('-')[1] + ' / ' + obj.XQMC + '</p>');
     html += ('<p class="p_li_body_left_body_jptj_cs">' + obj.S + '室 ' + obj.PFM + '平</p>');
@@ -276,7 +272,7 @@ function LoadJJRTJFY(TYPE) {
 //加载该经纪人推荐房源单条信息
 function LoadJJRTJFYInfo(obj) {
     var html = "";
-    html += ('<li onclick="OpenXXXX(\'CLXX_MTC\',\'' + obj.ID + '\')" class="li_body_right_jjrtj">');
+    html += ('<li onclick="OpenXXXX(\'CLXX_SLC\',\'' + obj.ID + '\')" class="li_body_right_jjrtj">');
     html += ('<img class="img_li_body_right_jjrtj" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<div class="div_li_body_right_jjrtj">');
     html += ('<p class="p_li_body_right_jjrtj_xq">' + obj.XQDZ.split('-')[0] + ' / ' + obj.XQDZ.split('-')[1] + ' / ' + obj.XQMC + '</p>');

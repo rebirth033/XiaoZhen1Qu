@@ -592,6 +592,7 @@
     <Content Include="Areas\Business\Scripts\Business\Common\Head.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\LBHead.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\Top.js" />
+    <Content Include="Areas\Business\Scripts\Business\CXLB\CLCX\CLCX_GCC.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\CLCX\CLCX_ZXC.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\CLCX\CLCX_DDC.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\CLCX\CLCX_SLC.js" />
@@ -1001,6 +1002,7 @@
     <Content Include="Areas\Business\Scripts\Business\Other\YHDL.js" />
     <Content Include="Areas\Business\Scripts\Business\HTGL\HTGL.js" />
     <Content Include="Areas\Business\Scripts\Business\Other\YHZC.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\CLXX\CLXX_GCC.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\CLXX\CLXX_ZXC.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\CLXX\CLXX_DDC.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\CLXX\CLXX_SLC.js" />
@@ -1762,6 +1764,8 @@
     <Content Include="Areas\Business\Views\CLXX\CLXX_SLC.cshtml" />
     <Content Include="Areas\Business\Views\CLXX\CLXX_ZXC.cshtml" />
     <Content Include="Areas\Business\Views\CLXX\CLXX_DDC.cshtml" />
+    <Content Include="Areas\Business\Views\CLCX\CLCX_GCC.cshtml" />
+    <Content Include="Areas\Business\Views\CLXX\CLXX_GCC.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

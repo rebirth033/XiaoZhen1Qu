@@ -12,7 +12,8 @@ create table CL_DDCJBXX
   bcms   BLOB,
   qy     VARCHAR2(20),
   dd     VARCHAR2(20),
-  pp     VARCHAR2(20)
+  pp     VARCHAR2(20),
+  lb     VARCHAR2(20)
 )
 tablespace USERS
   pctfree 10
@@ -30,7 +31,7 @@ comment on table CL_DDCJBXX
   is '车辆_电动车';
 -- Add comments to the columns 
 comment on column CL_DDCJBXX.id
-  is '自行车/电动车/三轮车基本信息ID';
+  is '电动车基本信息ID';
 comment on column CL_DDCJBXX.jcxxid
   is '基础信息ID';
 comment on column CL_DDCJBXX.gq
@@ -53,3 +54,5 @@ comment on column CL_DDCJBXX.dd
   is '地段';
 comment on column CL_DDCJBXX.pp
   is '品牌';
+comment on column CL_DDCJBXX.lb
+  is '类别';

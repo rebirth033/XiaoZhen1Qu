@@ -18,18 +18,24 @@ function BindBodyNav() {
 //加载条件
 function LoadCL_HCCondition() {
     $("#div_condition_body").html('');
+    var cx = "车型,不限,电动自行车,电动摩托车,折叠电动车,迷你电动车,助动车,电动观光车,平衡车".split(',');
     var pp = "品牌,不限,本田,雅马哈,铃木,嘉陵,豪爵,川崎,宗申,哈雷,建设,轻骑,钱江,阿普利亚,力帆,宝马,光阳,比亚乔,隆鑫,金城,春风,新大洲".split(',');
-    var cx = "车型,不限,大排量,迷你车,弯梁车,踏板车,骑式车,越野摩托,公路赛车,太子车,沙滩车,三轮摩托,配件/装备".split(',');
-    var jg = "价格,不限,1000元以下,1000-2000元,2000-3000元,3000-4000元,4000-6000元,6000-8000元,8000-10000元,10000元以上".split(',');
+    var jg = "价格,不限,300元以下,300-500元,500-1000元,1000-2000元,2000-3000元,3000-5000元,5000元以上".split(',');
+    var dcdy = "电池电压,不限,36V,48V,60V,其它".split(',');
+    var dcrl = "电池容量,不限,10-15AH,16-20AH,21-25AH,其它".split(',');
     var dq = "地区,不限,鼓楼,台江,晋安,仓山,闽侯,福清,马尾,长乐,连江,平潭,罗源,闽清,永泰".split(',');
-    LoadCondition(pp, "PP");
     LoadCondition(cx, "CX");
+    LoadCondition(pp, "PP");
     LoadCondition(jg, "JG");
+    LoadCondition(dcdy, "DCDY");
+    LoadCondition(dcrl, "DCRL");
     LoadCondition(dq, "DQ");
-    $("#ul_condition_body_PP").find(".li_condition_body").bind("click", SelectCondition);
     $("#ul_condition_body_CX").find(".li_condition_body").bind("click", SelectCondition);
+    $("#ul_condition_body_PP").find(".li_condition_body").bind("click", SelectCondition);
     $("#ul_condition_body_JG").find(".li_condition_body").bind("click", SelectCondition);
     $("#ul_condition_body_JG").append("<li><input id='input_zj_q' class='input_zj' type='text' /><span class='span_zj'>元</span> - <input class='input_zj' id='input_zj_z' type='text' /><span class='span_zj'>元</span></li>");
+    $("#ul_condition_body_DCDY").find(".li_condition_body").bind("click", SelectCondition);
+    $("#ul_condition_body_DCRL").find(".li_condition_body").bind("click", SelectCondition);
     $("#ul_condition_body_DQ").find(".li_condition_body").bind("click", SelectCondition);
 }
 //选择条件
@@ -143,7 +149,7 @@ function LoadCL_JCInfo(obj) {
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
     html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'CLXX_DDC\',\'' + obj.ID + '\')">' + TruncStr(obj.BT, 35) + '</p>');
-    html += ('<p class="p_li_body_left_center_cs font_size16">' + obj.LB + ' / ' + obj.GCSJ + ' / ' + obj.XSLC + obj.GLS + '万公里' + ' / ' + obj.QY + '</p>');
+    html += ('<p class="p_li_body_left_center_cs font_size16">' + obj.LB + ' / ' + obj.SYNX + '年 / ' + obj.XJ + ' / ' + obj.QY + '-' + obj.DD + '</p>');
     html += ('<p class="p_li_body_left_center_dz font_size16">' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');

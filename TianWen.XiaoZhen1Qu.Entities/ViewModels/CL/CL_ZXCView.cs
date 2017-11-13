@@ -17,7 +17,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.ViewModels.CL
         public string LXDH { get; set; }
         public DateTime ZXGXSJ { get; set; }
         public byte[] BCMS { get; set; }
-        //车辆_摩托车信息
+        //车辆_自行车信息
         public string ID { get; set; }
         public string GQ { get; set; }
         public string QY { get; set; }
@@ -27,8 +27,6 @@ namespace TianWen.XiaoZhen1Qu.Entities.ViewModels.CL
         public string PP { get; set; }
         public string CC { get; set; }
         public string XJ { get; set; }
-        public string GLS { get; set; }
-        public string GCSJ { get; set; }
         //图片
         public IList<PHOTOS> PHOTOS { get; set; }
 

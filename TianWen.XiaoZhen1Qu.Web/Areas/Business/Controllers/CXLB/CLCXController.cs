@@ -46,6 +46,11 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             GetSession();
             return View();
         }
+        public ActionResult CLCX_GCC()
+        {
+            GetSession();
+            return View();
+        }
 
         public JsonResult LoadCLXX()
         {
