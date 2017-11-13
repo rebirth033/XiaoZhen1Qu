@@ -253,3 +253,8 @@ function whichTransitionEvent() {
 function OpenXXXX(TYPE, ID) {
     window.open(getRootPath() + "/Business/" + TYPE.split('_')[0] + "/" + TYPE + "?ID=" + ID);
 }
+
+//字符串截断
+function TruncStr(value, length) {
+    return value.length > length ? (value.substr(0, length) + '...') : value;
+}

@@ -68,7 +68,7 @@ function LoadInfo(obj) {
     html += ('<li onclick="OpenXXXX(' + obj.LBID + ',\'' + obj.JCXXID + '\')" class="li_body_top_right_zxfb">');
     html += ('<img class="img_body_top_right_zxfb" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<div class="div_body_top_right_zxfb">');
-    html += ('<span class="span_body_top_right_zxfb">' + obj.BT + '</span>');
+    html += ('<span class="span_body_top_right_zxfb">' + TruncStr(obj.BT, 45) + '</span>');
     html += ('<span class="span_body_top_right_zxfb_sj">' + obj.CJSJ.ToString("yyyy-MM-dd hh:mm:ss") + '</span>');
     html += ('</div>');
     html += ('</li>');
