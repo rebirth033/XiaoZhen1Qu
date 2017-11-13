@@ -237,4 +237,10 @@ function OpenCXLB(lbid, typename, condition) {
         window.open(getRootPath() + "/Business/CLCX/CLCX_KC?LBID=" + lbid);
     if (lbid === 65)
         window.open(getRootPath() + "/Business/CLCX/CLCX_MTC?LBID=" + lbid);
+    if (lbid === 66)
+        window.open(getRootPath() + "/Business/CLCX/CLCX_ZXC?LBID=" + lbid);
+    if (lbid === 64)
+        window.open(getRootPath() + "/Business/CLCX/CLCX_DDC?LBID=" + lbid);
+    if (lbid === 63)
+        window.open(getRootPath() + "/Business/CLCX/CLCX_SLC?LBID=" + lbid);
 }

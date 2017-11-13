@@ -27,6 +27,18 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         {
             return View();
         }
+        public ActionResult CLXX_ZXC()
+        {
+            return View();
+        }
+        public ActionResult CLXX_DDC()
+        {
+            return View();
+        }
+        public ActionResult CLXX_SLC()
+        {
+            return View();
+        }
 
         public JsonResult LoadCLXX()
         {
