@@ -3,15 +3,15 @@ using NHibernate.Mapping.Attributes;
 
 namespace TianWen.XiaoZhen1Qu.Entities.Models
 {
-    public class CL_ZXCDDCSLCJBXX
+    public class CL_DDCJBXX
     {
-        public CL_ZXCDDCSLCJBXX()
+        public CL_DDCJBXX()
         {
             ID = Guid.NewGuid().ToString("N");
         }
 
         /// <summary>
-        /// 自行车/电动车/三轮车信息ID
+        /// 电动车信息ID
         /// </summary>
         [Id]
         public virtual string ID { get; set; }
@@ -29,34 +29,22 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string GQ { get; set; }
 
         /// <summary>
-        /// 类别
+        /// 品牌
         /// </summary>
         [Property]
-        public virtual string LB { get; set; }
+        public virtual string PP { get; set; }
 
         /// <summary>
-        /// 小类
+        /// 新旧
         /// </summary>
         [Property]
-        public virtual string XL { get; set; }
+        public virtual string XJ { get; set; }
 
         /// <summary>
-        /// 电动车品牌
+        /// 价格
         /// </summary>
         [Property]
-        public virtual string DDCPP { get; set; }
-
-        /// <summary>
-        /// 自行车品牌
-        /// </summary>
-        [Property]
-        public virtual string ZXCPP { get; set; }
-
-        /// <summary>
-        /// 尺寸
-        /// </summary>
-        [Property]
-        public virtual string CC { get; set; }
+        public virtual string JG { get; set; }
 
         /// <summary>
         /// 电池电压
@@ -75,18 +63,6 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// </summary>
         [Property]
         public virtual string SYNX { get; set; }
-
-        /// <summary>
-        /// 新旧
-        /// </summary>
-        [Property]
-        public virtual string XJ { get; set; }
-
-        /// <summary>
-        /// 价格
-        /// </summary>
-        [Property]
-        public virtual string JG { get; set; }
 
         /// <summary>
         /// 补充描述

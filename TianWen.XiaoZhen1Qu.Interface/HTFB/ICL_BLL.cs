@@ -28,8 +28,16 @@ namespace TianWen.XiaoZhen1Qu.Interface.HTFB
 
         object LoadCL_MTCJBXX(string ID);
 
-        object SaveCL_ZXCDDCSLCJBXX(JCXX jcxx, CL_ZXCDDCSLCJBXX dzfjbxx, List<PHOTOS> photos);
+        object SaveCL_ZXCJBXX(JCXX jcxx, CL_ZXCJBXX dzfjbxx, List<PHOTOS> photos);
 
-        object LoadCL_ZXCDDCSLCJBXX(string ID);
+        object LoadCL_ZXCJBXX(string ID);
+
+        object SaveCL_DDCJBXX(JCXX jcxx, CL_DDCJBXX dzfjbxx, List<PHOTOS> photos);
+
+        object LoadCL_DDCJBXX(string ID);
+
+        object SaveCL_SLCJBXX(JCXX jcxx, CL_SLCJBXX dzfjbxx, List<PHOTOS> photos);
+
+        object LoadCL_SLCJBXX(string ID);
     }
 }

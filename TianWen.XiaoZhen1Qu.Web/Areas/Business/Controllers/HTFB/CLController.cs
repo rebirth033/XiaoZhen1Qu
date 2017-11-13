@@ -44,7 +44,19 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             ViewData["YHM"] = Session["YHM"];
             return View();
         }
-        public ActionResult CL_ZXCDDCSLC()
+        public ActionResult CL_ZXC()
+        {
+            ViewData["XZQ"] = Session["XZQ"];
+            ViewData["YHM"] = Session["YHM"];
+            return View();
+        }
+        public ActionResult CL_DDC()
+        {
+            ViewData["XZQ"] = Session["XZQ"];
+            ViewData["YHM"] = Session["YHM"];
+            return View();
+        }
+        public ActionResult CL_SLC()
         {
             ViewData["XZQ"] = Session["XZQ"];
             ViewData["YHM"] = Session["YHM"];
@@ -124,17 +136,45 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return Json(result);
         }
         [ValidateInput(false)]
-        public JsonResult FBCL_ZXCDDCSLCJBXX()
+        public JsonResult FBCL_ZXCJBXX()
         {
             YHJBXX yhjbxx = CL_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
             JCXX jcxx = CreateJCXX(yhjbxx, json);
-            CL_ZXCDDCSLCJBXX CL_ZXCDDCSLCjbxx = JsonHelper.ConvertJsonToObject<CL_ZXCDDCSLCJBXX>(json);
-            CL_ZXCDDCSLCjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
+            CL_ZXCJBXX CL_ZXCJBXX = JsonHelper.ConvertJsonToObject<CL_ZXCJBXX>(json);
+            CL_ZXCJBXX.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = CL_BLL.SaveCL_ZXCDDCSLCJBXX(jcxx, CL_ZXCDDCSLCjbxx, photos);
+            object result = CL_BLL.SaveCL_ZXCJBXX(jcxx, CL_ZXCJBXX, photos);
+            return Json(result);
+        }
+        [ValidateInput(false)]
+        public JsonResult FBCL_DDCJBXX()
+        {
+            YHJBXX yhjbxx = CL_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            string json = Request["Json"];
+            string bcms = Request["BCMS"];
+            string fwzp = Request["FWZP"];
+            JCXX jcxx = CreateJCXX(yhjbxx, json);
+            CL_DDCJBXX CL_DDCJBXX = JsonHelper.ConvertJsonToObject<CL_DDCJBXX>(json);
+            CL_DDCJBXX.BCMS = BinaryHelper.StringToBinary(bcms);
+            List<PHOTOS> photos = GetTP(fwzp);
+            object result = CL_BLL.SaveCL_DDCJBXX(jcxx, CL_DDCJBXX, photos);
+            return Json(result);
+        }
+        [ValidateInput(false)]
+        public JsonResult FBCL_SLCJBXX()
+        {
+            YHJBXX yhjbxx = CL_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            string json = Request["Json"];
+            string bcms = Request["BCMS"];
+            string fwzp = Request["FWZP"];
+            JCXX jcxx = CreateJCXX(yhjbxx, json);
+            CL_SLCJBXX CL_SLCJBXX = JsonHelper.ConvertJsonToObject<CL_SLCJBXX>(json);
+            CL_SLCJBXX.BCMS = BinaryHelper.StringToBinary(bcms);
+            List<PHOTOS> photos = GetTP(fwzp);
+            object result = CL_BLL.SaveCL_SLCJBXX(jcxx, CL_SLCJBXX, photos);
             return Json(result);
         }
         public JsonResult LoadCL_GCCJBXX()
@@ -167,10 +207,22 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             object result = CL_BLL.LoadCL_MTCJBXX(ID);
             return Json(result);
         }
-        public JsonResult LoadCL_ZXCDDCSLCJBXX()
+        public JsonResult LoadCL_ZXCJBXX()
         {
             string ID = Request["ID"];
-            object result = CL_BLL.LoadCL_ZXCDDCSLCJBXX(ID);
+            object result = CL_BLL.LoadCL_ZXCJBXX(ID);
+            return Json(result);
+        }
+        public JsonResult LoadCL_DDCJBXX()
+        {
+            string ID = Request["ID"];
+            object result = CL_BLL.LoadCL_DDCJBXX(ID);
+            return Json(result);
+        }
+        public JsonResult LoadCL_SLCJBXX()
+        {
+            string ID = Request["ID"];
+            object result = CL_BLL.LoadCL_SLCJBXX(ID);
             return Json(result);
         }
     }

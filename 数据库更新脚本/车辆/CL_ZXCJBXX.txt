@@ -1,0 +1,48 @@
+-- Create table
+create table CL_ZXCJBXX
+(
+  id     VARCHAR2(50) not null,
+  jcxxid VARCHAR2(50),
+  gq     VARCHAR2(20),
+  xj     VARCHAR2(20),
+  jg     VARCHAR2(20),
+  cc     VARCHAR2(20),
+  pp     VARCHAR2(20),
+  bcms   BLOB,
+  qy     VARCHAR2(20),
+  dd     VARCHAR2(20)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 16
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table CL_ZXCJBXX
+  is '车辆_自行车';
+-- Add comments to the columns 
+comment on column CL_ZXCJBXX.id
+  is '自行车基本信息ID';
+comment on column CL_ZXCJBXX.jcxxid
+  is '基础信息ID';
+comment on column CL_ZXCJBXX.gq
+  is '供求';
+comment on column CL_ZXCJBXX.xj
+  is '新旧';
+comment on column CL_ZXCJBXX.jg
+  is '价格';
+comment on column CL_ZXCJBXX.cc
+  is '尺寸';
+comment on column CL_ZXCJBXX.pp
+  is '自行车品牌';
+comment on column CL_ZXCJBXX.bcms
+  is '补充描述';
+comment on column CL_ZXCJBXX.qy
+  is '区域';
+comment on column CL_ZXCJBXX.dd
+  is '地段';

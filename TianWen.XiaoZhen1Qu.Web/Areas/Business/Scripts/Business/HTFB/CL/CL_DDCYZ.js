@@ -5,16 +5,12 @@
     $("#SYNX").bind("blur", ValidateSYNX);
     $("#SYNX").bind("focus", InfoSYNX);
 });
-//验证自行车/电动车/三轮车类别
-function ValidateZXCDDCSLCLB() {
-    if (!ValidateSelect("ZXCDDCSLCLB", "LB", "请选择类别")) return false;
-    if (!ValidateSelect("ZXCDDCSLCLB", "XL", "请选择小类")) return false;
-    return true;
-}
 //验证所有
 function ValidateAll() {
     if (ValidateRadio("GQ", "忘记选择供求啦")
-        & ValidateZXCDDCSLCLB()
+        & ValidateSelect("DDCPP", "PP", "请选择品牌")
+        & ValidateSelect("DDCDCDY", "DCDY", "请选择电池电压")
+        & ValidateSelect("DDCDCRL", "DCRL", "请选择电池容量")
         & ValidateSelect("XJCD", "XJ", "请选择新旧")
         & ValidateBCMS("BCMS", "忘记填写补充描述啦")
         & ValidateSYNX()

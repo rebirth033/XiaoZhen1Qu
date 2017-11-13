@@ -1,0 +1,54 @@
+-- Create table
+create table CL_DDCJBXX
+(
+  id     VARCHAR2(50) not null,
+  jcxxid VARCHAR2(50),
+  gq     VARCHAR2(20),
+  xj     VARCHAR2(20),
+  jg     VARCHAR2(20),
+  ddcpp  VARCHAR2(20),
+  dcdy   VARCHAR2(20),
+  dcrl   VARCHAR2(20),
+  synx   VARCHAR2(20),
+  bcms   BLOB,
+  qy     VARCHAR2(20),
+  dd     VARCHAR2(20)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 16K
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table CL_DDCJBXX
+  is '车辆_电动车';
+-- Add comments to the columns 
+comment on column CL_DDCJBXX.id
+  is '自行车/电动车/三轮车基本信息ID';
+comment on column CL_DDCJBXX.jcxxid
+  is '基础信息ID';
+comment on column CL_DDCJBXX.gq
+  is '供求';
+comment on column CL_DDCJBXX.xj
+  is '新旧';
+comment on column CL_DDCJBXX.jg
+  is '价格';
+comment on column CL_DDCJBXX.ddcpp
+  is '品牌';
+comment on column CL_DDCJBXX.dcdy
+  is '电池电压';
+comment on column CL_DDCJBXX.dcrl
+  is '电池容量';
+comment on column CL_DDCJBXX.synx
+  is '使用年限';
+comment on column CL_DDCJBXX.bcms
+  is '补充描述';
+comment on column CL_DDCJBXX.qy
+  is '区域';
+comment on column CL_DDCJBXX.dd
+  is '地段';

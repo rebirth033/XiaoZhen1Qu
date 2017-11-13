@@ -521,6 +521,7 @@
     <Content Include="Areas\Business\Css\HTFB\XXYL\XXYL_ZLAM.css" />
     <Content Include="Areas\Business\Css\Other\YHDL.css" />
     <Content Include="Areas\Business\Css\HTGL\HTGL.css" />
+    <Content Include="Areas\Business\Css\XXXX\CL\CLXX_MTC.css" />
     <Content Include="Areas\Business\Css\XXXX\CL\CLXX_KC.css" />
     <Content Include="Areas\Business\Css\XXXX\CL\CLXX_HC.css" />
     <Content Include="Areas\Business\Css\XXXX\CL\CLXX_JC.css" />
@@ -612,8 +613,12 @@
     <Content Include="Areas\Business\Scripts\Business\HTFB\CL\CL_KCYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\CL\CL_MTC.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\CL\CL_MTCYZ.js" />
-    <Content Include="Areas\Business\Scripts\Business\HTFB\CL\CL_ZXCDDCSLC.js" />
-    <Content Include="Areas\Business\Scripts\Business\HTFB\CL\CL_ZXCDDCSLCYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\HTFB\CL\CL_DDC.js" />
+    <Content Include="Areas\Business\Scripts\Business\HTFB\CL\CL_SLC.js" />
+    <Content Include="Areas\Business\Scripts\Business\HTFB\CL\CL_ZXC.js" />
+    <Content Include="Areas\Business\Scripts\Business\HTFB\CL\CL_ZXCYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\HTFB\CL\CL_DDCYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\HTFB\CL\CL_SLCYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\Check.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\Common.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\HTFB_Common.js" />
@@ -1529,7 +1534,7 @@
     <Content Include="Areas\Business\Views\ES\ES_WHYL_WYXNWP.cshtml" />
     <Content Include="Areas\Business\Views\ES\ES_QTES_ESSB.cshtml" />
     <Content Include="Areas\Business\Views\ES\ES_QTES_CRYP.cshtml" />
-    <Content Include="Areas\Business\Views\CL\CL_ZXCDDCSLC.cshtml" />
+    <Content Include="Areas\Business\Views\CL\CL_ZXC.cshtml" />
     <Content Include="Areas\Business\Views\CL\CL_MTC.cshtml" />
     <Content Include="Config\SpringConfig\BLLHTFB.xml">
       <SubType>Designer</SubType>
@@ -1740,6 +1745,8 @@
     <Content Include="Areas\Business\Views\CLXX\CLXX_KC.cshtml" />
     <Content Include="Areas\Business\Views\CLCX\CLCX_MTC.cshtml" />
     <Content Include="Areas\Business\Views\CLXX\CLXX_MTC.cshtml" />
+    <Content Include="Areas\Business\Views\CL\CL_SLC.cshtml" />
+    <Content Include="Areas\Business\Views\CL\CL_DDC.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

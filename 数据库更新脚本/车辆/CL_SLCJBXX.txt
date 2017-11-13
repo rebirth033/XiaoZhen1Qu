@@ -1,0 +1,48 @@
+-- Create table
+create table CL_SLCJBXX
+(
+  id     VARCHAR2(50) not null,
+  jcxxid VARCHAR2(50),
+  xj     VARCHAR2(20),
+  jg     VARCHAR2(20),
+  xl     VARCHAR2(20),
+  synx   VARCHAR2(20),
+  pp     VARCHAR2(20),
+  bcms   BLOB,
+  qy     VARCHAR2(20),
+  dd     VARCHAR2(20)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 16K
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table CL_SLCJBXX
+  is '车辆_三轮车';
+-- Add comments to the columns 
+comment on column CL_SLCJBXX.id
+  is '三轮车基本信息ID';
+comment on column CL_SLCJBXX.jcxxid
+  is '基础信息ID';
+comment on column CL_SLCJBXX.xj
+  is '新旧';
+comment on column CL_SLCJBXX.jg
+  is '价格';
+comment on column CL_SLCJBXX.xl
+  is '小类';
+comment on column CL_SLCJBXX.synx
+  is '使用年限';
+comment on column CL_SLCJBXX.pp
+  is '品牌';
+comment on column CL_SLCJBXX.bcms
+  is '补充描述';
+comment on column CL_SLCJBXX.qy
+  is '区域';
+comment on column CL_SLCJBXX.dd
+  is '地段';

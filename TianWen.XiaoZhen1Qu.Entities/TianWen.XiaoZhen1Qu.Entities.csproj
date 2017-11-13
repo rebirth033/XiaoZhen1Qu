@@ -58,7 +58,9 @@
     <Compile Include="Maps\CL\CL_JCJBXX_Map.cs" />
     <Compile Include="Maps\CL\CL_KCJBXX_Map.cs" />
     <Compile Include="Maps\CL\CL_MTCJBXX_Map.cs" />
-    <Compile Include="Maps\CL\CL_ZXCDDCSLCJBXX_Map.cs" />
+    <Compile Include="Maps\CL\CL_DDCJBXX_Map.cs" />
+    <Compile Include="Maps\CL\CL_SLCJBXX_Map.cs" />
+    <Compile Include="Maps\CL\CL_ZXCJBXX_Map.cs" />
     <Compile Include="Maps\CODES\CODES_CL_JC_Map.cs" />
     <Compile Include="Maps\CODES\CODES_CL_Map.cs" />
     <Compile Include="Maps\CODES\CODES_CW_Map.cs" />
@@ -297,6 +299,8 @@
     <Compile Include="Models\CL\CL_JCJBXX.cs" />
     <Compile Include="Models\CL\CL_KCJBXX.cs" />
     <Compile Include="Models\CL\CL_MTCJBXX.cs" />
+    <Compile Include="Models\CL\CL_DDCJBXX.cs" />
+    <Compile Include="Models\CL\CL_SLCJBXX.cs" />
     <Compile Include="Models\CODES\CODES_CL_JC.cs" />
     <Compile Include="Models\CODES\CODES_CW.cs" />
     <Compile Include="Models\CODES\CODES_CY.cs" />
@@ -334,7 +338,7 @@
     <Compile Include="Models\DISTRICT.cs" />
     <Compile Include="Models\DJJDJL.cs" />
     <Compile Include="Models\EncryptionHelper.cs" />
-    <Compile Include="Models\CL\CL_ZXCDDCSLCJBXX.cs" />
+    <Compile Include="Models\CL\CL_ZXCJBXX.cs" />
     <Compile Include="Models\ES\ES_JDJJBG_BGSBJBXX.cs" />
     <Compile Include="Models\ES\ES_JDJJBG_ESJDJBXX.cs" />
     <Compile Include="Models\ES\ES_JDJJBG_ESJJJBXX.cs" />
