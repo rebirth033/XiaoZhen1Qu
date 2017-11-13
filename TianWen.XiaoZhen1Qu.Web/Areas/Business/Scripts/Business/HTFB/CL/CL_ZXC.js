@@ -1,6 +1,7 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
     LoadCL_ZXCJBXX();
+    BindClick("LB");
     BindClick("PP");
     BindClick("CC");
     BindClick("XJ");
@@ -10,14 +11,17 @@
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
-        if (type === "XJ") {
-            LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM", Bind, "XJCD", "XJ", "");
+        if (type === "LB") {
+            LoadCODESByTYPENAME("自行车类别", "LB", "CODES_CL", Bind, "ZXCLB", "LB", "");
         }
         if (type === "PP") {
             LoadCODESByTYPENAME("自行车品牌", "PP", "CODES_CL");
         }
         if (type === "CC") {
             LoadCODESByTYPENAME("自行车尺寸", "CC", "CODES_CL");
+        }
+        if (type === "XJ") {
+            LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM", Bind, "XJCD", "XJ", "");
         }
         if (type === "QY") {
             LoadQY();
@@ -53,6 +57,7 @@ function LoadCL_ZXCJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.BCMSString);
                 });
+                $("#spanLB").html(xml.Value.CL_ZXCJBXX.LB);
                 $("#spanXJ").html(xml.Value.CL_ZXCJBXX.XJ);
                 $("#spanQY").html(xml.Value.CL_ZXCJBXX.QY);
                 $("#spanDD").html(xml.Value.CL_ZXCJBXX.DD);
@@ -74,6 +79,7 @@ function FB() {
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
+    obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
     obj = jsonObj.AddJson(obj, "XJ", "'" + $("#spanXJ").html() + "'");
     obj = jsonObj.AddJson(obj, "PP", "'" + $("#spanPP").html() + "'");
     obj = jsonObj.AddJson(obj, "CC", "'" + $("#spanCC").html() + "'");

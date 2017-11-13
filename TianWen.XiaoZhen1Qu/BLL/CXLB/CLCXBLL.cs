@@ -243,7 +243,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "CLXX_ZXC") //车辆_自行车
                 {
-                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,cl_mtcjbxx b where a.jcxxid = b.jcxxid and id = '{0}'  order by zxgxsj desc", ID));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,cl_zxcjbxx b where a.jcxxid = b.jcxxid and id = '{0}'  order by zxgxsj desc", ID));
                     List<CL_ZXCView> list = ConvertHelper.DataTableToList<CL_ZXCView>(dt);
                     foreach (var jcxx in list)
                     {

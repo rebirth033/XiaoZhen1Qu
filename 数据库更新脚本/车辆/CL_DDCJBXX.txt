@@ -6,13 +6,13 @@ create table CL_DDCJBXX
   gq     VARCHAR2(20),
   xj     VARCHAR2(20),
   jg     VARCHAR2(20),
-  ddcpp  VARCHAR2(20),
   dcdy   VARCHAR2(20),
   dcrl   VARCHAR2(20),
   synx   VARCHAR2(20),
   bcms   BLOB,
   qy     VARCHAR2(20),
-  dd     VARCHAR2(20)
+  dd     VARCHAR2(20),
+  pp     VARCHAR2(20)
 )
 tablespace USERS
   pctfree 10
@@ -21,6 +21,7 @@ tablespace USERS
   storage
   (
     initial 16K
+    next 1M
     minextents 1
     maxextents unlimited
   );
@@ -38,8 +39,6 @@ comment on column CL_DDCJBXX.xj
   is '新旧';
 comment on column CL_DDCJBXX.jg
   is '价格';
-comment on column CL_DDCJBXX.ddcpp
-  is '品牌';
 comment on column CL_DDCJBXX.dcdy
   is '电池电压';
 comment on column CL_DDCJBXX.dcrl
@@ -52,3 +51,5 @@ comment on column CL_DDCJBXX.qy
   is '区域';
 comment on column CL_DDCJBXX.dd
   is '地段';
+comment on column CL_DDCJBXX.pp
+  is '品牌';

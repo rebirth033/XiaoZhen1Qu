@@ -25,7 +25,8 @@ namespace TianWen.XiaoZhen1Qu.Entities.ViewModels.CL
         public string LB { get; set; }
         public string JG { get; set; }
         public string PP { get; set; }
-        public string XSLC { get; set; }
+        public string CC { get; set; }
+        public string XJ { get; set; }
         public string GLS { get; set; }
         public string GCSJ { get; set; }
         //图片

@@ -1,6 +1,7 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
     LoadCL_DDCJBXX();
+    BindClick("LB");
     BindClick("PP");
     BindClick("DCDY");
     BindClick("DCRL");
@@ -11,6 +12,9 @@
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
+        if (type === "LB") {
+            LoadCODESByTYPENAME("电动车类别", "LB", "CODES_CL", Bind, "DDCLB", "LB", "");
+        }
         if (type === "PP") {
             LoadCODESByTYPENAME("电动车品牌", "PP", "CODES_CL", Bind, "DDCPP", "PP", "");
         }
