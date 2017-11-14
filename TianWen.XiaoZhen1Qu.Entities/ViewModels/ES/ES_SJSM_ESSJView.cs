@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using TianWen.XiaoZhen1Qu.Entities.Models;
 
-namespace TianWen.XiaoZhen1Qu.Entities.ViewModels.CL
+namespace TianWen.XiaoZhen1Qu.Entities.ViewModels.ES
 {
     public class ES_SJSM_ESSJView
     {

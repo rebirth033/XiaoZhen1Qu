@@ -6,7 +6,7 @@ using System.Text;
 using CommonClassLib.Helper;
 using TianWen.Framework.Log;
 using TianWen.XiaoZhen1Qu.Entities.Models;
-using TianWen.XiaoZhen1Qu.Entities.ViewModels.CL;
+using TianWen.XiaoZhen1Qu.Entities.ViewModels.ES;
 using TianWen.XiaoZhen1Qu.Entities.ViewModels.GY;
 using TianWen.XiaoZhen1Qu.Interface;
 
