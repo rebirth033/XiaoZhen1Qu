@@ -131,7 +131,7 @@ function LoadSY_ML() {
         }
     });
 }
-//加载首页_目录详细信息
+//加载首页_目录详细信息（有小类）
 function LoadSY_MLInfo(list, xzq, typename) {
     var html = "";
     for (var i = 0; i < list.length; i++) {
@@ -144,7 +144,10 @@ function LoadSY_MLInfo(list, xzq, typename) {
             html += ('<ul class="ul_body_middle_left_section" style="height: ' + GetHeight(list, list[i].ID) + 'px;">');
             for (var j = 0; j < list.length; j++) {
                 if (list[j].PARENTID === list[i].ID) {
-                    html += ('<li onclick="OpenCXLB(' + list[j].LBID + ',\'' + list[j].TYPENAME + '\',\'' + list[j].CONDITION + '\')" class="li_body_middle_left_section">' + list[j].LBNAME + '</li>');
+                    if (list[j].ISHOT === "是")
+                        html += ('<li class="li_body_middle_left_section orange" onclick="OpenCXLB(' + list[j].LBID + ',\'' + list[j].TYPENAME + '\',\'' + list[j].CONDITION + '\')">' + list[j].LBNAME + '</li>');
+                    else
+                        html += ('<li class="li_body_middle_left_section" onclick="OpenCXLB(' + list[j].LBID + ',\'' + list[j].TYPENAME + '\',\'' + list[j].CONDITION + '\')">' + list[j].LBNAME + '</li>');
                 }
             }
             html += ('</ul>');
@@ -152,7 +155,7 @@ function LoadSY_MLInfo(list, xzq, typename) {
     }
     $("#div_body_middle_left_" + typename).append(html);
 }
-//加载首页_目录详细信息
+//加载首页_目录详细信息（无小类）
 function LoadSY_ML_WXLInfo(list, xzq, typename) {
     var html = "";
     for (var i = 0; i < list.length; i++) {
@@ -161,7 +164,10 @@ function LoadSY_ML_WXLInfo(list, xzq, typename) {
             html += ('<ul class="ul_body_middle_left_section" style="height: ' + GetHeight(list, list[i].ID) + 'px;">');
             for (var j = 0; j < list.length; j++) {
                 if (list[j].PARENTID === list[i].ID) {
-                    html += ('<li class="li_body_middle_left_section">' + list[j].LBNAME + '</li>');
+                    if (list[j].ISHOT === "是")
+                        html += ('<li class="li_body_middle_left_section orange">' + list[j].LBNAME + '</li>');
+                    else
+                        html += ('<li class="li_body_middle_left_section">' + list[j].LBNAME + '</li>');
                 }
             }
             html += ('</ul>');
@@ -179,12 +185,15 @@ function LoadSY_ML_CWInfo(list, xzq, typename) {
     for (var i = 0; i < list.length; i++) {
         if (list[i].TYPE === "XL" && list[i].TYPENAME === typename) {
             html += ('<div class="div_body_middle_left_section_fl">');
-            html += ('<span class="span_body_middle_left_section_fl_left active" style="height: ' + GetHeight(list, list[i].ID) + 'px;">' + list[i].LBNAME + '</span>');
+            html += ('<span class="span_body_middle_left_section_fl_left blue" style="height: ' + GetHeight(list, list[i].ID) + 'px;">' + list[i].LBNAME + '</span>');
             var count = 0;
             for (var j = 0; j < list.length; j++) {
                 if (list[j].PARENTID === list[i].ID) {
                     count++;
-                    html += ('<span class="span_body_middle_left_section_fl_right">' + list[j].LBNAME + '</span>');
+                    if (list[j].ISHOT === "是")
+                        html += ('<span class="span_body_middle_left_section_fl_right orange">' + list[j].LBNAME + '</span>');
+                    else
+                        html += ('<span class="span_body_middle_left_section_fl_right">' + list[j].LBNAME + '</span>');
                     if (count % 3 === 0)
                         html += ('<br />');
                     else
