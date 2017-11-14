@@ -521,6 +521,7 @@
     <Content Include="Areas\Business\Css\HTFB\XXYL\XXYL_ZLAM.css" />
     <Content Include="Areas\Business\Css\Other\YHDL.css" />
     <Content Include="Areas\Business\Css\HTGL\HTGL.css" />
+    <Content Include="Areas\Business\Css\XXXX\CL\CLXX_GCC.css" />
     <Content Include="Areas\Business\Css\XXXX\CL\CLXX_ZXC.css" />
     <Content Include="Areas\Business\Css\XXXX\CL\CLXX_SLC.css" />
     <Content Include="Areas\Business\Css\XXXX\CL\CLXX_DDC.css" />

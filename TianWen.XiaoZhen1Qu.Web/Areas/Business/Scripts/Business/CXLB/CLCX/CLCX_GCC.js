@@ -18,14 +18,15 @@ function BindBodyNav() {
 //加载条件
 function LoadCL_HCCondition() {
     $("#div_condition_body").html('');
+    var lb = "类别,不限,车辆买卖,配件,维修/保养".split(',');
     var cx = "机型,不限,挖掘机,装载机,起重机,压路机,推土机,平地机,叉车,油罐车,水泥罐车,洒水车,工程自卸车,混凝土泵车".split(',');
     var jg = "价格,不限,卡特彼勒,小松,日立,神钢,斗山,沃尔沃,现代,久保田,临工,山工,中联重科,徐工,合力,三一重工".split(',');
     var dq = "地区,不限,鼓楼,台江,晋安,仓山,闽侯,福清,马尾,长乐,连江,平潭,罗源,闽清,永泰".split(',');
-    LoadCondition(pp, "PP");
+    LoadCondition(lb, "LB");
     LoadCondition(cx, "CX");
     LoadCondition(jg, "JG");
     LoadCondition(dq, "DQ");
-    $("#ul_condition_body_PP").find(".li_condition_body").bind("click", SelectCondition);
+    $("#ul_condition_body_LB").find(".li_condition_body").bind("click", SelectCondition);
     $("#ul_condition_body_CX").find(".li_condition_body").bind("click", SelectCondition);
     $("#ul_condition_body_JG").find(".li_condition_body").bind("click", SelectCondition);
     $("#ul_condition_body_JG").append("<li><input id='input_zj_q' class='input_zj' type='text' /><span class='span_zj'>元</span> - <input class='input_zj' id='input_zj_z' type='text' /><span class='span_zj'>元</span></li>");
@@ -106,7 +107,7 @@ function HasCondition() {
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = "PP:" + GetCondition("PP") + ",CX:" + GetCondition("CX") + ",JG:" + GetCondition("JG") + ",DQ:" + GetCondition("DQ");
+    var condition = "LB:" + GetCondition("LB") + ",CX:" + GetCondition("CX") + ",JG:" + GetCondition("JG") + ",DQ:" + GetCondition("DQ");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/CLCX/LoadCLXX",
@@ -142,7 +143,7 @@ function LoadCL_JCInfo(obj) {
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
     html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'CLXX_GCC\',\'' + obj.ID + '\')">' + TruncStr(obj.BT, 35) + '</p>');
-    html += ('<p class="p_li_body_left_center_cs font_size16">' + obj.LB + ' / ' + obj.GCSJ + ' / ' + obj.XSLC + obj.GLS + '万公里' + ' / ' + obj.QY + '</p>');
+    html += ('<p class="p_li_body_left_center_cs font_size16">' + obj.CX + ' / ' + obj.CCNF + '年 / ' + obj.XSS + '小时' + ' / ' + obj.QY + '-' + obj.DD + '</p>');
     html += ('<p class="p_li_body_left_center_dz font_size16">' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');

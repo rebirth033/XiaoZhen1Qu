@@ -53,10 +53,10 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string XSS { get; set; }
 
         /// <summary>
-        /// 出厂年限
+        /// 出厂年份
         /// </summary>
         [Property]
-        public virtual string CCNX { get; set; }
+        public virtual string CCNF { get; set; }
 
         /// <summary>
         /// 出厂月份

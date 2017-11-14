@@ -2,7 +2,7 @@
     $("body").bind("click", function () { Close("_XZQ"); });
     LoadCL_GCCJBXX();
     BindClick("CX");
-    BindClick("CCNX");
+    BindClick("CCNF");
     BindClick("CCYF");
     BindClick("QY");
     BindClick("DD");
@@ -64,6 +64,9 @@ function PDCX(CXMC) {
     if (CXMC === "挖掘机") {
         $("#divGCCPP").css("display", "");
         BindClick("PP");
+    }
+    else {
+        $("#divGCCPP").css("display", "none");
     }
 }
 //加载品牌标签
@@ -128,11 +131,11 @@ function BindClick(type) {
             LoadPP();
             LoadPPMC("挖掘机品牌", "divRM");
         }
-        if (type === "CCNX") {
-            LoadCODESByTYPENAME("出厂年限", "CCNX", "CODES_CL", Bind, "GCCCCNX", "CCNX", "");
+        if (type === "CCNF") {
+            LoadCODESByTYPENAME("出厂年份", "CCNF", "CODES_CL", Bind, "GCCCCNF", "CCNF", "");
         }
         if (type === "CCYF") {
-            LoadCODESByTYPENAME("出厂月份", "CCYF", "CODES_CL", Bind, "GCCCCNX", "CCYF", "");
+            LoadCODESByTYPENAME("出厂月份", "CCYF", "CODES_CL", Bind, "GCCCCNF", "CCYF", "");
         }
         if (type === "QY") {
             LoadQY();
@@ -176,7 +179,7 @@ function LoadCL_GCCJBXX() {
                 $("#spanXL").html(xml.Value.CL_GCCJBXX.XL);
                 $("#spanCX").html(xml.Value.CL_GCCJBXX.CX);
                 $("#spanPP").html(xml.Value.CL_GCCJBXX.PP);
-                $("#spanCCNX").html(xml.Value.CL_GCCJBXX.CCNX);
+                $("#spanCCNF").html(xml.Value.CL_GCCJBXX.CCNF);
                 $("#spanCCYF").html(xml.Value.CL_GCCJBXX.CCYF);
                 LoadPhotos(xml.Value.Photos);
                 PDCX(xml.Value.CL_GCCJBXX.CX);
@@ -196,7 +199,7 @@ function FB() {
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "CX", "'" + $("#spanCX").html() + "'");
     obj = jsonObj.AddJson(obj, "PP", "'" + $("#spanPP").html() + "'");
-    obj = jsonObj.AddJson(obj, "CCNX", "'" + $("#spanCCNX").html() + "'");
+    obj = jsonObj.AddJson(obj, "CCNF", "'" + $("#spanCCNF").html() + "'");
     obj = jsonObj.AddJson(obj, "CCYF", "'" + $("#spanCCYF").html() + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");

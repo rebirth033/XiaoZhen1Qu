@@ -539,6 +539,7 @@
     <Compile Include="Models\ZXJC\ZXJC_JJJBXX.cs" />
     <Compile Include="Models\ZXJC\ZXJC_JZFWJBXX.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\CL\CL_GCCView.cs" />
     <Compile Include="ViewModels\CL\CL_ZXCView.cs" />
     <Compile Include="ViewModels\CL\CL_DDCView.cs" />
     <Compile Include="ViewModels\CL\CL_SLCView.cs" />
