@@ -19,6 +19,10 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         {
             return View();
         }
+        public ActionResult ESXX_SJSM_PBDN()
+        {
+            return View();
+        }
 
         public JsonResult LoadESXX()
         {
