@@ -74,7 +74,7 @@
 
 /*首页_主体_左部_分页*/
 .div_body .div_body_left .div_main_info_bottom {background-color: #fff;text-align: center;height: 38px;color: #333;font-size: 14px;font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;padding-left: 10px;padding-top: 8px;}
-.div_body .div_body_left .div_main_info_bottom .div_main_info_bottom_fy { width: 100%;}
+.div_body .div_body_left .div_main_info_bottom .div_main_info_bli_body_rightottom_fy { width: 100%;}
 .div_body .div_body_left .div_main_info_bottom .div_main_info_bottom_fy .a_main_info_bottom_fy {line-height: 18px;cursor: pointer;text-decoration: none;font-size: 16px;background-color: #ffffff;border: 1px solid #dee3e7;padding: 10px 10px;display: inline-block;margin: 0 6px;color: #333;}
 .div_body .div_body_left .div_main_info_bottom .div_main_info_bottom_fy .a_main_info_bottom_fy:hover {background-color: #5bc0de;text-decoration: none;color: #ffffff;}
 .div_body .div_body_left .div_main_info_bottom .div_main_info_bottom_fy .a_main_info_bottom_fy_current {background-color: #5bc0de;color: #ffffff;}
@@ -83,9 +83,10 @@
 .div_body .div_body_right{display: inline-block;width: 200px;height: 1760px;}
 .div_body .div_body_right .p_div_body_right{ font-size: 18px;float: left;display: block;margin-left: 18px;}
 .div_body .div_body_right .ul_body_right{height: 100%;width: 100%;padding: 0;}
-.div_body .div_body_right .ul_body_right .li_body_right{width: 180px;height: 210px;border: 1px solid #e6e6e6;padding: 8px;float: left;margin-left: 18px;margin-bottom: 10px;}
+.div_body .div_body_right .ul_body_right .li_body_right{width: 180px;height: 230px;border: 1px solid #e6e6e6;padding: 8px;float: left;margin-left: 18px;margin-bottom: 10px;}
 .div_body .div_body_right .ul_body_right .li_body_right:hover{ cursor: pointer;}
 .div_body .div_body_right .ul_body_right .li_body_right .img_li_body_right{ height: 120px;width: 100%;margin-bottom: 10px;}
+.div_body .div_body_right .ul_body_right .li_body_right p{ font-size: 12px;}
 .div_body .div_body_right .ul_body_right .li_body_right .p_li_body_right_xq{ width: 100%;height: 20px;display: block;margin-bottom: 2px;font-size: 12px;}
 .div_body .div_body_right .ul_body_right .li_body_right .p_li_body_right_cs{ width: 100%;height: 20px;display: block;color: #999999;margin-bottom: 2px;font-size: 12px;}
 .div_body .div_body_right .ul_body_right .li_body_right .p_li_body_right_jg{width: 100%;height: 20px;display: block;color: #ef6100;font-size: 16px;margin-bottom: 2px;}

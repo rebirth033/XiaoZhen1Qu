@@ -1,11 +1,21 @@
-﻿$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });LoadCW_CWMJBXX();
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    LoadCW_CWMJBXX();
     BindClick("PZ");
+    BindClick("QY");
+    BindClick("DD");
 });
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "PZ") {
             LoadCODESByTYPENAME("宠物猫", "PZ", "CODES_CW", Bind, "CWMPZ", "PZ", "");
+        }
+        if (type === "QY") {
+            LoadQY();
+        }
+        if (type === "DD") {
+            LoadDD($("#QYCode").val());
         }
     });
 }
@@ -35,6 +45,8 @@ function LoadCW_CWMJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.BCMSString);
                 });
+                $("#spanQY").html(xml.Value.CW_CWMJBXX.QY);
+                $("#spanDD").html(xml.Value.CW_CWMJBXX.DD);
                 $("#spanPZ").html(xml.Value.CW_CWMJBXX.PZ);
                 if (xml.Value.CW_CWMJBXX.GQ !== null)
                     SetDX("GQ", xml.Value.CW_CWMJBXX.GQ);
@@ -55,6 +67,8 @@ function FB() {
     obj = jsonObj.AddJson(obj, "PZ", "'" + $("#spanPZ").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
+    obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
+    obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");

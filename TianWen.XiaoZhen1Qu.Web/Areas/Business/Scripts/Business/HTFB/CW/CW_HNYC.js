@@ -2,6 +2,8 @@
     $("body").bind("click", function () { Close("_XZQ"); });
     LoadCW_HNYCJBXX();
     BindClick("LB");
+    BindClick("QY");
+    BindClick("DD");
 });
 //加载小类
 function LoadXL() {
@@ -16,7 +18,10 @@ function LoadXL() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                var html = "<ul class='ul_select' style='overflow-y: scroll;'>";
+                var height = 341;
+                if (xml.list.length < 10)
+                    height = parseInt(xml.list.length * 34) + 1;
+                var html = "<ul class='ul_select' style='overflow-y: scroll; height:" + height + "px'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='li_select' onclick='SelectDropdown(this,\"XL\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
                 }
@@ -47,6 +52,12 @@ function BindClick(type) {
         if (type === "XL") {
             LoadXL();
         }
+        if (type === "QY") {
+            LoadQY();
+        }
+        if (type === "DD") {
+            LoadDD($("#QYCode").val());
+        }
     });
 }
 //加载宠物_花鸟鱼虫基本信息
@@ -71,6 +82,9 @@ function LoadCW_HNYCJBXX() {
                     ue.setContent(xml.Value.BCMSString);
                 });
                 $("#spanLB").html(xml.Value.CW_HNYCJBXX.PZ);
+                $("#spanXL").html(xml.Value.CW_HNYCJBXX.XL);
+                $("#spanQY").html(xml.Value.CW_HNYCJBXX.QY);
+                $("#spanDD").html(xml.Value.CW_HNYCJBXX.DD);
                 if (xml.Value.CW_HNYCJBXX.GQ !== null)
                     SetDX("GQ", xml.Value.CW_HNYCJBXX.GQ);
                 LoadPhotos(xml.Value.Photos);
@@ -88,8 +102,11 @@ function FB() {
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "PZ", "'" + $("#spanLB").html() + "'");
+    obj = jsonObj.AddJson(obj, "XL", "'" + $("#spanXL").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
+    obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
+    obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");

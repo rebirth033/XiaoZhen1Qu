@@ -29,7 +29,7 @@ function GetHeadNav() {
                 html += ('<li class="li_nav_font">' + xml.xzq + '房产</li>');
                 html += ('<li class="li_nav_split">></li>');
                 for (var i = 0; i < xml.list.length; i++) {
-                    if (xml.list[i].LBID == getUrlParam("LBID")) {
+                    if (xml.list[i].LBID === parseInt(getUrlParam("LBID")) && xml.list[i].CONDITION === null) {
                         html += ('<li class="li_nav_font">' + xml.xzq + xml.list[i].LBNAME + '</li>');
                         $("#li_body_head_first").html(xml.xzq + xml.list[i].LBNAME + "");
                     }

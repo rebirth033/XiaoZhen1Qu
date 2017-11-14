@@ -2,12 +2,20 @@
     $("body").bind("click", function () { Close("_XZQ"); });
     LoadCW_CWFWJBXX();
     BindClick("LB");
+    BindClick("QY");
+    BindClick("DD");
 });
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
             LoadCODESByTYPENAME("宠物服务", "LB", "CODES_CW", Bind, "CWFWLB", "LB", "");
+        }
+        if (type === "QY") {
+            LoadQY();
+        }
+        if (type === "DD") {
+            LoadDD($("#QYCode").val());
         }
     });
 }
@@ -33,6 +41,8 @@ function LoadCW_CWFWJBXX() {
                     ue.setContent(xml.Value.BCMSString);
                 });
                 $("#spanLB").html(xml.Value.CW_CWFWJBXX.LB);
+                $("#spanQY").html(xml.Value.CW_CWFWJBXX.QY);
+                $("#spanDD").html(xml.Value.CW_CWFWJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
             }
         },
@@ -49,6 +59,8 @@ function FB() {
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
+    obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
+    obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");

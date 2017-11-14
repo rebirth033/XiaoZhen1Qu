@@ -16,6 +16,21 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             GetSession();
             return View();
         }
+        public ActionResult CWCX_CWM()
+        {
+            GetSession();
+            return View();
+        }
+        public ActionResult CWCX_HNYC()
+        {
+            GetSession();
+            return View();
+        }
+        public ActionResult CWCX_CWFW()
+        {
+            GetSession();
+            return View();
+        }
 
         public JsonResult LoadCWXX()
         {

@@ -547,6 +547,9 @@
     <Compile Include="ViewModels\CL\CL_KCView.cs" />
     <Compile Include="ViewModels\CL\CL_HCView.cs" />
     <Compile Include="ViewModels\CL\CL_JCView.cs" />
+    <Compile Include="ViewModels\CW\CW_CWFWView.cs" />
+    <Compile Include="ViewModels\CW\CW_HNYCView.cs" />
+    <Compile Include="ViewModels\CW\CW_CWMView.cs" />
     <Compile Include="ViewModels\CW\CW_CWGView.cs" />
     <Compile Include="ViewModels\FC\FC_DZFView.cs" />
     <Compile Include="ViewModels\FC\FC_ESFView.cs" />
