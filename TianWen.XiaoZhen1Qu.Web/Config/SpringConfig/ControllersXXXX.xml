@@ -15,4 +15,9 @@
       <ref object="CWCXBLL"/>
     </property>
   </object>
+  <object id="ESXXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.ESXXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="ESCXBLL">
+      <ref object="ESCXBLL"/>
+    </property>
+  </object>
 </objects>

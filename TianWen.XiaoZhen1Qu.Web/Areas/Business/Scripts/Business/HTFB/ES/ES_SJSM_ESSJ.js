@@ -1,12 +1,46 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
-    LoadES_SJSM_ESSJJBXX();
     BindClick("SJPP");
     BindClick("SJXH");
+    LoadDuoX("特色标签", "TSBQ");
     BindClick("QY");
     BindClick("DD");
 });
+//加载多选
+function LoadDuoX(type, id) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
+        dataType: "json",
+        data:
+        {
+            TYPENAME: type,
+            TBName: "CODES_ES_SJSM"
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='ulFWPZ'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='li" + id + "' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    if (i % 5 === 4) {
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
+                    }
+                }
+                if (parseInt(xml.list.length % 5) === 0)
+                    $("#div" + id).css("height", parseInt(xml.list.length / 5) * 45 + "px");
+                else
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 5) + 1) * 45 + "px");
+                html += "</ul>";
+                $("#div" + id + "Text").html(html);
+                $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                LoadES_SJSM_ESSJJBXX();
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
+        }
+    });
+}
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
@@ -84,6 +118,8 @@ function LoadES_SJSM_ESSJJBXX() {
                     SetDX("GQ", xml.Value.ES_SJSM_ESSJJBXX.GQ);
                 if (xml.Value.ES_SJSM_ESSJJBXX.SYQK !== null)
                     SetDX("SYQK", xml.Value.ES_SJSM_ESSJJBXX.SYQK);
+                if (xml.Value.ES_SJSM_ESSJJBXX.TSBQ !== null)
+                    SetDuoX("TSBQ", xml.Value.ES_SJSM_ESSJJBXX.TSBQ);
                 $("#spanQY").html(xml.Value.ES_SJSM_ESSJJBXX.QY);
                 $("#spanDD").html(xml.Value.ES_SJSM_ESSJJBXX.DD);
                 $("#spanSJPP").html(xml.Value.ES_SJSM_ESSJJBXX.SJPP);
@@ -110,6 +146,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
     obj = jsonObj.AddJson(obj, "SYQK", "'" + GetDX("SYQK") + "'");
+    obj = jsonObj.AddJson(obj, "TSBQ", "'" + GetDuoX("TSBQ") + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");

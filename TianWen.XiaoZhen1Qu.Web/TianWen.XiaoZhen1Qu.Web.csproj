@@ -161,6 +161,7 @@
     <Content Include="Areas\Business\Css\BZZX\BZZX_SY_ZHMM.css" />
     <Content Include="Areas\Business\Css\BZZX\BZZX_WZJY.css" />
     <Content Include="Areas\Business\Css\Common\Head.css" />
+    <Content Include="Areas\Business\Css\CXLB\ESCX.css" />
     <Content Include="Areas\Business\Css\CXLB\CWCX.css" />
     <Content Include="Areas\Business\Css\CXLB\CLCX.css" />
     <Content Include="Areas\Business\Css\CXLB\FCCX.css" />
@@ -537,6 +538,7 @@
     <Content Include="Areas\Business\Css\XXXX\CW\CWXX_HNYC.css" />
     <Content Include="Areas\Business\Css\XXXX\CW\CWXX_CWM.css" />
     <Content Include="Areas\Business\Css\XXXX\CW\CWXX_CWG.css" />
+    <Content Include="Areas\Business\Css\XXXX\ES\ESXX_SJSM_ESSJ.css" />
     <Content Include="Areas\Business\Css\XXXX\FC\FCXX_DZF.css" />
     <Content Include="Areas\Business\Css\XXXX\FC\FCXX_ESF.css" />
     <Content Include="Areas\Business\Css\XXXX\FC\FCXX_XZL.css" />
@@ -615,6 +617,7 @@
     <Content Include="Areas\Business\Scripts\Business\CXLB\CWCX\CWCX_HNYC.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\CWCX\CWCX_CWM.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\CWCX\CWCX_CWG.js" />
+    <Content Include="Areas\Business\Scripts\Business\CXLB\ESCX\ESCX_SJSM_ESSJ.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\FCCX\FCCX_DZF.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\FCCX\FCCX_ESF.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\FCCX\FCCX_CF.js" />
@@ -1030,6 +1033,7 @@
     <Content Include="Areas\Business\Scripts\Business\XXXX\CWXX\CWXX_HNYC.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\CWXX\CWXX_CWM.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\CWXX\CWXX_CWG.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\ESXX\ESXX_SJSM_ESSJ.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\FCXX\FCXX_DZF.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\FCXX\FCXX_ESF.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\FCXX\FCXX_CF.js" />
@@ -1409,6 +1413,7 @@
       <DependentUpon>png.aspx</DependentUpon>
     </Compile>
     <Compile Include="Areas\Business\BusinessAreaRegistration.cs" />
+    <Compile Include="Areas\Business\Controllers\CXLB\ESCXController.cs" />
     <Compile Include="Areas\Business\Controllers\CXLB\CWCXController.cs" />
     <Compile Include="Areas\Business\Controllers\CXLB\CLCXController.cs" />
     <Compile Include="Areas\Business\Controllers\OTHER\BaseController.cs" />
@@ -1446,6 +1451,7 @@
     <Compile Include="Areas\Business\Controllers\HTGL\WDXJController.cs" />
     <Compile Include="Areas\Business\Controllers\HTGL\WZCXController.cs" />
     <Compile Include="Areas\Business\Controllers\HTGL\XXGLController.cs" />
+    <Compile Include="Areas\Business\Controllers\XXXX\ESXXController.cs" />
     <Compile Include="Areas\Business\Controllers\XXXX\CWXXController.cs" />
     <Compile Include="Areas\Business\Controllers\XXXX\CLXXController.cs" />
     <Compile Include="Areas\Business\Controllers\XXXX\FCXXController.cs" />
@@ -1800,6 +1806,8 @@
     <Content Include="Areas\Business\Views\CWXX\CWXX_CWYPSP.cshtml" />
     <Content Include="Areas\Business\Views\CWCX\CWCX_CWZSLY.cshtml" />
     <Content Include="Areas\Business\Views\CWXX\CWXX_CWZSLY.cshtml" />
+    <Content Include="Areas\Business\Views\ESCX\ESCX_SJSM_ESSJ.cshtml" />
+    <Content Include="Areas\Business\Views\ESXX\ESXX_SJSM_ESSJ.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
