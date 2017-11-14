@@ -109,7 +109,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "CWXX_CWZSLY")//宠物_宠物赠送领养
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,cw_cwypspjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + " order by zxgxsj desc");
+                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,cw_cwzslyjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + " order by zxgxsj desc");
                     List<CW_CWZSLYView> list = ConvertHelper.DataTableToList<CW_CWZSLYView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
