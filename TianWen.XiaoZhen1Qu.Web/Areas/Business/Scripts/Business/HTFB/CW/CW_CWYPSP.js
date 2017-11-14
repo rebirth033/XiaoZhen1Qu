@@ -84,6 +84,8 @@ function LoadCW_CWYPSPJBXX() {
                     ue.setContent(xml.Value.BCMSString);
                 });
                 $("#spanLB").html(xml.Value.CW_CWYPSPJBXX.LB);
+                $("#spanQY").html(xml.Value.CW_CWYPSPJBXX.QY);
+                $("#spanDD").html(xml.Value.CW_CWYPSPJBXX.DD);
                 PDLB(xml.Value.CW_CWYPSPJBXX.LB);
                 $("#spanXL").html(xml.Value.CW_CWYPSPJBXX.XL);
                 $("#spanXJ").html(xml.Value.CW_CWYPSPJBXX.XJ);
@@ -106,6 +108,8 @@ function FB() {
     obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
     obj = jsonObj.AddJson(obj, "XL", "'" + $("#spanXL").html() + "'");
     obj = jsonObj.AddJson(obj, "XJ", "'" + $("#spanXJ").html() + "'");
+    obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
+    obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
 

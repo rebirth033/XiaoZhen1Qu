@@ -1,7 +1,19 @@
 ﻿$(document).ready(function () {
     $("#span_content_info_qhcs").bind("click", LoadXZQByGrade);
+    BindXZQClick("QY");
+    BindXZQClick("DD");
 });
-
+//绑定下拉框鼠标点击样式
+function BindXZQClick(type) {
+    $("#div" + type + "Span").click(function () {
+        if (type === "QY") {
+            LoadQY();
+        }
+        if (type === "DD") {
+            LoadDD($("#QYCode").val());
+        }
+    });
+}
 //选择行政区
 function SelectXZQ(NAME, CODE) {
     $.ajax({
