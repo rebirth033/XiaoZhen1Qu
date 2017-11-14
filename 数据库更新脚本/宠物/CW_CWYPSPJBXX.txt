@@ -1,14 +1,16 @@
 -- Create table
 create table CW_CWYPSPJBXX
 (
-  cw_cwypspjbxxid VARCHAR2(50) not null,
-  jcxxid          VARCHAR2(50),
-  bcms            blob,
-  gq              VARCHAR2(20),
-  lb              VARCHAR2(20),
-  xl              VARCHAR2(20),
-  xj              VARCHAR2(20),
-  jg              VARCHAR2(20)
+  id     VARCHAR2(50) not null,
+  jcxxid VARCHAR2(50),
+  gq     VARCHAR2(20),
+  lb     VARCHAR2(20),
+  xl     VARCHAR2(20),
+  xj     VARCHAR2(20),
+  jg     VARCHAR2(20),
+  bcms   BLOB,
+  qy     VARCHAR2(20),
+  dd     VARCHAR2(20)
 )
 tablespace USERS
   pctfree 10
@@ -16,7 +18,7 @@ tablespace USERS
   maxtrans 255
   storage
   (
-    initial 16
+    initial 64
     minextents 1
     maxextents unlimited
   );
@@ -24,12 +26,10 @@ tablespace USERS
 comment on table CW_CWYPSPJBXX
   is '宠物_宠物用品/食品';
 -- Add comments to the columns 
-comment on column CW_CWYPSPJBXX.cw_cwypspjbxxid
+comment on column CW_CWYPSPJBXX.id
   is '宠物食品用品基本信息ID';
 comment on column CW_CWYPSPJBXX.jcxxid
   is '基础信息ID';
-comment on column CW_CWYPSPJBXX.bcms
-  is '补充描述';
 comment on column CW_CWYPSPJBXX.gq
   is '供求';
 comment on column CW_CWYPSPJBXX.lb
@@ -40,3 +40,9 @@ comment on column CW_CWYPSPJBXX.xj
   is '新旧';
 comment on column CW_CWYPSPJBXX.jg
   is '价格';
+comment on column CW_CWYPSPJBXX.bcms
+  is '补充描述';
+comment on column CW_CWYPSPJBXX.qy
+  is '区域';
+comment on column CW_CWYPSPJBXX.dd
+  is '地段';

@@ -31,6 +31,10 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         {
             return View();
         }
+        public ActionResult CWXX_CWZSLY()
+        {
+            return View();
+        }
 
         public JsonResult LoadCWXX()
         {

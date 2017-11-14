@@ -1,12 +1,14 @@
 -- Create table
 create table CW_CWMJBXX
 (
-  cw_cwmjbxxid VARCHAR2(50) not null,
-  jcxxid       VARCHAR2(50),
-  bcms         blob,
-  pz           VARCHAR2(20),
-  gq           VARCHAR2(20),
-  jg           VARCHAR2(20)
+  id     VARCHAR2(50) not null,
+  jcxxid VARCHAR2(50),
+  pz     VARCHAR2(20),
+  gq     VARCHAR2(20),
+  jg     VARCHAR2(20),
+  bcms   BLOB,
+  qy     VARCHAR2(20),
+  dd     VARCHAR2(20)
 )
 tablespace USERS
   pctfree 10
@@ -14,7 +16,7 @@ tablespace USERS
   maxtrans 255
   storage
   (
-    initial 16
+    initial 64
     minextents 1
     maxextents unlimited
   );
@@ -22,15 +24,19 @@ tablespace USERS
 comment on table CW_CWMJBXX
   is '宠物_宠物猫';
 -- Add comments to the columns 
-comment on column CW_CWMJBXX.cw_cwmjbxxid
+comment on column CW_CWMJBXX.id
   is '宠物猫基本信息ID';
 comment on column CW_CWMJBXX.jcxxid
   is '基础信息ID';
-comment on column CW_CWMJBXX.bcms
-  is '补充描述';
 comment on column CW_CWMJBXX.pz
   is '品种';
 comment on column CW_CWMJBXX.gq
   is '供求';
 comment on column CW_CWMJBXX.jg
   is '价格';
+comment on column CW_CWMJBXX.bcms
+  is '补充描述';
+comment on column CW_CWMJBXX.qy
+  is '区域';
+comment on column CW_CWMJBXX.dd
+  is '地段';

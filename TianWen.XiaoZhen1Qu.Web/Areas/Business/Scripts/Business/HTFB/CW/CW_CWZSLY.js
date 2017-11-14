@@ -1,20 +1,7 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });LoadCW_CWZSLYJBXX();
+﻿$(document).ready(function () {
+    $("body").bind("click", function () { Close("_XZQ"); });
+    LoadCW_CWZSLYJBXX();
 });
-//描述框focus
-function BCMSFocus() {
-    $("#BCMS").css("color", "#333333");
-}
-//描述框blur
-function BCMSBlur() {
-    $("#BCMS").css("color", "#999999");
-}
-//描述框设默认文本
-function BCMSSetDefault() {
-    var BCMS = "1.房屋特征：\r\n\r\n2.周边配套：\r\n\r\n3.房东心态：";
-    $("#BCMS").html(BCMS);
-}
-
 //选择类别下拉框
 function SelectLB(obj, type) {
     $("#span" + type).html(obj.innerHTML);
@@ -41,6 +28,8 @@ function LoadCW_CWZSLYJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.BCMSString);
                 });
+                $("#spanQY").html(xml.Value.CW_CWZSLYJBXX.QY);
+                $("#spanDD").html(xml.Value.CW_CWZSLYJBXX.DD);
                 if (xml.Value.CW_CWZSLYJBXX.GQ !== null)
                     SetDX("GQ", xml.Value.CW_CWZSLYJBXX.GQ);
                 LoadPhotos(xml.Value.Photos);
@@ -59,6 +48,8 @@ function FB() {
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
+    obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
+    obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");

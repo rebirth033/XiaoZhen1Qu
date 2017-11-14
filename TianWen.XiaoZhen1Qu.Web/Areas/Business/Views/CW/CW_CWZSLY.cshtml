@@ -25,8 +25,37 @@
                 <div class="div_radio" id="div_gq_ly">
                     <img class="img_radio" id="img_gq_ly"/><label class="label_radio">领养</label>
                 </div>
+                <div class="div_radio" id="div_gq_xcqs">
+                    <img class="img_radio" id="img_gq_xcqs"/><label class="label_radio">寻宠启事</label>
+                </div>
             </div>
             <div id="divGQTip" class="Warn" style="z-index: 999; position: relative;"></div>
+        </div>
+        <div id="divSZQY" class="div_row" style="z-index: 998;">
+            <div class="div_row_left">
+                <span class="span_required">*</span>
+                <span class="spanFWCZ">所在区域</span>
+            </div>
+            <div class="div_row_right">
+                <div id="divQYText" class="div_select_out SRK">
+                    <div id="divQYSpan" class="div_select_in" style="border: none; margin-top: 6px;">
+                        <input type="hidden" id="QYCode" />
+                        <span id="spanQY" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择区域</span>
+                        <div class="span_select_arrow"></div>
+                    </div>
+                    <div id="divQY" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
+                    </div>
+                </div>
+                <div id="divDDText" class="div_select_out SRK">
+                    <div id="divDDSpan" class="div_select_in" style="border: none; margin-top: 6px;">
+                        <span id="spanDD" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择地段</span>
+                        <div class="span_select_arrow"></div>
+                    </div>
+                    <div id="divDD" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
+                    </div>
+                </div>
+            </div>
+            <div id="divSZQYTip" class="Warn" style="z-index: 997; position: relative;"></div>
         </div>
         <div id="divFYBT" class="div_row" style="margin-top: 22px;">
             <div class="div_row_left" style="margin-left: 128px;">
@@ -38,7 +67,7 @@
                 <div id="divBTTip"></div>
             </div>
         </div>
-        <div id="divBCMS" class="div_row" style="height: 253px;">
+        <div id="divBCMS" class="div_row" style="height: 253px; z-index: 996;">
             <div class="div_row_left" style="height: 170px; vertical-align: top;">
                 <span class="span_required" style="vertical-align: top">*</span>
                 <span id="spanBCMS" style="vertical-align: top">补充描述</span>

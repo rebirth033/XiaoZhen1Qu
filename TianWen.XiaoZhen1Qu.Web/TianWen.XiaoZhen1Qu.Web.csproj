@@ -531,6 +531,7 @@
     <Content Include="Areas\Business\Css\XXXX\CL\CLXX_HC.css" />
     <Content Include="Areas\Business\Css\XXXX\CL\CLXX_JC.css" />
     <Content Include="Areas\Business\Css\XXXX\Common\XXXX_Common.css" />
+    <Content Include="Areas\Business\Css\XXXX\CW\CWXX_CWZSLY.css" />
     <Content Include="Areas\Business\Css\XXXX\CW\CWXX_CWYPSP.css" />
     <Content Include="Areas\Business\Css\XXXX\CW\CWXX_CWFW.css" />
     <Content Include="Areas\Business\Css\XXXX\CW\CWXX_HNYC.css" />
@@ -608,6 +609,7 @@
     <Content Include="Areas\Business\Scripts\Business\CXLB\CLCX\CLCX_HC.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\CLCX\CLCX_JC.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\Common\CXLB_Common.js" />
+    <Content Include="Areas\Business\Scripts\Business\CXLB\CWCX\CWCX_CWZSLY.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\CWCX\CWCX_CWYPSP.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\CWCX\CWCX_CWFW.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\CWCX\CWCX_HNYC.js" />
@@ -1022,6 +1024,7 @@
     <Content Include="Areas\Business\Scripts\Business\XXXX\CLXX\CLXX_KC.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\CLXX\CLXX_HC.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\CLXX\CLXX_JC.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\CWXX\CWXX_CWZSLY.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\CWXX\CWXX_CWYPSP.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\CWXX\CWXX_CWFW.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\CWXX\CWXX_HNYC.js" />
@@ -1795,6 +1798,8 @@
     <Content Include="Areas\Business\Views\CWXX\CWXX_CWFW.cshtml" />
     <Content Include="Areas\Business\Views\CWCX\CWCX_CWYPSP.cshtml" />
     <Content Include="Areas\Business\Views\CWXX\CWXX_CWYPSP.cshtml" />
+    <Content Include="Areas\Business\Views\CWCX\CWCX_CWZSLY.cshtml" />
+    <Content Include="Areas\Business\Views\CWXX\CWXX_CWZSLY.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -2,20 +2,12 @@
     $("body").bind("click", function () { Close("_XZQ"); });
     LoadCW_CWMJBXX();
     BindClick("PZ");
-    BindClick("QY");
-    BindClick("DD");
 });
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "PZ") {
             LoadCODESByTYPENAME("宠物猫", "PZ", "CODES_CW", Bind, "CWMPZ", "PZ", "");
-        }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
         }
     });
 }
