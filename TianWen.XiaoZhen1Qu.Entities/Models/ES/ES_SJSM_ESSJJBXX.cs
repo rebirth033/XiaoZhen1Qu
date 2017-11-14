@@ -29,16 +29,16 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string GQ { get; set; }
 
         /// <summary>
-        /// 手机品牌
+        /// 品牌
         /// </summary>
         [Property]
-        public virtual string SJPP { get; set; }
+        public virtual string PP { get; set; }
 
         /// <summary>
-        /// 手机型号
+        /// 型号
         /// </summary>
         [Property]
-        public virtual string SJXH { get; set; }
+        public virtual string XH { get; set; }
 
         /// <summary>
         /// 使用情况

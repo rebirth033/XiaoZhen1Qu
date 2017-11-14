@@ -553,6 +553,7 @@
     <Compile Include="ViewModels\CW\CW_HNYCView.cs" />
     <Compile Include="ViewModels\CW\CW_CWMView.cs" />
     <Compile Include="ViewModels\CW\CW_CWGView.cs" />
+    <Compile Include="ViewModels\ES\ES_SJSM_BJBDNView.cs" />
     <Compile Include="ViewModels\ES\ES_SJSM_ESSJView.cs" />
     <Compile Include="ViewModels\FC\FC_DZFView.cs" />
     <Compile Include="ViewModels\FC\FC_ESFView.cs" />
