@@ -165,9 +165,9 @@ function LoadSY_ML_WXLInfo(list, xzq, typename) {
             for (var j = 0; j < list.length; j++) {
                 if (list[j].PARENTID === list[i].ID) {
                     if (list[j].ISHOT === "是")
-                        html += ('<li class="li_body_middle_left_section orange">' + list[j].LBNAME + '</li>');
+                        html += ('<li class="li_body_middle_left_section orange" onclick="OpenCXLB(' + list[j].LBID + ',\'' + list[j].TYPENAME + '\',\'' + list[j].CONDITION + '\')">' + list[j].LBNAME + '</li>');
                     else
-                        html += ('<li class="li_body_middle_left_section">' + list[j].LBNAME + '</li>');
+                        html += ('<li class="li_body_middle_left_section" onclick="OpenCXLB(' + list[j].LBID + ',\'' + list[j].TYPENAME + '\',\'' + list[j].CONDITION + '\')">' + list[j].LBNAME + '</li>');
                 }
             }
             html += ('</ul>');
@@ -185,15 +185,15 @@ function LoadSY_ML_CWInfo(list, xzq, typename) {
     for (var i = 0; i < list.length; i++) {
         if (list[i].TYPE === "XL" && list[i].TYPENAME === typename) {
             html += ('<div class="div_body_middle_left_section_fl">');
-            html += ('<span class="span_body_middle_left_section_fl_left blue" style="height: ' + GetHeight(list, list[i].ID) + 'px;">' + list[i].LBNAME + '</span>');
+            html += ('<span class="span_body_middle_left_section_fl_left blue" onclick="OpenCXLB(' + list[i].LBID + ',\'' + list[i].TYPENAME + '\',\'' + list[i].CONDITION + '\')" style="height: ' + GetHeight(list, list[i].ID) + 'px;">' + list[i].LBNAME + '</span>');
             var count = 0;
             for (var j = 0; j < list.length; j++) {
                 if (list[j].PARENTID === list[i].ID) {
                     count++;
                     if (list[j].ISHOT === "是")
-                        html += ('<span class="span_body_middle_left_section_fl_right orange">' + list[j].LBNAME + '</span>');
+                        html += ('<span class="span_body_middle_left_section_fl_right orange" onclick="OpenCXLB(' + list[j].LBID + ',\'' + list[j].TYPENAME + '\',\'' + list[j].CONDITION + '\')">' + list[j].LBNAME + '</span>');
                     else
-                        html += ('<span class="span_body_middle_left_section_fl_right">' + list[j].LBNAME + '</span>');
+                        html += ('<span class="span_body_middle_left_section_fl_right" onclick="OpenCXLB(' + list[j].LBID + ',\'' + list[j].TYPENAME + '\',\'' + list[j].CONDITION + '\')">' + list[j].LBNAME + '</span>');
                     if (count % 3 === 0)
                         html += ('<br />');
                     else
@@ -254,4 +254,6 @@ function OpenCXLB(lbid, typename, condition) {
         window.open(getRootPath() + "/Business/CLCX/CLCX_SLC?LBID=" + lbid);
     if (lbid === 62)
         window.open(getRootPath() + "/Business/CLCX/CLCX_GCC?LBID=" + lbid);
+    if (lbid === 73)
+        window.open(getRootPath() + "/Business/CWCX/CWCX_CWG?LBID=" + lbid);
 }

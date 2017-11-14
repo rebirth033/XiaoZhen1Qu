@@ -32,10 +32,11 @@
 .div_body .div_body_middle .div_body_middle_left .div_body_middle_left_section .ul_body_middle_left_section .li_body_middle_left_section{display: inline-block;width: 80px;height: 30px;font-size: 14px;float: left;}
 .div_body .div_body_middle .div_body_middle_left #div_body_middle_left_section_fc .ul_body_middle_left_section .li_body_middle_left_section{display: inline-block;margin-right: 10px;width:auto ;height: 30px;font-size: 14px;float: left;}
 .div_body .div_body_middle .div_body_middle_left .div_body_middle_left_section .ul_body_middle_left_section .li_body_middle_left_section:hover{ cursor: pointer;color: #ef6100;text-decoration: underline;}
-.div_body .div_body_middle .div_body_middle_left .div_body_middle_left_section .ul_body_middle_left_section .li_body_middle_left_section_active{color: #ef6100;}
 .div_body .div_body_middle .div_body_middle_left .div_body_middle_left_section_fl{ display: block;}
 .div_body .div_body_middle .div_body_middle_left .div_body_middle_left_section_fl .span_body_middle_left_section_fl_left{ display: inline-block;float: left;width: 75px;}
+.div_body .div_body_middle .div_body_middle_left .div_body_middle_left_section_fl .span_body_middle_left_section_fl_left:hover{ cursor: pointer;color: #ef6100;text-decoration: underline;}
 .div_body .div_body_middle .div_body_middle_left .div_body_middle_left_section_fl .span_body_middle_left_section_fl_right{ display: inline-block;height: 30px;}
+.div_body .div_body_middle .div_body_middle_left .div_body_middle_left_section_fl .span_body_middle_left_section_fl_right:hover{ cursor: pointer;color: #ef6100;text-decoration: underline;}
 .div_body .div_body_middle .div_body_middle_left .div_body_middle_left_section_fl .em_body_middle_left_section_fl_right{ display: inline-block;margin-left: 3px;margin-right: 3px;}
 
 /*首页_主体_底部*/

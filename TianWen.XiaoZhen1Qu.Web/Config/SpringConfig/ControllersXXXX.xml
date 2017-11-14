@@ -10,4 +10,9 @@
       <ref object="CLCXBLL"/>
     </property>
   </object>
+  <object id="CWXXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.CWXXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="CWCXBLL">
+      <ref object="CWCXBLL"/>
+    </property>
+  </object>
 </objects>
