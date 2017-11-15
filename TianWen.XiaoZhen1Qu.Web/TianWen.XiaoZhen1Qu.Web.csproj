@@ -1590,7 +1590,6 @@
     <Content Include="Areas\Business\Views\FC\FC_CFCKTDCW.cshtml" />
     <Content Include="Areas\Business\Views\ES\ES_SJSM_ESSJ.cshtml" />
     <Content Include="Areas\Business\Views\ES\ES_SJSM_BJBDN.cshtml" />
-    <Content Include="Areas\Business\Views\ES\ES_SJSM_PBDN.cshtml" />
     <Content Include="Areas\Business\Views\ES\ES_SJSM_SMCP.cshtml" />
     <Content Include="Areas\Business\Views\ES\ES_SJSM_TSJ.cshtml" />
     <Content Include="Areas\Business\Views\ES\ES_JDJJBG_ESJD.cshtml" />

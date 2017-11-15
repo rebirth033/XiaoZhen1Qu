@@ -53,7 +53,6 @@ function DeleteSelect(obj) {
         $("#divConditionSelect").css("display", "none");
     LoadBody("ESXX_SJSM_ESSJ", currentIndex);
 }
-
 //获取查询条件
 function GetCondition(type) {
     var value = "";
@@ -63,6 +62,7 @@ function GetCondition(type) {
     });
     return value;
 }
+//获取所有查询条件
 function GetAllCondition(conditions) {
     var array = conditions.split(',');
     var condition = "";
@@ -72,7 +72,6 @@ function GetAllCondition(conditions) {
     }
     return RTrim(condition,',');
 }
-
 //获取导航查询条件
 function GetNavCondition() {
     var value = "";
