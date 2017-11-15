@@ -1,7 +1,7 @@
 ﻿var currentIndex = 1;
 $(document).ready(function () {
     BindBodyNav();
-    LoadCWCondition();
+    LoadESCondition();
     LoadHot("ESXX_SJSM_ESSJ");
     LoadBody("ESXX_SJSM_ESSJ", currentIndex);
 });
@@ -15,23 +15,27 @@ function BindBodyNav() {
     });
 }
 //加载条件
-function LoadCWCondition() {
+function LoadESCondition() {
     $("#div_condition_body").html('');
     LoadConditionByTypeName("手机品牌", "CODES_ES_SJSM", "品牌", "PP");
+    LoadConditionByTypeName("手机价格", "CODES_ES_SJSM", "价格", "JG");
+    LoadDistrict("福州", "350100", "DQ");
 }
 //选择条件
-function SelectCondition() {
-    $(this).parent().find(".li_condition_body").each(function () {
+function SelectCondition(obj, name) {
+    if(name === "品牌")
+        LoadConditionByParentID(obj.id, "CODES_ES_SJSM", "型号", "XH");
+    $(obj).parent().find(".li_condition_body").each(function () {
         $(this).removeClass("li_condition_body_active");
     });
-    $(this).addClass("li_condition_body_active");
-    $(".div_condition_select").css("display", "block");
-    $("#ul_condition_select").html('<li class="li_condition_select_first">筛选条件</li>');
-    $(".li_condition_body").each(function () {
-        if ($(this).css("color") === "rgb(91, 192, 222)" && $(this).html() !== "不限") {
-            $("#ul_condition_select").append('<li onclick="DeleteSelect(this)" class="li_condition_select"><span>' + $(this).html() + '</span><em>x</em></li>');
-        }
-    });
+    $(obj).addClass("li_condition_body_active");
+    //$(".div_condition_select").css("display", "block");
+    //$("#ul_condition_select").html('<li class="li_condition_select_first">筛选条件</li>');
+    //$(".li_condition_body").each(function () {
+    //    if ($(this).css("color") === "rgb(91, 192, 222)" && $(this).html() !== "不限") {
+    //        $("#ul_condition_select").append('<li onclick="DeleteSelect(this)" class="li_condition_select"><span>' + $(this).html() + '</span><em>x</em></li>');
+    //    }
+    //});
     LoadBody("ESXX_SJSM_ESSJ", currentIndex);
 }
 //绑定选择条件删除事件
@@ -115,7 +119,7 @@ function LoadESInfo(obj) {
     html += ('<div class="div_img_li_body_left_count"><span>' + obj.PHOTOS.length + '图</span></div>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
-    html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'ESXX_SJSM_ESSJ\',\'' + obj.ID + '\')">' + TruncStr(obj.BT,35) + '</p>');
+    html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'ESXX_SJSM_ESSJ\',\'' + obj.ID + '\')">' + TruncStr(obj.BT, 35) + '</p>');
     html += (TruncStr(obj.BCMSString, 35));
     html += ('<p class="p_li_body_left_center_dz font_size14">' + obj.QY + ' - ' + obj.DD + '<label>/</label>' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');

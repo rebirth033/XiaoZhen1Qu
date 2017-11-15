@@ -114,19 +114,41 @@ function LoadConditionByTypeName(typename, table, name, id) {
         }
     });
 }
+//根据PARENTID获取字典表
+function LoadConditionByParentID(parentid, table, name, id) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadByParentID",
+        dataType: "json",
+        data:
+        {
+            ParentID: parentid,
+            TBName: table
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                $("#ul_condition_body_" + id).remove();
+                if (parentid !== "0")
+                    LoadCondition(xml.list, name, id);
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
 //加载查询条件
 function LoadCondition(array, name, id) {
     var html = "";
     html += '<ul id="ul_condition_body_' + id + '" class="ul_condition_body">';
     html += '<li class="li_condition_body_first">' + name + '</li>';
-    html += '<li class="li_condition_body li_condition_body_active">不限</li>';
-    for (var i = 0; i < 15; i++) {
-        html += '<li class="li_condition_body">' + array[i].CODENAME + '</li>';
+    html += '<li id="0" class="li_condition_body li_condition_body_active" onclick="SelectCondition(this,\'' + name + '\')">不限</li>';
+    for (var i = 0; i < (array.length > 10 ? 10 : array.length) ; i++) {
+        html += '<li id="' + array[i].CODEID + '" class="li_condition_body" onclick="SelectCondition(this,\'' + name + '\')">' + array[i].CODENAME + '</li>';
     }
     html += '</ul>';
-    $("#div_condition_body").append(html);
-    $("#ul_condition_body_" + id).find(".li_condition_body").bind("click", SelectCondition);
-    LoadDistrict("福州", "350100", "DQ");
+    $("#div_condition_body_" + id).append(html);
+
 }
 //根据TYPENAME获取字典表
 function LoadDistrict(name, code, type) {
@@ -153,11 +175,10 @@ function LoadDistrictCondition(array, type, name) {
     var html = "";
     html += '<ul id="ul_condition_body_' + type + '" class="ul_condition_body">';
     html += '<li class="li_condition_body_first">' + name + '</li>';
-    html += '<li class="li_condition_body li_condition_body_active">不限</li>';
+    html += '<li class="li_condition_body li_condition_body_active" onclick="SelectCondition(this)">不限</li>';
     for (var i = 0; i < array.length; i++) {
-        html += '<li class="li_condition_body">' + RTrimStr(RTrimStr(RTrimStr(array[i].NAME, '区'), '县'),'市') + '</li>';
+        html += '<li class="li_condition_body" onclick="SelectCondition(this)">' + RTrimStr(RTrimStr(RTrimStr(array[i].NAME, '区'), '县'), '市') + '</li>';
     }
     html += '</ul>';
-    $("#div_condition_body").append(html);
-    $("#ul_condition_body_" + type).find(".li_condition_body").bind("click", SelectCondition);
+    $("#div_condition_body_DQ").append(html);
 }
