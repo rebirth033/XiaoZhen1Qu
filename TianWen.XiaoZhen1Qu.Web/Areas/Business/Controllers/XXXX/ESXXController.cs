@@ -23,6 +23,18 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         {
             return View();
         }
+        public ActionResult ESXX_SJSM_SMCP()
+        {
+            return View();
+        }
+        public ActionResult ESXX_SJSM_TSJ()
+        {
+            return View();
+        }
+        public ActionResult ESXX_JDJJBG_ESJD()
+        {
+            return View();
+        }
 
         public JsonResult LoadESXX()
         {

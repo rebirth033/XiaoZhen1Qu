@@ -18,9 +18,9 @@ function BindBodyNav() {
 //加载条件
 function LoadESCondition() {
     $("#div_condition_body").html('');
-    var lb = "类别,不限,笔记本,笔记本配件,笔记本回收".split(',');
+    var lb = "类别,不限,平板电脑,平板电脑配件".split(',');
+    var pp = "品牌,不限,iPad,三星,小米,联想/ThinkPad,爱国者,E人E本,纽曼,华为,宏基,华硕,戴尔".split(',');
     var jg = "价格,不限,100元以下,100-200元,200-500元,500-1000元,1000-2000元,2000-3500元,3500元以上".split(',');
-    var pp = "品牌,不限,ThinkPad/IBM,联想,戴尔,华硕,惠普,索尼,苹果,三星,宏基,富士通,东芝,方正,神舟,海尔,清华同方,其他品牌".split(',');
     var dq = "地区,不限,鼓楼,台江,晋安,仓山,闽侯,福清,马尾,长乐,连江,平潭,罗源,闽清,永泰".split(',');
     LoadCondition(lb, "LB");
     LoadCondition(pp, "PP");

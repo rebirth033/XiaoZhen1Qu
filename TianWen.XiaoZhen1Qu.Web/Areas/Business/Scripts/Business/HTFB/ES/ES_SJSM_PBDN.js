@@ -9,7 +9,6 @@
     BindClick("QY");
     BindClick("SQ");
 });
-
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
@@ -49,7 +48,10 @@ function LoadPBXH() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                var html = "<ul class='ul_select' style='overflow-y: scroll;height:340px;width:200px'>";
+                var height = 341;
+                if (xml.list.length < 10)
+                    height = parseInt(xml.list.length * 34) + 1;
+                var html = "<ul class='ul_select' style='overflow-y: scroll; height:" + height + "px;width:200px;'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='li_select' onclick='SelectDropdown(this,\"PBXH\")'>" + xml.list[i].CODENAME + "</li>";
                 }
@@ -68,7 +70,8 @@ function SelectLB(obj, type, id) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
     $("#PPID").val(id);
-    PDLB(obj.innerHTML);
+    if(type === "LB")
+        PDLB(obj.innerHTML);
 }
 //判断类别
 function PDLB(LB) {

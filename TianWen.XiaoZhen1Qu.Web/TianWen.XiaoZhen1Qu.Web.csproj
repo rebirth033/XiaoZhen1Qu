@@ -538,6 +538,10 @@
     <Content Include="Areas\Business\Css\XXXX\CW\CWXX_HNYC.css" />
     <Content Include="Areas\Business\Css\XXXX\CW\CWXX_CWM.css" />
     <Content Include="Areas\Business\Css\XXXX\CW\CWXX_CWG.css" />
+    <Content Include="Areas\Business\Css\XXXX\ES\ESXX_JDJJBG_ESJD.css" />
+    <Content Include="Areas\Business\Css\XXXX\ES\ESXX_SJSM_TSJ.css" />
+    <Content Include="Areas\Business\Css\XXXX\ES\ESXX_SJSM_SMCP.css" />
+    <Content Include="Areas\Business\Css\XXXX\ES\ESXX_SJSM_PBDN.css" />
     <Content Include="Areas\Business\Css\XXXX\ES\ESXX_SJSM_BJBDN.css" />
     <Content Include="Areas\Business\Css\XXXX\ES\ESXX_SJSM_ESSJ.css" />
     <Content Include="Areas\Business\Css\XXXX\FC\FCXX_DZF.css" />
@@ -618,6 +622,9 @@
     <Content Include="Areas\Business\Scripts\Business\CXLB\CWCX\CWCX_HNYC.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\CWCX\CWCX_CWM.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\CWCX\CWCX_CWG.js" />
+    <Content Include="Areas\Business\Scripts\Business\CXLB\ESCX\ESCX_JDJJBG_ESJD.js" />
+    <Content Include="Areas\Business\Scripts\Business\CXLB\ESCX\ESCX_SJSM_TSJ.js" />
+    <Content Include="Areas\Business\Scripts\Business\CXLB\ESCX\ESCX_SJSM_SMCP.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\ESCX\ESCX_SJSM_PBDN.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\ESCX\ESCX_SJSM_BJBDN.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\ESCX\ESCX_SJSM_ESSJ.js" />
@@ -1036,6 +1043,9 @@
     <Content Include="Areas\Business\Scripts\Business\XXXX\CWXX\CWXX_HNYC.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\CWXX\CWXX_CWM.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\CWXX\CWXX_CWG.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\ESXX\ESXX_JDJJBG_ESJD.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\ESXX\ESXX_SJSM_TSJ.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\ESXX\ESXX_SJSM_SMCP.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\ESXX\ESXX_SJSM_PBDN.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\ESXX\ESXX_SJSM_BJBDN.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\ESXX\ESXX_SJSM_ESSJ.js" />
@@ -1817,6 +1827,12 @@
     <Content Include="Areas\Business\Views\ESXX\ESXX_SJSM_BJBDN.cshtml" />
     <Content Include="Areas\Business\Views\ESCX\ESCX_SJSM_PBDN.cshtml" />
     <Content Include="Areas\Business\Views\ESXX\ESXX_SJSM_PBDN.cshtml" />
+    <Content Include="Areas\Business\Views\ESCX\ESCX_SJSM_SMCP.cshtml" />
+    <Content Include="Areas\Business\Views\ESXX\ESXX_SJSM_SMCP.cshtml" />
+    <Content Include="Areas\Business\Views\ESCX\ESCX_SJSM_TSJ.cshtml" />
+    <Content Include="Areas\Business\Views\ESXX\ESXX_SJSM_TSJ.cshtml" />
+    <Content Include="Areas\Business\Views\ESCX\ESCX_JDJJBG_ESJD.cshtml" />
+    <Content Include="Areas\Business\Views\ESXX\ESXX_JDJJBG_ESJD.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

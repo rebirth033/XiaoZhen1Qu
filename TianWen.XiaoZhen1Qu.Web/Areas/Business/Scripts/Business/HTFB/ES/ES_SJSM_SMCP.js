@@ -15,7 +15,8 @@ function BindClick(type) {
             LoadCODESByTYPENAME("数码产品类别", "LB", "CODES_ES_SJSM", Bind, "SMCPLB", "LB", "");
         }
         if (type === "XL") {
-            LoadSMCPXL();
+            $("#divXL").css("display", "block");
+            ActiveStyle("XL");
         }
         if (type === "XJ") {
             LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM", Bind, "XJCD", "XJ", "");
@@ -28,8 +29,18 @@ function BindClick(type) {
         }
     });
 }
+//选择类别下拉框
+function SelectLB(obj, type, id) {
+    $("#span" + type).html(obj.innerHTML);
+    $("#div" + type).css("display", "none");
+    $("#LBID").val(id);
+    if (type === "LB") {
+        LoadXLByParentID("CODES_ES_SJSM");
+        $("#spanXL").html("请选择小类");
+    }
+}
 //加载数码产品小类
-function LoadSMCPXL() {
+function LoadXLByParentID(TBName) {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/Common/LoadByParentID",
@@ -37,37 +48,33 @@ function LoadSMCPXL() {
         data:
         {
             ParentID: $("#LBID").val(),
-            TBName: "CODES_ES_SJSM"
+            TBName: TBName
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                var html = "<ul class='ul_select' style='overflow-y: scroll;'>";
+                var height = 341;
+                if (xml.list.length < 10)
+                    height = parseInt(xml.list.length * 34) + 1;
+                var html = "<ul class='ul_select' style='overflow-y: scroll; height:" + height + "px;'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='li_select' onclick='SelectLB(this,\"XL\")'>" + xml.list[i].CODENAME + "</li>";
                 }
                 html += "</ul>";
                 $("#divXL").html(html);
-                $("#divXL").css("display", "block");
-                ActiveStyle("XL");
+                $("#divXL").css("display", "none");
+                if (xml.list.length > 0) {
+                    $("#divXLText").css("display", "");
+                    BindClick("XL");
+                }
+                else {
+                    $("#divXLText").css("display", "none");
+                }
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
         }
     });
-}
-//选择类别下拉框
-function SelectLB(obj, type, id) {
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
-    $("#LBID").val(id);
-    BindClick("XL");
-}
-//选择数码产品品牌
-function SelectPBPP(obj, type, code) {
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
-    LoadPBXH(code);
 }
 //加载二手_手机数码_数码产品基本信息
 function LoadES_SJSM_SMCPJBXX() {

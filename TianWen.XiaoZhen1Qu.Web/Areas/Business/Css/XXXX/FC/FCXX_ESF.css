@@ -1,7 +1,7 @@
 ﻿/*首页_主体*/
 .div_body{display: block;width: 1200px;height: 1000px;}
 /*首页_主体_左部*/
-.div_body .div_body_left{display: inline-block;width: 880px;border: 1px solid #cccccc;border-radius: 2px;height: 3600px;background-color: #ffffff;float: left;padding: 10px;}
+.div_body .div_body_left{display: inline-block;width: 880px;border: 1px solid #cccccc;border-radius: 2px;height: auto;background-color: #ffffff;float: left;padding: 10px;}
 /*首页_主体_左部_标题*/
 .div_body .div_body_left .div_body_left_head{ height: 120px;width: 100%;border-bottom: 1px solid #cccccc;}
 .div_body .div_body_left .div_body_left_head .p_div_body_left_head_bt{ display: block;font-size: 25px;font-weight: 700;height: 40px;padding: 10px;}

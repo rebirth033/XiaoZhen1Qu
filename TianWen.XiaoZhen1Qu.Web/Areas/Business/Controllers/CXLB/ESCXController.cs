@@ -22,6 +22,21 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             GetSession();
             return View();
         }
+        public ActionResult ESCX_SJSM_SMCP()
+        {
+            GetSession();
+            return View();
+        }
+        public ActionResult ESCX_SJSM_TSJ()
+        {
+            GetSession();
+            return View();
+        }
+        public ActionResult ESCX_JDJJBG_ESJD()
+        {
+            GetSession();
+            return View();
+        }
 
         public JsonResult LoadESXX()
         {

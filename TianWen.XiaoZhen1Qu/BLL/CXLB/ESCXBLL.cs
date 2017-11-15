@@ -56,6 +56,78 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     }
                     return new { Result = EnResultType.Success, list = listnew, PageCount = PageCount, TotalCount = TotalCount };
                 }
+                if (TYPE == "ESXX_SJSM_PBDN")//二手_手机数码_平板电脑
+                {
+                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,es_sjsm_pbdnjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + " order by zxgxsj desc");
+                    List<ES_SJSM_PBDNView> list = ConvertHelper.DataTableToList<ES_SJSM_PBDNView>(dt);
+                    int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
+                    int TotalCount = list.Count;
+                    var WDCountlist = from p in list.Where(p => p.STATUS == 0) select p;
+                    int WCCount = WDCountlist.Count();
+
+                    var listnew = from p in list.Skip((int.Parse(PageIndex) - 1) * int.Parse(PageSize)).Take(int.Parse(PageSize)) select p;
+
+                    foreach (var jcxx in listnew)
+                    {
+                        jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
+                        jcxx.BCMSString = BinaryHelper.BinaryToString(jcxx.BCMS);
+                    }
+                    return new { Result = EnResultType.Success, list = listnew, PageCount = PageCount, TotalCount = TotalCount };
+                }
+                if (TYPE == "ESXX_SJSM_SMCP")//二手_手机数码_数码产品
+                {
+                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,es_sjsm_smcpjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + " order by zxgxsj desc");
+                    List<ES_SJSM_SMCPView> list = ConvertHelper.DataTableToList<ES_SJSM_SMCPView>(dt);
+                    int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
+                    int TotalCount = list.Count;
+                    var WDCountlist = from p in list.Where(p => p.STATUS == 0) select p;
+                    int WCCount = WDCountlist.Count();
+
+                    var listnew = from p in list.Skip((int.Parse(PageIndex) - 1) * int.Parse(PageSize)).Take(int.Parse(PageSize)) select p;
+
+                    foreach (var jcxx in listnew)
+                    {
+                        jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
+                        jcxx.BCMSString = BinaryHelper.BinaryToString(jcxx.BCMS);
+                    }
+                    return new { Result = EnResultType.Success, list = listnew, PageCount = PageCount, TotalCount = TotalCount };
+                }
+                if (TYPE == "ESXX_SJSM_TSJ")//二手_手机数码_台式机/配件
+                {
+                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,es_sjsm_tsjjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + " order by zxgxsj desc");
+                    List<ES_SJSM_TSJView> list = ConvertHelper.DataTableToList<ES_SJSM_TSJView>(dt);
+                    int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
+                    int TotalCount = list.Count;
+                    var WDCountlist = from p in list.Where(p => p.STATUS == 0) select p;
+                    int WCCount = WDCountlist.Count();
+
+                    var listnew = from p in list.Skip((int.Parse(PageIndex) - 1) * int.Parse(PageSize)).Take(int.Parse(PageSize)) select p;
+
+                    foreach (var jcxx in listnew)
+                    {
+                        jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
+                        jcxx.BCMSString = BinaryHelper.BinaryToString(jcxx.BCMS);
+                    }
+                    return new { Result = EnResultType.Success, list = listnew, PageCount = PageCount, TotalCount = TotalCount };
+                }
+                if (TYPE == "ESXX_JDJJBG_ESJD")//二手_家电家具办公_二手家电
+                {
+                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,es_jdjjbg_esjdjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + " order by zxgxsj desc");
+                    List<ES_JDJJBG_ESJDView> list = ConvertHelper.DataTableToList<ES_JDJJBG_ESJDView>(dt);
+                    int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
+                    int TotalCount = list.Count;
+                    var WDCountlist = from p in list.Where(p => p.STATUS == 0) select p;
+                    int WCCount = WDCountlist.Count();
+
+                    var listnew = from p in list.Skip((int.Parse(PageIndex) - 1) * int.Parse(PageSize)).Take(int.Parse(PageSize)) select p;
+
+                    foreach (var jcxx in listnew)
+                    {
+                        jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
+                        jcxx.BCMSString = BinaryHelper.BinaryToString(jcxx.BCMS);
+                    }
+                    return new { Result = EnResultType.Success, list = listnew, PageCount = PageCount, TotalCount = TotalCount };
+                }
                 return new { Result = EnResultType.Failed };
 
             }
@@ -64,43 +136,6 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 LoggerManager.Error("error", ex.Message);
                 return new { Result = EnResultType.Failed, Message = "加载失败" };
             }
-        }
-
-        //获取查询条件
-        public string GetConditin(string Condition)
-        {
-            StringBuilder condition = new StringBuilder();
-            string[] conditions = Condition.Split(',');
-            for (int i = 0; i < conditions.Count(); i++)
-            {
-                string[] array = conditions[i].Split(':');
-                if (array[1] != "不限")
-                {
-                    if (array[0] == "ZJ")
-                    {
-                        if (array[1].Contains("-"))
-                        {
-                            string[] zjarray = array[1].TrimEnd('元').Split('-');
-                            condition.AppendFormat(" and {0} >= {1} and {0} <= {2}", array[0], zjarray[0], zjarray[1]);
-                        }
-                        else if (array[1].Contains("以上"))
-                        {
-                            string zjsx = array[1].Substring(0, array[1].IndexOf('元'));
-                            condition.AppendFormat(" and {0} >= {1}", array[0], zjsx);
-                        }
-                        else
-                        {
-                            string zjxx = array[1].Substring(0, array[1].IndexOf('元'));
-                            condition.AppendFormat(" and {0} <= {1}", array[0], zjxx);
-                        }
-                    }
-                    else
-                    {
-                        condition.AppendFormat(" and {0} = '{1}'", array[0], array[1]);
-                    }
-                }
-            }
-            return condition.ToString();
         }
 
         //加载信息
@@ -125,6 +160,54 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 {
                     dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,es_sjsm_bjbdnjbxx b where a.jcxxid = b.jcxxid and id = '{0}'  order by zxgxsj desc", ID));
                     List<ES_SJSM_BJBDNView> list = ConvertHelper.DataTableToList<ES_SJSM_BJBDNView>(dt);
+                    foreach (var jcxx in list)
+                    {
+                        jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
+                    }
+                    DataTable dtgrxx = DAO.Repository.GetDataTable(string.Format("select * from yhjbxx y where y.yhid = '{0}'", list[0].YHID));
+                    List<GRXXView> grxxlist = ConvertHelper.DataTableToList<GRXXView>(dtgrxx);
+                    return new { Result = EnResultType.Success, list = list, BCMSString = BinaryHelper.BinaryToString(list[0].BCMS), grxxlist = grxxlist };
+                }
+                if (TYPE == "ESXX_SJSM_PBDN") //二手_手机数码_平板电脑
+                {
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,es_sjsm_pbdnjbxx b where a.jcxxid = b.jcxxid and id = '{0}'  order by zxgxsj desc", ID));
+                    List<ES_SJSM_PBDNView> list = ConvertHelper.DataTableToList<ES_SJSM_PBDNView>(dt);
+                    foreach (var jcxx in list)
+                    {
+                        jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
+                    }
+                    DataTable dtgrxx = DAO.Repository.GetDataTable(string.Format("select * from yhjbxx y where y.yhid = '{0}'", list[0].YHID));
+                    List<GRXXView> grxxlist = ConvertHelper.DataTableToList<GRXXView>(dtgrxx);
+                    return new { Result = EnResultType.Success, list = list, BCMSString = BinaryHelper.BinaryToString(list[0].BCMS), grxxlist = grxxlist };
+                }
+                if (TYPE == "ESXX_SJSM_SMCP") //二手_手机数码_数码产品
+                {
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,es_sjsm_smcpjbxx b where a.jcxxid = b.jcxxid and id = '{0}'  order by zxgxsj desc", ID));
+                    List<ES_SJSM_SMCPView> list = ConvertHelper.DataTableToList<ES_SJSM_SMCPView>(dt);
+                    foreach (var jcxx in list)
+                    {
+                        jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
+                    }
+                    DataTable dtgrxx = DAO.Repository.GetDataTable(string.Format("select * from yhjbxx y where y.yhid = '{0}'", list[0].YHID));
+                    List<GRXXView> grxxlist = ConvertHelper.DataTableToList<GRXXView>(dtgrxx);
+                    return new { Result = EnResultType.Success, list = list, BCMSString = BinaryHelper.BinaryToString(list[0].BCMS), grxxlist = grxxlist };
+                }
+                if (TYPE == "ESXX_SJSM_TSJ") //二手_手机数码_台式机/配件
+                {
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,es_sjsm_tsjjbxx b where a.jcxxid = b.jcxxid and id = '{0}'  order by zxgxsj desc", ID));
+                    List<ES_SJSM_TSJView> list = ConvertHelper.DataTableToList<ES_SJSM_TSJView>(dt);
+                    foreach (var jcxx in list)
+                    {
+                        jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
+                    }
+                    DataTable dtgrxx = DAO.Repository.GetDataTable(string.Format("select * from yhjbxx y where y.yhid = '{0}'", list[0].YHID));
+                    List<GRXXView> grxxlist = ConvertHelper.DataTableToList<GRXXView>(dtgrxx);
+                    return new { Result = EnResultType.Success, list = list, BCMSString = BinaryHelper.BinaryToString(list[0].BCMS), grxxlist = grxxlist };
+                }
+                if (TYPE == "ESXX_JDJJBG_ESJD") //二手_家电家具办公_二手家电
+                {
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,es_jdjjbg_esjdjbxx b where a.jcxxid = b.jcxxid and id = '{0}'  order by zxgxsj desc", ID));
+                    List<ES_JDJJBG_ESJDView> list = ConvertHelper.DataTableToList<ES_JDJJBG_ESJDView>(dt);
                     foreach (var jcxx in list)
                     {
                         jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));

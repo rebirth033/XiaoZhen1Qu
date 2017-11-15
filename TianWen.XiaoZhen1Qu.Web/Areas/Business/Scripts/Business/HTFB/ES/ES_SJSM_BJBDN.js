@@ -73,7 +73,10 @@ function LoadBJBXH() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                var html = "<ul class='ul_select' style='overflow-y: scroll;height:340px;width:200px'>";
+                var height = 341;
+                if (xml.list.length < 10)
+                    height = parseInt(xml.list.length * 34) + 1;
+                var html = "<ul class='ul_select' style='overflow-y: scroll; height:" + height + "px;width:200px;'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='li_select' onclick='SelectDropdown(this,\"BJBXH\")'>" + xml.list[i].CODENAME + "</li>";
                 }

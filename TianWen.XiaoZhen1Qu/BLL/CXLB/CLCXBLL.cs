@@ -167,43 +167,6 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
-        //获取查询条件
-        public string GetConditin(string Condition)
-        {
-            StringBuilder condition = new StringBuilder();
-            string[] conditions = Condition.Split(',');
-            for (int i = 0; i < conditions.Count(); i++)
-            {
-                string[] array = conditions[i].Split(':');
-                if (array[1] != "不限")
-                {
-                    if (array[0] == "ZJ")
-                    {
-                        if (array[1].Contains("-"))
-                        {
-                            string[] zjarray = array[1].TrimEnd('元').Split('-');
-                            condition.AppendFormat(" and {0} >= {1} and {0} <= {2}", array[0], zjarray[0], zjarray[1]);
-                        }
-                        else if (array[1].Contains("以上"))
-                        {
-                            string zjsx = array[1].Substring(0, array[1].IndexOf('元'));
-                            condition.AppendFormat(" and {0} >= {1}", array[0], zjsx);
-                        }
-                        else
-                        {
-                            string zjxx = array[1].Substring(0, array[1].IndexOf('元'));
-                            condition.AppendFormat(" and {0} <= {1}", array[0], zjxx);
-                        }
-                    }
-                    else
-                    {
-                        condition.AppendFormat(" and {0} = '{1}'", array[0], array[1]);
-                    }
-                }
-            }
-            return condition.ToString();
-        }
-
         //加载信息
         public object LoadCLXX(string TYPE, string ID)
         {
