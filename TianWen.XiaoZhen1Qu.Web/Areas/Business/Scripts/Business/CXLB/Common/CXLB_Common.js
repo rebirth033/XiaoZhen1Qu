@@ -180,5 +180,5 @@ function LoadDistrictCondition(array, type, name) {
         html += '<li class="li_condition_body" onclick="SelectCondition(this)">' + RTrimStr(RTrimStr(RTrimStr(array[i].NAME, '区'), '县'), '市') + '</li>';
     }
     html += '</ul>';
-    $("#div_condition_body_DQ").append(html);
+    $("#div_condition_body_QY").append(html);
 }

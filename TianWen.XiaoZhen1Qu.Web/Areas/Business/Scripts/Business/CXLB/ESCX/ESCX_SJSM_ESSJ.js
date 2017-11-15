@@ -19,7 +19,7 @@ function LoadESCondition() {
     $("#div_condition_body").html('');
     LoadConditionByTypeName("手机品牌", "CODES_ES_SJSM", "品牌", "PP");
     LoadConditionByTypeName("手机价格", "CODES_ES_SJSM", "价格", "JG");
-    LoadDistrict("福州", "350100", "DQ");
+    LoadDistrict("福州", "350100", "QY");
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -63,6 +63,16 @@ function GetCondition(type) {
     });
     return value;
 }
+function GetAllCondition(conditions) {
+    var array = conditions.split(',');
+    var condition = "";
+    for (var i = 0; i < array.length; i++) {
+        if (GetCondition(array[i]) !== "")
+            condition += array[i] + ":" + GetCondition(array[i]) + ",";
+    }
+    return RTrim(condition,',');
+}
+
 //获取导航查询条件
 function GetNavCondition() {
     var value = "";
@@ -84,7 +94,7 @@ function HasCondition() {
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = "PP:" + GetCondition("PP") + ",DQ:" + GetCondition("DQ");
+    var condition = GetAllCondition("PP,XH,JG,QY");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/ESCX/LoadESXX",
