@@ -3,8 +3,8 @@ $(document).ready(function () {
     $(".li_condition_head:eq(0)").each(function () { $(this).css("background-color", "#ffffff"); });
     BindBodyNav();
     LoadESCondition();
-    LoadHot("ESXX_JDJJBG_BGSB");
-    LoadBody("ESXX_JDJJBG_BGSB", currentIndex);
+    LoadHot("ESXX_MYFZMR_MYETYPWJ");
+    LoadBody("ESXX_MYFZMR_MYETYPWJ", currentIndex);
 });
 //绑定主体列表导航
 function BindBodyNav() {
@@ -18,16 +18,13 @@ function BindBodyNav() {
 //加载条件
 function LoadESCondition() {
     $("#div_condition_body").html('');
-    var lb = "类别,不限,办公设备,办公耗材,办公文仪,办公家具,公司转让,其他办公用品".split(',');
-    var xl = "小类,不限,打印机,复印机,多功能一体机,传真机,扫描仪,投影仪,碎纸机,其他办公设备".split(',');
+    var lb = "类别,不限,奶粉/营养辅食,喂养用品,护理用品,婴幼服饰,婴幼用品,童床童车,玩具,早教用品,孕妈用品,安全座椅".split(',');
     var jg = "价格,不限,100元以下,100-200元,200-500元,500-1000元,1000-2000元,2000元以上".split(',');
     var dq = "地区,不限,鼓楼,台江,晋安,仓山,闽侯,福清,马尾,长乐,连江,平潭,罗源,闽清,永泰".split(',');
     LoadCondition(lb, "LB");
-    LoadCondition(xl, "XL");
     LoadCondition(jg, "JG");
     LoadCondition(dq, "DQ");
     $("#ul_condition_body_LB").find(".li_condition_body").bind("click", SelectCondition);
-    $("#ul_condition_body_XL").find(".li_condition_body").bind("click", SelectCondition);
     $("#ul_condition_body_JG").find(".li_condition_body").bind("click", SelectCondition);
     $("#ul_condition_body_DQ").find(".li_condition_body").bind("click", SelectCondition);
 }
@@ -44,7 +41,7 @@ function SelectCondition() {
             $("#ul_condition_select").append('<li onclick="DeleteSelect(this)" class="li_condition_select"><span>' + $(this).html() + '</span><em>x</em></li>');
         }
     });
-    LoadBody("ESXX_JDJJBG_BGSB", currentIndex);
+    LoadBody("ESXX_MYFZMR_MYETYPWJ", currentIndex);
 }
 //绑定选择条件删除事件
 function DeleteSelect(obj) {
@@ -59,7 +56,7 @@ function DeleteSelect(obj) {
     });
     if (HasCondition() === "")
         $("#divConditionSelect").css("display", "none");
-    LoadBody("ESXX_JDJJBG_BGSB", currentIndex);
+    LoadBody("ESXX_MYFZMR_MYETYPWJ", currentIndex);
 }
 //加载查询条件
 function LoadCondition(array, type) {
@@ -137,11 +134,11 @@ function LoadESInfo(obj) {
     var html = "";
     html += ('<li class="li_body_left">');
     html += ('<div class="div_li_body_left_left">');
-    html += ('<img class="img_li_body_left" onclick="OpenXXXX(\'ESXX_JDJJBG_BGSB\',\'' + obj.ID + '\')" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
+    html += ('<img class="img_li_body_left" onclick="OpenXXXX(\'ESXX_MYFZMR_MYETYPWJ\',\'' + obj.ID + '\')" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<div class="div_img_li_body_left_count"><span>' + obj.PHOTOS.length + '图</span></div>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
-    html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'ESXX_JDJJBG_BGSB\',\'' + obj.ID + '\')">' + TruncStr(obj.BT,35) + '</p>');
+    html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'ESXX_MYFZMR_MYETYPWJ\',\'' + obj.ID + '\')">' + TruncStr(obj.BT,35) + '</p>');
     html += (TruncStr(obj.BCMSString, 35));
     html += ('<p class="p_li_body_left_center_dz font_size14">' + obj.QY + ' - ' + obj.DD + '<label>/</label>' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
@@ -180,7 +177,7 @@ function LoadHot(TYPE) {
 //加载热门单条信息
 function LoadHotInfo(obj) {
     var html = "";
-    html += ('<li onclick="OpenXXXX(\'ESXX_JDJJBG_BGSB\',\'' + obj.ID + '\')" class="li_body_right">');
+    html += ('<li onclick="OpenXXXX(\'ESXX_MYFZMR_MYETYPWJ\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_right_xq">' + "服务项目:" + obj.LB + '</p>');
     html += ('<p class="p_li_body_right_cs">' + obj.QY + '-' + obj.DD + '</p>');

@@ -182,6 +182,24 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     }
                     return new { Result = EnResultType.Success, list = listnew, PageCount = PageCount, TotalCount = TotalCount };
                 }
+                if (TYPE == "ESXX_MYFZMR_MYETYPWJ")//二手_母婴服装美容_母婴儿童用品玩具
+                {
+                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,es_myfzmr_myetypwjjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + " order by zxgxsj desc");
+                    List<ES_JDJJBG_BGSBView> list = ConvertHelper.DataTableToList<ES_JDJJBG_BGSBView>(dt);
+                    int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
+                    int TotalCount = list.Count;
+                    var WDCountlist = from p in list.Where(p => p.STATUS == 0) select p;
+                    int WCCount = WDCountlist.Count();
+
+                    var listnew = from p in list.Skip((int.Parse(PageIndex) - 1) * int.Parse(PageSize)).Take(int.Parse(PageSize)) select p;
+
+                    foreach (var jcxx in listnew)
+                    {
+                        jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
+                        jcxx.BCMSString = BinaryHelper.BinaryToString(jcxx.BCMS);
+                    }
+                    return new { Result = EnResultType.Success, list = listnew, PageCount = PageCount, TotalCount = TotalCount };
+                }
                 return new { Result = EnResultType.Failed };
 
             }
@@ -297,6 +315,18 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 if (TYPE == "ESXX_JDJJBG_BGSB") //二手_家电家具办公_办公设备
                 {
                     dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,es_jdjjbg_bgsbjbxx b where a.jcxxid = b.jcxxid and id = '{0}'  order by zxgxsj desc", ID));
+                    List<ES_JDJJBG_BGSBView> list = ConvertHelper.DataTableToList<ES_JDJJBG_BGSBView>(dt);
+                    foreach (var jcxx in list)
+                    {
+                        jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
+                    }
+                    DataTable dtgrxx = DAO.Repository.GetDataTable(string.Format("select * from yhjbxx y where y.yhid = '{0}'", list[0].YHID));
+                    List<GRXXView> grxxlist = ConvertHelper.DataTableToList<GRXXView>(dtgrxx);
+                    return new { Result = EnResultType.Success, list = list, BCMSString = BinaryHelper.BinaryToString(list[0].BCMS), grxxlist = grxxlist };
+                }
+                if (TYPE == "ESXX_MYFZMR_MYETYPWJ") //二手_母婴服装美容_母婴儿童用品玩具
+                {
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,es_myfzmr_myetypwjjbxx b where a.jcxxid = b.jcxxid and id = '{0}'  order by zxgxsj desc", ID));
                     List<ES_JDJJBG_BGSBView> list = ConvertHelper.DataTableToList<ES_JDJJBG_BGSBView>(dt);
                     foreach (var jcxx in list)
                     {
