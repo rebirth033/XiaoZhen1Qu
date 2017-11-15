@@ -538,6 +538,8 @@
     <Content Include="Areas\Business\Css\XXXX\CW\CWXX_HNYC.css" />
     <Content Include="Areas\Business\Css\XXXX\CW\CWXX_CWM.css" />
     <Content Include="Areas\Business\Css\XXXX\CW\CWXX_CWG.css" />
+    <Content Include="Areas\Business\Css\XXXX\ES\ESXX_MYFZMR_MRBJ.css" />
+    <Content Include="Areas\Business\Css\XXXX\ES\ESXX_MYFZMR_FZXMXB.css" />
     <Content Include="Areas\Business\Css\XXXX\ES\ESXX_MYFZMR_MYETYPWJ.css" />
     <Content Include="Areas\Business\Css\XXXX\ES\ESXX_JDJJBG_BGSB.css" />
     <Content Include="Areas\Business\Css\XXXX\ES\ESXX_JDJJBG_JJRY.css" />
@@ -626,6 +628,8 @@
     <Content Include="Areas\Business\Scripts\Business\CXLB\CWCX\CWCX_HNYC.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\CWCX\CWCX_CWM.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\CWCX\CWCX_CWG.js" />
+    <Content Include="Areas\Business\Scripts\Business\CXLB\ESCX\ESCX_MYFZMR_MRBJ.js" />
+    <Content Include="Areas\Business\Scripts\Business\CXLB\ESCX\ESCX_MYFZMR_FZXMXB.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\ESCX\ESCX_MYFZMR_MYETYPWJ.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\ESCX\ESCX_JDJJBG_BGSB.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\ESCX\ESCX_JDJJBG_JJRY.js" />
@@ -1051,6 +1055,8 @@
     <Content Include="Areas\Business\Scripts\Business\XXXX\CWXX\CWXX_HNYC.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\CWXX\CWXX_CWM.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\CWXX\CWXX_CWG.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\ESXX\ESXX_MYFZMR_MRBJ.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\ESXX\ESXX_MYFZMR_FZXMXB.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\ESXX\ESXX_MYFZMR_MYETYPWJ.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\ESXX\ESXX_JDJJBG_BGSB.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\ESXX\ESXX_JDJJBG_JJRY.js" />
@@ -1853,6 +1859,10 @@
     <Content Include="Areas\Business\Views\ESXX\ESXX_JDJJBG_BGSB.cshtml" />
     <Content Include="Areas\Business\Views\ESCX\ESCX_MYFZMR_MYETYPWJ.cshtml" />
     <Content Include="Areas\Business\Views\ESXX\ESXX_MYFZMR_MYETYPWJ.cshtml" />
+    <Content Include="Areas\Business\Views\ESCX\ESCX_MYFZMR_FZXMXB.cshtml" />
+    <Content Include="Areas\Business\Views\ESXX\ESXX_MYFZMR_FZXMXB.cshtml" />
+    <Content Include="Areas\Business\Views\ESCX\ESCX_MYFZMR_MRBJ.cshtml" />
+    <Content Include="Areas\Business\Views\ESXX\ESXX_MYFZMR_MRBJ.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
