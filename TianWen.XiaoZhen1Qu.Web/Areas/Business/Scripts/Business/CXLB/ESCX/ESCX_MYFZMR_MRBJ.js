@@ -1,6 +1,5 @@
 ﻿var currentIndex = 1;
 $(document).ready(function () {
-    $(".li_condition_head:eq(0)").each(function () { $(this).css("background-color", "#ffffff"); });
     BindBodyNav();
     LoadESCondition();
     LoadHot("ESXX_MYFZMR_MRBJ");

@@ -48,7 +48,7 @@ function OpenLBXZ() {
     window.open(getRootPath() + "/Business/LBXZ/LBXZ");
 }
 //加载分页
-function LoadPage(typename,pagecount) {
+function LoadPage(typename, pagecount) {
     var index = parseInt(currentIndex);
     $("#div_main_info_bottom_fy").html('');
     if (index > 1) {
@@ -92,4 +92,72 @@ function LoadPage(typename,pagecount) {
         $("#div_main_info_bottom_fy").append('<a onclick="LoadBody(\'' + typename + '\',\'' + (index + 1) + '\')" class="a_main_info_bottom_fy">下一页</a>');
         $("#div_main_info_bottom_fy").append('<a onclick="LoadBody(\'' + typename + '\',\'' + pagecount + '\')" class="a_main_info_bottom_fy">尾页</a>');
     }
+}
+//根据TYPENAME获取字典表
+function LoadConditionByTypeName(typename, table, name, id) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
+        dataType: "json",
+        data:
+        {
+            TYPENAME: typename,
+            TBName: table
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                LoadCondition(xml.list, name, id);
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//加载查询条件
+function LoadCondition(array, name, id) {
+    var html = "";
+    html += '<ul id="ul_condition_body_' + id + '" class="ul_condition_body">';
+    html += '<li class="li_condition_body_first">' + name + '</li>';
+    html += '<li class="li_condition_body li_condition_body_active">不限</li>';
+    for (var i = 0; i < 15; i++) {
+        html += '<li class="li_condition_body">' + array[i].CODENAME + '</li>';
+    }
+    html += '</ul>';
+    $("#div_condition_body").append(html);
+    $("#ul_condition_body_" + id).find(".li_condition_body").bind("click", SelectCondition);
+    LoadDistrict("福州", "350100", "DQ");
+}
+//根据TYPENAME获取字典表
+function LoadDistrict(name, code, type) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/GetDistrictBySuperCode",
+        dataType: "json",
+        data:
+        {
+            SuperCode: code
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                LoadDistrictCondition(xml.list, type, name);
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//加载查询条件
+function LoadDistrictCondition(array, type, name) {
+    var html = "";
+    html += '<ul id="ul_condition_body_' + type + '" class="ul_condition_body">';
+    html += '<li class="li_condition_body_first">' + name + '</li>';
+    html += '<li class="li_condition_body li_condition_body_active">不限</li>';
+    for (var i = 0; i < array.length; i++) {
+        html += '<li class="li_condition_body">' + RTrimStr(RTrimStr(RTrimStr(array[i].NAME, '区'), '县'),'市') + '</li>';
+    }
+    html += '</ul>';
+    $("#div_condition_body").append(html);
+    $("#ul_condition_body_" + type).find(".li_condition_body").bind("click", SelectCondition);
 }

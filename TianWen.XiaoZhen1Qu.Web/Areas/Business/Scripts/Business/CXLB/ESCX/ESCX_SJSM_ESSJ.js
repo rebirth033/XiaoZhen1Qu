@@ -1,6 +1,5 @@
 ﻿var currentIndex = 1;
 $(document).ready(function () {
-    $(".li_condition_head:eq(0)").each(function () { $(this).css("background-color", "#ffffff"); });
     BindBodyNav();
     LoadCWCondition();
     LoadHot("ESXX_SJSM_ESSJ");
@@ -18,12 +17,7 @@ function BindBodyNav() {
 //加载条件
 function LoadCWCondition() {
     $("#div_condition_body").html('');
-    var pp = "品牌,不限,苹果,三星,小米,华为,OPPO,vivo,魅族,手机配件,诺基亚,HTC,索尼爱立信,努比亚,夏普,摩托罗拉,联想,LG,中兴,酷派".split(',');
-    var dq = "地区,不限,鼓楼,台江,晋安,仓山,闽侯,福清,马尾,长乐,连江,平潭,罗源,闽清,永泰".split(',');
-    LoadCondition(pp, "PP");
-    LoadCondition(dq, "DQ");
-    $("#ul_condition_body_PP").find(".li_condition_body").bind("click", SelectCondition);
-    $("#ul_condition_body_DQ").find(".li_condition_body").bind("click", SelectCondition);
+    LoadConditionByTypeName("手机品牌", "CODES_ES_SJSM", "品牌", "PP");
 }
 //选择条件
 function SelectCondition() {
@@ -55,21 +49,7 @@ function DeleteSelect(obj) {
         $("#divConditionSelect").css("display", "none");
     LoadBody("ESXX_SJSM_ESSJ", currentIndex);
 }
-//加载查询条件
-function LoadCondition(array, type) {
-    var html = "";
-    html += '<ul id="ul_condition_body_' + type + '" class="ul_condition_body">';
-    for (var i = 0; i < array.length; i++) {
-        if (i === 0)
-            html += '<li class="li_condition_body_first">' + array[i] + '</li>';
-        else if (i === 1)
-            html += '<li class="li_condition_body li_condition_body_active">' + array[i] + '</li>';
-        else
-            html += '<li class="li_condition_body">' + array[i] + '</li>';
-    }
-    html += '</ul>';
-    $("#div_condition_body").append(html);
-}
+
 //获取查询条件
 function GetCondition(type) {
     var value = "";

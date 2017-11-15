@@ -82,7 +82,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
         {
             try
             {
-                List<DISTRICT> districts = DAO.GetObjectList<DISTRICT>(string.Format("FROM DISTRICT WHERE SuperCode = '{0}' ORDER BY CODE", SuperCode)).ToList();
+                List<DISTRICT> districts = DAO.GetObjectList<DISTRICT>(string.Format("FROM DISTRICT WHERE SUPERCODE = '{0}' AND NAME != '市辖区' ORDER BY CODE", SuperCode)).ToList();
                 return new { Result = EnResultType.Success, list = districts };
             }
             catch (Exception ex)
