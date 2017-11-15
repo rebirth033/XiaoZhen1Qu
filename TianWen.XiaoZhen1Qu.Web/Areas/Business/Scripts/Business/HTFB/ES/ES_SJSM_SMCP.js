@@ -5,8 +5,6 @@
     BindClick("PBPP");
     BindClick("PBXH");
     BindClick("XJ");
-    BindClick("QY");
-    BindClick("SQ");
 });
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
@@ -20,12 +18,6 @@ function BindClick(type) {
         }
         if (type === "XJ") {
             LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM", Bind, "XJCD", "XJ", "");
-        }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
         }
     });
 }

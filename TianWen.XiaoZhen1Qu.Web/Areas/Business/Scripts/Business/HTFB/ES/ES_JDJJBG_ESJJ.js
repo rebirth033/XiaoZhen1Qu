@@ -5,8 +5,6 @@
     BindClick("PBPP");
     BindClick("PBXH");
     BindClick("XJ");
-    BindClick("QY");
-    BindClick("DD");
 
 });
 //绑定下拉框鼠标点击样式
@@ -16,7 +14,8 @@ function BindClick(type) {
             LoadCODESByTYPENAME("二手家具", "LB", "CODES_ES_JDJJBG", Bind, "ESJJLB", "LB", "");
         }
         if (type === "XL") {
-            LoadCODESByTYPENAME($("#spanLB").html(), "XL", "CODES_ES_JDJJBG", Bind, "ESJJLB", "XL", "");
+            $("#divXL").css("display", "block");
+            ActiveStyle("XL");
         }
         if (type === "XJ") {
             LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM", Bind, "XJCD", "XJ", "");
@@ -27,20 +26,15 @@ function BindClick(type) {
         if (type === "CDCC") {
             LoadCODESByTYPENAME("床尺寸", "CDCC", "CODES_ES_JDJJBG");
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
     });
 }
 //选择类别下拉框
 function SelectLB(obj, type) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-    if(type === "LB")
-    PDLB(obj.innerHTML);
+    if (type === "LB") {
+        PDLB(obj.innerHTML);
+    }
 }
 //判断类别
 function PDLB(LB) {
@@ -58,7 +52,8 @@ function PDLB(LB) {
         $("#divCXXCS").css("display", "none");
         $("#divCDXXCS").css("display", "none");
     }
-    BindClick("XL");
+    LoadCODESByTYPENAME($("#spanLB").html(), "XL", "CODES_ES_JDJJBG", Bind, "ESJJLB", "XL", "");
+    $("#spanXL").html("请选择小类");
 }
 //选择二手家具品牌
 function SelectPBPP(obj, type, code) {

@@ -8,9 +8,7 @@
     BindClick("XJ");
     BindClick("QY");
     BindClick("DD");
-
 });
-
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
