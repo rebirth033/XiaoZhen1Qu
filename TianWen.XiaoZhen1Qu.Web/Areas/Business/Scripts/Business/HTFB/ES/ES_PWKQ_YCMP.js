@@ -4,8 +4,6 @@
     LoadES_PWKQ_YCMPJBXX();
     BindClick("LB");
     BindClick("XJ");
-    BindClick("QY");
-    BindClick("DD");
 });
 
 //绑定下拉框鼠标点击样式
@@ -14,19 +12,13 @@ function BindClick(type) {
         if (type === "LB") {
             LoadCODESByTYPENAME("演出门票", "LB", "CODES_PWKQ", Bind, "YCMPLB", "LB", "");
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
     });
 }
 //加载票务卡券_电影票基本信息
 function LoadES_PWKQ_YCMPJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/PWKQ/LoadES_PWKQ_YCMPJBXX",
+        url: getRootPath() + "/Business/ES/LoadES_PWKQ_YCMPJBXX",
         dataType: "json",
         data:
         {
@@ -77,7 +69,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/PWKQ/FBES_PWKQ_YCMPJBXX",
+        url: getRootPath() + "/Business/ES/FBES_PWKQ_YCMPJBXX",
         dataType: "json",
         data:
         {

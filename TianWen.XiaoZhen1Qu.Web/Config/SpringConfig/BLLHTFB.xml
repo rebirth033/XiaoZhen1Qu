@@ -55,11 +55,6 @@
       <ref object="DAOBase"/>
     </property>
   </object>
-  <object id="PWKQ_BLL" type="TianWen.XiaoZhen1Qu.BLL.PWKQ_BLL,TianWen.XiaoZhen1Qu">
-    <property name="DAO">
-      <ref object="DAOBase"/>
-    </property>
-  </object>
   <object id="QZZP_BLL" type="TianWen.XiaoZhen1Qu.BLL.QZZP_BLL,TianWen.XiaoZhen1Qu">
     <property name="DAO">
       <ref object="DAOBase"/>

@@ -61,7 +61,6 @@
     <Compile Include="HTFB\ILYJD_BLL.cs" />
     <Compile Include="HTFB\INLMFY_BLL.cs" />
     <Compile Include="HTFB\IPFCG_BLL.cs" />
-    <Compile Include="HTFB\IPWKQ_BLL.cs" />
     <Compile Include="HTFB\IQZZP_BLL.cs" />
     <Compile Include="HTFB\ISHFW_BLL.cs" />
     <Compile Include="HTFB\ISWFW_BLL.cs" />

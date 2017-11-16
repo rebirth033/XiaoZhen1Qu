@@ -3,8 +3,6 @@
     $("body").bind("click", function () { Close("_XZQ"); });
     LoadES_PWKQ_YLYJDPJBXX();
     BindClick("LB");
-    BindClick("QY");
-    BindClick("DD");
 });
 
 //绑定下拉框鼠标点击样式
@@ -13,19 +11,13 @@ function BindClick(type) {
         if (type === "LB") {
             LoadCODESByTYPENAME("游乐园/景点票", "LB", "CODES_PWKQ", Bind, "YLYJDPLB", "LB", "");
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
     });
 }
 //加载票务卡券_电影票基本信息
 function LoadES_PWKQ_YLYJDPJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/PWKQ/LoadES_PWKQ_YLYJDPJBXX",
+        url: getRootPath() + "/Business/ES/LoadES_PWKQ_YLYJDPJBXX",
         dataType: "json",
         data:
         {
@@ -76,7 +68,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/PWKQ/FBES_PWKQ_YLYJDPJBXX",
+        url: getRootPath() + "/Business/ES/FBES_PWKQ_YLYJDPJBXX",
         dataType: "json",
         data:
         {

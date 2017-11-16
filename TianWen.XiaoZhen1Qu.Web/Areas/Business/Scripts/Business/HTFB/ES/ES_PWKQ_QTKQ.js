@@ -4,26 +4,19 @@
     LoadES_PWKQ_QTKQJBXX();
     BindClick("LB");
     BindClick("XJ");
-    BindClick("QY");
-    BindClick("DD");
 });
 
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+    $("#div" + type + "Span").click(function() {
+        
     });
 }
 //加载票务卡券_电影票基本信息
 function LoadES_PWKQ_QTKQJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/PWKQ/LoadES_PWKQ_QTKQJBXX",
+        url: getRootPath() + "/Business/ES/LoadES_PWKQ_QTKQJBXX",
         dataType: "json",
         data:
         {
@@ -74,7 +67,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/PWKQ/FBES_PWKQ_QTKQJBXX",
+        url: getRootPath() + "/Business/ES/FBES_PWKQ_QTKQJBXX",
         dataType: "json",
         data:
         {

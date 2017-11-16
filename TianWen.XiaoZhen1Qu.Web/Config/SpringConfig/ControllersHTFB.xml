@@ -55,11 +55,6 @@
       <ref object="PFCG_BLL"/>
     </property>
   </object>
-  <object id="PWKQController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.PWKQController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
-    <property name="PWKQ_BLL">
-      <ref object="PWKQ_BLL"/>
-    </property>
-  </object>
   <object id="QZZPController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.QZZPController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
     <property name="QZZP_BLL">
       <ref object="QZZP_BLL"/>

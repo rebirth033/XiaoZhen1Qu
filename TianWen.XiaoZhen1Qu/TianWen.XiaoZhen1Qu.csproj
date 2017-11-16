@@ -76,7 +76,6 @@
     <Compile Include="BLL\HTFB\LYJD_BLL.cs" />
     <Compile Include="BLL\HTFB\NLMFY_BLL.cs" />
     <Compile Include="BLL\HTFB\PFCG_BLL.cs" />
-    <Compile Include="BLL\HTFB\PWKQ_BLL.cs" />
     <Compile Include="BLL\HTFB\QZZP_BLL.cs" />
     <Compile Include="BLL\HTFB\SHFW_BLL.cs" />
     <Compile Include="BLL\HTFB\SWFW_BLL.cs" />
