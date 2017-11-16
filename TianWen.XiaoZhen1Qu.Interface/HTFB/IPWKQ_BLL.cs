@@ -5,24 +5,24 @@ namespace TianWen.XiaoZhen1Qu.Interface
 {
     public interface IPWKQ_BLL : IBaseBLL
     {
-        object SavePWKQ_DYPJBXX(JCXX jcxx, PWKQ_DYPJBXX dzfjbxx);
+        object SaveES_PWKQ_DYPJBXX(JCXX jcxx, ES_PWKQ_DYPJBXX dzfjbxx);
 
-        object LoadPWKQ_DYPJBXX(string ID);
+        object LoadES_PWKQ_DYPJBXX(string ID);
 
-        object SavePWKQ_QTKQJBXX(JCXX jcxx, PWKQ_QTKQJBXX dzfjbxx);
+        object SaveES_PWKQ_QTKQJBXX(JCXX jcxx, ES_PWKQ_QTKQJBXX dzfjbxx);
 
-        object LoadPWKQ_QTKQJBXX(string ID);
+        object LoadES_PWKQ_QTKQJBXX(string ID);
 
-        object SavePWKQ_XFKGWQJBXX(JCXX jcxx, PWKQ_XFKGWQJBXX dzfjbxx);
+        object SaveES_PWKQ_XFKGWQJBXX(JCXX jcxx, ES_PWKQ_XFKGWQJBXX dzfjbxx);
 
-        object LoadPWKQ_XFKGWQJBXX(string ID);
+        object LoadES_PWKQ_XFKGWQJBXX(string ID);
 
-        object SavePWKQ_YCMPJBXX(JCXX jcxx, PWKQ_YCMPJBXX dzfjbxx);
+        object SaveES_PWKQ_YCMPJBXX(JCXX jcxx, ES_PWKQ_YCMPJBXX dzfjbxx);
 
-        object LoadPWKQ_YCMPJBXX(string ID);
+        object LoadES_PWKQ_YCMPJBXX(string ID);
 
-        object SavePWKQ_YLYJDPJBXX(JCXX jcxx, PWKQ_YLYJDPJBXX dzfjbxx);
+        object SaveES_PWKQ_YLYJDPJBXX(JCXX jcxx, ES_PWKQ_YLYJDPJBXX dzfjbxx);
 
-        object LoadPWKQ_YLYJDPJBXX(string ID);
+        object LoadES_PWKQ_YLYJDPJBXX(string ID);
     }
 }

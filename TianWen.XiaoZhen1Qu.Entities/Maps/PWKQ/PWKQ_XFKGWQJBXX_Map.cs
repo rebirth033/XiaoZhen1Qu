@@ -3,11 +3,11 @@ using TianWen.XiaoZhen1Qu.Entities.Models;
 
 namespace TianWen.XiaoZhen1Qu.Entities.Maps
 {
-    public class PWKQ_XFKGWQJBXX_Map : ClassMap<PWKQ_XFKGWQJBXX>
+    public class ES_PWKQ_XFKGWQJBXX_Map : ClassMap<ES_PWKQ_XFKGWQJBXX>
     {
-        public PWKQ_XFKGWQJBXX_Map()
+        public ES_PWKQ_XFKGWQJBXX_Map()
         {
-            Table("PWKQ_XFKGWQJBXX");
+            Table("ES_PWKQ_XFKGWQJBXX");
             #region 属性
             Id(x => x.ID, "ID").GeneratedBy.Assigned().CustomType("AnsiString");
             Map(x => x.JCXXID, "JCXXID");

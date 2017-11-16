@@ -1,18 +1,31 @@
 ﻿$(document).ready(function () {
     $("#YXQZ").datepicker({ minDate: 0 });
     $("body").bind("click", function () { Close("_XZQ"); });
-    LoadPWKQ_DYPJBXX();
+    LoadES_PWKQ_XFKGWQJBXX();
+    BindClick("LB");
+    BindClick("QY");
+    BindClick("DD");
 });
+
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
+        if (type === "LB") {
+            LoadCODESByTYPENAME("消费卡/购物券", "LB", "CODES_PWKQ", Bind, "XFKGWQLB", "LB", "");
+        }
+        if (type === "QY") {
+            LoadQY();
+        }
+        if (type === "DD") {
+            LoadDD($("#QYCode").val());
+        }
     });
 }
 //加载票务卡券_电影票基本信息
-function LoadPWKQ_DYPJBXX() {
+function LoadES_PWKQ_XFKGWQJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/PWKQ/LoadPWKQ_DYPJBXX",
+        url: getRootPath() + "/Business/PWKQ/LoadES_PWKQ_XFKGWQJBXX",
         dataType: "json",
         data:
         {
@@ -21,22 +34,21 @@ function LoadPWKQ_DYPJBXX() {
         success: function (xml) {
             if (xml.Result === 1) {
                 var jsonObj = new JsonDB("myTabContent");
-                jsonObj.DisplayFromJson("myTabContent", xml.Value.PWKQ_DYPJBXX);
+                jsonObj.DisplayFromJson("myTabContent", xml.Value.ES_PWKQ_XFKGWQJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
-                $("#ID").val(xml.Value.PWKQ_DYPJBXX.ID);
+                $("#ID").val(xml.Value.ES_PWKQ_XFKGWQJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.BCMSString);
                 });
-                if (xml.Value.PWKQ_DYPJBXX.GQ !== null)
-                    SetDX("GQ", xml.Value.PWKQ_DYPJBXX.GQ);
-                if (xml.Value.PWKQ_DYPJBXX.LB !== null)
-                    SetDX("KQLB", xml.Value.PWKQ_DYPJBXX.LB);
-                $("#spanQY").html(xml.Value.PWKQ_DYPJBXX.QY);
-                $("#spanDD").html(xml.Value.PWKQ_DYPJBXX.DD);
-                if (xml.Value.PWKQ_DYPJBXX.YXQZ.ToString("yyyy-MM-dd") !== "1-1-1")
-                    $("#YXQZ").val(xml.Value.PWKQ_DYPJBXX.YXQZ.ToString("yyyy-MM-dd"));
+                if (xml.Value.ES_PWKQ_XFKGWQJBXX.GQ !== null)
+                    SetDX("GQ", xml.Value.ES_PWKQ_XFKGWQJBXX.GQ);
+                $("#spanLB").html(xml.Value.ES_PWKQ_XFKGWQJBXX.LB);
+                $("#spanQY").html(xml.Value.ES_PWKQ_XFKGWQJBXX.QY);
+                $("#spanDD").html(xml.Value.ES_PWKQ_XFKGWQJBXX.DD);
+                if (xml.Value.ES_PWKQ_XFKGWQJBXX.YXQZ.ToString("yyyy-MM-dd") !== "1-1-1")
+                    $("#YXQZ").val(xml.Value.ES_PWKQ_XFKGWQJBXX.YXQZ.ToString("yyyy-MM-dd"));
                 return;
             }
         },
@@ -51,11 +63,11 @@ function FB() {
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
+    obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
-    obj = jsonObj.AddJson(obj, "LB", "'" + GetDX("KQLB") + "'");
 
     if ($("#YXQZ").val() !== "")
         obj = jsonObj.AddJson(obj, "YXQZ", "'" + $("#YXQZ").val() + "'");
@@ -64,7 +76,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/PWKQ/FBPWKQ_DYPJBXX",
+        url: getRootPath() + "/Business/PWKQ/FBES_PWKQ_XFKGWQJBXX",
         dataType: "json",
         data:
         {

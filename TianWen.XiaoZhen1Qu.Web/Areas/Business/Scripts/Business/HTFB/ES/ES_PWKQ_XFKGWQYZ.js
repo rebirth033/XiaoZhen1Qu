@@ -11,7 +11,7 @@ function ValidateAll() {
         & ValidateJG()
         & ValidateSZQY()
         & ValidateBCMS("BCMS", "忘记填写补充描述啦")
-        & ValidateBT() & ValidateLXR() & ValidateLXDH())
+         & ValidateInput("BT", "标题") & ValidateInput("LXR", "联系人") & ValidateInput("LXDH", "联系电话"))
         return true;
     else
         return false;

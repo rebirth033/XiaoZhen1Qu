@@ -1,19 +1,19 @@
 ﻿@{
-    ViewBag.Title = "PWKQ_DYP";
+    ViewBag.Title = "ES_PWKQ_YLYJDP";
     Layout = "~/Areas/Business/Views/Shared/HTFB.cshtml";
 }
 @section Section_Head {
-    <link href="@Url.Content("~/Areas/Business/Css/HTFB/PWKQ/PWKQ_DYP.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Areas/Business/Css/HTFB/ES/ES_PWKQ_YLYJDP.css")" rel="stylesheet" />
     <link href="@Url.Content("~/Areas/Business/Scripts/jquery-ui-1.12.1.custom/jquery-ui.min.css")" rel="stylesheet" />
-    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/HTFB/PWKQ/PWKQ_DYP.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/HTFB/PWKQ/PWKQ_DYPYZ.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/HTFB/ES/ES_PWKQ_YLYJDP.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/HTFB/ES/ES_PWKQ_YLYJDPYZ.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/jquery-ui-1.12.1.custom/jquery-ui.min.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/jquery-ui-1.12.1.custom/jquery.ui.datepicker-zh-CN.js")"></script>
 }
 @section Section_Body {
     <div id="myTabContent" class="div_content">
-        <div id="divJBXX" class="div_split" style="display: block; text-align: left">
-            <span class="span_split">基本信息</span>
+        <div id="divGQYLB" class="div_split" style="display: block; text-align: left">
+            <span class="span_split">供求与类别</span>
             <em class="em_split"></em>
         </div>
         <div id="divGQ" class="div_row">
@@ -23,62 +23,55 @@
             </div>
             <div class="div_row_right">
                 <div class="div_radio" id="div_gq_zr">
-                    <img class="img_radio" id="img_gq_zr"/><label class="label_radio">转让</label>
+                    <img class="img_radio" id="img_gq_zr" /><label class="label_radio">转让</label>
                 </div>
                 <div class="div_radio" id="div_gq_qg">
-                    <img class="img_radio" id="img_gq_qg"/><label class="label_radio">求购</label>
+                    <img class="img_radio" id="img_gq_qg" /><label class="label_radio">求购</label>
                 </div>
             </div>
             <div id="divGQTip" class="Warn" style="z-index: 999; position: relative;"></div>
         </div>
-        <div id="divKQLB" class="div_row">
+        <div id="divYLYJDPLB" class="div_row" style="z-index: 999">
             <div class="div_row_left" style="margin-left: 128px;">
                 <span class="span_required">*</span>
                 <span class="spanFWCZ">类别</span>
             </div>
             <div class="div_row_right">
-                <div class="div_radio" id="div_lb_dhq">
-                    <img class="img_radio" id="img_lb_dhq"/><label class="label_radio">兑换券</label>
-                </div>
-                <div class="div_radio" id="div_lb_dyk">
-                    <img class="img_radio" id="img_lb_dyk"/><label class="label_radio">电影卡</label>
-                </div>
-                <div class="div_radio" id="div_lb_dzq">
-                    <img class="img_radio" id="img_lb_dzq"/><label class="label_radio">电子券/团购券</label>
+                <div id="divLBText" class="div_select_out SRK" style="position: relative;">
+                    <div id="divLBSpan" class="div_select_in" style="border: none; margin-top: 6px;">
+                        <span id="spanLB" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择类别</span>
+                        <div class="span_select_arrow"></div>
+                    </div>
+                    <div id="divLB" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
+                    </div>
                 </div>
             </div>
-            <div id="divKQLBTip" class="Warn" style="z-index: 999; position: relative;"></div>
+            <div id="divYLYJDPLBTip" class="Warn" style="z-index: 999; position: relative;"></div>
         </div>
-        <div id="divYY" class="div_row" style="z-index: 992;">
-            <div class="div_row_left" style="margin-left: 128px;">
-                <span class="span_required">&nbsp;</span>
-                <span class="spanFWCZ">影院</span>
-            </div>
-            <div class="div_row_right">
-                <input id="YY" column="YY" class="span_spaninput input_input SRK" type="text" style="width: 305px"/>
-            </div>
-            <div id="divYYTip" class="Warn" style="z-index: 992; position: relative;"></div>
+        <div class="div_split" style="display: block; text-align: left">
+            <span class="span_split">基本信息</span>
+            <em class="em_split"></em>
         </div>
         <div id="divYXQZ" class="div_row" style="z-index: 994">
-            <div class="div_row_left" style="margin-left: 100px;">
+            <div class="div_row_left">
                 <span class="span_required">*</span>
                 <span id="spanYXQZ">有效期至</span>
             </div>
             <div class="div_row_right">
-                <input id="YXQZ" readonly="readonly" class="span_spaninput input_input SRK" type="text" style="width: 305px"/>
+                <input id="YXQZ" column="YXQZ" readonly="readonly" class="input_input SRK" type="text" style="width: 305px" />
             </div>
             <div id="divYXQZTip" class="Warn" style="z-index: 999; position: relative;"></div>
         </div>
         <div id="divJG" class="div_row" style="z-index: 992;">
-            <div class="div_row_left" style="margin-left: 100px;">
+            <div class="div_row_left" style="margin-left: 128px;">
                 <span class="span_required">*</span>
-                <span class="spanFWCZ">转让价格</span>
+                <span class="spanFWCZ">价格</span>
             </div>
             <div class="div_row_right">
-                <span id="spanJG" class="span_spaninput SRK" style="display: inline-block;">
-                        <input class="input_spaninput spaninput_fontcolor" id="JG" maxlength="9" column="JG" type="text" style="width: 120px" />
-                        <span class="spaninput_fontcolor">元</span>
-                    </span>
+                <span id="spanJG" class="span_spaninput SRK" style="display: inline-block; width: 150px;">
+                    <input class="input_spaninput spaninput_fontcolor" id="JG" maxlength="9" column="JG" type="text" style="width: 100px" />
+                    <span class="spaninput_fontcolor">元/张</span>
+                </span>
             </div>
             <div id="divJGTip" class="Warn" style="z-index: 992; position: relative;"></div>
         </div>
@@ -90,7 +83,7 @@
             <div class="div_row_right">
                 <div id="divQYText" class="div_select_out SRK" style="z-index: 997;">
                     <div id="divQYSpan" class="div_select_in" style="border: none; margin-top: 6px;">
-                        <input type="hidden" id="QYCode"/>
+                        <input type="hidden" id="QYCode" />
                         <span id="spanQY" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择区域</span>
                         <div class="span_select_arrow"></div>
                     </div>
@@ -106,7 +99,7 @@
                     </div>
                 </div>
             </div>
-            <div id="divSZQYTip" class="Warn" style="z-index: 999; position: relative;"></div>
+            <div id="divSZQYTip" class="Warn" style="z-index: 992; position: relative;"></div>
         </div>
         <div id="divXXXX" class="div_split" style="display: block; text-align: left;">
             <span class="span_split">详细信息</span>
@@ -118,7 +111,7 @@
                 <span id="spanFYBT">标题</span>
             </div>
             <div class="div_row_right">
-                <input id="BT" maxlength="50" column="BT" class="input_input SRK" type="text" placeholder="吸引人的标题可让更多的人看您的信息喔"/>
+                <input id="BT" maxlength="50" column="BT" class="input_input SRK"  type="text" placeholder="吸引人的标题可让更多的人看您的信息喔" />
                 <div id="divBTTip"></div>
             </div>
         </div>
@@ -129,7 +122,7 @@
             </div>
             <div class="div_row_right">
                 <script id="BCMS" type="text/plain" style="width: 594px; height: 200px; display: inline-block;">
-                    </script>
+                </script>
                 <div id="divBCMSTip" class="Warn"></div>
             </div>
         </div>
@@ -143,7 +136,7 @@
                 <span id="spanLXDH">联系人</span>
             </div>
             <div class="div_row_right">
-                <input id="LXR" column="LXR" class="input_input SRK" type="text" placeholder="请输入联系人"/>
+                <input id="LXR" column="LXR" class="input_input SRK" type="text" placeholder="请输入联系人" />
                 <div id="divLXRTip"></div>
             </div>
         </div>
@@ -153,7 +146,7 @@
                 <span id="spanLXDH">联系电话</span>
             </div>
             <div class="div_row_right">
-                <input id="LXDH" maxlength="11" column="LXDH" class="input_input SRK" type="text" placeholder="请输入联系电话"/>
+                <input id="LXDH" maxlength="11" column="LXDH" class="input_input SRK" type="text" placeholder="请输入联系电话" />
                 <div id="divLXDHTip"></div>
             </div>
         </div>
@@ -163,11 +156,11 @@
                 <span id="spanQQ">QQ</span>
             </div>
             <div class="div_row_right">
-                <input column="QQ" class="input_input SRK" type="text" placeholder="请输入QQ"/>
+                <input column="QQ" class="input_input SRK" type="text" placeholder="请输入QQ" />
             </div>
         </div>
         <div id="divFB" class="div_split" style="display: block; text-align: center; margin-top: 40px;">
-            <input type="button" class="btn btn-info input_text" style="height: 50px; font-size: 24px;" id="btnFB" value="发布"/>
+            <input type="button" class="btn btn-info input_text" style="height: 50px; font-size: 24px;" id="btnFB" value="发布" />
         </div>
     </div>
 }

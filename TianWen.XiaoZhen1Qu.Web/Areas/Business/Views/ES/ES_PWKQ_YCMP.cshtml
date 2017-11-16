@@ -1,19 +1,19 @@
 ﻿@{
-    ViewBag.Title = "PWKQ_QTKQ";
+    ViewBag.Title = "ES_PWKQ_YCMP";
     Layout = "~/Areas/Business/Views/Shared/HTFB.cshtml";
 }
 @section Section_Head {
-    <link href="@Url.Content("~/Areas/Business/Css/HTFB/PWKQ/PWKQ_QTKQ.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Areas/Business/Css/HTFB/ES/ES_PWKQ_YCMP.css")" rel="stylesheet" />
     <link href="@Url.Content("~/Areas/Business/Scripts/jquery-ui-1.12.1.custom/jquery-ui.min.css")" rel="stylesheet" />
-    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/HTFB/PWKQ/PWKQ_QTKQ.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/HTFB/PWKQ/PWKQ_QTKQYZ.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/HTFB/ES/ES_PWKQ_YCMP.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/HTFB/ES/ES_PWKQ_YCMPYZ.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/jquery-ui-1.12.1.custom/jquery-ui.min.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/jquery-ui-1.12.1.custom/jquery.ui.datepicker-zh-CN.js")"></script>
 }
 @section Section_Body {
     <div id="myTabContent" class="div_content">
-        <div id="divJBXX" class="div_split" style="display: block; text-align: left">
-            <span class="span_split">基本信息</span>
+        <div id="divGQYLB" class="div_split" style="display: block; text-align: left">
+            <span class="span_split">供求与类别</span>
             <em class="em_split"></em>
         </div>
         <div id="divGQ" class="div_row">
@@ -31,15 +31,69 @@
             </div>
             <div id="divGQTip" class="Warn" style="z-index: 999; position: relative;"></div>
         </div>
+        <div id="divYCMPLB" class="div_row" style="z-index: 999">
+            <div class="div_row_left" style="margin-left: 128px;">
+                <span class="span_required">*</span>
+                <span class="spanFWCZ">类别</span>
+            </div>
+            <div class="div_row_right">
+                <div id="divLBText" class="div_select_out SRK" style="position: relative;">
+                    <div id="divLBSpan" class="div_select_in" style="border: none; margin-top: 6px;">
+                        <span id="spanLB" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择类别</span>
+                        <div class="span_select_arrow"></div>
+                    </div>
+                    <div id="divLB" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
+                    </div>
+                </div>
+            </div>
+            <div id="divYCMPLBTip" class="Warn" style="z-index: 999; position: relative;"></div>
+        </div>
+        <div id="divJBXX" class="div_split" style="display: block; text-align: left">
+            <span class="span_split">基本信息</span>
+            <em class="em_split"></em>
+        </div>
+        <div id="divCG" class="div_row" style="z-index: 992;">
+            <div class="div_row_left" style="margin-left: 128px;">
+                <span class="span_required">*</span>
+                <span class="spanFWCZ">场馆</span>
+            </div>
+            <div class="div_row_right">
+                <input id="CG" column="CG" class="span_spaninput input_input SRK" type="text" style="width: 305px"/>
+            </div>
+            <div id="divCGTip" class="Warn" style="z-index: 992; position: relative;"></div>
+        </div>
+        <div id="divSJ" class="div_row" style="z-index: 994">
+            <div class="div_row_left" style="margin-left: 128px;">
+                <span class="span_required">*</span>
+                <span id="spanYXQZ">时间</span>
+            </div>
+            <div class="div_row_right">
+                <input id="SJ" readonly="readonly" class="span_spaninput input_input SRK" type="text" style="width: 305px"/>
+            </div>
+            <div id="divSJTip" class="Warn" style="z-index: 992; position: relative;"></div>
+        </div>
+        <div id="divYJ" class="div_row" style="z-index: 992;">
+            <div class="div_row_left" style="margin-left: 128px;">
+                <span class="span_required">&nbsp;</span>
+                <span class="spanFWCZ">原价</span>
+            </div>
+            <div class="div_row_right">
+                <span id="spanYJ" class="span_spaninput SRK" style="display: inline-block;">
+                        <input class="input_spaninput spaninput_fontcolor" id="YJ" maxlength="9" column="YJ" type="text" style="width: 100px" />
+                        <span class="spaninput_fontcolor">元/张</span>
+                    </span>
+            </div>
+            <div id="divYJTip" class="Warn" style="z-index: 992; position: relative;"></div>
+        </div>
         <div id="divJG" class="div_row" style="z-index: 992;">
             <div class="div_row_left" style="margin-left: 128px;">
                 <span class="span_required">*</span>
-                <span class="spanFWCZ">价格</span>
+                <span class="spanFWCZ">售价</span>
             </div>
             <div class="div_row_right">
-                <span id="spanJG" class="span_spaninput SRK" style="display: inline-block; width: 150px;">
-                        <input class="input_spaninput spaninput_fontcolor" id="JG" maxlength="9" column="JG" type="text" style="width: 120px" />
-                        <span class="spaninput_fontcolor">元</span>
+                <span id="spanJG" class="span_spaninput SRK" style="display: inline-block;">
+                        <input class="input_spaninput spaninput_fontcolor" id="JG" maxlength="9" column="JG" type="text" style="width: 100px" />
+                        <span class="spaninput_fontcolor">元/张</span>
                     </span>
             </div>
             <div id="divJGTip" class="Warn" style="z-index: 992; position: relative;"></div>
@@ -47,7 +101,7 @@
         <div id="divSZQY" class="div_row" style="z-index: 991;">
             <div class="div_row_left" style="margin-left: 100px;">
                 <span class="span_required">*</span>
-                <span class="spanFWCZ">交易地点</span>
+                <span class="spanFWCZ">取票地点</span>
             </div>
             <div class="div_row_right">
                 <div id="divQYText" class="div_select_out SRK" style="z-index: 997;">
@@ -68,7 +122,7 @@
                     </div>
                 </div>
             </div>
-            <div id="divSZQYTip" class="Warn" style="z-index: 999; position: relative;"></div>
+            <div id="divSZQYTip" class="Warn" style="z-index: 992; position: relative;"></div>
         </div>
         <div id="divXXXX" class="div_split" style="display: block; text-align: left;">
             <span class="span_split">详细信息</span>

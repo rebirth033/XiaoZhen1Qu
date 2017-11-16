@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
     $("#SJ").datepicker({ minDate: 0 });
     $("body").bind("click", function () { Close("_XZQ"); });
-    LoadPWKQ_YCMPJBXX();
+    LoadES_PWKQ_YCMPJBXX();
     BindClick("LB");
     BindClick("XJ");
     BindClick("QY");
@@ -23,10 +23,10 @@ function BindClick(type) {
     });
 }
 //加载票务卡券_电影票基本信息
-function LoadPWKQ_YCMPJBXX() {
+function LoadES_PWKQ_YCMPJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/PWKQ/LoadPWKQ_YCMPJBXX",
+        url: getRootPath() + "/Business/PWKQ/LoadES_PWKQ_YCMPJBXX",
         dataType: "json",
         data:
         {
@@ -35,21 +35,21 @@ function LoadPWKQ_YCMPJBXX() {
         success: function (xml) {
             if (xml.Result === 1) {
                 var jsonObj = new JsonDB("myTabContent");
-                jsonObj.DisplayFromJson("myTabContent", xml.Value.PWKQ_YCMPJBXX);
+                jsonObj.DisplayFromJson("myTabContent", xml.Value.ES_PWKQ_YCMPJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
-                $("#ID").val(xml.Value.PWKQ_YCMPJBXX.ID);
+                $("#ID").val(xml.Value.ES_PWKQ_YCMPJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.BCMSString);
                 });
-                if (xml.Value.PWKQ_YCMPJBXX.GQ !== null)
-                    SetDX("GQ", xml.Value.PWKQ_YCMPJBXX.GQ);
-                $("#spanLB").html(xml.Value.PWKQ_YCMPJBXX.LB);
-                $("#spanQY").html(xml.Value.PWKQ_YCMPJBXX.QY);
-                $("#spanDD").html(xml.Value.PWKQ_YCMPJBXX.DD);
-                if (xml.Value.PWKQ_YCMPJBXX.SJ.ToString("yyyy-MM-dd") !== "1-1-1")
-                    $("#SJ").val(xml.Value.PWKQ_YCMPJBXX.SJ.ToString("yyyy-MM-dd"));
+                if (xml.Value.ES_PWKQ_YCMPJBXX.GQ !== null)
+                    SetDX("GQ", xml.Value.ES_PWKQ_YCMPJBXX.GQ);
+                $("#spanLB").html(xml.Value.ES_PWKQ_YCMPJBXX.LB);
+                $("#spanQY").html(xml.Value.ES_PWKQ_YCMPJBXX.QY);
+                $("#spanDD").html(xml.Value.ES_PWKQ_YCMPJBXX.DD);
+                if (xml.Value.ES_PWKQ_YCMPJBXX.SJ.ToString("yyyy-MM-dd") !== "1-1-1")
+                    $("#SJ").val(xml.Value.ES_PWKQ_YCMPJBXX.SJ.ToString("yyyy-MM-dd"));
                 return;
             }
         },
@@ -77,7 +77,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/PWKQ/FBPWKQ_YCMPJBXX",
+        url: getRootPath() + "/Business/PWKQ/FBES_PWKQ_YCMPJBXX",
         dataType: "json",
         data:
         {
