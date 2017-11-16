@@ -1,0 +1,43 @@
+-- Create table
+create table ES_PWKQ_XFKGWQJBXX
+(
+  id     VARCHAR2(50) not null,
+  jcxxid VARCHAR2(50),
+  gq     VARCHAR2(20),
+  qy     VARCHAR2(20),
+  dd     VARCHAR2(20),
+  lb     VARCHAR2(20),
+  jg     VARCHAR2(20),
+  yxqz   DATE,
+  bcms   BLOB
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 16
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table ES_PWKQ_XFKGWQJBXX
+  is '二手_票务卡券_消费卡购物券';
+-- Add comments to the columns 
+comment on column ES_PWKQ_XFKGWQJBXX.id
+  is '消费卡购物券基本信息ID';
+comment on column ES_PWKQ_XFKGWQJBXX.jcxxid
+  is '基础信息ID';
+comment on column ES_PWKQ_XFKGWQJBXX.gq
+  is '供求';
+comment on column ES_PWKQ_XFKGWQJBXX.qy
+  is '交易区域';
+comment on column ES_PWKQ_XFKGWQJBXX.dd
+  is '交易地段';
+comment on column ES_PWKQ_XFKGWQJBXX.lb
+  is '类别';
+comment on column ES_PWKQ_XFKGWQJBXX.jg
+  is '价格';
+comment on column ES_PWKQ_XFKGWQJBXX.yxqz
+  is '有效期至';

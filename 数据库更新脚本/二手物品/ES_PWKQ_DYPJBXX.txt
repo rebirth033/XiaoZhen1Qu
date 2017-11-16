@@ -1,0 +1,48 @@
+-- Create table
+create table ES_PWKQ_DYPJBXX
+(
+  id     VARCHAR2(50) not null,
+  jcxxid VARCHAR2(50),
+  gq     VARCHAR2(20),
+  qy     VARCHAR2(20),
+  dd     VARCHAR2(20),
+  lb     VARCHAR2(20),
+  jg     VARCHAR2(20),
+  yy     VARCHAR2(200),
+  yxqz   DATE,
+  bcms   BLOB
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 16
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table ES_PWKQ_DYPJBXX
+  is '二手_票务卡券_电影票';
+-- Add comments to the columns 
+comment on column ES_PWKQ_DYPJBXX.id
+  is '电影票基本信息ID';
+comment on column ES_PWKQ_DYPJBXX.jcxxid
+  is '基础信息ID';
+comment on column ES_PWKQ_DYPJBXX.gq
+  is '供求';
+comment on column ES_PWKQ_DYPJBXX.qy
+  is '交易区域';
+comment on column ES_PWKQ_DYPJBXX.dd
+  is '交易地段';
+comment on column ES_PWKQ_DYPJBXX.lb
+  is '类别';
+comment on column ES_PWKQ_DYPJBXX.jg
+  is '价格';
+comment on column ES_PWKQ_DYPJBXX.yy
+  is '影院';
+comment on column ES_PWKQ_DYPJBXX.yxqz
+  is '有效期至';
+comment on column ES_PWKQ_DYPJBXX.bcms
+  is '补充描述';
