@@ -7,31 +7,6 @@ $(document).ready(function () {
     LoadHot("FCXX_CK");
     LoadBody("FCXX_CK", currentIndex);
 });
-//搬定查询条件导航
-function BindConditionNav() {
-    $(".li_condition_head").bind("click", function () {
-        $(".li_condition_head").each(function (i) {
-            $(this).css("background-color", "#eeeff1");
-        });
-        $(this).css("background-color", "#ffffff");
-        if ($(this).html() === "出租") {
-            LoadFCCX_SPCZCondition();
-            LoadBody("FCXX_CK", currentIndex);
-        } else {
-            LoadFCCX_SPCSCondition();
-            LoadBody("FCXX_CK", currentIndex);
-        }
-    });
-}
-//绑定主体列表导航
-function BindBodyNav() {
-    $(".li_body_head").bind("click", function () {
-        $(".li_body_head").each(function () {
-            $(this).css("border-bottom", "1px solid #cccccc").css("color", "#999999").css("font-weight", "normal");
-        });
-        $(this).css("border-bottom", "2px solid #5bc0de").css("color", "#5bc0de").css("font-weight", "700");
-    });
-}
 //加载房产查询_商铺出租条件
 function LoadFCCX_SPCZCondition() {
     $("#div_condition_body").html('');

@@ -302,28 +302,68 @@ namespace TianWen.XiaoZhen1Qu.BLL
         {
             StringBuilder condition = new StringBuilder();
             if (!string.IsNullOrEmpty(Condition))
-            {                string[] conditions = Condition.Split(',');
+            {
+                string[] conditions = Condition.Split(',');
                 for (int i = 0; i < conditions.Count(); i++)
                 {
                     string[] array = conditions[i].Split(':');
                     if (array[1] != "不限")
                     {
-                        if (array[0] == "ZJ" || array[0] == "JG")
+                        if (array[0] == "ZJ" || array[0] == "JG" || array[0] == "SJ" || array[0] == "PFM")
                         {
-                            if (array[1].Contains("-"))
+                            if (array[1].Contains("万元"))
                             {
-                                string[] zjarray = array[1].TrimEnd('元').Split('-');
-                                condition.AppendFormat(" and {0} >= {1} and {0} <= {2}", array[0], zjarray[0], zjarray[1]);
+                                if (array[1].Contains("-"))
+                                {
+                                    string[] zjarray = array[1].Substring(0, array[1].IndexOf("万元")).Split('-');
+                                    condition.AppendFormat(" and {0} >= {1} and {0} <= {2}", array[0], zjarray[0], zjarray[1]);
+                                }
+                                else if (array[1].Contains("以上"))
+                                {
+                                    string zjsx = array[1].Substring(0, array[1].IndexOf("万元"));
+                                    condition.AppendFormat(" and {0} >= {1}", array[0], zjsx);
+                                }
+                                else
+                                {
+                                    string zjxx = array[1].Substring(0, array[1].IndexOf("万元"));
+                                    condition.AppendFormat(" and {0} <= {1}", array[0], zjxx);
+                                }
                             }
-                            else if (array[1].Contains("以上"))
+                            else if (array[1].Contains("平米"))
                             {
-                                string zjsx = array[1].Substring(0, array[1].IndexOf('元'));
-                                condition.AppendFormat(" and {0} >= {1}", array[0], zjsx);
+                                if (array[1].Contains("-"))
+                                {
+                                    string[] zjarray = array[1].Substring(0, array[1].IndexOf("平米")).Split('-');
+                                    condition.AppendFormat(" and {0} >= {1} and {0} <= {2}", array[0], zjarray[0], zjarray[1]);
+                                }
+                                else if (array[1].Contains("以上"))
+                                {
+                                    string zjsx = array[1].Substring(0, array[1].IndexOf("平米"));
+                                    condition.AppendFormat(" and {0} >= {1}", array[0], zjsx);
+                                }
+                                else
+                                {
+                                    string zjxx = array[1].Substring(0, array[1].IndexOf("平米"));
+                                    condition.AppendFormat(" and {0} <= {1}", array[0], zjxx);
+                                }
                             }
                             else
                             {
-                                string zjxx = array[1].Substring(0, array[1].IndexOf('元'));
-                                condition.AppendFormat(" and {0} <= {1}", array[0], zjxx);
+                                if (array[1].Contains("-"))
+                                {
+                                    string[] zjarray = array[1].Substring(0, array[1].IndexOf("元")).Split('-');
+                                    condition.AppendFormat(" and {0} >= {1} and {0} <= {2}", array[0], zjarray[0], zjarray[1]);
+                                }
+                                else if (array[1].Contains("以上"))
+                                {
+                                    string zjsx = array[1].Substring(0, array[1].IndexOf("元"));
+                                    condition.AppendFormat(" and {0} >= {1}", array[0], zjsx);
+                                }
+                                else
+                                {
+                                    string zjxx = array[1].Substring(0, array[1].IndexOf("元"));
+                                    condition.AppendFormat(" and {0} <= {1}", array[0], zjxx);
+                                }
                             }
                         }
                         else

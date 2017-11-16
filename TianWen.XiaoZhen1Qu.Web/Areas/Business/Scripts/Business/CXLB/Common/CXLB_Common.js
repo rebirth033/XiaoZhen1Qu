@@ -44,9 +44,21 @@ function GetHeadNav() {
         }
     });
 }
-//类别选择
-function OpenLBXZ() {
-    window.open(getRootPath() + "/Business/LBXZ/LBXZ");
+//绑定查询条件导航
+function BindConditionNav() {
+    $(".li_condition_head").bind("click", function () {
+        $(".li_condition_head").each(function (i) {
+            $(this).css("background-color", "#eeeff1");
+        });
+        $(this).css("background-color", "#ffffff");
+        if ($(this).html() === "出租") {
+            LoadFCCX_SPCZCondition();
+            LoadBody("FCXX_CK", currentIndex);
+        } else {
+            LoadFCCX_SPCSCondition();
+            LoadBody("FCXX_CK", currentIndex);
+        }
+    });
 }
 //绑定主体列表导航
 function BindBodyNav() {
@@ -254,4 +266,8 @@ function LoadDistrictCondition(array, type, name) {
     }
     html += '</ul>';
     $("#div_condition_body_QY").append(html);
+}
+//类别选择
+function OpenLBXZ() {
+    window.open(getRootPath() + "/Business/LBXZ/LBXZ");
 }
