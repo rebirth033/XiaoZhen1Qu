@@ -3,109 +3,33 @@ $(document).ready(function () {
     BindBodyNav();
     LoadESCondition();
     LoadHot("ESXX_MYFZMR_MRBJ");
-    LoadBody("ESXX_MYFZMR_MRBJ", currentIndex);
 });
-//绑定主体列表导航
-function BindBodyNav() {
-    $(".li_body_head").bind("click", function () {
-        $(".li_body_head").each(function () {
-            $(this).css("border-bottom", "1px solid #cccccc").css("color", "#999999").css("font-weight", "normal");
-        });
-        $(this).css("border-bottom", "2px solid #5bc0de").css("color", "#5bc0de").css("font-weight", "700");
-    });
-}
 //加载条件
 function LoadESCondition() {
-    $("#div_condition_body").html('');
-    var lb = "类别,不限,彩妆,面部护肤,美容工具,美容设施,纤体/美体,香水,美发,美甲,保健食品,保健器械,口腔护理".split(',');
-    var xl = "小类,不限,洁面,化妆水,爽肤水,乳液,面霜,精华,面膜,眼部护理,精油".split(',');
-    var jg = "价格,不限,100元以下,100-150元,150-300元,300-500元,500-1000元,1000-2000元,2000元以上".split(',');
-    var dq = "地区,不限,鼓楼,台江,晋安,仓山,闽侯,福清,马尾,长乐,连江,平潭,罗源,闽清,永泰".split(',');
-    LoadCondition(lb, "LB");
-    LoadCondition(xl, "XL");
-    LoadCondition(jg, "JG");
-    LoadCondition(dq, "DQ");
-    $("#ul_condition_body_LB").find(".li_condition_body").bind("click", SelectCondition);
-    $("#ul_condition_body_XL").find(".li_condition_body").bind("click", SelectCondition);
-    $("#ul_condition_body_JG").find(".li_condition_body").bind("click", SelectCondition);
-    $("#ul_condition_body_DQ").find(".li_condition_body").bind("click", SelectCondition);
+    LoadConditionByTypeName("美容/保健", "CODES_ES_MYFZMR", "类别", "LB");
+    LoadConditionByTypeName("母婴价格", "CODES_ES_MYFZMR", "价格", "JG");
+    LoadDistrict("福州", "350100", "QY");
+    LoadBody("ESXX_MYFZMR_MRBJ", currentIndex);
 }
 //选择条件
-function SelectCondition() {
-    $(this).parent().find(".li_condition_body").each(function () {
+function SelectCondition(obj, name) {
+    if (name === "类别" && (obj.innerHTML !== "纤体/美体" && obj.innerHTML !== "香水" && obj.innerHTML !== "保健食品")) {
+        LoadConditionByParentID(obj.id, "CODES_ES_MYFZMR", "小类", "XL");
+    }
+    if (name === "类别" && (obj.innerHTML === "纤体/美体" || obj.innerHTML === "香水" || obj.innerHTML === "保健食品")) {
+        $("#ul_condition_body_XL").remove();
+    }
+    $(obj).parent().find(".li_condition_body").each(function () {
         $(this).removeClass("li_condition_body_active");
     });
-    $(this).addClass("li_condition_body_active");
-    $(".div_condition_select").css("display", "block");
-    $("#ul_condition_select").html('<li class="li_condition_select_first">筛选条件</li>');
-    $(".li_condition_body").each(function () {
-        if ($(this).css("color") === "rgb(91, 192, 222)" && $(this).html() !== "不限") {
-            $("#ul_condition_select").append('<li onclick="DeleteSelect(this)" class="li_condition_select"><span>' + $(this).html() + '</span><em>x</em></li>');
-        }
-    });
+    $(obj).addClass("li_condition_body_active");
     LoadBody("ESXX_MYFZMR_MRBJ", currentIndex);
-}
-//绑定选择条件删除事件
-function DeleteSelect(obj) {
-    var select = obj.innerHTML;
-    $(obj).css("display", "none");
-    $(".li_condition_body").each(function () {
-        if (select.indexOf($(this).html()) !== -1)
-            $(this).parent().find(".li_condition_body").each(function (index) {
-                if (index === 0) $(this).addClass("li_condition_body_active");
-                else $(this).removeClass("li_condition_body_active");
-            });
-    });
-    if (HasCondition() === "")
-        $("#divConditionSelect").css("display", "none");
-    LoadBody("ESXX_MYFZMR_MRBJ", currentIndex);
-}
-//加载查询条件
-function LoadCondition(array, type) {
-    var html = "";
-    html += '<ul id="ul_condition_body_' + type + '" class="ul_condition_body">';
-    for (var i = 0; i < array.length; i++) {
-        if (i === 0)
-            html += '<li class="li_condition_body_first">' + array[i] + '</li>';
-        else if (i === 1)
-            html += '<li class="li_condition_body li_condition_body_active">' + array[i] + '</li>';
-        else
-            html += '<li class="li_condition_body">' + array[i] + '</li>';
-    }
-    html += '</ul>';
-    $("#div_condition_body").append(html);
-}
-//获取查询条件
-function GetCondition(type) {
-    var value = "";
-    $("#ul_condition_body_" + type).find(".li_condition_body").each(function () {
-        if ($(this).css("color") === 'rgb(91, 192, 222)')
-            value = $(this).html();
-    });
-    return value;
-}
-//获取导航查询条件
-function GetNavCondition() {
-    var value = "";
-    $(".li_condition_head").each(function () {
-        if ($(this).css("background-color") === 'rgb(255, 255, 255)')
-            value = $(this).html();
-    });
-    return value;
-}
-//是否有条件
-function HasCondition() {
-    var condition = "";
-    $(".li_condition_body").each(function () {
-        if ($(this).html() !== "不限" && $(this).css("color") === "rgb(91, 192, 222)")
-            condition += $(this).html();
-    });
-    return condition;
+    ShowSelectCondition("ESXX_MYFZMR_MRBJ");
 }
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = "LB:" + GetCondition("LB") + ",JG:" + GetCondition("JG") + ",DQ:" + GetCondition("DQ");
+    var condition = GetAllCondition("LB,XL,JG,QY");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/ESCX/LoadESXX",

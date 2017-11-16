@@ -2,18 +2,10 @@
     $("#YXQZ").datepicker({ minDate: 0 });
     $("body").bind("click", function () { Close("_XZQ"); });
     LoadPWKQ_DYPJBXX();
-    BindClick("QY");
-    BindClick("DD");
 });
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
     });
 }
 //加载票务卡券_电影票基本信息

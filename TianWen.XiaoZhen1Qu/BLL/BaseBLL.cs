@@ -22,6 +22,8 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_ES_SJSM>(String.Format("FROM CODES_ES_SJSM WHERE PARENTID = '{0}' ORDER BY CODEORDER", ParentID)) };
                 if (TBName == "CODES_ES_JDJJBG")
                     return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_ES_JDJJBG>(String.Format("FROM CODES_ES_JDJJBG WHERE PARENTID = '{0}' ORDER BY CODEORDER", ParentID)) };
+                if (TBName == "CODES_ES_MYFZMR")
+                    return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_ES_MYFZMR>(String.Format("FROM CODES_ES_MYFZMR WHERE PARENTID = '{0}' ORDER BY CODEORDER", ParentID)) };
                 if (TBName == "CODES_PFCG")
                     return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_PFCG>(String.Format("FROM CODES_PFCG WHERE PARENTID = '{0}' ORDER BY CODEORDER", ParentID)) };
                 if (TBName == "CODES_CL")
