@@ -13,7 +13,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Maps
             Map(x => x.JCXXID, "JCXXID");
             Map(x => x.GQ, "GQ");
             Map(x => x.KZCGS, "KZCGS");
-            Map(x => x.XZLLX, "XZLLX");
+            Map(x => x.LX, "LX");
             Map(x => x.LPMC, "LPMC");
             Map(x => x.QY, "QY");
             Map(x => x.DD, "DD");

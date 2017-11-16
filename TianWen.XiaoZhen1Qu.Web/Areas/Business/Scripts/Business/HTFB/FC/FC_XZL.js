@@ -2,8 +2,6 @@
     $("#divGQ").find(".div_radio").bind("click", GetGQ);
     $("body").bind("click", function () { Close("_XZQ"); });
     LoadFC_XZLJBXX();
-    BindClick("QY");
-    BindClick("DD");
     BindClick("YFFS");
 });
 //选择出租
@@ -21,12 +19,6 @@ function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "YFFS") {
             LoadCODESByTYPENAME("押付方式", "YFFS", "CODES_FC", Bind, "ZJ", "YFFS", "");
-        }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
         }
     });
 }
@@ -80,8 +72,8 @@ function LoadFC_XZLJBXX() {
                 });
                 if (xml.Value.FC_XZLJBXX.GQ !== null)
                     SetDX("GQ", xml.Value.FC_XZLJBXX.GQ);
-                if (xml.Value.FC_XZLJBXX.XZLLX !== null)
-                    SetDX("XZLLX", xml.Value.FC_XZLJBXX.XZLLX);
+                if (xml.Value.FC_XZLJBXX.LX !== null)
+                    SetDX("LX", xml.Value.FC_XZLJBXX.LX);
                 if (xml.Value.FC_XZLJBXX.KZCGS !== null)
                     SetDX("KZCGS", xml.Value.FC_XZLJBXX.KZCGS);
                 $("#spanQY").html(xml.Value.FC_XZLJBXX.QY);
@@ -108,7 +100,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "YFFS", "'" + $("#spanYFFS").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
-    obj = jsonObj.AddJson(obj, "XZLLX", "'" + GetDX("XZLLX") + "'");
+    obj = jsonObj.AddJson(obj, "LX", "'" + GetDX("LX") + "'");
     obj = jsonObj.AddJson(obj, "KZCGS", "'" + GetDX("KZCGS") + "'");
 
     if (getUrlParam("ID") !== null)

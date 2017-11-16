@@ -309,7 +309,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     string[] array = conditions[i].Split(':');
                     if (array[1] != "不限")
                     {
-                        if (array[0] == "ZJ" || array[0] == "JG" || array[0] == "SJ" || array[0] == "PFM")
+                        if (array[0] == "ZJ" || array[0] == "JG" || array[0] == "SJ" || array[0] == "PFM" || array[0] == "MJ")
                         {
                             if (array[1].Contains("万元"))
                             {

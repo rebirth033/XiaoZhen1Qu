@@ -35,10 +35,10 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string KZCGS { get; set; }
 
         /// <summary>
-        /// 写字楼类型
+        /// 类型
         /// </summary>
         [Property]
-        public virtual string XZLLX { get; set; }
+        public virtual string LX { get; set; }
 
         /// <summary>
         /// 楼盘名称
