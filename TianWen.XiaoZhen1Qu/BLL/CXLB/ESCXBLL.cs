@@ -14,12 +14,11 @@ namespace TianWen.XiaoZhen1Qu.BLL
 {
     public class ESCXBLL : BaseBLL, IESCXBLL
     {
-        //加载二手信息
+        //加载二手列表信息
         public object LoadESXX(string TYPE, string Condition, string PageIndex, string PageSize)
         {
             try
             {
-                
                 DataTable dt = new DataTable();
                 if (TYPE == "ESXX_SJSM_ESSJ")//二手_手机数码_二手手机
                 {
@@ -235,7 +234,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
-        //加载信息
+        //加载二手详细信息
         public object LoadESXX(string TYPE, string ID)
         {
             try
