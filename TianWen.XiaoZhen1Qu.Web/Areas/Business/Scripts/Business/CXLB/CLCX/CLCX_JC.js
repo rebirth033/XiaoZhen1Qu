@@ -1,39 +1,11 @@
 ﻿var currentIndex = 1;
 $(document).ready(function () {
-    BindConditionNav();
-    $(".li_condition_head:eq(0)").each(function () { $(this).css("background-color", "#ffffff"); });
     BindBodyNav();
-    LoadCL_JCCondition();
+    LoadESCondition();
     LoadHot("CLXX_JC");
-    LoadBody("CLXX_JC", currentIndex);
 });
-//搬定查询条件导航
-function BindConditionNav() {
-    $(".li_condition_head").bind("click", function () {
-        $(".li_condition_head").each(function (i) {
-            $(this).css("background-color", "#eeeff1");
-        });
-        $(this).css("background-color", "#ffffff");
-        if ($(this).html() === "出租") {
-            LoadFCCX_SPCZCondition();
-            LoadBody("CLXX_JC", currentIndex);
-        } else {
-            LoadFCCX_SPCSCondition();
-            LoadBody("CLXX_JC", currentIndex);
-        }
-    });
-}
-//绑定主体列表导航
-function BindBodyNav() {
-    $(".li_body_head").bind("click", function () {
-        $(".li_body_head").each(function () {
-            $(this).css("border-bottom", "1px solid #cccccc").css("color", "#999999").css("font-weight", "normal");
-        });
-        $(this).css("border-bottom", "2px solid #5bc0de").css("color", "#5bc0de").css("font-weight", "700");
-    });
-}
 //加载条件
-function LoadCL_JCCondition() {
+function LoadESCondition() {
     $("#div_condition_body").html('');
     var pp = "品牌,不限,大众,本田,别克,丰田,福特,日产,奇瑞,宝马,现代,奥迪,马自达,比亚迪,铃木,雪铁龙,吉利,奔驰".split(',');
     var cx = "车系,不限,雅阁,奥德赛,飞度,CR-V,思域,锋范经典,艾力绅,杰德,锋范,XR-V,思铂睿,歌诗图,凌派,缤智".split(',');
@@ -42,10 +14,14 @@ function LoadCL_JCCondition() {
     LoadCondition(cx, "CX");
     LoadCondition(jg, "JG");
     $("#ul_condition_body_JG").append("<li><input id='input_zj_q' class='input_zj' type='text' /><span class='span_zj'>元</span> - <input class='input_zj' id='input_zj_z' type='text' /><span class='span_zj'>元</span></li>");
-
     $("#ul_condition_body_PP").find(".li_condition_body").bind("click", SelectCondition);
     $("#ul_condition_body_CX").find(".li_condition_body").bind("click", SelectCondition);
     $("#ul_condition_body_JG").find(".li_condition_body").bind("click", SelectCondition);
+
+    LoadConditionByTypeName("办公用品/设备", "CODES_CL", "类别", "LB");
+    LoadConditionByTypeName("电视价格", "CODES_CL", "价格", "JG");
+    LoadDistrict("福州", "350100", "QY");
+    LoadBody("CLXX_JC", currentIndex);
 }
 //选择条件
 function SelectCondition() {

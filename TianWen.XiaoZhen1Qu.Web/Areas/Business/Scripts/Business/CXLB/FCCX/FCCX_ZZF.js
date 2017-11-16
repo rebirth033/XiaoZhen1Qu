@@ -1,5 +1,6 @@
 ﻿var currentIndex = 1;
 $(document).ready(function () {
+    $(".li_condition_head:eq(0)").each(function () { $(this).css("background-color", "#ffffff"); });
     BindBodyNav();
     LoadFCCondition();
     LoadHot("FCXX_ZZF");
