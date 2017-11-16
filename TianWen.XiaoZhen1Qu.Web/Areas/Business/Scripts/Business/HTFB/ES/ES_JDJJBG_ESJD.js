@@ -6,8 +6,6 @@
     BindClick("PBPP");
     BindClick("PBXH");
     BindClick("XJ");
-    BindClick("QY");
-    BindClick("DD");
 });
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
@@ -44,12 +42,6 @@ function BindClick(type) {
         }
         if (type === "BGPP") {
             LoadCODESByTYPENAME("冰柜品牌", "BGPP", "CODES_ES_JDJJBG");
-        } 
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
         }
     });
 }
@@ -148,14 +140,15 @@ function LoadES_JDJJBG_ESJDJBXX() {
                 $("#spanQY").html(xml.Value.ES_JDJJBG_ESJDJBXX.QY);
                 $("#spanDD").html(xml.Value.ES_JDJJBG_ESJDJBXX.DD);
                 $("#spanXL").html(xml.Value.ES_JDJJBG_ESJDJBXX.XL);
+                $("#spanDSPP").html(xml.Value.ES_JDJJBG_ESJDJBXX.PP);
+                $("#spanXYJPP").html(xml.Value.ES_JDJJBG_ESJDJBXX.PP);
+                $("#spanKTPP").html(xml.Value.ES_JDJJBG_ESJDJBXX.PP);
+                $("#spanBXPP").html(xml.Value.ES_JDJJBG_ESJDJBXX.PP);
+                $("#spanBGPP").html(xml.Value.ES_JDJJBG_ESJDJBXX.PP);
                 $("#spanDSPMCC").html(xml.Value.ES_JDJJBG_ESJDJBXX.DSPMCC);
-                $("#spanDSPP").html(xml.Value.ES_JDJJBG_ESJDJBXX.DSPP);
-                $("#spanXYJPP").html(xml.Value.ES_JDJJBG_ESJDJBXX.XYJPP);
-                $("#spanKTPP").html(xml.Value.ES_JDJJBG_ESJDJBXX.KTPP);
                 $("#spanBPDS").html(xml.Value.ES_JDJJBG_ESJDJBXX.KTBPDS);
                 $("#spanKTGL").html(xml.Value.ES_JDJJBG_ESJDJBXX.KTGL);
-                $("#spanBXPP").html(xml.Value.ES_JDJJBG_ESJDJBXX.BXPP);
-                $("#spanBGPP").html(xml.Value.ES_JDJJBG_ESJDJBXX.BGPP);
+
 
                 LoadPhotos(xml.Value.Photos);
                 PDLB(xml.Value.ES_JDJJBG_ESJDJBXX.LB);
@@ -180,14 +173,14 @@ function FB() {
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
 
+    obj = jsonObj.AddJson(obj, "PP", "'" + $("#spanDSPP").html() + "'");
+    obj = jsonObj.AddJson(obj, "PP", "'" + $("#spanXYJPP").html() + "'");
+    obj = jsonObj.AddJson(obj, "PP", "'" + $("#spanKTPP").html() + "'");
+    obj = jsonObj.AddJson(obj, "PP", "'" + $("#spanBXPP").html() + "'");
+    obj = jsonObj.AddJson(obj, "PP", "'" + $("#spanBGPP").html() + "'");
     obj = jsonObj.AddJson(obj, "DSPMCC", "'" + $("#spanDSPMCC").html() + "'");
-    obj = jsonObj.AddJson(obj, "DSPP", "'" + $("#spanDSPP").html() + "'");
-    obj = jsonObj.AddJson(obj, "XYJPP", "'" + $("#spanXYJPP").html() + "'");
-    obj = jsonObj.AddJson(obj, "KTPP", "'" + $("#spanKTPP").html() + "'");
     obj = jsonObj.AddJson(obj, "KTBPDS", "'" + $("#spanBPDS").html() + "'");
     obj = jsonObj.AddJson(obj, "KTGL", "'" + $("#spanKTGL").html() + "'");
-    obj = jsonObj.AddJson(obj, "BXPP", "'" + $("#spanBXPP").html() + "'");
-    obj = jsonObj.AddJson(obj, "BGPP", "'" + $("#spanBGPP").html() + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");

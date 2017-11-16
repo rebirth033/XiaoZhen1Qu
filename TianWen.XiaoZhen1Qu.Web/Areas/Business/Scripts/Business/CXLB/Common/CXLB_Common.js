@@ -9,6 +9,7 @@
     $(".li_body_head:eq(0)").css("border-bottom", "2px solid #5bc0de").css("color", "#5bc0de").css("font-weight", "700");
     $("#span_fbxx").bind("click", OpenLBXZ);
     GetHeadNav();
+    $("#div_condition_body").html('');
 });
 //获取头部导航
 function GetHeadNav() {
@@ -46,6 +47,77 @@ function GetHeadNav() {
 //类别选择
 function OpenLBXZ() {
     window.open(getRootPath() + "/Business/LBXZ/LBXZ");
+}
+//绑定主体列表导航
+function BindBodyNav() {
+    $(".li_body_head").bind("click", function () {
+        $(".li_body_head").each(function () {
+            $(this).css("border-bottom", "1px solid #cccccc").css("color", "#999999").css("font-weight", "normal");
+        });
+        $(this).css("border-bottom", "2px solid #5bc0de").css("color", "#5bc0de").css("font-weight", "700");
+    });
+}
+//显示筛选条件
+function ShowSelectCondition(tbname) {
+    $(".div_condition_select").css("display", "block");
+    $("#ul_condition_select").html('<li class="li_condition_select_first">筛选条件</li>');
+    $(".li_condition_body").each(function () {
+        if ($(this).css("color") === "rgb(91, 192, 222)" && $(this).html() !== "不限") {
+            $("#ul_condition_select").append('<li onclick="DeleteSelect(this,\'' + tbname + '\')" class="li_condition_select"><span>' + $(this).html() + '</span><em>x</em></li>');
+        }
+    });
+}
+//绑定选择条件删除事件
+function DeleteSelect(obj, tbname) {
+    var select = obj.innerHTML;
+    $(obj).css("display", "none");
+    $(".li_condition_body").each(function () {
+        if (select.indexOf($(this).html()) !== -1)
+            $(this).parent().find(".li_condition_body").each(function (index) {
+                if (index === 0) $(this).addClass("li_condition_body_active");
+                else $(this).removeClass("li_condition_body_active");
+            });
+    });
+    if (HasCondition() === "")
+        $("#divConditionSelect").css("display", "none");
+    LoadBody(tbname, currentIndex);
+}
+//获取查询条件
+function GetCondition(type) {
+    var value = "";
+    $("#ul_condition_body_" + type).find(".li_condition_body").each(function () {
+        if ($(this).css("color") === 'rgb(91, 192, 222)')
+            value = $(this).html();
+    });
+    return value;
+}
+//获取所有查询条件
+function GetAllCondition(conditions) {
+    var array = conditions.split(',');
+    var condition = "";
+    for (var i = 0; i < array.length; i++) {
+        if (GetCondition(array[i]) !== "")
+            condition += array[i] + ":" + GetCondition(array[i]) + ",";
+    }
+    return RTrim(condition, ',');
+}
+//获取导航查询条件
+function GetNavCondition() {
+    var value = "";
+    $(".li_condition_head").each(function () {
+        if ($(this).css("background-color") === 'rgb(255, 255, 255)')
+            value = $(this).html();
+    });
+    return value;
+}
+//是否有条件
+function HasCondition() {
+    var condition = "";
+    $(".li_condition_body").each(function () {
+        if ($(this).html() !== "不限" && $(this).css("color") === "rgb(91, 192, 222)")
+            condition += $(this).html();
+    });
+    return condition;
 }
 //加载分页
 function LoadPage(typename, pagecount) {
@@ -106,6 +178,7 @@ function LoadConditionByTypeName(typename, table, name, id) {
         },
         success: function (xml) {
             if (xml.Result === 1) {
+                $("#ul_condition_body_" + id).remove();
                 LoadCondition(xml.list, name, id);
             }
         },

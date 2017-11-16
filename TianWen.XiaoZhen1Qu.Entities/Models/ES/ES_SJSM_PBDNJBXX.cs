@@ -44,13 +44,13 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// 平板品牌
         /// </summary>
         [Property]
-        public virtual string PBPP { get; set; }
+        public virtual string PP { get; set; }
 
         /// <summary>
         /// 平板型号
         /// </summary>
         [Property]
-        public virtual string PBXH { get; set; }
+        public virtual string XH { get; set; }
 
         /// <summary>
         /// 新旧

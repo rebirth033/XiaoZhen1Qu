@@ -16,17 +16,13 @@ namespace TianWen.XiaoZhen1Qu.Entities.Maps
             Map(x => x.XL, "XL");
             Map(x => x.XJ, "XJ");
             Map(x => x.JG, "JG");
-            Map(x => x.BCMS, "BCMS");
-            Map(x => x.QY, "QY");
-            Map(x => x.DD, "DD");
+            Map(x => x.PP, "PP");
             Map(x => x.DSPMCC, "DSPMCC");
-            Map(x => x.DSPP, "DSPP");
-            Map(x => x.XYJPP, "XYJPP");
-            Map(x => x.KTPP, "KTPP");
             Map(x => x.KTBPDS, "KTBPDS");
             Map(x => x.KTGL, "KTGL");
-            Map(x => x.BXPP, "BXPP");
-            Map(x => x.BGPP, "BGPP");
+            Map(x => x.QY, "QY");
+            Map(x => x.DD, "DD");
+            Map(x => x.BCMS, "BCMS");
             #endregion
 
             #region OneToMany
