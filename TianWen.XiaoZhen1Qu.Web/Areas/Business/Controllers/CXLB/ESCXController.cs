@@ -72,6 +72,16 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             GetSession();
             return View();
         }
+        public ActionResult ESCX_WHYL_WTHWYQ()
+        {
+            GetSession();
+            return View();
+        }
+        public ActionResult ESCX_WHYL_TSYXRJ()
+        {
+            GetSession();
+            return View();
+        }
 
         public JsonResult LoadESXX()
         {

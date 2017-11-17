@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "信息小镇_房产查询";
+    Layout = "~/Areas/Business/Views/Shared/CXLB.cshtml";
+}
+@section Section_Head {
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link href="@Url.Content("~/Areas/Business/Css/CXLB/ESCX.css")" rel="stylesheet" />
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/CXLB/ESCX/ESCX_WHYL_WTHWYQ.js")"></script>
+}
+@section Section_Body {
+    <div id="divNav" class="div_nav">
+    </div>
+    <div id="divCondition" class="div_condition">
+        <div id="div_condition_body_LB" class="div_condition_body" style="padding-top: 20px;"></div>
+        <div id="div_condition_body_XL" class="div_condition_body"></div>
+        <div id="div_condition_body_JG" class="div_condition_body"></div>
+        <div id="div_condition_body_QY" class="div_condition_body"></div>
+    </div>
+    <div id="divConditionSelect" class="div_condition_select">
+        <ul id="ul_condition_select" class="ul_condition_select">
+            <li class="li_condition_select_first">筛选条件</li>
+        </ul>
+    </div>
+    <div id="divBody" class="div_body"> 
+        <ul class="ul_body_head">
+            <li id="li_body_head_first" class="li_body_head"></li>
+            <li class="li_body_head">个人</li>
+            <li class="li_body_head">商家</li>
+        </ul>
+        <div id="div_body_left" class="div_body_left">
+            <ul id="ul_body_left" class="ul_body_left"></ul>
+            <div class="div_main_info_bottom">
+                <div class="div_main_info_bottom_fy" id="div_main_info_bottom_fy">
+                </div>
+            </div>
+        </div>
+        <div class="div_body_right">
+            <p class="p_div_body_right">小镇精选</p>
+            <ul id="ul_body_right" class="ul_body_right"></ul>
+        </div>
+    </div>
+}
