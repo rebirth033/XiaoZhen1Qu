@@ -61,5 +61,11 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models.CODES
         /// </summary>
         [Property]
         public virtual string ISHOT { get; set; }
+
+        /// <summary>
+        /// 是否热门
+        /// </summary>
+        [Property]
+        public virtual string TYPESHOWNAME { get; set; }
     }
 }

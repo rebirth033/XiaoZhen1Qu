@@ -8,7 +8,6 @@ $(document).ready(function () {
 function LoadCLCondition() {
     LoadConditionByTypeName("轿车品牌", "CODES_CL_JC", "品牌", "PP");
     LoadConditionByTypeName("轿车价格", "CODES_CL", "价格", "JG");
-    //LoadDistrict("福州", "350100", "QY");
     LoadBody("CLXX_JC", currentIndex);
 }
 //选择条件

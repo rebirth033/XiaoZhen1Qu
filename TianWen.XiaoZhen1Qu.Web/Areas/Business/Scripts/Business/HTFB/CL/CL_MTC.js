@@ -5,8 +5,6 @@
     BindClick("LB");
     BindClick("GCSJ");
     BindClick("PP");
-    BindClick("QY");
-    BindClick("SQ");
 });
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
@@ -19,12 +17,6 @@ function BindClick(type) {
         }
         if (type === "GCSJ") {
             LoadCODESByTYPENAME("购车时间", "GCSJ", "CODES_CL", Bind, "MTCGCSJ", "GCSJ", "");
-        }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
         }
     });
 }
@@ -92,7 +84,7 @@ function LoadCL_MTCJBXX() {
                 if (xml.Value.CL_MTCJBXX.XSLC !== null)
                     SetDX("XSQK", xml.Value.CL_MTCJBXX.XSLC);
                 SetXSQK(xml.Value.CL_MTCJBXX.XSLC);
-                $("#spanLB").html(xml.Value.CL_MTCJBXX.LB);
+                $("#spanCX").html(xml.Value.CL_MTCJBXX.CX);
                 $("#spanPP").html(xml.Value.CL_MTCJBXX.PP);
                 $("#spanGCSJ").html(xml.Value.CL_MTCJBXX.GCSJ);
                 $("#spanQY").html(xml.Value.CL_MTCJBXX.QY);
@@ -114,7 +106,7 @@ function FB() {
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
-    obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
+    obj = jsonObj.AddJson(obj, "CX", "'" + $("#spanCX").html() + "'");
     obj = jsonObj.AddJson(obj, "PP", "'" + $("#spanPP").html() + "'");
     obj = jsonObj.AddJson(obj, "GCSJ", "'" + $("#spanGCSJ").html() + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
