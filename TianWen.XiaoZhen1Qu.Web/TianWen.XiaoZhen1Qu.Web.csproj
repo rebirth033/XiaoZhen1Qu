@@ -179,7 +179,7 @@
     <Content Include="Areas\Business\Css\HTFB\CW\CW_CWG.css" />
     <Content Include="Areas\Business\Css\HTFB\CW\CW_CWM.css" />
     <Content Include="Areas\Business\Css\HTFB\CW\CW_CWYPSP.css" />
-    <Content Include="Areas\Business\Css\HTFB\CW\CW_CWZSLY.css" />
+    <Content Include="Areas\Business\Css\HTFB\CW\CW_CWGY.css" />
     <Content Include="Areas\Business\Css\HTFB\CW\CW_HNYC.css" />
     <Content Include="Areas\Business\Css\HTFB\CY\CY_KCTS.css" />
     <Content Include="Areas\Business\Css\HTFB\CY\CY_MS.css" />
@@ -532,7 +532,7 @@
     <Content Include="Areas\Business\Css\XXXX\CL\CLXX_HC.css" />
     <Content Include="Areas\Business\Css\XXXX\CL\CLXX_JC.css" />
     <Content Include="Areas\Business\Css\XXXX\Common\XXXX_Common.css" />
-    <Content Include="Areas\Business\Css\XXXX\CW\CWXX_CWZSLY.css" />
+    <Content Include="Areas\Business\Css\XXXX\CW\CWXX_CW.css" />
     <Content Include="Areas\Business\Css\XXXX\CW\CWXX_CWYPSP.css" />
     <Content Include="Areas\Business\Css\XXXX\CW\CWXX_CWFW.css" />
     <Content Include="Areas\Business\Css\XXXX\CW\CWXX_HNYC.css" />
@@ -623,7 +623,7 @@
     <Content Include="Areas\Business\Scripts\Business\CXLB\CLCX\CLCX_HC.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\CLCX\CLCX_JC.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\Common\CXLB_Common.js" />
-    <Content Include="Areas\Business\Scripts\Business\CXLB\CWCX\CWCX_CWZSLY.js" />
+    <Content Include="Areas\Business\Scripts\Business\CXLB\CWCX\CWCX_CWGY.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\CWCX\CWCX_CWYPSP.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\CWCX\CWCX_CWFW.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\CWCX\CWCX_HNYC.js" />
@@ -682,8 +682,8 @@
     <Content Include="Areas\Business\Scripts\Business\HTFB\CW\CW_CWMYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\CW\CW_CWYPSP.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\CW\CW_CWYPSPYZ.js" />
-    <Content Include="Areas\Business\Scripts\Business\HTFB\CW\CW_CWZSLY.js" />
-    <Content Include="Areas\Business\Scripts\Business\HTFB\CW\CW_CWZSLYYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\HTFB\CW\CW_CWGY.js" />
+    <Content Include="Areas\Business\Scripts\Business\HTFB\CW\CW_CWGYYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\CW\CW_HNYC.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\CW\CW_HNYCYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\CY\CY_KCTS.js" />
@@ -1051,7 +1051,7 @@
     <Content Include="Areas\Business\Scripts\Business\XXXX\CLXX\CLXX_KC.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\CLXX\CLXX_HC.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\CLXX\CLXX_JC.js" />
-    <Content Include="Areas\Business\Scripts\Business\XXXX\CWXX\CWXX_CWZSLY.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\CWXX\CWXX_CWGY.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\CWXX\CWXX_CWYPSP.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\CWXX\CWXX_CWFW.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\CWXX\CWXX_HNYC.js" />
@@ -1619,7 +1619,7 @@
     <Content Include="Areas\Business\Views\CW\CW_CWG.cshtml" />
     <Content Include="Areas\Business\Views\CW\CW_CWM.cshtml" />
     <Content Include="Areas\Business\Views\CW\CW_HNYC.cshtml" />
-    <Content Include="Areas\Business\Views\CW\CW_CWZSLY.cshtml" />
+    <Content Include="Areas\Business\Views\CW\CW_CWGY.cshtml" />
     <Content Include="Areas\Business\Views\CW\CW_CWYPSP.cshtml" />
     <Content Include="Areas\Business\Views\CW\CW_CWFW.cshtml" />
     <Content Include="Areas\Business\Views\CL\CL_JC.cshtml" />
@@ -1838,8 +1838,8 @@
     <Content Include="Areas\Business\Views\CWXX\CWXX_CWFW.cshtml" />
     <Content Include="Areas\Business\Views\CWCX\CWCX_CWYPSP.cshtml" />
     <Content Include="Areas\Business\Views\CWXX\CWXX_CWYPSP.cshtml" />
-    <Content Include="Areas\Business\Views\CWCX\CWCX_CWZSLY.cshtml" />
-    <Content Include="Areas\Business\Views\CWXX\CWXX_CWZSLY.cshtml" />
+    <Content Include="Areas\Business\Views\CWCX\CWCX_CWGY.cshtml" />
+    <Content Include="Areas\Business\Views\CWXX\CWXX_CWGY.cshtml" />
     <Content Include="Areas\Business\Views\ESCX\ESCX_SJSM_ESSJ.cshtml" />
     <Content Include="Areas\Business\Views\ESXX\ESXX_SJSM_ESSJ.cshtml" />
     <Content Include="Areas\Business\Views\ESCX\ESCX_SJSM_BJBDN.cshtml" />

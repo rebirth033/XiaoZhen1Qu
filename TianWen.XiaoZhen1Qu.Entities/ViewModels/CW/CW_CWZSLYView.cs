@@ -6,7 +6,7 @@ using TianWen.XiaoZhen1Qu.Entities.Models;
 
 namespace TianWen.XiaoZhen1Qu.Entities.ViewModels.CW
 {
-    public class CW_CWZSLYView
+    public class CW_CWGYView
     {
         //基础信息
         public string JCXXID { get; set; }

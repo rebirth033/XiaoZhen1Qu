@@ -21,9 +21,9 @@ namespace TianWen.XiaoZhen1Qu.Interface.HTFB
 
         object LoadCW_CWYPSPJBXX(string ID);
 
-        object SaveCW_CWZSLYJBXX(JCXX jcxx, CW_CWZSLYJBXX dzfjbxx, List<PHOTOS> photos);
+        object SaveCW_CWGYJBXX(JCXX jcxx, CW_CWGYJBXX dzfjbxx, List<PHOTOS> photos);
 
-        object LoadCW_CWZSLYJBXX(string ID);
+        object LoadCW_CWGYJBXX(string ID);
 
         object SaveCW_HNYCJBXX(JCXX jcxx, CW_HNYCJBXX dzfjbxx, List<PHOTOS> photos);
 

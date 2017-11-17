@@ -3,9 +3,9 @@ using NHibernate.Mapping.Attributes;
 
 namespace TianWen.XiaoZhen1Qu.Entities.Models
 {
-    public class CW_CWZSLYJBXX
+    public class CW_CWGYJBXX
     {
-        public CW_CWZSLYJBXX()
+        public CW_CWGYJBXX()
         {
             ID = Guid.NewGuid().ToString("N");
         }

@@ -90,7 +90,7 @@
     <Compile Include="Maps\CW\CW_CWGJBXX_Map.cs" />
     <Compile Include="Maps\CW\CW_CWMJBXX_Map.cs" />
     <Compile Include="Maps\CW\CW_CWYPSPJBXX_Map.cs" />
-    <Compile Include="Maps\CW\CW_CWZSLYJBXX_Map.cs" />
+    <Compile Include="Maps\CW\CW_CWGYJBXX_Map.cs" />
     <Compile Include="Maps\CW\CW_HNYCJBXX_Map.cs" />
     <Compile Include="Maps\CY\CY_KCTSJBXX_Map.cs" />
     <Compile Include="Maps\CY\CY_MSJBXX_Map.cs" />
@@ -330,7 +330,7 @@
     <Compile Include="Models\CW\CW_CWGJBXX.cs" />
     <Compile Include="Models\CW\CW_CWMJBXX.cs" />
     <Compile Include="Models\CW\CW_CWYPSPJBXX.cs" />
-    <Compile Include="Models\CW\CW_CWZSLYJBXX.cs" />
+    <Compile Include="Models\CW\CW_CWGYJBXX.cs" />
     <Compile Include="Models\CW\CW_HNYCJBXX.cs" />
     <Compile Include="Models\CY\CY_KCTSJBXX.cs" />
     <Compile Include="Models\CY\CY_MSJBXX.cs" />

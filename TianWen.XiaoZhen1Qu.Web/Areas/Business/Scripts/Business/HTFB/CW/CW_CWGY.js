@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
-    LoadCW_CWZSLYJBXX();
+    LoadCW_CWGYJBXX();
 });
 //选择类别下拉框
 function SelectLB(obj, type) {
@@ -8,10 +8,10 @@ function SelectLB(obj, type) {
     $("#div" + type).css("display", "none");
 }
 //加载宠物_宠物猫基本信息
-function LoadCW_CWZSLYJBXX() {
+function LoadCW_CWGYJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/CW/LoadCW_CWZSLYJBXX",
+        url: getRootPath() + "/Business/CW/LoadCW_CWGYJBXX",
         dataType: "json",
         data:
         {
@@ -20,18 +20,18 @@ function LoadCW_CWZSLYJBXX() {
         success: function (xml) {
             if (xml.Result === 1) {
                 var jsonObj = new JsonDB("myTabContent");
-                jsonObj.DisplayFromJson("myTabContent", xml.Value.CW_CWZSLYJBXX);
+                jsonObj.DisplayFromJson("myTabContent", xml.Value.CW_CWGYJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
-                $("#ID").val(xml.Value.CW_CWZSLYJBXX.ID);
+                $("#ID").val(xml.Value.CW_CWGYJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.BCMSString);
                 });
-                $("#spanQY").html(xml.Value.CW_CWZSLYJBXX.QY);
-                $("#spanDD").html(xml.Value.CW_CWZSLYJBXX.DD);
-                if (xml.Value.CW_CWZSLYJBXX.GQ !== null)
-                    SetDX("GQ", xml.Value.CW_CWZSLYJBXX.GQ);
+                $("#spanQY").html(xml.Value.CW_CWGYJBXX.QY);
+                $("#spanDD").html(xml.Value.CW_CWGYJBXX.DD);
+                if (xml.Value.CW_CWGYJBXX.GQ !== null)
+                    SetDX("GQ", xml.Value.CW_CWGYJBXX.GQ);
                 LoadPhotos(xml.Value.Photos);
             }
         },
@@ -56,7 +56,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/CW/FBCW_CWZSLYJBXX",
+        url: getRootPath() + "/Business/CW/FBCW_CWGYJBXX",
         dataType: "json",
         data:
         {
