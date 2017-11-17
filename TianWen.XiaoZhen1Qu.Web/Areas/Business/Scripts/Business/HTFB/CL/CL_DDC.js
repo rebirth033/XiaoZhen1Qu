@@ -13,16 +13,16 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("电动车类别", "LB", "CODES_CL", Bind, "DDCLB", "LB", "");
+            LoadCODESByTYPENAME("电动车车型", "CX", "CODES_CL", Bind, "DDCCX", "CX", "");
         }
         if (type === "PP") {
             LoadCODESByTYPENAME("电动车品牌", "PP", "CODES_CL", Bind, "DDCPP", "PP", "");
         }
         if (type === "DCDY") {
-            LoadCODESByTYPENAME("电池电压", "DCDY", "CODES_CL", Bind, "DDCDCDY", "DCDY", "");
+            LoadCODESByTYPENAME("电动车电池电压", "DCDY", "CODES_CL", Bind, "DDCDCDY", "DCDY", "");
         }
         if (type === "DCRL") {
-            LoadCODESByTYPENAME("电池容量", "DCRL", "CODES_CL", Bind, "DDCDCRL", "DCRL", "");
+            LoadCODESByTYPENAME("电动车电池容量", "DCRL", "CODES_CL", Bind, "DDCDCRL", "DCRL", "");
         }
         if (type === "XJ") {
             LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM", Bind, "XJCD", "XJ", "");

@@ -17,7 +17,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
             try
             {
                 IList<JCXX> list = new List<JCXX>();
-                list = DAO.Repository.GetObjectList<JCXX>(String.Format("FROM JCXX ORDER BY CJSJ DESC"));
+                list = DAO.Repository.GetObjectList<JCXX>(String.Format("FROM JCXX WHERE DH NOT LIKE '%票务%' ORDER BY CJSJ DESC"));
 
                 foreach (var jcxx in list)
                 {

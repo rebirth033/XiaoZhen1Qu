@@ -29,10 +29,10 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string GQ { get; set; }
 
         /// <summary>
-        /// 类别
+        /// 车型
         /// </summary>
         [Property]
-        public virtual string LB { get; set; }
+        public virtual string CX { get; set; }
 
         /// <summary>
         /// 品牌
