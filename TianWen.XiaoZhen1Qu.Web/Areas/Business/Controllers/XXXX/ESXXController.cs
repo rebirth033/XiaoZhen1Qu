@@ -71,6 +71,10 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         {
             return View();
         }
+        public ActionResult ESXX_WHYL_WYXNWP()
+        {
+            return View();
+        }
 
         public JsonResult LoadESXX()
         {

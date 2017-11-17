@@ -256,6 +256,22 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     }
                     return new { Result = EnResultType.Success, list = listnew, PageCount = PageCount, TotalCount = TotalCount };
                 }
+                if (TYPE == "ESXX_WHYL_WYXNWP")//二手_文化娱乐_网游虚拟物品
+                {
+                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,es_whyl_wyxnwpjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + " order by zxgxsj desc");
+                    var list = ConvertHelper.DataTableToList<ES_JDJJBG_BGSBView>(dt);
+                    int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
+                    int TotalCount = list.Count;
+
+                    var listnew = from p in list.Skip((int.Parse(PageIndex) - 1) * int.Parse(PageSize)).Take(int.Parse(PageSize)) select p;
+
+                    foreach (var obj in listnew)
+                    {
+                        obj.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", obj.JCXXID));
+                        obj.BCMSString = BinaryHelper.BinaryToString(obj.BCMS);
+                    }
+                    return new { Result = EnResultType.Success, list = listnew, PageCount = PageCount, TotalCount = TotalCount };
+                }
                 return new { Result = EnResultType.Failed };
 
             }
@@ -415,6 +431,16 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 if (TYPE == "ESXX_WHYL_TSYXRJ") //二手_文化娱乐_图书音像软件
                 {
                     dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,es_whyl_tsyxrjjbxx b where a.jcxxid = b.jcxxid and id = '{0}'  order by zxgxsj desc", ID));
+                    List<ES_JDJJBG_BGSBView> list = ConvertHelper.DataTableToList<ES_JDJJBG_BGSBView>(dt);
+                    foreach (var jcxx in list)
+                    {
+                        jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
+                    }
+                    return new { Result = EnResultType.Success, list = list, BCMSString = BinaryHelper.BinaryToString(list[0].BCMS), grxxlist = GetGRXX(list[0].YHID) };
+                }
+                if (TYPE == "ESXX_WHYL_WYXNWP") //二手_文化娱乐_网游虚拟物品
+                {
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,es_whyl_wyxnwpjbxx b where a.jcxxid = b.jcxxid and id = '{0}'  order by zxgxsj desc", ID));
                     List<ES_JDJJBG_BGSBView> list = ConvertHelper.DataTableToList<ES_JDJJBG_BGSBView>(dt);
                     foreach (var jcxx in list)
                     {
