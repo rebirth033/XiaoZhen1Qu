@@ -228,7 +228,7 @@ function LoadCondition(array, name, id) {
     html += '<ul id="ul_condition_body_' + id + '" class="ul_condition_body">';
     html += '<li class="li_condition_body_first">' + name + '</li>';
     html += '<li id="0" class="li_condition_body li_condition_body_active" onclick="SelectCondition(this,\'' + name + '\')">不限</li>';
-    for (var i = 0; i < (array.length > 10 ? 10 : array.length) ; i++) {
+    for (var i = 0; i < (array.length > 15 ? 15 : array.length) ; i++) {
         html += '<li id="' + array[i].CODEID + '" class="li_condition_body" onclick="SelectCondition(this,\'' + name + '\')">' + array[i].CODENAME + '</li>';
     }
     html += '</ul>';

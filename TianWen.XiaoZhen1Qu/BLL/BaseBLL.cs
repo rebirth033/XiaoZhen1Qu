@@ -122,7 +122,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 if (TBName == "CODES_CL")
                     return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_CL>(String.Format("FROM CODES_CL WHERE TYPENAME = '{0}' ORDER BY CODEORDER", TYPENAME)) };
                 if (TBName == "CODES_CL_JC")
-                    return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_CL_JC>(String.Format("FROM CODES_CL_JC WHERE TYPENAME = '{0}' ORDER BY CODEORDER", TYPENAME)) };
+                    return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_CL_JC>(String.Format("FROM CODES_CL_JC WHERE TYPENAME = '{0}' AND ISHOT = '是' ORDER BY CODEORDER", TYPENAME)) };
                 if (TBName == "CODES_CW")
                     return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_CW>(String.Format("FROM CODES_CW WHERE TYPENAME = '{0}' ORDER BY CODEORDER", TYPENAME)) };
                 if (TBName == "CODES_CY")
