@@ -10,7 +10,7 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("演出门票", "LB", "CODES_PWKQ", Bind, "YCMPLB", "LB", "");
+            LoadCODESByTYPENAME("演出门票", "LB", "CODES_ES_PWKQ", Bind, "YCMPLB", "LB", "");
         }
     });
 }

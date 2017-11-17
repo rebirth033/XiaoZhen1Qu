@@ -9,7 +9,7 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("游乐园/景点票", "LB", "CODES_PWKQ", Bind, "YLYJDPLB", "LB", "");
+            LoadCODESByTYPENAME("游乐园/景点票", "LB", "CODES_ES_PWKQ", Bind, "YLYJDPLB", "LB", "");
         }
     });
 }

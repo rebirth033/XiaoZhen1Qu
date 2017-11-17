@@ -298,4 +298,14 @@ function OpenCXLB(lbid, typename, condition) {
         window.open(getRootPath() + "/Business/ESCX/ESCX_WHYL_TSYXRJ?LBID=" + lbid);
     if (lbid === 201)
         window.open(getRootPath() + "/Business/ESCX/ESCX_WHYL_WYXNWP?LBID=" + lbid);
+    if (lbid === 82)
+        window.open(getRootPath() + "/Business/ESCX/ESCX_PWKQ_DYP?LBID=" + lbid);
+    if (lbid === 83)
+        window.open(getRootPath() + "/Business/ESCX/ESCX_PWKQ_XFKGWQ?LBID=" + lbid);
+    if (lbid === 84)
+        window.open(getRootPath() + "/Business/ESCX/ESCX_PWKQ_QTKQ?LBID=" + lbid);
+    if (lbid === 85)
+        window.open(getRootPath() + "/Business/ESCX/ESCX_PWKQ_YCMP?LBID=" + lbid);
+    if (lbid === 86)
+        window.open(getRootPath() + "/Business/ESCX/ESCX_PWKQ_YLYJDP?LBID=" + lbid);
 }

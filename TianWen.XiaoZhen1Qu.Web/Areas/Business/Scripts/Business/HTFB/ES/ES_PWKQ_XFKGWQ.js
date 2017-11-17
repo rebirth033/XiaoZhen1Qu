@@ -9,7 +9,7 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("消费卡/购物券", "LB", "CODES_PWKQ", Bind, "XFKGWQLB", "LB", "");
+            LoadCODESByTYPENAME("消费卡/购物券", "LB", "CODES_ES_PWKQ", Bind, "XFKGWQLB", "LB", "");
         }
     });
 }

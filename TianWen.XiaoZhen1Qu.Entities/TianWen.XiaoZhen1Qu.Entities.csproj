@@ -78,7 +78,7 @@
     <Compile Include="Maps\CODES\CODES_LYJD_Map.cs" />
     <Compile Include="Maps\CODES\CODES_NLMFY_Map.cs" />
     <Compile Include="Maps\CODES\CODES_PFCG_Map.cs" />
-    <Compile Include="Maps\CODES\CODES_PWKQ_Map.cs" />
+    <Compile Include="Maps\CODES\CODES_ES_PWKQ_Map.cs" />
     <Compile Include="Maps\CODES\CODES_QZZP_Map.cs" />
     <Compile Include="Maps\CODES\CODES_SHFW_Map.cs" />
     <Compile Include="Maps\CODES\CODES_SWFW_Map.cs" />
@@ -318,7 +318,7 @@
     <Compile Include="Models\CODES\CODES_LYJD.cs" />
     <Compile Include="Models\CODES\CODES_NLMFY.cs" />
     <Compile Include="Models\CODES\CODES_PFCG.cs" />
-    <Compile Include="Models\CODES\CODES_PWKQ.cs" />
+    <Compile Include="Models\CODES\CODES_ES_PWKQ.cs" />
     <Compile Include="Models\CODES\CODES_QZZP.cs" />
     <Compile Include="Models\CODES\CODES_SHFW.cs" />
     <Compile Include="Models\CODES\CODES_SWFW.cs" />
