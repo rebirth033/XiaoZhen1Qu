@@ -8,7 +8,7 @@ function ValidateAll() {
         & ValidateSelect("ZPXLYQ", "XLYQ", "忘记选择学历要求啦")
         & ValidateSelect("ZPGZNX", "GZNX", "忘记选择工作年限啦")
         & ValidateBCMS("BCMS", "忘记填写补充描述啦")
-        & ValidateCommon())
+        & ValidateInput("LXR", "联系人") & ValidateInput("LXDH", "联系电话"))
         return true;
     else
         return false;

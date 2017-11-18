@@ -20,4 +20,9 @@
       <ref object="ESCXBLL"/>
     </property>
   </object>
+  <object id="QZZPXXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.QZZPXXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="QZZPCXBLL">
+      <ref object="QZZPCXBLL"/>
+    </property>
+  </object>
 </objects>
