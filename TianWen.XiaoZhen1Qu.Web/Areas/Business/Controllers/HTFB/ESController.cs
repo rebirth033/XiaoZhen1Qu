@@ -403,19 +403,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             object result = ES_BLL.SaveES_WHYL_YSPSCPJBXX(jcxx, ES_WHYL_YSPSCPjbxx, photos);
             return Json(result);
         }
-
-        [ValidateInput(false)]
-        public JsonResult FBES_PWKQ_DYPJBXX()
-        {
-            YHJBXX yhjbxx = ES_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
-            string json = Request["Json"];
-            string bcms = Request["BCMS"];
-            JCXX jcxx = CreateJCXX(yhjbxx, json);
-            ES_PWKQ_DYPJBXX ES_PWKQ_DYPjbxx = JsonHelper.ConvertJsonToObject<ES_PWKQ_DYPJBXX>(json);
-            ES_PWKQ_DYPjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
-            object result = ES_BLL.SaveES_PWKQ_DYPJBXX(jcxx, ES_PWKQ_DYPjbxx);
-            return Json(result);
-        }
+        
         [ValidateInput(false)]
         public JsonResult FBES_PWKQ_QTKQJBXX()
         {
@@ -571,12 +559,6 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         {
             string ID = Request["ID"];
             object result = ES_BLL.LoadES_WHYL_YSPSCPJBXX(ID);
-            return Json(result);
-        }
-        public JsonResult LoadES_PWKQ_DYPJBXX()
-        {
-            string ID = Request["ID"];
-            object result = ES_BLL.LoadES_PWKQ_DYPJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadES_PWKQ_QTKQJBXX()

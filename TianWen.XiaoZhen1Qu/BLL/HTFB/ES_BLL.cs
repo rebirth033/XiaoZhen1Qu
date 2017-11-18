@@ -1130,66 +1130,6 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
-        public object SaveES_PWKQ_DYPJBXX(JCXX jcxx, ES_PWKQ_DYPJBXX ES_PWKQ_DYPJBXX)
-        {
-            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM ES_PWKQ_DYPJBXX WHERE ID='{0}'", ES_PWKQ_DYPJBXX.ID));
-            using (ITransaction transaction = DAO.BeginTransaction())
-            {
-                try
-                {
-                    if (dt.Rows.Count > 0)
-                    {
-                        ES_PWKQ_DYPJBXX.JCXXID = dt.Rows[0]["JCXXID"].ToString();
-                        jcxx.JCXXID = dt.Rows[0]["JCXXID"].ToString();
-                        DAO.Update(jcxx);
-                        DAO.Update(ES_PWKQ_DYPJBXX);
-                        transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, ID = ES_PWKQ_DYPJBXX.ID } };
-                    }
-                    else
-                    {
-                        ES_PWKQ_DYPJBXX.JCXXID = jcxx.JCXXID;
-                        DAO.Save(jcxx);
-                        DAO.Save(ES_PWKQ_DYPJBXX);
-                        transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, ID = ES_PWKQ_DYPJBXX.ID } };
-                    }
-                }
-                catch (Exception ex)
-                {
-                    transaction.Rollback();
-                    LoggerManager.Error("ES_PWKQ_DYPJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
-                    return new { Result = EnResultType.Failed, Message = "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!", Type = 3 };
-                }
-            }
-        }
-
-        public object LoadES_PWKQ_DYPJBXX(string ID)
-        {
-            try
-            {
-                ES_PWKQ_DYPJBXX ES_PWKQ_DYPJBXX = DAO.GetObjectByID<ES_PWKQ_DYPJBXX>(ID);
-                if (ES_PWKQ_DYPJBXX != null)
-                {
-                    JCXX jcxx = GetJCXXByID(ES_PWKQ_DYPJBXX.JCXXID);
-                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { ES_PWKQ_DYPJBXX = ES_PWKQ_DYPJBXX, BCMSString = BinaryHelper.BinaryToString(ES_PWKQ_DYPJBXX.BCMS), JCXX = jcxx, Photos = GetPhtosByJCXXID(ES_PWKQ_DYPJBXX.JCXXID) } };
-                }
-                else
-                {
-                    return new { Result = EnResultType.Failed, Message = "不存在" };
-                }
-            }
-            catch (Exception ex)
-            {
-                LoggerManager.Error("ES_PWKQ_DYPJBXXBLL", "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
-                return new
-                {
-                    Result = EnResultType.Failed,
-                    Message = "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!"
-                };
-            }
-        }
-
         public object SaveES_PWKQ_QTKQJBXX(JCXX jcxx, ES_PWKQ_QTKQJBXX ES_PWKQ_QTKQJBXX)
         {
             DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM ES_PWKQ_QTKQJBXX WHERE ID='{0}'", ES_PWKQ_QTKQJBXX.ID));

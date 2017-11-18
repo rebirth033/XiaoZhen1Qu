@@ -2,29 +2,23 @@
 $(document).ready(function () {
     BindBodyNav();
     LoadESCondition();
-    LoadHot("ESCX_PWKQ_XFKGWQ");
+    LoadHot("ESXX_PWKQ_XFKGWQ");
 });
 //加载条件
 function LoadESCondition() {
-    LoadConditionByTypeName("艺术品/收藏品", "CODES_ES_WHYL", "类别", "LB");
-    LoadConditionByTypeName("艺术品价格", "CODES_ES_WHYL", "价格", "JG");
+    LoadConditionByTypeName("消费卡/购物券", "CODES_ES_PWKQ", "类别", "LB");
+    LoadConditionByTypeName("卡券价格", "CODES_ES_PWKQ", "价格", "JG");
     LoadDistrict("福州", "350100", "QY");
-    LoadBody("ESCX_PWKQ_XFKGWQ", currentIndex);
+    LoadBody("ESXX_PWKQ_XFKGWQ", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
-    if (name === "类别" && (obj.innerHTML !== "邮票邮品" && obj.innerHTML !== "纪念品" && obj.innerHTML !== "其他收藏品")) {
-        LoadConditionByParentID(obj.id, "CODES_ES_WHYL", "小类", "XL");
-    }
-    if (name === "类别" && (obj.innerHTML === "邮票邮品" || obj.innerHTML === "纪念品" || obj.innerHTML === "其他收藏品")) {
-        $("#ul_condition_body_XL").remove();
-    }
     $(obj).parent().find(".li_condition_body").each(function () {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
-    LoadBody("ESCX_PWKQ_XFKGWQ", currentIndex);
-    ShowSelectCondition("ESCX_PWKQ_XFKGWQ");
+    LoadBody("ESXX_PWKQ_XFKGWQ", currentIndex);
+    ShowSelectCondition("ESXX_PWKQ_XFKGWQ");
 }
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
@@ -60,8 +54,6 @@ function LoadESInfo(obj) {
     var html = "";
     html += ('<li class="li_body_left">');
     html += ('<div class="div_li_body_left_left">');
-    html += ('<img class="img_li_body_left" onclick="OpenXXXX(\'ESCX_PWKQ_XFKGWQ\',\'' + obj.ID + '\')" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<div class="div_img_li_body_left_count"><span>' + obj.PHOTOS.length + '图</span></div>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
     html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'ESCX_PWKQ_XFKGWQ\',\'' + obj.ID + '\')">' + TruncStr(obj.BT,35) + '</p>');

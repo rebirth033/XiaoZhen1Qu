@@ -200,7 +200,6 @@
     <Compile Include="Maps\PFCG\PFCG_YBYQJBXX_Map.cs" />
     <Compile Include="Maps\PFCG\PFCG_YCLJBXX_Map.cs" />
     <Compile Include="Maps\PHOTOS_Map.cs" />
-    <Compile Include="Maps\ES\ES_PWKQ_DYPJBXX_Map.cs" />
     <Compile Include="Maps\ES\ES_PWKQ_QTKQJBXX_Map.cs" />
     <Compile Include="Maps\ES\ES_PWKQ_XFKGWQJBXX_Map.cs" />
     <Compile Include="Maps\ES\ES_PWKQ_YCMPJBXX_Map.cs" />
@@ -443,7 +442,6 @@
     <Compile Include="Models\PFCG\PFCG_YCLJBXX.cs" />
     <Compile Include="Models\PHOTOS.cs" />
     <Compile Include="Models\PublicType.cs" />
-    <Compile Include="Models\ES\ES_PWKQ_DYPJBXX.cs" />
     <Compile Include="Models\ES\ES_PWKQ_QTKQJBXX.cs" />
     <Compile Include="Models\ES\ES_PWKQ_XFKGWQJBXX.cs" />
     <Compile Include="Models\ES\ES_PWKQ_YCMPJBXX.cs" />

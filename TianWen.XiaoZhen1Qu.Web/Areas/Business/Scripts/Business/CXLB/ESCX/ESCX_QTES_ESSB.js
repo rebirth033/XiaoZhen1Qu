@@ -2,22 +2,30 @@
 $(document).ready(function () {
     BindBodyNav();
     LoadESCondition();
-    LoadHot("ESXX_PWKQ_QTKQ");
+    LoadHot("ESXX_QTES_ESSB");
 });
 //加载条件
 function LoadESCondition() {
-    LoadConditionByTypeName("卡券价格", "CODES_ES_PWKQ", "价格", "JG");
+    
+    LoadConditionByTypeName("二手设备", "CODES_ES_QTES", "类别", "LB");
+    LoadConditionByTypeName("其它二手价格", "CODES_ES_QTES", "价格", "JG");
     LoadDistrict("福州", "350100", "QY");
-    LoadBody("ESXX_PWKQ_QTKQ", currentIndex);
+    LoadBody("ESXX_QTES_ESSB", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
+    if (name === "类别" && (obj.innerHTML !== "纺织" && obj.innerHTML !== "其他")) {
+        LoadConditionByParentID(obj.id, "CODES_ES_QTES", "小类", "XL");
+    }
+    if (name === "类别" && (obj.innerHTML === "纺织" || obj.innerHTML === "其他")) {
+        $("#ul_condition_body_XL").remove();
+    }
     $(obj).parent().find(".li_condition_body").each(function () {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
-    LoadBody("ESXX_PWKQ_QTKQ", currentIndex);
-    ShowSelectCondition("ESXX_PWKQ_QTKQ");
+    LoadBody("ESXX_QTES_ESSB", currentIndex);
+    ShowSelectCondition("ESXX_QTES_ESSB");
 }
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
@@ -53,9 +61,11 @@ function LoadESInfo(obj) {
     var html = "";
     html += ('<li class="li_body_left">');
     html += ('<div class="div_li_body_left_left">');
+    html += ('<img class="img_li_body_left" onclick="OpenXXXX(\'ESXX_JDJJBG_BGSB\',\'' + obj.ID + '\')" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
+    html += ('<div class="div_img_li_body_left_count"><span>' + obj.PHOTOS.length + '图</span></div>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
-    html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'ESCX_PWKQ_QTKQ\',\'' + obj.ID + '\')">' + TruncStr(obj.BT,35) + '</p>');
+    html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'ESXX_JDJJBG_BGSB\',\'' + obj.ID + '\')">' + TruncStr(obj.BT, 35) + '</p>');
     html += (TruncStr(obj.BCMSString, 35));
     html += ('<p class="p_li_body_left_center_dz font_size14">' + obj.QY + ' - ' + obj.DD + '<label>/</label>' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
