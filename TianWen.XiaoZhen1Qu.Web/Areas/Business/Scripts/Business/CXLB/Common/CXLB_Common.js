@@ -28,15 +28,17 @@ function GetHeadNav() {
                 html += ('<li class="li_nav_font">信息小镇</li>');
                 html += ('<li class="li_nav_split">></li>');
                 for (var i = 0; i < xml.list.length; i++) {
-                    if (xml.list[i].LBID === parseInt(getUrlParam("LBID")) && xml.list[i].CONDITION === null) {
+                    if (xml.list[i].LBID === parseInt(getUrlParam("LBID"))) {
                         html += ('<li class="li_nav_font">' + xml.xzq + xml.list[i].TYPESHOWNAME + '</li>');
+                        break;
                     }
                 }
                 html += ('<li class="li_nav_split">></li>');
                 for (var i = 0; i < xml.list.length; i++) {
-                    if (xml.list[i].LBID === parseInt(getUrlParam("LBID")) && xml.list[i].CONDITION === null) {
+                    if (xml.list[i].LBID === parseInt(getUrlParam("LBID"))) {
                         html += ('<li class="li_nav_font">' + xml.xzq + xml.list[i].LBNAME + '</li>');
                         $("#li_body_head_first").html(xml.xzq + xml.list[i].LBNAME + "");
+                        break;
                     }
                 }
                 html += ('</ul>');

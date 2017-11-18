@@ -2,14 +2,14 @@
 $(document).ready(function () {
     BindBodyNav();
     LoadESCondition();
-    LoadHot("QZZPCX_JZZP");
+    LoadHot("QZZPXX_JZZP");
 });
 //加载条件
 function LoadESCondition() {
     LoadConditionByTypeName("图书/音像/软件", "CODES_ES_WHYL", "类别", "LB");
     LoadConditionByTypeName("图书价格", "CODES_ES_WHYL", "价格", "JG");
     LoadDistrict("福州", "350100", "QY");
-    LoadBody("QZZPCX_JZZP", currentIndex);
+    LoadBody("QZZPXX_JZZP", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -23,8 +23,8 @@ function SelectCondition(obj, name) {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
-    LoadBody("QZZPCX_JZZP", currentIndex);
-    ShowSelectCondition("QZZPCX_JZZP");
+    LoadBody("QZZPXX_JZZP", currentIndex);
+    ShowSelectCondition("QZZPXX_JZZP");
 }
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {

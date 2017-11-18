@@ -313,7 +313,7 @@ function OpenCXLB(lbid, typename, condition) {
     if (lbid === 204)
         window.open(getRootPath() + "/Business/ESCX/ESCX_QTES_CRYP?LBID=" + lbid);
     if (lbid === 205)
-        window.open(getRootPath() + "/Business/QZZPCX/QZZP_QZZP?LBID=" + lbid);
+        window.open(getRootPath() + "/Business/QZZPCX/QZZPCX_QZZP?LBID=" + lbid + "&" + condition);
     if (lbid === 206)
-        window.open(getRootPath() + "/Business/QZZPCX/QZZP_JZZP?LBID=" + lbid);
+        window.open(getRootPath() + "/Business/QZZPCX/QZZPCX_JZZP?LBID=" + lbid);
 }
