@@ -61,14 +61,13 @@ function LoadQZZPInfo(obj) {
     var html = "";
     html += ('<li class="li_body_left">');
     html += ('<div class="div_li_body_left_left">');
+    html += ('<p class="p_div_li_body_left_left_bt" onclick="OpenXXXX(\'QZZPCX_QZZP\',\'' + obj.ID + '\')">' + TruncStr(obj.BT, 15) + '</p>');
+    html += ('<p class="p_div_li_body_left_left_xz"><span class="span_zj">' + obj.MYXZ + '</span>/月</p>');
+    html += ('<p class="p_div_li_body_left_left_fl">' + obj.ZWFL + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
-    html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'QZZPCX_QZZP\',\'' + obj.ID + '\')">' + TruncStr(obj.BT,35) + '</p>');
-
-    html += ('<p class="p_li_body_left_center_dz font_size14">' + obj.QY + ' - ' + obj.DD + '<label>/</label>' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
-    html += ('<p class="p_li_body_left_right"><span class="span_zj">' + obj.JG + '</span>元</p>');
     html += ('</div>');
     html += ('</li>');
     $("#ul_body_left").append(html);
@@ -77,7 +76,7 @@ function LoadQZZPInfo(obj) {
 function LoadHot(TYPE) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/ESCX/LoadESXX",
+        url: getRootPath() + "/Business/QZZPCX/LoadQZZPXX",
         dataType: "json",
         data:
         {

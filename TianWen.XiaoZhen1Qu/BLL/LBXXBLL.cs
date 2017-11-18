@@ -12,7 +12,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
         {
             try
             {
-                IList<XXLB> list = DAO.Repository.GetObjectList<XXLB>(String.Format("FROM XXLB WHERE LBLX='大类' ORDER BY LBORDER"));
+                IList<XXLB> list = DAO.Repository.GetObjectList<XXLB>(String.Format("FROM XXLB WHERE LBLX='大类' AND LBNAME !='餐饮' ORDER BY LBORDER"));
                 return new { Result = EnResultType.Success, list = list };
             }
             catch (Exception ex)

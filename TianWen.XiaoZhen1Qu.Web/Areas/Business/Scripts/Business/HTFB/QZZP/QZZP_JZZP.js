@@ -10,6 +10,7 @@
     BindClick("GZCS");
     BindClick("QY");
     BindClick("DD");
+    $(".img_jzsj").each(function () {$(this).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");});
 });
 //选择兼职时间
 function SelectJZSJ() {
@@ -80,15 +81,6 @@ function ShowJZLBThird() {
 function HideJZLBThird() {
     $(this).find(".div_JZLB_third").each(function () {
         $(this).css("display", "none");
-    });
-}
-//加载默认
-function LoadDefault() {
-    ue.ready(function () {
-        ue.setHeight(200);
-    });
-    $(".img_jzsj").each(function () {
-        $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
     });
 }
 //设置兼职有效期

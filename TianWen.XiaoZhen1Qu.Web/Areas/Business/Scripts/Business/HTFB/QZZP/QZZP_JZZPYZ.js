@@ -2,8 +2,6 @@
     $("#divZPJZYXQ").find(".div_radio").bind("click", function() { ValidateRadio("ZPJZYXQ", "忘记选择兼职有效期啦"); });
     $("#DQJZKSSJ").bind("change", function () { ValidateZPDQJZSJ(); });
     $("#DQJZJSSJ").bind("change", function () { ValidateZPDQJZSJ(); });
-    $("#BT").bind("blur", ValidateJZMC);
-    $("#BT").bind("focus", InfoJZMC);
     $("#ZPRS").bind("blur", ValidateZPRS);
     $("#ZPRS").bind("focus", InfoZPRS);
     $("#XZ").bind("blur", ValidateXZSP);
@@ -23,8 +21,7 @@ function ValidateXZSP() {
 }
 //验证所有
 function ValidateAll() {
-    if (ValidateJZMC()
-        & ValidateSelect("ZPJZLB", "JZLB", "忘记选择兼职类别啦")
+    if (ValidateSelect("ZPJZLB", "JZLB", "忘记选择兼职类别啦")
         & ValidateZPRS()
         & ValidateRadio("ZPJZYXQ", "忘记选择兼职有效期啦")
         & ValidateZPDQJZSJ()
@@ -35,20 +32,6 @@ function ValidateAll() {
         return true;
     else
         return false;
-}
-//验证兼职名称
-function ValidateJZMC() {
-    if ($("#BT").val() === "" || $("#BT").val() === null) {
-        $("#divZPJZMCTip").css("display", "block");
-        $("#divZPJZMCTip").attr("class", "Warn");
-        $("#divZPJZMCTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写兼职名称啦');
-        $("#BT").css("border-color", "#fd634f");
-        return false;
-    } else {
-        $("#divZPJZMCTip").css("display", "none");
-        $("#BT").css("border-color", "#cccccc");
-        return true;
-    }
 }
 //验证招聘人数
 function ValidateZPRS() {
@@ -105,13 +88,6 @@ function ValidateXZ() {
         $("#XZ").css("border-color", "#cccccc");
         return true;
     }
-}
-//提示兼职名称
-function InfoJZMC() {
-    $("#divZPJZMCTip").css("display", "block");
-    $("#divZPJZMCTip").attr("class", "Info");
-    $("#divZPJZMCTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写兼职名称');
-    $("#BT").css("border-color", "#5bc0de");
 }
 //提示招聘人数
 function InfoZPRS() {

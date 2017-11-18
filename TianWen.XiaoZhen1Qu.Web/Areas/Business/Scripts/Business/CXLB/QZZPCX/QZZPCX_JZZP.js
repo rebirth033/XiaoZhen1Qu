@@ -6,19 +6,12 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadESCondition() {
-    LoadConditionByTypeName("图书/音像/软件", "CODES_ES_WHYL", "类别", "LB");
-    LoadConditionByTypeName("图书价格", "CODES_ES_WHYL", "价格", "JG");
+    LoadConditionByTypeName("兼职类别", "CODES_QZZP", "类别", "JZLB",15);
     LoadDistrict("福州", "350100", "QY");
     LoadBody("QZZPXX_JZZP", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
-    if (name === "类别" && (obj.innerHTML !== "软件")) {
-        LoadConditionByParentID(obj.id, "CODES_ES_WHYL", "小类", "XL");
-    }
-    if (name === "类别" && (obj.innerHTML === "软件")) {
-        $("#ul_condition_body_XL").remove();
-    }
     $(obj).parent().find(".li_condition_body").each(function () {
         $(this).removeClass("li_condition_body_active");
     });
@@ -32,7 +25,7 @@ function LoadBody(TYPE, PageIndex) {
     var condition = GetAllCondition("LB,XL,JG,QY");
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/ESCX/LoadESXX",
+        url: getRootPath() + "/Business/QZZPCX/LoadQZZPXX",
         dataType: "json",
         data:
         {
@@ -46,7 +39,7 @@ function LoadBody(TYPE, PageIndex) {
                 $("#ul_body_left").html('');
                 LoadPage(TYPE, xml.PageCount);
                 for (var i = 0; i < xml.list.length; i++) {
-                    LoadESInfo(xml.list[i]);
+                    LoadQZZPInfo(xml.list[i]);
                 }
             }
         },
@@ -55,21 +48,18 @@ function LoadBody(TYPE, PageIndex) {
         }
     });
 }
-//加载二手单条信息
-function LoadESInfo(obj) {
+//加载求职招聘单条信息
+function LoadQZZPInfo(obj) {
     var html = "";
     html += ('<li class="li_body_left">');
     html += ('<div class="div_li_body_left_left">');
-    html += ('<img class="img_li_body_left" onclick="OpenXXXX(\'QZZPCX_JZZP\',\'' + obj.ID + '\')" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<div class="div_img_li_body_left_count"><span>' + obj.PHOTOS.length + '图</span></div>');
+    html += ('<p class="p_div_li_body_left_left_bt" onclick="OpenXXXX(\'QZZPCX_QZZP\',\'' + obj.ID + '\')">' + TruncStr(obj.BT, 15) + '</p>');
+    html += ('<p class="p_div_li_body_left_left_xz"><span class="span_zj">' + obj.MYXZ + '</span>/月</p>');
+    html += ('<p class="p_div_li_body_left_left_fl">' + obj.ZWFL + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
-    html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'QZZPCX_JZZP\',\'' + obj.ID + '\')">' + TruncStr(obj.BT,35) + '</p>');
-    html += (TruncStr(obj.BCMSString, 35));
-    html += ('<p class="p_li_body_left_center_dz font_size14">' + obj.QY + ' - ' + obj.DD + '<label>/</label>' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
-    html += ('<p class="p_li_body_left_right"><span class="span_zj">' + obj.JG + '</span>元</p>');
     html += ('</div>');
     html += ('</li>');
     $("#ul_body_left").append(html);
@@ -78,7 +68,7 @@ function LoadESInfo(obj) {
 function LoadHot(TYPE) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/ESCX/LoadESXX",
+        url: getRootPath() + "/Business/QZZPCX/LoadQZZPXX",
         dataType: "json",
         data:
         {
