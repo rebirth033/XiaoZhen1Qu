@@ -1,9 +1,9 @@
 -- Create table
 create table ZSJM_WLFWJBXX
 (
-  zsjm_wlfwjbxxid VARCHAR2(50) not null,
+  id VARCHAR2(50) not null,
   jcxxid          VARCHAR2(50),
-  bcms            VARCHAR2(4000),
+  bcms            blob,
   lb              VARCHAR2(20),
   xl              VARCHAR2(100),
   ppmc            VARCHAR2(200),
@@ -29,7 +29,7 @@ tablespace USERS
 comment on table ZSJM_WLFWJBXX
   is '招商加盟_网络服务';
 -- Add comments to the columns 
-comment on column ZSJM_WLFWJBXX.zsjm_wlfwjbxxid
+comment on column ZSJM_WLFWJBXX.id
   is '网络服务基本信息ID';
 comment on column ZSJM_WLFWJBXX.jcxxid
   is '基础信息ID';

@@ -1,9 +1,9 @@
 -- Create table
 create table ZSJM_JCJBXX
 (
-  zsjm_jcjbxxid VARCHAR2(50) not null,
+  id VARCHAR2(50) not null,
   jcxxid        VARCHAR2(50),
-  bcms          VARCHAR2(4000),
+  bcms          blob,
   lb            VARCHAR2(20),
   ppmc          VARCHAR2(200),
   ppls          VARCHAR2(20),
@@ -28,7 +28,7 @@ tablespace USERS
 comment on table ZSJM_JCJBXX
   is '招商加盟_建材';
 -- Add comments to the columns 
-comment on column ZSJM_JCJBXX.zsjm_jcjbxxid
+comment on column ZSJM_JCJBXX.id
   is '建材基本信息ID';
 comment on column ZSJM_JCJBXX.jcxxid
   is '基础信息ID';

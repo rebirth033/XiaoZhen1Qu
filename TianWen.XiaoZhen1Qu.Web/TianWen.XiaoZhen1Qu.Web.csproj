@@ -161,6 +161,7 @@
     <Content Include="Areas\Business\Css\BZZX\BZZX_SY_ZHMM.css" />
     <Content Include="Areas\Business\Css\BZZX\BZZX_WZJY.css" />
     <Content Include="Areas\Business\Css\Common\Head.css" />
+    <Content Include="Areas\Business\Css\CXLB\ZSJMCX.css" />
     <Content Include="Areas\Business\Css\CXLB\QZZPCX.css" />
     <Content Include="Areas\Business\Css\CXLB\ESCX.css" />
     <Content Include="Areas\Business\Css\CXLB\CWCX.css" />
@@ -595,6 +596,8 @@
     <Content Include="Areas\Business\Css\HTFB\ZXJC\ZXJC_JZFW.css" />
     <Content Include="Areas\Business\Css\XXXX\QZZP\QZZPXX_JZZP.css" />
     <Content Include="Areas\Business\Css\XXXX\QZZP\QZZPXX_QZZP.css" />
+    <Content Include="Areas\Business\Css\XXXX\ZSJM\ZSJMXX_FZXB.css" />
+    <Content Include="Areas\Business\Css\XXXX\ZSJM\ZSJMXX_CY.css" />
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\css\bootstrap-theme.css" />
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\css\bootstrap-theme.min.css" />
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\css\bootstrap.css" />
@@ -674,6 +677,8 @@
     <Content Include="Areas\Business\Scripts\Business\CXLB\FCCX\FCCX_ZZF.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\QZZPCX\QZZPCX_JZZP.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\QZZPCX\QZZPCX_QZZP.js" />
+    <Content Include="Areas\Business\Scripts\Business\CXLB\ZSJMCX\ZSJMCX_FZXB.js" />
+    <Content Include="Areas\Business\Scripts\Business\CXLB\ZSJMCX\ZSJMCX_CY.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\CL\CL_GCC.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\CL\CL_GCCYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\CL\CL_HC.js" />
@@ -1161,6 +1166,8 @@
     <Content Include="Areas\Business\Scripts\Business\XXXX\Common\XXXX_Common.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\QZZPXX\QZZPXX_JZZP.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\QZZPXX\QZZPXX_QZZP.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\ZSJMXX\ZSJMXX_FZXB.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\ZSJMXX\ZSJMXX_CY.js" />
     <Content Include="Areas\Business\Scripts\jquery-1.9.1.min.js" />
     <Content Include="Areas\Business\Scripts\jquery-ui-1.12.1.custom\AUTHORS.txt" />
     <Content Include="Areas\Business\Scripts\jquery-ui-1.12.1.custom\external\jquery\jquery.js" />
@@ -1483,6 +1490,7 @@
       <DependentUpon>png.aspx</DependentUpon>
     </Compile>
     <Compile Include="Areas\Business\BusinessAreaRegistration.cs" />
+    <Compile Include="Areas\Business\Controllers\CXLB\ZSJMCXController.cs" />
     <Compile Include="Areas\Business\Controllers\CXLB\QZZPCXController.cs" />
     <Compile Include="Areas\Business\Controllers\CXLB\ESCXController.cs" />
     <Compile Include="Areas\Business\Controllers\CXLB\CWCXController.cs" />
@@ -1521,6 +1529,7 @@
     <Compile Include="Areas\Business\Controllers\HTGL\WDXJController.cs" />
     <Compile Include="Areas\Business\Controllers\HTGL\WZCXController.cs" />
     <Compile Include="Areas\Business\Controllers\HTGL\XXGLController.cs" />
+    <Compile Include="Areas\Business\Controllers\XXXX\ZSJMXXController.cs" />
     <Compile Include="Areas\Business\Controllers\XXXX\QZZPXXController.cs" />
     <Compile Include="Areas\Business\Controllers\XXXX\ESXXController.cs" />
     <Compile Include="Areas\Business\Controllers\XXXX\CWXXController.cs" />
@@ -1924,6 +1933,10 @@
     <Content Include="Areas\Business\Views\QZZPCX\QZZPCX_JZZP.cshtml" />
     <Content Include="Areas\Business\Views\QZZPXX\QZZPXX_QZZP.cshtml" />
     <Content Include="Areas\Business\Views\QZZPXX\QZZPXX_JZZP.cshtml" />
+    <Content Include="Areas\Business\Views\ZSJMCX\ZSJMCX_CY.cshtml" />
+    <Content Include="Areas\Business\Views\ZSJMXX\ZSJMXX_CY.cshtml" />
+    <Content Include="Areas\Business\Views\ZSJMCX\ZSJMCX_FZXB.cshtml" />
+    <Content Include="Areas\Business\Views\ZSJMXX\ZSJMXX_FZXB.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

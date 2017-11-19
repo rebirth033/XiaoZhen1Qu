@@ -40,8 +40,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         //根据行政区编码获取省内同级行政区
         public JsonResult GetDistrictTJByXZQDM()
         {
-            string XZQDM = Request["XZQDM"];
-            object result = CommonBLL.GetDistrictTJByXZQDM(XZQDM);
+            object result = CommonBLL.GetDistrictTJByXZQDM(Session["XZQDM"].ToString());
             return Json(result);
         }
         //切换行政区
@@ -58,6 +57,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             string TBName = Request["TBName"];
             return Json(CommonBLL.LoadCODESByTYPENAME(TYPENAME, TBName));
         }
+        
         //加载区域
         public JsonResult LoadQY()
         {

@@ -1,9 +1,9 @@
 -- Create table
 create table ZSJM_FZXBJBXX
 (
-  zsjm_fzxbjbxxid VARCHAR2(50) not null,
+  id 	 	  VARCHAR2(50) not null,
   jcxxid          VARCHAR2(50),
-  bcms            VARCHAR2(4000),
+  bcms            blob,
   lb              VARCHAR2(20),
   ppmc            VARCHAR2(200),
   ppls            VARCHAR2(20),
@@ -28,7 +28,7 @@ tablespace USERS
 comment on table ZSJM_FZXBJBXX
   is '招商加盟_服装鞋包';
 -- Add comments to the columns 
-comment on column ZSJM_FZXBJBXX.zsjm_fzxbjbxxid
+comment on column ZSJM_FZXBJBXX.id
   is '服装鞋包基本信息ID';
 comment on column ZSJM_FZXBJBXX.jcxxid
   is '基础信息ID';

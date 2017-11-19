@@ -1,9 +1,9 @@
 -- Create table
 create table ZSJM_WTMYETJBXX
 (
-  zsjm_wtmyetjbxxid VARCHAR2(50) not null,
+  id VARCHAR2(50) not null,
   jcxxid            VARCHAR2(50),
-  bcms              VARCHAR2(4000),
+  bcms              blob,
   lb                VARCHAR2(20),
   xl                VARCHAR2(100),
   ppmc              VARCHAR2(200),
@@ -29,7 +29,7 @@ tablespace USERS
 comment on table ZSJM_WTMYETJBXX
   is '招商加盟_文体母婴儿童';
 -- Add comments to the columns 
-comment on column ZSJM_WTMYETJBXX.zsjm_wtmyetjbxxid
+comment on column ZSJM_WTMYETJBXX.id
   is '文体母婴儿童基本信息ID';
 comment on column ZSJM_WTMYETJBXX.jcxxid
   is '基础信息ID';

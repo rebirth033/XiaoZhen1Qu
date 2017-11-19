@@ -5,8 +5,6 @@
     BindClick("TZJE");
     BindClick("QGFDS");
     BindClick("DDMJ");
-    BindClick("QY");
-    BindClick("DD");
     LoadDuoX("适合人群", "SHRQ");
 });
 //加载多选
@@ -43,6 +41,23 @@ function LoadDuoX(type, id) {
 
         }
     });
+}
+//选择类别下拉框
+function SelectLB(obj, type, codeid) {
+    $("#span" + type).html(obj.innerHTML);
+    $("#div" + type).css("display", "none");
+    if (type === "LB")
+        PDLB(obj.innerHTML, codeid);
+}
+//判断类别
+function PDLB(name, codeid) {
+    if (name.indexOf("干锅") !== -1) {
+        $("#divXL").css("display", "none");
+    }
+    else {
+        $("#divXL").css("display", "");
+        LoadDuoX(name, "XL");
+    }
 }
 //加载招商地区
 function LoadZSDQ() {
@@ -97,12 +112,6 @@ function BindClick(type) {
         if (type === "DDMJ") {
             LoadCODESByTYPENAME("单店面积", "DDMJ", "CODES_ZSJM");
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
     });
 }
 //加载丽人_餐饮基本信息
@@ -134,6 +143,8 @@ function LoadZSJM_CYJBXX() {
                 $("#spanQGFDS").html(xml.Value.ZSJM_CYJBXX.QGFDS);
                 $("#spanDDMJ").html(xml.Value.ZSJM_CYJBXX.DDMJ);
                 LoadPhotos(xml.Value.Photos);
+                if (xml.Value.ZSJM_CYJBXX.XL !== null)
+                    SetDuoX("ZSDQ", xml.Value.ZSJM_CYJBXX.XL);
                 if (xml.Value.ZSJM_CYJBXX.SHRQ !== null)
                     SetDuoX("SHRQ", xml.Value.ZSJM_CYJBXX.SHRQ);
                 if (xml.Value.ZSJM_CYJBXX.ZSDQ !== null)
@@ -156,6 +167,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "TZJE", "'" + $("#spanTZJE").html() + "'");
     obj = jsonObj.AddJson(obj, "QGFDS", "'" + $("#spanQGFDS").html() + "'");
     obj = jsonObj.AddJson(obj, "DDMJ", "'" + $("#spanDDMJ").html() + "'");
+    obj = jsonObj.AddJson(obj, "XL", "'" + GetDuoX("XL") + "'");
     obj = jsonObj.AddJson(obj, "SHRQ", "'" + GetDuoX("SHRQ") + "'");
     obj = jsonObj.AddJson(obj, "ZSDQ", "'" + GetDuoX("ZSDQ") + "'");
 

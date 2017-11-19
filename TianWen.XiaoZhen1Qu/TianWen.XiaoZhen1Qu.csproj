@@ -63,6 +63,7 @@
     <Compile Include="BLL\CXLB\ESCXBLL.cs" />
     <Compile Include="BLL\CXLB\CWCXBLL.cs" />
     <Compile Include="BLL\CXLB\CLCXBLL.cs" />
+    <Compile Include="BLL\CXLB\ZSJMCXBLL.cs" />
     <Compile Include="BLL\CXLB\QZZPCXBLL.cs" />
     <Compile Include="BLL\HTFB\CL_BLL.cs" />
     <Compile Include="BLL\CXLB\FCCXBLL.cs" />

@@ -1,9 +1,9 @@
 -- Create table
 create table ZSJM_CYJBXX
 (
-  zsjm_cyjbxxid VARCHAR2(50) not null,
+  id VARCHAR2(50) not null,
   jcxxid        VARCHAR2(50),
-  bcms          VARCHAR2(4000),
+  bcms          blob,
   lb            VARCHAR2(20),
   ppmc          VARCHAR2(200),
   ppls          VARCHAR2(20),
@@ -28,7 +28,7 @@ tablespace USERS
 comment on table ZSJM_CYJBXX
   is '招商加盟_餐饮';
 -- Add comments to the columns 
-comment on column ZSJM_CYJBXX.zsjm_cyjbxxid
+comment on column ZSJM_CYJBXX.id
   is '餐饮基本信息ID';
 comment on column ZSJM_CYJBXX.jcxxid
   is '基础信息ID';

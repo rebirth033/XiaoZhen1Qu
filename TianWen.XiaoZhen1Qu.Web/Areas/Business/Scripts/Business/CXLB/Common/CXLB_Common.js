@@ -206,7 +206,7 @@ function LoadConditionByTypeName(typename, table, name, id, length) {
     });
 }
 //根据PARENTID获取字典表
-function LoadConditionByParentID(parentid, table, name, id) {
+function LoadConditionByParentID(parentid, table, name, id, length) {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/Common/LoadByParentID",
@@ -220,7 +220,7 @@ function LoadConditionByParentID(parentid, table, name, id) {
             if (xml.Result === 1) {
                 $("#ul_condition_body_" + id).remove();
                 if (parentid !== "0")
-                    LoadCondition(xml.list, name, id);
+                    LoadCondition(xml.list, name, id, length);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
