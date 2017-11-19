@@ -22,7 +22,7 @@ function SelectCondition(obj, name) {
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("LB,XL,JG,QY");
+    var condition = GetAllCondition("JZLB,QY");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/QZZPCX/LoadQZZPXX",
@@ -52,15 +52,9 @@ function LoadBody(TYPE, PageIndex) {
 function LoadQZZPInfo(obj) {
     var html = "";
     html += ('<li class="li_body_left">');
-    html += ('<div class="div_li_body_left_left">');
-    html += ('<p class="p_div_li_body_left_left_bt" onclick="OpenXXXX(\'QZZPCX_QZZP\',\'' + obj.ID + '\')">' + TruncStr(obj.BT, 15) + '</p>');
-    html += ('<p class="p_div_li_body_left_left_xz"><span class="span_zj">' + obj.MYXZ + '</span>/月</p>');
-    html += ('<p class="p_div_li_body_left_left_fl">' + obj.ZWFL + '</p>');
-    html += ('</div>');
-    html += ('<div class="div_li_body_left_center">');
-    html += ('</div>');
-    html += ('<div class="div_li_body_left_right">');
-    html += ('</div>');
+    html += ('<span class="span_li_body_left_bt" onclick="OpenXXXX(\'QZZPCX_QZZP\',\'' + obj.ID + '\')">' + TruncStr(obj.BT, 15) + '</span>');
+    html += ('<span class="span_li_body_left_gs">北京闪送科技有限公司</span>');
+    html += ('<span class="span_li_body_left_gz">' + obj.XZ + obj.XZDW +'&nbsp;'+ obj.XZJS + '</span>');
     html += ('</li>');
     $("#ul_body_left").append(html);
 }
@@ -81,7 +75,7 @@ function LoadHot(TYPE) {
             if (xml.Result === 1) {
                 $("#ul_body_right").html('');
                 for (var i = 0; i < xml.list.length; i++) {
-                    LoadHotInfo(xml.list[i]);
+                    //LoadHotInfo(xml.list[i]);
                 }
             }
         },

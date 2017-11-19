@@ -17,7 +17,9 @@ namespace TianWen.XiaoZhen1Qu.Entities.ViewModels.FC
         public byte[] BCMS { get; set; }
         //求职招聘信息
         public string ID { get; set; }
-        public string MYXZ { get; set; }
+        public string XZ { get; set; }
+        public string XZDW { get; set; }
+        public string XZJS { get; set; }
         public string ZPRS { get; set; }
         public string ZWFL { get; set; }
         public string GZNX { get; set; }
