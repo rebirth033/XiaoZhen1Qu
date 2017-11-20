@@ -30,4 +30,9 @@
       <ref object="ZSJMCXBLL"/>
     </property>
   </object>
+  <object id="PFCGCXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.PFCGCXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="PFCGCXBLL">
+      <ref object="PFCGCXBLL"/>
+    </property>
+  </object>
 </objects>

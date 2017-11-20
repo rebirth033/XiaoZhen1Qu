@@ -345,4 +345,48 @@ function OpenCXLB(lbid, typename, condition) {
         window.open(getRootPath() + "/Business/ZSJMCX/ZSJMCX_SHFW?LBID=" + lbid);
     if (lbid === 172)
         window.open(getRootPath() + "/Business/ZSJMCX/ZSJMCX_MYET?LBID=" + lbid);
+    if (lbid === 224)
+        window.open(getRootPath() + "/Business/PFCGCX/PFCGCX_SP?LBID=" + lbid);
+    if (lbid === 225)
+        window.open(getRootPath() + "/Business/PFCGCX/PFCGCX_LP?LBID=" + lbid);
+    if (lbid === 226)
+        window.open(getRootPath() + "/Business/PFCGCX/PFCGCX_FSXM?LBID=" + lbid);
+    if (lbid === 227)
+        window.open(getRootPath() + "/Business/PFCGCX/PFCGCX_XBSP?LBID=" + lbid);
+    if (lbid === 228)
+        window.open(getRootPath() + "/Business/PFCGCX/PFCGCX_SJSM?LBID=" + lbid);
+    if (lbid === 229)
+        window.open(getRootPath() + "/Business/PFCGCX/PFCGCX_MYWJ?LBID=" + lbid);
+    if (lbid === 230)
+        window.open(getRootPath() + "/Business/PFCGCX/PFCGCX_HWYD?LBID=" + lbid);
+    if (lbid === 231)
+        window.open(getRootPath() + "/Business/PFCGCX/PFCGCX_HZP?LBID=" + lbid);
+    if (lbid === 232)
+        window.open(getRootPath() + "/Business/PFCGCX/PFCGCX_AFSB?LBID=" + lbid);
+    if (lbid === 233)
+        window.open(getRootPath() + "/Business/PFCGCX/PFCGCX_FZBL?LBID=" + lbid);
+    if (lbid === 234)
+        window.open(getRootPath() + "/Business/PFCGCX/PFCGCX_SCSB?LBID=" + lbid);
+    if (lbid === 235)
+        window.open(getRootPath() + "/Business/PFCGCX/PFCGCX_HXP?LBID=" + lbid);
+    if (lbid === 236)
+        window.open(getRootPath() + "/Business/PFCGCX/PFCGCX_DGDL?LBID=" + lbid);
+    if (lbid === 237)
+        window.open(getRootPath() + "/Business/PFCGCX/PFCGCX_DZYQJ?LBID=" + lbid);
+    if (lbid === 238)
+        window.open(getRootPath() + "/Business/PFCGCX/PFCGCX_YBYQ?LBID=" + lbid);
+    if (lbid === 239)
+        window.open(getRootPath() + "/Business/PFCGCX/PFCGCX_DJZM?LBID=" + lbid);
+    if (lbid === 240)
+        window.open(getRootPath() + "/Business/PFCGCX/PFCGCX_YCL?LBID=" + lbid);
+    if (lbid === 241)
+        window.open(getRootPath() + "/Business/PFCGCX/PFCGCX_BZ?LBID=" + lbid);
+    if (lbid === 242)
+        window.open(getRootPath() + "/Business/PFCGCX/PFCGCX_YX?LBID=" + lbid);
+    if (lbid === 243)
+        window.open(getRootPath() + "/Business/PFCGCX/PFCGCX_TS?LBID=" + lbid);
+    if (lbid === 244)
+        window.open(getRootPath() + "/Business/PFCGCX/PFCGCX_KQ?LBID=" + lbid);
+    if (lbid === 245)
+        window.open(getRootPath() + "/Business/PFCGCX/PFCGCX_JXJG?LBID=" + lbid);
 }
