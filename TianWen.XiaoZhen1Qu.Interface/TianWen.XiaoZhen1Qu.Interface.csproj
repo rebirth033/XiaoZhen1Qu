@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CXLB\IPFCGCXBLL.cs" />
+    <Compile Include="CXLB\IJYPXCXBLL.cs" />
     <Compile Include="CXLB\IZSJMCXBLL.cs" />
     <Compile Include="CXLB\IQZZPCXBLL.cs" />
     <Compile Include="CXLB\IESCXBLL.cs" />

@@ -389,4 +389,36 @@ function OpenCXLB(lbid, typename, condition) {
         window.open(getRootPath() + "/Business/PFCGCX/PFCGCX_KQ?LBID=" + lbid);
     if (lbid === 245)
         window.open(getRootPath() + "/Business/PFCGCX/PFCGCX_JXJG?LBID=" + lbid);
+    if (lbid === 259)
+        window.open(getRootPath() + "/Business/JYPXCX/JYPXCX_ZXXFDB?LBID=" + lbid);
+    if (lbid === 262)
+        window.open(getRootPath() + "/Business/JYPXCX/JYPXCX_ZXXYDY?LBID=" + lbid);
+    if (lbid === 261)
+        window.open(getRootPath() + "/Business/JYPXCX/JYPXCX_JJJG?LBID=" + lbid);
+    if (lbid === 260)
+        window.open(getRootPath() + "/Business/JYPXCX/JYPXCX_JJGR?LBID=" + lbid);
+    if (lbid === 263)
+        window.open(getRootPath() + "/Business/JYPXCX/JYPXCX_YYPX?LBID=" + lbid);
+    if (lbid === 267)
+        window.open(getRootPath() + "/Business/JYPXCX/JYPXCX_YSPX?LBID=" + lbid);
+    if (lbid === 275)
+        window.open(getRootPath() + "/Business/JYPXCX/JYPXCX_YSPXJS?LBID=" + lbid);
+    if (lbid === 265)
+        window.open(getRootPath() + "/Business/JYPXCX/JYPXCX_ZYJNPX?LBID=" + lbid);
+    if (lbid === 266)
+        window.open(getRootPath() + "/Business/JYPXCX/JYPXCX_XLJY?LBID=" + lbid);
+    if (lbid === 269)
+        window.open(getRootPath() + "/Business/JYPXCX/JYPXCX_ITPX?LBID=" + lbid);
+    if (lbid === 270)
+        window.open(getRootPath() + "/Business/JYPXCX/JYPXCX_SJPX?LBID=" + lbid);
+    if (lbid === 271)
+        window.open(getRootPath() + "/Business/JYPXCX/JYPXCX_GLPX?LBID=" + lbid);
+    if (lbid === 272)
+        window.open(getRootPath() + "/Business/JYPXCX/JYPXCX_YYEJY?LBID=" + lbid);
+    if (lbid === 273)
+        window.open(getRootPath() + "/Business/JYPXCX/JYPXCX_LX?LBID=" + lbid);
+    if (lbid === 274)
+        window.open(getRootPath() + "/Business/JYPXCX/JYPXCX_YM?LBID=" + lbid);
+    if (lbid === 277)
+        window.open(getRootPath() + "/Business/JYPXCX/JYPXCX_PBPK?LBID=" + lbid);
 }

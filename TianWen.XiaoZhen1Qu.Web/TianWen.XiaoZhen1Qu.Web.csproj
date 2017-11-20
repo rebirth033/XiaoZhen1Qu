@@ -1568,6 +1568,7 @@
     </Compile>
     <Compile Include="Areas\Business\BusinessAreaRegistration.cs" />
     <Compile Include="Areas\Business\Controllers\CXLB\PFCGCXController.cs" />
+    <Compile Include="Areas\Business\Controllers\CXLB\JYPXCXController.cs" />
     <Compile Include="Areas\Business\Controllers\CXLB\ZSJMCXController.cs" />
     <Compile Include="Areas\Business\Controllers\CXLB\QZZPCXController.cs" />
     <Compile Include="Areas\Business\Controllers\CXLB\ESCXController.cs" />

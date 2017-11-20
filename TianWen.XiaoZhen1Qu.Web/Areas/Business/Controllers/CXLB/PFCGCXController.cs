@@ -29,7 +29,6 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         public ActionResult PFCGCX_DJZM() { GetSession(); return View(); }
         public ActionResult PFCGCX_YCL() { GetSession(); return View(); }
         public ActionResult PFCGCX_BZ() { GetSession(); return View(); }
-        public ActionResult PFCGCX_YX() { GetSession(); return View(); }
         public ActionResult PFCGCX_TS() { GetSession(); return View(); }
         public ActionResult PFCGCX_KQ() { GetSession(); return View(); }
         public ActionResult PFCGCX_JXJG() { GetSession(); return View(); }
