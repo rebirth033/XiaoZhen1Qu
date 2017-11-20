@@ -5,8 +5,6 @@
     BindClick("TZJE");
     BindClick("QGFDS");
     BindClick("DDMJ");
-    BindClick("QY");
-    BindClick("DD");
     LoadDuoX("适合人群", "SHRQ");
 });
 //加载多选
@@ -85,16 +83,16 @@ function SelectLB(obj, type, codeid) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
     if (type === "LB")
-        PDLB(obj.innerHTML, codeid);
+        PDLB(obj.innerHTML);
 }
 //判断类别
-function PDLB(name, codeid) {
+function PDLB(name) {
     if (name.indexOf("化妆品") !== -1 || name.indexOf("美容SPA") !== -1 || name.indexOf("养生保健") !== -1) {
-        $("#divMRBJXL").css("display", "");
-        LoadDuoX(name, "MRBJXL");
+        $("#divXL").css("display", "");
+        LoadDuoX(name, "XL");
     }
     else {
-        $("#divMRBJXL").css("display", "none");
+        $("#divXL").css("display", "none");
     }
 }
 //绑定下拉框鼠标点击样式
@@ -114,12 +112,6 @@ function BindClick(type) {
         }
         if (type === "DDMJ") {
             LoadCODESByTYPENAME("单店面积", "DDMJ", "CODES_ZSJM");
-        }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
         }
     });
 }
@@ -152,12 +144,14 @@ function LoadZSJM_MRBJJBXX() {
                 $("#spanQGFDS").html(xml.Value.ZSJM_MRBJJBXX.QGFDS);
                 $("#spanDDMJ").html(xml.Value.ZSJM_MRBJJBXX.DDMJ);
                 LoadPhotos(xml.Value.Photos);
+                if (xml.Value.ZSJM_MRBJJBXX.XL !== null)
+                    SetDuoX("XL", xml.Value.ZSJM_MRBJJBXX.XL);
                 if (xml.Value.ZSJM_MRBJJBXX.SHRQ !== null)
                     SetDuoX("SHRQ", xml.Value.ZSJM_MRBJJBXX.SHRQ);
                 if (xml.Value.ZSJM_MRBJJBXX.ZSDQ !== null)
                     SetDuoX("ZSDQ", xml.Value.ZSJM_MRBJJBXX.ZSDQ);
                 if (xml.Value.ZSJM_MRBJJBXX.LB.indexOf("化妆品") !== -1 || xml.Value.ZSJM_MRBJJBXX.LB.indexOf("美容SPA") !== -1 || xml.Value.ZSJM_MRBJJBXX.LB.indexOf("养生保健") !== -1) {
-                    LoadMRBJXLByName(xml.Value.ZSJM_MRBJJBXX.LB, xml.Value.ZSJM_MRBJJBXX.XL);
+                    LoadXLByName(xml.Value.ZSJM_MRBJJBXX.LB, xml.Value.ZSJM_MRBJJBXX.XL, "CODES_ZSJM");
                 }
             }
         },

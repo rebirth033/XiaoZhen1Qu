@@ -19,6 +19,54 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         {
             return View();
         }
+        public ActionResult ZSJMXX_JC()
+        {
+            return View();
+        }
+        public ActionResult ZSJMXX_JX()
+        {
+            return View();
+        }
+        public ActionResult ZSJMXX_MRBJ()
+        {
+            return View();
+        }
+        public ActionResult ZSJMXX_LPSP()
+        {
+            return View();
+        }
+        public ActionResult ZSJMXX_JJHB()
+        {
+            return View();
+        }
+        public ActionResult ZSJMXX_JYPX()
+        {
+            return View();
+        }
+        public ActionResult ZSJMXX_QCFW()
+        {
+            return View();
+        }
+        public ActionResult ZSJMXX_WLFW()
+        {
+            return View();
+        }
+        public ActionResult ZSJMXX_NY()
+        {
+            return View();
+        }
+        public ActionResult ZSJMXX_TS()
+        {
+            return View();
+        }
+        public ActionResult ZSJMXX_SHFW()
+        {
+            return View();
+        }
+        public ActionResult ZSJMXX_WTMYET()
+        {
+            return View();
+        }
 
         public JsonResult LoadZSJMXX()
         {

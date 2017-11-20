@@ -12,6 +12,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Maps
             Id(x => x.ID, "ID").GeneratedBy.Assigned().CustomType("AnsiString");
             Map(x => x.JCXXID, "JCXXID");
             Map(x => x.LB, "LB");
+            Map(x => x.XL, "XL");
             Map(x => x.BCMS, "BCMS");
             Map(x => x.PPMC, "PPMC");
             Map(x => x.PPLS, "PPLS");

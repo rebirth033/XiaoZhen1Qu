@@ -5,8 +5,6 @@
     BindClick("TZJE");
     BindClick("QGFDS");
     BindClick("DDMJ");
-    BindClick("QY");
-    BindClick("DD");
     LoadDuoX("适合人群", "SHRQ");
 });
 //加载多选
@@ -43,6 +41,18 @@ function LoadDuoX(type, id) {
 
         }
     });
+}
+//选择类别下拉框
+function SelectLB(obj, type, codeid) {
+    $("#span" + type).html(obj.innerHTML);
+    $("#div" + type).css("display", "none");
+    if (type === "LB")
+        PDLB(obj.innerHTML, codeid);
+}
+//判断类别
+function PDLB(name, codeid) {
+    $("#divXL").css("display", "");
+    LoadDuoX(name, "XL");
 }
 //加载招商地区
 function LoadZSDQ() {
@@ -97,12 +107,6 @@ function BindClick(type) {
         if (type === "DDMJ") {
             LoadCODESByTYPENAME("单店面积", "DDMJ", "CODES_ZSJM");
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
     });
 }
 //加载招商加盟_建材基本信息
@@ -134,10 +138,15 @@ function LoadZSJM_JCJBXX() {
                 $("#spanQGFDS").html(xml.Value.ZSJM_JCJBXX.QGFDS);
                 $("#spanDDMJ").html(xml.Value.ZSJM_JCJBXX.DDMJ);
                 LoadPhotos(xml.Value.Photos);
+                if (xml.Value.ZSJM_JCJBXX.XL !== null)
+                    SetDuoX("XL", xml.Value.ZSJM_JCJBXX.XL);
                 if (xml.Value.ZSJM_JCJBXX.SHRQ !== null)
                     SetDuoX("SHRQ", xml.Value.ZSJM_JCJBXX.SHRQ);
                 if (xml.Value.ZSJM_JCJBXX.ZSDQ !== null)
                     SetDuoX("ZSDQ", xml.Value.ZSJM_JCJBXX.ZSDQ);
+                if ((xml.Value.ZSJM_LPXSPJBXX.LB.indexOf("饰品挂件") !== -1 || xml.Value.ZSJM_LPXSPJBXX.LB.indexOf("礼品") !== -1 || xml.Value.ZSJM_LPXSPJBXX.LB.indexOf("工艺品") !== -1 || xml.Value.ZSJM_LPXSPJBXX.LB.indexOf("珠宝玉器") !== -1) && xml.Value.ZSJM_LPXSPJBXX.LB !== "礼品加工") {
+                    LoadXLByName(xml.Value.ZSJM_LPXSPJBXX.LB, xml.Value.ZSJM_LPXSPJBXX.XL, "CODES_ZSJM");
+                }
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -156,6 +165,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "TZJE", "'" + $("#spanTZJE").html() + "'");
     obj = jsonObj.AddJson(obj, "QGFDS", "'" + $("#spanQGFDS").html() + "'");
     obj = jsonObj.AddJson(obj, "DDMJ", "'" + $("#spanDDMJ").html() + "'");
+    obj = jsonObj.AddJson(obj, "XL", "'" + GetDuoX("XL") + "'");
     obj = jsonObj.AddJson(obj, "SHRQ", "'" + GetDuoX("SHRQ") + "'");
     obj = jsonObj.AddJson(obj, "ZSDQ", "'" + GetDuoX("ZSDQ") + "'");
 

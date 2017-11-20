@@ -5,8 +5,6 @@
     BindClick("TZJE");
     BindClick("QGFDS");
     BindClick("DDMJ");
-    BindClick("QY");
-    BindClick("DD");
     LoadDuoX("适合人群", "SHRQ");
 });
 //加载多选
@@ -84,8 +82,13 @@ function LoadZSDQ() {
 function SelectLB(obj, type, codeid) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-    $("#divJXXL").css("display", "");
-    LoadDuoX(obj.innerHTML, "JXXL");
+    if (type === "LB")
+        PDLB(obj.innerHTML, codeid);
+}
+//判断类别
+function PDLB(name, codeid) {
+    $("#divXL").css("display", "");
+    LoadDuoX(name, "XL");
 }
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
@@ -104,12 +107,6 @@ function BindClick(type) {
         }
         if (type === "DDMJ") {
             LoadCODESByTYPENAME("单店面积", "DDMJ", "CODES_ZSJM");
-        }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
         }
     });
 }
@@ -142,10 +139,15 @@ function LoadZSJM_JXJBXX() {
                 $("#spanQGFDS").html(xml.Value.ZSJM_JXJBXX.QGFDS);
                 $("#spanDDMJ").html(xml.Value.ZSJM_JXJBXX.DDMJ);
                 LoadPhotos(xml.Value.Photos);
+                if (xml.Value.ZSJM_JXJBXX.XL !== null)
+                    SetDuoX("XL", xml.Value.ZSJM_JXJBXX.XL);
                 if (xml.Value.ZSJM_JXJBXX.SHRQ !== null)
                     SetDuoX("SHRQ", xml.Value.ZSJM_JXJBXX.SHRQ);
                 if (xml.Value.ZSJM_JXJBXX.ZSDQ !== null)
                     SetDuoX("ZSDQ", xml.Value.ZSJM_JXJBXX.ZSDQ);
+                if ((xml.Value.ZSJM_LPXSPJBXX.LB.indexOf("饰品挂件") !== -1 || xml.Value.ZSJM_LPXSPJBXX.LB.indexOf("礼品") !== -1 || xml.Value.ZSJM_LPXSPJBXX.LB.indexOf("工艺品") !== -1 || xml.Value.ZSJM_LPXSPJBXX.LB.indexOf("珠宝玉器") !== -1) && xml.Value.ZSJM_LPXSPJBXX.LB !== "礼品加工") {
+                    LoadXLByName(xml.Value.ZSJM_LPXSPJBXX.LB, xml.Value.ZSJM_LPXSPJBXX.XL, "CODES_ZSJM");
+                }
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -164,6 +166,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "TZJE", "'" + $("#spanTZJE").html() + "'");
     obj = jsonObj.AddJson(obj, "QGFDS", "'" + $("#spanQGFDS").html() + "'");
     obj = jsonObj.AddJson(obj, "DDMJ", "'" + $("#spanDDMJ").html() + "'");
+    obj = jsonObj.AddJson(obj, "XL", "'" + GetDuoX("XL") + "'");
     obj = jsonObj.AddJson(obj, "SHRQ", "'" + GetDuoX("SHRQ") + "'");
     obj = jsonObj.AddJson(obj, "ZSDQ", "'" + GetDuoX("ZSDQ") + "'");
 

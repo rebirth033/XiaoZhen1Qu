@@ -5,8 +5,6 @@
     BindClick("TZJE");
     BindClick("QGFDS");
     BindClick("DDMJ");
-    BindClick("QY");
-    BindClick("DD");
     LoadDuoX("适合人群", "SHRQ");
 });
 //加载多选
@@ -85,10 +83,10 @@ function SelectLB(obj, type, codeid) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
     if (type === "LB")
-        PDLB(obj.innerHTML, codeid);
+        PDLB(obj.innerHTML);
 }
 //判断类别
-function PDLB(name, codeid) {
+function PDLB(name) {
     if (name.indexOf("教育机构") !== -1) {
         $("#divJYPXXL").css("display", "");
         LoadDuoX(name, "JYPXXL");
@@ -113,12 +111,6 @@ function BindClick(type) {
         }
         if (type === "DDMJ") {
             LoadCODESByTYPENAME("单店面积", "DDMJ", "CODES_ZSJM");
-        }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
         }
     });
 }
@@ -156,7 +148,7 @@ function LoadZSJM_JYPXJBXX() {
                 if (xml.Value.ZSJM_JYPXJBXX.ZSDQ !== null)
                     SetDuoX("ZSDQ", xml.Value.ZSJM_JYPXJBXX.ZSDQ);
                 if (xml.Value.ZSJM_JYPXJBXX.LB.indexOf("教育机构") !== -1) {
-                    LoadJYPXXLByName(xml.Value.ZSJM_JYPXJBXX.LB, xml.Value.ZSJM_JYPXJBXX.XL);
+                    LoadXLByName(xml.Value.ZSJM_JYPXJBXX.LB, xml.Value.ZSJM_JYPXJBXX.XL,"CODES_ZSJM");
                 }
             }
         },
@@ -178,7 +170,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "DDMJ", "'" + $("#spanDDMJ").html() + "'");
     obj = jsonObj.AddJson(obj, "SHRQ", "'" + GetDuoX("SHRQ") + "'");
     obj = jsonObj.AddJson(obj, "ZSDQ", "'" + GetDuoX("ZSDQ") + "'");
-    obj = jsonObj.AddJson(obj, "XL", "'" + GetDuoX("JYPXXL") + "'");
+    obj = jsonObj.AddJson(obj, "XL", "'" + GetDuoX("XL") + "'");
 
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
 

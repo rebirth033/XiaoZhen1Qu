@@ -320,4 +320,28 @@ function OpenCXLB(lbid, typename, condition) {
         window.open(getRootPath() + "/Business/ZSJMCX/ZSJMCX_CY?LBID=" + lbid);
     if (lbid === 160)
         window.open(getRootPath() + "/Business/ZSJMCX/ZSJMCX_FZXB?LBID=" + lbid);
+    if (lbid === 161)
+        window.open(getRootPath() + "/Business/ZSJMCX/ZSJMCX_JC?LBID=" + lbid);
+    if (lbid === 162)
+        window.open(getRootPath() + "/Business/ZSJMCX/ZSJMCX_JX?LBID=" + lbid);
+    if (lbid === 163)
+        window.open(getRootPath() + "/Business/ZSJMCX/ZSJMCX_MRBJ?LBID=" + lbid);
+    if (lbid === 164)
+        window.open(getRootPath() + "/Business/ZSJMCX/ZSJMCX_LPSP?LBID=" + lbid);
+    if (lbid === 165)
+        window.open(getRootPath() + "/Business/ZSJMCX/ZSJMCX_JJHB?LBID=" + lbid);
+    if (lbid === 166)
+        window.open(getRootPath() + "/Business/ZSJMCX/ZSJMCX_JYPX?LBID=" + lbid);
+    if (lbid === 167)
+        window.open(getRootPath() + "/Business/ZSJMCX/ZSJMCX_QCFW?LBID=" + lbid);
+    if (lbid === 168)
+        window.open(getRootPath() + "/Business/ZSJMCX/ZSJMCX_WLFW?LBID=" + lbid);
+    if (lbid === 169)
+        window.open(getRootPath() + "/Business/ZSJMCX/ZSJMCX_NY?LBID=" + lbid);
+    if (lbid === 170)
+        window.open(getRootPath() + "/Business/ZSJMCX/ZSJMCX_TS?LBID=" + lbid);
+    if (lbid === 171)
+        window.open(getRootPath() + "/Business/ZSJMCX/ZSJMCX_SHFW?LBID=" + lbid);
+    if (lbid === 172)
+        window.open(getRootPath() + "/Business/ZSJMCX/ZSJMCX_WTMYET?LBID=" + lbid);
 }

@@ -390,7 +390,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                         }
                         else
                         {
-                            condition.AppendFormat(" and {0} = '{1}'", array[0], array[1]);
+                            condition.AppendFormat(" and {0} like '%{1}%'", array[0], array[1]);
                         }
                     }
                 }

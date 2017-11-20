@@ -5,8 +5,6 @@
     BindClick("TZJE");
     BindClick("QGFDS");
     BindClick("DDMJ");
-    BindClick("QY");
-    BindClick("DD");
     LoadDuoX("适合人群", "SHRQ");
 });
 //加载多选
@@ -97,43 +95,6 @@ function PDLB(name, codeid) {
         $("#divJJHBXL").css("display", "none");
     }
 }
-//加载家居环保小类
-function LoadJJHBXL(codeid) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadByParentID",
-        dataType: "json",
-        data:
-        {
-            ParentID: codeid,
-            TBName: "CODES_ZSJM"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='ulFWPZ'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liJJHBXL' onclick='SelectDuoX(this)'><img class='img_JJHBXL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i % 6 === 5) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
-                    }
-                }
-                html += "</ul>";
-                $("#divJJHBXLText").html(html);
-                $(".img_JJHBXL").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-
-                if (parseInt(xml.list.length % 6) === 0)
-                    $("#divJJHBXL").css("height", parseInt(xml.list.length / 6) * 45 + "px");
-                else
-                    $("#divJJHBXL").css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
-
-                $("#divJJHBXL").css("display", "");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
@@ -151,12 +112,6 @@ function BindClick(type) {
         }
         if (type === "DDMJ") {
             LoadCODESByTYPENAME("单店面积", "DDMJ", "CODES_ZSJM");
-        }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
         }
     });
 }
@@ -194,7 +149,7 @@ function LoadZSJM_JJHBJBXX() {
                 if (xml.Value.ZSJM_JJHBJBXX.ZSDQ !== null)
                     SetDuoX("ZSDQ", xml.Value.ZSJM_JJHBJBXX.ZSDQ);
                 if (xml.Value.ZSJM_JJHBJBXX.LB.indexOf("家纺床品") !== -1 || xml.Value.ZSJM_JJHBJBXX.LB.indexOf("窗帘布艺") !== -1 || xml.Value.ZSJM_JJHBJBXX.LB.indexOf("家具") !== -1 || xml.Value.ZSJM_JJHBJBXX.LB.indexOf("清洁环保") !== -1) {
-                    LoadJJHBXLByName(xml.Value.ZSJM_JJHBJBXX.LB, xml.Value.ZSJM_JJHBJBXX.XL);
+                    LoadXLByName(xml.Value.ZSJM_JJHBJBXX.LB, xml.Value.ZSJM_JJHBJBXX.XL,"CODES_ZSJM");
                 }
             }
         },
@@ -216,7 +171,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "DDMJ", "'" + $("#spanDDMJ").html() + "'");
     obj = jsonObj.AddJson(obj, "SHRQ", "'" + GetDuoX("SHRQ") + "'");
     obj = jsonObj.AddJson(obj, "ZSDQ", "'" + GetDuoX("ZSDQ") + "'");
-    obj = jsonObj.AddJson(obj, "XL", "'" + GetDuoX("LPXSPXL") + "'");
+    obj = jsonObj.AddJson(obj, "XL", "'" + GetDuoX("XL") + "'");
 
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
 

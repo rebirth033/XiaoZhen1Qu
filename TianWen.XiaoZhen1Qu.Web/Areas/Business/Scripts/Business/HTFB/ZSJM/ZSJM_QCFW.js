@@ -5,8 +5,6 @@
     BindClick("TZJE");
     BindClick("QGFDS");
     BindClick("DDMJ");
-    BindClick("QY");
-    BindClick("DD");
     LoadDuoX("适合人群", "SHRQ");
 });
 //加载多选
@@ -115,12 +113,6 @@ function BindClick(type) {
         if (type === "DDMJ") {
             LoadCODESByTYPENAME("单店面积", "DDMJ", "CODES_ZSJM");
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
     });
 }
 //加载招商加盟_汽车服务基本信息
@@ -157,7 +149,7 @@ function LoadZSJM_QCFWJBXX() {
                 if (xml.Value.ZSJM_QCFWJBXX.ZSDQ !== null)
                     SetDuoX("ZSDQ", xml.Value.ZSJM_QCFWJBXX.ZSDQ);
                 if (xml.Value.ZSJM_QCFWJBXX.LB.indexOf("汽车维修") !== -1 || xml.Value.ZSJM_QCFWJBXX.LB.indexOf("汽车美容") !== -1 || xml.Value.ZSJM_QCFWJBXX.LB.indexOf("汽车用品") !== -1 || xml.Value.ZSJM_QCFWJBXX.LB.indexOf("汽车租赁/买卖") !== -1) {
-                    LoadQCFWXLByName(xml.Value.ZSJM_QCFWJBXX.LB, xml.Value.ZSJM_QCFWJBXX.XL);
+                    LoadXLByName(xml.Value.ZSJM_QCFWJBXX.LB, xml.Value.ZSJM_QCFWJBXX.XL,"CODES_ZSJM");
                 }
             }
         },
@@ -179,7 +171,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "DDMJ", "'" + $("#spanDDMJ").html() + "'");
     obj = jsonObj.AddJson(obj, "SHRQ", "'" + GetDuoX("SHRQ") + "'");
     obj = jsonObj.AddJson(obj, "ZSDQ", "'" + GetDuoX("ZSDQ") + "'");
-    obj = jsonObj.AddJson(obj, "XL", "'" + GetDuoX("JYPXXL") + "'");
+    obj = jsonObj.AddJson(obj, "XL", "'" + GetDuoX("XL") + "'");
 
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
 

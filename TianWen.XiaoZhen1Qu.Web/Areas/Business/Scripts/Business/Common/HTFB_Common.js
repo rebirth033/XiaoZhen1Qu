@@ -60,6 +60,43 @@ function LoadCODESByTYPENAME(type, id, table, callback, idout, idin, message) {
         }
     });
 }
+//根据名称加载小类
+function LoadXLByName(lb, xl, tbname) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
+        dataType: "json",
+        data:
+        {
+            TYPENAME: lb,
+            TBName: tbname
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='ulFWPZ'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='liXL' style='width:120px' onclick='SelectDuoX(this)'><img class='img_XL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    if (i % 5 === 4) {
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
+                    }
+                }
+                if (parseInt(xml.list.length % 5) === 0)
+                    $("#divXL").css("height", parseInt(xml.list.length / 5) * 60 + "px");
+                else
+                    $("#divXL").css("height", (parseInt(xml.list.length / 5) + 1) * 60 + "px");
+                html += "</ul>";
+                $("#divXLText").html(html);
+                $(".img_XL").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".liXL").bind("click", function () { ValidateCheck("XL", "忘记选择小类啦"); });
+                $("#divXL").css("display", "");
+                SetDuoX("XL", xl);
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
 //选择类别下拉框
 function SelectLB(obj, type) {
     $("#span" + type).html(obj.innerHTML);
