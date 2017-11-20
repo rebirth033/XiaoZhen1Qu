@@ -6,18 +6,13 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadPFCGCondition() {
-    LoadConditionByTypeName("包装", "CODES_PFCG", "类别", "LB", 15);
+    LoadConditionByTypeName("包装类别", "CODES_PFCG", "类别", "LB", 15);
+    LoadConditionByTypeName("包装用途", "CODES_PFCG", "用途", "YT", 10);
     LoadDistrict("福州", "350100", "QY");
     LoadBody("PFCGXX_BZ", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
-    if (name === "类别" && (obj.innerHTML !== "干锅" && obj.innerHTML !== "中餐" && obj.innerHTML !== "粥店")) {
-        LoadConditionByParentID(obj.id, "CODES_PFCG", "小类", "XL",15);
-    }
-    if (name === "类别" && (obj.innerHTML === "干锅" || obj.innerHTML === "中餐" || obj.innerHTML === "粥店")) {
-        $("#ul_condition_body_XL").remove();
-    }
     $(obj).parent().find(".li_condition_body").each(function () {
         $(this).removeClass("li_condition_body_active");
     });
@@ -28,7 +23,7 @@ function SelectCondition(obj, name) {
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("LB,XL,TZJE,QY");
+    var condition = GetAllCondition("LB,YT,QY");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/PFCGCX/LoadPFCGXX",
