@@ -81,6 +81,8 @@
 .input_content {width: 451px;cursor: default;border: 1px solid #ccc;border-radius: 4px;height: 34px;padding: 4px 12px;display: inline-block;}
 
 :-ms-input-placeholder.input_content {color: #999;}
+:-ms-input-placeholder.input_input {color: #999;}
+:-ms-input-placeholder.span_spaninput {color: #999;}
 
 .ui-state-active {background: #5bc0de !important;border: 1px solid #5bc0de !important;}
 

@@ -5,8 +5,6 @@
     BindClick("TZJE");
     BindClick("QGFDS");
     BindClick("DDMJ");
-    BindClick("QY");
-    BindClick("DD");
     LoadDuoX("适合人群", "SHRQ");
 });
 //加载多选
@@ -90,11 +88,11 @@ function SelectLB(obj, type, codeid) {
 //判断类别
 function PDLB(name, codeid) {
     if (name.indexOf("种植养殖") !== -1){
-        $("#divNYXL").css("display", "");
-        LoadDuoX(name, "NYXL");
+        $("#divXL").css("display", "");
+        LoadDuoX(name, "XL");
     }
     else
-        $("#divNYXL").css("display", "none");
+        $("#divXL").css("display", "none");
 }
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
@@ -113,12 +111,6 @@ function BindClick(type) {
         }
         if (type === "DDMJ") {
             LoadCODESByTYPENAME("单店面积", "DDMJ", "CODES_ZSJM");
-        }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
         }
     });
 }
@@ -156,7 +148,7 @@ function LoadZSJM_NYJBXX() {
                 if (xml.Value.ZSJM_NYJBXX.ZSDQ !== null)
                     SetDuoX("ZSDQ", xml.Value.ZSJM_NYJBXX.ZSDQ);
                 if (xml.Value.ZSJM_NYJBXX.LB.indexOf("种植养殖") !== -1) {
-                    LoadNYXLByName(xml.Value.ZSJM_NYJBXX.LB, xml.Value.ZSJM_NYJBXX.XL);
+                    LoadXLByName(xml.Value.ZSJM_NYJBXX.LB, xml.Value.ZSJM_NYJBXX.XL,"CODES_ZSJM");
                 }
             }
         },
@@ -178,7 +170,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "DDMJ", "'" + $("#spanDDMJ").html() + "'");
     obj = jsonObj.AddJson(obj, "SHRQ", "'" + GetDuoX("SHRQ") + "'");
     obj = jsonObj.AddJson(obj, "ZSDQ", "'" + GetDuoX("ZSDQ") + "'");
-    obj = jsonObj.AddJson(obj, "XL", "'" + GetDuoX("JYPXXL") + "'");
+    obj = jsonObj.AddJson(obj, "XL", "'" + GetDuoX("XL") + "'");
 
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
 
