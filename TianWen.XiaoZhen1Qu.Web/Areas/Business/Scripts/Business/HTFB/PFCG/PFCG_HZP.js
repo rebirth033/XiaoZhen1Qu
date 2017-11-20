@@ -2,8 +2,6 @@
     $("body").bind("click", function () { Close("_XZQ"); });
     LoadPFCG_HZPJBXX();
     BindClick("LB");
-    BindClick("QY");
-    BindClick("DD");
 });
 //加载小类
 function LoadXL() {
@@ -59,12 +57,6 @@ function BindClick(type) {
         }
         if (type === "XL") {
             LoadXL();
-        }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
         }
     });
 }

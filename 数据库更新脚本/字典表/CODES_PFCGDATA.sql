@@ -1774,4 +1774,370 @@ values (590, '机械加工', '数控机床加工', '4', 4, null);
 insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (591, '机械加工', '五金加工', '5', 5, null);
 
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (592, '酒类', '白酒', '1', 1, 1);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (593, '酒类', '啤酒', '2', 2, 1);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (594, '酒类', '葡萄酒', '3', 3, 1);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (595, '酒类', '黄酒', '4', 4, 1);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (596, '酒类', '洋酒', '5', 5, 1);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (597, '酒类', '滋补酒', '6', 6, 1);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (598, '酒类', '日本酒', '7', 7, 1);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (599, '酒类', '预调酒', '8', 8, 1);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (600, '茶叶', '龙井', '1', 1, 2);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (601, '茶叶', '碧螺春', '2', 2, 2);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (602, '茶叶', '铁观音', '3', 3, 2);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (603, '茶叶', '普洱', '4', 4, 2);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (604, '茶叶', '毛尖', '5', 5, 2);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (605, '茶叶', '毛峰', '6', 6, 2);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (606, '茶叶', '乌龙茶', '7', 7, 2);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (607, '茶叶', '瓜片', '8', 8, 2);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (608, '茶叶', '红茶', '9', 9, 2);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (609, '茶叶', '花茶', '10', 10, 2);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (610, '茶叶', '白茶', '11', 11, 2);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (611, '茶叶', '黑茶', '12', 12, 2);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (612, '茶叶', '绿茶', '13', 13, 2);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (613, '茶叶', '礼盒茶', '14', 14, 2);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (614, '茶叶', '袋泡茶', '15', 15, 2);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (615, '休闲零食', '饼干', '1', 1, 4);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (616, '休闲零食', '糕点', '2', 2, 4);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (617, '休闲零食', '膨化食品', '3', 3, 4);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (618, '休闲零食', '坚果', '4', 4, 4);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (619, '休闲零食', '蜜饯', '5', 5, 4);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (620, '休闲零食', '炒货', '6', 6, 4);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (621, '休闲零食', '干果', '7', 7, 4);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (622, '方便食品', '方便面', '1', 1, 5);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (623, '方便食品', '速食品', '2', 2, 5);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (624, '肉制品', '猪肉类', '1', 1, 6);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (625, '肉制品', '羊肉类', '2', 2, 6);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (626, '肉制品', '牛肉类', '3', 3, 6);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (627, '肉制品', '鸭肉类', '4', 4, 6);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (628, '肉制品', '鹅肉类', '5', 5, 6);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (629, '肉制品', '鸡肉类', '6', 6, 6);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (630, '肉制品', '鹌鹑肉', '7', 7, 6);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (631, '海鲜类', '贝类制品', '1', 1, 7);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (632, '海鲜类', '鱼类制品', '2', 2, 7);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (633, '海鲜类', '虾类制品', '3', 3, 7);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (634, '海鲜类', '蟹类制品', '4', 4, 7);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (635, '海鲜类', '鱿鱼制品', '5', 5, 7);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (636, '海鲜类', '藻类制品', '6', 6, 7);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (637, '海鲜类', '海参', '7', 7, 7);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (638, '海鲜类', '海蜇', '8', 8, 7);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (639, '海鲜类', '鲍鱼', '9', 9, 7);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (640, '饮品', '咖啡饮料', '1', 1, 9);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (641, '饮品', '乳品', '2', 2, 9);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (642, '饮品', '果汁', '3', 3, 9);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (643, '饮品', '碳酸饮料', '4', 4, 9);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (644, '饮品', '运动/健康饮料', '5', 5, 9);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (645, '饮品', '茶饮料', '6', 6, 9);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (646, '饮品', '水', '7', 7, 9);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (647, '粮油', '米', '1', 1, 10);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (648, '粮油', '面粉', '2', 2, 10);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (649, '粮油', '食用油', '3', 3, 10);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (650, '粮油', '五谷杂粮', '4', 4, 10);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (651, '冲饮', '奶粉', '1', 1, 11);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (652, '冲饮', '蜂蜜', '2', 2, 11);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (653, '冲饮', '麦片', '3', 3, 11);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (654, '冲饮', '奶茶', '4', 4, 11);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (655, '冲饮', '速溶', '5', 5, 11);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (656, '咖啡', '咖啡豆/粉', '1', 1, 12);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (657, '咖啡', '咖啡伴侣/辅料', '2', 2, 12);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (658, '咖啡', '速溶咖啡', '3', 3, 12);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (659, '咖啡', '咖啡礼盒', '4', 4, 12);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (660, '奶酪/乳品', '奶片', '1', 1, 13);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (661, '奶酪/乳品', '奶皮', '2', 2, 13);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (662, '奶酪/乳品', '奶精炼乳', '3', 3, 13);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (663, '奶酪/乳品', '奶油', '4', 4, 13);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (664, '奶酪/乳品', '含乳饮料', '5', 5, 13);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (665, '奶酪/乳品', '常温牛奶', '6', 6, 13);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (666, '奶酪/乳品', '内蒙古奶酪', '7', 7, 13);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (667, '奶酪/乳品', '芝士/西式奶酪', '8', 8, 13);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (668, '奶酪/乳品', '黄油', '9', 9, 13);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (669, '奶酪/乳品', '酸奶/粉/益生菌', '10', 10, 13);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (670, '糖果/巧克力', '糖果', '1', 1, 15);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (671, '糖果/巧克力', '巧克力', '2', 2, 15);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (672, '糖果/巧克力', '口香糖', '3', 3, 15);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (673, '糖果/巧克力', '果冻布丁', '4', 4, 15);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (674, '月饼', '华美月饼', '1', 1, 19);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (675, '月饼', '安琪月饼', '2', 2, 19);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (676, '月饼', '哈根达斯月饼', '3', 3, 19);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (677, '月饼', '荣华月饼', '4', 4, 19);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (678, '月饼', '好利来', '5', 5, 19);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (679, '月饼', '富锦月饼', '6', 6, 19);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (680, '月饼', '杏花楼月饼', '7', 7, 19);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (681, '月饼', '元祖', '8', 8, 19);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (682, '月饼', '美心月饼', '9', 9, 19);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (683, '月饼', '冠生园', '10', 10, 19);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (684, '月饼', '米旗月饼', '11', 11, 19);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (685, '月饼', '广州酒家', '12', 12, 19);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (686, '月饼', '星巴克月饼', '13', 13, 19);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (687, '月饼', '稻香村', '14', 14, 19);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (688, '月饼', '天伦月饼', '15', 15, 19);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (689, '月饼', '荣诚', '16', 16, 19);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (690, '月饼', '新雅', '17', 17, 19);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (691, '月饼', '大三元', '18', 18, 19);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (692, '月饼', '大班月饼', '19', 19, 19);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (693, '月饼', '莲香楼月饼', '20', 20, 19);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (694, '月饼', '百威月饼', '21', 21, 19);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (695, '月饼', '克莉丝汀月饼', '22', 22, 19);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (696, '月饼', '乔家栅月饼', '23', 23, 19);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (697, '粽子', '五芳斋粽子', '1', 1, 20);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (698, '粽子', '全聚德粽子', '2', 2, 20);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (699, '粽子', '好利来粽子', '3', 3, 20);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (700, '粽子', '思念粽子', '4', 4, 20);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (701, '粽子', '元祖粽子', '5', 5, 20);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (702, '粽子', '稻香村粽子', '6', 6, 20);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (703, '粽子', '大三元粽子', '7', 7, 20);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (704, '粽子', '米旗粽子', '8', 8, 20);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (705, '粽子', '三全粽子', '9', 9, 20);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (706, '粽子', '津乐园粽子', '10', 10, 20);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (707, '粽子', '金凤呈祥粽子', '11', 11, 20);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (708, '粽子', '真真老老粽子', '12', 12, 20);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (709, '粽子', '仿膳粽子', '13', 13, 20);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (710, '粽子', '红船粽子', '14', 14, 20);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (711, '粽子', '三珍斋粽子', '15', 15, 20);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (712, '粽子', '宫颐府粽子', '16', 16, 20);
+
+insert into codes_pfcg (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (713, '粽子', '鲜品屋粽子', '17', 17, 20);
+
 prompt Done.

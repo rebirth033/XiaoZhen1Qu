@@ -1,23 +1,17 @@
 ﻿var currentIndex = 1;
 $(document).ready(function () {
     BindBodyNav();
-    LoadZSJMCondition();
+    LoadPFCGCondition();
     LoadHot("PFCGXX_SJSM");
 });
 //加载条件
-function LoadZSJMCondition() {
+function LoadPFCGCondition() {
     LoadConditionByTypeName("手机数码", "CODES_PFCG", "类别", "LB", 15);
     LoadDistrict("福州", "350100", "QY");
     LoadBody("PFCGXX_SJSM", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
-    if (name === "类别" && (obj.innerHTML !== "干锅" && obj.innerHTML !== "中餐" && obj.innerHTML !== "粥店")) {
-        LoadConditionByParentID(obj.id, "CODES_PFCG", "小类", "XL",15);
-    }
-    if (name === "类别" && (obj.innerHTML === "干锅" || obj.innerHTML === "中餐" || obj.innerHTML === "粥店")) {
-        $("#ul_condition_body_XL").remove();
-    }
     $(obj).parent().find(".li_condition_body").each(function () {
         $(this).removeClass("li_condition_body_active");
     });
@@ -31,7 +25,7 @@ function LoadBody(TYPE, PageIndex) {
     var condition = GetAllCondition("LB,XL,TZJE,QY");
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/ZSJMCX/LoadZSJMXX",
+        url: getRootPath() + "/Business/PFCGCX/LoadPFCGXX",
         dataType: "json",
         data:
         {
@@ -77,7 +71,7 @@ function LoadQZZPInfo(obj) {
 function LoadHot(TYPE) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/ZSJMCX/LoadZSJMXX",
+        url: getRootPath() + "/Business/PFCGCX/LoadPFCGXX",
         dataType: "json",
         data:
         {
@@ -102,7 +96,7 @@ function LoadHot(TYPE) {
 //加载热门单条信息
 function LoadHotInfo(obj) {
     var html = "";
-    html += ('<li onclick="OpenXXXX(\'ZSJMCX_ZSJM\',\'' + obj.ID + '\')" class="li_body_right">');
+    html += ('<li onclick="OpenXXXX(\'PFCGCX_PFCG\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_right_xq">' + "服务项目:" + obj.LB + '</p>');
     html += ('<p class="p_li_body_right_cs">' + obj.QY + '-' + obj.DD + '</p>');

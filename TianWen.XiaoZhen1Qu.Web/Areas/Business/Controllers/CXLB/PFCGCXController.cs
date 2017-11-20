@@ -33,9 +33,9 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         public ActionResult PFCGCX_TS() { GetSession(); return View(); }
         public ActionResult PFCGCX_KQ() { GetSession(); return View(); }
         public ActionResult PFCGCX_JXJG() { GetSession(); return View(); }
-        
 
-        public JsonResult LoadZSJMXX()
+
+        public JsonResult LoadPFCGXX()
         {
             return Json(PFCGCXBLL.LoadPFCGXX(Request["TYPE"], Request["Condition"], Request["PageIndex"], Request["PageSize"]));
         }
