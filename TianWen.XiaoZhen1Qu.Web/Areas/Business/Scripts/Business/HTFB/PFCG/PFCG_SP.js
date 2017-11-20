@@ -2,9 +2,58 @@
     $("body").bind("click", function () { Close("_XZQ"); });
     LoadPFCG_SPJBXX();
     BindClick("LB");
-    BindClick("QY");
-    BindClick("DD");
 });
+//加载多选
+function LoadDuoX(type, id) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
+        dataType: "json",
+        data:
+        {
+            TYPENAME: type,
+            TBName: "CODES_PFCG"
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='ulFWPZ'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='li" + id + "' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    if (i % 6 === 5) {
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
+                    }
+                }
+                if (parseInt(xml.list.length % 6) === 0)
+                    $("#div" + id).css("height", parseInt(xml.list.length / 6) * 60 + "px");
+                else
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 6) + 1) * 60 + "px");
+                html += "</ul>";
+                $("#div" + id + "Text").html(html);
+                $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//选择类别下拉框
+function SelectLB(obj, type, codeid) {
+    $("#span" + type).html(obj.innerHTML);
+    $("#div" + type).css("display", "none");
+    if (type === "LB")
+        PDLB(obj.innerHTML, codeid);
+}
+//判断类别
+function PDLB(name, codeid) {
+    if (name.indexOf("干锅") !== -1) {
+        $("#divXL").css("display", "none");
+    }
+    else {
+        $("#divXL").css("display", "");
+        LoadDuoX(name, "XL");
+    }
+}
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
@@ -44,6 +93,9 @@ function LoadPFCG_SPJBXX() {
                 $("#spanQY").html(xml.Value.PFCG_SPJBXX.QY);
                 $("#spanDD").html(xml.Value.PFCG_SPJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
+                if (xml.Value.PFCG_SPJBXX.LB.indexOf("土特产") === -1) {
+                    LoadXLByName(xml.Value.PFCG_SPJBXX.LB, xml.Value.PFCG_SPJBXX.XL, "CODES_PFCG");
+                }
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -60,6 +112,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
+    obj = jsonObj.AddJson(obj, "XL", "'" + GetDuoX("XL") + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
 
     if (getUrlParam("ID") !== null)

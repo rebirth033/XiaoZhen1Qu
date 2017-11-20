@@ -5,8 +5,6 @@
     BindClick("TZJE");
     BindClick("QGFDS");
     BindClick("DDMJ");
-    BindClick("QY");
-    BindClick("DD");
     LoadDuoX("适合人群", "SHRQ");
 });
 //加载多选
@@ -90,11 +88,11 @@ function SelectLB(obj, type, codeid) {
 //判断类别
 function PDLB(name, codeid) {
     if (name.indexOf("文体用品") !== -1 || name.indexOf("母婴儿童用品") !== -1) {
-        $("#divWTMYETXL").css("display", "");
-        LoadDuoX(name, "WTMYETXL");
+        $("#divXL").css("display", "");
+        LoadDuoX(name, "XL");
     }
     else {
-        $("#divWTMYETXL").css("display", "none");
+        $("#divXL").css("display", "none");
     }
 }
 //加载文体/母婴/儿童小类
@@ -153,12 +151,6 @@ function BindClick(type) {
         if (type === "DDMJ") {
             LoadCODESByTYPENAME("单店面积", "DDMJ", "CODES_ZSJM");
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
     });
 }
 //加载招商加盟_文体/母婴/儿童基本信息
@@ -195,7 +187,7 @@ function LoadZSJM_WTMYETJBXX() {
                 if (xml.Value.ZSJM_WTMYETJBXX.ZSDQ !== null)
                     SetDuoX("ZSDQ", xml.Value.ZSJM_WTMYETJBXX.ZSDQ);
                 if (xml.Value.ZSJM_WTMYETJBXX.LB.indexOf("文体用品") !== -1 || xml.Value.ZSJM_WTMYETJBXX.LB.indexOf("母婴儿童用品") !== -1) {
-                    LoadXLByTypeName("WTMYET", xml.Value.ZSJM_WTMYETJBXX.LB, xml.Value.ZSJM_WTMYETJBXX.XL);
+                    LoadXLByName(xml.Value.ZSJM_WTMYETJBXX.LB, xml.Value.ZSJM_WTMYETJBXX.XL,"CODES_ZSJM");
                 }
             }
         },
@@ -217,7 +209,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "DDMJ", "'" + $("#spanDDMJ").html() + "'");
     obj = jsonObj.AddJson(obj, "SHRQ", "'" + GetDuoX("SHRQ") + "'");
     obj = jsonObj.AddJson(obj, "ZSDQ", "'" + GetDuoX("ZSDQ") + "'");
-    obj = jsonObj.AddJson(obj, "XL", "'" + GetDuoX("WTMYETXL") + "'");
+    obj = jsonObj.AddJson(obj, "XL", "'" + GetDuoX("XL") + "'");
 
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
 

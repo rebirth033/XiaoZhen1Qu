@@ -9,16 +9,16 @@ function LoadDefault() {
         dataType: "json",
         data:
         {
-            TYPE: "ZSJMCX_WTMYET",
+            TYPE: "ZSJMCX_MYET",
             ID: getUrlParam("ID")
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 LoadJBXX(xml.list[0]);
                 LoadXQ(xml.list[0], xml.BCMSString);
-                LoadCNXH("ZSJMCX_WTMYET");
+                LoadCNXH("ZSJMCX_MYET");
                 LoadGRXX(xml.grxxlist[0]);
-                LoadJJRTJFY("ZSJMCX_WTMYET");
+                LoadJJRTJFY("ZSJMCX_MYET");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

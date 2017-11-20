@@ -76,7 +76,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             GetSession();
             return View();
         }
-        public ActionResult ZSJMCX_WTMYET()
+        public ActionResult ZSJMCX_MYET()
         {
             GetSession();
             return View();

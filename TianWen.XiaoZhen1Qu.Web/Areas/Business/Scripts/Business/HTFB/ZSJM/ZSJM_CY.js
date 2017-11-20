@@ -143,12 +143,13 @@ function LoadZSJM_CYJBXX() {
                 $("#spanQGFDS").html(xml.Value.ZSJM_CYJBXX.QGFDS);
                 $("#spanDDMJ").html(xml.Value.ZSJM_CYJBXX.DDMJ);
                 LoadPhotos(xml.Value.Photos);
-                if (xml.Value.ZSJM_CYJBXX.XL !== null)
-                    SetDuoX("ZSDQ", xml.Value.ZSJM_CYJBXX.XL);
                 if (xml.Value.ZSJM_CYJBXX.SHRQ !== null)
                     SetDuoX("SHRQ", xml.Value.ZSJM_CYJBXX.SHRQ);
                 if (xml.Value.ZSJM_CYJBXX.ZSDQ !== null)
                     SetDuoX("ZSDQ", xml.Value.ZSJM_CYJBXX.ZSDQ);
+                if (xml.Value.ZSJM_CYJBXX.LB.indexOf("饰品挂件") !== -1) {
+                    LoadXLByName(xml.Value.ZSJM_CYJBXX.LB, xml.Value.ZSJM_CYJBXX.XL, "CODES_ZSJM");
+                }
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

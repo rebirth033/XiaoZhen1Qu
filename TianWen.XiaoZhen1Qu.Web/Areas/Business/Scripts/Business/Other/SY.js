@@ -122,6 +122,7 @@ function LoadSY_ML() {
                 LoadSY_ML_WXLInfo(xml.list, xml.xzq, "PX");
                 LoadSY_MLInfo(xml.list, xml.xzq, "SHFW");
                 LoadSY_ML_WXLInfo(xml.list, xml.xzq, "JY");
+                LoadSY_ML_WXLInfo(xml.list, xml.xzq, "PFCG");
                 LoadSY_MLInfo(xml.list, xml.xzq, "SWFW");
                 LoadSY_MLInfo(xml.list, xml.xzq, "ES");
             }
@@ -213,7 +214,7 @@ function GetHeight(list, parentid) {
             count++;
         }
     }
-    height = (count / 3) * 30;
+    height = parseInt((count / 3)) * 30;
     if (count % 3 !== 0)
         height += 30;
     return height;
@@ -343,5 +344,5 @@ function OpenCXLB(lbid, typename, condition) {
     if (lbid === 171)
         window.open(getRootPath() + "/Business/ZSJMCX/ZSJMCX_SHFW?LBID=" + lbid);
     if (lbid === 172)
-        window.open(getRootPath() + "/Business/ZSJMCX/ZSJMCX_WTMYET?LBID=" + lbid);
+        window.open(getRootPath() + "/Business/ZSJMCX/ZSJMCX_MYET?LBID=" + lbid);
 }

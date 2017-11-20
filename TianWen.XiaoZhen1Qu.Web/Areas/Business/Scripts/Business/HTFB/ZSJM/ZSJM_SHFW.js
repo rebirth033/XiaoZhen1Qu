@@ -6,6 +6,7 @@
     BindClick("QGFDS");
     BindClick("DDMJ");
     LoadDuoX("适合人群", "SHRQ");
+    LoadZSJM_SHFWJBXX();
 });
 //加载多选
 function LoadDuoX(type, id) {
@@ -70,7 +71,6 @@ function LoadZSDQ() {
                 $("#divZSDQText").html(html);
                 $(".img_ZSDQ").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".liZSDQ").bind("click", function () { ValidateCheck("ZSDQ", "忘记选择招商地区啦"); });
-                LoadZSJM_SHFWJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
