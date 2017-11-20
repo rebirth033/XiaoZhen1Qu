@@ -727,7 +727,6 @@
     <Content Include="Areas\Business\Scripts\Business\CXLB\PFCGCX\PFCGCX_DJZM.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\PFCGCX\PFCGCX_YCL.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\PFCGCX\PFCGCX_BZ.js" />
-    <Content Include="Areas\Business\Scripts\Business\CXLB\PFCGCX\PFCGCX_YX.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\PFCGCX\PFCGCX_TS.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\PFCGCX\PFCGCX_KQ.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\PFCGCX\PFCGCX_JXJG.js" />
@@ -1806,7 +1805,6 @@
     <Content Include="Areas\Business\Views\PFCG\PFCG_DJZM.cshtml" />
     <Content Include="Areas\Business\Views\PFCG\PFCG_YCL.cshtml" />
     <Content Include="Areas\Business\Views\PFCG\PFCG_BZ.cshtml" />
-    <Content Include="Areas\Business\Views\PFCG\PFCG_YX.cshtml" />
     <Content Include="Areas\Business\Views\PFCG\PFCG_TS.cshtml" />
     <Content Include="Areas\Business\Views\PFCG\PFCG_KQ.cshtml" />
     <Content Include="Areas\Business\Views\PFCG\PFCG_JXJG.cshtml" />
@@ -2048,7 +2046,6 @@
     <Content Include="Areas\Business\Views\PFCGCX\PFCGCX_DJZM.cshtml" />
     <Content Include="Areas\Business\Views\PFCGCX\PFCGCX_YCL.cshtml" />
     <Content Include="Areas\Business\Views\PFCGCX\PFCGCX_BZ.cshtml" />
-    <Content Include="Areas\Business\Views\PFCGCX\PFCGCX_YX.cshtml" />
     <Content Include="Areas\Business\Views\PFCGCX\PFCGCX_TS.cshtml" />
     <Content Include="Areas\Business\Views\PFCGCX\PFCGCX_KQ.cshtml" />
     <Content Include="Areas\Business\Views\PFCGCX\PFCGCX_LP.cshtml" />
