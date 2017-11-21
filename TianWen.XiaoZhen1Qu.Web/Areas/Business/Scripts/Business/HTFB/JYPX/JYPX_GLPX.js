@@ -1,9 +1,7 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
     BindClick("LB");
-    BindClick("QY");
-    BindClick("DD");
-    LoadDuoX("场地", "CD");
+    LoadDuoX("管理培训场地", "CD");
 });
 //加载多选
 function LoadDuoX(type, id) {
@@ -37,7 +35,7 @@ function LoadDuoX(type, id) {
                     $("#div" + id).css("display", "none");
                 else
                     $("#div" + id).css("display", "");
-                if (type === "场地")
+                if (type === "管理培训场地")
                     LoadJYPX_GLPXJBXX();
             }
         },
@@ -108,12 +106,6 @@ function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
             LoadCODESByTYPENAME("管理培训", "LB", "CODES_JYPX", Bind, "OUTLB", "LB", "");
-        }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
         }
     });
 }

@@ -2,34 +2,34 @@
 $(document).ready(function () {
     BindBodyNav();
     LoadJYPXCondition();
-    LoadHot("JYPXXX_GJLPX");
+    LoadHot("JYPXXX_GLPX");
 });
 //加载条件
 function LoadJYPXCondition() {
     LoadConditionByTypeName("管理培训", "CODES_JYPX", "类别", "LB", 15);
-    LoadConditionByTypeName("投资金额", "CODES_JYPX", "投资金额", "TZJE");
+    LoadConditionByTypeName("管理培训场地", "CODES_JYPX", "场地", "CD");
     LoadDistrict("福州", "350100", "QY");
-    LoadBody("JYPXXX_GJLPX", currentIndex);
+    LoadBody("JYPXXX_GLPX", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
-    if (name === "类别" && (obj.innerHTML !== "干锅" && obj.innerHTML !== "中餐" && obj.innerHTML !== "粥店")) {
+    if (name === "类别" && (obj.innerHTML !== "酒店管理" && obj.innerHTML !== "工程管理" && obj.innerHTML !== "素质拓展" && obj.innerHTML !== "总裁研修")) {
         LoadConditionByParentID(obj.id, "CODES_JYPX", "小类", "XL",15);
     }
-    if (name === "类别" && (obj.innerHTML === "干锅" || obj.innerHTML === "中餐" || obj.innerHTML === "粥店")) {
+    if (name === "类别" && (obj.innerHTML === "酒店管理" || obj.innerHTML === "工程管理" || obj.innerHTML === "素质拓展" || obj.innerHTML === "总裁研修")) {
         $("#ul_condition_body_XL").remove();
     }
     $(obj).parent().find(".li_condition_body").each(function () {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
-    LoadBody("JYPXXX_GJLPX", currentIndex);
-    ShowSelectCondition("JYPXXX_GJLPX");
+    LoadBody("JYPXXX_GLPX", currentIndex);
+    ShowSelectCondition("JYPXXX_GLPX");
 }
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("LB,XL,TZJE,QY");
+    var condition = GetAllCondition("LB,XL,CD,QY");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/JYPXCX/LoadJYPXXX",
@@ -60,11 +60,11 @@ function LoadQZZPInfo(obj) {
     var html = "";
     html += ('<li class="li_body_left">');
     html += ('<div class="div_li_body_left_left">');
-    html += ('<img class="img_li_body_left" onclick="OpenXXXX(\'JYPXXX_GJLPX\',\'' + obj.ID + '\')" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
+    html += ('<img class="img_li_body_left" onclick="OpenXXXX(\'JYPXXX_GLPX\',\'' + obj.ID + '\')" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<div class="div_img_li_body_left_count"><span>' + obj.PHOTOS.length + '图</span></div>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
-    html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'JYPXXX_GJLPX\',\'' + obj.ID + '\')">' + obj.BT + '</p>');
+    html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'JYPXXX_GLPX\',\'' + obj.ID + '\')">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_left_center_cs">' + obj.MJ + '平米' + '</p>');
     html += ('<p class="p_li_body_left_center_dz">' + obj.XQMC + ' [' + obj.XQDZ + '] ' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');

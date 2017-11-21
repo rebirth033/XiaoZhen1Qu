@@ -1,9 +1,7 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
     BindClick("LB");
-    BindClick("QY");
-    BindClick("DD");
-    LoadDuoX("形式", "XS");
+    LoadDuoX("学历教育形式", "XS");
 });
 //加载多选
 function LoadDuoX(type, id) {
@@ -33,52 +31,8 @@ function LoadDuoX(type, id) {
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".li" + id).bind("click", function () { ValidateCheck(id, "忘记选择" + type + "啦"); });
-                if (xml.list.length === 0)
-                    $("#div" + id).css("display", "none");
-                else
-                    $("#div" + id).css("display", "");
-                if (type === "形式")
+                if (type === "学历教育形式")
                     LoadJYPX_XLJYJBXX();
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载小类
-function LoadXL(lbmc, xl) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: lbmc,
-            TBName: "CODES_JYPX"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='ulFWPZ'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liXL' onclick='SelectDuoX(this)'><img class='img_XL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i === 3 || i === 7 || i === 11) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
-                    }
-                }
-                if (parseInt(xml.list.length % 4) === 0)
-                    $("#divXL").css("height", parseInt(xml.list.length / 4) * 45 + "px");
-                else
-                    $("#divXL").css("height", (parseInt(xml.list.length / 4) + 1) * 45 + "px");
-                html += "</ul>";
-                $("#divXLText").html(html);
-                $(".img_XL").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-                if (xml.list.length === 0)
-                    $("#divXL").css("display", "none");
-                else
-                    $("#divXL").css("display", "");
-                if (xl !== "" && xl !== null && xl !== undefined)
-                    SetDuoX("XL", xl);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -91,12 +45,6 @@ function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
             LoadCODESByTYPENAME("学历教育", "LB", "CODES_JYPX", Bind, "OUTLB", "LB", "");
-        }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
         }
     });
 }
@@ -125,7 +73,6 @@ function LoadJYPX_XLJYJBXX() {
                 $("#spanQY").html(xml.Value.JYPX_XLJYJBXX.QY);
                 $("#spanDD").html(xml.Value.JYPX_XLJYJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
-                LoadXL(xml.Value.JYPX_XLJYJBXX.LB, xml.Value.JYPX_XLJYJBXX.XL);
                 SetDuoX("XS", xml.Value.JYPX_XLJYJBXX.XS);
             }
         },

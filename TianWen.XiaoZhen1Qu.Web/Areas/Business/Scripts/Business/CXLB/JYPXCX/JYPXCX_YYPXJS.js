@@ -6,8 +6,8 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadJYPXCondition() {
-    LoadConditionByTypeName("教学科目", "CODES_JYPX", "教学科目", "JXKM", 15);
-    LoadConditionByTypeName("教师身份", "CODES_JYPX", "身份", "SF");
+    LoadConditionByTypeName("语言培训教学科目", "CODES_JYPX", "教学科目", "JXKM", 15);
+    LoadConditionByTypeName("语言培训教师身份", "CODES_JYPX", "身份", "SF");
     LoadDistrict("福州", "350100", "QY");
     LoadBody("JYPXXX_YYPXJS", currentIndex);
 }

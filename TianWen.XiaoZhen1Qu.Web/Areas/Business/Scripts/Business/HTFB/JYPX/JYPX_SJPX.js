@@ -1,8 +1,6 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
     BindClick("LB");
-    BindClick("QY");
-    BindClick("DD");
     LoadDuoX("设计培训形式", "XS");
 });
 //加载多选
@@ -38,8 +36,8 @@ function LoadDuoX(type, id) {
                 else
                     $("#div" + id).css("display", "");
                 if (type === "设计培训形式")
-                    LoadDuoX("周期", "ZQ");
-                if (type === "周期")
+                    LoadDuoX("职业技能培训周期", "ZQ");
+                if (type === "职业技能培训周期")
                     LoadJYPX_SJPXJBXX();
             }
         },
@@ -110,12 +108,6 @@ function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
             LoadCODESByTYPENAME("设计培训", "LB", "CODES_JYPX", Bind, "OUTLB", "LB", "");
-        }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
         }
     });
 }

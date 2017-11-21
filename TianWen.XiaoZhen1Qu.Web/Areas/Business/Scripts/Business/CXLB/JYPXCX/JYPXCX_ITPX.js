@@ -6,8 +6,8 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadJYPXCondition() {
-    LoadConditionByTypeName("IT培训", "CODES_JYPX", "类别", "LB", 15);
-    LoadConditionByTypeName("投资金额", "CODES_JYPX", "投资金额", "TZJE");
+    LoadConditionByTypeName("IT培训", "CODES_JYPX", "类别", "LB", 10);
+    LoadConditionByTypeName("IT培训形式", "CODES_JYPX", "形式", "XS");
     LoadDistrict("福州", "350100", "QY");
     LoadBody("JYPXXX_ITPX", currentIndex);
 }

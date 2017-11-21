@@ -1,8 +1,6 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
     BindClick("LB");
-    BindClick("QY");
-    BindClick("DD");
     LoadDuoX("体育培训对象", "DX");
 });
 //加载多选
@@ -109,12 +107,6 @@ function BindClick(type) {
         if (type === "LB") {
             LoadCODESByTYPENAME("体育培训", "LB", "CODES_JYPX");
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
     });
 }
 //加载商务服务_体育培训基本信息
@@ -169,7 +161,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/JYPX/FBJYPX_TYJLJBXX",
+        url: getRootPath() + "/Business/JYPX/FBJYPX_TYPXJBXX",
         dataType: "json",
         data:
         {
