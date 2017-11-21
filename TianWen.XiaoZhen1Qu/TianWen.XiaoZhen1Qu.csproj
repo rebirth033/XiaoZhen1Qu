@@ -65,6 +65,7 @@
     <Compile Include="BLL\CXLB\CLCXBLL.cs" />
     <Compile Include="BLL\CXLB\PFCGCXBLL.cs" />
     <Compile Include="BLL\CXLB\JYPXCXBLL.cs" />
+    <Compile Include="BLL\CXLB\NLMFYCXBLL.cs" />
     <Compile Include="BLL\CXLB\ZSJMCXBLL.cs" />
     <Compile Include="BLL\CXLB\QZZPCXBLL.cs" />
     <Compile Include="BLL\HTFB\CL_BLL.cs" />

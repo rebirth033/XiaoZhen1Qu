@@ -163,6 +163,7 @@
     <Content Include="Areas\Business\Css\Common\Head.css" />
     <Content Include="Areas\Business\Css\CXLB\PFCGCX.css" />
     <Content Include="Areas\Business\Css\CXLB\JYPXCX.css" />
+    <Content Include="Areas\Business\Css\CXLB\NLMFYCX.css" />
     <Content Include="Areas\Business\Css\CXLB\ZSJMCX.css" />
     <Content Include="Areas\Business\Css\CXLB\QZZPCX.css" />
     <Content Include="Areas\Business\Css\CXLB\ESCX.css" />
@@ -615,6 +616,15 @@
     <Content Include="Areas\Business\Css\XXXX\JYPX\JYPXXX_YM.css" />
     <Content Include="Areas\Business\Css\XXXX\JYPX\JYPXXX_PBPK.css" />
     <Content Include="Areas\Business\Css\XXXX\JYPX\JYPXXX_ZXXFDB.css" />
+    <Content Include="Areas\Business\Css\XXXX\NLMFY\NLMFYXX_NZW.css" />
+    <Content Include="Areas\Business\Css\XXXX\NLMFY\NLMFYXX_DZWZM.css" />
+    <Content Include="Areas\Business\Css\XXXX\NLMFY\NLMFYXX_YLHH - 复制%284%29.css" />
+    <Content Include="Areas\Business\Css\XXXX\NLMFY\NLMFYXX_YLHH - 复制%285%29.css" />
+    <Content Include="Areas\Business\Css\XXXX\NLMFY\NLMFYXX_YLHH - 复制%286%29.css" />
+    <Content Include="Areas\Business\Css\XXXX\NLMFY\NLMFYXX_YLHH - 复制%287%29.css" />
+    <Content Include="Areas\Business\Css\XXXX\NLMFY\NLMFYXX_YLHH - 复制%288%29.css" />
+    <Content Include="Areas\Business\Css\XXXX\NLMFY\NLMFYXX_YLHH - 复制.css" />
+    <Content Include="Areas\Business\Css\XXXX\NLMFY\NLMFYXX_YLHH.css" />
     <Content Include="Areas\Business\Css\XXXX\PFCG\PFCGXX_LP.css" />
     <Content Include="Areas\Business\Css\XXXX\PFCG\PFCGXX_FSXM.css" />
     <Content Include="Areas\Business\Css\XXXX\PFCG\PFCGXX_XBSP.css" />
@@ -1627,6 +1637,7 @@
     <Compile Include="Areas\Business\BusinessAreaRegistration.cs" />
     <Compile Include="Areas\Business\Controllers\CXLB\PFCGCXController.cs" />
     <Compile Include="Areas\Business\Controllers\CXLB\JYPXCXController.cs" />
+    <Compile Include="Areas\Business\Controllers\CXLB\NLMFYCXController.cs" />
     <Compile Include="Areas\Business\Controllers\CXLB\ZSJMCXController.cs" />
     <Compile Include="Areas\Business\Controllers\CXLB\QZZPCXController.cs" />
     <Compile Include="Areas\Business\Controllers\CXLB\ESCXController.cs" />
@@ -1668,6 +1679,7 @@
     <Compile Include="Areas\Business\Controllers\HTGL\XXGLController.cs" />
     <Compile Include="Areas\Business\Controllers\XXXX\PFCGXXController.cs" />
     <Compile Include="Areas\Business\Controllers\XXXX\JYPXXXController.cs" />
+    <Compile Include="Areas\Business\Controllers\XXXX\NLMFYXXController.cs" />
     <Compile Include="Areas\Business\Controllers\XXXX\ZSJMXXController.cs" />
     <Compile Include="Areas\Business\Controllers\XXXX\QZZPXXController.cs" />
     <Compile Include="Areas\Business\Controllers\XXXX\ESXXController.cs" />
@@ -2159,6 +2171,16 @@
     <Content Include="Areas\Business\Views\JYPXXX\JYPXXX_YSPXJS.cshtml" />
     <Content Include="Areas\Business\Views\JYPXXX\JYPXXX_ZYJNPX.cshtml" />
     <Content Include="Areas\Business\Views\JYPXXX\JYPXXX_TYPX.cshtml" />
+    <Content Include="Areas\Business\Views\NLMFYCX\NLMFYCX_YLHH.cshtml" />
+    <Content Include="Areas\Business\Views\NLMFYXX\NLMFYXX_YLHH.cshtml" />
+    <Content Include="Areas\Business\Views\NLMFYCX\NLMFYCX_NCPJG.cshtml" />
+    <Content Include="Areas\Business\Views\NLMFYCX\NLMFYCX_NZW.cshtml" />
+    <Content Include="Areas\Business\Views\NLMFYCX\NLMFYCX_DZWZM.cshtml" />
+    <Content Include="Areas\Business\Views\NLMFYCX\NLMFYCX_CQYZ.cshtml" />
+    <Content Include="Areas\Business\Views\NLMFYCX\NLMFYCX_SC.cshtml" />
+    <Content Include="Areas\Business\Views\NLMFYCX\NLMFYCX_FLNY.cshtml" />
+    <Content Include="Areas\Business\Views\NLMFYCX\NLMFYCX_SLSY.cshtml" />
+    <Content Include="Areas\Business\Views\NLMFYCX\NLMFYCX_NJJSB.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
