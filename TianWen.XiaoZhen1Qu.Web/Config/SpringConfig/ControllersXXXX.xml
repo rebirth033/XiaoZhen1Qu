@@ -40,4 +40,9 @@
       <ref object="JYPXCXBLL"/>
     </property>
   </object>
+  <object id="NLMFYXXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.NLMFYXXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="NLMFYCXBLL">
+      <ref object="NLMFYCXBLL"/>
+    </property>
+  </object>
 </objects>

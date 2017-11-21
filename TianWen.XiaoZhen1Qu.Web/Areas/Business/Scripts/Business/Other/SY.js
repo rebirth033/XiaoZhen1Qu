@@ -425,6 +425,22 @@ function OpenCXLB(lbid, typename, condition) {
         window.open(getRootPath() + "/Business/JYPXCX/JYPXCX_LX?LBID=" + lbid);
     if (lbid === 274)
         window.open(getRootPath() + "/Business/JYPXCX/JYPXCX_YM?LBID=" + lbid);
-    if (lbid === 277)
-        window.open(getRootPath() + "/Business/JYPXCX/JYPXCX_PBPK?LBID=" + lbid);
+    if (lbid === 278)
+        window.open(getRootPath() + "/Business/NLMFYCX/NLMFYCX_YLHH?LBID=" + lbid);
+    if (lbid === 279)
+        window.open(getRootPath() + "/Business/NLMFYCX/NLMFYCX_NZW?LBID=" + lbid);
+    if (lbid === 280)
+        window.open(getRootPath() + "/Business/NLMFYCX/NLMFYCX_DZWZM?LBID=" + lbid);
+    if (lbid === 281)
+        window.open(getRootPath() + "/Business/NLMFYCX/NLMFYCX_CQYZ?LBID=" + lbid);
+    if (lbid === 282)
+        window.open(getRootPath() + "/Business/NLMFYCX/NLMFYCX_SC?LBID=" + lbid);
+    if (lbid === 283)
+        window.open(getRootPath() + "/Business/NLMFYCX/NLMFYCX_FLNY?LBID=" + lbid);
+    if (lbid === 284)
+        window.open(getRootPath() + "/Business/NLMFYCX/NLMFYCX_SLSY?LBID=" + lbid);
+    if (lbid === 285)
+        window.open(getRootPath() + "/Business/NLMFYCX/NLMFYCX_NJJSB?LBID=" + lbid);
+    if (lbid === 286)
+        window.open(getRootPath() + "/Business/NLMFYCX/NLMFYCX_NCPJG?LBID=" + lbid);
 }
