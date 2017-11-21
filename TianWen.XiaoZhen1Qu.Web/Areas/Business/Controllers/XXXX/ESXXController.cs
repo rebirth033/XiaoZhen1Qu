@@ -10,7 +10,6 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
     public class ESXXController : BaseController
     {
         public IESCXBLL ESCXBLL { get; set; }
-
         public ActionResult ESXX_SJSM_ESSJ() { return View(); }
         public ActionResult ESXX_SJSM_BJBDN() { return View(); }
         public ActionResult ESXX_SJSM_PBDN() { return View(); }

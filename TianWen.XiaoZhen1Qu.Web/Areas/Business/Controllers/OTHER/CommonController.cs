@@ -57,7 +57,6 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             string TBName = Request["TBName"];
             return Json(CommonBLL.LoadCODESByTYPENAME(TYPENAME, TBName));
         }
-        
         //加载区域
         public JsonResult LoadQY()
         {

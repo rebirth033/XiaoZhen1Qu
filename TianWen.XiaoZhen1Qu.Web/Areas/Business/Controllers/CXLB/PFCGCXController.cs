@@ -10,7 +10,6 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
     public class PFCGCXController : BaseController
     {
         public IPFCGCXBLL PFCGCXBLL { get; set; }
-
         public ActionResult PFCGCX_SP(){ GetSession();return View(); }
         public ActionResult PFCGCX_LP() { GetSession(); return View(); }
         public ActionResult PFCGCX_FSXM() { GetSession(); return View(); }

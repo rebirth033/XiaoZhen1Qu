@@ -35,4 +35,9 @@
       <ref object="PFCGCXBLL"/>
     </property>
   </object>
+  <object id="JYPXCXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.JYPXCXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="JYPXCXBLL">
+      <ref object="JYPXCXBLL"/>
+    </property>
+  </object>
 </objects>
