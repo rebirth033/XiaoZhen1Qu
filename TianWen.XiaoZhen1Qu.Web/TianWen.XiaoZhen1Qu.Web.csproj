@@ -165,6 +165,7 @@
     <Content Include="Areas\Business\Css\CXLB\PFCGCX.css" />
     <Content Include="Areas\Business\Css\CXLB\JYPXCX.css" />
     <Content Include="Areas\Business\Css\CXLB\NLMFYCX.css" />
+    <Content Include="Areas\Business\Css\CXLB\ZXJCCX.css" />
     <Content Include="Areas\Business\Css\CXLB\ZSJMCX.css" />
     <Content Include="Areas\Business\Css\CXLB\QZZPCX.css" />
     <Content Include="Areas\Business\Css\CXLB\ESCX.css" />
@@ -2345,6 +2346,18 @@
     <Content Include="Areas\Business\Views\SWFWXX\SWFWXX_ZXFW.cshtml" />
     <Content Include="Areas\Business\Views\SWFWXX\SWFWXX_KD.cshtml" />
     <Content Include="Areas\Business\Views\SWFWXX\SWFWXX_HYWL.cshtml" />
+    <Content Include="Areas\Business\Views\ZXJCCX\ZXJCCX_JZFW.cshtml" />
+    <Content Include="Areas\Business\Views\ZXJCXX\ZXJCXX_JZFW.cshtml" />
+    <Content Include="Areas\Business\Views\ZXJCCX\ZXJCCX_JFJS.cshtml" />
+    <Content Include="Areas\Business\Views\ZXJCCX\ZXJCCX_GZFW.cshtml" />
+    <Content Include="Areas\Business\Views\ZXJCCX\ZXJCCX_FWGZ.cshtml" />
+    <Content Include="Areas\Business\Views\ZXJCCX\ZXJCCX_JC.cshtml" />
+    <Content Include="Areas\Business\Views\ZXJCCX\ZXJCCX_JJ.cshtml" />
+    <Content Include="Areas\Business\Views\ZXJCXX\ZXJCXX_JFJS.cshtml" />
+    <Content Include="Areas\Business\Views\ZXJCXX\ZXJCXX_GZFW.cshtml" />
+    <Content Include="Areas\Business\Views\ZXJCXX\ZXJCXX_FWGZ.cshtml" />
+    <Content Include="Areas\Business\Views\ZXJCXX\ZXJCXX_JC.cshtml" />
+    <Content Include="Areas\Business\Views\ZXJCXX\ZXJCXX_JJ.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
