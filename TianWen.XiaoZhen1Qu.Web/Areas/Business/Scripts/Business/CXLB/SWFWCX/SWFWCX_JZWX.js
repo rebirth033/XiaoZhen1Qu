@@ -6,18 +6,12 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadSWFWCondition() {
-    LoadConditionByTypeName("建筑维修", "CODES_SWFW", "类别", "LB", 15);
+    LoadConditionByTypeName("建筑维修", "CODES_SWFW", "类别", "LB", 13);
     LoadDistrict("福州", "350100", "QY");
     LoadBody("SWFWXX_JZWX", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
-    if (name === "类别" && (obj.innerHTML !== "干锅" && obj.innerHTML !== "中餐" && obj.innerHTML !== "粥店")) {
-        LoadConditionByParentID(obj.id, "CODES_SWFW", "小类", "XL",15);
-    }
-    if (name === "类别" && (obj.innerHTML === "干锅" || obj.innerHTML === "中餐" || obj.innerHTML === "粥店")) {
-        $("#ul_condition_body_XL").remove();
-    }
     $(obj).parent().find(".li_condition_body").each(function () {
         $(this).removeClass("li_condition_body_active");
     });

@@ -126,7 +126,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SWFW/FBSWFW_TZDBJBXXJBXX",
+        url: getRootPath() + "/Business/SWFW/FBSWFW_TZDBJBXX",
         dataType: "json",
         data:
         {

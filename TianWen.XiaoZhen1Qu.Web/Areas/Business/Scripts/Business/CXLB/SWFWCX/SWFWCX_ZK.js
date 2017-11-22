@@ -12,10 +12,10 @@ function LoadSWFWCondition() {
 }
 //选择条件
 function SelectCondition(obj, name) {
-    if (name === "类别" && (obj.innerHTML !== "干锅" && obj.innerHTML !== "中餐" && obj.innerHTML !== "粥店")) {
+    if (name === "类别" && (obj.innerHTML === "智能卡/电子标签")) {
         LoadConditionByParentID(obj.id, "CODES_SWFW", "小类", "XL",15);
     }
-    if (name === "类别" && (obj.innerHTML === "干锅" || obj.innerHTML === "中餐" || obj.innerHTML === "粥店")) {
+    if (name === "类别" && (obj.innerHTML !== "智能卡/电子标签" )) {
         $("#ul_condition_body_XL").remove();
     }
     $(obj).parent().find(".li_condition_body").each(function () {
@@ -28,7 +28,7 @@ function SelectCondition(obj, name) {
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("LB,XL,TZJE,QY");
+    var condition = GetAllCondition("LB,XL,QY");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/SWFWCX/LoadSWFWXX",

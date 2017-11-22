@@ -12,10 +12,10 @@ function LoadSWFWCondition() {
 }
 //选择条件
 function SelectCondition(obj, name) {
-    if (name === "类别" && (obj.innerHTML !== "干锅" && obj.innerHTML !== "中餐" && obj.innerHTML !== "粥店")) {
+    if (name === "类别" && (obj.innerHTML === "纸类印刷" || obj.innerHTML === "宣传资料印刷")) {
         LoadConditionByParentID(obj.id, "CODES_SWFW", "小类", "XL",15);
     }
-    if (name === "类别" && (obj.innerHTML === "干锅" || obj.innerHTML === "中餐" || obj.innerHTML === "粥店")) {
+    if (name === "类别" && (obj.innerHTML !== "纸类印刷" && obj.innerHTML !== "宣传资料印刷")) {
         $("#ul_condition_body_XL").remove();
     }
     $(obj).parent().find(".li_condition_body").each(function () {

@@ -6,7 +6,8 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadSWFWCondition() {
-    LoadConditionByTypeName("货运专线", "CODES_SWFW", "类别", "LB", 15);
+    LoadConditionByTypeName("运送范围", "CODES_SWFW", "运送范围", "YSFW", 15);
+    LoadConditionByTypeName("货运通道", "CODES_SWFW", "货运通道", "HYTD", 15);
     LoadDistrict("福州", "350100", "QY");
     LoadBody("SWFWXX_HYZX", currentIndex);
 }
@@ -28,7 +29,7 @@ function SelectCondition(obj, name) {
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("LB,XL,TZJE,QY");
+    var condition = GetAllCondition("YSFW,HYTD,QY");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/SWFWCX/LoadSWFWXX",

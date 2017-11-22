@@ -12,10 +12,10 @@ function LoadSWFWCondition() {
 }
 //选择条件
 function SelectCondition(obj, name) {
-    if (name === "类别" && (obj.innerHTML !== "干锅" && obj.innerHTML !== "中餐" && obj.innerHTML !== "粥店")) {
+    if (name === "类别" && (obj.innerHTML !== "展会庆典策划" && obj.innerHTML !== "摄影摄像")) {
         LoadConditionByParentID(obj.id, "CODES_SWFW", "小类", "XL",15);
     }
-    if (name === "类别" && (obj.innerHTML === "干锅" || obj.innerHTML === "中餐" || obj.innerHTML === "粥店")) {
+    if (name === "类别" && (obj.innerHTML === "展会庆典策划" || obj.innerHTML === "摄影摄像")) {
         $("#ul_condition_body_XL").remove();
     }
     $(obj).parent().find(".li_condition_body").each(function () {

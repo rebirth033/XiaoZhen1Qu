@@ -12,11 +12,35 @@ function LoadSWFWCondition() {
 }
 //选择条件
 function SelectCondition(obj, name) {
-    if (name === "类别" && (obj.innerHTML !== "干锅" && obj.innerHTML !== "中餐" && obj.innerHTML !== "粥店")) {
-        LoadConditionByParentID(obj.id, "CODES_SWFW", "小类", "XL",15);
+    if (name === "类别" && (obj.innerHTML !== "标牌" && obj.innerHTML !== "LED显示屏" && obj.innerHTML !== "条幅/锦旗/奖牌")) {
+        LoadConditionByParentID(obj.id, "CODES_SWFW", "小类", "XL", 15);
+        if (obj.innerHTML === "灯箱/招牌") {
+            LoadConditionByTypeName("灯箱/招牌材质", "CODES_SWFW", "材质", "CZ");
+            LoadConditionByTypeName("灯箱/招牌工艺", "CODES_SWFW", "工艺", "GY");
+            LoadConditionByTypeName("是否发光", "CODES_SWFW", "是否发光", "SFFG");
+        }
+        else {
+            $("#ul_condition_body_CZ").remove();
+            $("#ul_condition_body_YT").remove();
+            $("#ul_condition_body_GN").remove();
+            $("#ul_condition_body_GY").remove();
+            $("#ul_condition_body_SFFG").remove();
+        }
     }
-    if (name === "类别" && (obj.innerHTML === "干锅" || obj.innerHTML === "中餐" || obj.innerHTML === "粥店")) {
+    if (name === "类别" && (obj.innerHTML === "标牌" || obj.innerHTML === "LED显示屏" || obj.innerHTML === "条幅/锦旗/奖牌")) {
         $("#ul_condition_body_XL").remove();
+        if (obj.innerHTML === "标牌") {
+            LoadConditionByTypeName("标牌用途", "CODES_SWFW", "用途", "YT");
+            LoadConditionByTypeName("标牌功能", "CODES_SWFW", "功能", "GN");
+            LoadConditionByTypeName("标牌材质", "CODES_SWFW", "材质", "CZ");
+        }
+        else {
+            $("#ul_condition_body_CZ").remove();
+            $("#ul_condition_body_YT").remove();
+            $("#ul_condition_body_GN").remove();
+            $("#ul_condition_body_GY").remove();
+            $("#ul_condition_body_SFFG").remove();
+        }
     }
     $(obj).parent().find(".li_condition_body").each(function () {
         $(this).removeClass("li_condition_body_active");
@@ -28,7 +52,7 @@ function SelectCondition(obj, name) {
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("LB,XL,TZJE,QY");
+    var condition = GetAllCondition("LB,XL,CZ,GY,SFFG,QY");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/SWFWCX/LoadSWFWXX",

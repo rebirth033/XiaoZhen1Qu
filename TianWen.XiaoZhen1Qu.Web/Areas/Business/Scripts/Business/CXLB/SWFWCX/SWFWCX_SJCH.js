@@ -6,16 +6,16 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadSWFWCondition() {
-    LoadConditionByTypeName("设计策划", "CODES_SWFW", "类别", "LB", 15);
+    LoadConditionByTypeName("设计策划", "CODES_SWFW", "类别", "LB", 13);
     LoadDistrict("福州", "350100", "QY");
     LoadBody("SWFWXX_SJCH", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
-    if (name === "类别" && (obj.innerHTML !== "干锅" && obj.innerHTML !== "中餐" && obj.innerHTML !== "粥店")) {
+    if (name === "类别" && (obj.innerHTML === "视频制作" || obj.innerHTML === "平面设计" || obj.innerHTML === "品牌策划推广" || obj.innerHTML === "工业设计")) {
         LoadConditionByParentID(obj.id, "CODES_SWFW", "小类", "XL",15);
     }
-    if (name === "类别" && (obj.innerHTML === "干锅" || obj.innerHTML === "中餐" || obj.innerHTML === "粥店")) {
+    if (name === "类别" && (obj.innerHTML !== "视频制作" && obj.innerHTML !== "平面设计" && obj.innerHTML !== "品牌策划推广" && obj.innerHTML !== "工业设计")) {
         $("#ul_condition_body_XL").remove();
     }
     $(obj).parent().find(".li_condition_body").each(function () {
@@ -28,7 +28,7 @@ function SelectCondition(obj, name) {
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("LB,XL,TZJE,QY");
+    var condition = GetAllCondition("LB,XL,QY");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/SWFWCX/LoadSWFWXX",

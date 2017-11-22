@@ -1,8 +1,6 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ");});
     BindClick("LB");
-    BindClick("QY");
-    BindClick("DD");
     LoadGY();
 });
 
@@ -20,12 +18,6 @@ function BindClick(type) {
         }
         if (type === "BZRQ") {
             LoadCODESByTYPENAME("包装容器", "BZRQ", "CODES_SWFW");
-        }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
         }
     });
 }
@@ -75,7 +67,7 @@ function LoadXL(lbmc, xl) {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liXL' onclick='SelectDuoX(this)'><img class='img_XL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    html += "<li class='liXL' style='width:120px;' onclick='SelectDuoX(this)'><img class='img_XL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i === 4 || i === 9) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
