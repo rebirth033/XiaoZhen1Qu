@@ -122,7 +122,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     }
                     return new { Result = EnResultType.Success, list = listnew, PageCount = PageCount, TotalCount = TotalCount };
                 }
-                if (TYPE == "NLMFYXX_SCPJG")
+                if (TYPE == "NLMFYXX_NCPJG")
                 {
                     dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,nlmfy_ncpjgjbxx b  where a.jcxxid = b.jcxxid " + GetConditin(Condition) + " order by zxgxsj desc");
                     List<QZZP_QZZPView> list = ConvertHelper.DataTableToList<QZZP_QZZPView>(dt);

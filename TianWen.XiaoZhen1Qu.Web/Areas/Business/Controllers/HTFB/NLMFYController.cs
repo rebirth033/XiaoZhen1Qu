@@ -111,6 +111,20 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return Json(result);
         }
         [ValidateInput(false)]
+        public JsonResult FBNLMFY_SLSYJBXX()
+        {
+            YHJBXX yhjbxx = NLMFY_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            string json = Request["Json"];
+            string bcms = Request["BCMS"];
+            string fwzp = Request["FWZP"];
+            JCXX jcxx = CreateJCXX(yhjbxx, json);
+            NLMFY_SLSYJBXX NLMFY_SLSYjbxx = JsonHelper.ConvertJsonToObject<NLMFY_SLSYJBXX>(json);
+            NLMFY_SLSYjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
+            List<PHOTOS> photos = GetTP(fwzp);
+            object result = NLMFY_BLL.SaveNLMFY_SLSYJBXX(jcxx, NLMFY_SLSYjbxx, photos);
+            return Json(result);
+        }
+        [ValidateInput(false)]
         public JsonResult FBNLMFY_NCPJGJBXX()
         {
             YHJBXX yhjbxx = NLMFY_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
@@ -164,20 +178,6 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             NLMFY_SCjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
             object result = NLMFY_BLL.SaveNLMFY_SCJBXX(jcxx, NLMFY_SCjbxx, photos);
-            return Json(result);
-        }
-        [ValidateInput(false)]
-        public JsonResult FB()
-        {
-            YHJBXX yhjbxx = NLMFY_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
-            string json = Request["Json"];
-            string bcms = Request["BCMS"];
-            string fwzp = Request["FWZP"];
-            JCXX jcxx = CreateJCXX(yhjbxx, json);
-            NLMFY_SLSYJBXX NLMFY_SLSYjbxx = JsonHelper.ConvertJsonToObject<NLMFY_SLSYJBXX>(json);
-            NLMFY_SLSYjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
-            List<PHOTOS> photos = GetTP(fwzp);
-            object result = NLMFY_BLL.SaveNLMFY_SLSYJBXX(jcxx, NLMFY_SLSYjbxx, photos);
             return Json(result);
         }
         [ValidateInput(false)]

@@ -1,30 +1,23 @@
 ﻿var currentIndex = 1;
 $(document).ready(function () {
     BindBodyNav();
-    LoadJYPXCondition();
-    LoadHot("NLMFYCX_SLSY");
+    LoadNLMFYCondition();
+    LoadHot("NLMFYXX_SLSY");
 });
 //加载条件
-function LoadJYPXCondition() {
-    LoadConditionByTypeName("管理培训", "CODES_JYPX", "类别", "LB", 15);
-    LoadConditionByTypeName("管理培训场地", "CODES_JYPX", "场地", "CD");
+function LoadNLMFYCondition() {
+    LoadConditionByTypeName("饲料/兽药", "CODES_NLMFY", "类别", "LB",14);
     LoadDistrict("福州", "350100", "QY");
-    LoadBody("NLMFYCX_SLSY", currentIndex);
+    LoadBody("NLMFYXX_SLSY", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
-    if (name === "类别" && (obj.innerHTML !== "酒店管理" && obj.innerHTML !== "工程管理" && obj.innerHTML !== "素质拓展" && obj.innerHTML !== "总裁研修")) {
-        LoadConditionByParentID(obj.id, "CODES_JYPX", "小类", "XL",15);
-    }
-    if (name === "类别" && (obj.innerHTML === "酒店管理" || obj.innerHTML === "工程管理" || obj.innerHTML === "素质拓展" || obj.innerHTML === "总裁研修")) {
-        $("#ul_condition_body_XL").remove();
-    }
     $(obj).parent().find(".li_condition_body").each(function () {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
-    LoadBody("NLMFYCX_SLSY", currentIndex);
-    ShowSelectCondition("NLMFYCX_SLSY");
+    LoadBody("NLMFYXX_SLSY", currentIndex);
+    ShowSelectCondition("NLMFYXX_SLSY");
 }
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
@@ -32,7 +25,7 @@ function LoadBody(TYPE, PageIndex) {
     var condition = GetAllCondition("LB,XL,CD,QY");
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/JYPXCX/LoadJYPXXX",
+        url: getRootPath() + "/Business/NLMFYCX/LoadNLMFYXX",
         dataType: "json",
         data:
         {
@@ -60,11 +53,11 @@ function LoadQZZPInfo(obj) {
     var html = "";
     html += ('<li class="li_body_left">');
     html += ('<div class="div_li_body_left_left">');
-    html += ('<img class="img_li_body_left" onclick="OpenXXXX(\'NLMFYCX_SLSY\',\'' + obj.ID + '\')" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
+    html += ('<img class="img_li_body_left" onclick="OpenXXXX(\'NLMFYXX_SLSY\',\'' + obj.ID + '\')" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<div class="div_img_li_body_left_count"><span>' + obj.PHOTOS.length + '图</span></div>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
-    html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'NLMFYCX_SLSY\',\'' + obj.ID + '\')">' + obj.BT + '</p>');
+    html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'NLMFYXX_SLSY\',\'' + obj.ID + '\')">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_left_center_cs">' + obj.MJ + '平米' + '</p>');
     html += ('<p class="p_li_body_left_center_dz">' + obj.XQMC + ' [' + obj.XQDZ + '] ' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
@@ -78,7 +71,7 @@ function LoadQZZPInfo(obj) {
 function LoadHot(TYPE) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/JYPXCX/LoadJYPXXX",
+        url: getRootPath() + "/Business/NLMFYCX/LoadNLMFYXX",
         dataType: "json",
         data:
         {
@@ -103,7 +96,7 @@ function LoadHot(TYPE) {
 //加载热门单条信息
 function LoadHotInfo(obj) {
     var html = "";
-    html += ('<li onclick="OpenXXXX(\'JYPXXX_JYPX\',\'' + obj.ID + '\')" class="li_body_right">');
+    html += ('<li onclick="OpenXXXX(\'NLMFYXX_NLMFY\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_right_xq">' + "服务项目:" + obj.LB + '</p>');
     html += ('<p class="p_li_body_right_cs">' + obj.QY + '-' + obj.DD + '</p>');

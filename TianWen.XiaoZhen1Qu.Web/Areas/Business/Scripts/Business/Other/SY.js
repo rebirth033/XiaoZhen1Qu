@@ -221,6 +221,7 @@ function GetHeight(list, parentid) {
 }
 //打开查询列表
 function OpenCXLB(lbid, typename, condition) {
+    //房产
     if (lbid === 19)
         window.open(getRootPath() + "/Business/FCCX/FCCX_ZZF?LBID=" + lbid + "&" + condition);
     if (lbid === 20)
@@ -239,6 +240,7 @@ function OpenCXLB(lbid, typename, condition) {
         window.open(getRootPath() + "/Business/FCCX/FCCX_TD?LBID=" + lbid);
     if (lbid === 2934)
         window.open(getRootPath() + "/Business/FCCX/FCCX_CW?LBID=" + lbid);
+    //车辆
     if (lbid === 61)
         window.open(getRootPath() + "/Business/CLCX/CLCX_JC?LBID=" + lbid);
     if (lbid === 68)
@@ -255,6 +257,7 @@ function OpenCXLB(lbid, typename, condition) {
         window.open(getRootPath() + "/Business/CLCX/CLCX_SLC?LBID=" + lbid);
     if (lbid === 62)
         window.open(getRootPath() + "/Business/CLCX/CLCX_GCC?LBID=" + lbid);
+    //宠物
     if (lbid === 73)
         window.open(getRootPath() + "/Business/CWCX/CWCX_CWG?LBID=" + lbid);
     if (lbid === 74)
@@ -267,6 +270,7 @@ function OpenCXLB(lbid, typename, condition) {
         window.open(getRootPath() + "/Business/CWCX/CWCX_CWYPSP?LBID=" + lbid);
     if (lbid === 78)
         window.open(getRootPath() + "/Business/CWCX/CWCX_CWGY?LBID=" + lbid);
+    //二手
     if (lbid === 186)
         window.open(getRootPath() + "/Business/ESCX/ESCX_SJSM_ESSJ?LBID=" + lbid);
     if (lbid === 187)
@@ -313,10 +317,12 @@ function OpenCXLB(lbid, typename, condition) {
         window.open(getRootPath() + "/Business/ESCX/ESCX_QTES_ESSB?LBID=" + lbid);
     if (lbid === 204)
         window.open(getRootPath() + "/Business/ESCX/ESCX_QTES_CRYP?LBID=" + lbid);
+    //求职招聘
     if (lbid === 205)
         window.open(getRootPath() + "/Business/QZZPCX/QZZPCX_QZZP?LBID=" + lbid + "&" + condition);
     if (lbid === 206)
         window.open(getRootPath() + "/Business/QZZPCX/QZZPCX_JZZP?LBID=" + lbid);
+    //招商加盟
     if (lbid === 159)
         window.open(getRootPath() + "/Business/ZSJMCX/ZSJMCX_CY?LBID=" + lbid);
     if (lbid === 160)
@@ -345,6 +351,7 @@ function OpenCXLB(lbid, typename, condition) {
         window.open(getRootPath() + "/Business/ZSJMCX/ZSJMCX_SHFW?LBID=" + lbid);
     if (lbid === 172)
         window.open(getRootPath() + "/Business/ZSJMCX/ZSJMCX_MYET?LBID=" + lbid);
+    //批发采购
     if (lbid === 224)
         window.open(getRootPath() + "/Business/PFCGCX/PFCGCX_SP?LBID=" + lbid);
     if (lbid === 225)
@@ -389,6 +396,7 @@ function OpenCXLB(lbid, typename, condition) {
         window.open(getRootPath() + "/Business/PFCGCX/PFCGCX_KQ?LBID=" + lbid);
     if (lbid === 245)
         window.open(getRootPath() + "/Business/PFCGCX/PFCGCX_JXJG?LBID=" + lbid);
+    //教育培训
     if (lbid === 259)
         window.open(getRootPath() + "/Business/JYPXCX/JYPXCX_ZXXFDB?LBID=" + lbid);
     if (lbid === 262)
@@ -425,6 +433,7 @@ function OpenCXLB(lbid, typename, condition) {
         window.open(getRootPath() + "/Business/JYPXCX/JYPXCX_LX?LBID=" + lbid);
     if (lbid === 274)
         window.open(getRootPath() + "/Business/JYPXCX/JYPXCX_YM?LBID=" + lbid);
+    //农林牧副渔
     if (lbid === 278)
         window.open(getRootPath() + "/Business/NLMFYCX/NLMFYCX_YLHH?LBID=" + lbid);
     if (lbid === 279)
@@ -443,4 +452,59 @@ function OpenCXLB(lbid, typename, condition) {
         window.open(getRootPath() + "/Business/NLMFYCX/NLMFYCX_NJJSB?LBID=" + lbid);
     if (lbid === 286)
         window.open(getRootPath() + "/Business/NLMFYCX/NLMFYCX_NCPJG?LBID=" + lbid);
+    //商务服务
+    if (lbid === 301)
+        window.open(getRootPath() + "/Business/SWFWCX/SWFWCX_GSZC?LBID=" + lbid);
+    if (lbid === 302)
+        window.open(getRootPath() + "/Business/SWFWCX/SWFWCX_SBZL?LBID=" + lbid);
+    if (lbid === 303)
+        window.open(getRootPath() + "/Business/SWFWCX/SWFWCX_FLZX?LBID=" + lbid);
+    if (lbid === 304)
+        window.open(getRootPath() + "/Business/SWFWCX/SWFWCX_CWKJPG?LBID=" + lbid);
+    if (lbid === 305)
+        window.open(getRootPath() + "/Business/SWFWCX/SWFWCX_BX?LBID=" + lbid);
+    if (lbid === 306)
+        window.open(getRootPath() + "/Business/SWFWCX/SWFWCX_TZDB?LBID=" + lbid);
+    if (lbid === 307)
+        window.open(getRootPath() + "/Business/SWFWCX/SWFWCX_YSBZ?LBID=" + lbid);
+    if (lbid === 308)
+        window.open(getRootPath() + "/Business/SWFWCX/SWFWCX_PHZP?LBID=" + lbid);
+    if (lbid === 309)
+        window.open(getRootPath() + "/Business/SWFWCX/SWFWCX_SJCH?LBID=" + lbid);
+    if (lbid === 310)
+        window.open(getRootPath() + "/Business/SWFWCX/SWFWCX_GGCM?LBID=" + lbid);
+    if (lbid === 311)
+        window.open(getRootPath() + "/Business/SWFWCX/SWFWCX_ZHFW?LBID=" + lbid);
+    if (lbid === 312)
+        window.open(getRootPath() + "/Business/SWFWCX/SWFWCX_LPDZ?LBID=" + lbid);
+    if (lbid === 313)
+        window.open(getRootPath() + "/Business/SWFWCX/SWFWCX_ZK?LBID=" + lbid);
+    if (lbid === 314)
+        window.open(getRootPath() + "/Business/SWFWCX/SWFWCX_FYSJ?LBID=" + lbid);
+    if (lbid === 315)
+        window.open(getRootPath() + "/Business/SWFWCX/SWFWCX_WLBXWH?LBID=" + lbid);
+    if (lbid === 316)
+        window.open(getRootPath() + "/Business/SWFWCX/SWFWCX_WZJSTG?LBID=" + lbid);
+    if (lbid === 317)
+        window.open(getRootPath() + "/Business/SWFWCX/SWFWCX_ZXFW?LBID=" + lbid);
+    if (lbid === 319)
+        window.open(getRootPath() + "/Business/SWFWCX/SWFWCX_KD?LBID=" + lbid);
+    if (lbid === 320)
+        window.open(getRootPath() + "/Business/SWFWCX/SWFWCX_HYWL?LBID=" + lbid);
+    if (lbid === 321)
+        window.open(getRootPath() + "/Business/SWFWCX/SWFWCX_HYZX?LBID=" + lbid);
+    if (lbid === 322)
+        window.open(getRootPath() + "/Business/SWFWCX/SWFWCX_BGSBWX?LBID=" + lbid);
+    if (lbid === 323)
+        window.open(getRootPath() + "/Business/SWFWCX/SWFWCX_ZL?LBID=" + lbid);
+    if (lbid === 324)
+        window.open(getRootPath() + "/Business/SWFWCX/SWFWCX_DBQZQZ?LBID=" + lbid);
+    if (lbid === 325)
+        window.open(getRootPath() + "/Business/SWFWCX/SWFWCX_JZWX?LBID=" + lbid);
+    if (lbid === 326)
+        window.open(getRootPath() + "/Business/SWFWCX/SWFWCX_JXSBWX?LBID=" + lbid);
+    if (lbid === 209)
+        window.open(getRootPath() + "/Business/SWFWCX/SWFWCX_SYSX?LBID=" + lbid);
+    if (lbid === 210)
+        window.open(getRootPath() + "/Business/SWFWCX/SWFWCX_LYQD?LBID=" + lbid);
 }
