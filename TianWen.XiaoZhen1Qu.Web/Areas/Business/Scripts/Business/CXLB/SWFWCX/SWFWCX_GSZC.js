@@ -1,29 +1,23 @@
 ﻿var currentIndex = 1;
 $(document).ready(function () {
     BindBodyNav();
-    LoadPFCGCondition();
-    LoadHot("SWFWCX_GSZC");
+    LoadSWFWCondition();
+    LoadHot("SWFWXX_GSZC");
 });
 //加载条件
-function LoadPFCGCondition() {
+function LoadSWFWCondition() {
     LoadConditionByTypeName("工商注册", "CODES_SWFW", "类别", "LB", 15);
     LoadDistrict("福州", "350100", "QY");
-    LoadBody("SWFWCX_GSZC", currentIndex);
+    LoadBody("SWFWXX_GSZC", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
-    if (name === "类别" && (obj.innerHTML !== "干锅" && obj.innerHTML !== "中餐" && obj.innerHTML !== "粥店")) {
-        LoadConditionByParentID(obj.id, "CODES_SWFW", "小类", "XL",15);
-    }
-    if (name === "类别" && (obj.innerHTML === "干锅" || obj.innerHTML === "中餐" || obj.innerHTML === "粥店")) {
-        $("#ul_condition_body_XL").remove();
-    }
     $(obj).parent().find(".li_condition_body").each(function () {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
-    LoadBody("SWFWCX_GSZC", currentIndex);
-    ShowSelectCondition("SWFWCX_GSZC");
+    LoadBody("SWFWXX_GSZC", currentIndex);
+    ShowSelectCondition("SWFWXX_GSZC");
 }
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
@@ -31,7 +25,7 @@ function LoadBody(TYPE, PageIndex) {
     var condition = GetAllCondition("LB,XL,TZJE,QY");
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/PFCGCX/LoadPFCGXX",
+        url: getRootPath() + "/Business/SWFWCX/LoadSWFWXX",
         dataType: "json",
         data:
         {
@@ -59,11 +53,11 @@ function LoadQZZPInfo(obj) {
     var html = "";
     html += ('<li class="li_body_left">');
     html += ('<div class="div_li_body_left_left">');
-    html += ('<img class="img_li_body_left" onclick="OpenXXXX(\'SWFWCX_GSZC\',\'' + obj.ID + '\')" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
+    html += ('<img class="img_li_body_left" onclick="OpenXXXX(\'SWFWXX_GSZC\',\'' + obj.ID + '\')" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<div class="div_img_li_body_left_count"><span>' + obj.PHOTOS.length + '图</span></div>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
-    html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'SWFWCX_GSZC\',\'' + obj.ID + '\')">' + obj.BT + '</p>');
+    html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'SWFWXX_GSZC\',\'' + obj.ID + '\')">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_left_center_cs">' + obj.MJ + '平米' + '</p>');
     html += ('<p class="p_li_body_left_center_dz">' + obj.XQMC + ' [' + obj.XQDZ + '] ' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
@@ -77,7 +71,7 @@ function LoadQZZPInfo(obj) {
 function LoadHot(TYPE) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/PFCGCX/LoadPFCGXX",
+        url: getRootPath() + "/Business/SWFWCX/LoadSWFWXX",
         dataType: "json",
         data:
         {
@@ -102,7 +96,7 @@ function LoadHot(TYPE) {
 //加载热门单条信息
 function LoadHotInfo(obj) {
     var html = "";
-    html += ('<li onclick="OpenXXXX(\'PFCGCX_PFCG\',\'' + obj.ID + '\')" class="li_body_right">');
+    html += ('<li onclick="OpenXXXX(\'SWFWCX_SWFW\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_right_xq">' + "服务项目:" + obj.LB + '</p>');
     html += ('<p class="p_li_body_right_cs">' + obj.QY + '-' + obj.DD + '</p>');
