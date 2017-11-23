@@ -520,4 +520,25 @@ function OpenCXLB(lbid, typename, condition) {
         window.open(getRootPath() + "/Business/ZXJCCX/ZXJCCX_JJ?LBID=" + lbid);
     if (lbid === 258)
         window.open(getRootPath() + "/Business/ZXJCCX/ZXJCCX_JFJS?LBID=" + lbid);
+    //婚庆摄影
+    if (lbid === 208)
+        window.open(getRootPath() + "/Business/HQSYCX/HQSYCX_HQGS?LBID=" + lbid);
+    if (lbid === 331)
+        window.open(getRootPath() + "/Business/HQSYCX/HQSYCX_HCZL?LBID=" + lbid);
+    if (lbid === 332)
+        window.open(getRootPath() + "/Business/HQSYCX/HQSYCX_HYJD?LBID=" + lbid);
+    if (lbid === 333)
+        window.open(getRootPath() + "/Business/HQSYCX/HQSYCX_CZZX?LBID=" + lbid);
+    if (lbid === 334)
+        window.open(getRootPath() + "/Business/HQSYCX/HQSYCX_HQYP?LBID=" + lbid);
+    if (lbid === 335)
+        window.open(getRootPath() + "/Business/HQSYCX/HQSYCX_SY?LBID=" + lbid);
+    if (lbid === 336)
+        window.open(getRootPath() + "/Business/HQSYCX/HQSYCX_HLGP?LBID=" + lbid);
+    if (lbid === 337)
+        window.open(getRootPath() + "/Business/HQSYCX/HQSYCX_HSLF?LBID=" + lbid);
+    if (lbid === 338)
+        window.open(getRootPath() + "/Business/HQSYCX/HQSYCX_ZBSS?LBID=" + lbid);
+    if (lbid === 339)
+        window.open(getRootPath() + "/Business/HQSYCX/HQSYCX_HSSY?LBID=" + lbid);
 }

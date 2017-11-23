@@ -55,4 +55,9 @@
       <ref object="ZXJCCXBLL"/>
     </property>
   </object>
+  <object id="HQSYXXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.HQSYXXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="HQSYCXBLL">
+      <ref object="HQSYCXBLL"/>
+    </property>
+  </object>
 </objects>
