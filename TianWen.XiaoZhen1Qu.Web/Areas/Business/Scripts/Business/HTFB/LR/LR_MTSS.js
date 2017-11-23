@@ -60,6 +60,7 @@ function LoadLR_MTSSJBXX() {
                     ue.setContent(xml.Value.BCMSString);
                 });
                 $("#spanLB").html(xml.Value.LR_MTSSJBXX.LB);
+                $("#spanFS").html(xml.Value.LR_MTSSJBXX.FS);
                 $("#spanQY").html(xml.Value.LR_MTSSJBXX.QY);
                 $("#spanDD").html(xml.Value.LR_MTSSJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
@@ -77,6 +78,7 @@ function FB() {
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
+    obj = jsonObj.AddJson(obj, "FS", "'" + $("#spanFS").html() + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
