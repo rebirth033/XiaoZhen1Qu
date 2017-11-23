@@ -861,6 +861,12 @@
     <Content Include="Areas\Business\Scripts\Business\CXLB\ZSJMCX\ZSJMCX_JC.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\ZSJMCX\ZSJMCX_FZXB.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\ZSJMCX\ZSJMCX_CY.js" />
+    <Content Include="Areas\Business\Scripts\Business\CXLB\ZXJCCX\ZXJCCX_GZFW.js" />
+    <Content Include="Areas\Business\Scripts\Business\CXLB\ZXJCCX\ZXJCCX_FWGZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\CXLB\ZXJCCX\ZXJCCX_JC.js" />
+    <Content Include="Areas\Business\Scripts\Business\CXLB\ZXJCCX\ZXJCCX_JJ.js" />
+    <Content Include="Areas\Business\Scripts\Business\CXLB\ZXJCCX\ZXJCCX_JFJS.js" />
+    <Content Include="Areas\Business\Scripts\Business\CXLB\ZXJCCX\ZXJCCX_JZFW.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\CL\CL_GCC.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\CL\CL_GCCYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\CL\CL_HC.js" />
@@ -1739,6 +1745,7 @@
     <Compile Include="Areas\Business\Controllers\CXLB\PFCGCXController.cs" />
     <Compile Include="Areas\Business\Controllers\CXLB\JYPXCXController.cs" />
     <Compile Include="Areas\Business\Controllers\CXLB\NLMFYCXController.cs" />
+    <Compile Include="Areas\Business\Controllers\CXLB\ZXJCCXController.cs" />
     <Compile Include="Areas\Business\Controllers\CXLB\SWFWCXController.cs" />
     <Compile Include="Areas\Business\Controllers\CXLB\ZSJMCXController.cs" />
     <Compile Include="Areas\Business\Controllers\CXLB\QZZPCXController.cs" />
@@ -1782,6 +1789,7 @@
     <Compile Include="Areas\Business\Controllers\XXXX\PFCGXXController.cs" />
     <Compile Include="Areas\Business\Controllers\XXXX\JYPXXXController.cs" />
     <Compile Include="Areas\Business\Controllers\XXXX\NLMFYXXController.cs" />
+    <Compile Include="Areas\Business\Controllers\XXXX\ZXJCXXController.cs" />
     <Compile Include="Areas\Business\Controllers\XXXX\SWFWXXController.cs" />
     <Compile Include="Areas\Business\Controllers\XXXX\ZSJMXXController.cs" />
     <Compile Include="Areas\Business\Controllers\XXXX\QZZPXXController.cs" />

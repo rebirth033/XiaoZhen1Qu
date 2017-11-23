@@ -50,4 +50,9 @@
       <ref object="SWFWCXBLL"/>
     </property>
   </object>
+  <object id="ZXJCCXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.ZXJCCXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="ZXJCCXBLL">
+      <ref object="ZXJCCXBLL"/>
+    </property>
+  </object>
 </objects>

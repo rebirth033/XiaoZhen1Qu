@@ -18,7 +18,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
             try
             {
                 DataTable dt = new DataTable();
-                if (TYPE == "QZZPXX_QZZP")//求职招聘_全职招聘
+                if (TYPE == "QZZPXX_QZZP")
                 {
                     dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,qzzp_qzzpjbxx b  where a.jcxxid = b.jcxxid " + GetConditin(Condition) + " order by zxgxsj desc");
                     List<QZZP_QZZPView> list = ConvertHelper.DataTableToList<QZZP_QZZPView>(dt);
@@ -31,7 +31,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     }
                     return new { Result = EnResultType.Success, list = listnew, PageCount = PageCount, TotalCount = TotalCount };
                 }
-                if (TYPE == "QZZPXX_JZZP")//求职招聘_兼职招聘
+                if (TYPE == "QZZPXX_JZZP")
                 {
                     dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,qzzp_jzzpjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + " order by zxgxsj desc");
                     List<QZZP_JZZPView> list = ConvertHelper.DataTableToList<QZZP_JZZPView>(dt);
@@ -60,7 +60,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
             try
             {
                 DataTable dt = new DataTable();
-                if (TYPE == "QZZPXX_QZZP") //求职招聘_全职招聘
+                if (TYPE == "QZZPXX_QZZP")
                 {
                     dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,qzzp_qzzpjbxx b where a.jcxxid = b.jcxxid and id = '{0}'  order by zxgxsj desc", ID));
                     List<QZZP_QZZPView> list = ConvertHelper.DataTableToList<QZZP_QZZPView>(dt);
@@ -70,7 +70,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     }
                     return new { Result = EnResultType.Success, list = list, BCMSString = BinaryHelper.BinaryToString(list[0].BCMS), grxxlist = GetGRXX(list[0].YHID) };
                 }
-                if (TYPE == "QZZPXX_JZZP") //求职招聘_兼职招聘
+                if (TYPE == "QZZPXX_JZZP")
                 {
                     dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,qzzp_jzzpjbxx b where a.jcxxid = b.jcxxid and id = '{0}'  order by zxgxsj desc", ID));
                     List<QZZP_JZZPView> list = ConvertHelper.DataTableToList<QZZP_JZZPView>(dt);

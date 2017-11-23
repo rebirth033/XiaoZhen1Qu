@@ -507,4 +507,17 @@ function OpenCXLB(lbid, typename, condition) {
         window.open(getRootPath() + "/Business/SWFWCX/SWFWCX_SYSX?LBID=" + lbid);
     if (lbid === 210)
         window.open(getRootPath() + "/Business/SWFWCX/SWFWCX_LYQD?LBID=" + lbid);
+    //装修建材
+    if (lbid === 253)
+        window.open(getRootPath() + "/Business/ZXJCCX/ZXJCCX_JZFW?LBID=" + lbid);
+    if (lbid === 254)
+        window.open(getRootPath() + "/Business/ZXJCCX/ZXJCCX_GZFW?LBID=" + lbid);
+    if (lbid === 255)
+        window.open(getRootPath() + "/Business/ZXJCCX/ZXJCCX_FWGZ?LBID=" + lbid);
+    if (lbid === 256)
+        window.open(getRootPath() + "/Business/ZXJCCX/ZXJCCX_JC?LBID=" + lbid);
+    if (lbid === 257)
+        window.open(getRootPath() + "/Business/ZXJCCX/ZXJCCX_JJ?LBID=" + lbid);
+    if (lbid === 258)
+        window.open(getRootPath() + "/Business/ZXJCCX/ZXJCCX_JFJS?LBID=" + lbid);
 }
