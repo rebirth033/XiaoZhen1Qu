@@ -2,20 +2,12 @@
     $("body").bind("click", function () { Close("_XZQ"); });
     LoadLR_KQHLJBXX();
     BindClick("LB");
-    BindClick("QY");
-    BindClick("DD");
 });
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
             LoadCODESByTYPENAME("口腔护理", "LB", "CODES_LR", Bind, "KQHLLB", "LB", "");
-        }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
         }
     });
 }
@@ -67,7 +59,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/LR/FBLR_KQHLJBX",
+        url: getRootPath() + "/Business/LR/FBLR_KQHLJBXX",
         dataType: "json",
         data:
         {

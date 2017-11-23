@@ -1,21 +1,19 @@
 ﻿var currentIndex = 1;
 $(document).ready(function () {
     BindBodyNav();
-    LoadHQSYCondition();
+    LoadLRCondition();
     LoadHot("LRXX_MFHF");
 });
 //加载条件
-function LoadHQSYCondition() {
-    LoadConditionByTypeName("彩妆造型价格", "CODES_HQSY", "价格范围", "JG");
-    LoadConditionByTypeName("彩妆造型化妆类型", "CODES_HQSY", "化妆类型", "HZLX");
-    LoadConditionByTypeName("彩妆造型服务形式", "CODES_HQSY", "服务形式", "FWXS");
+function LoadLRCondition() {
+    LoadConditionByTypeName("美发护发", "CODES_LR", "类别", "LB");
     LoadDistrict("福州", "350100", "QY");
     LoadBody("LRXX_MFHF", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
     if (name === "类别" && (obj.innerHTML !== "酒店管理" && obj.innerHTML !== "工程管理" && obj.innerHTML !== "素质拓展" && obj.innerHTML !== "总裁研修")) {
-        LoadConditionByParentID(obj.id, "CODES_HQSY", "小类", "XL",15);
+        LoadConditionByParentID(obj.id, "CODES_LR", "小类", "XL",15);
     }
     if (name === "类别" && (obj.innerHTML === "酒店管理" || obj.innerHTML === "工程管理" || obj.innerHTML === "素质拓展" || obj.innerHTML === "总裁研修")) {
         $("#ul_condition_body_XL").remove();
@@ -30,10 +28,10 @@ function SelectCondition(obj, name) {
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("JG,HZLX,FWXS,QY");
+    var condition = GetAllCondition("LB,QY");
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/HQSYCX/LoadHQSYXX",
+        url: getRootPath() + "/Business/LRCX/LoadLRXX",
         dataType: "json",
         data:
         {
@@ -79,7 +77,7 @@ function LoadQZZPInfo(obj) {
 function LoadHot(TYPE) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/HQSYCX/LoadHQSYXX",
+        url: getRootPath() + "/Business/LRCX/LoadLRXX",
         dataType: "json",
         data:
         {
@@ -104,7 +102,7 @@ function LoadHot(TYPE) {
 //加载热门单条信息
 function LoadHotInfo(obj) {
     var html = "";
-    html += ('<li onclick="OpenXXXX(\'HQSYXX_HQSY\',\'' + obj.ID + '\')" class="li_body_right">');
+    html += ('<li onclick="OpenXXXX(\'LRXX_LR\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_right_xq">' + "服务项目:" + obj.LB + '</p>');
     html += ('<p class="p_li_body_right_cs">' + obj.QY + '-' + obj.DD + '</p>');
