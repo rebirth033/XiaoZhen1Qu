@@ -6,18 +6,16 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadHQSYCondition() {
-    LoadConditionByTypeName("婚庆公司", "CODES_HQSY", "类别", "LB", 15);
+    LoadConditionByTypeName("婚纱摄影价格", "CODES_HQSY", "价格范围", "JG");
+    LoadConditionByTypeName("婚纱摄影类型", "CODES_HQSY", "商家类型", "YLGZS");
+    LoadConditionByTypeName("婚纱摄影拍摄地点", "CODES_HQSY", "拍摄地点", "PSDD");
+    LoadConditionByTypeName("婚纱摄影拍摄风格", "CODES_HQSY", "拍摄风格", "PSFG");
+    LoadConditionByTypeName("婚纱摄影服装套数", "CODES_HQSY", "服装套数", "FZTS");
     LoadDistrict("福州", "350100", "QY");
     LoadBody("HQSYXX_HSSY", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
-    if (name === "类别" && (obj.innerHTML !== "酒店管理" && obj.innerHTML !== "工程管理" && obj.innerHTML !== "素质拓展" && obj.innerHTML !== "总裁研修")) {
-        LoadConditionByParentID(obj.id, "CODES_HQSY", "小类", "XL",15);
-    }
-    if (name === "类别" && (obj.innerHTML === "酒店管理" || obj.innerHTML === "工程管理" || obj.innerHTML === "素质拓展" || obj.innerHTML === "总裁研修")) {
-        $("#ul_condition_body_XL").remove();
-    }
     $(obj).parent().find(".li_condition_body").each(function () {
         $(this).removeClass("li_condition_body_active");
     });
@@ -28,7 +26,7 @@ function SelectCondition(obj, name) {
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("LB,XL,CD,QY");
+    var condition = GetAllCondition("JG,YLGZS,PSDD,PSFG,FZTS,QY");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/HQSYCX/LoadHQSYXX",

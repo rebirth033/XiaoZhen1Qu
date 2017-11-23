@@ -7,18 +7,14 @@ $(document).ready(function () {
 //加载条件
 function LoadHQSYCondition() {
     LoadConditionByTypeName("司仪价格", "CODES_HQSY", "价格范围", "JG");
-    LoadConditionByTypeName("司仪价格", "CODES_HQSY", "价格范围", "JG");
+    LoadConditionByTypeName("司仪性别", "CODES_HQSY", "司仪性别", "SYXB");
+    LoadConditionByTypeName("司仪主持风格", "CODES_HQSY", "主持风格", "ZCFG");
+    LoadConditionByTypeName("司仪从业时间", "CODES_HQSY", "从业时间", "CYSJ");
     LoadDistrict("福州", "350100", "QY");
     LoadBody("HQSYXX_SY", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
-    if (name === "类别" && (obj.innerHTML !== "酒店管理" && obj.innerHTML !== "工程管理" && obj.innerHTML !== "素质拓展" && obj.innerHTML !== "总裁研修")) {
-        LoadConditionByParentID(obj.id, "CODES_HQSY", "小类", "XL",15);
-    }
-    if (name === "类别" && (obj.innerHTML === "酒店管理" || obj.innerHTML === "工程管理" || obj.innerHTML === "素质拓展" || obj.innerHTML === "总裁研修")) {
-        $("#ul_condition_body_XL").remove();
-    }
     $(obj).parent().find(".li_condition_body").each(function () {
         $(this).removeClass("li_condition_body_active");
     });
@@ -29,7 +25,7 @@ function SelectCondition(obj, name) {
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("LB,XL,CD,QY");
+    var condition = GetAllCondition("JG,SYXB,ZCFG,CYSJ");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/HQSYCX/LoadHQSYXX",

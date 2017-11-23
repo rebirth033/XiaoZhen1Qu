@@ -60,4 +60,9 @@
       <ref object="HQSYCXBLL"/>
     </property>
   </object>
+  <object id="LRXXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.LRXXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="LRCXBLL">
+      <ref object="LRCXBLL"/>
+    </property>
+  </object>
 </objects>

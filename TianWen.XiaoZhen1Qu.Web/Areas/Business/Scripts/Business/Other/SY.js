@@ -541,4 +541,25 @@ function OpenCXLB(lbid, typename, condition) {
         window.open(getRootPath() + "/Business/HQSYCX/HQSYCX_ZBSS?LBID=" + lbid);
     if (lbid === 339)
         window.open(getRootPath() + "/Business/HQSYCX/HQSYCX_HSSY?LBID=" + lbid);
+    //丽人
+    if (lbid === 215)
+        window.open(getRootPath() + "/Business/LRCX/LRCX_MTSS?LBID=" + lbid);
+    if (lbid === 216)
+        window.open(getRootPath() + "/Business/LRCX/LRCX_MRHF?LBID=" + lbid);
+    if (lbid === 217)
+        window.open(getRootPath() + "/Business/LRCX/LRCX_SPA?LBID=" + lbid);
+    if (lbid === 218)
+        window.open(getRootPath() + "/Business/LRCX/LRCX_WD?LBID=" + lbid);
+    if (lbid === 330)
+        window.open(getRootPath() + "/Business/LRCX/LRCX_YJ?LBID=" + lbid);
+    if (lbid === 219)
+        window.open(getRootPath() + "/Business/LRCX/LRCX_MFHF?LBID=" + lbid);
+    if (lbid === 220)
+        window.open(getRootPath() + "/Business/LRCX/LRCX_MJ?LBID=" + lbid);
+    if (lbid === 221)
+        window.open(getRootPath() + "/Business/LRCX/LRCX_WS?LBID=" + lbid);
+    if (lbid === 222)
+        window.open(getRootPath() + "/Business/LRCX/LRCX_KQHL?LBID=" + lbid);
+    if (lbid === 223)
+        window.open(getRootPath() + "/Business/LRCX/LRCX_TJ?LBID=" + lbid);
 }

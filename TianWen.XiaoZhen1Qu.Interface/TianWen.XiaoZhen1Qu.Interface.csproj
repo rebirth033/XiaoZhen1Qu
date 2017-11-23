@@ -50,6 +50,7 @@
     <Compile Include="CXLB\IJYPXCXBLL.cs" />
     <Compile Include="CXLB\INLMFYCXBLL.cs" />
     <Compile Include="CXLB\IHQSYCXBLL.cs" />
+    <Compile Include="CXLB\ILRCXBLL.cs" />
     <Compile Include="CXLB\IZXJCCXBLL.cs" />
     <Compile Include="CXLB\ISWFWCXBLL.cs" />
     <Compile Include="CXLB\IZSJMCXBLL.cs" />

@@ -60,6 +60,7 @@
     <Compile Include="BLL\BaseBLL.cs" />
     <Compile Include="BLL\BZZXBLL.cs" />
     <Compile Include="BLL\CommonBLL.cs" />
+    <Compile Include="BLL\CXLB\LRCXBLL.cs" />
     <Compile Include="BLL\CXLB\ESCXBLL.cs" />
     <Compile Include="BLL\CXLB\CWCXBLL.cs" />
     <Compile Include="BLL\CXLB\CLCXBLL.cs" />

@@ -371,6 +371,42 @@ namespace TianWen.XiaoZhen1Qu.BLL
                                     condition.AppendFormat(" and {0} <= {1}", array[0], zjxx);
                                 }
                             }
+                            else if (array[1].Contains("元"))
+                            {
+                                if (array[1].Contains("-"))
+                                {
+                                    string[] zjarray = array[1].Substring(0, array[1].IndexOf("元")).Split('-');
+                                    condition.AppendFormat(" and {0} >= {1} and {0} <= {2}", array[0], zjarray[0], zjarray[1]);
+                                }
+                                else if (array[1].Contains("以上"))
+                                {
+                                    string zjsx = array[1].Substring(0, array[1].IndexOf("元"));
+                                    condition.AppendFormat(" and {0} >= {1}", array[0], zjsx);
+                                }
+                                else
+                                {
+                                    string zjxx = array[1].Substring(0, array[1].IndexOf("元"));
+                                    condition.AppendFormat(" and {0} <= {1}", array[0], zjxx);
+                                }
+                            }
+                            else if (array[1].Contains("套"))
+                            {
+                                if (array[1].Contains("-"))
+                                {
+                                    string[] zjarray = array[1].Substring(0, array[1].IndexOf("套")).Split('-');
+                                    condition.AppendFormat(" and {0} >= {1} and {0} <= {2}", array[0], zjarray[0], zjarray[1]);
+                                }
+                                else if (array[1].Contains("以上"))
+                                {
+                                    string zjsx = array[1].Substring(0, array[1].IndexOf("套"));
+                                    condition.AppendFormat(" and {0} >= {1}", array[0], zjsx);
+                                }
+                                else
+                                {
+                                    string zjxx = array[1].Substring(0, array[1].IndexOf("套"));
+                                    condition.AppendFormat(" and {0} <= {1}", array[0], zjxx);
+                                }
+                            }
                             else
                             {
                                 if (array[1].Contains("-"))
