@@ -6,7 +6,9 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadHQSYCondition() {
-    LoadConditionByTypeName("婚庆公司", "CODES_HQSY", "类别", "LB", 15);
+    LoadConditionByTypeName("彩妆造型价格", "CODES_HQSY", "价格范围", "JG");
+    LoadConditionByTypeName("彩妆造型化妆类型", "CODES_HQSY", "化妆类型", "HZLX");
+    LoadConditionByTypeName("彩妆造型服务形式", "CODES_HQSY", "服务形式", "FWXS");
     LoadDistrict("福州", "350100", "QY");
     LoadBody("HQSYXX_CZZX", currentIndex);
 }
@@ -28,7 +30,7 @@ function SelectCondition(obj, name) {
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("LB,XL,CD,QY");
+    var condition = GetAllCondition("JG,HZLX,FWXS,QY");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/HQSYCX/LoadHQSYXX",

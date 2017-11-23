@@ -6,7 +6,8 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadHQSYCondition() {
-    LoadConditionByTypeName("婚庆公司", "CODES_HQSY", "类别", "LB", 15);
+    LoadConditionByTypeName("司仪价格", "CODES_HQSY", "价格范围", "JG");
+    LoadConditionByTypeName("司仪价格", "CODES_HQSY", "价格范围", "JG");
     LoadDistrict("福州", "350100", "QY");
     LoadBody("HQSYXX_SY", currentIndex);
 }

@@ -1,24 +1,16 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
     BindClick("LX");
-    BindClick("QY");
-    BindClick("DD");
     LoadHQSY_HQYPJBXX();
 });
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LX") {
-            LoadCODESByTYPENAME("婚庆用品", "LX", "CODES_HQSY", Bind, "OUTLB", "LX", "");
+            LoadCODESByTYPENAME("婚庆用品类型", "LX", "CODES_HQSY", Bind, "OUTLB", "LX", "");
         }
         if (type === "XL") {
             LoadXL();
-        }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
         }
     });
 }
