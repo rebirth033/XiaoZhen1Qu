@@ -215,13 +215,13 @@ insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENT
 values (71, '酒店/住宿预订', '宾馆/旅店/招待所', '4', 4, null);
 
 insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (72, '星级酒店', '三星级', '1', 1, null);
+values (72, '星级酒店', '三星级', '1', 1, 68);
 
 insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (73, '星级酒店', '四星级', '2', 2, null);
+values (73, '星级酒店', '四星级', '2', 2, 68);
 
 insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (74, '星级酒店', '五星级', '3', 3, null);
+values (74, '星级酒店', '五星级', '3', 3, 68);
 
 insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (75, '机票', '国际机票', '1', 1, null);
@@ -324,5 +324,104 @@ values (107, '带团经验', '5-10年', '5', 5, null);
 
 insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (108, '带团经验', '10年以上', '6', 6, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (109, '国内游游玩天数', '3日游及以下', '1', 1, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (110, '国内游游玩天数', '4日游', '2', 2, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (111, '国内游游玩天数', '5日游', '3', 3, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (112, '国内游游玩天数', '6日游', '4', 4, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (113, '国内游游玩天数', '7日游', '5', 5, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (114, '国内游游玩天数', '8日游及以上', '6', 6, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (115, '国内游出游方式', '跟团游', '1', 1, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (116, '国内游出游方式', '自驾游', '2', 2, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (117, '国内游出游方式', '自由行', '3', 3, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (118, '国内游价格', '500元以下', '1', 1, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (119, '国内游价格', '500-1000元', '2', 2, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (120, '国内游价格', '1000-2000元', '3', 3, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (121, '国内游价格', '2000-3000元', '4', 4, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (122, '国内游价格', '3000-4000元', '5', 5, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (123, '国内游价格', '4000-5000元', '6', 6, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (124, '国内游价格', '5000元以上', '7', 7, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (125, '周边游价格', '50元以下', '1', 1, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (126, '周边游价格', '50-100元', '2', 2, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (127, '周边游价格', '100-200元', '3', 3, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (128, '周边游价格', '200-300元', '4', 4, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (129, '周边游价格', '300元以上', '5', 5, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (130, '出境游游玩天数', '4日游及以下', '1', 1, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (131, '出境游游玩天数', '5日游', '2', 2, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (132, '出境游游玩天数', '6日游', '3', 3, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (133, '出境游游玩天数', '7日游', '4', 4, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (134, '出境游游玩天数', '8日游', '5', 5, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (135, '出境游游玩天数', '9日游及以上', '6', 6, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (136, '出境游价格', '2000元以下', '1', 1, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (137, '出境游价格', '2000-3000元', '2', 2, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (138, '出境游价格', '3000-5000元', '3', 3, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (139, '出境游价格', '5000-7000元', '4', 4, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (140, '出境游价格', '7000-10000元', '5', 5, null);
+
+insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (141, '出境游价格', '10000元以上', '6', 6, null);
 
 prompt Done.

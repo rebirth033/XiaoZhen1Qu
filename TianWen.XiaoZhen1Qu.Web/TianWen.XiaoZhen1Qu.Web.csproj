@@ -161,6 +161,7 @@
     <Content Include="Areas\Business\Css\BZZX\BZZX_SY_ZHMM.css" />
     <Content Include="Areas\Business\Css\BZZX\BZZX_WZJY.css" />
     <Content Include="Areas\Business\Css\Common\Head.css" />
+    <Content Include="Areas\Business\Css\CXLB\XXYLCX.css" />
     <Content Include="Areas\Business\Css\CXLB\LYJDCX.css" />
     <Content Include="Areas\Business\Css\CXLB\SWFWCX.css" />
     <Content Include="Areas\Business\Css\CXLB\PFCGCX.css" />
@@ -708,6 +709,15 @@
     <Content Include="Areas\Business\Css\XXXX\SWFW\SWFWXX_SYSX.css" />
     <Content Include="Areas\Business\Css\XXXX\SWFW\SWFWXX_LYQD.css" />
     <Content Include="Areas\Business\Css\XXXX\SWFW\SWFWXX_GSZC.css" />
+    <Content Include="Areas\Business\Css\XXXX\XXYL\XXYLXX_YDJB.css" />
+    <Content Include="Areas\Business\Css\XXXX\XXYL\XXYLXX_HW.css" />
+    <Content Include="Areas\Business\Css\XXXX\XXYL\XXYLXX_XYWQ.css" />
+    <Content Include="Areas\Business\Css\XXXX\XXYL\XXYLXX_ZLAM.css" />
+    <Content Include="Areas\Business\Css\XXXX\XXYL\XXYLXX_TQT.css" />
+    <Content Include="Areas\Business\Css\XXXX\XXYL\XXYLXX_QPZY.css" />
+    <Content Include="Areas\Business\Css\XXXX\XXYL\XXYLXX_DIYSGF.css" />
+    <Content Include="Areas\Business\Css\XXXX\XXYL\XXYLXX_HPG.css" />
+    <Content Include="Areas\Business\Css\XXXX\XXYL\XXYLXX_YDJS.css" />
     <Content Include="Areas\Business\Css\XXXX\ZSJM\ZSJMXX_WLFW.css" />
     <Content Include="Areas\Business\Css\XXXX\ZSJM\ZSJMXX_NY.css" />
     <Content Include="Areas\Business\Css\XXXX\ZSJM\ZSJMXX_TS.css" />
@@ -904,6 +914,15 @@
     <Content Include="Areas\Business\Scripts\Business\CXLB\SWFWCX\SWFWCX_SYSX.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\SWFWCX\SWFWCX_LYQD.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\SWFWCX\SWFWCX_GSZC.js" />
+    <Content Include="Areas\Business\Scripts\Business\CXLB\XXYLCX\XXYLCX_YDJB.js" />
+    <Content Include="Areas\Business\Scripts\Business\CXLB\XXYLCX\XXYLCX_HW.js" />
+    <Content Include="Areas\Business\Scripts\Business\CXLB\XXYLCX\XXYLCX_XYWQ.js" />
+    <Content Include="Areas\Business\Scripts\Business\CXLB\XXYLCX\XXYLCX_ZLAM.js" />
+    <Content Include="Areas\Business\Scripts\Business\CXLB\XXYLCX\XXYLCX_TQT.js" />
+    <Content Include="Areas\Business\Scripts\Business\CXLB\XXYLCX\XXYLCX_QPZY.js" />
+    <Content Include="Areas\Business\Scripts\Business\CXLB\XXYLCX\XXYLCX_DIYSGF.js" />
+    <Content Include="Areas\Business\Scripts\Business\CXLB\XXYLCX\XXYLCX_HPG.js" />
+    <Content Include="Areas\Business\Scripts\Business\CXLB\XXYLCX\XXYLCX_YDJS.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\ZSJMCX\ZSJMCX_NY.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\ZSJMCX\ZSJMCX_TS.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\ZSJMCX\ZSJMCX_SHFW.js" />
@@ -1493,6 +1512,15 @@
     <Content Include="Areas\Business\Scripts\Business\XXXX\SWFWXX\SWFWXX_SYSX.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\SWFWXX\SWFWXX_LYQD.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\SWFWXX\SWFWXX_GSZC.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\XXYLXX\XXYLXX_YDJB.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\XXYLXX\XXYLXX_HW.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\XXYLXX\XXYLXX_XYWQ.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\XXYLXX\XXYLXX_ZLAM.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\XXYLXX\XXYLXX_TQT.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\XXYLXX\XXYLXX_QPZY.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\XXYLXX\XXYLXX_DIYSGF.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\XXYLXX\XXYLXX_HPG.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\XXYLXX\XXYLXX_YDJS.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\ZSJMXX\ZSJMXX_WLFW.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\ZSJMXX\ZSJMXX_NY.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\ZSJMXX\ZSJMXX_TS.js" />
@@ -1832,6 +1860,7 @@
     <Compile Include="Areas\Business\Controllers\CXLB\NLMFYCXController.cs" />
     <Compile Include="Areas\Business\Controllers\CXLB\HQSYCXController.cs" />
     <Compile Include="Areas\Business\Controllers\CXLB\LRCXController.cs" />
+    <Compile Include="Areas\Business\Controllers\CXLB\XXYLCXController.cs" />
     <Compile Include="Areas\Business\Controllers\CXLB\ZXJCCXController.cs" />
     <Compile Include="Areas\Business\Controllers\CXLB\SWFWCXController.cs" />
     <Compile Include="Areas\Business\Controllers\CXLB\ZSJMCXController.cs" />
@@ -1879,6 +1908,7 @@
     <Compile Include="Areas\Business\Controllers\XXXX\HQSYXXController.cs" />
     <Compile Include="Areas\Business\Controllers\XXXX\LRXXController.cs" />
     <Compile Include="Areas\Business\Controllers\XXXX\LYJDXXController.cs" />
+    <Compile Include="Areas\Business\Controllers\XXXX\XXYLXXController.cs" />
     <Compile Include="Areas\Business\Controllers\XXXX\ZXJCXXController.cs" />
     <Compile Include="Areas\Business\Controllers\XXXX\SWFWXXController.cs" />
     <Compile Include="Areas\Business\Controllers\XXXX\ZSJMXXController.cs" />
@@ -2521,6 +2551,8 @@
   <ItemGroup>
     <Folder Include="Areas\Business\Photos\" />
     <Folder Include="Areas\Business\QRCode\" />
+    <Folder Include="Areas\Business\Views\XXYLCX\" />
+    <Folder Include="Areas\Business\Views\XXYLXX\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TianWen.XiaoZhen1Qu.Entities\TianWen.XiaoZhen1Qu.Entities.csproj">

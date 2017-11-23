@@ -577,4 +577,24 @@ function OpenCXLB(lbid, typename, condition) {
         window.open(getRootPath() + "/Business/LYJDCX/LYJDCX_JP?LBID=" + lbid);
     if (lbid === 252)
         window.open(getRootPath() + "/Business/LYJDCX/LYJDCX_DYDDR?LBID=" + lbid);
+    //休闲娱乐
+    if (lbid === 172)
+        window.open(getRootPath() + "/Business/XXYLCX/XXYLCX_YDJS?LBID=" + lbid);
+    if (lbid === 173)
+        window.open(getRootPath() + "/Business/XXYLCX/XXYLCX_YDJB?LBID=" + lbid);
+    if (lbid === 175)
+        window.open(getRootPath() + "/Business/XXYLCX/XXYLCX_HW?LBID=" + lbid);
+    if (lbid === 176)
+        window.open(getRootPath() + "/Business/XXYLCX/XXYLCX_XYWQ?LBID=" + lbid);
+    if (lbid === 177)
+        window.open(getRootPath() + "/Business/XXYLCX/XXYLCX_ZLAM?LBID=" + lbid);
+    if (lbid === 178)
+        window.open(getRootPath() + "/Business/XXYLCX/XXYLCX_TQT?LBID=" + lbid);
+    if (lbid === 179)
+        window.open(getRootPath() + "/Business/XXYLCX/XXYLCX_QPZY?LBID=" + lbid);
+    if (lbid === 180)
+        window.open(getRootPath() + "/Business/XXYLCX/XXYLCX_DIYSGF?LBID=" + lbid);
+    if (lbid === 182)
+        window.open(getRootPath() + "/Business/XXYLCX/XXYLCX_HPG?LBID=" + lbid);
+
 }

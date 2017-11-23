@@ -615,13 +615,10 @@ insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CO
 values (226, null, '跟团', 6, 214, null, 'SHFW', null, null, '生活服务');
 
 insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME)
-values (227, null, '休闲娱乐', 1, 171, null, 'SHFW', null, null, '生活服务');
+values (227, 172, '运动健身', 1, 171, null, 'SHFW', null, null, '生活服务');
 
 insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME)
-values (228, null, '运动健身', 2, 171, null, 'SHFW', null, null, '生活服务');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME)
-values (229, null, '按摩足浴', 3, 171, null, 'SHFW', null, null, '生活服务');
+values (228, 173, '夜店/酒吧/迪厅/KTV', 2, 171, null, 'SHFW', null, null, '生活服务');
 
 insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME)
 values (230, 215, '美体瘦身', 1, 172, null, 'SHFW', null, null, '生活服务');
@@ -979,6 +976,27 @@ values (2141, 251, '机票', 6, 170, null, 'SHFW', null, null, '生活服务');
 
 insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME)
 values (2142, 252, '导游/当地人', 7, 170, null, 'SHFW', null, null, '生活服务');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME)
+values (2281, 175, '户外', 3, 171, null, 'SHFW', null, null, '生活服务');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME)
+values (2282, 176, '洗浴温泉', 4, 171, null, 'SHFW', null, null, '生活服务');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME)
+values (2283, 177, '足疗按摩', 5, 171, null, 'SHFW', null, null, '生活服务');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME)
+values (2284, 178, '台球厅', 6, 171, null, 'SHFW', null, null, '生活服务');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME)
+values (2285, 179, '棋牌桌游', 7, 171, null, 'SHFW', null, null, '生活服务');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME)
+values (2286, 180, 'DIY手工坊', 8, 171, null, 'SHFW', null, null, '生活服务');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME)
+values (2287, 182, '轰趴馆', 9, 171, null, 'SHFW', null, null, '生活服务');
 
 insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME)
 values (2341, 219, '美发护发', 6, 172, null, 'SHFW', null, null, '生活服务');
