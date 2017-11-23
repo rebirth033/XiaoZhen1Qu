@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
 using System.Web.Mvc;
 using CommonClassLib.Helper;
 using TianWen.XiaoZhen1Qu.Entities.Models;
@@ -69,11 +66,11 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             string fwzp = Request["FWZP"];
             JCXX jcxx = CreateJCXX(yhjbxx, json);
             LYJD_CJYJBXX LYJD_CJYjbxx = JsonHelper.ConvertJsonToObject<LYJD_CJYJBXX>(json);
-            LYJD_CJYjbxx.XLTS = xlts;
-            LYJD_CJYjbxx.XCAP = xcap;
-            LYJD_CJYjbxx.YDXZ = ydxz;
-            LYJD_CJYjbxx.FYBH = fybh;
-            LYJD_CJYjbxx.ZFXM = zfxm;
+            LYJD_CJYjbxx.XLTS = BinaryHelper.StringToBinary(xlts);
+            LYJD_CJYjbxx.XCAP = BinaryHelper.StringToBinary(xcap);
+            LYJD_CJYjbxx.YDXZ = BinaryHelper.StringToBinary(ydxz);
+            LYJD_CJYjbxx.FYBH = BinaryHelper.StringToBinary(fybh);
+            LYJD_CJYjbxx.ZFXM = BinaryHelper.StringToBinary(zfxm);
             List<PHOTOS> photos = GetTP(fwzp);
             object result = LYJD_BLL.SaveLYJD_CJYJBXX(jcxx, LYJD_CJYjbxx, photos);
             return Json(result);
@@ -105,11 +102,11 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             string fwzp = Request["FWZP"];
             JCXX jcxx = CreateJCXX(yhjbxx, json);
             LYJD_GNYJBXX LYJD_GNYjbxx = JsonHelper.ConvertJsonToObject<LYJD_GNYJBXX>(json);
-            LYJD_GNYjbxx.XLTS = xlts;
-            LYJD_GNYjbxx.XCAP = xcap;
-            LYJD_GNYjbxx.YDXZ = ydxz;
-            LYJD_GNYjbxx.FYBH = fybh;
-            LYJD_GNYjbxx.ZFXM = zfxm;
+            LYJD_GNYjbxx.XLTS = BinaryHelper.StringToBinary(xlts);
+            LYJD_GNYjbxx.XCAP = BinaryHelper.StringToBinary(xcap);
+            LYJD_GNYjbxx.YDXZ = BinaryHelper.StringToBinary(ydxz);
+            LYJD_GNYjbxx.FYBH = BinaryHelper.StringToBinary(fybh);
+            LYJD_GNYjbxx.ZFXM = BinaryHelper.StringToBinary(zfxm);
             List<PHOTOS> photos = GetTP(fwzp);
             object result = LYJD_BLL.SaveLYJD_GNYJBXX(jcxx, LYJD_GNYjbxx, photos);
             return Json(result);
@@ -161,11 +158,11 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         {
             YHJBXX yhjbxx = LYJD_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
-            string fwjs = Request["FWJS"];
+            string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
             JCXX jcxx = CreateJCXX(yhjbxx, json);
             LYJD_ZBYJBXX LYJD_ZBYjbxx = JsonHelper.ConvertJsonToObject<LYJD_ZBYJBXX>(json);
-            LYJD_ZBYjbxx.FWJS = fwjs;
+            LYJD_ZBYjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
             object result = LYJD_BLL.SaveLYJD_ZBYJBXX(jcxx, LYJD_ZBYjbxx, photos);
             return Json(result);

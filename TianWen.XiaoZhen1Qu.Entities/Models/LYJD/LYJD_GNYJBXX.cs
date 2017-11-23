@@ -26,7 +26,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// 线路特色
         /// </summary>
         [Property]
-        public virtual string XLTS { get; set; }
+        public virtual Byte[] XLTS { get; set; }
 
         /// <summary>
         /// 出游方式
@@ -68,13 +68,13 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// 行程安排
         /// </summary>
         [Property]
-        public virtual string XCAP { get; set; }
+        public virtual Byte[] XCAP { get; set; }
 
         /// <summary>
         /// 预定须知
         /// </summary>
         [Property]
-        public virtual string YDXZ { get; set; }
+        public virtual Byte[] YDXZ { get; set; }
 
         /// <summary>
         /// 门市价
@@ -98,13 +98,13 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// 费用包含
         /// </summary>
         [Property]
-        public virtual string FYBH { get; set; }
+        public virtual Byte[] FYBH { get; set; }
 
         /// <summary>
         /// 自费项目
         /// </summary>
         [Property]
-        public virtual string ZFXM { get; set; }
+        public virtual Byte[] ZFXM { get; set; }
         /// <summary>
         /// 区域
         /// </summary>

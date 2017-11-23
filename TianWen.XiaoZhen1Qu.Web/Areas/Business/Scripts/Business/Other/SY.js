@@ -562,4 +562,19 @@ function OpenCXLB(lbid, typename, condition) {
         window.open(getRootPath() + "/Business/LRCX/LRCX_KQHL?LBID=" + lbid);
     if (lbid === 223)
         window.open(getRootPath() + "/Business/LRCX/LRCX_TJ?LBID=" + lbid);
+    //旅游酒店
+    if (lbid === 246)
+        window.open(getRootPath() + "/Business/LYJDCX/LYJDCX_LXS?LBID=" + lbid);
+    if (lbid === 247)
+        window.open(getRootPath() + "/Business/LYJDCX/LYJDCX_GNY?LBID=" + lbid);
+    if (lbid === 248)
+        window.open(getRootPath() + "/Business/LYJDCX/LYJDCX_ZBY?LBID=" + lbid);
+    if (lbid === 249)
+        window.open(getRootPath() + "/Business/LYJDCX/LYJDCX_CJY?LBID=" + lbid);
+    if (lbid === 250)
+        window.open(getRootPath() + "/Business/LYJDCX/LYJDCX_JDZSYD?LBID=" + lbid);
+    if (lbid === 251)
+        window.open(getRootPath() + "/Business/LYJDCX/LYJDCX_JP?LBID=" + lbid);
+    if (lbid === 252)
+        window.open(getRootPath() + "/Business/LYJDCX/LYJDCX_DYDDR?LBID=" + lbid);
 }

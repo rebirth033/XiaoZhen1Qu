@@ -65,4 +65,9 @@
       <ref object="LRCXBLL"/>
     </property>
   </object>
+  <object id="LYJDXXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.LYJDXXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="LYJDCXBLL">
+      <ref object="LYJDCXBLL"/>
+    </property>
+  </object>
 </objects>

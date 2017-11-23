@@ -6,8 +6,6 @@ var zfxm = UE.getEditor('ZFXM');
 $(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
     BindClick("CYFS");
-    BindClick("QY");
-    BindClick("DD");
     BindClick("WFJT_Q");
     BindClick("WFJT_H");
     BindClick("XCTS_R");
@@ -46,12 +44,6 @@ function BindClick(type) {
         if (type === "XCTS_W") {
             LoadCODESByTYPENAME("行程安排_晚", "XCTS_W", "CODES_LYJD", Bind, "XCTS", "XCTS_W", "");
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
     });
 }
 //加载旅游酒店_国内游基本信息
@@ -71,12 +63,11 @@ function LoadLYJD_GNYJBXX() {
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
                 $("#ID").val(xml.Value.LYJD_GNYJBXX.ID);
                 //设置编辑器的内容
-                xlts.ready(function () { xlts.setContent(xml.Value.LYJD_GNYJBXX.XLTS); });
-                xcap.ready(function () { xcap.setContent(xml.Value.LYJD_GNYJBXX.XCAP); });
-                if (xml.Value.LYJD_GNYJBXX.YDXZ !== null)
-                ydxz.ready(function () { ydxz.setContent(xml.Value.LYJD_GNYJBXX.YDXZ); });
-                fybh.ready(function () { fybh.setContent(xml.Value.LYJD_GNYJBXX.FYBH); });
-                zfxm.ready(function () { zfxm.setContent(xml.Value.LYJD_GNYJBXX.ZFXM); });
+                xlts.ready(function () { xlts.setContent(xml.Value.XLTSString); });
+                xcap.ready(function () { xcap.setContent(xml.Value.XCAPString); });
+                ydxz.ready(function () { ydxz.setContent(xml.Value.YDXZString); });
+                fybh.ready(function () { fybh.setContent(xml.Value.FYBHString); });
+                zfxm.ready(function () { zfxm.setContent(xml.Value.ZFXMString); });
 
                 $("#spanCYFS").html(xml.Value.LYJD_GNYJBXX.CYFS);
                 $("#spanWFJT_Q").html(xml.Value.LYJD_GNYJBXX.WFJT_Q);

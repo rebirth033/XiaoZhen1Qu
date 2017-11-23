@@ -6,8 +6,6 @@
     BindClick("DCDY");
     BindClick("DCRL");
     BindClick("XJ");
-    BindClick("QY");
-    BindClick("DD");
 });
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
@@ -26,12 +24,6 @@ function BindClick(type) {
         }
         if (type === "XJ") {
             LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM", Bind, "XJCD", "XJ", "");
-        }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
         }
     });
 }
@@ -57,10 +49,7 @@ function LoadCL_DDCJBXX() {
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
                 $("#ID").val(xml.Value.CL_DDCJBXX.ID);
                 //设置编辑器的内容
-                ue.ready(function () {
-                    ue.setHeight(200);
-                    ue.setContent(xml.Value.BCMSString);
-                });
+                ue.ready(function () { ue.setHeight(200); ue.setContent(xml.Value.BCMSString); });
                 $("#spanLB").html(xml.Value.CL_DDCJBXX.LB);
                 $("#spanPP").html(xml.Value.CL_DDCJBXX.PP);
                 $("#spanXJ").html(xml.Value.CL_DDCJBXX.XJ);

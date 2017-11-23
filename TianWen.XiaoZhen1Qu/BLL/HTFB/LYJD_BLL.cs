@@ -56,7 +56,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 if (LYJD_CJYJBXX != null)
                 {
                     JCXX jcxx = GetJCXXByID(LYJD_CJYJBXX.JCXXID);
-                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { LYJD_CJYJBXX = LYJD_CJYJBXX,  JCXX = jcxx, Photos = GetPhtosByJCXXID(LYJD_CJYJBXX.JCXXID) } };
+                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { LYJD_CJYJBXX = LYJD_CJYJBXX, XLTSString = BinaryHelper.BinaryToString(LYJD_CJYJBXX.XLTS), XCAPString = BinaryHelper.BinaryToString(LYJD_CJYJBXX.XCAP), YDXZString = BinaryHelper.BinaryToString(LYJD_CJYJBXX.YDXZ), FYBHString = BinaryHelper.BinaryToString(LYJD_CJYJBXX.FYBH), ZFXMString = BinaryHelper.BinaryToString(LYJD_CJYJBXX.ZFXM),  JCXX = jcxx, Photos = GetPhtosByJCXXID(LYJD_CJYJBXX.JCXXID) } };
                 }
                 else
                 {
@@ -180,7 +180,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 if (LYJD_GNYJBXX != null)
                 {
                     JCXX jcxx = GetJCXXByID(LYJD_GNYJBXX.JCXXID);
-                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { LYJD_GNYJBXX = LYJD_GNYJBXX, JCXX = jcxx, Photos = GetPhtosByJCXXID(LYJD_GNYJBXX.JCXXID) } };
+                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { LYJD_GNYJBXX = LYJD_GNYJBXX, XLTSString = BinaryHelper.BinaryToString(LYJD_GNYJBXX.XLTS), XCAPString = BinaryHelper.BinaryToString(LYJD_GNYJBXX.XCAP), YDXZString = BinaryHelper.BinaryToString(LYJD_GNYJBXX.YDXZ), FYBHString = BinaryHelper.BinaryToString(LYJD_GNYJBXX.FYBH), ZFXMString = BinaryHelper.BinaryToString(LYJD_GNYJBXX.ZFXM), JCXX = jcxx, Photos = GetPhtosByJCXXID(LYJD_GNYJBXX.JCXXID) } };
                 }
                 else
                 {
@@ -428,7 +428,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 if (LYJD_ZBYJBXX != null)
                 {
                     JCXX jcxx = GetJCXXByID(LYJD_ZBYJBXX.JCXXID);
-                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { LYJD_ZBYJBXX = LYJD_ZBYJBXX, JCXX = jcxx, Photos = GetPhtosByJCXXID(LYJD_ZBYJBXX.JCXXID) } };
+                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { LYJD_ZBYJBXX = LYJD_ZBYJBXX, BCMSString = BinaryHelper.BinaryToString(LYJD_ZBYJBXX.BCMS), JCXX = jcxx, Photos = GetPhtosByJCXXID(LYJD_ZBYJBXX.JCXXID) } };
                 }
                 else
                 {

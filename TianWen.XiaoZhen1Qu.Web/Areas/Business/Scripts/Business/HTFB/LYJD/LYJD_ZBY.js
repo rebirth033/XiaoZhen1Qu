@@ -1,8 +1,6 @@
-﻿var fwjs = UE.getEditor('BCMS');
+﻿var bcms = UE.getEditor('BCMS');
 $(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
-    BindClick("QY");
-    BindClick("DD");
     BindClick("XCTS_R");
     LoadDuoX("游玩项目", "YWXM");
 });
@@ -52,12 +50,7 @@ function LoadDuoX(type, id) {
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+
     });
 }
 //加载旅游酒店_周边游基本信息
@@ -77,11 +70,12 @@ function LoadLYJD_ZBYJBXX() {
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
                 $("#ID").val(xml.Value.LYJD_ZBYJBXX.ID);
                 //设置编辑器的内容
-                fwjs.ready(function () { fwjs.setContent(xml.Value.LYJD_ZBYJBXX.FWJS); });
-                $("#spanXCTS_R").html(xml.Value.LYJD_ZBYJBXX.XCTS_R);
+                bcms.ready(function () { bcms.setContent(xml.Value.BCMSString); });
                 $("#spanQY").html(xml.Value.LYJD_ZBYJBXX.QY);
                 $("#spanDD").html(xml.Value.LYJD_ZBYJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
+                if (xml.Value.LYJD_ZBYJBXX.XCTS_R !== null)
+                    SetDX("XCTS", xml.Value.LYJD_ZBYJBXX.XCTS_R);
                 if (xml.Value.LYJD_ZBYJBXX.CYFS !== null)
                     SetDX("CYFS", xml.Value.LYJD_ZBYJBXX.CYFS);
                 if (xml.Value.LYJD_ZBYJBXX.YWXM !== null)
@@ -101,7 +95,7 @@ function FB() {
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
-    obj = jsonObj.AddJson(obj, "XCTS_R", "'" + $("#spanXCTS_R").html() + "'");
+    obj = jsonObj.AddJson(obj, "XCTS_R", "'" + GetDX("XCTS") + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
@@ -119,7 +113,7 @@ function FB() {
         data:
         {
             Json: jsonObj.JsonToString(obj),
-            FWJS: fwjs.getContent(),
+            BCMS: bcms.getContent(),
             FWZP: GetPhotoUrls()
         },
         success: function (xml) {

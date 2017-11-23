@@ -161,6 +161,7 @@
     <Content Include="Areas\Business\Css\BZZX\BZZX_SY_ZHMM.css" />
     <Content Include="Areas\Business\Css\BZZX\BZZX_WZJY.css" />
     <Content Include="Areas\Business\Css\Common\Head.css" />
+    <Content Include="Areas\Business\Css\CXLB\LYJDCX.css" />
     <Content Include="Areas\Business\Css\CXLB\SWFWCX.css" />
     <Content Include="Areas\Business\Css\CXLB\PFCGCX.css" />
     <Content Include="Areas\Business\Css\CXLB\JYPXCX.css" />
@@ -640,6 +641,13 @@
     <Content Include="Areas\Business\Css\XXXX\LR\LRXX_KQHL.css" />
     <Content Include="Areas\Business\Css\XXXX\LR\LRXX_TJ.css" />
     <Content Include="Areas\Business\Css\XXXX\LR\LRXX_MTSS.css" />
+    <Content Include="Areas\Business\Css\XXXX\LYJD\LYJDXX_GNY.css" />
+    <Content Include="Areas\Business\Css\XXXX\LYJD\LYJDXX_ZBY.css" />
+    <Content Include="Areas\Business\Css\XXXX\LYJD\LYJDXX_CJY.css" />
+    <Content Include="Areas\Business\Css\XXXX\LYJD\LYJDXX_JDZSYD.css" />
+    <Content Include="Areas\Business\Css\XXXX\LYJD\LYJDXX_JP.css" />
+    <Content Include="Areas\Business\Css\XXXX\LYJD\LYJDXX_DYDDR.css" />
+    <Content Include="Areas\Business\Css\XXXX\LYJD\LYJDXX_LXS.css" />
     <Content Include="Areas\Business\Css\XXXX\NLMFY\NLMFYXX_NZW.css" />
     <Content Include="Areas\Business\Css\XXXX\NLMFY\NLMFYXX_DZWZM.css" />
     <Content Include="Areas\Business\Css\XXXX\NLMFY\NLMFYXX_CQYZ.css" />
@@ -830,6 +838,13 @@
     <Content Include="Areas\Business\Scripts\Business\CXLB\LRCX\LRCX_KQHL.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\LRCX\LRCX_TJ.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\LRCX\LRCX_MTSS.js" />
+    <Content Include="Areas\Business\Scripts\Business\CXLB\LYJDCX\LYJDCX_GNY.js" />
+    <Content Include="Areas\Business\Scripts\Business\CXLB\LYJDCX\LYJDCX_ZBY.js" />
+    <Content Include="Areas\Business\Scripts\Business\CXLB\LYJDCX\LYJDCX_CJY.js" />
+    <Content Include="Areas\Business\Scripts\Business\CXLB\LYJDCX\LYJDCX_JDZSYD.js" />
+    <Content Include="Areas\Business\Scripts\Business\CXLB\LYJDCX\LYJDCX_JP.js" />
+    <Content Include="Areas\Business\Scripts\Business\CXLB\LYJDCX\LYJDCX_DYDDR.js" />
+    <Content Include="Areas\Business\Scripts\Business\CXLB\LYJDCX\LYJDCX_LXS.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\NLMFYCX\NLMFYCX_NZW.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\NLMFYCX\NLMFYCX_DZWZM.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\NLMFYCX\NLMFYCX_CQYZ.js" />
@@ -1433,6 +1448,13 @@
     <Content Include="Areas\Business\Scripts\Business\XXXX\LRXX\LRXX_KQHL.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\LRXX\LRXX_TJ.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\LRXX\LRXX_MTSS.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\LYJDXX\LYJDXX_GNY.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\LYJDXX\LYJDXX_ZBY.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\LYJDXX\LYJDXX_CJY.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\LYJDXX\LYJDXX_JDZSYD.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\LYJDXX\LYJDXX_JP.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\LYJDXX\LYJDXX_DYDDR.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\LYJDXX\LYJDXX_LXS.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\NLMFYXX\NLMFYXX_NZW.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\NLMFYXX\NLMFYXX_DZWZM.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\NLMFYXX\NLMFYXX_CQYZ.js" />
@@ -1804,6 +1826,7 @@
       <DependentUpon>png.aspx</DependentUpon>
     </Compile>
     <Compile Include="Areas\Business\BusinessAreaRegistration.cs" />
+    <Compile Include="Areas\Business\Controllers\CXLB\LYJDCXController.cs" />
     <Compile Include="Areas\Business\Controllers\CXLB\PFCGCXController.cs" />
     <Compile Include="Areas\Business\Controllers\CXLB\JYPXCXController.cs" />
     <Compile Include="Areas\Business\Controllers\CXLB\NLMFYCXController.cs" />
@@ -1855,6 +1878,7 @@
     <Compile Include="Areas\Business\Controllers\XXXX\NLMFYXXController.cs" />
     <Compile Include="Areas\Business\Controllers\XXXX\HQSYXXController.cs" />
     <Compile Include="Areas\Business\Controllers\XXXX\LRXXController.cs" />
+    <Compile Include="Areas\Business\Controllers\XXXX\LYJDXXController.cs" />
     <Compile Include="Areas\Business\Controllers\XXXX\ZXJCXXController.cs" />
     <Compile Include="Areas\Business\Controllers\XXXX\SWFWXXController.cs" />
     <Compile Include="Areas\Business\Controllers\XXXX\ZSJMXXController.cs" />
@@ -2472,6 +2496,20 @@
     <Content Include="Areas\Business\Views\LRXX\LRXX_MJ.cshtml" />
     <Content Include="Areas\Business\Views\LRXX\LRXX_WS.cshtml" />
     <Content Include="Areas\Business\Views\LRXX\LRXX_TJ.cshtml" />
+    <Content Include="Areas\Business\Views\LYJDCX\LYJDCX_LXS.cshtml" />
+    <Content Include="Areas\Business\Views\LYJDXX\LYJDXX_LXS.cshtml" />
+    <Content Include="Areas\Business\Views\LYJDCX\LYJDCX_DYDDR.cshtml" />
+    <Content Include="Areas\Business\Views\LYJDCX\LYJDCX_GNY.cshtml" />
+    <Content Include="Areas\Business\Views\LYJDCX\LYJDCX_ZBY.cshtml" />
+    <Content Include="Areas\Business\Views\LYJDCX\LYJDCX_CJY.cshtml" />
+    <Content Include="Areas\Business\Views\LYJDCX\LYJDCX_JDZSYD.cshtml" />
+    <Content Include="Areas\Business\Views\LYJDCX\LYJDCX_JP.cshtml" />
+    <Content Include="Areas\Business\Views\LYJDXX\LYJDXX_DYDDR.cshtml" />
+    <Content Include="Areas\Business\Views\LYJDXX\LYJDXX_GNY.cshtml" />
+    <Content Include="Areas\Business\Views\LYJDXX\LYJDXX_ZBY.cshtml" />
+    <Content Include="Areas\Business\Views\LYJDXX\LYJDXX_CJY.cshtml" />
+    <Content Include="Areas\Business\Views\LYJDXX\LYJDXX_JDZSYD.cshtml" />
+    <Content Include="Areas\Business\Views\LYJDXX\LYJDXX_JP.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

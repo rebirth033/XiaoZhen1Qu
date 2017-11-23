@@ -43,6 +43,8 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_CL_JC>(String.Format("FROM CODES_CL_JC WHERE PARENTID = '{0}' ORDER BY CODEORDER", ParentID)) };
                 if (TBName == "CODES_CW")
                     return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_CW>(String.Format("FROM CODES_CW WHERE PARENTID = '{0}' ORDER BY CODEORDER", ParentID)) };
+                if (TBName == "CODES_LYJD")
+                    return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_LYJD>(String.Format("FROM CODES_LYJD WHERE PARENTID = '{0}' ORDER BY CODEORDER", ParentID)) };
                 if (TBName == "CODES_ZXJC")
                     return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_ZXJC>(String.Format("FROM CODES_ZXJC WHERE PARENTID = '{0}' ORDER BY CODEORDER", ParentID)) };
                 if (TBName == "CODES_ZSJM")
@@ -315,7 +317,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     string[] array = conditions[i].Split(':');
                     if (array[1] != "不限")
                     {
-                        if (array[0] == "ZJ" || array[0] == "JG" || array[0] == "SJ" || array[0] == "PFM" || array[0] == "MJ" || array[0] == "NL")
+                        if (array[0] == "ZJ" || array[0] == "JG" || array[0] == "SJ" || array[0] == "PFM" || array[0] == "MJ" || array[0] == "NL" || array[0] == "MSJ")
                         {
                             if (array[1].Contains("万元"))
                             {
@@ -404,6 +406,24 @@ namespace TianWen.XiaoZhen1Qu.BLL
                                 else
                                 {
                                     string zjxx = array[1].Substring(0, array[1].IndexOf("套"));
+                                    condition.AppendFormat(" and {0} <= {1}", array[0], zjxx);
+                                }
+                            }
+                            else if (array[1].Contains("日游"))
+                            {
+                                if (array[1].Contains("-"))
+                                {
+                                    string[] zjarray = array[1].Substring(0, array[1].IndexOf("日游")).Split('-');
+                                    condition.AppendFormat(" and {0} >= {1} and {0} <= {2}", array[0], zjarray[0], zjarray[1]);
+                                }
+                                else if (array[1].Contains("及以上"))
+                                {
+                                    string zjsx = array[1].Substring(0, array[1].IndexOf("日游"));
+                                    condition.AppendFormat(" and {0} >= {1}", array[0], zjsx);
+                                }
+                                else
+                                {
+                                    string zjxx = array[1].Substring(0, array[1].IndexOf("日游"));
                                     condition.AppendFormat(" and {0} <= {1}", array[0], zjxx);
                                 }
                             }
