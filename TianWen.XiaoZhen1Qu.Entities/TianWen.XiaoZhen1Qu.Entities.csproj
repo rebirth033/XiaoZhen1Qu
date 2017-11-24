@@ -224,7 +224,7 @@
     <Compile Include="Maps\SHFW\SHFW_WXFW_JDWXJBXX_Map.cs" />
     <Compile Include="Maps\SHFW\SHFW_WXFW_JJWXJBXX_Map.cs" />
     <Compile Include="Maps\SHFW\SHFW_SHFW_KSHSXSJBXX_Map.cs" />
-    <Compile Include="Maps\SHFW\SHFW_SHFW_QMFSSMJBXX_Map.cs" />
+    <Compile Include="Maps\SWFW\SWFW_QMFSSMJBXX_Map.cs" />
     <Compile Include="Maps\SHFW\SHFW_SHFW_SHPSJBXX_Map.cs" />
     <Compile Include="Maps\SHFW\SHFW_WXFW_SJSMWXJBXX_Map.cs" />
     <Compile Include="Maps\SWFW\SWFW_BGSBWXJBXX_Map.cs" />
@@ -467,7 +467,7 @@
     <Compile Include="Models\SHFW\SHFW_WXFW_JDWXJBXX.cs" />
     <Compile Include="Models\SHFW\SHFW_WXFW_JJWXJBXX.cs" />
     <Compile Include="Models\SHFW\SHFW_SHFW_KSHSXSJBXX.cs" />
-    <Compile Include="Models\SHFW\SHFW_SHFW_QMFSSMJBXX.cs" />
+    <Compile Include="Models\SWFW\SWFW_QMFSSMJBXX.cs" />
     <Compile Include="Models\SHFW\SHFW_SHFW_SHPSJBXX.cs" />
     <Compile Include="Models\SHFW\SHFW_WXFW_SJSMWXJBXX.cs" />
     <Compile Include="Models\BinaryHelper.cs" />

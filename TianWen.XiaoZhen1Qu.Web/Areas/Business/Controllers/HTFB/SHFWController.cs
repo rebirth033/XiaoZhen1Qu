@@ -98,12 +98,6 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             ViewData["YHM"] = Session["YHM"];
             return View();
         }
-        public ActionResult SHFW_SHFW_QMFSSM()
-        {
-            ViewData["XZQ"] = Session["XZQ"];
-            ViewData["YHM"] = Session["YHM"];
-            return View();
-        }
         public ActionResult SHFW_SHFW_SHPS()
         {
             ViewData["XZQ"] = Session["XZQ"];
@@ -338,20 +332,6 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return Json(result);
         }
         [ValidateInput(false)]
-        public JsonResult FBSHFW_SHFW_QMFSSMJBXX()
-        {
-            YHJBXX yhjbxx = SHFW_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
-            string json = Request["Json"];
-            string bcms = Request["BCMS"];
-            string fwzp = Request["FWZP"];
-            JCXX jcxx = CreateJCXX(yhjbxx, json);
-            SHFW_SHFW_QMFSSMJBXX SHFW_SHFW_QMFSSMjbxx = JsonHelper.ConvertJsonToObject<SHFW_SHFW_QMFSSMJBXX>(json);
-            SHFW_SHFW_QMFSSMjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
-            List<PHOTOS> photos = GetTP(fwzp);
-            object result = SHFW_BLL.SaveSHFW_SHFW_QMFSSMJBXX(jcxx, SHFW_SHFW_QMFSSMjbxx, photos);
-            return Json(result);
-        }
-        [ValidateInput(false)]
         public JsonResult FBSHFW_SHFW_SHPSJBXX()
         {
             YHJBXX yhjbxx = SHFW_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
@@ -518,12 +498,6 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         {
             string ID = Request["ID"];
             object result = SHFW_BLL.LoadSHFW_SHFW_KSHSXSJBXX(ID);
-            return Json(result);
-        }
-        public JsonResult LoadSHFW_SHFW_QMFSSMJBXX()
-        {
-            string ID = Request["ID"];
-            object result = SHFW_BLL.LoadSHFW_SHFW_QMFSSMJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadSHFW_SHFW_SHPSJBXX()

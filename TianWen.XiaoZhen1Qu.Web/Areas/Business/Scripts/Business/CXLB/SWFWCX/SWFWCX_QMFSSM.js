@@ -1,31 +1,37 @@
 ﻿var currentIndex = 1;
 $(document).ready(function () {
     BindBodyNav();
-    LoadXXYLCondition();
-    LoadHot("XXYLXX_QPZY");
+    LoadSWFWCondition();
+    LoadHot("SWFWXX_QMFSSM");
 });
 //加载条件
-function LoadXXYLCondition() {
-    LoadConditionByTypeName("棋牌桌游", "CODES_XXYL", "类别", "LB");
+function LoadSWFWCondition() {
+    LoadConditionByTypeName("起名/风水/算命", "CODES_SWFW", "类别", "LB", 15);
     LoadDistrict("福州", "350100", "QY");
-    LoadBody("XXYLXX_QPZY", currentIndex);
+    LoadBody("SWFWXX_QMFSSM", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
+    if (name === "类别" && (obj.innerHTML === "起名" || obj.innerHTML === "风水")) {
+        LoadConditionByParentID(obj.id, "CODES_SWFW", "小类", "XL");
+    }
+    if (name === "类别" && (obj.innerHTML !== "起名" && obj.innerHTML !== "风水")) {
+        $("#ul_condition_body_XL").remove();
+    }
     $(obj).parent().find(".li_condition_body").each(function () {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
-    LoadBody("XXYLXX_QPZY", currentIndex);
-    ShowSelectCondition("XXYLXX_QPZY");
+    LoadBody("SWFWXX_QMFSSM", currentIndex);
+    ShowSelectCondition("SWFWXX_QMFSSM");
 }
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("LBx,QY");
+    var condition = GetAllCondition("LB,XL,SFSM,QY");
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/XXYLCX/LoadXXYLXX",
+        url: getRootPath() + "/Business/SWFWCX/LoadSWFWXX",
         dataType: "json",
         data:
         {
@@ -53,11 +59,11 @@ function LoadQZZPInfo(obj) {
     var html = "";
     html += ('<li class="li_body_left">');
     html += ('<div class="div_li_body_left_left">');
-    html += ('<img class="img_li_body_left" onclick="OpenXXXX(\'XXYLXX_QPZY\',\'' + obj.ID + '\')" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
+    html += ('<img class="img_li_body_left" onclick="OpenXXXX(\'SWFWXX_QMFSSM\',\'' + obj.ID + '\')" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<div class="div_img_li_body_left_count"><span>' + obj.PHOTOS.length + '图</span></div>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
-    html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'XXYLXX_QPZY\',\'' + obj.ID + '\')">' + obj.BT + '</p>');
+    html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'SWFWXX_QMFSSM\',\'' + obj.ID + '\')">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_left_center_cs">' + obj.MJ + '平米' + '</p>');
     html += ('<p class="p_li_body_left_center_dz">' + obj.XQMC + ' [' + obj.XQDZ + '] ' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
@@ -71,7 +77,7 @@ function LoadQZZPInfo(obj) {
 function LoadHot(TYPE) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/XXYLCX/LoadXXYLXX",
+        url: getRootPath() + "/Business/SWFWCX/LoadSWFWXX",
         dataType: "json",
         data:
         {
@@ -96,7 +102,7 @@ function LoadHot(TYPE) {
 //加载热门单条信息
 function LoadHotInfo(obj) {
     var html = "";
-    html += ('<li onclick="OpenXXXX(\'XXYLXX_XXYL\',\'' + obj.ID + '\')" class="li_body_right">');
+    html += ('<li onclick="OpenXXXX(\'SWFWCX_SWFW\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_right_xq">' + "服务项目:" + obj.LB + '</p>');
     html += ('<p class="p_li_body_right_cs">' + obj.QY + '-' + obj.DD + '</p>');

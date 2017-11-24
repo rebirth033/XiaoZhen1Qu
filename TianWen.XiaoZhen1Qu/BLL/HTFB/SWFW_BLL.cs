@@ -1685,5 +1685,67 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 };
             }
         }
+
+        public object SaveSWFW_QMFSSMJBXX(JCXX jcxx, SWFW_QMFSSMJBXX SWFW_QMFSSMJBXX, List<PHOTOS> photos)
+        {
+            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM SWFW_QMFSSMJBXX WHERE ID='{0}'", SWFW_QMFSSMJBXX.ID));
+            using (ITransaction transaction = DAO.BeginTransaction())
+            {
+                try
+                {
+                    if (dt.Rows.Count > 0)
+                    {
+                        SavePhotos(photos, dt.Rows[0]["JCXXID"].ToString());
+                        SWFW_QMFSSMJBXX.JCXXID = dt.Rows[0]["JCXXID"].ToString();
+                        jcxx.JCXXID = dt.Rows[0]["JCXXID"].ToString();
+                        DAO.Update(jcxx);
+                        DAO.Update(SWFW_QMFSSMJBXX);
+                        transaction.Commit();
+                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, ID = SWFW_QMFSSMJBXX.ID } };
+                    }
+                    else
+                    {
+                        SavePhotos(photos, jcxx.JCXXID);
+                        SWFW_QMFSSMJBXX.JCXXID = jcxx.JCXXID;
+                        DAO.Save(jcxx);
+                        DAO.Save(SWFW_QMFSSMJBXX);
+                        transaction.Commit();
+                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, ID = SWFW_QMFSSMJBXX.ID } };
+                    }
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    LoggerManager.Error("SWFW_QMFSSMJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                    return new { Result = EnResultType.Failed, Message = "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!", Type = 3 };
+                }
+            }
+        }
+
+        public object LoadSWFW_QMFSSMJBXX(string ID)
+        {
+            try
+            {
+                SWFW_QMFSSMJBXX SWFW_QMFSSMJBXX = DAO.GetObjectByID<SWFW_QMFSSMJBXX>(ID);
+                if (SWFW_QMFSSMJBXX != null)
+                {
+                    JCXX jcxx = GetJCXXByID(SWFW_QMFSSMJBXX.JCXXID);
+                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { SWFW_QMFSSMJBXX = SWFW_QMFSSMJBXX, BCMSString = BinaryHelper.BinaryToString(SWFW_QMFSSMJBXX.BCMS), JCXX = jcxx, Photos = GetPhtosByJCXXID(SWFW_QMFSSMJBXX.JCXXID) } };
+                }
+                else
+                {
+                    return new { Result = EnResultType.Failed, Message = "不存在" };
+                }
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("SWFW_QMFSSMJBXXBLL", "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                return new
+                {
+                    Result = EnResultType.Failed,
+                    Message = "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!"
+                };
+            }
+        }
     }
 }

@@ -1,9 +1,7 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
     BindClick("LB");
-    BindClick("QY");
-    BindClick("DD");
-    LoadSHFW_SHFW_QMFSSMJBXX();
+    LoadSWFW_QMFSSMJBXX();
 });
 //选择类别下拉框
 function SelectLB(obj, type, id) {
@@ -21,7 +19,7 @@ function LoadXL(lbmc, xl) {
         data:
         {
             TYPENAME: lbmc,
-            TBName: "CODES_SHFW"
+            TBName: "CODES_SWFW"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -57,21 +55,15 @@ function LoadXL(lbmc, xl) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("起名/风水/算命", "LB", "CODES_SHFW");
-        }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
+            LoadCODESByTYPENAME("起名/风水/算命", "LB", "CODES_SWFW");
         }
     });
 }
-//加载生活服务_起名/风水/算命基本信息
-function LoadSHFW_SHFW_QMFSSMJBXX() {
+//加载商务服务_起名/风水/算命基本信息
+function LoadSWFW_QMFSSMJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SHFW/LoadSHFW_SHFW_QMFSSMJBXX",
+        url: getRootPath() + "/Business/SWFW/LoadSWFW_QMFSSMJBXX",
         dataType: "json",
         data:
         {
@@ -80,20 +72,20 @@ function LoadSHFW_SHFW_QMFSSMJBXX() {
         success: function (xml) {
             if (xml.Result === 1) {
                 var jsonObj = new JsonDB("myTabContent");
-                jsonObj.DisplayFromJson("myTabContent", xml.Value.SHFW_SHFW_QMFSSMJBXX);
+                jsonObj.DisplayFromJson("myTabContent", xml.Value.SWFW_QMFSSMJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
-                $("#ID").val(xml.Value.SHFW_SHFW_QMFSSMJBXX.ID);
+                $("#ID").val(xml.Value.SWFW_QMFSSMJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.BCMSString);
                 });
-                $("#spanLB").html(xml.Value.SHFW_SHFW_QMFSSMJBXX.LB);
-                $("#spanQY").html(xml.Value.SHFW_SHFW_QMFSSMJBXX.QY);
-                $("#spanDD").html(xml.Value.SHFW_SHFW_QMFSSMJBXX.DD);
+                $("#spanLB").html(xml.Value.SWFW_QMFSSMJBXX.LB);
+                $("#spanQY").html(xml.Value.SWFW_QMFSSMJBXX.QY);
+                $("#spanDD").html(xml.Value.SWFW_QMFSSMJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
-                if (xml.Value.SHFW_SHFW_QMFSSMJBXX.LB.indexOf("起名") !== -1 || xml.Value.SHFW_SHFW_QMFSSMJBXX.LB.indexOf("风水") !== -1) {
-                    LoadXL(xml.Value.SHFW_SHFW_QMFSSMJBXX.LB, xml.Value.SHFW_SHFW_QMFSSMJBXX.XL);
+                if (xml.Value.SWFW_QMFSSMJBXX.LB.indexOf("起名") !== -1 || xml.Value.SWFW_QMFSSMJBXX.LB.indexOf("风水") !== -1) {
+                    LoadXL(xml.Value.SWFW_QMFSSMJBXX.LB, xml.Value.SWFW_QMFSSMJBXX.XL);
                 }
             }
         },
@@ -119,7 +111,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SHFW/FBSHFW_SHFW_QMFSSMJBXX",
+        url: getRootPath() + "/Business/SWFW/FBSWFW_QMFSSMJBXX",
         dataType: "json",
         data:
         {

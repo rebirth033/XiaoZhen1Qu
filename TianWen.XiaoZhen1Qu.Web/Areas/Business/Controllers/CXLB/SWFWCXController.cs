@@ -33,6 +33,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         public ActionResult SWFWCX_JXSBWX() { GetSession(); return View(); }
         public ActionResult SWFWCX_SYSX() { GetSession(); return View(); }
         public ActionResult SWFWCX_LYQD() { GetSession(); return View(); }
+        public ActionResult SWFWCX_QMFSSM() { GetSession(); return View(); }
 
         public JsonResult LoadSWFWXX()
         {

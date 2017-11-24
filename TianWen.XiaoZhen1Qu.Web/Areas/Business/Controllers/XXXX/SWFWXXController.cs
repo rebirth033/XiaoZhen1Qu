@@ -33,6 +33,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         public ActionResult SWFWXX_JXSBWX() { return View(); }
         public ActionResult SWFWXX_SYSX() { return View(); }
         public ActionResult SWFWXX_LYQD() { return View(); }
+        public ActionResult SWFWXX_QMFSSM() { return View(); }
 
         public JsonResult LoadSWFWXX()
         {

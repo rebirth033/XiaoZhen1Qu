@@ -175,6 +175,12 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             ViewData["YHM"] = Session["YHM"];
             return View();
         }
+        public ActionResult SWFW_QMFSSM()
+        {
+            ViewData["XZQ"] = Session["XZQ"];
+            ViewData["YHM"] = Session["YHM"];
+            return View();
+        }
 
         [ValidateInput(false)]
         public JsonResult FBSWFW_BGSBWXJBXX()
@@ -555,6 +561,20 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return Json(result);
         }
 
+        [ValidateInput(false)]
+        public JsonResult FBSWFW_QMFSSMJBXX()
+        {
+            YHJBXX yhjbxx = SWFW_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            string json = Request["Json"];
+            string bcms = Request["BCMS"];
+            string fwzp = Request["FWZP"];
+            JCXX jcxx = CreateJCXX(yhjbxx, json);
+            SWFW_QMFSSMJBXX SWFW_QMFSSMjbxx = JsonHelper.ConvertJsonToObject<SWFW_QMFSSMJBXX>(json);
+            SWFW_QMFSSMjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
+            List<PHOTOS> photos = GetTP(fwzp);
+            object result = SWFW_BLL.SaveSWFW_QMFSSMJBXX(jcxx, SWFW_QMFSSMjbxx, photos);
+            return Json(result);
+        }
         public JsonResult LoadSWFW_BGSBWXJBXX()
         {
             string ID = Request["ID"];
@@ -715,6 +735,12 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         {
             string ID = Request["ID"];
             object result = SWFW_BLL.LoadSWFW_ZXFWJBXX(ID);
+            return Json(result);
+        }
+        public JsonResult LoadSWFW_QMFSSMJBXX()
+        {
+            string ID = Request["ID"];
+            object result = SWFW_BLL.LoadSWFW_QMFSSMJBXX(ID);
             return Json(result);
         }
     }

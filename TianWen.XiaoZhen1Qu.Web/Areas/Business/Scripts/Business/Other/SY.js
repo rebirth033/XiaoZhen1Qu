@@ -507,6 +507,8 @@ function OpenCXLB(lbid, typename, condition) {
         window.open(getRootPath() + "/Business/SWFWCX/SWFWCX_SYSX?LBID=" + lbid);
     if (lbid === 210)
         window.open(getRootPath() + "/Business/SWFWCX/SWFWCX_LYQD?LBID=" + lbid);
+    if (lbid === 110)
+        window.open(getRootPath() + "/Business/SWFWCX/SWFWCX_QMFSSM?LBID=" + lbid);
     //装修建材
     if (lbid === 253)
         window.open(getRootPath() + "/Business/ZXJCCX/ZXJCCX_JZFW?LBID=" + lbid);
