@@ -1,8 +1,6 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
     BindClick("LB");
-    BindClick("QY");
-    BindClick("DD");
     LoadCL_ZCJBXX();
 });
 //选择类别下拉框
@@ -30,7 +28,7 @@ function LoadXL(lbmc, xl) {
         data:
         {
             TYPENAME: lbmc,
-            TBName: "CODES_SHFW"
+            TBName: "CODES_CL"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -66,13 +64,7 @@ function LoadXL(lbmc, xl) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("租车", "LB", "CODES_SHFW");
-        }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
+            LoadCODESByTYPENAME("租车", "LB", "CODES_CL");
         }
     });
 }
@@ -80,7 +72,7 @@ function BindClick(type) {
 function LoadCL_ZCJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SHFW/LoadCL_ZCJBXX",
+        url: getRootPath() + "/Business/CL/LoadCL_ZCJBXX",
         dataType: "json",
         data:
         {
@@ -130,7 +122,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SHFW/FBCL_ZCJBXX",
+        url: getRootPath() + "/Business/CL/FBCL_ZCJBXX",
         dataType: "json",
         data:
         {

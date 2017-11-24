@@ -1,11 +1,11 @@
 ﻿@{
-    ViewBag.Title = "CL_DJSJWP";
+    ViewBag.Title = "CL_JX";
     Layout = "~/Areas/Business/Views/Shared/HTFB.cshtml";
 }
 @section Section_Head {
-    <link href="@Url.Content("~/Areas/Business/Css/HTFB/SHFW/CL_DJSJWP.css")" rel="stylesheet" />
-    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/HTFB/SHFW/CL_DJSJWP.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/HTFB/SHFW/CL_DJSJWPYZ.js")"></script>
+    <link href="@Url.Content("~/Areas/Business/Css/HTFB/CL/CL_JX.css")" rel="stylesheet" />
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/HTFB/CL/CL_JX.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/HTFB/CL/CL_JXYZ.js")"></script>
 }
 @section Section_Body {
     <div id="myTabContent" class="div_content">
@@ -13,53 +13,54 @@
             <span class="span_split">基本信息</span>
             <em class="em_split"></em>
         </div>
-        <div id="divBT" class="div_row" style="margin-top: 22px;">
+        <div id="divBT" class="div_row" style="margin-top: 22px; z-index: 993;">
             <div class="div_row_left" style="margin-left: 128px;">
                 <span class="span_required">*</span>
                 <span id="spanBT">标题</span>
             </div>
             <div class="div_row_right">
-                <input id="BT" maxlength="50" column="BT" class="input_input SRK"  type="text" placeholder="吸引人的标题可让更多的人看您的信息喔"/>
+                <input id="BT" maxlength="50" column="BT" class="input_input SRK" style="width: 594px; padding: 6px 12px;" type="text" placeholder="吸引人的标题可让更多的人看您的信息喔"/>
                 <div id="divBTTip"></div>
             </div>
         </div>
-        <div id="divOUTLB" class="div_row" style="z-index: 996;">
+        <div id="divOUTLB" class="div_row">
             <div class="div_row_left" style="margin-left: 128px;">
                 <span class="span_required">*</span>
-                <span id="spanSJSJWPLB">类别</span>
+                <span class="spanFWCZ">类别</span>
             </div>
-            <div id="divSJSJWPLBText" class="div_row_right" style="position: relative;">
+            <div class="div_row_right">
+                <div class="div_radio" id="div_lb_jxzs">
+                    <img class="img_radio" id="img_lb_jxzs"/><label class="label_radio">驾校招生</label>
+                </div>
+                <div class="div_radio" id="div_lb_jlzs">
+                    <img class="img_radio" id="img_lb_jlzs"/><label class="label_radio">教练招生</label>
+                </div>
             </div>
             <div id="divOUTLBTip"></div>
         </div>
-        <div id="divJG" class="div_row" style="z-index: 992;">
+        <div id="divJZ" class="div_row" style="z-index: 993;">
             <div class="div_row_left" style="margin-left: 128px;">
                 <span class="span_required">*</span>
-                <span class="spanFWCZ">价格</span>
+                <span id="spanJZ">驾照</span>
             </div>
-            <div class="div_row_right">
-                <span id="spanJG" class="span_spaninput SRK" style="display: inline-block; width: 150px;">
-                        <input class="input_spaninput spaninput_fontcolor" id="JG" maxlength="9" column="JG" type="text" style="width: 120px" />
-                        <span class="spaninput_fontcolor">元</span>
-                    </span>
+            <div id="divJZText" class="div_row_right" style="position: relative;">
             </div>
-            <div id="divJGTip" class="Warn" style="z-index: 992; position: relative;"></div>
+            <div id="divJZTip"></div>
         </div>
-        <div id="divFWQY" class="div_row" style="z-index: 998">
-            <div class="div_row_left">
+        <div id="divBB" class="div_row" style="z-index: 993;">
+            <div class="div_row_left" style="margin-left: 128px;">
                 <span class="span_required">*</span>
-                <span id="spanFWQY">服务区域</span>
+                <span id="spanBB">班别</span>
             </div>
-            <div class="div_row_right">
-                <input id="FWQY" column="FWQY" class="span_spaninput input_input SRK" type="text" placeholder="请输入服务区域"/>
-                <div id="divFWQYTip"></div>
+            <div id="divBBText" class="div_row_right" style="position: relative;">
             </div>
+            <div id="divBBTip"></div>
         </div>
         <div id="divXXXX" class="div_split" style="display: block; text-align: left;">
-            <span class="span_split">特色描述</span>
+            <span class="span_split">服务描述</span>
             <em class="em_split"></em>
         </div>
-        <div id="divBCMS" class="div_row" style="height: 253px;">
+        <div id="divBCMS" class="div_row" style="height: 253px; position: relative; z-index: 998;">
             <div class="div_row_left" style="height: 170px; vertical-align: top;">
                 <span class="span_required" style="vertical-align: top">*</span>
                 <span id="spanBCMS" style="vertical-align: top">服务介绍</span>

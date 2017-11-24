@@ -1,7 +1,5 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
-    BindClick("QY");
-    BindClick("DD");
     LoadJZ();
 });
 //加载驾照
@@ -13,7 +11,7 @@ function LoadJZ() {
         data:
         {
             TYPENAME: "驾照",
-            TBName: "CODES_SHFW"
+            TBName: "CODES_CL"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -50,7 +48,7 @@ function LoadBB() {
         data:
         {
             TYPENAME: "班别",
-            TBName: "CODES_SHFW"
+            TBName: "CODES_CL"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -80,19 +78,14 @@ function LoadBB() {
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+
     });
 }
 //加载生活服务_驾校基本信息
 function LoadCL_JXJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SHFW/LoadCL_JXJBXX",
+        url: getRootPath() + "/Business/CL/LoadCL_JXJBXX",
         dataType: "json",
         data:
         {
@@ -141,7 +134,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SHFW/FBCL_JXJBXX",
+        url: getRootPath() + "/Business/CL/FBCL_JXJBXX",
         dataType: "json",
         data:
         {

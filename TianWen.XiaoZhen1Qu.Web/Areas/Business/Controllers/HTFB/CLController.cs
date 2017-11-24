@@ -13,55 +13,14 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
     public class CLController : BaseController
     {
         public ICL_BLL CL_BLL { get; set; }
-
-        public ActionResult CL_GCC()
-        {
-            ViewData["XZQ"] = Session["XZQ"];
-            ViewData["YHM"] = Session["YHM"];
-            return View();
-        }
-        public ActionResult CL_HC()
-        {
-            ViewData["XZQ"] = Session["XZQ"];
-            ViewData["YHM"] = Session["YHM"];
-            return View();
-        }
-        public ActionResult CL_JC()
-        {
-            ViewData["XZQ"] = Session["XZQ"];
-            ViewData["YHM"] = Session["YHM"];
-            return View();
-        }
-        public ActionResult CL_KC()
-        {
-            ViewData["XZQ"] = Session["XZQ"];
-            ViewData["YHM"] = Session["YHM"];
-            return View();
-        }
-        public ActionResult CL_MTC()
-        {
-            ViewData["XZQ"] = Session["XZQ"];
-            ViewData["YHM"] = Session["YHM"];
-            return View();
-        }
-        public ActionResult CL_ZXC()
-        {
-            ViewData["XZQ"] = Session["XZQ"];
-            ViewData["YHM"] = Session["YHM"];
-            return View();
-        }
-        public ActionResult CL_DDC()
-        {
-            ViewData["XZQ"] = Session["XZQ"];
-            ViewData["YHM"] = Session["YHM"];
-            return View();
-        }
-        public ActionResult CL_SLC()
-        {
-            ViewData["XZQ"] = Session["XZQ"];
-            ViewData["YHM"] = Session["YHM"];
-            return View();
-        }
+        public ActionResult CL_GCC() { ViewData["XZQ"] = Session["XZQ"]; ViewData["YHM"] = Session["YHM"]; return View(); }
+        public ActionResult CL_HC() { ViewData["XZQ"] = Session["XZQ"]; ViewData["YHM"] = Session["YHM"]; return View(); }
+        public ActionResult CL_JC() { ViewData["XZQ"] = Session["XZQ"]; ViewData["YHM"] = Session["YHM"]; return View(); }
+        public ActionResult CL_KC() { ViewData["XZQ"] = Session["XZQ"]; ViewData["YHM"] = Session["YHM"]; return View(); }
+        public ActionResult CL_MTC() { ViewData["XZQ"] = Session["XZQ"]; ViewData["YHM"] = Session["YHM"]; return View(); }
+        public ActionResult CL_ZXC() { ViewData["XZQ"] = Session["XZQ"]; ViewData["YHM"] = Session["YHM"]; return View(); }
+        public ActionResult CL_DDC() { ViewData["XZQ"] = Session["XZQ"]; ViewData["YHM"] = Session["YHM"]; return View(); }
+        public ActionResult CL_SLC() { ViewData["XZQ"] = Session["XZQ"]; ViewData["YHM"] = Session["YHM"]; return View(); }
         public ActionResult CL_DJSJWP() { ViewData["XZQ"] = Session["XZQ"]; ViewData["YHM"] = Session["YHM"]; return View(); }
         public ActionResult CL_QCGZFH() { ViewData["XZQ"] = Session["XZQ"]; ViewData["YHM"] = Session["YHM"]; return View(); }
         public ActionResult CL_GHSPNJYC() { ViewData["XZQ"] = Session["XZQ"]; ViewData["YHM"] = Session["YHM"]; return View(); }
@@ -298,55 +257,14 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return Json(result);
         }
 
-        public JsonResult LoadCL_GCCJBXX()
-        {
-            string ID = Request["ID"];
-            object result = CL_BLL.LoadCL_GCCJBXX(ID);
-            return Json(result);
-        }
-        public JsonResult LoadCL_HCJBXX()
-        {
-            string ID = Request["ID"];
-            object result = CL_BLL.LoadCL_HCJBXX(ID);
-            return Json(result);
-        }
-        public JsonResult LoadCL_JCJBXX()
-        {
-            string ID = Request["ID"];
-            object result = CL_BLL.LoadCL_JCJBXX(ID);
-            return Json(result);
-        }
-        public JsonResult LoadCL_KCJBXX()
-        {
-            string ID = Request["ID"];
-            object result = CL_BLL.LoadCL_KCJBXX(ID);
-            return Json(result);
-        }
-        public JsonResult LoadCL_MTCJBXX()
-        {
-            string ID = Request["ID"];
-            object result = CL_BLL.LoadCL_MTCJBXX(ID);
-            return Json(result);
-        }
-        public JsonResult LoadCL_ZXCJBXX()
-        {
-            string ID = Request["ID"];
-            object result = CL_BLL.LoadCL_ZXCJBXX(ID);
-            return Json(result);
-        }
-        public JsonResult LoadCL_DDCJBXX()
-        {
-            string ID = Request["ID"];
-            object result = CL_BLL.LoadCL_DDCJBXX(ID);
-            return Json(result);
-        }
-        public JsonResult LoadCL_SLCJBXX()
-        {
-            string ID = Request["ID"];
-            object result = CL_BLL.LoadCL_SLCJBXX(ID);
-            return Json(result);
-        }
-
+        public JsonResult LoadCL_GCCJBXX() { string ID = Request["ID"]; object result = CL_BLL.LoadCL_GCCJBXX(ID); return Json(result); }
+        public JsonResult LoadCL_HCJBXX() { string ID = Request["ID"]; object result = CL_BLL.LoadCL_HCJBXX(ID); return Json(result); }
+        public JsonResult LoadCL_JCJBXX() { string ID = Request["ID"]; object result = CL_BLL.LoadCL_JCJBXX(ID); return Json(result); }
+        public JsonResult LoadCL_KCJBXX() { string ID = Request["ID"]; object result = CL_BLL.LoadCL_KCJBXX(ID); return Json(result); }
+        public JsonResult LoadCL_MTCJBXX() { string ID = Request["ID"]; object result = CL_BLL.LoadCL_MTCJBXX(ID); return Json(result); }
+        public JsonResult LoadCL_ZXCJBXX() { string ID = Request["ID"]; object result = CL_BLL.LoadCL_ZXCJBXX(ID); return Json(result); }
+        public JsonResult LoadCL_DDCJBXX() { string ID = Request["ID"]; object result = CL_BLL.LoadCL_DDCJBXX(ID); return Json(result); }
+        public JsonResult LoadCL_SLCJBXX() { string ID = Request["ID"]; object result = CL_BLL.LoadCL_SLCJBXX(ID); return Json(result); }
         public JsonResult LoadCL_DJSJWPJBXX() { string ID = Request["ID"]; object result = CL_BLL.LoadCL_DJSJWPJBXX(ID); return Json(result); }
         public JsonResult LoadCL_GHSPNJYCJBXX() { string ID = Request["ID"]; object result = CL_BLL.LoadCL_GHSPNJYCJBXX(ID); return Json(result); }
         public JsonResult LoadCL_JXJBXX() { string ID = Request["ID"]; object result = CL_BLL.LoadCL_JXJBXX(ID); return Json(result); }

@@ -2,35 +2,27 @@
     $("body").bind("click", function () { Close("_XZQ"); });
     LoadCL_QCMRZSJBXX();
     BindClick("LB");
-    BindClick("QY");
-    BindClick("DD");
 });
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("汽车美容/装饰", "LB", "CODES_SHFW", Bind, "OUTLB", "LB", "");
+            LoadCODESByTYPENAME("汽车美容/装饰", "LB", "CODES_CL", Bind, "OUTLB", "LB", "");
         }
         if (type === "XCDD") {
-            LoadCODESByTYPENAME("洗车地点", "XCDD", "CODES_SHFW", Bind, "QCMRZSXCDD", "XCDD", "");
+            LoadCODESByTYPENAME("洗车地点", "XCDD", "CODES_CL", Bind, "QCMRZSXCDD", "XCDD", "");
         }
         if (type === "XCFS") {
-            LoadCODESByTYPENAME("洗车方式", "XCFS", "CODES_SHFW", Bind, "QCMRZSXCFS", "XCFS", "");
+            LoadCODESByTYPENAME("洗车方式", "XCFS", "CODES_CL", Bind, "QCMRZSXCFS", "XCFS", "");
         }
         if (type === "PP") {
-            LoadCODESByTYPENAME($("#spanLB").html(), "PP", "CODES_SHFW", Bind, "QCMRZSPP", "PP", "");
+            LoadCODESByTYPENAME($("#spanLB").html(), "PP", "CODES_CL", Bind, "QCMRZSPP", "PP", "");
         }
         if (type === "PZ") {
-            LoadCODESByTYPENAME("打蜡品种", "PZ", "CODES_SHFW", Bind, "QCMRZSPZ", "PZ", "");
+            LoadCODESByTYPENAME("打蜡品种", "PZ", "CODES_CL", Bind, "QCMRZSPZ", "PZ", "");
         }
         if (type === "TMFW") {
-            LoadCODESByTYPENAME("贴膜范围", "TMFW", "CODES_SHFW", Bind, "QCMRZSTMFW", "TMFW", "");
-        }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
+            LoadCODESByTYPENAME("贴膜范围", "TMFW", "CODES_CL", Bind, "QCMRZSTMFW", "TMFW", "");
         }
     });
 }
@@ -92,7 +84,7 @@ function PDLB(lbmc) {
 function LoadCL_QCMRZSJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SHFW/LoadCL_QCMRZSJBXX",
+        url: getRootPath() + "/Business/CL/LoadCL_QCMRZSJBXX",
         dataType: "json",
         data:
         {
@@ -147,7 +139,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SHFW/FBCL_QCMRZSJBXX",
+        url: getRootPath() + "/Business/CL/FBCL_QCMRZSJBXX",
         dataType: "json",
         data:
         {

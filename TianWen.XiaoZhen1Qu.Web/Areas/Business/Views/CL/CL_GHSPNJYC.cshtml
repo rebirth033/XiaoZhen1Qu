@@ -1,11 +1,11 @@
 ﻿@{
-    ViewBag.Title = "SHFWSHFW_SJWX";
+    ViewBag.Title = "CL_GHSPNJYC";
     Layout = "~/Areas/Business/Views/Shared/HTFB.cshtml";
 }
 @section Section_Head {
-    <link href="@Url.Content("~/Areas/Business/Css/HTFB/SHFW/SHFW_QCWXBY.css")" rel="stylesheet" />
-    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/HTFB/SHFW/SHFW_QCWXBY.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/HTFB/SHFW/SHFW_QCWXBYYZ.js")"></script>
+    <link href="@Url.Content("~/Areas/Business/Css/HTFB/CL/CL_GHSPNJYC.css")" rel="stylesheet" />
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/HTFB/CL/CL_GHSPNJYC.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/HTFB/CL/CL_GHSPNJYCYZ.js")"></script>
 }
 @section Section_Body {
     <div id="myTabContent" class="div_content">
@@ -19,25 +19,16 @@
                 <span id="spanBT">标题</span>
             </div>
             <div class="div_row_right">
-                <input id="BT" maxlength="50" column="BT" class="input_input SRK" style="width: 472px; padding: 6px 12px; color: #999999" type="text" placeholder="吸引人的标题可让更多的人看您的信息喔"/>
+                <input id="BT" maxlength="50" column="BT" class="input_input SRK" type="text" placeholder="吸引人的标题可让更多的人看您的信息喔"/>
                 <div id="divBTTip"></div>
             </div>
         </div>
-        <div id="divOUTLB" class="div_row" style="z-index: 999">
+        <div id="divOUTLB" class="div_row" style="z-index: 996;">
             <div class="div_row_left" style="margin-left: 128px;">
                 <span class="span_required">*</span>
-                <span class="spanFWCZ">类别</span>
+                <span id="spanOUTLB">类别</span>
             </div>
-            <div class="div_row_right">
-                <div id="divLBText" class="div_select_out SRK" style="position: relative;">
-                    <div id="divLBSpan" class="div_select_in" style="border: none; margin-top: 6px;">
-                        <input type="hidden" id="LBID"/>
-                        <span id="spanLB" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择类别</span>
-                        <div class="span_select_arrow"></div>
-                    </div>
-                    <div id="divLB" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
-                    </div>
-                </div>
+            <div id="divOUTLBText" class="div_row_right" style="position: relative;">
             </div>
             <div id="divOUTLBTip"></div>
         </div>
@@ -68,7 +59,7 @@
             <span class="span_split">特色描述</span>
             <em class="em_split"></em>
         </div>
-        <div id="divBCMS" class="div_row" style="height: 253px; position: relative; z-index: 997;">
+        <div id="divBCMS" class="div_row" style="height: 253px;">
             <div class="div_row_left" style="height: 170px; vertical-align: top;">
                 <span class="span_required" style="vertical-align: top">*</span>
                 <span id="spanBCMS" style="vertical-align: top">服务介绍</span>

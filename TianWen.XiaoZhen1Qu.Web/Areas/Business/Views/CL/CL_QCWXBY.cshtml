@@ -3,9 +3,9 @@
     Layout = "~/Areas/Business/Views/Shared/HTFB.cshtml";
 }
 @section Section_Head {
-    <link href="@Url.Content("~/Areas/Business/Css/HTFB/SHFW/SHFW_QCMRZS.css")" rel="stylesheet" />
-    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/HTFB/SHFW/SHFW_QCMRZS.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/HTFB/SHFW/SHFW_QCMRZSYZ.js")"></script>
+    <link href="@Url.Content("~/Areas/Business/Css/HTFB/CL/CL_QCWXBY.css")" rel="stylesheet" />
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/HTFB/CL/CL_QCWXBY.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/HTFB/CL/CL_QCWXBYYZ.js")"></script>
 }
 @section Section_Body {
     <div id="myTabContent" class="div_content">
@@ -31,25 +31,17 @@
             <div class="div_row_right">
                 <div id="divLBText" class="div_select_out SRK" style="position: relative;">
                     <div id="divLBSpan" class="div_select_in" style="border: none; margin-top: 6px;">
-                        <input id="LBID" type="hidden"/>
+                        <input type="hidden" id="LBID"/>
                         <span id="spanLB" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择类别</span>
                         <div class="span_select_arrow"></div>
                     </div>
                     <div id="divLB" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
                     </div>
                 </div>
-                <div id="divXLText" class="div_select_out SRK" style="display: none;">
-                    <div id="divXLSpan" class="div_select_in" style="border: none; margin-top: 6px;">
-                        <span id="spanXL" class="span_select spaninput_fontcolor" style="margin-top: 0px;">请选择小类</span>
-                        <div class="span_select_arrow"></div>
-                    </div>
-                    <div id="divXL" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
-                    </div>
-                </div>
             </div>
-            <div id="divOUTLBTip" class="Warn"></div>
+            <div id="divOUTLBTip"></div>
         </div>
-        <div id="divJG" class="div_row" style="z-index: 994;">
+        <div id="divJG" class="div_row" style="z-index: 992;">
             <div class="div_row_left" style="margin-left: 128px;">
                 <span class="span_required">*</span>
                 <span class="spanFWCZ">价格</span>
@@ -60,7 +52,7 @@
                         <span class="spaninput_fontcolor">元</span>
                     </span>
             </div>
-            <div id="divJGTip" class="Warn" style="z-index: 994; position: relative;"></div>
+            <div id="divJGTip" class="Warn" style="z-index: 992; position: relative;"></div>
         </div>
         <div id="divFWQY" class="div_row" style="z-index: 998">
             <div class="div_row_left">
@@ -76,7 +68,7 @@
             <span class="span_split">特色描述</span>
             <em class="em_split"></em>
         </div>
-        <div id="divBCMS" class="div_row" style="height: 253px; position: relative; z-index: 992;">
+        <div id="divBCMS" class="div_row" style="height: 253px; position: relative; z-index: 997;">
             <div class="div_row_left" style="height: 170px; vertical-align: top;">
                 <span class="span_required" style="vertical-align: top">*</span>
                 <span id="spanBCMS" style="vertical-align: top">服务介绍</span>
@@ -149,7 +141,7 @@
                 </div>
                 <input id="JTDZ" column="JTDZ" class="span_spaninput input_input SRK" type="text" placeholder="请填写具体地址" style="width: 300px"/>
             </div>
-            <div id="divSZQYTip" class="Warn"></div>
+            <div id="divSZQYTip"></div>
         </div>
         <div id="divLXR" class="div_row" style="z-index: 990">
             <div class="div_row_left" style="margin-left: 114px;">

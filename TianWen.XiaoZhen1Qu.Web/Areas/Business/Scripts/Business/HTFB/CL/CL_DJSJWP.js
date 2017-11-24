@@ -1,8 +1,6 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
     LoadSJSJWPLB();
-    BindClick("QY");
-    BindClick("DD");
 });
 //加载代驾/司机外派类别
 function LoadSJSJWPLB() {
@@ -13,7 +11,7 @@ function LoadSJSJWPLB() {
         data:
         {
             TYPENAME: "代驾/司机外派",
-            TBName: "CODES_SHFW"
+            TBName: "CODES_CL"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -39,19 +37,14 @@ function LoadSJSJWPLB() {
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+
     });
 }
 //加载休闲娱乐_代驾/司机外派基本信息
 function LoadCL_DJSJWPJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SHFW/LoadCL_DJSJWPJBXX",
+        url: getRootPath() + "/Business/CL/LoadCL_DJSJWPJBXX",
         dataType: "json",
         data:
         {
@@ -95,7 +88,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SHFW/FBCL_DJSJWPJBXX",
+        url: getRootPath() + "/Business/CL/FBCL_DJSJWPJBXX",
         dataType: "json",
         data:
         {

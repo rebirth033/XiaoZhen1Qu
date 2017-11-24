@@ -2,23 +2,15 @@
     $("body").bind("click", function () { Close("_XZQ"); });
     LoadCL_QCGZFHJBXX();
     BindClick("LB");
-    BindClick("QY");
-    BindClick("DD");
 });
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("汽车改装/防护", "LB", "CODES_SHFW", Bind, "OUTLB", "LB", "");
+            LoadCODESByTYPENAME("汽车改装/防护", "LB", "CODES_CL", Bind, "OUTLB", "LB", "");
         }
         if (type === "XL") {
             LoadXL();
-        }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
         }
     });
 }
@@ -50,7 +42,7 @@ function LoadXL() {
         data:
         {
             ParentID: $("#LBID").val(),
-            TBName: "CODES_SHFW"
+            TBName: "CODES_CL"
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -77,7 +69,7 @@ function LoadXL() {
 function LoadCL_QCGZFHJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SHFW/LoadCL_QCGZFHJBXX",
+        url: getRootPath() + "/Business/CL/LoadCL_QCGZFHJBXX",
         dataType: "json",
         data:
         {
@@ -124,7 +116,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SHFW/FBCL_QCGZFHJBXX",
+        url: getRootPath() + "/Business/CL/FBCL_QCGZFHJBXX",
         dataType: "json",
         data:
         {
