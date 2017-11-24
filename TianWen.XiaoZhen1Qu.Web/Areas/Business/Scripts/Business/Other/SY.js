@@ -620,7 +620,7 @@ function OpenCXLB(lbid, typename, condition) {
     if (lbid === 113)
         window.open(getRootPath() + "/Business/SHFWCX/SHFWCX_DNWX?LBID=" + lbid);
     if (lbid === 114)
-        window.open(getRootPath() + "/Business/SHFWCX/SHFWCX_FWWX?LBID=" + lbid);
+        window.open(getRootPath() + "/Business/SHFWCX/SHFWCX_FWWXDK?LBID=" + lbid);
     if (lbid === 115)
         window.open(getRootPath() + "/Business/SHFWCX/SHFWCX_JJWX?LBID=" + lbid);
     if (lbid === 116)

@@ -2,14 +2,14 @@
 $(document).ready(function () {
     BindBodyNav();
     LoadSHFWCondition();
-    LoadHot("SHFWXX_BJ");
+    LoadHot("SHFWXX_JJWX");
 });
 //加载条件
 function LoadSHFWCondition() {
-    LoadConditionByTypeName("办公设备维修", "CODES_SHFW", "类别", "LB", 15);
+    LoadConditionByTypeName("家具维修", "CODES_SHFW", "类别", "LB", 15);
     LoadConditionByTypeName("是否上门", "CODES_SHFW", "是否上门", "SFSM", 15);
     LoadDistrict("福州", "350100", "QY");
-    LoadBody("SHFWXX_BJ", currentIndex);
+    LoadBody("SHFWXX_JJWX", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -23,8 +23,8 @@ function SelectCondition(obj, name) {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
-    LoadBody("SHFWXX_BJ", currentIndex);
-    ShowSelectCondition("SHFWXX_BJ");
+    LoadBody("SHFWXX_JJWX", currentIndex);
+    ShowSelectCondition("SHFWXX_JJWX");
 }
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
@@ -60,11 +60,11 @@ function LoadQZZPInfo(obj) {
     var html = "";
     html += ('<li class="li_body_left">');
     html += ('<div class="div_li_body_left_left">');
-    html += ('<img class="img_li_body_left" onclick="OpenXXXX(\'SHFWXX_BJ\',\'' + obj.ID + '\')" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
+    html += ('<img class="img_li_body_left" onclick="OpenXXXX(\'SHFWXX_JJWX\',\'' + obj.ID + '\')" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<div class="div_img_li_body_left_count"><span>' + obj.PHOTOS.length + '图</span></div>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
-    html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'SHFWXX_BJ\',\'' + obj.ID + '\')">' + obj.BT + '</p>');
+    html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'SHFWXX_JJWX\',\'' + obj.ID + '\')">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_left_center_cs">' + obj.MJ + '平米' + '</p>');
     html += ('<p class="p_li_body_left_center_dz">' + obj.XQMC + ' [' + obj.XQDZ + '] ' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
