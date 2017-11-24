@@ -600,5 +600,29 @@ function OpenCXLB(lbid, typename, condition) {
         window.open(getRootPath() + "/Business/XXYLCX/XXYLCX_DIYSGF?LBID=" + lbid);
     if (lbid === 182)
         window.open(getRootPath() + "/Business/XXYLCX/XXYLCX_HPG?LBID=" + lbid);
-
+    //生活服务
+    if (lbid === 102)
+        window.open(getRootPath() + "/Business/SHFWCX/SHFWCX_BJ?LBID=" + lbid);
+    if (lbid === 103)
+        window.open(getRootPath() + "/Business/SHFWCX/SHFWCX_YSBM?LBID=" + lbid);
+    if (lbid === 104)
+        window.open(getRootPath() + "/Business/SHFWCX/SHFWCX_BJQX?LBID=" + lbid);
+    if (lbid === 107)
+        window.open(getRootPath() + "/Business/SHFWCX/SHFWCX_GDST?LBID=" + lbid);
+    if (lbid === 108)
+        window.open(getRootPath() + "/Business/SHFWCX/SHFWCX_SHPS?LBID=" + lbid);
+    if (lbid === 106)
+        window.open(getRootPath() + "/Business/SHFWCX/SHFWCX_KSXS?LBID=" + lbid);
+    if (lbid === 111)
+        window.open(getRootPath() + "/Business/SHFWCX/SHFWCX_BZMD?LBID=" + lbid);
+    if (lbid === 112)
+        window.open(getRootPath() + "/Business/SHFWCX/SHFWCX_JDWX?LBID=" + lbid);
+    if (lbid === 113)
+        window.open(getRootPath() + "/Business/SHFWCX/SHFWCX_DNWX?LBID=" + lbid);
+    if (lbid === 114)
+        window.open(getRootPath() + "/Business/SHFWCX/SHFWCX_FWWX?LBID=" + lbid);
+    if (lbid === 115)
+        window.open(getRootPath() + "/Business/SHFWCX/SHFWCX_JJWX?LBID=" + lbid);
+    if (lbid === 116)
+        window.open(getRootPath() + "/Business/SHFWCX/SHFWCX_SJSMWX?LBID=" + lbid);
 }

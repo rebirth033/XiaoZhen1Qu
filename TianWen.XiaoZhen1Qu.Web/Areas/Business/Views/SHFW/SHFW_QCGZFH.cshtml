@@ -1,0 +1,187 @@
+﻿@{
+    ViewBag.Title = "SHFWSHFW_SJSMWX";
+    Layout = "~/Areas/Business/Views/Shared/HTFB.cshtml";
+}
+@section Section_Head {
+    <link href="@Url.Content("~/Areas/Business/Css/HTFB/SHFW/SHFW_QCMRZS.css")" rel="stylesheet" />
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/HTFB/SHFW/SHFW_QCMRZS.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/HTFB/SHFW/SHFW_QCMRZSYZ.js")"></script>
+}
+@section Section_Body {
+    <div id="myTabContent" class="div_content">
+        <div id="divJBXX" class="div_split" style="display: block; text-align: left">
+            <span class="span_split">基本信息</span>
+            <em class="em_split"></em>
+        </div>
+        <div id="divBT" class="div_row" style="margin-top: 22px;">
+            <div class="div_row_left" style="margin-left: 128px;">
+                <span class="span_required">*</span>
+                <span id="spanBT">标题</span>
+            </div>
+            <div class="div_row_right">
+                <input id="BT" maxlength="50" column="BT" class="input_input SRK" style="width: 472px; padding: 6px 12px; color: #999999" type="text" placeholder="吸引人的标题可让更多的人看您的信息喔"/>
+                <div id="divBTTip"></div>
+            </div>
+        </div>
+        <div id="divOUTLB" class="div_row" style="z-index: 999">
+            <div class="div_row_left" style="margin-left: 128px;">
+                <span class="span_required">*</span>
+                <span class="spanFWCZ">类别</span>
+            </div>
+            <div class="div_row_right">
+                <div id="divLBText" class="div_select_out SRK" style="position: relative;">
+                    <div id="divLBSpan" class="div_select_in" style="border: none; margin-top: 6px;">
+                        <input id="LBID" type="hidden"/>
+                        <span id="spanLB" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择类别</span>
+                        <div class="span_select_arrow"></div>
+                    </div>
+                    <div id="divLB" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
+                    </div>
+                </div>
+                <div id="divXLText" class="div_select_out SRK" style="display: none;">
+                    <div id="divXLSpan" class="div_select_in" style="border: none; margin-top: 6px;">
+                        <span id="spanXL" class="span_select spaninput_fontcolor" style="margin-top: 0px;">请选择小类</span>
+                        <div class="span_select_arrow"></div>
+                    </div>
+                    <div id="divXL" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
+                    </div>
+                </div>
+            </div>
+            <div id="divOUTLBTip" class="Warn"></div>
+        </div>
+        <div id="divJG" class="div_row" style="z-index: 994;">
+            <div class="div_row_left" style="margin-left: 128px;">
+                <span class="span_required">*</span>
+                <span class="spanFWCZ">价格</span>
+            </div>
+            <div class="div_row_right">
+                <span id="spanJG" class="span_spaninput SRK" style="display: inline-block; width: 150px;">
+                        <input class="input_spaninput spaninput_fontcolor" id="JG" maxlength="9" column="JG" type="text" style="width: 120px" />
+                        <span class="spaninput_fontcolor">元</span>
+                    </span>
+            </div>
+            <div id="divJGTip" class="Warn" style="z-index: 994; position: relative;"></div>
+        </div>
+        <div id="divFWQY" class="div_row" style="z-index: 998">
+            <div class="div_row_left">
+                <span class="span_required">*</span>
+                <span id="spanFWQY">服务区域</span>
+            </div>
+            <div class="div_row_right">
+                <input id="FWQY" column="FWQY" class="span_spaninput input_input SRK" type="text" placeholder="请输入服务区域"/>
+                <div id="divFWQYTip"></div>
+            </div>
+        </div>
+        <div id="divXXXX" class="div_split" style="display: block; text-align: left;">
+            <span class="span_split">特色描述</span>
+            <em class="em_split"></em>
+        </div>
+        <div id="divBCMS" class="div_row" style="height: 253px; position: relative; z-index: 992;">
+            <div class="div_row_left" style="height: 170px; vertical-align: top;">
+                <span class="span_required" style="vertical-align: top">*</span>
+                <span id="spanBCMS" style="vertical-align: top">服务介绍</span>
+            </div>
+            <div class="div_row_right">
+                <script id="BCMS" type="text/plain" style="width: 594px; height: 200px; display: inline-block;">
+                    </script>
+                <div id="divBCMSTip" class="Warn"></div>
+            </div>
+        </div>
+        <div id="divFWZP" class="div_row">
+            <div class="div_row_left" style="height: 170px; vertical-align: top;">
+                <span class="span_required" style="vertical-align: top">*</span>
+                <span id="spanFWZP" style="vertical-align: top">上传照片</span>
+            </div>
+            <div class="div_row_right">
+                <div id="div_upload" class="div_upload">
+                    <form action="" enctype="multipart/form-data" id="myform" method="post">
+                        <input id="input_upload" unselectable="on" type="file" multiple="multiple" class="file"/>
+                    </form>
+                </div>
+                <div style="margin-left: 214px; font-size: 14px; color: #999999;">
+                    <span>最多8张，可多选上传，最大10mb。有图可使浏览量增加3倍，并会在推荐位显示。</span>
+                </div>
+                <div id="divTPTip" style="margin-top: 10px; margin-left: 210px;"></div>
+            </div>
+        </div>
+        <div id="divFWZPValue" class="div_row" style="display: none; text-align: left; margin-top: 140px;">
+            <div class="div_row_left" style="height: 170px; vertical-align: top;">
+                <span class="span_required"></span>
+                <span id="spanFWZP" style="width: 56px; display: inline-block;"></span>
+            </div>
+            <div id="divImgs1" class="div_row_right" style="display: inline-block; width: 670px;">
+                <ul id="ulImgs1" class="ulImgs" style="padding-left: 0px;"></ul>
+            </div>
+            <div class="div_row_left" style="height: 170px; vertical-align: top;">
+                <span class="span_required"></span>
+                <span id="spanFWZP" style="width: 56px; display: inline-block;"></span>
+            </div>
+            <div id="divImgs2" class="div_row_right" style="display: inline-block; width: 670px;">
+                <ul id="ulImgs2" class="ulImgs" style="padding-left: 0px;"></ul>
+            </div>
+        </div>
+        <div id="divLXRXX" class="div_split" style="display: block; text-align: left; margin-top: 140px;">
+            <span class="span_split">联系人信息</span>
+            <em class="em_split"></em>
+        </div>
+        <div id="divSZQY" class="div_row" style="z-index: 991;">
+            <div class="div_row_left" style="margin-left: 100px;">
+                <span class="span_required">*</span>
+                <span class="spanFWCZ">详细地址</span>
+            </div>
+            <div class="div_row_right">
+                <div id="divQYText" class="div_select_out SRK" style="z-index: 997;">
+                    <div id="divQYSpan" class="div_select_in" style="border: none; margin-top: 6px;">
+                        <input type="hidden" id="QYCode"/>
+                        <span id="spanQY" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择区域</span>
+                        <div class="span_select_arrow"></div>
+                    </div>
+                    <div id="divQY" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
+                    </div>
+                </div>
+                <div id="divDDText" class="div_select_out SRK" style="z-index: 997;">
+                    <div id="divDDSpan" class="div_select_in" style="border: none; margin-top: 6px;">
+                        <span id="spanDD" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择地段</span>
+                        <div class="span_select_arrow"></div>
+                    </div>
+                    <div id="divDD" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
+                    </div>
+                </div>
+                <input id="JTDZ" column="JTDZ" class="span_spaninput input_input SRK" type="text" placeholder="请填写具体地址" style="width: 300px"/>
+            </div>
+            <div id="divSZQYTip" class="Warn"></div>
+        </div>
+        <div id="divLXR" class="div_row" style="z-index: 990">
+            <div class="div_row_left" style="margin-left: 114px;">
+                <span class="span_required">*</span>
+                <span id="spanLXDH">联系人</span>
+            </div>
+            <div class="div_row_right">
+                <input id="LXR" column="LXR" class="input_input SRK" type="text" placeholder="请输入联系人"/>
+                <div id="divLXRTip"></div>
+            </div>
+        </div>
+        <div id="divLXDH" class="div_row" style="z-index: 989">
+            <div class="div_row_left">
+                <span class="span_required">*</span>
+                <span id="spanLXDH">联系电话</span>
+            </div>
+            <div class="div_row_right">
+                <input id="LXDH" maxlength="11" column="LXDH" class="input_input SRK" type="text" placeholder="请输入联系电话"/>
+                <div id="divLXDHTip"></div>
+            </div>
+        </div>
+        <div id="divQQ" class="div_row" style="margin-top: -12px;" style="z-index: 988">
+            <div class="div_row_left" style="margin-left: 133px;">
+                <span class="span_required"></span>
+                <span id="spanQQ">QQ</span>
+            </div>
+            <div class="div_row_right">
+                <input column="QQ" class="input_input SRK" type="text" placeholder="请输入QQ"/>
+            </div>
+        </div>
+        <div id="divFB" class="div_split" style="display: block; text-align: center; margin-top: 40px;">
+            <input type="button" class="btn btn-info input_text" style="height: 50px; font-size: 24px;" id="btnFB" value="发布"/>
+        </div>
+    </div>
+}
