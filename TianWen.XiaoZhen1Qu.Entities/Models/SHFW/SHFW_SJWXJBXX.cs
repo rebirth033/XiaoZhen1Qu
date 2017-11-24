@@ -3,15 +3,15 @@ using NHibernate.Mapping.Attributes;
 
 namespace TianWen.XiaoZhen1Qu.Entities.Models
 {
-    public class SHFW_QCGZFHJBXX
+    public class SHFW_SJWXJBXX
     {
-        public SHFW_QCGZFHJBXX()
+        public SHFW_SJWXJBXX()
         {
             ID = Guid.NewGuid().ToString("N");
         }
 
         /// <summary>
-        /// 生活服务_车辆服务_汽车美容/装饰信息ID
+        /// 生活服务_手机数码维修信息ID
         /// </summary>
         [Id]
         public virtual string ID { get; set; }
@@ -33,18 +33,6 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// </summary>
         [Property]
         public virtual string XL { get; set; }
-
-        /// <summary>
-        /// 价格
-        /// </summary>
-        [Property]
-        public virtual string JG { get; set; }
-
-        /// <summary>
-        /// 服务区域
-        /// </summary>
-        [Property]
-        public virtual string FWQY { get; set; }
 
         /// <summary>
         /// 补充描述
@@ -69,5 +57,11 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// </summary>
         [Property]
         public virtual string JTDZ { get; set; }
+
+        /// <summary>
+        /// 服务区域
+        /// </summary>
+        [Property]
+        public virtual string FWQY { get; set; }
     }
 }

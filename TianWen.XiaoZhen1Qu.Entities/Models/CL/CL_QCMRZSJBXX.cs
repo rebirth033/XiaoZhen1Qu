@@ -3,15 +3,15 @@ using NHibernate.Mapping.Attributes;
 
 namespace TianWen.XiaoZhen1Qu.Entities.Models
 {
-    public class SHFW_SJSMWXJBXX
+    public class CL_QCMRZSJBXX
     {
-        public SHFW_SJSMWXJBXX()
+        public CL_QCMRZSJBXX()
         {
             ID = Guid.NewGuid().ToString("N");
         }
 
         /// <summary>
-        /// 生活服务_手机数码维修信息ID
+        /// 生活服务_车辆服务_汽车美容/装饰信息ID
         /// </summary>
         [Id]
         public virtual string ID { get; set; }
@@ -29,10 +29,40 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string LB { get; set; }
 
         /// <summary>
-        /// 小类
+        /// 洗车地点
         /// </summary>
         [Property]
-        public virtual string XL { get; set; }
+        public virtual string XCDD { get; set; }
+
+        /// <summary>
+        /// 洗车方式
+        /// </summary>
+        [Property]
+        public virtual string XCFS { get; set; }
+
+        /// <summary>
+        /// 品牌
+        /// </summary>
+        [Property]
+        public virtual string PP { get; set; }
+
+        /// <summary>
+        /// 品种
+        /// </summary>
+        [Property]
+        public virtual string PZ { get; set; }
+
+        /// <summary>
+        /// 贴膜范围
+        /// </summary>
+        [Property]
+        public virtual string TMFW { get; set; }
+
+        /// <summary>
+        /// 价格
+        /// </summary>
+        [Property]
+        public virtual string JG { get; set; }
 
         /// <summary>
         /// 补充描述
@@ -57,11 +87,5 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// </summary>
         [Property]
         public virtual string JTDZ { get; set; }
-
-        /// <summary>
-        /// 服务区域
-        /// </summary>
-        [Property]
-        public virtual string FWQY { get; set; }
     }
 }

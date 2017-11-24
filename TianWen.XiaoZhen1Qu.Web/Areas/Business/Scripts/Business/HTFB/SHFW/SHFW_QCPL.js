@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
-    LoadSHFW_QCPLJBXX();
+    LoadCL_QCPLJBXX();
     BindClick("QY");
     BindClick("DD");
 });
@@ -16,10 +16,10 @@ function BindClick(type) {
     });
 }
 //加载生活服务_汽车陪练基本信息
-function LoadSHFW_QCPLJBXX() {
+function LoadCL_QCPLJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SHFW/LoadSHFW_QCPLJBXX",
+        url: getRootPath() + "/Business/SHFW/LoadCL_QCPLJBXX",
         dataType: "json",
         data:
         {
@@ -28,16 +28,16 @@ function LoadSHFW_QCPLJBXX() {
         success: function (xml) {
             if (xml.Result === 1) {
                 var jsonObj = new JsonDB("myTabContent");
-                jsonObj.DisplayFromJson("myTabContent", xml.Value.SHFW_QCPLJBXX);
+                jsonObj.DisplayFromJson("myTabContent", xml.Value.CL_QCPLJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
-                $("#ID").val(xml.Value.SHFW_QCPLJBXX.ID);
+                $("#ID").val(xml.Value.CL_QCPLJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.BCMSString);
                 });
-                $("#spanQY").html(xml.Value.SHFW_QCPLJBXX.QY);
-                $("#spanDD").html(xml.Value.SHFW_QCPLJBXX.DD);
+                $("#spanQY").html(xml.Value.CL_QCPLJBXX.QY);
+                $("#spanDD").html(xml.Value.CL_QCPLJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
             }
         },
@@ -61,7 +61,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SHFW/FBSHFW_QCPLJBXX",
+        url: getRootPath() + "/Business/SHFW/FBCL_QCPLJBXX",
         dataType: "json",
         data:
         {

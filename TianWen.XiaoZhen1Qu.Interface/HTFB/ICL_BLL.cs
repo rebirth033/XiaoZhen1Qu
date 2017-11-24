@@ -39,5 +39,37 @@ namespace TianWen.XiaoZhen1Qu.Interface.HTFB
         object SaveCL_SLCJBXX(JCXX jcxx, CL_SLCJBXX dzfjbxx, List<PHOTOS> photos);
 
         object LoadCL_SLCJBXX(string ID);
+
+        object SaveCL_DJSJWPJBXX(JCXX jcxx, CL_DJSJWPJBXX jbxx, List<PHOTOS> photos);
+
+        object LoadCL_DJSJWPJBXX(string ID);
+
+        object SaveCL_GHSPNJYCJBXX(JCXX jcxx, CL_GHSPNJYCJBXX jbxx, List<PHOTOS> photos);
+
+        object LoadCL_GHSPNJYCJBXX(string ID);
+
+        object SaveCL_JXJBXX(JCXX jcxx, CL_JXJBXX jbxx, List<PHOTOS> photos);
+
+        object LoadCL_JXJBXX(string ID);
+
+        object SaveCL_QCGZFHJBXX(JCXX jcxx, CL_QCGZFHJBXX jbxx, List<PHOTOS> photos);
+
+        object LoadCL_QCGZFHJBXX(string ID);
+
+        object SaveCL_QCMRZSJBXX(JCXX jcxx, CL_QCMRZSJBXX jbxx, List<PHOTOS> photos);
+
+        object LoadCL_QCMRZSJBXX(string ID);
+
+        object SaveCL_QCPLJBXX(JCXX jcxx, CL_QCPLJBXX jbxx, List<PHOTOS> photos);
+
+        object LoadCL_QCPLJBXX(string ID);
+
+        object SaveCL_QCWXBYJBXX(JCXX jcxx, CL_QCWXBYJBXX jbxx, List<PHOTOS> photos);
+
+        object LoadCL_QCWXBYJBXX(string ID);
+
+        object SaveCL_ZCJBXX(JCXX jcxx, CL_ZCJBXX jbxx, List<PHOTOS> photos);
+
+        object LoadCL_ZCJBXX(string ID);
     }
 }

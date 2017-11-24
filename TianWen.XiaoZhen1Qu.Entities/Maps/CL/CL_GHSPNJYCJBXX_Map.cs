@@ -3,22 +3,21 @@ using TianWen.XiaoZhen1Qu.Entities.Models;
 
 namespace TianWen.XiaoZhen1Qu.Entities.Maps
 {
-    public class SHFW_QCGZFHJBXX_Map : ClassMap<SHFW_QCGZFHJBXX>
+    public class CL_GHSPNJYCJBXX_Map : ClassMap<CL_GHSPNJYCJBXX>
     {
-        public SHFW_QCGZFHJBXX_Map()
+        public CL_GHSPNJYCJBXX_Map()
         {
-            Table("SHFW_QCGZFHJBXX");
+            Table("CL_GHSPNJYCJBXX");
             #region 属性
             Id(x => x.ID, "ID").GeneratedBy.Assigned().CustomType("AnsiString");
             Map(x => x.JCXXID, "JCXXID");
             Map(x => x.LB, "LB");
-            Map(x => x.XL, "XL");
             Map(x => x.JG, "JG");
             Map(x => x.FWQY, "FWQY");
-            Map(x => x.BCMS, "BCMS");
             Map(x => x.QY, "QY");
             Map(x => x.DD, "DD");
             Map(x => x.JTDZ, "JTDZ");
+            Map(x => x.BCMS, "BCMS");
             #endregion
 
             #region OneToMany

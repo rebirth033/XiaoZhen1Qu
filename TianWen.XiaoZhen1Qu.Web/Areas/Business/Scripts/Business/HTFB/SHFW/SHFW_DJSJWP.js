@@ -28,7 +28,7 @@ function LoadSJSJWPLB() {
                 $("#divSJSJWPLBText").html(html);
                 $(".img_SJSJWPLB").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".liSJSJWPLB").bind("click", function () { ValidateCheck("OUTLB", "忘记选择类别啦"); });
-                LoadSHFW_DJSJWPJBXX();
+                LoadCL_DJSJWPJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -48,10 +48,10 @@ function BindClick(type) {
     });
 }
 //加载休闲娱乐_代驾/司机外派基本信息
-function LoadSHFW_DJSJWPJBXX() {
+function LoadCL_DJSJWPJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SHFW/LoadSHFW_DJSJWPJBXX",
+        url: getRootPath() + "/Business/SHFW/LoadCL_DJSJWPJBXX",
         dataType: "json",
         data:
         {
@@ -60,17 +60,17 @@ function LoadSHFW_DJSJWPJBXX() {
         success: function (xml) {
             if (xml.Result === 1) {
                 var jsonObj = new JsonDB("myTabContent");
-                jsonObj.DisplayFromJson("myTabContent", xml.Value.SHFW_DJSJWPJBXX);
+                jsonObj.DisplayFromJson("myTabContent", xml.Value.CL_DJSJWPJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
-                $("#ID").val(xml.Value.SHFW_DJSJWPJBXX.ID);
+                $("#ID").val(xml.Value.CL_DJSJWPJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.BCMSString);
                 });
-                SetDuoX("SJSJWPLB", xml.Value.SHFW_DJSJWPJBXX.LB);
-                $("#spanQY").html(xml.Value.SHFW_DJSJWPJBXX.QY);
-                $("#spanDD").html(xml.Value.SHFW_DJSJWPJBXX.DD);
+                SetDuoX("SJSJWPLB", xml.Value.CL_DJSJWPJBXX.LB);
+                $("#spanQY").html(xml.Value.CL_DJSJWPJBXX.QY);
+                $("#spanDD").html(xml.Value.CL_DJSJWPJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
             }
         },
@@ -95,7 +95,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SHFW/FBSHFW_DJSJWPJBXX",
+        url: getRootPath() + "/Business/SHFW/FBCL_DJSJWPJBXX",
         dataType: "json",
         data:
         {

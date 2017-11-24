@@ -69,7 +69,7 @@ function LoadBB() {
                 $("#divBBText").html(html);
                 $(".img_BB").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".liBB").bind("click", function () { ValidateCheck("BB", "忘记选择班别啦"); });
-                LoadSHFW_JXJBXX();
+                LoadCL_JXJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -89,10 +89,10 @@ function BindClick(type) {
     });
 }
 //加载生活服务_驾校基本信息
-function LoadSHFW_JXJBXX() {
+function LoadCL_JXJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SHFW/LoadSHFW_JXJBXX",
+        url: getRootPath() + "/Business/SHFW/LoadCL_JXJBXX",
         dataType: "json",
         data:
         {
@@ -101,20 +101,20 @@ function LoadSHFW_JXJBXX() {
         success: function (xml) {
             if (xml.Result === 1) {
                 var jsonObj = new JsonDB("myTabContent");
-                jsonObj.DisplayFromJson("myTabContent", xml.Value.SHFW_JXJBXX);
+                jsonObj.DisplayFromJson("myTabContent", xml.Value.CL_JXJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
-                $("#ID").val(xml.Value.SHFW_JXJBXX.ID);
+                $("#ID").val(xml.Value.CL_JXJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.BCMSString);
                 });
-                $("#spanQY").html(xml.Value.SHFW_JXJBXX.QY);
-                $("#spanDD").html(xml.Value.SHFW_JXJBXX.DD);
+                $("#spanQY").html(xml.Value.CL_JXJBXX.QY);
+                $("#spanDD").html(xml.Value.CL_JXJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
-                SetDX("OUTLB", xml.Value.SHFW_JXJBXX.LB);
-                SetDuoX("JZ", xml.Value.SHFW_JXJBXX.JZ);
-                SetDuoX("BB", xml.Value.SHFW_JXJBXX.BB);
+                SetDX("OUTLB", xml.Value.CL_JXJBXX.LB);
+                SetDuoX("JZ", xml.Value.CL_JXJBXX.JZ);
+                SetDuoX("BB", xml.Value.CL_JXJBXX.BB);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -141,7 +141,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SHFW/FBSHFW_JXJBXX",
+        url: getRootPath() + "/Business/SHFW/FBCL_JXJBXX",
         dataType: "json",
         data:
         {

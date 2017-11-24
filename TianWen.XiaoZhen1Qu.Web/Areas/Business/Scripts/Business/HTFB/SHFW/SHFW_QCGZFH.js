@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
-    LoadSHFW_QCGZFHJBXX();
+    LoadCL_QCGZFHJBXX();
     BindClick("LB");
     BindClick("QY");
     BindClick("DD");
@@ -74,10 +74,10 @@ function LoadXL() {
     });
 }
 //加载生活服务_汽车改装/防护基本信息
-function LoadSHFW_QCGZFHJBXX() {
+function LoadCL_QCGZFHJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SHFW/LoadSHFW_QCGZFHJBXX",
+        url: getRootPath() + "/Business/SHFW/LoadCL_QCGZFHJBXX",
         dataType: "json",
         data:
         {
@@ -86,19 +86,19 @@ function LoadSHFW_QCGZFHJBXX() {
         success: function (xml) {
             if (xml.Result === 1) {
                 var jsonObj = new JsonDB("myTabContent");
-                jsonObj.DisplayFromJson("myTabContent", xml.Value.SHFW_QCGZFHJBXX);
+                jsonObj.DisplayFromJson("myTabContent", xml.Value.CL_QCGZFHJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
-                $("#ID").val(xml.Value.SHFW_QCGZFHJBXX.ID);
+                $("#ID").val(xml.Value.CL_QCGZFHJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.BCMSString);
                 });
-                PDLB(xml.Value.SHFW_QCGZFHJBXX.LB);
-                $("#spanLB").html(xml.Value.SHFW_QCGZFHJBXX.LB);
-                $("#spanXL").html(xml.Value.SHFW_QCGZFHJBXX.XL);
-                $("#spanQY").html(xml.Value.SHFW_QCGZFHJBXX.QY);
-                $("#spanDD").html(xml.Value.SHFW_QCGZFHJBXX.DD);
+                PDLB(xml.Value.CL_QCGZFHJBXX.LB);
+                $("#spanLB").html(xml.Value.CL_QCGZFHJBXX.LB);
+                $("#spanXL").html(xml.Value.CL_QCGZFHJBXX.XL);
+                $("#spanQY").html(xml.Value.CL_QCGZFHJBXX.QY);
+                $("#spanDD").html(xml.Value.CL_QCGZFHJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
             }
         },
@@ -124,7 +124,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SHFW/FBSHFW_QCGZFHJBXX",
+        url: getRootPath() + "/Business/SHFW/FBCL_QCGZFHJBXX",
         dataType: "json",
         data:
         {

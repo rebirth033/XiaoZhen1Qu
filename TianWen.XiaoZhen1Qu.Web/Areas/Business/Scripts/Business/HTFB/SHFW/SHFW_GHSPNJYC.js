@@ -32,7 +32,7 @@ function LoadGHSPNJYC() {
                 $("#divOUTLBText").html(html);
                 $(".img_GHSPNJYC").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".liOUTLB").bind("click", function () { ValidateCheck("OUTLB", "忘记选择类别啦"); });
-                LoadSHFW_GHSPNJYCJBXX();
+                LoadCL_GHSPNJYCJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -52,10 +52,10 @@ function BindClick(type) {
     });
 }
 //加载休闲娱乐_过户/上牌/年检/验车基本信息
-function LoadSHFW_GHSPNJYCJBXX() {
+function LoadCL_GHSPNJYCJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SHFW/LoadSHFW_GHSPNJYCJBXX",
+        url: getRootPath() + "/Business/SHFW/LoadCL_GHSPNJYCJBXX",
         dataType: "json",
         data:
         {
@@ -64,18 +64,18 @@ function LoadSHFW_GHSPNJYCJBXX() {
         success: function (xml) {
             if (xml.Result === 1) {
                 var jsonObj = new JsonDB("myTabContent");
-                jsonObj.DisplayFromJson("myTabContent", xml.Value.SHFW_GHSPNJYCJBXX);
+                jsonObj.DisplayFromJson("myTabContent", xml.Value.CL_GHSPNJYCJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
-                $("#ID").val(xml.Value.SHFW_GHSPNJYCJBXX.ID);
+                $("#ID").val(xml.Value.CL_GHSPNJYCJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.BCMSString);
                 });
-                if (xml.Value.SHFW_GHSPNJYCJBXX.LB !== "" && xml.Value.SHFW_GHSPNJYCJBXX.LB !== null)
-                SetDuoX("OUTLB", xml.Value.SHFW_GHSPNJYCJBXX.LB);
-                $("#spanQY").html(xml.Value.SHFW_GHSPNJYCJBXX.QY);
-                $("#spanDD").html(xml.Value.SHFW_GHSPNJYCJBXX.DD);
+                if (xml.Value.CL_GHSPNJYCJBXX.LB !== "" && xml.Value.CL_GHSPNJYCJBXX.LB !== null)
+                SetDuoX("OUTLB", xml.Value.CL_GHSPNJYCJBXX.LB);
+                $("#spanQY").html(xml.Value.CL_GHSPNJYCJBXX.QY);
+                $("#spanDD").html(xml.Value.CL_GHSPNJYCJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
             }
         },
@@ -100,7 +100,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SHFW/FBSHFW_GHSPNJYCJBXX",
+        url: getRootPath() + "/Business/SHFW/FBCL_GHSPNJYCJBXX",
         dataType: "json",
         data:
         {

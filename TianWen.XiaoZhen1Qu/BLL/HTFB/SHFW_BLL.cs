@@ -12,502 +12,6 @@ namespace TianWen.XiaoZhen1Qu.BLL
 {
     public class SHFW_BLL : BaseBLL, ISHFW_BLL
     {
-        public object SaveSHFW_DJSJWPJBXX(JCXX jcxx, SHFW_DJSJWPJBXX SHFW_DJSJWPJBXX, List<PHOTOS> photos)
-        {
-            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM SHFW_DJSJWPJBXX WHERE ID='{0}'", SHFW_DJSJWPJBXX.ID));
-            using (ITransaction transaction = DAO.BeginTransaction())
-            {
-                try
-                {
-                    if (dt.Rows.Count > 0)
-                    {
-                        SavePhotos(photos, dt.Rows[0]["JCXXID"].ToString());
-                        SHFW_DJSJWPJBXX.JCXXID = dt.Rows[0]["JCXXID"].ToString();
-                        jcxx.JCXXID = dt.Rows[0]["JCXXID"].ToString();
-                        DAO.Update(jcxx);
-                        DAO.Update(SHFW_DJSJWPJBXX);
-                        transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, ID = SHFW_DJSJWPJBXX.ID } };
-                    }
-                    else
-                    {
-                        SavePhotos(photos, jcxx.JCXXID);
-                        SHFW_DJSJWPJBXX.JCXXID = jcxx.JCXXID;
-                        DAO.Save(jcxx);
-                        DAO.Save(SHFW_DJSJWPJBXX);
-                        transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, ID = SHFW_DJSJWPJBXX.ID } };
-                    }
-                }
-                catch (Exception ex)
-                {
-                    transaction.Rollback();
-                    LoggerManager.Error("SHFW_DJSJWPJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
-                    return new { Result = EnResultType.Failed, Message = "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!", Type = 3 };
-                }
-            }
-        }
-
-        public object LoadSHFW_DJSJWPJBXX(string ID)
-        {
-            try
-            {
-                SHFW_DJSJWPJBXX SHFW_DJSJWPJBXX = DAO.GetObjectByID<SHFW_DJSJWPJBXX>(ID);
-                if (SHFW_DJSJWPJBXX != null)
-                {
-                    JCXX jcxx = GetJCXXByID(SHFW_DJSJWPJBXX.JCXXID);
-                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { SHFW_DJSJWPJBXX = SHFW_DJSJWPJBXX, BCMSString = BinaryHelper.BinaryToString(SHFW_DJSJWPJBXX.BCMS), JCXX = jcxx, Photos = GetPhtosByJCXXID(SHFW_DJSJWPJBXX.JCXXID) } };
-                }
-                else
-                {
-                    return new { Result = EnResultType.Failed, Message = "不存在" };
-                }
-            }
-            catch (Exception ex)
-            {
-                LoggerManager.Error("SHFW_DJSJWPJBXXBLL", "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
-                return new
-                {
-                    Result = EnResultType.Failed,
-                    Message = "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!"
-                };
-            }
-        }
-
-        public object SaveSHFW_GHSPNJYCJBXX(JCXX jcxx, SHFW_GHSPNJYCJBXX SHFW_GHSPNJYCJBXX, List<PHOTOS> photos)
-        {
-            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM SHFW_GHSPNJYCJBXX WHERE ID='{0}'", SHFW_GHSPNJYCJBXX.ID));
-            using (ITransaction transaction = DAO.BeginTransaction())
-            {
-                try
-                {
-                    if (dt.Rows.Count > 0)
-                    {
-                        SavePhotos(photos, dt.Rows[0]["JCXXID"].ToString());
-                        SHFW_GHSPNJYCJBXX.JCXXID = dt.Rows[0]["JCXXID"].ToString();
-                        jcxx.JCXXID = dt.Rows[0]["JCXXID"].ToString();
-                        DAO.Update(jcxx);
-                        DAO.Update(SHFW_GHSPNJYCJBXX);
-                        transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, ID = SHFW_GHSPNJYCJBXX.ID } };
-                    }
-                    else
-                    {
-                        SavePhotos(photos, jcxx.JCXXID);
-                        SHFW_GHSPNJYCJBXX.JCXXID = jcxx.JCXXID;
-                        DAO.Save(jcxx);
-                        DAO.Save(SHFW_GHSPNJYCJBXX);
-                        transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, ID = SHFW_GHSPNJYCJBXX.ID } };
-                    }
-                }
-                catch (Exception ex)
-                {
-                    transaction.Rollback();
-                    LoggerManager.Error("SHFW_GHSPNJYCJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
-                    return new { Result = EnResultType.Failed, Message = "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!", Type = 3 };
-                }
-            }
-        }
-
-        public object LoadSHFW_GHSPNJYCJBXX(string ID)
-        {
-            try
-            {
-                SHFW_GHSPNJYCJBXX SHFW_GHSPNJYCJBXX = DAO.GetObjectByID<SHFW_GHSPNJYCJBXX>(ID);
-                if (SHFW_GHSPNJYCJBXX != null)
-                {
-                    JCXX jcxx = GetJCXXByID(SHFW_GHSPNJYCJBXX.JCXXID);
-                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { SHFW_GHSPNJYCJBXX = SHFW_GHSPNJYCJBXX, BCMSString = BinaryHelper.BinaryToString(SHFW_GHSPNJYCJBXX.BCMS), JCXX = jcxx, Photos = GetPhtosByJCXXID(SHFW_GHSPNJYCJBXX.JCXXID) } };
-                }
-                else
-                {
-                    return new { Result = EnResultType.Failed, Message = "不存在" };
-                }
-            }
-            catch (Exception ex)
-            {
-                LoggerManager.Error("SHFW_GHSPNJYCJBXXBLL", "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
-                return new
-                {
-                    Result = EnResultType.Failed,
-                    Message = "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!"
-                };
-            }
-        }
-
-        public object SaveSHFW_JXJBXX(JCXX jcxx, SHFW_JXJBXX SHFW_JXJBXX, List<PHOTOS> photos)
-        {
-            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM SHFW_JXJBXX WHERE ID='{0}'", SHFW_JXJBXX.ID));
-            using (ITransaction transaction = DAO.BeginTransaction())
-            {
-                try
-                {
-                    if (dt.Rows.Count > 0)
-                    {
-                        SavePhotos(photos, dt.Rows[0]["JCXXID"].ToString());
-                        SHFW_JXJBXX.JCXXID = dt.Rows[0]["JCXXID"].ToString();
-                        jcxx.JCXXID = dt.Rows[0]["JCXXID"].ToString();
-                        DAO.Update(jcxx);
-                        DAO.Update(SHFW_JXJBXX);
-                        transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, ID = SHFW_JXJBXX.ID } };
-                    }
-                    else
-                    {
-                        SavePhotos(photos, jcxx.JCXXID);
-                        SHFW_JXJBXX.JCXXID = jcxx.JCXXID;
-                        DAO.Save(jcxx);
-                        DAO.Save(SHFW_JXJBXX);
-                        transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, ID = SHFW_JXJBXX.ID } };
-                    }
-                }
-                catch (Exception ex)
-                {
-                    transaction.Rollback();
-                    LoggerManager.Error("SHFW_JXJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
-                    return new { Result = EnResultType.Failed, Message = "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!", Type = 3 };
-                }
-            }
-        }
-
-        public object LoadSHFW_JXJBXX(string ID)
-        {
-            try
-            {
-                SHFW_JXJBXX SHFW_JXJBXX = DAO.GetObjectByID<SHFW_JXJBXX>(ID);
-                if (SHFW_JXJBXX != null)
-                {
-                    JCXX jcxx = GetJCXXByID(SHFW_JXJBXX.JCXXID);
-                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { SHFW_JXJBXX = SHFW_JXJBXX, BCMSString = BinaryHelper.BinaryToString(SHFW_JXJBXX.BCMS), JCXX = jcxx, Photos = GetPhtosByJCXXID(SHFW_JXJBXX.JCXXID) } };
-                }
-                else
-                {
-                    return new { Result = EnResultType.Failed, Message = "不存在" };
-                }
-            }
-            catch (Exception ex)
-            {
-                LoggerManager.Error("SHFW_JXJBXXBLL", "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
-                return new
-                {
-                    Result = EnResultType.Failed,
-                    Message = "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!"
-                };
-            }
-        }
-
-        public object SaveSHFW_QCGZFHJBXX(JCXX jcxx, SHFW_QCGZFHJBXX SHFW_QCGZFHJBXX, List<PHOTOS> photos)
-        {
-            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM SHFW_QCGZFHJBXX WHERE ID='{0}'", SHFW_QCGZFHJBXX.ID));
-            using (ITransaction transaction = DAO.BeginTransaction())
-            {
-                try
-                {
-                    if (dt.Rows.Count > 0)
-                    {
-                        SavePhotos(photos, dt.Rows[0]["JCXXID"].ToString());
-                        SHFW_QCGZFHJBXX.JCXXID = dt.Rows[0]["JCXXID"].ToString();
-                        jcxx.JCXXID = dt.Rows[0]["JCXXID"].ToString();
-                        DAO.Update(jcxx);
-                        DAO.Update(SHFW_QCGZFHJBXX);
-                        transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, ID = SHFW_QCGZFHJBXX.ID } };
-                    }
-                    else
-                    {
-                        SavePhotos(photos, jcxx.JCXXID);
-                        SHFW_QCGZFHJBXX.JCXXID = jcxx.JCXXID;
-                        DAO.Save(jcxx);
-                        DAO.Save(SHFW_QCGZFHJBXX);
-                        transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, ID = SHFW_QCGZFHJBXX.ID } };
-                    }
-                }
-                catch (Exception ex)
-                {
-                    transaction.Rollback();
-                    LoggerManager.Error("SHFW_QCGZFHJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
-                    return new { Result = EnResultType.Failed, Message = "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!", Type = 3 };
-                }
-            }
-        }
-
-        public object LoadSHFW_QCGZFHJBXX(string ID)
-        {
-            try
-            {
-                SHFW_QCGZFHJBXX SHFW_QCGZFHJBXX = DAO.GetObjectByID<SHFW_QCGZFHJBXX>(ID);
-                if (SHFW_QCGZFHJBXX != null)
-                {
-                    JCXX jcxx = GetJCXXByID(SHFW_QCGZFHJBXX.JCXXID);
-                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { SHFW_QCGZFHJBXX = SHFW_QCGZFHJBXX, BCMSString = BinaryHelper.BinaryToString(SHFW_QCGZFHJBXX.BCMS), JCXX = jcxx, Photos = GetPhtosByJCXXID(SHFW_QCGZFHJBXX.JCXXID) } };
-                }
-                else
-                {
-                    return new { Result = EnResultType.Failed, Message = "不存在" };
-                }
-            }
-            catch (Exception ex)
-            {
-                LoggerManager.Error("SHFW_QCGZFHJBXXBLL", "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
-                return new
-                {
-                    Result = EnResultType.Failed,
-                    Message = "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!"
-                };
-            }
-        }
-
-        public object SaveSHFW_QCMRZSJBXX(JCXX jcxx, SHFW_QCMRZSJBXX SHFW_QCMRZSJBXX, List<PHOTOS> photos)
-        {
-            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM SHFW_QCMRZSJBXX WHERE ID='{0}'", SHFW_QCMRZSJBXX.ID));
-            using (ITransaction transaction = DAO.BeginTransaction())
-            {
-                try
-                {
-                    if (dt.Rows.Count > 0)
-                    {
-                        SavePhotos(photos, dt.Rows[0]["JCXXID"].ToString());
-                        SHFW_QCMRZSJBXX.JCXXID = dt.Rows[0]["JCXXID"].ToString();
-                        jcxx.JCXXID = dt.Rows[0]["JCXXID"].ToString();
-                        DAO.Update(jcxx);
-                        DAO.Update(SHFW_QCMRZSJBXX);
-                        transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, ID = SHFW_QCMRZSJBXX.ID } };
-                    }
-                    else
-                    {
-                        SavePhotos(photos, jcxx.JCXXID);
-                        SHFW_QCMRZSJBXX.JCXXID = jcxx.JCXXID;
-                        DAO.Save(jcxx);
-                        DAO.Save(SHFW_QCMRZSJBXX);
-                        transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, ID = SHFW_QCMRZSJBXX.ID } };
-                    }
-                }
-                catch (Exception ex)
-                {
-                    transaction.Rollback();
-                    LoggerManager.Error("SHFW_QCMRZSJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
-                    return new { Result = EnResultType.Failed, Message = "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!", Type = 3 };
-                }
-            }
-        }
-
-        public object LoadSHFW_QCMRZSJBXX(string ID)
-        {
-            try
-            {
-                SHFW_QCMRZSJBXX SHFW_QCMRZSJBXX = DAO.GetObjectByID<SHFW_QCMRZSJBXX>(ID);
-                if (SHFW_QCMRZSJBXX != null)
-                {
-                    JCXX jcxx = GetJCXXByID(SHFW_QCMRZSJBXX.JCXXID);
-                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { SHFW_QCMRZSJBXX = SHFW_QCMRZSJBXX, BCMSString = BinaryHelper.BinaryToString(SHFW_QCMRZSJBXX.BCMS), JCXX = jcxx, Photos = GetPhtosByJCXXID(SHFW_QCMRZSJBXX.JCXXID) } };
-                }
-                else
-                {
-                    return new { Result = EnResultType.Failed, Message = "不存在" };
-                }
-            }
-            catch (Exception ex)
-            {
-                LoggerManager.Error("SHFW_QCMRZSJBXXBLL", "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
-                return new
-                {
-                    Result = EnResultType.Failed,
-                    Message = "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!"
-                };
-            }
-        }
-
-        public object SaveSHFW_QCPLJBXX(JCXX jcxx, SHFW_QCPLJBXX SHFW_QCPLJBXX, List<PHOTOS> photos)
-        {
-            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM SHFW_QCPLJBXX WHERE ID='{0}'", SHFW_QCPLJBXX.ID));
-            using (ITransaction transaction = DAO.BeginTransaction())
-            {
-                try
-                {
-                    if (dt.Rows.Count > 0)
-                    {
-                        SavePhotos(photos, dt.Rows[0]["JCXXID"].ToString());
-                        SHFW_QCPLJBXX.JCXXID = dt.Rows[0]["JCXXID"].ToString();
-                        jcxx.JCXXID = dt.Rows[0]["JCXXID"].ToString();
-                        DAO.Update(jcxx);
-                        DAO.Update(SHFW_QCPLJBXX);
-                        transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, ID = SHFW_QCPLJBXX.ID } };
-                    }
-                    else
-                    {
-                        SavePhotos(photos, jcxx.JCXXID);
-                        SHFW_QCPLJBXX.JCXXID = jcxx.JCXXID;
-                        DAO.Save(jcxx);
-                        DAO.Save(SHFW_QCPLJBXX);
-                        transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, ID = SHFW_QCPLJBXX.ID } };
-                    }
-                }
-                catch (Exception ex)
-                {
-                    transaction.Rollback();
-                    LoggerManager.Error("SHFW_QCPLJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
-                    return new { Result = EnResultType.Failed, Message = "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!", Type = 3 };
-                }
-            }
-        }
-
-        public object LoadSHFW_QCPLJBXX(string ID)
-        {
-            try
-            {
-                SHFW_QCPLJBXX SHFW_QCPLJBXX = DAO.GetObjectByID<SHFW_QCPLJBXX>(ID);
-                if (SHFW_QCPLJBXX != null)
-                {
-                    JCXX jcxx = GetJCXXByID(SHFW_QCPLJBXX.JCXXID);
-                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { SHFW_QCPLJBXX = SHFW_QCPLJBXX, BCMSString = BinaryHelper.BinaryToString(SHFW_QCPLJBXX.BCMS), JCXX = jcxx, Photos = GetPhtosByJCXXID(SHFW_QCPLJBXX.JCXXID) } };
-                }
-                else
-                {
-                    return new { Result = EnResultType.Failed, Message = "不存在" };
-                }
-            }
-            catch (Exception ex)
-            {
-                LoggerManager.Error("SHFW_QCPLJBXXBLL", "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
-                return new
-                {
-                    Result = EnResultType.Failed,
-                    Message = "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!"
-                };
-            }
-        }
-
-        public object SaveSHFW_QCWXBYJBXX(JCXX jcxx, SHFW_QCWXBYJBXX SHFW_QCWXBYJBXX, List<PHOTOS> photos)
-        {
-            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM SHFW_QCWXBYJBXX WHERE ID='{0}'", SHFW_QCWXBYJBXX.ID));
-            using (ITransaction transaction = DAO.BeginTransaction())
-            {
-                try
-                {
-                    if (dt.Rows.Count > 0)
-                    {
-                        SavePhotos(photos, dt.Rows[0]["JCXXID"].ToString());
-                        SHFW_QCWXBYJBXX.JCXXID = dt.Rows[0]["JCXXID"].ToString();
-                        jcxx.JCXXID = dt.Rows[0]["JCXXID"].ToString();
-                        DAO.Update(jcxx);
-                        DAO.Update(SHFW_QCWXBYJBXX);
-                        transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, ID = SHFW_QCWXBYJBXX.ID } };
-                    }
-                    else
-                    {
-                        SavePhotos(photos, jcxx.JCXXID);
-                        SHFW_QCWXBYJBXX.JCXXID = jcxx.JCXXID;
-                        DAO.Save(jcxx);
-                        DAO.Save(SHFW_QCWXBYJBXX);
-                        transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, ID = SHFW_QCWXBYJBXX.ID } };
-                    }
-                }
-                catch (Exception ex)
-                {
-                    transaction.Rollback();
-                    LoggerManager.Error("SHFW_QCWXBYJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
-                    return new { Result = EnResultType.Failed, Message = "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!", Type = 3 };
-                }
-            }
-        }
-
-        public object LoadSHFW_QCWXBYJBXX(string ID)
-        {
-            try
-            {
-                SHFW_QCWXBYJBXX SHFW_QCWXBYJBXX = DAO.GetObjectByID<SHFW_QCWXBYJBXX>(ID);
-                if (SHFW_QCWXBYJBXX != null)
-                {
-                    JCXX jcxx = GetJCXXByID(SHFW_QCWXBYJBXX.JCXXID);
-                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { SHFW_QCWXBYJBXX = SHFW_QCWXBYJBXX, BCMSString = BinaryHelper.BinaryToString(SHFW_QCWXBYJBXX.BCMS), JCXX = jcxx, Photos = GetPhtosByJCXXID(SHFW_QCWXBYJBXX.JCXXID) } };
-                }
-                else
-                {
-                    return new { Result = EnResultType.Failed, Message = "不存在" };
-                }
-            }
-            catch (Exception ex)
-            {
-                LoggerManager.Error("SHFW_QCWXBYJBXXBLL", "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
-                return new
-                {
-                    Result = EnResultType.Failed,
-                    Message = "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!"
-                };
-            }
-        }
-
-        public object SaveSHFW_ZCJBXX(JCXX jcxx, SHFW_ZCJBXX SHFW_ZCJBXX, List<PHOTOS> photos)
-        {
-            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM SHFW_ZCJBXX WHERE ID='{0}'", SHFW_ZCJBXX.ID));
-            using (ITransaction transaction = DAO.BeginTransaction())
-            {
-                try
-                {
-                    if (dt.Rows.Count > 0)
-                    {
-                        SavePhotos(photos, dt.Rows[0]["JCXXID"].ToString());
-                        SHFW_ZCJBXX.JCXXID = dt.Rows[0]["JCXXID"].ToString();
-                        jcxx.JCXXID = dt.Rows[0]["JCXXID"].ToString();
-                        DAO.Update(jcxx);
-                        DAO.Update(SHFW_ZCJBXX);
-                        transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, ID = SHFW_ZCJBXX.ID } };
-                    }
-                    else
-                    {
-                        SavePhotos(photos, jcxx.JCXXID);
-                        SHFW_ZCJBXX.JCXXID = jcxx.JCXXID;
-                        DAO.Save(jcxx);
-                        DAO.Save(SHFW_ZCJBXX);
-                        transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, ID = SHFW_ZCJBXX.ID } };
-                    }
-                }
-                catch (Exception ex)
-                {
-                    transaction.Rollback();
-                    LoggerManager.Error("SHFW_ZCJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
-                    return new { Result = EnResultType.Failed, Message = "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!", Type = 3 };
-                }
-            }
-        }
-
-        public object LoadSHFW_ZCJBXX(string ID)
-        {
-            try
-            {
-                SHFW_ZCJBXX SHFW_ZCJBXX = DAO.GetObjectByID<SHFW_ZCJBXX>(ID);
-                if (SHFW_ZCJBXX != null)
-                {
-                    JCXX jcxx = GetJCXXByID(SHFW_ZCJBXX.JCXXID);
-                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { SHFW_ZCJBXX = SHFW_ZCJBXX, BCMSString = BinaryHelper.BinaryToString(SHFW_ZCJBXX.BCMS), JCXX = jcxx, Photos = GetPhtosByJCXXID(SHFW_ZCJBXX.JCXXID) } };
-                }
-                else
-                {
-                    return new { Result = EnResultType.Failed, Message = "不存在" };
-                }
-            }
-            catch (Exception ex)
-            {
-                LoggerManager.Error("SHFW_ZCJBXXBLL", "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
-                return new
-                {
-                    Result = EnResultType.Failed,
-                    Message = "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!"
-                };
-            }
-        }
-
         public object SaveSHFW_BJJBXX(JCXX jcxx, SHFW_BJJBXX SHFW_BJJBXX, List<PHOTOS> photos)
         {
             DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM SHFW_BJJBXX WHERE ID='{0}'", SHFW_BJJBXX.ID));
@@ -1190,9 +694,9 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
-        public object SaveSHFW_SJSMWXJBXX(JCXX jcxx, SHFW_SJSMWXJBXX SHFW_SJSMWXJBXX, List<PHOTOS> photos)
+        public object SaveSHFW_SJWXJBXX(JCXX jcxx, SHFW_SJWXJBXX SHFW_SJWXJBXX, List<PHOTOS> photos)
         {
-            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM SHFW_SJSMWXJBXX WHERE ID='{0}'", SHFW_SJSMWXJBXX.ID));
+            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM SHFW_SJWXJBXX WHERE ID='{0}'", SHFW_SJWXJBXX.ID));
             using (ITransaction transaction = DAO.BeginTransaction())
             {
                 try
@@ -1200,41 +704,41 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     if (dt.Rows.Count > 0)
                     {
                         SavePhotos(photos, dt.Rows[0]["JCXXID"].ToString());
-                        SHFW_SJSMWXJBXX.JCXXID = dt.Rows[0]["JCXXID"].ToString();
+                        SHFW_SJWXJBXX.JCXXID = dt.Rows[0]["JCXXID"].ToString();
                         jcxx.JCXXID = dt.Rows[0]["JCXXID"].ToString();
                         DAO.Update(jcxx);
-                        DAO.Update(SHFW_SJSMWXJBXX);
+                        DAO.Update(SHFW_SJWXJBXX);
                         transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, ID = SHFW_SJSMWXJBXX.ID } };
+                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, ID = SHFW_SJWXJBXX.ID } };
                     }
                     else
                     {
                         SavePhotos(photos, jcxx.JCXXID);
-                        SHFW_SJSMWXJBXX.JCXXID = jcxx.JCXXID;
+                        SHFW_SJWXJBXX.JCXXID = jcxx.JCXXID;
                         DAO.Save(jcxx);
-                        DAO.Save(SHFW_SJSMWXJBXX);
+                        DAO.Save(SHFW_SJWXJBXX);
                         transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, ID = SHFW_SJSMWXJBXX.ID } };
+                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, ID = SHFW_SJWXJBXX.ID } };
                     }
                 }
                 catch (Exception ex)
                 {
                     transaction.Rollback();
-                    LoggerManager.Error("SHFW_SJSMWXJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                    LoggerManager.Error("SHFW_SJWXJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
                     return new { Result = EnResultType.Failed, Message = "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!", Type = 3 };
                 }
             }
         }
 
-        public object LoadSHFW_SJSMWXJBXX(string ID)
+        public object LoadSHFW_SJWXJBXX(string ID)
         {
             try
             {
-                SHFW_SJSMWXJBXX SHFW_SJSMWXJBXX = DAO.GetObjectByID<SHFW_SJSMWXJBXX>(ID);
-                if (SHFW_SJSMWXJBXX != null)
+                SHFW_SJWXJBXX SHFW_SJWXJBXX = DAO.GetObjectByID<SHFW_SJWXJBXX>(ID);
+                if (SHFW_SJWXJBXX != null)
                 {
-                    JCXX jcxx = GetJCXXByID(SHFW_SJSMWXJBXX.JCXXID);
-                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { SHFW_SJSMWXJBXX = SHFW_SJSMWXJBXX, BCMSString = BinaryHelper.BinaryToString(SHFW_SJSMWXJBXX.BCMS), JCXX = jcxx, Photos = GetPhtosByJCXXID(SHFW_SJSMWXJBXX.JCXXID) } };
+                    JCXX jcxx = GetJCXXByID(SHFW_SJWXJBXX.JCXXID);
+                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { SHFW_SJWXJBXX = SHFW_SJWXJBXX, BCMSString = BinaryHelper.BinaryToString(SHFW_SJWXJBXX.BCMS), JCXX = jcxx, Photos = GetPhtosByJCXXID(SHFW_SJWXJBXX.JCXXID) } };
                 }
                 else
                 {
@@ -1243,7 +747,69 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
             catch (Exception ex)
             {
-                LoggerManager.Error("SHFW_SJSMWXJBXXBLL", "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                LoggerManager.Error("SHFW_SJWXJBXXBLL", "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                return new
+                {
+                    Result = EnResultType.Failed,
+                    Message = "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!"
+                };
+            }
+        }
+
+        public object SaveSHFW_SMWXJBXX(JCXX jcxx, SHFW_SMWXJBXX SHFW_SMWXJBXX, List<PHOTOS> photos)
+        {
+            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM SHFW_SMWXJBXX WHERE ID='{0}'", SHFW_SMWXJBXX.ID));
+            using (ITransaction transaction = DAO.BeginTransaction())
+            {
+                try
+                {
+                    if (dt.Rows.Count > 0)
+                    {
+                        SavePhotos(photos, dt.Rows[0]["JCXXID"].ToString());
+                        SHFW_SMWXJBXX.JCXXID = dt.Rows[0]["JCXXID"].ToString();
+                        jcxx.JCXXID = dt.Rows[0]["JCXXID"].ToString();
+                        DAO.Update(jcxx);
+                        DAO.Update(SHFW_SMWXJBXX);
+                        transaction.Commit();
+                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, ID = SHFW_SMWXJBXX.ID } };
+                    }
+                    else
+                    {
+                        SavePhotos(photos, jcxx.JCXXID);
+                        SHFW_SMWXJBXX.JCXXID = jcxx.JCXXID;
+                        DAO.Save(jcxx);
+                        DAO.Save(SHFW_SMWXJBXX);
+                        transaction.Commit();
+                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, ID = SHFW_SMWXJBXX.ID } };
+                    }
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    LoggerManager.Error("SHFW_SMWXJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                    return new { Result = EnResultType.Failed, Message = "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!", Type = 3 };
+                }
+            }
+        }
+
+        public object LoadSHFW_SMWXJBXX(string ID)
+        {
+            try
+            {
+                SHFW_SMWXJBXX SHFW_SMWXJBXX = DAO.GetObjectByID<SHFW_SMWXJBXX>(ID);
+                if (SHFW_SMWXJBXX != null)
+                {
+                    JCXX jcxx = GetJCXXByID(SHFW_SMWXJBXX.JCXXID);
+                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { SHFW_SMWXJBXX = SHFW_SMWXJBXX, BCMSString = BinaryHelper.BinaryToString(SHFW_SMWXJBXX.BCMS), JCXX = jcxx, Photos = GetPhtosByJCXXID(SHFW_SMWXJBXX.JCXXID) } };
+                }
+                else
+                {
+                    return new { Result = EnResultType.Failed, Message = "不存在" };
+                }
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("SHFW_SMWXJBXXBLL", "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
                 return new
                 {
                     Result = EnResultType.Failed,

@@ -9,16 +9,16 @@ function LoadDefault() {
         dataType: "json",
         data:
         {
-            TYPE: "SHFWXX_SJSMWX",
+            TYPE: "SHFWXX_SJWX",
             ID: getUrlParam("ID")
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 LoadJBXX(xml.list[0]);
                 LoadXQ(xml.list[0], xml.BCMSString);
-                LoadCNXH("SHFWXX_SJSMWX");
+                LoadCNXH("SHFWXX_SJWX");
                 LoadGRXX(xml.grxxlist[0]);
-                LoadJJRTJFY("SHFWXX_SJSMWX");
+                LoadJJRTJFY("SHFWXX_SJWX");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

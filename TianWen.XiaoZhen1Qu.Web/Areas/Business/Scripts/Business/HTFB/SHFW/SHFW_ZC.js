@@ -3,7 +3,7 @@
     BindClick("LB");
     BindClick("QY");
     BindClick("DD");
-    LoadSHFW_ZCJBXX();
+    LoadCL_ZCJBXX();
 });
 //选择类别下拉框
 function SelectLB(obj, type, id) {
@@ -77,10 +77,10 @@ function BindClick(type) {
     });
 }
 //加载生活服务_租车基本信息
-function LoadSHFW_ZCJBXX() {
+function LoadCL_ZCJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SHFW/LoadSHFW_ZCJBXX",
+        url: getRootPath() + "/Business/SHFW/LoadCL_ZCJBXX",
         dataType: "json",
         data:
         {
@@ -89,22 +89,22 @@ function LoadSHFW_ZCJBXX() {
         success: function (xml) {
             if (xml.Result === 1) {
                 var jsonObj = new JsonDB("myTabContent");
-                jsonObj.DisplayFromJson("myTabContent", xml.Value.SHFW_ZCJBXX);
+                jsonObj.DisplayFromJson("myTabContent", xml.Value.CL_ZCJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
-                $("#ID").val(xml.Value.SHFW_ZCJBXX.ID);
+                $("#ID").val(xml.Value.CL_ZCJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.BCMSString);
                 });
-                $("#spanLB").html(xml.Value.SHFW_ZCJBXX.LB);
-                $("#spanQY").html(xml.Value.SHFW_ZCJBXX.QY);
-                $("#spanDD").html(xml.Value.SHFW_ZCJBXX.DD);
+                $("#spanLB").html(xml.Value.CL_ZCJBXX.LB);
+                $("#spanQY").html(xml.Value.CL_ZCJBXX.QY);
+                $("#spanDD").html(xml.Value.CL_ZCJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
-                if (xml.Value.SHFW_ZCJBXX.LB.indexOf("大巴(30座以上)") !== -1 || xml.Value.SHFW_ZCJBXX.LB.indexOf("中巴(30座以下)") !== -1 || xml.Value.SHFW_ZCJBXX.LB.indexOf("面包车") !== -1
-                    || xml.Value.SHFW_ZCJBXX.LB.indexOf("MPV(商务车)") !== -1 || xml.Value.SHFW_ZCJBXX.LB.indexOf("豪华轿车") !== -1 || xml.Value.SHFW_ZCJBXX.LB.indexOf("普通轿车") !== -1
-                    || xml.Value.SHFW_ZCJBXX.LB.indexOf("跑车") !== -1 || xml.Value.SHFW_ZCJBXX.LB.indexOf("SUV(越野车)") !== -1) {
-                    LoadXL(xml.Value.SHFW_ZCJBXX.LB, xml.Value.SHFW_ZCJBXX.XL);
+                if (xml.Value.CL_ZCJBXX.LB.indexOf("大巴(30座以上)") !== -1 || xml.Value.CL_ZCJBXX.LB.indexOf("中巴(30座以下)") !== -1 || xml.Value.CL_ZCJBXX.LB.indexOf("面包车") !== -1
+                    || xml.Value.CL_ZCJBXX.LB.indexOf("MPV(商务车)") !== -1 || xml.Value.CL_ZCJBXX.LB.indexOf("豪华轿车") !== -1 || xml.Value.CL_ZCJBXX.LB.indexOf("普通轿车") !== -1
+                    || xml.Value.CL_ZCJBXX.LB.indexOf("跑车") !== -1 || xml.Value.CL_ZCJBXX.LB.indexOf("SUV(越野车)") !== -1) {
+                    LoadXL(xml.Value.CL_ZCJBXX.LB, xml.Value.CL_ZCJBXX.XL);
                 }
             }
         },
@@ -130,7 +130,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SHFW/FBSHFW_ZCJBXX",
+        url: getRootPath() + "/Business/SHFW/FBCL_ZCJBXX",
         dataType: "json",
         data:
         {

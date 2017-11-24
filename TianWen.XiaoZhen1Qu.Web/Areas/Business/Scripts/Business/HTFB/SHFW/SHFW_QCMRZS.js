@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
-    LoadSHFW_QCMRZSJBXX();
+    LoadCL_QCMRZSJBXX();
     BindClick("LB");
     BindClick("QY");
     BindClick("DD");
@@ -89,10 +89,10 @@ function PDLB(lbmc) {
     }
 }
 //加载生活服务_汽车美容/装饰基本信息
-function LoadSHFW_QCMRZSJBXX() {
+function LoadCL_QCMRZSJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SHFW/LoadSHFW_QCMRZSJBXX",
+        url: getRootPath() + "/Business/SHFW/LoadCL_QCMRZSJBXX",
         dataType: "json",
         data:
         {
@@ -101,23 +101,23 @@ function LoadSHFW_QCMRZSJBXX() {
         success: function (xml) {
             if (xml.Result === 1) {
                 var jsonObj = new JsonDB("myTabContent");
-                jsonObj.DisplayFromJson("myTabContent", xml.Value.SHFW_QCMRZSJBXX);
+                jsonObj.DisplayFromJson("myTabContent", xml.Value.CL_QCMRZSJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
-                $("#ID").val(xml.Value.SHFW_QCMRZSJBXX.ID);
+                $("#ID").val(xml.Value.CL_QCMRZSJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.BCMSString);
                 });
-                PDLB(xml.Value.SHFW_QCMRZSJBXX.LB);
-                $("#spanLB").html(xml.Value.SHFW_QCMRZSJBXX.LB);
-                $("#spanXCDD").html(xml.Value.SHFW_QCMRZSJBXX.XCDD);
-                $("#spanXCFS").html(xml.Value.SHFW_QCMRZSJBXX.XCFS);
-                $("#spanPP").html(xml.Value.SHFW_QCMRZSJBXX.PP);
-                $("#spanPZ").html(xml.Value.SHFW_QCMRZSJBXX.PZ);
-                $("#spanTMFW").html(xml.Value.SHFW_QCMRZSJBXX.TMFW);
-                $("#spanQY").html(xml.Value.SHFW_QCMRZSJBXX.QY);
-                $("#spanDD").html(xml.Value.SHFW_QCMRZSJBXX.DD);
+                PDLB(xml.Value.CL_QCMRZSJBXX.LB);
+                $("#spanLB").html(xml.Value.CL_QCMRZSJBXX.LB);
+                $("#spanXCDD").html(xml.Value.CL_QCMRZSJBXX.XCDD);
+                $("#spanXCFS").html(xml.Value.CL_QCMRZSJBXX.XCFS);
+                $("#spanPP").html(xml.Value.CL_QCMRZSJBXX.PP);
+                $("#spanPZ").html(xml.Value.CL_QCMRZSJBXX.PZ);
+                $("#spanTMFW").html(xml.Value.CL_QCMRZSJBXX.TMFW);
+                $("#spanQY").html(xml.Value.CL_QCMRZSJBXX.QY);
+                $("#spanDD").html(xml.Value.CL_QCMRZSJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
             }
         },
@@ -147,7 +147,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SHFW/FBSHFW_QCMRZSJBXX",
+        url: getRootPath() + "/Business/SHFW/FBCL_QCMRZSJBXX",
         dataType: "json",
         data:
         {
