@@ -53,6 +53,7 @@
     <Compile Include="CXLB\ILRCXBLL.cs" />
     <Compile Include="CXLB\ILYJDCXBLL.cs" />
     <Compile Include="CXLB\IXXYLCXBLL.cs" />
+    <Compile Include="CXLB\ISHFWCXBLL.cs" />
     <Compile Include="CXLB\IZXJCCXBLL.cs" />
     <Compile Include="CXLB\ISWFWCXBLL.cs" />
     <Compile Include="CXLB\IZSJMCXBLL.cs" />

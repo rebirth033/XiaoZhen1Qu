@@ -70,6 +70,7 @@
     <Compile Include="BLL\CXLB\HQSYCXBLL.cs" />
     <Compile Include="BLL\CXLB\LYJDCXBLL.cs" />
     <Compile Include="BLL\CXLB\XXYLCXBLL.cs" />
+    <Compile Include="BLL\CXLB\SHFWCXBLL.cs" />
     <Compile Include="BLL\CXLB\ZXJCCXBLL.cs" />
     <Compile Include="BLL\CXLB\SWFWCXBLL.cs" />
     <Compile Include="BLL\CXLB\ZSJMCXBLL.cs" />
