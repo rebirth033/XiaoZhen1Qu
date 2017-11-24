@@ -2,8 +2,6 @@
     $("body").bind("click", function () { Close("_XZQ"); });
     LoadXXYL_XYWQJBXX();
     BindClick("LB");
-    BindClick("QY");
-    BindClick("DD");
 });
 
 //绑定下拉框鼠标点击样式
@@ -11,12 +9,6 @@ function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
             LoadCODESByTYPENAME("洗浴温泉", "LB", "CODES_XXYL", Bind, "XYWQLB", "LB", "");
-        }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
         }
     });
 }
@@ -62,7 +54,6 @@ function FB() {
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");

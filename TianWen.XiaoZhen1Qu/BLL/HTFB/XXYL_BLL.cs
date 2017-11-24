@@ -446,6 +446,68 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
+        public object SaveXXYL_KTVJBXX(JCXX jcxx, XXYL_KTVJBXX XXYL_KTVJBXX, List<PHOTOS> photos)
+        {
+            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM XXYL_KTVJBXX WHERE ID='{0}'", XXYL_KTVJBXX.ID));
+            using (ITransaction transaction = DAO.BeginTransaction())
+            {
+                try
+                {
+                    if (dt.Rows.Count > 0)
+                    {
+                        SavePhotos(photos, dt.Rows[0]["JCXXID"].ToString());
+                        XXYL_KTVJBXX.JCXXID = dt.Rows[0]["JCXXID"].ToString();
+                        jcxx.JCXXID = dt.Rows[0]["JCXXID"].ToString();
+                        DAO.Update(jcxx);
+                        DAO.Update(XXYL_KTVJBXX);
+                        transaction.Commit();
+                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, ID = XXYL_KTVJBXX.ID } };
+                    }
+                    else
+                    {
+                        SavePhotos(photos, jcxx.JCXXID);
+                        XXYL_KTVJBXX.JCXXID = jcxx.JCXXID;
+                        DAO.Save(jcxx);
+                        DAO.Save(XXYL_KTVJBXX);
+                        transaction.Commit();
+                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, ID = XXYL_KTVJBXX.ID } };
+                    }
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    LoggerManager.Error("XXYL_KTVJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                    return new { Result = EnResultType.Failed, Message = "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!", Type = 3 };
+                }
+            }
+        }
+
+        public object LoadXXYL_KTVJBXX(string ID)
+        {
+            try
+            {
+                XXYL_KTVJBXX XXYL_KTVJBXX = DAO.GetObjectByID<XXYL_KTVJBXX>(ID);
+                if (XXYL_KTVJBXX != null)
+                {
+                    JCXX jcxx = GetJCXXByID(XXYL_KTVJBXX.JCXXID);
+                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { XXYL_KTVJBXX = XXYL_KTVJBXX, BCMSString = BinaryHelper.BinaryToString(XXYL_KTVJBXX.BCMS), JCXX = jcxx, Photos = GetPhtosByJCXXID(XXYL_KTVJBXX.JCXXID) } };
+                }
+                else
+                {
+                    return new { Result = EnResultType.Failed, Message = "不存在" };
+                }
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("XXYL_KTVJBXXBLL", "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                return new
+                {
+                    Result = EnResultType.Failed,
+                    Message = "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!"
+                };
+            }
+        }
+
         public object SaveXXYL_YDJSJBXX(JCXX jcxx, XXYL_YDJSJBXX XXYL_YDJSJBXX, List<PHOTOS> photos)
         {
             DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM XXYL_YDJSJBXX WHERE ID='{0}'", XXYL_YDJSJBXX.ID));

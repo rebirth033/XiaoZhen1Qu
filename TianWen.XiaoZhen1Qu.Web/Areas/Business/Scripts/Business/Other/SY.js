@@ -349,7 +349,7 @@ function OpenCXLB(lbid, typename, condition) {
         window.open(getRootPath() + "/Business/ZSJMCX/ZSJMCX_TS?LBID=" + lbid);
     if (lbid === 171)
         window.open(getRootPath() + "/Business/ZSJMCX/ZSJMCX_SHFW?LBID=" + lbid);
-    if (lbid === 172)
+    if (lbid === 295)
         window.open(getRootPath() + "/Business/ZSJMCX/ZSJMCX_MYET?LBID=" + lbid);
     //批发采购
     if (lbid === 224)
@@ -582,6 +582,8 @@ function OpenCXLB(lbid, typename, condition) {
         window.open(getRootPath() + "/Business/XXYLCX/XXYLCX_YDJS?LBID=" + lbid);
     if (lbid === 173)
         window.open(getRootPath() + "/Business/XXYLCX/XXYLCX_YDJB?LBID=" + lbid);
+    if (lbid === 174)
+        window.open(getRootPath() + "/Business/XXYLCX/XXYLCX_KTV?LBID=" + lbid);
     if (lbid === 175)
         window.open(getRootPath() + "/Business/XXYLCX/XXYLCX_HW?LBID=" + lbid);
     if (lbid === 176)

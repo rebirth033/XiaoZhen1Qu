@@ -264,6 +264,7 @@
     <Compile Include="Maps\XXYL\XXYL_QPZYJBXX_Map.cs" />
     <Compile Include="Maps\XXYL\XXYL_TQTJBXX_Map.cs" />
     <Compile Include="Maps\XXYL\XXYL_XYWQJBXX_Map.cs" />
+    <Compile Include="Maps\XXYL\XXYL_KTVJBXX_Map.cs" />
     <Compile Include="Maps\XXYL\XXYL_YDJBJBXX_Map.cs" />
     <Compile Include="Maps\XXYL\XXYL_YDJSJBXX_Map.cs" />
     <Compile Include="Maps\XXYL\XXYL_ZLAMJBXX_Map.cs" />
@@ -507,6 +508,7 @@
     <Compile Include="Models\XXYL\XXYL_QPZYJBXX.cs" />
     <Compile Include="Models\XXYL\XXYL_TQTJBXX.cs" />
     <Compile Include="Models\XXYL\XXYL_XYWQJBXX.cs" />
+    <Compile Include="Models\XXYL\XXYL_KTVJBXX.cs" />
     <Compile Include="Models\XXYL\XXYL_YDJBJBXX.cs" />
     <Compile Include="Models\XXYL\XXYL_YDJSJBXX.cs" />
     <Compile Include="Models\XXYL\XXYL_ZLAMJBXX.cs" />

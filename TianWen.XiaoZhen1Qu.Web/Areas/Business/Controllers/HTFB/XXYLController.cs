@@ -12,61 +12,16 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
     public class XXYLController : BaseController
     {
         public IXXYL_BLL XXYL_BLL { get; set; }
-
-        public ActionResult XXYL_DIYSGF()
-        {
-            ViewData["XZQ"] = Session["XZQ"];
-            ViewData["YHM"] = Session["YHM"];
-            return View();
-        }
-        public ActionResult XXYL_HW()
-        {
-            ViewData["XZQ"] = Session["XZQ"];
-            ViewData["YHM"] = Session["YHM"];
-            return View();
-        }
-        public ActionResult XXYL_HPG()
-        {
-            ViewData["XZQ"] = Session["XZQ"];
-            ViewData["YHM"] = Session["YHM"];
-            return View();
-        }
-        public ActionResult XXYL_TQT()
-        {
-            ViewData["XZQ"] = Session["XZQ"];
-            ViewData["YHM"] = Session["YHM"];
-            return View();
-        }
-        public ActionResult XXYL_QPZY()
-        {
-            ViewData["XZQ"] = Session["XZQ"];
-            ViewData["YHM"] = Session["YHM"];
-            return View();
-        }
-        public ActionResult XXYL_XYWQ()
-        {
-            ViewData["XZQ"] = Session["XZQ"];
-            ViewData["YHM"] = Session["YHM"];
-            return View();
-        }
-        public ActionResult XXYL_YDJB()
-        {
-            ViewData["XZQ"] = Session["XZQ"];
-            ViewData["YHM"] = Session["YHM"];
-            return View();
-        }
-        public ActionResult XXYL_YDJS()
-        {
-            ViewData["XZQ"] = Session["XZQ"];
-            ViewData["YHM"] = Session["YHM"];
-            return View();
-        }
-        public ActionResult XXYL_ZLAM()
-        {
-            ViewData["XZQ"] = Session["XZQ"];
-            ViewData["YHM"] = Session["YHM"];
-            return View();
-        }
+        public ActionResult XXYL_DIYSGF() { ViewData["XZQ"] = Session["XZQ"]; ViewData["YHM"] = Session["YHM"]; return View(); }
+        public ActionResult XXYL_HW() { ViewData["XZQ"] = Session["XZQ"]; ViewData["YHM"] = Session["YHM"]; return View(); }
+        public ActionResult XXYL_HPG() { ViewData["XZQ"] = Session["XZQ"]; ViewData["YHM"] = Session["YHM"]; return View(); }
+        public ActionResult XXYL_TQT() { ViewData["XZQ"] = Session["XZQ"]; ViewData["YHM"] = Session["YHM"]; return View(); }
+        public ActionResult XXYL_QPZY() { ViewData["XZQ"] = Session["XZQ"]; ViewData["YHM"] = Session["YHM"]; return View(); }
+        public ActionResult XXYL_XYWQ() { ViewData["XZQ"] = Session["XZQ"]; ViewData["YHM"] = Session["YHM"]; return View(); }
+        public ActionResult XXYL_YDJB() { ViewData["XZQ"] = Session["XZQ"]; ViewData["YHM"] = Session["YHM"]; return View(); }
+        public ActionResult XXYL_KTV() { ViewData["XZQ"] = Session["XZQ"]; ViewData["YHM"] = Session["YHM"]; return View(); }
+        public ActionResult XXYL_YDJS() { ViewData["XZQ"] = Session["XZQ"]; ViewData["YHM"] = Session["YHM"]; return View(); }
+        public ActionResult XXYL_ZLAM() { ViewData["XZQ"] = Session["XZQ"]; ViewData["YHM"] = Session["YHM"]; return View(); }
 
         [ValidateInput(false)]
         public JsonResult FBXXYL_DIYSGFJBXX()
@@ -153,7 +108,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return Json(result);
         }
         [ValidateInput(false)]
-        public JsonResult FBXXYL_YDJB()
+        public JsonResult FBXXYL_YDJBJBXX()
         {
             YHJBXX yhjbxx = XXYL_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
@@ -164,6 +119,20 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             XXYL_YDJBjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
             object result = XXYL_BLL.SaveXXYL_YDJBJBXX(jcxx, XXYL_YDJBjbxx, photos);
+            return Json(result);
+        }
+        [ValidateInput(false)]
+        public JsonResult FBXXYL_KTVJBXX()
+        {
+            YHJBXX yhjbxx = XXYL_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            string json = Request["Json"];
+            string bcms = Request["BCMS"];
+            string fwzp = Request["FWZP"];
+            JCXX jcxx = CreateJCXX(yhjbxx, json);
+            XXYL_KTVJBXX XXYL_KTVjbxx = JsonHelper.ConvertJsonToObject<XXYL_KTVJBXX>(json);
+            XXYL_KTVjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
+            List<PHOTOS> photos = GetTP(fwzp);
+            object result = XXYL_BLL.SaveXXYL_KTVJBXX(jcxx, XXYL_KTVjbxx, photos);
             return Json(result);
         }
         [ValidateInput(false)]
@@ -195,59 +164,15 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return Json(result);
         }
 
-        public JsonResult LoadXXYL_DIYSGFJBXX()
-        {
-            string ID = Request["ID"];
-            object result = XXYL_BLL.LoadXXYL_DIYSGFJBXX(ID);
-            return Json(result);
-        }
-        public JsonResult LoadXXYL_HWJBXX()
-        {
-            string ID = Request["ID"];
-            object result = XXYL_BLL.LoadXXYL_HWJBXX(ID);
-            return Json(result);
-        }
-        public JsonResult LoadXXYL_HPGJBXX()
-        {
-            string ID = Request["ID"];
-            object result = XXYL_BLL.LoadXXYL_HPGJBXX(ID);
-            return Json(result);
-        }
-        public JsonResult LoadXXYL_TQTJBXX()
-        {
-            string ID = Request["ID"];
-            object result = XXYL_BLL.LoadXXYL_TQTJBXX(ID);
-            return Json(result);
-        }
-        public JsonResult LoadXXYL_QPZYJBXX()
-        {
-            string ID = Request["ID"];
-            object result = XXYL_BLL.LoadXXYL_QPZYJBXX(ID);
-            return Json(result);
-        }
-        public JsonResult LoadXXYL_XYWQJBXX()
-        {
-            string ID = Request["ID"];
-            object result = XXYL_BLL.LoadXXYL_XYWQJBXX(ID);
-            return Json(result);
-        }
-        public JsonResult LoadXXYL_YDJBJBXX()
-        {
-            string ID = Request["ID"];
-            object result = XXYL_BLL.LoadXXYL_YDJBJBXX(ID);
-            return Json(result);
-        }
-        public JsonResult LoadXXYL_YDJSJBXX()
-        {
-            string ID = Request["ID"];
-            object result = XXYL_BLL.LoadXXYL_YDJSJBXX(ID);
-            return Json(result);
-        }
-        public JsonResult LoadXXYL_ZLAMJBXX()
-        {
-            string ID = Request["ID"];
-            object result = XXYL_BLL.LoadXXYL_ZLAMJBXX(ID);
-            return Json(result);
-        }
+        public JsonResult LoadXXYL_DIYSGFJBXX() { string ID = Request["ID"]; object result = XXYL_BLL.LoadXXYL_DIYSGFJBXX(ID); return Json(result); }
+        public JsonResult LoadXXYL_HWJBXX() { string ID = Request["ID"]; object result = XXYL_BLL.LoadXXYL_HWJBXX(ID); return Json(result); }
+        public JsonResult LoadXXYL_HPGJBXX() { string ID = Request["ID"]; object result = XXYL_BLL.LoadXXYL_HPGJBXX(ID); return Json(result); }
+        public JsonResult LoadXXYL_TQTJBXX() { string ID = Request["ID"]; object result = XXYL_BLL.LoadXXYL_TQTJBXX(ID); return Json(result); }
+        public JsonResult LoadXXYL_QPZYJBXX() { string ID = Request["ID"]; object result = XXYL_BLL.LoadXXYL_QPZYJBXX(ID); return Json(result); }
+        public JsonResult LoadXXYL_XYWQJBXX() { string ID = Request["ID"]; object result = XXYL_BLL.LoadXXYL_XYWQJBXX(ID); return Json(result); }
+        public JsonResult LoadXXYL_YDJBJBXX() { string ID = Request["ID"]; object result = XXYL_BLL.LoadXXYL_YDJBJBXX(ID); return Json(result); }
+        public JsonResult LoadXXYL_KTVJBXX() { string ID = Request["ID"]; object result = XXYL_BLL.LoadXXYL_KTVJBXX(ID); return Json(result); }
+        public JsonResult LoadXXYL_YDJSJBXX() { string ID = Request["ID"]; object result = XXYL_BLL.LoadXXYL_YDJSJBXX(ID); return Json(result); }
+        public JsonResult LoadXXYL_ZLAMJBXX() { string ID = Request["ID"]; object result = XXYL_BLL.LoadXXYL_ZLAMJBXX(ID); return Json(result); }
     }
 }
