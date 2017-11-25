@@ -12,12 +12,49 @@ function LoadCLCondition() {
 }
 //选择条件
 function SelectCondition(obj, name) {
-    if (name === "车型" && obj.innerHTML === "挖掘机") {
-        LoadConditionByTypeName("挖掘机品牌", "CODES_CL", "品牌", "PP");
-    }
-    if (name === "车型" && obj.innerHTML !== "挖掘机") {
+    if (name === "类别" && obj.innerHTML === "洗车") {
+        LoadConditionByTypeName("洗车方式", "CODES_CL", "方式", "XCFS");
+        LoadConditionByTypeName("洗车地点", "CODES_CL", "地点", "XCDD");
         $("#ul_condition_body_PP").remove();
+        $("#ul_condition_body_PZ").remove();
+        $("#ul_condition_body_TMFW").remove();
     }
+    if (name === "类别" && obj.innerHTML === "打蜡") {
+        LoadConditionByTypeName("打蜡品种", "CODES_CL", "品种", "PZ");
+        LoadConditionByTypeName("打蜡品牌", "CODES_CL", "品牌", "PP");
+        $("#ul_condition_body_XCFS").remove();
+        $("#ul_condition_body_XCDD").remove();
+        $("#ul_condition_body_TMFW").remove();
+    }
+    if (name === "类别" && obj.innerHTML === "镀膜") {
+        LoadConditionByTypeName("镀膜品牌", "CODES_CL", "品牌", "PP",15);
+        $("#ul_condition_body_XCFS").remove();
+        $("#ul_condition_body_XCDD").remove();
+        $("#ul_condition_body_PZ").remove();
+        $("#ul_condition_body_TMFW").remove();
+    }
+    if (name === "类别" && obj.innerHTML === "封釉") {
+        LoadConditionByTypeName("封釉品牌", "CODES_CL", "品牌", "PP", 15);
+        $("#ul_condition_body_XCFS").remove();
+        $("#ul_condition_body_XCDD").remove();
+        $("#ul_condition_body_PZ").remove();
+        $("#ul_condition_body_TMFW").remove();
+    }
+    if (name === "类别" && obj.innerHTML === "玻璃贴膜") {
+        LoadConditionByTypeName("玻璃贴膜品牌", "CODES_CL", "品牌", "PP");
+        LoadConditionByTypeName("贴膜范围", "CODES_CL", "贴膜范围", "TMFW");
+        $("#ul_condition_body_XCFS").remove();
+        $("#ul_condition_body_XCDD").remove();
+        $("#ul_condition_body_PZ").remove();
+    }
+    if (name === "类别" && (obj.innerHTML !== "玻璃贴膜" && obj.innerHTML !== "洗车" && obj.innerHTML !== "打蜡" && obj.innerHTML !== "镀膜" && obj.innerHTML !== "封釉")) {
+        $("#ul_condition_body_XCFS").remove();
+        $("#ul_condition_body_XCDD").remove();
+        $("#ul_condition_body_PP").remove();
+        $("#ul_condition_body_PZ").remove();
+        $("#ul_condition_body_TMFW").remove();
+    }
+
     $(obj).parent().find(".li_condition_body").each(function () {
         $(this).removeClass("li_condition_body_active");
     });

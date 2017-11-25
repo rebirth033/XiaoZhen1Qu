@@ -2,32 +2,26 @@
 $(document).ready(function () {
     BindBodyNav();
     LoadCLCondition();
-    LoadHot("CLXX_ZC");
+    LoadHot("CLXX_QCGZFH");
 });
 //加载条件
 function LoadCLCondition() {
-    LoadConditionByTypeName("工程车类型", "CODES_CL", "车型", "CX");
-    LoadConditionByTypeName("客车价格", "CODES_CL", "价格", "JG");
-    LoadBody("CLXX_ZC", currentIndex);
+    LoadConditionByTypeName("汽车改装/防护", "CODES_CL", "类别", "LB");
+    LoadDistrict("福州", "350100", "QY");
+    LoadBody("CLXX_QCGZFH", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
-    if (name === "车型" && obj.innerHTML === "挖掘机") {
-        LoadConditionByTypeName("挖掘机品牌", "CODES_CL", "品牌", "PP");
-    }
-    if (name === "车型" && obj.innerHTML !== "挖掘机") {
-        $("#ul_condition_body_PP").remove();
-    }
     $(obj).parent().find(".li_condition_body").each(function () {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
-    LoadBody("CLXX_ZC", currentIndex);
-    ShowSelectCondition("CLXX_ZC");
+    LoadBody("CLXX_QCGZFH", currentIndex);
+    ShowSelectCondition("CLXX_QCGZFH");
 }
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
-    currentIndex = parseInt(PageIndex);var condition = GetAllCondition("LB,PP,CX,JG,QY");
+    currentIndex = parseInt(PageIndex);var condition = GetAllCondition("LB,QY");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/CLCX/LoadCLXX",
@@ -58,11 +52,11 @@ function LoadCL_JCInfo(obj) {
     var html = "";
     html += ('<li class="li_body_left">');
     html += ('<div class="div_li_body_left_left">');
-    html += ('<img class="img_li_body_left" onclick="OpenXXXX(\'CLXX_ZC\',\'' + obj.ID + '\')" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
+    html += ('<img class="img_li_body_left" onclick="OpenXXXX(\'CLXX_QCGZFH\',\'' + obj.ID + '\')" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<div class="div_img_li_body_left_count"><span>' + obj.PHOTOS.length + '图</span></div>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
-    html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'CLXX_ZC\',\'' + obj.ID + '\')">' + TruncStr(obj.BT, 35) + '</p>');
+    html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'CLXX_QCGZFH\',\'' + obj.ID + '\')">' + TruncStr(obj.BT, 35) + '</p>');
     html += ('<p class="p_li_body_left_center_cs font_size16">' + obj.CX + ' / ' + obj.CCNF + '年 / ' + obj.XSS + '小时' + ' / ' + obj.QY + '-' + obj.DD + '</p>');
     html += ('<p class="p_li_body_left_center_dz font_size16">' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
@@ -101,7 +95,7 @@ function LoadHot(TYPE) {
 //加载热门单条信息
 function LoadHotInfo(obj) {
     var html = "";
-    html += ('<li onclick="OpenXXXX(\'CLXX_ZC\',\'' + obj.ID + '\')" class="li_body_right">');
+    html += ('<li onclick="OpenXXXX(\'CLXX_QCGZFH\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_right_xq">' + obj.QY + ' / ' + obj.DD  + '</p>');
     html += ('<p class="p_li_body_right_cs">' + obj.LB + '</p>');
