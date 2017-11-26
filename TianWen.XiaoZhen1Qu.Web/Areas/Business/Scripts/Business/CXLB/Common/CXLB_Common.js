@@ -7,7 +7,7 @@
     $(".div_body").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
     $("#li_condition_head_qyzf").css("background-color", "#ffffff");
     $(".li_body_head:eq(0)").css("border-bottom", "2px solid #5bc0de").css("color", "#5bc0de").css("font-weight", "700");
-    $("#span_fbxx").bind("click", OpenLBXZ);
+    $("#span_fbxx").bind("click", FBXX);
     GetHeadNav();
     $("#div_condition_body").html('');
 });
@@ -277,7 +277,26 @@ function LoadDistrictCondition(array, type, name) {
     html += '</ul>';
     $("#div_condition_body_" + type).append(html);
 }
-//类别选择
-function OpenLBXZ() {
-    window.open(getRootPath() + "/Business/LBXZ/LBXZ");
+//发布信息
+function FBXX() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/LBXZ/LoadLBByID",
+        dataType: "json",
+        data:
+        {
+            LBID: getUrlParam("LBID")
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                window.location.href = getRootPath() + "/Business/" + xml.list[0].FBYM.split('_')[0] + "/" + xml.list[0].FBYM + "?CLICKID=" + getUrlParam("LBID");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+    
+    
+    
 }

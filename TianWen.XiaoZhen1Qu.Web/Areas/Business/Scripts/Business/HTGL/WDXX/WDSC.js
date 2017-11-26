@@ -125,7 +125,7 @@ function Delete(JCXXID) {
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-            _masker.CloseMasker(false, errorThrown);
+            
         }
     });
 }

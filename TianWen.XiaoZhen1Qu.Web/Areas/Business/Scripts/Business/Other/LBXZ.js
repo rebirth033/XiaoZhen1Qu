@@ -8,7 +8,7 @@
     $("#title").html("信息小镇_发布信息");
     LoadDL();
 });
-
+//加载大类
 function LoadDL() {
     $("#spanXZDL").css("color", "#5bc0de");
     $("#emXZDL").css("background", "#5bc0de");
@@ -36,11 +36,11 @@ function LoadDL() {
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-            _masker.CloseMasker(false, errorThrown);
+            
         }
     });
 }
-
+//加载小类
 function LoadXL(LBID, LBNAME) {
     $("#spanXZDL").css("color", "#333333");
     $("#emXZDL").css("background", "#cccccc");
@@ -76,7 +76,6 @@ function LoadXL(LBID, LBNAME) {
                         trhtml += "</tr>";
                         XLhtml += trhtml;
                     }
-
                 } else {
                     for (var i = 0; i < xml.list.length; i++) {
                         if (i % 6 === 0 || i === 0)
@@ -97,15 +96,14 @@ function LoadXL(LBID, LBNAME) {
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-            _masker.CloseMasker(false, errorThrown);
+            
         }
     });
 }
-
+//发布信息
 function FBXX(FBYM, LBID) {
     window.location.href = getRootPath() + "/Business/" + FBYM.split('_')[0] + "/" + FBYM + "?CLICKID=" + LBID;
 }
-
 //显示用户菜单
 function ShowYHCD() {
     $("#div_top_right_dropdown_yhm").css("display", "block");
