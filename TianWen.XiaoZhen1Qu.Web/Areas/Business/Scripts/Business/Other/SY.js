@@ -90,6 +90,9 @@ function OpenXXXX(LBID, JCXXID) {
                 if (LBID === 19) {
                     window.open(getRootPath() + "/Business/FCXX/FCXX_ZZF?ID=" + xml.id);
                 }
+                if (LBID === 1902) {
+                    window.open(getRootPath() + "/Business/FCXX/FCXX_HZF?ID=" + xml.id);
+                }
                 if (LBID === 20) {
                     window.open(getRootPath() + "/Business/FCXX/FCXX_SP?ID=" + xml.id);
                 }
@@ -222,12 +225,10 @@ function GetHeight(list, parentid) {
 //打开查询列表
 function OpenCXLB(lbid, typename, condition) {
     //房产
-    if (lbid === 19) {
-        if (condition === "CZFS=1")
-            window.open(getRootPath() + "/Business/FCCX/FCCX_ZZF?LBID=" + lbid);
-        if (condition === "CZFS=2")
-            window.open(getRootPath() + "/Business/FCCX/FCCX_HZF?LBID=" + lbid);
-    }
+    if (lbid === 19)
+        window.open(getRootPath() + "/Business/FCCX/FCCX_ZZF?LBID=" + lbid);
+    if (lbid === 1902)
+        window.open(getRootPath() + "/Business/FCCX/FCCX_HZF?LBID=" + lbid);
     if (lbid === 20)
         window.open(getRootPath() + "/Business/FCCX/FCCX_SP?LBID=" + lbid);
     if (lbid === 21)

@@ -399,7 +399,72 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 };
             }
         }
-        
+
+        //保存合租房基本信息
+        public object SaveFC_HZFJBXX(JCXX jcxx, FC_HZFJBXX FC_HZFJBXX, List<PHOTOS> photos)
+        {
+            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM FC_HZFJBXX WHERE ID='{0}'", FC_HZFJBXX.ID));
+            using (ITransaction transaction = DAO.BeginTransaction())
+            {
+                try
+                {
+                    if (dt.Rows.Count > 0)
+                    {
+                        SavePhotos(photos, dt.Rows[0]["JCXXID"].ToString());
+                        FC_HZFJBXX.JCXXID = dt.Rows[0]["JCXXID"].ToString();
+                        jcxx.JCXXID = dt.Rows[0]["JCXXID"].ToString();
+                        DAO.Update(jcxx);
+                        DAO.Update(FC_HZFJBXX);
+                        transaction.Commit();
+                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, ID = FC_HZFJBXX.ID } };
+                    }
+                    else
+                    {
+                        SavePhotos(photos, jcxx.JCXXID);
+                        FC_HZFJBXX.JCXXID = jcxx.JCXXID;
+                        DAO.Save(jcxx);
+                        DAO.Save(FC_HZFJBXX);
+                        transaction.Commit();
+                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, ID = FC_HZFJBXX.ID } };
+                    }
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    LoggerManager.Error("FC_HZFJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                    return new { Result = EnResultType.Failed, Message = "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!", Type = 3 };
+                }
+            }
+        }
+
+        //加载合租房基本信息
+        public object LoadFC_HZFJBXX(string ID)
+        {
+            try
+            {
+                FC_HZFJBXX FC_HZFJBXX = DAO.GetObjectByID<FC_HZFJBXX>(ID);
+                if (FC_HZFJBXX != null)
+                {
+                    JCXX jcxx = GetJCXXByID(FC_HZFJBXX.JCXXID);
+                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { FC_HZFJBXX = FC_HZFJBXX, BCMSString = BinaryHelper.BinaryToString(FC_HZFJBXX.BCMS), JCXX = jcxx, Photos = GetPhtosByJCXXID(FC_HZFJBXX.JCXXID) } };
+                }
+                else
+                {
+                    return new { Result = EnResultType.Failed, Message = "不存在" };
+                }
+
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("FC_HZFJBXXBLL", "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                return new
+                {
+                    Result = EnResultType.Failed,
+                    Message = "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!"
+                };
+            }
+        }
+
         //根据汉子获取小区基本信息
         public object LoadXQJBXXSByHZ(string XQMC)
         {

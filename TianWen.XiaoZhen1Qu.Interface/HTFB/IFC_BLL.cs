@@ -29,6 +29,10 @@ namespace TianWen.XiaoZhen1Qu.Interface
 
         object LoadFC_ZZFJBXX(string ID);
 
+        object SaveFC_HZFJBXX(JCXX jcxx, FC_HZFJBXX FC_HZFjbxx, List<PHOTOS> photos);
+
+        object LoadFC_HZFJBXX(string ID);
+
         object LoadXQJBXXSByHZ(string XQMC);
 
         object LoadXQJBXXSByPY(string XQMC);

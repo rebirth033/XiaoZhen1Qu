@@ -215,6 +215,7 @@
     <Content Include="Areas\Business\Css\HTFB\ES\ES_WHYL_WYXNWP.css" />
     <Content Include="Areas\Business\Css\HTFB\ES\ES_WHYL_YSPSCP.css" />
     <Content Include="Areas\Business\Css\HTFB\FC\FC_ESF.css" />
+    <Content Include="Areas\Business\Css\HTFB\FC\FC_HZF.css" />
     <Content Include="Areas\Business\Css\HTFB\SHFW\SHFW_SMWX.css" />
     <Content Include="Areas\Business\Css\Other\FBCG.css" />
     <Content Include="Areas\Business\Css\HTFB\FC\FC_CFCKTDCW.css" />
@@ -1079,6 +1080,8 @@
     <Content Include="Areas\Business\Scripts\Business\HTFB\FC\FC_SPYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\FC\FC_XZL.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\FC\FC_XZLYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\HTFB\FC\FC_HZF.js" />
+    <Content Include="Areas\Business\Scripts\Business\HTFB\FC\FC_HZFYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\SHFW\SHFW_SMWX.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\SHFW\SHFW_SMWXYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\XXYL\XXYL_KTV.js" />
@@ -2686,6 +2689,7 @@
     <Content Include="Areas\Business\Views\CLXX\CLXX_QCMRZS.cshtml" />
     <Content Include="Areas\Business\Views\FCXX\FCXX_HZF.cshtml" />
     <Content Include="Areas\Business\Views\FCCX\FCCX_HZF.cshtml" />
+    <Content Include="Areas\Business\Views\FC\FC_HZF.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

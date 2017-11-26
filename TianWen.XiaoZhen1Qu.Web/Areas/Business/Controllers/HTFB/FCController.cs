@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
 using System.Web.Mvc;
 using CommonClassLib.Helper;
 using TianWen.XiaoZhen1Qu.Entities.Models;
@@ -13,42 +10,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
     {
         public IFC_BLL FC_BLL { get; set; }
 
-        public ActionResult FC_CFCKTDCW()
-        {
-            ViewData["XZQ"] = Session["XZQ"];
-            ViewData["YHM"] = Session["YHM"];
-            return View();
-        }
-        public ActionResult FC_DZF()
-        {
-            ViewData["XZQ"] = Session["XZQ"];
-            ViewData["YHM"] = Session["YHM"];
-            return View();
-        }
-        public ActionResult FC_SP()
-        {
-            ViewData["XZQ"] = Session["XZQ"];
-            ViewData["YHM"] = Session["YHM"];
-            return View();
-        }
-        public ActionResult FC_XZL()
-        {
-            ViewData["XZQ"] = Session["XZQ"];
-            ViewData["YHM"] = Session["YHM"];
-            return View();
-        }
-        public ActionResult FC_ZZF()
-        {
-            ViewData["XZQ"] = Session["XZQ"];
-            ViewData["YHM"] = Session["YHM"];
-            return View();
-        }
-        public ActionResult FC_ESF()
-        {
-            ViewData["XZQ"] = Session["XZQ"];
-            ViewData["YHM"] = Session["YHM"];
-            return View();
-        }
+        public ActionResult FC_CFCKTDCW() { ViewData["XZQ"] = Session["XZQ"]; ViewData["YHM"] = Session["YHM"]; return View(); }
+        public ActionResult FC_DZF() { ViewData["XZQ"] = Session["XZQ"]; ViewData["YHM"] = Session["YHM"]; return View(); }
+        public ActionResult FC_SP() { ViewData["XZQ"] = Session["XZQ"]; ViewData["YHM"] = Session["YHM"]; return View(); }
+        public ActionResult FC_XZL() { ViewData["XZQ"] = Session["XZQ"]; ViewData["YHM"] = Session["YHM"]; return View(); }
+        public ActionResult FC_ZZF() { ViewData["XZQ"] = Session["XZQ"]; ViewData["YHM"] = Session["YHM"]; return View(); }
+        public ActionResult FC_HZF() { ViewData["XZQ"] = Session["XZQ"]; ViewData["YHM"] = Session["YHM"]; return View(); }
+        public ActionResult FC_ESF() { ViewData["XZQ"] = Session["XZQ"]; ViewData["YHM"] = Session["YHM"]; return View(); }
 
         [ValidateInput(false)]
         public JsonResult FBFC_CFCKTDCWJBXX()
@@ -123,6 +91,20 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return Json(result);
         }
         [ValidateInput(false)]
+        public JsonResult FBFC_HZFJBXX()
+        {
+            YHJBXX yhjbxx = FC_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            string json = Request["Json"];
+            string bcms = Request["BCMS"];
+            string fwzp = Request["FWZP"];
+            JCXX jcxx = CreateJCXX(yhjbxx, json);
+            FC_HZFJBXX FC_HZFjbxx = JsonHelper.ConvertJsonToObject<FC_HZFJBXX>(json);
+            FC_HZFjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
+            List<PHOTOS> photos = GetTP(fwzp);
+            object result = FC_BLL.SaveFC_HZFJBXX(jcxx, FC_HZFjbxx, photos);
+            return Json(result);
+        }
+        [ValidateInput(false)]
         public JsonResult FBFC_ESFJBXX()
         {
             YHJBXX yhjbxx = FC_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
@@ -139,50 +121,47 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public JsonResult LoadFC_CFCKTDCWJBXX()
         {
-            string ID = Request["ID"];
-            object result = FC_BLL.LoadFC_CFCKTDCWJBXX(ID);
+            object result = FC_BLL.LoadFC_CFCKTDCWJBXX(Request["ID"]);
             return Json(result);
         }
         public JsonResult LoadFC_DZFJBXX()
         {
-            string ID = Request["ID"];
-            object result = FC_BLL.LoadFC_DZFJBXX(ID);
+            object result = FC_BLL.LoadFC_DZFJBXX(Request["ID"]);
             return Json(result);
         }
         public JsonResult LoadFC_SPJBXX()
         {
-            string ID = Request["ID"];
-            object result = FC_BLL.LoadFC_SPJBXX(ID);
+            object result = FC_BLL.LoadFC_SPJBXX(Request["ID"]);
             return Json(result);
         }
         public JsonResult LoadFC_XZLJBXX()
         {
-            string ID = Request["ID"];
-            object result = FC_BLL.LoadFC_XZLJBXX(ID);
+            object result = FC_BLL.LoadFC_XZLJBXX(Request["ID"]);
             return Json(result);
         }
         public JsonResult LoadFC_ZZFJBXX()
         {
-            string ID = Request["ID"];
-            object result = FC_BLL.LoadFC_ZZFJBXX(ID);
+            object result = FC_BLL.LoadFC_ZZFJBXX(Request["ID"]);
+            return Json(result);
+        }
+        public JsonResult LoadFC_HZFJBXX()
+        {
+            object result = FC_BLL.LoadFC_HZFJBXX(Request["ID"]);
             return Json(result);
         }
         public JsonResult LoadFC_ESFJBXX()
         {
-            string ID = Request["ID"];
-            object result = FC_BLL.LoadFC_ESFJBXX(ID);
+            object result = FC_BLL.LoadFC_ESFJBXX(Request["ID"]);
             return Json(result);
         }
         public JsonResult LoadXQJBXXSByHZ()
         {
-            string XQMC = Request["XQMC"];
-            return Json(FC_BLL.LoadXQJBXXSByHZ(XQMC));
+            return Json(FC_BLL.LoadXQJBXXSByHZ(Request["XQMC"]));
         }
 
         public JsonResult LoadXQJBXXSByPY()
         {
-            string XQMC = Request["XQMC"];
-            return Json(FC_BLL.LoadXQJBXXSByPY(XQMC));
+            return Json(FC_BLL.LoadXQJBXXSByPY(Request["XQMC"]));
         }
     }
 }

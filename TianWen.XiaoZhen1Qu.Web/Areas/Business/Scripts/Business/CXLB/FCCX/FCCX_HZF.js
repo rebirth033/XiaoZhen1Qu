@@ -9,7 +9,7 @@ $(document).ready(function () {
 function LoadFCCondition() {
     LoadDistrict("福州", "350100", "DQ");
     LoadConditionByTypeName("整租房租金", "CODES_FC", "租金", "ZJ");
-    LoadConditionByTypeName("厅室", "CODES_FC", "厅室", "S");
+    LoadConditionByTypeName("出租间类型", "CODES_FC", "类型", "CZJLX");
     LoadBody("FCXX_HZF", currentIndex);
 }
 //选择条件
@@ -24,7 +24,7 @@ function SelectCondition(obj, name) {
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("S,ZJ,DQ");
+    var condition = GetAllCondition("CZJLX,ZJ,DQ");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/FCCX/LoadFCXX",
