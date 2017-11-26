@@ -75,7 +75,7 @@ function LoadFC_CWJBXX() {
                     SetDX("GQ", xml.Value.FC_CWJBXX.GQ);
                 $("#spanKZCGS").html(xml.Value.FC_CWJBXX.KZCGS);
                 $("#spanQY").html(xml.Value.FC_CWJBXX.QY);
-                $("#spanSQ").html(xml.Value.FC_CWJBXX.SQ);
+                $("#spanDD").html(xml.Value.FC_CWJBXX.DD);
                 $("#spanZJDW").html(xml.Value.FC_CWJBXX.ZJDW);
                 LoadPhotos(xml.Value.Photos);
             }
@@ -93,7 +93,7 @@ function FB() {
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "KZCGS", "'" + $("#spanKZCGS").html() + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
-    obj = jsonObj.AddJson(obj, "SQ", "'" + $("#spanSQ").html() + "'");
+    obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "ZJDW", "'" + $("#spanZJDW").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
