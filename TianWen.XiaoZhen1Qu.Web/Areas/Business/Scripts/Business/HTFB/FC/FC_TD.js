@@ -2,10 +2,7 @@
     $("#div_gq_cz").bind("click", CZSelect);
     $("#div_gq_cs").bind("click", CSSelect);
     $("body").bind("click", function() { Close("_XZQ"); });
-    LoadFC_CFCKTDCWJBXX();
-    BindClick("CFCKTDCWLX");
-    BindClick("QY");
-    BindClick("DD");
+    LoadFC_TDJBXX();
     BindClick("ZJDW");
 });
 //选择出租
@@ -23,12 +20,6 @@ function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "ZJDW") {
             LoadCODESByTYPENAME("租金单位", "ZJDW", "CODES_FC");
-        }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
         }
     });
 }
@@ -60,10 +51,10 @@ function GetGQ() {
     return value;
 }
 //加载房产_写字楼基本信息
-function LoadFC_CFCKTDCWJBXX() {
+function LoadFC_TDJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC/LoadFC_CFCKTDCWJBXX",
+        url: getRootPath() + "/Business/FC/LoadFC_TDJBXX",
         dataType: "json",
         data:
         {
@@ -72,22 +63,20 @@ function LoadFC_CFCKTDCWJBXX() {
         success: function (xml) {
             if (xml.Result === 1) {
                 var jsonObj = new JsonDB("myTabContent");
-                jsonObj.DisplayFromJson("myTabContent", xml.Value.FC_CFCKTDCWJBXX);
+                jsonObj.DisplayFromJson("myTabContent", xml.Value.FC_TDJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
-                $("#ID").val(xml.Value.FC_CFCKTDCWJBXX.ID);
+                $("#ID").val(xml.Value.FC_TDJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.BCMSString);
                 });
-                if (xml.Value.FC_CFCKTDCWJBXX.GQ !== null)
-                    SetDX("GQ", xml.Value.FC_CFCKTDCWJBXX.GQ);
-                if (xml.Value.FC_CFCKTDCWJBXX.LX !== null)
-                    SetDX("LX", xml.Value.FC_CFCKTDCWJBXX.LX);
-                $("#spanKZCGS").html(xml.Value.FC_CFCKTDCWJBXX.KZCGS);
-                $("#spanQY").html(xml.Value.FC_CFCKTDCWJBXX.QY);
-                $("#spanSQ").html(xml.Value.FC_CFCKTDCWJBXX.SQ);
-                $("#spanZJDW").html(xml.Value.FC_CFCKTDCWJBXX.ZJDW);
+                if (xml.Value.FC_TDJBXX.GQ !== null)
+                    SetDX("GQ", xml.Value.FC_TDJBXX.GQ);
+                $("#spanKZCGS").html(xml.Value.FC_TDJBXX.KZCGS);
+                $("#spanQY").html(xml.Value.FC_TDJBXX.QY);
+                $("#spanSQ").html(xml.Value.FC_TDJBXX.SQ);
+                $("#spanZJDW").html(xml.Value.FC_TDJBXX.ZJDW);
                 LoadPhotos(xml.Value.Photos);
             }
         },
@@ -108,14 +97,13 @@ function FB() {
     obj = jsonObj.AddJson(obj, "ZJDW", "'" + $("#spanZJDW").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
-    obj = jsonObj.AddJson(obj, "LX", "'" + GetDX("LX") + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC/FBFC_CFCKTDCWJBXX",
+        url: getRootPath() + "/Business/FC/FBFC_TDJBXX",
         dataType: "json",
         data:
         {

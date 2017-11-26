@@ -82,7 +82,7 @@ function ValidateYSJG() {
         } else {
             $("#divYSJGTip").css("display", "block");
             $("#divYSJGTip").attr("class", "Warn");
-            $("#divYSJGTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />运输价格请填写整数，面议则填0');
+            $("#divYSJGTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />运输价格请填写整数，默认为面议');
             $("#YSJG").css("border-color", "#fd634f");
             return false;
         }
@@ -106,6 +106,6 @@ function InfoTZSJ() {
 function InfoYSJG() {
     $("#divYSJGTip").css("display", "block");
     $("#divYSJGTip").attr("class", "Info");
-    $("#divYSJGTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数，面议则填0');
+    $("#divYSJGTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数，默认为面议');
     $("#YSJG").css("border-color", "#5bc0de");
 }

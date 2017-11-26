@@ -2,16 +2,15 @@
 using TianWen.XiaoZhen1Qu.Entities.Models;
 namespace TianWen.XiaoZhen1Qu.Entities.Maps
 {
-    public class FC_CFCKTDCWJBXX_Map : ClassMap<FC_CFCKTDCWJBXX>
+    public class FC_TDJBXX_Map : ClassMap<FC_TDJBXX>
     {
-        public FC_CFCKTDCWJBXX_Map()
+        public FC_TDJBXX_Map()
         {
-            Table("FC_CFCKTDCWJBXX");
+            Table("FC_TDJBXX");
             #region 属性
             Id(x => x.ID, "ID").GeneratedBy.Assigned().CustomType("AnsiString");
             Map(x => x.JCXXID, "JCXXID");
             Map(x => x.GQ, "GQ");
-            Map(x => x.LX, "LX");
             Map(x => x.QY, "QY");
             Map(x => x.DD, "DD");
             Map(x => x.JTDZ, "JTDZ");

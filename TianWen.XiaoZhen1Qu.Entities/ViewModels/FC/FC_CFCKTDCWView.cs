@@ -4,7 +4,7 @@ using TianWen.XiaoZhen1Qu.Entities.Models;
 
 namespace TianWen.XiaoZhen1Qu.Entities.ViewModels.FC
 {
-    public class FC_CFCKTDCWView
+    public class FC_CFView
     {
         //基础信息
         public string JCXXID { get; set; }

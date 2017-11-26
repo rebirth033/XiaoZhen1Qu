@@ -237,13 +237,13 @@ function OpenCXLB(lbid, typename, condition) {
         window.open(getRootPath() + "/Business/FCCX/FCCX_DZF?LBID=" + lbid);
     if (lbid === 289)
         window.open(getRootPath() + "/Business/FCCX/FCCX_XZL?LBID=" + lbid);
-    if (lbid === 2931)
+    if (lbid === 293)
         window.open(getRootPath() + "/Business/FCCX/FCCX_CF?LBID=" + lbid);
-    if (lbid === 2932)
+    if (lbid === 2931)
         window.open(getRootPath() + "/Business/FCCX/FCCX_CK?LBID=" + lbid);
-    if (lbid === 2933)
+    if (lbid === 2932)
         window.open(getRootPath() + "/Business/FCCX/FCCX_TD?LBID=" + lbid);
-    if (lbid === 2934)
+    if (lbid === 2933)
         window.open(getRootPath() + "/Business/FCCX/FCCX_CW?LBID=" + lbid);
     //车辆
     if (lbid === 61)

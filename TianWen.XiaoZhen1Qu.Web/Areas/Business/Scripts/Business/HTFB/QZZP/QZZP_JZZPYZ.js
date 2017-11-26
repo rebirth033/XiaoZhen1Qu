@@ -100,6 +100,6 @@ function InfoZPRS() {
 function InfoXZ() {
     $("#divZPXZSPTip").css("display", "block");
     $("#divZPXZSPTip").attr("class", "Info");
-    $("#divZPXZSPTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数，面议则填0');
+    $("#divZPXZSPTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数，默认为面议');
     $("#XZ").css("border-color", "#5bc0de");
 }

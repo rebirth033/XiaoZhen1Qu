@@ -108,7 +108,7 @@ function ValidateFWLX_T() {
         } else {
             $("#divFWLXTip").css("display", "block");
             $("#divFWLXTip").attr("class", "Warn");
-            $("#divFWLXTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />厅请填写整数，面议则填0');
+            $("#divFWLXTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />厅请填写整数，默认为面议');
             $("#spanT").css("border-color", "#fd634f");
             return false;
         }
@@ -130,7 +130,7 @@ function ValidateFWLX_W() {
         } else {
             $("#divFWLXTip").css("display", "block");
             $("#divFWLXTip").attr("class", "Warn");
-            $("#divFWLXTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />卫请填写整数，面议则填0');
+            $("#divFWLXTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />卫请填写整数，默认为面议');
             $("#spanW").css("border-color", "#fd634f");
             return false;
         }
@@ -218,7 +218,7 @@ function ValidateSJ() {
         } else {
             $("#divSJTip").css("display", "block");
             $("#divSJTip").attr("class", "Warn");
-            $("#divSJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />售价请填写整数，面议则填0');
+            $("#divSJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />售价请填写整数，默认为面议');
             $("#spanSJ").css("border-color", "#fd634f");
             return false;
         }
@@ -277,6 +277,6 @@ function InfoLCFB_GJC() {
 function InfoSJ() {
     $("#divSJTip").css("display", "block");
     $("#divSJTip").attr("class", "Info");
-    $("#divSJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数，面议则填0');
+    $("#divSJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数，默认为面议');
     $("#spanSJ").css("border-color", "#5bc0de");
 } 

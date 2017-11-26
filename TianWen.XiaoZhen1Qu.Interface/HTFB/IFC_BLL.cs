@@ -5,10 +5,6 @@ namespace TianWen.XiaoZhen1Qu.Interface
 {
     public interface IFC_BLL : IBaseBLL
     {
-        object SaveCFCKTDCWJBXX(JCXX jcxx, FC_CFCKTDCWJBXX dzfjbxx, List<PHOTOS> photos);
-
-        object LoadFC_CFCKTDCWJBXX(string ID);
-
         object SaveDZFJBXX(JCXX jcxx, FC_DZFJBXX dzfjbxx, List<PHOTOS> photos);
 
         object LoadFC_DZFJBXX(string ID);
@@ -32,6 +28,22 @@ namespace TianWen.XiaoZhen1Qu.Interface
         object SaveFC_HZFJBXX(JCXX jcxx, FC_HZFJBXX FC_HZFjbxx, List<PHOTOS> photos);
 
         object LoadFC_HZFJBXX(string ID);
+
+        object SaveCFJBXX(JCXX jcxx, FC_CFJBXX dzfjbxx, List<PHOTOS> photos);
+
+        object LoadFC_CFJBXX(string ID);
+
+        object SaveCKJBXX(JCXX jcxx, FC_CKJBXX dzfjbxx, List<PHOTOS> photos);
+
+        object LoadFC_CKJBXX(string ID);
+
+        object SaveTDJBXX(JCXX jcxx, FC_TDJBXX dzfjbxx, List<PHOTOS> photos);
+
+        object LoadFC_TDJBXX(string ID);
+
+        object SaveCWJBXX(JCXX jcxx, FC_CWJBXX dzfjbxx, List<PHOTOS> photos);
+
+        object LoadFC_CWJBXX(string ID);
 
         object LoadXQJBXXSByHZ(string XQMC);
 

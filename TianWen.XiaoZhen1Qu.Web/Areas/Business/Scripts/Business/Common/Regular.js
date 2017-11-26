@@ -28,6 +28,8 @@ function ValidateChinese(value) {
 
 //整数验证
 function ValidateNumber(value) {
+    if (value === "面议")
+        return true;
     var zz = /^[\d]+$/g;
     if (value.length > 0) {
         return zz.test(value);

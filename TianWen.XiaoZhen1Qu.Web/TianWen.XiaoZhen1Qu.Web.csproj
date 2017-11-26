@@ -214,11 +214,14 @@
     <Content Include="Areas\Business\Css\HTFB\ES\ES_WHYL_WTHWYQ.css" />
     <Content Include="Areas\Business\Css\HTFB\ES\ES_WHYL_WYXNWP.css" />
     <Content Include="Areas\Business\Css\HTFB\ES\ES_WHYL_YSPSCP.css" />
+    <Content Include="Areas\Business\Css\HTFB\FC\FC_CK.css" />
+    <Content Include="Areas\Business\Css\HTFB\FC\FC_TD.css" />
+    <Content Include="Areas\Business\Css\HTFB\FC\FC_CW.css" />
     <Content Include="Areas\Business\Css\HTFB\FC\FC_ESF.css" />
     <Content Include="Areas\Business\Css\HTFB\FC\FC_HZF.css" />
     <Content Include="Areas\Business\Css\HTFB\SHFW\SHFW_SMWX.css" />
     <Content Include="Areas\Business\Css\Other\FBCG.css" />
-    <Content Include="Areas\Business\Css\HTFB\FC\FC_CFCKTDCW.css" />
+    <Content Include="Areas\Business\Css\HTFB\FC\FC_CF.css" />
     <Content Include="Areas\Business\Css\HTFB\FC\FC_DZF.css" />
     <Content Include="Areas\Business\Css\HTFB\FC\FC_ZZF.css" />
     <Content Include="Areas\Business\Css\HTFB\FC\FC_SP.css" />
@@ -1070,8 +1073,14 @@
     <Content Include="Areas\Business\Scripts\Business\HTFB\ES\ES_WHYL_WYXNWPYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\ES\ES_WHYL_YSPSCP.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\ES\ES_WHYL_YSPSCPYZ.js" />
-    <Content Include="Areas\Business\Scripts\Business\HTFB\FC\FC_CFCKTDCW.js" />
-    <Content Include="Areas\Business\Scripts\Business\HTFB\FC\FC_CFCKTDCWYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\HTFB\FC\FC_TD.js" />
+    <Content Include="Areas\Business\Scripts\Business\HTFB\FC\FC_CW.js" />
+    <Content Include="Areas\Business\Scripts\Business\HTFB\FC\FC_CK.js" />
+    <Content Include="Areas\Business\Scripts\Business\HTFB\FC\FC_CF.js" />
+    <Content Include="Areas\Business\Scripts\Business\HTFB\FC\FC_TDYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\HTFB\FC\FC_CWYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\HTFB\FC\FC_CKYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\HTFB\FC\FC_CFYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\FC\FC_DZF.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\FC\FC_DZFYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\FC\FC_ESF.js" />
@@ -2097,7 +2106,7 @@
     <Content Include="Areas\Business\Scripts\UEditor\third-party\video-js\font\vjs.woff" />
     <Content Include="Areas\Business\Views\FC\FC_SP.cshtml" />
     <Content Include="Areas\Business\Views\FC\FC_XZL.cshtml" />
-    <Content Include="Areas\Business\Views\FC\FC_CFCKTDCW.cshtml" />
+    <Content Include="Areas\Business\Views\FC\FC_CF.cshtml" />
     <Content Include="Areas\Business\Views\ES\ES_SJSM_ESSJ.cshtml" />
     <Content Include="Areas\Business\Views\ES\ES_SJSM_BJBDN.cshtml" />
     <Content Include="Areas\Business\Views\ES\ES_SJSM_SMCP.cshtml" />
@@ -2690,6 +2699,9 @@
     <Content Include="Areas\Business\Views\FCXX\FCXX_HZF.cshtml" />
     <Content Include="Areas\Business\Views\FCCX\FCCX_HZF.cshtml" />
     <Content Include="Areas\Business\Views\FC\FC_HZF.cshtml" />
+    <Content Include="Areas\Business\Views\FC\FC_CW.cshtml" />
+    <Content Include="Areas\Business\Views\FC\FC_CK.cshtml" />
+    <Content Include="Areas\Business\Views\FC\FC_TD.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

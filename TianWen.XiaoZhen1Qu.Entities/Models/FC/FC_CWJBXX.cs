@@ -3,15 +3,15 @@ using NHibernate.Mapping.Attributes;
 
 namespace TianWen.XiaoZhen1Qu.Entities.Models
 {
-    public class FC_CFCKTDCWJBXX
+    public class FC_CWJBXX
     {
-        public FC_CFCKTDCWJBXX()
+        public FC_CWJBXX()
         {
             ID = Guid.NewGuid().ToString("N");
         }
 
         /// <summary>
-        /// 写字楼基本信息ID
+        /// ID
         /// </summary>
         [Id]
         public virtual string ID { get; set; }
@@ -29,25 +29,19 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string GQ { get; set; }
 
         /// <summary>
-        /// 类型
-        /// </summary>
-        [Property]
-        public virtual string LX { get; set; }
-
-        /// <summary>
         /// 区域
         /// </summary>
         [Property]
         public virtual string QY { get; set; }
 
         /// <summary>
-        /// 商圈
+        /// 地段
         /// </summary>
         [Property]
         public virtual string DD { get; set; }
 
         /// <summary>
-        /// 地段
+        /// 具体地址
         /// </summary>
         [Property]
         public virtual string JTDZ { get; set; }

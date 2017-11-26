@@ -1,16 +1,15 @@
 ﻿@{
-    ViewBag.Title = "FC_CFCKTDCW";
     Layout = "~/Areas/Business/Views/Shared/HTFB.cshtml";
 }
 @section Section_Head {
-    <link href="@Url.Content("~/Areas/Business/Css/HTFB/FC/FC_CFCKTDCW.css")" rel="stylesheet" />
-    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/HTFB/FC/FC_CFCKTDCW.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/HTFB/FC/FC_CFCKTDCWYZ.js")"></script>
+    <link href="@Url.Content("~/Areas/Business/Css/HTFB/FC/FC_TD.css")" rel="stylesheet" />
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/HTFB/FC/FC_TD.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/HTFB/FC/FC_TDYZ.js")"></script>
 }
 @section Section_Body {
     <div id="myTabContent" class="div_content">
-        <div id="divFL" class="div_split" style="display: block; text-align: left">
-            <span class="span_split">供求与类型</span>
+        <div id="divJBXX" class="div_split" style="display: block; text-align: left">
+            <span class="span_split">基本信息</span>
             <em class="em_split"></em>
         </div>
         <div id="divGQ" class="div_row">
@@ -27,31 +26,6 @@
                 </div>
             </div>
             <div id="divGQTip" class="Warn" style="z-index: 999; position: relative;"></div>
-        </div>
-        <div id="divLX" class="div_row" style="z-index: 998">
-            <div class="div_row_left" style="margin-left: 128px;">
-                <span class="span_required">*</span>
-                <span class="spanFWCZ">类型</span>
-            </div>
-            <div class="div_row_right">
-                <div class="div_radio" id="div_lx_ck">
-                    <img class="img_radio" id="img_lx_ck" /><label class="label_radio">仓库</label>
-                </div>
-                <div class="div_radio" id="div_lx_cf">
-                    <img class="img_radio" id="img_lx_cf" /><label class="label_radio">厂房</label>
-                </div>
-                <div class="div_radio" id="div_lx_td">
-                    <img class="img_radio" id="img_lx_td" /><label class="label_radio">土地</label>
-                </div>
-                <div class="div_radio" id="div_lx_cw">
-                    <img class="img_radio" id="img_lx_cw" /><label class="label_radio">车位</label>
-                </div>
-            </div>
-            <div id="divLXTip" class="Warn" style="z-index: 997; position: relative;"></div>
-        </div>
-        <div id="divJBXX" class="div_split" style="display: block; text-align: left">
-            <span class="span_split">基本信息</span>
-            <em class="em_split"></em>
         </div>
         <div id="divSZQY" class="div_row" style="z-index: 996;">
             <div class="div_row_left" style="margin-left: 102px;">
@@ -70,7 +44,7 @@
                 </div>
                 <div id="divDDText" class="div_select_out SRK" style="z-index: 994;">
                     <div id="divDDSpan" class="div_select_in" style="border: none; margin-top: 6px;">
-                        <span id="spanDD" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择商圈</span>
+                        <span id="spanDD" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择地段</span>
                         <div class="span_select_arrow"></div>
                     </div>
                     <div id="divDD" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">

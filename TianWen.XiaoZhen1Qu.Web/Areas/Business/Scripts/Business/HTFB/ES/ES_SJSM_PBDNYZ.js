@@ -39,7 +39,7 @@ function ValidateJG() {
         } else {
             $("#divJGTip").css("display", "block");
             $("#divJGTip").attr("class", "Warn");
-            $("#divJGTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />价格请填写整数，面议则填0');
+            $("#divJGTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />价格请填写整数，默认为面议');
             $("#spanJG").css("border-color", "#fd634f");
             return false;
         }
@@ -49,6 +49,6 @@ function ValidateJG() {
 function InfoJG() {
     $("#divJGTip").css("display", "block");
     $("#divJGTip").attr("class", "Info");
-    $("#divJGTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数，面议则填0');
+    $("#divJGTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数，默认为面议');
     $("#spanJG").css("border-color", "#5bc0de");
 }

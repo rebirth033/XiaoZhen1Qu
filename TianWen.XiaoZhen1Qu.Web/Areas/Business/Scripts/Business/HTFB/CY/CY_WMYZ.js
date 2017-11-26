@@ -32,7 +32,7 @@ function ValidateRJXF() {
         } else {
             $("#divRJXFTip").css("display", "block");
             $("#divRJXFTip").attr("class", "Warn");
-            $("#divRJXFTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />人均消费请填写整数，面议则填0');
+            $("#divRJXFTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />人均消费请填写整数，默认为面议');
             $("#spanRJXF").css("border-color", "#fd634f");
             return false;
         }
@@ -56,13 +56,13 @@ function ValidateFWQY() {
 function InfoRJXF() {
     $("#divRJXFTip").css("display", "block");
     $("#divRJXFTip").attr("class", "Info");
-    $("#divRJXFTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数，面议则填0');
+    $("#divRJXFTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数，默认为面议');
     $("#spanRJXF").css("border-color", "#5bc0de");
 }
 //提示服务区域
 function InfoFWQY() {
     $("#divFWQYTip").css("display", "block");
     $("#divFWQYTip").attr("class", "Info");
-    $("#divFWQYTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数，面议则填0');
+    $("#divFWQYTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数，默认为面议');
     $("#FWQY").css("border-color", "#5bc0de");
 }
