@@ -125,3 +125,28 @@ function LeaveStyle(name) {
     $("#div" + name + "Text").css("border-top", "1px solid #cccccc").css("border-right", "1px solid #cccccc").css("border-left", "1px solid #cccccc").css("border-bottom", "1px solid #cccccc");
     $("#div" + name).find("ul").css("border-left", "1px solid #cccccc").css("border-right", "1px solid #cccccc").css("border-bottom", "1px solid #cccccc");
 }
+//加载填写信息
+function LoadTXXX() {
+    $("#spanTXXX").css("color", "#5bc0de");
+    $("#emTXXX").css("background", "#5bc0de");
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/LBXZ/LoadLBByID",
+        dataType: "json",
+        data:
+        {
+            LBID: getUrlParam("CLICKID")
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                if (xml.list.length > 0){
+                    $("#spanLBXZ").html("1." + xml.list[0].LBNAME);
+                    $("#title").html("信息小镇_发布" + $("#span_content_info_xzq").html() + xml.list[0].LBNAME + "信息");
+                }
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}

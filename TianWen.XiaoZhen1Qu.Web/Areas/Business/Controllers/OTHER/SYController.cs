@@ -6,6 +6,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
     public class SYController : BaseController
     {
         public ISYBLL SYBLL { get; set; }
+
         public ActionResult SY()
         {
             GetSession();

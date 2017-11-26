@@ -1,5 +1,4 @@
 ﻿using System;
-using System;
 using NHibernate.Mapping.Attributes;
 
 namespace TianWen.XiaoZhen1Qu.Entities.Models

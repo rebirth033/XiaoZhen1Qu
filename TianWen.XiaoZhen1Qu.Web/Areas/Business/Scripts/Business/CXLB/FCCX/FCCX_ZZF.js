@@ -4,13 +4,12 @@ $(document).ready(function () {
     BindBodyNav();
     LoadFCCondition();
     LoadHot("FCXX_ZZF");
-    SetCondition();
 });
 //加载房产查询条件
 function LoadFCCondition() {
-    LoadDistrict("福州", "350100", "QY");
+    LoadDistrict("福州", "350100", "DQ");
     LoadConditionByTypeName("整租房租金", "CODES_FC", "租金", "ZJ");
-    LoadConditionByTypeName("出租方式", "CODES_FC", "出租方式", "CZFS");
+    LoadConditionByTypeName("厅室", "CODES_FC", "厅室", "S");
     LoadBody("FCXX_ZZF", currentIndex);
 }
 //选择条件
@@ -22,29 +21,10 @@ function SelectCondition(obj, name) {
     LoadBody("FCXX_ZZF", currentIndex);
     ShowSelectCondition("FCXX_ZZF");
 }
-//设置条件
-function SetCondition() {
-    $("#ul_condition_body_CZFS").find(".li_condition_body").removeClass("li_condition_body_active");
-    if (getUrlParam("CZFS") === "1") {
-        $("#ul_condition_body_CZFS").find(".li_condition_body:eq(1)").addClass("li_condition_body_active");
-        LoadBody("FCXX_ZZF", currentIndex);
-    }
-    if (getUrlParam("CZFS") === "2") {
-        $("#ul_condition_body_CZFS").find(".li_condition_body:eq(2)").addClass("li_condition_body_active");
-        LoadBody("FCXX_ZZF", currentIndex);
-    }
-    $(".div_condition_select").css("display", "block");
-    $("#ul_condition_select").html('<li class="li_condition_select_first">筛选条件</li>');
-    $("#ul_condition_body_CZFS").find(".li_condition_body").each(function () {
-        if ($(this).css("color") === "rgb(91, 192, 222)" && $(this).html() !== "不限") {
-            $("#ul_condition_select").append('<li onclick="DeleteSelect(this)" class="li_condition_select"><span>' + $(this).html() + '</span><em>x</em></li>');
-        }
-    });
-}
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("CZFS,ZJ,QY");
+    var condition = GetAllCondition("S,ZJ,DQ");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/FCCX/LoadFCXX",
@@ -53,7 +33,7 @@ function LoadBody(TYPE, PageIndex) {
         {
             TYPE: TYPE,
             Condition: condition,
-            PageSize: 5,
+            PageSize: 10,
             PageIndex: PageIndex
         },
         success: function (xml) {
@@ -80,7 +60,7 @@ function LoadInfo(obj) {
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
     html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'FCXX_ZZF\',\'' + obj.ID + '\')">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_left_center_cs">' + obj.CZFS + ' / ' + obj.S + '室' + obj.T + '厅' + obj.W + '卫 / ' + obj.PFM + '平米 / ' + obj.ZXQK + ' / ' + obj.CX + ' / ' + obj.C + '层[共' + obj.GJC + '层]</p>');
+    html += ('<p class="p_li_body_left_center_cs">整套出租 / ' + obj.S + '室' + obj.T + '厅' + obj.W + '卫 / ' + obj.PFM + '平米 / ' + obj.ZXQK + ' / ' + obj.CX + ' / ' + obj.C + '层[共' + obj.GJC + '层]</p>');
     html += ('<p class="p_li_body_left_center_dz">' + obj.XQMC + ' [' + obj.XQDZ + '] ' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');

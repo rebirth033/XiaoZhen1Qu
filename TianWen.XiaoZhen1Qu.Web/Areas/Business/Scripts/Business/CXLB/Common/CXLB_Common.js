@@ -23,13 +23,15 @@ function GetHeadNav() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                var html = "";
+                var html = "", title = "";
                 html += ('<ul class="ul_nav">');
                 html += ('<li class="li_nav_font">信息小镇</li>');
                 html += ('<li class="li_nav_split">></li>');
+                title += "信息小镇";
                 for (var i = 0; i < xml.list.length; i++) {
                     if (xml.list[i].LBID === parseInt(getUrlParam("LBID"))) {
                         html += ('<li class="li_nav_font">' + xml.xzq + xml.list[i].TYPESHOWNAME + '</li>');
+                        title += "_" + xml.xzq + xml.list[i].TYPESHOWNAME;
                         break;
                     }
                 }
@@ -38,11 +40,13 @@ function GetHeadNav() {
                     if (xml.list[i].LBID === parseInt(getUrlParam("LBID"))) {
                         html += ('<li class="li_nav_font">' + xml.xzq + xml.list[i].LBNAME + '</li>');
                         $("#li_body_head_first").html(xml.xzq + xml.list[i].LBNAME + "");
+                        title += "_" + xml.xzq + xml.list[i].LBNAME;
                         break;
                     }
                 }
                 html += ('</ul>');
                 $("#divNav").html(html);
+                $("#title").html(title);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
@@ -271,7 +275,7 @@ function LoadDistrictCondition(array, type, name) {
         html += '<li class="li_condition_body" onclick="SelectCondition(this)">' + RTrimStr(RTrimStr(RTrimStr(array[i].NAME, '区'), '县'), '市') + '</li>';
     }
     html += '</ul>';
-    $("#div_condition_body_QY").append(html);
+    $("#div_condition_body_" + type).append(html);
 }
 //类别选择
 function OpenLBXZ() {

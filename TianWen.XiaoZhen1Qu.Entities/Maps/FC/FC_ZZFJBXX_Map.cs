@@ -11,7 +11,6 @@ namespace TianWen.XiaoZhen1Qu.Entities.Maps
             #region 属性
             Id(x => x.ID, "ID").GeneratedBy.Assigned().CustomType("AnsiString");
             Map(x => x.JCXXID, "JCXXID");
-            Map(x => x.CZFS, "CZFS");
             Map(x => x.XQMC, "XQMC");
             Map(x => x.XQDZ, "XQDZ");
             Map(x => x.S, "S");

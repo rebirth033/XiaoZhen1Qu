@@ -23,12 +23,6 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string JCXXID { get; set; }
 
         /// <summary>
-        /// 出租方式
-        /// </summary>
-        [Property]
-        public virtual string CZFS { get; set; }
-
-        /// <summary>
         /// 小区名称
         /// </summary>
         [Property]

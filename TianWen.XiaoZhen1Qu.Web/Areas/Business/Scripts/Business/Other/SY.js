@@ -88,13 +88,13 @@ function OpenXXXX(LBID, JCXXID) {
         success: function (xml) {
             if (xml.Result === 1) {
                 if (LBID === 19) {
-                    window.open(getRootPath() + "/Business/FCXX/FC_ZZF?ID=" + xml.id);
+                    window.open(getRootPath() + "/Business/FCXX/FCXX_ZZF?ID=" + xml.id);
                 }
                 if (LBID === 20) {
-                    window.open(getRootPath() + "/Business/FCXX/FC_SP?ID=" + xml.id);
+                    window.open(getRootPath() + "/Business/FCXX/FCXX_SP?ID=" + xml.id);
                 }
                 if (LBID === 21) {
-                    window.open(getRootPath() + "/Business/FCXX/FC_ESF?ID=" + xml.id);
+                    window.open(getRootPath() + "/Business/FCXX/FCXX_ESF?ID=" + xml.id);
                 }
             }
         },
@@ -222,8 +222,12 @@ function GetHeight(list, parentid) {
 //打开查询列表
 function OpenCXLB(lbid, typename, condition) {
     //房产
-    if (lbid === 19)
-        window.open(getRootPath() + "/Business/FCCX/FCCX_ZZF?LBID=" + lbid + "&" + condition);
+    if (lbid === 19) {
+        if (condition === "CZFS=1")
+            window.open(getRootPath() + "/Business/FCCX/FCCX_ZZF?LBID=" + lbid);
+        if (condition === "CZFS=2")
+            window.open(getRootPath() + "/Business/FCCX/FCCX_HZF?LBID=" + lbid);
+    }
     if (lbid === 20)
         window.open(getRootPath() + "/Business/FCCX/FCCX_SP?LBID=" + lbid);
     if (lbid === 21)
@@ -434,7 +438,7 @@ function OpenCXLB(lbid, typename, condition) {
     if (lbid === 268)
         window.open(getRootPath() + "/Business/JYPXCX/JYPXCX_TYPX?LBID=" + lbid);
     if (lbid === 276)
-        window.open(getRootPath() + "/Business/JYPXCX/JYPXCX_TYJL?LBID=" + lbid); 
+        window.open(getRootPath() + "/Business/JYPXCX/JYPXCX_TYJL?LBID=" + lbid);
     if (lbid === 266)
         window.open(getRootPath() + "/Business/JYPXCX/JYPXCX_XLJY?LBID=" + lbid);
     if (lbid === 269)

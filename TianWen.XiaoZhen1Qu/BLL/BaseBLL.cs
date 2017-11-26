@@ -317,7 +317,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     string[] array = conditions[i].Split(':');
                     if (array[1] != "不限")
                     {
-                        if (array[0] == "ZJ" || array[0] == "JG" || array[0] == "SJ" || array[0] == "PFM" || array[0] == "MJ" || array[0] == "NL" || array[0] == "MSJ")
+                        if (array[0] == "ZJ" || array[0] == "JG" || array[0] == "SJ" || array[0] == "PFM" || array[0] == "MJ" || array[0] == "NL" || array[0] == "MSJ" || array[0] == "S")
                         {
                             if (array[1].Contains("万元"))
                             {
@@ -425,6 +425,24 @@ namespace TianWen.XiaoZhen1Qu.BLL
                                 {
                                     string zjxx = array[1].Substring(0, array[1].IndexOf("日游"));
                                     condition.AppendFormat(" and {0} <= {1}", array[0], zjxx);
+                                }
+                            }
+                            else if (array[1].Contains("室"))
+                            {
+                                if (array[1].Contains("以上"))
+                                {
+                                    condition.AppendFormat(" and S >= 4");
+                                }
+                                else
+                                {
+                                    if(array[1].Contains("一"))
+                                        condition.AppendFormat(" and S = 1");
+                                    if (array[1].Contains("二"))
+                                        condition.AppendFormat(" and S = 2");
+                                    if (array[1].Contains("三"))
+                                        condition.AppendFormat(" and S = 3");
+                                    if (array[1].Contains("四"))
+                                        condition.AppendFormat(" and S = 4");
                                 }
                             }
                             else

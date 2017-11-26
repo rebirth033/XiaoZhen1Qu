@@ -18,20 +18,30 @@ function GetHeadNav() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                var html = "";
+                var html = "", title = "";
                 html += ('<ul class="ul_nav">');
                 html += ('<li class="li_nav_font">信息小镇</li>');
                 html += ('<li class="li_nav_split">></li>');
-                html += ('<li class="li_nav_font">' + xml.xzq + '房产</li>');
+                title += "信息小镇";
+                for (var i = 0; i < xml.list.length; i++) {
+                    if (xml.list[i].LBID === parseInt(getUrlParam("LBID"))) {
+                        html += ('<li class="li_nav_font">' + xml.xzq + xml.list[i].TYPESHOWNAME + '</li>');
+                        title += "_" + xml.xzq + xml.list[i].TYPESHOWNAME;
+                        break;
+                    }
+                }
                 html += ('<li class="li_nav_split">></li>');
                 for (var i = 0; i < xml.list.length; i++) {
-                    if (xml.list[i].LBID == getUrlParam("LBID")) {
+                    if (xml.list[i].LBID === parseInt(getUrlParam("LBID"))) {
                         html += ('<li class="li_nav_font">' + xml.xzq + xml.list[i].LBNAME + '</li>');
-                        $("#li_body_head_first").html(xml.xzq + xml.list[i].LBNAME + "出租");
+                        $("#li_body_head_first").html(xml.xzq + xml.list[i].LBNAME + "");
+                        title += "_" + xml.xzq + xml.list[i].LBNAME;
+                        break;
                     }
                 }
                 html += ('</ul>');
                 $("#divNav").html(html);
+                $("#title").html(title);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {

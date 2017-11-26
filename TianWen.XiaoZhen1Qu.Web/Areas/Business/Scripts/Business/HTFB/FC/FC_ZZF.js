@@ -268,8 +268,6 @@ function LoadFC_ZZFXX() {
                     SetDuoX("FWLD", xml.Value.FC_ZZFJBXX.FWLD);
                 if (xml.Value.FC_ZZFJBXX.CZYQ !== null)
                     SetDuoX("CZYQ", xml.Value.FC_ZZFJBXX.CZYQ);
-                if (xml.Value.FC_ZZFJBXX.CZFS !== null)
-                    SetDX("CZFS", xml.Value.FC_ZZFJBXX.CZFS);
                 $("#spanFWCX").html(xml.Value.FC_ZZFJBXX.CX);
                 $("#spanZXQK").html(xml.Value.FC_ZZFJBXX.ZXQK);
                 $("#spanZZLX").html(xml.Value.FC_ZZFJBXX.ZZLX);
@@ -301,7 +299,6 @@ function FB() {
     obj = jsonObj.AddJson(obj, "FWPZ", "'" + GetDuoX("FWPZ") + "'");
     obj = jsonObj.AddJson(obj, "FWLD", "'" + GetDuoX("FWLD") + "'");
     obj = jsonObj.AddJson(obj, "CZYQ", "'" + GetDuoX("CZYQ") + "'");
-    obj = jsonObj.AddJson(obj, "CZFS", "'" + GetDX("CZFS") + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     if ($("#KRZSJ").val() !== "")
         obj = jsonObj.AddJson(obj, "KRZSJ", "'" + $("#KRZSJ").val() + "'");

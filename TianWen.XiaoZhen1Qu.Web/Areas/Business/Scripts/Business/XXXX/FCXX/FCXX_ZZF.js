@@ -58,7 +58,7 @@ function LoadJBXX(obj) {
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">出租方式：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.CZFS + '</span>');
+    html += ('<span class="span_body_left_body_right_right">整套出租</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">房屋类型：</span>');
