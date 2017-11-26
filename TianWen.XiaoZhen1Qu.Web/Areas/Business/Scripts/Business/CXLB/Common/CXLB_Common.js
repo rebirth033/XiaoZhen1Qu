@@ -68,7 +68,7 @@ function ShowSelectCondition(tbname) {
     $(".div_condition_select").css("display", "block");
     $("#ul_condition_select").html('<li class="li_condition_select_first">筛选条件</li>');
     $(".li_condition_body").each(function () {
-        if ($(this).css("color") === "rgb(91, 192, 222)" && $(this).html() !== "不限") {
+        if ($(this).css("color") === "rgb(91, 192, 222)" && $(this).html() !== "全部") {
             $("#ul_condition_select").append('<li onclick="DeleteSelect(this,\'' + tbname + '\')" class="li_condition_select"><span>' + $(this).html() + '</span><em>x</em></li>');
         }
     });
@@ -172,20 +172,29 @@ function LoadPage(typename, pagecount) {
     }
 }
 //根据TYPENAME获取字典表
-function LoadConditionByTypeName(typename, table, name, id, length) {
+function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAMES",
         dataType: "json",
         data:
         {
-            TYPENAME: typename,
+            TYPENAMES: typenames,
             TBName: table
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                $("#ul_condition_body_" + id).remove();
-                LoadCondition(xml.list, name, id, length);
+                var typelist = typenames.split(',');
+                var namelist = names.split(',');
+                for (var i = 0; i < typelist.length; i++) {
+                    for (var j = 0; j < namelist.length; j++) {
+                        if (typelist[i].indexOf(namelist[j]) !== -1) {
+                            LoadCondition(_.filter(xml.list, function (value) { return typelist[i].indexOf(value.TYPENAME) !== -1; }), namelist[j], ids.split(',')[j]);
+                        }
+                    }
+                }
+
+                
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -218,6 +227,7 @@ function LoadConditionByParentID(parentid, table, name, id, length) {
 }
 //加载查询条件
 function LoadCondition(array, name, id, length) {
+    $("#ul_condition_body_" + id).remove();
     var html = "";
     html += '<ul id="ul_condition_body_' + id + '" class="ul_condition_body">';
     html += '<li class="li_condition_body_first">' + name + '</li>';

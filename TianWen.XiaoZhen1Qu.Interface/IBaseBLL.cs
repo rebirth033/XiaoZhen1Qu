@@ -18,6 +18,8 @@ namespace TianWen.XiaoZhen1Qu.Interface
 
         object LoadCODESByTYPENAME(string TYPENAME, string TBName);
 
+        object LoadCODESByTYPENAMES(string TYPENAMES, string TBName);
+
         object LoadByParentID(string ParentID, string TBName);
 
         object LoadByCodeValueAndTypeName(string CODEVALUE, string TYPENAME, string TBName);
