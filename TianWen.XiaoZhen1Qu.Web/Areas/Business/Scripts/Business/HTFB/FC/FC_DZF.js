@@ -3,8 +3,46 @@
     $("body").bind("click", function () { Close("_XZQ"); });
     BindClick("FWLX");
     BindClick("ZJDW");
-    LoadFC_DZFJBXX();
+    LoadDuoX("日租短租房屋配置", "FWPZ");
 });
+//加载多选
+function LoadDuoX(type, id) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
+        dataType: "json",
+        data:
+        {
+            TYPENAME: type,
+            TBName: "CODES_FC"
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='ulFWPZ'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='li" + id + "' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    if (i === 4 || i === 9 || i === 14 || i === 19) {
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
+                    }
+                }
+                if (parseInt(xml.list.length % 5) === 0)
+                    $("#div" + id).css("height", parseInt(xml.list.length / 5) * 45 + "px");
+                else
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 5) + 1) * 45 + "px");
+                html += "</ul>";
+                $("#div" + id + "Text").html(html);
+                $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                if (type === "日租短租房屋配置")
+                    LoadDuoX("日租短租付款方式", "FKFS");
+                if (type === "日租短租付款方式")
+                    LoadFC_DZFJBXX();
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
 //打开新增地址
 function OpenXZDZ() {
     $("#shadow").css("display", "block");
@@ -53,12 +91,6 @@ function BindClick(type) {
         }
         if (type === "ZJDW") {
             LoadZJDW();
-        }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "SQ") {
-            LoadSQ();
         }
     });
 }

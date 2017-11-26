@@ -237,7 +237,7 @@ function LoadCondition(array, name, id, length) {
     var html = "";
     html += '<ul id="ul_condition_body_' + id + '" class="ul_condition_body">';
     html += '<li class="li_condition_body_first">' + name + '</li>';
-    html += '<li id="0" class="li_condition_body li_condition_body_active" onclick="SelectCondition(this,\'' + name + '\')">不限</li>';
+    html += '<li id="0" class="li_condition_body li_condition_body_active" onclick="SelectCondition(this,\'' + name + '\')">全部</li>';
     for (var i = 0; i < (array.length > length ? length : array.length) ; i++) {
         html += '<li id="' + array[i].CODEID + '" class="li_condition_body" onclick="SelectCondition(this,\'' + name + '\')">' + array[i].CODENAME + '</li>';
     }
@@ -269,8 +269,8 @@ function LoadDistrict(name, code, type) {
 function LoadDistrictCondition(array, type, name) {
     var html = "";
     html += '<ul id="ul_condition_body_' + type + '" class="ul_condition_body">';
-    html += '<li class="li_condition_body_first">' + name + '</li>';
-    html += '<li class="li_condition_body li_condition_body_active" onclick="SelectCondition(this)">不限</li>';
+    html += '<li class="li_condition_body_first">区域</li>';
+    html += '<li class="li_condition_body li_condition_body_active" onclick="SelectCondition(this)">全部</li>';
     for (var i = 0; i < array.length; i++) {
         html += '<li class="li_condition_body" onclick="SelectCondition(this)">' + RTrimStr(RTrimStr(RTrimStr(array[i].NAME, '区'), '县'), '市') + '</li>';
     }

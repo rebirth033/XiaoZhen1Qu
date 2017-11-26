@@ -68,12 +68,79 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// 交易规则
         /// </summary>
         [Property]
-        public virtual string JYGZ { get; set; }
+        public virtual Byte[] JYGZ { get; set; }
 
         /// <summary>
         /// 补充描述
         /// </summary>
         [Property]
         public virtual Byte[] BCMS { get; set; }
+
+        /// <summary>
+        /// 卧室数
+        /// </summary>
+        [Property]
+        public virtual string WSS { get; set; }
+
+        /// <summary>
+        /// 双人床数
+        /// </summary>
+        [Property]
+        public virtual string SRCS { get; set; }
+
+        /// <summary>
+        /// 单人床数
+        /// </summary>
+        [Property]
+        public virtual string DRCS { get; set; }
+
+        /// <summary>
+        /// 入住时间_时
+        /// </summary>
+        [Property]
+        public virtual string RZSJ_H { get; set; }
+
+        /// <summary>
+        /// 入住时间_分
+        /// </summary>
+        [Property]
+        public virtual string RZSJ_M { get; set; }
+
+        /// <summary>
+        /// 退房时间_时
+        /// </summary>
+        [Property]
+        public virtual string TFSJ_H { get; set; }
+
+        /// <summary>
+        /// 退房时间_分
+        /// </summary>
+        [Property]
+        public virtual string TFSJ_M { get; set; }
+
+        /// <summary>
+        /// 押金
+        /// </summary>
+        [Property]
+        public virtual string YJ { get; set; }
+
+        /// <summary>
+        /// 定金
+        /// </summary>
+        [Property]
+        public virtual string DJ { get; set; }
+
+        /// <summary>
+        /// 有额外费用
+        /// </summary>
+        [Property]
+        public virtual string YEWFY { get; set; }
+
+        /// <summary>
+        /// 付款方式
+        /// </summary>
+        [Property]
+        public virtual string FKFS { get; set; }
+
     }
 }

@@ -20,11 +20,11 @@ function BCMSSetDefault() {
 }
 //加载默认
 function LoadDefault() {
-    xlts.ready(function () { xlts.setHeight(100); });
+    xlts.ready(function () { xlts.setHeight(200); });
     xcap.ready(function () { xcap.setHeight(200); });
-    ydxz.ready(function () { ydxz.setHeight(100); });
-    fybh.ready(function () { fybh.setHeight(100); });
-    zfxm.ready(function () { zfxm.setHeight(100); });
+    ydxz.ready(function () { ydxz.setHeight(200); });
+    fybh.ready(function () { fybh.setHeight(200); });
+    zfxm.ready(function () { zfxm.setHeight(200); });
 }
 //绑定下拉框鼠标点击样式
 function BindClick(type) {

@@ -14,7 +14,7 @@
 
 .em_split {width: 900px;height: 1px;float: left;background: #cccccc;}
 
-.div_row {width: 900px;height: auto;text-align: left;padding-top: 2px;font-size: 15px;margin-left: 10px;margin-bottom: 10px;height: 62px;position: relative;display: block;}
+.div_row {width: 900px;height: auto;text-align: left;padding-top: 2px;font-size: 15px;margin-left: 10px;margin-bottom: 20px;position: relative;display: block;}
 
 .div_row_left {color: black;text-align: right;margin-left: 100px;display: inline;font-size: 14px;}
 
@@ -41,11 +41,11 @@
 .li_select {height: 34px;text-align: left;display: block;padding-left: 6px;line-height: 34px;font-size: 14px;cursor: pointer;color: #999999;background: #FFFFFF;}
 .li_select:hover {background: #ececec;color: #333333;}
 
-.input_spaninput {width: 120px;margin-top: 1px;border: none;height: 30px;text-align: center;}
+.input_spaninput {width: 120px;margin-top: 1px;border: none;height: 30px;text-align: center;color: #000000 !important;}
 
 .span_spaninput {border: 1px solid #cccccc;display: inline-block;width: 150px;height: 34px;border-radius: 4px;font-size: 14px;}
 
-.spaninput_fontcolor {color: #333333;}
+.spaninput_fontcolor {color: #999999;}
 
 .span_required {color: #F2272D;display: inline-block;width: 20px;height: 36px;font-family: "宋体", "SimSun";}
 

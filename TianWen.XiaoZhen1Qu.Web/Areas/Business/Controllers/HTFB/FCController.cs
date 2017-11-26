@@ -43,7 +43,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             JCXX jcxx = CreateJCXX(yhjbxx, json);
             FC_DZFJBXX dzfjbxx = JsonHelper.ConvertJsonToObject<FC_DZFJBXX>(json);
             dzfjbxx.BCMS = BinaryHelper.StringToBinary(BCMS);
-            dzfjbxx.JYGZ = jygz;
+            dzfjbxx.JYGZ = BinaryHelper.StringToBinary(jygz);
             List<PHOTOS> photos = GetTP(fwzp);
             object result = FC_BLL.SaveDZFJBXX(jcxx, dzfjbxx, photos);
             return Json(result);
