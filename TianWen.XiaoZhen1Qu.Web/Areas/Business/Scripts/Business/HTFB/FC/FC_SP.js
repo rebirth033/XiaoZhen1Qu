@@ -4,8 +4,6 @@
     LoadFC_SPJBXX();
     BindClick("SPLX");
     BindClick("JYHY");
-    BindClick("QY");
-    BindClick("DD");
     BindClick("ZJDW");
 });
 
@@ -22,12 +20,6 @@ function BindClick(type) {
         }
         if (type === "ZJDW") {
             LoadCODESByTYPENAME("租金单位", "ZJDW", "CODES_FC");
-        }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
         }
     });
 }

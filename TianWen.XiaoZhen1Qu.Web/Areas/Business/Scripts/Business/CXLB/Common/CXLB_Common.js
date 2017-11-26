@@ -54,22 +54,6 @@ function GetHeadNav() {
         }
     });
 }
-//绑定查询条件导航
-function BindConditionNav(type) {
-    $(".li_condition_head").bind("click", function () {
-        $(".li_condition_head").each(function (i) {
-            $(this).css("background-color", "#eeeff1");
-        });
-        $(this).css("background-color", "#ffffff");
-        if ($(this).html() === "出租") {
-            LoadFCCondition();
-            LoadBody(type, currentIndex);
-        } else {
-            LoadFCCondition();
-            LoadBody(type, currentIndex);
-        }
-    });
-}
 //绑定主体列表导航
 function BindBodyNav() {
     $(".li_body_head").bind("click", function () {
@@ -296,7 +280,10 @@ function FBXX() {
 
         }
     });
-    
-    
-    
+}
+//删除查询条件
+function RemoveCondition(list) {
+    var conditions = list.split(',');
+    for (var i = 0; i < conditions.length; i++)
+        $("#ul_condition_body_" + conditions[i]).remove();
 }

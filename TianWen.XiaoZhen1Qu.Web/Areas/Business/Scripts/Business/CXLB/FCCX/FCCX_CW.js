@@ -3,15 +3,40 @@ $(document).ready(function () {
     $(".li_condition_head:eq(0)").each(function () { $(this).css("background-color", "#ffffff"); });
     BindConditionNav("FCXX_CW");
     BindBodyNav();
-    LoadFCCondition();
+    LoadCZCondition();
     LoadHot("FCXX_CW");
 });
-//加载房产查询_商铺出租条件
-function LoadFCCondition() {
+//加载出租查询条件
+function LoadCZCondition() {
+    RemoveCondition("QY,ZJ,SJ,MJ");
     LoadDistrict("福州", "350100", "QY");
-    LoadConditionByTypeName("商铺租金", "CODES_FC", "租金", "ZJ");
-    LoadConditionByTypeName("写字楼面积", "CODES_FC", "面积", "MJ");
+    LoadConditionByTypeName("车位租金", "CODES_FC", "租金", "ZJ");
+    LoadConditionByTypeName("车位面积", "CODES_FC", "面积", "MJ");
     LoadBody("FCXX_CW", currentIndex);
+}
+//加载出售查询条件
+function LoadCSCondition() {
+    RemoveCondition("QY,ZJ,SJ,MJ");
+    LoadDistrict("福州", "350100", "QY");
+    LoadConditionByTypeName("车位售价", "CODES_FC", "售价", "SJ");
+    LoadConditionByTypeName("车位面积", "CODES_FC", "面积", "MJ");
+    LoadBody("FCXX_CW", currentIndex);
+}
+//绑定查询条件导航
+function BindConditionNav(type) {
+    $(".li_condition_head").bind("click", function () {
+        $(".li_condition_head").each(function (i) {
+            $(this).css("background-color", "#eeeff1");
+        });
+        $(this).css("background-color", "#ffffff");
+        if ($(this).html() === "出租") {
+            LoadCZCondition();
+            LoadBody(type, currentIndex);
+        } else {
+            LoadCSCondition();
+            LoadBody(type, currentIndex);
+        }
+    });
 }
 //选择条件
 function SelectCondition(obj, name) {

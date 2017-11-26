@@ -3,15 +3,40 @@ $(document).ready(function () {
     $(".li_condition_head:eq(0)").each(function () { $(this).css("background-color", "#ffffff"); });
     BindConditionNav("FCXX_TD");
     BindBodyNav();
-    LoadFCCondition();
+    LoadCZCondition();
     LoadHot("FCXX_TD");
 });
 //加载房产查询条件
-function LoadFCCondition() {
+function LoadCZCondition() {
+    RemoveCondition("QY,ZJ,SJ,MJ");
     LoadDistrict("福州", "350100", "QY");
-    LoadConditionByTypeName("商铺租金", "CODES_FC", "租金", "ZJ");
-    LoadConditionByTypeName("写字楼面积", "CODES_FC", "面积", "MJ");
+    LoadConditionByTypeName("土地租金", "CODES_FC", "租金", "ZJ");
+    LoadConditionByTypeName("仓库面积", "CODES_FC", "面积", "MJ");
     LoadBody("FCXX_TD", currentIndex);
+}
+//加载房产查询条件
+function LoadCSCondition() {
+    RemoveCondition("QY,ZJ,SJ,MJ");
+    LoadDistrict("福州", "350100", "QY");
+    LoadConditionByTypeName("土地售价", "CODES_FC", "售价", "SJ");
+    LoadConditionByTypeName("仓库面积", "CODES_FC", "面积", "MJ");
+    LoadBody("FCXX_TD", currentIndex);
+}
+//绑定查询条件导航
+function BindConditionNav(type) {
+    $(".li_condition_head").bind("click", function () {
+        $(".li_condition_head").each(function (i) {
+            $(this).css("background-color", "#eeeff1");
+        });
+        $(this).css("background-color", "#ffffff");
+        if ($(this).html() === "出租") {
+            LoadCZCondition();
+            LoadBody(type, currentIndex);
+        } else {
+            LoadCSCondition();
+            LoadBody(type, currentIndex);
+        }
+    });
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -72,7 +97,7 @@ function LoadCZInfo(obj) {
     html += ('<p class="p_li_body_left_center_dz font_size16">' + '[' + obj.QY + '-' + obj.DD + '-' + obj.JTDZ + '] ' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
-    html += ('<p class="p_li_body_left_right"><span class="span_zj">' + obj.ZJ + '</span>元/月</p>');
+    html += ('<p class="p_li_body_left_right"><span class="span_zj">' + obj.SJ + '</span>万元</p>');
     html += ('</div>');
     html += ('</li>');
     $("#ul_body_left").append(html);

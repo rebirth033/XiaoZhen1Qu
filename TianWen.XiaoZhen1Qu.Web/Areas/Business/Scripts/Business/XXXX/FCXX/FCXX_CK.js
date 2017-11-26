@@ -16,7 +16,6 @@ function LoadDefault() {
             if (xml.Result === 1) {
                 LoadJBXX(xml.list[0]);
                 LoadXQ(xml.list[0], xml.BCMSString);
-                LoadSPXX();
                 LoadDTXX(xml.list[0].DZ);
                 LoadCNXH("FCXX_CK");
                 LoadGRXX(xml.grxxlist[0]);
@@ -53,28 +52,23 @@ function LoadJBXX(obj) {
     html += ('</div>');
     html += ('<div class="div_body_left_body_right">');
     html += ('<p class="p_body_left_body_right_first">');
-    html += ('<span class="span_body_left_body_right_zj">' + obj.ZJ + '</span><span class="span_body_left_body_right_zjdw">元/月</span>');
-    html += ('<span class="span_body_left_body_right_yffs">' + obj.YFFS + '</span>');
+    html += ('<span class="span_body_left_body_right_zj">' + obj.ZJ + '</span><span class="span_body_left_body_right_zjdw">' + (obj.ZJ === "面议" ? "" : obj.ZJDW) + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">类型：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.XZLLX + '</span>');
-    html += ('</p>');
-    html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">物业费：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.WYF + '元/㎡</span>');
-    html += ('</p>');
-    html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">签约年限：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.QYNX + '</span>');
+    html += ('<span class="span_body_left_body_right_left">类别：</span>');
+    html += ('<span class="span_body_left_body_right_right">厂房</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">面积：</span>');
     html += ('<span class="span_body_left_body_right_right">' + obj.MJ + '平米</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
+    html += ('<span class="span_body_left_body_right_left">区域：</span>');
+    html += ('<span class="span_body_left_body_right_right">' + obj.QY + '-' + obj.DD + '</span>');
+    html += ('</p>');
+    html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">具体地址：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.QY + '-' + obj.DD + '-' + obj.JTDZ + '</span>');
+    html += ('<span class="span_body_left_body_right_right">' + obj.JTDZ + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right_lxdh">');
     html += ('<img class="img_body_left_body_right_lxdh" src="' + getRootPath() + '/Areas/Business/Css/images/lxdh.png" />' + obj.LXDH);
@@ -128,22 +122,7 @@ function ToggleImg(length) {
 function LoadXQ(obj, BCMSString) {
     var html = "";
     html += ('<div class="div_body_left_body_fyxq">');
-    html += ('<p class="p_body_left_body_fyxq">写字楼详情</p>');
-    //if (obj.FWPZ !== null) {
-    //    var fwpzarray = obj.FWPZ.split(',');
-    //html += ('<div class="div_body_left_body_fyxq_xx">');
-    //    html += ('<div class="div_body_left_body_fyxq_xx_left">房屋配置</div>');
-    //    html += ('<div class="div_body_left_body_fyxq_xx_right" style="width: 600px;">');
-    //    for (var i = 0; i < fwpzarray.length; i++) {
-    //        html += ('<span class="span_body_left_body_fyxq_xx_right">');
-    //        html += ('<img class="img_body_left_body_fyxq_xx_right" src="' + getRootPath() + '/Areas/Business/Css/images/xxxx/fc/xxxx_fc_' + fwpzarray[i] + '.png")" />');
-    //        html += ('<span class="span_img_body_left_body_fyxq_xx_right">' + fwpzarray[i] + '</span>');
-    //        html += ('</span>');
-    //    }
-    //    html += ('</div>');
-    //    html += ('</div>');
-    //}
-
+    html += ('<p class="p_body_left_body_fyxq">厂房详情</p>');
     html += ('<div class="div_body_left_body_fyxq_xx">');
     html += ('<div class="div_body_left_body_fyxq_xx_left">房源描述</div>');
     html += ('<div class="div_body_left_body_fyxq_xx_right fyms">');

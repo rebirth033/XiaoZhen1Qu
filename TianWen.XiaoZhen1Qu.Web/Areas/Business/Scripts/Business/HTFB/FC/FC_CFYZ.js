@@ -13,16 +13,30 @@
 });
 //验证所有
 function ValidateAll() {
-    if (ValidateRadio("GQ", "忘记选择供求啦")
+    if (GetGQ() === "出售") {
+        if (ValidateRadio("GQ", "忘记选择供求啦")
+            & ValidateBCMS("BCMS", "忘记填写补充描述啦")
+            & ValidateSZQY()
+            & ValidateDD()
+            & ValidateSJ()
+            & ValidateMJ()
+            & ValidateCommon())
+            return true;
+        else
+            return false;
+    }
+    else {
+        if (ValidateRadio("GQ", "忘记选择供求啦")
         & ValidateBCMS("BCMS", "忘记填写补充描述啦")
         & ValidateSZQY()
         & ValidateDD()
         & ValidateZJ()
         & ValidateMJ()
         & ValidateCommon())
-        return true;
-    else
-        return false;
+            return true;
+        else
+            return false;
+    }
 }
 //验证楼盘名称
 function ValidateLPMC() {
@@ -137,16 +151,19 @@ function InfoZJ() {
     $("#divZJTip").css("display", "block");
     $("#divZJTip").attr("class", "Info");
     $("#divZJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数，默认为面议');
+    $("#spanZJ").css("border-color", "#5bc0de");
 }
-//提示租金
+//提示售价
 function InfoSJ() {
     $("#divSJTip").css("display", "block");
     $("#divSJTip").attr("class", "Info");
     $("#divSJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数，默认为面议');
+    $("#spanSJ").css("border-color", "#5bc0de");
 }
 //提示面积
 function InfoMJ() {
     $("#divMJTip").css("display", "block");
     $("#divMJTip").attr("class", "Info");
     $("#divMJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数，默认为面议');
+    $("#spanMJ").css("border-color", "#5bc0de");
 }

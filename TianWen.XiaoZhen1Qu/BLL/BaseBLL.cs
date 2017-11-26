@@ -315,7 +315,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 for (int i = 0; i < conditions.Count(); i++)
                 {
                     string[] array = conditions[i].Split(':');
-                    if (array[1] != "不限")
+                    if (array[1] != "全部")
                     {
                         if (array[0] == "ZJ" || array[0] == "JG" || array[0] == "SJ" || array[0] == "PFM" || array[0] == "MJ" || array[0] == "NL" || array[0] == "MSJ" || array[0] == "S")
                         {

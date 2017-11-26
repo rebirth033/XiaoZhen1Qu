@@ -50,7 +50,7 @@ function GetGQ() {
     }
     return value;
 }
-//加载房产_写字楼基本信息
+//加载
 function LoadFC_TDJBXX() {
     $.ajax({
         type: "POST",
@@ -71,8 +71,10 @@ function LoadFC_TDJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.BCMSString);
                 });
-                if (xml.Value.FC_TDJBXX.GQ !== null)
+                if (xml.Value.FC_TDJBXX.GQ !== null){
                     SetDX("GQ", xml.Value.FC_TDJBXX.GQ);
+                    SetGQ(xml.Value.FC_TDJBXX.GQ);
+                }
                 $("#spanKZCGS").html(xml.Value.FC_TDJBXX.KZCGS);
                 $("#spanQY").html(xml.Value.FC_TDJBXX.QY);
                 $("#spanDD").html(xml.Value.FC_TDJBXX.DD);
@@ -95,6 +97,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "ZJDW", "'" + $("#spanZJDW").html() + "'");
+    obj = jsonObj.AddJson(obj, "SJ", "'" + $("#SJ").val() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
 
