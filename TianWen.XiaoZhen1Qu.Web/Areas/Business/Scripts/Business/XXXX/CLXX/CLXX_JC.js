@@ -16,8 +16,6 @@ function LoadDefault() {
             if (xml.Result === 1) {
                 LoadJBXX(xml.list[0]);
                 LoadXQ(xml.list[0], xml.BCMSString);
-                LoadXQXX(xml.list[0]);
-                LoadDTXX(xml.list[0].XQMC);
                 LoadCNXH("CLXX_JC");
                 LoadGRXX(xml.grxxlist[0]);
                 LoadJJRTJFY("CLXX_JC");
@@ -170,83 +168,6 @@ function ToggleImg(length) {
         $("#div_body_left_body_xq_xx").css("overflow", "hidden").css("height", "530px");
         $("#div_body_left_body_xq_zk").html("展开更多图片 共（" + length + "）张");
     }
-}
-//加载小区信息
-function LoadXQXX(obj) {
-    var html = "";
-    html += ('<div class="div_body_left_body_xqxx">');
-    html += ('<p class="p_body_left_body_xqxx">小区信息</p>');
-    html += ('<ul class="ul_body_left_body_xqxx">');
-    html += ('<li class="li_body_left_body_xqxx">');
-    html += ('<span class="span_body_left_body_xqxx_left">小区名：</span>');
-    html += ('<span class="span_body_left_body_xqxx_right">' + obj.XQMC === null ? "" : obj.XQMC + '</span>');
-    html += ('</li>');
-    html += ('<li class="li_body_left_body_xqxx">');
-    html += ('<span class="span_body_left_body_xqxx_left">开发商：</span>');
-    html += ('<span class="span_body_left_body_xqxx_right">' + (obj.KFS === null ? "" : obj.KFS) + '</span>');
-    html += ('</li>');
-    html += ('<li class="li_body_left_body_xqxx">');
-    html += ('<span class="span_body_left_body_xqxx_left">物业公司：</span>');
-    html += ('<span class="span_body_left_body_xqxx_right">' + (obj.WYGS === null ? "" : obj.WYGS) + '</span>');
-    html += ('</li>');
-    html += ('<li class="li_body_left_body_xqxx">');
-    html += ('<span class="span_body_left_body_xqxx_left">物业类型：</span>');
-    html += ('<span class="span_body_left_body_xqxx_right">' + (obj.WYLX === null ? "" : obj.WYLX) + '</span>');
-    html += ('</li>');
-    html += ('<li class="li_body_left_body_xqxx">');
-    html += ('<span class="span_body_left_body_xqxx_left">总建面积：</span>');
-    html += ('<span class="span_body_left_body_xqxx_right">' + (obj.ZJMJ === null ? "" : obj.ZJMJ) + '</span>');
-    html += ('</li>');
-    html += ('<li class="li_body_left_body_xqxx">');
-    html += ('<span class="span_body_left_body_xqxx_left">总户数：</span>');
-    html += ('<span class="span_body_left_body_xqxx_right">' + (obj.ZHS === null ? "" : obj.ZHS) + '</span>');
-    html += ('</li>');
-    html += ('<li class="li_body_left_body_xqxx">');
-    html += ('<span class="span_body_left_body_xqxx_left">建筑年代：</span>');
-    html += ('<span class="span_body_left_body_xqxx_right">' + (obj.JZND === null ? "" : obj.JZND) + '</span>');
-    html += ('</li>');
-    html += ('<li class="li_body_left_body_xqxx">');
-    html += ('<span class="span_body_left_body_xqxx_left">容积率：</span>');
-    html += ('<span class="span_body_left_body_xqxx_right">' + (obj.RJL === null ? "" : obj.RJL) + '</span>');
-    html += ('</li>');
-    html += ('<li class="li_body_left_body_xqxx">');
-    html += ('<span class="span_body_left_body_xqxx_left">停车位：</span>');
-    html += ('<span class="span_body_left_body_xqxx_right">' + (obj.TCW === null ? "" : obj.TCW) + '</span>');
-    html += ('</li>');
-    html += ('<li class="li_body_left_body_xqxx">');
-    html += ('<span class="span_body_left_body_xqxx_left">绿化率：</span>');
-    html += ('<span class="span_body_left_body_xqxx_right">' + (obj.LHL === null ? "" : obj.LHL) + '</span>');
-    html += ('</li>');
-    html += ('</ul>');
-    html += ('<div id="div_body_left_body_xqxx_dtxx" class="div_body_left_body_xqxx_dtxx">');
-    html += ('<p class="p_body_left_body_xqxx_dtxx">小区地址</p>');
-    html += ('<div style="width: 780px; height: 300px; border: 1px solid gray" id="container"></div>');
-    html += ('</div>');
-    html += ('</div>');
-    $("#div_body_left").append(html);
-}
-//加载地图信息
-function LoadDTXX(XQMC) {
-    var map = new BMap.Map("container");//创建地图实例
-    map.centerAndZoom("福州市", 15);//创建点坐标,地图初始化
-    map.enableScrollWheelZoom(true);//允许鼠标滑轮放大缩小 
-    map.enableContinuousZoom(true);//允许惯性拖拽
-    map.addControl(new BMap.NavigationControl({ isOpen: true, anchor: BMAP_ANCHOR_BOTTOM_LEFT }));  //添加默认缩放平移控件,右上角打开
-    map.addControl(new BMap.OverviewMapControl({ isOpen: true, anchor: BMAP_ANCHOR_BOTTOM_RIGHT })); //添加默认缩略地图控件,右下角打开
-    searchByStationName(map, XQMC);
-};
-//地址定位
-function searchByStationName(map, XQMC) {
-    map.clearOverlays();//清空原来的标注
-    var localSearch = new BMap.LocalSearch(map);
-    localSearch.enableAutoViewport(); //允许自动调节窗体大小
-    localSearch.setSearchCompleteCallback(function (searchResult) {
-        var poi = searchResult.getPoi(0);
-        map.centerAndZoom(poi.point, 13);
-        var marker = new BMap.Marker(new BMap.Point(poi.point.lng, poi.point.lat));  // 创建标注，为要查询的地址对应的经纬度
-        map.addOverlay(marker);
-    });
-    localSearch.search(XQMC);
 }
 //加载猜你喜欢
 function LoadCNXH(TYPE) {

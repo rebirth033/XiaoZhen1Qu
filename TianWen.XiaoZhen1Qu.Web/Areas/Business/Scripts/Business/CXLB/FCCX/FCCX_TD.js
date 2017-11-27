@@ -15,7 +15,7 @@ function LoadCZCondition() {
 //加载房产查询条件
 function LoadCSCondition() {
     RemoveCondition("QY,ZJ,SJ,MJ");
-    LoadConditionByTypeNames("'土地租金','仓库面积'", "CODES_FC", "售价,面积", "SJ,MJ");
+    LoadConditionByTypeNames("'土地售价','仓库面积'", "CODES_FC", "售价,面积", "SJ,MJ");
     LoadBody("FCXX_TD", currentIndex);
 }
 //绑定查询条件导航
@@ -45,10 +45,16 @@ function SelectCondition(obj, name) {
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
     var condition = GetAllCondition("MJ,QY");
-    if (GetNavCondition() === "出租" && GetCondition("ZJ") !== "")
-        condition += ",ZJ:" + GetCondition("ZJ");
-    if (GetNavCondition() === "出售" && GetCondition("SJ") !== "")
-        condition += ",SJ:" + GetCondition("SJ");
+    if (GetNavCondition() === "出租") {
+        condition += ",GQ:出租";
+        if (GetCondition("ZJ") !== "")
+            condition += ",ZJ:" + GetCondition("ZJ");
+    }
+    if (GetNavCondition() === "出售") {
+        condition += ",GQ:出售";
+        if (GetCondition("SJ") !== "")
+            condition += ",SJ:" + GetCondition("SJ");
+    }
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/FCCX/LoadFCXX",
@@ -56,7 +62,7 @@ function LoadBody(TYPE, PageIndex) {
         data:
         {
             TYPE: TYPE,
-            Condition: condition,
+            Condition: LTrim(condition, ','),
             PageSize: 5,
             PageIndex: PageIndex
         },
@@ -91,7 +97,7 @@ function LoadCZInfo(obj) {
     html += ('<p class="p_li_body_left_center_dz font_size16">' + '[' + obj.QY + '-' + obj.DD + '-' + obj.JTDZ + '] ' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
-    html += ('<p class="p_li_body_left_right"><span class="span_zj">' + obj.SJ + '</span>万元</p>');
+    html += ('<p class="p_li_body_left_right">' + GetJG(obj.ZJ, obj.ZJDW) + '</p>');
     html += ('</div>');
     html += ('</li>');
     $("#ul_body_left").append(html);
@@ -110,7 +116,7 @@ function LoadCSInfo(obj) {
     html += ('<p class="p_li_body_left_center_dz font_size16">' + '[' + obj.QY + '-' + obj.DD + '-' + obj.JTDZ + '] ' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
-    html += ('<p class="p_li_body_left_right"><span class="span_zj">' + obj.SJ + '</span>万元</p>');
+    html += ('<p class="p_li_body_left_right">' + GetJG(obj.SJ, "万元") + '</p>');
     html += ('</div>');
     html += ('</li>');
     $("#ul_body_left").append(html);

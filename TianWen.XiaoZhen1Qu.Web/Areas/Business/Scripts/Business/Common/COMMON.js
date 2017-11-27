@@ -51,6 +51,14 @@ function RTrim(str, char) {
         return str;
 }
 
+//移除字串末尾指定字符
+function LTrim(str, char) {
+    if (str.charAt(0) === char)
+        return str.substring(1, str.length);
+    else
+        return str;
+}
+
 //移除字串末尾指定字符串
 function RTrimStr(str, strchar) {
     var arr = strchar.split(',');
