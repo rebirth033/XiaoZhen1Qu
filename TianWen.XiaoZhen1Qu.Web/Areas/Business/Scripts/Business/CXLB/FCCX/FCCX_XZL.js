@@ -45,10 +45,16 @@ function SelectCondition(obj, name) {
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
     var condition = GetAllCondition("XZLLX,MJ,QY");
-    if (GetNavCondition() === "出租" && GetCondition("ZJ") !== "")
-        condition += ",ZJ:" + GetCondition("ZJ");
-    if (GetNavCondition() === "出售" && GetCondition("SJ") !== "")
-        condition += ",SJ:" + GetCondition("SJ");
+    if (GetNavCondition() === "出租") {
+        condition += "GQ:出租";
+        if (GetCondition("ZJ") !== "") 
+            condition += ",ZJ:" + GetCondition("ZJ");
+    }
+    if (GetNavCondition() === "出售") {
+        condition += "GQ:出售";
+        if (GetCondition("SJ") !== "") 
+            condition += ",SJ:" + GetCondition("SJ");
+    }
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/FCCX/LoadFCXX",
