@@ -46,10 +46,16 @@ function SelectCondition(obj, name) {
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
     var condition = GetAllCondition("QY,JYHY,MJ");
-    if (GetNavCondition() === "出租" && GetCondition("ZJ") !== "")
-        condition += ",ZJ:" + GetCondition("ZJ");
-    if (GetNavCondition() === "出售" && GetCondition("SJ") !== "")
-        condition += ",SJ:" + GetCondition("SJ");
+    if (GetNavCondition() === "出租") {
+        condition += "GQ:出租";
+        if (GetCondition("ZJ") !== "")
+            condition += ",ZJ:" + GetCondition("ZJ");
+    }
+    if (GetNavCondition() === "出售") {
+        condition += "GQ:出售";
+        if (GetCondition("SJ") !== "")
+            condition += ",SJ:" + GetCondition("SJ");
+    }
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/FCCX/LoadFCXX",
@@ -92,7 +98,7 @@ function LoadCZInfo(obj) {
     html += ('<p class="p_li_body_left_center_dz font_size16">' + '[' + obj.QY + '-' + obj.DD + '-' + obj.JTDZ + '] ' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
-    html += ('<p class="p_li_body_left_right"><span class="span_zj">' + obj.ZJ + '</span>元/月</p>');
+    html += ('<p class="p_li_body_left_right">' + GetJG(obj.ZJ, obj.ZJDW) + '</p>');
     html += ('</div>');
     html += ('</li>');
     $("#ul_body_left").append(html);
@@ -111,7 +117,7 @@ function LoadCSInfo(obj) {
     html += ('<p class="p_li_body_left_center_dz font_size16">' + '[' + obj.QY + '-' + obj.DD + '-' + obj.JTDZ + '] ' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
-    html += ('<p class="p_li_body_left_right"><span class="span_zj">' + obj.SJ + '</span>万元</p>');
+    html += ('<p class="p_li_body_left_right">' + GetJG(obj.SJ, "万元") + '</p>');
     html += ('</div>');
     html += ('</li>');
     $("#ul_body_left").append(html);

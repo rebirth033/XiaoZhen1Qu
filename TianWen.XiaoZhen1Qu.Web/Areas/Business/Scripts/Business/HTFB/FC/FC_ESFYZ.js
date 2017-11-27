@@ -145,14 +145,14 @@ function ValidateFWLX_PFM() {
         $("#spanPFM").css("border-color", "#fd634f");
         return false;
     } else {
-        if (ValidateNumber($("#PFM").val()) && $("#PFM").val() !== "0") {
+        if (ValidateDecimal($("#PFM").val()) && $("#PFM").val() !== "0") {
             $("#divFWLXTip").css("display", "none");
             $("#PFM").css("border-color", "#cccccc");
             return true;
         } else {
             $("#divFWLXTip").css("display", "block");
             $("#divFWLXTip").attr("class", "Warn");
-            $("#divFWLXTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />面积请填写整数，不能是0');
+            $("#divFWLXTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />面积请填写数字，不能是0');
             $("#spanPFM").css("border-color", "#fd634f");
             return false;
         }

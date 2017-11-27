@@ -66,7 +66,7 @@ function BindBodyNav() {
 //显示筛选条件
 function ShowSelectCondition(tbname) {
     $(".div_condition_select").css("display", "block");
-    $("#ul_condition_select").html('<li class="li_condition_select_first">筛选条件</li>');
+    $("#ul_condition_select").html('<li class="li_condition_select_first">条件</li>');
     $(".li_condition_body").each(function () {
         if ($(this).css("color") === "rgb(91, 192, 222)" && $(this).html() !== "全部") {
             $("#ul_condition_select").append('<li onclick="DeleteSelect(this,\'' + tbname + '\')" class="li_condition_select"><span>' + $(this).html() + '</span><em>x</em></li>');
@@ -195,7 +195,7 @@ function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
                     }
                 }
 
-                
+
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -297,4 +297,11 @@ function RemoveCondition(list) {
     var conditions = list.split(',');
     for (var i = 0; i < conditions.length; i++)
         $("#ul_condition_body_" + conditions[i]).remove();
+}
+//加载价格
+function GetJG(jg, dw) {
+    if (jg === "面议")
+        return '<span class="span_zj">面议</span>';
+    else
+        return '<span class="span_zj">' + jg + '</span>' + dw;
 }

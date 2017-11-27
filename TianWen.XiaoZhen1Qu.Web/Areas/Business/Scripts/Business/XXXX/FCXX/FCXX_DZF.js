@@ -56,12 +56,20 @@ function LoadJBXX(obj) {
     html += ('</p>');
 
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">所属区域：</span>');
-    html += ('<span class="span_body_left_body_right_right">滨湖新区 滨湖世纪城</span>');
+    html += ('<span class="span_body_left_body_right_left">房屋类型：</span>');
+    html += ('<span class="span_body_left_body_right_right">' + obj.FWLX + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">详细地址：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.XQDZ + '</span>');
+    html += ('<span class="span_body_left_body_right_left">面积：</span>');
+    html += ('<span class="span_body_left_body_right_right">' + obj.MJ + '平米</span>');
+    html += ('</p>');
+    html += ('<p class="p_body_left_body_right">');
+    html += ('<span class="span_body_left_body_right_left">入住时间：</span>');
+    html += ('<span class="span_body_left_body_right_right">' + obj.RZSJ_H + ':' + obj.RZSJ_M + '之后</span>');
+    html += ('</p>');
+    html += ('<p class="p_body_left_body_right">');
+    html += ('<span class="span_body_left_body_right_left">退房时间：</span>');
+    html += ('<span class="span_body_left_body_right_right">' + obj.TFSJ_H + ':' + obj.TFSJ_M + '之前</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right_lxdh">');
     html += ('<img class="img_body_left_body_right_lxdh" src="' + getRootPath() + '/Areas/Business/Css/images/lxdh.png" />' + obj.LXDH);

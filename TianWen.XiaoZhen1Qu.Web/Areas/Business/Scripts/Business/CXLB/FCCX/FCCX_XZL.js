@@ -46,14 +46,14 @@ function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
     var condition = GetAllCondition("XZLLX,MJ,QY");
     if (GetNavCondition() === "出租") {
-        condition += "GQ:出租";
-        if (GetCondition("ZJ") !== "") 
-            condition += ",ZJ:" + GetCondition("ZJ");
+        condition += "GQ:出租,";
+        if (GetCondition("ZJ") !== "")
+            condition += "ZJ:" + GetCondition("ZJ") + ",";
     }
     if (GetNavCondition() === "出售") {
-        condition += "GQ:出售";
-        if (GetCondition("SJ") !== "") 
-            condition += ",SJ:" + GetCondition("SJ");
+        condition += "GQ:出售,";
+        if (GetCondition("SJ") !== "")
+            condition += "SJ:" + GetCondition("SJ") + ",";
     }
     $.ajax({
         type: "POST",
@@ -62,7 +62,7 @@ function LoadBody(TYPE, PageIndex) {
         data:
         {
             TYPE: TYPE,
-            Condition: condition,
+            Condition: RTrim(condition, ','),
             PageSize: 5,
             PageIndex: PageIndex
         },

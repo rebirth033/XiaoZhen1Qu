@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载房产查询条件
 function LoadFCCondition() {
-    LoadConditionByTypeNames("'二手房售价','二手房面积'", "CODES_FC", "售价,面积", "SJ,PFM");
+    LoadConditionByTypeNames("'二手房售价','二手房面积','厅室'", "CODES_FC", "售价,面积,厅室", "SJ,PFM,S");
     LoadBody("FCXX_ESF", currentIndex);
 }
 //选择条件
@@ -21,7 +21,7 @@ function SelectCondition(obj, name) {
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("SJ,PFM,QY");
+    var condition = GetAllCondition("SJ,PFM,QY,S");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/FCCX/LoadFCXX",
