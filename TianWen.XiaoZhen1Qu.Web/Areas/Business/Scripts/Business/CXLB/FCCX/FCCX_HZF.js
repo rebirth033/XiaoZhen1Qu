@@ -7,9 +7,7 @@ $(document).ready(function () {
 });
 //加载房产查询条件
 function LoadFCCondition() {
-    LoadDistrict("福州", "350100", "DQ");
-    LoadConditionByTypeName("整租房租金", "CODES_FC", "租金", "ZJ");
-    LoadConditionByTypeName("出租间类型", "CODES_FC", "类型", "CZJLX");
+    LoadConditionByTypeNames("'整租房租金','出租间类型'", "CODES_FC", "租金,类型", "ZJ,CZJLX");
     LoadBody("FCXX_HZF", currentIndex);
 }
 //选择条件

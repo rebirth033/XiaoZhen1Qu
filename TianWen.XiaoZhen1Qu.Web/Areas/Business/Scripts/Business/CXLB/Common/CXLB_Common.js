@@ -184,6 +184,7 @@ function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
         },
         success: function (xml) {
             if (xml.Result === 1) {
+                LoadDistrictCondition(xml.districts, "QY");
                 var typelist = typenames.split(',');
                 var namelist = names.split(',');
                 for (var i = 0; i < typelist.length; i++) {
@@ -251,7 +252,7 @@ function LoadDistrict(name, code, type) {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                LoadDistrictCondition(xml.list, type, name);
+                LoadDistrictCondition(xml.list, type);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -260,7 +261,7 @@ function LoadDistrict(name, code, type) {
     });
 }
 //加载查询条件
-function LoadDistrictCondition(array, type, name) {
+function LoadDistrictCondition(array, type) {
     var html = "";
     html += '<ul id="ul_condition_body_' + type + '" class="ul_condition_body">';
     html += '<li class="li_condition_body_first">区域</li>';

@@ -61,7 +61,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         {
             string TYPENAMES = Request["TYPENAMES"];
             string TBName = Request["TBName"];
-            return Json(CommonBLL.LoadCODESByTYPENAMES(TYPENAMES, TBName));
+            return Json(CommonBLL.LoadCODESByTYPENAMES(TYPENAMES, TBName, Session["XZQDM"].ToString()));
         }
         //加载区域
         public JsonResult LoadQY()

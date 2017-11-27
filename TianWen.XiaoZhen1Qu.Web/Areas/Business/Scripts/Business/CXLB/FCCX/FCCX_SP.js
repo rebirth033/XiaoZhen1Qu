@@ -9,10 +9,7 @@ $(document).ready(function () {
 });
 //加载房产查询条件
 function LoadFCCondition() {
-    LoadDistrict("福州", "350100", "QY");
-    LoadConditionByTypeName("经营行业", "CODES_FC", "经营行业", "JYHY");
-    LoadConditionByTypeName("商铺租金", "CODES_FC", "租金", "ZJ");
-    LoadConditionByTypeName("商铺面积", "CODES_FC", "面积", "MJ");
+    LoadConditionByTypeNames("'经营行业','商铺租金','商铺面积'", "CODES_FC", "经营行业,租金,面积", "JYHY,ZJ,MJ");
     LoadBody("FCXX_SP", currentIndex);
 }
 //选择条件

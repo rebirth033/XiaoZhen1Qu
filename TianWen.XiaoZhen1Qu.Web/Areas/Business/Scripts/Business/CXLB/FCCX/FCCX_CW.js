@@ -9,17 +9,13 @@ $(document).ready(function () {
 //加载出租查询条件
 function LoadCZCondition() {
     RemoveCondition("QY,ZJ,SJ,MJ");
-    LoadDistrict("福州", "350100", "QY");
-    LoadConditionByTypeName("车位租金", "CODES_FC", "租金", "ZJ");
-    LoadConditionByTypeName("车位面积", "CODES_FC", "面积", "MJ");
+    LoadConditionByTypeNames("'车位租金','车位面积'", "CODES_FC", "售价,面积", "ZJ,MJ");
     LoadBody("FCXX_CW", currentIndex);
 }
 //加载出售查询条件
 function LoadCSCondition() {
     RemoveCondition("QY,ZJ,SJ,MJ");
-    LoadDistrict("福州", "350100", "QY");
-    LoadConditionByTypeName("车位售价", "CODES_FC", "售价", "SJ");
-    LoadConditionByTypeName("车位面积", "CODES_FC", "面积", "MJ");
+    LoadConditionByTypeNames("'车位售价','车位面积'", "CODES_FC", "售价,面积", "SJ,MJ");
     LoadBody("FCXX_CW", currentIndex);
 }
 //绑定查询条件导航

@@ -1,16 +1,12 @@
 ﻿var currentIndex = 1;
 $(document).ready(function () {
-    BindConditionNav();
     BindBodyNav();
     LoadFCCondition();
     LoadHot("FCXX_DZF");
 });
 //加载房产查询条件
 function LoadFCCondition() {
-    LoadConditionByTypeName("短租房类型", "CODES_FC", "类型", "FWLX");
-    LoadConditionByTypeName("短租房租金", "CODES_FC", "租金", "ZJ");
-    LoadConditionByTypeName("出租方式", "CODES_FC", "出租方式", "CZFS");
-    LoadDistrict("福州", "350100", "QY");
+    LoadConditionByTypeNames("'短租房类型','短租房租金','出租方式'", "CODES_FC", "类型,租金,出租方式", "FWLX,ZJ,CZFS");
     LoadBody("FCXX_DZF", currentIndex);
 }
 //选择条件

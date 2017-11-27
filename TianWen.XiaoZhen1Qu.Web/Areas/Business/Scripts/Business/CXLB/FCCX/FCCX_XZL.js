@@ -1,17 +1,13 @@
 ﻿var currentIndex = 1;
 $(document).ready(function () {
     $(".li_condition_head:eq(0)").each(function () { $(this).css("background-color", "#ffffff"); });
-    BindConditionNav("FCXX_XZL");
     BindBodyNav();
     LoadFCCondition();
     LoadHot("FCXX_XZL");
 });
 //加载房产查询条件
 function LoadFCCondition() {
-    LoadConditionByTypeName("写字楼类型", "CODES_FC", "类型", "LX");
-    LoadConditionByTypeName("商铺租金", "CODES_FC", "租金", "ZJ");
-    LoadConditionByTypeName("写字楼面积", "CODES_FC", "面积", "MJ");
-    LoadDistrict("福州", "350100", "QY");
+    LoadConditionByTypeNames("'写字楼类型','商铺租金','写字楼面积'", "CODES_FC", "类型,租金,面积", "XZLLX,ZJ,MJ");
     LoadBody("FCXX_XZL", currentIndex);
 }
 //选择条件
@@ -26,7 +22,7 @@ function SelectCondition(obj, name) {
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("LX,MJ,QY");
+    var condition = GetAllCondition("XZLLX,MJ,QY");
     if (GetNavCondition() === "出租" && GetCondition("ZJ") !== "")
         condition += ",ZJ:" + GetCondition("ZJ");
     if (GetNavCondition() === "出售" && GetCondition("SJ") !== "")

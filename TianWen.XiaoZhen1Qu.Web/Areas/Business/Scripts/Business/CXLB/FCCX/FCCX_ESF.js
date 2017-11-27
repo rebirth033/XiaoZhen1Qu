@@ -1,15 +1,12 @@
 ﻿var currentIndex = 1;
 $(document).ready(function () {
-    BindConditionNav();
     BindBodyNav();
     LoadFCCondition();
     LoadHot("FCXX_ESF");
 });
 //加载房产查询条件
 function LoadFCCondition() {
-    LoadConditionByTypeName("二手房售价", "CODES_FC", "售价", "SJ");
-    LoadConditionByTypeName("二手房面积", "CODES_FC", "面积", "PFM");
-    LoadDistrict("福州", "350100", "QY");
+    LoadConditionByTypeNames("'二手房售价','二手房面积'", "CODES_FC", "售价,面积", "SJ,PFM");
     LoadBody("FCXX_ESF", currentIndex);
 }
 //选择条件
