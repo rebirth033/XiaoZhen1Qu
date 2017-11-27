@@ -26,10 +26,12 @@ function BindClick(type) {
 function SetGQ(gq) {
     if (gq !== "出售") {
         $("#divZJ").css("display", "block");
+        $("#divKZCGS").css("display", "block");
         $("#divSJ").css("display", "none");
     }
     else {
         $("#divZJ").css("display", "none");
+        $("#divKZCGS").css("display", "none");
         $("#divSJ").css("display", "block");
     }
 }
@@ -42,9 +44,11 @@ function GetGQ() {
     });
     if (value !== "出售") {
         $("#divZJ").css("display", "block");
+        $("#divKZCGS").css("display", "block");
         $("#divSJ").css("display", "none");
     } else {
         $("#divZJ").css("display", "none");
+        $("#divKZCGS").css("display", "none");
         $("#divSJ").css("display", "block");
     }
     return value;
@@ -70,8 +74,10 @@ function LoadFC_XZLJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.BCMSString);
                 });
-                if (xml.Value.FC_XZLJBXX.GQ !== null)
+                if (xml.Value.FC_XZLJBXX.GQ !== null){
                     SetDX("GQ", xml.Value.FC_XZLJBXX.GQ);
+                    SetGQ(xml.Value.FC_XZLJBXX.GQ);
+                }
                 if (xml.Value.FC_XZLJBXX.LX !== null)
                     SetDX("XZLLX", xml.Value.FC_XZLJBXX.XZLLX);
                 if (xml.Value.FC_XZLJBXX.KZCGS !== null)
