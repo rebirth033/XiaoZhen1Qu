@@ -27,10 +27,8 @@ function BindConditionNav(type) {
         $(this).css("background-color", "#ffffff");
         if ($(this).html() === "出租") {
             LoadCZCondition();
-            LoadBody(type, currentIndex);
         } else {
             LoadCSCondition();
-            LoadBody(type, currentIndex);
         }
     });
 }

@@ -38,7 +38,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// 类型
         /// </summary>
         [Property]
-        public virtual string LX { get; set; }
+        public virtual string XZLLX { get; set; }
 
         /// <summary>
         /// 楼盘名称

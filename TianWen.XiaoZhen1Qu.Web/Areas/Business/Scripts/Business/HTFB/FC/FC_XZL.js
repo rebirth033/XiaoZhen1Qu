@@ -73,7 +73,7 @@ function LoadFC_XZLJBXX() {
                 if (xml.Value.FC_XZLJBXX.GQ !== null)
                     SetDX("GQ", xml.Value.FC_XZLJBXX.GQ);
                 if (xml.Value.FC_XZLJBXX.LX !== null)
-                    SetDX("LX", xml.Value.FC_XZLJBXX.LX);
+                    SetDX("XZLLX", xml.Value.FC_XZLJBXX.XZLLX);
                 if (xml.Value.FC_XZLJBXX.KZCGS !== null)
                     SetDX("KZCGS", xml.Value.FC_XZLJBXX.KZCGS);
                 $("#spanQY").html(xml.Value.FC_XZLJBXX.QY);
@@ -100,7 +100,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "YFFS", "'" + $("#spanYFFS").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
-    obj = jsonObj.AddJson(obj, "LX", "'" + GetDX("LX") + "'");
+    obj = jsonObj.AddJson(obj, "XZLLX", "'" + GetDX("XZLLX") + "'");
     obj = jsonObj.AddJson(obj, "KZCGS", "'" + GetDX("KZCGS") + "'");
 
     if (getUrlParam("ID") !== null)

@@ -1,14 +1,36 @@
 ﻿var currentIndex = 1;
 $(document).ready(function () {
     $(".li_condition_head:eq(0)").each(function () { $(this).css("background-color", "#ffffff"); });
+    BindConditionNav("FCXX_XZL");
     BindBodyNav();
-    LoadFCCondition();
+    LoadCZCondition();
     LoadHot("FCXX_XZL");
 });
-//加载房产查询条件
-function LoadFCCondition() {
+//加载出租查询条件
+function LoadCZCondition() {
+    RemoveCondition("XZLLX,QY,ZJ,SJ,MJ");
     LoadConditionByTypeNames("'写字楼类型','商铺租金','写字楼面积'", "CODES_FC", "类型,租金,面积", "XZLLX,ZJ,MJ");
     LoadBody("FCXX_XZL", currentIndex);
+}
+//加载出售查询条件
+function LoadCSCondition() {
+    RemoveCondition("XZLLX,QY,ZJ,SJ,MJ");
+    LoadConditionByTypeNames("'写字楼类型','商铺售价','写字楼面积'", "CODES_FC", "类型,售价,面积", "XZLLX,SJ,MJ");
+    LoadBody("FCXX_XZL", currentIndex);
+}
+//绑定查询条件导航
+function BindConditionNav(type) {
+    $(".li_condition_head").bind("click", function () {
+        $(".li_condition_head").each(function (i) {
+            $(this).css("background-color", "#eeeff1");
+        });
+        $(this).css("background-color", "#ffffff");
+        if ($(this).html() === "出租") {
+            LoadCZCondition();
+        } else {
+            LoadCSCondition();
+        }
+    });
 }
 //选择条件
 function SelectCondition(obj, name) {

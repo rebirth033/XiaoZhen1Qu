@@ -202,7 +202,6 @@ function uploadComplete(evt) {
 
     }
     else {
-        $("#divLXRXX").css("margin-top", "300px");
         $("#ulImgs2").append("<li draggable='true' class='li_img'><img src='" + imagepath + "' class='divImg' /><div class='div_toolbar_wrap'><div class='opacity'></div><div class='toolbar'><a class='edit'></a><a class='delete'></a></div></div></li>");
     }
     ControlUpload();

@@ -3,14 +3,35 @@ $(document).ready(function () {
     BindConditionNav();
     $(".li_condition_head:eq(0)").each(function () { $(this).css("background-color", "#ffffff"); });
     BindBodyNav();
-    LoadFCCondition();
+    LoadCZCondition();
     LoadHot("FCXX_SP");
     LoadBody("FCXX_SP", currentIndex);
 });
-//加载房产查询条件
-function LoadFCCondition() {
+//加载出租查询条件
+function LoadCZCondition() {
+    RemoveCondition("QY,ZJ,SJ,MJ");
     LoadConditionByTypeNames("'经营行业','商铺租金','商铺面积'", "CODES_FC", "经营行业,租金,面积", "JYHY,ZJ,MJ");
     LoadBody("FCXX_SP", currentIndex);
+}
+//加载出售查询条件
+function LoadCSCondition() {
+    RemoveCondition("QY,ZJ,SJ,MJ");
+    LoadConditionByTypeNames("'经营行业','商铺售价','商铺面积'", "CODES_FC", "经营行业,售价,面积", "JYHY,SJ,MJ");
+    LoadBody("FCXX_SP", currentIndex);
+}
+//绑定查询条件导航
+function BindConditionNav(type) {
+    $(".li_condition_head").bind("click", function () {
+        $(".li_condition_head").each(function (i) {
+            $(this).css("background-color", "#eeeff1");
+        });
+        $(this).css("background-color", "#ffffff");
+        if ($(this).html() === "出租") {
+            LoadCZCondition();
+        } else {
+            LoadCSCondition();
+        }
+    });
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -24,11 +45,11 @@ function SelectCondition(obj, name) {
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("QY,JYHY,ZJ,MJ");
-    if (GetNavCondition() === "出租")
-        condition +=  ",ZJ:" + GetCondition("ZJ");
-    else
-        condition +=  ",SJ:" + GetCondition("SJ");
+    var condition = GetAllCondition("QY,JYHY,MJ");
+    if (GetNavCondition() === "出租" && GetCondition("ZJ") !== "")
+        condition += ",ZJ:" + GetCondition("ZJ");
+    if (GetNavCondition() === "出售" && GetCondition("SJ") !== "")
+        condition += ",SJ:" + GetCondition("SJ");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/FCCX/LoadFCXX",

@@ -14,7 +14,9 @@
 
 .em_split {width: 900px;height: 1px;float: left;background: #cccccc;}
 
-.div_row {width: 900px;height: auto;text-align: left;padding-top: 2px;font-size: 15px;margin-left: 10px;margin-bottom: 20px;position: relative;display: block;}
+.div_row {width: 900px;height: 60px;text-align: left;padding-top: 2px;font-size: 15px;margin-left: 10px;margin-bottom: 20px;position: relative;display: block;}
+
+.div_row_zp{width: 900px;height: auto;text-align: left;padding-top: 2px;font-size: 15px;margin-left: 10px;margin-bottom: 20px;position: relative;display: block;}
 
 .div_row_left {color: black;text-align: right;margin-left: 100px;display: inline;font-size: 14px;}
 
