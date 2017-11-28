@@ -173,7 +173,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
         {
             try
             {
-                IList<DISTRICT> districts = DAO.Repository.GetObjectList<DISTRICT>(String.Format("FROM DISTRICT WHERE SUPERCODE like '%{0}%' AND NAME != '市辖区' ORDER BY CODE", XZQDM));
+                IList<CODES_DISTRICT> districts = DAO.Repository.GetObjectList<CODES_DISTRICT>(String.Format("FROM CODES_DISTRICT WHERE SUPERCODE like '%{0}%' AND NAME != '市辖区' ORDER BY CODE", XZQDM));
                 if (TBName == "CODES_FC")
                     return new { Result = EnResultType.Success, districts, list = DAO.Repository.GetObjectList<CODES_FC>(String.Format("FROM CODES_FC WHERE TYPENAME in({0}) ORDER BY TYPENAME,CODEORDER", TYPENAMES)) };
                 if (TBName == "CODES_ES_SJSM")
@@ -238,7 +238,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
         {
             try
             {
-                IList<DISTRICT> list = DAO.Repository.GetObjectList<DISTRICT>(String.Format("FROM DISTRICT WHERE SUPERNAME like '%{0}%' and NAME != '市辖区' ORDER BY CODE", SUPERNAME));
+                IList<CODES_DISTRICT> list = DAO.Repository.GetObjectList<CODES_DISTRICT>(String.Format("FROM CODES_DISTRICT WHERE SUPERNAME like '%{0}%' and NAME != '市辖区' ORDER BY CODE", SUPERNAME));
                 return new { Result = EnResultType.Success, list = list };
             }
             catch (Exception ex)
@@ -253,7 +253,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
         {
             try
             {
-                IList<DISTRICT> list = DAO.Repository.GetObjectList<DISTRICT>(String.Format("FROM DISTRICT WHERE SUPERCODE like '%{0}%' ORDER BY CODE", SUPERCODE));
+                IList<CODES_DISTRICT> list = DAO.Repository.GetObjectList<CODES_DISTRICT>(String.Format("FROM CODES_DISTRICT WHERE SUPERCODE like '%{0}%' ORDER BY CODE", SUPERCODE));
                 return new { Result = EnResultType.Success, list = list };
             }
             catch (Exception ex)

@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Text;
-using Microsoft.SqlServer.Server;
 using TianWen.Framework.Log;
 using TianWen.XiaoZhen1Qu.Entities.Models;
 using TianWen.XiaoZhen1Qu.Interface;
@@ -44,7 +42,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
         {
             try
             {
-                List<DISTRICT> districts = DAO.GetObjectList<DISTRICT>(string.Format("FROM DISTRICT WHERE GRADE = '{0}' ORDER BY CODE", Grade)).ToList();
+                List<CODES_DISTRICT> districts = DAO.GetObjectList<CODES_DISTRICT>(string.Format("FROM CODES_DISTRICT WHERE GRADE = '{0}' ORDER BY CODE", Grade)).ToList();
                 return new { Result = EnResultType.Success, list = districts };
             }
             catch (Exception ex)
@@ -63,7 +61,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
         {
             try
             {
-                List<DISTRICT> districts = DAO.GetObjectList<DISTRICT>(string.Format("FROM DISTRICT WHERE ShortName = '{0}' ORDER BY CODE", ShortName)).ToList();
+                List<CODES_DISTRICT> districts = DAO.GetObjectList<CODES_DISTRICT>(string.Format("FROM CODES_DISTRICT WHERE ShortName = '{0}' ORDER BY CODE", ShortName)).ToList();
                 return new { Result = EnResultType.Success, list = districts };
             }
             catch (Exception ex)
@@ -82,7 +80,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
         {
             try
             {
-                List<DISTRICT> districts = DAO.GetObjectList<DISTRICT>(string.Format("FROM DISTRICT WHERE SUPERCODE = '{0}' AND NAME != '市辖区' ORDER BY CODE", SuperCode)).ToList();
+                List<CODES_DISTRICT> districts = DAO.GetObjectList<CODES_DISTRICT>(string.Format("FROM CODES_DISTRICT WHERE SUPERCODE = '{0}' AND NAME != '市辖区' ORDER BY CODE", SuperCode)).ToList();
                 return new { Result = EnResultType.Success, list = districts };
             }
             catch (Exception ex)
@@ -101,7 +99,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
         {
             try
             {
-                List<DISTRICT> districts = DAO.GetObjectList<DISTRICT>(string.Format("FROM DISTRICT WHERE SuperCode = '{0}' ORDER BY CODE", XZQDM.Substring(0,2) + "0000")).ToList();
+                List<CODES_DISTRICT> districts = DAO.GetObjectList<CODES_DISTRICT>(string.Format("FROM CODES_DISTRICT WHERE SuperCode = '{0}' ORDER BY CODE", XZQDM.Substring(0, 2) + "0000")).ToList();
                 return new { Result = EnResultType.Success, list = districts };
             }
             catch (Exception ex)
