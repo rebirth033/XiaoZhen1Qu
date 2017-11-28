@@ -6,8 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadCLCondition() {
-    LoadConditionByTypeName("客车品牌", "CODES_CL", "品牌", "PP",15);
-    LoadConditionByTypeName("客车价格", "CODES_CL", "价格", "JG");
+    LoadConditionByTypeNames("'客车品牌','客车价格'", "CODES_CL", "品牌,价格", "PP,JG","15,15");
     LoadBody("CLXX_KC", currentIndex);
 }
 //选择条件

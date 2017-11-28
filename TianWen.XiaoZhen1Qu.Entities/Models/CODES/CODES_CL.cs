@@ -40,5 +40,11 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         [Property]
         public virtual int PARENTID { get; set; }
 
+        /// <summary>
+        /// 是否热门
+        /// </summary>
+        [Property]
+        public virtual string ISHOT { get; set; }
+
     }
 }

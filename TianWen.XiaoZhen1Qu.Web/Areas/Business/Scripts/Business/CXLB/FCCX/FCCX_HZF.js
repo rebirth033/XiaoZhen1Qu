@@ -7,7 +7,7 @@ $(document).ready(function () {
 });
 //加载房产查询条件
 function LoadFCCondition() {
-    LoadConditionByTypeNames("'整租房租金','出租间类型'", "CODES_FC", "租金,类型", "ZJ,CZJLX");
+    LoadConditionByTypeNames("'整租房租金','出租间类型'", "CODES_FC", "租金,类型", "ZJ,CZJLX", "15,15");
     LoadBody("FCXX_HZF", currentIndex);
 }
 //选择条件

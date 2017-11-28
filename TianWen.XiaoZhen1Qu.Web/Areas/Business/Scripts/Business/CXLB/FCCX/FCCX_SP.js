@@ -10,13 +10,13 @@ $(document).ready(function () {
 //加载出租查询条件
 function LoadCZCondition() {
     RemoveCondition("QY,ZJ,SJ,MJ");
-    LoadConditionByTypeNames("'经营行业','商铺租金','商铺面积'", "CODES_FC", "经营行业,租金,面积", "JYHY,ZJ,MJ");
+    LoadConditionByTypeNames("'经营行业','商铺租金','商铺面积'", "CODES_FC", "经营行业,租金,面积", "JYHY,ZJ,MJ", "15,15,15");
     LoadBody("FCXX_SP", currentIndex);
 }
 //加载出售查询条件
 function LoadCSCondition() {
     RemoveCondition("QY,ZJ,SJ,MJ");
-    LoadConditionByTypeNames("'经营行业','商铺售价','商铺面积'", "CODES_FC", "经营行业,售价,面积", "JYHY,SJ,MJ");
+    LoadConditionByTypeNames("'经营行业','商铺售价','商铺面积'", "CODES_FC", "经营行业,售价,面积", "JYHY,SJ,MJ", "15,15,15");
     LoadBody("FCXX_SP", currentIndex);
 }
 //绑定查询条件导航

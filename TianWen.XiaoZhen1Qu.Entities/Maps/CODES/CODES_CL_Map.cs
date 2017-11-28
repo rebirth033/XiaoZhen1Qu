@@ -15,6 +15,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Maps
             Map(x => x.CODEVALUE, "CODEVALUE");
             Map(x => x.CODEORDER, "CODEORDER");
             Map(x => x.PARENTID, "PARENTID");
+            Map(x => x.ISHOT, "ISHOT");
             #endregion
 
             #region OneToMany

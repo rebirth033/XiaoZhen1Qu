@@ -6,13 +6,13 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadCLCondition() {
-    LoadConditionByTypeNames("'轿车品牌','轿车价格'", "CODES_CL", "品牌,价格", "PP,JG");
+    LoadConditionByTypeNames("'轿车品牌','轿车价格'", "CODES_CL", "品牌,价格", "PP,JG", "15,15");
     LoadBody("CLXX_JC", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
     if (name === "品牌") {
-        LoadConditionByParentID(obj.id, "CODES_CL_JC", "车系", "CX");
+        LoadConditionByParentID(obj.id, "CODES_CL_JC", "车系", "CX", 10);
     }
     $(obj).parent().find(".li_condition_body").each(function () {
         $(this).removeClass("li_condition_body_active");

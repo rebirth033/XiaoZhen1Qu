@@ -6,10 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadCLCondition() {
-    LoadConditionByTypeName("摩托车品牌", "CODES_CL", "品牌", "PP");
-    LoadConditionByTypeName("摩托车车型", "CODES_CL", "车型", "CX");
-    LoadConditionByTypeName("摩托车价格", "CODES_CL", "价格", "JG");
-    LoadDistrict("福州", "350100", "QY");
+    LoadConditionByTypeNames("'摩托车品牌','摩托车车型','摩托车价格'", "CODES_CL", "品牌,车型,价格", "PP,CX,JG", "15,15,15");
     LoadBody("CLXX_MTC", currentIndex);
 }
 //选择条件
@@ -50,7 +47,7 @@ function LoadBody(TYPE, PageIndex) {
         }
     });
 }
-//加载车辆_摩托车单条信息
+//加载单条信息
 function LoadCL_JCInfo(obj) {
     var html = "";
     html += ('<li class="li_body_left">');
@@ -60,7 +57,7 @@ function LoadCL_JCInfo(obj) {
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
     html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'CLXX_MTC\',\'' + obj.ID + '\')">' + TruncStr(obj.BT, 35) + '</p>');
-    html += ('<p class="p_li_body_left_center_cs font_size16">' + obj.LB + ' / ' + obj.GCSJ + ' / ' + obj.XSLC + obj.GLS + '万公里' + ' / ' + obj.QY + '</p>');
+    html += ('<p class="p_li_body_left_center_cs font_size16">' + obj.CX + ' / ' + obj.GCSJ + ' / ' + obj.XSLC + obj.GLS + '万公里' + ' / ' + obj.QY + '</p>');
     html += ('<p class="p_li_body_left_center_dz font_size16">' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');

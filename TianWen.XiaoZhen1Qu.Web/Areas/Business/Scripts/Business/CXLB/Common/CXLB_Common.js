@@ -190,12 +190,12 @@ function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
                 for (var i = 0; i < typelist.length; i++) {
                     for (var j = 0; j < namelist.length; j++) {
                         if (typelist[i].indexOf(namelist[j]) !== -1) {
-                            LoadCondition(_.filter(xml.list, function (value) { return typelist[i].indexOf(value.TYPENAME) !== -1; }), namelist[j], ids.split(',')[j]);
+                            LoadCondition(_.filter(xml.list, function (value) { return typelist[i].indexOf(value.TYPENAME) !== -1; }), namelist[j], ids.split(',')[j], lengths.split(',')[j]);
                         }
                     }
                 }
-
-
+                if (typenames.indexOf("轿车品牌") !== -1)
+                    LoadCondition(xml.jclist, "品牌", "PP", 15);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

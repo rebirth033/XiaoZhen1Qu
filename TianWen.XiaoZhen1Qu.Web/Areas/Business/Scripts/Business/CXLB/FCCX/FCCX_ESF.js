@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载房产查询条件
 function LoadFCCondition() {
-    LoadConditionByTypeNames("'二手房售价','二手房面积','厅室'", "CODES_FC", "售价,面积,厅室", "SJ,PFM,S");
+    LoadConditionByTypeNames("'二手房售价','二手房面积','厅室'", "CODES_FC", "售价,面积,厅室", "SJ,PFM,S", "15,15,15");
     LoadBody("FCXX_ESF", currentIndex);
 }
 //选择条件

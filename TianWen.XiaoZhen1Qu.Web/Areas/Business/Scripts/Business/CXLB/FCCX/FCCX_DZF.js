@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载房产查询条件
 function LoadFCCondition() {
-    LoadConditionByTypeNames("'短租房类型','短租房租金','出租方式'", "CODES_FC", "类型,租金,出租方式", "FWLX,ZJ,CZFS");
+    LoadConditionByTypeNames("'短租房类型','短租房租金','出租方式'", "CODES_FC", "类型,租金,出租方式", "FWLX,ZJ,CZFS", "15,15,15");
     LoadBody("FCXX_DZF", currentIndex);
 }
 //选择条件

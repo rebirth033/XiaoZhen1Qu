@@ -9,13 +9,13 @@ $(document).ready(function () {
 //加载出租查询条件
 function LoadCZCondition() {
     RemoveCondition("QY,ZJ,SJ,MJ");
-    LoadConditionByTypeNames("'土地租金','仓库面积'", "CODES_FC", "租金,面积", "ZJ,MJ");
+    LoadConditionByTypeNames("'土地租金','仓库面积'", "CODES_FC", "租金,面积", "ZJ,MJ", "15,15");
     LoadBody("FCXX_CK", currentIndex);
 }
 //加载出售查询条件
 function LoadCSCondition() {
     RemoveCondition("QY,ZJ,SJ,MJ");
-    LoadConditionByTypeNames("'土地售价','仓库面积'", "CODES_FC", "售价,面积", "ZJ,MJ");
+    LoadConditionByTypeNames("'土地售价','仓库面积'", "CODES_FC", "售价,面积", "ZJ,MJ", "15,15");
     LoadBody("FCXX_CK", currentIndex);
 }
 //绑定查询条件导航
