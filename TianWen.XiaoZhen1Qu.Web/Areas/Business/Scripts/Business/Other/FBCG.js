@@ -2,6 +2,7 @@
     $("#spanWCFB").css("color", "#5bc0de");
     $("#emWCFB").css("background", "#5bc0de");
     $("#btnGLXX").bind("click", ToHTGL);
+    $("#title").html("信息小镇_发布信息_发布成功");
     GenerateQRCode();
 });
 

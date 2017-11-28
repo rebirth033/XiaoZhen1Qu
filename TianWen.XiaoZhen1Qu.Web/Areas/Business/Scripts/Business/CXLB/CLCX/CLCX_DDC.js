@@ -6,12 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadCLCondition() {
-    LoadConditionByTypeName("电动车车型", "CODES_CL", "车型", "CX");
-    LoadConditionByTypeName("电动车品牌", "CODES_CL", "品牌", "PP");
-    LoadConditionByTypeName("电动车价格", "CODES_CL", "价格", "JG");
-    LoadConditionByTypeName("电动车电池电压", "CODES_CL", "电池电压", "DCDY");
-    LoadConditionByTypeName("电动车电池容量", "CODES_CL", "电池容量", "DCRL");
-    LoadDistrict("福州", "350100", "QY");
+    LoadConditionByTypeNames("'电动车品牌','电动车车型','电动车价格','电动车电池电压','电动车电池容量'", "CODES_CL", "品牌,车型,价格,电池电压,电池容量", "PP,CX,JG,DCDY,DCRL", "15,15,15,15,15");
     LoadBody("CLXX_DDC", currentIndex);
 }
 //选择条件
@@ -26,7 +21,7 @@ function SelectCondition(obj, name) {
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("CX,PP,JG,DCDY,DCRL,QY");
+    var condition = GetAllCondition("PP,CX,JG,DCDY,DCRL,QY");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/CLCX/LoadCLXX",
@@ -52,7 +47,7 @@ function LoadBody(TYPE, PageIndex) {
         }
     });
 }
-//加载车辆_摩托车单条信息
+//加载单条信息
 function LoadCL_JCInfo(obj) {
     var html = "";
     html += ('<li class="li_body_left">');
@@ -62,7 +57,7 @@ function LoadCL_JCInfo(obj) {
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
     html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'CLXX_DDC\',\'' + obj.ID + '\')">' + TruncStr(obj.BT, 35) + '</p>');
-    html += ('<p class="p_li_body_left_center_cs font_size16">' + obj.LB + ' / ' + obj.SYNX + '年 / ' + obj.XJ + ' / ' + obj.QY + '-' + obj.DD + '</p>');
+    html += ('<p class="p_li_body_left_center_cs font_size16">' + obj.CX + ' / ' + obj.SYNX + '年 / ' + obj.XJ + ' / ' + obj.QY + '-' + obj.DD + '</p>');
     html += ('<p class="p_li_body_left_center_dz font_size16">' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');

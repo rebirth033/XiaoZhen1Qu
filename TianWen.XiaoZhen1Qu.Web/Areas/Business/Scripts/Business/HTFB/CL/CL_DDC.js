@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
     LoadCL_DDCJBXX();
-    BindClick("LB");
+    BindClick("CX");
     BindClick("PP");
     BindClick("DCDY");
     BindClick("DCRL");
@@ -10,7 +10,7 @@
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
+        if (type === "CX") {
             LoadCODESByTYPENAME("电动车车型", "CX", "CODES_CL", Bind, "DDCCX", "CX", "");
         }
         if (type === "PP") {
@@ -50,7 +50,7 @@ function LoadCL_DDCJBXX() {
                 $("#ID").val(xml.Value.CL_DDCJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () { ue.setHeight(200); ue.setContent(xml.Value.BCMSString); });
-                $("#spanLB").html(xml.Value.CL_DDCJBXX.LB);
+                $("#spanCX").html(xml.Value.CL_DDCJBXX.CX);
                 $("#spanPP").html(xml.Value.CL_DDCJBXX.PP);
                 $("#spanXJ").html(xml.Value.CL_DDCJBXX.XJ);
                 $("#spanQY").html(xml.Value.CL_DDCJBXX.QY);
@@ -73,7 +73,7 @@ function FB() {
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
-    obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
+    obj = jsonObj.AddJson(obj, "CX", "'" + $("#spanCX").html() + "'");
     obj = jsonObj.AddJson(obj, "PP", "'" + $("#spanPP").html() + "'");
     obj = jsonObj.AddJson(obj, "XJ", "'" + $("#spanXJ").html() + "'");
     obj = jsonObj.AddJson(obj, "DCDY", "'" + $("#spanDCDY").html() + "'");

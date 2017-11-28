@@ -78,15 +78,7 @@ function LoadJBXX(obj) {
     $("#div_body_left").append(html);
     HandlerTPXX();
 }
-//处理图片信息
-function HandlerTPXX() {
-    $(".div_img_body_left_body_left_list_tp:eq(0)").each(function () { $(this).css("background-color", "rgba(0,0,0,0)") });
-    $(".li_body_left_body_left_list_tp").bind("click", function () {
-        $("#img_body_left_body_left_show").attr("src", $(this).find("img")[0].src);
-        $(".div_img_body_left_body_left_list_tp").css("background-color", "rgba(0,0,0,0.5)");
-        $(this).find(".div_img_body_left_body_left_list_tp").css("background-color", "rgba(0,0,0,0)");
-    });
-}
+
 var right = 0;
 //图片左侧切换
 function LeftImg() {

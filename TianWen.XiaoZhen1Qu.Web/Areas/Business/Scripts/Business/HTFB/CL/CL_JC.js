@@ -80,9 +80,9 @@ function BindClick(type) {
         }
         if (type.indexOf("NF") !== -1) {
             if (type === "SPNF")
-                LoadCODESByTYPENAME("出厂年限", type, "CODES_CL", Bind, "SCSPSJ", "SPNF", "");
+                LoadCODESByTYPENAME("出厂年份", type, "CODES_CL", Bind, "SCSPSJ", "SPNF", "");
             else
-                LoadCODESByTYPENAME("出厂年限", type, "CODES_CL");
+                LoadCODESByTYPENAME("到期年份", type, "CODES_CL");
         }
         if (type.indexOf("YF") !== -1) {
             if (type === "SPYF")
