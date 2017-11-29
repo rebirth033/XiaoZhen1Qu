@@ -267,7 +267,7 @@ function LoadDistrictCondition(array, type) {
     html += '<li class="li_condition_body_first">区域</li>';
     html += '<li class="li_condition_body li_condition_body_active" onclick="SelectCondition(this)">全部</li>';
     for (var i = 0; i < array.length; i++) {
-        html += '<li class="li_condition_body" onclick="SelectCondition(this)">' + RTrimStr(RTrimStr(RTrimStr(array[i].NAME, '区'), '县'), '市') + '</li>';
+        html += '<li class="li_condition_body" onclick="SelectCondition(this)">' + array[i].CODENAME + '</li>';
     }
     html += '</ul>';
     $("#div_condition_body_" + type).append(html);

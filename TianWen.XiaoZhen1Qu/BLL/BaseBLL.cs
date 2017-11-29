@@ -173,7 +173,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
         {
             try
             {
-                IList<CODES_DISTRICT> districts = DAO.Repository.GetObjectList<CODES_DISTRICT>(String.Format("FROM CODES_DISTRICT WHERE SUPERCODE like '%{0}%' AND NAME != '市辖区' ORDER BY CODE", XZQDM));
+                IList<CODES_DISTRICT> districts = DAO.Repository.GetObjectList<CODES_DISTRICT>(String.Format("FROM CODES_DISTRICT WHERE PARENTID = '{0}' ORDER BY CODEORDER", XZQDM));
                 if (TBName == "CODES_FC")
                     return new { Result = EnResultType.Success, districts, list = DAO.Repository.GetObjectList<CODES_FC>(String.Format("FROM CODES_FC WHERE TYPENAME in({0}) ORDER BY TYPENAME,CODEORDER", TYPENAMES)) };
                 if (TBName == "CODES_ES_SJSM")
