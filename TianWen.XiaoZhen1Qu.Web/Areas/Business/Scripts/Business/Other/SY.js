@@ -9,6 +9,10 @@ $(document).ready(function () {
     $("#li_head_sy").css("background", "#5bc0de").css("color", "#ffffff");
     LoadDefault();
 });
+//发布信息
+function FBXX() {
+    window.open(getRootPath() + "/Business/LBXZ/LBXZ");
+}
 //加载默认
 function LoadDefault() {
     LoadSY_ML();

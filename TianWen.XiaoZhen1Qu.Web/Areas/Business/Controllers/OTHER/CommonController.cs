@@ -66,12 +66,12 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         //加载区域
         public JsonResult LoadQY()
         {
-            return Json(CommonBLL.LoadQYBySuperName(Session["XZQ"].ToString()));
+            return Json(CommonBLL.LoadQYBySuperName(Session["XZQDM"].ToString()));
         }
         //加载商圈
-        public JsonResult LoadSQ()
+        public JsonResult LoadDD()
         {
-            return Json(CommonBLL.LoadSQByQY(Request["QY"]));
+            return Json(CommonBLL.LoadDDByQY(Request["QY"]));
         }
         //加载职位类别信息
         public JsonResult LoadZWLBXX()

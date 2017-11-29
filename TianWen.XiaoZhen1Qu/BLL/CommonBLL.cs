@@ -42,7 +42,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
         {
             try
             {
-                List<CODES_DISTRICT> districts = DAO.GetObjectList<CODES_DISTRICT>(string.Format("FROM CODES_DISTRICT WHERE GRADE = '{0}' ORDER BY CODE", Grade)).ToList();
+                List<CODES_DISTRICT> districts = DAO.GetObjectList<CODES_DISTRICT>(string.Format("FROM CODES_DISTRICT WHERE TYPENAME = '{0}' ORDER BY CODEORDER", Grade)).ToList();
                 return new { Result = EnResultType.Success, list = districts };
             }
             catch (Exception ex)
@@ -80,7 +80,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
         {
             try
             {
-                List<CODES_DISTRICT> districts = DAO.GetObjectList<CODES_DISTRICT>(string.Format("FROM CODES_DISTRICT WHERE SUPERCODE = '{0}' AND NAME != '市辖区' ORDER BY CODE", SuperCode)).ToList();
+                List<CODES_DISTRICT> districts = DAO.GetObjectList<CODES_DISTRICT>(string.Format("FROM CODES_DISTRICT WHERE PARENTID = '{0}' ORDER BY CODEORDER", SuperCode)).ToList();
                 return new { Result = EnResultType.Success, list = districts };
             }
             catch (Exception ex)
@@ -99,7 +99,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
         {
             try
             {
-                List<CODES_DISTRICT> districts = DAO.GetObjectList<CODES_DISTRICT>(string.Format("FROM CODES_DISTRICT WHERE SuperCode = '{0}' ORDER BY CODE", XZQDM.Substring(0, 2) + "0000")).ToList();
+                List<CODES_DISTRICT> districts = DAO.GetObjectList<CODES_DISTRICT>(string.Format("FROM CODES_DISTRICT WHERE PARENTID = '{0}' ORDER BY CODEORDER", XZQDM.Substring(0, 2) + "0000")).ToList();
                 return new { Result = EnResultType.Success, list = districts };
             }
             catch (Exception ex)

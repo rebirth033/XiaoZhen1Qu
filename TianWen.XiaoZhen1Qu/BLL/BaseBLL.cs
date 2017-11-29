@@ -234,11 +234,11 @@ namespace TianWen.XiaoZhen1Qu.BLL
         }
 
         //根据SUPERNAME获取行政区
-        public object LoadQYBySuperName(string SUPERNAME)
+        public object LoadQYBySuperName(string PARENTID)
         {
             try
             {
-                IList<CODES_DISTRICT> list = DAO.Repository.GetObjectList<CODES_DISTRICT>(String.Format("FROM CODES_DISTRICT WHERE SUPERNAME like '%{0}%' and NAME != '市辖区' ORDER BY CODE", SUPERNAME));
+                IList<CODES_DISTRICT> list = DAO.Repository.GetObjectList<CODES_DISTRICT>(String.Format("FROM CODES_DISTRICT WHERE PARENTID = '{0}' ORDER BY CODEORDER", PARENTID));
                 return new { Result = EnResultType.Success, list = list };
             }
             catch (Exception ex)
@@ -249,11 +249,11 @@ namespace TianWen.XiaoZhen1Qu.BLL
         }
 
         //根据SUPERCODE获取行政区
-        public object LoadSQByQY(string SUPERCODE)
+        public object LoadDDByQY(string SUPERCODE)
         {
             try
             {
-                IList<CODES_DISTRICT> list = DAO.Repository.GetObjectList<CODES_DISTRICT>(String.Format("FROM CODES_DISTRICT WHERE SUPERCODE like '%{0}%' ORDER BY CODE", SUPERCODE));
+                IList<CODES_DISTRICT> list = DAO.Repository.GetObjectList<CODES_DISTRICT>(String.Format("FROM CODES_DISTRICT WHERE PARENTID = '{0}' ORDER BY CODEORDER", SUPERCODE));
                 return new { Result = EnResultType.Success, list = list };
             }
             catch (Exception ex)

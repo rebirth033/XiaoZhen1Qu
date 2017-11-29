@@ -6,7 +6,7 @@ namespace TianWen.XiaoZhen1Qu.Interface
     {
         object LoadQYBySuperName(string SUPERNAME);
 
-        object LoadSQByQY(string QY);
+        object LoadDDByQY(string QY);
 
         string GetYHZHXXIDByYHID(string YHID);
 
