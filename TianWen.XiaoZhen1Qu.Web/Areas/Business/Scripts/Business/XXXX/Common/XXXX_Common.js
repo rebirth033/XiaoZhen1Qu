@@ -100,7 +100,7 @@ function ToggleImg(length) {
         $("#div_body_left_body_xq_xx").css("overflow", "visible").css("height", "auto");
         $("#div_body_left_body_xq_zk").html("收起更多图片 共（" + length + "）张");
     } else {
-        $("#div_body_left_body_xq_xx").css("overflow", "hidden").css("height", "530px");
+        $("#div_body_left_body_xq_xx").css("overflow", "hidden").css("height", "710px");
         $("#div_body_left_body_xq_zk").html("展开更多图片 共（" + length + "）张");
     }
 }

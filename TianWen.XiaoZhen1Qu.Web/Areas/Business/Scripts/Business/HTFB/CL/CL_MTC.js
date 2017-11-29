@@ -2,15 +2,15 @@
     $("#divXSQK").find(".div_radio").bind("click", GetXSQK);
     $("body").bind("click", function () { Close("_XZQ"); });
     LoadCL_MTCJBXX();
-    BindClick("LB");
+    BindClick("CX");
     BindClick("GCSJ");
     BindClick("PP");
 });
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadCODESByTYPENAME("摩托车", "LB", "CODES_CL", Bind, "MTCLB", "LB", "");
+        if (type === "CX") {
+            LoadCODESByTYPENAME("摩托车车型", "CX", "CODES_CL", Bind, "MTCLB", "CX", "");
         }
         if (type === "PP") {
             LoadCODESByTYPENAME("摩托车品牌", "PP", "CODES_CL", Bind, "MTCPP", "PP", "");

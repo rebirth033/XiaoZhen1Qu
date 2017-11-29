@@ -10,7 +10,7 @@
 function ValidateAll() {
     if (GetXSQK() !== "已行使") {
         if (ValidateRadio("GQ", "忘记选择供求啦")
-            & ValidateSelect("MTCLB", "LB", "忘记选择车型啦")
+            & ValidateSelect("MTCCX", "CX", "忘记选择车型啦")
             & ValidateSelect("MTCPP", "PP", "忘记选择品牌啦")
             & ValidateRadio("XSQK", "忘记选择行驶情况啦")
             & ValidateBCMS("BCMS", "忘记填写补充描述啦")
@@ -22,7 +22,7 @@ function ValidateAll() {
             return false;
     } else {
         if (ValidateRadio("GQ", "忘记选择供求啦")
-            & ValidateSelect("MTCLB", "LB", "忘记选择车型啦")
+            & ValidateSelect("MTCCX", "CX", "忘记选择车型啦")
             & ValidateSelect("MTCPP", "PP", "忘记选择品牌啦")
             & ValidateRadio("XSQK", "忘记选择行驶情况啦")
             & ValidateSelect("MTCGCSJ", "GCSJ", "忘记选择购车时间啦")
