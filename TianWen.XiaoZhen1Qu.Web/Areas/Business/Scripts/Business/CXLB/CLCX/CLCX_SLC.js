@@ -38,7 +38,7 @@ function LoadBody(TYPE, PageIndex) {
                 $("#ul_body_left").html('');
                 LoadPage(TYPE, xml.PageCount);
                 for (var i = 0; i < xml.list.length; i++) {
-                    LoadCL_JCInfo(xml.list[i]);
+                    LoadCL_SLCInfo(xml.list[i]);
                 }
             }
         },
@@ -47,8 +47,8 @@ function LoadBody(TYPE, PageIndex) {
         }
     });
 }
-//加载车辆_摩托车单条信息
-function LoadCL_JCInfo(obj) {
+//加载单条信息
+function LoadCL_SLCInfo(obj) {
     var html = "";
     html += ('<li class="li_body_left">');
     html += ('<div class="div_li_body_left_left">');
@@ -70,7 +70,7 @@ function LoadCL_JCInfo(obj) {
 function LoadHot(TYPE) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FCCX/LoadFCXX",
+        url: getRootPath() + "/Business/CLCX/LoadCLXX",
         dataType: "json",
         data:
         {
@@ -98,7 +98,7 @@ function LoadHotInfo(obj) {
     html += ('<li onclick="OpenXXXX(\'CLXX_SLC\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_right_xq">' + obj.QY + ' / ' + obj.DD  + '</p>');
-    html += ('<p class="p_li_body_right_cs">' + obj.LB + '</p>');
+    html += ('<p class="p_li_body_right_cs">' + obj.CX + '</p>');
     html += ('<p class="p_li_body_right_jg">' + obj.JG + '元</p>');
     html += ('</li>');
     $("#ul_body_right").append(html);

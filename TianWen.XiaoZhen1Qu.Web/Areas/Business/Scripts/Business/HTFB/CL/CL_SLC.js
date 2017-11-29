@@ -7,8 +7,8 @@
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadCODESByTYPENAME("三轮车", "CX", "CODES_CL", Bind, "SLCCX", "CX", "");
+        if (type === "CX") {
+            LoadCODESByTYPENAME("三轮车车型", "CX", "CODES_CL", Bind, "SLCCX", "CX", "");
         }
         if (type === "XJ") {
             LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM", Bind, "XJCD", "XJ", "");
@@ -20,7 +20,7 @@ function SelectLB(obj, type) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
 }
-//加载车辆_三轮车基本信息
+//加载基本信息
 function LoadCL_SLCJBXX() {
     $.ajax({
         type: "POST",
@@ -41,7 +41,7 @@ function LoadCL_SLCJBXX() {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.BCMSString);
                 });
-                $("#spanLB").html(xml.Value.CL_SLCJBXX.LB);
+                $("#spanCX").html(xml.Value.CL_SLCJBXX.CX);
                 $("#spanXJ").html(xml.Value.CL_SLCJBXX.XJ);
                 $("#spanQY").html(xml.Value.CL_SLCJBXX.QY);
                 $("#spanDD").html(xml.Value.CL_SLCJBXX.DD);
@@ -61,7 +61,7 @@ function FB() {
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
-    obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
+    obj = jsonObj.AddJson(obj, "CX", "'" + $("#spanCX").html() + "'");
     obj = jsonObj.AddJson(obj, "XJ", "'" + $("#spanXJ").html() + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");

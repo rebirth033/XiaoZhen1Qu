@@ -202,7 +202,7 @@ function LoadJPTJInfo(obj) {
     html += ('</li>');
     return html;
 }
-//加载该经纪人推荐房源
+//加载该经纪人推荐
 function LoadJJRTJFY(TYPE) {
     $.ajax({
         type: "POST",
@@ -219,7 +219,7 @@ function LoadJJRTJFY(TYPE) {
             if (xml.Result === 1) {
                 var html = "";
                 html += ('<div class="div_body_right_jjrtj">');
-                html += ('<p class="p_body_right_jjrtj">该经纪人推荐房源</p>');
+                html += ('<p class="p_body_right_jjrtj">该经纪人推荐</p>');
                 html += ('<ul id="ul_body_right_jjrtj" class="ul_body_right_jjrtj">');
                 for (var i = 0; i < xml.list.length; i++) {
                     html += LoadJJRTJFYInfo(xml.list[i]);
@@ -237,7 +237,7 @@ function LoadJJRTJFY(TYPE) {
         }
     });
 }
-//加载该经纪人推荐房源单条信息
+//加载该经纪人推荐单条信息
 function LoadJJRTJFYInfo(obj) {
     var html = "";
     html += ('<li onclick="OpenXXXX(\'CLXX_GCC\',\'' + obj.ID + '\')" class="li_body_right_jjrtj">');
