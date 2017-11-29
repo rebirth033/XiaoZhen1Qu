@@ -73,7 +73,7 @@ function LoadCL_JCInfo(obj) {
 function LoadHot(TYPE) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FCCX/LoadFCXX",
+        url: getRootPath() + "/Business/CLCX/LoadCLXX",
         dataType: "json",
         data:
         {
@@ -100,8 +100,8 @@ function LoadHotInfo(obj) {
     var html = "";
     html += ('<li onclick="OpenXXXX(\'CLXX_JC\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_right_xq">' + obj.QY + ' / ' + obj.DD + ' / ' + obj.JTDZ + '</p>');
-    html += ('<p class="p_li_body_right_cs">' + obj.MJ + '平</p>');
+    html += ('<p class="p_li_body_right_xq">' + obj.SPNF + '年 / ' + '2.0升' + ' / ' + '自动' + '</p>');
+    html += ('<p class="p_li_body_right_cs">' + obj.XSLC + '万公里</p>');
     html += ('<p class="p_li_body_right_jg">' + obj.JG + '万元</p>');
     html += ('</li>');
     $("#ul_body_right").append(html);
