@@ -6,11 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadCLCondition() {
-    LoadConditionByTypeName("自行车车型", "CODES_CL", "车型", "CX");
-    LoadConditionByTypeName("自行车品牌", "CODES_CL", "品牌", "PP");
-    LoadConditionByTypeName("自行车尺寸", "CODES_CL", "尺寸", "CC");
-    LoadConditionByTypeName("电动车价格", "CODES_CL", "价格", "JG");
-    LoadDistrict("福州", "350100", "QY");
+    LoadConditionByTypeNames("'自行车车型','自行车品牌','自行车尺寸','电动车价格'", "CODES_CL", "车型,品牌,尺寸,价格", "CX,PP,CC,JG", "15,15,15,15");
     LoadBody("CLXX_ZXC", currentIndex);
 }
 //选择条件
@@ -61,7 +57,7 @@ function LoadCL_JCInfo(obj) {
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
     html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'CLXX_ZXC\',\'' + obj.ID + '\')">' + TruncStr(obj.BT, 35) + '</p>');
-    html += ('<p class="p_li_body_left_center_cs font_size16">' + obj.XJ + ' / ' + obj.CC + ' / ' + obj.PP + ' / ' + obj.QY + '-' + obj.DD + '</p>');
+    html += (obj.BCMSString);
     html += ('<p class="p_li_body_left_center_dz font_size16">' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
@@ -74,7 +70,7 @@ function LoadCL_JCInfo(obj) {
 function LoadHot(TYPE) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FCCX/LoadFCXX",
+        url: getRootPath() + "/Business/CLCX/LoadCLXX",
         dataType: "json",
         data:
         {
@@ -102,7 +98,7 @@ function LoadHotInfo(obj) {
     html += ('<li onclick="OpenXXXX(\'CLXX_ZXC\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_right_xq">' + obj.QY + ' / ' + obj.DD + '</p>');
-    html += ('<p class="p_li_body_right_cs">' + obj.LB + '</p>');
+    html += ('<p class="p_li_body_right_cs">' + obj.XJ + '</p>');
     html += ('<p class="p_li_body_right_jg">' + obj.JG + '元</p>');
     html += ('</li>');
     $("#ul_body_right").append(html);

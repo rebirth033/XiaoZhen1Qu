@@ -6,9 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadCLCondition() {
-    LoadConditionByTypeName("三轮车车型", "CODES_CL", "车型", "CX");
-    LoadConditionByTypeName("电动车价格", "CODES_CL", "价格", "JG");
-    LoadDistrict("福州", "350100", "QY");
+    LoadConditionByTypeNames("'三轮车车型','电动车价格'", "CODES_CL", "车型,价格", "CX,JG", "15,15");
     LoadBody("CLXX_SLC", currentIndex);
 }
 //选择条件
@@ -59,7 +57,7 @@ function LoadCL_JCInfo(obj) {
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
     html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'CLXX_SLC\',\'' + obj.ID + '\')">' + TruncStr(obj.BT, 35) + '</p>');
-    html += ('<p class="p_li_body_left_center_cs font_size16">' + obj.LB + ' / ' + obj.XJ + ' / ' + obj.QY + '-' + obj.DD + '</p>');
+    html += ('<p class="p_li_body_left_center_cs font_size16">' + obj.CX + ' / ' + obj.XJ + ' / ' + obj.QY + '-' + obj.DD + '</p>');
     html += ('<p class="p_li_body_left_center_dz font_size16">' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');

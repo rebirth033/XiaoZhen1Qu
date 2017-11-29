@@ -1,25 +1,17 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
     LoadCL_SLCJBXX();
-    BindClick("LB");
+    BindClick("CX");
     BindClick("XJ");
-    BindClick("QY");
-    BindClick("DD");
 });
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("三轮车", "LB", "CODES_CL", Bind, "SLCLB", "LB", "");
+            LoadCODESByTYPENAME("三轮车", "CX", "CODES_CL", Bind, "SLCCX", "CX", "");
         }
         if (type === "XJ") {
             LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM", Bind, "XJCD", "XJ", "");
-        }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
         }
     });
 }

@@ -17,12 +17,13 @@ namespace TianWen.XiaoZhen1Qu.Entities.ViewModels.CL
         public string LXDH { get; set; }
         public DateTime ZXGXSJ { get; set; }
         public byte[] BCMS { get; set; }
+        public string BCMSString { get; set; }
         //车辆_自行车信息
         public string ID { get; set; }
         public string GQ { get; set; }
         public string QY { get; set; }
         public string DD { get; set; }
-        public string LB { get; set; }
+        public string CX { get; set; }
         public string JG { get; set; }
         public string PP { get; set; }
         public string CC { get; set; }
