@@ -6,9 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadCLCondition() {
-    LoadConditionByTypeName("货车车型", "CODES_CL", "车型", "LB");
-    LoadConditionByTypeName("货车品牌", "CODES_CL", "品牌", "PP");
-    LoadConditionByTypeName("客车价格", "CODES_CL", "价格", "JG");
+    LoadConditionByTypeNames("'货车车型','货车品牌','客车价格'", "CODES_CL", "车型,品牌,价格", "CX,PP,JG", "15,14,15");
     LoadBody("CLXX_HC", currentIndex);
 }
 //选择条件
@@ -75,7 +73,7 @@ function LoadCL_JCInfo(obj) {
 function LoadHot(TYPE) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FCCX/LoadFCXX",
+        url: getRootPath() + "/Business/CLCX/LoadCLXX",
         dataType: "json",
         data:
         {
@@ -102,8 +100,8 @@ function LoadHotInfo(obj) {
     var html = "";
     html += ('<li onclick="OpenXXXX(\'CLXX_HC\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_right_xq">' + obj.QY + ' / ' + obj.DD + ' / ' + obj.JTDZ + '</p>');
-    html += ('<p class="p_li_body_right_cs">' + obj.MJ + '平</p>');
+    html += ('<p class="p_li_body_right_xq">' + obj.LB + ' / ' + obj.CCNF + ' / ' + obj.EDZZ + '吨</p>');
+    html += ('<p class="p_li_body_right_cs">' + obj.XSLC + '万公里</p>');
     html += ('<p class="p_li_body_right_jg">' + obj.JG + '万元</p>');
     html += ('</li>');
     $("#ul_body_right").append(html);
