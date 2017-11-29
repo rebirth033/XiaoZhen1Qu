@@ -86,88 +86,49 @@ function LoadJBXX(obj) {
 }
 
 var right = 0;
-//图片左侧切换
-function LeftImg() {
-    if (right > 0) {
-        right -= 1;
-        $("#ul_body_left_body_left_list").css("transform", "translate3d(-" + right * 100 + "px, 0px, 0px)").css("transition-duration", "500ms");
-        $("#ul_body_left_body_left_list").find(".div_img_body_left_body_left_list_tp").css("background-color", "rgba(0,0,0,0.5)");
-        $("#ul_body_left_body_left_list").find(".li_body_left_body_left_list_tp:eq(" + right + ")").find(".div_img_body_left_body_left_list_tp").css("background-color", "rgba(0,0,0,0)");
-        $("#img_body_left_body_left_show").attr("src", $("#ul_body_left_body_left_list").find(".li_body_left_body_left_list_tp:eq(" + right + ")").find("img")[0].src);
-    }
-}
-//图片右侧切换
-function RightImg(length) {
-    if (right < length - 1) {
-        right += 1;
-        $("#ul_body_left_body_left_list").css("transform", "translate3d(-" + right * 100 + "px, 0px, 0px)").css("transition-duration", "500ms");
-        $("#ul_body_left_body_left_list").find(".div_img_body_left_body_left_list_tp").css("background-color", "rgba(0,0,0,0.5)");
-        $("#ul_body_left_body_left_list").find(".li_body_left_body_left_list_tp:eq(" + right + ")").find(".div_img_body_left_body_left_list_tp").css("background-color", "rgba(0,0,0,0)");
-        $("#img_body_left_body_left_show").attr("src", $("#ul_body_left_body_left_list").find(".li_body_left_body_left_list_tp:eq(" + right + ")").find("img")[0].src);
-    }
-}
-//伸缩图片
-function ToggleImg(length) {
-    if ($("#div_body_left_body_fyxq_zk").html().indexOf("展开") !== -1) {
-        $("#div_body_left_body_fyxq_xx").css("overflow", "visible").css("height", "auto");
-        $("#div_body_left_body_fyxq_zk").html("收起更多图片 共（" + length + "）张");
-    } else {
-        $("#div_body_left_body_fyxq_xx").css("overflow", "hidden").css("height", "530px");
-        $("#div_body_left_body_fyxq_zk").html("展开更多图片 共（" + length + "）张");
-    }
-}
+
 //加载详情
 function LoadXQ(obj, BCMSString) {
     var html = "";
-    html += ('<div class="div_body_left_body_fyxq">');
-    html += ('<p class="p_body_left_body_fyxq">写字楼详情</p>');
+    html += ('<div class="div_body_left_body_xq">');
+    html += ('<p class="p_body_left_body_xq">写字楼详情</p>');
     //if (obj.FWPZ !== null) {
     //    var fwpzarray = obj.FWPZ.split(',');
-    //html += ('<div class="div_body_left_body_fyxq_xx">');
-    //    html += ('<div class="div_body_left_body_fyxq_xx_left">房屋配置</div>');
-    //    html += ('<div class="div_body_left_body_fyxq_xx_right" style="width: 600px;">');
+    //html += ('<div class="div_body_left_body_xq_xx">');
+    //    html += ('<div class="div_body_left_body_xq_xx_left">房屋配置</div>');
+    //    html += ('<div class="div_body_left_body_xq_xx_right" style="width: 600px;">');
     //    for (var i = 0; i < fwpzarray.length; i++) {
     //        html += ('<span class="span_body_left_body_fyxq_xx_right">');
-    //        html += ('<img class="img_body_left_body_fyxq_xx_right" src="' + getRootPath() + '/Areas/Business/Css/images/xxxx/fc/xxxx_fc_' + fwpzarray[i] + '.png")" />');
-    //        html += ('<span class="span_img_body_left_body_fyxq_xx_right">' + fwpzarray[i] + '</span>');
+    //        html += ('<img class="img_body_left_body_xq_xx_right" src="' + getRootPath() + '/Areas/Business/Css/images/xxxx/fc/xxxx_fc_' + fwpzarray[i] + '.png")" />');
+    //        html += ('<span class="span_img_body_left_body_xq_xx_right">' + fwpzarray[i] + '</span>');
     //        html += ('</span>');
     //    }
     //    html += ('</div>');
     //    html += ('</div>');
     //}
 
-    html += ('<div class="div_body_left_body_fyxq_xx">');
-    html += ('<div class="div_body_left_body_fyxq_xx_left">房源描述</div>');
-    html += ('<div class="div_body_left_body_fyxq_xx_right fyms">');
+    html += ('<div class="div_body_left_body_xq_xx">');
+    html += ('<div class="div_body_left_body_xq_xx_left">房源描述</div>');
+    html += ('<div class="div_body_left_body_xq_xx_right fyms">');
     html += (BCMSString);
     html += ('</div>');
     html += ('</div>');
-    html += ('<div id="div_body_left_body_fyxq_xx" class="div_body_left_body_fyxq_xx" style="overflow:hidden;">');
-    html += ('<ul class="ul_body_left_body_fyxq_xx">');
+    html += ('<div id="div_body_left_body_xq_xx" class="div_body_left_body_xq_xx" style="overflow:hidden;">');
+    html += ('<ul class="ul_body_left_body_xq_xx">');
     for (var i = 0; i < obj.PHOTOS.length; i++) {
-        html += ('<li class="li_body_left_body_fyxq_xx">');
-        html += ('<img class="img_body_left_body_fyxq_xx" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[i].PHOTONAME + "?j=" + Math.random() + '" />');
+        html += ('<li class="li_body_left_body_xq_xx">');
+        html += ('<img class="img_body_left_body_xq_xx" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[i].PHOTONAME + "?j=" + Math.random() + '" />');
         html += ('</li>');
     }
     html += ('</ul>');
     html += ('</div>');
 
-    html += ('<div id="div_body_left_body_fyxq_zk" onclick="ToggleImg(' + obj.PHOTOS.length + ')" class="div_body_left_body_fyxq_zk">展开更多图片 共（' + obj.PHOTOS.length + '）张</div>');
+    html += ('<div id="div_body_left_body_xq_zk" onclick="ToggleImg(' + obj.PHOTOS.length + ')" class="div_body_left_body_xq_zk">展开更多图片 共（' + obj.PHOTOS.length + '）张</div>');
     html += ('</div>');
     $("#div_body_left").append(html);
     if (obj.PHOTOS.length > 4) {
-        $("#div_body_left_body_fyxq_xx").css("height", "530px");
-        $("#div_body_left_body_fyxq_zk").css("display", "block");
-    }
-}
-//伸缩图片
-function ToggleImg(length) {
-    if ($("#div_body_left_body_fyxq_zk").html().indexOf("展开") !== -1) {
-        $("#div_body_left_body_fyxq_xx").css("overflow", "visible").css("height", "auto");
-        $("#div_body_left_body_fyxq_zk").html("收起更多图片 共（" + length + "）张");
-    } else {
-        $("#div_body_left_body_fyxq_xx").css("overflow", "hidden").css("height", "530px");
-        $("#div_body_left_body_fyxq_zk").html("展开更多图片 共（" + length + "）张");
+        $("#div_body_left_body_xq_xx").css("height", "710px");
+        $("#div_body_left_body_xq_zk").css("display", "block");
     }
 }
 //加载信息

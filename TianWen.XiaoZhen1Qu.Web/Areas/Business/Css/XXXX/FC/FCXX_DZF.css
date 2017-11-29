@@ -31,21 +31,21 @@
 .div_body .div_body_left .div_body_left_body_right .p_body_left_body_right_lxdh{ border: 1px solid #ef6100;margin: 30px;padding: 16px 30px;width: 290px;height: 70px;font-size: 28px;color: #ef6100;}
 .div_body .div_body_left .div_body_left_body_right .p_body_left_body_right_lxdh .img_body_left_body_right_lxdh{ width: 25px;height: 25px;margin-right: 10px;}
 /*首页_主体_左部_房源详情*/
-.div_body .div_body_left .div_body_left_body_fyxq{ height: auto;}
-.div_body .div_body_left .div_body_left_body_fyxq .p_body_left_body_fyxq{ font-size: 18px;font-weight: 700;height: 60px;border-bottom: 1px solid #cccccc;}
-.div_body .div_body_left .div_body_left_body_fyxq .div_body_left_body_fyxq_xx{ height: auto;width: 100%;display: block;margin-left: 20px;margin-bottom: 30px;float: left;}
-.div_body .div_body_left .div_body_left_body_fyxq .div_body_left_body_fyxq_xx .div_body_left_body_fyxq_xx_left{ font-size: 16px;float: left;}
-.div_body .div_body_left .div_body_left_body_fyxq .div_body_left_body_fyxq_xx .div_body_left_body_fyxq_xx_right{ margin-left: 20px;color: #666666;float: left;}
-.div_body .div_body_left .div_body_left_body_fyxq .div_body_left_body_fyxq_xx .div_body_left_body_fyxq_xx_right .span_body_left_body_fyxq_xx_right_fwld{width: 96px;text-align: center;display: inline-block;}
-.div_body .div_body_left .div_body_left_body_fyxq .div_body_left_body_fyxq_xx .div_body_left_body_fyxq_xx_right .span_body_left_body_fyxq_xx_right{ width: 96px;height: 70px;display: inline-block;margin-bottom: 10px;}
-.div_body .div_body_left .div_body_left_body_fyxq .div_body_left_body_fyxq_xx .div_body_left_body_fyxq_xx_right .span_body_left_body_fyxq_xx_right .img_body_left_body_fyxq_xx_right{ width: 40px;height: 40px;display: block;margin-left: 28px;}
-.div_body .div_body_left .div_body_left_body_fyxq .div_body_left_body_fyxq_xx .div_body_left_body_fyxq_xx_right .span_body_left_body_fyxq_xx_right .span_img_body_left_body_fyxq_xx_right{width: 96px;text-align: center;display: block;}
-.div_body .div_body_left .div_body_left_body_fyxq .div_body_left_body_fyxq_xx .fyms{width:650px}
-.div_body .div_body_left .div_body_left_body_fyxq .div_body_left_body_fyxq_xx .ul_body_left_body_fyxq_xx{ width: 740px;padding: 0;}
-.div_body .div_body_left .div_body_left_body_fyxq .div_body_left_body_fyxq_xx .li_body_left_body_fyxq_xx{ width: 360px;height: 260px;margin-right: 10px;margin-bottom: 10px;display: inline-block;}
-.div_body .div_body_left .div_body_left_body_fyxq .div_body_left_body_fyxq_xx .img_body_left_body_fyxq_xx{ width: 360px;height: 260px;}
-.div_body .div_body_left .div_body_left_body_fyxq .div_body_left_body_fyxq_zk{padding-top: 10px;display: none; width: 730px;height: 48px;text-align: center;float: left;border: 1px solid #cccccc;border-radius: 2px;margin-left: 20px;background-color:rgba(204,204,204,0.2); }
-.div_body .div_body_left .div_body_left_body_fyxq .div_body_left_body_fyxq_zk:hover{background-color:rgba(204,204,204,0.6);cursor: pointer;}
+.div_body .div_body_left .div_body_left_body_xq{ height: auto;}
+.div_body .div_body_left .div_body_left_body_xq .p_body_left_body_xq{ font-size: 18px;font-weight: 700;height: 60px;border-bottom: 1px solid #cccccc;}
+.div_body .div_body_left .div_body_left_body_xq .div_body_left_body_xq_xx{ height: auto;width: 100%;display: block;margin-left: 20px;margin-bottom: 30px;float: left;}
+.div_body .div_body_left .div_body_left_body_xq .div_body_left_body_xq_xx .div_body_left_body_xq_xx_left{ font-size: 16px;float: left;}
+.div_body .div_body_left .div_body_left_body_xq .div_body_left_body_xq_xx .div_body_left_body_xq_xx_right{ margin-left: 20px;color: #666666;float: left;}
+.div_body .div_body_left .div_body_left_body_xq .div_body_left_body_xq_xx .div_body_left_body_xq_xx_right .span_body_left_body_fyxq_xx_right_fwld{width: 96px;text-align: center;display: inline-block;}
+.div_body .div_body_left .div_body_left_body_xq .div_body_left_body_xq_xx .div_body_left_body_xq_xx_right .span_body_left_body_fyxq_xx_right{ width: 96px;height: 70px;display: inline-block;margin-bottom: 10px;}
+.div_body .div_body_left .div_body_left_body_xq .div_body_left_body_xq_xx .div_body_left_body_xq_xx_right .span_body_left_body_fyxq_xx_right .img_body_left_body_xq_xx_right{ width: 40px;height: 40px;display: block;margin-left: 28px;}
+.div_body .div_body_left .div_body_left_body_xq .div_body_left_body_xq_xx .div_body_left_body_xq_xx_right .span_body_left_body_fyxq_xx_right .span_img_body_left_body_xq_xx_right{width: 96px;text-align: center;display: block;}
+.div_body .div_body_left .div_body_left_body_xq .div_body_left_body_xq_xx .fyms{width:650px}
+.div_body .div_body_left .div_body_left_body_xq .div_body_left_body_xq_xx .ul_body_left_body_xq_xx{ width: 860px;padding: 0;}
+.div_body .div_body_left .div_body_left_body_xq .div_body_left_body_xq_xx .li_body_left_body_xq_xx{ width: 405px;height: 350px;margin-right: 10px;margin-bottom: 10px;display: inline-block;}
+.div_body .div_body_left .div_body_left_body_xq .div_body_left_body_xq_xx .img_body_left_body_xq_xx{ width: 405px;height: 350px;}
+.div_body .div_body_left .div_body_left_body_xq .div_body_left_body_xq_zk{padding-top: 10px;display: none; width: 820px;height: 48px;text-align: center;float: left;border: 1px solid #cccccc;border-radius: 2px;margin-left: 20px;background-color:rgba(204,204,204,0.2); }
+.div_body .div_body_left .div_body_left_body_xq .div_body_left_body_xq_zk:hover{background-color:rgba(204,204,204,0.6);cursor: pointer;}
 /*首页_主体_左部_小区详情*/
 .div_body .div_body_left .div_body_left_body_xqxx{ height: auto;float: left;margin-top: 20px;}
 .div_body .div_body_left .div_body_left_body_xqxx .p_body_left_body_xqxx{ font-size: 18px;font-weight: 700;height: 60px;border-bottom: 1px solid #cccccc;}
