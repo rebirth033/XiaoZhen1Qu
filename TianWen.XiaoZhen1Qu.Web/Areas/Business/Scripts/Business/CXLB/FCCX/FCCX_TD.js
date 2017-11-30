@@ -154,7 +154,7 @@ function LoadHotInfo(obj, GQ) {
     html += ('<li onclick="OpenXXXX(\'FCXX_TD\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_right_xq">' + obj.QY + '-' + obj.DD + '</p>');
-    html += ('<p class="p_li_body_right_cs">' + obj.MJ + '平</p>');
+    html += ('<p class="p_li_body_right_cs">' + obj.MJ + '平米</p>');
     if(GQ === "出租")
         html += ('<p class="p_li_body_right_jg">' + GetJG(obj.ZJ, obj.ZJDW) + '</p>');
     if (GQ === "出售")

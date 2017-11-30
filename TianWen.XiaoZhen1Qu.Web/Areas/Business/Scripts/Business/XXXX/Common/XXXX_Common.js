@@ -3,6 +3,7 @@
     $(".div_top_right").css("margin-right", (document.documentElement.clientWidth - 1200) / 2);
     $(".div_nav").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
     $(".div_body").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
+    $("#span_fbxx").bind("click", FBXX);
     LoadDefault();
     GetHeadNav();
 });
@@ -103,4 +104,24 @@ function ToggleImg(length) {
         $("#div_body_left_body_xq_xx").css("overflow", "hidden").css("height", "710px");
         $("#div_body_left_body_xq_zk").html("展开更多图片 共（" + length + "）张");
     }
+}
+//发布信息
+function FBXX() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/LBXZ/LoadLBByID",
+        dataType: "json",
+        data:
+        {
+            LBID: getUrlParam("LBID")
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                window.location.href = getRootPath() + "/Business/" + xml.list[0].FBYM.split('_')[0] + "/" + xml.list[0].FBYM + "?CLICKID=" + getUrlParam("LBID");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
 }
