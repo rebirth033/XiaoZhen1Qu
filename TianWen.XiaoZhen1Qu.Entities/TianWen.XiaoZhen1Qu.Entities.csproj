@@ -554,6 +554,7 @@
     <Compile Include="ViewModels\CL\CL_JXView.cs" />
     <Compile Include="ViewModels\CL\CL_QCWXBYView.cs" />
     <Compile Include="ViewModels\CL\CL_GHSPNJYCView.cs" />
+    <Compile Include="ViewModels\CL\CL_QCMRZSView.cs" />
     <Compile Include="ViewModels\CL\CL_ZXCView.cs" />
     <Compile Include="ViewModels\CL\CL_DDCView.cs" />
     <Compile Include="ViewModels\CL\CL_SLCView.cs" />

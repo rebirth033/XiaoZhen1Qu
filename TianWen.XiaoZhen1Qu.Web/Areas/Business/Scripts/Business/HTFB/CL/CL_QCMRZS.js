@@ -7,7 +7,7 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("汽车美容/装饰", "LB", "CODES_CL", Bind, "OUTLB", "LB", "");
+            LoadCODESByTYPENAME("汽车美容/装饰类别", "LB", "CODES_CL", Bind, "OUTLB", "LB", "");
         }
         if (type === "XCDD") {
             LoadCODESByTYPENAME("洗车地点", "XCDD", "CODES_CL", Bind, "QCMRZSXCDD", "XCDD", "");
@@ -16,7 +16,7 @@ function BindClick(type) {
             LoadCODESByTYPENAME("洗车方式", "XCFS", "CODES_CL", Bind, "QCMRZSXCFS", "XCFS", "");
         }
         if (type === "PP") {
-            LoadCODESByTYPENAME($("#spanLB").html(), "PP", "CODES_CL", Bind, "QCMRZSPP", "PP", "");
+            LoadCODESByTYPENAME($("#spanLB").html() + "品牌", "PP", "CODES_CL", Bind, "QCMRZSPP", "PP", "");
         }
         if (type === "PZ") {
             LoadCODESByTYPENAME("打蜡品种", "PZ", "CODES_CL", Bind, "QCMRZSPZ", "PZ", "");

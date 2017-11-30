@@ -6,43 +6,39 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadCLCondition() {
-    LoadConditionByTypeName("汽车美容/装饰", "CODES_CL", "类别", "LB");
-    LoadDistrict("福州", "350100", "QY");
+    LoadConditionByTypeNames("'汽车美容/装饰类别'", "CODES_CL", "类别", "LB", "10");
     LoadBody("CLXX_QCMRZS", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
     if (name === "类别" && obj.innerHTML === "洗车") {
-        LoadConditionByTypeName("洗车方式", "CODES_CL", "方式", "XCFS");
-        LoadConditionByTypeName("洗车地点", "CODES_CL", "地点", "XCDD");
+        LoadConditionByTypeNames("'洗车方式','洗车地点'", "CODES_CL", "方式,地点", "XCFS,XCDD", "15,15");
         $("#ul_condition_body_PP").remove();
         $("#ul_condition_body_PZ").remove();
         $("#ul_condition_body_TMFW").remove();
     }
     if (name === "类别" && obj.innerHTML === "打蜡") {
-        LoadConditionByTypeName("打蜡品种", "CODES_CL", "品种", "PZ");
-        LoadConditionByTypeName("打蜡品牌", "CODES_CL", "品牌", "PP");
+        LoadConditionByTypeNames("'打蜡品种','打蜡品牌'", "CODES_CL", "品种,品牌", "PZ,PP", "15,15");
         $("#ul_condition_body_XCFS").remove();
         $("#ul_condition_body_XCDD").remove();
         $("#ul_condition_body_TMFW").remove();
     }
     if (name === "类别" && obj.innerHTML === "镀膜") {
-        LoadConditionByTypeName("镀膜品牌", "CODES_CL", "品牌", "PP",15);
+        LoadConditionByTypeNames("'镀膜品牌'", "CODES_CL", "品牌", "PP", "15");
         $("#ul_condition_body_XCFS").remove();
         $("#ul_condition_body_XCDD").remove();
         $("#ul_condition_body_PZ").remove();
         $("#ul_condition_body_TMFW").remove();
     }
     if (name === "类别" && obj.innerHTML === "封釉") {
-        LoadConditionByTypeName("封釉品牌", "CODES_CL", "品牌", "PP", 15);
+        LoadConditionByTypeNames("'封釉品牌'", "CODES_CL", "品牌", "PP", "15");
         $("#ul_condition_body_XCFS").remove();
         $("#ul_condition_body_XCDD").remove();
         $("#ul_condition_body_PZ").remove();
         $("#ul_condition_body_TMFW").remove();
     }
     if (name === "类别" && obj.innerHTML === "玻璃贴膜") {
-        LoadConditionByTypeName("玻璃贴膜品牌", "CODES_CL", "品牌", "PP");
-        LoadConditionByTypeName("贴膜范围", "CODES_CL", "贴膜范围", "TMFW");
+        LoadConditionByTypeNames("'玻璃贴膜品牌','贴膜范围'", "CODES_CL", "品牌,贴膜范围", "PP,TMFW", "15,15");
         $("#ul_condition_body_XCFS").remove();
         $("#ul_condition_body_XCDD").remove();
         $("#ul_condition_body_PZ").remove();
@@ -100,11 +96,11 @@ function LoadCL_JCInfo(obj) {
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
     html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'CLXX_QCMRZS\',\'' + obj.ID + '\')">' + TruncStr(obj.BT, 35) + '</p>');
-    html += ('<p class="p_li_body_left_center_cs font_size16">' + obj.CX + ' / ' + obj.CCNF + '年 / ' + obj.XSS + '小时' + ' / ' + obj.QY + '-' + obj.DD + '</p>');
+    html += ('<p class="p_li_body_left_center_cs font_size16">' + obj.QY + '-' + obj.DD + '</p>');
     html += ('<p class="p_li_body_left_center_dz font_size16">' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
-    html += ('<p class="p_li_body_left_right"><span class="span_zj">' + obj.JG + '</span>元</p>');
+    html += ('<p class="p_li_body_left_right"><span class="span_li_body_left_right">联系商家</span></p>');
     html += ('</div>');
     html += ('</li>');
     $("#ul_body_left").append(html);
@@ -113,7 +109,7 @@ function LoadCL_JCInfo(obj) {
 function LoadHot(TYPE) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FCCX/LoadFCXX",
+        url: getRootPath() + "/Business/CLCX/LoadCLXX",
         dataType: "json",
         data:
         {
@@ -140,8 +136,7 @@ function LoadHotInfo(obj) {
     var html = "";
     html += ('<li onclick="OpenXXXX(\'CLXX_QCMRZS\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_right_xq">' + obj.QY + ' / ' + obj.DD  + '</p>');
-    html += ('<p class="p_li_body_right_cs">' + obj.LB + '</p>');
+    html += ('<p class="p_li_body_right_xq">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_right_jg">' + obj.JG + '元</p>');
     html += ('</li>');
     $("#ul_body_right").append(html);
