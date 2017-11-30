@@ -305,3 +305,8 @@ function GetJG(jg, dw) {
     else
         return '<span class="span_zj">' + jg + '</span>' + dw;
 }
+
+//打开详细页面
+function OpenXXXX(TYPE, ID) {
+    window.open(getRootPath() + "/Business/" + TYPE.split('_')[0] + "/" + TYPE + "?ID=" + ID + "&LBID=" + getUrlParam("LBID"));
+}
