@@ -16,7 +16,7 @@ function LoadDefault() {
             if (xml.Result === 1) {
                 LoadJBXX(xml.list[0]);
                 LoadXQ(xml.list[0], xml.BCMSString);
-                LoadDTXX(xml.list[0].DZ);
+                //LoadDTXX(xml.list[0].DZ);
                 LoadCNXH("FCXX_CK");
                 LoadGRXX(xml.grxxlist[0]);
                 LoadJJRTJFY("FCXX_CK");
@@ -183,7 +183,7 @@ function LoadCNXHInfo(obj) {
     html += ('<li onclick="OpenXXXX(\'FCXX_CK\',\'' + obj.ID + '\')" class="li_body_left_body_cnxh">');
     html += ('<img class="img_li_body_left_body_cnxh" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_left_body_cnxh_xq">' + obj.QY + ' / ' + obj.DD + ' / ' + obj.JTDZ + '</p>');
-    html += ('<p class="p_li_body_left_body_cnxh_cs">' + obj.MJ + '平</p>');
+    html += ('<p class="p_li_body_left_body_cnxh_cs">' + obj.MJ + '平米</p>');
     html += ('<p class="p_li_body_left_body_cnxh_jg">' + obj.ZJ + obj.ZJDW + '</p>');
     html += ('</li>');
     return html;
@@ -226,7 +226,7 @@ function LoadJPTJInfo(obj) {
     html += ('<li onclick="OpenXXXX(\'FCXX_CK\',\'' + obj.ID + '\')" class="li_body_left_body_jptj">');
     html += ('<img class="img_li_body_left_body_jptj" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_left_body_jptj_xq">' + obj.QY + ' / ' + obj.DD + ' / ' + obj.JTDZ + '</p>');
-    html += ('<p class="p_li_body_left_body_jptj_cs">' + obj.MJ + '平</p>');
+    html += ('<p class="p_li_body_left_body_jptj_cs">' + obj.MJ + '平米</p>');
     html += ('<p class="p_li_body_left_body_jptj_jg">' + obj.ZJ + obj.ZJDW + '</p>');
     html += ('</li>');
     return html;
@@ -273,7 +273,7 @@ function LoadJJRTJFYInfo(obj) {
     html += ('<img class="img_li_body_right_jjrtj" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<div class="div_li_body_right_jjrtj">');
     html += ('<p class="p_li_body_right_jjrtj_xq">' + obj.QY + ' / ' + obj.DD + ' / ' + obj.JTDZ + '</p>');
-    html += ('<p class="p_li_body_right_jjrtj_cs">' + obj.MJ + '平</p>');
+    html += ('<p class="p_li_body_right_jjrtj_cs">' + obj.MJ + '平米</p>');
     html += ('<p class="p_li_body_right_jjrtj_jg">' + obj.ZJ + obj.ZJDW + '</p>');
     html += ('</div>');
     html += ('</li>');

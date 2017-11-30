@@ -17,10 +17,9 @@ function ValidateAll() {
         if (ValidateRadio("GQ", "忘记选择供求啦")
             & ValidateBCMS("BCMS", "忘记填写补充描述啦")
             & ValidateSZQY()
-            & ValidateDD()
             & ValidateSJ()
             & ValidateMJ()
-            & ValidateCommon())
+            & ValidateCommonWithoutZP())
             return true;
         else
             return false;
@@ -29,41 +28,12 @@ function ValidateAll() {
         if (ValidateRadio("GQ", "忘记选择供求啦")
         & ValidateBCMS("BCMS", "忘记填写补充描述啦")
         & ValidateSZQY()
-        & ValidateDD()
         & ValidateZJ()
         & ValidateMJ()
-        & ValidateCommon())
+        & ValidateCommonWithoutZP())
             return true;
         else
             return false;
-    }
-}
-//验证楼盘名称
-function ValidateLPMC() {
-    if ($("#LPMC").val() === "" || $("#LPMC").val() === null) {
-        $("#divLPMCTip").css("display", "block");
-        $("#divLPMCTip").attr("class", "Warn");
-        $("#divLPMCTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写楼盘名称啦');
-        $("#spanLPMC").css("border-color", "#fd634f");
-        return false;
-    } else {
-        $("#divLPMCTip").css("display", "none");
-        $("#spanLPMC").css("border-color", "#cccccc");
-        return true;
-    }
-}
-//验证地段
-function ValidateDD() {
-    if ($("#DD").val() === "" || $("#DD").val() === null) {
-        $("#divDDTip").css("display", "block");
-        $("#divDDTip").attr("class", "Warn");
-        $("#divDDTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写地段啦');
-        $("#spanDD").css("border-color", "#fd634f");
-        return false;
-    } else {
-        $("#divDDTip").css("display", "none");
-        $("#spanDD").css("border-color", "#cccccc");
-        return true;
     }
 }
 //验证租金
@@ -131,20 +101,6 @@ function ValidateMJ() {
             return false;
         }
     }
-}
-//提示楼盘名称
-function InfoLPMC() {
-    $("#divLPMCTip").css("display", "block");
-    $("#divLPMCTip").attr("class", "Info");
-    $("#divLPMCTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />不超过30字，不能填写电话、QQ、邮箱等联系方式或特殊符号');
-    $("#LPMC").css("border-color", "#5bc0de");
-}
-//提示地段
-function InfoDD() {
-    $("#divDDTip").css("display", "block");
-    $("#divDDTip").attr("class", "Info");
-    $("#divDDTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />不超过30字，不能填写电话、QQ、邮箱等联系方式或特殊符号');
-    $("#spanDD").css("border-color", "#5bc0de");
 }
 //提示租金
 function InfoZJ() {

@@ -16,7 +16,7 @@ function LoadDefault() {
             if (xml.Result === 1) {
                 LoadJBXX(xml.list[0]);
                 LoadXQ(xml.list[0], xml.BCMSString);
-                LoadDTXX(xml.list[0].DZ);
+                //LoadDTXX(xml.list[0].DZ);
                 LoadCNXH("FCXX_TD");
                 LoadGRXX(xml.grxxlist[0]);
                 LoadJJRTJFY("FCXX_TD");
@@ -52,7 +52,10 @@ function LoadJBXX(obj) {
     html += ('</div>');
     html += ('<div class="div_body_left_body_right">');
     html += ('<p class="p_body_left_body_right_first">');
-    html += ('<span class="span_body_left_body_right_zj">' + obj.SJ + '</span><span class="span_body_left_body_right_zjdw">' + obj.SJ + '</span>');
+    if(obj.GQ === "出租")
+        html += ('<span class="span_body_left_body_right_zj">' + obj.ZJ + '</span><span class="span_body_left_body_right_zjdw">' + (obj.ZJ === "面议" ? "" : obj.ZJDW) + '</span>');
+    if (obj.GQ === "出售")
+        html += ('<span class="span_body_left_body_right_zj">' + obj.SJ + '</span><span class="span_body_left_body_right_zjdw">万元</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">类别：</span>');
@@ -182,9 +185,9 @@ function LoadCNXHInfo(obj) {
     var html = "";
     html += ('<li onclick="OpenXXXX(\'FCXX_TD\',\'' + obj.ID + '\')" class="li_body_left_body_cnxh">');
     html += ('<img class="img_li_body_left_body_cnxh" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_left_body_cnxh_xq">' + obj.QY + ' / ' + obj.DD + ' / ' + obj.JTDZ + '</p>');
-    html += ('<p class="p_li_body_left_body_cnxh_cs">' + obj.MJ + '平</p>');
-    html += ('<p class="p_li_body_left_body_cnxh_jg">' + obj.ZJ + obj.ZJDW + '</p>');
+    html += ('<p class="p_li_body_left_body_cnxh_xq">' + obj.QY + '-' + obj.DD  + '</p>');
+    html += ('<p class="p_li_body_left_body_cnxh_cs">' + obj.MJ + '平米</p>');
+    html += ('<p class="p_li_body_left_body_cnxh_jg">' + obj.ZJ  +(obj.ZJ === "面议" ? "" : obj.ZJDW)  + '</p>');
     html += ('</li>');
     return html;
 }
@@ -225,9 +228,9 @@ function LoadJPTJInfo(obj) {
     var html = "";
     html += ('<li onclick="OpenXXXX(\'FCXX_TD\',\'' + obj.ID + '\')" class="li_body_left_body_jptj">');
     html += ('<img class="img_li_body_left_body_jptj" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_left_body_jptj_xq">' + obj.QY + ' / ' + obj.DD + ' / ' + obj.JTDZ + '</p>');
-    html += ('<p class="p_li_body_left_body_jptj_cs">' + obj.MJ + '平</p>');
-    html += ('<p class="p_li_body_left_body_jptj_jg">' + obj.ZJ + obj.ZJDW + '</p>');
+    html += ('<p class="p_li_body_left_body_jptj_xq">' + obj.QY + '-' + obj.DD + '</p>');
+    html += ('<p class="p_li_body_left_body_jptj_cs">' + obj.MJ + '平米</p>');
+    html += ('<p class="p_li_body_left_body_jptj_jg">' + obj.ZJ + (obj.ZJ === "面议" ? "" : obj.ZJDW) + '</p>');
     html += ('</li>');
     return html;
 }
@@ -272,9 +275,9 @@ function LoadJJRTJFYInfo(obj) {
     html += ('<li onclick="OpenXXXX(\'FCXX_TD\',\'' + obj.ID + '\')" class="li_body_right_jjrtj">');
     html += ('<img class="img_li_body_right_jjrtj" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<div class="div_li_body_right_jjrtj">');
-    html += ('<p class="p_li_body_right_jjrtj_xq">' + obj.QY + ' / ' + obj.DD + ' / ' + obj.JTDZ + '</p>');
-    html += ('<p class="p_li_body_right_jjrtj_cs">' + obj.MJ + '平</p>');
-    html += ('<p class="p_li_body_right_jjrtj_jg">' + obj.ZJ + obj.ZJDW + '</p>');
+    html += ('<p class="p_li_body_right_jjrtj_xq">' + obj.QY + '-' + obj.DD + '</p>');
+    html += ('<p class="p_li_body_right_jjrtj_cs">' + obj.MJ + '平米</p>');
+    html += ('<p class="p_li_body_right_jjrtj_jg">' + obj.ZJ + (obj.ZJ === "面议" ? "" : obj.ZJDW) + '</p>');
     html += ('</div>');
     html += ('</li>');
     return html;

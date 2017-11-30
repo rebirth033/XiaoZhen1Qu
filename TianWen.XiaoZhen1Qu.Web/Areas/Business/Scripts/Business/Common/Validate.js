@@ -176,6 +176,13 @@ function ValidateCommon() {
     else
         return false;
 }
+//验证共有不包括图片
+function ValidateCommonWithoutZP() {
+    if (ValidateInput("BT", "标题") & ValidateInput("LXR", "联系人") & ValidateInput("LXDH", "联系电话"))
+        return true;
+    else
+        return false;
+}
 //验证所在区域
 function ValidateSZQY() {
     if (!ValidateSelect("SZQY", "QY", "请选择区域")) return false;

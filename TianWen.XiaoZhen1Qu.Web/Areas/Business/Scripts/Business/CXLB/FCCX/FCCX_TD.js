@@ -4,19 +4,20 @@ $(document).ready(function () {
     BindConditionNav("FCXX_TD");
     BindBodyNav();
     LoadCZCondition();
-    LoadHot("FCXX_TD");
 });
 //加载房产查询条件
 function LoadCZCondition() {
     RemoveCondition("QY,ZJ,SJ,MJ");
     LoadConditionByTypeNames("'土地租金','仓库面积'", "CODES_FC", "租金,面积", "ZJ,MJ", "15,15");
     LoadBody("FCXX_TD", currentIndex);
+    LoadHot("FCXX_TD", "出租");
 }
 //加载房产查询条件
 function LoadCSCondition() {
     RemoveCondition("QY,ZJ,SJ,MJ");
     LoadConditionByTypeNames("'土地售价','仓库面积'", "CODES_FC", "售价,面积", "SJ,MJ", "15,15");
     LoadBody("FCXX_TD", currentIndex);
+    LoadHot("FCXX_TD", "出售");
 }
 //绑定查询条件导航
 function BindConditionNav(type) {
@@ -122,7 +123,7 @@ function LoadCSInfo(obj) {
     $("#ul_body_left").append(html);
 }
 //加载热门推荐
-function LoadHot(TYPE) {
+function LoadHot(TYPE, GQ) {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/FCCX/LoadFCXX",
@@ -130,7 +131,7 @@ function LoadHot(TYPE) {
         data:
         {
             TYPE: TYPE,
-            Condition: "STATUS:1",
+            Condition: "STATUS:1,GQ:" + GQ,
             PageSize: 5,
             PageIndex: 1
         },
@@ -138,7 +139,7 @@ function LoadHot(TYPE) {
             if (xml.Result === 1) {
                 $("#ul_body_right").html('');
                 for (var i = 0; i < xml.list.length; i++) {
-                    LoadHotInfo(xml.list[i]);
+                    LoadHotInfo(xml.list[i], GQ);
                 }
             }
         },
@@ -148,13 +149,16 @@ function LoadHot(TYPE) {
     });
 }
 //加载热门单条信息
-function LoadHotInfo(obj) {
+function LoadHotInfo(obj, GQ) {
     var html = "";
     html += ('<li onclick="OpenXXXX(\'FCXX_TD\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_right_xq">' + obj.QY + ' / ' + obj.DD + ' / ' + obj.JTDZ + '</p>');
+    html += ('<p class="p_li_body_right_xq">' + obj.QY + '-' + obj.DD + '</p>');
     html += ('<p class="p_li_body_right_cs">' + obj.MJ + '平</p>');
-    html += ('<p class="p_li_body_right_jg">' + obj.ZJ + '元/月</p>');
+    if(GQ === "出租")
+        html += ('<p class="p_li_body_right_jg">' + GetJG(obj.ZJ, obj.ZJDW) + '</p>');
+    if (GQ === "出售")
+        html += ('<p class="p_li_body_right_jg">' + GetJG(obj.SJ, "元") + '</p>');
     html += ('</li>');
     $("#ul_body_right").append(html);
 }

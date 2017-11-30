@@ -17,6 +17,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             {
                 ViewData["XZQ"] = "福州";
                 Session["XZQ"] = "福州";
+                Session["XZQDM"] = "145";
             }
             else
             {

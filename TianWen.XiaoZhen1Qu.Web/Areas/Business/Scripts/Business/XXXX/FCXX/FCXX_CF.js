@@ -1,4 +1,5 @@
-﻿$(document).ready(function () {
+﻿var right = 0;
+$(document).ready(function () {
 
 });
 //加载默认
@@ -16,7 +17,7 @@ function LoadDefault() {
             if (xml.Result === 1) {
                 LoadJBXX(xml.list[0]);
                 LoadXQ(xml.list[0], xml.BCMSString);
-                LoadDTXX(xml.list[0].DZ);
+                //LoadDTXX(xml.list[0].JTDZ);
                 LoadCNXH("FCXX_CF");
                 LoadGRXX(xml.grxxlist[0]);
                 LoadJJRTJFY("FCXX_CF");
@@ -78,9 +79,6 @@ function LoadJBXX(obj) {
     $("#div_body_left").append(html);
     HandlerTPXX();
 }
-
-var right = 0;
-
 //加载详情
 function LoadXQ(obj, BCMSString) {
     var html = "";
@@ -122,17 +120,17 @@ function LoadDZ() {
     $("#div_body_left").append(html);
 }
 //加载地图信息
-function LoadDTXX(XQMC) {
+function LoadDTXX(DZ) {
     var map = new BMap.Map("container");//创建地图实例
     map.centerAndZoom("福州市", 15);//创建点坐标,地图初始化
     map.enableScrollWheelZoom(true);//允许鼠标滑轮放大缩小 
     map.enableContinuousZoom(true);//允许惯性拖拽
     map.addControl(new BMap.NavigationControl({ isOpen: true, anchor: BMAP_ANCHOR_BOTTOM_LEFT }));  //添加默认缩放平移控件,右上角打开
     map.addControl(new BMap.OverviewMapControl({ isOpen: true, anchor: BMAP_ANCHOR_BOTTOM_RIGHT })); //添加默认缩略地图控件,右下角打开
-    searchByStationName(map, XQMC);
+    searchByStationName(map, DZ);
 };
 //地址定位
-function searchByStationName(map, XQMC) {
+function searchByStationName(map, DZ) {
     map.clearOverlays();//清空原来的标注
     var localSearch = new BMap.LocalSearch(map);
     localSearch.enableAutoViewport(); //允许自动调节窗体大小
@@ -142,7 +140,7 @@ function searchByStationName(map, XQMC) {
         var marker = new BMap.Marker(new BMap.Point(poi.point.lng, poi.point.lat));  // 创建标注，为要查询的地址对应的经纬度
         map.addOverlay(marker);
     });
-    localSearch.search(XQMC);
+    localSearch.search(DZ);
 }
 //加载猜你喜欢
 function LoadCNXH(TYPE) {
@@ -183,7 +181,7 @@ function LoadCNXHInfo(obj) {
     html += ('<li onclick="OpenXXXX(\'FCXX_CF\',\'' + obj.ID + '\')" class="li_body_left_body_cnxh">');
     html += ('<img class="img_li_body_left_body_cnxh" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_left_body_cnxh_xq">' + obj.QY + ' / ' + obj.DD + ' / ' + obj.JTDZ + '</p>');
-    html += ('<p class="p_li_body_left_body_cnxh_cs">' + obj.MJ + '平</p>');
+    html += ('<p class="p_li_body_left_body_cnxh_cs">' + obj.MJ + '平米</p>');
     html += ('<p class="p_li_body_left_body_cnxh_jg">' + obj.ZJ + obj.ZJDW + '</p>');
     html += ('</li>');
     return html;
@@ -226,7 +224,7 @@ function LoadJPTJInfo(obj) {
     html += ('<li onclick="OpenXXXX(\'FCXX_CF\',\'' + obj.ID + '\')" class="li_body_left_body_jptj">');
     html += ('<img class="img_li_body_left_body_jptj" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_left_body_jptj_xq">' + obj.QY + ' / ' + obj.DD + ' / ' + obj.JTDZ + '</p>');
-    html += ('<p class="p_li_body_left_body_jptj_cs">' + obj.MJ + '平</p>');
+    html += ('<p class="p_li_body_left_body_jptj_cs">' + obj.MJ + '平米</p>');
     html += ('<p class="p_li_body_left_body_jptj_jg">' + obj.ZJ + obj.ZJDW + '</p>');
     html += ('</li>');
     return html;
@@ -273,7 +271,7 @@ function LoadJJRTJFYInfo(obj) {
     html += ('<img class="img_li_body_right_jjrtj" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<div class="div_li_body_right_jjrtj">');
     html += ('<p class="p_li_body_right_jjrtj_xq">' + obj.QY + ' / ' + obj.DD + ' / ' + obj.JTDZ + '</p>');
-    html += ('<p class="p_li_body_right_jjrtj_cs">' + obj.MJ + '平</p>');
+    html += ('<p class="p_li_body_right_jjrtj_cs">' + obj.MJ + '平米</p>');
     html += ('<p class="p_li_body_right_jjrtj_jg">' + obj.ZJ + obj.ZJDW + '</p>');
     html += ('</div>');
     html += ('</li>');
