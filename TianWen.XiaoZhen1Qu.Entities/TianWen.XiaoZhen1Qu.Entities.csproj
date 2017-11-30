@@ -211,7 +211,7 @@
     <Compile Include="Maps\ES\ES_PWKQ_YLYJDPJBXX_Map.cs" />
     <Compile Include="Maps\QZZP\QZZP_JZZPJBXX_Map.cs" />
     <Compile Include="Maps\QZZP\QZZP_QZZPJBXX_Map.cs" />
-    <Compile Include="Maps\CL\CL_DJSJWPJBXX_Map.cs" />
+    <Compile Include="Maps\CL\CL_DJJBXX_Map.cs" />
     <Compile Include="Maps\CL\CL_GHSPNJYCJBXX_Map.cs" />
     <Compile Include="Maps\CL\CL_JXJBXX_Map.cs" />
     <Compile Include="Maps\CL\CL_QCGZFHJBXX_Map.cs" />
@@ -458,7 +458,7 @@
     <Compile Include="Models\ES\ES_PWKQ_YLYJDPJBXX.cs" />
     <Compile Include="Models\QZZP\QZZP_JZZPJBXX.cs" />
     <Compile Include="Models\QZZP\QZZP_QZZPJBXX.cs" />
-    <Compile Include="Models\CL\CL_DJSJWPJBXX.cs" />
+    <Compile Include="Models\CL\CL_DJJBXX.cs" />
     <Compile Include="Models\CL\CL_GHSPNJYCJBXX.cs" />
     <Compile Include="Models\CL\CL_JXJBXX.cs" />
     <Compile Include="Models\CL\CL_QCGZFHJBXX.cs" />
@@ -551,6 +551,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\CL\CL_GCCView.cs" />
     <Compile Include="ViewModels\CL\CL_ZCView.cs" />
+    <Compile Include="ViewModels\CL\CL_JXView.cs" />
     <Compile Include="ViewModels\CL\CL_ZXCView.cs" />
     <Compile Include="ViewModels\CL\CL_DDCView.cs" />
     <Compile Include="ViewModels\CL\CL_SLCView.cs" />

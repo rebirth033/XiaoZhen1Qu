@@ -40,9 +40,9 @@ namespace TianWen.XiaoZhen1Qu.Interface.HTFB
 
         object LoadCL_SLCJBXX(string ID);
 
-        object SaveCL_DJSJWPJBXX(JCXX jcxx, CL_DJSJWPJBXX jbxx, List<PHOTOS> photos);
+        object SaveCL_DJJBXX(JCXX jcxx, CL_DJJBXX jbxx, List<PHOTOS> photos);
 
-        object LoadCL_DJSJWPJBXX(string ID);
+        object LoadCL_DJJBXX(string ID);
 
         object SaveCL_GHSPNJYCJBXX(JCXX jcxx, CL_GHSPNJYCJBXX jbxx, List<PHOTOS> photos);
 

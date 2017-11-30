@@ -2,7 +2,7 @@
     $("body").bind("click", function () { Close("_XZQ"); });
     LoadSJSJWPLB();
 });
-//加载代驾/司机外派类别
+//加载代驾类别
 function LoadSJSJWPLB() {
     $.ajax({
         type: "POST",
@@ -10,7 +10,7 @@ function LoadSJSJWPLB() {
         dataType: "json",
         data:
         {
-            TYPENAME: "代驾/司机外派",
+            TYPENAME: "代驾",
             TBName: "CODES_CL"
         },
         success: function (xml) {
@@ -26,7 +26,7 @@ function LoadSJSJWPLB() {
                 $("#divSJSJWPLBText").html(html);
                 $(".img_SJSJWPLB").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".liSJSJWPLB").bind("click", function () { ValidateCheck("OUTLB", "忘记选择类别啦"); });
-                LoadCL_DJSJWPJBXX();
+                LoadCL_DJJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -40,11 +40,11 @@ function BindClick(type) {
 
     });
 }
-//加载休闲娱乐_代驾/司机外派基本信息
-function LoadCL_DJSJWPJBXX() {
+//加载休闲娱乐_代驾基本信息
+function LoadCL_DJJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/CL/LoadCL_DJSJWPJBXX",
+        url: getRootPath() + "/Business/CL/LoadCL_DJJBXX",
         dataType: "json",
         data:
         {
@@ -53,17 +53,15 @@ function LoadCL_DJSJWPJBXX() {
         success: function (xml) {
             if (xml.Result === 1) {
                 var jsonObj = new JsonDB("myTabContent");
-                jsonObj.DisplayFromJson("myTabContent", xml.Value.CL_DJSJWPJBXX);
+                jsonObj.DisplayFromJson("myTabContent", xml.Value.CL_DJJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
-                $("#ID").val(xml.Value.CL_DJSJWPJBXX.ID);
+                $("#ID").val(xml.Value.CL_DJJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.BCMSString);
                 });
-                SetDuoX("SJSJWPLB", xml.Value.CL_DJSJWPJBXX.LB);
-                $("#spanQY").html(xml.Value.CL_DJSJWPJBXX.QY);
-                $("#spanDD").html(xml.Value.CL_DJSJWPJBXX.DD);
+                SetDuoX("SJSJWPLB", xml.Value.CL_DJJBXX.LB);
                 LoadPhotos(xml.Value.Photos);
             }
         },
@@ -78,8 +76,6 @@ function FB() {
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
-    obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
-    obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "LB", "'" + GetDuoX("SJSJWPLB") + "'");
 
@@ -88,7 +84,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/CL/FBCL_DJSJWPJBXX",
+        url: getRootPath() + "/Business/CL/FBCL_DJJBXX",
         dataType: "json",
         data:
         {

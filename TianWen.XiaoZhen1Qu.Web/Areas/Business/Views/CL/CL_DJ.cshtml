@@ -2,9 +2,9 @@
     Layout = "~/Areas/Business/Views/Shared/HTFB.cshtml";
 }
 @section Section_Head {
-    <link href="@Url.Content("~/Areas/Business/Css/HTFB/CL/CL_DJSJWP.css")" rel="stylesheet" />
-    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/HTFB/CL/CL_DJSJWP.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/HTFB/CL/CL_DJSJWPYZ.js")"></script>
+    <link href="@Url.Content("~/Areas/Business/Css/HTFB/CL/CL_DJ.css")" rel="stylesheet" />
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/HTFB/CL/CL_DJ.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/HTFB/CL/CL_DJYZ.js")"></script>
 }
 @section Section_Body {
     <div id="myTabContent" class="div_content">
@@ -71,7 +71,7 @@
         </div>
         <div id="divFWZP" class="div_row_zp">
             <div class="div_row_left" style="height: 170px; vertical-align: top;">
-                <span class="span_required" style="vertical-align: top">*</span>
+                <span class="span_required" style="vertical-align: top">&nbsp;</span>
                 <span id="spanFWZP" style="vertical-align: top">上传照片</span>
             </div>
             <div class="div_row_right">
@@ -105,33 +105,6 @@
         <div id="divLXRXX" class="div_split" style="display: block; text-align: left;">
             <span class="span_split">联系人信息</span>
             <em class="em_split"></em>
-        </div>
-        <div id="divSZQY" class="div_row" style="z-index: 991;">
-            <div class="div_row_left" style="margin-left: 100px;">
-                <span class="span_required">*</span>
-                <span class="spanFWCZ">详细地址</span>
-            </div>
-            <div class="div_row_right">
-                <div id="divQYText" class="div_select_out SRK" style="z-index: 997;">
-                    <div id="divQYSpan" class="div_select_in" style="border: none; margin-top: 6px;">
-                        <input type="hidden" id="QYCode"/>
-                        <span id="spanQY" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择区域</span>
-                        <div class="span_select_arrow"></div>
-                    </div>
-                    <div id="divQY" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
-                    </div>
-                </div>
-                <div id="divDDText" class="div_select_out SRK" style="z-index: 997;">
-                    <div id="divDDSpan" class="div_select_in" style="border: none; margin-top: 6px;">
-                        <span id="spanDD" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择地段</span>
-                        <div class="span_select_arrow"></div>
-                    </div>
-                    <div id="divDD" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
-                    </div>
-                </div>
-                <input id="JTDZ" column="JTDZ" class="span_spaninput input_input SRK" type="text" placeholder="请填写具体地址" style="width: 300px"/>
-            </div>
-            <div id="divSZQYTip"></div>
         </div>
         <div id="divLXR" class="div_row" style="z-index: 990">
             <div class="div_row_left" style="margin-left: 114px;">

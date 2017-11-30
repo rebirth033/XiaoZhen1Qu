@@ -504,9 +504,9 @@ namespace TianWen.XiaoZhen1Qu.BLL.HTFB
             }
         }
 
-        public object SaveCL_DJSJWPJBXX(JCXX jcxx, CL_DJSJWPJBXX CL_DJSJWPJBXX, List<PHOTOS> photos)
+        public object SaveCL_DJJBXX(JCXX jcxx, CL_DJJBXX CL_DJJBXX, List<PHOTOS> photos)
         {
-            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM CL_DJSJWPJBXX WHERE ID='{0}'", CL_DJSJWPJBXX.ID));
+            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM CL_DJJBXX WHERE ID='{0}'", CL_DJJBXX.ID));
             using (ITransaction transaction = DAO.BeginTransaction())
             {
                 try
@@ -514,41 +514,41 @@ namespace TianWen.XiaoZhen1Qu.BLL.HTFB
                     if (dt.Rows.Count > 0)
                     {
                         SavePhotos(photos, dt.Rows[0]["JCXXID"].ToString());
-                        CL_DJSJWPJBXX.JCXXID = dt.Rows[0]["JCXXID"].ToString();
+                        CL_DJJBXX.JCXXID = dt.Rows[0]["JCXXID"].ToString();
                         jcxx.JCXXID = dt.Rows[0]["JCXXID"].ToString();
                         DAO.Update(jcxx);
-                        DAO.Update(CL_DJSJWPJBXX);
+                        DAO.Update(CL_DJJBXX);
                         transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, ID = CL_DJSJWPJBXX.ID } };
+                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, ID = CL_DJJBXX.ID } };
                     }
                     else
                     {
                         SavePhotos(photos, jcxx.JCXXID);
-                        CL_DJSJWPJBXX.JCXXID = jcxx.JCXXID;
+                        CL_DJJBXX.JCXXID = jcxx.JCXXID;
                         DAO.Save(jcxx);
-                        DAO.Save(CL_DJSJWPJBXX);
+                        DAO.Save(CL_DJJBXX);
                         transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, ID = CL_DJSJWPJBXX.ID } };
+                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, ID = CL_DJJBXX.ID } };
                     }
                 }
                 catch (Exception ex)
                 {
                     transaction.Rollback();
-                    LoggerManager.Error("CL_DJSJWPJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                    LoggerManager.Error("CL_DJJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
                     return new { Result = EnResultType.Failed, Message = "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!", Type = 3 };
                 }
             }
         }
 
-        public object LoadCL_DJSJWPJBXX(string ID)
+        public object LoadCL_DJJBXX(string ID)
         {
             try
             {
-                CL_DJSJWPJBXX CL_DJSJWPJBXX = DAO.GetObjectByID<CL_DJSJWPJBXX>(ID);
-                if (CL_DJSJWPJBXX != null)
+                CL_DJJBXX CL_DJJBXX = DAO.GetObjectByID<CL_DJJBXX>(ID);
+                if (CL_DJJBXX != null)
                 {
-                    JCXX jcxx = GetJCXXByID(CL_DJSJWPJBXX.JCXXID);
-                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { CL_DJSJWPJBXX = CL_DJSJWPJBXX, BCMSString = BinaryHelper.BinaryToString(CL_DJSJWPJBXX.BCMS), JCXX = jcxx, Photos = GetPhtosByJCXXID(CL_DJSJWPJBXX.JCXXID) } };
+                    JCXX jcxx = GetJCXXByID(CL_DJJBXX.JCXXID);
+                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { CL_DJJBXX = CL_DJJBXX, BCMSString = BinaryHelper.BinaryToString(CL_DJJBXX.BCMS), JCXX = jcxx, Photos = GetPhtosByJCXXID(CL_DJJBXX.JCXXID) } };
                 }
                 else
                 {
@@ -557,7 +557,7 @@ namespace TianWen.XiaoZhen1Qu.BLL.HTFB
             }
             catch (Exception ex)
             {
-                LoggerManager.Error("CL_DJSJWPJBXXBLL", "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                LoggerManager.Error("CL_DJJBXXBLL", "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
                 return new
                 {
                     Result = EnResultType.Failed,

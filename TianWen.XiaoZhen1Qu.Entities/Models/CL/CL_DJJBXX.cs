@@ -3,15 +3,15 @@ using NHibernate.Mapping.Attributes;
 
 namespace TianWen.XiaoZhen1Qu.Entities.Models
 {
-    public class CL_DJSJWPJBXX
+    public class CL_DJJBXX
     {
-        public CL_DJSJWPJBXX()
+        public CL_DJJBXX()
         {
             ID = Guid.NewGuid().ToString("N");
         }
 
         /// <summary>
-        /// 生活服务_车辆服务_代驾/司机外派信息ID
+        /// 生活服务_车辆服务_代驾信息ID
         /// </summary>
         [Id]
         public virtual string ID { get; set; }
