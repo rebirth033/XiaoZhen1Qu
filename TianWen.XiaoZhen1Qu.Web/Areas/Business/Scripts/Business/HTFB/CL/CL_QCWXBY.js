@@ -8,7 +8,7 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("汽车维修/保养", "LB", "CODES_CL", Bind, "OUTLB", "LB", "");
+            LoadCODESByTYPENAME("汽车维修/保养类别", "LB", "CODES_CL", Bind, "OUTLB", "LB", "");
         }
     });
 }

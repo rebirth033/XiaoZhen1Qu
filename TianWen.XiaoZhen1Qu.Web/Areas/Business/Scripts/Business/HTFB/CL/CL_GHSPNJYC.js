@@ -10,7 +10,7 @@ function LoadGHSPNJYC() {
         dataType: "json",
         data:
         {
-            TYPENAME: "过户/上牌/年检/验车",
+            TYPENAME: "过户/验车类别",
             TBName: "CODES_CL"
         },
         success: function (xml) {

@@ -46,7 +46,7 @@ function LoadBody(TYPE, PageIndex) {
         }
     });
 }
-//加载车辆_摩托车单条信息
+//加载单条信息
 function LoadCL_JCInfo(obj) {
     var html = "";
     html += ('<li class="li_body_left">');
@@ -69,7 +69,7 @@ function LoadCL_JCInfo(obj) {
 function LoadHot(TYPE) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FCCX/LoadFCXX",
+        url: getRootPath() + "/Business/CLCX/LoadCLXX",
         dataType: "json",
         data:
         {
