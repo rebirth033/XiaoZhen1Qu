@@ -127,13 +127,14 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 if (TYPE == "CLXX_ZC")
                 {
                     dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,cl_zcjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + " order by zxgxsj desc");
-                    List<CL_GCCView> list = ConvertHelper.DataTableToList<CL_GCCView>(dt);
+                    List<CL_ZCView> list = ConvertHelper.DataTableToList<CL_ZCView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
                     var listnew = from p in list.Skip((int.Parse(PageIndex) - 1) * int.Parse(PageSize)).Take(int.Parse(PageSize)) select p;
                     foreach (var jcxx in listnew)
                     {
                         jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
+                        jcxx.BCMSString = BinaryHelper.BinaryToString(jcxx.BCMS);
                     }
                     return new { Result = EnResultType.Success, list = listnew, PageCount = PageCount, TotalCount = TotalCount };
                 }
@@ -326,7 +327,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 if (TYPE == "CLXX_ZC")
                 {
                     dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,cl_zcjbxx b where a.jcxxid = b.jcxxid and id = '{0}'  order by zxgxsj desc", ID));
-                    List<CL_GCCView> list = ConvertHelper.DataTableToList<CL_GCCView>(dt);
+                    List<CL_ZCView> list = ConvertHelper.DataTableToList<CL_ZCView>(dt);
                     foreach (var jcxx in list)
                     {
                         jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
