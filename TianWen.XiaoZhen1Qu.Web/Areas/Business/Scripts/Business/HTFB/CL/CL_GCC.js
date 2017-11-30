@@ -4,8 +4,6 @@
     BindClick("CX");
     BindClick("CCNF");
     BindClick("CCYF");
-    BindClick("QY");
-    BindClick("DD");
 });
 //加载工程车车型标签
 function LoadGCC() {
@@ -33,7 +31,7 @@ function LoadGCCMC(GCC) {
         data:
         {
             CODEVALUE: GCC.split("div")[1],
-            TYPENAME: "工程车",
+            TYPENAME: "工程车车型",
             TBName: "CODES_CL"
         },
         success: function (xml) {
@@ -136,12 +134,6 @@ function BindClick(type) {
         }
         if (type === "CCYF") {
             LoadCODESByTYPENAME("出厂月份", "CCYF", "CODES_CL", Bind, "GCCCCNF", "CCYF", "");
-        }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
         }
     });
 }
