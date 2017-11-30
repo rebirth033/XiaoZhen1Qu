@@ -6,7 +6,7 @@
     $("#XSLC").bind("blur", ValidateXSLC);
     $("#XSLC").bind("focus", InfoXSLC);
 });
-//验证出厂年限
+//验证出厂年份
 function ValidateHCCCNF() {
     if (!ValidateSelect("HCCCNF", "CCNF", "请选择出厂年份")) return false;
     if (!ValidateSelect("HCCCNF", "CCYF", "请选择出厂月份")) return false;

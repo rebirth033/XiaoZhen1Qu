@@ -5,8 +5,6 @@
     BindClick("PP");
     BindClick("CCNF");
     BindClick("CCYF");
-    BindClick("QY");
-    BindClick("DD");
     BindClick("GCSJ");
 });
 //加载品牌标签
@@ -64,23 +62,17 @@ function PPXZ(PPMC, PPID) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("货车", "LB", "CODES_CL", Bind, "HCLB", "LB", "");
+            LoadCODESByTYPENAME("货车车型", "LB", "CODES_CL", Bind, "HCLB", "LB", "");
         }
         if (type === "PP") {
             LoadPP();
             LoadPPMC("divRM");
         }
         if (type === "CCNF") {
-            LoadCODESByTYPENAME("出厂年限", "CCNF", "CODES_CL", Bind, "HCCCNF", "CCNF", "");
+            LoadCODESByTYPENAME("出厂年份", "CCNF", "CODES_CL", Bind, "HCCCNF", "CCNF", "");
         }
         if (type === "CCYF") {
             LoadCODESByTYPENAME("出厂月份", "CCYF", "CODES_CL", Bind, "HCCCYF", "CCYF", "");
-        }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
         }
     });
 }
@@ -123,7 +115,6 @@ function LoadCL_HCJBXX() {
                 $("#spanCCYF").html(xml.Value.CL_HCJBXX.CCYF);
                 $("#spanQY").html(xml.Value.CL_HCJBXX.QY);
                 $("#spanDD").html(xml.Value.CL_HCJBXX.DD);
-
                 LoadPhotos(xml.Value.Photos);
                 return;
             }
