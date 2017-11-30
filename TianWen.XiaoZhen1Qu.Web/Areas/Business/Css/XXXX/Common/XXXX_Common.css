@@ -23,9 +23,9 @@
 .div_body .div_body_right .div_body_right_grxx .div_div_body_right_yyzz{ height: 60px;}
 .div_body .div_body_right .div_body_right_grxx .div_div_body_right_yyzz .div_div_div_body_right_yyzz{display: inline-block; width: 74px;height: 74px;text-align: center;}
 .div_body .div_body_right .div_body_right_grxx .div_div_body_right_yyzz .div_div_div_body_right_yyzz i{ width: 50px;height: 50px;display: block;margin-left: 12px;}
-.div_body .div_body_right .div_body_right_grxx .div_div_body_right_yyzz .div_div_div_body_right_yyzz .i_div_div_body_right_yyzz_sfz{ background: url(../images/xxxx/gy/xxxx_gy_sfz.png);}
-.div_body .div_body_right .div_body_right_grxx .div_div_body_right_yyzz .div_div_div_body_right_yyzz .i_div_div_body_right_yyzz_yyzz{ background: url(../images/xxxx/gy/xxxx_gy_yyzz.png);}
-.div_body .div_body_right .div_body_right_grxx .div_div_body_right_yyzz .div_div_div_body_right_yyzz .i_div_div_body_right_yyzz_zmxy{ background: url(../images/xxxx/gy/xxxx_gy_zmxy.png);}
+.div_body .div_body_right .div_body_right_grxx .div_div_body_right_yyzz .div_div_div_body_right_yyzz .i_div_div_body_right_yyzz_sfz{ background: url(../../images/xxxx/gy/xxxx_gy_sfz.png);}
+.div_body .div_body_right .div_body_right_grxx .div_div_body_right_yyzz .div_div_div_body_right_yyzz .i_div_div_body_right_yyzz_yyzz{ background: url(../../images/xxxx/gy/xxxx_gy_yyzz.png);}
+.div_body .div_body_right .div_body_right_grxx .div_div_body_right_yyzz .div_div_div_body_right_yyzz .i_div_div_body_right_yyzz_zmxy{ background: url(../../images/xxxx/gy/xxxx_gy_zmxy.png);}
 .div_body .div_body_right .div_body_right_grxx .div_div_body_right_ckxy{ width: 260px;height: 34px;padding: 6px 12px;color: #333;margin-top: 30px;background-color: rgba(238,239,241,0.2);border: 1px solid #cccccc;border-radius: 2px;}
 .div_body .div_body_right .div_body_right_grxx .div_div_body_right_ckxy:hover{ cursor: pointer;background-color: rgba(238,239,241,0.8);}
 /*首页_主体_左部_猜你喜欢*/
