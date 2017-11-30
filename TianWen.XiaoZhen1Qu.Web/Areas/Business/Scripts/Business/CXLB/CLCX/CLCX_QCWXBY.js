@@ -6,8 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadCLCondition() {
-    LoadConditionByTypeName("汽车维修/保养", "CODES_CL", "类别", "LB", 13);
-    LoadDistrict("福州", "350100", "QY");
+    LoadConditionByTypeNames("'汽车维修/保养类别'", "CODES_CL", "类别", "LB", "10");
     LoadBody("CLXX_QCWXBY", currentIndex);
 }
 //选择条件
@@ -57,7 +56,7 @@ function LoadCL_JCInfo(obj) {
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
     html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'CLXX_QCWXBY\',\'' + obj.ID + '\')">' + TruncStr(obj.BT, 35) + '</p>');
-    html += ('<p class="p_li_body_left_center_cs font_size16">' + obj.CX + ' / ' + obj.CCNF + '年 / ' + obj.XSS + '小时' + ' / ' + obj.QY + '-' + obj.DD + '</p>');
+    html += ('<p class="p_li_body_left_center_cs font_size16">' + obj.QY + '-' + obj.DD + '</p>');
     html += ('<p class="p_li_body_left_center_dz font_size16">' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
