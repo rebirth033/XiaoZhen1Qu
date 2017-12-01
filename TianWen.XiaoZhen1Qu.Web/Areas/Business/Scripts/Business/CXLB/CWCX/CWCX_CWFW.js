@@ -6,9 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadCWCondition() {
-    LoadConditionByTypeName("宠物服务", "CODES_CW", "类别", "LB");
-    LoadDistrict("福州", "350100", "QY");
-    LoadBody("CWXX_CWFW", currentIndex);
+    LoadConditionByTypeNames("'宠物服务类别'", "CODES_CW", "类别", "LB", "15");
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -18,6 +16,38 @@ function SelectCondition(obj, name) {
     $(obj).addClass("li_condition_body_active");
     LoadBody("CWXX_CWFW", currentIndex);
     ShowSelectCondition("CWXX_CWFW");
+}
+//根据TYPENAME获取字典表(私有)
+function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAMES",
+        dataType: "json",
+        data:
+        {
+            TYPENAMES: typenames,
+            TBName: table
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                LoadDistrictCondition(xml.districts, "QY");
+                var typelist = typenames.split(',');
+                var namelist = names.split(',');
+                for (var i = 0; i < typelist.length; i++) {
+                    for (var j = 0; j < namelist.length; j++) {
+                        if (typelist[i].indexOf(namelist[j]) !== -1) {
+                            LoadCondition(_.filter(xml.list, function (value) { return typelist[i].indexOf(value.TYPENAME) !== -1; }), namelist[j], ids.split(',')[j], lengths.split(',')[j]);
+                        }
+                    }
+                }
+                SetCondition("LB", getUrlParam("LB"));
+                LoadBody("CWXX_CWFW", currentIndex);
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
 }
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
@@ -48,7 +78,7 @@ function LoadBody(TYPE, PageIndex) {
         }
     });
 }
-//加载宠物单条信息
+//加载单条信息
 function LoadCWInfo(obj) {
     var html = "";
     html += ('<li class="li_body_left">');
@@ -62,7 +92,7 @@ function LoadCWInfo(obj) {
     html += ('<p class="p_li_body_left_center_dz font_size14">' + obj.QY + '-' + obj.DD + '<label>/</label>' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
-    html += ('<p class="p_li_body_left_right"><span class="span_zj">' + obj.JG + '</span>元/只</p>');
+    html += ('<p class="p_li_body_left_right"><span class="span_zj">' + obj.JG + '</span>元</p>');
     html += ('</div>');
     html += ('</li>');
     $("#ul_body_left").append(html);

@@ -7,7 +7,7 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("宠物服务", "LB", "CODES_CW", Bind, "CWFWLB", "LB", "");
+            LoadCODESByTYPENAME("宠物服务类别", "LB", "CODES_CW", Bind, "CWFWLB", "LB", "");
         }
     });
 }

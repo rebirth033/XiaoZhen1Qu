@@ -42,7 +42,7 @@ function SelectLB(obj, type, id) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("宠物用品/食品", "LB", "CODES_CW", Bind, "CWYPSPLB", "LB", "");
+            LoadCODESByTYPENAME("宠物用品/食品类别", "LB", "CODES_CW", Bind, "CWYPSPLB", "LB", "");
         }
         if (type === "XL") {
             LoadXL();

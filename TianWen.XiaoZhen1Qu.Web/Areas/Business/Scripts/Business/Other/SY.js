@@ -290,11 +290,11 @@ function OpenCXLB(lbid, typename, condition) {
     if (lbid === 75)
         window.open(getRootPath() + "/Business/CWCX/CWCX_HNYC?LBID=" + lbid + "&" + condition);
     if (lbid === 80)
-        window.open(getRootPath() + "/Business/CWCX/CWCX_CWFW?LBID=" + lbid);
+        window.open(getRootPath() + "/Business/CWCX/CWCX_CWFW?LBID=" + lbid + "&" + condition);
     if (lbid === 79)
-        window.open(getRootPath() + "/Business/CWCX/CWCX_CWYPSP?LBID=" + lbid);
+        window.open(getRootPath() + "/Business/CWCX/CWCX_CWYPSP?LBID=" + lbid + "&" + condition);
     if (lbid === 78)
-        window.open(getRootPath() + "/Business/CWCX/CWCX_CWGY?LBID=" + lbid);
+        window.open(getRootPath() + "/Business/CWCX/CWCX_CWGY?LBID=" + lbid + "&" + condition);
     //二手
     if (lbid === 186)
         window.open(getRootPath() + "/Business/ESCX/ESCX_SJSM_ESSJ?LBID=" + lbid);

@@ -45,7 +45,7 @@ function SelectLB(obj, type, id) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("花鸟鱼虫", "LB", "CODES_CW", Bind, "HNYCLB", "LB", "");
+            LoadCODESByTYPENAME("花鸟鱼虫类别", "LB", "CODES_CW", Bind, "HNYCLB", "LB", "");
         }
         if (type === "XL") {
             LoadXL();

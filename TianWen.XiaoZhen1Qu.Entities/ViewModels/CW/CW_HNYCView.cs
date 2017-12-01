@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using TianWen.XiaoZhen1Qu.Entities.Models;
 
 namespace TianWen.XiaoZhen1Qu.Entities.ViewModels.CW
@@ -18,9 +16,9 @@ namespace TianWen.XiaoZhen1Qu.Entities.ViewModels.CW
         public DateTime ZXGXSJ { get; set; }
         public byte[] BCMS { get; set; }
         public string BCMSString { get; set; }
-        //宠物_宠物狗信息
+        //详细信息
         public string ID { get; set; }
-        public string PZ { get; set; }
+        public string LB { get; set; }
         public string XL { get; set; }
         public string GQ { get; set; }
         public string JG { get; set; }

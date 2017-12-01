@@ -55,7 +55,7 @@ function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("LB,JG,QY");
+    var condition = GetAllCondition("LB,XL,JG,QY");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/CWCX/LoadCWXX",

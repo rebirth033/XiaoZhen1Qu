@@ -125,3 +125,10 @@ function FBXX() {
         }
     });
 }
+//加载价格
+function GetJG(jg, dw) {
+    if (jg === "面议")
+        return '<span class="span_zj">面议</span>';
+    else
+        return '<span class="span_zj">' + jg + '</span>' + dw;
+}
