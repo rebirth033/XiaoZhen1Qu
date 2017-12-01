@@ -84,10 +84,10 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string YMZL { get; set; }
 
         /// <summary>
-        /// 视频看狗
+        /// 在售只数
         /// </summary>
         [Property]
-        public virtual string SPKG { get; set; }
+        public virtual string ZSZS { get; set; }
 
         /// <summary>
         /// 补充描述

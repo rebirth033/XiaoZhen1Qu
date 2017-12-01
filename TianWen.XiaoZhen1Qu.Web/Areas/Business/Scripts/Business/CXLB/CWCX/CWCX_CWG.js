@@ -6,10 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadCWCondition() {
-    LoadConditionByTypeName("宠物狗品种", "CODES_CW", "品种", "PZ",15);
-    LoadConditionByTypeName("宠物狗年龄", "CODES_CW", "年龄", "NL");
-    LoadConditionByTypeName("宠物狗价格", "CODES_CW", "价格", "JG");
-    LoadDistrict("福州", "350100", "QY");
+    LoadConditionByTypeNames("'宠物狗品种','宠物狗年龄','宠物狗价格'", "CODES_CW", "品种,年龄,价格", "PZ,NL,JG", "15,15,15");
     LoadBody("CWXX_CWG", currentIndex);
 }
 //选择条件
@@ -41,7 +38,7 @@ function LoadBody(TYPE, PageIndex) {
                 $("#ul_body_left").html('');
                 LoadPage(TYPE, xml.PageCount);
                 for (var i = 0; i < xml.list.length; i++) {
-                    LoadCL_JCInfo(xml.list[i]);
+                    LoadInfo(xml.list[i]);
                 }
             }
         },
@@ -50,8 +47,8 @@ function LoadBody(TYPE, PageIndex) {
         }
     });
 }
-//加载宠物_宠物狗单条信息
-function LoadCL_JCInfo(obj) {
+//加载单条信息
+function LoadInfo(obj) {
     var html = "";
     html += ('<li class="li_body_left">');
     html += ('<div class="div_li_body_left_left">');
@@ -60,7 +57,7 @@ function LoadCL_JCInfo(obj) {
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
     html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'CWXX_CWG\',\'' + obj.ID + '\')">' + TruncStr(obj.BT, 35) + '</p>');
-    html += ('<p class="p_li_body_left_center_cs font_size14">' + obj.NL + obj.NLDW + '<label>/</label>' + obj.YMQK + '疫苗<label>/</label>' + obj.QCQK + '</p>');
+    html += ('<p class="p_li_body_left_center_cs font_size14">' + obj.NL + obj.NLDW + '<label>/</label>' + obj.YMQK + '疫苗<label>/</label>' + obj.QCQK + '<label>/</label>' + obj.ZSZS + '只在售</p>');
     html += ('<p class="p_li_body_left_center_dz font_size14">' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');

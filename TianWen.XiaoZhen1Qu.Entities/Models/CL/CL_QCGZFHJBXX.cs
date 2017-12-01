@@ -41,12 +41,6 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string JG { get; set; }
 
         /// <summary>
-        /// 服务区域
-        /// </summary>
-        [Property]
-        public virtual string FWQY { get; set; }
-
-        /// <summary>
         /// 补充描述
         /// </summary>
         [Property]

@@ -30,6 +30,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.ViewModels.CW
         public string SPKG { get; set; }
         public string SF { get; set; }
         public string JG { get; set; }
+        public string ZSZS { get; set; }
         //图片
         public IList<PHOTOS> PHOTOS { get; set; }
 

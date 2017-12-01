@@ -33,7 +33,7 @@ function LoadCWGPZ(CWG) {
         data:
         {
             CODEVALUE: CWG.split("div")[1],
-            TYPENAME: "宠物狗",
+            TYPENAME: "宠物狗品种",
             TBName: "CODES_CW"
         },
         success: function (xml) {
@@ -120,8 +120,6 @@ function LoadCW_CWGJBXX() {
                     SetDX("GQ", xml.Value.CW_CWGJBXX.SF);
                 if (xml.Value.CW_CWGJBXX.QCQK !== null)
                     SetDX("QCQK", xml.Value.CW_CWGJBXX.QCQK);
-                if (xml.Value.CW_CWGJBXX.SPKG !== null)
-                    SetDX("SPKG", xml.Value.CW_CWGJBXX.SPKG);
                 LoadPhotos(xml.Value.Photos);
             }
         },
@@ -144,7 +142,6 @@ function FB() {
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "SF", "'" + GetDX("GQ") + "'");
     obj = jsonObj.AddJson(obj, "QCQK", "'" + GetDX("QCQK") + "'");
-    obj = jsonObj.AddJson(obj, "SPKG", "'" + GetDX("SPKG") + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");

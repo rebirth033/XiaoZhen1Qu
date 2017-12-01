@@ -7,7 +7,7 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("汽车改装/防护", "LB", "CODES_CL", Bind, "OUTLB", "LB", "");
+            LoadCODESByTYPENAME("汽车改装/防护类别", "LB", "CODES_CL", Bind, "OUTLB", "LB", "");
         }
         if (type === "XL") {
             LoadXL();

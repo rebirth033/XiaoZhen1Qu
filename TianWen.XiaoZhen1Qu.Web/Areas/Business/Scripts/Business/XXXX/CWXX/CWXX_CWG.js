@@ -66,12 +66,12 @@ function LoadJBXX(obj) {
     html += ('<span class="span_body_left_body_right_right">' + obj.XB + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">毛色：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.MS + '</span>');
+    html += ('<span class="span_body_left_body_right_left">在售只数：</span>');
+    html += ('<span class="span_body_left_body_right_right">' + obj.ZSZS + '只</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">防疫：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.YMQK + ' / ' + obj.QCQK + '年</span>');
+    html += ('<span class="span_body_left_body_right_right">' + obj.YMQK + ' / ' + obj.QCQK + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right_lxdh" style="margin-top:78px;">');
     html += ('<img class="img_body_left_body_right_lxdh" src="' + getRootPath() + '/Areas/Business/Css/images/lxdh.png" />' + obj.LXDH);
