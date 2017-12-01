@@ -46,7 +46,7 @@ function SelectLB(obj, type, codeid) {
 }
 //判断类别
 function PDLB(name, codeid) {
-    if (name.indexOf("干锅") !== -1) {
+    if (name.indexOf("干锅") !== -1 || name.indexOf("土特产") !== -1) {
         $("#divXL").css("display", "none");
     }
     else {
