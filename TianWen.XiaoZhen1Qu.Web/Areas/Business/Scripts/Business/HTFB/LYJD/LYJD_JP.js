@@ -2,8 +2,6 @@
 $(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
     BindClick("LB");
-    BindClick("QY");
-    BindClick("DD");
     LoadLYJD_JPJBXX();
 });
 //选择类别下拉框
@@ -57,12 +55,7 @@ function BindClick(type) {
         if (type === "LB") {
             LoadCODESByTYPENAME("机票", "LB", "CODES_LYJD", Bind, "OUTLB", "LB", "");
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+        
     });
 }
 //加载旅游酒店_机票基本信息

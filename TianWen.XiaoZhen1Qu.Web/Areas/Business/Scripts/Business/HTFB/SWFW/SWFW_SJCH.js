@@ -1,8 +1,6 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
     BindClick("LB");
-    BindClick("QY");
-    BindClick("DD");
     LoadSWFW_SJCHJBXX();
 });
 //选择类别下拉框
@@ -70,12 +68,7 @@ function BindClick(type) {
         if (type === "LB") {
             LoadCODESByTYPENAME("设计策划", "LB", "CODES_SWFW");
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+        
     });
 }
 //加载商务服务_设计策划基本信息

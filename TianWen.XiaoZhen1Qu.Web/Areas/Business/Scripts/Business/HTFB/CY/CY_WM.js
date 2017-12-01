@@ -2,8 +2,6 @@
     $("body").bind("click", function () { Close("_XZQ"); });
     LoadDuoX("外卖", "WMLB");
     BindClick("LB");
-    BindClick("QY");
-    BindClick("DD");
 });
 //加载多选
 function LoadDuoX(type, id) {
@@ -54,12 +52,7 @@ function BindClick(type) {
         if (type === "LB") {
             LoadLB();
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+        
     });
 }
 //加载餐饮_外卖基本信息

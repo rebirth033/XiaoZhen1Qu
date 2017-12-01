@@ -31,12 +31,6 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             ViewData["YHM"] = Session["YHM"];
             return View();
         }
-        public ActionResult PFCG_YX()
-        {
-            ViewData["XZQ"] = Session["XZQ"];
-            ViewData["YHM"] = Session["YHM"];
-            return View();
-        }
         public ActionResult PFCG_DJZM()
         {
             ViewData["XZQ"] = Session["XZQ"];
@@ -158,20 +152,6 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             PFCG_AFSBjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
             object result = PFCG_BLL.SavePFCG_AFSBJBXX(jcxx, PFCG_AFSBjbxx, photos);
-            return Json(result);
-        }
-        [ValidateInput(false)]
-        public JsonResult FBPFCG_YXJBXX()
-        {
-            YHJBXX yhjbxx = PFCG_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
-            string json = Request["Json"];
-            string bcms = Request["BCMS"];
-            string fwzp = Request["FWZP"];
-            JCXX jcxx = CreateJCXX(yhjbxx, json);
-            PFCG_YXJBXX PFCG_YXjbxx = JsonHelper.ConvertJsonToObject<PFCG_YXJBXX>(json);
-            PFCG_YXjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
-            List<PHOTOS> photos = GetTP(fwzp);
-            object result = PFCG_BLL.SavePFCG_YXJBXX(jcxx, PFCG_YXjbxx, photos);
             return Json(result);
         }
         [ValidateInput(false)]
@@ -455,17 +435,10 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return Json(result);
         }
 
-
         public JsonResult LoadPFCG_AFSBJBXX()
         {
             string ID = Request["ID"];
             object result = PFCG_BLL.LoadPFCG_AFSBJBXX(ID);
-            return Json(result);
-        }
-        public JsonResult LoadPFCG_YXBXX()
-        {
-            string ID = Request["ID"];
-            object result = PFCG_BLL.LoadPFCG_YXJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadPFCG_BZJBXX()

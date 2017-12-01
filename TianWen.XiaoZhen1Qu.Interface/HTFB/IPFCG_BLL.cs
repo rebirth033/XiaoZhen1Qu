@@ -88,9 +88,5 @@ namespace TianWen.XiaoZhen1Qu.Interface
         object SavePFCG_YCLJBXX(JCXX jcxx, PFCG_YCLJBXX dzfjbxx, List<PHOTOS> photos);
 
         object LoadPFCG_YCLJBXX(string ID);
-
-        object SavePFCG_YXJBXX(JCXX jcxx, PFCG_YXJBXX dzfjbxx, List<PHOTOS> photos);
-
-        object LoadPFCG_YXJBXX(string ID);
     }
 }

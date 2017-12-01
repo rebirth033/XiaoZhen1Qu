@@ -1,18 +1,11 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
-    BindClick("QY");
-    BindClick("DD");
     LoadLYJD_LXSJBXX();
 });
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+        
     });
 }
 //加载旅游酒店_旅行社基本信息

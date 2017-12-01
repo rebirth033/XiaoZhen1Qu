@@ -2,8 +2,6 @@
     $("body").bind("click", function () { Close("_XZQ"); });
     LoadPFCG_YCLJBXX();
     BindClick("LB");
-    BindClick("QY");
-    BindClick("DD");
 });
 //加载小类
 function LoadXL() {
@@ -53,17 +51,12 @@ function SelectLB(obj, type, id) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("原材料", "LB", "CODES_PFCG", Bind, "OUTLB", "LB", "");
+            LoadCODESByTYPENAME("原材料类别", "LB", "CODES_PFCG", Bind, "OUTLB", "LB", "");
         }
         if (type === "XL") {
             LoadXL();
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+        
     });
 }
 //加载批发采购_原材料基本信息

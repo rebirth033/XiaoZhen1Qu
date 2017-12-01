@@ -1,8 +1,6 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
     BindClick("LB");
-    BindClick("QY");
-    BindClick("DD");
     BindClick("YZ");
     LoadZYLY();
 });
@@ -203,12 +201,7 @@ function BindClick(type) {
             LoadYZ();
             LoadYZMC("语种", "divA");
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+        
     });
 }
 //加载商务服务_翻译/速记基本信息

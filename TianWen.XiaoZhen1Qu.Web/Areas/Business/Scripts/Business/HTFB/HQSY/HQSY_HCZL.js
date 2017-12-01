@@ -3,8 +3,6 @@
     BindClick("LB");
     BindClick("TCPP");
     BindClick("GCPP");
-    BindClick("QY");
-    BindClick("DD");
     LoadTCYS();
     LoadGCYS();
     LoadDuoX("婚车租赁", "TGFW");
@@ -169,12 +167,7 @@ function BindClick(type) {
         if (type === "XL") {
             LoadXL();
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+        
     });
 }
 //选择类别下拉框

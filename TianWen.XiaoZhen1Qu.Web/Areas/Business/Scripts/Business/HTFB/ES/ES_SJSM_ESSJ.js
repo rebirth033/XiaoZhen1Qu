@@ -3,8 +3,6 @@
     BindClick("SJPP");
     BindClick("SJXH");
     LoadDuoX("特色标签", "TSBQ");
-    BindClick("QY");
-    BindClick("DD");
 });
 //加载多选
 function LoadDuoX(type, id) {
@@ -50,12 +48,7 @@ function BindClick(type) {
         if (type === "SJXH") {
             LoadSJXH();
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+        
     });
 }
 //加载手机型号

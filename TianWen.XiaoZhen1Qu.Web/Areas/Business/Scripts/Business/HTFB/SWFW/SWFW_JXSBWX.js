@@ -1,8 +1,6 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
     LoadJXSBWXLB();
-    BindClick("QY");
-    BindClick("DD");
 });
 //加载机械设备维修类别
 function LoadJXSBWXLB() {
@@ -43,12 +41,7 @@ function LoadJXSBWXLB() {
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+        
     });
 }
 //加载商务服务_机械设备维修基本信息

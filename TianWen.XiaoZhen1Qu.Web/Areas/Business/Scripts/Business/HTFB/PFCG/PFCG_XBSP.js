@@ -2,8 +2,6 @@
     $("body").bind("click", function () { Close("_XZQ"); });
     LoadPFCG_XBSPJBXX();
     BindClick("LB");
-    BindClick("QY");
-    BindClick("DD");
 });
 //加载小类
 function LoadXL() {
@@ -55,17 +53,12 @@ function SelectLB(obj, type, id) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("箱包/饰品", "LB", "CODES_PFCG", Bind, "OUTLB", "LB", "");
+            LoadCODESByTYPENAME("箱包/饰品类别", "LB", "CODES_PFCG", Bind, "OUTLB", "LB", "");
         }
         if (type === "XL") {
             LoadXL();
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+        
     });
 }
 //加载批发采购_箱包/饰品基本信息

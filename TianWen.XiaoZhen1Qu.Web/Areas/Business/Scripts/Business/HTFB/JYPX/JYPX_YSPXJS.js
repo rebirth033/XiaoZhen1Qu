@@ -2,8 +2,6 @@
     $("body").bind("click", function () { Close("_XZQ"); });
     BindClick("JXKM");
     BindClick("BYYX");
-    BindClick("QY");
-    BindClick("DD");
     LoadJYPX_YSPXJSJBXX();
 });
 //加载毕业院校标签
@@ -65,12 +63,7 @@ function BindClick(type) {
             LoadBYYX();
             LoadBYYXMC("毕业院校", "divA");
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+        
     });
 }
 //加载多选

@@ -1,7 +1,5 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
-    BindClick("QY");
-    BindClick("DD");
     LoadDuoX("辅导阶段", "FDJD");
     LoadDuoX("辅导科目", "FDKM");
 });
@@ -49,12 +47,7 @@ function LoadDuoX(type, id) {
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+        
     });
 }
 //加载商务服务_家教个人基本信息

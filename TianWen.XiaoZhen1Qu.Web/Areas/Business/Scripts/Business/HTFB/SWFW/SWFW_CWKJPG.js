@@ -1,8 +1,6 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
     LoadCWKJPGLB();
-    BindClick("QY");
-    BindClick("DD");
 });
 //加载财务会计/评估类别
 function LoadCWKJPGLB() {
@@ -43,12 +41,7 @@ function LoadCWKJPGLB() {
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+        
     });
 }
 //加载商务服务_财务会计/评估基本信息

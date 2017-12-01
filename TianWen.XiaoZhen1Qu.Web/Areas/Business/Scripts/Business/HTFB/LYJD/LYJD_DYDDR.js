@@ -2,8 +2,6 @@
     $("body").bind("click", function () { Close("_XZQ"); });
     BindClick("XL");
     BindClick("DTJY");
-    BindClick("QY");
-    BindClick("DD");
     LoadDuoX("导游语种", "DYYZ");
 });
 //加载多选
@@ -59,12 +57,7 @@ function BindClick(type) {
         if (type === "CYFS") {
             LoadCODESByTYPENAME("出游方式", "CYFS", "CODES_LYJD", Bind, "DYDDRCYFS", "CYFS", "");
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+        
     });
 }
 //加载旅游酒店_导游/当地人基本信息

@@ -2,8 +2,6 @@
     $("body").bind("click", function () { Close("_XZQ"); });
     BindClick("LB");
     BindClick("PP");
-    BindClick("QY");
-    BindClick("DD");
     LoadSHFW_SHPSJBXX();
 });
 
@@ -81,12 +79,7 @@ function BindClick(type) {
         if (type === "PP") {
             LoadCODESByTYPENAME("桶装水品牌", "PP", "CODES_SHFW", Bind, "TZSPP", "PP", "");
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+        
     });
 }
 //加载生活服务_生活配送基本信息

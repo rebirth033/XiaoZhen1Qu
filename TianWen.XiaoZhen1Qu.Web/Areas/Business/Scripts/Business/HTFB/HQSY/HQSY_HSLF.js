@@ -3,8 +3,6 @@
     BindClick("YS");
     BindClick("LX");
     BindClick("CZ");
-    BindClick("QY");
-    BindClick("DD");
     LoadHQSY_HSLFJBXX();
 });
 //绑定下拉框鼠标点击样式
@@ -19,12 +17,7 @@ function BindClick(type) {
         if (type === "CZ") {
             LoadCODESByTYPENAME("婚纱礼服材质", "CZ", "CODES_HQSY", Bind, "HSLFCZ", "CZ", "");
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+        
     });
 }
 //选择类别下拉框

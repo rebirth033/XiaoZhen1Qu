@@ -1,8 +1,6 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
     BindClick("GJ");
-    BindClick("QY");
-    BindClick("DD");
     LoadDuoX("移民类别", "YMLB");
 });
 //加载国家标签
@@ -102,12 +100,7 @@ function BindClick(type) {
             LoadGJ();
             LoadGJMC("留学国家", "divA");
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+        
     });
 }
 //加载商务服务_移民基本信息

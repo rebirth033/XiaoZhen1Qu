@@ -1,8 +1,6 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
     BindClick("LB");
-    BindClick("QY");
-    BindClick("DD");
     LoadSHFW_JJWXJBXX();
 });
 //加载小类
@@ -43,12 +41,7 @@ function BindClick(type) {
         if (type === "XL") {
             LoadXL();
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+        
     });
 }
 //加载生活服务_家具维修基本信息

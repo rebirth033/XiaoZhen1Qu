@@ -1,8 +1,6 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
     BindClick("JXKM");
-    BindClick("QY");
-    BindClick("DD");
     LoadDuoX("辅导阶段", "FDJD");
     LoadDuoX("辅导科目", "FDKM");
     LoadJYPX_YYPXJSJBXX();
@@ -20,12 +18,7 @@ function BindClick(type) {
         if (type === "JXKM") {
             LoadCODESByTYPENAME("教学科目", "JXKM", "CODES_JYPX", Bind, "YYPXJSJXKM", "JXKM", "");
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+        
     });
 }
 //加载多选

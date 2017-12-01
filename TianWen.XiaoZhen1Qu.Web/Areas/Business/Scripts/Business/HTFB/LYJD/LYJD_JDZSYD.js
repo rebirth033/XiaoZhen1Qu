@@ -2,8 +2,6 @@
 $(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
     BindClick("LB");
-    BindClick("QY");
-    BindClick("DD");
     LoadLYJD_JDZSYDJBXX();
 });
 
@@ -70,12 +68,7 @@ function BindClick(type) {
         if (type === "LB") {
             LoadCODESByTYPENAME("酒店/住宿预订", "LB", "CODES_LYJD", Bind, "OUTLB", "LB", "");
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+        
     });
 }
 //加载旅游酒店_酒店/住宿预订基本信息

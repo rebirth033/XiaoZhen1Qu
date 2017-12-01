@@ -1,8 +1,6 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
     BindClick("YZ");
-    BindClick("QY");
-    BindClick("DD");
     LoadDuoX("专项", "ZX");
 });
 //选择类别下拉框
@@ -110,12 +108,7 @@ function BindClick(type) {
         if (type === "YZ") {
             LoadCODESByTYPENAME("语言培训机构", "YZ", "CODES_JYPX");
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+        
     });
 }
 //加载商务服务_语言培训机构基本信息

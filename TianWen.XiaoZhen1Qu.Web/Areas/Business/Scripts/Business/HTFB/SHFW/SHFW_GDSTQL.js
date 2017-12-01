@@ -1,8 +1,6 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
     BindClick("LB");
-    BindClick("QY");
-    BindClick("DD");
     LoadSHFW_GDSTQLJBXX();
 });
 //选择类别下拉框
@@ -59,12 +57,7 @@ function BindClick(type) {
         if (type === "LB") {
             LoadCODESByTYPENAME("管道疏通/清理", "LB", "CODES_SHFW", Bind, "OUTLB", "LB", "");
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+        
     });
 }
 //加载生活服务_管道疏通/清理基本信息

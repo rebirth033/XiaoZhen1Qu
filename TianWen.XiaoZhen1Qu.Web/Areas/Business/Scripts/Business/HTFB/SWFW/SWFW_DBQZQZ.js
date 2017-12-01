@@ -2,8 +2,6 @@
     $("body").bind("click", function () { Close("_XZQ"); });
     BindClick("LB");
     BindClick("GJ");
-    BindClick("QY");
-    BindClick("DD");
     LoadSWFW_DBQZQZJBXX();
 });
 //加载国家标签
@@ -66,12 +64,7 @@ function BindClick(type) {
             LoadGJ();
             LoadGJMC("国家", "divA");
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+        
     });
 }
 //加载商务服务_代办签证/签注基本信息

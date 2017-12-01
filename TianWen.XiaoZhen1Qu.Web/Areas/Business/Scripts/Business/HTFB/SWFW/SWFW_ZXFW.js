@@ -1,8 +1,6 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
     BindClick("LB");
-    BindClick("QY");
-    BindClick("DD");
     LoadSWFW_ZXFWJBXX();
 });
 //选择类别下拉框
@@ -58,12 +56,7 @@ function BindClick(type) {
         if (type === "LB") {
             LoadCODESByTYPENAME("咨询服务", "LB", "CODES_SWFW", Bind, "OUTLB", "LB", "");
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+        
     });
 }
 //加载商务服务_咨询服务基本信息

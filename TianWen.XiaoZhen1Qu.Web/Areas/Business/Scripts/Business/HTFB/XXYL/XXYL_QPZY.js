@@ -2,8 +2,6 @@
     $("body").bind("click", function () { Close("_XZQ"); });
     LoadXXYL_QPZYJBXX();
     BindClick("LB");
-    BindClick("QY");
-    BindClick("DD");
 });
 
 //绑定下拉框鼠标点击样式
@@ -12,12 +10,7 @@ function BindClick(type) {
         if (type === "LB") {
             LoadCODESByTYPENAME("棋牌桌游", "LB", "CODES_XXYL", Bind, "QPZYLB", "LB", "");
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+        
     });
 }
 //加载休闲娱乐_棋牌桌游基本信息

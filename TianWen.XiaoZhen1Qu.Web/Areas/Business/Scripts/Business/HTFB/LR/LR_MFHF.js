@@ -2,8 +2,6 @@
     $("body").bind("click", function () { Close("_XZQ"); });
     LoadDuoX("美发护发", "MFHFLB");
     BindClick("LB");
-    BindClick("QY");
-    BindClick("DD");
 });
 //加载多选
 function LoadDuoX(type, id) {
@@ -44,12 +42,7 @@ function LoadDuoX(type, id) {
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+        
     });
 }
 //加载丽人_美发护发基本信息

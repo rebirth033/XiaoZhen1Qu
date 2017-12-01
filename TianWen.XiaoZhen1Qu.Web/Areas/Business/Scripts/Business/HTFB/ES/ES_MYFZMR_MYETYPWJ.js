@@ -3,8 +3,6 @@
     LoadES_MYFZMR_MYETYPWJJBXX();
     BindClick("LB");
     BindClick("XJ");
-    BindClick("QY");
-    BindClick("DD");
 
 });
 
@@ -20,12 +18,7 @@ function BindClick(type) {
         if (type === "XJ") {
             LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM", Bind, "XJCD", "XJ", "");
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+        
     });
 }
 //选择类别下拉框

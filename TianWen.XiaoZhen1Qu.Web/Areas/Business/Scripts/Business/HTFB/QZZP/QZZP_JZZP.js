@@ -8,8 +8,6 @@
     BindClick("XZDW");
     BindClick("XZJS");
     BindClick("GZCS");
-    BindClick("QY");
-    BindClick("DD");
     $(".img_jzsj").each(function () {$(this).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");});
 });
 //选择兼职时间
@@ -120,12 +118,7 @@ function BindClick(type) {
         if (type === "JZLB") {
             LoadJZLB();
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+        
         if (type === "GZCS") {
             LoadGZCSBQ();
             LoadGZCS("A", "divA");

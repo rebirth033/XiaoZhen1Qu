@@ -201,7 +201,6 @@
     <Compile Include="Maps\PFCG\PFCG_TSJBXX_Map.cs" />
     <Compile Include="Maps\PFCG\PFCG_XBSPJBXX_Map.cs" />
     <Compile Include="Maps\PFCG\PFCG_HWYDJBXX_Map.cs" />
-    <Compile Include="Maps\PFCG\PFCG_YXJBXX_Map.cs" />
     <Compile Include="Maps\PFCG\PFCG_YBYQJBXX_Map.cs" />
     <Compile Include="Maps\PFCG\PFCG_YCLJBXX_Map.cs" />
     <Compile Include="Maps\PHOTOS_Map.cs" />

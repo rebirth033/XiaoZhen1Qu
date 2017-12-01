@@ -2,8 +2,6 @@
     $("body").bind("click", function () { Close("_XZQ"); });
     LoadLR_MTSSJBXX();
     BindClick("LB");
-    BindClick("QY");
-    BindClick("DD");
 });
 //选择类别下拉框
 function SelectLB(obj, type) {
@@ -30,12 +28,7 @@ function BindClick(type) {
         if (type === "FS") {
             LoadCODESByTYPENAME("减肥方式", "FS", "CODES_LR", Bind, "JFFS", "FS", "");
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+        
     });
 }
 //加载丽人_美体瘦身基本信息

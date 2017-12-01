@@ -1,8 +1,6 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
-    BindClick("GJ");
-    BindClick("QY");
-    BindClick("DD"); 
+    BindClick("GJ"); 
     LoadDuoX("申请学历", "SQXL");
 });
 //加载国家标签
@@ -102,12 +100,7 @@ function BindClick(type) {
             LoadGJ();
             LoadGJMC("国家", "divA");
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+        
     });
 }
 //加载商务服务_留学基本信息

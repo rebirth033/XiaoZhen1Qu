@@ -1,8 +1,6 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
     BindClick("LB");
-    BindClick("QY");
-    BindClick("DD");
     LoadSHFW_BJQXJBXX();
 });
 //选择类别下拉框
@@ -59,12 +57,7 @@ function BindClick(type) {
         if (type === "LB") {
             LoadCODESByTYPENAME("保洁清洗", "LB", "CODES_SHFW", Bind, "OUTLB", "LB", "");
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+        
     });
 }
 //加载生活服务_保洁清洗基本信息

@@ -27,12 +27,7 @@ function BindClick(type) {
         if (type === "XL") {
             LoadCODESByTYPENAME("平板电脑配件", "XL", "CODES_ES_SJSM", Bind, "PBLB", "XL", "");
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+        
     });
 }
 //加载平板型号

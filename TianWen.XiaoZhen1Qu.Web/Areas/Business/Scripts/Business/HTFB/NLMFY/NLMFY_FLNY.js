@@ -2,8 +2,6 @@
     $("body").bind("click", function () { Close("_XZQ"); });
     LoadNLMFY_FLNYJBXX();
     BindClick("LB");
-    BindClick("QY");
-    BindClick("DD");
 });
 
 //绑定下拉框鼠标点击样式
@@ -16,12 +14,7 @@ function BindClick(type) {
             LoadXL();
             LoadXLMC($("#spanLB").html(), "divA");
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+        
     });
 }
 //选择类别下拉框

@@ -1,8 +1,6 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
     BindClick("JXKM");
-    BindClick("QY");
-    BindClick("DD");
     LoadJYPX_TYJLJBXX();
 });
 //绑定下拉框鼠标点击样式
@@ -11,12 +9,7 @@ function BindClick(type) {
         if (type === "JXKM") {
             LoadCODESByTYPENAME("体育培训", "JXKM", "CODES_JYPX", Bind, "TYJLJXKM", "JXKM", "");
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+        
     });
 }
 //加载教育培训_体育教练基本信息

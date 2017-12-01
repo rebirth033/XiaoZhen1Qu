@@ -1,8 +1,6 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
     BindClick("LB");
-    BindClick("QY");
-    BindClick("DD");
     LoadSWFW_GGCMJBXX();
 });
 //选择类别下拉框
@@ -70,12 +68,7 @@ function BindClick(type) {
         if (type === "LB") {
             LoadCODESByTYPENAME("广告传媒", "LB", "CODES_SWFW", Bind, "OUTLB", "LB", "");
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+        
     });
 }
 //加载商务服务_广告传媒基本信息

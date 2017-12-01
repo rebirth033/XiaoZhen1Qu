@@ -1,8 +1,6 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
     LoadZHFS();
-    BindClick("QY");
-    BindClick("DD");
     BindClick("YSJGDW");
 });
 //绑定下拉框鼠标点击样式
@@ -11,12 +9,7 @@ function BindClick(type) {
         if (type === "YSJGDW") {
             LoadCODESByTYPENAME("运输价格单位", "YSJGDW", "CODES_SWFW", Bind, "YSJG", "YSJGDW", "");
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+        
     });
 }
 //加载组货方式

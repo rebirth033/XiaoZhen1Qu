@@ -3,8 +3,6 @@
     LoadDuoX("室内设备", "SNSB");
     BindClick("LB");
     BindClick("KRNRS");
-    BindClick("QY");
-    BindClick("DD");
 });
 //加载多选
 function LoadDuoX(type, id) {
@@ -48,12 +46,7 @@ function BindClick(type) {
         if (type === "KRNRS") {
             LoadCODESByTYPENAME("可容纳人数", "KRNRS", "CODES_XXYL", Bind, "HPGKRNRS", "KRNRS", "");
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+        
     });
 }
 //加载休闲娱乐_轰趴馆基本信息

@@ -2,8 +2,6 @@
     $("#divSFSM").find(".div_radio").bind("click", function () { ValidateRadio("SFSM", "忘记选择是否上门啦"); });
     $("body").bind("click", function () { Close("_XZQ"); });
     BindClick("LB");
-    BindClick("QY");
-    BindClick("DD");
     LoadSHFW_DNWXJBXX();
 });
 //选择类别下拉框
@@ -60,12 +58,7 @@ function BindClick(type) {
         if (type === "LB") {
             LoadCODESByTYPENAME("电脑维修", "LB", "CODES_SHFW", Bind, "OUTLB", "LB", "");
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+        
     });
 }
 //加载生活服务_电脑维修基本信息

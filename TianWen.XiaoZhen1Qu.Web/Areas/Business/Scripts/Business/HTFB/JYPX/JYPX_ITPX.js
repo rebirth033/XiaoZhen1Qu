@@ -1,8 +1,6 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
     BindClick("LB");
-    BindClick("QY");
-    BindClick("DD");
     LoadDuoX("IT培训形式", "XS");
 });
 //加载多选
@@ -109,12 +107,7 @@ function BindClick(type) {
         if (type === "LB") {
             LoadCODESByTYPENAME("IT培训", "LB", "CODES_JYPX", Bind, "OUTLB", "LB", "");
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+        
     });
 }
 //加载商务服务_IT培训基本信息

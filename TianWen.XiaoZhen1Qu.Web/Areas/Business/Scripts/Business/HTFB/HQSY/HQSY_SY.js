@@ -1,7 +1,5 @@
 ﻿
 $(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });BindClick("CYSJ");
-    BindClick("QY");
-    BindClick("DD");
     LoadHQSY_SYJBXX();
 });
 
@@ -14,12 +12,7 @@ function BindClick(type) {
         if (type === "XL") {
             LoadXL();
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+        
     });
 }
 //选择类别下拉框

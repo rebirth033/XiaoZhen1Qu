@@ -5,8 +5,6 @@
     BindClick("PSFG");
     BindClick("LX");
     BindClick("CZ");
-    BindClick("QY");
-    BindClick("DD");
     LoadSWFW_SYSXJBXX();
 });
 //绑定下拉框鼠标点击样式
@@ -21,12 +19,7 @@ function BindClick(type) {
         if (type === "PSFG") {
             LoadCODESByTYPENAME("拍摄风格", "PSFG", "CODES_SWFW", Bind, "SYSXPSFG", "PSFG", "");
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+        
     });
 }
 //选择类别下拉框

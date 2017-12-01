@@ -1,8 +1,6 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
     BindClick("JXKM");
-    BindClick("QY");
-    BindClick("DD");
     LoadDuoX("辅导阶段", "FDJD");
 });
 //加载多选
@@ -61,12 +59,7 @@ function BindClick(type) {
         if (type === "JXKM") {
             LoadCODESByTYPENAME("体育培训教学科目", "JXKM", "CODES_JYPX");
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+        
     });
 }
 //加载教育培训_拼班拼课基本信息

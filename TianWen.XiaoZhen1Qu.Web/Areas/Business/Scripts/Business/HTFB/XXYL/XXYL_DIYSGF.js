@@ -2,8 +2,6 @@
     $("body").bind("click", function () { Close("_XZQ"); });
     LoadXXYL_DIYSGFJBXX();
     BindClick("LB");
-    BindClick("QY");
-    BindClick("DD");
 });
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
@@ -11,12 +9,7 @@ function BindClick(type) {
         if (type === "LB") {
             LoadCODESByTYPENAME("DIY手工坊", "LB", "CODES_XXYL", Bind, "DIYSGFLB", "LB", "");
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+        
     });
 }
 //加载休闲娱乐_DIY手工坊基本信息

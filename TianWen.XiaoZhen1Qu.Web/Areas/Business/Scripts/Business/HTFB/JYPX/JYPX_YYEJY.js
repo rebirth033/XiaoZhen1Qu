@@ -1,8 +1,6 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
     BindClick("LB");
-    BindClick("QY");
-    BindClick("DD");
     LoadDuoX("服务类型", "FWLX");
 });
 //加载多选
@@ -97,12 +95,7 @@ function BindClick(type) {
         if (type === "LB") {
             LoadCODESByTYPENAME("婴幼儿教育", "LB", "CODES_JYPX", Bind, "OUTLB", "LB", "");
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+        
     });
 }
 //加载商务服务_婴幼儿教育基本信息

@@ -1,8 +1,6 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
     BindClick("LB");
-    BindClick("QY");
-    BindClick("DD");
     LoadSWFW_PHZPJBXX();
 });
 //绑定下拉框鼠标点击样式
@@ -26,12 +24,7 @@ function BindClick(type) {
         if (type === "GN") {
             LoadCODESByTYPENAME("标牌功能", "GN", "CODES_SWFW", Bind, "PHZPGN", "GN", "");
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+        
     });
 }
 //选择类别下拉框

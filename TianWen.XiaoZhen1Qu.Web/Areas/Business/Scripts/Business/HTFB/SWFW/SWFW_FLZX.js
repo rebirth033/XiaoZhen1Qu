@@ -3,8 +3,6 @@
     $("#div_ly_lssws").bind("click", LSSWSSelect);
     $("body").bind("click", function () { Close("_XZQ"); });
     LoadFLZXLB();
-    BindClick("QY");
-    BindClick("DD");
 });
 //选择律师
 function LSSelect() {
@@ -55,12 +53,7 @@ function LoadFLZXLB() {
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+        
     });
 }
 //加载商务服务_法律咨询基本信息
