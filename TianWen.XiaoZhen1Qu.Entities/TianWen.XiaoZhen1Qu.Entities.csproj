@@ -585,6 +585,7 @@
     <Compile Include="ViewModels\FC\FC_SPView.cs" />
     <Compile Include="ViewModels\FC\FC_ZZFView.cs" />
     <Compile Include="ViewModels\GY\GRXXView.cs" />
+    <Compile Include="ViewModels\PFCG\PFCG_SPView.cs" />
     <Compile Include="ViewModels\QZZP\QZZP_JZZPView.cs" />
     <Compile Include="ViewModels\QZZP\QZZP_QZZPView.cs" />
   </ItemGroup>

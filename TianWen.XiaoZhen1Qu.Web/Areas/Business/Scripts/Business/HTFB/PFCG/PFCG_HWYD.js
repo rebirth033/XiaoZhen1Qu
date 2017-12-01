@@ -2,10 +2,7 @@
     $("body").bind("click", function () { Close("_XZQ"); });
     LoadPFCG_HWYDJBXX();
     BindClick("LB");
-    BindClick("QY");
-    BindClick("DD");
 });
-
 //加载小类
 function LoadXL() {
     $.ajax({
@@ -55,13 +52,7 @@ function SelectLB(obj, type, id) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("户外运动", "LB", "CODES_PFCG", Bind, "OUTLB", "LB", "");
-        }
-        if (type === "XL") {
-            LoadXL();
-        }
-        if (type === "QY") {
-            LoadQY();
+            LoadCODESByTYPENAME("户外运动类别", "LB", "CODES_PFCG", Bind, "OUTLB", "LB", "");
         }
         if (type === "DD") {
             LoadDD($("#QYCode").val());

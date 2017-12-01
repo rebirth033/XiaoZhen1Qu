@@ -1,8 +1,6 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
-    LoadDuoX("商超设备", "SCSBLB");
-    BindClick("QY");
-    BindClick("DD");
+    LoadDuoX("商超设备类别", "SCSBLB");
 });
 
 //加载多选
@@ -44,12 +42,7 @@ function LoadDuoX(type, id) {
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+
     });
 }
 //加载休闲娱乐_商超设备基本信息

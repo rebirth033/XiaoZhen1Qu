@@ -1,9 +1,7 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
-    LoadPFCG_FSXMJBXX();
+    LoadJBXX();
     BindClick("LB");
-    BindClick("QY");
-    BindClick("DD");
 });
 //加载小类
 function LoadXL() {
@@ -49,21 +47,15 @@ function SelectLB(obj, type, id) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("服饰鞋帽", "LB", "CODES_PFCG", Bind, "OUTLB", "LB", "");
+            LoadCODESByTYPENAME("服饰鞋帽类别", "LB", "CODES_PFCG", Bind, "OUTLB", "LB", "");
         }
         if (type === "XL") {
             LoadXL();
         }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
     });
 }
-//加载批发采购_服饰鞋帽基本信息
-function LoadPFCG_FSXMJBXX() {
+//加载基本信息
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/PFCG/LoadPFCG_FSXMJBXX",

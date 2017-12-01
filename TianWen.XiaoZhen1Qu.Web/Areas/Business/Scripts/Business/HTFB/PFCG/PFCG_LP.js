@@ -2,23 +2,15 @@
     $("body").bind("click", function () { Close("_XZQ"); });
     LoadPFCG_LPJBXX();
     BindClick("LB");
-    BindClick("QY");
-    BindClick("DD");
 });
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("礼品", "LB", "CODES_PFCG", Bind, "OUTLB", "LB", "");
+            LoadCODESByTYPENAME("礼品类别", "LB", "CODES_PFCG", Bind, "OUTLB", "LB", "");
         }
         if (type === "XL") {
             LoadXL();
-        }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
         }
     });
 }

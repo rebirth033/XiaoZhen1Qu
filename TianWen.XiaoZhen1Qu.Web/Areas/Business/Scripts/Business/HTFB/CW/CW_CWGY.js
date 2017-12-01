@@ -31,7 +31,7 @@ function LoadCW_CWGYJBXX() {
                 $("#spanQY").html(xml.Value.CW_CWGYJBXX.QY);
                 $("#spanDD").html(xml.Value.CW_CWGYJBXX.DD);
                 if (xml.Value.CW_CWGYJBXX.GQ !== null)
-                    SetDX("GQ", xml.Value.CW_CWGYJBXX.GQ);
+                    SetDX("LB", xml.Value.CW_CWGYJBXX.GQ);
                 LoadPhotos(xml.Value.Photos);
             }
         },
@@ -47,7 +47,7 @@ function FB() {
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
+    obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("LB") + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
 

@@ -53,7 +53,7 @@ function SelectLB(obj, type, id) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("化妆品", "LB", "CODES_PFCG", Bind, "OUTLB", "LB", "");
+            LoadCODESByTYPENAME("化妆品类别", "LB", "CODES_PFCG", Bind, "OUTLB", "LB", "");
         }
         if (type === "XL") {
             LoadXL();

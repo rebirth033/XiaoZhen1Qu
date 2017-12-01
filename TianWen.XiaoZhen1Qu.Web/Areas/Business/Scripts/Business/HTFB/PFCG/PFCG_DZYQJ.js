@@ -1,8 +1,6 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
-    LoadDuoX("电子元器件", "DZYQJLB");
-    BindClick("QY");
-    BindClick("DD");
+    LoadDuoX("电子元器件类别", "DZYQJLB");
 });
 //加载多选
 function LoadDuoX(type, id) {
@@ -43,12 +41,7 @@ function LoadDuoX(type, id) {
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
-        }
+
     });
 }
 //加载批发采购_电子元器件基本信息

@@ -2,20 +2,12 @@
     $("body").bind("click", function () { Close("_XZQ"); });
     LoadPFCG_KQJBXX();
     BindClick("LB");
-    BindClick("QY");
-    BindClick("DD");
 });
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("卡券", "LB", "CODES_PFCG", Bind, "OUTLB", "LB", "");
-        }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
+            LoadCODESByTYPENAME("卡券类别", "LB", "CODES_PFCG", Bind, "OUTLB", "LB", "");
         }
     });
 }

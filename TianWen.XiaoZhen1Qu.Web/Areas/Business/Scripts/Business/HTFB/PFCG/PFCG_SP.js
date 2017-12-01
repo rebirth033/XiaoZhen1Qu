@@ -58,13 +58,7 @@ function PDLB(name, codeid) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("食品", "LB", "CODES_PFCG", Bind, "SPLB", "LB", "");
-        }
-        if (type === "QY") {
-            LoadQY();
-        }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
+            LoadCODESByTYPENAME("食品类别", "LB", "CODES_PFCG", Bind, "SPLB", "LB", "");
         }
     });
 }
