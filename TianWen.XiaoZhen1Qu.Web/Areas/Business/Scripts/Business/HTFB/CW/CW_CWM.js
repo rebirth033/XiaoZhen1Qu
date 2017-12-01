@@ -7,7 +7,7 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "PZ") {
-            LoadCODESByTYPENAME("宠物猫", "PZ", "CODES_CW", Bind, "CWMPZ", "PZ", "");
+            LoadCODESByTYPENAME("宠物猫品种", "PZ", "CODES_CW", Bind, "CWMPZ", "PZ", "");
         }
     });
 }

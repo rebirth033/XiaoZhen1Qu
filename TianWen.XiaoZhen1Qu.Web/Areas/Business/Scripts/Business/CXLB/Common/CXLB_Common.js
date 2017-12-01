@@ -238,7 +238,16 @@ function LoadCondition(array, name, id, length) {
     }
     html += '</ul>';
     $("#div_condition_body_" + id).append(html);
-
+}
+//设置条件
+function SetCondition(type, value) {
+    $("#ul_condition_body_" + type).find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $("#ul_condition_body_" + type).find(".li_condition_body").each(function () {
+        if ($(this).html() === value)
+            $(this).addClass("li_condition_body_active");
+    });
 }
 //根据TYPENAME获取字典表
 function LoadDistrict(name, code, type) {

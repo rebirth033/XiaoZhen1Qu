@@ -29,10 +29,10 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string GQ { get; set; }
 
         /// <summary>
-        /// 品种
+        /// 类别
         /// </summary>
         [Property]
-        public virtual string PZ { get; set; }
+        public virtual string LB { get; set; }
 
         /// <summary>
         /// 品种

@@ -1,4 +1,5 @@
-﻿$(document).ready(function () {
+﻿var right = 0;
+$(document).ready(function () {
 
 });
 //加载默认
@@ -81,9 +82,6 @@ function LoadJBXX(obj) {
     $("#div_body_left").append(html);
     HandlerTPXX();
 }
-
-var right = 0;
-
 //加载车辆详情
 function LoadXQ(obj, BCMSString) {
     var html = "";
@@ -114,7 +112,6 @@ function LoadXQ(obj, BCMSString) {
         $("#div_body_left_body_xq_zk").css("display", "block");
     }
 }
-
 //加载猜你喜欢
 function LoadCNXH(TYPE) {
     $.ajax({
@@ -140,7 +137,7 @@ function LoadCNXH(TYPE) {
                 html += ('</ul>');
                 html += ('</div>');
                 $("#div_body_left").append(html);
-                LoadJPTJ("FC");
+                LoadJPTJ("CWXX_CWG");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -153,9 +150,8 @@ function LoadCNXHInfo(obj) {
     var html = "";
     html += ('<li onclick="OpenXXXX(\'CWXX_CWG\',\'' + obj.ID + '\')" class="li_body_left_body_cnxh">');
     html += ('<img class="img_li_body_left_body_cnxh" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_left_body_cnxh_xq">' + obj.XQDZ.split('-')[0] + ' / ' + obj.XQDZ.split('-')[1] + ' / ' + obj.XQMC + '</p>');
-    html += ('<p class="p_li_body_left_body_cnxh_cs">' + obj.S + '室 ' + obj.PFM + '平</p>');
-    html += ('<p class="p_li_body_left_body_cnxh_jg">' + obj.ZJ + '元/月</p>');
+    html += ('<p class="p_li_body_left_body_cnxh_xq">' + obj.BT + '</p>');
+    html += ('<p class="p_li_body_left_body_cnxh_jg">' + obj.JG + '元</p>');
     html += ('</li>');
     return html;
 }
@@ -196,9 +192,8 @@ function LoadJPTJInfo(obj) {
     var html = "";
     html += ('<li onclick="OpenXXXX(\'CWXX_CWG\',\'' + obj.ID + '\')" class="li_body_left_body_jptj">');
     html += ('<img class="img_li_body_left_body_jptj" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_left_body_jptj_xq">' + obj.XQDZ.split('-')[0] + ' / ' + obj.XQDZ.split('-')[1] + ' / ' + obj.XQMC + '</p>');
-    html += ('<p class="p_li_body_left_body_jptj_cs">' + obj.S + '室 ' + obj.PFM + '平</p>');
-    html += ('<p class="p_li_body_left_body_jptj_jg">' + obj.ZJ + '元/月</p>');
+    html += ('<p class="p_li_body_left_body_jptj_xq">' + obj.BT + '</p>');
+    html += ('<p class="p_li_body_left_body_jptj_jg">' + obj.JG + '元</p>');
     html += ('</li>');
     return html;
 }
@@ -243,9 +238,8 @@ function LoadJJRTJFYInfo(obj) {
     html += ('<li onclick="OpenXXXX(\'CWXX_CWG\',\'' + obj.ID + '\')" class="li_body_right_jjrtj">');
     html += ('<img class="img_li_body_right_jjrtj" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<div class="div_li_body_right_jjrtj">');
-    html += ('<p class="p_li_body_right_jjrtj_xq">' + obj.XQDZ.split('-')[0] + ' / ' + obj.XQDZ.split('-')[1] + ' / ' + obj.XQMC + '</p>');
-    html += ('<p class="p_li_body_right_jjrtj_cs">' + obj.S + '室 ' + obj.PFM + '平</p>');
-    html += ('<p class="p_li_body_right_jjrtj_jg">' + obj.ZJ + '元/月</p>');
+    html += ('<p class="p_li_body_right_jjrtj_xq">' + obj.BT + '</p>');
+    html += ('<p class="p_li_body_right_jjrtj_jg">' + obj.JG + '元</p>');
     html += ('</div>');
     html += ('</li>');
     return html;

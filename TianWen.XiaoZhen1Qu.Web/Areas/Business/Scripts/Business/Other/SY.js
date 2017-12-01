@@ -284,11 +284,11 @@ function OpenCXLB(lbid, typename, condition) {
         window.open(getRootPath() + "/Business/CLCX/CLCX_QCGZFH?LBID=" + lbid);
     //宠物
     if (lbid === 73)
-        window.open(getRootPath() + "/Business/CWCX/CWCX_CWG?LBID=" + lbid);
+        window.open(getRootPath() + "/Business/CWCX/CWCX_CWG?LBID=" + lbid + "&" + condition);
     if (lbid === 74)
-        window.open(getRootPath() + "/Business/CWCX/CWCX_CWM?LBID=" + lbid);
+        window.open(getRootPath() + "/Business/CWCX/CWCX_CWM?LBID=" + lbid + "&" + condition);
     if (lbid === 75)
-        window.open(getRootPath() + "/Business/CWCX/CWCX_HNYC?LBID=" + lbid);
+        window.open(getRootPath() + "/Business/CWCX/CWCX_HNYC?LBID=" + lbid + "&" + condition);
     if (lbid === 80)
         window.open(getRootPath() + "/Business/CWCX/CWCX_CWFW?LBID=" + lbid);
     if (lbid === 79)
