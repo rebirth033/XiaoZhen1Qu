@@ -393,7 +393,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return Json(result);
         }
         [ValidateInput(false)]
-        public JsonResult FBPFCG_TSBJBXX()
+        public JsonResult FBPFCG_TSJBXX()
         {
             YHJBXX yhjbxx = PFCG_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];

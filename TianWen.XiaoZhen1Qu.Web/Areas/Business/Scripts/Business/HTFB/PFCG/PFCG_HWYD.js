@@ -54,8 +54,8 @@ function BindClick(type) {
         if (type === "LB") {
             LoadCODESByTYPENAME("户外运动类别", "LB", "CODES_PFCG", Bind, "OUTLB", "LB", "");
         }
-        if (type === "DD") {
-            LoadDD($("#QYCode").val());
+        if (type === "XL") {
+            LoadXL();
         }
     });
 }

@@ -6,8 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadPFCGCondition() {
-    LoadConditionByTypeName("手机数码", "CODES_PFCG", "类别", "LB", 15);
-    LoadDistrict("福州", "350100", "QY");
+    LoadConditionByTypeNames("'手机数码类别'", "CODES_PFCG", "类别", "LB", "15");
     LoadBody("PFCGXX_SJSM", currentIndex);
 }
 //选择条件
@@ -39,7 +38,7 @@ function LoadBody(TYPE, PageIndex) {
                 $("#ul_body_left").html('');
                 LoadPage(TYPE, xml.PageCount);
                 for (var i = 0; i < xml.list.length; i++) {
-                    LoadQZZPInfo(xml.list[i]);
+                    LoadInfo(xml.list[i]);
                 }
             }
         },
@@ -48,8 +47,8 @@ function LoadBody(TYPE, PageIndex) {
         }
     });
 }
-//加载求职招聘单条信息
-function LoadQZZPInfo(obj) {
+//加载单条信息
+function LoadInfo(obj) {
     var html = "";
     html += ('<li class="li_body_left">');
     html += ('<div class="div_li_body_left_left">');
@@ -58,11 +57,11 @@ function LoadQZZPInfo(obj) {
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
     html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'PFCGXX_SJSM\',\'' + obj.ID + '\')">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_left_center_cs">' + obj.MJ + '平米' + '</p>');
-    html += ('<p class="p_li_body_left_center_dz">' + obj.XQMC + ' [' + obj.XQDZ + '] ' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
+    html += (TruncStr(obj.BCMSString, 90));
+    html += ('<p class="p_li_body_left_center_dz">' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
-    html += ('<p class="p_li_body_left_right"><span class="span_zj">' + obj.ZJ + '</span>元/月</p>');
+    html += ('<p class="p_li_body_left_right"><span class="span_li_body_left_right">联系商家</span></p>');
     html += ('</div>');
     html += ('</li>');
     $("#ul_body_left").append(html);
@@ -84,7 +83,7 @@ function LoadHot(TYPE) {
             if (xml.Result === 1) {
                 $("#ul_body_right").html('');
                 for (var i = 0; i < xml.list.length; i++) {
-                    //LoadHotInfo(xml.list[i]);
+                    LoadHotInfo(xml.list[i]);
                 }
             }
         },
@@ -96,11 +95,10 @@ function LoadHot(TYPE) {
 //加载热门单条信息
 function LoadHotInfo(obj) {
     var html = "";
-    html += ('<li onclick="OpenXXXX(\'PFCGCX_PFCG\',\'' + obj.ID + '\')" class="li_body_right">');
+    html += ('<li onclick="OpenXXXX(\'PFCGXX_SJSM\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_right_xq">' + "服务项目:" + obj.LB + '</p>');
+    html += ('<p class="p_li_body_right_xq">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_right_cs">' + obj.QY + '-' + obj.DD + '</p>');
-    html += ('<p class="p_li_body_right_jg">' + obj.JG + '元</p>');
     html += ('</li>');
     $("#ul_body_right").append(html);
 }

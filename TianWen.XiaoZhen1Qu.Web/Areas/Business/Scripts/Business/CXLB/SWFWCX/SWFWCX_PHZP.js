@@ -78,7 +78,7 @@ function LoadBody(TYPE, PageIndex) {
         }
     });
 }
-//加载求职招聘单条信息
+//加载单条信息
 function LoadQZZPInfo(obj) {
     var html = "";
     html += ('<li class="li_body_left">');
