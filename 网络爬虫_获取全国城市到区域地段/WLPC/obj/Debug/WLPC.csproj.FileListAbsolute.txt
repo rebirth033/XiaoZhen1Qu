@@ -140,7 +140,6 @@ D:\福建天问信息技术有限公司\源代码\网络爬虫_获取全国城�
 D:\福建天问信息技术有限公司\源代码\网络爬虫_获取全国城市到区域地段\WLPC\bin\WLPC.pdb
 D:\福建天问信息技术有限公司\源代码\网络爬虫_获取全国城市到区域地段\WLPC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 D:\福建天问信息技术有限公司\源代码\网络爬虫_获取全国城市到区域地段\WLPC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\福建天问信息技术有限公司\源代码\网络爬虫_获取全国城市到区域地段\WLPC\obj\Debug\WLPC.csprojResolveAssemblyReference.cache
 D:\福建天问信息技术有限公司\源代码\网络爬虫_获取全国城市到区域地段\WLPC\obj\Debug\WLPC.dll
 D:\福建天问信息技术有限公司\源代码\网络爬虫_获取全国城市到区域地段\WLPC\obj\Debug\WLPC.pdb
 D:\福建天问信息技术有限公司\源代码\网络爬虫_获取全国城市到区域地段\WLPC\bin\CommonClassLib.dll
