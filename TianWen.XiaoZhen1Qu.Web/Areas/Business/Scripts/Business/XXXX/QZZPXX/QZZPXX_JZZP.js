@@ -5,7 +5,7 @@
 function LoadDefault() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/ESXX/LoadESXX",
+        url: getRootPath() + "/Business/QZZPXX/LoadQZZPXX",
         dataType: "json",
         data:
         {
@@ -34,25 +34,7 @@ function LoadJBXX(obj) {
     html += ('<p class="p_div_body_left_head_ll">11月5日 22:36 3次浏览 </p>');
     html += ('</div>');
     html += ('<div class="div_body_left_body">');
-    html += ('<div class="div_body_left_body_left">');
-    html += ('<img id="img_body_left_body_left_show" class="img_body_left_body_left_show" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<span onclick="LeftImg()" class="div_body_left_body_left_list_an" style="margin-right: 10px;"><</span>');
-    html += ('<div class="div_body_left_body_left_list">');
-    html += ('<ul id="ul_body_left_body_left_list" class="ul_body_left_body_left_list">');
-    for (var i = 0; i < obj.PHOTOS.length; i++) {
-        html += ('<li class="li_body_left_body_left_list_tp">');
-        html += ('<img class="img_body_left_body_left_list_tp" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[i].PHOTONAME + "?j=" + Math.random() + '" />');
-        html += ('<div class="div_img_body_left_body_left_list_tp"></div>');
-        html += ('</li>');
-    }
-    html += ('</ul>');
-    html += ('</div>');
-    html += ('<span onclick="RightImg(' + obj.PHOTOS.length + ')" class="div_body_left_body_left_list_an">></span>');
-    html += ('</div>');
     html += ('<div class="div_body_left_body_right">');
-    html += ('<p class="p_body_left_body_right_first">');
-    html += ('<span class="span_body_left_body_right_zj">' + obj.JG + '</span><span class="span_body_left_body_right_zjdw">元</span>');
-    html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">类别：</span>');
     html += ('<span class="span_body_left_body_right_right">' + obj.LB + '</span>');
@@ -62,14 +44,14 @@ function LoadJBXX(obj) {
     html += ('<span class="span_body_left_body_right_right">' + obj.XL + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">新旧程度：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.XJ + '</span>');
+    html += ('<span class="span_body_left_body_right_left">联系人：</span>');
+    html += ('<span class="span_body_left_body_right_right">' + obj.LXR + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">区域：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.QY + '-' + obj.DD + '</span>');
+    html += ('<span class="span_body_left_body_right_left">商家地址：</span>');
+    html += ('<span class="span_body_left_body_right_right">' + obj.QY + "-" + obj.DD + "-" + obj.JTDZ + '</span>');
     html += ('</p>');
-    html += ('<p class="p_body_left_body_right_lxdh">');
+    html += ('<p class="p_body_left_body_right_lxdh" style="margin-top:78px;">');
     html += ('<img class="img_body_left_body_right_lxdh" src="' + getRootPath() + '/Areas/Business/Css/images/lxdh.png" />' + obj.LXDH);
     html += ('</p>');
     html += ('</div>');
@@ -84,10 +66,8 @@ var right = 0;
 function LoadXQ(obj, BCMSString) {
     var html = "";
     html += ('<div class="div_body_left_body_xq">');
-    html += ('<p class="p_body_left_body_xq">宠物详情</p>');
-
     html += ('<div class="div_body_left_body_xq_xx">');
-    html += ('<div class="div_body_left_body_xq_xx_left">宠物描述</div>');
+    html += ('<div class="div_body_left_body_xq_xx_left">职位描述</div>');
     html += ('<div class="div_body_left_body_xq_xx_right fyms" style="padding-left:32px;">');
     html += (BCMSString);
     html += ('</div>');
@@ -115,7 +95,7 @@ function LoadXQ(obj, BCMSString) {
 function LoadCNXH(TYPE) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/ESCX/LoadESXX",
+        url: getRootPath() + "/Business/QZZPCX/LoadQZZPXX",
         dataType: "json",
         data:
         {
@@ -136,7 +116,7 @@ function LoadCNXH(TYPE) {
                 html += ('</ul>');
                 html += ('</div>');
                 $("#div_body_left").append(html);
-                LoadJPTJ("CW");
+                LoadJPTJ("QZZPXX_JZZP");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -159,7 +139,7 @@ function LoadCNXHInfo(obj) {
 function LoadJPTJ(TYPE) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/ESCX/LoadESXX",
+        url: getRootPath() + "/Business/QZZPCX/LoadQZZPXX",
         dataType: "json",
         data:
         {
@@ -202,7 +182,7 @@ function LoadJPTJInfo(obj) {
 function LoadJJRTJFY(TYPE) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/ESCX/LoadESXX",
+        url: getRootPath() + "/Business/QZZPCX/LoadQZZPXX",
         dataType: "json",
         data:
         {
