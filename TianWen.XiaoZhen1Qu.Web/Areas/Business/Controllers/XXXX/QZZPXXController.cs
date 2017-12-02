@@ -13,7 +13,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         public ActionResult QZZPXX_QZZP() { return View(); }
         public ActionResult QZZPXX_JZZP() { return View(); }
 
-        public JsonResult LoadCLXX()
+        public JsonResult LoadQZZPXX()
         {
             return Json(QZZPCXBLL.LoadQZZPXX(Request["TYPE"], Request["ID"]));
         }

@@ -6,18 +6,6 @@
     BindClick("ZWLB");
     LoadDuoX("职位福利", "ZWFL");
 });
-//显示职位类别
-function ShowZWLBThird() {
-    $(this).find(".div_zwlb_third").each(function () {
-        $(this).css("display", "block");
-    });
-}
-//隐藏职位类别
-function HideZWLBThird() {
-    $(this).find(".div_zwlb_third").each(function () {
-        $(this).css("display", "none");
-    });
-}
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
@@ -71,6 +59,19 @@ function LoadZWLB() {
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
         }
+    });
+}
+//显示职位类别
+function ShowZWLBThird() {
+    $("#HYLB").val($(this).find(".span_zwlb_second")[0].innerHTML);
+    $(this).find(".div_zwlb_third").each(function () {
+        $(this).css("display", "block");
+    });
+}
+//隐藏职位类别
+function HideZWLBThird() {
+    $(this).find(".div_zwlb_third").each(function () {
+        $(this).css("display", "none");
     });
 }
 //选择职位类别

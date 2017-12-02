@@ -6,8 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadESCondition() {
-    LoadConditionByTypeName("兼职类别", "CODES_QZZP", "类别", "JZLB",15);
-    LoadDistrict("福州", "350100", "QY");
+    LoadConditionByTypeNames("'兼职类别'", "CODES_QZZP", "类别", "JZLB", "13");
     LoadBody("QZZPXX_JZZP", currentIndex);
 }
 //选择条件
@@ -39,7 +38,7 @@ function LoadBody(TYPE, PageIndex) {
                 $("#ul_body_left").html('');
                 LoadPage(TYPE, xml.PageCount);
                 for (var i = 0; i < xml.list.length; i++) {
-                    LoadQZZPInfo(xml.list[i]);
+                    LoadInfo(xml.list[i]);
                 }
             }
         },
@@ -49,10 +48,10 @@ function LoadBody(TYPE, PageIndex) {
     });
 }
 //加载单条信息
-function LoadQZZPInfo(obj) {
+function LoadInfo(obj) {
     var html = "";
     html += ('<li class="li_body_left">');
-    html += ('<span class="span_li_body_left_bt" onclick="OpenXXXX(\'QZZPCX_QZZP\',\'' + obj.ID + '\')">' + TruncStr(obj.BT, 15) + '</span>');
+    html += ('<span class="span_li_body_left_bt" onclick="OpenXXXX(\'QZZPXX_JZZP\',\'' + obj.ID + '\')">' + TruncStr(obj.BT, 15) + '</span>');
     html += ('<span class="span_li_body_left_gs">北京闪送科技有限公司</span>');
     html += ('<span class="span_li_body_left_gz">' + obj.XZ + obj.XZDW +'&nbsp;'+ obj.XZJS + '</span>');
     html += ('</li>');
@@ -87,7 +86,7 @@ function LoadHot(TYPE) {
 //加载热门单条信息
 function LoadHotInfo(obj) {
     var html = "";
-    html += ('<li onclick="OpenXXXX(\'QZZPCX_JZZP\',\'' + obj.ID + '\')" class="li_body_right">');
+    html += ('<li onclick="OpenXXXX(\'QZZPXX_JZZP\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_right_xq">' + "服务项目:" + obj.LB + '</p>');
     html += ('<p class="p_li_body_right_cs">' + obj.QY + '-' + obj.DD + '</p>');

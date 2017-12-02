@@ -346,7 +346,7 @@ function OpenCXLB(lbid, typename, condition) {
     if (lbid === 205)
         window.open(getRootPath() + "/Business/QZZPCX/QZZPCX_QZZP?LBID=" + lbid + "&" + condition);
     if (lbid === 206)
-        window.open(getRootPath() + "/Business/QZZPCX/QZZPCX_JZZP?LBID=" + lbid);
+        window.open(getRootPath() + "/Business/QZZPCX/QZZPCX_JZZP?LBID=" + lbid + "&" + condition);
     //招商加盟
     if (lbid === 159)
         window.open(getRootPath() + "/Business/ZSJMCX/ZSJMCX_CY?LBID=" + lbid);
