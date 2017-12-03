@@ -105,7 +105,7 @@ function LoadXL(lbmc, xl) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("管理培训", "LB", "CODES_JYPX", Bind, "OUTLB", "LB", "");
+            LoadCODESByTYPENAME("管理培训类别", "LB", "CODES_JYPX", Bind, "OUTLB", "LB", "");
         }
     });
 }

@@ -3,6 +3,14 @@
     BindClick("LB");
     LoadDuoX("服务类型", "FWLX");
 });
+//绑定下拉框鼠标点击样式
+function BindClick(type) {
+    $("#div" + type + "Span").click(function () {
+        if (type === "LB") {
+            LoadCODESByTYPENAME("婴幼儿教育类别", "LB", "CODES_JYPX", Bind, "OUTLB", "LB", "");
+        }
+    });
+}
 //加载多选
 function LoadDuoX(type, id) {
     $.ajax({
@@ -87,15 +95,6 @@ function LoadXL(lbmc, xl) {
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
         }
-    });
-}
-//绑定下拉框鼠标点击样式
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadCODESByTYPENAME("婴幼儿教育", "LB", "CODES_JYPX", Bind, "OUTLB", "LB", "");
-        }
-        
     });
 }
 //加载商务服务_婴幼儿教育基本信息

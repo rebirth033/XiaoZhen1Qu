@@ -6,10 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadJYPXCondition() {
-    LoadConditionByTypeName("婴幼儿教育", "CODES_JYPX", "类别", "LB", 15);
-    LoadConditionByTypeName("服务类型", "CODES_JYPX", "服务类型", "FWLX");
-    LoadConditionByTypeName("婴幼儿教育办学性质", "CODES_JYPX", "办学性质", "BXXZ");
-    LoadDistrict("福州", "350100", "QY");
+    LoadConditionByTypeNames("'婴幼儿教育类别','服务类型','婴幼儿教育办学性质'", "CODES_JYPX", "类别,服务类型,办学性质", "LB,FWLX,BXXZ", "15,15,15");
     LoadBody("JYPXXX_YYEJY", currentIndex);
 }
 //选择条件
@@ -47,7 +44,7 @@ function LoadBody(TYPE, PageIndex) {
                 $("#ul_body_left").html('');
                 LoadPage(TYPE, xml.PageCount);
                 for (var i = 0; i < xml.list.length; i++) {
-                    LoadQZZPInfo(xml.list[i]);
+                    LoadInfo(xml.list[i]);
                 }
             }
         },
@@ -57,20 +54,20 @@ function LoadBody(TYPE, PageIndex) {
     });
 }
 //加载单条信息
-function LoadQZZPInfo(obj) {
+function LoadInfo(obj) {
     var html = "";
-    html += ('<li class="li_body_left">');
+    html += ('<li class="li_body_left" onclick="OpenXXXX(\'JYPXXX_YYEJY\',\'' + obj.ID + '\')">');
     html += ('<div class="div_li_body_left_left">');
-    html += ('<img class="img_li_body_left" onclick="OpenXXXX(\'JYPXXX_YYEJY\',\'' + obj.ID + '\')" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
+    html += ('<img class="img_li_body_left" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<div class="div_img_li_body_left_count"><span>' + obj.PHOTOS.length + '图</span></div>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
-    html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'JYPXXX_YYEJY\',\'' + obj.ID + '\')">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_left_center_cs">' + obj.MJ + '平米' + '</p>');
-    html += ('<p class="p_li_body_left_center_dz">' + obj.XQMC + ' [' + obj.XQDZ + '] ' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
+    html += ('<p class="p_li_body_left_center_bt">' + obj.BT + '</p>');
+    html += (TruncStr(obj.BCMSString, 90));
+    html += ('<p class="p_li_body_left_center_dz">' + obj.QY + '-' + obj.DD + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
-    html += ('<p class="p_li_body_left_right"><span class="span_zj">' + obj.ZJ + '</span>元/月</p>');
+    html += ('<p class="p_li_body_left_right"><span class="span_li_body_left_right">联系商家</span></p>');
     html += ('</div>');
     html += ('</li>');
     $("#ul_body_left").append(html);
@@ -92,7 +89,7 @@ function LoadHot(TYPE) {
             if (xml.Result === 1) {
                 $("#ul_body_right").html('');
                 for (var i = 0; i < xml.list.length; i++) {
-                    //LoadHotInfo(xml.list[i]);
+                    LoadHotInfo(xml.list[i]);
                 }
             }
         },
@@ -106,9 +103,8 @@ function LoadHotInfo(obj) {
     var html = "";
     html += ('<li onclick="OpenXXXX(\'JYPXCX_JYPX\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_right_xq">' + "服务项目:" + obj.LB + '</p>');
+    html += ('<p class="p_li_body_right_xq">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_right_cs">' + obj.QY + '-' + obj.DD + '</p>');
-    html += ('<p class="p_li_body_right_jg">' + obj.JG + '元</p>');
     html += ('</li>');
     $("#ul_body_right").append(html);
 }

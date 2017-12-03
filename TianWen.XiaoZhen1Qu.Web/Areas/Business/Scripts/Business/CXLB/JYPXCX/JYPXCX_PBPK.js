@@ -6,11 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadJYPXCondition() {
-    LoadConditionByTypeName("拼班拼课身份", "CODES_JYPX", "类别", "SF");
-    LoadConditionByTypeName("拼班拼课辅导阶段", "CODES_JYPX", "辅导阶段", "FDJD");
-    LoadConditionByTypeName("拼班拼课辅导科目", "CODES_JYPX", "辅导科目", "FDKM");
-    LoadConditionByTypeName("拼班拼课人数", "CODES_JYPX", "拼班人数", "PBRS");
-    LoadDistrict("福州", "350100", "QY");
+    LoadConditionByTypeNames("'拼班拼课身份','拼班拼课辅导阶段','拼班拼课辅导科目','拼班拼课人数'", "CODES_JYPX", "类别,辅导阶段,辅导科目,拼班人数", "SF,FDJD,FDKM,PBRS", "15,15,15,15");
     LoadBody("JYPXXX_PBPK", currentIndex);
 }
 //选择条件
@@ -42,7 +38,7 @@ function LoadBody(TYPE, PageIndex) {
                 $("#ul_body_left").html('');
                 LoadPage(TYPE, xml.PageCount);
                 for (var i = 0; i < xml.list.length; i++) {
-                    LoadQZZPInfo(xml.list[i]);
+                    LoadInfo(xml.list[i]);
                 }
             }
         },
@@ -52,20 +48,20 @@ function LoadBody(TYPE, PageIndex) {
     });
 }
 //加载单条信息
-function LoadQZZPInfo(obj) {
+function LoadInfo(obj) {
     var html = "";
-    html += ('<li class="li_body_left">');
+    html += ('<li class="li_body_left" onclick="OpenXXXX(\'JYPXXX_PBPK\',\'' + obj.ID + '\')">');
     html += ('<div class="div_li_body_left_left">');
-    html += ('<img class="img_li_body_left" onclick="OpenXXXX(\'JYPXXX_PBPK\',\'' + obj.ID + '\')" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
+    html += ('<img class="img_li_body_left" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<div class="div_img_li_body_left_count"><span>' + obj.PHOTOS.length + '图</span></div>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
-    html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'JYPXXX_PBPK\',\'' + obj.ID + '\')">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_left_center_cs">' + obj.MJ + '平米' + '</p>');
-    html += ('<p class="p_li_body_left_center_dz">' + obj.XQMC + ' [' + obj.XQDZ + '] ' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
+    html += ('<p class="p_li_body_left_center_bt">' + obj.BT + '</p>');
+    html += (TruncStr(obj.BCMSString, 90));
+    html += ('<p class="p_li_body_left_center_dz">' + obj.QY + '-' + obj.DD + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
-    html += ('<p class="p_li_body_left_right"><span class="span_zj">' + obj.ZJ + '</span>元/月</p>');
+    html += ('<p class="p_li_body_left_right"><span class="span_li_body_left_right">联系商家</span></p>');
     html += ('</div>');
     html += ('</li>');
     $("#ul_body_left").append(html);
@@ -87,7 +83,7 @@ function LoadHot(TYPE) {
             if (xml.Result === 1) {
                 $("#ul_body_right").html('');
                 for (var i = 0; i < xml.list.length; i++) {
-                    //LoadHotInfo(xml.list[i]);
+                    LoadHotInfo(xml.list[i]);
                 }
             }
         },
@@ -99,11 +95,10 @@ function LoadHot(TYPE) {
 //加载热门单条信息
 function LoadHotInfo(obj) {
     var html = "";
-    html += ('<li onclick="OpenXXXX(\'JYPXCX_JYPX\',\'' + obj.ID + '\')" class="li_body_right">');
+    html += ('<li onclick="OpenXXXX(\'JYPXXX_PBPK\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_right_xq">' + "服务项目:" + obj.LB + '</p>');
+    html += ('<p class="p_li_body_right_xq">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_right_cs">' + obj.QY + '-' + obj.DD + '</p>');
-    html += ('<p class="p_li_body_right_jg">' + obj.JG + '元</p>');
     html += ('</li>');
     $("#ul_body_right").append(html);
 }

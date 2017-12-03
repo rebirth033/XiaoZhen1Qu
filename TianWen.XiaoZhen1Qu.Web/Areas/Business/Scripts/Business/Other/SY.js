@@ -458,6 +458,8 @@ function OpenCXLB(lbid, typename, condition) {
         window.open(getRootPath() + "/Business/JYPXCX/JYPXCX_LX?LBID=" + lbid);
     if (lbid === 274)
         window.open(getRootPath() + "/Business/JYPXCX/JYPXCX_YM?LBID=" + lbid);
+    if (lbid === 277)
+        window.open(getRootPath() + "/Business/JYPXCX/JYPXCX_PBPK?LBID=" + lbid);
     //农林牧副渔
     if (lbid === 278)
         window.open(getRootPath() + "/Business/NLMFYCX/NLMFYCX_YLHH?LBID=" + lbid);
