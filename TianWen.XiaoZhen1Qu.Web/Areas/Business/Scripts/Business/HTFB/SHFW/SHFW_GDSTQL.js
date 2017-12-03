@@ -3,6 +3,14 @@
     BindClick("LB");
     LoadSHFW_GDSTQLJBXX();
 });
+//绑定下拉框鼠标点击样式
+function BindClick(type) {
+    $("#div" + type + "Span").click(function () {
+        if (type === "LB") {
+            LoadCODESByTYPENAME("管道疏通/清理类别", "LB", "CODES_SHFW", Bind, "OUTLB", "LB", "");
+        }
+    });
+}
 //选择类别下拉框
 function SelectLB(obj, type, id) {
     $("#span" + type).html(obj.innerHTML);
@@ -49,15 +57,6 @@ function LoadXL(lbmc, xl) {
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
         }
-    });
-}
-//绑定下拉框鼠标点击样式
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadCODESByTYPENAME("管道疏通/清理", "LB", "CODES_SHFW", Bind, "OUTLB", "LB", "");
-        }
-        
     });
 }
 //加载生活服务_管道疏通/清理基本信息

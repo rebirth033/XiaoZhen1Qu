@@ -20,7 +20,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         public ActionResult SHFWXX_SJWX() { return View(); }
         public ActionResult SHFWXX_SMWX() { return View(); }
 
-        public JsonResult LoadZXJCXX()
+        public JsonResult LoadSHFWXX()
         {
             return Json(SHFWCXBLL.LoadSHFWXX(Request["TYPE"], Request["ID"]));
         }

@@ -7,9 +7,8 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("月嫂/保姆", "LB", "CODES_SHFW", Bind, "OUTLB", "LB", "");
+            LoadCODESByTYPENAME("月嫂/保姆类别", "LB", "CODES_SHFW", Bind, "OUTLB", "LB", "");
         }
-        
     });
 }
 //加载生活服务_月嫂/保姆基本信息

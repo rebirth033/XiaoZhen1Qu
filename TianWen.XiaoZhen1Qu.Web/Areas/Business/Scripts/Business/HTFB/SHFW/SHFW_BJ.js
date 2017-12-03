@@ -7,7 +7,7 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("搬家", "LB", "CODES_SHFW", Bind, "OUTLB", "LB", "");
+            LoadCODESByTYPENAME("搬家类别", "LB", "CODES_SHFW", Bind, "OUTLB", "LB", "");
         }
         
     });
