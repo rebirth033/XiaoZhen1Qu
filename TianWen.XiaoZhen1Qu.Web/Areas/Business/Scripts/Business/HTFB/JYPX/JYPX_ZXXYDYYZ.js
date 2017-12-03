@@ -12,7 +12,6 @@ function ValidateAll() {
     if (ValidateLB()
         & ValidateCheck("XL", "忘记选择小类啦")
         & ValidateXF()
-        & ValidateFWQY()
         & ValidateBCMS("BCMS", "忘记填写补充描述啦")
         & ValidateXXDZ()
         & ValidateCommon())

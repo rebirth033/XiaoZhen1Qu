@@ -106,9 +106,8 @@ function LoadDuoX(type, id) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "YZ") {
-            LoadCODESByTYPENAME("语言培训机构", "YZ", "CODES_JYPX");
+            LoadCODESByTYPENAME("语种", "YZ", "CODES_JYPX");
         }
-        
     });
 }
 //加载商务服务_语言培训机构基本信息

@@ -10,7 +10,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         public ActionResult JYPXXX_ZXXYDY() { return View(); }
         public ActionResult JYPXXX_JJJG() { return View(); }
         public ActionResult JYPXXX_JJGR() { return View(); }
-        public ActionResult JYPXXX_YYPX() { return View(); }
+        public ActionResult JYPXXX_YYPXJG() { return View(); }
         public ActionResult JYPXXX_YYPXJS() { return View(); }
         public ActionResult JYPXXX_YSPX() { return View(); }
         public ActionResult JYPXXX_YSPXJS() { return View(); }

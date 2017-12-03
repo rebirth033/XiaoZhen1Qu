@@ -56,7 +56,7 @@ function LoadXL(lbmc, xl) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("中小学一对一", "LB", "CODES_JYPX", Bind, "OUTLB", "LB");
+            LoadCODESByTYPENAME("中小学一对一类别", "LB", "CODES_JYPX", Bind, "OUTLB", "LB");
         }
         
     });

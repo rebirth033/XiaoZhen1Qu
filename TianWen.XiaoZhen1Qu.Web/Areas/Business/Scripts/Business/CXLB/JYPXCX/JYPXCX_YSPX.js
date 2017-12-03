@@ -6,9 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadJYPXCondition() {
-    LoadConditionByTypeName("艺术培训", "CODES_JYPX", "类别", "LB", 15);
-    LoadConditionByTypeName("艺术培训对象", "CODES_JYPX", "对象", "DX");
-    LoadDistrict("福州", "350100", "QY");
+    LoadConditionByTypeNames("'艺术培训','艺术培训对象'", "CODES_JYPX", "类别,对象", "LB,DX", "15,15");
     LoadBody("JYPXXX_YSPX", currentIndex);
 }
 //选择条件
