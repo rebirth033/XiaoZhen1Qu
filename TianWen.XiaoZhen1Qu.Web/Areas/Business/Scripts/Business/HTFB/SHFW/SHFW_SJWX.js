@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
-    LoadXL("手机维修");
+    LoadXL("手机维修品牌");
     LoadSHFW_SJWXJBXX();
 });
 //加载小类

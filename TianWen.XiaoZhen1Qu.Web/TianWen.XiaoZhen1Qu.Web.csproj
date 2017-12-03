@@ -1590,7 +1590,7 @@
     <Content Include="Areas\Business\Scripts\Business\XXXX\SHFWXX\SHFWXX_DNWX.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\SHFWXX\SHFWXX_FWWX.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\SHFWXX\SHFWXX_JJWX.js" />
-    <Content Include="Areas\Business\Scripts\Business\XXXX\SHFWXX\SHFWXX_SJSMWX.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\SHFWXX\SHFWXX_SJWX.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\SHFWXX\SHFWXX_BJ.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\SWFWXX\SWFWXX_QMFSSM.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\SWFWXX\SWFWXX_SBZL.js" />
