@@ -431,11 +431,11 @@ function OpenCXLB(lbid, typename, condition) {
     if (lbid === 260)
         window.open(getRootPath() + "/Business/JYPXCX/JYPXCX_JJGR?LBID=" + lbid);
     if (lbid === 263)
-        window.open(getRootPath() + "/Business/JYPXCX/JYPXCX_YYPX?LBID=" + lbid);
+        window.open(getRootPath() + "/Business/JYPXCX/JYPXCX_YYPXJG?LBID=" + lbid);
     if (lbid === 264)
         window.open(getRootPath() + "/Business/JYPXCX/JYPXCX_YYPXJS?LBID=" + lbid);
     if (lbid === 267)
-        window.open(getRootPath() + "/Business/JYPXCX/JYPXCX_YSPX?LBID=" + lbid);
+        window.open(getRootPath() + "/Business/JYPXCX/JYPXCX_YSPXJG?LBID=" + lbid);
     if (lbid === 275)
         window.open(getRootPath() + "/Business/JYPXCX/JYPXCX_YSPXJS?LBID=" + lbid);
     if (lbid === 265)

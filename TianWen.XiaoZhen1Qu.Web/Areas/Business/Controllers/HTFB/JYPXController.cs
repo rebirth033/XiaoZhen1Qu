@@ -79,7 +79,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             ViewData["YHM"] = Session["YHM"];
             return View();
         }
-        public ActionResult JYPX_YSPX()
+        public ActionResult JYPX_YSPXJG()
         {
             ViewData["XZQ"] = Session["XZQ"];
             ViewData["YHM"] = Session["YHM"];
@@ -283,17 +283,17 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return Json(result);
         }
         [ValidateInput(false)]
-        public JsonResult FBJYPX_YSPXJBXX()
+        public JsonResult FBJYPX_YSPXJGJBXX()
         {
             YHJBXX yhjbxx = JYPX_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
             JCXX jcxx = CreateJCXX(yhjbxx, json);
-            JYPX_YSPXJBXX JYPX_YSPXjbxx = JsonHelper.ConvertJsonToObject<JYPX_YSPXJBXX>(json);
-            JYPX_YSPXjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
+            JYPX_YSPXJGJBXX JYPX_YSPXJGJBXX = JsonHelper.ConvertJsonToObject<JYPX_YSPXJGJBXX>(json);
+            JYPX_YSPXJGJBXX.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = JYPX_BLL.SaveJYPX_YSPXJBXX(jcxx, JYPX_YSPXjbxx, photos);
+            object result = JYPX_BLL.SaveJYPX_YSPXJGJBXX(jcxx, JYPX_YSPXJGJBXX, photos);
             return Json(result);
         }
         [ValidateInput(false)]
@@ -461,10 +461,10 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             object result = JYPX_BLL.LoadJYPX_YMJBXX(ID);
             return Json(result);
         }
-        public JsonResult LoadJYPX_YSPXJBXX()
+        public JsonResult LoadJYPX_YSPXJGJBXX()
         {
             string ID = Request["ID"];
-            object result = JYPX_BLL.LoadJYPX_YSPXJBXX(ID);
+            object result = JYPX_BLL.LoadJYPX_YSPXJGJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadJYPX_YSPXJSJBXX()

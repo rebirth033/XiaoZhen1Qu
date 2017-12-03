@@ -36,7 +36,7 @@ function LoadDuoX(type, id) {
                 else
                     $("#div" + id).css("display", "");
                 if (type === "对象")
-                    LoadJYPX_YSPXJBXX();
+                    LoadJYPX_YSPXJGJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -105,16 +105,15 @@ function LoadXL(lbmc, xl) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("艺术培训", "LB", "CODES_JYPX", Bind, "OUTLB", "LB", "");
+            LoadCODESByTYPENAME("艺术培训教学科目", "LB", "CODES_JYPX", Bind, "OUTLB", "LB", "");
         }
-        
     });
 }
 //加载商务服务_艺术培训基本信息
-function LoadJYPX_YSPXJBXX() {
+function LoadJYPX_YSPXJGJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/JYPX/LoadJYPX_YSPXJBXX",
+        url: getRootPath() + "/Business/JYPX/LoadJYPX_YSPXJGJBXX",
         dataType: "json",
         data:
         {
@@ -123,20 +122,20 @@ function LoadJYPX_YSPXJBXX() {
         success: function (xml) {
             if (xml.Result === 1) {
                 var jsonObj = new JsonDB("myTabContent");
-                jsonObj.DisplayFromJson("myTabContent", xml.Value.JYPX_YSPXJBXX);
+                jsonObj.DisplayFromJson("myTabContent", xml.Value.JYPX_YSPXJGJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
-                $("#ID").val(xml.Value.JYPX_YSPXJBXX.ID);
+                $("#ID").val(xml.Value.JYPX_YSPXJGJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.BCMSString);
                 });
-                $("#spanLB").html(xml.Value.JYPX_YSPXJBXX.LB);
-                $("#spanQY").html(xml.Value.JYPX_YSPXJBXX.QY);
-                $("#spanDD").html(xml.Value.JYPX_YSPXJBXX.DD);
+                $("#spanLB").html(xml.Value.JYPX_YSPXJGJBXX.LB);
+                $("#spanQY").html(xml.Value.JYPX_YSPXJGJBXX.QY);
+                $("#spanDD").html(xml.Value.JYPX_YSPXJGJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
-                LoadXL(xml.Value.JYPX_YSPXJBXX.LB, xml.Value.JYPX_YSPXJBXX.XL);
-                SetDuoX("DX", xml.Value.JYPX_YSPXJBXX.DX);
+                LoadXL(xml.Value.JYPX_YSPXJGJBXX.LB, xml.Value.JYPX_YSPXJGJBXX.XL);
+                SetDuoX("DX", xml.Value.JYPX_YSPXJGJBXX.DX);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -162,7 +161,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/JYPX/FBJYPX_YSPXJBXX",
+        url: getRootPath() + "/Business/JYPX/FBJYPX_YSPXJGJBXX",
         dataType: "json",
         data:
         {

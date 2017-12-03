@@ -16,9 +16,8 @@ function SelectLB(obj, type, id) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "JXKM") {
-            LoadCODESByTYPENAME("教学科目", "JXKM", "CODES_JYPX", Bind, "YYPXJSJXKM", "JXKM", "");
+            LoadCODESByTYPENAME("语言培训教学科目", "JXKM", "CODES_JYPX", Bind, "YYPXJSJXKM", "JXKM", "");
         }
-        
     });
 }
 //加载多选

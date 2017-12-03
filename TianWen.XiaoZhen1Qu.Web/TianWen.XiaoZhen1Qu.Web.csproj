@@ -407,7 +407,7 @@
     <Content Include="Areas\Business\Css\HTFB\JYPX\JYPX_TYPX.css" />
     <Content Include="Areas\Business\Css\HTFB\JYPX\JYPX_XLJY.css" />
     <Content Include="Areas\Business\Css\HTFB\JYPX\JYPX_YM.css" />
-    <Content Include="Areas\Business\Css\HTFB\JYPX\JYPX_YSPX.css" />
+    <Content Include="Areas\Business\Css\HTFB\JYPX\JYPX_YSPXJG.css" />
     <Content Include="Areas\Business\Css\HTFB\JYPX\JYPX_YSPXJS.css" />
     <Content Include="Areas\Business\Css\HTFB\JYPX\JYPX_YYEJY.css" />
     <Content Include="Areas\Business\Css\HTFB\JYPX\JYPX_YYPXJG.css" />
@@ -634,7 +634,7 @@
     <Content Include="Areas\Business\Css\XXXX\JYPX\JYPXXX_JJGR.css" />
     <Content Include="Areas\Business\Css\XXXX\JYPX\JYPXXX_YYPXJG.css" />
     <Content Include="Areas\Business\Css\XXXX\JYPX\JYPXXX_YYPXJS.css" />
-    <Content Include="Areas\Business\Css\XXXX\JYPX\JYPXXX_YSPX.css" />
+    <Content Include="Areas\Business\Css\XXXX\JYPX\JYPXXX_YSPXJG.css" />
     <Content Include="Areas\Business\Css\XXXX\JYPX\JYPXXX_YSPXJS.css" />
     <Content Include="Areas\Business\Css\XXXX\JYPX\JYPXXX_ZYJNPX.css" />
     <Content Include="Areas\Business\Css\XXXX\JYPX\JYPXXX_TYPX.css" />
@@ -862,7 +862,7 @@
     <Content Include="Areas\Business\Scripts\Business\CXLB\JYPXCX\JYPXCX_JJGR.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\JYPXCX\JYPXCX_YYPXJG.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\JYPXCX\JYPXCX_YYPXJS.js" />
-    <Content Include="Areas\Business\Scripts\Business\CXLB\JYPXCX\JYPXCX_YSPX.js" />
+    <Content Include="Areas\Business\Scripts\Business\CXLB\JYPXCX\JYPXCX_YSPXJG.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\JYPXCX\JYPXCX_YSPXJS.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\JYPXCX\JYPXCX_ZYJNPX.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\JYPXCX\JYPXCX_TYPX.js" />
@@ -1140,10 +1140,10 @@
     <Content Include="Areas\Business\Scripts\Business\HTFB\JYPX\JYPX_XLJYYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\JYPX\JYPX_YM.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\JYPX\JYPX_YMYZ.js" />
-    <Content Include="Areas\Business\Scripts\Business\HTFB\JYPX\JYPX_YSPX.js" />
+    <Content Include="Areas\Business\Scripts\Business\HTFB\JYPX\JYPX_YSPXJG.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\JYPX\JYPX_YSPXJS.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\JYPX\JYPX_YSPXJSYZ.js" />
-    <Content Include="Areas\Business\Scripts\Business\HTFB\JYPX\JYPX_YSPXYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\HTFB\JYPX\JYPX_YSPXJGYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\JYPX\JYPX_YYEJY.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\JYPX\JYPX_YYEJYYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\JYPX\JYPX_YYPXJSYZ.js" />
@@ -1517,7 +1517,7 @@
     <Content Include="Areas\Business\Scripts\Business\XXXX\JYPXXX\JYPXXX_JJJG.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\JYPXXX\JYPXXX_JJGR.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\JYPXXX\JYPXXX_YYPXJG.js" />
-    <Content Include="Areas\Business\Scripts\Business\XXXX\JYPXXX\JYPXXX_YSPX.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\JYPXXX\JYPXXX_YSPXJG.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\JYPXXX\JYPXXX_YSPXJS.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\JYPXXX\JYPXXX_ZYJNPX.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\JYPXXX\JYPXXX_TYPX.js" />
@@ -2278,7 +2278,7 @@
     <Content Include="Areas\Business\Views\JYPX\JYPX_YYPXJS.cshtml" />
     <Content Include="Areas\Business\Views\JYPX\JYPX_ZYJNPX.cshtml" />
     <Content Include="Areas\Business\Views\JYPX\JYPX_XLJY.cshtml" />
-    <Content Include="Areas\Business\Views\JYPX\JYPX_YSPX.cshtml" />
+    <Content Include="Areas\Business\Views\JYPX\JYPX_YSPXJG.cshtml" />
     <Content Include="Areas\Business\Views\JYPX\JYPX_TYPX.cshtml" />
     <Content Include="Areas\Business\Views\JYPX\JYPX_ITPX.cshtml" />
     <Content Include="Areas\Business\Views\JYPX\JYPX_SJPX.cshtml" />
@@ -2491,7 +2491,7 @@
     <Content Include="Areas\Business\Views\JYPXCX\JYPXCX_JJGR.cshtml" />
     <Content Include="Areas\Business\Views\JYPXCX\JYPXCX_YYPXJG.cshtml" />
     <Content Include="Areas\Business\Views\JYPXCX\JYPXCX_YYPXJS.cshtml" />
-    <Content Include="Areas\Business\Views\JYPXCX\JYPXCX_YSPX.cshtml" />
+    <Content Include="Areas\Business\Views\JYPXCX\JYPXCX_YSPXJG.cshtml" />
     <Content Include="Areas\Business\Views\JYPXCX\JYPXCX_YSPXJS.cshtml" />
     <Content Include="Areas\Business\Views\JYPXCX\JYPXCX_PBPK.cshtml" />
     <Content Include="Areas\Business\Views\JYPXCX\JYPXCX_YM.cshtml" />
@@ -2509,7 +2509,7 @@
     <Content Include="Areas\Business\Views\JYPXXX\JYPXXX_JJJG.cshtml" />
     <Content Include="Areas\Business\Views\JYPXXX\JYPXXX_YYPXJG.cshtml" />
     <Content Include="Areas\Business\Views\JYPXXX\JYPXXX_YYPXJS.cshtml" />
-    <Content Include="Areas\Business\Views\JYPXXX\JYPXXX_YSPX.cshtml" />
+    <Content Include="Areas\Business\Views\JYPXXX\JYPXXX_YSPXJG.cshtml" />
     <Content Include="Areas\Business\Views\JYPXXX\JYPXXX_YSPXJS.cshtml" />
     <Content Include="Areas\Business\Views\JYPXXX\JYPXXX_ZYJNPX.cshtml" />
     <Content Include="Areas\Business\Views\JYPXXX\JYPXXX_TYPX.cshtml" />

@@ -56,7 +56,7 @@ function LoadBody(TYPE, PageIndex) {
 //加载单条信息
 function LoadInfo(obj) {
     var html = "";
-    html += ('<li class="li_body_left" onclick="OpenXXXX(\'JYPXXX_YYPX\',\'' + obj.ID + '\')">');
+    html += ('<li class="li_body_left" onclick="OpenXXXX(\'JYPXXX_YYPXJG\',\'' + obj.ID + '\')">');
     html += ('<div class="div_li_body_left_left">');
     html += ('<img class="img_li_body_left" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<div class="div_img_li_body_left_count"><span>' + obj.PHOTOS.length + '图</span></div>');
