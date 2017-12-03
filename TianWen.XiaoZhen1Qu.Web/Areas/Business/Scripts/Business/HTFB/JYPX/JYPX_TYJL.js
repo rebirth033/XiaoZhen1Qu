@@ -7,9 +7,8 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "JXKM") {
-            LoadCODESByTYPENAME("体育培训", "JXKM", "CODES_JYPX", Bind, "TYJLJXKM", "JXKM", "");
+            LoadCODESByTYPENAME("体育培训类别", "JXKM", "CODES_JYPX", Bind, "TYJLJXKM", "JXKM", "");
         }
-        
     });
 }
 //加载教育培训_体育教练基本信息

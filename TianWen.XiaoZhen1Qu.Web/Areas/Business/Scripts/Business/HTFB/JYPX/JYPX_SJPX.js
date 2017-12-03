@@ -3,6 +3,14 @@
     BindClick("LB");
     LoadDuoX("设计培训形式", "XS");
 });
+//绑定下拉框鼠标点击样式
+function BindClick(type) {
+    $("#div" + type + "Span").click(function () {
+        if (type === "LB") {
+            LoadCODESByTYPENAME("设计培训类别", "LB", "CODES_JYPX", Bind, "OUTLB", "LB", "");
+        }
+    });
+}
 //加载多选
 function LoadDuoX(type, id) {
     $.ajax({
@@ -100,14 +108,6 @@ function LoadXL(lbmc, xl) {
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
-        }
-    });
-}
-//绑定下拉框鼠标点击样式
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadCODESByTYPENAME("设计培训", "LB", "CODES_JYPX", Bind, "OUTLB", "LB", "");
         }
     });
 }

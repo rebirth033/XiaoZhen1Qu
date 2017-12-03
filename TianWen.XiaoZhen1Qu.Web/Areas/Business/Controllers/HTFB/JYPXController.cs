@@ -61,7 +61,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             ViewData["YHM"] = Session["YHM"];
             return View();
         }
-        public ActionResult JYPX_TYPX()
+        public ActionResult JYPX_TYPXJG()
         {
             ViewData["XZQ"] = Session["XZQ"];
             ViewData["YHM"] = Session["YHM"];
@@ -241,17 +241,17 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return Json(result);
         }
         [ValidateInput(false)]
-        public JsonResult FBJYPX_TYPXJBXX()
+        public JsonResult FBJYPX_TYPXJGJBXX()
         {
             YHJBXX yhjbxx = JYPX_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
             JCXX jcxx = CreateJCXX(yhjbxx, json);
-            JYPX_TYPXJBXX JYPX_TYPXjbxx = JsonHelper.ConvertJsonToObject<JYPX_TYPXJBXX>(json);
-            JYPX_TYPXjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
+            JYPX_TYPXJGJBXX JYPX_TYPXJGJBXX = JsonHelper.ConvertJsonToObject<JYPX_TYPXJGJBXX>(json);
+            JYPX_TYPXJGJBXX.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = JYPX_BLL.SaveJYPX_TYPXJBXX(jcxx, JYPX_TYPXjbxx, photos);
+            object result = JYPX_BLL.SaveJYPX_TYPXJGJBXX(jcxx, JYPX_TYPXJGJBXX, photos);
             return Json(result);
         }
         [ValidateInput(false)]
@@ -443,10 +443,10 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             object result = JYPX_BLL.LoadJYPX_TYJLJBXX(ID);
             return Json(result);
         }
-        public JsonResult LoadJYPX_TYPXJBXX()
+        public JsonResult LoadJYPX_TYPXJGJBXX()
         {
             string ID = Request["ID"];
-            object result = JYPX_BLL.LoadJYPX_TYPXJBXX(ID);
+            object result = JYPX_BLL.LoadJYPX_TYPXJGJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadJYPX_XLJYJBXX()

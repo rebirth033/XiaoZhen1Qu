@@ -94,7 +94,7 @@ function LoadXL(lbmc, xl) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("职业技能培训", "LB", "CODES_JYPX", Bind, "OUTLB", "LB", "");
+            LoadCODESByTYPENAME("职业技能培训类别", "LB", "CODES_JYPX", Bind, "OUTLB", "LB", "");
         }
     });
 }

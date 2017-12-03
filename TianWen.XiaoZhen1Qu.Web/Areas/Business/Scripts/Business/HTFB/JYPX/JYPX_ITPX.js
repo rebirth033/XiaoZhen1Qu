@@ -3,6 +3,15 @@
     BindClick("LB");
     LoadDuoX("IT培训形式", "XS");
 });
+//绑定下拉框鼠标点击样式
+function BindClick(type) {
+    $("#div" + type + "Span").click(function () {
+        if (type === "LB") {
+            LoadCODESByTYPENAME("IT培训类别", "LB", "CODES_JYPX", Bind, "OUTLB", "LB", "");
+        }
+
+    });
+}
 //加载多选
 function LoadDuoX(type, id) {
     $.ajax({
@@ -52,7 +61,7 @@ function SelectLB(obj, type, id) {
 }
 //判断类别
 function PDLB(lb) {
-    if (lb === "软件开发" || lb === "IT认证" || lb === "app开发" || lb === "游戏开发" || lb === "数据库") {
+    if (lb === "软件开发" || lb === "IT认证" || lb === "app开发" || lb === "游戏开发" || lb === "数据库" || lb === "办公自动化") {
         LoadXL($("#spanLB").html());
         $("#divXL").css("display", "");
     }
@@ -99,15 +108,6 @@ function LoadXL(lbmc, xl) {
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
         }
-    });
-}
-//绑定下拉框鼠标点击样式
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadCODESByTYPENAME("IT培训", "LB", "CODES_JYPX", Bind, "OUTLB", "LB", "");
-        }
-        
     });
 }
 //加载商务服务_IT培训基本信息

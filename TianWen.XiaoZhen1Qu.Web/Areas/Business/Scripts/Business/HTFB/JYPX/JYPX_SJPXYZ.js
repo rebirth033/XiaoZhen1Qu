@@ -14,7 +14,6 @@ function ValidateAll() {
     if (ValidateLB()
         & ValidateCheck("XS", "忘记选择形式啦")
         & ValidateCheck("ZQ", "忘记选择周期啦")
-        & ValidateFWQY()
         & ValidateBCMS("BCMS", "忘记填写补充描述啦")
         & ValidateXXDZ()
         & ValidateCommon())

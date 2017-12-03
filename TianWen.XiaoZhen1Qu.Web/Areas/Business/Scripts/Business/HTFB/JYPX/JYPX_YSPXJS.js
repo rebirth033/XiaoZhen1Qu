@@ -57,7 +57,7 @@ function BYYXXZ(BYYXMC, BYYXID) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "JXKM") {
-            LoadCODESByTYPENAME("艺术培训", "JXKM", "CODES_JYPX", Bind, "YSPXJSJXKM", "JXKM", "");
+            LoadCODESByTYPENAME("艺术培训教学科目", "JXKM", "CODES_JYPX", Bind, "YSPXJSJXKM", "JXKM", "");
         }
         if (type === "BYYX") {
             LoadBYYX();

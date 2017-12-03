@@ -508,9 +508,9 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
-        public object SaveJYPX_TYPXJBXX(JCXX jcxx, JYPX_TYPXJBXX JYPX_TYPXJBXX, List<PHOTOS> photos)
+        public object SaveJYPX_TYPXJGJBXX(JCXX jcxx, JYPX_TYPXJGJBXX JYPX_TYPXJGJBXX, List<PHOTOS> photos)
         {
-            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM JYPX_TYPXJBXX WHERE ID='{0}'", JYPX_TYPXJBXX.ID));
+            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM JYPX_TYPXJGJBXX WHERE ID='{0}'", JYPX_TYPXJGJBXX.ID));
             using (ITransaction transaction = DAO.BeginTransaction())
             {
                 try
@@ -518,41 +518,41 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     if (dt.Rows.Count > 0)
                     {
                         SavePhotos(photos, dt.Rows[0]["JCXXID"].ToString());
-                        JYPX_TYPXJBXX.JCXXID = dt.Rows[0]["JCXXID"].ToString();
+                        JYPX_TYPXJGJBXX.JCXXID = dt.Rows[0]["JCXXID"].ToString();
                         jcxx.JCXXID = dt.Rows[0]["JCXXID"].ToString();
                         DAO.Update(jcxx);
-                        DAO.Update(JYPX_TYPXJBXX);
+                        DAO.Update(JYPX_TYPXJGJBXX);
                         transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, ID = JYPX_TYPXJBXX.ID } };
+                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, ID = JYPX_TYPXJGJBXX.ID } };
                     }
                     else
                     {
                         SavePhotos(photos, jcxx.JCXXID);
-                        JYPX_TYPXJBXX.JCXXID = jcxx.JCXXID;
+                        JYPX_TYPXJGJBXX.JCXXID = jcxx.JCXXID;
                         DAO.Save(jcxx);
-                        DAO.Save(JYPX_TYPXJBXX);
+                        DAO.Save(JYPX_TYPXJGJBXX);
                         transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, ID = JYPX_TYPXJBXX.ID } };
+                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, ID = JYPX_TYPXJGJBXX.ID } };
                     }
                 }
                 catch (Exception ex)
                 {
                     transaction.Rollback();
-                    LoggerManager.Error("JYPX_TYPXJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                    LoggerManager.Error("JYPX_TYPXJGJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
                     return new { Result = EnResultType.Failed, Message = "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!", Type = 3 };
                 }
             }
         }
 
-        public object LoadJYPX_TYPXJBXX(string ID)
+        public object LoadJYPX_TYPXJGJBXX(string ID)
         {
             try
             {
-                JYPX_TYPXJBXX JYPX_TYPXJBXX = DAO.GetObjectByID<JYPX_TYPXJBXX>(ID);
-                if (JYPX_TYPXJBXX != null)
+                JYPX_TYPXJGJBXX JYPX_TYPXJGJBXX = DAO.GetObjectByID<JYPX_TYPXJGJBXX>(ID);
+                if (JYPX_TYPXJGJBXX != null)
                 {
-                    JCXX jcxx = GetJCXXByID(JYPX_TYPXJBXX.JCXXID);
-                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { JYPX_TYPXJBXX = JYPX_TYPXJBXX, BCMSString = BinaryHelper.BinaryToString(JYPX_TYPXJBXX.BCMS), JCXX = jcxx, Photos = GetPhtosByJCXXID(JYPX_TYPXJBXX.JCXXID) } };
+                    JCXX jcxx = GetJCXXByID(JYPX_TYPXJGJBXX.JCXXID);
+                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { JYPX_TYPXJGJBXX = JYPX_TYPXJGJBXX, BCMSString = BinaryHelper.BinaryToString(JYPX_TYPXJGJBXX.BCMS), JCXX = jcxx, Photos = GetPhtosByJCXXID(JYPX_TYPXJGJBXX.JCXXID) } };
                 }
                 else
                 {
@@ -561,7 +561,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
             catch (Exception ex)
             {
-                LoggerManager.Error("JYPX_TYPXJBXXBLL", "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                LoggerManager.Error("JYPX_TYPXJGJBXXBLL", "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
                 return new
                 {
                     Result = EnResultType.Failed,

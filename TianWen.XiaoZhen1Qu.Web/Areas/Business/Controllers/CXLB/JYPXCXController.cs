@@ -15,7 +15,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         public ActionResult JYPXCX_YSPXJG() { GetSession(); return View(); }
         public ActionResult JYPXCX_YSPXJS() { GetSession(); return View(); }
         public ActionResult JYPXCX_ZYJNPX() { GetSession(); return View(); }
-        public ActionResult JYPXCX_TYPX() { GetSession(); return View(); }
+        public ActionResult JYPXCX_TYPXJG() { GetSession(); return View(); }
         public ActionResult JYPXCX_TYJL() { GetSession(); return View(); }
         public ActionResult JYPXCX_XLJY() { GetSession(); return View(); }
         public ActionResult JYPXCX_ITPX() { GetSession(); return View(); }

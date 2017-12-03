@@ -84,7 +84,7 @@ function LoadJBXX(obj) {
 
 var right = 0;
 
-//加载宠物详情
+//加载详情
 function LoadXQ(obj, BCMSString) {
     var html = "";
     html += ('<div class="div_body_left_body_xq">');
