@@ -15,7 +15,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         public ActionResult SHFWXX_BZMD() { return View(); }
         public ActionResult SHFWXX_JDWX() { return View(); }
         public ActionResult SHFWXX_DNWX() { return View(); }
-        public ActionResult SHFWXX_FWWXDK() { return View(); }
+        public ActionResult SHFWXX_FWWX() { return View(); }
         public ActionResult SHFWXX_JJWX() { return View(); }
         public ActionResult SHFWXX_SJWX() { return View(); }
         public ActionResult SHFWXX_SMWX() { return View(); }

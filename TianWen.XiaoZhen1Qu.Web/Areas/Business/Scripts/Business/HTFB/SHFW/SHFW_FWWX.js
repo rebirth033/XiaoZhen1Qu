@@ -1,9 +1,19 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
     BindClick("LB");
-    LoadSHFW_FWWXDKJBXX();
+    LoadSHFW_FWWXJBXX();
 });
-
+//绑定下拉框鼠标点击样式
+function BindClick(type) {
+    $("#div" + type + "Span").click(function () {
+        if (type === "LB") {
+            LoadCODESByTYPENAME("房屋维修类别", "LB", "CODES_SHFW", Bind, "OUTLB", "LB", "");
+        }
+        if (type === "XL") {
+            LoadXL();
+        }
+    });
+}
 //选择类别下拉框
 function SelectLB(obj, type, id) {
     $("#span" + type).html(obj.innerHTML);
@@ -55,23 +65,11 @@ function LoadXL() {
         }
     });
 }
-//绑定下拉框鼠标点击样式
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadCODESByTYPENAME("房屋维修/打孔", "LB", "CODES_SHFW", Bind, "OUTLB", "LB", "");
-        }
-        if (type === "XL") {
-            LoadXL();
-        }
-        
-    });
-}
 //加载生活服务_房屋维修/打孔基本信息
-function LoadSHFW_FWWXDKJBXX() {
+function LoadSHFW_FWWXJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SHFW/LoadSHFW_FWWXDKJBXX",
+        url: getRootPath() + "/Business/SHFW/LoadSHFW_FWWXJBXX",
         dataType: "json",
         data:
         {
@@ -80,22 +78,22 @@ function LoadSHFW_FWWXDKJBXX() {
         success: function (xml) {
             if (xml.Result === 1) {
                 var jsonObj = new JsonDB("myTabContent");
-                jsonObj.DisplayFromJson("myTabContent", xml.Value.SHFW_FWWXDKJBXX);
+                jsonObj.DisplayFromJson("myTabContent", xml.Value.SHFW_FWWXJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
-                $("#ID").val(xml.Value.SHFW_FWWXDKJBXX.ID);
+                $("#ID").val(xml.Value.SHFW_FWWXJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.BCMSString);
                 });
-                $("#spanLB").html(xml.Value.SHFW_FWWXDKJBXX.LB);
-                $("#spanQY").html(xml.Value.SHFW_FWWXDKJBXX.QY);
-                $("#spanDD").html(xml.Value.SHFW_FWWXDKJBXX.DD);
-                $("#spanXL").html(xml.Value.SHFW_FWWXDKJBXX.XL);
+                $("#spanLB").html(xml.Value.SHFW_FWWXJBXX.LB);
+                $("#spanQY").html(xml.Value.SHFW_FWWXJBXX.QY);
+                $("#spanDD").html(xml.Value.SHFW_FWWXJBXX.DD);
+                $("#spanXL").html(xml.Value.SHFW_FWWXJBXX.XL);
                 LoadPhotos(xml.Value.Photos);
-                if (xml.Value.SHFW_FWWXDKJBXX.LB.indexOf("卫浴/洁具维修") !== -1 || xml.Value.SHFW_FWWXDKJBXX.LB.indexOf("水管/水龙头维修") !== -1 || xml.Value.SHFW_FWWXDKJBXX.LB.indexOf("粉刷/防腐") !== -1) {
+                if (xml.Value.SHFW_FWWXJBXX.LB.indexOf("卫浴/洁具维修") !== -1 || xml.Value.SHFW_FWWXJBXX.LB.indexOf("水管/水龙头维修") !== -1 || xml.Value.SHFW_FWWXJBXX.LB.indexOf("粉刷/防腐") !== -1) {
                     $("#divXLText").css("display", "");
-                    $("#spanXL").html(xml.Value.SHFW_FWWXDKJBXX.XL);
+                    $("#spanXL").html(xml.Value.SHFW_FWWXJBXX.XL);
                 }
             }
         },
@@ -121,7 +119,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SHFW/FBSHFW_FWWXDKJBXX",
+        url: getRootPath() + "/Business/SHFW/FBSHFW_FWWXJBXX",
         dataType: "json",
         data:
         {

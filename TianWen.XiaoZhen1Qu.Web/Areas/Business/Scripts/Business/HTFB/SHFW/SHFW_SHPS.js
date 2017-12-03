@@ -4,13 +4,24 @@
     BindClick("PP");
     LoadSHFW_SHPSJBXX();
 });
+//绑定下拉框鼠标点击样式
+function BindClick(type) {
+    $("#div" + type + "Span").click(function () {
+        if (type === "LB") {
+            LoadCODESByTYPENAME("生活配送类别", "LB", "CODES_SHFW", Bind, "OUTLB", "LB", "");
+        }
+        if (type === "PP") {
+            LoadCODESByTYPENAME("桶装水品牌", "PP", "CODES_SHFW", Bind, "TZSPP", "PP", "");
+        }
 
+    });
+}
 //选择类别下拉框
 function SelectLB(obj, type, id) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-    if(type === "LB")
-    PDLB(obj.innerHTML);
+    if (type === "LB")
+        PDLB(obj.innerHTML);
 
 }
 //判断类别
@@ -68,18 +79,6 @@ function LoadXL(lbmc, xl) {
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
         }
-    });
-}
-//绑定下拉框鼠标点击样式
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadCODESByTYPENAME("生活配送", "LB", "CODES_SHFW", Bind, "OUTLB", "LB", "");
-        }
-        if (type === "PP") {
-            LoadCODESByTYPENAME("桶装水品牌", "PP", "CODES_SHFW", Bind, "TZSPP", "PP", "");
-        }
-        
     });
 }
 //加载生活服务_生活配送基本信息

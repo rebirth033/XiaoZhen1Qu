@@ -486,7 +486,7 @@
     <Content Include="Areas\Business\Css\HTFB\SHFW\SHFW_BMYS.css" />
     <Content Include="Areas\Business\Css\HTFB\SHFW\SHFW_BZMD.css" />
     <Content Include="Areas\Business\Css\HTFB\SHFW\SHFW_DNWX.css" />
-    <Content Include="Areas\Business\Css\HTFB\SHFW\SHFW_FWWXDK.css" />
+    <Content Include="Areas\Business\Css\HTFB\SHFW\SHFW_FWWX.css" />
     <Content Include="Areas\Business\Css\HTFB\SHFW\SHFW_GDSTQL.css" />
     <Content Include="Areas\Business\Css\HTFB\SHFW\SHFW_JDWX.css" />
     <Content Include="Areas\Business\Css\HTFB\SHFW\SHFW_JJWX.css" />
@@ -705,7 +705,7 @@
     <Content Include="Areas\Business\Css\XXXX\SHFW\SHFWXX_BZMD.css" />
     <Content Include="Areas\Business\Css\XXXX\SHFW\SHFWXX_JDWX.css" />
     <Content Include="Areas\Business\Css\XXXX\SHFW\SHFWXX_DNWX.css" />
-    <Content Include="Areas\Business\Css\XXXX\SHFW\SHFWXX_FWWXDK.css" />
+    <Content Include="Areas\Business\Css\XXXX\SHFW\SHFWXX_FWWX.css" />
     <Content Include="Areas\Business\Css\XXXX\SHFW\SHFWXX_JJWX.css" />
     <Content Include="Areas\Business\Css\XXXX\SHFW\SHFWXX_SMWX.css" />
     <Content Include="Areas\Business\Css\XXXX\SHFW\SHFWXX_SJWX.css" />
@@ -933,7 +933,7 @@
     <Content Include="Areas\Business\Scripts\Business\CXLB\SHFWCX\SHFWCX_BZMD.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\SHFWCX\SHFWCX_JDWX.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\SHFWCX\SHFWCX_DNWX.js" />
-    <Content Include="Areas\Business\Scripts\Business\CXLB\SHFWCX\SHFWCX_FWWXDK.js" />
+    <Content Include="Areas\Business\Scripts\Business\CXLB\SHFWCX\SHFWCX_FWWX.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\SHFWCX\SHFWCX_JJWX.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\SHFWCX\SHFWCX_SMWX.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\SHFWCX\SHFWCX_SJWX.js" />
@@ -1301,8 +1301,8 @@
     <Content Include="Areas\Business\Scripts\Business\HTFB\SHFW\SHFW_BZMDYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\SHFW\SHFW_DNWX.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\SHFW\SHFW_DNWXYZ.js" />
-    <Content Include="Areas\Business\Scripts\Business\HTFB\SHFW\SHFW_FWWXDK.js" />
-    <Content Include="Areas\Business\Scripts\Business\HTFB\SHFW\SHFW_FWWXDKYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\HTFB\SHFW\SHFW_FWWX.js" />
+    <Content Include="Areas\Business\Scripts\Business\HTFB\SHFW\SHFW_FWWXYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\SHFW\SHFW_GDSTQL.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\SHFW\SHFW_GDSTQLYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\SHFW\SHFW_JDWX.js" />
@@ -1588,7 +1588,7 @@
     <Content Include="Areas\Business\Scripts\Business\XXXX\SHFWXX\SHFWXX_BZMD.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\SHFWXX\SHFWXX_JDWX.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\SHFWXX\SHFWXX_DNWX.js" />
-    <Content Include="Areas\Business\Scripts\Business\XXXX\SHFWXX\SHFWXX_FWWXDK.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\SHFWXX\SHFWXX_FWWX.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\SHFWXX\SHFWXX_JJWX.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\SHFWXX\SHFWXX_SJSMWX.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\SHFWXX\SHFWXX_BJ.js" />
@@ -2233,7 +2233,7 @@
     <Content Include="Areas\Business\Views\SHFW\SHFW_BZMD.cshtml" />
     <Content Include="Areas\Business\Views\SHFW\SHFW_JDWX.cshtml" />
     <Content Include="Areas\Business\Views\SHFW\SHFW_DNWX.cshtml" />
-    <Content Include="Areas\Business\Views\SHFW\SHFW_FWWXDK.cshtml" />
+    <Content Include="Areas\Business\Views\SHFW\SHFW_FWWX.cshtml" />
     <Content Include="Areas\Business\Views\SHFW\SHFW_JJWX.cshtml" />
     <Content Include="Areas\Business\Views\SHFW\SHFW_SJWX.cshtml" />
     <Content Include="Areas\Business\Views\SWFW\SWFW_QMFSSM.cshtml" />
@@ -2683,7 +2683,7 @@
     <Content Include="Areas\Business\Views\SHFWCX\SHFWCX_BZMD.cshtml" />
     <Content Include="Areas\Business\Views\SHFWCX\SHFWCX_JDWX.cshtml" />
     <Content Include="Areas\Business\Views\SHFWCX\SHFWCX_DNWX.cshtml" />
-    <Content Include="Areas\Business\Views\SHFWCX\SHFWCX_FWWXDK.cshtml" />
+    <Content Include="Areas\Business\Views\SHFWCX\SHFWCX_FWWX.cshtml" />
     <Content Include="Areas\Business\Views\SHFWCX\SHFWCX_JJWX.cshtml" />
     <Content Include="Areas\Business\Views\SHFWCX\SHFWCX_BMYS.cshtml" />
     <Content Include="Areas\Business\Views\SHFWCX\SHFWCX_BJQX.cshtml" />
@@ -2694,7 +2694,7 @@
     <Content Include="Areas\Business\Views\SHFWXX\SHFWXX_BZMD.cshtml" />
     <Content Include="Areas\Business\Views\SHFWXX\SHFWXX_JDWX.cshtml" />
     <Content Include="Areas\Business\Views\SHFWXX\SHFWXX_DNWX.cshtml" />
-    <Content Include="Areas\Business\Views\SHFWXX\SHFWXX_FWWXDK.cshtml" />
+    <Content Include="Areas\Business\Views\SHFWXX\SHFWXX_FWWX.cshtml" />
     <Content Include="Areas\Business\Views\SHFWXX\SHFWXX_JJWX.cshtml" />
     <Content Include="Areas\Business\Views\SHFWXX\SHFWXX_BMYS.cshtml" />
     <Content Include="Areas\Business\Views\SHFWXX\SHFWXX_BJQX.cshtml" />

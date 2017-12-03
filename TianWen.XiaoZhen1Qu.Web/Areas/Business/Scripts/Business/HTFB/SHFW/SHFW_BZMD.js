@@ -4,13 +4,20 @@
     BindClick("LB");
     LoadSHFW_BZMDJBXX();
 });
+//绑定下拉框鼠标点击样式
+function BindClick(type) {
+    $("#div" + type + "Span").click(function () {
+        if (type === "LB") {
+            LoadCODESByTYPENAME("殡葬/墓地类别", "LB", "CODES_SHFW", Bind, "OUTLB", "LB", "");
+        }
+    });
+}
 //选择类别下拉框
 function SelectLB(obj, type, id) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
     PDLB(obj.innerHTML);
 }
-
 function PDLB(lb) {
     if (lb === "殡仪馆/殡葬服务" || lb === "殡葬用品") {
         LoadXL($("#spanLB").html());
@@ -59,15 +66,6 @@ function LoadXL(lbmc, xl) {
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
         }
-    });
-}
-//绑定下拉框鼠标点击样式
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadCODESByTYPENAME("殡葬/墓地", "LB", "CODES_SHFW", Bind, "OUTLB", "LB", "");
-        }
-        
     });
 }
 //加载生活服务_殡葬/墓地基本信息
