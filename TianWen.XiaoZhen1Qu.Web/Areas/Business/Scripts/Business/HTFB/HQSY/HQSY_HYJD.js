@@ -8,7 +8,7 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "HLLX") {
-            LoadCODESByTYPENAME("婚礼类型", "HLLX", "CODES_HQSY", Bind, "HYJDHLLX", "HLLX", "");
+            LoadCODESByTYPENAME("婚宴酒店婚礼类型", "HLLX", "CODES_HQSY", Bind, "HYJDHLLX", "HLLX", "");
         }
         if (type === "JDXJ") {
             LoadCODESByTYPENAME("酒店星级", "JDXJ", "CODES_HQSY", Bind, "HYJDJDXJ", "JDXJ", "");

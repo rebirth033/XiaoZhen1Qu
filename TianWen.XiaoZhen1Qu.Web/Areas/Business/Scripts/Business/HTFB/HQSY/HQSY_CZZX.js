@@ -16,7 +16,6 @@ function BindClick(type) {
         if (type === "XL") {
             LoadXL();
         }
-        
     });
 }
 //选择类别下拉框
