@@ -8,9 +8,8 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("户外", "LB", "CODES_XXYL", Bind, "HWLB", "LB", "");
+            LoadCODESByTYPENAME("户外类别", "LB", "CODES_XXYL", Bind, "HWLB", "LB", "");
         }
-        
     });
 }
 //加载休闲娱乐_户外基本信息

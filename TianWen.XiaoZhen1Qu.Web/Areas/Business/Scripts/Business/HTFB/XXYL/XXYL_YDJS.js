@@ -8,9 +8,8 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("运动健身", "LB", "CODES_XXYL", Bind, "YDJSLB", "LB", "");
+            LoadCODESByTYPENAME("运动健身类别", "LB", "CODES_XXYL", Bind, "YDJSLB", "LB", "");
         }
-        
     });
 }
 //加载休闲娱乐_运动健身基本信息

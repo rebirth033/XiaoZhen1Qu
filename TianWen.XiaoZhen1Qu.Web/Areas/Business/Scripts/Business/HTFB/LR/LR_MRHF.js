@@ -1,8 +1,14 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
-    LoadDuoX("美容护肤", "MRHFLB");
+    LoadDuoX("美容护肤类别", "MRHFLB");
     BindClick("LB");
 });
+//绑定下拉框鼠标点击样式
+function BindClick(type) {
+    $("#div" + type + "Span").click(function () {
+
+    });
+}
 //加载多选
 function LoadDuoX(type, id) {
     $.ajax({
@@ -37,12 +43,6 @@ function LoadDuoX(type, id) {
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
         }
-    });
-}
-//绑定下拉框鼠标点击样式
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-
     });
 }
 //加载休闲娱乐_美容护肤基本信息

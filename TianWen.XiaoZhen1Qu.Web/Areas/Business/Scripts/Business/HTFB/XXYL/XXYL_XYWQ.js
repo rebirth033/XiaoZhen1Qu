@@ -8,7 +8,7 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("洗浴温泉", "LB", "CODES_XXYL", Bind, "XYWQLB", "LB", "");
+            LoadCODESByTYPENAME("洗浴温泉类别", "LB", "CODES_XXYL", Bind, "XYWQLB", "LB", "");
         }
     });
 }

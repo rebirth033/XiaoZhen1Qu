@@ -8,9 +8,8 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("棋牌桌游", "LB", "CODES_XXYL", Bind, "QPZYLB", "LB", "");
+            LoadCODESByTYPENAME("棋牌桌游类别", "LB", "CODES_XXYL", Bind, "QPZYLB", "LB", "");
         }
-        
     });
 }
 //加载休闲娱乐_棋牌桌游基本信息

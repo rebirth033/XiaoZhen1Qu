@@ -23,7 +23,7 @@ function PDLB(LB) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("美体瘦身", "LB", "CODES_LR", Bind, "MTSSLB", "LB", "");
+            LoadCODESByTYPENAME("美体瘦身类别", "LB", "CODES_LR", Bind, "MTSSLB", "LB", "");
         }
         if (type === "FS") {
             LoadCODESByTYPENAME("减肥方式", "FS", "CODES_LR", Bind, "JFFS", "FS", "");

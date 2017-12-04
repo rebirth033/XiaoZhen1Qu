@@ -7,7 +7,7 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("DIY手工坊", "LB", "CODES_XXYL", Bind, "DIYSGFLB", "LB", "");
+            LoadCODESByTYPENAME("DIY手工坊类别", "LB", "CODES_XXYL", Bind, "DIYSGFLB", "LB", "");
         }
         
     });

@@ -8,9 +8,8 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("夜店酒吧", "LB", "CODES_XXYL", Bind, "YDJBLB", "LB", "");
+            LoadCODESByTYPENAME("夜店酒吧类别", "LB", "CODES_XXYL", Bind, "YDJBLB", "LB", "");
         }
-        
     });
 }
 //加载休闲娱乐_夜店酒吧基本信息

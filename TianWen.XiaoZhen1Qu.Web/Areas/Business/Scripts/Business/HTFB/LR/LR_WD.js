@@ -1,7 +1,6 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
-    LoadDuoX("舞蹈", "WDLB");
-    BindClick("LB");
+    LoadDuoX("舞蹈类别", "WDLB");
 });
 //加载多选
 function LoadDuoX(type, id) {
@@ -37,12 +36,6 @@ function LoadDuoX(type, id) {
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
         }
-    });
-}
-//绑定下拉框鼠标点击样式
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        
     });
 }
 //加载休闲娱乐_舞蹈基本信息

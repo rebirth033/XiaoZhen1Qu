@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
-    LoadDuoX("SPA", "SPALB");
+    LoadDuoX("SPA功效", "SPALB");
     BindClick("LB");
 });
 //加载多选
