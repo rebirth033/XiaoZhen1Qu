@@ -7,12 +7,11 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("建材", "LB", "CODES_ZXJC", Bind, "OUTLB", "LB", "");
+            LoadCODESByTYPENAME("建材类别", "LB", "CODES_ZXJC", Bind, "OUTLB", "LB", "");
         }
         if (type === "XL") {
             LoadXL();
         }
-        
     });
 }
 //选择类别下拉框

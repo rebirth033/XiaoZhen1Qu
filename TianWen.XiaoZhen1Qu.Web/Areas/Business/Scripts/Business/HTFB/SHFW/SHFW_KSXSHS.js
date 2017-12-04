@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function() { Close("_XZQ"); });
-    LoadSHFW_KSHSXSJBXX();
+    LoadSHFW_KSXSHSJBXX();
 });
 
 //绑定下拉框鼠标点击样式
@@ -10,10 +10,10 @@ function BindClick(type) {
     });
 }
 //加载生活服务_开锁/换锁/修锁基本信息
-function LoadSHFW_KSHSXSJBXX() {
+function LoadSHFW_KSXSHSJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SHFW/LoadSHFW_KSHSXSJBXX",
+        url: getRootPath() + "/Business/SHFW/LoadSHFW_KSXSHSJBXX",
         dataType: "json",
         data:
         {
@@ -22,16 +22,16 @@ function LoadSHFW_KSHSXSJBXX() {
         success: function (xml) {
             if (xml.Result === 1) {
                 var jsonObj = new JsonDB("myTabContent");
-                jsonObj.DisplayFromJson("myTabContent", xml.Value.SHFW_KSHSXSJBXX);
+                jsonObj.DisplayFromJson("myTabContent", xml.Value.SHFW_KSXSHSJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
-                $("#ID").val(xml.Value.SHFW_KSHSXSJBXX.ID);
+                $("#ID").val(xml.Value.SHFW_KSXSHSJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () {
                     ue.setHeight(200);
                     ue.setContent(xml.Value.BCMSString);
                 });
-                $("#spanQY").html(xml.Value.SHFW_KSHSXSJBXX.QY);
-                $("#spanDD").html(xml.Value.SHFW_KSHSXSJBXX.DD);
+                $("#spanQY").html(xml.Value.SHFW_KSXSHSJBXX.QY);
+                $("#spanDD").html(xml.Value.SHFW_KSXSHSJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
             }
         },
@@ -55,7 +55,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SHFW/FBSHFW_KSHSXSJBXX",
+        url: getRootPath() + "/Business/SHFW/FBSHFW_KSXSHSJBXX",
         dataType: "json",
         data:
         {

@@ -7,7 +7,7 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("房屋改造", "LB", "CODES_ZXJC", Bind, "OUTLB", "LB", "");
+            LoadCODESByTYPENAME("房屋改造类别", "LB", "CODES_ZXJC", Bind, "OUTLB", "LB", "");
         }
         if (type === "XL") {
             LoadXL();

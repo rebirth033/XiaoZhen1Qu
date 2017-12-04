@@ -227,7 +227,7 @@
     <Compile Include="Maps\SHFW\SHFW_GDSTQLJBXX_Map.cs" />
     <Compile Include="Maps\SHFW\SHFW_JDWXJBXX_Map.cs" />
     <Compile Include="Maps\SHFW\SHFW_JJWXJBXX_Map.cs" />
-    <Compile Include="Maps\SHFW\SHFW_KSHSXSJBXX_Map.cs" />
+    <Compile Include="Maps\SHFW\SHFW_KSXSHSJBXX_Map.cs" />
     <Compile Include="Maps\SWFW\SWFW_QMFSSMJBXX_Map.cs" />
     <Compile Include="Maps\SHFW\SHFW_SHPSJBXX_Map.cs" />
     <Compile Include="Maps\SHFW\SHFW_SJWXJBXX_Map.cs" />
@@ -475,7 +475,7 @@
     <Compile Include="Models\SHFW\SHFW_GDSTQLJBXX.cs" />
     <Compile Include="Models\SHFW\SHFW_JDWXJBXX.cs" />
     <Compile Include="Models\SHFW\SHFW_JJWXJBXX.cs" />
-    <Compile Include="Models\SHFW\SHFW_KSHSXSJBXX.cs" />
+    <Compile Include="Models\SHFW\SHFW_KSXSHSJBXX.cs" />
     <Compile Include="Models\SWFW\SWFW_QMFSSMJBXX.cs" />
     <Compile Include="Models\SHFW\SHFW_SHPSJBXX.cs" />
     <Compile Include="Models\SHFW\SHFW_SJWXJBXX.cs" />
@@ -589,6 +589,7 @@
     <Compile Include="ViewModels\QZZP\QZZP_JZZPView.cs" />
     <Compile Include="ViewModels\QZZP\QZZP_QZZPView.cs" />
     <Compile Include="ViewModels\SHFW\SHFW_BJView.cs" />
+    <Compile Include="ViewModels\ZXJC\ZXJC_JZFWView.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

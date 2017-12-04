@@ -14,7 +14,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         public ActionResult SHFW_BMYS() { ViewData["XZQ"] = Session["XZQ"]; ViewData["YHM"] = Session["YHM"]; return View(); }
         public ActionResult SHFW_BZMD() { ViewData["XZQ"] = Session["XZQ"]; ViewData["YHM"] = Session["YHM"]; return View(); }
         public ActionResult SHFW_GDSTQL() { ViewData["XZQ"] = Session["XZQ"]; ViewData["YHM"] = Session["YHM"]; return View(); }
-        public ActionResult SHFW_KSHSXS() { ViewData["XZQ"] = Session["XZQ"]; ViewData["YHM"] = Session["YHM"]; return View(); }
+        public ActionResult SHFW_KSXSHS() { ViewData["XZQ"] = Session["XZQ"]; ViewData["YHM"] = Session["YHM"]; return View(); }
         public ActionResult SHFW_SHPS() { ViewData["XZQ"] = Session["XZQ"]; ViewData["YHM"] = Session["YHM"]; return View(); }
         public ActionResult SHFW_DNWX() { ViewData["XZQ"] = Session["XZQ"]; ViewData["YHM"] = Session["YHM"]; return View(); }
         public ActionResult SHFW_FWWX() { ViewData["XZQ"] = Session["XZQ"]; ViewData["YHM"] = Session["YHM"]; return View(); }
@@ -94,17 +94,17 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return Json(result);
         }
         [ValidateInput(false)]
-        public JsonResult FBSHFW_KSHSXSJBXX()
+        public JsonResult FBSHFW_KSXSHSJBXX()
         {
             YHJBXX yhjbxx = SHFW_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
             JCXX jcxx = CreateJCXX(yhjbxx, json);
-            SHFW_KSHSXSJBXX SHFW_KSHSXSJBXX = JsonHelper.ConvertJsonToObject<SHFW_KSHSXSJBXX>(json);
-            SHFW_KSHSXSJBXX.BCMS = BinaryHelper.StringToBinary(bcms);
+            SHFW_KSXSHSJBXX SHFW_KSXSHSJBXX = JsonHelper.ConvertJsonToObject<SHFW_KSXSHSJBXX>(json);
+            SHFW_KSXSHSJBXX.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = SHFW_BLL.SaveSHFW_KSHSXSJBXX(jcxx, SHFW_KSHSXSJBXX, photos);
+            object result = SHFW_BLL.SaveSHFW_KSXSHSJBXX(jcxx, SHFW_KSXSHSJBXX, photos);
             return Json(result);
         }
         [ValidateInput(false)]
@@ -211,7 +211,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         public JsonResult LoadSHFW_BMYSJBXX() { string ID = Request["ID"]; object result = SHFW_BLL.LoadSHFW_BMYSJBXX(ID); return Json(result); }
         public JsonResult LoadSHFW_BJQXJBXX() { string ID = Request["ID"]; object result = SHFW_BLL.LoadSHFW_BJQXJBXX(ID); return Json(result); }
         public JsonResult LoadSHFW_GDSTQLJBXX() { string ID = Request["ID"]; object result = SHFW_BLL.LoadSHFW_GDSTQLJBXX(ID); return Json(result); }
-        public JsonResult LoadSHFW_KSHSXSJBXX() { string ID = Request["ID"]; object result = SHFW_BLL.LoadSHFW_KSHSXSJBXX(ID); return Json(result); }
+        public JsonResult LoadSHFW_KSXSHSJBXX() { string ID = Request["ID"]; object result = SHFW_BLL.LoadSHFW_KSXSHSJBXX(ID); return Json(result); }
         public JsonResult LoadSHFW_SHPSJBXX() { string ID = Request["ID"]; object result = SHFW_BLL.LoadSHFW_SHPSJBXX(ID); return Json(result); }
         public JsonResult LoadSHFW_DNWXJBXX() { string ID = Request["ID"]; object result = SHFW_BLL.LoadSHFW_DNWXJBXX(ID); return Json(result); }
         public JsonResult LoadSHFW_FWWXJBXX() { string ID = Request["ID"]; object result = SHFW_BLL.LoadSHFW_FWWXJBXX(ID); return Json(result); }

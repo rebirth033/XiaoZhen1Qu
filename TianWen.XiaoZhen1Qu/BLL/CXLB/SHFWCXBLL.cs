@@ -60,9 +60,9 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     }
                     return new { Result = EnResultType.Success, list = listnew, PageCount = PageCount, TotalCount = TotalCount };
                 }
-                if (TYPE == "SHFWXX_KSHSXS")
+                if (TYPE == "SHFWXX_KSXSHS")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,shfw_kshsxsjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + " order by zxgxsj desc");
+                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,shfw_KSXSHSjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + " order by zxgxsj desc");
                     List<SHFW_BJView> list = ConvertHelper.DataTableToList<SHFW_BJView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -246,9 +246,9 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     }
                     return new { Result = EnResultType.Success, list = list, BCMSString = BinaryHelper.BinaryToString(list[0].BCMS), grxxlist = GetGRXX(list[0].YHID) };
                 }
-                if (TYPE == "SHFWXX_KSHSXS")
+                if (TYPE == "SHFWXX_KSXSHS")
                 {
-                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,shfw_kshsxsjbxx b where a.jcxxid = b.jcxxid and id = '{0}'  order by zxgxsj desc", ID));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,shfw_KSXSHSjbxx b where a.jcxxid = b.jcxxid and id = '{0}'  order by zxgxsj desc", ID));
                     List<SHFW_BJView> list = ConvertHelper.DataTableToList<SHFW_BJView>(dt);
                     foreach (var jcxx in list)
                     {

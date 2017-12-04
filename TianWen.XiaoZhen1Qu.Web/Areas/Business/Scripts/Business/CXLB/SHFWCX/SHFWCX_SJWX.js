@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadSHFWCondition() {
-    LoadConditionByTypeNames("'手机维修品牌',''是否上门", "CODES_SHFW", "品牌,是否上门", "LB,SFSM", "15,15");
+    LoadConditionByTypeNames("'手机维修品牌'", "CODES_SHFW", "品牌", "LB", "15");
     LoadBody("SHFWXX_SJWX", currentIndex);
 }
 //选择条件

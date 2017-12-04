@@ -490,7 +490,7 @@
     <Content Include="Areas\Business\Css\HTFB\SHFW\SHFW_GDSTQL.css" />
     <Content Include="Areas\Business\Css\HTFB\SHFW\SHFW_JDWX.css" />
     <Content Include="Areas\Business\Css\HTFB\SHFW\SHFW_JJWX.css" />
-    <Content Include="Areas\Business\Css\HTFB\SHFW\SHFW_KSHSXS.css" />
+    <Content Include="Areas\Business\Css\HTFB\SHFW\SHFW_KSXSHS.css" />
     <Content Include="Areas\Business\Css\HTFB\SWFW\SWFW_QMFSSM.css" />
     <Content Include="Areas\Business\Css\HTFB\SHFW\SHFW_SHPS.css" />
     <Content Include="Areas\Business\Css\HTFB\SHFW\SHFW_SJWX.css" />
@@ -762,6 +762,12 @@
     <Content Include="Areas\Business\Css\XXXX\ZSJM\ZSJMXX_JC.css" />
     <Content Include="Areas\Business\Css\XXXX\ZSJM\ZSJMXX_FZXB.css" />
     <Content Include="Areas\Business\Css\XXXX\ZSJM\ZSJMXX_CY.css" />
+    <Content Include="Areas\Business\Css\XXXX\ZXJC\ZXJCXX_GZFW.css" />
+    <Content Include="Areas\Business\Css\XXXX\ZXJC\ZXJCXX_FWGZ.css" />
+    <Content Include="Areas\Business\Css\XXXX\ZXJC\ZXJCXX_JC.css" />
+    <Content Include="Areas\Business\Css\XXXX\ZXJC\ZXJCXX_JJ.css" />
+    <Content Include="Areas\Business\Css\XXXX\ZXJC\ZXJCXX_JFJS.css" />
+    <Content Include="Areas\Business\Css\XXXX\ZXJC\ZXJCXX_JZFW.css" />
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\css\bootstrap-theme.css" />
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\css\bootstrap-theme.min.css" />
     <Content Include="Areas\Business\Scripts\bootstrap-3.3.7\css\bootstrap.css" />
@@ -1309,8 +1315,8 @@
     <Content Include="Areas\Business\Scripts\Business\HTFB\SHFW\SHFW_JDWXYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\SHFW\SHFW_JJWX.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\SHFW\SHFW_JJWXYZ.js" />
-    <Content Include="Areas\Business\Scripts\Business\HTFB\SHFW\SHFW_KSHSXS.js" />
-    <Content Include="Areas\Business\Scripts\Business\HTFB\SHFW\SHFW_KSHSXSYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\HTFB\SHFW\SHFW_KSXSHS.js" />
+    <Content Include="Areas\Business\Scripts\Business\HTFB\SHFW\SHFW_KSXSHSYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\SWFW\SWFW_QMFSSM.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\SWFW\SWFW_QMFSSMYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\SHFW\SHFW_SHPS.js" />
@@ -1590,6 +1596,7 @@
     <Content Include="Areas\Business\Scripts\Business\XXXX\SHFWXX\SHFWXX_DNWX.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\SHFWXX\SHFWXX_FWWX.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\SHFWXX\SHFWXX_JJWX.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\SHFWXX\SHFWXX_SMWX.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\SHFWXX\SHFWXX_SJWX.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\SHFWXX\SHFWXX_BJ.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\SWFWXX\SWFWXX_QMFSSM.js" />
@@ -1641,6 +1648,12 @@
     <Content Include="Areas\Business\Scripts\Business\XXXX\ZSJMXX\ZSJMXX_JC.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\ZSJMXX\ZSJMXX_FZXB.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\ZSJMXX\ZSJMXX_CY.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\ZXJCXX\ZXJCXX_GZFW.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\ZXJCXX\ZXJCXX_FWGZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\ZXJCXX\ZXJCXX_JC.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\ZXJCXX\ZXJCXX_JJ.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\ZXJCXX\ZXJCXX_JFJS.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\ZXJCXX\ZXJCXX_JZFW.js" />
     <Content Include="Areas\Business\Scripts\jquery-1.9.1.min.js" />
     <Content Include="Areas\Business\Scripts\jquery-ui-1.12.1.custom\AUTHORS.txt" />
     <Content Include="Areas\Business\Scripts\jquery-ui-1.12.1.custom\external\jquery\jquery.js" />
@@ -2227,7 +2240,7 @@
     <Content Include="Areas\Business\Views\SHFW\SHFW_BJ.cshtml" />
     <Content Include="Areas\Business\Views\SHFW\SHFW_BMYS.cshtml" />
     <Content Include="Areas\Business\Views\SHFW\SHFW_BJQX.cshtml" />
-    <Content Include="Areas\Business\Views\SHFW\SHFW_KSHSXS.cshtml" />
+    <Content Include="Areas\Business\Views\SHFW\SHFW_KSXSHS.cshtml" />
     <Content Include="Areas\Business\Views\SHFW\SHFW_SHPS.cshtml" />
     <Content Include="Areas\Business\Views\SHFW\SHFW_GDSTQL.cshtml" />
     <Content Include="Areas\Business\Views\SHFW\SHFW_BZMD.cshtml" />

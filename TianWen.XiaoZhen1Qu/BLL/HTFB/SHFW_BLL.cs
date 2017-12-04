@@ -322,9 +322,9 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
-        public object SaveSHFW_KSHSXSJBXX(JCXX jcxx, SHFW_KSHSXSJBXX SHFW_KSHSXSJBXX, List<PHOTOS> photos)
+        public object SaveSHFW_KSXSHSJBXX(JCXX jcxx, SHFW_KSXSHSJBXX SHFW_KSXSHSJBXX, List<PHOTOS> photos)
         {
-            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM SHFW_KSHSXSJBXX WHERE ID='{0}'", SHFW_KSHSXSJBXX.ID));
+            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM SHFW_KSXSHSJBXX WHERE ID='{0}'", SHFW_KSXSHSJBXX.ID));
             using (ITransaction transaction = DAO.BeginTransaction())
             {
                 try
@@ -332,41 +332,41 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     if (dt.Rows.Count > 0)
                     {
                         SavePhotos(photos, dt.Rows[0]["JCXXID"].ToString());
-                        SHFW_KSHSXSJBXX.JCXXID = dt.Rows[0]["JCXXID"].ToString();
+                        SHFW_KSXSHSJBXX.JCXXID = dt.Rows[0]["JCXXID"].ToString();
                         jcxx.JCXXID = dt.Rows[0]["JCXXID"].ToString();
                         DAO.Update(jcxx);
-                        DAO.Update(SHFW_KSHSXSJBXX);
+                        DAO.Update(SHFW_KSXSHSJBXX);
                         transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, ID = SHFW_KSHSXSJBXX.ID } };
+                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, ID = SHFW_KSXSHSJBXX.ID } };
                     }
                     else
                     {
                         SavePhotos(photos, jcxx.JCXXID);
-                        SHFW_KSHSXSJBXX.JCXXID = jcxx.JCXXID;
+                        SHFW_KSXSHSJBXX.JCXXID = jcxx.JCXXID;
                         DAO.Save(jcxx);
-                        DAO.Save(SHFW_KSHSXSJBXX);
+                        DAO.Save(SHFW_KSXSHSJBXX);
                         transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, ID = SHFW_KSHSXSJBXX.ID } };
+                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, ID = SHFW_KSXSHSJBXX.ID } };
                     }
                 }
                 catch (Exception ex)
                 {
                     transaction.Rollback();
-                    LoggerManager.Error("SHFW_KSHSXSJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                    LoggerManager.Error("SHFW_KSXSHSJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
                     return new { Result = EnResultType.Failed, Message = "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!", Type = 3 };
                 }
             }
         }
 
-        public object LoadSHFW_KSHSXSJBXX(string ID)
+        public object LoadSHFW_KSXSHSJBXX(string ID)
         {
             try
             {
-                SHFW_KSHSXSJBXX SHFW_KSHSXSJBXX = DAO.GetObjectByID<SHFW_KSHSXSJBXX>(ID);
-                if (SHFW_KSHSXSJBXX != null)
+                SHFW_KSXSHSJBXX SHFW_KSXSHSJBXX = DAO.GetObjectByID<SHFW_KSXSHSJBXX>(ID);
+                if (SHFW_KSXSHSJBXX != null)
                 {
-                    JCXX jcxx = GetJCXXByID(SHFW_KSHSXSJBXX.JCXXID);
-                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { SHFW_KSHSXSJBXX = SHFW_KSHSXSJBXX, BCMSString = BinaryHelper.BinaryToString(SHFW_KSHSXSJBXX.BCMS), JCXX = jcxx, Photos = GetPhtosByJCXXID(SHFW_KSHSXSJBXX.JCXXID) } };
+                    JCXX jcxx = GetJCXXByID(SHFW_KSXSHSJBXX.JCXXID);
+                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { SHFW_KSXSHSJBXX = SHFW_KSXSHSJBXX, BCMSString = BinaryHelper.BinaryToString(SHFW_KSXSHSJBXX.BCMS), JCXX = jcxx, Photos = GetPhtosByJCXXID(SHFW_KSXSHSJBXX.JCXXID) } };
                 }
                 else
                 {
@@ -375,7 +375,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
             catch (Exception ex)
             {
-                LoggerManager.Error("SHFW_KSHSXSJBXXBLL", "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                LoggerManager.Error("SHFW_KSXSHSJBXXBLL", "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
                 return new
                 {
                     Result = EnResultType.Failed,
