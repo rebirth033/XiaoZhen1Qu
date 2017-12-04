@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
-    LoadDuoX("美甲", "MJLB");
+    LoadDuoX("美甲类别", "MJLB");
     BindClick("LB");
 });
 //加载多选

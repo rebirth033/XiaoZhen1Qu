@@ -7,7 +7,7 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("口腔护理", "LB", "CODES_LR", Bind, "KQHLLB", "LB", "");
+            LoadCODESByTYPENAME("口腔护理类别", "LB", "CODES_LR", Bind, "KQHLLB", "LB", "");
         }
     });
 }

@@ -1,7 +1,6 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
-    LoadDuoX("美发护发", "MFHFLB");
-    BindClick("LB");
+    LoadDuoX("美发护发类别", "MFHFLB");
 });
 //加载多选
 function LoadDuoX(type, id) {

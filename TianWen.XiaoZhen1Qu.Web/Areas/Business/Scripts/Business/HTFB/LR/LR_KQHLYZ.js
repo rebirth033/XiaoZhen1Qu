@@ -7,7 +7,7 @@ function ValidateAll() {
         & ValidateBCMS("BCMS", "忘记填写补充描述啦")
         & ValidateFWQY()
         & ValidateXXDZ()
-        & ValidateCommon())
+        & ValidateCommonWithoutZP())
         return true;
     else
         return false;
