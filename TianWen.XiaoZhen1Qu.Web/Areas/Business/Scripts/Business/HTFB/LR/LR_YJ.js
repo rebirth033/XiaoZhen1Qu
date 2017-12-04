@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
-    LoadDuoX("瑜伽", "YJLB");
+    LoadDuoX("瑜伽类别", "YJLB");
     BindClick("LB");
 });
 //加载多选
