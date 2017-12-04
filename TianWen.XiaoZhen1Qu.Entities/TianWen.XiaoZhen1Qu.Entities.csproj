@@ -135,7 +135,6 @@
     <Compile Include="Maps\HQSY\HQSY_HSSYJBXX_Map.cs" />
     <Compile Include="Maps\HQSY\HQSY_HYJDJBXX_Map.cs" />
     <Compile Include="Maps\HQSY\HQSY_SYJBXX_Map.cs" />
-    <Compile Include="Maps\HQSY\HQSY_ZBSSJBXX_Map.cs" />
     <Compile Include="Maps\JCXX_Map.cs" />
     <Compile Include="Maps\JYPX\JYPX_GLPXJBXX_Map.cs" />
     <Compile Include="Maps\JYPX\JYPX_ITPXJBXX_Map.cs" />
@@ -380,7 +379,6 @@
     <Compile Include="Models\HQSY\HQSY_HSSYJBXX.cs" />
     <Compile Include="Models\HQSY\HQSY_HYJDJBXX.cs" />
     <Compile Include="Models\HQSY\HQSY_SYJBXX.cs" />
-    <Compile Include="Models\HQSY\HQSY_ZBSSJBXX.cs" />
     <Compile Include="Models\JCXX.cs" />
     <Compile Include="Models\JYPX\JYPX_GLPXJBXX.cs" />
     <Compile Include="Models\JYPX\JYPX_ITPXJBXX.cs" />
@@ -586,10 +584,12 @@
     <Compile Include="ViewModels\GY\GRXXView.cs" />
     <Compile Include="ViewModels\HQSY\HQSY_HQGSView.cs" />
     <Compile Include="ViewModels\JYPX\QZZP_JZZPView.cs" />
+    <Compile Include="ViewModels\LYJD\LYJD_LXSView.cs" />
     <Compile Include="ViewModels\PFCG\PFCG_SPView.cs" />
     <Compile Include="ViewModels\QZZP\QZZP_JZZPView.cs" />
     <Compile Include="ViewModels\QZZP\QZZP_QZZPView.cs" />
     <Compile Include="ViewModels\SHFW\SHFW_BJView.cs" />
+    <Compile Include="ViewModels\XXYL\XXYL_YDJSView.cs" />
     <Compile Include="ViewModels\ZXJC\ZXJC_JZFWView.cs" />
   </ItemGroup>
   <ItemGroup />

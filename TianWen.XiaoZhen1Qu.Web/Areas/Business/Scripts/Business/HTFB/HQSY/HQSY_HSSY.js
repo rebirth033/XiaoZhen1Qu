@@ -9,7 +9,7 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "PSFG") {
-            LoadCODESByTYPENAME("拍摄风格", "PSFG", "CODES_HQSY", Bind, "HSSYPSFG", "PSFG", "");
+            LoadCODESByTYPENAME("婚纱摄影拍摄风格", "PSFG", "CODES_HQSY", Bind, "HSSYPSFG", "PSFG", "");
         }
         
     });

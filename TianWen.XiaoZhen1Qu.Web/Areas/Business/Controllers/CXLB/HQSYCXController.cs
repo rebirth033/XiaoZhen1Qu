@@ -14,7 +14,6 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         public ActionResult HQSYCX_SY() { GetSession(); return View(); }
         public ActionResult HQSYCX_HLGP() { GetSession(); return View(); }
         public ActionResult HQSYCX_HSLF() { GetSession(); return View(); }
-        public ActionResult HQSYCX_ZBSS() { GetSession(); return View(); }
         public ActionResult HQSYCX_HSSY() { GetSession(); return View(); }
 
         public JsonResult LoadHQSYXX()

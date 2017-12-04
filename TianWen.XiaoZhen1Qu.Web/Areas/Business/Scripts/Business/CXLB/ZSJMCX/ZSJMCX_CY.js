@@ -46,7 +46,7 @@ function LoadBody(TYPE, PageIndex) {
                 $("#ul_body_left").html('');
                 LoadPage(TYPE, xml.PageCount);
                 for (var i = 0; i < xml.list.length; i++) {
-                    LoadQZZPInfo(xml.list[i]);
+                    LoadInfo(xml.list[i]);
                 }
             }
         },
@@ -56,7 +56,7 @@ function LoadBody(TYPE, PageIndex) {
     });
 }
 //加载单条信息
-function LoadQZZPInfo(obj) {
+function LoadInfo(obj) {
     var html = "";
     html += ('<li class="li_body_left">');
     html += ('<div class="div_li_body_left_left">');

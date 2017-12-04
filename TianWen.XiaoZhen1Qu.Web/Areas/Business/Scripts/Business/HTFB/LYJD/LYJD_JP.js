@@ -4,6 +4,14 @@ $(document).ready(function () {
     BindClick("LB");
     LoadLYJD_JPJBXX();
 });
+//绑定下拉框鼠标点击样式
+function BindClick(type) {
+    $("#div" + type + "Span").click(function () {
+        if (type === "LB") {
+            LoadCODESByTYPENAME("机票类别", "LB", "CODES_LYJD", Bind, "OUTLB", "LB", "");
+        }
+    });
+}
 //选择类别下拉框
 function SelectLB(obj, type, id) {
     $("#span" + type).html(obj.innerHTML);
@@ -47,15 +55,6 @@ function LoadXL(lbmc, xl) {
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
         }
-    });
-}
-//绑定下拉框鼠标点击样式
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadCODESByTYPENAME("机票", "LB", "CODES_LYJD", Bind, "OUTLB", "LB", "");
-        }
-        
     });
 }
 //加载旅游酒店_机票基本信息

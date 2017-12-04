@@ -40,9 +40,5 @@ namespace TianWen.XiaoZhen1Qu.Interface
         object SaveHQSY_SYJBXX(JCXX jcxx, HQSY_SYJBXX dzfjbxx, List<PHOTOS> photos);
 
         object LoadHQSY_SYJBXX(string ID);
-
-        object SaveHQSY_ZBSSJBXX(JCXX jcxx, HQSY_ZBSSJBXX dzfjbxx, List<PHOTOS> photos);
-
-        object LoadHQSY_ZBSSJBXX(string ID);
     }
 }

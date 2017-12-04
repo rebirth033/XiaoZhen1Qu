@@ -7,12 +7,11 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "GPLX") {
-            LoadCODESByTYPENAME("跟拍类型", "GPLX", "CODES_HQSY", Bind, "HLGPGPLX", "GPLX", "");
+            LoadCODESByTYPENAME("婚礼跟拍类型", "GPLX", "CODES_HQSY", Bind, "HLGPGPLX", "GPLX", "");
         }
         if (type === "XL") {
             LoadXL();
         }
-        
     });
 }
 //选择类别下拉框

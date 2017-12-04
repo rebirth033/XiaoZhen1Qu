@@ -7,6 +7,7 @@ $(document).ready(function () {
 //加载条件
 function LoadLYJDCondition() {
     LoadDistrict("福州", "350100", "QY");
+    LoadConditionByTypeNames("'导游当地人'", "CODES_LYJD", "旅行社", "LXS", "15");
     LoadBody("LYJDXX_DYDDR", currentIndex);
 }
 //选择条件
@@ -38,7 +39,7 @@ function LoadBody(TYPE, PageIndex) {
                 $("#ul_body_left").html('');
                 LoadPage(TYPE, xml.PageCount);
                 for (var i = 0; i < xml.list.length; i++) {
-                    LoadQZZPInfo(xml.list[i]);
+                    LoadInfo(xml.list[i]);
                 }
             }
         },
@@ -48,7 +49,7 @@ function LoadBody(TYPE, PageIndex) {
     });
 }
 //加载单条信息
-function LoadQZZPInfo(obj) {
+function LoadInfo(obj) {
     var html = "";
     html += ('<li class="li_body_left">');
     html += ('<div class="div_li_body_left_left">');
