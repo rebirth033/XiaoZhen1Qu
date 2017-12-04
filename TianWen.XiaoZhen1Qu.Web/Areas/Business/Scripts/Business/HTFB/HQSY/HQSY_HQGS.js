@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ"); });
     BindClick("LB");
-    LoadDuoX("婚庆公司", "TGFW");
+    LoadDuoX("婚庆公司服务提供", "TGFW");
 });
 //绑定下拉框鼠标点击样式
 function BindClick(type) {

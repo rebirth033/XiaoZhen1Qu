@@ -7,12 +7,11 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("家纺家饰", "LB", "CODES_ZXJC", Bind, "OUTLB", "LB", "");
+            LoadCODESByTYPENAME("家纺家饰类别", "LB", "CODES_ZXJC", Bind, "OUTLB", "LB", "");
         }
         if (type === "XL") {
             LoadXL();
         }
-        
     });
 }
 //选择类别下拉框

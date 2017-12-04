@@ -17,7 +17,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         public ActionResult HQSYXX_ZBSS() { return View(); }
         public ActionResult HQSYXX_HSSY() { return View(); }
 
-        public JsonResult LoadHQSYLXX()
+        public JsonResult LoadHQSYXX()
         {
             return Json(HQSYCXBLL.LoadHQSYXX(Request["TYPE"], Request["ID"]));
         }
