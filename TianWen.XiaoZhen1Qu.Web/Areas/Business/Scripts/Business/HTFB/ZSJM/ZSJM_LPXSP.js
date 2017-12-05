@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-
     BindClick("LB");
     BindClick("PPLS");
     BindClick("TZJE");
@@ -7,6 +6,26 @@
     BindClick("DDMJ");
     LoadDuoX("适合人群", "SHRQ");
 });
+//绑定下拉框鼠标点击样式
+function BindClick(type) {
+    $("#div" + type + "Span").click(function () {
+        if (type === "LB") {
+            LoadCODESByTYPENAME("礼品商品类别", "LB", "CODES_ZSJM", Bind, "LPXSPLB", "LB", "");
+        }
+        if (type === "PPLS") {
+            LoadCODESByTYPENAME("品牌历史", "PPLS", "CODES_ZSJM");
+        }
+        if (type === "TZJE") {
+            LoadCODESByTYPENAME("投资金额", "TZJE", "CODES_ZSJM", Bind, "LPXSPTZJE", "TZJE", "");
+        }
+        if (type === "QGFDS") {
+            LoadCODESByTYPENAME("全国分店数", "QGFDS", "CODES_ZSJM");
+        }
+        if (type === "DDMJ") {
+            LoadCODESByTYPENAME("单店面积", "DDMJ", "CODES_ZSJM");
+        }
+    });
+}
 //加载多选
 function LoadDuoX(type, id) {
     $.ajax({
@@ -34,7 +53,7 @@ function LoadDuoX(type, id) {
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-                $(".liLPXSPXL").bind("click", function () { ValidateCheck("LPXSPXL", "忘记选择小类啦"); });
+                $(".liXL").bind("click", function () { ValidateCheck("XL", "忘记选择小类啦"); });
                 LoadZSDQ();
             }
         },
@@ -88,32 +107,12 @@ function SelectLB(obj, type, codeid) {
 //判断类别
 function PDLB(name, codeid) {
     if ((name.indexOf("饰品挂件") !== -1 || name.indexOf("礼品") !== -1 || name.indexOf("工艺品") !== -1 || name.indexOf("珠宝玉器") !== -1) && name !== "礼品加工") {
-        $("#divLPXSPXL").css("display", "");
-        LoadDuoX(name, "LPXSPXL");
+        $("#divXL").css("display", "");
+        LoadDuoX(name, "XL");
     }
     else {
-        $("#divLPXSPXL").css("display", "none");
+        $("#divXL").css("display", "none");
     }
-}
-//绑定下拉框鼠标点击样式
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadCODESByTYPENAME("礼品/小商品", "LB", "CODES_ZSJM", Bind, "LPXSPLB", "LB", "");
-        }
-        if (type === "PPLS") {
-            LoadCODESByTYPENAME("品牌历史", "PPLS", "CODES_ZSJM");
-        }
-        if (type === "TZJE") {
-            LoadCODESByTYPENAME("投资金额", "TZJE", "CODES_ZSJM", Bind, "LPXSPTZJE", "TZJE", "");
-        }
-        if (type === "QGFDS") {
-            LoadCODESByTYPENAME("全国分店数", "QGFDS", "CODES_ZSJM");
-        }
-        if (type === "DDMJ") {
-            LoadCODESByTYPENAME("单店面积", "DDMJ", "CODES_ZSJM");
-        }
-    });
 }
 //加载招商加盟_礼品/小商品基本信息
 function LoadZSJM_LPXSPJBXX() {

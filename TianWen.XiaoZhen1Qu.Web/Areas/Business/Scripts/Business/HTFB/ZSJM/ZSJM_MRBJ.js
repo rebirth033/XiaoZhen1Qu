@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-
     BindClick("LB");
     BindClick("PPLS");
     BindClick("TZJE");
@@ -7,6 +6,26 @@
     BindClick("DDMJ");
     LoadDuoX("适合人群", "SHRQ");
 });
+//绑定下拉框鼠标点击样式
+function BindClick(type) {
+    $("#div" + type + "Span").click(function () {
+        if (type === "LB") {
+            LoadCODESByTYPENAME("美容保健类别", "LB", "CODES_ZSJM", Bind, "MRBJLB", "LB", "");
+        }
+        if (type === "PPLS") {
+            LoadCODESByTYPENAME("品牌历史", "PPLS", "CODES_ZSJM");
+        }
+        if (type === "TZJE") {
+            LoadCODESByTYPENAME("投资金额", "TZJE", "CODES_ZSJM", Bind, "MRBJTZJE", "TZJE", "");
+        }
+        if (type === "QGFDS") {
+            LoadCODESByTYPENAME("全国分店数", "QGFDS", "CODES_ZSJM");
+        }
+        if (type === "DDMJ") {
+            LoadCODESByTYPENAME("单店面积", "DDMJ", "CODES_ZSJM");
+        }
+    });
+}
 //加载多选
 function LoadDuoX(type, id) {
     $.ajax({
@@ -94,26 +113,6 @@ function PDLB(name) {
     else {
         $("#divXL").css("display", "none");
     }
-}
-//绑定下拉框鼠标点击样式
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadCODESByTYPENAME("美容保健", "LB", "CODES_ZSJM", Bind, "MRBJLB", "LB", "");
-        }
-        if (type === "PPLS") {
-            LoadCODESByTYPENAME("品牌历史", "PPLS", "CODES_ZSJM");
-        }
-        if (type === "TZJE") {
-            LoadCODESByTYPENAME("投资金额", "TZJE", "CODES_ZSJM", Bind, "MRBJTZJE", "TZJE", "");
-        }
-        if (type === "QGFDS") {
-            LoadCODESByTYPENAME("全国分店数", "QGFDS", "CODES_ZSJM");
-        }
-        if (type === "DDMJ") {
-            LoadCODESByTYPENAME("单店面积", "DDMJ", "CODES_ZSJM");
-        }
-    });
 }
 //加载招商加盟_美容保健基本信息
 function LoadZSJM_MRBJJBXX() {

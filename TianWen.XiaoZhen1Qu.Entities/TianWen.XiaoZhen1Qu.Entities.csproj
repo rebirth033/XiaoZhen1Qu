@@ -586,6 +586,7 @@
     <Compile Include="ViewModels\JYPX\QZZP_JZZPView.cs" />
     <Compile Include="ViewModels\LR\LR_MTSSView.cs" />
     <Compile Include="ViewModels\LYJD\LYJD_LXSView.cs" />
+    <Compile Include="ViewModels\NLMFY\NLMFY_YLHHView.cs" />
     <Compile Include="ViewModels\PFCG\PFCG_SPView.cs" />
     <Compile Include="ViewModels\QZZP\QZZP_JZZPView.cs" />
     <Compile Include="ViewModels\QZZP\QZZP_QZZPView.cs" />

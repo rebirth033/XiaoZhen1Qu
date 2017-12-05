@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-
     LoadNLMFY_YLHHJBXX();
     BindClick("LB");
 });
@@ -7,13 +6,12 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("园林花卉", "LB", "CODES_NLMFY", Bind, "OUTLB", "LB", "");
+            LoadCODESByTYPENAME("园林花卉类别", "LB", "CODES_NLMFY", Bind, "OUTLB", "LB", "");
         }
         if (type === "XL") {
             LoadXL();
             LoadXLMC($("#spanLB").html(), "divA");
         }
-        
     });
 }
 //选择类别下拉框

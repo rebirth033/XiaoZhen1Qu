@@ -1631,6 +1631,9 @@
     <Content Include="Areas\Business\Scripts\Business\XXXX\XXYLXX\XXYLXX_DIYSGF.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\XXYLXX\XXYLXX_HPG.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\XXYLXX\XXYLXX_YDJS.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\ZSJMXX\ZSJMXX_QCFW.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\ZSJMXX\ZSJMXX_JYPX.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\ZSJMXX\ZSJMXX_JJHB.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\ZSJMXX\ZSJMXX_WLFW.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\ZSJMXX\ZSJMXX_NY.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\ZSJMXX\ZSJMXX_TS.js" />

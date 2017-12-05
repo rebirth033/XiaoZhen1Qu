@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-
     BindClick("LB");
     BindClick("PPLS");
     BindClick("TZJE");
@@ -7,6 +6,26 @@
     BindClick("DDMJ");
     LoadDuoX("适合人群", "SHRQ");
 });
+//绑定下拉框鼠标点击样式
+function BindClick(type) {
+    $("#div" + type + "Span").click(function () {
+        if (type === "LB") {
+            LoadCODESByTYPENAME("教育培训类别", "LB", "CODES_ZSJM", Bind, "JYPXLB", "LB", "");
+        }
+        if (type === "PPLS") {
+            LoadCODESByTYPENAME("品牌历史", "PPLS", "CODES_ZSJM");
+        }
+        if (type === "TZJE") {
+            LoadCODESByTYPENAME("投资金额", "TZJE", "CODES_ZSJM", Bind, "JYPXTZJE", "TZJE", "");
+        }
+        if (type === "QGFDS") {
+            LoadCODESByTYPENAME("全国分店数", "QGFDS", "CODES_ZSJM");
+        }
+        if (type === "DDMJ") {
+            LoadCODESByTYPENAME("单店面积", "DDMJ", "CODES_ZSJM");
+        }
+    });
+}
 //加载多选
 function LoadDuoX(type, id) {
     $.ajax({
@@ -34,7 +53,7 @@ function LoadDuoX(type, id) {
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-                $(".liJYPXXL").bind("click", function () { ValidateCheck("JYPXXL", "忘记选择小类啦"); });
+                $(".liXL").bind("click", function () { ValidateCheck("XL", "忘记选择小类啦"); });
                 LoadZSDQ();
             }
         },
@@ -88,31 +107,11 @@ function SelectLB(obj, type, codeid) {
 //判断类别
 function PDLB(name) {
     if (name.indexOf("教育机构") !== -1) {
-        $("#divJYPXXL").css("display", "");
-        LoadDuoX(name, "JYPXXL");
+        $("#divXL").css("display", "");
+        LoadDuoX(name, "XL");
     }
     else
-        $("#divJYPXXL").css("display", "none");
-}
-//绑定下拉框鼠标点击样式
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadCODESByTYPENAME("教育培训", "LB", "CODES_ZSJM", Bind, "JYPXLB", "LB", "");
-        }
-        if (type === "PPLS") {
-            LoadCODESByTYPENAME("品牌历史", "PPLS", "CODES_ZSJM");
-        }
-        if (type === "TZJE") {
-            LoadCODESByTYPENAME("投资金额", "TZJE", "CODES_ZSJM", Bind, "JYPXTZJE", "TZJE", "");
-        }
-        if (type === "QGFDS") {
-            LoadCODESByTYPENAME("全国分店数", "QGFDS", "CODES_ZSJM");
-        }
-        if (type === "DDMJ") {
-            LoadCODESByTYPENAME("单店面积", "DDMJ", "CODES_ZSJM");
-        }
-    });
+        $("#divXL").css("display", "none");
 }
 //加载招商加盟_教育培训基本信息
 function LoadZSJM_JYPXJBXX() {

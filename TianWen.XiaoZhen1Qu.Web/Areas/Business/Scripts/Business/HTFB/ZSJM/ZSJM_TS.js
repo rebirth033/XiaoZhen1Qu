@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-
     BindClick("LB");
     BindClick("PPLS");
     BindClick("TZJE");
@@ -7,6 +6,26 @@
     BindClick("DDMJ");
     LoadDuoX("适合人群", "SHRQ");
 });
+//绑定下拉框鼠标点击样式
+function BindClick(type) {
+    $("#div" + type + "Span").click(function () {
+        if (type === "LB") {
+            LoadCODESByTYPENAME("特色类别", "LB", "CODES_ZSJM", Bind, "TSLB", "LB", "");
+        }
+        if (type === "PPLS") {
+            LoadCODESByTYPENAME("品牌历史", "PPLS", "CODES_ZSJM");
+        }
+        if (type === "TZJE") {
+            LoadCODESByTYPENAME("投资金额", "TZJE", "CODES_ZSJM", Bind, "TSTZJE", "TZJE", "");
+        }
+        if (type === "QGFDS") {
+            LoadCODESByTYPENAME("全国分店数", "QGFDS", "CODES_ZSJM");
+        }
+        if (type === "DDMJ") {
+            LoadCODESByTYPENAME("单店面积", "DDMJ", "CODES_ZSJM");
+        }
+    });
+}
 //加载多选
 function LoadDuoX(type, id) {
     $.ajax({
@@ -81,26 +100,6 @@ function LoadZSDQ() {
 function SelectLB(obj, type, codeid) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-}
-//绑定下拉框鼠标点击样式
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadCODESByTYPENAME("特色", "LB", "CODES_ZSJM", Bind, "TSLB", "LB", "");
-        }
-        if (type === "PPLS") {
-            LoadCODESByTYPENAME("品牌历史", "PPLS", "CODES_ZSJM");
-        }
-        if (type === "TZJE") {
-            LoadCODESByTYPENAME("投资金额", "TZJE", "CODES_ZSJM", Bind, "TSTZJE", "TZJE", "");
-        }
-        if (type === "QGFDS") {
-            LoadCODESByTYPENAME("全国分店数", "QGFDS", "CODES_ZSJM");
-        }
-        if (type === "DDMJ") {
-            LoadCODESByTYPENAME("单店面积", "DDMJ", "CODES_ZSJM");
-        }
-    });
 }
 //加载招商加盟_特色基本信息
 function LoadZSJM_TSJBXX() {
