@@ -7,7 +7,7 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("喷绘招牌", "LB", "CODES_SWFW", Bind, "OUTLB", "LB", "");
+            LoadCODESByTYPENAME("喷绘招牌类别", "LB", "CODES_SWFW", Bind, "OUTLB", "LB", "");
         }
         if (type === "CZ") {
             LoadCODESByTYPENAME("灯箱/招牌材质", "CZ", "CODES_SWFW", Bind, "PHZPCZ", "CZ", "");

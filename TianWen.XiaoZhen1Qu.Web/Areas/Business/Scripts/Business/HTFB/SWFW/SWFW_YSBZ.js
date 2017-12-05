@@ -3,12 +3,11 @@
     BindClick("LB");
     LoadGY();
 });
-
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("印刷包装", "LB", "CODES_SWFW", Bind, "OUTLB", "LB", "");
+            LoadCODESByTYPENAME("印刷包装类别", "LB", "CODES_SWFW", Bind, "OUTLB", "LB", "");
         }
         if (type === "CZ") {
             LoadCODESByTYPENAME("材质", "CZ", "CODES_SWFW");
