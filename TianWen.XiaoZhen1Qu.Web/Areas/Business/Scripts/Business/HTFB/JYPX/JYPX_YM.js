@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    $("body").bind("click", function () { Close("_XZQ"); });
+
     BindClick("GJ");
     LoadDuoX("移民类别", "YMLB");
 });

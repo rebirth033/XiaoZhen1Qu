@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    $("body").bind("click", function () { Close("_XZQ"); });
+
     LoadGHSPNJYC();
 });
 //加载过户/上牌/年检/验车类别

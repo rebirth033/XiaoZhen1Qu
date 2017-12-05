@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     $("#YXQZ").datepicker({ minDate: 0 });
-    $("body").bind("click", function () { Close("_XZQ"); });
+
     LoadES_PWKQ_DYPJBXX();
 });
 //绑定下拉框鼠标点击样式

@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    $("body").bind("click", function () { Close("_XZQ"); });
+
     LoadDuoX("电工电料类别", "DGDLLB");
     BindClick("LB");
 });

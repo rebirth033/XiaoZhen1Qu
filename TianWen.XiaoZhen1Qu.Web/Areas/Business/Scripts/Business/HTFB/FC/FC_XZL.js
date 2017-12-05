@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     $("#divGQ").find(".div_radio").bind("click", GetGQ);
-    $("body").bind("click", function () { Close("_XZQ"); });
+
     LoadFC_XZLJBXX();
     BindClick("YFFS");
 });

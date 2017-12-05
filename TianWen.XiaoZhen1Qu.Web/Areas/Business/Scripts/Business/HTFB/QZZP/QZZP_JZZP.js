@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
     $("#DQJZKSSJ").datepicker({ minDate: 0 });
     $("#DQJZJSSJ").datepicker({ minDate: 0 });
-    $("body").bind("click", function () { Close("_XZQ"); });
+
     $("td").bind("click", SelectJZSJ);
     LoadQZZP_JZZPJBXX();
     BindClick("JZLB");

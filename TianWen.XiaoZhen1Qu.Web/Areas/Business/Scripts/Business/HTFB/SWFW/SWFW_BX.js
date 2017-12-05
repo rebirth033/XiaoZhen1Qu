@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-    $("body").bind("click", function () { Close("_XZQ"); });
     LoadSWFW_BXJBXX();
     BindClick("LB");
 });
@@ -7,12 +6,11 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("保险", "LB", "CODES_SWFW", Bind, "OUTLB", "LB", "");
+            LoadCODESByTYPENAME("保险类别", "LB", "CODES_SWFW", Bind, "OUTLB", "LB", "");
         }
         if (type === "XL") {
             LoadXL();
         }
-        
     });
 }
 //选择类别下拉框

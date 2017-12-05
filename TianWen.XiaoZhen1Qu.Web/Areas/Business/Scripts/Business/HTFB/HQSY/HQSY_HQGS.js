@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    $("body").bind("click", function () { Close("_XZQ"); });
+
     BindClick("LB");
     LoadDuoX("婚庆公司服务提供", "TGFW");
 });

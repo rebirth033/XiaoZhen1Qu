@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    $("body").bind("click", function () { Close("_XZQ"); });
+
     LoadDuoX("SPA功效", "SPALB");
     BindClick("LB");
 });

@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    $("body").bind("click", function () { Close("_XZQ"); });
+
     BindClick("LB");
     LoadDuoX("体育培训对象", "DX");
 });

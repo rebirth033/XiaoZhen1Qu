@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     $("#span_xzdz").bind("click", OpenXZDZ);
-    $("body").bind("click", function () { Close("_XZQ"); });
+
     BindClick("FWLX");
     BindClick("ZJDW");
     LoadDuoX("日租短租房屋配置", "FWPZ");

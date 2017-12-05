@@ -1,6 +1,6 @@
 ﻿var bcms = UE.getEditor('BCMS');
 $(document).ready(function () {
-    $("body").bind("click", function () { Close("_XZQ"); });
+
     BindClick("XCTS_R");
     LoadDuoX("游玩项目", "YWXM");
 });

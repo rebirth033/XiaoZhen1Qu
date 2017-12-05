@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    $("body").bind("click", function () { Close("_XZQ"); });
+
     LoadGSZCLB();
 });
 //加载工商注册类别
@@ -10,7 +10,7 @@ function LoadGSZCLB() {
         dataType: "json",
         data:
         {
-            TYPENAME: "工商注册",
+            TYPENAME: "工商注册类别",
             TBName: "CODES_SWFW"
         },
         success: function (xml) {
@@ -36,12 +36,6 @@ function LoadGSZCLB() {
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
         }
-    });
-}
-//绑定下拉框鼠标点击样式
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        
     });
 }
 //加载商务服务_工商注册基本信息

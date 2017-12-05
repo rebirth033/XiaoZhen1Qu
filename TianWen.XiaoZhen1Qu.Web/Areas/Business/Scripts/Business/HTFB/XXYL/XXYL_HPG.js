@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    $("body").bind("click", function () { Close("_XZQ"); });
+
     LoadDuoX("室内设备", "SNSB");
     BindClick("LB");
     BindClick("KRNRS");

@@ -4,7 +4,7 @@ var ydxz = UE.getEditor('YDXZ');
 var fybh = UE.getEditor('FYBH');
 var zfxm = UE.getEditor('ZFXM');
 $(document).ready(function () {
-    $("body").bind("click", function () { Close("_XZQ"); });
+
     BindClick("CYFS");
     BindClick("WFJT_Q");
     BindClick("WFJT_H");

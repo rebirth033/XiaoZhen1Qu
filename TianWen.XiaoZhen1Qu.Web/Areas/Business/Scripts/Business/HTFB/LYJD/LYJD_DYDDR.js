@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    $("body").bind("click", function () { Close("_XZQ"); });
+
     BindClick("XL");
     BindClick("DTJY");
     LoadDuoX("导游语种", "DYYZ");

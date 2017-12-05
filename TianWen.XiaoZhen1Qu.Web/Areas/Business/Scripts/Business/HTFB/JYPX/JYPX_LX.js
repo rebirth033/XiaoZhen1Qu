@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    $("body").bind("click", function () { Close("_XZQ"); });
+
     BindClick("GJ"); 
     LoadDuoX("申请学历", "SQXL");
 });

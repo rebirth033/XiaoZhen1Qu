@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     $("#divSFSM").find(".div_radio").bind("click", function () { ValidateRadio("SFSM", "忘记选择是否上门啦"); });
-    $("body").bind("click", function () { Close("_XZQ"); });
+
     BindClick("LB");
     LoadSHFW_DNWXJBXX();
 });

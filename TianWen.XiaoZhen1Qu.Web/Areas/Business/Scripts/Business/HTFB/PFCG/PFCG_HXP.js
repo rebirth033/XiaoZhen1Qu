@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    $("body").bind("click", function () { Close("_XZQ"); });
+
     LoadDuoX("化学品类别", "HXPLB");
 });
 //加载多选

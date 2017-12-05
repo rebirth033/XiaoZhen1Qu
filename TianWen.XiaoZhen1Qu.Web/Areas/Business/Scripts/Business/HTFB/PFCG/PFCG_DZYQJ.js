@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    $("body").bind("click", function () { Close("_XZQ"); });
+
     LoadDuoX("电子元器件类别", "DZYQJLB");
 });
 //加载多选

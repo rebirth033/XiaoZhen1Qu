@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    $("body").bind("click", function () { Close("_XZQ"); });
+
     LoadES_JDJJBG_JJRYJBXX();
     BindClick("LB");
     BindClick("XJ");

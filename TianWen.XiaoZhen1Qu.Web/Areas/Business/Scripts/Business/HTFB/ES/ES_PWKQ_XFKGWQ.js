@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     $("#YXQZ").datepicker({ minDate: 0 });
-    $("body").bind("click", function () { Close("_XZQ"); });
+
     LoadES_PWKQ_XFKGWQJBXX();
     BindClick("LB");
 });

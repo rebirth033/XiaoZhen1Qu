@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
     $("#div_ly_ls").bind("click", LSSelect);
     $("#div_ly_lssws").bind("click", LSSWSSelect);
-    $("body").bind("click", function () { Close("_XZQ"); });
+
     LoadFLZXLB();
 });
 //选择律师
@@ -22,7 +22,7 @@ function LoadFLZXLB() {
         dataType: "json",
         data:
         {
-            TYPENAME: "法律咨询",
+            TYPENAME: "法律咨询类别",
             TBName: "CODES_SWFW"
         },
         success: function (xml) {
@@ -48,12 +48,6 @@ function LoadFLZXLB() {
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
         }
-    });
-}
-//绑定下拉框鼠标点击样式
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        
     });
 }
 //加载商务服务_法律咨询基本信息

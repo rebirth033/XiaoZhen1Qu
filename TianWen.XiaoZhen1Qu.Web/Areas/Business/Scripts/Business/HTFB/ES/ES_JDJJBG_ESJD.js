@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     $("#divGQ").find(".div_radio").bind("click", function () { ValidateRadio("GQ", "忘记选择供求啦"); });
-    $("body").bind("click", function () { Close("_XZQ"); });
+
     LoadES_JDJJBG_ESJDJBXX();
     BindClick("LB");
     BindClick("PBPP");

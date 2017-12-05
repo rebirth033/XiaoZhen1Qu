@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    $("body").bind("click", function () { Close("_XZQ"); });
+
     BindClick("SJPP");
     BindClick("SJXH");
     LoadDuoX("特色标签", "TSBQ");

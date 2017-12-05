@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    $("body").bind("click", function () { Close("_XZQ"); });
+
     LoadCL_QCPLJBXX();
 });
 //绑定下拉框鼠标点击样式

@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    $("body").bind("click", function () { Close("_XZQ"); });
+
     LoadDuoX("美容护肤类别", "MRHFLB");
     BindClick("LB");
 });

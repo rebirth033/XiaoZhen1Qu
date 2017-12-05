@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-    $("body").bind("click", function () { Close("_XZQ"); });
     LoadCWKJPGLB();
 });
 //加载财务会计/评估类别
@@ -10,7 +9,7 @@ function LoadCWKJPGLB() {
         dataType: "json",
         data:
         {
-            TYPENAME: "财务会计/评估",
+            TYPENAME: "财务会计/评估类别",
             TBName: "CODES_SWFW"
         },
         success: function (xml) {
@@ -36,12 +35,6 @@ function LoadCWKJPGLB() {
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
         }
-    });
-}
-//绑定下拉框鼠标点击样式
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        
     });
 }
 //加载商务服务_财务会计/评估基本信息

@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    $("body").bind("click", function () { Close("_XZQ"); });
+
     BindClick("LB");
     LoadDuoX("职业技能培训形式", "XS");
 });

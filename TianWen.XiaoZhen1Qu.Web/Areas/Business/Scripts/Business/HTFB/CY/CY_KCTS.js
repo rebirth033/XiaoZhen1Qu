@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    $("body").bind("click", function () { Close("_XZQ"); });
+
     LoadDuoX("快餐/团膳", "KCTSLB");
     BindClick("LB");
 });

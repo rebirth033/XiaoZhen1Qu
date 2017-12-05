@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     $("#divXSQK").find(".div_radio").bind("click", GetXSQK);
-    $("body").bind("click", function () { Close("_XZQ"); });
+
     LoadCL_MTCJBXX();
     BindClick("CX");
     BindClick("GCSJ");
