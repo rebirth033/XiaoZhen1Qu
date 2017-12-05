@@ -1,8 +1,15 @@
 ﻿$(document).ready(function () {
-
     BindClick("LB");
     LoadKX();
 });
+//绑定下拉框鼠标点击样式
+function BindClick(type) {
+    $("#div" + type + "Span").click(function () {
+        if (type === "LB") {
+            LoadCODESByTYPENAME("制卡类别", "LB", "CODES_SWFW", Bind, "OUTLB", "LB", "");
+        }
+    });
+}
 //选择类别下拉框
 function SelectLB(obj, type, id) {
     $("#span" + type).html(obj.innerHTML);
@@ -100,15 +107,6 @@ function LoadKX() {
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
         }
-    });
-}
-//绑定下拉框鼠标点击样式
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadCODESByTYPENAME("制卡", "LB", "CODES_SWFW", Bind, "OUTLB", "LB", "");
-        }
-        
     });
 }
 //加载商务服务_制卡基本信息

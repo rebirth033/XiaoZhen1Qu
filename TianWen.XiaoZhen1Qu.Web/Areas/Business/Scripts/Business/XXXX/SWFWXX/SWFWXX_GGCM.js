@@ -10,7 +10,7 @@ function LoadDefault() {
         dataType: "json",
         data:
         {
-            TYPE: "SWFWXX_GSZC",
+            TYPE: "SWFWXX_GGCM",
             ID: getUrlParam("ID")
         },
         success: function (xml) {

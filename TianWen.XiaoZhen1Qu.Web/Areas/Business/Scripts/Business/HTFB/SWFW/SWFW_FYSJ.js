@@ -1,9 +1,20 @@
 ﻿$(document).ready(function () {
-
     BindClick("LB");
     BindClick("YZ");
     LoadZYLY();
 });
+//绑定下拉框鼠标点击样式
+function BindClick(type) {
+    $("#div" + type + "Span").click(function () {
+        if (type === "LB") {
+            LoadCODESByTYPENAME("翻译/速记类别", "LB", "CODES_SWFW", Bind, "OUTLB", "LB", "");
+        }
+        if (type === "YZ") {
+            LoadYZ();
+            LoadYZMC("语种", "divA");
+        }
+    });
+}
 //加载语种标签
 function LoadYZ() {
     var arrayObj = new Array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
@@ -189,19 +200,6 @@ function LoadWJLX() {
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
         }
-    });
-}
-//绑定下拉框鼠标点击样式
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadCODESByTYPENAME("翻译/速记", "LB", "CODES_SWFW", Bind, "OUTLB", "LB", "");
-        }
-        if (type === "YZ") {
-            LoadYZ();
-            LoadYZMC("语种", "divA");
-        }
-        
     });
 }
 //加载商务服务_翻译/速记基本信息
