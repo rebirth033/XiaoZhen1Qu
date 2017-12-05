@@ -1,19 +1,16 @@
 ﻿$(document).ready(function () {
-
     LoadSWFW_BGSBWXJBXX();
     BindClick("LB");
 });
-
 //绑定下拉框鼠标点击样式
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("办公设备维修", "LB", "CODES_SWFW", Bind, "OUTLB", "LB", "");
+            LoadCODESByTYPENAME("办公设备维修类别", "LB", "CODES_SWFW", Bind, "OUTLB", "LB", "");
         }
         if (type === "XL") {
             LoadXL();
         }
-        
     });
 }
 //选择类别下拉框

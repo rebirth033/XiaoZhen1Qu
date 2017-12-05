@@ -1,8 +1,15 @@
 ﻿$(document).ready(function () {
-
     BindClick("LB");
     LoadSWFW_QMFSSMJBXX();
 });
+//绑定下拉框鼠标点击样式
+function BindClick(type) {
+    $("#div" + type + "Span").click(function () {
+        if (type === "LB") {
+            LoadCODESByTYPENAME("起名/风水/算命类别", "LB", "CODES_SWFW");
+        }
+    });
+}
 //选择类别下拉框
 function SelectLB(obj, type, id) {
     $("#span" + type).html(obj.innerHTML);
@@ -51,15 +58,7 @@ function LoadXL(lbmc, xl) {
         }
     });
 }
-//绑定下拉框鼠标点击样式
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadCODESByTYPENAME("起名/风水/算命", "LB", "CODES_SWFW");
-        }
-    });
-}
-//加载商务服务_起名/风水/算命基本信息
+//加载起名/风水/算命基本信息
 function LoadSWFW_QMFSSMJBXX() {
     $.ajax({
         type: "POST",

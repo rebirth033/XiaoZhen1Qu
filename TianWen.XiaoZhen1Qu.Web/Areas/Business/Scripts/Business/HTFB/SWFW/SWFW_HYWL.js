@@ -10,7 +10,7 @@ function LoadHYWLLB() {
         dataType: "json",
         data:
         {
-            TYPENAME: "货运物流",
+            TYPENAME: "货运物流类别",
             TBName: "CODES_SWFW"
         },
         success: function (xml) {

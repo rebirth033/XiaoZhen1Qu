@@ -1,9 +1,20 @@
 ﻿$(document).ready(function () {
-
     BindClick("LB");
     BindClick("GJ");
     LoadSWFW_DBQZQZJBXX();
 });
+//绑定下拉框鼠标点击样式
+function BindClick(type) {
+    $("#div" + type + "Span").click(function () {
+        if (type === "LB") {
+            LoadCODESByTYPENAME("代办签证/签注类别", "LB", "CODES_SWFW", Bind, "OUTLB", "LB", "");
+        }
+        if (type === "GJ") {
+            LoadGJ();
+            LoadGJMC("国家", "divA");
+        }
+    });
+}
 //加载国家标签
 function LoadGJ() {
     var arrayObj = new Array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
@@ -53,19 +64,6 @@ function GJXZ(GJMC, GJID) {
     $("#spanGJ").html(GJMC);
     $("#divGJ").css("display", "none");
     ValidateSelect("DBQZQZGJ", "GJ", "忘记选择国家啦");
-}
-//绑定下拉框鼠标点击样式
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadCODESByTYPENAME("代办签证/签注", "LB", "CODES_SWFW", Bind, "OUTLB", "LB", "");
-        }
-        if (type === "GJ") {
-            LoadGJ();
-            LoadGJMC("国家", "divA");
-        }
-        
-    });
 }
 //加载商务服务_代办签证/签注基本信息
 function LoadSWFW_DBQZQZJBXX() {

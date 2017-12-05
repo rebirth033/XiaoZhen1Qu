@@ -592,6 +592,7 @@
     <Compile Include="ViewModels\SHFW\SHFW_BJView.cs" />
     <Compile Include="ViewModels\SWFW\SWFW_GSZCView.cs" />
     <Compile Include="ViewModels\XXYL\XXYL_YDJSView.cs" />
+    <Compile Include="ViewModels\ZSJM\ZSJM_CYView.cs" />
     <Compile Include="ViewModels\ZXJC\ZXJC_JZFWView.cs" />
   </ItemGroup>
   <ItemGroup />

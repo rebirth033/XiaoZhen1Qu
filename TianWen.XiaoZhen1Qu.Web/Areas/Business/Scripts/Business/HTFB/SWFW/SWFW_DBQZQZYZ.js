@@ -11,7 +11,6 @@ function ValidateAll() {
     if (ValidateLB()
         & ValidateRadio("GRTT", "忘记选择个人团体啦")
         & ValidateSelect("DBQZQZGJ", "GJ", "忘记选择国家啦")
-        & ValidateFWQY()
         & ValidateBCMS("BCMS", "忘记填写补充描述啦")
         & ValidateXXDZ()
         & ValidateCommon())

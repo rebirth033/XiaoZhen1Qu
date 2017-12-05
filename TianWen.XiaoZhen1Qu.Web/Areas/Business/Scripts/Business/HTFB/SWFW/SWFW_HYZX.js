@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-
     LoadZHFS();
     BindClick("YSJGDW");
 });
@@ -9,7 +8,6 @@ function BindClick(type) {
         if (type === "YSJGDW") {
             LoadCODESByTYPENAME("运输价格单位", "YSJGDW", "CODES_SWFW", Bind, "YSJG", "YSJGDW", "");
         }
-        
     });
 }
 //加载组货方式

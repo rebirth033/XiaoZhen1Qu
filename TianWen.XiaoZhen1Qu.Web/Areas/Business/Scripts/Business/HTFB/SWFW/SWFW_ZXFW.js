@@ -1,8 +1,15 @@
 ﻿$(document).ready(function () {
-
     BindClick("LB");
     LoadSWFW_ZXFWJBXX();
 });
+//绑定下拉框鼠标点击样式
+function BindClick(type) {
+    $("#div" + type + "Span").click(function () {
+        if (type === "LB") {
+            LoadCODESByTYPENAME("咨询服务类别", "LB", "CODES_SWFW", Bind, "OUTLB", "LB", "");
+        }
+    });
+}
 //选择类别下拉框
 function SelectLB(obj, type, id) {
     $("#span" + type).html(obj.innerHTML);
@@ -48,15 +55,6 @@ function LoadXL(lbmc, xl) {
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
         }
-    });
-}
-//绑定下拉框鼠标点击样式
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadCODESByTYPENAME("咨询服务", "LB", "CODES_SWFW", Bind, "OUTLB", "LB", "");
-        }
-        
     });
 }
 //加载商务服务_咨询服务基本信息

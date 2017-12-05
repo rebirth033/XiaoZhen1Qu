@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadSWFWCondition() {
-    LoadConditionByTypeNames("'工商注册类别'", "CODES_SWFW", "类别", "LB", "10");
+    LoadConditionByTypeNames("'工商注册类别'", "CODES_SWFW", "类别", "LB", "15");
     LoadBody("SWFWXX_GSZC", currentIndex);
 }
 //选择条件

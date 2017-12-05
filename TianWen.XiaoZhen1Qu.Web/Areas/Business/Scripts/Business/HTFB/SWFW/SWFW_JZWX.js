@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-
     LoadJZWXLB();
 });
 //加载建筑维修类别
@@ -10,7 +9,7 @@ function LoadJZWXLB() {
         dataType: "json",
         data:
         {
-            TYPENAME: "建筑维修",
+            TYPENAME: "建筑维修类别",
             TBName: "CODES_SWFW"
         },
         success: function (xml) {
@@ -36,12 +35,6 @@ function LoadJZWXLB() {
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
         }
-    });
-}
-//绑定下拉框鼠标点击样式
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        
     });
 }
 //加载商务服务_建筑维修基本信息
