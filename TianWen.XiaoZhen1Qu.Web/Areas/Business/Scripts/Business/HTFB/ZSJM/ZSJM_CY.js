@@ -86,13 +86,13 @@ function LoadZSDQ() {
         dataType: "json",
         data:
         {
-            XZQDM: $("#input_XZQDM").val()
+
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liZSDQ' onclick='SelectDuoX(this)'><img class='img_ZSDQ'/><label style='font-weight:normal;'>" + xml.list[i].NAME + "</label></li>";
+                    html += "<li class='liZSDQ' onclick='SelectDuoX(this)'><img class='img_ZSDQ'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i % 6 === 5) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }

@@ -93,14 +93,30 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 };
             }
         }
-        
+
         //根据行政区编码获取省内同级行政区
         public object GetDistrictTJByXZQDM(string XZQDM)
         {
             try
             {
-                List<CODES_DISTRICT> districts = DAO.GetObjectList<CODES_DISTRICT>(string.Format("FROM CODES_DISTRICT WHERE PARENTID = '{0}' ORDER BY CODEORDER", XZQDM.Substring(0, 2) + "0000")).ToList();
-                return new { Result = EnResultType.Success, list = districts };
+                int PARENTID = 0;
+                List<CODES_DISTRICT> result = new List<CODES_DISTRICT>();
+                List<CODES_DISTRICT> districts = DAO.GetObjectList<CODES_DISTRICT>(string.Format("FROM CODES_DISTRICT WHERE TYPENAME='市级' ORDER BY CODEORDER")).ToList();
+                foreach (var district in districts)
+                {
+                    if (district.CODEID == int.Parse(XZQDM))
+                    {
+                        PARENTID = district.PARENTID;
+                    }
+                }
+                foreach (var district in districts)
+                {
+                    if (district.PARENTID == PARENTID)
+                    {
+                        result.Add(district);
+                    }
+                }
+                return new { Result = EnResultType.Success, list = result };
             }
             catch (Exception ex)
             {

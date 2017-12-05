@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-
     BindClick("LB");
     BindClick("PPLS");
     BindClick("TZJE");
@@ -7,6 +6,26 @@
     BindClick("DDMJ");
     LoadDuoX("适合人群", "SHRQ");
 });
+//绑定下拉框鼠标点击样式
+function BindClick(type) {
+    $("#div" + type + "Span").click(function () {
+        if (type === "LB") {
+            LoadCODESByTYPENAME("服装鞋包类别", "LB", "CODES_ZSJM", Bind, "FZXBLB", "LB", "");
+        }
+        if (type === "PPLS") {
+            LoadCODESByTYPENAME("品牌历史", "PPLS", "CODES_ZSJM");
+        }
+        if (type === "TZJE") {
+            LoadCODESByTYPENAME("投资金额", "TZJE", "CODES_ZSJM", Bind, "FZXBTZJE", "TZJE", "");
+        }
+        if (type === "QGFDS") {
+            LoadCODESByTYPENAME("全国分店数", "QGFDS", "CODES_ZSJM");
+        }
+        if (type === "DDMJ") {
+            LoadCODESByTYPENAME("单店面积", "DDMJ", "CODES_ZSJM");
+        }
+    });
+}
 //加载多选
 function LoadDuoX(type, id) {
     $.ajax({
@@ -74,7 +93,7 @@ function LoadZSDQ() {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liZSDQ' onclick='SelectDuoX(this)'><img class='img_ZSDQ'/><label style='font-weight:normal;'>" + xml.list[i].NAME + "</label></li>";
+                    html += "<li class='liZSDQ' onclick='SelectDuoX(this)'><img class='img_ZSDQ'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i % 6 === 5) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
                     }
@@ -92,26 +111,6 @@ function LoadZSDQ() {
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
-        }
-    });
-}
-//绑定下拉框鼠标点击样式
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadCODESByTYPENAME("服装鞋包", "LB", "CODES_ZSJM", Bind, "FZXBLB", "LB", "");
-        }
-        if (type === "PPLS") {
-            LoadCODESByTYPENAME("品牌历史", "PPLS", "CODES_ZSJM");
-        }
-        if (type === "TZJE") {
-            LoadCODESByTYPENAME("投资金额", "TZJE", "CODES_ZSJM", Bind, "FZXBTZJE", "TZJE", "");
-        }
-        if (type === "QGFDS") {
-            LoadCODESByTYPENAME("全国分店数", "QGFDS", "CODES_ZSJM");
-        }
-        if (type === "DDMJ") {
-            LoadCODESByTYPENAME("单店面积", "DDMJ", "CODES_ZSJM");
         }
     });
 }
