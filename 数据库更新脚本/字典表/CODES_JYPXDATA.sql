@@ -2,19 +2,19 @@ prompt Importing table codes_jypx...
 set feedback off
 set define off
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1, '中小学辅导班', '小学', '1', 1, null);
+values (1, '中小学辅导班类别', '小学', '1', 1, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (2, '中小学辅导班', '初中', '2', 2, null);
+values (2, '中小学辅导班类别', '初中', '2', 2, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (3, '中小学辅导班', '高中', '3', 3, null);
+values (3, '中小学辅导班类别', '高中', '3', 3, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (4, '中小学辅导班', '课外英语', '4', 4, null);
+values (4, '中小学辅导班类别', '课外英语', '4', 4, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (5, '中小学辅导班', '夏冬令营', '5', 5, null);
+values (5, '中小学辅导班类别', '夏冬令营', '5', 5, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (6, '小学', '数学', '1', 1, 1);
@@ -137,25 +137,25 @@ insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENT
 values (45, '辅导科目', '竞赛', '7', 7, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (46, '中小学一对一', '小学', '1', 1, null);
+values (46, '中小学一对一类别', '小学', '1', 1, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (47, '中小学一对一', '小升初', '2', 2, null);
+values (47, '中小学一对一类别', '小升初', '2', 2, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (48, '中小学一对一', '初中', '3', 3, null);
+values (48, '中小学一对一类别', '初中', '3', 3, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (49, '中小学一对一', '中考', '4', 4, null);
+values (49, '中小学一对一类别', '中考', '4', 4, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (50, '中小学一对一', '高中', '5', 5, null);
+values (50, '中小学一对一类别', '高中', '5', 5, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (51, '中小学一对一', '高考', '6', 6, null);
+values (51, '中小学一对一类别', '高考', '6', 6, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (52, '中小学一对一', '课外英语', '7', 7, null);
+values (52, '中小学一对一类别', '课外英语', '7', 7, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (53, '小学', '语文', '1', 1, 46);
@@ -734,52 +734,52 @@ insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENT
 values (244, '语言培训教学科目', '其他小语种', '13', 13, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (245, '职业技能培训', '普工/技工/生产', '1', 1, null);
+values (245, '职业技能培训类别', '普工/技工/生产', '1', 1, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (246, '职业技能培训', '会计/审计/统计', '2', 2, null);
+values (246, '职业技能培训类别', '会计/审计/统计', '2', 2, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (247, '职业技能培训', '建筑/房产/物业', '3', 3, null);
+values (247, '职业技能培训类别', '建筑/房产/物业', '3', 3, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (248, '职业技能培训', '餐饮/酒店/旅游', '4', 4, null);
+values (248, '职业技能培训类别', '餐饮/酒店/旅游', '4', 4, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (249, '职业技能培训', '美容/保健/健身', '5', 5, null);
+values (249, '职业技能培训类别', '美容/保健/健身', '5', 5, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (250, '职业技能培训', '教育/人力/市场', '6', 6, null);
+values (250, '职业技能培训类别', '教育/人力/市场', '6', 6, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (251, '职业技能培训', '医疗/健康/心理', '7', 7, null);
+values (251, '职业技能培训类别', '医疗/健康/心理', '7', 7, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (252, '职业技能培训', '育儿/孕妇/产妇', '8', 8, null);
+values (252, '职业技能培训类别', '育儿/孕妇/产妇', '8', 8, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (253, '职业技能培训', '贸易/采购/物流', '9', 9, null);
+values (253, '职业技能培训类别', '贸易/采购/物流', '9', 9, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (254, '职业技能培训', '汽车制造/服务', '10', 10, null);
+values (254, '职业技能培训类别', '汽车制造/服务', '10', 10, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (255, '职业技能培训', '电器/数码维修', '11', 11, null);
+values (255, '职业技能培训类别', '电器/数码维修', '11', 11, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (256, '职业技能培训', '环境/资源/交通', '12', 12, null);
+values (256, '职业技能培训类别', '环境/资源/交通', '12', 12, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (257, '职业技能培训', '金融/证券/保险', '13', 13, null);
+values (257, '职业技能培训类别', '金融/证券/保险', '13', 13, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (258, '职业技能培训', '农/林/牧/渔', '14', 14, null);
+values (258, '职业技能培训类别', '农/林/牧/渔', '14', 14, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (259, '职业技能培训', '公务员考试', '15', 15, null);
+values (259, '职业技能培训类别', '公务员考试', '15', 15, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (260, '职业技能培训', '司法考试', '16', 16, null);
+values (260, '职业技能培训类别', '司法考试', '16', 16, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (261, '普工/技工/生产', '电工', '1', 1, 245);
@@ -1547,49 +1547,49 @@ insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENT
 values (515, '对象', '成人', '2', 2, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (516, '体育培训', '球类', '1', 1, null);
+values (516, '体育培训类别', '球类', '1', 1, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (517, '体育培训', '瑜伽', '2', 2, null);
+values (517, '体育培训类别', '瑜伽', '2', 2, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (518, '体育培训', '武术', '3', 3, null);
+values (518, '体育培训类别', '武术', '3', 3, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (519, '体育培训', '棋类', '4', 4, null);
+values (519, '体育培训类别', '棋类', '4', 4, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (520, '体育培训', '游泳', '5', 5, null);
+values (520, '体育培训类别', '游泳', '5', 5, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (521, '体育培训', '健身', '6', 6, null);
+values (521, '体育培训类别', '健身', '6', 6, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (522, '体育培训', '跆拳道', '7', 7, null);
+values (522, '体育培训类别', '跆拳道', '7', 7, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (523, '体育培训', '健美操', '8', 8, null);
+values (523, '体育培训类别', '健美操', '8', 8, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (524, '体育培训', '溜冰', '9', 9, null);
+values (524, '体育培训类别', '溜冰', '9', 9, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (525, '体育培训', '轮滑', '10', 10, null);
+values (525, '体育培训类别', '轮滑', '10', 10, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (526, '体育培训', '滑雪', '11', 11, null);
+values (526, '体育培训类别', '滑雪', '11', 11, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (527, '体育培训', '马术', '12', 12, null);
+values (527, '体育培训类别', '马术', '12', 12, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (528, '体育培训', '舍宾', '13', 13, null);
+values (528, '体育培训类别', '舍宾', '13', 13, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (529, '体育培训', '普拉提', '14', 14, null);
+values (529, '体育培训类别', '普拉提', '14', 14, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (530, '体育培训', '攀岩', '15', 15, null);
+values (530, '体育培训类别', '攀岩', '15', 15, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (531, '球类', '足球', '1', 1, 516);
@@ -1670,52 +1670,52 @@ insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENT
 values (556, '体育培训对象', '男子', '4', 4, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (557, 'IT培训', '软件开发', '1', 1, null);
+values (557, 'IT培训类别', '软件开发', '1', 1, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (558, 'IT培训', '软件测试', '2', 2, null);
+values (558, 'IT培训类别', '软件测试', '2', 2, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (559, 'IT培训', 'IT认证', '3', 3, null);
+values (559, 'IT培训类别', 'IT认证', '3', 3, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (560, 'IT培训', 'app开发', '4', 4, null);
+values (560, 'IT培训类别', 'app开发', '4', 4, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (561, 'IT培训', '游戏开发', '5', 5, null);
+values (561, 'IT培训类别', '游戏开发', '5', 5, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (562, 'IT培训', '网络工程/网络管理', '6', 6, null);
+values (562, 'IT培训类别', '网络工程/网络管理', '6', 6, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (563, 'IT培训', '数据库', '7', 7, null);
+values (563, 'IT培训类别', '数据库', '7', 7, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (564, 'IT培训', '网络营销', '8', 8, null);
+values (564, 'IT培训类别', '网络营销', '8', 8, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (565, 'IT培训', '办公自动化', '9', 9, null);
+values (565, 'IT培训类别', '办公自动化', '9', 9, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (566, 'IT培训', '计算机等级考试', '10', 10, null);
+values (566, 'IT培训类别', '计算机等级考试', '10', 10, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (567, 'IT培训', '软件水平考试', '11', 11, null);
+values (567, 'IT培训类别', '软件水平考试', '11', 11, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (568, 'IT培训', '计算机职称考试', '12', 12, null);
+values (568, 'IT培训类别', '计算机职称考试', '12', 12, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (569, 'IT培训', '影视制作', '13', 13, null);
+values (569, 'IT培训类别', '影视制作', '13', 13, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (570, 'IT培训', '嵌入式开发', '14', 14, null);
+values (570, 'IT培训类别', '嵌入式开发', '14', 14, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (571, 'IT培训', '硬件技术/维修', '15', 15, null);
+values (571, 'IT培训类别', '硬件技术/维修', '15', 15, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (572, 'IT培训', 'ERP/CRM', '16', 16, null);
+values (572, 'IT培训类别', 'ERP/CRM', '16', 16, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (573, '软件开发', 'Java', '1', 1, 557);
@@ -1889,55 +1889,55 @@ insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENT
 values (629, 'IT培训形式', '寒暑假班', '5', 5, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (630, '设计培训', '室内设计', '1', 1, null);
+values (630, '设计培训类别', '室内设计', '1', 1, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (631, '设计培训', '平面设计', '2', 2, null);
+values (631, '设计培训类别', '平面设计', '2', 2, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (632, '设计培训', '服装设计', '3', 3, null);
+values (632, '设计培训类别', '服装设计', '3', 3, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (633, '设计培训', '网页设计', '4', 4, null);
+values (633, '设计培训类别', '网页设计', '4', 4, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (634, '设计培训', '广告设计', '5', 5, null);
+values (634, '设计培训类别', '广告设计', '5', 5, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (635, '设计培训', '景观设计', '6', 6, null);
+values (635, '设计培训类别', '景观设计', '6', 6, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (636, '设计培训', '色彩搭配', '7', 7, null);
+values (636, '设计培训类别', '色彩搭配', '7', 7, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (637, '设计培训', '包装设计', '8', 8, null);
+values (637, '设计培训类别', '包装设计', '8', 8, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (638, '设计培训', '家具设计', '9', 9, null);
+values (638, '设计培训类别', '家具设计', '9', 9, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (639, '设计培训', '模具设计', '10', 10, null);
+values (639, '设计培训类别', '模具设计', '10', 10, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (640, '设计培训', '园林设计', '11', 11, null);
+values (640, '设计培训类别', '园林设计', '11', 11, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (641, '设计培训', '形象设计', '12', 12, null);
+values (641, '设计培训类别', '形象设计', '12', 12, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (642, '设计培训', '会展设计', '13', 13, null);
+values (642, '设计培训类别', '会展设计', '13', 13, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (643, '设计培训', '动漫设计', '14', 14, null);
+values (643, '设计培训类别', '动漫设计', '14', 14, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (644, '设计培训', '珠宝鉴定', '15', 15, null);
+values (644, '设计培训类别', '珠宝鉴定', '15', 15, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (645, '设计培训', '装饰装潢设计', '16', 16, null);
+values (645, '设计培训类别', '装饰装潢设计', '16', 16, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (646, '设计培训', '其它设计', '17', 17, null);
+values (646, '设计培训类别', '其它设计', '17', 17, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (647, '平面设计', 'Photoshop', '1', 1, 631);
@@ -1964,37 +1964,37 @@ insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENT
 values (654, '设计培训形式', '工作日班', '4', 4, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (655, '管理培训', '管理技能', '1', 1, null);
+values (655, '管理培训类别', '管理技能', '1', 1, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (656, '管理培训', '职业素养', '2', 2, null);
+values (656, '管理培训类别', '职业素养', '2', 2, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (657, '管理培训', '人力行政', '3', 3, null);
+values (657, '管理培训类别', '人力行政', '3', 3, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (658, '管理培训', '生产管理', '4', 4, null);
+values (658, '管理培训类别', '生产管理', '4', 4, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (659, '管理培训', '财务管理', '5', 5, null);
+values (659, '管理培训类别', '财务管理', '5', 5, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (660, '管理培训', '营销销售', '6', 6, null);
+values (660, '管理培训类别', '营销销售', '6', 6, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (661, '管理培训', '物流供应链', '7', 7, null);
+values (661, '管理培训类别', '物流供应链', '7', 7, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (662, '管理培训', '酒店管理', '8', 8, null);
+values (662, '管理培训类别', '酒店管理', '8', 8, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (663, '管理培训', '工程管理', '9', 9, null);
+values (663, '管理培训类别', '工程管理', '9', 9, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (664, '管理培训', '素质拓展', '10', 10, null);
+values (664, '管理培训类别', '素质拓展', '10', 10, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (665, '管理培训', '总裁研修', '11', 11, null);
+values (665, '管理培训类别', '总裁研修', '11', 11, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (667, '管理技能', '领导力', '1', 1, 655);
@@ -2156,16 +2156,16 @@ insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENT
 values (719, '服务类型', '全托', '2', 2, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (720, '婴幼儿教育', '学前教育', '1', 1, null);
+values (720, '婴幼儿教育类别', '学前教育', '1', 1, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (721, '婴幼儿教育', '亲子教育', '2', 2, null);
+values (721, '婴幼儿教育类别', '亲子教育', '2', 2, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (722, '婴幼儿教育', '胎教', '3', 3, null);
+values (722, '婴幼儿教育类别', '胎教', '3', 3, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (723, '婴幼儿教育', '幼儿园', '4', 4, null);
+values (723, '婴幼儿教育类别', '幼儿园', '4', 4, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (724, '留学国家', '澳大利亚', 'A', 1, null);
@@ -2994,5 +2994,17 @@ values (998, '拼班拼课人数', '16-20人', '4', 4, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (999, '拼班拼课人数', '21人以上', '5', 5, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (4501, '艺术培训教学科目', '钢琴', '2', 2, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (6241, '办公自动化', '电脑入门/打字', '1', 1, 565);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (6242, '办公自动化', 'office', '2', 2, 565);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (6243, '办公自动化', '上网', '3', 3, 565);
 
 prompt Done.

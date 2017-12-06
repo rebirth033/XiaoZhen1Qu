@@ -497,7 +497,7 @@ insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID
 values (165, '二手房售价', '150-200万元', '4', 4, null);
 
 insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1664, '二手房售价', '700-900万元', '9', 9, null);
+values (166, '二手房售价', '200-300万元', '5', 5, null);
 
 insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (167, '二手房面积', '50平米以下', '1', 1, null);
@@ -510,9 +510,6 @@ values (169, '二手房面积', '70-90平米', '3', 3, null);
 
 insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (170, '二手房面积', '90-110平米', '4', 4, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1706, '二手房面积', '500平米以上', '10', 10, null);
 
 insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (172, '商铺租金', '2000元/月以下', '1', 1, null);
@@ -561,144 +558,6 @@ values (186, '写字楼面积', '1000-2000平米', '7', 7, null);
 
 insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (187, '写字楼面积', '2000平米以上', '8', 8, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (7703, '出租间类型', '隔断', '3', 3, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (7702, '出租间类型', '次卧', '2', 2, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (7701, '出租间类型', '主卧', '1', 1, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (7707, '出租间性别', '限夫妻', '4', 4, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (7705, '出租间性别', '限女生', '2', 2, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (7704, '出租间性别', '男女不限', '1', 1, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (7706, '出租间性别', '限男生', '3', 3, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (6201, '房屋亮点', '朝南', '9', 9, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (219, '日租短租付款方式', '微信', '5', 5, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (218, '日租短租付款方式', '支付宝', '4', 4, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (217, '日租短租付款方式', '信用卡', '3', 3, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (216, '日租短租付款方式', '银行卡', '2', 2, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (215, '日租短租付款方式', '现金', '1', 1, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (220, '仓库面积', '1000平米以下', '1', 1, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (221, '仓库面积', '1000-2000平米', '2', 2, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (222, '仓库面积', '2000-5000平米', '3', 3, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (223, '仓库面积', '5000-8000平米', '4', 4, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (224, '仓库面积', '8000-12000平米', '5', 5, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (225, '仓库面积', '12000平米以上', '6', 6, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (226, '土地租金', '2000元/月以下', '1', 1, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (227, '土地租金', '2000-5000元/月', '2', 2, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (228, '土地租金', '5000-8000元/月', '3', 3, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (229, '土地租金', '8000-10000元/月', '4', 4, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (230, '土地租金', '1-2万元/月', '5', 5, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (231, '土地租金', '2-5万元/月', '6', 6, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (232, '土地租金', '5万元/月以上', '7', 7, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (233, '土地售价', '10-30万元', '1', 1, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (234, '土地售价', '30-50万元', '2', 2, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (235, '土地售价', '50-100万元', '3', 3, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (236, '土地售价', '100-200万元', '4', 4, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (237, '土地售价', '200-500万元', '5', 5, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (238, '土地售价', '500-1000万元', '6', 6, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (239, '土地售价', '1000万元以上', '7', 7, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (240, '车位租金', '200元/月以下', '1', 1, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (241, '车位租金', '200-500元/月', '2', 2, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (242, '车位租金', '500-800元/月', '3', 3, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (243, '车位租金', '800-1000元/月', '4', 4, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (244, '车位租金', '1000元/月以上', '5', 5, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (245, '车位面积', '15平米以下', '1', 1, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (246, '车位面积', '15-30平米', '2', 2, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (247, '车位面积', '30-50平米', '3', 3, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (248, '车位面积', '50平米以上', '4', 4, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (250, '车位售价', '10-30万元', '2', 2, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (251, '车位售价', '30-50万元', '3', 3, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (252, '车位售价', '50万元以上', '4', 4, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (249, '车位售价', '10万元以下', '1', 1, null);
 
 insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (188, '厅室', '一室', '1', 1, null);
@@ -782,28 +641,13 @@ insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID
 values (214, '日租短租房屋配置', '寄存行李', '22', 22, null);
 
 insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1663, '二手房售价', '550-700万元', '8', 8, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1662, '二手房售价', '400-550万元', '7', 7, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1661, '二手房售价', '300-400万元', '6', 6, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (166, '二手房售价', '200-300万元', '5', 5, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1665, '二手房售价', '900万元以上', '10', 10, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1792, '商铺面积', '500平米以上', '6', 6, null);
-
-insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1791, '商铺面积', '200-500平米', '5', 5, null);
+values (215, '日租短租付款方式', '现金', '1', 1, null);
 
 insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (215, '商铺售价', '50万元以下', '1', 1, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (216, '日租短租付款方式', '银行卡', '2', 2, null);
 
 insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (216, '商铺售价', '50-100万元', '2', 2, null);
@@ -812,13 +656,28 @@ insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID
 values (217, '商铺售价', '100-200万元', '3', 3, null);
 
 insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (217, '日租短租付款方式', '信用卡', '3', 3, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (218, '商铺售价', '200-300万元', '4', 4, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (218, '日租短租付款方式', '支付宝', '4', 4, null);
 
 insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (219, '商铺售价', '300-500万元', '5', 5, null);
 
 insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (219, '日租短租付款方式', '微信', '5', 5, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (220, '商铺售价', '500-800万元', '6', 6, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (220, '仓库面积', '1000平米以下', '1', 1, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (221, '仓库面积', '1000-2000平米', '2', 2, null);
 
 insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (221, '商铺售价', '800-1000万元', '7', 7, null);
@@ -827,18 +686,159 @@ insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID
 values (222, '商铺售价', '1000万以上', '8', 8, null);
 
 insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1705, '二手房面积', '300-500平米', '9', 9, null);
+values (222, '仓库面积', '2000-5000平米', '3', 3, null);
 
 insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1704, '二手房面积', '200-300平米', '8', 8, null);
+values (223, '仓库面积', '5000-8000平米', '4', 4, null);
 
 insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1703, '二手房面积', '150-200平米', '7', 7, null);
+values (224, '仓库面积', '8000-12000平米', '5', 5, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (225, '仓库面积', '12000平米以上', '6', 6, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (226, '土地租金', '2000元/月以下', '1', 1, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (227, '土地租金', '2000-5000元/月', '2', 2, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (228, '土地租金', '5000-8000元/月', '3', 3, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (229, '土地租金', '8000-10000元/月', '4', 4, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (230, '土地租金', '1-2万元/月', '5', 5, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (231, '土地租金', '2-5万元/月', '6', 6, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (232, '土地租金', '5万元/月以上', '7', 7, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (233, '土地售价', '10-30万元', '1', 1, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (234, '土地售价', '30-50万元', '2', 2, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (235, '土地售价', '50-100万元', '3', 3, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (236, '土地售价', '100-200万元', '4', 4, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (237, '土地售价', '200-500万元', '5', 5, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (238, '土地售价', '500-1000万元', '6', 6, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (239, '土地售价', '1000万元以上', '7', 7, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (240, '车位租金', '200元/月以下', '1', 1, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (241, '车位租金', '200-500元/月', '2', 2, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (242, '车位租金', '500-800元/月', '3', 3, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (243, '车位租金', '800-1000元/月', '4', 4, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (244, '车位租金', '1000元/月以上', '5', 5, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (245, '车位面积', '15平米以下', '1', 1, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (246, '车位面积', '15-30平米', '2', 2, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (247, '车位面积', '30-50平米', '3', 3, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (248, '车位面积', '50平米以上', '4', 4, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (249, '车位售价', '10万元以下', '1', 1, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (250, '车位售价', '10-30万元', '2', 2, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (251, '车位售价', '30-50万元', '3', 3, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (252, '车位售价', '50万元以上', '4', 4, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1661, '二手房售价', '300-400万元', '6', 6, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1662, '二手房售价', '400-550万元', '7', 7, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1663, '二手房售价', '550-700万元', '8', 8, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1664, '二手房售价', '700-900万元', '9', 9, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1665, '二手房售价', '900万元以上', '10', 10, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1701, '二手房面积', '110-130平米', '5', 5, null);
 
 insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (1702, '二手房面积', '130-150平米', '6', 6, null);
 
 insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1701, '二手房面积', '110-130平米', '5', 5, null);
+values (1703, '二手房面积', '150-200平米', '7', 7, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1704, '二手房面积', '200-300平米', '8', 8, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1705, '二手房面积', '300-500平米', '9', 9, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1706, '二手房面积', '500平米以上', '10', 10, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1791, '商铺面积', '200-500平米', '5', 5, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1792, '商铺面积', '500平米以上', '6', 6, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (6201, '房屋亮点', '朝南', '9', 9, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (7701, '出租间类型', '主卧', '1', 1, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (7702, '出租间类型', '次卧', '2', 2, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (7703, '出租间类型', '隔断', '3', 3, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (7704, '出租间性别', '男女不限', '1', 1, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (7705, '出租间性别', '限女生', '2', 2, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (7706, '出租间性别', '限男生', '3', 3, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (7707, '出租间性别', '限夫妻', '4', 4, null);
 
 prompt Done.

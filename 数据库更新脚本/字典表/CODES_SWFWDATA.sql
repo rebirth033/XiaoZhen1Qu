@@ -2,6 +2,1296 @@ prompt Importing table codes_swfw...
 set feedback off
 set define off
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1, '工商注册类别', '内资公司注册', '1', 1, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (2, '工商注册类别', '海外公司注册', '2', 2, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (3, '工商注册类别', '外资公司注册', '3', 3, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (4, '工商注册类别', '香港公司注册', '4', 4, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (5, '工商注册类别', '专项审批', '5', 5, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (6, '工商注册类别', '工商年检', '6', 6, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (7, '工商注册类别', '验资开户', '7', 7, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (8, '工商注册类别', '资质认证', '8', 8, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (9, '工商注册类别', '公司变更', '9', 9, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (10, '工商注册类别', '公司注销', '10', 10, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (11, '工商注册类别', '一般纳税人申请', '11', 11, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (12, '商标专利类别', '商标服务', '1', 1, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (13, '商标专利类别', '专利服务', '2', 2, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (14, '商标专利类别', '版权服务', '3', 3, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (15, '商标服务', '商标变更', '1', 1, 12);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (16, '商标服务', '商标许可', '2', 2, 12);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (17, '商标服务', '商标案件', '3', 3, 12);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (18, '商标服务', '商标补正', '4', 4, 12);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (19, '商标服务', '商标续展', '5', 5, 12);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (20, '商标服务', '商标转让', '6', 6, 12);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (21, '商标服务', '商标注册', '7', 7, 12);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (22, '专利服务', '专利申请', '1', 1, 13);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (23, '专利服务', '专利变更', '2', 2, 13);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (24, '专利服务', '专利转让', '3', 3, 13);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (25, '专利服务', '专利实施许可', '4', 4, 13);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (26, '专利服务', '专利诉讼', '5', 5, 13);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (27, '版权服务', '版权登记', '1', 1, 14);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (28, '版权服务', '版权转让', '3', 3, 14);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (29, '版权服务', '版权许可', '4', 4, 14);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (30, '版权服务', '版权纠纷', '5', 5, 14);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (31, '版权服务', '版权变更', '2', 2, 14);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (32, '法律咨询类别', '知识产权', '1', 1, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (33, '法律咨询类别', '房产纠纷', '2', 2, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (34, '法律咨询类别', '劳动争议', '3', 3, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (35, '法律咨询类别', '商业纠纷', '4', 4, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (36, '法律咨询类别', '合同纠纷', '5', 5, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (37, '法律咨询类别', '建筑工程', '6', 6, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (38, '法律咨询类别', '债务纠纷', '7', 7, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (39, '法律咨询类别', '刑事辩护/诉讼', '8', 8, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (40, '法律咨询类别', '公司法务', '9', 9, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (41, '法律咨询类别', '法律援助', '10', 10, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (42, '法律咨询类别', '婚姻家庭', '11', 11, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (43, '法律咨询类别', '征地补偿', '12', 12, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (44, '法律咨询类别', '交通事故', '13', 13, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (45, '法律咨询类别', '医疗事故', '14', 14, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (46, '法律咨询类别', '涉外法律', '15', 15, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (47, '财务会计/评估类别', '代理记账', '1', 1, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (48, '财务会计/评估类别', '验资', '2', 2, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (49, '财务会计/评估类别', '财务审计', '3', 3, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (50, '财务会计/评估类别', '资产评估', '4', 4, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (51, '财务会计/评估类别', '税务咨询', '5', 5, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (52, '财务会计/评估类别', '工程造价', '6', 6, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (53, '财务会计/评估类别', '财税疑难', '7', 7, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (54, '财务会计/评估类别', '纳税申报', '8', 8, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (55, '保险类别', '意外险', '1', 1, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (56, '保险类别', '旅游保险', '2', 2, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (57, '保险类别', '签证保险', '3', 3, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (58, '保险类别', '健康险', '4', 4, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (59, '保险类别', '人寿险', '5', 5, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (60, '保险类别', '少儿保险', '6', 6, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (61, '保险类别', '商业养老险', '7', 7, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (62, '保险类别', '投资型保险', '8', 8, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (63, '保险类别', '家财险', '9', 9, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (64, '保险类别', '企业财产险', '10', 10, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (65, '保险类别', '汽车保险', '11', 11, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (66, '意外险', '综合意外险', '1', 1, 55);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (67, '意外险', '人身意外险', '2', 2, 55);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (68, '意外险', '交通意外险', '3', 3, 55);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (69, '意外险', '航空意外险', '4', 4, 55);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (70, '旅游保险', '国内旅游保险', '1', 1, 56);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (71, '旅游保险', '境外旅游保险', '2', 2, 56);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (72, '健康险', '重大疾病保险', '1', 1, 58);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (73, '健康险', '商业医疗保险 ', '2', 2, 58);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (74, '健康险', '特定疾病保险', '3', 3, 58);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (75, '健康险', '女性疾病保险', '4', 4, 58);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (76, '人寿险', '定期寿险', '1', 1, 59);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (77, '人寿险', '终身寿险', '2', 2, 59);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (78, '人寿险', '两全保险', '3', 3, 59);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (79, '人寿险', '年金保险', '4', 4, 59);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (80, '少儿保险', '少儿意外伤害', '1', 1, 60);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (81, '少儿保险', '少儿健康医疗', '2', 2, 60);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (82, '少儿保险', '少儿教育储蓄', '3', 3, 60);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (83, '商业养老险', '分红型', '1', 1, 61);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (84, '商业养老险', '两全型', '2', 2, 61);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (85, '商业养老险', '万能型', '3', 3, 61);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (86, '投资型保险', '分红险', '1', 1, 62);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (87, '投资型保险', '万能险', '2', 2, 62);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (88, '投资型保险', '投连险', '3', 3, 62);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (89, '投资型保险', '教育金', '4', 4, 62);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (90, '家财险', '自住型', '1', 1, 63);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (91, '家财险', '租房型', '2', 2, 63);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (92, '家财险', '出租型', '3', 3, 63);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (93, '家财险', '网店型', '4', 4, 63);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (94, '企业财产险', '财产综合险', '1', 1, 64);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (95, '企业财产险', '财产基本险', '2', 2, 64);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (96, '企业财产险', '财产一切险', '3', 3, 64);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (97, '企业财产险', '计算机保险', '4', 4, 64);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (98, '企业财产险', '利润损失险', '5', 5, 64);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (99, '企业财产险', '机器损坏险', '6', 6, 64);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (100, '投资担保类别', '担保', '1', 1, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (101, '投资担保类别', '投资', '2', 2, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (102, '投资担保类别', '典当行', '3', 3, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (103, '投资担保类别', '贷款', '4', 4, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (104, '投资担保类别', '银行直投', '5', 5, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (105, '担保', '无抵押', '1', 1, 100);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (106, '担保', '房产抵押', '2', 2, 100);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (107, '担保', '汽车抵押', '3', 3, 100);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (108, '担保', '证券质押', '4', 4, 100);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (109, '典当行', '房产抵押', '1', 1, 102);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (110, '典当行', '汽车质押', '2', 2, 102);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (111, '典当行', '证券质押', '3', 3, 102);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (112, '典当行', '股票质押', '4', 4, 102);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (113, '典当行', '财产质押', '5', 5, 102);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (114, '贷款', '个人信贷', '1', 1, 103);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (115, '贷款', '企业信贷', '2', 2, 103);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (116, '贷款', '抵押贷款', '3', 3, 103);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (117, '贷款', '质押贷款', '4', 4, 103);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (118, '印刷包装类别', '包装', '1', 1, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (119, '印刷包装类别', '纸类印刷', '2', 2, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (120, '印刷包装类别', '防伪印刷', '3', 3, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (121, '印刷包装类别', '名片印刷', '4', 4, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (122, '印刷包装类别', '书刊印刷', '5', 5, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (123, '印刷包装类别', '不干胶印刷', '6', 6, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (124, '印刷包装类别', '服装印花', '7', 7, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (125, '印刷包装类别', '仪器面板印刷', '8', 8, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (126, '印刷包装类别', '办公礼品印刷', '9', 9, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (127, '印刷包装类别', '宣传资料印刷', '10', 10, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (128, '印刷包装类别', '春联', '11', 11, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (129, '材质', '塑料', '1', 1, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (130, '材质', '纸类', '2', 2, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (131, '材质', '布类', '3', 3, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (132, '材质', '金属', '4', 4, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (133, '材质', '木质', '5', 5, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (134, '材质', '玻璃', '6', 6, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (135, '用途', '礼品包装', '1', 1, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (136, '用途', '食品包装', '2', 2, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (137, '用途', '饰品包装', '3', 3, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (138, '用途', '服装包装', '4', 4, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (139, '用途', '玩具包装', '5', 5, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (140, '用途', '数码/电子包装', '6', 6, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (141, '用途', '化妆品包装', '7', 7, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (142, '用途', '药品包装', '8', 8, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (143, '用途', '仪器包装', '9', 9, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (144, '用途', '香烟包装', '10', 10, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (145, '用途', '五金包装', '11', 11, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (146, '用途', '酒水包装', '12', 12, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (147, '用途', '茶叶包装', '13', 13, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (148, '包装容器', '包装盒/包装箱', '1', 1, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (149, '包装容器', '包装袋', '2', 2, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (150, '包装容器', '桶', '3', 3, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (151, '包装容器', '杯', '4', 4, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (152, '包装容器', '瓶/罐', '5', 5, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (153, '包装容器', '软管', '6', 6, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (154, '纸类印刷', '票据印刷', '1', 1, 119);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (155, '纸类印刷', '台历制作', '2', 2, 119);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (156, '宣传资料印刷', '手提袋', '1', 1, 127);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (157, '宣传资料印刷', '封套', '2', 2, 127);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (158, '宣传资料印刷', '优惠券/门票', '3', 3, 127);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (159, '宣传资料印刷', '单页/折页', '4', 4, 127);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (160, '宣传资料印刷', '海报', '5', 5, 127);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (161, '宣传资料印刷', '工程图/效果图', '6', 6, 127);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (162, '宣传资料印刷', '画册', '7', 7, 127);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (163, '工艺', '无碳复写', '1', 1, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (164, '工艺', '丝网印刷', '2', 2, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (165, '工艺', '数码印刷', '3', 3, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (166, '工艺', '彩印', '4', 4, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (167, '工艺', '胶印', '5', 5, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (168, '工艺', '热转印', '6', 6, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (169, '工艺', '水转印', '7', 7, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (170, '工艺', '凹印', '8', 8, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (171, '工艺', '柔印', '9', 9, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (172, '工艺', '移印', '10', 10, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (173, '工艺', '立体印刷', '11', 11, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (174, '喷绘招牌类别', '灯箱/招牌', '1', 1, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (175, '喷绘招牌类别', '亮化工程', '2', 2, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (176, '喷绘招牌类别', '背景/形象墙', '3', 3, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (177, '喷绘招牌类别', '展架制作', '4', 4, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (178, '喷绘招牌类别', '户外广告', '5', 5, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (179, '喷绘招牌类别', '标牌', '6', 6, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (180, '喷绘招牌类别', 'LED显示屏', '7', 7, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (181, '喷绘招牌类别', '条幅/锦旗/奖牌', '8', 8, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (182, '灯箱/招牌材质', '钛金', '1', 1, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (183, '灯箱/招牌材质', '不锈钢', '2', 2, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (184, '灯箱/招牌材质', '铜', '3', 3, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (185, '灯箱/招牌材质', '有色亚克力', '4', 4, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (186, '灯箱/招牌材质', '树脂/塑料', '5', 5, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (187, '灯箱/招牌材质', '透明亚克力/水晶', '6', 6, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (188, '灯箱/招牌材质', '铁', '7', 7, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (189, '灯箱/招牌材质', 'PVC', '8', 8, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (190, '灯箱/招牌材质', '铝', '9', 9, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (191, '灯箱/招牌材质', '金箔', '10', 10, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (192, '灯箱/招牌材质', '木制', '11', 11, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (193, '灯箱/招牌工艺', '喷绘', '1', 1, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (194, '灯箱/招牌工艺', '吸塑', '2', 2, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (195, '灯箱/招牌工艺', '拉丝', '3', 3, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (196, '灯箱/招牌工艺', '丝印', '4', 4, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (197, '灯箱/招牌工艺', '冲孔', '5', 5, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (198, '灯箱/招牌工艺', 'LED', '6', 6, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (199, '灯箱/招牌工艺', '烤漆', '7', 7, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (200, '灯箱/招牌', '灯箱', '1', 1, 174);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (201, '灯箱/招牌', '广告字', '2', 2, 174);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (202, '灯箱/招牌', '广告牌', '3', 3, 174);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (203, '亮化工程', '楼体亮化', '1', 1, 175);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (204, '亮化工程', '景观照明', '2', 2, 175);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (205, '亮化工程', '城市亮化', '3', 3, 175);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (206, '亮化工程', '霓虹灯工程', '4', 4, 175);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (207, '亮化工程', '场馆照明', '5', 5, 175);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (208, '背景/形象墙', '会议背景', '1', 1, 176);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (209, '背景/形象墙', '形象墙', '2', 2, 176);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (210, '背景/形象墙', '舞台背景', '3', 3, 176);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (211, '展架制作', '拉网展架', '1', 1, 177);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (212, '展架制作', '易拉宝', '2', 2, 177);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (213, '展架制作', 'X展架', '3', 3, 177);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (214, '展架制作', '促销台', '4', 4, 177);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (215, '展架制作', '注水旗杆', '5', 5, 177);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (216, '展架制作', '挂画架', '6', 6, 177);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (217, '展架制作', '人像立牌', '7', 7, 177);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (218, '展架制作', '海报架', '8', 8, 177);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (219, '展架制作', 'L展架', '9', 9, 177);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (220, '展架制作', '资料架', '10', 10, 177);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (221, '展架制作', '广告帐篷', '11', 11, 177);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (222, '户外广告', '车体广告', '1', 1, 178);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (223, '户外广告', '玻璃贴', '2', 2, 178);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (224, '户外广告', '工程围挡', '3', 3, 178);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (225, '户外广告', '楼顶广告牌', '4', 4, 178);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (226, '户外广告', '楼体广告', '5', 5, 178);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (227, '户外广告', '升空气球', '6', 6, 178);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (228, '户外广告', '墙体广告', '7', 7, 178);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (229, '标牌用途', '机场车站', '1', 1, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (230, '标牌用途', '体育场馆', '2', 2, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (231, '标牌用途', '文化会展', '3', 3, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (232, '标牌用途', '写字楼', '4', 4, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (233, '标牌用途', '医院', '5', 5, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (234, '标牌用途', '工业园区', '6', 6, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (235, '标牌用途', '学校', '7', 7, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (236, '标牌用途', '公园景区', '8', 8, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (237, '标牌用途', '停车场', '9', 9, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (238, '标牌用途', '城市街区', '10', 10, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (239, '标牌用途', '商场', '11', 11, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (240, '标牌用途', '宾馆酒店', '12', 12, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (241, '标牌用途', '地铁', '13', 13, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (242, '标牌功能', '立式导向牌', '1', 1, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (243, '标牌功能', '吊式导向牌', '2', 2, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (244, '标牌功能', '大堂水牌', '3', 3, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (245, '标牌功能', '桌牌', '4', 4, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (246, '标牌功能', '楼层号牌', '5', 5, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (247, '标牌功能', '门牌', '6', 6, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (248, '标牌功能', '宣传栏', '7', 7, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (249, '标牌功能', '公司铭牌', '8', 8, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (250, '标牌功能', '授权牌', '9', 9, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (251, '标牌功能', '胸牌/徽章', '10', 10, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (252, '标牌功能', '安全标识', '11', 11, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (253, '标牌功能', '夜光标牌', '12', 12, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (254, '标牌材质', '不锈钢', '1', 1, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (255, '标牌材质', '钛金', '2', 2, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (256, '标牌材质', '亚克力', '3', 3, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (257, '标牌材质', '电光板', '4', 4, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (258, '标牌材质', '铝制', '5', 5, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (259, '标牌材质', '铜', '6', 6, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (260, '标牌材质', '塑料', '7', 7, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (261, '标牌材质', '锌合金', '8', 8, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (262, 'LED显示屏', '户外单色显示屏', '1', 1, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (263, 'LED显示屏', '室内单色显示屏', '2', 2, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (264, 'LED显示屏', '户外双色显示屏', '3', 3, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (265, 'LED显示屏', '室内双色显示屏', '4', 4, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (266, 'LED显示屏', '户外全彩显示屏', '5', 5, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (267, 'LED显示屏', '室内全彩显示屏', '6', 6, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (268, '条幅/锦旗/奖牌', '条幅', '1', 1, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (269, '条幅/锦旗/奖牌', '锦旗', '2', 2, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (270, '条幅/锦旗/奖牌', '奖牌', '3', 3, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (271, '条幅/锦旗/奖牌', '奖杯', '4', 4, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (272, '条幅/锦旗/奖牌', '奖章', '5', 5, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (273, '是否发光', '是', '1', 1, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (274, '是否发光', '否', '2', 2, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (275, '设计策划类别', '视频制作', '1', 1, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (276, '设计策划类别', '广告设计', '2', 2, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (277, '设计策划类别', '平面设计', '3', 3, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (278, '设计策划类别', '名片设计', '4', 4, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (279, '设计策划类别', '品牌策划推广', '5', 5, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (280, '设计策划类别', '工业设计', '6', 6, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (281, '设计策划类别', 'SI店面设计', '7', 7, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (282, '设计策划类别', '装潢设计', '8', 8, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (283, '设计策划类别', 'LOGO设计/VI设计', '9', 9, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (284, '设计策划类别', '建筑设计', '10', 10, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (285, '设计策划类别', '景观设计', '11', 11, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (286, '设计策划类别', '服装设计', '12', 12, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (287, '设计策划类别', '签名设计', '13', 13, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (288, '设计策划类别', '动漫设计', '14', 14, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (289, '视频制作', '宣传片', '1', 1, 275);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (290, '视频制作', '微电影', '2', 2, 275);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (291, '视频制作', '广告片', '3', 3, 275);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (292, '视频制作', '纪录片/专题片', '4', 4, 275);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (293, '视频制作', 'MV制作', '5', 5, 275);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (294, '视频制作', '栏目包装', '6', 6, 275);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (295, '视频制作', '影视后期制作', '7', 7, 275);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (296, '视频制作', '光盘刻录', '8', 8, 275);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (297, '视频制作', '动画制作', '9', 9, 275);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (298, '平面设计', '书籍装帧设计', '1', 1, 277);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (299, '平面设计', '画册设计', '2', 2, 277);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (300, '平面设计', '海报设计', '3', 3, 277);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (301, '平面设计', '折页设计', '4', 4, 277);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (302, '品牌策划推广', '品牌策划', '1', 1, 279);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (303, '品牌策划推广', '企业形象设计/CI设计', '2', 2, 279);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (304, '工业设计', '包装设计', '1', 1, 280);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (305, '工业设计', '模具设计', '2', 2, 280);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (306, '工业设计', '电子产品设计', '3', 3, 280);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (307, '工业设计', '仪器仪表设计', '4', 4, 280);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (308, '工业设计', '灯具设计', '5', 5, 280);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (309, '工业设计', '机械设计', '6', 6, 280);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (310, '工业设计', '电气设计', '7', 7, 280);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (311, '工业设计', '模型制作/设计', '8', 8, 280);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (312, '广告传媒类别', '广告位招租', '1', 1, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (313, '广告传媒类别', '导视系统设计', '2', 2, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (314, '广告传媒类别', '多媒体互动', '3', 3, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (315, '广告位招租', '出租车/车体广告', '1', 1, 312);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (316, '广告位招租', '高速广告', '2', 2, 312);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (317, '广告位招租', '机场广告', '3', 3, 312);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (318, '广告位招租', '社区学校', '4', 4, 312);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (319, '广告位招租', '地铁广告', '5', 5, 312);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (320, '广告位招租', '加油站广告', '6', 6, 312);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (321, '广告位招租', 'LED大屏广告', '7', 7, 312);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (322, '广告位招租', '车站广告', '8', 8, 312);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (323, '广告位招租', '电视广播', '9', 9, 312);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (324, '广告位招租', '报纸杂志', '10', 10, 312);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (325, '广告位招租', '网络新媒体', '11', 11, 312);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (326, '展会服务类别', '展会庆典策划', '1', 1, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (327, '展会服务类别', '展位设计', '2', 2, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (328, '展会服务类别', '展会布置/搭建', '3', 3, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (329, '展会服务类别', '展会用品制作', '4', 4, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (330, '展位设计', '展厅设计', '1', 1, 327);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (331, '展位设计', '展台设计', '2', 2, 327);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (332, '展位设计', '展柜设计', '3', 3, 327);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (333, '展会布置/搭建', '会场/展厅布置', '1', 1, 328);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (334, '展会布置/搭建', '舞台/展台搭建', '2', 2, 328);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (335, '展会布置/搭建', '标摊搭建', '3', 3, 328);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (336, '展会用品制作', '展柜制作', '1', 1, 329);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (337, '展会用品制作', '展板制作', '2', 2, 329);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (338, '展会用品制作', '气球拱门', '3', 3, 329);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (339, '展会用品制作', '礼炮烟花', '4', 4, 329);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (340, '展会服务类别', '摄影摄像', '5', 5, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (341, '制卡类别', '智能卡/电子标签', '1', 1, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (342, '制卡类别', 'PVC卡', '2', 2, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (343, '制卡类别', '纸卡', '3', 3, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (344, '制卡类别', '金属卡', '4', 4, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (345, '制卡类别', '磁条卡', '5', 5, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (346, '制卡类别', '滴胶卡', '6', 6, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (347, '智能卡/电子标签', 'IC卡', '1', 1, 341);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (348, '智能卡/电子标签', 'ID卡', '2', 2, 341);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (349, '智能卡/电子标签', 'M1卡', '3', 3, 341);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (350, '智能卡/电子标签', '可视卡', '4', 4, 341);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (351, '智能卡/电子标签', '电子标签/射频卡', '5', 5, 341);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (352, '卡型', '人像卡', '1', 1, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (353, '卡型', '会员卡', '2', 2, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (354, '卡型', '异形卡', '3', 3, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (355, '卡型', '年历卡', '4', 4, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (356, '卡型', '贵宾卡/VIP卡', '5', 5, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (357, '卡型', '刮刮卡', '6', 6, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (358, '卡型', '积分卡', '7', 7, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (359, '卡型', '优惠卡', '8', 8, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (360, '卡型', '条码卡', '9', 9, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (361, '卡型', '充值卡', '10', 10, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (362, '卡型', '礼品卡', '11', 11, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (363, '卡型', '磨砂卡', '12', 12, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (364, '礼品定制类别', '数码电子', '1', 1, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (365, '礼品定制类别', '杯子茶具', '2', 2, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (366, '礼品定制类别', '文具本册', '3', 3, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (367, '礼品定制类别', '箱包皮具', '4', 4, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (368, '礼品定制类别', '服装', '5', 5, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (370, '礼品定制类别', '家居家纺', '6', 6, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (371, '礼品定制类别', '汽车/户外', '7', 7, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (372, '礼品定制类别', '运动健康', '8', 8, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (373, '礼品定制类别', '小家电', '9', 9, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (374, '礼品定制类别', '工艺品', '10', 10, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (375, '礼品定制类别', '奖杯证书', '11', 11, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (376, '网络布线/维护类别', '安防监控', '1', 1, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (377, '网络布线/维护类别', '综合布线', '2', 2, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (378, '网络布线/维护类别', '系统集成', '3', 3, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (379, '网络布线/维护类别', '网络维护', '4', 4, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (380, '网络布线/维护类别', 'IT外包', '5', 5, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (381, '网络布线/维护类别', '电脑组装', '6', 6, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (382, '网络布线/维护类别', '光纤宽带', '7', 7, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (383, '网络布线/维护类别', '弱电工程', '8', 8, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (384, '安防监控', '监控系统', '1', 1, 376);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (385, '安防监控', '防盗报警', '2', 2, 376);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (386, '安防监控', '消防系统', '3', 3, 376);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (387, '安防监控', '门禁考勤', '4', 4, 376);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (388, '安防监控', '出入口控制', '5', 5, 376);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (389, '安防监控', '巡更系统', '6', 6, 376);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (390, '弱电工程', '停车场管理系统', '1', 1, 383);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (391, '弱电工程', '机房建设', '2', 2, 383);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (392, '弱电工程', '公共广播', '3', 3, 383);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (393, '弱电工程', '对讲系统', '4', 4, 383);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (394, '弱电工程', 'LED显示屏/触摸屏', '5', 5, 383);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (395, '弱电工程', '集团电话', '6', 6, 383);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (396, '弱电工程', '视频音频会议系统', '7', 7, 383);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (397, '弱电工程', '背景音乐', '8', 8, 383);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (398, '弱电工程', '楼宇自控', '9', 9, 383);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (399, '弱电工程', '检票系统', '10', 10, 383);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (400, '弱电工程', '智能家居', '11', 11, 383);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (401, '弱电工程', '多媒体教学', '12', 12, 383);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (402, '网站建设/推广类别', '网站建设/设计', '1', 1, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (403, '网站建设/推广类别', '软件开发', '2', 2, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (404, '网站建设/推广类别', 'app开发', '3', 3, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (405, '网站建设/推广类别', '域名注册', '4', 4, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (406, '网站建设/推广类别', '网络营销/推广', '5', 5, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (407, '网站建设/推广类别', '服务器', '6', 6, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (408, '网站建设/推广类别', '企业邮箱', '7', 7, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (409, '网站建设/推广类别', '网站维护', '8', 8, null);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (410, '网站建设/设计', '网站建设', '1', 1, 402);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (411, '网站建设/设计', '网站设计', '2', 2, 402);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (412, '软件开发', '系统软件', '1', 1, 403);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (413, '软件开发', '应用软件', '2', 2, 403);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (414, '软件开发', '数据库', '3', 3, 403);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (415, '软件开发', '游戏', '4', 4, 403);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (416, 'app开发', 'ios', '1', 1, 404);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (417, 'app开发', 'android', '2', 2, 404);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (418, 'app开发', 'Windows PHONE', '3', 3, 404);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (419, 'app开发', 'html5', '4', 4, 404);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (420, 'app开发', '微信开发', '5', 5, 404);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (421, '网络营销/推广', 'SEO/SEM', '1', 1, 406);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (422, '网络营销/推广', '视频营销', '2', 2, 406);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (423, '网络营销/推广', '微博营销', '3', 3, 406);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (424, '网络营销/推广', '短信营销', '4', 4, 406);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (425, '网络营销/推广', '电话营销', '5', 5, 406);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (426, '网络营销/推广', '邮箱营销', '6', 6, 406);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (427, '网络营销/推广', '微信营销', '7', 7, 406);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (428, '网络营销/推广', '事件炒作', '8', 8, 406);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (429, '网络营销/推广', '论坛/社区推广', '9', 9, 406);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (430, '网络营销/推广', '软文推广', '10', 10, 406);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (431, '服务器', '云主机', '1', 1, 407);
+
+insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (432, '服务器', '虚拟主机', '2', 2, 407);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
@@ -14,31 +1304,31 @@ insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENT
 values (435, '服务器', '主机托管', '5', 5, 407);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (436, '咨询服务', '人才/职介', '1', 1, null);
+values (436, '咨询服务类别', '人才/职介', '1', 1, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (437, '咨询服务', '户口咨询', '2', 2, null);
+values (437, '咨询服务类别', '户口咨询', '2', 2, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (438, '咨询服务', '心理咨询', '3', 3, null);
+values (438, '咨询服务类别', '心理咨询', '3', 3, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (439, '咨询服务', '企业公关', '4', 4, null);
+values (439, '咨询服务类别', '企业公关', '4', 4, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (440, '咨询服务', '市场调查', '5', 5, null);
+values (440, '咨询服务类别', '市场调查', '5', 5, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (441, '咨询服务', '代缴社保/公积金', '6', 6, null);
+values (441, '咨询服务类别', '代缴社保/公积金', '6', 6, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (442, '快递', '同城快递', '1', 1, null);
+values (442, '快递类别', '同城快递', '1', 1, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (443, '快递', '国内快递', '2', 2, null);
+values (443, '快递类别', '国内快递', '2', 2, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (444, '快递', '国际快递', '3', 3, null);
+values (444, '快递类别', '国际快递', '3', 3, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (445, '国内快递', 'ems', '1', 1, 443);
@@ -113,19 +1403,19 @@ insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENT
 values (468, '国际快递', '马士基', '6', 6, 444);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (469, '翻译/速记', '笔译', '1', 1, null);
+values (469, '翻译/速记类别', '笔译', '1', 1, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (470, '翻译/速记', '口译', '2', 2, null);
+values (470, '翻译/速记类别', '口译', '2', 2, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (471, '翻译/速记', '同声传译', '3', 3, null);
+values (471, '翻译/速记类别', '同声传译', '3', 3, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (472, '翻译/速记', '本地化', '4', 4, null);
+values (472, '翻译/速记类别', '本地化', '4', 4, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (473, '翻译/速记', '速记', '5', 5, null);
+values (473, '翻译/速记类别', '速记', '5', 5, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (474, '口译', '商务谈判', '1', 1, 470);
@@ -557,25 +1847,25 @@ insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENT
 values (616, '文件类型', '广告', '20', 20, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (617, '货运物流', '仓储', '1', 1, null);
+values (617, '货运物流类别', '仓储', '1', 1, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (618, '货运物流', '托运', '2', 2, null);
+values (618, '货运物流类别', '托运', '2', 2, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (619, '货运物流', '空车配货', '3', 3, null);
+values (619, '货运物流类别', '空车配货', '3', 3, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (620, '货运物流', '航空运输', '4', 4, null);
+values (620, '货运物流类别', '航空运输', '4', 4, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (621, '货运物流', '全国零担', '5', 5, null);
+values (621, '货运物流类别', '全国零担', '5', 5, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (622, '货运物流', '进出口报关', '6', 6, null);
+values (622, '货运物流类别', '进出口报关', '6', 6, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (623, '货运物流', '货运代理', '7', 7, null);
+values (623, '货运物流类别', '货运代理', '7', 7, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (624, '组货方式', '零整不限', '1', 1, null);
@@ -635,55 +1925,55 @@ insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENT
 values (642, '运输价格单位', '元/方', '3', 3, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (643, '办公设备维修', '投影仪', '1', 1, null);
+values (643, '办公设备维修类别', '投影仪', '1', 1, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (644, '办公设备维修', '绘图仪', '2', 2, null);
+values (644, '办公设备维修类别', '绘图仪', '2', 2, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (645, '办公设备维修', '喷码机', '3', 3, null);
+values (645, '办公设备维修类别', '喷码机', '3', 3, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (646, '办公设备维修', '印刷机', '4', 4, null);
+values (646, '办公设备维修类别', '印刷机', '4', 4, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (647, '办公设备维修', '打印机', '5', 5, null);
+values (647, '办公设备维修类别', '打印机', '5', 5, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (648, '办公设备维修', '复印机', '6', 6, null);
+values (648, '办公设备维修类别', '复印机', '6', 6, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (649, '办公设备维修', '传真机', '7', 7, null);
+values (649, '办公设备维修类别', '传真机', '7', 7, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (650, '办公设备维修', '扫描仪', '8', 8, null);
+values (650, '办公设备维修类别', '扫描仪', '8', 8, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (651, '办公设备维修', '考勤机', '9', 9, null);
+values (651, '办公设备维修类别', '考勤机', '9', 9, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (652, '办公设备维修', '一体机', '10', 10, null);
+values (652, '办公设备维修类别', '一体机', '10', 10, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (653, '办公设备维修', 'LED显示屏/触摸屏', '11', 11, null);
+values (653, '办公设备维修类别', 'LED显示屏/触摸屏', '11', 11, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (654, '办公设备维修', '碎纸机', '12', 12, null);
+values (654, '办公设备维修类别', '碎纸机', '12', 12, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (655, '办公设备维修', '监控/门禁', '13', 13, null);
+values (655, '办公设备维修类别', '监控/门禁', '13', 13, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (656, '办公设备维修', '安防系统', '14', 14, null);
+values (656, '办公设备维修类别', '安防系统', '14', 14, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (657, '办公设备维修', '集团电话', '15', 15, null);
+values (657, '办公设备维修类别', '集团电话', '15', 15, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (658, '办公设备维修', '视频/音频会议系统', '16', 16, null);
+values (658, '办公设备维修类别', '视频/音频会议系统', '16', 16, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (659, '办公设备维修', '广播系统', '17', 17, null);
+values (659, '办公设备维修类别', '广播系统', '17', 17, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (660, '打印机', '惠普', '1', 1, 647);
@@ -800,28 +2090,28 @@ insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENT
 values (697, '一体机', '柯尼卡美能达', '10', 10, 652);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (698, '租赁', '机械设备租赁', '1', 1, null);
+values (698, '租赁类别', '机械设备租赁', '1', 1, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (699, '租赁', '办公设备租赁', '2', 2, null);
+values (699, '租赁类别', '办公设备租赁', '2', 2, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (700, '租赁', '庆典会展租赁', '3', 3, null);
+values (700, '租赁类别', '庆典会展租赁', '3', 3, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (701, '租赁', '服装租赁', '4', 4, null);
+values (701, '租赁类别', '服装租赁', '4', 4, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (702, '租赁', '家具租赁', '5', 5, null);
+values (702, '租赁类别', '家具租赁', '5', 5, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (703, '租赁', '空调租赁', '6', 6, null);
+values (703, '租赁类别', '空调租赁', '6', 6, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (704, '租赁', '户外装备租赁', '7', 7, null);
+values (704, '租赁类别', '户外装备租赁', '7', 7, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (705, '租赁', '移动厕所租赁', '8', 8, null);
+values (705, '租赁类别', '移动厕所租赁', '8', 8, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (706, '机械设备租赁', '发电机租赁', '1', 1, 698);
@@ -935,52 +2225,52 @@ insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENT
 values (742, '家具租赁', '屏风', '5', 5, 702);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (743, '建筑维修', '打井', '1', 1, null);
+values (743, '建筑维修类别', '打井', '1', 1, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (744, '建筑维修', '高空防腐', '2', 2, null);
+values (744, '建筑维修类别', '高空防腐', '2', 2, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (745, '建筑维修', '专业破碎', '3', 3, null);
+values (745, '建筑维修类别', '专业破碎', '3', 3, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (746, '建筑维修', '抗震加固', '4', 4, null);
+values (746, '建筑维修类别', '抗震加固', '4', 4, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (747, '建筑维修', '基础灌浆', '5', 5, null);
+values (747, '建筑维修类别', '基础灌浆', '5', 5, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (748, '建筑维修', '化学锚栓', '6', 6, null);
+values (748, '建筑维修类别', '化学锚栓', '6', 6, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (749, '建筑维修', '植筋加固', '7', 7, null);
+values (749, '建筑维修类别', '植筋加固', '7', 7, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (750, '建筑维修', '桥梁加固', '8', 8, null);
+values (750, '建筑维修类别', '桥梁加固', '8', 8, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (751, '建筑维修', '专业拆除', '9', 9, null);
+values (751, '建筑维修类别', '专业拆除', '9', 9, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (752, '建筑维修', '碳纤维加固', '10', 10, null);
+values (752, '建筑维修类别', '碳纤维加固', '10', 10, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (753, '建筑维修', '别墅改造加固', '11', 11, null);
+values (753, '建筑维修类别', '别墅改造加固', '11', 11, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (754, '建筑维修', '粘钢加固', '12', 12, null);
+values (754, '建筑维修类别', '粘钢加固', '12', 12, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (755, '建筑维修', '包钢加固', '13', 13, null);
+values (755, '建筑维修类别', '包钢加固', '13', 13, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (756, '建筑维修', '窗口加固', '14', 14, null);
+values (756, '建筑维修类别', '窗口加固', '14', 14, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (757, '建筑维修', '开门洞加固', '15', 15, null);
+values (757, '建筑维修类别', '开门洞加固', '15', 15, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (758, '建筑维修', '混凝土切割加固', '16', 16, null);
+values (758, '建筑维修类别', '混凝土切割加固', '16', 16, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (759, '机械设备维修', '医疗设备维修', '1', 1, null);
@@ -1019,31 +2309,31 @@ insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENT
 values (770, '机械设备维修', '电子天平维修', '12', 12, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (771, '代办签证/签注', '港澳通行证/签注', '1', 1, null);
+values (771, '代办签证/签注类别', '港澳通行证/签注', '1', 1, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (772, '代办签证/签注', '入台证/台湾通行证', '2', 2, null);
+values (772, '代办签证/签注类别', '入台证/台湾通行证', '2', 2, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (773, '代办签证/签注', '护照', '3', 3, null);
+values (773, '代办签证/签注类别', '护照', '3', 3, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (774, '代办签证/签注', '旅游签证', '4', 4, null);
+values (774, '代办签证/签注类别', '旅游签证', '4', 4, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (775, '代办签证/签注', '商务签证', '5', 5, null);
+values (775, '代办签证/签注类别', '商务签证', '5', 5, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (776, '代办签证/签注', '工作签证', '6', 6, null);
+values (776, '代办签证/签注类别', '工作签证', '6', 6, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (777, '代办签证/签注', '探亲访友签证', '7', 7, null);
+values (777, '代办签证/签注类别', '探亲访友签证', '7', 7, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (778, '代办签证/签注', '留学签证', '8', 8, null);
+values (778, '代办签证/签注类别', '留学签证', '8', 8, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (779, '代办签证/签注', '移民签证', '9', 9, null);
+values (779, '代办签证/签注类别', '移民签证', '9', 9, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (780, '国家', '奥地利', 'A', 1, null);
@@ -1301,22 +2591,22 @@ insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENT
 values (864, '年龄段', '12岁以上', '5', 5, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (865, '礼仪庆典', '庆典公司', '1', 1, null);
+values (865, '礼仪庆典类别', '庆典公司', '1', 1, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (866, '礼仪庆典', '演出表演', '2', 2, null);
+values (866, '礼仪庆典类别', '演出表演', '2', 2, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (867, '礼仪庆典', '场地布置', '3', 3, null);
+values (867, '礼仪庆典类别', '场地布置', '3', 3, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (868, '礼仪庆典', '展览展会', '4', 4, null);
+values (868, '礼仪庆典类别', '展览展会', '4', 4, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (869, '礼仪庆典', '活动策划', '5', 5, null);
+values (869, '礼仪庆典类别', '活动策划', '5', 5, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (870, '礼仪庆典', '礼仪模特', '6', 6, null);
+values (870, '礼仪庆典类别', '礼仪模特', '6', 6, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (871, '演出表演', '魔术表演', '1', 1, 866);
@@ -1394,1293 +2684,60 @@ insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENT
 values (895, '货运通道', '海运', '5', 5, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1, '工商注册', '内资公司注册', '1', 1, null);
+values (896, '起名/风水/算命类别', '起名', '1', 1, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (2, '工商注册', '海外公司注册', '2', 2, null);
+values (897, '起名/风水/算命类别', '风水', '2', 2, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (3, '工商注册', '外资公司注册', '3', 3, null);
+values (898, '起名/风水/算命类别', '算命', '3', 3, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (4, '工商注册', '香港公司注册', '4', 4, null);
+values (899, '起名/风水/算命类别', '星座', '4', 4, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (5, '工商注册', '专项审批', '5', 5, null);
+values (900, '起名/风水/算命类别', '择吉日', '5', 5, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (6, '工商注册', '工商年检', '6', 6, null);
+values (901, '起名/风水/算命类别', '解梦', '6', 6, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (7, '工商注册', '验资开户', '7', 7, null);
+values (902, '起名', '宝宝起名', '1', 1, 896);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (8, '工商注册', '资质认证', '8', 8, null);
+values (903, '起名', '公司/店铺起名', '2', 2, 896);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (9, '工商注册', '公司变更', '9', 9, null);
+values (904, '起名', '品牌/项目起名', '3', 3, 896);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (10, '工商注册', '公司注销', '10', 10, null);
+values (905, '风水', '家居风水', '1', 1, 897);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (11, '工商注册', '一般纳税人申请', '11', 11, null);
+values (906, '风水', '办公室风水', '2', 2, 897);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (12, '商标专利', '商标服务', '1', 1, null);
+values (907, '风水', '楼盘风水', '3', 3, 897);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (13, '商标专利', '专利服务', '2', 2, null);
+values (908, '风水', '公司选址', '4', 4, 897);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (14, '商标专利', '版权服务', '3', 3, null);
+values (909, '风水', '店铺风水', '5', 5, 897);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (15, '商标服务', '商标变更', '1', 1, 12);
+values (910, '风水', '厂区风水', '6', 6, 897);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (16, '商标服务', '商标许可', '2', 2, 12);
+values (911, '风水', '风水吉祥物', '7', 7, 897);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (17, '商标服务', '商标案件', '3', 3, 12);
+values (912, '风水', '墓地风水', '8', 8, 897);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (18, '商标服务', '商标补正', '4', 4, 12);
+values (7791, '个人/团体', '个人', '1', 1, null);
 
 insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (19, '商标服务', '商标续展', '5', 5, 12);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (20, '商标服务', '商标转让', '6', 6, 12);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (21, '商标服务', '商标注册', '7', 7, 12);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (22, '专利服务', '专利申请', '1', 1, 13);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (23, '专利服务', '专利变更', '2', 2, 13);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (24, '专利服务', '专利转让', '3', 3, 13);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (25, '专利服务', '专利实施许可', '4', 4, 13);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (26, '专利服务', '专利诉讼', '5', 5, 13);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (27, '版权服务', '版权登记', '1', 1, 14);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (28, '版权服务', '版权转让', '3', 3, 14);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (29, '版权服务', '版权许可', '4', 4, 14);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (30, '版权服务', '版权纠纷', '5', 5, 14);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (31, '版权服务', '版权变更', '2', 2, 14);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (32, '法律咨询', '知识产权', '1', 1, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (33, '法律咨询', '房产纠纷', '2', 2, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (34, '法律咨询', '劳动争议', '3', 3, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (35, '法律咨询', '商业纠纷', '4', 4, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (36, '法律咨询', '合同纠纷', '5', 5, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (37, '法律咨询', '建筑工程', '6', 6, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (38, '法律咨询', '债务纠纷', '7', 7, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (39, '法律咨询', '刑事辩护/诉讼', '8', 8, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (40, '法律咨询', '公司法务', '9', 9, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (41, '法律咨询', '法律援助', '10', 10, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (42, '法律咨询', '婚姻家庭', '11', 11, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (43, '法律咨询', '征地补偿', '12', 12, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (44, '法律咨询', '交通事故', '13', 13, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (45, '法律咨询', '医疗事故', '14', 14, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (46, '法律咨询', '涉外法律', '15', 15, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (47, '财务会计/评估', '代理记账', '1', 1, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (48, '财务会计/评估', '验资', '2', 2, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (49, '财务会计/评估', '财务审计', '3', 3, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (50, '财务会计/评估', '资产评估', '4', 4, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (51, '财务会计/评估', '税务咨询', '5', 5, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (52, '财务会计/评估', '工程造价', '6', 6, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (53, '财务会计/评估', '财税疑难', '7', 7, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (54, '财务会计/评估', '纳税申报', '8', 8, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (55, '保险', '意外险', '1', 1, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (56, '保险', '旅游保险', '2', 2, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (57, '保险', '签证保险', '3', 3, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (58, '保险', '健康险', '4', 4, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (59, '保险', '人寿险', '5', 5, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (60, '保险', '少儿保险', '6', 6, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (61, '保险', '商业养老险', '7', 7, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (62, '保险', '投资型保险', '8', 8, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (63, '保险', '家财险', '9', 9, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (64, '保险', '企业财产险', '10', 10, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (65, '保险', '汽车保险', '11', 11, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (66, '意外险', '综合意外险', '1', 1, 55);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (67, '意外险', '人身意外险', '2', 2, 55);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (68, '意外险', '交通意外险', '3', 3, 55);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (69, '意外险', '航空意外险', '4', 4, 55);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (70, '旅游保险', '国内旅游保险', '1', 1, 56);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (71, '旅游保险', '境外旅游保险', '2', 2, 56);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (72, '健康险', '重大疾病保险', '1', 1, 58);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (73, '健康险', '商业医疗保险 ', '2', 2, 58);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (74, '健康险', '特定疾病保险', '3', 3, 58);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (75, '健康险', '女性疾病保险', '4', 4, 58);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (76, '人寿险', '定期寿险', '1', 1, 59);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (77, '人寿险', '终身寿险', '2', 2, 59);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (78, '人寿险', '两全保险', '3', 3, 59);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (79, '人寿险', '年金保险', '4', 4, 59);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (80, '少儿保险', '少儿意外伤害', '1', 1, 60);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (81, '少儿保险', '少儿健康医疗', '2', 2, 60);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (82, '少儿保险', '少儿教育储蓄', '3', 3, 60);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (83, '商业养老险', '分红型', '1', 1, 61);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (84, '商业养老险', '两全型', '2', 2, 61);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (85, '商业养老险', '万能型', '3', 3, 61);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (86, '投资型保险', '分红险', '1', 1, 62);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (87, '投资型保险', '万能险', '2', 2, 62);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (88, '投资型保险', '投连险', '3', 3, 62);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (89, '投资型保险', '教育金', '4', 4, 62);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (90, '家财险', '自住型', '1', 1, 63);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (91, '家财险', '租房型', '2', 2, 63);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (92, '家财险', '出租型', '3', 3, 63);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (93, '家财险', '网店型', '4', 4, 63);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (94, '企业财产险', '财产综合险', '1', 1, 64);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (95, '企业财产险', '财产基本险', '2', 2, 64);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (96, '企业财产险', '财产一切险', '3', 3, 64);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (97, '企业财产险', '计算机保险', '4', 4, 64);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (98, '企业财产险', '利润损失险', '5', 5, 64);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (99, '企业财产险', '机器损坏险', '6', 6, 64);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (100, '投资担保', '担保', '1', 1, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (101, '投资担保', '投资', '2', 2, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (102, '投资担保', '典当行', '3', 3, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (103, '投资担保', '贷款', '4', 4, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (104, '投资担保', '银行直投', '5', 5, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (105, '担保', '无抵押', '1', 1, 100);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (106, '担保', '房产抵押', '2', 2, 100);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (107, '担保', '汽车抵押', '3', 3, 100);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (108, '担保', '证券质押', '4', 4, 100);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (109, '典当行', '房产抵押', '1', 1, 102);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (110, '典当行', '汽车质押', '2', 2, 102);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (111, '典当行', '证券质押', '3', 3, 102);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (112, '典当行', '股票质押', '4', 4, 102);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (113, '典当行', '财产质押', '5', 5, 102);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (114, '贷款', '个人信贷', '1', 1, 103);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (115, '贷款', '企业信贷', '2', 2, 103);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (116, '贷款', '抵押贷款', '3', 3, 103);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (117, '贷款', '质押贷款', '4', 4, 103);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (118, '印刷包装', '包装', '1', 1, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (119, '印刷包装', '纸类印刷', '2', 2, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (120, '印刷包装', '防伪印刷', '3', 3, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (121, '印刷包装', '名片印刷', '4', 4, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (122, '印刷包装', '书刊印刷', '5', 5, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (123, '印刷包装', '不干胶印刷', '6', 6, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (124, '印刷包装', '服装印花', '7', 7, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (125, '印刷包装', '仪器面板印刷', '8', 8, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (126, '印刷包装', '办公礼品印刷', '9', 9, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (127, '印刷包装', '宣传资料印刷', '10', 10, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (128, '印刷包装', '春联', '11', 11, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (129, '材质', '塑料', '1', 1, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (130, '材质', '纸类', '2', 2, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (131, '材质', '布类', '3', 3, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (132, '材质', '金属', '4', 4, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (133, '材质', '木质', '5', 5, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (134, '材质', '玻璃', '6', 6, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (135, '用途', '礼品包装', '1', 1, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (136, '用途', '食品包装', '2', 2, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (137, '用途', '饰品包装', '3', 3, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (138, '用途', '服装包装', '4', 4, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (139, '用途', '玩具包装', '5', 5, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (140, '用途', '数码/电子包装', '6', 6, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (141, '用途', '化妆品包装', '7', 7, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (142, '用途', '药品包装', '8', 8, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (143, '用途', '仪器包装', '9', 9, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (144, '用途', '香烟包装', '10', 10, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (145, '用途', '五金包装', '11', 11, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (146, '用途', '酒水包装', '12', 12, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (147, '用途', '茶叶包装', '13', 13, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (148, '包装容器', '包装盒/包装箱', '1', 1, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (149, '包装容器', '包装袋', '2', 2, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (150, '包装容器', '桶', '3', 3, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (151, '包装容器', '杯', '4', 4, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (152, '包装容器', '瓶/罐', '5', 5, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (153, '包装容器', '软管', '6', 6, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (154, '纸类印刷', '票据印刷', '1', 1, 119);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (155, '纸类印刷', '台历制作', '2', 2, 119);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (156, '宣传资料印刷', '手提袋', '1', 1, 127);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (157, '宣传资料印刷', '封套', '2', 2, 127);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (158, '宣传资料印刷', '优惠券/门票', '3', 3, 127);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (159, '宣传资料印刷', '单页/折页', '4', 4, 127);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (160, '宣传资料印刷', '海报', '5', 5, 127);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (161, '宣传资料印刷', '工程图/效果图', '6', 6, 127);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (162, '宣传资料印刷', '画册', '7', 7, 127);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (163, '工艺', '无碳复写', '1', 1, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (164, '工艺', '丝网印刷', '2', 2, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (165, '工艺', '数码印刷', '3', 3, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (166, '工艺', '彩印', '4', 4, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (167, '工艺', '胶印', '5', 5, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (168, '工艺', '热转印', '6', 6, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (169, '工艺', '水转印', '7', 7, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (170, '工艺', '凹印', '8', 8, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (171, '工艺', '柔印', '9', 9, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (172, '工艺', '移印', '10', 10, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (173, '工艺', '立体印刷', '11', 11, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (174, '喷绘招牌', '灯箱/招牌', '1', 1, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (175, '喷绘招牌', '亮化工程', '2', 2, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (176, '喷绘招牌', '背景/形象墙', '3', 3, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (177, '喷绘招牌', '展架制作', '4', 4, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (178, '喷绘招牌', '户外广告', '5', 5, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (179, '喷绘招牌', '标牌', '6', 6, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (180, '喷绘招牌', 'LED显示屏', '7', 7, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (181, '喷绘招牌', '条幅/锦旗/奖牌', '8', 8, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (182, '灯箱/招牌材质', '钛金', '1', 1, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (183, '灯箱/招牌材质', '不锈钢', '2', 2, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (184, '灯箱/招牌材质', '铜', '3', 3, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (185, '灯箱/招牌材质', '有色亚克力', '4', 4, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (186, '灯箱/招牌材质', '树脂/塑料', '5', 5, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (187, '灯箱/招牌材质', '透明亚克力/水晶', '6', 6, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (188, '灯箱/招牌材质', '铁', '7', 7, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (189, '灯箱/招牌材质', 'PVC', '8', 8, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (190, '灯箱/招牌材质', '铝', '9', 9, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (191, '灯箱/招牌材质', '金箔', '10', 10, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (192, '灯箱/招牌材质', '木制', '11', 11, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (193, '灯箱/招牌工艺', '喷绘', '1', 1, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (194, '灯箱/招牌工艺', '吸塑', '2', 2, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (195, '灯箱/招牌工艺', '拉丝', '3', 3, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (196, '灯箱/招牌工艺', '丝印', '4', 4, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (197, '灯箱/招牌工艺', '冲孔', '5', 5, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (198, '灯箱/招牌工艺', 'LED', '6', 6, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (199, '灯箱/招牌工艺', '烤漆', '7', 7, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (200, '灯箱/招牌', '灯箱', '1', 1, 174);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (201, '灯箱/招牌', '广告字', '2', 2, 174);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (202, '灯箱/招牌', '广告牌', '3', 3, 174);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (203, '亮化工程', '楼体亮化', '1', 1, 175);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (204, '亮化工程', '景观照明', '2', 2, 175);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (205, '亮化工程', '城市亮化', '3', 3, 175);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (206, '亮化工程', '霓虹灯工程', '4', 4, 175);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (207, '亮化工程', '场馆照明', '5', 5, 175);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (208, '背景/形象墙', '会议背景', '1', 1, 176);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (209, '背景/形象墙', '形象墙', '2', 2, 176);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (210, '背景/形象墙', '舞台背景', '3', 3, 176);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (211, '展架制作', '拉网展架', '1', 1, 177);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (212, '展架制作', '易拉宝', '2', 2, 177);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (213, '展架制作', 'X展架', '3', 3, 177);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (214, '展架制作', '促销台', '4', 4, 177);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (215, '展架制作', '注水旗杆', '5', 5, 177);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (216, '展架制作', '挂画架', '6', 6, 177);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (217, '展架制作', '人像立牌', '7', 7, 177);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (218, '展架制作', '海报架', '8', 8, 177);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (219, '展架制作', 'L展架', '9', 9, 177);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (220, '展架制作', '资料架', '10', 10, 177);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (221, '展架制作', '广告帐篷', '11', 11, 177);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (222, '户外广告', '车体广告', '1', 1, 178);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (223, '户外广告', '玻璃贴', '2', 2, 178);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (224, '户外广告', '工程围挡', '3', 3, 178);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (225, '户外广告', '楼顶广告牌', '4', 4, 178);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (226, '户外广告', '楼体广告', '5', 5, 178);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (227, '户外广告', '升空气球', '6', 6, 178);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (228, '户外广告', '墙体广告', '7', 7, 178);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (229, '标牌用途', '机场车站', '1', 1, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (230, '标牌用途', '体育场馆', '2', 2, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (231, '标牌用途', '文化会展', '3', 3, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (232, '标牌用途', '写字楼', '4', 4, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (233, '标牌用途', '医院', '5', 5, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (234, '标牌用途', '工业园区', '6', 6, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (235, '标牌用途', '学校', '7', 7, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (236, '标牌用途', '公园景区', '8', 8, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (237, '标牌用途', '停车场', '9', 9, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (238, '标牌用途', '城市街区', '10', 10, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (239, '标牌用途', '商场', '11', 11, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (240, '标牌用途', '宾馆酒店', '12', 12, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (241, '标牌用途', '地铁', '13', 13, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (242, '标牌功能', '立式导向牌', '1', 1, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (243, '标牌功能', '吊式导向牌', '2', 2, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (244, '标牌功能', '大堂水牌', '3', 3, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (245, '标牌功能', '桌牌', '4', 4, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (246, '标牌功能', '楼层号牌', '5', 5, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (247, '标牌功能', '门牌', '6', 6, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (248, '标牌功能', '宣传栏', '7', 7, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (249, '标牌功能', '公司铭牌', '8', 8, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (250, '标牌功能', '授权牌', '9', 9, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (251, '标牌功能', '胸牌/徽章', '10', 10, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (252, '标牌功能', '安全标识', '11', 11, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (253, '标牌功能', '夜光标牌', '12', 12, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (254, '标牌材质', '不锈钢', '1', 1, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (255, '标牌材质', '钛金', '2', 2, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (256, '标牌材质', '亚克力', '3', 3, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (257, '标牌材质', '电光板', '4', 4, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (258, '标牌材质', '铝制', '5', 5, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (259, '标牌材质', '铜', '6', 6, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (260, '标牌材质', '塑料', '7', 7, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (261, '标牌材质', '锌合金', '8', 8, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (262, 'LED显示屏', '户外单色显示屏', '1', 1, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (263, 'LED显示屏', '室内单色显示屏', '2', 2, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (264, 'LED显示屏', '户外双色显示屏', '3', 3, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (265, 'LED显示屏', '室内双色显示屏', '4', 4, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (266, 'LED显示屏', '户外全彩显示屏', '5', 5, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (267, 'LED显示屏', '室内全彩显示屏', '6', 6, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (268, '条幅/锦旗/奖牌', '条幅', '1', 1, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (269, '条幅/锦旗/奖牌', '锦旗', '2', 2, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (270, '条幅/锦旗/奖牌', '奖牌', '3', 3, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (271, '条幅/锦旗/奖牌', '奖杯', '4', 4, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (272, '条幅/锦旗/奖牌', '奖章', '5', 5, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (273, '是否发光', '是', '1', 1, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (274, '是否发光', '否', '2', 2, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (275, '设计策划', '视频制作', '1', 1, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (276, '设计策划', '广告设计', '2', 2, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (277, '设计策划', '平面设计', '3', 3, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (278, '设计策划', '名片设计', '4', 4, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (279, '设计策划', '品牌策划推广', '5', 5, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (280, '设计策划', '工业设计', '6', 6, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (281, '设计策划', 'SI店面设计', '7', 7, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (282, '设计策划', '装潢设计', '8', 8, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (283, '设计策划', 'LOGO设计/VI设计', '9', 9, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (284, '设计策划', '建筑设计', '10', 10, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (285, '设计策划', '景观设计', '11', 11, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (286, '设计策划', '服装设计', '12', 12, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (287, '设计策划', '签名设计', '13', 13, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (288, '设计策划', '动漫设计', '14', 14, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (289, '视频制作', '宣传片', '1', 1, 275);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (290, '视频制作', '微电影', '2', 2, 275);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (291, '视频制作', '广告片', '3', 3, 275);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (292, '视频制作', '纪录片/专题片', '4', 4, 275);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (293, '视频制作', 'MV制作', '5', 5, 275);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (294, '视频制作', '栏目包装', '6', 6, 275);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (295, '视频制作', '影视后期制作', '7', 7, 275);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (296, '视频制作', '光盘刻录', '8', 8, 275);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (297, '视频制作', '动画制作', '9', 9, 275);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (298, '平面设计', '书籍装帧设计', '1', 1, 277);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (299, '平面设计', '画册设计', '2', 2, 277);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (300, '平面设计', '海报设计', '3', 3, 277);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (301, '平面设计', '折页设计', '4', 4, 277);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (302, '品牌策划推广', '品牌策划', '1', 1, 279);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (303, '品牌策划推广', '企业形象设计/CI设计', '2', 2, 279);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (304, '工业设计', '包装设计', '1', 1, 280);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (305, '工业设计', '模具设计', '2', 2, 280);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (306, '工业设计', '电子产品设计', '3', 3, 280);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (307, '工业设计', '仪器仪表设计', '4', 4, 280);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (308, '工业设计', '灯具设计', '5', 5, 280);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (309, '工业设计', '机械设计', '6', 6, 280);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (310, '工业设计', '电气设计', '7', 7, 280);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (311, '工业设计', '模型制作/设计', '8', 8, 280);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (312, '广告传媒', '广告位招租', '1', 1, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (313, '广告传媒', '导视系统设计', '2', 2, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (314, '广告传媒', '多媒体互动', '3', 3, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (315, '广告位招租', '出租车/车体广告', '1', 1, 312);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (316, '广告位招租', '高速广告', '2', 2, 312);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (317, '广告位招租', '机场广告', '3', 3, 312);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (318, '广告位招租', '社区学校', '4', 4, 312);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (319, '广告位招租', '地铁广告', '5', 5, 312);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (320, '广告位招租', '加油站广告', '6', 6, 312);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (321, '广告位招租', 'LED大屏广告', '7', 7, 312);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (322, '广告位招租', '车站广告', '8', 8, 312);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (323, '广告位招租', '电视广播', '9', 9, 312);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (324, '广告位招租', '报纸杂志', '10', 10, 312);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (325, '广告位招租', '网络新媒体', '11', 11, 312);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (326, '展会服务', '展会庆典策划', '1', 1, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (327, '展会服务', '展位设计', '2', 2, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (328, '展会服务', '展会布置/搭建', '3', 3, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (329, '展会服务', '展会用品制作', '4', 4, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (330, '展位设计', '展厅设计', '1', 1, 327);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (331, '展位设计', '展台设计', '2', 2, 327);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (332, '展位设计', '展柜设计', '3', 3, 327);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (333, '展会布置/搭建', '会场/展厅布置', '1', 1, 328);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (334, '展会布置/搭建', '舞台/展台搭建', '2', 2, 328);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (335, '展会布置/搭建', '标摊搭建', '3', 3, 328);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (336, '展会用品制作', '展柜制作', '1', 1, 329);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (337, '展会用品制作', '展板制作', '2', 2, 329);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (338, '展会用品制作', '气球拱门', '3', 3, 329);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (339, '展会用品制作', '礼炮烟花', '4', 4, 329);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (340, '展会服务', '摄影摄像', '5', 5, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (341, '制卡', '智能卡/电子标签', '1', 1, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (342, '制卡', 'PVC卡', '2', 2, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (343, '制卡', '纸卡', '3', 3, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (344, '制卡', '金属卡', '4', 4, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (345, '制卡', '磁条卡', '5', 5, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (346, '制卡', '滴胶卡', '6', 6, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (347, '智能卡/电子标签', 'IC卡', '1', 1, 341);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (348, '智能卡/电子标签', 'ID卡', '2', 2, 341);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (349, '智能卡/电子标签', 'M1卡', '3', 3, 341);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (350, '智能卡/电子标签', '可视卡', '4', 4, 341);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (351, '智能卡/电子标签', '电子标签/射频卡', '5', 5, 341);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (352, '卡型', '人像卡', '1', 1, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (353, '卡型', '会员卡', '2', 2, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (354, '卡型', '异形卡', '3', 3, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (355, '卡型', '年历卡', '4', 4, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (356, '卡型', '贵宾卡/VIP卡', '5', 5, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (357, '卡型', '刮刮卡', '6', 6, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (358, '卡型', '积分卡', '7', 7, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (359, '卡型', '优惠卡', '8', 8, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (360, '卡型', '条码卡', '9', 9, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (361, '卡型', '充值卡', '10', 10, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (362, '卡型', '礼品卡', '11', 11, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (363, '卡型', '磨砂卡', '12', 12, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (364, '礼品定制', '数码电子', '1', 1, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (365, '礼品定制', '杯子茶具', '2', 2, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (366, '礼品定制', '文具本册', '3', 3, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (367, '礼品定制', '箱包皮具', '4', 4, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (368, '礼品定制', '服装', '5', 5, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (370, '礼品定制', '家居家纺', '6', 6, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (371, '礼品定制', '汽车/户外', '7', 7, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (372, '礼品定制', '运动健康', '8', 8, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (373, '礼品定制', '小家电', '9', 9, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (374, '礼品定制', '工艺品', '10', 10, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (375, '礼品定制', '奖杯证书', '11', 11, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (376, '网络布线/维护', '安防监控', '1', 1, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (377, '网络布线/维护', '综合布线', '2', 2, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (378, '网络布线/维护', '系统集成', '3', 3, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (379, '网络布线/维护', '网络维护', '4', 4, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (380, '网络布线/维护', 'IT外包', '5', 5, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (381, '网络布线/维护', '电脑组装', '6', 6, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (382, '网络布线/维护', '光纤宽带', '7', 7, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (383, '网络布线/维护', '弱电工程', '8', 8, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (384, '安防监控', '监控系统', '1', 1, 376);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (385, '安防监控', '防盗报警', '2', 2, 376);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (386, '安防监控', '消防系统', '3', 3, 376);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (387, '安防监控', '门禁考勤', '4', 4, 376);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (388, '安防监控', '出入口控制', '5', 5, 376);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (389, '安防监控', '巡更系统', '6', 6, 376);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (390, '弱电工程', '停车场管理系统', '1', 1, 383);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (391, '弱电工程', '机房建设', '2', 2, 383);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (392, '弱电工程', '公共广播', '3', 3, 383);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (393, '弱电工程', '对讲系统', '4', 4, 383);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (394, '弱电工程', 'LED显示屏/触摸屏', '5', 5, 383);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (395, '弱电工程', '集团电话', '6', 6, 383);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (396, '弱电工程', '视频音频会议系统', '7', 7, 383);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (397, '弱电工程', '背景音乐', '8', 8, 383);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (398, '弱电工程', '楼宇自控', '9', 9, 383);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (399, '弱电工程', '检票系统', '10', 10, 383);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (400, '弱电工程', '智能家居', '11', 11, 383);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (401, '弱电工程', '多媒体教学', '12', 12, 383);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (402, '网站建设/推广', '网站建设/设计', '1', 1, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (403, '网站建设/推广', '软件开发', '2', 2, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (404, '网站建设/推广', 'app开发', '3', 3, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (405, '网站建设/推广', '域名注册', '4', 4, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (406, '网站建设/推广', '网络营销/推广', '5', 5, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (407, '网站建设/推广', '服务器', '6', 6, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (408, '网站建设/推广', '企业邮箱', '7', 7, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (409, '网站建设/推广', '网站维护', '8', 8, null);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (410, '网站建设/设计', '网站建设', '1', 1, 402);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (411, '网站建设/设计', '网站设计', '2', 2, 402);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (412, '软件开发', '系统软件', '1', 1, 403);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (413, '软件开发', '应用软件', '2', 2, 403);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (414, '软件开发', '数据库', '3', 3, 403);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (415, '软件开发', '游戏', '4', 4, 403);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (416, 'app开发', 'ios', '1', 1, 404);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (417, 'app开发', 'android', '2', 2, 404);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (418, 'app开发', 'Windows PHONE', '3', 3, 404);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (419, 'app开发', 'html5', '4', 4, 404);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (420, 'app开发', '微信开发', '5', 5, 404);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (421, '网络营销/推广', 'SEO/SEM', '1', 1, 406);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (422, '网络营销/推广', '视频营销', '2', 2, 406);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (423, '网络营销/推广', '微博营销', '3', 3, 406);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (424, '网络营销/推广', '短信营销', '4', 4, 406);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (425, '网络营销/推广', '电话营销', '5', 5, 406);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (426, '网络营销/推广', '邮箱营销', '6', 6, 406);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (427, '网络营销/推广', '微信营销', '7', 7, 406);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (428, '网络营销/推广', '事件炒作', '8', 8, 406);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (429, '网络营销/推广', '论坛/社区推广', '9', 9, 406);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (430, '网络营销/推广', '软文推广', '10', 10, 406);
-
-insert into codes_swfw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (431, '服务器', '云主机', '1', 1, 407);
+values (7792, '个人/团体', '团体', '2', 2, null);
 
 prompt Done.

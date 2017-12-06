@@ -2,43 +2,43 @@ prompt Importing table codes_es_qtes...
 set feedback off
 set define off
 insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1, '二手设备', '机床车床', '1', 1, null);
+values (1, '二手设备类别', '机床车床', '1', 1, null);
 
 insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (2, '二手设备', '食品加工机械', '2', 2, null);
+values (2, '二手设备类别', '食品加工机械', '2', 2, null);
 
 insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (3, '二手设备', '印刷设备', '3', 3, null);
+values (3, '二手设备类别', '印刷设备', '3', 3, null);
 
 insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (4, '二手设备', '发电设备', '4', 4, null);
+values (4, '二手设备类别', '发电设备', '4', 4, null);
 
 insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (5, '二手设备', '塑料设备', '5', 5, null);
+values (5, '二手设备类别', '塑料设备', '5', 5, null);
 
 insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (6, '二手设备', '配件', '6', 6, null);
+values (6, '二手设备类别', '配件', '6', 6, null);
 
 insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (7, '二手设备', '木工', '7', 7, null);
+values (7, '二手设备类别', '木工', '7', 7, null);
 
 insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (8, '二手设备', '化工设备', '8', 8, null);
+values (8, '二手设备类别', '化工设备', '8', 8, null);
 
 insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (9, '二手设备', '仪器仪表', '9', 9, null);
+values (9, '二手设备类别', '仪器仪表', '9', 9, null);
 
 insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (10, '二手设备', '纺织', '10', 10, null);
+values (10, '二手设备类别', '纺织', '10', 10, null);
 
 insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (11, '二手设备', '农用机械', '11', 11, null);
+values (11, '二手设备类别', '农用机械', '11', 11, null);
 
 insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (12, '二手设备', '其他', '12', 12, null);
+values (12, '二手设备类别', '其他', '12', 12, null);
 
 insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (13, '二手设备', '生产线', '13', 13, null);
+values (13, '二手设备类别', '生产线', '13', 13, null);
 
 insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (15, '机床车床', '雕刻机', '1', 1, 1);
@@ -239,28 +239,28 @@ insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PAR
 values (80, '生产线', '其它生产线', '3', 3, 13);
 
 insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (81, '成人用品', '男用器具', '1', 1, null);
+values (81, '成人用品类别', '男用器具', '1', 1, null);
 
 insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (82, '成人用品', '女用器具', '2', 2, null);
+values (82, '成人用品类别', '女用器具', '2', 2, null);
 
 insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (83, '成人用品', '情趣用品', '3', 3, null);
+values (83, '成人用品类别', '情趣用品', '3', 3, null);
 
 insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (84, '成人用品', '情趣内衣', '4', 4, null);
+values (84, '成人用品类别', '情趣内衣', '4', 4, null);
 
 insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (85, '成人用品', '润滑剂', '5', 5, null);
+values (85, '成人用品类别', '润滑剂', '5', 5, null);
 
 insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (86, '成人用品', '计生用品', '6', 6, null);
+values (86, '成人用品类别', '计生用品', '6', 6, null);
 
 insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (87, '成人用品', '安全套', '7', 7, null);
+values (87, '成人用品类别', '安全套', '7', 7, null);
 
 insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (88, '成人用品', '其他成人用品', '8', 8, null);
+values (88, '成人用品类别', '其他成人用品', '8', 8, null);
 
 insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (89, '男用器具', '阴臀倒模', '1', 1, 81);
@@ -363,5 +363,23 @@ values (121, '安全套', '杜蕾斯', '3', 3, 87);
 
 insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (122, '安全套', '第六感', '4', 4, 87);
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (123, '其它二手价格', '100元以下', '1', 1, null);
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (124, '其它二手价格', '100-150元', '2', 2, null);
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (125, '其它二手价格', '150-300元', '3', 3, null);
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (126, '其它二手价格', '500-1000元', '4', 4, null);
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (127, '其它二手价格', '1000-2000元', '5', 5, null);
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (128, '其它二手价格', '2000元以上', '6', 6, null);
 
 prompt Done.

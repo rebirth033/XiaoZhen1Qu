@@ -1423,10 +1423,10 @@
     <Content Include="Areas\Business\Scripts\Business\XXXX\CWXX\CWXX_HNYC.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\CWXX\CWXX_CWM.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\CWXX\CWXX_CWG.js" />
-    <Content Include="Areas\Business\Scripts\Business\XXXX\ESXX\ESCX_PWKQ_YLYJDP.js" />
-    <Content Include="Areas\Business\Scripts\Business\XXXX\ESXX\ESCX_PWKQ_QTKQ.js" />
-    <Content Include="Areas\Business\Scripts\Business\XXXX\ESXX\ESCX_PWKQ_XFKGWQ.js" />
-    <Content Include="Areas\Business\Scripts\Business\XXXX\ESXX\ESCX_PWKQ_YCMP.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\ESXX\ESXX_PWKQ_YLYJDP.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\ESXX\ESXX_PWKQ_QTKQ.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\ESXX\ESXX_PWKQ_XFKGWQ.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\ESXX\ESXX_PWKQ_YCMP.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\ESXX\ESXX_QTES_CRYP.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\ESXX\ESXX_QTES_ESSB.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\ESXX\ESXX_WHYL_WYXNWP.js" />

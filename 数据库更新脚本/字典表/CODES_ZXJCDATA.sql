@@ -2,19 +2,19 @@ prompt Importing table codes_zxjc...
 set feedback off
 set define off
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1, '家装服务', '装修队/散工', '1', 1, null);
+values (1, '家装服务类别', '装修队/散工', '1', 1, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (2, '家装服务', '装修公司', '2', 2, null);
+values (2, '家装服务类别', '装修公司', '2', 2, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (3, '家装服务', '设计公司/设计师', '3', 3, null);
+values (3, '家装服务类别', '设计公司/设计师', '3', 3, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (4, '家装服务', '施工监理', '4', 4, null);
+values (4, '家装服务类别', '施工监理', '4', 4, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (5, '家装服务', '软装设计', '5', 5, null);
+values (5, '家装服务类别', '软装设计', '5', 5, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (6, '装修队/散工', '水电改造', '1', 1, 1);
@@ -41,34 +41,34 @@ insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENT
 values (13, '装修队/散工', '美缝', '8', 8, 1);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (14, '工装服务', '办公室装修', '1', 1, null);
+values (14, '工装服务类别', '办公室装修', '1', 1, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (15, '工装服务', '写字楼装修', '2', 2, null);
+values (15, '工装服务类别', '写字楼装修', '2', 2, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (16, '工装服务', '餐饮娱乐装修', '3', 3, null);
+values (16, '工装服务类别', '餐饮娱乐装修', '3', 3, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (17, '工装服务', '店铺装修', '4', 4, null);
+values (17, '工装服务类别', '店铺装修', '4', 4, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (18, '工装服务', '商场/超市装修', '5', 5, null);
+values (18, '工装服务类别', '商场/超市装修', '5', 5, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (19, '工装服务', '酒店装修', '6', 6, null);
+values (19, '工装服务类别', '酒店装修', '6', 6, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (20, '工装服务', '厂房装修', '7', 7, null);
+values (20, '工装服务类别', '厂房装修', '7', 7, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (21, '工装服务', '幼儿园装修', '8', 8, null);
+values (21, '工装服务类别', '幼儿园装修', '8', 8, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (22, '工装服务', '医院装修', '9', 9, null);
+values (22, '工装服务类别', '医院装修', '9', 9, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (23, '工装服务', '展厅装修', '10', 10, null);
+values (23, '工装服务类别', '展厅装修', '10', 10, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (24, '餐饮娱乐装修', '网吧装修', '1', 1, 16);
@@ -134,13 +134,13 @@ insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENT
 values (44, '店铺装修', '汽车美容店装修', '10', 10, 17);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (45, '房屋改造', '自建房', '1', 1, null);
+values (45, '房屋改造类别', '自建房', '1', 1, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (46, '房屋改造', '房屋改造', '2', 2, null);
+values (46, '房屋改造类别', '房屋改造', '2', 2, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (47, '房屋改造', '活动房定制', '3', 3, null);
+values (47, '房屋改造类别', '活动房定制', '3', 3, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (48, '房屋改造小类', '平房加盖', '1', 1, 46);
@@ -194,70 +194,70 @@ insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENT
 values (64, '活动房定制', '车房', '8', 8, 47);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (65, '建材', '橱柜', '1', 1, null);
+values (65, '建材类别', '橱柜', '1', 1, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (66, '建材', '瓷砖', '2', 2, null);
+values (66, '建材类别', '瓷砖', '2', 2, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (67, '建材', '地板', '3', 3, null);
+values (67, '建材类别', '地板', '3', 3, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (68, '建材', '房门', '4', 4, null);
+values (68, '建材类别', '房门', '4', 4, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (69, '建材', '卫浴洁具', '5', 5, null);
+values (69, '建材类别', '卫浴洁具', '5', 5, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (70, '建材', '移门壁柜', '6', 6, null);
+values (70, '建材类别', '移门壁柜', '6', 6, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (71, '建材', '涂料壁纸', '7', 7, null);
+values (71, '建材类别', '涂料壁纸', '7', 7, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (72, '建材', '厨卫电器', '8', 8, null);
+values (72, '建材类别', '厨卫电器', '8', 8, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (73, '建材', '公共环卫设施', '9', 9, null);
+values (73, '建材类别', '公共环卫设施', '9', 9, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (74, '建材', '灯具照明', '10', 10, null);
+values (74, '建材类别', '灯具照明', '10', 10, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (75, '建材', '门窗', '11', 11, null);
+values (75, '建材类别', '门窗', '11', 11, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (76, '建材', '龙头水槽', '12', 12, null);
+values (76, '建材类别', '龙头水槽', '12', 12, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (77, '建材', '吊顶浴霸', '13', 13, null);
+values (77, '建材类别', '吊顶浴霸', '13', 13, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (78, '建材', '暖气地暖', '14', 14, null);
+values (78, '建材类别', '暖气地暖', '14', 14, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (79, '建材', '晾衣架/杆', '15', 15, null);
+values (79, '建材类别', '晾衣架/杆', '15', 15, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (80, '建材', '楼梯', '16', 16, null);
+values (80, '建材类别', '楼梯', '16', 16, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (81, '建材', '智能家居系统', '17', 17, null);
+values (81, '建材类别', '智能家居系统', '17', 17, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (82, '建材', '基础建筑材料', '18', 18, null);
+values (82, '建材类别', '基础建筑材料', '18', 18, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (83, '建材', '水泥砂石', '19', 19, null);
+values (83, '建材类别', '水泥砂石', '19', 19, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (84, '建材', '五金工具', '20', 20, null);
+values (84, '建材类别', '五金工具', '20', 20, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (85, '建材', '电子电工', '21', 21, null);
+values (85, '建材类别', '电子电工', '21', 21, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (86, '建材', '环保/除味/保养', '22', 22, null);
+values (86, '建材类别', '环保/除味/保养', '22', 22, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (87, '橱柜', '整体橱柜', '1', 1, 65);
@@ -776,58 +776,58 @@ insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENT
 values (258, '环保/除味/保养', '保养产品', '3', 3, 86);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (259, '家具', '床', '1', 1, null);
+values (259, '家具类别', '床', '1', 1, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (260, '家具', '床垫', '2', 2, null);
+values (260, '家具类别', '床垫', '2', 2, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (261, '家具', '榻榻米', '3', 3, null);
+values (261, '家具类别', '榻榻米', '3', 3, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (262, '家具', '空间家具', '4', 4, null);
+values (262, '家具类别', '空间家具', '4', 4, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (263, '家具', '沙发', '5', 5, null);
+values (263, '家具类别', '沙发', '5', 5, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (264, '家具', '桌类', '6', 6, null);
+values (264, '家具类别', '桌类', '6', 6, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (265, '家具', '椅凳', '7', 7, null);
+values (265, '家具类别', '椅凳', '7', 7, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (266, '家具', '柜类', '8', 8, null);
+values (266, '家具类别', '柜类', '8', 8, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (267, '家具', '架类', '9', 9, null);
+values (267, '家具类别', '架类', '9', 9, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (268, '家具', '几类', '10', 10, null);
+values (268, '家具类别', '几类', '10', 10, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (269, '家具', '案/台类', '11', 11, null);
+values (269, '家具类别', '案/台类', '11', 11, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (270, '家具', '根雕类', '12', 12, null);
+values (270, '家具类别', '根雕类', '12', 12, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (271, '家具', '镜子类', '13', 13, null);
+values (271, '家具类别', '镜子类', '13', 13, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (272, '家具', '屏风/花窗', '14', 14, null);
+values (272, '家具类别', '屏风/花窗', '14', 14, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (273, '家具', '箱类', '15', 15, null);
+values (273, '家具类别', '箱类', '15', 15, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (274, '家具', '户外庭院', '16', 16, null);
+values (274, '家具类别', '户外庭院', '16', 16, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (275, '家具', '辅料配件', '17', 17, null);
+values (275, '家具类别', '辅料配件', '17', 17, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (276, '家具', '商业/办公家具', '18', 18, null);
+values (276, '家具类别', '商业/办公家具', '18', 18, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (277, '榻榻米', '和室几桌', '1', 1, 261);
@@ -1154,31 +1154,31 @@ insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENT
 values (384, '商业/办公家具', '殡葬业家具', '13', 13, 276);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (385, '家纺家饰', '床上用品', '1', 1, null);
+values (385, '家纺家饰类别', '床上用品', '1', 1, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (386, '家纺家饰', '布艺软饰', '2', 2, null);
+values (386, '家纺家饰类别', '布艺软饰', '2', 2, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (387, '家纺家饰', '帘类', '3', 3, null);
+values (387, '家纺家饰类别', '帘类', '3', 3, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (388, '家纺家饰', '毯类', '4', 4, null);
+values (388, '家纺家饰类别', '毯类', '4', 4, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (389, '家纺家饰', '垫类', '5', 5, null);
+values (389, '家纺家饰类别', '垫类', '5', 5, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (390, '家纺家饰', '家居摆挂饰', '6', 6, null);
+values (390, '家纺家饰类别', '家居摆挂饰', '6', 6, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (391, '家纺家饰', '相框/画片', '7', 7, null);
+values (391, '家纺家饰类别', '相框/画片', '7', 7, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (392, '家纺家饰', '贴饰壁饰', '8', 8, null);
+values (392, '家纺家饰类别', '贴饰壁饰', '8', 8, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (393, '家纺家饰', '工艺饰品', '9', 9, null);
+values (393, '家纺家饰类别', '工艺饰品', '9', 9, null);
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (394, '床上用品', '床单', '1', 1, 385);

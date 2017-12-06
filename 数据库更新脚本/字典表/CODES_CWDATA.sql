@@ -2,265 +2,265 @@ prompt Importing table codes_cw...
 set feedback off
 set define off
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1, '宠物狗', '阿富汗猎犬', 'A', 1, null);
+values (1, '宠物狗品种', '阿富汗猎犬', 'A', 1, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (2, '宠物狗', '阿拉斯加', 'A', 2, null);
+values (2, '宠物狗品种', '阿拉斯加', 'A', 2, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (3, '宠物狗', '比熊', 'B', 1, null);
+values (3, '宠物狗品种', '比熊', 'B', 1, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (4, '宠物狗', '博美犬', 'B', 2, null);
+values (4, '宠物狗品种', '博美犬', 'B', 2, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (5, '宠物狗', '巴哥', 'B', 3, null);
+values (5, '宠物狗品种', '巴哥', 'B', 3, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (6, '宠物狗', '比格犬', 'B', 4, null);
+values (6, '宠物狗品种', '比格犬', 'B', 4, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (7, '宠物狗', '边境牧羊犬', 'B', 5, null);
+values (7, '宠物狗品种', '边境牧羊犬', 'B', 5, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (8, '宠物狗', '巴吉度猎犬', 'B', 6, null);
+values (8, '宠物狗品种', '巴吉度猎犬', 'B', 6, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (9, '宠物狗', '伯恩山犬', 'B', 7, null);
+values (9, '宠物狗品种', '伯恩山犬', 'B', 7, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (10, '宠物狗', '比特犬', 'B', 8, null);
+values (10, '宠物狗品种', '比特犬', 'B', 8, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (11, '宠物狗', '波音达', 'B', 9, null);
+values (11, '宠物狗品种', '波音达', 'B', 9, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (12, '宠物狗', '贝灵顿梗', 'B', 10, null);
+values (12, '宠物狗品种', '贝灵顿梗', 'B', 10, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (13, '宠物狗', '比利时牧羊犬', 'B', 11, null);
+values (13, '宠物狗品种', '比利时牧羊犬', 'B', 11, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (14, '宠物狗', '柴犬', 'C', 1, null);
+values (14, '宠物狗品种', '柴犬', 'C', 1, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (15, '宠物狗', '查理王', 'C', 2, null);
+values (15, '宠物狗品种', '查理王', 'C', 2, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (16, '宠物狗', '茶杯犬', 'C', 3, null);
+values (16, '宠物狗品种', '茶杯犬', 'C', 3, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (17, '宠物狗', '德国牧羊犬', 'D', 1, null);
+values (17, '宠物狗品种', '德国牧羊犬', 'D', 1, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (18, '宠物狗', '大麦町犬', 'D', 2, null);
+values (18, '宠物狗品种', '大麦町犬', 'D', 2, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (19, '宠物狗', '大白熊', 'D', 3, null);
+values (19, '宠物狗品种', '大白熊', 'D', 3, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (20, '宠物狗', '斗牛犬', 'D', 4, null);
+values (20, '宠物狗品种', '斗牛犬', 'D', 4, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (21, '宠物狗', '杜宾犬', 'D', 5, null);
+values (21, '宠物狗品种', '杜宾犬', 'D', 5, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (22, '宠物狗', '大丹犬', 'D', 6, null);
+values (22, '宠物狗品种', '大丹犬', 'D', 6, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (23, '宠物狗', '杜高犬', 'D', 7, null);
+values (23, '宠物狗品种', '杜高犬', 'D', 7, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (24, '宠物狗', '法国斗牛犬', 'F', 1, null);
+values (24, '宠物狗品种', '法国斗牛犬', 'F', 1, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (25, '宠物狗', '贵宾', 'G', 1, null);
+values (25, '宠物狗品种', '贵宾', 'G', 1, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (26, '宠物狗', '高加索犬', 'G', 2, null);
+values (26, '宠物狗品种', '高加索犬', 'G', 2, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (27, '宠物狗', '古牧', 'G', 3, null);
+values (27, '宠物狗品种', '古牧', 'G', 3, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (28, '宠物狗', '格力犬', 'G', 4, null);
+values (28, '宠物狗品种', '格力犬', 'G', 4, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (29, '宠物狗', '冠毛', 'G', 5, null);
+values (29, '宠物狗品种', '冠毛', 'G', 5, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (30, '宠物狗', '哈士奇', 'H', 1, null);
+values (30, '宠物狗品种', '哈士奇', 'H', 1, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (31, '宠物狗', '蝴蝶犬', 'H', 2, null);
+values (31, '宠物狗品种', '蝴蝶犬', 'H', 2, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (32, '宠物狗', '黑背', 'H', 3, null);
+values (32, '宠物狗品种', '黑背', 'H', 3, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (33, '宠物狗', '金毛', 'J', 1, null);
+values (33, '宠物狗品种', '金毛', 'J', 1, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (34, '宠物狗', '吉娃娃', 'J', 2, null);
+values (34, '宠物狗品种', '吉娃娃', 'J', 2, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (35, '宠物狗', '巨型贵宾', 'J', 3, null);
+values (35, '宠物狗品种', '巨型贵宾', 'J', 3, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (36, '宠物狗', '京巴', 'J', 4, null);
+values (36, '宠物狗品种', '京巴', 'J', 4, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (37, '宠物狗', '加纳利', 'J', 5, null);
+values (37, '宠物狗品种', '加纳利', 'J', 5, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (38, '宠物狗', '捷克狼犬', 'J', 6, null);
+values (38, '宠物狗品种', '捷克狼犬', 'J', 6, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (39, '宠物狗', '可卡', 'K', 1, null);
+values (39, '宠物狗品种', '可卡', 'K', 1, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (40, '宠物狗', '柯基犬', 'K', 2, null);
+values (40, '宠物狗品种', '柯基犬', 'K', 2, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (41, '宠物狗', '卡斯罗', 'K', 3, null);
+values (41, '宠物狗品种', '卡斯罗', 'K', 3, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (42, '宠物狗', '凯利蓝梗', 'K', 4, null);
+values (42, '宠物狗品种', '凯利蓝梗', 'K', 4, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (43, '宠物狗', '可蒙犬', 'K', 5, null);
+values (43, '宠物狗品种', '可蒙犬', 'K', 5, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (44, '宠物狗', '拉布拉多', 'L', 1, null);
+values (44, '宠物狗品种', '拉布拉多', 'L', 1, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (45, '宠物狗', '罗威纳', 'L', 2, null);
+values (45, '宠物狗品种', '罗威纳', 'L', 2, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (46, '宠物狗', '腊肠', 'L', 3, null);
+values (46, '宠物狗品种', '腊肠', 'L', 3, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (47, '宠物狗', '灵提', 'L', 4, null);
+values (47, '宠物狗品种', '灵提', 'L', 4, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (48, '宠物狗', '猎狐梗', 'L', 5, null);
+values (48, '宠物狗品种', '猎狐梗', 'L', 5, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (49, '宠物狗', '狼狗', 'L', 6, null);
+values (49, '宠物狗品种', '狼狗', 'L', 6, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (50, '宠物狗', '马犬', 'M', 1, null);
+values (50, '宠物狗品种', '马犬', 'M', 1, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (51, '宠物狗', '马尔济斯犬', 'M', 2, null);
+values (51, '宠物狗品种', '马尔济斯犬', 'M', 2, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (52, '宠物狗', '马里努阿犬', 'M', 3, null);
+values (52, '宠物狗品种', '马里努阿犬', 'M', 3, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (53, '宠物狗', '美国恶霸犬', 'M', 4, null);
+values (53, '宠物狗品种', '美国恶霸犬', 'M', 4, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (54, '宠物狗', '美国斗牛犬', 'M', 5, null);
+values (54, '宠物狗品种', '美国斗牛犬', 'M', 5, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (55, '宠物狗', '牛头梗', 'N', 1, null);
+values (55, '宠物狗品种', '牛头梗', 'N', 1, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (56, '宠物狗', '纽芬兰犬', 'N', 2, null);
+values (56, '宠物狗品种', '纽芬兰犬', 'N', 2, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (57, '宠物狗', '秋田犬', 'Q', 1, null);
+values (57, '宠物狗品种', '秋田犬', 'Q', 1, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (58, '宠物狗', '其他品种', 'Q', 2, null);
+values (58, '宠物狗品种', '其他品种', 'Q', 2, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (59, '宠物狗', '拳师犬', 'Q', 3, null);
+values (59, '宠物狗品种', '拳师犬', 'Q', 3, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (60, '宠物狗', '萨摩耶', 'S', 1, null);
+values (60, '宠物狗品种', '萨摩耶', 'S', 1, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (61, '宠物狗', '松狮', 'S', 2, null);
+values (61, '宠物狗品种', '松狮', 'S', 2, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (62, '宠物狗', '沙皮犬', 'S', 3, null);
+values (62, '宠物狗品种', '沙皮犬', 'S', 3, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (63, '宠物狗', '苏格兰牧羊犬', 'S', 4, null);
+values (63, '宠物狗品种', '苏格兰牧羊犬', 'S', 4, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (64, '宠物狗', '圣伯纳', 'S', 5, null);
+values (64, '宠物狗品种', '圣伯纳', 'S', 5, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (65, '宠物狗', '史宾格', 'S', 6, null);
+values (65, '宠物狗品种', '史宾格', 'S', 6, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (66, '宠物狗', '苏格兰梗', 'S', 7, null);
+values (66, '宠物狗品种', '苏格兰梗', 'S', 7, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (67, '宠物狗', '泰迪熊', 'T', 1, null);
+values (67, '宠物狗品种', '泰迪', 'T', 1, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (68, '宠物狗', '威玛猎犬', 'W', 1, null);
+values (68, '宠物狗品种', '威玛猎犬', 'W', 1, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (69, '宠物狗', '万能梗', 'W', 2, null);
+values (69, '宠物狗品种', '万能梗', 'W', 2, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (70, '宠物狗', '雪纳瑞', 'X', 1, null);
+values (70, '宠物狗品种', '雪纳瑞', 'X', 1, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (71, '宠物狗', '喜乐蒂', 'X', 2, null);
+values (71, '宠物狗品种', '喜乐蒂', 'X', 2, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (72, '宠物狗', '西施犬', 'X', 3, null);
+values (72, '宠物狗品种', '西施犬', 'X', 3, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (73, '宠物狗', '西高地', 'X', 4, null);
+values (73, '宠物狗品种', '西高地', 'X', 4, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (74, '宠物狗', '小鹿犬', 'X', 5, null);
+values (74, '宠物狗品种', '小鹿犬', 'X', 5, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (75, '宠物狗', '约克夏', 'Y', 1, null);
+values (75, '宠物狗品种', '约克夏', 'Y', 1, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (76, '宠物狗', '银狐犬', 'Y', 2, null);
+values (76, '宠物狗品种', '银狐犬', 'Y', 2, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (77, '宠物狗', '英国斗牛犬', 'Y', 3, null);
+values (77, '宠物狗品种', '英国斗牛犬', 'Y', 3, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (78, '宠物狗', '藏獒', 'Z', 1, null);
+values (78, '宠物狗品种', '藏獒', 'Z', 1, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (79, '宠物狗', '中亚牧羊犬', 'Z', 2, null);
+values (79, '宠物狗品种', '中亚牧羊犬', 'Z', 2, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (80, '宠物狗', '哈士奇', 'RM', 1, null);
+values (80, '宠物狗品种', '哈士奇', 'RM', 1, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (81, '宠物狗', '藏獒', 'RM', 2, null);
+values (81, '宠物狗品种', '藏獒', 'RM', 2, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (82, '宠物狗', '泰迪熊', 'RM', 3, null);
+values (82, '宠物狗品种', '泰迪熊', 'RM', 3, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (83, '宠物狗', '萨摩耶', 'RM', 4, null);
+values (83, '宠物狗品种', '萨摩耶', 'RM', 4, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (84, '宠物狗', '金毛', 'RM', 5, null);
+values (84, '宠物狗品种', '金毛', 'RM', 5, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (85, '宠物狗', '拉布拉多', 'RM', 6, null);
+values (85, '宠物狗品种', '拉布拉多', 'RM', 6, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (86, '宠物狗', '博美犬', 'RM', 7, null);
+values (86, '宠物狗品种', '博美犬', 'RM', 7, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (87, '宠物狗', '德国牧羊犬', 'RM', 8, null);
+values (87, '宠物狗品种', '德国牧羊犬', 'RM', 8, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (88, '年龄单位', '岁', '1', 1, null);
@@ -314,121 +314,121 @@ insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID
 values (104, '疫苗种类', '其他', '6', 6, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (105, '宠物猫', '短毛猫', '1', 1, null);
+values (105, '宠物猫品种', '短毛猫', '1', 1, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (106, '宠物猫', '加菲猫', '2', 2, null);
+values (106, '宠物猫品种', '加菲猫', '2', 2, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (107, '宠物猫', '蓝猫', '3', 3, null);
+values (107, '宠物猫品种', '蓝猫', '3', 3, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (108, '宠物猫', '折耳猫', '4', 4, null);
+values (108, '宠物猫品种', '折耳猫', '4', 4, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (109, '宠物猫', '暹罗猫', '5', 5, null);
+values (109, '宠物猫品种', '暹罗猫', '5', 5, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (110, '宠物猫', '布偶猫', '6', 6, null);
+values (110, '宠物猫品种', '布偶猫', '6', 6, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (111, '宠物猫', '豹猫', '7', 7, null);
+values (111, '宠物猫品种', '豹猫', '7', 7, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (112, '宠物猫', '波斯猫', '8', 8, null);
+values (112, '宠物猫品种', '波斯猫', '8', 8, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (113, '宠物猫', '金吉拉猫', '9', 9, null);
+values (113, '宠物猫品种', '金吉拉猫', '9', 9, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (114, '宠物猫', '卷毛猫', '10', 10, null);
+values (114, '宠物猫品种', '卷毛猫', '10', 10, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (115, '宠物猫', '无毛猫', '11', 11, null);
+values (115, '宠物猫品种', '无毛猫', '11', 11, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (116, '宠物猫', '其他', '12', 12, null);
+values (116, '宠物猫品种', '其他', '12', 12, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (117, '花鸟鱼虫', '观赏鱼', '1', 1, null);
+values (117, '花鸟鱼虫类别', '观赏鱼', '1', 1, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (118, '花鸟鱼虫', '玩赏鸟', '2', 2, null);
+values (118, '花鸟鱼虫类别', '玩赏鸟', '2', 2, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (119, '花鸟鱼虫', '奇石盆景', '3', 3, null);
+values (119, '花鸟鱼虫类别', '奇石盆景', '3', 3, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (120, '花鸟鱼虫', '其他小宠', '4', 4, null);
+values (120, '花鸟鱼虫类别', '其他小宠', '4', 4, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (121, '观赏鱼', '锦鲤', '1', 1, 117);
+values (121, '观赏鱼品种', '锦鲤', '1', 1, 117);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (122, '观赏鱼', '七彩神仙', '2', 2, 117);
+values (122, '观赏鱼品种', '七彩神仙', '2', 2, 117);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (123, '观赏鱼', '接吻鱼', '3', 3, 117);
+values (123, '观赏鱼品种', '接吻鱼', '3', 3, 117);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (124, '观赏鱼', '罗汉鱼', '4', 4, 117);
+values (124, '观赏鱼品种', '罗汉鱼', '4', 4, 117);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (125, '观赏鱼', '孔雀鱼', '5', 5, 117);
+values (125, '观赏鱼品种', '孔雀鱼', '5', 5, 117);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (126, '观赏鱼', '龙鱼', '6', 6, 117);
+values (126, '观赏鱼品种', '龙鱼', '6', 6, 117);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (127, '观赏鱼', '红鲫鱼', '7', 7, 117);
+values (127, '观赏鱼品种', '红鲫鱼', '7', 7, 117);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (128, '观赏鱼', '中国金鱼', '8', 8, 117);
+values (128, '观赏鱼品种', '中国金鱼', '8', 8, 117);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (129, '观赏鱼', '鹦鹉鱼', '9', 9, 117);
+values (129, '观赏鱼品种', '鹦鹉鱼', '9', 9, 117);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (130, '观赏鱼', '清道夫', '10', 10, 117);
+values (130, '观赏鱼品种', '清道夫', '10', 10, 117);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (131, '观赏鱼', '地图鱼', '11', 11, 117);
+values (131, '观赏鱼品种', '地图鱼', '11', 11, 117);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (132, '观赏鱼', '招财鱼', '12', 12, 117);
+values (132, '观赏鱼品种', '招财鱼', '12', 12, 117);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (133, '观赏鱼', '宝莲灯鱼', '13', 13, 117);
+values (133, '观赏鱼品种', '宝莲灯鱼', '13', 13, 117);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (134, '观赏鱼', '鲷鱼', '14', 14, 117);
+values (134, '观赏鱼品种', '鲷鱼', '14', 14, 117);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (135, '玩赏鸟', '鹦鹉', '1', 1, 118);
+values (135, '玩赏鸟品种', '鹦鹉', '1', 1, 118);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (136, '玩赏鸟', '文鸟', '2', 2, 118);
+values (136, '玩赏鸟品种', '文鸟', '2', 2, 118);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (137, '玩赏鸟', '白玉鸟', '3', 3, 118);
+values (137, '玩赏鸟品种', '白玉鸟', '3', 3, 118);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (138, '玩赏鸟', '八哥', '4', 4, 118);
+values (138, '玩赏鸟品种', '八哥', '4', 4, 118);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (139, '玩赏鸟', '珍珠鸟', '5', 5, 118);
+values (139, '玩赏鸟品种', '珍珠鸟', '5', 5, 118);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (140, '玩赏鸟', '鹩哥', '6', 6, 118);
+values (140, '玩赏鸟品种', '鹩哥', '6', 6, 118);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (141, '玩赏鸟', '画眉', '7', 7, 118);
+values (141, '玩赏鸟品种', '画眉', '7', 7, 118);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (142, '玩赏鸟', '杜鹃', '8', 8, 118);
+values (142, '玩赏鸟品种', '杜鹃', '8', 8, 118);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (143, '玩赏鸟', '鸽子', '9', 9, 118);
+values (143, '玩赏鸟品种', '鸽子', '9', 9, 118);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (144, '奇石盆景', '根雕', '1', 1, 119);
@@ -470,22 +470,22 @@ insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID
 values (157, '其他小宠', '龙猫', '10', 10, 120);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (158, '宠物用品/食品', '狗粮', '1', 1, null);
+values (158, '宠物用品/食品类别', '狗粮', '1', 1, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (159, '宠物用品/食品', '狗用品', '2', 2, null);
+values (159, '宠物用品/食品类别', '狗用品', '2', 2, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (160, '宠物用品/食品', '猫粮', '3', 3, null);
+values (160, '宠物用品/食品类别', '猫粮', '3', 3, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (161, '宠物用品/食品', '猫用品', '4', 4, null);
+values (161, '宠物用品/食品类别', '猫用品', '4', 4, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (162, '宠物用品/食品', '鱼缸', '5', 5, null);
+values (162, '宠物用品/食品类别', '鱼缸', '5', 5, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (163, '宠物用品/食品', '其他宠物用品', '6', 6, null);
+values (163, '宠物用品/食品类别', '其他宠物用品', '6', 6, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (164, '狗用品', '狗窝/笼子', '1', 1, 159);
@@ -548,33 +548,114 @@ insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID
 values (183, '新旧', '6成以下', '7', 7, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (184, '宠物服务', '宠物医院', '1', 1, null);
+values (184, '宠物服务类别', '宠物医院', '1', 1, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (185, '宠物服务', '宠物寄养', '2', 2, null);
+values (185, '宠物服务类别', '宠物寄养', '2', 2, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (186, '宠物服务', '宠物美容', '3', 3, null);
+values (186, '宠物服务类别', '宠物美容', '3', 3, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (187, '宠物服务', '宠物训练', '4', 4, null);
+values (187, '宠物服务类别', '宠物训练', '4', 4, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (188, '宠物服务', '宠物托运', '5', 5, null);
+values (188, '宠物服务类别', '宠物托运', '5', 5, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (189, '宠物服务', '宠物配种', '6', 6, null);
+values (189, '宠物服务类别', '宠物配种', '6', 6, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (190, '宠物服务', '宠物殡葬', '7', 7, null);
+values (190, '宠物服务类别', '宠物殡葬', '7', 7, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (191, '宠物服务', '宠物摄影', '8', 8, null);
+values (191, '宠物服务类别', '宠物摄影', '8', 8, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (192, '宠物服务', '水族服务', '9', 9, null);
+values (192, '宠物服务类别', '水族服务', '9', 9, null);
 
 insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (193, '宠物服务', '其他宠物服务', '10', 10, null);
+values (193, '宠物服务类别', '其他宠物服务', '10', 10, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (194, '宠物狗年龄', '3月龄以下', '1', 1, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (195, '宠物狗年龄', '3-5月龄', '2', 2, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (196, '宠物狗年龄', '5-12月龄', '3', 3, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (197, '宠物狗年龄', '1岁以上', '4', 4, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (198, '宠物狗价格', '500-1000元', '1', 1, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (199, '宠物狗价格', '1000-1500元', '2', 2, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (200, '宠物狗价格', '1500-2000元', '3', 3, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (201, '宠物狗价格', '2000-3000元', '4', 4, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (202, '宠物狗价格', '3000-5000元', '5', 5, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (203, '宠物狗价格', '5000元以上', '6', 6, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (204, '宠物猫价格', '100元以下', '1', 1, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (205, '宠物猫价格', '100-200元', '2', 2, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (206, '宠物猫价格', '200-500元', '3', 3, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (207, '宠物猫价格', '500-1000元', '4', 4, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (208, '宠物猫价格', '1000-2000元', '5', 5, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (209, '宠物猫价格', '2000-3500元', '6', 6, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (210, '宠物猫价格', '3500元以上', '7', 7, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (211, '宠物用品价格', '50元以下', '1', 1, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (212, '宠物用品价格', '50-100元', '2', 2, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (213, '宠物用品价格', '100-200元', '3', 3, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (214, '宠物用品价格', '200-400元', '4', 4, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (215, '宠物用品价格', '400-800元', '5', 5, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (216, '宠物用品价格', '800-1200元', '6', 6, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (217, '宠物用品价格', '1200元以上', '7', 7, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (218, '宠物公益类别', '宠物赠送', '1', 1, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (219, '宠物公益类别', '宠物领养', '2', 2, null);
+
+insert into codes_cw (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (220, '宠物公益类别', '寻宠启事', '3', 3, null);
 
 prompt Done.

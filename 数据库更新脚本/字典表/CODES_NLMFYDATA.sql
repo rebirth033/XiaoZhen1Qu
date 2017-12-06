@@ -2,31 +2,31 @@ prompt Importing table codes_nlmfy...
 set feedback off
 set define off
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1, '园林花卉', '苗木', '1', 1, null);
+values (1, '园林花卉类别', '苗木', '1', 1, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (2, '园林花卉', '花卉', '2', 2, null);
+values (2, '园林花卉类别', '花卉', '2', 2, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (3, '园林花卉', '竹类', '3', 3, null);
+values (3, '园林花卉类别', '竹类', '3', 3, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (4, '园林花卉', '草坪/草坪草种', '4', 4, null);
+values (4, '园林花卉类别', '草坪/草坪草种', '4', 4, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (5, '园林花卉', '副产品树脂/胶', '5', 5, null);
+values (5, '园林花卉类别', '副产品树脂/胶', '5', 5, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (6, '园林花卉', '藤蔓植物', '6', 6, null);
+values (6, '园林花卉类别', '藤蔓植物', '6', 6, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (7, '园林花卉', '盆景', '7', 7, null);
+values (7, '园林花卉类别', '盆景', '7', 7, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (8, '园林花卉', '园林设施', '8', 8, null);
+values (8, '园林花卉类别', '园林设施', '8', 8, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (9, '园林花卉', '林业产品', '9', 9, null);
+values (9, '园林花卉类别', '林业产品', '9', 9, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (10, '苗木', '桉树', 'A', 1, 1);
@@ -2534,34 +2534,34 @@ insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PAREN
 values (844, '林业产品', '棕叶', 'Z', 12, 9);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (845, '农作物', '粮油作物', '1', 1, null);
+values (845, '农作物类别', '粮油作物', '1', 1, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (846, '农作物', '食用菌', '2', 2, null);
+values (846, '农作物类别', '食用菌', '2', 2, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (847, '农作物', '蔬菜', '3', 3, null);
+values (847, '农作物类别', '蔬菜', '3', 3, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (848, '农作物', '水果', '4', 4, null);
+values (848, '农作物类别', '水果', '4', 4, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (849, '农作物', '坚果/干果', '5', 5, null);
+values (849, '农作物类别', '坚果/干果', '5', 5, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (850, '农作物', '棉麻丝', '6', 6, null);
+values (850, '农作物类别', '棉麻丝', '6', 6, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (851, '农作物', '毛茶', '7', 7, null);
+values (851, '农作物类别', '毛茶', '7', 7, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (852, '农作物', '植物中药材', '8', 8, null);
+values (852, '农作物类别', '植物中药材', '8', 8, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (853, '农作物', '香料原料', '9', 9, null);
+values (853, '农作物类别', '香料原料', '9', 9, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (854, '农作物', '饮料原料', '10', 10, null);
+values (854, '农作物类别', '饮料原料', '10', 10, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (855, '粮油作物', '兵豆', 'B', 1, 845);
@@ -4226,52 +4226,52 @@ insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PAREN
 values (1408, '饮料原料', '可可豆', 'K', 2, 854);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1409, '动植物种苗', '粮油作物种苗', '1', 1, null);
+values (1409, '动植物种苗类别', '粮油作物种苗', '1', 1, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1410, '动植物种苗', '食用菌菌种', '2', 2, null);
+values (1410, '动植物种苗类别', '食用菌菌种', '2', 2, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1411, '动植物种苗', '蔬菜种子', '3', 3, null);
+values (1411, '动植物种苗类别', '蔬菜种子', '3', 3, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1412, '动植物种苗', '树苗', '4', 4, null);
+values (1412, '动植物种苗类别', '树苗', '4', 4, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1413, '动植物种苗', '花卉种子', '5', 5, null);
+values (1413, '动植物种苗类别', '花卉种子', '5', 5, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1414, '动植物种苗', '鱼苗', '6', 6, null);
+values (1414, '动植物种苗类别', '鱼苗', '6', 6, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1415, '动植物种苗', '种羊', '7', 7, null);
+values (1415, '动植物种苗类别', '种羊', '7', 7, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1416, '动植物种苗', '种猪', '8', 8, null);
+values (1416, '动植物种苗类别', '种猪', '8', 8, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1417, '动植物种苗', '种牛', '9', 9, null);
+values (1417, '动植物种苗类别', '种牛', '9', 9, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1418, '动植物种苗', '种驴', '10', 10, null);
+values (1418, '动植物种苗类别', '种驴', '10', 10, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1419, '动植物种苗', '鸡苗', '11', 11, null);
+values (1419, '动植物种苗类别', '鸡苗', '11', 11, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1420, '动植物种苗', '鸭苗', '12', 12, null);
+values (1420, '动植物种苗类别', '鸭苗', '12', 12, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1421, '动植物种苗', '种马', '13', 13, null);
+values (1421, '动植物种苗类别', '种马', '13', 13, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1422, '动植物种苗', '鹅苗', '14', 14, null);
+values (1422, '动植物种苗类别', '鹅苗', '14', 14, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1423, '动植物种苗', '蛇苗', '15', 15, null);
+values (1423, '动植物种苗类别', '蛇苗', '15', 15, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1424, '动植物种苗', '其他种苗', '16', 16, null);
+values (1424, '动植物种苗类别', '其他种苗', '16', 16, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (1425, '种羊', '波尔山羊', 'B', 1, 1415);
@@ -4553,19 +4553,19 @@ insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PAREN
 values (1517, '鹅苗', '浙东白鹅', '110', 10, 1422);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1518, '畜禽养殖', '家畜', '1', 1, null);
+values (1518, '畜禽养殖类别', '家畜', '1', 1, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1519, '畜禽养殖', '家禽', '2', 2, null);
+values (1519, '畜禽养殖类别', '家禽', '2', 2, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1520, '畜禽养殖', '禽蛋', '3', 3, null);
+values (1520, '畜禽养殖类别', '禽蛋', '3', 3, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1521, '畜禽养殖', '畜牧副产品', '4', 4, null);
+values (1521, '畜禽养殖类别', '畜牧副产品', '4', 4, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1522, '畜禽养殖', '特种养殖', '5', 5, null);
+values (1522, '畜禽养殖类别', '特种养殖', '5', 5, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (1523, '家畜', '驴', 'L', 1, 1518);
@@ -4814,22 +4814,22 @@ insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PAREN
 values (1604, '特种养殖', '长毛兔', 'C', 60, 1522);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1605, '水产', '淡水鱼', '1', 1, null);
+values (1605, '水产类别', '淡水鱼', '1', 1, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1606, '水产', '海水鱼', '2', 2, null);
+values (1606, '水产类别', '海水鱼', '2', 2, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1607, '水产', '虾蟹/两栖类', '3', 3, null);
+values (1607, '水产类别', '虾蟹/两栖类', '3', 3, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1608, '水产', '螺贝/软体类', '4', 4, null);
+values (1608, '水产类别', '螺贝/软体类', '4', 4, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1609, '水产', '水生植物', '5', 5, null);
+values (1609, '水产类别', '水生植物', '5', 5, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1610, '水产', '渔业副产品', '6', 6, null);
+values (1610, '水产类别', '渔业副产品', '6', 6, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (1611, '淡水鱼', '斑点叉尾鮰', 'B', 1, 1605);
@@ -5270,193 +5270,193 @@ insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PAREN
 values (1756, '渔业副产品', '珍珠', 'Z', 9, 1610);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1757, '肥料/农药', '除草剂', '1', 1, null);
+values (1757, '肥料/农药类别', '除草剂', '1', 1, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1758, '肥料/农药', '杀虫剂', '2', 2, null);
+values (1758, '肥料/农药类别', '杀虫剂', '2', 2, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1759, '肥料/农药', '杀菌剂', '3', 3, null);
+values (1759, '肥料/农药类别', '杀菌剂', '3', 3, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1760, '肥料/农药', '杀螨剂', '4', 4, null);
+values (1760, '肥料/农药类别', '杀螨剂', '4', 4, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1761, '肥料/农药', '氮肥', '5', 5, null);
+values (1761, '肥料/农药类别', '氮肥', '5', 5, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1762, '肥料/农药', '钾肥', '6', 6, null);
+values (1762, '肥料/农药类别', '钾肥', '6', 6, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1763, '肥料/农药', '磷肥', '7', 7, null);
+values (1763, '肥料/农药类别', '磷肥', '7', 7, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1764, '肥料/农药', '复合肥', '8', 8, null);
+values (1764, '肥料/农药类别', '复合肥', '8', 8, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1765, '肥料/农药', '有机肥', '9', 9, null);
+values (1765, '肥料/农药类别', '有机肥', '9', 9, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1766, '肥料/农药', '杀线虫剂', '10', 10, null);
+values (1766, '肥料/农药类别', '杀线虫剂', '10', 10, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1767, '肥料/农药', '杀鼠剂', '11', 11, null);
+values (1767, '肥料/农药类别', '杀鼠剂', '11', 11, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1768, '肥料/农药', '脱叶剂', '12', 12, null);
+values (1768, '肥料/农药类别', '脱叶剂', '12', 12, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1769, '肥料/农药', '植物生长调节剂', '13', 13, null);
+values (1769, '肥料/农药类别', '植物生长调节剂', '13', 13, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1770, '肥料/农药', '种子处理剂', '14', 14, null);
+values (1770, '肥料/农药类别', '种子处理剂', '14', 14, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1771, '肥料/农药', '杀藻剂', '15', 15, null);
+values (1771, '肥料/农药类别', '杀藻剂', '15', 15, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1772, '肥料/农药', '土壤改良活性剂', '16', 16, null);
+values (1772, '肥料/农药类别', '土壤改良活性剂', '16', 16, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1773, '肥料/农药', '生物农药', '17', 17, null);
+values (1773, '肥料/农药类别', '生物农药', '17', 17, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1774, '肥料/农药', '冲施肥', '18', 18, null);
+values (1774, '肥料/农药类别', '冲施肥', '18', 18, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1775, '肥料/农药', '氨肥', '19', 19, null);
+values (1775, '肥料/农药类别', '氨肥', '19', 19, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1776, '肥料/农药', '缓控肥', '20', 20, null);
+values (1776, '肥料/农药类别', '缓控肥', '20', 20, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1777, '肥料/农药', '微量元素肥料', '21', 21, null);
+values (1777, '肥料/农药类别', '微量元素肥料', '21', 21, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1778, '肥料/农药', '微生物肥料', '22', 22, null);
+values (1778, '肥料/农药类别', '微生物肥料', '22', 22, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1779, '肥料/农药', '叶面肥', '23', 23, null);
+values (1779, '肥料/农药类别', '叶面肥', '23', 23, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1780, '肥料/农药', '营养液肥', '24', 24, null);
+values (1780, '肥料/农药类别', '营养液肥', '24', 24, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1781, '饲料/兽药', '饼粕', '1', 1, null);
+values (1781, '饲料/兽药类别', '饼粕', '1', 1, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1782, '饲料/兽药', '麸皮', '2', 2, null);
+values (1782, '饲料/兽药类别', '麸皮', '2', 2, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1783, '饲料/兽药', '干草', '3', 3, null);
+values (1783, '饲料/兽药类别', '干草', '3', 3, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1784, '饲料/兽药', '浓缩饲料', '4', 4, null);
+values (1784, '饲料/兽药类别', '浓缩饲料', '4', 4, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1785, '饲料/兽药', '配合饲料', '5', 5, null);
+values (1785, '饲料/兽药类别', '配合饲料', '5', 5, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1786, '饲料/兽药', '青贮饲料', '6', 6, null);
+values (1786, '饲料/兽药类别', '青贮饲料', '6', 6, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1787, '饲料/兽药', '饲料昆虫', '7', 7, null);
+values (1787, '饲料/兽药类别', '饲料昆虫', '7', 7, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1788, '饲料/兽药', '鱼粉', '8', 8, null);
+values (1788, '饲料/兽药类别', '鱼粉', '8', 8, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1789, '饲料/兽药', '动物生长调节剂', '9', 9, null);
+values (1789, '饲料/兽药类别', '动物生长调节剂', '9', 9, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1790, '饲料/兽药', '抗氧化剂', '10', 10, null);
+values (1790, '饲料/兽药类别', '抗氧化剂', '10', 10, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1791, '饲料/兽药', '营养物质添加剂', '11', 11, null);
+values (1791, '饲料/兽药类别', '营养物质添加剂', '11', 11, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1792, '饲料/兽药', '兽用杀虫剂', '12', 12, null);
+values (1792, '饲料/兽药类别', '兽用杀虫剂', '12', 12, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1793, '饲料/兽药', '兽用杀菌剂', '13', 13, null);
+values (1793, '饲料/兽药类别', '兽用杀菌剂', '13', 13, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1794, '饲料/兽药', '兽用疫苗', '14', 14, null);
+values (1794, '饲料/兽药类别', '兽用疫苗', '14', 14, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1795, '饲料/兽药', '驴饲料', '15', 15, null);
+values (1795, '饲料/兽药类别', '驴饲料', '15', 15, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1796, '饲料/兽药', '马饲料', '16', 16, null);
+values (1796, '饲料/兽药类别', '马饲料', '16', 16, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1797, '饲料/兽药', '虾饲料', '17', 17, null);
+values (1797, '饲料/兽药类别', '虾饲料', '17', 17, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1798, '饲料/兽药', '蟹饲料', '18', 18, null);
+values (1798, '饲料/兽药类别', '蟹饲料', '18', 18, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1799, '饲料/兽药', '牛饲料', '19', 19, null);
+values (1799, '饲料/兽药类别', '牛饲料', '19', 19, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1800, '饲料/兽药', '羊饲料', '20', 20, null);
+values (1800, '饲料/兽药类别', '羊饲料', '20', 20, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1801, '饲料/兽药', '鸡饲料', '21', 21, null);
+values (1801, '饲料/兽药类别', '鸡饲料', '21', 21, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1802, '饲料/兽药', '鸭饲料', '22', 22, null);
+values (1802, '饲料/兽药类别', '鸭饲料', '22', 22, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1803, '饲料/兽药', '鹅饲料', '23', 23, null);
+values (1803, '饲料/兽药类别', '鹅饲料', '23', 23, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1804, '饲料/兽药', '鸽子饲料', '24', 24, null);
+values (1804, '饲料/兽药类别', '鸽子饲料', '24', 24, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1805, '饲料/兽药', '鱼饲料', '25', 25, null);
+values (1805, '饲料/兽药类别', '鱼饲料', '25', 25, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1806, '农机具/设备', '土壤耕整机械', '1', 1, null);
+values (1806, '农机具/设备类别', '土壤耕整机械', '1', 1, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1807, '农机具/设备', '排灌机械', '2', 2, null);
+values (1807, '农机具/设备类别', '排灌机械', '2', 2, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1808, '农机具/设备', '种植机械', '3', 3, null);
+values (1808, '农机具/设备类别', '种植机械', '3', 3, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1809, '农机具/设备', '施肥/肥料机械', '4', 4, null);
+values (1809, '农机具/设备类别', '施肥/肥料机械', '4', 4, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1810, '农机具/设备', '收获机械', '5', 5, null);
+values (1810, '农机具/设备类别', '收获机械', '5', 5, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1811, '农机具/设备', '植保机械', '6', 6, null);
+values (1811, '农机具/设备类别', '植保机械', '6', 6, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1812, '农机具/设备', '茶叶机械', '7', 7, null);
+values (1812, '农机具/设备类别', '茶叶机械', '7', 7, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1813, '农机具/设备', '粮油机械', '8', 8, null);
+values (1813, '农机具/设备类别', '粮油机械', '8', 8, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1814, '农机具/设备', '果蔬机械', '9', 9, null);
+values (1814, '农机具/设备类别', '果蔬机械', '9', 9, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1815, '农机具/设备', '饲料机械', '10', 10, null);
+values (1815, '农机具/设备类别', '饲料机械', '10', 10, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1816, '农机具/设备', '畜牧饲养机械', '11', 11, null);
+values (1816, '农机具/设备类别', '畜牧饲养机械', '11', 11, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1817, '农机具/设备', '棉花机械', '12', 12, null);
+values (1817, '农机具/设备类别', '棉花机械', '12', 12, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1818, '农机具/设备', '动力输送机械', '13', 13, null);
+values (1818, '农机具/设备类别', '动力输送机械', '13', 13, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1819, '农机具/设备', '农机配件', '14', 14, null);
+values (1819, '农机具/设备类别', '农机配件', '14', 14, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (1820, '土壤耕整机械', '翻转犁', 'F', 1, 1806);
@@ -5843,30 +5843,30 @@ insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PAREN
 values (1947, '农机配件', '旋耕机配件', 'X', 8, 1819);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1948, '农产品加工', '食品加工', '1', 1, null);
+values (1948, '农产品加工类别', '食品加工', '1', 1, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1949, '农产品加工', '饮料加工', '2', 2, null);
+values (1949, '农产品加工类别', '饮料加工', '2', 2, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1950, '农产品加工', '烟草加工', '3', 3, null);
+values (1950, '农产品加工类别', '烟草加工', '3', 3, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1951, '农产品加工', '纺织', '4', 4, null);
+values (1951, '农产品加工类别', '纺织', '4', 4, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1952, '农产品加工', '皮革毛皮羽绒加工', '5', 5, null);
+values (1952, '农产品加工类别', '皮革毛皮羽绒加工', '5', 5, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1953, '农产品加工', '木材加工', '6', 6, null);
+values (1953, '农产品加工类别', '木材加工', '6', 6, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1954, '农产品加工', '家具制造', '7', 7, null);
+values (1954, '农产品加工类别', '家具制造', '7', 7, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1955, '农产品加工', '造纸', '8', 8, null);
+values (1955, '农产品加工类别', '造纸', '8', 8, null);
 
 insert into codes_nlmfy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1956, '农产品加工', '橡胶制品加工', '9', 9, null);
+values (1956, '农产品加工类别', '橡胶制品加工', '9', 9, null);
 
 prompt Done.

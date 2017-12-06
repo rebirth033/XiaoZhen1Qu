@@ -2,6 +2,2889 @@ prompt Importing table codes_jypx_xx...
 set feedback off
 set define off
 insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1, '学校', '北京工业职业技术学院', 'B', 1, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (2, '学校', '北京信息职业技术学院', 'B', 2, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (3, '学校', '北京电子科技职业学院', 'B', 3, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (4, '学校', '北京科技经营管理学院', 'B', 4, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (5, '学校', '北京吉利大学', 'B', 5, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (6, '学校', '北京农业职业学院', 'B', 6, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (7, '学校', '北京戏曲艺术职业学院', 'B', 7, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (8, '学校', '北京京北职业技术学院', 'B', 8, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (9, '学校', '北京经贸职业学院', 'B', 9, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (10, '学校', '北京财贸职业学院', 'B', 10, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (11, '学校', '北京经济管理职业学院', 'B', 11, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (12, '学校', '北京政法职业学院', 'B', 12, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (13, '学校', '北京锡华国际经贸职业学院', 'B', 13, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (14, '学校', '北京科技大学延庆分校', 'B', 14, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (15, '学校', '北京劳动保障职业学院', 'B', 15, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (16, '学校', '北京社会管理职业学院', 'B', 16, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (17, '学校', '仲恺农业工程学院', 'Z', 17, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (18, '学校', '北京工商大学嘉华学院', 'B', 18, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (19, '学校', '北京工业大学耿丹学院', 'B', 19, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (20, '学校', '北京汇佳职业学院', 'B', 20, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (21, '学校', '北京交通职业技术学院', 'B', 21, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (22, '学校', '北京科技职业学院', 'B', 22, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (23, '学校', '北京培黎职业学院', 'B', 23, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (24, '学校', '北京现代职业技术学院', 'B', 24, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (25, '学校', '北京邮电大学世纪学院', 'B', 25, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (26, '学校', '复旦大学', 'F', 26, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (27, '学校', '同济大学', 'T', 27, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (28, '学校', '上海交通大学', 'S', 28, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (29, '学校', '华东理工大学', 'H', 29, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (30, '学校', '上海理工大学', 'S', 30, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (31, '学校', '东华大学', 'D', 31, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (32, '学校', '上海电力学院', 'S', 32, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (33, '学校', '上海水产大学', 'S', 33, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (34, '学校', '上海中医药大学', 'S', 34, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (35, '学校', '华东师范大学', 'H', 35, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (36, '学校', '上海师范大学', 'S', 36, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (37, '学校', '上海外国语大学', 'S', 37, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (38, '学校', '上海财经大学', 'S', 38, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (39, '学校', '上海对外贸易学院', 'S', 39, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (40, '学校', '华东政法大学', 'H', 40, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (41, '学校', '上海体育学院', 'S', 41, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (42, '学校', '上海音乐学院', 'S', 42, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (43, '学校', '上海戏剧学院', 'S', 43, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (44, '学校', '上海工程技术大学', 'S', 44, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (45, '学校', '上海政法学院', 'S', 45, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (46, '学校', '上海大学', 'S', 46, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (47, '学校', '第二军医大学', 'D', 47, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (48, '学校', '上海第二工业大学', 'S', 48, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (49, '学校', '上海市广播电视大学', 'S', 49, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (50, '学校', '上海海事大学', 'S', 50, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (51, '学校', '上海交通大学医学院', 'S', 51, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (52, '学校', '上海商学院', 'S', 52, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (53, '学校', '上海金融学院', 'S', 53, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (54, '学校', '上海医疗器械高等专科学校', 'S', 54, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (55, '学校', '上海公安高等专科学校', 'S', 55, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (56, '学校', '上海出版印刷高等专科学校', 'S', 56, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (57, '学校', '上海杉达学院', 'S', 57, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (58, '学校', '上海应用技术学院', 'S', 58, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (59, '学校', '上海建桥学院', 'S', 59, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (60, '学校', '上海外国语大学贤达经济人文学院', 'S', 60, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (61, '学校', '上海师范大学天华学院', 'S', 61, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (62, '学校', '同济大学同科学院', 'T', 62, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (63, '学校', '上海建峰职业技术学院', 'S', 63, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (64, '学校', '上海科学技术职业学院', 'S', 64, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (65, '学校', '上海海事职业技术学院', 'S', 65, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (66, '学校', '上海电子信息职业技术学院', 'S', 66, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (67, '学校', '上海交通职业技术学院', 'S', 67, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (68, '学校', '上海城市管理职业技术学院', 'S', 68, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (69, '学校', '上海行健职业学院', 'S', 69, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (70, '学校', '上海农林职业技术学院', 'S', 70, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (71, '学校', '上海新侨职业技术学院', 'S', 71, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (72, '学校', '上海东海职业技术学院', 'S', 72, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (73, '学校', '上海立达职业技术学院', 'S', 73, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (74, '学校', '上海民远职业技术学院', 'S', 74, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (75, '学校', '上海欧华职业技术学院', 'S', 75, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (76, '学校', '上海邦德职业技术学院', 'S', 76, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (77, '学校', '上海震旦职业学院', 'S', 77, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (78, '学校', '上海中侨职业技术学院', 'S', 78, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (79, '学校', '上海中华职业技术学院', 'S', 79, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (80, '学校', '上海医药高等专科学校', 'S', 80, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (81, '学校', '上海旅游高等专科学校', 'S', 81, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (82, '学校', '上海工艺美术职业学院', 'S', 82, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (83, '学校', '上海工会管理职业学院', 'S', 83, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (84, '学校', '上海体育职业学院', 'S', 84, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (85, '学校', '上海海洋大学', 'S', 85, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (86, '学校', '上海海关学院', 'S', 86, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (87, '学校', '上海电影艺术职业学院', 'S', 87, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (88, '学校', '上海工商外国语职业学院', 'S', 88, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (89, '学校', '上海托普信息技术职业学院', 'S', 89, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (90, '学校', '上海济光职业技术学院', 'S', 90, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (91, '学校', '上海思博职业技术学院', 'S', 91, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (92, '学校', '上海立信会计学院', 'S', 92, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (93, '学校', '上海电机学院', 'S', 93, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (94, '学校', '南开大学', 'N', 94, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (95, '学校', '天津大学', 'T', 95, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (96, '学校', '天津科技大学', 'T', 96, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (97, '学校', '天津工业大学', 'T', 97, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (98, '学校', '中国民航大学', 'Z', 98, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (99, '学校', '天津理工大学', 'T', 99, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (100, '学校', '天津农学院', 'T', 100, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (101, '学校', '天津中医药大学', 'T', 101, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (102, '学校', '天津师范大学', 'T', 102, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (103, '学校', '天津外国语学院', 'T', 103, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (104, '学校', '天津商业大学', 'T', 104, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (105, '学校', '天津体育学院', 'T', 105, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (106, '学校', '天津音乐学院', 'T', 106, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (107, '学校', '天津美术学院', 'T', 107, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (108, '学校', '河北工业大学', 'H', 108, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (109, '学校', '天津城市建设学院', 'T', 109, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (110, '学校', '天津医科大学', 'T', 110, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (111, '学校', '天津财经大学', 'T', 111, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (112, '学校', '天津工程师范学院', 'T', 112, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (113, '学校', '中国人民解放军军事交通学院', 'Z', 113, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (114, '学校', '天津职业大学', 'T', 114, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (115, '学校', '天津医学高等专科学校', 'T', 115, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (116, '学校', '天津财经大学珠江学院', 'T', 116, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (117, '学校', '民办天狮职业技术学院', 'M', 117, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (118, '学校', '天津滨海职业学院', 'T', 118, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (119, '学校', '天津工程职业技术学院', 'T', 119, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (120, '学校', '天津现代职业技术学院', 'T', 120, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (121, '学校', '天津轻工职业技术学院', 'T', 121, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (122, '学校', '天津电子信息职业技术学院', 'T', 122, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (123, '学校', '天津公安警官职业学院', 'T', 123, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (124, '学校', '天津机电职业技术学院', 'T', 124, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (125, '学校', '天津渤海职业技术学院', 'T', 125, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (126, '学校', '天津中德职业技术学院', 'T', 126, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (127, '学校', '天津青年职业学院', 'T', 127, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (128, '学校', '天津对外经济贸易职业学院', 'T', 128, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (129, '学校', '天津交通职业学院', 'T', 129, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (130, '学校', '天津开发区职业技术学院', 'T', 130, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (131, '学校', '天津市广播电视大学', 'T', 131, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (132, '学校', '天津市工会管理干部学院', 'T', 132, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (133, '学校', '天津商业大学宝德学院', 'T', 133, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (134, '学校', '天津工艺美术职业学院', 'T', 134, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (135, '学校', '天津艺术职业学院', 'T', 135, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (136, '学校', '天津国土资源和房屋职业学院', 'T', 136, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (137, '学校', '天津天狮学院', 'T', 137, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (138, '学校', '北京科技大学天津学院', 'B', 138, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (139, '学校', '南开大学滨海学院', 'N', 139, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (140, '学校', '天津石油职业技术学院', 'T', 140, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (141, '学校', '天津医科大学临床医学院', 'T', 141, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (142, '学校', '天津海运职业学院', 'T', 142, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (143, '学校', '天津大学仁爱学院', 'T', 143, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (144, '学校', '河北工业大学城市学院', 'H', 144, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (145, '学校', '天津铁道职业技术学院', 'T', 145, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (146, '学校', '天津城市建设管理职业技术学院', 'T', 146, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (147, '学校', '天津师范大学津沽学院', 'T', 147, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (148, '学校', '天津冶金职业技术学院', 'T', 148, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (149, '学校', '天津体育学院运动与文化艺术学院', 'T', 149, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (150, '学校', '天津城市职业学院', 'T', 150, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (151, '学校', '天津外国语学院滨海外事学院', 'T', 151, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (152, '学校', '天津生物工程职业技术学院', 'T', 152, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (153, '学校', '天津理工大学中环信息学院', 'T', 153, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (154, '学校', '重庆邮电大学', 'C', 154, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (155, '学校', '重庆交通大学', 'C', 155, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (156, '学校', '重庆医科大学', 'C', 156, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (157, '学校', '西南大学', 'X', 157, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (158, '学校', '重庆三峡学院', 'C', 158, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (159, '学校', '长江师范学院', 'C', 159, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (160, '学校', '四川外语学院', 'S', 160, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (161, '学校', '西南政法大学', 'X', 161, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (162, '学校', '四川美术学院', 'S', 162, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (163, '学校', '重庆理工大学(原重庆工学院)', 'C', 163, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (164, '学校', '重庆电力高等专科学校', 'C', 164, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (165, '学校', '重庆师范大学涉外商贸学院', 'C', 165, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (166, '学校', '重庆工商大学', 'C', 166, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (167, '学校', '重庆科技学院', 'C', 167, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (168, '学校', '重庆师范大学', 'C', 168, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (169, '学校', '重庆文理学院', 'C', 169, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (170, '学校', '重庆大学城市科技学院', 'C', 170, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (171, '学校', '重庆电子职业技术学院', 'C', 171, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (172, '学校', '重庆工业职业技术学院', 'C', 172, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (173, '学校', '重庆工程职业技术学院', 'C', 173, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (174, '学校', '重庆警官职业学院', 'C', 174, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (175, '学校', '重庆信息技术职业学院', 'C', 175, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (176, '学校', '重庆海联职业技术学院', 'C', 176, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (177, '学校', '重庆光彩职业技术学院', 'C', 177, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (178, '学校', '重庆巴渝职业技术学院', 'C', 178, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (179, '学校', '重庆三峡职业学院', 'C', 179, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (180, '学校', '重庆教育学院', 'C', 180, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (181, '学校', '重庆民生职业技术学院', 'C', 181, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (182, '学校', '重庆正大软件职业技术学院', 'C', 182, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (183, '学校', '重庆三峡医药高等专科学校', 'C', 183, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (184, '学校', '重庆医药高等专科学校', 'C', 184, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (185, '学校', '重庆城市管理职业学院', 'C', 185, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (186, '学校', '重庆城市职业学院', 'C', 186, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (187, '学校', '重庆青年职业技术学院', 'C', 187, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (188, '学校', '重庆机电职业技术学院', 'C', 188, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (189, '学校', '重庆工商职业学院', 'C', 189, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (190, '学校', '重庆水利电力职业技术学院', 'C', 190, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (191, '学校', '重庆工贸职业技术学院', 'C', 191, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (192, '学校', '重庆电子工程职业学院', 'C', 192, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (193, '学校', '重庆财经职业学院', 'C', 193, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (194, '学校', '重庆科创职业学院', 'C', 194, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (195, '学校', '重庆建筑工程职业学院', 'C', 195, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (196, '学校', '西南大学育才学院', 'X', 196, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (197, '学校', '四川外语学院重庆南方翻译学院', 'S', 197, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (198, '学校', '重庆工商大学派斯学院', 'C', 198, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (199, '学校', '重庆工商大学融智学院', 'C', 199, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (200, '学校', '重庆邮电大学移通学院', 'C', 200, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (201, '学校', '重庆大学', 'C', 201, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (202, '学校', '河北大学', 'H', 202, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (203, '学校', '石家庄经济学院', 'S', 203, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (204, '学校', '华北电力大学(保定)', 'H', 204, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (205, '学校', '河北科技大学', 'H', 205, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (206, '学校', '河北建筑工程学院', 'H', 206, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (207, '学校', '华北煤炭医学院', 'H', 207, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (208, '学校', '承德医学院', 'C', 208, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (209, '学校', '河北师范大学', 'H', 209, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (210, '学校', '唐山师范学院', 'T', 210, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (211, '学校', '廊坊师范学院', 'L', 211, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (212, '学校', '邢台学院', 'X', 212, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (213, '学校', '石家庄铁道学院', 'S', 213, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (214, '学校', '燕山大学', 'Y', 214, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (215, '学校', '河北科技师范学院', 'H', 215, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (216, '学校', '中国人民武装警察部队学院', 'Z', 216, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (217, '学校', '河北体育学院', 'H', 217, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (218, '学校', '河北经贸大学', 'H', 218, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (219, '学校', '河北医科大学', 'H', 219, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (220, '学校', '河北农业大学', 'H', 220, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (221, '学校', '唐山学院', 'T', 221, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (222, '学校', '中央司法警官学院', 'Z', 222, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (223, '学校', '河北工程大学', 'H', 223, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (224, '学校', '河北传媒学院', 'H', 224, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (225, '学校', '河北北方学院', 'H', 225, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (226, '学校', '衡水学院', 'H', 226, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (227, '学校', '河北理工大学', 'H', 227, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (228, '学校', '石家庄学院', 'S', 228, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (229, '学校', '邯郸学院', 'H', 229, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (230, '学校', '河北金融学院', 'H', 230, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (231, '学校', '北华航天工业学院', 'B', 231, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (232, '学校', '河北工程技术高等专科学校', 'H', 232, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (233, '学校', '承德民族师范高等专科学校', 'C', 233, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (234, '学校', '沧州师范专科学校', 'C', 234, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (235, '学校', '承德石油高等专科学校', 'C', 235, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (236, '学校', '邢台职业技术学院', 'X', 236, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (237, '学校', '邢台医学高等专科学校', 'X', 237, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (238, '学校', '北京经济技术职业学院', 'B', 238, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (239, '学校', '北京北大方正软件职业技术学院', 'B', 239, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (240, '学校', '河北工业职业技术学院', 'H', 240, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (241, '学校', '邯郸职业技术学院', 'H', 241, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (242, '学校', '石家庄职业技术学院', 'S', 242, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (243, '学校', '张家口职业技术学院', 'Z', 243, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (244, '学校', '沧州职业技术学院', 'C', 244, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (245, '学校', '石家庄铁路职业技术学院', 'S', 245, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (246, '学校', '河北能源职业技术学院', 'H', 246, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (247, '学校', '保定职业技术学院', 'B', 247, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (248, '学校', '河北建材职业技术学院', 'H', 248, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (249, '学校', '河北政法职业学院', 'H', 249, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (250, '学校', '河北石油职业技术学院', 'H', 250, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (251, '学校', '衡水职业技术学院', 'H', 251, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (252, '学校', '秦皇岛职业技术学院', 'Q', 252, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (253, '学校', '唐山职业技术学院', 'T', 253, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (254, '学校', '唐山工业职业技术学院', 'T', 254, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (255, '学校', '石家庄计算机职业学院', 'S', 255, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (256, '学校', '石家庄法商职业学院', 'S', 256, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (257, '学校', '河北省艺术职业学院', 'H', 257, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (258, '学校', '河北交通职业技术学院', 'H', 258, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (259, '学校', '河北化工医药职业技术学院', 'H', 259, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (260, '学校', '秦皇岛外国语职业学院', 'Q', 260, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (261, '学校', '石家庄信息工程职业学院', 'S', 261, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (262, '学校', '石家庄外经贸职业学院', 'S', 262, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (263, '学校', '石家庄东方美术职业学院', 'S', 263, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (264, '学校', '河北京都高尔夫职业学院', 'H', 264, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (265, '学校', '河北地质职工大学', 'H', 265, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (266, '学校', '石家庄职工大学', 'S', 266, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (267, '学校', '河北管理干部学院', 'H', 267, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (268, '学校', '河北青年管理干部学院', 'H', 268, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (269, '学校', '石家庄联合技术职业学院', 'S', 269, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (270, '学校', '石家庄外事职业学院', 'S', 270, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (271, '学校', '石家庄工商职业学院', 'S', 271, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (272, '学校', '河北机电职业技术学院', 'H', 272, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (273, '学校', '河北司法警官职业学院', 'H', 273, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (274, '学校', '河北公安警察职业学院', 'H', 274, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (275, '学校', '河北通信职业技术学院', 'H', 275, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (276, '学校', '河北女子职业技术学院', 'H', 276, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (277, '学校', '河北旅游职业学院', 'H', 277, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (278, '学校', '石家庄科技工程职业学院', 'S', 278, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (279, '学校', '保定电力职业技术学院', 'B', 279, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (280, '学校', '北京化工大学北方学院', 'B', 280, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (281, '学校', '北京中医药大学东方学院', 'B', 281, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (282, '学校', '河北大学工商学院', 'H', 282, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (283, '学校', '河北理工大学轻工学院', 'H', 283, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (284, '学校', '华北电力大学科技学院', 'H', 284, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (285, '学校', '华北煤炭医学院冀唐学院', 'H', 285, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (286, '学校', '石家庄经济学院华信学院', 'S', 286, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (287, '学校', '石家庄铁道学院四方学院', 'S', 287, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (288, '学校', '石家庄外语翻译职业学院', 'S', 288, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (289, '学校', '石家庄医学高等专科学校', 'S', 289, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (290, '学校', '石家庄邮电职业技术学院', 'S', 290, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (291, '学校', '中国地质大学长城学院', 'Z', 291, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (292, '学校', '中国环境管理干部学院', 'Z', 292, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (293, '学校', '河北农业大学现代科技学院', 'H', 293, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (294, '学校', '河北科技大学理工学院', 'H', 294, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (295, '学校', '河北软件职业技术学院', 'H', 295, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (296, '学校', '河北医科大学临床学院', 'H', 296, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (297, '学校', '唐山科技职业技术学院', 'T', 297, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (298, '学校', '石家庄科技信息职业学院', 'S', 298, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (299, '学校', '河北工程大学科信学院', 'H', 299, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (300, '学校', '燕山大学里仁学院', 'Y', 300, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (301, '学校', '沧州医学高等专科学校', 'C', 301, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (302, '学校', '河北师范大学汇华学院', 'H', 302, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (303, '学校', '河北经贸大学经济管理学院', 'H', 303, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (304, '学校', '石家庄外国语职业学院', 'S', 304, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (305, '学校', '渤海石油职业学院', 'B', 305, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (306, '学校', '山西大学', 'S', 306, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (307, '学校', '太原理工大学', 'T', 307, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (308, '学校', '山西农业大学', 'S', 308, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (309, '学校', '山西医科大学', 'S', 309, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (310, '学校', '长治医学院', 'C', 310, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (311, '学校', '山西师范大学', 'S', 311, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (312, '学校', '太原师范学院', 'T', 312, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (313, '学校', '晋中学院', 'J', 313, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (314, '学校', '运城学院', 'Y', 314, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (315, '学校', '忻州师范学院', 'X', 315, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (316, '学校', '山西财经大学', 'S', 316, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (317, '学校', '山西中医学院', 'S', 317, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (318, '学校', '太原科技大学', 'T', 318, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (319, '学校', '中北大学', 'Z', 319, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (320, '学校', '太原工业学院', 'T', 320, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (321, '学校', '山西大同大学', 'S', 321, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (322, '学校', '长治学院', 'C', 322, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (323, '学校', '吕梁高等专科学校', 'L', 323, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (324, '学校', '太原大学', 'T', 324, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (325, '学校', '山西警官高等专科学校', 'S', 325, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (326, '学校', '山西大学商务学院', 'S', 326, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (327, '学校', '山西农业大学信息学院', 'S', 327, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (328, '学校', '山西建筑职业技术学院', 'S', 328, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (329, '学校', '山西工程职业技术学院', 'S', 329, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (330, '学校', '晋城职业技术学院', 'J', 330, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (331, '学校', '北岳职业技术学院', 'B', 331, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (332, '学校', '山西生物应用职业技术学院', 'S', 332, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (333, '学校', '山西交通职业技术学院', 'S', 333, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (334, '学校', '山西兴华职业学院', 'S', 334, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (335, '学校', '长治职业技术学院', 'C', 335, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (336, '学校', '山西艺术职业学院', 'S', 336, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (337, '学校', '阳泉职业技术学院', 'Y', 337, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (338, '学校', '山西水利职业技术学院', 'S', 338, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (339, '学校', '山西林业职业技术学院', 'S', 339, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (340, '学校', '山西财贸职业技术学院', 'S', 340, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (341, '学校', '山西戏剧职业学院', 'S', 341, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (342, '学校', '山西机电职业技术学院', 'S', 342, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (343, '学校', '临汾职业技术学院', 'L', 343, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (344, '学校', '山西综合职业技术学院', 'S', 344, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (345, '学校', '太原城市职业技术学院', 'T', 345, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (346, '学校', '山西煤炭职业技术学院', 'S', 346, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (347, '学校', '广播电影电视管理干部学院', 'G', 347, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (348, '学校', '山西职工医学院', 'S', 348, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (349, '学校', '山西煤炭职工联合大学', 'S', 349, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (350, '学校', '山西煤炭管理干部学院', 'S', 350, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (351, '学校', '山西青年管理干部学院', 'S', 351, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (352, '学校', '山西政法管理干部学院', 'S', 352, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (353, '学校', '山西华澳商贸职业学院', 'S', 353, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (354, '学校', '山西同文外语职业学院', 'S', 354, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (355, '学校', '山西老区职业技术学院', 'S', 355, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (356, '学校', '山西信息职业技术学院', 'S', 356, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (357, '学校', '山西工商职业学院', 'S', 357, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (358, '学校', '山西省财政税务专科学校', 'S', 358, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (359, '学校', '山西运城农业职业技术学院', 'S', 359, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (360, '学校', '山西管理职业学院', 'S', 360, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (361, '学校', '山西金融职业学院', 'S', 361, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (362, '学校', '山西体育职业学院', 'S', 362, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (363, '学校', '山西警官职业学院', 'S', 363, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (364, '学校', '山西国际商务职业学院', 'S', 364, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (365, '学校', '山西经贸职业学院', 'S', 365, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (366, '学校', '山西财经大学华商学院', 'S', 366, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (367, '学校', '山西旅游职业学院', 'S', 367, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (368, '学校', '太原理工大学现代科技学院', 'T', 368, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (369, '学校', '中北大学信息商务学院', 'Z', 369, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (370, '学校', '太原科技大学华科学院', 'T', 370, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (371, '学校', '山西电力职业技术学院', 'S', 371, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (372, '学校', '山西师范大学现代文理学院', 'S', 372, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (373, '学校', '山西医科大学晋祠学院', 'S', 373, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (374, '学校', '辽宁大学', 'L', 374, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (375, '学校', '大连理工大学', 'D', 375, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (376, '学校', '沈阳工业大学', 'S', 376, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (377, '学校', '沈阳航空工业学院', 'S', 377, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (378, '学校', '东北大学', 'D', 378, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (379, '学校', '辽宁科技大学', 'L', 379, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (380, '学校', '辽宁工程技术大学', 'L', 380, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (381, '学校', '辽宁石油化工大学', 'L', 381, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (382, '学校', '沈阳化工学院', 'S', 382, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (383, '学校', '大连海事大学', 'D', 383, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (384, '学校', '大连工业大学', 'D', 384, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (385, '学校', '辽宁工业大学', 'L', 385, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (386, '学校', '沈阳农业大学', 'S', 386, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (387, '学校', '大连水产学院', 'D', 387, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (388, '学校', '中国医科大学', 'Z', 388, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (389, '学校', '辽宁医学院', 'L', 389, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (390, '学校', '大连医科大学', 'D', 390, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (391, '学校', '辽宁中医药大学', 'L', 391, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (392, '学校', '沈阳药科大学', 'S', 392, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (393, '学校', '沈阳医学院', 'S', 393, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (394, '学校', '辽宁师范大学', 'L', 394, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (395, '学校', '沈阳师范大学', 'S', 395, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (396, '学校', '鞍山师范学院', 'A', 396, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (397, '学校', '大连外国语学院', 'D', 397, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (398, '学校', '东北财经大学', 'D', 398, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (399, '学校', '中国刑事警察学院', 'Z', 399, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (400, '学校', '沈阳体育学院', 'S', 400, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (401, '学校', '沈阳音乐学院', 'S', 401, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (402, '学校', '鲁迅美术学院', 'L', 402, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (403, '学校', '大连民族学院', 'D', 403, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (404, '学校', '大连大学', 'D', 404, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (405, '学校', '辽东学院', 'L', 405, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (406, '学校', '沈阳建筑大学', 'S', 406, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (407, '学校', '沈阳理工大学', 'S', 407, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (408, '学校', '渤海大学', 'B', 408, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (409, '学校', '大连交通大学', 'D', 409, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (410, '学校', '朝阳师范高等专科学校', 'C', 410, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (411, '学校', '抚顺师范高等专科学校', 'F', 411, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (412, '学校', '锦州师范高等专科学校', 'J', 412, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (413, '学校', '铁岭师范高等专科学校', 'T', 413, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (414, '学校', '抚顺职业技术学院', 'F', 414, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (415, '学校', '辽宁农业职业技术学院', 'L', 415, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (416, '学校', '阜新高等专科学校', 'F', 416, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (417, '学校', '辽宁警官高等专科学校', 'L', 417, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (418, '学校', '辽宁交通高等专科学校', 'L', 418, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (419, '学校', '沈阳建筑大学城市建设学院', 'S', 419, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (420, '学校', '大连医科大学中山学院', 'D', 420, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (421, '学校', '辽宁师范大学海华学院', 'L', 421, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (422, '学校', '东北大学大连艺术学院', 'D', 422, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (423, '学校', '大连理工大学城市学院', 'D', 423, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (424, '学校', '渤海船舶职业学院', 'B', 424, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (425, '学校', '盘锦职业技术学院', 'P', 425, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (426, '学校', '辽宁金融职业学院', 'L', 426, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (427, '学校', '大连职业技术学院', 'D', 427, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (428, '学校', '大连商务职业学院', 'D', 428, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (429, '学校', '辽阳职业技术学院', 'L', 429, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (430, '学校', '营口职业技术学院', 'Y', 430, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (431, '学校', '大连艺术职业学院', 'D', 431, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (432, '学校', '大连东软信息技术职业学院', 'D', 432, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (433, '学校', '辽宁石化职业技术学院', 'L', 433, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (434, '学校', '辽宁经济职业技术学院', 'L', 434, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (435, '学校', '辽宁机电职业技术学院', 'L', 435, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (436, '学校', '辽宁广告职业学院', 'L', 436, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (437, '学校', '辽宁信息职业技术学院', 'L', 437, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (438, '学校', '辽宁体育运动职业技术学院', 'L', 438, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (439, '学校', '辽宁林业职业技术学院', 'L', 439, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (440, '学校', '沈阳航空职业技术学院', 'S', 440, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (441, '学校', '沈阳职业技术学院', 'S', 441, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (442, '学校', '辽宁商贸职业学院', 'L', 442, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (443, '学校', '辽宁文化艺术职工大学', 'L', 443, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (444, '学校', '辽宁公安司法管理干部学院', 'L', 444, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (445, '学校', '辽宁美术职业学院', 'L', 445, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (446, '学校', '辽宁科技大学信息技术学院', 'L', 446, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (447, '学校', '辽宁医学院医疗学院', 'L', 447, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (448, '学校', '辽宁装备制造职业技术学院', 'L', 448, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (449, '学校', '辽宁职业学院', 'L', 449, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (450, '学校', '辽宁地质工程职业学院', 'L', 450, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (451, '学校', '辽宁铁道职业技术学院', 'L', 451, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (452, '学校', '辽宁建筑职业技术学院', 'L', 452, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (453, '学校', '大连交通大学信息工程学院', 'D', 453, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (454, '学校', '东北财经大学津桥商学院', 'D', 454, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (455, '学校', '东北大学东软信息学院', 'D', 455, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (456, '学校', '辽宁对外经贸学院', 'L', 456, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (457, '学校', '辽宁科技学院', 'L', 457, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (458, '学校', '辽宁石油化工大学顺华能源学院', 'L', 458, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (459, '学校', '沈阳大学科技工程学院', 'S', 459, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (460, '学校', '沈阳工程学院', 'S', 460, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (461, '学校', '中国医科大学临床医药学院', 'Z', 461, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (462, '学校', '大连软件职业学院', 'D', 462, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (463, '学校', '渤海大学文理学院', 'B', 463, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (464, '学校', '沈阳航空工业学院北方科技学院', 'S', 464, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (465, '学校', '沈阳农业大学科学技术学院', 'S', 465, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (466, '学校', '大连枫叶职业技术学院', 'D', 466, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (467, '学校', '沈阳化工学院科亚学院', 'S', 467, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (468, '学校', '沈阳理工大学应用技术学院', 'S', 468, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (469, '学校', '沈阳师范大学渤海学院', 'S', 469, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (470, '学校', '辽宁中医药大学杏林学院', 'L', 470, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (471, '学校', '沈阳医学院何氏视觉科学学院', 'S', 471, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (472, '学校', '沈阳工业大学工程学院', 'S', 472, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (473, '学校', '吉林大学', 'J', 473, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (474, '学校', '延边大学', 'Y', 474, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (475, '学校', '长春理工大学', 'C', 475, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (476, '学校', '东北电力大学', 'D', 476, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (477, '学校', '长春工业大学', 'C', 477, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (478, '学校', '吉林建筑工程学院', 'J', 478, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (479, '学校', '吉林化工学院', 'J', 479, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (480, '学校', '吉林农业大学', 'J', 480, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (481, '学校', '东北师范大学', 'D', 481, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (482, '学校', '通化师范学院', 'T', 482, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (483, '学校', '吉林师范大学', 'J', 483, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (484, '学校', '吉林工程技术师范学院', 'J', 484, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (485, '学校', '长春师范学院', 'C', 485, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (486, '学校', '白城师范学院', 'B', 486, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (487, '学校', '长春税务学院', 'C', 487, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (488, '学校', '吉林体育学院', 'J', 488, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (489, '学校', '吉林艺术学院', 'J', 489, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (490, '学校', '长春大学', 'C', 490, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (491, '学校', '北华大学', 'B', 491, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (492, '学校', '长春工程学院', 'C', 492, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (493, '学校', '吉林医药学院', 'J', 493, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (494, '学校', '吉林华侨外国语学院', 'J', 494, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (495, '学校', '长春中医药大学', 'C', 495, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (496, '学校', '吉林农业科技学院', 'J', 496, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (497, '学校', '吉林工商学院', 'J', 497, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (498, '学校', '长春汽车工业高等专科学校', 'C', 498, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (499, '学校', '长春金融高等专科学校', 'C', 499, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (500, '学校', '吉林公安高等专科学校', 'J', 500, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (501, '学校', '长春医学高等专科学校', 'C', 501, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (502, '学校', '吉林艺术学院动画学院', 'J', 502, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (503, '学校', '吉林师范大学博达学院', 'J', 503, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (504, '学校', '长春大学旅游学院', 'C', 504, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (505, '学校', '吉林交通职业技术学院', 'J', 505, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (506, '学校', '辽源职业技术学院', 'L', 506, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (507, '学校', '吉林对外经贸职业学院', 'J', 507, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (508, '学校', '长春东方职业学院', 'C', 508, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (509, '学校', '吉林电子信息职业技术学院', 'J', 509, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (510, '学校', '吉林工业职业技术学院', 'J', 510, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (511, '学校', '吉林司法警官职业学院', 'J', 511, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (512, '学校', '吉林农业工程职业技术学院', 'J', 512, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (513, '学校', '长春职业技术学院', 'C', 513, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (514, '学校', '吉林省教育学院', 'J', 514, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (515, '学校', '吉林省经济管理干部学院', 'J', 515, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (516, '学校', '吉林华桥外国语学院', 'J', 516, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (517, '学校', '吉林铁道职业技术学院', 'J', 517, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (518, '学校', '长春理工大学光电信息学院', 'C', 518, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (519, '学校', '长春税务学院信息经济学院', 'C', 519, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (520, '学校', '吉林建筑工程学院建筑装饰学院', 'J', 520, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (521, '学校', '吉林农业大学发展学院', 'J', 521, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (522, '学校', '吉林建筑工程学院城建学院', 'J', 522, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (523, '学校', '白城医学高等专科学校', 'B', 523, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (524, '学校', '长春大学光华学院', 'C', 524, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (525, '学校', '长春工业大学人文信息学院', 'C', 525, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (526, '学校', '东北师范大学人文学院', 'D', 526, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (527, '学校', '南京大学', 'N', 527, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (528, '学校', '苏州大学', 'S', 528, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (529, '学校', '东南大学', 'D', 529, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (530, '学校', '南京航空航天大学', 'N', 530, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (531, '学校', '南京理工大学', 'N', 531, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (532, '学校', '中国矿业大学', 'Z', 532, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (533, '学校', '南京工业大学', 'N', 533, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (534, '学校', '江苏工业学院', 'J', 534, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (535, '学校', '河海大学', 'H', 535, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (536, '学校', '江南大学', 'J', 536, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (537, '学校', '南京林业大学', 'N', 537, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (538, '学校', '江苏大学', 'J', 538, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (539, '学校', '盐城工学院', 'Y', 539, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (540, '学校', '南京农业大学', 'N', 540, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (541, '学校', '南京医科大学', 'N', 541, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (542, '学校', '徐州医学院', 'X', 542, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (543, '学校', '中国药科大学', 'Z', 543, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (544, '学校', '南京师范大学', 'N', 544, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (545, '学校', '徐州师范大学', 'X', 545, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (546, '学校', '淮阴师范学院', 'H', 546, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (547, '学校', '盐城师范学院', 'Y', 547, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (548, '学校', '南京体育学院', 'N', 548, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (549, '学校', '南京艺术学院', 'N', 549, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (550, '学校', '常熟理工学院', 'C', 550, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (551, '学校', '淮阴工学院', 'H', 551, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (552, '学校', '徐州工程学院', 'X', 552, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (553, '学校', '常州工学院', 'C', 553, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (554, '学校', '扬州大学', 'Y', 554, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (555, '学校', '南京审计学院', 'N', 555, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (556, '学校', '淮海工学院', 'H', 556, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (557, '学校', '南京晓庄学院', 'N', 557, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (558, '学校', '南京工程学院', 'N', 558, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (559, '学校', '苏州科技学院', 'S', 559, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (560, '学校', '解放军理工大学', 'J', 560, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (561, '学校', '江苏省广播电视大学', 'J', 561, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (562, '学校', '江苏科技大学', 'J', 562, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (563, '学校', '金陵科技学院', 'J', 563, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (564, '学校', '南京财经大学', 'N', 564, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (565, '学校', '南京信息工程大学', 'N', 565, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (566, '学校', '南京邮电大学', 'N', 566, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (567, '学校', '南通大学', 'N', 567, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (568, '学校', '西交利物浦大学', 'X', 568, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (569, '学校', '解放军南京政治学院', 'J', 569, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (570, '学校', '中国人民解放军工程兵指挥学院', 'Z', 570, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (571, '学校', '江苏警官学院', 'J', 571, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (572, '学校', '镇江市高等专科学校', 'Z', 572, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (573, '学校', '南通职业大学', 'N', 573, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (574, '学校', '沙洲职业工学院', 'S', 574, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (575, '学校', '扬州市职业大学', 'Y', 575, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (576, '学校', '江苏技术师范学院', 'J', 576, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (577, '学校', '南京森林公安高等专科学校', 'N', 577, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (578, '学校', '三江学院', 'S', 578, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (579, '学校', '连云港师范高等专科学校', 'L', 579, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (580, '学校', '泰州师范高等专科学校', 'T', 580, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (581, '学校', '东南大学成贤学院', 'D', 581, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (582, '学校', '江南大学太湖学院', 'J', 582, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (583, '学校', '南京大学金陵学院', 'N', 583, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (584, '学校', '南京理工大学紫金学院', 'N', 584, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (585, '学校', '南京理工大学泰州科技学院', 'N', 585, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (586, '学校', '南京师范大学中北学院', 'N', 586, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (587, '学校', '南京医科大学康达学院', 'N', 587, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (588, '学校', '南京中医药大学翰林学院', 'N', 588, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (589, '学校', '苏州大学文正学院', 'S', 589, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (590, '学校', '苏州大学应用技术学院', 'S', 590, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (591, '学校', '苏州科技学院天平学院', 'S', 591, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (592, '学校', '扬州大学广陵学院', 'Y', 592, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (593, '学校', '徐州师范大学科文学院', 'X', 593, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (594, '学校', '南京财经大学红山学院', 'N', 594, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (595, '学校', '江苏工业学院怀德学院', 'J', 595, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (596, '学校', '南通大学杏林学院', 'N', 596, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (597, '学校', '民办明达职业技术学院', 'M', 597, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (598, '学校', '连云港职业技术学院', 'L', 598, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (599, '学校', '南京工业职业技术学院', 'N', 599, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (600, '学校', '徐州建筑职业技术学院', 'X', 600, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (601, '学校', '泰州职业技术学院', 'T', 601, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (602, '学校', '无锡职业技术学院', 'W', 602, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (603, '学校', '南通纺织职业技术学院', 'N', 603, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (604, '学校', '苏州工艺美术职业技术学院', 'S', 604, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (605, '学校', '常州信息职业技术学院', 'C', 605, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (606, '学校', '南通航运职业技术学院', 'N', 606, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (607, '学校', '无锡商业职业技术学院', 'W', 607, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (608, '学校', '南京交通职业技术学院', 'N', 608, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (609, '学校', '淮安信息职业技术学院', 'H', 609, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (610, '学校', '江苏畜牧兽医职业技术学院', 'J', 610, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (611, '学校', '常州纺织服装职业技术学院', 'C', 611, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (612, '学校', '苏州农业职业技术学院', 'S', 612, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (613, '学校', '苏州工业园区职业技术学院', 'S', 613, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (614, '学校', '南京化工职业技术学院', 'N', 614, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (615, '学校', '正德职业技术学院', 'Z', 615, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (616, '学校', '无锡南洋职业技术学院', 'W', 616, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (617, '学校', '钟山职业技术学院', 'Z', 617, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (618, '学校', '炎黄职业技术学院', 'Y', 618, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (619, '学校', '金肯职业技术学院', 'J', 619, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (620, '学校', '紫琅职业技术学院', 'Z', 620, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (621, '学校', '九州职业技术学院', 'J', 621, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (622, '学校', '硅湖职业技术学院', 'G', 622, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (623, '学校', '江阴职业技术学院', 'J', 623, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (624, '学校', '宿迁职业技术学院', 'S', 624, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (625, '学校', '南京信息职业技术学院', 'N', 625, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (626, '学校', '常州工程职业技术学院', 'C', 626, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (627, '学校', '常州轻工职业技术学院', 'C', 627, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (628, '学校', '常州机电职业技术学院', 'C', 628, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (629, '学校', '徐州工业职业技术学院', 'X', 629, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (630, '学校', '江苏食品职业技术学院', 'J', 630, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (631, '学校', '江苏农林职业技术学院', 'J', 631, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (632, '学校', '江苏信息职业技术学院', 'J', 632, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (633, '学校', '南京特殊教育职业技术学院', 'N', 633, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (634, '学校', '江苏教育学院', 'J', 634, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (635, '学校', '南京人口管理干部学院', 'N', 635, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (636, '学校', '江苏省省级机关管理干部学院', 'J', 636, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (637, '学校', '江苏省青年管理干部学院', 'J', 637, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (638, '学校', '苏州港大思培科技职业学院', 'S', 638, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (639, '学校', '苏州托普信息职业技术学院', 'S', 639, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (640, '学校', '江苏职工医科大学', 'J', 640, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (641, '学校', '苏州职业大学', 'S', 641, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (642, '学校', '江苏联合职业技术学院', 'J', 642, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (643, '学校', '江苏财经职业技术学院', 'J', 643, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (644, '学校', '苏州工业职业技术学院', 'S', 644, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (645, '学校', '江苏城市职业学院', 'J', 645, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (646, '学校', '苏州卫生职业技术学院', 'S', 646, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (647, '学校', '苏州高博软件技术职业学院', 'S', 647, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (648, '学校', '江苏大学京江学院', 'J', 648, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (649, '学校', '江苏科技大学南徐学院', 'J', 649, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (650, '学校', '南京工业大学浦江学院', 'N', 650, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (651, '学校', '南京航空航天大学金城学院', 'N', 651, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (652, '学校', '南京审计学院金审学院', 'N', 652, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (653, '学校', '南京师范大学泰州学院', 'N', 653, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (654, '学校', '南京信息工程大学滨江学院', 'N', 654, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (655, '学校', '南京邮电大学通达学院', 'N', 655, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (656, '学校', '苏州经贸职业技术学院', 'S', 656, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (657, '学校', '中国传媒大学南广学院', 'Z', 657, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (658, '学校', '中国矿业大学徐海学院', 'Z', 658, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (659, '学校', '江苏海事职业技术学院', 'J', 659, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (660, '学校', '江苏经贸职业技术学院', 'J', 660, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (661, '学校', '南京中医药大学', 'N', 661, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (662, '学校', '浙江大学', 'Z', 662, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (663, '学校', '浙江工业大学', 'Z', 663, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (664, '学校', '浙江理工大学', 'Z', 664, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (665, '学校', '浙江海洋学院', 'Z', 665, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (666, '学校', '浙江林学院', 'Z', 666, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (667, '学校', '温州医学院', 'W', 667, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (668, '学校', '浙江中医药大学', 'Z', 668, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (669, '学校', '浙江师范大学', 'Z', 669, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (670, '学校', '杭州师范大学', 'H', 670, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (671, '学校', '湖州师范学院', 'H', 671, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (672, '学校', '绍兴文理学院', 'S', 672, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (673, '学校', '台州学院', 'T', 673, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (674, '学校', '中国美术学院', 'Z', 674, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (675, '学校', '中国计量学院', 'Z', 675, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (676, '学校', '浙江万里学院', 'Z', 676, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (677, '学校', '浙江科技学院', 'Z', 677, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (678, '学校', '宁波工程学院', 'N', 678, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (679, '学校', '温州大学', 'W', 679, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (680, '学校', '浙江财经学院', 'Z', 680, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (681, '学校', '宁波大学', 'N', 681, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (682, '学校', '嘉兴学院', 'J', 682, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (683, '学校', '浙江教育学院', 'Z', 683, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (684, '学校', '杭州电子科技大学', 'H', 684, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (685, '学校', '浙江工商大学', 'Z', 685, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (686, '学校', '宁波诺丁汉大学', 'N', 686, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (687, '学校', '丽水学院', 'L', 687, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (688, '学校', '公安海警高等专科学校', 'G', 688, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (689, '学校', '浙江水利水电专科学校', 'Z', 689, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (690, '学校', '浙江树人学院', 'Z', 690, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (691, '学校', '浙江医药高等专科学校', 'Z', 691, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (692, '学校', '浙江工业大学之江学院', 'Z', 692, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (693, '学校', '浙江师范大学行知学院', 'Z', 693, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (694, '学校', '宁波大学科学技术学院', 'N', 694, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (695, '学校', '杭州电子科技大学信息工程学院', 'H', 695, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (696, '学校', '浙江理工大学科技与艺术学院', 'Z', 696, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (697, '学校', '浙江海洋学院东海科学技术学院', 'Z', 697, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (698, '学校', '浙江林学院天目学院', 'Z', 698, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (699, '学校', '温州医学院仁济学院', 'W', 699, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (700, '学校', '浙江中医药大学滨江学院', 'Z', 700, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (701, '学校', '湖州师范学院求真学院', 'H', 701, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (702, '学校', '绍兴文理学院元培学院', 'S', 702, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (703, '学校', '温州大学瓯江学院', 'W', 703, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (704, '学校', '浙江工商大学杭州商学院', 'Z', 704, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (705, '学校', '嘉兴学院南湖学院', 'J', 705, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (706, '学校', '浙江财经学院东方学院', 'Z', 706, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (707, '学校', '温州大学城市学院', 'W', 707, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (708, '学校', '浙江大学宁波理工学院', 'Z', 708, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (709, '学校', '浙江大学城市学院', 'Z', 709, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (710, '学校', '浙江艺术职业学院', 'Z', 710, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (711, '学校', '浙江交通职业技术学院', 'Z', 711, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (712, '学校', '杭州职业技术学院', 'H', 712, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (713, '学校', '义乌工商职业技术学院', 'Y', 713, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (714, '学校', '温州职业技术学院', 'W', 714, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (715, '学校', '浙江工商职业技术学院', 'Z', 715, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (716, '学校', '浙江工贸职业技术学院', 'Z', 716, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (717, '学校', '绍兴越秀外国语职业学院', 'S', 717, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (718, '学校', '台州职业技术学院', 'T', 718, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (719, '学校', '浙江机电职业技术学院', 'Z', 719, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (720, '学校', '浙江商业职业技术学院', 'Z', 720, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (721, '学校', '浙江警官职业学院', 'Z', 721, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (722, '学校', '浙江工业职业技术学院', 'Z', 722, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (723, '学校', '浙江旅游职业学院', 'Z', 723, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (724, '学校', '浙江金融职业学院', 'Z', 724, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (725, '学校', '浙江经济职业技术学院', 'Z', 725, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (726, '学校', '浙江建设职业技术学院', 'Z', 726, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (727, '学校', '浙江经贸职业技术学院', 'Z', 727, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (728, '学校', '浙江育英职业技术学院', 'Z', 728, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (729, '学校', '绍兴托普信息职业技术学院', 'S', 729, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (730, '学校', '嘉兴职业技术学院', 'J', 730, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (731, '学校', '湖州职业技术学院', 'H', 731, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (732, '学校', '衢州职业技术学院', 'Q', 732, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (733, '学校', '丽水职业技术学院', 'L', 733, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (734, '学校', '宁波大红鹰职业技术学院', 'N', 734, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (735, '学校', '浙江东方职业技术学院', 'Z', 735, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (736, '学校', '宁波教育学院', 'N', 736, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (737, '学校', '浙江长征职业技术学院', 'Z', 737, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (738, '学校', '浙江广厦建设职业技术学院', 'Z', 738, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (739, '学校', '浙江工业大学浙西分校', 'Z', 739, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (740, '学校', '浙江医学高等专科学校', 'Z', 740, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (741, '学校', '浙江国际海运职业技术学院', 'Z', 741, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (742, '学校', '浙江纺织服装职业技术学院', 'Z', 742, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (743, '学校', '浙江同济科技职业学院', 'Z', 743, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (744, '学校', '浙江邮电职业技术学院', 'Z', 744, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (745, '学校', '浙江体育职业技术学院', 'Z', 745, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (746, '学校', '浙江电力职业技术学院', 'Z', 746, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (747, '学校', '浙江警察学院', 'Z', 747, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (748, '学校', '浙江越秀外国语学院', 'Z', 748, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (749, '学校', '浙江传媒学院', 'Z', 749, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (750, '学校', '中国计量学院现代科技学院', 'Z', 750, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (751, '学校', '安徽大学', 'A', 751, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (752, '学校', '中国科学技术大学', 'Z', 752, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (753, '学校', '合肥工业大学', 'H', 753, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (754, '学校', '安徽工业大学', 'A', 754, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (755, '学校', '安徽理工大学', 'A', 755, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (756, '学校', '安徽工程科技学院', 'A', 756, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (757, '学校', '安徽农业大学', 'A', 757, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (758, '学校', '安徽医科大学', 'A', 758, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (759, '学校', '蚌埠医学院', 'B', 759, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (760, '学校', '皖南医学院', 'W', 760, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (761, '学校', '安徽中医学院', 'A', 761, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (762, '学校', '安徽师范大学', 'A', 762, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (763, '学校', '阜阳师范学院', 'F', 763, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (764, '学校', '安庆师范学院', 'A', 764, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (765, '学校', '淮北煤炭师范学院', 'H', 765, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (766, '学校', '黄山学院', 'H', 766, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (767, '学校', '巢湖学院', 'C', 767, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (768, '学校', '淮南师范学院', 'H', 768, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (769, '学校', '铜陵学院', 'T', 769, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (770, '学校', '安徽建筑工业学院', 'A', 770, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (771, '学校', '合肥学院', 'H', 771, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (772, '学校', '皖西学院', 'W', 772, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (773, '学校', '安徽财经大学', 'A', 773, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (774, '学校', '安徽科技学院', 'A', 774, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (775, '学校', '滁州学院', 'C', 775, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (776, '学校', '宿州学院', 'S', 776, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (777, '学校', '淮南联合大学', 'H', 777, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (778, '学校', '安徽医学高等专科学校', 'A', 778, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (779, '学校', '亳州师范高等专科学校', 'H', 779, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (780, '学校', '安徽中医药高等专科学校', 'A', 780, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (781, '学校', '安徽新华学院', 'A', 781, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (782, '学校', '安徽工程科技学院机电学院', 'A', 782, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (783, '学校', '安徽工业大学工商学院', 'A', 783, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (784, '学校', '安徽师范大学皖江学院', 'A', 784, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (785, '学校', '安徽医科大学临床医学院', 'A', 785, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (786, '学校', '阜阳师范学院信息工程学院', 'F', 786, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (787, '学校', '西南科技大学城市学院', 'X', 787, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (788, '学校', '安徽职业技术学院', 'A', 788, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (789, '学校', '民办三联职业技术学院', 'M', 789, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (790, '学校', '淮北职业技术学院', 'H', 790, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (791, '学校', '芜湖职业技术学院', 'W', 791, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (792, '学校', '民办万博科技职业学院', 'M', 792, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (793, '学校', '铜陵职业技术学院', 'T', 793, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (794, '学校', '安徽商贸职业技术学院', 'A', 794, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (795, '学校', '安徽警官职业学院', 'A', 795, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (796, '学校', '安徽水利水电职业技术学院', 'A', 796, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (797, '学校', '淮南职业技术学院', 'H', 797, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (798, '学校', '安徽电子信息职业技术学院', 'A', 798, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (799, '学校', '安徽工贸职业技术学院', 'A', 799, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (800, '学校', '安徽工业经济职业技术学院', 'A', 800, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (801, '学校', '安徽交通职业技术学院', 'A', 801, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (802, '学校', '安徽体育运动职业技术学院', 'A', 802, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (803, '学校', '阜阳职业技术学院', 'F', 803, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (804, '学校', '合肥通用职业技术学院', 'H', 804, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (805, '学校', '六安职业技术学院', 'L', 805, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (806, '学校', '民办安徽文达信息技术职业学院', 'M', 806, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (807, '学校', '民办合肥经济技术职业学院', 'M', 807, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (808, '学校', '宿州职业技术学院', 'S', 808, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (809, '学校', '安徽广播影视职业技术学院', 'A', 809, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (810, '学校', '民办安徽明星科技职业学院', 'M', 810, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (811, '学校', '池州职业技术学院', 'C', 811, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (812, '学校', '滁州职业技术学院', 'C', 812, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (813, '学校', '宣城职业技术学院', 'X', 813, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (814, '学校', '安徽外国语学院', 'A', 814, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (815, '学校', '巢湖职业技术学院', 'C', 815, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (816, '学校', '安徽城市管理职业学院', 'A', 816, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (817, '学校', '安徽绿海商务职业学院', 'A', 817, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (818, '学校', '安徽涉外经济职业学院', 'A', 818, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (819, '学校', '安徽经济管理干部学院', 'A', 819, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (820, '学校', '安徽工业职业技术学院', 'A', 820, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (821, '学校', '安徽工商职业学院', 'A', 821, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (822, '学校', '安徽邮电职业技术学院', 'A', 822, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (823, '学校', '安徽艺术职业学院', 'A', 823, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (824, '学校', '安徽国防科技职业学院', 'A', 824, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (825, '学校', '安徽林业职业技术学院', 'A', 825, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (826, '学校', '安徽新闻出版职业技术学院', 'A', 826, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (827, '学校', '安徽财贸职业学院', 'A', 827, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (828, '学校', '安徽电气工程职业技术学院', 'A', 828, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (829, '学校', '安徽公安职业学院', 'A', 829, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (830, '学校', '安徽国际商务职业学院', 'A', 830, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (831, '学校', '安徽冶金科技职业学院', 'A', 831, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (832, '学校', '安徽机电职业技术学院', 'A', 832, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (833, '学校', '安徽审计职业学院', 'A', 833, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (834, '学校', '安徽中澳科技职业学院', 'A', 834, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (835, '学校', '安徽三联学院', 'A', 835, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (836, '学校', '安徽农业大学经济技术学院', 'A', 836, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (837, '学校', '安徽建筑工业学院城市建设学院', 'A', 837, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (838, '学校', '阜阳科技职业学院', 'F', 838, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (839, '学校', '马鞍山师范高等专科学校', 'M', 839, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (840, '学校', '安徽财经大学商学院', 'A', 840, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (841, '学校', '淮北煤炭师范学院信息学院', 'H', 841, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (842, '学校', '安徽大学江淮学院', 'A', 842, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (843, '学校', '厦门大学', 'X', 843, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (844, '学校', '华侨大学', 'H', 844, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (845, '学校', '福州大学', 'F', 845, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (846, '学校', '福建工程学院', 'F', 846, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (847, '学校', '福建医科大学', 'F', 847, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (848, '学校', '福建中医学院', 'F', 848, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (849, '学校', '福建师范大学', 'F', 849, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (850, '学校', '闽江学院', 'M', 850, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (851, '学校', '泉州师范学院', 'Q', 851, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (852, '学校', '漳州师范学院', 'Z', 852, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (853, '学校', '莆田学院', 'P', 853, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (854, '学校', '仰恩大学', 'Y', 854, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (855, '学校', '集美大学', 'J', 855, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (856, '学校', '福建农林大学', 'F', 856, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (857, '学校', '厦门理工学院', 'X', 857, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (858, '学校', '三明学院', 'S', 858, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (859, '学校', '龙岩学院', 'L', 859, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (860, '学校', '宁德师范高等专科学校', 'N', 860, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (861, '学校', '福建商业高等专科学校', 'F', 861, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (862, '学校', '黎明职业大学', 'L', 862, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (863, '学校', '福建华南女子职业学院', 'F', 863, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (864, '学校', '福建师范大学闽南科技学院', 'F', 864, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (865, '学校', '福建农林大学东方学院', 'F', 865, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (866, '学校', '福州大学阳光学院', 'F', 866, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (867, '学校', '福州大学至诚学院', 'F', 867, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (868, '学校', '福建农林大学金山学院', 'F', 868, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (869, '学校', '福建交通职业技术学院', 'F', 869, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (870, '学校', '福州职业技术学院', 'F', 870, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (871, '学校', '福州英华职业学院', 'F', 871, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (872, '学校', '厦门华夏职业学院', 'X', 872, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (873, '学校', '泉州光电信息职业学院', 'Q', 873, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (874, '学校', '漳州职业技术学院', 'Z', 874, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (875, '学校', '泉州华光摄影艺术职业学院', 'Q', 875, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (876, '学校', '福建信息职业技术学院', 'F', 876, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (877, '学校', '福建水利电力职业技术学院', 'F', 877, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (878, '学校', '福建电力职业技术学院', 'F', 878, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (879, '学校', '福建林业职业技术学院', 'F', 879, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (880, '学校', '福建农业职业技术学院', 'F', 880, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (881, '学校', '厦门海洋职业技术学院', 'X', 881, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (882, '学校', '福建教育学院', 'F', 882, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (883, '学校', '福建经济管理干部学院', 'F', 883, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (884, '学校', '闽北职业技术学院', 'M', 884, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (885, '学校', '福州教育学院', 'F', 885, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (886, '学校', '福建财会管理干部学院', 'F', 886, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (887, '学校', '福州黎明职业技术学院', 'F', 887, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (888, '学校', '厦门兴才职业技术学院', 'X', 888, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (889, '学校', '福州软件职业技术学院', 'F', 889, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (890, '学校', '福州外语外贸职业技术学院', 'F', 890, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (891, '学校', '厦门东海职业技术学院', 'X', 891, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (892, '学校', '厦门南洋职业学院', 'X', 892, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (893, '学校', '厦门软件职业技术学院', 'X', 893, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (894, '学校', '福州科技职业技术学院', 'F', 894, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (895, '学校', '福州海峡职业技术学院', 'F', 895, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (896, '学校', '福建卫生职业技术学院', 'F', 896, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (897, '学校', '福建政法管理干部学院', 'F', 897, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (898, '学校', '厦门医学高等专科学校', 'X', 898, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (899, '学校', '厦门城市职业学院', 'X', 899, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (900, '学校', '福建警官职业学院', 'F', 900, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (901, '学校', '福建生物工程职业技术学院', 'F', 901, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (902, '学校', '福建艺术职业学院', 'F', 902, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (903, '学校', '福建体育职业技术学院', 'F', 903, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (904, '学校', '福建警察学院', 'F', 904, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (905, '学校', '集美大学诚毅学院', 'J', 905, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (906, '学校', '厦门大学嘉庚学院', 'X', 906, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (907, '学校', '厦门演艺职业学院', 'X', 907, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (908, '学校', '泉州纺织服装职业学院', 'Q', 908, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (909, '学校', '福建师范大学协和学院', 'F', 909, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (910, '学校', '厦门华天涉外职业技术学院', 'X', 910, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (911, '学校', '福建对外经济贸易职业技术学院', 'F', 911, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (912, '学校', '福建中医药大学', 'F', 912, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (913, '学校', '福建江夏学院', 'F', 913, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (914, '学校', '华东交通大学', 'H', 914, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (915, '学校', '南昌航空大学', 'N', 915, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (916, '学校', '景德镇陶瓷学院', 'J', 916, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (917, '学校', '江西农业大学', 'J', 917, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (918, '学校', '江西中医学院', 'J', 918, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (919, '学校', '赣南医学院', 'G', 919, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (920, '学校', '江西师范大学', 'J', 920, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (921, '学校', '上饶师范学院', 'S', 921, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (922, '学校', '赣南师范学院', 'G', 922, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (923, '学校', '江西财经大学', 'J', 923, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (924, '学校', '江西科技师范学院', 'J', 924, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (925, '学校', '南昌大学', 'N', 925, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (926, '学校', '宜春学院', 'Y', 926, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (927, '学校', '九江学院', 'J', 927, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (928, '学校', '江西理工大学', 'J', 928, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (929, '学校', '井冈山大学', 'J', 929, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (930, '学校', '南昌大学医学院', 'N', 930, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (931, '学校', '南昌工程学院', 'N', 931, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (932, '学校', '南昌理工学院', 'N', 932, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (933, '学校', '东华理工大学', 'D', 933, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (934, '学校', '江西医学院上饶分院', 'J', 934, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (935, '学校', '景德镇高等专科学校', 'J', 935, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (936, '学校', '萍乡高等专科学校', 'P', 936, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (937, '学校', '江西公安专科学校', 'J', 937, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (938, '学校', '九江职业大学', 'J', 938, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (939, '学校', '新余高等专科学校', 'X', 939, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (940, '学校', '赣南师范学院科技学院', 'G', 940, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (941, '学校', '九江职业技术学院', 'J', 941, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (942, '学校', '江西工业职业技术学院', 'J', 942, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (943, '学校', '江西蓝天学院', 'J', 943, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (944, '学校', '江西司法警官职业学院', 'J', 944, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (945, '学校', '江西电力职业技术学院', 'J', 945, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (946, '学校', '江西旅游商贸职业学院', 'J', 946, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (947, '学校', '江西机电职业技术学院', 'J', 947, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (948, '学校', '江西陶瓷工艺美术职业技术学院', 'J', 948, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (949, '学校', '江西环境工程职业学院', 'J', 949, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (950, '学校', '江西信息应用职业技术学院', 'J', 950, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (951, '学校', '江西工业工程职业技术学院', 'J', 951, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (952, '学校', '江西交通职业技术学院', 'J', 952, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (953, '学校', '江西艺术职业学院', 'J', 953, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (954, '学校', '江西应用技术职业学院', 'J', 954, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (955, '学校', '鹰潭职业技术学院', 'Y', 955, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (956, '学校', '江西现代职业技术学院', 'J', 956, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (957, '学校', '江西行政管理干部学院', 'J', 957, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (958, '学校', '江西教育学院', 'J', 958, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (959, '学校', '南昌教育学院', 'N', 959, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (960, '学校', '赣南教育学院', 'G', 960, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (961, '学校', '江西渝州科技职业学院', 'J', 961, null);
+
+insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (962, '学校', '江西科技职业学院', 'J', 962, null);
 
 insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
@@ -3117,2888 +6000,5 @@ values (1999, '学校', '新疆农业大学科学技术学院', 'X', 1999, null);
 
 insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (2000, '学校', '新疆农业职业技术学院', 'X', 2000, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1, '学校', '北京工业职业技术学院', 'B', 1, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (2, '学校', '北京信息职业技术学院', 'B', 2, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (3, '学校', '北京电子科技职业学院', 'B', 3, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (4, '学校', '北京科技经营管理学院', 'B', 4, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (5, '学校', '北京吉利大学', 'B', 5, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (6, '学校', '北京农业职业学院', 'B', 6, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (7, '学校', '北京戏曲艺术职业学院', 'B', 7, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (8, '学校', '北京京北职业技术学院', 'B', 8, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (9, '学校', '北京经贸职业学院', 'B', 9, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (10, '学校', '北京财贸职业学院', 'B', 10, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (11, '学校', '北京经济管理职业学院', 'B', 11, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (12, '学校', '北京政法职业学院', 'B', 12, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (13, '学校', '北京锡华国际经贸职业学院', 'B', 13, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (14, '学校', '北京科技大学延庆分校', 'B', 14, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (15, '学校', '北京劳动保障职业学院', 'B', 15, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (16, '学校', '北京社会管理职业学院', 'B', 16, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (17, '学校', '仲恺农业工程学院', 'Z', 17, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (18, '学校', '北京工商大学嘉华学院', 'B', 18, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (19, '学校', '北京工业大学耿丹学院', 'B', 19, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (20, '学校', '北京汇佳职业学院', 'B', 20, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (21, '学校', '北京交通职业技术学院', 'B', 21, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (22, '学校', '北京科技职业学院', 'B', 22, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (23, '学校', '北京培黎职业学院', 'B', 23, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (24, '学校', '北京现代职业技术学院', 'B', 24, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (25, '学校', '北京邮电大学世纪学院', 'B', 25, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (26, '学校', '复旦大学', 'F', 26, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (27, '学校', '同济大学', 'T', 27, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (28, '学校', '上海交通大学', 'S', 28, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (29, '学校', '华东理工大学', 'H', 29, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (30, '学校', '上海理工大学', 'S', 30, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (31, '学校', '东华大学', 'D', 31, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (32, '学校', '上海电力学院', 'S', 32, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (33, '学校', '上海水产大学', 'S', 33, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (34, '学校', '上海中医药大学', 'S', 34, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (35, '学校', '华东师范大学', 'H', 35, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (36, '学校', '上海师范大学', 'S', 36, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (37, '学校', '上海外国语大学', 'S', 37, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (38, '学校', '上海财经大学', 'S', 38, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (39, '学校', '上海对外贸易学院', 'S', 39, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (40, '学校', '华东政法大学', 'H', 40, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (41, '学校', '上海体育学院', 'S', 41, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (42, '学校', '上海音乐学院', 'S', 42, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (43, '学校', '上海戏剧学院', 'S', 43, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (44, '学校', '上海工程技术大学', 'S', 44, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (45, '学校', '上海政法学院', 'S', 45, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (46, '学校', '上海大学', 'S', 46, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (47, '学校', '第二军医大学', 'D', 47, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (48, '学校', '上海第二工业大学', 'S', 48, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (49, '学校', '上海市广播电视大学', 'S', 49, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (50, '学校', '上海海事大学', 'S', 50, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (51, '学校', '上海交通大学医学院', 'S', 51, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (52, '学校', '上海商学院', 'S', 52, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (53, '学校', '上海金融学院', 'S', 53, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (54, '学校', '上海医疗器械高等专科学校', 'S', 54, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (55, '学校', '上海公安高等专科学校', 'S', 55, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (56, '学校', '上海出版印刷高等专科学校', 'S', 56, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (57, '学校', '上海杉达学院', 'S', 57, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (58, '学校', '上海应用技术学院', 'S', 58, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (59, '学校', '上海建桥学院', 'S', 59, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (60, '学校', '上海外国语大学贤达经济人文学院', 'S', 60, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (61, '学校', '上海师范大学天华学院', 'S', 61, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (62, '学校', '同济大学同科学院', 'T', 62, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (63, '学校', '上海建峰职业技术学院', 'S', 63, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (64, '学校', '上海科学技术职业学院', 'S', 64, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (65, '学校', '上海海事职业技术学院', 'S', 65, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (66, '学校', '上海电子信息职业技术学院', 'S', 66, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (67, '学校', '上海交通职业技术学院', 'S', 67, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (68, '学校', '上海城市管理职业技术学院', 'S', 68, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (69, '学校', '上海行健职业学院', 'S', 69, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (70, '学校', '上海农林职业技术学院', 'S', 70, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (71, '学校', '上海新侨职业技术学院', 'S', 71, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (72, '学校', '上海东海职业技术学院', 'S', 72, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (73, '学校', '上海立达职业技术学院', 'S', 73, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (74, '学校', '上海民远职业技术学院', 'S', 74, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (75, '学校', '上海欧华职业技术学院', 'S', 75, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (76, '学校', '上海邦德职业技术学院', 'S', 76, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (77, '学校', '上海震旦职业学院', 'S', 77, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (78, '学校', '上海中侨职业技术学院', 'S', 78, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (79, '学校', '上海中华职业技术学院', 'S', 79, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (80, '学校', '上海医药高等专科学校', 'S', 80, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (81, '学校', '上海旅游高等专科学校', 'S', 81, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (82, '学校', '上海工艺美术职业学院', 'S', 82, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (83, '学校', '上海工会管理职业学院', 'S', 83, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (84, '学校', '上海体育职业学院', 'S', 84, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (85, '学校', '上海海洋大学', 'S', 85, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (86, '学校', '上海海关学院', 'S', 86, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (87, '学校', '上海电影艺术职业学院', 'S', 87, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (88, '学校', '上海工商外国语职业学院', 'S', 88, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (89, '学校', '上海托普信息技术职业学院', 'S', 89, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (90, '学校', '上海济光职业技术学院', 'S', 90, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (91, '学校', '上海思博职业技术学院', 'S', 91, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (92, '学校', '上海立信会计学院', 'S', 92, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (93, '学校', '上海电机学院', 'S', 93, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (94, '学校', '南开大学', 'N', 94, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (95, '学校', '天津大学', 'T', 95, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (96, '学校', '天津科技大学', 'T', 96, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (97, '学校', '天津工业大学', 'T', 97, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (98, '学校', '中国民航大学', 'Z', 98, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (99, '学校', '天津理工大学', 'T', 99, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (100, '学校', '天津农学院', 'T', 100, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (101, '学校', '天津中医药大学', 'T', 101, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (102, '学校', '天津师范大学', 'T', 102, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (103, '学校', '天津外国语学院', 'T', 103, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (104, '学校', '天津商业大学', 'T', 104, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (105, '学校', '天津体育学院', 'T', 105, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (106, '学校', '天津音乐学院', 'T', 106, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (107, '学校', '天津美术学院', 'T', 107, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (108, '学校', '河北工业大学', 'H', 108, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (109, '学校', '天津城市建设学院', 'T', 109, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (110, '学校', '天津医科大学', 'T', 110, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (111, '学校', '天津财经大学', 'T', 111, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (112, '学校', '天津工程师范学院', 'T', 112, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (113, '学校', '中国人民解放军军事交通学院', 'Z', 113, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (114, '学校', '天津职业大学', 'T', 114, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (115, '学校', '天津医学高等专科学校', 'T', 115, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (116, '学校', '天津财经大学珠江学院', 'T', 116, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (117, '学校', '民办天狮职业技术学院', 'M', 117, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (118, '学校', '天津滨海职业学院', 'T', 118, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (119, '学校', '天津工程职业技术学院', 'T', 119, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (120, '学校', '天津现代职业技术学院', 'T', 120, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (121, '学校', '天津轻工职业技术学院', 'T', 121, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (122, '学校', '天津电子信息职业技术学院', 'T', 122, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (123, '学校', '天津公安警官职业学院', 'T', 123, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (124, '学校', '天津机电职业技术学院', 'T', 124, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (125, '学校', '天津渤海职业技术学院', 'T', 125, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (126, '学校', '天津中德职业技术学院', 'T', 126, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (127, '学校', '天津青年职业学院', 'T', 127, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (128, '学校', '天津对外经济贸易职业学院', 'T', 128, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (129, '学校', '天津交通职业学院', 'T', 129, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (130, '学校', '天津开发区职业技术学院', 'T', 130, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (131, '学校', '天津市广播电视大学', 'T', 131, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (132, '学校', '天津市工会管理干部学院', 'T', 132, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (133, '学校', '天津商业大学宝德学院', 'T', 133, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (134, '学校', '天津工艺美术职业学院', 'T', 134, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (135, '学校', '天津艺术职业学院', 'T', 135, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (136, '学校', '天津国土资源和房屋职业学院', 'T', 136, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (137, '学校', '天津天狮学院', 'T', 137, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (138, '学校', '北京科技大学天津学院', 'B', 138, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (139, '学校', '南开大学滨海学院', 'N', 139, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (140, '学校', '天津石油职业技术学院', 'T', 140, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (141, '学校', '天津医科大学临床医学院', 'T', 141, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (142, '学校', '天津海运职业学院', 'T', 142, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (143, '学校', '天津大学仁爱学院', 'T', 143, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (144, '学校', '河北工业大学城市学院', 'H', 144, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (145, '学校', '天津铁道职业技术学院', 'T', 145, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (146, '学校', '天津城市建设管理职业技术学院', 'T', 146, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (147, '学校', '天津师范大学津沽学院', 'T', 147, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (148, '学校', '天津冶金职业技术学院', 'T', 148, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (149, '学校', '天津体育学院运动与文化艺术学院', 'T', 149, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (150, '学校', '天津城市职业学院', 'T', 150, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (151, '学校', '天津外国语学院滨海外事学院', 'T', 151, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (152, '学校', '天津生物工程职业技术学院', 'T', 152, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (153, '学校', '天津理工大学中环信息学院', 'T', 153, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (154, '学校', '重庆邮电大学', 'C', 154, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (155, '学校', '重庆交通大学', 'C', 155, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (156, '学校', '重庆医科大学', 'C', 156, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (157, '学校', '西南大学', 'X', 157, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (158, '学校', '重庆三峡学院', 'C', 158, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (159, '学校', '长江师范学院', 'C', 159, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (160, '学校', '四川外语学院', 'S', 160, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (161, '学校', '西南政法大学', 'X', 161, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (162, '学校', '四川美术学院', 'S', 162, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (163, '学校', '重庆理工大学(原重庆工学院)', 'C', 163, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (164, '学校', '重庆电力高等专科学校', 'C', 164, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (165, '学校', '重庆师范大学涉外商贸学院', 'C', 165, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (166, '学校', '重庆工商大学', 'C', 166, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (167, '学校', '重庆科技学院', 'C', 167, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (168, '学校', '重庆师范大学', 'C', 168, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (169, '学校', '重庆文理学院', 'C', 169, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (170, '学校', '重庆大学城市科技学院', 'C', 170, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (171, '学校', '重庆电子职业技术学院', 'C', 171, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (172, '学校', '重庆工业职业技术学院', 'C', 172, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (173, '学校', '重庆工程职业技术学院', 'C', 173, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (174, '学校', '重庆警官职业学院', 'C', 174, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (175, '学校', '重庆信息技术职业学院', 'C', 175, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (176, '学校', '重庆海联职业技术学院', 'C', 176, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (177, '学校', '重庆光彩职业技术学院', 'C', 177, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (178, '学校', '重庆巴渝职业技术学院', 'C', 178, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (179, '学校', '重庆三峡职业学院', 'C', 179, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (180, '学校', '重庆教育学院', 'C', 180, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (181, '学校', '重庆民生职业技术学院', 'C', 181, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (182, '学校', '重庆正大软件职业技术学院', 'C', 182, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (183, '学校', '重庆三峡医药高等专科学校', 'C', 183, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (184, '学校', '重庆医药高等专科学校', 'C', 184, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (185, '学校', '重庆城市管理职业学院', 'C', 185, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (186, '学校', '重庆城市职业学院', 'C', 186, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (187, '学校', '重庆青年职业技术学院', 'C', 187, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (188, '学校', '重庆机电职业技术学院', 'C', 188, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (189, '学校', '重庆工商职业学院', 'C', 189, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (190, '学校', '重庆水利电力职业技术学院', 'C', 190, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (191, '学校', '重庆工贸职业技术学院', 'C', 191, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (192, '学校', '重庆电子工程职业学院', 'C', 192, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (193, '学校', '重庆财经职业学院', 'C', 193, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (194, '学校', '重庆科创职业学院', 'C', 194, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (195, '学校', '重庆建筑工程职业学院', 'C', 195, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (196, '学校', '西南大学育才学院', 'X', 196, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (197, '学校', '四川外语学院重庆南方翻译学院', 'S', 197, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (198, '学校', '重庆工商大学派斯学院', 'C', 198, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (199, '学校', '重庆工商大学融智学院', 'C', 199, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (200, '学校', '重庆邮电大学移通学院', 'C', 200, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (201, '学校', '重庆大学', 'C', 201, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (202, '学校', '河北大学', 'H', 202, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (203, '学校', '石家庄经济学院', 'S', 203, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (204, '学校', '华北电力大学(保定)', 'H', 204, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (205, '学校', '河北科技大学', 'H', 205, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (206, '学校', '河北建筑工程学院', 'H', 206, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (207, '学校', '华北煤炭医学院', 'H', 207, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (208, '学校', '承德医学院', 'C', 208, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (209, '学校', '河北师范大学', 'H', 209, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (210, '学校', '唐山师范学院', 'T', 210, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (211, '学校', '廊坊师范学院', 'L', 211, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (212, '学校', '邢台学院', 'X', 212, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (213, '学校', '石家庄铁道学院', 'S', 213, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (214, '学校', '燕山大学', 'Y', 214, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (215, '学校', '河北科技师范学院', 'H', 215, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (216, '学校', '中国人民武装警察部队学院', 'Z', 216, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (217, '学校', '河北体育学院', 'H', 217, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (218, '学校', '河北经贸大学', 'H', 218, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (219, '学校', '河北医科大学', 'H', 219, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (220, '学校', '河北农业大学', 'H', 220, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (221, '学校', '唐山学院', 'T', 221, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (222, '学校', '中央司法警官学院', 'Z', 222, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (223, '学校', '河北工程大学', 'H', 223, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (224, '学校', '河北传媒学院', 'H', 224, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (225, '学校', '河北北方学院', 'H', 225, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (226, '学校', '衡水学院', 'H', 226, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (227, '学校', '河北理工大学', 'H', 227, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (228, '学校', '石家庄学院', 'S', 228, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (229, '学校', '邯郸学院', 'H', 229, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (230, '学校', '河北金融学院', 'H', 230, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (231, '学校', '北华航天工业学院', 'B', 231, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (232, '学校', '河北工程技术高等专科学校', 'H', 232, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (233, '学校', '承德民族师范高等专科学校', 'C', 233, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (234, '学校', '沧州师范专科学校', 'C', 234, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (235, '学校', '承德石油高等专科学校', 'C', 235, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (236, '学校', '邢台职业技术学院', 'X', 236, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (237, '学校', '邢台医学高等专科学校', 'X', 237, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (238, '学校', '北京经济技术职业学院', 'B', 238, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (239, '学校', '北京北大方正软件职业技术学院', 'B', 239, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (240, '学校', '河北工业职业技术学院', 'H', 240, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (241, '学校', '邯郸职业技术学院', 'H', 241, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (242, '学校', '石家庄职业技术学院', 'S', 242, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (243, '学校', '张家口职业技术学院', 'Z', 243, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (244, '学校', '沧州职业技术学院', 'C', 244, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (245, '学校', '石家庄铁路职业技术学院', 'S', 245, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (246, '学校', '河北能源职业技术学院', 'H', 246, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (247, '学校', '保定职业技术学院', 'B', 247, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (248, '学校', '河北建材职业技术学院', 'H', 248, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (249, '学校', '河北政法职业学院', 'H', 249, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (250, '学校', '河北石油职业技术学院', 'H', 250, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (251, '学校', '衡水职业技术学院', 'H', 251, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (252, '学校', '秦皇岛职业技术学院', 'Q', 252, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (253, '学校', '唐山职业技术学院', 'T', 253, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (254, '学校', '唐山工业职业技术学院', 'T', 254, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (255, '学校', '石家庄计算机职业学院', 'S', 255, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (256, '学校', '石家庄法商职业学院', 'S', 256, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (257, '学校', '河北省艺术职业学院', 'H', 257, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (258, '学校', '河北交通职业技术学院', 'H', 258, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (259, '学校', '河北化工医药职业技术学院', 'H', 259, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (260, '学校', '秦皇岛外国语职业学院', 'Q', 260, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (261, '学校', '石家庄信息工程职业学院', 'S', 261, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (262, '学校', '石家庄外经贸职业学院', 'S', 262, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (263, '学校', '石家庄东方美术职业学院', 'S', 263, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (264, '学校', '河北京都高尔夫职业学院', 'H', 264, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (265, '学校', '河北地质职工大学', 'H', 265, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (266, '学校', '石家庄职工大学', 'S', 266, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (267, '学校', '河北管理干部学院', 'H', 267, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (268, '学校', '河北青年管理干部学院', 'H', 268, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (269, '学校', '石家庄联合技术职业学院', 'S', 269, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (270, '学校', '石家庄外事职业学院', 'S', 270, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (271, '学校', '石家庄工商职业学院', 'S', 271, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (272, '学校', '河北机电职业技术学院', 'H', 272, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (273, '学校', '河北司法警官职业学院', 'H', 273, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (274, '学校', '河北公安警察职业学院', 'H', 274, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (275, '学校', '河北通信职业技术学院', 'H', 275, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (276, '学校', '河北女子职业技术学院', 'H', 276, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (277, '学校', '河北旅游职业学院', 'H', 277, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (278, '学校', '石家庄科技工程职业学院', 'S', 278, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (279, '学校', '保定电力职业技术学院', 'B', 279, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (280, '学校', '北京化工大学北方学院', 'B', 280, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (281, '学校', '北京中医药大学东方学院', 'B', 281, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (282, '学校', '河北大学工商学院', 'H', 282, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (283, '学校', '河北理工大学轻工学院', 'H', 283, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (284, '学校', '华北电力大学科技学院', 'H', 284, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (285, '学校', '华北煤炭医学院冀唐学院', 'H', 285, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (286, '学校', '石家庄经济学院华信学院', 'S', 286, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (287, '学校', '石家庄铁道学院四方学院', 'S', 287, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (288, '学校', '石家庄外语翻译职业学院', 'S', 288, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (289, '学校', '石家庄医学高等专科学校', 'S', 289, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (290, '学校', '石家庄邮电职业技术学院', 'S', 290, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (291, '学校', '中国地质大学长城学院', 'Z', 291, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (292, '学校', '中国环境管理干部学院', 'Z', 292, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (293, '学校', '河北农业大学现代科技学院', 'H', 293, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (294, '学校', '河北科技大学理工学院', 'H', 294, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (295, '学校', '河北软件职业技术学院', 'H', 295, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (296, '学校', '河北医科大学临床学院', 'H', 296, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (297, '学校', '唐山科技职业技术学院', 'T', 297, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (298, '学校', '石家庄科技信息职业学院', 'S', 298, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (299, '学校', '河北工程大学科信学院', 'H', 299, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (300, '学校', '燕山大学里仁学院', 'Y', 300, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (301, '学校', '沧州医学高等专科学校', 'C', 301, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (302, '学校', '河北师范大学汇华学院', 'H', 302, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (303, '学校', '河北经贸大学经济管理学院', 'H', 303, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (304, '学校', '石家庄外国语职业学院', 'S', 304, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (305, '学校', '渤海石油职业学院', 'B', 305, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (306, '学校', '山西大学', 'S', 306, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (307, '学校', '太原理工大学', 'T', 307, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (308, '学校', '山西农业大学', 'S', 308, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (309, '学校', '山西医科大学', 'S', 309, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (310, '学校', '长治医学院', 'C', 310, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (311, '学校', '山西师范大学', 'S', 311, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (312, '学校', '太原师范学院', 'T', 312, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (313, '学校', '晋中学院', 'J', 313, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (314, '学校', '运城学院', 'Y', 314, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (315, '学校', '忻州师范学院', 'X', 315, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (316, '学校', '山西财经大学', 'S', 316, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (317, '学校', '山西中医学院', 'S', 317, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (318, '学校', '太原科技大学', 'T', 318, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (319, '学校', '中北大学', 'Z', 319, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (320, '学校', '太原工业学院', 'T', 320, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (321, '学校', '山西大同大学', 'S', 321, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (322, '学校', '长治学院', 'C', 322, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (323, '学校', '吕梁高等专科学校', 'L', 323, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (324, '学校', '太原大学', 'T', 324, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (325, '学校', '山西警官高等专科学校', 'S', 325, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (326, '学校', '山西大学商务学院', 'S', 326, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (327, '学校', '山西农业大学信息学院', 'S', 327, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (328, '学校', '山西建筑职业技术学院', 'S', 328, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (329, '学校', '山西工程职业技术学院', 'S', 329, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (330, '学校', '晋城职业技术学院', 'J', 330, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (331, '学校', '北岳职业技术学院', 'B', 331, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (332, '学校', '山西生物应用职业技术学院', 'S', 332, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (333, '学校', '山西交通职业技术学院', 'S', 333, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (334, '学校', '山西兴华职业学院', 'S', 334, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (335, '学校', '长治职业技术学院', 'C', 335, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (336, '学校', '山西艺术职业学院', 'S', 336, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (337, '学校', '阳泉职业技术学院', 'Y', 337, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (338, '学校', '山西水利职业技术学院', 'S', 338, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (339, '学校', '山西林业职业技术学院', 'S', 339, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (340, '学校', '山西财贸职业技术学院', 'S', 340, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (341, '学校', '山西戏剧职业学院', 'S', 341, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (342, '学校', '山西机电职业技术学院', 'S', 342, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (343, '学校', '临汾职业技术学院', 'L', 343, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (344, '学校', '山西综合职业技术学院', 'S', 344, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (345, '学校', '太原城市职业技术学院', 'T', 345, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (346, '学校', '山西煤炭职业技术学院', 'S', 346, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (347, '学校', '广播电影电视管理干部学院', 'G', 347, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (348, '学校', '山西职工医学院', 'S', 348, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (349, '学校', '山西煤炭职工联合大学', 'S', 349, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (350, '学校', '山西煤炭管理干部学院', 'S', 350, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (351, '学校', '山西青年管理干部学院', 'S', 351, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (352, '学校', '山西政法管理干部学院', 'S', 352, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (353, '学校', '山西华澳商贸职业学院', 'S', 353, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (354, '学校', '山西同文外语职业学院', 'S', 354, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (355, '学校', '山西老区职业技术学院', 'S', 355, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (356, '学校', '山西信息职业技术学院', 'S', 356, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (357, '学校', '山西工商职业学院', 'S', 357, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (358, '学校', '山西省财政税务专科学校', 'S', 358, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (359, '学校', '山西运城农业职业技术学院', 'S', 359, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (360, '学校', '山西管理职业学院', 'S', 360, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (361, '学校', '山西金融职业学院', 'S', 361, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (362, '学校', '山西体育职业学院', 'S', 362, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (363, '学校', '山西警官职业学院', 'S', 363, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (364, '学校', '山西国际商务职业学院', 'S', 364, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (365, '学校', '山西经贸职业学院', 'S', 365, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (366, '学校', '山西财经大学华商学院', 'S', 366, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (367, '学校', '山西旅游职业学院', 'S', 367, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (368, '学校', '太原理工大学现代科技学院', 'T', 368, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (369, '学校', '中北大学信息商务学院', 'Z', 369, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (370, '学校', '太原科技大学华科学院', 'T', 370, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (371, '学校', '山西电力职业技术学院', 'S', 371, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (372, '学校', '山西师范大学现代文理学院', 'S', 372, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (373, '学校', '山西医科大学晋祠学院', 'S', 373, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (374, '学校', '辽宁大学', 'L', 374, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (375, '学校', '大连理工大学', 'D', 375, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (376, '学校', '沈阳工业大学', 'S', 376, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (377, '学校', '沈阳航空工业学院', 'S', 377, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (378, '学校', '东北大学', 'D', 378, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (379, '学校', '辽宁科技大学', 'L', 379, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (380, '学校', '辽宁工程技术大学', 'L', 380, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (381, '学校', '辽宁石油化工大学', 'L', 381, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (382, '学校', '沈阳化工学院', 'S', 382, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (383, '学校', '大连海事大学', 'D', 383, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (384, '学校', '大连工业大学', 'D', 384, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (385, '学校', '辽宁工业大学', 'L', 385, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (386, '学校', '沈阳农业大学', 'S', 386, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (387, '学校', '大连水产学院', 'D', 387, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (388, '学校', '中国医科大学', 'Z', 388, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (389, '学校', '辽宁医学院', 'L', 389, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (390, '学校', '大连医科大学', 'D', 390, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (391, '学校', '辽宁中医药大学', 'L', 391, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (392, '学校', '沈阳药科大学', 'S', 392, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (393, '学校', '沈阳医学院', 'S', 393, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (394, '学校', '辽宁师范大学', 'L', 394, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (395, '学校', '沈阳师范大学', 'S', 395, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (396, '学校', '鞍山师范学院', 'A', 396, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (397, '学校', '大连外国语学院', 'D', 397, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (398, '学校', '东北财经大学', 'D', 398, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (399, '学校', '中国刑事警察学院', 'Z', 399, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (400, '学校', '沈阳体育学院', 'S', 400, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (401, '学校', '沈阳音乐学院', 'S', 401, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (402, '学校', '鲁迅美术学院', 'L', 402, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (403, '学校', '大连民族学院', 'D', 403, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (404, '学校', '大连大学', 'D', 404, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (405, '学校', '辽东学院', 'L', 405, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (406, '学校', '沈阳建筑大学', 'S', 406, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (407, '学校', '沈阳理工大学', 'S', 407, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (408, '学校', '渤海大学', 'B', 408, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (409, '学校', '大连交通大学', 'D', 409, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (410, '学校', '朝阳师范高等专科学校', 'C', 410, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (411, '学校', '抚顺师范高等专科学校', 'F', 411, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (412, '学校', '锦州师范高等专科学校', 'J', 412, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (413, '学校', '铁岭师范高等专科学校', 'T', 413, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (414, '学校', '抚顺职业技术学院', 'F', 414, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (415, '学校', '辽宁农业职业技术学院', 'L', 415, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (416, '学校', '阜新高等专科学校', 'F', 416, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (417, '学校', '辽宁警官高等专科学校', 'L', 417, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (418, '学校', '辽宁交通高等专科学校', 'L', 418, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (419, '学校', '沈阳建筑大学城市建设学院', 'S', 419, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (420, '学校', '大连医科大学中山学院', 'D', 420, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (421, '学校', '辽宁师范大学海华学院', 'L', 421, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (422, '学校', '东北大学大连艺术学院', 'D', 422, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (423, '学校', '大连理工大学城市学院', 'D', 423, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (424, '学校', '渤海船舶职业学院', 'B', 424, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (425, '学校', '盘锦职业技术学院', 'P', 425, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (426, '学校', '辽宁金融职业学院', 'L', 426, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (427, '学校', '大连职业技术学院', 'D', 427, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (428, '学校', '大连商务职业学院', 'D', 428, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (429, '学校', '辽阳职业技术学院', 'L', 429, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (430, '学校', '营口职业技术学院', 'Y', 430, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (431, '学校', '大连艺术职业学院', 'D', 431, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (432, '学校', '大连东软信息技术职业学院', 'D', 432, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (433, '学校', '辽宁石化职业技术学院', 'L', 433, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (434, '学校', '辽宁经济职业技术学院', 'L', 434, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (435, '学校', '辽宁机电职业技术学院', 'L', 435, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (436, '学校', '辽宁广告职业学院', 'L', 436, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (437, '学校', '辽宁信息职业技术学院', 'L', 437, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (438, '学校', '辽宁体育运动职业技术学院', 'L', 438, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (439, '学校', '辽宁林业职业技术学院', 'L', 439, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (440, '学校', '沈阳航空职业技术学院', 'S', 440, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (441, '学校', '沈阳职业技术学院', 'S', 441, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (442, '学校', '辽宁商贸职业学院', 'L', 442, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (443, '学校', '辽宁文化艺术职工大学', 'L', 443, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (444, '学校', '辽宁公安司法管理干部学院', 'L', 444, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (445, '学校', '辽宁美术职业学院', 'L', 445, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (446, '学校', '辽宁科技大学信息技术学院', 'L', 446, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (447, '学校', '辽宁医学院医疗学院', 'L', 447, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (448, '学校', '辽宁装备制造职业技术学院', 'L', 448, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (449, '学校', '辽宁职业学院', 'L', 449, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (450, '学校', '辽宁地质工程职业学院', 'L', 450, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (451, '学校', '辽宁铁道职业技术学院', 'L', 451, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (452, '学校', '辽宁建筑职业技术学院', 'L', 452, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (453, '学校', '大连交通大学信息工程学院', 'D', 453, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (454, '学校', '东北财经大学津桥商学院', 'D', 454, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (455, '学校', '东北大学东软信息学院', 'D', 455, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (456, '学校', '辽宁对外经贸学院', 'L', 456, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (457, '学校', '辽宁科技学院', 'L', 457, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (458, '学校', '辽宁石油化工大学顺华能源学院', 'L', 458, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (459, '学校', '沈阳大学科技工程学院', 'S', 459, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (460, '学校', '沈阳工程学院', 'S', 460, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (461, '学校', '中国医科大学临床医药学院', 'Z', 461, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (462, '学校', '大连软件职业学院', 'D', 462, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (463, '学校', '渤海大学文理学院', 'B', 463, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (464, '学校', '沈阳航空工业学院北方科技学院', 'S', 464, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (465, '学校', '沈阳农业大学科学技术学院', 'S', 465, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (466, '学校', '大连枫叶职业技术学院', 'D', 466, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (467, '学校', '沈阳化工学院科亚学院', 'S', 467, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (468, '学校', '沈阳理工大学应用技术学院', 'S', 468, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (469, '学校', '沈阳师范大学渤海学院', 'S', 469, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (470, '学校', '辽宁中医药大学杏林学院', 'L', 470, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (471, '学校', '沈阳医学院何氏视觉科学学院', 'S', 471, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (472, '学校', '沈阳工业大学工程学院', 'S', 472, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (473, '学校', '吉林大学', 'J', 473, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (474, '学校', '延边大学', 'Y', 474, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (475, '学校', '长春理工大学', 'C', 475, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (476, '学校', '东北电力大学', 'D', 476, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (477, '学校', '长春工业大学', 'C', 477, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (478, '学校', '吉林建筑工程学院', 'J', 478, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (479, '学校', '吉林化工学院', 'J', 479, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (480, '学校', '吉林农业大学', 'J', 480, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (481, '学校', '东北师范大学', 'D', 481, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (482, '学校', '通化师范学院', 'T', 482, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (483, '学校', '吉林师范大学', 'J', 483, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (484, '学校', '吉林工程技术师范学院', 'J', 484, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (485, '学校', '长春师范学院', 'C', 485, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (486, '学校', '白城师范学院', 'B', 486, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (487, '学校', '长春税务学院', 'C', 487, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (488, '学校', '吉林体育学院', 'J', 488, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (489, '学校', '吉林艺术学院', 'J', 489, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (490, '学校', '长春大学', 'C', 490, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (491, '学校', '北华大学', 'B', 491, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (492, '学校', '长春工程学院', 'C', 492, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (493, '学校', '吉林医药学院', 'J', 493, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (494, '学校', '吉林华侨外国语学院', 'J', 494, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (495, '学校', '长春中医药大学', 'C', 495, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (496, '学校', '吉林农业科技学院', 'J', 496, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (497, '学校', '吉林工商学院', 'J', 497, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (498, '学校', '长春汽车工业高等专科学校', 'C', 498, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (499, '学校', '长春金融高等专科学校', 'C', 499, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (500, '学校', '吉林公安高等专科学校', 'J', 500, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (501, '学校', '长春医学高等专科学校', 'C', 501, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (502, '学校', '吉林艺术学院动画学院', 'J', 502, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (503, '学校', '吉林师范大学博达学院', 'J', 503, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (504, '学校', '长春大学旅游学院', 'C', 504, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (505, '学校', '吉林交通职业技术学院', 'J', 505, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (506, '学校', '辽源职业技术学院', 'L', 506, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (507, '学校', '吉林对外经贸职业学院', 'J', 507, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (508, '学校', '长春东方职业学院', 'C', 508, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (509, '学校', '吉林电子信息职业技术学院', 'J', 509, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (510, '学校', '吉林工业职业技术学院', 'J', 510, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (511, '学校', '吉林司法警官职业学院', 'J', 511, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (512, '学校', '吉林农业工程职业技术学院', 'J', 512, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (513, '学校', '长春职业技术学院', 'C', 513, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (514, '学校', '吉林省教育学院', 'J', 514, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (515, '学校', '吉林省经济管理干部学院', 'J', 515, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (516, '学校', '吉林华桥外国语学院', 'J', 516, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (517, '学校', '吉林铁道职业技术学院', 'J', 517, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (518, '学校', '长春理工大学光电信息学院', 'C', 518, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (519, '学校', '长春税务学院信息经济学院', 'C', 519, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (520, '学校', '吉林建筑工程学院建筑装饰学院', 'J', 520, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (521, '学校', '吉林农业大学发展学院', 'J', 521, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (522, '学校', '吉林建筑工程学院城建学院', 'J', 522, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (523, '学校', '白城医学高等专科学校', 'B', 523, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (524, '学校', '长春大学光华学院', 'C', 524, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (525, '学校', '长春工业大学人文信息学院', 'C', 525, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (526, '学校', '东北师范大学人文学院', 'D', 526, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (527, '学校', '南京大学', 'N', 527, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (528, '学校', '苏州大学', 'S', 528, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (529, '学校', '东南大学', 'D', 529, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (530, '学校', '南京航空航天大学', 'N', 530, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (531, '学校', '南京理工大学', 'N', 531, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (532, '学校', '中国矿业大学', 'Z', 532, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (533, '学校', '南京工业大学', 'N', 533, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (534, '学校', '江苏工业学院', 'J', 534, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (535, '学校', '河海大学', 'H', 535, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (536, '学校', '江南大学', 'J', 536, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (537, '学校', '南京林业大学', 'N', 537, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (538, '学校', '江苏大学', 'J', 538, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (539, '学校', '盐城工学院', 'Y', 539, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (540, '学校', '南京农业大学', 'N', 540, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (541, '学校', '南京医科大学', 'N', 541, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (542, '学校', '徐州医学院', 'X', 542, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (543, '学校', '中国药科大学', 'Z', 543, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (544, '学校', '南京师范大学', 'N', 544, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (545, '学校', '徐州师范大学', 'X', 545, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (546, '学校', '淮阴师范学院', 'H', 546, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (547, '学校', '盐城师范学院', 'Y', 547, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (548, '学校', '南京体育学院', 'N', 548, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (549, '学校', '南京艺术学院', 'N', 549, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (550, '学校', '常熟理工学院', 'C', 550, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (551, '学校', '淮阴工学院', 'H', 551, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (552, '学校', '徐州工程学院', 'X', 552, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (553, '学校', '常州工学院', 'C', 553, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (554, '学校', '扬州大学', 'Y', 554, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (555, '学校', '南京审计学院', 'N', 555, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (556, '学校', '淮海工学院', 'H', 556, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (557, '学校', '南京晓庄学院', 'N', 557, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (558, '学校', '南京工程学院', 'N', 558, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (559, '学校', '苏州科技学院', 'S', 559, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (560, '学校', '解放军理工大学', 'J', 560, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (561, '学校', '江苏省广播电视大学', 'J', 561, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (562, '学校', '江苏科技大学', 'J', 562, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (563, '学校', '金陵科技学院', 'J', 563, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (564, '学校', '南京财经大学', 'N', 564, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (565, '学校', '南京信息工程大学', 'N', 565, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (566, '学校', '南京邮电大学', 'N', 566, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (567, '学校', '南通大学', 'N', 567, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (568, '学校', '西交利物浦大学', 'X', 568, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (569, '学校', '解放军南京政治学院', 'J', 569, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (570, '学校', '中国人民解放军工程兵指挥学院', 'Z', 570, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (571, '学校', '江苏警官学院', 'J', 571, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (572, '学校', '镇江市高等专科学校', 'Z', 572, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (573, '学校', '南通职业大学', 'N', 573, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (574, '学校', '沙洲职业工学院', 'S', 574, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (575, '学校', '扬州市职业大学', 'Y', 575, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (576, '学校', '江苏技术师范学院', 'J', 576, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (577, '学校', '南京森林公安高等专科学校', 'N', 577, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (578, '学校', '三江学院', 'S', 578, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (579, '学校', '连云港师范高等专科学校', 'L', 579, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (580, '学校', '泰州师范高等专科学校', 'T', 580, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (581, '学校', '东南大学成贤学院', 'D', 581, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (582, '学校', '江南大学太湖学院', 'J', 582, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (583, '学校', '南京大学金陵学院', 'N', 583, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (584, '学校', '南京理工大学紫金学院', 'N', 584, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (585, '学校', '南京理工大学泰州科技学院', 'N', 585, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (586, '学校', '南京师范大学中北学院', 'N', 586, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (587, '学校', '南京医科大学康达学院', 'N', 587, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (588, '学校', '南京中医药大学翰林学院', 'N', 588, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (589, '学校', '苏州大学文正学院', 'S', 589, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (590, '学校', '苏州大学应用技术学院', 'S', 590, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (591, '学校', '苏州科技学院天平学院', 'S', 591, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (592, '学校', '扬州大学广陵学院', 'Y', 592, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (593, '学校', '徐州师范大学科文学院', 'X', 593, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (594, '学校', '南京财经大学红山学院', 'N', 594, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (595, '学校', '江苏工业学院怀德学院', 'J', 595, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (596, '学校', '南通大学杏林学院', 'N', 596, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (597, '学校', '民办明达职业技术学院', 'M', 597, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (598, '学校', '连云港职业技术学院', 'L', 598, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (599, '学校', '南京工业职业技术学院', 'N', 599, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (600, '学校', '徐州建筑职业技术学院', 'X', 600, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (601, '学校', '泰州职业技术学院', 'T', 601, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (602, '学校', '无锡职业技术学院', 'W', 602, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (603, '学校', '南通纺织职业技术学院', 'N', 603, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (604, '学校', '苏州工艺美术职业技术学院', 'S', 604, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (605, '学校', '常州信息职业技术学院', 'C', 605, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (606, '学校', '南通航运职业技术学院', 'N', 606, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (607, '学校', '无锡商业职业技术学院', 'W', 607, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (608, '学校', '南京交通职业技术学院', 'N', 608, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (609, '学校', '淮安信息职业技术学院', 'H', 609, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (610, '学校', '江苏畜牧兽医职业技术学院', 'J', 610, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (611, '学校', '常州纺织服装职业技术学院', 'C', 611, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (612, '学校', '苏州农业职业技术学院', 'S', 612, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (613, '学校', '苏州工业园区职业技术学院', 'S', 613, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (614, '学校', '南京化工职业技术学院', 'N', 614, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (615, '学校', '正德职业技术学院', 'Z', 615, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (616, '学校', '无锡南洋职业技术学院', 'W', 616, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (617, '学校', '钟山职业技术学院', 'Z', 617, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (618, '学校', '炎黄职业技术学院', 'Y', 618, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (619, '学校', '金肯职业技术学院', 'J', 619, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (620, '学校', '紫琅职业技术学院', 'Z', 620, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (621, '学校', '九州职业技术学院', 'J', 621, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (622, '学校', '硅湖职业技术学院', 'G', 622, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (623, '学校', '江阴职业技术学院', 'J', 623, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (624, '学校', '宿迁职业技术学院', 'S', 624, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (625, '学校', '南京信息职业技术学院', 'N', 625, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (626, '学校', '常州工程职业技术学院', 'C', 626, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (627, '学校', '常州轻工职业技术学院', 'C', 627, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (628, '学校', '常州机电职业技术学院', 'C', 628, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (629, '学校', '徐州工业职业技术学院', 'X', 629, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (630, '学校', '江苏食品职业技术学院', 'J', 630, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (631, '学校', '江苏农林职业技术学院', 'J', 631, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (632, '学校', '江苏信息职业技术学院', 'J', 632, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (633, '学校', '南京特殊教育职业技术学院', 'N', 633, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (634, '学校', '江苏教育学院', 'J', 634, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (635, '学校', '南京人口管理干部学院', 'N', 635, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (636, '学校', '江苏省省级机关管理干部学院', 'J', 636, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (637, '学校', '江苏省青年管理干部学院', 'J', 637, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (638, '学校', '苏州港大思培科技职业学院', 'S', 638, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (639, '学校', '苏州托普信息职业技术学院', 'S', 639, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (640, '学校', '江苏职工医科大学', 'J', 640, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (641, '学校', '苏州职业大学', 'S', 641, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (642, '学校', '江苏联合职业技术学院', 'J', 642, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (643, '学校', '江苏财经职业技术学院', 'J', 643, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (644, '学校', '苏州工业职业技术学院', 'S', 644, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (645, '学校', '江苏城市职业学院', 'J', 645, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (646, '学校', '苏州卫生职业技术学院', 'S', 646, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (647, '学校', '苏州高博软件技术职业学院', 'S', 647, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (648, '学校', '江苏大学京江学院', 'J', 648, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (649, '学校', '江苏科技大学南徐学院', 'J', 649, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (650, '学校', '南京工业大学浦江学院', 'N', 650, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (651, '学校', '南京航空航天大学金城学院', 'N', 651, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (652, '学校', '南京审计学院金审学院', 'N', 652, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (653, '学校', '南京师范大学泰州学院', 'N', 653, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (654, '学校', '南京信息工程大学滨江学院', 'N', 654, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (655, '学校', '南京邮电大学通达学院', 'N', 655, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (656, '学校', '苏州经贸职业技术学院', 'S', 656, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (657, '学校', '中国传媒大学南广学院', 'Z', 657, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (658, '学校', '中国矿业大学徐海学院', 'Z', 658, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (659, '学校', '江苏海事职业技术学院', 'J', 659, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (660, '学校', '江苏经贸职业技术学院', 'J', 660, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (661, '学校', '南京中医药大学', 'N', 661, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (662, '学校', '浙江大学', 'Z', 662, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (663, '学校', '浙江工业大学', 'Z', 663, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (664, '学校', '浙江理工大学', 'Z', 664, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (665, '学校', '浙江海洋学院', 'Z', 665, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (666, '学校', '浙江林学院', 'Z', 666, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (667, '学校', '温州医学院', 'W', 667, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (668, '学校', '浙江中医药大学', 'Z', 668, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (669, '学校', '浙江师范大学', 'Z', 669, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (670, '学校', '杭州师范大学', 'H', 670, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (671, '学校', '湖州师范学院', 'H', 671, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (672, '学校', '绍兴文理学院', 'S', 672, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (673, '学校', '台州学院', 'T', 673, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (674, '学校', '中国美术学院', 'Z', 674, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (675, '学校', '中国计量学院', 'Z', 675, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (676, '学校', '浙江万里学院', 'Z', 676, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (677, '学校', '浙江科技学院', 'Z', 677, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (678, '学校', '宁波工程学院', 'N', 678, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (679, '学校', '温州大学', 'W', 679, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (680, '学校', '浙江财经学院', 'Z', 680, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (681, '学校', '宁波大学', 'N', 681, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (682, '学校', '嘉兴学院', 'J', 682, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (683, '学校', '浙江教育学院', 'Z', 683, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (684, '学校', '杭州电子科技大学', 'H', 684, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (685, '学校', '浙江工商大学', 'Z', 685, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (686, '学校', '宁波诺丁汉大学', 'N', 686, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (687, '学校', '丽水学院', 'L', 687, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (688, '学校', '公安海警高等专科学校', 'G', 688, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (689, '学校', '浙江水利水电专科学校', 'Z', 689, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (690, '学校', '浙江树人学院', 'Z', 690, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (691, '学校', '浙江医药高等专科学校', 'Z', 691, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (692, '学校', '浙江工业大学之江学院', 'Z', 692, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (693, '学校', '浙江师范大学行知学院', 'Z', 693, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (694, '学校', '宁波大学科学技术学院', 'N', 694, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (695, '学校', '杭州电子科技大学信息工程学院', 'H', 695, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (696, '学校', '浙江理工大学科技与艺术学院', 'Z', 696, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (697, '学校', '浙江海洋学院东海科学技术学院', 'Z', 697, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (698, '学校', '浙江林学院天目学院', 'Z', 698, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (699, '学校', '温州医学院仁济学院', 'W', 699, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (700, '学校', '浙江中医药大学滨江学院', 'Z', 700, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (701, '学校', '湖州师范学院求真学院', 'H', 701, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (702, '学校', '绍兴文理学院元培学院', 'S', 702, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (703, '学校', '温州大学瓯江学院', 'W', 703, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (704, '学校', '浙江工商大学杭州商学院', 'Z', 704, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (705, '学校', '嘉兴学院南湖学院', 'J', 705, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (706, '学校', '浙江财经学院东方学院', 'Z', 706, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (707, '学校', '温州大学城市学院', 'W', 707, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (708, '学校', '浙江大学宁波理工学院', 'Z', 708, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (709, '学校', '浙江大学城市学院', 'Z', 709, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (710, '学校', '浙江艺术职业学院', 'Z', 710, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (711, '学校', '浙江交通职业技术学院', 'Z', 711, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (712, '学校', '杭州职业技术学院', 'H', 712, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (713, '学校', '义乌工商职业技术学院', 'Y', 713, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (714, '学校', '温州职业技术学院', 'W', 714, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (715, '学校', '浙江工商职业技术学院', 'Z', 715, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (716, '学校', '浙江工贸职业技术学院', 'Z', 716, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (717, '学校', '绍兴越秀外国语职业学院', 'S', 717, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (718, '学校', '台州职业技术学院', 'T', 718, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (719, '学校', '浙江机电职业技术学院', 'Z', 719, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (720, '学校', '浙江商业职业技术学院', 'Z', 720, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (721, '学校', '浙江警官职业学院', 'Z', 721, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (722, '学校', '浙江工业职业技术学院', 'Z', 722, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (723, '学校', '浙江旅游职业学院', 'Z', 723, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (724, '学校', '浙江金融职业学院', 'Z', 724, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (725, '学校', '浙江经济职业技术学院', 'Z', 725, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (726, '学校', '浙江建设职业技术学院', 'Z', 726, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (727, '学校', '浙江经贸职业技术学院', 'Z', 727, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (728, '学校', '浙江育英职业技术学院', 'Z', 728, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (729, '学校', '绍兴托普信息职业技术学院', 'S', 729, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (730, '学校', '嘉兴职业技术学院', 'J', 730, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (731, '学校', '湖州职业技术学院', 'H', 731, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (732, '学校', '衢州职业技术学院', 'Q', 732, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (733, '学校', '丽水职业技术学院', 'L', 733, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (734, '学校', '宁波大红鹰职业技术学院', 'N', 734, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (735, '学校', '浙江东方职业技术学院', 'Z', 735, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (736, '学校', '宁波教育学院', 'N', 736, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (737, '学校', '浙江长征职业技术学院', 'Z', 737, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (738, '学校', '浙江广厦建设职业技术学院', 'Z', 738, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (739, '学校', '浙江工业大学浙西分校', 'Z', 739, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (740, '学校', '浙江医学高等专科学校', 'Z', 740, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (741, '学校', '浙江国际海运职业技术学院', 'Z', 741, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (742, '学校', '浙江纺织服装职业技术学院', 'Z', 742, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (743, '学校', '浙江同济科技职业学院', 'Z', 743, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (744, '学校', '浙江邮电职业技术学院', 'Z', 744, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (745, '学校', '浙江体育职业技术学院', 'Z', 745, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (746, '学校', '浙江电力职业技术学院', 'Z', 746, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (747, '学校', '浙江警察学院', 'Z', 747, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (748, '学校', '浙江越秀外国语学院', 'Z', 748, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (749, '学校', '浙江传媒学院', 'Z', 749, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (750, '学校', '中国计量学院现代科技学院', 'Z', 750, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (751, '学校', '安徽大学', 'A', 751, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (752, '学校', '中国科学技术大学', 'Z', 752, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (753, '学校', '合肥工业大学', 'H', 753, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (754, '学校', '安徽工业大学', 'A', 754, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (755, '学校', '安徽理工大学', 'A', 755, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (756, '学校', '安徽工程科技学院', 'A', 756, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (757, '学校', '安徽农业大学', 'A', 757, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (758, '学校', '安徽医科大学', 'A', 758, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (759, '学校', '蚌埠医学院', 'B', 759, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (760, '学校', '皖南医学院', 'W', 760, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (761, '学校', '安徽中医学院', 'A', 761, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (762, '学校', '安徽师范大学', 'A', 762, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (763, '学校', '阜阳师范学院', 'F', 763, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (764, '学校', '安庆师范学院', 'A', 764, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (765, '学校', '淮北煤炭师范学院', 'H', 765, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (766, '学校', '黄山学院', 'H', 766, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (767, '学校', '巢湖学院', 'C', 767, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (768, '学校', '淮南师范学院', 'H', 768, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (769, '学校', '铜陵学院', 'T', 769, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (770, '学校', '安徽建筑工业学院', 'A', 770, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (771, '学校', '合肥学院', 'H', 771, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (772, '学校', '皖西学院', 'W', 772, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (773, '学校', '安徽财经大学', 'A', 773, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (774, '学校', '安徽科技学院', 'A', 774, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (775, '学校', '滁州学院', 'C', 775, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (776, '学校', '宿州学院', 'S', 776, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (777, '学校', '淮南联合大学', 'H', 777, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (778, '学校', '安徽医学高等专科学校', 'A', 778, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (779, '学校', '亳州师范高等专科学校', 'H', 779, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (780, '学校', '安徽中医药高等专科学校', 'A', 780, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (781, '学校', '安徽新华学院', 'A', 781, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (782, '学校', '安徽工程科技学院机电学院', 'A', 782, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (783, '学校', '安徽工业大学工商学院', 'A', 783, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (784, '学校', '安徽师范大学皖江学院', 'A', 784, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (785, '学校', '安徽医科大学临床医学院', 'A', 785, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (786, '学校', '阜阳师范学院信息工程学院', 'F', 786, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (787, '学校', '西南科技大学城市学院', 'X', 787, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (788, '学校', '安徽职业技术学院', 'A', 788, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (789, '学校', '民办三联职业技术学院', 'M', 789, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (790, '学校', '淮北职业技术学院', 'H', 790, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (791, '学校', '芜湖职业技术学院', 'W', 791, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (792, '学校', '民办万博科技职业学院', 'M', 792, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (793, '学校', '铜陵职业技术学院', 'T', 793, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (794, '学校', '安徽商贸职业技术学院', 'A', 794, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (795, '学校', '安徽警官职业学院', 'A', 795, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (796, '学校', '安徽水利水电职业技术学院', 'A', 796, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (797, '学校', '淮南职业技术学院', 'H', 797, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (798, '学校', '安徽电子信息职业技术学院', 'A', 798, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (799, '学校', '安徽工贸职业技术学院', 'A', 799, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (800, '学校', '安徽工业经济职业技术学院', 'A', 800, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (801, '学校', '安徽交通职业技术学院', 'A', 801, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (802, '学校', '安徽体育运动职业技术学院', 'A', 802, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (803, '学校', '阜阳职业技术学院', 'F', 803, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (804, '学校', '合肥通用职业技术学院', 'H', 804, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (805, '学校', '六安职业技术学院', 'L', 805, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (806, '学校', '民办安徽文达信息技术职业学院', 'M', 806, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (807, '学校', '民办合肥经济技术职业学院', 'M', 807, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (808, '学校', '宿州职业技术学院', 'S', 808, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (809, '学校', '安徽广播影视职业技术学院', 'A', 809, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (810, '学校', '民办安徽明星科技职业学院', 'M', 810, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (811, '学校', '池州职业技术学院', 'C', 811, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (812, '学校', '滁州职业技术学院', 'C', 812, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (813, '学校', '宣城职业技术学院', 'X', 813, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (814, '学校', '安徽外国语学院', 'A', 814, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (815, '学校', '巢湖职业技术学院', 'C', 815, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (816, '学校', '安徽城市管理职业学院', 'A', 816, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (817, '学校', '安徽绿海商务职业学院', 'A', 817, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (818, '学校', '安徽涉外经济职业学院', 'A', 818, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (819, '学校', '安徽经济管理干部学院', 'A', 819, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (820, '学校', '安徽工业职业技术学院', 'A', 820, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (821, '学校', '安徽工商职业学院', 'A', 821, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (822, '学校', '安徽邮电职业技术学院', 'A', 822, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (823, '学校', '安徽艺术职业学院', 'A', 823, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (824, '学校', '安徽国防科技职业学院', 'A', 824, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (825, '学校', '安徽林业职业技术学院', 'A', 825, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (826, '学校', '安徽新闻出版职业技术学院', 'A', 826, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (827, '学校', '安徽财贸职业学院', 'A', 827, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (828, '学校', '安徽电气工程职业技术学院', 'A', 828, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (829, '学校', '安徽公安职业学院', 'A', 829, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (830, '学校', '安徽国际商务职业学院', 'A', 830, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (831, '学校', '安徽冶金科技职业学院', 'A', 831, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (832, '学校', '安徽机电职业技术学院', 'A', 832, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (833, '学校', '安徽审计职业学院', 'A', 833, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (834, '学校', '安徽中澳科技职业学院', 'A', 834, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (835, '学校', '安徽三联学院', 'A', 835, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (836, '学校', '安徽农业大学经济技术学院', 'A', 836, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (837, '学校', '安徽建筑工业学院城市建设学院', 'A', 837, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (838, '学校', '阜阳科技职业学院', 'F', 838, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (839, '学校', '马鞍山师范高等专科学校', 'M', 839, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (840, '学校', '安徽财经大学商学院', 'A', 840, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (841, '学校', '淮北煤炭师范学院信息学院', 'H', 841, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (842, '学校', '安徽大学江淮学院', 'A', 842, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (843, '学校', '厦门大学', 'X', 843, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (844, '学校', '华侨大学', 'H', 844, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (845, '学校', '福州大学', 'F', 845, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (846, '学校', '福建工程学院', 'F', 846, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (847, '学校', '福建医科大学', 'F', 847, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (848, '学校', '福建中医学院', 'F', 848, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (849, '学校', '福建师范大学', 'F', 849, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (850, '学校', '闽江学院', 'M', 850, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (851, '学校', '泉州师范学院', 'Q', 851, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (852, '学校', '漳州师范学院', 'Z', 852, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (853, '学校', '莆田学院', 'P', 853, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (854, '学校', '仰恩大学', 'Y', 854, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (855, '学校', '集美大学', 'J', 855, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (856, '学校', '福建农林大学', 'F', 856, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (857, '学校', '厦门理工学院', 'X', 857, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (858, '学校', '三明学院', 'S', 858, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (859, '学校', '龙岩学院', 'L', 859, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (860, '学校', '宁德师范高等专科学校', 'N', 860, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (861, '学校', '福建商业高等专科学校', 'F', 861, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (862, '学校', '黎明职业大学', 'L', 862, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (863, '学校', '福建华南女子职业学院', 'F', 863, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (864, '学校', '福建师范大学闽南科技学院', 'F', 864, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (865, '学校', '福建农林大学东方学院', 'F', 865, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (866, '学校', '福州大学阳光学院', 'F', 866, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (867, '学校', '福州大学至诚学院', 'F', 867, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (868, '学校', '福建农林大学金山学院', 'F', 868, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (869, '学校', '福建交通职业技术学院', 'F', 869, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (870, '学校', '福州职业技术学院', 'F', 870, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (871, '学校', '福州英华职业学院', 'F', 871, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (872, '学校', '厦门华夏职业学院', 'X', 872, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (873, '学校', '泉州光电信息职业学院', 'Q', 873, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (874, '学校', '漳州职业技术学院', 'Z', 874, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (875, '学校', '泉州华光摄影艺术职业学院', 'Q', 875, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (876, '学校', '福建信息职业技术学院', 'F', 876, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (877, '学校', '福建水利电力职业技术学院', 'F', 877, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (878, '学校', '福建电力职业技术学院', 'F', 878, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (879, '学校', '福建林业职业技术学院', 'F', 879, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (880, '学校', '福建农业职业技术学院', 'F', 880, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (881, '学校', '厦门海洋职业技术学院', 'X', 881, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (882, '学校', '福建教育学院', 'F', 882, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (883, '学校', '福建经济管理干部学院', 'F', 883, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (884, '学校', '闽北职业技术学院', 'M', 884, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (885, '学校', '福州教育学院', 'F', 885, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (886, '学校', '福建财会管理干部学院', 'F', 886, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (887, '学校', '福州黎明职业技术学院', 'F', 887, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (888, '学校', '厦门兴才职业技术学院', 'X', 888, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (889, '学校', '福州软件职业技术学院', 'F', 889, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (890, '学校', '福州外语外贸职业技术学院', 'F', 890, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (891, '学校', '厦门东海职业技术学院', 'X', 891, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (892, '学校', '厦门南洋职业学院', 'X', 892, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (893, '学校', '厦门软件职业技术学院', 'X', 893, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (894, '学校', '福州科技职业技术学院', 'F', 894, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (895, '学校', '福州海峡职业技术学院', 'F', 895, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (896, '学校', '福建卫生职业技术学院', 'F', 896, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (897, '学校', '福建政法管理干部学院', 'F', 897, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (898, '学校', '厦门医学高等专科学校', 'X', 898, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (899, '学校', '厦门城市职业学院', 'X', 899, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (900, '学校', '福建警官职业学院', 'F', 900, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (901, '学校', '福建生物工程职业技术学院', 'F', 901, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (902, '学校', '福建艺术职业学院', 'F', 902, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (903, '学校', '福建体育职业技术学院', 'F', 903, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (904, '学校', '福建警察学院', 'F', 904, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (905, '学校', '集美大学诚毅学院', 'J', 905, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (906, '学校', '厦门大学嘉庚学院', 'X', 906, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (907, '学校', '厦门演艺职业学院', 'X', 907, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (908, '学校', '泉州纺织服装职业学院', 'Q', 908, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (909, '学校', '福建师范大学协和学院', 'F', 909, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (910, '学校', '厦门华天涉外职业技术学院', 'X', 910, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (911, '学校', '福建对外经济贸易职业技术学院', 'F', 911, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (912, '学校', '福建中医药大学', 'F', 912, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (913, '学校', '福建江夏学院', 'F', 913, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (914, '学校', '华东交通大学', 'H', 914, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (915, '学校', '南昌航空大学', 'N', 915, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (916, '学校', '景德镇陶瓷学院', 'J', 916, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (917, '学校', '江西农业大学', 'J', 917, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (918, '学校', '江西中医学院', 'J', 918, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (919, '学校', '赣南医学院', 'G', 919, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (920, '学校', '江西师范大学', 'J', 920, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (921, '学校', '上饶师范学院', 'S', 921, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (922, '学校', '赣南师范学院', 'G', 922, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (923, '学校', '江西财经大学', 'J', 923, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (924, '学校', '江西科技师范学院', 'J', 924, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (925, '学校', '南昌大学', 'N', 925, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (926, '学校', '宜春学院', 'Y', 926, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (927, '学校', '九江学院', 'J', 927, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (928, '学校', '江西理工大学', 'J', 928, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (929, '学校', '井冈山大学', 'J', 929, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (930, '学校', '南昌大学医学院', 'N', 930, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (931, '学校', '南昌工程学院', 'N', 931, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (932, '学校', '南昌理工学院', 'N', 932, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (933, '学校', '东华理工大学', 'D', 933, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (934, '学校', '江西医学院上饶分院', 'J', 934, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (935, '学校', '景德镇高等专科学校', 'J', 935, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (936, '学校', '萍乡高等专科学校', 'P', 936, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (937, '学校', '江西公安专科学校', 'J', 937, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (938, '学校', '九江职业大学', 'J', 938, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (939, '学校', '新余高等专科学校', 'X', 939, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (940, '学校', '赣南师范学院科技学院', 'G', 940, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (941, '学校', '九江职业技术学院', 'J', 941, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (942, '学校', '江西工业职业技术学院', 'J', 942, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (943, '学校', '江西蓝天学院', 'J', 943, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (944, '学校', '江西司法警官职业学院', 'J', 944, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (945, '学校', '江西电力职业技术学院', 'J', 945, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (946, '学校', '江西旅游商贸职业学院', 'J', 946, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (947, '学校', '江西机电职业技术学院', 'J', 947, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (948, '学校', '江西陶瓷工艺美术职业技术学院', 'J', 948, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (949, '学校', '江西环境工程职业学院', 'J', 949, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (950, '学校', '江西信息应用职业技术学院', 'J', 950, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (951, '学校', '江西工业工程职业技术学院', 'J', 951, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (952, '学校', '江西交通职业技术学院', 'J', 952, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (953, '学校', '江西艺术职业学院', 'J', 953, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (954, '学校', '江西应用技术职业学院', 'J', 954, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (955, '学校', '鹰潭职业技术学院', 'Y', 955, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (956, '学校', '江西现代职业技术学院', 'J', 956, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (957, '学校', '江西行政管理干部学院', 'J', 957, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (958, '学校', '江西教育学院', 'J', 958, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (959, '学校', '南昌教育学院', 'N', 959, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (960, '学校', '赣南教育学院', 'G', 960, null);
-
-insert into codes_jypx_xx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (961, '学校', '江西渝州科技职业学院', 'J', 961, null);
 
 prompt Done.

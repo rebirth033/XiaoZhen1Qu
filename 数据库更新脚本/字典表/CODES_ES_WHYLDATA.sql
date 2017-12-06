@@ -2,31 +2,31 @@ prompt Importing table codes_es_whyl...
 set feedback off
 set define off
 insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1, '艺术品/收藏品', '古董古玩', '1', 1, null);
+values (1, '艺术品/收藏品类别', '古董古玩', '1', 1, null);
 
 insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (2, '艺术品/收藏品', '书法绘画', '2', 2, null);
+values (2, '艺术品/收藏品类别', '书法绘画', '2', 2, null);
 
 insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (3, '艺术品/收藏品', '把玩物件', '3', 3, null);
+values (3, '艺术品/收藏品类别', '把玩物件', '3', 3, null);
 
 insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (4, '艺术品/收藏品', '钱币/票证', '4', 4, null);
+values (4, '艺术品/收藏品类别', '钱币/票证', '4', 4, null);
 
 insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (5, '艺术品/收藏品', '珠宝玉器', '5', 5, null);
+values (5, '艺术品/收藏品类别', '珠宝玉器', '5', 5, null);
 
 insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (6, '艺术品/收藏品', '手工制品/工艺品', '6', 6, null);
+values (6, '艺术品/收藏品类别', '手工制品/工艺品', '6', 6, null);
 
 insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (7, '艺术品/收藏品', '邮票邮品', '7', 7, null);
+values (7, '艺术品/收藏品类别', '邮票邮品', '7', 7, null);
 
 insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (8, '艺术品/收藏品', '纪念品', '8', 8, null);
+values (8, '艺术品/收藏品类别', '纪念品', '8', 8, null);
 
 insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (9, '艺术品/收藏品', '其他收藏品', '9', 9, null);
+values (9, '艺术品/收藏品类别', '其他收藏品', '9', 9, null);
 
 insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (10, '古董古玩', '古董古玩', '1', 1, 1);
@@ -158,37 +158,37 @@ insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PAR
 values (52, '手工制品/工艺品', '其他工艺品', '7', 7, 6);
 
 insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (53, '文体/户外/乐器', '户外用品', '1', 1, null);
+values (53, '文体/户外/乐器类别', '户外用品', '1', 1, null);
 
 insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (54, '文体/户外/乐器', '健身器材', '2', 2, null);
+values (54, '文体/户外/乐器类别', '健身器材', '2', 2, null);
 
 insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (55, '文体/户外/乐器', '轮滑/滑板', '3', 3, null);
+values (55, '文体/户外/乐器类别', '轮滑/滑板', '3', 3, null);
 
 insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (56, '文体/户外/乐器', '文教用品', '4', 4, null);
+values (56, '文体/户外/乐器类别', '文教用品', '4', 4, null);
 
 insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (57, '文体/户外/乐器', '乐器', '5', 5, null);
+values (57, '文体/户外/乐器类别', '乐器', '5', 5, null);
 
 insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (58, '文体/户外/乐器', '球类用品', '6', 6, null);
+values (58, '文体/户外/乐器类别', '球类用品', '6', 6, null);
 
 insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (59, '文体/户外/乐器', '瑜伽用品', '7', 7, null);
+values (59, '文体/户外/乐器类别', '瑜伽用品', '7', 7, null);
 
 insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (60, '文体/户外/乐器', '游泳用品', '8', 8, null);
+values (60, '文体/户外/乐器类别', '游泳用品', '8', 8, null);
 
 insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (61, '文体/户外/乐器', '钓鱼用具', '9', 9, null);
+values (61, '文体/户外/乐器类别', '钓鱼用具', '9', 9, null);
 
 insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (62, '文体/户外/乐器', '各类棋牌', '10', 10, null);
+values (62, '文体/户外/乐器类别', '各类棋牌', '10', 10, null);
 
 insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (63, '文体/户外/乐器', '其他文体用品', '11', 11, null);
+values (63, '文体/户外/乐器类别', '其他文体用品', '11', 11, null);
 
 insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (64, '户外用品', '帐篷', '1', 1, 53);
@@ -431,13 +431,13 @@ insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PAR
 values (143, '各类棋牌', '其他', '5', 5, 62);
 
 insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (144, '图书/音像/软件', '图书/教材', '1', 1, null);
+values (144, '图书/音像/软件类别', '图书/教材', '1', 1, null);
 
 insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (145, '图书/音像/软件', '音像', '2', 2, null);
+values (145, '图书/音像/软件类别', '音像', '2', 2, null);
 
 insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (146, '图书/音像/软件', '软件', '3', 3, null);
+values (146, '图书/音像/软件类别', '软件', '3', 3, null);
 
 insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (147, '图书/教材', '专业/技术', '1', 1, 144);
@@ -491,28 +491,28 @@ insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PAR
 values (163, '音像', '其他', '5', 5, 145);
 
 insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (164, '网游/虚拟物品', '游戏账号', '1', 1, null);
+values (164, '网游/虚拟物品类别', '游戏账号', '1', 1, null);
 
 insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (165, '网游/虚拟物品', '游戏点卡', '2', 2, null);
+values (165, '网游/虚拟物品类别', '游戏点卡', '2', 2, null);
 
 insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (166, '网游/虚拟物品', '游戏币', '3', 3, null);
+values (166, '网游/虚拟物品类别', '游戏币', '3', 3, null);
 
 insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (167, '网游/虚拟物品', '游戏装备', '4', 4, null);
+values (167, '网游/虚拟物品类别', '游戏装备', '4', 4, null);
 
 insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (168, '网游/虚拟物品', '游戏代练', '5', 5, null);
+values (168, '网游/虚拟物品类别', '游戏代练', '5', 5, null);
 
 insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (169, '网游/虚拟物品', '游戏工具', '6', 6, null);
+values (169, '网游/虚拟物品类别', '游戏工具', '6', 6, null);
 
 insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (170, '网游/虚拟物品', '充值卡', '7', 7, null);
+values (170, '网游/虚拟物品类别', '充值卡', '7', 7, null);
 
 insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (171, '网游/虚拟物品', '网络服务', '8', 8, null);
+values (171, '网游/虚拟物品类别', '网络服务', '8', 8, null);
 
 insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (172, '游戏', '艾尔之光', 'A', 1, null);
@@ -1013,7 +1013,7 @@ insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PAR
 values (337, '游戏', '突击风暴', 'T', 166, null);
 
 insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (338, '游戏', '完美一卡通', 'W', 167, null);
+values (338, '游戏', '王者荣耀', 'W', 167, null);
 
 insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (339, '游戏', '武魂', 'W', 168, null);
@@ -1158,5 +1158,74 @@ values (385, '游戏', '征途怀旧版', 'Z', 214, null);
 
 insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (386, '游戏', '战网一卡通', 'Z', 215, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (387, '艺术品价格', '1000元以下', '1', 1, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (388, '艺术品价格', '1000-5000元', '2', 2, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (389, '艺术品价格', '5000-10000元', '3', 3, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (390, '艺术品价格', '10000-20000元', '4', 4, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (391, '艺术品价格', '20000-40000元', '5', 5, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (392, '艺术品价格', '40000-60000元', '6', 6, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (393, '艺术品价格', '60000元以上', '7', 7, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (394, '户外用品价格', '100元以下', '1', 1, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (395, '户外用品价格', '100-500元', '2', 2, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (396, '户外用品价格', '500-1000元', '3', 3, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (397, '户外用品价格', '1000-2000元', '4', 4, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (398, '户外用品价格', '2000-3000元', '5', 5, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (399, '户外用品价格', '3000-5000元', '6', 6, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (400, '户外用品价格', '5000元以上', '7', 7, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (401, '图书价格', '20元以下', '1', 1, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (402, '图书价格', '20-50元', '2', 2, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (403, '图书价格', '50-100元', '3', 3, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (404, '图书价格', '100-150元', '4', 4, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (405, '图书价格', '150-200元', '5', 5, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (406, '图书价格', '200-300元', '6', 6, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (407, '图书价格', '300-500元', '7', 7, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (408, '图书价格', '500-1000元', '8', 8, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (409, '图书价格', '1000元以上', '9', 9, null);
 
 prompt Done.

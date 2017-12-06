@@ -29,37 +29,37 @@ insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENT
 values (9, '婚庆', '珠宝首饰', '9', 9, null);
 
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (10, '婚庆公司', '婚车租赁', '1', 1, null);
+values (10, '婚庆公司服务提供', '婚车租赁', '1', 1, null);
 
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (11, '婚庆公司', '流程策划', '2', 2, null);
+values (11, '婚庆公司服务提供', '流程策划', '2', 2, null);
 
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (12, '婚庆公司', '司仪督导', '3', 3, null);
+values (12, '婚庆公司服务提供', '司仪督导', '3', 3, null);
 
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (13, '婚庆公司', '乐队视频', '4', 4, null);
+values (13, '婚庆公司服务提供', '乐队视频', '4', 4, null);
 
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (14, '婚庆公司', '摄像摄影', '5', 5, null);
+values (14, '婚庆公司服务提供', '摄像摄影', '5', 5, null);
 
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (15, '婚庆公司', '婚礼跟妆', '6', 6, null);
+values (15, '婚庆公司服务提供', '婚礼跟妆', '6', 6, null);
 
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (22, '婚礼类型', '室内婚礼', '1', 1, null);
+values (22, '婚宴酒店婚礼类型', '室内婚礼', '1', 1, null);
 
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (23, '婚礼类型', '草坪婚礼', '2', 2, null);
+values (23, '婚宴酒店婚礼类型', '草坪婚礼', '2', 2, null);
 
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (24, '婚礼类型', '中式婚礼', '3', 3, null);
+values (24, '婚宴酒店婚礼类型', '中式婚礼', '3', 3, null);
 
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (25, '婚礼类型', '创意婚礼', '4', 4, null);
+values (25, '婚宴酒店婚礼类型', '创意婚礼', '4', 4, null);
 
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (26, '婚礼类型', '集体婚礼', '5', 5, null);
+values (26, '婚宴酒店婚礼类型', '集体婚礼', '5', 5, null);
 
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (27, '酒店星级', '三星级', '1', 1, null);
@@ -71,55 +71,55 @@ insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENT
 values (29, '酒店星级', '五星级', '3', 3, null);
 
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (38, '婚庆用品', '请柬', '1', 1, 5);
+values (38, '婚庆用品类型', '请柬', '1', 1, 5);
 
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (39, '婚庆用品', '蛋糕', '2', 2, 5);
+values (39, '婚庆用品类型', '蛋糕', '2', 2, 5);
 
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (40, '婚庆用品', '喜糖', '3', 3, 5);
+values (40, '婚庆用品类型', '喜糖', '3', 3, 5);
 
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (41, '婚庆用品', '喜糖盒', '4', 4, 5);
+values (41, '婚庆用品类型', '喜糖盒', '4', 4, 5);
 
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (42, '婚庆用品', '喜糖袋', '5', 5, 5);
+values (42, '婚庆用品类型', '喜糖袋', '5', 5, 5);
 
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (43, '婚庆用品', '花饰', '6', 6, 5);
+values (43, '婚庆用品类型', '花饰', '6', 6, 5);
 
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (44, '婚庆用品', '气球', '7', 7, 5);
+values (44, '婚庆用品类型', '气球', '7', 7, 5);
 
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (45, '婚庆用品', '礼花', '8', 8, 5);
+values (45, '婚庆用品类型', '礼花', '8', 8, 5);
 
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (46, '婚庆用品', '烟酒茶饮料', '9', 9, 5);
+values (46, '婚庆用品类型', '烟酒茶饮料', '9', 9, 5);
 
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (47, '婚庆用品', '礼金簿', '10', 10, 5);
+values (47, '婚庆用品类型', '礼金簿', '10', 10, 5);
 
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (48, '婚庆用品', '签名册', '11', 11, 5);
+values (48, '婚庆用品类型', '签名册', '11', 11, 5);
 
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (49, '婚庆用品', '签字笔', '12', 12, 5);
+values (49, '婚庆用品类型', '签字笔', '12', 12, 5);
 
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (50, '婚庆用品', '红包', '13', 13, 5);
+values (50, '婚庆用品类型', '红包', '13', 13, 5);
 
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (51, '婚庆用品', '喜字喜贴', '14', 14, 5);
+values (51, '婚庆用品类型', '喜字喜贴', '14', 14, 5);
 
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (52, '婚庆用品', '桌位卡', '15', 15, 5);
+values (52, '婚庆用品类型', '桌位卡', '15', 15, 5);
 
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (53, '婚庆用品', '席位卡', '16', 16, 5);
+values (53, '婚庆用品类型', '席位卡', '16', 16, 5);
 
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (54, '婚庆用品', '其他', '17', 17, 5);
+values (54, '婚庆用品类型', '其他', '17', 17, 5);
 
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (61, '从业时间', '1年以下', '1', 1, null);
@@ -135,15 +135,6 @@ values (64, '从业时间', '5-10年', '4', 4, null);
 
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (65, '从业时间', '10年以上', '5', 5, null);
-
-insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (66, '跟拍类型', '婚礼摄影', '1', 1, null);
-
-insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (67, '跟拍类型', '婚礼摄像', '2', 2, null);
-
-insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (68, '跟拍类型', '婚礼微电影/MV', '3', 3, null);
 
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (69, '婚纱礼服颜色', '红', '1', 1, null);
@@ -626,30 +617,324 @@ insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENT
 values (228, '珠宝首饰', '胸针', '11', 11, null);
 
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (229, '拍摄风格', '韩式', '1', 1, null);
+values (229, '婚纱摄影拍摄风格', '韩式', '1', 1, null);
 
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (230, '拍摄风格', '欧式', '2', 2, null);
+values (230, '婚纱摄影拍摄风格', '欧式', '2', 2, null);
 
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (231, '拍摄风格', '中式', '3', 3, null);
+values (231, '婚纱摄影拍摄风格', '中式', '3', 3, null);
 
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (232, '拍摄风格', '古典', '4', 4, null);
+values (232, '婚纱摄影拍摄风格', '古典', '4', 4, null);
 
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (233, '拍摄风格', '浪漫', '5', 5, null);
+values (233, '婚纱摄影拍摄风格', '浪漫', '5', 5, null);
 
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (234, '拍摄风格', '清纯', '6', 6, null);
+values (234, '婚纱摄影拍摄风格', '清纯', '6', 6, null);
 
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (235, '拍摄风格', '性感', '7', 7, null);
+values (235, '婚纱摄影拍摄风格', '性感', '7', 7, null);
 
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (236, '拍摄风格', '另类', '8', 8, null);
+values (236, '婚纱摄影拍摄风格', '另类', '8', 8, null);
 
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (237, '拍摄风格', '怀旧', '9', 9, null);
+values (237, '婚纱摄影拍摄风格', '怀旧', '9', 9, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (238, '婚庆公司价格', '5000元以下', '1', 1, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (239, '婚庆公司价格', '5000-10000元', '2', 2, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (240, '婚庆公司价格', '10000-15000元', '3', 3, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (241, '婚庆公司价格', '15000-20000元', '4', 4, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (241, '婚庆公司价格', '20000-30000元', '5', 5, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (243, '婚庆公司价格', '30000-50000元', '6', 6, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (244, '婚庆公司价格', '50000元以上', '7', 7, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (245, '婚车租赁价格', '500元以下', '1', 1, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (246, '婚车租赁价格', '500-1000元', '2', 2, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (247, '婚车租赁价格', '1000-2000元', '3', 3, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (248, '婚车租赁价格', '2000-3000元', '4', 4, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (249, '婚车租赁价格', '3000-5000元', '5', 5, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (250, '婚车租赁价格', '5000元以上', '6', 6, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (251, '婚车颜色', '红', '1', 1, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (252, '婚车颜色', '黄', '2', 2, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (253, '婚车颜色', '黑', '3', 3, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (254, '婚车颜色', '白', '4', 4, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (255, '婚车颜色', '蓝', '5', 5, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (256, '婚车颜色', '绿', '6', 6, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (257, '婚车颜色', '灰', '7', 7, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (258, '婚车颜色', '紫', '8', 8, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (259, '婚车颜色', '金', '9', 9, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (260, '婚车颜色', '橙', '10', 10, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (261, '婚车颜色', '棕', '11', 11, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (262, '婚车颜色', '青', '12', 12, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (263, '婚车颜色', '栗', '13', 13, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (264, '婚车颜色', '米', '14', 14, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (265, '婚车颜色', '银', '15', 15, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (266, '婚车颜色', '褐', '16', 16, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (267, '婚车颜色', '其他', '17', 17, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (268, '婚车租赁套餐出租', '是', '1', 1, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (269, '婚车租赁套餐出租', '否', '2', 2, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (270, '婚宴酒店价格范围', '500元以下', '1', 1, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (271, '婚宴酒店价格范围', '500-1000元', '2', 2, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (272, '婚宴酒店价格范围', '1000-1500元', '3', 3, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (273, '婚宴酒店价格范围', '1500-2000元', '4', 4, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (274, '婚宴酒店价格范围', '2000-3000元', '5', 5, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (275, '婚宴酒店价格范围', '3000元以上', '6', 6, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (276, '婚宴酒店容纳桌数', '10桌以下', '1', 1, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (277, '婚宴酒店容纳桌数', '11-20桌', '2', 2, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (278, '婚宴酒店容纳桌数', '21-30桌', '3', 3, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (279, '婚宴酒店容纳桌数', '31-40桌', '4', 4, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (280, '婚宴酒店容纳桌数', '40桌以上', '5', 5, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (281, '婚宴酒店酒店类型', '星级酒店', '1', 1, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (282, '婚宴酒店酒店类型', '特色餐厅', '2', 2, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (283, '婚宴酒店酒店类型', '高级会所', '3', 3, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (284, '彩妆造型价格范围', '200元以下', '1', 1, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (285, '彩妆造型价格范围', '200-400元', '2', 2, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (286, '彩妆造型价格范围', '400-800元', '3', 3, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (287, '彩妆造型价格范围', '800-1000元', '4', 4, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (288, '彩妆造型价格范围', '1000-2000元', '5', 5, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (289, '彩妆造型价格范围', '2000元以上', '6', 6, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (290, '彩妆造型化妆类型', '新娘妆', '1', 1, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (291, '彩妆造型化妆类型', '宴会/主持人妆', '2', 2, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (292, '彩妆造型化妆类型', '年会/演出妆', '3', 3, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (293, '彩妆造型化妆类型', '杂志广告妆', '4', 4, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (294, '彩妆造型服务形式', '上门', '1', 1, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (295, '彩妆造型服务形式', '到店', '2', 2, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (296, '婚庆用品价格范围', '10元以下', '1', 1, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (297, '婚庆用品价格范围', '10-50元', '2', 2, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (298, '婚庆用品价格范围', '50-100元', '3', 3, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (299, '婚庆用品价格范围', '100-200元', '4', 4, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (300, '婚庆用品价格范围', '200元以上', '5', 5, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (301, '司仪价格范围', '500元以下', '1', 1, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (302, '司仪价格范围', '500-1000元', '2', 2, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (303, '司仪价格范围', '1000-1500元', '3', 3, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (304, '司仪价格范围', '1500-2000元', '4', 4, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (305, '司仪价格范围', '2000-3000元', '5', 5, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (306, '司仪价格范围', '3000元以上', '6', 6, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (307, '司仪性别', '男', '1', 1, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (308, '司仪性别', '女', '2', 2, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (309, '司仪主持风格', '幽默', '1', 1, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (310, '司仪主持风格', '稳重', '2', 2, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (311, '司仪主持风格', '开朗', '3', 3, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (312, '司仪主持风格', '激情', '4', 4, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (313, '司仪从业时间', '1年以下', '1', 1, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (314, '司仪从业时间', '1-3年', '2', 2, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (315, '司仪从业时间', '3-5年', '3', 3, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (316, '司仪从业时间', '5-10年', '4', 4, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (317, '司仪从业时间', '10年以上', '5', 5, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (318, '婚礼跟拍类型', '婚礼摄影', '1', 1, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (319, '婚礼跟拍类型', '婚礼摄像', '2', 2, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (320, '婚礼跟拍类型', '婚礼微电影/MV', '3', 3, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (321, '婚纱摄影价格范围', '3000元以下', '1', 1, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (322, '婚纱摄影价格范围', '3000-5000元', '2', 2, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (323, '婚纱摄影价格范围', '5000-8000元', '3', 3, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (324, '婚纱摄影价格范围', '8000-15000元', '4', 4, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (325, '婚纱摄影价格范围', '15000元以上', '5', 5, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (326, '婚纱摄影类型', '摄影工作室', '1', 1, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (327, '婚纱摄影类型', '影楼', '2', 2, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (328, '婚纱摄影拍摄地点', '纯内景', '1', 1, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (329, '婚纱摄影拍摄地点', '内/外景', '2', 2, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (330, '婚纱摄影拍摄地点', '旅游', '3', 3, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (331, '婚纱摄影服装套数', '4套以下', '1', 1, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (332, '婚纱摄影服装套数', '4-5套', '2', 2, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (333, '婚纱摄影服装套数', '6-7套', '3', 3, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (334, '婚纱摄影服装套数', '8-9套', '4', 4, null);
+
+insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (335, '婚纱摄影服装套数', '9套以上', '5', 5, null);
 
 prompt Done.

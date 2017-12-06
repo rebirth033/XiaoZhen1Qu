@@ -203,16 +203,16 @@ insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENT
 values (67, '周边游行程天数', '四日游', '4', 4, null);
 
 insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (68, '酒店/住宿预订', '星级酒店', '1', 1, null);
+values (68, '酒店/住宿预订类别', '星级酒店', '1', 1, null);
 
 insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (69, '酒店/住宿预订', '特价住宿', '2', 2, null);
+values (69, '酒店/住宿预订类别', '特价住宿', '2', 2, null);
 
 insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (70, '酒店/住宿预订', '经济型酒店', '3', 3, null);
+values (70, '酒店/住宿预订类别', '经济型酒店', '3', 3, null);
 
 insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (71, '酒店/住宿预订', '宾馆/旅店/招待所', '4', 4, null);
+values (71, '酒店/住宿预订类别', '宾馆/旅店/招待所', '4', 4, null);
 
 insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (72, '星级酒店', '三星级', '1', 1, 68);
@@ -224,10 +224,10 @@ insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENT
 values (74, '星级酒店', '五星级', '3', 3, 68);
 
 insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (75, '机票', '国际机票', '1', 1, null);
+values (75, '机票类别', '国际机票', '1', 1, null);
 
 insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (76, '机票', '国内机票', '2', 2, null);
+values (76, '机票类别', '国内机票', '2', 2, null);
 
 insert into codes_lyjd (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (77, '导游类型', '专职导游', '1', 1, null);
