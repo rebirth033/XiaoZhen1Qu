@@ -6,9 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadESCondition() {
-    LoadConditionByTypeName("办公用品/设备", "CODES_ES_JDJJBG", "类别", "LB");
-    LoadConditionByTypeName("电视价格", "CODES_ES_JDJJBG", "价格", "JG");
-    LoadDistrict("福州", "350100", "QY");
+    LoadConditionByTypeNames("'办公用品/设备类别','电视价格'", "CODES_ES_JDJJBG", "类别,价格", "LB,JG", "15,15");
     LoadBody("ESXX_JDJJBG_BGSB", currentIndex);
 }
 //选择条件
@@ -46,7 +44,7 @@ function LoadBody(TYPE, PageIndex) {
                 $("#ul_body_left").html('');
                 LoadPage(TYPE, xml.PageCount);
                 for (var i = 0; i < xml.list.length; i++) {
-                    LoadESInfo(xml.list[i]);
+                    LoadInfo(xml.list[i]);
                 }
             }
         },
@@ -56,15 +54,15 @@ function LoadBody(TYPE, PageIndex) {
     });
 }
 //加载二手单条信息
-function LoadESInfo(obj) {
+function LoadInfo(obj) {
     var html = "";
-    html += ('<li class="li_body_left">');
+    html += ('<li class="li_body_left" onclick="OpenXXXX(\'ESXX_JDJJBG_BGSB\',\'' + obj.ID + '\')">');
     html += ('<div class="div_li_body_left_left">');
-    html += ('<img class="img_li_body_left" onclick="OpenXXXX(\'ESXX_JDJJBG_BGSB\',\'' + obj.ID + '\')" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
+    html += ('<img class="img_li_body_left" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<div class="div_img_li_body_left_count"><span>' + obj.PHOTOS.length + '图</span></div>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
-    html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'ESXX_JDJJBG_BGSB\',\'' + obj.ID + '\')">' + TruncStr(obj.BT,35) + '</p>');
+    html += ('<p class="p_li_body_left_center_bt">' + TruncStr(obj.BT,35) + '</p>');
     html += (TruncStr(obj.BCMSString, 35));
     html += ('<p class="p_li_body_left_center_dz font_size14">' + obj.QY + ' - ' + obj.DD + '<label>/</label>' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
@@ -105,7 +103,7 @@ function LoadHotInfo(obj) {
     var html = "";
     html += ('<li onclick="OpenXXXX(\'ESXX_JDJJBG_BGSB\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_right_xq">' + "服务项目:" + obj.LB + '</p>');
+    html += ('<p class="p_li_body_right_xq">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_right_cs">' + obj.QY + '-' + obj.DD + '</p>');
     html += ('<p class="p_li_body_right_jg">' + obj.JG + '元</p>');
     html += ('</li>');

@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-
     LoadES_JDJJBG_JJRYJBXX();
     BindClick("LB");
     BindClick("XJ");
@@ -8,7 +7,7 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("家居/日用品", "LB", "CODES_ES_JDJJBG", Bind, "JJRYLB", "LB", "");
+            LoadCODESByTYPENAME("家居/日用品类别", "LB", "CODES_ES_JDJJBG", Bind, "JJRYLB", "LB", "");
         }
         if (type === "XL") {
             LoadCODESByTYPENAME($("#spanLB").html(), "XL", "CODES_ES_JDJJBG", Bind, "JJRYLB", "XL", "");

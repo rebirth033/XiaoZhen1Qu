@@ -6,9 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadESCondition() {
-    LoadConditionByTypeName("家居/日用品", "CODES_ES_JDJJBG", "类别", "LB");
-    LoadConditionByTypeName("电视价格", "CODES_ES_JDJJBG", "价格", "JG");
-    LoadDistrict("福州", "350100", "QY");
+    LoadConditionByTypeNames("'家居/日用品类别','电视价格'", "CODES_ES_JDJJBG", "类别,价格", "LB,JG", "15,15");
     LoadBody("ESXX_JDJJBG_JJRY", currentIndex);
 }
 //选择条件

@@ -9,7 +9,7 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("办公用品/设备", "LB", "CODES_ES_JDJJBG", Bind, "BGSBLB", "LB", "");
+            LoadCODESByTYPENAME("办公用品/设备类别", "LB", "CODES_ES_JDJJBG", Bind, "BGSBLB", "LB", "");
         }
         if (type === "XL") {
             LoadCODESByTYPENAME($("#spanLB").html(), "XL", "CODES_ES_JDJJBG", Bind, "BGSBLB", "XL", "");

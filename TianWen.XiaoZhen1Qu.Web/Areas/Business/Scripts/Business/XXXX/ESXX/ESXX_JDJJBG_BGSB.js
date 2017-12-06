@@ -1,4 +1,5 @@
-﻿$(document).ready(function () {
+﻿var right = 0;
+$(document).ready(function () {
 
 });
 //加载默认
@@ -16,9 +17,9 @@ function LoadDefault() {
             if (xml.Result === 1) {
                 LoadJBXX(xml.list[0]);
                 LoadXQ(xml.list[0], xml.BCMSString);
-                LoadCNXH("ESXX_JDJJBG_ESJJ");
+                LoadCNXH("ESXX_JDJJBG_BGSB");
                 LoadGRXX(xml.grxxlist[0]);
-                LoadJJRTJFY("ESXX_JDJJBG_ESJJ");
+                LoadJJRTJFY("ESXX_JDJJBG_BGSB");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -77,9 +78,6 @@ function LoadJBXX(obj) {
     $("#div_body_left").append(html);
     HandlerTPXX();
 }
-
-var right = 0;
-
 //加载详情
 function LoadXQ(obj, BCMSString) {
     var html = "";
@@ -110,7 +108,6 @@ function LoadXQ(obj, BCMSString) {
         $("#div_body_left_body_xq_zk").css("display", "block");
     }
 }
-
 //加载猜你喜欢
 function LoadCNXH(TYPE) {
     $.ajax({
@@ -136,7 +133,7 @@ function LoadCNXH(TYPE) {
                 html += ('</ul>');
                 html += ('</div>');
                 $("#div_body_left").append(html);
-                LoadJPTJ("CW");
+                LoadJPTJ("ESXX_JDJJBG_BGSB");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -147,7 +144,7 @@ function LoadCNXH(TYPE) {
 //加载猜你喜欢单条信息
 function LoadCNXHInfo(obj) {
     var html = "";
-    html += ('<li onclick="OpenXXXX(\'ESXX_JDJJBG_ESJJ\',\'' + obj.ID + '\')" class="li_body_left_body_cnxh">');
+    html += ('<li onclick="OpenXXXX(\'ESXX_JDJJBG_BGSB\',\'' + obj.ID + '\')" class="li_body_left_body_cnxh">');
     html += ('<img class="img_li_body_left_body_cnxh" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_left_body_cnxh_xq">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_left_body_cnxh_cs">' + obj.QY + '-' + obj.DD + '</p>');
@@ -190,7 +187,7 @@ function LoadJPTJ(TYPE) {
 //加载精品推荐单条信息
 function LoadJPTJInfo(obj) {
     var html = "";
-    html += ('<li onclick="OpenXXXX(\'ESXX_JDJJBG_ESJJ\',\'' + obj.ID + '\')" class="li_body_left_body_jptj">');
+    html += ('<li onclick="OpenXXXX(\'ESXX_JDJJBG_BGSB\',\'' + obj.ID + '\')" class="li_body_left_body_jptj">');
     html += ('<img class="img_li_body_left_body_jptj" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_left_body_jptj_xq">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_left_body_jptj_cs">' + obj.QY + '-' + obj.DD + '</p>');
@@ -236,7 +233,7 @@ function LoadJJRTJFY(TYPE) {
 //加载该经纪人推荐单条信息
 function LoadJJRTJFYInfo(obj) {
     var html = "";
-    html += ('<li onclick="OpenXXXX(\'ESXX_JDJJBG_ESJJ\',\'' + obj.ID + '\')" class="li_body_right_jjrtj">');
+    html += ('<li onclick="OpenXXXX(\'ESXX_JDJJBG_BGSB\',\'' + obj.ID + '\')" class="li_body_right_jjrtj">');
     html += ('<img class="img_li_body_right_jjrtj" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<div class="div_li_body_right_jjrtj">');
     html += ('<p class="p_li_body_right_jjrtj_xq">' + obj.BT + '</p>');

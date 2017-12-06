@@ -3,14 +3,13 @@
     LoadES_MYFZMR_MYETYPWJJBXX();
     BindClick("LB");
     BindClick("XJ");
-
 });
 
 //绑定下拉框
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("母婴/儿童用品/玩具", "LB", "CODES_ES_MYFZMR", Bind, "MYETYPWJLB", "LB", "");
+            LoadCODESByTYPENAME("母婴/儿童用品/玩具类别", "LB", "CODES_ES_MYFZMR", Bind, "MYETYPWJLB", "LB", "");
         }
         if (type === "XL") {
             LoadCODESByTYPENAME($("#spanLB").html(), "XL", "CODES_ES_MYFZMR", Bind, "MYETYPWJLB", "XL", "");
@@ -18,7 +17,6 @@ function BindClick(type) {
         if (type === "XJ") {
             LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM", Bind, "XJCD", "XJ", "");
         }
-        
     });
 }
 //选择类别下拉框

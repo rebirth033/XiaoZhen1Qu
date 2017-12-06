@@ -8,7 +8,7 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("文体/户外/乐器", "LB", "CODES_ES_WHYL", Bind, "WTHWYQLB", "LB", "");
+            LoadCODESByTYPENAME("文体/户外/乐器类别", "LB", "CODES_ES_WHYL", Bind, "WTHWYQLB", "LB", "");
         }
         if (type === "XL") {
             LoadCODESByTYPENAME($("#spanLB").html(), "XL", "CODES_ES_WHYL", Bind, "WTHWYQLB", "XL", "");
@@ -16,7 +16,6 @@ function BindClick(type) {
         if (type === "XJ") {
             LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM", Bind, "XJCD", "XJ", "");
         }
-        
     });
 }
 //选择类别下拉框

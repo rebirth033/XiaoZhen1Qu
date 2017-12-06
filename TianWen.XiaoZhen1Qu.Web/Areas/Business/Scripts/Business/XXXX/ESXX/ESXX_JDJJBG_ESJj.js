@@ -1,4 +1,5 @@
-﻿$(document).ready(function () {
+﻿var right = 0;
+$(document).ready(function () {
 
 });
 //加载默认
@@ -77,9 +78,6 @@ function LoadJBXX(obj) {
     $("#div_body_left").append(html);
     HandlerTPXX();
 }
-
-var right = 0;
-
 //加载详情
 function LoadXQ(obj, BCMSString) {
     var html = "";
@@ -136,7 +134,7 @@ function LoadCNXH(TYPE) {
                 html += ('</ul>');
                 html += ('</div>');
                 $("#div_body_left").append(html);
-                LoadJPTJ("CW");
+                LoadJPTJ("ESXX_JDJJBG_ESJJ");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

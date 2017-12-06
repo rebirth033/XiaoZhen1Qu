@@ -5,13 +5,12 @@
     BindClick("PBPP");
     BindClick("PBXH");
     BindClick("XJ");
-
 });
 //绑定下拉框
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("二手家具", "LB", "CODES_ES_JDJJBG", Bind, "ESJJLB", "LB", "");
+            LoadCODESByTYPENAME("二手家具类别", "LB", "CODES_ES_JDJJBG", Bind, "ESJJLB", "LB", "");
         }
         if (type === "XL") {
             $("#divXL").css("display", "block");

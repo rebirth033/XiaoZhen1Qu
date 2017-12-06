@@ -7,7 +7,7 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("艺术品/收藏品", "LB", "CODES_ES_WHYL", Bind, "YSPSCPLB", "LB", "");
+            LoadCODESByTYPENAME("艺术品/收藏品类别", "LB", "CODES_ES_WHYL", Bind, "YSPSCPLB", "LB", "");
         }
         if (type === "XL") {
             LoadCODESByTYPENAME($("#spanLB").html(), "XL", "CODES_ES_WHYL", Bind, "YSPSCPLB", "XL", "");
