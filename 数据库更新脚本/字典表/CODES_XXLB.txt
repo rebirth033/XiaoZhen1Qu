@@ -1,0 +1,53 @@
+-- Create table
+create table CODES_XXLB
+(
+  lbid     NUMBER(4) not null,
+  lblx     VARCHAR2(20),
+  lbname   VARCHAR2(50),
+  lborder  NUMBER(4),
+  parentid NUMBER(4),
+  fbym     VARCHAR2(50),
+  fbtable  VARCHAR2(50)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 16
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table CODES_XXLB
+  is '字典表_信息类别';
+-- Add comments to the columns 
+comment on column CODES_XXLB.lbid
+  is '类别ID';
+comment on column CODES_XXLB.lblx
+  is '类别类型';
+comment on column CODES_XXLB.lbname
+  is '类别名称';
+comment on column CODES_XXLB.lborder
+  is '类别排序';
+comment on column CODES_XXLB.parentid
+  is '父级ID';
+comment on column CODES_XXLB.fbym
+  is '发布页面';
+comment on column CODES_XXLB.fbtable
+  is '类别对应数据表';
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table CODES_XXLB
+  add constraint PK_CODES_XXLB primary key (LBID)
+  using index 
+  tablespace USERS
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    minextents 1
+    maxextents unlimited
+  );
