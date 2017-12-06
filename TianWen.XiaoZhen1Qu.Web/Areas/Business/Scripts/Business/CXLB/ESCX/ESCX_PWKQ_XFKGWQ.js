@@ -6,9 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadESCondition() {
-    LoadConditionByTypeName("消费卡/购物券", "CODES_ES_PWKQ", "类别", "LB");
-    LoadConditionByTypeName("卡券价格", "CODES_ES_PWKQ", "价格", "JG");
-    LoadDistrict("福州", "350100", "QY");
+    LoadConditionByTypeNames("'消费卡/购物券类别','卡券价格'", "CODES_ES_PWKQ", "类别,价格", "LB,JG", "13,15");
     LoadBody("ESXX_PWKQ_XFKGWQ", currentIndex);
 }
 //选择条件
@@ -40,7 +38,7 @@ function LoadBody(TYPE, PageIndex) {
                 $("#ul_body_left").html('');
                 LoadPage(TYPE, xml.PageCount);
                 for (var i = 0; i < xml.list.length; i++) {
-                    LoadESInfo(xml.list[i]);
+                    LoadInfo(xml.list[i]);
                 }
             }
         },
@@ -50,13 +48,13 @@ function LoadBody(TYPE, PageIndex) {
     });
 }
 //加载二手单条信息
-function LoadESInfo(obj) {
+function LoadInfo(obj) {
     var html = "";
-    html += ('<li class="li_body_left">');
+    html += ('<li class="li_body_left" onclick="OpenXXXX(\'ESXX_PWKQ_XFKGWQ\',\'' + obj.ID + '\')">');
     html += ('<div class="div_li_body_left_left">');
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
-    html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'ESCX_PWKQ_XFKGWQ\',\'' + obj.ID + '\')">' + TruncStr(obj.BT,35) + '</p>');
+    html += ('<p class="p_li_body_left_center_bt">' + TruncStr(obj.BT,35) + '</p>');
     html += (TruncStr(obj.BCMSString, 35));
     html += ('<p class="p_li_body_left_center_dz font_size14">' + obj.QY + ' - ' + obj.DD + '<label>/</label>' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
@@ -96,8 +94,8 @@ function LoadHot(TYPE) {
 function LoadHotInfo(obj) {
     var html = "";
     html += ('<li onclick="OpenXXXX(\'ESCX_PWKQ_XFKGWQ\',\'' + obj.ID + '\')" class="li_body_right">');
-    html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_right_xq">' + "服务项目:" + obj.LB + '</p>');
+    //html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
+    html += ('<p class="p_li_body_right_xq">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_right_cs">' + obj.QY + '-' + obj.DD + '</p>');
     html += ('<p class="p_li_body_right_jg">' + obj.JG + '元</p>');
     html += ('</li>');

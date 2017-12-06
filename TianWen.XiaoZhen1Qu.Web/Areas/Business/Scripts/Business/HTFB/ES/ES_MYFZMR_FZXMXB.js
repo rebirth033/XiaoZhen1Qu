@@ -9,7 +9,7 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("服装/鞋帽/箱包", "LB", "CODES_ES_MYFZMR", Bind, "FZXMXBLB", "LB", "");
+            LoadCODESByTYPENAME("服装/鞋帽/箱包类别", "LB", "CODES_ES_MYFZMR", Bind, "FZXMXBLB", "LB", "");
         }
         if (type === "XL") {
             LoadCODESByTYPENAME($("#spanLB").html(), "XL", "CODES_ES_MYFZMR", Bind, "FZXMXBLB", "XL", "");

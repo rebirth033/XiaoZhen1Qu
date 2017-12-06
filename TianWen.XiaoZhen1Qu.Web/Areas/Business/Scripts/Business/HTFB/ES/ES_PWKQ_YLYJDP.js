@@ -1,15 +1,13 @@
 ﻿$(document).ready(function () {
     $("#YXQZ").datepicker({ minDate: 0 });
-
     LoadES_PWKQ_YLYJDPJBXX();
     BindClick("LB");
 });
-
 //绑定下拉框
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("游乐园/景点票", "LB", "CODES_ES_PWKQ", Bind, "YLYJDPLB", "LB", "");
+            LoadCODESByTYPENAME("游乐园/景点票类别", "LB", "CODES_ES_PWKQ", Bind, "YLYJDPLB", "LB", "");
         }
     });
 }

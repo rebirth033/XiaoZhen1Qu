@@ -1,17 +1,8 @@
 ﻿$(document).ready(function () {
     $("#YXQZ").datepicker({ minDate: 0 });
-
     LoadES_PWKQ_QTKQJBXX();
-    BindClick("LB");
     BindClick("XJ");
 });
-
-//绑定下拉框
-function BindClick(type) {
-    $("#div" + type + "Span").click(function() {
-        
-    });
-}
 //加载票务卡券_电影票基本信息
 function LoadES_PWKQ_QTKQJBXX() {
     $.ajax({

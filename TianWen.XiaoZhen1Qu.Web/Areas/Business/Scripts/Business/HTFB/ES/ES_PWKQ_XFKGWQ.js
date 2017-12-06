@@ -1,15 +1,13 @@
 ﻿$(document).ready(function () {
     $("#YXQZ").datepicker({ minDate: 0 });
-
     LoadES_PWKQ_XFKGWQJBXX();
     BindClick("LB");
 });
-
 //绑定下拉框
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("消费卡/购物券", "LB", "CODES_ES_PWKQ", Bind, "XFKGWQLB", "LB", "");
+            LoadCODESByTYPENAME("消费卡/购物券类别", "LB", "CODES_ES_PWKQ", Bind, "XFKGWQLB", "LB", "");
         }
     });
 }
@@ -30,10 +28,7 @@ function LoadES_PWKQ_XFKGWQJBXX() {
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
                 $("#ID").val(xml.Value.ES_PWKQ_XFKGWQJBXX.ID);
                 //设置编辑器的内容
-                ue.ready(function () {
-                    ue.setHeight(200);
-                    ue.setContent(xml.Value.BCMSString);
-                });
+                ue.ready(function () { ue.setHeight(200); ue.setContent(xml.Value.BCMSString); });
                 if (xml.Value.ES_PWKQ_XFKGWQJBXX.GQ !== null)
                     SetDX("GQ", xml.Value.ES_PWKQ_XFKGWQJBXX.GQ);
                 $("#spanLB").html(xml.Value.ES_PWKQ_XFKGWQJBXX.LB);
