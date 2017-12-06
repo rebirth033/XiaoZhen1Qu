@@ -102,7 +102,7 @@ function LoadDuoX(type, id) {
         }
     });
 }
-//绑定下拉框鼠标点击样式
+//绑定下拉框
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "YZ") {

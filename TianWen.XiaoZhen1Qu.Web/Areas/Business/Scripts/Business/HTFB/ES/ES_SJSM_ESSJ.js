@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-
     BindClick("SJPP");
     BindClick("SJXH");
     LoadDuoX("特色标签", "TSBQ");
@@ -39,7 +38,7 @@ function LoadDuoX(type, id) {
         }
     });
 }
-//绑定下拉框鼠标点击样式
+//绑定下拉框
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "SJPP") {
@@ -48,7 +47,6 @@ function BindClick(type) {
         if (type === "SJXH") {
             LoadSJXH();
         }
-        
     });
 }
 //加载手机型号

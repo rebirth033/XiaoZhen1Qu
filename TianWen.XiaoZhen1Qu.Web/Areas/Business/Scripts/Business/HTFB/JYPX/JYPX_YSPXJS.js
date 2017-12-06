@@ -53,7 +53,7 @@ function BYYXXZ(BYYXMC, BYYXID) {
     $("#divBYYX").css("display", "none");
     ValidateSelect("YSPXJSBYYX", "BYYX", "忘记选择毕业院校啦");
 }
-//绑定下拉框鼠标点击样式
+//绑定下拉框
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "JXKM") {

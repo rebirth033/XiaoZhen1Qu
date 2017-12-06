@@ -153,7 +153,7 @@ function GCPPXZ(GCPPMC, GCPPID) {
     $("#divGCPP").css("display", "none");
     ValidateSelect("HCZLGCPP", "GCPP", "忘记选择跟车品牌啦");
 }
-//绑定下拉框鼠标点击样式
+//绑定下拉框
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "TCPP") {

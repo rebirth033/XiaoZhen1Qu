@@ -4,7 +4,7 @@
     BindXZQClick("QY");
     BindXZQClick("DD");
 });
-//绑定下拉框鼠标点击样式
+//绑定下拉框
 function BindXZQClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "QY") {

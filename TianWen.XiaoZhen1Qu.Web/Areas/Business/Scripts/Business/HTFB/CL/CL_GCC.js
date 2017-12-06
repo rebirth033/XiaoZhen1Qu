@@ -118,7 +118,7 @@ function PPXZ(PPMC, PPID) {
     $("#spanPP").html(PPMC);
     $("#divPP").css("display", "none");
 }
-//绑定下拉框鼠标点击样式
+//绑定下拉框
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "CX") {

@@ -1,20 +1,18 @@
 ﻿$(document).ready(function () {
-
     LoadNLMFY_FLNYJBXX();
     BindClick("LB");
 });
 
-//绑定下拉框鼠标点击样式
+//绑定下拉框
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("肥料/农药", "LB", "CODES_NLMFY", Bind, "OUTLB", "LB", "");
+            LoadCODESByTYPENAME("肥料/农药类别", "LB", "CODES_NLMFY", Bind, "OUTLB", "LB", "");
         }
         if (type === "XL") {
             LoadXL();
             LoadXLMC($("#spanLB").html(), "divA");
         }
-        
     });
 }
 //选择类别下拉框

@@ -3,7 +3,7 @@
     BindClick("LB");
     LoadDuoX("婚庆公司服务提供", "TGFW");
 });
-//绑定下拉框鼠标点击样式
+//绑定下拉框
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         
