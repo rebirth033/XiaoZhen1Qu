@@ -11,7 +11,7 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("二手家电", "LB", "CODES_ES_JDJJBG", Bind, "ESJDLB", "LB", "");
+            LoadCODESByTYPENAME("二手家电类别", "LB", "CODES_ES_JDJJBG", Bind, "ESJDLB", "LB", "");
         }
         if (type === "XL") {
             LoadCODESByTYPENAME($("#spanLB").html(), "XL", "CODES_ES_JDJJBG", Bind, "ESJDLB", "XL", "");

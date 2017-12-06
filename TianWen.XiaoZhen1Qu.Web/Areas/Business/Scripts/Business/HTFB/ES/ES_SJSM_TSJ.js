@@ -1,9 +1,6 @@
 ﻿$(document).ready(function () {
-
     LoadES_SJSM_TSJJBXX();
     BindClick("LB");
-    BindClick("PBPP");
-    BindClick("PBXH");
     BindClick("XJ");
 
     BindClick("CPUPP");
@@ -18,7 +15,7 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("台式机/配件", "LB", "CODES_ES_SJSM", Bind, "TSJLB", "LB", "");
+            LoadCODESByTYPENAME("台式机/配件类别", "LB", "CODES_ES_SJSM", Bind, "TSJLB", "LB", "");
         }
         if (type === "XL") {
             LoadCODESByTYPENAME($("#spanLB").html(), "XL", "CODES_ES_SJSM", Bind, "TSJLB", "XL", "");
@@ -36,7 +33,7 @@ function BindClick(type) {
             LoadCODESByTYPENAME("硬盘", "YP", "CODES_ES_SJSM");
         }
         if (type === "PMCC") {
-            LoadCODESByTYPENAME("屏幕尺寸", "PMCC", "CODES_ES_SJSM");
+            LoadCODESByTYPENAME("台式机屏幕尺寸", "PMCC", "CODES_ES_SJSM");
         }
         if (type === "XK") {
             LoadCODESByTYPENAME("显卡", "XK", "CODES_ES_SJSM");
@@ -44,7 +41,6 @@ function BindClick(type) {
         if (type === "XJ") {
             LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM", Bind, "XJCD", "XJ", "");
         }
-        
     });
 }
 //选择类别下拉框

@@ -6,7 +6,7 @@
 //验证台式机/配件类别
 function ValidateTSJLB() {
     if (!ValidateSelect("TSJLB", "LB", "请选择类别")) return false;
-    if (!ValidateSelect("TSJLB", "XL", "请选择小类")) return false;
+    //if (!ValidateSelect("TSJLB", "XL", "请选择小类")) return false;
     return true;
 }
 //验证所有
