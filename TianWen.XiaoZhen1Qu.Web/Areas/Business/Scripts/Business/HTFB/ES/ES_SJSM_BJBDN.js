@@ -1,7 +1,6 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function () { Close("_XZQ");});
     LoadES_SJSM_BJBDNJBXX();
-
     BindClick("LB");
     BindClick("BJBPP");
     BindClick("XL");
@@ -52,7 +51,6 @@ function BindClick(type) {
         if (type === "XJ") {
             LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM", Bind, "XJCD", "XJ", "");
         }
-        
     });
 }
 //加载笔记本型号

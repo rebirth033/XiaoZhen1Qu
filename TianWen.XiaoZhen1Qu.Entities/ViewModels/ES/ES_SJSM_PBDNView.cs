@@ -22,8 +22,8 @@ namespace TianWen.XiaoZhen1Qu.Entities.ViewModels.ES
         //二手_手机数码_平板电脑信息
         public string ID { get; set; }
         public string GQ { get; set; }
-        public string PBPP { get; set; }
-        public string PBXH { get; set; }
+        public string PP { get; set; }
+        public string XH { get; set; }
         public string LB { get; set; }
         public string XJ { get; set; }
         public string JG { get; set; }
