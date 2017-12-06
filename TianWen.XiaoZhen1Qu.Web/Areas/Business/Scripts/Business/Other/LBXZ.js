@@ -59,16 +59,16 @@ function LoadXL(LBID, LBNAME) {
                 var XLhtml = "", trhtml = "";
                 if (LBNAME === "二手" || LBNAME === "生活服务" || LBNAME === "商务服务" || LBNAME === "车辆") {
                     for (var i = 0; i < xml.list.length; i++) {
-                        if (xml.list[i].XXLBS.length > 5)
+                        if (xml.list[i].CODES_XXLBS.length > 5)
                             trhtml = "<tr><td class=\"LBFirst\">" + xml.list[i].LBNAME + "</td>";
                         else
                             trhtml = "<tr class=\"trXL\"><td class=\"LBFirst\">" + xml.list[i].LBNAME + "</td>";
-                        for (var j = 0; j < xml.list[i].XXLBS.length; j++) {
+                        for (var j = 0; j < xml.list[i].CODES_XXLBS.length; j++) {
                             if (j === 5) {
                                 trhtml = "<tr class=\"trXL\"><td class=\"LBFirst\"></td>";
                             }
-                            trhtml += "<td class=\"LB\" onclick=\"FBXX('" + xml.list[i].XXLBS[j].FBYM + "','" + xml.list[i].XXLBS[j].LBID + "')\">" + xml.list[i].XXLBS[j].LBNAME + "</td>";
-                            if (j === 4 && j !== (xml.list[i].XXLBS.length - 1)) {
+                            trhtml += "<td class=\"LB\" onclick=\"FBXX('" + xml.list[i].CODES_XXLBS[j].FBYM + "','" + xml.list[i].CODES_XXLBS[j].LBID + "')\">" + xml.list[i].CODES_XXLBS[j].LBNAME + "</td>";
+                            if (j === 4 && j !== (xml.list[i].CODES_XXLBS.length - 1)) {
                                 trhtml += "</tr>";
                                 XLhtml += trhtml;
                             }

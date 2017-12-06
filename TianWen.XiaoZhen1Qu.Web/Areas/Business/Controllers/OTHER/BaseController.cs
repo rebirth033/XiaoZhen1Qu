@@ -55,8 +55,8 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public string GetLBQCByLBID(int LBID)
         {
-            XXLB xl = DataFactory.GetObjectById<XXLB>(LBID);
-            XXLB dl = DataFactory.GetObjectById<XXLB>(xl.PARENTID);
+            CODES_XXLB xl = DataFactory.GetObjectById<CODES_XXLB>(LBID);
+            CODES_XXLB dl = DataFactory.GetObjectById<CODES_XXLB>(xl.PARENTID);
             return dl.LBNAME + "-" + xl.LBNAME;
         }
     }

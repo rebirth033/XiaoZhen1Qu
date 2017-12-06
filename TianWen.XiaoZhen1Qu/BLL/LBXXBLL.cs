@@ -12,7 +12,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
         {
             try
             {
-                IList<XXLB> list = DAO.Repository.GetObjectList<XXLB>(String.Format("FROM XXLB WHERE LBLX='大类' AND LBNAME !='餐饮' ORDER BY LBORDER"));
+                IList<CODES_XXLB> list = DAO.Repository.GetObjectList<CODES_XXLB>(String.Format("FROM CODES_XXLB WHERE LBLX='大类' AND LBNAME !='餐饮' ORDER BY LBORDER"));
                 return new { Result = EnResultType.Success, list = list };
             }
             catch (Exception ex)
@@ -26,8 +26,8 @@ namespace TianWen.XiaoZhen1Qu.BLL
         {
             try
             {
-                IList<XXLB> result = new List<XXLB>();
-                IList<XXLB> list = DAO.Repository.GetObjectList<XXLB>(String.Format("FROM XXLB WHERE LBLX='小类' ORDER BY LBORDER"));
+                IList<CODES_XXLB> result = new List<CODES_XXLB>();
+                IList<CODES_XXLB> list = DAO.Repository.GetObjectList<CODES_XXLB>(String.Format("FROM CODES_XXLB WHERE LBLX='小类' ORDER BY LBORDER"));
 
                 foreach (var obj in list)
                 {
@@ -37,7 +37,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                         {
                             if (childobj.PARENTID == obj.LBID)
                             {
-                                obj.XXLBS.Add(childobj);
+                                obj.CODES_XXLBS.Add(childobj);
                             }
                         }
                         result.Add(obj);
@@ -57,7 +57,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
         {
             try
             {
-                IList<XXLB> list = DAO.Repository.GetObjectList<XXLB>(String.Format("FROM XXLB WHERE LBID='{0}'", LBID));
+                IList<CODES_XXLB> list = DAO.Repository.GetObjectList<CODES_XXLB>(String.Format("FROM CODES_XXLB WHERE LBID='{0}'", LBID));
 
                 return new { Result = EnResultType.Success, list = list };
             }

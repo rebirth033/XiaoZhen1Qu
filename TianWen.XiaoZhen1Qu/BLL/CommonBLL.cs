@@ -15,13 +15,13 @@ namespace TianWen.XiaoZhen1Qu.BLL
         {
             try
             {
-                List<XXLB> xxlbs = DAO.GetObjectList<XXLB>(string.Format("FROM XXLB WHERE LBID = {0}", LBID)).ToList();
-                if (xxlbs.Count > 0)
+                List<CODES_XXLB> CODES_XXLBs = DAO.GetObjectList<CODES_XXLB>(string.Format("FROM CODES_XXLB WHERE LBID = {0}", LBID)).ToList();
+                if (CODES_XXLBs.Count > 0)
                 {
-                    DataTable dt = DAO.GetDataTable(string.Format("SELECT * FROM {0} WHERE JCXXID = '{1}'", xxlbs[0].FBTABLE, JCXXID));
+                    DataTable dt = DAO.GetDataTable(string.Format("SELECT * FROM {0} WHERE JCXXID = '{1}'", CODES_XXLBs[0].FBTABLE, JCXXID));
                     if (dt.Rows.Count > 0)
                     {
-                        return new { Result = EnResultType.Success, Message = "获取成功", Value = new { Value = dt.Rows[0]["ID"], Key = "ID", FBYM = xxlbs[0].FBYM, LBID = xxlbs[0].LBID } };
+                        return new { Result = EnResultType.Success, Message = "获取成功", Value = new { Value = dt.Rows[0]["ID"], Key = "ID", FBYM = CODES_XXLBs[0].FBYM, LBID = CODES_XXLBs[0].LBID } };
                     }
                 }
                 return new { Result = EnResultType.Failed, Message = "不存在" };

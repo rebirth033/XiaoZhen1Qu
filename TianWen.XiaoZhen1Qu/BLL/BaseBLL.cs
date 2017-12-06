@@ -310,8 +310,8 @@ namespace TianWen.XiaoZhen1Qu.BLL
         //根据类别ID获取类别全称
         public string GetLBQCByLBID(int LBID)
         {
-            XXLB xl = DAO.Repository.GetObjectById<XXLB>(LBID);
-            XXLB dl = DAO.Repository.GetObjectById<XXLB>(xl.PARENTID);
+            CODES_XXLB xl = DAO.Repository.GetObjectById<CODES_XXLB>(LBID);
+            CODES_XXLB dl = DAO.Repository.GetObjectById<CODES_XXLB>(xl.PARENTID);
             return dl.LBNAME + "-" + xl.LBNAME;
         }
 

@@ -4,7 +4,7 @@ using TianWen.XiaoZhen1Qu.Entities.Models;
 namespace TianWen.XiaoZhen1Qu.Entities.Maps
 {
     ///<summary>
-    ///
+    /// 用户基本信息
     ///</summary>
     public class YHJBXX_Map : ClassMap<YHJBXX>
     {
