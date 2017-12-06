@@ -6,9 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadESCondition() {
-    LoadConditionByTypeName("服装/鞋帽/箱包", "CODES_ES_MYFZMR", "类别", "LB");
-    LoadConditionByTypeName("母婴价格", "CODES_ES_MYFZMR", "价格", "JG");
-    LoadDistrict("福州", "350100", "QY");
+    LoadConditionByTypeNames("'服装/鞋帽/箱包类别','母婴价格'", "CODES_ES_MYFZMR", "类别,价格", "LB,JG", "15,15");
     LoadBody("ESXX_MYFZMR_FZXMXB", currentIndex);
 }
 //选择条件
@@ -43,7 +41,7 @@ function LoadBody(TYPE, PageIndex) {
                 $("#ul_body_left").html('');
                 LoadPage(TYPE, xml.PageCount);
                 for (var i = 0; i < xml.list.length; i++) {
-                    LoadESInfo(xml.list[i]);
+                    LoadInfo(xml.list[i]);
                 }
             }
         },
@@ -53,11 +51,11 @@ function LoadBody(TYPE, PageIndex) {
     });
 }
 //加载二手单条信息
-function LoadESInfo(obj) {
+function LoadInfo(obj) {
     var html = "";
-    html += ('<li class="li_body_left">');
+    html += ('<li class="li_body_left" onclick="OpenXXXX(\'ESXX_MYFZMR_FZXMXB\',\'' + obj.ID + '\')">');
     html += ('<div class="div_li_body_left_left">');
-    html += ('<img class="img_li_body_left" onclick="OpenXXXX(\'ESXX_MYFZMR_FZXMXB\',\'' + obj.ID + '\')" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
+    html += ('<img class="img_li_body_left" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<div class="div_img_li_body_left_count"><span>' + obj.PHOTOS.length + '图</span></div>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');

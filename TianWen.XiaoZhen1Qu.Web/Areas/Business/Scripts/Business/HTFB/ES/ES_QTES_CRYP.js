@@ -1,26 +1,23 @@
 ﻿$(document).ready(function () {
-
     LoadES_QTES_CRYPJBXX();
     BindClick("LB");
 });
-
+//绑定下拉框
+function BindClick(type) {
+    $("#div" + type + "Span").click(function () {
+        if (type === "LB") {
+            LoadCODESByTYPENAME("成人用品类别", "LB", "CODES_ES_QTES", Bind, "CRYPLB", "LB", "");
+        }
+        if (type === "XL") {
+            LoadCODESByTYPENAME($("#spanLB").html(), "XL", "CODES_ES_QTES", Bind, "CRYPLB", "XL", "");
+        }
+    });
+}
 //选择类别下拉框
 function SelectLB(obj, type) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
     BindClick("XL");
-}
-//绑定下拉框
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadCODESByTYPENAME("成人用品", "LB", "CODES_ES_QTES", Bind, "CRYPLB", "LB", "");
-        }
-        if (type === "XL") {
-            LoadCODESByTYPENAME($("#spanLB").html(), "XL", "CODES_ES_QTES", Bind, "CRYPLB", "XL", "");
-        }
-        
-    });
 }
 //选择成人用品品牌
 function SelectPBPP(obj, type, code) {

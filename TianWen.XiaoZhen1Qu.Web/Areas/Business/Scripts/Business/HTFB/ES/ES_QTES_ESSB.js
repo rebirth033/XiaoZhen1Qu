@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-
     LoadES_QTES_ESSBJBXX();
     BindClick("LB");
     BindClick("XJ");
@@ -8,7 +7,7 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("二手设备", "LB", "CODES_ES_QTES", Bind, "ESSBLB", "LB", "");
+            LoadCODESByTYPENAME("二手设备类别", "LB", "CODES_ES_QTES", Bind, "ESSBLB", "LB", "");
         }
         if (type === "XL") {
             LoadCODESByTYPENAME($("#spanLB").html(), "XL", "CODES_ES_QTES", Bind, "ESSBLB", "XL", "");
@@ -16,7 +15,6 @@ function BindClick(type) {
         if (type === "XJ") {
             LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM", Bind, "XJCD", "XJ", "");
         }
-        
     });
 }
 //选择类别下拉框
@@ -49,19 +47,16 @@ function LoadES_QTES_ESSBJBXX() {
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
                 $("#ID").val(xml.Value.ES_QTES_ESSBJBXX.ID);
                 //设置编辑器的内容
-                ue.ready(function () {
-                    ue.setHeight(200);
-                    ue.setContent(xml.Value.BCMSString);
-                });
+                ue.ready(function () { ue.setHeight(200); ue.setContent(xml.Value.BCMSString); });
                 if (xml.Value.ES_QTES_ESSBJBXX.GQ !== null)
                     SetDX("GQ", xml.Value.ES_QTES_ESSBJBXX.GQ);
                 $("#spanLB").html(xml.Value.ES_QTES_ESSBJBXX.LB);
+                $("#spanXL").html(xml.Value.ES_QTES_ESSBJBXX.XL);
                 $("#spanXJ").html(xml.Value.ES_QTES_ESSBJBXX.XJ);
                 $("#spanQY").html(xml.Value.ES_QTES_ESSBJBXX.QY);
                 $("#spanDD").html(xml.Value.ES_QTES_ESSBJBXX.DD);
 
                 LoadPhotos(xml.Value.Photos);
-                $("#spanXL").html(xml.Value.ES_QTES_ESSBJBXX.XL);
                 return;
             }
         },

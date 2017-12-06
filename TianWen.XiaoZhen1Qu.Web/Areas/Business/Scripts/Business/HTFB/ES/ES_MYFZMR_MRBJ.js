@@ -4,12 +4,11 @@
     BindClick("LB");
     BindClick("XJ");
 });
-
 //绑定下拉框
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("美容/保健", "LB", "CODES_ES_MYFZMR", Bind, "MRBJLB", "LB", "");
+            LoadCODESByTYPENAME("美容/保健类别", "LB", "CODES_ES_MYFZMR", Bind, "MRBJLB", "LB", "");
         }
         if (type === "XL") {
             LoadCODESByTYPENAME($("#spanLB").html(), "XL", "CODES_ES_MYFZMR", Bind, "MRBJLB", "XL", "");

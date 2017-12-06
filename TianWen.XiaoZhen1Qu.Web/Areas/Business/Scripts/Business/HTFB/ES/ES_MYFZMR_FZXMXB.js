@@ -4,7 +4,6 @@
     BindClick("LB");
     BindClick("XJ");
 });
-
 //绑定下拉框
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {

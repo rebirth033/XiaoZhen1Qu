@@ -1,10 +1,8 @@
 ﻿$(document).ready(function () {
-
     LoadES_WHYL_WYXNWPJBXX();
     BindClick("LB");
     BindClick("XL");
     BindClick("XJ");
-
 });
 //加载游戏标签
 function LoadYXBQ() {
@@ -58,7 +56,7 @@ function YXXZ(YXMC) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("网游/虚拟物品", "LB", "CODES_ES_WHYL", Bind, "WYXNWPLB", "LB", "");
+            LoadCODESByTYPENAME("网游/虚拟物品类别", "LB", "CODES_ES_WHYL", Bind, "WYXNWPLB", "LB", "");
         }
         if (type === "XL") {
             LoadYXBQ();
@@ -67,7 +65,6 @@ function BindClick(type) {
         if (type === "XJ") {
             LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM", Bind, "XJCD", "XJ", "");
         }
-        
     });
 }
 //选择类别下拉框

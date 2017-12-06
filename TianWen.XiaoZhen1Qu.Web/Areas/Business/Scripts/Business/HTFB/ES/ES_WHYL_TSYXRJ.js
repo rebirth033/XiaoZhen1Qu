@@ -4,12 +4,11 @@
     BindClick("LB");
     BindClick("XJ");
 });
-
 //绑定下拉框
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("图书/音像/软件", "LB", "CODES_ES_WHYL", Bind, "TSYXRJLB", "LB", "");
+            LoadCODESByTYPENAME("图书/音像/软件类别", "LB", "CODES_ES_WHYL", Bind, "TSYXRJLB", "LB", "");
         }
         if (type === "XL") {
             LoadCODESByTYPENAME($("#spanLB").html(), "XL", "CODES_ES_WHYL", Bind, "TSYXRJLB", "XL", "");
