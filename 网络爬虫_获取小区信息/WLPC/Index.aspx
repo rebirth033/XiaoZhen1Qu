@@ -9,7 +9,7 @@
     <script src="Scripts/jquery-1.9.1.min.js"></script>
     <script type="text/javascript">
 
-        function GetXQXX() {
+        function GetXQJBXX() {
             var url = "https://www.anjuke.com/sy-city.html";
             $.ajax({
                 url: "Ashx/GetXQXX.ashx",
@@ -33,7 +33,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <input type="button" value="获取全国小区信息" onclick="GetXQXX()" />
+        <input type="button" value="获取全国小区基本信息" onclick="GetXQJBXX()" />
     </form>
 </body>
 </html>
