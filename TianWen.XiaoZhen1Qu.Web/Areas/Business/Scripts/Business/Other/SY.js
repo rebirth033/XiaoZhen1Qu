@@ -228,7 +228,7 @@ function GetHeight(list, parentid) {
 }
 //打开查询列表
 function OpenCXLB(lbid, lburl, condition) {
-    if (condition !== "" && condition !== null)
+    if (condition !== "null" && condition !== null)
         window.open(getRootPath() + "/Business" + lburl + "?LBID=" + lbid + "&" + condition);
     else
         window.open(getRootPath() + "/Business" + lburl + "?LBID=" + lbid);
