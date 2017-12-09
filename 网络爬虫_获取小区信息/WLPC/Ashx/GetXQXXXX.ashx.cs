@@ -65,7 +65,7 @@ namespace WLPC.Ashx
                                 sql = "insert into codes_xqjbxx(xqjbxxid,xqmc,xqdz,szs,szx,wylx,wyf,zjmj,zhs,jznd,rjl,tcw,lhl,kfs,wygs) values(S_XQJBXX.NEXTVAL,'" + matches_second[l].Groups["text2"].Value + "','" + address + "','" + szs + "','" + szx + "','" + xxxx.WYLX + "','" + xxxx.WYF + "','" + xxxx.ZJMJ + "','" + xxxx.ZHS + "','" + xxxx.JZND + "','" + xxxx.RJL + "','" + xxxx.TCW + "','" + xxxx.LHL + "','" + xxxx.KFS + "','" + xxxx.WYGS + "')";
                                 command.CommandText = sql;
                                 command.ExecuteNonQuery();
-                                count ++;
+                                count++;
                             }
                         }
                     }
@@ -83,11 +83,11 @@ namespace WLPC.Ashx
         {
             try
             {
-                HttpWebRequest myReq = (HttpWebRequest) HttpWebRequest.Create(url);
+                HttpWebRequest myReq = (HttpWebRequest)HttpWebRequest.Create(url);
                 myReq.Accept =
                     "image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, application/x-shockwave-flash, application/vnd.ms-excel, application/vnd.ms-powerpoint, application/msword, */*";
                 myReq.UserAgent = "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)";
-                HttpWebResponse myRep = (HttpWebResponse) myReq.GetResponse();
+                HttpWebResponse myRep = (HttpWebResponse)myReq.GetResponse();
                 Stream myStream = myRep.GetResponseStream();
                 StreamReader sr = new StreamReader(myStream, Encoding.UTF8);
                 return sr.ReadToEnd();
@@ -100,7 +100,7 @@ namespace WLPC.Ashx
 
         public string GetAddress(string address)
         {
-            return address.Replace(" ","").Replace("[","").Replace(']','-');
+            return address.Replace(" ", "").Replace("[", "").Replace(']', '-');
         }
 
         public XXXX GetXXXX(string prefix, string url)
@@ -118,45 +118,56 @@ namespace WLPC.Ashx
             string lhlpattern = "<dt class=\"other-dt\">绿化率：</dt><dd class=\"other-dd\">(?<lhl>(.*?))</dd>";
             string kfspattern = "<dt>开&nbsp;&nbsp;发&nbsp;&nbsp;商：</dt><dd class=\"dd-column\">(?<kfs>(.*?))</dd>";
             string wygspattern = "<dt>物业公司：</dt><dd class=\"dd-column\">(?<wygs>(.*?))</dd>";
+
             Regex regex = new Regex(wylxpattern);
             MatchCollection matchs = regex.Matches(pageinfo);
-            xxxx.WYLX = matchs[0].Groups["wylx"].Value;
+            if (matchs.Count > 0)
+                xxxx.WYLX = matchs[0].Groups["wylx"].Value;
 
             regex = new Regex(wyfpattern);
             matchs = regex.Matches(pageinfo);
-            xxxx.WYF = matchs[0].Groups["wyf"].Value;
+            if (matchs.Count > 0)
+                xxxx.WYF = matchs[0].Groups["wyf"].Value;
 
             regex = new Regex(zjmjpattern);
             matchs = regex.Matches(pageinfo);
-            xxxx.ZJMJ = matchs[0].Groups["zjmj"].Value;
+            if (matchs.Count > 0)
+                xxxx.ZJMJ = matchs[0].Groups["zjmj"].Value;
 
             regex = new Regex(zhspattern);
             matchs = regex.Matches(pageinfo);
-            xxxx.ZHS = matchs[0].Groups["zhs"].Value;
+            if (matchs.Count > 0)
+                xxxx.ZHS = matchs[0].Groups["zhs"].Value;
 
             regex = new Regex(jzndpattern);
             matchs = regex.Matches(pageinfo);
-            xxxx.JZND = matchs[0].Groups["jznd"].Value;
+            if (matchs.Count > 0)
+                xxxx.JZND = matchs[0].Groups["jznd"].Value;
 
             regex = new Regex(tcwpattern);
             matchs = regex.Matches(pageinfo);
-            xxxx.TCW = matchs[0].Groups["tcw"].Value;
+            if (matchs.Count > 0)
+                xxxx.TCW = matchs[0].Groups["tcw"].Value;
 
             regex = new Regex(rjlpattern);
             matchs = regex.Matches(pageinfo);
-            xxxx.RJL = matchs[0].Groups["rjl"].Value;
+            if (matchs.Count > 0)
+                xxxx.RJL = matchs[0].Groups["rjl"].Value;
 
             regex = new Regex(lhlpattern);
             matchs = regex.Matches(pageinfo);
-            xxxx.LHL = matchs[0].Groups["lhl"].Value;
+            if (matchs.Count > 0)
+                xxxx.LHL = matchs[0].Groups["lhl"].Value;
 
             regex = new Regex(kfspattern);
             matchs = regex.Matches(pageinfo);
-            xxxx.KFS = matchs[0].Groups["kfs"].Value;
+            if (matchs.Count > 0)
+                xxxx.KFS = matchs[0].Groups["kfs"].Value;
 
             regex = new Regex(wygspattern);
             matchs = regex.Matches(pageinfo);
-            xxxx.WYGS = matchs[0].Groups["wygs"].Value;
+            if (matchs.Count > 0)
+                xxxx.WYGS = matchs[0].Groups["wygs"].Value;
 
             return xxxx;
         }

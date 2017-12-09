@@ -1,10 +1,19 @@
 ﻿var currentIndex = 1;
 $(document).ready(function () {
-    $(".li_condition_head:eq(0)").each(function () { $(this).css("background-color", "#ffffff"); });
+    LoadHeadSearch();
     BindBodyNav();
     LoadFCCondition();
     LoadHot("FCXX_ZZF");
 });
+//加载头部搜索栏关键字
+function LoadHeadSearch() {
+    $(".div_head_right_ss").append('<span class="span_head_right_ss">独立阳台</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss">独立卫生间</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss">邻近地铁</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss">南北通透</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss">精装修</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss">支持月付</span>');
+}
 //加载房产查询条件
 function LoadFCCondition() {
     LoadConditionByTypeNames("'整租房租金','厅室'", "CODES_FC", "租金,厅室", "ZJ,S", "15,15");

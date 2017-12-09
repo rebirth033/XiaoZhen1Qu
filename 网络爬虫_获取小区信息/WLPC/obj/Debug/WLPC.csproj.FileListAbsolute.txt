@@ -37,4 +37,3 @@ D:\福建天问信息技术有限公司\源代码\网络爬虫_获取小区信�
 D:\福建天问信息技术有限公司\源代码\网络爬虫_获取小区信息\WLPC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\福建天问信息技术有限公司\源代码\网络爬虫_获取小区信息\WLPC\obj\Debug\WLPC.dll
 D:\福建天问信息技术有限公司\源代码\网络爬虫_获取小区信息\WLPC\obj\Debug\WLPC.pdb
-D:\福建天问信息技术有限公司\源代码\网络爬虫_获取小区信息\WLPC\obj\Debug\WLPC.csprojResolveAssemblyReference.cache
