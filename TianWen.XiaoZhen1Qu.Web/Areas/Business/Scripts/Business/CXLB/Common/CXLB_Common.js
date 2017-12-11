@@ -8,8 +8,9 @@
     $(".div_bottom").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
     $("#li_condition_head_qyzf").css("background-color", "#ffffff");
     $("#span_fbxx").bind("click", FBXX);
-    GetHeadNav();
     $("#div_condition_body").html('');
+    GetHeadNav();
+    BindCXItem();
 });
 //获取头部导航
 function GetHeadNav() {
@@ -58,18 +59,41 @@ function GetHeadNav() {
 function BindBodyNav() {
     $(".li_body_head:eq(0)").css("background-color", "#5bc0de").css("color", "#ffffff").css("border", "none");
     $(".li_body_head").mouseover(function () {
-        if($(this).css("background-color") === "transparent")
-         $(this).css("background-color", "#eaeaea");
+        if ($(this).css("background-color") === "transparent")
+            $(this).css("background-color", "#eaeaea");
     }).mouseleave(function () {
         if ($(this).css("background-color") === "rgb(234, 234, 234)")
             $(this).css("background-color", "transparent");
     });
-    
+
     $(".li_body_head").bind("click", function () {
         $(".li_body_head").each(function () {
             $(this).css("border-top", "1px solid #cccccc").css("background-color", "transparent").css("border-left", "1px solid #cccccc").css("border-right", "1px solid #cccccc").css("color", "#999999");
         });
         $(this).css("background-color", "#5bc0de").css("color", "#ffffff").css("border", "none");
+    });
+}
+//列表排序绑定事件
+function BindCXItem() {
+    $(".li_body_head_sort_item").bind("click", function () {
+        $(".li_body_head_sort_item").each(function() {
+            $(this).css("color", "rgb(51, 51, 51)");
+            $(this).find("i").each(function () {
+                if ($(this).attr("class").indexOf("up") !== -1)
+                    $(this).attr("class", "i_body_left_sort_up_gray");
+                else
+                    $(this).attr("class", "i_body_left_sort_down_gray");
+            });
+        });
+        if ($(this).css("color") === "rgb(51, 51, 51)") {
+            $(this).css("color", "rgb(239, 97, 0)");
+            $(this).find("i").each(function () {
+                if ($(this).attr("class").indexOf("up") !== -1)
+                    $(this).attr("class", "i_body_left_sort_down_orange");
+                else
+                    $(this).attr("class", "i_body_left_sort_up_orange");
+            });
+        }
     });
 }
 //显示筛选条件
