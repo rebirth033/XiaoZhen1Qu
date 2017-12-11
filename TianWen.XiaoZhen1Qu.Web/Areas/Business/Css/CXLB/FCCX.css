@@ -54,7 +54,13 @@
 .div_body .ul_body_head .li_body_head:hover{ cursor: pointer;}
 .div_body .ul_body_head .li_body_head_sort{width: 50px;padding-top: 7px;height: 38px;display: inline-block;float: right;color: #333;text-decoration: none;}
 .div_body .ul_body_head .li_body_head_sort_item{ cursor: pointer;}
+.div_body .ul_body_head .li_body_head_sort_item_active{ color: #ef6100;}
 .div_body .ul_body_head .li_body_head_sort .i_body_left_sort_up_gray{ width: 12px;height: 12px;margin-right: 5px;margin-left: 5px;display: inline-block;background-image: url(../images/CXLB/cxlb_px_up_gray.png)}
+.div_body .ul_body_head .li_body_head_sort .i_body_left_sort_down_gray{ width: 12px;height: 12px;margin-right: 5px;margin-left: 5px;display: inline-block;background-image: url(../images/CXLB/cxlb_px_down_gray.png)}
+.div_body .ul_body_head .li_body_head_sort .i_body_left_sort_up_orange{ width: 12px;height: 12px;margin-right: 5px;margin-left: 5px;display: inline-block;background-image: url(../images/CXLB/cxlb_px_up_orange.png)}
+.div_body .ul_body_head .li_body_head_sort .i_body_left_sort_down_orange{ width: 12px;height: 12px;margin-right: 5px;margin-left: 5px;display: inline-block;background-image: url(../images/CXLB/cxlb_px_down_orange.png)}
+
+
 /*首页_主体_左部*/
 .div_body .div_body_left{display: inline-block;width: 980px;height: 1740px;background-color: #ffffff;float: left;}
 .div_body .div_body_left .ul_body_left{ width: 100%;padding: 0;}
@@ -96,7 +102,3 @@
 .font_size18{ font-size: 18px;}
 .font_size19{ font-size: 19px;}
 .font_size20{ font-size: 20px;}
-
-/*首页_底部*/
-.div_bottom{width: 1200px;overflow-x: hidden;background: #ffffff;height: 100px;display: block;}
-.div_bottom .p_div_bottom { width: 100%;text-align: center;}
