@@ -26,7 +26,7 @@ namespace WLPC.Ashx
                 pageinfo = "zibo,淄博|zhangjiakou,张家口|zhuzhou,株洲|zhangzhou,漳州|zhanjiang,湛江|zhaoqing,肇庆|zaozhuang,枣庄|zhoushan,舟山|zunyi,遵义|zhumadian,驻马店|zigong,自贡|ziyang,资阳|zhoukou,周口|zhangqiu,章丘|zhangjiajie,张家界|zhucheng,诸城|zhuanghe,庄河|zhengding,正定|zhangbei,张北|zhangye,张掖|zhaotong,昭通|weizhong,中卫";
                 //pageinfo = "anshan,鞍山";
                 string[] list = pageinfo.Split('|');
-                string connString = "User ID=c##infotownlet;Password=infotownlet;Data Source=10.0.6.1/orcl;";
+                string connString = "User ID=c##infotownlet;Password=infotownlet;Data Source=localhost/orcl;";
                 OracleConnection conn = new OracleConnection(connString);
                 OracleCommand command = new OracleCommand();
                 command.Connection = conn;
