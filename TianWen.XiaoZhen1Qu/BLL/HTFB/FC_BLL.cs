@@ -645,7 +645,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
         {
             try
             {
-                IList<CODES_FUZHOU_XQJBXX> list = DAO.Repository.GetObjectList<CODES_FUZHOU_XQJBXX>(String.Format("FROM CODES_FUZHOU_XQJBXX WHERE XQMC like '%{0}%' and ROWNUM <= 10 ORDER BY XQMC", XQMC));
+                IList<CODES_XQJBXX> list = DAO.Repository.GetObjectList<CODES_XQJBXX>(String.Format("FROM CODES_XQJBXX WHERE XQMC like '%{0}%' and ROWNUM <= 10 ORDER BY XQMC", XQMC));
                 return new { Result = EnResultType.Success, list = list };
             }
             catch (Exception ex)
@@ -660,7 +660,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
         {
             try
             {
-                IList<CODES_FUZHOU_XQJBXX> list = DAO.Repository.GetObjectList<CODES_FUZHOU_XQJBXX>(String.Format("FROM CODES_FUZHOU_XQJBXX WHERE (XQMCPYQKG like '%{0}%' or XQMCPYSZM like '%{0}%') and ROWNUM <= 10 ORDER BY XQMC", XQMC));
+                IList<CODES_XQJBXX> list = DAO.Repository.GetObjectList<CODES_XQJBXX>(String.Format("FROM CODES_XQJBXX WHERE (XQMCPYQKG like '%{0}%' or XQMCPYSZM like '%{0}%') and ROWNUM <= 10 ORDER BY XQMC", XQMC));
                 return new { Result = EnResultType.Success, list = list };
             }
             catch (Exception ex)

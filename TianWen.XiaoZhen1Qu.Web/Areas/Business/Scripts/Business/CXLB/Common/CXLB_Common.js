@@ -6,7 +6,6 @@
     $(".div_condition_select").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
     $(".div_body").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
     $("#li_condition_head_qyzf").css("background-color", "#ffffff");
-    $(".li_body_head:eq(0)").css("border-bottom", "2px solid #5bc0de").css("color", "#5bc0de").css("font-weight", "700");
     $("#span_fbxx").bind("click", FBXX);
     GetHeadNav();
     $("#div_condition_body").html('');
@@ -56,11 +55,20 @@ function GetHeadNav() {
 }
 //绑定主体列表导航
 function BindBodyNav() {
+    $(".li_body_head:eq(0)").css("background-color", "#5bc0de").css("color", "#ffffff").css("border", "none");
+    $(".li_body_head").mouseover(function () {
+        if($(this).css("background-color") === "transparent")
+         $(this).css("background-color", "#eaeaea");
+    }).mouseleave(function () {
+        if ($(this).css("background-color") === "rgb(234, 234, 234)")
+            $(this).css("background-color", "transparent");
+    });
+    
     $(".li_body_head").bind("click", function () {
         $(".li_body_head").each(function () {
-            $(this).css("border-bottom", "1px solid #cccccc").css("color", "#999999").css("font-weight", "normal");
+            $(this).css("border-top", "1px solid #cccccc").css("background-color", "transparent").css("border-left", "1px solid #cccccc").css("border-right", "1px solid #cccccc").css("color", "#999999");
         });
-        $(this).css("border-bottom", "2px solid #5bc0de").css("color", "#5bc0de").css("font-weight", "700");
+        $(this).css("background-color", "#5bc0de").css("color", "#ffffff").css("border", "none");
     });
 }
 //显示筛选条件
@@ -69,7 +77,7 @@ function ShowSelectCondition(tbname) {
     $("#ul_condition_select").html('<li class="li_condition_select_first">条件</li>');
     $(".li_condition_body").each(function () {
         if ($(this).css("color") === "rgb(91, 192, 222)" && $(this).html() !== "全部") {
-            $("#ul_condition_select").append('<li onclick="DeleteSelect(this,\'' + tbname + '\')" class="li_condition_select"><span>' + $(this).html() + '</span><em>x</em></li>');
+            $("#ul_condition_select").append('<li onclick="DeleteSelect(this,\'' + tbname + '\')" class="li_condition_select"><span>' + $(this).html() + '</span><em>×</em></li>');
         }
     });
 }
@@ -120,7 +128,7 @@ function GetNavCondition() {
 function HasCondition() {
     var condition = "";
     $(".li_condition_body").each(function () {
-        if ($(this).html() !== "不限" && $(this).css("color") === "rgb(91, 192, 222)")
+        if (($(this).html() !== "不限" && $(this).html() !== "全部") && $(this).css("color") === "rgb(91, 192, 222)")
             condition += $(this).html();
     });
     return condition;

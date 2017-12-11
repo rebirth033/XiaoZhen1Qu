@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Text;
 using CommonClassLib.Helper;
 using TianWen.Framework.Log;
 using TianWen.XiaoZhen1Qu.Entities.Models;
@@ -14,14 +13,14 @@ namespace TianWen.XiaoZhen1Qu.BLL
     public class FCCXBLL : BaseBLL, IFCCXBLL
     {
         //加载房产列表信息
-        public object LoadFCXX(string TYPE, string Condition, string PageIndex, string PageSize)
+        public object LoadFCXX(string TYPE, string Condition, string PageIndex, string PageSize, string XZQ)
         {
             try
             {
                 DataTable dt = new DataTable();
                 if (TYPE == "FCXX_ZZF")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.*,x.* from jcxx a,fc_zzfjbxx b left join codes_fuzhou_xqjbxx x on b.xqmc = x.xqmc where a.jcxxid = b.jcxxid " + GetConditin(Condition) + " order by zxgxsj desc");
+                    dt = DAO.Repository.GetDataTable("select a.*,b.*,x.* from jcxx a,fc_zzfjbxx b left join CODES_XQJBXX x on b.xqmc = x.xqmc where a.jcxxid = b.jcxxid and szs = '" + XZQ + "' " + GetConditin(Condition.Replace("QY", "SZX")) + " order by zxgxsj desc");
                     List<FC_ZZFView> list = ConvertHelper.DataTableToList<FC_ZZFView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -34,7 +33,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "FCXX_HZF")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.*,x.* from jcxx a,fc_hzfjbxx b left join codes_fuzhou_xqjbxx x on b.xqmc = x.xqmc where a.jcxxid = b.jcxxid " + GetConditin(Condition) + " order by zxgxsj desc");
+                    dt = DAO.Repository.GetDataTable("select a.*,b.*,x.* from jcxx a,fc_hzfjbxx b left join CODES_XQJBXX x on b.xqmc = x.xqmc where a.jcxxid = b.jcxxid and szs = '" + XZQ + "' " + GetConditin(Condition.Replace("QY", "SZX")) + " order by zxgxsj desc");
                     List<FC_ZZFView> list = ConvertHelper.DataTableToList<FC_ZZFView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -166,9 +165,9 @@ namespace TianWen.XiaoZhen1Qu.BLL
             try
             {
                 DataTable dt = new DataTable();
-                if (TYPE == "FCXX_ZZF") 
+                if (TYPE == "FCXX_ZZF")
                 {
-                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.*,x.* from jcxx a,fc_zzfjbxx b left join codes_fuzhou_xqjbxx x on b.xqmc = x.xqmc where a.jcxxid = b.jcxxid and id = '{0}'  order by zxgxsj desc", ID));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.*,x.* from jcxx a,fc_zzfjbxx b left join CODES_XQJBXX x on b.xqmc = x.xqmc where a.jcxxid = b.jcxxid and id = '{0}'  order by zxgxsj desc", ID));
                     List<FC_ZZFView> list = ConvertHelper.DataTableToList<FC_ZZFView>(dt);
                     foreach (var jcxx in list)
                     {
@@ -178,7 +177,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "FCXX_HZF")
                 {
-                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.*,x.* from jcxx a,fc_hzfjbxx b left join codes_fuzhou_xqjbxx x on b.xqmc = x.xqmc where a.jcxxid = b.jcxxid and id = '{0}'  order by zxgxsj desc", ID));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.*,x.* from jcxx a,fc_hzfjbxx b left join CODES_XQJBXX x on b.xqmc = x.xqmc where a.jcxxid = b.jcxxid and id = '{0}'  order by zxgxsj desc", ID));
                     List<FC_ZZFView> list = ConvertHelper.DataTableToList<FC_ZZFView>(dt);
                     foreach (var jcxx in list)
                     {
@@ -186,7 +185,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     }
                     return new { Result = EnResultType.Success, list = list, BCMSString = BinaryHelper.BinaryToString(list[0].BCMS), grxxlist = GetGRXX(list[0].YHID) };
                 }
-                if (TYPE == "FCXX_DZF") 
+                if (TYPE == "FCXX_DZF")
                 {
                     dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,fc_dzfjbxx b where a.jcxxid = b.jcxxid and id = '{0}'  order by zxgxsj desc", ID));
                     List<FC_DZFView> list = ConvertHelper.DataTableToList<FC_DZFView>(dt);
@@ -196,9 +195,9 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     }
                     return new { Result = EnResultType.Success, list = list, BCMSString = BinaryHelper.BinaryToString(list[0].BCMS), grxxlist = GetGRXX(list[0].YHID) };
                 }
-                if (TYPE == "FCXX_ESF") 
+                if (TYPE == "FCXX_ESF")
                 {
-                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.*,x.* from jcxx a,fc_esfjbxx b left join codes_fuzhou_xqjbxx x on b.xqmc = x.xqmc where a.jcxxid = b.jcxxid and id = '{0}'  order by zxgxsj desc", ID));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.*,x.* from jcxx a,fc_esfjbxx b left join CODES_XQJBXX x on b.xqmc = x.xqmc where a.jcxxid = b.jcxxid and id = '{0}'  order by zxgxsj desc", ID));
                     List<FC_ESFView> list = ConvertHelper.DataTableToList<FC_ESFView>(dt);
                     foreach (var jcxx in list)
                     {
@@ -206,7 +205,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     }
                     return new { Result = EnResultType.Success, list = list, BCMSString = BinaryHelper.BinaryToString(list[0].BCMS), grxxlist = GetGRXX(list[0].YHID) };
                 }
-                if (TYPE == "FCXX_SP") 
+                if (TYPE == "FCXX_SP")
                 {
                     dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,fc_spjbxx b where a.jcxxid = b.jcxxid and id = '{0}' order by zxgxsj desc", ID));
                     List<FC_SPView> list = ConvertHelper.DataTableToList<FC_SPView>(dt);
@@ -216,7 +215,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     }
                     return new { Result = EnResultType.Success, list = list, BCMSString = BinaryHelper.BinaryToString(list[0].BCMS), grxxlist = GetGRXX(list[0].YHID) };
                 }
-                if (TYPE == "FCXX_XZL") 
+                if (TYPE == "FCXX_XZL")
                 {
                     dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,fc_xzljbxx b where a.jcxxid = b.jcxxid and id = '{0}' order by zxgxsj desc", ID));
                     List<FC_XZLView> list = ConvertHelper.DataTableToList<FC_XZLView>(dt);

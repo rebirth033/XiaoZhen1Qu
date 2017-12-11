@@ -220,6 +220,8 @@
     <Content Include="Areas\Business\Css\HTFB\FC\FC_ESF.css" />
     <Content Include="Areas\Business\Css\HTFB\FC\FC_HZF.css" />
     <Content Include="Areas\Business\Css\HTFB\SHFW\SHFW_SMWX.css" />
+    <Content Include="Areas\Business\Css\images\CXLB\cxlb_px_down_gray.png" />
+    <Content Include="Areas\Business\Css\images\CXLB\cxlb_px_up_gray.png" />
     <Content Include="Areas\Business\Css\Other\FBCG.css" />
     <Content Include="Areas\Business\Css\HTFB\FC\FC_CF.css" />
     <Content Include="Areas\Business\Css\HTFB\FC\FC_DZF.css" />
