@@ -16,6 +16,7 @@
 .div_head_right .div_head_right_ss .span_head_right_ss:hover {color: #ef6100;}
 .div_head_right .div_head_right_ss .span_head_right_ss_split{ color: #999;}
 .div_head_right .div_head_right_ss .span_spaninput_out .span_ss {width: 130px;font-family: "微软雅黑";height: 40px;background: #5bc0de;float: right;display: inline-block;color: #fff;font-size: 18px;font-weight: 700;padding: 6px 46px;cursor: pointer;}
+.div_head_right .div_head_right_ss .span_spaninput_out .span_ss:hover {background: #31b0d5;}
 .div_head_right .span_fbxx {width: 180px;font-family: "微软雅黑";border: 1px solid #5bc0de;height: 40px;background: #5bc0de;float: left;display: inline-block;color: #fff;font-size: 16px;padding-top: 6px;text-align: center;cursor: pointer;margin-top: 10px;margin-left: 60px;}
 .div_head_right .span_fbxx:hover {background: #31b0d5;}
 

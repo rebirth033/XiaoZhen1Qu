@@ -1,12 +1,12 @@
 ﻿/*顶部*/
-.div_top {width: 100%;height: 30px;vertical-align: middle;font-size: 12px;z-index: 1002;position: relative;}
+.div_top {width: 100%;height: 40px;vertical-align: middle;font-size: 12px;z-index: 1002;position: relative;border-bottom-color: transparent !important;box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.3);}
 /*顶部_左侧*/
-.div_top .div_top_left {width: 400px;text-align: left;height: 25px;padding-top: 5px;float: left;padding-left: 10px;}
+.div_top .div_top_left {width: 400px;text-align: left;height: 25px;padding-top: 10px;float: left;padding-left: 10px;}
 .div_top .div_top_left .span_dqxzq {color: #ff6a00;cursor: default;margin-right: 5px;}
 .div_top .div_top_left .span_qhcs {cursor: pointer;}
 .div_top .div_top_left .span_qhcs:hover {text-decoration: underline;color: #ff6a00;}
 /*顶部_右侧*/
-.div_top .div_top_right {padding-right: 10px;text-align: center;height: 25px;padding-top: 5px;float: right;}
+.div_top .div_top_right {padding-right: 10px;text-align: center;height: 25px;padding-top: 10px;float: right;}
 .div_top .div_top_right .div_top_right_inner {cursor: pointer;float: left;display: inline-block;position: relative;}
 .div_top .div_top_right .div_top_right_dropdown_yhm {position: absolute;top: 0;left: 0;display: none;}
 .div_top .div_top_right .div_top_right_dropdown_yhm .ul_top_right_yhm {width: 70px;height: 150px;padding-left: 0px;margin-top: 20px;}
