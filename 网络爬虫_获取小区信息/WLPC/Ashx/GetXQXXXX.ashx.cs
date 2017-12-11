@@ -26,7 +26,7 @@ namespace WLPC.Ashx
                 pageinfo = "wuxi,无锡|weihai,威海|weifang,潍坊|wulumuqi,乌鲁木齐|wenzhou,温州|wuhu,芜湖|wuzhou,梧州|weinan,渭南|wuhai,乌海|wenshan,文山|wuwei,武威|wulanchabu,乌兰察布|wafangdian,瓦房店|wujiaqu,五家渠|wuyishan,武夷山|wuzhong,吴忠|wuzhishan,五指山|xa,西安|xm,厦门|xuzhou,徐州|xiangtan,湘潭|xiangyang,襄阳|xinxiang,新乡|xinyang,信阳|xianyang,咸阳|xingtai,邢台|xiaogan,孝感|xining,西宁|xuchang,许昌|xinzhou,忻州|xuancheng,宣城|xianning,咸宁|xinganmeng,兴安盟|xinyu,新余|bannan,西双版纳|xiangxi,湘西|xiantao,仙桃|xilinguole,锡林郭勒盟|yt,烟台|yangzhou,扬州|yichang,宜昌|yinchuan,银川|yangjiang,阳江|yongzhou,永州|yulinshi,玉林|yancheng,盐城|yueyang,岳阳|yuncheng,运城|yichun,宜春|yingkou,营口|yulin,榆林|yibin,宜宾|yiyang,益阳|yiwu,义乌|yuxi,玉溪|yili,伊犁|yangquan,阳泉|yanan,延安|yingtan,鹰潭|yanbian,延边|yufu,云浮|yaan,雅安|yangchun,阳春|yanling,鄢陵|yichunshi,伊春|yushu,玉树|yueqing,乐清|yuzhou,禹州|yongxin,永新|zhengzhou,郑州|zh,珠海|zs,中山|zhenjiang,镇江|zibo,淄博|zhangjiakou,张家口|zhuzhou,株洲|zhangzhou,漳州|zhanjiang,湛江|zhaoqing,肇庆|zaozhuang,枣庄|zhoushan,舟山|zunyi,遵义|zhumadian,驻马店|zigong,自贡|ziyang,资阳|zhoukou,周口|zhangqiu,章丘|zhangjiajie,张家界|zhucheng,诸城|zhuanghe,庄河|zhengding,正定|zhangbei,张北|zhangye,张掖|zhaotong,昭通|weizhong,中卫|zhaoxian,赵县";
                 //pageinfo = "anshan,鞍山";
                 string[] list = pageinfo.Split('|');
-                string connString = "User ID=c##infotownlet;Password=infotownlet;Data Source=localhost/orcl;";
+                string connString = "User ID=c##infotownlet;Password=infotownlet;Data Source=10.0.6.1/orcl;";
                 OracleConnection conn = new OracleConnection(connString);
                 OracleCommand command = new OracleCommand();
                 command.Connection = conn;
@@ -50,7 +50,7 @@ namespace WLPC.Ashx
                     {
                         string qy = matches_first[j].Groups["url"].Value;
                         string szx = matches_first[j].Groups["text"].Value;
-                        if(szx == "吴中" || szx.Contains("周边")) continue;
+                        if (szx == "吴中" || szx.Contains("周边")) continue;
                         pattern = "<div class=\"li-info\">\n<h3>\n<a href=\"(?<url>([^\"])*)\" _soj=\"(?<text1>([^\"])*)\"\n title=\"(?<text2>([^\"])*)\"\n target=\"(?<text3>([^\"])*)\">(?<text4>([^\"])*)</a>\n</h3>\n<address>(?<text5>([^\"])*)</address>";
                         for (int k = 1; k < 500; k++)
                         {
@@ -63,7 +63,7 @@ namespace WLPC.Ashx
                             {
                                 address = GetAddress(matches_second[l].Groups["text5"].Value.Replace("\n ", ""));
                                 XXXX xxxx = GetXXXX("https://" + id + ".anjuke.com", matches_second[l].Groups["url"].Value);
-                                sql = "insert into codes_xqjbxx(xqjbxxid,xqmc,xqdz,szs,szx,wylx,wyf,zjmj,zhs,jznd,rjl,tcw,lhl,kfs,wygs) values(S_XQJBXX.NEXTVAL,'" + matches_second[l].Groups["text2"].Value.Replace("'","") + "','" + address + "','" + szs + "','" + szx + "','" + xxxx.WYLX + "','" + xxxx.WYF + "','" + xxxx.ZJMJ + "','" + xxxx.ZHS + "','" + xxxx.JZND + "','" + xxxx.RJL + "','" + xxxx.TCW + "','" + xxxx.LHL + "','" + xxxx.KFS + "','" + xxxx.WYGS + "')";
+                                sql = "insert into codes_xqjbxx(xqjbxxid,xqmc,xqdz,szs,szx,wylx,wyf,zjmj,zhs,jznd,rjl,tcw,lhl,kfs,wygs) values(S_XQJBXX.NEXTVAL,'" + matches_second[l].Groups["text2"].Value.Replace("'", "") + "','" + address + "','" + szs + "','" + szx + "','" + xxxx.WYLX + "','" + xxxx.WYF + "','" + xxxx.ZJMJ + "','" + xxxx.ZHS + "','" + xxxx.JZND + "','" + xxxx.RJL + "','" + xxxx.TCW + "','" + xxxx.LHL + "','" + xxxx.KFS + "','" + xxxx.WYGS + "')";
                                 command.CommandText = sql;
                                 command.ExecuteNonQuery();
                                 count++;
