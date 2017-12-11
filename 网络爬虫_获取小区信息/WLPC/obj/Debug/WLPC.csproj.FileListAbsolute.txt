@@ -17,7 +17,6 @@ F:\福建天问信息技术有限公司\小镇1区源代码\网络爬虫_获取�
 F:\福建天问信息技术有限公司\小镇1区源代码\网络爬虫_获取小区信息\WLPC\bin\WLPC.pdb
 F:\福建天问信息技术有限公司\小镇1区源代码\网络爬虫_获取小区信息\WLPC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 F:\福建天问信息技术有限公司\小镇1区源代码\网络爬虫_获取小区信息\WLPC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-F:\福建天问信息技术有限公司\小镇1区源代码\网络爬虫_获取小区信息\WLPC\obj\Debug\WLPC.csprojResolveAssemblyReference.cache
 D:\福建天问信息技术有限公司\源代码\网络爬虫_获取小区信息\WLPC\bin\roslyn\csc.exe
 D:\福建天问信息技术有限公司\源代码\网络爬虫_获取小区信息\WLPC\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 D:\福建天问信息技术有限公司\源代码\网络爬虫_获取小区信息\WLPC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
@@ -38,3 +37,4 @@ D:\福建天问信息技术有限公司\源代码\网络爬虫_获取小区信�
 D:\福建天问信息技术有限公司\源代码\网络爬虫_获取小区信息\WLPC\obj\Debug\WLPC.dll
 D:\福建天问信息技术有限公司\源代码\网络爬虫_获取小区信息\WLPC\obj\Debug\WLPC.pdb
 D:\福建天问信息技术有限公司\源代码\网络爬虫_获取小区信息\WLPC\obj\Debug\WLPC.csprojResolveAssemblyReference.cache
+F:\福建天问信息技术有限公司\小镇1区源代码\网络爬虫_获取小区信息\WLPC\obj\Debug\WLPC.csprojResolveAssemblyReference.cache
