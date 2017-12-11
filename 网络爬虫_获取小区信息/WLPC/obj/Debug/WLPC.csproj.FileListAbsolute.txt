@@ -37,3 +37,4 @@ D:\福建天问信息技术有限公司\源代码\网络爬虫_获取小区信�
 D:\福建天问信息技术有限公司\源代码\网络爬虫_获取小区信息\WLPC\obj\Debug\WLPC.dll
 D:\福建天问信息技术有限公司\源代码\网络爬虫_获取小区信息\WLPC\obj\Debug\WLPC.pdb
 D:\福建天问信息技术有限公司\源代码\网络爬虫_获取小区信息\WLPC\obj\Debug\WLPC.csprojResolveAssemblyReference.cache
+F:\福建天问信息技术有限公司\小镇1区源代码\网络爬虫_获取小区信息\WLPC\obj\Debug\WLPC.csprojResolveAssemblyReference.cache
