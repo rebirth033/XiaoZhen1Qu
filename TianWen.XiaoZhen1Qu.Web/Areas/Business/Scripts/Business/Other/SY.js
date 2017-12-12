@@ -124,12 +124,12 @@ function LoadSY_ML() {
             if (xml.Result === 1) {
                 LoadSY_MLInfo(xml.list, xml.xzq, "FC");
                 LoadSY_MLInfo(xml.list, xml.xzq, "CL");
-                LoadSY_ML_CWInfo(xml.list, xml.xzq, "CW");
+                LoadSY_MLInfo(xml.list, xml.xzq, "CW");
                 LoadSY_MLInfo(xml.list, xml.xzq, "ZP");
                 LoadSY_ML_WXLInfo(xml.list, xml.xzq, "ZSJM");
                 LoadSY_ML_WXLInfo(xml.list, xml.xzq, "PX");
                 LoadSY_MLInfo(xml.list, xml.xzq, "SHFW");
-                LoadSY_ML_WXLInfo(xml.list, xml.xzq, "JY");
+                LoadSY_ML_WXLInfo(xml.list, xml.xzq, "JYPX");
                 LoadSY_ML_WXLInfo(xml.list, xml.xzq, "PFCG");
                 LoadSY_MLInfo(xml.list, xml.xzq, "SWFW");
                 LoadSY_MLInfo(xml.list, xml.xzq, "ES");
@@ -140,7 +140,7 @@ function LoadSY_ML() {
                 $("#p_body_middle_left_title_ZSJM").css("border-bottom", "2px solid #abc466");
                 $("#p_body_middle_left_title_PX").css("border-bottom", "2px solid #c49966");
                 $("#p_body_middle_left_title_SHFW").css("border-bottom", "2px solid #ce9fc8");
-                $("#p_body_middle_left_title_JY").css("border-bottom", "2px solid #fda19d");
+                $("#p_body_middle_left_title_JYPX").css("border-bottom", "2px solid #fda19d");
                 $("#p_body_middle_left_title_PFCG").css("border-bottom", "2px solid #eb437e");
                 $("#p_body_middle_left_title_SWFW").css("border-bottom", "2px solid #e5237e");
                 $("#p_body_middle_left_title_ES").css("border-bottom", "2px solid #64f4de");
@@ -191,36 +191,6 @@ function LoadSY_ML_WXLInfo(list, xzq, typename) {
                 }
             }
             html += ('</ul>');
-        }
-    }
-    $("#div_body_middle_left_" + typename).append(html);
-}
-//加载首页_目录_宠物详细信息
-function LoadSY_ML_CWInfo(list, xzq, typename) {
-    var html = "";
-    for (var i = 0; i < list.length; i++) {
-        if (list[i].TYPE === "DL" && list[i].TYPENAME === typename)
-            html += ('<p id="p_body_middle_left_title_' + typename + '" class="p_body_middle_left_title">' + list[i].LBNAME + '</p>');
-    }
-    for (var i = 0; i < list.length; i++) {
-        if (list[i].TYPE === "XL" && list[i].TYPENAME === typename) {
-            html += ('<div class="div_body_middle_left_section_fl">');
-            html += ('<span class="span_body_middle_left_section_fl_left blue" onclick="OpenCXLB(' + list[i].LBID + ',\'' + list[i].LBURL + '\',\'' + list[i].CONDITION + '\')" style="height: ' + GetHeight(list, list[i].ID) + 'px;">' + list[i].LBNAME + '</span>');
-            var count = 0;
-            for (var j = 0; j < list.length; j++) {
-                if (list[j].PARENTID === list[i].ID) {
-                    count++;
-                    if (list[j].ISHOT === "是")
-                        html += ('<span class="span_body_middle_left_section_fl_right orange" onclick="OpenCXLB(' + list[j].LBID + ',\'' + list[j].LBURL + '\',\'' + list[j].CONDITION + '\')">' + list[j].LBNAME + '</span>');
-                    else
-                        html += ('<span class="span_body_middle_left_section_fl_right" onclick="OpenCXLB(' + list[j].LBID + ',\'' + list[j].LBURL + '\',\'' + list[j].CONDITION + '\')">' + list[j].LBNAME + '</span>');
-                    if (count % 3 === 0)
-                        html += ('<br />');
-                    else
-                        html += ('<em class="em_body_middle_left_section_fl_right">/</em>');
-                }
-            }
-            html += ('</div>');
         }
     }
     $("#div_body_middle_left_" + typename).append(html);
