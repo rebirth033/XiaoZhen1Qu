@@ -16,7 +16,7 @@ function FBXX() {
 //加载默认
 function LoadDefault() {
     LoadSY_ML();
-    LoadZXFBXX();
+    //LoadZXFBXX();
 }
 //最新发布列表
 function ZXFBLB() {
