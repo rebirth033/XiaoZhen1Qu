@@ -15,20 +15,19 @@
 
 /*首页_主体_中部*/
 .div_body .div_body_middle{ width: 1200px;overflow-x: hidden;}
-.div_body .div_body_middle .div_body_middle_left{width: 280px;height: 1300px;margin-top: 10px;margin-right: 10px;display: inline-block;float: left;background: #ffffff;padding: 10px;}
-.div_body .div_body_middle .div_body_middle_left .div_body_middle_left_section { width: 260px;height: auto;display: block;float: left;}
-.div_body .div_body_middle .div_body_middle_left .div_body_middle_left_section .p_body_middle_left_title{font-size: 26px;border-bottom: 2px solid #5bc0de;display: block;height: 52px;color: #333333;}
-.div_body .div_body_middle .div_body_middle_left .div_body_middle_left_section .p_body_middle_left_title_small{font-size: 12px;color: #999999;display: block;height: 25px;}
-.div_body .div_body_middle .div_body_middle_left .div_body_middle_left_section .ul_body_middle_left_section{display: block;padding: 0;height: 30px;}
-.div_body .div_body_middle .div_body_middle_left .div_body_middle_left_section .ul_body_middle_left_section .li_body_middle_left_section{display: inline-block;width: 80px;height: 30px;font-size: 14px;float: left;}
-.div_body .div_body_middle .div_body_middle_left #div_body_middle_left_section_fc .ul_body_middle_left_section .li_body_middle_left_section{display: inline-block;margin-right: 10px;width:auto ;height: 30px;font-size: 14px;float: left;}
-.div_body .div_body_middle .div_body_middle_left .div_body_middle_left_section .ul_body_middle_left_section .li_body_middle_left_section:hover{ cursor: pointer;color: #ef6100;text-decoration: underline;}
-.div_body .div_body_middle .div_body_middle_left .div_body_middle_left_section_fl{ display: block;}
-.div_body .div_body_middle .div_body_middle_left .div_body_middle_left_section_fl .span_body_middle_left_section_fl_left{ display: inline-block;float: left;width: 75px;}
-.div_body .div_body_middle .div_body_middle_left .div_body_middle_left_section_fl .span_body_middle_left_section_fl_left:hover{ cursor: pointer;color: #ef6100;text-decoration: underline;}
-.div_body .div_body_middle .div_body_middle_left .div_body_middle_left_section_fl .span_body_middle_left_section_fl_right{ display: inline-block;height: 30px;}
-.div_body .div_body_middle .div_body_middle_left .div_body_middle_left_section_fl .span_body_middle_left_section_fl_right:hover{ cursor: pointer;color: #ef6100;text-decoration: underline;}
-.div_body .div_body_middle .div_body_middle_left .div_body_middle_left_section_fl .em_body_middle_left_section_fl_right{ display: inline-block;margin-left: 3px;margin-right: 3px;}
+.div_body .div_body_middle .div_body_middle_left_section { width: 280px;height: auto;display: block;float: left;padding: 10px;background: #ffffff;display: inline-block;margin-right: 10px;margin-top: 10px;}
+.div_body .div_body_middle .div_body_middle_left_section .p_body_middle_left_title{font-size: 26px;border-bottom: 2px solid #5bc0de;display: block;height: 52px;color: #333333;}
+.div_body .div_body_middle .div_body_middle_left_section .p_body_middle_left_title_small{font-size: 12px;color: #999999;display: block;height: 25px;}
+.div_body .div_body_middle .div_body_middle_left_section .ul_body_middle_left_section{display: block;padding: 0;height: 30px;}
+.div_body .div_body_middle .div_body_middle_left_section .ul_body_middle_left_section .li_body_middle_left_section{display: inline-block;width: 80px;height: 30px;font-size: 14px;float: left;}
+.div_body .div_body_middle #div_body_middle_left_section_fc .ul_body_middle_left_section .li_body_middle_left_section{display: inline-block;margin-right: 10px;width:auto ;height: 30px;font-size: 14px;float: left;}
+.div_body .div_body_middle .div_body_middle_left_section .ul_body_middle_left_section .li_body_middle_left_section:hover{ cursor: pointer;color: #ef6100;text-decoration: underline;}
+.div_body .div_body_middle .div_body_middle_left_section_fl{ display: block;}
+.div_body .div_body_middle .div_body_middle_left_section_fl .span_body_middle_left_section_fl_left{ display: inline-block;float: left;width: 75px;}
+.div_body .div_body_middle .div_body_middle_left_section_fl .span_body_middle_left_section_fl_left:hover{ cursor: pointer;color: #ef6100;text-decoration: underline;}
+.div_body .div_body_middle .div_body_middle_left_section_fl .span_body_middle_left_section_fl_right{ display: inline-block;height: 30px;}
+.div_body .div_body_middle .div_body_middle_left_section_fl .span_body_middle_left_section_fl_right:hover{ cursor: pointer;color: #ef6100;text-decoration: underline;}
+.div_body .div_body_middle .div_body_middle_left_section_fl .em_body_middle_left_section_fl_right{ display: inline-block;margin-left: 3px;margin-right: 3px;}
 
 /*首页_主体_底部*/
 .div_body .div_body_bottom{ width: 1200px;height: 280px;display: block;margin-top: 10px; overflow-x: hidden;background: #ffffff;padding: 10px 20px;}
