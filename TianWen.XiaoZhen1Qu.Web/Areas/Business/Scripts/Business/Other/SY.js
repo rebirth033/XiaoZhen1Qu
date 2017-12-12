@@ -7,6 +7,7 @@ $(document).ready(function () {
     $(".div_bottom").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
     $(".img_head_left_logo").css("margin-left", "20px");
     $("#li_head_sy").css("background", "#5bc0de").css("color", "#ffffff");
+    
     LoadDefault();
 });
 //发布信息
@@ -132,6 +133,17 @@ function LoadSY_ML() {
                 LoadSY_ML_WXLInfo(xml.list, xml.xzq, "PFCG");
                 LoadSY_MLInfo(xml.list, xml.xzq, "SWFW");
                 LoadSY_MLInfo(xml.list, xml.xzq, "ES");
+                $("#p_body_middle_left_title_FC").css("border-bottom", "2px solid #59d072");
+                $("#p_body_middle_left_title_CL").css("border-bottom", "2px solid #bc6ba6");
+                $("#p_body_middle_left_title_CW").css("border-bottom", "2px solid #9fa4ce");
+                $("#p_body_middle_left_title_ZP").css("border-bottom", "2px solid #00bfe1");
+                $("#p_body_middle_left_title_JZ").css("border-bottom", "2px solid #abc466");
+                $("#p_body_middle_left_title_PX").css("border-bottom", "2px solid #c49966");
+                $("#p_body_middle_left_title_SHFW").css("border-bottom", "2px solid #ce9fc8");
+                $("#p_body_middle_left_title_JY").css("border-bottom", "2px solid #fda19d");
+                $("#p_body_middle_left_title_PFCG").css("border-bottom", "2px solid #eb437e");
+                $("#p_body_middle_left_title_SWFW").css("border-bottom", "2px solid #e5237e");
+                $("#p_body_middle_left_title_ES").css("border-bottom", "2px solid #64f4de");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -144,7 +156,7 @@ function LoadSY_MLInfo(list, xzq, typename) {
     var html = "";
     for (var i = 0; i < list.length; i++) {
         if (list[i].TYPE === "DL" && list[i].TYPENAME === typename)
-            html += ('<p class="p_body_middle_left_title">' + xzq + list[i].LBNAME + '</p>');
+            html += ('<p id="p_body_middle_left_title_' + typename + '" class="p_body_middle_left_title">' + list[i].LBNAME + '</p>');
     }
     for (var i = 0; i < list.length; i++) {
         if (list[i].TYPE === "XL" && list[i].TYPENAME === typename) {
@@ -168,7 +180,7 @@ function LoadSY_ML_WXLInfo(list, xzq, typename) {
     var html = "";
     for (var i = 0; i < list.length; i++) {
         if (list[i].TYPE === "DL" && list[i].TYPENAME === typename) {
-            html += ('<p class="p_body_middle_left_title">' + xzq + list[i].LBNAME + '</p>');
+            html += ('<p class="p_body_middle_left_title">' + list[i].LBNAME + '</p>');
             html += ('<ul class="ul_body_middle_left_section" style="height: ' + GetHeight(list, list[i].ID) + 'px;">');
             for (var j = 0; j < list.length; j++) {
                 if (list[j].PARENTID === list[i].ID) {
@@ -188,7 +200,7 @@ function LoadSY_ML_CWInfo(list, xzq, typename) {
     var html = "";
     for (var i = 0; i < list.length; i++) {
         if (list[i].TYPE === "DL" && list[i].TYPENAME === typename)
-            html += ('<p class="p_body_middle_left_title">' + xzq + list[i].LBNAME + '</p>');
+            html += ('<p id="p_body_middle_left_title_' + typename + '" class="p_body_middle_left_title">' + list[i].LBNAME + '</p>');
     }
     for (var i = 0; i < list.length; i++) {
         if (list[i].TYPE === "XL" && list[i].TYPENAME === typename) {
