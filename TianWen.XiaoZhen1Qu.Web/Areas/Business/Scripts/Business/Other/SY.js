@@ -126,7 +126,7 @@ function LoadSY_ML() {
                 LoadSY_MLInfo(xml.list, xml.xzq, "CL");
                 LoadSY_ML_CWInfo(xml.list, xml.xzq, "CW");
                 LoadSY_MLInfo(xml.list, xml.xzq, "ZP");
-                LoadSY_ML_WXLInfo(xml.list, xml.xzq, "JZ");
+                LoadSY_ML_WXLInfo(xml.list, xml.xzq, "ZSJM");
                 LoadSY_ML_WXLInfo(xml.list, xml.xzq, "PX");
                 LoadSY_MLInfo(xml.list, xml.xzq, "SHFW");
                 LoadSY_ML_WXLInfo(xml.list, xml.xzq, "JY");
@@ -137,7 +137,7 @@ function LoadSY_ML() {
                 $("#p_body_middle_left_title_CL").css("border-bottom", "2px solid #bc6ba6");
                 $("#p_body_middle_left_title_CW").css("border-bottom", "2px solid #9fa4ce");
                 $("#p_body_middle_left_title_ZP").css("border-bottom", "2px solid #00bfe1");
-                $("#p_body_middle_left_title_JZ").css("border-bottom", "2px solid #abc466");
+                $("#p_body_middle_left_title_ZSJM").css("border-bottom", "2px solid #abc466");
                 $("#p_body_middle_left_title_PX").css("border-bottom", "2px solid #c49966");
                 $("#p_body_middle_left_title_SHFW").css("border-bottom", "2px solid #ce9fc8");
                 $("#p_body_middle_left_title_JY").css("border-bottom", "2px solid #fda19d");
