@@ -180,7 +180,7 @@ function LoadSY_ML_WXLInfo(list, xzq, typename) {
     var html = "";
     for (var i = 0; i < list.length; i++) {
         if (list[i].TYPE === "DL" && list[i].TYPENAME === typename) {
-            html += ('<p class="p_body_middle_left_title">' + list[i].LBNAME + '</p>');
+            html += ('<p id="p_body_middle_left_title_' + typename + '" class="p_body_middle_left_title">' + list[i].LBNAME + '</p>');
             html += ('<ul class="ul_body_middle_left_section" style="height: ' + GetHeight(list, list[i].ID) + 'px;">');
             for (var j = 0; j < list.length; j++) {
                 if (list[j].PARENTID === list[i].ID) {

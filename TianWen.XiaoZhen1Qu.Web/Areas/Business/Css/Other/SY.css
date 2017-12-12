@@ -30,14 +30,6 @@
 
 /*首页_主体_底部*/
 .div_body .div_body_bottom{ width: 1200px;height: 280px;display: block;margin-top: 10px; overflow-x: hidden;background: #ffffff;padding: 10px 20px;}
-.div_body .div_body_bottom .p_div_body_bottom_title{font-size: 16px;font-weight: 700;border-bottom: 1px solid #cccccc;display: block;height: 35px;color: #5bc0de;}
-.div_body .div_body_bottom .div_body_bottom_section{ width: 276px;height: 200px;border-right: 1px solid #cccccc;float: left;}
-.div_body .div_body_bottom .div_body_bottom_section .p_div_body_bottom_section_title{font-size: 14px;display: block;height: 25px;}
-.div_body .div_body_bottom .div_body_bottom_section .ul_body_bottom_section{ padding: 0;}
-.div_body .div_body_bottom .div_body_bottom_section .ul_body_bottom_section .li_body_bottom_section{ width: 80px;height: 60px;float: left;margin-top: 10px;}
-.div_body .div_body_bottom .div_body_bottom_section .ul_body_bottom_section .li_body_bottom_section .p_li_body_bottom_section{ text-align: center;font-size: 13px;color: #999999;}
-.div_body .div_body_bottom .div_body_bottom_section .ul_body_bottom_section .li_body_bottom_section .p_li_body_bottom_section:hover{ cursor: pointer;color: #ef6100;text-decoration: underline;}
-.div_body .div_body_bottom .div_body_bottom_section .ul_body_bottom_section .li_body_bottom_section .p_li_body_bottom_section .img_li_body_bottom_section{ width: 28px;height: 28px;display: block;margin-left: 25px;}
 .orange{color: #ef6100;}
 .gray{ color: #999999;}
 .blue{ color: #5bc0de;}
