@@ -7,7 +7,7 @@ $(document).ready(function () {
     $(".div_bottom").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
     $(".img_head_left_logo").css("margin-left", "20px");
     $("#li_head_sy").css("background", "#5bc0de").css("color", "#ffffff");
-    
+
     LoadDefault();
 });
 //发布信息
@@ -161,7 +161,7 @@ function LoadSY_MLInfo(list, xzq, typename) {
     for (var i = 0; i < list.length; i++) {
         if (list[i].TYPE === "XL" && list[i].TYPENAME === typename) {
             html += ('<p class="p_body_middle_left_title_small">' + list[i].LBNAME + '</p>');
-            html += ('<ul class="ul_body_middle_left_section" style="height: ' + GetHeight(list, list[i].ID) + 'px;">');
+            html += ('<ul class="ul_body_middle_left_section" style="height: ' + GetHeight(list, list[i].ID, typename) + 'px;">');
             for (var j = 0; j < list.length; j++) {
                 if (list[j].PARENTID === list[i].ID) {
                     if (list[j].ISHOT === "是")
@@ -181,7 +181,7 @@ function LoadSY_ML_WXLInfo(list, xzq, typename) {
     for (var i = 0; i < list.length; i++) {
         if (list[i].TYPE === "DL" && list[i].TYPENAME === typename) {
             html += ('<p id="p_body_middle_left_title_' + typename + '" class="p_body_middle_left_title">' + list[i].LBNAME + '</p>');
-            html += ('<ul class="ul_body_middle_left_section" style="height: ' + GetHeight(list, list[i].ID) + 'px;">');
+            html += ('<ul class="ul_body_middle_left_section" style="height: ' + GetHeight(list, list[i].ID, typename) + 'px;">');
             for (var j = 0; j < list.length; j++) {
                 if (list[j].PARENTID === list[i].ID) {
                     if (list[j].ISHOT === "是")
@@ -196,16 +196,23 @@ function LoadSY_ML_WXLInfo(list, xzq, typename) {
     $("#div_body_middle_left_" + typename).append(html);
 }
 //获取高度
-function GetHeight(list, parentid) {
+function GetHeight(list, parentid, typename) {
     var count = 0, height = 0;
     for (var i = 0; i < list.length; i++) {
         if (list[i].PARENTID === parentid) {
             count++;
         }
     }
-    height = parseInt((count / 3)) * 30;
-    if (count % 3 !== 0)
-        height += 30;
+    if (typename === "ES" || typename === "SHFW") {
+        height = parseInt((count / 7)) * 30;
+        if (count % 7 !== 0) height += 30;
+    }
+    else {
+        height = parseInt((count / 3)) * 30;
+        if (count % 3 !== 0) height += 30;
+    }
+        
+    
     return height;
 }
 //打开查询列表
