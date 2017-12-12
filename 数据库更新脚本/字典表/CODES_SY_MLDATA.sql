@@ -32,10 +32,10 @@ insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CO
 values (10, null, '二手市集', 10, null, 'DL', 'ES', null, null, '二手', null);
 
 insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (11, null, '房屋租售', 1, 1, 'XL', 'FC', null, null, '房产', null);
+values (11, null, '房屋出租', 1, 1, 'XL', 'FC', null, null, '房产', null);
 
 insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (12, null, '商业地产租售', 2, 1, 'XL', 'FC', null, null, '房产', null);
+values (12, null, '商业地产', 3, 1, 'XL', 'FC', null, null, '房产', null);
 
 insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
 values (13, null, '二手车', 1, 2, 'XL', 'CL', null, null, '车辆', null);
@@ -83,7 +83,7 @@ insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CO
 values (29, null, '旅游酒店', 5, 8, 'XL', 'SHFW', null, null, '生活服务', null);
 
 insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (30, null, '休闲服务', 6, 8, 'XL', 'SHFW', null, null, '生活服务', null);
+values (30, null, '休闲娱乐', 6, null, null, null, null, null, null, null);
 
 insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
 values (32, null, '商务服务', 1, 9, 'XL', 'SWFW', null, null, '商务服务', null);
@@ -260,25 +260,25 @@ insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CO
 values (92, 122, '拼班拼课', 16, 7, null, 'JYPX', null, null, '教育培训', '/JYPXCX/JYPXCX_PBPK');
 
 insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (93, 13, '整租', 1, 11, null, 'FC', null, '是', '房产', '/FCCX/FCCX_ZZF');
+values (93, 13, '整套出租', 1, 11, null, 'FC', null, '是', '房产', '/FCCX/FCCX_ZZF');
 
 insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (94, 14, '合租', 2, 11, null, 'FC', null, null, '房产', '/FCCX/FCCX_HZF');
+values (94, 14, '单间出租', 2, 11, null, 'FC', null, null, '房产', '/FCCX/FCCX_HZF');
 
 insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (95, 15, '日租/短租', 3, 11, null, 'FC', null, null, '房产', '/FCCX/FCCX_DZF');
+values (95, 15, '日租短租', 3, 11, null, 'FC', null, null, '房产', '/FCCX/FCCX_DZF');
 
 insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (96, 16, '二手房', 4, 11, null, 'FC', null, '是', '房产', '/FCCX/FCCX_ESF');
+values (96, 16, '二手房', 1, 1101, null, 'FC', null, '是', '房产', '/FCCX/FCCX_ESF');
 
 insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (97, 16, '新房', 5, 11, null, 'FC', null, '是', '房产', null);
+values (97, 16, '新房', 2, 1101, null, 'FC', null, '是', '房产', '/FCCX/FCCX_ESF');
 
 insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (98, 17, '商铺', 1, 12, null, 'FC', null, null, '房产', '/FCCX/FCCX_SP');
+values (98, 17, '商铺', 2, 12, null, 'FC', null, null, '房产', '/FCCX/FCCX_SP');
 
 insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (99, 18, '写字楼', 2, 12, null, 'FC', null, null, '房产', '/FCCX/FCCX_XZL');
+values (99, 18, '写字楼', 1, 12, null, 'FC', null, null, '房产', '/FCCX/FCCX_XZL');
 
 insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
 values (100, 19, '厂房', 3, 12, null, 'FC', null, null, '房产', '/FCCX/FCCX_CF');
@@ -296,7 +296,7 @@ insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CO
 values (104, 185, '二手轿车', 1, 13, null, 'CL', null, '是', '车辆', '/CLCX/CLCX_JC');
 
 insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (105, 192, '客车', 2, 13, null, 'CL', null, null, '车辆', '/CLCX/CLCX_KC');
+values (105, 192, '客运车', 2, 13, null, 'CL', null, null, '车辆', '/CLCX/CLCX_KC');
 
 insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
 values (106, 187, '摩托车', 3, 13, null, 'CL', null, null, '车辆', '/CLCX/CLCX_MTC');
@@ -311,7 +311,7 @@ insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CO
 values (109, 189, '三轮车', 6, 13, null, 'CL', null, null, '车辆', '/CLCX/CLCX_SLC');
 
 insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (110, 190, '货车', 1, 14, null, 'CL', null, null, '车辆', '/CLCX/CLCX_HC');
+values (110, 190, '货运车', 1, 14, null, 'CL', null, null, '车辆', '/CLCX/CLCX_HC');
 
 insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
 values (111, 191, '工程车', 2, 14, null, 'CL', null, null, '车辆', '/CLCX/CLCX_GCC');
@@ -396,342 +396,6 @@ values (149, 89, '包住', 7, 22, null, 'ZP', 'ZWLB=包住', null, '招聘', '/QZZPCX/
 
 insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
 values (150, 89, '五险一金', 3, 22, null, 'ZP', 'ZWLB=五险一金', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (151, 89, '交通补助', 4, 22, null, 'ZP', 'ZWLB=交通补助', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (152, 89, '房补', 5, 22, null, 'ZP', 'ZWLB=房补', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (153, 89, '双休', 6, 22, null, 'ZP', 'ZWLB=双休', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (154, 89, '带薪年假', 2, 22, null, 'ZP', 'ZWLB=带薪年假', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (155, 89, '餐饮', 1, 23, null, 'ZP', 'HYLB=餐饮', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (156, 89, '销售', 2, 23, null, 'ZP', 'HYLB=销售', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (158, 89, '美容/美发', 4, 23, null, 'ZP', 'HYLB=美容/美发', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (159, 89, '酒店', 5, 23, null, 'ZP', 'HYLB=酒店', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (160, 89, '保健按摩', 6, 23, null, 'ZP', 'HYLB=保健按摩', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (161, 89, '运动健身', 7, 23, null, 'ZP', 'HYLB=运动健身', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (163, 89, '客服', 1, 24, null, 'ZP', 'ZWLB=客服', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (164, 89, '文员', 2, 24, null, 'ZP', 'ZWLB=文员', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (165, 89, '会计', 3, 24, null, 'ZP', 'ZWLB=会计', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (166, 89, '普工', 4, 24, null, 'ZP', 'ZWLB=普工', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (167, 89, '保安', 5, 24, null, 'ZP', 'ZWLB=保安', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (168, 89, '旅游', 6, 24, null, 'ZP', 'HYLB=旅游', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (169, 89, '保姆', 7, 24, null, 'ZP', 'ZWLB=保姆', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (170, 89, '司机', 8, 24, null, 'ZP', 'ZWLB=司机', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (171, 89, '厨师', 9, 24, null, 'ZP', 'ZWLB=厨师', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (172, 89, '检验', 10, 24, null, 'ZP', 'ZWLB=检验', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (173, 89, '服务员', 11, 24, null, 'ZP', 'ZWLB=服务员', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (174, 89, '淘宝客服', 12, 24, null, 'ZP', 'ZWLB=淘宝客服', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (175, 89, '保洁', 13, 24, null, 'ZP', 'ZWLB=保洁', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (176, 89, '采购', 14, 24, null, 'ZP', 'ZWLB=采购', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (177, 89, '快递员', 15, 24, null, 'ZP', 'ZWLB=快递员', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (178, 89, '平面设计', 16, 24, null, 'ZP', 'ZWLB=平面设计', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (179, 89, '美发', 17, 24, null, 'ZP', 'ZWLB=美发', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (180, 89, '出纳', 18, 24, null, 'ZP', 'ZWLB=出纳', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (181, 89, '收银员', 19, 24, null, 'ZP', 'ZWLB=收银员', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (182, 89, '健身教练', 20, 24, null, 'ZP', 'ZWLB=健身教练', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (183, 89, '外贸', 21, 24, null, 'ZP', 'ZWLB=外贸', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (184, 89, '幼教', 22, 24, null, 'ZP', 'ZWLB=幼教', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (185, 89, '洗车工', 23, 24, null, 'ZP', 'ZWLB=洗车工', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (186, 89, '房产', 25, 24, null, 'ZP', 'ZWLB=房产', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (187, 89, '演员', 26, 24, null, 'ZP', 'ZWLB=演员', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (188, 89, '美容师', 27, 24, null, 'ZP', 'ZWLB=美容师', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (189, 89, '仓库管理', 28, 24, null, 'ZP', 'ZWLB=仓库管理', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (190, 89, '电工', 29, 24, null, 'ZP', 'ZWLB=电工', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (191, 89, '导游', 30, 24, null, 'ZP', 'ZWLB=导游', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (192, 172, '搬家', 1, 25, null, 'SHFW', null, null, '生活服务', '/SHFWCX/SHFWCX_BJ');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (193, 173, '保姆月嫂', 2, 25, null, 'SHFW', null, null, '生活服务', '/SHFWCX/SHFWCX_BMYS');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (194, 174, '保洁清洗', 3, 25, null, 'SHFW', null, null, '生活服务', '/SHFWCX/SHFWCX_BJQX');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (195, 175, '管道疏通', 4, 25, null, 'SHFW', null, null, '生活服务', '/SHFWCX/SHFWCX_GDST');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (196, 176, '生活配送', 5, 25, null, 'SHFW', null, null, '生活服务', '/SHFWCX/SHFWCX_SHPS');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (197, 177, '白事服务', 6, 25, null, 'SHFW', null, null, '生活服务', '/SHFWCX/SHFWCX_BSFW');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (198, 178, '家电维修', 1, 26, null, 'SHFW', null, null, '生活服务', '/SHFWCX/SHFWCX_JDWX');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (199, 179, '电脑维修', 2, 26, null, 'SHFW', null, null, '生活服务', '/SHFWCX/SHFWCX_DNWX');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (200, 180, '房屋维修', 3, 26, null, 'SHFW', null, null, '生活服务', '/SHFWCX/SHFWCX_FWWX');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (201, 181, '家具维修', 4, 26, null, 'SHFW', null, null, '生活服务', '/SHFWCX/SHFWCX_JJWX');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (202, 182, '手机维修', 5, 26, null, 'SHFW', null, null, '生活服务', '/SHFWCX/SHFWCX_SJWX');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (203, 184, '数码维修', 6, 26, null, 'SHFW', null, null, '生活服务', '/SHFWCX/SHFWCX_SMWX');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (204, 183, '开锁修锁', 7, 26, null, 'SHFW', null, null, '生活服务', '/SHFWCX/SHFWCX_KSXS');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (205, 130, '家装服务', 1, 27, null, 'SHFW', null, null, '生活服务', '/ZXJCCX/ZXJCCX_JZFW');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (206, 131, '工装服务', 2, 27, null, 'SHFW', null, null, '生活服务', '/ZXJCCX/ZXJCCX_GZFW');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (207, 132, '房屋改造', 3, 27, null, 'SHFW', null, null, '生活服务', '/ZXJCCX/ZXJCCX_FWGZ');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (208, 133, '建材', 4, 27, null, 'SHFW', null, null, '生活服务', '/ZXJCCX/ZXJCCX_JC');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (209, 134, '家具', 5, 27, null, 'SHFW', null, null, '生活服务', '/ZXJCCX/ZXJCCX_JJ');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (210, 135, '家纺家饰', 6, 27, null, 'SHFW', null, null, '生活服务', '/ZXJCCX/ZXJCCX_JFJS');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (211, 136, '婚庆公司', 1, 28, null, 'SHFW', null, null, '生活服务', '/HQSYCX/HQSYCX_HQGS');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (212, 137, '婚车租赁', 2, 28, null, 'SHFW', null, null, '生活服务', '/HQSYCX/HQSYCX_HCZL');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (213, 138, '婚宴酒店', 3, 28, null, 'SHFW', null, null, '生活服务', '/HQSYCX/HQSYCX_HYJD');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (214, 139, '彩妆造型', 4, 28, null, 'SHFW', null, null, '生活服务', '/HQSYCX/HQSYCX_CZZX');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (215, 140, '婚庆用品', 5, 28, null, 'SHFW', null, null, '生活服务', '/HQSYCX/HQSYCX_HQYP');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (216, 141, '司仪', 6, 28, null, 'SHFW', null, null, '生活服务', '/HQSYCX/HQSYCX_SY');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (217, 142, '婚礼跟拍', 7, 28, null, 'SHFW', null, null, '生活服务', '/HQSYCX/HQSYCX_HLGP');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (218, 143, '婚纱礼服', 8, 28, null, 'SHFW', null, null, '生活服务', '/HQSYCX/HQSYCX_HSLF');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (219, 144, '婚纱摄影', 9, 28, null, 'SHFW', null, null, '生活服务', '/HQSYCX/HQSYCX_HLGP');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (220, 123, '旅行社', 1, 29, null, 'SHFW', null, null, '生活服务', '/LYJDCX/LYJDCX_LXS');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (221, 124, '国内游', 2, 29, null, 'SHFW', null, null, '生活服务', '/LYJDCX/LYJDCX_GNY');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (222, 125, '周边游', 3, 29, null, 'SHFW', null, null, '生活服务', '/LYJDCX/LYJDCX_ZBY');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (223, 126, '出境游', 4, 29, null, 'SHFW', null, null, '生活服务', '/LYJDCX/LYJDCX_CJY');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (224, 127, '酒店/住宿', 5, 29, null, 'SHFW', null, null, '生活服务', '/LYJDCX/LYJDCX_JDZSYD');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (225, 128, '机票', 6, 29, null, 'SHFW', null, null, '生活服务', '/LYJDCX/LYJDCX_HW');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (226, 44, '运动健身', 1, 30, null, 'SHFW', null, null, '生活服务', '/XXYLCX/XXYLCX_YDJS');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (227, 45, '酒吧', 2, 30, null, 'SHFW', null, null, '生活服务', '/XXYLCX/XXYLCX_YDJB');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (228, 46, 'KTV', 3, 30, null, 'SHFW', null, null, '生活服务', '/XXYLCX/XXYLCX_KTV');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (229, 47, '户外', 4, 30, null, 'SHFW', null, null, '生活服务', '/XXYLCX/XXYLCX_HW');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (230, 48, '洗浴温泉', 5, 30, null, 'SHFW', null, null, '生活服务', '/XXYLCX/XXYLCX_XYWQ');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (231, 49, '足疗按摩', 6, 30, null, 'SHFW', null, null, '生活服务', '/XXYLCX/XXYLCX_ZLAM');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (232, 50, '台球厅', 7, 30, null, 'SHFW', null, null, '生活服务', '/XXYLCX/XXYLCX_TQT');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (233, 51, '棋牌桌游', 8, 30, null, 'SHFW', null, null, '生活服务', '/XXYLCX/XXYLCX_QPZY');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (234, 52, 'DIY手工坊', 9, 30, null, 'SHFW', null, null, '生活服务', '/XXYLCX/XXYLCX_DIYSGF');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (235, 53, '轰趴馆', 10, 30, null, 'SHFW', null, null, '生活服务', '/XXYLCX/XXYLCX_HPG');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (246, 211, '工商注册', 1, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_GSZC');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (247, 212, '商标专利', 2, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_SBZL');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (248, 213, '法律咨询', 3, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_FLZX');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (249, 214, '财务会计', 4, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_CWKJPG');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (250, 215, '保险', 5, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_BX');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (251, 216, '投资担保', 6, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_TZDB');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (252, 217, '印刷包装', 7, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_YSBZ');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (253, 218, '喷绘招牌', 8, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_PHZP');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (254, 219, '设计策划', 9, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_SJCH');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (255, 220, '广告传媒', 10, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_GGCM');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (256, 221, '展会服务', 11, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_ZHFW');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (257, 222, '礼品定制', 12, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_LPDZ');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (258, 223, '制卡', 13, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_ZK');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (259, 234, '翻译/速记', 14, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_FYSJ');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (260, 227, '网络布线', 15, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_WLBXWH');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (261, 228, '网站建设', 16, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_WZJSTG');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (262, 235, '咨询服务', 17, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_ZXFW');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (263, 214, '快递', 18, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_KD');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (264, 215, '货运物流', 19, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_HYWL');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (265, 216, '货运专线', 20, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_HYZX');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (266, 229, '办公维修', 21, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_BGSBWX');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (267, 213, '租赁', 22, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_ZL');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (268, 224, '代办签证', 23, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_DBQZQZ');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (269, 230, '建筑维修', 24, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_JZWX');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (270, 231, '机械维修', 25, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_JXSBWX');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (271, 225, '摄影摄像', 26, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_SYSX');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (272, 226, '礼仪庆典', 27, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_LYQD');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (274, 54, '餐饮', 1, 33, null, 'SWFW', null, null, '招商加盟', '/ZSJMCX/ZSJMCX_CY');
-
-insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (275, 55, '服装鞋包', 2, 33, null, 'SWFW', null, null, '招商加盟', '/ZSJMCX/ZSJMCX_FZXB');
 
 insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
 values (276, 57, '机械', 3, 33, null, 'SWFW', null, null, '招商加盟', '/ZSJMCX/ZSJMCX_JX');
@@ -864,5 +528,293 @@ values (318, 170, '二手设备', 17, 36, null, 'ES', null, null, '二手', '/ESCX/ESC
 
 insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
 values (320, 171, '成人用品', 19, 36, null, 'ES', null, null, '二手', '/ESCX/ESCX_QTES_CRYP');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (1101, null, '房屋买卖', 2, 1, 'XL', 'FC', null, null, '房产', null);
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (9503, 13, '南北通透', 3, 11, null, 'FC', null, null, '房产', '/FCCX/FCCX_ZZF');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (9502, 13, '紧邻地铁', 2, 11, null, 'FC', null, null, '房产', '/FCCX/FCCX_ZZF');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (9501, 13, '配套齐全', 1, 11, null, 'FC', null, null, '房产', '/FCCX/FCCX_ZZF');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (9504, 13, '独立卫生间', 4, 11, null, 'FC', null, null, '房产', '/FCCX/FCCX_ZZF');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (9702, 16, '紧邻地铁', 4, 1101, null, 'FC', null, null, null, '/FCCX/FCCX_ESF');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (9701, 16, '配套完善', 3, 1101, null, 'FC', null, null, null, '/FCCX/FCCX_ESF');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (192, 172, '搬家服务', 1, 25, null, 'SHFW', null, null, '生活服务', '/SHFWCX/SHFWCX_BJ');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (193, 173, '保姆月嫂', 2, 25, null, 'SHFW', null, null, '生活服务', '/SHFWCX/SHFWCX_BMYS');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (194, 174, '保洁清洗', 3, 25, null, 'SHFW', null, null, '生活服务', '/SHFWCX/SHFWCX_BJQX');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (195, 175, '管道疏通', 4, 25, null, 'SHFW', null, null, '生活服务', '/SHFWCX/SHFWCX_GDST');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (196, 176, '生活配送', 5, 25, null, 'SHFW', null, null, '生活服务', '/SHFWCX/SHFWCX_SHPS');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (197, 177, '白事服务', 6, 25, null, 'SHFW', null, null, '生活服务', '/SHFWCX/SHFWCX_BSFW');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (198, 178, '家电维修', 1, 26, null, 'SHFW', null, null, '生活服务', '/SHFWCX/SHFWCX_JDWX');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (199, 179, '电脑维修', 2, 26, null, 'SHFW', null, null, '生活服务', '/SHFWCX/SHFWCX_DNWX');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (200, 180, '房屋维修', 3, 26, null, 'SHFW', null, null, '生活服务', '/SHFWCX/SHFWCX_FWWX');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (201, 181, '家具维修', 4, 26, null, 'SHFW', null, null, '生活服务', '/SHFWCX/SHFWCX_JJWX');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (202, 182, '手机维修', 5, 26, null, 'SHFW', null, null, '生活服务', '/SHFWCX/SHFWCX_SJWX');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (203, 184, '数码维修', 6, 26, null, 'SHFW', null, null, '生活服务', '/SHFWCX/SHFWCX_SMWX');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (204, 183, '开锁修锁', 7, 26, null, 'SHFW', null, null, '生活服务', '/SHFWCX/SHFWCX_KSXS');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (205, 130, '家装服务', 1, 27, null, 'SHFW', null, null, '生活服务', '/ZXJCCX/ZXJCCX_JZFW');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (206, 131, '工装服务', 2, 27, null, 'SHFW', null, null, '生活服务', '/ZXJCCX/ZXJCCX_GZFW');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (207, 132, '房屋改造', 3, 27, null, 'SHFW', null, null, '生活服务', '/ZXJCCX/ZXJCCX_FWGZ');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (208, 133, '建材', 5, 27, null, 'SHFW', null, null, '生活服务', '/ZXJCCX/ZXJCCX_JC');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (209, 134, '家具', 6, 27, null, 'SHFW', null, null, '生活服务', '/ZXJCCX/ZXJCCX_JJ');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (210, 135, '家纺家饰', 4, 27, null, 'SHFW', null, null, '生活服务', '/ZXJCCX/ZXJCCX_JFJS');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (211, 136, '婚庆公司', 1, 28, null, 'SHFW', null, null, '生活服务', '/HQSYCX/HQSYCX_HQGS');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (212, 137, '婚车租赁', 2, 28, null, 'SHFW', null, null, '生活服务', '/HQSYCX/HQSYCX_HCZL');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (213, 138, '婚宴酒店', 3, 28, null, 'SHFW', null, null, '生活服务', '/HQSYCX/HQSYCX_HYJD');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (214, 139, '彩妆造型', 4, 28, null, 'SHFW', null, null, '生活服务', '/HQSYCX/HQSYCX_CZZX');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (215, 140, '婚庆用品', 5, 28, null, 'SHFW', null, null, '生活服务', '/HQSYCX/HQSYCX_HQYP');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (216, 141, '司仪', 9, 28, null, 'SHFW', null, null, '生活服务', '/HQSYCX/HQSYCX_SY');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (217, 142, '婚礼跟拍', 6, 28, null, 'SHFW', null, null, '生活服务', '/HQSYCX/HQSYCX_HLGP');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (218, 143, '婚纱礼服', 7, 28, null, 'SHFW', null, null, '生活服务', '/HQSYCX/HQSYCX_HSLF');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (219, 144, '婚纱摄影', 8, 28, null, 'SHFW', null, null, '生活服务', '/HQSYCX/HQSYCX_HLGP');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (220, 123, '旅行社', 1, 29, null, 'SHFW', null, null, '生活服务', '/LYJDCX/LYJDCX_LXS');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (221, 124, '国内游', 2, 29, null, 'SHFW', null, null, '生活服务', '/LYJDCX/LYJDCX_GNY');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (222, 125, '周边游', 3, 29, null, 'SHFW', null, null, '生活服务', '/LYJDCX/LYJDCX_ZBY');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (223, 126, '出境游', 4, 29, null, 'SHFW', null, null, '生活服务', '/LYJDCX/LYJDCX_CJY');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (224, 127, '酒店住宿', 5, 29, null, 'SHFW', null, null, '生活服务', '/LYJDCX/LYJDCX_JDZSYD');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (225, 128, '机票', 6, 29, null, 'SHFW', null, null, '生活服务', '/LYJDCX/LYJDCX_HW');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (226, 44, '运动健身', 1, 30, null, 'SHFW', null, null, '生活服务', '/XXYLCX/XXYLCX_YDJS');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (227, 45, '酒吧', 2, 30, null, 'SHFW', null, null, '生活服务', '/XXYLCX/XXYLCX_YDJB');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (228, 46, 'KTV', 3, 30, null, 'SHFW', null, null, '生活服务', '/XXYLCX/XXYLCX_KTV');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (229, 47, '户外', 4, 30, null, 'SHFW', null, null, '生活服务', '/XXYLCX/XXYLCX_HW');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (230, 48, '洗浴温泉', 5, 30, null, 'SHFW', null, null, '生活服务', '/XXYLCX/XXYLCX_XYWQ');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (231, 49, '足疗按摩', 6, 30, null, 'SHFW', null, null, '生活服务', '/XXYLCX/XXYLCX_ZLAM');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (232, 50, '台球厅', 7, 30, null, 'SHFW', null, null, '生活服务', '/XXYLCX/XXYLCX_TQT');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (233, 51, '棋牌桌游', 8, 30, null, 'SHFW', null, null, '生活服务', '/XXYLCX/XXYLCX_QPZY');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (234, 52, 'DIY手工坊', 9, 30, null, 'SHFW', null, null, '生活服务', '/XXYLCX/XXYLCX_DIYSGF');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (235, 53, '轰趴馆', 10, 30, null, 'SHFW', null, null, '生活服务', '/XXYLCX/XXYLCX_HPG');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (246, 211, '工商注册', 1, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_GSZC');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (247, 212, '商标专利', 2, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_SBZL');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (248, 213, '法律咨询', 3, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_FLZX');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (249, 214, '财务会计', 4, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_CWKJPG');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (250, 215, '保险', 5, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_BX');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (251, 216, '投资担保', 6, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_TZDB');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (252, 217, '印刷包装', 7, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_YSBZ');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (253, 218, '喷绘招牌', 8, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_PHZP');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (254, 219, '设计策划', 9, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_SJCH');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (255, 220, '广告传媒', 10, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_GGCM');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (256, 221, '展会服务', 11, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_ZHFW');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (257, 222, '礼品定制', 12, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_LPDZ');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (258, 223, '制卡', 13, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_ZK');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (259, 234, '翻译/速记', 14, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_FYSJ');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (260, 227, '网络布线', 15, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_WLBXWH');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (261, 228, '网站建设', 16, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_WZJSTG');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (262, 235, '咨询服务', 17, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_ZXFW');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (263, 214, '快递', 18, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_KD');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (264, 215, '货运物流', 19, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_HYWL');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (265, 216, '货运专线', 20, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_HYZX');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (266, 229, '办公维修', 21, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_BGSBWX');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (267, 213, '租赁', 22, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_ZL');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (268, 224, '代办签证', 23, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_DBQZQZ');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (269, 230, '建筑维修', 24, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_JZWX');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (270, 231, '机械维修', 25, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_JXSBWX');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (271, 225, '摄影摄像', 26, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_SYSX');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (272, 226, '礼仪庆典', 27, 32, null, 'SWFW', null, null, '商务服务', '/SWFWCX/SWFWCX_LYQD');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (274, 54, '餐饮', 1, 33, null, 'SWFW', null, null, '招商加盟', '/ZSJMCX/ZSJMCX_CY');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (275, 55, '服装鞋包', 2, 33, null, 'SWFW', null, null, '招商加盟', '/ZSJMCX/ZSJMCX_FZXB');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (151, 89, '交通补助', 4, 22, null, 'ZP', 'ZWLB=交通补助', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (152, 89, '房补', 5, 22, null, 'ZP', 'ZWLB=房补', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (153, 89, '双休', 6, 22, null, 'ZP', 'ZWLB=双休', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (154, 89, '带薪年假', 2, 22, null, 'ZP', 'ZWLB=带薪年假', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (155, 89, '餐饮', 1, 23, null, 'ZP', 'HYLB=餐饮', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (156, 89, '销售', 2, 23, null, 'ZP', 'HYLB=销售', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (158, 89, '美容/美发', 4, 23, null, 'ZP', 'HYLB=美容/美发', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (159, 89, '酒店', 5, 23, null, 'ZP', 'HYLB=酒店', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (160, 89, '保健按摩', 6, 23, null, 'ZP', 'HYLB=保健按摩', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (161, 89, '运动健身', 7, 23, null, 'ZP', 'HYLB=运动健身', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (163, 89, '客服', 1, 24, null, 'ZP', 'ZWLB=客服', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (164, 89, '文员', 2, 24, null, 'ZP', 'ZWLB=文员', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (165, 89, '会计', 3, 24, null, 'ZP', 'ZWLB=会计', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (166, 89, '普工', 4, 24, null, 'ZP', 'ZWLB=普工', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (167, 89, '保安', 5, 24, null, 'ZP', 'ZWLB=保安', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
+
+insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
+values (168, 89, '旅游', 6, 24, null, 'ZP', 'HYLB=旅游', null, '招聘', '/QZZPCX/QZZPCX_QZZP');
 
 prompt Done.

@@ -14,7 +14,7 @@
 .div_body .div_body_top .div_body_top_inner .ul_body_top .li_body_top .span_body_top_left_xl:hover{ cursor: pointer;color: #ef6100;text-decoration: underline;}
 
 /*首页_主体_中部*/
-.div_body .div_body_middle{ width: 1200px;overflow-x: hidden;}
+.div_body .div_body_middle{ width: 1200px;overflow-x: hidden;height: 1680px;}
 .div_body .div_body_middle .div_body_middle_left_section { width: 292.5px;height: 400px;display: block;float: left;padding: 10px;background: #ffffff;display: inline-block;margin-right: 10px;margin-top: 10px;}
 .div_body .div_body_middle .div_body_middle_left_section .p_body_middle_left_title{font-size: 26px;border-bottom: 2px solid #5bc0de;display: block;height: 52px;color: #333333;}
 .div_body .div_body_middle .div_body_middle_left_section .p_body_middle_left_title_small{font-size: 14px;color: #999999;display: block;height: 25px;}

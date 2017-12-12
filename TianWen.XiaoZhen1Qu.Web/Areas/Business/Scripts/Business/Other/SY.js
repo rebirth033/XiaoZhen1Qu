@@ -203,7 +203,7 @@ function GetHeight(list, parentid, typename) {
             count++;
         }
     }
-    if (typename === "ES" || typename === "SHFW") {
+    if (typename === "FC" || typename === "CL" || typename === "ZP" || typename === "ES" || typename === "SHFW" || typename === "SWFW") {
         height = parseInt((count / 7)) * 30;
         if (count % 7 !== 0) height += 30;
     }
