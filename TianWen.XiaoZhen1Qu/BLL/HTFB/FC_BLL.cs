@@ -45,7 +45,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
             }
         }
-        
+
         public object LoadFC_CFJBXX(string ID)
         {
             try
@@ -297,7 +297,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
             }
         }
-        
+
         public object LoadFC_DZFJBXX(string ID)
         {
             try
@@ -324,7 +324,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 };
             }
         }
-        
+
         public object SaveFC_ESFJBXX(JCXX jcxx, FC_ESFJBXX FC_ESFJBXX, List<PHOTOS> photos)
         {
             DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM FC_ESFJBXX WHERE ID='{0}'", FC_ESFJBXX.ID));
@@ -360,7 +360,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
             }
         }
-        
+
         public object LoadFC_ESFJBXX(string ID)
         {
             try
@@ -387,7 +387,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 };
             }
         }
-        
+
         public object SaveSPJBXX(JCXX jcxx, FC_SPJBXX FC_SPJBXX, List<PHOTOS> photos)
         {
             DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM FC_SPJBXX WHERE ID='{0}'", FC_SPJBXX.ID));
@@ -423,7 +423,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
             }
         }
-        
+
         public object LoadFC_SPJBXX(string ID)
         {
             try
@@ -450,7 +450,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 };
             }
         }
-        
+
         public object SaveXZLJBXX(JCXX jcxx, FC_XZLJBXX FC_XZLJBXX, List<PHOTOS> photos)
         {
             DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM FC_XZLJBXX WHERE ID='{0}'", FC_XZLJBXX.ID));
@@ -486,7 +486,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
             }
         }
-        
+
         public object LoadFC_XZLJBXX(string ID)
         {
             try
@@ -513,7 +513,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 };
             }
         }
-        
+
         public object SaveFC_ZZFJBXX(JCXX jcxx, FC_ZZFJBXX FC_ZZFJBXX, List<PHOTOS> photos)
         {
             DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM FC_ZZFJBXX WHERE ID='{0}'", FC_ZZFJBXX.ID));
@@ -549,7 +549,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
             }
         }
-        
+
         public object LoadFC_ZZFJBXX(string ID)
         {
             try
@@ -576,7 +576,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 };
             }
         }
-        
+
         public object SaveFC_HZFJBXX(JCXX jcxx, FC_HZFJBXX FC_HZFJBXX, List<PHOTOS> photos)
         {
             DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM FC_HZFJBXX WHERE ID='{0}'", FC_HZFJBXX.ID));
@@ -612,7 +612,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
             }
         }
-        
+
         public object LoadFC_HZFJBXX(string ID)
         {
             try
@@ -641,11 +641,11 @@ namespace TianWen.XiaoZhen1Qu.BLL
         }
 
         //根据汉子获取小区基本信息
-        public object LoadXQJBXXSByHZ(string XQMC)
+        public object LoadXQJBXXSByHZ(string XQMC, string XZQ)
         {
             try
             {
-                IList<CODES_XQJBXX> list = DAO.Repository.GetObjectList<CODES_XQJBXX>(String.Format("FROM CODES_XQJBXX WHERE XQMC like '%{0}%' and ROWNUM <= 10 ORDER BY XQMC", XQMC));
+                IList<CODES_XQJBXX> list = DAO.Repository.GetObjectList<CODES_XQJBXX>(String.Format("FROM CODES_XQJBXX WHERE XQMC like '%{0}%' and SZS = '{1}' and ROWNUM <= 10 ORDER BY XQMC", XQMC, XZQ));
                 return new { Result = EnResultType.Success, list = list };
             }
             catch (Exception ex)
@@ -654,13 +654,13 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 return new { Result = EnResultType.Failed, Message = "加载失败" };
             }
         }
-        
+
         //根据拼音获取小区基本信息
-        public object LoadXQJBXXSByPY(string XQMC)
+        public object LoadXQJBXXSByPY(string XQMC, string XZQ)
         {
             try
             {
-                IList<CODES_XQJBXX> list = DAO.Repository.GetObjectList<CODES_XQJBXX>(String.Format("FROM CODES_XQJBXX WHERE (XQMCPYQKG like '%{0}%' or XQMCPYSZM like '%{0}%') and ROWNUM <= 10 ORDER BY XQMC", XQMC));
+                IList<CODES_XQJBXX> list = DAO.Repository.GetObjectList<CODES_XQJBXX>(String.Format("FROM CODES_XQJBXX WHERE (XQMCPYQKG like '%{0}%' or XQMCPYSZM like '%{0}%')  and SZS = '{1}' and ROWNUM <= 10 ORDER BY XQMC", XQMC, XZQ));
                 return new { Result = EnResultType.Success, list = list };
             }
             catch (Exception ex)

@@ -19,7 +19,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         public ActionResult FC_CK() { ViewData["XZQ"] = Session["XZQ"]; ViewData["YHM"] = Session["YHM"]; return View(); }
         public ActionResult FC_TD() { ViewData["XZQ"] = Session["XZQ"]; ViewData["YHM"] = Session["YHM"]; return View(); }
         public ActionResult FC_CW() { ViewData["XZQ"] = Session["XZQ"]; ViewData["YHM"] = Session["YHM"]; return View(); }
-        
+
         [ValidateInput(false)]
         public JsonResult FBFC_DZFJBXX()
         {
@@ -162,7 +162,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             object result = FC_BLL.SaveCWJBXX(jcxx, CWjbxx, photos);
             return Json(result);
         }
-        
+
         public JsonResult LoadFC_DZFJBXX()
         {
             object result = FC_BLL.LoadFC_DZFJBXX(Request["ID"]);
@@ -215,11 +215,11 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         }
         public JsonResult LoadXQJBXXSByHZ()
         {
-            return Json(FC_BLL.LoadXQJBXXSByHZ(Request["XQMC"]));
+            return Json(FC_BLL.LoadXQJBXXSByHZ(Request["XQMC"], Session["XZQ"].ToString()));
         }
         public JsonResult LoadXQJBXXSByPY()
         {
-            return Json(FC_BLL.LoadXQJBXXSByPY(Request["XQMC"]));
+            return Json(FC_BLL.LoadXQJBXXSByPY(Request["XQMC"], Session["XZQ"].ToString()));
         }
     }
 }
