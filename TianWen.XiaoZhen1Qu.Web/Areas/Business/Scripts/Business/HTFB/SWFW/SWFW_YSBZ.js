@@ -68,7 +68,7 @@ function LoadXL(lbmc, xl) {
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='liXL' style='width:120px;' onclick='SelectDuoX(this)'><img class='img_XL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i === 4 || i === 9) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 6) === 0)
@@ -109,7 +109,7 @@ function LoadGY() {
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='liGY' onclick='SelectDuoX(this)'><img class='img_GY'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i % 6 === 5) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 6) === 0)

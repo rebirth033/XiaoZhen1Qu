@@ -42,7 +42,7 @@ function ValidateGLS() {
         $("#divGLSTip").css("display", "block");
         $("#divGLSTip").attr("class", "Warn");
         $("#divGLSTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写公里数啦');
-        $("#spanGLS").css("border-color", "#fd634f");
+        $("#spanGLS").css("border-color", "#F2272D");
         return false;
     } else {
         if (ValidateNumber($("#GLS").val())) {
@@ -53,7 +53,7 @@ function ValidateGLS() {
             $("#divGLSTip").css("display", "block");
             $("#divGLSTip").attr("class", "Warn");
             $("#divGLSTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />公里数填写整数，默认为面议');
-            $("#spanGLS").css("border-color", "#fd634f");
+            $("#spanGLS").css("border-color", "#F2272D");
             return false;
         }
     }

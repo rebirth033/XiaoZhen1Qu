@@ -261,6 +261,7 @@
     <Content Include="Areas\Business\Css\images\SY\WZJB\QQ图片20171101223342.png" />
     <Content Include="Areas\Business\Css\images\SY\WZJB\QQ图片20171101223345.png" />
     <Content Include="Areas\Business\Css\images\SY\WZJB\QQ图片20171101223348.png" />
+    <Content Include="Areas\Business\Css\images\warn.png" />
     <Content Include="Areas\Business\Css\images\XXXX\FC\xxxx_fc_冰箱.png" />
     <Content Include="Areas\Business\Css\images\XXXX\FC\xxxx_fc_宽带.png" />
     <Content Include="Areas\Business\Css\images\XXXX\FC\xxxx_fc_床.png" />
@@ -336,7 +337,7 @@
     <Content Include="Areas\Business\Css\images\BZZX\bzzx_fhdb.png" />
     <Content Include="Areas\Business\Css\images\BZZX\bzzx_wzyj_sctp.png" />
     <Content Include="Areas\Business\Css\images\cellphone.png" />
-    <Content Include="Areas\Business\Css\images\check_blue.png" />
+    <Content Include="Areas\Business\Css\images\check_purple.png" />
     <Content Include="Areas\Business\Css\images\check_gray.png" />
     <Content Include="Areas\Business\Css\images\clip.png" />
     <Content Include="Areas\Business\Css\images\close.png" />
@@ -408,7 +409,6 @@
     <Content Include="Areas\Business\Css\images\up.png" />
     <Content Include="Areas\Business\Css\images\upload_small.png" />
     <Content Include="Areas\Business\Css\images\upload_small2.png" />
-    <Content Include="Areas\Business\Css\images\warn.png" />
     <Content Include="Areas\Business\Css\images\wb_logo.png" />
     <Content Include="Areas\Business\Css\images\WDZJ\wdxj_cz_wxzf.png" />
     <Content Include="Areas\Business\Css\images\WDZJ\wdxj_cz_bjyh.png" />

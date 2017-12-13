@@ -3,7 +3,7 @@ function SelectDuoX(obj) {
     if ($(obj).find("img").attr("src").indexOf("blue") !== -1)
         $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
     else
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
+        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_purple.png");
 }
 //获取多选
 function GetDuoX(type) {
@@ -20,7 +20,7 @@ function SetDuoX(type, lbs) {
     for (var i = 0; i < lbarray.length; i++) {
         $(".li" + type).each(function () {
             if ($(this).find("label")[0].innerHTML.indexOf(lbarray[i]) !== -1)
-                $(this).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
+                $(this).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_purple.png");
         });
     }
 }

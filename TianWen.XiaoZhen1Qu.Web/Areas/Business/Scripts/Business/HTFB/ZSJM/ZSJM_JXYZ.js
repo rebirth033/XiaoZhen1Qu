@@ -21,7 +21,7 @@ function ValidatePPMC() {
         $("#divPPMCTip").css("display", "block");
         $("#divPPMCTip").attr("class", "Warn");
         $("#divPPMCTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写品牌名称啦');
-        $("#PPMC").css("border-color", "#fd634f");
+        $("#PPMC").css("border-color", "#F2272D");
         return false;
     } else {
         $("#divPPMCTip").css("display", "none");

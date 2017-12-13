@@ -1,12 +1,4 @@
-﻿function GetUploadCss() {
-    $("#div_upload").css("border-color", "#ad5b97");
-}
-
-function LeaveUploadCss() {
-    $("#div_upload").css("border-color", "#cccccc");
-}
-
-function LoadPhotos(photos) {
+﻿function LoadPhotos(photos) {
     if (photos.length > 0) {
         $("#divFWZPValue").css("display", "block");
         if (photos.length > 4)

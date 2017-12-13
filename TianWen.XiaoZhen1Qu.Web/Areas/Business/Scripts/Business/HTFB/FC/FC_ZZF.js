@@ -2,6 +2,7 @@
 $(document).ready(function () {
     $("#XQMC").bind("keyup", LoadXQMC);
     $("#KRZSJ").datepicker({ minDate: 0 });
+    $("#ui-datepicker-div").css("width", "471px");
     BindClick("FWCX");
     BindClick("ZXQK");
     BindClick("ZZLX");
@@ -208,7 +209,7 @@ function LoadDuoX(type, id) {
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='li" + id + "' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i === 4 || i === 9 || i === 14 || i === 19) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 5) === 0)

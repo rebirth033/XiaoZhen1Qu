@@ -1,10 +1,10 @@
 ﻿//激活上传按钮样式
 function GetUploadCss() {
-    $("#div_upload").css("border-color", "#ad5b97");
+    $("#div_upload").css("border", "2px solid #ad5b97");
 }
 //取消上传按钮样式
 function LeaveUploadCss() {
-    $("#div_upload").css("border-color", "#cccccc");
+    $("#div_upload").css("border", "2px solid #cccccc");
 }
 //加载图片
 function LoadPhotos(photos) {

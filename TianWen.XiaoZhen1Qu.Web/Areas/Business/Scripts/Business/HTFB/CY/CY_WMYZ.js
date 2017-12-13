@@ -22,7 +22,7 @@ function ValidateRJXF() {
         $("#divRJXFTip").css("display", "block");
         $("#divRJXFTip").attr("class", "Warn");
         $("#divRJXFTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写人均消费啦');
-        $("#spanRJXF").css("border-color", "#fd634f");
+        $("#spanRJXF").css("border-color", "#F2272D");
         return false;
     } else {
         if (ValidateDecimal($("#RJXF").val())) {
@@ -33,7 +33,7 @@ function ValidateRJXF() {
             $("#divRJXFTip").css("display", "block");
             $("#divRJXFTip").attr("class", "Warn");
             $("#divRJXFTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />人均消费请填写整数，默认为面议');
-            $("#spanRJXF").css("border-color", "#fd634f");
+            $("#spanRJXF").css("border-color", "#F2272D");
             return false;
         }
     }
@@ -44,7 +44,7 @@ function ValidateFWQY() {
         $("#divFWQYTip").css("display", "block");
         $("#divFWQYTip").attr("class", "Warn");
         $("#divFWQYTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写服务区域啦');
-        $("#FWQY").css("border-color", "#fd634f");
+        $("#FWQY").css("border-color", "#F2272D");
         return false;
     } else {
         $("#divFWQYTip").css("display", "none");

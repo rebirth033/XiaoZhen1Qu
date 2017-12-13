@@ -25,7 +25,7 @@ function ValidateCG() {
         $("#divCGTip").css("display", "block");
         $("#divCGTip").attr("class", "Warn");
         $("#divCGTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记选择场馆啦');
-        $("#CG").css("border-color", "#fd634f");
+        $("#CG").css("border-color", "#F2272D");
         return false;
     } else {
         $("#divCGTip").css("display", "none");
@@ -39,7 +39,7 @@ function ValidateSJ() {
         $("#divSJTip").css("display", "block");
         $("#divSJTip").attr("class", "Warn");
         $("#divSJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记选择时间啦');
-        $("#SJ").css("border-color", "#fd634f");
+        $("#SJ").css("border-color", "#F2272D");
         return false;
     } else {
         $("#divSJTip").css("display", "none");

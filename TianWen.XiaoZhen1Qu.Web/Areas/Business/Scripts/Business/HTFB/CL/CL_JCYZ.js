@@ -39,7 +39,7 @@ function ValidateXSLC() {
         $("#divXSLCTip").css("display", "block");
         $("#divXSLCTip").attr("class", "Warn");
         $("#divXSLCTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写行驶里程啦');
-        $("#spanXSLC").css("border-color", "#fd634f");
+        $("#spanXSLC").css("border-color", "#F2272D");
         return false;
     } else {
         if (ValidateDecimal($("#XSLC").val())) {
@@ -50,7 +50,7 @@ function ValidateXSLC() {
             $("#divXSLCTip").css("display", "block");
             $("#divXSLCTip").attr("class", "Warn");
             $("#divXSLCTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />行驶里程请填写数字');
-            $("#spanXSLC").css("border-color", "#fd634f");
+            $("#spanXSLC").css("border-color", "#F2272D");
             return false;
         }
     }
@@ -61,7 +61,7 @@ function ValidateKCDZ() {
         $("#divKCDZTip").css("display", "block");
         $("#divKCDZTip").attr("class", "Warn");
         $("#divKCDZTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写看车地址啦');
-        $("#KCDZ").css("border-color", "#fd634f");
+        $("#KCDZ").css("border-color", "#F2272D");
         return false;
     } else {
         $("#divKCDZTip").css("display", "none");

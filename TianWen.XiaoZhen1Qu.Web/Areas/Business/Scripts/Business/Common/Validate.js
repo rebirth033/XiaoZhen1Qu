@@ -32,7 +32,7 @@ function ValidateJG() {
         $("#divJGTip").css("display", "block");
         $("#divJGTip").attr("class", "Warn");
         $("#divJGTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写价格啦');
-        $("#spanJG").css("border-color", "#fd634f");
+        $("#spanJG").css("border-color", "#F2272D");
         return false;
     } else {
         if (ValidateNumber($("#JG").val())) {
@@ -43,7 +43,7 @@ function ValidateJG() {
             $("#divJGTip").css("display", "block");
             $("#divJGTip").attr("class", "Warn");
             $("#divJGTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />价格请填写数字，保留两位小数，默认为面议');
-            $("#spanJG").css("border-color", "#fd634f");
+            $("#spanJG").css("border-color", "#F2272D");
             return false;
         }
     }
@@ -66,7 +66,7 @@ function ValidateJTDZ() {
         $("#divSZQYTip").css("display", "block");
         $("#divSZQYTip").attr("class", "Warn");
         $("#divSZQYTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写具体地址啦');
-        $("#JTDZ").css("border-color", "#fd634f");
+        $("#JTDZ").css("border-color", "#F2272D");
         return false;
     } else {
         $("#divSZQYTip").css("display", "none");
@@ -80,7 +80,7 @@ function ValidateFWQY() {
         $("#divFWQYTip").css("display", "block");
         $("#divFWQYTip").attr("class", "Warn");
         $("#divFWQYTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写服务区域啦');
-        $("#FWQY").css("border-color", "#fd634f");
+        $("#FWQY").css("border-color", "#F2272D");
         return false;
     } else {
         $("#divFWQYTip").css("display", "none");
@@ -96,7 +96,7 @@ function ValidateSpanInput(id, value, outid) {
         $("#div" + outid + "Tip").css("display", "block");
         $("#div" + outid + "Tip").attr("class", "Warn");
         $("#div" + outid + "Tip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写' + value + '啦');
-        $("#span" + id).css("border-color", "#fd634f");
+        $("#span" + id).css("border-color", "#F2272D");
         return false;
     } else {
         $("#div" + outid + "Tip").css("display", "none");
@@ -112,7 +112,7 @@ function ValidateInput(id, value, outid) {
         $("#div" + outid + "Tip").css("display", "block");
         $("#div" + outid + "Tip").attr("class", "Warn");
         $("#div" + outid + "Tip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写' + value + '啦');
-        $("#" + id).css("border-color", "#fd634f");
+        $("#" + id).css("border-color", "#F2272D");
         return false;
     } else {
         $("#div" + outid + "Tip").css("display", "none");
@@ -157,7 +157,7 @@ function ValidateCheck(id, message) {
 function ValidateSelect(idout, idin, message) {
     var bool = false;
     if ($("#span" + idin).html().indexOf("请选择") !== -1) {
-        $("#div" + idin + "Text").css("border-color", "#fd634f");
+        $("#div" + idin + "Text").css("border-color", "#F2272D");
         $("#div" + idout + "Tip").css("display", "block");
         $("#div" + idout + "Tip").attr("class", "Warn");
         $("#div" + idout + "Tip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />' + message + '');

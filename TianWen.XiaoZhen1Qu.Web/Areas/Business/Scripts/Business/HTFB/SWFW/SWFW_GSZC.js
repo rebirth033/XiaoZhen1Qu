@@ -19,7 +19,7 @@ function LoadGSZCLB() {
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='liGSZCLB' onclick='SelectDuoX(this)'><img class='img_GSZCLB'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i === 3 || i === 7 || i === 11 || i === 15 || i === 19) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 4) === 0)

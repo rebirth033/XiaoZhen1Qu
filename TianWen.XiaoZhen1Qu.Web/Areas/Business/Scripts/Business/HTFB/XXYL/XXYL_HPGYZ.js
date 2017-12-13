@@ -22,7 +22,7 @@ function ValidateCDMJ() {
         $("#divCDMJTip").css("display", "block");
         $("#divCDMJTip").attr("class", "Warn");
         $("#divCDMJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写场地面积啦');
-        $("#spanCDMJ").css("border-color", "#fd634f");
+        $("#spanCDMJ").css("border-color", "#F2272D");
         return false;
     } else {
         $("#divCDMJTip").css("display", "none");

@@ -44,7 +44,7 @@ function ValidateDDD() {
         $("#divDDDTip").css("display", "block");
         $("#divDDDTip").attr("class", "Warn");
         $("#divDDDTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写到达地啦');
-        $("#DDD").css("border-color", "#fd634f");
+        $("#DDD").css("border-color", "#F2272D");
         return false;
     } else {
         $("#divDDDTip").css("display", "none");
@@ -58,7 +58,7 @@ function ValidateTZSJ() {
         $("#divTZSJTip").css("display", "block");
         $("#divTZSJTip").attr("class", "Warn");
         $("#divTZSJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写途中时间啦');
-        $("#TZSJ").css("border-color", "#fd634f");
+        $("#TZSJ").css("border-color", "#F2272D");
         return false;
     } else {
         $("#divTZSJTip").css("display", "none");
@@ -72,7 +72,7 @@ function ValidateYSJG() {
         $("#divYSJGTip").css("display", "block");
         $("#divYSJGTip").attr("class", "Warn");
         $("#divYSJGTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写运输价格啦');
-        $("#YSJG").css("border-color", "#fd634f");
+        $("#YSJG").css("border-color", "#F2272D");
         return false;
     } else {
         if (ValidateNumber($("#YSJG").val())) {
@@ -83,7 +83,7 @@ function ValidateYSJG() {
             $("#divYSJGTip").css("display", "block");
             $("#divYSJGTip").attr("class", "Warn");
             $("#divYSJGTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />运输价格请填写整数，默认为面议');
-            $("#YSJG").css("border-color", "#fd634f");
+            $("#YSJG").css("border-color", "#F2272D");
             return false;
         }
     }

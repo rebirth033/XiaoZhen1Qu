@@ -31,7 +31,7 @@ function ValidateSJ_H(type, id, value) {
         $("#div" + type + "Tip").css("display", "block");
         $("#div" + type + "Tip").attr("class", "Warn");
         $("#div" + type + "Tip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写小时啦');
-        $("#div" + type + "Tip").css("border-color", "#fd634f");
+        $("#div" + type + "Tip").css("border-color", "#F2272D");
         return false;
     } else {
         if (ValidateNumber(value)) {
@@ -42,7 +42,7 @@ function ValidateSJ_H(type, id, value) {
             $("#div" + type + "Tip").css("display", "block");
             $("#div" + type + "Tip").attr("class", "Warn");
             $("#div" + type + "Tip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />小时请填写整数');
-            $("#" + id).css("border-color", "#fd634f");
+            $("#" + id).css("border-color", "#F2272D");
             return false;
         }
     }
@@ -53,7 +53,7 @@ function ValidateSJ_M(type, id, value) {
         $("#div" + type + "Tip").css("display", "block");
         $("#div" + type + "Tip").attr("class", "Warn");
         $("#div" + type + "Tip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写分钟啦');
-        $("#div" + type + "Tip").css("border-color", "#fd634f");
+        $("#div" + type + "Tip").css("border-color", "#F2272D");
         return false;
     } else {
         if (ValidateNumber(value)) {
@@ -64,7 +64,7 @@ function ValidateSJ_M(type, id, value) {
             $("#div" + type + "Tip").css("display", "block");
             $("#div" + type + "Tip").attr("class", "Warn");
             $("#div" + type + "Tip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />分钟请填写整数');
-            $("#" + id).css("border-color", "#fd634f");
+            $("#" + id).css("border-color", "#F2272D");
             return false;
         }
     }

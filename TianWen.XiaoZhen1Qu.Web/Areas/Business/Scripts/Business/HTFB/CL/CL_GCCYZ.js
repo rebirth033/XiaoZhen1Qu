@@ -51,7 +51,7 @@ function ValidateDW() {
         $("#divDWTip").css("display", "block");
         $("#divDWTip").attr("class", "Warn");
         $("#divDWTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写吨位啦');
-        $("#spanDW").css("border-color", "#fd634f");
+        $("#spanDW").css("border-color", "#F2272D");
         return false;
     } else {
         if (ValidateDecimal($("#DW").val())) {
@@ -62,7 +62,7 @@ function ValidateDW() {
             $("#divDWTip").css("display", "block");
             $("#divDWTip").attr("class", "Warn");
             $("#divDWTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />吨位请填写数字');
-            $("#spanDW").css("border-color", "#fd634f");
+            $("#spanDW").css("border-color", "#F2272D");
             return false;
         }
     }
@@ -73,7 +73,7 @@ function ValidateXSS() {
         $("#divXSSTip").css("display", "block");
         $("#divXSSTip").attr("class", "Warn");
         $("#divXSSTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写小时数啦');
-        $("#spanXSS").css("border-color", "#fd634f");
+        $("#spanXSS").css("border-color", "#F2272D");
         return false;
     } else {
         if (ValidateDecimal($("#XSS").val())) {
@@ -84,7 +84,7 @@ function ValidateXSS() {
             $("#divXSSTip").css("display", "block");
             $("#divXSSTip").attr("class", "Warn");
             $("#divXSSTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />小时数请填写数字');
-            $("#spanXSS").css("border-color", "#fd634f");
+            $("#spanXSS").css("border-color", "#F2272D");
             return false;
         }
     }

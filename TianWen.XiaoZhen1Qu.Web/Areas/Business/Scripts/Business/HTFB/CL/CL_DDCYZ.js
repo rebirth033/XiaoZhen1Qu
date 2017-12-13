@@ -27,7 +27,7 @@ function ValidateSYNX() {
         $("#divSYNXTip").css("display", "block");
         $("#divSYNXTip").attr("class", "Warn");
         $("#divSYNXTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写使用年限啦');
-        $("#spanSYNX").css("border-color", "#fd634f");
+        $("#spanSYNX").css("border-color", "#F2272D");
         return false;
     } else {
         if (ValidateNumber($("#SYNX").val())) {
@@ -38,7 +38,7 @@ function ValidateSYNX() {
             $("#divSYNXTip").css("display", "block");
             $("#divSYNXTip").attr("class", "Warn");
             $("#divSYNXTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />使用年限请填写整数');
-            $("#spanSYNX").css("border-color", "#fd634f");
+            $("#spanSYNX").css("border-color", "#F2272D");
             return false;
         }
     }

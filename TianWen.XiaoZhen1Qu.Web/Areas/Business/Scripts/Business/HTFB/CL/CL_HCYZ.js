@@ -33,7 +33,7 @@ function ValidateEDZZ() {
         $("#divEDZZTip").css("display", "block");
         $("#divEDZZTip").attr("class", "Warn");
         $("#divEDZZTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写额定载重啦');
-        $("#spanEDZZ").css("border-color", "#fd634f");
+        $("#spanEDZZ").css("border-color", "#F2272D");
         return false;
     } else {
         if (ValidateDecimal($("#EDZZ").val())) {
@@ -44,7 +44,7 @@ function ValidateEDZZ() {
             $("#divEDZZTip").css("display", "block");
             $("#divEDZZTip").attr("class", "Warn");
             $("#divEDZZTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />额定载重请填写数字,可保留一到四位小数');
-            $("#spanEDZZ").css("border-color", "#fd634f");
+            $("#spanEDZZ").css("border-color", "#F2272D");
             return false;
         }
     }
@@ -55,7 +55,7 @@ function ValidateXSLC() {
         $("#divXSLCTip").css("display", "block");
         $("#divXSLCTip").attr("class", "Warn");
         $("#divXSLCTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写行驶里程啦');
-        $("#spanXSLC").css("border-color", "#fd634f");
+        $("#spanXSLC").css("border-color", "#F2272D");
         return false;
     } else {
         if (ValidateDecimal($("#XSLC").val())) {
@@ -66,7 +66,7 @@ function ValidateXSLC() {
             $("#divXSLCTip").css("display", "block");
             $("#divXSLCTip").attr("class", "Warn");
             $("#divXSLCTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />行驶里程请填写数字');
-            $("#spanXSLC").css("border-color", "#fd634f");
+            $("#spanXSLC").css("border-color", "#F2272D");
             return false;
         }
     }

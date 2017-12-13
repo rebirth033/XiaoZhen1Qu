@@ -44,7 +44,7 @@ function LoadXL(lbmc, xl) {
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='liXL' onclick='SelectDuoX(this)'><img class='img_XL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i % 4 === 3) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 214px'>";
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 4) === 0)

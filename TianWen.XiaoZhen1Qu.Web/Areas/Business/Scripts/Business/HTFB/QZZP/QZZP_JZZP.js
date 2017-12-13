@@ -16,7 +16,7 @@ function SelectJZSJ() {
         if ($(this).attr("src").indexOf("blue") !== -1)
             $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
         else
-            $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
+            $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/check_purple.png");
     });
 }
 //加载工作城市标签
@@ -103,7 +103,7 @@ function GetJZSJ() {
 function SetJZSJ(jzsj) {
     $(".img_jzsj").each(function () {
         if (jzsj.indexOf(this.id) !== -1)
-            $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/check_blue.png");
+            $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/check_purple.png");
     });
 }
 //绑定下拉框

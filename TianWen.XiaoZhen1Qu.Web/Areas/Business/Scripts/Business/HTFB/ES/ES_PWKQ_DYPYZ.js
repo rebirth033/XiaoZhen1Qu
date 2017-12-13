@@ -25,7 +25,7 @@ function ValidateYXQZ() {
         $("#divYXQZTip").css("display", "block");
         $("#divYXQZTip").attr("class", "Warn");
         $("#divYXQZTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记选择有效期至啦');
-        $("#YXQZ").css("border-color", "#fd634f");
+        $("#YXQZ").css("border-color", "#F2272D");
         return false;
     } else {
         $("#divYXQZTip").css("display", "none");

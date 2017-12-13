@@ -86,7 +86,7 @@ function ValidateNumber(id, value) {
         $("#div" + id + "Tip").css("display", "block");
         $("#div" + id + "Tip").attr("class", "Warn");
         $("#div" + id + "Tip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写' + value + '啦');
-        $("#span" + id).css("border-color", "#fd634f");
+        $("#span" + id).css("border-color", "#F2272D");
         return false;
     } else {
         if (ValidateDecimal($("#FZTS").val())) {
@@ -97,7 +97,7 @@ function ValidateNumber(id, value) {
             $("#div" + id + "Tip").css("display", "block");
             $("#div" + id + "Tip").attr("class", "Warn");
             $("#div" + id + "Tip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />' + value + '请填写数字');
-            $("#span" + id).css("border-color", "#fd634f");
+            $("#span" + id).css("border-color", "#F2272D");
             return false;
         }
     }

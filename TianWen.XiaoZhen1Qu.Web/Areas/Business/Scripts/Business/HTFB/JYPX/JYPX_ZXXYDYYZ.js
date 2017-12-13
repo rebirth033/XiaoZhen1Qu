@@ -25,7 +25,7 @@ function ValidateXF() {
         $("#divXFTip").css("display", "block");
         $("#divXFTip").attr("class", "Warn");
         $("#divXFTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写学费啦');
-        $("#spanXF").css("border-color", "#fd634f");
+        $("#spanXF").css("border-color", "#F2272D");
         return false;
     } else {
         if (ValidateNumber($("#XF").val())) {
@@ -36,7 +36,7 @@ function ValidateXF() {
             $("#divXFTip").css("display", "block");
             $("#divXFTip").attr("class", "Warn");
             $("#divXFTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />学费请填写整数，默认为面议');
-            $("#spanXF").css("border-color", "#fd634f");
+            $("#spanXF").css("border-color", "#F2272D");
             return false;
         }
     }

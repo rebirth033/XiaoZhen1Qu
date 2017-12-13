@@ -39,7 +39,7 @@ function ValidateZPRS() {
         $("#divZPRSTip").css("display", "block");
         $("#divZPRSTip").attr("class", "Warn");
         $("#divZPRSTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写招聘人数啦');
-        $("#spanZPRS").css("border-color", "#fd634f");
+        $("#spanZPRS").css("border-color", "#F2272D");
         return false;
     } else {
         $("#divZPRSTip").css("display", "none");
@@ -53,7 +53,7 @@ function ValidateDQJZKSSJ() {
         $("#divZPDQJZSJTip").css("display", "block");
         $("#divZPDQJZSJTip").attr("class", "Warn");
         $("#divZPDQJZSJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写短期兼职开始时间啦');
-        $("#DQJZKSSJ").css("border-color", "#fd634f");
+        $("#DQJZKSSJ").css("border-color", "#F2272D");
         return false;
     } else {
         $("#divDQJZSJTip").css("display", "none");
@@ -67,7 +67,7 @@ function ValidateDQJZJSSJ() {
         $("#divZPDQJZSJTip").css("display", "block");
         $("#divZPDQJZSJTip").attr("class", "Warn");
         $("#divZPDQJZSJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写短期兼职结束时间啦');
-        $("#DQJZJSSJ").css("border-color", "#fd634f");
+        $("#DQJZJSSJ").css("border-color", "#F2272D");
         return false;
     } else {
         $("#divZPDQJZSJTip").css("display", "none");
@@ -81,7 +81,7 @@ function ValidateXZ() {
         $("#divZPXZSPTip").css("display", "block");
         $("#divZPXZSPTip").attr("class", "Warn");
         $("#divZPXZSPTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写薪资啦');
-        $("#XZ").css("border-color", "#fd634f");
+        $("#XZ").css("border-color", "#F2272D");
         return false;
     } else {
         $("#divZPXZSPTip").css("display", "none");
