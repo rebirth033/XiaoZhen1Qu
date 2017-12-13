@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
-    $("#spanDKCZ").css("color", "#5bc0de");
+    $("#spanDKCZ").css("color", "#ad5b97");
     $("#spanDKCZ").css("font-weight", "700");
-    $("#emDKCZ").css("background-color", "#5bc0de");
+    $("#emDKCZ").css("background-color", "#ad5b97");
     $("#emDKCZ").css("height", "2px");
     $(".divstep").bind("click", HeadActive);
     $("#span_content_info_cxxz").bind("click", CCXZ);
@@ -22,12 +22,12 @@ function HeadActive() {
         });
     });
     $(this).find("span").each(function () {
-        $(this).css("color", "#5bc0de");
+        $(this).css("color", "#ad5b97");
         $(this).css("font-weight", "700");
     });
     $(this).find("em").each(function () {
         $(this).css("height", "2px");
-        $(this).css("background-color", "#5bc0de");
+        $(this).css("background-color", "#ad5b97");
     });
     Load(this.id);
 }
@@ -68,12 +68,12 @@ function YXBQActive() {
         $(this).css("background-color", "#cccccc");
     });
     $(this).find("span").each(function () {
-        $(this).css("color", "#5bc0de");
+        $(this).css("color", "#ad5b97");
         $(this).css("font-weight", "700");
     });
     $(this).find("em").each(function () {
         $(this).css("height", "2px");
-        $(this).css("background-color", "#5bc0de");
+        $(this).css("background-color", "#ad5b97");
     });
     LoadYXMC(this.id);
 }
@@ -106,10 +106,10 @@ function LoadYXMC(SZM) {
 }
 //加载热门游戏
 function LoadRMYX() {
-    $("#spanRMYX").css("color", "#5bc0de");
+    $("#spanRMYX").css("color", "#ad5b97");
     $("#spanRMYX").css("font-weight", "700");
     $("#emRMYX").css("height", "2px");
-    $("#emRMYX").css("background-color", "#5bc0de");
+    $("#emRMYX").css("background-color", "#ad5b97");
     LoadYXMC("divRMYX");
 }
 //重新选择

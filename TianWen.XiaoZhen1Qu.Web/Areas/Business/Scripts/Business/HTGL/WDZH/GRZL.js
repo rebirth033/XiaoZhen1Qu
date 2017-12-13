@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
-    $("#spanSYWXTX").css("color", "#5bc0de");
+    $("#spanSYWXTX").css("color", "#ad5b97");
     $("#spanSYWXTX").css("font-weight", "700");
-    $("#emSYWXTX").css("background-color", "#5bc0de");
+    $("#emSYWXTX").css("background-color", "#ad5b97");
     $("#emSYWXTX").css("height", "2px");
     $("#btnTBWXTX").css("display", "block");
     $(".divstep").bind("click", HeadActive);
@@ -32,12 +32,12 @@ function HeadActive() {
         });
     });
     $(this).find("span").each(function () {
-        $(this).css("color", "#5bc0de");
+        $(this).css("color", "#ad5b97");
         $(this).css("font-weight", "700");
     });
     $(this).find("em").each(function () {
         $(this).css("height", "2px");
-        $(this).css("background-color", "#5bc0de");
+        $(this).css("background-color", "#ad5b97");
     });
 }
 

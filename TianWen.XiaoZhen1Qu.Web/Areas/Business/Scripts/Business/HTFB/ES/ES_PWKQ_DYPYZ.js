@@ -36,5 +36,5 @@ function ValidateYXQZ() {
 
 function InfoYXQZ() {
     $("#divYXQZTip").css("display", "none");
-    $("#YXQZ").css("border-color", "#5bc0de");
+    $("#YXQZ").css("border-color", "#ad5b97");
 }

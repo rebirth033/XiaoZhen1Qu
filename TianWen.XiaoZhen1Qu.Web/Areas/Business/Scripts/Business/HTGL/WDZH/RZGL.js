@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
-    $("#spanGRLRZ").css("color", "#5bc0de");
+    $("#spanGRLRZ").css("color", "#ad5b97");
     $("#spanGRLRZ").css("font-weight", "700");
-    $("#emGRLRZ").css("background-color", "#5bc0de");
+    $("#emGRLRZ").css("background-color", "#ad5b97");
     $("#emGRLRZ").css("height", "2px");
     $(".divstep").bind("click", HeadActive);
 });
@@ -18,12 +18,12 @@ function HeadActive() {
         });
     });
     $(this).find("span").each(function () {
-        $(this).css("color", "#5bc0de");
+        $(this).css("color", "#ad5b97");
         $(this).css("font-weight", "700");
     });
     $(this).find("em").each(function () {
         $(this).css("height", "2px");
-        $(this).css("background-color", "#5bc0de");
+        $(this).css("background-color", "#ad5b97");
     });
     Load(this.id);
 }

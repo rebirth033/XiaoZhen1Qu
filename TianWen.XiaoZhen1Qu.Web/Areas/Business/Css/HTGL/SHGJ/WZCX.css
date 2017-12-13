@@ -21,7 +21,7 @@
 .span_div_content_title {
     width: 208px;
     height: 55px;
-    color: #5bc0de;
+    color: #ad5b97;
     line-height: 55px;
     text-align: center;
     font-size: 24px;
@@ -58,7 +58,7 @@
 
     .span_content_info_qhcs:hover {
         cursor: pointer;
-        color: #ef6100;
+        color: #ad5b97;
         text-decoration: underline;
     }
 
@@ -138,7 +138,7 @@
     padding: 4px 12px;
     display: inline-block;
     cursor: text;
-    background-color: #5bc0de;
+    background-color: #ad5b97;
     color: #ffffff;
     margin-left: 39px;
 }

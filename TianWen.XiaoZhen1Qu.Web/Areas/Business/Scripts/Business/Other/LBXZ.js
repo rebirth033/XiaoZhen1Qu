@@ -10,8 +10,8 @@
 });
 //加载大类
 function LoadDL() {
-    $("#spanXZDL").css("color", "#5bc0de");
-    $("#emXZDL").css("background", "#5bc0de");
+    $("#spanXZDL").css("color", "#ad5b97");
+    $("#emXZDL").css("background", "#ad5b97");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/LBXZ/LoadDL",
@@ -44,8 +44,8 @@ function LoadDL() {
 function LoadXL(LBID, LBNAME) {
     $("#spanXZDL").css("color", "#333333");
     $("#emXZDL").css("background", "#cccccc");
-    $("#spanXZXL").css("color", "#5bc0de");
-    $("#emXZXL").css("background", "#5bc0de");
+    $("#spanXZXL").css("color", "#ad5b97");
+    $("#emXZXL").css("background", "#ad5b97");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/LBXZ/LoadXL",

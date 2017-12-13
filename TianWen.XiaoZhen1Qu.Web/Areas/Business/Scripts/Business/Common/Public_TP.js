@@ -1,6 +1,6 @@
 ﻿//激活上传按钮样式
 function GetUploadCss() {
-    $("#div_upload").css("border-color", "#5bc0de");
+    $("#div_upload").css("border-color", "#ad5b97");
 }
 //取消上传按钮样式
 function LeaveUploadCss() {

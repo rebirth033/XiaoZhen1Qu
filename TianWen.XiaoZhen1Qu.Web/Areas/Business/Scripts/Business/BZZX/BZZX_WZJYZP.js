@@ -1,5 +1,5 @@
 ﻿function GetUploadCss() {
-    $("#div_upload").css("border-color", "#5bc0de");
+    $("#div_upload").css("border-color", "#ad5b97");
 }
 
 function LeaveUploadCss() {

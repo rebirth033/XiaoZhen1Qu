@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
-    $("#spanTXYX").css("color", "#5bc0de");
+    $("#spanTXYX").css("color", "#ad5b97");
     $("#spanTXYX").css("font-weight", "700");
-    $("#emTXYX").css("background-color", "#5bc0de");
+    $("#emTXYX").css("background-color", "#ad5b97");
     $("#btnFirst").bind("click", SendEmail);
     $("#span_yx").bind("click", ToQQYX);
 });
@@ -46,9 +46,9 @@ function SendEmail() {
                 $("#spanTXYX").css("color", "#cccccc");
                 $("#spanTXYX").css("font-weight", "normal");
                 $("#emTXYX").css("background", "#cccccc");
-                $("#spanCSYJ").css("color", "#5bc0de");
+                $("#spanCSYJ").css("color", "#ad5b97");
                 $("#spanCSYJ").css("font-weight", "700");
-                $("#emCSYJ").css("background", "#5bc0de");
+                $("#emCSYJ").css("background", "#ad5b97");
                 $("#divFirst").css("display", "none");
                 $("#divSecond").css("display", "block");
             }

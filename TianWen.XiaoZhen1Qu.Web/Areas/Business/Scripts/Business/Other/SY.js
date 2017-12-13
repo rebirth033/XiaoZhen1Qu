@@ -6,7 +6,7 @@ $(document).ready(function () {
     $(".div_foot").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
     $(".div_bottom").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
     $(".img_head_left_logo").css("margin-left", "20px");
-    $("#li_head_sy").css("background", "#5bc0de").css("color", "#ffffff");
+    $("#li_head_sy").css("background", "#bc6ba6").css("color", "#ffffff");
 
     LoadDefault();
 });
@@ -134,15 +134,15 @@ function LoadSY_ML() {
                 LoadSY_MLInfo(xml.list, xml.xzq, "SWFW");
                 LoadSY_MLInfo(xml.list, xml.xzq, "ES");
                 $("#p_body_middle_left_title_FC").css("border-bottom", "2px solid #59d072");
-                $("#p_body_middle_left_title_CL").css("border-bottom", "2px solid #bc6ba6");
-                $("#p_body_middle_left_title_CW").css("border-bottom", "2px solid #9fa4ce");
+                $("#p_body_middle_left_title_CL").css("border-bottom", "2px solid #44eea6");
+                $("#p_body_middle_left_title_CW").css("border-bottom", "2px solid #9244ce");
                 $("#p_body_middle_left_title_ZP").css("border-bottom", "2px solid #00bfe1");
                 $("#p_body_middle_left_title_ZSJM").css("border-bottom", "2px solid #abc466");
                 $("#p_body_middle_left_title_PX").css("border-bottom", "2px solid #c49966");
                 $("#p_body_middle_left_title_SHFW").css("border-bottom", "2px solid #ce9fc8");
                 $("#p_body_middle_left_title_JYPX").css("border-bottom", "2px solid #fda19d");
                 $("#p_body_middle_left_title_PFCG").css("border-bottom", "2px solid #eb437e");
-                $("#p_body_middle_left_title_SWFW").css("border-bottom", "2px solid #e5237e");
+                $("#p_body_middle_left_title_SWFW").css("border-bottom", "2px solid #66419d");
                 $("#p_body_middle_left_title_ES").css("border-bottom", "2px solid #64f4de");
             }
         },

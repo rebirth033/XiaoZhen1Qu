@@ -155,7 +155,7 @@
 
 .active {
     cursor: pointer;
-    color: #5bc0de;
+    color: #ad5b97;
 }
 
     .active:hover {
@@ -201,28 +201,28 @@
     padding-left: 28px;
     margin-top: 20px;
     display: inline-block;
-    color: #5bc0de;
+    color: #ad5b97;
 }
 
 .span_new_info_body_middle_refresh {
     cursor: pointer;
     padding-left: 12px;
     display: inline-block;
-    color: #5bc0de;
+    color: #ad5b97;
 }
 
 .span_new_info_body_middle_top {
     cursor: pointer;
     padding-left: 12px;
     display: inline-block;
-    color: #5bc0de;
+    color: #ad5b97;
 }
 
 .span_new_info_body_middle_delete {
     cursor: pointer;
     padding-left: 12px;
     display: inline-block;
-    color: #5bc0de;
+    color: #ad5b97;
 }
 
 .div_main_info_bottom {
@@ -260,12 +260,12 @@
 }
 
 .a_main_info_bottom_fy_current {
-    background-color: #5bc0de;
+    background-color: #ad5b97;
     color: #ffffff;
 }
 
 .a_main_info_bottom_fy:hover {
-    background-color: #5bc0de;
+    background-color: #ad5b97;
     text-decoration: none;
     color: #ffffff;
 }

@@ -107,5 +107,5 @@ function InfoNumber(id) {
     $("#div" + id + "Tip").css("display", "block");
     $("#div" + id + "Tip").attr("class", "Info");
     $("#div" + id + "Tip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写数字');
-    $("#" + id).css("border-color", "#5bc0de");
+    $("#" + id).css("border-color", "#ad5b97");
 }

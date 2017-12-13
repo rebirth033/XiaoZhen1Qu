@@ -36,5 +36,5 @@ function InfoCDMJ() {
     $("#divCDMJTip").attr("class", "Info");
     $("#divCDMJTip").html('');
     $("#divCDMJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请输入场地面积');
-    $("#spanCDMJ").css("border-color", "#5bc0de");
+    $("#spanCDMJ").css("border-color", "#ad5b97");
 }

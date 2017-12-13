@@ -48,5 +48,5 @@ function InfoSYNX() {
     $("#divSYNXTip").css("display", "block");
     $("#divSYNXTip").attr("class", "Info");
     $("#divSYNXTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数');
-    $("#spanSYNX").css("border-color", "#5bc0de");
+    $("#spanSYNX").css("border-color", "#ad5b97");
 }

@@ -201,7 +201,7 @@ function InfoJG() {
     $("#divJGTip").css("display", "block");
     $("#divJGTip").attr("class", "Info");
     $("#divJGTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数，默认为面议');
-    $("#spanJG").css("border-color", "#5bc0de");
+    $("#spanJG").css("border-color", "#ad5b97");
 }
 //提示补充描述
 function InfoBCMS() {
@@ -214,14 +214,14 @@ function InfoFWQY() {
     $("#divFWQYTip").css("display", "block");
     $("#divFWQYTip").attr("class", "Info");
     $("#divFWQYTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写服务区域');
-    $("#FWQY").css("border-color", "#5bc0de");
+    $("#FWQY").css("border-color", "#ad5b97");
 }
 //提示具体地址
 function InfoJTDZ() {
     $("#divSZQYTip").css("display", "block");
     $("#divSZQYTip").attr("class", "Info");
     $("#divSZQYTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写具体地址');
-    $("#JTDZ").css("border-color", "#5bc0de");
+    $("#JTDZ").css("border-color", "#ad5b97");
 }
 //提示span输入框
 function InfoSpanInput(id, message, outid) {
@@ -230,7 +230,7 @@ function InfoSpanInput(id, message, outid) {
     $("#div" + outid + "Tip").css("display", "block");
     $("#div" + outid + "Tip").attr("class", "Info");
     $("#div" + outid + "Tip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />' + message);
-    $("#span" + id).css("border-color", "#5bc0de");
+    $("#span" + id).css("border-color", "#ad5b97");
 }
 //提示输入框
 function InfoInput(id, message, outid) {
@@ -239,5 +239,5 @@ function InfoInput(id, message, outid) {
     $("#div" + outid + "Tip").css("display", "block");
     $("#div" + outid + "Tip").attr("class", "Info");
     $("#div" + outid + "Tip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />' + message);
-    $("#" + id).css("border-color", "#5bc0de");
+    $("#" + id).css("border-color", "#ad5b97");
 }

@@ -57,12 +57,12 @@ function InfoRJXF() {
     $("#divRJXFTip").css("display", "block");
     $("#divRJXFTip").attr("class", "Info");
     $("#divRJXFTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数，默认为面议');
-    $("#spanRJXF").css("border-color", "#5bc0de");
+    $("#spanRJXF").css("border-color", "#ad5b97");
 }
 //提示服务区域
 function InfoFWQY() {
     $("#divFWQYTip").css("display", "block");
     $("#divFWQYTip").attr("class", "Info");
     $("#divFWQYTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数，默认为面议');
-    $("#FWQY").css("border-color", "#5bc0de");
+    $("#FWQY").css("border-color", "#ad5b97");
 }

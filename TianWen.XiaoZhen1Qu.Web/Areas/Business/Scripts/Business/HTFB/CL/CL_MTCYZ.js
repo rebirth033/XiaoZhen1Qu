@@ -63,6 +63,6 @@ function InfoGLS() {
     $("#divGLSTip").css("display", "block");
     $("#divGLSTip").attr("class", "Info");
     $("#divGLSTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数');
-    $("#spanGLS").css("border-color", "#5bc0de");
+    $("#spanGLS").css("border-color", "#ad5b97");
 }
 

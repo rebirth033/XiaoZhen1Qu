@@ -74,7 +74,7 @@
     padding-top: 10px;
     width: 135px;
     height: 40px;
-    background-color: #5bc0de;
+    background-color: #ad5b97;
     position: relative;
     display: block;
     float: left;
@@ -89,7 +89,7 @@
     width: 135px;
     height: 40px;
     cursor: pointer;
-    background: #5bc0de;
+    background: #ad5b97;
     display: none;
     z-index: 102;
     color: #fff;
@@ -236,6 +236,6 @@
 }
 
 .span_person_info_right {
-    color: #5bc0de;
+    color: #ad5b97;
     cursor: pointer;
 }

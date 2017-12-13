@@ -239,7 +239,7 @@ function LoadJJRTJFY(TYPE) {
                 html += ('</ul>');
                 html += ('</div>');
                 $("#div_body_right").append(html);
-                $(".li_body_right_jjrtj").bind("mouseover", function () { $(this).find(".p_li_body_right_jjrtj_xq").css("color", "#5bc0de"); });
+                $(".li_body_right_jjrtj").bind("mouseover", function () { $(this).find(".p_li_body_right_jjrtj_xq").css("color", "#ad5b97"); });
                 $(".li_body_right_jjrtj").bind("mouseleave", function () { $(this).find(".p_li_body_right_jjrtj_xq").css("color", "#333333"); });
                 LoadXGLM();
             }

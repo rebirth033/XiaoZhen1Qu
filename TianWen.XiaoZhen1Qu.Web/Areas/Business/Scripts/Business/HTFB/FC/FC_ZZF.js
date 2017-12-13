@@ -60,7 +60,7 @@ function LoadXQMC() {
         var lis = $("#divXQMClist").find("li");
         for (var i = 0; i < lis.length; i++) {
             if ($("#divXQMClist").find("li:eq(" + i + ")").css("background-color") === "rgb(236, 236, 236)") {
-                SelectXQMC($("#divXQMClist").find("li:eq(" + i + ")"));
+                SelectXQMC($("#divXQMClist").find("li:eq(" + i + ")")[0]);
                 return;
             }
         }
@@ -235,7 +235,7 @@ function LoadDuoX(type, id) {
 }
 //选择小区名称
 function SelectXQMC(obj) {
-    var array = obj[0].innerText.split(' ');
+    var array = obj.innerText.split(' ');
     $("#XQMC").val(array[0]);
     $("#divXQMClist").css("display", "none");
 }

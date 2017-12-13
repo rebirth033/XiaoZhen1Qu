@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
-    $("#spanHFCZ").css("color", "#5bc0de");
+    $("#spanHFCZ").css("color", "#ad5b97");
     $("#spanHFCZ").css("font-weight", "700");
-    $("#emHFCZ").css("background-color", "#5bc0de");
+    $("#emHFCZ").css("background-color", "#ad5b97");
     $("#emHFCZ").css("height", "2px");
     $(".divstep").bind("click", HeadActive);
     $(".span_content_info_HF").bind("click", SelectHF);
@@ -28,12 +28,12 @@ function HeadActive() {
         });
     });
     $(this).find("span").each(function () {
-        $(this).css("color", "#5bc0de");
+        $(this).css("color", "#ad5b97");
         $(this).css("font-weight", "700");
     });
     $(this).find("em").each(function () {
         $(this).css("height", "2px");
-        $(this).css("background-color", "#5bc0de");
+        $(this).css("background-color", "#ad5b97");
     });
     Load(this.id);
 }
@@ -54,7 +54,7 @@ function SelectHF() {
         $(this).css("background-color", "#fff");
         $(this).css("color", "#333");
     });
-    $(this).css("background-color", "#5bc0de");
+    $(this).css("background-color", "#ad5b97");
     $(this).css("color", "#fff");
     $("#spanGXZF").html(parseFloat(RTrim($(this).html(), "元")) * 0.999 + "元");
 }
@@ -64,7 +64,7 @@ function SelectLL() {
         $(this).css("background-color", "#fff");
         $(this).css("color", "#333");
     });
-    $(this).css("background-color", "#5bc0de");
+    $(this).css("background-color", "#ad5b97");
     $(this).css("color", "#fff");
     if ($(this).html() === "10M")
         $("#spanLLJG").html("2.85元");
@@ -190,7 +190,7 @@ function HFSearchMobilePhoneGuiSuArea(mobileNo) {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                $("#span_content_info_hfsj").html("<span style='color:#5bc0de'>"+xml.Values[5] + "&nbsp;&nbsp;" + xml.Values[1] + "&nbsp;&nbsp;" + xml.Values[2] + "</span>");
+                $("#span_content_info_hfsj").html("<span style='color:#ad5b97'>"+xml.Values[5] + "&nbsp;&nbsp;" + xml.Values[1] + "&nbsp;&nbsp;" + xml.Values[2] + "</span>");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -211,7 +211,7 @@ function LLSearchMobilePhoneGuiSuArea(mobileNo) {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                $("#span_content_info_llsj").html("<span style='color:#5bc0de'>" + xml.Values[5] + "&nbsp;&nbsp;" + xml.Values[1] + "&nbsp;&nbsp;" + xml.Values[2] + "</span>");
+                $("#span_content_info_llsj").html("<span style='color:#ad5b97'>" + xml.Values[5] + "&nbsp;&nbsp;" + xml.Values[1] + "&nbsp;&nbsp;" + xml.Values[2] + "</span>");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

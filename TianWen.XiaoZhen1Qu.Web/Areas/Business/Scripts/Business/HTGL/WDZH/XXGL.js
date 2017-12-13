@@ -1,8 +1,8 @@
 ﻿var currentIndex = 1;
 $(document).ready(function () {
-    $("#spanXTTZ").css("color", "#5bc0de");
+    $("#spanXTTZ").css("color", "#ad5b97");
     $("#spanXTTZ").css("font-weight", "700");
-    $("#emXTTZ").css("background-color", "#5bc0de");
+    $("#emXTTZ").css("background-color", "#ad5b97");
     $("#emXTTZ").css("height", "2px");
     $(".divstep").bind("click", HeadActive);
     $("#checkbox_main_info_bottom").bind("click", SelectAll);
@@ -23,12 +23,12 @@ function HeadActive() {
         });
     });
     $(this).find("span").each(function () {
-        $(this).css("color", "#5bc0de");
+        $(this).css("color", "#ad5b97");
         $(this).css("font-weight", "700");
     });
     $(this).find("em").each(function () {
         $(this).css("height", "2px");
-        $(this).css("background-color", "#5bc0de");
+        $(this).css("background-color", "#ad5b97");
     });
     LoadDefault($(this)[0].id + "LB", 1);
 }

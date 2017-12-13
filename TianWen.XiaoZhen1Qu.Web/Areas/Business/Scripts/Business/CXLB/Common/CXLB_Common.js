@@ -57,7 +57,7 @@ function GetHeadNav() {
 }
 //绑定主体列表导航
 function BindBodyNav() {
-    $(".li_body_head:eq(0)").css("background-color", "#5bc0de").css("color", "#ffffff").css("border", "none");
+    $(".li_body_head:eq(0)").css("background-color", "#ad5b97").css("color", "#ffffff").css("border", "none");
     $(".li_body_head").mouseover(function () {
         if ($(this).css("background-color") === "transparent")
             $(this).css("background-color", "#eaeaea");
@@ -70,7 +70,7 @@ function BindBodyNav() {
         $(".li_body_head").each(function () {
             $(this).css("border-top", "1px solid #cccccc").css("background-color", "transparent").css("border-left", "1px solid #cccccc").css("border-right", "1px solid #cccccc").css("color", "#999999");
         });
-        $(this).css("background-color", "#5bc0de").css("color", "#ffffff").css("border", "none");
+        $(this).css("background-color", "#ad5b97").css("color", "#ffffff").css("border", "none");
     });
 }
 //列表排序绑定事件
