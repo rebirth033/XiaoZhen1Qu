@@ -225,6 +225,9 @@
     <Content Include="Areas\Business\Css\images\CXLB\cxlb_px_down_orange.png" />
     <Content Include="Areas\Business\Css\images\CXLB\cxlb_px_up_gray.png" />
     <Content Include="Areas\Business\Css\images\CXLB\cxlb_px_up_orange.png" />
+    <Content Include="Areas\Business\Css\images\info_purple.png" />
+    <Content Include="Areas\Business\Css\images\info_blue.png" />
+    <Content Include="Areas\Business\Css\images\logo_purple.png" />
     <Content Include="Areas\Business\Css\images\lxdh.png" />
     <Content Include="Areas\Business\Css\images\SY\BMFW\sy_bmfw_kdcx.png" />
     <Content Include="Areas\Business\Css\images\SY\TBDH\body_top_cl2.png" />
@@ -350,7 +353,6 @@
     <Content Include="Areas\Business\Css\images\head_nav_down.png" />
     <Content Include="Areas\Business\Css\images\head_nav_up.png" />
     <Content Include="Areas\Business\Css\images\icon.png" />
-    <Content Include="Areas\Business\Css\images\info.png" />
     <Content Include="Areas\Business\Css\images\logo.png" />
     <Content Include="Areas\Business\Css\images\logo_blue.png" />
     <Content Include="Areas\Business\Css\images\mosaic.png" />

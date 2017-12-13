@@ -75,14 +75,14 @@ function ValidateXSLC() {
 function InfoEDZZ() {
     $("#divEDZZTip").css("display", "block");
     $("#divEDZZTip").attr("class", "Info");
-    $("#divEDZZTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写数字');
+    $("#divEDZZTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />请填写数字');
     $("#spanEDZZ").css("border-color", "#ad5b97");
 }
 //提示行驶里程
 function InfoXSLC() {
     $("#divXSLCTip").css("display", "block");
     $("#divXSLCTip").attr("class", "Info");
-    $("#divXSLCTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写数字');
+    $("#divXSLCTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />请填写数字');
     $("#spanXSLC").css("border-color", "#ad5b97");
 }
 

@@ -35,6 +35,6 @@ function InfoCDMJ() {
     $("#divCDMJTip").css("display", "block");
     $("#divCDMJTip").attr("class", "Info");
     $("#divCDMJTip").html('');
-    $("#divCDMJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请输入场地面积');
+    $("#divCDMJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />请输入场地面积');
     $("#spanCDMJ").css("border-color", "#ad5b97");
 }

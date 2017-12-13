@@ -59,7 +59,7 @@ function ValidateNL() {
 function InfoNL() {
     $("#divCWGNLTip").css("display", "block");
     $("#divCWGNLTip").attr("class", "Info");
-    $("#divCWGNLTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数');
+    $("#divCWGNLTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />请填写整数');
     $("#spanNL").css("border-color", "#ad5b97");
 }
 

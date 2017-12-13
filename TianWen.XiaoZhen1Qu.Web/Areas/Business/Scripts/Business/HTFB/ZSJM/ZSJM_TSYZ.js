@@ -32,6 +32,6 @@ function ValidatePPMC() {
 function InfoPPMC() {
     $("#divPPMCTip").css("display", "block");
     $("#divPPMCTip").attr("class", "Info");
-    $("#divPPMCTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />不超过30字，不能填写电话、QQ、邮箱等联系方式或特殊符号');
+    $("#divPPMCTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />不超过30字，不能填写电话、QQ、邮箱等联系方式或特殊符号');
     $("#PPMC").css("border-color", "#ad5b97");
 }

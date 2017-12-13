@@ -92,20 +92,20 @@ function ValidateYSJG() {
 function InfoDDD() {
     $("#divDDDTip").css("display", "block");
     $("#divDDDTip").attr("class", "Info");
-    $("#divDDDTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写到达地');
+    $("#divDDDTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />请填写到达地');
     $("#DDD").css("border-color", "#ad5b97");
 }
 //提示途中时间
 function InfoTZSJ() {
     $("#divTZSJTip").css("display", "block");
     $("#divTZSJTip").attr("class", "Info");
-    $("#divTZSJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写途中时间');
+    $("#divTZSJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />请填写途中时间');
     $("#TZSJ").css("border-color", "#ad5b97");
 }
 //提示运输价格
 function InfoYSJG() {
     $("#divYSJGTip").css("display", "block");
     $("#divYSJGTip").attr("class", "Info");
-    $("#divYSJGTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数，默认为面议');
+    $("#divYSJGTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />请填写整数，默认为面议');
     $("#YSJG").css("border-color", "#ad5b97");
 }

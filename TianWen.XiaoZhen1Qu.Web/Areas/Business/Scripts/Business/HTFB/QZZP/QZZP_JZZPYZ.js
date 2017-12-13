@@ -93,13 +93,13 @@ function ValidateXZ() {
 function InfoZPRS() {
     $("#divZPRSTip").css("display", "block");
     $("#divZPRSTip").attr("class", "Info");
-    $("#divZPRSTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写招聘人数');
+    $("#divZPRSTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />请填写招聘人数');
     $("#spanZPRS").css("border-color", "#ad5b97");
 }
 //提示薪资
 function InfoXZ() {
     $("#divZPXZSPTip").css("display", "block");
     $("#divZPXZSPTip").attr("class", "Info");
-    $("#divZPXZSPTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info.png" class="imgTip" />请填写整数，默认为面议');
+    $("#divZPXZSPTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />请填写整数，默认为面议');
     $("#XZ").css("border-color", "#ad5b97");
 }
