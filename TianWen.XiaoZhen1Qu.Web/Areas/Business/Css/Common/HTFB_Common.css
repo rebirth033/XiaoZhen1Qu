@@ -15,12 +15,12 @@
 .em_split {width: 900px;height: 1px;float: left;background: #cccccc;}
 
 .div_row {width: 900px;height: 60px;text-align: left;padding-top: 2px;font-size: 15px;margin-left: 10px;margin-bottom: 30px;position: relative;display: block;}
-
 .div_row_zp{width: 900px;height: auto;text-align: left;padding-top: 2px;font-size: 15px;margin-left: 10px;margin-bottom: 20px;position: relative;display: block;}
-
 .div_row_left {color: black;text-align: right;margin-left: 60px;display: inline;font-size: 16px;}
-
 .div_row_right {display: inline;margin-left: 30px;position: relative;font-size: 16px;}
+.div_row .font_two{ margin-left: 92px;}
+.div_row .font_three{ margin-left: 75px;}
+.div_row .font_five{ margin-left: 44px;}
 
 .div_radio {cursor: pointer;display: inline-block;}
 
@@ -52,7 +52,7 @@
 
 .span_required {color: #F2272D;display: inline-block;width: 20px;height: 36px;font-family: "宋体", "SimSun";}
 
-.input_input {width: 472px;padding: 6px 12px;border: 2px solid #cccccc;border-radius: 4px;font-size: 14px;height: 40px;}
+.input_input {width: 472px;padding: 6px 12px;border: 2px solid #cccccc;border-radius: 4px;font-size: 16px;height: 40px;}
 
 .Warn {font-size: 16px;color: #F2272D;margin-left: 180px;position: relative;display: block;}
 
