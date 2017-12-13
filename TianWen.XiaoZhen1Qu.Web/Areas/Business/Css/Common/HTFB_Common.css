@@ -81,7 +81,7 @@
 
 .span_mc:hover {color: #ff6100;font-weight: 700;}
 
-.input_content {width: 451px;cursor: default;border: 1px solid #ccc;border-radius: 4px;height: 34px;padding: 4px 12px;display: inline-block;}
+.input_content {width: 451px;cursor: default;border: 2px solid #ccc;border-radius: 4px;height: 34px;padding: 4px 12px;display: inline-block;}
 
 :-ms-input-placeholder.input_content {color: #999;}
 :-ms-input-placeholder.input_input {color: #999;}
@@ -95,7 +95,7 @@
 
 .ulFWPZ {display: inline-block;padding-left: 0;}
 
-.SRK:focus {border: 1px solid #00bfe1;color: #333333 !important;}
+.SRK:focus {border: 2px solid #ad5b97;color: #333333 !important;}
 
 
 .span_xzdz {color: #31b0d5;cursor: pointer;}

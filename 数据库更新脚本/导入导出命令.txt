@@ -14,3 +14,5 @@ impdp c##infotownlet/infotownlet@localhost/orcl directory=data_pump_dir dumpfile
 小区基本信息表
 家里导出
 exp c##infotownlet/infotownlet@localhost/orcl file=e:/codes_xqjbxx.dmp tables=(codes_xqjbxx)
+家里导入
+imp c##infotownlet/infotownlet@localhost/orcl file=e:/codes_xqjbxx.dmp full=y

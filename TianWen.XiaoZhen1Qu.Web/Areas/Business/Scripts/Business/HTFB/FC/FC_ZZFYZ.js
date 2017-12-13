@@ -1,20 +1,20 @@
 ﻿$(document).ready(function () {
     $("#XQMC").bind("blur", ValidateXQMC);
-    $("#XQMC").bind("focus", InfoXQMC);
+    $("#XQMC").bind("focus", function () { InfoInput("XQMC", "小区名称不超过30字"); });
     $("#S").bind("blur", ValidateFWLX_S);
-    $("#S").bind("focus", InfoFWLX_S);
+    $("#S").bind("focus", function () { InfoSpanInput("S", "室请填写整数，不能是0", "FWLX"); });
     $("#T").bind("blur", ValidateFWLX_T);
-    $("#T").bind("focus", InfoFWLX_T);
+    $("#T").bind("focus", function () { InfoSpanInput("T", "厅请填写整数，不能是0", "FWLX"); });
     $("#W").bind("blur", ValidateFWLX_W);
-    $("#W").bind("focus", InfoFWLX_W);
+    $("#W").bind("focus", function () { InfoSpanInput("W", "卫请填写整数，不能是0", "FWLX"); });
     $("#PFM").bind("blur", ValidateFWLX_PFM);
-    $("#PFM").bind("focus", InfoFWLX_PFM);
+    $("#PFM").bind("focus", function () { InfoSpanInput("PFM", "面积请填写整数，不能是0", "FWLX"); });
     $("#C").bind("blur", ValidateLCFB_C);
-    $("#C").bind("focus", InfoLCFB_C);
+    $("#C").bind("focus", function () { InfoSpanInput("C", "楼层请填写整数，地下室用负数填写，不能为0", "LCFB"); });
     $("#GJC").bind("blur", ValidateLCFB_GJC);
-    $("#GJC").bind("focus", InfoLCFB_GJC);
+    $("#GJC").bind("focus", function () { InfoSpanInput("GJC", "总层数请填写整数，不能是0", "LCFB"); });
     $("#ZJ").bind("blur", ValidateZJ);
-    $("#ZJ").bind("focus", InfoZJ);
+    $("#ZJ").bind("focus", function () { InfoSpanInput("ZJ", "租金请填写整数，默认为面议"); });
 });
 //验证房屋类型
 function ValidateFWLX() {
@@ -45,7 +45,7 @@ function ValidateFWZJ() {
 }
 //验证所有
 function ValidateAll() {
-    if (ValidateBCMS("BCMS", "忘记填写房源描述啦") 
+    if (ValidateBCMS("BCMS", "忘记填写房源描述啦")
         & ValidateFWQK()
         & ValidateXQMC()
         & ValidateFWLX()
@@ -223,60 +223,4 @@ function ValidateZJ() {
             return false;
         }
     }
-}
-
-function InfoXQMC() {
-    $("#divXQMCTip").css("display", "block");
-    $("#divXQMCTip").attr("class", "Info");
-    $("#divXQMCTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />不超过30字');
-    $("#XQMC").css("border-color", "#ad5b97");
-}
-
-function InfoFWLX_S() {
-    $("#divFWLXTip").css("display", "block");
-    $("#divFWLXTip").attr("class", "Info");
-    $("#divFWLXTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />填写整数，不能是0');
-    $("#spanS").css("border-color", "#ad5b97");
-}
-
-function InfoFWLX_T() {
-    $("#divFWLXTip").css("display", "block");
-    $("#divFWLXTip").attr("class", "Info");
-    $("#divFWLXTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />填写整数，没有请填0');
-    $("#spanT").css("border-color", "#ad5b97");
-}
-
-function InfoFWLX_W() {
-    $("#divFWLXTip").css("display", "block");
-    $("#divFWLXTip").attr("class", "Info");
-    $("#divFWLXTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />填写整数，没有请填0');
-    $("#spanW").css("border-color", "#ad5b97");
-}
-
-function InfoFWLX_PFM() {
-    $("#divFWLXTip").css("display", "block");
-    $("#divFWLXTip").attr("class", "Info");
-    $("#divFWLXTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />填写整数，不能是0');
-    $("#spanPFM").css("border-color", "#ad5b97");
-}
-
-function InfoLCFB_C() {
-    $("#divLCFBTip").css("display", "block");
-    $("#divLCFBTip").attr("class", "Info");
-    $("#divLCFBTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />填写整数，地下室用负数填写，不能为0');
-    $("#spanC").css("border-color", "#ad5b97");
-}
-
-function InfoLCFB_GJC() {
-    $("#divLCFBTip").css("display", "block");
-    $("#divLCFBTip").attr("class", "Info");
-    $("#divLCFBTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />填写整数，不能为0');
-    $("#spanGJC").css("border-color", "#ad5b97");
-}
-
-function InfoZJ() {
-    $("#divZJTip").css("display", "block");
-    $("#divZJTip").attr("class", "Info");
-    $("#divZJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />请填写整数，默认为面议');
-    $("#spanZJ").css("border-color", "#ad5b97");
 }
