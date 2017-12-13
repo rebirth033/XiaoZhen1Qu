@@ -116,8 +116,8 @@ function Bind(idout, idin, message) {
 }
 //加载填写信息
 function LoadTXXX() {
-    $("#spanTXXX").css("color", "#5bc0de");
-    $("#emTXXX").css("background", "#5bc0de");
+    $("#spanTXXX").css("color", "#ad5b97");
+    $("#emTXXX").css("background", "#ad5b97");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/LBXZ/LoadLBByID",

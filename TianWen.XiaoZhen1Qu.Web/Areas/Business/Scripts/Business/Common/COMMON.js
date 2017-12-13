@@ -212,8 +212,8 @@ function CXLB() {
 }
 //鼠标点击样式
 function ActiveStyle(name) {
-    $("#div" + name + "Text").css("border-top", "2px solid #5bc0de").css("border-right", "2px solid #5bc0de").css("border-left", "2px solid #5bc0de").css("border-bottom", "2px solid #5bc0de");
-    $("#div" + name).find("ul").css("border-left", "2px solid #5bc0de").css("border-right", "2px solid #5bc0de").css("border-bottom", "2px solid #5bc0de");
+    $("#div" + name + "Text").css("border-top", "2px solid #ad5b97").css("border-right", "2px solid #ad5b97").css("border-left", "2px solid #ad5b97").css("border-bottom", "2px solid #ad5b97");
+    $("#div" + name).find("ul").css("border-left", "2px solid #ad5b97").css("border-right", "2px solid #ad5b97").css("border-bottom", "2px solid #ad5b97");
 }
 //鼠标离开样式
 function LeaveStyle(name) {
