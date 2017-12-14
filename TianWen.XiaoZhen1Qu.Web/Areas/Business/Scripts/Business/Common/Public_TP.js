@@ -1,22 +1,91 @@
-﻿//激活上传按钮样式
-function GetUploadCss() {
-    $("#div_upload").css("border", "2px solid #bc6ba6");
+﻿//上传照片
+function UploadZP() {
+    $("#divFWZPValue").css("display", "block");
+    var f = $(this).get(0).files[0];
+    var reader = new FileReader();
+    reader.readAsDataURL(f);
+    reader.onload = function (theFile) {
+        var image = new Image();
+        image.src = theFile.target.result;
+        image.onload = function () {
+            var form = $("#myform");
+            var formData = new FormData(form);
+            formData.append('Filedata', f);
+            formData.append('width', this.width);
+            formData.append('height', this.height);
+            var xhr = new XMLHttpRequest();
+            xhr.addEventListener("load", uploadComplete, false);
+            xhr.open('POST', getRootPath() + "/Areas/Business/Ashx/SavePhotos.Ashx");
+            xhr.send(formData);
+        };
+    };
 }
-//取消上传按钮样式
-function LeaveUploadCss() {
-    $("#div_upload").css("border", "2px solid #cccccc");
+//上传完成事件
+function uploadComplete(evt) {
+    var imagepath = getRootPath() + "/Areas/Business/Photos/" + evt.target.responseText;
+    if ($("#ulImgs1").find("img").length < 4)
+        $("#ulImgs1").append("<li draggable='true' class='li_img'><img src='" + imagepath + "' class='divImg' /><div class='div_toolbar_wrap'><div class='opacity'></div><div class='toolbar'><a class='edit'></a><a class='delete'></a></div></div></li>");
+    else if ($("#ulImgs2").find("img").length < 4)
+        $("#ulImgs2").append("<li draggable='true' class='li_img'><img src='" + imagepath + "' class='divImg' /><div class='div_toolbar_wrap'><div class='opacity'></div><div class='toolbar'><a class='edit'></a><a class='delete'></a></div></div></li>");
+    else if ($("#ulImgs3").find("img").length < 4)
+        $("#ulImgs3").append("<li draggable='true' class='li_img'><img src='" + imagepath + "' class='divImg' /><div class='div_toolbar_wrap'><div class='opacity'></div><div class='toolbar'><a class='edit'></a><a class='delete'></a></div></div></li>");
+    else
+        $("#ulImgs4").append("<li draggable='true' class='li_img'><img src='" + imagepath + "' class='divImg' /><div class='div_toolbar_wrap'><div class='opacity'></div><div class='toolbar'><a class='edit'></a><a class='delete'></a></div></div></li>");
+    ControlUpload();
+    ValidateZP();
+    BindToolBar();
+}
+//上传按钮控制
+function ControlUpload() {
+    if ($("#ulImgs4").find("img").length === 4) {
+        $("#div_upload").css("background-color", "#ececec");
+        $("#input_upload").attr("disabled", "disabled");
+    } else {
+        $("#div_upload").css("background-color", "#fff");
+        $("#input_upload").removeAttr("disabled");
+    }
+}
+//保存照片
+function SavePhoto(obj) {
+    var filepath = obj.data.src;
+    var c = $("#canvas")[0];
+    var data = c.toDataURL();
+    var b64 = data.substring(22);
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Areas/Business/Ashx/SavePhotos.Ashx",
+        dataType: "json",
+        data:
+        {
+            data: b64,
+            filepath: filepath
+        },
+        success: function (xml) {
+
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            $("#shadow").css("display", "none");
+            $("#editImgWindow").css("display", "none");
+            $("#" + obj.data.id).attr("src", obj.data.src + "?t=" + Math.random());
+        }
+    });
 }
 //加载图片
 function LoadPhotos(photos) {
     if (photos.length > 0) {
         $("#divFWZPValue").css("display", "block");
         for (var i = 0; i < photos.length; i++) {
-            if (i > 3)
+            if (i > 11)
+                $("#ulImgs4").append("<li draggable='true' class='li_img'><img id='ulImgs4_" + (i + 1) + "' src='" + photos[i].PHOTOURL + "' class='divImg' /><div class='div_toolbar_wrap'><div class='opacity'></div><div class='toolbar'><a class='edit'></a><a class='delete'></a></div></div></li>");
+            if (i > 7 && i <= 11)
+                $("#ulImgs3").append("<li draggable='true' class='li_img'><img id='ulImgs3_" + (i + 1) + "' src='" + photos[i].PHOTOURL + "' class='divImg' /><div class='div_toolbar_wrap'><div class='opacity'></div><div class='toolbar'><a class='edit'></a><a class='delete'></a></div></div></li>");
+            if (i > 3 && i <= 7)
                 $("#ulImgs2").append("<li draggable='true' class='li_img'><img id='ulImgs2_" + (i + 1) + "' src='" + photos[i].PHOTOURL + "' class='divImg' /><div class='div_toolbar_wrap'><div class='opacity'></div><div class='toolbar'><a class='edit'></a><a class='delete'></a></div></div></li>");
-            else
+            if (i <= 3)
                 $("#ulImgs1").append("<li draggable='true' class='li_img'><img id='ulImgs1_" + (i + 1) + "' src='" + photos[i].PHOTOURL + "' class='divImg' /><div class='div_toolbar_wrap'><div class='opacity'></div><div class='toolbar'><a class='edit'></a><a class='delete'></a></div></div></li>");
         }
         BindToolBar();
+        ControlUpload();
     }
 }
 //加载图片工具条
@@ -27,26 +96,19 @@ function BindToolBar() {
 }
 //绑定图片鼠标浮动事件
 function BindMouseHover() {
-    $("#ulImgs1").find("img").each(function (i) {
-        $(this).bind("mouseover", function () {
-            $(this).next().css("display", "block");
-        });
-        $("#ulImgs1").find(".div_toolbar_wrap").each(function () {
-            $(this).bind("mouseleave", function () {
-                $(this).css("display", "none");
+    var uls = "ulImgs1,ulImgs2,ulImgs3,ulImgs4".split(',');
+    for (var i = 0; i < uls.length; i++) {
+        $("#" + uls[i]).find("img").each(function (i) {
+            $(this).bind("mouseover", function () {
+                $(this).next().css("display", "block");
+            });
+            $("#" + uls[i]).find(".div_toolbar_wrap").each(function () {
+                $(this).bind("mouseleave", function () {
+                    $(this).css("display", "none");
+                });
             });
         });
-    });
-    $("#ulImgs2").find("img").each(function (i) {
-        $(this).bind("mouseover", function () {
-            $(this).next().css("display", "block");
-        });
-        $("#ulImgs2").find(".div_toolbar_wrap").each(function () {
-            $(this).bind("mouseleave", function () {
-                $(this).css("display", "none");
-            });
-        });
-    });
+    }
 }
 //绑定图片点击编辑事件
 function BindUlImgEdit() {
@@ -82,23 +144,53 @@ function BindUlImgDelete() {
             if ($("#ulImgs2").find("li").length > 0) {
                 $("#ulImgs1").append($("#ulImgs2").find("li:eq(0)")[0].outerHTML);
                 $("#ulImgs2").find("li:eq(0)").remove();
-                BindMouseHover();
-                ControlUpload();
-                BindUlImg1Delete();
             }
+            if ($("#ulImgs3").find("li").length > 0) {
+                $("#ulImgs2").append($("#ulImgs3").find("li:eq(0)")[0].outerHTML);
+                $("#ulImgs3").find("li:eq(0)").remove();
+            }
+            BindMouseHover();
+            ControlUpload();
+            BindUlImg1Delete();
         });
     });
     $("#ulImgs2").find(".delete").each(function (i) {
         $(this).unbind("click");
         $(this).bind("click", function () {
             $(this).parent().parent().parent("li").remove();
+            if ($("#ulImgs3").find("li").length > 0) {
+                $("#ulImgs2").append($("#ulImgs3").find("li:eq(0)")[0].outerHTML);
+                $("#ulImgs3").find("li:eq(0)").remove();
+            }
             BindMouseHover();
             ControlUpload();
             BindUlImg2Delete();
         });
     });
+    $("#ulImgs3").find(".delete").each(function (i) {
+        $(this).unbind("click");
+        $(this).bind("click", function () {
+            $(this).parent().parent().parent("li").remove();
+            if ($("#ulImgs4").find("li").length > 0) {
+                $("#ulImgs3").append($("#ulImgs4").find("li:eq(0)")[0].outerHTML);
+                $("#ulImgs4").find("li:eq(0)").remove();
+            }
+            BindMouseHover();
+            ControlUpload();
+            BindUlImg3Delete();
+        });
+    });
+    $("#ulImgs4").find(".delete").each(function (i) {
+        $(this).unbind("click");
+        $(this).bind("click", function () {
+            $(this).parent().parent().parent("li").remove();
+            BindMouseHover();
+            ControlUpload();
+            BindUlImg4Delete();
+        });
+    });
 }
-//绑定图片点击编辑事件_第一排
+//绑定图片点击删除事件_第一排
 function BindUlImg1Delete() {
     $("#ulImgs1").find(".delete").each(function (i) {
         $(this).unbind("click");
@@ -107,15 +199,57 @@ function BindUlImg1Delete() {
             if ($("#ulImgs2").find("li").length > 0) {
                 $("#ulImgs1").append($("#ulImgs2").find("li:eq(0)")[0].outerHTML);
                 $("#ulImgs2").find("li:eq(0)").remove();
-                BindMouseHover();
-                ControlUpload();
             }
+            if ($("#ulImgs3").find("li").length > 0) {
+                $("#ulImgs2").append($("#ulImgs3").find("li:eq(0)")[0].outerHTML);
+                $("#ulImgs3").find("li:eq(0)").remove();
+            }
+            if ($("#ulImgs4").find("li").length > 0) {
+                $("#ulImgs3").append($("#ulImgs4").find("li:eq(0)")[0].outerHTML);
+                $("#ulImgs4").find("li:eq(0)").remove();
+            }
+            BindMouseHover();
+            ControlUpload();
         });
     });
 }
-//绑定图片点击编辑事件_第二排
+//绑定图片点击删除事件_第二排
 function BindUlImg2Delete() {
     $("#ulImgs2").find(".delete").each(function (i) {
+        $(this).unbind("click");
+        $(this).bind("click", function () {
+            $(this).parent().parent().parent("li").remove();
+            if ($("#ulImgs3").find("li").length > 0) {
+                $("#ulImgs2").append($("#ulImgs3").find("li:eq(0)")[0].outerHTML);
+                $("#ulImgs3").find("li:eq(0)").remove();
+            }
+            if ($("#ulImgs4").find("li").length > 0) {
+                $("#ulImgs3").append($("#ulImgs4").find("li:eq(0)")[0].outerHTML);
+                $("#ulImgs4").find("li:eq(0)").remove();
+            }
+            BindMouseHover();
+            ControlUpload();
+        });
+    });
+}
+//绑定图片点击删除事件_第三排
+function BindUlImg3Delete() {
+    $("#ulImgs3").find(".delete").each(function (i) {
+        $(this).unbind("click");
+        $(this).bind("click", function () {
+            $(this).parent().parent().parent("li").remove();
+            if ($("#ulImgs4").find("li").length > 0) {
+                $("#ulImgs3").append($("#ulImgs4").find("li:eq(0)")[0].outerHTML);
+                $("#ulImgs4").find("li:eq(0)").remove();
+            }
+            BindMouseHover();
+            ControlUpload();
+        });
+    });
+}
+//绑定图片点击删除事件_第四排
+function BindUlImg4Delete() {
+    $("#ulImgs4").find(".delete").each(function (i) {
         $(this).unbind("click");
         $(this).bind("click", function () {
             $(this).parent().parent().parent("li").remove();
@@ -145,80 +279,17 @@ function Rotate(obj) {
     }
 
 }
-//保存照片
-function SavePhoto(obj) {
-    var filepath = obj.data.src;
-    var c = $("#canvas")[0];
-    var data = c.toDataURL();
-    var b64 = data.substring(22);
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Areas/Business/Ashx/SavePhotos.Ashx",
-        dataType: "json",
-        data:
-        {
-            data: b64,
-            filepath: filepath
-        },
-        success: function (xml) {
-
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) {
-            $("#shadow").css("display", "none");
-            $("#editImgWindow").css("display", "none");
-            $("#" + obj.data.id).attr("src", obj.data.src + "?t=" + Math.random());
-        }
-    });
-}
-//上传照片
-function UploadZP() {
-    $("#divFWZPValue").css("display", "block");
-    var f = $(this).get(0).files[0];
-    var reader = new FileReader();
-    reader.readAsDataURL(f);
-    reader.onload = function (theFile) {
-        var image = new Image();
-        image.src = theFile.target.result;
-        image.onload = function () {
-            var form = $("#myform");
-            var formData = new FormData(form);
-            formData.append('Filedata', f);
-            formData.append('width', this.width);
-            formData.append('height', this.height);
-            var xhr = new XMLHttpRequest();
-            xhr.addEventListener("load", uploadComplete, false);
-            xhr.open('POST', getRootPath() + "/Areas/Business/Ashx/SavePhotos.Ashx");
-            xhr.send(formData);
-        };
-    };
-}
-//上传完成事件
-function uploadComplete(evt) {
-    var imagepath = getRootPath() + "/Areas/Business/Photos/" + evt.target.responseText;
-    if ($("#ulImgs1").find("img").length < 4) {
-        $("#ulImgs1").append("<li draggable='true' class='li_img'><img src='" + imagepath + "' class='divImg' /><div class='div_toolbar_wrap'><div class='opacity'></div><div class='toolbar'><a class='edit'></a><a class='delete'></a></div></div></li>");
-
-    }
-    else {
-        $("#ulImgs2").append("<li draggable='true' class='li_img'><img src='" + imagepath + "' class='divImg' /><div class='div_toolbar_wrap'><div class='opacity'></div><div class='toolbar'><a class='edit'></a><a class='delete'></a></div></div></li>");
-    }
-    ControlUpload();
-    ValidateZP();
-    BindToolBar();
-}
-//上传按钮控制
-function ControlUpload() {
-    if ($("#ulImgs2").find("img").length === 4) {
-        $("#div_upload").css("background-color", "#ececec");
-        $("#input_upload").attr("disabled", "disabled");
-    } else {
-        $("#div_upload").css("background-color", "#fff");
-        $("#input_upload").removeAttr("disabled");
-    }
-}
 //关闭图片编辑窗口
 function CloseWindow() {
     $("#shadow").css("display", "none");
     $("#editImgWindow").css("display", "none");
     $("#editDZWindow").css("display", "none");
+}
+//激活上传按钮样式
+function GetUploadCss() {
+    $("#div_upload").css("border", "2px solid #bc6ba6");
+}
+//取消上传按钮样式
+function LeaveUploadCss() {
+    $("#div_upload").css("border", "2px solid #cccccc");
 }

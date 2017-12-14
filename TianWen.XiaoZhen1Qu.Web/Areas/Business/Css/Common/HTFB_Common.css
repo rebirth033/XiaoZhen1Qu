@@ -16,11 +16,13 @@
 
 .div_row {width: 900px;height: 60px;text-align: left;padding-top: 2px;font-size: 15px;margin-left: 10px;margin-bottom: 30px;position: relative;display: block;}
 .div_row_zp{width: 900px;height: 180px;text-align: left;padding-top: 2px;font-size: 15px;margin-left: 10px;margin-bottom: 20px;position: relative;display: block;}
-.div_row_zp_value{ height: auto;}
+.div_row_zp_value{ height: auto;display: none;}
 .div_row_left {color: black;text-align: right;margin-left: 60px;display: inline;font-size: 16px;height: 170px;}
 .span_row_left_fwzp{width: 56px; display: inline-block;}
 .div_row_right {display: inline;margin-left: 30px;position: relative;font-size: 16px;}
 .div_row_right_bcms{ width: 594px; height: 240px; display: inline-block;}
+.div_row_right_zp{width: 670px;display: inline-block;}
+.div_row_right_zp .ulImgs{ padding-left: 10px;}
 .div_row_right_zp_info{ margin-left: 185px; font-size: 14px; color: #999999;}
 .div_row .font_QQ{ margin-left: 98px;}
 .div_row .font_two{ margin-left: 92px;}
