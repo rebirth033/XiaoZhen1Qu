@@ -21,7 +21,7 @@ function LoadHeadSearch() {
 }
 //加载房产查询条件
 function LoadFCCondition() {
-    LoadConditionByTypeNames("'整租房租金','厅室','朝向','装修情况'", "CODES_FC", "租金,厅室,朝向,装修情况", "ZJ,S,CX,ZXQK", "15,15,15,15");
+    LoadConditionByTypeNames("'整租房租金','厅室','朝向','装修情况','房屋亮点'", "CODES_FC", "租金,厅室,朝向,装修情况,房屋亮点", "ZJ,S,CX,ZXQK,FWLD", "15,15,15,15,15");
     LoadBody("FCXX_ZZF", currentIndex);
 }
 //选择条件
@@ -36,7 +36,7 @@ function SelectCondition(obj, name) {
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("QY,S,ZJ,CX,ZXQK");
+    var condition = GetAllCondition("QY,S,ZJ,CX,ZXQK,FWLD");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/FCCX/LoadFCXX",
