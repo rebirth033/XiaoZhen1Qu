@@ -100,6 +100,7 @@ function LoadXLByName(lb, xl, tbname) {
 function SelectLB(obj, type) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
+    LeaveStyle(type);
 }
 //选择下拉框
 function SelectDropdown(obj, type) {

@@ -173,25 +173,25 @@
                     <span id="spanFYBT">房源标题</span>
                 </div>
                 <div class="div_row_right">
-                    <input id="BT" maxlength="50" column="BT" class="input_input SRK" type="text" placeholder="吸引人的标题可让更多的人看您的信息喔" />
+                    <input id="BT" maxlength="50" column="BT" class="input_input SRK" style="width: 594px;" type="text" placeholder="吸引人的标题可让更多的人看您的信息喔" />
                     <div id="divBTTip"></div>
                 </div>
             </div>
             <div id="divBCMS" class="div_row" style="height: 253px; position: relative; z-index: 991;">
-                <div class="div_row_left" style="height: 170px; vertical-align: top;">
-                    <span class="span_required" style="vertical-align: top">*</span>
-                    <span id="spanBCMS" style="vertical-align: top">房源描述</span>
+                <div class="div_row_left">
+                    <span class="span_required">*</span>
+                    <span id="spanBCMS">房源描述</span>
                 </div>
                 <div class="div_row_right">
-                    <script id="BCMS" type="text/plain" style="width: 594px; height: 200px; display: inline-block;">
+                    <script id="BCMS" class="div_row_right_bcms" type="text/plain">
                     </script>
                     <div id="divBCMSTip" class="Warn"></div>
                 </div>
             </div>
             <div id="divFWZP" class="div_row_zp">
-                <div class="div_row_left" style="height: 170px; vertical-align: top;">
-                    <span class="span_required" style="vertical-align: top">*</span>
-                    <span id="spanFWZP" style="vertical-align: top">上传照片</span>
+                <div class="div_row_left">
+                    <span class="span_required">*</span>
+                    <span id="spanFWZP">上传照片</span>
                 </div>
                 <div class="div_row_right">
                     <div id="div_upload" class="div_upload">
@@ -199,29 +199,29 @@
                             <input id="input_upload" unselectable="on" type="file" multiple="multiple" class="file" />
                         </form>
                     </div>
-                    <div style="margin-left: 185px; font-size: 14px; color: #999999;">
-                        <span>最多8张，可多选上传，最大10mb。有图可使浏览量增加3倍，并会在推荐位显示。</span>
+                    <div class="div_row_right_zp_info">
+                        <span>最多20张，可多选上传，最大10mb。有图可使浏览量增加3倍，并会在推荐位显示。</span>
                     </div>
-                    <div id="divTPTip" style="margin-top: 10px; margin-left: 210px;"></div>
+                    <div id="divTPTip" class="Warn"></div>
                 </div>
             </div>
-            <div id="divFWZPValue" class="div_row_zp" style="display: none; text-align: left;">
-                <div class="div_row_left" style="height: 170px; vertical-align: top;">
+            <div id="divFWZPValue" class="div_row_zp div_row_zp_value" style="display: none;">
+                <div class="div_row_left">
                     <span class="span_required"></span>
-                    <span id="spanFWZP" style="width: 56px; display: inline-block;"></span>
+                    <span id="spanFWZP" class="span_row_left_fwzp"></span>
                 </div>
                 <div id="divImgs1" class="div_row_right" style="display: inline-block; width: 670px;">
                     <ul id="ulImgs1" class="ulImgs" style="padding-left: 0px;"></ul>
                 </div>
-                <div class="div_row_left" style="height: 170px; vertical-align: top;">
+                <div class="div_row_left">
                     <span class="span_required"></span>
-                    <span id="spanFWZP" style="width: 56px; display: inline-block;"></span>
+                    <span id="spanFWZP" class="span_row_left_fwzp"></span>
                 </div>
                 <div id="divImgs2" class="div_row_right" style="display: inline-block; width: 670px;">
                     <ul id="ulImgs2" class="ulImgs" style="padding-left: 0px;"></ul>
                 </div>
             </div>
-            <div id="divLXRXX" class="div_split" style="display: block; text-align: left;">
+            <div id="divLXRXX" class="div_split" style="display: block;">
                 <span class="span_split">联系人信息</span>
                 <em class="em_split"></em>
             </div>
@@ -246,7 +246,7 @@
                 </div>
             </div>
             <div id="divQQ" class="div_row" style="margin-top: -12px;" style="z-index: 993">
-                <div class="div_row_left font_two">
+                <div class="div_row_left font_QQ">
                     <span class="span_required"></span>
                     <span id="spanQQ">QQ</span>
                 </div>

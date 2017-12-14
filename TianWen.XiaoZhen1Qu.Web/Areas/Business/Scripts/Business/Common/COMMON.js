@@ -217,8 +217,8 @@ function ActiveStyle(name) {
 }
 //鼠标离开样式
 function LeaveStyle(name) {
-    $("#div" + name + "Text").css("border-top", "1px solid #777777").css("border-right", "1px solid #777777").css("border-left", "1px solid #777777").css("border-bottom", "1px solid #777777");
-    $("#div" + name).find("ul").css("border-left", "1px solid #777777").css("border-right", "1px solid #777777").css("border-bottom", "1px solid #777777");
+    $("#div" + name + "Text").css("border-top", "2px solid #cccccc").css("border-right", "2px solid #cccccc").css("border-left", "2px solid #cccccc").css("border-bottom", "2px solid #cccccc");
+    $("#div" + name).find("ul").css("border-left", "2px solid #cccccc").css("border-right", "2px solid #cccccc").css("border-bottom", "2px solid #cccccc");
 }
 //关闭
 function Close(id) {
