@@ -3,9 +3,9 @@
 /*首页_主体_左部*/
 .div_body .div_body_left{display: inline-block;width: 880px;border: 1px solid #cccccc;border-radius: 2px;height: auto;background-color: #ffffff;float: left;padding: 10px;}
 /*首页_主体_左部_标题*/
-.div_body .div_body_left .div_body_left_head{ height: 120px;width: 100%;border-bottom: 1px solid #cccccc;}
+.div_body .div_body_left .div_body_left_head{ height: 100px;width: 100%;border-bottom: 1px solid #cccccc;}
 .div_body .div_body_left .div_body_left_head .p_div_body_left_head_bt{ display: block;font-size: 25px;font-weight: 700;height: 40px;padding: 10px;}
-.div_body .div_body_left .div_body_left_head .p_div_body_left_head_ll{ display: block;color: #999999;height: 40px;padding: 10px;}
+.div_body .div_body_left .div_body_left_head .p_div_body_left_head_ll{ display: block;color: #999999;height: 30px;padding: 10px;font-size: 16px;}
 /*首页_主体_左部_信息主要内容*/
 .div_body .div_body_left .div_body_left_body{ width: 100%;height: 470px;margin-top: 20px;font-size: 16px;}
 .div_body .div_body_left .div_body_left_body_left{ width: 470px;height: 475px;float: left;}
@@ -30,7 +30,7 @@
 /*首页_主体_左部_房源详情*/
 .div_body .div_body_left .div_body_left_body_xq{ height: auto;}
 .div_body .div_body_left .div_body_left_body_xq .p_body_left_body_xq{ font-size: 18px;font-weight: 700;height: 60px;border-bottom: 1px solid #cccccc;}
-.div_body .div_body_left .div_body_left_body_xq .div_body_left_body_xq_xx{ height: auto;width: 100%;display: block;margin-left: 10px;margin-bottom: 30px;float: left;}
+.div_body .div_body_left .div_body_left_body_xq .div_body_left_body_xq_xx{ height: auto;width: 100%;display: block;margin-left: 10px;margin-bottom: 30px;float: left;font-size: 16px;}
 .div_body .div_body_left .div_body_left_body_xq .div_body_left_body_xq_xx .div_body_left_body_xq_xx_left{ font-size: 16px;float: left;}
 .div_body .div_body_left .div_body_left_body_xq .div_body_left_body_xq_xx .div_body_left_body_xq_xx_right{ margin-left: 20px;color: #666666;float: left;}
 .div_body .div_body_left .div_body_left_body_xq .div_body_left_body_xq_xx .div_body_left_body_xq_xx_right .span_body_left_body_fyxq_xx_right_fwld{width: 96px;text-align: center;display: inline-block;}
