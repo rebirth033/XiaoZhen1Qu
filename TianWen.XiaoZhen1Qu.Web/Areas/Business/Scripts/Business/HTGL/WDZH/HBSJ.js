@@ -1,9 +1,9 @@
 ﻿var ysjcount = 60, xsjcount = 60;;
 
 $(document).ready(function () {
-    $("#spanJBSJ").css("color", "#ad5b97");
+    $("#spanJBSJ").css("color", "#bc6ba6");
     $("#spanJBSJ").css("font-weight", "700");
-    $("#emJBSJ").css("background-color", "#ad5b97");
+    $("#emJBSJ").css("background-color", "#bc6ba6");
     $("#btnHQYSJYZM").bind("click", { id: "inputYSJ" }, GetYSJCheckCode);
     $("#btnHQXSJYZM").bind("click", { id: "inputXSJ" }, GetXSJCheckCode);
     $("#inputYSJ").val(getUrlParam("SJ"));
@@ -26,8 +26,8 @@ function QRYSJYZH() {
             if (xml.Result === 1) {
                 $("#spanJBSJ").css("color", "#cccccc");
                 $("#emJBSJ").css("background", "#cccccc");
-                $("#spanBDSJ").css("color", "#ad5b97");
-                $("#emBDSJ").css("background", "#ad5b97");
+                $("#spanBDSJ").css("color", "#bc6ba6");
+                $("#emBDSJ").css("background", "#bc6ba6");
                 $("#divFirst").css("display", "none");
                 $("#divSecond").css("display", "block");
             } else {
@@ -94,8 +94,8 @@ function UpdateSJ() {
             if (xml.Result === 1) {
                 $("#spanBDSJ").css("color", "#cccccc");
                 $("#emBDSJ").css("background", "#cccccc");
-                $("#spanWC").css("color", "#ad5b97");
-                $("#emWC").css("background", "#ad5b97");
+                $("#spanWC").css("color", "#bc6ba6");
+                $("#emWC").css("background", "#bc6ba6");
                 $("#divSecond").css("display", "none");
                 $("#divThird").css("display", "block");
             }

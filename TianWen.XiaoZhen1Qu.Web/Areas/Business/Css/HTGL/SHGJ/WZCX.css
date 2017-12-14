@@ -21,7 +21,7 @@
 .span_div_content_title {
     width: 208px;
     height: 55px;
-    color: #ad5b97;
+    color: #bc6ba6;
     line-height: 55px;
     text-align: center;
     font-size: 24px;
@@ -58,7 +58,7 @@
 
     .span_content_info_qhcs:hover {
         cursor: pointer;
-        color: #ad5b97;
+        color: #bc6ba6;
         text-decoration: underline;
     }
 
@@ -138,13 +138,13 @@
     padding: 4px 12px;
     display: inline-block;
     cursor: text;
-    background-color: #ad5b97;
+    background-color: #bc6ba6;
     color: #ffffff;
     margin-left: 39px;
 }
 
     .input_content_mfcx:hover {
-        background-color: #31b0d5;
+        background-color: #ad5b97;
     }
 
 

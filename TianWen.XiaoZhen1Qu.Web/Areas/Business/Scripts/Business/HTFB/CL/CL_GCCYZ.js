@@ -94,12 +94,12 @@ function InfoDW() {
     $("#divDWTip").css("display", "block");
     $("#divDWTip").attr("class", "Info");
     $("#divDWTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />请填写数字');
-    $("#spanDW").css("border-color", "#ad5b97");
+    $("#spanDW").css("border-color", "#bc6ba6");
 }
 //提示小时数
 function InfoXSS() {
     $("#divXSSTip").css("display", "block");
     $("#divXSSTip").attr("class", "Info");
     $("#divXSSTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />请填写数字');
-    $("#spanXSS").css("border-color", "#ad5b97");
+    $("#spanXSS").css("border-color", "#bc6ba6");
 }

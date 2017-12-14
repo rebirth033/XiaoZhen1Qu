@@ -43,5 +43,5 @@ function InfoRJXF() {
     $("#divRJXFTip").css("display", "block");
     $("#divRJXFTip").attr("class", "Info");
     $("#divRJXFTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />请填写整数，默认为面议');
-    $("#spanRJXF").css("border-color", "#ad5b97");
+    $("#spanRJXF").css("border-color", "#bc6ba6");
 }

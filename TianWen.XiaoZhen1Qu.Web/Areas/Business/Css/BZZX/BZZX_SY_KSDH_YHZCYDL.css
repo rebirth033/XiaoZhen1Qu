@@ -104,7 +104,7 @@
     background-color: #f7f7f7;
     width: 1000px;
     height: 34px;
-    border-left: 2px solid #ad5b97;
+    border-left: 2px solid #bc6ba6;
     display: block;
     margin-top: 20px;
     padding-left: 10px;
@@ -136,7 +136,7 @@
     }
 
 .cursor {
-    color: #31b0d5;
+    color: #ad5b97;
     font-weight: 700;
 }
 
@@ -248,7 +248,7 @@
     float: right;
     width: 55px;
     height: 100%;
-    color: #31b0d5;
+    color: #ad5b97;
     font-size: 12px;
     padding: 3px 3px;
 }

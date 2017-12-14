@@ -91,7 +91,7 @@
     cursor: pointer;
     line-height: 28px;
     margin-top: 5px;
-    color: #31b0d5;
+    color: #ad5b97;
     border-radius: 4px;
     padding-bottom: 2px;
 }
@@ -136,7 +136,7 @@
     cursor: pointer;
     line-height: 26px;
     margin-top: 5px;
-    background-color: #31b0d5;
+    background-color: #ad5b97;
     border-radius: 4px;
     padding-bottom: 2px;
     margin-left: 10px;
@@ -208,12 +208,12 @@
 }
 
 .a_main_info_bottom_fy_current {
-    background-color: #ad5b97;
+    background-color: #bc6ba6;
     color: #ffffff;
 }
 
 .a_main_info_bottom_fy:hover {
-    background-color: #ad5b97;
+    background-color: #bc6ba6;
     text-decoration: none;
     color: #ffffff;
 }

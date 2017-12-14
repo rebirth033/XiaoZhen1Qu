@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
-    $("#spanDSFPTZF").css("color", "#31b0d5");
+    $("#spanDSFPTZF").css("color", "#ad5b97");
     $("#spanDSFPTZF").css("font-weight", "700");
-    $("#emDSFPTZF").css("background-color", "#31b0d5");
+    $("#emDSFPTZF").css("background-color", "#ad5b97");
     $("#emDSFPTZF").css("height", "2px");
     $(".divstep").bind("click", HeadActive);
     $("#span_main_info_body_bottom_xy").bind("click", ShowFWXY);
@@ -21,12 +21,12 @@ function HeadActive() {
         });
     });
     $(this).find("span").each(function () {
-        $(this).css("color", "#31b0d5");
+        $(this).css("color", "#ad5b97");
         $(this).css("font-weight", "700");
     });
     $(this).find("em").each(function () {
         $(this).css("height", "2px");
-        $(this).css("background-color", "#31b0d5");
+        $(this).css("background-color", "#ad5b97");
     });
     LoadDivInfo(this.id);
 }
@@ -224,7 +224,7 @@ function SelectWYZF_YH(obj) {
     $(this).find(".img_select").each(function () {
         $(this).css("background-image", 'url(' + getRootPath() + '/Areas/Business/Css/images/WDZJ/wdxj_cz_zffs_select.png)');
     });
-    $(this).css("border", "1px solid #ad5b97");
+    $(this).css("border", "1px solid #bc6ba6");
 }
 
 function FirstLoad(zffs) {
@@ -234,7 +234,7 @@ function FirstLoad(zffs) {
         });
         $("#img_radio_wxzf").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
         $("#img_select_wxzf").css("background-image", 'url(' + getRootPath() + '/Areas/Business/Css/images/WDZJ/wdxj_cz_zffs_select.png)');
-        $("#div_main_info_zffs_wxzf").css("border", "1px solid #ad5b97");
+        $("#div_main_info_zffs_wxzf").css("border", "1px solid #bc6ba6");
     }
     if (zffs === "wyzf") {
         $("#div_main_info_body_wyzf").find(".img_radio").each(function () {
@@ -242,7 +242,7 @@ function FirstLoad(zffs) {
         });
         $("#img_radio_wyzf_gsyh").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
         $("#img_select_wyzf_gsyh").css("background-image", 'url(' + getRootPath() + '/Areas/Business/Css/images/WDZJ/wdxj_cz_zffs_select.png)');
-        $("#div_main_info_zffs_wyzf_gsyh").css("border", "1px solid #ad5b97");
+        $("#div_main_info_zffs_wyzf_gsyh").css("border", "1px solid #bc6ba6");
     }
     if (zffs === "kjzf") {
         $("#div_main_info_body_kjzf").find(".img_radio").each(function () {
@@ -250,6 +250,6 @@ function FirstLoad(zffs) {
         });
         $("#img_radio_jjkkjzf_gsyh").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
         $("#img_select_jjkkjzf_gsyh").css("background-image", 'url(' + getRootPath() + '/Areas/Business/Css/images/WDZJ/wdxj_cz_zffs_select.png)');
-        $("#div_main_info_zffs_jjkkjzf_gsyh").css("border", "1px solid #ad5b97");
+        $("#div_main_info_zffs_jjkkjzf_gsyh").css("border", "1px solid #bc6ba6");
     }
 }

@@ -149,7 +149,7 @@
 }
 
 .span_main_info_tip {
-    color: #ad5b97;
+    color: #bc6ba6;
 }
 
 .img_select {
@@ -167,7 +167,7 @@
     width: 135px;
     height: 40px;
     cursor: pointer;
-    background-color: #31b0d5;
+    background-color: #ad5b97;
     z-index: 102;
     color: #fff;
     border-radius: 4px;
@@ -196,7 +196,7 @@
     .span_main_info_body_bottom_xy:hover {
         cursor: pointer;
         text-decoration: underline;
-        color: #ad5b97;
+        color: #bc6ba6;
     }
 
 .em_main_info_body_split {
@@ -208,7 +208,7 @@
 
 .span_main_info_body_wxlj {
     font-size: 12px;
-    color: #31b0d5;
+    color: #ad5b97;
     line-height: 30px;
     display: block;
 }
@@ -271,7 +271,7 @@
     font-size: 16px; 
     font-weight: 700; 
     margin-top: 10px;
-    color: #31b0d5;
+    color: #ad5b97;
     text-align: left;
     margin-left: 40px;
 }
@@ -301,7 +301,7 @@
 }
 
 .div_main_info_body_yhhk_text_lxkf {
-    color: #ad5b97;
+    color: #bc6ba6;
 }
 
 .span_main_info_body_yhhk_text_lxkf:hover {

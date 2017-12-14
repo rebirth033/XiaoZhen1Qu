@@ -9,8 +9,8 @@ $(document).ready(function () {
     $("#btnFirst").bind("click", QRZH);
     $("#btnSecond").bind("click", YZZH);
     $("#btnThird").bind("click", CZMM);
-    $("#spanQRZH").css("color", "#ad5b97");
-    $("#emQRZH").css("background", "#ad5b97");
+    $("#spanQRZH").css("color", "#bc6ba6");
+    $("#emQRZH").css("background", "#bc6ba6");
 });
 //确认账户
 function QRZH() {
@@ -28,8 +28,8 @@ function QRZH() {
             if (xml.Result === 1) {
                 $("#spanQRZH").css("color", "#cccccc");
                 $("#emQRZH").css("background", "#cccccc");
-                $("#spanYZZH").css("color", "#ad5b97");
-                $("#emYZZH").css("background", "#ad5b97");
+                $("#spanYZZH").css("color", "#bc6ba6");
+                $("#emYZZH").css("background", "#bc6ba6");
                 $("#divFirst").css("display", "none");
                 $("#divSecond").css("display", "block");
             } else {
@@ -66,8 +66,8 @@ function YZZH() {
             if (xml.Result === 1) {
                 $("#spanYZZH").css("color", "#cccccc");
                 $("#emYZZH").css("background", "#cccccc");
-                $("#spanCZMM").css("color", "#ad5b97");
-                $("#emCZMM").css("background", "#ad5b97");
+                $("#spanCZMM").css("color", "#bc6ba6");
+                $("#emCZMM").css("background", "#bc6ba6");
                 $("#divSecond").css("display", "none");
                 $("#divThird").css("display", "block");
             } else {
@@ -304,7 +304,7 @@ function GetNumber() {
 function TXYZMTip() {
     $("#TXYZM").css("border-color", "#999");
     $("#TXYZMInfo").css("color", "#999");
-    $("#TXYZMInfo").html('验证码看不清？<span onclick="QHTXYZM()" style="cursor:pointer;text-decoration:none;color:#ad5b97">换一下？</span>');
+    $("#TXYZMInfo").html('验证码看不清？<span onclick="QHTXYZM()" style="cursor:pointer;text-decoration:none;color:#bc6ba6">换一下？</span>');
 }
 
 function QHTXYZM() {

@@ -6,7 +6,7 @@
 }
 
 .div_head {
-    background-color: #ad5b97;
+    background-color: #bc6ba6;
     width: 100%;
     height: 80px;
     vertical-align: middle;
@@ -105,5 +105,5 @@
 
 .span_content_tip_bottom {
     cursor: pointer;
-    color: #ad5b97;
+    color: #bc6ba6;
 }

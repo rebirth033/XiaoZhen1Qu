@@ -1,8 +1,8 @@
 ﻿var currentIndex = 1, currentDJJDIndex = 1;
 $(document).ready(function () {
-    $("#spanSZMX").css("color", "#31b0d5");
+    $("#spanSZMX").css("color", "#ad5b97");
     $("#spanSZMX").css("font-weight", "700");
-    $("#emSZMX").css("background-color", "#31b0d5");
+    $("#emSZMX").css("background-color", "#ad5b97");
     $("#emSZMX").css("height", "2px");
     $(".divstep").bind("click", { PageIndex: currentIndex }, HeadActive);
     $("#div_main_info_head_lx").find(".span_main_info_right").bind("click", { id: "lx", PageIndex: currentIndex }, SZMXSpanActive);
@@ -37,12 +37,12 @@ function HeadActive(obj) {
         });
     });
     $(this).find("span").each(function () {
-        $(this).css("color", "#31b0d5");
+        $(this).css("color", "#ad5b97");
         $(this).css("font-weight", "700");
     });
     $(this).find("em").each(function () {
         $(this).css("height", "2px");
-        $(this).css("background-color", "#31b0d5");
+        $(this).css("background-color", "#ad5b97");
     });
     LoadDivInfo(this.id, obj.data.PageIndex);
 }
@@ -51,7 +51,7 @@ function SZMXSpanActive(obj) {
     var id = this.id;
     $("#div_main_info_head_" + obj.data.id).find(".span_main_info_right").each(function () {
         $(this).css("background-color", "#ffffff");
-        $(this).css("color", "#31b0d5");
+        $(this).css("color", "#ad5b97");
         $(this).off('mouseenter').unbind('mouseleave');
         if (this.id !== id)
             $(this).hover(function () {
@@ -59,10 +59,10 @@ function SZMXSpanActive(obj) {
                 $(this).css("color", "#ff6100");
             }, function () {
                 $(this).css("background-color", "#ffffff");
-                $(this).css("color", "#31b0d5");
+                $(this).css("color", "#ad5b97");
             });
     });
-    $(this).css("background-color", "#31b0d5");
+    $(this).css("background-color", "#ad5b97");
     $(this).css("color", "#ffffff");
     LoadSZMX(obj.data.PageIndex);
 }
@@ -71,7 +71,7 @@ function DJJDJLSpanActive(obj) {
     var id = this.id;
     $("#div_main_info_head_djjd_" + obj.data.id).find(".span_main_info_right").each(function () {
         $(this).css("background-color", "#ffffff");
-        $(this).css("color", "#31b0d5");
+        $(this).css("color", "#ad5b97");
         $(this).off('mouseenter').unbind('mouseleave');
         if (this.id !== id)
             $(this).hover(function () {
@@ -79,17 +79,17 @@ function DJJDJLSpanActive(obj) {
                 $(this).css("color", "#ff6100");
             }, function () {
                 $(this).css("background-color", "#ffffff");
-                $(this).css("color", "#31b0d5");
+                $(this).css("color", "#ad5b97");
             });
     });
-    $(this).css("background-color", "#31b0d5");
+    $(this).css("background-color", "#ad5b97");
     $(this).css("color", "#ffffff");
     LoadDJJDJL(obj.data.PageIndex);
 }
 
 function LoadDefault(PageIndex) {
-    $("#span_main_info_right_lxqb").css("background-color", "#31b0d5").css("color", "#fff");
-    $("#span_main_info_right_zjlxqb").css("background-color", "#31b0d5").css("color", "#fff");
+    $("#span_main_info_right_lxqb").css("background-color", "#ad5b97").css("color", "#fff");
+    $("#span_main_info_right_zjlxqb").css("background-color", "#ad5b97").css("color", "#fff");
     LoadDivInfo("divSZMX", PageIndex);
 }
 

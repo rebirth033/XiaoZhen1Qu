@@ -87,7 +87,7 @@
     width: 400px;
     height: 35px;
     cursor: pointer;
-    background: #ad5b97;
+    background: #bc6ba6;
     z-index: 102;
     color: #fff;
     border-radius: 4px;
@@ -97,7 +97,7 @@
 }
 
     .input_bottom:hover {
-        background-color: #31b0d5;
+        background-color: #ad5b97;
     }
 
 .Info {

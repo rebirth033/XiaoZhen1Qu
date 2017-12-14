@@ -1,8 +1,8 @@
 ﻿var currentIndex = 1;
 $(document).ready(function () {
-    $("#spanZJFBXX").css("color", "#ad5b97");
+    $("#spanZJFBXX").css("color", "#bc6ba6");
     $("#spanZJFBXX").css("font-weight", "700");
-    $("#emZJFBXX").css("background-color", "#ad5b97");
+    $("#emZJFBXX").css("background-color", "#bc6ba6");
     $("#emZJFBXX").css("height", "2px");
     $(".divstep").bind("click", HeadActive);
     LoadDefault("divZJFBXX", currentIndex);
@@ -20,12 +20,12 @@ function HeadActive() {
         });
     });
     $(this).find("span").each(function () {
-        $(this).css("color", "#ad5b97");
+        $(this).css("color", "#bc6ba6");
         $(this).css("font-weight", "700");
     });
     $(this).find("em").each(function () {
         $(this).css("height", "2px");
-        $(this).css("background-color", "#ad5b97");
+        $(this).css("background-color", "#bc6ba6");
     });
     LoadDefault($(this)[0].id, currentIndex);
 }

@@ -142,33 +142,33 @@ function InfoLSJY() {
     $("#divLSJYTip").css("display", "block");
     $("#divLSJYTip").attr("class", "Info");
     $("#divLSJYTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />不超过30字，不能填写电话、QQ、邮箱等联系方式或特殊符号');
-    $("#spanLSJY").css("border-color", "#ad5b97");
+    $("#spanLSJY").css("border-color", "#bc6ba6");
 }
 //提示地段
 function InfoDD() {
     $("#divDDTip").css("display", "block");
     $("#divDDTip").attr("class", "Info");
     $("#divDDTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />不超过30字，不能填写电话、QQ、邮箱等联系方式或特殊符号');
-    $("#spanDD").css("border-color", "#ad5b97");
+    $("#spanDD").css("border-color", "#bc6ba6");
 }
 //提示租金
 function InfoZJ() {
     $("#divZJTip").css("display", "block");
     $("#divZJTip").attr("class", "Info");
     $("#divZJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />请填写整数，默认为面议');
-    $("#spanZJ").css("border-color", "#ad5b97");
+    $("#spanZJ").css("border-color", "#bc6ba6");
 }
 //提示售价
 function InfoSJ() {
     $("#divSJTip").css("display", "block");
     $("#divSJTip").attr("class", "Info");
     $("#divSJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />请填写整数，默认为面议');
-    $("#spanSJ").css("border-color", "#ad5b97");
+    $("#spanSJ").css("border-color", "#bc6ba6");
 }
 //提示面积
 function InfoMJ() {
     $("#divMJTip").css("display", "block");
     $("#divMJTip").attr("class", "Info");
     $("#divMJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />请填写整数，默认为面议');
-    $("#spanMJ").css("border-color", "#ad5b97");
+    $("#spanMJ").css("border-color", "#bc6ba6");
 }

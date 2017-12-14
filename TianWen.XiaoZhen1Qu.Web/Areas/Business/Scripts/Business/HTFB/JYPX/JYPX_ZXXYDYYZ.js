@@ -46,5 +46,5 @@ function InfoXF() {
     $("#divXFTip").css("display", "block");
     $("#divXFTip").attr("class", "Info");
     $("#divXFTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />请填写整数，默认为面议');
-    $("#spanXF").css("border-color", "#ad5b97");
+    $("#spanXF").css("border-color", "#bc6ba6");
 }

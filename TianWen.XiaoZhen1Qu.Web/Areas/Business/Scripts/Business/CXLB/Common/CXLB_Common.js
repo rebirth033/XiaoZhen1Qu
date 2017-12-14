@@ -57,7 +57,7 @@ function GetHeadNav() {
 }
 //绑定主体列表导航
 function BindBodyNav() {
-    $(".li_body_head:eq(0)").css("background-color", "#ad5b97").css("color", "#ffffff").css("border", "none");
+    $(".li_body_head:eq(0)").css("background-color", "#bc6ba6").css("color", "#ffffff").css("border", "none");
     $(".li_body_head").mouseover(function () {
         if ($(this).css("background-color") === "transparent")
             $(this).css("background-color", "#eaeaea");
@@ -70,7 +70,7 @@ function BindBodyNav() {
         $(".li_body_head").each(function () {
             $(this).css("border-top", "1px solid #cccccc").css("background-color", "transparent").css("border-left", "1px solid #cccccc").css("border-right", "1px solid #cccccc").css("color", "#999999");
         });
-        $(this).css("background-color", "#ad5b97").css("color", "#ffffff").css("border", "none");
+        $(this).css("background-color", "#bc6ba6").css("color", "#ffffff").css("border", "none");
     });
 }
 //列表排序绑定事件
@@ -86,7 +86,7 @@ function BindCXItem() {
             });
         });
         if ($(this).css("color") === "rgb(51, 51, 51)") {
-            $(this).css("color", "rgb(239, 97, 0)");
+            $(this).css("color", "rgb(188, 107, 166)");
             $(this).find("i").each(function () {
                 if ($(this).attr("class").indexOf("up") !== -1)
                     $(this).attr("class", "i_body_left_sort_down_orange");
@@ -101,7 +101,7 @@ function ShowSelectCondition(tbname) {
     $(".div_condition_select").css("display", "block");
     $("#ul_condition_select").html('<li class="li_condition_select_first">条件</li>');
     $(".li_condition_body").each(function () {
-        if ($(this).css("color") === "rgb(91, 192, 222)" && $(this).html() !== "全部") {
+        if ($(this).css("color") === "rgb(188, 107, 166)" && $(this).html() !== "全部") {
             $("#ul_condition_select").append('<li onclick="DeleteSelect(this,\'' + tbname + '\')" class="li_condition_select"><span>' + $(this).html() + '</span><em>×</em></li>');
         }
     });
@@ -125,7 +125,7 @@ function DeleteSelect(obj, tbname) {
 function GetCondition(type) {
     var value = "";
     $("#ul_condition_body_" + type).find(".li_condition_body").each(function () {
-        if ($(this).css("color") === 'rgb(91, 192, 222)')
+        if ($(this).css("color") === 'rgb(188, 107, 166)')
             value = $(this).html();
     });
     return value;
@@ -153,7 +153,7 @@ function GetNavCondition() {
 function HasCondition() {
     var condition = "";
     $(".li_condition_body").each(function () {
-        if (($(this).html() !== "不限" && $(this).html() !== "全部") && $(this).css("color") === "rgb(91, 192, 222)")
+        if (($(this).html() !== "不限" && $(this).html() !== "全部") && $(this).css("color") === "rgb(188, 107, 166)")
             condition += $(this).html();
     });
     return condition;

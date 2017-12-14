@@ -113,7 +113,7 @@
     width: 135px;
     height: 40px;
     cursor: pointer;
-    background: #ad5b97;
+    background: #bc6ba6;
     color: #fff;
     border-radius: 4px;
     border: none;
@@ -123,7 +123,7 @@
 }
 
     .input_content_ljzf:hover {
-        background: #31b0d5;
+        background: #ad5b97;
     }
 
 

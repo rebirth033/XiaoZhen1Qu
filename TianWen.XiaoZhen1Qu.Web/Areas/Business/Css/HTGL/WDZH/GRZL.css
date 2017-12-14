@@ -74,7 +74,7 @@
     padding-top: 10px;
     width: 135px;
     height: 40px;
-    background-color: #ad5b97;
+    background-color: #bc6ba6;
     position: relative;
     display: block;
     float: left;
@@ -89,7 +89,7 @@
     width: 135px;
     height: 40px;
     cursor: pointer;
-    background: #ad5b97;
+    background: #bc6ba6;
     display: none;
     z-index: 102;
     color: #fff;
@@ -99,7 +99,7 @@
 }
 
 .button_main_photo:hover {
-    background: #31b0d5;
+    background: #ad5b97;
 }
 
 .button_main_photo_upload {
@@ -236,6 +236,6 @@
 }
 
 .span_person_info_right {
-    color: #ad5b97;
+    color: #bc6ba6;
     cursor: pointer;
 }

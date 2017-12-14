@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
-    $("#spanSCXX").css("color", "#ad5b97");
+    $("#spanSCXX").css("color", "#bc6ba6");
     $("#spanSCXX").css("font-weight", "700");
-    $("#emSCXX").css("background-color", "#ad5b97");
+    $("#emSCXX").css("background-color", "#bc6ba6");
     $("#emSCXX").css("height", "2px");
     $(".divstep").bind("click", HeadActive);
     LoadDefault("divSCXX");
@@ -19,11 +19,11 @@ function HeadActive() {
         });
     });
     $(this).find("span").each(function () {
-        $(this).css("color", "#ad5b97");
+        $(this).css("color", "#bc6ba6");
         $(this).css("font-weight", "700");
     });
     $(this).find("em").each(function () {
-        $(this).css("background-color", "#ad5b97");
+        $(this).css("background-color", "#bc6ba6");
         $(this).css("height", "2px");
     });
     LoadDefault($(this)[0].id);

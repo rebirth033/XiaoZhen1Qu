@@ -52,5 +52,5 @@ function InfoCG() {
     $("#divCGTip").css("display", "block");
     $("#divCGTip").attr("class", "Info");
     $("#divCGTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />请填写场馆');
-    $("#CG").css("border-color", "#ad5b97");
+    $("#CG").css("border-color", "#bc6ba6");
 }

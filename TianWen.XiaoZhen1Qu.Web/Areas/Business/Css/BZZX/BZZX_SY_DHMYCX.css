@@ -96,7 +96,7 @@
     cursor: text;
     width: 100px;
     margin-left: 4px;
-    background-color: #31b0d5;
+    background-color: #ad5b97;
     color: #fff;
 }
 
@@ -270,12 +270,12 @@
 }
 
 .a_main_info_bottom_fy_current {
-    background-color: #ad5b97;
+    background-color: #bc6ba6;
     color: #ffffff;
 }
 
 .a_main_info_bottom_fy:hover {
-    background-color: #ad5b97;
+    background-color: #bc6ba6;
     text-decoration: none;
     color: #ffffff;
 }
@@ -293,7 +293,7 @@
 
 .span_main_info_bt {
     cursor: pointer;
-    color: #31b0d5;
+    color: #ad5b97;
 }
 
     .span_main_info_bt:hover {

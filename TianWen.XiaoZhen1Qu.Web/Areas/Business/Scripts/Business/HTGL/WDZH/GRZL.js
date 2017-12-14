@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
-    $("#spanSYWXTX").css("color", "#ad5b97");
+    $("#spanSYWXTX").css("color", "#bc6ba6");
     $("#spanSYWXTX").css("font-weight", "700");
-    $("#emSYWXTX").css("background-color", "#ad5b97");
+    $("#emSYWXTX").css("background-color", "#bc6ba6");
     $("#emSYWXTX").css("height", "2px");
     $("#btnTBWXTX").css("display", "block");
     $(".divstep").bind("click", HeadActive);
@@ -14,7 +14,7 @@
     $("#span_person_info_right_sj").bind("click", UpdateSJ);
     $("#img_person_info_yx").bind("click", UpdateYX);
     $("#span_person_info_right_yx").bind("click", UpdateYX);
-    $("#btnBDSC").bind("mouseover", function() { $("#div_button_main_photo_child").css("background-color", "#31b0d5") });
+    $("#btnBDSC").bind("mouseover", function() { $("#div_button_main_photo_child").css("background-color", "#ad5b97") });
     $("#btnBDSC").bind("mouseleave", function () { $("#div_button_main_photo_child").css("background-color", "#5bd0de") });
     LoadGRZL();
 });
@@ -32,12 +32,12 @@ function HeadActive() {
         });
     });
     $(this).find("span").each(function () {
-        $(this).css("color", "#ad5b97");
+        $(this).css("color", "#bc6ba6");
         $(this).css("font-weight", "700");
     });
     $(this).find("em").each(function () {
         $(this).css("height", "2px");
-        $(this).css("background-color", "#ad5b97");
+        $(this).css("background-color", "#bc6ba6");
     });
 }
 

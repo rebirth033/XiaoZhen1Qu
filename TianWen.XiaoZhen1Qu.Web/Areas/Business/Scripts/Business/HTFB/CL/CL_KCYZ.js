@@ -91,12 +91,12 @@ function InfoXSLC() {
     $("#divXSLCTip").css("display", "block");
     $("#divXSLCTip").attr("class", "Info");
     $("#divXSLCTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />请填写行驶里程');
-    $("#spanXSLC").css("border-color", "#ad5b97");
+    $("#spanXSLC").css("border-color", "#bc6ba6");
 }
 //看车地址
 function InfoKCDZ() {
     $("#divKCDZTip").css("display", "block");
     $("#divKCDZTip").attr("class", "Info");
     $("#divKCDZTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />请填写看车地址');
-    $("#KCDZ").css("border-color", "#ad5b97");
+    $("#KCDZ").css("border-color", "#bc6ba6");
 }
