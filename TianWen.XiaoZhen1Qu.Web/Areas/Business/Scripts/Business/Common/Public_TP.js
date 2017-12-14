@@ -10,8 +10,6 @@ function LeaveUploadCss() {
 function LoadPhotos(photos) {
     if (photos.length > 0) {
         $("#divFWZPValue").css("display", "block");
-        if (photos.length > 4)
-            $("#divLXRXX").css("margin-top", "300px");
         for (var i = 0; i < photos.length; i++) {
             if (i > 3)
                 $("#ulImgs2").append("<li draggable='true' class='li_img'><img id='ulImgs2_" + (i + 1) + "' src='" + photos[i].PHOTOURL + "' class='divImg' /><div class='div_toolbar_wrap'><div class='opacity'></div><div class='toolbar'><a class='edit'></a><a class='delete'></a></div></div></li>");

@@ -17,7 +17,7 @@
 .div_row {width: 900px;height: 60px;text-align: left;padding-top: 2px;font-size: 15px;margin-left: 10px;margin-bottom: 30px;position: relative;display: block;}
 .div_row_zp{width: 900px;height: 180px;text-align: left;padding-top: 2px;font-size: 15px;margin-left: 10px;margin-bottom: 20px;position: relative;display: block;}
 .div_row_zp_value{ height: auto;}
-.div_row_left {color: black;text-align: right;margin-left: 60px;display: inline;font-size: 16px;height: 170px; vertical-align: top;}
+.div_row_left {color: black;text-align: right;margin-left: 60px;display: inline;font-size: 16px;height: 170px;}
 .span_row_left_fwzp{width: 56px; display: inline-block;}
 .div_row_right {display: inline;margin-left: 30px;position: relative;font-size: 16px;}
 .div_row_right_bcms{ width: 594px; height: 240px; display: inline-block;}
@@ -50,7 +50,7 @@
 
 .li_select:hover {background: #ececec;color: #333333;}
 
-.input_spaninput {width: 120px;margin-top: 1px;border: none;height: 30px;text-align: center;color: #000000 !important;}
+.input_spaninput {width: 120px;margin-top: 1px;border: none;height: 30px;text-align: center;color: #333333 !important;}
 
 .span_spaninput {border: 2px solid #cccccc;display: inline-block;width: 160px;height: 40px;border-radius: 4px;font-size: 16px;}
 
