@@ -16,7 +16,26 @@ function FBXX() {
 //加载默认
 function LoadDefault() {
     LoadSY_ML();
-    //LoadZXFBXX();
+    LoadHeadSearch();
+    //LoadZXFBXX
+}
+//加载头部搜索栏关键字
+function LoadHeadSearch() {
+    $(".div_head_right_ss").append('<span class="span_head_right_ss">租房子</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss">二手车</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss">兼职</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss">装修服务</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss">旅游度假</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss">居民搬家</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss">演出表演</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss">运动健身</span>');
 }
 //最新发布列表
 function ZXFBLB() {

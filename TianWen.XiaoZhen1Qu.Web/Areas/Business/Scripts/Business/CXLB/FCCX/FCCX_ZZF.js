@@ -1,9 +1,9 @@
 ﻿var currentIndex = 1;
 $(document).ready(function () {
-    LoadHeadSearch();
     BindBodyNav();
     LoadFCCondition();
     LoadHot("FCXX_ZZF");
+    LoadHeadSearch();
 });
 //加载头部搜索栏关键字
 function LoadHeadSearch() {
