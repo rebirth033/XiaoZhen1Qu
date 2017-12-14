@@ -1,4 +1,5 @@
 ﻿$(document).ready(function () {
+    $(".div_body").css("margin-left", (document.documentElement.clientWidth - 900) / 2);
     $("#spanWCFB").css("color", "#bc6ba6");
     $("#emWCFB").css("background", "#bc6ba6");
     $("#btnGLXX").bind("click", ToHTGL);
@@ -13,7 +14,6 @@ function GenerateQRCode() {
         url: getRootPath() + "/Areas/Business/Ashx/GenerateQRCode.ashx",
         data:
         {
-            //FWCZID: getUrlParam("FWCZID"),
             qrdata: qrdata
         },
         success: function (filename) {

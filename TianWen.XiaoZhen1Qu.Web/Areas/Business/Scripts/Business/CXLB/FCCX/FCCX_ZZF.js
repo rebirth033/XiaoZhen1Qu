@@ -8,10 +8,15 @@ $(document).ready(function () {
 //加载头部搜索栏关键字
 function LoadHeadSearch() {
     $(".div_head_right_ss").append('<span class="span_head_right_ss">独立阳台</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
     $(".div_head_right_ss").append('<span class="span_head_right_ss">独立卫生间</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
     $(".div_head_right_ss").append('<span class="span_head_right_ss">邻近地铁</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
     $(".div_head_right_ss").append('<span class="span_head_right_ss">南北通透</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
     $(".div_head_right_ss").append('<span class="span_head_right_ss">精装修</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
     $(".div_head_right_ss").append('<span class="span_head_right_ss">支持月付</span>');
 }
 //加载房产查询条件

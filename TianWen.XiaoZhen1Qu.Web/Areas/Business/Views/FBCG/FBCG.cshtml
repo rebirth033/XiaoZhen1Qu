@@ -2,21 +2,14 @@
     ViewBag.Title = "发布成功";
     Layout = "~/Areas/Business/Views/Shared/QT.cshtml";
 }
-
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title></title>
-
+@section Section_Head {
     <link href="@Url.Content("~/Areas/Business/Css/Other/FBCG.css")" rel="stylesheet" />
     <link href="@Url.Content("~/Areas/Business/Scripts/jquery-ui-1.12.1.custom/jquery-ui.min.css")" rel="stylesheet" />
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/Other/FBCG.js")"></script>
-</head>
-<body style="width: 100%; height: 100%; font-family: 微软雅黑">
-    <div style="width: 1440px; text-align: center;">
-        <div id="divLBHead" style="margin-left: 18%; margin-top: 20px;">
+}
+@section Section_Body {
+    <div class="div_body" style="width: 900px;">
+        <div id="divLBHead" style="margin-top: 10px;">
             <table class="table_head" style="width: 100%; text-align: center;">
                 <tr>
                     <td class="headtd">
@@ -38,12 +31,12 @@
                 </tr>
             </table>
         </div>
-        <div id="myTabContent" style="margin-left: 18%; padding-bottom: 150px; width: 900px; text-align: center;">
-            <div style="border: 1px solid #e2e2e2; height: 300px; margin-left: 8px; width: 100%;">
+        <div id="myTabContent" style="padding-bottom: 150px; margin-top: 20px; width: 900px; text-align: center;">
+            <div style="border: 1px solid #e2e2e2; height: 300px; width: 100%;">
                 <div class="fbcg_left">
                     <div class="fbcg_warning">请勿发布虚假欺诈信息，不然将影响您的个人征信纪录哦～</div>
                     <div class="fbcg_tip">
-                        <img class="fbcg_tip_img" />发布成功!
+                        <img class="fbcg_tip_img"/>发布成功!
                     </div>
                     <div class="fbcg_info">
                         该信息已发布在 <a class="fbcg_info_navigation">福州 - 房产信息 - 租房</a>您的信息需要审核才能展示，请在个人中心关注信息状态。
@@ -60,7 +53,7 @@
                 </div>
                 <div class="fbcg_right">
                     <div class="fbcg_share">
-                        <img id="fbcg_share_img" class="fbcg_share_img" />
+                        <img id="fbcg_share_img" class="fbcg_share_img"/>
                     </div>
                     <div class="fbcg_sm">
                         扫码分享信息
@@ -72,5 +65,4 @@
             </div>
         </div>
     </div>
-</body>
-</html>
+}

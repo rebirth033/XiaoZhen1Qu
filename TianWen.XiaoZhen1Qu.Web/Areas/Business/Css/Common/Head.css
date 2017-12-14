@@ -14,7 +14,7 @@
 .div_head_right .div_head_right_ss .span_spaninput_out .span_spaninput_in {border: 2px solid #bc6ba6;display: inline-block;width: 500px;height: 40px;font-size: 14px;padding: 6px 12px;}
 .div_head_right .div_head_right_ss .span_head_right_ss {font-size: 14px;color: #999;cursor: pointer;margin-left: 4px;}
 .div_head_right .div_head_right_ss .span_head_right_ss:hover {color: #ad5b97;text-decoration: underline;}
-.div_head_right .div_head_right_ss .span_head_right_ss_split{ color: #999;}
+.div_head_right .div_head_right_ss .span_head_right_ss_split{ color: #999999;}
 .div_head_right .div_head_right_ss .span_spaninput_out .span_ss {width: 130px;font-family: "微软雅黑";height: 40px;background: #bc6ba6;float: right;display: inline-block;color: #fff;font-size: 18px;font-weight: 700;padding: 6px 46px;cursor: pointer;}
 .div_head_right .div_head_right_ss .span_spaninput_out .span_ss:hover {background: #ad5b97;}
 .div_head_right .span_fbxx {width: 180px;font-family: "微软雅黑";border: 1px solid #bc6ba6;height: 40px;background: #bc6ba6;float: left;display: inline-block;color: #fff;font-size: 16px;padding-top: 6px;text-align: center;cursor: pointer;margin-top: 10px;margin-left: 60px;}

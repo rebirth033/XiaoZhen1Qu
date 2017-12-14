@@ -7,7 +7,6 @@ $(document).ready(function () {
     $(".div_bottom").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
     $(".img_head_left_logo").css("margin-left", "20px");
     $("#li_head_sy").css("background", "#bc6ba6").css("color", "#ffffff");
-
     LoadDefault();
 });
 //发布信息
