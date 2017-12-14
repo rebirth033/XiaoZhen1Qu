@@ -533,22 +533,22 @@ insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CO
 values (1101, null, '房屋买卖', 2, 1, 'XL', 'FC', null, null, '房产', null);
 
 insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (9503, 13, '南北通透', 3, 11, null, 'FC', null, null, '房产', '/FCCX/FCCX_ZZF');
+values (9503, 13, '南北通透', 6, 11, null, 'FC', 'FWLD=61', null, '房产', '/FCCX/FCCX_ZZF');
 
 insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (9502, 13, '紧邻地铁', 2, 11, null, 'FC', null, null, '房产', '/FCCX/FCCX_ZZF');
+values (9502, 13, '紧邻地铁', 5, 11, null, 'FC', 'FWLD=60', null, '房产', '/FCCX/FCCX_ZZF');
 
 insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (9501, 13, '配套齐全', 1, 11, null, 'FC', null, null, '房产', '/FCCX/FCCX_ZZF');
+values (9501, 13, '配套齐全', 4, 11, null, 'FC', 'FWLD=121', null, '房产', '/FCCX/FCCX_ZZF');
 
 insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (9504, 13, '独立卫生间', 4, 11, null, 'FC', null, null, '房产', '/FCCX/FCCX_ZZF');
+values (9504, 13, '独立卫生间', 7, 11, null, 'FC', 'FWLD=独立卫生间', null, '房产', '/FCCX/FCCX_ZZF');
 
 insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (9702, 16, '紧邻地铁', 4, 1101, null, 'FC', null, null, null, '/FCCX/FCCX_ESF');
+values (9702, 16, '紧邻地铁', 4, 1101, null, 'FC', 'FWLD=紧邻地铁', null, null, '/FCCX/FCCX_ESF');
 
 insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
-values (9701, 16, '配套完善', 3, 1101, null, 'FC', null, null, null, '/FCCX/FCCX_ESF');
+values (9701, 16, '配套完善', 3, 1101, null, 'FC', 'FWLD=配套完善', null, null, '/FCCX/FCCX_ESF');
 
 insert into codes_sy_ml (ID, LBID, LBNAME, LBORDER, PARENTID, TYPE, TYPENAME, CONDITION, ISHOT, TYPESHOWNAME, LBURL)
 values (192, 172, '搬家服务', 1, 25, null, 'SHFW', null, null, '生活服务', '/SHFWCX/SHFWCX_BJ');
