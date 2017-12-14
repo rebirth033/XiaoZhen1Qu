@@ -7,7 +7,7 @@
 .div_nav .ul_nav .li_nav_split{ float: left;margin-left: 10px;margin-right: 10px;}
 
 /*首页_头部_查询条件*/
-.div_condition{background-color: #ffffff;display: block;width: 1200px;height: auto;border: 1px solid #cccccc;}
+.div_condition{background-color: #ffffff;display: block;width: 1200px;height: 140px;overflow: hidden;border: 1px solid #cccccc;}
 .div_condition .ul_condition_head{display: block;width: 100%;height: 40px;padding: 0;}
 .div_condition .ul_condition_head .li_condition_head{display: inline-block;float: left;text-align: center;color: #999999;font-size: 16px;width: 100px;height: 40px;padding: 8px 10px;background-color: #eeeff1;cursor: pointer;}
 .div_condition .div_condition_body{ width: 100%;height: auto;}
@@ -20,6 +20,9 @@
 .div_condition .div_condition_body .ul_condition_body .span_zj{ font-size: 12px;}
 .div_condition .div_condition_body .ul_condition_body .input_sj{ width: 60px;margin-right: 5px;}
 .div_condition .div_condition_body .ul_condition_body .span_sj{ font-size: 12px;}
+.div_condition_toggle{ width: 1200px;height: 30px;}
+.div_condition_toggle .span_condition_toggle{ color: #bc6ba6;width: 80px;height: 30px;background-color: transparent;display: inline-block;float: right;cursor: pointer;}
+.div_condition_toggle .span_condition_toggle .i_condition_tottle{width: 12px;height: 12px;display: inline-block;background-image: url(../images/head_nav_down1.png);margin-left: 5px;}
 .div_condition_select{background-color: #ffffff;display: none;width: 1200px;height: 40px;border-bottom: 1px solid #cccccc;border-right: 1px solid #cccccc;border-left: 1px solid #cccccc;padding-top: 8px;}
 .div_condition_select .ul_condition_select{display: block;width: 100%;height: 40px;padding: 0;}
 .div_condition_select .ul_condition_select .li_condition_select_first{ font-weight: 700;color: #999999;float: left;font-size: 14px;display: inline-block;width: 80px;height: 100%;padding-left: 20px;}
@@ -28,7 +31,7 @@
 .div_condition_select .ul_condition_select .li_condition_select em{ margin-left: 10px;color: #999999;}
 
 /*首页_主体_头部*/
-.div_body{display: block;width: 1200px;height: 2000px;margin-top: 20px;background-color: #ffffff;padding-top: 2px;}
+.div_body{display: block;width: 1200px;height: 2000px;background-color: #ffffff;padding-top: 2px;}
 .div_body .ul_body_head {height: 40px;display: block;padding: 0;width: 100%;border-bottom: 1.5px solid #bc6ba6;}
 .div_body .ul_body_head .li_body_head {text-align: center;color: #999999;height: 38px;border-top-left-radius: 2px;border-top-right-radius: 2px;font-size: 16px;float: left;display: inline-block;padding: 6px 20px;border-top: 1px solid #cccccc;border-left: 1px solid #cccccc;border-right: 1px solid #cccccc;margin-left: 10px;}
 .div_body .ul_body_head .li_body_head:hover{ cursor: pointer;}

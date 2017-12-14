@@ -3,11 +3,13 @@
     $(".div_top_right").css("margin-right", (document.documentElement.clientWidth - 1200) / 2);
     $(".div_nav").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
     $(".div_condition").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
+    $(".div_condition_toggle").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
     $(".div_condition_select").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
     $(".div_body").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
     $(".div_bottom").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
     $("#li_condition_head_qyzf").css("background-color", "#ffffff");
     $("#span_fbxx").bind("click", FBXX);
+    $("#span_condition_toggle").bind("click", ToggleCondition);
     $("#div_condition_body").html('');
     GetHeadNav();
     BindCXItem();
@@ -76,7 +78,7 @@ function BindBodyNav() {
 //列表排序绑定事件
 function BindCXItem() {
     $(".li_body_head_sort_item").bind("click", function () {
-        $(".li_body_head_sort_item").each(function() {
+        $(".li_body_head_sort_item").each(function () {
             $(this).css("color", "rgb(51, 51, 51)");
             $(this).find("i").each(function () {
                 if ($(this).attr("class").indexOf("up") !== -1)
@@ -157,6 +159,19 @@ function HasCondition() {
             condition += $(this).html();
     });
     return condition;
+}
+//展开收缩条件
+function ToggleCondition() {
+    if ($("#span_condition_toggle").html().indexOf("更多") !== -1) {
+        $(".div_condition").css("height", "auto").css("overflow", "visible");
+        $("#span_condition_toggle").html($("#span_condition_toggle").html().replace("更多", "精简"));
+        $("#i_condition_tottle").css("background-image", "url(" + getRootPath() + "/areas/business/css/images/head_nav_up.png)");
+    }
+    else {
+        $(".div_condition").css("height", "140px").css("overflow", "hidden");
+        $("#span_condition_toggle").html($("#span_condition_toggle").html().replace("精简", "更多"));
+        $("#i_condition_tottle").css("background-image", "url(" + getRootPath() + "/areas/business/css/images/head_nav_down1.png)");
+    }
 }
 //加载分页
 function LoadPage(typename, pagecount) {
