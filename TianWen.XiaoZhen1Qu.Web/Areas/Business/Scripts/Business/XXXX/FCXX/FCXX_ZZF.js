@@ -200,7 +200,7 @@ function LoadXQXX(obj) {
     html += ('</ul>');
     html += ('<div id="div_body_left_body_xqxx_dtxx" class="div_body_left_body_xqxx_dtxx">');
     html += ('<p class="p_body_left_body_xqxx_dtxx">小区地址</p>');
-    html += ('<div style="width: 780px; height: 300px; border: 1px solid gray" id="container"></div>');
+    html += ('<div style="width: 820px; height: 340px; border: 1px solid gray" id="container"></div>');
     html += ('</div>');
     html += ('</div>');
     $("#div_body_left").append(html);
