@@ -1,5 +1,4 @@
 ﻿@{
-    ViewBag.Title = "FC_XZL";
     Layout = "~/Areas/Business/Views/Shared/HTFB.cshtml";
 }
 @section Section_Head {
@@ -14,7 +13,7 @@
             <em class="em_split"></em>
         </div>
         <div id="divGQ" class="div_row">
-            <div class="div_row_left" style="margin-left: 128px;">
+            <div class="div_row_left font_two">
                 <span class="span_required">*</span>
                 <span class="spanFWCZ">供求</span>
             </div>
@@ -29,7 +28,7 @@
             <div id="divGQTip" class="Warn" style="z-index: 996; position: relative;"></div>
         </div>
         <div id="divXZLLX" class="div_row" style="z-index: 999">
-            <div class="div_row_left" style="margin-left: 128px;">
+            <div class="div_row_left font_two">
                 <span class="span_required">*</span>
                 <span class="spanFWCZ">类型</span>
             </div>
@@ -44,7 +43,7 @@
             <div id="divXZLLXTip" class="Warn" style="z-index: 996; position: relative;"></div>
         </div>
         <div id="divKZCGS" class="div_row" style="z-index: 998">
-            <div class="div_row_left" style="margin-left: 86px;">
+            <div class="div_row_left font_five">
                 <span class="span_required">*</span>
                 <span class="spanFWCZ">可注册公司</span>
             </div>
@@ -63,19 +62,17 @@
             <em class="em_split"></em>
         </div>
         <div id="divLPMC" class="div_row" style="z-index: 998;">
-            <div class="div_row_left" style="margin-left: 102px;">
+            <div class="div_row_left">
                 <span class="span_required">*</span>
                 <span class="spanFWCZ">楼盘名称</span>
             </div>
             <div class="div_row_right">
-                <span id="spanLPMC" class="span_spaninput SRK" style="display: inline-block; width: 322px;">
-                    <input id="LPMC" maxlength="50" column="LPMC" class="input_spaninput spaninput_fontcolor" type="text" style="width: 320px; text-align: left; padding-left: 12px;" />
-                </span>
+                <input id="LPMC" maxlength="50" column="LPMC" class="input_input spaninput_fontcolor" type="text" style="width: 590px;" />
                 <div id="divLPMCTip" class="Warn" style="z-index: 996; position: relative;"></div>
             </div>
         </div>
         <div id="divZJ" class="div_row" style="z-index: 998">
-            <div class="div_row_left" style="margin-left: 128px;">
+            <div class="div_row_left font_two">
                 <span class="span_required">*</span>
                 <span class="spanFWCZ">租金</span>
             </div>
@@ -96,7 +93,7 @@
             </div>
         </div>
         <div id="divSJ" class="div_row" style="z-index: 995; display: none;">
-            <div class="div_row_left" style="margin-left: 128px;">
+            <div class="div_row_left font_two">
                 <span class="span_required">*</span>
                 <span class="spanFWCZ">售价</span>
             </div>
@@ -109,7 +106,7 @@
             <div id="divSJTip" class="Warn" style="z-index: 994; position: relative;"></div>
         </div>
         <div id="divMJ" class="div_row" style="z-index: 993;">
-            <div class="div_row_left" style="margin-left: 128px;">
+            <div class="div_row_left font_two">
                 <span class="span_required">*</span>
                 <span class="spanFWCZ">面积</span>
             </div>
@@ -122,7 +119,7 @@
             <div id="divMJTip" class="Warn" style="z-index: 992; position: relative;"></div>
         </div>
         <div id="divWYF" class="div_row" style="z-index: 991;">
-            <div class="div_row_left" style="margin-left: 114px;">
+            <div class="div_row_left font_three">
                 <span class="span_required">&nbsp;</span>
                 <span class="spanFWCZ">物业费</span>
             </div>
@@ -157,7 +154,7 @@
             <div id="divQYNXTip" class="Warn" style="z-index: 986; position: relative;"></div>
         </div>
         <div id="divSZQY" class="div_row" style="z-index: 985;">
-            <div class="div_row_left" style="margin-left: 102px;">
+            <div class="div_row_left">
                 <span class="span_required">*</span>
                 <span class="spanFWCZ">详细地址</span>
             </div>
@@ -188,7 +185,7 @@
             <em class="em_split"></em>
         </div>
         <div id="divFYBT" class="div_row" style="margin-top: 22px;">
-            <div class="div_row_left" style="margin-left: 128px;">
+            <div class="div_row_left font_two">
                 <span class="span_required">*</span>
                 <span id="spanFYBT">标题</span>
             </div>
@@ -226,19 +223,33 @@
             </div>
         </div>
         <div id="divFWZPValue" class="div_row_zp" style="display: none;">
-            <div class="div_row_left" style="height: 170px; vertical-align: top;">
+            <div class="div_row_left">
                 <span class="span_required"></span>
-                <span id="spanFWZP" style="width: 56px; display: inline-block;"></span>
+                <span class="span_row_left_fwzp"></span>
             </div>
-            <div id="divImgs1" class="div_row_right" style="display: inline-block; width: 670px;">
-                <ul id="ulImgs1" class="ulImgs" style="padding-left: 0px;"></ul>
+            <div id="divImgs1" class="div_row_right div_row_right_zp">
+                <ul id="ulImgs1" class="ulImgs"></ul>
             </div>
-            <div class="div_row_left" style="height: 170px; vertical-align: top;">
+            <div class="div_row_left">
                 <span class="span_required"></span>
-                <span id="spanFWZP" style="width: 56px; display: inline-block;"></span>
+                <span class="span_row_left_fwzp"></span>
             </div>
-            <div id="divImgs2" class="div_row_right" style="display: inline-block; width: 670px;">
-                <ul id="ulImgs2" class="ulImgs" style="padding-left: 0px;"></ul>
+            <div id="divImgs2" class="div_row_right div_row_right_zp">
+                <ul id="ulImgs2" class="ulImgs"></ul>
+            </div>
+            <div class="div_row_left">
+                <span class="span_required"></span>
+                <span class="span_row_left_fwzp"></span>
+            </div>
+            <div id="divImgs3" class="div_row_right div_row_right_zp">
+                <ul id="ulImgs3" class="ulImgs"></ul>
+            </div>
+            <div class="div_row_left">
+                <span class="span_required"></span>
+                <span class="span_row_left_fwzp"></span>
+            </div>
+            <div id="divImgs4" class="div_row_right div_row_right_zp">
+                <ul id="ulImgs4" class="ulImgs"></ul>
             </div>
         </div>
         <div id="divLXRXX" class="div_split" style="display: block; text-align: left;">
@@ -246,7 +257,7 @@
             <em class="em_split"></em>
         </div>
         <div id="divLXR" class="div_row" style="z-index: 993">
-            <div class="div_row_left" style="margin-left: 114px;">
+            <div class="div_row_left font_three">
                 <span class="span_required">*</span>
                 <span id="spanLXDH">联系人</span>
             </div>
@@ -266,9 +277,9 @@
             </div>
         </div>
         <div id="divQQ" class="div_row" style="margin-top: -12px;" style="z-index: 993">
-            <div class="div_row_left" style="margin-left: 133px;">
+            <div class="div_row_left font_three">
                 <span class="span_required"></span>
-                <span id="spanQQ">QQ</span>
+                <span id="spanQQ">微信号</span>
             </div>
             <div class="div_row_right">
                 <input column="QQ" class="input_input SRK" type="text" placeholder="请输入微信号" />
