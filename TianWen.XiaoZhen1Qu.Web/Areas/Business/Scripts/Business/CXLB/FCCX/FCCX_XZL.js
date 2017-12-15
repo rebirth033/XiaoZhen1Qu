@@ -11,12 +11,14 @@ function LoadCZCondition() {
     RemoveCondition("XZLLX,QY,ZJ,SJ,MJ");
     LoadConditionByTypeNames("'写字楼类型','商铺租金','写字楼面积'", "CODES_FC", "类型,租金,面积", "XZLLX,ZJ,MJ", "15,15,15");
     LoadBody("FCXX_XZL", currentIndex);
+    LoadHot("FCXX_XZL");
 }
 //加载出售查询条件
 function LoadCSCondition() {
     RemoveCondition("XZLLX,QY,ZJ,SJ,MJ");
     LoadConditionByTypeNames("'写字楼类型','商铺售价','写字楼面积'", "CODES_FC", "类型,售价,面积", "XZLLX,SJ,MJ", "15,15,15");
     LoadBody("FCXX_XZL", currentIndex);
+    LoadHot("FCXX_XZL");
 }
 //绑定查询条件导航
 function BindConditionNav(type) {
@@ -130,7 +132,7 @@ function LoadHot(TYPE) {
         data:
         {
             TYPE: TYPE,
-            Condition: "STATUS:1",
+            Condition: "STATUS:1,GQ:" + GetNavCondition(),
             PageSize: 5,
             PageIndex: 1
         },
@@ -147,14 +149,14 @@ function LoadHot(TYPE) {
         }
     });
 }
-//加载热门单条信息
+//加载热门出租单条信息
 function LoadHotInfo(obj) {
     var html = "";
     html += ('<li onclick="OpenXXXX(\'FCXX_XZL\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_right_xq">' + TruncStr((obj.QY + ' / ' + obj.DD + ' / ' + obj.JTDZ), 15) + '</p>');
     html += ('<p class="p_li_body_right_cs">' + obj.MJ + '平米</p>');
-    html += ('<p class="p_li_body_right_jg">' + obj.ZJ + '元/月</p>');
+    html += ('<p class="p_li_body_right_jg">' + (GetNavCondition() === "出租" ? obj.ZJ : obj.SJ) + obj.ZJDW + '</p>');
     html += ('</li>');
     $("#ul_body_right").append(html);
 }

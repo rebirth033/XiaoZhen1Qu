@@ -124,7 +124,7 @@ function ValidateInput(id, value, outid) {
 function ValidateRadio(id, message) {
     var bool = false;
     $("#div" + id).find("img").each(function () {
-        if ($(this).attr("src").indexOf("blue") !== -1) {
+        if ($(this).attr("src").indexOf("purple") !== -1) {
             $("#div" + id + "Tip").css("display", "none");
             bool = true;
         }
@@ -140,7 +140,7 @@ function ValidateRadio(id, message) {
 function ValidateCheck(id, message) {
     var bool = false;
     $("#div" + id).find("img").each(function () {
-        if ($(this).attr("src").indexOf("blue") !== -1) {
+        if ($(this).attr("src").indexOf("purple") !== -1) {
             $("#div" + id + "Tip").css("display", "none");
             bool = true;
         }

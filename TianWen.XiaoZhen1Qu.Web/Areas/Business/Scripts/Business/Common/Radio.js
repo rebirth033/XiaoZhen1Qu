@@ -4,14 +4,14 @@ function RadioSelect() {
         $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
     });
     $(this).find(".img_radio").each(function () {
-        $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+        $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/radio_purple.png");
     });
 }
 //获取单选
 function GetDX(type) {
     var value = "";
     $("#div" + type).find("img").each(function () {
-        if ($(this).attr("src").indexOf("blue") !== -1)
+        if ($(this).attr("src").indexOf("purple") !== -1)
             value = $(this).parent().find("label")[0].innerHTML;
     });
     return value;
@@ -21,7 +21,7 @@ function SetDX(type, value) {
     $("#div" + type).find("label").each(function () {
         if ($(this)[0].innerHTML === value)
             $(this).parent().find("img").each(function () {
-                $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+                $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/radio_purple.png");
             });
     });
 }

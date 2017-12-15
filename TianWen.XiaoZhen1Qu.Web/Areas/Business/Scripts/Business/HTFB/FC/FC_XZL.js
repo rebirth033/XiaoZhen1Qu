@@ -1,6 +1,5 @@
 ﻿$(document).ready(function () {
     $("#divGQ").find(".div_radio").bind("click", GetGQ);
-
     LoadFC_XZLJBXX();
     BindClick("YFFS");
 });
@@ -39,7 +38,7 @@ function SetGQ(gq) {
 function GetGQ() {
     var value = "";
     $("#divGQ").find("img").each(function () {
-        if ($(this).attr("src").indexOf("blue") !== -1)
+        if ($(this).attr("src").indexOf("purple") !== -1)
             value = $(this).parent().find("label")[0].innerHTML;
     });
     if (value !== "出售") {
@@ -102,10 +101,13 @@ function FB() {
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
-    obj = jsonObj.AddJson(obj, "ZJDW", "'" + $("#spanZJDW").html() + "'");
     obj = jsonObj.AddJson(obj, "YFFS", "'" + $("#spanYFFS").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
+    if (GetDX("GQ") === "出租")
+        obj = jsonObj.AddJson(obj, "ZJDW", "'元/月'");
+    if (GetDX("GQ") === "出售")
+        obj = jsonObj.AddJson(obj, "ZJDW", "'万元'");
     obj = jsonObj.AddJson(obj, "XZLLX", "'" + GetDX("XZLLX") + "'");
     obj = jsonObj.AddJson(obj, "KZCGS", "'" + GetDX("KZCGS") + "'");
 

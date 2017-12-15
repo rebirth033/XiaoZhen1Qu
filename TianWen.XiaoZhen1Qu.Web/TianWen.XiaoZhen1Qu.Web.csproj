@@ -229,6 +229,7 @@
     <Content Include="Areas\Business\Css\images\info_blue.png" />
     <Content Include="Areas\Business\Css\images\logo_purple.png" />
     <Content Include="Areas\Business\Css\images\lxdh.png" />
+    <Content Include="Areas\Business\Css\images\radio_purple.png" />
     <Content Include="Areas\Business\Css\images\SY\BMFW\sy_bmfw_kdcx.png" />
     <Content Include="Areas\Business\Css\images\SY\TBDH\body_top_cl2.png" />
     <Content Include="Areas\Business\Css\images\SY\TBDH\body_top_cl3.png" />

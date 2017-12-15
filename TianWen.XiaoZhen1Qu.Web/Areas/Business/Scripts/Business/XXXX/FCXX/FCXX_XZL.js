@@ -17,9 +17,8 @@ function LoadDefault() {
             if (xml.Result === 1) {
                 LoadJBXX(xml.list[0]);
                 LoadXQ(xml.list[0], xml.BCMSString);
-                LoadCNXH("FCXX_XZL");
-                LoadGRXX(xml.grxxlist[0]);
-                LoadJJRTJFY("FCXX_XZL");
+                LoadCNXH("FCXX_XZL", xml.list[0].GQ);
+                LoadJJRTJFY("FCXX_XZL", xml.list[0].GQ);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -52,7 +51,7 @@ function LoadJBXX(obj) {
     html += ('</div>');
     html += ('<div class="div_body_left_body_right">');
     html += ('<p class="p_body_left_body_right_first">');
-    html += ('<span class="span_body_left_body_right_zj">' + obj.ZJ + '</span><span class="span_body_left_body_right_zjdw">元/月</span>');
+    html += ('<span class="span_body_left_body_right_zj">' + (obj.GQ === "出租" ? obj.ZJ : obj.SJ) + '</span><span class="span_body_left_body_right_zjdw">' + obj.ZJDW + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">押付方式：</span>');
@@ -66,10 +65,12 @@ function LoadJBXX(obj) {
     html += ('<span class="span_body_left_body_right_left">物业费：</span>');
     html += ('<span class="span_body_left_body_right_right">' + obj.WYF + '元/㎡</span>');
     html += ('</p>');
-    html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">签约年限：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.QYNX + '</span>');
-    html += ('</p>');
+    if (obj.GQ === "出租") {
+        html += ('<p class="p_body_left_body_right">');
+        html += ('<span class="span_body_left_body_right_left">签约年限：</span>');
+        html += ('<span class="span_body_left_body_right_right">' + obj.QYNX + '</span>');
+        html += ('</p>');
+    }
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">面积：</span>');
     html += ('<span class="span_body_left_body_right_right">' + obj.MJ + '平米</span>');
@@ -117,7 +118,7 @@ function LoadXQ(obj, BCMSString) {
     }
 }
 //加载猜你喜欢
-function LoadCNXH(TYPE) {
+function LoadCNXH(TYPE, GQ) {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/FCCX/LoadFCXX",
@@ -125,7 +126,7 @@ function LoadCNXH(TYPE) {
         data:
         {
             TYPE: TYPE,
-            Condition: "STATUS:1",
+            Condition: "STATUS:1,GQ:" + GQ,
             PageSize: 4,
             PageIndex: 1
         },
@@ -136,12 +137,12 @@ function LoadCNXH(TYPE) {
                 html += ('<p class="p_body_left_body_cnxh">猜你喜欢</p>');
                 html += ('<ul id="ul_body_left_body_cnxh" class="ul_body_left_body_cnxh">');
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += LoadCNXHInfo(xml.list[i]);
+                    html += LoadCNXHInfo(xml.list[i], GQ);
                 }
                 html += ('</ul>');
                 html += ('</div>');
                 $("#div_body_left").append(html);
-                LoadJPTJ("FCXX_XZL");
+                LoadJPTJ("FCXX_XZL", GQ);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -150,18 +151,18 @@ function LoadCNXH(TYPE) {
     });
 }
 //加载猜你喜欢单条信息
-function LoadCNXHInfo(obj) {
+function LoadCNXHInfo(obj, GQ) {
     var html = "";
     html += ('<li onclick="OpenXXXX(\'FCXX_XZL\',\'' + obj.ID + '\')" class="li_body_left_body_cnxh">');
     html += ('<img class="img_li_body_left_body_cnxh" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_left_body_cnxh_xq">' + obj.QY + ' / ' + obj.DD + ' / ' + obj.JTDZ + '</p>');
+    html += ('<p class="p_li_body_left_body_cnxh_xq">' + obj.JTDZ + '</p>');
     html += ('<p class="p_li_body_left_body_cnxh_cs">' + obj.MJ + '平米</p>');
-    html += ('<p class="p_li_body_left_body_cnxh_jg">' + obj.ZJ + obj.ZJDW + '</p>');
+    html += ('<p class="p_li_body_left_body_cnxh_jg">' + (GQ === "出租" ? obj.ZJ : obj.SJ) + obj.ZJDW + '</p>');
     html += ('</li>');
     return html;
 }
 //加载精品推荐
-function LoadJPTJ(TYPE) {
+function LoadJPTJ(TYPE, GQ) {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/FCCX/LoadFCXX",
@@ -169,7 +170,7 @@ function LoadJPTJ(TYPE) {
         data:
         {
             TYPE: TYPE,
-            Condition: "STATUS:1",
+            Condition: "STATUS:1,GQ:" + GQ,
             PageSize: 4,
             PageIndex: 1
         },
@@ -180,7 +181,7 @@ function LoadJPTJ(TYPE) {
                 html += ('<p class="p_body_left_body_jptj">精品推荐</p>');
                 html += ('<ul id="ul_body_left_body_jptj" class="ul_body_left_body_jptj">');
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += LoadJPTJInfo(xml.list[i]);
+                    html += LoadJPTJInfo(xml.list[i], GQ);
                 }
                 html += ('</ul>');
                 html += ('</div>');
@@ -193,18 +194,18 @@ function LoadJPTJ(TYPE) {
     });
 }
 //加载精品推荐单条信息
-function LoadJPTJInfo(obj) {
+function LoadJPTJInfo(obj, GQ) {
     var html = "";
     html += ('<li onclick="OpenXXXX(\'FCXX_XZL\',\'' + obj.ID + '\')" class="li_body_left_body_jptj">');
     html += ('<img class="img_li_body_left_body_jptj" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_left_body_jptj_xq">' + obj.QY + ' / ' + obj.DD + ' / ' + obj.JTDZ + '</p>');
+    html += ('<p class="p_li_body_left_body_jptj_xq">' + obj.JTDZ + '</p>');
     html += ('<p class="p_li_body_left_body_jptj_cs">' + obj.MJ + '平米</p>');
-    html += ('<p class="p_li_body_left_body_jptj_jg">' + obj.ZJ + obj.ZJDW + '</p>');
+    html += ('<p class="p_li_body_left_body_jptj_jg">' + (GQ === "出租" ? obj.ZJ : obj.SJ) + obj.ZJDW + '</p>');
     html += ('</li>');
     return html;
 }
 //加载该经纪人推荐
-function LoadJJRTJFY(TYPE) {
+function LoadJJRTJFY(TYPE, GQ) {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/FCCX/LoadFCXX",
@@ -212,7 +213,7 @@ function LoadJJRTJFY(TYPE) {
         data:
         {
             TYPE: TYPE,
-            Condition: "STATUS:1",
+            Condition: "STATUS:1,GQ:" + GQ,
             PageSize: 5,
             PageIndex: 1
         },
@@ -223,7 +224,7 @@ function LoadJJRTJFY(TYPE) {
                 html += ('<p class="p_body_right_jjrtj">该经纪人推荐</p>');
                 html += ('<ul id="ul_body_right_jjrtj" class="ul_body_right_jjrtj">');
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += LoadJJRTJFYInfo(xml.list[i]);
+                    html += LoadJJRTJFYInfo(xml.list[i], GQ);
                 }
                 html += ('</ul>');
                 html += ('</div>');
@@ -239,14 +240,14 @@ function LoadJJRTJFY(TYPE) {
     });
 }
 //加载该经纪人推荐单条信息
-function LoadJJRTJFYInfo(obj) {
+function LoadJJRTJFYInfo(obj, GQ) {
     var html = "";
     html += ('<li onclick="OpenXXXX(\'FCXX_XZL\',\'' + obj.ID + '\')" class="li_body_right_jjrtj">');
     html += ('<img class="img_li_body_right_jjrtj" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<div class="div_li_body_right_jjrtj">');
-    html += ('<p class="p_li_body_right_jjrtj_xq">' + obj.QY + ' / ' + obj.DD + ' / ' + obj.JTDZ + '</p>');
+    html += ('<p class="p_li_body_right_jjrtj_xq">' + obj.JTDZ + '</p>');
     html += ('<p class="p_li_body_right_jjrtj_cs">' + obj.MJ + '平米</p>');
-    html += ('<p class="p_li_body_right_jjrtj_jg">' + obj.ZJ + obj.ZJDW + '</p>');
+    html += ('<p class="p_li_body_right_jjrtj_jg">' + (GQ === "出租" ? obj.ZJ : obj.SJ) + obj.ZJDW + '</p>');
     html += ('</div>');
     html += ('</li>');
     return html;
