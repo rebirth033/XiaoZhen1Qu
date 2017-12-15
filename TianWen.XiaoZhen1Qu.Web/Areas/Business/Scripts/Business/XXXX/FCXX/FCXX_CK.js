@@ -182,7 +182,7 @@ function LoadCNXHInfo(obj) {
     var html = "";
     html += ('<li onclick="OpenXXXX(\'FCXX_CK\',\'' + obj.ID + '\')" class="li_body_left_body_cnxh">');
     html += ('<img class="img_li_body_left_body_cnxh" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_left_body_cnxh_xq">' + obj.QY + ' / ' + obj.DD + ' / ' + obj.JTDZ + '</p>');
+    html += ('<p class="p_li_body_left_body_cnxh_xq">' + TruncStr((obj.QY + ' / ' + obj.DD + ' / ' + obj.JTDZ), 15)+ '</p>');
     html += ('<p class="p_li_body_left_body_cnxh_cs">' + obj.MJ + '平米</p>');
     html += ('<p class="p_li_body_left_body_cnxh_jg">' + obj.ZJ + obj.ZJDW + '</p>');
     html += ('</li>');
@@ -225,7 +225,7 @@ function LoadJPTJInfo(obj) {
     var html = "";
     html += ('<li onclick="OpenXXXX(\'FCXX_CK\',\'' + obj.ID + '\')" class="li_body_left_body_jptj">');
     html += ('<img class="img_li_body_left_body_jptj" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_left_body_jptj_xq">' + obj.QY + ' / ' + obj.DD + ' / ' + obj.JTDZ + '</p>');
+    html += ('<p class="p_li_body_left_body_jptj_xq">' + TruncStr((obj.QY + ' / ' + obj.DD + ' / ' + obj.JTDZ), 15)+ '</p>');
     html += ('<p class="p_li_body_left_body_jptj_cs">' + obj.MJ + '平米</p>');
     html += ('<p class="p_li_body_left_body_jptj_jg">' + obj.ZJ + obj.ZJDW + '</p>');
     html += ('</li>');
@@ -272,7 +272,7 @@ function LoadJJRTJFYInfo(obj) {
     html += ('<li onclick="OpenXXXX(\'FCXX_CK\',\'' + obj.ID + '\')" class="li_body_right_jjrtj">');
     html += ('<img class="img_li_body_right_jjrtj" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<div class="div_li_body_right_jjrtj">');
-    html += ('<p class="p_li_body_right_jjrtj_xq">' + obj.QY + ' / ' + obj.DD + ' / ' + obj.JTDZ + '</p>');
+    html += ('<p class="p_li_body_right_jjrtj_xq">' + TruncStr((obj.QY + ' / ' + obj.DD + ' / ' + obj.JTDZ), 15)+ '</p>');
     html += ('<p class="p_li_body_right_jjrtj_cs">' + obj.MJ + '平米</p>');
     html += ('<p class="p_li_body_right_jjrtj_jg">' + obj.ZJ + obj.ZJDW + '</p>');
     html += ('</div>');
