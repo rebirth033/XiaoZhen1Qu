@@ -1,4 +1,5 @@
-﻿$(document).ready(function () {
+﻿var right = 0;
+$(document).ready(function () {
 
 });
 //加载默认
@@ -16,8 +17,6 @@ function LoadDefault() {
             if (xml.Result === 1) {
                 LoadJBXX(xml.list[0]);
                 LoadXQ(xml.list[0], xml.BCMSString);
-                LoadSPXX();
-                LoadDTXX(xml.list[0].DZ);
                 LoadCNXH("FCXX_XZL");
                 LoadGRXX(xml.grxxlist[0]);
                 LoadJJRTJFY("FCXX_XZL");
@@ -54,7 +53,10 @@ function LoadJBXX(obj) {
     html += ('<div class="div_body_left_body_right">');
     html += ('<p class="p_body_left_body_right_first">');
     html += ('<span class="span_body_left_body_right_zj">' + obj.ZJ + '</span><span class="span_body_left_body_right_zjdw">元/月</span>');
-    html += ('<span class="span_body_left_body_right_yffs">' + obj.YFFS + '</span>');
+    html += ('</p>');
+    html += ('<p class="p_body_left_body_right">');
+    html += ('<span class="span_body_left_body_right_left">押付方式：</span>');
+    html += ('<span class="span_body_left_body_right_right">' + obj.YFFS + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">类型：</span>');
@@ -74,39 +76,22 @@ function LoadJBXX(obj) {
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">具体地址：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.QY + '-' + obj.DD + '-' + obj.JTDZ + '</span>');
+    html += ('<span class="span_body_left_body_right_right">' + '[' + obj.QY + '-' + obj.DD + '] ' + obj.JTDZ + '</span>');
     html += ('</p>');
-    html += ('<p class="p_body_left_body_right_lxdh">');
-    html += ('<img class="img_body_left_body_right_lxdh" src="' + getRootPath() + '/Areas/Business/Css/images/lxdh.png" />' + obj.LXDH);
+    html += ('<p class="p_body_left_body_right">');
+    html += ('<span class="span_body_left_body_right_left">联系电话：</span>');
+    html += ('<span class="span_body_left_body_right_right span_body_left_body_right_right_lxdh">' + obj.LXDH.substr(0, 7) + '****' + '</span>');
     html += ('</p>');
     html += ('</div>');
     html += ('</div>');
     $("#div_body_left").append(html);
     HandlerTPXX();
 }
-
-var right = 0;
-
 //加载详情
 function LoadXQ(obj, BCMSString) {
     var html = "";
     html += ('<div class="div_body_left_body_xq">');
     html += ('<p class="p_body_left_body_xq">写字楼详情</p>');
-    //if (obj.FWPZ !== null) {
-    //    var fwpzarray = obj.FWPZ.split(',');
-    //html += ('<div class="div_body_left_body_xq_xx">');
-    //    html += ('<div class="div_body_left_body_xq_xx_left">房屋配置</div>');
-    //    html += ('<div class="div_body_left_body_xq_xx_right" style="width: 600px;">');
-    //    for (var i = 0; i < fwpzarray.length; i++) {
-    //        html += ('<span class="span_body_left_body_fyxq_xx_right">');
-    //        html += ('<img class="img_body_left_body_xq_xx_right" src="' + getRootPath() + '/Areas/Business/Css/images/xxxx/fc/xxxx_fc_' + fwpzarray[i] + '.png")" />');
-    //        html += ('<span class="span_img_body_left_body_xq_xx_right">' + fwpzarray[i] + '</span>');
-    //        html += ('</span>');
-    //    }
-    //    html += ('</div>');
-    //    html += ('</div>');
-    //}
-
     html += ('<div class="div_body_left_body_xq_xx">');
     html += ('<div class="div_body_left_body_xq_xx_left">房源描述</div>');
     html += ('<div class="div_body_left_body_xq_xx_right fyms">');
@@ -130,40 +115,6 @@ function LoadXQ(obj, BCMSString) {
         $("#div_body_left_body_xq_xx").css("height", "710px");
         $("#div_body_left_body_xq_zk").css("display", "block");
     }
-}
-//加载信息
-function LoadDZ() {
-    var html = "";
-    html += ('<div class="div_body_left_body_xqxx">');
-    html += ('<div id="div_body_left_body_xqxx_dtxx" class="div_body_left_body_xqxx_dtxx">');
-    html += ('<p class="p_body_left_body_xqxx_dtxx">写字楼地址</p>');
-    html += ('<div style="width: 780px; height: 300px; border: 1px solid gray" id="container"></div>');
-    html += ('</div>');
-    html += ('</div>');
-    $("#div_body_left").append(html);
-}
-//加载地图信息
-function LoadDTXX(XQMC) {
-    var map = new BMap.Map("container");//创建地图实例
-    map.centerAndZoom("福州市", 15);//创建点坐标,地图初始化
-    map.enableScrollWheelZoom(true);//允许鼠标滑轮放大缩小 
-    map.enableContinuousZoom(true);//允许惯性拖拽
-    map.addControl(new BMap.NavigationControl({ isOpen: true, anchor: BMAP_ANCHOR_BOTTOM_LEFT }));  //添加默认缩放平移控件,右上角打开
-    map.addControl(new BMap.OverviewMapControl({ isOpen: true, anchor: BMAP_ANCHOR_BOTTOM_RIGHT })); //添加默认缩略地图控件,右下角打开
-    searchByStationName(map, XQMC);
-};
-//地址定位
-function searchByStationName(map, XQMC) {
-    map.clearOverlays();//清空原来的标注
-    var localSearch = new BMap.LocalSearch(map);
-    localSearch.enableAutoViewport(); //允许自动调节窗体大小
-    localSearch.setSearchCompleteCallback(function (searchResult) {
-        var poi = searchResult.getPoi(0);
-        map.centerAndZoom(poi.point, 13);
-        var marker = new BMap.Marker(new BMap.Point(poi.point.lng, poi.point.lat));  // 创建标注，为要查询的地址对应的经纬度
-        map.addOverlay(marker);
-    });
-    localSearch.search(XQMC);
 }
 //加载猜你喜欢
 function LoadCNXH(TYPE) {
