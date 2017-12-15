@@ -81,7 +81,7 @@ function ValidateFWLX_S() {
     } else {
         if (ValidateNumber($("#S").val()) && $("#S").val() !== "0") {
             $("#divFWLXTip").css("display", "none");
-            $("#S").css("border-color", "#cccccc");
+            $("#spanS").css("border-color", "#cccccc");
             return true;
         } else {
             $("#divFWLXTip").css("display", "block");
@@ -103,7 +103,7 @@ function ValidateFWLX_T() {
     } else {
         if (ValidateNumber($("#T").val())) {
             $("#divFWLXTip").css("display", "none");
-            $("#T").css("border-color", "#cccccc");
+            $("#spanT").css("border-color", "#cccccc");
             return true;
         } else {
             $("#divFWLXTip").css("display", "block");
@@ -125,7 +125,7 @@ function ValidateFWLX_W() {
     } else {
         if (ValidateNumber($("#W").val())) {
             $("#divFWLXTip").css("display", "none");
-            $("#W").css("border-color", "#cccccc");
+            $("#spanW").css("border-color", "#cccccc");
             return true;
         } else {
             $("#divFWLXTip").css("display", "block");
@@ -147,7 +147,7 @@ function ValidateFWLX_PFM() {
     } else {
         if (ValidateDecimal($("#PFM").val()) && $("#PFM").val() !== "0") {
             $("#divFWLXTip").css("display", "none");
-            $("#PFM").css("border-color", "#cccccc");
+            $("#spanPFM").css("border-color", "#cccccc");
             return true;
         } else {
             $("#divFWLXTip").css("display", "block");
@@ -169,7 +169,7 @@ function ValidateLCFB_C() {
     } else {
         if (ValidateNumber($("#C").val()) && $("#C").val() !== "0") {
             $("#divLCFBTip").css("display", "none");
-            $("#C").css("border-color", "#cccccc");
+            $("#spanC").css("border-color", "#cccccc");
             return true;
         } else {
             $("#divLCFBTip").css("display", "block");

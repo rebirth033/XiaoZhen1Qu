@@ -43,7 +43,7 @@ function LoadXQMC() {
         var lis = $("#divXQMClist").find("li");
         for (var i = 0; i < lis.length; i++) {
             if ($("#divXQMClist").find("li:eq(" + i + ")").css("background-color") === "rgb(236, 236, 236)") {
-                SelectXQMC($("#divXQMClist").find("li:eq(" + i + ")"));
+                SelectXQMC($("#divXQMClist").find("li:eq(" + i + ")")[0]);
                 return;
             }
         }
@@ -238,7 +238,6 @@ function LoadDuoX(type, id) {
 function SelectXQMC(obj) {
     var array = obj.innerText.split(' ');
     $("#XQMC").val(array[0]);
-    $("#XQDZ").val(array[2]);
     $("#divXQMClist").css("display", "none");
 }
 //加载
@@ -256,10 +255,9 @@ function LoadFC_ZZFXX() {
                 var jsonObj = new JsonDB("myTabContent");
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.FC_ESFJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
-                //if (xml.Value.FC_ESFJBXX.FWLD !== null)
-                //    SetDuoX("FWLD", xml.Value.FC_ESFJBXX.FWLD);
+                if (xml.Value.FC_ESFJBXX.FWLD !== null)
+                    SetDuoX("FWLD", xml.Value.FC_ESFJBXX.FWLD);
                 $("#spanFWCX").html(xml.Value.FC_ESFJBXX.CX);
-                //$("#spanSJ").html(xml.Value.FC_ESFJBXX.SJ);
                 $("#spanZXQK").html(xml.Value.FC_ESFJBXX.ZXQK);
                 $("#spanZZLX").html(xml.Value.FC_ESFJBXX.ZZLX);
                 //设置编辑器的内容
@@ -284,9 +282,8 @@ function FB() {
     obj = jsonObj.AddJson(obj, "CX", "'" + $("#spanFWCX").html() + "'");
     obj = jsonObj.AddJson(obj, "ZXQK", "'" + $("#spanZXQK").html() + "'");
     obj = jsonObj.AddJson(obj, "ZZLX", "'" + $("#spanZZLX").html() + "'");
-    //obj = jsonObj.AddJson(obj, "FWLD", "'" + GetDuoX("FWLD") + "'");
+    obj = jsonObj.AddJson(obj, "FWLD", "'" + GetDuoX("FWLD") + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "SJ", "'" + $("#SJ").val() + "'");
     if ($("#KRZSJ").val() !== "")
         obj = jsonObj.AddJson(obj, "KRZSJ", "'" + $("#KRZSJ").val() + "'");
     if (getUrlParam("ID") !== null)
