@@ -1,6 +1,6 @@
 ﻿//选择多选
 function SelectDuoX(obj) {
-    if ($(obj).find("img").attr("src").indexOf("blue") !== -1)
+    if ($(obj).find("img").attr("src").indexOf("purple") !== -1)
         $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
     else
         $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_purple.png");
@@ -9,7 +9,7 @@ function SelectDuoX(obj) {
 function GetDuoX(type) {
     var value = "";
     $(".li" + type).each(function () {
-        if ($(this).find("img").attr("src").indexOf("blue") !== -1)
+        if ($(this).find("img").attr("src").indexOf("purple") !== -1)
             value += $(this).find("label")[0].innerHTML + ",";
     });
     return RTrim(value, ',');

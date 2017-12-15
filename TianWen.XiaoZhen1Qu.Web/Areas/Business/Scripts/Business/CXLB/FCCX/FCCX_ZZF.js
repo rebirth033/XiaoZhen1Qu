@@ -21,7 +21,7 @@ function LoadHeadSearch() {
 }
 //加载房产查询条件
 function LoadFCCondition() {
-    LoadConditionByTypeNames("'整租房租金','厅室','朝向','装修情况','房屋亮点'", "CODES_FC", "租金,厅室,朝向,装修情况,房屋亮点", "ZJ,S,CX,ZXQK,FWLD", "15,15,15,15,15");
+    LoadConditionByTypeNames("'整租房租金','厅室','朝向','装修情况','出租房屋亮点'", "CODES_FC", "租金,厅室,朝向,装修情况,房屋亮点", "ZJ,S,CX,ZXQK,FWLD", "15,15,15,15,15");
     LoadBody("FCXX_ZZF", currentIndex);
 }
 //加载URL查询条件

@@ -6,8 +6,12 @@ $(document).ready(function () {
 });
 //加载房产查询条件
 function LoadFCCondition() {
-    LoadConditionByTypeNames("'二手房售价','二手房面积','厅室','朝向','住宅类型','装修情况'", "CODES_FC", "售价,面积,厅室,朝向,住宅类型,装修情况", "SJ,PFM,S,CX,ZZLX,ZXQK", "15,15,15,15,15,15");
+    LoadConditionByTypeNames("'二手房售价','二手房面积','厅室','朝向','住宅类型','装修情况','出售房屋亮点'", "CODES_FC", "售价,面积,厅室,朝向,住宅类型,装修情况,房屋亮点", "SJ,PFM,S,CX,ZZLX,ZXQK,FWLD", "15,15,15,15,15,15,15");
     LoadBody("FCXX_ESF", currentIndex);
+}
+//加载URL查询条件
+function LoadURLCondition() {
+    SelectURLCondition(getUrlParam("FWLD"));
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -18,10 +22,19 @@ function SelectCondition(obj, name) {
     LoadBody("FCXX_ESF", currentIndex);
     ShowSelectCondition("FCXX_ESF");
 }
+//选择URL条件
+function SelectURLCondition(obj) {
+    $("#" + obj).parent().find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $("#" + obj).addClass("li_condition_body_active");
+    LoadBody("FCXX_ESF", currentIndex);
+    ShowSelectCondition("FCXX_ESF");
+}
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("SJ,PFM,QY,S,CX,ZZLX,ZXQK");
+    var condition = GetAllCondition("SJ,PFM,QY,S,CX,ZZLX,ZXQK,FWLD");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/FCCX/LoadFCXX",

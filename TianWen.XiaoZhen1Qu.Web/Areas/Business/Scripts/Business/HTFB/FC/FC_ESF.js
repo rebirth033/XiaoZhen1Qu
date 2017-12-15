@@ -6,7 +6,7 @@ $(document).ready(function () {
     BindClick("FWCX");
     BindClick("ZXQK");
     BindClick("ZZLX");
-    LoadFC_ZZFXX();
+    LoadDuoX("出售房屋亮点", "FWLD");
 });
 //加载小区名称
 function LoadXQMC() {
@@ -215,18 +215,7 @@ function LoadDuoX(type, id) {
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-                if (xml.list.length === 0)
-                    $("#div" + id).css("display", "none");
-                else
-                    $("#div" + id).css("display", "");
-                if (type === "包含费用")
-                    LoadDuoX("房屋配置", "FWPZ");
-                if (type === "房屋配置")
-                    LoadDuoX("房屋亮点", "FWLD");
-                if (type === "房屋亮点")
-                    LoadDuoX("出租要求", "CZYQ");
-                if (type === "出租要求")
-                    LoadFC_ZZFXX();
+                LoadFC_ZZFXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

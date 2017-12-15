@@ -234,8 +234,8 @@ function LoadDuoX(type, id) {
                 if (type === "包含费用")
                     LoadDuoX("房屋配置", "FWPZ");
                 if (type === "房屋配置")
-                    LoadDuoX("房屋亮点", "FWLD");
-                if (type === "房屋亮点")
+                    LoadDuoX("出租房屋亮点", "FWLD");
+                if (type === "出租房屋亮点")
                     LoadDuoX("出租要求", "CZYQ");
                 if (type === "出租要求")
                     LoadFC_HZFXX();
