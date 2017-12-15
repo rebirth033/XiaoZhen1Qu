@@ -29,12 +29,6 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string XQMC { get; set; }
 
         /// <summary>
-        /// 小区名称
-        /// </summary>
-        [Property]
-        public virtual string XQDZ{ get; set; }
-
-        /// <summary>
         /// 室
         /// </summary>
         [Property]

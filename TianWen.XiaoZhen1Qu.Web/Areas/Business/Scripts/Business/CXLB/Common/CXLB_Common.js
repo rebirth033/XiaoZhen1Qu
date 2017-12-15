@@ -168,7 +168,7 @@ function ToggleCondition() {
         $("#i_condition_tottle").css("background-image", "url(" + getRootPath() + "/areas/business/css/images/head_nav_up.png)");
     }
     else {
-        $(".div_condition").css("height", "140px").css("overflow", "hidden");
+        $(".div_condition").css("height", "180px").css("overflow", "hidden");
         $("#span_condition_toggle").html($("#span_condition_toggle").html().replace("精简", "更多"));
         $("#i_condition_tottle").css("background-image", "url(" + getRootPath() + "/areas/business/css/images/head_nav_down1.png)");
     }

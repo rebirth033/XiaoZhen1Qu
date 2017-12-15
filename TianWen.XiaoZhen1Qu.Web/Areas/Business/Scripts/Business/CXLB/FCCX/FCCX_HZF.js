@@ -7,7 +7,7 @@ $(document).ready(function () {
 });
 //加载房产查询条件
 function LoadFCCondition() {
-    LoadConditionByTypeNames("'整租房租金','出租间类型'", "CODES_FC", "租金,类型", "ZJ,CZJLX", "15,15");
+    LoadConditionByTypeNames("'整租房租金','出租间类型','朝向','装修情况'", "CODES_FC", "租金,类型,朝向,装修情况", "ZJ,CZJLX,CX,ZXQK", "15,15,15,15");
     LoadBody("FCXX_HZF", currentIndex);
 }
 //选择条件
@@ -22,7 +22,7 @@ function SelectCondition(obj, name) {
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("CZJLX,ZJ,DQ");
+    var condition = GetAllCondition("CZJLX,ZJ,QY,CX,ZXQK");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/FCCX/LoadFCXX",
@@ -59,7 +59,7 @@ function LoadInfo(obj) {
     html += ('<div class="div_li_body_left_center">');
     html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'FCXX_HZF\',\'' + obj.ID + '\')">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_left_center_cs">单间出租 / ' + obj.S + '室' + obj.T + '厅' + obj.W + '卫 / ' + obj.PFM + '平米 / ' + obj.ZXQK + ' / ' + obj.CX + ' / ' + obj.C + '层[共' + obj.GJC + '层]</p>');
-    html += ('<p class="p_li_body_left_center_dz">' + obj.XQMC + ' [' + obj.XQDZ + '] ' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
+    html += ('<p class="p_li_body_left_center_dz">' + obj.XQMC + obj.XQDZ + ' ' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
     html += ('<p class="p_li_body_left_right"><span class="span_zj">' + obj.ZJ + '</span>元/月</p>');
@@ -98,8 +98,8 @@ function LoadHotInfo(obj) {
     var html = "";
     html += ('<li onclick="OpenXXXX(\'FCXX_HZF\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_right_xq">' + obj.XQDZ.split('-')[0] + ' / ' + obj.XQDZ.split('-')[1] + ' / ' + obj.XQMC + '</p>');
-    html += ('<p class="p_li_body_right_cs">' + obj.S + '室 ' + obj.PFM + '平</p>');
+    html += ('<p class="p_li_body_right_xq">' + obj.XQMC + '</p>');
+    html += ('<p class="p_li_body_right_cs">' + obj.S + '室 / ' + obj.PFM + '平米 / ' + obj.ZXQK + '</p>');
     html += ('<p class="p_li_body_right_jg">' + obj.ZJ + '元/月</p>');
     html += ('</li>');
     $("#ul_body_right").append(html);

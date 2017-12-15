@@ -1,15 +1,12 @@
 ﻿@{
-
     Layout = "~/Areas/Business/Views/Shared/CXLB.cshtml";
 }
 @section Section_Head {
-    <meta name="viewport" content="width=device-width" />
-    <title></title>
     <link href="@Url.Content("~/Areas/Business/Css/CXLB/FCCX.css")" rel="stylesheet" />
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/CXLB/FCCX/FCCX_XZL.js")"></script>
 }
 @section Section_Body {
-    <div id="divCondition" class="div_condition">
+    <div id="divCondition" class="div_condition" style="height: 210px;">
         <ul class="ul_condition_head">
             <li id="li_condition_head_spcz" class="li_condition_head">出租</li>
             <li id="li_condition_head_dtcs" class="li_condition_head">出售</li>
@@ -25,7 +22,7 @@
             <li class="li_condition_select_first">条件</li>
         </ul>
     </div>
-    <div id="divBody" class="div_body">
+    <div id="divBody" class="div_body" style="margin-top: 20px;">
         <ul class="ul_body_head">
             <li id="li_body_head_first" class="li_body_head"></li>
             <li class="li_body_head">个人房源</li>
