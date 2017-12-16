@@ -1,7 +1,7 @@
 ﻿var currentIndex = 1;
 $(document).ready(function () {
     BindConditionNav();
-    $(".li_condition_head:eq(0)").each(function () { $(this).css("background-color", "#ffffff"); });
+    $(".li_condition_head:eq(0)").each(function () { $(this).css("background-color", "#ffffff").css("color", "#bc6ba6"); });
     BindBodyNav();
     LoadCZCondition();
     LoadHot("FCXX_SP");
@@ -23,9 +23,9 @@ function LoadCSCondition() {
 function BindConditionNav(type) {
     $(".li_condition_head").bind("click", function () {
         $(".li_condition_head").each(function (i) {
-            $(this).css("background-color", "#eeeff1");
+            $(this).css("background-color", "#eeeff1").css("color", "#999999");
         });
-        $(this).css("background-color", "#ffffff");
+        $(this).css("background-color", "#ffffff").css("color", "#bc6ba6");
         if ($(this).html() === "出租") {
             LoadCZCondition();
         } else {

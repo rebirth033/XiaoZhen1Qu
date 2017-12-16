@@ -35,7 +35,7 @@ function SetXSQK(XSQK) {
 function GetXSQK() {
     var value = "";
     $("#divXSQK").find("img").each(function () {
-        if ($(this).attr("src").indexOf("blue") !== -1)
+        if ($(this).attr("src").indexOf("purple") !== -1)
             value = $(this).parent().find("label")[0].innerHTML;
     });
     if (value !== "已行使") {

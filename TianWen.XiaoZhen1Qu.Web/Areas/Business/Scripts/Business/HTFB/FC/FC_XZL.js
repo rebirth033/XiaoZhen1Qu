@@ -105,7 +105,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
     if (GetDX("GQ") === "出租")
-        obj = jsonObj.AddJson(obj, "ZJDW", "'元/月'");
+        obj = jsonObj.AddJson(obj, "ZJDW", "'" + $("#spanZJDW").html() + "'");
     if (GetDX("GQ") === "出售")
         obj = jsonObj.AddJson(obj, "ZJDW", "'万元'");
     obj = jsonObj.AddJson(obj, "XZLLX", "'" + GetDX("XZLLX") + "'");

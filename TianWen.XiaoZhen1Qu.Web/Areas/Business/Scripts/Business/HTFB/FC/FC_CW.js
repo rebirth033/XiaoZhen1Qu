@@ -38,7 +38,7 @@ function SetGQ(gq) {
 function GetGQ() {
     var value = "";
     $("#divGQ").find("img").each(function () {
-        if ($(this).attr("src").indexOf("blue") !== -1)
+        if ($(this).attr("src").indexOf("purple") !== -1)
             value = $(this).parent().find("label")[0].innerHTML;
     });
     if (value !== "出售") {

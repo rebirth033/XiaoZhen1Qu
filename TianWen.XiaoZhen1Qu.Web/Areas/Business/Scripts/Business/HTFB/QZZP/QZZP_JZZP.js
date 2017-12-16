@@ -13,7 +13,7 @@
 //选择兼职时间
 function SelectJZSJ() {
     $(this).find(".img_jzsj").each(function () {
-        if ($(this).attr("src").indexOf("blue") !== -1)
+        if ($(this).attr("src").indexOf("purple") !== -1)
             $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
         else
             $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/check_purple.png");
@@ -94,7 +94,7 @@ function SetJZYXQ(JZYXQ) {
 function GetJZSJ() {
     var jzsj = "";
     $(".img_jzsj").each(function () {
-        if ($(this).attr("src").indexOf("blue") !== -1)
+        if ($(this).attr("src").indexOf("purple") !== -1)
             jzsj += this.id + ",";
     });
     return RTrim(jzsj, ',');
