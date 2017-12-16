@@ -17,8 +17,6 @@ function LoadDefault() {
             if (xml.Result === 1) {
                 LoadJBXX(xml.list[0]);
                 LoadXQ(xml.list[0], xml.BCMSString);
-                LoadSPXX();
-                LoadDTXX(xml.list[0].DZ);
                 LoadCNXH("FCXX_SP", xml.list[0].GQ);
                 LoadGRXX(xml.grxxlist[0]);
                 LoadJJRTJFY("FCXX_SP", xml.list[0].GQ);
@@ -56,6 +54,12 @@ function LoadJBXX(obj) {
     html += ('<p class="p_body_left_body_right_first">');
     html += ('<span class="span_body_left_body_right_zj">' + (obj.GQ === "出租" ? obj.ZJ : obj.SJ) + '</span><span class="span_body_left_body_right_zjdw">' + obj.ZJDW + '</span>');
     html += ('</p>');
+    if (obj.GQ === "出租") {
+        html += ('<p class="p_body_left_body_right">');
+        html += ('<span class="span_body_left_body_right_left">押付方式：</span>');
+        html += ('<span class="span_body_left_body_right_right">' + obj.YFFS + '</span>');
+        html += ('</p>');
+    }
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">商铺类型：</span>');
     html += ('<span class="span_body_left_body_right_right">' + obj.SPLX + '</span>');
@@ -93,10 +97,10 @@ function LoadXQ(obj, BCMSString) {
     html += ('<div class="div_body_left_body_xq_xx">');
     html += ('<div class="div_body_left_body_xq_xx_left">详细信息</div>');
     html += ('<div class="div_body_left_body_xq_xx_right">');
-    html += ('<p><span class="span_body_left_body_xq_xx_right">面宽：</span><span>' + (obj.MK === null ? "暂无数据" : obj.MK) + '</span><span class="span_body_left_body_xq_xx_right">进深：</span><span>' + (obj.JS === null ? "暂无数据" : obj.JS) + '</span></p>');
-    html += ('<p><span class="span_body_left_body_xq_xx_right">层高：</span><span>' + (obj.CG === null ? "暂无数据" : obj.CG) + '</span><span class="span_body_left_body_xq_xx_right">楼层：</span><span>' + (obj.C === null ? "暂无数据" : obj.C) + '</span></p>');
-    html += ('<p><span class="span_body_left_body_xq_xx_right">电费：</span><span>' + (obj.DF === undefined ? "暂无数据" : obj.DF) + '</span><span class="span_body_left_body_xq_xx_right">水费：</span><span>' + (obj.SF === undefined ? "暂无数据" : obj.SF) + '</span></p>');
-    html += ('<p><span class="span_body_left_body_xq_xx_right">物业费：</span><span>' + (obj.WYF === undefined ? "暂无数据" : obj.WYF) + '</span></p>');
+    html += ('<p><span class="span_body_left_body_xq_xx_right">面宽：</span><span>' + (obj.MK === null ? "暂无数据" : obj.MK) + '米</span><span class="span_body_left_body_xq_xx_right">进深：</span><span>' + (obj.JS === null ? "暂无数据" : obj.JS) + '米</span></p>');
+    html += ('<p><span class="span_body_left_body_xq_xx_right">层高：</span><span>' + (obj.CG === null ? "暂无数据" : obj.CG) + '米</span><span class="span_body_left_body_xq_xx_right">楼层：</span><span>' + (obj.C === null ? "暂无数据" : obj.C) + '</span></p>');
+    html += ('<p><span class="span_body_left_body_xq_xx_right">电费：</span><span>' + (obj.DF === undefined ? "暂无数据" : obj.DF) + '元/度</span><span class="span_body_left_body_xq_xx_right">水费：</span><span>' + (obj.SF === undefined ? "暂无数据" : obj.SF) + '元/吨</span></p>');
+    html += ('<p><span class="span_body_left_body_xq_xx_right">物业费：</span><span>' + (obj.WYF === undefined ? "暂无数据" : obj.WYF) + '元/平米/月</span></p>');
     html += ('</div>');
     html += ('</div>');
     html += ('<div class="div_body_left_body_xq_xx">');
@@ -121,40 +125,6 @@ function LoadXQ(obj, BCMSString) {
         $("#div_body_left_body_xq_xx").css("height", "710px");
         $("#div_body_left_body_xq_zk").css("display", "block");
     }
-}
-//加载商铺信息
-function LoadSPXX() {
-    var html = "";
-    html += ('<div class="div_body_left_body_xqxx">');
-    html += ('<div id="div_body_left_body_xqxx_dtxx" class="div_body_left_body_xqxx_dtxx">');
-    html += ('<p class="p_body_left_body_xqxx_dtxx">商铺地址</p>');
-    html += ('<div style="width: 780px; height: 300px; border: 1px solid gray" id="container"></div>');
-    html += ('</div>');
-    html += ('</div>');
-    $("#div_body_left").append(html);
-}
-//加载地图信息
-function LoadDTXX(XQMC) {
-    var map = new BMap.Map("container");//创建地图实例
-    map.centerAndZoom("福州市", 15);//创建点坐标,地图初始化
-    map.enableScrollWheelZoom(true);//允许鼠标滑轮放大缩小 
-    map.enableContinuousZoom(true);//允许惯性拖拽
-    map.addControl(new BMap.NavigationControl({ isOpen: true, anchor: BMAP_ANCHOR_BOTTOM_LEFT }));  //添加默认缩放平移控件,右上角打开
-    map.addControl(new BMap.OverviewMapControl({ isOpen: true, anchor: BMAP_ANCHOR_BOTTOM_RIGHT })); //添加默认缩略地图控件,右下角打开
-    searchByStationName(map, XQMC);
-};
-//地址定位
-function searchByStationName(map, XQMC) {
-    map.clearOverlays();//清空原来的标注
-    var localSearch = new BMap.LocalSearch(map);
-    localSearch.enableAutoViewport(); //允许自动调节窗体大小
-    localSearch.setSearchCompleteCallback(function (searchResult) {
-        var poi = searchResult.getPoi(0);
-        map.centerAndZoom(poi.point, 13);
-        var marker = new BMap.Marker(new BMap.Point(poi.point.lng, poi.point.lat));  // 创建标注，为要查询的地址对应的经纬度
-        map.addOverlay(marker);
-    });
-    localSearch.search(XQMC);
 }
 //加载猜你喜欢
 function LoadCNXH(TYPE, GQ) {

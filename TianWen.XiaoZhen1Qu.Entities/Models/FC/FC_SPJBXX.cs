@@ -11,7 +11,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         }
 
         /// <summary>
-        /// 商铺基本信息ID
+        /// ID
         /// </summary>
         [Id]
         public virtual string ID { get; set; }
@@ -39,12 +39,6 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// </summary>
         [Property]
         public virtual string SPLX { get; set; }
-
-        /// <summary>
-        /// 历史经营
-        /// </summary>
-        [Property]
-        public virtual string LSJY { get; set; }
 
         /// <summary>
         /// 区域
@@ -135,5 +129,53 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// </summary>
         [Property]
         public virtual string JYZT { get; set; }
+
+        /// <summary>
+        /// 商铺配套
+        /// </summary>
+        [Property]
+        public virtual string PT { get; set; }
+
+        /// <summary>
+        /// 电费
+        /// </summary>
+        [Property]
+        public virtual string DF { get; set; }
+
+        /// <summary>
+        /// 水费
+        /// </summary>
+        [Property]
+        public virtual string SF { get; set; }
+
+        /// <summary>
+        /// 物业费
+        /// </summary>
+        [Property]
+        public virtual string WYF { get; set; }
+
+        /// <summary>
+        /// 押付方式
+        /// </summary>
+        [Property]
+        public virtual string YFFS { get; set; }
+
+        /// <summary>
+        /// 起租期
+        /// </summary>
+        [Property]
+        public virtual string QZQ { get; set; }
+
+        /// <summary>
+        /// 免租期
+        /// </summary>
+        [Property]
+        public virtual string MZQ { get; set; }
+
+        /// <summary>
+        /// 是否临街
+        /// </summary>
+        [Property]
+        public virtual string SFLJ { get; set; }
     }
 }

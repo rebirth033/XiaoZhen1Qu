@@ -14,7 +14,6 @@ namespace TianWen.XiaoZhen1Qu.Entities.Maps
             Map(x => x.FL, "FL");
             Map(x => x.GQ, "GQ");
             Map(x => x.SPLX, "SPLX"); 
-            Map(x => x.LSJY, "LSJY");
             Map(x => x.QY, "QY");
             Map(x => x.DD, "DD");
             Map(x => x.JTDZ, "JTDZ");
@@ -30,7 +29,15 @@ namespace TianWen.XiaoZhen1Qu.Entities.Maps
             Map(x => x.GJC, "GJC");
             Map(x => x.JYHY, "JYHY");
             Map(x => x.JYZT, "JYZT");
-            
+            Map(x => x.PT, "PT");
+            Map(x => x.DF, "DF");
+            Map(x => x.SF, "SF");
+            Map(x => x.WYF, "WYF");
+            Map(x => x.YFFS, "YFFS");
+            Map(x => x.QZQ, "QZQ");
+            Map(x => x.MZQ, "MZQ");
+            Map(x => x.SFLJ, "SFLJ");
+
             #endregion
 
             #region OneToMany

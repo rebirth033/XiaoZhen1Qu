@@ -35,6 +35,10 @@ namespace TianWen.XiaoZhen1Qu.Entities.ViewModels.FC
         public string GJC { get; set; }
         public string JYHY { get; set; }
         public string JYZT { get; set; }
+        public string SF { get; set; }
+        public string DF { get; set; }
+        public string WYF { get; set; }
+        public string YFFS { get; set; }
         //图片
         public IList<PHOTOS> PHOTOS { get; set; }
     }
