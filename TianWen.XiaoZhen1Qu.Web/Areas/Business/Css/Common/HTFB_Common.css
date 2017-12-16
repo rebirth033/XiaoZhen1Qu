@@ -46,7 +46,7 @@
 
 .span_select_arrow {background-image: url(../images/arrow_down.png);width: 16px;height: 16px;display: inline-block;vertical-align: middle;}
 
-.ul_select {border-radius: 4px;margin-left: -2px;text-align: center;width: 160px;display: inline-block;border-left: 1px solid #cccccc;border-right: 1px solid #cccccc;border-bottom: 1px solid #cccccc;padding-left: 0px;height: 341px;}
+.ul_select {border-radius: 4px;margin-left: -1px;text-align: center;width: 160px;display: inline-block;border-left: 1px solid #cccccc;border-right: 1px solid #cccccc;border-bottom: 1px solid #cccccc;padding-left: 0px;height: 341px;}
 
 .li_select {height: 34px;text-align: left;display: block;padding-left: 6px;line-height: 34px;font-size: 16px;cursor: pointer;color: #999999;background: #FFFFFF;}
 
