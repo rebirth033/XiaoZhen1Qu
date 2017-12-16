@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-
     LoadZXJC_JZFWJBXX();
     BindClick("LB");
 });

@@ -105,6 +105,18 @@ function ToggleImg(length) {
         $("#div_body_left_body_xq_zk").html("展开更多图片 共（" + length + "）张");
     }
 }
+//伸缩补充描述
+function ToggleBCMS() {
+    if ($("#div_body_left_body_xq_zk_bcms").html().indexOf("展开") !== -1) {
+        $("#div_body_left_body_xq_xx_bcms").css("overflow", "visible").css("height", "auto");
+        $("#div_body_left_body_xq_zk_bcms").html('收起内容<i id="i_body_left_body_xq_zk_bcms" class="i_body_left_body_xq_zk_bcms"></i>');
+        $("#i_body_left_body_xq_zk_bcms").css("background-image", "url(" + getRootPath() + "/areas/business/css/images/head_nav_up.png)");
+    } else {
+        $("#div_body_left_body_xq_xx_bcms").css("overflow", "hidden").css("height", "300px");
+        $("#div_body_left_body_xq_zk_bcms").html('展开内容<i id="i_body_left_body_xq_zk_bcms" class="i_body_left_body_xq_zk_bcms"></i>');
+        $("#i_body_left_body_xq_zk_bcms").css("background-image", "url(" + getRootPath() + "/areas/business/css/images/head_nav_down1.png)");
+    }
+}
 //发布信息
 function FBXX() {
     $.ajax({
