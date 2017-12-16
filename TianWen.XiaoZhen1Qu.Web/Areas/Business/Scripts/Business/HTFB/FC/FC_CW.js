@@ -77,6 +77,7 @@ function LoadFC_CWJBXX() {
                 $("#spanQY").html(xml.Value.FC_CWJBXX.QY);
                 $("#spanDD").html(xml.Value.FC_CWJBXX.DD);
                 $("#spanZJDW").html(xml.Value.FC_CWJBXX.ZJDW);
+                SetGQ(xml.Value.FC_CWJBXX.GQ);
                 LoadPhotos(xml.Value.Photos);
             }
         },
@@ -94,7 +95,10 @@ function FB() {
     obj = jsonObj.AddJson(obj, "KZCGS", "'" + $("#spanKZCGS").html() + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
-    obj = jsonObj.AddJson(obj, "ZJDW", "'" + $("#spanZJDW").html() + "'");
+    if (GetDX("GQ") === "出租")
+        obj = jsonObj.AddJson(obj, "ZJDW", "'" + $("#spanZJDW").html() + "'");
+    if (GetDX("GQ") === "出售")
+        obj = jsonObj.AddJson(obj, "ZJDW", "'万元'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
 
