@@ -12,7 +12,7 @@ function LoadZXJCCondition() {
 //选择条件
 function SelectCondition(obj, name) {
     if (name === "类别" && (obj.innerHTML === "餐饮娱乐装修" || obj.innerHTML === "店铺装修")) {
-        LoadConditionByParentID(obj.id, "CODES_ZXJC", "小类", "XL",15);
+        LoadConditionByParentID(obj.id, "CODES_ZXJC", "小类", "XL", 15);
     }
     if (name === "类别" && (obj.innerHTML !== "餐饮娱乐装修" && obj.innerHTML !== "店铺装修")) {
         $("#ul_condition_body_XL").remove();

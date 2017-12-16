@@ -51,9 +51,6 @@ function LoadJBXX(obj) {
     html += ('<span onclick="RightImg(' + obj.PHOTOS.length + ')" class="div_body_left_body_left_list_an">></span>');
     html += ('</div>');
     html += ('<div class="div_body_left_body_right">');
-    html += ('<p class="p_body_left_body_right_first">');
-    html += ('<span class="span_body_left_body_right_zj">' + obj.JG + '</span><span class="span_body_left_body_right_zjdw">元</span>');
-    html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">类别：</span>');
     html += ('<span class="span_body_left_body_right_right">' + obj.LB + '</span>');
@@ -63,15 +60,20 @@ function LoadJBXX(obj) {
     html += ('<span class="span_body_left_body_right_right">' + obj.XL + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">新旧程度：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.XJ + '</span>');
+    html += ('<span class="span_body_left_body_right_left">服务区域：</span>');
+    html += ('<span class="span_body_left_body_right_right">' + obj.FWQY + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">区域：</span>');
+    html += ('<span class="span_body_left_body_right_left">联系人：</span>');
+    html += ('<span class="span_body_left_body_right_right">' + obj.LXR + '</span>');
+    html += ('</p>');
+    html += ('<p class="p_body_left_body_right">');
+    html += ('<span class="span_body_left_body_right_left">商家地址：</span>');
     html += ('<span class="span_body_left_body_right_right">' + obj.QY + '-' + obj.DD + '</span>');
     html += ('</p>');
-    html += ('<p class="p_body_left_body_right_lxdh">');
-    html += ('<img class="img_body_left_body_right_lxdh" src="' + getRootPath() + '/Areas/Business/Css/images/lxdh.png" />' + obj.LXDH);
+    html += ('<p class="p_body_left_body_right">');
+    html += ('<span class="span_body_left_body_right_left">联系电话：</span>');
+    html += ('<span class="span_body_left_body_right_right span_body_left_body_right_right_lxdh">' + obj.LXDH.substr(0, 7) + '****' + '</span>');
     html += ('</p>');
     html += ('</div>');
     html += ('</div>');
@@ -82,14 +84,14 @@ function LoadJBXX(obj) {
 function LoadXQ(obj, BCMSString) {
     var html = "";
     html += ('<div class="div_body_left_body_xq">');
-    html += ('<p class="p_body_left_body_xq">宠物详情</p>');
-
-    html += ('<div class="div_body_left_body_xq_xx">');
-    html += ('<div class="div_body_left_body_xq_xx_left">宠物描述</div>');
+    html += ('<p class="p_body_left_body_xq">详情</p>');
+    html += ('<div id="div_body_left_body_xq_xx_bcms" class="div_body_left_body_xq_xx div_body_left_body_xq_xx_bcms">');
+    html += ('<div class="div_body_left_body_xq_xx_left">服务描述</div>');
     html += ('<div class="div_body_left_body_xq_xx_right fyms" style="padding-left:32px;">');
     html += (BCMSString);
     html += ('</div>');
     html += ('</div>');
+    html += ('<div id="div_body_left_body_xq_zk_bcms" onclick="ToggleBCMS()" class="div_body_left_body_xq_zk_bcms">展开内容<i id="i_body_left_body_xq_zk_bcms" class="i_body_left_body_xq_zk_bcms"></i></div>');
     html += ('<div id="div_body_left_body_xq_xx" class="div_body_left_body_xq_xx" style="overflow:hidden;">');
     html += ('<ul class="ul_body_left_body_xq_xx">');
     for (var i = 0; i < obj.PHOTOS.length; i++) {

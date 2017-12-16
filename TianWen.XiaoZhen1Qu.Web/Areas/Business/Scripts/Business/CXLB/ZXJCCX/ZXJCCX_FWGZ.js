@@ -12,7 +12,7 @@ function LoadZXJCCondition() {
 //选择条件
 function SelectCondition(obj, name) {
     if (name === "类别" && (obj.innerHTML !== "自建房")) {
-        LoadConditionByParentID(obj.id, "CODES_ZXJC", "小类", "XL",15);
+        LoadConditionByParentID(obj.id, "CODES_ZXJC", "小类", "XL", 15);
     }
     if (name === "类别" && (obj.innerHTML === "自建房")) {
         $("#ul_condition_body_XL").remove();
@@ -103,7 +103,7 @@ function LoadHotInfo(obj) {
     var html = "";
     html += ('<li onclick="OpenXXXX(\'ZXJCCX_ZXJC\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_right_xq">' + obj.BT + '</p>');
+    html += ('<p class="p_li_body_right_xq">' + TruncStr(obj.BT, 23) + '</p>');
     html += ('<p class="p_li_body_right_cs">' + obj.QY + '-' + obj.DD + '</p>');
     html += ('</li>');
     $("#ul_body_right").append(html);
