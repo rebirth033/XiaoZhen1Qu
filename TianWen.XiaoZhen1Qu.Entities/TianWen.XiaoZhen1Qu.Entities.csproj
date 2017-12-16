@@ -577,7 +577,7 @@
     <Compile Include="ViewModels\ES\ES_SJSM_ESSJView.cs" />
     <Compile Include="ViewModels\FC\FC_DZFView.cs" />
     <Compile Include="ViewModels\FC\FC_ESFView.cs" />
-    <Compile Include="ViewModels\FC\FC_CFCKTDCWView.cs" />
+    <Compile Include="ViewModels\FC\FC_CFView.cs" />
     <Compile Include="ViewModels\FC\FC_XZLView.cs" />
     <Compile Include="ViewModels\FC\FC_SPView.cs" />
     <Compile Include="ViewModels\FC\FC_ZZFView.cs" />

@@ -52,7 +52,7 @@ function LoadJBXX(obj) {
     html += ('</div>');
     html += ('<div class="div_body_left_body_right">');
     html += ('<p class="p_body_left_body_right_first">');
-    html += ('<span class="span_body_left_body_right_zj">' + (obj.GQ === "出租" ? obj.ZJ : obj.SJ) + '</span><span class="span_body_left_body_right_zjdw">' + obj.ZJDW + '</span>');
+    html += ('<span class="span_body_left_body_right_zj">' + (obj.GQ === "出租" ? GetJG(obj.ZJ, obj.ZJDW) : GetJG(obj.SJ, obj.ZJDW)) + '</span>');
     html += ('</p>');
     if (obj.GQ === "出租") {
         html += ('<p class="p_body_left_body_right">');

@@ -19,7 +19,7 @@ function CSSelect() {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "ZJDW") {
-            LoadCODESByTYPENAME("租金单位", "ZJDW", "CODES_FC");
+            LoadCODESByTYPENAME("厂房租金单位", "ZJDW", "CODES_FC");
         }
     });
 }
@@ -77,6 +77,7 @@ function LoadFC_CKJBXX() {
                 $("#spanQY").html(xml.Value.FC_CKJBXX.QY);
                 $("#spanDD").html(xml.Value.FC_CKJBXX.DD);
                 $("#spanZJDW").html(xml.Value.FC_CKJBXX.ZJDW);
+                SetGQ(xml.Value.FC_CKJBXX.GQ);
                 LoadPhotos(xml.Value.Photos);
             }
         },
@@ -94,7 +95,10 @@ function FB() {
     obj = jsonObj.AddJson(obj, "KZCGS", "'" + $("#spanKZCGS").html() + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
-    obj = jsonObj.AddJson(obj, "ZJDW", "'" + $("#spanZJDW").html() + "'");
+    if (GetDX("GQ") === "出租")
+        obj = jsonObj.AddJson(obj, "ZJDW", "'" + $("#spanZJDW").html() + "'");
+    if (GetDX("GQ") === "出售")
+        obj = jsonObj.AddJson(obj, "ZJDW", "'万元'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
 

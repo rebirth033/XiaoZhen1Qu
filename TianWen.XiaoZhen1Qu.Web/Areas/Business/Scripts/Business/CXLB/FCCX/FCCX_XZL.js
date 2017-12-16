@@ -4,7 +4,6 @@ $(document).ready(function () {
     BindConditionNav("FCXX_XZL");
     BindBodyNav();
     LoadCZCondition();
-    LoadHot("FCXX_XZL");
 });
 //加载出租查询条件
 function LoadCZCondition() {

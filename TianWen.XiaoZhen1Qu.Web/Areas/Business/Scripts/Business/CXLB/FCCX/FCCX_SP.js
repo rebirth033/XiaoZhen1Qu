@@ -4,8 +4,6 @@ $(document).ready(function () {
     $(".li_condition_head:eq(0)").each(function () { $(this).css("background-color", "#ffffff").css("color", "#bc6ba6"); });
     BindBodyNav();
     LoadCZCondition();
-    LoadHot("FCXX_SP");
-    LoadBody("FCXX_SP", currentIndex);
 });
 //加载出租查询条件
 function LoadCZCondition() {
