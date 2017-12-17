@@ -55,6 +55,10 @@ function LoadJBXX(obj) {
     html += ('<span class="span_body_left_body_right_zj">' + obj.JG + '</span><span class="span_body_left_body_right_zjdw">万元</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
+    html += ('<span class="span_body_left_body_right_left">车系：</span>');
+    html += ('<span class="span_body_left_body_right_right">' + obj.CX + '</span>');
+    html += ('</p>');
+    html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">表显里程：</span>');
     html += ('<span class="span_body_left_body_right_right">' + obj.XSLC + '万公里</span>');
     html += ('</p>');
@@ -71,15 +75,12 @@ function LoadJBXX(obj) {
     html += ('<span class="span_body_left_body_right_right">自动</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">所属区域：</span>');
-    html += ('<span class="span_body_left_body_right_right">滨湖新区 滨湖世纪城</span>');
-    html += ('</p>');
-    html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">看车地址：</span>');
     html += ('<span class="span_body_left_body_right_right">' + obj.KCDZ + '</span>');
     html += ('</p>');
-    html += ('<p class="p_body_left_body_right_lxdh">');
-    html += ('<img class="img_body_left_body_right_lxdh" src="' + getRootPath() + '/Areas/Business/Css/images/lxdh.png" />' + obj.LXDH);
+    html += ('<p class="p_body_left_body_right">');
+    html += ('<span class="span_body_left_body_right_left">联系电话：</span>');
+    html += ('<span class="span_body_left_body_right_right span_body_left_body_right_right_lxdh">' + obj.LXDH.substr(0, 7) + '****' + '</span>');
     html += ('</p>');
     html += ('</div>');
     html += ('</div>');
@@ -236,7 +237,7 @@ function LoadJJRTJFY(TYPE) {
                 html += ('<div class="div_body_right_jjrtj">');
                 html += ('<p class="p_body_right_jjrtj">该经纪人推荐</p>');
                 html += ('<ul id="ul_body_right_jjrtj" class="ul_body_right_jjrtj">');
-                for (var i = 0; i < xml.list.length; i++) {
+                for (var i = 0; i < 4; i++) {
                     html += LoadJJRTJFYInfo(xml.list[i]);
                 }
                 html += ('</ul>');

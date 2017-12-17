@@ -244,7 +244,8 @@ function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
                 }
                 if (typenames.indexOf("轿车品牌") !== -1)
                     LoadCondition(xml.jclist, "品牌", "PP", 15);
-                LoadURLCondition();
+                if (table.indexOf("FC_ZZF") !== -1)
+                    LoadURLCondition();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
