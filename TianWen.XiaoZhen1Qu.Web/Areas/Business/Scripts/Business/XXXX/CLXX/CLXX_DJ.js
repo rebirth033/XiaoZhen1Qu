@@ -233,7 +233,7 @@ function LoadJJRTJFYInfo(obj) {
     html += ('<div class="div_li_body_right_jjrtj">');
     html += ('<p class="p_li_body_right_jjrtj_xq">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_right_jjrtj_cs">' + obj.FWYQ + '</p>');
-    html += ('<p class="p_li_body_right_jjrtj_jg">' + obj.JG + '元</p>');
+    html += ('<p class="p_li_body_right_jjrtj_jg">' + GetJG(obj.JG,'元')+'</p>');
     html += ('</div>');
     html += ('</li>');
     return html;
