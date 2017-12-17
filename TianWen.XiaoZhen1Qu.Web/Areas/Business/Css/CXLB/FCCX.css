@@ -31,7 +31,7 @@
 .div_condition_select .ul_condition_select .li_condition_select em{ margin-left: 10px;color: #999999;}
 
 /*首页_主体_头部*/
-.div_body{display: block;width: 1200px;height: 2000px;background-color: #ffffff;padding-top: 2px;}
+.div_body{display: block;width: 1200px;height: 2000px;background-color: #ffffff;padding-top: 2px;margin-top: 20px;}
 .div_body .ul_body_head {height: 40px;display: block;padding: 0;width: 100%;border-bottom: 1.5px solid #bc6ba6;}
 .div_body .ul_body_head .li_body_head {text-align: center;color: #999999;height: 38px;border-top-left-radius: 2px;border-top-right-radius: 2px;font-size: 16px;float: left;display: inline-block;padding: 6px 20px;border-top: 1px solid #cccccc;border-left: 1px solid #cccccc;border-right: 1px solid #cccccc;margin-left: 10px;}
 .div_body .ul_body_head .li_body_head:hover{ cursor: pointer;}

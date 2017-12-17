@@ -35,7 +35,7 @@ function ValidateJG() {
         $("#spanJG").css("border-color", "#F2272D");
         return false;
     } else {
-        if (ValidateNumber($("#JG").val())) {
+        if (ValidateDecimal($("#JG").val())) {
             $("#divJGTip").css("display", "none");
             $("#spanJG").css("border-color", "#cccccc");
             return true;

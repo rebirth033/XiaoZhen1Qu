@@ -1,11 +1,11 @@
 ﻿$(document).ready(function () {
     $(".div_clys").bind("click", function () { ValidateCLYS(); });
     $("#XSLC").bind("blur", ValidateXSLC);
-    $("#XSLC").bind("focus", InfoXSLC);
+    $("#XSLC").bind("focus", function() { InfoSpanInput("XSLC", "请填写行驶里程"); });
     $("#KCDZ").bind("blur", ValidateKCDZ);
-    $("#KCDZ").bind("focus", InfoKCDZ);
+    $("#KCDZ").bind("focus", function () { InfoInput("KCDZ", "请填写看车地址"); });
     $("#JG").bind("blur", ValidateJG);
-    $("#JG").bind("focus", InfoJG);
+    $("#JG").bind("focus", function () { InfoSpanInput("JG", "价格请填写数字，默认为面议"); });
 });
 //验证客车品牌
 function ValidateKCPP() {
@@ -85,18 +85,4 @@ function ValidateCLYS() {
         $("#divCLYSTip").css("display", "none");
         return true;
     }
-}
-//行驶里程
-function InfoXSLC() {
-    $("#divXSLCTip").css("display", "block");
-    $("#divXSLCTip").attr("class", "Info");
-    $("#divXSLCTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />请填写行驶里程');
-    $("#spanXSLC").css("border-color", "#bc6ba6");
-}
-//看车地址
-function InfoKCDZ() {
-    $("#divKCDZTip").css("display", "block");
-    $("#divKCDZTip").attr("class", "Info");
-    $("#divKCDZTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />请填写看车地址');
-    $("#KCDZ").css("border-color", "#bc6ba6");
 }

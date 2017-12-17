@@ -2,8 +2,6 @@
     Layout = "~/Areas/Business/Views/Shared/CXLB.cshtml";
 }
 @section Section_Head {
-    <meta name="viewport" content="width=device-width" />
-    <title></title>
     <link href="@Url.Content("~/Areas/Business/Css/CXLB/FCCX.css")" rel="stylesheet" />
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/CXLB/FCCX/FCCX_HZF.js")"></script>
 }
@@ -29,7 +27,7 @@
     <div class="div_condition_toggle">
         <span id="span_condition_toggle" class="span_condition_toggle">更多选项<i id="i_condition_tottle" class="i_condition_tottle"></i></span>
     </div>
-    <div id="divBody" class="div_body">
+    <div id="divBody" class="div_body" style="margin-top: 0;">
         <ul class="ul_body_head">
             <li id="li_body_head_first" class="li_body_head"></li>
             <li class="li_body_head">个人房源</li>
