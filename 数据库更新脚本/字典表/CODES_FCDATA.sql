@@ -164,28 +164,28 @@ insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID
 values (54, '房屋配置', '独立卫生间', '14', 14, null);
 
 insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (55, '房屋亮点', '支持月付', '1', 1, null);
+values (55, '出租房屋亮点', '支持月付', '1', 1, null);
 
 insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (56, '房屋亮点', '首次出租', '2', 2, null);
+values (56, '出租房屋亮点', '首次出租', '2', 2, null);
 
 insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (57, '房屋亮点', '带阳台', '3', 3, null);
+values (57, '出租房屋亮点', '带阳台', '3', 3, null);
 
 insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (58, '房屋亮点', '随时看房', '4', 4, null);
+values (58, '出租房屋亮点', '随时看房', '4', 4, null);
 
 insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (59, '房屋亮点', '精装修', '5', 5, null);
+values (59, '出租房屋亮点', '精装修', '5', 5, null);
 
 insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (60, '房屋亮点', '紧邻地铁', '6', 6, null);
+values (60, '出租房屋亮点', '紧邻地铁', '6', 6, null);
 
 insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (61, '房屋亮点', '南北通透', '7', 7, null);
+values (61, '出租房屋亮点', '南北通透', '7', 7, null);
 
 insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (62, '房屋亮点', '可短租', '8', 8, null);
+values (62, '出租房屋亮点', '可短租', '8', 8, null);
 
 insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (63, '出租要求', '只限女生', '1', 1, null);
@@ -356,13 +356,13 @@ insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID
 values (118, '平板电脑配件', '其他配件', '5', 5, null);
 
 insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (119, '房屋亮点', '独立卫生间', '9', 9, null);
+values (119, '出租房屋亮点', '独立卫生间', '9', 9, null);
 
 insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (120, '房屋亮点', '独立阳台', '10', 10, null);
+values (120, '出租房屋亮点', '独立阳台', '10', 10, null);
 
 insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (121, '房屋亮点', '配套齐全', '11', 11, null);
+values (121, '出租房屋亮点', '配套齐全', '11', 11, null);
 
 insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (122, '经营行业', '美容美发', '1', 1, null);
@@ -584,7 +584,7 @@ insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID
 values (7706, '出租间性别', '限男生', '3', 3, null);
 
 insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (6201, '房屋亮点', '朝南', '9', 9, null);
+values (6201, '出租房屋亮点', '朝南', '9', 9, null);
 
 insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (219, '日租短租付款方式', '微信', '5', 5, null);
@@ -824,7 +824,7 @@ insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID
 values (221, '商铺售价', '800-1000万元', '7', 7, null);
 
 insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (222, '商铺售价', '1000万以上', '8', 8, null);
+values (222, '商铺售价', '1000万元以上', '8', 8, null);
 
 insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (1705, '二手房面积', '300-500平米', '9', 9, null);
@@ -840,5 +840,26 @@ values (1702, '二手房面积', '130-150平米', '6', 6, null);
 
 insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (1701, '二手房面积', '110-130平米', '5', 5, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (226, '出售房屋亮点', '精装修', '1', 1, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (227, '出售房屋亮点', '南北通透', '2', 2, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (228, '出售房屋亮点', '紧邻地铁', '3', 3, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (229, '出售房屋亮点', '朝南', '4', 4, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (230, '出售房屋亮点', '随时看房', '5', 5, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (231, '厂房租金单位', '元/㎡/天', '1', 1, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (232, '厂房租金单位', '元/月', '2', 2, null);
 
 prompt Done.
