@@ -110,7 +110,7 @@ function LoadXQ(obj, BCMSString) {
     html += ('</div>');
     html += ('<div class="div_body_left_body_xq_xx">');
     html += ('<div class="div_body_left_body_xq_xx_left">车辆描述</div>');
-    html += ('<div class="div_body_left_body_xq_xx_right fyms" style="padding-left:32px;">');
+    html += ('<div id="div_body_left_body_xq_xx_bcms" class="div_body_left_body_xq_xx_right fyms div_body_left_body_xq_xx_bcms">');
     html += (BCMSString);
     html += ('</div>');
     html += ('</div>');

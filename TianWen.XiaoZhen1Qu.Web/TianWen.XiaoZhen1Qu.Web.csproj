@@ -603,7 +603,7 @@
     <Content Include="Areas\Business\Css\XXXX\CL\CLXX_KC.css" />
     <Content Include="Areas\Business\Css\XXXX\CL\CLXX_HC.css" />
     <Content Include="Areas\Business\Css\XXXX\CL\CLXX_JC.css" />
-    <Content Include="Areas\Business\Css\XXXX\Common\XXXX_Common.css" />
+    <Content Include="Areas\Business\Css\Common\XXXX_Common.css" />
     <Content Include="Areas\Business\Css\XXXX\CW\CWXX_CW.css" />
     <Content Include="Areas\Business\Css\XXXX\CW\CWXX_CWYPSP.css" />
     <Content Include="Areas\Business\Css\XXXX\CW\CWXX_CWFW.css" />

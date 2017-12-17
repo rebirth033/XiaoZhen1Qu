@@ -86,7 +86,7 @@ function LoadBody(TYPE, PageIndex) {
         }
     });
 }
-//加载车辆_摩托车单条信息
+//加载单条信息
 function LoadCL_JCInfo(obj) {
     var html = "";
     html += ('<li class="li_body_left">');
@@ -136,7 +136,7 @@ function LoadHotInfo(obj) {
     var html = "";
     html += ('<li onclick="OpenXXXX(\'CLXX_QCMRZS\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_right_xq">' + TruncStr(obj.BT,23) + '</p>');
+    html += ('<p class="p_li_body_right_xq">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_right_jg">' + obj.JG + '元</p>');
     html += ('</li>');
     $("#ul_body_right").append(html);

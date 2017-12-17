@@ -8,6 +8,7 @@
 //验证所有
 function ValidateAll() {
     if (ValidateRadio("GQ", "忘记选择供求啦")
+        & ValidateSelect("DDCCX", "CX", "请选择车型")
         & ValidateSelect("DDCPP", "PP", "请选择品牌")
         & ValidateSelect("DDCDCDY", "DCDY", "请选择电池电压")
         & ValidateSelect("DDCDCRL", "DCRL", "请选择电池容量")

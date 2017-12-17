@@ -35,7 +35,7 @@
 .div_body .div_body_left .ul_body_left_body_cnxh .li_body_left_body_cnxh{width: 180px;height: 210px;border: 1px solid #e6e6e6;padding: 8px;float: left;margin-left: 18px;margin-bottom: 10px;}
 .div_body .div_body_left .ul_body_left_body_cnxh .li_body_left_body_cnxh:hover{ cursor: pointer;}
 .div_body .div_body_left .ul_body_left_body_cnxh .li_body_left_body_cnxh .img_li_body_left_body_cnxh{ height: 120px;width: 100%;margin-bottom: 10px;}
-.div_body .div_body_left .ul_body_left_body_cnxh .li_body_left_body_cnxh .p_li_body_left_body_cnxh_xq{ width: 100%;height: auto;display: block;margin-bottom: 2px;font-size: 14px;}
+.div_body .div_body_left .ul_body_left_body_cnxh .li_body_left_body_cnxh .p_li_body_left_body_cnxh_xq{ width: 100%;height: 40px;overflow: hidden;display: block;margin-bottom: 2px;font-size: 14px;}
 .div_body .div_body_left .ul_body_left_body_cnxh .li_body_left_body_cnxh .p_li_body_left_body_cnxh_cs{ width: 100%;height: 20px;display: block;color: #999999;margin-bottom: 2px;font-size: 14px;}
 .div_body .div_body_left .ul_body_left_body_cnxh .li_body_left_body_cnxh .p_li_body_left_body_cnxh_jg{width: 100%;height: 20px;display: block;color: #bc6ba6;font-size: 14px;font-weight: 700;margin-bottom: 2px;}
 /*首页_主体_左部_精品推荐*/
@@ -45,7 +45,7 @@
 .div_body .div_body_left .ul_body_left_body_jptj .li_body_left_body_jptj{width: 180px;height: 210px;border: 1px solid #e6e6e6;padding: 8px;float: left;margin-left: 18px;margin-bottom: 10px;}
 .div_body .div_body_left .ul_body_left_body_jptj .li_body_left_body_jptj:hover{ cursor: pointer;}
 .div_body .div_body_left .ul_body_left_body_jptj .li_body_left_body_jptj .img_li_body_left_body_jptj{ height: 120px;width: 100%;margin-bottom: 10px;}
-.div_body .div_body_left .ul_body_left_body_jptj .li_body_left_body_jptj .p_li_body_left_body_jptj_xq{ width: 100%;height: auto;display: block;margin-bottom: 2px;font-size: 14px;}
+.div_body .div_body_left .ul_body_left_body_jptj .li_body_left_body_jptj .p_li_body_left_body_jptj_xq{ width: 100%;height: 40px;overflow: hidden;display: block;margin-bottom: 2px;font-size: 14px;}
 .div_body .div_body_left .ul_body_left_body_jptj .li_body_left_body_jptj .p_li_body_left_body_jptj_cs{ width: 100%;height: 20px;display: block;color: #999999;margin-bottom: 2px;font-size: 14px;}
 .div_body .div_body_left .ul_body_left_body_jptj .li_body_left_body_jptj .p_li_body_left_body_jptj_jg{width: 100%;height: 20px;display: block;color: #bc6ba6;font-size: 14px;font-weight: 700;margin-bottom: 2px;}
 /*首页_主体_右部_该经纪人推荐*/

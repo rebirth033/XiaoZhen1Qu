@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-
     LoadCL_HCJBXX();
     BindClick("LB");
     BindClick("PP");
@@ -55,8 +54,11 @@ function LoadPPMC(HC) {
 }
 //选择品牌名称
 function PPXZ(PPMC, PPID) {
+    $("#PPID").val(PPID);
     $("#spanPP").html(PPMC);
     $(".div_bqss").css("display", "none");
+    $("#spanCX").html("请选择车系");
+    BindClick("CX");
 }
 //绑定下拉框
 function BindClick(type) {
@@ -68,11 +70,45 @@ function BindClick(type) {
             LoadPP();
             LoadPPMC("divRM");
         }
+        if (type === "CX") {
+            LoadCX();
+        }
         if (type === "CCNF") {
             LoadCODESByTYPENAME("出厂年份", "CCNF", "CODES_CL", Bind, "HCCCNF", "CCNF", "");
         }
         if (type === "CCYF") {
             LoadCODESByTYPENAME("出厂月份", "CCYF", "CODES_CL", Bind, "HCCCYF", "CCYF", "");
+        }
+    });
+}
+//加载货车车系
+function LoadCX() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadByParentID",
+        dataType: "json",
+        data:
+        {
+            ParentID: $("#PPID").val(),
+            TBName: "CODES_CL"
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var height = 341;
+                if (xml.list.length < 10)
+                    height = parseInt(xml.list.length * 34) + 1;
+                var html = "<ul class='ul_select' style='overflow-y: scroll; height:" + height + "px'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='li_select' onclick='SelectDropdown(this,\"CX\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
+                }
+                html += "</ul>";
+                $("#divCX").html(html);
+                $("#divCX").css("display", "block");
+                Bind("HCPP", "CX", "");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
         }
     });
 }
@@ -111,6 +147,7 @@ function LoadCL_HCJBXX() {
                 $("#spanLB").html(xml.Value.CL_HCJBXX.LB);
                 $("#spanXL").html(xml.Value.CL_HCJBXX.XL);
                 $("#spanPP").html(xml.Value.CL_HCJBXX.PP);
+                $("#spanCX").html(xml.Value.CL_HCJBXX.CX);
                 $("#spanCCNF").html(xml.Value.CL_HCJBXX.CCNF);
                 $("#spanCCYF").html(xml.Value.CL_HCJBXX.CCYF);
                 $("#spanQY").html(xml.Value.CL_HCJBXX.QY);
@@ -132,6 +169,7 @@ function FB() {
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
     obj = jsonObj.AddJson(obj, "PP", "'" + $("#spanPP").html() + "'");
+    obj = jsonObj.AddJson(obj, "CX", "'" + $("#spanCX").html() + "'");
     obj = jsonObj.AddJson(obj, "CCNF", "'" + $("#spanCCNF").html() + "'");
     obj = jsonObj.AddJson(obj, "CCYF", "'" + $("#spanCCYF").html() + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");

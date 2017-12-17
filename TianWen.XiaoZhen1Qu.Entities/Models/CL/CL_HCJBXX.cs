@@ -35,6 +35,12 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string PP { get; set; }
 
         /// <summary>
+        /// 车系
+        /// </summary>
+        [Property]
+        public virtual string CX { get; set; }
+
+        /// <summary>
         /// 行驶里程
         /// </summary>
         [Property]

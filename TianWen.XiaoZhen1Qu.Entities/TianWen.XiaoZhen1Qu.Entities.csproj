@@ -546,6 +546,7 @@
     <Compile Include="Models\ZXJC\ZXJC_JJJBXX.cs" />
     <Compile Include="Models\ZXJC\ZXJC_JZFWJBXX.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\CL\CL_DJView.cs" />
     <Compile Include="ViewModels\CL\CL_GCCView.cs" />
     <Compile Include="ViewModels\CL\CL_ZCView.cs" />
     <Compile Include="ViewModels\CL\CL_JXView.cs" />

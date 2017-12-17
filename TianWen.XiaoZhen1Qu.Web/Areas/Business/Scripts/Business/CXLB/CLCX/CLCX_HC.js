@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadCLCondition() {
-    LoadConditionByTypeNames("'货车车型','货车品牌','客车价格'", "CODES_CL", "车型,品牌,价格", "CX,PP,JG", "15,14,15");
+    LoadConditionByTypeNames("'货车车型','货车品牌','客车价格'", "CODES_CL", "车型,品牌,价格", "LB,PP,JG", "15,14,15");
     LoadBody("CLXX_HC", currentIndex);
 }
 //选择条件
@@ -53,13 +53,13 @@ function LoadBody(TYPE, PageIndex) {
 //加载车辆_轿车单条信息
 function LoadCL_JCInfo(obj) {
     var html = "";
-    html += ('<li class="li_body_left">');
+    html += ('<li class="li_body_left" onclick="OpenXXXX(\'CLXX_HC\',\'' + obj.ID + '\')">');
     html += ('<div class="div_li_body_left_left">');
-    html += ('<img class="img_li_body_left" onclick="OpenXXXX(\'CLXX_HC\',\'' + obj.ID + '\')" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
+    html += ('<img class="img_li_body_left" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<div class="div_img_li_body_left_count"><span>' + obj.PHOTOS.length + '图</span></div>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
-    html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'CLXX_HC\',\'' + obj.ID + '\')">' + (obj.BT.length > 30 ? (obj.BT.substr(0, 35)+ '...') : obj.BT)  + '</p>');
+    html += ('<p class="p_li_body_left_center_bt">' + (obj.BT.length > 30 ? (obj.BT.substr(0, 35)+ '...') : obj.BT)  + '</p>');
     html += ('<p class="p_li_body_left_center_cs font_size16">' + obj.LB + ' / ' + obj.CCNF + ' / ' + obj.XSLC + '万公里' + ' / ' + obj.EDZZ + '吨</p>');
     html += ('<p class="p_li_body_left_center_dz font_size16">' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');

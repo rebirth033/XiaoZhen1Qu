@@ -80,7 +80,7 @@ function LoadXQ(obj, BCMSString) {
 
     html += ('<div class="div_body_left_body_xq_xx">');
     html += ('<div class="div_body_left_body_xq_xx_left">车辆描述</div>');
-    html += ('<div class="div_body_left_body_xq_xx_right fyms" style="padding-left:32px;">');
+    html += ('<div id="div_body_left_body_xq_xx_bcms" class="div_body_left_body_xq_xx_right fyms div_body_left_body_xq_xx_bcms">');
     html += (BCMSString);
     html += ('</div>');
     html += ('</div>');
@@ -141,7 +141,7 @@ function LoadCNXHInfo(obj) {
     var html = "";
     html += ('<li onclick="OpenXXXX(\'CWXX_CWM\',\'' + obj.ID + '\')" class="li_body_left_body_cnxh">');
     html += ('<img class="img_li_body_left_body_cnxh" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_left_body_cnxh_xq">' + TruncStr(obj.BT,23) + '</p>');
+    html += ('<p class="p_li_body_left_body_cnxh_xq">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_left_body_cnxh_jg">' + obj.JG + '元</p>');
     html += ('</li>');
     return html;
@@ -183,7 +183,7 @@ function LoadJPTJInfo(obj) {
     var html = "";
     html += ('<li onclick="OpenXXXX(\'CWXX_CWM\',\'' + obj.ID + '\')" class="li_body_left_body_jptj">');
     html += ('<img class="img_li_body_left_body_jptj" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_left_body_jptj_xq">' + TruncStr(obj.BT,23) + '</p>');
+    html += ('<p class="p_li_body_left_body_jptj_xq">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_left_body_jptj_jg">' + obj.JG + '元</p>');
     html += ('</li>');
     return html;
@@ -229,7 +229,7 @@ function LoadJJRTJFYInfo(obj) {
     html += ('<li onclick="OpenXXXX(\'CWXX_CWM\',\'' + obj.ID + '\')" class="li_body_right_jjrtj">');
     html += ('<img class="img_li_body_right_jjrtj" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<div class="div_li_body_right_jjrtj">');
-    html += ('<p class="p_li_body_right_jjrtj_xq">' + TruncStr(obj.BT,23) + '</p>');
+    html += ('<p class="p_li_body_right_jjrtj_xq">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_right_jjrtj_jg">' + obj.JG + '元</p>');
     html += ('</div>');
     html += ('</li>');

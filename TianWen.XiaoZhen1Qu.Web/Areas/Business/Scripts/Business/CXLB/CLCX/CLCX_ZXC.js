@@ -47,16 +47,16 @@ function LoadBody(TYPE, PageIndex) {
         }
     });
 }
-//加载车辆_摩托车单条信息
+//加载单条信息
 function LoadCL_JCInfo(obj) {
     var html = "";
-    html += ('<li class="li_body_left">');
+    html += ('<li class="li_body_left" onclick="OpenXXXX(\'CLXX_ZXC\',\'' + obj.ID + '\')">');
     html += ('<div class="div_li_body_left_left">');
-    html += ('<img class="img_li_body_left" onclick="OpenXXXX(\'CLXX_ZXC\',\'' + obj.ID + '\')" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
+    html += ('<img class="img_li_body_left" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<div class="div_img_li_body_left_count"><span>' + obj.PHOTOS.length + '图</span></div>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
-    html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'CLXX_ZXC\',\'' + obj.ID + '\')">' + TruncStr(obj.BT, 35) + '</p>');
+    html += ('<p class="p_li_body_left_center_bt">' + TruncStr(obj.BT, 35) + '</p>');
     html += (obj.BCMSString);
     html += ('<p class="p_li_body_left_center_dz font_size16">' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');

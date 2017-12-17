@@ -70,8 +70,9 @@ function LoadJBXX(obj) {
     html += ('<span class="span_body_left_body_right_left">区域：</span>');
     html += ('<span class="span_body_left_body_right_right">' + obj.QY +"-" + obj.DD + '</span>');
     html += ('</p>');
-    html += ('<p class="p_body_left_body_right_lxdh" style="margin-top:126px;">');
-    html += ('<img class="img_body_left_body_right_lxdh" src="' + getRootPath() + '/Areas/Business/Css/images/lxdh.png" />' + obj.LXDH);
+    html += ('<p class="p_body_left_body_right">');
+    html += ('<span class="span_body_left_body_right_left">联系电话：</span>');
+    html += ('<span class="span_body_left_body_right_right span_body_left_body_right_right_lxdh">' + obj.LXDH.substr(0, 7) + '****' + '</span>');
     html += ('</p>');
     html += ('</div>');
     html += ('</div>');
@@ -86,7 +87,7 @@ function LoadXQ(obj, BCMSString) {
 
     html += ('<div class="div_body_left_body_xq_xx">');
     html += ('<div class="div_body_left_body_xq_xx_left">车辆描述</div>');
-    html += ('<div class="div_body_left_body_xq_xx_right fyms" style="padding-left:32px;">');
+    html += ('<div id="div_body_left_body_xq_xx_bcms" class="div_body_left_body_xq_xx_right fyms div_body_left_body_xq_xx_bcms">');
     html += (BCMSString);
     html += ('</div>');
     html += ('</div>');

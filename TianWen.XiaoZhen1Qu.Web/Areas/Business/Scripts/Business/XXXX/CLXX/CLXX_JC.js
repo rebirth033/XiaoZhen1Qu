@@ -95,21 +95,17 @@ function LoadXQ(obj, BCMSString) {
     html += ('<div class="div_body_left_body_xq_xx">');
     html += ('<div class="div_body_left_body_xq_xx_left">基本信息</div>');
     html += ('<div class="div_body_left_body_xq_xx_right" style="width: 600px;">');
-
     html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_right_left">上牌时间</span><span class="span_body_left_body_xq_xx_right_right">' + obj.SPNF + obj.SPYF + '</span></p>');
     html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_right_left">4S店定期保养</span><span class="span_body_left_body_xq_xx_right_right">' + obj.SFDQBY + '</span></p>');
-
     html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_right_left">表显里程</span><span class="span_body_left_body_xq_xx_right_right">' + obj.XSLC + '万公里</span></p>');
     html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_right_left">年检到期</span><span class="span_body_left_body_xq_xx_right_right">' + (obj.NJDQNF === null ? "未填写" : obj.NJDQNF) + '</span></p>');
-
     html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_right_left">排量</span><span class="span_body_left_body_xq_xx_right_right">' + obj.PL + '</span></p>');
     html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_right_left">商业险到期</span><span class="span_body_left_body_xq_xx_right_right">' + obj.SYXDQ + '</span></p>');
-
     html += ('</div>');
     html += ('</div>');
     html += ('<div class="div_body_left_body_xq_xx">');
     html += ('<div class="div_body_left_body_xq_xx_left">车辆描述</div>');
-    html += ('<div class="div_body_left_body_xq_xx_right fyms" style="padding-left:32px;">');
+    html += ('<div id="div_body_left_body_xq_xx_bcms" class="div_body_left_body_xq_xx_right fyms div_body_left_body_xq_xx_bcms">');
     html += (BCMSString);
     html += ('</div>');
     html += ('</div>');
@@ -122,7 +118,6 @@ function LoadXQ(obj, BCMSString) {
     }
     html += ('</ul>');
     html += ('</div>');
-
     html += ('<div id="div_body_left_body_xq_zk" onclick="ToggleImg(' + obj.PHOTOS.length + ')" class="div_body_left_body_xq_zk">展开更多图片 共（' + obj.PHOTOS.length + '）张</div>');
     html += ('</div>');
     $("#div_body_left").append(html);

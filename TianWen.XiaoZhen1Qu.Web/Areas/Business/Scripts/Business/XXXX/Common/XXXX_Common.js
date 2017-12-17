@@ -98,10 +98,10 @@ function RightImg(length) {
 //伸缩图片
 function ToggleImg(length) {
     if ($("#div_body_left_body_xq_zk").html().indexOf("展开") !== -1) {
-        $("#div_body_left_body_xq_xx").css("overflow", "visible").css("height", "auto");
+        $("#div_body_left_body_xq_xx").css("overflow", "visible").css("height", "auto").css("margin-bottom","0");
         $("#div_body_left_body_xq_zk").html("收起更多图片 共（" + length + "）张");
     } else {
-        $("#div_body_left_body_xq_xx").css("overflow", "hidden").css("height", "710px");
+        $("#div_body_left_body_xq_xx").css("overflow", "hidden").css("height", "710px").css("margin-bottom", "10px");
         $("#div_body_left_body_xq_zk").html("展开更多图片 共（" + length + "）张");
     }
 }

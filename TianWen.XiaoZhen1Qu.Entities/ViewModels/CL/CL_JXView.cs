@@ -12,6 +12,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.ViewModels.CL
         public string YHID { get; set; }
         public decimal STATUS { get; set; }
         public string XQDZ { get; set; }
+        public string LXR { get; set; }
         public string LXDH { get; set; }
         public DateTime ZXGXSJ { get; set; }
         public byte[] BCMS { get; set; }
@@ -19,6 +20,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.ViewModels.CL
         //详细信息
         public string ID { get; set; }
         public string LB { get; set; }
+        public string JG { get; set; }
         public string QY { get; set; }
         public string DD { get; set; }
         public string JTDZ { get; set; }
