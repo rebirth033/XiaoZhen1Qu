@@ -23,7 +23,7 @@
 /*首页_头部_导航*/
 .div_nav { width: 1200px;height: 28px;display: block;}
 .div_nav .ul_nav { width: 100%;padding: 0;}
-.div_nav .ul_nav .li_nav_font{ float: left;font-size: 13px;}
+.div_nav .ul_nav .li_nav_font{ float: left;font-size: 14px;}
 .div_nav .ul_nav .li_nav_split{ float: left;margin-left: 10px;margin-right: 10px;}
 
 /*首页_头部_查询条件*/
@@ -32,7 +32,7 @@
 .div_condition .ul_condition_head .li_condition_head{display: inline-block;float: left;text-align: center;color: #999999;font-size: 16px;width: 100px;height: 40px;padding: 8px 10px;background-color: #eeeff1;cursor: pointer;}
 .div_condition .div_condition_body{ width: 100%;height: auto;}
 .div_condition .div_condition_body .ul_condition_body{ padding: 0;width: 1110px;height: 30px;}
-.div_condition .div_condition_body .ul_condition_body .li_condition_body_first{ font-weight: 700;color: #999999;float: left;font-size: 13px;display: inline-block;width: 80px;height: 100%;padding-left: 20px;}
+.div_condition .div_condition_body .ul_condition_body .li_condition_body_first{ font-weight: 700;color: #999999;float: left;font-size: 14px;display: inline-block;width: 80px;height: 100%;padding-left: 20px;}
 .div_condition .div_condition_body .ul_condition_body .li_condition_body{ display: inline-block;width: auto;height: 100%;margin-right: 20px;font-size: 14px;}
 .div_condition .div_condition_body .ul_condition_body .li_condition_body:hover{ cursor: pointer;color: #bc6ba6;text-decoration: underline;}
 .div_condition .div_condition_body .ul_condition_body .li_condition_body_active{color: #bc6ba6;}
@@ -86,7 +86,7 @@
 .div_body .div_body_right .ul_body_right .li_body_right:hover{ cursor: pointer;}
 .div_body .div_body_right .ul_body_right .li_body_right .img_li_body_right{ height: 120px;width: 100%;margin-bottom: 10px;}
 .div_body .div_body_right .ul_body_right .li_body_right .p_li_body_right_xq{ width: 100%;height: 20px;display: block;margin-bottom: 2px;font-size: 12px;}
-.div_body .div_body_right .ul_body_right .li_body_right .p_li_body_right_cs{ width: 100%;height: 20px;display: block;color: #999999;margin-bottom: 2px;font-size: 13px;}
+.div_body .div_body_right .ul_body_right .li_body_right .p_li_body_right_cs{ width: 100%;height: 20px;display: block;color: #999999;margin-bottom: 2px;font-size: 14px;}
 .div_body .div_body_right .ul_body_right .li_body_right .p_li_body_right_jg{width: 100%;height: 20px;display: block;color: #bc6ba6;font-size: 16px;margin-bottom: 2px;}
 
 .font_size16{ font-size: 16px;}

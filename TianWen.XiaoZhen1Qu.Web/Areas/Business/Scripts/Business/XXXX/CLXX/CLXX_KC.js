@@ -1,4 +1,5 @@
-﻿$(document).ready(function () {
+﻿var right = 0;
+$(document).ready(function () {
 
 });
 //加载默认
@@ -70,20 +71,18 @@ function LoadJBXX(obj) {
     html += ('<span class="span_body_left_body_right_right">' + obj.NJDQNF +"年" + obj.NJDQYF + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">是否定期保养：</span>');
+    html += ('<span class="span_body_left_body_right_left">定期保养：</span>');
     html += ('<span class="span_body_left_body_right_right">' + obj.SFDQBY + '</span>');
     html += ('</p>');
-    html += ('<p class="p_body_left_body_right_lxdh">');
-    html += ('<img class="img_body_left_body_right_lxdh" src="' + getRootPath() + '/Areas/Business/Css/images/lxdh.png" />' + obj.LXDH);
+    html += ('<p class="p_body_left_body_right">');
+    html += ('<span class="span_body_left_body_right_left">联系电话：</span>');
+    html += ('<span class="span_body_left_body_right_right span_body_left_body_right_right_lxdh">' + obj.LXDH.substr(0, 7) + '****' + '</span>');
     html += ('</p>');
     html += ('</div>');
     html += ('</div>');
     $("#div_body_left").append(html);
     HandlerTPXX();
 }
-   
-var right = 0;
-
 //加载车辆详情
 function LoadXQ(obj, BCMSString) {
     var html = "";
@@ -97,7 +96,7 @@ function LoadXQ(obj, BCMSString) {
     html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_right_left">表显里程</span><span class="span_body_left_body_xq_xx_right_right">' + obj.XSLC + '</span></p>');
 
     html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_right_left">马力</span><span class="span_body_left_body_xq_xx_right_right">120匹</span></p>');
-    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_right_left">变速箱档位数</span><span class="span_body_left_body_xq_xx_right_right">5</span></p>');
+    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_right_left">档位数</span><span class="span_body_left_body_xq_xx_right_right">5</span></p>');
 
     html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_right_left">整车重量</span><span class="span_body_left_body_xq_xx_right_right">4.49吨</span></p>');
     html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_right_left">额定载重</span><span class="span_body_left_body_xq_xx_right_right">' + obj.EDZZ + '吨</span></p>');
