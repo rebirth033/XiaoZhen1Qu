@@ -1,20 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using TianWen.XiaoZhen1Qu.Entities.Models;
+using TianWen.XiaoZhen1Qu.Entities.ViewModels.Common;
 
 namespace TianWen.XiaoZhen1Qu.Entities.ViewModels.FC
 {
-    public class FC_XZLView
+    public class FC_XZLView : BaseView
     {
-        //基础信息
-        public string JCXXID { get; set; }
-        public string BT { get; set; }
-        public string YHID { get; set; }
-        public decimal STATUS { get; set; }
-        public string XQDZ { get; set; }
-        public string LXDH { get; set; }
-        public DateTime ZXGXSJ { get; set; }
-        public byte[] BCMS { get; set; }
         //商铺信息
         public string ID { get; set; }
         public string ZJ { get; set; }
@@ -32,7 +24,5 @@ namespace TianWen.XiaoZhen1Qu.Entities.ViewModels.FC
         public string QYNX { get; set; }
         public string ZXGJ { get; set; }
         public string YFFS { get; set; }
-        //图片
-        public IList<PHOTOS> PHOTOS { get; set; }
     }
 }

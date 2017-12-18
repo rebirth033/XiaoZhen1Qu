@@ -561,6 +561,7 @@
     <Compile Include="ViewModels\CL\CL_KCView.cs" />
     <Compile Include="ViewModels\CL\CL_HCView.cs" />
     <Compile Include="ViewModels\CL\CL_JCView.cs" />
+    <Compile Include="ViewModels\Common\BaseView.cs" />
     <Compile Include="ViewModels\CW\CW_CWZSLYView.cs" />
     <Compile Include="ViewModels\CW\CW_CWFWView.cs" />
     <Compile Include="ViewModels\CW\CW_CWYPSPView.cs" />

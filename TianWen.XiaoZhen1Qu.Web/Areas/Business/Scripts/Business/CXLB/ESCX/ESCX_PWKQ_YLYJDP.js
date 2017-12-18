@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadESCondition() {
-    LoadConditionByTypeNames("'游乐园/景点票类别','卡券价格'", "CODES_ES_PWKQ", "类别,价格", "LB,JG", "15,15");
+    LoadConditionByTypeNames("'游乐园/景点票类别','卡券价格'", "CODES_ES_PWKQ", "类别,价格", "LB,JG", "14,15");
     LoadBody("ESXX_PWKQ_YLYJDP", currentIndex);
 }
 //选择条件
@@ -50,10 +50,10 @@ function LoadBody(TYPE, PageIndex) {
 //加载二手单条信息
 function LoadInfo(obj) {
     var html = "";
-    html += ('<li class="li_body_left">');
+    html += ('<li class="li_body_left" onclick="OpenXXXX(\'ESXX_PWKQ_YLYJDP\',\'' + obj.ID + '\')">');
     html += ('<div class="div_li_body_left_left">');html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
-    html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'ESXX_PWKQ_YLYJDP\',\'' + obj.ID + '\')">' + obj.BT + '</p>');
+    html += ('<p class="p_li_body_left_center_bt">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_left_center_nr">' + obj.BCMSString.replace(/<\/?.+?>/g, "") + '</p>');
     html += ('<p class="p_li_body_left_center_dz font_size14">' + obj.QY + ' - ' + obj.DD + '&nbsp;&nbsp;&nbsp;&nbsp;' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');

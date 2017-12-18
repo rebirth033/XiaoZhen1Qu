@@ -3,20 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using TianWen.XiaoZhen1Qu.Entities.Models;
+using TianWen.XiaoZhen1Qu.Entities.ViewModels.Common;
 
 namespace TianWen.XiaoZhen1Qu.Entities.ViewModels.CL
 {
-    public class CL_HCView
+    public class CL_HCView : BaseView
     {
-        //基础信息
-        public string JCXXID { get; set; }
-        public string BT { get; set; }
-        public string YHID { get; set; }
-        public decimal STATUS { get; set; }
-        public string XQDZ { get; set; }
-        public string LXDH { get; set; }
-        public DateTime ZXGXSJ { get; set; }
-        public byte[] BCMS { get; set; }
         //车辆_货车信息
         public string ID { get; set; }
         public string LB { get; set; }
@@ -28,9 +20,5 @@ namespace TianWen.XiaoZhen1Qu.Entities.ViewModels.CL
         public string EDZZ { get; set; }
         public string QY { get; set; }
         public string DD { get; set; }
-        //图片
-        public IList<PHOTOS> PHOTOS { get; set; }
-
-
     }
 }
