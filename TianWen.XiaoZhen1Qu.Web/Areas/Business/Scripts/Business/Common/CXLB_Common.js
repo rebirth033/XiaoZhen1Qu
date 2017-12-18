@@ -323,6 +323,7 @@ function LoadDistrict(name, code, type) {
 }
 //加载查询条件
 function LoadDistrictCondition(array, type) {
+    $("#div_condition_body_" + type).html('');
     var html = "";
     html += '<ul id="ul_condition_body_' + type + '" class="ul_condition_body">';
     html += '<li class="li_condition_body_first">区域</li>';

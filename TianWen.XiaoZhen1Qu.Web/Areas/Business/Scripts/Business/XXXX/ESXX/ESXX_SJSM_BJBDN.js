@@ -31,7 +31,7 @@ function LoadDefault() {
 function LoadJBXX(obj) {
     var html = "";
     html += ('<div class="div_body_left_head">');
-    html += ('<p class="p_div_body_left_head_bt">' + TruncStr(obj.BT, 35) + '</p>');
+    html += ('<p class="p_div_body_left_head_bt">' + obj.BT + '</p>');
     html += ('<p class="p_div_body_left_head_ll">11月5日 22:36 3次浏览 </p>');
     html += ('</div>');
     html += ('<div class="div_body_left_body">');
@@ -82,8 +82,9 @@ function LoadJBXX(obj) {
     html += ('<span class="span_body_left_body_right_left">区域：</span>');
     html += ('<span class="span_body_left_body_right_right">' + obj.QY + '-' + obj.DD + '</span>');
     html += ('</p>');
-    html += ('<p class="p_body_left_body_right_lxdh">');
-    html += ('<img class="img_body_left_body_right_lxdh" src="' + getRootPath() + '/Areas/Business/Css/images/lxdh.png" />' + obj.LXDH);
+    html += ('<p class="p_body_left_body_right">');
+    html += ('<span class="span_body_left_body_right_left">联系电话：</span>');
+    html += ('<span class="span_body_left_body_right_right span_body_left_body_right_right_lxdh">' + obj.LXDH.substr(0, 7) + '****' + '</span>');
     html += ('</p>');
     html += ('</div>');
     html += ('</div>');

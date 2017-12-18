@@ -31,7 +31,7 @@ function LoadDefault() {
 function LoadJBXX(obj) {
     var html = "";
     html += ('<div class="div_body_left_head">');
-    html += ('<p class="p_div_body_left_head_bt">' + TruncStr(obj.BT, 35) + '</p>');
+    html += ('<p class="p_div_body_left_head_bt">' + obj.BT + '</p>');
     html += ('<p class="p_div_body_left_head_ll">11月5日 22:36 3次浏览 </p>');
     html += ('</div>');
     html += ('<div class="div_body_left_body">');
@@ -75,14 +75,14 @@ function LoadJBXX(obj) {
 function LoadXQ(obj, BCMSString) {
     var html = "";
     html += ('<div class="div_body_left_body_xq">');
-    html += ('<p class="p_body_left_body_xq">宠物详情</p>');
-
+    html += ('<p class="p_body_left_body_xq">物品详情</p>');
     html += ('<div class="div_body_left_body_xq_xx">');
-    html += ('<div class="div_body_left_body_xq_xx_left">宠物描述</div>');
+    html += ('<div class="div_body_left_body_xq_xx_left">物品描述</div>');
     html += ('<div id="div_body_left_body_xq_xx_bcms" class="div_body_left_body_xq_xx_right fyms div_body_left_body_xq_xx_bcms">');
     html += (BCMSString);
     html += ('</div>');
     html += ('</div>');
+
     html += ('<div id="div_body_left_body_xq_xx" class="div_body_left_body_xq_xx" style="overflow:hidden;">');
     html += ('<ul class="ul_body_left_body_xq_xx">');
     for (var i = 0; i < obj.PHOTOS.length; i++) {
@@ -92,7 +92,6 @@ function LoadXQ(obj, BCMSString) {
     }
     html += ('</ul>');
     html += ('</div>');
-
     html += ('<div id="div_body_left_body_xq_zk" onclick="ToggleImg(' + obj.PHOTOS.length + ')" class="div_body_left_body_xq_zk">展开更多图片 共（' + obj.PHOTOS.length + '）张</div>');
     html += ('</div>');
     $("#div_body_left").append(html);

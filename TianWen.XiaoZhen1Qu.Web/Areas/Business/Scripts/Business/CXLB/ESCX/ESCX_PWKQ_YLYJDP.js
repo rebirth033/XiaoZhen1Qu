@@ -53,7 +53,7 @@ function LoadInfo(obj) {
     html += ('<li class="li_body_left">');
     html += ('<div class="div_li_body_left_left">');html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
-    html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'ESXX_PWKQ_YLYJDP\',\'' + obj.ID + '\')">' + TruncStr(obj.BT, 35) + '</p>');
+    html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'ESXX_PWKQ_YLYJDP\',\'' + obj.ID + '\')">' + obj.BT + '</p>');
     html += (TruncStr(obj.BCMSString, 35));
     html += ('<p class="p_li_body_left_center_dz font_size14">' + obj.QY + ' - ' + obj.DD + '<label>/</label>' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');

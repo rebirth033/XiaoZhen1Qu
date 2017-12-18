@@ -9,6 +9,11 @@ $(document).ready(function () {
     $("#li_head_sy").css("background", "#bc6ba6").css("color", "#ffffff");
     LoadDefault();
 });
+//首页获取title
+function GetHeadNav()
+{
+    $("#title").html("信息小镇_首页");
+}
 //发布信息
 function FBXX() {
     window.open(getRootPath() + "/Business/LBXZ/LBXZ");

@@ -860,7 +860,7 @@
     <Content Include="Areas\Business\Scripts\Business\CXLB\CLCX\CLCX_KC.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\CLCX\CLCX_HC.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\CLCX\CLCX_JC.js" />
-    <Content Include="Areas\Business\Scripts\Business\CXLB\Common\CXLB_Common.js" />
+    <Content Include="Areas\Business\Scripts\Business\Common\CXLB_Common.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\CWCX\CWCX_CWGY.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\CWCX\CWCX_CWYPSP.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\CWCX\CWCX_CWFW.js" />
@@ -1550,7 +1550,7 @@
     <Content Include="Areas\Business\Scripts\Business\HTFB\ZXJC\ZXJC_JJYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\ZXJC\ZXJC_JZFW.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\ZXJC\ZXJC_JZFWYZ.js" />
-    <Content Include="Areas\Business\Scripts\Business\XXXX\Common\XXXX_Common.js" />
+    <Content Include="Areas\Business\Scripts\Business\Common\XXXX_Common.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\HQSYXX\HQSYXX_HCZL.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\HQSYXX\HQSYXX_HYJD.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\HQSYXX\HQSYXX_CZZX.js" />
