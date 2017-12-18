@@ -1,5 +1,4 @@
 ﻿@{
-    ViewBag.Title = "QZZP_QZZP";
     Layout = "~/Areas/Business/Views/Shared/HTFB.cshtml";
 }
 @section Section_Head {
@@ -29,18 +28,18 @@
                 <span class="spanFWCZ">职位名称</span>
             </div>
             <div class="div_row_right">
-                <div id="divZWLBText" class="div_select_out SRK" style="position: relative;">
+                <div id="divZWLBText" class="div_select_out SRK" style="position: relative;z-index: 998;">
                     <div id="divZWLBSpan" class="div_select_in" style="border: none; margin-top: 6px;">
                         <input type="hidden" id="HYLB" column="HYLB" />
                         <input type="hidden" id="ZWLBID" />
-                        <span id="spanZWLB" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择职位名称</span>
+                        <span id="spanZWLB" class="span_select spaninput_fontcolor" style="margin-top: 0;">请选择职位名称</span>
                         <div class="span_select_arrow"></div>
                     </div>
                     <div id="divZWLB" class="div_bqss" style="display: none">
                     </div>
                 </div>
             </div>
-            <div id="divZPZWLBTip" class="Warn" style="z-index: 998; position: relative;"></div>
+            <div id="divZPZWLBTip" class="Warn" style="z-index: 997; position: relative;"></div>
         </div>
         <div id="divZPRS" class="div_row" style="margin-top: 22px; z-index: 998;">
             <div class="div_row_left">
@@ -48,7 +47,7 @@
                 <span class="spanFWCZ">招聘人数</span>
             </div>
             <div class="div_row_right">
-                <span id="spanZPRS" class="span_spaninput SRK" style="display: inline-block; width: 150px;">
+                <span id="spanZPRS" class="span_spaninput SRK" style="display: inline-block;">
                     <input class="input_spaninput spaninput_fontcolor" id="ZPRS" maxlength="9" column="ZPRS" type="text" style="width: 120px" />
                     <span class="spaninput_fontcolor">人</span>
                 </span>

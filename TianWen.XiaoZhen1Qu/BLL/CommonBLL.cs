@@ -61,7 +61,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
         {
             try
             {
-                List<CODES_DISTRICT> districts = DAO.GetObjectList<CODES_DISTRICT>(string.Format("FROM CODES_DISTRICT WHERE ShortName = '{0}' ORDER BY CODE", ShortName)).ToList();
+                List<CODES_DISTRICT> districts = DAO.GetObjectList<CODES_DISTRICT>(string.Format("FROM CODES_DISTRICT WHERE CODEVALUE = '{0}' ORDER BY CODEORDER", ShortName)).ToList();
                 return new { Result = EnResultType.Success, list = districts };
             }
             catch (Exception ex)

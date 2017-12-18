@@ -50,7 +50,7 @@ function LoadGZCS(JCLX, JCBQ) {
             if (xml.Result === 1) {
                 var html = "";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += '<span class="span_mc" onclick="GZCSXZ(\'' + xml.list[i].NAME + '\',\'' + xml.list[i].CODE + '\')">' + xml.list[i].NAME + '</span>';
+                    html += '<span class="span_mc" onclick="GZCSXZ(\'' + xml.list[i].CODENAME + '\',\'' + xml.list[i].CODEID + '\')">' + xml.list[i].CODENAME + '</span>';
                 }
                 if (xml.list.length === 0)
                     html += '<span class="span_mc" style=\"width:200px;text-align:left;margin-left:14px;\">该字母下暂无数据</span>';

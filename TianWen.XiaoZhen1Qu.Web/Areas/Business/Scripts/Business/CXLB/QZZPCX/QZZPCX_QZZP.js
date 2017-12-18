@@ -1,7 +1,7 @@
 ﻿var currentIndex = 1;
 $(document).ready(function () {
     BindBodyNav();
-    LoadESCondition();
+    LoadQZZPCondition();
     LoadHot("QZZPXX_QZZP");
 });
 //获取头部导航
@@ -48,14 +48,15 @@ function GetHeadNav() {
     });
 }
 //加载条件
-function LoadESCondition() {
-    LoadConditionByTypeNames("'" + getUrlParam("HYLB") + "类别','每月薪资','职位福利'", "CODES_QZZP", "类别,薪资,福利", "ZWLB,MYXZ,ZWFL", "7,9,15");
-    LoadBody("QZZPXX_QZZP", currentIndex);
+function LoadQZZPCondition() {
+    LoadConditionByTypeNames("'" + getUrlParam("HYLB") + "类别','每月薪资','职位福利'", "CODES_QZZP", "类别,薪资,福利", "ZWLB,MYXZ,ZWFL", "100,15,15");
 }
 //加载URL查询条件
 function LoadURLCondition() {
     if (getUrlParam("ZWLB") !== null)
         SelectURLCondition(getUrlParam("ZWLB"));
+    else
+        LoadBody("QZZPXX_QZZP", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -80,6 +81,56 @@ function SelectURLCondition(obj) {
     $("#" + obj).addClass("li_condition_body_active");
     LoadBody("QZZPXX_QZZP", currentIndex);
     ShowSelectCondition("QZZPXX_QZZP");
+}
+//根据TYPENAME获取字典表
+function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAMES",
+        dataType: "json",
+        data:
+        {
+            TYPENAMES: typenames,
+            TBName: table
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                LoadDistrictCondition(xml.districts, "QY");
+                var typelist = typenames.split(',');
+                var namelist = names.split(',');
+                for (var i = 0; i < typelist.length; i++) {
+                    for (var j = 0; j < namelist.length; j++) {
+                        if (typelist[i].indexOf(namelist[j]) !== -1) {
+                            LoadCondition(_.filter(xml.list, function (value) { return typelist[i].indexOf(value.TYPENAME) !== -1; }), namelist[j], ids.split(',')[j], lengths.split(',')[j]);
+                        }
+                    }
+                }
+                if (table.indexOf("QZZP") !== -1)
+                    LoadURLCondition();
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//加载查询条件
+function LoadCondition(array, name, id, length) {
+    $("#ul_condition_body_" + id).remove();
+    var html = "";
+    html += '<ul id="ul_condition_body_' + id + '" class="ul_condition_body">';
+    if (name === "类别")
+        html += '<li id="li_condition_body_first_' + id + '" class="li_condition_body_first">' + name + '</li>';
+    else
+        html += '<li class="li_condition_body_first">' + name + '</li>';
+    html += '<li id="0" class="li_condition_body li_condition_body_active" onclick="SelectCondition(this,\'' + name + '\')">全部</li>';
+    for (var i = 0; i < (array.length > length ? length : array.length) ; i++) {
+        html += '<li id="' + array[i].CODEID + '" class="li_condition_body" onclick="SelectCondition(this,\'' + name + '\')">' + array[i].CODENAME + '</li>';
+    }
+    html += '</ul>';
+    $("#div_condition_body_" + id).append(html);
+
+    $("#li_condition_body_first_" + id).css("height", (parseInt($("#div_condition_body_" + id).css("height"))-10));
 }
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {

@@ -209,7 +209,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 if (TBName == "CODES_ZSJM")
                     return new { Result = EnResultType.Success, districts, list = DAO.Repository.GetObjectList<CODES_ZSJM>(String.Format("FROM CODES_ZSJM WHERE TYPENAME in({0}) ORDER BY TYPENAME,CODEORDER", TYPENAMES)) };
                 if (TBName == "CODES_QZZP")
-                    return new { Result = EnResultType.Success, districts, list = DAO.Repository.GetObjectList<CODES_QZZP>(String.Format("FROM CODES_QZZP WHERE TYPENAME in({0}) ORDER BY TYPENAME,CODEORDER", TYPENAMES)) };
+                    return new { Result = EnResultType.Success, districts, list = DAO.Repository.GetObjectList<CODES_QZZP>(String.Format("FROM CODES_QZZP WHERE TYPENAME in({0}) AND CODENAME !='面议' ORDER BY TYPENAME,CODEORDER", TYPENAMES)) };
                 if (TBName == "CODES_SWFW")
                     return new { Result = EnResultType.Success, districts, list = DAO.Repository.GetObjectList<CODES_SWFW>(String.Format("FROM CODES_SWFW WHERE TYPENAME in({0}) ORDER BY TYPENAME,CODEORDER", TYPENAMES)) };
                 if (TBName == "CODES_SHFW")

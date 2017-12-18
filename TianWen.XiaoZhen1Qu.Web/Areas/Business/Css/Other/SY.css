@@ -33,7 +33,7 @@
 .orange{color: #bc6ba6;}
 .gray{ color: #999999;}
 .blue{ color: #bc6ba6;}
-.purple{ color: #bc6ba6;}
+.purple{ color: #bc6ba6 !important;}
 
 /*首页_下部*/
 .div_foot{ width: 1200px;overflow-x: hidden;background: #ffffff;height: 300px;display: block;padding: 20px 10px;margin-top: 10px;}

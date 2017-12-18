@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-
     BindClick("MYXZ");
     BindClick("XLYQ");
     BindClick("GZNX");
