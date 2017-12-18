@@ -63,11 +63,11 @@ function LoadInfo(obj) {
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
     html += ('<p class="p_li_body_left_center_bt">' + obj.BT + '</p>');
-    html += (TruncStr(obj.BCMSString, 35));
+    html += ('<p class="p_li_body_left_center_nr">' + obj.BCMSString.replace(/<\/?.+?>/g, "") + '</p>');
     html += ('<p class="p_li_body_left_center_dz font_size14">' + obj.QY + ' - ' + obj.DD + '<label>/</label>' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
-    html += ('<p class="p_li_body_left_right"><span class="span_zj">' + obj.JG + '</span>元</p>');
+    html += ('<p class="p_li_body_left_right">' + GetJG(obj.JG, '元') + '</p>');
     html += ('</div>');
     html += ('</li>');
     $("#ul_body_left").append(html);
@@ -105,7 +105,7 @@ function LoadHotInfo(obj) {
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_right_xq">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_right_cs">' + obj.QY + '-' + obj.DD + '</p>');
-    html += ('<p class="p_li_body_right_jg">' + GetJG(obj.JG,'元')+'</p>');
+    html += ('<p class="p_li_body_right_jg">' + GetJG(obj.JG, '元') + '</p>');
     html += ('</li>');
     $("#ul_body_right").append(html);
 }
