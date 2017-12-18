@@ -246,6 +246,8 @@ function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
                     LoadCondition(xml.jclist, "品牌", "PP", 15);
                 if (table.indexOf("FC_ZZF") !== -1)
                     LoadURLCondition();
+                if (table.indexOf("QZZP") !== -1)
+                    LoadURLCondition();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

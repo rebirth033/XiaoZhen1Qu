@@ -4,10 +4,58 @@ $(document).ready(function () {
     LoadESCondition();
     LoadHot("QZZPXX_QZZP");
 });
+//获取头部导航
+function GetHeadNav() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/SY/LoadSY_ML",
+        dataType: "json",
+        data:
+        {
+
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "", title = "";
+                html += ('<ul class="ul_nav">');
+                html += ('<li class="li_nav_font">信息小镇</li>');
+                html += ('<li class="li_nav_split">></li>');
+                title += "信息小镇";
+                for (var i = 0; i < xml.list.length; i++) {
+                    if (xml.list[i].LBID === parseInt(getUrlParam("LBID"))) {
+                        html += ('<li class="li_nav_font">' + xml.xzq + xml.list[i].TYPESHOWNAME + '</li>');
+                        title += "_" + xml.xzq + xml.list[i].TYPESHOWNAME;
+                        break;
+                    }
+                }
+                html += ('<li class="li_nav_split">></li>');
+                for (var i = 0; i < xml.list.length; i++) {
+                    if (xml.list[i].LBID === parseInt(getUrlParam("LBID"))) {
+                        html += ('<li class="li_nav_font">全职招聘</li>');
+                        $("#li_body_head_first").html(xml.xzq + "全职招聘");
+                        title += "_" + xml.xzq + "全职招聘";
+                        break;
+                    }
+                }
+                html += ('</ul>');
+                $("#divNav").html(html);
+                $("#title").html(title);
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+
+        }
+    });
+}
 //加载条件
 function LoadESCondition() {
     LoadConditionByTypeNames("'" + getUrlParam("HYLB") + "类别','每月薪资','职位福利'", "CODES_QZZP", "类别,薪资,福利", "ZWLB,MYXZ,ZWFL", "7,9,15");
     LoadBody("QZZPXX_QZZP", currentIndex);
+}
+//加载URL查询条件
+function LoadURLCondition() {
+    if (getUrlParam("ZWLB") !== null)
+        SelectURLCondition(getUrlParam("ZWLB"));
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -21,6 +69,15 @@ function SelectCondition(obj, name) {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
+    LoadBody("QZZPXX_QZZP", currentIndex);
+    ShowSelectCondition("QZZPXX_QZZP");
+}
+//选择URL条件
+function SelectURLCondition(obj) {
+    $("#" + obj).parent().find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $("#" + obj).addClass("li_condition_body_active");
     LoadBody("QZZPXX_QZZP", currentIndex);
     ShowSelectCondition("QZZPXX_QZZP");
 }
