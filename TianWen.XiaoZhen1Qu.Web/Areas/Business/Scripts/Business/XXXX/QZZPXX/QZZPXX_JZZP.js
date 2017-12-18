@@ -51,8 +51,9 @@ function LoadJBXX(obj) {
     html += ('<span class="span_body_left_body_right_left">商家地址：</span>');
     html += ('<span class="span_body_left_body_right_right">' + obj.QY + "-" + obj.DD + "-" + obj.JTDZ + '</span>');
     html += ('</p>');
-    html += ('<p class="p_body_left_body_right_lxdh" style="margin-top:78px;">');
-    html += ('<img class="img_body_left_body_right_lxdh" src="' + getRootPath() + '/Areas/Business/Css/images/lxdh.png" />' + obj.LXDH);
+    html += ('<p class="p_body_left_body_right">');
+    html += ('<span class="span_body_left_body_right_left">联系电话：</span>');
+    html += ('<span class="span_body_left_body_right_right span_body_left_body_right_right_lxdh">' + obj.LXDH.substr(0, 7) + '****' + '</span>');
     html += ('</p>');
     html += ('</div>');
     html += ('</div>');
@@ -72,6 +73,7 @@ function LoadXQ(obj, BCMSString) {
     html += (BCMSString);
     html += ('</div>');
     html += ('</div>');
+    html += ('<div id="div_body_left_body_xq_zk_bcms" onclick="ToggleBCMS()" class="div_body_left_body_xq_zk_bcms">展开内容<i id="i_body_left_body_xq_zk_bcms" class="i_body_left_body_xq_zk_bcms"></i></div>');
     html += ('<div id="div_body_left_body_xq_xx" class="div_body_left_body_xq_xx" style="overflow:hidden;">');
     html += ('<ul class="ul_body_left_body_xq_xx">');
     for (var i = 0; i < obj.PHOTOS.length; i++) {
