@@ -71,6 +71,10 @@ function LoadJBXX(obj) {
     html += ('<span class="span_body_left_body_right_right">' + obj.QY + '-' + obj.DD + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
+    html += ('<span class="span_body_left_body_right_left">联系人：</span>');
+    html += ('<span class="span_body_left_body_right_right">' + obj.LXR + '</span>');
+    html += ('</p>');
+    html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">联系电话：</span>');
     html += ('<span class="span_body_left_body_right_right span_body_left_body_right_right_lxdh">' + obj.LXDH.substr(0, 7) + '****' + '</span>');
     html += ('</p>');
