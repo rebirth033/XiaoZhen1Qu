@@ -88,7 +88,7 @@ function LoadInfo(obj) {
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
     html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'CWXX_CWG\',\'' + obj.ID + '\')">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_left_center_cs font_size14">' + obj.NL + obj.NLDW + '<label>/</label>' + obj.YMQK + '疫苗<label>/</label>' + obj.QCQK + '<label>/</label>' + obj.ZSZS + '只在售</p>');
+    html += ('<p class="p_li_body_left_center_cs font_size14">' + obj.NL + obj.NLDW + ' / ' + obj.YMQK + '疫苗<label>/</label>' + obj.QCQK + ' / ' + obj.ZSZS + '只在售</p>');
     html += ('<p class="p_li_body_left_center_dz font_size14">' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
@@ -128,7 +128,7 @@ function LoadHotInfo(obj) {
     var html = "";
     html += ('<li onclick="OpenXXXX(\'CWXX_CWG\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_right_xq">' + obj.NL + obj.NLDW + '<label>/</label>' + obj.YMQK + '疫苗</p>');
+    html += ('<p class="p_li_body_right_xq">' + obj.NL + obj.NLDW + ' / ' + obj.YMQK + '疫苗</p>');
     html += ('<p class="p_li_body_right_cs">' + obj.QCQK + '</p>');
     html += ('<p class="p_li_body_right_jg">' + GetJG(obj.JG,'元')+'</p>');
     html += ('</li>');

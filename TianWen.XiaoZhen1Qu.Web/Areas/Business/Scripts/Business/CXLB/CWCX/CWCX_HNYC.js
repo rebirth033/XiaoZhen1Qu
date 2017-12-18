@@ -91,8 +91,8 @@ function LoadCWInfo(obj) {
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
     html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'CWXX_HNYC\',\'' + obj.ID + '\')">' + obj.BT + '</p>');
-    html += (TruncStr(obj.BCMSString, 35));
-    html += ('<p class="p_li_body_left_center_dz font_size14">' + obj.QY + '-' + obj.DD + '<label>/</label>' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
+    html += ('<p class="p_li_body_left_center_nr">' + obj.BCMSString.replace(/<\/?.+?>/g, "") + '</p>');
+    html += ('<p class="p_li_body_left_center_dz font_size14">' + obj.QY + '-' + obj.DD + ' / ' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
     html += ('<p class="p_li_body_left_right"><span class="span_zj">' + obj.JG + '</span>元/只</p>');
