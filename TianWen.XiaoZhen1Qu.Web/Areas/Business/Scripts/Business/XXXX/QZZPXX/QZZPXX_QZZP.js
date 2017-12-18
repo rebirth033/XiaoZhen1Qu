@@ -37,20 +37,32 @@ function LoadJBXX(obj) {
     html += ('<div class="div_body_left_body">');
     html += ('<div class="div_body_left_body_right">');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">类别：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.LB + '</span>');
+    html += ('<span class="span_body_left_body_right_left">职位类别：</span>');
+    html += ('<span class="span_body_left_body_right_right">' + obj.ZWLB + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">小类：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.XL + '</span>');
+    html += ('<span class="span_body_left_body_right_left">每月薪资：</span>');
+    html += ('<span class="span_body_left_body_right_right" style="color:#bc6ba6;">' + GetJG(obj.MYXZ.replace('元', ''), '元') + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">联系人：</span>');
+    html += ('<span class="span_body_left_body_right_left">公司名称：</span>');
     html += ('<span class="span_body_left_body_right_right">' + obj.LXR + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">商家地址：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.QY + "-" + obj.DD + "-" + obj.JTDZ + '</span>');
+    html += ('<span class="span_body_left_body_right_left">学历要求：</span>');
+    html += ('<span class="span_body_left_body_right_right">不限</span>');
+    html += ('</p>');
+    html += ('<p class="p_body_left_body_right">');
+    html += ('<span class="span_body_left_body_right_left">工作年限：</span>');
+    html += ('<span class="span_body_left_body_right_right">不限</span>');
+    html += ('</p>');
+    html += ('<p class="p_body_left_body_right">');
+    html += ('<span class="span_body_left_body_right_left">招聘人数：</span>');
+    html += ('<span class="span_body_left_body_right_right">' + obj.ZPRS + '人</span>');
+    html += ('</p>');
+    html += ('<p class="p_body_left_body_right">');
+    html += ('<span class="span_body_left_body_right_left">公司地址：</span>');
+    html += ('<span class="span_body_left_body_right_right">' + obj.JTDZ + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">联系电话：</span>');
@@ -90,7 +102,6 @@ function LoadXQ(obj, BCMSString) {
         $("#div_body_left_body_xq_zk").css("display", "block");
     }
 }
-
 //加载猜你喜欢
 function LoadCNXH(TYPE) {
     $.ajax({
@@ -116,7 +127,7 @@ function LoadCNXH(TYPE) {
                 html += ('</ul>');
                 html += ('</div>');
                 $("#div_body_left").append(html);
-                LoadJPTJ("CW");
+                LoadJPTJ("QZZPXX_QZZP");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

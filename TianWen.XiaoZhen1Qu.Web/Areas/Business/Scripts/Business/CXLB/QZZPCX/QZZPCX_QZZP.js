@@ -24,38 +24,6 @@ function SelectCondition(obj, name) {
     LoadBody("QZZPXX_QZZP", currentIndex);
     ShowSelectCondition("QZZPXX_QZZP");
 }
-////根据TYPENAME获取字典表(私有)
-//function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
-//    $.ajax({
-//        type: "POST",
-//        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAMES",
-//        dataType: "json",
-//        data:
-//        {
-//            TYPENAMES: typenames,
-//            TBName: table
-//        },
-//        success: function (xml) {
-//            if (xml.Result === 1) {
-//                LoadDistrictCondition(xml.districts, "QY");
-//                var typelist = typenames.split(',');
-//                var namelist = names.split(',');
-//                for (var i = 0; i < typelist.length; i++) {
-//                    for (var j = 0; j < namelist.length; j++) {
-//                        if (typelist[i].indexOf(namelist[j]) !== -1) {
-//                            LoadCondition(_.filter(xml.list, function (value) { return typelist[i].indexOf(value.TYPENAME) !== -1; }), namelist[j], ids.split(',')[j], lengths.split(',')[j]);
-//                        }
-//                    }
-//                }
-//                SetCondition("HYLB", getUrlParam("HYLB"));
-//                LoadBody("QZZPXX_QZZP", currentIndex);
-//            }
-//        },
-//        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-//        }
-//    });
-//}
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
@@ -89,9 +57,9 @@ function LoadBody(TYPE, PageIndex) {
 //加载单条信息
 function LoadInfo(obj) {
     var html = "";
-    html += ('<li class="li_body_left">');
+    html += ('<li class="li_body_left" onclick="OpenXXXX(\'QZZPXX_QZZP\',\'' + obj.ID + '\')">');
     html += ('<div class="div_li_body_left_left">');
-    html += ('<p class="p_div_li_body_left_left_bt" onclick="OpenXXXX(\'QZZPXX_QZZP\',\'' + obj.ID + '\')">' + TruncStr(obj.BT, 15) + '</p>');
+    html += ('<p class="p_div_li_body_left_left_bt">' + TruncStr(obj.BT, 15) + '</p>');
     html += ('<p class="p_div_li_body_left_left_xz"><span class="span_zj">' + obj.MYXZ + '</span>/月</p>');
     html += ('<p class="p_div_li_body_left_left_fl">' + obj.ZWFL + '</p>');
     html += ('</div>');
