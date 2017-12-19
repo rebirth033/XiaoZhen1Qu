@@ -63,7 +63,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 if (TYPE == "HQSYXX_CZZX")
                 {
                     dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,hqsy_czzxjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + " order by zxgxsj desc");
-                    List<HQSY_HQGSView> list = ConvertHelper.DataTableToList<HQSY_HQGSView>(dt);
+                    List<HQSY_CZZXView> list = ConvertHelper.DataTableToList<HQSY_CZZXView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
                     var listnew = from p in list.Skip((int.Parse(PageIndex) - 1) * int.Parse(PageSize)).Take(int.Parse(PageSize)) select p;
@@ -77,7 +77,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 if (TYPE == "HQSYXX_HQYP")
                 {
                     dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,hqsy_hqypjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + " order by zxgxsj desc");
-                    List<HQSY_HQGSView> list = ConvertHelper.DataTableToList<HQSY_HQGSView>(dt);
+                    List<HQSY_HQYPView> list = ConvertHelper.DataTableToList<HQSY_HQYPView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
                     var listnew = from p in list.Skip((int.Parse(PageIndex) - 1) * int.Parse(PageSize)).Take(int.Parse(PageSize)) select p;
@@ -105,7 +105,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 if (TYPE == "HQSYXX_HLGP")
                 {
                     dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,hqsy_hlgpjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + " order by zxgxsj desc");
-                    List<HQSY_HQGSView> list = ConvertHelper.DataTableToList<HQSY_HQGSView>(dt);
+                    List<HQSY_HLGPView> list = ConvertHelper.DataTableToList<HQSY_HLGPView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
                     var listnew = from p in list.Skip((int.Parse(PageIndex) - 1) * int.Parse(PageSize)).Take(int.Parse(PageSize)) select p;
@@ -193,7 +193,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 if (TYPE == "HQSYXX_CZZX")
                 {
                     dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,hqsy_czzxjbxx b where a.jcxxid = b.jcxxid and id = '{0}'  order by zxgxsj desc", ID));
-                    List<HQSY_HQGSView> list = ConvertHelper.DataTableToList<HQSY_HQGSView>(dt);
+                    List<HQSY_CZZXView> list = ConvertHelper.DataTableToList<HQSY_CZZXView>(dt);
                     foreach (var jcxx in list)
                     {
                         jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
@@ -203,7 +203,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 if (TYPE == "HQSYXX_HQYP")
                 {
                     dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,hqsy_hqypjbxx b where a.jcxxid = b.jcxxid and id = '{0}'  order by zxgxsj desc", ID));
-                    List<HQSY_HQGSView> list = ConvertHelper.DataTableToList<HQSY_HQGSView>(dt);
+                    List<HQSY_HQYPView> list = ConvertHelper.DataTableToList<HQSY_HQYPView>(dt);
                     foreach (var jcxx in list)
                     {
                         jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
@@ -223,7 +223,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 if (TYPE == "HQSYXX_HLGP")
                 {
                     dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,hqsy_hlgpjbxx b where a.jcxxid = b.jcxxid and id = '{0}'  order by zxgxsj desc", ID));
-                    List<HQSY_HQGSView> list = ConvertHelper.DataTableToList<HQSY_HQGSView>(dt);
+                    List<HQSY_HLGPView> list = ConvertHelper.DataTableToList<HQSY_HLGPView>(dt);
                     foreach (var jcxx in list)
                     {
                         jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
