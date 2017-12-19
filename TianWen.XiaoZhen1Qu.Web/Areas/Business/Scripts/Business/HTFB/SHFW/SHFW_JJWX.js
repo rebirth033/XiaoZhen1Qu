@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-
     BindClick("LB");
     LoadSHFW_JJWXJBXX();
 });
@@ -36,12 +35,11 @@ function LoadXL() {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("家具维修", "LB", "CODES_SHFW", Bind, "OUTLB", "LB", "");
+            LoadCODESByTYPENAME("家具维修类别", "LB", "CODES_SHFW", Bind, "OUTLB", "LB", "");
         }
         if (type === "XL") {
             LoadXL();
         }
-        
     });
 }
 //加载生活服务_家具维修基本信息
