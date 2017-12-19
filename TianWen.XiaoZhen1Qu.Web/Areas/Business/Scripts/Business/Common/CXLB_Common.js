@@ -280,7 +280,7 @@ function LoadConditionByParentID(parentid, table, name, id, length) {
 function LoadCondition(array, name, id, length) {
     $("#ul_condition_body_" + id).remove();
     var html = "";
-    html += '<ul id="ul_condition_body_' + id + '" class="ul_condition_body" style="height:auto;">';
+    html += '<ul id="ul_condition_body_' + id + '" class="ul_condition_body">';
     html += '<li id="li_condition_body_first_' + id + '" class="li_condition_body_first">' + name + '</li>';
     html += '<li id="0" class="li_condition_body li_condition_body_active" onclick="SelectCondition(this,\'' + name + '\')">全部</li>';
     for (var i = 0; i < (array.length > length ? length : array.length) ; i++) {
