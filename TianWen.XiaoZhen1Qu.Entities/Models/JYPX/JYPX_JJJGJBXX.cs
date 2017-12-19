@@ -11,7 +11,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         }
 
         /// <summary>
-        /// 教育培训_家教机构信息ID
+        /// 教育培训_详细信息信息ID
         /// </summary>
         [Id]
         public virtual string ID { get; set; }

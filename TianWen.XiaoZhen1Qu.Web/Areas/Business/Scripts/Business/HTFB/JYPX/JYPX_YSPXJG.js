@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-
     BindClick("LB");
     LoadDuoX("对象", "DX");
 });
@@ -105,7 +104,7 @@ function LoadXL(lbmc, xl) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("艺术培训教学科目", "LB", "CODES_JYPX", Bind, "OUTLB", "LB", "");
+            LoadCODESByTYPENAME("艺术培训教学科目类别", "LB", "CODES_JYPX", Bind, "OUTLB", "LB", "");
         }
     });
 }
