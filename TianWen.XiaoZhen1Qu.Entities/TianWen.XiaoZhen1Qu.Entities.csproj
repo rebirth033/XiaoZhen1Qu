@@ -584,6 +584,8 @@
     <Compile Include="ViewModels\FC\FC_SPView.cs" />
     <Compile Include="ViewModels\FC\FC_ZZFView.cs" />
     <Compile Include="ViewModels\GY\GRXXView.cs" />
+    <Compile Include="ViewModels\HQSY\HQSY_HCZLView.cs" />
+    <Compile Include="ViewModels\HQSY\HQSY_HYJDView.cs" />
     <Compile Include="ViewModels\HQSY\HQSY_HQGSView.cs" />
     <Compile Include="ViewModels\JYPX\QZZP_JZZPView.cs" />
     <Compile Include="ViewModels\LR\LR_MTSSView.cs" />
