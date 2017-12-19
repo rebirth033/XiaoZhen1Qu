@@ -6,13 +6,13 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadNLMFYCondition() {
-    LoadConditionByTypeNames("'园林花卉类别'", "CODES_NLMFY", "类别", "LB", "15");
+    LoadConditionByTypeNames("'园林花卉类别'", "CODES_NLMFY", "类别", "LB", "100");
     LoadBody("NLMFYXX_YLHH", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
     if (name === "类别") {
-        LoadConditionByParentID(obj.id, "CODES_NLMFY", "小类", "XL",10);
+        LoadConditionByParentID(obj.id, "CODES_NLMFY", "小类", "XL", 100);
     }
     if (name === "类别") {
         $("#ul_condition_body_XL").remove();
@@ -23,6 +23,23 @@ function SelectCondition(obj, name) {
     $(obj).addClass("li_condition_body_active");
     LoadBody("NLMFYXX_YLHH", currentIndex);
     ShowSelectCondition("NLMFYXX_YLHH");
+}
+//加载查询条件
+function LoadCondition(array, name, id, length) {
+    $("#ul_condition_body_" + id).remove();
+    var html = "";
+    html += '<ul id="ul_condition_body_' + id + '" class="ul_condition_body" style="height:auto;">';
+    html += '<li id="li_condition_body_first_' + id + '" class="li_condition_body_first">' + name + '</li>';
+    html += '<li id="0" class="li_condition_body li_condition_body_active" onclick="SelectCondition(this,\'' + name + '\')">全部</li>';
+    for (var i = 0; i < (array.length > length ? length : array.length) ; i++) {
+        html += '<li id="' + array[i].CODEID + '" class="li_condition_body" onclick="SelectCondition(this,\'' + name + '\')">' + array[i].CODENAME + '</li>';
+    }
+    html += '</ul>';
+    $("#div_condition_body_" + id).append(html);
+    if ($("#div_condition_body_" + id).css("height") === "180px")
+        $("#li_condition_body_first_" + id).css("height", (parseInt($("#div_condition_body_" + id).css("height")) + 20));
+    else
+        $("#li_condition_body_first_" + id).css("height", (parseInt($("#div_condition_body_" + id).css("height")) - 10));
 }
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {

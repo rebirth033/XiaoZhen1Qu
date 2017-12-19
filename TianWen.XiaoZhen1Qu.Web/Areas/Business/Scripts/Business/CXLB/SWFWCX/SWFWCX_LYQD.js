@@ -6,15 +6,15 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadSWFWCondition() {
-    LoadConditionByTypeNames("'礼仪庆典类别'", "CODES_SWFW", "类别", "LB", "15");
+    LoadConditionByTypeNames("'礼仪庆典类别'", "CODES_SWFW", "类别", "LB", "100");
     LoadBody("SWFWXX_LYQD", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
-    if (name === "类别" && (obj.innerHTML !== "干锅" && obj.innerHTML !== "中餐" && obj.innerHTML !== "粥店")) {
-        LoadConditionByParentID(obj.id, "CODES_SWFW", "小类", "XL",15);
+    if (name === "类别" && (obj.innerHTML !== "庆典公司" && obj.innerHTML !== "场地布置" && obj.innerHTML !== "展览展会" && obj.innerHTML !== "礼仪模特")) {
+        LoadConditionByParentID(obj.id, "CODES_SWFW", "小类", "XL",100);
     }
-    if (name === "类别" && (obj.innerHTML === "干锅" || obj.innerHTML === "中餐" || obj.innerHTML === "粥店")) {
+    if (name === "类别" && (obj.innerHTML === "庆典公司" || obj.innerHTML === "场地布置" || obj.innerHTML === "展览展会" || obj.innerHTML === "礼仪模特")) {
         $("#ul_condition_body_XL").remove();
     }
     $(obj).parent().find(".li_condition_body").each(function () {
