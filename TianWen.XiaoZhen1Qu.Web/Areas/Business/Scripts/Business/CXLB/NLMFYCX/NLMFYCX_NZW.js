@@ -6,13 +6,13 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadNLMFYCondition() {
-    LoadConditionByTypeNames("'农作物'", "CODES_NLMFY", "类别", "LB", "15");
+    LoadConditionByTypeNames("'农作物类别'", "CODES_NLMFY", "类别", "LB", "100");
     LoadBody("NLMFYXX_NZW", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
     if (name === "类别" && (obj.innerHTML !== "酒店管理" && obj.innerHTML !== "工程管理" && obj.innerHTML !== "素质拓展" && obj.innerHTML !== "总裁研修")) {
-        LoadConditionByParentID(obj.id, "CODES_NLMFY", "小类", "XL",15);
+        LoadConditionByParentID(obj.id, "CODES_NLMFY", "小类", "XL", 100);
     }
     if (name === "类别" && (obj.innerHTML === "酒店管理" || obj.innerHTML === "工程管理" || obj.innerHTML === "素质拓展" || obj.innerHTML === "总裁研修")) {
         $("#ul_condition_body_XL").remove();
@@ -23,6 +23,23 @@ function SelectCondition(obj, name) {
     $(obj).addClass("li_condition_body_active");
     LoadBody("NLMFYXX_NZW", currentIndex);
     ShowSelectCondition("NLMFYXX_NZW");
+}
+//加载查询条件
+function LoadCondition(array, name, id, length) {
+    $("#ul_condition_body_" + id).remove();
+    var html = "";
+    html += '<ul id="ul_condition_body_' + id + '" class="ul_condition_body" style="height:auto;">';
+    html += '<li id="li_condition_body_first_' + id + '" class="li_condition_body_first">' + name + '</li>';
+    html += '<li id="0" class="li_condition_body li_condition_body_active" onclick="SelectCondition(this,\'' + name + '\')">全部</li>';
+    for (var i = 0; i < (array.length > length ? length : array.length) ; i++) {
+        html += '<li id="' + array[i].CODEID + '" class="li_condition_body" onclick="SelectCondition(this,\'' + name + '\')">' + array[i].CODENAME + '</li>';
+    }
+    html += '</ul>';
+    $("#div_condition_body_" + id).append(html);
+    if ($("#div_condition_body_" + id).css("height") === "180px")
+        $("#li_condition_body_first_" + id).css("height", (parseInt($("#div_condition_body_" + id).css("height")) + 10));
+    else
+        $("#li_condition_body_first_" + id).css("height", (parseInt($("#div_condition_body_" + id).css("height")) - 10));
 }
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
