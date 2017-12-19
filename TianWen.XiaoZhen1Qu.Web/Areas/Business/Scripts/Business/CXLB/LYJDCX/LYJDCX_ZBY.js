@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadLYJDCondition() {
-    LoadConditionByTypeNames("'周边游行程天数','游玩项目','出游方式','适合人群','周边游价格'", "CODES_LYJD", "行程天数,游玩项目,出游方式,适合人群,周边游价格", "XCTS_R,YWXM,CYFS,SHRQ,MSJ", "15,15,15,15,15");
+    LoadConditionByTypeNames("'周边游行程天数','游玩项目','出游方式','适合人群','周边游价格'", "CODES_LYJD", "行程天数,游玩项目,出游方式,适合人群,价格", "XCTS_R,YWXM,CYFS,SHRQ,MSJ", "15,15,15,15,15");
     LoadBody("LYJDXX_ZBY", currentIndex);
 }
 //选择条件
