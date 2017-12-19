@@ -57,7 +57,7 @@ function LoadInfo(obj) {
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
     html += ('<p class="p_li_body_left_center_bt">' + obj.BT + '</p>');
-    html += (TruncStr(obj.BCMSString, 90));
+    html += ('<p class="p_li_body_left_center_nr">' + obj.BCMSString.replace(/<\/?.+?>/g, "") + '</p>');
     html += ('<p class="p_li_body_left_center_dz">' + obj.QY + '-' + obj.DD + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');

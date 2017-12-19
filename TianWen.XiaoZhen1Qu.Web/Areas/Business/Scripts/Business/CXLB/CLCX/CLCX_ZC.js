@@ -37,7 +37,7 @@ function LoadBody(TYPE, PageIndex) {
                 $("#ul_body_left").html('');
                 LoadPage(TYPE, xml.PageCount);
                 for (var i = 0; i < xml.list.length; i++) {
-                    LoadCL_ZCInfo(xml.list[i]);
+                    LoadInfo(xml.list[i]);
                 }
             }
         },
@@ -47,7 +47,7 @@ function LoadBody(TYPE, PageIndex) {
     });
 }
 //加载单条信息
-function LoadCL_ZCInfo(obj) {
+function LoadInfo(obj) {
     var html = "";
     html += ('<li class="li_body_left" onclick="OpenXXXX(\'CLXX_ZC\',\'' + obj.ID + '\')">');
     html += ('<div class="div_li_body_left_left">');

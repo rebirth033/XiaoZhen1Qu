@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadSHFWCondition() {
-    LoadConditionByTypeNames("'搬家类别'", "CODES_SHFW", "类别", "LB", "15");
+    LoadConditionByTypeNames("'搬家类别'", "CODES_SHFW", "类别", "LB", "100");
     LoadBody("SHFWXX_BJ", currentIndex);
 }
 //选择条件
@@ -57,7 +57,7 @@ function LoadInfo(obj) {
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
     html += ('<p class="p_li_body_left_center_bt">' + obj.BT + '</p>');
-    html += (TruncStr(obj.BCMSString, 90));
+    html += ('<p class="p_li_body_left_center_nr">' + obj.BCMSString.replace(/<\/?.+?>/g, "") + '</p>');
     html += ('<p class="p_li_body_left_center_dz">' + obj.QY + '-' + obj.DD + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
