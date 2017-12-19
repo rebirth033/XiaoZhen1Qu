@@ -593,6 +593,8 @@
     <Compile Include="ViewModels\HQSY\HQSY_HQGSView.cs" />
     <Compile Include="ViewModels\JYPX\QZZP_JZZPView.cs" />
     <Compile Include="ViewModels\LR\LR_MTSSView.cs" />
+    <Compile Include="ViewModels\LYJD\LYJD_CJYView.cs" />
+    <Compile Include="ViewModels\LYJD\LYJD_ZBYView.cs" />
     <Compile Include="ViewModels\LYJD\LYJD_GNYView.cs" />
     <Compile Include="ViewModels\LYJD\LYJD_LXSView.cs" />
     <Compile Include="ViewModels\NLMFY\NLMFY_YLHHView.cs" />

@@ -7,13 +7,13 @@
 .div_body .div_body_left .div_body_left_head .p_div_body_left_head_bt{ display: block;font-size: 25px;font-weight: 700;height: 45px;overflow:hidden;padding: 10px;}
 .div_body .div_body_left .div_body_left_head .p_div_body_left_head_ll{ display: block;color: #999999;height: 30px;padding: 10px;font-size: 16px;}
 /*首页_主体_左部_信息主要内容*/
-.div_body .div_body_left .div_body_left_body{ width: 100%;height: 380px;margin-top: 20px;font-size: 16px;}
-.div_body .div_body_left .div_body_left_body_right{ width: 100%;height: 380px;float: left;}
+.div_body .div_body_left .div_body_left_body{ width: 100%;height: 280px;margin-top: 20px;font-size: 16px;}
+.div_body .div_body_left .div_body_left_body_right{ width: 100%;height: 280px;float: left;}
 .div_body .div_body_left .div_body_left_body_right .p_body_left_body_right_first{ height: 40px;width: 100%;padding: 0px 70px;}
 .div_body .div_body_left .div_body_left_body_right .span_body_left_body_right_zj{ color: #bc6ba6;font-size: 16px;}
 .div_body .div_body_left .div_body_left_body_right .span_body_left_body_right_zjdw{ color: #bc6ba6;font-size: 16px;}
 .div_body .div_body_left .div_body_left_body_right .span_body_left_body_right_yffs{ font-size: 16px;margin-left: 30px; }
-.div_body .div_body_left .div_body_left_body_right .p_body_left_body_right{ height: 45px;width: 100%;padding: 20px 30px;}
+.div_body .div_body_left .div_body_left_body_right .p_body_left_body_right{ height: 45px;width: 50%;padding: 20px 30px;float: left;}
 .div_body .div_body_left .div_body_left_body_right .p_body_left_body_right .span_body_left_body_right_left{ width: 80px;display: inline-block;text-align: right;}
 .div_body .div_body_left .div_body_left_body_right .p_body_left_body_right .span_body_left_body_right_right_lxdh {font-size: 28px;color: #bc6ba6;}
 /*首页_主体_左部_房源详情*/
