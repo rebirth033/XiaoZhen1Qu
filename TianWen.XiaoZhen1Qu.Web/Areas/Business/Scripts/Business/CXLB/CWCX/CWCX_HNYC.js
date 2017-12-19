@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadCWCondition() {
-    LoadConditionByTypeNames("'花鸟鱼虫类别','宠物猫价格'", "CODES_CW", "类别,价格", "LB,JG", "15,15");
+    LoadConditionByTypeNames("'花鸟鱼虫类别','宠物猫价格'", "CODES_CW", "类别,价格", "LB,JG", "100,100");
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -72,7 +72,7 @@ function LoadBody(TYPE, PageIndex) {
                 $("#ul_body_left").html('');
                 LoadPage(TYPE, xml.PageCount);
                 for (var i = 0; i < xml.list.length; i++) {
-                    LoadCWInfo(xml.list[i]);
+                    LoadInfo(xml.list[i]);
                 }
             }
         },
@@ -82,15 +82,15 @@ function LoadBody(TYPE, PageIndex) {
     });
 }
 //加载宠物单条信息
-function LoadCWInfo(obj) {
+function LoadInfo(obj) {
     var html = "";
-    html += ('<li class="li_body_left">');
+    html += ('<li class="li_body_left" onclick="OpenXXXX(\'CWXX_HNYC\',\'' + obj.ID + '\')">');
     html += ('<div class="div_li_body_left_left">');
-    html += ('<img class="img_li_body_left" onclick="OpenXXXX(\'CWXX_HNYC\',\'' + obj.ID + '\')" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
+    html += ('<img class="img_li_body_left" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<div class="div_img_li_body_left_count"><span>' + obj.PHOTOS.length + '图</span></div>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
-    html += ('<p class="p_li_body_left_center_bt" onclick="OpenXXXX(\'CWXX_HNYC\',\'' + obj.ID + '\')">' + obj.BT + '</p>');
+    html += ('<p class="p_li_body_left_center_bt">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_left_center_nr">' + obj.BCMSString.replace(/<\/?.+?>/g, "") + '</p>');
     html += ('<p class="p_li_body_left_center_dz font_size14">' + obj.QY + '-' + obj.DD + ' / ' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
