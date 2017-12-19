@@ -129,7 +129,6 @@ function LoadCondition(array, name, id, length) {
     }
     html += '</ul>';
     $("#div_condition_body_" + id).append(html);
-
     $("#li_condition_body_first_" + id).css("height", (parseInt($("#div_condition_body_" + id).css("height"))-10));
 }
 //加载主体部分
