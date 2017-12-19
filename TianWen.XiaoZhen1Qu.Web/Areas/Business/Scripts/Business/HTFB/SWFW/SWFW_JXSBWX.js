@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-
     LoadJXSBWXLB();
 });
 //加载机械设备维修类别
@@ -10,7 +9,7 @@ function LoadJXSBWXLB() {
         dataType: "json",
         data:
         {
-            TYPENAME: "机械设备维修",
+            TYPENAME: "机械设备维修类别",
             TBName: "CODES_SWFW"
         },
         success: function (xml) {
@@ -23,9 +22,9 @@ function LoadJXSBWXLB() {
                     }
                 }
                 if (parseInt(xml.list.length % 4) === 0)
-                    $("#divJXSBWXLB").css("height", parseInt(xml.list.length / 4) * 60 + "px");
+                    $("#divJXSBWXLB").css("height", parseInt(xml.list.length / 4) * 40 + "px");
                 else
-                    $("#divJXSBWXLB").css("height", (parseInt(xml.list.length / 4) + 1) * 60 + "px");
+                    $("#divJXSBWXLB").css("height", (parseInt(xml.list.length / 4) + 1) * 40 + "px");
                 html += "</ul>";
                 $("#divJXSBWXLBText").html(html);
                 $(".img_JXSBWXLB").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
@@ -40,9 +39,7 @@ function LoadJXSBWXLB() {
 }
 //绑定下拉框
 function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        
-    });
+
 }
 //加载商务服务_机械设备维修基本信息
 function LoadSWFW_JXSBWXJBXX() {

@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadSWFWCondition() {
-    LoadConditionByTypeName("机械设备维修", "CODES_SWFW", "类别", "LB", 9);
+    LoadConditionByTypeNames("'机械设备维修类别'", "CODES_SWFW", "类别", "LB", "100");
     LoadDistrict("福州", "350100", "QY");
     LoadBody("SWFWCX_JXSBWX", currentIndex);
 }

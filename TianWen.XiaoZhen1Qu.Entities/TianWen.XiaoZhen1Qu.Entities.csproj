@@ -602,6 +602,7 @@
     <Compile Include="ViewModels\QZZP\QZZP_JZZPView.cs" />
     <Compile Include="ViewModels\QZZP\QZZP_QZZPView.cs" />
     <Compile Include="ViewModels\SHFW\SHFW_BJView.cs" />
+    <Compile Include="ViewModels\SWFW\SWFW_HYZXView.cs" />
     <Compile Include="ViewModels\SWFW\SWFW_GSZCView.cs" />
     <Compile Include="ViewModels\XXYL\XXYL_YDJSView.cs" />
     <Compile Include="ViewModels\ZSJM\ZSJM_CYView.cs" />

@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadSWFWCondition() {
-    LoadConditionByTypeNames("'设计策划类别'", "CODES_SWFW", "类别", "LB", "11");
+    LoadConditionByTypeNames("'设计策划类别'", "CODES_SWFW", "类别", "LB", "100");
     LoadBody("SWFWXX_SJCH", currentIndex);
 }
 //选择条件

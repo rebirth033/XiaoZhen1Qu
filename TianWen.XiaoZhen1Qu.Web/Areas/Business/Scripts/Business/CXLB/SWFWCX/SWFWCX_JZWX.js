@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadSWFWCondition() {
-    LoadConditionByTypeNames("'建筑维修类别'", "CODES_SWFW", "类别", "LB", "12");
+    LoadConditionByTypeNames("'建筑维修类别'", "CODES_SWFW", "类别", "LB", "100");
     LoadBody("SWFWXX_JZWX", currentIndex);
 }
 //选择条件

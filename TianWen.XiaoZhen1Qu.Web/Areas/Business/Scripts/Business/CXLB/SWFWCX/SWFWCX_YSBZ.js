@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadSWFWCondition() {
-    LoadConditionByTypeNames("'印刷包装类别'", "CODES_SWFW", "类别", "LB", "10");
+    LoadConditionByTypeNames("'印刷包装类别'", "CODES_SWFW", "类别", "LB", "100");
     LoadBody("SWFWXX_YSBZ", currentIndex);
 }
 //选择条件

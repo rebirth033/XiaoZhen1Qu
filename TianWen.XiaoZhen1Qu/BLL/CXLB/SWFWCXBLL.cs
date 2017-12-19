@@ -287,7 +287,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 if (TYPE == "SWFWXX_HYZX")
                 {
                     dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,swfw_hyzxjbxx b  where a.jcxxid = b.jcxxid " + GetConditin(Condition) + " order by zxgxsj desc");
-                    List<SWFW_GSZCView> list = ConvertHelper.DataTableToList<SWFW_GSZCView>(dt);
+                    List<SWFW_HYZXView> list = ConvertHelper.DataTableToList<SWFW_HYZXView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
                     var listnew = from p in list.Skip((int.Parse(PageIndex) - 1) * int.Parse(PageSize)).Take(int.Parse(PageSize)) select p;
@@ -618,7 +618,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 if (TYPE == "SWFWXX_HYZX")
                 {
                     dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,swfw_HYZXjbxx b where a.jcxxid = b.jcxxid and id = '{0}'  order by zxgxsj desc", ID));
-                    List<SWFW_GSZCView> list = ConvertHelper.DataTableToList<SWFW_GSZCView>(dt);
+                    List<SWFW_HYZXView> list = ConvertHelper.DataTableToList<SWFW_HYZXView>(dt);
                     foreach (var jcxx in list)
                     {
                         jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));

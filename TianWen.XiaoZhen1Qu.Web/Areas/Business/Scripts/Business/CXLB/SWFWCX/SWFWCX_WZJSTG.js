@@ -6,15 +6,15 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadSWFWCondition() {
-    LoadConditionByTypeNames("'网站建设/推广类别'", "CODES_SWFW", "类别", "LB", "15");
+    LoadConditionByTypeNames("'网站建设/推广类别'", "CODES_SWFW", "类别", "LB", "100");
     LoadBody("SWFWXX_WZJSTG", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
-    if (name === "类别" && (obj.innerHTML !== "干锅" && obj.innerHTML !== "中餐" && obj.innerHTML !== "粥店")) {
-        LoadConditionByParentID(obj.id, "CODES_SWFW", "小类", "XL",15);
+    if (name === "类别" && (obj.innerHTML !== "域名注册" && obj.innerHTML !== "企业邮箱" && obj.innerHTML !== "网站维护")) {
+        LoadConditionByParentID(obj.id, "CODES_SWFW", "小类", "XL",100);
     }
-    if (name === "类别" && (obj.innerHTML === "干锅" || obj.innerHTML === "中餐" || obj.innerHTML === "粥店")) {
+    if (name === "类别" && (obj.innerHTML === "域名注册" || obj.innerHTML === "企业邮箱" || obj.innerHTML === "网站维护")) {
         $("#ul_condition_body_XL").remove();
     }
     $(obj).parent().find(".li_condition_body").each(function () {
@@ -103,7 +103,6 @@ function LoadHotInfo(obj) {
     var html = "";
     html += ('<li onclick="OpenXXXX(\'SWFWXX_WZJSTG\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_right_xq">' + "服务项目:" + obj.LB + '</p>');
     html += ('<p class="p_li_body_right_xq">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_right_cs">' + obj.QY + '-' + obj.DD + '</p>');
     html += ('</li>');

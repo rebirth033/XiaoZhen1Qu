@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadSWFWCondition() {
-    LoadConditionByTypeNames("'办公设备维修类别'", "CODES_SWFW", "类别", "LB", "14");
+    LoadConditionByTypeNames("'办公设备维修类别'", "CODES_SWFW", "类别", "LB", "100");
     LoadBody("SWFWXX_BGSBWX", currentIndex);
 }
 //选择条件
