@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadJYPXCondition() {
-    LoadConditionByTypeNames("'体育培训类别','体育培训对象'", "CODES_JYPX", "类别,对象", "LB,DX", "15,15");
+    LoadConditionByTypeNames("'体育培训类别','体育培训对象'", "CODES_JYPX", "类别,对象", "LB,DX", "100,100");
     LoadBody("JYPXXX_TYPXJG", currentIndex);
 }
 //选择条件

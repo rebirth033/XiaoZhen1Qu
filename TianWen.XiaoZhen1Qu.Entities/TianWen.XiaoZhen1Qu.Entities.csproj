@@ -591,6 +591,10 @@
     <Compile Include="ViewModels\HQSY\HQSY_CZZXView.cs" />
     <Compile Include="ViewModels\HQSY\HQSY_HYJDView.cs" />
     <Compile Include="ViewModels\HQSY\HQSY_HQGSView.cs" />
+    <Compile Include="ViewModels\JYPX\JYPX_ITPXView.cs" />
+    <Compile Include="ViewModels\JYPX\JYPX_XLJYView.cs" />
+    <Compile Include="ViewModels\JYPX\JYPX_TYJLView.cs" />
+    <Compile Include="ViewModels\JYPX\JYPX_TYPXJGView.cs" />
     <Compile Include="ViewModels\JYPX\JYPX_ZYJNPXView.cs" />
     <Compile Include="ViewModels\JYPX\JYPX_YSPXJGView.cs" />
     <Compile Include="ViewModels\JYPX\JYPX_JJGRView.cs" />

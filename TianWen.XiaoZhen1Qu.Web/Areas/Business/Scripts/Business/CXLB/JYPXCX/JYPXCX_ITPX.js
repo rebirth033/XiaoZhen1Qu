@@ -6,15 +6,15 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadJYPXCondition() {
-    LoadConditionByTypeNames("'IT培训类别','IT培训形式'", "CODES_JYPX", "类别,形式", "LB,XS", "11,15");
+    LoadConditionByTypeNames("'IT培训类别','IT培训形式'", "CODES_JYPX", "类别,形式", "LB,XS", "100,100");
     LoadBody("JYPXXX_ITPX", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
-    if (name === "类别" && (obj.innerHTML !== "干锅" && obj.innerHTML !== "中餐" && obj.innerHTML !== "粥店")) {
-        LoadConditionByParentID(obj.id, "CODES_JYPX", "小类", "XL",15);
+    if (name === "类别" && (obj.innerHTML === "软件开发" || obj.innerHTML === "IT认证" || obj.innerHTML === "app开发" || obj.innerHTML === "游戏开发" || obj.innerHTML === "数据库" || obj.innerHTML === "办公自动化")) {
+        LoadConditionByParentID(obj.id, "CODES_JYPX", "小类", "XL",100);
     }
-    if (name === "类别" && (obj.innerHTML === "干锅" || obj.innerHTML === "中餐" || obj.innerHTML === "粥店")) {
+    if (name === "类别" && (obj.innerHTML !== "软件开发" && obj.innerHTML !== "IT认证" && obj.innerHTML !== "app开发" && obj.innerHTML !== "游戏开发" && obj.innerHTML !== "数据库" && obj.innerHTML !== "办公自动化")) {
         $("#ul_condition_body_XL").remove();
     }
     $(obj).parent().find(".li_condition_body").each(function () {
@@ -23,6 +23,23 @@ function SelectCondition(obj, name) {
     $(obj).addClass("li_condition_body_active");
     LoadBody("JYPXXX_ITPX", currentIndex);
     ShowSelectCondition("JYPXXX_ITPX");
+}
+//加载查询条件
+function LoadCondition(array, name, id, length) {
+    $("#ul_condition_body_" + id).remove();
+    var html = "";
+    html += '<ul id="ul_condition_body_' + id + '" class="ul_condition_body" style="height:auto;">';
+    if (name === "类别" || name === "小类")
+        html += '<li id="li_condition_body_first_' + id + '" class="li_condition_body_first">' + name + '</li>';
+    else
+        html += '<li class="li_condition_body_first">' + name + '</li>';
+    html += '<li id="0" class="li_condition_body li_condition_body_active" onclick="SelectCondition(this,\'' + name + '\')">全部</li>';
+    for (var i = 0; i < (array.length > length ? length : array.length) ; i++) {
+        html += '<li id="' + array[i].CODEID + '" class="li_condition_body" onclick="SelectCondition(this,\'' + name + '\')">' + array[i].CODENAME + '</li>';
+    }
+    html += '</ul>';
+    $("#div_condition_body_" + id).append(html);
+    $("#li_condition_body_first_" + id).css("height", (parseInt($("#div_condition_body_" + id).css("height")) - 20));
 }
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
