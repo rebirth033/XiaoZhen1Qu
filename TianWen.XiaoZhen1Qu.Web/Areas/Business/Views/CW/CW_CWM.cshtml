@@ -1,5 +1,4 @@
 ﻿@{
-    ViewBag.Title = "CW_CWM";
     Layout = "~/Areas/Business/Views/Shared/HTFB.cshtml";
 }
 @section Section_Head {
@@ -20,10 +19,10 @@
             </div>
             <div class="div_row_right">
                 <div class="div_radio" id="div_gq_zr">
-                    <img class="img_radio" id="img_gq_zr"/><label class="label_radio">转让</label>
+                    <img class="img_radio" id="img_gq_zr" /><label class="label_radio">转让</label>
                 </div>
                 <div class="div_radio" id="div_gq_qg">
-                    <img class="img_radio" id="img_gq_qg"/><label class="label_radio">求购</label>
+                    <img class="img_radio" id="img_gq_qg" /><label class="label_radio">求购</label>
                 </div>
             </div>
             <div id="divGQTip" class="Warn" style="z-index: 999; position: relative;"></div>
@@ -52,10 +51,10 @@
                 <span class="spanFWCZ">价格</span>
             </div>
             <div class="div_row_right">
-                <span id="spanJG" class="span_spaninput SRK" style="display: inline-block;">
-                        <input class="input_spaninput spaninput_fontcolor" id="JG" maxlength="9" column="JG" type="text" style="width: 100px" />
-                        <span class="spaninput_fontcolor">元/只</span>
-                    </span>
+                <span id="spanJG" class="span_spaninput SRK">
+                    <input class="input_spaninput spaninput_fontcolor" id="JG" maxlength="9" column="JG" type="text" style="width: 100px" />
+                    <span class="spaninput_fontcolor">元/只</span>
+                </span>
             </div>
             <div id="divJGTip" class="Warn" style="z-index: 998; position: relative;"></div>
         </div>
@@ -95,18 +94,18 @@
                 <span id="spanFYBT">标题</span>
             </div>
             <div class="div_row_right">
-                <input id="BT" maxlength="50" column="BT" class="input_input SRK"  type="text" placeholder="吸引人的标题可让更多的人看您的信息喔"/>
+                <input id="BT" maxlength="50" column="BT" class="input_input SRK" type="text" placeholder="吸引人的标题可让更多的人看您的信息喔" />
                 <div id="divBTTip"></div>
             </div>
         </div>
-        <div id="divBCMS" class="div_row" style="height: 253px;">
+        <div id="divBCMS" class="div_row" style="height: 253px; z-index: 988;">
             <div class="div_row_left" style="height: 170px; vertical-align: top;">
                 <span class="span_required" style="vertical-align: top">*</span>
                 <span id="spanBCMS" style="vertical-align: top">补充描述</span>
             </div>
             <div class="div_row_right">
                 <script id="BCMS" type="text/plain" style="width: 594px; height: 200px; display: inline-block;">
-                    </script>
+                </script>
                 <div id="divBCMSTip" class="Warn"></div>
             </div>
         </div>
@@ -118,7 +117,7 @@
             <div class="div_row_right">
                 <div id="div_upload" class="div_upload">
                     <form action="" enctype="multipart/form-data" id="myform" method="post">
-                        <input id="input_upload" unselectable="on" type="file" multiple="multiple" class="file"/>
+                        <input id="input_upload" unselectable="on" type="file" multiple="multiple" class="file" />
                     </form>
                 </div>
                 <div class="div_row_right_zp_info">
@@ -153,7 +152,7 @@
                 <span id="spanLXR">联系人</span>
             </div>
             <div class="div_row_right">
-                <input id="LXR" column="LXR" class="input_input SRK" type="text" placeholder="请输入联系人"/>
+                <input id="LXR" column="LXR" class="input_input SRK" type="text" placeholder="请输入联系人" />
                 <div id="divLXRTip"></div>
             </div>
         </div>
@@ -163,7 +162,7 @@
                 <span id="spanLXDH">联系电话</span>
             </div>
             <div class="div_row_right">
-                <input id="LXDH" maxlength="11" column="LXDH" class="input_input SRK" type="text" placeholder="请输入联系电话"/>
+                <input id="LXDH" maxlength="11" column="LXDH" class="input_input SRK" type="text" placeholder="请输入联系电话" />
                 <div id="divLXDHTip"></div>
             </div>
         </div>
@@ -173,11 +172,11 @@
                 <span id="spanQQ">微信号</span>
             </div>
             <div class="div_row_right">
-                <input column="QQ" class="input_input SRK" type="text" placeholder="请输入微信号"/>
+                <input column="QQ" class="input_input SRK" type="text" placeholder="请输入微信号" />
             </div>
         </div>
         <div id="divFB" class="div_split" style="display: block; text-align: center; margin-top: 40px;">
-            <input type="button" class="btn btn-info input_text" style="height: 50px; font-size: 24px;" id="btnFB" value="发布"/>
+            <input type="button" class="btn btn-info input_text" style="height: 50px; font-size: 24px;" id="btnFB" value="发布" />
         </div>
     </div>
 }

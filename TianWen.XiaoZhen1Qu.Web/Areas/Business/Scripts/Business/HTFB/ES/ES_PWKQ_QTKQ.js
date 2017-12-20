@@ -1,7 +1,6 @@
 ﻿$(document).ready(function () {
     $("#YXQZ").datepicker({ minDate: 0 });
     LoadES_PWKQ_QTKQJBXX();
-    BindClick("XJ");
 });
 //加载票务卡券_电影票基本信息
 function LoadES_PWKQ_QTKQJBXX() {

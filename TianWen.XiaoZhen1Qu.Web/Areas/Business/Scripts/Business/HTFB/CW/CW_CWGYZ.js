@@ -2,7 +2,9 @@
     $("#divGQ").find(".div_radio").bind("click", function () { ValidateRadio("GQ", "忘记选择供求啦"); });
     $("#divQCQK").find(".div_radio").bind("click", function () { ValidateRadio("QCQK", "忘记选择驱虫情况啦"); });
     $("#NL").bind("blur", ValidateNL);
-    $("#NL").bind("focus", InfoNL);
+    $("#NL").bind("focus", function () { InfoInput("NL", "年龄填写整数，不能是0", "CWGNL"); });
+    $("#ZSZS").bind("blur", ValidateZSZS);
+    $("#ZSZS").bind("focus", function () { InfoSpanInput("ZSZS", "在售只数请填写整数，不能是0", "ZSZS"); });
     $("#JG").bind("blur", ValidateJG);
     $("#JG").bind("focus", InfoJG);
 });
@@ -23,6 +25,7 @@ function ValidateAll() {
     if (ValidateRadio("GQ", "忘记选择供求啦")
         & ValidateSelect("CWGPZ", "PZ", "请选择品种")
         & ValidateJG()
+        & ValidateZSZS()
         & ValidateCWGNL()
         & ValidateSelect("CWGXB", "XB", "请选择性别")
         & ValidateCWGYMQK()
@@ -55,11 +58,25 @@ function ValidateNL() {
         }
     }
 }
-//提示年龄
-function InfoNL() {
-    $("#divCWGNLTip").css("display", "block");
-    $("#divCWGNLTip").attr("class", "Info");
-    $("#divCWGNLTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />请填写整数');
-    $("#spanNL").css("border-color", "#bc6ba6");
+//验证在售只数
+function ValidateZSZS() {
+    if ($("#ZSZS").val() === "" || $("#ZSZS").val() === null) {
+        $("#divZSZSTip").css("display", "block");
+        $("#divZSZSTip").attr("class", "Warn");
+        $("#divZSZSTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写在售只数啦');
+        $("#spanZSZS").css("border-color", "#F2272D");
+        return false;
+    } else {
+        if (ValidateDecimal($("#ZSZS").val())) {
+            $("#divCWGNLTip").css("display", "none");
+            $("#spanZSZS").css("border-color", "#cccccc");
+            return true;
+        } else {
+            $("#divZSZSTip").css("display", "block");
+            $("#divZSZSTip").attr("class", "Warn");
+            $("#divZSZSTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />在售只数请填写整数');
+            $("#spanZSZS").css("border-color", "#F2272D");
+            return false;
+        }
+    }
 }
-
