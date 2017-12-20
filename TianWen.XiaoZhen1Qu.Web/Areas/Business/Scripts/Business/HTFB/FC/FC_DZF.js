@@ -1,10 +1,15 @@
-﻿$(document).ready(function () {
+﻿var jygz = UE.getEditor('JYGZ');
+$(document).ready(function () {
     $("#span_xzdz").bind("click", OpenXZDZ);
 
     BindClick("FWLX");
     BindClick("ZJDW");
     LoadDuoX("日租短租房屋配置", "FWPZ");
 });
+//加载默认
+function LoadDefault() {
+    jygz.ready(function () { jygz.setHeight(200); });
+}
 //加载多选
 function LoadDuoX(type, id) {
     $.ajax({
@@ -170,10 +175,8 @@ function LoadFC_DZFJBXX() {
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
                 $("#ID").val(xml.Value.FC_DZFJBXX.ID);
                 //设置编辑器的内容
-                ue.ready(function () {
-                    ue.setHeight(200);
-                    ue.setContent(xml.Value.BCMSString);
-                });
+                ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
+                xlts.ready(function () { xlts.setContent(xml.Value.XLTSString); });
                 $("#spanFWLX").html(xml.Value.FC_DZFJBXX.FWLX);
                 $("#spanZJDW").html(xml.Value.FC_DZFJBXX.ZJDW);
                 $("#JYGZ").html(xml.Value.FC_DZFJBXX.JYGZ);
@@ -207,7 +210,7 @@ function FB() {
             Json: jsonObj.JsonToString(obj),
             BCMS: ue.getContent(),
             FWZP: GetPhotoUrls(),
-            JYGZ: $("#JYGZ").val()
+            JYGZ: jygz.getContent()
         },
         success: function (xml) {
             if (xml.Result === 1) {
