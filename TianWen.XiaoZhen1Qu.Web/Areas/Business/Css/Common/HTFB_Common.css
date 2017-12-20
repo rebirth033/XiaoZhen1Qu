@@ -60,7 +60,7 @@
 
 .span_required {color: #F2272D;display: inline-block;width: 20px;height: 36px;font-family: "宋体", "SimSun";}
 
-.input_input {text-align: center;width: 472px;padding: 6px 12px;border: 2px solid #cccccc;border-radius: 4px;font-size: 16px;height: 40px;}
+.input_input {width: 472px;padding: 6px 12px;border: 2px solid #cccccc;border-radius: 4px;font-size: 16px;height: 40px;}
 
 .Warn {font-size: 16px;color: #F2272D;margin-left: 180px;position: relative;display: block;margin-top: 6px;}
 

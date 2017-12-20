@@ -6,7 +6,6 @@
 function ValidateAll() {
     if (ValidateSelect("FZXBLB", "LB", "忘记选择类别啦")
         & ValidatePPMC()
-        & ValidatePPMC()
         & ValidateSelect("FZXBTZJE", "TZJE", "忘记选择投资金额啦")
         & ValidateCheck("ZSDQ", "忘记选择招商地区啦")
         & ValidateBCMS("BCMS", "忘记填写补充描述啦")

@@ -5,7 +5,6 @@
 //验证所有
 function ValidateAll() {
     if (ValidateSelect("SHFWLB", "LB", "忘记选择类别啦")
-        & ValidateCheck("XL", "忘记选择小类啦")
         & ValidatePPMC()
         & ValidateSelect("SHFWTZJE", "TZJE", "忘记选择投资金额啦")
         & ValidateCheck("ZSDQ", "忘记选择招商地区啦")
