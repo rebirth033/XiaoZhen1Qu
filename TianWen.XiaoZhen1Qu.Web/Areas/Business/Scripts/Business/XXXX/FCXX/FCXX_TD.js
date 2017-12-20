@@ -86,7 +86,7 @@ function LoadXQ(obj, BCMSString) {
     html += ('<p class="p_body_left_body_xq">土地详情</p>');
     html += ('<div class="div_body_left_body_xq_xx">');
     html += ('<div class="div_body_left_body_xq_xx_left">房源描述</div>');
-    html += ('<div class="div_body_left_body_xq_xx_right fyms">');
+    html += ('<div id="div_body_left_body_xq_xx_bcms" class="div_body_left_body_xq_xx_right fyms div_body_left_body_xq_xx_bcms">');
     html += (BCMSString);
     html += ('</div>');
     html += ('</div>');
