@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-
     BindClick("LB");
     LoadDuoX("管理培训场地", "CD");
 });
@@ -24,17 +23,13 @@ function LoadDuoX(type, id) {
                     }
                 }
                 if (parseInt(xml.list.length % 4) === 0)
-                    $("#div" + id).css("height", parseInt(xml.list.length / 4) * 60 + "px");
+                    $("#div" + id).css("height", parseInt(xml.list.length / 4) * 45 + "px");
                 else
-                    $("#div" + id).css("height", (parseInt(xml.list.length / 4) + 1) * 60 + "px");
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 4) + 1) * 45 + "px");
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".li" + id).bind("click", function () { ValidateCheck(id, "忘记选择" + type + "啦"); });
-                if (xml.list.length === 0)
-                    $("#div" + id).css("display", "none");
-                else
-                    $("#div" + id).css("display", "");
                 if (type === "管理培训场地")
                     LoadJYPX_GLPXJBXX();
             }
@@ -81,17 +76,13 @@ function LoadXL(lbmc, xl) {
                     }
                 }
                 if (parseInt(xml.list.length % 4) === 0)
-                    $("#divXL").css("height", parseInt(xml.list.length / 4) * 60 + "px");
+                    $("#divXL").css("height", parseInt(xml.list.length / 4) * 45 + "px");
                 else
-                    $("#divXL").css("height", (parseInt(xml.list.length / 4) + 1) * 60 + "px");
+                    $("#divXL").css("height", (parseInt(xml.list.length / 4) + 1) * 45 + "px");
                 html += "</ul>";
                 $("#divXLText").html(html);
                 $(".img_XL").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".liXL").bind("click", function () { ValidateCheck("XL", "忘记选择小类啦"); });
-                if (xml.list.length === 0)
-                    $("#divXL").css("display", "none");
-                else
-                    $("#divXL").css("display", "");
                 if (xl !== "" && xl !== null && xl !== undefined)
                     SetDuoX("XL", xl);
             }

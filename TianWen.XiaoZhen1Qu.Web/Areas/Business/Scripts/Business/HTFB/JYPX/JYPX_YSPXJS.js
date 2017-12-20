@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-
     BindClick("JXKM");
     BindClick("BYYX");
     LoadJYPX_YSPXJSJBXX();
@@ -57,13 +56,12 @@ function BYYXXZ(BYYXMC, BYYXID) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "JXKM") {
-            LoadCODESByTYPENAME("艺术培训教学科目", "JXKM", "CODES_JYPX", Bind, "YSPXJSJXKM", "JXKM", "");
+            LoadCODESByTYPENAME("艺术培训教学科目类别", "JXKM", "CODES_JYPX", Bind, "YSPXJSJXKM", "JXKM", "");
         }
         if (type === "BYYX") {
             LoadBYYX();
             LoadBYYXMC("毕业院校", "divA");
         }
-        
     });
 }
 //加载多选
@@ -93,10 +91,6 @@ function LoadDuoX(type, id) {
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-                if (xml.list.length === 0)
-                    $("#div" + id).css("display", "none");
-                else
-                    $("#div" + id).css("display", "");
                 if (type === "辅导科目")
                     LoadJYPX_YSPXJSJBXX();
             }

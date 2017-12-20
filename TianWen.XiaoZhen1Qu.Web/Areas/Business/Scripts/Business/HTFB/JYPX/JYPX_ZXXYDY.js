@@ -27,22 +27,18 @@ function LoadXL(lbmc, xl) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='liXL' style='width:120px;' onclick='SelectDuoX(this)'><img class='img_XL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i === 3 || i === 7 || i === 11) {
+                    if (i % 4 === 3 && i !== (xml.list.length - 1)) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 4) === 0)
-                    $("#divXL").css("height", parseInt(xml.list.length / 4) * 50 + "px");
+                    $("#divXL").css("height", parseInt(xml.list.length / 4) * 45 + "px");
                 else
-                    $("#divXL").css("height", (parseInt(xml.list.length / 4) + 1) * 50 + "px");
+                    $("#divXL").css("height", (parseInt(xml.list.length / 4) + 1) * 45 + "px");
                 html += "</ul>";
                 $("#divXLText").html(html);
                 $(".img_XL").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".liXL").bind("click", function () { ValidateCheck("XL", "忘记选择小类啦"); });
-                if (xml.list.length === 0)
-                    $("#divXL").css("display", "none");
-                else
-                    $("#divXL").css("display", "");
                 if (xl !== "" && xl !== null && xl !== undefined)
                     SetDuoX("XL", xl);
             }
@@ -58,7 +54,7 @@ function BindClick(type) {
         if (type === "LB") {
             LoadCODESByTYPENAME("中小学一对一类别", "LB", "CODES_JYPX", Bind, "OUTLB", "LB");
         }
-        
+
     });
 }
 //加载商务服务_中小学一对一基本信息

@@ -34,7 +34,7 @@ function ValidateAll() {
         & ValidateXCTS()
         & ValidateXCAP("XCAP", "忘记填写行程安排啦")
         & ValidateYDXZ("YDXZ", "忘记填写预定须知啦")
-        & ValidateSpanInput("MSJ", "忘记填写门市价啦")
+        & ValidateSpanInput("MSJ", "门市价")
         & ValidateYHJ()
         & ValidateFYBH("FYBH", "忘记填写费用包含啦")
         & ValidateZFXM("ZFXM", "忘记填写自费项目啦")
