@@ -147,7 +147,7 @@ function ValidateCheck(id, message) {
     });
     if (!bool) {
         $("#div" + id + "Tip").css("display", "block");
-        $("#div" + id + "Tip").css("margin-top", "-10px");
+        //$("#div" + id + "Tip").css("margin-top", "-10px");
         $("#div" + id + "Tip").attr("class", "Warn");
         $("#div" + id + "Tip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />' + message + '');
     }

@@ -8,231 +8,231 @@
 }
 @section Section_Body {
     <div id="myTabContent" class="div_content">
-    <div id="divJBXX" class="div_split" style="display: block; text-align: left">
-        <span class="span_split">基本信息</span>
-        <em class="em_split"></em>
-    </div>
-    <div id="divTSLB" class="div_row" style="z-index: 999;">
-        <div class="div_row_left font_two">
-            <span class="span_required">*</span>
-            <span class="spanFWCZ">类别</span>
+        <div id="divJBXX" class="div_split" style="display: block; text-align: left">
+            <span class="span_split">基本信息</span>
+            <em class="em_split"></em>
         </div>
-        <div class="div_row_right">
-            <div id="divLBText" class="div_select_out SRK" style="position: relative;">
-                <div id="divLBSpan" class="div_select_in" style="border: none; margin-top: 6px;">
-                    <span id="spanLB" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择类别</span>
-                    <div class="span_select_arrow"></div>
+        <div id="divBT" class="div_row">
+            <div class="div_row_left font_two">
+                <span class="span_required">*</span>
+                <span id="spanBT">标题</span>
+            </div>
+            <div class="div_row_right">
+                <input id="BT" maxlength="50" column="BT" class="input_input SRK" style="width: 594px; padding: 6px 12px;" type="text" placeholder="吸引人的标题可让更多的人看您的信息喔" />
+                <div id="divBTTip"></div>
+            </div>
+        </div>
+        <div id="divTSLB" class="div_row" style="z-index: 999;">
+            <div class="div_row_left font_two">
+                <span class="span_required">*</span>
+                <span class="spanFWCZ">类别</span>
+            </div>
+            <div class="div_row_right">
+                <div id="divLBText" class="div_select_out SRK" style="position: relative;">
+                    <div id="divLBSpan" class="div_select_in" style="border: none; margin-top: 6px;">
+                        <span id="spanLB" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择类别</span>
+                        <div class="span_select_arrow"></div>
+                    </div>
+                    <div id="divLB" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
+                    </div>
                 </div>
-                <div id="divLB" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
+            </div>
+            <div id="divTSLBTip" class="Warn" style="z-index: 998; position: relative;"></div>
+        </div>
+        <div id="divXL" class="div_row" style="z-index: 996; display: none;">
+            <div class="div_row_left font_two">
+                <span class="span_required">&nbsp;</span>
+                <span id="spanXL">小类</span>
+            </div>
+            <div id="divXLText" class="div_row_right" style="position: relative;">
+            </div>
+            <div id="divXLTip" class="Warn" style="z-index: 998; position: relative;"></div>
+        </div>
+        <div id="divPPMC" class="div_row" style="margin-top: 22px; z-index: 998;">
+            <div class="div_row_left">
+                <span class="span_required">*</span>
+                <span id="spanPPMC">品牌名称</span>
+            </div>
+            <div class="div_row_right">
+                <input id="PPMC" maxlength="50" column="PPMC" class="span_spaninput SRK" style="width: 594px; padding: 6px 12px;" type="text" placeholder="填写真实的品牌名称可以提升搜索流量，增加品牌曝光" />
+                <div id="divPPMCTip"></div>
+            </div>
+        </div>
+        <div id="divCYPPLS" class="div_row" style="z-index: 997;">
+            <div class="div_row_left">
+                <span class="span_required">&nbsp;</span>
+                <span class="spanFWCZ">品牌历史</span>
+            </div>
+            <div class="div_row_right">
+                <div id="divPPLSText" class="div_select_out SRK" style="position: relative;">
+                    <div id="divPPLSSpan" class="div_select_in" style="border: none; margin-top: 6px;">
+                        <span id="spanPPLS" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择品牌历史</span>
+                        <div class="span_select_arrow"></div>
+                    </div>
+                    <div id="divPPLS" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
+                    </div>
                 </div>
             </div>
         </div>
-        <div id="divTSLBTip" class="Warn" style="z-index: 998; position: relative;"></div>
-    </div>
-    <div id="divXL" class="div_row" style="z-index: 996; display: none;">
-        <div class="div_row_left font_two">
-            <span class="span_required">&nbsp;</span>
-            <span id="spanXL">小类</span>
-        </div>
-        <div id="divXLText" class="div_row_right" style="position: relative;">
-        </div>
-        <div id="divXLTip" class="Warn" style="z-index: 998; position: relative;"></div>
-    </div>
-    <div id="divPPMC" class="div_row" style="margin-top: 22px; z-index: 998;">
-        <div class="div_row_left">
-            <span class="span_required">*</span>
-            <span id="spanPPMC">品牌名称</span>
-        </div>
-        <div class="div_row_right">
-            <input id="PPMC" maxlength="50" column="PPMC" class="span_spaninput SRK" style="width: 594px; padding: 6px 12px;" type="text" placeholder="填写真实的品牌名称可以提升搜索流量，增加品牌曝光"/>
-            <div id="divPPMCTip"></div>
-        </div>
-    </div>
-    <div id="divCYPPLS" class="div_row" style="z-index: 997;">
-        <div class="div_row_left">
-            <span class="span_required">&nbsp;</span>
-            <span class="spanFWCZ">品牌历史</span>
-        </div>
-        <div class="div_row_right">
-            <div id="divPPLSText" class="div_select_out SRK" style="position: relative;">
-                <div id="divPPLSSpan" class="div_select_in" style="border: none; margin-top: 6px;">
-                    <span id="spanPPLS" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择品牌历史</span>
-                    <div class="span_select_arrow"></div>
+        <div id="divTSTZJE" class="div_row" style="z-index: 996;">
+            <div class="div_row_left">
+                <span class="span_required">*</span>
+                <span class="spanFWCZ">投资金额</span>
+            </div>
+            <div class="div_row_right">
+                <div id="divTZJEText" class="div_select_out SRK" style="position: relative;">
+                    <div id="divTZJESpan" class="div_select_in" style="border: none; margin-top: 6px;">
+                        <span id="spanTZJE" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择投资金额</span>
+                        <div class="span_select_arrow"></div>
+                    </div>
+                    <div id="divTZJE" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
+                    </div>
                 </div>
-                <div id="divPPLS" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
+            </div>
+            <div id="divTSTZJETip" class="Warn" style="z-index: 998; position: relative;"></div>
+        </div>
+        <div id="divCYQGFDS" class="div_row" style="z-index: 995;">
+            <div class="div_row_left font_five">
+                <span class="span_required">&nbsp;</span>
+                <span class="spanFWCZ">全国分店数</span>
+            </div>
+            <div class="div_row_right">
+                <div id="divQGFDSText" class="div_select_out SRK" style="position: relative;">
+                    <div id="divQGFDSSpan" class="div_select_in" style="border: none; margin-top: 6px;">
+                        <span id="spanQGFDS" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择全国分店数</span>
+                        <div class="span_select_arrow"></div>
+                    </div>
+                    <div id="divQGFDS" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div id="divTSTZJE" class="div_row" style="z-index: 996;">
-        <div class="div_row_left">
-            <span class="span_required">*</span>
-            <span class="spanFWCZ">投资金额</span>
-        </div>
-        <div class="div_row_right">
-            <div id="divTZJEText" class="div_select_out SRK" style="position: relative;">
-                <div id="divTZJESpan" class="div_select_in" style="border: none; margin-top: 6px;">
-                    <span id="spanTZJE" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择投资金额</span>
-                    <div class="span_select_arrow"></div>
-                </div>
-                <div id="divTZJE" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
+        <div id="divCYDDMJ" class="div_row" style="z-index: 994;">
+            <div class="div_row_left">
+                <span class="span_required">&nbsp;</span>
+                <span class="spanFWCZ">单店面积</span>
+            </div>
+            <div class="div_row_right">
+                <div id="divDDMJText" class="div_select_out SRK" style="position: relative;">
+                    <div id="divDDMJSpan" class="div_select_in" style="border: none; margin-top: 6px;">
+                        <span id="spanDDMJ" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择单店面积</span>
+                        <div class="span_select_arrow"></div>
+                    </div>
+                    <div id="divDDMJ" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
+                    </div>
                 </div>
             </div>
         </div>
-        <div id="divTSTZJETip" class="Warn" style="z-index: 998; position: relative;"></div>
-    </div>
-    <div id="divCYQGFDS" class="div_row" style="z-index: 995;">
-        <div class="div_row_left font_five">
-            <span class="span_required">&nbsp;</span>
-            <span class="spanFWCZ">全国分店数</span>
-        </div>
-        <div class="div_row_right">
-            <div id="divQGFDSText" class="div_select_out SRK" style="position: relative;">
-                <div id="divQGFDSSpan" class="div_select_in" style="border: none; margin-top: 6px;">
-                    <span id="spanQGFDS" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择全国分店数</span>
-                    <div class="span_select_arrow"></div>
-                </div>
-                <div id="divQGFDS" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
-                </div>
+        <div id="divSHRQ" class="div_row" style="z-index: 993;">
+            <div class="div_row_left">
+                <span class="span_required">&nbsp;</span>
+                <span id="spanSHRQ">适合人群</span>
+            </div>
+            <div id="divSHRQText" class="div_row_right" style="position: relative;">
             </div>
         </div>
-    </div>
-    <div id="divCYDDMJ" class="div_row" style="z-index: 994;">
-        <div class="div_row_left">
-            <span class="span_required">&nbsp;</span>
-            <span class="spanFWCZ">单店面积</span>
+        <div id="divPPMS" class="div_row" style="margin-top: 22px; z-index: 993;">
+            <div class="div_row_left">
+                <span class="span_required">&nbsp;</span>
+                <span id="spanPPMS">品牌描述</span>
+            </div>
+            <div class="div_row_right">
+                <input id="PPMS" maxlength="50" column="PPMS" class="span_spaninput SRK" style="width: 594px; padding: 6px 12px;" type="text" placeholder="用于列表展示，可填写加盟品牌的特点和优势，不超过30字" />
+                <div id="divPPMSTip"></div>
+            </div>
         </div>
-        <div class="div_row_right">
-            <div id="divDDMJText" class="div_select_out SRK" style="position: relative;">
-                <div id="divDDMJSpan" class="div_select_in" style="border: none; margin-top: 6px;">
-                    <span id="spanDDMJ" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择单店面积</span>
-                    <div class="span_select_arrow"></div>
+        <div id="divZSDQ" class="div_row" style="z-index: 993;">
+            <div class="div_row_left">
+                <span class="span_required">*</span>
+                <span id="spanZSDQ">招商地区</span>
+            </div>
+            <div id="divZSDQText" class="div_row_right" style="position: relative;">
+            </div>
+            <div id="divZSDQTip" class="Warn" style="z-index: 998; position: relative;"></div>
+        </div>
+        <div id="divXXXX" class="div_split" style="display: block; text-align: left;">
+            <span class="span_split">加盟项目描述</span>
+            <em class="em_split"></em>
+        </div>
+        <div id="divBCMS" class="div_row" style="height: 253px; position: relative; z-index: 998;">
+            <div class="div_row_left" style="height: 170px; vertical-align: top;">
+                <span class="span_required" style="vertical-align: top">*</span>
+                <span id="spanBCMS" style="vertical-align: top">服务介绍</span>
+            </div>
+            <div class="div_row_right">
+                <script id="BCMS" type="text/plain" style="width: 594px; height: 200px; display: inline-block;">
+                </script>
+                <div id="divBCMSTip" class="Warn"></div>
+            </div>
+        </div>
+        <div id="divFWZP" class="div_row_zp">
+            <div class="div_row_left" style="height: 170px; vertical-align: top;">
+                <span class="span_required" style="vertical-align: top">*</span>
+                <span id="spanFWZP" style="vertical-align: top">上传照片</span>
+            </div>
+            <div class="div_row_right">
+                <div id="div_upload" class="div_upload">
+                    <form action="" enctype="multipart/form-data" id="myform" method="post">
+                        <input id="input_upload" unselectable="on" type="file" multiple="multiple" class="file" />
+                    </form>
                 </div>
-                <div id="divDDMJ" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
+                <div class="div_row_right_zp_info">
+                    <span>最多可上传16张，支持多选上传，图片格式jpg/png/jpeg等。有图可使浏览量增加。</span>
                 </div>
+                <div id="divTPTip" class="Warn"></div>
             </div>
         </div>
-    </div>
-    <div id="divSHRQ" class="div_row" style="z-index: 993;">
-        <div class="div_row_left">
-            <span class="span_required">&nbsp;</span>
-            <span id="spanSHRQ">适合人群</span>
-        </div>
-        <div id="divSHRQText" class="div_row_right" style="position: relative;">
-        </div>
-    </div>
-    <div id="divBT" class="div_row" style="margin-top: 22px; z-index: 993;">
-        <div class="div_row_left font_two">
-            <span class="span_required">*</span>
-            <span id="spanBT">标题</span>
-        </div>
-        <div class="div_row_right">
-            <input id="BT" maxlength="50" column="BT" class="input_input SRK" style="width: 594px; padding: 6px 12px;" type="text" placeholder="吸引人的标题可让更多的人看您的信息喔"/>
-            <div id="divBTTip"></div>
-        </div>
-    </div>
-    <div id="divPPMS" class="div_row" style="margin-top: 22px; z-index: 993;">
-        <div class="div_row_left">
-            <span class="span_required">&nbsp;</span>
-            <span id="spanPPMS">品牌描述</span>
-        </div>
-        <div class="div_row_right">
-            <input id="PPMS" maxlength="50" column="PPMS" class="span_spaninput SRK" style="width: 594px; padding: 6px 12px;" type="text" placeholder="用于列表展示，可填写加盟品牌的特点和优势，不超过30字"/>
-            <div id="divPPMSTip"></div>
-        </div>
-    </div>
-    <div id="divZSDQ" class="div_row" style="z-index: 993;">
-        <div class="div_row_left">
-            <span class="span_required">*</span>
-            <span id="spanZSDQ">招商地区</span>
-        </div>
-        <div id="divZSDQText" class="div_row_right" style="position: relative;">
-        </div>
-        <div id="divZSDQTip" class="Warn" style="z-index: 998; position: relative;"></div>
-    </div>
-    <div id="divXXXX" class="div_split" style="display: block; text-align: left;">
-        <span class="span_split">加盟项目描述</span>
-        <em class="em_split"></em>
-    </div>
-    <div id="divBCMS" class="div_row" style="height: 253px; position: relative; z-index: 998;">
-        <div class="div_row_left" style="height: 170px; vertical-align: top;">
-            <span class="span_required" style="vertical-align: top">*</span>
-            <span id="spanBCMS" style="vertical-align: top">服务介绍</span>
-        </div>
-        <div class="div_row_right">
-            <script id="BCMS" type="text/plain" style="width: 594px; height: 200px; display: inline-block;">
-                    </script>
-            <div id="divBCMSTip" class="Warn"></div>
-        </div>
-    </div>
-    <div id="divFWZP" class="div_row_zp">
-        <div class="div_row_left" style="height: 170px; vertical-align: top;">
-            <span class="span_required" style="vertical-align: top">*</span>
-            <span id="spanFWZP" style="vertical-align: top">上传照片</span>
-        </div>
-        <div class="div_row_right">
-            <div id="div_upload" class="div_upload">
-                <form action="" enctype="multipart/form-data" id="myform" method="post">
-                    <input id="input_upload" unselectable="on" type="file" multiple="multiple" class="file"/>
-                </form>
+        <div id="divFWZPValue" class="div_row_zp" style="display: none;">
+            <div class="div_row_left" style="height: 170px; vertical-align: top;">
+                <span class="span_required"></span>
+                <span id="spanFWZP" style="width: 56px; display: inline-block;"></span>
             </div>
-            <div class="div_row_right_zp_info">
-                <span>最多可上传16张，支持多选上传，图片格式jpg/png/jpeg等。有图可使浏览量增加。</span>
+            <div id="divImgs1" class="div_row_right" style="display: inline-block; width: 670px;">
+                <ul id="ulImgs1" class="ulImgs" style="padding-left: 0px;"></ul>
             </div>
-            <div id="divTPTip" class="Warn"></div>
+            <div class="div_row_left" style="height: 170px; vertical-align: top;">
+                <span class="span_required"></span>
+                <span id="spanFWZP" style="width: 56px; display: inline-block;"></span>
+            </div>
+            <div id="divImgs2" class="div_row_right" style="display: inline-block; width: 670px;">
+                <ul id="ulImgs2" class="ulImgs" style="padding-left: 0px;"></ul>
+            </div>
         </div>
-    </div>
-    <div id="divFWZPValue" class="div_row_zp" style="display: none;">
-        <div class="div_row_left" style="height: 170px; vertical-align: top;">
-            <span class="span_required"></span>
-            <span id="spanFWZP" style="width: 56px; display: inline-block;"></span>
+        <div id="divLXRXX" class="div_split" style="display: block; text-align: left;">
+            <span class="span_split">联系人信息</span>
+            <em class="em_split"></em>
         </div>
-        <div id="divImgs1" class="div_row_right" style="display: inline-block; width: 670px;">
-            <ul id="ulImgs1" class="ulImgs" style="padding-left: 0px;"></ul>
+        <div id="divLXR" class="div_row" style="z-index: 990">
+            <div class="div_row_left font_three">
+                <span class="span_required">*</span>
+                <span id="spanLXR">联系人</span>
+            </div>
+            <div class="div_row_right">
+                <input id="LXR" column="LXR" class="input_input SRK" type="text" placeholder="请输入联系人" />
+                <div id="divLXRTip"></div>
+            </div>
         </div>
-        <div class="div_row_left" style="height: 170px; vertical-align: top;">
-            <span class="span_required"></span>
-            <span id="spanFWZP" style="width: 56px; display: inline-block;"></span>
+        <div id="divLXDH" class="div_row" style="z-index: 989">
+            <div class="div_row_left">
+                <span class="span_required">*</span>
+                <span id="spanLXDH">联系电话</span>
+            </div>
+            <div class="div_row_right">
+                <input id="LXDH" maxlength="11" column="LXDH" class="input_input SRK" type="text" placeholder="请输入联系电话" />
+                <div id="divLXDHTip"></div>
+            </div>
         </div>
-        <div id="divImgs2" class="div_row_right" style="display: inline-block; width: 670px;">
-            <ul id="ulImgs2" class="ulImgs" style="padding-left: 0px;"></ul>
+        <div id="divQQ" class="div_row" style="margin-top: -12px;" style="z-index: 988">
+            <div class="div_row_left font_three">
+                <span class="span_required"></span>
+                <span id="spanQQ">微信号</span>
+            </div>
+            <div class="div_row_right">
+                <input column="QQ" class="input_input SRK" type="text" placeholder="请输入微信号" />
+            </div>
         </div>
-    </div>
-    <div id="divLXRXX" class="div_split" style="display: block; text-align: left;">
-        <span class="span_split">联系人信息</span>
-        <em class="em_split"></em>
-    </div>
-    <div id="divLXR" class="div_row" style="z-index: 990">
-        <div class="div_row_left font_three">
-            <span class="span_required">*</span>
-            <span id="spanLXR">联系人</span>
+        <div id="divFB" class="div_split" style="display: block; text-align: center; margin-top: 40px;">
+            <input type="button" class="btn btn-info input_text" style="height: 50px; font-size: 24px;" id="btnFB" value="发布" />
         </div>
-        <div class="div_row_right">
-            <input id="LXR" column="LXR" class="input_input SRK" type="text" placeholder="请输入联系人"/>
-            <div id="divLXRTip"></div>
-        </div>
-    </div>
-    <div id="divLXDH" class="div_row" style="z-index: 989">
-        <div class="div_row_left">
-            <span class="span_required">*</span>
-            <span id="spanLXDH">联系电话</span>
-        </div>
-        <div class="div_row_right">
-            <input id="LXDH" maxlength="11" column="LXDH" class="input_input SRK" type="text" placeholder="请输入联系电话"/>
-            <div id="divLXDHTip"></div>
-        </div>
-    </div>
-    <div id="divQQ" class="div_row" style="margin-top: -12px;" style="z-index: 988">
-        <div class="div_row_left font_three">
-            <span class="span_required"></span>
-            <span id="spanQQ">微信号</span>
-        </div>
-        <div class="div_row_right">
-            <input column="QQ" class="input_input SRK" type="text" placeholder="请输入微信号"/>
-        </div>
-    </div>
-    <div id="divFB" class="div_split" style="display: block; text-align: center; margin-top: 40px;">
-        <input type="button" class="btn btn-info input_text" style="height: 50px; font-size: 24px;" id="btnFB" value="发布"/>
-    </div>
     </div>
 }
