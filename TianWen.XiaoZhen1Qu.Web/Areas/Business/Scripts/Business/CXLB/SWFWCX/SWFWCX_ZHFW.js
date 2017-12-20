@@ -6,13 +6,13 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadSWFWCondition() {
-    LoadConditionByTypeNames("'展会服务类别'", "CODES_SWFW", "类别", "LB", "15");
+    LoadConditionByTypeNames("'展会服务类别'", "CODES_SWFW", "类别", "LB", "100");
     LoadBody("SWFWXX_ZHFW", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
     if (name === "类别" && (obj.innerHTML !== "展会庆典策划" && obj.innerHTML !== "摄影摄像")) {
-        LoadConditionByParentID(obj.id, "CODES_SWFW", "小类", "XL",15);
+        LoadConditionByParentID(obj.id, "CODES_SWFW", "小类", "XL",100);
     }
     if (name === "类别" && (obj.innerHTML === "展会庆典策划" || obj.innerHTML === "摄影摄像")) {
         $("#ul_condition_body_XL").remove();

@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadSWFWCondition() {
-    LoadConditionByTypeNames("'咨询服务类别'", "CODES_SWFW", "类别", "LB", "15");
+    LoadConditionByTypeNames("'咨询服务类别'", "CODES_SWFW", "类别", "LB", "100");
     LoadBody("SWFWXX_ZXFW", currentIndex);
 }
 //选择条件

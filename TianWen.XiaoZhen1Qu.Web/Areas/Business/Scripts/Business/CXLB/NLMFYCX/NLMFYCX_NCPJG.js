@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadNLMFYCondition() {
-    LoadConditionByTypeNames("'农产品加工类别'", "CODES_NLMFY", "类别", "LB", "15");
+    LoadConditionByTypeNames("'农产品加工类别'", "CODES_NLMFY", "类别", "LB", "100");
     LoadBody("NLMFYXX_NCPJG", currentIndex);
 }
 //选择条件

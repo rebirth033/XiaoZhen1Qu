@@ -6,13 +6,13 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadNLMFYCondition() {
-    LoadConditionByTypeNames("'畜禽养殖类别'", "CODES_NLMFY", "类别", "LB", "15");
+    LoadConditionByTypeNames("'畜禽养殖类别'", "CODES_NLMFY", "类别", "LB", "100");
     LoadBody("NLMFYXX_CQYZ", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
     if (name === "类别" && (obj.innerHTML !== "酒店管理" && obj.innerHTML !== "工程管理" && obj.innerHTML !== "素质拓展" && obj.innerHTML !== "总裁研修")) {
-        LoadConditionByParentID(obj.id, "CODES_NLMFY", "小类", "XL",15);
+        LoadConditionByParentID(obj.id, "CODES_NLMFY", "小类", "XL",100);
     }
     if (name === "类别" && (obj.innerHTML === "酒店管理" || obj.innerHTML === "工程管理" || obj.innerHTML === "素质拓展" || obj.innerHTML === "总裁研修")) {
         $("#ul_condition_body_XL").remove();

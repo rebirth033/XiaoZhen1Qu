@@ -60,7 +60,7 @@ function LoadJBXX(obj) {
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">全国分店数：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.QGFDS + '</span>');
+    html += ('<span class="span_body_left_body_right_right">' + obj.QGFDS + '个</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">单店面积：</span>');
@@ -87,10 +87,10 @@ function LoadJBXX(obj) {
 function LoadXQ(obj, BCMSString) {
     var html = "";
     html += ('<div class="div_body_left_body_xq">');
-    html += ('<p class="p_body_left_body_xq">物品详情</p>');
+    html += ('<p class="p_body_left_body_xq">加盟详情</p>');
 
     html += ('<div class="div_body_left_body_xq_xx">');
-    html += ('<div class="div_body_left_body_xq_xx_left">物品描述</div>');
+    html += ('<div class="div_body_left_body_xq_xx_left">加盟描述</div>');
     html += ('<div id="div_body_left_body_xq_xx_bcms" class="div_body_left_body_xq_xx_right fyms div_body_left_body_xq_xx_bcms">');
     html += (BCMSString);
     html += ('</div>');

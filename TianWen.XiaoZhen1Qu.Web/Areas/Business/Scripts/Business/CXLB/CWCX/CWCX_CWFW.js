@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadCWCondition() {
-    LoadConditionByTypeNames("'宠物服务类别'", "CODES_CW", "类别", "LB", "15");
+    LoadConditionByTypeNames("'宠物服务类别'", "CODES_CW", "类别", "LB", "100");
 }
 //选择条件
 function SelectCondition(obj, name) {

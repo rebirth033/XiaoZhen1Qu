@@ -6,13 +6,13 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadSHFWCondition() {
-    LoadConditionByTypeNames("'家电维修类别'", "CODES_SHFW", "类别", "LB", "15");
+    LoadConditionByTypeNames("'家电维修类别'", "CODES_SHFW", "类别", "LB", "100");
     LoadBody("SHFWXX_JDWX", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
     if (name === "类别") {
-        LoadConditionByParentID(obj.id, "CODES_SHFW", "小类", "XL",15);
+        LoadConditionByParentID(obj.id, "CODES_SHFW", "小类", "XL",100);
     }
     $(obj).parent().find(".li_condition_body").each(function () {
         $(this).removeClass("li_condition_body_active");

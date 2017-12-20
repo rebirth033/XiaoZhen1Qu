@@ -6,13 +6,13 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadSWFWCondition() {
-    LoadConditionByTypeNames("'翻译/速记类别'", "CODES_SWFW", "类别", "LB", "15");
+    LoadConditionByTypeNames("'翻译/速记类别'", "CODES_SWFW", "类别", "LB", "100");
     LoadBody("SWFWXX_FYSJ", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
     if (name === "类别" && (obj.innerHTML !== "笔译" && obj.innerHTML !== "同声传译")) {
-        LoadConditionByParentID(obj.id, "CODES_SWFW", "小类", "XL",15);
+        LoadConditionByParentID(obj.id, "CODES_SWFW", "小类", "XL",100);
     }
     if (name === "类别" && (obj.innerHTML === "笔译" || obj.innerHTML === "同声传译")) {
         $("#ul_condition_body_XL").remove();

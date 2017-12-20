@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadLYJDCondition() {
-    LoadConditionByTypeNames("'机票类别'", "CODES_LYJD", "类别", "LB", "15");
+    LoadConditionByTypeNames("'机票类别'", "CODES_LYJD", "类别", "LB", "100");
     LoadBody("LYJDXX_JP", currentIndex);
 }
 //选择条件

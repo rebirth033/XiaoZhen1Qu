@@ -6,13 +6,13 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadSWFWCondition() {
-    LoadConditionByTypeNames("'快递类别'", "CODES_SWFW", "类别", "LB", "15");
+    LoadConditionByTypeNames("'快递类别'", "CODES_SWFW", "类别", "LB", "100");
     LoadBody("SWFWXX_KD", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
     if (name === "类别" && (obj.innerHTML !== "同城快递")) {
-        LoadConditionByParentID(obj.id, "CODES_SWFW", "小类", "XL",15);
+        LoadConditionByParentID(obj.id, "CODES_SWFW", "小类", "XL",100);
     }
     if (name === "类别" && (obj.innerHTML === "同城快递")) {
         $("#ul_condition_body_XL").remove();

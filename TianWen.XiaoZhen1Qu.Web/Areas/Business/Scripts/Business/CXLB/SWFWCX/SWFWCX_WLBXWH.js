@@ -12,7 +12,7 @@ function LoadSWFWCondition() {
 //选择条件
 function SelectCondition(obj, name) {
     if (name === "类别" && (obj.innerHTML === "安防监控" || obj.innerHTML === "弱电工程")) {
-        LoadConditionByParentID(obj.id, "CODES_SWFW", "小类", "XL",15);
+        LoadConditionByParentID(obj.id, "CODES_SWFW", "小类", "XL",100);
     }
     if (name === "类别" && (obj.innerHTML !== "安防监控" && obj.innerHTML !== "弱电工程")) {
         $("#ul_condition_body_XL").remove();

@@ -6,13 +6,13 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadNLMFYCondition() {
-    LoadConditionByTypeNames("'动植物种苗类别'", "CODES_NLMFY", "类别", "LB", "15");
+    LoadConditionByTypeNames("'动植物种苗类别'", "CODES_NLMFY", "类别", "LB", "100");
     LoadBody("NLMFYXX_DZWZM", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
     if (name === "类别" && (obj.innerHTML === "种羊" || obj.innerHTML === "种猪" || obj.innerHTML === "种牛" || obj.innerHTML === "种驴" || obj.innerHTML === "鸡苗" || obj.innerHTML === "鸭苗" || obj.innerHTML === "种马" || obj.innerHTML === "鹅苗")) {
-        LoadConditionByParentID(obj.id, "CODES_NLMFY", "小类", "XL",15);
+        LoadConditionByParentID(obj.id, "CODES_NLMFY", "小类", "XL",100);
     }
     if (name === "类别" && (obj.innerHTML !== "种羊" && obj.innerHTML !== "种猪" && obj.innerHTML !== "种牛" && obj.innerHTML !== "种驴" && obj.innerHTML !== "鸡苗" && obj.innerHTML !== "鸭苗" && obj.innerHTML !== "种马" && obj.innerHTML !== "鹅苗")) {
         $("#ul_condition_body_XL").remove();

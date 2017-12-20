@@ -12,7 +12,7 @@ function LoadJYPXCondition() {
 //选择条件
 function SelectCondition(obj, name) {
     if (name === "类别" && (obj.innerHTML === "球类" || obj.innerHTML === "瑜伽" || obj.innerHTML === "武术" || obj.innerHTML === "棋类")) {
-        LoadConditionByParentID(obj.id, "CODES_JYPX", "小类", "XL",15);
+        LoadConditionByParentID(obj.id, "CODES_JYPX", "小类", "XL",100);
     }
     if (name === "类别" && (obj.innerHTML !== "球类" && obj.innerHTML !== "瑜伽" && obj.innerHTML !== "武术" && obj.innerHTML !== "棋类")) {
         $("#ul_condition_body_XL").remove();

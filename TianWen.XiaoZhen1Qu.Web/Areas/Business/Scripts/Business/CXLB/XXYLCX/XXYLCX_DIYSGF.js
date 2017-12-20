@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadXXYLCondition() {
-    LoadConditionByTypeNames("'DIY手工坊类别'", "CODES_XXYL", "类别", "LB", "15");
+    LoadConditionByTypeNames("'DIY手工坊类别'", "CODES_XXYL", "类别", "LB", "100");
     LoadBody("XXYLXX_DIYSGF", currentIndex);
 }
 //选择条件

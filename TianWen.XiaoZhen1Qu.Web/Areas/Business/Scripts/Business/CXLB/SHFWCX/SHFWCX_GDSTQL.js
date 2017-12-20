@@ -6,13 +6,13 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadSHFWCondition() {
-    LoadConditionByTypeNames("'管道疏通/清理类别'", "CODES_SHFW", "类别", "LB", "15");
+    LoadConditionByTypeNames("'管道疏通/清理类别'", "CODES_SHFW", "类别", "LB", "100");
     LoadBody("SHFWXX_GDSTQL", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
     if (name === "类别" && (obj.innerHTML === "打印机" || obj.innerHTML === "复印机" || obj.innerHTML === "传真机" || obj.innerHTML === "一体机")) {
-        LoadConditionByParentID(obj.id, "CODES_SHFW", "小类", "XL",15);
+        LoadConditionByParentID(obj.id, "CODES_SHFW", "小类", "XL",100);
     }
     if (name === "类别" && (obj.innerHTML !== "打印机" && obj.innerHTML !== "复印机" && obj.innerHTML !== "传真机" && obj.innerHTML !== "一体机")) {
         $("#ul_condition_body_XL").remove();

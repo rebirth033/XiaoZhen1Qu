@@ -1,10 +1,7 @@
 ﻿@{
-
     Layout = "~/Areas/Business/Views/Shared/CXLB.cshtml";
 }
 @section Section_Head {
-
-
     <link href="@Url.Content("~/Areas/Business/Css/CXLB/PFCGCX.css")" rel="stylesheet" />
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/CXLB/PFCGCX/PFCGCX_AFSB.js")"></script>
 }
@@ -23,8 +20,8 @@
     <div id="divBody" class="div_body">
         <ul class="ul_body_head">
             <li id="li_body_head_first" class="li_body_head"></li>
-            <li class="li_body_head">个人</li>
-            <li class="li_body_head">商家</li>
+            @*<li class="li_body_head">个人</li>
+            <li class="li_body_head">商家</li>*@
         </ul>
         <div id="div_body_left" class="div_body_left">
             <ul id="ul_body_left" class="ul_body_left"></ul>

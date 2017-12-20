@@ -6,13 +6,13 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadZXJCCondition() {
-    LoadConditionByTypeNames("'家装服务类别'", "CODES_ZXJC", "类别", "LB", "15");
+    LoadConditionByTypeNames("'家装服务类别'", "CODES_ZXJC", "类别", "LB", "100");
     LoadBody("ZXJCXX_JZFW", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
     if (name === "类别" && (obj.innerHTML === "装修队/散工")) {
-        LoadConditionByParentID(obj.id, "CODES_ZXJC", "小类", "XL",15);
+        LoadConditionByParentID(obj.id, "CODES_ZXJC", "小类", "XL",100);
     }
     if (name === "类别" && (obj.innerHTML !== "装修队/散工")) {
         $("#ul_condition_body_XL").remove();

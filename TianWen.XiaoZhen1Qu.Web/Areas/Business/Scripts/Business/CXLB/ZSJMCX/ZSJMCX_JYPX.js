@@ -12,7 +12,7 @@ function LoadZSJMCondition() {
 //选择条件
 function SelectCondition(obj, name) {
     if (name === "类别" && (obj.innerHTML !== "儿童乐园")) {
-        LoadConditionByParentID(obj.id, "CODES_ZSJM", "小类", "XL",15);
+        LoadConditionByParentID(obj.id, "CODES_ZSJM", "小类", "XL",100);
     }
     if (name === "类别" && (obj.innerHTML === "儿童乐园")) {
         $("#ul_condition_body_XL").remove();

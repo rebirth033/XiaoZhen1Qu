@@ -12,7 +12,7 @@ function LoadSWFWCondition() {
 //选择条件
 function SelectCondition(obj, name) {
     if (name === "类别" && (obj.innerHTML !== "空调租赁" && obj.innerHTML !== "户外装备租赁" && obj.innerHTML !== "移动厕所租赁")) {
-        LoadConditionByParentID(obj.id, "CODES_SWFW", "小类", "XL",15);
+        LoadConditionByParentID(obj.id, "CODES_SWFW", "小类", "XL",100);
     }
     if (name === "类别" && (obj.innerHTML === "空调租赁" || obj.innerHTML === "户外装备租赁" || obj.innerHTML === "移动厕所租赁")) {
         $("#ul_condition_body_XL").remove();

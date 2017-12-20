@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadCLCondition() {
-    LoadConditionByTypeNames("'过户/验车类别'", "CODES_CL", "类别", "LB", "15");
+    LoadConditionByTypeNames("'过户/验车类别'", "CODES_CL", "类别", "LB", "100");
     LoadBody("CLXX_GHSPNJYC", currentIndex);
 }
 //选择条件

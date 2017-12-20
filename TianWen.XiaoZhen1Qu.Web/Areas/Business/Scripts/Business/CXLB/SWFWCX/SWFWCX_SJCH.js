@@ -12,7 +12,7 @@ function LoadSWFWCondition() {
 //选择条件
 function SelectCondition(obj, name) {
     if (name === "类别" && (obj.innerHTML === "视频制作" || obj.innerHTML === "平面设计" || obj.innerHTML === "品牌策划推广" || obj.innerHTML === "工业设计")) {
-        LoadConditionByParentID(obj.id, "CODES_SWFW", "小类", "XL",15);
+        LoadConditionByParentID(obj.id, "CODES_SWFW", "小类", "XL",100);
     }
     if (name === "类别" && (obj.innerHTML !== "视频制作" && obj.innerHTML !== "平面设计" && obj.innerHTML !== "品牌策划推广" && obj.innerHTML !== "工业设计")) {
         $("#ul_condition_body_XL").remove();

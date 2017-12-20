@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadLRCondition() {
-    LoadConditionByTypeNames("'美甲类别'", "CODES_LR", "类别", "LB", "15");
+    LoadConditionByTypeNames("'美甲类别'", "CODES_LR", "类别", "LB", "100");
     LoadBody("LRXX_MJ", currentIndex);
 }
 //选择条件

@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadLRCondition() {
-    LoadConditionByTypeNames("'口腔护理类别'", "CODES_LR", "类别", "LB", "15");
+    LoadConditionByTypeNames("'口腔护理类别'", "CODES_LR", "类别", "LB", "100");
     LoadBody("LRXX_KQHL", currentIndex);
 }
 //选择条件

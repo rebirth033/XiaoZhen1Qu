@@ -12,7 +12,7 @@ function LoadSHFWCondition() {
 //选择条件
 function SelectCondition(obj, name) {
     if (name === "类别" && (obj.innerHTML === "空气净化" || obj.innerHTML === "开荒保洁" || obj.innerHTML === "物业保洁" || obj.innerHTML === "沙发清洗" || obj.innerHTML === "地毯清洗" || obj.innerHTML === "地板打蜡" || obj.innerHTML === "石材翻新/养护" || obj.innerHTML === "除虫除蚁" || obj.innerHTML === "高空清洗")) {
-        LoadConditionByParentID(obj.id, "CODES_SHFW", "小类", "XL",15);
+        LoadConditionByParentID(obj.id, "CODES_SHFW", "小类", "XL",100);
     }
     if (name === "类别" && (obj.innerHTML !== "空气净化" && obj.innerHTML !== "开荒保洁" && obj.innerHTML !== "物业保洁" && obj.innerHTML !== "沙发清洗" && obj.innerHTML !== "地毯清洗" && obj.innerHTML !== "地板打蜡" && obj.innerHTML !== "石材翻新/养护" && obj.innerHTML !== "除虫除蚁" && obj.innerHTML !== "高空清洗")) {
         $("#ul_condition_body_XL").remove();

@@ -12,7 +12,7 @@ function LoadSHFWCondition() {
 //选择条件
 function SelectCondition(obj, name) {
     if (name === "类别" && (obj.innerHTML === "打印机" || obj.innerHTML === "复印机" || obj.innerHTML === "传真机" || obj.innerHTML === "一体机")) {
-        LoadConditionByParentID(obj.id, "CODES_SHFW", "小类", "XL",15);
+        LoadConditionByParentID(obj.id, "CODES_SHFW", "小类", "XL",100);
     }
     if (name === "类别" && (obj.innerHTML !== "打印机" && obj.innerHTML !== "复印机" && obj.innerHTML !== "传真机" && obj.innerHTML !== "一体机")) {
         $("#ul_condition_body_XL").remove();

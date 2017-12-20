@@ -12,7 +12,7 @@ function LoadLYJDCondition() {
 //选择条件
 function SelectCondition(obj, name) {
     if (name === "类别" && (obj.innerHTML !== "酒店管理" && obj.innerHTML !== "工程管理" && obj.innerHTML !== "素质拓展" && obj.innerHTML !== "总裁研修")) {
-        LoadConditionByParentID(obj.id, "CODES_LYJD", "小类", "XL",15);
+        LoadConditionByParentID(obj.id, "CODES_LYJD", "小类", "XL",100);
     }
     if (name === "类别" && (obj.innerHTML === "酒店管理" || obj.innerHTML === "工程管理" || obj.innerHTML === "素质拓展" || obj.innerHTML === "总裁研修")) {
         $("#ul_condition_body_XL").remove();

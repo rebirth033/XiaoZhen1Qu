@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadSHFWCondition() {
-    LoadConditionByTypeNames("'生活配送类别'", "CODES_SHFW", "类别", "LB", "15");
+    LoadConditionByTypeNames("'生活配送类别'", "CODES_SHFW", "类别", "LB", "100");
     LoadBody("SHFWXX_SHPS", currentIndex);
 }
 //选择条件

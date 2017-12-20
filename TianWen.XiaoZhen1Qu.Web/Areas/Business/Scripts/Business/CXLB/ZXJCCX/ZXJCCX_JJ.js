@@ -6,13 +6,13 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadZXJCCondition() {
-    LoadConditionByTypeNames("'家具类别'", "CODES_ZXJC", "类别", "LB", "15");
+    LoadConditionByTypeNames("'家具类别'", "CODES_ZXJC", "类别", "LB", "100");
     LoadBody("ZXJCXX_JJ", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
     if (name === "类别" && (obj.innerHTML !== "床" && obj.innerHTML !== "床垫" && obj.innerHTML !== "沙发")) {
-        LoadConditionByParentID(obj.id, "CODES_ZXJC", "小类", "XL",15);
+        LoadConditionByParentID(obj.id, "CODES_ZXJC", "小类", "XL",100);
     }
     if (name === "类别" && (obj.innerHTML === "床" || obj.innerHTML === "床垫" || obj.innerHTML === "沙发")) {
         $("#ul_condition_body_XL").remove();

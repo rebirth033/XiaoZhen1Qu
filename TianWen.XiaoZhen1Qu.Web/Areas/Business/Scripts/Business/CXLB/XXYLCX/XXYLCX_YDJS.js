@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadXXYLCondition() {
-    LoadConditionByTypeNames("'运动健身类别'", "CODES_XXYL", "类别", "LB", "15");
+    LoadConditionByTypeNames("'运动健身类别'", "CODES_XXYL", "类别", "LB", "100");
     LoadBody("XXYLXX_YDJS", currentIndex);
 }
 //选择条件

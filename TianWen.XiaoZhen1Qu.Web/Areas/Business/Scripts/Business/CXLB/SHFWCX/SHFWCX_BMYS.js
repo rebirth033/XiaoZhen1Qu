@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadSHFWCondition() {
-    LoadConditionByTypeNames("'月嫂/保姆类别'", "CODES_SHFW", "类别", "LB", "15");
+    LoadConditionByTypeNames("'月嫂/保姆类别'", "CODES_SHFW", "类别", "LB", "100");
     LoadBody("SHFWXX_BMYS", currentIndex);
 }
 //选择条件

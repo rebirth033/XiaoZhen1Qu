@@ -6,13 +6,13 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadSHFWCondition() {
-    LoadConditionByTypeNames("'数码维修类别'", "CODES_SHFW", "类别", "LB", "15");
+    LoadConditionByTypeNames("'数码维修类别'", "CODES_SHFW", "类别", "LB", "100");
     LoadBody("SHFWXX_SMWX", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
     if (name === "类别" && (obj.innerHTML === "数码相机维修" || obj.innerHTML === "摄像机维修" || obj.innerHTML === "单反相机/单反配件" || obj.innerHTML === "单电/微单相机")) {
-        LoadConditionByParentID(obj.id, "CODES_SHFW", "小类", "XL",15);
+        LoadConditionByParentID(obj.id, "CODES_SHFW", "小类", "XL",100);
     }
     if (name === "类别" && (obj.innerHTML !== "数码相机维修" && obj.innerHTML !== "摄像机维修" && obj.innerHTML !== "单反相机/单反配件" && obj.innerHTML !== "单电/微单相机")) {
         $("#ul_condition_body_XL").remove();

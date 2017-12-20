@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadNLMFYCondition() {
-    LoadConditionByTypeNames("'肥料/农药类别'", "CODES_NLMFY", "类别", "LB", "15");
+    LoadConditionByTypeNames("'肥料/农药类别'", "CODES_NLMFY", "类别", "LB", "100");
     LoadBody("NLMFYXX_FLNY", currentIndex);
 }
 //选择条件

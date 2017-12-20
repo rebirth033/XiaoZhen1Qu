@@ -6,13 +6,13 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadJYPXCondition() {
-    LoadConditionByTypeNames("'中小学一对一类别','授课形式'", "CODES_JYPX", "类别", "LB", "15");
+    LoadConditionByTypeNames("'中小学一对一类别','授课形式'", "CODES_JYPX", "类别", "LB", "100");
     LoadBody("JYPXXX_ZXXYDY", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
     if (name === "类别" && (obj.innerHTML !== "干锅" && obj.innerHTML !== "中餐" && obj.innerHTML !== "粥店")) {
-        LoadConditionByParentID(obj.id, "CODES_JYPX", "小类", "XL",15);
+        LoadConditionByParentID(obj.id, "CODES_JYPX", "小类", "XL",100);
     }
     if (name === "类别" && (obj.innerHTML === "干锅" || obj.innerHTML === "中餐" || obj.innerHTML === "粥店")) {
         $("#ul_condition_body_XL").remove();

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using TianWen.XiaoZhen1Qu.Entities.Models;
-using TianWen.XiaoZhen1Qu.Entities.ViewModels.Common;
+﻿using TianWen.XiaoZhen1Qu.Entities.ViewModels.Common;
 
 namespace TianWen.XiaoZhen1Qu.Entities.ViewModels.PFCG
 {

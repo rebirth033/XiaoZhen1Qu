@@ -6,13 +6,13 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadSHFWCondition() {
-    LoadConditionByTypeNames("'殡葬/墓地类别'", "CODES_SHFW", "类别", "LB", "15");
+    LoadConditionByTypeNames("'殡葬/墓地类别'", "CODES_SHFW", "类别", "LB", "100");
     LoadBody("SHFWXX_BZMD", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
     if (name === "类别" && (obj.innerHTML === "殡仪馆/殡葬服务" || obj.innerHTML === "殡葬用品")) {
-        LoadConditionByParentID(obj.id, "CODES_SHFW", "小类", "XL",15);
+        LoadConditionByParentID(obj.id, "CODES_SHFW", "小类", "XL",100);
     }
     if (name === "类别" && (obj.innerHTML !== "殡仪馆/殡葬服务" && obj.innerHTML !== "殡葬用品")) {
         $("#ul_condition_body_XL").remove();

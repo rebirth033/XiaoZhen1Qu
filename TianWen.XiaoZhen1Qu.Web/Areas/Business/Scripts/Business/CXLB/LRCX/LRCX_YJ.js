@@ -6,13 +6,13 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadLRCondition() {
-    LoadConditionByTypeNames("'瑜伽类别'", "CODES_LR", "类别", "LB", "15");
+    LoadConditionByTypeNames("'瑜伽类别'", "CODES_LR", "类别", "LB", "100");
     LoadBody("LRXX_YJ", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
     if (name === "类别" && (obj.innerHTML !== "酒店管理" && obj.innerHTML !== "工程管理" && obj.innerHTML !== "素质拓展" && obj.innerHTML !== "总裁研修")) {
-        LoadConditionByParentID(obj.id, "CODES_LR", "小类", "XL",15);
+        LoadConditionByParentID(obj.id, "CODES_LR", "小类", "XL",100);
     }
     if (name === "类别" && (obj.innerHTML === "酒店管理" || obj.innerHTML === "工程管理" || obj.innerHTML === "素质拓展" || obj.innerHTML === "总裁研修")) {
         $("#ul_condition_body_XL").remove();

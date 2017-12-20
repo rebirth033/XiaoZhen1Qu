@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadZXJCCondition() {
-    LoadConditionByTypeNames("'工装服务类别'", "CODES_ZXJC", "类别", "LB", "15");
+    LoadConditionByTypeNames("'工装服务类别'", "CODES_ZXJC", "类别", "LB", "100");
     LoadBody("ZXJCXX_GZFW", currentIndex);
 }
 //选择条件

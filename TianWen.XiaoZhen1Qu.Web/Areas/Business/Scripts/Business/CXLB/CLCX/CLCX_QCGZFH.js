@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadCLCondition() {
-    LoadConditionByTypeNames("'汽车改装/防护类别'", "CODES_CL", "类别", "LB", "15");
+    LoadConditionByTypeNames("'汽车改装/防护类别'", "CODES_CL", "类别", "LB", "100");
     LoadBody("CLXX_QCGZFH", currentIndex);
 }
 //选择条件
