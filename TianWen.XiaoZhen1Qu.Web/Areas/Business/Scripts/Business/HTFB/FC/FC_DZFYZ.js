@@ -11,7 +11,8 @@
 //验证所有
 function ValidateAll() {
     if (ValidateSelect("FWLX", "FWLX", "请选择房屋类型")
-        & ValidateBCMS("BCMS", "忘记填写房源描述啦") 
+        & ValidateBCMS("BCMS", "忘记填写房源描述啦")
+        & ValidateBCMS("JYGZ", "忘记填写交易规则啦")
         & ValidateZJ()
         & ValidateMJ()
         & ValidateZDZQ()

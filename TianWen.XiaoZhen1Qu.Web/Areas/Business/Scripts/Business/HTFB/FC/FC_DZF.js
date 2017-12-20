@@ -1,7 +1,6 @@
 ﻿var jygz = UE.getEditor('JYGZ');
 $(document).ready(function () {
     $("#span_xzdz").bind("click", OpenXZDZ);
-
     BindClick("FWLX");
     BindClick("ZJDW");
     LoadDuoX("日租短租房屋配置", "FWPZ");
@@ -9,6 +8,17 @@ $(document).ready(function () {
 //加载默认
 function LoadDefault() {
     jygz.ready(function () { jygz.setHeight(200); });
+}
+//绑定下拉框
+function BindClick(type) {
+    $("#div" + type + "Span").click(function () {
+        if (type === "FWLX") {
+            LoadCODESByTYPENAME("短租房类型", "FWLX", "CODES_FC");
+        }
+        if (type === "ZJDW") {
+            LoadCODESByTYPENAME("租金单位", "ZJDW", "CODES_FC");
+        }
+    });
 }
 //加载多选
 function LoadDuoX(type, id) {
@@ -87,76 +97,6 @@ function searchByStationName(map) {
         map.addOverlay(marker);
     });
     localSearch.search(keyword);
-}
-//绑定下拉框
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        if (type === "FWLX") {
-            LoadFWLX();
-        }
-        if (type === "ZJDW") {
-            LoadZJDW();
-        }
-    });
-}
-//加载房屋类型
-function LoadFWLX() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "短租房类型",
-            TBName: "CODES_FC"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var height = 341;
-                if (xml.list.length < 10)
-                    height = parseInt(xml.list.length * 34) + 1;
-                var html = "<ul class='ul_select' style='overflow-y: scroll; height:" + height + "px'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='li_select' onclick='SelectDropdown(this,\"FWLX\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divFWLX").html(html);
-                $("#divFWLX").css("display", "block");
-                ActiveStyle("FWLX");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载租金单位
-function LoadZJDW() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "租金单位",
-            TBName: "CODES_FC"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='ul_select' style='overflow-y: none;height:70px;margin-left:-1px;'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='li_select' onclick='SelectDropdown(this,\"ZJDW\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divZJDW").html(html);
-                $("#divZJDW").css("display", "block");
-                ActiveStyle("ZJDW");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
 }
 //加载短租房基本信息
 function LoadFC_DZFJBXX() {
