@@ -51,3 +51,9 @@
 ::-webkit-input-placeholder { color:#999999; }
 ::-moz-placeholder { color:#999999; } /* firefox 19+ */
 :-ms-input-placeholder { color:#999999; } /* ie */
+
+#div_body_middle_left_SWFW .p_body_middle_left_title_small{ margin-bottom: 4px;}
+#div_body_middle_left_SWFW .ul_body_middle_left_section{ margin-bottom: 0;}
+#div_body_middle_left_JYPX .li_body_middle_left_section{ height: 55px;}
+#div_body_middle_left_ZSJM .li_body_middle_left_section{ height: 55px;}
+#div_body_middle_left_PFCG .li_body_middle_left_section{ height: 45px;}

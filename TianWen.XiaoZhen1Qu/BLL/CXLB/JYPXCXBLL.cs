@@ -231,7 +231,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 if (TYPE == "JYPXXX_YYEJY")
                 {
                     dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,jypx_yyejyjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + " order by zxgxsj desc");
-                    List<JYPX_ZXXFDBView> list = ConvertHelper.DataTableToList<JYPX_ZXXFDBView>(dt);
+                    List<JYPX_YYEJYView> list = ConvertHelper.DataTableToList<JYPX_YYEJYView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
                     var listnew = from p in list.Skip((int.Parse(PageIndex) - 1) * int.Parse(PageSize)).Take(int.Parse(PageSize)) select p;
@@ -245,7 +245,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 if (TYPE == "JYPXXX_LX")
                 {
                     dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,jypx_lxjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + " order by zxgxsj desc");
-                    List<JYPX_ZXXFDBView> list = ConvertHelper.DataTableToList<JYPX_ZXXFDBView>(dt);
+                    List<JYPX_LXView> list = ConvertHelper.DataTableToList<JYPX_LXView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
                     var listnew = from p in list.Skip((int.Parse(PageIndex) - 1) * int.Parse(PageSize)).Take(int.Parse(PageSize)) select p;
@@ -259,7 +259,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 if (TYPE == "JYPXXX_YM")
                 {
                     dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,jypx_ymjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + " order by zxgxsj desc");
-                    List<JYPX_ZXXFDBView> list = ConvertHelper.DataTableToList<JYPX_ZXXFDBView>(dt);
+                    List<JYPX_YMView> list = ConvertHelper.DataTableToList<JYPX_YMView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
                     var listnew = from p in list.Skip((int.Parse(PageIndex) - 1) * int.Parse(PageSize)).Take(int.Parse(PageSize)) select p;
@@ -273,7 +273,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 if (TYPE == "JYPXXX_PBPK")
                 {
                     dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,jypx_pbpkjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + " order by zxgxsj desc");
-                    List<JYPX_ZXXFDBView> list = ConvertHelper.DataTableToList<JYPX_ZXXFDBView>(dt);
+                    List<JYPX_PBPKView> list = ConvertHelper.DataTableToList<JYPX_PBPKView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
                     var listnew = from p in list.Skip((int.Parse(PageIndex) - 1) * int.Parse(PageSize)).Take(int.Parse(PageSize)) select p;
@@ -463,7 +463,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 if (TYPE == "JYPXXX_YYEJY")
                 {
                     dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,jypx_yyejyjbxx b where a.jcxxid = b.jcxxid and id = '{0}' order by zxgxsj desc", ID));
-                    List<JYPX_ZXXFDBView> list = ConvertHelper.DataTableToList<JYPX_ZXXFDBView>(dt);
+                    List<JYPX_YYEJYView> list = ConvertHelper.DataTableToList<JYPX_YYEJYView>(dt);
                     foreach (var jcxx in list)
                     {
                         jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
@@ -473,7 +473,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 if (TYPE == "JYPXXX_LX")
                 {
                     dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,jypx_lxjbxx b where a.jcxxid = b.jcxxid and id = '{0}' order by zxgxsj desc", ID));
-                    List<JYPX_ZXXFDBView> list = ConvertHelper.DataTableToList<JYPX_ZXXFDBView>(dt);
+                    List<JYPX_LXView> list = ConvertHelper.DataTableToList<JYPX_LXView>(dt);
                     foreach (var jcxx in list)
                     {
                         jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
@@ -483,7 +483,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 if (TYPE == "JYPXXX_YM")
                 {
                     dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,jypx_ymjbxx b where a.jcxxid = b.jcxxid and id = '{0}' order by zxgxsj desc", ID));
-                    List<JYPX_ZXXFDBView> list = ConvertHelper.DataTableToList<JYPX_ZXXFDBView>(dt);
+                    List<JYPX_YMView> list = ConvertHelper.DataTableToList<JYPX_YMView>(dt);
                     foreach (var jcxx in list)
                     {
                         jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
@@ -493,7 +493,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 if (TYPE == "JYPXXX_PBPK")
                 {
                     dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,jypx_pbpkjbxx b where a.jcxxid = b.jcxxid and id = '{0}' order by zxgxsj desc", ID));
-                    List<JYPX_ZXXFDBView> list = ConvertHelper.DataTableToList<JYPX_ZXXFDBView>(dt);
+                    List<JYPX_PBPKView> list = ConvertHelper.DataTableToList<JYPX_PBPKView>(dt);
                     foreach (var jcxx in list)
                     {
                         jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
