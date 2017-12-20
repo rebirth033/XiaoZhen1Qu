@@ -1,8 +1,6 @@
-﻿var ue = UE.getEditor('BCMS');
-$(document).ready(function () {
+﻿$(document).ready(function () {
     $("#XQMC").bind("keyup", LoadXQMC);
     $("#KRZSJ").datepicker({ minDate: 0 });
-    $("body").bind("click", function () { Close("_XZQ"); Close("QY"); Close("SQ");});
     BindClick("FWCX");
     BindClick("ZXQK");
     BindClick("ZZLX");
@@ -11,6 +9,29 @@ $(document).ready(function () {
     BindClick("CZJXB");
     LoadDuoX("包含费用", "BHFY");
 });
+//绑定下拉框
+function BindClick(type) {
+    $("#div" + type + "Span").click(function () {
+        if (type === "FWCX") {
+            LoadCODESByTYPENAME("朝向", "FWCX", "CODES_FC");
+        }
+        if (type === "ZXQK") {
+            LoadCODESByTYPENAME("装修情况", "ZXQK", "CODES_FC");
+        }
+        if (type === "ZZLX") {
+            LoadCODESByTYPENAME("住宅类型", "ZZLX", "CODES_FC");
+        }
+        if (type === "YFFS") {
+            LoadCODESByTYPENAME("押付方式", "YFFS", "CODES_FC");
+        }
+        if (type === "CZJLX") {
+            LoadCODESByTYPENAME("出租间类型", "CZJLX", "CODES_FC");
+        }
+        if (type === "CZJXB") {
+            LoadCODESByTYPENAME("出租间性别", "CZJXB", "CODES_FC");
+        }
+    });
+}
 //加载小区名称
 function LoadXQMC() {
     if (event.keyCode === 40) {//按下
@@ -176,29 +197,6 @@ function GetStartIndex(pys, sqmc) {
 //根据首字母获取开始索引
 function GetStartIndexBySZM(pyszm, sqmc) {
     return pyszm.indexOf(sqmc);
-}
-//绑定下拉框
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        if (type === "FWCX") {
-            LoadCODESByTYPENAME("朝向", "FWCX", "CODES_FC");
-        }
-        if (type === "ZXQK") {
-            LoadCODESByTYPENAME("装修情况", "ZXQK", "CODES_FC");
-        }
-        if (type === "ZZLX") {
-            LoadCODESByTYPENAME("住宅类型", "ZZLX", "CODES_FC");
-        }
-        if (type === "YFFS") {
-            LoadCODESByTYPENAME("押付方式", "YFFS", "CODES_FC");
-        }
-        if (type === "CZJLX") {
-            LoadCODESByTYPENAME("出租间类型", "CZJLX", "CODES_FC");
-        }
-        if (type === "CZJXB") {
-            LoadCODESByTYPENAME("出租间性别", "CZJXB", "CODES_FC");
-        }
-    });
 }
 //加载多选
 function LoadDuoX(type, id) {
