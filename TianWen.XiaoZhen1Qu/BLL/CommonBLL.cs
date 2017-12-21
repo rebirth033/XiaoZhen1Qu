@@ -128,5 +128,38 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 };
             }
         }
+
+        public object GetAllDistrictByXZQDM(string XZQDM)
+        {
+            try
+            {
+                List<CODES_DISTRICT> qylist = new List<CODES_DISTRICT>();
+                List<CODES_DISTRICT> ddlist = new List<CODES_DISTRICT>();
+                List<CODES_DISTRICT> districts = DAO.GetObjectList<CODES_DISTRICT>(string.Format("FROM CODES_DISTRICT")).ToList();
+                foreach (var qy in districts)
+                {
+                    if(qy.PARENTID.ToString() == XZQDM)
+                        qylist.Add(qy);
+                }
+                foreach (var qy in qylist)
+                {
+                    foreach (var dd in districts)
+                    {
+                        if(dd.PARENTID == qy.CODEID)
+                            ddlist.Add(dd);
+                    }
+                }
+                return new { Result = EnResultType.Success, qylist = qylist, ddlist = ddlist };
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("CommonBLL", "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                return new
+                {
+                    Result = EnResultType.Failed,
+                    Message = "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!"
+                };
+            }
+        }
     }
 }

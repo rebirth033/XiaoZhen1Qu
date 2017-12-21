@@ -80,7 +80,7 @@ function ValidateFWQY() {
     if ($("#FWQY").val() === "" || $("#FWQY").val() === null) {
         $("#divFWQYTip").css("display", "block");
         $("#divFWQYTip").attr("class", "Warn");
-        $("#divFWQYTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写服务区域啦');
+        $("#divFWQYTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记选择服务区域啦');
         $("#FWQY").css("border-color", "#F2272D");
         return false;
     } else {

@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     $("#span_content_info_qhcs").bind("click", LoadXZQByGrade);
-    $("body").bind("click", function () { Close("_XZQ"); });
+    $("body").bind("click", function () { Close("_XZQ");});
     BindXZQClick("QY");
     BindXZQClick("DD");
 });

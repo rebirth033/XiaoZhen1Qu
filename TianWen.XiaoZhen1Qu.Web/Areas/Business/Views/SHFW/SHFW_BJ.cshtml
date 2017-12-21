@@ -18,7 +18,7 @@
                 <span id="spanBT">标题</span>
             </div>
             <div class="div_row_right">
-                <input id="BT" maxlength="50" column="BT" class="input_input SRK"  type="text" placeholder="吸引人的标题可让更多的人看您的信息喔"/>
+                <input id="BT" maxlength="50" column="BT" class="input_input SRK" type="text" placeholder="吸引人的标题可让更多的人看您的信息喔" />
                 <div id="divBTTip"></div>
             </div>
         </div>
@@ -30,7 +30,7 @@
             <div class="div_row_right">
                 <div id="divLBText" class="div_select_out SRK" style="position: relative;">
                     <div id="divLBSpan" class="div_select_in" style="border: none; margin-top: 6px;">
-                        <input type="hidden" id="LBID"/>
+                        <input type="hidden" id="LBID" />
                         <span id="spanLB" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择类别</span>
                         <div class="span_select_arrow"></div>
                     </div>
@@ -40,28 +40,30 @@
             </div>
             <div id="divOUTLBTip" class="Warn" style="z-index: 998; position: relative;"></div>
         </div>
-        <div id="divFWQY" class="div_row" style="z-index: 998">
+        <div id="divFWQY" class="div_row" style="z-index: 997">
             <div class="div_row_left">
                 <span class="span_required">*</span>
                 <span id="spanFWQY">服务区域</span>
             </div>
             <div class="div_row_right">
-                <input id="FWQY" column="FWQY" class="span_spaninput input_input SRK" type="text" placeholder="请输入服务区域"/>
-                <div id="divFWQYTip"></div>
+                <input id="FWQY" column="FWQY" class="span_spaninput input_input SRK" readonly="readonly" type="text" placeholder="请输入服务区域" />
+                <div id="div_row_right_fwqy" class="div_row_right_fwqy"></div>
             </div>
+            <div id="divFWQYTip"></div>
+            
         </div>
         <div id="divXXXX" class="div_split" style="display: block; text-align: left;">
-            <span class="span_split">特色描述</span>
+            <span class="span_split">服务描述</span>
             <em class="em_split"></em>
         </div>
-        <div id="divBCMS" class="div_row" style="height: 253px; position: relative; z-index: 997;">
+        <div id="divBCMS" class="div_row" style="height: 253px; position: relative; z-index: 996;">
             <div class="div_row_left" style="height: 170px; vertical-align: top;">
                 <span class="span_required" style="vertical-align: top">*</span>
                 <span id="spanBCMS" style="vertical-align: top">服务介绍</span>
             </div>
             <div class="div_row_right">
                 <script id="BCMS" type="text/plain" style="width: 594px; height: 200px; display: inline-block;">
-                    </script>
+                </script>
                 <div id="divBCMSTip" class="Warn"></div>
             </div>
         </div>
@@ -73,7 +75,7 @@
             <div class="div_row_right">
                 <div id="div_upload" class="div_upload">
                     <form action="" enctype="multipart/form-data" id="myform" method="post">
-                        <input id="input_upload" unselectable="on" type="file" multiple="multiple" class="file"/>
+                        <input id="input_upload" unselectable="on" type="file" multiple="multiple" class="file" />
                     </form>
                 </div>
                 <div class="div_row_right_zp_info">
@@ -124,7 +126,7 @@
             <div class="div_row_right">
                 <div id="divQYText" class="div_select_out SRK" style="z-index: 990;">
                     <div id="divQYSpan" class="div_select_in" style="border: none; margin-top: 6px;">
-                        <input type="hidden" id="QYCode"/>
+                        <input type="hidden" id="QYCode" />
                         <span id="spanQY" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择区域</span>
                         <div class="span_select_arrow"></div>
                     </div>
@@ -139,7 +141,7 @@
                     <div id="divDD" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
                     </div>
                 </div>
-                <input id="JTDZ" column="JTDZ" class="span_spaninput input_input SRK" type="text" placeholder="请填写具体地址" style="width: 300px"/>
+                <input id="JTDZ" column="JTDZ" class="span_spaninput input_input SRK" type="text" placeholder="请填写具体地址" style="width: 300px" />
             </div>
             <div id="divBCMSTip" class="Warn"></div>
         </div>
@@ -149,7 +151,7 @@
                 <span id="spanLXR">联系人</span>
             </div>
             <div class="div_row_right">
-                <input id="LXR" column="LXR" class="input_input SRK" type="text" placeholder="请输入联系人"/>
+                <input id="LXR" column="LXR" class="input_input SRK" type="text" placeholder="请输入联系人" />
                 <div id="divLXRTip"></div>
             </div>
         </div>
@@ -159,7 +161,7 @@
                 <span id="spanLXDH">联系电话</span>
             </div>
             <div class="div_row_right">
-                <input id="LXDH" maxlength="11" column="LXDH" class="input_input SRK" type="text" placeholder="请输入联系电话"/>
+                <input id="LXDH" maxlength="11" column="LXDH" class="input_input SRK" type="text" placeholder="请输入联系电话" />
                 <div id="divLXDHTip"></div>
             </div>
         </div>
@@ -169,11 +171,11 @@
                 <span id="spanQQ">微信号</span>
             </div>
             <div class="div_row_right">
-                <input column="QQ" class="input_input SRK" type="text" placeholder="请输入微信号"/>
+                <input column="QQ" class="input_input SRK" type="text" placeholder="请输入微信号" />
             </div>
         </div>
         <div id="divFB" class="div_split" style="display: block; text-align: center; margin-top: 40px;">
-            <input type="button" class="btn btn-info input_text" style="height: 50px; font-size: 24px;" id="btnFB" value="发布"/>
+            <input type="button" class="btn btn-info input_text" style="height: 50px; font-size: 24px;" id="btnFB" value="发布" />
         </div>
     </div>
 }

@@ -137,3 +137,20 @@
 
 .span_fbxx {width: 392px;font-family: "微软雅黑";border: 1px solid #bc6ba6;height: 50px;background: #bc6ba6;display: inline-block;color: #fff;font-size: 24px;text-align: center;cursor: pointer;}
 .span_fbxx:hover {background: #ad5b97;}
+
+.div_row_right_fwqy{font-size: 15px;display: none;margin-top: -4px;margin-left: 183px;width: 476px;height: 408px;border: 2px solid #cccccc;border-radius: 2px;background: #ffffff;}
+.div_row_right_fwqy .div_row_right_fwqy_top{ border-bottom: 2px solid #cccccc;display: block;height: 43px;width: 472px;background-color: #eeeff1;}
+.div_row_right_fwqy .div_row_right_fwqy_top .div_row_right_fwqy_top_qs{ width: 100px;height: 40px;background-color: #eeeff1;padding-top: 5px;display: inline-block;}
+.div_row_right_fwqy .div_row_right_fwqy_top .div_row_right_fwqy_top_qs .img_row_right_fwqy_top_qs{ margin-right: 2px;margin-left: 10px;}
+.div_row_right_fwqy .div_row_right_fwqy_top .div_row_right_fwqy_top_qs .img_row_right_fwqy_top_qs:hover{ cursor: pointer;}
+.div_row_right_fwqy .div_row_right_fwqy_top .img_row_right_fwqy_top_close{cursor: pointer;margin-top: 5px;margin-right: 5px; width: 20px;height: 20px;float: right;display: inline-block;}
+.div_row_right_fwqy .div_row_right_fwqy_left{ display: inline-block;width: 145px;height: 359px;border-right: 2px solid #cccccc;overflow-y: scroll;overflow-x: visible;}
+.div_row_right_fwqy .div_row_right_fwqy_left .ul_row_right_fwqy_left{ padding: 0;width: 126px;margin: 0;}
+.div_row_right_fwqy .div_row_right_fwqy_left .ul_row_right_fwqy_left .li_row_right_fwqy_left{height: 40px;width: 126px;display: block;background-color: #eeeff1;cursor: pointer;padding-top: 8px;padding-left: 10px;}
+.div_row_right_fwqy .div_row_right_fwqy_left .ul_row_right_fwqy_left .li_row_right_fwqy_left:hover{background-color: #d7d7d8;}
+.div_row_right_fwqy .div_row_right_fwqy_left .ul_row_right_fwqy_left .li_row_right_fwqy_left .img_row_right_fwqy_left{ margin-right: 2px;}
+.div_row_right_fwqy .div_row_right_fwqy_right{display: none;width: 323px;height: 360px;overflow-y: visible;overflow-x: visible;}
+.div_row_right_fwqy .div_row_right_fwqy_right .ul_row_right_fwqy_right{ width: 327px;height: 100%;padding: 0;margin: 0;overflow-y: scroll;overflow-x: visible;}
+.div_row_right_fwqy .div_row_right_fwqy_right .ul_row_right_fwqy_right .li_row_right_fwqy_right{ width: 140px;height: 40px;display: inline-block;float: left;padding: 4px 10px;cursor: pointer;}
+.div_row_right_fwqy .div_row_right_fwqy_right .ul_row_right_fwqy_right .li_row_right_fwqy_right:hover{background-color: #eeeff1;}
+.div_row_right_fwqy .div_row_right_fwqy_right .ul_row_right_fwqy_right .li_row_right_fwqy_right .img_row_right_fwqy_right{ margin-right: 2px;}
