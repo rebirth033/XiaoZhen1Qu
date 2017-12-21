@@ -224,3 +224,23 @@ function ValidateZJ() {
         }
     }
 }
+//验证房源描述
+function ValidateBCMS(id, message) {
+    if (ue.getContent() === "" || ue.getContent() === null) {
+        $("#div" + id + "Tip").css("display", "block");
+        $("#div" + id + "Tip").attr("class", "Warn");
+        $("#div" + id + "Tip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写房源描述啦');
+        $("#edui1").css("border-color", "#F2272D");
+        return false;
+    } else {
+        $("#div" + id + "Tip").css("display", "none");
+        return true;
+    }
+}
+//提示房源描述
+function InfoBCMS(id, message) {
+    $("#div" + id + "Tip").css("display", "block");
+    $("#div" + id + "Tip").attr("class", "Info");
+    $("#div" + id + "Tip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />请填写房源描述');
+    $("#edui1").css("border-color", "#bc6ba6");
+}

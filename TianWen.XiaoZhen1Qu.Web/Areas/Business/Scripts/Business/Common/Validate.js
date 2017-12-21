@@ -5,8 +5,8 @@
     $("#LXR").bind("focus", function () { InfoInput("LXR", "请填写联系人"); });
     $("#LXDH").bind("blur", function () { ValidateInput("LXDH", "联系电话"); });
     $("#LXDH").bind("focus", function () { InfoInput("LXDH", "请填写联系电话"); });
-    ue.addListener("focus", function (type, event) { InfoBCMS(); });
-    ue.addListener("blur", function (type, event) { ValidateBCMS("BCMS","忘记填写补充描述啦"); });
+    ue.addListener("focus", function (type, event) { InfoBCMS("BCMS", "请填写补充描述"); });
+    ue.addListener("blur", function (type, event) { ValidateBCMS("BCMS", "忘记填写补充描述啦"); });
     $("#JTDZ").bind("blur", ValidateJTDZ);
     $("#JTDZ").bind("focus", InfoJTDZ);
     $("#JG").bind("blur", ValidateJG);
@@ -54,6 +54,7 @@ function ValidateBCMS(id, message) {
         $("#div" + id + "Tip").css("display", "block");
         $("#div" + id + "Tip").attr("class", "Warn");
         $("#div" + id + "Tip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />' + message);
+        $("#edui1").css("border-color", "#F2272D");
         return false;
     } else {
         $("#div" + id + "Tip").css("display", "none");
@@ -204,10 +205,11 @@ function InfoJG() {
     $("#spanJG").css("border-color", "#bc6ba6");
 }
 //提示补充描述
-function InfoBCMS() {
-    $("#divBCMSTip").css("display", "block");
-    $("#divBCMSTip").attr("class", "Info");
-    $("#divBCMSTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />请填写补充描述');
+function InfoBCMS(id, message) {
+    $("#div" + id + "Tip").css("display", "block");
+    $("#div" + id + "Tip").attr("class", "Info");
+    $("#div" + id + "Tip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />' + message);
+    $("#edui1").css("border-color", "#bc6ba6");
 }
 //提示服务区域
 function InfoFWQY() {
