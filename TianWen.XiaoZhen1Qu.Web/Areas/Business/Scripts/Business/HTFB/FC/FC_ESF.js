@@ -1,5 +1,4 @@
-﻿var ue = UE.getEditor('BCMS');
-$(document).ready(function () {
+﻿$(document).ready(function () {
     $("#XQMC").bind("keyup", LoadXQMC);
     $("#KRZSJ").datepicker({ minDate: 0 });
     $("body").bind("click", function () { Close("_XZQ"); Close("QY"); Close("SQ"); });
@@ -250,7 +249,7 @@ function LoadFC_ZZFXX() {
                 $("#spanZXQK").html(xml.Value.FC_ESFJBXX.ZXQK);
                 $("#spanZZLX").html(xml.Value.FC_ESFJBXX.ZZLX);
                 //设置编辑器的内容
-                ue.ready(function () { ue.setHeight(200); ue.setContent(xml.Value.BCMSString); });
+                ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
                 if (xml.Value.FC_ESFJBXX.KRZSJ.ToString("yyyy-MM-dd") !== "1-1-1")
                     $("#KRZSJ").val(xml.Value.FC_ESFJBXX.KRZSJ.ToString("yyyy-MM-dd"));
                 LoadPhotos(xml.Value.Photos);

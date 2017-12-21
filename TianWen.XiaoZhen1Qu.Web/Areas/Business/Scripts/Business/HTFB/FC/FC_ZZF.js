@@ -1,5 +1,4 @@
-﻿var ue = UE.getEditor('BCMS');
-$(document).ready(function () {
+﻿$(document).ready(function () {
     $("#XQMC").bind("keyup", LoadXQMC);
     $("#KRZSJ").datepicker({ minDate: 0 });
     $("#ui-datepicker-div").css("width", "471px");
@@ -268,7 +267,7 @@ function LoadFC_ZZFXX() {
                 $("#spanZZLX").html(xml.Value.FC_ZZFJBXX.ZZLX);
                 $("#spanYFFS").html(xml.Value.FC_ZZFJBXX.YFFS);
                 //设置编辑器的内容
-                ue.ready(function () { ue.setHeight(200); ue.setContent(xml.Value.BCMSString); });
+                ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
                 if (xml.Value.FC_ZZFJBXX.KRZSJ.ToString("yyyy-MM-dd") !== "1-1-1")
                     $("#KRZSJ").val(xml.Value.FC_ZZFJBXX.KRZSJ.ToString("yyyy-MM-dd"));
                 LoadPhotos(xml.Value.Photos);

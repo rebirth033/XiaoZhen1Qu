@@ -47,7 +47,7 @@ function LoadES_QTES_ESSBJBXX() {
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
                 $("#ID").val(xml.Value.ES_QTES_ESSBJBXX.ID);
                 //设置编辑器的内容
-                ue.ready(function () { ue.setHeight(200); ue.setContent(xml.Value.BCMSString); });
+                ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
                 if (xml.Value.ES_QTES_ESSBJBXX.GQ !== null)
                     SetDX("GQ", xml.Value.ES_QTES_ESSBJBXX.GQ);
                 $("#spanLB").html(xml.Value.ES_QTES_ESSBJBXX.LB);

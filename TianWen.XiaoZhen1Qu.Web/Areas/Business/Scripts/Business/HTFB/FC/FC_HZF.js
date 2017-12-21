@@ -280,7 +280,7 @@ function LoadFC_HZFXX() {
                 $("#spanCZJLX").html(xml.Value.FC_HZFJBXX.CZJLX);
                 $("#spanCZJXB").html(xml.Value.FC_HZFJBXX.CZJXB);
                 //设置编辑器的内容
-                ue.ready(function () { ue.setHeight(200); ue.setContent(xml.Value.BCMSString); });
+                ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
                 if (xml.Value.FC_HZFJBXX.KRZSJ.ToString("yyyy-MM-dd") !== "1-1-1")
                     $("#KRZSJ").val(xml.Value.FC_HZFJBXX.KRZSJ.ToString("yyyy-MM-dd"));
                 LoadPhotos(xml.Value.Photos);
