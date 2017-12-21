@@ -844,6 +844,7 @@
     <Content Include="Areas\Business\Scripts\Business\Common\FWQY.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\Head.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\Top.js" />
+    <Content Include="Areas\Business\Scripts\Business\Common\XLBQ.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\CLCX\CLCX_DJ.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\CLCX\CLCX_JX.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\CLCX\CLCX_QCPL.js" />

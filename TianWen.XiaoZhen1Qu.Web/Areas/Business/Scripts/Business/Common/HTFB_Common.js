@@ -1,4 +1,5 @@
 ﻿var ue = UE.getEditor('BCMS');
+var BQArray = "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z".split(',');
 $(document).ready(function () {
     $(".div_top_left").css("margin-left", (document.documentElement.clientWidth - 940) / 2);
     $(".div_top_right").css("margin-right", (document.documentElement.clientWidth - 940) / 2);
@@ -52,7 +53,8 @@ function LoadCODESByTYPENAME(type, id, table, callback, idout, idin, message) {
                 $("#div" + id).html(html);
                 $("#div" + id).css("display", "block");
                 ActiveStyle(id);
-                callback(idout, idin, message);
+                if (callback !== undefined)
+                    callback(idout, idin, message);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -130,7 +132,7 @@ function LoadTXXX() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                if (xml.list.length > 0){
+                if (xml.list.length > 0) {
                     $("#spanLBXZ").html("1." + xml.list[0].LBNAME);
                     $("#title").html("信息小镇_发布" + $("#span_content_info_xzq").html() + xml.list[0].LBNAME + "信息");
                 }

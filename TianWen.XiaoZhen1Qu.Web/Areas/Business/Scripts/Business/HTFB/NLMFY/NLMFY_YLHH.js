@@ -1,16 +1,13 @@
 ﻿$(document).ready(function () {
     LoadNLMFY_YLHHJBXX();
     BindClick("LB");
+    $("#divXLBQ").bind("click", function () { LoadXLBQ("CODES_NLMFY"); });
 });
 //绑定下拉框
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
             LoadCODESByTYPENAME("园林花卉类别", "LB", "CODES_NLMFY", Bind, "OUTLB", "LB", "");
-        }
-        if (type === "XL") {
-            LoadXL();
-            LoadXLMC($("#spanLB").html(), "divA");
         }
     });
 }
@@ -19,56 +16,6 @@ function SelectLB(obj, type, lbid) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
     $("#LBID").val(lbid);
-    BindClick("XL");
-}
-//加载小类标签
-function LoadXL() {
-    var arrayObj = new Array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
-    var html = "";
-    for (var i = 0; i < arrayObj.length; i++) {
-        html += '<div class="div_bqss_content_bq" id="div' + arrayObj[i] + '"><span class="span_bqss_content_bq" id="span' + arrayObj[i] + '">' + arrayObj[i] + '</span><em class="em_bqss_content_bq" id="em' + arrayObj[i] + '"></em></div>';
-    }
-    $("#div_bqss_body_bq").html(html);
-    $(".div_bqss_content_bq").bind("click", JCBQActive);
-}
-//小类标签切换
-function JCBQActive() {
-    LoadXLMC($("#spanLB").html(), this.id);
-}
-//加载小类名称
-function LoadXLMC(JCLX, JCBQ) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadByCodeValueAndTypeName",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: JCLX,
-            CODEVALUE: JCBQ.split("div")[1],
-            TBName: "CODES_NLMFY"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += '<span class="span_mc" onclick="XLXZ(\'' + xml.list[i].CODENAME + '\',\'' + xml.list[i].CODEID + '\')">' + xml.list[i].CODENAME + '</span>';
-                }
-                if (xml.list.length === 0)
-                    html += '<span class="span_mc" style=\"width:200px;text-align:left;margin-left:14px;\">该字母下暂无数据</span>';
-                $("#div_bqss_body_mc").html(html);
-                $("#divXL").css("display", "block");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//选择小类名称
-function XLXZ(XLMC, XLID) {
-    $("#spanXL").html(XLMC);
-    $("#divXL").css("display", "none");
-    ValidateSelect("YLHHXL", "XL", "忘记选择小类啦");
 }
 //加载农林牧副渔_园林花卉基本信息
 function LoadNLMFY_YLHHJBXX() {
