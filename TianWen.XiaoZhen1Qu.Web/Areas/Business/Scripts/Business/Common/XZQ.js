@@ -134,13 +134,13 @@ function LoadDD() {
             QY: $("#QYCode").val()
         },
         success: function (xml) {
-            if (xml.Result === 1) {
+            if (xml.Result === 1 && xml.list.length>0) {
                 var height = 341;
                 if (xml.list.length < 10)
                     height = parseInt(xml.list.length * 34) + 1;
                 var html = "<ul class='ul_select' style='overflow-y: scroll; height:" + height + "px'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='li_select' onclick='SelectDropdown(this,\"DD\")'>" + xml.list[i].CODENAME + "</li>";
+                    html += "<li class='li_select' onclick='SelectDD(this,\"DD\")'>" + xml.list[i].CODENAME + "</li>";
                 }
                 html += "</ul>";
                 $("#divDD").html(html);
@@ -161,5 +161,10 @@ function SelectQY(obj, type, code) {
     $("#div" + type).css("display", "none");
     $("#spanDD").html("请选择地段");
     $("#divDD").css("display", "none");
-    BindXZQClick("DD");
+    
+}
+//选择地段下拉框
+function SelectDD(obj, type) {
+    $("#span" + type).html(obj.innerHTML);
+    $("#div" + type).css("display", "none");
 }
