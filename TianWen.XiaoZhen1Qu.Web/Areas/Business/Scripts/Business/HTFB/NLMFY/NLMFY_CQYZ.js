@@ -34,10 +34,7 @@ function LoadNLMFY_CQYZJBXX() {
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
                 $("#ID").val(xml.Value.NLMFY_CQYZJBXX.ID);
                 //设置编辑器的内容
-                ue.ready(function () {
-                    ue.setHeight(200);
-                    ue.setContent(xml.Value.BCMSString);
-                });
+                ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
                 $("#spanLB").html(xml.Value.NLMFY_CQYZJBXX.LB);
                 SetXLBQ(xml.Value.NLMFY_CQYZJBXX.XL);
                 $("#spanQY").html(xml.Value.NLMFY_CQYZJBXX.QY);
