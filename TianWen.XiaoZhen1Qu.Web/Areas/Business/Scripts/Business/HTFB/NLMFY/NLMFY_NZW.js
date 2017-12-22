@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
     LoadNLMFY_NZWJBXX();
     BindClick("LB");
-    $("#divXLBQ").bind("click", function () { LoadXLBQ("CODES_NLMFY"); });
+    $("#divXLBQ").bind("click", function () { LoadXLBQ("CODES_NLMFY",$("#spanLB").html()); });
 });
 //绑定下拉框
 function BindClick(type) {

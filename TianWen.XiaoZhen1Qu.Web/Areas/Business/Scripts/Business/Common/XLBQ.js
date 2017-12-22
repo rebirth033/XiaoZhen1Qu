@@ -1,12 +1,12 @@
 ﻿//加载小类标签
-function LoadXLBQ(tableName) {
+function LoadXLBQ(tableName, typename) {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: $("#spanLB").html(),
+            TYPENAME: typename,
             TBName: tableName
         },
         success: function (xml) {
@@ -36,7 +36,7 @@ function LoadXLBQ(tableName) {
                     html += '<ul class="ul_row_right_xlbq_right">';
                     for (var j = 0; j < xml.list.length; j++) {
                         if (BQArray[i] === xml.list[j].CODEVALUE)
-                            html += '<li onclick="SelectXLBQ(this,\'' + xml.list[j].CODENAME + '\',\'' + xml.list[j].CODEID + '\')" class="li_row_right_xlbq_right"><img class="img_row_right_xlbq_right" src="' + getRootPath() + '/Areas/Business/Css/images/check_gray.png">' + xml.list[j].CODENAME + '</li>';
+                            html += '<li onclick="SelectXLBQ(this,\'' + xml.list[j].CODENAME + '\')" class="li_row_right_xlbq_right"><img class="img_row_right_xlbq_right" src="' + getRootPath() + '/Areas/Business/Css/images/check_gray.png">' + xml.list[j].CODENAME + '</li>';
                     }
                     html += '</ul>';
                     html += '</div>';
@@ -70,17 +70,16 @@ function TabXLBQ(obj, BQ) {
     $("#" + BQ).css("display", "inline-block");
 }
 //选择小类标签
-function SelectXLBQ(obj, codename, codeid) {
+function SelectXLBQ(obj, codename) {
     if ($(obj).find("img").attr("src").indexOf("purple") !== -1) {
         $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-        $("#" + codeid).remove();
+        $("#" + codename).remove();
     }
     else {
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_purple.png");
         if ($("#spanXLBQ").find(".div_XLBQ").length !== 4) {
-            if ($("#spanXLBQ").html() === "请选择小类,最多可选4项")
-                $("#spanXLBQ").html('');
-            $("#spanXLBQ").append('<div id="' + codeid + '" class="div_XLBQ">' + codename + '</div>');
+            if ($("#spanXLBQ").html() === "请选择小类,最多可选4项") $("#spanXLBQ").html('');
+            $("#spanXLBQ").append('<div id="' + codename + '" class="div_XLBQ">' + codename + '</div>');
+            $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_purple.png");
         }
         else
             alert("最多只选择4项");

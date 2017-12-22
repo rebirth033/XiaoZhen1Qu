@@ -1,56 +1,22 @@
 ﻿$(document).ready(function () {
-
-    BindClick("GJ");
     LoadDuoX("移民类别", "YMLB");
+    $("#divXLBQ").bind("click", function () { LoadXLBQ("CODES_JYPX", "留学国家"); });
 });
-//加载国家标签
-function LoadGJ() {
-    var arrayObj = new Array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
-    var html = "";
-    for (var i = 0; i < arrayObj.length; i++) {
-        html += '<div class="div_bqss_content_bq" id="div' + arrayObj[i] + '"><span class="span_bqss_content_bq" id="span' + arrayObj[i] + '">' + arrayObj[i] + '</span><em class="em_bqss_content_bq" id="em' + arrayObj[i] + '"></em></div>';
+//选择小类标签
+function SelectXLBQ(obj, codename) {
+    if ($(obj).find("img").attr("src").indexOf("purple") !== -1) {
+        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+        $("#" + codename).remove();
     }
-    $("#div_bqss_body_bq").html(html);
-    $(".div_bqss_content_bq").bind("click", JCBQActive);
-}
-//国家标签切换
-function JCBQActive() {
-    LoadGJMC("留学国家", this.id);
-}
-//加载国家名称
-function LoadGJMC(JCLX, JCBQ) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadByCodeValueAndTypeName",
-        dataType: "json",
-        data:
-        {
-            CODEVALUE: JCBQ.split("div")[1],
-            TYPENAME: JCLX,
-            TBName: "CODES_JYPX"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += '<span class="span_mc" onclick="GJXZ(\'' + xml.list[i].CODENAME + '\',\'' + xml.list[i].CODEID + '\')">' + xml.list[i].CODENAME + '</span>';
-                }
-                if (xml.list.length === 0)
-                    html += '<span class="span_mc" style=\"width:200px;text-align:left;margin-left:14px;\">该字母下暂无数据</span>';
-                $("#div_bqss_body_mc").html(html);
-                $("#divGJ").css("display", "block");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
+    else {
+        if ($("#spanXLBQ").find(".div_XLBQ").length !== 2) {
+            if ($("#spanXLBQ").html() === "请选择小类,最多可选2项") $("#spanXLBQ").html('');
+            $("#spanXLBQ").append('<div id="' + codename + '" class="div_XLBQ">' + codename + '</div>');
+            $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_purple.png");
         }
-    });
-}
-//选择国家名称
-function GJXZ(GJMC, GJID) {
-    $("#spanGJ").html(GJMC);
-    $("#divGJ").css("display", "none");
-    ValidateSelect("YMGJ", "GJ", "忘记选择国家啦");
+        else
+            alert("最多只选择2项");
+    }
 }
 //加载多选
 function LoadDuoX(type, id) {
@@ -80,10 +46,6 @@ function LoadDuoX(type, id) {
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".li" + id).bind("click", function () { ValidateCheck(id, "忘记选择" + type + "啦"); });
-                if (xml.list.length === 0)
-                    $("#div" + id).css("display", "none");
-                else
-                    $("#div" + id).css("display", "");
                 if (type === "移民类别")
                     LoadJYPX_YMJBXX();
             }
@@ -91,16 +53,6 @@ function LoadDuoX(type, id) {
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
         }
-    });
-}
-//绑定下拉框
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        if (type === "GJ") {
-            LoadGJ();
-            LoadGJMC("留学国家", "divA");
-        }
-        
     });
 }
 //加载商务服务_移民基本信息
@@ -120,11 +72,8 @@ function LoadJYPX_YMJBXX() {
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
                 $("#ID").val(xml.Value.JYPX_YMJBXX.ID);
                 //设置编辑器的内容
-                ue.ready(function () {
-                    ue.setHeight(200);
-                    ue.setContent(xml.Value.BCMSString);
-                });
-                $("#spanGJ").html(xml.Value.JYPX_YMJBXX.GJ);
+                ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
+                SetXLBQ(xml.Value.JYPX_YMJBXX.GJ);
                 $("#spanQY").html(xml.Value.JYPX_YMJBXX.QY);
                 $("#spanDD").html(xml.Value.JYPX_YMJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
@@ -143,7 +92,7 @@ function FB() {
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
-    obj = jsonObj.AddJson(obj, "GJ", "'" + $("#spanGJ").html() + "'");
+    obj = jsonObj.AddJson(obj, "GJ", "'" + GetXLBQ() + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
@@ -165,8 +114,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
