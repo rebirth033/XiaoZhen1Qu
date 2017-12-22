@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
     BindClick("LB");
-    BindClick("YZ");
     LoadZYLY();
+    $("#divXLBQ").bind("click", function () { LoadXLBQ("CODES_SWFW", "语种"); });
 });
 //绑定下拉框
 function BindClick(type) {
@@ -9,61 +9,7 @@ function BindClick(type) {
         if (type === "LB") {
             LoadCODESByTYPENAME("翻译/速记类别", "LB", "CODES_SWFW", Bind, "OUTLB", "LB", "");
         }
-        if (type === "YZ") {
-            LoadYZ();
-            LoadYZMC("语种", "divA");
-        }
     });
-}
-//加载语种标签
-function LoadYZ() {
-    var arrayObj = new Array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
-    var html = "";
-    for (var i = 0; i < arrayObj.length; i++) {
-        html += '<div class="div_bqss_content_bq" id="div' + arrayObj[i] + '"><span class="span_bqss_content_bq" id="span' + arrayObj[i] + '">' + arrayObj[i] + '</span><em class="em_bqss_content_bq" id="em' + arrayObj[i] + '"></em></div>';
-    }
-    $("#div_bqss_body_bq").html(html);
-    $(".div_bqss_content_bq").bind("click", JCBQActive);
-}
-//语种标签切换
-function JCBQActive() {
-    LoadYZMC("语种", this.id);
-}
-//加载语种名称
-function LoadYZMC(JCLX, JCBQ) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadByCodeValueAndTypeName",
-        dataType: "json",
-        data:
-        {
-            CODEVALUE: JCBQ.split("div")[1],
-            TYPENAME: "语种",
-            TBName: "CODES_SWFW"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += '<span class="span_mc" onclick="YZXZ(\'' + xml.list[i].CODENAME + '\',\'' + xml.list[i].CODEID + '\')">' + xml.list[i].CODENAME + '</span>';
-                }
-                if (xml.list.length === 0)
-                    html += '<span class="span_mc" style=\"width:200px;text-align:left;margin-left:14px;\">该字母下暂无数据</span>';
-                $("#div_bqss_body_mc").html(html);
-                $("#divYZ").css("display", "block");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//选择语种名称
-function YZXZ(YZMC, YZID) {
-    $("#PPID").val(YZID);
-    $("#spanYZ").html(YZMC);
-    $("#divYZ").css("display", "none");
-    ValidateSelect("FYSJYZ", "YZ", "");
 }
 //选择类别下拉框
 function SelectLB(obj, type, id) {
@@ -224,7 +170,7 @@ function LoadSWFW_FYSJJBXX() {
                     ue.setContent(xml.Value.BCMSString);
                 });
                 $("#spanLB").html(xml.Value.SWFW_FYSJJBXX.LB);
-                $("#spanYZ").html(xml.Value.SWFW_FYSJJBXX.YZ);
+                SetXLBQ(xml.Value.SWFW_FYSJJBXX.YZ);
                 $("#spanQY").html(xml.Value.SWFW_FYSJJBXX.QY);
                 $("#spanDD").html(xml.Value.SWFW_FYSJJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
@@ -245,7 +191,7 @@ function FB() {
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
-    obj = jsonObj.AddJson(obj, "YZ", "'" + $("#spanYZ").html() + "'");
+    obj = jsonObj.AddJson(obj, "YZ", "'" + GetXLBQ() + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
@@ -269,8 +215,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
