@@ -77,7 +77,7 @@ function SelectXLBQ(obj, codename) {
     }
     else {
         if ($("#spanXLBQ").find(".div_XLBQ").length !== 4) {
-            if ($("#spanXLBQ").html() === "请选择小类,最多可选4项") $("#spanXLBQ").html('');
+            if ($("#spanXLBQ").html().indexOf("请选择") !== -1) $("#spanXLBQ").html('');
             $("#spanXLBQ").append('<div id="' + codename + '" class="div_XLBQ">' + codename + '</div>');
             $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_purple.png");
         }
