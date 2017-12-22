@@ -4,7 +4,6 @@
 //验证所有
 function ValidateAll() {
     if (ValidateSelect("OUTLB", "LB", "忘记选择类别啦")
-        & ValidateSelect("YLHHXL", "XL", "忘记选择小类啦")
         & ValidateBCMS("BCMS", "忘记填写补充描述啦")
         & ValidateFWQY()
         & ValidateXXDZ()

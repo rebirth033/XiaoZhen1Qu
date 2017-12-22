@@ -16,6 +16,7 @@ function SelectLB(obj, type, lbid) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
     $("#LBID").val(lbid);
+    $("#divOUTXLBQ").css("display", "block");
 }
 //加载农林牧副渔_园林花卉基本信息
 function LoadNLMFY_YLHHJBXX() {

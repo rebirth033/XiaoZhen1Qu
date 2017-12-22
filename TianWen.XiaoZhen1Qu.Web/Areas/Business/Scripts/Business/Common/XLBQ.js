@@ -16,8 +16,8 @@ function LoadXLBQ(tableName) {
             if (xml.Result === 1) {
                 var html = "";
                 html += '<div class="div_row_right_xlbq_top">';
-                html += '<div class="div_row_right_xlbq_top_qs"><img onclick="Selectxlbq(this)" class="img_row_right_xlbq_top_qs" src="' + getRootPath() + '/Areas/Business/Css/images/check_gray.png">全选</div>';
-                html += '<img class="img_row_right_xlbq_top_close" onclick="Closexlbq()" src="' + getRootPath() + '/Areas/Business/Css/images/close.png">';
+                html += '<div class="div_row_right_xlbq_top_qs"></div>';
+                html += '<img class="img_row_right_xlbq_top_close" onclick="CloseXLBQ()" src="' + getRootPath() + '/Areas/Business/Css/images/close.png">';
                 html += '</div>';
 
                 html += '<div class="div_row_right_xlbq_left">';
@@ -29,7 +29,7 @@ function LoadXLBQ(tableName) {
                             count++;
                     }
                     if (count !== 0)
-                        html += '<li class="li_row_right_xlbq_left" onclick="TabXLBQ(this,\'' + BQArray[i] + '\')">' + BQArray[i] + '</li>';
+                        html += '<li class="li_row_right_xlbq_left" onmouseover="TabXLBQ(this,\'' + BQArray[i] + '\')">' + BQArray[i] + '</li>';
                 }
                 html += '</ul>';
                 html += '</div>';
@@ -39,16 +39,18 @@ function LoadXLBQ(tableName) {
                     html += '<ul class="ul_row_right_xlbq_right">';
                     for (var j = 0; j < xml.list.length; j++) {
                         if (BQArray[i] === xml.list[j].CODEVALUE)
-                            html += '<li onclick="SelectFWDD(this,\'' + xml.list[j].CODENAME + '\')" class="li_row_right_xlbq_right"><img class="img_row_right_xlbq_right" src="' + getRootPath() + '/Areas/Business/Css/images/check_gray.png">' + xml.list[j].CODENAME + '</li>';
+                            html += '<li onclick="SelectXLBQ(this,\'' + xml.list[j].CODENAME + '\',\'' + xml.list[j].CODEID + '\')" class="li_row_right_xlbq_right"><img class="img_row_right_xlbq_right" src="' + getRootPath() + '/Areas/Business/Css/images/check_gray.png">' + xml.list[j].CODENAME + '</li>';
                     }
                     html += '</ul>';
                     html += '</div>';
                 }
-
                 $("#div_row_right_xlbq").html(html);
-                $("#div_row_right_xlbq").css("display", "block");
-                $(".li_row_right_xlbq_left:eq(0)").css("background-color", "#ffffff");
-                $(".div_row_right_xlbq_right:eq(0)").css("display", "inline-block");
+                if (xml.list.length > 0) {
+                    $("#div_row_right_xlbq").css("display", "block");
+                    $(".li_row_right_xlbq_left:eq(0)").css("background-color", "#ffffff");
+                    $(".div_row_right_xlbq_right:eq(0)").css("display", "inline-block");
+
+                }
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -56,29 +58,31 @@ function LoadXLBQ(tableName) {
         }
     });
 }
-//切换服务区域
+//切换小类标签
 function TabXLBQ(obj, BQ) {
     $(".li_row_right_xlbq_left").css("background-color", "#eeeff1");
     $(obj).css("background-color", "#ffffff");
     $(".div_row_right_xlbq_right").css("display", "none");
     $("#" + BQ).css("display", "inline-block");
 }
-//选择服务区域
-function Selectxlbq(obj) {
-    if ($(obj).attr("src").indexOf("purple") !== -1)
-        $(obj).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-    else
-        $(obj).attr("src", getRootPath() + "/Areas/Business/Css/images/check_purple.png");
-}
-//选择服务区域
-function SelectFWDD(obj, codename) {
-    if ($(obj).find("img").attr("src").indexOf("purple") !== -1)
+//选择小类标签
+function SelectXLBQ(obj, codename, codeid) {
+    if ($(obj).find("img").attr("src").indexOf("purple") !== -1) {
         $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-    else
+        $("#" + codeid).remove();
+    }
+    else {
         $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_purple.png");
-    $("#xlbq").val(codename);
+        if ($("#spanXLBQ").find(".div_XLBQ").length !== 4) {
+            if ($("#spanXLBQ").html() === "请选择小类,最多可选4项")
+                $("#spanXLBQ").html('');
+            $("#spanXLBQ").append('<div id="' + codeid + '" class="div_XLBQ">' + codename + '</div>');
+        }
+        else
+            alert("最多只选择4项");
+    }
 }
-//关闭服务区域
-function Closexlbq() {
+//关闭小类标签
+function CloseXLBQ() {
     $("#div_row_right_xlbq").css("display", "none");
 }
