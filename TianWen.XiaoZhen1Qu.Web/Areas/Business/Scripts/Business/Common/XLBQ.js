@@ -1,15 +1,12 @@
-﻿$(document).ready(function () {
-
-});
-//加载小类标签
+﻿//加载小类标签
 function LoadXLBQ(tableName) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadByParentID",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            ParentID: $("#LBID").val(),
+            TYPENAME: $("#spanLB").html(),
             TBName: tableName
         },
         success: function (xml) {
@@ -50,6 +47,13 @@ function LoadXLBQ(tableName) {
                     $(".li_row_right_xlbq_left:eq(0)").css("background-color", "#ffffff");
                     $(".div_row_right_xlbq_right:eq(0)").css("display", "inline-block");
 
+                    $("#spanXLBQ").find(".div_XLBQ").each(function () {
+                        for (var i = 0; i < $(".li_row_right_xlbq_right").length; i++) {
+                            if ($(".li_row_right_xlbq_right")[i].innerHTML.indexOf($(this).html()) !== -1) {
+                                $(".li_row_right_xlbq_right:eq(" + i + ")").find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_purple.png");
+                            }
+                        }
+                    });
                 }
             }
         },
@@ -85,4 +89,22 @@ function SelectXLBQ(obj, codename, codeid) {
 //关闭小类标签
 function CloseXLBQ() {
     $("#div_row_right_xlbq").css("display", "none");
+}
+//获取小类标签
+function GetXLBQ() {
+    var bqs = "";
+    $("#spanXLBQ").find(".div_XLBQ").each(function () {
+        bqs += $(this).html() + ",";
+    });
+    return RTrim(bqs, ',');
+}
+//设置小类标签
+function SetXLBQ(bqs) {
+    if ($("#spanXLBQ").html() === "请选择小类,最多可选4项")
+        $("#spanXLBQ").html('');
+    var bqarray = bqs.split(',');
+    for (var i = 0; i < bqarray.length; i++)
+        $("#spanXLBQ").append('<div class="div_XLBQ">' + bqarray[i] + '</div>');
+    
+    $("#divOUTXLBQ").css("display", "block");
 }

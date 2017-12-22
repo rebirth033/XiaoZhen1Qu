@@ -15,7 +15,6 @@ function BindClick(type) {
 function SelectLB(obj, type, lbid) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-    $("#LBID").val(lbid);
     $("#divOUTXLBQ").css("display", "block");
 }
 //加载农林牧副渔_园林花卉基本信息
@@ -40,7 +39,7 @@ function LoadNLMFY_YLHHJBXX() {
                     ue.setContent(xml.Value.BCMSString);
                 });
                 $("#spanLB").html(xml.Value.NLMFY_YLHHJBXX.LB);
-                $("#spanXL").html(xml.Value.NLMFY_YLHHJBXX.XL);
+                SetXLBQ(xml.Value.NLMFY_YLHHJBXX.XL);
                 $("#spanQY").html(xml.Value.NLMFY_YLHHJBXX.QY);
                 $("#spanDD").html(xml.Value.NLMFY_YLHHJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
@@ -59,7 +58,7 @@ function FB() {
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
-    obj = jsonObj.AddJson(obj, "XL", "'" + $("#spanXL").html() + "'");
+    obj = jsonObj.AddJson(obj, "XL", "'" + GetXLBQ() + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
 
@@ -79,8 +78,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
