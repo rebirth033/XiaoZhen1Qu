@@ -89,12 +89,6 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string JLJSYX { get; set; }
 
         /// <summary>
-        /// 工作城市
-        /// </summary>
-        [Property]
-        public virtual string GZCS { get; set; }
-
-        /// <summary>
         /// 工作区域
         /// </summary>
         [Property]

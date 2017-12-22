@@ -1,14 +1,13 @@
 ﻿$(document).ready(function () {
     $("#DQJZKSSJ").datepicker({ minDate: 0 });
     $("#DQJZJSSJ").datepicker({ minDate: 0 });
-
     $("td").bind("click", SelectJZSJ);
     LoadQZZP_JZZPJBXX();
     BindClick("JZLB");
     BindClick("XZDW");
     BindClick("XZJS");
     BindClick("GZCS");
-    $(".img_jzsj").each(function () {$(this).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");});
+    $(".img_jzsj").each(function () { $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png"); });
 });
 //选择兼职时间
 function SelectJZSJ() {
@@ -18,56 +17,6 @@ function SelectJZSJ() {
         else
             $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/check_purple.png");
     });
-}
-//加载工作城市标签
-function LoadGZCSBQ() {
-    var arrayObj = new Array('RM', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
-    var html = "";
-    for (var i = 0; i < arrayObj.length; i++) {
-        if (i === 0)
-            html += '<div class="div_bqss_content_bq" id="div' + arrayObj[i] + '" style="width:62px;"><span class="span_bqss_content_bq" id="span' + arrayObj[i] + '">' + "热门" + '</span><em class="em_bqss_content_bq" id="em' + arrayObj[i] + '"></em></div>';
-        else
-            html += '<div class="div_bqss_content_bq" id="div' + arrayObj[i] + '"><span class="span_bqss_content_bq" id="span' + arrayObj[i] + '">' + arrayObj[i] + '</span><em class="em_bqss_content_bq" id="em' + arrayObj[i] + '"></em></div>';
-    }
-    $("#div_bqss_body_bq").html(html);
-    $(".div_bqss_content_bq").bind("click", JCBQActive);
-}
-//工作城市标签切换
-function JCBQActive() {
-    LoadGZCS("A", this.id);
-}
-//加载工作城市名称
-function LoadGZCS(JCLX, JCBQ) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/GetDistrictByShortName",
-        dataType: "json",
-        data:
-        {
-            ShortName: JCBQ.split("div")[1]
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += '<span class="span_mc" onclick="GZCSXZ(\'' + xml.list[i].CODENAME + '\',\'' + xml.list[i].CODEID + '\')">' + xml.list[i].CODENAME + '</span>';
-                }
-                if (xml.list.length === 0)
-                    html += '<span class="span_mc" style=\"width:200px;text-align:left;margin-left:14px;\">该字母下暂无数据</span>';
-                $("#div_bqss_body_mc").html(html);
-                $("#divGZCS").css("display", "block");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//选择工作城市名称
-function GZCSXZ(GZCSMC, GZCSID) {
-    $("#CityName").val(GZCSMC);
-    $("#spanGZCS").html(GZCSMC);
-    $("#divGZCS").css("display", "none");
 }
 //显示职位类别
 function ShowJZLBThird() {
@@ -118,11 +67,6 @@ function BindClick(type) {
         if (type === "JZLB") {
             LoadJZLB();
         }
-        
-        if (type === "GZCS") {
-            LoadGZCSBQ();
-            LoadGZCS("A", "divA");
-        }
     });
 }
 //加载兼职类别
@@ -160,13 +104,6 @@ function SelectJZLB() {
     $("#BT").val($(this)[0].innerHTML);
     ValidateSelect("ZPJZLB", "JZLB", "忘记选择兼职类别啦");
 }
-//选择区域下拉框
-function SelectQY(obj, type, code) {
-    $("#QYCode").val(code);
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
-    LoadDD();
-}
 //加载求职招聘_兼职招聘基本信息
 function LoadQZZP_JZZPJBXX() {
     $.ajax({
@@ -191,7 +128,6 @@ function LoadQZZP_JZZPJBXX() {
                 $("#spanJZLB").html(xml.Value.QZZP_JZZPJBXX.JZLB);
                 $("#spanXZDW").html(xml.Value.QZZP_JZZPJBXX.XZDW);
                 $("#spanXZJS").html(xml.Value.QZZP_JZZPJBXX.XZJS);
-                $("#spanGZCS").html(xml.Value.QZZP_JZZPJBXX.GZCS);
                 $("#spanQY").html(xml.Value.QZZP_JZZPJBXX.QY);
                 $("#spanDD").html(xml.Value.QZZP_JZZPJBXX.DD);
                 SetDX("ZPJZYXQ", xml.Value.QZZP_JZZPJBXX.JZYXQ);
@@ -216,7 +152,6 @@ function FB() {
     obj = jsonObj.AddJson(obj, "JZLB", "'" + $("#spanJZLB").html() + "'");
     obj = jsonObj.AddJson(obj, "XZDW", "'" + $("#spanXZDW").html() + "'");
     obj = jsonObj.AddJson(obj, "XZJS", "'" + $("#spanXZJS").html() + "'");
-    obj = jsonObj.AddJson(obj, "GZCS", "'" + $("#spanGZCS").html() + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "JZYXQ", "'" + GetDX("ZPJZYXQ") + "'");
