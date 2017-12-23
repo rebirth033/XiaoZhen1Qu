@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
-
     LoadCW_HNYCJBXX();
     BindClick("LB");
+    BindClick("XL");
 });
 //加载小类
 function LoadXL() {
@@ -39,7 +39,6 @@ function SelectLB(obj, type, id) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
     $("#LBID").val(id);
-    BindClick("XL");
 }
 //绑定下拉框
 function BindClick(type) {

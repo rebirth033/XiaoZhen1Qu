@@ -57,7 +57,7 @@ function LoadXL(LBID, LBNAME) {
         success: function (xml) {
             if (xml.Result === 1) {
                 var XLhtml = "", trhtml = "";
-                if (LBNAME === "二手" || LBNAME === "生活服务" || LBNAME === "商务服务" || LBNAME === "车辆") {
+                if (LBNAME === "二手" || LBNAME === "生活服务" || LBNAME === "商务服务" || LBNAME === "车辆" || LBNAME === "招聘兼职") {
                     for (var i = 0; i < xml.list.length; i++) {
                         if (xml.list[i].CODES_XXLBS.length > 5)
                             trhtml = "<tr><td class=\"LBFirst\">" + xml.list[i].LBNAME + "</td>";

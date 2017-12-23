@@ -1,8 +1,32 @@
 ﻿$(document).ready(function () {
-
     LoadPFCG_SPJBXX();
     BindClick("LB");
 });
+//绑定下拉框
+function BindClick(type) {
+    $("#div" + type + "Span").click(function () {
+        if (type === "LB") {
+            LoadCODESByTYPENAME("食品类别", "LB", "CODES_PFCG", Bind, "SPLB", "LB", "");
+        }
+    });
+}
+//选择类别下拉框
+function SelectLB(obj, type, codeid) {
+    $("#span" + type).html(obj.innerHTML);
+    $("#div" + type).css("display", "none");
+    if (type === "LB")
+        PDLB(obj.innerHTML, codeid);
+}
+//判断类别
+function PDLB(name, codeid) {
+    if (name.indexOf("果蔬类") !== -1 || name.indexOf("蛋奶制品") !== -1 || name.indexOf("营养品") !== -1 || name.indexOf("调味品") !== -1) {
+        $("#divXL").css("display", "none");
+    }
+    else {
+        $("#divXL").css("display", "");
+        LoadDuoX(name, "XL");
+    }
+}
 //加载多选
 function LoadDuoX(type, id) {
     $.ajax({
@@ -34,31 +58,6 @@ function LoadDuoX(type, id) {
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
-        }
-    });
-}
-//选择类别下拉框
-function SelectLB(obj, type, codeid) {
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
-    if (type === "LB")
-        PDLB(obj.innerHTML, codeid);
-}
-//判断类别
-function PDLB(name, codeid) {
-    if (name.indexOf("干锅") !== -1 || name.indexOf("土特产") !== -1) {
-        $("#divXL").css("display", "none");
-    }
-    else {
-        $("#divXL").css("display", "");
-        LoadDuoX(name, "XL");
-    }
-}
-//绑定下拉框
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadCODESByTYPENAME("食品类别", "LB", "CODES_PFCG", Bind, "SPLB", "LB", "");
         }
     });
 }

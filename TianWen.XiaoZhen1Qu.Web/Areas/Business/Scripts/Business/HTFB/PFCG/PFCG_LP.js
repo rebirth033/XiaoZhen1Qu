@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-
     LoadPFCG_LPJBXX();
     BindClick("LB");
 });
@@ -9,51 +8,58 @@ function BindClick(type) {
         if (type === "LB") {
             LoadCODESByTYPENAME("礼品类别", "LB", "CODES_PFCG", Bind, "OUTLB", "LB", "");
         }
-        if (type === "XL") {
-            LoadXL();
-        }
     });
 }
-//加载小类
-function LoadXL() {
+//选择类别下拉框
+function SelectLB(obj, type, codeid) {
+    $("#span" + type).html(obj.innerHTML);
+    $("#div" + type).css("display", "none");
+    if (type === "LB")
+        PDLB(obj.innerHTML, codeid);
+}
+//判断类别
+function PDLB(name, codeid) {
+    if (name.indexOf("果蔬类") !== -1 || name.indexOf("蛋奶制品") !== -1 || name.indexOf("营养品") !== -1 || name.indexOf("调味品") !== -1) {
+        $("#divXL").css("display", "none");
+    }
+    else {
+        $("#divXL").css("display", "");
+        LoadDuoX(name, "XL");
+    }
+}
+//加载多选
+function LoadDuoX(type, id) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadByParentID",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            ParentID: $("#LBID").val(),
+            TYPENAME: type,
             TBName: "CODES_PFCG"
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                var height = 341;
-                if (xml.list.length < 10)
-                    height = parseInt(xml.list.length * 34) + 1;
-                var html = "<ul class='ul_select' style='overflow-y: scroll; height:" + height + "px'>";
+                var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='li_select' onclick='SelectDropdown(this,\"XL\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
+                    html += "<li class='li" + id + "' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    if (i % 6 === 5) {
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
+                    }
                 }
+                if (parseInt(xml.list.length % 6) === 0)
+                    $("#div" + id).css("height", parseInt(xml.list.length / 6) * 60 + "px");
+                else
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 6) + 1) * 60 + "px");
                 html += "</ul>";
-                $("#divXL").html(html);
-                $("#divXL").css("display", "block");
-                Bind("OUTLB", "XL", "");
+                $("#div" + id + "Text").html(html);
+                $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
         }
     });
-}
-//选择类别下拉框
-function SelectLB(obj, type, id) {
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
-    $("#LBID").val(id);
-    BindClick("XL");
-    $("#spanXL").html("请选择小类");
-    $("#divXLText").css("display", "");
-    $("#divXL").css("display", "none");
 }
 //加载批发采购_礼品基本信息
 function LoadPFCG_LPJBXX() {

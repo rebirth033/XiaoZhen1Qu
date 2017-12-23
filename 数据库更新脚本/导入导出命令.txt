@@ -9,7 +9,7 @@ impdp c##infotownlet/infotownlet@10.0.6.1/orcl directory=dumpdir dumpfile=xxxz.d
 expdp c##infotownlet/infotownlet@10.0.6.1/orcl directory=dumpdir dumpfile=xxxz.dmp version=10.2.0.1.0
 家里导入
 impdp c##infotownlet/infotownlet@localhost/orcl directory=data_pump_dir dumpfile=xxxz.dmp full=y
-imp c##infotownlet/infotownlet@localhost/orcl file=e:/xxxz.dmp
+imp c##infotownlet/infotownlet@localhost/orcl file=e:/xxxz.dmp full=y
 
 
 小区基本信息表
