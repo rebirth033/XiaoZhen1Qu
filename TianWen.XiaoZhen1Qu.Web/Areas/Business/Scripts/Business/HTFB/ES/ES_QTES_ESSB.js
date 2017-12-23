@@ -2,6 +2,7 @@
     LoadES_QTES_ESSBJBXX();
     BindClick("LB");
     BindClick("XJ");
+    BindClick("XL");
 });
 //绑定下拉框
 function BindClick(type) {
@@ -21,14 +22,7 @@ function BindClick(type) {
 function SelectLB(obj, type, lbcode) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-    BindClick("XL");
     $("#LBCode").val(obj.innerHTML);
-}
-//选择二手设备品牌
-function SelectPBPP(obj, type, code) {
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
-    LoadPBXH(code);
 }
 //加载二手_手机数码_二手设备基本信息
 function LoadES_QTES_ESSBJBXX() {
@@ -48,8 +42,8 @@ function LoadES_QTES_ESSBJBXX() {
                 $("#ID").val(xml.Value.ES_QTES_ESSBJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
-                if (xml.Value.ES_QTES_ESSBJBXX.GQ !== null)
-                    SetDX("GQ", xml.Value.ES_QTES_ESSBJBXX.GQ);
+                if (xml.Value.ES_QTES_ESSBJBXX.SF !== null)
+                    SetDX("SF", xml.Value.ES_QTES_ESSBJBXX.SF);
                 $("#spanLB").html(xml.Value.ES_QTES_ESSBJBXX.LB);
                 $("#spanXL").html(xml.Value.ES_QTES_ESSBJBXX.XL);
                 $("#spanXJ").html(xml.Value.ES_QTES_ESSBJBXX.XJ);
@@ -77,7 +71,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
+    obj = jsonObj.AddJson(obj, "SF", "'" + GetDX("SF") + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");

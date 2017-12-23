@@ -1,16 +1,7 @@
 ﻿$(document).ready(function () {
-
     LoadCW_CWMJBXX();
-    BindClick("PZ");
+    $("#divXLBQ").bind("click", function () { LoadXLBQ("CODES_CW", "宠物猫品种"); });
 });
-//绑定下拉框
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        if (type === "PZ") {
-            LoadCODESByTYPENAME("宠物猫品种", "PZ", "CODES_CW", Bind, "CWMPZ", "PZ", "");
-        }
-    });
-}
 //选择类别下拉框
 function SelectLB(obj, type) {
     $("#span" + type).html(obj.innerHTML);
@@ -33,13 +24,10 @@ function LoadCW_CWMJBXX() {
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
                 $("#ID").val(xml.Value.CW_CWMJBXX.ID);
                 //设置编辑器的内容
-                ue.ready(function () {
-                    ue.setHeight(200);
-                    ue.setContent(xml.Value.BCMSString);
-                });
+                ue.ready(function () {ue.setContent(xml.Value.BCMSString);});
                 $("#spanQY").html(xml.Value.CW_CWMJBXX.QY);
                 $("#spanDD").html(xml.Value.CW_CWMJBXX.DD);
-                $("#spanPZ").html(xml.Value.CW_CWMJBXX.PZ);
+                SetXLBQ(xml.Value.CW_CWMJBXX.PZ);
                 if (xml.Value.CW_CWMJBXX.GQ !== null)
                     SetDX("GQ", xml.Value.CW_CWMJBXX.GQ);
                 LoadPhotos(xml.Value.Photos);
@@ -56,7 +44,7 @@ function FB() {
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
-    obj = jsonObj.AddJson(obj, "PZ", "'" + $("#spanPZ").html() + "'");
+    obj = jsonObj.AddJson(obj, "PZ", "'" + GetXLBQ() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");

@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-    $("body").bind("click", function () { Close("_XZQ");});
     LoadES_SJSM_PBDNJBXX();
     BindClick("LB");
     BindClick("PBPP");
@@ -27,7 +26,6 @@ function BindClick(type) {
         if (type === "XL") {
             LoadCODESByTYPENAME("平板电脑配件", "XL", "CODES_ES_SJSM", Bind, "PBLB", "XL", "");
         }
-        
     });
 }
 //加载平板型号
@@ -107,12 +105,9 @@ function LoadES_SJSM_PBDNJBXX() {
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
                 $("#ID").val(xml.Value.ES_SJSM_PBDNJBXX.ID);
                 //设置编辑器的内容
-                ue.ready(function () {
-                    ue.setHeight(200);
-                    ue.setContent(xml.Value.BCMSString);
-                });
-                if (xml.Value.ES_SJSM_PBDNJBXX.GQ !== null)
-                    SetDX("GQ", xml.Value.ES_SJSM_PBDNJBXX.GQ);
+                ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
+                if (xml.Value.ES_SJSM_PBDNJBXX.SF !== null)
+                    SetDX("SF", xml.Value.ES_SJSM_PBDNJBXX.SF);
                 $("#spanLB").html(xml.Value.ES_SJSM_PBDNJBXX.LB);
                 $("#spanPBPP").html(xml.Value.ES_SJSM_PBDNJBXX.PP);
                 $("#spanPBXH").html(xml.Value.ES_SJSM_PBDNJBXX.XH);
@@ -122,8 +117,6 @@ function LoadES_SJSM_PBDNJBXX() {
                 $("#spanDD").html(xml.Value.ES_SJSM_PBDNJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
                 PDLB(xml.Value.ES_SJSM_PBDNJBXX.LB);
-                
-                return;
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -145,7 +138,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
+    obj = jsonObj.AddJson(obj, "SF", "'" + GetDX("SF") + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");
@@ -163,8 +156,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

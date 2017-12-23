@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
-    $("body").bind("click", function () { Close("_XZQ");});
     LoadES_JDJJBG_BGSBJBXX();
     BindClick("LB");
+    BindClick("XL");
     BindClick("XJ");
 });
 
@@ -23,13 +23,6 @@ function BindClick(type) {
 function SelectLB(obj, type) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-    BindClick("XL");
-}
-//选择家居日用品牌
-function SelectPBPP(obj, type, code) {
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
-    LoadPBXH(code);
 }
 //加载二手_手机数码_家居日用基本信息
 function LoadES_JDJJBG_BGSBJBXX() {
@@ -48,12 +41,9 @@ function LoadES_JDJJBG_BGSBJBXX() {
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
                 $("#ID").val(xml.Value.ES_JDJJBG_BGSBJBXX.ID);
                 //设置编辑器的内容
-                ue.ready(function () {
-                    ue.setHeight(200);
-                    ue.setContent(xml.Value.BCMSString);
-                });
-                if (xml.Value.ES_JDJJBG_BGSBJBXX.GQ !== null)
-                    SetDX("GQ", xml.Value.ES_JDJJBG_BGSBJBXX.GQ);
+                ue.ready(function () {ue.setContent(xml.Value.BCMSString);});
+                if (xml.Value.ES_JDJJBG_BGSBJBXX.SF !== null)
+                    SetDX("SF", xml.Value.ES_JDJJBG_BGSBJBXX.SF);
                 $("#spanLB").html(xml.Value.ES_JDJJBG_BGSBJBXX.LB);
                 $("#spanXJ").html(xml.Value.ES_JDJJBG_BGSBJBXX.XJ);
                 $("#spanQY").html(xml.Value.ES_JDJJBG_BGSBJBXX.QY);
@@ -80,7 +70,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
+    obj = jsonObj.AddJson(obj, "SF", "'" + GetDX("SF") + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");
@@ -98,8 +88,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

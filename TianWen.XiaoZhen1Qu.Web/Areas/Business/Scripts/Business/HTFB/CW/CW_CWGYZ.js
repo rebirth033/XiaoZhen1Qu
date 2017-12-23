@@ -17,7 +17,7 @@ function ValidateCWGNL() {
 //验证疫苗情况
 function ValidateCWGYMQK() {
     if (!ValidateSelect("CWGYMQK", "YMQK", "请填写疫苗针数")) return false;
-    if (!ValidateSelect("CWGYMQK", "YMZL", "请选择疫苗种类")) return false;
+    //if (!ValidateSelect("CWGYMQK", "YMZL", "请选择疫苗种类")) return false;
     return true;
 }
 //验证所有

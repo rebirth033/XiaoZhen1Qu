@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
-    $("body").bind("click", function () { Close("_XZQ");});
     LoadES_WHYL_WTHWYQJBXX();
     BindClick("LB");
+    BindClick("XL");
     BindClick("XJ");
 });
 //绑定下拉框
@@ -22,7 +22,6 @@ function BindClick(type) {
 function SelectLB(obj, type) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-    BindClick("XL");
 }
 //选择文体/户外/乐器品牌
 function SelectPBPP(obj, type, code) {
@@ -47,12 +46,9 @@ function LoadES_WHYL_WTHWYQJBXX() {
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
                 $("#ID").val(xml.Value.ES_WHYL_WTHWYQJBXX.ID);
                 //设置编辑器的内容
-                ue.ready(function () {
-                    ue.setHeight(200);
-                    ue.setContent(xml.Value.BCMSString);
-                });
-                if (xml.Value.ES_WHYL_WTHWYQJBXX.GQ !== null)
-                    SetDX("GQ", xml.Value.ES_WHYL_WTHWYQJBXX.GQ);
+                ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
+                if (xml.Value.ES_WHYL_WTHWYQJBXX.SF !== null)
+                    SetDX("SF", xml.Value.ES_WHYL_WTHWYQJBXX.SF);
                 $("#spanLB").html(xml.Value.ES_WHYL_WTHWYQJBXX.LB);
                 $("#spanXJ").html(xml.Value.ES_WHYL_WTHWYQJBXX.XJ);
                 $("#spanQY").html(xml.Value.ES_WHYL_WTHWYQJBXX.QY);
@@ -90,7 +86,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
+    obj = jsonObj.AddJson(obj, "SF", "'" + GetDX("SF") + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");

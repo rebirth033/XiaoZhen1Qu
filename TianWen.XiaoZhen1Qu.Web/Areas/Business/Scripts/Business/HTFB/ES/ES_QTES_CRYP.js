@@ -1,6 +1,7 @@
 ﻿$(document).ready(function () {
     LoadES_QTES_CRYPJBXX();
     BindClick("LB");
+    BindClick("XL");
 });
 //绑定下拉框
 function BindClick(type) {
@@ -17,13 +18,6 @@ function BindClick(type) {
 function SelectLB(obj, type) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-    BindClick("XL");
-}
-//选择成人用品品牌
-function SelectPBPP(obj, type, code) {
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
-    LoadPBXH(code);
 }
 //加载二手_手机数码_成人用品基本信息
 function LoadES_QTES_CRYPJBXX() {
@@ -42,12 +36,9 @@ function LoadES_QTES_CRYPJBXX() {
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
                 $("#ID").val(xml.Value.ES_QTES_CRYPJBXX.ID);
                 //设置编辑器的内容
-                ue.ready(function () {
-                    ue.setHeight(200);
-                    ue.setContent(xml.Value.BCMSString);
-                });
-                if (xml.Value.ES_QTES_CRYPJBXX.GQ !== null)
-                    SetDX("GQ", xml.Value.ES_QTES_CRYPJBXX.GQ);
+                ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
+                if (xml.Value.ES_QTES_CRYPJBXX.SF !== null)
+                    SetDX("SF", xml.Value.ES_QTES_CRYPJBXX.SF);
                 $("#spanLB").html(xml.Value.ES_QTES_CRYPJBXX.LB);
                 $("#spanQY").html(xml.Value.ES_QTES_CRYPJBXX.QY);
                 $("#spanDD").html(xml.Value.ES_QTES_CRYPJBXX.DD);
@@ -73,7 +64,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
+    obj = jsonObj.AddJson(obj, "SF", "'" + GetDX("SF") + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");

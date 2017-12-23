@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-    $("body").bind("click", function () { Close("_XZQ");});
     LoadES_MYFZMR_FZXMXBJBXX();
     BindClick("LB");
     BindClick("XJ");
@@ -22,7 +21,6 @@ function BindClick(type) {
         if (type === "XJ") {
             LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM", Bind, "XJCD", "XJ", "");
         }
-        
     });
 }
 //选择类别下拉框
@@ -50,12 +48,6 @@ function PDLB(LB) {
     }
     BindClick("XL");
 }
-//选择母婴/服装/美容品牌
-function SelectPBPP(obj, type, code) {
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
-    LoadPBXH(code);
-}
 //加载二手_手机数码_母婴/服装/美容基本信息
 function LoadES_MYFZMR_FZXMXBJBXX() {
     $.ajax({
@@ -73,12 +65,9 @@ function LoadES_MYFZMR_FZXMXBJBXX() {
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
                 $("#ID").val(xml.Value.ES_MYFZMR_FZXMXBJBXX.ID);
                 //设置编辑器的内容
-                ue.ready(function () {
-                    ue.setHeight(200);
-                    ue.setContent(xml.Value.BCMSString);
-                });
-                if (xml.Value.ES_MYFZMR_FZXMXBJBXX.GQ !== null)
-                    SetDX("GQ", xml.Value.ES_MYFZMR_FZXMXBJBXX.GQ);
+                ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
+                if (xml.Value.ES_MYFZMR_FZXMXBJBXX.SF !== null)
+                    SetDX("SF", xml.Value.ES_MYFZMR_FZXMXBJBXX.SF);
                 $("#spanLB").html(xml.Value.ES_MYFZMR_FZXMXBJBXX.LB);
                 $("#spanXJ").html(xml.Value.ES_MYFZMR_FZXMXBJBXX.XJ);
                 $("#spanQY").html(xml.Value.ES_MYFZMR_FZXMXBJBXX.QY);
@@ -110,8 +99,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "XCC", "'" + $("#spanXCC").html() + "'");
     obj = jsonObj.AddJson(obj, "FZCC", "'" + $("#spanFZCC").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
-
+    obj = jsonObj.AddJson(obj, "SF", "'" + GetDX("SF") + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");

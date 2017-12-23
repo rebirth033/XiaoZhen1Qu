@@ -1,8 +1,7 @@
 ﻿$(document).ready(function () {
-    $("#divGQ").find(".div_radio").bind("click", function () { ValidateRadio("GQ", "忘记选择供求啦"); });
-
     LoadES_JDJJBG_ESJDJBXX();
     BindClick("LB");
+    BindClick("XL");
     BindClick("PBPP");
     BindClick("PBXH");
     BindClick("XJ");
@@ -104,13 +103,6 @@ function PDLB(LB) {
         $("#divBXXXCS").css("display", "none");
         $("#divBGXXCS").css("display", "none");
     }
-    BindClick("XL");
-}
-//选择二手家电品牌
-function SelectPBPP(obj, type, code) {
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
-    LoadPBXH(code);
 }
 //加载二手_家电家具办公_二手家电基本信息
 function LoadES_JDJJBG_ESJDJBXX() {
@@ -129,12 +121,9 @@ function LoadES_JDJJBG_ESJDJBXX() {
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
                 $("#ID").val(xml.Value.ES_JDJJBG_ESJDJBXX.ID);
                 //设置编辑器的内容
-                ue.ready(function () {
-                    ue.setHeight(200);
-                    ue.setContent(xml.Value.BCMSString);
-                });
-                if (xml.Value.ES_JDJJBG_ESJDJBXX.GQ !== null)
-                    SetDX("GQ", xml.Value.ES_JDJJBG_ESJDJBXX.GQ);
+                ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
+                if (xml.Value.ES_JDJJBG_ESJDJBXX.SF !== null)
+                    SetDX("SF", xml.Value.ES_JDJJBG_ESJDJBXX.SF);
                 $("#spanLB").html(xml.Value.ES_JDJJBG_ESJDJBXX.LB);
                 $("#spanXJ").html(xml.Value.ES_JDJJBG_ESJDJBXX.XJ);
                 $("#spanQY").html(xml.Value.ES_JDJJBG_ESJDJBXX.QY);
@@ -171,7 +160,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
+    obj = jsonObj.AddJson(obj, "SF", "'" + GetDX("SF") + "'");
 
     obj = jsonObj.AddJson(obj, "PP", "'" + $("#spanDSPP").html() + "'");
     obj = jsonObj.AddJson(obj, "PP", "'" + $("#spanXYJPP").html() + "'");

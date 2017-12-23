@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-    $("body").bind("click", function () { Close("_XZQ");});
     LoadES_SJSM_SMCPJBXX();
     BindClick("LB");
     BindClick("PBPP");
@@ -85,12 +84,9 @@ function LoadES_SJSM_SMCPJBXX() {
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
                 $("#ID").val(xml.Value.ES_SJSM_SMCPJBXX.ID);
                 //设置编辑器的内容
-                ue.ready(function () {
-                    ue.setHeight(200);
-                    ue.setContent(xml.Value.BCMSString);
-                });
-                if (xml.Value.ES_SJSM_SMCPJBXX.GQ !== null)
-                    SetDX("GQ", xml.Value.ES_SJSM_SMCPJBXX.GQ);
+                ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
+                if (xml.Value.ES_SJSM_SMCPJBXX.SF !== null)
+                    SetDX("SF", xml.Value.ES_SJSM_SMCPJBXX.SF);
                 $("#spanLB").html(xml.Value.ES_SJSM_SMCPJBXX.LB);
                 $("#spanXJ").html(xml.Value.ES_SJSM_SMCPJBXX.XJ);
                 $("#spanQY").html(xml.Value.ES_SJSM_SMCPJBXX.QY);
@@ -117,7 +113,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
+    obj = jsonObj.AddJson(obj, "SF", "'" + GetDX("SF") + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");

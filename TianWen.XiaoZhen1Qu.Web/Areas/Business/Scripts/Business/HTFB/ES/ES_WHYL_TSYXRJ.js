@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
-    $("body").bind("click", function () { Close("_XZQ");});
     LoadES_WHYL_TSYXRJJBXX();
     BindClick("LB");
+    BindClick("XL");
     BindClick("XJ");
 });
 //绑定下拉框
@@ -16,14 +16,12 @@ function BindClick(type) {
         if (type === "XJ") {
             LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM", Bind, "XJCD", "XJ", "");
         }
-        
     });
 }
 //选择类别下拉框
 function SelectLB(obj, type) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-    BindClick("XL");
 }
 //选择图书/音像/软件品牌
 function SelectPBPP(obj, type, code) {
@@ -48,12 +46,9 @@ function LoadES_WHYL_TSYXRJJBXX() {
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
                 $("#ID").val(xml.Value.ES_WHYL_TSYXRJJBXX.ID);
                 //设置编辑器的内容
-                ue.ready(function () {
-                    ue.setHeight(200);
-                    ue.setContent(xml.Value.BCMSString);
-                });
-                if (xml.Value.ES_WHYL_TSYXRJJBXX.GQ !== null)
-                    SetDX("GQ", xml.Value.ES_WHYL_TSYXRJJBXX.GQ);
+                ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
+                if (xml.Value.ES_WHYL_TSYXRJJBXX.SF !== null)
+                    SetDX("SF", xml.Value.ES_WHYL_TSYXRJJBXX.SF);
                 $("#spanLB").html(xml.Value.ES_WHYL_TSYXRJJBXX.LB);
                 $("#spanXL").html(xml.Value.ES_WHYL_TSYXRJJBXX.XL);
                 $("#spanXJ").html(xml.Value.ES_WHYL_TSYXRJJBXX.XJ);
@@ -81,7 +76,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
+    obj = jsonObj.AddJson(obj, "SF", "'" + GetDX("SF") + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");
