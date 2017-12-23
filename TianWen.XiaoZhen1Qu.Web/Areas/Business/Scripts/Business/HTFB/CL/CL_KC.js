@@ -1,8 +1,7 @@
 ﻿$(document).ready(function () {
-
     LoadCL_KCJBXX();
     LoadCYLS();
-    BindClick("PP");
+    $("#divXLBQ").bind("click", function () { LoadXLBQ("CODES_CL", "客车品牌"); });
     BindClick("SPNF");
     BindClick("SPYF");
     BindClick("NJDQNF");
@@ -12,64 +11,9 @@
     BindClick("SYXDQNF");
     BindClick("SYXDQYF");
 });
-//加载品牌标签
-function LoadPP() {
-    var arrayObj = new Array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
-    var html = "";
-    for (var i = 0; i < arrayObj.length; i++) {
-        html += '<div class="div_bqss_content_bq" id="div' + arrayObj[i] + '"><span class="span_bqss_content_bq" id="span' + arrayObj[i] + '">' + arrayObj[i] + '</span><em class="em_bqss_content_bq" id="em' + arrayObj[i] + '"></em></div>';
-    }
-    $("#div_bqss_body_bq").html(html);
-    $(".div_bqss_content_bq").bind("click", KCBQActive);
-}
-//品牌标签切换
-function KCBQActive() {
-    LoadPPMC("客车品牌", this.id);
-}
-//加载品牌名称
-function LoadPPMC(KCLX, KCBQ) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadByCodeValueAndTypeName",
-        dataType: "json",
-        data:
-        {
-            CODEVALUE: KCBQ.split("div")[1],
-            TYPENAME: "客车品牌",
-            TBName: "CODES_CL"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += '<span class="span_mc" onclick="PPXZ(\'' + xml.list[i].CODENAME + '\',\'' + xml.list[i].CODEID + '\')">' + xml.list[i].CODENAME + '</span>';
-                }
-                if (xml.list.length === 0)
-                    html += '<span class="span_mc" style=\"width:200px;text-align:left;margin-left:14px;\">该字母下暂无数据</span>';
-                $("#div_bqss_body_mc").html(html);
-                $("#divPP").css("display", "block");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//选择品牌名称
-function PPXZ(PPMC, PPID) {
-    $("#PPID").val(PPID);
-    $("#spanPP").html(PPMC);
-    $("#divPP").css("display", "none");
-    $("#divCXText").css("display", "");
-    BindClick("CX");
-}
 //绑定下拉框
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
-        if (type === "PP") {
-            LoadPP();
-            LoadPPMC("客车品牌", "divA");
-        }
         if (type === "CX") {
             LoadKCCX();
         }
@@ -146,16 +90,6 @@ function LoadCYLS() {
     }
     $(".div_clys").bind("click", ActiveCLYS);
 }
-//选择下拉框
-function SelectDropdown(obj, type) {
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
-}
-//选择类别下拉框
-function SelectLB(obj, type) {
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
-}
 //选择车辆颜色
 function ActiveCLYS() {
     $(".div_clys").each(function () {
@@ -196,11 +130,8 @@ function LoadCL_KCJBXX() {
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
                 $("#ID").val(xml.Value.CL_KCJBXX.ID);
                 //设置编辑器的内容
-                ue.ready(function () {
-                    ue.setHeight(200);
-                    ue.setContent(xml.Value.BCMSString);
-                });
-                $("#spanPP").html(xml.Value.CL_KCJBXX.PP);
+                ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
+                SetXLBQ(xml.Value.CL_KCJBXX.PPXZ);
                 $("#spanCX").html(xml.Value.CL_KCJBXX.CX);
                 $("#spanSPNF").html(xml.Value.CL_KCJBXX.SPNF);
                 $("#spanSPYF").html(xml.Value.CL_KCJBXX.SPYF);
@@ -230,7 +161,7 @@ function FB() {
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
-    obj = jsonObj.AddJson(obj, "PP", "'" + $("#spanPP").html() + "'");
+    obj = jsonObj.AddJson(obj, "PP", "'" + GetXLBQ() + "'");
     obj = jsonObj.AddJson(obj, "CX", "'" + $("#spanCX").html() + "'");
     obj = jsonObj.AddJson(obj, "CLYS", "'" + GetCLYS() + "'");
     obj = jsonObj.AddJson(obj, "SPNF", "'" + $("#spanSPNF").html() + "'");

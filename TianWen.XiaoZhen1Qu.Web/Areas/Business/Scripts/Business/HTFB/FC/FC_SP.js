@@ -19,7 +19,7 @@ function BindClick(type) {
 
         }
         if (type === "ZJDW") {
-            LoadCODESByTYPENAME("租金单位", "ZJDW", "CODES_FC");
+            LoadCODESByTYPENAME("厂房租金单位", "ZJDW", "CODES_FC");
         }
         if (type === "YFFS") {
             LoadCODESByTYPENAME("押付方式", "YFFS", "CODES_FC");

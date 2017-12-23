@@ -112,12 +112,6 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual Byte[] BCMS { get; set; }
 
         /// <summary>
-        /// 车架号
-        /// </summary>
-        [Property]
-        public virtual string CJH { get; set; }
-
-        /// <summary>
         /// 包含过户费用
         /// </summary>
         [Property]

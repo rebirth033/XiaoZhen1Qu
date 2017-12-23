@@ -1,6 +1,5 @@
 ﻿var jygz = UE.getEditor('JYGZ');
 $(document).ready(function () {
-    $("#span_xzdz").bind("click", OpenXZDZ);
     BindClick("FWLX");
     BindClick("ZJDW");
     LoadDuoX("日租短租房屋配置", "FWPZ");
@@ -57,46 +56,6 @@ function LoadDuoX(type, id) {
 
         }
     });
-}
-//打开新增地址
-function OpenXZDZ() {
-    $("#shadow").css("display", "block");
-    $("#editDZWindow").css("display", "block");
-    var map = new BMap.Map("container");//创建地图实例
-    map.centerAndZoom("福州市", 11);//创建点坐标,地图初始化
-    map.enableScrollWheelZoom(true);//允许鼠标滑轮放大缩小 
-    map.enableContinuousZoom(true);//允许惯性拖拽
-    map.addControl(new BMap.NavigationControl({ isOpen: true, anchor: BMAP_ANCHOR_BOTTOM_LEFT }));  //添加默认缩放平移控件,右上角打开
-    map.addControl(new BMap.OverviewMapControl({ isOpen: true, anchor: BMAP_ANCHOR_BOTTOM_RIGHT })); //添加默认缩略地图控件,右下角打开
-    map.addControl(new BMap.MapTypeControl());//添加卫星控件
-
-    $("#input_dtss").keydown(function (e) {
-        var curKey = e.which;
-        if (curKey == 13) {
-            searchByStationName(map);
-            return false;
-        }
-    });
-    $("#btn_dtss").click(function () { searchByStationName(map); });
-    $("#btn_savedz").click(function () { SaveDZ(); });
-}
-//保存地址
-function SaveDZ() {
-    CloseWindow();
-}
-//地址定位
-function searchByStationName(map) {
-    map.clearOverlays();//清空原来的标注
-    var keyword = document.getElementById("input_dtss").value;
-    var localSearch = new BMap.LocalSearch(map);
-    localSearch.enableAutoViewport(); //允许自动调节窗体大小
-    localSearch.setSearchCompleteCallback(function (searchResult) {
-        var poi = searchResult.getPoi(0);
-        map.centerAndZoom(poi.point, 13);
-        var marker = new BMap.Marker(new BMap.Point(poi.point.lng, poi.point.lat));  // 创建标注，为要查询的地址对应的经纬度
-        map.addOverlay(marker);
-    });
-    localSearch.search(keyword);
 }
 //加载短租房基本信息
 function LoadFC_DZFJBXX() {

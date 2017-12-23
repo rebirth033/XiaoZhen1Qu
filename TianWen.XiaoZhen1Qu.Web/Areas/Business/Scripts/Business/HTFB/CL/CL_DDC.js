@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-
     LoadCL_DDCJBXX();
     BindClick("CX");
     BindClick("PP");

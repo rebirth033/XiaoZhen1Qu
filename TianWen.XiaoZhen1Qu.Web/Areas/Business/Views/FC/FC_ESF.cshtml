@@ -16,6 +16,21 @@
                 <span class="span_split">基本信息</span>
                 <em class="em_split"></em>
             </div>
+            <div id="divSF" class="div_row">
+                <div class="div_row_left font_two">
+                    <span class="span_required">*</span>
+                    <span class="spanFWCZ">身份</span>
+                </div>
+                <div class="div_row_right">
+                    <div class="div_radio" id="div_sf_gr">
+                        <img class="img_radio" id="img_sf_gr" /><label class="label_radio">个人</label>
+                    </div>
+                    <div class="div_radio" id="div_sf_jjr">
+                        <img class="img_radio" id="img_sf_jjr" /><label class="label_radio">经纪人</label>
+                    </div>
+                </div>
+                <div id="divSFTip" class="Warn" style="z-index: 999; position: relative;"></div>
+            </div>
             <div id="divXQMC" class="div_row" style="z-index: 998">
                 <div class="div_row_left">
                     <span class="span_required">*</span>
@@ -109,6 +124,39 @@
                         <span class="spaninput_fontcolor">层</span>
                     </span>
                     <div id="divLCFBTip" class="Warn" style="z-index: 991;"></div>
+                </div>
+            </div>
+            <div id="divCQMS" class="div_row" style="z-index: 991">
+                <div class="div_row_left">
+                    <span class="span_required">&nbsp;</span>
+                    <span class="spanFWCZ">产权描述</span>
+                </div>
+                <div class="div_row_right">
+                    <div id="divCQNXText" class="div_select_out">
+                        <div id="divCQNXSpan" class="div_select_in">
+                            <span id="spanCQNX" column="CQNX" class="span_select spaninput_fontcolor">请选择产权年限</span>
+                            <div class="span_select_arrow"></div>
+                        </div>
+                        <div id="divCQNX" class="div_select_dropdown">
+                        </div>
+                    </div>
+                    <div id="divCQLXText" class="div_select_out">
+                        <div id="divCQLXSpan" class="div_select_in SRK">
+                            <span id="spanCQLX" column="CQLX" class="span_select spaninput_fontcolor">请选择产权类型</span>
+                            <div class="span_select_arrow"></div>
+                        </div>
+                        <div id="divCQLX" class="div_select_dropdown">
+                        </div>
+                    </div>
+                    <div id="divJZNDText" class="div_select_out">
+                        <div id="divJZNDSpan" class="div_select_in SRK">
+                            <span id="spanJZND" column="JZND" class="span_select spaninput_fontcolor">请选择建筑年代</span>
+                            <div class="span_select_arrow"></div>
+                        </div>
+                        <div id="divJZND" class="div_select_dropdown">
+                        </div>
+                    </div>
+                    <div id="divCQMSTip" class="Warn" style="z-index: 990;"></div>
                 </div>
             </div>
             <div id="divSJ" class="div_row" style="z-index: 990">

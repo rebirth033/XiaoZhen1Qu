@@ -1,74 +1,16 @@
 ﻿$(document).ready(function () {
     LoadCL_HCJBXX();
     BindClick("LB");
-    BindClick("PP");
+    $("#divXLBQ").bind("click", function () { LoadXLBQ("CODES_CL", "货车品牌"); });
     BindClick("CCNF");
     BindClick("CCYF");
     BindClick("GCSJ");
 });
-//加载品牌标签
-function LoadPP() {
-    var arrayObj = new Array('RM', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
-    var html = "";
-    for (var i = 0; i < arrayObj.length; i++) {
-        if (i === 0)
-            html += '<div class="div_bqss_content_bq" id="div' + arrayObj[i] + '" style="width:62px;"><span class="span_bqss_content_bq" id="span' + arrayObj[i] + '">' + "热门" + '</span><em class="em_bqss_content_bq" id="em' + arrayObj[i] + '"></em></div>';
-        else
-            html += '<div class="div_bqss_content_bq" id="div' + arrayObj[i] + '"><span class="span_bqss_content_bq" id="span' + arrayObj[i] + '">' + arrayObj[i] + '</span><em class="em_bqss_content_bq" id="em' + arrayObj[i] + '"></em></div>';
-    }
-    $("#div_bqss_body_bq").html(html);
-    $(".div_bqss_content_bq").bind("click", YXBQActive);
-}
-//品牌标签切换
-function YXBQActive() {
-    LoadPPMC(this.id);
-}
-//加载品牌名称
-function LoadPPMC(HC) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadByCodeValueAndTypeName",
-        dataType: "json",
-        data:
-        {
-            CODEVALUE: HC.split("div")[1],
-            TYPENAME: "货车品牌",
-            TBName: "CODES_CL"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += '<span class="span_mc" onclick="PPXZ(\'' + xml.list[i].CODENAME + '\',\'' + xml.list[i].CODEID + '\')">' + xml.list[i].CODENAME + '</span>';
-                }
-                if (xml.list.length === 0)
-                    html += '<span class="span_mc" style=\"width:200px;text-align:left;margin-left:14px;\">该字母下暂无数据</span>';
-                $("#div_bqss_body_mc").html(html);
-                $("#divPP").css("display", "block");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//选择品牌名称
-function PPXZ(PPMC, PPID) {
-    $("#PPID").val(PPID);
-    $("#spanPP").html(PPMC);
-    $(".div_bqss").css("display", "none");
-    $("#spanCX").html("请选择车系");
-    BindClick("CX");
-}
 //绑定下拉框
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
             LoadCODESByTYPENAME("货车车型", "LB", "CODES_CL", Bind, "HCLB", "LB", "");
-        }
-        if (type === "PP") {
-            LoadPP();
-            LoadPPMC("divRM");
         }
         if (type === "CX") {
             LoadCX();
@@ -111,11 +53,6 @@ function LoadCX() {
 
         }
     });
-}
-//选择类别下拉框
-function SelectLB(obj, type) {
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
 }
 //选择货车品牌
 function SelectPBPP(obj, type, code) {

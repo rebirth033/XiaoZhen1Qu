@@ -1,6 +1,7 @@
 ﻿$(document).ready(function () {
     BindClick("SJPP");
     BindClick("SJXH");
+    BindClick("XJ");
     LoadDuoX("特色标签", "TSBQ");
 });
 //加载多选
@@ -47,6 +48,9 @@ function BindClick(type) {
         if (type === "SJXH") {
             LoadSJXH();
         }
+        if (type === "XJ") {
+            LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM", Bind, "XJCD", "XJ", "");
+        }
     });
 }
 //加载手机型号
@@ -82,7 +86,6 @@ function SelectLB(obj, type, code) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
     $("#PPID").val(code);
-    BindClick("SJXH");
 }
 //加载二手_手机数码_二手手机基本信息
 function LoadES_SJSM_ESSJJBXX() {

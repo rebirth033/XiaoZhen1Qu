@@ -5,8 +5,34 @@
     BindClick("FWCX");
     BindClick("ZXQK");
     BindClick("ZZLX");
+    BindClick("CQNX");
+    BindClick("CQLX");
+    BindClick("JZND");
     LoadDuoX("出售房屋亮点", "FWLD");
 });
+//绑定下拉框
+function BindClick(type) {
+    $("#div" + type + "Span").click(function () {
+        if (type === "FWCX") {
+            LoadCODESByTYPENAME("朝向", "FWCX", "CODES_FC");
+        }
+        if (type === "ZXQK") {
+            LoadCODESByTYPENAME("装修情况", "ZXQK", "CODES_FC");
+        }
+        if (type === "ZZLX") {
+            LoadCODESByTYPENAME("住宅类型", "ZZLX", "CODES_FC");
+        }
+        if (type === "CQNX") {
+            LoadCODESByTYPENAME("产权年限", "CQNX", "CODES_FC");
+        }
+        if (type === "CQLX") {
+            LoadCODESByTYPENAME("产权类型", "CQLX", "CODES_FC");
+        }
+        if (type === "JZND") {
+            LoadCODESByTYPENAME("建筑年代", "JZND", "CODES_FC");
+        }
+    });
+}
 //加载小区名称
 function LoadXQMC() {
     if (event.keyCode === 40) {//按下
@@ -172,20 +198,6 @@ function GetStartIndex(pys, sqmc) {
 //根据首字母获取开始索引
 function GetStartIndexBySZM(pyszm, sqmc) {
     return pyszm.indexOf(sqmc);
-}
-//绑定下拉框
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        if (type === "FWCX") {
-            LoadCODESByTYPENAME("朝向", "FWCX", "CODES_FC");
-        }
-        if (type === "ZXQK") {
-            LoadCODESByTYPENAME("装修情况", "ZXQK", "CODES_FC");
-        }
-        if (type === "ZZLX") {
-            LoadCODESByTYPENAME("住宅类型", "ZZLX", "CODES_FC");
-        }
-    });
 }
 //加载多选
 function LoadDuoX(type, id) {
