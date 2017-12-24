@@ -1,12 +1,12 @@
 ﻿$(document).ready(function () {
-    LoadJBXX();
     BindClick("LB");
+    LoadFWFW();
 });
 //绑定下拉框
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("服饰鞋帽类别", "LB", "CODES_PFCG", Bind, "OUTLB", "LB", "");
+            LoadCODESByTYPENAME("服装鞋包类别", "LB", "CODES_PFCG", Bind, "OUTLB", "LB", "");
         }
     });
 }
@@ -19,7 +19,7 @@ function SelectLB(obj, type, codeid) {
 }
 //判断类别
 function PDLB(name, codeid) {
-    if (name.indexOf("果蔬类") !== -1 || name.indexOf("蛋奶制品") !== -1 || name.indexOf("营养品") !== -1 || name.indexOf("调味品") !== -1) {
+    if (name.indexOf("干锅") !== -1) {
         $("#divXL").css("display", "none");
     }
     else {
@@ -48,9 +48,9 @@ function LoadDuoX(type, id) {
                     }
                 }
                 if (parseInt(xml.list.length % 6) === 0)
-                    $("#div" + id).css("height", parseInt(xml.list.length / 6) * 60 + "px");
+                    $("#div" + id).css("height", parseInt(xml.list.length / 6) * 45 + "px");
                 else
-                    $("#div" + id).css("height", (parseInt(xml.list.length / 6) + 1) * 60 + "px");
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
@@ -61,8 +61,43 @@ function LoadDuoX(type, id) {
         }
     });
 }
+//加载服务范围
+function LoadFWFW() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/GetDistrictXQJByXZQDM",
+        dataType: "json",
+        data:
+        {
+
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='ulFWPZ'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='liFWFW' onclick='SelectDuoX(this)'><img class='img_FWFW'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    if (i % 6 === 5) {
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
+                    }
+                }
+                if (parseInt(xml.list.length % 6) === 0)
+                    $("#divFWFW").css("height", parseInt(xml.list.length / 6) * 45 + "px");
+                else
+                    $("#divFWFW").css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
+                html += "</ul>";
+                $("#divFWFWText").html(html);
+                $(".img_FWFW").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".liFWFW").bind("click", function () { ValidateCheck("FWFW", "忘记选择服务范围啦"); });
+                LoadFSXMJBXX();
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
 //加载基本信息
-function LoadJBXX() {
+function LoadFSXMJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/PFCG/LoadPFCG_FSXMJBXX",

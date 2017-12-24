@@ -67,8 +67,8 @@ function LoadJBXX(obj) {
     html += ('<span class="span_body_left_body_right_right">' + obj.DDMJ + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">招商地区：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.ZSDQ + '</span>');
+    html += ('<span class="span_body_left_body_right_left">服务范围：</span>');
+    html += ('<span class="span_body_left_body_right_right">' + obj.FWFW + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">联系人：</span>');

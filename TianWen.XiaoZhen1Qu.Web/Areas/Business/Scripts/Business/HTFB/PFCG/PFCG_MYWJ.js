@@ -1,31 +1,59 @@
 ﻿$(document).ready(function () {
-
-    LoadPFCG_MYWJJBXX();
     BindClick("LB");
+    LoadFWFW();
 });
-//加载小类
-function LoadXL() {
+//绑定下拉框
+function BindClick(type) {
+    $("#div" + type + "Span").click(function () {
+        if (type === "LB") {
+            LoadCODESByTYPENAME("母婴玩具类别", "LB", "CODES_PFCG", Bind, "OUTLB", "LB", "");
+        }
+    });
+}
+//选择类别下拉框
+function SelectLB(obj, type, codeid) {
+    $("#span" + type).html(obj.innerHTML);
+    $("#div" + type).css("display", "none");
+    if (type === "LB")
+        PDLB(obj.innerHTML, codeid);
+}
+//判断类别
+function PDLB(name, codeid) {
+    if (name.indexOf("干锅") !== -1) {
+        $("#divXL").css("display", "none");
+    }
+    else {
+        $("#divXL").css("display", "");
+        LoadDuoX(name, "XL");
+    }
+}
+//加载多选
+function LoadDuoX(type, id) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadByParentID",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            ParentID: $("#LBID").val(),
+            TYPENAME: type,
             TBName: "CODES_PFCG"
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                var height = 341;
-                if (xml.list.length < 10)
-                    height = parseInt(xml.list.length * 34) + 1;
-                var html = "<ul class='ul_select' style='overflow-y: scroll; height:" + height + "px'>";
+                var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='li_select' onclick='SelectDropdown(this,\"XL\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
+                    html += "<li class='li" + id + "' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    if (i % 6 === 5) {
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
+                    }
                 }
+                if (parseInt(xml.list.length % 6) === 0)
+                    $("#div" + id).css("height", parseInt(xml.list.length / 6) * 45 + "px");
+                else
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
                 html += "</ul>";
-                $("#divXL").html(html);
-                $("#divXL").css("display", "block");
+                $("#div" + id + "Text").html(html);
+                $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -33,29 +61,38 @@ function LoadXL() {
         }
     });
 }
-//选择类别下拉框
-function SelectLB(obj, type, id) {
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
-    $("#LBID").val(id);
-    if (obj.innerHTML === "奶粉") {
-        $("#divXLText").css("display", "none");
-    }
-    else {
-        $("#spanXL").html("请选择小类");
-        BindClick("XL");
-        $("#divXLText").css("display", "");
-        $("#divXL").css("display", "none");
-    }
-}
-//绑定下拉框
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadCODESByTYPENAME("母婴玩具类别", "LB", "CODES_PFCG", Bind, "OUTLB", "LB", "");
-        }
-        if (type === "XL") {
-            LoadXL();
+//加载服务范围
+function LoadFWFW() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/GetDistrictXQJByXZQDM",
+        dataType: "json",
+        data:
+        {
+
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='ulFWPZ'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='liFWFW' onclick='SelectDuoX(this)'><img class='img_FWFW'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    if (i % 6 === 5) {
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
+                    }
+                }
+                if (parseInt(xml.list.length % 6) === 0)
+                    $("#divFWFW").css("height", parseInt(xml.list.length / 6) * 45 + "px");
+                else
+                    $("#divFWFW").css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
+                html += "</ul>";
+                $("#divFWFWText").html(html);
+                $(".img_FWFW").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".liFWFW").bind("click", function () { ValidateCheck("FWFW", "忘记选择服务范围啦"); });
+                LoadPFCG_MYWJJBXX();
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
         }
     });
 }
@@ -76,10 +113,7 @@ function LoadPFCG_MYWJJBXX() {
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
                 $("#ID").val(xml.Value.PFCG_MYWJJBXX.ID);
                 //设置编辑器的内容
-                ue.ready(function () {
-                    ue.setHeight(200);
-                    ue.setContent(xml.Value.BCMSString);
-                });
+                ue.ready(function () {ue.setContent(xml.Value.BCMSString);});
                 $("#spanLB").html(xml.Value.PFCG_MYWJJBXX.LB);
                 $("#spanXL").html(xml.Value.PFCG_MYWJJBXX.XL);
                 $("#spanQY").html(xml.Value.PFCG_MYWJJBXX.QY);

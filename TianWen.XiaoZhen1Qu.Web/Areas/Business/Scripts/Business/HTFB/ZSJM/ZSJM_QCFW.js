@@ -57,7 +57,7 @@ function LoadDuoX(type, id) {
                 if (type === "适合人群")
                     LoadDuoX("经营模式", "JYMS");
                 if (type === "经营模式")
-                    LoadZSDQ();
+                    LoadFWFW();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -65,8 +65,8 @@ function LoadDuoX(type, id) {
         }
     });
 }
-//加载招商地区
-function LoadZSDQ() {
+//加载服务范围
+function LoadFWFW() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/Common/GetDistrictXQJByXZQDM",
@@ -79,19 +79,19 @@ function LoadZSDQ() {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liZSDQ' onclick='SelectDuoX(this)'><img class='img_ZSDQ'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    html += "<li class='liFWFW' onclick='SelectDuoX(this)'><img class='img_FWFW'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i % 6 === 5) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 6) === 0)
-                    $("#divZSDQ").css("height", parseInt(xml.list.length / 6) * 45 + "px");
+                    $("#divFWFW").css("height", parseInt(xml.list.length / 6) * 45 + "px");
                 else
-                    $("#divZSDQ").css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
+                    $("#divFWFW").css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
                 html += "</ul>";
-                $("#divZSDQText").html(html);
-                $(".img_ZSDQ").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-                $(".liZSDQ").bind("click", function () { ValidateCheck("ZSDQ", "忘记选择招商地区啦"); });
+                $("#divFWFWText").html(html);
+                $(".img_FWFW").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".liFWFW").bind("click", function () { ValidateCheck("FWFW", "忘记选择服务范围啦"); });
                 LoadZSJM_QCFWJBXX();
             }
         },
@@ -150,8 +150,8 @@ function LoadZSJM_QCFWJBXX() {
                     SetDuoX("SHRQ", xml.Value.ZSJM_QCFWJBXX.SHRQ);
                 if (xml.Value.ZSJM_QCFWJBXX.JYMS !== null)
                     SetDuoX("JYMS", xml.Value.ZSJM_QCFWJBXX.JYMS);
-                if (xml.Value.ZSJM_QCFWJBXX.ZSDQ !== null)
-                    SetDuoX("ZSDQ", xml.Value.ZSJM_QCFWJBXX.ZSDQ);
+                if (xml.Value.ZSJM_QCFWJBXX.FWFW !== null)
+                    SetDuoX("FWFW", xml.Value.ZSJM_QCFWJBXX.FWFW);
                 if (xml.Value.ZSJM_QCFWJBXX.LB.indexOf("汽车维修") !== -1 || xml.Value.ZSJM_QCFWJBXX.LB.indexOf("汽车美容") !== -1 || xml.Value.ZSJM_QCFWJBXX.LB.indexOf("汽车用品") !== -1 || xml.Value.ZSJM_QCFWJBXX.LB.indexOf("汽车租赁/买卖") !== -1) {
                     LoadXLByName(xml.Value.ZSJM_QCFWJBXX.LB, xml.Value.ZSJM_QCFWJBXX.XL,"CODES_ZSJM");
                 }
@@ -175,7 +175,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "DDMJ", "'" + $("#spanDDMJ").html() + "'");
     obj = jsonObj.AddJson(obj, "SHRQ", "'" + GetDuoX("SHRQ") + "'");
     obj = jsonObj.AddJson(obj, "JYMS", "'" + GetDuoX("JYMS") + "'");
-    obj = jsonObj.AddJson(obj, "ZSDQ", "'" + GetDuoX("ZSDQ") + "'");
+    obj = jsonObj.AddJson(obj, "FWFW", "'" + GetDuoX("FWFW") + "'");
     obj = jsonObj.AddJson(obj, "XL", "'" + GetDuoX("XL") + "'");
 
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
