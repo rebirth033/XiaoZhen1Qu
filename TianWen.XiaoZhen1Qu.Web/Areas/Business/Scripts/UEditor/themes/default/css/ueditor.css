@@ -31,7 +31,7 @@
 }
 
 div.edui-box {
-    position: relative;
+   
     display: -moz-inline-box !important;
     display: inline-block !important;
     vertical-align: top;
@@ -57,7 +57,7 @@ div.edui-box {
 
 /* control layout */
 .edui-default .edui-button-body, .edui-splitbutton-body, .edui-menubutton-body, .edui-combox-body {
-    position: relative;
+   
 }
 
 .edui-default .edui-popup {
@@ -77,7 +77,7 @@ div.edui-box {
 }
 
 .edui-default .edui-tablepicker .edui-canvas {
-    position: relative;
+   
 }
 
 .edui-default .edui-tablepicker .edui-canvas .edui-overlay {
@@ -93,7 +93,7 @@ div.edui-box {
 }
 
 .edui-default .edui-toolbar {
-    position: relative;
+   
 }
 
 /*
@@ -135,7 +135,7 @@ div.edui-box {
 .edui-default .edui-editor {
     border: 1px solid #d4d4d4;
     background-color: white;
-    position: relative;
+   
     overflow: visible;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -146,7 +146,7 @@ div.edui-box {
     height:auto;
 }
 .edui-default .edui-editor-toolbarbox {
-    position: relative;
+   
     zoom: 1;
     -webkit-box-shadow:0 1px 4px rgba(204, 204, 204, 0.6);
     -moz-box-shadow:0 1px 4px rgba(204, 204, 204, 0.6);
@@ -180,7 +180,7 @@ div.edui-box {
 }
 
 .edui-default .edui-editor-iframeholder {
-    position: relative;
+   
     /*for fix ie6 toolbarmsg under iframe bug. relative -> static */
     /*_position: static !important;*
 }
@@ -310,7 +310,7 @@ div.edui-box {
 }
 
 .edui-default .edui-list .edui-state-hover {
-    position: relative;
+   
     background-color: #fff5d4;
     border: 1px solid #dcac6c;
     padding: 0;
@@ -492,7 +492,7 @@ div.edui-box {
 
 .edui-default .edui-toolbar .edui-button .edui-button-wrap {
     padding: 1px;
-    position: relative;
+   
 }
 
 .edui-default .edui-toolbar .edui-button .edui-state-hover .edui-button-wrap {
@@ -1117,7 +1117,7 @@ div.edui-box {
     text-shadow: 0 1px 0 rgba(255,255,255,0.5);
     padding: 0;
     margin-bottom: 3px;
-    position: relative;
+   
 }
 .edui-default .edui-message-body{
     border-radius: 3px;
@@ -1188,7 +1188,7 @@ div.edui-box {
 }
 
 .edui-default .edui-dialog-body {
-    position: relative;
+   
     padding:2px 0 0 2px;
     _zoom: 1;
 }
@@ -1228,7 +1228,7 @@ div.edui-box {
     height: 26px;
     border-bottom: 1px solid #c6c6c6;
     background: url(../images/dialog-title-bg.png) repeat-x bottom;
-    position: relative;
+   
     cursor: move;
 }
 .edui-default .edui-dialog-caption {
@@ -1309,7 +1309,7 @@ div.edui-box {
 }
 
 .edui-default .edui-dialog-content {
-    position: relative;
+   
 }
 
 .edui-default .dialogcontmask {
@@ -1604,7 +1604,7 @@ div.edui-box {
 }
 /*高级的样式*/
 .edui-colorpicker-adv{
-    position: relative;
+   
     overflow: hidden;
     height: 180px;
     display: none;
@@ -1774,7 +1774,7 @@ div.edui-box {
 }
 .edui-default .edui-for-emotion .edui-popup-content
 {
-    position: relative;
+   
     z-index: 555
 }
 
@@ -1848,7 +1848,7 @@ div.edui-box {
 }
 
 .edui-default  .edui-pastecontainer {
-    position: relative;
+   
     visibility: hidden;
     width: 97px;
     background: #fff;

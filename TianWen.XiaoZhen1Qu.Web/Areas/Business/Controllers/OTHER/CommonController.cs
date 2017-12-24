@@ -40,7 +40,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         //根据行政区编码获取省内同级行政区
         public JsonResult GetDistrictTJByXZQDM()
         {
-            object result = CommonBLL.GetDistrictTJByXZQDM(Session["XZQDM"].ToString());
+            object result = CommonBLL.GetDistrictXQJByXZQDM(Session["XZQDM"].ToString());
+            return Json(result);
+        }
+        //根据县区级行政区
+        public JsonResult GetDistrictXQJByXZQDM()
+        {
+            object result = CommonBLL.GetDistrictXQJByXZQDM(Session["XZQDM"].ToString());
             return Json(result);
         }
         //根据一个市的所有子记录

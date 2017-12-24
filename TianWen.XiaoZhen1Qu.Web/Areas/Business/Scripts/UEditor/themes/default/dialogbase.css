@@ -53,7 +53,7 @@ body {
 
 /*tab*/
 .tabhead {
-    position: relative;
+   
     z-index: 10;
 }
 
@@ -76,7 +76,7 @@ body {
 }
 
 .tabbody {
-    position: relative;
+   
     top: -1px;
     margin: 0 auto;
     border: 1px solid #ccc;

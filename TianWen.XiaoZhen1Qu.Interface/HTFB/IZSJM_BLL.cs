@@ -60,5 +60,13 @@ namespace TianWen.XiaoZhen1Qu.Interface
         object SaveZSJM_WTMYETJBXX(JCXX jcxx, ZSJM_WTMYETJBXX dzfjbxx, List<PHOTOS> photos);
 
         object LoadZSJM_WTMYETJBXX(string ID);
+
+        object SaveZSJM_LSJBXX(JCXX jcxx, ZSJM_LSJBXX dzfjbxx, List<PHOTOS> photos);
+
+        object LoadZSJM_LSJBXX(string ID);
+
+        object SaveZSJM_HBCPJBXX(JCXX jcxx, ZSJM_HBCPJBXX dzfjbxx, List<PHOTOS> photos);
+
+        object LoadZSJM_HBCPJBXX(string ID);
     }
 }

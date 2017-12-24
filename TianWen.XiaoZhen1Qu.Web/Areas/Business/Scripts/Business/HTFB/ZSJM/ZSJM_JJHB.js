@@ -10,7 +10,7 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("家居环保类别", "LB", "CODES_ZSJM", Bind, "JJHBLB", "LB", "");
+            LoadCODESByTYPENAME("家居类别", "LB", "CODES_ZSJM", Bind, "JJHBLB", "LB", "");
         }
         if (type === "PPLS") {
             LoadCODESByTYPENAME("品牌历史", "PPLS", "CODES_ZSJM");
@@ -54,7 +54,10 @@ function LoadDuoX(type, id) {
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".liXL").bind("click", function () { ValidateCheck("XL", "忘记选择小类啦"); });
-                LoadZSDQ();
+                if (type === "适合人群")
+                    LoadDuoX("经营模式", "JYMS");
+                if (type === "经营模式")
+                    LoadZSDQ();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -66,7 +69,7 @@ function LoadDuoX(type, id) {
 function LoadZSDQ() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/GetDistrictTJByXZQDM",
+        url: getRootPath() + "/Business/Common/GetDistrictXQJByXZQDM",
         dataType: "json",
         data:
         {
@@ -106,12 +109,12 @@ function SelectLB(obj, type, codeid) {
 }
 //判断类别
 function PDLB(name, codeid) {
-    if ((name.indexOf("家纺床品") !== -1 || name.indexOf("窗帘布艺") !== -1 || name.indexOf("家具") !== -1 || name.indexOf("清洁环保") !== -1)) {
-        $("#divXL").css("display", "");
-        LoadDuoX(name, "XL");
+    if (name.indexOf("清洁环保") !== -1) {
+        $("#divXL").css("display", "none");
     }
     else {
-        $("#divXL").css("display", "none");
+        $("#divXL").css("display", "");
+        LoadDuoX(name, "XL");
     }
 }
 //加载招商加盟_家居环保基本信息
@@ -145,6 +148,8 @@ function LoadZSJM_JJHBJBXX() {
                 LoadPhotos(xml.Value.Photos);
                 if (xml.Value.ZSJM_JJHBJBXX.SHRQ !== null)
                     SetDuoX("SHRQ", xml.Value.ZSJM_JJHBJBXX.SHRQ);
+                if (xml.Value.ZSJM_JJHBJBXX.JYMS !== null)
+                    SetDuoX("JYMS", xml.Value.ZSJM_JJHBJBXX.JYMS);
                 if (xml.Value.ZSJM_JJHBJBXX.ZSDQ !== null)
                     SetDuoX("ZSDQ", xml.Value.ZSJM_JJHBJBXX.ZSDQ);
                 if (xml.Value.ZSJM_JJHBJBXX.LB.indexOf("家纺床品") !== -1 || xml.Value.ZSJM_JJHBJBXX.LB.indexOf("窗帘布艺") !== -1 || xml.Value.ZSJM_JJHBJBXX.LB.indexOf("家具") !== -1 || xml.Value.ZSJM_JJHBJBXX.LB.indexOf("清洁环保") !== -1) {
@@ -169,6 +174,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "QGFDS", "'" + $("#spanQGFDS").html() + "'");
     obj = jsonObj.AddJson(obj, "DDMJ", "'" + $("#spanDDMJ").html() + "'");
     obj = jsonObj.AddJson(obj, "SHRQ", "'" + GetDuoX("SHRQ") + "'");
+    obj = jsonObj.AddJson(obj, "JYMS", "'" + GetDuoX("JYMS") + "'");
     obj = jsonObj.AddJson(obj, "ZSDQ", "'" + GetDuoX("ZSDQ") + "'");
     obj = jsonObj.AddJson(obj, "XL", "'" + GetDuoX("XL") + "'");
 

@@ -71,7 +71,7 @@ function SelectLB(obj, type, codeid) {
 }
 //判断类别
 function PDLB(name, codeid) {
-    if (name.indexOf("服饰配件") !== -1) {
+    if (name.indexOf("服饰配件") !== -1 || name.indexOf("亲子装") !== -1 || name.indexOf("情侣装") !== -1 || name.indexOf("羊绒制品") !== -1 || name.indexOf("羽绒制品") !== -1 || name.indexOf("袜子") !== -1 || name.indexOf("泳装") !== -1) {
         $("#divXL").css("display", "none");
     }
     else {
@@ -83,7 +83,7 @@ function PDLB(name, codeid) {
 function LoadZSDQ() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/GetDistrictTJByXZQDM",
+        url: getRootPath() + "/Business/Common/GetDistrictXQJByXZQDM",
         dataType: "json",
         data:
         {
@@ -106,7 +106,10 @@ function LoadZSDQ() {
                 $("#divZSDQText").html(html);
                 $(".img_ZSDQ").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".liZSDQ").bind("click", function () { ValidateCheck("ZSDQ", "忘记选择招商地区啦"); });
-                LoadZSJM_FZXBJBXX();
+                if (type === "适合人群")
+                    LoadDuoX("经营模式", "JYMS");
+                if (type === "经营模式")
+                    LoadZSDQ();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -147,6 +150,8 @@ function LoadZSJM_FZXBJBXX() {
                     SetDuoX("XL", xml.Value.ZSJM_FZXBJBXX.XL);
                 if (xml.Value.ZSJM_FZXBJBXX.SHRQ !== null)
                     SetDuoX("SHRQ", xml.Value.ZSJM_FZXBJBXX.SHRQ);
+                if (xml.Value.ZSJM_FZXBJBXX.JYMS !== null)
+                    SetDuoX("SHRQ", xml.Value.ZSJM_FZXBJBXX.JYMS);
                 if (xml.Value.ZSJM_FZXBJBXX.ZSDQ !== null)
                     SetDuoX("ZSDQ", xml.Value.ZSJM_FZXBJBXX.ZSDQ);
             }
@@ -169,6 +174,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "DDMJ", "'" + $("#spanDDMJ").html() + "'");
     obj = jsonObj.AddJson(obj, "XL", "'" + GetDuoX("XL") + "'");
     obj = jsonObj.AddJson(obj, "SHRQ", "'" + GetDuoX("SHRQ") + "'");
+    obj = jsonObj.AddJson(obj, "JYMS", "'" + GetDuoX("JYMS") + "'");
     obj = jsonObj.AddJson(obj, "ZSDQ", "'" + GetDuoX("ZSDQ") + "'");
 
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");

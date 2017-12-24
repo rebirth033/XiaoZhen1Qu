@@ -54,7 +54,10 @@ function LoadDuoX(type, id) {
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".liXL").bind("click", function () { ValidateCheck("XL", "忘记选择小类啦"); });
-                LoadZSDQ();
+                if (type === "适合人群")
+                    LoadDuoX("经营模式", "JYMS");
+                if (type === "经营模式")
+                    LoadZSDQ();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -66,7 +69,7 @@ function LoadDuoX(type, id) {
 function LoadZSDQ() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/GetDistrictTJByXZQDM",
+        url: getRootPath() + "/Business/Common/GetDistrictXQJByXZQDM",
         dataType: "json",
         data:
         {
@@ -144,6 +147,8 @@ function LoadZSJM_JYPXJBXX() {
                 LoadPhotos(xml.Value.Photos);
                 if (xml.Value.ZSJM_JYPXJBXX.SHRQ !== null)
                     SetDuoX("SHRQ", xml.Value.ZSJM_JYPXJBXX.SHRQ);
+                if (xml.Value.ZSJM_JYPXJBXX.JYMS !== null)
+                    SetDuoX("JYMS", xml.Value.ZSJM_JYPXJBXX.JYMS);
                 if (xml.Value.ZSJM_JYPXJBXX.ZSDQ !== null)
                     SetDuoX("ZSDQ", xml.Value.ZSJM_JYPXJBXX.ZSDQ);
                 if (xml.Value.ZSJM_JYPXJBXX.LB.indexOf("教育机构") !== -1) {
@@ -168,6 +173,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "QGFDS", "'" + $("#spanQGFDS").html() + "'");
     obj = jsonObj.AddJson(obj, "DDMJ", "'" + $("#spanDDMJ").html() + "'");
     obj = jsonObj.AddJson(obj, "SHRQ", "'" + GetDuoX("SHRQ") + "'");
+    obj = jsonObj.AddJson(obj, "JYMS", "'" + GetDuoX("JYMS") + "'");
     obj = jsonObj.AddJson(obj, "ZSDQ", "'" + GetDuoX("ZSDQ") + "'");
     obj = jsonObj.AddJson(obj, "XL", "'" + GetDuoX("XL") + "'");
 

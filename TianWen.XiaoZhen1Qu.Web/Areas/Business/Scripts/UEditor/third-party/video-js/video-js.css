@@ -32,7 +32,7 @@ The control icons are from a custom font. Each icon corresponds to a character
 .vjs-default-skin .vjs-slider {
   /* Replace browser focus hightlight with handle highlight */
   outline: 0;
-  position: relative;
+ 
   cursor: pointer;
   padding: 0;
   /* background-color-with-alpha */
@@ -132,7 +132,7 @@ fonts to show/hide properly.
 /* General styles for individual controls. */
 .vjs-default-skin .vjs-control {
   outline: none;
-  position: relative;
+ 
   float: left;
   text-align: center;
   margin: 0;
@@ -628,7 +628,7 @@ control positioning and full window mode. **
 */
 .video-js {
   background-color: #000;
-  position: relative;
+ 
   padding: 0;
   /* Start with 10px for base font size so other dimensions can be em based and
      easily calculable. */
@@ -708,7 +708,7 @@ body.vjs-full-window {
   height: 100%;
   margin: 0;
   padding: 0;
-  position: relative;
+ 
   width: 100%;
 }
 .vjs-poster img {

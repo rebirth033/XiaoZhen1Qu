@@ -52,7 +52,7 @@ div.alignment,#custom{margin-left: 23px;margin-left: 28px\9;}
     background-color: #eee;
     overflow: hidden;
     cursor: pointer;
-    position: relative;
+   
 }
 #imgManager li.clearFloat {
     float: none;

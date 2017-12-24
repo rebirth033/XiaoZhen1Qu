@@ -15,7 +15,7 @@
     display: block;
     margin-bottom: 10px;
     padding-left: 228px;
-    position: relative;
+   
 }
 
 .span_div_content_title {
@@ -74,7 +74,7 @@
 .div_row_right {
     display: inline-block;
     margin-left: 15px;
-    position: relative;
+   
 }
 
 .span_select_arrow {

@@ -129,6 +129,26 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
+        //根据行政区编码获取县区级行政区
+        public object GetDistrictXQJByXZQDM(string XZQDM)
+        {
+            try
+            {
+                int PARENTID = 0;
+                List<CODES_DISTRICT> districts = DAO.GetObjectList<CODES_DISTRICT>(string.Format("FROM CODES_DISTRICT WHERE TYPENAME='县区级' AND PARENTID='{0}' ORDER BY CODEORDER",XZQDM)).ToList();
+                return new { Result = EnResultType.Success, list = districts };
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("CommonBLL", "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                return new
+                {
+                    Result = EnResultType.Failed,
+                    Message = "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!"
+                };
+            }
+        }
+
         public object GetAllDistrictByXZQDM(string XZQDM)
         {
             try

@@ -277,6 +277,8 @@
     <Compile Include="Maps\YHZHXX_Map.cs" />
     <Compile Include="Maps\YXJBXX_Map.cs" />
     <Compile Include="Maps\ZDDLXX_Map.cs" />
+    <Compile Include="Maps\ZSJM\ZSJM_LSJBXX_Map.cs" />
+    <Compile Include="Maps\ZSJM\ZSJM_HBCPJBXX_Map.cs" />
     <Compile Include="Maps\ZSJM\ZSJM_CYJBXX_Map.cs" />
     <Compile Include="Maps\ZSJM\ZSJM_FZXBJBXX_Map.cs" />
     <Compile Include="Maps\ZSJM\ZSJM_JCJBXX_Map.cs" />
@@ -525,6 +527,8 @@
     <Compile Include="Models\YHZHXX.cs" />
     <Compile Include="Models\YXJBXX.cs" />
     <Compile Include="Models\ZDDLXX.cs" />
+    <Compile Include="Models\ZSJM\ZSJM_LSJBXX.cs" />
+    <Compile Include="Models\ZSJM\ZSJM_HBCPJBXX.cs" />
     <Compile Include="Models\ZSJM\ZSJM_CYJBXX.cs" />
     <Compile Include="Models\ZSJM\ZSJM_FZXBJBXX.cs" />
     <Compile Include="Models\ZSJM\ZSJM_JCJBXX.cs" />

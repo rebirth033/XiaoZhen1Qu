@@ -18,6 +18,8 @@ namespace TianWen.XiaoZhen1Qu.Interface
 
         object GetDistrictTJByXZQDM(string XZQDM);
 
+        object GetDistrictXQJByXZQDM(string XZQDM);
+
         object GetAllDistrictByXZQDM(string XZQDM);
     }
 }

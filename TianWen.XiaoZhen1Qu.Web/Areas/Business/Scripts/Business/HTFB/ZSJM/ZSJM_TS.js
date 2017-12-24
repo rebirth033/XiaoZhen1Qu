@@ -53,7 +53,10 @@ function LoadDuoX(type, id) {
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-                LoadZSDQ();
+                if (type === "适合人群")
+                    LoadDuoX("经营模式", "JYMS");
+                if (type === "经营模式")
+                    LoadZSDQ();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -65,7 +68,7 @@ function LoadDuoX(type, id) {
 function LoadZSDQ() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/GetDistrictTJByXZQDM",
+        url: getRootPath() + "/Business/Common/GetDistrictXQJByXZQDM",
         dataType: "json",
         data:
         {
@@ -132,6 +135,8 @@ function LoadZSJM_TSJBXX() {
                 LoadPhotos(xml.Value.Photos);
                 if (xml.Value.ZSJM_TSJBXX.SHRQ !== null)
                     SetDuoX("SHRQ", xml.Value.ZSJM_TSJBXX.SHRQ);
+                if (xml.Value.ZSJM_TSJBXX.JYMS !== null)
+                    SetDuoX("JYMS", xml.Value.ZSJM_TSJBXX.JYMS);
                 if (xml.Value.ZSJM_TSJBXX.ZSDQ !== null)
                     SetDuoX("ZSDQ", xml.Value.ZSJM_TSJBXX.ZSDQ);
                 if (xml.Value.ZSJM_TSJBXX.LB.indexOf("化妆品") !== -1 || xml.Value.ZSJM_TSJBXX.LB.indexOf("美容SPA") !== -1 || xml.Value.ZSJM_TSJBXX.LB.indexOf("养生保健") !== -1) {
@@ -156,6 +161,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "QGFDS", "'" + $("#spanQGFDS").html() + "'");
     obj = jsonObj.AddJson(obj, "DDMJ", "'" + $("#spanDDMJ").html() + "'");
     obj = jsonObj.AddJson(obj, "SHRQ", "'" + GetDuoX("SHRQ") + "'");
+    obj = jsonObj.AddJson(obj, "JYMS", "'" + GetDuoX("JYMS") + "'");
     obj = jsonObj.AddJson(obj, "ZSDQ", "'" + GetDuoX("ZSDQ") + "'");
     obj = jsonObj.AddJson(obj, "XL", "'" + GetDuoX("XL") + "'");
 

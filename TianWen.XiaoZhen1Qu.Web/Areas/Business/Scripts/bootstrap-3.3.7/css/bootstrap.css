@@ -72,7 +72,7 @@ small {
 }
 sub,
 sup {
-  position: relative;
+ 
   font-size: 75%;
   line-height: 0;
   vertical-align: baseline;
@@ -267,7 +267,7 @@ th {
   src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 .glyphicon {
-  position: relative;
+ 
   top: 1px;
   display: inline-block;
   font-family: 'Glyphicons Halflings';
@@ -1613,7 +1613,7 @@ pre code {
   margin-left: -15px;
 }
 .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
-  position: relative;
+ 
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
@@ -2633,7 +2633,7 @@ input[type="search"] {
 }
 .radio,
 .checkbox {
-  position: relative;
+ 
   display: block;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -2660,7 +2660,7 @@ input[type="search"] {
 }
 .radio-inline,
 .checkbox-inline {
-  position: relative;
+ 
   display: inline-block;
   padding-left: 20px;
   margin-bottom: 0;
@@ -2779,7 +2779,7 @@ select[multiple].input-lg {
   line-height: 1.3333333;
 }
 .has-feedback {
-  position: relative;
+ 
 }
 .has-feedback .form-control {
   padding-right: 42.5px;
@@ -2955,7 +2955,7 @@ select[multiple].input-lg {
   }
   .form-inline .radio input[type="radio"],
   .form-inline .checkbox input[type="checkbox"] {
-    position: relative;
+   
     margin-left: 0;
   }
   .form-inline .has-feedback .form-control-feedback {
@@ -3486,7 +3486,7 @@ tbody.collapse.in {
   display: table-row-group;
 }
 .collapsing {
-  position: relative;
+ 
   height: 0;
   overflow: hidden;
   -webkit-transition-timing-function: ease;
@@ -3512,7 +3512,7 @@ tbody.collapse.in {
 }
 .dropup,
 .dropdown {
-  position: relative;
+ 
 }
 .dropdown-toggle:focus {
   outline: 0;
@@ -3644,13 +3644,13 @@ tbody.collapse.in {
 }
 .btn-group,
 .btn-group-vertical {
-  position: relative;
+ 
   display: inline-block;
   vertical-align: middle;
 }
 .btn-group > .btn,
 .btn-group-vertical > .btn {
-  position: relative;
+ 
   float: left;
 }
 .btn-group > .btn:hover,
@@ -3814,7 +3814,7 @@ tbody.collapse.in {
   pointer-events: none;
 }
 .input-group {
-  position: relative;
+ 
   display: table;
   border-collapse: separate;
 }
@@ -3824,7 +3824,7 @@ tbody.collapse.in {
   padding-left: 0;
 }
 .input-group .form-control {
-  position: relative;
+ 
   z-index: 2;
   float: left;
   width: 100%;
@@ -3947,12 +3947,12 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-left: 0;
 }
 .input-group-btn {
-  position: relative;
+ 
   font-size: 0;
   white-space: nowrap;
 }
 .input-group-btn > .btn {
-  position: relative;
+ 
 }
 .input-group-btn > .btn + .btn {
   margin-left: -1px;
@@ -3977,11 +3977,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   list-style: none;
 }
 .nav > li {
-  position: relative;
+ 
   display: block;
 }
 .nav > li > a {
-  position: relative;
+ 
   display: block;
   padding: 10px 15px;
 }
@@ -4164,7 +4164,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-top-right-radius: 0;
 }
 .navbar {
-  position: relative;
+ 
   min-height: 50px;
   margin-bottom: 20px;
   border: 1px solid transparent;
@@ -4292,7 +4292,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-toggle {
-  position: relative;
+ 
   float: right;
   padding: 9px 10px;
   margin-top: 8px;
@@ -4418,7 +4418,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
   .navbar-form .radio input[type="radio"],
   .navbar-form .checkbox input[type="checkbox"] {
-    position: relative;
+   
     margin-left: 0;
   }
   .navbar-form .has-feedback .form-control-feedback {
@@ -4719,7 +4719,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 }
 .pagination > li > a,
 .pagination > li > span {
-  position: relative;
+ 
   float: left;
   padding: 6px 12px;
   margin-left: -1px;
@@ -4864,7 +4864,7 @@ a.label:focus {
   display: none;
 }
 .btn .label {
-  position: relative;
+ 
   top: -1px;
 }
 .label-default {
@@ -4927,7 +4927,7 @@ a.label:focus {
   display: none;
 }
 .btn .badge {
-  position: relative;
+ 
   top: -1px;
 }
 .btn-xs .badge,
@@ -5050,7 +5050,7 @@ a.thumbnail.active {
 }
 .alert-dismissable .close,
 .alert-dismissible .close {
-  position: relative;
+ 
   top: -2px;
   right: -21px;
   color: inherit;
@@ -5246,7 +5246,7 @@ a.thumbnail.active {
   margin-bottom: 20px;
 }
 .list-group-item {
-  position: relative;
+ 
   display: block;
   padding: 10px 15px;
   margin-bottom: -1px;
@@ -5791,7 +5791,7 @@ button.list-group-item-danger.active:focus {
   border-bottom-color: #ebccd1;
 }
 .embed-responsive {
-  position: relative;
+ 
   display: block;
   height: 0;
   padding: 0;
@@ -5898,12 +5898,12 @@ button.close {
   overflow-y: auto;
 }
 .modal-dialog {
-  position: relative;
+ 
   width: auto;
   margin: 10px;
 }
 .modal-content {
-  position: relative;
+ 
   background-color: #fff;
   -webkit-background-clip: padding-box;
           background-clip: padding-box;
@@ -5943,7 +5943,7 @@ button.close {
   line-height: 1.42857143;
 }
 .modal-body {
-  position: relative;
+ 
   padding: 15px;
 }
 .modal-footer {
@@ -6235,15 +6235,15 @@ button.close {
   border-left-color: #fff;
 }
 .carousel {
-  position: relative;
+ 
 }
 .carousel-inner {
-  position: relative;
+ 
   width: 100%;
   overflow: hidden;
 }
 .carousel-inner > .item {
-  position: relative;
+ 
   display: none;
   -webkit-transition: .6s ease-in-out left;
        -o-transition: .6s ease-in-out left;

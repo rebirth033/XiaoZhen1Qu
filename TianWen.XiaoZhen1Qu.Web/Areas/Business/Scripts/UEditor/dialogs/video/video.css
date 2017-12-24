@@ -139,7 +139,7 @@ span.view{display: inline-block;width: 30px;float: right;cursor: pointer;color: 
     background: url(./images/image.png) center 70px no-repeat;
     color: #cccccc;
     font-size: 18px;
-    position: relative;
+   
     top:0;
     *margin-left: 0;
     *left: 10px;
@@ -196,7 +196,7 @@ span.view{display: inline-block;width: 30px;float: right;cursor: pointer;color: 
     padding: 0;
     overflow-x: hidden;
     overflow-y: auto;
-    position: relative;
+   
     height: 285px;
 }
 
@@ -216,7 +216,7 @@ span.view{display: inline-block;width: 30px;float: right;cursor: pointer;color: 
     text-align: center;
     margin: 15px 0 0 20px;
     *margin: 15px 0 0 15px;
-    position: relative;
+   
     display: block;
     float: left;
     overflow: hidden;
@@ -224,7 +224,7 @@ span.view{display: inline-block;width: 30px;float: right;cursor: pointer;color: 
 }
 
 #upload .filelist li p.log {
-    position: relative;
+   
     top: -45px;
 }
 
@@ -305,7 +305,7 @@ span.view{display: inline-block;width: 30px;float: right;cursor: pointer;color: 
 }
 
 #upload .filelist li p.imgWrap {
-    position: relative;
+   
     z-index: 2;
     line-height: 113px;
     vertical-align: middle;
@@ -444,7 +444,7 @@ span.view{display: inline-block;width: 30px;float: right;cursor: pointer;color: 
     padding: 0;
     line-height: 45px;
     vertical-align: middle;
-    position: relative;
+   
 }
 
 #upload .statusBar .progress {
@@ -469,7 +469,7 @@ span.view{display: inline-block;width: 30px;float: right;cursor: pointer;color: 
     position: absolute;
 }
 #upload .statusBar .progress span.text {
-    position: relative;
+   
     z-index: 10;
 }
 

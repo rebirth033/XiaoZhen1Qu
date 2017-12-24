@@ -67,7 +67,7 @@
     height: 40px;
     text-align: center;
     vertical-align: middle;
-    position: relative;
+   
 }
 
 .div_button_main_photo_child {
@@ -75,7 +75,7 @@
     width: 135px;
     height: 40px;
     background-color: #bc6ba6;
-    position: relative;
+   
     display: block;
     float: left;
     z-index: 101;
@@ -213,7 +213,7 @@
 .div_person_info_right {
     display: inline-block;
     margin-left: 10px;
-    position: relative;
+   
     width: 40%;
 }
 

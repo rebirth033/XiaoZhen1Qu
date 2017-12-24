@@ -7,7 +7,7 @@
     height: 380px;
     margin: 0 auto;
     padding: 10px;
-    position: relative;
+   
     font-family: sans-serif;
 }
 
@@ -18,7 +18,7 @@
 .tabbody {
     width: 100%;
     height: 346px;
-    position: relative;
+   
     clear: both;
 }
 
@@ -88,7 +88,7 @@
     background: url(./images/image.png) center 70px no-repeat;
     color: #cccccc;
     font-size: 18px;
-    position: relative;
+   
     top:0;
     *top: 10px;
 }
@@ -144,7 +144,7 @@
     padding: 0;
     overflow-x: hidden;
     overflow-y: auto;
-    position: relative;
+   
     height: 300px;
 }
 
@@ -164,7 +164,7 @@
     text-align: center;
     margin: 9px 0 0 9px;
     *margin: 6px 0 0 6px;
-    position: relative;
+   
     display: block;
     float: left;
     overflow: hidden;
@@ -172,7 +172,7 @@
 }
 
 #upload .filelist li p.log {
-    position: relative;
+   
     top: -45px;
 }
 
@@ -253,7 +253,7 @@
 }
 
 #upload .filelist li p.imgWrap {
-    position: relative;
+   
     z-index: 2;
     line-height: 113px;
     vertical-align: middle;
@@ -392,7 +392,7 @@
     padding: 0;
     line-height: 45px;
     vertical-align: middle;
-    position: relative;
+   
 }
 
 #upload .statusBar .progress {
@@ -417,7 +417,7 @@
     position: absolute;
 }
 #upload .statusBar .progress span.text {
-    position: relative;
+   
     z-index: 10;
 }
 
@@ -496,7 +496,7 @@
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
-    position: relative;
+   
 }
 #online ul {
     display: block;
@@ -516,7 +516,7 @@
     background-color: #eee;
     overflow: hidden;
     cursor: pointer;
-    position: relative;
+   
 }
 #online li.clearFloat {
     float: none;

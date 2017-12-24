@@ -77,6 +77,12 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string SHRQ { get; set; }
 
         /// <summary>
+        /// 经营模式
+        /// </summary>
+        [Property]
+        public virtual string JYMS { get; set; }
+
+        /// <summary>
         /// 品牌描述
         /// </summary>
         [Property]

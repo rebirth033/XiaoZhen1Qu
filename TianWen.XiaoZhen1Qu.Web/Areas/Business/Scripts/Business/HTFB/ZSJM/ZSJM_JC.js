@@ -53,7 +53,10 @@ function LoadDuoX(type, id) {
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-                LoadZSDQ();
+                if (type === "适合人群")
+                    LoadDuoX("经营模式", "JYMS");
+                if (type === "经营模式")
+                    LoadZSDQ();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -77,7 +80,7 @@ function PDLB(name, codeid) {
 function LoadZSDQ() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/GetDistrictTJByXZQDM",
+        url: getRootPath() + "/Business/Common/GetDistrictXQJByXZQDM",
         dataType: "json",
         data:
         {
@@ -141,6 +144,8 @@ function LoadZSJM_JCJBXX() {
                     SetDuoX("XL", xml.Value.ZSJM_JCJBXX.XL);
                 if (xml.Value.ZSJM_JCJBXX.SHRQ !== null)
                     SetDuoX("SHRQ", xml.Value.ZSJM_JCJBXX.SHRQ);
+                if (xml.Value.ZSJM_JCJBXX.JYMS !== null)
+                    SetDuoX("JYMS", xml.Value.ZSJM_JCJBXX.JYMS);
                 if (xml.Value.ZSJM_JCJBXX.ZSDQ !== null)
                     SetDuoX("ZSDQ", xml.Value.ZSJM_JCJBXX.ZSDQ);
                 if ((xml.Value.ZSJM_LPXSPJBXX.LB.indexOf("饰品挂件") !== -1 || xml.Value.ZSJM_LPXSPJBXX.LB.indexOf("礼品") !== -1 || xml.Value.ZSJM_LPXSPJBXX.LB.indexOf("工艺品") !== -1 || xml.Value.ZSJM_LPXSPJBXX.LB.indexOf("珠宝玉器") !== -1) && xml.Value.ZSJM_LPXSPJBXX.LB !== "礼品加工") {
@@ -166,6 +171,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "DDMJ", "'" + $("#spanDDMJ").html() + "'");
     obj = jsonObj.AddJson(obj, "XL", "'" + GetDuoX("XL") + "'");
     obj = jsonObj.AddJson(obj, "SHRQ", "'" + GetDuoX("SHRQ") + "'");
+    obj = jsonObj.AddJson(obj, "JYMS", "'" + GetDuoX("JYMS") + "'");
     obj = jsonObj.AddJson(obj, "ZSDQ", "'" + GetDuoX("ZSDQ") + "'");
 
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");

@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.IO;
-using System.Linq;
 using NHibernate;
 using TianWen.Framework.Log;
 using TianWen.XiaoZhen1Qu.Entities.Models;
@@ -872,6 +870,130 @@ namespace TianWen.XiaoZhen1Qu.BLL
             catch (Exception ex)
             {
                 LoggerManager.Error("ZSJM_WTMYETJBXXBLL", "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                return new
+                {
+                    Result = EnResultType.Failed,
+                    Message = "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!"
+                };
+            }
+        }
+
+        public object SaveZSJM_LSJBXX(JCXX jcxx, ZSJM_LSJBXX ZSJM_LSJBXX, List<PHOTOS> photos)
+        {
+            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM ZSJM_LSJBXX WHERE ID='{0}'", ZSJM_LSJBXX.ID));
+            using (ITransaction transaction = DAO.BeginTransaction())
+            {
+                try
+                {
+                    if (dt.Rows.Count > 0)
+                    {
+                        SavePhotos(photos, dt.Rows[0]["JCXXID"].ToString());
+                        ZSJM_LSJBXX.JCXXID = dt.Rows[0]["JCXXID"].ToString();
+                        jcxx.JCXXID = dt.Rows[0]["JCXXID"].ToString();
+                        DAO.Update(jcxx);
+                        DAO.Update(ZSJM_LSJBXX);
+                        transaction.Commit();
+                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, ID = ZSJM_LSJBXX.ID } };
+                    }
+                    else
+                    {
+                        SavePhotos(photos, jcxx.JCXXID);
+                        ZSJM_LSJBXX.JCXXID = jcxx.JCXXID;
+                        DAO.Save(jcxx);
+                        DAO.Save(ZSJM_LSJBXX);
+                        transaction.Commit();
+                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, ID = ZSJM_LSJBXX.ID } };
+                    }
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    LoggerManager.Error("ZSJM_LSJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                    return new { Result = EnResultType.Failed, Message = "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!", Type = 3 };
+                }
+            }
+        }
+
+        public object LoadZSJM_LSJBXX(string ID)
+        {
+            try
+            {
+                ZSJM_LSJBXX ZSJM_LSJBXX = DAO.GetObjectByID<ZSJM_LSJBXX>(ID);
+                if (ZSJM_LSJBXX != null)
+                {
+                    JCXX jcxx = GetJCXXByID(ZSJM_LSJBXX.JCXXID);
+                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { ZSJM_LSJBXX = ZSJM_LSJBXX, BCMSString = BinaryHelper.BinaryToString(ZSJM_LSJBXX.BCMS), JCXX = jcxx, Photos = GetPhtosByJCXXID(ZSJM_LSJBXX.JCXXID) } };
+                }
+                else
+                {
+                    return new { Result = EnResultType.Failed, Message = "不存在" };
+                }
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("ZSJM_LSJBXXBLL", "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                return new
+                {
+                    Result = EnResultType.Failed,
+                    Message = "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!"
+                };
+            }
+        }
+
+        public object SaveZSJM_HBCPJBXX(JCXX jcxx, ZSJM_HBCPJBXX ZSJM_HBCPJBXX, List<PHOTOS> photos)
+        {
+            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM ZSJM_HBCPJBXX WHERE ID='{0}'", ZSJM_HBCPJBXX.ID));
+            using (ITransaction transaction = DAO.BeginTransaction())
+            {
+                try
+                {
+                    if (dt.Rows.Count > 0)
+                    {
+                        SavePhotos(photos, dt.Rows[0]["JCXXID"].ToString());
+                        ZSJM_HBCPJBXX.JCXXID = dt.Rows[0]["JCXXID"].ToString();
+                        jcxx.JCXXID = dt.Rows[0]["JCXXID"].ToString();
+                        DAO.Update(jcxx);
+                        DAO.Update(ZSJM_HBCPJBXX);
+                        transaction.Commit();
+                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, ID = ZSJM_HBCPJBXX.ID } };
+                    }
+                    else
+                    {
+                        SavePhotos(photos, jcxx.JCXXID);
+                        ZSJM_HBCPJBXX.JCXXID = jcxx.JCXXID;
+                        DAO.Save(jcxx);
+                        DAO.Save(ZSJM_HBCPJBXX);
+                        transaction.Commit();
+                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, ID = ZSJM_HBCPJBXX.ID } };
+                    }
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    LoggerManager.Error("ZSJM_HBCPJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                    return new { Result = EnResultType.Failed, Message = "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!", Type = 3 };
+                }
+            }
+        }
+
+        public object LoadZSJM_HBCPJBXX(string ID)
+        {
+            try
+            {
+                ZSJM_HBCPJBXX ZSJM_HBCPJBXX = DAO.GetObjectByID<ZSJM_HBCPJBXX>(ID);
+                if (ZSJM_HBCPJBXX != null)
+                {
+                    JCXX jcxx = GetJCXXByID(ZSJM_HBCPJBXX.JCXXID);
+                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { ZSJM_HBCPJBXX = ZSJM_HBCPJBXX, BCMSString = BinaryHelper.BinaryToString(ZSJM_HBCPJBXX.BCMS), JCXX = jcxx, Photos = GetPhtosByJCXXID(ZSJM_HBCPJBXX.JCXXID) } };
+                }
+                else
+                {
+                    return new { Result = EnResultType.Failed, Message = "不存在" };
+                }
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("ZSJM_HBCPJBXXBLL", "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
                 return new
                 {
                     Result = EnResultType.Failed,

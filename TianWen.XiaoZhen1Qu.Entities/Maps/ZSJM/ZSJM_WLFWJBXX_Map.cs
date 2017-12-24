@@ -20,6 +20,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Maps
             Map(x => x.QGFDS, "QGFDS");
             Map(x => x.DDMJ, "DDMJ");
             Map(x => x.SHRQ, "SHRQ");
+            Map(x => x.JYMS, "JYMS");
             Map(x => x.PPMS, "PPMS");
             Map(x => x.ZSDQ, "ZSDQ");
             #endregion

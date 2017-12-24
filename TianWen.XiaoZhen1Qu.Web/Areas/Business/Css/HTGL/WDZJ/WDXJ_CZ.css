@@ -101,7 +101,7 @@
     width: 170px;
     height: 36px;
     border: 1px solid #cccccc;
-    position: relative;
+   
     padding-top: 1px;
     float: left;
         cursor: pointer;
@@ -113,7 +113,7 @@
     height: 36px;
     border-top: 1px solid #cccccc;
     border-left: 1px solid #cccccc;
-    position: relative;
+   
     padding-top: 1px;
     float: left;
     cursor: pointer;
@@ -124,7 +124,7 @@
     height: 36px;
     border-top: 1px solid #cccccc;
     border-left: 1px solid #cccccc;
-    position: relative;
+   
     padding-top: 1px;
     float: left;
     cursor: pointer;

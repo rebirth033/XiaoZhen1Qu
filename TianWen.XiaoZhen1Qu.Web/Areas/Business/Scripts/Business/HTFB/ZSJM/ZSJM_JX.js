@@ -54,7 +54,10 @@ function LoadDuoX(type, id) {
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".liJXXL").bind("click", function () { ValidateCheck("JXXL", "忘记选择小类啦"); });
-                LoadZSDQ();
+                if (type === "适合人群")
+                    LoadDuoX("经营模式", "JYMS");
+                if (type === "经营模式")
+                    LoadZSDQ();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -66,7 +69,7 @@ function LoadDuoX(type, id) {
 function LoadZSDQ() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/GetDistrictTJByXZQDM",
+        url: getRootPath() + "/Business/Common/GetDistrictXQJByXZQDM",
         dataType: "json",
         data:
         {
@@ -106,8 +109,13 @@ function SelectLB(obj, type, codeid) {
 }
 //判断类别
 function PDLB(name, codeid) {
-    $("#divXL").css("display", "");
-    LoadDuoX(name, "XL");
+    if (name.indexOf("包装机械") !== -1 || name.indexOf("服装机械") !== -1 || name.indexOf("干洗设备") !== -1 || name.indexOf("化工设备") !== -1) {
+        $("#divXL").css("display", "none");
+    }
+    else {
+        $("#divXL").css("display", "");
+        LoadDuoX(name, "XL");
+    }
 }
 //加载招商加盟_机械基本信息
 function LoadZSJM_JXJBXX() {
@@ -142,6 +150,8 @@ function LoadZSJM_JXJBXX() {
                     SetDuoX("XL", xml.Value.ZSJM_JXJBXX.XL);
                 if (xml.Value.ZSJM_JXJBXX.SHRQ !== null)
                     SetDuoX("SHRQ", xml.Value.ZSJM_JXJBXX.SHRQ);
+                if (xml.Value.ZSJM_JXJBXX.JYMS !== null)
+                    SetDuoX("JYMS", xml.Value.ZSJM_JXJBXX.JYMS);
                 if (xml.Value.ZSJM_JXJBXX.ZSDQ !== null)
                     SetDuoX("ZSDQ", xml.Value.ZSJM_JXJBXX.ZSDQ);
                 if ((xml.Value.ZSJM_LPXSPJBXX.LB.indexOf("饰品挂件") !== -1 || xml.Value.ZSJM_LPXSPJBXX.LB.indexOf("礼品") !== -1 || xml.Value.ZSJM_LPXSPJBXX.LB.indexOf("工艺品") !== -1 || xml.Value.ZSJM_LPXSPJBXX.LB.indexOf("珠宝玉器") !== -1) && xml.Value.ZSJM_LPXSPJBXX.LB !== "礼品加工") {
@@ -167,6 +177,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "DDMJ", "'" + $("#spanDDMJ").html() + "'");
     obj = jsonObj.AddJson(obj, "XL", "'" + GetDuoX("XL") + "'");
     obj = jsonObj.AddJson(obj, "SHRQ", "'" + GetDuoX("SHRQ") + "'");
+    obj = jsonObj.AddJson(obj, "JYMS", "'" + GetDuoX("JYMS") + "'");
     obj = jsonObj.AddJson(obj, "ZSDQ", "'" + GetDuoX("ZSDQ") + "'");
 
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
