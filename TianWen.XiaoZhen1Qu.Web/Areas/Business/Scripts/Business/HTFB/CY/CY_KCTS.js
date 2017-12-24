@@ -62,10 +62,7 @@ function LoadCY_KCTSJBXX() {
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
                 $("#ID").val(xml.Value.CY_KCTSJBXX.ID);
                 //设置编辑器的内容
-                ue.ready(function () {
-                    ue.setHeight(200);
-                    ue.setContent(xml.Value.BCMSString);
-                });
+                ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
                 if (xml.Value.CY_KCTSJBXX.LB !== null)
                     SetDuoX("KCTSLB", xml.Value.CY_KCTSJBXX.LB);
                 $("#spanQY").html(xml.Value.CY_KCTSJBXX.QY);

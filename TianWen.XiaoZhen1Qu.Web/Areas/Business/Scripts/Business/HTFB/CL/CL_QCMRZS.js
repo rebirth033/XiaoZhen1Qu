@@ -97,10 +97,7 @@ function LoadCL_QCMRZSJBXX() {
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
                 $("#ID").val(xml.Value.CL_QCMRZSJBXX.ID);
                 //设置编辑器的内容
-                ue.ready(function () {
-                    ue.setHeight(200);
-                    ue.setContent(xml.Value.BCMSString);
-                });
+                ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
                 PDLB(xml.Value.CL_QCMRZSJBXX.LB);
                 $("#spanLB").html(xml.Value.CL_QCMRZSJBXX.LB);
                 $("#spanXCDD").html(xml.Value.CL_QCMRZSJBXX.XCDD);

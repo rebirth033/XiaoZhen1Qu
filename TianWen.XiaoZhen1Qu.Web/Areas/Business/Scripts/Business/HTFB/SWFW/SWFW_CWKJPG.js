@@ -54,10 +54,7 @@ function LoadSWFW_CWKJPGJBXX() {
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
                 $("#ID").val(xml.Value.SWFW_CWKJPGJBXX.ID);
                 //设置编辑器的内容
-                ue.ready(function () {
-                    ue.setHeight(200);
-                    ue.setContent(xml.Value.BCMSString);
-                });
+                ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
                 SetDuoX("CWKJPGLB", xml.Value.SWFW_CWKJPGJBXX.LB);
                 SetDX("SFSM", xml.Value.SWFW_CWKJPGJBXX.SFSM);
                 $("#spanQY").html(xml.Value.SWFW_CWKJPGJBXX.QY);

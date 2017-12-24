@@ -113,10 +113,7 @@ function LoadPFCG_YCLJBXX() {
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
                 $("#ID").val(xml.Value.PFCG_YCLJBXX.ID);
                 //设置编辑器的内容
-                ue.ready(function () {
-                    ue.setHeight(200);
-                    ue.setContent(xml.Value.BCMSString);
-                });
+                ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
                 $("#spanLB").html(xml.Value.PFCG_YCLJBXX.LB);
                 if (xml.Value.PFCG_YCLJBXX.LB === "冶金" || xml.Value.PFCG_YCLJBXX.LB === "橡胶制品") {
                     $("#spanXL").html("请选择小类");

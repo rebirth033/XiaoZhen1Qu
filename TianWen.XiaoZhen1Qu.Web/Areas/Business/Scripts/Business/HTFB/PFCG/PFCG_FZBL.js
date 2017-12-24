@@ -112,10 +112,7 @@ function LoadPFCG_FZBLJBXX() {
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
                 $("#ID").val(xml.Value.PFCG_FZBLJBXX.ID);
                 //设置编辑器的内容
-                ue.ready(function () {
-                    ue.setHeight(200);
-                    ue.setContent(xml.Value.BCMSString);
-                });
+                ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
                 SetDuoX("FZBLLB", xml.Value.PFCG_FZBLJBXX.LB);
                 $("#spanQY").html(xml.Value.PFCG_FZBLJBXX.QY);
                 $("#spanDD").html(xml.Value.PFCG_FZBLJBXX.DD);

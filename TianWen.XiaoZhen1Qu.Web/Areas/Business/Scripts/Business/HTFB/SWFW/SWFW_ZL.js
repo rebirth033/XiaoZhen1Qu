@@ -83,10 +83,7 @@ function LoadSWFW_ZLJBXX() {
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.SWFW_ZLJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
                 //设置编辑器的内容
-                ue.ready(function () {
-                    ue.setHeight(200);
-                    ue.setContent(xml.Value.BCMSString);
-                });
+                ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
                 $("#ID").val(xml.Value.SWFW_ZLJBXX.ID);
                 $("#spanLB").html(xml.Value.SWFW_ZLJBXX.LB);
                 $("#spanQY").html(xml.Value.SWFW_ZLJBXX.QY);

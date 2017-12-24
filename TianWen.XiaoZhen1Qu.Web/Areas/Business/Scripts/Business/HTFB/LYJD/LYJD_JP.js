@@ -74,10 +74,7 @@ function LoadLYJD_JPJBXX() {
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
                 $("#ID").val(xml.Value.LYJD_JPJBXX.ID);
                 //设置编辑器的内容
-                ue.ready(function () {
-                    ue.setHeight(200);
-                    ue.setContent(xml.Value.BCMSString);
-                });
+                ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
                 $("#spanLB").html(xml.Value.LYJD_JPJBXX.LB);
                 $("#spanQY").html(xml.Value.LYJD_JPJBXX.QY);
                 $("#spanDD").html(xml.Value.LYJD_JPJBXX.DD);

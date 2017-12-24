@@ -77,10 +77,7 @@ function LoadCL_HCJBXX() {
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
                 $("#ID").val(xml.Value.CL_HCJBXX.ID);
                 //设置编辑器的内容
-                ue.ready(function () {
-                    ue.setHeight(200);
-                    ue.setContent(xml.Value.BCMSString);
-                });
+                ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
                 $("#spanLB").html(xml.Value.CL_HCJBXX.LB);
                 $("#spanXL").html(xml.Value.CL_HCJBXX.XL);
                 $("#spanPP").html(xml.Value.CL_HCJBXX.PP);

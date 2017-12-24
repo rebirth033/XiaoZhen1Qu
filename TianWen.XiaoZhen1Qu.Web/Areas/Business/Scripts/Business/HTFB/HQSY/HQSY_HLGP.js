@@ -37,10 +37,7 @@ function LoadHQSY_HLGPJBXX() {
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
                 $("#ID").val(xml.Value.HQSY_HLGPJBXX.ID);
                 //设置编辑器的内容
-                ue.ready(function () {
-                    ue.setHeight(200);
-                    ue.setContent(xml.Value.BCMSString);
-                });
+                ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
                 $("#spanGPLX").html(xml.Value.HQSY_HLGPJBXX.GPLX);
                 $("#spanQY").html(xml.Value.HQSY_HLGPJBXX.QY);
                 $("#spanDD").html(xml.Value.HQSY_HLGPJBXX.DD);

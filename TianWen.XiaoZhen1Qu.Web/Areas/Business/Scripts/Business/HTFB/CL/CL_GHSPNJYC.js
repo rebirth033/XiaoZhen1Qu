@@ -61,10 +61,7 @@ function LoadCL_GHSPNJYCJBXX() {
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
                 $("#ID").val(xml.Value.CL_GHSPNJYCJBXX.ID);
                 //设置编辑器的内容
-                ue.ready(function () {
-                    ue.setHeight(200);
-                    ue.setContent(xml.Value.BCMSString);
-                });
+                ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
                 if (xml.Value.CL_GHSPNJYCJBXX.LB !== "" && xml.Value.CL_GHSPNJYCJBXX.LB !== null)
                 SetDuoX("OUTLB", xml.Value.CL_GHSPNJYCJBXX.LB);
                 $("#spanQY").html(xml.Value.CL_GHSPNJYCJBXX.QY);

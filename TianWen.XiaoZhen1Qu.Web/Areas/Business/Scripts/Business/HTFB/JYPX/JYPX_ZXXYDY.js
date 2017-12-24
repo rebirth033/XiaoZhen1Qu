@@ -74,10 +74,7 @@ function LoadJYPX_ZXXYDYJBXX() {
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
                 $("#ID").val(xml.Value.JYPX_ZXXYDYJBXX.ID);
                 //设置编辑器的内容
-                ue.ready(function () {
-                    ue.setHeight(200);
-                    ue.setContent(xml.Value.BCMSString);
-                });
+                ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
                 $("#spanLB").html(xml.Value.JYPX_ZXXYDYJBXX.LB);
                 $("#spanQY").html(xml.Value.JYPX_ZXXYDYJBXX.QY);
                 $("#spanDD").html(xml.Value.JYPX_ZXXYDYJBXX.DD);

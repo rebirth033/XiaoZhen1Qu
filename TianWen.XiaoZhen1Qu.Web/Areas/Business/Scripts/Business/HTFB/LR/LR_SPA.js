@@ -62,10 +62,7 @@ function LoadLR_SPAJBXX() {
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
                 $("#ID").val(xml.Value.LR_SPAJBXX.ID);
                 //设置编辑器的内容
-                ue.ready(function () {
-                    ue.setHeight(200);
-                    ue.setContent(xml.Value.BCMSString);
-                });
+                ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
                 if (xml.Value.LR_SPAJBXX.LB !== null)
                     SetDuoX("SPALB", xml.Value.LR_SPAJBXX.LB);
                 $("#spanQY").html(xml.Value.LR_SPAJBXX.QY);

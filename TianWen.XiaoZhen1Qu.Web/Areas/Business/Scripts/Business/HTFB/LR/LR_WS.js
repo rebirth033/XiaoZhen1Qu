@@ -25,10 +25,7 @@ function LoadLR_WSJBXX() {
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
                 $("#ID").val(xml.Value.LR_WSJBXX.ID);
                 //设置编辑器的内容
-                ue.ready(function () {
-                    ue.setHeight(200);
-                    ue.setContent(xml.Value.BCMSString);
-                });
+                ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
                 $("#spanQY").html(xml.Value.LR_WSJBXX.QY);
                 $("#spanDD").html(xml.Value.LR_WSJBXX.DD);
                 LoadPhotos(xml.Value.Photos);

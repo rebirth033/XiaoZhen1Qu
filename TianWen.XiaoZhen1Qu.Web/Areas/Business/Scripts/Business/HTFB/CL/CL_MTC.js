@@ -75,10 +75,7 @@ function LoadCL_MTCJBXX() {
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
                 $("#ID").val(xml.Value.CL_MTCJBXX.ID);
                 //设置编辑器的内容
-                ue.ready(function () {
-                    ue.setHeight(200);
-                    ue.setContent(xml.Value.BCMSString);
-                });
+                ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
                 if (xml.Value.CL_MTCJBXX.GQ !== null)
                     SetDX("GQ", xml.Value.CL_MTCJBXX.GQ);
                 if (xml.Value.CL_MTCJBXX.XSLC !== null)

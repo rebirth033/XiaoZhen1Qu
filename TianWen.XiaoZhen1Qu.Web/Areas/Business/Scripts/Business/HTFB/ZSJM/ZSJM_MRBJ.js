@@ -134,10 +134,7 @@ function LoadZSJM_MRBJJBXX() {
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
                 $("#ID").val(xml.Value.ZSJM_MRBJJBXX.ID);
                 //设置编辑器的内容
-                ue.ready(function () {
-                    ue.setHeight(200);
-                    ue.setContent(xml.Value.BCMSString);
-                });
+                ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
                 $("#spanLB").html(xml.Value.ZSJM_MRBJJBXX.LB);
                 $("#spanQY").html(xml.Value.ZSJM_MRBJJBXX.QY);
                 $("#spanDD").html(xml.Value.ZSJM_MRBJJBXX.DD);
