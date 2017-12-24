@@ -1,12 +1,12 @@
 ﻿$(document).ready(function () {
-    LoadPFCG_SJSMJBXX();
     BindClick("LB");
+    LoadFWFW();
 });
 //绑定下拉框
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("电工电料类别", "LB", "CODES_PFCG", Bind, "OUTLB", "LB", "");
+            LoadCODESByTYPENAME("手机数码类别", "LB", "CODES_PFCG", Bind, "OUTLB", "LB", "");
         }
     });
 }
@@ -19,13 +19,13 @@ function SelectLB(obj, type, codeid) {
 }
 //判断类别
 function PDLB(name, codeid) {
-    if (name.indexOf("干锅") !== -1) {
+    //if (name.indexOf("干锅") !== -1) {
         $("#divXL").css("display", "none");
-    }
-    else {
-        $("#divXL").css("display", "");
-        LoadDuoX(name, "XL");
-    }
+    //}
+    //else {
+        //$("#divXL").css("display", "");
+        //LoadDuoX(name, "XL");
+    //}
 }
 //加载多选
 function LoadDuoX(type, id) {
@@ -88,7 +88,7 @@ function LoadFWFW() {
                 $("#divFWFWText").html(html);
                 $(".img_FWFW").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".liFWFW").bind("click", function () { ValidateCheck("FWFW", "忘记选择服务范围啦"); });
-                LoadPFCG_DGDLJBXX();
+                LoadPFCG_SJSMJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

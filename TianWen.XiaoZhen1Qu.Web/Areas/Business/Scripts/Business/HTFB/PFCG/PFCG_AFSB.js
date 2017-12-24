@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-    LoadPFCG_AFSBJBXX();
     BindClick("LB");
     LoadFWFW();
 });

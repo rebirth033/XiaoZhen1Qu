@@ -1,31 +1,7 @@
 ﻿$(document).ready(function () {
-    LoadDuoX("纺织/布料类别", "FZBLLB");
+    LoadDuoX("纺织布料类别", "OUTLB");
+    LoadFWFW();
 });
-//绑定下拉框
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadCODESByTYPENAME("电工电料类别", "LB", "CODES_PFCG", Bind, "OUTLB", "LB", "");
-        }
-    });
-}
-//选择类别下拉框
-function SelectLB(obj, type, codeid) {
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
-    if (type === "LB")
-        PDLB(obj.innerHTML, codeid);
-}
-//判断类别
-function PDLB(name, codeid) {
-    if (name.indexOf("干锅") !== -1) {
-        $("#divXL").css("display", "none");
-    }
-    else {
-        $("#divXL").css("display", "");
-        LoadDuoX(name, "XL");
-    }
-}
 //加载多选
 function LoadDuoX(type, id) {
     $.ajax({
@@ -41,15 +17,15 @@ function LoadDuoX(type, id) {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='li" + id + "' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i % 6 === 5) {
+                    html += "<li class='li" + id + "' style='width:120px;' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    if (i % 5 === 4) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
                     }
                 }
-                if (parseInt(xml.list.length % 6) === 0)
-                    $("#div" + id).css("height", parseInt(xml.list.length / 6) * 45 + "px");
+                if (parseInt(xml.list.length % 5) === 0)
+                    $("#div" + id).css("height", parseInt(xml.list.length / 5) * 45 + "px");
                 else
-                    $("#div" + id).css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 5) + 1) * 45 + "px");
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
@@ -113,7 +89,7 @@ function LoadPFCG_FZBLJBXX() {
                 $("#ID").val(xml.Value.PFCG_FZBLJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
-                SetDuoX("FZBLLB", xml.Value.PFCG_FZBLJBXX.LB);
+                SetDuoX("OUTLB", xml.Value.PFCG_FZBLJBXX.LB);
                 $("#spanQY").html(xml.Value.PFCG_FZBLJBXX.QY);
                 $("#spanDD").html(xml.Value.PFCG_FZBLJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
@@ -133,7 +109,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "LB", "'" + GetDuoX("FZBLLB") + "'");
+    obj = jsonObj.AddJson(obj, "LB", "'" + GetDuoX("OUTLB") + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");

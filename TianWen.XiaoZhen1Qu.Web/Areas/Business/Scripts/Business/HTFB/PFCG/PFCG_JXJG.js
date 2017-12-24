@@ -1,12 +1,12 @@
 ﻿$(document).ready(function () {
-    LoadPFCG_JXJGJBXX();
+    LoadFWFW();
     BindClick("LB");
 });
 //绑定下拉框
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("电工电料类别", "LB", "CODES_PFCG", Bind, "OUTLB", "LB", "");
+            LoadCODESByTYPENAME("机械加工类别", "LB", "CODES_PFCG", Bind, "OUTLB", "LB", "");
         }
     });
 }

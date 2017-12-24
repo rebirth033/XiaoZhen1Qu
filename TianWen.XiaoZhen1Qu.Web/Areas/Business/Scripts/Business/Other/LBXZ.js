@@ -36,7 +36,7 @@ function LoadDL() {
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-            
+
         }
     });
 }
@@ -57,18 +57,18 @@ function LoadXL(LBID, LBNAME) {
         success: function (xml) {
             if (xml.Result === 1) {
                 var XLhtml = "", trhtml = "";
-                if (LBNAME === "二手" || LBNAME === "生活服务" || LBNAME === "商务服务" || LBNAME === "车辆" || LBNAME === "招聘兼职") {
+                if (LBNAME === "二手" || LBNAME === "生活服务" || LBNAME === "商务服务" || LBNAME === "车辆") {
                     for (var i = 0; i < xml.list.length; i++) {
                         if (xml.list[i].CODES_XXLBS.length > 5)
                             trhtml = "<tr><td class=\"LBFirst\">" + xml.list[i].LBNAME + "</td>";
                         else
                             trhtml = "<tr class=\"trXL\"><td class=\"LBFirst\">" + xml.list[i].LBNAME + "</td>";
                         for (var j = 0; j < xml.list[i].CODES_XXLBS.length; j++) {
-                            if (j === 5) {
+                            if (j === 5 || j === 10) {
                                 trhtml = "<tr class=\"trXL\"><td class=\"LBFirst\"></td>";
                             }
                             trhtml += "<td class=\"LB\" onclick=\"FBXX('" + xml.list[i].CODES_XXLBS[j].FBYM + "','" + xml.list[i].CODES_XXLBS[j].LBID + "')\">" + xml.list[i].CODES_XXLBS[j].LBNAME + "</td>";
-                            if (j === 4 && j !== (xml.list[i].CODES_XXLBS.length - 1)) {
+                            if ((j === 4 || j === 9) && j !== (xml.list[i].CODES_XXLBS.length - 1)) {
                                 trhtml += "</tr>";
                                 XLhtml += trhtml;
                             }
@@ -76,7 +76,31 @@ function LoadXL(LBID, LBNAME) {
                         trhtml += "</tr>";
                         XLhtml += trhtml;
                     }
-                } else {
+                }
+                else if (LBNAME === "招聘兼职") {
+                    for (var i = 0; i < xml.list.length; i++) {
+                        if (xml.list[i].CODES_XXLBS.length > 5)
+                            trhtml = "<tr><td class=\"LBFirst\">" + xml.list[i].LBNAME + "</td>";
+                        else
+                            trhtml = "<tr class=\"trXL\"><td class=\"LBFirst\">" + xml.list[i].LBNAME + "</td>";
+                        for (var j = 0; j < xml.list[i].CODES_XXLBS.length; j++) {
+                            if (j === 5) {
+                                trhtml = "<tr><td class=\"LBFirst\"></td>";
+                            }
+                            if (j === 10) {
+                                trhtml = "<tr class=\"trXL\"><td class=\"LBFirst\"></td>";
+                            }
+                            trhtml += "<td class=\"LB\" onclick=\"FBXX('" + xml.list[i].CODES_XXLBS[j].FBYM + "','" + xml.list[i].CODES_XXLBS[j].LBID + "')\">" + xml.list[i].CODES_XXLBS[j].LBNAME + "</td>";
+                            if ((j === 4 || j === 9) && j !== (xml.list[i].CODES_XXLBS.length - 1)) {
+                                trhtml += "</tr>";
+                                XLhtml += trhtml;
+                            }
+                        }
+                        trhtml += "</tr>";
+                        XLhtml += trhtml;
+                    }
+                }
+                else {
                     for (var i = 0; i < xml.list.length; i++) {
                         if (i % 6 === 0 || i === 0)
                             trhtml = "<tr>";
@@ -96,7 +120,7 @@ function LoadXL(LBID, LBNAME) {
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-            
+
         }
     });
 }
