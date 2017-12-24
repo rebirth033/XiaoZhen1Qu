@@ -2,7 +2,7 @@
     BindClick("MYXZ");
     BindClick("XLYQ");
     BindClick("GZNX");
-    BindClick("ZWLB");
+    BindClick("LB");
     LoadDuoX("职位福利", "ZWFL");
 });
 //绑定下拉框
@@ -17,60 +17,9 @@ function BindClick(type) {
         if (type === "GZNX") {
             LoadCODESByTYPENAME("工作年限", "GZNX", "CODES_QZZP", Bind, "ZPGZNX", "GZNX", "");
         }
-        if (type === "ZWLB") {
-            LoadZWLB();
+        if (type === "LB") {
+            LoadCODESByTYPENAME("餐饮|百货|服务", "LB", "CODES_QZZP", Bind, "OUTLB", "LB", "");
         }
-    });
-}
-//加载职位类别
-function LoadZWLB() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadZWLBXX",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: "职位类别"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += '<div class="div_zwlb_first"><span class="span_zwlb_first">' + xml.list[i].CODENAME + '</span><em class="em_zwlb_split"></em></div><div class="div_zwlb_second">';
-                    for (var j = 0; j < xml.list[i].childs.length; j++) {
-                        html += '<div class="div_zwlb_second_inner"><span class="span_zwlb_second">' + xml.list[i].childs[j].CODENAME + '</span><img class="img_zwlb_second_inner"/>';
-                        html += '<div class="div_zwlb_third">';
-                        for (var k = 0; k < xml.list[i].childs[j].childs.length; k++) {
-                            html += '<span class="span_zwlb_third">' + xml.list[i].childs[j].childs[k].CODENAME + '</span>';
-                        }
-                        html += '</div></div>';
-                    }
-                    html += '</div>';
-                }
-                $("#divZWLB").html(html);
-                $(".div_zwlb_second:eq(0)").css("height", "60px"); $(".div_zwlb_second:eq(2)").css("height", "60px"); $(".div_zwlb_second:eq(4)").css("height", "60px");
-                $("#divZWLB").css("display", "");
-                $(".div_zwlb_second_inner").bind("click", ShowZWLBThird);
-                $(".div_zwlb_second_inner").bind("mouseleave", HideZWLBThird);
-                $(".span_zwlb_third").bind("click", SelectZWLB);
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//显示职位类别
-function ShowZWLBThird() {
-    $("#HYLB").val($(this).find(".span_zwlb_second")[0].innerHTML);
-    $(this).find(".div_zwlb_third").each(function () {
-        $(this).css("display", "block");
-    });
-}
-//隐藏职位类别
-function HideZWLBThird() {
-    $(this).find(".div_zwlb_third").each(function () {
-        $(this).css("display", "none");
     });
 }
 //选择职位类别

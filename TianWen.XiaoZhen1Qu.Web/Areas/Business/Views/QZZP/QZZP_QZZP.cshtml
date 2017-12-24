@@ -22,26 +22,41 @@
                 <div id="divBTTip"></div>
             </div>
         </div>
-        <div id="divZPZWLB" class="div_row" style="margin-top: 22px; z-index: 999;">
-            <div class="div_row_left">
+        <div id="divOUTLB" class="div_row" style="z-index: 999">
+            <div class="div_row_left font_four">
+                <span class="span_required">*</span>
+                <span class="spanFWCZ">职位类别</span>
+            </div>
+            <div class="div_row_right">
+                <div id="divLBText" class="div_select_out SRK">
+                    <div id="divLBSpan" class="div_select_in" style="border: none; margin-top: 6px;">
+                        <span id="spanLB" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择职位类别</span>
+                        <div class="span_select_arrow"></div>
+                    </div>
+                    <div id="divLB" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
+                    </div>
+                </div>
+            </div>
+            <div id="divOUTLBTip" class="Warn"></div>
+        </div>
+        <div id="divOUTXL" class="div_row" style="z-index: 998">
+            <div class="div_row_left font_four">
                 <span class="span_required">*</span>
                 <span class="spanFWCZ">职位名称</span>
             </div>
             <div class="div_row_right">
-                <div id="divZWLBText" class="div_select_out SRK" style="position: relative;z-index: 998;">
-                    <div id="divZWLBSpan" class="div_select_in" style="border: none; margin-top: 6px;">
-                        <input type="hidden" id="HYLB" column="HYLB" />
-                        <input type="hidden" id="ZWLBID" />
-                        <span id="spanZWLB" class="span_select spaninput_fontcolor" style="margin-top: 0;">请选择职位名称</span>
+                <div id="divXLText" class="div_select_out SRK">
+                    <div id="divXLSpan" class="div_select_in" style="border: none; margin-top: 6px;">
+                        <span id="spanXL" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择职位名称</span>
                         <div class="span_select_arrow"></div>
                     </div>
-                    <div id="divZWLB" class="div_bqss" style="display: none">
+                    <div id="divXL" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
                     </div>
                 </div>
             </div>
-            <div id="divZPZWLBTip" class="Warn" style="z-index: 997;"></div>
+            <div id="divOUTXLTip" class="Warn"></div>
         </div>
-        <div id="divZPRS" class="div_row" style="margin-top: 22px; z-index: 998;">
+        <div id="divZPRS" class="div_row" style="margin-top: 22px; z-index: 997;">
             <div class="div_row_left">
                 <span class="span_required">*</span>
                 <span class="spanFWCZ">招聘人数</span>
@@ -54,10 +69,10 @@
             </div>
             <div id="divZPRSTip"></div>
         </div>
-        <div id="divZPMYXZ" class="div_row" style="z-index: 997;">
+        <div id="divZPMYXZ" class="div_row" style="z-index: 996;">
             <div class="div_row_left">
                 <span class="span_required">*</span>
-                <span class="spanFWCZ">每月薪资</span>
+                <span class="spanFWCZ">薪资待遇</span>
             </div>
             <div class="div_row_right">
                 <div id="divMYXZText" class="div_select_out SRK">
@@ -69,17 +84,17 @@
                     </div>
                 </div>
             </div>
-            <div id="divZPMYXZTip" class="Warn" style="z-index: 998;"></div>
+            <div id="divZPMYXZTip" class="Warn" style="z-index: 995;"></div>
         </div>
         <div id="divZWFL" class="div_row" style="z-index: 994;">
             <div class="div_row_left">
                 <span class="span_required">&nbsp;</span>
-                <span id="spanZWFL">职位福利</span>
+                <span id="spanZWFL">福利待遇</span>
             </div>
             <div id="divZWFLText" class="div_row_right">
             </div>
         </div>
-        <div id="divZPXLYQ" class="div_row" style="z-index: 996;">
+        <div id="divZPXLYQ" class="div_row" style="z-index: 993;">
             <div class="div_row_left">
                 <span class="span_required">*</span>
                 <span class="spanFWCZ">学历要求</span>
@@ -94,9 +109,9 @@
                     </div>
                 </div>
             </div>
-            <div id="divZPXLYQTip" class="Warn" style="z-index: 998;"></div>
+            <div id="divZPXLYQTip" class="Warn" style="z-index: 992;"></div>
         </div>
-        <div id="divZPGZNX" class="div_row" style="z-index: 995;">
+        <div id="divZPGZNX" class="div_row" style="z-index: 991;">
             <div class="div_row_left">
                 <span class="span_required">*</span>
                 <span class="spanFWCZ">工作年限</span>
@@ -111,13 +126,40 @@
                     </div>
                 </div>
             </div>
-            <div id="divZPGZNXTip" class="Warn" style="z-index: 998;"></div>
+            <div id="divZPGZNXTip" class="Warn" style="z-index: 990;"></div>
+        </div>
+        <div id="divSZQY" class="div_row" style="z-index: 991;">
+            <div class="div_row_left">
+                <span class="span_required">*</span>
+                <span class="spanFWCZ">工作地址</span>
+            </div>
+            <div class="div_row_right">
+                <div id="divQYText" class="div_select_out SRK" style="z-index: 990;">
+                    <div id="divQYSpan" class="div_select_in" style="border: none; margin-top: 6px;">
+                        <input type="hidden" id="QYCode" />
+                        <span id="spanQY" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择区域</span>
+                        <div class="span_select_arrow"></div>
+                    </div>
+                    <div id="divQY" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
+                    </div>
+                </div>
+                <div id="divDDText" class="div_select_out SRK" style="z-index: 990;">
+                    <div id="divDDSpan" class="div_select_in" style="border: none; margin-top: 6px;">
+                        <span id="spanDD" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择地段</span>
+                        <div class="span_select_arrow"></div>
+                    </div>
+                    <div id="divDD" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
+                    </div>
+                </div>
+                <input id="JTDZ" column="JTDZ" class="span_spaninput input_input SRK" type="text" placeholder="请填写具体地址" style="width: 300px" />
+            </div>
+            <div id="divSZQYTip" class="Warn"></div>
         </div>
         <div id="divXXXX" class="div_split" style="display: block; text-align: left;">
             <span class="span_split">职位描述</span>
             <em class="em_split"></em>
         </div>
-        <div id="divBCMS" class="div_row" style="height: 253px; z-index: 994;">
+        <div id="divBCMS" class="div_row" style="height: 253px; z-index: 989;">
             <div class="div_row_left" style="height: 170px; vertical-align: top;">
                 <span class="span_required" style="vertical-align: top">*</span>
                 <span id="spanBCMS" style="vertical-align: top">职位描述</span>
