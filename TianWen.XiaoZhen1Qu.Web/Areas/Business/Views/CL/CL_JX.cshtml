@@ -22,25 +22,20 @@
                 <div id="divBTTip"></div>
             </div>
         </div>
-        <div id="divOUTLB" class="div_row">
-            <div class="div_row_left font_two">
+        <div id="divJXMC" class="div_row" style="margin-top: 22px; z-index: 993;">
+            <div class="div_row_left">
                 <span class="span_required">*</span>
-                <span class="spanFWCZ">类别</span>
+                <span id="spanJXMC">驾校名称</span>
             </div>
             <div class="div_row_right">
-                <div class="div_radio" id="div_lb_jxzs">
-                    <img class="img_radio" id="img_lb_jxzs"/><label class="label_radio">驾校招生</label>
-                </div>
-                <div class="div_radio" id="div_lb_jlzs">
-                    <img class="img_radio" id="img_lb_jlzs"/><label class="label_radio">教练招生</label>
-                </div>
+                <input id="JXMC" maxlength="50" column="JXMC" class="input_input SRK" style="width: 594px; padding: 6px 12px;" type="text" placeholder="请填写驾校全称" />
+                <div id="divJXMCTip"></div>
             </div>
-            <div id="divOUTLBTip"></div>
         </div>
         <div id="divJZ" class="div_row" style="z-index: 993;">
-            <div class="div_row_left font_two">
+            <div class="div_row_left">
                 <span class="span_required">*</span>
-                <span id="spanJZ">驾照</span>
+                <span id="spanJZ">驾照类型</span>
             </div>
             <div id="divJZText" class="div_row_right">
             </div>
@@ -54,6 +49,19 @@
             <div id="divBBText" class="div_row_right">
             </div>
             <div id="divBBTip"></div>
+        </div>
+        <div id="divJG" class="div_row" style="z-index: 992;">
+            <div class="div_row_left font_two">
+                <span class="span_required">*</span>
+                <span class="spanFWCZ">价格</span>
+            </div>
+            <div class="div_row_right">
+                <span id="spanJG" class="span_spaninput SRK" style="display: inline-block;">
+                    <input class="input_spaninput spaninput_fontcolor" id="JG" maxlength="9" column="JG" type="text" style="width: 120px" />
+                    <span class="spaninput_fontcolor">元</span>
+                </span>
+            </div>
+            <div id="divJGTip" class="Warn" style="z-index: 991;"></div>
         </div>
         <div id="divXXXX" class="div_split" style="display: block; text-align: left;">
             <span class="span_split">服务描述</span>
