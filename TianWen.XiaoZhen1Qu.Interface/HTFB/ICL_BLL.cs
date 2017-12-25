@@ -68,6 +68,10 @@ namespace TianWen.XiaoZhen1Qu.Interface.HTFB
 
         object LoadCL_QCWXBYJBXX(string ID);
 
+        object SaveCL_QCPJJBXX(JCXX jcxx, CL_QCPJJBXX jbxx, List<PHOTOS> photos);
+
+        object LoadCL_QCPJJBXX(string ID);
+
         object SaveCL_ZCJBXX(JCXX jcxx, CL_ZCJBXX jbxx, List<PHOTOS> photos);
 
         object LoadCL_ZCJBXX(string ID);

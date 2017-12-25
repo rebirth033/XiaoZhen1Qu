@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
-    LoadCL_QCWXBYJBXX();
-    LoadDuoX("汽车维修/保养类别", "LB");
+    LoadCL_QCPJJBXX();
+    LoadDuoX("汽车配件", "LB");
 });
 //加载多选
 function LoadDuoX(type, id) {
@@ -37,10 +37,10 @@ function LoadDuoX(type, id) {
     });
 }
 //加载生活服务_汽车维修/保养基本信息
-function LoadCL_QCWXBYJBXX() {
+function LoadCL_QCPJJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/CL/LoadCL_QCWXBYJBXX",
+        url: getRootPath() + "/Business/CL/LoadCL_QCPJJBXX",
         dataType: "json",
         data:
         {
@@ -49,14 +49,14 @@ function LoadCL_QCWXBYJBXX() {
         success: function (xml) {
             if (xml.Result === 1) {
                 var jsonObj = new JsonDB("myTabContent");
-                jsonObj.DisplayFromJson("myTabContent", xml.Value.CL_QCWXBYJBXX);
+                jsonObj.DisplayFromJson("myTabContent", xml.Value.CL_QCPJJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
-                $("#ID").val(xml.Value.CL_QCWXBYJBXX.ID);
+                $("#ID").val(xml.Value.CL_QCPJJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
-                $("#spanQY").html(xml.Value.CL_QCWXBYJBXX.QY);
-                $("#spanDD").html(xml.Value.CL_QCWXBYJBXX.DD);
-                $("#spanLB").html(xml.Value.CL_QCWXBYJBXX.LB);
+                $("#spanQY").html(xml.Value.CL_QCPJJBXX.QY);
+                $("#spanDD").html(xml.Value.CL_QCPJJBXX.DD);
+                $("#spanLB").html(xml.Value.CL_QCPJJBXX.LB);
                 LoadPhotos(xml.Value.Photos);
             }
         },
@@ -81,7 +81,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/CL/FBCL_QCWXBYJBXX",
+        url: getRootPath() + "/Business/CL/FBCL_QCPJJBXX",
         dataType: "json",
         data:
         {

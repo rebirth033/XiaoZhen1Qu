@@ -28,6 +28,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         public ActionResult CL_QCMRZS() { ViewData["XZQ"] = Session["XZQ"]; ViewData["YHM"] = Session["YHM"]; return View(); }
         public ActionResult CL_QCPL() { ViewData["XZQ"] = Session["XZQ"]; ViewData["YHM"] = Session["YHM"]; return View(); }
         public ActionResult CL_QCWXBY() { ViewData["XZQ"] = Session["XZQ"]; ViewData["YHM"] = Session["YHM"]; return View(); }
+        public ActionResult CL_QCPJ() { ViewData["XZQ"] = Session["XZQ"]; ViewData["YHM"] = Session["YHM"]; return View(); }
         public ActionResult CL_ZC() { ViewData["XZQ"] = Session["XZQ"]; ViewData["YHM"] = Session["YHM"]; return View(); }
 
         [ValidateInput(false)]
@@ -243,6 +244,20 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return Json(result);
         }
         [ValidateInput(false)]
+        public JsonResult FBCL_QCPJJBXX()
+        {
+            YHJBXX yhjbxx = CL_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            string json = Request["Json"];
+            string bcms = Request["BCMS"];
+            string fwzp = Request["FWZP"];
+            JCXX jcxx = CreateJCXX(yhjbxx, json);
+            CL_QCPJJBXX CL_QCPJJBXX = JsonHelper.ConvertJsonToObject<CL_QCPJJBXX>(json);
+            CL_QCPJJBXX.BCMS = BinaryHelper.StringToBinary(bcms);
+            List<PHOTOS> photos = GetTP(fwzp);
+            object result = CL_BLL.SaveCL_QCPJJBXX(jcxx, CL_QCPJJBXX, photos);
+            return Json(result);
+        }
+        [ValidateInput(false)]
         public JsonResult FBCL_ZCJBXX()
         {
             YHJBXX yhjbxx = CL_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
@@ -272,6 +287,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         public JsonResult LoadCL_QCMRZSJBXX() { string ID = Request["ID"]; object result = CL_BLL.LoadCL_QCMRZSJBXX(ID); return Json(result); }
         public JsonResult LoadCL_QCPLJBXX() { string ID = Request["ID"]; object result = CL_BLL.LoadCL_QCPLJBXX(ID); return Json(result); }
         public JsonResult LoadCL_QCWXBYJBXX() { string ID = Request["ID"]; object result = CL_BLL.LoadCL_QCWXBYJBXX(ID); return Json(result); }
+        public JsonResult LoadCL_QCPJJBXX() { string ID = Request["ID"]; object result = CL_BLL.LoadCL_QCPJJBXX(ID); return Json(result); }
         public JsonResult LoadCL_ZCJBXX() { string ID = Request["ID"]; object result = CL_BLL.LoadCL_ZCJBXX(ID); return Json(result); }
     }
 }

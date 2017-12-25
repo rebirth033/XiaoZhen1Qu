@@ -183,6 +183,7 @@
     <Content Include="Areas\Business\Css\HTFB\CL\CL_JC.css" />
     <Content Include="Areas\Business\Css\HTFB\CL\CL_KC.css" />
     <Content Include="Areas\Business\Css\HTFB\CL\CL_MTC.css" />
+    <Content Include="Areas\Business\Css\HTFB\CL\CL_QCPJ.css" />
     <Content Include="Areas\Business\Css\HTFB\CL\CL_ZXCDDCSLC.css" />
     <Content Include="Areas\Business\Css\Common\HTFB_Common.css" />
     <Content Include="Areas\Business\Css\Common\Img.css" />
@@ -1061,6 +1062,8 @@
     <Content Include="Areas\Business\Scripts\Business\HTFB\CL\CL_MTC.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\CL\CL_MTCYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\CL\CL_DDC.js" />
+    <Content Include="Areas\Business\Scripts\Business\HTFB\CL\CL_QCPJ.js" />
+    <Content Include="Areas\Business\Scripts\Business\HTFB\CL\CL_QCPJYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\CL\CL_SLC.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\CL\CL_ZXC.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\CL\CL_ZXCYZ.js" />
@@ -2807,6 +2810,7 @@
     <Content Include="Areas\Business\Views\PFCGXX\PFCGXX_DGDL.cshtml" />
     <Content Include="Areas\Business\Views\ZSJM\ZSJM_LS.cshtml" />
     <Content Include="Areas\Business\Views\ZSJM\ZSJM_HBCP.cshtml" />
+    <Content Include="Areas\Business\Views\CL\CL_QCPJ.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
