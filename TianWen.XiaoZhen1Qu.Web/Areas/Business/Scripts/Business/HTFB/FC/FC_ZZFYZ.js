@@ -1,4 +1,5 @@
 ﻿$(document).ready(function () {
+    $("#divSF").find(".div_radio").bind("click", function () { ValidateRadio("SF", ""); });
     $("#XQMC").bind("blur", ValidateXQMC);
     $("#XQMC").bind("focus", function () { InfoInput("XQMC", "小区名称不超过30字"); });
     $("#S").bind("blur", ValidateFWLX_S);
@@ -45,7 +46,8 @@ function ValidateFWZJ() {
 }
 //验证所有
 function ValidateAll() {
-    if (ValidateBCMS("BCMS", "忘记填写房源描述啦")
+    if (ValidateRadio("SF", "忘记选择身份啦")
+        & ValidateBCMS("BCMS", "忘记填写房源描述啦")
         & ValidateFWQK()
         & ValidateXQMC()
         & ValidateFWLX()

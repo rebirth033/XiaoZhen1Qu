@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-
     BindClick("HLLX");
     BindClick("JDXJ");
     LoadHQSY_CZZXJBXX();

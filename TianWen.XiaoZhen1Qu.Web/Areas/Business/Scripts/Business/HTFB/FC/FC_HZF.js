@@ -13,22 +13,22 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "FWCX") {
-            LoadCODESByTYPENAME("朝向", "FWCX", "CODES_FC");
+            LoadCODESByTYPENAME("朝向", "FWCX", "CODES_FC", Bind, "OUTLB", "LB", "");
         }
         if (type === "ZXQK") {
-            LoadCODESByTYPENAME("装修情况", "ZXQK", "CODES_FC");
+            LoadCODESByTYPENAME("装修情况", "ZXQK", "CODES_FC", Bind, "OUTLB", "LB", "");
         }
         if (type === "ZZLX") {
-            LoadCODESByTYPENAME("住宅类型", "ZZLX", "CODES_FC");
+            LoadCODESByTYPENAME("住宅类型", "ZZLX", "CODES_FC", Bind, "OUTLB", "LB", "");
         }
         if (type === "YFFS") {
-            LoadCODESByTYPENAME("押付方式", "YFFS", "CODES_FC");
+            LoadCODESByTYPENAME("押付方式", "YFFS", "CODES_FC", Bind, "OUTLB", "LB", "");
         }
         if (type === "CZJLX") {
-            LoadCODESByTYPENAME("出租间类型", "CZJLX", "CODES_FC");
+            LoadCODESByTYPENAME("出租间类型", "CZJLX", "CODES_FC", Bind, "OUTLB", "LB", "");
         }
         if (type === "CZJXB") {
-            LoadCODESByTYPENAME("出租间性别", "CZJXB", "CODES_FC");
+            LoadCODESByTYPENAME("出租间性别", "CZJXB", "CODES_FC", Bind, "OUTLB", "LB", "");
         }
     });
 }

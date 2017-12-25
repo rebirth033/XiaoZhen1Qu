@@ -12,16 +12,16 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "FWCX") {
-            LoadCODESByTYPENAME("朝向", "FWCX", "CODES_FC");
+            LoadCODESByTYPENAME("朝向", "FWCX", "CODES_FC", Bind, "FWQK", "FWCX", "");
         }
         if (type === "ZXQK") {
-            LoadCODESByTYPENAME("装修情况", "ZXQK", "CODES_FC");
+            LoadCODESByTYPENAME("装修情况", "ZXQK", "CODES_FC", Bind, "FWQK", "ZXQK", "");
         }
         if (type === "ZZLX") {
-            LoadCODESByTYPENAME("住宅类型", "ZZLX", "CODES_FC");
+            LoadCODESByTYPENAME("住宅类型", "ZZLX", "CODES_FC", Bind, "FWQK", "ZZLX", "");
         }
         if (type === "YFFS") {
-            LoadCODESByTYPENAME("押付方式", "YFFS", "CODES_FC");
+            LoadCODESByTYPENAME("押付方式", "YFFS", "CODES_FC", Bind, "ZJ", "YFFS", "");
         }
     });
 }
@@ -254,6 +254,8 @@ function LoadFC_ZZFXX() {
                 var jsonObj = new JsonDB("myTabContent");
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.FC_ZZFJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
+                if (xml.Value.FC_ZZFJBXX.SF !== null)
+                    SetDX("SF", xml.Value.FC_ZZFJBXX.SF);
                 if (xml.Value.FC_ZZFJBXX.ZJYBHFY !== null)
                     SetDuoX("BHFY", xml.Value.FC_ZZFJBXX.ZJYBHFY);
                 if (xml.Value.FC_ZZFJBXX.FWPZ !== null)
@@ -289,6 +291,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "ZXQK", "'" + $("#spanZXQK").html() + "'");
     obj = jsonObj.AddJson(obj, "ZZLX", "'" + $("#spanZZLX").html() + "'");
     obj = jsonObj.AddJson(obj, "YFFS", "'" + $("#spanYFFS").html() + "'");
+    obj = jsonObj.AddJson(obj, "SF", "'" + GetDX("SF") + "'");
     obj = jsonObj.AddJson(obj, "ZJYBHFY", "'" + GetDuoX("BHFY") + "'");
     obj = jsonObj.AddJson(obj, "FWPZ", "'" + GetDuoX("FWPZ") + "'");
     obj = jsonObj.AddJson(obj, "FWLD", "'" + GetDuoX("FWLD") + "'");
