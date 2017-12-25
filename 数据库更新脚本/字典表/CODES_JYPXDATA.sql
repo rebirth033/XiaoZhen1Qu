@@ -2,181 +2,673 @@ prompt Importing table codes_jypx...
 set feedback off
 set define off
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (664, '管理培训类别', '素质拓展', '10', 10, null);
+values (655, '管理培训类别', '管理技能', '1', 1, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (665, '管理培训类别', '总裁研修', '11', 11, null);
+values (656, '管理培训类别', '职业素养', '2', 2, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (667, '管理技能', '领导力', '1', 1, 655);
+values (657, '管理培训类别', '人力行政', '3', 3, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (668, '管理技能', '项目管理', '2', 2, 655);
+values (658, '管理培训类别', '生产管理', '4', 4, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (669, '管理技能', '战略管理', '3', 3, 655);
+values (659, '管理培训类别', '财务管理', '5', 5, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (670, '管理技能', '时间管理', '4', 4, 655);
+values (660, '管理培训类别', '营销销售', '6', 6, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (671, '管理技能', '危机管理', '5', 5, 655);
+values (661, '管理培训类别', '物流供应链', '7', 7, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (672, '管理技能', '企业文化', '6', 6, 655);
+values (662, '管理培训类别', '酒店管理', '8', 8, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (673, '职业素养', '礼仪', '1', 1, 656);
+values (663, '管理培训类别', '工程管理', '9', 9, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (674, '职业素养', '沟通表达', '2', 2, 656);
+values (718, '服务类型', '日托', '1', 1, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (675, '职业素养', '职业规划', '3', 3, 656);
+values (719, '服务类型', '全托', '2', 2, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (676, '职业素养', '办公软件', '4', 4, 656);
+values (720, '婴幼儿教育类别', '学前教育', '1', 1, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (677, '人力行政', '薪酬设计', '1', 1, 657);
+values (721, '婴幼儿教育类别', '亲子教育', '2', 2, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (678, '人力行政', '招聘面试', '2', 2, 657);
+values (722, '婴幼儿教育类别', '胎教', '3', 3, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (679, '人力行政', '绩效管理', '3', 3, 657);
+values (723, '婴幼儿教育类别', '幼儿园', '4', 4, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (680, '人力行政', '行政工作', '4', 4, 657);
+values (724, '留学国家', '澳大利亚', 'A', 1, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (681, '人力行政', '培训体系', '5', 5, 657);
+values (725, '留学国家', '埃及', 'A', 2, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (682, '人力行政', '劳动关系', '6', 6, 657);
+values (726, '留学国家', '埃塞俄比亚', 'A', 3, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (683, '人力行政', 'EAP', '7', 7, 657);
+values (727, '留学国家', '奥地利', 'A', 4, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (684, '生产管理', '质量管理', '1', 1, 658);
+values (728, '留学国家', '安哥拉', 'A', 5, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (685, '生产管理', '设备管理', '2', 2, 658);
+values (729, '留学国家', '安提瓜巴布达', 'A', 6, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (686, '生产管理', '安全管理', '3', 3, 658);
+values (730, '留学国家', '安道尔', 'A', 7, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (687, '生产管理', '现场管理', '4', 4, 658);
+values (731, '留学国家', '爱尔兰', 'A', 8, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (688, '生产管理', '车间管理', '5', 5, 658);
+values (732, '留学国家', '爱沙尼亚', 'A', 9, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (689, '生产管理', 'PMC', '6', 6, 658);
+values (733, '留学国家', '阿塞拜疆', 'A', 10, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (690, '生产管理', 'TPM', '7', 7, 658);
+values (734, '留学国家', '阿富汗', 'A', 11, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (691, '生产管理', '6S(5S)', '8', 8, 658);
+values (735, '留学国家', '阿尔及利亚', 'A', 12, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (692, '生产管理', 'SPC', '9', 9, 658);
+values (736, '留学国家', '阿尔巴尼亚', 'A', 13, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (693, '财务管理', '高管研修', '1', 1, 659);
+values (737, '留学国家', '阿曼', 'A', 14, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (694, '财务管理', '非财人员培训', '2', 2, 659);
+values (738, '留学国家', '阿根廷', 'A', 15, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (695, '财务管理', '预算管理', '3', 3, 659);
+values (739, '留学国家', '阿联酋', 'A', 16, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (696, '财务管理', '成本管理', '4', 4, 659);
+values (740, '留学国家', '阿鲁巴', 'A', 17, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (697, '财务管理', '内部控制', '5', 5, 659);
+values (741, '留学国家', '不丹', 'B', 18, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (698, '财务管理', '现金管理', '6', 6, 659);
+values (742, '留学国家', '伯利兹', 'B', 19, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (699, '财务管理', '投融资', '7', 7, 659);
+values (743, '留学国家', '保加利亚', 'B', 20, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (700, '财务管理', '会计准则', '8', 8, 659);
+values (744, '留学国家', '冰岛', 'B', 21, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (701, '财务管理', '税务管理', '9', 9, 659);
+values (745, '留学国家', '博茨瓦纳', 'B', 22, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (702, '财务管理', '信用管理', '10', 10, 659);
+values (746, '留学国家', '巴勒斯坦', 'B', 23, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (703, '财务管理', '财务工具', '11', 11, 659);
+values (747, '留学国家', '巴哈马', 'B', 24, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (704, '营销销售', '销售技能', '1', 1, 660);
+values (748, '留学国家', '巴基斯坦', 'B', 25, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (705, '营销销售', '市场调研', '2', 2, 660);
+values (749, '留学国家', '巴巴多斯', 'B', 26, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (706, '营销销售', '营销策划', '3', 3, 660);
+values (750, '留学国家', '巴布亚新几内亚', 'B', 27, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (707, '营销销售', '网络营销', '4', 4, 660);
+values (751, '留学国家', '巴拉圭', 'B', 28, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (708, '营销销售', '大客户营销', '5', 5, 660);
+values (752, '留学国家', '巴拿马', 'B', 29, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (709, '营销销售', '客服培训', '6', 6, 660);
+values (753, '留学国家', '巴林', 'B', 30, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (710, '营销销售', '售后服务', '7', 7, 660);
+values (754, '留学国家', '巴西', 'B', 31, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (711, '营销销售', '商务谈判', '8', 8, 660);
+values (755, '留学国家', '布基纳法索', 'B', 32, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (712, '物流供应链', '物流管理', '1', 1, 661);
+values (756, '留学国家', '布隆迪', 'B', 33, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (713, '物流供应链', '供应链管理', '2', 2, 661);
+values (757, '留学国家', '比利时', 'B', 34, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (714, '物流供应链', '采购管理', '3', 3, 661);
+values (758, '留学国家', '波兰', 'B', 35, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (715, '物流供应链', '仓储管理', '4', 4, 661);
+values (759, '留学国家', '波多黎各', 'B', 36, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (716, '管理培训场地', '企业内部', '1', 1, null);
+values (760, '留学国家', '波黑', 'B', 37, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (717, '管理培训场地', '外部场地', '2', 2, null);
+values (761, '留学国家', '玻利维亚', 'B', 38, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (195, '英语', '托业TOEIC', '8', 8, 119);
+values (762, '留学国家', '白俄罗斯', 'B', 39, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (196, '英语', 'AP', '9', 9, 119);
+values (763, '留学国家', '百慕大', 'B', 40, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (197, '英语', 'SAT', '10', 10, 119);
+values (764, '留学国家', '贝宁', 'B', 41, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (198, '英语', 'SSAT', '11', 11, 119);
+values (765, '留学国家', '朝鲜', 'C', 42, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (199, '英语', '口译翻译', '12', 12, 119);
+values (766, '留学国家', '赤道几内亚', 'C', 43, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (200, '英语', '走遍美国', '13', 13, 119);
+values (767, '留学国家', '德国', 'D', 44, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (768, '留学国家', '东帝汶', 'D', 45, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (769, '留学国家', '丹麦', 'D', 46, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (770, '留学国家', '多哥', 'D', 47, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (771, '留学国家', '多米尼克', 'D', 48, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (772, '留学国家', '多米尼加', 'D', 49, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (773, '留学国家', '俄罗斯', 'E', 50, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (774, '留学国家', '厄瓜多尔', 'E', 51, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (775, '留学国家', '厄立特里亚', 'E', 52, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (776, '留学国家', '法国', 'F', 53, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (777, '留学国家', '佛得角', 'F', 54, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (778, '留学国家', '斐济', 'F', 55, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (779, '留学国家', '芬兰', 'F', 56, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (780, '留学国家', '菲律宾', 'F', 57, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (781, '留学国家', '关岛', 'G', 58, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (782, '留学国家', '冈比亚', 'G', 59, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (783, '留学国家', '刚果(布)', 'G', 60, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (784, '留学国家', '刚果(金)', 'G', 61, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (785, '留学国家', '古巴', 'G', 62, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (786, '留学国家', '古巴共和国', 'G', 63, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (787, '留学国家', '哥伦比亚', 'G', 64, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (788, '留学国家', '哥斯达黎加', 'G', 65, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (789, '留学国家', '圭亚那', 'G', 66, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (790, '留学国家', '格林纳达', 'G', 67, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (791, '留学国家', '格鲁吉亚', '68', 68, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (792, '留学国家', '韩国', 'H', 69, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (793, '留学国家', '荷兰', 'H', 70, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (794, '留学国家', '哈萨克斯坦', 'H', 71, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (795, '留学国家', '洪都拉斯', 'H', 72, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (796, '留学国家', '海地', 'H', 73, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (797, '留学国家', '荷属安的列斯', 'H', 74, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (798, '留学国家', '黑山', 'H', 75, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (799, '留学国家', '加拿大', 'J', 76, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (800, '留学国家', '几内亚', 'J', 77, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (801, '留学国家', '几内亚比绍', 'J', 78, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (802, '留学国家', '加纳', 'J', 79, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (803, '留学国家', '加蓬', 'J', 80, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (804, '留学国家', '吉尔吉斯斯坦', 'J', 81, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (805, '留学国家', '吉布提', 'J', 82, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (806, '留学国家', '基里巴斯', 'J', 83, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (807, '留学国家', '捷克', 'J', 84, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (808, '留学国家', '柬埔寨', 'J', 85, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (809, '留学国家', '津巴布韦', 'J', 86, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (810, '留学国家', '克罗地亚', 'K', 87, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (811, '留学国家', '卡塔尔', 'K', 88, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (812, '留学国家', '喀麦隆', 'K', 89, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (813, '留学国家', '库克群岛', 'K', 90, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (814, '留学国家', '开曼', 'K', 91, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (815, '留学国家', '科威特', 'K', 92, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (816, '留学国家', '科摩罗', 'K', 93, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (817, '留学国家', '科特迪瓦', 'K', 94, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (818, '留学国家', '肯尼亚', 'K', 95, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (819, '留学国家', '列支敦士登', 'L', 96, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (820, '留学国家', '利比亚', 'L', 97, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (821, '留学国家', '利比里亚', 'L', 98, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (822, '留学国家', '卢旺达', 'L', 99, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (823, '留学国家', '卢森堡', 'L', 100, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (824, '留学国家', '拉脱维亚', 'L', 101, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (825, '留学国家', '立陶宛', 'L', 102, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (826, '留学国家', '罗马尼亚', 'L', 103, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (827, '留学国家', '老挝', 'L', 104, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (828, '留学国家', '莱索托', 'L', 105, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (829, '留学国家', '黎巴嫩', 'L', 106, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (830, '留学国家', '美国', 'M', 107, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (831, '留学国家', '马来西亚', 'M', 108, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (832, '留学国家', '墨西哥', 'M', 109, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (833, '留学国家', '孟加拉', 'M', 110, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (834, '留学国家', '密克罗尼西亚', 'M', 111, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (835, '留学国家', '摩尔多瓦', 'M', 112, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (836, '留学国家', '摩洛哥', 'M', 113, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (837, '留学国家', '摩纳哥', 'M', 114, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (838, '留学国家', '毛里塔尼亚', 'M', 115, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (839, '留学国家', '毛里求斯', 'M', 116, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (840, '留学国家', '秘鲁', 'M', 117, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (841, '留学国家', '缅甸', 'M', 118, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (842, '留学国家', '美属维尔京群岛', 'M', 119, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (843, '留学国家', '美属萨摩亚', 'M', 120, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (844, '留学国家', '莫桑比克', 'M', 121, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (845, '留学国家', '蒙古', 'M', 122, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (846, '留学国家', '马其顿', 'M', 123, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (847, '留学国家', '马尔代夫', 'M', 124, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (848, '留学国家', '马拉维', 'M', 125, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (849, '留学国家', '马绍尔群岛', 'M', 126, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (850, '留学国家', '马耳他', 'M', 127, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (851, '留学国家', '马达加斯加', 'M', 128, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (852, '留学国家', '马里', 'M', 129, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (853, '留学国家', '南非', 'N', 130, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (854, '留学国家', '尼加拉瓜', 'N', 131, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (855, '留学国家', '尼日利亚', 'N', 132, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (856, '留学国家', '尼日尔', 'N', 133, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (857, '留学国家', '尼泊尔', 'N', 134, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (858, '留学国家', '挪威', 'N', 135, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (859, '留学国家', '瑙鲁', 'N', 136, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (860, '留学国家', '纳米比亚', 'N', 137, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (861, '留学国家', '帕劳', 'P', 138, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (862, '留学国家', '葡萄牙', 'P', 139, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (863, '留学国家', '其他国家', 'Q', 140, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (864, '留学国家', '日本', 'R', 141, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (865, '留学国家', '瑞士', 'R', 142, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (581, '软件开发', 'CSS', '9', 9, 557);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (582, '软件开发', 'Python', '10', 10, 557);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (583, '软件开发', 'VB', '11', 11, 557);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (584, '软件开发', 'ASP', '12', 12, 557);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (585, '软件开发', 'Ruby', '13', 13, 557);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (586, '软件开发', 'UML', '14', 14, 557);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (587, '软件开发', 'Basic', '15', 15, 557);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (588, '软件开发', 'Fortran', '16', 16, 557);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (589, '软件开发', 'Cobol', '17', 17, 557);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (590, 'IT认证', '微软认证', '1', 1, 559);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (591, 'IT认证', 'Oracle认证', '2', 2, 559);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (592, 'IT认证', '华为认证', '3', 3, 559);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (593, 'IT认证', 'ACCP认证', '4', 4, 559);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (594, 'IT认证', 'H3C认证', '5', 5, 559);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (595, 'IT认证', '思科认证', '6', 6, 559);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (596, 'IT认证', 'JAVA认证', '7', 7, 559);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (597, 'IT认证', 'Adobe认证', '8', 8, 559);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (598, 'IT认证', 'Linux认证', '9', 9, 559);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (599, 'IT认证', 'BENET认证', '10', 10, 559);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (600, 'IT认证', 'IBM认证', '11', 11, 559);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (601, 'IT认证', 'SUN认证', '12', 12, 559);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (602, 'IT认证', 'SAP认证', '13', 13, 559);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (603, 'IT认证', 'Macromedia认证', '14', 14, 559);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (604, 'IT认证', 'ARM认证', '15', 15, 559);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (605, 'IT认证', 'PHP认证', '16', 16, 559);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (606, 'IT认证', 'Symbian认证', '17', 17, 559);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (607, 'IT认证', 'NIIT认证', '18', 18, 559);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (608, 'IT认证', 'RHCE认证', '19', 19, 559);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (609, 'app开发', 'android', '1', 1, 560);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (610, 'app开发', 'ios', '2', 2, 560);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (611, 'app开发', 'windows phone', '3', 3, 560);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (612, '游戏开发', '网页游戏开发', '1', 1, 561);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (613, '游戏开发', '手机游戏开发', '2', 2, 561);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (614, '游戏开发', 'flash游戏开发', '3', 3, 561);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (615, '游戏开发', '游戏原画', '4', 4, 561);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (616, '游戏开发', '游戏策划', '5', 5, 561);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (617, '游戏开发', '游戏特效', '6', 6, 561);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (618, '数据库', 'SQL Server', '1', 1, 563);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (619, '数据库', 'Mysql', '2', 2, 563);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (620, '数据库', 'Access', '3', 3, 563);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (621, '数据库', 'Oracle', '4', 4, 563);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (622, '数据库', 'DB2', '5', 5, 563);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (623, '数据库', 'Sybase', '6', 6, 563);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (624, '数据库', 'vb数据库', '7', 7, 563);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (625, 'IT培训形式', '脱产班', '1', 1, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (626, 'IT培训形式', '周末班', '2', 2, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (627, 'IT培训形式', '网络班', '3', 3, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (628, 'IT培训形式', '工作日班', '4', 4, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (629, 'IT培训形式', '寒暑假班', '5', 5, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (630, '设计培训类别', '室内设计', '1', 1, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (644, '设计培训类别', '珠宝鉴定', '15', 15, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (645, '设计培训类别', '装饰装潢设计', '16', 16, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (646, '设计培训类别', '其它设计', '17', 17, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (647, '平面设计', 'Photoshop', '1', 1, 631);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (648, '平面设计', 'CAD', '2', 2, 631);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (649, '平面设计', 'Illustrator', '3', 3, 631);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (650, '平面设计', 'Coredraw', '4', 4, 631);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (651, '设计培训形式', '脱产班', '1', 1, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (652, '设计培训形式', '周末班', '2', 2, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (653, '设计培训形式', '网络班', '3', 3, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (654, '设计培训形式', '工作日班', '4', 4, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (866, '留学国家', '瑞典', 'R', 143, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (867, '留学国家', '圣卢西亚', 'S', 144, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (868, '留学国家', '圣基茨和尼维斯', 'S', 145, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (869, '留学国家', '圣多美和普林西比', 'S', 146, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (870, '留学国家', '圣文森特和格林纳丁斯', 'S', 147, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (201, '英语', '剑桥少儿英语', '14', 14, 119);
@@ -672,9 +1164,6 @@ values (129, '语种', '俄语', '11', 11, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (130, '语种', '希腊语', '12', 12, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (131, '语种', '马来语', '13', 13, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (132, '语种', '东干语', '14', 14, null);
@@ -1245,6 +1734,9 @@ values (387, '汽车制造/服务', '二手车评估师', '3', 3, 254);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (388, '汽车制造/服务', '汽车美容师', '4', 4, 254);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (131, '语种', '马来语', '13', 13, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (389, '汽车制造/服务', '汽车设计师', '5', 5, 254);
@@ -1862,673 +2354,16 @@ insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENT
 values (580, '软件开发', 'JS', '8', 8, 557);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (581, '软件开发', 'CSS', '9', 9, 557);
+values (1001, '家教机构授课形式', '一对一', '1', 1, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (582, '软件开发', 'Python', '10', 10, 557);
+values (1002, '家教机构授课形式', '辅导班', '2', 2, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (583, '软件开发', 'VB', '11', 11, 557);
+values (1003, '家教机构授课形式', '网络教育', '3', 3, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (584, '软件开发', 'ASP', '12', 12, 557);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (585, '软件开发', 'Ruby', '13', 13, 557);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (586, '软件开发', 'UML', '14', 14, 557);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (587, '软件开发', 'Basic', '15', 15, 557);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (588, '软件开发', 'Fortran', '16', 16, 557);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (589, '软件开发', 'Cobol', '17', 17, 557);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (590, 'IT认证', '微软认证', '1', 1, 559);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (591, 'IT认证', 'Oracle认证', '2', 2, 559);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (592, 'IT认证', '华为认证', '3', 3, 559);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (593, 'IT认证', 'ACCP认证', '4', 4, 559);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (594, 'IT认证', 'H3C认证', '5', 5, 559);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (595, 'IT认证', '思科认证', '6', 6, 559);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (596, 'IT认证', 'JAVA认证', '7', 7, 559);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (597, 'IT认证', 'Adobe认证', '8', 8, 559);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (598, 'IT认证', 'Linux认证', '9', 9, 559);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (599, 'IT认证', 'BENET认证', '10', 10, 559);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (600, 'IT认证', 'IBM认证', '11', 11, 559);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (601, 'IT认证', 'SUN认证', '12', 12, 559);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (602, 'IT认证', 'SAP认证', '13', 13, 559);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (603, 'IT认证', 'Macromedia认证', '14', 14, 559);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (604, 'IT认证', 'ARM认证', '15', 15, 559);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (605, 'IT认证', 'PHP认证', '16', 16, 559);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (606, 'IT认证', 'Symbian认证', '17', 17, 559);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (607, 'IT认证', 'NIIT认证', '18', 18, 559);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (608, 'IT认证', 'RHCE认证', '19', 19, 559);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (609, 'app开发', 'android', '1', 1, 560);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (610, 'app开发', 'ios', '2', 2, 560);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (611, 'app开发', 'windows phone', '3', 3, 560);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (612, '游戏开发', '网页游戏开发', '1', 1, 561);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (613, '游戏开发', '手机游戏开发', '2', 2, 561);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (614, '游戏开发', 'flash游戏开发', '3', 3, 561);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (615, '游戏开发', '游戏原画', '4', 4, 561);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (616, '游戏开发', '游戏策划', '5', 5, 561);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (617, '游戏开发', '游戏特效', '6', 6, 561);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (618, '数据库', 'SQL Server', '1', 1, 563);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (619, '数据库', 'Mysql', '2', 2, 563);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (620, '数据库', 'Access', '3', 3, 563);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (621, '数据库', 'Oracle', '4', 4, 563);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (622, '数据库', 'DB2', '5', 5, 563);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (623, '数据库', 'Sybase', '6', 6, 563);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (624, '数据库', 'vb数据库', '7', 7, 563);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (625, 'IT培训形式', '脱产班', '1', 1, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (626, 'IT培训形式', '周末班', '2', 2, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (627, 'IT培训形式', '网络班', '3', 3, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (628, 'IT培训形式', '工作日班', '4', 4, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (629, 'IT培训形式', '寒暑假班', '5', 5, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (630, '设计培训类别', '室内设计', '1', 1, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (644, '设计培训类别', '珠宝鉴定', '15', 15, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (645, '设计培训类别', '装饰装潢设计', '16', 16, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (646, '设计培训类别', '其它设计', '17', 17, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (647, '平面设计', 'Photoshop', '1', 1, 631);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (648, '平面设计', 'CAD', '2', 2, 631);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (649, '平面设计', 'Illustrator', '3', 3, 631);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (650, '平面设计', 'Coredraw', '4', 4, 631);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (651, '设计培训形式', '脱产班', '1', 1, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (652, '设计培训形式', '周末班', '2', 2, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (653, '设计培训形式', '网络班', '3', 3, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (654, '设计培训形式', '工作日班', '4', 4, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (655, '管理培训类别', '管理技能', '1', 1, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (656, '管理培训类别', '职业素养', '2', 2, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (657, '管理培训类别', '人力行政', '3', 3, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (658, '管理培训类别', '生产管理', '4', 4, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (659, '管理培训类别', '财务管理', '5', 5, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (660, '管理培训类别', '营销销售', '6', 6, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (661, '管理培训类别', '物流供应链', '7', 7, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (662, '管理培训类别', '酒店管理', '8', 8, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (663, '管理培训类别', '工程管理', '9', 9, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (718, '服务类型', '日托', '1', 1, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (719, '服务类型', '全托', '2', 2, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (720, '婴幼儿教育类别', '学前教育', '1', 1, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (721, '婴幼儿教育类别', '亲子教育', '2', 2, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (722, '婴幼儿教育类别', '胎教', '3', 3, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (723, '婴幼儿教育类别', '幼儿园', '4', 4, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (724, '留学国家', '澳大利亚', 'A', 1, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (725, '留学国家', '埃及', 'A', 2, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (726, '留学国家', '埃塞俄比亚', 'A', 3, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (727, '留学国家', '奥地利', 'A', 4, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (728, '留学国家', '安哥拉', 'A', 5, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (729, '留学国家', '安提瓜巴布达', 'A', 6, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (730, '留学国家', '安道尔', 'A', 7, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (731, '留学国家', '爱尔兰', 'A', 8, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (732, '留学国家', '爱沙尼亚', 'A', 9, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (733, '留学国家', '阿塞拜疆', 'A', 10, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (734, '留学国家', '阿富汗', 'A', 11, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (735, '留学国家', '阿尔及利亚', 'A', 12, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (736, '留学国家', '阿尔巴尼亚', 'A', 13, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (737, '留学国家', '阿曼', 'A', 14, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (738, '留学国家', '阿根廷', 'A', 15, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (739, '留学国家', '阿联酋', 'A', 16, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (740, '留学国家', '阿鲁巴', 'A', 17, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (741, '留学国家', '不丹', 'B', 18, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (742, '留学国家', '伯利兹', 'B', 19, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (743, '留学国家', '保加利亚', 'B', 20, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (744, '留学国家', '冰岛', 'B', 21, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (745, '留学国家', '博茨瓦纳', 'B', 22, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (746, '留学国家', '巴勒斯坦', 'B', 23, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (747, '留学国家', '巴哈马', 'B', 24, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (748, '留学国家', '巴基斯坦', 'B', 25, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (749, '留学国家', '巴巴多斯', 'B', 26, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (750, '留学国家', '巴布亚新几内亚', 'B', 27, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (751, '留学国家', '巴拉圭', 'B', 28, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (752, '留学国家', '巴拿马', 'B', 29, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (753, '留学国家', '巴林', 'B', 30, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (754, '留学国家', '巴西', 'B', 31, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (755, '留学国家', '布基纳法索', 'B', 32, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (756, '留学国家', '布隆迪', 'B', 33, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (757, '留学国家', '比利时', 'B', 34, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (758, '留学国家', '波兰', 'B', 35, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (759, '留学国家', '波多黎各', 'B', 36, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (760, '留学国家', '波黑', 'B', 37, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (761, '留学国家', '玻利维亚', 'B', 38, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (762, '留学国家', '白俄罗斯', 'B', 39, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (763, '留学国家', '百慕大', 'B', 40, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (764, '留学国家', '贝宁', 'B', 41, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (765, '留学国家', '朝鲜', 'C', 42, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (766, '留学国家', '赤道几内亚', 'C', 43, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (767, '留学国家', '德国', 'D', 44, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (768, '留学国家', '东帝汶', 'D', 45, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (769, '留学国家', '丹麦', 'D', 46, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (770, '留学国家', '多哥', 'D', 47, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (771, '留学国家', '多米尼克', 'D', 48, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (772, '留学国家', '多米尼加', 'D', 49, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (773, '留学国家', '俄罗斯', 'E', 50, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (774, '留学国家', '厄瓜多尔', 'E', 51, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (775, '留学国家', '厄立特里亚', 'E', 52, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (776, '留学国家', '法国', 'F', 53, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (777, '留学国家', '佛得角', 'F', 54, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (778, '留学国家', '斐济', 'F', 55, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (779, '留学国家', '芬兰', 'F', 56, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (780, '留学国家', '菲律宾', 'F', 57, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (781, '留学国家', '关岛', 'G', 58, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (782, '留学国家', '冈比亚', 'G', 59, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (783, '留学国家', '刚果(布)', 'G', 60, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (784, '留学国家', '刚果(金)', 'G', 61, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (785, '留学国家', '古巴', 'G', 62, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (786, '留学国家', '古巴共和国', 'G', 63, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (787, '留学国家', '哥伦比亚', 'G', 64, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (788, '留学国家', '哥斯达黎加', 'G', 65, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (789, '留学国家', '圭亚那', 'G', 66, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (790, '留学国家', '格林纳达', 'G', 67, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (791, '留学国家', '格鲁吉亚', '68', 68, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (792, '留学国家', '韩国', 'H', 69, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (793, '留学国家', '荷兰', 'H', 70, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (794, '留学国家', '哈萨克斯坦', 'H', 71, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (795, '留学国家', '洪都拉斯', 'H', 72, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (796, '留学国家', '海地', 'H', 73, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (797, '留学国家', '荷属安的列斯', 'H', 74, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (798, '留学国家', '黑山', 'H', 75, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (799, '留学国家', '加拿大', 'J', 76, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (800, '留学国家', '几内亚', 'J', 77, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (801, '留学国家', '几内亚比绍', 'J', 78, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (802, '留学国家', '加纳', 'J', 79, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (803, '留学国家', '加蓬', 'J', 80, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (804, '留学国家', '吉尔吉斯斯坦', 'J', 81, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (805, '留学国家', '吉布提', 'J', 82, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (806, '留学国家', '基里巴斯', 'J', 83, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (807, '留学国家', '捷克', 'J', 84, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (808, '留学国家', '柬埔寨', 'J', 85, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (809, '留学国家', '津巴布韦', 'J', 86, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (810, '留学国家', '克罗地亚', 'K', 87, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (811, '留学国家', '卡塔尔', 'K', 88, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (812, '留学国家', '喀麦隆', 'K', 89, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (813, '留学国家', '库克群岛', 'K', 90, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (814, '留学国家', '开曼', 'K', 91, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (815, '留学国家', '科威特', 'K', 92, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (816, '留学国家', '科摩罗', 'K', 93, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (817, '留学国家', '科特迪瓦', 'K', 94, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (818, '留学国家', '肯尼亚', 'K', 95, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (819, '留学国家', '列支敦士登', 'L', 96, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (820, '留学国家', '利比亚', 'L', 97, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (821, '留学国家', '利比里亚', 'L', 98, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (822, '留学国家', '卢旺达', 'L', 99, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (823, '留学国家', '卢森堡', 'L', 100, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (824, '留学国家', '拉脱维亚', 'L', 101, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (825, '留学国家', '立陶宛', 'L', 102, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (826, '留学国家', '罗马尼亚', 'L', 103, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (827, '留学国家', '老挝', 'L', 104, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (828, '留学国家', '莱索托', 'L', 105, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (829, '留学国家', '黎巴嫩', 'L', 106, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (830, '留学国家', '美国', 'M', 107, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (831, '留学国家', '马来西亚', 'M', 108, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (832, '留学国家', '墨西哥', 'M', 109, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (833, '留学国家', '孟加拉', 'M', 110, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (834, '留学国家', '密克罗尼西亚', 'M', 111, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (835, '留学国家', '摩尔多瓦', 'M', 112, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (836, '留学国家', '摩洛哥', 'M', 113, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (837, '留学国家', '摩纳哥', 'M', 114, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (838, '留学国家', '毛里塔尼亚', 'M', 115, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (839, '留学国家', '毛里求斯', 'M', 116, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (840, '留学国家', '秘鲁', 'M', 117, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (841, '留学国家', '缅甸', 'M', 118, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (842, '留学国家', '美属维尔京群岛', 'M', 119, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (843, '留学国家', '美属萨摩亚', 'M', 120, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (844, '留学国家', '莫桑比克', 'M', 121, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (845, '留学国家', '蒙古', 'M', 122, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (846, '留学国家', '马其顿', 'M', 123, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (847, '留学国家', '马尔代夫', 'M', 124, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (848, '留学国家', '马拉维', 'M', 125, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (849, '留学国家', '马绍尔群岛', 'M', 126, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (850, '留学国家', '马耳他', 'M', 127, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (851, '留学国家', '马达加斯加', 'M', 128, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (852, '留学国家', '马里', 'M', 129, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (853, '留学国家', '南非', 'N', 130, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (854, '留学国家', '尼加拉瓜', 'N', 131, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (855, '留学国家', '尼日利亚', 'N', 132, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (856, '留学国家', '尼日尔', 'N', 133, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (857, '留学国家', '尼泊尔', 'N', 134, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (858, '留学国家', '挪威', 'N', 135, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (859, '留学国家', '瑙鲁', 'N', 136, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (860, '留学国家', '纳米比亚', 'N', 137, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (861, '留学国家', '帕劳', 'P', 138, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (862, '留学国家', '葡萄牙', 'P', 139, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (863, '留学国家', '其他国家', 'Q', 140, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (864, '留学国家', '日本', 'R', 141, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (865, '留学国家', '瑞士', 'R', 142, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (866, '留学国家', '瑞典', 'R', 143, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (867, '留学国家', '圣卢西亚', 'S', 144, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (868, '留学国家', '圣基茨和尼维斯', 'S', 145, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (869, '留学国家', '圣多美和普林西比', 'S', 146, null);
-
-insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (870, '留学国家', '圣文森特和格林纳丁斯', 'S', 147, null);
+values (1004, '家教机构授课形式', '其他', '4', 4, null);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (871, '留学国家', '圣马力诺', 'S', 148, null);
@@ -3006,5 +2841,182 @@ values (6242, '办公自动化', 'office', '2', 2, 565);
 
 insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (6241, '办公自动化', '电脑入门/打字', '1', 1, 565);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (664, '管理培训类别', '素质拓展', '10', 10, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (665, '管理培训类别', '总裁研修', '11', 11, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (667, '管理技能', '领导力', '1', 1, 655);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (668, '管理技能', '项目管理', '2', 2, 655);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (669, '管理技能', '战略管理', '3', 3, 655);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (670, '管理技能', '时间管理', '4', 4, 655);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (671, '管理技能', '危机管理', '5', 5, 655);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (672, '管理技能', '企业文化', '6', 6, 655);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (673, '职业素养', '礼仪', '1', 1, 656);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (674, '职业素养', '沟通表达', '2', 2, 656);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (675, '职业素养', '职业规划', '3', 3, 656);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (676, '职业素养', '办公软件', '4', 4, 656);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (677, '人力行政', '薪酬设计', '1', 1, 657);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (678, '人力行政', '招聘面试', '2', 2, 657);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (679, '人力行政', '绩效管理', '3', 3, 657);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (680, '人力行政', '行政工作', '4', 4, 657);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (681, '人力行政', '培训体系', '5', 5, 657);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (682, '人力行政', '劳动关系', '6', 6, 657);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (683, '人力行政', 'EAP', '7', 7, 657);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (684, '生产管理', '质量管理', '1', 1, 658);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (685, '生产管理', '设备管理', '2', 2, 658);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (686, '生产管理', '安全管理', '3', 3, 658);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (687, '生产管理', '现场管理', '4', 4, 658);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (688, '生产管理', '车间管理', '5', 5, 658);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (689, '生产管理', 'PMC', '6', 6, 658);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (690, '生产管理', 'TPM', '7', 7, 658);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (691, '生产管理', '6S(5S)', '8', 8, 658);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (692, '生产管理', 'SPC', '9', 9, 658);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (693, '财务管理', '高管研修', '1', 1, 659);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (694, '财务管理', '非财人员培训', '2', 2, 659);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (695, '财务管理', '预算管理', '3', 3, 659);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (696, '财务管理', '成本管理', '4', 4, 659);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (697, '财务管理', '内部控制', '5', 5, 659);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (698, '财务管理', '现金管理', '6', 6, 659);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (699, '财务管理', '投融资', '7', 7, 659);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (700, '财务管理', '会计准则', '8', 8, 659);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (701, '财务管理', '税务管理', '9', 9, 659);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (702, '财务管理', '信用管理', '10', 10, 659);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (703, '财务管理', '财务工具', '11', 11, 659);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (704, '营销销售', '销售技能', '1', 1, 660);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (705, '营销销售', '市场调研', '2', 2, 660);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (706, '营销销售', '营销策划', '3', 3, 660);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (707, '营销销售', '网络营销', '4', 4, 660);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (708, '营销销售', '大客户营销', '5', 5, 660);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (709, '营销销售', '客服培训', '6', 6, 660);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (710, '营销销售', '售后服务', '7', 7, 660);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (711, '营销销售', '商务谈判', '8', 8, 660);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (712, '物流供应链', '物流管理', '1', 1, 661);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (713, '物流供应链', '供应链管理', '2', 2, 661);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (714, '物流供应链', '采购管理', '3', 3, 661);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (715, '物流供应链', '仓储管理', '4', 4, 661);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (716, '管理培训场地', '企业内部', '1', 1, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (717, '管理培训场地', '外部场地', '2', 2, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (195, '英语', '托业TOEIC', '8', 8, 119);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (196, '英语', 'AP', '9', 9, 119);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (197, '英语', 'SAT', '10', 10, 119);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (198, '英语', 'SSAT', '11', 11, 119);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (199, '英语', '口译翻译', '12', 12, 119);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (200, '英语', '走遍美国', '13', 13, 119);
 
 prompt Done.
