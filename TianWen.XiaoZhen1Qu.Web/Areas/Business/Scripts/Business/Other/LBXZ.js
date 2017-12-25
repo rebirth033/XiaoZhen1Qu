@@ -42,10 +42,10 @@ function LoadDL() {
 }
 //加载小类
 function LoadXL(LBID, LBNAME) {
-    $("#spanXZDL").css("color", "#333333");
-    $("#emXZDL").css("background", "#cccccc");
-    $("#spanXZXL").css("color", "#bc6ba6");
-    $("#emXZXL").css("background", "#bc6ba6");
+    //$("#spanXZDL").css("color", "#333333");
+    //$("#emXZDL").css("background", "#cccccc");
+    //$("#spanXZXL").css("color", "#bc6ba6");
+    //$("#emXZXL").css("background", "#bc6ba6");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/LBXZ/LoadXL",

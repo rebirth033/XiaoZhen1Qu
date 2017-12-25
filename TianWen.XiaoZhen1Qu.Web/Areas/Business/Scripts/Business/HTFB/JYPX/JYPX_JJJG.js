@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
-
     LoadDuoX("辅导阶段", "FDJD");
     LoadDuoX("辅导科目", "FDKM");
+    LoadDuoX("家教机构授课形式", "SKXS");
 });
 //加载多选
 function LoadDuoX(type, id) {
@@ -42,12 +42,6 @@ function LoadDuoX(type, id) {
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
         }
-    });
-}
-//绑定下拉框
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        
     });
 }
 //加载商务服务_家教机构基本信息
