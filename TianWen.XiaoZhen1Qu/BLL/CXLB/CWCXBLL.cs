@@ -122,6 +122,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     {
                         jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
                     }
+                    UpdateLLCS(list[0].JCXXID);
                     return new { Result = EnResultType.Success, list = list, BCMSString = BinaryHelper.BinaryToString(list[0].BCMS), grxxlist = GetGRXX(list[0].YHID) };
                 }
                 if (TYPE == "CWXX_CWM") //宠物_宠物猫
@@ -132,6 +133,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     {
                         jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
                     }
+                    UpdateLLCS(list[0].JCXXID);
                     return new { Result = EnResultType.Success, list = list, BCMSString = BinaryHelper.BinaryToString(list[0].BCMS), grxxlist = GetGRXX(list[0].YHID) };
                 }
                 if (TYPE == "CWXX_HNYC") //宠物_花鸟鱼虫
@@ -142,6 +144,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     {
                         jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
                     }
+                    UpdateLLCS(list[0].JCXXID);
                     return new { Result = EnResultType.Success, list = list, BCMSString = BinaryHelper.BinaryToString(list[0].BCMS), grxxlist = GetGRXX(list[0].YHID) };
                 }
                 if (TYPE == "CWXX_CWFW") //宠物_宠物服务
@@ -152,6 +155,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     {
                         jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
                     }
+                    UpdateLLCS(list[0].JCXXID);
                     return new { Result = EnResultType.Success, list = list, BCMSString = BinaryHelper.BinaryToString(list[0].BCMS), grxxlist = GetGRXX(list[0].YHID) };
                 }
                 if (TYPE == "CWXX_CWYPSP") //宠物_宠物用品食品
@@ -162,6 +166,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     {
                         jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
                     }
+                    UpdateLLCS(list[0].JCXXID);
                     return new { Result = EnResultType.Success, list = list, BCMSString = BinaryHelper.BinaryToString(list[0].BCMS), grxxlist = GetGRXX(list[0].YHID) };
                 }
                 if (TYPE == "CWXX_CWGY") //宠物_宠物赠送领养
@@ -172,6 +177,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     {
                         jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
                     }
+                    UpdateLLCS(list[0].JCXXID);
                     return new { Result = EnResultType.Success, list = list, BCMSString = BinaryHelper.BinaryToString(list[0].BCMS), grxxlist = GetGRXX(list[0].YHID) };
                 }
                 return new { Result = EnResultType.Failed };

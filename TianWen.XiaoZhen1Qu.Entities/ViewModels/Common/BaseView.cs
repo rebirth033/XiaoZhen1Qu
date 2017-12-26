@@ -14,6 +14,8 @@ namespace TianWen.XiaoZhen1Qu.Entities.ViewModels.Common
         public string XQDZ { get; set; }
         public string LXR { get; set; }
         public string LXDH { get; set; }
+        public decimal LLCS { get; set; }
+        public DateTime CJSJ { get; set; }
         public DateTime ZXGXSJ { get; set; }
         public byte[] BCMS { get; set; }
         public string BCMSString { get; set; }

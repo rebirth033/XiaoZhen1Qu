@@ -34,7 +34,7 @@ function LoadJBXX(obj) {
     var html = "";
     html += ('<div class="div_body_left_head">');
     html += ('<p class="p_div_body_left_head_bt">' + obj.BT + '</p>');
-    html += ('<p class="p_div_body_left_head_ll">11月5日 22:36 3次浏览 </p>');
+    html += ('<p class="p_div_body_left_head_ll">' + obj.ZXGXSJ.ToString('yyyy年MM月dd日') + '  ' + obj.LLCS + '次浏览 </p>');
     html += ('</div>');
     html += ('<div class="div_body_left_body">');
     html += ('<div class="div_body_left_body_left">');
@@ -415,7 +415,7 @@ function LoadXGLM() {
 }
 //打开相关类目
 function OpenXGLM(lbname, lbid) {
-    if(lbname.indexOf("FC_") !== -1)
+    if (lbname.indexOf("FC_") !== -1)
         window.open(getRootPath() + "/Business" + "/FCCX/" + lbname.replace("FC_", "FCCX_") + "?LBID=" + lbid);
     if (lbname.indexOf("LYJD_") !== -1)
         window.open(getRootPath() + "/Business" + "/LYJDCX/" + lbname.replace("LYJD_", "LYJDCX_") + "?LBID=" + lbid);

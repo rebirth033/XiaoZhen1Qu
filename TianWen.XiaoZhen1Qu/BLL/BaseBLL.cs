@@ -371,6 +371,14 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
+        //修改浏览次数
+        public void UpdateLLCS(string JCXXID)
+        {
+            JCXX obj = DAO.GetObjectByID<JCXX>(JCXXID);
+            obj.LLCS += 1;
+            DAO.Update(obj);
+        }
+
         //获取查询条件
         public string GetConditin(string Condition)
         {
