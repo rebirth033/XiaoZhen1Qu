@@ -90,25 +90,8 @@ function LoadPhotos(photos) {
 }
 //加载图片工具条
 function BindToolBar() {
-    //BindMouseHover();
     BindUlImgEdit();
     BindUlImgDelete();
-}
-//绑定图片鼠标浮动事件
-function BindMouseHover() {
-    var uls = "ulImgs1,ulImgs2,ulImgs3,ulImgs4".split(',');
-    for (var i = 0; i < uls.length; i++) {
-        $("#" + uls[i]).find("img").each(function (i) {
-            $(this).bind("mouseover", function () {
-                $(this).next().css("display", "block");
-            });
-            $("#" + uls[i]).find(".div_toolbar_wrap").each(function () {
-                $(this).bind("mouseleave", function () {
-                    $(this).css("display", "none");
-                });
-            });
-        });
-    }
 }
 //绑定图片点击编辑事件
 function BindUlImgEdit() {
@@ -140,7 +123,7 @@ function BindUlImgDelete() {
     $("#ulImgs1").find(".delete").each(function (i) {
         $(this).unbind("click");
         $(this).bind("click", function () {
-            $(this).parent().parent().parent("li").remove();
+            $(this).parent().parent("li").remove();
             if ($("#ulImgs2").find("li").length > 0) {
                 $("#ulImgs1").append($("#ulImgs2").find("li:eq(0)")[0].outerHTML);
                 $("#ulImgs2").find("li:eq(0)").remove();
@@ -149,42 +132,46 @@ function BindUlImgDelete() {
                 $("#ulImgs2").append($("#ulImgs3").find("li:eq(0)")[0].outerHTML);
                 $("#ulImgs3").find("li:eq(0)").remove();
             }
-            BindMouseHover();
+            if ($("#ulImgs4").find("li").length > 0) {
+                $("#ulImgs3").append($("#ulImgs4").find("li:eq(0)")[0].outerHTML);
+                $("#ulImgs4").find("li:eq(0)").remove();
+            }
             ControlUpload();
-            BindUlImg1Delete();
+            BindUlImgDelete();
         });
     });
     $("#ulImgs2").find(".delete").each(function (i) {
         $(this).unbind("click");
         $(this).bind("click", function () {
-            $(this).parent().parent().parent("li").remove();
+            $(this).parent().parent("li").remove();
             if ($("#ulImgs3").find("li").length > 0) {
                 $("#ulImgs2").append($("#ulImgs3").find("li:eq(0)")[0].outerHTML);
                 $("#ulImgs3").find("li:eq(0)").remove();
             }
-            BindMouseHover();
+            if ($("#ulImgs4").find("li").length > 0) {
+                $("#ulImgs3").append($("#ulImgs4").find("li:eq(0)")[0].outerHTML);
+                $("#ulImgs4").find("li:eq(0)").remove();
+            }
             ControlUpload();
-            BindUlImg2Delete();
+            BindUlImgDelete();
         });
     });
     $("#ulImgs3").find(".delete").each(function (i) {
         $(this).unbind("click");
         $(this).bind("click", function () {
-            $(this).parent().parent().parent("li").remove();
+            $(this).parent().parent("li").remove();
             if ($("#ulImgs4").find("li").length > 0) {
                 $("#ulImgs3").append($("#ulImgs4").find("li:eq(0)")[0].outerHTML);
                 $("#ulImgs4").find("li:eq(0)").remove();
             }
-            BindMouseHover();
             ControlUpload();
-            BindUlImg3Delete();
+            BindUlImgDelete();
         });
     });
     $("#ulImgs4").find(".delete").each(function (i) {
         $(this).unbind("click");
         $(this).bind("click", function () {
-            $(this).parent().parent().parent("li").remove();
-            BindMouseHover();
+            $(this).parent().parent("li").remove();
             ControlUpload();
             BindUlImg4Delete();
         });
@@ -195,7 +182,7 @@ function BindUlImg1Delete() {
     $("#ulImgs1").find(".delete").each(function (i) {
         $(this).unbind("click");
         $(this).bind("click", function () {
-            $(this).parent().parent().parent("li").remove();
+            $(this).parent().parent("li").remove();
             if ($("#ulImgs2").find("li").length > 0) {
                 $("#ulImgs1").append($("#ulImgs2").find("li:eq(0)")[0].outerHTML);
                 $("#ulImgs2").find("li:eq(0)").remove();
@@ -208,7 +195,6 @@ function BindUlImg1Delete() {
                 $("#ulImgs3").append($("#ulImgs4").find("li:eq(0)")[0].outerHTML);
                 $("#ulImgs4").find("li:eq(0)").remove();
             }
-            BindMouseHover();
             ControlUpload();
         });
     });
@@ -218,7 +204,7 @@ function BindUlImg2Delete() {
     $("#ulImgs2").find(".delete").each(function (i) {
         $(this).unbind("click");
         $(this).bind("click", function () {
-            $(this).parent().parent().parent("li").remove();
+            $(this).parent().parent("li").remove();
             if ($("#ulImgs3").find("li").length > 0) {
                 $("#ulImgs2").append($("#ulImgs3").find("li:eq(0)")[0].outerHTML);
                 $("#ulImgs3").find("li:eq(0)").remove();
@@ -227,7 +213,6 @@ function BindUlImg2Delete() {
                 $("#ulImgs3").append($("#ulImgs4").find("li:eq(0)")[0].outerHTML);
                 $("#ulImgs4").find("li:eq(0)").remove();
             }
-            BindMouseHover();
             ControlUpload();
         });
     });
@@ -237,12 +222,11 @@ function BindUlImg3Delete() {
     $("#ulImgs3").find(".delete").each(function (i) {
         $(this).unbind("click");
         $(this).bind("click", function () {
-            $(this).parent().parent().parent("li").remove();
+            $(this).parent().parent("li").remove();
             if ($("#ulImgs4").find("li").length > 0) {
                 $("#ulImgs3").append($("#ulImgs4").find("li:eq(0)")[0].outerHTML);
                 $("#ulImgs4").find("li:eq(0)").remove();
             }
-            BindMouseHover();
             ControlUpload();
         });
     });
@@ -252,8 +236,7 @@ function BindUlImg4Delete() {
     $("#ulImgs4").find(".delete").each(function (i) {
         $(this).unbind("click");
         $(this).bind("click", function () {
-            $(this).parent().parent().parent("li").remove();
-            BindMouseHover();
+            $(this).parent().parent("li").remove();
             ControlUpload();
         });
     });
