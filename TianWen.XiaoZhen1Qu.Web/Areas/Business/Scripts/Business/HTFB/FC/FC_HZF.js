@@ -248,6 +248,7 @@ function LoadDuoX(type, id) {
 function SelectXQMC(obj) {
     var array = obj.innerText.split(' ');
     $("#XQMC").val(array[0]);
+    $("#XQDZ").val(array[0]);
     $("#divXQMClist").css("display", "none");
 }
 //加载

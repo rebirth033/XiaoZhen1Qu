@@ -60,6 +60,7 @@ function ValidateAll() {
 }
 
 function ValidateXQMC() {
+    if ($("#XQDZ").val() === "" || ($("#XQMC").val() !== $("#XQDZ").val())) $("#XQMC").val("");
     if ($("#XQMC").val() === "" || $("#XQMC").val() === null) {
         $("#divXQMCTip").css("display", "block");
         $("#divXQMCTip").attr("class", "Warn");
