@@ -22,7 +22,6 @@ function FBXX() {
 function LoadDefault() {
     LoadSY_ML();
     LoadHeadSearch();
-    //LoadZXFBXX
 }
 //加载头部搜索栏关键字
 function LoadHeadSearch() {
@@ -41,66 +40,6 @@ function LoadHeadSearch() {
     $(".div_head_right_ss").append('<span class="span_head_right_ss">演出表演</span>');
     $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
     $(".div_head_right_ss").append('<span class="span_head_right_ss">运动健身</span>');
-}
-//最新发布列表
-function ZXFBLB() {
-    var e = $("#ul_body_top_right_zxfb")[0];
-    var transitionEvent = whichTransitionEvent();
-    transitionEvent && e.addEventListener(transitionEvent, function () {
-        if (temp === 10) {
-            $("#ul_body_top_right_zxfb").css("transform", "translate3d(0px, 0px, 0px)").css("transition-duration", "0ms");
-        }
-    });
-    setInterval(function () {
-        if (curIndex < 10) {
-            changeTo(curIndex);
-            curIndex++;
-        } else {
-            changeTo(curIndex);
-            curIndex = 1;
-        }
-    }, 2500);
-}
-//消息切换
-function changeTo(num) {
-    var height = parseInt(num) * 60;
-    temp = num;
-    $("#ul_body_top_right_zxfb").css("transform", "translate3d(0px, -" + height + "px, 0px)").css("transition-duration", "500ms");
-}
-//加载最新发布信息
-function LoadZXFBXX() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/SY/LoadZXFBXX",
-        dataType: "json",
-        data: {
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                $("#div_main_info").html('');
-                for (var i = 0; i < 10; i++) {
-                    LoadInfo(xml.list[i]);
-                }
-                LoadInfo(xml.list[0]);
-                ZXFBLB();
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载最新发布信息单条
-function LoadInfo(obj) {
-    var html = "";
-    html += ('<li onclick="OpenXXXX(' + obj.LBID + ',\'' + obj.JCXXID + '\')" class="li_body_top_right_zxfb">');
-    html += ('<img class="img_body_top_right_zxfb" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<div class="div_body_top_right_zxfb">');
-    html += ('<span class="span_body_top_right_zxfb">' + TruncStr(obj.BT, 45) + '</span>');
-    html += ('<span class="span_body_top_right_zxfb_sj">' + obj.CJSJ.ToString("yyyy-MM-dd hh:mm:ss") + '</span>');
-    html += ('</div>');
-    html += ('</li>');
-    $("#ul_body_top_right_zxfb").append(html);
 }
 //打开详细页面
 function OpenXXXX(LBID, JCXXID) {

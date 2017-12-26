@@ -24,5 +24,7 @@ namespace TianWen.XiaoZhen1Qu.Interface
 
         object LoadByCodeValueAndTypeName(string CODEVALUE, string TYPENAME, string TBName);
 
+        object LoadXGLM(string TYPE, string XZQ);
+
     }
 }

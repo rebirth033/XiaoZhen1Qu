@@ -190,8 +190,9 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     return new { Result = EnResultType.Success, districts, list = DAO.Repository.GetObjectList<CODES_ES_PWKQ>(String.Format("FROM CODES_ES_PWKQ WHERE TYPENAME in({0}) ORDER BY TYPENAME,CODEORDER", TYPENAMES)) };
                 if (TBName == "CODES_PFCG")
                     return new { Result = EnResultType.Success, districts, list = DAO.Repository.GetObjectList<CODES_PFCG>(String.Format("FROM CODES_PFCG WHERE TYPENAME in({0}) ORDER BY TYPENAME,CODEORDER", TYPENAMES)) };
-                if (TBName == "CODES_CL") { 
-                    if(TYPENAMES.Contains("轿车品牌"))
+                if (TBName == "CODES_CL")
+                {
+                    if (TYPENAMES.Contains("轿车品牌"))
                         return new { Result = EnResultType.Success, districts, jclist = DAO.Repository.GetObjectList<CODES_CL_JC>(String.Format("FROM CODES_CL_JC WHERE TYPENAME in({0}) AND ISHOT = '是' ORDER BY TYPENAME,CODEORDER", "'轿车品牌'")), list = DAO.Repository.GetObjectList<CODES_CL>(String.Format("FROM CODES_CL WHERE TYPENAME in({0}) ORDER BY TYPENAME,CODEORDER", TYPENAMES)) };
                     else
                         return new { Result = EnResultType.Success, districts, list = DAO.Repository.GetObjectList<CODES_CL>(String.Format("FROM CODES_CL WHERE TYPENAME in({0}) ORDER BY TYPENAME,CODEORDER", TYPENAMES)) };
@@ -544,6 +545,22 @@ namespace TianWen.XiaoZhen1Qu.BLL
         {
             DataTable dtgrxx = DAO.Repository.GetDataTable(string.Format("select * from yhjbxx y where y.yhid = '{0}'", yhid));
             return ConvertHelper.DataTableToList<GRXXView>(dtgrxx);
+        }
+
+        //相关类目
+        public object LoadXGLM(string TYPE, string XZQ)
+        {
+            try
+            {
+                string[] array = TYPE.Split(',');
+                IList<CODES_XXLB> list = DAO.Repository.GetObjectList<CODES_XXLB>(String.Format("FROM CODES_XXLB WHERE FBYM LIKE '{0}_%' OR FBYM LIKE '{1}_%' ORDER BY LBORDER", array[0], array[1]));
+                return new { Result = EnResultType.Success, list = list, xzq = XZQ };
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("error", ex.Message);
+                return new { Result = EnResultType.Failed, Message = "加载失败" };
+            }
         }
     }
 

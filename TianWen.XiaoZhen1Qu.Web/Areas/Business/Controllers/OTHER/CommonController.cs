@@ -100,5 +100,11 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         {
             return Json(CommonBLL.LoadByParentID(Request["ParentID"], Request["TBName"]));
         }
+        //加载相关类目
+        public JsonResult LoadXGLM()
+        {
+            string TYPE = Request["TYPE"];
+            return Json(CommonBLL.LoadXGLM(TYPE, Session["XZQ"].ToString()));
+        }
     }
 }
