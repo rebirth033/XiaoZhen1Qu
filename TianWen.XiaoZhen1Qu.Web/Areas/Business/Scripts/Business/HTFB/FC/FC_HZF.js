@@ -250,6 +250,7 @@ function SelectXQMC(obj) {
     $("#XQMC").val(array[0]);
     $("#XQDZ").val(array[0]);
     $("#divXQMClist").css("display", "none");
+    ValidateXQMC();
 }
 //加载
 function LoadFC_HZFXX() {
@@ -266,6 +267,8 @@ function LoadFC_HZFXX() {
                 var jsonObj = new JsonDB("myTabContent");
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.FC_HZFJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
+                if (xml.Value.FC_HZFJBXX.SF !== null)
+                    SetDX("SF", xml.Value.FC_HZFJBXX.SF);
                 if (xml.Value.FC_HZFJBXX.ZJYBHFY !== null)
                     SetDuoX("BHFY", xml.Value.FC_HZFJBXX.ZJYBHFY);
                 if (xml.Value.FC_HZFJBXX.FWPZ !== null)
@@ -280,6 +283,7 @@ function LoadFC_HZFXX() {
                 $("#spanYFFS").html(xml.Value.FC_HZFJBXX.YFFS);
                 $("#spanCZJLX").html(xml.Value.FC_HZFJBXX.CZJLX);
                 $("#spanCZJXB").html(xml.Value.FC_HZFJBXX.CZJXB);
+                $("#XQDZ").val(xml.Value.FC_HZFJBXX.XQMC);
                 //设置编辑器的内容
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
                 if (xml.Value.FC_HZFJBXX.KRZSJ.ToString("yyyy-MM-dd") !== "1-1-1")
@@ -305,6 +309,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "YFFS", "'" + $("#spanYFFS").html() + "'");
     obj = jsonObj.AddJson(obj, "CZJLX", "'" + $("#spanCZJLX").html() + "'");
     obj = jsonObj.AddJson(obj, "CZJXB", "'" + $("#spanCZJXB").html() + "'");
+    obj = jsonObj.AddJson(obj, "SF", "'" + GetDX("SF") + "'");
     obj = jsonObj.AddJson(obj, "ZJYBHFY", "'" + GetDuoX("BHFY") + "'");
     obj = jsonObj.AddJson(obj, "FWPZ", "'" + GetDuoX("FWPZ") + "'");
     obj = jsonObj.AddJson(obj, "FWLD", "'" + GetDuoX("FWLD") + "'");

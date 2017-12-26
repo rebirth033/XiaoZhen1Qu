@@ -239,6 +239,7 @@ function SelectXQMC(obj) {
     $("#XQMC").val(array[0]);
     $("#XQDZ").val(array[0]);
     $("#divXQMClist").css("display", "none");
+    ValidateXQMC();
 }
 //加载
 function LoadFC_ZZFXX() {
@@ -269,6 +270,7 @@ function LoadFC_ZZFXX() {
                 $("#spanZXQK").html(xml.Value.FC_ZZFJBXX.ZXQK);
                 $("#spanZZLX").html(xml.Value.FC_ZZFJBXX.ZZLX);
                 $("#spanYFFS").html(xml.Value.FC_ZZFJBXX.YFFS);
+                $("#XQDZ").val(xml.Value.FC_ZZFJBXX.XQMC);
                 //设置编辑器的内容
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
                 if (xml.Value.FC_ZZFJBXX.KRZSJ.ToString("yyyy-MM-dd") !== "1-1-1")

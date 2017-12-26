@@ -2,7 +2,7 @@
     $("#divGQ").find(".div_radio").bind("click", function () { ValidateRadio("GQ", "忘记选择供求啦"); });
     $("#divQCQK").find(".div_radio").bind("click", function () { ValidateRadio("QCQK", "忘记选择驱虫情况啦"); });
     $("#NL").bind("blur", ValidateNL);
-    $("#NL").bind("focus", function () { InfoInput("NL", "年龄填写整数，不能是0", "CWGNL"); });
+    $("#NL").bind("focus", function () { InfoInput("NL", "年龄请填写整数，不能是0", "CWGNL"); });
     $("#ZSZS").bind("blur", ValidateZSZS);
     $("#ZSZS").bind("focus", function () { InfoSpanInput("ZSZS", "在售只数请填写整数，不能是0", "ZSZS"); });
     $("#JG").bind("blur", ValidateJG);

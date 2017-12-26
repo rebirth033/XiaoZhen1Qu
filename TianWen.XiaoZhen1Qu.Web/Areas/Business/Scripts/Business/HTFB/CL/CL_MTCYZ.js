@@ -52,7 +52,7 @@ function ValidateGLS() {
         } else {
             $("#divGLSTip").css("display", "block");
             $("#divGLSTip").attr("class", "Warn");
-            $("#divGLSTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />公里数填写整数，默认为面议');
+            $("#divGLSTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />公里数请填写整数，默认为面议');
             $("#spanGLS").css("border-color", "#F2272D");
             return false;
         }
