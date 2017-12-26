@@ -144,3 +144,11 @@ function GetJG(jg, dw) {
     else
         return '<span class="span_zj">' + jg + '</span>' + dw;
 }
+//隐藏完整电话
+function HideWZDH() {
+    $(".span_body_left_body_right_wzdh").fadeOut();
+}
+//显示完整电话
+function ShowWZDH() {
+    $(".span_body_left_body_right_wzdh").fadeIn().css("display","block");
+}
