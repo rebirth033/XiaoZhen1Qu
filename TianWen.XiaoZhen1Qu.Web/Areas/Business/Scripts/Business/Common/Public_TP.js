@@ -24,13 +24,13 @@ function UploadZP() {
 function uploadComplete(evt) {
     var imagepath = getRootPath() + "/Areas/Business/Photos/" + evt.target.responseText;
     if ($("#ulImgs1").find("img").length < 4)
-        $("#ulImgs1").append("<li draggable='true' class='li_img'><img src='" + imagepath + "' class='divImg' /><div class='div_toolbar_wrap'><div class='opacity'></div><div class='toolbar'><a class='edit'></a><a class='delete'></a></div></div></li>");
+        $("#ulImgs1").append("<li draggable='true' class='li_img'><img src='" + imagepath + "' class='divImg' /><div class='div_toolbar_wrap'><div class='delete'>删除</div><div class='edit'>编辑</div></div></li>");
     else if ($("#ulImgs2").find("img").length < 4)
-        $("#ulImgs2").append("<li draggable='true' class='li_img'><img src='" + imagepath + "' class='divImg' /><div class='div_toolbar_wrap'><div class='opacity'></div><div class='toolbar'><a class='edit'></a><a class='delete'></a></div></div></li>");
+        $("#ulImgs2").append("<li draggable='true' class='li_img'><img src='" + imagepath + "' class='divImg' /><div class='div_toolbar_wrap'><div class='delete'>删除</div><div class='edit'>编辑</div></div></li>");
     else if ($("#ulImgs3").find("img").length < 4)
-        $("#ulImgs3").append("<li draggable='true' class='li_img'><img src='" + imagepath + "' class='divImg' /><div class='div_toolbar_wrap'><div class='opacity'></div><div class='toolbar'><a class='edit'></a><a class='delete'></a></div></div></li>");
+        $("#ulImgs3").append("<li draggable='true' class='li_img'><img src='" + imagepath + "' class='divImg' /><div class='div_toolbar_wrap'><div class='delete'>删除</div><div class='edit'>编辑</div></div></li>");
     else
-        $("#ulImgs4").append("<li draggable='true' class='li_img'><img src='" + imagepath + "' class='divImg' /><div class='div_toolbar_wrap'><div class='opacity'></div><div class='toolbar'><a class='edit'></a><a class='delete'></a></div></div></li>");
+        $("#ulImgs4").append("<li draggable='true' class='li_img'><img src='" + imagepath + "' class='divImg' /><div class='div_toolbar_wrap'><div class='delete'>删除</div><div class='edit'>编辑</div></div></li>");
     ControlUpload();
     ValidateZP();
     BindToolBar();
@@ -76,13 +76,13 @@ function LoadPhotos(photos) {
         $("#divFWZPValue").css("display", "block");
         for (var i = 0; i < photos.length; i++) {
             if (i > 11)
-                $("#ulImgs4").append("<li draggable='true' class='li_img'><img id='ulImgs4_" + (i + 1) + "' src='" + photos[i].PHOTOURL + "' class='divImg' /><div class='div_toolbar_wrap'><div class='opacity'></div><div class='toolbar'><a class='edit'></a><a class='delete'></a></div></div></li>");
+                $("#ulImgs4").append("<li draggable='true' class='li_img'><img id='ulImgs4_" + (i + 1) + "' src='" + photos[i].PHOTOURL + "' class='divImg' /><div class='div_toolbar_wrap'><div class='delete'>删除</div><div class='edit'>编辑</div></div></li>");
             if (i > 7 && i <= 11)
-                $("#ulImgs3").append("<li draggable='true' class='li_img'><img id='ulImgs3_" + (i + 1) + "' src='" + photos[i].PHOTOURL + "' class='divImg' /><div class='div_toolbar_wrap'><div class='opacity'></div><div class='toolbar'><a class='edit'></a><a class='delete'></a></div></div></li>");
+                $("#ulImgs3").append("<li draggable='true' class='li_img'><img id='ulImgs3_" + (i + 1) + "' src='" + photos[i].PHOTOURL + "' class='divImg' /><div class='div_toolbar_wrap'><div class='delete'>删除</div><div class='edit'>编辑</div></div></li>");
             if (i > 3 && i <= 7)
-                $("#ulImgs2").append("<li draggable='true' class='li_img'><img id='ulImgs2_" + (i + 1) + "' src='" + photos[i].PHOTOURL + "' class='divImg' /><div class='div_toolbar_wrap'><div class='opacity'></div><div class='toolbar'><a class='edit'></a><a class='delete'></a></div></div></li>");
+                $("#ulImgs2").append("<li draggable='true' class='li_img'><img id='ulImgs2_" + (i + 1) + "' src='" + photos[i].PHOTOURL + "' class='divImg' /><div class='div_toolbar_wrap'><div class='delete'>删除</div><div class='edit'>编辑</div></div></li>");
             if (i <= 3)
-                $("#ulImgs1").append("<li draggable='true' class='li_img'><img id='ulImgs1_" + (i + 1) + "' src='" + photos[i].PHOTOURL + "' class='divImg' /><div class='div_toolbar_wrap'><div class='opacity'></div><div class='toolbar'><a class='edit'></a><a class='delete'></a></div></div></li>");
+                $("#ulImgs1").append("<li draggable='true' class='li_img'><img id='ulImgs1_" + (i + 1) + "' src='" + photos[i].PHOTOURL + "' class='divImg' /><div class='div_toolbar_wrap'><div class='delete'>删除</div><div class='edit'>编辑</div></div></li>");
         }
         BindToolBar();
         ControlUpload();
@@ -90,7 +90,7 @@ function LoadPhotos(photos) {
 }
 //加载图片工具条
 function BindToolBar() {
-    BindMouseHover();
+    //BindMouseHover();
     BindUlImgEdit();
     BindUlImgDelete();
 }
