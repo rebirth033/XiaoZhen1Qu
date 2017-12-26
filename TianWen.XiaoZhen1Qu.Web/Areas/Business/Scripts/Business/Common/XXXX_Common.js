@@ -98,7 +98,7 @@ function RightImg(length) {
 //伸缩图片
 function ToggleImg(length) {
     if ($("#div_body_left_body_xq_zk").html().indexOf("展开") !== -1) {
-        $("#div_body_left_body_xq_xx").css("overflow", "visible").css("height", "auto").css("margin-bottom","0");
+        $("#div_body_left_body_xq_xx").css("overflow", "visible").css("height", "auto").css("margin-bottom", "0");
         $("#div_body_left_body_xq_zk").html("收起更多图片 共（" + length + "）张");
     } else {
         $("#div_body_left_body_xq_xx").css("overflow", "hidden").css("height", "710px").css("margin-bottom", "10px");
@@ -150,5 +150,14 @@ function HideWZDH() {
 }
 //显示完整电话
 function ShowWZDH() {
-    $(".span_body_left_body_right_wzdh").fadeIn().css("display","block");
+    $(".span_body_left_body_right_wzdh").fadeIn().css("display", "block");
+}
+//获取楼层
+function GetLC(szc, gjc) {
+    if (parseInt(szc) < parseInt(gjc / 3))
+        return "低层";
+    if (parseInt(szc) >= parseInt(gjc / 3) && parseInt(szc) < parseInt(gjc / 3 * 2))
+        return "中层";
+    if (parseInt(szc) >= parseInt(gjc / 3 * 2))
+        return "高层";
 }

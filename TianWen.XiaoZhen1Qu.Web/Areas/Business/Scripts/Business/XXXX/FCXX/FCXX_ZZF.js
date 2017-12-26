@@ -70,7 +70,7 @@ function LoadJBXX(obj) {
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">朝向楼层：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.CX + ' ' + obj.C + '层/共' + obj.GJC + '层</span>');
+    html += ('<span class="span_body_left_body_right_right">' + obj.CX + ' ' + GetLC(obj.C, obj.GJC) + '/共' + obj.GJC + '层</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">所在小区：</span>');
@@ -260,7 +260,7 @@ function LoadCNXH(TYPE) {
                 html += ('<div class="div_body_left_body_cnxh">');
                 html += ('<p class="p_body_left_body_cnxh">相似房源</p>');
                 html += ('<ul id="ul_body_left_body_cnxh" class="ul_body_left_body_cnxh">');
-                for (var i = 0; i < xml.list.length; i++) {
+                for (var i = 0; i < 8; i++) {
                     html += LoadCNXHInfo(xml.list[i]);
                 }
                 html += ('</ul>');
@@ -304,7 +304,7 @@ function LoadJPTJ(TYPE) {
                 html += ('<div class="div_body_left_body_jptj">');
                 html += ('<p class="p_body_left_body_jptj">精品推荐</p>');
                 html += ('<ul id="ul_body_left_body_jptj" class="ul_body_left_body_jptj">');
-                for (var i = 0; i < xml.list.length; i++) {
+                for (var i = 0; i < 8; i++) {
                     html += LoadJPTJInfo(xml.list[i]);
                 }
                 html += ('</ul>');
