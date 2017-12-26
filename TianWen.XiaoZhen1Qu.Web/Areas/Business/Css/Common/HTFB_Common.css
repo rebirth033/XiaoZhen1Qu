@@ -131,9 +131,11 @@
 
 .div_row_zp .div_row_right .div_upload{ border: 2px solid #cccccc;}
 
-#edui1{border: 2px solid #cccccc;}
+#edui1{border: 2px solid #cccccc}
+#edui49{border: 2px solid #cccccc}
+#edui97{border: 2px solid #cccccc}
 
-#ueditor_0{ width: 99.1%;}
+.edui-editor iframe{ width: 99.1% !important;}
 
 .span_fbxx {width: 392px;font-family: "微软雅黑";border: 1px solid #bc6ba6;height: 50px;background: #bc6ba6;display: inline-block;color: #fff;font-size: 24px;text-align: center;cursor: pointer;}
 .span_fbxx:hover {background: #ad5b97;}

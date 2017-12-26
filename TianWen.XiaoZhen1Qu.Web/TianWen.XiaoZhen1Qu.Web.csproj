@@ -221,6 +221,7 @@
     <Content Include="Areas\Business\Css\HTFB\FC\FC_CW.css" />
     <Content Include="Areas\Business\Css\HTFB\FC\FC_ESF.css" />
     <Content Include="Areas\Business\Css\HTFB\FC\FC_HZF.css" />
+    <Content Include="Areas\Business\Css\HTFB\LYJD\LYJD_QZFW.css" />
     <Content Include="Areas\Business\Css\HTFB\SHFW\SHFW_SMWX.css" />
     <Content Include="Areas\Business\Css\HTFB\ZSJM\ZSJM_LS.css" />
     <Content Include="Areas\Business\Css\HTFB\ZSJM\ZSJM_HBCP.css" />
@@ -706,6 +707,7 @@
     <Content Include="Areas\Business\Css\XXXX\LR\LRXX_KQHL.css" />
     <Content Include="Areas\Business\Css\XXXX\LR\LRXX_TJ.css" />
     <Content Include="Areas\Business\Css\XXXX\LR\LRXX_MTSS.css" />
+    <Content Include="Areas\Business\Css\XXXX\LYJD\LYJDXX_QZFW.css" />
     <Content Include="Areas\Business\Css\XXXX\LYJD\LYJDXX_GNY.css" />
     <Content Include="Areas\Business\Css\XXXX\LYJD\LYJDXX_ZBY.css" />
     <Content Include="Areas\Business\Css\XXXX\LYJD\LYJDXX_CJY.css" />
@@ -941,6 +943,7 @@
     <Content Include="Areas\Business\Scripts\Business\CXLB\LRCX\LRCX_KQHL.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\LRCX\LRCX_TJ.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\LRCX\LRCX_MTSS.js" />
+    <Content Include="Areas\Business\Scripts\Business\CXLB\LYJDCX\LYJDCX_QZFW.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\LYJDCX\LYJDCX_GNY.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\LYJDCX\LYJDCX_ZBY.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\LYJDCX\LYJDCX_CJY.js" />
@@ -1148,6 +1151,8 @@
     <Content Include="Areas\Business\Scripts\Business\HTFB\FC\FC_XZLYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\FC\FC_HZF.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\FC\FC_HZFYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\HTFB\LYJD\LYJD_QZFW.js" />
+    <Content Include="Areas\Business\Scripts\Business\HTFB\LYJD\LYJD_QZFWYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\SHFW\SHFW_SMWX.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\SHFW\SHFW_SMWXYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\XXYL\XXYL_KTV.js" />
@@ -1241,8 +1246,6 @@
     <Content Include="Areas\Business\Scripts\Business\HTFB\LR\LR_WSYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\LR\LR_YJ.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\LR\LR_YJYZ.js" />
-    <Content Include="Areas\Business\Scripts\Business\HTFB\LYJD\LYJD_CJY.js" />
-    <Content Include="Areas\Business\Scripts\Business\HTFB\LYJD\LYJD_CJYYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\LYJD\LYJD_DYDDR.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\LYJD\LYJD_DYDDRYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\LYJD\LYJD_GNY.js" />
@@ -1599,6 +1602,7 @@
     <Content Include="Areas\Business\Scripts\Business\XXXX\LRXX\LRXX_KQHL.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\LRXX\LRXX_TJ.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\LRXX\LRXX_MTSS.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\LYJDXX\LYJDXX_QZFW.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\LYJDXX\LYJDXX_GNY.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\LYJDXX\LYJDXX_ZBY.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\LYJDXX\LYJDXX_CJY.js" />
@@ -2360,7 +2364,6 @@
     <Content Include="Areas\Business\Views\LYJD\LYJD_LXS.cshtml" />
     <Content Include="Areas\Business\Views\LYJD\LYJD_GNY.cshtml" />
     <Content Include="Areas\Business\Views\LYJD\LYJD_ZBY.cshtml" />
-    <Content Include="Areas\Business\Views\LYJD\LYJD_CJY.cshtml" />
     <Content Include="Areas\Business\Views\LYJD\LYJD_JDZSYD.cshtml" />
     <Content Include="Areas\Business\Views\LYJD\LYJD_JP.cshtml" />
     <Content Include="Areas\Business\Views\LYJD\LYJD_DYDDR.cshtml" />
@@ -2707,13 +2710,11 @@
     <Content Include="Areas\Business\Views\LYJDCX\LYJDCX_DYDDR.cshtml" />
     <Content Include="Areas\Business\Views\LYJDCX\LYJDCX_GNY.cshtml" />
     <Content Include="Areas\Business\Views\LYJDCX\LYJDCX_ZBY.cshtml" />
-    <Content Include="Areas\Business\Views\LYJDCX\LYJDCX_CJY.cshtml" />
     <Content Include="Areas\Business\Views\LYJDCX\LYJDCX_JDZSYD.cshtml" />
     <Content Include="Areas\Business\Views\LYJDCX\LYJDCX_JP.cshtml" />
     <Content Include="Areas\Business\Views\LYJDXX\LYJDXX_DYDDR.cshtml" />
     <Content Include="Areas\Business\Views\LYJDXX\LYJDXX_GNY.cshtml" />
     <Content Include="Areas\Business\Views\LYJDXX\LYJDXX_ZBY.cshtml" />
-    <Content Include="Areas\Business\Views\LYJDXX\LYJDXX_CJY.cshtml" />
     <Content Include="Areas\Business\Views\LYJDXX\LYJDXX_JDZSYD.cshtml" />
     <Content Include="Areas\Business\Views\LYJDXX\LYJDXX_JP.cshtml" />
     <Content Include="Areas\Business\Views\XXYLCX\XXYLCX_YDJS.cshtml" />
@@ -2811,6 +2812,9 @@
     <Content Include="Areas\Business\Views\ZSJM\ZSJM_LS.cshtml" />
     <Content Include="Areas\Business\Views\ZSJM\ZSJM_HBCP.cshtml" />
     <Content Include="Areas\Business\Views\CL\CL_QCPJ.cshtml" />
+    <Content Include="Areas\Business\Views\LYJD\LYJD_QZFW.cshtml" />
+    <Content Include="Areas\Business\Views\LYJDCX\LYJDCX_QZFW.cshtml" />
+    <Content Include="Areas\Business\Views\LYJDXX\LYJDXX_QZFW.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

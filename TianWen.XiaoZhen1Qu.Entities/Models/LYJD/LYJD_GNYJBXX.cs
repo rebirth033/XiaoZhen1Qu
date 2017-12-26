@@ -23,22 +23,16 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string JCXXID { get; set; }
 
         /// <summary>
-        /// 线路特色
+        /// 出游类别
         /// </summary>
         [Property]
-        public virtual Byte[] XLTS { get; set; }
+        public virtual string CYLB { get; set; }
 
         /// <summary>
         /// 出游方式
         /// </summary>
         [Property]
         public virtual string CYFS { get; set; }
-
-        /// <summary>
-        /// 发团日期
-        /// </summary>
-        [Property]
-        public virtual string FTRQ { get; set; }
 
         /// <summary>
         /// 往返交通_去
@@ -71,28 +65,16 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual Byte[] XCAP { get; set; }
 
         /// <summary>
-        /// 预定须知
+        /// 价格_成人
         /// </summary>
         [Property]
-        public virtual Byte[] YDXZ { get; set; }
+        public virtual string JG_CR { get; set; }
 
         /// <summary>
-        /// 门市价
+        /// 价格_儿童
         /// </summary>
         [Property]
-        public virtual string MSJ { get; set; }
-
-        /// <summary>
-        /// 优惠价_成人
-        /// </summary>
-        [Property]
-        public virtual string YHJ_CR { get; set; }
-
-        /// <summary>
-        /// 优惠价_儿童
-        /// </summary>
-        [Property]
-        public virtual string YHJ_ET { get; set; }
+        public virtual string JG_ET { get; set; }
 
         /// <summary>
         /// 费用包含
@@ -105,6 +87,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// </summary>
         [Property]
         public virtual Byte[] ZFXM { get; set; }
+
         /// <summary>
         /// 区域
         /// </summary>

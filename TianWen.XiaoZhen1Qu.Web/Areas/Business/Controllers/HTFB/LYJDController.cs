@@ -10,12 +10,6 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
     {
         public ILYJD_BLL LYJD_BLL { get; set; }
 
-        public ActionResult LYJD_CJY()
-        {
-            ViewData["XZQ"] = Session["XZQ"];
-            ViewData["YHM"] = Session["YHM"];
-            return View();
-        }
         public ActionResult LYJD_DYDDR()
         {
             ViewData["XZQ"] = Session["XZQ"];
@@ -46,6 +40,12 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             ViewData["YHM"] = Session["YHM"];
             return View();
         }
+        public ActionResult LYJD_QZFW()
+        {
+            ViewData["XZQ"] = Session["XZQ"];
+            ViewData["YHM"] = Session["YHM"];
+            return View();
+        }
         public ActionResult LYJD_ZBY()
         {
             ViewData["XZQ"] = Session["XZQ"];
@@ -53,28 +53,6 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return View();
         }
 
-        [ValidateInput(false)]
-        public JsonResult FBLYJD_CJYJBXX()
-        {
-            YHJBXX yhjbxx = LYJD_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
-            string json = Request["Json"];
-            string xlts = Request["XLTS"];
-            string xcap = Request["XCAP"];
-            string ydxz = Request["YDXZ"];
-            string fybh = Request["FYBH"];
-            string zfxm = Request["ZFXM"];
-            string fwzp = Request["FWZP"];
-            JCXX jcxx = CreateJCXX(yhjbxx, json);
-            LYJD_CJYJBXX LYJD_CJYjbxx = JsonHelper.ConvertJsonToObject<LYJD_CJYJBXX>(json);
-            LYJD_CJYjbxx.XLTS = BinaryHelper.StringToBinary(xlts);
-            LYJD_CJYjbxx.XCAP = BinaryHelper.StringToBinary(xcap);
-            LYJD_CJYjbxx.YDXZ = BinaryHelper.StringToBinary(ydxz);
-            LYJD_CJYjbxx.FYBH = BinaryHelper.StringToBinary(fybh);
-            LYJD_CJYjbxx.ZFXM = BinaryHelper.StringToBinary(zfxm);
-            List<PHOTOS> photos = GetTP(fwzp);
-            object result = LYJD_BLL.SaveLYJD_CJYJBXX(jcxx, LYJD_CJYjbxx, photos);
-            return Json(result);
-        }
         [ValidateInput(false)]
         public JsonResult FBLYJD_DYDDRJBXX()
         {
@@ -102,9 +80,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             string fwzp = Request["FWZP"];
             JCXX jcxx = CreateJCXX(yhjbxx, json);
             LYJD_GNYJBXX LYJD_GNYjbxx = JsonHelper.ConvertJsonToObject<LYJD_GNYJBXX>(json);
-            LYJD_GNYjbxx.XLTS = BinaryHelper.StringToBinary(xlts);
             LYJD_GNYjbxx.XCAP = BinaryHelper.StringToBinary(xcap);
-            LYJD_GNYjbxx.YDXZ = BinaryHelper.StringToBinary(ydxz);
             LYJD_GNYjbxx.FYBH = BinaryHelper.StringToBinary(fybh);
             LYJD_GNYjbxx.ZFXM = BinaryHelper.StringToBinary(zfxm);
             List<PHOTOS> photos = GetTP(fwzp);
@@ -154,6 +130,20 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return Json(result);
         }
         [ValidateInput(false)]
+        public JsonResult FBLYJD_QZFWJBXX()
+        {
+            YHJBXX yhjbxx = LYJD_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            string json = Request["Json"];
+            string bcms = Request["BCMS"];
+            string fwzp = Request["FWZP"];
+            JCXX jcxx = CreateJCXX(yhjbxx, json);
+            LYJD_QZFWJBXX LYJD_QZFWjbxx = JsonHelper.ConvertJsonToObject<LYJD_QZFWJBXX>(json);
+            LYJD_QZFWjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
+            List<PHOTOS> photos = GetTP(fwzp);
+            object result = LYJD_BLL.SaveLYJD_QZFWJBXX(jcxx, LYJD_QZFWjbxx, photos);
+            return Json(result);
+        }
+        [ValidateInput(false)]
         public JsonResult FBLYJD_ZBYJBXX()
         {
             YHJBXX yhjbxx = LYJD_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
@@ -168,12 +158,6 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return Json(result);
         }
 
-        public JsonResult LoadLYJD_CJYJBXX()
-        {
-            string ID = Request["ID"];
-            object result = LYJD_BLL.LoadLYJD_CJYJBXX(ID);
-            return Json(result);
-        }
         public JsonResult LoadLYJD_DYDDRJBXX()
         {
             string ID = Request["ID"];
@@ -202,6 +186,12 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         {
             string ID = Request["ID"];
             object result = LYJD_BLL.LoadLYJD_LXSJBXX(ID);
+            return Json(result);
+        }
+        public JsonResult LoadLYJD_QZFWJBXX()
+        {
+            string ID = Request["ID"];
+            object result = LYJD_BLL.LoadLYJD_QZFWJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadLYJD_ZBYJBXX()

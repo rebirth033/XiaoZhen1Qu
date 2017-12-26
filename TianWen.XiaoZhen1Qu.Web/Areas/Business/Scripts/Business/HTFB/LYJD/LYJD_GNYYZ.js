@@ -1,11 +1,10 @@
 ﻿$(document).ready(function () {
-    $("#divFTRQ").find(".div_radio").bind("click", function () { ValidateRadio("FTRQ", ""); });
-    $("#MSJ").bind("blur", function () { ValidateSpanInput("MSJ", "门市价"); });
-    $("#MSJ").bind("focus", function () { InfoSpanInput("MSJ", "请填写门市价"); });
-    $("#YHJ_CR").bind("blur", function () { ValidateSpanInput("YHJ_CR", "优惠价_成人", "YHJ"); });
-    $("#YHJ_CR").bind("focus", function () { InfoSpanInput("YHJ_CR", "请填写优惠价_成人", "YHJ"); });
-    $("#YHJ_ET").bind("blur", function () { ValidateSpanInput("YHJ_ET", "优惠价_儿童", "YHJ"); });
-    $("#YHJ_ET").bind("focus", function () { InfoSpanInput("YHJ_ET", "请填写优惠价_儿童", "YHJ"); });
+    $("#divCYLB").find(".div_radio").bind("click", function () { ValidateRadio("CYLB", ""); });
+    $("#divCYFS").find(".div_radio").bind("click", function () { ValidateRadio("CYFS", ""); });
+    $("#JG_CR").bind("blur", function () { ValidateSpanInput("JG_CR", "价格_成人", "JG"); });
+    $("#JG_CR").bind("focus", function () { InfoSpanInput("JG_CR", "请填写价格_成人", "JG"); });
+    $("#JG_ET").bind("blur", function () { ValidateSpanInput("JG_ET", "价格_儿童", "JG"); });
+    $("#JG_ET").bind("focus", function () { InfoSpanInput("JG_ET", "请填写价格_儿童", "JG"); });
 });
 //验证往返交通
 function ValidateWFJT() {
@@ -19,66 +18,24 @@ function ValidateXCTS() {
     if (!ValidateSelect("XCTS", "XCTS_W", "请选择行程天数_晚")) return false;
     return true;
 }
-//验证优惠价
-function ValidateYHJ() {
-    if (!ValidateSpanInput("YHJ_CR", "优惠价_成人", "YHJ")) return false;
-    if (!ValidateSpanInput("YHJ_ET", "优惠价_儿童", "YHJ")) return false;
+//验证价格
+function ValidateJG() {
+    if (!ValidateSpanInput("JG_CR", "价格_成人", "JG")) return false;
+    if (!ValidateSpanInput("JG_ET", "价格_儿童", "JG")) return false;
     return true;
 }
 //验证所有
 function ValidateAll() {
-    if (ValidateXLTS("XLTS", "忘记填写线路特色啦")
-        & ValidateSelect("GNYCYFS", "CYFS", "忘记选择出游方式啦")
-        & ValidateRadio("FTRQ", "忘记选择发团日期啦")
+    if (ValidateRadio("CYFS", "忘记选择出游方式啦")
+        & ValidateRadio("CYLB", "忘记选择出游类别啦")
         & ValidateWFJT()
         & ValidateXCTS()
-        & ValidateXCAP("XCAP", "忘记填写行程安排啦")
-        & ValidateYDXZ("YDXZ", "忘记填写预定须知啦")
-        & ValidateSpanInput("MSJ", "门市价")
-        & ValidateYHJ()
-        & ValidateFYBH("FYBH", "忘记填写费用包含啦")
-        & ValidateZFXM("ZFXM", "忘记填写自费项目啦")
+        & ValidateJG()
         & ValidateXXDZ()
         & ValidateCommon())
         return true;
     else
         return false;
-}
-//验证线路特色
-function ValidateXLTS(id, message) {
-    if (xlts.getContent() === "" || xlts.getContent() === null) {
-        $("#div" + id + "Tip").css("display", "block");
-        $("#div" + id + "Tip").attr("class", "Warn");
-        $("#div" + id + "Tip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />' + message);
-        return false;
-    } else {
-        $("#div" + id + "Tip").css("display", "none");
-        return true;
-    }
-}
-//验证行程安排
-function ValidateXCAP(id, message) {
-    if (xcap.getContent() === "" || xcap.getContent() === null) {
-        $("#div" + id + "Tip").css("display", "block");
-        $("#div" + id + "Tip").attr("class", "Warn");
-        $("#div" + id + "Tip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />' + message);
-        return false;
-    } else {
-        $("#div" + id + "Tip").css("display", "none");
-        return true;
-    }
-}
-//验证预定须知
-function ValidateYDXZ(id, message) {
-    if (ydxz.getContent() === "" || ydxz.getContent() === null) {
-        $("#div" + id + "Tip").css("display", "block");
-        $("#div" + id + "Tip").attr("class", "Warn");
-        $("#div" + id + "Tip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />' + message);
-        return false;
-    } else {
-        $("#div" + id + "Tip").css("display", "none");
-        return true;
-    }
 }
 //验证费用包含
 function ValidateFYBH(id, message) {

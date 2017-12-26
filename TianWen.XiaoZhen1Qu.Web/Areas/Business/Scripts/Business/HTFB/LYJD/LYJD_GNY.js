@@ -1,6 +1,4 @@
-﻿var xlts = UE.getEditor('XLTS');
-var xcap = UE.getEditor('XCAP');
-var ydxz = UE.getEditor('YDXZ');
+﻿var xcap = UE.getEditor('XCAP');
 var fybh = UE.getEditor('FYBH');
 var zfxm = UE.getEditor('ZFXM');
 $(document).ready(function () {
@@ -10,20 +8,16 @@ $(document).ready(function () {
     BindClick("XCTS_R");
     BindClick("XCTS_W");
     LoadLYJD_GNYJBXX();
-    BCMSSetDefault();
 });
-//描述框设默认文本
-function BCMSSetDefault() {
-    //var xcap = '<span style="color: gray;font-size:12px;">请详细描述游玩的行程安排，包含住宿、用餐、游玩景点、费用说明、注意事项等，认真填写游玩描述会达到双倍的效果</span>';
-    //$("#XCAP").html(xcap);
-}
 //加载默认
 function LoadDefault() {
-    xlts.ready(function () { xlts.setHeight(200); });
     xcap.ready(function () { xcap.setHeight(200); });
-    ydxz.ready(function () { ydxz.setHeight(200); });
     fybh.ready(function () { fybh.setHeight(200); });
     zfxm.ready(function () { zfxm.setHeight(200); });
+    if ($("#span_top_right_yhm_text").html() === "") {
+        $(".div_shadow").css("display", "block");
+        $(".div_body_yhdl").css("display", "block");
+    }
 }
 //绑定下拉框
 function BindClick(type) {
@@ -62,13 +56,10 @@ function LoadLYJD_GNYJBXX() {
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
                 $("#ID").val(xml.Value.LYJD_GNYJBXX.ID);
                 //设置编辑器的内容
-                xlts.ready(function () { xlts.setContent(xml.Value.XLTSString); });
-                xcap.ready(function () { xcap.setContent(xml.Value.XCAPString); });
-                ydxz.ready(function () { ydxz.setContent(xml.Value.YDXZString); });
                 fybh.ready(function () { fybh.setContent(xml.Value.FYBHString); });
                 zfxm.ready(function () { zfxm.setContent(xml.Value.ZFXMString); });
+                xcap.ready(function () { xcap.setContent(xml.Value.XCAPString); });
 
-                $("#spanCYFS").html(xml.Value.LYJD_GNYJBXX.CYFS);
                 $("#spanWFJT_Q").html(xml.Value.LYJD_GNYJBXX.WFJT_Q);
                 $("#spanWFJT_H").html(xml.Value.LYJD_GNYJBXX.WFJT_H);
                 $("#spanXCTS_R").html(xml.Value.LYJD_GNYJBXX.XCTS_R);
@@ -76,8 +67,10 @@ function LoadLYJD_GNYJBXX() {
                 $("#spanQY").html(xml.Value.LYJD_GNYJBXX.QY);
                 $("#spanDD").html(xml.Value.LYJD_GNYJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
-                if (xml.Value.LYJD_GNYJBXX.FTRQ !== null)
-                    SetDX("FTRQ", xml.Value.LYJD_GNYJBXX.FTRQ);
+                if (xml.Value.LYJD_GNYJBXX.CYLB !== null)
+                    SetDX("CYLB", xml.Value.LYJD_GNYJBXX.CYLB);
+                if (xml.Value.LYJD_GNYJBXX.CYFS !== null)
+                    SetDX("CYFS", xml.Value.LYJD_GNYJBXX.CYFS);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -91,7 +84,6 @@ function FB() {
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
-    obj = jsonObj.AddJson(obj, "CYFS", "'" + $("#spanCYFS").html() + "'");
     obj = jsonObj.AddJson(obj, "WFJT_Q", "'" + $("#spanWFJT_Q").html() + "'");
     obj = jsonObj.AddJson(obj, "WFJT_H", "'" + $("#spanWFJT_H").html() + "'");
     obj = jsonObj.AddJson(obj, "XCTS_R", "'" + $("#spanXCTS_R").html() + "'");
@@ -99,7 +91,8 @@ function FB() {
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "FTRQ", "'" + GetDX("FTRQ") + "'");
+    obj = jsonObj.AddJson(obj, "CYLB", "'" + GetDX("CYLB") + "'");
+    obj = jsonObj.AddJson(obj, "CYFS", "'" + GetDX("CYFS") + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");
@@ -111,18 +104,14 @@ function FB() {
         data:
         {
             Json: jsonObj.JsonToString(obj),
-            XLTS: xlts.getContent(),
-            XCAP: xcap.getContent(),
-            YDXZ: ydxz.getContent(),
             FYBH: fybh.getContent(),
+            XCAP: xcap.getContent(),
             ZFXM: zfxm.getContent(),
             FWZP: GetPhotoUrls()
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

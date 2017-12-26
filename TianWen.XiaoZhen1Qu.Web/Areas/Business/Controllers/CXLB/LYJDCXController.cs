@@ -7,6 +7,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
     {
         public ILYJDCXBLL LYJDCXBLL { get; set; }
         public ActionResult LYJDCX_LXS() { GetSession(); return View(); }
+        public ActionResult LYJDCX_QZFW() { GetSession(); return View(); }
         public ActionResult LYJDCX_GNY() { GetSession(); return View(); }
         public ActionResult LYJDCX_ZBY() { GetSession(); return View(); }
         public ActionResult LYJDCX_CJY() { GetSession(); return View(); }

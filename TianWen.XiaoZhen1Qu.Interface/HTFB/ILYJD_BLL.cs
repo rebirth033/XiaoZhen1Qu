@@ -5,9 +5,6 @@ namespace TianWen.XiaoZhen1Qu.Interface
 {
     public interface ILYJD_BLL : IBaseBLL
     {
-        object SaveLYJD_CJYJBXX(JCXX jcxx, LYJD_CJYJBXX dzfjbxx, List<PHOTOS> photos);
-
-        object LoadLYJD_CJYJBXX(string ID);
 
         object SaveLYJD_DYDDRJBXX(JCXX jcxx, LYJD_DYDDRJBXX dzfjbxx, List<PHOTOS> photos);
 
@@ -28,6 +25,10 @@ namespace TianWen.XiaoZhen1Qu.Interface
         object SaveLYJD_LXSJBXX(JCXX jcxx, LYJD_LXSJBXX dzfjbxx, List<PHOTOS> photos);
 
         object LoadLYJD_LXSJBXX(string ID);
+
+        object SaveLYJD_QZFWJBXX(JCXX jcxx, LYJD_QZFWJBXX dzfjbxx, List<PHOTOS> photos);
+
+        object LoadLYJD_QZFWJBXX(string ID);
 
         object SaveLYJD_ZBYJBXX(JCXX jcxx, LYJD_ZBYJBXX dzfjbxx, List<PHOTOS> photos);
 
