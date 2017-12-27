@@ -4,14 +4,61 @@ $(document).ready(function () {
     LoadFCCondition();
     LoadHot("FCXX_ESF");
 });
+//加载头部搜索栏关键字
+function LoadHeadSearch() {
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'FWLD\',\'120\')">独立阳台</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'FWLD\',\'119\')">独立卫生间</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'FWLD\',\'60\')">邻近地铁</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'FWLD\',\'61\')">南北通透</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'FWLD\',\'59\')">精装修</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'FWLD\',\'55\')">支持月付</span>');
+}
 //加载房产查询条件
 function LoadFCCondition() {
     LoadConditionByTypeNames("'二手房售价','二手房面积','厅室','朝向','住宅类型','装修情况','出售房屋亮点'", "CODES_FC", "售价,面积,厅室,朝向,住宅类型,装修情况,房屋亮点", "SJ,PFM,S,CX,ZZLX,ZXQK,FWLD", "15,15,15,15,15,15,15");
-    LoadBody("FCXX_ESF", currentIndex);
+}
+//根据TYPENAME获取字典表
+function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAMES",
+        dataType: "json",
+        data:
+        {
+            TYPENAMES: typenames,
+            TBName: table
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                LoadDistrictCondition(xml.districts, "QY");
+                var typelist = typenames.split(',');
+                var namelist = names.split(',');
+                for (var i = 0; i < typelist.length; i++) {
+                    for (var j = 0; j < namelist.length; j++) {
+                        if (typelist[i].indexOf(namelist[j]) !== -1) {
+                            LoadCondition(_.filter(xml.list, function (value) { return typelist[i].indexOf(value.TYPENAME) !== -1; }), namelist[j], ids.split(',')[j], lengths.split(',')[j]);
+                        }
+                    }
+                }
+                LoadURLCondition();
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
 }
 //加载URL查询条件
 function LoadURLCondition() {
-    SelectURLCondition(getUrlParam("FWLD"));
+    if (getUrlParam("FWLD") !== null)
+        SelectURLCondition(getUrlParam("FWLD"));
+    else
+        LoadBody("FCXX_ESF", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -32,9 +79,9 @@ function SelectURLCondition(obj) {
     ShowSelectCondition("FCXX_ESF");
 }
 //加载主体部分
-function LoadBody(TYPE, PageIndex) {
+function LoadBody(TYPE, PageIndex, OrderColumn, OrderType) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("SJ,PFM,QY,S,CX,ZZLX,ZXQK,FWLD");
+    var condition = GetAllCondition("SJ,PFM,QY,S,CX,ZZLX,ZXQK,FWLD,SF");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/FCCX/LoadFCXX",
@@ -44,7 +91,9 @@ function LoadBody(TYPE, PageIndex) {
             TYPE: TYPE,
             Condition: condition,
             PageSize: 5,
-            PageIndex: PageIndex
+            PageIndex: PageIndex,
+            OrderColumn: OrderColumn,
+            OrderType: OrderType
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -110,9 +159,47 @@ function LoadHotInfo(obj) {
     var html = "";
     html += ('<li onclick="OpenXXXX(\'FCXX_ESF\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_right_xq">' + obj.XQMC + '</p>');
+    html += ('<p class="p_li_body_right_xq">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_right_cs">' + obj.S + '室 / ' + obj.PFM + '平米 / ' + obj.ZXQK + '</p>');
     html += ('<p class="p_li_body_right_jg">' + obj.SJ + '万元</p>');
     html += ('</li>');
     $("#ul_body_right").append(html);
+}
+//根据条件查询
+function SearchByCondition(type) {
+    $("#ul_condition_body_SF").find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    if (type === "GR")
+        $("#ul_condition_body_SF").find(".li_condition_body:eq(1)").addClass("li_condition_body_active");
+    if (type === "JJR")
+        $("#ul_condition_body_SF").find(".li_condition_body:eq(2)").addClass("li_condition_body_active");
+    LoadBody("FCXX_ESF", 1);
+}
+//根据条件排序
+function OrderByCondition(type, obj) {
+    ChangeCXItem(obj);
+    var ordertype = "";
+    if (type === "SJ") {
+        $("#li_body_head_sort_item_SJ").find("i").each(function () {
+            if ($(this).attr("class").indexOf("up") !== -1)
+                ordertype = "ASC";
+            else
+                ordertype = "DESC";
+        });
+        LoadBody("FCXX_ESF", 1, "SJ", ordertype);
+    }
+    else {
+        $("#li_body_head_sort_item_GXSJ").find("i").each(function () {
+            if ($(this).attr("class").indexOf("up") !== -1)
+                ordertype = "ASC";
+            else
+                ordertype = "DESC";
+        });
+        LoadBody("FCXX_ESF", 1, "ZXGXSJ", ordertype);
+    }
+}
+//搜索栏备注导航
+function OpenSS(TYPE, ID) {
+    window.open(getRootPath() + "/Business/FCCX/FCCX_ZZF?LBID=13" + "&" + TYPE + "=" + ID);
 }

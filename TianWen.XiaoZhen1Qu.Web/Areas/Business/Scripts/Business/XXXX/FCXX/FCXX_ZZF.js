@@ -1,7 +1,20 @@
 ﻿var right = 0;
 $(document).ready(function () {
-
+    LoadHeadSearch();
 });
+function LoadHeadSearch() {
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'FWLD\',\'120\')">独立阳台</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'FWLD\',\'119\')">独立卫生间</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'FWLD\',\'60\')">邻近地铁</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'FWLD\',\'61\')">南北通透</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'FWLD\',\'59\')">精装修</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'FWLD\',\'55\')">支持月付</span>');
+}
 //加载默认
 function LoadDefault() {
     $.ajax({
@@ -422,4 +435,8 @@ function OpenXGLM(lbname, lbid) {
         window.open(getRootPath() + "/Business" + "/FCCX/" + lbname.replace("FC_", "FCCX_") + "?LBID=" + lbid);
     if (lbname.indexOf("LYJD_") !== -1)
         window.open(getRootPath() + "/Business" + "/LYJDCX/" + lbname.replace("LYJD_", "LYJDCX_") + "?LBID=" + lbid);
+}
+//搜索栏备注导航
+function OpenSS(TYPE, ID) {
+    window.open(getRootPath() + "/Business/FCCX/FCCX_ZZF?LBID=13" + "&" + TYPE + "=" + ID);
 }
