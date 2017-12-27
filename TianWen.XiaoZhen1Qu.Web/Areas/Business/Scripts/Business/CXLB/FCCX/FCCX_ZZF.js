@@ -147,18 +147,24 @@ function SearchByCondition(type) {
 }
 //根据条件排序
 function OrderByCondition(type, obj) {
-    $(obj).find("i").each(function () {
-        if (type === "ZJ") {
+    ChangeCXItem(obj);
+    var ordertype = "";
+    if (type === "ZJ") {
+        $("#li_body_head_sort_item_ZJ").find("i").each(function () {
             if ($(this).attr("class").indexOf("up") !== -1)
-                LoadBody("FCXX_ZZF", 1, "ZJ", "ASC");
+                ordertype = "ASC";
             else
-                LoadBody("FCXX_ZZF", 1, "ZJ", "DESC");
-        }
-        if (type === "SJ") {
+                ordertype = "DESC";
+        });
+        LoadBody("FCXX_ZZF", 1, "ZJ", ordertype);
+    }
+    else {
+        $("#li_body_head_sort_item_SJ").find("i").each(function () {
             if ($(this).attr("class").indexOf("up") !== -1)
-                LoadBody("FCXX_ZZF", 1, "ZXGXSJ", "ASC");
+                ordertype = "ASC";
             else
-                LoadBody("FCXX_ZZF", 1, "ZXGXSJ", "DESC");
-        }
-    });
+                ordertype = "DESC";
+        });
+        LoadBody("FCXX_ZZF", 1, "ZXGXSJ", ordertype);
+    }
 }

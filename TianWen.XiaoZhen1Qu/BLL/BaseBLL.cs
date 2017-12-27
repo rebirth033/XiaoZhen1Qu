@@ -551,10 +551,38 @@ namespace TianWen.XiaoZhen1Qu.BLL
         //获取排序条件
         public string GetOrder(string OrderColumn, string OrderType)
         {
+            string result = string.Empty;
             if (!string.IsNullOrEmpty(OrderColumn) && !string.IsNullOrEmpty(OrderType))
-                return " ORDER BY " + OrderColumn + " " + OrderType;
-            else
-                return " ORDER BY ZXGXSJ";
+            {
+                string[] columns = OrderColumn.Split(',');
+                string[] types = OrderType.Split(',');
+                for (int i = 0; i < columns.Length; i++)
+                {
+                    if (i == 0)
+                    {
+                        if (!string.IsNullOrEmpty(columns[i]) && !string.IsNullOrEmpty(types[i]))
+                        {
+                            if (columns[i] == "ZJ")
+                                result += " ORDER BY TO_NUMBER(" + columns[i] + ") " + types[i];
+                            else
+                                result += " ORDER BY " + columns[i] + " " + types[i];
+                        }
+                    }
+                    else
+                    {
+                        if (!string.IsNullOrEmpty(columns[i]) && !string.IsNullOrEmpty(types[i]))
+                        {
+                            if (columns[i] == "ZJ")
+                                result += ",TO_NUMBER(" + columns[i] + ") " + types[i];
+                            else
+                                result += "," + columns[i] + " " + types[i];
+                        }
+                    }
+                }
+            }
+            if (string.IsNullOrEmpty(result))
+                result = " ORDER BY ZXGXSJ";
+            return result;
         }
 
         //获取个人信息

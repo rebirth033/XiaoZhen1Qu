@@ -12,7 +12,6 @@
     $("#span_condition_toggle").bind("click", ToggleCondition);
     $("#div_condition_body").html('');
     GetHeadNav();
-    BindCXItem();
 });
 //获取头部导航
 function GetHeadNav() {
@@ -76,27 +75,25 @@ function BindBodyNav() {
     });
 }
 //列表排序绑定事件
-function BindCXItem() {
-    $(".li_body_head_sort_item").bind("click", function () {
-        $(".li_body_head_sort_item").each(function () {
-            $(this).css("color", "rgb(51, 51, 51)");
-            $(this).find("i").each(function () {
-                if ($(this).attr("class").indexOf("up") !== -1)
-                    $(this).attr("class", "i_body_left_sort_up_gray");
-                else
-                    $(this).attr("class", "i_body_left_sort_down_gray");
-            });
+function ChangeCXItem(obj) {
+    $(".li_body_head_sort_item").each(function () {
+        $(this).css("color", "rgb(51, 51, 51)");
+        $(this).find("i").each(function () {
+            if ($(this).attr("class").indexOf("up") !== -1)
+                $(this).attr("class", "i_body_left_sort_up_gray");
+            else
+                $(this).attr("class", "i_body_left_sort_down_gray");
         });
-        if ($(this).css("color") === "rgb(51, 51, 51)") {
-            $(this).css("color", "rgb(188, 107, 166)");
-            $(this).find("i").each(function () {
-                if ($(this).attr("class").indexOf("up") !== -1)
-                    $(this).attr("class", "i_body_left_sort_down_orange");
-                else
-                    $(this).attr("class", "i_body_left_sort_up_orange");
-            });
-        }
     });
+    if ($(obj).css("color") === "rgb(51, 51, 51)") {
+        $(obj).css("color", "rgb(188, 107, 166)");
+        $(obj).find("i").each(function () {
+            if ($(this).attr("class").indexOf("up") !== -1)
+                $(this).attr("class", "i_body_left_sort_down_orange");
+            else
+                $(this).attr("class", "i_body_left_sort_up_orange");
+        });
+    }
 }
 //显示筛选条件
 function ShowSelectCondition(tbname) {
