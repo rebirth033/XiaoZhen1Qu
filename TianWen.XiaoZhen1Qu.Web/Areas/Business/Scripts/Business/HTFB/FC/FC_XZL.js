@@ -70,6 +70,9 @@ function LoadFC_XZLJBXX() {
                 $("#ID").val(xml.Value.FC_XZLJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
+                if (xml.Value.FC_XZLJBXX.SF !== null) {
+                    SetDX("SF", xml.Value.FC_XZLJBXX.SF);
+                }
                 if (xml.Value.FC_XZLJBXX.GQ !== null){
                     SetDX("GQ", xml.Value.FC_XZLJBXX.GQ);
                     SetGQ(xml.Value.FC_XZLJBXX.GQ);
@@ -80,7 +83,6 @@ function LoadFC_XZLJBXX() {
                     SetDX("KZCGS", xml.Value.FC_XZLJBXX.KZCGS);
                 $("#spanQY").html(xml.Value.FC_XZLJBXX.QY);
                 $("#spanDD").html(xml.Value.FC_XZLJBXX.DD);
-                $("#spanZJDW").html(xml.Value.FC_XZLJBXX.ZJDW);
                 $("#spanYFFS").html(xml.Value.FC_XZLJBXX.YFFS);
                 LoadPhotos(xml.Value.Photos);
             }
@@ -100,9 +102,10 @@ function FB() {
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "YFFS", "'" + $("#spanYFFS").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
+    obj = jsonObj.AddJson(obj, "SF", "'" + GetDX("SF") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
     if (GetDX("GQ") === "出租")
-        obj = jsonObj.AddJson(obj, "ZJDW", "'" + $("#spanZJDW").html() + "'");
+        obj = jsonObj.AddJson(obj, "ZJDW", "'元/月'");
     if (GetDX("GQ") === "出售")
         obj = jsonObj.AddJson(obj, "ZJDW", "'万元'");
     obj = jsonObj.AddJson(obj, "XZLLX", "'" + GetDX("XZLLX") + "'");

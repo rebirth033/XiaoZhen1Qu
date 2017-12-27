@@ -1,4 +1,5 @@
 ﻿$(document).ready(function () {
+    $("#divSF").find(".div_radio").bind("click", function () { ValidateRadio("SF", ""); });
     $("#divGQ").find(".div_radio").bind("click", function () { ValidateRadio("GQ", "忘记选择供求啦"); });
     $("#divXZLLX").find(".div_radio").bind("click", function () { ValidateRadio("XZLLX", "忘记选择类型啦"); });
     $("#divKZCGS").find(".div_radio").bind("click", function () { ValidateRadio("KZCGS", "忘记选择可注册公司啦"); });
@@ -17,6 +18,7 @@
 function ValidateAll() {
     if (GetGQ() !== "出售") {
         if (ValidateRadio("GQ", "忘记选择供求啦")
+            & ValidateRadio("SF", "忘记选择身份啦")
             & ValidateRadio("XZLLX", "忘记选择类型啦")
             & ValidateRadio("KZCGS", "忘记选择可注册公司啦")
             & ValidateBCMS("BCMS", "忘记填写补充描述啦")
@@ -31,6 +33,7 @@ function ValidateAll() {
             return false;
     } else {
         if (ValidateRadio("GQ", "忘记选择供求啦")
+            & ValidateRadio("SF", "忘记选择身份啦")
             & ValidateRadio("XZLLX", "忘记选择类型啦")
             & ValidateRadio("KZCGS", "忘记选择可注册公司啦")
             & ValidateBCMS("BCMS", "忘记填写补充描述啦")
