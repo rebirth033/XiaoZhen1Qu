@@ -8,9 +8,24 @@
 }
 @section Section_Body {
     <div id="myTabContent" class="div_content">
-        <div id="divFLYGQ" class="div_split" style="display: block; text-align: left">
-            <span class="span_split">分类与供求</span>
-            <em class="em_split"></em>
+    <div id="divFLYGQ" class="div_split" style="display: block; text-align: left">
+        <span class="span_split">分类与供求</span>
+        <em class="em_split"></em>
+    </div>
+        <div id="divSF" class="div_row">
+            <div class="div_row_left font_two">
+                <span class="span_required">*</span>
+                <span class="spanFWCZ">身份</span>
+            </div>
+            <div class="div_row_right">
+                <div class="div_radio" id="div_sf_gr">
+                    <img class="img_radio" id="img_sf_gr" /><label class="label_radio">个人</label>
+                </div>
+                <div class="div_radio" id="div_sf_jjr">
+                    <img class="img_radio" id="img_sf_jjr" /><label class="label_radio">经纪人</label>
+                </div>
+            </div>
+            <div id="divSFTip" class="Warn" style="z-index: 999;"></div>
         </div>
         <div id="divFL" class="div_row">
             <div class="div_row_left font_two">
@@ -162,15 +177,15 @@
                     <img class="img_radio" id="img_sflj_f" /><label class="label_radio">否</label>
                 </div>
             </div>
-            <div id="divSFLJTip" class="Warn" style="z-index: 998;"></div>
+            <div id="divSFLJTip" class="Warn" style="z-index: 980;"></div>
         </div>
-        <div id="divSZQY" class="div_row" style="z-index: 972;">
+        <div id="divSZQY" class="div_row" style="z-index: 979;">
             <div class="div_row_left">
                 <span class="span_required">*</span>
                 <span class="spanFWCZ">商铺地址</span>
             </div>
             <div class="div_row_right">
-                <div id="divQYText" class="div_select_out SRK" style="z-index: 971;">
+                <div id="divQYText" class="div_select_out SRK" style="z-index: 979;">
                     <div id="divQYSpan" class="div_select_in" style="border: none; margin-top: 6px;">
                         <input type="hidden" id="QYCode" />
                         <span id="spanQY" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择区域</span>
@@ -179,7 +194,7 @@
                     <div id="divQY" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
                     </div>
                 </div>
-                <div id="divDDText" class="div_select_out SRK" style="z-index: 970;">
+                <div id="divDDText" class="div_select_out SRK" style="z-index: 979;">
                     <div id="divDDSpan" class="div_select_in" style="border: none; margin-top: 6px;">
                         <span id="spanDD" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择地段</span>
                         <div class="span_select_arrow"></div>
@@ -187,11 +202,11 @@
                     <div id="divDD" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
                     </div>
                 </div>
-                <input id="JTDZ" column="JTDZ" class="input_input" type="text" placeholder="请选择具体地址" style="width: 320px; text-align: left; padding-left: 12px;" />
-                <div id="divSZQYTip" class="Warn" style="z-index: 969;"></div>
+                <input id="JTDZ" column="JTDZ" class="input_input" type="text" placeholder="请选择具体地址" maxlength="50" style="width: 320px; text-align: left; padding-left: 12px;" />
+                <div id="divSZQYTip" class="Warn" style="z-index: 978;"></div>
             </div>
         </div>
-        <div id="divSPRJ" class="div_row" style="z-index: 980;">
+        <div id="divSPRJ" class="div_row" style="z-index: 968;">
             <div class="div_row_left">
                 <span class="span_required">&nbsp;</span>
                 <span class="spanFWCZ">商铺容积</span>
@@ -199,66 +214,66 @@
             <div class="div_row_right">
                 <span id="spanMK" class="span_spaninput SRK" style="display: inline-block;">
                     <span class="spaninput_fontcolor" style="margin-left: 8px">面宽</span>
-                    <input class="input_spaninput spaninput_fontcolor" id="MK" maxlength="9" column="MK" type="text" style="width: 80px;" />
+                    <input class="input_spaninput spaninput_fontcolor" id="MK" maxlength="5" column="MK" type="text" style="width: 80px;" />
                     <span class="spaninput_fontcolor">米</span>
                 </span>
                 <span id="spanJS" class="span_spaninput SRK" style="display: inline-block;">
                     <span class="spaninput_fontcolor" style="margin-left: 8px">进深</span>
-                    <input class="input_spaninput spaninput_fontcolor" id="JS" maxlength="9" column="JS" type="text" style="width: 80px;" />
+                    <input class="input_spaninput spaninput_fontcolor" id="JS" maxlength="5" column="JS" type="text" style="width: 80px;" />
                     <span class="spaninput_fontcolor">米</span>
                 </span>
                 <span id="spanCG" class="span_spaninput SRK" style="display: inline-block;">
                     <span class="spaninput_fontcolor" style="margin-left: 8px">层高</span>
-                    <input class="input_spaninput spaninput_fontcolor" id="CG" maxlength="9" column="CG" type="text" style="width: 80px;" />
+                    <input class="input_spaninput spaninput_fontcolor" id="CG" maxlength="5" column="CG" type="text" style="width: 80px;" />
                     <span class="spaninput_fontcolor">米</span>
                 </span>
             </div>
-            <div id="divSPRJTip" class="Warn" style="z-index: 979;"></div>
+            <div id="divSPRJTip" class="Warn" style="z-index: 967;"></div>
         </div>
-        <div id="divLC" class="div_row" style="z-index: 974">
+        <div id="divLC" class="div_row" style="z-index: 966">
             <div class="div_row_left">
                 <span class="span_required">&nbsp;</span>
                 <span class="spanFWCZ">楼层分布</span>
             </div>
             <div class="div_row_right">
                 <span id="spanC" class="span_spaninput SRK">
-                    <span class="spaninput_fontcolor" style="margin-left: 8px; width: 32px; display: inline-block;">第</span>
-                    <input id="C" maxlength="2" column="C" class="input_spaninput spaninput_fontcolor" type="text" style="width: 80px" />
+                    <span class="spaninput_fontcolor" style="margin-left: 8px; width: 24px; display: inline-block;">第</span>
+                    <input id="C" maxlength="4" column="C" class="input_spaninput spaninput_fontcolor" type="text" style="width: 80px" />
                     <span class="spaninput_fontcolor">层</span>
                 </span>
                 <span id="spanGJC" class="span_spaninput SRK">
-                    <span class="spaninput_fontcolor" style="margin-left: 8px; width: 32px; display: inline-block;">共</span>
-                    <input id="GJC" maxlength="2" column="GJC" class="input_spaninput spaninput_fontcolor" type="text" style="width: 80px" />
+                    <span class="spaninput_fontcolor" style="margin-left: 8px; width: 24px; display: inline-block;">共</span>
+                    <input id="GJC" maxlength="4" column="GJC" class="input_spaninput spaninput_fontcolor" type="text" style="width: 80px" />
                     <span class="spaninput_fontcolor">层</span>
                 </span>
-                <div id="divLCTip" class="Warn" style="z-index: 973;"></div>
+                <div id="divLCTip" class="Warn" style="z-index: 965;"></div>
             </div>
         </div>
-        <div id="divWYSD" class="div_row" style="z-index: 980;">
+        <div id="divWYSD" class="div_row" style="z-index: 964;">
             <div class="div_row_left">
                 <span class="span_required">&nbsp;</span>
                 <span class="spanFWCZ">水电物业</span>
             </div>
             <div class="div_row_right">
-                <span id="spanJS" class="span_spaninput SRK" style="display: inline-block;">
+                <span id="spanSFEI" class="span_spaninput SRK" style="display: inline-block;">
                     <span class="spaninput_fontcolor" style="margin-left: 8px">水费</span>
-                    <input class="input_spaninput spaninput_fontcolor" id="SF" maxlength="9" column="SF" type="text" style="width: 60px;" />
+                    <input class="input_spaninput spaninput_fontcolor" id="SFEI" maxlength="5" column="SFEI" type="text" style="width: 60px;" />
                     <span class="spaninput_fontcolor">元/吨</span>
                 </span>
-                <span id="spanCG" class="span_spaninput SRK" style="display: inline-block;">
+                <span id="spanDF" class="span_spaninput SRK" style="display: inline-block;">
                     <span class="spaninput_fontcolor" style="margin-left: 8px">电费</span>
-                    <input class="input_spaninput spaninput_fontcolor" id="DF" maxlength="9" column="DF" type="text" style="width: 60px;" />
+                    <input class="input_spaninput spaninput_fontcolor" id="DF" maxlength="5" column="DF" type="text" style="width: 60px;" />
                     <span class="spaninput_fontcolor">元/度</span>
                 </span>
                 <span id="spanWYF" class="span_spaninput SRK" style="display: inline-block; width: 200px;">
                     <span class="spaninput_fontcolor" style="margin-left: 8px">物业费</span>
-                    <input class="input_spaninput spaninput_fontcolor" id="WYF" maxlength="9" column="WYF" type="text" style="width: 60px;" />
+                    <input class="input_spaninput spaninput_fontcolor" id="WYF" maxlength="5" column="WYF" type="text" style="width: 60px;" />
                     <span class="spaninput_fontcolor">元/㎡/月</span>
                 </span>
             </div>
-            <div id="divMKTip" class="Warn" style="z-index: 979;"></div>
+            <div id="divMKTip" class="Warn" style="z-index: 963;"></div>
         </div>
-        <div id="divSPPT" class="div_row" style="z-index: 968">
+        <div id="divSPPT" class="div_row" style="z-index: 962">
             <div class="div_row_left">
                 <span class="span_required"></span>
                 <span>商铺配套</span>

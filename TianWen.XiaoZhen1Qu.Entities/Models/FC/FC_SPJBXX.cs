@@ -23,6 +23,12 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string JCXXID { get; set; }
 
         /// <summary>
+        /// 身份
+        /// </summary>
+        [Property]
+        public virtual string SF { get; set; }
+
+        /// <summary>
         /// 分类
         /// </summary>
         [Property]
@@ -146,7 +152,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// 水费
         /// </summary>
         [Property]
-        public virtual string SF { get; set; }
+        public virtual string SFEI { get; set; }
 
         /// <summary>
         /// 物业费

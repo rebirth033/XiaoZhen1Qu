@@ -31,5 +31,6 @@ namespace TianWen.XiaoZhen1Qu.Entities.ViewModels.FC
         public string DF { get; set; }
         public string WYF { get; set; }
         public string YFFS { get; set; }
+        public string SFEI { get; set; }
     }
 }

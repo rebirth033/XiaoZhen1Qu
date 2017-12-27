@@ -1,7 +1,9 @@
 ﻿$(document).ready(function () {
+    $("#divSF").find(".div_radio").bind("click", function () { ValidateRadio("SF", ""); });
     $("#divFL").find(".div_radio").bind("click", function () { ValidateRadio("FL", ""); });
     $("#divGQ").find(".div_radio").bind("click", function () { ValidateRadio("GQ", ""); });
     $("#divJYZT").find(".div_radio").bind("click", function () { ValidateRadio("JYZT", ""); });
+    $("#divSFLJ").find(".div_radio").bind("click", function () { ValidateRadio("SFLJ", ""); });
     $("#LSJY").bind("blur", ValidateLSJY);
     $("#LSJY").bind("focus", InfoLSJY);
     $("#DD").bind("blur", ValidateDD);
@@ -17,8 +19,10 @@
 function ValidateAll() {
     if (GetGQ() !== "出售") {
         if (ValidateRadio("FL", "忘记选择分类啦")
+            & ValidateRadio("SF", "忘记选择身份啦")
             & ValidateRadio("GQ", "忘记选择供求啦")
             & ValidateRadio("JYZT", "忘记选择经营状态啦")
+            & ValidateRadio("SFLJ", "忘记选择是否临街啦")
             & ValidateSelect("LX", "SPLX", "请选择商铺类型")
             & ValidateSelect("SPJYHY", "JYHY", "请选择经营行业")
             & ValidateBCMS("BCMS", "忘记填写补充描述啦")
@@ -31,8 +35,10 @@ function ValidateAll() {
             return false;
     } else {
         if (ValidateRadio("FL", "忘记选择分类啦")
+            & ValidateRadio("SF", "忘记选择身份啦")
             & ValidateRadio("GQ", "忘记选择供求啦")
             & ValidateSelect("LX", "SPLX", "请选择商铺类型")
+            & ValidateRadio("SFLJ", "忘记选择是否临街啦")
             & ValidateBCMS("BCMS", "忘记填写补充描述啦")
             & ValidateXXDZ()
             & ValidateSJ()
