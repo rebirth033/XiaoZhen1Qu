@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    $("#divCZFS").find(".div_radio").bind("click", function () { ValidateRadio("CZFS", "忘记填写出租方式啦"); });
+    $("#divSF").find(".div_radio").bind("click", function () { ValidateRadio("SF", ""); });
     $("#XQMC").bind("blur", ValidateXQMC);
     $("#XQMC").bind("focus", InfoXQMC);
     $("#S").bind("blur", ValidateFWLX_S);
@@ -45,7 +45,8 @@ function ValidateFWSJ() {
 }
 //验证所有
 function ValidateAll() {
-    if (ValidateBCMS("BCMS", "忘记填写房源描述啦")
+    if (ValidateRadio("SF", "忘记选择身份啦")
+        & ValidateBCMS("BCMS", "忘记填写房源描述啦")
         & ValidateFWQK()
         & ValidateXQMC()
         & ValidateFWLX()
@@ -58,6 +59,7 @@ function ValidateAll() {
 }
 
 function ValidateXQMC() {
+    if ($("#XQDZ").val() === "" || ($("#XQMC").val() !== $("#XQDZ").val())) $("#XQMC").val("");
     if ($("#XQMC").val() === "" || $("#XQMC").val() === null) {
         $("#divXQMCTip").css("display", "block");
         $("#divXQMCTip").attr("class", "Warn");

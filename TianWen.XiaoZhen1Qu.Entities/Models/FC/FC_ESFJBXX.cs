@@ -26,6 +26,12 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string JCXXID { get; set; }
 
         /// <summary>
+        /// 身份
+        /// </summary>
+        [Property]
+        public virtual string SF { get; set; }
+
+        /// <summary>
         /// 小区名称
         /// </summary>
         [Property]
@@ -54,50 +60,77 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// </summary>
         [Property]
         public virtual string PFM { get; set; }
+
         /// <summary>
         /// 朝向
         /// </summary>
         [Property]
         public virtual string CX { get; set; }
+
         /// <summary>
         /// 装修情况
         /// </summary>
         [Property]
         public virtual string ZXQK { get; set; }
+
         /// <summary>
         /// 住宅类型
         /// </summary>
         [Property]
         public virtual string ZZLX { get; set; }
+
         /// <summary>
         /// 层
         /// </summary>
         [Property]
         public virtual string C { get; set; }
+
         /// <summary>
         /// 共几层
         /// </summary>
         [Property]
         public virtual string GJC { get; set; }
+
         /// <summary>
         /// 售价
         /// </summary>
         [Property]
         public virtual string SJ { get; set; }
+
         /// <summary>
         /// 房屋亮点
         /// </summary>
         [Property]
         public virtual string FWLD { get; set; }
+
         /// <summary>
         /// 房源描述
         /// </summary>
         [Property]
         public virtual byte[] BCMS { get; set; }
+
         /// <summary>
         /// 可入住时间
         /// </summary>
         [Property]
         public virtual DateTime KRZSJ { get; set; }
+
+        /// <summary>
+        /// 产权年限
+        /// </summary>
+        [Property]
+        public virtual string CQNX { get; set; }
+
+        /// <summary>
+        /// 产权类型
+        /// </summary>
+        [Property]
+        public virtual string CQLX { get; set; }
+
+        /// <summary>
+        /// 建筑年代
+        /// </summary>
+        [Property]
+        public virtual string JZND { get; set; }
     }
 }

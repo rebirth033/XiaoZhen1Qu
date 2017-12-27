@@ -1,7 +1,6 @@
 ﻿$(document).ready(function () {
     $("#XQMC").bind("keyup", LoadXQMC);
     $("#KRZSJ").datepicker({ minDate: 0 });
-    $("body").bind("click", function () { Close("_XZQ"); Close("QY"); Close("SQ"); });
     BindClick("FWCX");
     BindClick("ZXQK");
     BindClick("ZZLX");
@@ -14,22 +13,22 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "FWCX") {
-            LoadCODESByTYPENAME("朝向", "FWCX", "CODES_FC");
+            LoadCODESByTYPENAME("朝向", "FWCX", "CODES_FC", Bind, "FWQK", "FWCX", "");
         }
         if (type === "ZXQK") {
-            LoadCODESByTYPENAME("装修情况", "ZXQK", "CODES_FC");
+            LoadCODESByTYPENAME("装修情况", "ZXQK", "CODES_FC", Bind, "FWQK", "ZXQK", "");
         }
         if (type === "ZZLX") {
-            LoadCODESByTYPENAME("住宅类型", "ZZLX", "CODES_FC");
+            LoadCODESByTYPENAME("住宅类型", "ZZLX", "CODES_FC", Bind, "FWQK", "ZZLX", "");
         }
         if (type === "CQNX") {
-            LoadCODESByTYPENAME("产权年限", "CQNX", "CODES_FC");
+            LoadCODESByTYPENAME("产权年限", "CQNX", "CODES_FC", Bind, "CQMS", "CQNX", "");
         }
         if (type === "CQLX") {
-            LoadCODESByTYPENAME("产权类型", "CQLX", "CODES_FC");
+            LoadCODESByTYPENAME("产权类型", "CQLX", "CODES_FC", Bind, "CQMS", "CQLX", "");
         }
         if (type === "JZND") {
-            LoadCODESByTYPENAME("建筑年代", "JZND", "CODES_FC");
+            LoadCODESByTYPENAME("建筑年代", "JZND", "CODES_FC", Bind, "CQMS", "JZND", "");
         }
     });
 }
@@ -238,7 +237,9 @@ function LoadDuoX(type, id) {
 function SelectXQMC(obj) {
     var array = obj.innerText.split(' ');
     $("#XQMC").val(array[0]);
+    $("#XQDZ").val(array[0]);
     $("#divXQMClist").css("display", "none");
+    ValidateXQMC();
 }
 //加载
 function LoadFC_ZZFXX() {
@@ -255,11 +256,17 @@ function LoadFC_ZZFXX() {
                 var jsonObj = new JsonDB("myTabContent");
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.FC_ESFJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
+                if (xml.Value.FC_ESFJBXX.SF !== null)
+                    SetDX("SF", xml.Value.FC_ESFJBXX.SF);
                 if (xml.Value.FC_ESFJBXX.FWLD !== null)
                     SetDuoX("FWLD", xml.Value.FC_ESFJBXX.FWLD);
                 $("#spanFWCX").html(xml.Value.FC_ESFJBXX.CX);
                 $("#spanZXQK").html(xml.Value.FC_ESFJBXX.ZXQK);
                 $("#spanZZLX").html(xml.Value.FC_ESFJBXX.ZZLX);
+                $("#spanCQNX").html(xml.Value.FC_ESFJBXX.CQNX);
+                $("#spanCQLX").html(xml.Value.FC_ESFJBXX.CQLX);
+                $("#spanJZND").html(xml.Value.FC_ESFJBXX.JZND);
+                $("#XQDZ").val(xml.Value.FC_ESFJBXX.XQMC);
                 //设置编辑器的内容
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
                 if (xml.Value.FC_ESFJBXX.KRZSJ.ToString("yyyy-MM-dd") !== "1-1-1")
@@ -282,6 +289,10 @@ function FB() {
     obj = jsonObj.AddJson(obj, "CX", "'" + $("#spanFWCX").html() + "'");
     obj = jsonObj.AddJson(obj, "ZXQK", "'" + $("#spanZXQK").html() + "'");
     obj = jsonObj.AddJson(obj, "ZZLX", "'" + $("#spanZZLX").html() + "'");
+    obj = jsonObj.AddJson(obj, "CQNX", "'" + $("#spanCQNX").html() + "'");
+    obj = jsonObj.AddJson(obj, "CQLX", "'" + $("#spanCQLX").html() + "'");
+    obj = jsonObj.AddJson(obj, "JZND", "'" + $("#spanJZND").html() + "'");
+    obj = jsonObj.AddJson(obj, "SF", "'" + GetDX("SF") + "'");
     obj = jsonObj.AddJson(obj, "FWLD", "'" + GetDuoX("FWLD") + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     if ($("#KRZSJ").val() !== "")
