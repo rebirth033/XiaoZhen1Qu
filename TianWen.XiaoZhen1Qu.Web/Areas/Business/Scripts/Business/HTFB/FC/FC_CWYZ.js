@@ -1,4 +1,5 @@
 ﻿$(document).ready(function () {
+    $("#divSF").find(".div_radio").bind("click", function () { ValidateRadio("SF", ""); });
     $("#divGQ").find(".div_radio").bind("click", function () { ValidateRadio("GQ", "忘记选择供求啦"); });
     $("#LPMC").bind("blur", ValidateLPMC);
     $("#LPMC").bind("focus", InfoLPMC);
@@ -15,6 +16,7 @@
 function ValidateAll() {
     if (GetGQ() === "出售") {
         if (ValidateRadio("GQ", "忘记选择供求啦")
+            & ValidateRadio("SF", "忘记选择身份啦")
             & ValidateBCMS("BCMS", "忘记填写补充描述啦")
             & ValidateSZQY()
             & ValidateSJ()
@@ -26,6 +28,7 @@ function ValidateAll() {
     }
     else {
         if (ValidateRadio("GQ", "忘记选择供求啦")
+        & ValidateRadio("SF", "忘记选择身份啦")
         & ValidateBCMS("BCMS", "忘记填写补充描述啦")
         & ValidateSZQY()
         & ValidateZJ()
