@@ -12,10 +12,9 @@ namespace TianWen.XiaoZhen1Qu.Entities.ViewModels.FC
         //房产信息
         public string ID { get; set; }
         public string ZJ { get; set; }
-        public string ZDZQ { get; set; }
-        public string ZJDW { get; set; }
-        public string YZRS { get; set; }
-        public string MJ { get; set; }
+        public string QY { get; set; }
+        public string DD { get; set; }
+        public string JTDZ { get; set; }
         public string FWLX { get; set; }
         public string RZSJ_H { get; set; }
         public string RZSJ_M { get; set; }

@@ -1,21 +1,12 @@
-﻿var jygz = UE.getEditor('JYGZ');
-$(document).ready(function () {
+﻿$(document).ready(function () {
     BindClick("FWLX");
-    BindClick("ZJDW");
     LoadDuoX("日租短租房屋配置", "FWPZ");
 });
-//加载默认
-function LoadDefault() {
-    jygz.ready(function () { jygz.setHeight(200); });
-}
 //绑定下拉框
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "FWLX") {
-            LoadCODESByTYPENAME("短租房类型", "FWLX", "CODES_FC");
-        }
-        if (type === "ZJDW") {
-            LoadCODESByTYPENAME("租金单位", "ZJDW", "CODES_FC");
+            LoadCODESByTYPENAME("短租房类型", "FWLX", "CODES_FC", Bind, "FWLX", "FWLX", "");
         }
     });
 }
@@ -72,13 +63,16 @@ function LoadFC_DZFJBXX() {
                 var jsonObj = new JsonDB("myTabContent");
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.FC_DZFJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
+                $("#spanQY").html(xml.Value.FC_DZFJBXX.QY);
+                $("#spanDD").html(xml.Value.FC_DZFJBXX.DD);
+                $("#spanFWLX").html(xml.Value.FC_DZFJBXX.FWLX);
+                if (xml.Value.FC_DZFJBXX.FWPZ !== null)
+                    SetDuoX("FWPZ", xml.Value.FC_DZFJBXX.FWPZ);
+                if (xml.Value.FC_DZFJBXX.FKFS !== null)
+                    SetDuoX("FKFS", xml.Value.FC_DZFJBXX.FKFS);
                 $("#ID").val(xml.Value.FC_DZFJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
-                xlts.ready(function () { xlts.setContent(xml.Value.XLTSString); });
-                $("#spanFWLX").html(xml.Value.FC_DZFJBXX.FWLX);
-                $("#spanZJDW").html(xml.Value.FC_DZFJBXX.ZJDW);
-                $("#JYGZ").html(xml.Value.FC_DZFJBXX.JYGZ);
                 LoadPhotos(xml.Value.Photos);
             }
         },
@@ -94,7 +88,10 @@ function FB() {
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "FWLX", "'" + $("#spanFWLX").html() + "'");
-    obj = jsonObj.AddJson(obj, "ZJDW", "'" + $("#spanZJDW").html() + "'");
+    obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
+    obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
+    obj = jsonObj.AddJson(obj, "FWPZ", "'" + GetDuoX("FWPZ") + "'");
+    obj = jsonObj.AddJson(obj, "FKFS", "'" + GetDuoX("FKFS") + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
 
     if (getUrlParam("ID") !== null)
@@ -108,8 +105,7 @@ function FB() {
         {
             Json: jsonObj.JsonToString(obj),
             BCMS: ue.getContent(),
-            FWZP: GetPhotoUrls(),
-            JYGZ: jygz.getContent()
+            FWZP: GetPhotoUrls()
         },
         success: function (xml) {
             if (xml.Result === 1) {

@@ -16,7 +16,7 @@ function LoadDefault() {
         success: function (xml) {
             if (xml.Result === 1) {
                 LoadJBXX(xml.list[0]);
-                Loadxq(xml.list[0], xml.BCMSString);
+                LoadXQ(xml.list[0], xml.BCMSString);
                 LoadXQXX(xml.list[0]);
                 LoadDTXX(xml.list[0].XQMC);
                 LoadCNXH("FCXX_HZF");
@@ -92,7 +92,7 @@ function LoadJBXX(obj) {
     HandlerTPXX();
 }
 //加载详情
-function Loadxq(obj, BCMSString) {
+function LoadXQ(obj, BCMSString) {
     var html = "";
     html += ('<div class="div_body_left_body_xq">');
     html += ('<p class="p_body_left_body_xq">房源详情</p>');
@@ -254,6 +254,7 @@ function LoadCNXH(TYPE) {
                 html += ('<ul id="ul_body_left_body_cnxh" class="ul_body_left_body_cnxh">');
                 for (var i = 0; i < xml.list.length; i++) {
                     html += LoadCNXHInfo(xml.list[i]);
+                    if (i === 3) break;
                 }
                 html += ('</ul>');
                 html += ('</div>');
@@ -298,6 +299,7 @@ function LoadJPTJ(TYPE) {
                 html += ('<ul id="ul_body_left_body_jptj" class="ul_body_left_body_jptj">');
                 for (var i = 0; i < xml.list.length; i++) {
                     html += LoadJPTJInfo(xml.list[i]);
+                    if (i === 3) break;
                 }
                 html += ('</ul>');
                 html += ('</div>');
@@ -341,6 +343,7 @@ function LoadJJRTJFY(TYPE) {
                 html += ('<ul id="ul_body_right_jjrtj" class="ul_body_right_jjrtj">');
                 for (var i = 0; i < 4; i++) {
                     html += LoadJJRTJFYInfo(xml.list[i]);
+                    if (i === 3) break;
                 }
                 html += ('</ul>');
                 html += ('</div>');

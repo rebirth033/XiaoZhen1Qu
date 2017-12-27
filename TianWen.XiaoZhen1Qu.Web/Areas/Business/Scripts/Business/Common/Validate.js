@@ -58,6 +58,7 @@ function ValidateBCMS(id, message) {
         return false;
     } else {
         $("#div" + id + "Tip").css("display", "none");
+        $("#edui1").css("border-color", "#cccccc");
         return true;
     }
 }

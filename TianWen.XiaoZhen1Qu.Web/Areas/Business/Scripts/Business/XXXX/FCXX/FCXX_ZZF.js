@@ -260,8 +260,9 @@ function LoadCNXH(TYPE) {
                 html += ('<div class="div_body_left_body_cnxh">');
                 html += ('<p class="p_body_left_body_cnxh">相似房源</p>');
                 html += ('<ul id="ul_body_left_body_cnxh" class="ul_body_left_body_cnxh">');
-                for (var i = 0; i < 8; i++) {
+                for (var i = 0; i < xml.list[i].length; i++) {
                     html += LoadCNXHInfo(xml.list[i]);
+                    if (i === 3) break;
                 }
                 html += ('</ul>');
                 html += ('</div>');
@@ -304,8 +305,9 @@ function LoadJPTJ(TYPE) {
                 html += ('<div class="div_body_left_body_jptj">');
                 html += ('<p class="p_body_left_body_jptj">精品推荐</p>');
                 html += ('<ul id="ul_body_left_body_jptj" class="ul_body_left_body_jptj">');
-                for (var i = 0; i < 8; i++) {
+                for (var i = 0; i < xml.list[i].length; i++) {
                     html += LoadJPTJInfo(xml.list[i]);
+                    if (i === 3) break;
                 }
                 html += ('</ul>');
                 html += ('</div>');
@@ -349,6 +351,7 @@ function LoadJJRTJFY(TYPE) {
                 html += ('<ul id="ul_body_right_jjrtj" class="ul_body_right_jjrtj">');
                 for (var i = 0; i < 4; i++) {
                     html += LoadJJRTJFYInfo(xml.list[i]);
+                    if (i === 3) break;
                 }
                 html += ('</ul>');
                 html += ('</div>');

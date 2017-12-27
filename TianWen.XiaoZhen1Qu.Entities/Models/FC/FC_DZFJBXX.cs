@@ -23,58 +23,33 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string JCXXID { get; set; }
 
         /// <summary>
-        /// 身份
-        /// </summary>
-        [Property]
-        public virtual string SF { get; set; }
-
-        /// <summary>
         /// 房屋类型
         /// </summary>
         [Property]
         public virtual string FWLX { get; set; }
 
         /// <summary>
-        /// 最短租期
+        /// 房屋配置
         /// </summary>
         [Property]
-        public virtual string ZDZQ { get; set; }
+        public virtual string FWPZ { get; set; }
 
         /// <summary>
-        /// 租金
+        /// 区域
         /// </summary>
         [Property]
-        public virtual string ZJ { get; set; }
+        public virtual string QY { get; set; }
+        /// <summary>
+        /// 地段
+        /// </summary>
+        [Property]
+        public virtual string DD { get; set; }
 
         /// <summary>
-        /// 租金单位
+        /// 具体地址
         /// </summary>
         [Property]
-        public virtual string ZJDW { get; set; }
-
-        /// <summary>
-        /// 宜租人数
-        /// </summary>
-        [Property]
-        public virtual string YZRS { get; set; }
-
-        /// <summary>
-        /// 面积
-        /// </summary>
-        [Property]
-        public virtual string MJ { get; set; }
-
-        /// <summary>
-        /// 地址
-        /// </summary>
-        [Property]
-        public virtual string DZ { get; set; }
-
-        /// <summary>
-        /// 交易规则
-        /// </summary>
-        [Property]
-        public virtual Byte[] JYGZ { get; set; }
+        public virtual string JTDZ { get; set; }
 
         /// <summary>
         /// 补充描述
@@ -147,6 +122,5 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// </summary>
         [Property]
         public virtual string FKFS { get; set; }
-
     }
 }

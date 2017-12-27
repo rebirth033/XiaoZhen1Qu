@@ -306,7 +306,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 if (FC_DZFJBXX != null)
                 {
                     JCXX jcxx = GetJCXXByID(FC_DZFJBXX.JCXXID);
-                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { FC_DZFJBXX = FC_DZFJBXX, BCMSString = BinaryHelper.BinaryToString(FC_DZFJBXX.BCMS), JYGZString = BinaryHelper.BinaryToString(FC_DZFJBXX.JYGZ), JCXX = jcxx, Photos = GetPhtosByJCXXID(FC_DZFJBXX.JCXXID) } };
+                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { FC_DZFJBXX = FC_DZFJBXX, BCMSString = BinaryHelper.BinaryToString(FC_DZFJBXX.BCMS), JCXX = jcxx, Photos = GetPhtosByJCXXID(FC_DZFJBXX.JCXXID) } };
                 }
                 else
                 {
