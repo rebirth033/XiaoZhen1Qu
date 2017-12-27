@@ -1,7 +1,6 @@
 ﻿$(document).ready(function () {
     $("#div_gq_cz").bind("click", CZSelect);
     $("#div_gq_cs").bind("click", CSSelect);
-    $("body").bind("click", function() { Close("_XZQ"); });
     LoadFC_CFJBXX();
     BindClick("ZJDW");
 });
@@ -68,6 +67,8 @@ function LoadFC_CFJBXX() {
                 $("#ID").val(xml.Value.FC_CFJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
+                if (xml.Value.FC_CFJBXX.SF !== null)
+                    SetDX("SF", xml.Value.FC_CFJBXX.SF);
                 if (xml.Value.FC_CFJBXX.GQ !== null)
                     SetDX("GQ", xml.Value.FC_CFJBXX.GQ);
                 $("#spanKZCGS").html(xml.Value.FC_CFJBXX.KZCGS);
@@ -98,6 +99,7 @@ function FB() {
         obj = jsonObj.AddJson(obj, "ZJDW", "'万元'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
+    obj = jsonObj.AddJson(obj, "SF", "'" + GetDX("SF") + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");
