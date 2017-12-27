@@ -20,7 +20,8 @@ function SelectCondition(obj, name) {
 }
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
-    currentIndex = parseInt(PageIndex); var condition = GetAllCondition("LB,QY");
+    currentIndex = parseInt(PageIndex);
+    var condition = GetAllCondition("LB,QY");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/CLCX/LoadCLXX",
