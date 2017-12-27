@@ -37,7 +37,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public JsonResult LoadSWFWXX()
         {
-            return Json(SWFWCXBLL.LoadSWFWXX(Request["TYPE"], Request["Condition"], Request["PageIndex"], Request["PageSize"]));
+            return Json(SWFWCXBLL.LoadSWFWXX(Request["TYPE"], Request["Condition"], Request["PageIndex"], Request["PageSize"], Request["OrderColumn"], Request["OrderType"]));
         }
     }
 }

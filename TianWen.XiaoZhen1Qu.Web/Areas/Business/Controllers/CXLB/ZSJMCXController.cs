@@ -23,7 +23,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public JsonResult LoadZSJMXX()
         {
-            return Json(ZSJMCXBLL.LoadZSJMXX(Request["TYPE"], Request["Condition"], Request["PageIndex"], Request["PageSize"]));
+            return Json(ZSJMCXBLL.LoadZSJMXX(Request["TYPE"], Request["Condition"], Request["PageIndex"], Request["PageSize"], Request["OrderColumn"], Request["OrderType"]));
         }
     }
 }

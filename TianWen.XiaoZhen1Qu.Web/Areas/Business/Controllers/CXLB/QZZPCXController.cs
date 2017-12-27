@@ -11,7 +11,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public JsonResult LoadQZZPXX()
         {
-            return Json(QZZPCXBLL.LoadQZZPXX(Request["TYPE"], Request["Condition"], Request["PageIndex"], Request["PageSize"]));
+            return Json(QZZPCXBLL.LoadQZZPXX(Request["TYPE"], Request["Condition"], Request["PageIndex"], Request["PageSize"], Request["OrderColumn"], Request["OrderType"]));
         }
     }
 }

@@ -548,6 +548,15 @@ namespace TianWen.XiaoZhen1Qu.BLL
             return condition.ToString();
         }
 
+        //获取排序条件
+        public string GetOrder(string OrderColumn, string OrderType)
+        {
+            if (!string.IsNullOrEmpty(OrderColumn) && !string.IsNullOrEmpty(OrderType))
+                return " ORDER BY " + OrderColumn + " " + OrderType;
+            else
+                return " ORDER BY ZXGXSJ";
+        }
+
         //获取个人信息
         public List<GRXXView> GetGRXX(string yhid)
         {

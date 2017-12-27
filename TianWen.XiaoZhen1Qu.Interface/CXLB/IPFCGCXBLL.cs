@@ -7,7 +7,7 @@ namespace TianWen.XiaoZhen1Qu.Interface
 {
     public interface IPFCGCXBLL : IBaseBLL
     {
-        object LoadPFCGXX(string TYPE, string Condition, string PageIndex, string PageSize);
+        object LoadPFCGXX(string TYPE, string Condition, string PageIndex, string PageSize, string OrderColumn, string OrderType);
 
         object LoadPFCGXX(string TYPE, string ID);
     }

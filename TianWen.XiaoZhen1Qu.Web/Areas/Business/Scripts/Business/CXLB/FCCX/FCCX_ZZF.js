@@ -48,7 +48,7 @@ function SelectURLCondition(obj) {
     ShowSelectCondition("FCXX_ZZF");
 }
 //加载主体部分
-function LoadBody(TYPE, PageIndex) {
+function LoadBody(TYPE, PageIndex, OrderColumn, OrderType) {
     currentIndex = parseInt(PageIndex);
     var condition = GetAllCondition("QY,S,ZJ,CX,ZXQK,FWLD,SF");
     $.ajax({
@@ -60,7 +60,9 @@ function LoadBody(TYPE, PageIndex) {
             TYPE: TYPE,
             Condition: condition,
             PageSize: 10,
-            PageIndex: PageIndex
+            PageIndex: PageIndex,
+            OrderColumn: OrderColumn,
+            OrderType: OrderType
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -142,4 +144,21 @@ function SearchByCondition(type) {
     if (type === "JJR")
         $("#ul_condition_body_SF").find(".li_condition_body:eq(2)").addClass("li_condition_body_active");
     LoadBody("FCXX_ZZF", 1);
+}
+//根据条件排序
+function OrderByCondition(type, obj) {
+    $(obj).find("i").each(function () {
+        if (type === "ZJ") {
+            if ($(this).attr("class").indexOf("up") !== -1)
+                LoadBody("FCXX_ZZF", 1, "ZJ", "ASC");
+            else
+                LoadBody("FCXX_ZZF", 1, "ZJ", "DESC");
+        }
+        if (type === "SJ") {
+            if ($(this).attr("class").indexOf("up") !== -1)
+                LoadBody("FCXX_ZZF", 1, "ZXGXSJ", "ASC");
+            else
+                LoadBody("FCXX_ZZF", 1, "ZXGXSJ", "DESC");
+        }
+    });
 }

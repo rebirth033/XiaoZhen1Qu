@@ -13,14 +13,14 @@ namespace TianWen.XiaoZhen1Qu.BLL
     public class LYJDCXBLL : BaseBLL, ILYJDCXBLL
     {
         //加载旅游酒店列表信息
-        public object LoadLYJDXX(string TYPE, string Condition, string PageIndex, string PageSize)
+        public object LoadLYJDXX(string TYPE, string Condition, string PageIndex, string PageSize, string OrderColumn, string OrderType)
         {
             try
             {
                 DataTable dt = new DataTable();
                 if (TYPE == "LYJDXX_LXS")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,lyjd_lxsjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + " order by zxgxsj desc");
+                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,lyjd_lxsjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
                     List<LYJD_LXSView> list = ConvertHelper.DataTableToList<LYJD_LXSView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -34,7 +34,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "LYJDXX_QZFW")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,lyjd_qzfwjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + " order by zxgxsj desc");
+                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,lyjd_qzfwjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
                     List<LYJD_QZFWView> list = ConvertHelper.DataTableToList<LYJD_QZFWView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -48,7 +48,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "LYJDXX_GNY")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,lyjd_gnyjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + " order by zxgxsj desc");
+                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,lyjd_gnyjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
                     List<LYJD_GNYView> list = ConvertHelper.DataTableToList<LYJD_GNYView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -62,7 +62,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "LYJDXX_ZBY")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,lyjd_zbyjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + " order by zxgxsj desc");
+                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,lyjd_zbyjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
                     List<LYJD_ZBYView> list = ConvertHelper.DataTableToList<LYJD_ZBYView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -76,7 +76,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "LYJDXX_CJY")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,lyjd_cjyjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + " order by zxgxsj desc");
+                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,lyjd_cjyjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
                     List<LYJD_CJYView> list = ConvertHelper.DataTableToList<LYJD_CJYView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -90,7 +90,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "LYJDXX_JDZSYD")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,lyjd_jdzsydjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + " order by zxgxsj desc");
+                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,lyjd_jdzsydjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
                     List<LYJD_LXSView> list = ConvertHelper.DataTableToList<LYJD_LXSView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -104,7 +104,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "LYJDXX_JP")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,lyjd_jpjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + " order by zxgxsj desc");
+                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,lyjd_jpjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
                     List<LYJD_LXSView> list = ConvertHelper.DataTableToList<LYJD_LXSView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -118,7 +118,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "LYJDXX_DYDDR")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,lyjd_dyddrjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + " order by zxgxsj desc");
+                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,lyjd_dyddrjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
                     List<LYJD_LXSView> list = ConvertHelper.DataTableToList<LYJD_LXSView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
