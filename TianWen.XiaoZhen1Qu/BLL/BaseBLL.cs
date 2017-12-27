@@ -581,7 +581,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
             }
             if (string.IsNullOrEmpty(result))
-                result = " ORDER BY ZXGXSJ";
+                result = " ORDER BY ZXGXSJ DESC";
             return result;
         }
 

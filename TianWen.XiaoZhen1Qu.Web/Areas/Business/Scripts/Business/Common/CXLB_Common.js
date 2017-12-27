@@ -241,7 +241,7 @@ function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
                 }
                 if (typenames.indexOf("轿车品牌") !== -1)
                     LoadCondition(xml.jclist, "品牌", "PP", 15);
-                if (table.indexOf("FC_ZZF") !== -1)
+                if (table.indexOf("CODES_FC") !== -1)
                     LoadURLCondition();
             }
         },

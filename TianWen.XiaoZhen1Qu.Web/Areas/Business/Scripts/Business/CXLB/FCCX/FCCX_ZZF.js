@@ -7,27 +7,28 @@ $(document).ready(function () {
 });
 //加载头部搜索栏关键字
 function LoadHeadSearch() {
-    $(".div_head_right_ss").append('<span class="span_head_right_ss">独立阳台</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'FWLD\',\'120\')">独立阳台</span>');
     $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
-    $(".div_head_right_ss").append('<span class="span_head_right_ss">独立卫生间</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'FWLD\',\'119\')">独立卫生间</span>');
     $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
-    $(".div_head_right_ss").append('<span class="span_head_right_ss">邻近地铁</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'FWLD\',\'60\')">邻近地铁</span>');
     $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
-    $(".div_head_right_ss").append('<span class="span_head_right_ss">南北通透</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'FWLD\',\'61\')">南北通透</span>');
     $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
-    $(".div_head_right_ss").append('<span class="span_head_right_ss">精装修</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'FWLD\',\'59\')">精装修</span>');
     $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
-    $(".div_head_right_ss").append('<span class="span_head_right_ss">支持月付</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'FWLD\',\'55\')">支持月付</span>');
 }
 //加载房产查询条件
 function LoadFCCondition() {
     LoadConditionByTypeNames("'整租房租金','厅室','朝向','装修情况','出租房屋亮点'", "CODES_FC", "租金,厅室,朝向,装修情况,房屋亮点", "ZJ,S,CX,ZXQK,FWLD", "15,15,15,15,15");
-    LoadBody("FCXX_ZZF", currentIndex);
 }
 //加载URL查询条件
 function LoadURLCondition() {
     if (getUrlParam("FWLD") !== null)
         SelectURLCondition(getUrlParam("FWLD"));
+    else
+        LoadBody("FCXX_ZZF", currentIndex);
 }
 //选择条件
 function SelectCondition(obj) {
@@ -167,4 +168,8 @@ function OrderByCondition(type, obj) {
         });
         LoadBody("FCXX_ZZF", 1, "ZXGXSJ", ordertype);
     }
+}
+//搜索栏备注导航
+function OpenSS(TYPE, ID) {
+    window.open(getRootPath() + "/Business/FCCX/FCCX_ZZF?LBID=13" + "&" + TYPE + "=" + ID);
 }

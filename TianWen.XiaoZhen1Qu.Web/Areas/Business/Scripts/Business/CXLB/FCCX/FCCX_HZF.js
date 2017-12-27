@@ -20,7 +20,7 @@ function SelectCondition(obj, name) {
     ShowSelectCondition("FCXX_HZF");
 }
 //加载主体部分
-function LoadBody(TYPE, PageIndex) {
+function LoadBody(TYPE, PageIndex, OrderColumn, OrderType) {
     currentIndex = parseInt(PageIndex);
     var condition = GetAllCondition("CZJLX,ZJ,QY,CX,ZXQK,SF");
     $.ajax({
@@ -32,7 +32,9 @@ function LoadBody(TYPE, PageIndex) {
             TYPE: TYPE,
             Condition: condition,
             PageSize: 5,
-            PageIndex: PageIndex
+            PageIndex: PageIndex,
+            OrderColumn: OrderColumn,
+            OrderType: OrderType
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -114,4 +116,27 @@ function SearchByCondition(type) {
     if (type === "JJR")
         $("#ul_condition_body_SF").find(".li_condition_body:eq(2)").addClass("li_condition_body_active");
     LoadBody("FCXX_HZF", 1);
+}
+//根据条件排序
+function OrderByCondition(type, obj) {
+    ChangeCXItem(obj);
+    var ordertype = "";
+    if (type === "ZJ") {
+        $("#li_body_head_sort_item_ZJ").find("i").each(function () {
+            if ($(this).attr("class").indexOf("up") !== -1)
+                ordertype = "ASC";
+            else
+                ordertype = "DESC";
+        });
+        LoadBody("FCXX_HZF", 1, "ZJ", ordertype);
+    }
+    else {
+        $("#li_body_head_sort_item_SJ").find("i").each(function () {
+            if ($(this).attr("class").indexOf("up") !== -1)
+                ordertype = "ASC";
+            else
+                ordertype = "DESC";
+        });
+        LoadBody("FCXX_HZF", 1, "ZXGXSJ", ordertype);
+    }
 }
