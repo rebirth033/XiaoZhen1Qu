@@ -137,7 +137,7 @@ function LoadCNXH(TYPE) {
                 html += ('<div class="div_body_left_body_cnxh">');
                 html += ('<p class="p_body_left_body_cnxh">相似房源</p>');
                 html += ('<ul id="ul_body_left_body_cnxh" class="ul_body_left_body_cnxh">');
-                for (var i = 0; i < xml.list[i].length; i++) {
+                for (var i = 0; i < xml.list.length; i++) {
                     html += LoadCNXHInfo(xml.list[i]);
                     if (i === 3) break;
                 }
@@ -157,9 +157,8 @@ function LoadCNXHInfo(obj) {
     var html = "";
     html += ('<li onclick="OpenXXXX(\'FCXX_DZF\',\'' + obj.ID + '\')" class="li_body_left_body_cnxh">');
     html += ('<img class="img_li_body_left_body_cnxh" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_left_body_cnxh_xq">' + obj.XQMC + '</p>');
-    html += ('<p class="p_li_body_left_body_cnxh_cs">' + obj.S + '室 / ' + obj.PFM + '平米 / ' + obj.ZXQK + '</p>');
-    html += ('<p class="p_li_body_left_body_cnxh_jg">' + obj.ZJ + '元/月</p>');
+    html += ('<p class="p_li_body_left_body_cnxh_xq" style="height:40px;">' + obj.BT + '</p>');
+    html += ('<p class="p_li_body_left_body_cnxh_cs">' + obj.QY + '-' + obj.DD + '</p>');
     html += ('</li>');
     return html;
 }
@@ -182,7 +181,7 @@ function LoadJPTJ(TYPE) {
                 html += ('<div class="div_body_left_body_jptj">');
                 html += ('<p class="p_body_left_body_jptj">精品推荐</p>');
                 html += ('<ul id="ul_body_left_body_jptj" class="ul_body_left_body_jptj">');
-                for (var i = 0; i < xml.list[i].length; i++) {
+                for (var i = 0; i < xml.list.length; i++) {
                     html += LoadJPTJInfo(xml.list[i]);
                     if (i === 3) break;
                 }
@@ -201,9 +200,8 @@ function LoadJPTJInfo(obj) {
     var html = "";
     html += ('<li onclick="OpenXXXX(\'FCXX_DZF\',\'' + obj.ID + '\')" class="li_body_left_body_jptj">');
     html += ('<img class="img_li_body_left_body_jptj" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_left_body_jptj_xq">' + obj.XQMC + '</p>');
-    html += ('<p class="p_li_body_left_body_jptj_cs">' + obj.S + '室 / ' + obj.PFM + '平米 / ' + obj.ZXQK + '</p>');
-    html += ('<p class="p_li_body_left_body_jptj_jg">' + obj.ZJ + '元/月</p>');
+    html += ('<p class="p_li_body_left_body_jptj_xq" style="height:40px;">' + obj.BT + '</p>');
+    html += ('<p class="p_li_body_left_body_jptj_cs">' + obj.QY + '-' + obj.DD + '</p>');
     html += ('</li>');
     return html;
 }
@@ -226,7 +224,7 @@ function LoadJJRTJFY(TYPE) {
                 html += ('<div class="div_body_right_jjrtj">');
                 html += ('<p class="p_body_right_jjrtj">该经纪人推荐</p>');
                 html += ('<ul id="ul_body_right_jjrtj" class="ul_body_right_jjrtj">');
-                for (var i = 0; i < xml.list[i].length; i++) {
+                for (var i = 0; i < xml.list.length; i++) {
                     html += LoadJJRTJFYInfo(xml.list[i]);
                     if (i === 3) break;
                 }
@@ -249,9 +247,9 @@ function LoadJJRTJFYInfo(obj) {
     html += ('<li onclick="OpenXXXX(\'FCXX_DZF\',\'' + obj.ID + '\')" class="li_body_right_jjrtj">');
     html += ('<img class="img_li_body_right_jjrtj" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<div class="div_li_body_right_jjrtj">');
-    html += ('<p class="p_li_body_right_jjrtj_xq">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_right_jjrtj_cs">' + obj.S + '室 / ' + obj.PFM + '平米 / ' + obj.ZXQK + '</p>');
-    html += ('<p class="p_li_body_right_jjrtj_jg">' + obj.ZJ + '元/月</p>');
+    html += ('<p class="p_li_body_right_jjrtj_xq" style="height:40px;">' + obj.BT + '</p>');
+    html += ('<p class="p_li_body_right_jjrtj_cs">' + obj.FWLX + '</p>');
+    html += ('<p class="p_li_body_right_jjrtj_cs">' + obj.QY + '-' + obj.DD + '</p>');
     html += ('</div>');
     html += ('</li>');
     return html;

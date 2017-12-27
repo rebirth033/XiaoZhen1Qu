@@ -446,7 +446,7 @@ var ScaleBoy = function () {
 
         scale.id = 'J_scaleCon';
         scale.className = 'scale';
-        for (var i = 0; i < xml.list[i].length; i++) {
+        for (var i = 0; i < xml.list.length; i++) {
             arr.push("<span class='hand" + i + "'></span>");
         }
         scale.innerHTML = arr.join("");
