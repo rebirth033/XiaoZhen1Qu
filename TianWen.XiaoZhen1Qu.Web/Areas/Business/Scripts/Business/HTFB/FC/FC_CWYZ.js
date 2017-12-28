@@ -1,16 +1,14 @@
 ﻿$(document).ready(function () {
     $("#divSF").find(".div_radio").bind("click", function () { ValidateRadio("SF", ""); });
     $("#divGQ").find(".div_radio").bind("click", function () { ValidateRadio("GQ", "忘记选择供求啦"); });
-    $("#LPMC").bind("blur", ValidateLPMC);
-    $("#LPMC").bind("focus", InfoLPMC);
     $("#DD").bind("blur", ValidateDD);
     $("#DD").bind("focus", InfoDD);
     $("#ZJ").bind("blur", ValidateZJ);
-    $("#ZJ").bind("focus", function () { InfoSpanInput("ZJ", "租金请填写整数，默认为面议"); });
+    $("#ZJ").bind("focus", InfoZJ);
     $("#SJ").bind("blur", ValidateSJ);
-    $("#SJ").bind("focus", function () { InfoSpanInput("SJ", "售价请填写整数，默认为面议"); });
+    $("#SJ").bind("focus", InfoSJ);
     $("#MJ").bind("blur", ValidateMJ);
-    $("#ZJ").bind("focus", function () { InfoSpanInput("MJ", "面积请填写整数"); });
+    $("#MJ").bind("focus", InfoMJ);
 });
 //验证所有
 function ValidateAll() {
@@ -21,7 +19,7 @@ function ValidateAll() {
             & ValidateSZQY()
             & ValidateSJ()
             & ValidateMJ()
-            & ValidateCommonWithoutZP())
+            & ValidateCommon())
             return true;
         else
             return false;
@@ -33,7 +31,7 @@ function ValidateAll() {
         & ValidateSZQY()
         & ValidateZJ()
         & ValidateMJ()
-        & ValidateCommonWithoutZP())
+        & ValidateCommon())
             return true;
         else
             return false;
@@ -104,4 +102,25 @@ function ValidateMJ() {
             return false;
         }
     }
+}
+//提示租金
+function InfoZJ() {
+    $("#divZJTip").css("display", "block");
+    $("#divZJTip").attr("class", "Info");
+    $("#divZJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />请填写整数，默认为面议');
+    $("#spanZJ").css("border-color", "#bc6ba6");
+}
+//提示售价
+function InfoSJ() {
+    $("#divSJTip").css("display", "block");
+    $("#divSJTip").attr("class", "Info");
+    $("#divSJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />请填写整数，默认为面议');
+    $("#spanSJ").css("border-color", "#bc6ba6");
+}
+//提示面积
+function InfoMJ() {
+    $("#divMJTip").css("display", "block");
+    $("#divMJTip").attr("class", "Info");
+    $("#divMJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />请填写整数');
+    $("#spanMJ").css("border-color", "#bc6ba6");
 }

@@ -1,8 +1,6 @@
 ﻿$(document).ready(function () {
     $("#divSF").find(".div_radio").bind("click", function () { ValidateRadio("SF", ""); });
     $("#divGQ").find(".div_radio").bind("click", function () { ValidateRadio("GQ", "忘记选择供求啦"); });
-    $("#LPMC").bind("blur", ValidateLPMC);
-    $("#LPMC").bind("focus", InfoLPMC);
     $("#DD").bind("blur", ValidateDD);
     $("#DD").bind("focus", InfoDD);
     $("#ZJ").bind("blur", ValidateZJ);
@@ -144,6 +142,6 @@ function InfoSJ() {
 function InfoMJ() {
     $("#divMJTip").css("display", "block");
     $("#divMJTip").attr("class", "Info");
-    $("#divMJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />请填写整数，默认为面议');
+    $("#divMJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />请填写整数');
     $("#spanMJ").css("border-color", "#bc6ba6");
 }

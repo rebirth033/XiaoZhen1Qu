@@ -69,6 +69,8 @@ function LoadFC_CWJBXX() {
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
                 if (xml.Value.FC_CWJBXX.GQ !== null)
                     SetDX("GQ", xml.Value.FC_CWJBXX.GQ);
+                if (xml.Value.FC_CWJBXX.SF !== null)
+                    SetDX("SF", xml.Value.FC_CWJBXX.SF);
                 $("#spanKZCGS").html(xml.Value.FC_CWJBXX.KZCGS);
                 $("#spanQY").html(xml.Value.FC_CWJBXX.QY);
                 $("#spanDD").html(xml.Value.FC_CWJBXX.DD);
@@ -97,6 +99,7 @@ function FB() {
         obj = jsonObj.AddJson(obj, "ZJDW", "'万元'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
+    obj = jsonObj.AddJson(obj, "SF", "'" + GetDX("SF") + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");

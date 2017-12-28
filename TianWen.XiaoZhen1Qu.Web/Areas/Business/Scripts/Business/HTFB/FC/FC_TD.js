@@ -71,6 +71,9 @@ function LoadFC_TDJBXX() {
                     SetDX("GQ", xml.Value.FC_TDJBXX.GQ);
                     SetGQ(xml.Value.FC_TDJBXX.GQ);
                 }
+                if (xml.Value.FC_TDJBXX.SF !== null) {
+                    SetDX("SF", xml.Value.FC_TDJBXX.SF);
+                }
                 $("#spanKZCGS").html(xml.Value.FC_TDJBXX.KZCGS);
                 $("#spanQY").html(xml.Value.FC_TDJBXX.QY);
                 $("#spanDD").html(xml.Value.FC_TDJBXX.DD);
@@ -99,6 +102,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "SJ", "'" + $("#SJ").val() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
+    obj = jsonObj.AddJson(obj, "SF", "'" + GetDX("SF") + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");
