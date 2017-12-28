@@ -10,7 +10,7 @@ function ValidateLB() {
 //验证所有
 function ValidateAll() {
     if (ValidateLB()
-        & ValidateFWQY()
+        & ValidateFWFW()
         & ValidateBCMS("BCMS", "忘记填写服务介绍啦")
         & ValidateXXDZ()
         & ValidateCommon())

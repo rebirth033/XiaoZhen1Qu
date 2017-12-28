@@ -23,7 +23,7 @@ function ValidateAll() {
         & ValidateSpanInput("JNGLS", "价内公里数 ")
         & ValidateJG()
         & ValidateBCMS("BCMS", "忘记填写补充描述啦")
-        & ValidateFWQY()
+        & ValidateFWFW()
         & ValidateXXDZ()
         & ValidateCommon())
         return true;

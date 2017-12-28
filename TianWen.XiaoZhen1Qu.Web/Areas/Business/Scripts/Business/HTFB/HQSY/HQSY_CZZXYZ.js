@@ -10,7 +10,7 @@ function ValidateAll() {
         & ValidateRadio("FWXS", "忘记选择服务形式啦")
         & ValidateJG()
         & ValidateBCMS("BCMS", "忘记填写补充描述啦")
-        & ValidateFWQY()
+        & ValidateFWFW()
         & ValidateXXDZ()
         & ValidateCommon())
         return true;

@@ -29,7 +29,7 @@ function ValidateAll() {
         & ValidateInput("JBSP", "级别水平")
         & ValidateRadio("JJJY", "忘记选择家教经验啦")
         & ValidateQWSX()
-        & ValidateFWQY()
+        & ValidateFWFW()
         & ValidateBCMS("BCMS", "忘记填写补充描述啦")
         & ValidateXXDZ()
         & ValidateCommon())

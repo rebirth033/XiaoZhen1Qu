@@ -23,7 +23,7 @@ function ValidateAll() {
         & ValidateCheck("DYYZ", "导游语种")
         & ValidateSelect("DYDDRXL", "XL", "忘记选择学历啦")
         & ValidateSelect("DYDDRDTJY", "DTJY", "忘记选择带团经验啦")
-        & ValidateFWQY()
+        & ValidateFWFW()
         & ValidateBCMS("BCMS", "忘记填写补充描述啦")
         & ValidateXXDZ()
         & ValidateCommon())

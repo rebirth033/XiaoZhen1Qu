@@ -72,7 +72,7 @@ function ValidateLB() {
 function ValidateAll() {
     if (ValidateLB()
         & ValidateJG()
-        & ValidateFWQY()
+        & ValidateFWFW()
         & ValidateBCMS("BCMS", "忘记填写服务介绍啦")
         & ValidateXXDZ()
         & ValidateCommon())

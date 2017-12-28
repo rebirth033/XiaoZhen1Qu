@@ -6,7 +6,7 @@
 function ValidateAll() {
     if (ValidateSelect("YYPXYZ", "YZ", "忘记选择语种啦")
         & ValidateCheck("XL", "忘记选择小类啦")
-        & ValidateFWQY()
+        & ValidateFWFW()
         & ValidateBCMS("BCMS", "忘记填写补充描述啦")
         & ValidateXXDZ()
         & ValidateCommon())

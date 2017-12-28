@@ -13,7 +13,7 @@ function ValidateLB() {
 function ValidateAll() {
     if (ValidateLB()
         & ValidateCheck("DX", "忘记选择对象啦")
-        & ValidateFWQY()
+        & ValidateFWFW()
         & ValidateBCMS("BCMS", "忘记填写补充描述啦")
         & ValidateXXDZ()
         & ValidateCommon())

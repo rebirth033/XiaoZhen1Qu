@@ -7,7 +7,7 @@ function ValidateAll() {
         if (ValidateSelect("MTSSLB", "LB", "忘记选择类别啦")
             & ValidateSelect("JFFS", "FS", "忘记选择类别啦")
             & ValidateBCMS("BCMS", "忘记填写补充描述啦")
-            & ValidateFWQY()
+            & ValidateFWFW()
             & ValidateXXDZ()
             & ValidateCommon())
             return true;
@@ -17,7 +17,7 @@ function ValidateAll() {
     else {
         if (ValidateSelect("MTSSLB", "LB", "忘记选择类别啦")
             & ValidateBCMS("BCMS", "忘记填写补充描述啦")
-            & ValidateFWQY()
+            & ValidateFWFW()
             & ValidateXXDZ()
             & ValidateCommon())
             return true;

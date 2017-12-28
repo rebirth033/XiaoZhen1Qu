@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    LoadZXJC_JZFWJBXX();
+    LoadFWFW();
     BindClick("LB");
 });
 //绑定下拉框
@@ -8,54 +8,89 @@ function BindClick(type) {
         if (type === "LB") {
             LoadCODESByTYPENAME("家装服务类别", "LB", "CODES_ZXJC", Bind, "OUTLB", "LB", "");
         }
-        if (type === "XL") {
-            LoadXL();
-        }
     });
 }
 //选择类别下拉框
-function SelectLB(obj, type, lbid) {
+function SelectLB(obj, type) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-    $("#LBID").val(lbid);
-    PDLB(obj.innerHTML);
+    if (type === "LB")
+        PDLB(obj.innerHTML);
 }
 //判断类别
-function PDLB(lbmc) {
-    if (lbmc === "装修队/散工") {
-        $("#spanXL").html("请选择小类");
-        $("#divXLText").css("display", "");
-        BindClick("XL");
+function PDLB(name, xl) {
+    if (name.indexOf("装修队/散工") !== -1) {
+        $("#divXL").css("display", "");
+        LoadDuoX(name, "XL", xl);
     }
     else {
-        $("#divXLText").css("display", "none");
+        $("#divXL").css("display", "none");
     }
 }
-//加载小类
-function LoadXL() {
+//加载多选
+function LoadDuoX(type, id, xl) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadByParentID",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            ParentID: $("#LBID").val(),
+            TYPENAME: type,
             TBName: "CODES_ZXJC"
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                var height = 341;
-                if (xml.list.length < 10)
-                    height = parseInt(xml.list.length * 34) + 1;
-                var html = "<ul class='ul_select' style='overflow-y: scroll; height:" + height + "px'>";
+                var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='li_select' onclick='SelectDropdown(this,\"XL\")'>" + xml.list[i].CODENAME + "</li>";
+                    html += "<li class='li" + id + "' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    if (i % 6 === 5) {
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
+                    }
                 }
+                if (parseInt(xml.list.length % 6) === 0)
+                    $("#div" + id).css("height", parseInt(xml.list.length / 6) * 45 + "px");
+                else
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
                 html += "</ul>";
-                $("#divXL").html(html);
-                $("#divXL").css("display", "block");
-                Bind("OUTLB", "XL", "");
-                ActiveStyle("XL");
+                $("#div" + id + "Text").html(html);
+                $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                if (xl !== null)
+                    SetDuoX("XL", xl);
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//加载服务范围
+function LoadFWFW() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/GetDistrictXQJByXZQDM",
+        dataType: "json",
+        data:
+        {
+
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='ulFWPZ'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='liFWFW' onclick='SelectDuoX(this)'><img class='img_FWFW'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    if (i % 6 === 5) {
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
+                    }
+                }
+                if (parseInt(xml.list.length % 6) === 0)
+                    $("#divFWFW").css("height", parseInt(xml.list.length / 6) * 45 + "px");
+                else
+                    $("#divFWFW").css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
+                html += "</ul>";
+                $("#divFWFWText").html(html);
+                $(".img_FWFW").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".liFWFW").bind("click", function () { ValidateCheck("FWFW", "忘记选择服务范围啦"); });
+                LoadZXJC_JZFWJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -81,9 +116,10 @@ function LoadZXJC_JZFWJBXX() {
                 $("#ID").val(xml.Value.ZXJC_JZFWJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
-                PDLB(xml.Value.ZXJC_JZFWJBXX.LB);
+                PDLB(xml.Value.ZXJC_JZFWJBXX.LB, xml.Value.ZXJC_JZFWJBXX.XL);
+                if (xml.Value.ZXJC_JZFWJBXX.FWQY !== null)
+                    SetDuoX("FWFW", xml.Value.ZXJC_JZFWJBXX.FWQY);
                 $("#spanLB").html(xml.Value.ZXJC_JZFWJBXX.LB);
-                $("#spanXL").html(xml.Value.ZXJC_JZFWJBXX.XL);
                 $("#spanQY").html(xml.Value.ZXJC_JZFWJBXX.QY);
                 $("#spanDD").html(xml.Value.ZXJC_JZFWJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
@@ -102,7 +138,8 @@ function FB() {
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
-    obj = jsonObj.AddJson(obj, "XL", "'" + $("#spanXL").html() + "'");
+    obj = jsonObj.AddJson(obj, "XL", "'" + GetDuoX("XL") + "'");
+    obj = jsonObj.AddJson(obj, "FWQY", "'" + GetDuoX("FWFW") + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
 

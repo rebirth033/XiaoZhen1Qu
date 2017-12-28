@@ -11,8 +11,8 @@
     $("#JTDZ").bind("focus", InfoJTDZ);
     $("#JG").bind("blur", ValidateJG);
     $("#JG").bind("focus", InfoJG);
-    $("#FWQY").bind("blur", ValidateFWQY);
-    $("#FWQY").bind("focus", InfoFWQY);
+    $("#FWFW").bind("blur", ValidateFWFW);
+    $("#FWFW").bind("focus", InfoFWFW);
 });
 //验证照片
 function ValidateZP() {
@@ -77,16 +77,16 @@ function ValidateJTDZ() {
     }
 }
 //验证服务区域 
-function ValidateFWQY() {
-    if ($("#FWQY").val() === "" || $("#FWQY").val() === null) {
-        $("#divFWQYTip").css("display", "block");
-        $("#divFWQYTip").attr("class", "Warn");
-        $("#divFWQYTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记选择服务区域啦');
-        $("#FWQY").css("border-color", "#F2272D");
+function ValidateFWFW() {
+    if ($("#FWFW").val() === "" || $("#FWFW").val() === null) {
+        $("#divFWFWTip").css("display", "block");
+        $("#divFWFWTip").attr("class", "Warn");
+        $("#divFWFWTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记选择服务区域啦');
+        $("#FWFW").css("border-color", "#F2272D");
         return false;
     } else {
-        $("#divFWQYTip").css("display", "none");
-        $("#FWQY").css("border-color", "#cccccc");
+        $("#divFWFWTip").css("display", "none");
+        $("#FWFW").css("border-color", "#cccccc");
         return true;
     }
 }
@@ -213,11 +213,11 @@ function InfoBCMS(id, message) {
     $("#edui1").css("border-color", "#bc6ba6");
 }
 //提示服务区域
-function InfoFWQY() {
-    $("#divFWQYTip").css("display", "block");
-    $("#divFWQYTip").attr("class", "Info");
-    $("#divFWQYTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />请填写服务区域');
-    $("#FWQY").css("border-color", "#bc6ba6");
+function InfoFWFW() {
+    $("#divFWFWTip").css("display", "block");
+    $("#divFWFWTip").attr("class", "Info");
+    $("#divFWFWTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />请填写服务区域');
+    $("#FWFW").css("border-color", "#bc6ba6");
 }
 //提示具体地址
 function InfoJTDZ() {

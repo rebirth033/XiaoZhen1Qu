@@ -17,7 +17,7 @@ $(document).ready(function () {
     $("#btnFB").bind("click", FB);
     $("#span_content_info_qCWFWs").bind("click", LoadXZQByGrade);
     $("#btnClose").bind("click", CloseWindow);
-    $("#FWQY").bind("click", LoadFWQY);
+    $("#FWFW").bind("click", LoadFWFW);
     LoadDefault();
     LoadTXXX();
 });

@@ -1,14 +1,14 @@
 ﻿$(document).ready(function () {
     $("#RJXF").bind("blur", ValidateRJXF);
     $("#RJXF").bind("focus", InfoRJXF);
-    $("#FWQY").bind("blur", ValidateFWQY);
-    $("#FWQY").bind("focus", InfoFWQY);
+    $("#FWFW").bind("blur", ValidateFWFW);
+    $("#FWFW").bind("focus", InfoFWFW);
 });
 //验证所有
 function ValidateAll() {
     if (ValidateCheck("KCTSLB", "忘记选择类别啦")
         & ValidateRJXF()
-        & ValidateFWQY()
+        & ValidateFWFW()
         & ValidateBCMS("BCMS", "忘记填写补充描述啦")
         & ValidateXXDZ()
         & ValidateCommon())

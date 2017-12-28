@@ -1,14 +1,14 @@
 ﻿$(document).ready(function () {
     $("#RJXF").bind("blur", ValidateRJXF);
     $("#RJXF").bind("focus", InfoRJXF);
-    $("#FWQY").bind("blur", ValidateFWQY);
-    $("#FWQY").bind("focus", InfoFWQY);
+    $("#FWFW").bind("blur", ValidateFWFW);
+    $("#FWFW").bind("focus", InfoFWFW);
 });
 //验证所有
 function ValidateAll() {
     if (ValidateCheck("WMLB", "忘记选择类别啦")
         & ValidateRJXF()
-        & ValidateFWQY()
+        & ValidateFWFW()
         & ValidateBCMS("BCMS", "忘记填写补充描述啦")
         & ValidateXXDZ()
         & ValidateCommon())
@@ -39,16 +39,16 @@ function ValidateRJXF() {
     }
 }
 //验证服务区域 
-function ValidateFWQY() {
-    if ($("#FWQY").val() === "" || $("#FWQY").val() === null) {
-        $("#divFWQYTip").css("display", "block");
-        $("#divFWQYTip").attr("class", "Warn");
-        $("#divFWQYTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写服务区域啦');
-        $("#FWQY").css("border-color", "#F2272D");
+function ValidateFWFW() {
+    if ($("#FWFW").val() === "" || $("#FWFW").val() === null) {
+        $("#divFWFWTip").css("display", "block");
+        $("#divFWFWTip").attr("class", "Warn");
+        $("#divFWFWTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写服务区域啦');
+        $("#FWFW").css("border-color", "#F2272D");
         return false;
     } else {
-        $("#divFWQYTip").css("display", "none");
-        $("#FWQY").css("border-color", "#cccccc");
+        $("#divFWFWTip").css("display", "none");
+        $("#FWFW").css("border-color", "#cccccc");
         return true;
     }
 }
@@ -60,9 +60,9 @@ function InfoRJXF() {
     $("#spanRJXF").css("border-color", "#bc6ba6");
 }
 //提示服务区域
-function InfoFWQY() {
-    $("#divFWQYTip").css("display", "block");
-    $("#divFWQYTip").attr("class", "Info");
-    $("#divFWQYTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />请填写整数，默认为面议');
-    $("#FWQY").css("border-color", "#bc6ba6");
+function InfoFWFW() {
+    $("#divFWFWTip").css("display", "block");
+    $("#divFWFWTip").attr("class", "Info");
+    $("#divFWFWTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />请填写整数，默认为面议');
+    $("#FWFW").css("border-color", "#bc6ba6");
 }

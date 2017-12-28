@@ -4,7 +4,7 @@
 //验证所有
 function ValidateAll() {
     if (ValidateBCMS("BCMS", "忘记填写补充描述啦")
-        & ValidateFWQY()
+        & ValidateFWFW()
         & ValidateXXDZ()
         & ValidateCommon())
         return true;
