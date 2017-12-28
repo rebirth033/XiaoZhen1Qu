@@ -1,61 +1,35 @@
 ﻿$(document).ready(function () {
-    LoadJBXX();
-    BindClick("LB");
+    LoadDuoX("建材类别", "LB");
 });
-//绑定下拉框
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadCODESByTYPENAME("建材类别", "LB", "CODES_ZXJC", Bind, "OUTLB", "LB", "");
-        }
-        if (type === "XL") {
-            LoadXL();
-        }
-    });
-}
-//选择类别下拉框
-function SelectLB(obj, type, lbid) {
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
-    $("#LBID").val(lbid);
-    PDLB(obj.innerHTML);
-}
-//判断类别
-function PDLB(lbmc) {
-    if (lbmc !== "") {
-        $("#spanXL").html("请选择小类");
-        $("#divXLText").css("display", "");
-        $("#divXL").css("display", "none");
-        BindClick("XL");
-    }
-    else {
-        $("#divXLText").css("display", "none");
-    }
-}
-//加载小类
-function LoadXL(type) {
+//加载多选
+function LoadDuoX(type, id) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadByParentID",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            ParentID: $("#LBID").val(),
+            TYPENAME: type,
             TBName: "CODES_ZXJC"
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                var height = 341;
-                if (xml.list.length < 10)
-                    height = parseInt(xml.list.length * 34) + 1;
-                var html = "<ul class='ul_select' style='overflow-y: scroll; height:" + height + "px'>";
+                var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='li_select' onclick='SelectDropdown(this,\"XL\")'>" + xml.list[i].CODENAME + "</li>";
+                    html += "<li class='li" + id + "' style='width:120px;' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    if (i % 5 === 4 && i !== xml.list.length - 1) {
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
+                    }
                 }
+                if (parseInt(xml.list.length % 5) === 0)
+                    $("#div" + id).css("height", parseInt(xml.list.length / 5) * 45 + "px");
+                else
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 5) + 1) * 45 + "px");
                 html += "</ul>";
-                $("#divXL").html(html);
-                $("#divXL").css("display", "block");
-                ActiveStyle("XL");
+                $("#div" + id + "Text").html(html);
+                $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".li" + id).bind("click", function () { ValidateCheck(id, "忘记选择类别啦"); });
+                LoadFWFW();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -82,8 +56,10 @@ function LoadJBXX() {
                 //设置编辑器的内容
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
                 PDLB(xml.Value.ZXJC_JCJBXX.LB);
-                $("#spanLB").html(xml.Value.ZXJC_JCJBXX.LB);
-                $("#spanXL").html(xml.Value.ZXJC_JCJBXX.XL);
+                if (xml.Value.ZXJC_JCJBXX.LB !== null)
+                    SetDuoX("LB", xml.Value.ZXJC_JCJBXX.LB);
+                if (xml.Value.ZXJC_JCJBXX.FWFW !== null)
+                    SetDuoX("FWFW", xml.Value.ZXJC_JCJBXX.FWQY);
                 $("#spanQY").html(xml.Value.ZXJC_JCJBXX.QY);
                 $("#spanDD").html(xml.Value.ZXJC_JCJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
@@ -101,8 +77,8 @@ function FB() {
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
-    obj = jsonObj.AddJson(obj, "XL", "'" + $("#spanXL").html() + "'");
+    obj = jsonObj.AddJson(obj, "LB", "'" + GetDuoX("LB") + "'");
+    obj = jsonObj.AddJson(obj, "FWQY", "'" + GetDuoX("FWFW") + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
 
