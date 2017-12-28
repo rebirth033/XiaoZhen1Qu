@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-
     LoadDuoX("室内设备", "SNSB");
     BindClick("LB");
     BindClick("KRNRS");
@@ -32,7 +31,7 @@ function LoadDuoX(type, id) {
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".liSNSB").bind("click", function () { ValidateCheck("SNSB", "忘记选择室内设备啦"); });
-                LoadXXYL_HPGJBXX();
+                LoadJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -46,11 +45,10 @@ function BindClick(type) {
         if (type === "KRNRS") {
             LoadCODESByTYPENAME("可容纳人数", "KRNRS", "CODES_XXYL", Bind, "HPGKRNRS", "KRNRS", "");
         }
-        
     });
 }
 //加载休闲娱乐_轰趴馆基本信息
-function LoadXXYL_HPGJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/XXYL/LoadXXYL_HPGJBXX",
@@ -108,8 +106,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

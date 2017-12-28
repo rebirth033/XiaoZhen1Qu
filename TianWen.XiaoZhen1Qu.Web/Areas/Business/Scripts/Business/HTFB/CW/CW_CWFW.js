@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    LoadCW_CWFWJBXX();
+    LoadJBXX();
     BindClick("LB");
 });
 //绑定下拉框
@@ -11,7 +11,7 @@ function BindClick(type) {
     });
 }
 //加载宠物_宠物服务基本信息
-function LoadCW_CWFWJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/CW/LoadCW_CWFWJBXX",
@@ -66,8 +66,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

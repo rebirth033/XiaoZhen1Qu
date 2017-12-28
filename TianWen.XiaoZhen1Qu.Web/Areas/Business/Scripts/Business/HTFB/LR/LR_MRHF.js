@@ -1,14 +1,6 @@
 ﻿$(document).ready(function () {
-
     LoadDuoX("美容护肤类别", "MRHFLB");
-    BindClick("LB");
 });
-//绑定下拉框
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-
-    });
-}
 //加载多选
 function LoadDuoX(type, id) {
     $.ajax({
@@ -37,7 +29,7 @@ function LoadDuoX(type, id) {
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".liMRHFLB").bind("click", function () { ValidateCheck("MRHFLB", "忘记选择类别啦"); });
-                LoadLR_MRHFJBXX();
+                LoadJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -46,7 +38,7 @@ function LoadDuoX(type, id) {
     });
 }
 //加载休闲娱乐_美容护肤基本信息
-function LoadLR_MRHFJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/LR/LoadLR_MRHFJBXX",
@@ -103,8 +95,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

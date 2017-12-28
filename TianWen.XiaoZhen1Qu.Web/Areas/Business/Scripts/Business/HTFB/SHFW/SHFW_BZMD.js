@@ -1,8 +1,7 @@
 ﻿$(document).ready(function () {
     $("#divSFSM").find(".div_radio").bind("click", function () { ValidateRadio("SFSM", "忘记选择是否上门啦"); });
-
     BindClick("LB");
-    LoadSHFW_BZMDJBXX();
+    LoadJBXX();
 });
 //绑定下拉框
 function BindClick(type) {
@@ -55,10 +54,6 @@ function LoadXL(lbmc, xl) {
                 $("#divXLText").html(html);
                 $(".img_XL").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".liXL").bind("click", function () { ValidateCheck("XL", "忘记选择小类啦"); });
-                if (xml.list.length === 0)
-                    $("#divXL").css("display", "none");
-                else
-                    $("#divXL").css("display", "");
                 if (xl !== "" && xl !== null && xl !== undefined)
                     SetDuoX("XL", xl);
             }
@@ -69,7 +64,7 @@ function LoadXL(lbmc, xl) {
     });
 }
 //加载生活服务_殡葬/墓地基本信息
-function LoadSHFW_BZMDJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/SHFW/LoadSHFW_BZMDJBXX",
@@ -130,8 +125,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

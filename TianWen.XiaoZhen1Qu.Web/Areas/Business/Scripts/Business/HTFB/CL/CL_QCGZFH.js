@@ -1,6 +1,5 @@
 ﻿$(document).ready(function () {
-
-    LoadCL_QCGZFHJBXX();
+    LoadJBXX();
     BindClick("LB");
 });
 //绑定下拉框
@@ -66,7 +65,7 @@ function LoadXL() {
     });
 }
 //加载生活服务_汽车改装/防护基本信息
-function LoadCL_QCGZFHJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/CL/LoadCL_QCGZFHJBXX",
@@ -124,8 +123,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

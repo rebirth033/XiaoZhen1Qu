@@ -1,6 +1,5 @@
 ﻿$(document).ready(function () {
-
-    LoadLR_MTSSJBXX();
+    LoadJBXX();
     BindClick("LB");
 });
 //选择类别下拉框
@@ -32,7 +31,7 @@ function BindClick(type) {
     });
 }
 //加载丽人_美体瘦身基本信息
-function LoadLR_MTSSJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/LR/LoadLR_MTSSJBXX",
@@ -89,8 +88,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

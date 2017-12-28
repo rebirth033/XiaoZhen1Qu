@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-
     BindClick("LB");
     LoadDuoX("职业技能培训形式", "XS");
 });
@@ -31,10 +30,10 @@ function LoadDuoX(type, id) {
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".li" + id).bind("click", function () { ValidateCheck(id, "忘记选择小类啦"); });
-                if (type === "职业技能培训周期")
-                    LoadJYPX_ZYJNPXJBXX();
                 if (type === "职业技能培训形式")
                     LoadDuoX("职业技能培训周期", "ZQ");
+                if (type === "职业技能培训周期")
+                    LoadJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -77,10 +76,6 @@ function LoadXL(lbmc, xl) {
                 $("#divXLText").html(html);
                 $(".img_XL").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".liXL").bind("click", function () { ValidateCheck("XL", "忘记选择小类啦"); });
-                if (xml.list.length === 0)
-                    $("#divXL").css("display", "none");
-                else
-                    $("#divXL").css("display", "");
                 if (xl !== "" && xl !== null && xl !== undefined)
                     SetDuoX("XL", xl);
             }
@@ -99,7 +94,7 @@ function BindClick(type) {
     });
 }
 //加载商务服务_职业技能培训基本信息
-function LoadJYPX_ZYJNPXJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/JYPX/LoadJYPX_ZYJNPXJBXX",
@@ -160,8 +155,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

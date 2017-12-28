@@ -1,15 +1,8 @@
 ﻿$(document).ready(function () {
-
-    LoadLR_TJJBXX();
+    LoadJBXX();
 });
-//绑定下拉框
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        
-    });
-}
 //加载丽人_体检基本信息
-function LoadLR_TJJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/LR/LoadLR_TJJBXX",
@@ -62,8 +55,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

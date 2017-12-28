@@ -1,7 +1,6 @@
 ﻿$(document).ready(function () {
     $("#divXSQK").find(".div_radio").bind("click", GetXSQK);
-
-    LoadCL_MTCJBXX();
+    LoadJBXX();
     BindClick("CX");
     BindClick("GCSJ");
     BindClick("PP");
@@ -59,7 +58,7 @@ function SelectPBPP(obj, type, code) {
     LoadPBXH(code);
 }
 //加载车辆_摩托车基本信息
-function LoadCL_MTCJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/CL/LoadCL_MTCJBXX",
@@ -128,8 +127,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

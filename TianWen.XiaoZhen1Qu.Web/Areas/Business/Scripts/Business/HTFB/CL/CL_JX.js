@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-
     LoadJZ();
 });
 //加载驾照
@@ -67,7 +66,7 @@ function LoadBB() {
                 $("#divBBText").html(html);
                 $(".img_BB").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".liBB").bind("click", function () { ValidateCheck("BB", "忘记选择班别啦"); });
-                LoadCL_JXJBXX();
+                LoadJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -75,14 +74,8 @@ function LoadBB() {
         }
     });
 }
-//绑定下拉框
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-
-    });
-}
 //加载生活服务_驾校基本信息
-function LoadCL_JXJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/CL/LoadCL_JXJBXX",
@@ -142,8 +135,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

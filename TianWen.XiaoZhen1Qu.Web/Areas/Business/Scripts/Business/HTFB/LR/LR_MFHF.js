@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-
     LoadDuoX("美发护发类别", "MFHFLB");
 });
 //加载多选
@@ -30,7 +29,7 @@ function LoadDuoX(type, id) {
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".liMFHFLB").bind("click", function () { ValidateCheck("MFHFLB", "忘记选择类别啦"); });
-                LoadLR_MFHFJBXX();
+                LoadJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -38,14 +37,8 @@ function LoadDuoX(type, id) {
         }
     });
 }
-//绑定下拉框
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        
-    });
-}
 //加载丽人_美发护发基本信息
-function LoadLR_MFHFJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/LR/LoadLR_MFHFJBXX",
@@ -101,8 +94,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

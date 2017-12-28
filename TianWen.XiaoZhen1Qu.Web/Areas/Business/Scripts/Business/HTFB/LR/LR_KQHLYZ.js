@@ -5,7 +5,7 @@
 function ValidateAll() {
     if (ValidateSelect("KQHLLB", "LB", "忘记选择类别啦")
         & ValidateBCMS("BCMS", "忘记填写补充描述啦")
-        & ValidateFWFW()
+
         & ValidateXXDZ()
         & ValidateCommonWithoutZP())
         return true;

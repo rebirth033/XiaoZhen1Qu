@@ -1,7 +1,6 @@
 ﻿$(document).ready(function () {
-
     BindClick("LB");
-    LoadSHFW_SMWXJBXX();
+    LoadJBXX();
 });
 //绑定下拉框
 function BindClick(type) {
@@ -69,7 +68,7 @@ function LoadXL(lbmc, xl) {
     });
 }
 //加载生活服务_手机/数码维修基本信息
-function LoadSHFW_SMWXJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/SHFW/LoadSHFW_SMWXJBXX",
@@ -129,8 +128,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

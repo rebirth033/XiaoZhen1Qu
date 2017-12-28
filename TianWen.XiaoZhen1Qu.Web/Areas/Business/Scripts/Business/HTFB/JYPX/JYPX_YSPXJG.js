@@ -35,7 +35,7 @@ function LoadDuoX(type, id) {
                 else
                     $("#div" + id).css("display", "");
                 if (type === "对象")
-                    LoadJYPX_YSPXJGJBXX();
+                    LoadJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -105,7 +105,7 @@ function BindClick(type) {
     });
 }
 //加载商务服务_艺术培训基本信息
-function LoadJYPX_YSPXJGJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/JYPX/LoadJYPX_YSPXJGJBXX",
@@ -164,8 +164,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

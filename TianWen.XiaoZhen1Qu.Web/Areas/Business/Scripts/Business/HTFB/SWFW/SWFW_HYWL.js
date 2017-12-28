@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-
     LoadHYWLLB();
 });
 //加载货运物流类别
@@ -30,7 +29,7 @@ function LoadHYWLLB() {
                 $("#divHYWLLBText").html(html);
                 $(".img_HYWLLB").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".liHYWLLB").bind("click", function () { ValidateCheck("HYWLLB", "忘记选择类别啦"); });
-                LoadSWFW_HYWLJBXX();
+                LoadJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -38,14 +37,8 @@ function LoadHYWLLB() {
         }
     });
 }
-//绑定下拉框
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-
-    });
-}
 //加载商务服务_货运物流基本信息
-function LoadSWFW_HYWLJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/SWFW/LoadSWFW_HYWLJBXX",
@@ -100,8 +93,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

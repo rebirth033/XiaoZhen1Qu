@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    LoadNLMFY_SLSYJBXX();
+    LoadJBXX();
     BindClick("LB");
     $("#divXLBQ").bind("click", function () { LoadXLBQ("CODES_NLMFY",$("#spanLB").html()); });
 });
@@ -18,7 +18,7 @@ function SelectLB(obj, type, lbid) {
     $("#divOUTXLBQ").css("display", "block");
 }
 //加载农林牧副渔_饲料/兽药基本信息
-function LoadNLMFY_SLSYJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/NLMFY/LoadNLMFY_SLSYJBXX",
@@ -75,8 +75,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

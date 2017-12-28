@@ -88,7 +88,7 @@ function LoadFWFW() {
                 $("#divFWFWText").html(html);
                 $(".img_FWFW").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".liFWFW").bind("click", function () { ValidateCheck("FWFW", "忘记选择服务范围啦"); });
-                LoadPFCG_DGDLJBXX();
+                LoadJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -97,7 +97,7 @@ function LoadFWFW() {
     });
 }
 //加载批发采购_原材料基本信息
-function LoadPFCG_YCLJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/PFCG/LoadPFCG_YCLJBXX",
@@ -160,8 +160,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

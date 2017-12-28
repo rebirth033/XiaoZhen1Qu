@@ -7,7 +7,7 @@ function ValidateAll() {
     if (ValidateRadio("SF", "忘记选择身份啦")
         & ValidateCheck("FDJD", "忘记选择辅导阶段啦")
         & ValidateCheck("FDKM", "忘记选择辅导科目啦")
-        & ValidateFWFW()
+
         & ValidateBCMS("BCMS", "忘记填写补充描述啦")
         & ValidateXXDZ()
         & ValidateCommon())

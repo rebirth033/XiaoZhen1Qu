@@ -1,8 +1,8 @@
 ﻿$(document).ready(function () {
-    LoadES_WHYL_WYXNWPJBXX();
+    LoadJBXX();
     BindClick("LB");
-    $("#divXLBQ").bind("click", function () { LoadXLBQ("CODES_ES_WHYL", "游戏"); });
     BindClick("XJ");
+    $("#divXLBQ").bind("click", function () { LoadXLBQ("CODES_ES_WHYL", "游戏"); });
 });
 //绑定下拉框
 function BindClick(type) {
@@ -16,7 +16,7 @@ function BindClick(type) {
     });
 }
 //加载二手_手机数码_网游/虚拟物品基本信息
-function LoadES_WHYL_WYXNWPJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/ES/LoadES_WHYL_WYXNWPJBXX",
@@ -78,8 +78,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

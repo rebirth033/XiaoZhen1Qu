@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    LoadES_JDJJBG_ESJJJBXX();
+    LoadJBXX();
     BindClick("LB");
     BindClick("PBPP");
     BindClick("PBXH");
@@ -54,7 +54,7 @@ function PDLB(LB) {
     $("#spanXL").html("请选择小类");
 }
 //加载二手_手机数码_二手家具基本信息
-function LoadES_JDJJBG_ESJJJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/ES/LoadES_JDJJBG_ESJJJBXX",
@@ -121,8 +121,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

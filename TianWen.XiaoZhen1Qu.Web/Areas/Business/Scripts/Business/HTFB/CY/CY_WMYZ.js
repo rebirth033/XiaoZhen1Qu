@@ -8,7 +8,7 @@
 function ValidateAll() {
     if (ValidateCheck("WMLB", "忘记选择类别啦")
         & ValidateRJXF()
-        & ValidateFWFW()
+
         & ValidateBCMS("BCMS", "忘记填写补充描述啦")
         & ValidateXXDZ()
         & ValidateCommon())

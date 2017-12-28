@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    LoadCL_GCCJBXX();
+    LoadJBXX();
     BindClick("CX");
     BindClick("CCNF");
     BindClick("CCYF");
@@ -17,7 +17,7 @@ function BindClick(type) {
     });
 }
 //加载车辆_工程车基本信息
-function LoadCL_GCCJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/CL/LoadCL_GCCJBXX",

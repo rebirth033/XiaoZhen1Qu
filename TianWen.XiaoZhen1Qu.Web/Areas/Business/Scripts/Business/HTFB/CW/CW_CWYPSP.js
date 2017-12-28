@@ -1,6 +1,5 @@
 ﻿$(document).ready(function () {
-
-    LoadCW_CWYPSPJBXX();
+    LoadJBXX();
     BindClick("LB");
     BindClick("XJ");
 });
@@ -63,7 +62,7 @@ function PDLB(LB) {
     }
 }
 //加载宠物_宠物用品/食品基本信息
-function LoadCW_CWYPSPJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/CW/LoadCW_CWYPSPJBXX",
@@ -126,8 +125,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-
     BindClick("JXKM");
     LoadDuoX("辅导阶段", "FDJD");
 });
@@ -38,7 +37,7 @@ function LoadDuoX(type, id) {
                 if (type === "辅导阶段")
                     LoadDuoX("拼班拼课辅导科目", "FDKM");
                 if (type === "拼班拼课辅导科目")
-                    LoadJYPX_PBPKJBXX();
+                    LoadJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -59,11 +58,10 @@ function BindClick(type) {
         if (type === "JXKM") {
             LoadCODESByTYPENAME("体育培训教学科目", "JXKM", "CODES_JYPX");
         }
-        
     });
 }
 //加载教育培训_拼班拼课基本信息
-function LoadJYPX_PBPKJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/JYPX/LoadJYPX_PBPKJBXX",
@@ -126,8 +124,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

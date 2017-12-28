@@ -4,7 +4,7 @@
     BindClick("PSFG");
     BindClick("LX");
     BindClick("CZ");
-    LoadSWFW_SYSXJBXX();
+    LoadJBXX();
 });
 //绑定下拉框
 function BindClick(type) {
@@ -18,7 +18,6 @@ function BindClick(type) {
         if (type === "PSFG") {
             LoadCODESByTYPENAME("拍摄风格", "PSFG", "CODES_SWFW", Bind, "SYSXPSFG", "PSFG", "");
         }
-        
     });
 }
 //选择类别下拉框
@@ -167,7 +166,7 @@ function LoadDuoX(type, id) {
     });
 }
 //加载婚庆摄影_婚纱摄影基本信息
-function LoadSWFW_SYSXJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/SWFW/LoadSWFW_SYSXJBXX",
@@ -257,8 +256,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

@@ -1,15 +1,8 @@
 ﻿$(document).ready(function () {
-
-    LoadLYJD_LXSJBXX();
+    LoadJBXX();
 });
-//绑定下拉框
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        
-    });
-}
 //加载旅游酒店_旅行社基本信息
-function LoadLYJD_LXSJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/LYJD/LoadLYJD_LXSJBXX",
@@ -69,8 +62,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

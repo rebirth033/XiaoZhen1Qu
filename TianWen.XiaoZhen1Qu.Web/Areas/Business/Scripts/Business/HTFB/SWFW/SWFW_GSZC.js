@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-
     LoadGSZCLB();
 });
 //加载工商注册类别
@@ -30,7 +29,7 @@ function LoadGSZCLB() {
                 $("#divGSZCLBText").html(html);
                 $(".img_GSZCLB").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".liGSZCLB").bind("click", function () { ValidateCheck("GSZCLB", "忘记选择类别啦"); });
-                LoadSWFW_GSZCJBXX();
+                LoadJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -39,7 +38,7 @@ function LoadGSZCLB() {
     });
 }
 //加载商务服务_工商注册基本信息
-function LoadSWFW_GSZCJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/SWFW/LoadSWFW_GSZCJBXX",
@@ -94,8 +93,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

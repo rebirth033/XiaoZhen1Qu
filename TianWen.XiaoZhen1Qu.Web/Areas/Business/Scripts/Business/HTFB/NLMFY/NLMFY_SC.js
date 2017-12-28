@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    LoadNLMFY_SCJBXX();
+    LoadJBXX();
     BindClick("LB");
     $("#divXLBQ").bind("click", function () { LoadXLBQ("CODES_NLMFY",$("#spanLB").html()); });
 });
@@ -18,7 +18,7 @@ function SelectLB(obj, type, lbid) {
     $("#divOUTXLBQ").css("display", "block");
 }
 //加载农林牧副渔_水产基本信息
-function LoadNLMFY_SCJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/NLMFY/LoadNLMFY_SCJBXX",

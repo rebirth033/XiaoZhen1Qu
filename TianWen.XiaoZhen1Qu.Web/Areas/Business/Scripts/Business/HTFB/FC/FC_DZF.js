@@ -40,7 +40,7 @@ function LoadDuoX(type, id) {
                 if (type === "日租短租房屋配置")
                     LoadDuoX("日租短租付款方式", "FKFS");
                 if (type === "日租短租付款方式")
-                    LoadFC_DZFJBXX();
+                    LoadJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -49,7 +49,7 @@ function LoadDuoX(type, id) {
     });
 }
 //加载短租房基本信息
-function LoadFC_DZFJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/FC/LoadFC_DZFJBXX",

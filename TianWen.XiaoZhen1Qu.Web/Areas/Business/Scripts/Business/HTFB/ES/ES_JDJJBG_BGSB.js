@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    LoadES_JDJJBG_BGSBJBXX();
+    LoadJBXX();
     BindClick("LB");
     BindClick("XL");
     BindClick("XJ");
@@ -25,7 +25,7 @@ function SelectLB(obj, type) {
     $("#div" + type).css("display", "none");
 }
 //加载二手_手机数码_家居日用基本信息
-function LoadES_JDJJBG_BGSBJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/ES/LoadES_JDJJBG_BGSBJBXX",

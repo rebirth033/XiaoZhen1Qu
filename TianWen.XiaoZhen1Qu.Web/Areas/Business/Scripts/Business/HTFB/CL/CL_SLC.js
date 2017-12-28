@@ -1,6 +1,5 @@
 ﻿$(document).ready(function () {
-
-    LoadCL_SLCJBXX();
+    LoadJBXX();
     BindClick("CX");
     BindClick("XJ");
 });
@@ -21,7 +20,7 @@ function SelectLB(obj, type) {
     $("#div" + type).css("display", "none");
 }
 //加载基本信息
-function LoadCL_SLCJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/CL/LoadCL_SLCJBXX",
@@ -81,8 +80,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

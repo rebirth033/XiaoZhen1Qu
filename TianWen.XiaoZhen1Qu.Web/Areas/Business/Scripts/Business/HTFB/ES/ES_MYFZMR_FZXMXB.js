@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    LoadES_MYFZMR_FZXMXBJBXX();
+    LoadJBXX();
     BindClick("LB");
     BindClick("XJ");
 });
@@ -49,7 +49,7 @@ function PDLB(LB) {
     BindClick("XL");
 }
 //加载二手_手机数码_母婴/服装/美容基本信息
-function LoadES_MYFZMR_FZXMXBJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/ES/LoadES_MYFZMR_FZXMXBJBXX",
@@ -117,8 +117,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

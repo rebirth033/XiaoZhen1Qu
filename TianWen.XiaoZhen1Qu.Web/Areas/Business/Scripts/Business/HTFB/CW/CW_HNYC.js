@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    LoadCW_HNYCJBXX();
+    LoadJBXX();
     BindClick("LB");
     BindClick("XL");
 });
@@ -52,7 +52,7 @@ function BindClick(type) {
     });
 }
 //加载宠物_花鸟鱼虫基本信息
-function LoadCW_HNYCJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/CW/LoadCW_HNYCJBXX",
@@ -112,8 +112,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

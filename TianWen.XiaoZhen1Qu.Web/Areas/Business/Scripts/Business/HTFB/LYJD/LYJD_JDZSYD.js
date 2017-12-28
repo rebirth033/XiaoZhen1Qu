@@ -1,8 +1,7 @@
 ﻿var ue = UE.getEditor('BCMS');
 $(document).ready(function () {
-
     BindClick("LB");
-    LoadLYJD_JDZSYDJBXX();
+    LoadJBXX();
 });
 //绑定下拉框
 function BindClick(type) {
@@ -56,10 +55,6 @@ function LoadXL(lbmc, xl) {
                 $("#divXLText").html(html);
                 $(".img_XL").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".liXL").bind("click", function () { ValidateCheck("XL", "忘记选择小类啦"); });
-                if (xml.list.length === 0)
-                    $("#divXL").css("display", "none");
-                else
-                    $("#divXL").css("display", "");
                 if (xl !== "" && xl !== null && xl !== undefined)
                     SetDuoX("XL", xl);
             }
@@ -70,7 +65,7 @@ function LoadXL(lbmc, xl) {
     });
 }
 //加载旅游酒店_酒店/住宿预订基本信息
-function LoadLYJD_JDZSYDJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/LYJD/LoadLYJD_JDZSYDJBXX",
@@ -127,8 +122,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

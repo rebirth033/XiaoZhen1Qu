@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    LoadCL_ZXCJBXX();
+    LoadJBXX();
     BindClick("CX");
     BindClick("PP");
     BindClick("CC");
@@ -28,7 +28,7 @@ function SelectLB(obj, type) {
     $("#div" + type).css("display", "none");
 }
 //加载车辆_自行车基本信息
-function LoadCL_ZXCJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/CL/LoadCL_ZXCJBXX",
@@ -92,8 +92,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

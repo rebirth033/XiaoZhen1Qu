@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    LoadSHFW_BJJBXX();
+    LoadJBXX();
     BindClick("LB");
 });
 //绑定下拉框
@@ -11,7 +11,7 @@ function BindClick(type) {
     });
 }
 //加载生活服务_搬家基本信息
-function LoadSHFW_BJJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/SHFW/LoadSHFW_BJJBXX",
@@ -66,8 +66,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

@@ -1,9 +1,8 @@
 ﻿$(document).ready(function () {
-
     BindClick("YS");
     BindClick("LX");
     BindClick("CZ");
-    LoadHQSY_HSLFJBXX();
+    LoadJBXX();
 });
 //绑定下拉框
 function BindClick(type) {
@@ -27,7 +26,7 @@ function SelectLB(obj, type, lbid) {
     $("#LBID").val(lbid);
 }
 //加载婚庆摄影_婚纱礼服基本信息
-function LoadHQSY_HSLFJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/HQSY/LoadHQSY_HSLFJBXX",
@@ -92,8 +91,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

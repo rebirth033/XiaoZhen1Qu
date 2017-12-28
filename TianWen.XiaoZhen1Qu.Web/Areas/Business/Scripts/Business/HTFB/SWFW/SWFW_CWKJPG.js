@@ -29,7 +29,7 @@ function LoadCWKJPGLB() {
                 $("#divCWKJPGLBText").html(html);
                 $(".img_CWKJPGLB").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".liCWKJPGLB").bind("click", function () { ValidateCheck("CWKJPGLB", "忘记选择类别啦"); });
-                LoadSWFW_CWKJPGJBXX();
+                LoadJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -38,7 +38,7 @@ function LoadCWKJPGLB() {
     });
 }
 //加载商务服务_财务会计/评估基本信息
-function LoadSWFW_CWKJPGJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/SWFW/LoadSWFW_CWKJPGJBXX",
@@ -95,8 +95,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

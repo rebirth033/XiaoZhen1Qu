@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
     BindClick("JXKM");
     $("#divXLBQ").bind("click", function () { LoadXLBQ("CODES_JYPX_XX", "学校"); });
-    LoadJYPX_YSPXJSJBXX();
+    LoadJBXX();
 });
 //绑定下拉框
 function BindClick(type) {
@@ -55,7 +55,7 @@ function LoadDuoX(type, id) {
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 if (type === "辅导科目")
-                    LoadJYPX_YSPXJSJBXX();
+                    LoadJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -64,7 +64,7 @@ function LoadDuoX(type, id) {
     });
 }
 //加载商务服务_艺术培训教师基本信息
-function LoadJYPX_YSPXJSJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/JYPX/LoadJYPX_YSPXJSJBXX",
@@ -125,8 +125,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

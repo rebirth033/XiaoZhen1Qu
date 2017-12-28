@@ -1,14 +1,7 @@
 ﻿$(document).ready(function () {
-
     LoadDuoX("足疗按摩类别", "ZLAMLB");
     BindClick("LB");
 });
-//绑定下拉框
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-
-    });
-}
 //加载多选
 function LoadDuoX(type, id) {
     $.ajax({
@@ -37,7 +30,7 @@ function LoadDuoX(type, id) {
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".liZLAMLB").bind("click", function () { ValidateCheck("ZLAMLB", "忘记选择类别啦"); });
-                LoadXXYL_ZLAMJBXX();
+                LoadJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -46,7 +39,7 @@ function LoadDuoX(type, id) {
     });
 }
 //加载休闲娱乐_足疗按摩基本信息
-function LoadXXYL_ZLAMJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/XXYL/LoadXXYL_ZLAMJBXX",
@@ -103,8 +96,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

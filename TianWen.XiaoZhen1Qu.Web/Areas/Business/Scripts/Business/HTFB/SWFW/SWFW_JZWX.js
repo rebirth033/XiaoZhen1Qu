@@ -29,7 +29,7 @@ function LoadJZWXLB() {
                 $("#divJZWXLBText").html(html);
                 $(".img_JZWXLB").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".liJZWXLB").bind("click", function () { ValidateCheck("JZWXLB", "忘记选择类别啦"); });
-                LoadSWFW_JZWXJBXX();
+                LoadJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -38,7 +38,7 @@ function LoadJZWXLB() {
     });
 }
 //加载商务服务_建筑维修基本信息
-function LoadSWFW_JZWXJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/SWFW/LoadSWFW_JZWXJBXX",
@@ -93,8 +93,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

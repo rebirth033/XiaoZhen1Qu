@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    LoadES_SJSM_TSJJBXX();
+    LoadJBXX();
     BindClick("LB");
     BindClick("XJ");
     BindClick("CPUPP");
@@ -70,7 +70,7 @@ function SelectPBPP(obj, type, code) {
     LoadPBXH(code);
 }
 //加载二手_手机数码_台式机/配件基本信息
-function LoadES_SJSM_TSJJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/ES/LoadES_SJSM_TSJJBXX",
@@ -148,8 +148,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

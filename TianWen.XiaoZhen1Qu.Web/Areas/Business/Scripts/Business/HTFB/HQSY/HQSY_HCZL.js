@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-
     BindClick("LB");
     BindClick("TCPP");
     BindClick("GCPP");
@@ -167,7 +166,6 @@ function BindClick(type) {
         if (type === "XL") {
             LoadXL();
         }
-        
     });
 }
 //选择类别下拉框
@@ -203,7 +201,7 @@ function LoadDuoX(type, id) {
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-                LoadHQSY_HCZLJBXX();
+                LoadJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -248,7 +246,7 @@ function SetGCYS(type, ys) {
     });
 }
 //加载婚庆摄影_婚车租赁基本信息
-function LoadHQSY_HCZLJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/HQSY/LoadHQSY_HCZLJBXX",
@@ -317,8 +315,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

@@ -25,7 +25,7 @@ function ValidateAll() {
         & ValidateSelect("YYPXJSJXKM", "JXKM", "忘记选择教学科目啦")
         & ValidateRadio("JJJY", "忘记选择家教经验啦")
         & ValidateQWSX()
-        & ValidateFWFW()
+
         & ValidateBCMS("BCMS", "忘记填写补充描述啦")
         & ValidateXXDZ()
         & ValidateCommon())

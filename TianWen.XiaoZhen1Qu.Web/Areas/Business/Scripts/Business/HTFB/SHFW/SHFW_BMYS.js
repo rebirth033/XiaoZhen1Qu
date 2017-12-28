@@ -1,6 +1,5 @@
 ﻿$(document).ready(function () {
-
-    LoadSHFW_BMYSJBXX();
+    LoadJBXX();
     BindClick("LB");
 });
 //绑定下拉框
@@ -12,7 +11,7 @@ function BindClick(type) {
     });
 }
 //加载生活服务_月嫂/保姆基本信息
-function LoadSHFW_BMYSJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/SHFW/LoadSHFW_BMYSJBXX",
@@ -67,8 +66,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

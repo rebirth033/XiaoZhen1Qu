@@ -225,7 +225,7 @@ function LoadDuoX(type, id) {
                 if (type === "出租房屋亮点")
                     LoadDuoX("出租要求", "CZYQ");
                 if (type === "出租要求")
-                    LoadFC_ZZFXX();
+                    LoadJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -242,7 +242,7 @@ function SelectXQMC(obj) {
     ValidateXQMC();
 }
 //加载
-function LoadFC_ZZFXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/FC/LoadFC_ZZFJBXX",

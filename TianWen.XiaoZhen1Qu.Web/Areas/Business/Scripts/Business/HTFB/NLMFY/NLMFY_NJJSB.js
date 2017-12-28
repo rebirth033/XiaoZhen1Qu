@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    LoadNLMFY_NJJSBJBXX();
+    LoadJBXX();
     BindClick("LB");
     $("#divXLBQ").bind("click", function () { LoadXLBQ("CODES_NLMFY",$("#spanLB").html()); });
 });
@@ -18,7 +18,7 @@ function SelectLB(obj, type, lbid) {
     $("#divOUTXLBQ").css("display", "block");
 }
 //加载农林牧副渔_农机具/设备基本信息
-function LoadNLMFY_NJJSBJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/NLMFY/LoadNLMFY_NJJSBJBXX",

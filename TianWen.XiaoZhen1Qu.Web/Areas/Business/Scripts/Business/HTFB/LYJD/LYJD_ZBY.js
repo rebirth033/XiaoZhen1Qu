@@ -1,6 +1,5 @@
 ﻿var bcms = UE.getEditor('BCMS');
 $(document).ready(function () {
-
     BindClick("XCTS_R");
     LoadDuoX("游玩项目", "YWXM");
 });
@@ -39,7 +38,7 @@ function LoadDuoX(type, id) {
                 if (type === "游玩项目")
                     LoadDuoX("适合人群", "SHRQ");
                 if (type === "适合人群")
-                    LoadLYJD_ZBYJBXX();
+                    LoadJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -47,14 +46,8 @@ function LoadDuoX(type, id) {
         }
     });
 }
-//绑定下拉框
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-
-    });
-}
 //加载旅游酒店_周边游基本信息
-function LoadLYJD_ZBYJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/LYJD/LoadLYJD_ZBYJBXX",
@@ -119,8 +112,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

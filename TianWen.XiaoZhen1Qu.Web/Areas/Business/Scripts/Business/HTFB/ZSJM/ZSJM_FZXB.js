@@ -118,7 +118,7 @@ function LoadFWFW() {
     });
 }
 //加载招商加盟_服装鞋包基本信息
-function LoadZSJM_FZXBJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/ZSJM/LoadZSJM_FZXBJBXX",

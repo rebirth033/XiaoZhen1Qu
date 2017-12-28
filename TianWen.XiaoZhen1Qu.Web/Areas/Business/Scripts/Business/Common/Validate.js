@@ -11,8 +11,6 @@
     $("#JTDZ").bind("focus", InfoJTDZ);
     $("#JG").bind("blur", ValidateJG);
     $("#JG").bind("focus", InfoJG);
-    $("#FWFW").bind("blur", ValidateFWFW);
-    $("#FWFW").bind("focus", InfoFWFW);
 });
 //验证照片
 function ValidateZP() {
@@ -73,20 +71,6 @@ function ValidateJTDZ() {
     } else {
         $("#divSZQYTip").css("display", "none");
         $("#JTDZ").css("border-color", "#cccccc");
-        return true;
-    }
-}
-//验证服务区域 
-function ValidateFWFW() {
-    if ($("#FWFW").val() === "" || $("#FWFW").val() === null) {
-        $("#divFWFWTip").css("display", "block");
-        $("#divFWFWTip").attr("class", "Warn");
-        $("#divFWFWTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记选择服务区域啦');
-        $("#FWFW").css("border-color", "#F2272D");
-        return false;
-    } else {
-        $("#divFWFWTip").css("display", "none");
-        $("#FWFW").css("border-color", "#cccccc");
         return true;
     }
 }

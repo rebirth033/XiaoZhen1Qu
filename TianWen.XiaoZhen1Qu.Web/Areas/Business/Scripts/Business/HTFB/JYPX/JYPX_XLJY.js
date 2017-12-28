@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-
     BindClick("LB");
     LoadDuoX("学历教育形式", "XS");
 });
@@ -32,7 +31,7 @@ function LoadDuoX(type, id) {
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".li" + id).bind("click", function () { ValidateCheck(id, "忘记选择" + type + "啦"); });
                 if (type === "学历教育形式")
-                    LoadJYPX_XLJYJBXX();
+                    LoadJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -49,7 +48,7 @@ function BindClick(type) {
     });
 }
 //加载商务服务_学历教育基本信息
-function LoadJYPX_XLJYJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/JYPX/LoadJYPX_XLJYJBXX",
@@ -107,8 +106,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

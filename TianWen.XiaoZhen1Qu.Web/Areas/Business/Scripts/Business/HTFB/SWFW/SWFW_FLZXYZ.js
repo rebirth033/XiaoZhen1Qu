@@ -10,7 +10,7 @@ function ValidateLB() {
 function ValidateAll() {
     if (ValidateLB()
         & ValidateRadio("LY", "忘记选择来源啦")
-        & ValidateFWFW()
+
         & ValidateBCMS("BCMS", "忘记填写服务介绍啦")
         & ValidateXXDZ()
         & ValidateCommon())

@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    LoadCL_QCWXBYJBXX();
+    LoadJBXX();
     LoadDuoX("汽车维修/保养类别", "LB");
 });
 //加载多选
@@ -37,7 +37,7 @@ function LoadDuoX(type, id) {
     });
 }
 //加载生活服务_汽车维修/保养基本信息
-function LoadCL_QCWXBYJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/CL/LoadCL_QCWXBYJBXX",
@@ -92,8 +92,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

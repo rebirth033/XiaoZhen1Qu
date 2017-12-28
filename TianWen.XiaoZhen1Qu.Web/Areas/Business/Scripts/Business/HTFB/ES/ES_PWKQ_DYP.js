@@ -1,16 +1,9 @@
 ﻿$(document).ready(function () {
     $("#YXQZ").datepicker({ minDate: 0 });
-
-    LoadES_PWKQ_DYPJBXX();
+    LoadJBXX();
 });
-//绑定下拉框
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-
-    });
-}
 //加载票务卡券_电影票基本信息
-function LoadES_PWKQ_DYPJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/ES/LoadES_PWKQ_DYPJBXX",
@@ -72,8 +65,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

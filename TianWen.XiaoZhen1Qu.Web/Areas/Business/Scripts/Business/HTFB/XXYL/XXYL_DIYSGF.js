@@ -1,6 +1,5 @@
 ﻿$(document).ready(function () {
-
-    LoadXXYL_DIYSGFJBXX();
+    LoadJBXX();
     BindClick("LB");
 });
 //绑定下拉框
@@ -9,11 +8,10 @@ function BindClick(type) {
         if (type === "LB") {
             LoadCODESByTYPENAME("DIY手工坊类别", "LB", "CODES_XXYL", Bind, "DIYSGFLB", "LB", "");
         }
-        
     });
 }
 //加载休闲娱乐_DIY手工坊基本信息
-function LoadXXYL_DIYSGFJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/XXYL/LoadXXYL_DIYSGFJBXX",
@@ -68,8 +66,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

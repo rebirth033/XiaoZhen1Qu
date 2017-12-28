@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-
     LoadDuoX("美食", "MSLB");
 });
 //加载多选
@@ -30,7 +29,7 @@ function LoadDuoX(type, id) {
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".liMSLB").bind("click", function () { ValidateCheck("MSLB", "忘记选择类别啦"); });
-                LoadCY_MSJBXX();
+                LoadJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -38,14 +37,8 @@ function LoadDuoX(type, id) {
         }
     });
 }
-//绑定下拉框
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        
-    });
-}
 //加载餐饮_美食基本信息
-function LoadCY_MSJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/CY/LoadCY_MSJBXX",
@@ -101,8 +94,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

@@ -47,7 +47,7 @@ function LoadDuoX(type, id) {
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".li" + id).bind("click", function () { ValidateCheck(id, "忘记选择" + type + "啦"); });
                 if (type === "移民类别")
-                    LoadJYPX_YMJBXX();
+                    LoadJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -56,7 +56,7 @@ function LoadDuoX(type, id) {
     });
 }
 //加载商务服务_移民基本信息
-function LoadJYPX_YMJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/JYPX/LoadJYPX_YMJBXX",

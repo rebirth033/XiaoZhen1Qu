@@ -36,7 +36,7 @@ function LoadDuoX(type, id) {
                 else
                     $("#div" + id).css("display", "");
                 if (type === "辅导科目")
-                    LoadJYPX_JJJGJBXX();
+                    LoadJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -45,7 +45,7 @@ function LoadDuoX(type, id) {
     });
 }
 //加载商务服务_家教机构基本信息
-function LoadJYPX_JJJGJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/JYPX/LoadJYPX_JJJGJBXX",
@@ -106,8 +106,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

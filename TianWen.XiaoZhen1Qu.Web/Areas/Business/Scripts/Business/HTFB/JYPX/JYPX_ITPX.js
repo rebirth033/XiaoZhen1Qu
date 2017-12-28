@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-
     BindClick("LB");
     LoadDuoX("IT培训形式", "XS");
 });
@@ -9,7 +8,6 @@ function BindClick(type) {
         if (type === "LB") {
             LoadCODESByTYPENAME("IT培训类别", "LB", "CODES_JYPX", Bind, "OUTLB", "LB", "");
         }
-
     });
 }
 //加载多选
@@ -45,7 +43,7 @@ function LoadDuoX(type, id) {
                 else
                     $("#div" + id).css("display", "");
                 if (type === "IT培训形式")
-                    LoadJYPX_ITPXJBXX();
+                    LoadJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -111,7 +109,7 @@ function LoadXL(lbmc, xl) {
     });
 }
 //加载商务服务_IT培训基本信息
-function LoadJYPX_ITPXJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/JYPX/LoadJYPX_ITPXJBXX",
@@ -170,8 +168,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

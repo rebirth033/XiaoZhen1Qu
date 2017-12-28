@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    LoadES_WHYL_YSPSCPJBXX();
+    LoadJBXX();
     BindClick("LB");
     BindClick("XL");
 });
@@ -29,7 +29,7 @@ function SelectPBPP(obj, type, code) {
     LoadPBXH(code);
 }
 //加载二手_文化娱乐_艺术品/收藏品基本信息
-function LoadES_WHYL_YSPSCPJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/ES/LoadES_WHYL_YSPSCPJBXX",
@@ -91,8 +91,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

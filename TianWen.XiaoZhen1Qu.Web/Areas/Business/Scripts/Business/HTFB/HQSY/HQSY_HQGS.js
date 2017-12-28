@@ -1,14 +1,7 @@
 ﻿$(document).ready(function () {
-
     BindClick("LB");
     LoadDuoX("婚庆公司服务提供", "TGFW");
 });
-//绑定下拉框
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        
-    });
-}
 //选择类别下拉框
 function SelectLB(obj, type, lbid) {
     $("#span" + type).html(obj.innerHTML);
@@ -43,7 +36,7 @@ function LoadDuoX(type, id) {
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".li" + id).bind("click", function () { ValidateCheck(id, "忘记选择小类啦"); });
-                LoadHQSY_HQGSJBXX();
+                LoadJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -52,7 +45,7 @@ function LoadDuoX(type, id) {
     });
 }
 //加载婚庆摄影_婚庆公司基本信息
-function LoadHQSY_HQGSJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/HQSY/LoadHQSY_HQGSJBXX",
@@ -108,8 +101,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

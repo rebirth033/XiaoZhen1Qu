@@ -63,7 +63,7 @@ function LoadFWFW() {
                 $("#divFWFWText").html(html);
                 $(".img_FWFW").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".liFWFW").bind("click", function () { ValidateCheck("FWFW", "忘记选择服务范围啦"); });
-                LoadLYJD_QZFWJBXX();
+                LoadJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -72,7 +72,7 @@ function LoadFWFW() {
     });
 }
 //加载旅游酒店_签证服务基本信息
-function LoadLYJD_QZFWJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/LYJD/LoadLYJD_QZFWJBXX",

@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    LoadCW_CWGJBXX();
+    LoadJBXX();
     BindClick("NLDW");
     BindClick("XB");
     BindClick("YMQK");
@@ -29,7 +29,7 @@ function SelectLB(obj, type) {
     $("#div" + type).css("display", "none");
 }
 //加载车辆_宠物狗基本信息
-function LoadCW_CWGJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/CW/LoadCW_CWGJBXX",
@@ -94,8 +94,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

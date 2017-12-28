@@ -7,7 +7,7 @@ $(document).ready(function () {
     BindClick("WFJT_H");
     BindClick("XCTS_R");
     BindClick("XCTS_W");
-    LoadLYJD_GNYJBXX();
+    LoadJBXX();
 });
 //加载默认
 function LoadDefault() {
@@ -40,7 +40,7 @@ function BindClick(type) {
     });
 }
 //加载旅游酒店_国内游基本信息
-function LoadLYJD_GNYJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/LYJD/LoadLYJD_GNYJBXX",

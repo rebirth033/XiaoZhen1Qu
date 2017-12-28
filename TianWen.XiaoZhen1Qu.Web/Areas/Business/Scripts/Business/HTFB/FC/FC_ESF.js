@@ -225,7 +225,7 @@ function LoadDuoX(type, id) {
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-                LoadFC_ZZFXX();
+                LoadJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -242,7 +242,7 @@ function SelectXQMC(obj) {
     ValidateXQMC();
 }
 //加载
-function LoadFC_ZZFXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/FC/LoadFC_ESFJBXX",

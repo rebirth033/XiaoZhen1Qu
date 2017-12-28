@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-
     LoadDuoX("辅导阶段", "FDJD");
     LoadDuoX("辅导科目", "FDKM");
 });
@@ -36,7 +35,7 @@ function LoadDuoX(type, id) {
                 else
                     $("#div" + id).css("display", "");
                 if (type === "辅导科目")
-                    LoadJYPX_JJGRJBXX();
+                    LoadJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -44,14 +43,8 @@ function LoadDuoX(type, id) {
         }
     });
 }
-//绑定下拉框
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        
-    });
-}
 //加载商务服务_家教个人基本信息
-function LoadJYPX_JJGRJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/JYPX/LoadJYPX_JJGRJBXX",
@@ -114,8 +107,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

@@ -41,7 +41,7 @@ function LoadDuoX(type, id) {
                 if (type === "设计培训形式")
                     LoadDuoX("职业技能培训周期", "ZQ");
                 if (type === "职业技能培训周期")
-                    LoadJYPX_SJPXJBXX();
+                    LoadJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -107,7 +107,7 @@ function LoadXL(lbmc, xl) {
     });
 }
 //加载商务服务_设计培训基本信息
-function LoadJYPX_SJPXJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/JYPX/LoadJYPX_SJPXJBXX",
@@ -170,8 +170,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

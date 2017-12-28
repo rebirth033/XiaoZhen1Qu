@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    LoadSWFW_BXJBXX();
+    LoadJBXX();
     BindClick("LB");
 });
 //绑定下拉框
@@ -65,7 +65,7 @@ function LoadXL(type) {
     });
 }
 //加载商务服务_保险基本信息
-function LoadSWFW_BXJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/SWFW/LoadSWFW_BXJBXX",
@@ -123,8 +123,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

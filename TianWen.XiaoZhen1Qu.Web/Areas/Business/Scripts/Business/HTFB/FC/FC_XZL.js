@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     $("#divGQ").find(".div_radio").bind("click", GetGQ);
-    LoadFC_XZLJBXX();
+    LoadJBXX();
     BindClick("YFFS");
 });
 //选择出租
@@ -53,7 +53,7 @@ function GetGQ() {
     return value;
 }
 //加载房产_写字楼基本信息
-function LoadFC_XZLJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/FC/LoadFC_XZLJBXX",
@@ -127,8 +127,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

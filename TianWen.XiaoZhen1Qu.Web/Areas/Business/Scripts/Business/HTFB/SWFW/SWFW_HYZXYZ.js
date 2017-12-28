@@ -31,7 +31,7 @@ function ValidateAll() {
         & ValidateCheck("HWZL", "忘记选择货物种类啦")
         & ValidateCheck("FWYS", "忘记选择服务延伸啦")
         & ValidateYS()
-        & ValidateFWFW()
+
         & ValidateBCMS("BCMS", "忘记填写服务介绍啦")
         & ValidateCommon())
         return true;

@@ -1,9 +1,8 @@
 ﻿$(document).ready(function () {
-
     BindClick("JXKM");
     LoadDuoX("辅导阶段", "FDJD");
     LoadDuoX("辅导科目", "FDKM");
-    LoadJYPX_YYPXJSJBXX();
+    LoadJBXX();
 });
 //选择类别下拉框
 function SelectLB(obj, type, id) {
@@ -52,7 +51,7 @@ function LoadDuoX(type, id) {
                 else
                     $("#div" + id).css("display", "");
                 if (type === "辅导科目")
-                    LoadJYPX_YYPXJSJBXX();
+                    LoadJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -61,7 +60,7 @@ function LoadDuoX(type, id) {
     });
 }
 //加载商务服务_语言培训教师基本信息
-function LoadJYPX_YYPXJSJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/JYPX/LoadJYPX_YYPXJSJBXX",
@@ -120,8 +119,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

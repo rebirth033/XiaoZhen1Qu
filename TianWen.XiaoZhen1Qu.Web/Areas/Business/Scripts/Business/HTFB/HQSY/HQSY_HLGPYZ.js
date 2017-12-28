@@ -17,7 +17,7 @@ function ValidateAll() {
         & ValidateInput("SLCP", "摄录成品")
         & ValidateJG()
         & ValidateBCMS("BCMS", "忘记填写补充描述啦")
-        & ValidateFWFW()
+
         & ValidateXXDZ()
         & ValidateCommon())
         return true;

@@ -1,8 +1,7 @@
 ﻿$(document).ready(function () {
-
     BindClick("LB");
     BindClick("PP");
-    LoadSHFW_SHPSJBXX();
+    LoadJBXX();
 });
 //绑定下拉框
 function BindClick(type) {
@@ -13,7 +12,6 @@ function BindClick(type) {
         if (type === "PP") {
             LoadCODESByTYPENAME("桶装水品牌", "PP", "CODES_SHFW", Bind, "TZSPP", "PP", "");
         }
-
     });
 }
 //选择类别下拉框
@@ -22,7 +20,6 @@ function SelectLB(obj, type, id) {
     $("#div" + type).css("display", "none");
     if (type === "LB")
         PDLB(obj.innerHTML);
-
 }
 //判断类别
 function PDLB(lbmc) {
@@ -82,7 +79,7 @@ function LoadXL(lbmc, xl) {
     });
 }
 //加载生活服务_生活配送基本信息
-function LoadSHFW_SHPSJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/SHFW/LoadSHFW_SHPSJBXX",
@@ -146,8 +143,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

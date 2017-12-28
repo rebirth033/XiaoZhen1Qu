@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-
     BindClick("XL");
     BindClick("DTJY");
     LoadDuoX("导游语种", "DYYZ");
@@ -37,7 +36,7 @@ function LoadDuoX(type, id) {
                 else
                     $("#div" + id).css("display", "");
                 if (type === "导游语种")
-                    LoadLYJD_DYDDRJBXX();
+                    LoadJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -57,11 +56,10 @@ function BindClick(type) {
         if (type === "CYFS") {
             LoadCODESByTYPENAME("出游方式", "CYFS", "CODES_LYJD", Bind, "DYDDRCYFS", "CYFS", "");
         }
-        
     });
 }
 //加载旅游酒店_导游/当地人基本信息
-function LoadLYJD_DYDDRJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/LYJD/LoadLYJD_DYDDRJBXX",
@@ -124,8 +122,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

@@ -119,7 +119,7 @@ function LoadGY() {
                 html += "</ul>";
                 $("#divGYText").html(html);
                 $(".img_GY").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-                LoadSWFW_YSBZJBXX();
+                LoadJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -128,7 +128,7 @@ function LoadGY() {
     });
 }
 //加载商务服务_印刷包装基本信息
-function LoadSWFW_YSBZJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/SWFW/LoadSWFW_YSBZJBXX",
@@ -193,8 +193,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-
     LoadDuoX("快餐/团膳", "KCTSLB");
     BindClick("LB");
 });
@@ -31,7 +30,7 @@ function LoadDuoX(type, id) {
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".liKCTSLB").bind("click", function () { ValidateCheck("KCTSLB", "忘记选择类别啦"); });
-                LoadCY_KCTSJBXX();
+                LoadJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -39,14 +38,8 @@ function LoadDuoX(type, id) {
         }
     });
 }
-//绑定下拉框
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        
-    });
-}
 //加载餐饮_快餐/团膳基本信息
-function LoadCY_KCTSJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/CY/LoadCY_KCTSJBXX",
@@ -103,8 +96,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

@@ -5,7 +5,7 @@
     BindClick("QGFDS");
     BindClick("DDMJ");
     LoadDuoX("适合人群", "SHRQ");
-    LoadZSJM_SHFWJBXX();
+    LoadJBXX();
 });
 //绑定下拉框
 function BindClick(type) {
@@ -118,7 +118,7 @@ function PDLB(name, codeid) {
     }
 }
 //加载招商加盟_生活服务基本信息
-function LoadZSJM_SHFWJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/ZSJM/LoadZSJM_SHFWJBXX",
@@ -193,8 +193,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

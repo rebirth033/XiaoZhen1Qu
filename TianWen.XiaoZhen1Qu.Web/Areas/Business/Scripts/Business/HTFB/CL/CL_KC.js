@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    LoadCL_KCJBXX();
+    LoadJBXX();
     LoadCYLS();
     $("#divXLBQ").bind("click", function () { LoadXLBQ("CODES_CL", "客车品牌"); });
     BindClick("SPNF");
@@ -114,7 +114,7 @@ function SetCLYS(clys) {
     });
 }
 //加载车辆_客车基本信息
-function LoadCL_KCJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/CL/LoadCL_KCJBXX",
@@ -192,8 +192,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

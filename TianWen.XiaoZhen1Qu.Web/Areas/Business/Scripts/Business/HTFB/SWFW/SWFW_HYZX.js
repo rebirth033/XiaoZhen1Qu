@@ -110,7 +110,7 @@ function LoadFWYS() {
                 $("#divFWYSText").html(html);
                 $(".img_FWYS").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".liFWYS").bind("click", function () { ValidateCheck("FWYS", "忘记选择服务延伸啦"); });
-                LoadSWFW_HYZXJBXX();
+                LoadJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -119,7 +119,7 @@ function LoadFWYS() {
     });
 }
 //加载商务服务_货运专线基本信息
-function LoadSWFW_HYZXJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/SWFW/LoadSWFW_HYZXJBXX",
@@ -191,8 +191,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

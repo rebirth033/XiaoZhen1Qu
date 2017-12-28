@@ -1,8 +1,7 @@
-﻿
-$(document).ready(function () {$("body").bind("click", function () { Close("_XZQ"); Close("CX"); Close("PP"); Close("CCNX"); Close("CCYF"); Close("QY"); Close("DD"); });BindClick("CYSJ");
-    LoadHQSY_SYJBXX();
+﻿$(document).ready(function () {
+    BindClick("CYSJ");
+    LoadJBXX();
 });
-
 //绑定下拉框
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
@@ -12,7 +11,6 @@ function BindClick(type) {
         if (type === "XL") {
             LoadXL();
         }
-        
     });
 }
 //选择类别下拉框
@@ -48,7 +46,7 @@ function LoadDuoX(type, id) {
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-                LoadHQSY_SYJBXX();
+                LoadJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -57,7 +55,7 @@ function LoadDuoX(type, id) {
     });
 }
 //加载婚庆摄影_司仪基本信息
-function LoadHQSY_SYJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/HQSY/LoadHQSY_SYJBXX",
@@ -119,8 +117,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

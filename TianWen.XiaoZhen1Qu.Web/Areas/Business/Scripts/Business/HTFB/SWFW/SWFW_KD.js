@@ -1,6 +1,5 @@
 ﻿$(document).ready(function () {
-
-    LoadSWFW_KDJBXX();
+    LoadJBXX();
     BindClick("LB");
 });
 //绑定下拉框
@@ -66,7 +65,7 @@ function LoadXL() {
     });
 }
 //加载商务服务_快递基本信息
-function LoadSWFW_KDJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/SWFW/LoadSWFW_KDJBXX",
@@ -124,8 +123,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

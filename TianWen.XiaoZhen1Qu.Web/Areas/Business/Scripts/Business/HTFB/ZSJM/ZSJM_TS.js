@@ -91,7 +91,7 @@ function LoadFWFW() {
                 $("#divFWFWText").html(html);
                 $(".img_FWFW").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".liFWFW").bind("click", function () { ValidateCheck("FWFW", "忘记选择服务范围啦"); });
-                LoadZSJM_TSJBXX();
+                LoadJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -105,7 +105,7 @@ function SelectLB(obj, type, codeid) {
     $("#div" + type).css("display", "none");
 }
 //加载招商加盟_特色基本信息
-function LoadZSJM_TSJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/ZSJM/LoadZSJM_TSJBXX",
@@ -180,8 +180,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

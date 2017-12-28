@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-
     LoadDuoX("外卖", "WMLB");
     BindClick("LB");
 });
@@ -31,7 +30,7 @@ function LoadDuoX(type, id) {
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".liWMLB").bind("click", function () { ValidateCheck("WMLB", "忘记选择类别啦"); });
-                LoadCY_WMJBXX();
+                LoadJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -46,17 +45,8 @@ function SelectWMLB(obj) {
     else
         $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_purple.png");
 }
-//绑定下拉框
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadLB();
-        }
-        
-    });
-}
 //加载餐饮_外卖基本信息
-function LoadCY_WMJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/CY/LoadCY_WMJBXX",
@@ -112,8 +102,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

@@ -56,7 +56,7 @@ function LoadDuoX(type, id) {
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-                LoadQZZP_QZZPJBXX();
+                LoadJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -65,7 +65,7 @@ function LoadDuoX(type, id) {
     });
 }
 //加载求职招聘_全职招聘基本信息
-function LoadQZZP_QZZPJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/QZZP/LoadQZZP_QZZPJBXX",

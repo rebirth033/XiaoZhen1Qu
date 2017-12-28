@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
     BindClick("LB");
     $("#divXLBQ").bind("click", function () { LoadXLBQ("CODES_SWFW", "国家"); });
-    LoadSWFW_DBQZQZJBXX();
+    LoadJBXX();
 });
 //绑定下拉框
 function BindClick(type) {
@@ -28,7 +28,7 @@ function SelectXLBQ(obj, codename) {
     }
 }
 //加载商务服务_代办签证/签注基本信息
-function LoadSWFW_DBQZQZJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/SWFW/LoadSWFW_DBQZQZJBXX",

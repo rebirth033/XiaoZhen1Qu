@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    LoadES_SJSM_PBDNJBXX();
+    LoadJBXX();
     BindClick("LB");
     BindClick("PBPP");
     BindClick("PBXH");
@@ -89,7 +89,7 @@ function SelectPBPP(obj, type, code) {
     $("#PPID").val(code);
 }
 //加载二手_手机数码_平板基本信息
-function LoadES_SJSM_PBDNJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/ES/LoadES_SJSM_PBDNJBXX",

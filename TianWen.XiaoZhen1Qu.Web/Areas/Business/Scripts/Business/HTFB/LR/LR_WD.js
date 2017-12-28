@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-
     LoadDuoX("舞蹈类别", "WDLB");
 });
 //加载多选
@@ -30,7 +29,7 @@ function LoadDuoX(type, id) {
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".liWDLB").bind("click", function () { ValidateCheck("WDLB", "忘记选择类别啦"); });
-                LoadLR_WDJBXX();
+                LoadJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -39,7 +38,7 @@ function LoadDuoX(type, id) {
     });
 }
 //加载休闲娱乐_舞蹈基本信息
-function LoadLR_WDJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/LR/LoadLR_WDJBXX",
@@ -95,8 +94,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

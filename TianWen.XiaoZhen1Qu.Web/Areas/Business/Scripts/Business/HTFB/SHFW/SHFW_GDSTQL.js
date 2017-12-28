@@ -1,7 +1,6 @@
 ﻿$(document).ready(function () {
-
     BindClick("LB");
-    LoadSHFW_GDSTQLJBXX();
+    LoadJBXX();
 });
 //绑定下拉框
 function BindClick(type) {
@@ -60,7 +59,7 @@ function LoadXL(lbmc, xl) {
     });
 }
 //加载生活服务_管道疏通/清理基本信息
-function LoadSHFW_GDSTQLJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/SHFW/LoadSHFW_GDSTQLJBXX",
@@ -119,8 +118,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

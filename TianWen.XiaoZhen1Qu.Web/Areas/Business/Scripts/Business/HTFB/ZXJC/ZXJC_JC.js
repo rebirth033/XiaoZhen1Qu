@@ -1,6 +1,5 @@
 ﻿$(document).ready(function () {
-
-    LoadZXJC_JCJBXX();
+    LoadJBXX();
     BindClick("LB");
 });
 //绑定下拉框
@@ -65,7 +64,7 @@ function LoadXL(type) {
     });
 }
 //加载装修建材_建材基本信息
-function LoadZXJC_JCJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/ZXJC/LoadZXJC_JCJBXX",
@@ -123,8 +122,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

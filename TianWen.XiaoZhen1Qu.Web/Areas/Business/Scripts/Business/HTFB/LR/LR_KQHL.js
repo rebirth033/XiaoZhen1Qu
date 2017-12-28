@@ -1,6 +1,5 @@
 ﻿$(document).ready(function () {
-
-    LoadLR_KQHLJBXX();
+    LoadJBXX();
     BindClick("LB");
 });
 //绑定下拉框
@@ -12,7 +11,7 @@ function BindClick(type) {
     });
 }
 //加载丽人_口腔护理基本信息
-function LoadLR_KQHLJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/LR/LoadLR_KQHLJBXX",
@@ -67,8 +66,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

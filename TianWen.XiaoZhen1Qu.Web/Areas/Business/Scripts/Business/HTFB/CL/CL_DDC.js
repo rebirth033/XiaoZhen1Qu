@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    LoadCL_DDCJBXX();
+    LoadJBXX();
     BindClick("CX");
     BindClick("PP");
     BindClick("DCDY");
@@ -31,8 +31,8 @@ function SelectLB(obj, type) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
 }
-//加载车辆_自行车/电动车/三轮车基本信息
-function LoadCL_DDCJBXX() {
+//加载车辆_电动车基本信息
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/CL/LoadCL_DDCJBXX",
@@ -98,8 +98,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

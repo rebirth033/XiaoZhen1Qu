@@ -86,14 +86,10 @@ function LoadDuoX(type, id) {
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-                if (xml.list.length === 0)
-                    $("#div" + id).css("display", "none");
-                else
-                    $("#div" + id).css("display", "");
-                if (type === "级别")
-                    LoadJYPX_YYPXJGJBXX();
                 if (type === "专项")
                     LoadDuoX("级别", "JB");
+                if (type === "级别")
+                    LoadJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -110,7 +106,7 @@ function BindClick(type) {
     });
 }
 //加载商务服务_语言培训机构基本信息
-function LoadJYPX_YYPXJGJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/JYPX/LoadJYPX_YYPXJGJBXX",
@@ -171,8 +167,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

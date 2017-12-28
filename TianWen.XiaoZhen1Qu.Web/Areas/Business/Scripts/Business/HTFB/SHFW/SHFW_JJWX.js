@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     BindClick("LB");
-    LoadSHFW_JJWXJBXX();
+    LoadJBXX();
 });
 //加载小类
 function LoadXL() {
@@ -43,7 +43,7 @@ function BindClick(type) {
     });
 }
 //加载生活服务_家具维修基本信息
-function LoadSHFW_JJWXJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/SHFW/LoadSHFW_JJWXJBXX",
@@ -101,8 +101,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

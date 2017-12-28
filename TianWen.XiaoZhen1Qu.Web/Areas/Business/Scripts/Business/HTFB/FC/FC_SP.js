@@ -16,7 +16,6 @@ function BindClick(type) {
         }
         if (type === "JYHY") {
             LoadCODESByTYPENAME("经营行业", "JYHY", "CODES_FC", Bind, "SPJYHY", "JYHY", "");
-
         }
         if (type === "ZJDW") {
             LoadCODESByTYPENAME("厂房租金单位", "ZJDW", "CODES_FC");
@@ -53,7 +52,7 @@ function LoadDuoX(type, id) {
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-                LoadFC_SPJBXX();
+                LoadJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -112,7 +111,7 @@ function GetGQ() {
     return value;
 }
 //加载房产_商铺基本信息
-function LoadFC_SPJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/FC/LoadFC_SPJBXX",
@@ -196,8 +195,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

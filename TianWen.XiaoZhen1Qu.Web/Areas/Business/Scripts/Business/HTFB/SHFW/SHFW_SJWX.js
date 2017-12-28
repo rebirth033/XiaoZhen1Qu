@@ -1,7 +1,6 @@
 ﻿$(document).ready(function () {
-
     LoadXL("手机维修品牌");
-    LoadSHFW_SJWXJBXX();
+    LoadJBXX();
 });
 //加载小类
 function LoadXL(lbmc, xl) {
@@ -41,7 +40,7 @@ function LoadXL(lbmc, xl) {
     });
 }
 //加载生活服务_手机/数码维修基本信息
-function LoadSHFW_SJWXJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/SHFW/LoadSHFW_SJWXJBXX",
@@ -96,8 +95,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

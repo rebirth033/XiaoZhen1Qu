@@ -1,6 +1,5 @@
 ﻿$(document).ready(function () {
-
-    LoadZXJC_FWGZJBXX();
+    LoadJBXX();
     BindClick("LB");
 });
 //绑定下拉框
@@ -12,7 +11,6 @@ function BindClick(type) {
         if (type === "XL") {
             LoadXL();
         }
-        
     });
 }
 //选择类别下拉框
@@ -67,7 +65,7 @@ function LoadXL(type) {
     });
 }
 //加载装修建材_房屋改造基本信息
-function LoadZXJC_FWGZJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/ZXJC/LoadZXJC_FWGZJBXX",
@@ -125,8 +123,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

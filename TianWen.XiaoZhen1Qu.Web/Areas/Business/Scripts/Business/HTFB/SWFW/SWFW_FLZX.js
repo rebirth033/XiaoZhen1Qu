@@ -1,7 +1,6 @@
 ﻿$(document).ready(function () {
     $("#div_ly_ls").bind("click", LSSelect);
     $("#div_ly_lssws").bind("click", LSSWSSelect);
-
     LoadFLZXLB();
 });
 //选择律师
@@ -42,7 +41,7 @@ function LoadFLZXLB() {
                 $("#divFLZXLBText").html(html);
                 $(".img_FLZXLB").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".liFLZXLB").bind("click", function () { ValidateCheck("FLZXLB", "忘记选择类别啦"); });
-                LoadSWFW_FLZXJBXX();
+                LoadJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -51,7 +50,7 @@ function LoadFLZXLB() {
     });
 }
 //加载商务服务_法律咨询基本信息
-function LoadSWFW_FLZXJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/SWFW/LoadSWFW_FLZXJBXX",
@@ -108,8 +107,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

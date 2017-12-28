@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-
     BindClick("LB");
     LoadDuoX("体育培训对象", "DX");
 });
@@ -44,7 +43,7 @@ function LoadDuoX(type, id) {
                 else
                     $("#div" + id).css("display", "");
                 if (type === "体育培训对象")
-                    LoadJYPX_TYPXJGJBXX();
+                    LoadJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -110,7 +109,7 @@ function LoadXL(lbmc, xl) {
     });
 }
 //加载商务服务_体育培训基本信息
-function LoadJYPX_TYPXJGJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/JYPX/LoadJYPX_TYPXJGJBXX",
@@ -169,8 +168,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

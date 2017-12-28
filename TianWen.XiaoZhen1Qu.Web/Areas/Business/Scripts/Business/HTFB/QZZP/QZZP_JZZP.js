@@ -2,7 +2,7 @@
     $("#DQJZKSSJ").datepicker({ minDate: 0 });
     $("#DQJZJSSJ").datepicker({ minDate: 0 });
     $("td").bind("click", SelectJZSJ);
-    LoadQZZP_JZZPJBXX();
+    LoadJBXX();
     BindClick("JZLB");
     BindClick("XZDW");
     BindClick("XZJS");
@@ -105,7 +105,7 @@ function SelectJZLB() {
     ValidateSelect("ZPJZLB", "JZLB", "忘记选择兼职类别啦");
 }
 //加载求职招聘_兼职招聘基本信息
-function LoadQZZP_JZZPJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/QZZP/LoadQZZP_JZZPJBXX",
@@ -173,8 +173,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

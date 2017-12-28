@@ -140,7 +140,7 @@ function LoadWJLX() {
                     $("#divWJLX").css("display", "none");
                 else
                     $("#divWJLX").css("display", "");
-                LoadSWFW_FYSJJBXX();
+                LoadJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -149,7 +149,7 @@ function LoadWJLX() {
     });
 }
 //加载商务服务_翻译/速记基本信息
-function LoadSWFW_FYSJJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/SWFW/LoadSWFW_FYSJJBXX",

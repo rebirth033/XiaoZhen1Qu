@@ -1,8 +1,7 @@
 ﻿$(document).ready(function () {
     $("#divSFSM").find(".div_radio").bind("click", function () { ValidateRadio("SFSM", "忘记选择是否上门啦"); }); 
-
     BindClick("LB");
-    LoadSHFW_JDWXJBXX();
+    LoadJBXX();
 });
 //绑定下拉框
 function BindClick(type) {
@@ -61,7 +60,7 @@ function LoadXL(lbmc, xl) {
     });
 }
 //加载生活服务_家电维修基本信息
-function LoadSHFW_JDWXJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/SHFW/LoadSHFW_JDWXJBXX",
@@ -120,8 +119,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

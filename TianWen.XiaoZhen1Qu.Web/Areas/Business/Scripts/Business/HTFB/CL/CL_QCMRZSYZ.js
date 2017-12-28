@@ -28,7 +28,7 @@ function ValidateAll() {
     if (ValidateSelect("OUTLB", "LB", "忘记选择类别啦")
         & ValidateOther()
         & ValidateJG()
-        & ValidateFWFW()
+
         & ValidateBCMS("BCMS", "忘记填写补充描述啦")
         & ValidateXXDZ()
         & ValidateCommon())

@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    LoadNLMFY_FLNYJBXX();
+    LoadJBXX();
     BindClick("LB");
     $("#divXLBQ").bind("click", function () { LoadXLBQ("CODES_NLMFY",$("#spanLB").html()); });
 });
@@ -19,7 +19,7 @@ function SelectLB(obj, type, lbid) {
     $("#divOUTXLBQ").css("display", "block");
 }
 //加载农林牧副渔_肥料/农药基本信息
-function LoadNLMFY_FLNYJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/NLMFY/LoadNLMFY_FLNYJBXX",

@@ -1,6 +1,5 @@
 ﻿$(document).ready(function () {
-
-    LoadXXYL_YDJBJBXX();
+    LoadJBXX();
     BindClick("LB");
 });
 
@@ -13,7 +12,7 @@ function BindClick(type) {
     });
 }
 //加载休闲娱乐_夜店酒吧基本信息
-function LoadXXYL_YDJBJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/XXYL/LoadXXYL_YDJBJBXX",
@@ -69,8 +68,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

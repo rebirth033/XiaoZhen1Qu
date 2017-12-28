@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    LoadES_JDJJBG_ESJDJBXX();
+    LoadJBXX();
     BindClick("LB");
     BindClick("XL");
     BindClick("PBPP");
@@ -105,7 +105,7 @@ function PDLB(LB) {
     }
 }
 //加载二手_家电家具办公_二手家电基本信息
-function LoadES_JDJJBG_ESJDJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/ES/LoadES_JDJJBG_ESJDJBXX",
@@ -187,8 +187,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

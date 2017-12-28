@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-
     BindClick("LB");
     LoadSKXS();
 });
@@ -38,10 +37,6 @@ function LoadXL(lbmc, xl) {
                 $("#divXLText").html(html);
                 $(".img_XL").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".liXL").bind("click", function () { ValidateCheck("XL", "忘记选择小类啦"); });
-                if (xml.list.length === 0)
-                    $("#divXL").css("display", "none");
-                else
-                    $("#divXL").css("display", "");
                 if (xl !== "" && xl !== null && xl !== undefined)
                     SetDuoX("XL", xl);
             }
@@ -83,7 +78,7 @@ function LoadSKXS() {
                     $("#divSKXS").css("display", "none");
                 else
                     $("#divSKXS").css("display", "");
-                LoadJYPX_ZXXFDBJBXX();
+                LoadJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -97,11 +92,10 @@ function BindClick(type) {
         if (type === "LB") {
             LoadCODESByTYPENAME("中小学辅导班类别", "LB", "CODES_JYPX", Bind, "OUTLB", "LB");
         }
-
     });
 }
 //加载商务服务_中小学辅导班基本信息
-function LoadJYPX_ZXXFDBJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/JYPX/LoadJYPX_ZXXFDBJBXX",
@@ -160,8 +154,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

@@ -1,7 +1,6 @@
 ﻿$(document).ready(function () {
-
     BindClick("JXKM");
-    LoadJYPX_TYJLJBXX();
+    LoadJBXX();
 });
 //绑定下拉框
 function BindClick(type) {
@@ -12,7 +11,7 @@ function BindClick(type) {
     });
 }
 //加载教育培训_体育教练基本信息
-function LoadJYPX_TYJLJBXX() {
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/JYPX/LoadJYPX_TYJLJBXX",
@@ -71,8 +70,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

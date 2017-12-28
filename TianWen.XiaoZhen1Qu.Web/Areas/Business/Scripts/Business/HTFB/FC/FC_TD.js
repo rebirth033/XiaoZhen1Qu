@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
     $("#div_gq_cz").bind("click", CZSelect);
     $("#div_gq_cs").bind("click", CSSelect);
-    LoadFC_TDJBXX();
+    LoadJBXX();
     BindClick("ZJDW");
 });
 //选择出租
@@ -49,8 +49,8 @@ function GetGQ() {
     }
     return value;
 }
-//加载
-function LoadFC_TDJBXX() {
+//加载房产_土地基本信息
+function LoadJBXX() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/FC/LoadFC_TDJBXX",
@@ -120,8 +120,6 @@ function FB() {
         success: function (xml) {
             if (xml.Result === 1) {
                 window.location.href = getRootPath() + "/Business/FBCG/FBCG";
-            } else {
-
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
