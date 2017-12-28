@@ -32,7 +32,7 @@ function LoadJBXX(obj) {
     var html = "";
     html += ('<div class="div_body_left_head">');
     html += ('<p class="p_div_body_left_head_bt">' + obj.BT + '</p>');
-    html += ('<p class="p_div_body_left_head_ll">11月5日 22:36 3次浏览 </p>');
+    html += ('<p class="p_div_body_left_head_ll">' + obj.ZXGXSJ.ToString('yyyy年MM月dd日') + '  ' + obj.LLCS + '次浏览 </p>');
     html += ('</div>');
     html += ('<div class="div_body_left_body">');
     html += ('<div class="div_body_left_body_left">');
@@ -53,11 +53,7 @@ function LoadJBXX(obj) {
     html += ('<div class="div_body_left_body_right">');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">类别：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.LB + '</span>');
-    html += ('</p>');
-    html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">小类：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.XL + '</span>');
+    html += ('<span class="span_body_left_body_right_right" style="width:240px;display:inline-block;">' + obj.LB + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">服务区域：</span>');
@@ -69,11 +65,13 @@ function LoadJBXX(obj) {
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">商家地址：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.QY + '-' + obj.DD + '</span>');
+    html += ('<span class="span_body_left_body_right_right">' + '［' + obj.QY + '-' + obj.DD + '］ ' + obj.JTDZ + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">联系电话：</span>');
-    html += ('<span class="span_body_left_body_right_right span_body_left_body_right_right_lxdh">' + obj.LXDH.substr(0, 7) + '****' + '</span>');
+    html += ('<span class="span_body_left_body_right_right span_body_left_body_right_right_lxdh">' + obj.LXDH.substr(0, 4) + '****' + '</span>');
+    html += ('<span class="span_body_left_body_right_right_ckwzdh" onclick="ShowWZDH()">完整电话</span>');
+    html += ('<span class="span_body_left_body_right_wzdh"><span class="span_body_left_body_right_wzdh_lxdh"><i class="i_body_left_body_right_wzdh_lxdh"></i>' + obj.LXDH + '</span><span class="span_body_left_body_right_wzdh_ts">联系时请一定说明在信息小镇上看到的哈，谢谢^_^</span><i class="i_body_left_body_right_wzdh_close" onclick="HideWZDH()">×</i></span>');
     html += ('</p>');
     html += ('</div>');
     html += ('</div>');

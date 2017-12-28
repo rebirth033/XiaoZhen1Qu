@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-    LoadFWFW();
     LoadDuoX("工装服务类别", "LB");
 });
 //加载多选
@@ -29,6 +28,8 @@ function LoadDuoX(type, id) {
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".li" + id).bind("click", function () { ValidateCheck(id, "忘记选择类别啦"); });
+                LoadFWFW();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -54,9 +55,10 @@ function LoadJBXX() {
                 $("#ID").val(xml.Value.ZXJC_GZFWJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
-                PDLB(xml.Value.ZXJC_GZFWJBXX.LB);
-                $("#spanLB").html(xml.Value.ZXJC_GZFWJBXX.LB);
-                $("#spanXL").html(xml.Value.ZXJC_GZFWJBXX.XL);
+                if (xml.Value.ZXJC_GZFWJBXX.LB !== null)
+                    SetDuoX("LB", xml.Value.ZXJC_GZFWJBXX.LB);
+                if (xml.Value.ZXJC_GZFWJBXX.FWFW !== null)
+                    SetDuoX("FWFW", xml.Value.ZXJC_GZFWJBXX.FWQY);
                 $("#spanQY").html(xml.Value.ZXJC_GZFWJBXX.QY);
                 $("#spanDD").html(xml.Value.ZXJC_GZFWJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
@@ -74,8 +76,8 @@ function FB() {
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
-    obj = jsonObj.AddJson(obj, "XL", "'" + $("#spanXL").html() + "'");
+    obj = jsonObj.AddJson(obj, "LB", "'" + GetDuoX("LB")+ "'");
+    obj = jsonObj.AddJson(obj, "FWQY", "'" + GetDuoX("FWFW") + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
 
