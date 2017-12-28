@@ -65,7 +65,7 @@ function LoadJBXX(obj) {
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">商家地址：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.QY + '-' + obj.DD + '</span>');
+    html += ('<span class="span_body_left_body_right_right">' + '［' + obj.QY + '-' + obj.DD + '］ ' + obj.JTDZ + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">联系电话：</span>');
@@ -251,22 +251,45 @@ function LoadJJRTJFYInfo(obj) {
 }
 //加载相关类目
 function LoadXGLM() {
-    var list = "福州日租/短租,福州二手房出售,福州新房出售,福州租房/出租,福州找室友,福州写字楼出租".split(",");
-    var html = "";
-    html += ('<div class="div_body_right_xglm">');
-    html += ('<p class="p_body_right_xglm">相关类目</p>');
-    html += ('<ul id="ul_body_right_xglm" class="ul_body_right_xglm">');
-    for (var i = 0; i < list.length; i++) {
-        html += '<li class="li_body_right_xglm">' + list[i] + '</li>';
-    }
-    html += ('<em class="em_body_right_xglm"></em>');
-    html += ('</ul>');
-    list = "福州酒店宾馆,福州医药保健,福州电子通讯,福州服饰鞋包,福州汽修美容,福州家居建材".split(",");
-    html += ('<ul id="ul_body_right_xglm" class="ul_body_right_xglm">');
-    for (var i = 0; i < list.length; i++) {
-        html += '<li class="li_body_right_xglm">' + list[i] + '</li>';
-    }
-    html += ('</ul>');
-    html += ('</div>');
-    $("#div_body_right").append(html);
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadXGLM",
+        dataType: "json",
+        data:
+        {
+            TYPE: "FC,LYJD"
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "";
+                html += ('<div class="div_body_right_xglm">');
+                html += ('<p class="p_body_right_xglm">相关类目</p>');
+                html += ('<ul id="ul_body_right_xglm" class="ul_body_right_xglm">');
+                for (var i = 0; i < xml.list.length; i++) {
+                    if (xml.list[i].FBYM.indexOf("FC_") !== -1)
+                        html += '<li class="li_body_right_xglm" onclick="OpenXGLM(\'' + xml.list[i].FBYM + '\',' + xml.list[i].LBID + ')">' + xml.xzq + xml.list[i].LBNAME + '</li>';
+                }
+                html += ('<em class="em_body_right_xglm"></em>');
+                html += ('</ul>');
+                html += ('<ul id="ul_body_right_xglm" class="ul_body_right_xglm">');
+                for (var i = 0; i < xml.list.length; i++) {
+                    if (xml.list[i].FBYM.indexOf("LYJD_") !== -1)
+                        html += '<li class="li_body_right_xglm" onclick="OpenXGLM(\'' + xml.list[i].FBYM + '\',' + xml.list[i].LBID + ')">' + xml.xzq + xml.list[i].LBNAME + '</li>';
+                }
+                html += ('</ul>');
+                html += ('</div>');
+                $("#div_body_right").append(html);
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//打开相关类目
+function OpenXGLM(lbname, lbid) {
+    if (lbname.indexOf("FC_") !== -1)
+        window.open(getRootPath() + "/Business" + "/FCCX/" + lbname.replace("FC_", "FCCX_") + "?LBID=" + lbid);
+    if (lbname.indexOf("LYJD_") !== -1)
+        window.open(getRootPath() + "/Business" + "/LYJDCX/" + lbname.replace("LYJD_", "LYJDCX_") + "?LBID=" + lbid);
 }
