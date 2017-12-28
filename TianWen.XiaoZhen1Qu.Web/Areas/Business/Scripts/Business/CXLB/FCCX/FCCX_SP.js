@@ -3,6 +3,7 @@ $(document).ready(function () {
     BindConditionNav();
     $(".li_condition_head:eq(0)").each(function () { $(this).css("background-color", "#ffffff").css("color", "#bc6ba6"); });
     BindBodyNav();
+    LoadHot("FCXX_SP");
     LoadCZCondition();
 });
 //加载出租查询条件
@@ -43,14 +44,14 @@ function SelectCondition(obj, name) {
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("QY,JYHY,MJ");
+    var condition = GetAllCondition("QY,JYHY,MJ,SF");
     if (GetNavCondition() === "出租") {
-        condition += "GQ:出租";
+        condition += ",GQ:出租";
         if (GetCondition("ZJ") !== "")
             condition += ",ZJ:" + GetCondition("ZJ");
     }
     if (GetNavCondition() === "出售") {
-        condition += "GQ:出售";
+        condition += ",GQ:出售";
         if (GetCondition("SJ") !== "")
             condition += ",SJ:" + GetCondition("SJ");
     }
@@ -61,7 +62,7 @@ function LoadBody(TYPE, PageIndex) {
         data:
         {
             TYPE: TYPE,
-            Condition: condition,
+            Condition: LTrim(condition, ','),
             PageSize: 5,
             PageIndex: PageIndex
         },
@@ -92,7 +93,7 @@ function LoadCZInfo(obj) {
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
     html += ('<p class="p_li_body_left_center_bt">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_left_center_cs font_size16">' + obj.MJ + '平米</p>');
+    html += ('<p class="p_li_body_left_center_cs font_size16">' + obj.SPLX + ' / ' + obj.MJ + '平米</p>');
     html += ('<p class="p_li_body_left_center_dz font_size16">' + '[' + obj.QY + '-' + obj.DD + '] ' + obj.JTDZ + ' ' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
@@ -111,7 +112,7 @@ function LoadCSInfo(obj) {
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
     html += ('<p class="p_li_body_left_center_bt">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_left_center_cs font_size16">' + obj.MJ + '平米</p>');
+    html += ('<p class="p_li_body_left_center_cs font_size16">' + obj.SPLX + ' / ' + obj.MJ + '平米</p>');
     html += ('<p class="p_li_body_left_center_dz font_size16">' + '[' + obj.QY + '-' + obj.DD + '-' + obj.JTDZ + '] ' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
@@ -151,9 +152,20 @@ function LoadHotInfo(obj) {
     var html = "";
     html += ('<li onclick="OpenXXXX(\'FCXX_SP\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_right_xq">' + obj.JTDZ + '</p>');
-    html += ('<p class="p_li_body_right_cs">' + obj.MJ + '平米</p>');
+    html += ('<p class="p_li_body_right_xq">' + obj.BT + '</p>');
+    html += ('<p class="p_li_body_right_cs">' + obj.SPLX + ' / ' + obj.MJ + '平米</p>');
     html += ('<p class="p_li_body_right_jg">' + GetJG(obj.ZJ, obj.ZJDW) + '</p>');
     html += ('</li>');
     $("#ul_body_right").append(html);
+}
+//根据条件查询
+function SearchByCondition(type) {
+    $("#ul_condition_body_SF").find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    if (type === "GR")
+        $("#ul_condition_body_SF").find(".li_condition_body:eq(1)").addClass("li_condition_body_active");
+    if (type === "JJR")
+        $("#ul_condition_body_SF").find(".li_condition_body:eq(2)").addClass("li_condition_body_active");
+    LoadBody("FCXX_SP", 1);
 }

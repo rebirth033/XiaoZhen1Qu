@@ -34,7 +34,9 @@
 .div_body .div_body_left .div_body_left_body_xq .div_body_left_body_xq_xx{ height: auto;width: 100%;display: block;margin-left: 10px;margin-bottom: 30px;float: left;font-size: 16px;}
 .div_body .div_body_left .div_body_left_body_xq .div_body_left_body_xq_xx .div_body_left_body_xq_xx_left{ font-size: 16px;float: left;}
 .div_body .div_body_left .div_body_left_body_xq .div_body_left_body_xq_xx .div_body_left_body_xq_xx_right{ margin-left: 20px;color: #666666;float: left;}
-.div_body .div_body_left .div_body_left_body_xq .div_body_left_body_xq_xx .div_body_left_body_xq_xx_right .span_body_left_body_xq_xx_right{width: 96px;text-align: right;display: inline-block;margin-left: 30px;}
+.div_body .div_body_left .div_body_left_body_xq .div_body_left_body_xq_xx .div_body_left_body_xq_xx_right .p_body_left_body_xq_xx_right{ width: 100%;}
+.div_body .div_body_left .div_body_left_body_xq .div_body_left_body_xq_xx .div_body_left_body_xq_xx_right .p_body_left_body_xq_xx_right .span_body_left_body_xq_xx_left{width: 96px;text-align: right;display: inline-block;margin-left: 30px;}
+.div_body .div_body_left .div_body_left_body_xq .div_body_left_body_xq_xx .div_body_left_body_xq_xx_right .p_body_left_body_xq_xx_right .span_body_left_body_xq_xx_right{width: 120px;text-align: left;display: inline-block;margin-left: 30px;}
 .div_body .div_body_left .div_body_left_body_xq .div_body_left_body_xq_xx .div_body_left_body_xq_xx_right .span_body_left_body_xq_xx_right_fwld{width: 96px;text-align: center;display: inline-block;}
 .div_body .div_body_left .div_body_left_body_xq .div_body_left_body_xq_xx .div_body_left_body_xqxx .div_body_left_body_xqxx_dtxx_body_left_body_xq_xx_right .span_body_left_body_xq_xx_right{ width: 96px;height: 70px;display: inline-block;margin-bottom: 10px;}
 .div_body .div_body_left .div_body_left_body_xq .div_body_left_body_xq_xx .div_body_left_body_xq_xx_right .span_body_left_body_xq_xx_right .img_body_left_body_xq_xx_right{ width: 40px;height: 40px;display: block;margin-left: 28px;}

@@ -1,4 +1,5 @@
 ﻿$(document).ready(function () {
+    $("#divSF").find(".div_radio").bind("click", function () { ValidateRadio("SF", ""); });
     $("#divGQ").find(".div_radio").bind("click", function () { ValidateRadio("GQ", "忘记选择供求啦"); });
     $("#LPMC").bind("blur", ValidateLPMC);
     $("#LPMC").bind("focus", InfoLPMC);
@@ -15,9 +16,9 @@
 function ValidateAll() {
     if (GetGQ() === "出售") {
         if (ValidateRadio("GQ", "忘记选择供求啦")
+            & ValidateRadio("SF", "忘记选择身份啦")
             & ValidateBCMS("BCMS", "忘记填写补充描述啦")
             & ValidateSZQY()
-            & ValidateDD()
             & ValidateSJ()
             & ValidateMJ()
             & ValidateCommon())
@@ -27,9 +28,9 @@ function ValidateAll() {
     }
     else {
         if (ValidateRadio("GQ", "忘记选择供求啦")
+        & ValidateRadio("SF", "忘记选择身份啦")
         & ValidateBCMS("BCMS", "忘记填写补充描述啦")
         & ValidateSZQY()
-        & ValidateDD()
         & ValidateZJ()
         & ValidateMJ()
         & ValidateCommon())
@@ -49,20 +50,6 @@ function ValidateLPMC() {
     } else {
         $("#divLPMCTip").css("display", "none");
         $("#spanLPMC").css("border-color", "#cccccc");
-        return true;
-    }
-}
-//验证地段
-function ValidateDD() {
-    if ($("#DD").val() === "" || $("#DD").val() === null) {
-        $("#divDDTip").css("display", "block");
-        $("#divDDTip").attr("class", "Warn");
-        $("#divDDTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写地段啦');
-        $("#spanDD").css("border-color", "#F2272D");
-        return false;
-    } else {
-        $("#divDDTip").css("display", "none");
-        $("#spanDD").css("border-color", "#cccccc");
         return true;
     }
 }
@@ -138,13 +125,6 @@ function InfoLPMC() {
     $("#divLPMCTip").attr("class", "Info");
     $("#divLPMCTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />不超过30字，不能填写电话、QQ、邮箱等联系方式或特殊符号');
     $("#LPMC").css("border-color", "#bc6ba6");
-}
-//提示地段
-function InfoDD() {
-    $("#divDDTip").css("display", "block");
-    $("#divDDTip").attr("class", "Info");
-    $("#divDDTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />不超过30字，不能填写电话、QQ、邮箱等联系方式或特殊符号');
-    $("#spanDD").css("border-color", "#bc6ba6");
 }
 //提示租金
 function InfoZJ() {

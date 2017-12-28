@@ -1,7 +1,6 @@
 ﻿$(document).ready(function () {
     $("#div_gq_cz").bind("click", CZSelect);
     $("#div_gq_cs").bind("click", CSSelect);
-    $("body").bind("click", function() { Close("_XZQ"); });
     LoadFC_CWJBXX();
     BindClick("ZJDW");
 });
