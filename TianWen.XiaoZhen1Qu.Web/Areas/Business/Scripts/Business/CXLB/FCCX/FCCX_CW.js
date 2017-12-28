@@ -45,7 +45,7 @@ function SelectCondition(obj, name) {
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("MJ,QY");
+    var condition = GetAllCondition("MJ,QY,SF");
     if (GetNavCondition() === "出租") {
         condition += ",GQ:出租";
         if (GetCondition("ZJ") !== "")
@@ -158,4 +158,15 @@ function LoadHotInfo(obj) {
     html += ('<p class="p_li_body_right_jg">' + (GetNavCondition() === "出租" ? GetJG(obj.ZJ, obj.ZJDW) : GetJG(obj.SJ, obj.ZJDW)) + '</p>');
     html += ('</li>');
     $("#ul_body_right").append(html);
+}
+//根据条件查询
+function SearchByCondition(type) {
+    $("#ul_condition_body_SF").find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    if (type === "GR")
+        $("#ul_condition_body_SF").find(".li_condition_body:eq(1)").addClass("li_condition_body_active");
+    if (type === "JJR")
+        $("#ul_condition_body_SF").find(".li_condition_body:eq(2)").addClass("li_condition_body_active");
+    LoadBody("FCXX_CW", 1);
 }

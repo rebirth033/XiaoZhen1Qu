@@ -1,8 +1,6 @@
 ﻿$(document).ready(function () {
     $("#divSF").find(".div_radio").bind("click", function () { ValidateRadio("SF", ""); });
     $("#divGQ").find(".div_radio").bind("click", function () { ValidateRadio("GQ", "忘记选择供求啦"); });
-    $("#DD").bind("blur", ValidateDD);
-    $("#DD").bind("focus", InfoDD);
     $("#ZJ").bind("blur", ValidateZJ);
     $("#ZJ").bind("focus", InfoZJ);
     $("#SJ").bind("blur", ValidateSJ);
