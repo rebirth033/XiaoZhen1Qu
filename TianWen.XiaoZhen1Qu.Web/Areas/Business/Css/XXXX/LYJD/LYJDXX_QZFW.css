@@ -14,7 +14,7 @@
 .div_body .div_body_left .div_body_left_body_right .span_body_left_body_right_zjdw{ color: #bc6ba6;font-size: 16px;}
 .div_body .div_body_left .div_body_left_body_right .span_body_left_body_right_yffs{ font-size: 16px;margin-left: 30px; }
 .div_body .div_body_left .div_body_left_body_right .p_body_left_body_right{ height: 45px;width: 100%;padding: 20px 30px;float: left;}
-.div_body .div_body_left .div_body_left_body_right .p_body_left_body_right .span_body_left_body_right_left{ width: 80px;display: inline-block;text-align: right;}
+.div_body .div_body_left .div_body_left_body_right .p_body_left_body_right .span_body_left_body_right_left{ width: 80px;display: inline-block;text-align: right;vertical-align:top;}
 .div_body .div_body_left .div_body_left_body_right .p_body_left_body_right .span_body_left_body_right_right_lxdh {font-size: 28px;color: #bc6ba6;}
 /*首页_主体_左部_详情*/
 .div_body .div_body_left .div_body_left_body_xq{ height: auto;float: left;display: block;width: 100%;}
