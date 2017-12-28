@@ -55,7 +55,6 @@ function LoadJBXX() {
                 $("#ID").val(xml.Value.ZXJC_JCJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
-                PDLB(xml.Value.ZXJC_JCJBXX.LB);
                 if (xml.Value.ZXJC_JCJBXX.LB !== null)
                     SetDuoX("LB", xml.Value.ZXJC_JCJBXX.LB);
                 if (xml.Value.ZXJC_JCJBXX.FWFW !== null)
