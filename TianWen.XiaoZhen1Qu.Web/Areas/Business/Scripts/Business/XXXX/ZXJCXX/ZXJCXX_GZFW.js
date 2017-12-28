@@ -35,21 +35,6 @@ function LoadJBXX(obj) {
     html += ('<p class="p_div_body_left_head_ll">' + obj.ZXGXSJ.ToString('yyyy年MM月dd日') + '  ' + obj.LLCS + '次浏览 </p>');
     html += ('</div>');
     html += ('<div class="div_body_left_body">');
-    html += ('<div class="div_body_left_body_left">');
-    html += ('<img id="img_body_left_body_left_show" class="img_body_left_body_left_show" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<span onclick="LeftImg()" class="div_body_left_body_left_list_an" style="margin-right: 10px;"><</span>');
-    html += ('<div class="div_body_left_body_left_list">');
-    html += ('<ul id="ul_body_left_body_left_list" class="ul_body_left_body_left_list">');
-    for (var i = 0; i < obj.PHOTOS.length; i++) {
-        html += ('<li class="li_body_left_body_left_list_tp">');
-        html += ('<img class="img_body_left_body_left_list_tp" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[i].PHOTONAME + "?j=" + Math.random() + '" />');
-        html += ('<div class="div_img_body_left_body_left_list_tp"></div>');
-        html += ('</li>');
-    }
-    html += ('</ul>');
-    html += ('</div>');
-    html += ('<span onclick="RightImg(' + obj.PHOTOS.length + ')" class="div_body_left_body_left_list_an">></span>');
-    html += ('</div>');
     html += ('<div class="div_body_left_body_right">');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">类别：</span>');
