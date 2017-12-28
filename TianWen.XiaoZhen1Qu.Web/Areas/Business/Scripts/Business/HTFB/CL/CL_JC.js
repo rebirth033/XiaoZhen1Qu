@@ -12,33 +12,16 @@
     BindClick("SYXDQYF");
     BindClick("PZSZSF");
     LoadDuoX("车辆加装配置", "CLJZPZ");
+    $("#divPPText").bind("click", function () { LoadJCPP(); });
 });
-//加载品牌标签
-function LoadPP() {
-    var arrayObj = new Array('RM', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
-    var html = "";
-    for (var i = 0; i < arrayObj.length; i++) {
-        if (i === 0)
-            html += '<div class="div_bqss_content_bq" id="div' + arrayObj[i] + '" style="width:62px;"><span class="span_bqss_content_bq" id="span' + arrayObj[i] + '">' + "热门" + '</span><em class="em_bqss_content_bq" id="em' + arrayObj[i] + '"></em></div>';
-        else
-            html += '<div class="div_bqss_content_bq" id="div' + arrayObj[i] + '"><span class="span_bqss_content_bq" id="span' + arrayObj[i] + '">' + arrayObj[i] + '</span><em class="em_bqss_content_bq" id="em' + arrayObj[i] + '"></em></div>';
-    }
-    $("#div_bqss_body_bq").html(html);
-    $(".div_bqss_content_bq").bind("click", JCBQActive);
-}
-//品牌标签切换
-function JCBQActive() {
-    LoadPPMC("轿车品牌", this.id);
-}
 //加载品牌名称
-function LoadPPMC(JCLX, JCBQ) {
+function LoadJCPP() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/Common/LoadByCodeValueAndTypeName",
         dataType: "json",
         data:
         {
-            CODEVALUE: JCBQ.split("div")[1],
             TYPENAME: "轿车品牌",
             TBName: "CODES_CL_JC"
         },
@@ -59,24 +42,9 @@ function LoadPPMC(JCLX, JCBQ) {
         }
     });
 }
-//选择品牌名称
-function PPXZ(PPMC, PPID) {
-    $("#PPID").val(PPID);
-    $("#spanPP").html(PPMC);
-    $("#divPP").css("display", "none");
-    $("#spanCX").html("请选择车系");
-    BindClick("CX");
-}
 //绑定下拉框
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
-        if (type === "PP") {
-            LoadPP();
-            LoadPPMC("轿车品牌", "divRM");
-        }
-        if (type === "CX") {
-            LoadCX();
-        }
         if (type.indexOf("NF") !== -1) {
             if (type === "SPNF")
                 LoadCODESByTYPENAME("出厂年份", type, "CODES_CL", Bind, "SCSPSJ", "SPNF", "");
@@ -185,12 +153,12 @@ function LoadPZSZCS() {
 }
 //加载车辆颜色
 function LoadCYLS() {
-    var colors = new Array("black:黑", "red:红", "white:白", "rgb(230, 230, 230):银", "rgb(214, 214, 214):灰", "rgb(51, 153, 255):蓝", "rgb(255, 255, 0):黄", "rgb(153, 102, 0):棕");
+    var colors = new Array("black:黑", "white:白", "red:红", "rgb(255, 255, 0):黄", "rgb(51, 153, 255):蓝", "rgb(13, 207, 110):绿", "rgb(255, 102, 0):橙");
     for (var i = 0; i < colors.length; i++) {
         var obj = colors[i].split(':');
         $("#div_clys_right").append('<div class="div_clys"><span class="span_clys_left" style="background-color: ' + obj[0] + '"></span><span class="span_clys_right">' + obj[1] + '</span></div>');
     }
-    colors = new Array("rgb(13, 207, 110):绿", "rgb(255, 102, 0):橙", "rgb(204, 51, 153):紫", "rgb(243, 238, 170):香槟", "rgb(255, 204, 0):金", "rgb(255, 192, 203):粉红", "其他");
+    colors = new Array("rgb(204, 51, 153):紫", "rgb(255, 204, 0):金", "rgb(230, 230, 230):银", "rgb(214, 214, 214):灰", "rgb(153, 102, 0):棕", "rgb(255, 192, 203):粉红", "其他");
     for (var i = 0; i < colors.length; i++) {
         var obj = colors[i].split(':');
         if (i === colors.length - 1)
@@ -204,7 +172,7 @@ function LoadCYLS() {
 function GetCLYS() {
     var value = "";
     $(".div_clys").each(function () {
-        if ($(this).css("background-color") === "rgb(135, 181, 59)")
+        if ($(this).css("border-color") === "rgb(188, 107, 166)")
             value = $(this).find(".span_clys_right")[0].innerHTML;
     });
     return value;
@@ -213,15 +181,15 @@ function GetCLYS() {
 function SetCLYS(clys) {
     $(".div_clys").each(function () {
         if ($(this).find(".span_clys_right")[0].innerHTML === clys)
-            $(this).css("background-color", "#87B53B");
+            $(this).css("border-color", "#bc6ba6");
     });
 }
 //选择车辆颜色
 function ActiveCLYS() {
     $(".div_clys").each(function () {
-        $(this).css("background-color", "#ffffff;");
+        $(this).css("border-color", "#cccccc");
     });
-    $(this).css("background-color", "#87B53B");
+    $(this).css("border-color", "#bc6ba6");
 }
 //选择类别下拉框
 function SelectLB(obj, type) {

@@ -73,7 +73,7 @@ function ValidateKCDZ() {
 function ValidateCLYS() {
     var value = "";
     $(".div_clys").each(function () {
-        if ($(this).css("background-color") === "rgb(135, 181, 59)")
+        if ($(this).css("border-color") === "rgb(188, 107, 166)")
             value = $(this).find(".span_clys_right")[0].innerHTML;
     });
     if (value === "") {
