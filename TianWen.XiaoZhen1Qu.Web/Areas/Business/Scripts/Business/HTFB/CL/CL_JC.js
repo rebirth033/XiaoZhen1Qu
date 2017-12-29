@@ -353,6 +353,8 @@ function LoadJBXX() {
                 $("#spanQY").html(xml.Value.CL_JCJBXX.QY);
                 $("#spanDD").html(xml.Value.CL_JCJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
+                if (xml.Value.CL_JCJBXX.SF !== null)
+                    SetDX("SF", xml.Value.CL_JCJBXX.SF);
                 if (xml.Value.CL_JCJBXX.CLYS !== null)
                     SetCLYS(xml.Value.CL_JCJBXX.CLYS);
                 if (xml.Value.CL_JCJBXX.SFDQBY !== null)
@@ -387,6 +389,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "GHCS", "'" + $("#spanGHCS").html() + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
+    obj = jsonObj.AddJson(obj, "SF", "'" + GetDX("SF") + "'");
     obj = jsonObj.AddJson(obj, "SFDQBY", "'" + GetDX("SFDQBY") + "'");
     obj = jsonObj.AddJson(obj, "CLJZPZ", "'" + GetDuoX("CLJZPZ") + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");

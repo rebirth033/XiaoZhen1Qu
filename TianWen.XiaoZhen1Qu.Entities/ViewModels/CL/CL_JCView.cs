@@ -31,8 +31,9 @@ namespace TianWen.XiaoZhen1Qu.Entities.ViewModels.CL
         public string SFYDY { get; set; }
         public string CLJZPZ { get; set; }
         public string GHCS { get; set; }
-        public string KCDZ { get; set; }
-        public string CX { get; set; }
+        public string QY { get; set; }
+        public string DD { get; set; }
+        public string JTDZ { get; set; }
         //车辆_轿车详细参数
         public virtual string PL { get; set; }
         public virtual string BSX { get; set; }

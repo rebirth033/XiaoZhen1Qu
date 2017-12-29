@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    $("#divGQ").find(".div_radio").bind("click", function () { ValidateRadio("GQ", "忘记选择供求啦"); });
+    $("#divGQ").find(".div_radio").bind("click", function () { ValidateRadio("GQ", "忘记选择身份啦"); });
     $("#JG").bind("blur", ValidateJG);
     $("#JG").bind("focus", InfoJG);
     $("#SYNX").bind("blur", ValidateSYNX);
@@ -7,15 +7,11 @@
 });
 //验证所有
 function ValidateAll() {
-    if (ValidateRadio("GQ", "忘记选择供求啦")
-        & ValidateSelect("DDCCX", "CX", "请选择车型")
-        & ValidateSelect("DDCPP", "PP", "请选择品牌")
-        & ValidateSelect("DDCDCDY", "DCDY", "请选择电池电压")
-        & ValidateSelect("DDCDCRL", "DCRL", "请选择电池容量")
-        & ValidateSelect("XJCD", "XJ", "请选择新旧")
+    if (ValidateRadio("GQ", "忘记选择身份啦")
+        & ValidateSelect("DDCCX", "CX", "忘记选择车型啦")
+        & ValidateCheck("PP", "忘记选择品牌啦")
         & ValidateBCMS("BCMS", "忘记填写补充描述啦")
-        & ValidateSYNX()
-        & ValidateSZQY()
+        & ValidateXXDZ()
         & ValidateJG()
         & ValidateCommon())
         return true;

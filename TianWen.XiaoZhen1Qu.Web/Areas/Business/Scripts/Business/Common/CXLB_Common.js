@@ -240,7 +240,7 @@ function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
                     }
                 }
                 if (typenames.indexOf("轿车品牌") !== -1)
-                    LoadCondition(xml.jclist, "品牌", "PP", 15);
+                    LoadCondition(xml.jclist, "品牌", "PP", 100);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -276,7 +276,7 @@ function LoadCondition(array, name, id, length) {
     $("#ul_condition_body_" + id).remove();
     var html = "";
     html += '<ul id="ul_condition_body_' + id + '" class="ul_condition_body" style="height:auto;">';
-    if (name === "类别" || name === "小类")
+    if (name === "类别" || name === "小类" || name === "品牌" || name === "车系")
         html += '<li id="li_condition_body_first_' + id + '" class="li_condition_body_first">' + name + '</li>';
     else
         html += '<li class="li_condition_body_first">' + name + '</li>';
