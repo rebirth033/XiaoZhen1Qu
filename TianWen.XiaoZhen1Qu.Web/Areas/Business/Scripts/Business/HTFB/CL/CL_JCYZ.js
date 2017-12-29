@@ -2,15 +2,12 @@
     $(".div_clys").bind("click", function () { ValidateCLYS(); });
     $("#XSLC").bind("blur", ValidateXSLC);
     $("#XSLC").bind("focus", InfoXSLC);
-    $("#KCDZ").bind("blur", ValidateKCDZ);
-    $("#KCDZ").bind("focus", InfoKCDZ);
     $("#JG").bind("blur", ValidateJG);
     $("#JG").bind("focus", InfoJG);
 });
 //验证轿车
 function ValidateJCPP() {
     if (!ValidateSelect("JCPP", "PP", "请选择品牌")) return false;
-    if (!ValidateSelect("JCPP", "CX", "请选择车型")) return false;
     return true;
 }
 //验证轿车
@@ -26,7 +23,7 @@ function ValidateAll() {
         & ValidateSCSPSJ()
         & ValidateBCMS("BCMS", "忘记填写补充描述啦")
         & ValidateXSLC()
-        & ValidateKCDZ()
+        & ValidateXXDZ()
         & ValidateJG()
         & ValidateCommon())
         return true;
@@ -55,25 +52,11 @@ function ValidateXSLC() {
         }
     }
 }
-//验证看车地址
-function ValidateKCDZ() {
-    if ($("#KCDZ").val() === "" || $("#KCDZ").val() === null) {
-        $("#divKCDZTip").css("display", "block");
-        $("#divKCDZTip").attr("class", "Warn");
-        $("#divKCDZTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写看车地址啦');
-        $("#KCDZ").css("border-color", "#F2272D");
-        return false;
-    } else {
-        $("#divKCDZTip").css("display", "none");
-        $("#KCDZ").css("border-color", "#cccccc");
-        return true;
-    }
-}
 //验证车辆颜色
 function ValidateCLYS() {
     var value = "";
     $(".div_clys").each(function () {
-        if ($(this).css("border-color") === "rgb(188, 107, 166)")
+        if ($(this).css("background-color") === "rgb(188, 107, 166)")
             value = $(this).find(".span_clys_right")[0].innerHTML;
     });
     if (value === "") {
@@ -93,11 +76,3 @@ function InfoXSLC() {
     $("#divXSLCTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />请填写行驶里程');
     $("#spanXSLC").css("border-color", "#bc6ba6");
 }
-//看车地址
-function InfoKCDZ() {
-    $("#divKCDZTip").css("display", "block");
-    $("#divKCDZTip").attr("class", "Info");
-    $("#divKCDZTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />请填写看车地址');
-    $("#KCDZ").css("border-color", "#bc6ba6");
-}
-

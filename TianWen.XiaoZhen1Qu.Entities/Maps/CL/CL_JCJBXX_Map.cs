@@ -12,7 +12,6 @@ namespace TianWen.XiaoZhen1Qu.Entities.Maps
             Id(x => x.ID, "ID").GeneratedBy.Assigned().CustomType("AnsiString");
             Map(x => x.JCXXID, "JCXXID");
             Map(x => x.PP, "PP");
-            Map(x => x.CX, "CX");
             Map(x => x.CLYS, "CLYS");
             Map(x => x.SPNF, "SPNF");
             Map(x => x.SPYF, "SPYF");
@@ -33,7 +32,9 @@ namespace TianWen.XiaoZhen1Qu.Entities.Maps
             Map(x => x.SFYDY, "SFYDY");
             Map(x => x.CLJZPZ, "CLJZPZ");
             Map(x => x.GHCS, "GHCS");
-            Map(x => x.KCDZ, "KCDZ");
+            Map(x => x.QY, "QY");
+            Map(x => x.DD, "DD");
+            Map(x => x.JTDZ, "JTDZ");
             #endregion
 
             #region OneToMany

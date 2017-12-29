@@ -29,11 +29,6 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string PP { get; set; }
 
         /// <summary>
-        /// 车系
-        /// </summary>
-        [Property]
-        public virtual string CX { get; set; }
-        /// <summary>
         /// 车辆颜色
         /// </summary>
         [Property]
@@ -154,9 +149,21 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string GHCS { get; set; }
 
         /// <summary>
-        /// 看车地址
+        /// 区域
         /// </summary>
         [Property]
-        public virtual string KCDZ { get; set; }
+        public virtual string QY { get; set; }
+
+        /// <summary>
+        /// 地段
+        /// </summary>
+        [Property]
+        public virtual string DD { get; set; }
+
+        /// <summary>
+        /// 具体地址
+        /// </summary>
+        [Property]
+        public virtual string JTDZ { get; set; }
     }
 }

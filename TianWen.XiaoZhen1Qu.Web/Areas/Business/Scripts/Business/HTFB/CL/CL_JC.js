@@ -254,7 +254,7 @@ function LoadCYLS() {
 function GetCLYS() {
     var value = "";
     $(".div_clys").each(function () {
-        if ($(this).css("border-color") === "rgb(188, 107, 166)")
+        if ($(this).css("background-color") === "rgb(188, 107, 166)")
             value = $(this).find(".span_clys_right")[0].innerHTML;
     });
     return value;
@@ -263,15 +263,15 @@ function GetCLYS() {
 function SetCLYS(clys) {
     $(".div_clys").each(function () {
         if ($(this).find(".span_clys_right")[0].innerHTML === clys)
-            $(this).css("border-color", "#bc6ba6");
+            $(this).css("border-color", "#bc6ba6").css("background-color", "#bc6ba6");
     });
 }
 //选择车辆颜色
 function ActiveCLYS() {
     $(".div_clys").each(function () {
-        $(this).css("border-color", "#cccccc");
+        $(this).css("border-color", "#cccccc").css("background-color", "#ffffff");;
     });
-    $(this).css("border-color", "#bc6ba6");
+    $(this).css("border-color", "#bc6ba6").css("background-color", "#bc6ba6");
 }
 //选择类别下拉框
 function SelectLB(obj, type) {
@@ -339,7 +339,6 @@ function LoadJBXX() {
                 //设置编辑器的内容
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
                 $("#spanPP").html(xml.Value.CL_JCJBXX.PP);
-                $("#spanCX").html(xml.Value.CL_JCJBXX.CX);
                 $("#spanSPNF").html(xml.Value.CL_JCJBXX.SPNF);
                 $("#spanSPYF").html(xml.Value.CL_JCJBXX.SPYF);
                 $("#spanNJDQNF").html(xml.Value.CL_JCJBXX.NJDQNF);
@@ -351,6 +350,8 @@ function LoadJBXX() {
                 $("#spanPZSZSF").html(xml.Value.CL_JCJBXX.PZSZSF);
                 $("#spanPZSZCS").html(xml.Value.CL_JCJBXX.PZSZCS);
                 $("#spanGHCS").html(xml.Value.CL_JCJBXX.GHCS);
+                $("#spanQY").html(xml.Value.CL_JCJBXX.QY);
+                $("#spanDD").html(xml.Value.CL_JCJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
                 if (xml.Value.CL_JCJBXX.CLYS !== null)
                     SetCLYS(xml.Value.CL_JCJBXX.CLYS);
@@ -372,7 +373,6 @@ function FB() {
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "PP", "'" + $("#spanPP").html() + "'");
-    obj = jsonObj.AddJson(obj, "CX", "'" + $("#spanCX").html() + "'");
     obj = jsonObj.AddJson(obj, "CLYS", "'" + GetCLYS() + "'");
     obj = jsonObj.AddJson(obj, "SPNF", "'" + $("#spanSPNF").html() + "'");
     obj = jsonObj.AddJson(obj, "SPYF", "'" + $("#spanSPYF").html() + "'");
@@ -385,6 +385,8 @@ function FB() {
     obj = jsonObj.AddJson(obj, "PZSZSF", "'" + $("#spanPZSZSF").html() + "'");
     obj = jsonObj.AddJson(obj, "PZSZCS", "'" + $("#spanPZSZCS").html() + "'");
     obj = jsonObj.AddJson(obj, "GHCS", "'" + $("#spanGHCS").html() + "'");
+    obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
+    obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "SFDQBY", "'" + GetDX("SFDQBY") + "'");
     obj = jsonObj.AddJson(obj, "CLJZPZ", "'" + GetDuoX("CLJZPZ") + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
