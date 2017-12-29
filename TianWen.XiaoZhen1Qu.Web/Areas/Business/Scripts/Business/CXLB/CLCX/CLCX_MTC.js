@@ -21,7 +21,7 @@ function SelectCondition(obj, name) {
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("PP,CX,JG,QY");
+    var condition = GetAllCondition("PP,CX,JG,QY,SF");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/CLCX/LoadCLXX",
@@ -56,8 +56,8 @@ function LoadCL_MTCInfo(obj) {
     html += ('<div class="div_img_li_body_left_count"><span>' + obj.PHOTOS.length + '图</span></div>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
-    html += ('<p class="p_li_body_left_center_bt">' + TruncStr(obj.BT, 33) + '</p>');
-    html += ('<p class="p_li_body_left_center_cs font_size16">' + obj.CX + ' / ' + obj.GCSJ + ' / ' + obj.XSLC + (obj.GLS === null ? '' : obj.GLS + '万公里') + ' / ' + obj.QY + '</p>');
+    html += ('<p class="p_li_body_left_center_bt">' + obj.BT + '</p>');
+    html += ('<p class="p_li_body_left_center_cs font_size16">' + obj.CX + ' / ' + '［' + obj.QY + '-' + obj.DD + '］ ' + obj.JTDZ + '</p>');
     html += ('<p class="p_li_body_left_center_dz font_size16">' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
@@ -97,9 +97,20 @@ function LoadHotInfo(obj) {
     var html = "";
     html += ('<li onclick="OpenXXXX(\'CLXX_MTC\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_right_xq">' + obj.XSLC + (obj.GLS === null ? '' : obj.GLS + '万公里') + '</p>');
+    html += ('<p class="p_li_body_right_xq">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_right_cs">' + obj.CX + '</p>');
     html += ('<p class="p_li_body_right_jg">' + GetJG(obj.JG,'元')+'</p>');
     html += ('</li>');
     $("#ul_body_right").append(html);
+}
+//根据条件查询
+function SearchByCondition(type) {
+    $("#ul_condition_body_SF").find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    if (type === "GR")
+        $("#ul_condition_body_SF").find(".li_condition_body:eq(1)").addClass("li_condition_body_active");
+    if (type === "SJ")
+        $("#ul_condition_body_SF").find(".li_condition_body:eq(2)").addClass("li_condition_body_active");
+    LoadBody("CLXX_MTC", 1);
 }

@@ -1,6 +1,5 @@
 ﻿$(document).ready(function () {
     $("#divXSQK").find(".div_radio").bind("click", GetXSQK);
-    LoadJBXX();
     BindClick("CX");
     BindClick("GCSJ");
     BindClick("XJ");
@@ -108,8 +107,11 @@ function LoadJBXX() {
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
                 if (xml.Value.CL_MTCJBXX.SF !== null)
                     SetDX("SF", xml.Value.CL_MTCJBXX.SF);
-                $("#spanCX").html(xml.Value.CL_MTCJBXX.CX);
-                $("#spanPP").html(xml.Value.CL_MTCJBXX.PP);
+                if (xml.Value.CL_MTCJBXX.CX !== null)
+                    SetDuoX("CX", xml.Value.CL_MTCJBXX.CX);
+                if (xml.Value.CL_MTCJBXX.PP !== null)
+                    SetDuoX("PP", xml.Value.CL_MTCJBXX.PP);
+                $("#spanXJ").html(xml.Value.CL_MTCJBXX.XJ);
                 $("#spanQY").html(xml.Value.CL_MTCJBXX.QY);
                 $("#spanDD").html(xml.Value.CL_MTCJBXX.DD);
 
@@ -128,12 +130,13 @@ function FB() {
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
-    obj = jsonObj.AddJson(obj, "CX", "'" + $("#spanCX").html() + "'");
-    obj = jsonObj.AddJson(obj, "PP", "'" + $("#spanPP").html() + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
+    obj = jsonObj.AddJson(obj, "XJ", "'" + $("#spanXJ").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "SF", "'" + GetDX("SF") + "'");
+    obj = jsonObj.AddJson(obj, "CX", "'" + GetDuoX("CX") + "'");
+    obj = jsonObj.AddJson(obj, "PP", "'" + GetDuoX("PP") + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");

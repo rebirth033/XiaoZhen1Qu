@@ -6,11 +6,11 @@
 //验证所有
 function ValidateAll() {
     if (ValidateRadio("GQ", "忘记选择供求啦")
-        & ValidateSelect("ZXCCX", "CX", "请选择车型")
-        & ValidateSelect("ZXCPP", "PP", "请选择品牌")
+        & ValidateCheck("CX", "忘记选择车型啦")
+        & ValidateCheck("PP", "忘记选择品牌啦")
         & ValidateSelect("XJCD", "XJ", "请选择新旧")
         & ValidateBCMS("BCMS", "忘记填写补充描述啦")
-        & ValidateSZQY()
+        & ValidateXXDZ()
         & ValidateJG()
         & ValidateCommon())
         return true;

@@ -69,5 +69,11 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// </summary>
         [Property]
         public virtual string JTDZ { get; set; }
+
+        /// <summary>
+        /// 新旧
+        /// </summary>
+        [Property]
+        public virtual string XJ { get; set; }
     }
 }
