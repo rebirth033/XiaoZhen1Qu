@@ -12,6 +12,21 @@
             <span class="span_split">基本信息</span>
             <em class="em_split"></em>
         </div>
+        <div id="divSF" class="div_row">
+            <div class="div_row_left font_two">
+                <span class="span_required">*</span>
+                <span class="spanFWCZ">身份</span>
+            </div>
+            <div class="div_row_right">
+                <div class="div_radio" id="div_sf_gr">
+                    <img class="img_radio" id="img_sf_gr" /><label class="label_radio">个人</label>
+                </div>
+                <div class="div_radio" id="div_sf_sj">
+                    <img class="img_radio" id="img_sf_sj" /><label class="label_radio">商家</label>
+                </div>
+            </div>
+            <div id="divSFTip" class="Warn" style="z-index: 1000;"></div>
+        </div>
         <div id="divHCLB" class="div_row" style="z-index: 999">
             <div class="div_row_left font_two">
                 <span class="span_required">*</span>
@@ -20,7 +35,7 @@
             <div class="div_row_right">
                 <div id="divLBText" class="div_select_out SRK">
                     <div id="divLBSpan" class="div_select_in" style="border: none; margin-top: 6px;">
-                        <span id="spanLB" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择类别</span>
+                        <span id="spanLB" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择车型</span>
                         <div class="span_select_arrow"></div>
                     </div>
                     <div id="divLB" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
@@ -29,34 +44,30 @@
             </div>
             <div id="divHCLBTip" class="Warn" style="z-index: 998;"></div>
         </div>
-        <div id="divHCPP" class="div_row" style="z-index: 997">
+        <div id="divHCPP" class="div_row" style="z-index: 998">
             <div class="div_row_left font_two">
-                <span class="span_required">&nbsp;</span>
+                <span class="span_required">*</span>
                 <span class="spanFWCZ">品牌</span>
             </div>
             <div class="div_row_right">
-                <div id="divXLBQ" class="div_select_out SRK" style="position: relative; z-index: 997; width: 160px;">
-                    <div id="divXLBQSpan" class="div_select_in" style="border: none; margin-top: 6px; width: 160px;">
-                        <div id="spanXLBQ" class="span_select spaninput_fontcolor" style="padding-left: 10px; margin-top: 0; width: 120px; text-align: left;">请选择品牌</div>
-                        <div class="span_select_arrow" style="float: right; margin-top: 5px; margin-right: 10px;"></div>
-                    </div>
-                </div>
-                <div id="div_row_right_xlbq" class="div_row_right_xlbq">
-                </div>
-                <div id="divCXText" class="div_select_out SRK" style="z-index: 996;">
-                    <div id="divCXSpan" class="div_select_in" style="border: none; margin-top: 6px;">
-                        <span id="spanCX" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择车系</span>
+                <div id="divPPText" class="div_select_out SRK" style="position: relative; z-index: 997; width: 325px;">
+                    <div id="divPPSpan" class="div_select_in" style="border: none; margin-top: 6px; width: 325px;">
+                        <span id="spanPP" class="span_select spaninput_fontcolor" style="margin-top: 0; width: 295px;">请选择品牌</span>
                         <div class="span_select_arrow"></div>
                     </div>
-                    <div id="divCX" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
+                </div>
+                <div class="div_row_right_jcpp">
+                    <div id="div_row_right_jcpp_first" class="div_row_right_jcpp_item div_row_right_jcpp_first">
+                    </div>
+                    <div id="div_row_right_jcpp_second" class="div_row_right_jcpp_item div_row_right_jcpp_second">
                     </div>
                 </div>
             </div>
-            <div id="divHCPPTip" class="Warn" style="z-index: 996;"></div>
+            <div id="divHCPPTip" class="Warn" style="z-index: 995;"></div>
         </div>
         <div id="divHCCCNF" class="div_row" style="z-index: 995;">
             <div class="div_row_left">
-                <span class="span_required">&nbsp;</span>
+                <span class="span_required">*</span>
                 <span class="spanFWCZ">出厂年份</span>
             </div>
             <div class="div_row_right">
@@ -81,7 +92,7 @@
         </div>
         <div id="divEDZZ" class="div_row" style="z-index: 993;">
             <div class="div_row_left">
-                <span class="span_required">&nbsp;</span>
+                <span class="span_required">*</span>
                 <span class="spanFWCZ">额定载重</span>
             </div>
             <div class="div_row_right">
@@ -94,7 +105,7 @@
         </div>
         <div id="divXSLC" class="div_row" style="z-index: 991;">
             <div class="div_row_left">
-                <span class="span_required">&nbsp;</span>
+                <span class="span_required">*</span>
                 <span class="spanFWCZ">行驶里程</span>
             </div>
             <div class="div_row_right">
@@ -118,13 +129,13 @@
             </div>
             <div id="divJGTip" class="Warn" style="z-index: 988;"></div>
         </div>
-        <div id="divSZQY" class="div_row" style="z-index: 987;">
+        <div id="divSZQY" class="div_row" style="z-index: 983;">
             <div class="div_row_left">
                 <span class="span_required">*</span>
-                <span class="spanFWCZ">交易地点</span>
+                <span class="spanFWCZ">看车地址</span>
             </div>
             <div class="div_row_right">
-                <div id="divQYText" class="div_select_out SRK">
+                <div id="divQYText" class="div_select_out SRK" style="z-index: 982;">
                     <div id="divQYSpan" class="div_select_in" style="border: none; margin-top: 6px;">
                         <input type="hidden" id="QYCode" />
                         <span id="spanQY" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择区域</span>
@@ -133,7 +144,7 @@
                     <div id="divQY" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
                     </div>
                 </div>
-                <div id="divDDText" class="div_select_out SRK">
+                <div id="divDDText" class="div_select_out SRK" style="z-index: 982;">
                     <div id="divDDSpan" class="div_select_in" style="border: none; margin-top: 6px;">
                         <span id="spanDD" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择地段</span>
                         <div class="span_select_arrow"></div>
@@ -141,8 +152,9 @@
                     <div id="divDD" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
                     </div>
                 </div>
+                <input id="JTDZ" column="JTDZ" class="span_spaninput input_input SRK" type="text" placeholder="请填写具体地址" style="width: 300px" />
             </div>
-            <div id="divSZQYTip" class="Warn" style="z-index: 986;"></div>
+            <div id="divSZQYTip" class="Warn" style="z-index: 981;"></div>
         </div>
         <div id="divXXXX" class="div_split" style="display: block; text-align: left;">
             <span class="span_split">详细信息</span>
@@ -158,7 +170,7 @@
                 <div id="divBTTip"></div>
             </div>
         </div>
-        <div id="divBCMS" class="div_row" style="height: 253px; z-index: 985;">
+        <div id="divBCMS" class="div_row" style="height: 253px; z-index: 981;">
             <div class="div_row_left" style="height: 170px; vertical-align: top;">
                 <span class="span_required" style="vertical-align: top">*</span>
                 <span id="spanBCMS" style="vertical-align: top">补充描述</span>

@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-    LoadJBXX();
     BindClick("CC");
     BindClick("XJ");
     LoadDuoX("自行车品牌", "PP");

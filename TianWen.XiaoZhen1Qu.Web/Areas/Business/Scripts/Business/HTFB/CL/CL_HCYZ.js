@@ -1,4 +1,5 @@
 ﻿$(document).ready(function () {
+    $("#divSF").find(".div_radio").bind("click", function () { ValidateRadio("SF", "忘记选择身份啦"); });
     $("#JG").bind("blur", ValidateJG);
     $("#JG").bind("focus", InfoJG);
     $("#EDZZ").bind("blur", ValidateEDZZ);
@@ -14,7 +15,8 @@ function ValidateHCCCNF() {
 }
 //验证所有
 function ValidateAll() {
-    if (ValidateSelect("HCLB", "LB", "忘记选择车型啦")
+    if (ValidateRadio("SF", "忘记选择身份啦")
+           & ValidateSelect("HCLB", "LB", "忘记选择车型啦")
            & ValidateSelect("HCPP", "PP", "忘记选择品牌啦")
            & ValidateHCCCNF()
            & ValidateEDZZ()

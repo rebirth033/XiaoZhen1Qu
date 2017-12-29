@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadCLCondition() {
-    LoadConditionByTypeNames("'货车车型','货车品牌','客车价格'", "CODES_CL", "车型,品牌,价格", "LB,PP,JG", "15,14,15");
+    LoadConditionByTypeNames("'货车车型','货车品牌','客车价格'", "CODES_CL", "车型,品牌,价格", "LB,PP,JG", "100,100,100");
     LoadBody("CLXX_HC", currentIndex);
 }
 //选择条件
@@ -24,7 +24,7 @@ function SelectCondition(obj, name) {
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("LB,PP,CX,JG,QY");
+    var condition = GetAllCondition("LB,PP,CX,JG,QY,SF");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/CLCX/LoadCLXX",
@@ -59,7 +59,7 @@ function LoadCL_JCInfo(obj) {
     html += ('<div class="div_img_li_body_left_count"><span>' + obj.PHOTOS.length + '图</span></div>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
-    html += ('<p class="p_li_body_left_center_bt">' + (obj.BT.length > 30 ? (obj.BT.substr(0, 35)+ '...') : obj.BT)  + '</p>');
+    html += ('<p class="p_li_body_left_center_bt">' + obj.BT  + '</p>');
     html += ('<p class="p_li_body_left_center_cs font_size16">' + obj.LB + ' / ' + obj.CCNF + ' / ' + obj.XSLC + '万公里' + ' / ' + obj.EDZZ + '吨</p>');
     html += ('<p class="p_li_body_left_center_dz font_size16">' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
@@ -100,9 +100,20 @@ function LoadHotInfo(obj) {
     var html = "";
     html += ('<li onclick="OpenXXXX(\'CLXX_HC\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_right_xq">' + obj.LB + ' / ' + obj.CCNF + ' / ' + obj.EDZZ + '吨</p>');
-    html += ('<p class="p_li_body_right_cs">' + obj.XSLC + '万公里</p>');
+    html += ('<p class="p_li_body_right_xq">' + obj.BT + '</p>');
+    html += ('<p class="p_li_body_right_cs">' + obj.LB + ' / ' + obj.CCNF + ' / ' + obj.EDZZ + '吨</p>');
     html += ('<p class="p_li_body_right_jg">' + obj.JG + '万元</p>');
     html += ('</li>');
     $("#ul_body_right").append(html);
+}
+//根据条件查询
+function SearchByCondition(type) {
+    $("#ul_condition_body_SF").find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    if (type === "GR")
+        $("#ul_condition_body_SF").find(".li_condition_body:eq(1)").addClass("li_condition_body_active");
+    if (type === "SJ")
+        $("#ul_condition_body_SF").find(".li_condition_body:eq(2)").addClass("li_condition_body_active");
+    LoadBody("CLXX_HC", 1);
 }
