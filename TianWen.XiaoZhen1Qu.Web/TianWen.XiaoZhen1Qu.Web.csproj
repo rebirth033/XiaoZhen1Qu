@@ -846,7 +846,7 @@
     <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_SY_ZHMM.js" />
     <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_WZJY.js" />
     <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_WZJYZP.js" />
-    <Content Include="Areas\Business\Scripts\Business\Common\FWQY.js" />
+    <Content Include="Areas\Business\Scripts\Business\Common\FWFW.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\Head.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\Top.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\XLBQ.js" />

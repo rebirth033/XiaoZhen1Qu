@@ -18,7 +18,7 @@
 function LoadJCPP() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadByCodeValueAndTypeName",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
@@ -27,20 +27,133 @@ function LoadJCPP() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
+                $("#div_row_right_jcpp_first").html('');
                 var html = "";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += '<span class="span_mc" onclick="PPXZ(\'' + xml.list[i].CODENAME + '\',\'' + xml.list[i].CODEID + '\')">' + xml.list[i].CODENAME + '</span>';
+                html += '<span class="p_row_right_jcpp">请选择品牌<span onclick="CloseJCPP(1)" class="span_row_right_jcpp">×</span></span>';
+                html += '<div class="div_row_right_jcpp_first_left">';
+                html += '<ul class="ul_row_right_jcpp_first_left">';
+                for (var i = 0; i < BQArray.length; i++) {
+                    var count = 0;
+                    for (var j = 0; j < xml.list.length; j++) {
+                        if (BQArray[i] === xml.list[j].CODEVALUE)
+                            count++;
+                    }
+                    if (count !== 0)
+                        html += '<li onclick="GoToBQ(\'' + BQArray[i] + '\')" class="li_row_right_jcpp_first_left">' + BQArray[i] + '</li>';
                 }
-                if (xml.list.length === 0)
-                    html += '<span class="span_mc" style=\"width:200px;text-align:left;margin-left:14px;\">该字母下暂无数据</span>';
-                $("#div_bqss_body_mc").html(html);
-                $("#divPP").css("display", "block");
+                html += '</ul>';
+                html += '</div>';
+
+                html += '<div class="div_row_right_jcpp_first_right">';
+                html += '<ul class="ul_row_right_jcpp_first_right">';
+                for (var i = 0; i < BQArray.length; i++) {
+                    var count = 0;
+                    for (var j = 0; j < xml.list.length; j++) {
+                        if (BQArray[i] === xml.list[j].CODEVALUE)
+                            count++;
+                    }
+                    if (count !== 0)
+                        html += '<li id="li_row_right_jcpp_first_right_tag_' + BQArray[i] + '" class="li_row_right_jcpp_first_right_tag">' + BQArray[i] + '</li>';
+                    for (var j = 0; j < xml.list.length; j++) {
+                        if (BQArray[i] === xml.list[j].CODEVALUE)
+                            html += '<li onclick="OpenSecond(\'' + xml.list[j].CODEID + '\')" class="li_row_right_jcpp_first_right_value">' + xml.list[j].CODENAME + '</li>';
+                    }
+                }
+                html += '</ul>';
+                html += '</div>';
+
+                $("#div_row_right_jcpp_first").append(html);
+                $("#div_row_right_jcpp_first").css("display", "inline-block");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
         }
     });
+}
+//跳转到标签位置
+function GoToBQ(tag) {
+    var len = document.getElementById("li_row_right_jcpp_first_right_tag_" + tag).offsetTop - 75;//获取div层到页面顶部的高度 
+    $(".ul_row_right_jcpp_first_right").stop().animate({ scrollTop: len }, 300, "swing", function () { });
+}
+//打开车系列表
+function OpenSecond(codeid) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadByParentID",
+        dataType: "json",
+        data:
+        {
+            ParentID: codeid,
+            TBName: "CODES_CL_JC"
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                $("#div_row_right_jcpp_second").html('');
+                var html = "";
+                html += '<span class="p_row_right_jcpp">请选择车系<span onclick="CloseJCPP(2)" class="span_row_right_jcpp">×</span></span>';
+                html += '<ul class="ul_row_right_jcpp_second">';
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += '<li onclick="OpenThird(\'' + xml.list[i].CODEID + '\',\'' + xml.list[i].CODEVALUE + " " + xml.list[i].CODENAME + '\')" class="li_row_right_jcpp_second">' + xml.list[i].CODEVALUE + " " + xml.list[i].CODENAME + '</li>';
+                }
+                html += '</ul>';
+                $("#div_row_right_jcpp_second").append(html);
+                $("#div_row_right_jcpp_second").css("display", "inline-block");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//打开款式列表
+function OpenThird(codeid, cx) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadByParentID",
+        dataType: "json",
+        data:
+        {
+            ParentID: codeid,
+            TBName: "CODES_CL_JC"
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                $("#div_row_right_jcpp_third").html('');
+                var html = "";
+                html += '<span class="p_row_right_jcpp">请选择款式<span onclick="CloseJCPP(3)" class="span_row_right_jcpp">×</span></span>';
+                html += '<ul class="ul_row_right_jcpp_third">';
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += '<li onclick="SelectThird(\'' + cx + '\',\'' + xml.list[i].CODENAME + '\')" class="li_row_right_jcpp_third">' + xml.list[i].CODENAME + '</li>';
+                }
+                html += '</ul>';
+                $("#div_row_right_jcpp_third").append(html);
+                $("#div_row_right_jcpp_third").css("display", "inline-block");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//选择款式
+function SelectThird(cx, ks) {
+    $("#spanPP").html(cx + " " + ks);
+}
+//关闭选择品牌框
+function CloseJCPP(count) {
+    if (count === 1) {
+        $("#div_row_right_jcpp_first").css("display", "none");
+        $("#div_row_right_jcpp_second").css("display", "none");
+        $("#div_row_right_jcpp_third").css("display", "none");
+    }
+    if (count === 2) {
+        $("#div_row_right_jcpp_second").css("display", "none");
+        $("#div_row_right_jcpp_third").css("display", "none");
+    }
+    if (count === 3) {
+        $("#div_row_right_jcpp_third").css("display", "none");
+    }
 }
 //绑定下拉框
 function BindClick(type) {
@@ -65,37 +178,6 @@ function BindClick(type) {
         }
         if (type.indexOf("PZSZCS") !== -1) {
             LoadPZSZCS(type);
-        }
-    });
-}
-//加载轿车车系
-function LoadCX() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadByParentID",
-        dataType: "json",
-        data:
-        {
-            ParentID: $("#PPID").val(),
-            TBName: "CODES_CL_JC"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var height = 341;
-                if (xml.list.length < 10)
-                    height = parseInt(xml.list.length * 34) + 1;
-                var html = "<ul class='ul_select' style='overflow-y: scroll; height:" + height + "px'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='li_select' onclick='SelectDropdown(this,\"CX\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
-                }
-                html += "</ul>";
-                $("#divCX").html(html);
-                $("#divCX").css("display", "block");
-                Bind("JCPP", "CX", "");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
         }
     });
 }
