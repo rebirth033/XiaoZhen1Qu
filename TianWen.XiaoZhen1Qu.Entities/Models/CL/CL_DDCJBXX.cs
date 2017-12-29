@@ -23,10 +23,10 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string JCXXID { get; set; }
 
         /// <summary>
-        /// 供求
+        /// 身份
         /// </summary>
         [Property]
-        public virtual string GQ { get; set; }
+        public virtual string SF { get; set; }
 
         /// <summary>
         /// 车型
@@ -87,5 +87,11 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// </summary>
         [Property]
         public virtual string DD { get; set; }
+
+        /// <summary>
+        /// 具体地址
+        /// </summary>
+        [Property]
+        public virtual string JTDZ { get; set; }
     }
 }

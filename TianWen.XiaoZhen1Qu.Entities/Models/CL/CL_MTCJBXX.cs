@@ -23,10 +23,10 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string JCXXID { get; set; }
 
         /// <summary>
-        /// 供求
+        /// 身份
         /// </summary>
         [Property]
-        public virtual string GQ { get; set; }
+        public virtual string SF { get; set; }
 
         /// <summary>
         /// 车型
@@ -39,24 +39,6 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// </summary>
         [Property]
         public virtual string PP { get; set; }
-
-        /// <summary>
-        /// 行驶里程
-        /// </summary>
-        [Property]
-        public virtual string XSLC { get; set; }
-
-        /// <summary>
-        /// 公里数
-        /// </summary>
-        [Property]
-        public virtual string GLS { get; set; }
-
-        /// <summary>
-        /// 购车时间
-        /// </summary>
-        [Property]
-        public virtual string GCSJ { get; set; }
 
         /// <summary>
         /// 价格
@@ -81,5 +63,11 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// </summary>
         [Property]
         public virtual string DD { get; set; }
+
+        /// <summary>
+        /// 具体地址
+        /// </summary>
+        [Property]
+        public virtual string JTDZ { get; set; }
     }
 }

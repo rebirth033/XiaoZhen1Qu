@@ -1,68 +1,20 @@
 ﻿$(document).ready(function () {
-    $("#divGQ").find(".div_radio").bind("click", function () { ValidateRadio("GQ", "忘记选择供求啦"); });
+    $("#divSF").find(".div_radio").bind("click", function () { ValidateRadio("SF", "忘记选择身份啦"); });
     $("#divXSQK").find(".div_radio").bind("click", function () { ValidateRadio("XSQK", "忘记选择行驶情况啦"); });
-    $("#GLS").bind("blur", ValidateGLS);
-    $("#GLS").bind("focus", InfoGLS);
     $("#JG").bind("blur", ValidateJG);
     $("#JG").bind("focus", InfoJG);
 });
 //验证所有
 function ValidateAll() {
-    if (GetXSQK() !== "已行使") {
-        if (ValidateRadio("GQ", "忘记选择供求啦")
-            & ValidateSelect("MTCCX", "CX", "忘记选择车型啦")
-            & ValidateSelect("MTCPP", "PP", "忘记选择品牌啦")
-            & ValidateRadio("XSQK", "忘记选择行驶情况啦")
+    if (ValidateRadio("SF", "忘记选择身份啦")
+            & ValidateCheck("CX", "忘记选择车型啦")
+            & ValidateCheck("PP", "忘记选择品牌啦")
+            & ValidateSelect("XJCD", "XJ", "忘记选择新旧啦")
             & ValidateBCMS("BCMS", "忘记填写补充描述啦")
-            & ValidateSZQY()
+            & ValidateXXDZ()
             & ValidateJG()
             & ValidateCommon())
-            return true;
-        else
-            return false;
-    } else {
-        if (ValidateRadio("GQ", "忘记选择供求啦")
-            & ValidateSelect("MTCCX", "CX", "忘记选择车型啦")
-            & ValidateSelect("MTCPP", "PP", "忘记选择品牌啦")
-            & ValidateRadio("XSQK", "忘记选择行驶情况啦")
-            & ValidateSelect("MTCGCSJ", "GCSJ", "忘记选择购车时间啦")
-            & ValidateBCMS("BCMS", "忘记填写补充描述啦")
-            & ValidateSZQY()
-            & ValidateJG()
-            & ValidateGLS()
-            & ValidateCommon())
-            return true;
-        else
-            return false;
-    }
-}
-//验证公里数
-function ValidateGLS() {
-    if ($("#GLS").val() === "" || $("#GLS").val() === null) {
-        $("#divGLSTip").css("display", "block");
-        $("#divGLSTip").attr("class", "Warn");
-        $("#divGLSTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写公里数啦');
-        $("#spanGLS").css("border-color", "#F2272D");
+        return true;
+    else
         return false;
-    } else {
-        if (ValidateNumber($("#GLS").val())) {
-            $("#divGLSTip").css("display", "none");
-            $("#spanGLS").css("border-color", "#cccccc");
-            return true;
-        } else {
-            $("#divGLSTip").css("display", "block");
-            $("#divGLSTip").attr("class", "Warn");
-            $("#divGLSTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />公里数请填写整数，默认为面议');
-            $("#spanGLS").css("border-color", "#F2272D");
-            return false;
-        }
-    }
 }
-//提示公里数
-function InfoGLS() {
-    $("#divGLSTip").css("display", "block");
-    $("#divGLSTip").attr("class", "Info");
-    $("#divGLSTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />请填写整数');
-    $("#spanGLS").css("border-color", "#bc6ba6");
-}
-

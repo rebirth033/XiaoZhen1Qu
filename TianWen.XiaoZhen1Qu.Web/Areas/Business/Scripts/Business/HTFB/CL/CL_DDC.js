@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-    LoadJBXX();
     BindClick("CX");
     BindClick("DCDY");
     BindClick("DCRL");
@@ -83,15 +82,16 @@ function LoadJBXX() {
                 //设置编辑器的内容
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
                 $("#spanCX").html(xml.Value.CL_DDCJBXX.CX);
-                $("#spanPP").html(xml.Value.CL_DDCJBXX.PP);
                 $("#spanXJ").html(xml.Value.CL_DDCJBXX.XJ);
                 $("#spanQY").html(xml.Value.CL_DDCJBXX.QY);
                 $("#spanDD").html(xml.Value.CL_DDCJBXX.DD);
                 $("#spanDCDY").html(xml.Value.CL_DDCJBXX.DCDY);
                 $("#spanDCRL").html(xml.Value.CL_DDCJBXX.DCRL);
                 LoadPhotos(xml.Value.Photos);
-                if (xml.Value.CL_DDCJBXX.GQ !== null)
-                    SetDX("GQ", xml.Value.CL_DDCJBXX.GQ);
+                if (xml.Value.CL_DDCJBXX.SF !== null)
+                    SetDX("SF", xml.Value.CL_DDCJBXX.SF);
+                if (xml.Value.CL_DDCJBXX.PP !== null)
+                    SetDuoX("PP", xml.Value.CL_DDCJBXX.PP);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -106,14 +106,14 @@ function FB() {
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "CX", "'" + $("#spanCX").html() + "'");
-    obj = jsonObj.AddJson(obj, "PP", "'" + $("#spanPP").html() + "'");
+    obj = jsonObj.AddJson(obj, "PP", "'" + GetDuoX("PP") + "'");
     obj = jsonObj.AddJson(obj, "XJ", "'" + $("#spanXJ").html() + "'");
     obj = jsonObj.AddJson(obj, "DCDY", "'" + $("#spanDCDY").html() + "'");
     obj = jsonObj.AddJson(obj, "DCRL", "'" + $("#spanDCRL").html() + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
+    obj = jsonObj.AddJson(obj, "SF", "'" + GetDX("SF") + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");
