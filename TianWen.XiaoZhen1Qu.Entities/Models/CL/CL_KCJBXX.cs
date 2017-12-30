@@ -125,6 +125,24 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string JG { get; set; }
 
         /// <summary>
+        /// 区域
+        /// </summary>
+        [Property]
+        public virtual string QY { get; set; }
+
+        /// <summary>
+        /// 地段
+        /// </summary>
+        [Property]
+        public virtual string DD { get; set; }
+
+        /// <summary>
+        /// 具体地址
+        /// </summary>
+        [Property]
+        public virtual string JTDZ { get; set; }
+
+        /// <summary>
         /// 补充描述
         /// </summary>
         [Property]

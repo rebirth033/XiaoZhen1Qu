@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using TianWen.XiaoZhen1Qu.Entities.Models;
-using TianWen.XiaoZhen1Qu.Entities.ViewModels.Common;
+﻿using TianWen.XiaoZhen1Qu.Entities.ViewModels.Common;
 
 namespace TianWen.XiaoZhen1Qu.Entities.ViewModels.CL
 {
@@ -26,5 +21,8 @@ namespace TianWen.XiaoZhen1Qu.Entities.ViewModels.CL
         public string JQXDQYF { get; set; }
         public string SYXDQNF { get; set; }
         public string SYXDQYF { get; set; }
+        public string QY { get; set; }
+        public string DD { get; set; }
+        public string JTDZ { get; set; }
     }
 }

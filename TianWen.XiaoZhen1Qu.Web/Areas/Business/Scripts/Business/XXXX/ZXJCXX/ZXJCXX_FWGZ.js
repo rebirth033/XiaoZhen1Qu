@@ -32,7 +32,7 @@ function LoadJBXX(obj) {
     var html = "";
     html += ('<div class="div_body_left_head">');
     html += ('<p class="p_div_body_left_head_bt">' + obj.BT + '</p>');
-    html += ('<p class="p_div_body_left_head_ll">11月5日 22:36 3次浏览 </p>');
+    html += ('<p class="p_div_body_left_head_ll">' + obj.ZXGXSJ.ToString('yyyy年MM月dd日') + '  ' + obj.LLCS + '次浏览 </p>');
     html += ('</div>');
     html += ('<div class="div_body_left_body">');
     html += ('<span onclick="RightImg(' + obj.PHOTOS.length + ')" class="div_body_left_body_left_list_an">></span>');

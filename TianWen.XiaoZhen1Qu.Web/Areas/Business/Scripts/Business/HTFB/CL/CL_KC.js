@@ -214,6 +214,8 @@ function LoadJBXX() {
                 $("#spanJQXDQYF").html(xml.Value.CL_KCJBXX.JQXDQYF);
                 $("#spanSYXDQNF").html(xml.Value.CL_KCJBXX.SYXDQNF);
                 $("#spanSYXDQYF").html(xml.Value.CL_KCJBXX.SYXDQYF);
+                $("#spanQY").html(xml.Value.CL_KCJBXX.QY);
+                $("#spanDD").html(xml.Value.CL_KCJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
                 if (xml.Value.CL_KCJBXX.CLYS !== null)
                     SetCLYS(xml.Value.CL_KCJBXX.CLYS);
@@ -247,6 +249,8 @@ function FB() {
     obj = jsonObj.AddJson(obj, "JQXDQYF", "'" + $("#spanJQXDQYF").html() + "'");
     obj = jsonObj.AddJson(obj, "SYXDQNF", "'" + $("#spanSYXDQNF").html() + "'");
     obj = jsonObj.AddJson(obj, "SYXDQYF", "'" + $("#spanSYXDQYF").html() + "'");
+    obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
+    obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "SF", "'" + GetDX("SF") + "'");
     obj = jsonObj.AddJson(obj, "SFDQBY", "'" + GetDX("SFDQBY") + "'");
     obj = jsonObj.AddJson(obj, "YWZDSG", "'" + GetDX("YWZDSG") + "'");
