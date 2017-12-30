@@ -21,6 +21,12 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// </summary>
         [Property]
         public virtual string JCXXID { get; set; }
+        
+        /// <summary>
+        /// 身份
+        /// </summary>
+        [Property]
+        public virtual string SF { get; set; }
 
         /// <summary>
         /// 品牌

@@ -1,7 +1,8 @@
 ﻿$(document).ready(function () {
+    $("#divSF").find(".div_radio").bind("click", function () { ValidateRadio("SF", "忘记选择身份啦"); });
     $(".div_clys").bind("click", function () { ValidateCLYS(); });
     $("#XSLC").bind("blur", ValidateXSLC);
-    $("#XSLC").bind("focus", function() { InfoSpanInput("XSLC", "请填写行驶里程"); });
+    $("#XSLC").bind("focus", function () { InfoSpanInput("XSLC", "请填写行驶里程"); });
     $("#KCDZ").bind("blur", ValidateKCDZ);
     $("#KCDZ").bind("focus", function () { InfoInput("KCDZ", "请填写看车地址"); });
     $("#JG").bind("blur", ValidateJG);
@@ -21,7 +22,8 @@ function ValidateSCSPSJ() {
 }
 //验证所有
 function ValidateAll() {
-    if (ValidateKCPP()
+    if (ValidateRadio("SF", "忘记选择身份啦")
+        & ValidateSelect("KCPP", "PP", "忘记选择品牌啦")
         & ValidateCLYS()
         & ValidateSCSPSJ()
         & ValidateBCMS("BCMS", "忘记填写补充描述啦")
@@ -73,7 +75,7 @@ function ValidateKCDZ() {
 function ValidateCLYS() {
     var value = "";
     $(".div_clys").each(function () {
-        if ($(this).css("background-color") === "rgb(135, 181, 59)")
+        if ($(this).css("background-color") === "rgb(188, 107, 166)")
             value = $(this).find(".span_clys_right")[0].innerHTML;
     });
     if (value === "") {

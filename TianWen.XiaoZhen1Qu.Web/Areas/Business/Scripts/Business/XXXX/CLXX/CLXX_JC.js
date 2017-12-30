@@ -310,5 +310,5 @@ function OpenXGLM(lbname, lbid) {
 }
 //搜索栏备注导航
 function OpenSS(TYPE, ID) {
-    window.open(getRootPath() + "/Business/CLCX/CLCX_ZZF?LBID=13" + "&" + TYPE + "=" + ID);
+    window.open(getRootPath() + "/Business/CLCX/CLCX_JC?LBID=13" + "&" + TYPE + "=" + ID);
 }
