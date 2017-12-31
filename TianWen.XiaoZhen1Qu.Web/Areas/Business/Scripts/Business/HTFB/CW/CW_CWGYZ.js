@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    $("#divGQ").find(".div_radio").bind("click", function () { ValidateRadio("GQ", "忘记选择供求啦"); });
+    $("#divSF").find(".div_radio").bind("click", function () { ValidateRadio("SF", "忘记选择身份啦"); });
     $("#divQCQK").find(".div_radio").bind("click", function () { ValidateRadio("QCQK", "忘记选择驱虫情况啦"); });
     $("#NL").bind("blur", ValidateNL);
     $("#NL").bind("focus", function () { InfoInput("NL", "年龄请填写整数，不能是0", "CWGNL"); });
@@ -22,7 +22,7 @@ function ValidateCWGYMQK() {
 }
 //验证所有
 function ValidateAll() {
-    if (ValidateRadio("GQ", "忘记选择供求啦")
+    if (ValidateRadio("SF", "忘记选择身份啦")
         & ValidateSelect("CWGPZ", "PZ", "请选择品种")
         & ValidateJG()
         & ValidateZSZS()
