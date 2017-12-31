@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    $("#divOUTLB").find(".div_radio").bind("click", function () { ValidateRadio("OUTLB", "忘记选择类别啦"); });
+
 });
 //类别
 function ValidateOther() {
@@ -25,10 +25,7 @@ function ValidateOther() {
 }
 //验证所有
 function ValidateAll() {
-    if (ValidateSelect("OUTLB", "LB", "忘记选择类别啦")
-        & ValidateOther()
-        & ValidateJG()
-
+    if (ValidateCheck("LB", "忘记选择类别啦")
         & ValidateBCMS("BCMS", "忘记填写补充描述啦")
         & ValidateXXDZ()
         & ValidateCommon())

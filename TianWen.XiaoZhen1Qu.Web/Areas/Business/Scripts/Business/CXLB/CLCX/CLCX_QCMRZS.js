@@ -11,45 +11,45 @@ function LoadCLCondition() {
 }
 //选择条件
 function SelectCondition(obj, name) {
-    if (name === "类别" && obj.innerHTML === "洗车") {
-        LoadConditionByTypeNames("'洗车方式','洗车地点'", "CODES_CL", "方式,地点", "XCFS,XCDD", "15,15");
-        $("#ul_condition_body_PP").remove();
-        $("#ul_condition_body_PZ").remove();
-        $("#ul_condition_body_TMFW").remove();
-    }
-    if (name === "类别" && obj.innerHTML === "打蜡") {
-        LoadConditionByTypeNames("'打蜡品种','打蜡品牌'", "CODES_CL", "品种,品牌", "PZ,PP", "15,15");
-        $("#ul_condition_body_XCFS").remove();
-        $("#ul_condition_body_XCDD").remove();
-        $("#ul_condition_body_TMFW").remove();
-    }
-    if (name === "类别" && obj.innerHTML === "镀膜") {
-        LoadConditionByTypeNames("'镀膜品牌'", "CODES_CL", "品牌", "PP", "15");
-        $("#ul_condition_body_XCFS").remove();
-        $("#ul_condition_body_XCDD").remove();
-        $("#ul_condition_body_PZ").remove();
-        $("#ul_condition_body_TMFW").remove();
-    }
-    if (name === "类别" && obj.innerHTML === "封釉") {
-        LoadConditionByTypeNames("'封釉品牌'", "CODES_CL", "品牌", "PP", "15");
-        $("#ul_condition_body_XCFS").remove();
-        $("#ul_condition_body_XCDD").remove();
-        $("#ul_condition_body_PZ").remove();
-        $("#ul_condition_body_TMFW").remove();
-    }
-    if (name === "类别" && obj.innerHTML === "玻璃贴膜") {
-        LoadConditionByTypeNames("'玻璃贴膜品牌','贴膜范围'", "CODES_CL", "品牌,贴膜范围", "PP,TMFW", "15,15");
-        $("#ul_condition_body_XCFS").remove();
-        $("#ul_condition_body_XCDD").remove();
-        $("#ul_condition_body_PZ").remove();
-    }
-    if (name === "类别" && (obj.innerHTML !== "玻璃贴膜" && obj.innerHTML !== "洗车" && obj.innerHTML !== "打蜡" && obj.innerHTML !== "镀膜" && obj.innerHTML !== "封釉")) {
-        $("#ul_condition_body_XCFS").remove();
-        $("#ul_condition_body_XCDD").remove();
-        $("#ul_condition_body_PP").remove();
-        $("#ul_condition_body_PZ").remove();
-        $("#ul_condition_body_TMFW").remove();
-    }
+    //if (name === "类别" && obj.innerHTML === "洗车") {
+    //    LoadConditionByTypeNames("'洗车方式','洗车地点'", "CODES_CL", "方式,地点", "XCFS,XCDD", "15,15");
+    //    $("#ul_condition_body_PP").remove();
+    //    $("#ul_condition_body_PZ").remove();
+    //    $("#ul_condition_body_TMFW").remove();
+    //}
+    //if (name === "类别" && obj.innerHTML === "打蜡") {
+    //    LoadConditionByTypeNames("'打蜡品种','打蜡品牌'", "CODES_CL", "品种,品牌", "PZ,PP", "15,15");
+    //    $("#ul_condition_body_XCFS").remove();
+    //    $("#ul_condition_body_XCDD").remove();
+    //    $("#ul_condition_body_TMFW").remove();
+    //}
+    //if (name === "类别" && obj.innerHTML === "镀膜") {
+    //    LoadConditionByTypeNames("'镀膜品牌'", "CODES_CL", "品牌", "PP", "15");
+    //    $("#ul_condition_body_XCFS").remove();
+    //    $("#ul_condition_body_XCDD").remove();
+    //    $("#ul_condition_body_PZ").remove();
+    //    $("#ul_condition_body_TMFW").remove();
+    //}
+    //if (name === "类别" && obj.innerHTML === "封釉") {
+    //    LoadConditionByTypeNames("'封釉品牌'", "CODES_CL", "品牌", "PP", "15");
+    //    $("#ul_condition_body_XCFS").remove();
+    //    $("#ul_condition_body_XCDD").remove();
+    //    $("#ul_condition_body_PZ").remove();
+    //    $("#ul_condition_body_TMFW").remove();
+    //}
+    //if (name === "类别" && obj.innerHTML === "玻璃贴膜") {
+    //    LoadConditionByTypeNames("'玻璃贴膜品牌','贴膜范围'", "CODES_CL", "品牌,贴膜范围", "PP,TMFW", "15,15");
+    //    $("#ul_condition_body_XCFS").remove();
+    //    $("#ul_condition_body_XCDD").remove();
+    //    $("#ul_condition_body_PZ").remove();
+    //}
+    //if (name === "类别" && (obj.innerHTML !== "玻璃贴膜" && obj.innerHTML !== "洗车" && obj.innerHTML !== "打蜡" && obj.innerHTML !== "镀膜" && obj.innerHTML !== "封釉")) {
+    //    $("#ul_condition_body_XCFS").remove();
+    //    $("#ul_condition_body_XCDD").remove();
+    //    $("#ul_condition_body_PP").remove();
+    //    $("#ul_condition_body_PZ").remove();
+    //    $("#ul_condition_body_TMFW").remove();
+    //}
 
     $(obj).parent().find(".li_condition_body").each(function () {
         $(this).removeClass("li_condition_body_active");
@@ -97,7 +97,7 @@ function LoadInfo(obj) {
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
     html += ('<p class="p_li_body_left_center_bt">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_left_center_cs font_size16">' + obj.QY + '-' + obj.DD + '</p>');
+    html += ('<p class="p_li_body_left_center_nr">' + obj.BCMSString.replace(/<\/?.+?>/g, "") + '</p>');
     html += ('<p class="p_li_body_left_center_dz font_size16">' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
@@ -138,7 +138,7 @@ function LoadHotInfo(obj) {
     html += ('<li onclick="OpenXXXX(\'CLXX_QCMRZS\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_right_xq">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_right_jg">' + GetJG(obj.JG, '元') + '</p>');
+    html += ('<p class="p_li_body_right_cs">' + obj.QY + '-' + obj.DD + '</p>');
     html += ('</li>');
     $("#ul_body_right").append(html);
 }

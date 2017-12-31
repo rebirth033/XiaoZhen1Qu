@@ -1,83 +1,41 @@
 ﻿$(document).ready(function () {
-    LoadJBXX();
-    BindClick("LB");
+    LoadDuoX("汽车美容/装饰类别", "LB");
 });
-//绑定下拉框
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadCODESByTYPENAME("汽车美容/装饰类别", "LB", "CODES_CL", Bind, "OUTLB", "LB", "");
-        }
-        if (type === "XCDD") {
-            LoadCODESByTYPENAME("洗车地点", "XCDD", "CODES_CL", Bind, "QCMRZSXCDD", "XCDD", "");
-        }
-        if (type === "XCFS") {
-            LoadCODESByTYPENAME("洗车方式", "XCFS", "CODES_CL", Bind, "QCMRZSXCFS", "XCFS", "");
-        }
-        if (type === "PP") {
-            LoadCODESByTYPENAME($("#spanLB").html() + "品牌", "PP", "CODES_CL", Bind, "QCMRZSPP", "PP", "");
-        }
-        if (type === "PZ") {
-            LoadCODESByTYPENAME("打蜡品种", "PZ", "CODES_CL", Bind, "QCMRZSPZ", "PZ", "");
-        }
-        if (type === "TMFW") {
-            LoadCODESByTYPENAME("贴膜范围", "TMFW", "CODES_CL", Bind, "QCMRZSTMFW", "TMFW", "");
+//加载多选
+function LoadDuoX(type, id) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
+        dataType: "json",
+        data:
+        {
+            TYPENAME: type,
+            TBName: "CODES_CL"
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='ulFWPZ'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='li" + id + "' style='width:150px;' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    if (i % 4 === 3 && i !== xml.list.length - 1) {
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
+                    }
+                }
+                if (parseInt(xml.list.length % 4) === 0)
+                    $("#div" + id).css("height", parseInt(xml.list.length / 4) * 45 + "px");
+                else
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 4) + 1) * 45 + "px");
+                html += "</ul>";
+                $("#div" + id + "Text").html(html);
+                $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".li" + id).bind("click", function () { ValidateCheck("LB", "忘记选择类别啦"); });
+                LoadJBXX();
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
         }
     });
-}
-//选择类别下拉框
-function SelectLB(obj, type) {
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
-    PDLB(obj.innerHTML);
-}
-//判断类别
-function PDLB(lbmc) {
-    if (lbmc === "洗车") {
-        $("#divQCMRZSXCDD").css("display", "");
-        $("#divQCMRZSXCFS").css("display", "");
-        $("#divQCMRZSPP").css("display", "none");
-        $("#divQCMRZSPZ").css("display", "none");
-        $("#divQCMRZSTMFW").css("display", "none");
-        BindClick("XCDD");
-        BindClick("XCFS");
-    }
-    if (lbmc === "打蜡") {
-        $("#divQCMRZSXCDD").css("display", "none");
-        $("#divQCMRZSXCFS").css("display", "none");
-        $("#divQCMRZSPP").css("display", "");
-        $("#spanPP").html("请选择品牌");
-        $("#divQCMRZSPZ").css("display", "");
-        $("#divQCMRZSTMFW").css("display", "none");
-        BindClick("PP");
-        BindClick("PZ");
-    }
-    if (lbmc === "镀膜" || lbmc === "封釉" || lbmc === "座椅包真皮" || lbmc === "底盘装甲") {
-        $("#divQCMRZSXCDD").css("display", "none");
-        $("#divQCMRZSXCFS").css("display", "none");
-        $("#divQCMRZSPP").css("display", "");
-        $("#spanPP").html("请选择品牌");
-        $("#divQCMRZSPZ").css("display", "none");
-        $("#divQCMRZSTMFW").css("display", "none");
-        BindClick("PP");
-    }
-    if (lbmc === "玻璃贴膜") {
-        $("#divQCMRZSXCDD").css("display", "none");
-        $("#divQCMRZSXCFS").css("display", "none");
-        $("#divQCMRZSPP").css("display", "");
-        $("#spanPP").html("请选择品牌");
-        $("#divQCMRZSPZ").css("display", "none");
-        $("#divQCMRZSTMFW").css("display", "");
-        BindClick("PP");
-        BindClick("TMFW");
-    }
-    if (lbmc === "内饰清洗" || lbmc === "大灯翻新" || lbmc === "空调清洗" || lbmc === "真皮座椅保养" || lbmc === "汽车精品") {
-        $("#divQCMRZSXCDD").css("display", "none");
-        $("#divQCMRZSXCFS").css("display", "none");
-        $("#divQCMRZSPP").css("display", "none");
-        $("#divQCMRZSPZ").css("display", "none");
-        $("#divQCMRZSTMFW").css("display", "none");
-    }
 }
 //加载生活服务_汽车美容/装饰基本信息
 function LoadJBXX() {
@@ -97,15 +55,9 @@ function LoadJBXX() {
                 $("#ID").val(xml.Value.CL_QCMRZSJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
-                PDLB(xml.Value.CL_QCMRZSJBXX.LB);
-                $("#spanLB").html(xml.Value.CL_QCMRZSJBXX.LB);
-                $("#spanXCDD").html(xml.Value.CL_QCMRZSJBXX.XCDD);
-                $("#spanXCFS").html(xml.Value.CL_QCMRZSJBXX.XCFS);
-                $("#spanPP").html(xml.Value.CL_QCMRZSJBXX.PP);
-                $("#spanPZ").html(xml.Value.CL_QCMRZSJBXX.PZ);
-                $("#spanTMFW").html(xml.Value.CL_QCMRZSJBXX.TMFW);
                 $("#spanQY").html(xml.Value.CL_QCMRZSJBXX.QY);
                 $("#spanDD").html(xml.Value.CL_QCMRZSJBXX.DD);
+                SetDuoX("LB", xml.Value.CL_QCMRZSJBXX.LB);
                 LoadPhotos(xml.Value.Photos);
             }
         },
@@ -121,12 +73,7 @@ function FB() {
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
-    obj = jsonObj.AddJson(obj, "XCDD", "'" + $("#spanXCDD").html() + "'");
-    obj = jsonObj.AddJson(obj, "XCFS", "'" + $("#spanXCFS").html() + "'");
-    obj = jsonObj.AddJson(obj, "PP", "'" + $("#spanPP").html() + "'");
-    obj = jsonObj.AddJson(obj, "PZ", "'" + $("#spanPZ").html() + "'");
-    obj = jsonObj.AddJson(obj, "TMFW", "'" + $("#spanTMFW").html() + "'");
+    obj = jsonObj.AddJson(obj, "LB", "'" + GetDuoX("LB") + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
 
