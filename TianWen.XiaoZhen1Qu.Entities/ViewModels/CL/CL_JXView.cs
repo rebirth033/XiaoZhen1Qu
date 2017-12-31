@@ -16,5 +16,6 @@ namespace TianWen.XiaoZhen1Qu.Entities.ViewModels.CL
         public string JTDZ { get; set; }
         public string BB { get; set; }
         public string JZ { get; set; }
+        public string JXMC { get; set; }
     }
 }

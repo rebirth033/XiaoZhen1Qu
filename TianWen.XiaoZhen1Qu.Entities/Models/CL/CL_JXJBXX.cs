@@ -23,6 +23,12 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string JCXXID { get; set; }
 
         /// <summary>
+        /// 驾校名称
+        /// </summary>
+        [Property]
+        public virtual string JXMC { get; set; }
+
+        /// <summary>
         /// 类别
         /// </summary>
         [Property]

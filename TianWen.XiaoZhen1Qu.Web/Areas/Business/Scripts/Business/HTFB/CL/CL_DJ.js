@@ -9,7 +9,7 @@ function LoadSJSJWPLB() {
         dataType: "json",
         data:
         {
-            TYPENAME: "代驾",
+            TYPENAME: "代驾类别",
             TBName: "CODES_CL"
         },
         success: function (xml) {
@@ -25,7 +25,7 @@ function LoadSJSJWPLB() {
                 $("#divSJSJWPLBText").html(html);
                 $(".img_SJSJWPLB").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".liSJSJWPLB").bind("click", function () { ValidateCheck("OUTLB", "忘记选择类别啦"); });
-                LoadJBXX();
+                LoadFWFW();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -33,7 +33,7 @@ function LoadSJSJWPLB() {
         }
     });
 }
-//加载休闲娱乐_代驾基本信息
+//加载汽车服务_代驾基本信息
 function LoadJBXX() {
     $.ajax({
         type: "POST",
@@ -52,6 +52,8 @@ function LoadJBXX() {
                 //设置编辑器的内容
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
                 SetDuoX("SJSJWPLB", xml.Value.CL_DJJBXX.LB);
+                if (xml.Value.CL_DJJBXX.FWFW !== null)
+                    SetDuoX("FWFW", xml.Value.CL_DJJBXX.FWQY);
                 LoadPhotos(xml.Value.Photos);
             }
         },
@@ -68,6 +70,7 @@ function FB() {
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "LB", "'" + GetDuoX("SJSJWPLB") + "'");
+    obj = jsonObj.AddJson(obj, "FWQY", "'" + GetDuoX("FWFW") + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");
