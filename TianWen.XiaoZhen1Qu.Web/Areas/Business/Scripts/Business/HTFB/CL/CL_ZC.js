@@ -6,7 +6,7 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("租车", "LB", "CODES_CL");
+            LoadCODESByTYPENAME("租车类别", "LB", "CODES_CL");
         }
     });
 }

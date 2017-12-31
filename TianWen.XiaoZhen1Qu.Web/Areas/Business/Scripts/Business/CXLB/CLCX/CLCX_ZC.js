@@ -6,11 +6,14 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadCLCondition() {
-    LoadConditionByTypeNames("'租车'", "CODES_CL", "类别", "LB", "100");
+    LoadConditionByTypeNames("'租车类别'", "CODES_CL", "类别", "LB", "100");
     LoadBody("CLXX_ZC", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
+    if (name === "类别") {
+        LoadConditionByParentID(obj.id, "CODES_CL", "品牌", "XL");
+    }
     $(obj).parent().find(".li_condition_body").each(function () {
         $(this).removeClass("li_condition_body_active");
     });
@@ -21,7 +24,7 @@ function SelectCondition(obj, name) {
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("LB,QY");
+    var condition = GetAllCondition("LB,XL,QY");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/CLCX/LoadCLXX",
