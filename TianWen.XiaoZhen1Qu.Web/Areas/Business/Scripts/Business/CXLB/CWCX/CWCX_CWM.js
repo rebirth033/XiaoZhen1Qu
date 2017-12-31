@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadCWCondition() {
-    LoadConditionByTypeNames("'宠物猫品种','宠物狗价格'", "CODES_CW", "品种,价格", "PZ,JG", "15,15");
+    LoadConditionByTypeNames("'宠物猫品种','宠物狗价格'", "CODES_CW", "品种,价格", "PZ,JG", "100,100");
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -16,6 +16,23 @@ function SelectCondition(obj, name) {
     $(obj).addClass("li_condition_body_active");
     LoadBody("CWXX_CWM", currentIndex);
     ShowSelectCondition("CWXX_CWM");
+}
+//加载查询条件
+function LoadCondition(array, name, id, length) {
+    $("#ul_condition_body_" + id).remove();
+    var html = "";
+    html += '<ul id="ul_condition_body_' + id + '" class="ul_condition_body" style="height:auto;">';
+    if (name === "类别" || name === "小类" || name === "品牌" || name === "车系" || name === "车型" || name === "驾照" || name === "品种")
+        html += '<li id="li_condition_body_first_' + id + '" class="li_condition_body_first">' + name + '</li>';
+    else
+        html += '<li class="li_condition_body_first">' + name + '</li>';
+    html += '<li id="0" class="li_condition_body li_condition_body_active" onclick="SelectCondition(this,\'' + name + '\')">全部</li>';
+    for (var i = 0; i < (array.length > length ? length : array.length) ; i++) {
+        html += '<li id="' + array[i].CODEID + '" class="li_condition_body" onclick="SelectCondition(this,\'' + name + '\')">' + array[i].CODENAME + '</li>';
+    }
+    html += '</ul>';
+    $("#div_condition_body_" + id).append(html);
+    $("#li_condition_body_first_" + id).css("height", (parseInt($("#div_condition_body_" + id).css("height")) - 10));
 }
 //根据TYPENAME获取字典表(私有)
 function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
@@ -42,6 +59,7 @@ function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
                 }
                 SetCondition("PZ", getUrlParam("PZ"));
                 LoadBody("CWXX_CWM", currentIndex);
+                ShowSelectCondition("CWXX_CWM");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -52,7 +70,7 @@ function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("PZ,JG,QY");
+    var condition = GetAllCondition("PZ,JG,QY,SF");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/CWCX/LoadCWXX",
@@ -128,9 +146,20 @@ function LoadHotInfo(obj) {
     var html = "";
     html += ('<li onclick="OpenXXXX(\'CWXX_CWM\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_right_xq">' + obj.PZ + '</p>');
-    html += ('<p class="p_li_body_right_cs">' + obj.QY + '-' + obj.DD + '</p>');
+    html += ('<p class="p_li_body_right_xq">' + obj.BT + '</p>');
+    html += ('<p class="p_li_body_right_cs">' + obj.PZ + '</p>');
     html += ('<p class="p_li_body_right_jg">' + GetJG(obj.JG,'元')+'</p>');
     html += ('</li>');
     $("#ul_body_right").append(html);
+}
+//根据条件查询
+function SearchByCondition(type) {
+    $("#ul_condition_body_SF").find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    if (type === "GR")
+        $("#ul_condition_body_SF").find(".li_condition_body:eq(1)").addClass("li_condition_body_active");
+    if (type === "SJ")
+        $("#ul_condition_body_SF").find(".li_condition_body:eq(2)").addClass("li_condition_body_active");
+    LoadBody("CWXX_CWM", 1);
 }
