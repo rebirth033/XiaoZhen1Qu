@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    LoadJBXX();
+    LoadFWFW();
 });
 //加载生活服务_汽车陪练基本信息
 function LoadJBXX() {
@@ -21,6 +21,8 @@ function LoadJBXX() {
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
                 $("#spanQY").html(xml.Value.CL_QCPLJBXX.QY);
                 $("#spanDD").html(xml.Value.CL_QCPLJBXX.DD);
+                if (xml.Value.CL_QCPLJBXX.FWFW !== null)
+                    SetDuoX("FWFW", xml.Value.CL_QCPLJBXX.FWQY);
                 LoadPhotos(xml.Value.Photos);
             }
         },
@@ -38,6 +40,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
+    obj = jsonObj.AddJson(obj, "FWQY", "'" + GetDuoX("FWFW") + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");

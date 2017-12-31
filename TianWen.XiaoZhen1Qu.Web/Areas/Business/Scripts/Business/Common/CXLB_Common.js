@@ -276,7 +276,7 @@ function LoadCondition(array, name, id, length) {
     $("#ul_condition_body_" + id).remove();
     var html = "";
     html += '<ul id="ul_condition_body_' + id + '" class="ul_condition_body" style="height:auto;">';
-    if (name === "类别" || name === "小类" || name === "品牌" || name === "车系" || name === "车型")
+    if (name === "类别" || name === "小类" || name === "品牌" || name === "车系" || name === "车型" || name === "驾照")
         html += '<li id="li_condition_body_first_' + id + '" class="li_condition_body_first">' + name + '</li>';
     else
         html += '<li class="li_condition_body_first">' + name + '</li>';
