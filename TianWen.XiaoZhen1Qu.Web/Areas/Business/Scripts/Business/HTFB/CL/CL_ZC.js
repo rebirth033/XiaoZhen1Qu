@@ -1,12 +1,12 @@
 ﻿$(document).ready(function () {
     BindClick("LB");
-    LoadJBXX();
+    LoadFWFW();
 });
 //绑定下拉框
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("租车类别", "LB", "CODES_CL");
+            LoadCODESByTYPENAME("租车类别", "LB", "CODES_CL", Bind, "OUTLB", "LB", "");
         }
     });
 }
@@ -88,9 +88,11 @@ function LoadJBXX() {
                 $("#spanLB").html(xml.Value.CL_ZCJBXX.LB);
                 $("#spanQY").html(xml.Value.CL_ZCJBXX.QY);
                 $("#spanDD").html(xml.Value.CL_ZCJBXX.DD);
+                if (xml.Value.CL_ZCJBXX.FWFW !== null)
+                    SetDuoX("FWFW", xml.Value.CL_ZCJBXX.FWQY);
                 LoadPhotos(xml.Value.Photos);
-                if (xml.Value.CL_ZCJBXX.LB.indexOf("大巴(30座以上)") !== -1 || xml.Value.CL_ZCJBXX.LB.indexOf("中巴(30座以下)") !== -1 || xml.Value.CL_ZCJBXX.LB.indexOf("面包车") !== -1
-                    || xml.Value.CL_ZCJBXX.LB.indexOf("MPV(商务车)") !== -1 || xml.Value.CL_ZCJBXX.LB.indexOf("豪华轿车") !== -1 || xml.Value.CL_ZCJBXX.LB.indexOf("普通轿车") !== -1
+                if (xml.Value.CL_ZCJBXX.LB.indexOf("大巴（30座以上）") !== -1 || xml.Value.CL_ZCJBXX.LB.indexOf("中巴（30座以下）") !== -1 || xml.Value.CL_ZCJBXX.LB.indexOf("面包车") !== -1
+                    || xml.Value.CL_ZCJBXX.LB.indexOf("商务车") !== -1 || xml.Value.CL_ZCJBXX.LB.indexOf("豪华轿车") !== -1 || xml.Value.CL_ZCJBXX.LB.indexOf("普通轿车") !== -1
                     || xml.Value.CL_ZCJBXX.LB.indexOf("跑车") !== -1 || xml.Value.CL_ZCJBXX.LB.indexOf("SUV(越野车)") !== -1) {
                     LoadXL(xml.Value.CL_ZCJBXX.LB, xml.Value.CL_ZCJBXX.XL);
                 }
@@ -112,6 +114,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "XL", "'" + GetDuoX("XL") + "'");
+    obj = jsonObj.AddJson(obj, "FWQY", "'" + GetDuoX("FWFW") + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");

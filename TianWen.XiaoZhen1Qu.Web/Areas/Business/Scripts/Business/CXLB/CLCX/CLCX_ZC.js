@@ -60,7 +60,7 @@ function LoadInfo(obj) {
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
     html += ('<p class="p_li_body_left_center_bt">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_left_center_cs font_size16">' + obj.QY + '-' + obj.DD + '-' + obj.JTDZ + '</p>');
+    html += ('<p class="p_li_body_left_center_nr">' + obj.BCMSString.replace(/<\/?.+?>/g, "") + '</p>');
     html += ('<p class="p_li_body_left_center_dz font_size16">' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
@@ -100,9 +100,8 @@ function LoadHotInfo(obj) {
     var html = "";
     html += ('<li onclick="OpenXXXX(\'CLXX_ZC\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_right_xq">' + obj.QY + '-' + obj.DD  + '</p>');
+    html += ('<p class="p_li_body_right_xq">' + obj.BT  + '</p>');
     html += ('<p class="p_li_body_right_cs">' + obj.LB + '</p>');
-    html += ('<p class="p_li_body_right_cs">' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</li>');
     $("#ul_body_right").append(html);
 }

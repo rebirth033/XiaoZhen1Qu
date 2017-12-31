@@ -162,6 +162,7 @@
     <Content Include="Areas\Business\Css\BZZX\BZZX_WZJY.css" />
     <Content Include="Areas\Business\Css\Common\Head.css" />
     <Content Include="Areas\Business\Css\Common\CXLB_Common.css" />
+    <Content Include="Areas\Business\Css\CXLB\CLFWCX.css" />
     <Content Include="Areas\Business\Css\CXLB\SHFWCX.css" />
     <Content Include="Areas\Business\Css\CXLB\XXYLCX.css" />
     <Content Include="Areas\Business\Css\CXLB\LYJDCX.css" />
