@@ -169,7 +169,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 if (TYPE == "CLXX_QCPL")
                 {
                     dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,cl_qcpljbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
-                    List<CL_JXView> list = ConvertHelper.DataTableToList<CL_JXView>(dt);
+                    List<CL_QCPLView> list = ConvertHelper.DataTableToList<CL_QCPLView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
                     var listnew = from p in list.Skip((int.Parse(PageIndex) - 1) * int.Parse(PageSize)).Take(int.Parse(PageSize)) select p;
@@ -375,7 +375,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 if (TYPE == "CLXX_QCPL")
                 {
                     dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,cl_qcpljbxx b where a.jcxxid = b.jcxxid and id = '{0}'  order by zxgxsj desc", ID));
-                    List<CL_JXView> list = ConvertHelper.DataTableToList<CL_JXView>(dt);
+                    List<CL_QCPLView> list = ConvertHelper.DataTableToList<CL_QCPLView>(dt);
                     foreach (var jcxx in list)
                     {
                         jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));

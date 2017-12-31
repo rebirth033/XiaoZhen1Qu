@@ -29,12 +29,6 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string LB { get; set; }
 
         /// <summary>
-        /// 价格
-        /// </summary>
-        [Property]
-        public virtual string JG { get; set; }
-
-        /// <summary>
         /// 补充描述
         /// </summary>
         [Property]

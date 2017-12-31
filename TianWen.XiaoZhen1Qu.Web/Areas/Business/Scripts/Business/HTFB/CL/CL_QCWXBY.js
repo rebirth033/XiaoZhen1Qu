@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-    LoadJBXX();
     LoadDuoX("汽车维修/保养类别", "LB");
 });
 //加载多选
@@ -18,7 +17,7 @@ function LoadDuoX(type, id) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='li" + id + "' style='width:150px;' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i % 4 === 3) {
+                    if (i % 4 === 3 && i !== xml.list.length - 1) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
                     }
                 }
@@ -29,6 +28,8 @@ function LoadDuoX(type, id) {
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".li" + id).bind("click", function () { ValidateCheck("LB", "忘记选择类别啦"); });
+                LoadJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -56,7 +57,7 @@ function LoadJBXX() {
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
                 $("#spanQY").html(xml.Value.CL_QCWXBYJBXX.QY);
                 $("#spanDD").html(xml.Value.CL_QCWXBYJBXX.DD);
-                $("#spanLB").html(xml.Value.CL_QCWXBYJBXX.LB);
+                SetDuoX("LB", xml.Value.CL_QCWXBYJBXX.LB);
                 LoadPhotos(xml.Value.Photos);
             }
         },
@@ -72,7 +73,7 @@ function FB() {
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
+    obj = jsonObj.AddJson(obj, "LB", "'" + GetDuoX("LB") + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
 
