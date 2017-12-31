@@ -22,7 +22,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         public ActionResult CLXX_GHSPNJYC() { return View(); }
         public ActionResult CLXX_QCMRZS() { return View(); }
         public ActionResult CLXX_QCGZFH() { return View(); }
-        
+        public ActionResult CLXX_QCPJ() { return View(); }
 
         public JsonResult LoadCLXX()
         {

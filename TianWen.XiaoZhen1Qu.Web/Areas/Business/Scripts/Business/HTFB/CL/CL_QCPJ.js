@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     LoadJBXX();
-    LoadDuoX("汽车配件", "LB");
+    LoadDuoX("汽车配件类别", "LB");
 });
 //加载多选
 function LoadDuoX(type, id) {
@@ -29,6 +29,7 @@ function LoadDuoX(type, id) {
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".liLB").bind("click", function () { ValidateCheck("LB", "忘记选择类别啦"); });
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -56,7 +57,8 @@ function LoadJBXX() {
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
                 $("#spanQY").html(xml.Value.CL_QCPJJBXX.QY);
                 $("#spanDD").html(xml.Value.CL_QCPJJBXX.DD);
-                $("#spanLB").html(xml.Value.CL_QCPJJBXX.LB);
+                if (xml.Value.CL_QCPJJBXX.LB !== null)
+                    SetDuoX("LB", xml.Value.CL_QCPJJBXX.LB);
                 LoadPhotos(xml.Value.Photos);
             }
         },
@@ -72,7 +74,7 @@ function FB() {
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
+    obj = jsonObj.AddJson(obj, "LB", "'" + GetDuoX("LB") + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
 

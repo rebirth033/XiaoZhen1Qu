@@ -236,6 +236,20 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     }
                     return new { Result = EnResultType.Success, list = listnew, PageCount = PageCount, TotalCount = TotalCount };
                 }
+                if (TYPE == "CLXX_QCPJ")
+                {
+                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,cl_qcpjjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
+                    List<CL_QCPJView> list = ConvertHelper.DataTableToList<CL_QCPJView>(dt);
+                    int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
+                    int TotalCount = list.Count;
+                    var listnew = from p in list.Skip((int.Parse(PageIndex) - 1) * int.Parse(PageSize)).Take(int.Parse(PageSize)) select p;
+                    foreach (var jcxx in listnew)
+                    {
+                        jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
+                        jcxx.BCMSString = BinaryHelper.BinaryToString(jcxx.BCMS);
+                    }
+                    return new { Result = EnResultType.Success, list = listnew, PageCount = PageCount, TotalCount = TotalCount };
+                }
                 return new { Result = EnResultType.Failed };
             }
             catch (Exception ex)
@@ -420,6 +434,17 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 {
                     dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,cl_qcgzfhjbxx b where a.jcxxid = b.jcxxid and id = '{0}'  order by zxgxsj desc", ID));
                     List<CL_QCGZFHView> list = ConvertHelper.DataTableToList<CL_QCGZFHView>(dt);
+                    foreach (var jcxx in list)
+                    {
+                        jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
+                    }
+                    UpdateLLCS(list[0].JCXXID);
+                    return new { Result = EnResultType.Success, list = list, BCMSString = BinaryHelper.BinaryToString(list[0].BCMS), grxxlist = GetGRXX(list[0].YHID) };
+                }
+                if (TYPE == "CLXX_QCPJ")
+                {
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,cl_qcpjjbxx b where a.jcxxid = b.jcxxid and id = '{0}'  order by zxgxsj desc", ID));
+                    List<CL_QCPJView> list = ConvertHelper.DataTableToList<CL_QCPJView>(dt);
                     foreach (var jcxx in list)
                     {
                         jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));

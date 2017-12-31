@@ -593,6 +593,7 @@
     <Content Include="Areas\Business\Css\Other\YHDL.css" />
     <Content Include="Areas\Business\Css\HTGL\HTGL.css" />
     <Content Include="Areas\Business\Css\XXXX\CL\CLXX_DJ.css" />
+    <Content Include="Areas\Business\Css\XXXX\CL\CLXX_QCPJ.css" />
     <Content Include="Areas\Business\Css\XXXX\CL\CLXX_JX.css" />
     <Content Include="Areas\Business\Css\XXXX\CL\CLXX_QCPL.css" />
     <Content Include="Areas\Business\Css\XXXX\CL\CLXX_QCWXBY.css" />
@@ -852,6 +853,7 @@
     <Content Include="Areas\Business\Scripts\Business\Common\Top.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\XLBQ.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\CLCX\CLCX_DJ.js" />
+    <Content Include="Areas\Business\Scripts\Business\CXLB\CLCX\CLCX_QCPJ.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\CLCX\CLCX_JX.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\CLCX\CLCX_QCPL.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\CLCX\CLCX_QCWXBY.js" />
@@ -1464,6 +1466,7 @@
     <Content Include="Areas\Business\Scripts\Business\HTGL\HTGL.js" />
     <Content Include="Areas\Business\Scripts\Business\Other\YHZC.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\CLXX\CLXX_DJ.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\CLXX\CLXX_QCPJ.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\CLXX\CLXX_JX.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\CLXX\CLXX_QCPL.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\CLXX\CLXX_QCWXBY.js" />
@@ -2816,6 +2819,8 @@
     <Content Include="Areas\Business\Views\LYJD\LYJD_QZFW.cshtml" />
     <Content Include="Areas\Business\Views\LYJDCX\LYJDCX_QZFW.cshtml" />
     <Content Include="Areas\Business\Views\LYJDXX\LYJDXX_QZFW.cshtml" />
+    <Content Include="Areas\Business\Views\CLCX\CLCX_QCPJ.cshtml" />
+    <Content Include="Areas\Business\Views\CLXX\CLXX_QCPJ.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
