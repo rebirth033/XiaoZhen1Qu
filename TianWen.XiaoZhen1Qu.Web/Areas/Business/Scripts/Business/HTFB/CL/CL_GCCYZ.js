@@ -1,9 +1,5 @@
 ﻿$(document).ready(function () {
-    $("#divGCCLB").find(".div_radio").bind("click", function () { ValidateRadio("GCCLB", ""); });
-    $("#DW").bind("blur", ValidateDW);
-    $("#DW").bind("focus", InfoDW);
-    $("#XSS").bind("blur", ValidateXSS);
-    $("#XSS").bind("focus", InfoXSS);
+    $("#divSF").find(".div_radio").bind("click", function () { ValidateRadio("SF", "忘记选择身份啦"); });
     $("#JG").bind("blur", ValidateJG);
     $("#JG").bind("focus", InfoJG);
 });
@@ -15,35 +11,15 @@ function ValidateGCCCCNF() {
 }
 //验证所有
 function ValidateAll() {
-    if ($("#spanCX").html() === "挖掘机") {
-        if (ValidateRadio("GCCLB", "忘记选择类别啦")
-            & ValidateSelect("GCCCX", "CX", "忘记选择车型啦")
-            & ValidateSelect("GCCPP", "PP", "忘记选择品牌啦")
-            & ValidateGCCCCNF()
-            & ValidateDW()
-            & ValidateXSS()
-            & ValidateBCMS("BCMS", "忘记填写补充描述啦")
-            & ValidateSZQY()
-            & ValidateJG()
-            & ValidateCommon())
-            return true;
-        else
-            return false;
-    }
-    else {
-        if (ValidateRadio("GCCLB", "忘记选择类别啦")
-            & ValidateSelect("GCCCX", "CX", "忘记选择车型啦")
-            & ValidateGCCCCNF()
-            & ValidateDW()
-            & ValidateXSS()
-            & ValidateBCMS("BCMS", "忘记填写补充描述啦")
-            & ValidateSZQY()
-            & ValidateJG()
-            & ValidateCommon())
-            return true;
-        else
-            return false;
-    }
+    if (ValidateRadio("SF", "忘记选择身份啦")
+           & ValidateSelect("GCCCX", "CX", "忘记选择车型啦")
+           & ValidateGCCCCNF()
+           & ValidateBCMS("BCMS", "忘记填写补充描述啦")
+           & ValidateJG()
+           & ValidateCommon())
+        return true;
+    else
+        return false;
 }
 //验证吨位
 function ValidateDW() {

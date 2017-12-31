@@ -12,28 +12,35 @@
             <span class="span_split">基本信息</span>
             <em class="em_split"></em>
         </div>
-        <div id="divGCCCX" class="div_row" style="z-index: 999">
+        <div id="divSF" class="div_row">
+            <div class="div_row_left font_two">
+                <span class="span_required">*</span>
+                <span class="spanFWCZ">身份</span>
+            </div>
+            <div class="div_row_right">
+                <div class="div_radio" id="div_sf_gr">
+                    <img class="img_radio" id="img_sf_gr" /><label class="label_radio">个人</label>
+                </div>
+                <div class="div_radio" id="div_sf_sj">
+                    <img class="img_radio" id="img_sf_sj" /><label class="label_radio">商家</label>
+                </div>
+            </div>
+            <div id="divSFTip" class="Warn" style="z-index: 999;"></div>
+        </div>
+        <div id="divGCCCX" class="div_row" style="z-index: 998">
             <div class="div_row_left font_two">
                 <span class="span_required">*</span>
                 <span class="spanFWCZ">车型</span>
             </div>
             <div class="div_row_right">
-                <div id="divCXText" class="div_select_out SRK" style="position: relative; z-index: 998;">
-                    <div id="divCXSpan" class="div_select_in" style="border: none; margin-top: 6px;">
-                        <span id="spanCX" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择车型</span>
+                <div id="divCXText" class="div_select_out SRK" style="position: relative; z-index: 998; width: 250px;">
+                    <div id="divCXSpan" class="div_select_in" style="border: none; margin-top: 6px; width: 250px;">
+                        <span id="spanCX" class="span_select spaninput_fontcolor" style="margin-top: 0; width: 220px;">请选择车型</span>
                         <div class="span_select_arrow"></div>
                     </div>
-                    <div id="divCX" class="div_bqss" style="display: none;">
-                        <div class="div_bqss_head">
-                            <input class="input_content" type="text" placeholder="输入名称快速搜索" style="cursor: text" />
-                            <input class="btn btn-info" type="button" value="快速搜索" />
-                        </div>
-                        <div class="div_bqss_body">
-                            <div class="div_bqss_body_mc" id="div_content_gccmc">
-                            </div>
-                            <div class="div_bqss_body_bq" id="div_content_gccbq">
-                            </div>
-                        </div>
+                </div>
+                <div id="div_row_right_jcpp" class="div_row_right_jcpp">
+                    <div id="div_row_right_jcpp_first" class="div_row_right_jcpp_item div_row_right_jcpp_first">
                     </div>
                 </div>
             </div>
@@ -45,7 +52,7 @@
                 <span class="spanFWCZ">品牌</span>
             </div>
             <div class="div_row_right">
-                <div id="divPPText" class="div_select_out SRK" style="position: relative; z-index: 995;">
+                <div id="divPPText" class="div_select_out SRK" style="position: relative; z-index: 996;">
                     <div id="divPPSpan" class="div_select_in" style="border: none; margin-top: 6px;">
                         <span id="spanPP" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择品牌</span>
                         <div class="span_select_arrow"></div>
@@ -64,41 +71,15 @@
                     </div>
                 </div>
             </div>
-            <div id="divGCCPPTip" class="Warn" style="z-index: 994;"></div>
+            <div id="divGCCPPTip" class="Warn" style="z-index: 995;"></div>
         </div>
-        <div id="divDW" class="div_row" style="z-index: 993;">
-            <div class="div_row_left font_two">
-                <span class="span_required">*</span>
-                <span class="spanFWCZ">吨位</span>
-            </div>
-            <div class="div_row_right">
-                <span id="spanDW" class="span_spaninput SRK" style="display: inline-block;">
-                    <input class="input_spaninput spaninput_fontcolor" id="DW" maxlength="9" column="DW" type="text" style="width: 100px" />
-                    <span class="spaninput_fontcolor" style="margin-left: 15px;">吨</span>
-                </span>
-            </div>
-            <div id="divDWTip" class="Warn" style="z-index: 992;"></div>
-        </div>
-        <div id="divXSS" class="div_row" style="z-index: 991;">
-            <div class="div_row_left font_three">
-                <span class="span_required">*</span>
-                <span class="spanFWCZ">小时数</span>
-            </div>
-            <div class="div_row_right">
-                <span id="spanXSS" class="span_spaninput SRK" style="display: inline-block;">
-                    <input class="input_spaninput spaninput_fontcolor" id="XSS" maxlength="9" column="XSS" type="text" style="width: 100px" />
-                    <span class="spaninput_fontcolor">小时</span>
-                </span>
-            </div>
-            <div id="divXSSTip" class="Warn" style="z-index: 990;"></div>
-        </div>
-        <div id="divGCCCCNF" class="div_row" style="z-index: 989;">
+        <div id="divGCCCCNF" class="div_row" style="z-index: 994;">
             <div class="div_row_left">
                 <span class="span_required">*</span>
                 <span class="spanFWCZ">出厂年份</span>
             </div>
             <div class="div_row_right">
-                <div id="divCCNFText" class="div_select_out SRK" style="z-index: 988;">
+                <div id="divCCNFText" class="div_select_out SRK" style="z-index: 994;">
                     <div id="divCCNFSpan" class="div_select_in" style="border: none; margin-top: 6px;">
                         <span id="spanCCNF" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择出厂年份</span>
                         <div class="span_select_arrow"></div>
@@ -106,7 +87,7 @@
                     <div id="divCCNF" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
                     </div>
                 </div>
-                <div id="divCCYFText" class="div_select_out SRK" style="z-index: 987;">
+                <div id="divCCYFText" class="div_select_out SRK" style="z-index: 994;">
                     <div id="divCCYFSpan" class="div_select_in" style="border: none; margin-top: 6px;">
                         <span id="spanCCYF" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择出厂月份</span>
                         <div class="span_select_arrow"></div>
@@ -115,9 +96,9 @@
                     </div>
                 </div>
             </div>
-            <div id="divGCCCCNFTip" class="Warn" style="z-index: 986;"></div>
+            <div id="divGCCCCNFTip" class="Warn" style="z-index: 993;"></div>
         </div>
-        <div id="divJG" class="div_row" style="z-index: 985;">
+        <div id="divJG" class="div_row" style="z-index: 992;">
             <div class="div_row_left">
                 <span class="span_required">*</span>
                 <span class="spanFWCZ">转让价格</span>
@@ -128,15 +109,15 @@
                     <span class="spaninput_fontcolor">万元</span>
                 </span>
             </div>
-            <div id="divJGTip" class="Warn" style="z-index: 984;"></div>
+            <div id="divJGTip" class="Warn" style="z-index: 991;"></div>
         </div>
-        <div id="divSZQY" class="div_row" style="z-index: 983;">
+        <div id="divSZQY" class="div_row" style="z-index: 990;">
             <div class="div_row_left">
-                <span class="span_required">*</span>
-                <span class="spanFWCZ">交易地点</span>
+                <span class="span_required">&nbsp;</span>
+                <span class="spanFWCZ">看车地址</span>
             </div>
             <div class="div_row_right">
-                <div id="divQYText" class="div_select_out SRK">
+                <div id="divQYText" class="div_select_out SRK" style="z-index: 990;">
                     <div id="divQYSpan" class="div_select_in" style="border: none; margin-top: 6px;">
                         <input type="hidden" id="QYCode" />
                         <span id="spanQY" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择区域</span>
@@ -145,7 +126,7 @@
                     <div id="divQY" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
                     </div>
                 </div>
-                <div id="divDDText" class="div_select_out SRK">
+                <div id="divDDText" class="div_select_out SRK" style="z-index: 990;">
                     <div id="divDDSpan" class="div_select_in" style="border: none; margin-top: 6px;">
                         <span id="spanDD" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择地段</span>
                         <div class="span_select_arrow"></div>
@@ -153,8 +134,35 @@
                     <div id="divDD" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
                     </div>
                 </div>
+                <input id="JTDZ" column="JTDZ" class="span_spaninput input_input SRK" type="text" placeholder="请填写具体地址" style="width: 300px" />
             </div>
-            <div id="divSZQYTip" class="Warn" style="z-index: 982;"></div>
+            <div id="divSZQYTip" class="Warn" style="z-index: 989;"></div>
+        </div>
+        <div id="divDW" class="div_row" style="z-index: 988;">
+            <div class="div_row_left font_two">
+                <span class="span_required">&nbsp;</span>
+                <span class="spanFWCZ">吨位</span>
+            </div>
+            <div class="div_row_right">
+                <span id="spanDW" class="span_spaninput SRK" style="display: inline-block;">
+                    <input class="input_spaninput spaninput_fontcolor" id="DW" maxlength="9" column="DW" type="text" style="width: 100px" />
+                    <span class="spaninput_fontcolor" style="margin-left: 15px;">吨</span>
+                </span>
+            </div>
+            <div id="divDWTip" class="Warn" style="z-index: 987;"></div>
+        </div>
+        <div id="divXSS" class="div_row" style="z-index: 986;">
+            <div class="div_row_left font_five">
+                <span class="span_required">&nbsp;</span>
+                <span class="spanFWCZ">已使用时长</span>
+            </div>
+            <div class="div_row_right">
+                <span id="spanXSS" class="span_spaninput SRK" style="display: inline-block;">
+                    <input class="input_spaninput spaninput_fontcolor" id="XSS" maxlength="9" column="XSS" type="text" style="width: 100px" />
+                    <span class="spaninput_fontcolor">小时</span>
+                </span>
+            </div>
+            <div id="divXSSTip" class="Warn" style="z-index: 985;"></div>
         </div>
         <div id="divXXXX" class="div_split" style="display: block; text-align: left;">
             <span class="span_split">详细信息</span>
@@ -166,7 +174,7 @@
                 <span id="spanFYBT">标题</span>
             </div>
             <div class="div_row_right">
-                <input id="BT" maxlength="50" column="BT" class="input_input SRK"  type="text" placeholder="吸引人的标题可让更多的人看您的信息喔" />
+                <input id="BT" maxlength="50" column="BT" class="input_input SRK" type="text" placeholder="吸引人的标题可让更多的人看您的信息喔" />
                 <div id="divBTTip"></div>
             </div>
         </div>

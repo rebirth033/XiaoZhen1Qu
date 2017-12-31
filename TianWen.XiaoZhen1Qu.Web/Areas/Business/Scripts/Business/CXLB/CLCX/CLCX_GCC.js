@@ -6,13 +6,13 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadCLCondition() {
-    LoadConditionByTypeNames("'工程车车型','客车价格'", "CODES_CL", "车型,价格", "CX,JG", "14,15");
+    LoadConditionByTypeNames("'工程车车型','客车价格'", "CODES_CL", "车型,价格", "CX,JG", "100,100");
     LoadBody("CLXX_GCC", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
     if (name === "车型" && obj.innerHTML === "挖掘机") {
-        LoadConditionByTypeNames("'挖掘机品牌'", "CODES_CL", "品牌", "PP","15");
+        LoadConditionByTypeNames("'挖掘机品牌'", "CODES_CL", "品牌", "PP", "100");
     }
     if (name === "车型" && obj.innerHTML !== "挖掘机") {
         $("#ul_condition_body_PP").remove();
@@ -26,7 +26,7 @@ function SelectCondition(obj, name) {
 }
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
-    currentIndex = parseInt(PageIndex);var condition = GetAllCondition("CX,PP,JG,QY");
+    currentIndex = parseInt(PageIndex);var condition = GetAllCondition("CX,PP,JG,QY,SF");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/CLCX/LoadCLXX",
@@ -62,7 +62,7 @@ function LoadCL_GCCInfo(obj) {
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
     html += ('<p class="p_li_body_left_center_bt">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_left_center_cs font_size16">' + obj.CX + ' / ' + obj.CCNF + ' / ' + obj.XSS + '小时' + ' / ' + obj.QY + '-' + obj.DD + '</p>');
+    html += ('<p class="p_li_body_left_center_cs font_size16">' + obj.CX + ' / ' + obj.CCNF + ' / ' + obj.XSS + '小时' + '</p>');
     html += ('<p class="p_li_body_left_center_dz font_size16">' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
@@ -102,9 +102,20 @@ function LoadHotInfo(obj) {
     var html = "";
     html += ('<li onclick="OpenXXXX(\'CLXX_GCC\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_right_xq">' + obj.CX + ' / ' + obj.CCNF + ' / ' + obj.XSS + '小时' + '</p>');
-    html += ('<p class="p_li_body_right_cs">' + obj.QY + '-' + obj.DD + '</p>');
+    html += ('<p class="p_li_body_right_xq">' + obj.BT + '</p>');
+    html += ('<p class="p_li_body_right_cs">' + obj.CX + ' / ' + obj.CCNF + ' / ' + obj.XSS + '小时' + '</p>');
     html += ('<p class="p_li_body_right_jg">' + obj.JG + '万元</p>');
     html += ('</li>');
     $("#ul_body_right").append(html);
+}
+//根据条件查询
+function SearchByCondition(type) {
+    $("#ul_condition_body_SF").find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    if (type === "GR")
+        $("#ul_condition_body_SF").find(".li_condition_body:eq(1)").addClass("li_condition_body_active");
+    if (type === "SJ")
+        $("#ul_condition_body_SF").find(".li_condition_body:eq(2)").addClass("li_condition_body_active");
+    LoadBody("CLXX_GCC", 1);
 }
