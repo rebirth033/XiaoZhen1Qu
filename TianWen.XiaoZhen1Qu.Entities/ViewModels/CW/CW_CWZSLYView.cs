@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using TianWen.XiaoZhen1Qu.Entities.Models;
-using TianWen.XiaoZhen1Qu.Entities.ViewModels.Common;
+﻿using TianWen.XiaoZhen1Qu.Entities.ViewModels.Common;
 
 namespace TianWen.XiaoZhen1Qu.Entities.ViewModels.CW
 {

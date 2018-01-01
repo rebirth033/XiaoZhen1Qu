@@ -47,16 +47,34 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string JG { get; set; }
 
         /// <summary>
-        /// 区域
+        /// 在售只数
         /// </summary>
         [Property]
-        public virtual string QY { get; set; }
+        public virtual string ZSZS { get; set; }
 
         /// <summary>
-        /// 地段
+        /// 年龄
         /// </summary>
         [Property]
-        public virtual string DD { get; set; }
+        public virtual string NL { get; set; }
+
+        /// <summary>
+        /// 年龄单位
+        /// </summary>
+        [Property]
+        public virtual string NLDW { get; set; }
+
+        /// <summary>
+        /// 性别
+        /// </summary>
+        [Property]
+        public virtual string XB { get; set; }
+
+        /// <summary>
+        /// 毛色
+        /// </summary>
+        [Property]
+        public virtual string MS { get; set; }
 
         /// <summary>
         /// 补充描述

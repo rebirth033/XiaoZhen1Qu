@@ -29,6 +29,12 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string GQ { get; set; }
 
         /// <summary>
+        /// 身份
+        /// </summary>
+        [Property]
+        public virtual string SF { get; set; }
+
+        /// <summary>
         /// 类别
         /// </summary>
         [Property]
@@ -45,18 +51,6 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// </summary>
         [Property]
         public virtual string JG { get; set; }
-
-        /// <summary>
-        /// 区域
-        /// </summary>
-        [Property]
-        public virtual string QY { get; set; }
-
-        /// <summary>
-        /// 地段
-        /// </summary>
-        [Property]
-        public virtual string DD { get; set; }
 
         /// <summary>
         /// 补充描述

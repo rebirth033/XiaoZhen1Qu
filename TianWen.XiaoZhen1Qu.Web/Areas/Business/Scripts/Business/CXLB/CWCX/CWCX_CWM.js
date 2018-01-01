@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadCWCondition() {
-    LoadConditionByTypeNames("'宠物猫品种','宠物狗价格'", "CODES_CW", "品种,价格", "PZ,JG", "100,100");
+    LoadConditionByTypeNames("'宠物猫品种','宠物猫价格'", "CODES_CW", "品种,价格", "PZ,JG", "100,100");
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -87,7 +87,7 @@ function LoadBody(TYPE, PageIndex) {
                 $("#ul_body_left").html('');
                 LoadPage(TYPE, xml.PageCount);
                 for (var i = 0; i < xml.list.length; i++) {
-                    LoadCL_JCInfo(xml.list[i]);
+                    LoadInfo(xml.list[i]);
                 }
             }
         },
@@ -96,8 +96,8 @@ function LoadBody(TYPE, PageIndex) {
         }
     });
 }
-//加载宠物_宠物狗单条信息
-function LoadCL_JCInfo(obj) {
+//加载宠物_宠物猫单条信息
+function LoadInfo(obj) {
     var html = "";
     html += ('<li class="li_body_left" onclick="OpenXXXX(\'CWXX_CWM\',\'' + obj.ID + '\')">');
     html += ('<div class="div_li_body_left_left">');
@@ -106,7 +106,7 @@ function LoadCL_JCInfo(obj) {
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
     html += ('<p class="p_li_body_left_center_bt">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_left_center_cs font_size16">' + obj.PZ + ' / ' + obj.QY + '-' + obj.DD + '</p>');
+    html += ('<p class="p_li_body_left_center_cs font_size16">' + obj.PZ + ' / ' + obj.NL + obj.NLDW + ' / ' + obj.ZSZS + '只在售</p>');
     html += ('<p class="p_li_body_left_center_dz font_size16">' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
@@ -147,8 +147,8 @@ function LoadHotInfo(obj) {
     html += ('<li onclick="OpenXXXX(\'CWXX_CWM\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_right_xq">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_right_cs">' + obj.PZ + '</p>');
-    html += ('<p class="p_li_body_right_jg">' + GetJG(obj.JG,'元')+'</p>');
+    html += ('<p class="p_li_body_right_cs">' + obj.PZ + ' / ' + obj.NL + obj.NLDW + ' / ' + obj.ZSZS + '只在售</p>');
+    html += ('<p class="p_li_body_right_jg">' + GetJG(obj.JG, '元') + '</p>');
     html += ('</li>');
     $("#ul_body_right").append(html);
 }

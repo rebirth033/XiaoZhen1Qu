@@ -14,9 +14,12 @@ namespace TianWen.XiaoZhen1Qu.Entities.Maps
             Map(x => x.GQ, "GQ");
             Map(x => x.SF, "SF");
             Map(x => x.PZ, "PZ");
+            Map(x => x.NL, "NL");
+            Map(x => x.NLDW, "NLDW");
+            Map(x => x.XB, "XB");
+            Map(x => x.MS, "MS");
             Map(x => x.JG, "JG");
-            Map(x => x.QY, "QY");
-            Map(x => x.DD, "DD");
+            Map(x => x.ZSZS, "ZSZS");
             Map(x => x.BCMS, "BCMS");
             #endregion
 

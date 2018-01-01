@@ -45,6 +45,7 @@ function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
                 }
                 SetCondition("LB", getUrlParam("LB"));
                 LoadBody("CWXX_HNYC", currentIndex);
+                ShowSelectCondition("CWXX_HNYC");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -55,7 +56,7 @@ function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("LB,XL,JG,QY");
+    var condition = GetAllCondition("LB,XL,JG,QY,SF");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/CWCX/LoadCWXX",
@@ -92,10 +93,10 @@ function LoadInfo(obj) {
     html += ('<div class="div_li_body_left_center">');
     html += ('<p class="p_li_body_left_center_bt">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_left_center_nr">' + obj.BCMSString.replace(/<\/?.+?>/g, "") + '</p>');
-    html += ('<p class="p_li_body_left_center_dz font_size16">' + obj.QY + '-' + obj.DD + ' / ' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
+    html += ('<p class="p_li_body_left_center_dz font_size16">' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
-    html += ('<p class="p_li_body_left_right"><span class="span_zj">' + obj.JG + '</span>元/只</p>');
+    html += ('<p class="p_li_body_left_right"><span class="span_zj">' + GetJG(obj.JG, '元') + '</p>');
     html += ('</div>');
     html += ('</li>');
     $("#ul_body_left").append(html);
@@ -131,9 +132,19 @@ function LoadHotInfo(obj) {
     var html = "";
     html += ('<li onclick="OpenXXXX(\'CWXX_HNYC\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += (TruncStr(obj.BCMSString, 30));
-    html += ('<p class="p_li_body_right_cs">' + obj.QY + '-' + obj.DD + '</p>');
-    html += ('<p class="p_li_body_right_jg">' + GetJG(obj.JG,'元')+'</p>');
+    html += ('<p class="p_li_body_right_xq">' + obj.BT + '</p>');
+    html += ('<p class="p_li_body_right_jg">' + GetJG(obj.JG, '元') + '</p>');
     html += ('</li>');
     $("#ul_body_right").append(html);
+}
+//根据条件查询
+function SearchByCondition(type) {
+    $("#ul_condition_body_SF").find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    if (type === "GR")
+        $("#ul_condition_body_SF").find(".li_condition_body:eq(1)").addClass("li_condition_body_active");
+    if (type === "SJ")
+        $("#ul_condition_body_SF").find(".li_condition_body:eq(2)").addClass("li_condition_body_active");
+    LoadBody("CWXX_HNYC", 1);
 }

@@ -107,13 +107,12 @@ function LoadJBXX() {
                 var jsonObj = new JsonDB("myTabContent");
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.CW_CWMJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
-                $("#spanNLDW").html(xml.Value.CW_CWGJBXX.NLDW);
-                $("#spanXB").html(xml.Value.CW_CWGJBXX.XB);
+                $("#spanNLDW").html(xml.Value.CW_CWMJBXX.NLDW);
+                $("#spanXB").html(xml.Value.CW_CWMJBXX.XB);
+                $("#spanPZ").html(xml.Value.CW_CWMJBXX.PZ);
                 $("#ID").val(xml.Value.CW_CWMJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
-
-                $("#spanPZ").html(xml.Value.CW_CWMJBXX.PZ);
                 if (xml.Value.CW_CWMJBXX.SF !== null)
                     SetDX("SF", xml.Value.CW_CWMJBXX.SF);
                 LoadPhotos(xml.Value.Photos);
