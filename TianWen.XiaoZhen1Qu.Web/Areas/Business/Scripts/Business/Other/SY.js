@@ -86,7 +86,7 @@ function LoadSY_ML() {
             if (xml.Result === 1) {
                 LoadSY_MLInfo(xml.list, xml.xzq, "FC");
                 LoadSY_MLInfo(xml.list, xml.xzq, "CL");
-                LoadSY_MLInfo(xml.list, xml.xzq, "CW");
+                LoadSY_ML_CWInfo(xml.list, xml.xzq, "CW");
                 LoadSY_MLInfo(xml.list, xml.xzq, "ZP");
                 LoadSY_ML_WXLInfo(xml.list, xml.xzq, "ZSJM");
                 LoadSY_ML_WXLInfo(xml.list, xml.xzq, "PX");
@@ -130,6 +130,30 @@ function LoadSY_MLInfo(list, xzq, typename) {
                         html += ('<li class="li_body_middle_left_section purple" onclick="OpenCXLB(' + list[j].LBID + ',\'' + list[j].LBURL + '\',\'' + list[j].CONDITION + '\')">' + list[j].LBNAME + '</li>');
                     else
                         html += ('<li class="li_body_middle_left_section" onclick="OpenCXLB(' + list[j].LBID + ',\'' + list[j].LBURL + '\',\'' + list[j].CONDITION + '\')">' + list[j].LBNAME + '</li>');
+                }
+            }
+            html += ('</ul>');
+        }
+    }
+    $("#div_body_middle_left_" + typename).append(html);
+}
+//加载首页_目录详细信息（有小类_宠物）
+function LoadSY_ML_CWInfo(list, xzq, typename) {
+    var html = "";
+    for (var i = 0; i < list.length; i++) {
+        if (list[i].TYPE === "DL" && list[i].TYPENAME === typename)
+            html += ('<p id="p_body_middle_left_title_' + typename + '" class="p_body_middle_left_title">' + list[i].LBNAME + '</p>');
+    }
+    for (var i = 0; i < list.length; i++) {
+        if (list[i].TYPE === "XL" && list[i].TYPENAME === typename) {
+            html += ('<span class="span_body_middle_left_title_small_cw">' + list[i].LBNAME + '</span>');
+            html += ('<ul class="ul_body_middle_left_section_cw" style="height: ' + GetHeight(list, list[i].ID, typename) + 'px;">');
+            for (var j = 0; j < list.length; j++) {
+                if (list[j].PARENTID === list[i].ID) {
+                    if (list[j].ISHOT === "是")
+                        html += ('<li class="li_body_middle_left_section_cw purple" onclick="OpenCXLB(' + list[j].LBID + ',\'' + list[j].LBURL + '\',\'' + list[j].CONDITION + '\')">' + list[j].LBNAME + '</li>');
+                    else
+                        html += ('<li class="li_body_middle_left_section_cw" onclick="OpenCXLB(' + list[j].LBID + ',\'' + list[j].LBURL + '\',\'' + list[j].CONDITION + '\')">' + list[j].LBNAME + '</li>');
                 }
             }
             html += ('</ul>');

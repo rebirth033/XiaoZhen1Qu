@@ -5,7 +5,8 @@
 
 //验证所有
 function ValidateAll() {
-    if (ValidateSelect("CWFWLB", "LB", "请填写类别")
+    if (ValidateCheck("LB", "忘记选择类别啦")
+        & ValidateCheck("FWFW", "忘记选择服务范围啦")
         & ValidateJG()
         & ValidateBCMS("BCMS", "忘记填写补充描述啦")
         & ValidateCommon())

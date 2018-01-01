@@ -18,9 +18,13 @@
 .div_body .div_body_middle .div_body_middle_left_section { width: 292.5px;height: 400px;display: block;float: left;padding: 10px;background: #ffffff;display: inline-block;margin-right: 10px;margin-top: 10px;}
 .div_body .div_body_middle .div_body_middle_left_section .p_body_middle_left_title{font-size: 26px;border-bottom: 2px solid #bc6ba6;display: block;height: 52px;color: #333333;}
 .div_body .div_body_middle .div_body_middle_left_section .p_body_middle_left_title_small{font-size: 14px;color: #999999;display: block;height: 25px;}
+.div_body .div_body_middle .div_body_middle_left_section .span_body_middle_left_title_small_cw{font-size: 14px;color: #999999;display: inline-block;width: 60px;height: 25px;float: left;margin-right: 10px;}
 .div_body .div_body_middle .div_body_middle_left_section .ul_body_middle_left_section{display: block;padding: 0;height: 30px;}
 .div_body .div_body_middle .div_body_middle_left_section .ul_body_middle_left_section .li_body_middle_left_section{display: inline-block;width: 80px;height: 30px;font-size: 15px;float: left;color: #333333;}
 .div_body .div_body_middle .div_body_middle_left_section .ul_body_middle_left_section .li_body_middle_left_section:hover{ cursor: pointer;color: #bc6ba6;text-decoration: underline;}
+.div_body .div_body_middle .div_body_middle_left_section .ul_body_middle_left_section_cw{display: inline-block;padding: 0;height: 30px;width: 200px;}
+.div_body .div_body_middle .div_body_middle_left_section .ul_body_middle_left_section_cw .li_body_middle_left_section_cw{display: inline-block;width: 65px;height: 30px;font-size: 15px;float: left;color: #333333;}
+.div_body .div_body_middle .div_body_middle_left_section .ul_body_middle_left_section_cw .li_body_middle_left_section_cw:hover{ cursor: pointer;color: #bc6ba6;text-decoration: underline;}
 .div_body .div_body_middle .div_body_middle_left_section_fl{ display: block;}
 .div_body .div_body_middle .div_body_middle_left_section_fl .span_body_middle_left_section_fl_left{ display: inline-block;float: left;width: 75px;}
 .div_body .div_body_middle .div_body_middle_left_section_fl .span_body_middle_left_section_fl_left:hover{ cursor: pointer;color: #bc6ba6;text-decoration: underline;}
