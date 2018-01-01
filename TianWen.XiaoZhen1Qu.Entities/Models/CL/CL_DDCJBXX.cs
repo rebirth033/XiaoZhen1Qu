@@ -77,13 +77,13 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual Byte[] BCMS { get; set; }
 
         /// <summary>
-        /// 交易区域
+        /// 区域
         /// </summary>
         [Property]
         public virtual string QY { get; set; }
 
         /// <summary>
-        /// 交易地段
+        /// 地段
         /// </summary>
         [Property]
         public virtual string DD { get; set; }

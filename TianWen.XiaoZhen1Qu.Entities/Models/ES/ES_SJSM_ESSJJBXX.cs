@@ -23,6 +23,12 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string JCXXID { get; set; }
 
         /// <summary>
+        /// 配送方式
+        /// </summary>
+        [Property]
+        public virtual string PSFS { get; set; }
+
+        /// <summary>
         /// 身份
         /// </summary>
         [Property]
@@ -65,15 +71,21 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual Byte[] BCMS { get; set; }
 
         /// <summary>
-        /// 交易区域
+        /// 区域
         /// </summary>
         [Property]
         public virtual string QY { get; set; }
 
         /// <summary>
-        /// 交易地段
+        /// 地段
         /// </summary>
         [Property]
         public virtual string DD { get; set; }
+
+        /// <summary>
+        /// 具体地址
+        /// </summary>
+        [Property]
+        public virtual string JTDZ { get; set; }
     }
 }
