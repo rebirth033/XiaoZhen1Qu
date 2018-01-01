@@ -42,18 +42,18 @@ function ValidateNL() {
         $("#divCWGNLTip").css("display", "block");
         $("#divCWGNLTip").attr("class", "Warn");
         $("#divCWGNLTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写年龄啦');
-        $("#spanNL").css("border-color", "#F2272D");
+        $("#NL").css("border-color", "#F2272D");
         return false;
     } else {
         if (ValidateDecimal($("#NL").val())) {
             $("#divCWGNLTip").css("display", "none");
-            $("#spanNL").css("border-color", "#cccccc");
+            $("#NL").css("border-color", "#cccccc");
             return true;
         } else {
             $("#divCWGNLTip").css("display", "block");
             $("#divCWGNLTip").attr("class", "Warn");
             $("#divCWGNLTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />年龄请填写整数');
-            $("#spanNL").css("border-color", "#F2272D");
+            $("#NL").css("border-color", "#F2272D");
             return false;
         }
     }

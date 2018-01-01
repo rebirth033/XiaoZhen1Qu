@@ -88,6 +88,7 @@ function GoToBQ(tag) {
 //选择款式
 function SelectFirst(pz) {
     $("#spanPZ").html(pz);
+    ValidateSelect("CWGPZ", "PZ", "请选择品种");
 }
 //关闭选择品牌框
 function CloseJCPP(count) {
