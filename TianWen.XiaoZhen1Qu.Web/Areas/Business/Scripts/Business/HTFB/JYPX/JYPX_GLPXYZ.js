@@ -14,7 +14,7 @@ function ValidateAll() {
     if (ValidateLB()
         & ValidateCheck("CD", "忘记选择场地啦")
 
-        & ValidateBCMS("BCMS", "忘记填写补充描述啦")
+        & ValidateBCMS("BCMS", "忘记填写详情描述啦")
         & ValidateXXDZ()
         & ValidateCommon())
         return true;

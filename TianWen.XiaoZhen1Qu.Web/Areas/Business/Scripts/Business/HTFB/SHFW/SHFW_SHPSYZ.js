@@ -16,7 +16,7 @@ function ValidateLB() {
 function ValidateAll() {
     if (ValidateLB()
 
-        & ValidateBCMS("BCMS", "忘记填写补充描述啦")
+        & ValidateBCMS("BCMS", "忘记填写详情描述啦")
         & ValidateXXDZ()
         & ValidateCommon())
         return true;

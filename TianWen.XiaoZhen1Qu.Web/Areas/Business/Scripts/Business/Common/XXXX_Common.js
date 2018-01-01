@@ -105,7 +105,7 @@ function ToggleImg(length) {
         $("#div_body_left_body_xq_zk").html("展开更多图片 共（" + length + "）张");
     }
 }
-//伸缩补充描述
+//伸缩详情描述
 function ToggleBCMS() {
     if ($("#div_body_left_body_xq_zk_bcms").html().indexOf("展开") !== -1) {
         $("#div_body_left_body_xq_xx_bcms").css("overflow", "visible").css("height", "auto");

@@ -10,7 +10,7 @@ function ValidateAll() {
             & ValidateCheck("CX", "忘记选择车型啦")
             & ValidateCheck("PP", "忘记选择品牌啦")
             & ValidateSelect("XJCD", "XJ", "忘记选择新旧啦")
-            & ValidateBCMS("BCMS", "忘记填写补充描述啦")
+            & ValidateBCMS("BCMS", "忘记填写详情描述啦")
             & ValidateXXDZ()
             & ValidateJG()
             & ValidateCommon())

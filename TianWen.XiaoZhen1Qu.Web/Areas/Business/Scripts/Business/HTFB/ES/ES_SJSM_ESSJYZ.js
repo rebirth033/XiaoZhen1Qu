@@ -14,7 +14,7 @@ function ValidateSJPPYXH() {
 function ValidateAll() {
     if (ValidateRadio("SF", "忘记选择身份啦")
         & ValidateRadio("SYQK", "忘记选择使用情况啦")
-        & ValidateBCMS("BCMS", "忘记填写补充描述啦")
+        & ValidateBCMS("BCMS", "忘记填写详情描述啦")
         & ValidateSJPPYXH()
         & ValidateSZQY()
         & ValidateJG()

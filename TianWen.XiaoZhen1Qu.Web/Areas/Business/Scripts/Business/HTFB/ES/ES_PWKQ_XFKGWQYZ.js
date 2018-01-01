@@ -10,7 +10,7 @@ function ValidateAll() {
         & ValidateYXQZ()
         & ValidateJG()
         & ValidateSZQY()
-        & ValidateBCMS("BCMS", "忘记填写补充描述啦")
+        & ValidateBCMS("BCMS", "忘记填写详情描述啦")
          & ValidateInput("BT", "标题") & ValidateInput("LXR", "联系人") & ValidateInput("LXDH", "联系电话"))
         return true;
     else

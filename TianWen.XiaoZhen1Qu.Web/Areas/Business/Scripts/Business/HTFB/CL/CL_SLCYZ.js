@@ -8,7 +8,7 @@ function ValidateAll() {
     if (ValidateRadio("GQ", "忘记选择供求啦")
         & ValidateSelect("XJCD", "XJ", "请选择新旧")
         & ValidateSelect("SLCCX", "CX", "请选择车型")
-        & ValidateBCMS("BCMS", "忘记填写补充描述啦")
+        & ValidateBCMS("BCMS", "忘记填写详情描述啦")
         & ValidateSZQY()
         & ValidateJG()
         & ValidateCommon())

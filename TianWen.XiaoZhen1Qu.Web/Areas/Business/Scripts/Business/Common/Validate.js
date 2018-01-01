@@ -5,8 +5,8 @@
     $("#LXR").bind("focus", function () { InfoInput("LXR", "请填写联系人"); });
     $("#LXDH").bind("blur", function () { ValidateInput("LXDH", "联系电话"); });
     $("#LXDH").bind("focus", function () { InfoInput("LXDH", "请填写联系电话"); });
-    ue.addListener("focus", function (type, event) { InfoBCMS("BCMS", "请填写补充描述"); });
-    ue.addListener("blur", function (type, event) { ValidateBCMS("BCMS", "忘记填写补充描述啦"); });
+    ue.addListener("focus", function (type, event) { InfoBCMS("BCMS", "请填写详情描述"); });
+    ue.addListener("blur", function (type, event) { ValidateBCMS("BCMS", "忘记填写详情描述啦"); });
     $("#JTDZ").bind("blur", ValidateJTDZ);
     $("#JTDZ").bind("focus", InfoJTDZ);
     $("#JG").bind("blur", ValidateJG);
@@ -46,7 +46,7 @@ function ValidateJG() {
         }
     }
 }
-//验证补充描述
+//验证详情描述
 function ValidateBCMS(id, message) {
     if (ue.getContent() === "" || ue.getContent() === null) {
         $("#div" + id + "Tip").css("display", "block");
@@ -189,7 +189,7 @@ function InfoJG() {
     $("#divJGTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />请填写整数，默认为面议');
     $("#spanJG").css("border-color", "#bc6ba6");
 }
-//提示补充描述
+//提示详情描述
 function InfoBCMS(id, message) {
     $("#div" + id + "Tip").css("display", "block");
     $("#div" + id + "Tip").attr("class", "Info");

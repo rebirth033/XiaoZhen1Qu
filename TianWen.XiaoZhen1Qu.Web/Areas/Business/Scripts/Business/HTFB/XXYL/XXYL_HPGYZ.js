@@ -8,7 +8,7 @@ function ValidateAll() {
         & ValidateCheck("SNSB", "忘记选择室内设备啦")
         & ValidateJG()
         & ValidateCDMJ()
-        & ValidateBCMS("BCMS", "忘记填写补充描述啦")
+        & ValidateBCMS("BCMS", "忘记填写详情描述啦")
 
         & ValidateXXDZ()
         & ValidateCommon())

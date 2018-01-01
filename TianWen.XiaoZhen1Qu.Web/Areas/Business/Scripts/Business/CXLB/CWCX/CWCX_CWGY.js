@@ -42,6 +42,7 @@ function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
                 }
                 SetCondition("GQ", getUrlParam("LB"));
                 LoadBody("CWXX_CWGY", currentIndex);
+                ShowSelectCondition("CWXX_CWGY");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -88,8 +89,8 @@ function LoadInfo(obj) {
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
     html += ('<p class="p_li_body_left_center_bt">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_left_right">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_left_center_dz font_size16">' + obj.QY + '-' + obj.DD + ' / ' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
+    html += ('<p class="p_li_body_left_center_nr">' + obj.BCMSString.replace(/<\/?.+?>/g, "") + '</p>');
+    html += ('<p class="p_li_body_left_center_dz font_size16">' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
     html += ('</div>');
@@ -127,8 +128,8 @@ function LoadHotInfo(obj) {
     var html = "";
     html += ('<li onclick="OpenXXXX(\'CWXX_CWGY\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_right_xq">' + "服务项目:" + obj.LB + '</p>');
-    html += ('<p class="p_li_body_right_cs">' + obj.QY + '-' + obj.DD + '</p>');
+    html += ('<p class="p_li_body_right_xq">' + obj.BT + '</p>');
+    html += ('<p class="p_li_body_right_cs">' + obj.GQ + '</p>');
     html += ('</li>');
     $("#ul_body_right").append(html);
 }

@@ -21,7 +21,7 @@ function ValidateAll() {
            & ValidateHCCCNF()
            & ValidateEDZZ()
            & ValidateXSLC()
-           & ValidateBCMS("BCMS", "忘记填写补充描述啦")
+           & ValidateBCMS("BCMS", "忘记填写详情描述啦")
            & ValidateSZQY()
            & ValidateJG()
            & ValidateCommon())

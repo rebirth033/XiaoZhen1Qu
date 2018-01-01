@@ -11,7 +11,7 @@ function ValidateAll() {
     if (ValidateLB()
         & ValidateJG()
         & ValidateCheck("FWFW", "忘记选择服务范围啦")
-        & ValidateBCMS("BCMS", "忘记填写补充描述啦")
+        & ValidateBCMS("BCMS", "忘记填写详情描述啦")
         & ValidateCommon())
         return true;
     else

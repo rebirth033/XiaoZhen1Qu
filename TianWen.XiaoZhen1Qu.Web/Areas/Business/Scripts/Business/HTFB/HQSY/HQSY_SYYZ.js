@@ -9,7 +9,7 @@ function ValidateAll() {
         & ValidateRadio("ZCFG", "忘记选择主持风格啦")
         & ValidateRadio("CYSJ", "忘记选择从业时间啦")
         & ValidateJG()
-        & ValidateBCMS("BCMS", "忘记填写补充描述啦")
+        & ValidateBCMS("BCMS", "忘记填写详情描述啦")
 
         & ValidateXXDZ()
         & ValidateCommon())

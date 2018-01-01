@@ -10,7 +10,7 @@ function ValidateAll() {
         & ValidateSelect("HYJDJDXJ", "JDXJ", "忘记选择酒店星级啦")
         & ValidateSpanInput("RNZS", "容纳桌数 ")
         & ValidateJG()
-        & ValidateBCMS("BCMS", "忘记填写补充描述啦")
+        & ValidateBCMS("BCMS", "忘记填写详情描述啦")
 
         & ValidateXXDZ()
         & ValidateCommon())

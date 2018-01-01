@@ -25,7 +25,7 @@ function ValidateAll() {
         & ValidateCheck("FDKM", "忘记选择辅导科目啦")
         & ValidateQWSX()
 
-        & ValidateBCMS("BCMS", "忘记填写补充描述啦")
+        & ValidateBCMS("BCMS", "忘记填写详情描述啦")
         & ValidateXXDZ()
         & ValidateCommon())
         return true;

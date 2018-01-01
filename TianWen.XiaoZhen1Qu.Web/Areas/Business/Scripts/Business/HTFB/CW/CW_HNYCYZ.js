@@ -14,7 +14,7 @@ function ValidateAll() {
     if (ValidateRadio("SF", "忘记选择身份啦")
         & ValidateHNYCLB()
         & ValidateJG()
-        & ValidateBCMS("BCMS", "忘记填写补充描述啦")
+        & ValidateBCMS("BCMS", "忘记填写详情描述啦")
         & ValidateCommon())
         return true;
     else

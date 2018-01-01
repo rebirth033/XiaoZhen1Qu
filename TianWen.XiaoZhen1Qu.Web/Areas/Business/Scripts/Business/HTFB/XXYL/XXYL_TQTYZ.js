@@ -3,7 +3,7 @@
 });
 //验证所有
 function ValidateAll() {
-    if (ValidateBCMS("BCMS", "忘记填写补充描述啦")
+    if (ValidateBCMS("BCMS", "忘记填写详情描述啦")
         & ValidateXXDZ()
         & ValidateCommonWithoutZP())
         return true;

@@ -13,7 +13,7 @@ function ValidateLB() {
 function ValidateAll() {
     if (ValidateLB()
         & ValidateCheck("XS", "忘记选择形式啦")
-        & ValidateBCMS("BCMS", "忘记填写补充描述啦")
+        & ValidateBCMS("BCMS", "忘记填写详情描述啦")
         & ValidateXXDZ()
         & ValidateCommon())
         return true;

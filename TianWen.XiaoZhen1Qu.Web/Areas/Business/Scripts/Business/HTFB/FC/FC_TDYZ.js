@@ -13,7 +13,7 @@ function ValidateAll() {
     if (GetGQ() === "出售") {
         if (ValidateRadio("GQ", "忘记选择供求啦")
             & ValidateRadio("SF", "忘记选择身份啦")
-            & ValidateBCMS("BCMS", "忘记填写补充描述啦")
+            & ValidateBCMS("BCMS", "忘记填写详情描述啦")
             & ValidateSZQY()
             & ValidateDD()
             & ValidateSJ()
@@ -26,7 +26,7 @@ function ValidateAll() {
     else {
         if (ValidateRadio("GQ", "忘记选择供求啦")
         & ValidateRadio("SF", "忘记选择身份啦")
-        & ValidateBCMS("BCMS", "忘记填写补充描述啦")
+        & ValidateBCMS("BCMS", "忘记填写详情描述啦")
         & ValidateSZQY()
         & ValidateDD()
         & ValidateZJ()

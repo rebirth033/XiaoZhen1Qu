@@ -20,7 +20,7 @@ function ValidateAll() {
         & ValidateCheck("FWLX", "忘记选择服务类型啦")
         & ValidateCheck("BXXZ", "忘记选择办学性质啦")
         & ValidateYYSJ()
-        & ValidateBCMS("BCMS", "忘记填写补充描述啦")
+        & ValidateBCMS("BCMS", "忘记填写详情描述啦")
         & ValidateXXDZ()
         & ValidateCommon())
         return true;

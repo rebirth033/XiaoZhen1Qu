@@ -24,7 +24,7 @@ function ValidateAll() {
         & ValidateSelect("DYDDRXL", "XL", "忘记选择学历啦")
         & ValidateSelect("DYDDRDTJY", "DTJY", "忘记选择带团经验啦")
 
-        & ValidateBCMS("BCMS", "忘记填写补充描述啦")
+        & ValidateBCMS("BCMS", "忘记填写详情描述啦")
         & ValidateXXDZ()
         & ValidateCommon())
         return true;

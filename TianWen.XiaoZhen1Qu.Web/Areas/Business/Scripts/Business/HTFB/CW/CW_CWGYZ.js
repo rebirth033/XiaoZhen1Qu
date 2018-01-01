@@ -29,7 +29,7 @@ function ValidateAll() {
         & ValidateCWGNL()
         & ValidateSelect("CWGXB", "XB", "请选择性别")
         & ValidateCWGYMQK()
-        & ValidateBCMS("BCMS", "忘记填写补充描述啦")
+        & ValidateBCMS("BCMS", "忘记填写详情描述啦")
         & ValidateRadio("QCQK", "忘记选择驱虫情况啦")
         & ValidateCommon())
         return true;

@@ -21,7 +21,7 @@ function ValidateAll() {
     if (ValidateJCPP()
         & ValidateCLYS()
         & ValidateSCSPSJ()
-        & ValidateBCMS("BCMS", "忘记填写补充描述啦")
+        & ValidateBCMS("BCMS", "忘记填写详情描述啦")
         & ValidateXSLC()
         & ValidateXXDZ()
         & ValidateJG()

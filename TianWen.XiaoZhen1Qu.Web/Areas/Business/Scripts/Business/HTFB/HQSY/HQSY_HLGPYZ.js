@@ -16,7 +16,7 @@ function ValidateAll() {
         & ValidateInput("SLQC", "摄录器材")
         & ValidateInput("SLCP", "摄录成品")
         & ValidateJG()
-        & ValidateBCMS("BCMS", "忘记填写补充描述啦")
+        & ValidateBCMS("BCMS", "忘记填写详情描述啦")
 
         & ValidateXXDZ()
         & ValidateCommon())

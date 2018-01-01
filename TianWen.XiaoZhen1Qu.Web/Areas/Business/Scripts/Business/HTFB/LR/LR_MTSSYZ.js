@@ -6,7 +6,7 @@ function ValidateAll() {
     if ($("#spanLB").html() === "减肥") {
         if (ValidateSelect("MTSSLB", "LB", "忘记选择类别啦")
             & ValidateSelect("JFFS", "FS", "忘记选择类别啦")
-            & ValidateBCMS("BCMS", "忘记填写补充描述啦")
+            & ValidateBCMS("BCMS", "忘记填写详情描述啦")
     
             & ValidateXXDZ()
             & ValidateCommon())
@@ -16,7 +16,7 @@ function ValidateAll() {
     }
     else {
         if (ValidateSelect("MTSSLB", "LB", "忘记选择类别啦")
-            & ValidateBCMS("BCMS", "忘记填写补充描述啦")
+            & ValidateBCMS("BCMS", "忘记填写详情描述啦")
     
             & ValidateXXDZ()
             & ValidateCommon())

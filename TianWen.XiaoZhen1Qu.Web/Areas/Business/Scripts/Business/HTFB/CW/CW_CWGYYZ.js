@@ -4,7 +4,7 @@
 //验证所有
 function ValidateAll() {
     if (ValidateRadio("GQ", "忘记选择供求啦")
-        & ValidateBCMS("BCMS", "忘记填写补充描述啦")
+        & ValidateBCMS("BCMS", "忘记填写详情描述啦")
         & ValidateCommon())
         return true;
     else

@@ -10,7 +10,7 @@ function ValidateAll() {
     if (ValidateRadio("SF", "忘记选择身份啦")
         & ValidateSelect("DDCCX", "CX", "忘记选择车型啦")
         & ValidateCheck("PP", "忘记选择品牌啦")
-        & ValidateBCMS("BCMS", "忘记填写补充描述啦")
+        & ValidateBCMS("BCMS", "忘记填写详情描述啦")
         & ValidateXXDZ()
         & ValidateJG()
         & ValidateCommon())
