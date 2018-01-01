@@ -1,21 +1,21 @@
 ﻿$(document).ready(function () {
     $("#divSF").find(".div_radio").bind("click", function () { ValidateRadio("SF", "忘记选择身份啦"); });
-    $("#divSYQK").find(".div_radio").bind("click", function () { ValidateRadio("SYQK", "忘记选择使用情况啦"); });
     $("#JG").bind("blur", ValidateJG);
     $("#JG").bind("focus", InfoJG);
 });
 //验证手机品牌与型号
-function ValidateSJPPYXH() {
-    if (!ValidateSelect("SJPPYXH", "SJPP", "请选择手机品牌")) return false;
-    if (!ValidateSelect("SJPPYXH", "SJXH", "请选择手机型号")) return false;
+function ValidatePPYXH() {
+    if (!ValidateSelect("PPYXH", "PP", "请选择手机品牌")) return false;
+    if (!ValidateSelect("PPYXH", "XH", "请选择手机型号")) return false;
     return true;
 }
 //验证所有
 function ValidateAll() {
     if (ValidateRadio("SF", "忘记选择身份啦")
-        & ValidateRadio("SYQK", "忘记选择使用情况啦")
+        & ValidateSelect("XJCD", "XJ", "忘记选择新旧啦")
+        & ValidateCheck("PSFS", "忘记选择配送方式啦")
         & ValidateBCMS("BCMS", "忘记填写详情描述啦")
-        & ValidateSJPPYXH()
+        & ValidatePPYXH()
         & ValidateSZQY()
         & ValidateJG()
         & ValidateCommon())

@@ -1,8 +1,8 @@
 ﻿$(document).ready(function () {
-    BindClick("SJPP");
-    BindClick("SJXH");
+    BindClick("PP");
+    BindClick("XH");
     BindClick("XJ");
-    LoadDuoX("特色标签", "TSBQ");
+    LoadDuoX("配送方式", "PSFS");
 });
 //加载多选
 function LoadDuoX(type, id) {
@@ -25,12 +25,13 @@ function LoadDuoX(type, id) {
                     }
                 }
                 if (parseInt(xml.list.length % 5) === 0)
-                    $("#div" + id).css("height", parseInt(xml.list.length / 5) * 45 + "px");
+                    $("#div" + id).css("height", parseInt(xml.list.length / 5) * 60 + "px");
                 else
-                    $("#div" + id).css("height", (parseInt(xml.list.length / 5) + 1) * 45 + "px");
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 5) + 1) * 60 + "px");
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".li" + id).bind("click", function () { ValidateCheck(id, "忘记选择配送方式啦"); });
                 LoadJBXX();
             }
         },
@@ -42,11 +43,11 @@ function LoadDuoX(type, id) {
 //绑定下拉框
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
-        if (type === "SJPP") {
-            LoadCODESByTYPENAME("手机品牌", "SJPP", "CODES_ES_SJSM");
+        if (type === "PP") {
+            LoadCODESByTYPENAME("手机品牌", "PP", "CODES_ES_SJSM", Bind, "PPYXH", "PP", "");
         }
-        if (type === "SJXH") {
-            LoadSJXH();
+        if (type === "XH") {
+            LoadXH();
         }
         if (type === "XJ") {
             LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM", Bind, "XJCD", "XJ", "");
@@ -54,7 +55,7 @@ function BindClick(type) {
     });
 }
 //加载手机型号
-function LoadSJXH() {
+function LoadXH() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/Common/LoadByParentID",
@@ -68,12 +69,12 @@ function LoadSJXH() {
             if (xml.Result === 1) {
                 var html = "<ul class='ul_select' style='overflow-y: scroll;height:340px;'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='li_select' onclick='SelectDropdown(this,\"SJXH\")'>" + xml.list[i].CODENAME + "</li>";
+                    html += "<li class='li_select' onclick='SelectDropdown(this,\"XH\")'>" + xml.list[i].CODENAME + "</li>";
                 }
                 html += "</ul>";
-                $("#divSJXH").html(html);
-                $("#divSJXH").css("display", "block");
-                ActiveStyle("SJXH");
+                $("#divXH").html(html);
+                $("#divXH").css("display", "block");
+                ActiveStyle("XH");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -107,14 +108,13 @@ function LoadJBXX() {
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
                 if (xml.Value.ES_SJSM_ESSJJBXX.SF !== null)
                     SetDX("SF", xml.Value.ES_SJSM_ESSJJBXX.SF);
-                if (xml.Value.ES_SJSM_ESSJJBXX.SYQK !== null)
-                    SetDX("SYQK", xml.Value.ES_SJSM_ESSJJBXX.SYQK);
-                if (xml.Value.ES_SJSM_ESSJJBXX.TSBQ !== null)
-                    SetDuoX("TSBQ", xml.Value.ES_SJSM_ESSJJBXX.TSBQ);
+                if (xml.Value.ES_SJSM_ESSJJBXX.PSFS !== null)
+                    SetDuoX("PSFS", xml.Value.ES_SJSM_ESSJJBXX.PSFS);
                 $("#spanQY").html(xml.Value.ES_SJSM_ESSJJBXX.QY);
                 $("#spanDD").html(xml.Value.ES_SJSM_ESSJJBXX.DD);
-                $("#spanSJPP").html(xml.Value.ES_SJSM_ESSJJBXX.SJPP);
-                $("#spanSJXH").html(xml.Value.ES_SJSM_ESSJJBXX.SJXH);
+                $("#spanPP").html(xml.Value.ES_SJSM_ESSJJBXX.PP);
+                $("#spanXH").html(xml.Value.ES_SJSM_ESSJJBXX.XH);
+                $("#spanXJ").html(xml.Value.ES_SJSM_ESSJJBXX.XJ);
                 LoadPhotos(xml.Value.Photos);
                 return;
             }
@@ -130,14 +130,14 @@ function FB() {
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
-    obj = jsonObj.AddJson(obj, "SJPP", "'" + $("#spanSJPP").html() + "'");
-    obj = jsonObj.AddJson(obj, "SJXH", "'" + $("#spanSJXH").html() + "'");
+    obj = jsonObj.AddJson(obj, "PP", "'" + $("#spanPP").html() + "'");
+    obj = jsonObj.AddJson(obj, "XH", "'" + $("#spanXH").html() + "'");
+    obj = jsonObj.AddJson(obj, "XJ", "'" + $("#spanXJ").html() + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "SF", "'" + GetDX("SF") + "'");
-    obj = jsonObj.AddJson(obj, "SYQK", "'" + GetDX("SYQK") + "'");
-    obj = jsonObj.AddJson(obj, "TSBQ", "'" + GetDuoX("TSBQ") + "'");
+    obj = jsonObj.AddJson(obj, "PSFS", "'" + GetDuoX("PSFS") + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");
