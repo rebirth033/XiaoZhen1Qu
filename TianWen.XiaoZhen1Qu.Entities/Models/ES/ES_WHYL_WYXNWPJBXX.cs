@@ -63,5 +63,17 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// </summary>
         [Property]
         public virtual string DD { get; set; }
+
+        /// <summary>
+        /// 具体地址
+        /// </summary>
+        [Property]
+        public virtual string JTDZ { get; set; }
+
+        /// <summary>
+        /// 配送方式
+        /// </summary>
+        [Property]
+        public virtual string PSFS { get; set; }
     }
 }
