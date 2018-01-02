@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadESCondition() {
-    LoadConditionByTypeNames("'笔记本类别','手机价格'", "CODES_ES_SJSM", "类别,价格", "LB,JG", "15,15");
+    LoadConditionByTypeNames("'笔记本类别','手机价格'", "CODES_ES_SJSM", "类别,价格", "LB,JG", "100,100");
     LoadBody("ESXX_SJSM_BJBDN", currentIndex);
 }
 //选择条件

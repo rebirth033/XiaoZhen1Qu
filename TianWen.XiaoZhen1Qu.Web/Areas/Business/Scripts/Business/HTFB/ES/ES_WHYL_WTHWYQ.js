@@ -102,7 +102,6 @@ function LoadJBXX() {
                 $("#spanBGPP").html(xml.Value.ES_WHYL_WTHWYQJBXX.BGPP);
 
                 LoadPhotos(xml.Value.Photos);
-                PDLB(xml.Value.ES_WHYL_WTHWYQJBXX.LB);
                 $("#spanXL").html(xml.Value.ES_WHYL_WTHWYQJBXX.XL);
                 return;
             }

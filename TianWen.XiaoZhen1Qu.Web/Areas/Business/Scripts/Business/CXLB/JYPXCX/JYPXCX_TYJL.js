@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadJYPXCondition() {
-    LoadConditionByTypeNames("'体育教练教学科目','体育教练身份'", "CODES_JYPX", "教学科目,教练身份", "JXKM,SF", "15,15");
+    LoadConditionByTypeNames("'体育教练教学科目','体育教练身份'", "CODES_JYPX", "教学科目,教练身份", "JXKM,SF", "100,100");
     LoadBody("JYPXXX_TYJL", currentIndex);
 }
 //选择条件

@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadXXYLCondition() {
-    LoadConditionByTypeNames("'室内设备','可容纳人数'", "CODES_XXYL", "室内设备,容纳人数", "SNSB,KRNRS", "15,15");
+    LoadConditionByTypeNames("'室内设备','可容纳人数'", "CODES_XXYL", "室内设备,容纳人数", "SNSB,KRNRS", "100,100");
     LoadBody("XXYLXX_HPG", currentIndex);
 }
 //选择条件

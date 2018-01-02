@@ -8,14 +8,14 @@ $(document).ready(function () {
 //加载出租查询条件
 function LoadCZCondition(type) {
     RemoveCondition("QY,ZJ,SJ,MJ");
-    LoadConditionByTypeNames("'车位租金','车位面积'", "CODES_FC", "租金,面积", "ZJ,MJ", "15,15");
+    LoadConditionByTypeNames("'车位租金','车位面积'", "CODES_FC", "租金,面积", "ZJ,MJ", "100,100");
     LoadBody(type, currentIndex);
     LoadHot(type);
 }
 //加载出售查询条件
 function LoadCSCondition(type) {
     RemoveCondition("QY,ZJ,SJ,MJ");
-    LoadConditionByTypeNames("'车位售价','车位面积'", "CODES_FC", "售价,面积", "SJ,MJ", "15,15");
+    LoadConditionByTypeNames("'车位售价','车位面积'", "CODES_FC", "售价,面积", "SJ,MJ", "100,100");
     LoadBody(type, currentIndex);
     LoadHot(type);
 }

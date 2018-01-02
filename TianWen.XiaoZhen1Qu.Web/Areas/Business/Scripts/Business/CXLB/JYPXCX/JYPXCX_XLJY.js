@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadJYPXCondition() {
-    LoadConditionByTypeNames("'学历教育','学历教育形式'", "CODES_JYPX", "类别,形式", "LB,XS", "15,15");
+    LoadConditionByTypeNames("'学历教育','学历教育形式'", "CODES_JYPX", "类别,形式", "LB,XS", "100,100");
     LoadBody("JYPXXX_XLJY", currentIndex);
 }
 //选择条件

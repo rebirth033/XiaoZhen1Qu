@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadESCondition() {
-    LoadConditionByTypeNames("'网游/虚拟物品类别','游戏','图书价格'", "CODES_ES_WHYL", "类别,游戏,价格", "LB,XL,JG", "15,13,15");
+    LoadConditionByTypeNames("'网游/虚拟物品类别','游戏','图书价格'", "CODES_ES_WHYL", "类别,游戏,价格", "LB,XL,JG", "100,100,100");
     LoadBody("ESXX_WHYL_WYXNWP", currentIndex);
 }
 //选择条件
@@ -21,7 +21,7 @@ function SelectCondition(obj, name) {
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("LB,XL,JG,QY");
+    var condition = GetAllCondition("LB,XL,JG,QY,SF");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/ESCX/LoadESXX",
@@ -98,8 +98,18 @@ function LoadHotInfo(obj) {
     html += ('<li onclick="OpenXXXX(\'ESXX_WHYL_WYXNWP\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_right_xq">' + "服务项目:" + obj.LB + '</p>');
-    html += ('<p class="p_li_body_right_cs">' + obj.QY + '-' + obj.DD + '</p>');
     html += ('<p class="p_li_body_right_jg">' + GetJG(obj.JG,'元')+'</p>');
     html += ('</li>');
     $("#ul_body_right").append(html);
+}
+//根据条件查询
+function SearchByCondition(type) {
+    $("#ul_condition_body_SF").find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    if (type === "GR")
+        $("#ul_condition_body_SF").find(".li_condition_body:eq(1)").addClass("li_condition_body_active");
+    if (type === "SJ")
+        $("#ul_condition_body_SF").find(".li_condition_body:eq(2)").addClass("li_condition_body_active");
+    LoadBody("ESXX_WHYL_WYXNWP", 1);
 }

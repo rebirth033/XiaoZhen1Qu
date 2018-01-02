@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadZSJMCondition() {
-    LoadConditionByTypeNames("'教育培训类别','投资金额'", "CODES_ZSJM", "类别,投资金额", "LB,TZJE", "15,15");
+    LoadConditionByTypeNames("'教育培训类别','投资金额'", "CODES_ZSJM", "类别,投资金额", "LB,TZJE", "100,100");
     LoadBody("ZSJMXX_JYPX", currentIndex);
 }
 //选择条件

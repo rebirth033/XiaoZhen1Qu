@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadJYPXCondition() {
-    LoadConditionByTypeNames("'中小学辅导班类别','授课形式'", "CODES_JYPX", "类别,授课形式", "LB,SKXS", "15,15");
+    LoadConditionByTypeNames("'中小学辅导班类别','授课形式'", "CODES_JYPX", "类别,授课形式", "LB,SKXS", "100,100");
     LoadBody("JYPXXX_ZXXFDB", currentIndex);
 }
 //选择条件

@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadESCondition() {
-    LoadConditionByTypeNames("'服装/鞋帽/箱包类别','母婴价格'", "CODES_ES_MYFZMR", "类别,价格", "LB,JG", "15,15");
+    LoadConditionByTypeNames("'服装/鞋帽/箱包类别','母婴价格'", "CODES_ES_MYFZMR", "类别,价格", "LB,JG", "100,100");
     LoadBody("ESXX_MYFZMR_FZXMXB", currentIndex);
 }
 //选择条件

@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadCWCondition() {
-    LoadConditionByTypeNames("'宠物用品/食品类别','宠物用品价格'", "CODES_CW", "类别,价格", "LB,JG", "15,15");
+    LoadConditionByTypeNames("'宠物用品/食品类别','宠物用品价格'", "CODES_CW", "类别,价格", "LB,JG", "100,100");
 }
 //选择条件
 function SelectCondition(obj, name) {

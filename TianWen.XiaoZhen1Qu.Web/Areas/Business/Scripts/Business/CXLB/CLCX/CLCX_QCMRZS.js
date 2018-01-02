@@ -12,13 +12,13 @@ function LoadCLCondition() {
 //选择条件
 function SelectCondition(obj, name) {
     //if (name === "类别" && obj.innerHTML === "洗车") {
-    //    LoadConditionByTypeNames("'洗车方式','洗车地点'", "CODES_CL", "方式,地点", "XCFS,XCDD", "15,15");
+    //    LoadConditionByTypeNames("'洗车方式','洗车地点'", "CODES_CL", "方式,地点", "XCFS,XCDD", "100,100");
     //    $("#ul_condition_body_PP").remove();
     //    $("#ul_condition_body_PZ").remove();
     //    $("#ul_condition_body_TMFW").remove();
     //}
     //if (name === "类别" && obj.innerHTML === "打蜡") {
-    //    LoadConditionByTypeNames("'打蜡品种','打蜡品牌'", "CODES_CL", "品种,品牌", "PZ,PP", "15,15");
+    //    LoadConditionByTypeNames("'打蜡品种','打蜡品牌'", "CODES_CL", "品种,品牌", "PZ,PP", "100,100");
     //    $("#ul_condition_body_XCFS").remove();
     //    $("#ul_condition_body_XCDD").remove();
     //    $("#ul_condition_body_TMFW").remove();
@@ -38,7 +38,7 @@ function SelectCondition(obj, name) {
     //    $("#ul_condition_body_TMFW").remove();
     //}
     //if (name === "类别" && obj.innerHTML === "玻璃贴膜") {
-    //    LoadConditionByTypeNames("'玻璃贴膜品牌','贴膜范围'", "CODES_CL", "品牌,贴膜范围", "PP,TMFW", "15,15");
+    //    LoadConditionByTypeNames("'玻璃贴膜品牌','贴膜范围'", "CODES_CL", "品牌,贴膜范围", "PP,TMFW", "100,100");
     //    $("#ul_condition_body_XCFS").remove();
     //    $("#ul_condition_body_XCDD").remove();
     //    $("#ul_condition_body_PZ").remove();

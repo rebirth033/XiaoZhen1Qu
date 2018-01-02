@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadSWFWCondition() {
-    LoadConditionByTypeNames("'运送范围','货运通道'", "CODES_SWFW", "运送范围,货运通道", "YSFW,HYTD", "15,15");
+    LoadConditionByTypeNames("'运送范围','货运通道'", "CODES_SWFW", "运送范围,货运通道", "YSFW,HYTD", "100,100");
     LoadBody("SWFWXX_HYZX", currentIndex);
 }
 //选择条件

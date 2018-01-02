@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadSHFWCondition() {
-    LoadConditionByTypeNames("'电脑维修','是否上门'", "CODES_SHFW", "类别,是否上门", "LB,SFSM", "15,15");
+    LoadConditionByTypeNames("'电脑维修','是否上门'", "CODES_SHFW", "类别,是否上门", "LB,SFSM", "100,100");
     LoadBody("SHFWXX_DNWX", currentIndex);
 }
 //选择条件

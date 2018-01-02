@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadHQSYCondition() {
-    LoadConditionByTypeNames("'婚庆用品类型','婚庆用品价格'", "CODES_HQSY", "类型,价格范围", "LX,JG", "15,15");
+    LoadConditionByTypeNames("'婚庆用品类型','婚庆用品价格'", "CODES_HQSY", "类型,价格范围", "LX,JG", "100,100");
     LoadBody("HQSYXX_HQYP", currentIndex);
 }
 //选择条件

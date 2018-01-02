@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadESCondition() {
-    LoadConditionByTypeNames("'手机品牌','手机价格'", "CODES_ES_SJSM", "品牌,价格", "PP,JG", "15,15");
+    LoadConditionByTypeNames("'手机品牌','手机价格'", "CODES_ES_SJSM", "品牌,价格", "PP,JG", "100,100");
     LoadBody("ESXX_SJSM_ESSJ", currentIndex);
 }
 //选择条件

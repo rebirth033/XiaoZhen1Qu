@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadHQSYCondition() {
-    LoadConditionByTypeNames("'婚庆公司服务提供','婚庆公司价格'", "CODES_HQSY", "服务提供,价格", "TGFW,JGFW", "15,15");
+    LoadConditionByTypeNames("'婚庆公司服务提供','婚庆公司价格'", "CODES_HQSY", "服务提供,价格", "TGFW,JGFW", "100,100");
     LoadBody("HQSYXX_HQGS", currentIndex);
 }
 //选择条件

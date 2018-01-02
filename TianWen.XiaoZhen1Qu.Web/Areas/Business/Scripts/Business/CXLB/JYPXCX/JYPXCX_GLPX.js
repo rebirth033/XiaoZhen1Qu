@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadJYPXCondition() {
-    LoadConditionByTypeNames("'管理培训类别','管理培训场地'", "CODES_JYPX", "类别,场地", "LB,CD", "15,15");
+    LoadConditionByTypeNames("'管理培训类别','管理培训场地'", "CODES_JYPX", "类别,场地", "LB,CD", "100,100");
     LoadBody("JYPXXX_GLPX", currentIndex);
 }
 //选择条件

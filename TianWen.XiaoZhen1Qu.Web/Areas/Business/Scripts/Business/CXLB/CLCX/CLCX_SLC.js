@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadCLCondition() {
-    LoadConditionByTypeNames("'三轮车车型','电动车价格'", "CODES_CL", "车型,价格", "CX,JG", "15,15");
+    LoadConditionByTypeNames("'三轮车车型','电动车价格'", "CODES_CL", "车型,价格", "CX,JG", "100,100");
     LoadBody("CLXX_SLC", currentIndex);
 }
 //选择条件

@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadSHFWCondition() {
-    LoadConditionByTypeNames("'房屋维修类别','是否上门'", "CODES_SHFW", "类别,是否上门", "LB,SFSM", "15,15");
+    LoadConditionByTypeNames("'房屋维修类别','是否上门'", "CODES_SHFW", "类别,是否上门", "LB,SFSM", "100,100");
     LoadBody("SHFWXX_FWWX", currentIndex);
 }
 //选择条件

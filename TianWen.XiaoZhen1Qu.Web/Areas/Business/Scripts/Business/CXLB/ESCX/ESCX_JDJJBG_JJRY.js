@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadESCondition() {
-    LoadConditionByTypeNames("'家居/日用品类别','电视价格'", "CODES_ES_JDJJBG", "类别,价格", "LB,JG", "15,15");
+    LoadConditionByTypeNames("'家居/日用品类别','电视价格'", "CODES_ES_JDJJBG", "类别,价格", "LB,JG", "100,100");
     LoadBody("ESXX_JDJJBG_JJRY", currentIndex);
 }
 //选择条件

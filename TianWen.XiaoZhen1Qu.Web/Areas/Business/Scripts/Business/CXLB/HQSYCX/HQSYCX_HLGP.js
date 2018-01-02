@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadHQSYCondition() {
-    LoadConditionByTypeNames("'婚宴酒店价格范围','婚礼跟拍类型'", "CODES_HQSY", "价格范围,跟拍类型", "JG,GPLX", "15,15");
+    LoadConditionByTypeNames("'婚宴酒店价格范围','婚礼跟拍类型'", "CODES_HQSY", "价格范围,跟拍类型", "JG,GPLX", "100,100");
     LoadBody("HQSYXX_HLGP", currentIndex);
 }
 //选择条件
