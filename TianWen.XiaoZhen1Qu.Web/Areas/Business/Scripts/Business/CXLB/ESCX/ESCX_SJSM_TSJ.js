@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadESCondition() {
-    LoadConditionByTypeNames("'台式机/配件类别','CPU品牌','手机价格'", "CODES_ES_SJSM", "类别,品牌,价格", "LB,PP,JG", "15,15,15");
+    LoadConditionByTypeNames("'台式机/配件类别','CPU品牌','手机价格'", "CODES_ES_SJSM", "类别,品牌,价格", "LB,PP,JG", "100,100,100");
     LoadBody("ESXX_SJSM_TSJ", currentIndex);
 }
 //选择条件
@@ -21,7 +21,7 @@ function SelectCondition(obj, name) {
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("LB,XL,CPUPP,JG,QY");
+    var condition = GetAllCondition("LB,XL,CPUPP,JG,QY,SF");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/ESCX/LoadESXX",
@@ -98,8 +98,18 @@ function LoadHotInfo(obj) {
     html += ('<li onclick="OpenXXXX(\'ESXX_SJSM_TSJ\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_right_xq">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_right_cs">' + obj.QY + '-' + obj.DD + '</p>');
     html += ('<p class="p_li_body_right_jg">' + GetJG(obj.JG,'元')+'</p>');
     html += ('</li>');
     $("#ul_body_right").append(html);
+}
+//根据条件查询
+function SearchByCondition(type) {
+    $("#ul_condition_body_SF").find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    if (type === "GR")
+        $("#ul_condition_body_SF").find(".li_condition_body:eq(1)").addClass("li_condition_body_active");
+    if (type === "SJ")
+        $("#ul_condition_body_SF").find(".li_condition_body:eq(2)").addClass("li_condition_body_active");
+    LoadBody("ESXX_SJSM_TSJ", 1);
 }
