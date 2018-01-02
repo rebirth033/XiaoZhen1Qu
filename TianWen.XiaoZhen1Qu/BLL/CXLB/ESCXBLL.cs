@@ -272,58 +272,10 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     }
                     return new { Result = EnResultType.Success, list = listnew, PageCount = PageCount, TotalCount = TotalCount };
                 }
-                if (TYPE == "ESXX_PWKQ_YCMP")//二手_票务卡券_演出门票
+                if (TYPE == "ESXX_PWKQ_MPKQ")//二手_票务卡券_门票卡券
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,es_pwkq_ycmpjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
-                    var list = ConvertHelper.DataTableToList<ES_JDJJBG_BGSBView>(dt);
-                    int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
-                    int TotalCount = list.Count;
-
-                    var listnew = from p in list.Skip((int.Parse(PageIndex) - 1) * int.Parse(PageSize)).Take(int.Parse(PageSize)) select p;
-
-                    foreach (var obj in listnew)
-                    {
-                        obj.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", obj.JCXXID));
-                        obj.BCMSString = BinaryHelper.BinaryToString(obj.BCMS);
-                    }
-                    return new { Result = EnResultType.Success, list = listnew, PageCount = PageCount, TotalCount = TotalCount };
-                }
-                if (TYPE == "ESXX_PWKQ_YLYJDP")//二手_票务卡券_游乐园景点票
-                {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,es_pwkq_ylyjdpjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
-                    var list = ConvertHelper.DataTableToList<ES_JDJJBG_BGSBView>(dt);
-                    int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
-                    int TotalCount = list.Count;
-
-                    var listnew = from p in list.Skip((int.Parse(PageIndex) - 1) * int.Parse(PageSize)).Take(int.Parse(PageSize)) select p;
-
-                    foreach (var obj in listnew)
-                    {
-                        obj.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", obj.JCXXID));
-                        obj.BCMSString = BinaryHelper.BinaryToString(obj.BCMS);
-                    }
-                    return new { Result = EnResultType.Success, list = listnew, PageCount = PageCount, TotalCount = TotalCount };
-                }
-                if (TYPE == "ESXX_PWKQ_XFKGWQ")//二手_票务卡券_消费卡购物券
-                {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,es_pwkq_xfkgwqjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
-                    var list = ConvertHelper.DataTableToList<ES_JDJJBG_BGSBView>(dt);
-                    int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
-                    int TotalCount = list.Count;
-
-                    var listnew = from p in list.Skip((int.Parse(PageIndex) - 1) * int.Parse(PageSize)).Take(int.Parse(PageSize)) select p;
-
-                    foreach (var obj in listnew)
-                    {
-                        obj.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", obj.JCXXID));
-                        obj.BCMSString = BinaryHelper.BinaryToString(obj.BCMS);
-                    }
-                    return new { Result = EnResultType.Success, list = listnew, PageCount = PageCount, TotalCount = TotalCount };
-                }
-                if (TYPE == "ESXX_PWKQ_QTKQ")//二手_票务卡券_其他卡券
-                {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,es_pwkq_qtkqjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
-                    var list = ConvertHelper.DataTableToList<ES_JDJJBG_BGSBView>(dt);
+                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,es_pwkq_MPKQjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
+                    var list = ConvertHelper.DataTableToList<ES_PWKQ_MPKQView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
 
@@ -560,43 +512,10 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     UpdateLLCS(list[0].JCXXID);
                     return new { Result = EnResultType.Success, list = list, BCMSString = BinaryHelper.BinaryToString(list[0].BCMS), grxxlist = GetGRXX(list[0].YHID) };
                 }
-                if (TYPE == "ESXX_PWKQ_YCMP") //二手_票务卡券_演出门票
+                if (TYPE == "ESXX_PWKQ_MPKQ") //二手_票务卡券_门票卡券
                 {
-                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,es_pwkq_ycmpjbxx b where a.jcxxid = b.jcxxid and id = '{0}'  order by zxgxsj desc", ID));
-                    List<ES_JDJJBG_BGSBView> list = ConvertHelper.DataTableToList<ES_JDJJBG_BGSBView>(dt);
-                    foreach (var jcxx in list)
-                    {
-                        jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
-                    }
-                    UpdateLLCS(list[0].JCXXID);
-                    return new { Result = EnResultType.Success, list = list, BCMSString = BinaryHelper.BinaryToString(list[0].BCMS), grxxlist = GetGRXX(list[0].YHID) };
-                }
-                if (TYPE == "ESXX_PWKQ_YLYJDP") //二手_票务卡券_游乐园景点票
-                {
-                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,es_pwkq_ylyjdpjbxx b where a.jcxxid = b.jcxxid and id = '{0}'  order by zxgxsj desc", ID));
-                    List<ES_JDJJBG_BGSBView> list = ConvertHelper.DataTableToList<ES_JDJJBG_BGSBView>(dt);
-                    foreach (var jcxx in list)
-                    {
-                        jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
-                    }
-                    UpdateLLCS(list[0].JCXXID);
-                    return new { Result = EnResultType.Success, list = list, BCMSString = BinaryHelper.BinaryToString(list[0].BCMS), grxxlist = GetGRXX(list[0].YHID) };
-                }
-                if (TYPE == "ESXX_PWKQ_XFKGWQ") //二手_票务卡券_消费卡购物券
-                {
-                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,es_pwkq_xfkgwqjbxx b where a.jcxxid = b.jcxxid and id = '{0}'  order by zxgxsj desc", ID));
-                    List<ES_JDJJBG_BGSBView> list = ConvertHelper.DataTableToList<ES_JDJJBG_BGSBView>(dt);
-                    foreach (var jcxx in list)
-                    {
-                        jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
-                    }
-                    UpdateLLCS(list[0].JCXXID);
-                    return new { Result = EnResultType.Success, list = list, BCMSString = BinaryHelper.BinaryToString(list[0].BCMS), grxxlist = GetGRXX(list[0].YHID) };
-                }
-                if (TYPE == "ESXX_PWKQ_QTKQ") //二手_票务卡券_其他卡券
-                {
-                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,es_pwkq_qtkqjbxx b where a.jcxxid = b.jcxxid and id = '{0}'  order by zxgxsj desc", ID));
-                    List<ES_JDJJBG_BGSBView> list = ConvertHelper.DataTableToList<ES_JDJJBG_BGSBView>(dt);
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,es_pwkq_MPKQjbxx b where a.jcxxid = b.jcxxid and id = '{0}'  order by zxgxsj desc", ID));
+                    List<ES_PWKQ_MPKQView> list = ConvertHelper.DataTableToList<ES_PWKQ_MPKQView>(dt);
                     foreach (var jcxx in list)
                     {
                         jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));

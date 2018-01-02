@@ -2,7 +2,7 @@
     LoadDuoX("配送方式", "PSFS");
     BindClick("LB");
     BindClick("XJ");
-    $("#divXLBQ").bind("click", function () { LoadXLBQ("CODES_ES_WHYL", "游戏"); });
+    $("#divYXText").bind("click", function () { LoadYX(); });
 });
 //绑定下拉框
 function BindClick(type) {
@@ -14,6 +14,79 @@ function BindClick(type) {
             LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM", Bind, "XJCD", "XJ", "");
         }
     });
+}
+//加载游戏
+function LoadYX() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
+        dataType: "json",
+        data:
+        {
+            TYPENAME: "游戏",
+            TBName: "CODES_ES_WHYL"
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                $("#div_row_right_jcpp_first").html('');
+                var html = "";
+                html += '<span class="p_row_right_jcpp">请选择品种<span onclick="CloseJCPP(1)" class="span_row_right_jcpp">×</span></span>';
+                html += '<div class="div_row_right_jcpp_first_left">';
+                html += '<ul class="ul_row_right_jcpp_first_left">';
+                for (var i = 0; i < BQArray.length; i++) {
+                    var count = 0;
+                    for (var j = 0; j < xml.list.length; j++) {
+                        if (BQArray[i] === xml.list[j].CODEVALUE)
+                            count++;
+                    }
+                    if (count !== 0)
+                        html += '<li onclick="GoToBQ(\'' + BQArray[i] + '\')" class="li_row_right_jcpp_first_left">' + BQArray[i] + '</li>';
+                }
+                html += '</ul>';
+                html += '</div>';
+
+                html += '<div class="div_row_right_jcpp_first_right">';
+                html += '<ul class="ul_row_right_jcpp_first_right">';
+                for (var i = 0; i < BQArray.length; i++) {
+                    var count = 0;
+                    for (var j = 0; j < xml.list.length; j++) {
+                        if (BQArray[i] === xml.list[j].CODEVALUE)
+                            count++;
+                    }
+                    if (count !== 0)
+                        html += '<li id="li_row_right_jcpp_first_right_tag_' + BQArray[i] + '" class="li_row_right_jcpp_first_right_tag">' + BQArray[i] + '</li>';
+                    for (var j = 0; j < xml.list.length; j++) {
+                        if (BQArray[i] === xml.list[j].CODEVALUE)
+                            html += '<li onclick="SelectFirst(\'' + xml.list[j].CODENAME + '\')" class="li_row_right_jcpp_first_right_value">' + xml.list[j].CODENAME + '</li>';
+                    }
+                }
+                html += '</ul>';
+                html += '</div>';
+
+                $("#div_row_right_jcpp_first").append(html);
+                $("#div_row_right_jcpp_first").css("display", "inline-block");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//跳转到标签位置
+function GoToBQ(tag) {
+    var len = document.getElementById("li_row_right_jcpp_first_right_tag_" + tag).offsetTop - 75;//获取div层到页面顶部的高度 
+    $(".ul_row_right_jcpp_first_right").stop().animate({ scrollTop: len }, 300, "swing", function () { });
+}
+//选择款式
+function SelectFirst(pz) {
+    $("#spanYX").html(pz);
+    ValidateSelect("YX", "YX", "请选择游戏");
+}
+//关闭选择品牌框
+function CloseJCPP(count) {
+    if (count === 1) {
+        $("#div_row_right_jcpp_first").css("display", "none");
+    }
 }
 //加载多选
 function LoadDuoX(type, id) {
@@ -74,10 +147,9 @@ function LoadJBXX() {
                 if (xml.Value.ES_WHYL_WYXNWPJBXX.PSFS !== null)
                     SetDuoX("PSFS", xml.Value.ES_WHYL_WYXNWPJBXX.PSFS);
                 $("#spanLB").html(xml.Value.ES_WHYL_WYXNWPJBXX.LB);
-                SetXLBQ(xml.Value.ES_WHYL_WYXNWPJBXX.XL);
                 $("#spanQY").html(xml.Value.ES_WHYL_WYXNWPJBXX.QY);
                 $("#spanDD").html(xml.Value.ES_WHYL_WYXNWPJBXX.DD);
-                $("#spanXL").html(xml.Value.ES_WHYL_WYXNWPJBXX.XL);
+                $("#spanYX").html(xml.Value.ES_WHYL_WYXNWPJBXX.XL);
                 LoadPhotos(xml.Value.Photos);
                 return;
             }
@@ -94,7 +166,7 @@ function FB() {
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
-    obj = jsonObj.AddJson(obj, "XL", "'" + GetXLBQ() + "'");
+    obj = jsonObj.AddJson(obj, "XL", "'" + $("#spanYX").html() + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");

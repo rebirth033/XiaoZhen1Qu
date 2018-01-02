@@ -6,12 +6,12 @@
 //验证网游/虚拟物品类别
 function ValidateWYXNWPLB() {
     if (!ValidateSelect("WYXNWPLB", "LB", "请选择类别")) return false;
-    //if (!ValidateSelect("WYXNWPLB", "XL", "请选择小类")) return false;
     return true;
 }
 //验证所有
 function ValidateAll() {
     if (ValidateRadio("SF", "忘记选择身份啦")
+        & ValidateSelect("YX", "YX", "请选择游戏")
         & ValidateCheck("PSFS", "忘记选择配送方式啦")
         & ValidateWYXNWPLB()
         & ValidateBCMS("BCMS", "忘记填写详情描述啦")
