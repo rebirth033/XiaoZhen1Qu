@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadESCondition() {
-    LoadConditionByTypeNames("'数码产品类别','手机价格'", "CODES_ES_SJSM", "类别,价格", "LB,JG", "15,15");
+    LoadConditionByTypeNames("'数码产品类别','手机价格'", "CODES_ES_SJSM", "类别,价格", "LB,JG", "100,100");
     LoadBody("ESXX_SJSM_SMCP", currentIndex);
 }
 //选择条件
@@ -27,7 +27,7 @@ function SelectCondition(obj, name) {
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("LB,XL,JG,QY");
+    var condition = GetAllCondition("LB,XL,JG,QY,SF");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/ESCX/LoadESXX",
@@ -108,4 +108,15 @@ function LoadHotInfo(obj) {
     html += ('<p class="p_li_body_right_jg">' + GetJG(obj.JG, '元') + '</p>');
     html += ('</li>');
     $("#ul_body_right").append(html);
+}
+//根据条件查询
+function SearchByCondition(type) {
+    $("#ul_condition_body_SF").find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    if (type === "GR")
+        $("#ul_condition_body_SF").find(".li_condition_body:eq(1)").addClass("li_condition_body_active");
+    if (type === "SJ")
+        $("#ul_condition_body_SF").find(".li_condition_body:eq(2)").addClass("li_condition_body_active");
+    LoadBody("ESXX_SJSM_SMCP", 1);
 }
