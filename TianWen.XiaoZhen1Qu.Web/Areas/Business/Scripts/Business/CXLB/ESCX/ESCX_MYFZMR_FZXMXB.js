@@ -100,7 +100,7 @@ function LoadHotInfo(obj) {
     var html = "";
     html += ('<li onclick="OpenXXXX(\'ESXX_MYFZMR_FZXMXB\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_right_xq">' + "服务项目:" + obj.LB + '</p>');
+    html += ('<p class="p_li_body_right_xq">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_right_jg">' + GetJG(obj.JG,'元')+'</p>');
     html += ('</li>');
     $("#ul_body_right").append(html);
