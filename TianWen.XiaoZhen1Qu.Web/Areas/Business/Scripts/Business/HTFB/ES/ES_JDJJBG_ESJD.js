@@ -160,6 +160,8 @@ function LoadJBXX() {
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
                 if (xml.Value.ES_JDJJBG_ESJDJBXX.SF !== null)
                     SetDX("SF", xml.Value.ES_JDJJBG_ESJDJBXX.SF);
+                if (xml.Value.ES_JDJJBG_ESJDJBXX.PSFS !== null)
+                    SetDuoX("PSFS", xml.Value.ES_JDJJBG_ESJDJBXX.PSFS);
                 $("#spanLB").html(xml.Value.ES_JDJJBG_ESJDJBXX.LB);
                 $("#spanXJ").html(xml.Value.ES_JDJJBG_ESJDJBXX.XJ);
                 $("#spanQY").html(xml.Value.ES_JDJJBG_ESJDJBXX.QY);
@@ -173,7 +175,6 @@ function LoadJBXX() {
                 $("#spanDSPMCC").html(xml.Value.ES_JDJJBG_ESJDJBXX.DSPMCC);
                 $("#spanBPDS").html(xml.Value.ES_JDJJBG_ESJDJBXX.KTBPDS);
                 $("#spanKTGL").html(xml.Value.ES_JDJJBG_ESJDJBXX.KTGL);
-
 
                 LoadPhotos(xml.Value.Photos);
                 PDLB(xml.Value.ES_JDJJBG_ESJDJBXX.LB);
@@ -197,6 +198,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "SF", "'" + GetDX("SF") + "'");
+    obj = jsonObj.AddJson(obj, "PSFS", "'" + GetDuoX("PSFS") + "'");
 
     obj = jsonObj.AddJson(obj, "PP", "'" + $("#spanDSPP").html() + "'");
     obj = jsonObj.AddJson(obj, "PP", "'" + $("#spanXYJPP").html() + "'");

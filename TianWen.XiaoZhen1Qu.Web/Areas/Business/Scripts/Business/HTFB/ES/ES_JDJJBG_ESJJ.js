@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    LoadJBXX();
+    LoadDuoX("配送方式", "PSFS");
     BindClick("LB");
     BindClick("PBPP");
     BindClick("PBXH");
@@ -23,6 +23,42 @@ function BindClick(type) {
         }
         if (type === "CDCC") {
             LoadCODESByTYPENAME("床尺寸", "CDCC", "CODES_ES_JDJJBG");
+        }
+    });
+}
+//加载多选
+function LoadDuoX(type, id) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
+        dataType: "json",
+        data:
+        {
+            TYPENAME: type,
+            TBName: "CODES_ES_SJSM"
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='ulFWPZ'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='li" + id + "' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    if (i % 5 === 4) {
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
+                    }
+                }
+                if (parseInt(xml.list.length % 5) === 0)
+                    $("#div" + id).css("height", parseInt(xml.list.length / 5) * 60 + "px");
+                else
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 5) + 1) * 60 + "px");
+                html += "</ul>";
+                $("#div" + id + "Text").html(html);
+                $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".li" + id).bind("click", function () { ValidateCheck(id, "忘记选择配送方式啦"); });
+                LoadJBXX();
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
         }
     });
 }
@@ -73,6 +109,8 @@ function LoadJBXX() {
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
                 if (xml.Value.ES_JDJJBG_ESJJJBXX.SF !== null)
                     SetDX("SF", xml.Value.ES_JDJJBG_ESJJJBXX.SF);
+                if (xml.Value.ES_JDJJBG_ESJJJBXX.PSFS !== null)
+                    SetDuoX("PSFS", xml.Value.ES_JDJJBG_ESJJJBXX.PSFS);
                 $("#spanLB").html(xml.Value.ES_JDJJBG_ESJJJBXX.LB);
                 $("#spanCCC").html(xml.Value.ES_JDJJBG_ESJJJBXX.CCC);
                 $("#spanCDCC").html(xml.Value.ES_JDJJBG_ESJJJBXX.CDCC);
@@ -104,6 +142,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "SF", "'" + GetDX("SF") + "'");
+    obj = jsonObj.AddJson(obj, "PSFS", "'" + GetDuoX("PSFS") + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");
