@@ -17,5 +17,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.ViewModels.ES
         public string JG { get; set; }
         public string QY { get; set; }
         public string DD { get; set; }
+        public string JTDZ { get; set; }
+        public string PSFS { get; set; }
     }
 }

@@ -6,7 +6,7 @@
 //验证办公用品/设备类别
 function ValidateBGSBLB() {
     if (!ValidateSelect("BGSBLB", "LB", "请选择类别")) return false;
-    if (!ValidateSelect("BGSBLB", "XL", "请选择小类")) return false;
+    //if (!ValidateSelect("BGSBLB", "XL", "请选择小类")) return false;
     return true;
 }
 //验证所有

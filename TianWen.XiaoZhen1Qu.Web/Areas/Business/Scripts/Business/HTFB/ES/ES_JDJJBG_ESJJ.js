@@ -12,8 +12,7 @@ function BindClick(type) {
             LoadCODESByTYPENAME("二手家具类别", "LB", "CODES_ES_JDJJBG", Bind, "ESJJLB", "LB", "");
         }
         if (type === "XL") {
-            $("#divXL").css("display", "block");
-            ActiveStyle("XL");
+            LoadCODESByTYPENAME($("#spanLB").html(), "XL", "CODES_ES_JDJJBG", Bind, "ESJJLB", "XL", "");
         }
         if (type === "XJ") {
             LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM", Bind, "XJCD", "XJ", "");
@@ -86,7 +85,7 @@ function PDLB(LB) {
         $("#divCXXCS").css("display", "none");
         $("#divCDXXCS").css("display", "none");
     }
-    LoadCODESByTYPENAME($("#spanLB").html(), "XL", "CODES_ES_JDJJBG", Bind, "ESJJLB", "XL", "");
+    BindClick("XL");
     $("#spanXL").html("请选择小类");
 }
 //加载二手_手机数码_二手家具基本信息
@@ -117,9 +116,9 @@ function LoadJBXX() {
                 $("#spanXJ").html(xml.Value.ES_JDJJBG_ESJJJBXX.XJ);
                 $("#spanQY").html(xml.Value.ES_JDJJBG_ESJJJBXX.QY);
                 $("#spanDD").html(xml.Value.ES_JDJJBG_ESJJJBXX.DD);
-                $("#spanXL").html(xml.Value.ES_JDJJBG_ESJJJBXX.XL);
                 LoadPhotos(xml.Value.Photos);
                 PDLB(xml.Value.ES_JDJJBG_ESJJJBXX.LB);
+                $("#spanXL").html(xml.Value.ES_JDJJBG_ESJJJBXX.XL);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

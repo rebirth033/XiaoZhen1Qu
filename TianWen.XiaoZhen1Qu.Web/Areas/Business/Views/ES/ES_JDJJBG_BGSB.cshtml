@@ -12,7 +12,7 @@
             <span class="span_split">基本信息</span>
             <em class="em_split"></em>
         </div>
-        <div id="divGQ" class="div_row">
+        <div id="divSF" class="div_row">
             <div class="div_row_left font_two">
                 <span class="span_required">*</span>
                 <span class="spanFWCZ">身份</span>
@@ -25,7 +25,7 @@
                     <img class="img_radio" id="img_sf_sjzr"/><label class="label_radio">商家</label>
                 </div>
             </div>
-            <div id="divGQTip" class="Warn" style="z-index: 996;"></div>
+            <div id="divSFTip" class="Warn" style="z-index: 996;"></div>
         </div>
         <div id="divBGSBLB" class="div_row" style="z-index: 999">
             <div class="div_row_left font_two">
@@ -82,22 +82,31 @@
             </div>
             <div id="divJGTip" class="Warn" style="z-index: 992;"></div>
         </div>
-        <div id="divSZQY" class="div_row" style="z-index: 991;">
+        <div id="divPSFS" class="div_row" style="z-index: 987; height: 280px;">
+            <div class="div_row_left">
+                <span class="span_required">*</span>
+                <span id="spanPSFS">配送方式</span>
+            </div>
+            <div id="divPSFSText" class="div_row_right">
+            </div>
+            <div id="divPSFSTip" class="Warn" style="z-index: 986;"></div>
+        </div>
+        <div id="divSZQY" class="div_row" style="z-index: 985;">
             <div class="div_row_left">
                 <span class="span_required">*</span>
                 <span class="spanFWCZ">交易地址</span>
             </div>
             <div class="div_row_right">
-                <div id="divQYText" class="div_select_out SRK" style="z-index: 990;">
+                <div id="divQYText" class="div_select_out SRK">
                     <div id="divQYSpan" class="div_select_in" style="border: none; margin-top: 6px;">
-                        <input type="hidden" id="QYCode"/>
+                        <input type="hidden" id="QYCode" />
                         <span id="spanQY" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择区域</span>
                         <div class="span_select_arrow"></div>
                     </div>
                     <div id="divQY" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
                     </div>
                 </div>
-                <div id="divDDText" class="div_select_out SRK" style="z-index: 990;">
+                <div id="divDDText" class="div_select_out SRK">
                     <div id="divDDSpan" class="div_select_in" style="border: none; margin-top: 6px;">
                         <span id="spanDD" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择地段</span>
                         <div class="span_select_arrow"></div>
@@ -105,8 +114,9 @@
                     <div id="divDD" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
                     </div>
                 </div>
+                <input id="JTDZ" column="JTDZ" class="span_spaninput input_input SRK" type="text" placeholder="请填写具体地址" style="width: 300px" />
             </div>
-            <div id="divSZQYTip" class="Warn" style="z-index: 989;"></div>
+            <div id="divSZQYTip" class="Warn"></div>
         </div>
         <div id="divXXXX" class="div_split" style="display: block; text-align: left;">
             <span class="span_split">详细信息</span>
@@ -122,7 +132,7 @@
                 <div id="divBTTip"></div>
             </div>
         </div>
-        <div id="divBCMS" class="div_row" style="height: 253px; z-index: 988;">
+        <div id="divBCMS" class="div_row" style="height: 253px; z-index: 984;">
             <div class="div_row_left" style="height: 170px; vertical-align: top;">
                 <span class="span_required" style="vertical-align: top">*</span>
                 <span id="spanBCMS" style="vertical-align: top">详情描述</span>
