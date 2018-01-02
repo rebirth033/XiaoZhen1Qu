@@ -67,12 +67,22 @@ function LoadJBXX(obj) {
     html += ('<span class="span_body_left_body_right_right">' + obj.XJ + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
+    html += ('<span class="span_body_left_body_right_left">配送方式：</span>');
+    html += ('<span class="span_body_left_body_right_right">' + obj.PSFS + '</span>');
+    html += ('</p>');
+    html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">区域：</span>');
     html += ('<span class="span_body_left_body_right_right">' + obj.QY + '-' + obj.DD + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
+    html += ('<span class="span_body_left_body_right_left">具体地址：</span>');
+    html += ('<span class="span_body_left_body_right_right">' + obj.JTDZ + '</span>');
+    html += ('</p>');
+    html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">联系电话：</span>');
-    html += ('<span class="span_body_left_body_right_right span_body_left_body_right_right_lxdh">' + obj.LXDH.substr(0, 7) + '****' + '</span>');
+    html += ('<span class="span_body_left_body_right_right span_body_left_body_right_right_lxdh">' + obj.LXDH.substr(0, 4) + '****' + '</span>');
+    html += ('<span class="span_body_left_body_right_right_ckwzdh" onclick="ShowWZDH()">完整电话</span>');
+    html += ('<span class="span_body_left_body_right_wzdh"><span class="span_body_left_body_right_wzdh_lxdh"><i class="i_body_left_body_right_wzdh_lxdh"></i>' + obj.LXDH + '</span><span class="span_body_left_body_right_wzdh_ts">联系时请一定说明在信息小镇上看到的哈，谢谢^_^</span><i class="i_body_left_body_right_wzdh_close" onclick="HideWZDH()">×</i></span>');
     html += ('</p>');
     html += ('</div>');
     html += ('</div>');
@@ -91,7 +101,9 @@ function LoadXQ(obj, BCMSString) {
     html += (BCMSString);
     html += ('</div>');
     html += ('</div>');
-    html += ('<div id="div_body_left_body_xq_zk_bcms" onclick="ToggleBCMS()" class="div_body_left_body_xq_zk_bcms">展开内容<i id="i_body_left_body_xq_zk_bcms" class="i_body_left_body_xq_zk_bcms"></i></div>');
+
+    html += ('<div id = "zk" class="div_body_left_body_xq_xx"></div>');
+
     html += ('<div id="div_body_left_body_xq_xx" class="div_body_left_body_xq_xx" style="overflow:hidden;">');
     html += ('<ul class="ul_body_left_body_xq_xx">');
     for (var i = 0; i < obj.PHOTOS.length; i++) {
@@ -104,7 +116,14 @@ function LoadXQ(obj, BCMSString) {
 
     html += ('<div id="div_body_left_body_xq_zk" onclick="ToggleImg(' + obj.PHOTOS.length + ')" class="div_body_left_body_xq_zk">展开更多图片 共（' + obj.PHOTOS.length + '）张</div>');
     html += ('</div>');
+
     $("#div_body_left").append(html);
+
+    if (parseInt(RTrimStr($("#div_body_left_body_xq_xx_bcms").css("height"), "px")) > 300) {
+        $("#div_body_left_body_xq_xx_bcms").css("height", "300px").css("overflow", "hidden");
+        $("#zk").append('<div id="div_body_left_body_xq_zk_bcms" onclick="ToggleBCMS()" class="div_body_left_body_xq_zk_bcms">展开内容<i id="i_body_left_body_xq_zk_bcms" class="i_body_left_body_xq_zk_bcms"></i></div>');
+    }
+
     if (obj.PHOTOS.length > 4) {
         $("#div_body_left_body_xq_xx").css("height", "710px");
         $("#div_body_left_body_xq_zk").css("display", "block");
