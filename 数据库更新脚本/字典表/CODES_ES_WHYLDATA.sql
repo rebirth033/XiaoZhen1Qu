@@ -2,6 +2,387 @@ prompt Importing table codes_es_whyl...
 set feedback off
 set define off
 insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (283, '游戏', 'QQ英雄岛', 'Q', 112, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (284, '游戏', 'QQ水浒', 'Q', 113, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (285, '游戏', 'QQ游戏', 'Q', 114, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (286, '游戏', 'QQ炫舞', 'Q', 115, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (287, '游戏', 'QQ音速', 'Q', 116, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (288, '游戏', 'Q币', 'Q', 117, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (289, '游戏', 'QQ华夏', 'Q', 118, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (290, '游戏', '全球使命', 'Q', 119, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (291, '游戏', 'QQ仙境', 'Q', 120, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (292, '游戏', 'QQ三国', 'Q', 121, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (293, '游戏', 'R2', 'R', 122, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (294, '游戏', '热血江湖', 'R', 123, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (295, '游戏', '热血传奇', 'R', 124, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (296, '游戏', '热舞派对II', 'R', 125, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (297, '游戏', '热斗传说', 'R', 126, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (298, '游戏', '人人豆', 'R', 127, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (299, '游戏', '神鬼传奇', 'S', 128, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (300, '游戏', '水浒传', 'S', 129, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (301, '游戏', '神鬼世界', 'S', 130, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (302, '游戏', 'SD敢达ONLINE', 'S', 131, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (303, '游戏', '神泣', 'S', 132, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (304, '游戏', '深红一卡通', 'S', 133, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (305, '游戏', '蜀山剑侠传', 'S', 134, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (306, '游戏', '世纪天成一卡通', 'S', 135, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (307, '游戏', '尚游一卡通', 'S', 136, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (308, '游戏', '蜀门', 'S', 137, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (309, '游戏', '神雕侠侣', 'S', 138, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (310, '游戏', '神兽', 'S', 139, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (311, '游戏', '兽血沸腾', 'S', 140, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (312, '游戏', '丝路英雄', 'S', 141, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (313, '游戏', '圣魔之血', 'S', 142, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (314, '游戏', '上古世纪', 'S', 143, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (315, '游戏', '三国策V', 'S', 144, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (316, '游戏', '圣斗士星矢', 'S', 145, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (317, '游戏', '水浒无双', 'S', 146, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (318, '游戏', '神话', 'S', 147, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (319, '游戏', '世模一卡通', 'S', 148, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (320, '游戏', '生肖传说', 'S', 149, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (321, '游戏', '书剑恩仇录', 'S', 150, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (322, '游戏', '盛世三国OL', 'S', 151, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (323, '游戏', '搜狐一卡通', 'S', 152, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (324, '游戏', '神兵传奇', 'S', 153, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (325, '游戏', '神魔大陆', 'S', 154, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (326, '游戏', '三国演义', 'S', 155, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (327, '游戏', '盛大点券', 'S', 156, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (328, '游戏', '天骄3', 'T', 157, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (329, '游戏', '天下3', 'T', 158, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (330, '游戏', '天龙八部3', 'T', 159, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (331, '游戏', '特战先锋', 'T', 160, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (332, '游戏', '桃园', 'T', 161, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (333, '游戏', '坦克世界', 'T', 162, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (334, '游戏', 'TERA', 'T', 163, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (335, '游戏', '桃花源记', 'T', 164, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (336, '游戏', '腾讯CF', 'T', 165, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (337, '游戏', '突击风暴', 'T', 166, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (338, '游戏', '王者荣耀', 'W', 167, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (339, '游戏', '武魂', 'W', 168, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (340, '游戏', '完美世界', 'W', 169, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (341, '游戏', '武林外传', 'W', 170, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (342, '游戏', '完美国际', 'W', 171, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (343, '游戏', '问道外传', 'W', 172, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (344, '游戏', '武神', 'W', 173, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (345, '游戏', '网易一卡通', 'W', 174, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (346, '游戏', '问道', 'W', 175, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (347, '游戏', '新英雄年代', 'X', 176, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (348, '游戏', '笑傲江湖', 'X', 177, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (349, '游戏', '新梦幻诛仙', 'X', 178, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (350, '游戏', '新魔界', 'X', 179, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (351, '游戏', '新热血英豪', 'X', 180, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (352, '游戏', '轩辕传奇', 'X', 181, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (353, '游戏', '新倚天剑与屠龙刀', 'X', 182, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (354, '游戏', '仙途', 'X', 183, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (355, '游戏', '星战前夜EVE', 'X', 184, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (356, '游戏', '新飞飞', 'X', 185, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (357, '游戏', '寻仙', 'X', 186, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (358, '游戏', '星辰变', 'X', 187, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (359, '游戏', '玄天之剑', 'X', 188, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (360, '游戏', '星尘传说', 'X', 189, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (361, '游戏', '新水浒Q传', 'X', 190, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (362, '游戏', '侠客列传', 'X', 191, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (363, '游戏', '修罗刹', 'X', 192, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (364, '游戏', '西游记', 'X', 193, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (365, '游戏', '玄幻之剑', 'X', 194, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (366, '游戏', '佣兵天下', 'Y', 195, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (367, '游戏', '月影传说', 'Y', 196, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (368, '游戏', '游戏星城', 'Y', 197, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (369, '游戏', '一级戒备', 'Y', 198, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (370, '游戏', '英雄联盟', 'Y', 199, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (371, '游戏', '倚天剑与屠龙刀2', 'Y', 200, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (372, '游戏', '英雄三国', 'Y', 201, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (373, '游戏', '永恒之塔', 'Y', 202, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (374, '游戏', '御龙在天', 'Y', 203, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (375, '游戏', '征途', 'Z', 204, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (376, '游戏', '自由篮球', 'Z', 205, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (377, '游戏', '臻游一卡通', 'Z', 206, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (378, '游戏', '战地之王AVA', 'Z', 207, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (379, '游戏', '斩魂', 'Z', 208, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (380, '游戏', '征途2S', 'Z', 209, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (381, '游戏', '诸侯', 'Z', 210, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (382, '游戏', '诛仙3', 'Z', 211, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (383, '游戏', '征途2', 'Z', 212, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (384, '游戏', '中华英雄', 'Z', 213, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (385, '游戏', '征途怀旧版', 'Z', 214, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (386, '游戏', '战网一卡通', 'Z', 215, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (387, '艺术品价格', '1000元以下', '1', 1, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (388, '艺术品价格', '1000-5000元', '2', 2, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (389, '艺术品价格', '5000-10000元', '3', 3, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (390, '艺术品价格', '10000-20000元', '4', 4, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (391, '艺术品价格', '20000-40000元', '5', 5, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (392, '艺术品价格', '40000-60000元', '6', 6, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (393, '艺术品价格', '60000元以上', '7', 7, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (394, '户外用品价格', '100元以下', '1', 1, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (395, '户外用品价格', '100-500元', '2', 2, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (396, '户外用品价格', '500-1000元', '3', 3, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (397, '户外用品价格', '1000-2000元', '4', 4, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (398, '户外用品价格', '2000-3000元', '5', 5, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (399, '户外用品价格', '3000-5000元', '6', 6, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (400, '户外用品价格', '5000元以上', '7', 7, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (401, '图书价格', '20元以下', '1', 1, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (402, '图书价格', '20-50元', '2', 2, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (403, '图书价格', '50-100元', '3', 3, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (404, '图书价格', '100-150元', '4', 4, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (405, '图书价格', '150-200元', '5', 5, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (406, '图书价格', '200-300元', '6', 6, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (407, '图书价格', '300-500元', '7', 7, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (408, '图书价格', '500-1000元', '8', 8, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (409, '图书价格', '1000元以上', '9', 9, null);
+
+insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (1, '艺术品/收藏品类别', '古董古玩', '1', 1, null);
 
 insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
@@ -846,386 +1227,5 @@ values (281, '游戏', 'Q钻,QQ服务', 'Q', 110, null);
 
 insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (282, '游戏', '枪神纪', 'Q', 111, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (283, '游戏', 'QQ英雄岛', 'Q', 112, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (284, '游戏', 'QQ水浒', 'Q', 113, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (285, '游戏', 'QQ游戏', 'Q', 114, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (286, '游戏', 'QQ炫舞', 'Q', 115, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (287, '游戏', 'QQ音速', 'Q', 116, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (288, '游戏', 'Q币', 'Q', 117, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (289, '游戏', 'QQ华夏', 'Q', 118, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (290, '游戏', '全球使命', 'Q', 119, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (291, '游戏', 'QQ仙境', 'Q', 120, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (292, '游戏', 'QQ三国', 'Q', 121, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (293, '游戏', 'R2', 'R', 122, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (294, '游戏', '热血江湖', 'R', 123, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (295, '游戏', '热血传奇', 'R', 124, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (296, '游戏', '热舞派对II', 'R', 125, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (297, '游戏', '热斗传说', 'R', 126, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (298, '游戏', '人人豆', 'R', 127, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (299, '游戏', '神鬼传奇', 'S', 128, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (300, '游戏', '水浒传', 'S', 129, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (301, '游戏', '神鬼世界', 'S', 130, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (302, '游戏', 'SD敢达ONLINE', 'S', 131, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (303, '游戏', '神泣', 'S', 132, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (304, '游戏', '深红一卡通', 'S', 133, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (305, '游戏', '蜀山剑侠传', 'S', 134, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (306, '游戏', '世纪天成一卡通', 'S', 135, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (307, '游戏', '尚游一卡通', 'S', 136, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (308, '游戏', '蜀门', 'S', 137, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (309, '游戏', '神雕侠侣', 'S', 138, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (310, '游戏', '神兽', 'S', 139, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (311, '游戏', '兽血沸腾', 'S', 140, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (312, '游戏', '丝路英雄', 'S', 141, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (313, '游戏', '圣魔之血', 'S', 142, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (314, '游戏', '上古世纪', 'S', 143, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (315, '游戏', '三国策V', 'S', 144, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (316, '游戏', '圣斗士星矢', 'S', 145, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (317, '游戏', '水浒无双', 'S', 146, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (318, '游戏', '神话', 'S', 147, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (319, '游戏', '世模一卡通', 'S', 148, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (320, '游戏', '生肖传说', 'S', 149, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (321, '游戏', '书剑恩仇录', 'S', 150, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (322, '游戏', '盛世三国OL', 'S', 151, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (323, '游戏', '搜狐一卡通', 'S', 152, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (324, '游戏', '神兵传奇', 'S', 153, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (325, '游戏', '神魔大陆', 'S', 154, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (326, '游戏', '三国演义', 'S', 155, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (327, '游戏', '盛大点券', 'S', 156, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (328, '游戏', '天骄3', 'T', 157, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (329, '游戏', '天下3', 'T', 158, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (330, '游戏', '天龙八部3', 'T', 159, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (331, '游戏', '特战先锋', 'T', 160, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (332, '游戏', '桃园', 'T', 161, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (333, '游戏', '坦克世界', 'T', 162, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (334, '游戏', 'TERA', 'T', 163, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (335, '游戏', '桃花源记', 'T', 164, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (336, '游戏', '腾讯CF', 'T', 165, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (337, '游戏', '突击风暴', 'T', 166, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (338, '游戏', '王者荣耀', 'W', 167, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (339, '游戏', '武魂', 'W', 168, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (340, '游戏', '完美世界', 'W', 169, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (341, '游戏', '武林外传', 'W', 170, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (342, '游戏', '完美国际', 'W', 171, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (343, '游戏', '问道外传', 'W', 172, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (344, '游戏', '武神', 'W', 173, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (345, '游戏', '网易一卡通', 'W', 174, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (346, '游戏', '问道', 'W', 175, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (347, '游戏', '新英雄年代', 'X', 176, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (348, '游戏', '笑傲江湖', 'X', 177, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (349, '游戏', '新梦幻诛仙', 'X', 178, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (350, '游戏', '新魔界', 'X', 179, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (351, '游戏', '新热血英豪', 'X', 180, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (352, '游戏', '轩辕传奇', 'X', 181, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (353, '游戏', '新倚天剑与屠龙刀', 'X', 182, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (354, '游戏', '仙途', 'X', 183, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (355, '游戏', '星战前夜EVE', 'X', 184, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (356, '游戏', '新飞飞', 'X', 185, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (357, '游戏', '寻仙', 'X', 186, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (358, '游戏', '星辰变', 'X', 187, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (359, '游戏', '玄天之剑', 'X', 188, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (360, '游戏', '星尘传说', 'X', 189, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (361, '游戏', '新水浒Q传', 'X', 190, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (362, '游戏', '侠客列传', 'X', 191, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (363, '游戏', '修罗刹', 'X', 192, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (364, '游戏', '西游记', 'X', 193, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (365, '游戏', '玄幻之剑', 'X', 194, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (366, '游戏', '佣兵天下', 'Y', 195, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (367, '游戏', '月影传说', 'Y', 196, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (368, '游戏', '游戏星城', 'Y', 197, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (369, '游戏', '一级戒备', 'Y', 198, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (370, '游戏', '英雄联盟', 'Y', 199, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (371, '游戏', '倚天剑与屠龙刀2', 'Y', 200, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (372, '游戏', '英雄三国', 'Y', 201, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (373, '游戏', '永恒之塔', 'Y', 202, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (374, '游戏', '御龙在天', 'Y', 203, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (375, '游戏', '征途', 'Z', 204, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (376, '游戏', '自由篮球', 'Z', 205, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (377, '游戏', '臻游一卡通', 'Z', 206, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (378, '游戏', '战地之王AVA', 'Z', 207, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (379, '游戏', '斩魂', 'Z', 208, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (380, '游戏', '征途2S', 'Z', 209, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (381, '游戏', '诸侯', 'Z', 210, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (382, '游戏', '诛仙3', 'Z', 211, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (383, '游戏', '征途2', 'Z', 212, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (384, '游戏', '中华英雄', 'Z', 213, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (385, '游戏', '征途怀旧版', 'Z', 214, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (386, '游戏', '战网一卡通', 'Z', 215, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (387, '艺术品价格', '1000元以下', '1', 1, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (388, '艺术品价格', '1000-5000元', '2', 2, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (389, '艺术品价格', '5000-10000元', '3', 3, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (390, '艺术品价格', '10000-20000元', '4', 4, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (391, '艺术品价格', '20000-40000元', '5', 5, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (392, '艺术品价格', '40000-60000元', '6', 6, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (393, '艺术品价格', '60000元以上', '7', 7, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (394, '户外用品价格', '100元以下', '1', 1, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (395, '户外用品价格', '100-500元', '2', 2, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (396, '户外用品价格', '500-1000元', '3', 3, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (397, '户外用品价格', '1000-2000元', '4', 4, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (398, '户外用品价格', '2000-3000元', '5', 5, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (399, '户外用品价格', '3000-5000元', '6', 6, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (400, '户外用品价格', '5000元以上', '7', 7, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (401, '图书价格', '20元以下', '1', 1, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (402, '图书价格', '20-50元', '2', 2, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (403, '图书价格', '50-100元', '3', 3, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (404, '图书价格', '100-150元', '4', 4, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (405, '图书价格', '150-200元', '5', 5, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (406, '图书价格', '200-300元', '6', 6, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (407, '图书价格', '300-500元', '7', 7, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (408, '图书价格', '500-1000元', '8', 8, null);
-
-insert into codes_es_whyl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (409, '图书价格', '1000元以上', '9', 9, null);
 
 prompt Done.

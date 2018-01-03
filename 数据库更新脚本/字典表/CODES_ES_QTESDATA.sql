@@ -35,10 +35,10 @@ insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PAR
 values (11, '二手设备类别', '农用机械', '11', 11, null);
 
 insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (12, '二手设备类别', '其他', '12', 12, null);
+values (12, '二手设备类别', '其他', '13', 13, null);
 
 insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (13, '二手设备类别', '生产线', '13', 13, null);
+values (13, '二手设备类别', '生产线', '12', 12, null);
 
 insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (15, '机床车床', '雕刻机', '1', 1, 1);

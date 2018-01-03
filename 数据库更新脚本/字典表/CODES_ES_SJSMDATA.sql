@@ -2,55 +2,385 @@ prompt Importing table codes_es_sjsm...
 set feedback off
 set define off
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (1, '新旧程度', '全新', '1', 1, null);
+values (825, '平板型号', 'A500', '1', 1, 756);
 
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (2, '新旧程度', '95成新', '2', 2, null);
+values (826, '平板型号', 'A700', '1', 1, 756);
 
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (3, '新旧程度', '9成新', '3', 3, null);
+values (827, '平板型号', 'W500', '1', 1, 756);
 
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (4, '新旧程度', '8成新', '4', 4, null);
+values (828, '平板型号', '其它', '1', 1, 756);
 
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (5, '新旧程度', '7成新及以下', '5', 5, null);
+values (829, '平板型号', 'TF101', '1', 1, 758);
 
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (6, '笔记本配件', '笔记本包', '1', 1, 945);
+values (830, '平板型号', 'TF201', '1', 1, 758);
 
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (7, '笔记本配件', '笔记本电源', '2', 2, 945);
+values (831, '平板型号', 'Streak 5', '1', 1, 758);
 
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (8, '笔记本配件', '笔记本电池', '3', 3, 945);
+values (832, '平板型号', 'Streak 7', '1', 1, 758);
 
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (9, '笔记本配件', '支架/散热垫', '4', 4, 945);
+values (833, '平板型号', 'Streak 10', '1', 1, 758);
 
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (10, '笔记本配件', '笔记本内存', '5', 5, 945);
+values (834, '平板型号', 'Latitude ST', '1', 1, 758);
 
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (11, '笔记本配件', '笔记本硬盘', '6', 6, 945);
+values (835, '平板型号', '其他', '1', 1, 758);
 
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (12, '笔记本配件', '其他配件', '7', 7, 945);
+values (836, '平板型号', 'surface1', '1', 1, 759);
 
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (13, '平板电脑配件', '保护套', '1', 1, null);
+values (837, '平板型号', 'surface2', '1', 1, 759);
 
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (14, '平板电脑配件', '底座/支架', '2', 2, null);
+values (838, '平板型号', 'surface3', '1', 1, 759);
 
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (15, '平板电脑配件', '数据线/转接线', '3', 3, null);
+values (839, '平板类别', '平板电脑', '1', 1, null);
 
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (16, '平板电脑配件', '平板电脑包', '4', 4, null);
+values (840, '平板类别', '平板电脑配件', '2', 2, null);
 
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (17, '平板电脑配件', '其他配件', '5', 5, null);
+values (841, '数码产品类别', '相机/配件', '1', 1, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (842, '数码产品类别', '数码摄像机', '2', 2, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (843, '数码产品类别', 'MP3/MP4', '3', 3, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (844, '数码产品类别', '游戏机', '4', 4, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (845, '数码产品类别', '电子书/kindle', '5', 5, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (846, '数码产品类别', '耳机耳麦', '6', 6, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (847, '数码产品类别', '智能设备', '7', 7, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (848, '数码产品类别', '其他数码', '8', 8, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (849, '数码产品类别', '音箱', '9', 9, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (850, '相机/配件', '单反相机', '1', 1, 841);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (851, '相机/配件', '数码相机', '2', 2, 841);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (852, '相机/配件', '微单相机', '3', 3, 841);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (853, '相机/配件', '其他相机', '4', 4, 841);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (854, '相机/配件', '镜头', '5', 5, 841);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (855, '相机/配件', '闪光灯', '6', 6, 841);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (856, '相机/配件', '脚架/云台', '7', 7, 841);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (857, '相机/配件', '存储卡/读卡器', '8', 8, 841);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (858, '相机/配件', '相机电池/电源', '9', 9, 841);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (859, '相机/配件', '相机包', '10', 10, 841);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (860, '相机/配件', '其他相机配件', '11', 11, 841);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (861, 'MP3/MP4', 'iPod', '1', 1, 843);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (862, 'MP3/MP4', 'MP3', '2', 2, 843);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (863, 'MP3/MP4', 'MP4', '3', 3, 843);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (864, 'MP3/MP4', '其它', '4', 4, 843);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (865, '游戏机', 'PSP', '1', 1, 844);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (866, '游戏机', 'PSV', '2', 2, 844);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (867, '游戏机', 'NDS', '3', 3, 844);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (868, '游戏机', '3DS', '4', 4, 844);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (869, '游戏机', 'Xbox 360', '5', 5, 844);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (870, '游戏机', 'PS2', '6', 6, 844);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (871, '游戏机', 'PS3', '7', 7, 844);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (872, '游戏机', 'GBA', '8', 8, 844);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (873, '游戏机', 'WII', '9', 9, 844);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (874, '游戏机', '游戏机配件', '10', 10, 844);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (875, '游戏机', '其他', '11', 11, 844);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (876, '智能设备', '智能手表', '1', 1, 847);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (877, '智能设备', '智能手环', '2', 2, 847);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (878, '智能设备', '其它智能设备', '3', 3, 847);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (879, '其他数码', '数码相框', '1', 1, 848);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (880, '其他数码', '录音笔', '2', 2, 848);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (881, '其他数码', '音响', '3', 3, 848);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (882, '其他数码', 'GPS导航仪', '4', 4, 848);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (883, '其他数码', '电子辞典', '5', 5, 848);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (884, '其他数码', '学习机', '6', 6, 848);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (885, '其他数码', '复读机', '7', 7, 848);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (886, '其他数码', '掌上电脑', '8', 8, 848);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (887, '其他数码', '行车记录仪', '9', 9, 848);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (888, '其他数码', '其他数码产品', '10', 10, 848);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (889, '台式机/配件类别', '台式机', '1', 1, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (890, '台式机/配件类别', '服务器', '2', 2, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (891, '台式机/配件类别', '硬件', '3', 3, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (892, '台式机/配件类别', '外设产品', '4', 4, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (893, '台式机/配件类别', '网络设备', '5', 5, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (894, '台式机/配件类别', '上网套餐', '6', 6, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (895, '台式机/配件类别', '其他', '7', 7, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (897, '服务器', '台式服务器', '1', 1, 389);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (898, '服务器', '机架式服务器', '2', 2, 389);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (899, '服务器', '机柜式服务器', '3', 3, 389);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (900, '服务器', '其他服务器', '4', 4, 389);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (901, '硬件', 'cpu', '1', 1, 390);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (902, '硬件', '硬盘', '2', 2, 390);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (903, '硬件', '内存条', '3', 3, 390);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (904, '硬件', '显卡', '4', 4, 390);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (905, '硬件', '主板', '5', 5, 390);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (906, '硬件', '显示器', '6', 6, 390);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (907, '硬件', '光驱/刻录机', '7', 7, 390);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (908, '硬件', '散热器', '8', 8, 390);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (909, '硬件', '机箱', '9', 9, 390);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (910, '硬件', '电源', '10', 10, 390);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (911, '硬件', '其他', '11', 11, 390);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (912, '外设产品', 'UPS电源', '1', 1, 391);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (913, '外设产品', '耳机/耳麦', '2', 2, 391);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (914, '外设产品', '摄像头', '3', 3, 391);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (915, '外设产品', '音箱', '4', 4, 391);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (916, '外设产品', 'U盘', '5', 5, 391);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (917, '外设产品', '鼠标', '6', 6, 391);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (918, '外设产品', '键盘', '7', 7, 391);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (919, '外设产品', '鼠标垫', '8', 8, 391);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (920, '外设产品', '手写板', '9', 9, 391);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (921, '外设产品', '其他外设', '10', 10, 391);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (922, '网络设备', '网卡', '1', 1, 392);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (923, '网络设备', '路由器', '2', 2, 392);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (924, '网络设备', '无线路由器', '3', 3, 392);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (925, '网络设备', '交换机', '4', 4, 392);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (926, '网络设备', '网线', '5', 5, 392);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (927, '网络设备', '调制解调器', '6', 6, 392);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (933, '特色标签', '一口价', '7', 7, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (934, '特色标签', '配件齐全', '6', 6, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (935, '特色标签', '保修期内', '5', 5, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (936, '特色标签', '无拆无修', '4', 4, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (937, '手机价格', '100元以下', '1', 1, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (938, '手机价格', '100-200元', '2', 2, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (939, '手机价格', '200-500元', '3', 3, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (940, '手机价格', '500-1000元', '4', 4, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (941, '手机价格', '1000-2000元', '5', 5, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (942, '手机价格', '2000-3500元', '6', 6, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (943, '手机价格', '3500元以上', '7', 7, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (944, '笔记本类别', '笔记本', '1', 1, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (945, '笔记本类别', '笔记本配件', '2', 2, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (947, '台式机屏幕尺寸', '18寸及以下', '1', 1, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (948, '台式机屏幕尺寸', '19寸', '2', 2, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (949, '台式机屏幕尺寸', '20寸', '3', 3, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (950, '台式机屏幕尺寸', '21寸', '4', 4, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (951, '台式机屏幕尺寸', '22寸', '5', 5, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (952, '台式机屏幕尺寸', '23寸', '6', 6, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (953, '台式机屏幕尺寸', '24寸', '7', 7, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (954, '台式机屏幕尺寸', '25寸', '8', 8, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (955, '台式机屏幕尺寸', '26寸', '9', 9, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (956, '台式机屏幕尺寸', '27寸', '10', 10, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (957, '台式机屏幕尺寸', '32寸及以上', '11', 11, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (928, '网络设备', '其他网络设备', '7', 7, 392);
 
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (102, '手机品牌', '苹果', '1', 1, null);
@@ -473,6 +803,9 @@ insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PAR
 values (241, '手机型号', 'R1C', '11', 11, 107);
 
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (959, '配送方式', '自取', '2', 2, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (242, '手机型号', 'Plus', '12', 12, 107);
 
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
@@ -684,6 +1017,18 @@ values (311, '手机型号', '黑莓9000', '7', 7, 111);
 
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (312, '手机型号', '黑莓8900', '8', 8, 111);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (929, '手机型号', 'iphone8', '0', 0, 102);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (930, '特色标签', '全新未拆封', '1', 1, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (931, '特色标签', '验货面付', '2', 2, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (932, '特色标签', '快递包邮', '3', 3, null);
 
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (313, '手机型号', '黑莓8520', '9', 9, 111);
@@ -1115,6 +1460,21 @@ insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PAR
 values (455, '手机型号', 'R750', '9', 9, 118);
 
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (8711, '游戏机', 'PS4', '7', 7, 844);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (8691, '游戏机', 'Xbox One', '5', 5, 844);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (8732, '游戏机', 'Nentendo Switch', '9', 9, 844);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (8731, '游戏机', 'WII U', '9', 9, 844);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (10001, '新旧程度', '99成新', '2', 2, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (456, '手机型号', 'U722', '10', 10, 118);
 
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
@@ -1257,6 +1617,57 @@ values (502, '手机型号', 'X1S', '17', 17, 121);
 
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (503, '手机型号', 'S7', '18', 18, 121);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (1, '新旧程度', '全新', '1', 1, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (2, '新旧程度', '95成新', '2', 2, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (3, '新旧程度', '9成新', '3', 3, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (4, '新旧程度', '8成新', '4', 4, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (5, '新旧程度', '7成新及以下', '5', 5, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (6, '笔记本配件', '笔记本包', '1', 1, 945);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (7, '笔记本配件', '笔记本电源', '2', 2, 945);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (8, '笔记本配件', '笔记本电池', '3', 3, 945);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (9, '笔记本配件', '支架/散热垫', '4', 4, 945);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (10, '笔记本配件', '笔记本内存', '5', 5, 945);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (11, '笔记本配件', '笔记本硬盘', '6', 6, 945);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (12, '笔记本配件', '其他配件', '7', 7, 945);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (13, '平板电脑配件', '保护套', '1', 1, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (14, '平板电脑配件', '底座/支架', '2', 2, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (15, '平板电脑配件', '数据线/转接线', '3', 3, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (16, '平板电脑配件', '平板电脑包', '4', 4, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (17, '平板电脑配件', '其他配件', '5', 5, null);
 
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (506, '笔记本品牌', 'ThinkPad/IBM', '1', 1, null);
@@ -1721,6 +2132,9 @@ insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PAR
 values (659, '笔记本型号', 'PH521系列', '5', 5, 515);
 
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
+values (958, '配送方式', '快递', '1', 1, null);
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (660, '笔记本型号', 'SH560系列', '6', 6, 515);
 
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
@@ -2060,49 +2474,49 @@ insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PAR
 values (772, '平板型号', 'P1000', '1', 1, 750);
 
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (773, '平板型号', 'P1010', '1', 1, 750);
+values (773, '平板型号', 'P1010', '1', 2, 750);
 
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (774, '平板型号', 'P3100', '1', 1, 750);
+values (774, '平板型号', 'P3100', '1', 3, 750);
 
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (775, '平板型号', 'P3110', '1', 1, 750);
+values (775, '平板型号', 'P3110', '1', 4, 750);
 
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (776, '平板型号', 'P5100', '1', 1, 750);
+values (776, '平板型号', 'P5100', '1', 5, 750);
 
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (777, '平板型号', 'P5110', '1', 1, 750);
+values (777, '平板型号', 'P5110', '1', 6, 750);
 
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (778, '平板型号', 'P6200', '1', 1, 750);
+values (778, '平板型号', 'P6200', '1', 7, 750);
 
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (779, '平板型号', 'P6210', '1', 1, 750);
+values (779, '平板型号', 'P6210', '1', 8, 750);
 
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (780, '平板型号', 'P6800', '1', 1, 750);
+values (780, '平板型号', 'P6800', '1', 9, 750);
 
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (781, '平板型号', 'P7300', '1', 1, 750);
+values (781, '平板型号', 'P7300', '1', 10, 750);
 
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (782, '平板型号', 'P7310', '1', 1, 750);
+values (782, '平板型号', 'P7310', '1', 11, 750);
 
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (783, '平板型号', 'P739', '1', 1, 750);
+values (783, '平板型号', 'P739', '1', 12, 750);
 
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (784, '平板型号', 'P7500', '1', 1, 750);
+values (784, '平板型号', 'P7500', '1', 13, 750);
 
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (785, '平板型号', 'P7510', '1', 1, 750);
+values (785, '平板型号', 'P7510', '1', 14, 750);
 
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (786, '平板型号', 'N8000', '1', 1, 750);
+values (786, '平板型号', 'N8000', '1', 15, 750);
 
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (787, '平板型号', '其他', '1', 1, 750);
+values (787, '平板型号', '其他', '1', 16, 750);
 
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (788, '平板型号', 'A1', '1', 1, 751);
@@ -2214,404 +2628,5 @@ values (823, '平板型号', 'S7', '1', 1, 755);
 
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
 values (824, '平板型号', 'A100', '1', 1, 756);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (825, '平板型号', 'A500', '1', 1, 756);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (826, '平板型号', 'A700', '1', 1, 756);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (827, '平板型号', 'W500', '1', 1, 756);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (828, '平板型号', '其它', '1', 1, 756);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (829, '平板型号', 'TF101', '1', 1, 758);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (830, '平板型号', 'TF201', '1', 1, 758);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (831, '平板型号', 'Streak 5', '1', 1, 758);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (832, '平板型号', 'Streak 7', '1', 1, 758);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (833, '平板型号', 'Streak 10', '1', 1, 758);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (834, '平板型号', 'Latitude ST', '1', 1, 758);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (835, '平板型号', '其他', '1', 1, 758);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (836, '平板型号', 'surface1', '1', 1, 759);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (837, '平板型号', 'surface2', '1', 1, 759);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (838, '平板型号', 'surface3', '1', 1, 759);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (839, '平板类别', '平板电脑', '1', 1, null);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (840, '平板类别', '平板电脑配件', '2', 2, null);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (841, '数码产品类别', '相机/配件', '1', 1, null);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (842, '数码产品类别', '数码摄像机', '2', 2, null);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (843, '数码产品类别', 'MP3/MP4', '3', 3, null);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (844, '数码产品类别', '游戏机', '4', 4, null);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (845, '数码产品类别', '电子书/kindle', '5', 5, null);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (846, '数码产品类别', '耳机耳麦', '6', 6, null);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (847, '数码产品类别', '智能设备', '7', 7, null);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (848, '数码产品类别', '其他数码', '8', 8, null);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (849, '数码产品类别', '数码回收', '9', 9, null);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (850, '相机/配件', '单反相机', '1', 1, 841);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (851, '相机/配件', '数码相机', '2', 2, 841);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (852, '相机/配件', '微单相机', '3', 3, 841);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (853, '相机/配件', '其他相机', '4', 4, 841);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (854, '相机/配件', '镜头', '5', 5, 841);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (855, '相机/配件', '闪光灯', '6', 6, 841);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (856, '相机/配件', '脚架/云台', '7', 7, 841);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (857, '相机/配件', '存储卡/读卡器', '8', 8, 841);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (858, '相机/配件', '相机电池/电源', '9', 9, 841);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (859, '相机/配件', '相机包', '10', 10, 841);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (860, '相机/配件', '其他相机配件', '11', 11, 841);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (861, 'MP3/MP4', 'iPod', '1', 1, 843);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (862, 'MP3/MP4', 'MP3', '2', 2, 843);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (863, 'MP3/MP4', 'MP4', '3', 3, 843);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (864, 'MP3/MP4', '其它', '4', 4, 843);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (865, '游戏机', 'PSP', '1', 1, 844);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (866, '游戏机', 'PSV', '2', 2, 844);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (867, '游戏机', 'NDS', '3', 3, 844);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (868, '游戏机', '3DS', '4', 4, 844);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (869, '游戏机', 'Xbox', '5', 5, 844);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (870, '游戏机', 'PS3', '6', 6, 844);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (871, '游戏机', 'PS2', '7', 7, 844);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (872, '游戏机', 'GBA', '8', 8, 844);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (873, '游戏机', 'WII', '9', 9, 844);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (874, '游戏机', '游戏机配件', '10', 10, 844);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (875, '游戏机', '其他', '11', 11, 844);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (876, '智能设备', '智能手表', '1', 1, 847);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (877, '智能设备', '智能手环', '2', 2, 847);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (878, '智能设备', '其它智能设备', '3', 3, 847);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (879, '其他数码', '数码相框', '1', 1, 848);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (880, '其他数码', '录音笔', '2', 2, 848);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (881, '其他数码', '音响', '3', 3, 848);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (882, '其他数码', 'GPS导航仪', '4', 4, 848);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (883, '其他数码', '电子辞典', '5', 5, 848);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (884, '其他数码', '学习机', '6', 6, 848);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (885, '其他数码', '复读机', '7', 7, 848);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (886, '其他数码', '掌上电脑', '8', 8, 848);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (887, '其他数码', '行车记录仪', '9', 9, 848);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (888, '其他数码', '其他数码产品', '10', 10, 848);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (889, '台式机/配件类别', '台式机', '1', 1, null);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (890, '台式机/配件类别', '服务器', '2', 2, null);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (891, '台式机/配件类别', '硬件', '3', 3, null);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (892, '台式机/配件类别', '外设产品', '4', 4, null);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (893, '台式机/配件类别', '网络设备', '5', 5, null);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (894, '台式机/配件类别', '上网套餐', '6', 6, null);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (895, '台式机/配件类别', '其他', '7', 7, null);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (896, '台式机/配件类别', '电脑回收', '8', 8, null);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (897, '服务器', '台式服务器', '1', 1, 389);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (898, '服务器', '机架式服务器', '2', 2, 389);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (899, '服务器', '机柜式服务器', '3', 3, 389);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (900, '服务器', '其他服务器', '4', 4, 389);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (901, '硬件', 'cpu', '1', 1, 390);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (902, '硬件', '硬盘', '2', 2, 390);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (903, '硬件', '内存条', '3', 3, 390);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (904, '硬件', '显卡', '4', 4, 390);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (905, '硬件', '主板', '5', 5, 390);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (906, '硬件', '显示器', '6', 6, 390);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (907, '硬件', '光驱/刻录机', '7', 7, 390);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (908, '硬件', '散热器', '8', 8, 390);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (909, '硬件', '机箱', '9', 9, 390);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (910, '硬件', '电源', '10', 10, 390);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (911, '硬件', '其他', '11', 11, 390);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (912, '外设产品', 'UPS电源', '1', 1, 391);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (913, '外设产品', '耳机/耳麦', '2', 2, 391);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (914, '外设产品', '摄像头', '3', 3, 391);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (915, '外设产品', '音箱', '4', 4, 391);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (916, '外设产品', 'U盘', '5', 5, 391);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (917, '外设产品', '鼠标', '6', 6, 391);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (918, '外设产品', '键盘', '7', 7, 391);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (919, '外设产品', '鼠标垫', '8', 8, 391);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (920, '外设产品', '手写板', '9', 9, 391);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (921, '外设产品', '其他外设', '10', 10, 391);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (922, '网络设备', '网卡', '1', 1, 392);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (923, '网络设备', '路由器', '2', 2, 392);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (924, '网络设备', '无线路由器', '3', 3, 392);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (925, '网络设备', '交换机', '4', 4, 392);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (926, '网络设备', '网线', '5', 5, 392);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (927, '网络设备', '调制解调器', '6', 6, 392);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (928, '网络设备', '其他网络设备', '7', 7, 392);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (929, '手机型号', 'iphone8', '0', 0, 102);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (930, '特色标签', '全新未拆封', '1', 1, null);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (931, '特色标签', '验货面付', '2', 2, null);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (932, '特色标签', '快递包邮', '3', 3, null);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (933, '特色标签', '一口价', '4', 4, null);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (934, '特色标签', '配件齐全', '5', 5, null);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (935, '特色标签', '保修期内', '6', 6, null);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (936, '特色标签', '无拆无修', '7', 7, null);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (937, '手机价格', '100元以下', '1', 1, null);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (938, '手机价格', '100-200元', '2', 2, null);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (939, '手机价格', '200-500元', '3', 3, null);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (940, '手机价格', '500-1000元', '4', 4, null);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (941, '手机价格', '1000-2000元', '5', 5, null);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (942, '手机价格', '2000-3500元', '6', 6, null);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (943, '手机价格', '3500元以上', '7', 7, null);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (944, '笔记本类别', '笔记本', '1', 1, null);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (945, '笔记本类别', '笔记本配件', '2', 2, null);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (946, '笔记本类别', '笔记本回收', '3', 3, null);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (947, '台式机屏幕尺寸', '18寸及以下', '1', 1, null);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (948, '台式机屏幕尺寸', '19寸', '2', 2, null);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (949, '台式机屏幕尺寸', '20寸', '3', 3, null);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (950, '台式机屏幕尺寸', '21寸', '4', 4, null);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (951, '台式机屏幕尺寸', '22寸', '5', 5, null);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (952, '台式机屏幕尺寸', '23寸', '6', 6, null);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (953, '台式机屏幕尺寸', '24寸', '7', 7, null);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (954, '台式机屏幕尺寸', '25寸', '8', 8, null);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (955, '台式机屏幕尺寸', '26寸', '9', 9, null);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (956, '台式机屏幕尺寸', '27寸', '10', 10, null);
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID)
-values (957, '台式机屏幕尺寸', '32寸及以上', '11', 11, null);
 
 prompt Done.
