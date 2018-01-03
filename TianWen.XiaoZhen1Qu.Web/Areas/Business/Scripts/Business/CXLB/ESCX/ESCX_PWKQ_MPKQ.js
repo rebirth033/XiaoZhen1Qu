@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadESCondition() {
-    LoadConditionByTypeNames("'游乐园/景点票类别','卡券价格'", "CODES_ES_PWKQ", "类别,价格", "LB,JG", "14,15");
+    LoadConditionByTypeNames("'门票卡券类别','卡券价格'", "CODES_ES_PWKQ", "类别,价格", "LB,JG", "14,15");
     LoadBody("ESXX_PWKQ_MPKQ", currentIndex);
 }
 //选择条件
@@ -21,7 +21,7 @@ function SelectCondition(obj, name) {
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("LB,XL,JG,QY");
+    var condition = GetAllCondition("LB,XL,JG,QY,GQ");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/ESCX/LoadESXX",
@@ -51,15 +51,9 @@ function LoadBody(TYPE, PageIndex) {
 function LoadInfo(obj) {
     var html = "";
     html += ('<li class="li_body_left" onclick="OpenXXXX(\'ESXX_PWKQ_MPKQ\',\'' + obj.ID + '\')">');
-    html += ('<div class="div_li_body_left_left">');html += ('</div>');
-    html += ('<div class="div_li_body_left_center">');
-    html += ('<p class="p_li_body_left_center_bt">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_left_center_nr">' + obj.BCMSString.replace(/<\/?.+?>/g, "") + '</p>');
-    html += ('<p class="p_li_body_left_center_dz font_size16">' + obj.QY + ' - ' + obj.DD + '&nbsp;&nbsp;&nbsp;&nbsp;' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
-    html += ('</div>');
-    html += ('<div class="div_li_body_left_right">');
-    html += ('<p class="p_li_body_left_right"><span class="span_zj">' + obj.JG + '</span>元</p>');
-    html += ('</div>');
+    html += ('<div class="div_li_body_left_left">' + GetJG(obj.JG, '元') + '</div>');
+    html += ('<div class="div_li_body_left_center">' + obj.BT + '</div>');
+    html += ('<div class="div_li_body_left_right">' + obj.ZXGXSJ.ToString("MM月dd日") + '</div>');
     html += ('</li>');
     $("#ul_body_left").append(html);
 }
@@ -94,9 +88,20 @@ function LoadHotInfo(obj) {
     var html = "";
     html += ('<li onclick="OpenXXXX(\'ESXX_PWKQ_MPKQ\',\'' + obj.ID + '\')" class="li_body_right">');
     //html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_right_xq">' + "服务项目:" + obj.LB + '</p>');
+    html += ('<p class="p_li_body_right_xq">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_right_cs">' + obj.QY + '-' + obj.DD + '</p>');
-    html += ('<p class="p_li_body_right_jg">' + GetJG(obj.JG,'元')+'</p>');
+    html += ('<p class="p_li_body_right_jg">' + GetJG(obj.JG, '元') + '</p>');
     html += ('</li>');
     $("#ul_body_right").append(html);
+}
+//根据条件查询
+function SearchByCondition(type) {
+    $("#ul_condition_body_GQ").find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    if (type === "ZR")
+        $("#ul_condition_body_GQ").find(".li_condition_body:eq(1)").addClass("li_condition_body_active");
+    if (type === "QG")
+        $("#ul_condition_body_GQ").find(".li_condition_body:eq(2)").addClass("li_condition_body_active");
+    LoadBody("ESXX_PWKQ_MPKQ", 1);
 }

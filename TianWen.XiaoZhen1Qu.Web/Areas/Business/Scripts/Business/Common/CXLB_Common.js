@@ -41,7 +41,8 @@ function GetHeadNav() {
                 for (var i = 0; i < xml.list.length; i++) {
                     if (xml.list[i].LBID === parseInt(getUrlParam("LBID"))) {
                         html += ('<li class="li_nav_font">' + xml.xzq + xml.list[i].LBNAME + '</li>');
-                        $("#li_body_head_first").html(xml.xzq + xml.list[i].LBNAME + "");
+                        if ($("#li_body_head_first").html() !== "转让")
+                            $("#li_body_head_first").html(xml.xzq + xml.list[i].LBNAME + "");
                         title += "_" + xml.xzq + xml.list[i].LBNAME;
                         break;
                     }

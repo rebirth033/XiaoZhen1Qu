@@ -1,13 +1,101 @@
 ﻿$(document).ready(function () {
     $("#YXQZ").datepicker({ minDate: 0 });
-    LoadJBXX();
+    LoadDuoXPSFS("配送方式", "PSFS");
     BindClick("LB");
 });
 //绑定下拉框
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("游乐园/景点票类别", "LB", "CODES_ES_PWKQ", Bind, "MPKQLB", "LB", "");
+            LoadCODESByTYPENAME("门票卡券类别", "LB", "CODES_ES_PWKQ", Bind, "MPKQLB", "LB", "");
+        }
+    });
+}
+//选择类别下拉框
+function SelectLB(obj, type, codeid) {
+    $("#span" + type).html(obj.innerHTML);
+    $("#div" + type).css("display", "none");
+    if (type === "LB")
+        PDLB(obj.innerHTML, codeid);
+}
+//判断类别
+function PDLB(name, codeid) {
+    if (name.indexOf("其它卡券") !== -1) {
+        $("#divXL").css("display", "none");
+    }
+    else {
+        $("#divXL").css("display", "");
+        LoadDuoX(name, "XL");
+    }
+}
+//加载多选
+function LoadDuoX(type, id) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
+        dataType: "json",
+        data:
+        {
+            TYPENAME: type,
+            TBName: "CODES_ES_PWKQ"
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='ulFWPZ'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='li" + id + "' style='width:140px;' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    if (i % 5 === 4 && (i !== xml.list.length - 1)) {
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
+                    }
+                }
+                if (parseInt(xml.list.length % 5) === 0)
+                    $("#div" + id).css("height", parseInt(xml.list.length / 5) * 45 + "px");
+                else
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 5) + 1) * 45 + "px");
+                html += "</ul>";
+                $("#div" + id + "Text").html(html);
+                $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".li" + id).bind("click", function () { ValidateCheck(id, "忘记选择小类啦"); });
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//加载多选
+function LoadDuoXPSFS(type, id) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
+        dataType: "json",
+        data:
+        {
+            TYPENAME: type,
+            TBName: "CODES_ES_SJSM"
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='ulFWPZ'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='li" + id + "' style='width:140px;' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    if (i % 5 === 4 && (i !== xml.list.length - 1)) {
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
+                    }
+                }
+                if (parseInt(xml.list.length % 5) === 0)
+                    $("#div" + id).css("height", parseInt(xml.list.length / 5) * 60 + "px");
+                else
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 5) + 1) * 60 + "px");
+                html += "</ul>";
+                $("#div" + id + "Text").html(html);
+                $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".li" + id).bind("click", function () { ValidateCheck(id, "忘记选择配送方式啦"); });
+                LoadJBXX();
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
         }
     });
 }
@@ -31,6 +119,8 @@ function LoadJBXX() {
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
                 if (xml.Value.ES_PWKQ_MPKQJBXX.GQ !== null)
                     SetDX("GQ", xml.Value.ES_PWKQ_MPKQJBXX.GQ);
+                if (xml.Value.ES_PWKQ_MPKQJBXX.PSFS !== null)
+                    SetDuoX("PSFS", xml.Value.ES_PWKQ_MPKQJBXX.PSFS);
                 $("#spanLB").html(xml.Value.ES_PWKQ_MPKQJBXX.LB);
                 $("#spanQY").html(xml.Value.ES_PWKQ_MPKQJBXX.QY);
                 $("#spanDD").html(xml.Value.ES_PWKQ_MPKQJBXX.DD);
@@ -55,6 +145,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "GQ", "'" + GetDX("GQ") + "'");
+    obj = jsonObj.AddJson(obj, "PSFS", "'" + GetDuoX("PSFS") + "'");
 
     if ($("#YXQZ").val() !== "")
         obj = jsonObj.AddJson(obj, "YXQZ", "'" + $("#YXQZ").val() + "'");
