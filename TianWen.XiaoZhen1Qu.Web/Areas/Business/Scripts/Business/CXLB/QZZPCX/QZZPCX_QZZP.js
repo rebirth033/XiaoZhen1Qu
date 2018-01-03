@@ -49,7 +49,7 @@ function GetHeadNav() {
 }
 //加载条件
 function LoadQZZPCondition() {
-    LoadConditionByTypeNames("'" + getUrlParam("HYLB") + "类别','每月薪资','职位福利'", "CODES_QZZP", "类别,薪资,福利", "ZWLB,MYXZ,ZWFL", "100,15,15");
+    LoadConditionByTypeNames("'" + getUrlParam("HYLB") + "类别','每月薪资','职位福利'", "CODES_QZZP", "职位,薪资,福利", "ZWLB,MYXZ,ZWFL", "100,15,15");
 }
 //加载URL查询条件
 function LoadURLCondition() {

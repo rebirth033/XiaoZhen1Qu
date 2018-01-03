@@ -18,17 +18,27 @@
                 <span id="spanBT">标题</span>
             </div>
             <div class="div_row_right">
-                <input id="BT" maxlength="50" column="BT" class="input_input SRK" type="text" placeholder="吸引人的标题可让更多的人看您的信息喔" />
-                <div id="divBTTip"></div>
+                <input id="BT" maxlength="50" column="BT" class="input_input SRK" type="text" placeholder="吸引人的标题可让更多的人看您的信息喔"/>
             </div>
+            <div id="divBTTip"></div>
         </div>
-        <div id="divZWMC" class="div_row" style="z-index: 998">
+        <div id="divGSMC" class="div_row">
+            <div class="div_row_left">
+                <span class="span_required">*</span>
+                <span id="spanGSMC">公司名称</span>
+            </div>
+            <div class="div_row_right">
+                <input id="GSMC" maxlength="15" column="GSMC" class="input_input SRK" type="text" placeholder="请输入公司名称" />
+            </div>
+            <div id="divGSMCTip"></div>
+        </div>
+        <div id="divZWMC" class="div_row" style="z-index: 999">
             <div class="div_row_left">
                 <span class="span_required">*</span>
                 <span class="spanFWCZ">职位名称</span>
             </div>
             <div class="div_row_right">
-                <div id="divZWMCText" class="div_select_out SRK" style="position: relative; z-index: 997; width: 325px;">
+                <div id="divZWMCText" class="div_select_out SRK" style="width: 325px;">
                     <div id="divZWMCSpan" class="div_select_in" style="border: none; margin-top: 6px; width: 325px;">
                         <span id="spanZWMC" class="span_select spaninput_fontcolor" style="margin-top: 0; width: 295px;">请选择职位名称</span>
                         <div class="span_select_arrow"></div>
@@ -41,7 +51,7 @@
                     </div>
                 </div>
             </div>
-            <div id="divZWMCTip" class="Warn" style="z-index: 995;"></div>
+            <div id="divZWMCTip" class="Warn" style="z-index: 998;"></div>
         </div>
         <div id="divZPRS" class="div_row" style="margin-top: 22px; z-index: 997;">
             <div class="div_row_left">
@@ -115,13 +125,13 @@
             </div>
             <div id="divZPGZNXTip" class="Warn" style="z-index: 990;"></div>
         </div>
-        <div id="divSZQY" class="div_row" style="z-index: 991;">
+        <div id="divSZQY" class="div_row" style="z-index: 989;">
             <div class="div_row_left">
                 <span class="span_required">*</span>
                 <span class="spanFWCZ">工作地址</span>
             </div>
             <div class="div_row_right">
-                <div id="divQYText" class="div_select_out SRK" style="z-index: 990;">
+                <div id="divQYText" class="div_select_out SRK">
                     <div id="divQYSpan" class="div_select_in" style="border: none; margin-top: 6px;">
                         <input type="hidden" id="QYCode" />
                         <span id="spanQY" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择区域</span>
@@ -130,7 +140,7 @@
                     <div id="divQY" class="div_select_dropdown" style="margin-top: -7px; margin-left: -1px;">
                     </div>
                 </div>
-                <div id="divDDText" class="div_select_out SRK" style="z-index: 990;">
+                <div id="divDDText" class="div_select_out SRK">
                     <div id="divDDSpan" class="div_select_in" style="border: none; margin-top: 6px;">
                         <span id="spanDD" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择地段</span>
                         <div class="span_select_arrow"></div>
@@ -146,7 +156,7 @@
             <span class="span_split">职位描述</span>
             <em class="em_split"></em>
         </div>
-        <div id="divBCMS" class="div_row" style="height: 253px; z-index: 989;">
+        <div id="divBCMS" class="div_row" style="height: 253px; z-index: 988;">
             <div class="div_row_left" style="height: 170px; vertical-align: top;">
                 <span class="span_required" style="vertical-align: top">*</span>
                 <span id="spanBCMS" style="vertical-align: top">职位描述</span>
@@ -161,7 +171,7 @@
             <span class="span_split">联系人信息</span>
             <em class="em_split"></em>
         </div>
-        <div id="divLXR" class="div_row" style="z-index: 990">
+        <div id="divLXR" class="div_row">
             <div class="div_row_left font_three">
                 <span class="span_required">*</span>
                 <span id="spanLXR">联系人</span>
@@ -171,7 +181,7 @@
                 <div id="divLXRTip"></div>
             </div>
         </div>
-        <div id="divLXDH" class="div_row" style="z-index: 989">
+        <div id="divLXDH" class="div_row">
             <div class="div_row_left">
                 <span class="span_required">*</span>
                 <span id="spanLXDH">联系电话</span>
@@ -181,7 +191,7 @@
                 <div id="divLXDHTip"></div>
             </div>
         </div>
-        <div id="divQQ" class="div_row" style="margin-top: -12px;" style="z-index: 988">
+        <div id="divQQ" class="div_row" style="margin-top: -12px;">
             <div class="div_row_left font_three">
                 <span class="span_required"></span>
                 <span id="spanQQ">微信号</span>

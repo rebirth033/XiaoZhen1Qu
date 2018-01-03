@@ -12,13 +12,17 @@ namespace TianWen.XiaoZhen1Qu.Entities.Maps
             Id(x => x.ID, "ID").GeneratedBy.Assigned().CustomType("AnsiString");
             Map(x => x.JCXXID, "JCXXID");
             Map(x => x.HYLB, "HYLB");
-            Map(x => x.ZWLB, "ZWLB");
+            Map(x => x.ZWMC, "ZWMC");
             Map(x => x.ZPRS, "ZPRS");
             Map(x => x.MYXZ, "MYXZ");
             Map(x => x.ZWFL, "ZWFL");
             Map(x => x.XLYQ, "XLYQ");
             Map(x => x.GZNX, "GZNX");
             Map(x => x.BCMS, "BCMS");
+            Map(x => x.GSMC, "GSMC");
+            Map(x => x.QY, "QY");
+            Map(x => x.DD, "DD");
+            Map(x => x.JTDZ, "JTDZ");
             #endregion
 
             #region OneToMany

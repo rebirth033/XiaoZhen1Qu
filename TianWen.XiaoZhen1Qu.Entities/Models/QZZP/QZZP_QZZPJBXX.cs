@@ -29,10 +29,10 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string HYLB { get; set; }
 
         /// <summary>
-        /// 职位类别
+        /// 职位名称
         /// </summary>
         [Property]
-        public virtual string ZWLB { get; set; }
+        public virtual string ZWMC { get; set; }
 
         /// <summary>
         /// 招聘人数
@@ -69,5 +69,29 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// </summary>
         [Property]
         public virtual Byte[] BCMS { get; set; }
+
+        /// <summary>
+        /// 公司名称
+        /// </summary>
+        [Property]
+        public virtual string GSMC { get; set; }
+
+        /// <summary>
+        /// 区域
+        /// </summary>
+        [Property]
+        public virtual string QY { get; set; }
+
+        /// <summary>
+        /// 地段
+        /// </summary>
+        [Property]
+        public virtual string DD { get; set; }
+
+        /// <summary>
+        /// 具体地址
+        /// </summary>
+        [Property]
+        public virtual string JTDZ { get; set; }
     }
 }

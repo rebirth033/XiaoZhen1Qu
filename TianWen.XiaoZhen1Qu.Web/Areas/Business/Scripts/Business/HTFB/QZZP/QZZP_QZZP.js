@@ -189,10 +189,12 @@ function LoadJBXX() {
                 $("#ID").val(xml.Value.QZZP_QZZPJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
-                $("#spanZWLB").html(xml.Value.QZZP_QZZPJBXX.ZWLB);
+                $("#spanZWMC").html(xml.Value.QZZP_QZZPJBXX.ZWMC);
                 $("#spanMYXZ").html(xml.Value.QZZP_QZZPJBXX.MYXZ);
                 $("#spanXLYQ").html(xml.Value.QZZP_QZZPJBXX.XLYQ);
                 $("#spanGZNX").html(xml.Value.QZZP_QZZPJBXX.GZNX);
+                $("#spanQY").html(xml.Value.QZZP_QZZPJBXX.QY);
+                $("#spanDD").html(xml.Value.QZZP_QZZPJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
                 if (xml.Value.QZZP_QZZPJBXX.ZWFL !== null)
                     SetDuoX("ZWFL", xml.Value.QZZP_QZZPJBXX.ZWFL);
@@ -209,10 +211,12 @@ function FB() {
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
-    obj = jsonObj.AddJson(obj, "ZWLB", "'" + $("#spanZWLB").html() + "'");
+    obj = jsonObj.AddJson(obj, "ZWMC", "'" + $("#spanZWMC").html() + "'");
     obj = jsonObj.AddJson(obj, "MYXZ", "'" + $("#spanMYXZ").html() + "'");
     obj = jsonObj.AddJson(obj, "XLYQ", "'" + $("#spanXLYQ").html() + "'");
     obj = jsonObj.AddJson(obj, "GZNX", "'" + $("#spanGZNX").html() + "'");
+    obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
+    obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "ZWFL", "'" + GetDuoX("ZWFL") + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
 
