@@ -17,9 +17,9 @@ function LoadDefault() {
             if (xml.Result === 1) {
                 LoadJBXX(xml.list[0]);
                 LoadXQ(xml.list[0], xml.BCMSString);
-                LoadCNXH("QZZPXX_QZZP");
+                //LoadCNXH("QZZPXX_QZZP");
                 LoadGRXX(xml.grxxlist[0]);
-                LoadJJRTJFY("QZZPXX_QZZP");
+                //LoadJJRTJFY("QZZPXX_QZZP");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -37,8 +37,8 @@ function LoadJBXX(obj) {
     html += ('<div class="div_body_left_body">');
     html += ('<div class="div_body_left_body_right">');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">职位类别：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.ZWLB + '</span>');
+    html += ('<span class="span_body_left_body_right_left">职位名称：</span>');
+    html += ('<span class="span_body_left_body_right_right">' + obj.ZWMC + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">每月薪资：</span>');
@@ -61,12 +61,14 @@ function LoadJBXX(obj) {
     html += ('<span class="span_body_left_body_right_right">' + obj.ZPRS + '人</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">公司地址：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + (obj.JTDZ === null ? "暂无数据":obj.JTDZ) + '</span>');
+    html += ('<span class="span_body_left_body_right_left">工作地址：</span>');
+    html += ('<span class="span_body_left_body_right_right">' + '［' + obj.QY + ' - ' + obj.DD + '］' + obj.JTDZ + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">联系电话：</span>');
-    html += ('<span class="span_body_left_body_right_right span_body_left_body_right_right_lxdh">' + obj.LXDH.substr(0, 7) + '****' + '</span>');
+    html += ('<span class="span_body_left_body_right_right span_body_left_body_right_right_lxdh">' + obj.LXDH.substr(0, 4) + '****' + '</span>');
+    html += ('<span class="span_body_left_body_right_right_ckwzdh" onclick="ShowWZDH()">完整电话</span>');
+    html += ('<span class="span_body_left_body_right_wzdh"><span class="span_body_left_body_right_wzdh_lxdh"><i class="i_body_left_body_right_wzdh_lxdh"></i>' + obj.LXDH + '</span><span class="span_body_left_body_right_wzdh_ts">联系时请一定说明在信息小镇上看到的哈，谢谢^_^</span><i class="i_body_left_body_right_wzdh_close" onclick="HideWZDH()">×</i></span>');
     html += ('</p>');
     html += ('</div>');
     html += ('</div>');
@@ -77,29 +79,23 @@ function LoadJBXX(obj) {
 function LoadXQ(obj, BCMSString) {
     var html = "";
     html += ('<div class="div_body_left_body_xq">');
+    html += ('<p class="p_body_left_body_xq">职位描述</p>');
+
     html += ('<div class="div_body_left_body_xq_xx">');
-    html += ('<div class="div_body_left_body_xq_xx_left">职位描述</div>');
     html += ('<div id="div_body_left_body_xq_xx_bcms" class="div_body_left_body_xq_xx_right fyms div_body_left_body_xq_xx_bcms">');
     html += (BCMSString);
     html += ('</div>');
     html += ('</div>');
-    html += ('<div id="div_body_left_body_xq_zk_bcms" onclick="ToggleBCMS()" class="div_body_left_body_xq_zk_bcms">展开内容<i id="i_body_left_body_xq_zk_bcms" class="i_body_left_body_xq_zk_bcms"></i></div>');
-    html += ('<div id="div_body_left_body_xq_xx" class="div_body_left_body_xq_xx" style="overflow:hidden;">');
-    html += ('<ul class="ul_body_left_body_xq_xx">');
-    for (var i = 0; i < obj.PHOTOS.length; i++) {
-        html += ('<li class="li_body_left_body_xq_xx">');
-        html += ('<img class="img_body_left_body_xq_xx" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[i].PHOTONAME + "?j=" + Math.random() + '" />');
-        html += ('</li>');
-    }
-    html += ('</ul>');
+
+    html += ('<div id = "zk" class="div_body_left_body_xq_xx"></div>');
+
     html += ('</div>');
 
-    html += ('<div id="div_body_left_body_xq_zk" onclick="ToggleImg(' + obj.PHOTOS.length + ')" class="div_body_left_body_xq_zk">展开更多图片 共（' + obj.PHOTOS.length + '）张</div>');
-    html += ('</div>');
     $("#div_body_left").append(html);
-    if (obj.PHOTOS.length > 4) {
-        $("#div_body_left_body_xq_xx").css("height", "710px");
-        $("#div_body_left_body_xq_zk").css("display", "block");
+
+    if (parseInt(RTrimStr($("#div_body_left_body_xq_xx_bcms").css("height"), "px")) > 300) {
+        $("#div_body_left_body_xq_xx_bcms").css("height", "300px").css("overflow", "hidden");
+        $("#zk").append('<div id="div_body_left_body_xq_zk_bcms" onclick="ToggleBCMS()" class="div_body_left_body_xq_zk_bcms">展开内容<i id="i_body_left_body_xq_zk_bcms" class="i_body_left_body_xq_zk_bcms"></i></div>');
     }
 }
 //加载猜你喜欢
@@ -184,7 +180,7 @@ function LoadJPTJInfo(obj) {
     html += ('<img class="img_li_body_left_body_jptj" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_left_body_jptj_xq">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_left_body_jptj_cs">' + obj.QY + '-' + obj.DD + '</p>');
-    html += ('<p class="p_li_body_left_body_jptj_jg">' + GetJG(obj.JG,'元')+'</p>');
+    html += ('<p class="p_li_body_left_body_jptj_jg">' + GetJG(obj.JG, '元') + '</p>');
     html += ('</li>');
     return html;
 }
@@ -231,7 +227,7 @@ function LoadJJRTJFYInfo(obj) {
     html += ('<div class="div_li_body_right_jjrtj">');
     html += ('<p class="p_li_body_right_jjrtj_xq">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_right_jjrtj_cs">' + obj.QY + '-' + obj.DD + '</p>');
-    html += ('<p class="p_li_body_right_jjrtj_jg">' + GetJG(obj.JG,'元')+'</p>');
+    html += ('<p class="p_li_body_right_jjrtj_jg">' + GetJG(obj.JG, '元') + '</p>');
     html += ('</div>');
     html += ('</li>');
     return html;

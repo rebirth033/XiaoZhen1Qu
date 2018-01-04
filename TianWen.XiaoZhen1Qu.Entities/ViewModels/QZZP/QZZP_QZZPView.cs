@@ -14,6 +14,10 @@ namespace TianWen.XiaoZhen1Qu.Entities.ViewModels.FC
         public string ZWFL { get; set; }
         public string GZNX { get; set; }
         public string XLYQ { get; set; }
-        public string ZWLB { get; set; }
+        public string ZWMC { get; set; }
+        public string GSMC { get; set; }
+        public string QY { get; set; }
+        public string DD { get; set; }
+        public string JTDZ { get; set; }
     }
 }

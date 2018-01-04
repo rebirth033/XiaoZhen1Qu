@@ -49,23 +49,17 @@ function GetHeadNav() {
 }
 //加载条件
 function LoadQZZPCondition() {
-    LoadConditionByTypeNames("'" + getUrlParam("HYLB") + "类别','每月薪资','职位福利'", "CODES_QZZP", "职位,薪资,福利", "ZWLB,MYXZ,ZWFL", "100,15,15");
+    LoadConditionByTypeNames("'" + getUrlParam("ZWLB") + "类别','每月薪资','职位福利'", "CODES_QZZP", "类别,薪资,福利", "ZWLB,MYXZ,ZWFL", "100,100,100");
 }
 //加载URL查询条件
 function LoadURLCondition() {
-    if (getUrlParam("ZWLB") !== null)
-        SelectURLCondition(getUrlParam("ZWLB"));
+    if (getUrlParam("ZWFL") !== null)
+        SelectURLCondition(getUrlParam("ZWFL"));
     else
         LoadBody("QZZPXX_QZZP", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
-    if (name === "类别" && (obj.innerHTML !== "软件")) {
-        LoadConditionByParentID(obj.id, "CODES_QZZP", "小类", "XL");
-    }
-    if (name === "类别" && (obj.innerHTML === "软件")) {
-        $("#ul_condition_body_XL").remove();
-    }
     $(obj).parent().find(".li_condition_body").each(function () {
         $(this).removeClass("li_condition_body_active");
     });
@@ -135,7 +129,6 @@ function LoadCondition(array, name, id, length) {
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
     var condition = GetAllCondition("ZWLB,MYXZ,ZWFL,QY");
-    condition += (condition === "" ? "HYLB:" : ",HYLB:") + getUrlParam("HYLB");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/QZZPCX/LoadQZZPXX",
@@ -165,16 +158,9 @@ function LoadBody(TYPE, PageIndex) {
 function LoadInfo(obj) {
     var html = "";
     html += ('<li class="li_body_left" onclick="OpenXXXX(\'QZZPXX_QZZP\',\'' + obj.ID + '\')">');
-    html += ('<div class="div_li_body_left_left">');
-    html += ('<p class="p_div_li_body_left_left_bt">' + TruncStr(obj.BT, 15) + '</p>');
-    html += ('<p class="p_div_li_body_left_left_xz"><span class="span_zj">' + obj.MYXZ + '</span>/月</p>');
-    html += ('<p class="p_div_li_body_left_left_fl">' + obj.ZWFL + '</p>');
-    html += ('</div>');
-    html += ('<div class="div_li_body_left_center">');
-    html += ('</div>');
-    html += ('<div class="div_li_body_left_right">');
-    html += ('<p class="p_li_body_left_right"><span class="span_li_body_left_right">申请</span></p>');
-    html += ('</div>');
+    html += ('<div class="div_li_body_left_left">' + obj.MYXZ + '</div>');
+    html += ('<div class="div_li_body_left_center">' + obj.BT + '</div>');
+    html += ('<div class="div_li_body_left_right">' + obj.ZXGXSJ.ToString("MM月dd日") + '</div>');
     html += ('</li>');
     $("#ul_body_left").append(html);
 }
