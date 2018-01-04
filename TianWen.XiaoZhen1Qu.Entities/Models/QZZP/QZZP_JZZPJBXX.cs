@@ -101,9 +101,9 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string DD { get; set; }
 
         /// <summary>
-        /// 详细地址
+        /// 具体地址
         /// </summary>
         [Property]
-        public virtual string XXDZ { get; set; }
+        public virtual string JTDZ { get; set; }
     }
 }

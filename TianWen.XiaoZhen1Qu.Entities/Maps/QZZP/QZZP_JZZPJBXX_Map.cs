@@ -24,7 +24,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Maps
             Map(x => x.JLJSYX, "JLJSYX");
             Map(x => x.QY, "QY");
             Map(x => x.DD, "DD");
-            Map(x => x.XXDZ, "XXDZ");
+            Map(x => x.JTDZ, "JTDZ");
             #endregion
 
             #region OneToMany

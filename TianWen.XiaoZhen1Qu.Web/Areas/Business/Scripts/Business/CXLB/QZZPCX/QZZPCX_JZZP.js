@@ -4,9 +4,52 @@ $(document).ready(function () {
     LoadQZZPCondition();
     LoadHot("QZZPXX_JZZP");
 });
+//获取头部导航
+function GetHeadNav() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/SY/LoadSY_ML",
+        dataType: "json",
+        data:
+        {
+
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "", title = "";
+                html += ('<ul class="ul_nav">');
+                html += ('<li class="li_nav_font">信息小镇</li>');
+                html += ('<li class="li_nav_split">></li>');
+                title += "信息小镇";
+                for (var i = 0; i < xml.list.length; i++) {
+                    if (xml.list[i].LBID === parseInt(getUrlParam("LBID"))) {
+                        html += ('<li class="li_nav_font">' + xml.xzq + xml.list[i].TYPESHOWNAME + '</li>');
+                        title += "_" + xml.xzq + xml.list[i].TYPESHOWNAME;
+                        break;
+                    }
+                }
+                html += ('<li class="li_nav_split">></li>');
+                for (var i = 0; i < xml.list.length; i++) {
+                    if (xml.list[i].LBID === parseInt(getUrlParam("LBID"))) {
+                        html += ('<li class="li_nav_font">兼职招聘</li>');
+                        $("#li_body_head_first").html(xml.xzq + "兼职招聘");
+                        title += "_" + xml.xzq + "兼职招聘";
+                        break;
+                    }
+                }
+                html += ('</ul>');
+                $("#divNav").html(html);
+                $("#title").html(title);
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+
+        }
+    });
+}
 //加载条件
 function LoadQZZPCondition() {
-    LoadConditionByTypeNames("'兼职类别'", "CODES_QZZP", "类别", "JZLB", "13");
+    LoadConditionByTypeNames("'兼职类别'", "CODES_QZZP", "类别", "JZLB", "100");
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -82,9 +125,9 @@ function LoadBody(TYPE, PageIndex) {
 function LoadInfo(obj) {
     var html = "";
     html += ('<li class="li_body_left" onclick="OpenXXXX(\'QZZPXX_JZZP\',\'' + obj.ID + '\')">');
-    html += ('<span class="span_li_body_left_bt">' + TruncStr(obj.BT, 15) + '</span>');
-    html += ('<span class="span_li_body_left_gs">北京闪送科技有限公司</span>');
-    html += ('<span class="span_li_body_left_gz">' + obj.XZ + obj.XZDW +'&nbsp;'+ obj.XZJS + '</span>');
+    html += ('<div class="div_li_body_left_left">' + obj.XZ + obj.XZDW + '&nbsp;' + obj.XZJS + '</div>');
+    html += ('<div class="div_li_body_left_center">' + obj.BT + '</div>');
+    html += ('<div class="div_li_body_left_right">' + obj.ZXGXSJ.ToString("MM月dd日") + '</div>');
     html += ('</li>');
     $("#ul_body_left").append(html);
 }
@@ -121,7 +164,7 @@ function LoadHotInfo(obj) {
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_right_xq">' + "服务项目:" + obj.LB + '</p>');
     html += ('<p class="p_li_body_right_cs">' + obj.QY + '-' + obj.DD + '</p>');
-    html += ('<p class="p_li_body_right_jg">' + GetJG(obj.JG,'元')+'</p>');
+    html += ('<p class="p_li_body_right_jg">' + GetJG(obj.JG, '元') + '</p>');
     html += ('</li>');
     $("#ul_body_right").append(html);
 }
