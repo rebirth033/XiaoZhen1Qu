@@ -101,7 +101,6 @@ function LoadJZLB() {
 function SelectJZLB() {
     $("#spanJZLB").html($(this)[0].innerHTML);
     $("#divJZLB").css("display", "none");
-    $("#BT").val($(this)[0].innerHTML);
     ValidateSelect("ZPJZLB", "JZLB", "忘记选择兼职类别啦");
 }
 //加载求职招聘_兼职招聘基本信息
@@ -121,7 +120,7 @@ function LoadJBXX() {
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
                 $("#ID").val(xml.Value.QZZP_JZZPJBXX.ID);
                 //设置编辑器的内容
-                ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
+                ue.ready(function() { ue.setContent(xml.Value.BCMSString); });
                 $("#spanJZLB").html(xml.Value.QZZP_JZZPJBXX.JZLB);
                 $("#spanXZDW").html(xml.Value.QZZP_JZZPJBXX.XZDW);
                 $("#spanXZJS").html(xml.Value.QZZP_JZZPJBXX.XZJS);
@@ -133,6 +132,8 @@ function LoadJBXX() {
                     $("#DQJZKSSJ").val(xml.Value.QZZP_JZZPJBXX.DQJZKSSJ.ToString("yyyy-MM-dd"));
                 if (xml.Value.QZZP_JZZPJBXX.DQJZJSSJ.ToString("yyyy-MM-dd") !== "1-1-1")
                     $("#DQJZJSSJ").val(xml.Value.QZZP_JZZPJBXX.DQJZJSSJ.ToString("yyyy-MM-dd"));
+            } else {
+                $("#spanJZLB").html($("#spanLBXZ").html().replace("1.", ""));
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

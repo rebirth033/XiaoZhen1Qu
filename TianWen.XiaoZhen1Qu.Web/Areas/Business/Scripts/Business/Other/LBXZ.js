@@ -87,11 +87,11 @@ function LoadXL(LBID, LBNAME) {
                             if (j === 5) {
                                 trhtml = "<tr><td class=\"LBFirst\"></td>";
                             }
-                            if (j === 10) {
+                            if (j === 10 || j === 15 || j === 20) {
                                 trhtml = "<tr class=\"trXL\"><td class=\"LBFirst\"></td>";
                             }
                             trhtml += "<td class=\"LB\" onclick=\"FBXX('" + xml.list[i].CODES_XXLBS[j].FBYM + "','" + xml.list[i].CODES_XXLBS[j].LBID + "')\">" + xml.list[i].CODES_XXLBS[j].LBNAME + "</td>";
-                            if ((j === 4 || j === 9) && j !== (xml.list[i].CODES_XXLBS.length - 1)) {
+                            if ((j === 4 || j === 9 || j === 14 || j === 19) && j !== (xml.list[i].CODES_XXLBS.length - 1)) {
                                 trhtml += "</tr>";
                                 XLhtml += trhtml;
                             }
