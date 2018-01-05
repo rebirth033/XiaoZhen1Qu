@@ -1,44 +1,39 @@
 ﻿$(document).ready(function () {
-    BindClick("LB");
-    LoadJBXX();
+    LoadDuoX("家具维修类别", "LB");
 });
-//加载小类
-function LoadXL() {
+//加载多选
+function LoadDuoX(type, id) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadByParentID",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            ParentID: $("#LBID").val(),
-            TBName:"CODES_SHFW"
+            TYPENAME: type,
+            TBName: "CODES_SHFW"
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                var html = "<ul class='ul_select' style='overflow-y: scroll;'>";
+                var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='li_select' onclick='SelectDropdown(this,\"XL\")'>" + xml.list[i].CODENAME + "</li>";
+                    html += "<li class='li" + id + "' style='width:160px;' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    if (i % 4 === 3 && i !== xml.list.length - 1) {
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
+                    }
                 }
+                if (parseInt(xml.list.length % 4) === 0)
+                    $("#div" + id).css("height", parseInt(xml.list.length / 4) * 50 + "px");
+                else
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 4) + 1) * 50 + "px");
                 html += "</ul>";
-                $("#divXL").html(html);
-                $("#divXL").css("display", "");
-                Bind("OUTLB", "XL", "");
-                ActiveStyle("XL");
+                $("#div" + id + "Text").html(html);
+                $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".li" + id).bind("click", function () { ValidateCheck(id, "忘记选择类别啦"); });
+                LoadFWFW();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
-        }
-    });
-}
-//绑定下拉框
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadCODESByTYPENAME("家具维修类别", "LB", "CODES_SHFW", Bind, "OUTLB", "LB", "");
-        }
-        if (type === "XL") {
-            LoadXL();
         }
     });
 }
@@ -60,7 +55,10 @@ function LoadJBXX() {
                 $("#ID").val(xml.Value.SHFW_JJWXJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
-                $("#spanLB").html(xml.Value.SHFW_JJWXJBXX.LB);
+                if (xml.Value.SHFW_JJWXJBXX.LB !== null)
+                    SetDuoX("LB", xml.Value.SHFW_JJWXJBXX.LB);
+                if (xml.Value.SHFW_JJWXJBXX.FWFW !== null)
+                    SetDuoX("FWFW", xml.Value.SHFW_JJWXJBXX.FWFW);
                 $("#spanQY").html(xml.Value.SHFW_JJWXJBXX.QY);
                 $("#spanDD").html(xml.Value.SHFW_JJWXJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
@@ -80,7 +78,8 @@ function FB() {
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
-    obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
+    obj = jsonObj.AddJson(obj, "LB", "'" + GetDuoX("LB") + "'");
+    obj = jsonObj.AddJson(obj, "FWFW", "'" + GetDuoX("FWFW") + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
