@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Data;
 using System.Linq;
 using CommonClassLib.Helper;
@@ -55,7 +56,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     var listnew = from p in list.Skip((int.Parse(PageIndex) - 1) * int.Parse(PageSize)).Take(int.Parse(PageSize)) select p;
                     foreach (var jcxx in listnew)
                     {
-                        jcxx.BCMSString = BinaryHelper.BinaryToString(jcxx.BCMS);
+                        jcxx.BCMSString = BinaryHelper.BinaryToString(list[0].XCAP);
                         jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
                     }
                     return new { Result = EnResultType.Success, list = listnew, PageCount = PageCount, TotalCount = TotalCount };

@@ -9,6 +9,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.ViewModels.LYJD
     {
         //详细信息
         public string ID { get; set; }
+        public byte[] XCAP { get; set; }
         public string CYFS { get; set; }
         public string FTRQ { get; set; }
         public string WFJT_Q { get; set; }

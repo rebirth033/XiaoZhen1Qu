@@ -248,10 +248,14 @@ function LoadXGLM() {
                 for (var i = 0; i < xml.list.length; i++) {
                     if (xml.list[i].FBYM.indexOf("XXYL_") !== -1)
                         html += '<li class="li_body_right_xglm" onclick="OpenXGLM(\'' + xml.list[i].FBYM + '\',' + xml.list[i].LBID + ')">' + xml.xzq + xml.list[i].LBNAME + '</li>';
+                }
+                html += ('<em class="em_body_right_xglm"></em>');
+                html += ('</ul>');
+                html += ('<ul id="ul_body_right_xglm" class="ul_body_right_xglm">');
+                for (var i = 0; i < xml.list.length; i++) {
                     if (xml.list[i].FBYM.indexOf("LYJD_") !== -1)
                         html += '<li class="li_body_right_xglm" onclick="OpenXGLM(\'' + xml.list[i].FBYM + '\',' + xml.list[i].LBID + ')">' + xml.xzq + xml.list[i].LBNAME + '</li>';
                 }
-                html += ('<em class="em_body_right_xglm"></em>');
                 html += ('</ul>');
                 html += ('</div>');
                 $("#div_body_right").append(html);
