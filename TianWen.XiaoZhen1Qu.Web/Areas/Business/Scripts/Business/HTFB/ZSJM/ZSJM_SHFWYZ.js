@@ -1,11 +1,14 @@
 ﻿$(document).ready(function () {
-    $("#PPMC").bind("blur", ValidatePPMC);
-    $("#PPMC").bind("focus", InfoPPMC);
+    $("#PPMC").bind("blur", function () { ValidatePPMC() });
+    $("#PPMC").bind("focus", function () { InfoInput("PPMC", "品牌名称"); });
+    $("#GSMC").bind("blur", function () { ValidateGSMC() });
+    $("#GSMC").bind("focus", function () { InfoInput("GSMC", "公司名称"); });
 });
 //验证所有
 function ValidateAll() {
     if (ValidateSelect("SHFWLB", "LB", "忘记选择类别啦")
         & ValidatePPMC()
+        & ValidateGSMC()
         & ValidateSelect("SHFWTZJE", "TZJE", "忘记选择投资金额啦")
         & ValidateCheck("FWFW", "忘记选择服务范围啦")
         & ValidateBCMS("BCMS", "忘记填写详情描述啦")
@@ -28,10 +31,17 @@ function ValidatePPMC() {
         return true;
     }
 }
-//提示品牌名称
-function InfoPPMC() {
-    $("#divPPMCTip").css("display", "block");
-    $("#divPPMCTip").attr("class", "Info");
-    $("#divPPMCTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />不超过30字，不能填写电话、QQ、邮箱等联系方式或特殊符号');
-    $("#PPMC").css("border-color", "#bc6ba6");
+//验证公司名称
+function ValidateGSMC() {
+    if ($("#GSMC").val() === "" || $("#GSMC").val() === null) {
+        $("#divGSMCTip").css("display", "block");
+        $("#divGSMCTip").attr("class", "Warn");
+        $("#divGSMCTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写公司名称啦');
+        $("#GSMC").css("border-color", "#F2272D");
+        return false;
+    } else {
+        $("#divGSMCTip").css("display", "none");
+        $("#GSMC").css("border-color", "#cccccc");
+        return true;
+    }
 }

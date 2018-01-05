@@ -161,3 +161,10 @@ function GetLC(szc, gjc) {
     if (parseInt(szc) >= parseInt(gjc / 3 * 2))
         return "高层";
 }
+//处理显示数据
+function HandlerData(value) {
+    if (value.indexOf("请选择") !== -1)
+        return "暂无数据";
+    else
+        return value;
+}
