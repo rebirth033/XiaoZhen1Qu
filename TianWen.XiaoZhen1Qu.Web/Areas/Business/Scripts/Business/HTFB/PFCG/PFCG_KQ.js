@@ -117,6 +117,8 @@ function LoadJBXX() {
                 $("#spanLB").html(xml.Value.PFCG_KQJBXX.LB);
                 $("#spanQY").html(xml.Value.PFCG_KQJBXX.QY);
                 $("#spanDD").html(xml.Value.PFCG_KQJBXX.DD);
+                if (xml.Value.PFCG_KQJBXX.FWFW !== null)
+                    SetDuoX("FWFW", xml.Value.PFCG_KQJBXX.FWFW);
                 LoadPhotos(xml.Value.Photos);
             }
         },
@@ -135,6 +137,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
+    obj = jsonObj.AddJson(obj, "FWFW", "'" + GetDuoX("FWFW") + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");
