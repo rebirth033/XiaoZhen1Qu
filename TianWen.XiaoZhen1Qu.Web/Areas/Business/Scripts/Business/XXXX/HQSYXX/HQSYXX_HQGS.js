@@ -41,8 +41,8 @@ function LoadJBXX(obj) {
     html += ('<span class="span_body_left_body_right_right">' + obj.TGFW + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">服务区域：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.FWQY+ '</span>');
+    html += ('<span class="span_body_left_body_right_left">服务范围：</span>');
+    html += ('<span class="span_body_left_body_right_right">' + obj.FWFW+ '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">具体地址：</span>');
@@ -73,7 +73,7 @@ function LoadXQ(obj, BCMSString) {
     html += (BCMSString);
     html += ('</div>');
     html += ('</div>');
-    html += ('<div id="div_body_left_body_xq_zk_bcms" onclick="ToggleBCMS()" class="div_body_left_body_xq_zk_bcms">展开内容<i id="i_body_left_body_xq_zk_bcms" class="i_body_left_body_xq_zk_bcms"></i></div>');
+    html += ('<div id = "zk" class="div_body_left_body_xq_xx"></div>');
     html += ('<div id="div_body_left_body_xq_xx" class="div_body_left_body_xq_xx" style="overflow:hidden;">');
     html += ('<ul class="ul_body_left_body_xq_xx">');
     for (var i = 0; i < obj.PHOTOS.length; i++) {

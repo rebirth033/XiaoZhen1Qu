@@ -8,7 +8,7 @@ function ValidateLB() {
 }
 //验证所有
 function ValidateAll() {
-    if (ValidateLB()
+    if (ValidateCheck("LB", "忘记选择类别啦")
         & ValidateBCMS("BCMS", "忘记填写详情描述啦")
         & ValidateXXDZ()
         & ValidateCommon())
