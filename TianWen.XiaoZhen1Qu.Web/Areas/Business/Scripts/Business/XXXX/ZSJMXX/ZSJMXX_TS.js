@@ -67,7 +67,7 @@ function LoadJBXX(obj) {
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">服务范围：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.FWQY+ '</span>');
+    html += ('<span class="span_body_left_body_right_right">' + obj.FWWF+ '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">联系人：</span>');
@@ -75,7 +75,9 @@ function LoadJBXX(obj) {
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">联系电话：</span>');
-    html += ('<span class="span_body_left_body_right_right span_body_left_body_right_right_lxdh">' + obj.LXDH.substr(0, 7) + '****' + '</span>');
+    html += ('<span class="span_body_left_body_right_right span_body_left_body_right_right_lxdh">' + obj.LXDH.substr(0, 4) + '****' + '</span>');
+    html += ('<span class="span_body_left_body_right_right_ckwzdh" onclick="ShowWZDH()">完整电话</span>');
+    html += ('<span class="span_body_left_body_right_wzdh"><span class="span_body_left_body_right_wzdh_lxdh"><i class="i_body_left_body_right_wzdh_lxdh"></i>' + obj.LXDH + '</span><span class="span_body_left_body_right_wzdh_ts">联系时请一定说明在信息小镇上看到的哈，谢谢^_^</span><i class="i_body_left_body_right_wzdh_close" onclick="HideWZDH()">×</i></span>');
     html += ('</p>');
     html += ('</div>');
     html += ('</div>');

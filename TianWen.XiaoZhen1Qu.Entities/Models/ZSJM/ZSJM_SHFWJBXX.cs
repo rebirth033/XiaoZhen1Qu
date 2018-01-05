@@ -93,5 +93,17 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// </summary>
         [Property]
         public virtual string ZSDQ { get; set; }
+
+        /// <summary>
+        /// 公司名称
+        /// </summary>
+        [Property]
+        public virtual string GSMC { get; set; }
+
+        /// <summary>
+        /// 服务范围
+        /// </summary>
+        [Property]
+        public virtual string FWFW { get; set; }
     }
 }

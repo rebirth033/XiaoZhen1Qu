@@ -143,6 +143,8 @@ function LoadJBXX() {
                 $("#spanQGFDS").html(xml.Value.ZSJM_JJHBJBXX.QGFDS);
                 $("#spanDDMJ").html(xml.Value.ZSJM_JJHBJBXX.DDMJ);
                 LoadPhotos(xml.Value.Photos);
+                if (xml.Value.ZSJM_JJHBJBXX.XL !== null)
+                    SetDuoX("XL", xml.Value.ZSJM_JJHBJBXX.XL);
                 if (xml.Value.ZSJM_JJHBJBXX.SHRQ !== null)
                     SetDuoX("SHRQ", xml.Value.ZSJM_JJHBJBXX.SHRQ);
                 if (xml.Value.ZSJM_JJHBJBXX.JYMS !== null)
@@ -170,10 +172,10 @@ function FB() {
     obj = jsonObj.AddJson(obj, "TZJE", "'" + $("#spanTZJE").html() + "'");
     obj = jsonObj.AddJson(obj, "QGFDS", "'" + $("#spanQGFDS").html() + "'");
     obj = jsonObj.AddJson(obj, "DDMJ", "'" + $("#spanDDMJ").html() + "'");
+    obj = jsonObj.AddJson(obj, "XL", "'" + GetDuoX("XL") + "'");
     obj = jsonObj.AddJson(obj, "SHRQ", "'" + GetDuoX("SHRQ") + "'");
     obj = jsonObj.AddJson(obj, "JYMS", "'" + GetDuoX("JYMS") + "'");
     obj = jsonObj.AddJson(obj, "FWFW", "'" + GetDuoX("FWFW") + "'");
-    obj = jsonObj.AddJson(obj, "XL", "'" + GetDuoX("XL") + "'");
 
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
 

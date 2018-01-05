@@ -6,15 +6,15 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadZSJMCondition() {
-    LoadConditionByTypeNames("'家居环保类别','投资金额'", "CODES_ZSJM", "类别,投资金额", "LB,TZJE", "100,100");
+    LoadConditionByTypeNames("'家居类别','投资金额'", "CODES_ZSJM", "类别,投资金额", "LB,TZJE", "100,100");
     LoadBody("ZSJMXX_JJHB", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
-    if (name === "类别" && (obj.innerHTML !== "干锅" && obj.innerHTML !== "中餐" && obj.innerHTML !== "粥店")) {
+    if (name === "类别" && (obj.innerHTML !== "创意家居")) {
         LoadConditionByParentID(obj.id, "CODES_ZSJM", "小类", "XL",100);
     }
-    if (name === "类别" && (obj.innerHTML === "干锅" || obj.innerHTML === "中餐" || obj.innerHTML === "粥店")) {
+    if (name === "类别" && (obj.innerHTML === "创意家居")) {
         $("#ul_condition_body_XL").remove();
     }
     $(obj).parent().find(".li_condition_body").each(function () {

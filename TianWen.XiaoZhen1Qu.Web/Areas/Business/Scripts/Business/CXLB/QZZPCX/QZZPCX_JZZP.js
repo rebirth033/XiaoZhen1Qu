@@ -1,7 +1,7 @@
 ﻿var currentIndex = 1;
 $(document).ready(function () {
     BindBodyNav();
-    LoadQZZPCondition();
+    LoadJZZPCondition();
     LoadHot("QZZPXX_JZZP");
 });
 //获取头部导航
@@ -48,8 +48,15 @@ function GetHeadNav() {
     });
 }
 //加载条件
-function LoadQZZPCondition() {
+function LoadJZZPCondition() {
     LoadConditionByTypeNames("'兼职类别'", "CODES_QZZP", "类别", "JZLB", "100");
+}
+//加载URL查询条件
+function LoadURLCondition() {
+    if (getUrlParam("JZLB") !== null)
+        SelectURLCondition(getUrlParam("JZLB"));
+    else
+        LoadBody("QZZPXX_JZZP", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -57,6 +64,15 @@ function SelectCondition(obj, name) {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
+    LoadBody("QZZPXX_JZZP", currentIndex);
+    ShowSelectCondition("QZZPXX_JZZP");
+}
+//选择URL条件
+function SelectURLCondition(obj) {
+    $("#" + obj).parent().find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $("#" + obj).addClass("li_condition_body_active");
     LoadBody("QZZPXX_JZZP", currentIndex);
     ShowSelectCondition("QZZPXX_JZZP");
 }
@@ -83,8 +99,7 @@ function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
                         }
                     }
                 }
-                SetCondition("JZLB", getUrlParam("JZLB"));
-                LoadBody("QZZPXX_JZZP", currentIndex);
+                LoadURLCondition();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
