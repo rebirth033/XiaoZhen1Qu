@@ -117,6 +117,8 @@ function LoadJBXX() {
                 $("#spanLB").html(xml.Value.PFCG_SPJBXX.LB);
                 $("#spanQY").html(xml.Value.PFCG_SPJBXX.QY);
                 $("#spanDD").html(xml.Value.PFCG_SPJBXX.DD);
+                if (xml.Value.PFCG_SPJBXX.FWFW !== null)
+                    SetDuoX("FWFW", xml.Value.PFCG_SPJBXX.FWFW);
                 LoadPhotos(xml.Value.Photos);
                 if (xml.Value.PFCG_SPJBXX.LB.indexOf("土特产") === -1) {
                     LoadXLByName(xml.Value.PFCG_SPJBXX.LB, xml.Value.PFCG_SPJBXX.XL, "CODES_PFCG");
@@ -138,6 +140,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "XL", "'" + GetDuoX("XL") + "'");
+    obj = jsonObj.AddJson(obj, "FWFW", "'" + GetDuoX("FWFW") + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
 
     if (getUrlParam("ID") !== null)
