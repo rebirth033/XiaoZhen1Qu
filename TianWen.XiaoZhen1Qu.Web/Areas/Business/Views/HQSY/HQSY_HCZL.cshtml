@@ -37,32 +37,24 @@
             </div>
             <div id="divTCCZTip"></div>
         </div>
-        <div id="divHCZLTCPP" class="div_row" style="z-index: 998">
+        <div id="divTCPP" class="div_row" style="z-index: 998">
             <div class="div_row_left">
                 <span class="span_required">*</span>
                 <span class="spanFWCZ">头车品牌</span>
             </div>
             <div class="div_row_right">
-                <div id="divTCPPText" class="div_select_out SRK" style="position: relative; z-index: 997">
-                    <div id="divTCPPSpan" class="div_select_in" style="border: none; margin-top: 6px;">
-                        <span id="spanTCPP" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择头车品牌</span>
+                <div id="divTCPPText" class="div_select_out SRK" style="position: relative; z-index: 997; width: 250px;">
+                    <div id="divTCPPSpan" class="div_select_in" style="border: none; margin-top: 6px; width: 250px;">
+                        <span id="spanTCPP" class="span_select spaninput_fontcolor" style="margin-top: 0; width: 220px;">请选择头车品牌</span>
                         <div class="span_select_arrow"></div>
                     </div>
-                    <div id="divTCPP" class="div_bqss" style="display: none;">
-                        <div class="div_bqss_head">
-                            <input class="input_content" type="text" placeholder="输入名称快速搜索" style="cursor: text" />
-                            <input class="btn btn-info" type="button" value="快速搜索" />
-                        </div>
-                        <div class="div_bqss_body">
-                            <div class="div_bqss_body_mc" id="div_content_tcmc">
-                            </div>
-                            <div class="div_bqss_body_bq" id="div_content_tcbq">
-                            </div>
-                        </div>
+                </div>
+                <div class="div_row_right_jcpp">
+                    <div id="div_row_right_tcpp_first" class="div_row_right_jcpp_item div_row_right_jcpp_first">
                     </div>
                 </div>
             </div>
-            <div id="divHCZLTCPPTip" style="z-index: 996;"></div>
+            <div id="divTCPPTip" class="Warn" style="z-index: 995;"></div>
         </div>
         <div id="divTCYS" class="div_row" style="z-index: 994">
             <div class="div_row_left">
@@ -93,37 +85,29 @@
             </div>
             <div id="divGCSLTip" class="Warn" style="z-index: 995;"></div>
         </div>
-        <div id="divHCZLGCPP" class="div_row" style="z-index: 994">
+        <div id="divGCPP" class="div_row" style="z-index: 998">
             <div class="div_row_left">
                 <span class="span_required">*</span>
                 <span class="spanFWCZ">跟车品牌</span>
             </div>
             <div class="div_row_right">
-                <div id="divGCPPText" class="div_select_out SRK" style="position: relative; z-index: 994;">
-                    <div id="divGCPPSpan" class="div_select_in" style="border: none; margin-top: 6px;">
-                        <span id="spanGCPP" class="span_select spaninput_fontcolor" style="margin-top: 0">请选择跟车品牌</span>
+                <div id="divGCPPText" class="div_select_out SRK" style="position: relative; z-index: 997; width: 250px;">
+                    <div id="divGCPPSpan" class="div_select_in" style="border: none; margin-top: 6px; width: 250px;">
+                        <span id="spanGCPP" class="span_select spaninput_fontcolor" style="margin-top: 0; width: 220px;">请选择头车品牌</span>
                         <div class="span_select_arrow"></div>
                     </div>
-                    <div id="divGCPP" class="div_bqss" style="display: none;">
-                        <div class="div_bqss_head">
-                            <input class="input_content" type="text" placeholder="输入名称快速搜索" style="cursor: text" />
-                            <input class="btn btn-info" type="button" value="快速搜索" />
-                        </div>
-                        <div class="div_bqss_body">
-                            <div class="div_bqss_body_mc" id="div_content_gcmc">
-                            </div>
-                            <div class="div_bqss_body_bq" id="div_content_gcbq">
-                            </div>
-                        </div>
+                </div>
+                <div class="div_row_right_jcpp">
+                    <div id="div_row_right_gcpp_first" class="div_row_right_jcpp_item div_row_right_jcpp_first">
                     </div>
                 </div>
             </div>
-            <div id="divHCZLGCPPTip" style="z-index: 993"></div>
+            <div id="divGCPPTip" class="Warn" style="z-index: 995;"></div>
         </div>
         <div id="divGCYS" class="div_row" style="z-index: 994">
             <div class="div_row_left">
                 <span class="span_required">*</span>
-                <span class="spanFWCZ">车辆颜色</span>
+                <span class="spanFWCZ">跟车颜色</span>
             </div>
             <div class="div_row_right" id="div_gcys_right">
             </div>
@@ -190,16 +174,14 @@
             </div>
             <div id="divJGTip" class="Warn" style="z-index: 989;"></div>
         </div>
-        <div id="divFWFW" class="div_row" style="z-index: 988">
+        <div id="divFWFW" class="div_row" style="z-index: 988;">
             <div class="div_row_left">
                 <span class="span_required">*</span>
-                <span id="spanFWFW">服务区域</span>
+                <span id="spanFWFW">服务范围</span>
             </div>
-            <div class="div_row_right">
-                <input id="FWFW" column="FWFW" class="span_spaninput input_input SRK" readonly="readonly" type="text" placeholder="请输入服务区域"/>
-                <div id="div_row_right_FWFW" class="div_row_right_FWFW" style="z-index: 997;"></div>
+            <div id="divFWFWText" class="div_row_right">
             </div>
-            <div id="divFWFWTip" style="z-index:996"></div>
+            <div id="divFWFWTip" class="Warn" style="z-index: 987;"></div>
         </div>
         <div id="divXXXX" class="div_split" style="display: block; text-align: left;">
             <span class="span_split">服务描述</span>
@@ -270,7 +252,7 @@
         <div id="divSZQY" class="div_row" style="z-index: 991;">
             <div class="div_row_left">
                 <span class="span_required">*</span>
-                <span class="spanFWCZ">详细地址</span>
+                <span class="spanFWCZ">商家地址</span>
             </div>
             <div class="div_row_right">
                 <div id="divQYText" class="div_select_out SRK" style="z-index: 990;">

@@ -23,7 +23,7 @@ function ValidateAll() {
         & ValidateSpanInput("JNGLS", "价内公里数 ")
         & ValidateJG()
         & ValidateBCMS("BCMS", "忘记填写详情描述啦")
-
+        & ValidateCheck("FWFW", "忘记选择服务范围啦")
         & ValidateXXDZ()
         & ValidateCommon())
         return true;
@@ -34,7 +34,7 @@ function ValidateAll() {
 function ValidateTCYS() {
     var value = "";
     $(".div_tcys").each(function () {
-        if ($(this).css("background-color") === "rgb(135, 181, 59)")
+        if ($(this).css("background-color") === "rgb(188, 107, 166)")
             value = $(this).find(".span_tcys_right")[0].innerHTML;
     });
     if (value === "") {
@@ -51,7 +51,7 @@ function ValidateTCYS() {
 function ValidateGCYS() {
     var value = "";
     $(".div_gcys").each(function () {
-        if ($(this).css("background-color") === "rgb(135, 181, 59)")
+        if ($(this).css("background-color") === "rgb(188, 107, 166)")
             value = $(this).find(".span_gcys_right")[0].innerHTML;
     });
     if (value === "") {

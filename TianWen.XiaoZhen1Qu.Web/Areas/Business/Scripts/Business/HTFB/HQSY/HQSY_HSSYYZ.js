@@ -46,7 +46,7 @@ function ValidateAll() {
          & ValidateRadio("BHCY", "包含餐饮")
         & ValidateJG()
         & ValidateBCMS("BCMS", "忘记填写详情描述啦")
-
+        & ValidateCheck("FWFW", "忘记选择服务范围啦")
         & ValidateXXDZ()
         & ValidateCommon())
         return true;
