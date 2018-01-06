@@ -16,7 +16,7 @@ function LoadGSZCLB() {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liGSZCLB' onclick='SelectDuoX(this)'><img class='img_GSZCLB'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    html += "<li class='liGSZCLB' style='width:140px;' onclick='SelectDuoX(this)'><img class='img_GSZCLB'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i === 3 || i === 7 || i === 11 || i === 15 || i === 19) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
                     }
@@ -29,7 +29,7 @@ function LoadGSZCLB() {
                 $("#divGSZCLBText").html(html);
                 $(".img_GSZCLB").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".liGSZCLB").bind("click", function () { ValidateCheck("GSZCLB", "忘记选择类别啦"); });
-                LoadJBXX();
+                LoadFWFW();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -56,6 +56,8 @@ function LoadJBXX() {
                 //设置编辑器的内容
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
                 SetDuoX("GSZCLB", xml.Value.SWFW_GSZCJBXX.LB);
+                if (xml.Value.SWFW_GSZCJBXX.FWFW !== null)
+                    SetDuoX("FWFW", xml.Value.SWFW_GSZCJBXX.FWFW);
                 $("#spanQY").html(xml.Value.SWFW_GSZCJBXX.QY);
                 $("#spanDD").html(xml.Value.SWFW_GSZCJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
@@ -76,6 +78,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "LB", "'" + GetDuoX("GSZCLB") + "'");
+    obj = jsonObj.AddJson(obj, "FWFW", "'" + GetDuoX("FWFW") + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");

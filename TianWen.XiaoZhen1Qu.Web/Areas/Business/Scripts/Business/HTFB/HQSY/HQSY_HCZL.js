@@ -1,7 +1,6 @@
 ﻿$(document).ready(function () {
     LoadTCYS();
     LoadGCYS();
-    //LoadDuoX("婚车租赁", "TGFW");
     LoadFWFW();
     $("#divTCPPText").bind("click", function () { LoadTCPP(); });
     $("#divGCPPText").bind("click", function () { LoadGCPP(); });

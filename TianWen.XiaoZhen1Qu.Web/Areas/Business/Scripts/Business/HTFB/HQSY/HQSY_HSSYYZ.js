@@ -22,7 +22,7 @@
     $("#TXBJSL").bind("blur", function () { ValidateSpanInput("TXBJSL", "套系摆件数量"); });
     $("#TXBJSL").bind("focus", function () { InfoSpanInput("TXBJSL", "套系摆件数量"); });
     $("#PSSJ").bind("blur", function () { ValidateSpanInput("PSSJ", "拍摄时间"); });
-    $("#PSSJ").bind("focus", function () { InfoInput("PSSJ", "拍摄时间"); });
+    $("#PSSJ").bind("focus", function () { InfoSpanInput("PSSJ", "拍摄时间"); });
 });
 //验证所有
 function ValidateAll() {
@@ -36,14 +36,14 @@ function ValidateAll() {
         & ValidateRadio("TXNHZZX", "套系内化妆造型")
         & ValidateSpanInput("TXDPS", "套系底片数")
         & ValidateSpanInput("TXJXJRCS", "套系精修及入册数")
-         & ValidateRadio("JXKPZS", "精修刻盘赠送")
-         & ValidateRadio("DPZS", "底片赠送")
-         & ValidateRadio("JPSF", "加片收费")
-         & ValidateRadio("JDSF", "加底收费")
+        & ValidateRadio("JXKPZS", "精修刻盘赠送")
+        & ValidateRadio("DPZS", "底片赠送")
+        & ValidateRadio("JPSF", "加片收费")
+        & ValidateRadio("JDSF", "加底收费")
         & ValidateSpanInput("TXXCSL", "套系相册数量")
         & ValidateSpanInput("TXBJSL", "套系摆件数量")
         & ValidateSpanInput("PSSJ", "拍摄时间")
-         & ValidateRadio("BHCY", "包含餐饮")
+        & ValidateRadio("BHCY", "包含餐饮")
         & ValidateJG()
         & ValidateBCMS("BCMS", "忘记填写详情描述啦")
         & ValidateCheck("FWFW", "忘记选择服务范围啦")
