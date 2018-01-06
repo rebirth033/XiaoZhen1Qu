@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    LoadJBXX();
+    LoadFWFW();
     BindClick("LB");
 });
 //绑定下拉框

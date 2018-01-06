@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     BindClick("LB");
-    LoadJBXX();
+    LoadFWFW();
 });
 //绑定下拉框
 function BindClick(type) {
@@ -53,7 +53,6 @@ function LoadXL(lbmc, xl) {
                 html += "</ul>";
                 $("#divXLText").html(html);
                 $(".img_XL").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-                $(".liXL").bind("click", function () { ValidateCheck("XL", "忘记选择类别啦"); });
                 if (xl !== "" && xl !== null && xl !== undefined)
                     SetDuoX("XL", xl);
                 if (lbmc === "品牌策划推广")
@@ -88,6 +87,8 @@ function LoadJBXX() {
                 $("#spanDD").html(xml.Value.SWFW_WLBXWHJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
                 LoadXL(xml.Value.SWFW_WLBXWHJBXX.LB, xml.Value.SWFW_WLBXWHJBXX.XL);
+                if (xml.Value.SWFW_WLBXWHJBXX.FWFW !== null)
+                    SetDuoX("FWFW", xml.Value.SWFW_WLBXWHJBXX.FWFW);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -106,6 +107,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "XL", "'" + GetDuoX("XL") + "'");
+    obj = jsonObj.AddJson(obj, "FWFW", "'" + GetDuoX("FWFW") + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");

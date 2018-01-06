@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     BindClick("LB");
-    LoadJBXX();
+    LoadFWFW();
 });
 //绑定下拉框
 function BindClick(type) {

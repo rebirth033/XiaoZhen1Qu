@@ -119,7 +119,7 @@ function LoadGY() {
                 html += "</ul>";
                 $("#divGYText").html(html);
                 $(".img_GY").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-                LoadJBXX();
+                LoadFWFW();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -154,6 +154,8 @@ function LoadJBXX() {
                 PDLB(xml.Value.SWFW_YSBZJBXX.LB, xml.Value.SWFW_YSBZJBXX.XL);
                 LoadPhotos(xml.Value.Photos);
                 SetDuoX("GY", xml.Value.SWFW_YSBZJBXX.GY);
+                if (xml.Value.SWFW_YSBZJBXX.FWFW !== null)
+                    SetDuoX("FWFW", xml.Value.SWFW_YSBZJBXX.FWFW);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -176,6 +178,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "XL", "'" + GetDuoX("XL") + "'");
     obj = jsonObj.AddJson(obj, "GY", "'" + GetDuoX("GY") + "'");
+    obj = jsonObj.AddJson(obj, "FWFW", "'" + GetDuoX("FWFW") + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");

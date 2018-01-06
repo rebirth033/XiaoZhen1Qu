@@ -29,7 +29,7 @@ function LoadCWKJPGLB() {
                 $("#divCWKJPGLBText").html(html);
                 $(".img_CWKJPGLB").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".liCWKJPGLB").bind("click", function () { ValidateCheck("CWKJPGLB", "忘记选择类别啦"); });
-                LoadJBXX();
+                LoadFWFW();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -57,6 +57,8 @@ function LoadJBXX() {
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
                 SetDuoX("CWKJPGLB", xml.Value.SWFW_CWKJPGJBXX.LB);
                 SetDX("SFSM", xml.Value.SWFW_CWKJPGJBXX.SFSM);
+                if (xml.Value.SWFW_CWKJPGJBXX.FWFW !== null)
+                    SetDuoX("FWFW", xml.Value.SWFW_CWKJPGJBXX.FWFW);
                 $("#spanQY").html(xml.Value.SWFW_CWKJPGJBXX.QY);
                 $("#spanDD").html(xml.Value.SWFW_CWKJPGJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
@@ -78,6 +80,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "LB", "'" + GetDuoX("CWKJPGLB") + "'");
     obj = jsonObj.AddJson(obj, "SFSM", "'" + GetDX("SFSM") + "'");
+    obj = jsonObj.AddJson(obj, "FWFW", "'" + GetDuoX("FWFW") + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");

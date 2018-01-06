@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     BindClick("LB");
-    LoadJBXX();
+    LoadFWFW();
 });
 //绑定下拉框
 function BindClick(type) {
@@ -90,6 +90,8 @@ function LoadJBXX() {
                 $("#spanLB").html(xml.Value.SWFW_ZHFWJBXX.LB);
                 $("#spanQY").html(xml.Value.SWFW_ZHFWJBXX.QY);
                 $("#spanDD").html(xml.Value.SWFW_ZHFWJBXX.DD);
+                if (xml.Value.SWFW_ZHFWJBXX.FWFW !== null)
+                    SetDuoX("FWFW", xml.Value.SWFW_ZHFWJBXX.FWFW);
                 LoadPhotos(xml.Value.Photos);
                 LoadXL(xml.Value.SWFW_ZHFWJBXX.LB, xml.Value.SWFW_ZHFWJBXX.XL);
             }
@@ -110,6 +112,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "XL", "'" + GetDuoX("XL") + "'");
+    obj = jsonObj.AddJson(obj, "FWFW", "'" + GetDuoX("FWFW") + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");

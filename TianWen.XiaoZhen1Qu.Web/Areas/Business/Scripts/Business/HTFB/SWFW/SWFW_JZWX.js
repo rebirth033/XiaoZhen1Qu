@@ -17,7 +17,7 @@ function LoadJZWXLB() {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='liJZWXLB' style='width:140px;' onclick='SelectDuoX(this)'><img class='img_JZWXLB'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i % 4 === 3) {
+                    if (i % 4 === 3 && i !== xml.list.length - 1) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
                     }
                 }
@@ -29,7 +29,7 @@ function LoadJZWXLB() {
                 $("#divJZWXLBText").html(html);
                 $(".img_JZWXLB").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".liJZWXLB").bind("click", function () { ValidateCheck("JZWXLB", "忘记选择类别啦"); });
-                LoadJBXX();
+                LoadFWFW();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -58,6 +58,8 @@ function LoadJBXX() {
                 SetDuoX("JZWXLB", xml.Value.SWFW_JZWXJBXX.LB);
                 $("#spanQY").html(xml.Value.SWFW_JZWXJBXX.QY);
                 $("#spanDD").html(xml.Value.SWFW_JZWXJBXX.DD);
+                if (xml.Value.SWFW_JZWXJBXX.FWFW !== null)
+                    SetDuoX("FWFW", xml.Value.SWFW_JZWXJBXX.FWFW);
                 LoadPhotos(xml.Value.Photos);
             }
         },
@@ -76,6 +78,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "LB", "'" + GetDuoX("JZWXLB") + "'");
+    obj = jsonObj.AddJson(obj, "FWFW", "'" + GetDuoX("FWFW") + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");

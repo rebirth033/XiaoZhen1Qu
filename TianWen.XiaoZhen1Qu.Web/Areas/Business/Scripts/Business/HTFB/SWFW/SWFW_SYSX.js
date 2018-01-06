@@ -4,7 +4,7 @@
     BindClick("PSFG");
     BindClick("LX");
     BindClick("CZ");
-    LoadJBXX();
+    LoadFWFW();
 });
 //绑定下拉框
 function BindClick(type) {
@@ -157,7 +157,7 @@ function LoadDuoX(type, id) {
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-                LoadSWFW_SYSXJBXX();
+                LoadJBXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -210,6 +210,8 @@ function LoadJBXX() {
                     SetDX("JPSF", xml.Value.SWFW_SYSXJBXX.JPSF);
                 if (xml.Value.SWFW_SYSXJBXX.JDSF !== null)
                     SetDX("JDSF", xml.Value.SWFW_SYSXJBXX.JDSF);
+                if (xml.Value.SWFW_SYSXJBXX.FWFW !== null)
+                    SetDuoX("FWFW", xml.Value.SWFW_SYSXJBXX.FWFW);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -239,6 +241,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "DPZS", "'" + GetDX("DPZS") + "'");
     obj = jsonObj.AddJson(obj, "JPSF", "'" + GetDX("JPSF") + "'");
     obj = jsonObj.AddJson(obj, "JDSF", "'" + GetDX("JDSF") + "'");
+    obj = jsonObj.AddJson(obj, "FWFW", "'" + GetDuoX("FWFW") + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");

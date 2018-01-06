@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     BindClick("LB");
-    LoadJBXX();
+    LoadFWFW();
 });
 //绑定下拉框
 function BindClick(type) {
@@ -23,7 +23,7 @@ function BindClick(type) {
         if (type === "GN") {
             LoadCODESByTYPENAME("标牌功能", "GN", "CODES_SWFW", Bind, "PHZPGN", "GN", "");
         }
-        
+
     });
 }
 //选择类别下拉框
@@ -86,7 +86,7 @@ function LoadXL(lbmc, xl) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='liXL' style='width:140px;' onclick='SelectDuoX(this)'><img class='img_XL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i % 4 === 3) {
+                    if (i % 4 === 3 && i !== xml.list.length - 1) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
                     }
                 }
@@ -138,6 +138,8 @@ function LoadJBXX() {
                 $("#spanQY").html(xml.Value.SWFW_PHZPJBXX.QY);
                 $("#spanDD").html(xml.Value.SWFW_PHZPJBXX.DD);
                 PDLB(xml.Value.SWFW_PHZPJBXX.LB, xml.Value.SWFW_PHZPJBXX.XL);
+                if (xml.Value.SWFW_PHZPJBXX.FWFW !== null)
+                    SetDuoX("FWFW", xml.Value.SWFW_PHZPJBXX.FWFW);
                 LoadPhotos(xml.Value.Photos);
             }
         },
@@ -162,6 +164,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "XL", "'" + GetDuoX("XL") + "'");
+    obj = jsonObj.AddJson(obj, "FWFW", "'" + GetDuoX("FWFW") + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");
