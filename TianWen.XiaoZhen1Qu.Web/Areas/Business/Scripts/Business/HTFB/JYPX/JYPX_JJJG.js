@@ -1,7 +1,5 @@
 ﻿$(document).ready(function () {
     LoadDuoX("辅导阶段", "FDJD");
-    LoadDuoX("辅导科目", "FDKM");
-    LoadDuoX("家教机构授课形式", "SKXS");
 });
 //加载多选
 function LoadDuoX(type, id) {
@@ -35,8 +33,12 @@ function LoadDuoX(type, id) {
                     $("#div" + id).css("display", "none");
                 else
                     $("#div" + id).css("display", "");
+                if (type === "辅导阶段")
+                    LoadDuoX("辅导科目", "FDKM");
                 if (type === "辅导科目")
-                    LoadJBXX();
+                    LoadDuoX("家教机构授课形式", "SKXS");
+                if (type === "家教机构授课形式")
+                    LoadFWFW();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -68,6 +70,8 @@ function LoadJBXX() {
                 SetDX("SF", xml.Value.JYPX_JJJGJBXX.SF);
                 SetDuoX("FDJD", xml.Value.JYPX_JJJGJBXX.FDJD);
                 SetDuoX("FDKM", xml.Value.JYPX_JJJGJBXX.FDKM);
+                if (xml.Value.JYPX_JJJGJBXX.FWFW !== null)
+                    SetDuoX("FWFW", xml.Value.JYPX_JJJGJBXX.FWFW);
                 LoadPhotos(xml.Value.Photos);
             }
         },
@@ -89,6 +93,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "SF", "'" + GetDX("SF") + "'");
     obj = jsonObj.AddJson(obj, "FDJD", "'" + GetDuoX("FDJD") + "'");
     obj = jsonObj.AddJson(obj, "FDKM", "'" + GetDuoX("FDKM") + "'");
+    obj = jsonObj.AddJson(obj, "FWFW", "'" + GetDuoX("FWFW") + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");
