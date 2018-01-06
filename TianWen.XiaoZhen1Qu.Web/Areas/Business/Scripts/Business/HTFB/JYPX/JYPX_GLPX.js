@@ -31,7 +31,7 @@ function LoadDuoX(type, id) {
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".li" + id).bind("click", function () { ValidateCheck(id, "忘记选择" + type + "啦"); });
                 if (type === "管理培训场地")
-                    LoadJBXX();
+                    LoadFWFW();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -125,6 +125,8 @@ function LoadJBXX() {
                 LoadXL(xml.Value.JYPX_GLPXJBXX.LB, xml.Value.JYPX_GLPXJBXX.XL);
                 if (xml.Value.JYPX_GLPXJBXX.CD !== null)
                     SetDuoX("CD", xml.Value.JYPX_GLPXJBXX.CD);
+                if (xml.Value.JYPX_GLPXJBXX.FWFW !== null)
+                    SetDuoX("FWFW", xml.Value.JYPX_GLPXJBXX.FWFW);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -144,6 +146,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "XL", "'" + GetDuoX("XL") + "'");
     obj = jsonObj.AddJson(obj, "CD", "'" + GetDuoX("CD") + "'");
+    obj = jsonObj.AddJson(obj, "FWFW", "'" + GetDuoX("FWFW") + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");

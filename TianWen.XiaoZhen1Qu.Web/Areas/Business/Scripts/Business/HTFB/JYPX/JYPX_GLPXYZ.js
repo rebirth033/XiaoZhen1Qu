@@ -13,7 +13,7 @@ function ValidateLB() {
 function ValidateAll() {
     if (ValidateLB()
         & ValidateCheck("CD", "忘记选择场地啦")
-
+        & ValidateCheck("FWFW", "忘记选择服务范围啦")
         & ValidateBCMS("BCMS", "忘记填写详情描述啦")
         & ValidateXXDZ()
         & ValidateCommon())

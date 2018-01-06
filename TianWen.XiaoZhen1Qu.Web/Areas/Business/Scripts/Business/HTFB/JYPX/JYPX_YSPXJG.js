@@ -35,7 +35,7 @@ function LoadDuoX(type, id) {
                 else
                     $("#div" + id).css("display", "");
                 if (type === "对象")
-                    LoadJBXX();
+                    LoadFWFW();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -128,6 +128,8 @@ function LoadJBXX() {
                 LoadPhotos(xml.Value.Photos);
                 LoadXL(xml.Value.JYPX_YSPXJGJBXX.LB, xml.Value.JYPX_YSPXJGJBXX.XL);
                 SetDuoX("DX", xml.Value.JYPX_YSPXJGJBXX.DX);
+                if (xml.Value.JYPX_YSPXJGJBXX.FWFW !== null)
+                    SetDuoX("FWFW", xml.Value.JYPX_YSPXJGJBXX.FWFW);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -147,6 +149,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "XL", "'" + GetDuoX("XL") + "'");
     obj = jsonObj.AddJson(obj, "DX", "'" + GetDuoX("DX") + "'");
+    obj = jsonObj.AddJson(obj, "FWFW", "'" + GetDuoX("FWFW") + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");
