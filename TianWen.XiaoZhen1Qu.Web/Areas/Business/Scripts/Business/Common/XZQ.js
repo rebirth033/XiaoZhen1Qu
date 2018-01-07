@@ -29,7 +29,7 @@ function LoadXZQByGrade() {
             if (xml.Result === 1) {
                 var html = "";
                 for (var i = 0; i < xml.list.length; i++) {
-                    if (xml.list[i].NAME === "北京市" || xml.list[i].NAME === "天津市" || xml.list[i].NAME === "上海市" || xml.list[i].NAME === "重庆市")
+                    if (xml.list[i].CODENAME === "北京" || xml.list[i].CODENAME === "天津" || xml.list[i].CODENAME === "上海" || xml.list[i].CODENAME === "重庆")
                         html += '<span class="span_xzq" onclick="SelectXZQ(\'' + xml.list[i].CODENAME + '\',\'' + xml.list[i].CODEID + '\')">' + xml.list[i].CODENAME + '</span>';
                     else
                         html += '<span class="span_xzq" onclick="GetCitys(\'' + xml.list[i].CODEID + '\')">' + xml.list[i].CODENAME + '</span>';

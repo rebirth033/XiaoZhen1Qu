@@ -166,7 +166,7 @@ function ToggleCondition() {
         $("#i_condition_tottle").css("background-image", "url(" + getRootPath() + "/areas/business/css/images/head_nav_up.png)");
     }
     else {
-        $(".div_condition").css("height", "180px").css("overflow", "hidden");
+        $(".div_condition").css("height", "170px").css("overflow", "hidden");
         $("#span_condition_toggle").html($("#span_condition_toggle").html().replace("精简", "更多"));
         $("#i_condition_tottle").css("background-image", "url(" + getRootPath() + "/areas/business/css/images/head_nav_down1.png)");
     }
@@ -326,13 +326,14 @@ function LoadDistrictCondition(array, type) {
     $("#div_condition_body_" + type).html('');
     var html = "";
     html += '<ul id="ul_condition_body_' + type + '" class="ul_condition_body">';
-    html += '<li class="li_condition_body_first">区域</li>';
+    html += '<li id="li_condition_body_first_QY" class="li_condition_body_first">区域</li>';
     html += '<li class="li_condition_body li_condition_body_active" onclick="SelectCondition(this)">全部</li>';
     for (var i = 0; i < array.length; i++) {
         html += '<li class="li_condition_body" onclick="SelectCondition(this)">' + array[i].CODENAME + '</li>';
     }
     html += '</ul>';
     $("#div_condition_body_" + type).append(html);
+    $("#li_condition_body_first_QY").css("height", (parseInt($("#div_condition_body_QY").css("height")) - 30));
 }
 //发布信息
 function FBXX() {
