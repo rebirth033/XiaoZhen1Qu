@@ -333,7 +333,7 @@ function LoadDistrictCondition(array, type) {
     }
     html += '</ul>';
     $("#div_condition_body_" + type).append(html);
-    $("#li_condition_body_first_QY").css("height", (parseInt($("#div_condition_body_QY").css("height")) - 30));
+    //$("#li_condition_body_first_QY").css("height", (parseInt($("#div_condition_body_QY").css("height")) - 10));
 }
 //发布信息
 function FBXX() {

@@ -10,8 +10,7 @@ $(document).ready(function () {
     LoadDefault();
 });
 //首页获取title
-function GetHeadNav()
-{
+function GetHeadNav() {
     $("#title").html("信息小镇_首页");
 }
 //发布信息
@@ -25,21 +24,25 @@ function LoadDefault() {
 }
 //加载头部搜索栏关键字
 function LoadHeadSearch() {
-    $(".div_head_right_ss").append('<span class="span_head_right_ss">租房子</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'FCCX\',\'FCCX_ZZF\',\'13\')">租房子</span>');
     $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
-    $(".div_head_right_ss").append('<span class="span_head_right_ss">二手车</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'CLCX\',\'CLCX_JC\',\'185\')">二手车</span>');
     $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
-    $(".div_head_right_ss").append('<span class="span_head_right_ss">兼职</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'QZZPCX\',\'QZZPCX_JZ\',\'89\')">兼职</span>');
     $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
-    $(".div_head_right_ss").append('<span class="span_head_right_ss">装修服务</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'ZXJCCX\',\'ZXJCCX_JZFW\',\'130\')">装修服务</span>');
     $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
-    $(".div_head_right_ss").append('<span class="span_head_right_ss">旅游度假</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'LYJDCX\',\'LYJDCX_GNY\',\'124\')">旅游度假</span>');
     $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
-    $(".div_head_right_ss").append('<span class="span_head_right_ss">居民搬家</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'SHFWCX\',\'SHFWCX_GNY\',\'172\')">居民搬家</span>');
     $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
-    $(".div_head_right_ss").append('<span class="span_head_right_ss">演出表演</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'HQSYCX\',\'HQSYCX_HQGS\',\'136\')">婚庆公司</span>');
     $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
-    $(".div_head_right_ss").append('<span class="span_head_right_ss">运动健身</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'XXYLCX\',\'XXYLCX_YDJS\',\'44\')">运动健身</span>');
+}
+//搜索栏备注导航
+function OpenSS(DL, XL, ID) {
+    window.open(getRootPath() + "/Business/" + DL + "/" + XL + "?LBID=" + ID);
 }
 //打开详细页面
 function OpenXXXX(LBID, JCXXID) {
@@ -221,8 +224,8 @@ function GetHeight(list, parentid, typename) {
         height = parseInt((count / 3)) * 30;
         if (count % 3 !== 0) height += 30;
     }
-        
-    
+
+
     return height;
 }
 //打开查询列表
