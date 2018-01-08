@@ -17,6 +17,8 @@ $(document).ready(function () {
     $("#liSJDL").bind("click", Showcellphone);
     $("#liMMDL").bind("click", Showusername);
     $("#aWJMM").attr("href", getRootPath() + "/Business/ZHMM/ZHMM");
+    $("#aYHZC1").attr("href", getRootPath() + "/Business/YHJBXX/YHJBXX");
+    $("#aYHZC2").attr("href", getRootPath() + "/Business/YHJBXX/YHJBXX");
     $("#username input").keydown(function (e) {
         var curKey = e.which;
         if (curKey === 13) MMDL();

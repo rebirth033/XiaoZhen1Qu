@@ -13,3 +13,8 @@
 .div_bottom .div_bottom_inner .span_div_bottom_inner {font-size: 14px;font-family: "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", tahoma, arial, simhei;}
 .div_bottom .div_bottom_inner .span_div_bottom_inner:hover {cursor: pointer;text-decoration: underline;}
 .div_bottom .div_bottom_inner .em_div_bottom_inner {width: 1px;background-color: #fff;height: 9px;margin: 2px 5px 0px 5px;display: inline-block;}
+
+.spanYHZC {cursor:pointer;float: right;}
+.spanYHZC:hover {color:#ad5b97;}
+.spanWJMM {cursor:pointer;}
+.spanWJMM:hover {color:#ad5b97;}
