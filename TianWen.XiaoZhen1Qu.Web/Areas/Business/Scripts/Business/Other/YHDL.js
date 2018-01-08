@@ -1,5 +1,9 @@
 ﻿var count = 60;
 $(document).ready(function () {
+    $(".div_head").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
+    $(".em_head_split").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
+    $(".div_body").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
+    $(".div_bottom").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
     $("#SJDL").bind("click", SJDL);
     $("#MMDL").bind("click", MMDL);
     $("#YHM").bind("blur", YHMCheck);
@@ -23,6 +27,7 @@ $(document).ready(function () {
     });
     $("body").css("height", document.documentElement.clientHeight);
     $(".div_body").css("height", document.documentElement.clientHeight * 0.807);
+    $("#title").html("信息小镇_登录页");
 });
 
 function Showcellphone() {

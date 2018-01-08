@@ -1,18 +1,11 @@
 ﻿@{
-    ViewBag.Title = "YHDL";
     Layout = "~/Areas/Business/Views/Shared/QT.cshtml";
 }
-
-<!DOCTYPE html>
-
-<html>
-<head>
-
-
+@section Section_Head {
     <link href="@Url.Content("~/Areas/Business/Css/Other/YHDL.css")" rel="stylesheet" />
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/Other/YHDL.js")"></script>
-</head>
-<body>
+}
+@section Section_Body {
     <div class="div_head">
         <span class="span_head_main_logo"></span>
     </div>
@@ -110,5 +103,4 @@
             <span class="span_div_bottom_inner">Copyright&nbsp;©&nbsp;&nbsp;www.infotownlet.com</span>
         </div>
     </div>
-</body>
-</html>
+}
