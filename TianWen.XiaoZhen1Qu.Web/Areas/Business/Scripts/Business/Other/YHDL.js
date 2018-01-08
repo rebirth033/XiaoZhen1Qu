@@ -206,8 +206,7 @@ function MMDL() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                //window.location.href = getRootPath() + "/Business/HTGL/HTGL";
-                window.location.reload();
+                window.location.href = getRootPath() + "/Business/SY/SY";
             } else {
                 if (xml.Type === 1) {
                     $("#YHM").css("border-color", "#F2272D");

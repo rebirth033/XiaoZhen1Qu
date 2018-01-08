@@ -70,3 +70,8 @@
 #div_body_middle_left_JYPX .li_body_middle_left_section{ height: 55px;}
 #div_body_middle_left_ZSJM .li_body_middle_left_section{ height: 55px;}
 #div_body_middle_left_PFCG .li_body_middle_left_section{ height: 45px;}
+
+.a_yhm {color:#bc6ba6;margin-left:5px;cursor:pointer;text-decoration:none;}
+.a_yhm:hover {text-decoration:none;color:#bc6ba6;}
+.a_yhm_tip {color:#666666;cursor:default;}
+.a_yhm_tip:hover {text-decoration:none;color:#666666;}

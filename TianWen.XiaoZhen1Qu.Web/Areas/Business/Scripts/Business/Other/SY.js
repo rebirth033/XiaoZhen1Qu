@@ -8,6 +8,16 @@ $(document).ready(function () {
     $(".img_head_left_logo").css("margin-left", "20px");
     $("#li_head_sy").css("background", "#bc6ba6").css("color", "#ffffff");
     LoadDefault();
+    if ($("#input_yhm").val() !== "") {
+        $("#span_yhm").html("<a class='a_yhm_tip'>您好</a>,<a class='a_yhm'>" + $("#input_yhm").val() + "</a>");
+        $("#span_yhm").css("display", "");
+        $("#span_dl").css("display", "none");
+    }
+    else {
+        $("#span_yhm").css("display", "none");
+        $("#span_dl").css("display", "");
+    }
+    $("#span_yhm").bind("click", OpenGRZX);
 });
 //首页获取title
 function GetHeadNav() {

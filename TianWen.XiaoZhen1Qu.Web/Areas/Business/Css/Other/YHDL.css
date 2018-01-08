@@ -16,5 +16,6 @@
 
 .spanYHZC {cursor:pointer;float: right;}
 .spanYHZC:hover {color:#ad5b97;}
-.spanWJMM {cursor:pointer;}
+.spanWJMM {cursor:pointer;float: right;}
 .spanWJMM:hover {color:#ad5b97;}
+.spanSplit {margin-left:5px;margin-right:5px;float:right;color:#666;}

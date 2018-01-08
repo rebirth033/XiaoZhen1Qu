@@ -5,7 +5,7 @@
     <link href=@Url.Content("~/Areas/Business/Scripts/bootstrap-3.3.7/css/bootstrap.min.css") rel="stylesheet" />
     <link href=@Url.Content("~/Areas/Business/Css/Common/PageCommon.css") rel="stylesheet" />
     <link href="@Url.Content("~/Areas/Business/Css/Common/Top.css" )" rel="stylesheet" />
-    <link href="@Url.Content("~/Areas/Business/Css/Common/XZQ.css")" rel="stylesheet"/>
+    <link href="@Url.Content("~/Areas/Business/Css/Common/XZQ.css")" rel="stylesheet" />
     <link href="@Url.Content("~/Areas/Business/Css/Common/Head.css" )" rel="stylesheet" />
     <script src=@Url.Content("~/Areas/Business/Scripts/bootstrap-3.3.7/js/bootstrap.min.js")></script>
     <script src=@Url.Content("~/Areas/Business/Scripts/underscore.min.js")></script>
@@ -28,8 +28,11 @@
         <div id="div_XZQ" class="div_dropdown">
         </div>
         <div class="div_top_right">
+            <input id="input_yhm" type="hidden" value="@ViewData["YHM"]" />
             <span id="span_dl" class="span_top_right">
                 您好，请登录
+            </span>
+            <span id="span_yhm" class="span_top_right">
             </span>
             <span class="span_top_right_split"></span>
             <span id="span_zc" class="span_top_right">
