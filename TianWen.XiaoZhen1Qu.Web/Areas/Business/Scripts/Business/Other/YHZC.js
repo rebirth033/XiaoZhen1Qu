@@ -18,7 +18,7 @@ $(document).ready(function () {
     $("#btnHQYZM").bind("click", GetCheckCode);
     $("#YZM").bind("blur", ValidateCheckCode);
     BindToolTip();
-    //DragValidate($(".dragEle"), $(".dragTipInner"));
+    $("#title").html("信息小镇_注册页");
 });
 
 function BindToolTip() {
