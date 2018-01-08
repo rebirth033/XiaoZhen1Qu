@@ -587,6 +587,7 @@
     <Content Include="Areas\Business\Css\HTFB\XXYL\XXYL_YDJB.css" />
     <Content Include="Areas\Business\Css\HTFB\XXYL\XXYL_YDJS.css" />
     <Content Include="Areas\Business\Css\HTFB\XXYL\XXYL_ZLAM.css" />
+    <Content Include="Areas\Business\Css\Other\YHZC.css" />
     <Content Include="Areas\Business\Css\Other\YHDL.css" />
     <Content Include="Areas\Business\Css\HTGL\HTGL.css" />
     <Content Include="Areas\Business\Css\XXXX\CL\CLXX_DJ.css" />

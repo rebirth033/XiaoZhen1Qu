@@ -1,6 +1,9 @@
 ﻿var count = 60;
-
 $(document).ready(function () {
+    $(".div_head").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
+    $(".em_head_split").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
+    $(".div_body").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
+    $(".div_bottom").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
     $("#Reg").bind("click", Register);
     $("#Cancel").bind("click", Close);
     $("[data-toggle='tooltip']").tooltip();

@@ -1,60 +1,75 @@
 ﻿@{
-    ViewBag.Title = "YHJBXX";
     Layout = "~/Areas/Business/Views/Shared/QT.cshtml";
 }
-
-<!DOCTYPE html>
-
-<html>
-<head>
-
-
-    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/Other/YHJBXX.js")"></script>
-</head>
-<body>
-    <div id="divReg">
-        <table class="table" style="width: 600px;">
-            <tr>
-                <td class="headtd"><span class="title">欢迎注册信息小镇</span></td>
-            </tr>
-            <tr>
-                <td style="width:50%"><input type="text" class="form-control input_text" id="YHM" column="YHM" placeholder="请输入用户名"></td>
-                <td class="Info" id="YHMInfo" style="width:50%"></td>
-            </tr>
-            <tr>
-                <td>
-                    <input type="password" class="form-control input_text" id="MM" column="MM" placeholder="请输入登录密码">
-                </td>
-                <td class="Info" id="MMInfo" style="width:50%"></td>
-            </tr>
-            <tr>
-                <td><input type="password" class="form-control input_text" id="QRMM" column="QRMM" placeholder="请再次输入登录密码"></td>
-                <td class="Info" id="QRMMInfo" style="width:50%"></td>
-            </tr>
-            <tr>
-                <td id="tdSJ">
-                    <input type="text" class="form-control input_text" style="width: 266px;" id="SJ" column="SJ" placeholder="请输入手机号">
-                    <input type="button" class="btn btn-info" id="btnHQYZM" value="获取验证码" />
-                </td>
-                <td class="Info" id="SJInfo" style="width: 50%"></td>
-            </tr>
-            <tr>
-                <td><input type="text" class="form-control input_text" id="YZM" column="YZM" placeholder="请输入验证码"></td>
-                <td class="Info" id="YZMInfo" style="width:50%"></td>
-            </tr>
-            @*<tr>
-                    <td>
-                        <div class="box">
-                            <div class="dragEle">>></div>
-                            <div class="dragTip"><div class="dragTipInner">拖动滑块到最右边,完成验证</div></div>
-                            <div class="tips">拖动滑块到最右边,完成验证</div>
-                        </div>
-                    </td>
-                </tr>*@
-            <tr>
-                <td><input type="button" class="btn btn-info input_text" id="Reg" value="同意条款并注册" /></td>
-            </tr>
-        </table>
+@section Section_Head {
+    <link href="@Url.Content("~/Areas/Business/Css/Other/YHZC.css")" rel="stylesheet" />
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/Other/YHZC.js")"></script>
+}
+@section Section_Body {
+    <div class="div_head">
+        <span class="span_head_main_logo"></span>
     </div>
-</body>
-</html>
+    <em class="em_head_split"></em>
+    <div class="div_body">
+        <div id="divReg" class="div_body_yhzc">
+            <table class="table" style="width: 600px;">
+                <tr>
+                    <td class="headtd"><span class="title">欢迎注册信息小镇</span></td>
+                </tr>
+                <tr>
+                    <td style="width:50%"><input type="text" class="form-control input_text" id="YHM" column="YHM" placeholder="请输入用户名"></td>
+                    <td class="Info" id="YHMInfo" style="width:50%"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="password" class="form-control input_text" id="MM" column="MM" placeholder="请输入登录密码">
+                    </td>
+                    <td class="Info" id="MMInfo" style="width:50%"></td>
+                </tr>
+                <tr>
+                    <td><input type="password" class="form-control input_text" id="QRMM" column="QRMM" placeholder="请再次输入登录密码"></td>
+                    <td class="Info" id="QRMMInfo" style="width:50%"></td>
+                </tr>
+                <tr>
+                    <td id="tdSJ">
+                        <input type="text" class="form-control input_text" style="width: 266px;" id="SJ" column="SJ" placeholder="请输入手机号">
+                        <input type="button" class="btn btn-info" id="btnHQYZM" value="获取验证码" />
+                    </td>
+                    <td class="Info" id="SJInfo" style="width: 50%"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" class="form-control input_text" id="YZM" column="YZM" placeholder="请输入验证码"></td>
+                    <td class="Info" id="YZMInfo" style="width:50%"></td>
+                </tr>
+                @*<tr>
+                        <td>
+                            <div class="box">
+                                <div class="dragEle">>></div>
+                                <div class="dragTip"><div class="dragTipInner">拖动滑块到最右边,完成验证</div></div>
+                                <div class="tips">拖动滑块到最右边,完成验证</div>
+                            </div>
+                        </td>
+                    </tr>*@
+                <tr>
+                    <td><input type="button" class="btn btn-info input_text" id="Reg" value="同意条款并注册" /></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="div_bottom">
+        <div class="div_bottom_inner">
+            <span class="span_div_bottom_inner">关于信息小镇</span>
+            <em class="em_div_bottom_inner"></em>
+            <span class="span_div_bottom_inner">联系我们</span>
+            <em class="em_div_bottom_inner"></em>
+            <span class="span_div_bottom_inner">友情链接</span>
+        </div>
+        <div class="div_bottom_inner">
+            <span class="span_div_bottom_inner">推广服务</span>
+            <em class="em_div_bottom_inner"></em>
+            <span class="span_div_bottom_inner">客户服务中心</span>
+            <em class="em_div_bottom_inner"></em>
+            <span class="span_div_bottom_inner">Copyright&nbsp;©&nbsp;&nbsp;www.infotownlet.com</span>
+        </div>
+    </div>
+}
