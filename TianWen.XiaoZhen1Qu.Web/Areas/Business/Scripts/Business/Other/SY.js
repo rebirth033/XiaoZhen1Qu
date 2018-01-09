@@ -7,6 +7,10 @@ $(document).ready(function () {
     $(".div_bottom").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
     $(".img_head_left_logo").css("margin-left", "20px");
     $("#li_head_sy").css("background", "#bc6ba6").css("color", "#ffffff");
+    $("#liWDXX").bind("click", ShowWDXX);
+    $("#liWDZH").bind("click", ShowWDZH);
+    $("#liWDZJ").bind("click", ShowWDZJ);
+    $("#liSHGJ").bind("click", ShowSHGJ);
     LoadDefault();
 });
 //首页获取title
@@ -250,7 +254,7 @@ function HideYHCD() {
 function LoadUser() {
     if ($("#input_yhm").val() !== "") {
         var html = "";
-        html += "<a class='a_yhm_tip'>您好</a>,<a class='a_yhm'>" + $("#input_yhm").val() + "</a id='i_yhm' class='i_yhm'>";
+        html += "<a class='a_yhm'>" + $("#input_yhm").val() + "</a id='i_yhm' class='i_yhm'>";
         html += '<span class="span_top_right_yhm" id="span_top_right_yhm_img"></span>';
         html += '<div class="div_top_right_dropdown_yhm" id="div_top_right_dropdown_yhm">';
         html += '<ul class="ul_top_right_yhm">';
@@ -271,4 +275,60 @@ function LoadUser() {
     }
     $("#div_yhm").bind("mouseover", ShowYHCD);
     $("#div_yhm").bind("mouseleave", HideYHCD);
+}
+//退出
+function Exit() {
+    window.location.href = getRootPath() + "/Business/YHDL/YHDL";
+}
+//显示我的信息
+function ShowWDXX() {
+    window.open(getRootPath() + "/Business/HTGL/HTGL");
+    $("#liWDXX").css("font-size", "18px").css("font-weight", "700");
+    $("#liWDZH").css("font-size", "16px").css("font-weight", "normal");
+    $("#liWDZJ").css("font-size", "16px").css("font-weight", "normal");
+    $("#liSHGJ").css("font-size", "16px").css("font-weight", "normal");
+    $("#ulWDXX").css("display", "block");
+    $("#ulWDZH").css("display", "block");
+    $("#ulWDZJ").css("display", "block");
+    $("#ulSHGJ").css("display", "block");
+    ToWDFB();
+}
+//显示我的账户
+function ShowWDZH() {
+    window.open(getRootPath() + "/Business/HTGL/HTGL");
+    $("#liWDXX").css("font-size", "16px").css("font-weight", "normal");
+    $("#liWDZH").css("font-size", "18px").css("font-weight", "700");
+    $("#liWDZJ").css("font-size", "16px").css("font-weight", "normal");
+    $("#liSHGJ").css("font-size", "16px").css("font-weight", "normal");
+    $("#ulWDXX").css("display", "none");
+    $("#ulWDZH").css("display", "block");
+    $("#ulWDZJ").css("display", "block");
+    $("#ulSHGJ").css("display", "block");
+    ToGRZL();
+}
+//显示我的资金
+function ShowWDZJ() {
+    window.open(getRootPath() + "/Business/HTGL/HTGL");
+    $("#liWDXX").css("font-size", "16px").css("font-weight", "normal");
+    $("#liWDZH").css("font-size", "16px").css("font-weight", "normal");
+    $("#liWDZJ").css("font-size", "18px").css("font-weight", "700");
+    $("#liSHGJ").css("font-size", "16px").css("font-weight", "normal");
+    $("#ulWDXX").css("display", "none");
+    $("#ulWDZH").css("display", "none");
+    $("#ulWDZJ").css("display", "block");
+    $("#ulSHGJ").css("display", "block");
+    ToXJMXCX();
+}
+//显示生活工具
+function ShowSHGJ() {
+    window.open(getRootPath() + "/Business/HTGL/HTGL");
+    $("#liWDXX").css("font-size", "16px").css("font-weight", "normal");
+    $("#liWDZH").css("font-size", "16px").css("font-weight", "normal");
+    $("#liWDZJ").css("font-size", "16px").css("font-weight", "normal");
+    $("#liSHGJ").css("font-size", "18px").css("font-weight", "700");
+    $("#ulWDXX").css("display", "none");
+    $("#ulWDZH").css("display", "none");
+    $("#ulWDZJ").css("display", "none");
+    $("#ulSHGJ").css("display", "block");
+    ToHFCZ();
 }
