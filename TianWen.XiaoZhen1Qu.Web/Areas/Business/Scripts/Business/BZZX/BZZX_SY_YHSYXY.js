@@ -1,5 +1,6 @@
 ﻿$(document).ready(function () {
     $(".span_body_nav").bind("click", GoToTip);
+    $("#title").html("信息小镇_用户使用协议");
 });
 
 function GoToTip() {

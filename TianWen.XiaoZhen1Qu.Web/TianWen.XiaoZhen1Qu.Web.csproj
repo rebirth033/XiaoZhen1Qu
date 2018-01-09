@@ -155,7 +155,7 @@
     <Content Include="Areas\Business\Css\BZZX\BZZX_SY_KSDH_ZHDJYXY.css" />
     <Content Include="Areas\Business\Css\BZZX\BZZX_SY_RZSM.css" />
     <Content Include="Areas\Business\Css\BZZX\BZZX_SY_XXBSC.css" />
-    <Content Include="Areas\Business\Css\BZZX\BZZX_SY_XXWFFB.css" />
+    <Content Include="Areas\Business\Css\BZZX\BZZX_SY_YHSYXY.css" />
     <Content Include="Areas\Business\Css\BZZX\BZZX_SY_YYYZM.css" />
     <Content Include="Areas\Business\Css\BZZX\BZZX_SY_ZDJS.css" />
     <Content Include="Areas\Business\Css\BZZX\BZZX_SY_ZHMM.css" />
@@ -839,7 +839,7 @@
     <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_SY_KSDH_ZHDJYXY.js" />
     <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_SY_RZSM.js" />
     <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_SY_XXBSC.js" />
-    <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_SY_XXWFFB.js" />
+    <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_SY_YHSYXY.js" />
     <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_SY_YYYZM.js" />
     <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_SY_ZDJS.js" />
     <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_SY_ZHMM.js" />
@@ -2165,7 +2165,7 @@
     <Content Include="Areas\Business\Views\BZZX\BZZX_SY_DHMYCX.cshtml" />
     <Content Include="Areas\Business\Views\BZZX\BZZX_SY_YYYZM.cshtml" />
     <Content Include="Areas\Business\Views\BZZX\BZZX_SY_RZSM.cshtml" />
-    <Content Include="Areas\Business\Views\BZZX\BZZX_SY_XXWFFB.cshtml" />
+    <Content Include="Areas\Business\Views\BZZX\BZZX_SY_YHSYXY.cshtml" />
     <Content Include="Areas\Business\Views\BZZX\BZZX_SY_XXBSC.cshtml" />
     <Content Include="Areas\Business\Views\BZZX\BZZX_SY_FBGZLTZ.cshtml" />
     <Content Include="Areas\Business\Views\BZZX\BZZX_SY_FTBG.cshtml" />

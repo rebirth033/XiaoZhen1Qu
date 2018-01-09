@@ -17,6 +17,7 @@ $(document).ready(function () {
     $("#SJ").bind("keydown", ColorChange);
     $("#btnHQYZM").bind("click", GetCheckCode);
     $("#YZM").bind("blur", ValidateCheckCode);
+    $("#a_syxy").bind("click", OpenSYXY);
     BindToolTip();
     $("#title").html("信息小镇_注册页");
 });
@@ -190,13 +191,12 @@ function ColorChange() {
 }
 
 function Validate() {
-    if (!SYXYCheck()) return false;
     if (!YHMCheck()) return false;
     if (!MMCheck()) return false;
     if (!QRMMCheck()) return false;
     if (!SJCheck()) return false;
     if (!ValidateCheckCode()) return false;
-    
+    if (!SYXYCheck()) return false;
     return true;
 }
 
@@ -230,7 +230,7 @@ function Register() {
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-            
+
         }
     });
 }
@@ -365,4 +365,8 @@ function ValidateCheckCode() {
         $("#YZMInfo").html('<img src=' + getRootPath() + '/Areas/Business/Css/images/yes.png />');
         return true;
     }
+}
+
+function OpenSYXY() {
+    window.open(getRootPath() + "/Business/BZZX/BZZX_SY_YHSYXY");
 }
