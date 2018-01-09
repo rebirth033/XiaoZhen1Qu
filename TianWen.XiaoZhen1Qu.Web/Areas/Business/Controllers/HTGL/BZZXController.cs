@@ -60,7 +60,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return View();
         }
 
-        public ActionResult BZZX_SY_XXWFFB()
+        public ActionResult BZZX_SY_YHSYXY()
         {
             return View();
         }
