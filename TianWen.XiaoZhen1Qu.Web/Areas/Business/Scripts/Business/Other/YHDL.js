@@ -28,7 +28,6 @@ $(document).ready(function () {
         if (curKey === 13) SJDL();
     });
     $("body").css("height", document.documentElement.clientHeight);
-    $(".div_body").css("height", document.documentElement.clientHeight * 0.807);
     $("#title").html("信息小镇_登录页");
 });
 

@@ -8,11 +8,11 @@
 });
 //登录
 function OpenDL() {
-    window.open(getRootPath() + "/Business/YHDL/YHDL");
+    window.location.href = getRootPath() + "/Business/YHDL/YHDL";
 }
 //注册
 function OpenZC() {
-    window.open(getRootPath() + "/Business/YHJBXX/YHJBXX");
+    window.location.href = getRootPath() + "/Business/YHJBXX/YHJBXX";
 }
 //个人中心
 function OpenGRZX() {

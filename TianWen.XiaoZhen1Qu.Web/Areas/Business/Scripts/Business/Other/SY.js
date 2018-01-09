@@ -278,7 +278,22 @@ function LoadUser() {
 }
 //退出
 function Exit() {
-    window.location.href = getRootPath() + "/Business/YHDL/YHDL";
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/YHDL/Exit",
+        dataType: "json",
+        data: {
+
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                window.location.href = getRootPath() + "/Business/YHDL/YHDL";
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
 }
 //显示我的信息
 function ShowWDXX() {

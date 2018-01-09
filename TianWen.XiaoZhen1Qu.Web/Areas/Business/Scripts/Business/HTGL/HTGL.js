@@ -55,8 +55,24 @@ function HideYHCD() {
     $("#span_top_right_yhm_img").css("background-image", 'url(' + getRootPath() + "/Areas/Business/Css/images/arrow_down.png" + ')');
 }
 //退出
+//退出
 function Exit() {
-    window.location.href = getRootPath() + "/Business/YHDL/YHDL";
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/YHDL/Exit",
+        dataType: "json",
+        data: {
+
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                window.location.href = getRootPath() + "/Business/YHDL/YHDL";
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
 }
 //自动登录
 function AutoLogin() {

@@ -82,5 +82,11 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
                 return Json(result);
             }
         }
+
+        public JsonResult Exit()
+        {
+            Session["YHM"] = "";
+            return Json(new { Result = EnResultType.Success, Message = "退出成功" });
+        }
     }
 }
