@@ -174,16 +174,29 @@ function SJCheck() {
     }
 }
 
+function SYXYCheck() {
+    if ($("#SYXY")[0].checked === false) {
+        $("#SYXYInfo").css("color", "#F2272D");
+        $("#SYXYInfo").html("还未阅读并同意协议");
+    }
+    else {
+        $("#SYXYInfo").html('<img src=' + getRootPath() + '/Areas/Business/Css/images/yes.png />');
+        return true;
+    }
+}
+
 function ColorChange() {
     $(this).css("border-color", "#999");
 }
 
 function Validate() {
+    if (!SYXYCheck()) return false;
     if (!YHMCheck()) return false;
     if (!MMCheck()) return false;
     if (!QRMMCheck()) return false;
     if (!SJCheck()) return false;
     if (!ValidateCheckCode()) return false;
+    
     return true;
 }
 
