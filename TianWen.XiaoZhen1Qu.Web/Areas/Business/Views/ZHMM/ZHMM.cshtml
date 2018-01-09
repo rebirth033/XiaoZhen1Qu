@@ -1,16 +1,11 @@
 ﻿@{
-    ViewBag.Title = "ZHMM";
     Layout = "~/Areas/Business/Views/Shared/QT.cshtml";
 }
-
-<html>
-<head>
-
-
-    <link href="@Url.Content("~/Areas/Business/Css/ZHMM.css")" rel="stylesheet" />
-    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/HTFB/ZHMM.js")"></script>
-</head>
-<body>
+@section Section_Head {
+    <link href="@Url.Content("~/Areas/Business/Css/HTGL/WDZH/ZHMM.css")" rel="stylesheet" />
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/HTGL/WDZH/ZHMM.js")"></script>
+}
+@section Section_Body {
     <div class="div_head_inner">
         <div class="divstep" id="divQRZH">
             <span class="spanstep" id="spanQRZH">确认账户</span>
@@ -49,7 +44,7 @@
                 <tr>
                     <td>
                         <input type="text" id="SJ" class="form-control input_text" style="width: 266px;" placeholder="请输入手机号">
-                        <input type="button" class="btn btn-info" id="btnHQYZM" value="获取验证码"/>
+                        <input type="button" class="btn btn-info" id="btnHQYZM" value="获取验证码" />
                     </td>
                     <td class="Info" id="SJInfo" style="width: 50%"></td>
                 </tr>
@@ -58,7 +53,7 @@
                     <td class="Info" id="YZMInfo" style="width: 50%"></td>
                 </tr>
                 <tr>
-                    <td><input type="button" class="btn btn-info input_text" id="btnSecond" value="下一步"/></td>
+                    <td><input type="button" class="btn btn-info input_text" id="btnSecond" value="下一步" /></td>
                 </tr>
             </table>
         </div>
@@ -80,5 +75,4 @@
             </table>
         </div>
     </div>
-</body>
-</html>
+}

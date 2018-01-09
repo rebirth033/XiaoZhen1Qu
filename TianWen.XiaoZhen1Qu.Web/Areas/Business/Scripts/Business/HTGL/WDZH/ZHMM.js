@@ -1,5 +1,4 @@
 ﻿var count = 60;
-
 $(document).ready(function () {
     //$("#YHM").bind("blur", YHMCheck);
     //$("#TXYZM").bind("blur", TXYZMCheck);
@@ -11,6 +10,7 @@ $(document).ready(function () {
     $("#btnThird").bind("click", CZMM);
     $("#spanQRZH").css("color", "#bc6ba6");
     $("#emQRZH").css("background", "#bc6ba6");
+    $("#title").html("信息小镇_找回密码")
 });
 //确认账户
 function QRZH() {

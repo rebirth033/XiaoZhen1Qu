@@ -1,22 +1,14 @@
 ﻿@{
-    ViewBag.Title = "MMSZ";
     Layout = "~/Areas/Business/Views/Shared/QT.cshtml";
 }
-
-<!DOCTYPE html>
-
-<html>
-<head>
-
-
-
-    <link href="@Url.Content("~/Areas/Business/Css/GRZL/MMSZ.css")" rel="stylesheet" />
+@section Section_Head {
+    <link href="@Url.Content("~/Areas/Business/Css/HTGL/WDZH/MMSZ.css")" rel="stylesheet" />
     <link href="@Url.Content("~/Areas/Business/Scripts/jquery-ui-1.12.1.custom/jquery-ui.min.css")" rel="stylesheet" />
-    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/HTFB/GRZL/MMSZ.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/HTGL/WDZH/MMSZ.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/jquery-ui-1.12.1.custom/jquery-ui.min.js")"></script>
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/jquery-ui-1.12.1.custom/jquery.ui.datepicker-zh-CN.js")"></script>
-</head>
-<body>
+}
+@section Section_Body {
     <div class="div_content">
         <div class="div_head">
             <span class="span_head">修改密码</span>
@@ -58,8 +50,7 @@
             </table>
         </div>
         <div class="div_bottom">
-            <input class="input_bottom" id="input_bottom_wcxg" type="button" value="完成修改"/>
+            <input class="input_bottom" id="input_bottom_wcxg" type="button" value="完成修改" />
         </div>
     </div>
-</body>
-</html>
+}
