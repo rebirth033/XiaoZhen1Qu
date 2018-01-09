@@ -105,7 +105,7 @@
 
     .span_body_nav:hover {
         cursor: pointer;
-        color: #ff6100;
+        color: #bc6ba6;
     }
 
 .childnode {
@@ -139,13 +139,13 @@
 }
 
 .highlight {
-    color: #ff6100;
+    color: #bc6ba6;
     font-weight: 700;
 }
 
     .highlight:hover {
         text-decoration: none;
-        color: #ff6100;
+        color: #bc6ba6;
     }
 
 .cursor {
@@ -156,7 +156,7 @@
     .cursor:hover {
         text-decoration: underline;
         cursor: pointer;
-        color: #ff6100;
+        color: #bc6ba6;
     }
 
 .span_body_nav_img {

@@ -22,12 +22,12 @@
     $("#spanBZZX").bind("click", OpenBZZX);
     $("#spanXJMXCX").bind("click", ToXJMXCX);
     $("#spanXJCZ").bind("click", ToXJCZ);
-    $("#spanWDQZ").parent().bind("click", { type: "WDQZ" }, ExpandSecond_Leaf);
-    $("#spanWDZP").parent().bind("click", { type: "WDZP" }, ExpandSecond_Tree);
-    $("#spanZWGL").parent().bind("click", { type: "ZWGL" }, ExpandThird);
-    $("#spanJLGL").parent().bind("click", { type: "JLGL" }, ExpandThird);
-    $("#spanZHXX").parent().bind("click", { type: "ZHXX" }, ExpandThird);
-    $("#spanTGB").parent().bind("click", { type: "TGB" }, ExpandSecond_Leaf);
+    //$("#spanWDQZ").parent().bind("click", { type: "WDQZ" }, ExpandSecond_Leaf);
+    //$("#spanWDZP").parent().bind("click", { type: "WDZP" }, ExpandSecond_Tree);
+    //$("#spanZWGL").parent().bind("click", { type: "ZWGL" }, ExpandThird);
+    //$("#spanJLGL").parent().bind("click", { type: "JLGL" }, ExpandThird);
+    //$("#spanZHXX").parent().bind("click", { type: "ZHXX" }, ExpandThird);
+    //$("#spanTGB").parent().bind("click", { type: "TGB" }, ExpandSecond_Leaf);
     $(".li_left_menu").bind("click", LiFocus);
     $("#span_close").bind("click", CloseQQRZ);
     $("#span_xjfwxy_close").bind("click", CloseXJFWXY);
@@ -88,7 +88,7 @@ function LiFocus() {
         });
     });
     $(this).find("span").each(function () {
-        $(this).css("color", "#ff6100");
+        $(this).css("color", "#bc6ba6");
     });
 }
 //我的发布

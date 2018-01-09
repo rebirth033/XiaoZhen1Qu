@@ -109,7 +109,7 @@
 
 .span_content_info_inner_yzm {
     cursor: pointer;
-    color: #ff6100;
+    color: #bc6ba6;
 }
 
     .span_content_info_inner_yzm:hover {
@@ -181,7 +181,7 @@
 }
 
     .span_content_info_sjyzm_tip_inner:hover {
-        color: #ff6100;
+        color: #bc6ba6;
     }
 
 .span_content_info_sjyzm_bottom_tip {
@@ -297,7 +297,7 @@
 }
 
     .span_main_info_bt:hover {
-        color: #ff6100;
+        color: #bc6ba6;
         text-decoration: underline;
     }
 

@@ -56,7 +56,7 @@ function SZMXSpanActive(obj) {
         if (this.id !== id)
             $(this).hover(function () {
                 $(this).css("background-color", "#f0f8fa");
-                $(this).css("color", "#ff6100");
+                $(this).css("color", "#bc6ba6");
             }, function () {
                 $(this).css("background-color", "#ffffff");
                 $(this).css("color", "#ad5b97");
@@ -76,7 +76,7 @@ function DJJDJLSpanActive(obj) {
         if (this.id !== id)
             $(this).hover(function () {
                 $(this).css("background-color", "#f0f8fa");
-                $(this).css("color", "#ff6100");
+                $(this).css("color", "#bc6ba6");
             }, function () {
                 $(this).css("background-color", "#ffffff");
                 $(this).css("color", "#ad5b97");

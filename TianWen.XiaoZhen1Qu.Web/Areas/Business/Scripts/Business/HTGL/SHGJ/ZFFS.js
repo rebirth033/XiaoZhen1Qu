@@ -7,7 +7,7 @@
 });
 //选择支付宝
 function SelectZFB() {
-    $("#span_content_info_left_zffs_zfb").css("border-color", "#ff6100");
+    $("#span_content_info_left_zffs_zfb").css("border-color", "#bc6ba6");
     $("#span_content_info_left_zffs_wx").css("border-color", "#cccccc");
     $("#div_content_info_zfb").css("display", "block");
     $("#div_content_info_wx").css("display", "none");
@@ -15,7 +15,7 @@ function SelectZFB() {
 //选择微信
 function SelectWX() {
     $("#span_content_info_left_zffs_zfb").css("border-color", "#cccccc");
-    $("#span_content_info_left_zffs_wx").css("border-color", "#ff6100");
+    $("#span_content_info_left_zffs_wx").css("border-color", "#bc6ba6");
     $("#div_content_info_zfb").css("display", "none");
     $("#div_content_info_wx").css("display", "block");
 }

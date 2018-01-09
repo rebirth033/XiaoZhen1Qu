@@ -89,7 +89,7 @@
 
 .span_mc {display: block;float: left;height: 35px;line-height: 30px;width: 110px;color: #333;font-size: 14px;text-align: center;cursor: pointer;}
 
-.span_mc:hover {color: #ff6100;font-weight: 700;}
+.span_mc:hover {color: #bc6ba6;font-weight: 700;}
 
 .input_content {width: 451px;cursor: default;border: 2px solid #ccc;border-radius: 4px;height: 34px;padding: 4px 12px;display: inline-block;}
 

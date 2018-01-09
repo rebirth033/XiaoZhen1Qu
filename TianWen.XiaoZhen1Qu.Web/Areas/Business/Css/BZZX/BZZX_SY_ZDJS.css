@@ -83,7 +83,7 @@
 
     .span_body_nav:hover {
         cursor: pointer;
-        color: #ff6100;
+        color: #bc6ba6;
     }
 
 .span_body_nav_inner {
@@ -111,13 +111,13 @@
 }
 
 .highlight {
-    color: #ff6100;
+    color: #bc6ba6;
     font-weight: 700;
 }
 
     .highlight:hover {
         text-decoration: none;
-        color: #ff6100;
+        color: #bc6ba6;
     }
 
 .div_rtop {

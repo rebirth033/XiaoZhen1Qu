@@ -33,7 +33,7 @@
     height: 40px;
     display: block;
     font-size: 26px;
-    color: #ff6100;
+    color: #bc6ba6;
 }
 
 .div_content {
@@ -98,7 +98,7 @@
 
     .span_main_info_right:hover {
         background-color: #f0f8fa;
-        color: #ff6100;
+        color: #bc6ba6;
     }
 
 .input_spaninput {

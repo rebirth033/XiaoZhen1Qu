@@ -66,7 +66,9 @@ function LoadInfo(obj) {
     html += ('<li class="li_new_info">');
     html += ('<div class="div_new_info">');
     html += ('<div class="div_new_info_head">');
-    html += ('<span class="span_new_info_head">信息号: ' + obj.JCXXID + '</span>');
+    html += ('<span class="span_new_info_head">' + obj.CJSJ.ToString("yyyy年MM月dd日 hh:mm") + '</span>');
+    html += ('<span class="span_new_info_edit"></span>');
+    html += ('<span class="span_new_info_delete"></span>');
     html += ('</div>');
     html += ('<div class="div_new_info_body">');
     html += ('<div class="div_new_info_body_left">');
@@ -79,7 +81,6 @@ function LoadInfo(obj) {
     html += ('</div>');
     html += ('<div class="div_new_info_body_left_inner_info">');
     html += ('<span class="span_new_info_body_left_bt">' + obj.BT + '</span>');
-    html += ('<span class="span_new_info_body_left_rq">' + obj.CJSJ.ToString("yyyy-MM-dd hh:mm:ss") + '</span>');
     html += ('<span class="span_new_info_body_left_dh">' + obj.DH + '</span>');
     html += ('</div>');
     html += ('</div>');

@@ -30,15 +30,15 @@ body{width: 100%; height: 100%; overflow-x:hidden; background-color: #eeeff1;}
 
 .span_left_menu_second {font-size: 16px;margin-bottom: 5px;line-height: 40px;color: #595757;cursor: pointer;text-align: right;margin-right: 16px;display: inline-block;width: 80px;}
 
-.span_left_menu_second:hover {color: #ff6100;}
+.span_left_menu_second:hover {color: #bc6ba6;}
 
 .span_left_menu_third {font-size: 14px;margin-bottom: 5px;line-height: 35px;margin-left: 50px;color: #595757;cursor: pointer;display: none;text-align: left;width: 70px;}
 
-.span_left_menu_third:hover {color: #ff6100;}
+.span_left_menu_third:hover {color: #bc6ba6;}
 
 .span_left_menu_four {font-size: 12px;margin-bottom: 5px;line-height: 35px;margin-left: 25px;color: #595757;cursor: pointer;display: none;}
 
-.span_left_menu_four:hover {color: #ff6100;}
+.span_left_menu_four:hover {color: #bc6ba6;}
 
 .img_left_menu_second {width: 10px;height: 10px;margin-top: 15px;margin-left: 12px;position: absolute;float: right;cursor: pointer;}
 
@@ -46,7 +46,9 @@ body{width: 100%; height: 100%; overflow-x:hidden; background-color: #eeeff1;}
 
 .em_left_menu {width: 140px;height: 1px;float: left;background: #cccccc;}
 
-.li_left_menu {width: 130px;text-align: center;}
+.li_left_menu {width: 140px;text-align: center;}
+
+.li_left_menu:hover {color:#bc6ba6;}
 
 .li_left_menu_expand {cursor: pointer;}
 
