@@ -16,7 +16,12 @@ function OpenZC() {
 }
 //个人中心
 function OpenGRZX() {
-    window.open(getRootPath() + "/Business/HTGL/HTGL");
+    if ($("#input_yhm").val() !== "") {
+        window.open(getRootPath() + "/Business/HTGL/HTGL");
+    }
+    else {
+        window.open(getRootPath() + "/Business/YHDL/YHDL?To=HTGL");
+    }
 }
 //帮助中心
 function OpenBZZX() {

@@ -8,16 +8,6 @@ $(document).ready(function () {
     $(".img_head_left_logo").css("margin-left", "20px");
     $("#li_head_sy").css("background", "#bc6ba6").css("color", "#ffffff");
     LoadDefault();
-    if ($("#input_yhm").val() !== "") {
-        $("#span_yhm").html("<a class='a_yhm_tip'>您好</a>,<a class='a_yhm'>" + $("#input_yhm").val() + "</a>");
-        $("#span_yhm").css("display", "");
-        $("#span_dl").css("display", "none");
-    }
-    else {
-        $("#span_yhm").css("display", "none");
-        $("#span_dl").css("display", "");
-    }
-    $("#span_yhm").bind("click", OpenGRZX);
 });
 //首页获取title
 function GetHeadNav() {
@@ -31,6 +21,7 @@ function FBXX() {
 function LoadDefault() {
     LoadSY_ML();
     LoadHeadSearch();
+    LoadUser();
 }
 //加载头部搜索栏关键字
 function LoadHeadSearch() {
@@ -244,4 +235,40 @@ function OpenCXLB(lbid, lburl, condition) {
         window.open(getRootPath() + "/Business" + lburl + "?LBID=" + lbid + "&" + condition);
     else
         window.open(getRootPath() + "/Business" + lburl + "?LBID=" + lbid);
+}
+//显示用户菜单
+function ShowYHCD() {
+    $("#div_top_right_dropdown_yhm").css("display", "block");
+    $("#span_top_right_yhm_img").css("background-image", 'url(' + getRootPath() + "/Areas/Business/Css/images/arrow_up.png" + ')');
+}
+//隐藏用户菜单
+function HideYHCD() {
+    $("#div_top_right_dropdown_yhm").css("display", "none");
+    $("#span_top_right_yhm_img").css("background-image", 'url(' + getRootPath() + "/Areas/Business/Css/images/arrow_down.png" + ')');
+}
+//加载用户下拉框
+function LoadUser() {
+    if ($("#input_yhm").val() !== "") {
+        var html = "";
+        html += "<a class='a_yhm_tip'>您好</a>,<a class='a_yhm'>" + $("#input_yhm").val() + "</a id='i_yhm' class='i_yhm'>";
+        html += '<span class="span_top_right_yhm" id="span_top_right_yhm_img"></span>';
+        html += '<div class="div_top_right_dropdown_yhm" id="div_top_right_dropdown_yhm">';
+        html += '<ul class="ul_top_right_yhm">';
+        html += '<li class="li_top_right_yhm" onclick="ShowWDXX()">我的信息</li>';
+        html += '<li class="li_top_right_yhm" onclick="ShowWDZH()">我的账户</li>';
+        html += '<li class="li_top_right_yhm" onclick="ShowWDZJ()">我的资金</li>';
+        html += '<li class="li_top_right_yhm" onclick="ShowSHGJ()">生活工具</li>';
+        html += '<li class="li_top_right_yhm" onclick="Exit()">退出</li>';
+        html += '</ul>';
+        html += '</div>';
+        $("#div_yhm").html(html);
+        $("#div_yhm").css("display", "");
+        $("#span_dl").css("display", "none");
+    }
+    else {
+        $("#div_yhm").css("display", "none");
+        $("#span_dl").css("display", "");
+    }
+    $("#div_yhm").bind("mouseover", ShowYHCD);
+    $("#div_yhm").bind("mouseleave", HideYHCD);
 }

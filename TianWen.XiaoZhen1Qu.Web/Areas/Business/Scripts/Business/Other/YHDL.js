@@ -178,8 +178,7 @@ function SJDL() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                //window.location.href = getRootPath() + "/Business/HTGL/HTGL";
-                window.location.reload();
+                DLCG();
             } else {
                 $("#YZM").css("border-color", "#F2272D");
                 $("#YZMInfo").css("color", "#F2272D");
@@ -206,7 +205,7 @@ function MMDL() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                window.location.href = getRootPath() + "/Business/SY/SY";
+                DLCG();
             } else {
                 if (xml.Type === 1) {
                     $("#YHM").css("border-color", "#F2272D");
@@ -271,4 +270,11 @@ function GetNumber() {
 
 function ColorChange() {
     $(this).css("border-color", "#999");
+}
+
+function DLCG() {
+    if (getUrlParam("To") === "HTGL")
+        window.location.href = getRootPath() + "/Business/HTGL/HTGL";
+    else
+        window.location.href = getRootPath() + "/Business/SY/SY";
 }

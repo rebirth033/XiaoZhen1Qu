@@ -33,7 +33,6 @@
 .div_body .div_body_middle .div_body_middle_left_section .ul_body_middle_left_section_shfw .li_body_middle_left_section_shfw{display: inline-block;width: 65px;height: 30px;font-size: 15px;float: left;color: #333333;}
 .div_body .div_body_middle .div_body_middle_left_section .ul_body_middle_left_section_shfw .li_body_middle_left_section_shfw:hover{ cursor: pointer;color: #bc6ba6;text-decoration: underline;}
 
-
 .div_body .div_body_middle .div_body_middle_left_section_fl{ display: block;}
 .div_body .div_body_middle .div_body_middle_left_section_fl .span_body_middle_left_section_fl_left{ display: inline-block;float: left;width: 75px;}
 .div_body .div_body_middle .div_body_middle_left_section_fl .span_body_middle_left_section_fl_left:hover{ cursor: pointer;color: #bc6ba6;text-decoration: underline;}
@@ -75,3 +74,10 @@
 .a_yhm:hover {text-decoration:none;color:#bc6ba6;}
 .a_yhm_tip {color:#666666;cursor:default;}
 .a_yhm_tip:hover {text-decoration:none;color:#666666;}
+
+
+.div_top_right_dropdown_yhm {top: 0;left: 0;display: none;}
+.div_top_right_dropdown_yhm .ul_top_right_yhm {width: 70px;height: 150px;padding-left: 0px;margin-top: 20px;}
+.div_top_right_dropdown_yhm .ul_top_right_yhm .li_top_right_yhm {width: 70px;height: 30px;font-size: 12px;text-align: left;background-color: #ffffff;padding: 5px 5px;}
+.div_top_right_dropdown_yhm .ul_top_right_yhm .li_top_right_yhm:hover {background: #ececec;color: #333333;}
+.span_top_right_yhm {background-image: url(../images/arrow_down.png);width: 12px;height: 18px;margin: 0px 5px 0 5px;float: right;}
