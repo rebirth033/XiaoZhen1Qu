@@ -1,183 +1,112 @@
 ﻿@{
-    ViewBag.Title = "BZZX_SY";
     Layout = "~/Areas/Business/Views/Shared/QT.cshtml";
 }
-
-<!DOCTYPE html>
-
-<html>
-<head>
-
-
+@section Section_Head {
     <link href="@Url.Content("~/Areas/Business/Css/BZZX/BZZX_SY.css")" rel="stylesheet" />
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/BZZX/BZZX_SY.js")"></script>
-</head>
-<body>
-    <div>
-        <div class="div_left_box">
-            <div class="div_left_box_info" id="div_left_box_info_zhyecz">
-                <img class="img_left_box_info" src="@Url.Content("~/Areas/Business/Css/images/bzzx/bzzx_sy_zhyecz.png")" />
-                <span class="span_left_box_info_text">账户余额充值</span>
-                <span class="span_left_box_info_remark">进入我的账户充值</span>
-            </div>
-            <div class="div_left_box_info" id="div_left_box_info_zhmm">
-                <img class="img_left_box_info" src="@Url.Content("~/Areas/Business/Css/images/bzzx/bzzx_sy_zhmm.png")" />
-                <span class="span_left_box_info_text">找回密码</span>
-                <span class="span_left_box_info_remark">自助快速找回账户密码</span>
-            </div>
-            <div class="div_left_box_info" id="div_left_box_info_dhbmycx">
-                <img class="img_left_box_info" src="@Url.Content("~/Areas/Business/Css/images/bzzx/bzzx_sy_dhbmycx.png")" />
-                <span class="span_left_box_info_text">电话被冒用查询</span>
-                <span class="span_left_box_info_remark">输入电话号码自助查询</span>
-            </div>
-            <div class="div_left_box_info" id="div_left_box_info_sbddxyzm">
-                <img class="img_left_box_info" src="@Url.Content("~/Areas/Business/Css/images/bzzx/bzzx_sy_sbddxyzm.png")" style="width: 36px;" />
-                <span class="span_left_box_info_text">收不到短信验证码</span>
-                <span class="span_left_box_info_remark">自助电话获取语音验证码</span>
-            </div>
-            <div class="div_left_box_info" id="div_left_box_info_rzsm">
-                <img class="img_left_box_info" src="@Url.Content("~/Areas/Business/Css/images/bzzx/bzzx_sy_rzsm.png")" />
-                <span class="span_left_box_info_text">认证说明</span>
-                <span class="span_left_box_info_remark">介绍认证及认证中的问题</span>
-            </div>
-            <div class="div_left_box_info" id="div_left_box_info_xxwffb">
-                <img class="img_left_box_info" src="@Url.Content("~/Areas/Business/Css/images/bzzx/bzzx_sy_xxwffb.png")" />
-                <span class="span_left_box_info_text">用户使用协议</span>
-                <span class="span_left_box_info_remark">点击查看用户使用协议</span>
-            </div>
-            <div class="div_left_box_info" id="div_left_box_info_xxbsc">
-                <img class="img_left_box_info" src="@Url.Content("~/Areas/Business/Css/images/bzzx/bzzx_sy_xxbsc.png")" />
-                <span class="span_left_box_info_text">信息被删除</span>
-                <span class="span_left_box_info_remark">查看被删除原因</span>
-            </div>
-            <div class="div_left_box_info" id="div_left_box_info_fbgzltz">
-                <img class="img_left_box_info" src="@Url.Content("~/Areas/Business/Css/images/bzzx/bzzx_sy_fbgzltz.png")" />
-                <span class="span_left_box_info_text">发布高质量帖子</span>
-                <span class="span_left_box_info_remark">教你发布用户喜欢的贴</span>
-            </div>
-            <div class="div_left_box_info" id="div_left_box_info_ftbg">
-                <img class="img_left_box_info" src="@Url.Content("~/Areas/Business/Css/images/bzzx/bzzx_sy_ftbg.png")" />
-                <span class="span_left_box_info_text">发帖版规</span>
-                <span class="span_left_box_info_remark">发帖质量控制说明</span>
-            </div>
-            <div class="div_left_box_info" id="div_left_box_info_zdjs">
-                <img class="img_left_box_info" src="@Url.Content("~/Areas/Business/Css/images/bzzx/bzzx_sy_zdjs.png")" />
-                <span class="span_left_box_info_text">置顶介绍</span>
-                <span class="span_left_box_info_remark">介绍信息置顶及步骤</span>
-            </div>
-            <div class="div_left_box_info div_left_box_info_bottom">
-                <img class="img_left_box_info" src="@Url.Content("~/Areas/Business/Css/images/bzzx/bzzx_sy_esjybzzx.png")" />
-                <span class="span_left_box_info_text">二手交易保障中心</span>
-                <span class="span_left_box_info_remark">买家卖家安全交易常识</span>
-            </div>
-            <div class="div_left_box_info div_left_box_info_bottom"></div>
-            <div class="div_left_box_info div_left_box_info_bottom"></div>
-            <div class="div_left_box_info div_left_box_info_bottom"></div>
-            <div class="div_left_box_info div_left_box_info_bottom"></div>
+}
+@section Section_Body {
+    <div class="div_left_box_bottom">
+        <div class="div_left_box_bottom_nav">
+            <span class="span_left_box_bottom_nav">常见问题快速导航</span>
         </div>
-        <div class="div_left_box_bottom">
-            <div class="div_left_box_bottom_nav">
-                <span class="span_left_box_bottom_nav">常见问题快速导航</span>
-            </div>
-            <table class="table_left_box_bottom">
-                <tr class="tr_left_box_bottom">
-                    <td class="td_left_box_bottom_left">新手使用指南：</td>
-                    <td class="td_left_box_bottom_right">
-                        <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_cwczyh">成为注册用户</span>
-                        <em class="em_left_box_bottom_right"></em>
-                        <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_rhfbxx">如何发布信息</span>
-                        <em class="em_left_box_bottom_right"></em>
-                        <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_rhglxx">如何管理信息</span>
-                        <em class="em_left_box_bottom_right"></em>
-                        <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_rhczxx">如何查找信息</span>
-                        <em class="em_left_box_bottom_right"></em>
-                        <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_xxshgf">信息审核规范</span>
-                        <em class="em_left_box_bottom_right"></em>
-                        <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_mjrm">买家入门</span>
-                    </td>
-                </tr>
-                <tr class="tr_left_box_bottom">
-                    <td class="td_left_box_bottom_left">用户注册与登录：</td>
-                    <td class="td_left_box_bottom_right">
-                        <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_yhmxg">用户名修改</span>
-                        <em class="em_left_box_bottom_right"></em>
-                        <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_wfdl">无法登录</span>
-                        <em class="em_left_box_bottom_right"></em>
-                        <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_zhdshbd">账户丢失或被盗</span>
-                        <em class="em_left_box_bottom_right"></em>
-                        <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_zhzx">账户注销</span>
-                    </td>
-                </tr>
-                <tr class="tr_left_box_bottom">
-                    <td class="td_left_box_bottom_left">信息发布与删除：</td>
-                    <td class="td_left_box_bottom_right">
-                        <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_xxzlbbxs">信息在列表不显示</span>
-                        <em class="em_left_box_bottom_right"></em>
-                        <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_tsxxxshcf">提示信息相似或重复</span>
-                        <em class="em_left_box_bottom_right"></em>
-                        <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_xxwffb">信息无法发布</span>
-                        <em class="em_left_box_bottom_right"></em>
-                        <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_xxbsc">信息被删除</span>
-                        <em class="em_left_box_bottom_right"></em>
-                        <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_rhxgscxx">如何修改/删除信息 </span>
-                    </td>
-                </tr>
-                <tr class="tr_left_box_bottom">
-                    <td class="td_left_box_bottom_left">认证与取消认证：</td>
-                    <td class="td_left_box_bottom_right">
-                        <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_rzzx">认证中心</span>
-                        <em class="em_left_box_bottom_right"></em>
-                        <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_rhrz">如何认证</span>
-                        <em class="em_left_box_bottom_right"></em>
-                        <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_ghrz">更换认证</span>
-                        <em class="em_left_box_bottom_right"></em>
-                        <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_sbdrzm">收不到认证码</span>
-                        <em class="em_left_box_bottom_right"></em>
-                        <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_sbdrzyj">收不到认证邮件</span>
-                        <em class="em_left_box_bottom_right"></em>
-                        <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_gdrzwt">更多认证问题</span>
-                    </td>
-                </tr>
-                <tr class="tr_left_box_bottom">
-                    <td class="td_left_box_bottom_left">账户等级与信用：</td>
-                    <td class="td_left_box_bottom_right">
-                        <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_smsxy">什么是信用</span>
-                        <em class="em_left_box_bottom_right"></em>
-                        <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_xydzjyjs">信用的增加与减少</span>
-                        <em class="em_left_box_bottom_right"></em>
-                        <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_djyftl">等级与发帖量</span>
-                        <em class="em_left_box_bottom_right"></em>
-                        <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_tytxxgxcs">同一条信息更新次数</span>
-                    </td>
-                </tr>
-                <tr class="tr_left_box_bottom">
-                    <td class="td_left_box_bottom_left">网络防骗常识：</td>
-                    <td class="td_left_box_bottom_right">
-                        <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_pcfp">拼车防骗</span>
-                        <em class="em_left_box_bottom_right"></em>
-                        <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_wlzpfp">网络招聘防骗</span>
-                        <em class="em_left_box_bottom_right"></em>
-                        <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_cwfp">宠物防骗</span>
-                        <em class="em_left_box_bottom_right"></em>
-                        <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_esjyfp">二手交易防骗</span>
-                        <em class="em_left_box_bottom_right"></em>
-                        <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_fcfp">房产防骗</span>
-                        <em class="em_left_box_bottom_right"></em>
-                        <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_hcpfp">火车票防骗</span>
-                    </td>
-                </tr>
-                <tr class="tr_left_box_bottom">
-                    <td class="td_left_box_bottom_left">预约/评价/开店：</td>
-                    <td class="td_left_box_bottom_right">
-                        <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_yypjbuy">预约评价买家使用指南</span>
-                        <em class="em_left_box_bottom_right"></em>
-                        <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_yypjsell">预约评价卖家使用指南</span>
-                        <em class="em_left_box_bottom_right"></em>
-                        <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_pjss">评价申诉</span>
-                    </td>
-                </tr>
-            </table>
-        </div>
+        <table class="table_left_box_bottom">
+            <tr class="tr_left_box_bottom">
+                <td class="td_left_box_bottom_left">新手使用指南：</td>
+                <td class="td_left_box_bottom_right">
+                    <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_cwczyh">成为注册用户</span>
+                    <em class="em_left_box_bottom_right"></em>
+                    <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_rhfbxx">如何发布信息</span>
+                    <em class="em_left_box_bottom_right"></em>
+                    <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_rhglxx">如何管理信息</span>
+                    <em class="em_left_box_bottom_right"></em>
+                    <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_rhczxx">如何查找信息</span>
+                    <em class="em_left_box_bottom_right"></em>
+                    <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_xxshgf">信息审核规范</span>
+                    <em class="em_left_box_bottom_right"></em>
+                    <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_mjrm">买家入门</span>
+                </td>
+            </tr>
+            <tr class="tr_left_box_bottom">
+                <td class="td_left_box_bottom_left">用户注册与登录：</td>
+                <td class="td_left_box_bottom_right">
+                    <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_yhmxg">用户名修改</span>
+                    <em class="em_left_box_bottom_right"></em>
+                    <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_wfdl">无法登录</span>
+                    <em class="em_left_box_bottom_right"></em>
+                    <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_zhdshbd">账户丢失或被盗</span>
+                    <em class="em_left_box_bottom_right"></em>
+                    <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_zhzx">账户注销</span>
+                </td>
+            </tr>
+            <tr class="tr_left_box_bottom">
+                <td class="td_left_box_bottom_left">信息发布与删除：</td>
+                <td class="td_left_box_bottom_right">
+                    <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_xxzlbbxs">信息在列表不显示</span>
+                    <em class="em_left_box_bottom_right"></em>
+                    <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_tsxxxshcf">提示信息相似或重复</span>
+                    <em class="em_left_box_bottom_right"></em>
+                    <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_xxwffb">信息无法发布</span>
+                    <em class="em_left_box_bottom_right"></em>
+                    <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_xxbsc">信息被删除</span>
+                    <em class="em_left_box_bottom_right"></em>
+                    <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_rhxgscxx">如何修改/删除信息 </span>
+                </td>
+            </tr>
+            <tr class="tr_left_box_bottom">
+                <td class="td_left_box_bottom_left">认证与取消认证：</td>
+                <td class="td_left_box_bottom_right">
+                    <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_rzzx">认证中心</span>
+                    <em class="em_left_box_bottom_right"></em>
+                    <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_rhrz">如何认证</span>
+                    <em class="em_left_box_bottom_right"></em>
+                    <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_ghrz">更换认证</span>
+                    <em class="em_left_box_bottom_right"></em>
+                    <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_sbdrzm">收不到认证码</span>
+                    <em class="em_left_box_bottom_right"></em>
+                    <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_sbdrzyj">收不到认证邮件</span>
+                    <em class="em_left_box_bottom_right"></em>
+                    <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_gdrzwt">更多认证问题</span>
+                </td>
+            </tr>
+            <tr class="tr_left_box_bottom">
+                <td class="td_left_box_bottom_left">账户等级与信用：</td>
+                <td class="td_left_box_bottom_right">
+                    <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_smsxy">什么是信用</span>
+                    <em class="em_left_box_bottom_right"></em>
+                    <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_xydzjyjs">信用的增加与减少</span>
+                    <em class="em_left_box_bottom_right"></em>
+                    <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_djyftl">等级与发帖量</span>
+                    <em class="em_left_box_bottom_right"></em>
+                    <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_tytxxgxcs">同一条信息更新次数</span>
+                </td>
+            </tr>
+            <tr class="tr_left_box_bottom">
+                <td class="td_left_box_bottom_left">网络防骗常识：</td>
+                <td class="td_left_box_bottom_right">
+                    <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_pcfp">拼车防骗</span>
+                    <em class="em_left_box_bottom_right"></em>
+                    <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_wlzpfp">网络招聘防骗</span>
+                    <em class="em_left_box_bottom_right"></em>
+                    <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_cwfp">宠物防骗</span>
+                    <em class="em_left_box_bottom_right"></em>
+                    <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_esjyfp">二手交易防骗</span>
+                    <em class="em_left_box_bottom_right"></em>
+                    <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_fcfp">房产防骗</span>
+                    <em class="em_left_box_bottom_right"></em>
+                    <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_hcpfp">火车票防骗</span>
+                </td>
+            </tr>
+            <tr class="tr_left_box_bottom">
+                <td class="td_left_box_bottom_left">预约/评价/开店：</td>
+                <td class="td_left_box_bottom_right">
+                    <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_yypjbuy">预约评价买家使用指南</span>
+                    <em class="em_left_box_bottom_right"></em>
+                    <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_yypjsell">预约评价卖家使用指南</span>
+                    <em class="em_left_box_bottom_right"></em>
+                    <span class="span_left_box_bottom_right" id="span_left_box_bottom_right_pjss">评价申诉</span>
+                </td>
+            </tr>
+        </table>
     </div>
-</body>
-</html>
+}
