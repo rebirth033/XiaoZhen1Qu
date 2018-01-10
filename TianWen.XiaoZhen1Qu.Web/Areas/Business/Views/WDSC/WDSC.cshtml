@@ -1,20 +1,13 @@
 ﻿@{
-    ViewBag.Title = "WDSC";
     Layout = "~/Areas/Business/Views/Shared/QT.cshtml";
 }
-
-<!DOCTYPE html>
-
-<html>
-<head>
-
-
+@section Section_Head {
     <link href="@Url.Content("~/Areas/Business/Css/HTGL/WDXX/WDSC.css")" rel="stylesheet" />
     <link href="@Url.Content("~/Areas/Business/Scripts/jquery-ui-1.12.1.custom/jquery-ui.min.css")" rel="stylesheet" />
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/HTGL/WDXX/WDSC.js")"></script>
-</head>
-<body>
-    <div class="wdfb_right_head">
+}
+@section Section_Body {
+    <div class="right_head">
         <div class="divstep" id="divSCXX">
             <span class="spanstep" id="spanSCXX">收藏的信息</span>
             <em class="emstep" id="emSCXX"></em>
@@ -23,16 +16,11 @@
             <span class="spanstep" id="spanLLGXX">浏览过的信息</span>
             <em class="emstep" id="emLLGXX"></em>
         </div>
-        <div class="divstep" id="divGZDP">
-            <span class="spanstep" id="spanGZDP">关注的店铺</span>
-            <em class="emstep" id="emGZDP"></em>
-        </div>
         <div class="divstep">
             <span class="spanstep" id="spanOther">&nbsp;</span>
-            <em class="emstep" id="emOther" style="width: 512px;"></em>
+            <em class="emstep" id="emOther" style="width: 650px;"></em>
         </div>
     </div>
     <div id="div_main_info" class="div_main_info">
     </div>
-</body>
-</html>
+}

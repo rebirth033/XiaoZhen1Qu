@@ -15,11 +15,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
             try
             {
                 IList<JCXX> list = new List<JCXX>();
-                if (TYPE == "divZJFBXX")//最近发布信息，暂定三个月以内
-                {
-                    list = DAO.Repository.GetObjectList<JCXX>(String.Format("FROM JCXX WHERE YHID='{0}' AND LBID != 0 AND CJSJ >= TO_DATE(to_char(add_months(sysdate, -3), 'yyyy-mm-dd hh24:mi:ss'), 'yyyy-mm-dd hh24:mi:ss') ORDER BY ZXGXSJ DESC", YHID));
-                }
-                if (TYPE == "divXSZXX")//显示中信息
+                if (TYPE == "divXSZXX")//正常显示信息
                 {
                     list = DAO.Repository.GetObjectList<JCXX>(String.Format("FROM JCXX WHERE YHID='{0}' AND LBID != 0 AND STATUS = 1 ORDER BY ZXGXSJ DESC", YHID));
                 }
@@ -27,13 +23,9 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 {
                     list = DAO.Repository.GetObjectList<JCXX>(String.Format("FROM JCXX WHERE YHID='{0}' AND LBID != 0 AND STATUS = 3 ORDER BY ZXGXSJ DESC", YHID));
                 }
-                if (TYPE == "divYSCXX")//已删除信息
+                if (TYPE == "divYSCXX")//已隐藏信息
                 {
                     list = DAO.Repository.GetObjectList<JCXX>(String.Format("FROM JCXX WHERE YHID='{0}' AND LBID != 0 AND STATUS = 0 ORDER BY ZXGXSJ DESC", YHID));
-                }
-                if (TYPE == "divWXSXX")//未显示信息
-                {
-                    list = DAO.Repository.GetObjectList<JCXX>(String.Format("FROM JCXX WHERE YHID='{0}' AND LBID != 0 AND STATUS = 2 ORDER BY ZXGXSJ DESC", YHID));
                 }
 
                 int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
@@ -65,9 +57,11 @@ namespace TianWen.XiaoZhen1Qu.BLL
             {
                 JCXX jcxx = DAO.GetObjectByID<JCXX>(JCXXID);
                 if (OPTYPE == "DELETE")
-                    jcxx.STATUS = 0;
+                    jcxx.STATUS = 2;
                 if (OPTYPE == "RESTORE")
                     jcxx.STATUS = 1;
+                if (OPTYPE == "HIDE")
+                    jcxx.STATUS = 0;
                 DAO.Update(jcxx);
                 return new { Result = EnResultType.Success };
             }

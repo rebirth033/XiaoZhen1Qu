@@ -86,21 +86,18 @@ function LoadInfo(obj) {
     html += ('</div>');
     html += ('</div>');
     html += ('<div class="div_new_info_body_middle">');
-    if (obj.STATUS === 1) {
-        html += ('<span class="span_new_info_body_middle_common">状态:' + (obj.STATUS === 1 ? '<span class="green">显示中</span>' : '<span class="red">已删除</span>') + '</span>');
-        html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_read" style="margin-top:10px;">浏览:' + '<span class="purple" style="font-weight:700;">' + obj.LLCS + '次</span>' + '</span>');
-    }
-    else
-        html += ('<span class="span_new_info_body_middle">个人删除</span>');
+
+    html += ('<span class="span_new_info_body_middle_common">状态:' + (obj.STATUS === 1 ? '<span class="green">正常显示</span>' : '<span class="red">已隐藏</span>') + '</span>');
+    html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_read" style="margin-top:10px;">浏览:' + '<span class="purple" style="font-weight:700;">' + obj.LLCS + '次</span>' + '</span>');
     html += ('</div>');
     html += ('<div class="div_new_info_body_right">');
     if (obj.STATUS === 0)
-        html += ('<span class="span_new_info_body_right active" onclick="Restore(\'' + obj.JCXXID + '\')">恢复</span>');
+        html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_common_button span_new_info_body_middle_update" onclick="Restore(\'' + obj.JCXXID + '\')">恢复显示</span>');
     else {
         html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_common_button span_new_info_body_middle_update" onclick="Update(\'' + obj.JCXXID + '\',\'' + obj.LBID + '\')">修改</span>');
-        html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_common_button span_new_info_body_middle_refresh">刷新</span>');
-        html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_common_button span_new_info_body_middle_top">置顶</span>');
-        html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_common_button span_new_info_body_middle_delete"  onclick="Delete(\'' + obj.JCXXID + '\')">删除</span>');
+        //html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_common_button span_new_info_body_middle_refresh">刷新</span>');
+        html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_common_button span_new_info_body_middle_top" onclick="Hide(\'' + obj.JCXXID + '\')">隐藏</span>');
+        html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_common_button span_new_info_body_middle_delete" onclick="Delete(\'' + obj.JCXXID + '\')">删除</span>');
     }
     html += ('</div>');
     html += ('</div>');
@@ -111,20 +108,14 @@ function LoadInfo(obj) {
 }
 //没有信息
 function NoInfo(TYPE) {
-    if (TYPE === "divZJFBXX") {
-        $("#div_main_info").html('<div class="div_no_info">您最近三个月内没有发布信息</div>');
-    }
     if (TYPE === "divXSZXX") {
-        $("#div_main_info").html('<div class="div_no_info">您没有显示中的信息</div>');
+        $("#div_main_info").html('<div class="div_no_info">您没有正常显示的信息</div>');
     }
     if (TYPE === "divDSHXX") {
         $("#div_main_info").html('<div class="div_no_info">您没有待审核的信息</div>');
     }
     if (TYPE === "divYSCXX") {
-        $("#div_main_info").html('<div class="div_no_info">您没有已删除的信息</div>');
-    }
-    if (TYPE === "divWXSXX") {
-        $("#div_main_info").html('<div class="div_no_info">您没有未显示的信息</div>');
+        $("#div_main_info").html('<div class="div_no_info">您没有已隐藏的信息</div>');
     }
 }
 //恢复信息
@@ -153,7 +144,7 @@ function Restore(JCXXID) {
 }
 //删除信息
 function Delete(JCXXID) {
-    if (confirm("您确定删除本条信息吗?")) {
+    if (confirm("您确定彻底删除本条信息吗,删除后将无法恢复")) {
         $.ajax({
             type: "POST",
             url: getRootPath() + "/Business/WDFB/UpdateYHFBXX",
@@ -166,6 +157,30 @@ function Delete(JCXXID) {
             success: function (xml) {
                 if (xml.Result === 1) {
                     alert("信息删除成功");
+                    LoadByActive();
+                }
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+            }
+        });
+    }
+}
+//隐藏信息
+function Hide(JCXXID) {
+    if (confirm("您确定恢复本条信息吗?")) {
+        $.ajax({
+            type: "POST",
+            url: getRootPath() + "/Business/WDFB/UpdateYHFBXX",
+            dataType: "json",
+            data:
+            {
+                JCXXID: JCXXID,
+                OPTYPE: "HIDE"
+            },
+            success: function (xml) {
+                if (xml.Result === 1) {
+                    alert("信息隐藏成功");
                     LoadByActive();
                 }
             },
@@ -199,7 +214,7 @@ function Update(JCXXID, LBID) {
 
 function LoadByActive() {
     $(".spanstep").each(function (i) {
-        if ($("#" + this.id).css("color") === "rgb(91, 192, 222)")
+        if ($("#" + this.id).css("color") === "rgb(188, 107, 166)")
             LoadDefault($("#" + this.id).parent()[0].id, currentIndex);
     });
 }
