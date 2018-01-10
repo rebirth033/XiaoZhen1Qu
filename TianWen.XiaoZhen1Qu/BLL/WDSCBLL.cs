@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using TianWen.Framework.Log;
 using TianWen.XiaoZhen1Qu.Entities.Models;
 using TianWen.XiaoZhen1Qu.Interface;
@@ -8,25 +9,32 @@ namespace TianWen.XiaoZhen1Qu.BLL
 {
     public class WDSCBLL : BaseBLL, IWDSCBLL
     {
-        public object LoadYHSCXX(string YHID)
+        public object LoadYHSCXX(string YHID, string PageIndex, string PageSize)
         {
             try
             {
                 IList<JCXX> JCXXs = DAO.Repository.GetObjectList<JCXX>(String.Format("FROM JCXX WHERE JCXXID IN(SELECT JCXXID FROM HTGL_YHSCXX WHERE YHID='{0}') ORDER BY JCXXID", YHID));
                 IList<HTGL_YHSCXX> HTGL_YHSCXXs = DAO.Repository.GetObjectList<HTGL_YHSCXX>(String.Format("FROM HTGL_YHSCXX WHERE YHID='{0}' ORDER BY JCXXID", YHID));
-                //if (HTGL_YHSCXXs.Count > 0)
-                //{
-                //    JCXXs = DAO.Repository.GetObjectList<JCXX>(String.Format("FROM JCXX WHERE JCXXID='{0}'", HTGL_YHSCXXs[0].JCXXID));
-                //    if (JCXXs.Count > 0)
-                //    {
-                //        foreach (var jcxx in JCXXs)
-                //        {
-                //            jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
-                //        }
-                //    }
-                //    return new { Result = EnResultType.Success, list = JCXXs };
-                //}
-                return new { Result = EnResultType.Success, JCXXs = JCXXs, SCXXs= HTGL_YHSCXXs };
+                int PageCount = (JCXXs.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
+                int TotalCount = JCXXs.Count;
+                var WDCountlist = from p in JCXXs.Where(p => p.STATUS == 0) select p;
+                int WCCount = WDCountlist.Count();
+
+                var listnew = from p in JCXXs
+                    .Skip((int.Parse(PageIndex) - 1) * int.Parse(PageSize))
+                    .Take(int.Parse(PageSize))
+                              select p;
+
+                 PageCount = (JCXXs.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
+                 TotalCount = JCXXs.Count;
+                 WDCountlist = from p in JCXXs.Where(p => p.STATUS == 0) select p;
+                 WCCount = WDCountlist.Count();
+
+                var listnewscxx = from p in HTGL_YHSCXXs
+                    .Skip((int.Parse(PageIndex) - 1) * int.Parse(PageSize))
+                    .Take(int.Parse(PageSize))
+                              select p;
+                return new { Result = EnResultType.Success, JCXXs = listnew, SCXXs= listnewscxx, PageCount = PageCount };
             }
             catch (Exception ex)
             {

@@ -20,7 +20,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public JsonResult LoadSCXX()
         {
-            return Json(WDSCBLL.LoadYHSCXX(Session["YHM"].ToString()));
+            return Json(WDSCBLL.LoadYHSCXX(Session["YHM"].ToString(), Request["PageIndex"], Request["PageSize"]));
         }
 
         public JsonResult DeleteYHSCXX()

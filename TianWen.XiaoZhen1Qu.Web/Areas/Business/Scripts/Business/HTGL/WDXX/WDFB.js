@@ -44,7 +44,6 @@ function LoadDefault(TYPE, PageIndex) {
             if (xml.Result === 1) {
                 $("#div_main_info").html('');
                 LoadPage(xml.PageCount);
-                $("#span_main_info_head_gjt").html(xml.TotalCount);
                 for (var i = 0; i < xml.list.length; i++) {
                     LoadInfo(xml.list[i]);
                 }
