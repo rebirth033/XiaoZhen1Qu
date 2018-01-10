@@ -66,7 +66,7 @@ function LoadInfo(obj) {
     html += ('<li class="li_new_info">');
     html += ('<div class="div_new_info">');
     html += ('<div class="div_new_info_head">');
-    html += ('<span class="span_new_info_head">' + obj.CJSJ.ToString("yyyy年MM月dd日 hh:mm") + '</span>');
+    html += ('<span class="span_new_info_head">' + obj.CJSJ.ToString("yyyy年MM月dd日 hh:mm:ss") + '</span>');
     //html += ('<span class="span_new_info_edit"></span>');
     //html += ('<span class="span_new_info_delete"></span>');
     html += ('</div>');
@@ -87,9 +87,8 @@ function LoadInfo(obj) {
     html += ('</div>');
     html += ('<div class="div_new_info_body_middle">');
     if (obj.STATUS === 1) {
-        html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_status">显示中</span>');
-        html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_read">浏览:' + obj.LLCS + '</span>');
-        html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_tip">进行置顶或精准推广会让你的信息成交更快哦。</span>');
+        html += ('<span class="span_new_info_body_middle_common">状态:' + (obj.STATUS === 1 ? '<span class="green">显示中</span>' : '<span class="red">已删除</span>') + '</span>');
+        html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_read" style="margin-top:10px;">浏览:' + '<span class="purple" style="font-weight:700;">' + obj.LLCS + '次</span>' + '</span>');
     }
     else
         html += ('<span class="span_new_info_body_middle">个人删除</span>');
@@ -147,7 +146,7 @@ function Restore(JCXXID) {
                 }
             },
             error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-                
+
             }
         });
     }
@@ -171,7 +170,7 @@ function Delete(JCXXID) {
                 }
             },
             error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-                
+
             }
         });
     }
