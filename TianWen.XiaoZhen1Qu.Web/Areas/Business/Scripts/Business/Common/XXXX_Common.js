@@ -171,9 +171,28 @@ function HandlerData(value) {
 //收藏信息
 function SCXX(jcxxid) {
     if ($("#input_yhm").val() !== "") {
-        
+        $.ajax({
+            type: "POST",
+            url: getRootPath() + "/Business/WDSC/SCXX",
+            dataType: "json",
+            data:
+            {
+                JCXXID: jcxxid,
+                TYPE: getUrlParam("TYPE"),
+                TYPEID: getUrlParam("ID"),
+                LBID: getUrlParam("LBID")
+            },
+            success: function (xml) {
+                if (xml.Result === 1) {
+                    alert("已添加到我的收藏");
+                }
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+            }
+        });
     }
     else {
-        window.location.href = getRootPath() + "/Business/YHDL/YHDL";
+        window.open(getRootPath() + "/Business/YHDL/YHDL");
     }
 }

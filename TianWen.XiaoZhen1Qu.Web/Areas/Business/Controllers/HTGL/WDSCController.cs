@@ -20,12 +20,17 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public JsonResult LoadSCXX()
         {
-            return Json(WDSCBLL.LoadSCXX(Request["YHID"]));
+            return Json(WDSCBLL.LoadYHSCXX(Session["YHM"].ToString()));
         }
 
         public JsonResult DeleteYHSCXX()
         {
             return Json(WDSCBLL.DeleteYHSCXX(Request["YHID"], Request["JCXXID"]));
+        }
+
+        public JsonResult SCXX()
+        {
+            return Json(WDSCBLL.AddYHSCXX(Session["YHM"].ToString(), Request["JCXXID"], Request["TYPE"], Request["LBID"], Request["TYPEID"]));
         }
     }
 }

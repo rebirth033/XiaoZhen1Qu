@@ -1,11 +1,9 @@
 ﻿var currentIndex = 1;
 $(document).ready(function () {
-    $("#spanZJFBXX").css("color", "#bc6ba6");
-    $("#spanZJFBXX").css("font-weight", "700");
-    $("#emZJFBXX").css("background-color", "#bc6ba6");
-    $("#emZJFBXX").css("height", "2px");
+    $("#spanXSZXX").css("color", "#bc6ba6").css("font-weight", "700");
+    $("#emXSZXX").css("background-color", "#bc6ba6").css("height", "2px");
     $(".divstep").bind("click", HeadActive);
-    LoadDefault("divZJFBXX", currentIndex);
+    LoadDefault("divXSZXX", currentIndex);
 });
 
 function HeadActive() {

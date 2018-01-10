@@ -6,9 +6,9 @@ using NHibernate.Mapping.Attributes;
 
 namespace TianWen.XiaoZhen1Qu.Entities.Models
 {
-    public class YHSCXX
+    public class HTGL_YHSCXX
     {
-        public YHSCXX()
+        public HTGL_YHSCXX()
         {
             YHSCXXID = Guid.NewGuid().ToString("N");
         }
@@ -29,5 +29,23 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// </summary>
         [Property]
         public virtual string JCXXID { get; set; }
+
+        /// <summary>
+        /// 类型
+        /// </summary>
+        [Property]
+        public virtual string TYPE { get; set; }
+
+        /// <summary>
+        /// 类型ID
+        /// </summary>
+        [Property]
+        public virtual string TYPEID { get; set; }
+
+        /// <summary>
+        /// 类别ID
+        /// </summary>
+        [Property]
+        public virtual string LBID { get; set; }
     }
 }

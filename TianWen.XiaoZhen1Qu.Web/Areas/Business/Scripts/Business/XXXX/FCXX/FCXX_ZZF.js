@@ -23,7 +23,7 @@ function LoadDefault() {
         dataType: "json",
         data:
         {
-            TYPE: "FCXX_ZZF",
+            TYPE: getUrlParam("TYPE"),
             ID: getUrlParam("ID")
         },
         success: function (xml) {
@@ -32,9 +32,9 @@ function LoadDefault() {
                 LoadFYXQ(xml.list[0], xml.BCMSString);
                 LoadXQXX(xml.list[0]);
                 LoadDTXX(xml.list[0].XQMC);
-                LoadCNXH("FCXX_ZZF");
+                LoadCNXH(getUrlParam("TYPE"));
                 LoadGRXX(xml.grxxlist[0]);
-                LoadJJRTJFY("FCXX_ZZF");
+                LoadJJRTJFY(getUrlParam("TYPE"));
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -274,13 +274,13 @@ function LoadCNXH(TYPE) {
                 html += ('<p class="p_body_left_body_cnxh">相似房源</p>');
                 html += ('<ul id="ul_body_left_body_cnxh" class="ul_body_left_body_cnxh">');
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += LoadCNXHInfo(xml.list[i]);
+                    html += LoadCNXHInfo(xml.list[i], TYPE);
                     if (i === 3) break;
                 }
                 html += ('</ul>');
                 html += ('</div>');
                 $("#div_body_left").append(html);
-                LoadJPTJ("FCXX_ZZF");
+                LoadJPTJ(TYPE);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -289,9 +289,9 @@ function LoadCNXH(TYPE) {
     });
 }
 //加载猜你喜欢单条信息
-function LoadCNXHInfo(obj) {
+function LoadCNXHInfo(obj, TYPE) {
     var html = "";
-    html += ('<li onclick="OpenXXXX(\'FCXX_ZZF\',\'' + obj.ID + '\')" class="li_body_left_body_cnxh">');
+    html += ('<li onclick="OpenXXXX(\'' + TYPE + '\',\'' + obj.ID + '\')" class="li_body_left_body_cnxh">');
     html += ('<img class="img_li_body_left_body_cnxh" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_left_body_cnxh_xq">' + obj.XQMC + '</p>');
     html += ('<p class="p_li_body_left_body_cnxh_cs">' + obj.S + '室 / ' + obj.PFM + '平米 / ' + obj.ZXQK + '</p>');
@@ -319,7 +319,7 @@ function LoadJPTJ(TYPE) {
                 html += ('<p class="p_body_left_body_jptj">精品推荐</p>');
                 html += ('<ul id="ul_body_left_body_jptj" class="ul_body_left_body_jptj">');
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += LoadJPTJInfo(xml.list[i]);
+                    html += LoadJPTJInfo(xml.list[i], TYPE);
                     if (i === 3) break;
                 }
                 html += ('</ul>');
@@ -333,9 +333,9 @@ function LoadJPTJ(TYPE) {
     });
 }
 //加载精品推荐单条信息
-function LoadJPTJInfo(obj) {
+function LoadJPTJInfo(obj, TYPE) {
     var html = "";
-    html += ('<li onclick="OpenXXXX(\'FCXX_ZZF\',\'' + obj.ID + '\')" class="li_body_left_body_jptj">');
+    html += ('<li onclick="OpenXXXX(\'' + TYPE + '\',\'' + obj.ID + '\')" class="li_body_left_body_jptj">');
     html += ('<img class="img_li_body_left_body_jptj" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_left_body_jptj_xq">' + obj.XQMC + '</p>');
     html += ('<p class="p_li_body_left_body_jptj_cs">' + obj.S + '室 / ' + obj.PFM + '平米 / ' + obj.ZXQK + '</p>');
@@ -363,7 +363,7 @@ function LoadJJRTJFY(TYPE) {
                 html += ('<p class="p_body_right_jjrtj">该经纪人推荐</p>');
                 html += ('<ul id="ul_body_right_jjrtj" class="ul_body_right_jjrtj">');
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += LoadJJRTJFYInfo(xml.list[i]);
+                    html += LoadJJRTJFYInfo(xml.list[i], TYPE);
                     if (i === 3) break;
                 }
                 html += ('</ul>');
@@ -380,9 +380,9 @@ function LoadJJRTJFY(TYPE) {
     });
 }
 //加载该经纪人推荐单条信息
-function LoadJJRTJFYInfo(obj) {
+function LoadJJRTJFYInfo(obj, TYPE) {
     var html = "";
-    html += ('<li onclick="OpenXXXX(\'FCXX_ZZF\',\'' + obj.ID + '\')" class="li_body_right_jjrtj">');
+    html += ('<li onclick="OpenXXXX(\'' + TYPE + '\',\'' + obj.ID + '\')" class="li_body_right_jjrtj">');
     html += ('<img class="img_li_body_right_jjrtj" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<div class="div_li_body_right_jjrtj">');
     html += ('<p class="p_li_body_right_jjrtj_xq">' + obj.BT + '</p>');

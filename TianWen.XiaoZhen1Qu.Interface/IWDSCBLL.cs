@@ -9,8 +9,10 @@ namespace TianWen.XiaoZhen1Qu.Interface
     {
         IDAO DAO { get; set; }
 
-        object LoadSCXX(string YHID);
+        object LoadYHSCXX(string YHID);
 
         object DeleteYHSCXX(string YHID, string JCXXID);
+
+        object AddYHSCXX(string YHM, string JCXXID, string TYPE, string LBID, string TYPEID);
     }
 }

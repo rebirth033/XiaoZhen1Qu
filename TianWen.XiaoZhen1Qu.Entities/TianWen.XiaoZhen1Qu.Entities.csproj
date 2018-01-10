@@ -270,7 +270,7 @@
     <Compile Include="Maps\XXYL\XXYL_YDJSJBXX_Map.cs" />
     <Compile Include="Maps\XXYL\XXYL_ZLAMJBXX_Map.cs" />
     <Compile Include="Maps\YHJBXX_Map.cs" />
-    <Compile Include="Maps\YHSCXX_Map.cs" />
+    <Compile Include="Maps\HTGL\HTGL_YHSCXX_Map.cs" />
     <Compile Include="Maps\YHXX_Map.cs" />
     <Compile Include="Maps\YHZHXX_Map.cs" />
     <Compile Include="Maps\YXJBXX_Map.cs" />
@@ -518,7 +518,7 @@
     <Compile Include="Models\XXYL\XXYL_YDJSJBXX.cs" />
     <Compile Include="Models\XXYL\XXYL_ZLAMJBXX.cs" />
     <Compile Include="Models\YHJBXX.cs" />
-    <Compile Include="Models\YHSCXX.cs" />
+    <Compile Include="Models\HTGL\HTGL_YHSCXX.cs" />
     <Compile Include="Models\YHXX.cs" />
     <Compile Include="Models\YHZHXX.cs" />
     <Compile Include="Models\YXJBXX.cs" />
