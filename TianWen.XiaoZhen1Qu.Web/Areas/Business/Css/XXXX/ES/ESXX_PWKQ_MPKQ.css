@@ -5,7 +5,7 @@
 /*首页_主体_左部_标题*/
 .div_body .div_body_left .div_body_left_head{ height: 100px;width: 100%;border-bottom: 1px solid #cccccc;}
 .div_body .div_body_left .div_body_left_head .p_div_body_left_head_bt{ display: block;font-size: 25px;font-weight: 700;height: 45px;overflow:hidden;padding: 10px;}
-.div_body .div_body_left .div_body_left_head .p_div_body_left_head_ll{ display: block;color: #999999;height: 30px;padding: 10px;font-size: 16px;}
+.div_body .div_body_left .div_body_left_head .p_div_body_left_head_ll{ display: block;color: #999999;height: 30px;padding: 10px;font-size: 14px;}
 /*首页_主体_左部_信息主要内容*/
 .div_body .div_body_left .div_body_left_body{ width: 100%;height: 330px;margin-top: 20px;font-size: 16px;}
 .div_body .div_body_left .div_body_left_body_left{ width: 470px;height: 475px;float: left;}
