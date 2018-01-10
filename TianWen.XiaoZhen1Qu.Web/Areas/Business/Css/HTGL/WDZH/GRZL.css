@@ -35,6 +35,7 @@
 .div_main_photo {
     width: 900px;
     height: 220px;
+    padding-left:10px;
 }
 
 .div_main_photo_left {
