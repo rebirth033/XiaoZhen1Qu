@@ -9,7 +9,7 @@ function SelectWTLX() {
         $(this).css("background-color", "#eBeBeB").css("font-weight", "normal").css("color", "#000");
     });
     bindHover();
-    $(this).css("background-color", "#ff6a00").css("font-weight", "700").css("color", "#fff");
+    $(this).css("background-color", "#bc6ba6").css("font-weight", "700").css("color", "#fff");
     $(this).unbind("mouseleave");
     showWTLX(this.id);
 }
@@ -17,7 +17,7 @@ function SelectWTLX() {
 function bindHover() {
     $(".span_wtlx_inner_right").each(function () {
         $(this).bind("mouseover", function () {
-            $(this).css("background-color", "#ff6a00").css("font-weight", "700").css("color", "#fff");
+            $(this).css("background-color", "#bc6ba6").css("font-weight", "700").css("color", "#fff");
         })
         $(this).bind("mouseleave", function () {
             $(this).css("background-color", "#eBeBeB").css("font-weight", "normal").css("color", "#000");
@@ -28,7 +28,7 @@ function bindHover() {
 function bindJTWTHover() {
     $(".span_wtjj_inner").each(function () {
         $(this).bind("mouseover", function () {
-            $(this).css("color", "#ff6a00");
+            $(this).css("color", "#bc6ba6");
         })
         $(this).bind("mouseleave", function () {
             $(this).css("color", "#0000cd");
