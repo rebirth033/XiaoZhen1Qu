@@ -6,25 +6,25 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
     public class JYPXXXController : BaseController
     {
         public IJYPXCXBLL JYPXCXBLL { get; set; }
-        public ActionResult JYPXXX_ZXXFDB() { return View(); }
-        public ActionResult JYPXXX_ZXXYDY() { return View(); }
-        public ActionResult JYPXXX_JJJG() { return View(); }
-        public ActionResult JYPXXX_JJGR() { return View(); }
-        public ActionResult JYPXXX_YYPXJG() { return View(); }
-        public ActionResult JYPXXX_YYPXJS() { return View(); }
-        public ActionResult JYPXXX_YSPXJG() { return View(); }
-        public ActionResult JYPXXX_YSPXJS() { return View(); }
-        public ActionResult JYPXXX_ZYJNPX() { return View(); }
-        public ActionResult JYPXXX_TYPXJG() { return View(); }
-        public ActionResult JYPXXX_TYJL() { return View(); }
-        public ActionResult JYPXXX_XLJY() { return View(); }
-        public ActionResult JYPXXX_ITPX() { return View(); }
-        public ActionResult JYPXXX_SJPX() { return View(); }
-        public ActionResult JYPXXX_GLPX() { return View(); }
-        public ActionResult JYPXXX_YYEJY() { return View(); }
-        public ActionResult JYPXXX_LX() { return View(); }
-        public ActionResult JYPXXX_YM() { return View(); }
-        public ActionResult JYPXXX_PBPK() { return View(); }
+        public ActionResult JYPXXX_ZXXFDB() { GetSession(); return View(); }
+        public ActionResult JYPXXX_ZXXYDY() { GetSession(); return View(); }
+        public ActionResult JYPXXX_JJJG() { GetSession(); return View(); }
+        public ActionResult JYPXXX_JJGR() { GetSession(); return View(); }
+        public ActionResult JYPXXX_YYPXJG() { GetSession(); return View(); }
+        public ActionResult JYPXXX_YYPXJS() { GetSession(); return View(); }
+        public ActionResult JYPXXX_YSPXJG() { GetSession(); return View(); }
+        public ActionResult JYPXXX_YSPXJS() { GetSession(); return View(); }
+        public ActionResult JYPXXX_ZYJNPX() { GetSession(); return View(); }
+        public ActionResult JYPXXX_TYPXJG() { GetSession(); return View(); }
+        public ActionResult JYPXXX_TYJL() { GetSession(); return View(); }
+        public ActionResult JYPXXX_XLJY() { GetSession(); return View(); }
+        public ActionResult JYPXXX_ITPX() { GetSession(); return View(); }
+        public ActionResult JYPXXX_SJPX() { GetSession(); return View(); }
+        public ActionResult JYPXXX_GLPX() { GetSession(); return View(); }
+        public ActionResult JYPXXX_YYEJY() { GetSession(); return View(); }
+        public ActionResult JYPXXX_LX() { GetSession(); return View(); }
+        public ActionResult JYPXXX_YM() { GetSession(); return View(); }
+        public ActionResult JYPXXX_PBPK() { GetSession(); return View(); }
 
         public JsonResult LoadJYPXXX()
         {

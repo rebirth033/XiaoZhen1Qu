@@ -10,12 +10,12 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
     public class CWXXController : BaseController
     {
         public ICWCXBLL CWCXBLL { get; set; }
-        public ActionResult CWXX_CWG() { return View(); }
-        public ActionResult CWXX_CWM() { return View(); }
-        public ActionResult CWXX_HNYC() { return View(); }
-        public ActionResult CWXX_CWFW() { return View(); }
-        public ActionResult CWXX_CWYPSP() { return View(); }
-        public ActionResult CWXX_CWGY() { return View(); }
+        public ActionResult CWXX_CWG() { GetSession(); return View(); }
+        public ActionResult CWXX_CWM() { GetSession(); return View(); }
+        public ActionResult CWXX_HNYC() { GetSession(); return View(); }
+        public ActionResult CWXX_CWFW() { GetSession(); return View(); }
+        public ActionResult CWXX_CWYPSP() { GetSession(); return View(); }
+        public ActionResult CWXX_CWGY() { GetSession(); return View(); }
 
         public JsonResult LoadCWXX()
         {

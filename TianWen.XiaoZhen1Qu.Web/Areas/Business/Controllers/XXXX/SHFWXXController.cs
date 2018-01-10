@@ -6,19 +6,19 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
     public class SHFWXXController : BaseController
     {
         public ISHFWCXBLL SHFWCXBLL { get; set; }
-        public ActionResult SHFWXX_BJ() { return View(); }
-        public ActionResult SHFWXX_BMYS() { return View(); }
-        public ActionResult SHFWXX_BJQX() { return View(); }
-        public ActionResult SHFWXX_KSXSHS() { return View(); }
-        public ActionResult SHFWXX_GDSTQL() { return View(); }
-        public ActionResult SHFWXX_SHPS() { return View(); }
-        public ActionResult SHFWXX_BZMD() { return View(); }
-        public ActionResult SHFWXX_JDWX() { return View(); }
-        public ActionResult SHFWXX_DNWX() { return View(); }
-        public ActionResult SHFWXX_FWWX() { return View(); }
-        public ActionResult SHFWXX_JJWX() { return View(); }
-        public ActionResult SHFWXX_SJWX() { return View(); }
-        public ActionResult SHFWXX_SMWX() { return View(); }
+        public ActionResult SHFWXX_BJ() { GetSession(); return View(); }
+        public ActionResult SHFWXX_BMYS() { GetSession(); return View(); }
+        public ActionResult SHFWXX_BJQX() { GetSession(); return View(); }
+        public ActionResult SHFWXX_KSXSHS() { GetSession(); return View(); }
+        public ActionResult SHFWXX_GDSTQL() { GetSession(); return View(); }
+        public ActionResult SHFWXX_SHPS() { GetSession(); return View(); }
+        public ActionResult SHFWXX_BZMD() { GetSession(); return View(); }
+        public ActionResult SHFWXX_JDWX() { GetSession(); return View(); }
+        public ActionResult SHFWXX_DNWX() { GetSession(); return View(); }
+        public ActionResult SHFWXX_FWWX() { GetSession(); return View(); }
+        public ActionResult SHFWXX_JJWX() { GetSession(); return View(); }
+        public ActionResult SHFWXX_SJWX() { GetSession(); return View(); }
+        public ActionResult SHFWXX_SMWX() { GetSession(); return View(); }
 
         public JsonResult LoadSHFWXX()
         {

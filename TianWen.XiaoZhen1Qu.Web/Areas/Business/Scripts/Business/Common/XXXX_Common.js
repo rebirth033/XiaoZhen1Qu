@@ -4,6 +4,7 @@
     $(".div_nav").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
     $(".div_body").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
     $("#span_fbxx").bind("click", FBXX);
+    $("#span_div_body_left_head_sc").bind("click", SCXX);
     LoadDefault();
     GetHeadNav();
 });
@@ -167,4 +168,8 @@ function HandlerData(value) {
         return "暂无数据";
     else
         return value;
+}
+//收藏信息
+function SCXX() {
+
 }

@@ -69,15 +69,3 @@
 #div_body_middle_left_JYPX .li_body_middle_left_section{ height: 55px;}
 #div_body_middle_left_ZSJM .li_body_middle_left_section{ height: 55px;}
 #div_body_middle_left_PFCG .li_body_middle_left_section{ height: 45px;}
-
-.a_yhm {color:#bc6ba6;margin-left:5px;cursor:pointer;text-decoration:none;}
-.a_yhm:hover {text-decoration:none;color:#bc6ba6;}
-.a_yhm_tip {color:#666666;cursor:default;}
-.a_yhm_tip:hover {text-decoration:none;color:#666666;}
-
-
-.div_top_right_dropdown_yhm {top: 0;left: 0;display: none;}
-.div_top_right_dropdown_yhm .ul_top_right_yhm {width: 70px;height: 150px;padding-left: 0px;margin-top: 0 !important;}
-.div_top_right_dropdown_yhm .ul_top_right_yhm .li_top_right_yhm {width: 70px;height: 30px;color: #333333;font-size: 12px;text-align: left;background-color: #ffffff;padding: 5px 5px;}
-.div_top_right_dropdown_yhm .ul_top_right_yhm .li_top_right_yhm:hover {background: #ececec;color: #333333;}
-.span_top_right_yhm {background-image: url(../images/arrow_down.png);width: 12px;height: 18px;margin: 0px 5px 0 5px;float: right;}

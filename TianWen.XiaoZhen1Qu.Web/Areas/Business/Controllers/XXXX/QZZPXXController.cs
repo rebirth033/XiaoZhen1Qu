@@ -10,8 +10,8 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
     public class QZZPXXController : BaseController
     {
         public IQZZPCXBLL QZZPCXBLL { get; set; }
-        public ActionResult QZZPXX_QZZP() { return View(); }
-        public ActionResult QZZPXX_JZZP() { return View(); }
+        public ActionResult QZZPXX_QZZP() { GetSession(); return View(); }
+        public ActionResult QZZPXX_JZZP() { GetSession(); return View(); }
 
         public JsonResult LoadQZZPXX()
         {

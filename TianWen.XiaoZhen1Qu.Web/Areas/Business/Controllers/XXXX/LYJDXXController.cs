@@ -6,14 +6,14 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
     public class LYJDXXController : BaseController
     {
         public ILYJDCXBLL LYJDCXBLL { get; set; }
-        public ActionResult LYJDXX_LXS() { return View(); }
-        public ActionResult LYJDXX_QZFW() { return View(); }
-        public ActionResult LYJDXX_GNY() { return View(); }
-        public ActionResult LYJDXX_ZBY() { return View(); }
-        public ActionResult LYJDXX_CJY() { return View(); }
-        public ActionResult LYJDXX_JDZSYD() { return View(); }
-        public ActionResult LYJDXX_JP() { return View(); }
-        public ActionResult LYJDXX_DYDDR() { return View(); }
+        public ActionResult LYJDXX_LXS() { GetSession(); return View(); }
+        public ActionResult LYJDXX_QZFW() { GetSession(); return View(); }
+        public ActionResult LYJDXX_GNY() { GetSession(); return View(); }
+        public ActionResult LYJDXX_ZBY() { GetSession(); return View(); }
+        public ActionResult LYJDXX_CJY() { GetSession(); return View(); }
+        public ActionResult LYJDXX_JDZSYD() { GetSession(); return View(); }
+        public ActionResult LYJDXX_JP() { GetSession(); return View(); }
+        public ActionResult LYJDXX_DYDDR() { GetSession(); return View(); }
 
         public JsonResult LoadLYJDXX()
         {

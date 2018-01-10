@@ -286,6 +286,7 @@
     <Content Include="Areas\Business\Css\images\XXXX\GY\xxxx_gy_sfz.png" />
     <Content Include="Areas\Business\Css\images\XXXX\GY\xxxx_gy_yyzz.png" />
     <Content Include="Areas\Business\Css\images\XXXX\GY\xxxx_gy_zmxy.png" />
+    <Content Include="Areas\Business\Css\images\XXXX\GY\xxxx_gy_sc.png" />
     <Content Include="Areas\Business\Css\Other\FBCG.css" />
     <Content Include="Areas\Business\Css\HTFB\FC\FC_CF.css" />
     <Content Include="Areas\Business\Css\HTFB\FC\FC_DZF.css" />
