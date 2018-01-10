@@ -36,10 +36,10 @@ function LoadUser() {
         html += '<span class="span_top_right_yhm" id="span_top_right_yhm_img"></span>';
         html += '<div class="div_top_right_dropdown_yhm" id="div_top_right_dropdown_yhm">';
         html += '<ul class="ul_top_right_yhm">';
-        html += '<li class="li_top_right_yhm" onclick="ShowWDXX()">我的信息</li>';
-        html += '<li class="li_top_right_yhm" onclick="ShowWDZH()">我的账户</li>';
-        html += '<li class="li_top_right_yhm" onclick="ShowWDZJ()">我的资金</li>';
-        html += '<li class="li_top_right_yhm" onclick="ShowSHGJ()">生活工具</li>';
+        html += '<li class="li_top_right_yhm">我的信息</li>';
+        html += '<li class="li_top_right_yhm">我的账户</li>';
+        html += '<li class="li_top_right_yhm">我的资金</li>';
+        //html += '<li class="li_top_right_yhm" onclick="ShowSHGJ()">生活工具</li>';
         html += '<li class="li_top_right_yhm" onclick="Exit()">退出</li>';
         html += '</ul>';
         html += '</div>';

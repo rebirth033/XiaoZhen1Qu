@@ -2,9 +2,7 @@
     $("#span_head_nav_info_sy").bind("click", ToSY);
     $("#span_head_nav_info_lxkf").bind("click", ToLXKF);
     $("#span_head_nav_info_wzjy").bind("click", ToWZJY);
-    $("#title").html("信息小镇_帮助中心")
     ToSY();
-    
 });
 
 //帮助中心_首页

@@ -111,10 +111,6 @@ function LiFocus() {
 function ToWDFB() {
     $("#iframeright").attr("src", getRootPath() + "/Business/WDFB/WDFB");
 }
-//我的发布
-function ToWDFB() {
-    $("#iframeright").attr("src", getRootPath() + "/Business/WDFB/WDFB");
-}
 //我的收藏
 function ToWDSC() {
     $("#iframeright").attr("src", getRootPath() + "/Business/WDSC/WDSC");

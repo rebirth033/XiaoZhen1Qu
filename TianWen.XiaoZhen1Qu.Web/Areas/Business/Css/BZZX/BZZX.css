@@ -1,206 +1,49 @@
-﻿body {
-    text-align: center;
-}
+﻿body {text-align: center;}
 
-.div_head {
-    width: 100%;
-}
+.div_head {width: 100%;}
 
-.div_head_main {
-    width: 1000px;
-    height: 75px;
-    margin: 0 auto;
-    text-align: left;
-}
+.div_head_main {width: 1000px;height: 75px;margin: 0 auto;text-align: left;}
 
-.span_head_main_logo {
-    background-image: url(../images/logo_purple.png);
-    background-repeat: no-repeat;
-    width: 155px;
-    height: 55px;
-    display: inline-block;
-    margin-top: 20px;
-    float: left;
-}
+.span_head_main_logo {background-image: url(../images/logo_purple.png);background-repeat: no-repeat;width: 160px;height: 55px;display: inline-block;margin-top: 20px;float: left;}
 
-.span_head_main_bzzx {
-    font: 26px "微软雅黑", "黑体", sans-serif;
-    color: #666;
-    float: left;
-    margin-top: 37px;
-    margin-left: 15px;
-}
+.span_head_main_bzzx {font: 26px "微软雅黑", "黑体", sans-serif;color: #666;float: left;margin-top: 37px;margin-left: 15px;}
 
-.div_head_nav {
-    width: 100%;
-    height: 40px;
-    background-color: #bc6ba6;
-    margin-top: 10px;
-}
+.div_head_nav {width: 100%;height: 40px;background-color: #bc6ba6;margin-top: 10px;}
 
-.div_head_nav_info {
-    width: 1000px;
-    height: 40px;
-    margin: 0 auto;
-    text-align: left;
-}
+.div_head_nav_info {width: 1000px;height: 40px;margin: 0 auto;text-align: left;}
 
-.span_head_nav_info {
-    color: #fff;
-    width: 100px;
-    height: 40px;
-    text-align: center;
-    padding-top: 7px;
-    font-size: 16px;
-    font-weight: 700;
-    display: inline-block;
-    font-family: 微软雅黑;
-    float: left;
-}
+.span_head_nav_info {color: #fff;width: 100px;height: 40px;text-align: center;padding-top: 7px;font-size: 16px;font-weight: 700;display: inline-block;font-family: 微软雅黑;float: left;}
 
-    .span_head_nav_info:hover {
-        background: #ad5b97;
-        cursor: pointer;
-    }
+.span_head_nav_info:hover {background: #ad5b97;cursor: pointer}
 
-.div_body {
-    width: 1000px;
-    height: 630px;
-    margin: 0 auto;
-    text-align: left;
-}
+.div_body {width: 1000px;height: 630px;margin: 0 auto;text-align: left;}
 
-.iframe {
-    border: none;
-    width: 100%;
-    height: 100%;
-}
+.iframe {border: none;width: 100%;height: 100%;}
 
-.div_bottom {
-    border-top: 1px solid #cccccc;
-    display: block;
-    text-align: center;
-    height: 100px;
-    color: #333;
-    padding-top: 15px;
-    font-family: Microsoft YaHei, SimHei, Arial, Helvetica, sans-serif;
-    bottom: 0;
-    width: 100%;
-    background-color: #000;
-    opacity: 0.5;
-    color: #fff;
-    line-height: 34px;
-}
+.div_bottom {border-top: 1px solid #cccccc;display: block;text-align: center;height: 100px;color: #333;padding-top: 15px;font-family: Microsoft YaHei, SimHei, Arial, Helvetica, sans-serif;bottom: 0;width: 100%;background-color: #000;opacity: 0.5;color: #fff;line-height: 34px;}
 
-.span_div_bottom_inner {
-    font-size: 14px;
-    font-family: "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", tahoma, arial, simhei;
-}
+.span_div_bottom_inner {font-size: 14px;font-family: "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", tahoma, arial, simhei;}
 
-    .span_div_bottom_inner:hover {
-        cursor: pointer;
-        text-decoration: underline;
-    }
+.span_div_bottom_inner:hover {cursor: pointer;text-decoration: underline}
 
-.em_div_bottom_inner {
-    width: 1px;
-    background-color: #fff;
-    height: 9px;
-    margin: 2px 5px 0px 5px;
-    display: inline-block;
-}
+.em_div_bottom_inner {width: 1px;background-color: #fff;height: 9px;margin: 2px 5px 0px 5px;display: inline-block;}
 
+.div_shadow {display: none;background-color: #000;opacity: 0.5;position: fixed;top: 0;left: 0;z-index: 999;}
 
-.div_shadow {
-    display: none;
-    background-color: #000;
-    opacity: 0.5;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
-}
+.div_editImgWindow {display: none;border-radius: 4px;width: 936px;height: 562px;position: fixed;top: 50%;left: 50%;z-index: 1000;background: #fff;margin-top: -290px;margin-left: -467px;}
 
-.div_editImgWindow {
-    display: none;
-    border-radius: 4px;
-    width: 936px;
-    height: 562px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    z-index: 1000;
-    background: #fff;
-    margin-top: -290px;
-    margin-left: -467px;
-}
+#canvasFrame {z-index: 1001;position: absolute;left: 75.5px;top: 56px;width: 785px;height: 435px;background-color: #E1E1E1;}
 
+#canvas {left: 0px;top: 0px;position: absolute;}
 
-#canvasFrame {
-    z-index: 1001;
-    position: absolute;
-    left: 75.5px;
-    top: 56px;
-    width: 785px;
-    height: 435px;
-    background-color: #E1E1E1;
-}
+.editToolButton {height: 60px;width: 60px;display: inline-block;cursor: pointer; olor: gray;}
 
-#canvas {
-    left: 0px;
-    top: 0px;
-    position: absolute;
-}
+.editToolButton span {display:inline-block;position:absolute;bottom:3px;left:15px}
 
-.editToolButton {
-    height: 60px;
-    width: 60px;
-    display: inline-block;
-    cursor: pointer;
-   
-    color: gray;
-}
+.editButtonIcon {height:27px;width:27px;position:absolute;left:17px;top:5px;}
 
-    .editToolButton span {
-        display:inline-block;
-        position:absolute;
-        bottom:3px;
-        left:15px;
-    }
+#editImgHead {width: 100%;height: 65px;position: absolute;top: 0;left: 0;font-size: 14px;cursor: default;}
 
-.editButtonIcon {
-    height:27px;
-    width:27px;
-    position:absolute;
-    left:17px;
-    top:5px;
-}
+#editImgHead span {font-size: 16px;font-weight: 700;position: absolute;top: 20px;left: 25px}
 
-
-#editImgHead {
-    width: 100%;
-    height: 65px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-size: 14px;
-    cursor: default;
-}
-
-    #editImgHead span {
-        font-size: 16px;
-        font-weight: 700;
-        position: absolute;
-        top: 20px;
-        left: 25px;
-    }
-
-    #editImgHead div {
-        height: 17px;
-        width: 17px;
-        position: absolute;
-        right: 25px;
-        top: 25px;
-        background-image: url(../images/close.png);
-        cursor: pointer;
-    }
+#editImgHead div {height: 17px;width: 17px;position: absolute;right: 25px;top: 25px;background-image: url(../images/close.png);cursor: pointer}

@@ -65,65 +65,65 @@ function HideRemark() {
 }
 
 function OpenZDJS() {
-    window.open(getRootPath() + "/Business/BZZX/BZZX_SY_ZDJS?YHID=" + getUrlParam("YHID"));
+    window.open(getRootPath() + "/Business/BZZX/BZZX_SY_ZDJS");
 }
 
 function OpenZHMM() {
-    window.open(getRootPath() + "/Business/BZZX/BZZX_SY_ZHMM?YHID=" + getUrlParam("YHID"));
+    window.open(getRootPath() + "/Business/BZZX/BZZX_SY_ZHMM");
 }
 
 function OpenZHYECZ() {
-    window.open(getRootPath() + "/Business/HTGL/HTGL?YHID=" + getUrlParam("YHID") + "&Show=WDZJ");
+    window.open(getRootPath() + "/Business/HTGL/HTGL?Show=WDZJ");
 }
 
 function OpenDHMYCX() {
-    window.open(getRootPath() + "/Business/BZZX/BZZX_SY_DHMYCX?YHID=" + getUrlParam("YHID"));
+    window.open(getRootPath() + "/Business/BZZX/BZZX_SY_DHMYCX");
 }
 
 function OpenYYYZM() {
-    window.open(getRootPath() + "/Business/BZZX/BZZX_SY_YYYZM?YHID=" + getUrlParam("YHID"));
+    window.open(getRootPath() + "/Business/BZZX/BZZX_SY_YYYZM");
 }
 
 function OpenRZSM() {
-    window.open(getRootPath() + "/Business/BZZX/BZZX_SY_RZSM?YHID=" + getUrlParam("YHID"));
+    window.open(getRootPath() + "/Business/BZZX/BZZX_SY_RZSM");
 }
 
 function OpenXXWFFB() {
-    window.open(getRootPath() + "/Business/BZZX/BZZX_SY_XXWFFB?YHID=" + getUrlParam("YHID"));
+    window.open(getRootPath() + "/Business/BZZX/BZZX_SY_XXWFFB");
 }
 
 function OpenXXBSC() {
-    window.open(getRootPath() + "/Business/BZZX/BZZX_SY_XXBSC?YHID=" + getUrlParam("YHID"));
+    window.open(getRootPath() + "/Business/BZZX/BZZX_SY_XXBSC");
 }
 
 function OpenFBGZLTZ() {
-    window.open(getRootPath() + "/Business/BZZX/BZZX_SY_FBGZLTZ?YHID=" + getUrlParam("YHID"));
+    window.open(getRootPath() + "/Business/BZZX/BZZX_SY_FBGZLTZ");
 }
 
 function OpenFTBG() {
-    window.open(getRootPath() + "/Business/BZZX/BZZX_SY_FTBG?YHID=" + getUrlParam("YHID"));
+    window.open(getRootPath() + "/Business/BZZX/BZZX_SY_FTBG");
 }
 
 function OpenXSSYZN() {
-    window.open(getRootPath() + "/Business/BZZX/BZZX_SY_KSDH_XSSYZN?YHID=" + getUrlParam("YHID"));
+    window.open(getRootPath() + "/Business/BZZX/BZZX_SY_KSDH_XSSYZN");
 }
 
 function OpenYHZCYDL() {
-    window.open(getRootPath() + "/Business/BZZX/BZZX_SY_KSDH_YHZCYDL?YHID=" + getUrlParam("YHID"));
+    window.open(getRootPath() + "/Business/BZZX/BZZX_SY_KSDH_YHZCYDL");
 }
 
 function OpenXXFBYSC() {
-    window.open(getRootPath() + "/Business/BZZX/BZZX_SY_KSDH_XXFBYSC?YHID=" + getUrlParam("YHID"));
+    window.open(getRootPath() + "/Business/BZZX/BZZX_SY_KSDH_XXFBYSC");
 }
 
 function OpenZHDJYXY() {
-    window.open(getRootPath() + "/Business/BZZX/BZZX_SY_KSDH_ZHDJYXY?YHID=" + getUrlParam("YHID"));
+    window.open(getRootPath() + "/Business/BZZX/BZZX_SY_KSDH_ZHDJYXY");
 }
 
 function OpenWLFPCS() {
-    window.open(getRootPath() + "/Business/BZZX/BZZX_SY_KSDH_WLFPCS?YHID=" + getUrlParam("YHID"));
+    window.open(getRootPath() + "/Business/BZZX/BZZX_SY_KSDH_WLFPCS");
 }
 
 function OpenYYPJKD() {
-    window.open(getRootPath() + "/Business/BZZX/BZZX_SY_KSDH_YYPJKD?YHID=" + getUrlParam("YHID"));
+    window.open(getRootPath() + "/Business/BZZX/BZZX_SY_KSDH_YYPJKD");
 } 
