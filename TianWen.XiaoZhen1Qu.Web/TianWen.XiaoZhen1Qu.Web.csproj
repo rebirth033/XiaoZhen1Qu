@@ -233,6 +233,7 @@
     <Content Include="Areas\Business\Css\images\CXLB\cxlb_px_up_orange.png" />
     <Content Include="Areas\Business\Css\images\HTGL\htgl_delete.png" />
     <Content Include="Areas\Business\Css\images\HTGL\htgl_edit.png" />
+    <Content Include="Areas\Business\Css\images\HTGL\htgl_grzl_tx.jpg" />
     <Content Include="Areas\Business\Css\images\info_purple.png" />
     <Content Include="Areas\Business\Css\images\info_blue.png" />
     <Content Include="Areas\Business\Css\images\logo_purple.png" />
