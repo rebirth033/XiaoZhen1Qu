@@ -4,7 +4,10 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
+using TianWen.Framework.Common;
 using System.Web;
+using TianWen.XiaoZhen1Qu.Interface;
+using TianWen.XiaoZhen1Qu.Entities.Models;
 
 namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Ashx
 {
@@ -13,6 +16,8 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Ashx
     /// </summary>
     public class SaveGRZLPhotos : IHttpHandler
     {
+        IYHJBXXBLL YHJBXXBLL = SpringHelper.GetSpringObject<IYHJBXXBLL>("YHJBXXBLL");
+
         public void ProcessRequest(HttpContext context)
         {
             var data = context.Request["data"];
@@ -34,10 +39,10 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Ashx
                     {
                         int width = Convert.ToInt32(context.Request.Form["width"]);
                         int height = Convert.ToInt32(context.Request.Form["height"]);
-                        string yhid = context.Request.Form["yhid"];
+                        YHJBXX yhjbxx = YHJBXXBLL.GetYHJBXXByYHM(context.Session["YHM"].ToString());
                         string type = context.Request.Form["type"];
                         string filename = context.Request.Form["filename"];
-                        return ResizeImg(file.InputStream, width, height, yhid, type, filename);
+                        return ResizeImg(file.InputStream, width, height, yhjbxx.YHID, type, filename);
                     }
                 }
             }

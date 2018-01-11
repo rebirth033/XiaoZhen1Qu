@@ -13,7 +13,7 @@
     $("#img_person_info_yx").bind("click", UpdateYX);
     $("#span_person_info_right_yx").bind("click", UpdateYX);
     $("#btnBDSC").bind("mouseover", function() { $("#div_button_main_photo_child").css("background-color", "#ad5b97") });
-    $("#btnBDSC").bind("mouseleave", function () { $("#div_button_main_photo_child").css("background-color", "#5bd0de") });
+    $("#btnBDSC").bind("mouseleave", function () { $("#div_button_main_photo_child").css("background-color", "#bc6ba6") });
     Load("BDSC");
 });
 

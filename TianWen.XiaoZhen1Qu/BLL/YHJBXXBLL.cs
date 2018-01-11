@@ -386,7 +386,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
 
             string filepath = Common.GetRootPath() + @"\Areas\Business\Photos\" + YHID + @"\GRZL\";
 
-            string copypath = Common.GetRootPath() + @"\Areas\Business\Css\images\";
+            string copypath = Common.GetRootPath() + @"\Areas\Business\Css\images\HTGL\";
 
             using (ITransaction transaction = DAO.BeginTransaction())
             {
