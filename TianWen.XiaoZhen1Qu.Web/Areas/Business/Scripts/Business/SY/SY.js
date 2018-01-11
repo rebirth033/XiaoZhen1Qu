@@ -234,3 +234,7 @@ function OpenCXLB(lbid, lburl, condition) {
     else
         window.open(getRootPath() + "/Business" + lburl + "?LBID=" + lbid);
 }
+//打开二级首页
+function ToEJSY(type) {
+    window.open(getRootPath() + "/Business/SY/" + type);
+}

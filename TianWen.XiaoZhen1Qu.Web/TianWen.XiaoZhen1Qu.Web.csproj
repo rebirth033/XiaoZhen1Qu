@@ -579,7 +579,17 @@
     <Content Include="Areas\Business\Css\HTFB\SWFW\SWFW_ZK.css" />
     <Content Include="Areas\Business\Css\HTFB\SWFW\SWFW_ZL.css" />
     <Content Include="Areas\Business\Css\HTFB\SWFW\SWFW_ZXFW.css" />
-    <Content Include="Areas\Business\Css\Other\SY.css" />
+    <Content Include="Areas\Business\Css\SY\CLSY.css" />
+    <Content Include="Areas\Business\Css\SY\ZPSY.css" />
+    <Content Include="Areas\Business\Css\SY\ESSY.css" />
+    <Content Include="Areas\Business\Css\SY\SHFWSY.css" />
+    <Content Include="Areas\Business\Css\SY\SWFWSY.css" />
+    <Content Include="Areas\Business\Css\SY\PFCGSY.css" />
+    <Content Include="Areas\Business\Css\SY\ZSJMSY.css" />
+    <Content Include="Areas\Business\Css\SY\JYPXSY.css" />
+    <Content Include="Areas\Business\Css\SY\CWSY.css" />
+    <Content Include="Areas\Business\Css\SY\FCSY.css" />
+    <Content Include="Areas\Business\Css\SY\SY.css" />
     <Content Include="Areas\Business\Css\HTGL\WDXX\WDFB.css" />
     <Content Include="Areas\Business\Css\HTGL\WDXX\WDSC.css" />
     <Content Include="Areas\Business\Css\HTGL\WDZJ\WDXJ_CZ.css" />
@@ -1430,7 +1440,17 @@
     <Content Include="Areas\Business\Scripts\Business\HTFB\SWFW\SWFW_ZHFWYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\SWFW\SWFW_ZK.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\SWFW\SWFW_ZKYZ.js" />
-    <Content Include="Areas\Business\Scripts\Business\Other\SY.js" />
+    <Content Include="Areas\Business\Scripts\Business\SY\CLSY.js" />
+    <Content Include="Areas\Business\Scripts\Business\SY\ESSY.js" />
+    <Content Include="Areas\Business\Scripts\Business\SY\SHFWSY.js" />
+    <Content Include="Areas\Business\Scripts\Business\SY\SWFWSY.js" />
+    <Content Include="Areas\Business\Scripts\Business\SY\CWSY.js" />
+    <Content Include="Areas\Business\Scripts\Business\SY\ZSJMSY.js" />
+    <Content Include="Areas\Business\Scripts\Business\SY\JYPXSY.js" />
+    <Content Include="Areas\Business\Scripts\Business\SY\PFCGSY.js" />
+    <Content Include="Areas\Business\Scripts\Business\SY\ZPSY.js" />
+    <Content Include="Areas\Business\Scripts\Business\SY\FCSY.js" />
+    <Content Include="Areas\Business\Scripts\Business\SY\SY.js" />
     <Content Include="Areas\Business\Scripts\Business\HTGL\WDXX\WDFB.js" />
     <Content Include="Areas\Business\Scripts\Business\HTGL\WDXX\WDSC.js" />
     <Content Include="Areas\Business\Scripts\Business\HTGL\WDZJ\WDXJ_CZ.js" />
@@ -2803,6 +2823,7 @@
     <Content Include="Areas\Business\Views\CLCX\CLCX_QCPJ.cshtml" />
     <Content Include="Areas\Business\Views\CLXX\CLXX_QCPJ.cshtml" />
     <Content Include="Areas\Business\Views\Shared\BZZX.cshtml" />
+    <Content Include="Areas\Business\Views\SY\FCSY.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
