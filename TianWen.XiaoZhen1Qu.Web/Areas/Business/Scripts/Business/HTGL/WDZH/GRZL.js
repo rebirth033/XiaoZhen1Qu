@@ -1,8 +1,6 @@
 ﻿$(document).ready(function () {
-    $("#spanSYWXTX").css("color", "#bc6ba6");
-    $("#spanSYWXTX").css("font-weight", "700");
-    $("#emSYWXTX").css("background-color", "#bc6ba6");
-    $("#emSYWXTX").css("height", "2px");
+    $("#spanBDSC").css("color", "#bc6ba6").css("font-weight", "700");
+    $("#emBDSC").css("background-color", "#bc6ba6").css("height", "2px")
     $("#btnTBWXTX").css("display", "block");
     $(".divstep").bind("click", HeadActive);
     $(".li_main_photo_middle_xt").bind("click", LoadSystemPhoto);
@@ -16,7 +14,7 @@
     $("#span_person_info_right_yx").bind("click", UpdateYX);
     $("#btnBDSC").bind("mouseover", function() { $("#div_button_main_photo_child").css("background-color", "#ad5b97") });
     $("#btnBDSC").bind("mouseleave", function () { $("#div_button_main_photo_child").css("background-color", "#5bd0de") });
-    LoadGRZL();
+    Load("BDSC");
 });
 
 function HeadActive() {
