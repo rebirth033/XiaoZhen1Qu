@@ -109,12 +109,12 @@ function LoadDivInfo(id, PageIndex) {
 function LoadSZMX(PageIndex) {
     var LX = "", ZJLX = "";
     $("#div_main_info_head_lx").find(".span_main_info_right").each(function () {
-        if ($(this).css("background-color") === "rgb(49, 176, 213)") {
+        if ($(this).css("background-color") === "rgb(173, 91, 151)") {
             LX = $(this).html() === "全部" ? "" : $(this).html();
         }
     });
     $("#div_main_info_head_zjlx").find(".span_main_info_right").each(function () {
-        if ($(this).css("background-color") === "rgb(49, 176, 213)") {
+        if ($(this).css("background-color") === "rgb(173, 91, 151)") {
             ZJLX = $(this).html() === "全部" ? "" : $(this).html();
         }
     });
@@ -153,7 +153,7 @@ function LoadSZMX(PageIndex) {
 function LoadDJJDJL(PageIndex) {
     var LX = "";
     $("#div_main_info_head_djjd_lx").find(".span_main_info_right").each(function () {
-        if ($(this).css("background-color") === "rgb(49, 176, 213)") {
+        if ($(this).css("background-color") === "rgb(173, 91, 151)") {
             LX = $(this).html() === "全部" ? "" : $(this).html();
         }
     });
@@ -233,12 +233,12 @@ function SelectDJJDJL(obj) {
 function SelectSZMXBySJ(obj) {
     var LX = "", ZJLX = "", StartTime, EndTime;
     $("#div_main_info_head_lx").find(".span_main_info_right").each(function () {
-        if ($(this).css("background-color") === "rgb(49, 176, 213)") {
+        if ($(this).css("background-color") === "rgb(173, 91, 151)") {
             LX = $(this).html() === "全部" ? "" : $(this).html();
         }
     });
     $("#div_main_info_head_zjlx").find(".span_main_info_right").each(function () {
-        if ($(this).css("background-color") === "rgb(49, 176, 213)") {
+        if ($(this).css("background-color") === "rgb(173, 91, 151)") {
             ZJLX = $(this).html() === "全部" ? "" : $(this).html();
         }
     });
@@ -297,7 +297,7 @@ function SelectSZMXBySJ(obj) {
 function SelectDJJDJLBySJ(obj) {
     var LX = "", StartTime, EndTime;
     $("#div_main_info_head_lx").find(".span_main_info_right").each(function () {
-        if ($(this).css("background-color") === "rgb(49, 176, 213)") {
+        if ($(this).css("background-color") === "rgb(173, 91, 151)") {
             LX = $(this).html() === "全部" ? "" : $(this).html();
         }
     });

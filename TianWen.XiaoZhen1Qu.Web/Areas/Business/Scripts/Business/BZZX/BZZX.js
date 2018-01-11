@@ -2,21 +2,32 @@
     $("#span_head_nav_info_sy").bind("click", ToSY);
     $("#span_head_nav_info_lxkf").bind("click", ToLXKF);
     $("#span_head_nav_info_wzjy").bind("click", ToWZJY);
-    ToSY();
+    if (getUrlParam("TYPE") === "CJWT" || getUrlParam("TYPE") === null)
+        ToSY();
+    if (getUrlParam("TYPE") === "LXKF")
+        ToLXKF();
+    if (getUrlParam("TYPE") === "YJFK")
+        ToWZJY();
 });
 
 //帮助中心_首页
 function ToSY() {
+    $(".span_head_nav_info").css("background-color", "#bc6ba6");
+    $("#span_head_nav_info_sy").css("background-color", "#ad5b97");
     $("#iframeright").attr("src", getRootPath() + "/Business/BZZX/BZZX_SY");
 }
 
 //帮助中心_联系客服
 function ToLXKF() {
+    $(".span_head_nav_info").css("background-color", "#bc6ba6");
+    $("#span_head_nav_info_lxkf").css("background-color", "#ad5b97");
     $("#iframeright").attr("src", getRootPath() + "/Business/BZZX/BZZX_LXKF");
 }
 
 //帮助中心_网站建议
 function ToWZJY() {
+    $(".span_head_nav_info").css("background-color", "#bc6ba6");
+    $("#span_head_nav_info_wzjy").css("background-color", "#ad5b97");
     $("#iframeright").attr("src", getRootPath() + "/Business/BZZX/BZZX_WZJY");
 }
 

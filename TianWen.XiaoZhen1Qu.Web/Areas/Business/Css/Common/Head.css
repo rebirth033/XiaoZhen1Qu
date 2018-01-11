@@ -24,6 +24,6 @@
 /*首页_头部导航*/
 .div_head_nav {background-color: #ffffff;width: 1200px;height: 39px;}
 .div_head_nav .ul_head_nav {height: 39px;display: block;padding: 0;width: 100%;border-bottom: 2px solid #bc6ba6;}
-.div_head_nav .ul_head_nav .li_head_nav {background: #ffffff;text-align: center;color: #bc6ba6;height: 37px;font-size: 16px;font-weight: 700;float: left;display: inline-block;padding: 6px 20px;border-top-left-radius: 4px;border-top-right-radius: 4px;}
+.div_head_nav .ul_head_nav .li_head_nav {background: #ffffff;text-align: center;color: #bc6ba6;height: 37px;font-size: 16px;font-weight: 700;float: left;display: inline-block;padding: 6px 18px;border-top-left-radius: 4px;border-top-right-radius: 4px;}
 .div_head_nav .ul_head_nav .li_head_nav .span_head_nav {cursor: pointer;}
 .div_head_nav .ul_head_nav .li_head_nav .i_head_nav {background-image: url(images/head_nav_down.png);display: inline-block;width: 14px;height: 14px;margin-left: 5px;}
