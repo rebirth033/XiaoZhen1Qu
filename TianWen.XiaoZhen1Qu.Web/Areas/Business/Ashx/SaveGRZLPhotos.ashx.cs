@@ -14,7 +14,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Ashx
     /// <summary>
     /// SaveGRZLPhotos 的摘要说明
     /// </summary>
-    public class SaveGRZLPhotos : IHttpHandler
+    public class SaveGRZLPhotos : IHttpHandler, System.Web.SessionState.IRequiresSessionState
     {
         IYHJBXXBLL YHJBXXBLL = SpringHelper.GetSpringObject<IYHJBXXBLL>("YHJBXXBLL");
 
