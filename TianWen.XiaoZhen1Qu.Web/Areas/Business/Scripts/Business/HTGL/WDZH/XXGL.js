@@ -14,22 +14,33 @@ $(document).ready(function () {
 function HeadActive() {
     $(".divstep").each(function () {
         $(this).find("span").each(function () {
-            $(this).css("color", "#cccccc");
-            $(this).css("font-weight", "normal");
+            $(this).css("color", "#cccccc").css("font-weight", "normal");
         });
         $(this).find("em").each(function () {
-            $(this).css("height", "1px");
-            $(this).css("background-color", "#cccccc");
+            $(this).css("height", "1px").css("background-color", "#cccccc");
         });
     });
     $(this).find("span").each(function () {
-        $(this).css("color", "#bc6ba6");
-        $(this).css("font-weight", "700");
+        $(this).css("color", "#bc6ba6").css("font-weight", "700");
     });
     $(this).find("em").each(function () {
-        $(this).css("height", "2px");
-        $(this).css("background-color", "#bc6ba6");
+        $(this).css("height", "2px").css("background-color", "#bc6ba6");
     });
+    if ($(this)[0].id === "divXTTZ") {
+        $("#divXTTZLB").css("display", "block");
+        $("#divKHZXLB").css("display", "none");
+        $("#divWDZXLB").css("display", "none");
+    }
+    if ($(this)[0].id === "divKHZX") {
+        $("#divXTTZLB").css("display", "none");
+        $("#divKHZXLB").css("display", "block");
+        $("#divWDZXLB").css("display", "none");
+    }
+    if ($(this)[0].id === "divWDZX") {
+        $("#divXTTZLB").css("display", "none");
+        $("#divKHZXLB").css("display", "none");
+        $("#divWDZXLB").css("display", "block");
+    }
     LoadDefault($(this)[0].id + "LB", 1);
 }
 
@@ -105,10 +116,10 @@ function NoInfo(TYPE) {
         $("#divXTTZLB").html('<div class="div_no_info">您暂时没有系统通知消息</div>');
     }
     if (TYPE === "divKHZXLB") {
-        $("#divKHZXLB").html('<div class="div_no_info">您暂时没有咨询消息</div>');
+        $("#divKHZXLB").html('<div class="div_no_info">您暂时没有客户咨询消息</div>');
     }
     if (TYPE === "divWDZXLB") {
-        $("#divWDZXLB").html('<div class="div_no_info">您暂时没有咨询消息</div>');
+        $("#divWDZXLB").html('<div class="div_no_info">您暂时没有我的咨询消息</div>');
     }
 }
 
