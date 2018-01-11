@@ -1,5 +1,4 @@
 ﻿var ysjcount = 60, xsjcount = 60;;
-
 $(document).ready(function () {
     $("#spanJBSJ").css("color", "#bc6ba6");
     $("#spanJBSJ").css("font-weight", "700");

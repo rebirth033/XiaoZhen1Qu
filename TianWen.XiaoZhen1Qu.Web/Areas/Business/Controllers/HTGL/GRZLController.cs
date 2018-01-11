@@ -57,28 +57,28 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         public JsonResult UpdateSJ()
         {
             YHJBXX yhjbxx = YHJBXXBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
-            object result = YHJBXXBLL.UpdateSJ(yhjbxx.YHID, yhjbxx.SJ);
+            object result = YHJBXXBLL.UpdateSJ(yhjbxx.YHID, Request["SJ"]);
             return Json(result);
         }
 
         public JsonResult UpdateQQ()
         {
             YHJBXX yhjbxx = YHJBXXBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
-            object result = YHJBXXBLL.UpdateQQ(yhjbxx.YHID, yhjbxx.QQ);
+            object result = YHJBXXBLL.UpdateQQ(yhjbxx.YHID, Request["SJ"]);
             return Json(result);
         }
 
         public JsonResult UpdateWB()
         {
             YHJBXX yhjbxx = YHJBXXBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
-            object result = YHJBXXBLL.UpdateWB(yhjbxx.YHID, yhjbxx.WB);
+            object result = YHJBXXBLL.UpdateWB(yhjbxx.YHID, Request["WB"]);
             return Json(result);
         }
 
         public JsonResult UpdateWX()
         {
             YHJBXX yhjbxx = YHJBXXBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
-            object result = YHJBXXBLL.UpdateWX(yhjbxx.YHID, yhjbxx.WX);
+            object result = YHJBXXBLL.UpdateWX(yhjbxx.YHID, Request["WX"]);
             return Json(result);
         }
 

@@ -176,7 +176,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                         DAO.Update(yhjbxx);
                         DAO.Repository.Session.Flush();
                         transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "修改成功", Value = new { YHID = yhjbxx.YHID } };
+                        return new { Result = EnResultType.Success, Message = "绑定成功", Value = new { YHID = yhjbxx.YHID } };
                     }
                     else
                     {
@@ -187,11 +187,11 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 catch (Exception ex)
                 {
                     transaction.Rollback();
-                    LoggerManager.Error("YHJBXXBLL", "修改失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                    LoggerManager.Error("YHJBXXBLL", "绑定失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
                     return new
                     {
                         Result = EnResultType.Failed,
-                        Message = "修改失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!"
+                        Message = "绑定失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!"
                     };
                 }
             }
@@ -493,7 +493,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     UpdateYX(YHID, YX);
                     MailMessage msg = new MailMessage();
                     msg.To.Add(YX);
-                    msg.From = new MailAddress("980381266@qq.com", "信息小镇", Encoding.UTF8);
+                    msg.From = new MailAddress(YX, "信息小镇", Encoding.UTF8);
                     msg.Subject = "邮件认证 - 信息小镇";
                     msg.SubjectEncoding = Encoding.UTF8;//邮件标题编码 
                     string url =  "http://localhost" + Common.GetVirtualRootPath() + "/Business/GRZL/YXYZCG?para=" + EncryptionHelper.MD5Encrypt64(YHID) + "|" + EncryptionHelper.MD5Encrypt64(CheckCode);
@@ -523,7 +523,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     msg.Priority = MailPriority.High;//邮件优先级 
 
                     SmtpClient client = new SmtpClient();
-                    client.Credentials = new System.Net.NetworkCredential("980381266@qq.com", "vbfhologcvanbfch");//邮箱用户名，smtp服务授权密码
+                    client.Credentials = new System.Net.NetworkCredential(YX, "vbfhologcvanbfch");//邮箱用户名，smtp服务授权密码
                     client.Host = "smtp.qq.com";//SMTP服务器地址  
                     client.Port = 587;//SMTP端口，QQ邮箱填写587
                     client.EnableSsl = true;//启用SSL加密  

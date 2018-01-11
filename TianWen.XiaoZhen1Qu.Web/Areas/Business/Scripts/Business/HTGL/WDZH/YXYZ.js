@@ -51,6 +51,7 @@ function SendEmail() {
                 $("#emCSYJ").css("background", "#bc6ba6");
                 $("#divFirst").css("display", "none");
                 $("#divSecond").css("display", "block");
+                $("#span_yx").html($("#inputYX").val());
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
