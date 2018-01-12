@@ -2824,6 +2824,15 @@
     <Content Include="Areas\Business\Views\CLXX\CLXX_QCPJ.cshtml" />
     <Content Include="Areas\Business\Views\Shared\BZZX.cshtml" />
     <Content Include="Areas\Business\Views\SY\FCSY.cshtml" />
+    <Content Include="Areas\Business\Views\SY\JYPXSY.cshtml" />
+    <Content Include="Areas\Business\Views\SY\CLSY.cshtml" />
+    <Content Include="Areas\Business\Views\SY\ZPSY.cshtml" />
+    <Content Include="Areas\Business\Views\SY\ESSY.cshtml" />
+    <Content Include="Areas\Business\Views\SY\SHFWSY.cshtml" />
+    <Content Include="Areas\Business\Views\SY\CWSY.cshtml" />
+    <Content Include="Areas\Business\Views\SY\SWFWSY.cshtml" />
+    <Content Include="Areas\Business\Views\SY\PFCGSY.cshtml" />
+    <Content Include="Areas\Business\Views\SY\ZSJMSY.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
