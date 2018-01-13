@@ -16,5 +16,7 @@ namespace TianWen.XiaoZhen1Qu.Interface
         object LoadSY_ML(string XZQ);
 
         object LoadFCSY(string XZQDM, string XZQ);
+
+        object LoadCLSY(string XZQDM, string XZQ);
     }
 }

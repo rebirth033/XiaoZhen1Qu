@@ -12,6 +12,8 @@ function LoadCLCondition() {
 function LoadURLCondition() {
     if (getUrlParam("JG") !== null)
         SelectURLCondition(getUrlParam("JG"));
+    else if (getUrlParam("PP") !== null)
+        SelectURLCondition(getUrlParam("PP"));
     else if (getUrlParam("QY") !== null)
         SelectURLCondition(getUrlParam("QY"));
     else
