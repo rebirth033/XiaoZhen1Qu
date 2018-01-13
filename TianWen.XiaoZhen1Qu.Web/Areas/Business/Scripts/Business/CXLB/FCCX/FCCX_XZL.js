@@ -3,23 +3,8 @@ $(document).ready(function () {
     BindConditionNav();
     $(".li_condition_head:eq(0)").each(function () { $(this).css("background-color", "#ffffff").css("color", "#bc6ba6"); });
     BindBodyNav();
-    LoadHot("FCXX_XZL");
     LoadCZCondition();
 });
-//加载出租查询条件
-function LoadCZCondition() {
-    RemoveCondition("XZLLX,QY,ZJ,SJ,MJ");
-    LoadConditionByTypeNames("'写字楼类型','商铺租金','写字楼面积'", "CODES_FC", "类型,租金,面积", "XZLLX,ZJ,MJ", "15,15,15");
-    LoadBody("FCXX_XZL", currentIndex);
-    LoadHot("FCXX_XZL");
-}
-//加载出售查询条件
-function LoadCSCondition() {
-    RemoveCondition("XZLLX,QY,ZJ,SJ,MJ");
-    LoadConditionByTypeNames("'写字楼类型','商铺售价','写字楼面积'", "CODES_FC", "类型,售价,面积", "XZLLX,SJ,MJ", "15,15,15");
-    LoadBody("FCXX_XZL", currentIndex);
-    LoadHot("FCXX_XZL");
-}
 //绑定查询条件导航
 function BindConditionNav() {
     $(".li_condition_head").bind("click", function () {
@@ -34,12 +19,74 @@ function BindConditionNav() {
         }
     });
 }
+//加载出租查询条件
+function LoadCZCondition() {
+    RemoveCondition("XZLLX,QY,ZJ,SJ,MJ");
+    LoadConditionByTypeNames("'写字楼类型','商铺租金','写字楼面积'", "CODES_FC", "类型,租金,面积", "XZLLX,ZJ,MJ", "15,15,15");
+
+}
+//加载出售查询条件
+function LoadCSCondition() {
+    RemoveCondition("XZLLX,QY,ZJ,SJ,MJ");
+    LoadConditionByTypeNames("'写字楼类型','商铺售价','写字楼面积'", "CODES_FC", "类型,售价,面积", "XZLLX,SJ,MJ", "15,15,15");
+
+}
+//根据TYPENAME获取字典表
+function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAMES",
+        dataType: "json",
+        data:
+        {
+            TYPENAMES: typenames,
+            TBName: table
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                LoadDistrictCondition(xml.districts, "QY");
+                var typelist = typenames.split(',');
+                var namelist = names.split(',');
+                for (var i = 0; i < typelist.length; i++) {
+                    for (var j = 0; j < namelist.length; j++) {
+                        if (typelist[i].indexOf(namelist[j]) !== -1) {
+                            LoadCondition(_.filter(xml.list, function (value) { return typelist[i].indexOf(value.TYPENAME) !== -1; }), namelist[j], ids.split(',')[j], lengths.split(',')[j]);
+                        }
+                    }
+                }
+                LoadURLCondition();
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//加载URL查询条件
+function LoadURLCondition() {
+    if (getUrlParam("MJ") !== null)
+        SelectURLCondition(getUrlParam("MJ"));
+    else
+    {
+        LoadBody("FCXX_XZL", currentIndex);
+    }
+    LoadHot("FCXX_XZL");
+}
 //选择条件
 function SelectCondition(obj, name) {
     $(obj).parent().find(".li_condition_body").each(function () {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
+    LoadBody("FCXX_XZL", currentIndex);
+    ShowSelectCondition("FCXX_XZL");
+}
+//选择URL条件
+function SelectURLCondition(obj) {
+    $("#" + obj).parent().find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $("#" + obj).addClass("li_condition_body_active");
     LoadBody("FCXX_XZL", currentIndex);
     ShowSelectCondition("FCXX_XZL");
 }

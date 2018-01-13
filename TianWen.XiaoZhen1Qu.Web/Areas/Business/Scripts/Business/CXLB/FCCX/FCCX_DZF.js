@@ -7,7 +7,46 @@ $(document).ready(function () {
 //加载房产查询条件
 function LoadFCCondition() {
     LoadConditionByTypeNames("'短租房类型','短租房租金','出租方式'", "CODES_FC", "类型,租金,出租方式", "FWLX,ZJ,CZFS", "15,15,15");
-    LoadBody("FCXX_DZF", currentIndex);
+}
+//根据TYPENAME获取字典表
+function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAMES",
+        dataType: "json",
+        data:
+        {
+            TYPENAMES: typenames,
+            TBName: table
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                LoadDistrictCondition(xml.districts, "QY");
+                var typelist = typenames.split(',');
+                var namelist = names.split(',');
+                for (var i = 0; i < typelist.length; i++) {
+                    for (var j = 0; j < namelist.length; j++) {
+                        if (typelist[i].indexOf(namelist[j]) !== -1) {
+                            LoadCondition(_.filter(xml.list, function (value) { return typelist[i].indexOf(value.TYPENAME) !== -1; }), namelist[j], ids.split(',')[j], lengths.split(',')[j]);
+                        }
+                    }
+                }
+                LoadURLCondition();
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//加载URL查询条件
+function LoadURLCondition() {
+    if (getUrlParam("FWLD") !== null)
+        SelectURLCondition(getUrlParam("FWLD"));
+    else if (getUrlParam("ZJ") !== null)
+        SelectURLCondition(getUrlParam("ZJ"));
+    else
+        LoadBody("FCXX_DZF", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -15,6 +54,15 @@ function SelectCondition(obj, name) {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
+    LoadBody("FCXX_DZF", currentIndex);
+    ShowSelectCondition("FCXX_DZF");
+}
+//选择URL条件
+function SelectURLCondition(obj) {
+    $("#" + obj).parent().find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $("#" + obj).addClass("li_condition_body_active");
     LoadBody("FCXX_DZF", currentIndex);
     ShowSelectCondition("FCXX_DZF");
 }

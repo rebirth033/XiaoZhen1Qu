@@ -56,6 +56,8 @@ function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
 function LoadURLCondition() {
     if (getUrlParam("FWLD") !== null)
         SelectURLCondition(getUrlParam("FWLD"));
+    else if (getUrlParam("SJ") !== null)
+        SelectURLCondition(getUrlParam("SJ"));
     else
         LoadBody("FCXX_ESF", currentIndex);
 }
