@@ -8,7 +8,6 @@
     $("#div_yhm").bind("click", ShowWDXX);
     LoadDefault();
 });
-
 //打开查询列表
 function OpenCXLB(lbid, lburl, condition) {
     if (condition !== "null" && condition !== null)

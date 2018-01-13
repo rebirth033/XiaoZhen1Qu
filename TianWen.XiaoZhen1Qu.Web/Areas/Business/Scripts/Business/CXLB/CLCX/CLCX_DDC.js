@@ -7,7 +7,15 @@ $(document).ready(function () {
 //加载条件
 function LoadCLCondition() {
     LoadConditionByTypeNames("'电动车品牌','电动车车型','电动车价格','电动车电池电压','电动车电池容量'", "CODES_CL", "品牌,车型,价格,电池电压,电池容量", "PP,CX,JG,DCDY,DCRL", "15,15,15,15,15");
-    LoadBody("CLXX_DDC", currentIndex);
+}
+//加载URL查询条件
+function LoadURLCondition() {
+    if (getUrlParam("JG") !== null)
+        SelectURLCondition(getUrlParam("JG"));
+    else if (getUrlParam("QY") !== null)
+        SelectURLCondition(getUrlParam("QY"));
+    else
+        LoadBody("CLXX_DDC", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -15,6 +23,15 @@ function SelectCondition(obj, name) {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
+    LoadBody("CLXX_DDC", currentIndex);
+    ShowSelectCondition("CLXX_DDC");
+}
+//选择URL条件
+function SelectURLCondition(obj) {
+    $("#" + obj).parent().find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $("#" + obj).addClass("li_condition_body_active");
     LoadBody("CLXX_DDC", currentIndex);
     ShowSelectCondition("CLXX_DDC");
 }

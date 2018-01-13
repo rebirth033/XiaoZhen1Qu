@@ -240,8 +240,7 @@ function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
                         }
                     }
                 }
-                if (typenames.indexOf("轿车品牌") !== -1)
-                    LoadCondition(xml.jclist, "品牌", "PP", 100);
+                LoadURLCondition();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

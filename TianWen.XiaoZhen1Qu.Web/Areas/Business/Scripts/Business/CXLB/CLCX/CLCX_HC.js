@@ -7,7 +7,15 @@ $(document).ready(function () {
 //加载条件
 function LoadCLCondition() {
     LoadConditionByTypeNames("'货车车型','货车品牌','客车价格'", "CODES_CL", "车型,品牌,价格", "LB,PP,JG", "100,100,100");
-    LoadBody("CLXX_HC", currentIndex);
+}
+//加载URL查询条件
+function LoadURLCondition() {
+    if (getUrlParam("JG") !== null)
+        SelectURLCondition(getUrlParam("JG"));
+    else if (getUrlParam("QY") !== null)
+        SelectURLCondition(getUrlParam("QY"));
+    else
+        LoadBody("CLXX_HC", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -18,6 +26,15 @@ function SelectCondition(obj, name) {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
+    LoadBody("CLXX_HC", currentIndex);
+    ShowSelectCondition("CLXX_HC");
+}
+//选择URL条件
+function SelectURLCondition(obj) {
+    $("#" + obj).parent().find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $("#" + obj).addClass("li_condition_body_active");
     LoadBody("CLXX_HC", currentIndex);
     ShowSelectCondition("CLXX_HC");
 }

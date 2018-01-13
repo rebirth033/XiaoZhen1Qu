@@ -2,13 +2,54 @@
 $(document).ready(function () {
     BindBodyNav();
     LoadCLCondition();
-    LoadHot("CLXX_JC");
     ToggleCondition();
+    LoadHot("CLXX_JC");
 });
 //加载条件
 function LoadCLCondition() {
     LoadConditionByTypeNames("'轿车品牌','轿车价格','轿车车龄','轿车排量','轿车里程','轿车变速箱','轿车颜色'", "CODES_CL", "品牌,价格,车龄,排量,里程,变速箱,颜色", "PP,JG,CL,PL,LC,BSX,CLYS", "100,100,100,100,100,100,100");
-    LoadBody("CLXX_JC", currentIndex);
+}
+//根据TYPENAME获取字典表
+function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAMES",
+        dataType: "json",
+        data:
+        {
+            TYPENAMES: typenames,
+            TBName: table
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                LoadDistrictCondition(xml.districts, "QY");
+                var typelist = typenames.split(',');
+                var namelist = names.split(',');
+                for (var i = 0; i < typelist.length; i++) {
+                    for (var j = 0; j < namelist.length; j++) {
+                        if (typelist[i].indexOf(namelist[j]) !== -1) {
+                            LoadCondition(_.filter(xml.list, function (value) { return typelist[i].indexOf(value.TYPENAME) !== -1; }), namelist[j], ids.split(',')[j], lengths.split(',')[j]);
+                        }
+                    }
+                }
+                if (typenames.indexOf("轿车品牌") !== -1)
+                    LoadCondition(xml.jclist, "品牌", "PP", 100);
+                LoadURLCondition();
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//加载URL查询条件
+function LoadURLCondition() {
+    if (getUrlParam("JG") !== null)
+        SelectURLCondition(getUrlParam("JG"));
+    else if (getUrlParam("QY") !== null)
+        SelectURLCondition(getUrlParam("QY"));
+    else
+        LoadBody("CLXX_JC", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -19,6 +60,15 @@ function SelectCondition(obj, name) {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
+    LoadBody("CLXX_JC", currentIndex);
+    ShowSelectCondition("CLXX_JC");
+}
+//选择URL条件
+function SelectURLCondition(obj) {
+    $("#" + obj).parent().find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $("#" + obj).addClass("li_condition_body_active");
     LoadBody("CLXX_JC", currentIndex);
     ShowSelectCondition("CLXX_JC");
 }
