@@ -1,37 +1,73 @@
 ﻿var currentIndex = 1;
 $(document).ready(function () {
     $(".li_condition_head:eq(0)").each(function () { $(this).css("background-color", "#ffffff").css("color", "#bc6ba6"); });
-    BindConditionNav("FCXX_CW");
+    BindConditionNav();
     BindBodyNav();
-    LoadCZCondition("FCXX_CW");
+    LoadCZCondition();
 });
-//加载出租查询条件
-function LoadCZCondition(type) {
-    RemoveCondition("QY,ZJ,SJ,MJ");
-    LoadConditionByTypeNames("'车位租金','车位面积'", "CODES_FC", "租金,面积", "ZJ,MJ", "100,100");
-    LoadBody(type, currentIndex);
-    LoadHot(type);
-}
-//加载出售查询条件
-function LoadCSCondition(type) {
-    RemoveCondition("QY,ZJ,SJ,MJ");
-    LoadConditionByTypeNames("'车位售价','车位面积'", "CODES_FC", "售价,面积", "SJ,MJ", "100,100");
-    LoadBody(type, currentIndex);
-    LoadHot(type);
-}
 //绑定查询条件导航
-function BindConditionNav(type) {
+function BindConditionNav() {
     $(".li_condition_head").bind("click", function () {
         $(".li_condition_head").each(function (i) {
             $(this).css("background-color", "#eeeff1").css("color", "#999999");
         });
         $(this).css("background-color", "#ffffff").css("color", "#bc6ba6");
         if ($(this).html() === "出租") {
-            LoadCZCondition(type);
+            LoadCZCondition();
         } else {
-            LoadCSCondition(type);
+            LoadCSCondition();
         }
     });
+}
+//加载出租查询条件
+function LoadCZCondition() {
+    RemoveCondition("QY,ZJ,SJ,MJ");
+    LoadConditionByTypeNames("'车位租金','车位面积'", "CODES_FC", "租金,面积", "ZJ,MJ", "100,100");
+}
+//加载出售查询条件
+function LoadCSCondition() {
+    RemoveCondition("QY,ZJ,SJ,MJ");
+    LoadConditionByTypeNames("'车位售价','车位面积'", "CODES_FC", "售价,面积", "SJ,MJ", "100,100");
+}
+//根据TYPENAME获取字典表
+function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAMES",
+        dataType: "json",
+        data:
+        {
+            TYPENAMES: typenames,
+            TBName: table
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                LoadDistrictCondition(xml.districts, "QY");
+                var typelist = typenames.split(',');
+                var namelist = names.split(',');
+                for (var i = 0; i < typelist.length; i++) {
+                    for (var j = 0; j < namelist.length; j++) {
+                        if (typelist[i].indexOf(namelist[j]) !== -1) {
+                            LoadCondition(_.filter(xml.list, function (value) { return typelist[i].indexOf(value.TYPENAME) !== -1; }), namelist[j], ids.split(',')[j], lengths.split(',')[j]);
+                        }
+                    }
+                }
+                LoadURLCondition();
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//加载URL查询条件
+function LoadURLCondition() {
+    if (getUrlParam("MJ") !== null)
+        SelectURLCondition(getUrlParam("MJ"));
+    else {
+        LoadBody("FCXX_CW", currentIndex);
+    }
+    LoadHot("FCXX_CW");
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -39,6 +75,15 @@ function SelectCondition(obj, name) {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
+    LoadBody("FCXX_CW", currentIndex);
+    ShowSelectCondition("FCXX_CW");
+}
+//选择URL条件
+function SelectURLCondition(obj) {
+    $("#" + obj).parent().find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $("#" + obj).addClass("li_condition_body_active");
     LoadBody("FCXX_CW", currentIndex);
     ShowSelectCondition("FCXX_CW");
 }

@@ -43,7 +43,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             object result = CommonBLL.GetDistrictXQJByXZQDM(Session["XZQDM"].ToString());
             return Json(result);
         }
-        //根据县区级行政区
+        //获取县区级行政区
         public JsonResult GetDistrictXQJByXZQDM()
         {
             object result = CommonBLL.GetDistrictXQJByXZQDM(Session["XZQDM"].ToString());
