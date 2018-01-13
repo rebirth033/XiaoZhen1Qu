@@ -46,6 +46,8 @@ function LoadURLCondition() {
         SelectURLCondition(getUrlParam("FWLD"));
     else if (getUrlParam("ZJ") !== null)
         SelectURLCondition(getUrlParam("ZJ"));
+    else if (getUrlParam("QY") !== null)
+        SelectURLCondition(getUrlParam("QY"));
     else
         LoadBody("FCXX_HZF", currentIndex);
 }

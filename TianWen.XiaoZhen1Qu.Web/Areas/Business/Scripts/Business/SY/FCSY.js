@@ -46,8 +46,17 @@ function LoadItem(title, list, districts) {
     html += '<div class="div_body_middle_item_left">';
     html += '<p class="p_body_middle_item_left">' + title + '</p>';
     html += '<ul class="ul_body_middle_item_left">';
-    for (var i = 0; i < districts.length; i++)
-        html += '<li class="li_body_middle_item_left">' + districts[i].CODENAME + '</li>';
+    for (var i = 0; i < districts.length; i++) {
+        if (title === "整套出租")
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(13, \'' + "/FCCX/FCCX_ZZF" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+        if (title === "单间出租")
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(14, \'' + "/FCCX/FCCX_HZF" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+        if (title === "日租短租")
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(15, \'' + "/FCCX/FCCX_DZF" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+        if (title === "二手房出售")
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(16, \'' + "/FCCX/FCCX_ESF" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+
+    }
     html += '</ul>';
     html += '</div>';
 

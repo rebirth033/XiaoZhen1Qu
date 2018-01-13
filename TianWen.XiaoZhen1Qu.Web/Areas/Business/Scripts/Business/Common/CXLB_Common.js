@@ -329,11 +329,10 @@ function LoadDistrictCondition(array, type) {
     html += '<li id="li_condition_body_first_QY" class="li_condition_body_first">区域</li>';
     html += '<li class="li_condition_body li_condition_body_active" onclick="SelectCondition(this)">全部</li>';
     for (var i = 0; i < array.length; i++) {
-        html += '<li class="li_condition_body" onclick="SelectCondition(this)">' + array[i].CODENAME + '</li>';
+        html += '<li id="' + array[i].CODEID + '" class="li_condition_body" onclick="SelectCondition(this)">' + array[i].CODENAME + '</li>';
     }
     html += '</ul>';
     $("#div_condition_body_" + type).append(html);
-    //$("#li_condition_body_first_QY").css("height", (parseInt($("#div_condition_body_QY").css("height")) - 10));
 }
 //发布信息
 function FBXX() {
