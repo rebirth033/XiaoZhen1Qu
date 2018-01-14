@@ -48,5 +48,9 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         {
             return Json(SYBLL.LoadCWSY(Session["XZQDM"].ToString(), Session["XZQ"].ToString()));
         }
+        public JsonResult LoadESSY()
+        {
+            return Json(SYBLL.LoadESSY(Session["XZQDM"].ToString(), Session["XZQ"].ToString()));
+        }
     }
 }

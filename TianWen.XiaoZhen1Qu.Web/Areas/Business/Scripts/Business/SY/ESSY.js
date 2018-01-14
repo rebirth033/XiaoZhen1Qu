@@ -19,7 +19,7 @@ function OpenCXLB(lbid, lburl, condition) {
 function LoadDefault() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SY/LoadCWSY",
+        url: getRootPath() + "/Business/SY/LoadESSY",
         dataType: "json",
         data:
         {
@@ -27,12 +27,12 @@ function LoadDefault() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                LoadItem("宠物狗", xml.cwgs, xml.cwgpz);
-                LoadItem("宠物猫", xml.cwms, xml.cwmpz);
-                LoadItem("花鸟鱼虫", xml.hnycs, xml.hnyclb);
-                LoadItem("宠物服务", xml.cwfws, xml.cwfwlb);
-                LoadItem("宠物用品", xml.cwyps, xml.cwyplb);
-                LoadItem("宠物公益", xml.cwgys, xml.cwgylb);
+                LoadItem("手机", xml.sjs, xml.sjpp);
+                LoadItem("笔记本电脑", xml.bjbdns, xml.bjbdnpp);
+                LoadItem("平板电脑", xml.pbdns, xml.pbdnpp);
+                LoadItem("数码产品", xml.smcps, xml.smcplb);
+                LoadItem("台式机/配件", xml.tsjs, xml.tsjlb);
+                //LoadItem("宠物公益", xml.cwgys, xml.cwgylb);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -48,15 +48,15 @@ function LoadItem(title, list, districts) {
     html += '<p class="p_body_middle_item_left">' + title + '</p>';
     html += '<ul class="ul_body_middle_item_left">';
     for (var i = 0; i < (districts.length > 14 ? 14 : districts.length) ; i++) {
-        if (title === "宠物狗")
+        if (title === "手机")
             html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(31, \'' + "/CWCX/CWCX_CWG" + '\', \'PZ=' + districts[i].CODENAME + '\')">' + districts[i].CODENAME + '</li>';
-        if (title === "宠物猫")
+        if (title === "笔记本电脑")
             html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(32, \'' + "/CWCX/CWCX_CWM" + '\', \'PZ=' + districts[i].CODENAME + '\')">' + districts[i].CODENAME + '</li>';
-        if (title === "花鸟鱼虫")
+        if (title === "平板电脑")
             html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(33, \'' + "/CWCX/CWCX_HNYC" + '\', \'LB=' + districts[i].CODENAME + '\')">' + districts[i].CODENAME + '</li>';
-        if (title === "宠物服务")
+        if (title === "数码产品")
             html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(34, \'' + "/CWCX/CWCX_CWFW" + '\', \'LB=' + districts[i].CODENAME + '\')">' + districts[i].CODENAME + '</li>';
-        if (title === "宠物用品")
+        if (title === "台式机/配件")
             html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(35, \'' + "/CWCX/CWCX_CWYPSP" + '\', \'LB=' + districts[i].CODENAME + '\')">' + districts[i].CODENAME + '</li>';
         if (title === "宠物公益")
             html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(36, \'' + "/CWCX/CWCX_CWGY" + '\', \'LB=' + districts[i].CODENAME + '\')">' + districts[i].CODENAME + '</li>';
