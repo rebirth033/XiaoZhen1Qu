@@ -7,7 +7,17 @@ $(document).ready(function () {
 //加载条件
 function LoadESCondition() {
     LoadConditionByTypeNames("'台式机/配件类别','CPU品牌','手机价格'", "CODES_ES_SJSM", "类别,品牌,价格", "LB,PP,JG", "100,100,100");
-    LoadBody("ESXX_SJSM_TSJ", currentIndex);
+}
+//加载URL查询条件
+function LoadURLCondition() {
+    if (getUrlParam("JG") !== null)
+        SelectURLCondition(getUrlParam("JG"));
+    else if (getUrlParam("LB") !== null)
+        SelectURLCondition(getUrlParam("LB"));
+    else if (getUrlParam("QY") !== null)
+        SelectURLCondition(getUrlParam("QY"));
+    else
+        LoadBody("ESXX_SJSM_TSJ", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -15,6 +25,15 @@ function SelectCondition(obj, name) {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
+    LoadBody("ESXX_SJSM_TSJ", currentIndex);
+    ShowSelectCondition("ESXX_SJSM_TSJ");
+}
+//选择URL条件
+function SelectURLCondition(obj) {
+    $("#" + obj).parent().find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $("#" + obj).addClass("li_condition_body_active");
     LoadBody("ESXX_SJSM_TSJ", currentIndex);
     ShowSelectCondition("ESXX_SJSM_TSJ");
 }

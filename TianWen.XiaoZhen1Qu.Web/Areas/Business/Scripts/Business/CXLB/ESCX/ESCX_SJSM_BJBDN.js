@@ -7,7 +7,19 @@ $(document).ready(function () {
 //加载条件
 function LoadESCondition() {
     LoadConditionByTypeNames("'笔记本类别','手机价格'", "CODES_ES_SJSM", "类别,价格", "LB,JG", "100,100");
-    LoadBody("ESXX_SJSM_BJBDN", currentIndex);
+}
+//加载URL查询条件
+function LoadURLCondition() {
+    if (getUrlParam("JG") !== null)
+        SelectURLCondition(getUrlParam("JG"));
+    else if (getUrlParam("LB") !== null)
+        SelectURLCondition(getUrlParam("LB"));
+    else if (getUrlParam("PP") !== null)
+        SelectURLCondition(getUrlParam("PP"));
+    else if (getUrlParam("QY") !== null)
+        SelectURLCondition(getUrlParam("QY"));
+    else
+        LoadBody("ESXX_SJSM_BJBDN", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -17,7 +29,7 @@ function SelectCondition(obj, name) {
     }
     if (name === "类别" && obj.innerHTML === "笔记本") {
         $("#ul_condition_body_XL").remove();
-        LoadConditionByTypeNames("'笔记本品牌'", "CODES_ES_SJSM", "品牌", "BJBPP","15");
+        LoadConditionByTypeNames("'笔记本品牌'", "CODES_ES_SJSM", "品牌", "BJBPP", "15");
     }
     if (name === "类别" && obj.innerHTML === "笔记本回收") {
         $("#ul_condition_body_BJBPP").remove();
@@ -27,6 +39,15 @@ function SelectCondition(obj, name) {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
+    LoadBody("ESXX_SJSM_BJBDN", currentIndex);
+    ShowSelectCondition("ESXX_SJSM_BJBDN");
+}
+//选择URL条件
+function SelectURLCondition(obj) {
+    $("#" + obj).parent().find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $("#" + obj).addClass("li_condition_body_active");
     LoadBody("ESXX_SJSM_BJBDN", currentIndex);
     ShowSelectCondition("ESXX_SJSM_BJBDN");
 }
@@ -110,7 +131,7 @@ function LoadHotInfo(obj) {
     html += ('<li onclick="OpenXXXX(\'ESXX_SJSM_BJBDN\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_right_xq">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_right_jg">' + GetJG(obj.JG,'元')+'</p>');
+    html += ('<p class="p_li_body_right_jg">' + GetJG(obj.JG, '元') + '</p>');
     html += ('</li>');
     $("#ul_body_right").append(html);
 }

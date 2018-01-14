@@ -7,7 +7,17 @@ $(document).ready(function () {
 //加载条件
 function LoadESCondition() {
     LoadConditionByTypeNames("'手机品牌','手机价格'", "CODES_ES_SJSM", "品牌,价格", "PP,JG", "100,100");
-    LoadBody("ESXX_SJSM_ESSJ", currentIndex);
+}
+//加载URL查询条件
+function LoadURLCondition() {
+    if (getUrlParam("JG") !== null)
+        SelectURLCondition(getUrlParam("JG"));
+    else if (getUrlParam("PP") !== null)
+        SelectURLCondition(getUrlParam("PP"));
+    else if (getUrlParam("QY") !== null)
+        SelectURLCondition(getUrlParam("QY"));
+    else
+        LoadBody("ESXX_SJSM_ESSJ", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -17,6 +27,15 @@ function SelectCondition(obj, name) {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
+    LoadBody("ESXX_SJSM_ESSJ", currentIndex);
+    ShowSelectCondition("ESXX_SJSM_ESSJ");
+}
+//选择URL条件
+function SelectURLCondition(obj) {
+    $("#" + obj).parent().find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $("#" + obj).addClass("li_condition_body_active");
     LoadBody("ESXX_SJSM_ESSJ", currentIndex);
     ShowSelectCondition("ESXX_SJSM_ESSJ");
 }
