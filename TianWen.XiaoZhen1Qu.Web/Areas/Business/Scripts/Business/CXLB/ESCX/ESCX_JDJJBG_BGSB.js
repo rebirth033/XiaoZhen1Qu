@@ -7,7 +7,17 @@ $(document).ready(function () {
 //加载条件
 function LoadESCondition() {
     LoadConditionByTypeNames("'办公用品/设备类别','电视价格'", "CODES_ES_JDJJBG", "类别,价格", "LB,JG", "100,100");
-    LoadBody("ESXX_JDJJBG_BGSB", currentIndex);
+}
+//加载URL查询条件
+function LoadURLCondition() {
+    if (getUrlParam("JG") !== null)
+        SelectURLCondition(getUrlParam("JG"));
+    else if (getUrlParam("LB") !== null)
+        SelectURLCondition(getUrlParam("LB"));
+    else if (getUrlParam("QY") !== null)
+        SelectURLCondition(getUrlParam("QY"));
+    else
+        LoadBody("ESXX_JDJJBG_BGSB", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -21,6 +31,15 @@ function SelectCondition(obj, name) {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
+    LoadBody("ESXX_JDJJBG_BGSB", currentIndex);
+    ShowSelectCondition("ESXX_JDJJBG_BGSB");
+}
+//选择URL条件
+function SelectURLCondition(obj) {
+    $("#" + obj).parent().find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $("#" + obj).addClass("li_condition_body_active");
     LoadBody("ESXX_JDJJBG_BGSB", currentIndex);
     ShowSelectCondition("ESXX_JDJJBG_BGSB");
 }
