@@ -181,12 +181,10 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 IList<CODES_DISTRICT> districts = DAO.GetObjectList<CODES_DISTRICT>(string.Format("FROM CODES_DISTRICT WHERE TYPENAME='县区级' AND PARENTID='{0}' ORDER BY CODEORDER", xzqdm));
                 IList<CODES_CW> cwgpz = DAO.GetObjectList<CODES_CW>(string.Format("FROM CODES_CW WHERE TYPENAME='宠物狗品种' ORDER BY CODEORDER"));
                 IList<CODES_CW> cwmpz = DAO.GetObjectList<CODES_CW>(string.Format("FROM CODES_CW WHERE TYPENAME='宠物猫品种' ORDER BY CODEORDER"));
-                IList<CODES_CW> gsypz = DAO.GetObjectList<CODES_CW>(string.Format("FROM CODES_CW WHERE TYPENAME='观赏鱼品种' ORDER BY CODEORDER"));
-                IList<CODES_CW> wsnpz = DAO.GetObjectList<CODES_CW>(string.Format("FROM CODES_CW WHERE TYPENAME='玩赏鸟品种' ORDER BY CODEORDER"));
-                IList<CODES_CW> qtxclb = DAO.GetObjectList<CODES_CW>(string.Format("FROM CODES_CW WHERE TYPENAME='其他小宠' ORDER BY CODEORDER"));
-                IList<CODES_CW> cwfwlb = DAO.GetObjectList<CODES_CW>(string.Format("FROM CODES_CW WHERE TYPENAME='宠物服务' ORDER BY CODEORDER"));
-                IList<CODES_CW> cwyplb = DAO.GetObjectList<CODES_CW>(string.Format("FROM CODES_CW WHERE TYPENAME='宠物用品' ORDER BY CODEORDER"));
-                IList<CODES_CW> cwgylb = DAO.GetObjectList<CODES_CW>(string.Format("FROM CODES_CW WHERE TYPENAME='宠物公益' ORDER BY CODEORDER"));
+                IList<CODES_CW> hnyclb = DAO.GetObjectList<CODES_CW>(string.Format("FROM CODES_CW WHERE TYPENAME='花鸟鱼虫类别' ORDER BY CODEORDER"));
+                IList<CODES_CW> cwfwlb = DAO.GetObjectList<CODES_CW>(string.Format("FROM CODES_CW WHERE TYPENAME='宠物服务类别' ORDER BY CODEORDER"));
+                IList<CODES_CW> cwyplb = DAO.GetObjectList<CODES_CW>(string.Format("FROM CODES_CW WHERE TYPENAME='宠物用品/食品类别' ORDER BY CODEORDER"));
+                IList<CODES_CW> cwgylb = DAO.GetObjectList<CODES_CW>(string.Format("FROM CODES_CW WHERE TYPENAME='宠物公益类别' ORDER BY CODEORDER"));
                 dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,cw_cwgjbxx b where a.jcxxid = b.jcxxid ");
                 List<CW_CWGView> cwgs = ConvertHelper.DataTableToList<CW_CWGView>(dt);
                 foreach (var jcxx in cwgs)
@@ -199,21 +197,9 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 {
                     jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
                 }
-                dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,cw_hnycjbxx b where a.jcxxid = b.jcxxid and lb='观赏鱼'");
-                List<CW_HNYCView> gsys = ConvertHelper.DataTableToList<CW_HNYCView>(dt);
-                foreach (var jcxx in gsys)
-                {
-                    jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
-                }
-                dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,cw_hnycjbxx b where a.jcxxid = b.jcxxid and lb='玩赏鸟'");
-                List<CW_HNYCView> wsns = ConvertHelper.DataTableToList<CW_HNYCView>(dt);
-                foreach (var jcxx in wsns)
-                {
-                    jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
-                }
-                dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,cw_hnycjbxx b where a.jcxxid = b.jcxxid and lb='其他小宠'");
-                List<CW_HNYCView> qtxcs = ConvertHelper.DataTableToList<CW_HNYCView>(dt);
-                foreach (var jcxx in qtxcs)
+                dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,cw_hnycjbxx b where a.jcxxid = b.jcxxid");
+                List<CW_HNYCView> hnycs = ConvertHelper.DataTableToList<CW_HNYCView>(dt);
+                foreach (var jcxx in hnycs)
                 {
                     jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
                 }
@@ -235,7 +221,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 {
                     jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
                 }
-                return new { Result = EnResultType.Success, districts = districts, cwgs = cwgs, cwgpz = cwgpz, cwms = cwms, cwmpz = cwmpz, gsys = gsys, gsypz = gsypz, wsns = wsns, wsnpz = wsnpz, qtxcs = qtxcs, qtxclb = qtxclb, cwfws = cwfws, cwfwlb = cwfwlb, cwyps = cwyps, cwyplb = cwyplb, cwgys = cwgys, cwgylb = cwgylb };
+                return new { Result = EnResultType.Success, districts = districts, cwgs = cwgs, cwgpz = cwgpz, cwms = cwms, cwmpz = cwmpz, hnycs = hnycs, hnyclb = hnyclb, cwfws = cwfws, cwfwlb = cwfwlb, cwyps = cwyps, cwyplb = cwyplb, cwgys = cwgys, cwgylb = cwgylb };
             }
             catch (Exception ex)
             {

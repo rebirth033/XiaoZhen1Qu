@@ -29,9 +29,7 @@ function LoadDefault() {
             if (xml.Result === 1) {
                 LoadItem("宠物狗", xml.cwgs, xml.cwgpz);
                 LoadItem("宠物猫", xml.cwms, xml.cwmpz);
-                LoadItem("观赏鱼", xml.gsys, xml.gsypz);
-                LoadItem("玩赏鸟", xml.wsns, xml.wsnpz);
-                LoadItem("其他小宠", xml.qtxcs, xml.qtxclb);
+                LoadItem("花鸟鱼虫", xml.hnycs, xml.hnyclb);
                 LoadItem("宠物服务", xml.cwfws, xml.cwfwlb);
                 LoadItem("宠物用品", xml.cwyps, xml.cwyplb);
                 LoadItem("宠物公益", xml.cwgys, xml.cwgylb);
@@ -54,16 +52,12 @@ function LoadItem(title, list, districts) {
             html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(31, \'' + "/CWCX/CWCX_CWG" + '\', \'PZ=' + districts[i].CODENAME + '\')">' + districts[i].CODENAME + '</li>';
         if (title === "宠物猫")
             html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(32, \'' + "/CWCX/CWCX_CWM" + '\', \'PZ=' + districts[i].CODENAME + '\')">' + districts[i].CODENAME + '</li>';
-        if (title === "观赏鱼")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(33, \'' + "/CWCX/CWCX_HNYC" + '\', \'PZ=' + districts[i].CODENAME + '\')">' + districts[i].CODENAME + '</li>';
-        if (title === "玩赏鸟")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(33, \'' + "/CWCX/CWCX_HNYC" + '\', \'PZ=' + districts[i].CODENAME + '\')">' + districts[i].CODENAME + '</li>';
-        if (title === "其他小宠")
+        if (title === "花鸟鱼虫")
             html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(33, \'' + "/CWCX/CWCX_HNYC" + '\', \'LB=' + districts[i].CODENAME + '\')">' + districts[i].CODENAME + '</li>';
         if (title === "宠物服务")
             html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(34, \'' + "/CWCX/CWCX_CWFW" + '\', \'LB=' + districts[i].CODENAME + '\')">' + districts[i].CODENAME + '</li>';
         if (title === "宠物用品")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(35, \'' + "/CWCX/CWCX_CWYP" + '\', \'LB=' + districts[i].CODENAME + '\')">' + districts[i].CODENAME + '</li>';
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(35, \'' + "/CWCX/CWCX_CWYPSP" + '\', \'LB=' + districts[i].CODENAME + '\')">' + districts[i].CODENAME + '</li>';
         if (title === "宠物公益")
             html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(36, \'' + "/CWCX/CWCX_CWGY" + '\', \'LB=' + districts[i].CODENAME + '\')">' + districts[i].CODENAME + '</li>';
     }
@@ -78,11 +72,7 @@ function LoadItem(title, list, districts) {
             html += LoadCWGInfo(list[i])
         if (title === "宠物猫")
             html += LoadCWMInfo(list[i])
-        if (title === "观赏鱼")
-            html += LoadHNYCInfo(list[i])
-        if (title === "玩赏鸟")
-            html += LoadHNYCInfo(list[i])
-        if (title === "其他小宠")
+        if (title === "花鸟鱼虫")
             html += LoadHNYCInfo(list[i])
         if (title === "宠物服务")
             html += LoadCWFWInfo(list[i])
