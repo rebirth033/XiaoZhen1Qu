@@ -55,8 +55,10 @@ function LoadQZZPCondition() {
 function LoadURLCondition() {
     if (getUrlParam("ZWFL") !== null)
         SelectURLCondition(getUrlParam("ZWFL"));
-    if (getUrlParam("ZW") !== null)
-        SelectURLCondition(getUrlParam("ZW"));
+    else if (getUrlParam("ZWLB") !== null)
+        SelectURLCondition(getUrlParam("ZWLB"));
+    else if (getUrlParam("ZWMC") !== null)
+        SelectURLCondition(getUrlParam("ZWMC"));
     else
         LoadBody("QZZPXX_QZZP", currentIndex);
 }
@@ -78,37 +80,6 @@ function SelectURLCondition(obj) {
     LoadBody("QZZPXX_QZZP", currentIndex);
     ShowSelectCondition("QZZPXX_QZZP");
 }
-//根据TYPENAME获取字典表
-function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAMES",
-        dataType: "json",
-        data:
-        {
-            TYPENAMES: typenames,
-            TBName: table
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                LoadDistrictCondition(xml.districts, "QY");
-                var typelist = typenames.split(',');
-                var namelist = names.split(',');
-                for (var i = 0; i < typelist.length; i++) {
-                    for (var j = 0; j < namelist.length; j++) {
-                        if (typelist[i].indexOf(namelist[j]) !== -1) {
-                            LoadCondition(_.filter(xml.list, function (value) { return typelist[i].indexOf(value.TYPENAME) !== -1; }), namelist[j], ids.split(',')[j], lengths.split(',')[j]);
-                        }
-                    }
-                }
-                LoadURLCondition();
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
 //加载查询条件
 function LoadCondition(array, name, id, length) {
     $("#ul_condition_body_" + id).remove();
@@ -129,7 +100,8 @@ function LoadCondition(array, name, id, length) {
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("ZWLB,MYXZ,ZWFL,QY");
+    var condition = GetAllCondition("ZWMC,MYXZ,ZWFL,QY");
+    condition += ",ZWLB:" + getUrlParam("ZWLB");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/QZZPCX/LoadQZZPXX",
