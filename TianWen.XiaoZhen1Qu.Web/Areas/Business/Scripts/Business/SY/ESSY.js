@@ -37,7 +37,6 @@ function LoadDefault() {
                 LoadItem("数码产品", xml.smcps, xml.smcplb);
                 LoadItem("台式机/配件", xml.tsjs, xml.tsjlb);
                 LoadItem("家用家电", xml.jyjds, xml.jyjdlb);
-                alert(xml.jyjjlb.length)
                 LoadItem("家用家具", xml.jyjjs, xml.jyjjlb);
                 LoadItem("家居日用", xml.jjrys, xml.jjrylb);
                 LoadItem("办公用品", xml.bgyps, xml.bgyplb);
