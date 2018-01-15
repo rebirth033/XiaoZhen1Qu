@@ -6,6 +6,7 @@
     $(".img_head_left_logo").css("margin-left", "20px");
     $("#li_head_sy").css("background", "#bc6ba6").css("color", "#ffffff");
     $("#div_yhm").bind("click", ShowWDXX);
+    LoadRZZW();
     LoadDefault();
 });
 //打开查询列表
@@ -18,6 +19,26 @@ function OpenCXLB(lbid, lburl, condition) {
 //打开详细页面
 function OpenXXXX(TYPE, ID, LBID) {
     window.open(getRootPath() + "/Business/" + TYPE.split('_')[0] + "/" + TYPE + "?ID=" + ID + "&LBID=" + LBID + "&TYPE=" + TYPE);
+}
+//加载热招职位
+function LoadRZZW() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/SY/LoadZPSY",
+        dataType: "json",
+        data:
+        {
+
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                LoadZWItem(xml.rzzws);
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
 }
 //加载默认
 function LoadDefault() {
@@ -50,6 +71,14 @@ function LoadDefault() {
 
         }
     });
+}
+//加载职位
+function LoadZWItem(rzzws) {
+    var html = "";
+    for (var i = 0; i < rzzws.length; i++) {
+        html += "<li class=\"li_body_top_right\" onclick=\"OpenCXLB(89, '/ZPCX/ZP CX_QZZP', 'ZWLB=" + rzzws[i].PARENTID + "&ZW=" + rzzws[i].CODEID + "')\">" + rzzws[i].CODENAME + "</li>";
+    }
+    $("#ul_body_top_right_rzzw").html(html);
 }
 //加载模块
 function LoadItem(title, list, districts) {

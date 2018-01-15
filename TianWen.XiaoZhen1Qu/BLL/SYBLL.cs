@@ -337,5 +337,41 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 return new { Result = EnResultType.Failed, Message = "加载失败" };
             }
         }
+
+        public object LoadZPSY(string xzqdm, string xzq)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                IList<CODES_QZZP> rzzws = DAO.GetObjectList<CODES_QZZP>(string.Format("FROM CODES_QZZP WHERE ISHOT='是' ORDER BY CODEORDER"));
+                //IList<CODES_ES_SJSM> sjpp = DAO.GetObjectList<CODES_ES_SJSM>(string.Format("FROM CODES_ES_SJSM WHERE TYPENAME='手机品牌' ORDER BY CODEORDER"));
+                //IList<CODES_ES_SJSM> bjbdnpp = DAO.GetObjectList<CODES_ES_SJSM>(string.Format("FROM CODES_ES_SJSM WHERE TYPENAME='笔记本品牌' ORDER BY CODEORDER"));
+
+                //dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,es_myfzmr_fzxmxbjbxx b where a.jcxxid = b.jcxxid ");
+                //List<ES_JDJJBG_BGSBView> fsxbs = ConvertHelper.DataTableToList<ES_JDJJBG_BGSBView>(dt);
+                //foreach (var jcxx in fsxbs)
+                //{
+                //    jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
+                //}
+                //dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,es_myfzmr_mrbjjbxx b where a.jcxxid = b.jcxxid ");
+                //List<ES_JDJJBG_BGSBView> mrbjs = ConvertHelper.DataTableToList<ES_JDJJBG_BGSBView>(dt);
+                //foreach (var jcxx in mrbjs)
+                //{
+                //    jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
+                //}
+                //dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,es_qtes_essbjbxx b where a.jcxxid = b.jcxxid ");
+                //List<ES_JDJJBG_BGSBView> essbs = ConvertHelper.DataTableToList<ES_JDJJBG_BGSBView>(dt);
+                //foreach (var jcxx in essbs)
+                //{
+                //    jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
+                //}
+                return new { Result = EnResultType.Success, rzzws = rzzws };
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("error", ex.Message);
+                return new { Result = EnResultType.Failed, Message = "加载失败" };
+            }
+        }
     }
 }
