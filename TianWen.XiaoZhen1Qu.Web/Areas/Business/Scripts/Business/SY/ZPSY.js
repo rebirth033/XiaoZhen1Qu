@@ -76,7 +76,7 @@ function LoadDefault() {
 function LoadZWItem(rzzws) {
     var html = "";
     for (var i = 0; i < rzzws.length; i++) {
-        html += "<li class=\"li_body_top_right\" onclick=\"OpenCXLB(89, '/ZPCX/ZP CX_QZZP', 'ZWLB=" + rzzws[i].PARENTID + "&ZW=" + rzzws[i].CODEID + "')\">" + rzzws[i].CODENAME + "</li>";
+        html += "<li class=\"li_body_top_right\" onclick=\"OpenCXLB(89, '/QZZPCX/QZZPCX_QZZP', 'ZWLB=" + rzzws[i].PARENTID + "&ZW=" + rzzws[i].CODEID + "')\">" + rzzws[i].CODENAME + "</li>";
     }
     $("#ul_body_top_right_rzzw").html(html);
 }

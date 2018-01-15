@@ -55,6 +55,8 @@ function LoadQZZPCondition() {
 function LoadURLCondition() {
     if (getUrlParam("ZWFL") !== null)
         SelectURLCondition(getUrlParam("ZWFL"));
+    if (getUrlParam("ZW") !== null)
+        SelectURLCondition(getUrlParam("ZW"));
     else
         LoadBody("QZZPXX_QZZP", currentIndex);
 }
