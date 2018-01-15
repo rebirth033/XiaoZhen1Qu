@@ -15,6 +15,10 @@ function OpenCXLB(lbid, lburl, condition) {
     else
         window.open(getRootPath() + "/Business" + lburl + "?LBID=" + lbid);
 }
+//打开详细页面
+function OpenXXXX(TYPE, ID, LBID) {
+    window.open(getRootPath() + "/Business/" + TYPE.split('_')[0] + "/" + TYPE + "?ID=" + ID + "&LBID=" + LBID + "&TYPE=" + TYPE);
+}
 //加载默认
 function LoadDefault() {
     $.ajax({
@@ -91,7 +95,7 @@ function LoadItem(title, list, districts) {
 //加载宠物狗信息
 function LoadCWGInfo(obj) {
     var html = "";
-    html += ('<li onclick="OpenXXXX(\'CWXX_CWG\',\'' + obj.ID + '\')" class="li_body_middle_item_right">');
+    html += ('<li onclick="OpenXXXX(\'CWXX_CWG\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
     html += ('<img class="img_li_body_middle_item_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_middle_item_right_xq">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_middle_item_right_cs">' + obj.NL + obj.NLDW + ' / ' + obj.YMQK + '疫苗</p>');
@@ -102,7 +106,7 @@ function LoadCWGInfo(obj) {
 //加载宠物猫信息
 function LoadCWMInfo(obj) {
     var html = "";
-    html += ('<li onclick="OpenXXXX(\'CWXX_CWM\',\'' + obj.ID + '\')" class="li_body_middle_item_right">');
+    html += ('<li onclick="OpenXXXX(\'CWXX_CWM\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
     html += ('<img class="img_li_body_middle_item_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_middle_item_right_xq">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_middle_item_right_cs">' + obj.PZ + ' / ' + obj.NL + obj.NLDW + ' / ' + obj.ZSZS + '只在售</p>');
@@ -113,7 +117,7 @@ function LoadCWMInfo(obj) {
 //加载花鸟鱼虫信息
 function LoadHNYCInfo(obj) {
     var html = "";
-    html += ('<li onclick="OpenXXXX(\'CWXX_HNYC\',\'' + obj.ID + '\')" class="li_body_middle_item_right">');
+    html += ('<li onclick="OpenXXXX(\'CWXX_HNYC\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
     html += ('<img class="img_li_body_middle_item_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_middle_item_right_xq">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_middle_item_right_jg">' + GetJG(obj.JG, '元') + '</p>');
@@ -123,7 +127,7 @@ function LoadHNYCInfo(obj) {
 //加载宠物服务信息
 function LoadCWFWInfo(obj) {
     var html = "";
-    html += ('<li onclick="OpenXXXX(\'CWXX_CWFW\',\'' + obj.ID + '\')" class="li_body_middle_item_right">');
+    html += ('<li onclick="OpenXXXX(\'CWXX_CWFW\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
     html += ('<img class="img_li_body_middle_item_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_middle_item_right_xq">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_middle_item_right_jg">' + GetJG(obj.JG, '万元') + '</p>');
@@ -133,7 +137,7 @@ function LoadCWFWInfo(obj) {
 //加载宠物用品信息
 function LoadCWYPInfo(obj) {
     var html = "";
-    html += ('<li onclick="OpenXXXX(\'CWXX_CWYP\',\'' + obj.ID + '\')" class="li_body_middle_item_right">');
+    html += ('<li onclick="OpenXXXX(\'CWXX_CWYP\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
     html += ('<img class="img_li_body_middle_item_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_middle_item_right_xq">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_middle_item_right_jg">' + GetJG(obj.JG, '万元') + '</p>');
@@ -143,7 +147,7 @@ function LoadCWYPInfo(obj) {
 //加载宠物公益信息
 function LoadCWGYInfo(obj) {
     var html = "";
-    html += ('<li onclick="OpenXXXX(\'CWXX_CWGY\',\'' + obj.ID + '\')" class="li_body_middle_item_right">');
+    html += ('<li onclick="OpenXXXX(\'CWXX_CWGY\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
     html += ('<img class="img_li_body_middle_item_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_middle_item_right_xq">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_middle_item_right_jg">' + GetJG(obj.JG, '万元') + '</p>');

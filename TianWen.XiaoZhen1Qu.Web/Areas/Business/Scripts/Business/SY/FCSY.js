@@ -15,6 +15,10 @@ function OpenCXLB(lbid, lburl, condition) {
     else
         window.open(getRootPath() + "/Business" + lburl + "?LBID=" + lbid);
 }
+//打开详细页面
+function OpenXXXX(TYPE, ID, LBID) {
+    window.open(getRootPath() + "/Business/" + TYPE.split('_')[0] + "/" + TYPE + "?ID=" + ID + "&LBID=" + LBID + "&TYPE=" + TYPE);
+}
 //加载默认
 function LoadDefault() {
     $.ajax({
@@ -82,7 +86,7 @@ function LoadItem(title, list, districts) {
 //加载整租房信息
 function LoadZZFInfo(obj) {
     var html = "";
-    html += ('<li onclick="OpenXXXX(\'FCXX_ZZF\',\'' + obj.ID + '\')" class="li_body_middle_item_right">');
+    html += ('<li onclick="OpenXXXX(\'FCXX_ZZF\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
     html += ('<img class="img_li_body_middle_item_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_middle_item_right_xq">' + obj.XQMC + '</p>');
     html += ('<p class="p_li_body_middle_item_right_cs">' + obj.S + '室 / ' + obj.PFM + '平米 / ' + obj.ZXQK + '</p>');
@@ -93,7 +97,7 @@ function LoadZZFInfo(obj) {
 //加载合租房信息
 function LoadHZFInfo(obj) {
     var html = "";
-    html += ('<li onclick="OpenXXXX(\'FCXX_HZF\',\'' + obj.ID + '\')" class="li_body_middle_item_right">');
+    html += ('<li onclick="OpenXXXX(\'FCXX_HZF\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
     html += ('<img class="img_li_body_middle_item_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_middle_item_right_xq">' + obj.XQMC + '</p>');
     html += ('<p class="p_li_body_middle_item_right_cs">' + obj.S + '室 / ' + obj.PFM + '平米 / ' + obj.ZXQK + '</p>');
@@ -104,7 +108,7 @@ function LoadHZFInfo(obj) {
 //加载短租房信息
 function LoadDZFInfo(obj) {
     var html = "";
-    html += ('<li onclick="OpenXXXX(\'FCXX_DZF\',\'' + obj.ID + '\')" class="li_body_middle_item_right">');
+    html += ('<li onclick="OpenXXXX(\'FCXX_DZF\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
     html += ('<img class="img_li_body_middle_item_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_middle_item_right_xq" style="height:40px;">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_middle_item_right_cs">' + obj.QY + '-' + obj.DD + '</p>');
@@ -114,7 +118,7 @@ function LoadDZFInfo(obj) {
 //加载二手房信息
 function LoadESFInfo(obj) {
     var html = "";
-    html += ('<li onclick="OpenXXXX(\'FCXX_ESF\',\'' + obj.ID + '\')" class="li_body_middle_item_right">');
+    html += ('<li onclick="OpenXXXX(\'FCXX_ESF\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
     html += ('<img class="img_li_body_middle_item_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_middle_item_right_xq">' + obj.XQMC + '</p>');
     html += ('<p class="p_li_body_middle_item_right_cs">' + obj.S + '室 / ' + obj.PFM + '平米 / ' + obj.ZXQK + '</p>');

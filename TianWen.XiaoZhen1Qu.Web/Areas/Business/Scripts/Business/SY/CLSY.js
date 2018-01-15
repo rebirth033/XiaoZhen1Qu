@@ -15,6 +15,10 @@ function OpenCXLB(lbid, lburl, condition) {
     else
         window.open(getRootPath() + "/Business" + lburl + "?LBID=" + lbid);
 }
+//打开详细页面
+function OpenXXXX(TYPE, ID, LBID) {
+    window.open(getRootPath() + "/Business/" + TYPE.split('_')[0] + "/" + TYPE + "?ID=" + ID + "&LBID=" + LBID + "&TYPE=" + TYPE);
+}
 //加载默认
 function LoadDefault() {
     $.ajax({
@@ -96,7 +100,7 @@ function LoadItem(title, list, districts) {
 //加载轿车信息
 function LoadJCInfo(obj) {
     var html = "";
-    html += ('<li onclick="OpenXXXX(\'CLXX_JC\',\'' + obj.ID + '\')" class="li_body_middle_item_right">');
+    html += ('<li onclick="OpenXXXX(\'CLXX_JC\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
     html += ('<img class="img_li_body_middle_item_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_middle_item_right_xq">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_middle_item_right_cs">' + obj.SPNF + ' / ' + '2.0升' + ' / ' + '自动' + '</p>');
@@ -107,7 +111,7 @@ function LoadJCInfo(obj) {
 //加载电动车信息
 function LoadDDCInfo(obj) {
     var html = "";
-    html += ('<li onclick="OpenXXXX(\'CLXX_DDC\',\'' + obj.ID + '\')" class="li_body_middle_item_right">');
+    html += ('<li onclick="OpenXXXX(\'CLXX_DDC\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
     html += ('<img class="img_li_body_middle_item_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_middle_item_right_xq">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_middle_item_right_cs">' + obj.CX + '</p>');
@@ -118,7 +122,7 @@ function LoadDDCInfo(obj) {
 //加载摩托车信息
 function LoadMTCInfo(obj) {
     var html = "";
-    html += ('<li onclick="OpenXXXX(\'CLXX_MTC\',\'' + obj.ID + '\')" class="li_body_middle_item_right">');
+    html += ('<li onclick="OpenXXXX(\'CLXX_MTC\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
     html += ('<img class="img_li_body_middle_item_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_middle_item_right_xq">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_middle_item_right_cs">' + obj.CX + '</p>');
@@ -129,7 +133,7 @@ function LoadMTCInfo(obj) {
 //加载货车信息
 function LoadHCInfo(obj) {
     var html = "";
-    html += ('<li onclick="OpenXXXX(\'CLXX_HC\',\'' + obj.ID + '\')" class="li_body_middle_item_right">');
+    html += ('<li onclick="OpenXXXX(\'CLXX_HC\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
     html += ('<img class="img_li_body_middle_item_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_middle_item_right_xq">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_middle_item_right_cs">' + obj.LB + ' / ' + obj.CCNF + ' / ' + obj.EDZZ + '吨</p>');
@@ -140,7 +144,7 @@ function LoadHCInfo(obj) {
 //加载客车信息
 function LoadKCInfo(obj) {
     var html = "";
-    html += ('<li onclick="OpenXXXX(\'CLXX_KC\',\'' + obj.ID + '\')" class="li_body_middle_item_right">');
+    html += ('<li onclick="OpenXXXX(\'CLXX_KC\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
     html += ('<img class="img_li_body_middle_item_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_middle_item_right_xq">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_middle_item_right_cs">' + obj.SPNF + ' / ' + obj.CLYS + ' / ' + obj.CX + '</p>');
@@ -151,7 +155,7 @@ function LoadKCInfo(obj) {
 //加载工程车信息
 function LoadGCCInfo(obj) {
     var html = "";
-    html += ('<li onclick="OpenXXXX(\'CLXX_GCC\',\'' + obj.ID + '\')" class="li_body_middle_item_right">');
+    html += ('<li onclick="OpenXXXX(\'CLXX_GCC\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
     html += ('<img class="img_li_body_middle_item_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_middle_item_right_xq">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_middle_item_right_cs">' + obj.CX + ' / ' + obj.CCNF + ' / ' + obj.XSS + '小时' + '</p>');
@@ -162,7 +166,7 @@ function LoadGCCInfo(obj) {
 //加载自行车信息
 function LoadZXCInfo(obj) {
     var html = "";
-    html += ('<li onclick="OpenXXXX(\'CLXX_ZXC\',\'' + obj.ID + '\')" class="li_body_middle_item_right">');
+    html += ('<li onclick="OpenXXXX(\'CLXX_ZXC\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
     html += ('<img class="img_li_body_middle_item_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_middle_item_right_xq">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_middle_item_right_cs">' + obj.PP + ' / ' + obj.XJ + '</p>');

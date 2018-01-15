@@ -15,6 +15,10 @@ function OpenCXLB(lbid, lburl, condition) {
     else
         window.open(getRootPath() + "/Business" + lburl + "?LBID=" + lbid);
 }
+//打开详细页面
+function OpenXXXX(TYPE, ID, LBID) {
+    window.open(getRootPath() + "/Business/" + TYPE.split('_')[0] + "/" + TYPE + "?ID=" + ID + "&LBID=" + LBID + "&TYPE=" + TYPE);
+}
 //加载默认
 function LoadDefault() {
     $.ajax({
@@ -32,7 +36,15 @@ function LoadDefault() {
                 LoadItem("平板电脑", xml.pbdns, xml.pbdnpp);
                 LoadItem("数码产品", xml.smcps, xml.smcplb);
                 LoadItem("台式机/配件", xml.tsjs, xml.tsjlb);
-                //LoadItem("宠物公益", xml.cwgys, xml.cwgylb);
+                LoadItem("家用家电", xml.jyjds, xml.jyjdlb);
+                alert(xml.jyjjlb.length)
+                LoadItem("家用家具", xml.jyjjs, xml.jyjjlb);
+                LoadItem("家居日用", xml.jjrys, xml.jjrylb);
+                LoadItem("办公用品", xml.bgyps, xml.bgyplb);
+                LoadItem("母婴儿童", xml.myets, xml.myetlb);
+                LoadItem("服饰箱包", xml.fsxbs, xml.fsxblb);
+                LoadItem("美容保健", xml.mrbjs, xml.mrbjlb);
+                LoadItem("二手设备", xml.essbs, xml.essblb);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -49,17 +61,31 @@ function LoadItem(title, list, districts) {
     html += '<ul class="ul_body_middle_item_left">';
     for (var i = 0; i < (districts.length > 14 ? 14 : districts.length) ; i++) {
         if (title === "手机")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(31, \'' + "/CWCX/CWCX_CWG" + '\', \'PZ=' + districts[i].CODENAME + '\')">' + districts[i].CODENAME + '</li>';
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(154, \'' + "/ESCX/ESCX_SJSM_ESSJ" + '\', \'PP=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
         if (title === "笔记本电脑")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(32, \'' + "/CWCX/CWCX_CWM" + '\', \'PZ=' + districts[i].CODENAME + '\')">' + districts[i].CODENAME + '</li>';
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(155, \'' + "/ESCX/ESCX_SJSM_BJBDN" + '\', \'PP=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
         if (title === "平板电脑")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(33, \'' + "/CWCX/CWCX_HNYC" + '\', \'LB=' + districts[i].CODENAME + '\')">' + districts[i].CODENAME + '</li>';
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(156, \'' + "/ESCX/ESCX_SJSM_PBDN" + '\', \'PP=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
         if (title === "数码产品")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(34, \'' + "/CWCX/CWCX_CWFW" + '\', \'LB=' + districts[i].CODENAME + '\')">' + districts[i].CODENAME + '</li>';
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(157, \'' + "/ESCX/ESCX_SJSM_SMCP" + '\', \'LB=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
         if (title === "台式机/配件")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(35, \'' + "/CWCX/CWCX_CWYPSP" + '\', \'LB=' + districts[i].CODENAME + '\')">' + districts[i].CODENAME + '</li>';
-        if (title === "宠物公益")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(36, \'' + "/CWCX/CWCX_CWGY" + '\', \'LB=' + districts[i].CODENAME + '\')">' + districts[i].CODENAME + '</li>';
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(158, \'' + "/ESCX/ESCX_SJSM_TSJ" + '\', \'LB=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+        if (title === "家用家电")
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(159, \'' + "/ESCX/ESCX_JDJJBG_ESJD" + '\', \'LB=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+        if (title === "家用家具")
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(160, \'' + "/ESCX/ESCX_JDJJBG_ESJJ" + '\', \'LB=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+        if (title === "家居日用")
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(161, \'' + "/ESCX/ESCX_JDJJBG_JJRY" + '\', \'LB=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+        if (title === "办公用品")
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(162, \'' + "/ESCX/ESCX_JDJJBG_BGSB" + '\', \'LB=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+        if (title === "母婴儿童")
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(163, \'' + "/ESCX/ESCX_MYFZMR_MYETYPWJ" + '\', \'LB=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+        if (title === "服饰箱包")
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(164, \'' + "/ESCX/ESCX_MYFZMR_FZXMXB" + '\', \'LB=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+        if (title === "美容保健")
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(165, \'' + "/ESCX/ESCX_MYFZMR_MRBJ" + '\', \'LB=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+        if (title === "二手设备")
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(170, \'' + "/ESCX/ESCX_QTES_ESSB" + '\', \'LB=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
     }
     html += '</ul>';
     html += '</div>';
@@ -68,18 +94,32 @@ function LoadItem(title, list, districts) {
 
     html += '<ul class="ul_body_middle_item_right">';
     for (var i = 0; i < (list.length < 8 ? list.length : 8) ; i++) {
-        if (title === "宠物狗")
-            html += LoadCWGInfo(list[i])
-        if (title === "宠物猫")
-            html += LoadCWMInfo(list[i])
-        if (title === "花鸟鱼虫")
-            html += LoadHNYCInfo(list[i])
-        if (title === "宠物服务")
-            html += LoadCWFWInfo(list[i])
-        if (title === "宠物用品")
-            html += LoadCWYPInfo(list[i])
-        if (title === "宠物公益")
-            html += LoadCWGYInfo(list[i])
+        if (title === "手机")
+            html += LoadSJInfo(list[i])
+        if (title === "笔记本电脑")
+            html += LoadBJBDNInfo(list[i])
+        if (title === "平板电脑")
+            html += LoadPBDNInfo(list[i])
+        if (title === "数码产品")
+            html += LoadSMCPInfo(list[i])
+        if (title === "台式机/配件")
+            html += LoadTSJInfo(list[i])
+        if (title === "家用家电")
+            html += LoadJYJDInfo(list[i])
+        if (title === "家用家具")
+            html += LoadJYJJInfo(list[i])
+        if (title === "家居日用")
+            html += LoadJJRYInfo(list[i])
+        if (title === "办公用品")
+            html += LoadBGYPInfo(list[i])
+        if (title === "母婴儿童")
+            html += LoadMYETInfo(list[i])
+        if (title === "服饰箱包")
+            html += LoadFSXBInfo(list[i])
+        if (title === "美容保健")
+            html += LoadMRBJInfo(list[i])
+        if (title === "二手设备")
+            html += LoadESSBInfo(list[i])
     }
     html += '</ul>';
 
@@ -88,62 +128,130 @@ function LoadItem(title, list, districts) {
     html += '</div>';
     $("#div_body_middle").append(html);
 }
-//加载宠物狗信息
-function LoadCWGInfo(obj) {
+//加载手机信息
+function LoadSJInfo(obj) {
     var html = "";
-    html += ('<li onclick="OpenXXXX(\'CWXX_CWG\',\'' + obj.ID + '\')" class="li_body_middle_item_right">');
-    html += ('<img class="img_li_body_middle_item_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_middle_item_right_xq">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_middle_item_right_cs">' + obj.NL + obj.NLDW + ' / ' + obj.YMQK + '疫苗</p>');
-    html += ('<p class="p_li_body_middle_item_right_jg">' + GetJG(obj.JG, '元') + '</p>');
-    html += ('</li>');
-    return html;
-}
-//加载宠物猫信息
-function LoadCWMInfo(obj) {
-    var html = "";
-    html += ('<li onclick="OpenXXXX(\'CWXX_CWM\',\'' + obj.ID + '\')" class="li_body_middle_item_right">');
-    html += ('<img class="img_li_body_middle_item_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_middle_item_right_xq">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_middle_item_right_cs">' + obj.PZ + ' / ' + obj.NL + obj.NLDW + ' / ' + obj.ZSZS + '只在售</p>');
-    html += ('<p class="p_li_body_middle_item_right_jg">' + GetJG(obj.JG, '元') + '</p>');
-    html += ('</li>');
-    return html;
-}
-//加载花鸟鱼虫信息
-function LoadHNYCInfo(obj) {
-    var html = "";
-    html += ('<li onclick="OpenXXXX(\'CWXX_HNYC\',\'' + obj.ID + '\')" class="li_body_middle_item_right">');
+    html += ('<li onclick="OpenXXXX(\'ESXX_SJSM_ESSJ\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
     html += ('<img class="img_li_body_middle_item_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_middle_item_right_xq">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_middle_item_right_jg">' + GetJG(obj.JG, '元') + '</p>');
     html += ('</li>');
     return html;
 }
-//加载宠物服务信息
-function LoadCWFWInfo(obj) {
+//加载笔记本电脑信息
+function LoadBJBDNInfo(obj) {
     var html = "";
-    html += ('<li onclick="OpenXXXX(\'CWXX_CWFW\',\'' + obj.ID + '\')" class="li_body_middle_item_right">');
+    html += ('<li onclick="OpenXXXX(\'ESXX_SJSM_BJBDN\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
+    html += ('<img class="img_li_body_middle_item_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
+    html += ('<p class="p_li_body_middle_item_right_xq">' + obj.BT + '</p>');
+    html += ('<p class="p_li_body_middle_item_right_jg">' + GetJG(obj.JG, '元') + '</p>');
+    html += ('</li>');
+    return html;
+}
+//加载平板电脑信息
+function LoadPBDNInfo(obj) {
+    var html = "";
+    html += ('<li onclick="OpenXXXX(\'ESXX_SJSM_PBDN\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
+    html += ('<img class="img_li_body_middle_item_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
+    html += ('<p class="p_li_body_middle_item_right_xq">' + obj.BT + '</p>');
+    html += ('<p class="p_li_body_middle_item_right_jg">' + GetJG(obj.JG, '元') + '</p>');
+    html += ('</li>');
+    return html;
+}
+//加载数码产品信息
+function LoadSMCPInfo(obj) {
+    var html = "";
+    html += ('<li onclick="OpenXXXX(\'ESXX_SJSM_SMCP\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
     html += ('<img class="img_li_body_middle_item_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_middle_item_right_xq">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_middle_item_right_jg">' + GetJG(obj.JG, '万元') + '</p>');
     html += ('</li>');
     return html;
 }
-//加载宠物用品信息
-function LoadCWYPInfo(obj) {
+//加载台式机/配件信息
+function LoadTSJInfo(obj) {
     var html = "";
-    html += ('<li onclick="OpenXXXX(\'CWXX_CWYP\',\'' + obj.ID + '\')" class="li_body_middle_item_right">');
+    html += ('<li onclick="OpenXXXX(\'ESXX_SJSM_TSJ\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
     html += ('<img class="img_li_body_middle_item_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_middle_item_right_xq">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_middle_item_right_jg">' + GetJG(obj.JG, '万元') + '</p>');
     html += ('</li>');
     return html;
 }
-//加载宠物公益信息
-function LoadCWGYInfo(obj) {
+//加载家用家电信息
+function LoadJYJDInfo(obj) {
     var html = "";
-    html += ('<li onclick="OpenXXXX(\'CWXX_CWGY\',\'' + obj.ID + '\')" class="li_body_middle_item_right">');
+    html += ('<li onclick="OpenXXXX(\'ESXX_JDJJBG_ESJD\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
+    html += ('<img class="img_li_body_middle_item_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
+    html += ('<p class="p_li_body_middle_item_right_xq">' + obj.BT + '</p>');
+    html += ('<p class="p_li_body_middle_item_right_jg">' + GetJG(obj.JG, '万元') + '</p>');
+    html += ('</li>');
+    return html;
+}
+//加载家用家具信息
+function LoadJYJJInfo(obj) {
+    var html = "";
+    html += ('<li onclick="OpenXXXX(\'ESXX_JDJJBG_ESJJ\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
+    html += ('<img class="img_li_body_middle_item_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
+    html += ('<p class="p_li_body_middle_item_right_xq">' + obj.BT + '</p>');
+    html += ('<p class="p_li_body_middle_item_right_jg">' + GetJG(obj.JG, '万元') + '</p>');
+    html += ('</li>');
+    return html;
+}
+//加载家居日用信息
+function LoadJJRYInfo(obj) {
+    var html = "";
+    html += ('<li onclick="OpenXXXX(\'ESXX_JDJJBG_JJRY\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
+    html += ('<img class="img_li_body_middle_item_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
+    html += ('<p class="p_li_body_middle_item_right_xq">' + obj.BT + '</p>');
+    html += ('<p class="p_li_body_middle_item_right_jg">' + GetJG(obj.JG, '万元') + '</p>');
+    html += ('</li>');
+    return html;
+}
+//加载办公用品信息
+function LoadBGYPInfo(obj) {
+    var html = "";
+    html += ('<li onclick="OpenXXXX(\'ESXX_JDJJBG_BGYP\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
+    html += ('<img class="img_li_body_middle_item_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
+    html += ('<p class="p_li_body_middle_item_right_xq">' + obj.BT + '</p>');
+    html += ('<p class="p_li_body_middle_item_right_jg">' + GetJG(obj.JG, '万元') + '</p>');
+    html += ('</li>');
+    return html;
+}
+//加载母婴儿童信息
+function LoadMYETInfo(obj) {
+    var html = "";
+    html += ('<li onclick="OpenXXXX(\'ESXX_MYFZMR_MYETYPWJ\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
+    html += ('<img class="img_li_body_middle_item_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
+    html += ('<p class="p_li_body_middle_item_right_xq">' + obj.BT + '</p>');
+    html += ('<p class="p_li_body_middle_item_right_jg">' + GetJG(obj.JG, '万元') + '</p>');
+    html += ('</li>');
+    return html;
+}
+//加载服装鞋帽信息
+function LoadFSXBInfo(obj) {
+    var html = "";
+    html += ('<li onclick="OpenXXXX(\'ESXX_MYFZMR_FZXMXB\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
+    html += ('<img class="img_li_body_middle_item_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
+    html += ('<p class="p_li_body_middle_item_right_xq">' + obj.BT + '</p>');
+    html += ('<p class="p_li_body_middle_item_right_jg">' + GetJG(obj.JG, '万元') + '</p>');
+    html += ('</li>');
+    return html;
+}
+//加载美容保健信息
+function LoadMRBJInfo(obj) {
+    var html = "";
+    html += ('<li onclick="OpenXXXX(\'ESXX_MYFZMR_MRBJ\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
+    html += ('<img class="img_li_body_middle_item_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
+    html += ('<p class="p_li_body_middle_item_right_xq">' + obj.BT + '</p>');
+    html += ('<p class="p_li_body_middle_item_right_jg">' + GetJG(obj.JG, '万元') + '</p>');
+    html += ('</li>');
+    return html;
+}
+//加载二手设备信息
+function LoadESSBInfo(obj) {
+    var html = "";
+    html += ('<li onclick="OpenXXXX(\'ESXX_QTES_ESSB\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
     html += ('<img class="img_li_body_middle_item_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_middle_item_right_xq">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_middle_item_right_jg">' + GetJG(obj.JG, '万元') + '</p>');

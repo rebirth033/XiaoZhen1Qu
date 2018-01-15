@@ -19,6 +19,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.ViewModels.Common
         public DateTime ZXGXSJ { get; set; }
         public byte[] BCMS { get; set; }
         public string BCMSString { get; set; }
+        public decimal LBID { get; set; }
 
         //图片
         public IList<PHOTOS> PHOTOS { get; set; }

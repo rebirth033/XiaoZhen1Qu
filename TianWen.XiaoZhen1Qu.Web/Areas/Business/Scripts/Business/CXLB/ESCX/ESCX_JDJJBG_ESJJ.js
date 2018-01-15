@@ -17,7 +17,7 @@ function LoadURLCondition() {
     else if (getUrlParam("QY") !== null)
         SelectURLCondition(getUrlParam("QY"));
     else
-        LoadBody("ESXX_JDJJBG_ESJJ", currentIndex);
+        LoadBody("ESXX_JDJJBG_ESJD", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
