@@ -1,5 +1,4 @@
-﻿
-$(document).ready(function () {
+﻿$(document).ready(function () {
     $(".div_head_nav").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
     $(".div_body").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
     $(".div_foot").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
@@ -20,6 +19,10 @@ function OpenCXLB(lbid, lburl, condition) {
 //打开详细页面
 function OpenXXXX(TYPE, ID, LBID) {
     window.open(getRootPath() + "/Business/" + TYPE.split('_')[0] + "/" + TYPE + "?ID=" + ID + "&LBID=" + LBID + "&TYPE=" + TYPE);
+}
+//打开职位类别
+function OpenZWLB(ID) {
+
 }
 //加载热招职位
 function LoadRZZW() {
