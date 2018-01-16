@@ -344,28 +344,60 @@ namespace TianWen.XiaoZhen1Qu.BLL
             try
             {
                 IList<CODES_QZZP> rzzws = DAO.GetObjectList<CODES_QZZP>(string.Format("FROM CODES_QZZP WHERE ISHOT='是' ORDER BY CODEORDER"));
-                //IList<CODES_ES_SJSM> sjpp = DAO.GetObjectList<CODES_ES_SJSM>(string.Format("FROM CODES_ES_SJSM WHERE TYPENAME='手机品牌' ORDER BY CODEORDER"));
-                //IList<CODES_ES_SJSM> bjbdnpp = DAO.GetObjectList<CODES_ES_SJSM>(string.Format("FROM CODES_ES_SJSM WHERE TYPENAME='笔记本品牌' ORDER BY CODEORDER"));
+                IList<CODES_QZZP> xszw = DAO.GetObjectList<CODES_QZZP>(string.Format("FROM CODES_QZZP WHERE TYPENAME='销售类别' ORDER BY CODEORDER"));
+                IList<CODES_QZZP> sjzw = DAO.GetObjectList<CODES_QZZP>(string.Format("FROM CODES_QZZP WHERE TYPENAME='司机类别' ORDER BY CODEORDER"));
+                IList<CODES_QZZP> cyzw = DAO.GetObjectList<CODES_QZZP>(string.Format("FROM CODES_QZZP WHERE TYPENAME='餐饮类别' ORDER BY CODEORDER"));
+                IList<CODES_QZZP> jrzw = DAO.GetObjectList<CODES_QZZP>(string.Format("FROM CODES_QZZP WHERE TYPENAME='金融类别' ORDER BY CODEORDER"));
+                IList<CODES_QZZP> glzw = DAO.GetObjectList<CODES_QZZP>(string.Format("FROM CODES_QZZP WHERE TYPENAME='管理类别' ORDER BY CODEORDER"));
+                IList<CODES_QZZP> qczw = DAO.GetObjectList<CODES_QZZP>(string.Format("FROM CODES_QZZP WHERE TYPENAME='汽车类别' ORDER BY CODEORDER"));
+                IList<CODES_QZZP> wlzw = DAO.GetObjectList<CODES_QZZP>(string.Format("FROM CODES_QZZP WHERE TYPENAME='物流类别' ORDER BY CODEORDER"));
+                IList<CODES_QZZP> ggzw = DAO.GetObjectList<CODES_QZZP>(string.Format("FROM CODES_QZZP WHERE TYPENAME='广告类别' ORDER BY CODEORDER"));
+                IList<CODES_QZZP> fczw = DAO.GetObjectList<CODES_QZZP>(string.Format("FROM CODES_QZZP WHERE TYPENAME='房产类别' ORDER BY CODEORDER"));
+                IList<CODES_QZZP> jzzw = DAO.GetObjectList<CODES_QZZP>(string.Format("FROM CODES_QZZP WHERE TYPENAME='建筑类别' ORDER BY CODEORDER"));
+                IList<CODES_QZZP> zxzw = DAO.GetObjectList<CODES_QZZP>(string.Format("FROM CODES_QZZP WHERE TYPENAME='装修类别' ORDER BY CODEORDER"));
+                IList<CODES_QZZP> wluozw = DAO.GetObjectList<CODES_QZZP>(string.Format("FROM CODES_QZZP WHERE TYPENAME='网络类别' ORDER BY CODEORDER"));
+                IList<CODES_QZZP> txzw = DAO.GetObjectList<CODES_QZZP>(string.Format("FROM CODES_QZZP WHERE TYPENAME='通讯类别' ORDER BY CODEORDER"));
 
-                //dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,es_myfzmr_fzxmxbjbxx b where a.jcxxid = b.jcxxid ");
-                //List<ES_JDJJBG_BGSBView> fsxbs = ConvertHelper.DataTableToList<ES_JDJJBG_BGSBView>(dt);
-                //foreach (var jcxx in fsxbs)
-                //{
-                //    jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
-                //}
-                //dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,es_myfzmr_mrbjjbxx b where a.jcxxid = b.jcxxid ");
-                //List<ES_JDJJBG_BGSBView> mrbjs = ConvertHelper.DataTableToList<ES_JDJJBG_BGSBView>(dt);
-                //foreach (var jcxx in mrbjs)
-                //{
-                //    jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
-                //}
-                //dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,es_qtes_essbjbxx b where a.jcxxid = b.jcxxid ");
-                //List<ES_JDJJBG_BGSBView> essbs = ConvertHelper.DataTableToList<ES_JDJJBG_BGSBView>(dt);
-                //foreach (var jcxx in essbs)
-                //{
-                //    jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
-                //}
-                return new { Result = EnResultType.Success, rzzws = rzzws };
+                dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,qzzp_qzzpjbxx b where a.jcxxid = b.jcxxid and zwlb='销售'");
+                List<QZZP_QZZPView> xss = ConvertHelper.DataTableToList<QZZP_QZZPView>(dt);
+
+                dt = DAO.Repository.GetDataTable("select a.*, b.* from jcxx a, qzzp_qzzpjbxx b where a.jcxxid = b.jcxxid and zwlb = '司机'");
+                List<QZZP_QZZPView> sjs = ConvertHelper.DataTableToList<QZZP_QZZPView>(dt);
+
+                dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,qzzp_qzzpjbxx b where a.jcxxid = b.jcxxid and zwlb = '餐饮'");
+                List<QZZP_QZZPView> cys = ConvertHelper.DataTableToList<QZZP_QZZPView>(dt);
+
+                dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,qzzp_qzzpjbxx b where a.jcxxid = b.jcxxid and zwlb = '金融'");
+                List<QZZP_QZZPView> jrs = ConvertHelper.DataTableToList<QZZP_QZZPView>(dt);
+
+                dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,qzzp_qzzpjbxx b where a.jcxxid = b.jcxxid and zwlb = '管理'");
+                List<QZZP_QZZPView> gls = ConvertHelper.DataTableToList<QZZP_QZZPView>(dt);
+
+                dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,qzzp_qzzpjbxx b where a.jcxxid = b.jcxxid and zwlb = '汽车'");
+                List<QZZP_QZZPView> qcs = ConvertHelper.DataTableToList<QZZP_QZZPView>(dt);
+
+                dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,qzzp_qzzpjbxx b where a.jcxxid = b.jcxxid and zwlb = '物流'");
+                List<QZZP_QZZPView> wls = ConvertHelper.DataTableToList<QZZP_QZZPView>(dt);
+
+                dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,qzzp_qzzpjbxx b where a.jcxxid = b.jcxxid and zwlb = '广告'");
+                List<QZZP_QZZPView> ggs = ConvertHelper.DataTableToList<QZZP_QZZPView>(dt);
+
+                dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,qzzp_qzzpjbxx b where a.jcxxid = b.jcxxid and zwlb = '房产'");
+                List<QZZP_QZZPView> fcs = ConvertHelper.DataTableToList<QZZP_QZZPView>(dt);
+
+                dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,qzzp_qzzpjbxx b where a.jcxxid = b.jcxxid and zwlb = '建筑'");
+                List<QZZP_QZZPView> jzs = ConvertHelper.DataTableToList<QZZP_QZZPView>(dt);
+
+                dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,qzzp_qzzpjbxx b where a.jcxxid = b.jcxxid and zwlb = '装修'");
+                List<QZZP_QZZPView> zxs = ConvertHelper.DataTableToList<QZZP_QZZPView>(dt);
+
+                dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,qzzp_qzzpjbxx b where a.jcxxid = b.jcxxid and zwlb = '网络'");
+                List<QZZP_QZZPView> wluos = ConvertHelper.DataTableToList<QZZP_QZZPView>(dt);
+
+                dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,qzzp_qzzpjbxx b where a.jcxxid = b.jcxxid and zwlb = '通讯'");
+                List<QZZP_QZZPView> txs = ConvertHelper.DataTableToList<QZZP_QZZPView>(dt);
+
+                return new { Result = EnResultType.Success, rzzws = rzzws, xszw = xszw, sjzw = sjzw, cyzw = cyzw,jrzw,glzw,qczw,wlzw,ggzw,fczw,jzzw,zxzw,wluozw,txzw };
             }
             catch (Exception ex)
             {

@@ -6,7 +6,7 @@
     $(".img_head_left_logo").css("margin-left", "20px");
     $("#li_head_sy").css("background", "#bc6ba6").css("color", "#ffffff");
     $("#div_yhm").bind("click", ShowWDXX);
-    LoadRZZW();
+    //LoadRZZW();
     LoadDefault();
 });
 //打开查询列表
@@ -44,7 +44,7 @@ function LoadRZZW() {
 function LoadDefault() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SY/LoadESSY",
+        url: getRootPath() + "/Business/SY/LoadZPSY",
         dataType: "json",
         data:
         {
@@ -52,19 +52,19 @@ function LoadDefault() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                LoadItem("手机", xml.sjs, xml.sjpp);
-                LoadItem("笔记本电脑", xml.bjbdns, xml.bjbdnpp);
-                LoadItem("平板电脑", xml.pbdns, xml.pbdnpp);
-                LoadItem("数码产品", xml.smcps, xml.smcplb);
-                LoadItem("台式机/配件", xml.tsjs, xml.tsjlb);
-                LoadItem("家用家电", xml.jyjds, xml.jyjdlb);
-                LoadItem("家用家具", xml.jyjjs, xml.jyjjlb);
-                LoadItem("家居日用", xml.jjrys, xml.jjrylb);
-                LoadItem("办公用品", xml.bgyps, xml.bgyplb);
-                LoadItem("母婴儿童", xml.myets, xml.myetlb);
-                LoadItem("服饰箱包", xml.fsxbs, xml.fsxblb);
-                LoadItem("美容保健", xml.mrbjs, xml.mrbjlb);
-                LoadItem("二手设备", xml.essbs, xml.essblb);
+                LoadItem("销售", xml.xss, xml.xszw);
+                LoadItem("司机", xml.sjs, xml.sjzw);
+                LoadItem("餐饮", xml.cys, xml.cyzw);
+                LoadItem("金融", xml.jrs, xml.jrzw);
+                LoadItem("管理", xml.gls, xml.glzw);
+                LoadItem("汽车", xml.qcs, xml.qczw);
+                LoadItem("物流", xml.wls, xml.wlzw);
+                LoadItem("广告", xml.ggs, xml.ggzw);
+                LoadItem("房产", xml.fcs, xml.fczw);
+                LoadItem("建筑", xml.jzs, xml.jzzw);
+                LoadItem("装修", xml.zxs, xml.zxzw);
+                LoadItem("网络", xml.wls, xml.wlzw);
+                LoadItem("通讯", xml.txs, xml.txzw);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -76,7 +76,7 @@ function LoadDefault() {
 function LoadZWItem(rzzws) {
     var html = "";
     for (var i = 0; i < rzzws.length; i++) {
-        html += "<li class=\"li_body_top_right\" onclick=\"OpenCXLB(89, '/QZZPCX/QZZPCX_QZZP', 'ZWLB=" + rzzws[i].PARENTID + "&ZW=" + rzzws[i].CODEID + "')\">" + rzzws[i].CODENAME + "</li>";
+        html += "<li class=\"li_body_top_right\" onclick=\"OpenCXLB(89, '/QZZPCX/QZZPCX_QZZP', 'ZWLB=" + rzzws[i].TYPENAME.replace("类别",'') + "&ZWMC=" + rzzws[i].CODEID + "')\">" + rzzws[i].CODENAME + "</li>";
     }
     $("#ul_body_top_right_rzzw").html(html);
 }
@@ -88,32 +88,32 @@ function LoadItem(title, list, districts) {
     html += '<p class="p_body_middle_item_left">' + title + '</p>';
     html += '<ul class="ul_body_middle_item_left">';
     for (var i = 0; i < (districts.length > 14 ? 14 : districts.length) ; i++) {
-        if (title === "手机")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(154, \'' + "/ESCX/ESCX_SJSM_ESSJ" + '\', \'PP=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
-        if (title === "笔记本电脑")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(155, \'' + "/ESCX/ESCX_SJSM_BJBDN" + '\', \'PP=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
-        if (title === "平板电脑")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(156, \'' + "/ESCX/ESCX_SJSM_PBDN" + '\', \'PP=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
-        if (title === "数码产品")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(157, \'' + "/ESCX/ESCX_SJSM_SMCP" + '\', \'LB=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
-        if (title === "台式机/配件")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(158, \'' + "/ESCX/ESCX_SJSM_TSJ" + '\', \'LB=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
-        if (title === "家用家电")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(159, \'' + "/ESCX/ESCX_JDJJBG_ESJD" + '\', \'LB=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
-        if (title === "家用家具")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(160, \'' + "/ESCX/ESCX_JDJJBG_ESJJ" + '\', \'LB=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
-        if (title === "家居日用")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(161, \'' + "/ESCX/ESCX_JDJJBG_JJRY" + '\', \'LB=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
-        if (title === "办公用品")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(162, \'' + "/ESCX/ESCX_JDJJBG_BGSB" + '\', \'LB=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
-        if (title === "母婴儿童")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(163, \'' + "/ESCX/ESCX_MYFZMR_MYETYPWJ" + '\', \'LB=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
-        if (title === "服饰箱包")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(164, \'' + "/ESCX/ESCX_MYFZMR_FZXMXB" + '\', \'LB=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
-        if (title === "美容保健")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(165, \'' + "/ESCX/ESCX_MYFZMR_MRBJ" + '\', \'LB=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
-        if (title === "二手设备")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(170, \'' + "/ESCX/ESCX_QTES_ESSB" + '\', \'LB=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+        if (title === "销售")
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(89, \'' + "/QZZPCX/QZZPCX_QZZP" + '\', \'ZWMC=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+        if (title === "司机")
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(89, \'' + "/QZZPCX/QZZPCX_QZZP" + '\', \'ZWMC=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+        if (title === "餐饮")
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(89, \'' + "/QZZPCX/QZZPCX_QZZP" + '\', \'ZWMC=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+        if (title === "金融")
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(89, \'' + "/QZZPCX/QZZPCX_QZZP" + '\', \'ZWMC=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+        if (title === "管理")
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(89, \'' + "/QZZPCX/QZZPCX_QZZP" + '\', \'ZWMC=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+        if (title === "汽车")
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(89, \'' + "/QZZPCX/QZZPCX_QZZP" + '\', \'ZWMC=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+        if (title === "物流")
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(89, \'' + "/QZZPCX/QZZPCX_QZZP" + '\', \'ZWMC=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+        if (title === "广告")
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(89, \'' + "/QZZPCX/QZZPCX_QZZP" + '\', \'ZWMC=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+        if (title === "房产")
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(89, \'' + "/QZZPCX/QZZPCX_QZZP" + '\', \'ZWMC=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+        if (title === "建筑")
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(89, \'' + "/QZZPCX/QZZPCX_QZZP" + '\', \'ZWMC=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+        if (title === "装修")
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(89, \'' + "/QZZPCX/QZZPCX_QZZP" + '\', \'ZWMC=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+        if (title === "网络")
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(89, \'' + "/QZZPCX/QZZPCX_QZZP" + '\', \'ZWMC=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+        if (title === "通讯")
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(89, \'' + "/QZZPCX/QZZPCX_QZZP" + '\', \'ZWMC=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
     }
     html += '</ul>';
     html += '</div>';
@@ -122,32 +122,32 @@ function LoadItem(title, list, districts) {
 
     html += '<ul class="ul_body_middle_item_right">';
     for (var i = 0; i < (list.length < 8 ? list.length : 8) ; i++) {
-        if (title === "手机")
-            html += LoadSJInfo(list[i])
-        if (title === "笔记本电脑")
-            html += LoadBJBDNInfo(list[i])
-        if (title === "平板电脑")
-            html += LoadPBDNInfo(list[i])
-        if (title === "数码产品")
-            html += LoadSMCPInfo(list[i])
-        if (title === "台式机/配件")
-            html += LoadTSJInfo(list[i])
-        if (title === "家用家电")
-            html += LoadJYJDInfo(list[i])
-        if (title === "家用家具")
-            html += LoadJYJJInfo(list[i])
-        if (title === "家居日用")
-            html += LoadJJRYInfo(list[i])
-        if (title === "办公用品")
-            html += LoadBGYPInfo(list[i])
-        if (title === "母婴儿童")
-            html += LoadMYETInfo(list[i])
-        if (title === "服饰箱包")
-            html += LoadFSXBInfo(list[i])
-        if (title === "美容保健")
-            html += LoadMRBJInfo(list[i])
-        if (title === "二手设备")
-            html += LoadESSBInfo(list[i])
+        if (title === "销售")
+            html += LoadXSInfo(list[i])
+        if (title === "司机")
+            html += LoadInfo(list[i])
+        if (title === "餐饮")
+            html += LoadInfo(list[i])
+        if (title === "金融")
+            html += LoadInfo(list[i])
+        if (title === "管理")
+            html += LoadInfo(list[i])
+        if (title === "汽车")
+            html += LoadInfo(list[i])
+        if (title === "物流")
+            html += LoadInfo(list[i])
+        if (title === "广告")
+            html += LoadInfo(list[i])
+        if (title === "房产")
+            html += LoadInfo(list[i])
+        if (title === "建筑")
+            html += LoadInfo(list[i])
+        if (title === "装修")
+            html += LoadInfo(list[i])
+        if (title === "网络")
+            html += LoadInfo(list[i])
+        if (title === "通讯")
+            html += LoadInfo(list[i])
     }
     html += '</ul>';
 
@@ -156,131 +156,10 @@ function LoadItem(title, list, districts) {
     html += '</div>';
     $("#div_body_middle").append(html);
 }
-//加载手机信息
-function LoadSJInfo(obj) {
-    var html = "";
-    html += ('<li onclick="OpenXXXX(\'ESXX_SJSM_ESSJ\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
-    html += ('<img class="img_li_body_middle_item_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_middle_item_right_xq">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_middle_item_right_jg">' + GetJG(obj.JG, '元') + '</p>');
-    html += ('</li>');
-    return html;
-}
-//加载笔记本电脑信息
-function LoadBJBDNInfo(obj) {
-    var html = "";
-    html += ('<li onclick="OpenXXXX(\'ESXX_SJSM_BJBDN\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
-    html += ('<img class="img_li_body_middle_item_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_middle_item_right_xq">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_middle_item_right_jg">' + GetJG(obj.JG, '元') + '</p>');
-    html += ('</li>');
-    return html;
-}
-//加载平板电脑信息
-function LoadPBDNInfo(obj) {
-    var html = "";
-    html += ('<li onclick="OpenXXXX(\'ESXX_SJSM_PBDN\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
-    html += ('<img class="img_li_body_middle_item_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_middle_item_right_xq">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_middle_item_right_jg">' + GetJG(obj.JG, '元') + '</p>');
-    html += ('</li>');
-    return html;
-}
-//加载数码产品信息
-function LoadSMCPInfo(obj) {
-    var html = "";
-    html += ('<li onclick="OpenXXXX(\'ESXX_SJSM_SMCP\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
-    html += ('<img class="img_li_body_middle_item_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_middle_item_right_xq">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_middle_item_right_jg">' + GetJG(obj.JG, '万元') + '</p>');
-    html += ('</li>');
-    return html;
-}
-//加载台式机/配件信息
-function LoadTSJInfo(obj) {
-    var html = "";
-    html += ('<li onclick="OpenXXXX(\'ESXX_SJSM_TSJ\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
-    html += ('<img class="img_li_body_middle_item_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_middle_item_right_xq">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_middle_item_right_jg">' + GetJG(obj.JG, '万元') + '</p>');
-    html += ('</li>');
-    return html;
-}
-//加载家用家电信息
-function LoadJYJDInfo(obj) {
-    var html = "";
-    html += ('<li onclick="OpenXXXX(\'ESXX_JDJJBG_ESJD\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
-    html += ('<img class="img_li_body_middle_item_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_middle_item_right_xq">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_middle_item_right_jg">' + GetJG(obj.JG, '万元') + '</p>');
-    html += ('</li>');
-    return html;
-}
-//加载家用家具信息
-function LoadJYJJInfo(obj) {
-    var html = "";
-    html += ('<li onclick="OpenXXXX(\'ESXX_JDJJBG_ESJJ\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
-    html += ('<img class="img_li_body_middle_item_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_middle_item_right_xq">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_middle_item_right_jg">' + GetJG(obj.JG, '万元') + '</p>');
-    html += ('</li>');
-    return html;
-}
-//加载家居日用信息
-function LoadJJRYInfo(obj) {
-    var html = "";
-    html += ('<li onclick="OpenXXXX(\'ESXX_JDJJBG_JJRY\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
-    html += ('<img class="img_li_body_middle_item_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_middle_item_right_xq">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_middle_item_right_jg">' + GetJG(obj.JG, '万元') + '</p>');
-    html += ('</li>');
-    return html;
-}
-//加载办公用品信息
-function LoadBGYPInfo(obj) {
-    var html = "";
-    html += ('<li onclick="OpenXXXX(\'ESXX_JDJJBG_BGYP\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
-    html += ('<img class="img_li_body_middle_item_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_middle_item_right_xq">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_middle_item_right_jg">' + GetJG(obj.JG, '万元') + '</p>');
-    html += ('</li>');
-    return html;
-}
-//加载母婴儿童信息
-function LoadMYETInfo(obj) {
-    var html = "";
-    html += ('<li onclick="OpenXXXX(\'ESXX_MYFZMR_MYETYPWJ\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
-    html += ('<img class="img_li_body_middle_item_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_middle_item_right_xq">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_middle_item_right_jg">' + GetJG(obj.JG, '万元') + '</p>');
-    html += ('</li>');
-    return html;
-}
-//加载服装鞋帽信息
-function LoadFSXBInfo(obj) {
-    var html = "";
-    html += ('<li onclick="OpenXXXX(\'ESXX_MYFZMR_FZXMXB\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
-    html += ('<img class="img_li_body_middle_item_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_middle_item_right_xq">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_middle_item_right_jg">' + GetJG(obj.JG, '万元') + '</p>');
-    html += ('</li>');
-    return html;
-}
-//加载美容保健信息
-function LoadMRBJInfo(obj) {
-    var html = "";
-    html += ('<li onclick="OpenXXXX(\'ESXX_MYFZMR_MRBJ\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
-    html += ('<img class="img_li_body_middle_item_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_middle_item_right_xq">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_middle_item_right_jg">' + GetJG(obj.JG, '万元') + '</p>');
-    html += ('</li>');
-    return html;
-}
 //加载二手设备信息
-function LoadESSBInfo(obj) {
+function LoadInfo(obj) {
     var html = "";
-    html += ('<li onclick="OpenXXXX(\'ESXX_QTES_ESSB\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
-    html += ('<img class="img_li_body_middle_item_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
+    html += ('<li onclick="OpenXXXX(\'QZZPXX_QZZP\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
     html += ('<p class="p_li_body_middle_item_right_xq">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_middle_item_right_jg">' + GetJG(obj.JG, '万元') + '</p>');
     html += ('</li>');
