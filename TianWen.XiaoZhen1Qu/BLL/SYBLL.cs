@@ -347,15 +347,15 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 IList<CODES_QZZP> xszw = DAO.GetObjectList<CODES_QZZP>(string.Format("FROM CODES_QZZP WHERE TYPENAME='销售类别' ORDER BY CODEORDER"));
                 IList<CODES_QZZP> sjzw = DAO.GetObjectList<CODES_QZZP>(string.Format("FROM CODES_QZZP WHERE TYPENAME='司机类别' ORDER BY CODEORDER"));
                 IList<CODES_QZZP> cyzw = DAO.GetObjectList<CODES_QZZP>(string.Format("FROM CODES_QZZP WHERE TYPENAME='餐饮类别' ORDER BY CODEORDER"));
-                IList<CODES_QZZP> jrzw = DAO.GetObjectList<CODES_QZZP>(string.Format("FROM CODES_QZZP WHERE TYPENAME='金融类别' ORDER BY CODEORDER"));
-                IList<CODES_QZZP> glzw = DAO.GetObjectList<CODES_QZZP>(string.Format("FROM CODES_QZZP WHERE TYPENAME='管理类别' ORDER BY CODEORDER"));
+                IList<CODES_QZZP> jrzw = DAO.GetObjectList<CODES_QZZP>(string.Format("FROM CODES_QZZP WHERE TYPENAME='金融/银行/证券/投资类别' ORDER BY CODEORDER"));
+                IList<CODES_QZZP> glzw = DAO.GetObjectList<CODES_QZZP>(string.Format("FROM CODES_QZZP WHERE TYPENAME='高级管理类别' ORDER BY CODEORDER"));
                 IList<CODES_QZZP> qczw = DAO.GetObjectList<CODES_QZZP>(string.Format("FROM CODES_QZZP WHERE TYPENAME='汽车类别' ORDER BY CODEORDER"));
-                IList<CODES_QZZP> wlzw = DAO.GetObjectList<CODES_QZZP>(string.Format("FROM CODES_QZZP WHERE TYPENAME='物流类别' ORDER BY CODEORDER"));
-                IList<CODES_QZZP> ggzw = DAO.GetObjectList<CODES_QZZP>(string.Format("FROM CODES_QZZP WHERE TYPENAME='广告类别' ORDER BY CODEORDER"));
+                IList<CODES_QZZP> wlzw = DAO.GetObjectList<CODES_QZZP>(string.Format("FROM CODES_QZZP WHERE TYPENAME='物流/仓储类别' ORDER BY CODEORDER"));
+                IList<CODES_QZZP> ggzw = DAO.GetObjectList<CODES_QZZP>(string.Format("FROM CODES_QZZP WHERE TYPENAME='广告/咨询类别' ORDER BY CODEORDER"));
                 IList<CODES_QZZP> fczw = DAO.GetObjectList<CODES_QZZP>(string.Format("FROM CODES_QZZP WHERE TYPENAME='房产类别' ORDER BY CODEORDER"));
                 IList<CODES_QZZP> jzzw = DAO.GetObjectList<CODES_QZZP>(string.Format("FROM CODES_QZZP WHERE TYPENAME='建筑类别' ORDER BY CODEORDER"));
                 IList<CODES_QZZP> zxzw = DAO.GetObjectList<CODES_QZZP>(string.Format("FROM CODES_QZZP WHERE TYPENAME='装修类别' ORDER BY CODEORDER"));
-                IList<CODES_QZZP> wluozw = DAO.GetObjectList<CODES_QZZP>(string.Format("FROM CODES_QZZP WHERE TYPENAME='网络类别' ORDER BY CODEORDER"));
+                IList<CODES_QZZP> wluozw = DAO.GetObjectList<CODES_QZZP>(string.Format("FROM CODES_QZZP WHERE TYPENAME='计算机/互联网类别' ORDER BY CODEORDER"));
                 IList<CODES_QZZP> txzw = DAO.GetObjectList<CODES_QZZP>(string.Format("FROM CODES_QZZP WHERE TYPENAME='通讯类别' ORDER BY CODEORDER"));
 
                 dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,qzzp_qzzpjbxx b where a.jcxxid = b.jcxxid and zwlb='销售'");
@@ -397,7 +397,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,qzzp_qzzpjbxx b where a.jcxxid = b.jcxxid and zwlb = '通讯'");
                 List<QZZP_QZZPView> txs = ConvertHelper.DataTableToList<QZZP_QZZPView>(dt);
 
-                return new { Result = EnResultType.Success, rzzws = rzzws, xszw = xszw, sjzw = sjzw, cyzw = cyzw,jrzw,glzw,qczw,wlzw,ggzw,fczw,jzzw,zxzw,wluozw,txzw };
+                return new { Result = EnResultType.Success, rzzws = rzzws, xss = xss, sjs = sjs, cys = cys, jrs = jrs, gls = gls, qcs = qcs, wls = wls, ggs = ggs, fcs = fcs, jzs = jzs, zxs = zxs, txs = txs, wluos = wluos, xszw = xszw, sjzw = sjzw, cyzw = cyzw, jrzw, glzw, qczw, wlzw, ggzw, fczw, jzzw, zxzw, wluozw, txzw };
             }
             catch (Exception ex)
             {
