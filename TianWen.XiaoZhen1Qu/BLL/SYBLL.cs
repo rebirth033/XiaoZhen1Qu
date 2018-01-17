@@ -423,5 +423,24 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 return new { Result = EnResultType.Failed, Message = "加载失败" };
             }
         }
+
+        public object LoadSHFWTOP(string xzqdm, string xzq)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                IList<CODES_XXLB> shfwlb = DAO.GetObjectList<CODES_XXLB>(string.Format("FROM CODES_XXLB WHERE PARENTID = 9 OR FBYM LIKE 'SHFW%' OR FBYM LIKE 'XXYL%' OR FBYM LIKE 'HQSY%' OR FBYM LIKE 'LYJD%'"));
+                IList<CODES_SHFW> shfwxl = DAO.GetObjectList<CODES_SHFW>(string.Format("FROM CODES_SHFW WHERE TYPENAME LIKE '%类别%' ORDER BY CODEORDER"));
+                IList<CODES_LYJD> lyjdxl = DAO.GetObjectList<CODES_LYJD>(string.Format("FROM CODES_LYJD WHERE TYPENAME LIKE '%类别%' ORDER BY CODEORDER"));
+                IList<CODES_HQSY> hqsyxl = DAO.GetObjectList<CODES_HQSY>(string.Format("FROM CODES_HQSY WHERE TYPENAME LIKE '%类别%' ORDER BY CODEORDER"));
+                IList<CODES_XXYL> xxylxl = DAO.GetObjectList<CODES_XXYL>(string.Format("FROM CODES_XXYL WHERE TYPENAME LIKE '%类别%' ORDER BY CODEORDER"));
+                return new { Result = EnResultType.Success, shfwlb = shfwlb, shfwxl = shfwxl, lyjdxl= lyjdxl, hqsyxl= hqsyxl, xxylxl= xxylxl };
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("error", ex.Message);
+                return new { Result = EnResultType.Failed, Message = "加载失败" };
+            }
+        }
     }
 }

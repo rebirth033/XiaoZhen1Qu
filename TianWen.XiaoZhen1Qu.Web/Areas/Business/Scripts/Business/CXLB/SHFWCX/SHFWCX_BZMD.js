@@ -6,8 +6,25 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadSHFWCondition() {
-    LoadConditionByTypeNames("'殡葬/墓地类别'", "CODES_SHFW", "类别", "LB", "100");
+    LoadConditionByTypeNames("'白事服务类别'", "CODES_SHFW", "类别", "LB", "100");
+}
+//加载URL查询条件
+function LoadURLCondition() {
+    if (getUrlParam("LB") !== null)
+        SelectURLCondition(getUrlParam("LB"));
+    else if (getUrlParam("QY") !== null)
+        SelectURLCondition(getUrlParam("QY"));
+    else
+        LoadBody("SHFWXX_BZMD", currentIndex);
+}
+//选择URL条件
+function SelectURLCondition(obj) {
+    $("#" + obj).parent().find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $("#" + obj).addClass("li_condition_body_active");
     LoadBody("SHFWXX_BZMD", currentIndex);
+    ShowSelectCondition("SHFWXX_BZMD");
 }
 //选择条件
 function SelectCondition(obj, name) {
