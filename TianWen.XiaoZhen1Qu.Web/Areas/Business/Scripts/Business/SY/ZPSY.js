@@ -7,6 +7,7 @@
     $("#li_head_sy").css("background", "#bc6ba6").css("color", "#ffffff");
     $("#div_yhm").bind("click", ShowWDXX);
     //LoadRZZW();
+    //LoadHYLB();
     LoadDefault();
 });
 //打开查询列表
@@ -22,7 +23,8 @@ function OpenXXXX(TYPE, ID, LBID) {
 }
 //打开职位类别
 function OpenZWLB(ID) {
-
+    $(".div_body_top_left_inner").css("display", "none");
+    $("#" + ID).css("display", "inline-block");
 }
 //加载热招职位
 function LoadRZZW() {
@@ -36,7 +38,56 @@ function LoadRZZW() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                LoadZWItem(xml.rzzws);
+                var html = "";
+                for (var i = 0; i < xml.rzzws.length; i++) {
+                    html += "<li class=\"li_body_top_right\" onclick=\"OpenCXLB(89, '/QZZPCX/QZZPCX_QZZP', 'ZWLB=" + rzzws[i].TYPENAME.replace("类别", '') + "&ZWMC=" + rzzws[i].CODEID + "')\">" + rzzws[i].CODENAME + "</li>";
+                }
+                $("#ul_body_top_right_rzzw").html(html);
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//加载行业类别
+function LoadHYLB() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/SY/LoadHYLB",
+        dataType: "json",
+        data:
+        {
+
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "";
+                html += '<p class="p_body_top_left">行业类别</p>';
+                html += '<ul class="ul_body_top_left">';
+                var height = 100;
+                for (var i = 0; i < xml.hylb.length; i++) {
+                    html += ' <li class="li_body_top_left" onmouseover="OpenZWLB(\'' + xml.hylb[i].CODEID + '\')">';
+                    html += '<a class="a_body_top_left">' + xml.hylb[i].CODENAME + '</a>';
+                    html += '<div id="' + xml.hylb[i].CODEID + '" style="top:-' + (parseInt(height) + (i * 10)) + 'px;" class="div_body_top_left_inner">';
+
+                    for (var j = 0; j < xml.zwlb.length; j++) {
+                        if (xml.zwlb[j].PARENTID === xml.hylb[i].CODEID) {
+                            html += '<p class="p_body_top_left_inner_first">' + xml.zwlb[j].CODENAME + '</p>';
+                            html += '<p class="p_body_top_left_inner_second">';
+                            for (var k = 0; k < xml.zwmc.length; k++) {
+                                if (xml.zwmc[k].PARENTID === xml.zwlb[j].CODEID) {
+                                    html += '<a onclick="OpenCXLB(89, \'/QZZPCX/QZZPCX_QZZP\', \'ZWLB=' + xml.zwlb[j].CODENAME + '&ZWMC=' + xml.zwmc[k].CODEID + '\')" class="a_body_top_left_inner_second">' + xml.zwmc[k].CODENAME + '</a>';
+                                }
+                            }
+                            html += '</p>';
+                        }
+                    }
+
+                    html += '</div>';
+                }
+                html += '</ul>';
+                $("#div_body_top_left").html(html);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -75,14 +126,6 @@ function LoadDefault() {
 
         }
     });
-}
-//加载职位
-function LoadZWItem(rzzws) {
-    var html = "";
-    for (var i = 0; i < rzzws.length; i++) {
-        html += "<li class=\"li_body_top_right\" onclick=\"OpenCXLB(89, '/QZZPCX/QZZPCX_QZZP', 'ZWLB=" + rzzws[i].TYPENAME.replace("类别", '') + "&ZWMC=" + rzzws[i].CODEID + "')\">" + rzzws[i].CODENAME + "</li>";
-    }
-    $("#ul_body_top_right_rzzw").html(html);
 }
 //加载模块
 function LoadItem(title, list, districts) {

@@ -405,5 +405,23 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 return new { Result = EnResultType.Failed, Message = "加载失败" };
             }
         }
+
+        public object LoadHYLB(string xzqdm, string xzq)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                IList<CODES_QZZP> hylb = DAO.GetObjectList<CODES_QZZP>(string.Format("FROM CODES_QZZP WHERE TYPENAME='职位类别' ORDER BY CODEORDER"));
+                IList<CODES_QZZP> zwlb = DAO.GetObjectList<CODES_QZZP>(string.Format("FROM CODES_QZZP WHERE PARENTID IN(SELECT CODEID FROM CODES_QZZP WHERE TYPENAME='职位类别') ORDER BY CODEORDER"));
+                IList<CODES_QZZP> zwmc = DAO.GetObjectList<CODES_QZZP>(string.Format("FROM CODES_QZZP WHERE PARENTID IN(SELECT CODEID FROM CODES_QZZP WHERE PARENTID IN(SELECT CODEID FROM CODES_QZZP WHERE TYPENAME='职位类别')) ORDER BY CODEORDER"));
+
+                return new { Result = EnResultType.Success, hylb = hylb, zwlb = zwlb, zwmc = zwmc };
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("error", ex.Message);
+                return new { Result = EnResultType.Failed, Message = "加载失败" };
+            }
+        }
     }
 }
