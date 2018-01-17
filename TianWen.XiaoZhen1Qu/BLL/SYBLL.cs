@@ -511,7 +511,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 {
                     jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
                 }
-                return new { Result = EnResultType.Success, districts = districts , bjfws = bjfws, bmysfws= bmysfws, bjqxfws= bjqxfws, gdstqlfws= gdstqlfws, shpsfws = shpsfws, jdwxfws= jdwxfws, jjwxfws= jjwxfws, dnwxfws= dnwxfws, smwxfws = smwxfws };
+                return new { Result = EnResultType.Success, districts = districts , bjfws = bjfws, bmysfws= bmysfws, bjqxfws= bjqxfws, gdstqlfws= gdstqlfws, shpsfws = shpsfws, jdwxfws= jdwxfws, jjwxfws= jjwxfws, dnwxfws= dnwxfws, smwxfws = smwxfws, fwwxfws = fwwxfws };
             }
             catch (Exception ex)
             {
