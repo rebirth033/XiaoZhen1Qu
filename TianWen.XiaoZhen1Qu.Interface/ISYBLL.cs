@@ -28,5 +28,7 @@ namespace TianWen.XiaoZhen1Qu.Interface
         object LoadHYLB(string XZQDM, string XZQ);
 
         object LoadSHFWTOP(string XZQDM, string XZQ);
+
+        object LoadSHFWSY(string XZQDM, string XZQ);
     }
 }

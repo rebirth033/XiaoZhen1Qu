@@ -49,7 +49,7 @@ function LoadSHFWTOP() {
                 html += '</div>';
                 html += '<div class="div_body_top_right">';
                 for (var i = 0; i < xml.shfwlb.length; i++) {
-                    if (xml.shfwlb[i].PARENTID !== 9 && xml.shfwlb[i].FBYM.indexOf("SHFW") !== -1) {
+                    if (xml.shfwlb[i].PARENTID !== 9 && xml.shfwlb[i].FBYM.indexOf("SHFW") !== -1 && xml.shfwlb[i].LBNAME !== "手机维修" && xml.shfwlb[i].LBNAME !== "开锁修锁" && xml.shfwlb[i].LBNAME !== "白事服务") {
                         html += '<p class="p_body_top_right">' + xml.shfwlb[i].LBNAME + '</p>';
                         html += '<ul class="ul_body_top_right">';
                         for (var j = 0; j < xml.shfwxl.length; j++) {
@@ -74,7 +74,7 @@ function LoadSHFWTOP() {
 function LoadDefault() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SY/LoadZPSY",
+        url: getRootPath() + "/Business/SY/LoadSHFWSY",
         dataType: "json",
         data:
         {
@@ -82,19 +82,16 @@ function LoadDefault() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                LoadItem("销售", xml.xss, xml.xszw);
-                LoadItem("司机", xml.sjs, xml.sjzw);
-                LoadItem("餐饮", xml.cys, xml.cyzw);
-                LoadItem("金融", xml.jrs, xml.jrzw);
-                LoadItem("管理", xml.gls, xml.glzw);
-                LoadItem("汽车", xml.qcs, xml.qczw);
-                LoadItem("物流", xml.wls, xml.wlzw);
-                LoadItem("广告", xml.ggs, xml.ggzw);
-                LoadItem("房产", xml.fcs, xml.fczw);
-                LoadItem("建筑", xml.jzs, xml.jzzw);
-                LoadItem("装修", xml.zxs, xml.zxzw);
-                LoadItem("网络", xml.wls, xml.wlzw);
-                LoadItem("通讯", xml.txs, xml.txzw);
+                LoadItem("搬家服务", xml.xss, xml.xszw);
+                //LoadItem("保姆月嫂", xml.sjs, xml.sjzw);
+                //LoadItem("保洁清洗", xml.cys, xml.cyzw);
+                //LoadItem("管道疏通/清理", xml.jrs, xml.jrzw);
+                //LoadItem("生活配送", xml.gls, xml.glzw);
+                //LoadItem("家电维修", xml.qcs, xml.qczw);
+                //LoadItem("电脑维修", xml.wls, xml.wlzw);
+                //LoadItem("房屋维修", xml.ggs, xml.ggzw);
+                //LoadItem("家具维修", xml.fcs, xml.fczw);
+                //LoadItem("数码维修", xml.jzs, xml.jzzw);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -106,39 +103,16 @@ function LoadDefault() {
 function LoadItem(title, list, districts) {
     var html = "";
     html += '<div class="div_body_middle_item">';
-    //html += '<div class="div_body_middle_item_left">';
-    //html += '<p class="p_body_middle_item_left">' + title + '</p>';
-    //html += '<ul class="ul_body_middle_item_left">';
-    //for (var i = 0; i < (districts.length > 14 ? 14 : districts.length) ; i++) {
-    //    if (title === "销售")
-    //        html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(89, \'' + "/QZZPCX/QZZPCX_QZZP" + '\', \'ZWMC=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
-    //    if (title === "司机")
-    //        html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(89, \'' + "/QZZPCX/QZZPCX_QZZP" + '\', \'ZWMC=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
-    //    if (title === "餐饮")
-    //        html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(89, \'' + "/QZZPCX/QZZPCX_QZZP" + '\', \'ZWMC=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
-    //    if (title === "金融")
-    //        html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(89, \'' + "/QZZPCX/QZZPCX_QZZP" + '\', \'ZWMC=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
-    //    if (title === "管理")
-    //        html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(89, \'' + "/QZZPCX/QZZPCX_QZZP" + '\', \'ZWMC=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
-    //    if (title === "汽车")
-    //        html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(89, \'' + "/QZZPCX/QZZPCX_QZZP" + '\', \'ZWMC=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
-    //    if (title === "物流")
-    //        html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(89, \'' + "/QZZPCX/QZZPCX_QZZP" + '\', \'ZWMC=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
-    //    if (title === "广告")
-    //        html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(89, \'' + "/QZZPCX/QZZPCX_QZZP" + '\', \'ZWMC=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
-    //    if (title === "房产")
-    //        html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(89, \'' + "/QZZPCX/QZZPCX_QZZP" + '\', \'ZWMC=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
-    //    if (title === "建筑")
-    //        html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(89, \'' + "/QZZPCX/QZZPCX_QZZP" + '\', \'ZWMC=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
-    //    if (title === "装修")
-    //        html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(89, \'' + "/QZZPCX/QZZPCX_QZZP" + '\', \'ZWMC=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
-    //    if (title === "网络")
-    //        html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(89, \'' + "/QZZPCX/QZZPCX_QZZP" + '\', \'ZWMC=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
-    //    if (title === "通讯")
-    //        html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(89, \'' + "/QZZPCX/QZZPCX_QZZP" + '\', \'ZWMC=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
-    //}
-    //html += '</ul>';
-    //html += '</div>';
+    html += '<div class="div_body_middle_item_left">';
+    html += '<p class="p_body_middle_item_left">' + title + '</p>';
+    html += '<ul class="ul_body_middle_item_left">';
+    for (var i = 0; i < (districts.length > 14 ? 14 : districts.length) ; i++) {
+        if (title === "搬家服务")
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(89, \'' + "/QZZPCX/QZZPCX_QZZP" + '\', \'ZWMC=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+        
+    }
+    html += '</ul>';
+    html += '</div>';
 
     html += '<div class="div_body_middle_item_right">';
     html += '<p class="p_body_middle_item_right">' + title + '</p>';
@@ -178,14 +152,14 @@ function LoadItem(title, list, districts) {
     html += '</div>';
     $("#div_body_middle").append(html);
 }
-//加载招聘信息
+//加载生活服务信息
 function LoadInfo(obj) {
     var html = "";
-    html += ('<li onclick="OpenXXXX(\'QZZPXX_QZZP\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
-    html += ('<p class="p_li_body_middle_item_right_bt">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_middle_item_right_myxz">' + obj.MYXZ + '</p>');
-    html += ('<p class="p_li_body_middle_item_right_cs">' + obj.ZWMC + ' | ' + obj.ZWFL + '</p>');
-    html += ('<p class="p_li_body_middle_item_right_cs">招聘' + obj.ZPRS + '人 | ' + obj.GSMC + '</p>');
+    html += ('<li onclick="OpenXXXX(\'SHFWXX_\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
+    html += ('<img class="img_li_body_middle_item_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
+    html += ('<p class="p_li_body_middle_item_right_xq">' + obj.BT + '</p>');
+    html += ('<p class="p_li_body_middle_item_right_cs">' + obj.SPNF + ' / ' + '2.0升' + ' / ' + '自动' + '</p>');
+    html += ('<p class="p_li_body_middle_item_right_jg">' + GetJG(obj.JG, '万元') + '</p>');
     html += ('</li>');
     return html;
 }

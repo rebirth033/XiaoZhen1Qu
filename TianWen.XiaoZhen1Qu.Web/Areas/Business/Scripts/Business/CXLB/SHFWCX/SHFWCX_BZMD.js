@@ -17,15 +17,6 @@ function LoadURLCondition() {
     else
         LoadBody("SHFWXX_BZMD", currentIndex);
 }
-//选择URL条件
-function SelectURLCondition(obj) {
-    $("#" + obj).parent().find(".li_condition_body").each(function () {
-        $(this).removeClass("li_condition_body_active");
-    });
-    $("#" + obj).addClass("li_condition_body_active");
-    LoadBody("SHFWXX_BZMD", currentIndex);
-    ShowSelectCondition("SHFWXX_BZMD");
-}
 //选择条件
 function SelectCondition(obj, name) {
     if (name === "类别" && (obj.innerHTML === "殡仪馆/殡葬服务" || obj.innerHTML === "殡葬用品")) {
@@ -38,6 +29,15 @@ function SelectCondition(obj, name) {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
+    LoadBody("SHFWXX_BZMD", currentIndex);
+    ShowSelectCondition("SHFWXX_BZMD");
+}
+//选择URL条件
+function SelectURLCondition(obj) {
+    $("#" + obj).parent().find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $("#" + obj).addClass("li_condition_body_active");
     LoadBody("SHFWXX_BZMD", currentIndex);
     ShowSelectCondition("SHFWXX_BZMD");
 }
