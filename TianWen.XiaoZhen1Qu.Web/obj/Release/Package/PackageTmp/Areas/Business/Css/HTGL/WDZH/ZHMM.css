@@ -1,0 +1,50 @@
+﻿.div_head {
+    width: 900px; 
+    text-align: center;
+    height: 48px;
+}
+
+.div_head_inner {
+    width: 600px;
+    margin-left: 16%;
+}
+
+.divstep {
+    width: 196px;
+    text-align: center;
+    height: 48px;
+    float: left;
+    cursor: default;
+}
+
+.spanstep {
+    font-size: 14px;
+    margin-bottom: 5px;
+    line-height: 40px;
+    color: #cccccc;
+}
+
+.emstep {
+    width: 196px;
+    height: 2px;
+    float: left;
+    background: #cccccc;
+}
+
+.div_content {
+    width: 900px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.table {
+    margin-left: 26%;
+}
+
+.table tr {
+    height: 40px;
+}
+
+.table tr td {
+    vertical-align: middle !important;
+}

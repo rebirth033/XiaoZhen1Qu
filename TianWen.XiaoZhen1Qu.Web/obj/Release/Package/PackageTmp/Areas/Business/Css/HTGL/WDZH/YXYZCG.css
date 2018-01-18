@@ -1,0 +1,109 @@
+﻿.div_top {
+    width: 100%;
+    height: 30px;
+    background-color: #fafafa;
+    vertical-align: middle;
+}
+
+.div_head {
+    background-color: #bc6ba6;
+    width: 100%;
+    height: 80px;
+    vertical-align: middle;
+}
+
+.em_head_split {
+    background: #ccc;
+    height: 1px;
+    width: 70%;
+    display: block;
+    margin-top: 20px;
+    margin-left: 15%;
+}
+
+.div_head_left {
+    float: left;
+    width: 120px;
+    margin-left: 200px;
+    margin-top: 5px;
+}
+
+.img_head_left {
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    float: left;
+}
+
+.span_head_left {
+    width: 100%;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    font-size: 17px;
+    float: left;
+    cursor: default;
+}
+
+.div_content {
+    width: 100%;
+    height: 931px;
+}
+
+.div_content_tip {
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.span_content_tip {
+    font: 25px/1.7 "微软雅黑", "黑体", sans-serif;
+    color: #090;
+    line-height: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 3px;
+    margin-left: 3px;
+}
+
+.div_content_tip_info {
+    width: 30%;
+    height: 30px;
+    text-align: left;
+    margin-top: 30px;
+    margin-left: 40%;
+}
+
+.span_content_tip_left {
+    font-size: 14px;
+}
+
+.span_content_tip_right {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.span_content_tip_other {
+    color: #666;
+    font-size: 12px;
+}
+
+.span_content_tip_xy {
+    font-weight: 700;
+    color: red;
+}
+
+.div_content_tip_bottom {
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.span_content_tip_bottom {
+    cursor: pointer;
+    color: #bc6ba6;
+}

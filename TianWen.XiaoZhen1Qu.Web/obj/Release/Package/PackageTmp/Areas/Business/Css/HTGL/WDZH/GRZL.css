@@ -1,0 +1,242 @@
+﻿.div_photo {
+    width: 900px;
+    display: block;
+    height: 50px;
+    margin-top: 16px;
+}
+
+.divstep {
+    width: 130px;
+    text-align: center;
+    height: 45px;
+    float: left;
+    cursor: pointer;
+}
+
+.spanstep {
+    font-size: 16px;
+    margin-bottom: 5px;
+    line-height: 44px;
+    color: #cccccc;
+}
+
+.emstep {
+    width: 130px;
+    height: 1px;
+    float: left;
+    background: #cccccc;
+}
+
+.div_photo_info {
+    display: block;
+    width: 100%;
+}
+
+.div_main_photo {
+    width: 900px;
+    height: 220px;
+    padding-left:10px;
+}
+
+.div_main_photo_left {
+    width: 140px;
+    height: 140px;
+    border: 1px solid #cccccc;
+    margin-top: 17px;
+    float: left;
+}
+
+.img_main_photo {
+    width: 128px;
+    height: 128px;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+    margin: 5px 5px;
+}
+
+.div_main_photo_button {
+    margin-top: 14px;
+    margin-left: 2px;
+}
+
+.div_button_main_photo {
+    z-index: 100;
+    float: left;
+    font-size: 14px;
+    width: 135px;
+    height: 40px;
+    text-align: center;
+    vertical-align: middle;
+   
+}
+
+.div_button_main_photo_child {
+    padding-top: 10px;
+    width: 135px;
+    height: 40px;
+    background-color: #bc6ba6;
+   
+    display: block;
+    float: left;
+    z-index: 101;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.button_main_photo {
+    position: absolute;
+    font-size: 14px;
+    width: 135px;
+    height: 40px;
+    cursor: pointer;
+    background: #bc6ba6;
+    display: none;
+    z-index: 102;
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.button_main_photo:hover {
+    background: #ad5b97;
+}
+
+.button_main_photo_upload {
+    border-radius: 4px;
+    opacity: 0;
+}
+
+.div_main_photo_middle {
+    float: left;
+    margin-top: 25px;
+    margin-left: 120px;
+    text-align: center;
+    display: none;
+    width: 150px;
+}
+
+.img_main_photo_middle {
+    border-radius: 50%;
+    width: 128px;
+    height: 128px;
+}
+
+.span_main_photo_middle {
+    float: left;
+    font-size: 14px;
+    color: #999;
+    width: 150px;
+    display: block;
+    text-align: center;
+}
+
+.div_main_photo_middle_xt {
+    float: left;
+    margin-top: 25px;
+    margin-left: 120px;
+    text-align: center;
+    display: none;
+}
+
+.span_main_photo_middle_xt {
+    font-size: 14px;
+    color: #999;
+    width: 180px;
+    display: block;
+    text-align: center;
+}
+
+.ul_main_photo_middle_xt {
+    margin-top: 20px;
+}
+
+.li_main_photo_middle_xt {
+    cursor: pointer;
+    float: left;
+    display: block;
+    width: 85px;
+    margin-right: 13px;
+}
+
+.img_main_photo_middle_xt {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.div_person_head {
+    width: 100%;
+    display: block;
+    margin-top: 32px;
+    height: 46px;
+}
+
+.divstep_info {
+    width: 130px;
+    text-align: center;
+    height: 45px;
+    float: left;
+    cursor: pointer;
+    display: block;
+}
+
+.spanstep_info {
+    margin-bottom: 5px;
+    line-height: 44px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #666;
+}
+
+.emstep_info {
+    width: 130px;
+    height: 1px;
+    float: left;
+    background: #cccccc;
+}
+
+.div_person_info {
+    width: 100%;
+    display: block;
+    margin-top: 20px;
+}
+
+.div_person_info_left {
+    color: gray;
+    text-align: right;
+    display: inline-block;
+    font-size: 14px;
+    width: 10%;
+}
+
+.div_person_info_right {
+    display: inline-block;
+    margin-left: 10px;
+   
+    width: 40%;
+}
+
+.input_person_info {
+    width: 66%;
+    cursor: default;
+    border: none;
+    border-radius: 4px;
+    height: 34px;
+    padding: 4px 12px;
+    display: inline-block;
+}
+
+.img_person_info {
+    width: 18px;
+    height: 18px;
+    background-image: url(images/person_info_edit.png);
+    margin-left: 16px;
+    cursor: pointer;
+}
+
+.span_person_info_right {
+    color: #bc6ba6;
+    cursor: pointer;
+}

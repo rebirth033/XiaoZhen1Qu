@@ -1826,7 +1826,7 @@ var widgetsMouse = $.widget( "ui.mouse", {
 			$.removeData( event.target, this.widgetName + ".preventClickEvent" );
 		}
 
-		// These delegates are required to keep context
+		// These delegates are span_required to keep context
 		this._mouseMoveDelegate = function( event ) {
 			return that._mouseMove( event );
 		};
@@ -16139,7 +16139,7 @@ var widgetsTooltip = $.ui.tooltip;
 //>>label: Effects Core
 //>>group: Effects
 // jscs:disable maximumLineLength
-//>>description: Extends the internal jQuery effects. Includes morphing and easing. Required by all other effects.
+//>>description: Extends the internal jQuery effects. Includes morphing and easing. span_required by all other effects.
 // jscs:enable maximumLineLength
 //>>docs: http://api.jqueryui.com/category/effects-core/
 //>>demos: http://jqueryui.com/effect/

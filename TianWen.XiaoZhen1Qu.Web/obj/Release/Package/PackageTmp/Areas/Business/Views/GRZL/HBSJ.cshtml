@@ -1,0 +1,83 @@
+﻿@{
+    Layout = "~/Areas/Business/Views/Shared/QT.cshtml";
+}
+<html>
+<head>
+    <link href="@Url.Content("~/Areas/Business/Css/HTGL/WDZH/HBSJ.css")" rel="stylesheet" />
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/HTGL/WDZH/HBSJ.js")"></script>
+</head>
+<body>
+    <div class="div_head">
+        <div class="div_head_inner">
+            <div class="divstep" id="divJBSJ">
+                <span class="spanstep" id="spanJBSJ">1.解绑手机</span>
+                <em class="emstep" id="emJBSJ"></em>
+            </div>
+            <div class="divstep" id="divBDSJ">
+                <span class="spanstep" id="spanBDSJ">2.搬定手机</span>
+                <em class="emstep" id="emBDSJ"></em>
+            </div>
+            <div class="divstep" id="divWC">
+                <span class="spanstep" id="spanWC">3.完成</span>
+                <em class="emstep" id="emWC"></em>
+            </div>
+        </div>
+    </div>
+    <div id="myTabContent" class="div_content">
+        <div id="divFirst" style="display: block">
+            <table class="table" style="width: 600px;">
+                <tr>
+                    <td>
+                        <input type="text" id="inputYSJ" readonly="readonly" class="input_content" style="width: 270px;">
+                        <input class="btn btn-info" id="btnHQYSJYZM" type="button" style="margin-top: -3px; width: 116px;" value="获取验证码" />
+                    </td>
+                    <td class="Info" id="YSJInfo" style="width: 50%"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" class="input_content" style="cursor:text;" id="YSJYZM" placeholder="请输入验证码"></td>
+                    <td class="Info" id="YSJYZMInfo" style="width: 50%"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" class="btn btn-info input_text" id="btnFirst" value="解绑" /></td>
+                </tr>
+            </table>
+        </div>
+        <div id="divSecond" style="display: none">
+            <table class="table" style="width: 600px; ">
+                <tr>
+                    <td>
+                        <input type="text" id="inputXSJ" class="input_content" style="width: 270px;cursor:text;" placeholder="请输入新手机号">
+                        <input class="btn btn-info" id="btnHQXSJYZM" type="button" style="margin-top: -3px; width: 116px;" value="获取验证码" />
+                    </td>
+                    <td class="Info" id="XSJInfo" style="width: 50%"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" class="input_content" style="cursor:text;" id="XSJYZM" placeholder="请输入验证码"></td>
+                    <td class="Info" id="XSJYZMInfo" style="width: 50%"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" class="btn btn-info input_text" id="btnSecond" value="绑定" /></td>
+                </tr>
+            </table>
+        </div>
+        <div id="divThird" style="display: none">
+            <table class="table" style="width: 600px; ">
+                <tr>
+                    <td>
+                        <div class="div_bdcg">
+                            <div class="div_bdcg_tip">
+                                <img class="img_bdcg_tip"/>绑定成功!
+                            </div>
+                        </div>
+                    </td>
+                    <td class="Info" id="test" style="width: 50%"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" class="btn btn-info input_text" id="btnThird" value="返回" /></td>
+                </tr>
+            </table>
+            
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+﻿.body {
+    background-color: #fff;
+    text-align: center;
+}
+
+.div_content {
+    width: 600px;
+    height: 380px;
+    display: block;
+    margin-left: 150px;
+}
+
+.div_head {
+    width: 100%;
+    height: 64px;
+    text-align: center;
+    padding-top: 3.5px;
+}
+
+.span_head {
+    background-image: url(../images/wxbd_head_img.png);
+    display: inline-block;
+    width: 410px;
+    height: 47px;
+}
+
+.div_body_title {
+    width: 100%;
+    height: 32px;
+    font-size: 14px;
+    margin-top: 15px;
+    color: #333;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.span_body_info {
+    width: 180px;
+    height: 180px;
+    display: block;
+    margin-left: 210px;
+}

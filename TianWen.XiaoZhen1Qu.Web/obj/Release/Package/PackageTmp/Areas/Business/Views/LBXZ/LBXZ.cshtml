@@ -1,35 +1,53 @@
 ﻿@{
-    ViewBag.Title = "LBXZ";
-    Layout = "~/Areas/Business/Views/Shared/_ListLayout.cshtml";
+    Layout = "~/Areas/Business/Views/Shared/QT.cshtml";
 }
-
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title></title>
-    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/LBXZ.js")"></script>
-    <link href="@Url.Content("~/Areas/Business/Css/LBXZ.css" )" rel="stylesheet" />
-</head>
-
-><body style="width: 100%; height: 100%;">
-<div style="width: 1440px; text-align: center;">
-    <div id="divLBHead" style="margin-left: 18%; margin-top: 20px;">
-        <table class="table" style="width: 100%; text-align: center;">
+@section Section_Head {
+    <link href="@Url.Content("~/Areas/Business/Css/Other/LBXZ.css" )" rel="stylesheet" />
+    <link href="@Url.Content("~/Areas/Business/Css/Common/Top.css" )" rel="stylesheet" />
+    <link href="@Url.Content("~/Areas/Business/Css/Common/XZQ.css")" rel="stylesheet" />
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/Other/LBXZ.js")"></script>
+}
+@section Section_Body {
+    <div id="divTop" class="div_top">
+        <div class="div_top_left">
+            <span class="span_dqxzq" id="span_content_info_xzq">@ViewData["XZQ"]</span>
+            [<span class="span_qhcs" id="span_content_info_qhcs">切换城市</span>]
+        </div>
+        <div id="div_XZQ" class="div_dropdown">
+        </div>
+        <div class="div_top_right">
+            <span id="span_dl" class="span_top_right">
+                登录
+            </span>
+            <span class="span_top_right_fg">/</span>
+            <span id="span_zc" class="span_top_right">
+                注册
+            </span>
+            <span class="span_top_right_split"></span>
+            <span id="span_grzx" class="span_top_right">
+                个人中心
+            </span>
+            <span class="span_top_right_split"></span>
+            <span id="span_bzzx" class="span_top_right">
+                帮助中心
+            </span>
+        </div>
+    </div>
+    <div id="divLBHead" class="div_head">
+        <table class="table_head" style="width: 100%; text-align: center;">
             <tr>
                 <td class="headtd">
-                    <div style="width: 900px;">
+                    <div style="width: 960px;">
                         <div class="divstep" id="divXZDL">
-                            <span class="spanstep" id="spanXZDL">1.选择大类</span>
+                            <span class="spanstep" id="spanXZDL">1.选择类别</span>
                             <em class="emstep" id="emXZDL"></em>
                         </div>
                         <div class="divstep" id="divXZXL">
-                            <span class="spanstep" id="spanXZXL">2.选择小类</span>
+                            <span class="spanstep" id="spanXZXL">2.填写信息</span>
                             <em class="emstep" id="emXZXL"></em>
                         </div>
                         <div class="divstep" id="divFBXX">
-                            <span class="spanstep" id="spanFBXX">3.发布信息</span>
+                            <span class="spanstep" id="spanFBXX">3.完成发布</span>
                             <em class="emstep" id="emFBXX"></em>
                         </div>
                     </div>
@@ -37,22 +55,20 @@
             </tr>
         </table>
     </div>
-    <div id="myTabContent" style="margin-left: 18%;">
-        <div id="divDL" class="divLB" style="display: block; ">
+    <div id="myTabContent" class="div_content">
+        <div id="divDL" class="divLB">
             <div id="divDLText" class="DLText">1.选择大类</div>
-            <img style="width: 20px; height: 28px; float: left;" src="@Url.Content("~/Areas/Business/Css/images/righttip.png")"/>
+            <img style="width: 20px; height: 28px; float: left;" src="@Url.Content("~/Areas/Business/Css/images/righttip.png")" />
         </div>
         <div id="divFirst" style="display: block; width: 900px; padding-top: 50px;">
             <table id="tableDL" class="table" style="width: 900px;"></table>
         </div>
-        <div id="divXL" class="divLB" style="display: none; ">
+        <div id="divXL" class="divLB" style="display: none;">
             <div id="divXLText" class="DLText">2.选择小类</div>
-            <img style="width: 20px; height: 28px; float: left;" src="@Url.Content("~/Areas/Business/Css/images/righttip.png")"/>
+            <img style="width: 20px; height: 28px; float: left;" src="@Url.Content("~/Areas/Business/Css/images/righttip.png")" />
         </div>
-        <div id="divSecond" style="display: block; width: 900px; padding-top: 50px; ">
+        <div id="divSecond" class="div_second">
             <table id="tableXL" class="table" style="width: 900px;"></table>
         </div>
     </div>
-</div>
-</body>
-</html>
+}

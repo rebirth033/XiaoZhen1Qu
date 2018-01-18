@@ -1,0 +1,75 @@
+﻿@{
+    Layout = "~/Areas/Business/Views/Shared/QT.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="@Url.Content("~/Areas/Business/Css/HTGL/WDZH/YXYZ.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Areas/Business/Scripts/jquery-ui-1.12.1.custom/jquery-ui.min.css")" rel="stylesheet" />
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/HTGL/WDZH/YXYZ.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/jquery-ui-1.12.1.custom/jquery-ui.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/jquery-ui-1.12.1.custom/jquery.ui.datepicker-zh-CN.js")"></script>
+</head>
+<body>
+    <div class="div_head">
+        <div class="div_head_inner">
+            <div class="divstep" id="divTXYX">
+                <span class="spanstep" id="spanTXYX">1.填写邮箱</span>
+                <em class="emstep" id="emTXYX"></em>
+            </div>
+            <div class="divstep" id="divCSYJ">
+                <span class="spanstep" id="spanCSYJ">2.查收邮件</span>
+                <em class="emstep" id="emCSYJ"></em>
+            </div>
+            <div class="divstep" id="divWCRZ">
+                <span class="spanstep" id="spanWCRZ">3.完成认证</span>
+                <em class="emstep" id="emWCRZ"></em>
+            </div>
+        </div>
+    </div>
+    <div id="myTabContent" class="div_content">
+        <div id="divFirst" style="display: block">
+            <table class="table" style="width: 600px;">
+                <tr>
+                    <td>
+                        <span style="display:inline-block; height:30px;">您的邮箱：</span>
+                        <input type="text" id="inputYX" class="input_content" style="width: 316px;" placeholder="请输入电子邮箱">
+                    </td>
+                    <td class="Info" id="YXInfo" style="width: 50%"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" class="btn btn-info input_text" id="btnFirst" value="发送认证邮件" /></td>
+                </tr>
+            </table>
+        </div>
+        <div id="divSecond" style="display: none">
+            <table style="width: 900px; ">
+                <tr>
+                    <td>
+                        <div class="div_csyj">
+                            请登录到您的邮箱<span id="span_yx" class="span_yx"></span>中查收认证邮件，点击邮件中的“<span class="span_yxrz">邮箱认证</span>”按钮完成认证。
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="divThird" style="display: none">
+            <table class="table" style="width: 600px; ">
+                <tr>
+                    <td>
+                        <div class="div_bdcg">
+                            <div class="div_bdcg_tip">
+                                <img class="img_bdcg_tip" />修改成功!
+                            </div>
+                        </div>
+                    </td>
+                    <td class="Info" id="test" style="width: 50%"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" class="btn btn-info input_text" id="btnThird" value="返回" /></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

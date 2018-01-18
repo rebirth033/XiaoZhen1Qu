@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects  xmlns="http://www.springframework.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.net http://www.springframework.net/xsd/spring-objects.xsd">
+  <object id="CLController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.CLController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+      <property name="CL_BLL">
+      <ref object="CL_BLL"/>
+    </property>
+  </object>
+  <object id="CWController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.CWController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="CW_BLL">
+      <ref object="CW_BLL"/>
+    </property>
+  </object>
+  <object id="CYController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.CYController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="CY_BLL">
+      <ref object="CY_BLL"/>
+    </property>
+  </object>
+  <object id="ESController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.ESController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="ES_BLL">
+      <ref object="ES_BLL"/>
+    </property>
+  </object>
+  <object id="FCController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.FCController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="FC_BLL">
+      <ref object="FC_BLL"/>
+    </property>
+  </object>
+  <object id="HQSYController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.HQSYController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="HQSY_BLL">
+      <ref object="HQSY_BLL"/>
+    </property>
+  </object>
+  <object id="JYPXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.JYPXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="JYPX_BLL">
+      <ref object="JYPX_BLL"/>
+    </property>
+  </object>
+  <object id="LRController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.LRController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="LR_BLL">
+      <ref object="LR_BLL"/>
+    </property>
+  </object>
+  <object id="LYJDController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.LYJDController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="LYJD_BLL">
+      <ref object="LYJD_BLL"/>
+    </property>
+  </object>
+  <object id="NLMFYController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.NLMFYController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="NLMFY_BLL">
+      <ref object="NLMFY_BLL"/>
+    </property>
+  </object>
+  <object id="PFCGController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.PFCGController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="PFCG_BLL">
+      <ref object="PFCG_BLL"/>
+    </property>
+  </object>
+  <object id="QZZPController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.QZZPController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="QZZP_BLL">
+      <ref object="QZZP_BLL"/>
+    </property>
+  </object>
+  <object id="SHFWController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SHFWController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="SHFW_BLL">
+      <ref object="SHFW_BLL"/>
+    </property>
+  </object>
+  <object id="SWFWController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SWFWController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="SWFW_BLL">
+      <ref object="SWFW_BLL"/>
+    </property>
+  </object>
+  <object id="XXYLController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.XXYLController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="XXYL_BLL">
+      <ref object="XXYL_BLL"/>
+    </property>
+  </object>
+  <object id="ZSJMController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.ZSJMController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="ZSJM_BLL">
+      <ref object="ZSJM_BLL"/>
+    </property>
+  </object>
+  <object id="ZXJCController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.ZXJCController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="ZXJC_BLL">
+      <ref object="ZXJC_BLL"/>
+    </property>
+  </object>
+</objects>

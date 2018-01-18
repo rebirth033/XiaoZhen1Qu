@@ -1,0 +1,454 @@
+﻿@{
+    Layout = "~/Areas/Business/Views/Shared/BZZX.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="@Url.Content("~/Areas/Business/Css/BZZX/BZZX_SY_KSDH_ZHDJYXY.css")" rel="stylesheet" />
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/BZZX/BZZX_SY_KSDH_ZHDJYXY.js")"></script>
+</head>
+<body>
+    <div class="div_head">
+        <div class="div_head_main">
+            <span class="span_head_main_logo"></span>
+            <span class="span_head_main_bzzx">帮助中心</span>
+        </div>
+    </div>
+    <em class="em_split"></em>
+    <div class="div_body">
+        <div class="div_body_nav">
+            <div class="div_body_nav_inner">
+                <span class="span_body_nav" id="1"><span class="span_body_nav_inner">1、什么是信用 ?</span></span>
+                <span class="span_body_nav" id="2"><span class="span_body_nav_inner">2、信用是如何显示的 ?</span></span>
+                <span class="span_body_nav" id="3"><span class="span_body_nav_inner">3、如何增加信用 ?</span></span>
+            </div>
+            <div class="div_body_nav_inner">
+                <span class="span_body_nav" id="4"><span class="span_body_nav_inner">4、信用为什么会减少 ?</span></span>
+                <span class="span_body_nav" id="5"><span class="span_body_nav_inner">5、我每天可以发布多少条信息？</span></span>
+                <span class="span_body_nav" id="6"><span class="span_body_nav_inner">6、同一条信息每天我可以更新几次 ?</span></span> 
+            </div>
+        </div>
+        <div class="div_body_nav_title" id="div_body_nav_title_1">1.什么是信用 ?</div>
+        <div class="div_body_nav_text">
+            <table>
+                <tr>
+                    <td colspan="2" class="td_content">
+                        信用是信息小镇对一个用户真实性的评价，信用值越高，表示该用户越可信，主要通过邮件验证、手机验证、实名验证以及用户在58同城的一些活动等来衡量。信用不能兑换服务和物品，也不能转让他人。 如果进行一些非法操作,信用有可能被置为0。
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="div_body_nav_title" id="div_body_nav_title_2">2.信用是如何显示的 ?</div>
+        <div class="div_body_nav_text">
+            <table>
+                <tr>
+                    <td colspan="2" class="td_content">
+                        (1) 在用户中心后台向用户本人显示<br />
+                        (2) 在最终页、用户前台显示<br />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <table class="table_inner">
+                            <thead>
+                                <tr>
+                                    <th>信用级别</th>
+                                    <th>图标</th>
+                                    <th>信用值</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>黑名单</td>
+                                    <td>0,黑名单用户</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td><img class="img_content_xy_tx" /></td>
+                                    <td>1—25</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td><img class="img_content_xy_tx" /><img class="img_content_xy_tx" /></td>
+                                    <td>26—60</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td><img class="img_content_xy_tx" /><img class="img_content_xy_tx" /><img class="img_content_xy_tx" /></td>
+                                    <td>61—105</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td><img class="img_content_xy_tx" /><img class="img_content_xy_tx" /><img class="img_content_xy_tx" /><img class="img_content_xy_tx" /></td>
+                                    <td>106—160</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td><img class="img_content_xy_tx" /><img class="img_content_xy_tx" /><img class="img_content_xy_tx" /><img class="img_content_xy_tx" /><img class="img_content_xy_tx" /></td>
+                                    <td>161—225</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td><img class="img_content_xy_zs" /></td>
+                                    <td>226—300</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td><img class="img_content_xy_zs" /><img class="img_content_xy_zs" /></td>
+                                    <td>301—385</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td><img class="img_content_xy_zs" /><img class="img_content_xy_zs" /><img class="img_content_xy_zs" /></td>
+                                    <td>386—480</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td><img class="img_content_xy_zs" /><img class="img_content_xy_zs" /><img class="img_content_xy_zs" /><img class="img_content_xy_zs" /></td>
+                                    <td>481—585</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td><img class="img_content_xy_zs" /><img class="img_content_xy_zs" /><img class="img_content_xy_zs" /><img class="img_content_xy_zs" /><img class="img_content_xy_zs" /></td>
+                                    <td>586—700</td>
+                                </tr>
+                                <tr>
+                                    <td>11</td>
+                                    <td><img class="img_content_xy_hg" /></td>
+                                    <td>701—825</td>
+                                </tr>
+                                <tr>
+                                    <td>12</td>
+                                    <td><img class="img_content_xy_hg" /><img class="img_content_xy_hg" /></td>
+                                    <td>826—960</td>
+                                </tr>
+                                <tr>
+                                    <td>13</td>
+                                    <td><img class="img_content_xy_hg" /><img class="img_content_xy_hg" /><img class="img_content_xy_hg" /></td>
+                                    <td> 961—1105 </td>
+                                </tr>
+                                <tr>
+                                    <td>14</td>
+                                    <td><img class="img_content_xy_hg" /><img class="img_content_xy_hg" /><img class="img_content_xy_hg" /><img class="img_content_xy_hg" /></td>
+                                    <td> 1106—1260 </td>
+                                </tr>
+                                <tr>
+                                    <td>15</td>
+                                    <td><img class="img_content_xy_hg" /><img class="img_content_xy_hg" /><img class="img_content_xy_hg" /><img class="img_content_xy_hg" /><img class="img_content_xy_hg" /></td>
+                                    <td>大于1260</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="div_body_nav_title" id="div_body_nav_title_3">3.如何增加信用 ?</div>
+        <div class="div_body_nav_text">
+            <table>
+                <tr>
+                    <td colspan="2" class="td_content">
+                        信用可以通过如下方式增加：
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <table class="table_inner">
+                            <thead>
+                                <tr>
+                                    <th>增加方式</th>
+                                    <th>增加点数</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>邮箱验证</td>
+                                    <td><span class="span_green">+50</span></td>
+                                </tr>
+                                <tr>
+                                    <td>企业验证</td>
+                                    <td><span class="span_green">+210</span></td>
+                                </tr>
+                                <tr>
+                                    <td>生活服务网邻通用户第一年赠送  </td>
+                                    <td><span class="span_green">+150</span></td>
+                                </tr>
+                                <tr>
+                                    <td>生活服务网邻通用户第二年赠送</td>
+                                    <td><span class="span_green">+200</span></td>
+                                </tr>
+                                <tr>
+                                    <td>生活服务网邻通用户第三年赠送</td>
+                                    <td><span class="span_green">+200</span></td>
+                                </tr>
+                                <tr>
+                                    <td>手机验证</td>
+                                    <td><span class="span_green">+100</span></td>
+                                </tr>
+                                <tr>
+                                    <td>身份验证</td>
+                                    <td><span class="span_green">+150</span></td>
+                                </tr>
+                                <tr>
+                                    <td>置顶在线时间满100小时（可累计）</td>
+                                    <td><span class="span_green">+5</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="div_body_nav_title" id="div_body_nav_title_4">4.信用为什么会减少 ?</div>
+        <div class="div_body_nav_text">
+            <table>
+                <tr>
+                    <td colspan="2" class="td_content">
+                        信用减少的原因如下：
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <table class="table_inner">
+                            <thead>
+                                <tr>
+                                    <th>减少原因</th>
+                                    <th>减少点数</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>被用户举报违规信息并被确认属实</td>
+                                    <td><span class="span_red">-1</span></td>
+                                </tr>
+                                <tr>
+                                    <td>信息判为中介</td>
+                                    <td><span class="span_red">-3</span></td>
+                                </tr>
+                                <tr>
+                                    <td>锁定账户</td>
+                                    <td><span class="span_red">信用减半</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="div_body_nav_title" id="div_body_nav_title_5">5.我每天可以发布多少条信息 ?</div>
+        <div class="div_body_nav_text">
+            <table class="table_inner">
+                <thead>
+                    <tr>
+                        <th rowspan="2">类目 </th>
+                        <th rowspan="2">类别 </th>
+                        <th colspan="2">个人免费发帖数 </th>
+                    </tr>
+                    <tr>
+                        <th>每天</th>
+                        <th>每月</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="7">房产</td>
+                        <td>整租</td>
+                        <td>2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>合租</td>
+                        <td>4</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>短租</td>
+                        <td>2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>商铺</td>
+                        <td>2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>厂房</td>
+                        <td>2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>写字楼</td>
+                        <td>2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>二手房</td>
+                        <td>2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">宠物</td>
+                        <td>宠物狗、宠物猫、花鸟鱼虫</td>
+                        <td>2</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>宠物用品/食品、宠物店/服务</td>
+                        <td>3</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>宠物赠送/领养</td>
+                        <td>1</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="11">二手</td>
+                        <td>办公用品/设备、家居/日用品</td>
+                        <td>8</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>成人用品、二手求购、5元以下物品、免费赠送、创意服务交易、其他</td>
+                        <td>6</td>
+                        <td>9</td>
+                    </tr>
+                    <tr>
+                        <td>二手设备、网游/虚拟物品、图书/音像/软件</td>
+                        <td>8</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>通讯业务</td>
+                        <td>3</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>艺术品/收藏品、票务卡券、文体/户外/乐器、美容/保健、文体/户外/乐器</td>
+                        <td>5</td>
+                        <td>9</td>
+                    </tr>
+                    <tr>
+                        <td>平板电脑、笔记本电脑、二手手机、台式机/配件、数码产品</td>
+                        <td>3</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>物品交换</td>
+                        <td>6</td>
+                        <td>9</td>
+                    </tr>
+                    <tr>
+                        <td>手家具、二手家电</td>
+                        <td>10</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>电动车/自行车、二手摩托车</td>
+                        <td>3</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>母婴/儿童用品</td>
+                        <td>10</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>服装/鞋帽/箱包</td>
+                        <td>8</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>二手汽车</td>
+                        <td>所有二级类</td>
+                        <td colspan="2">个人每日2条月2条/商家每日3条月5条。<br />为了维护信息小镇良好的交易环境，提高网站的信息质量，当您的行为有异常时发帖需要付费1分钱（不可退）。</td>
+                    </tr>
+                    <tr>
+                        <td>全职招聘</td>
+                        <td>所有二级类</td>
+                        <td colspan="2">免费用户在未进行信息小镇实名认证、芝麻认证、营业执照认证或银行对公认证（以上任意一种）的情况下，首次发帖展现需支付1元，否则无法展现。 完成任意一种认证后，免费发布上限为10条。完成支付或芝麻认证、信息小镇实名认证后，可展现2条；完成营业执照认证，可展现3条；完成银行对公帐号认证后，可展现4条。<br />为了维护信息小镇良好的交易环境，提高网站的信息质量，当您的行为有异常时发帖需要付费18元（不可退）。</td>
+                    </tr>
+                    <tr>
+                        <td>兼职招聘</td>
+                        <td>所有二级类</td>
+                        <td colspan="2">北京，上海，广州，深圳，成都5个城市免费发帖条数为1条，超出后收费10元/条；整体发帖上限为10条和30条（认证营业执照后），超出后收费5元/条。<br />为了维护信息小镇良好的交易环境，提高网站的信息质量，当您的行为有异常时发帖需要付费18元（不可退）。</td>
+                    </tr>
+                    <tr>
+                        <td>本地服务</td>
+                        <td>所有二级类</td>
+                        <td colspan="2">每个二级类发帖上限每日一条，每月30条（特殊情况详见发布页面）</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="div_body_nav_title" id="div_body_nav_title_6">6.同一条信息每天我可以更新几次 ?</div>
+        <div class="div_body_nav_text">
+            <table class="table_inner">
+                <thead>
+                    <tr>
+                        <th>您的等级 </th>
+                        <th>信用值 </th>
+                        <th>更新次数 </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>等级一</td>
+                        <td>1-10</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>等级二</td>
+                        <td>11-65</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>等级三</td>
+                        <td>66-165</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>等级四</td>
+                        <td>166-320</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>等级五</td>
+                        <td>321-500</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>等级六</td>
+                        <td>501-1000</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>等级七</td>
+                        <td>1001以上</td>
+                        <td>3</td>
+                    </tr>
+                </tbody>
+            </table>
+            <span class="span_red">备注：信用值为0的账户不允许更新。</span>
+        </div>
+    </div>
+    <div class="div_bottom">
+        <div class="div_bottom_inner">
+            <span class="span_div_bottom_inner">关于信息小镇</span>
+            <em class="em_div_bottom_inner"></em>
+            <span class="span_div_bottom_inner">联系我们</span>
+            <em class="em_div_bottom_inner"></em>
+            <span class="span_div_bottom_inner">友情链接</span>
+        </div>
+        <div class="div_bottom_inner">
+            <span class="span_div_bottom_inner">推广服务</span>
+            <em class="em_div_bottom_inner"></em>
+            <span class="span_div_bottom_inner">客户服务中心</span>
+            <em class="em_div_bottom_inner"></em>
+            <span class="span_div_bottom_inner">Copyright&nbsp;©&nbsp;&nbsp;www.infotownlet.com</span>
+        </div>
+    </div>
+    <div class="div_rtop" id="div_rtop" onClick="GoToTop()"></div>
+</body>
+</html>

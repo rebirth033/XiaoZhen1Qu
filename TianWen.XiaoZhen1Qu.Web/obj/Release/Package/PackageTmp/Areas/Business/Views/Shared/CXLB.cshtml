@@ -1,0 +1,74 @@
+﻿@{
+    Layout = "~/Areas/Business/Views/Shared/Root.cshtml";
+}
+@section Section_Head {
+    <link href=@Url.Content("~/Areas/Business/Scripts/bootstrap-3.3.7/css/bootstrap.min.css") rel="stylesheet" />
+    <link href=@Url.Content("~/Areas/Business/Css/Common/PageCommon.css") rel="stylesheet" />
+    <link href="@Url.Content("~/Areas/Business/Css/Common/Top.css" )" rel="stylesheet" />
+    <link href="@Url.Content("~/Areas/Business/Css/Common/XZQ.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Areas/Business/Css/Common/Head.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Areas/Business/Css/Common/CXLB_Common.css" )" rel="stylesheet" />
+    <script src=@Url.Content("~/Areas/Business/Scripts/bootstrap-3.3.7/js/bootstrap.min.js")></script>
+    <script src=@Url.Content("~/Areas/Business/Scripts/underscore.min.js")></script>
+    <script src=@Url.Content("~/Areas/Business/Scripts/Business/Common/Common.js")></script>
+    <script src=@Url.Content("~/Areas/Business/Scripts/Business/Common/CXLB_Common.js")></script>
+    <script src=@Url.Content("~/Areas/Business/Scripts/Business/Common/Regular.js")></script>
+    <script src=@Url.Content("~/Areas/Business/Scripts/Business/Common/PageJson.js")></script>
+    <script src="@Url.Content("~/Areas/Business/Scripts/Business/Common/XZQ.js")"></script>
+    <script src="@Url.Content("~/Areas/Business/Scripts/Business/Common/Top.js")"></script>
+    <script src="@Url.Content("~/Areas/Business/Scripts/Business/Common/Head.js")"></script>
+    @RenderSection("Section_Head", false)
+}
+@section Section_Body {
+    <div id="divTop" class="div_top">
+        <div class="div_top_left">
+            <span class="span_dqxzq" id="span_content_info_xzq">@ViewData["XZQ"]</span>
+            [<span class="span_qhcs" id="span_content_info_qhcs">切换城市</span>]
+        </div>
+        <div id="div_XZQ" class="div_dropdown">
+        </div>
+        <div class="div_top_right">
+            <input id="input_yhm" type="hidden" value="@ViewData["YHM"]" />
+            <span id="span_dl" class="span_top_right">
+                您好，请登录
+            </span>
+            <div id="div_yhm" class="span_top_right">
+            </div>
+            <span class="span_top_right_split"></span>
+            <span id="span_zc" class="span_top_right">
+                免费注册
+            </span>
+            <span class="span_top_right_split"></span>
+            <span id="span_grzx" class="span_top_right">
+                个人中心
+            </span>
+            <span class="span_top_right_split"></span>
+            <span id="span_bzzx" class="span_top_right">
+                帮助中心
+            </span>
+        </div>
+    </div>
+    <div id="divHead" class="div_head">
+        <div class="div_head_left">
+            <img class="img_head_left_logo" src="@Url.Content("~/Areas/Business/Css/images/logo_purple.png")" />
+        </div>
+        <div class="div_head_right">
+            <div class="div_head_right_ss">
+                <span id="spanXSLC" class="span_spaninput_out SRK">
+                    <input class="span_spaninput_in" id="SS" type="text" placeholder="搜索 房子/车子/工作/服务" />
+                    <span class="span_ss">搜索</span>
+                </span>
+            </div>
+            <span class="span_fbxx" id="span_fbxx">免费发布信息</span>
+        </div>
+    </div>
+    <div id="divNav" class="div_nav">
+    </div>
+    @RenderSection("Section_Body", false)
+    <div class="div_bottom">
+        <p class="p_div_bottom">©2017 福建天问信息技术有限公司 客服电话：400-036-3432 | 021-6430110（周一至周日，9:00-18:00）</p>
+        <p class="p_div_bottom reduce">闽ICP备06019413号 | 闽ICP证B2-20080088 | 闽公网安备31010402000116号</p>
+    </div>
+}
+@RenderBody()
+

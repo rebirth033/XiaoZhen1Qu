@@ -1,0 +1,111 @@
+﻿@{
+    Layout = "~/Areas/Business/Views/Shared/SY.cshtml";
+}
+@section Section_Head {
+    <link href="@Url.Content("~/Areas/Business/Css/SY/FCSY.css")" rel="stylesheet" />
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/SY/FCSY.js")"></script>
+}
+@section Section_Body {
+    <div id="div_Body" class="div_body">
+        <div class="div_body_top">
+            <div class="div_body_top_left">
+                <p class="p_body_top_left">房屋租售</p>
+                <ul class="ul_body_top_left">
+                    <li class="li_body_top_left" onclick="OpenCXLB(13,'/FCCX/FCCX_ZZF','null')">整套出租</li>
+                    <li class="li_body_top_left" onclick="OpenCXLB(14,'/FCCX/FCCX_HZF','null')">单间出租</li>
+                    <li class="li_body_top_left" onclick="OpenCXLB(15, '/FCCX/FCCX_DZF', 'null')">日租短租</li>
+                    <li class="li_body_top_left" onclick="OpenCXLB(16, '/FCCX/FCCX_ESF', 'null')">二手房出售</li>
+                </ul>
+                <p class="p_body_top_left" style="margin-top:10px;">商业地产</p>
+                <ul class="ul_body_top_left">
+                    <li class="li_body_top_left" onclick="OpenCXLB(18, '/FCCX/FCCX_XZL', 'null')">写字楼租售</li>
+                    <li class="li_body_top_left" onclick="OpenCXLB(17, '/FCCX/FCCX_SP', 'null')">商铺租售</li>
+                    <li class="li_body_top_left" onclick="OpenCXLB(19, '/FCCX/FCCX_CF', 'null')">厂房租售</li>
+                    <li class="li_body_top_left" onclick="OpenCXLB(20, '/FCCX/FCCX_CK', 'null')">仓库租售</li>
+                    <li class="li_body_top_left" onclick="OpenCXLB(21, '/FCCX/FCCX_TD', 'null')">土地租售</li>
+                    <li class="li_body_top_left" onclick="OpenCXLB(22, '/FCCX/FCCX_CW', 'null')">车位租售</li>
+                </ul>
+            </div>
+            <div class="div_body_top_right">
+                <p class="p_body_top_right">整套出租</p>
+                <ul class="ul_body_top_right">
+                    <li class="li_body_top_right" onclick="OpenCXLB(13, '/FCCX/FCCX_ZZF', 'ZJ=151')">500元以下</li>
+                    <li class="li_body_top_right" onclick="OpenCXLB(13, '/FCCX/FCCX_ZZF', 'ZJ=152')">500-1000元</li>
+                    <li class="li_body_top_right" onclick="OpenCXLB(13, '/FCCX/FCCX_ZZF', 'ZJ=153')">1000-1500元</li>
+                    <li class="li_body_top_right" onclick="OpenCXLB(13, '/FCCX/FCCX_ZZF', 'ZJ=154')">1500-2000元</li>
+                    <li class="li_body_top_right" onclick="OpenCXLB(13, '/FCCX/FCCX_ZZF', 'ZJ=155')">2000-3000元</li>
+                    <li class="li_body_top_right" onclick="OpenCXLB(13, '/FCCX/FCCX_ZZF', 'ZJ=156')">3000-4000元</li>
+                    <li class="li_body_top_right" onclick="OpenCXLB(13, '/FCCX/FCCX_ZZF', 'ZJ=157')">4000元以上</li>
+                </ul>
+                <p class="p_body_top_right">单间出租</p>
+                <ul class="ul_body_top_right">
+                    <li class="li_body_top_right" onclick="OpenCXLB(14, '/FCCX/FCCX_HZF', 'ZJ=151')">500元以下</li>
+                    <li class="li_body_top_right" onclick="OpenCXLB(14, '/FCCX/FCCX_HZF', 'ZJ=152')">500-1000元</li>
+                    <li class="li_body_top_right" onclick="OpenCXLB(14, '/FCCX/FCCX_HZF', 'ZJ=153')">1000-1500元</li>
+                    <li class="li_body_top_right" onclick="OpenCXLB(14, '/FCCX/FCCX_HZF', 'ZJ=154')">1500-2000元</li>
+                    <li class="li_body_top_right" onclick="OpenCXLB(14, '/FCCX/FCCX_HZF', 'ZJ=155')">2000-3000元</li>
+                    <li class="li_body_top_right" onclick="OpenCXLB(14, '/FCCX/FCCX_HZF', 'ZJ=156')">3000-4000元</li>
+                    <li class="li_body_top_right" onclick="OpenCXLB(14, '/FCCX/FCCX_HZF', 'ZJ=157')">4000元以上</li>
+                </ul>
+                <p class="p_body_top_right">日租短租</p>
+                <ul class="ul_body_top_right">
+                    <li class="li_body_top_right" onclick="OpenCXLB(15, '/FCCX/FCCX_DZF', 'ZJ=158')">100元以下</li>
+                    <li class="li_body_top_right" onclick="OpenCXLB(15, '/FCCX/FCCX_DZF', 'ZJ=159')">100-200元</li>
+                    <li class="li_body_top_right" onclick="OpenCXLB(15, '/FCCX/FCCX_DZF', 'ZJ=160')">200-300元</li>
+                    <li class="li_body_top_right" onclick="OpenCXLB(15, '/FCCX/FCCX_DZF', 'ZJ=161')">300元以上</li>
+                </ul>
+                <p class="p_body_top_right">二手房出售</p>
+                <ul class="ul_body_top_right">
+                    <li class="li_body_top_right" onclick="OpenCXLB(16, '/FCCX/FCCX_ESF', 'SJ=162')">80万元以下</li>
+                    <li class="li_body_top_right" onclick="OpenCXLB(16, '/FCCX/FCCX_ESF', 'SJ=163')">80-120万元</li>
+                    <li class="li_body_top_right" onclick="OpenCXLB(16, '/FCCX/FCCX_ESF', 'SJ=164')">120-150万元</li>
+                    <li class="li_body_top_right" onclick="OpenCXLB(16, '/FCCX/FCCX_ESF', 'SJ=165')">150-200万元</li>
+                    <li class="li_body_top_right" onclick="OpenCXLB(16, '/FCCX/FCCX_ESF', 'SJ=166')">200-300万元</li>
+                    <li class="li_body_top_right" onclick="OpenCXLB(16, '/FCCX/FCCX_ESF', 'SJ=1661')">300-500万元</li>
+                    <li class="li_body_top_right" onclick="OpenCXLB(16, '/FCCX/FCCX_ESF', 'SJ=1662')">500-700万元</li>
+                </ul>
+                <p class="p_body_top_right">写字楼租售</p>
+                <ul class="ul_body_top_right">
+                    <li class="li_body_top_right" onclick="OpenCXLB(18, '/FCCX/FCCX_XZL', 'MJ=180')">100平米以下</li>
+                    <li class="li_body_top_right" onclick="OpenCXLB(18, '/FCCX/FCCX_XZL', 'MJ=181')">100-200平米</li>
+                    <li class="li_body_top_right" onclick="OpenCXLB(18, '/FCCX/FCCX_XZL', 'MJ=182')">200-300平米</li>
+                    <li class="li_body_top_right" onclick="OpenCXLB(18, '/FCCX/FCCX_XZL', 'MJ=183')">300-500平米</li>
+                    <li class="li_body_top_right" onclick="OpenCXLB(18, '/FCCX/FCCX_XZL', 'MJ=184')">500-800平米</li>
+                    <li class="li_body_top_right" onclick="OpenCXLB(18, '/FCCX/FCCX_XZL', 'MJ=185')">800-1000平米</li>
+                    <li class="li_body_top_right" onclick="OpenCXLB(18, '/FCCX/FCCX_XZL', 'MJ=186')">1000-2000平米</li>
+                </ul>
+                <p class="p_body_top_right">商铺租售</p>
+                <ul class="ul_body_top_right">
+                    <li class="li_body_top_right" onclick="OpenCXLB(17, '/FCCX/FCCX_SP', 'MJ=176')">20平米以下</li>
+                    <li class="li_body_top_right" onclick="OpenCXLB(17, '/FCCX/FCCX_SP', 'MJ=177')">20-50平米</li>
+                    <li class="li_body_top_right" onclick="OpenCXLB(17, '/FCCX/FCCX_SP', 'MJ=178')">50-100平米</li>
+                    <li class="li_body_top_right" onclick="OpenCXLB(17, '/FCCX/FCCX_SP', 'MJ=179')">100-200平米</li>
+                    <li class="li_body_top_right" onclick="OpenCXLB(17, '/FCCX/FCCX_SP', 'MJ=1791')">200-500平米</li>
+                    <li class="li_body_top_right" onclick="OpenCXLB(17, '/FCCX/FCCX_SP', 'MJ=1792')">500平米以上</li>
+                </ul>
+                <p class="p_body_top_right">厂房租售</p>
+                <ul class="ul_body_top_right">
+                    <li class="li_body_top_right" onclick="OpenCXLB(19, '/FCCX/FCCX_CF', 'MJ=220')">1000平米以下</li>
+                    <li class="li_body_top_right" onclick="OpenCXLB(19, '/FCCX/FCCX_CF', 'MJ=221')">1000-2000平米</li>
+                    <li class="li_body_top_right" onclick="OpenCXLB(19, '/FCCX/FCCX_CF', 'MJ=222')">2000-5000平米</li>
+                    <li class="li_body_top_right" onclick="OpenCXLB(19, '/FCCX/FCCX_CF', 'MJ=223')">5000-8000平米</li>
+                    <li class="li_body_top_right" onclick="OpenCXLB(19, '/FCCX/FCCX_CF', 'MJ=224')">8000-12000平米</li>
+                    <li class="li_body_top_right" onclick="OpenCXLB(19, '/FCCX/FCCX_CF', 'MJ=225')">12000平米以上</li>
+                </ul>
+                <p class="p_body_top_right">车位租售</p>
+                <ul class="ul_body_top_right">
+                    <li class="li_body_top_right" onclick="OpenCXLB(22, '/FCCX/FCCX_CW', 'MJ=245')">15平米以下</li>
+                    <li class="li_body_top_right" onclick="OpenCXLB(22, '/FCCX/FCCX_CW', 'MJ=246')">15-30平米</li>
+                    <li class="li_body_top_right" onclick="OpenCXLB(22, '/FCCX/FCCX_CW', 'MJ=247')">30-50平米</li>
+                    <li class="li_body_top_right" onclick="OpenCXLB(22, '/FCCX/FCCX_CW', 'MJ=248')">50平米以上</li>
+                </ul>
+            </div>
+        </div>
+        <div id="div_body_middle" class="div_body_middle">
+        </div>
+    </div>
+    <div class="div_bottom">
+        <p class="p_div_bottom">©2017 福建天问信息技术有限公司 客服电话：400-036-3432 | 021-6430110（周一至周日，9:00-18:00）</p>
+        <p class="p_div_bottom reduce">闽ICP备06019413号 | 闽ICP证B2-20080088 | 闽公网安备31010402000116号</p>
+    </div>
+}

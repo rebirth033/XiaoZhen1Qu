@@ -1,0 +1,129 @@
+﻿.div_photo {
+    width: 900px;
+    display: block;
+    height: 50px;
+    margin-top: 16px;
+}
+
+.divstep {
+    width: 130px;
+    text-align: center;
+    height: 45px;
+    float: left;
+    cursor: pointer;
+}
+
+.spanstep {
+    font-size: 16px;
+    margin-bottom: 5px;
+    line-height: 44px;
+    color: #cccccc;
+}
+
+.emstep {
+    width: 130px;
+    height: 1px;
+    float: left;
+    background: #e9e9e9;
+}
+
+.div_content {
+    height: 130px;
+}
+
+.div_content_info {
+    width: 900px;
+    height: 60px;
+    margin-bottom: 20px;
+    padding-top: 33px;
+}
+
+.span_conent_info {
+    margin-left: 10px;
+}
+
+.span_content_info_HF {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 45px;
+    width: 90px;
+    margin-right: 20px;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 10px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.span_content_info_LL {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 45px;
+    width: 90px;
+    margin-right: 20px;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 10px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.span_content_info_left {
+    display: inline-block;
+    height: 30px;
+    margin-left: 34px;
+    margin-top: 10px;
+}
+
+.span_content_info_left_space {
+    display: inline-block;
+    height: 30px;
+    margin-left: 105px;
+    margin-top: 10px;
+}
+
+.input_content {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 34px;
+    padding: 4px 12px;
+    display: inline-block;
+    cursor: text;
+    width: 316px;
+    margin-left: 4px;
+}
+
+.span_content_gxzf {
+    font-size: 16px;
+    border: none;
+    color: #bc6ba6;
+}
+
+.div_content_info_left {
+    display: block;
+    height: 30px;
+    margin-left: 34px;
+    color: #999;
+    font-size: 12px;
+}
+
+.input_content_ljzf {
+    font-size: 14px;
+    width: 135px;
+    height: 40px;
+    cursor: pointer;
+    background: #bc6ba6;
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    margin-left: 34px;
+}
+
+    .input_content_ljzf:hover {
+        background: #ad5b97;
+    }
+
+

@@ -1,0 +1,64 @@
+﻿@{
+    ViewBag.Title = "YXCZ";
+    Layout = "~/Areas/Business/Views/Shared/QT.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+
+    <link href="@Url.Content("~/Areas/Business/Css/YXCZ/YXCZ.css")" rel="stylesheet" />
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/HTFB/YXCZ/YXCZ.js")"></script>
+</head>
+<body>
+    <div class="div_content">
+        <div class="divstep" id="divDKCZ">
+            <span class="spanstep" id="spanDKCZ">点卡充值</span>
+            <em class="emstep" id="emDKCZ"></em>
+        </div>
+        @*<div class="divstep" id="divJBCZ">
+                <span class="spanstep" id="spanJBCZ">金币充值</span>
+                <em class="emstep" id="emJBCZ"></em>
+            </div>*@
+        <div class="divstep">
+            <span class="spanstep">&nbsp;</span>
+            <em class="emstep" style="width: 770px;"></em>
+        </div>
+    </div>
+    <div id="div_content_dkcz" style="display: block">
+        <div class="div_content" id="div_content_yxxz" style="display: block">
+            <div class="div_content" id="div_bqss_body_bq">
+            </div>
+            <div class="div_content" id="div_bqss_body_mc">
+            </div>
+        </div>
+        <div class="div_content" id="div_content_yxcz" style="display: none">
+            <div class="div_content_info"><span class="span_content_info_left">您选择的游戏为</span><span class="span_content_info_yxmc" id="span_content_info_yxmc"></span><span class="span_content_info_cxxz" id="span_content_info_cxxz">重新选择</span></div>
+            <div class="div_content_info">
+                <span class="span_content_info_left">面值：</span>
+                <div class="div_content_info_right">
+                    <div class="div_content_info_right_mz"><input class="radio_content_info_right_mz" type="radio" /><span class="span_content_info_right_mz">1元</span></div>
+                    <div class="div_content_info_right_mz"><input class="radio_content_info_right_mz" type="radio" /><span class="span_content_info_right_mz">10元</span></div>
+                    <div class="div_content_info_right_mz"><input class="radio_content_info_right_mz" type="radio" /><span class="span_content_info_right_mz">30元</span></div>
+                    <div class="div_content_info_right_mz"><input class="radio_content_info_right_mz" type="radio" /><span class="span_content_info_right_mz">35元</span></div>
+                    <div class="div_content_info_right_mz"><input class="radio_content_info_right_mz" type="radio" /><span class="span_content_info_right_mz">45元</span></div>
+                    <div class="div_content_info_right_mz"><input class="radio_content_info_right_mz" type="radio" /><span class="span_content_info_right_mz">50元</span></div>
+                </div>
+            </div>
+            <div class="div_content_info">
+                <span class="span_content_info_left">售价：</span>
+                <input class="input_content_sj" id="inputSJ" value="0.0元" type="text">
+            </div>
+            <div class="div_content_info">
+               
+                <input class="input_content_ljzf" id="inputLJCZ" value="立即充值" type="button">
+            </div>
+        </div>
+    </div>
+    <div id="div_content_jbcz" style="display: none">
+
+    </div>
+</body>
+</html>

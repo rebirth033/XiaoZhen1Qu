@@ -1,0 +1,24 @@
+﻿@{
+    Layout = "~/Areas/Business/Views/Shared/XXXX.cshtml";
+}
+@section Section_Head {
+    <link href="@Url.Content("~/Areas/Business/Css/XXXX/FC/FCXX_HZF.css")" rel="stylesheet" />
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/XXXX/FCXX/FCXX_HZF.js")"></script>
+}
+@section Section_Body {
+    <div id="divNav" class="div_nav">
+        <ul class="ul_nav">
+            <li class="li_nav_font">信息小镇</li>
+            <li class="li_nav_split">></li>
+            <li class="li_nav_font">@ViewData["XZQ"]房产信息</li>
+            <li class="li_nav_split">></li>
+            <li class="li_nav_font">@ViewData["XZQ"]整租房</li>
+        </ul>
+    </div>
+    <div id="divBody" class="div_body">
+        <div id="div_body_left" class="div_body_left">
+        </div>
+        <div id="div_body_right" class="div_body_right">
+        </div>
+    </div>
+}

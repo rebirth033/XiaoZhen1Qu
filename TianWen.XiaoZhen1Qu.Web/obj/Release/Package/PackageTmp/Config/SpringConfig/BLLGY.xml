@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects  xmlns="http://www.springframework.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.net http://www.springframework.net/xsd/spring-objects.xsd">
+  <object id="BaseBLL" type="TianWen.XiaoZhen1Qu.BLL.BaseBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="SYBLL" type="TianWen.XiaoZhen1Qu.BLL.SYBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="YHJBXXBLL" type="TianWen.XiaoZhen1Qu.BLL.YHJBXXBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="YHDLBLL" type="TianWen.XiaoZhen1Qu.BLL.YHDLBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="LBXXBLL" type="TianWen.XiaoZhen1Qu.BLL.LBXXBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="WDFBBLL" type="TianWen.XiaoZhen1Qu.BLL.WDFBBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="WDSCBLL" type="TianWen.XiaoZhen1Qu.BLL.WDSCBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="CommonBLL" type="TianWen.XiaoZhen1Qu.BLL.CommonBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="ZHBDBLL" type="TianWen.XiaoZhen1Qu.BLL.ZHBDBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="RZGLBLL" type="TianWen.XiaoZhen1Qu.BLL.RZGLBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="XXGLBLL" type="TianWen.XiaoZhen1Qu.BLL.XXGLBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="HFCZBLL" type="TianWen.XiaoZhen1Qu.BLL.HFCZBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="YXCZBLL" type="TianWen.XiaoZhen1Qu.BLL.YXCZBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="WZCXBLL" type="TianWen.XiaoZhen1Qu.BLL.WZCXBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="BZZXBLL" type="TianWen.XiaoZhen1Qu.BLL.BZZXBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="WDXJBLL" type="TianWen.XiaoZhen1Qu.BLL.WDXJBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+  <object id="BZZX_WZJYBLL" type="TianWen.XiaoZhen1Qu.BLL.BZZX_WZJYBLL,TianWen.XiaoZhen1Qu">
+    <property name="DAO">
+      <ref object="DAOBase"/>
+    </property>
+  </object>
+</objects>

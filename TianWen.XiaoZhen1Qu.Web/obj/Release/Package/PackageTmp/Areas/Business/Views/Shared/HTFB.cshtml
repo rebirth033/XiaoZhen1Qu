@@ -1,0 +1,193 @@
+﻿@{
+    Layout = "~/Areas/Business/Views/Shared/Root.cshtml";
+}
+@section Section_Head {
+    <link href=@Url.Content("~/Areas/Business/Scripts/bootstrap-3.3.7/css/bootstrap.min.css") rel="stylesheet" />
+    <link href=@Url.Content("~/Areas/Business/Css/Common/PageCommon.css") rel="stylesheet" />
+    <link href="@Url.Content("~/Areas/Business/Css/Common/Top.css" )" rel="stylesheet" />
+    <link href="@Url.Content("~/Areas/Business/Css/Common/XZQ.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Areas/Business/Css/Common/Img.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Areas/Business/Css/Common/HTFB_Common.css")" rel="stylesheet" />
+    <script src=@Url.Content("~/Areas/Business/Scripts/bootstrap-3.3.7/js/bootstrap.min.js")></script>
+    <script src=@Url.Content("~/Areas/Business/Scripts/underscore.min.js")></script>
+    <script src=@Url.Content("~/Areas/Business/Scripts/UEditor/ueditor.config.js")></script>
+    <script src=@Url.Content("~/Areas/Business/Scripts/UEditor/ueditor.all.js")></script>
+    <script src=@Url.Content("~/Areas/Business/Scripts/UEditor/lang/zh-cn/zh-cn.js")></script>
+    <script src="@Url.Content("~/Areas/Business/Scripts/UEditor/ueditor.js")"></script>
+    <script src=@Url.Content("~/Areas/Business/Scripts/Business/Common/Common.js")></script>
+    <script src="@Url.Content("~/Areas/Business/Scripts/Business/Common/XZQ.js")"></script>
+    <script src="@Url.Content("~/Areas/Business/Scripts/Business/Common/Top.js")"></script>
+    <script src="@Url.Content("~/Areas/Business/Scripts/Business/Other/YHDL.js")"></script>
+    <script src=@Url.Content("~/Areas/Business/Scripts/Business/Common/Public_TP.js")></script>
+    <script src=@Url.Content("~/Areas/Business/Scripts/Business/Common/Regular.js")></script>
+    <script src=@Url.Content("~/Areas/Business/Scripts/Business/Common/Radio.js")></script>
+    <script src=@Url.Content("~/Areas/Business/Scripts/Business/Common/Check.js")></script>
+    <script src=@Url.Content("~/Areas/Business/Scripts/Business/Common/Validate.js")></script>
+    <script src=@Url.Content("~/Areas/Business/Scripts/Business/Common/PageJson.js")></script>
+    <script src=@Url.Content("~/Areas/Business/Scripts/Business/Common/HTFB_Common.js")></script>
+    @RenderSection("Section_Head", false)
+}
+@section Section_Body {
+    <div id="divTop" class="div_top">
+        <div class="div_top_left">
+            <span class="span_dqxzq" id="span_content_info_xzq">@ViewData["XZQ"]</span>
+            [<span class="span_qhcs" id="span_content_info_qhcs">切换城市</span>]
+        </div>
+        <div id="div_XZQ" class="div_dropdown">
+
+        </div>
+        <div class="div_top_right">
+            <span class="span_top_right">
+                信息小镇首页
+            </span>
+            <span class="span_top_right_split"></span>
+            <div class="div_top_right_inner">
+                <span class="span_top_right_sjdl"></span>
+                <span class="span_top_right">
+                    手机登录
+                </span>
+            </div>
+            <span class="span_top_right_split"></span>
+            <div class="div_top_right_inner" id="div_top_right_inner_yhm">
+                <span class="span_top_right span_top_right_yhm_text" id="span_top_right_yhm_text">@ViewData["YHM"]</span>
+                <span class="span_top_right_yhm" id="span_top_right_yhm_img"></span>
+                <div class="div_top_right_dropdown_yhm" id="div_top_right_dropdown_yhm">
+                    <ul class="ul_top_right_yhm">
+                        <li class="li_top_right_yhm" onclick="ShowWDXX()">我的信息</li>
+                        <li class="li_top_right_yhm" onclick="ShowWDZH()">我的账户</li>
+                        <li class="li_top_right_yhm" onclick="ShowWDZJ()">我的资金</li>
+                        <li class="li_top_right_yhm" onclick="ShowSHGJ()">生活工具</li>
+                        <li class="li_top_right_yhm" onclick="Exit()">退出</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="divLBHead" class="div_head">
+        <table class="table_head">
+            <tr>
+                <td>
+                    <div class="div_td_head">
+                        <div class="divstep" id="divLBXZ">
+                            <span class="spanstep" id="spanLBXZ"></span>
+                            <span class="span_cxlb" id="spanCXLB">重选类别</span>
+                            <em class="emstep" id="emLBXZ"></em>
+                        </div>
+                        <div class="divstep" id="divTXXX">
+                            <span class="spanstep" id="spanTXXX">2.填写信息</span>
+                            <em class="emstep" id="emTXXX"></em>
+                        </div>
+                        <div class="divstep" id="divWCFB">
+                            <span class="spanstep" id="spanWCFB">3.完成发布</span>
+                            <em class="emstep" id="emWCFB"></em>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    @RenderSection("Section_Body", false)
+    <div class="div_shadow" id="shadow"></div>
+    <div id="editImgWindow" class="div_img_window">
+        <div id="editImgHead">
+            <span>编辑图片</span>
+            <div id="btnClose"></div>
+        </div>
+        <div id="canvasFrame">
+            <canvas id="canvas" width="7850" height="4350" style="width: 785px; height: 435px;"></canvas>
+        </div>
+        <div id="toolBar">
+            <div id="editToolBar">
+                <div class="editToolButton" id="rotate">
+                    <div class="editButtonIcon" style="background-image: url(@Url.Content("~/Areas/Business/Css/images/rotate.png"))"></div>
+                    <span>旋转</span>
+                </div>
+                <div class="editToolButton" id="clip">
+                    <div class="editButtonIcon" style="background-image: url(@Url.Content("~/Areas/Business/Css/images/clip.png"))"></div>
+                    <span>裁剪</span>
+                </div>
+                <div class="editToolButton" id="mosaic">
+                    <div class="editButtonIcon" style="background-image: url(@Url.Content("~/Areas/Business/Css/images/mosaic.png"))"></div>
+                    <span>模糊</span>
+                </div>
+            </div>
+        </div>
+        <input type="button" id="btnSavePhoto" class="btn btn-info" style="height: 34px; width: 69px; position: absolute; bottom: 14px; right: 77px;" value="保&nbsp;&nbsp;存" />
+    </div>
+    <div class="div_body_yhdl">
+        <table class="table" style="width: 300px;">
+            <tr>
+                <td class="headtd"><span class="title">欢迎来到信息小镇</span></td>
+            </tr>
+            <tr>
+                <td>
+                    <ul id="myTab" class="nav nav-tabs" style="width: 390px">
+                        <li id="liMMDL" style="width: 195px" class="active"><a href="#username" data-toggle="tab">用户名密码登录</a></li>
+                        <li id="liSJDL" style="width: 195px;"><a href="#cellphone" data-toggle="tab">手机验证码登录</a></li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+        <div id="myTabContent" class="tab-content">
+            <div id="username" style="display: block">
+                <table class="table" style="width: 600px;">
+                    <tr>
+                        <td>
+                            <input type="text" class="form-control input_text" id="YHM" column="YHM" placeholder="请输入用户名">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="Info" id="YHMInfo"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="password" class="form-control input_text" id="MM" column="MM" placeholder="请输入登录密码">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="Info" id="MMInfo"></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left">
+                            <input id="checkMMSFZDDL" type="checkbox" />
+                            <span class="spanZDDD">下次自动登录</span>
+                            <a id="aWJMM">忘记密码</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" class="btn btn-info input_text" id="MMDL" value="登录" /></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="cellphone" style="display: none">
+                <table class="table" style="width: 600px;">
+                    <tr>
+                        <td id="tdSJH">
+                            <input class="form-control input_text" id="SJH" maxlength="11" type="text" style="width: 266px;" column="SJH" placeholder="请输入手机号">
+                            <input type="button" class="btn btn-info" id="btnHQYZM" value="获取验证码" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="Info" id="SJHInfo"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" class="form-control input_text" id="YZM" column="YZM" placeholder="请输入验证码"></td>
+                    </tr>
+                    <tr>
+                        <td class="Info" id="YZMInfo"></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left">
+                            <input id="checkSJSFZDDL" type="checkbox" />
+                            <span class="spanZDDD">下次自动登录</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" class="btn btn-info input_text" id="SJDL" value="登录" /></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+}
+@RenderBody()

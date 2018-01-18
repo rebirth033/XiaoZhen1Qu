@@ -1,0 +1,78 @@
+﻿@{
+    Layout = "~/Areas/Business/Views/Shared/BZZX.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="@Url.Content("~/Areas/Business/Css/BZZX/BZZX_SY_KSDH_YHZCYDL.css")" rel="stylesheet" />
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/BZZX/BZZX_SY_KSDH_YHZCYDL.js")"></script>
+</head>
+<body>
+    <div class="div_head">
+        <div class="div_head_main">
+            <span class="span_head_main_logo"></span>
+            <span class="span_head_main_bzzx">帮助中心</span>
+        </div>
+    </div>
+    <em class="em_split"></em>
+    <div class="div_body">
+        <div class="div_body_nav">
+            <div class="div_body_nav_inner">
+                <span class="span_body_nav" id="1"><span class="span_body_nav_inner">1、用户名修改</span></span>
+                <span class="span_body_nav" id="2"><span class="span_body_nav_inner">2、无法登录</span></span>
+            </div>
+        </div>
+        <div class="div_body_nav_title" id="div_body_nav_title_1">1.用户名修改</div>
+        <div class="div_body_nav_text">
+            <table>
+                <tr>
+                    <td colspan="2" class="td_content">用户注册后是不可以修改用户名的，用户名是您在信息小镇上的身份标识，是唯一并永久的，一旦注册成功，就无法再更改了。因此，在注册时请选择您喜欢并能牢记的用户名。信息小镇网推荐您使用中文的用户名。 </td>
+                </tr>
+            </table>
+        </div>
+        <div class="div_body_nav_title" id="div_body_nav_title_2">2.无法登录</div>
+        <div class="div_body_nav_text">
+            <table>
+                <tr>
+                    <td colspan="2" class="td_content">
+                        用户不能登录网站的原因有以下几种可能：<br />
+                        1、登录时输入的"用户名或邮件"、"密码"有错误，这种情况请检查用户名和密码，也可以“找回密码”，重试登录<br />
+                        2、信用值为“<span class="span_red">0</span>”时，不允许登录网站。在信息小镇进行了非法操作，一旦查实，信用值即被降为0。<br />
+                        （1）分类信息被删除，信用<span class="span_red">-1</span><br />
+                        （2）举报被确认为非法，信用<span class="span_red">-1</span><br />
+                        （3）评论被删除，信用<span class="span_red">-1</span><br />
+                        3、您的浏览器没有开启cookie，无法登录！<br />
+                        <span class="span_bold">如何启用cookie？</span><br />
+                        启用cookies,请根据您的浏览器版本按以下说明操作。<br />
+                        <span class="span_bold">Mozilla Firefox (1.4或更高版本)</span><br />
+                        打开“工具”菜单 选择“选项” 选择面板左边的“隐私”按纽 在Cookies选项下选择“启用cookie” 单击“确定”保持设置<br />
+                        <span class="span_bold">Netscape 7.1/Mozilla 5.0</span><br />
+                        从“编辑”菜单中选择“个性设置” 单击“隐私和安全性”旁的按键展开该项 在“隐私和安全性”下选择“Cookie” 选择“启用所有cookie” 单击“确定”<br />
+                        <span class="span_bold">Microsoft Internet Explorer 6.0+</span><br />
+                        在工具菜单中单击“Internet选项” 单击“隐私”选项卡 在“设置”中点击“默认”按纽 (或手动将滑条调到“中”) 单击“确定”<br />
+                        <span class="span_bold">Microsoft Internet Explorer 5.x</span><br />
+                        在工具菜单上单击“Internet选项” 单击“安全”选项卡 单击所需的 Web 内容区域，然后单击“自定义级别” 在 Cookie 下 在“允许使用存储在您计算机上的 Cookie”下单击要使用的选项，单击“确定” 在“允许使用每个对话 Cookie(未存储)”下单击所需的选项，单击“确定”。<br />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="div_bottom">
+        <div class="div_bottom_inner">
+            <span class="span_div_bottom_inner">关于信息小镇</span>
+            <em class="em_div_bottom_inner"></em>
+            <span class="span_div_bottom_inner">联系我们</span>
+            <em class="em_div_bottom_inner"></em>
+            <span class="span_div_bottom_inner">友情链接</span>
+        </div>
+        <div class="div_bottom_inner">
+            <span class="span_div_bottom_inner">推广服务</span>
+            <em class="em_div_bottom_inner"></em>
+            <span class="span_div_bottom_inner">客户服务中心</span>
+            <em class="em_div_bottom_inner"></em>
+            <span class="span_div_bottom_inner">Copyright&nbsp;©&nbsp;&nbsp;www.infotownlet.com</span>
+        </div>
+    </div>
+    <div class="div_rtop" id="div_rtop" onClick="GoToTop()"></div>
+</body>
+</html>

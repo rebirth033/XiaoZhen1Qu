@@ -1,0 +1,145 @@
+﻿#editDZWindow { 
+    display: none; 
+    border-radius: 4px; 
+    width: 936px; 
+    height: 562px; 
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    z-index: 1101; 
+    background: #fff; 
+    margin-top: -290px; 
+    margin-left: -467px; 
+} 
+
+#editImgHead { 
+    width: 100%; 
+    height: 65px; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    font-size: 14px; 
+    cursor: default; 
+} 
+
+    #editImgHead span { 
+        font-size: 16px; 
+        font-weight: 700; 
+        position: absolute; 
+        top: 20px; 
+        left: 25px; 
+    } 
+
+    #editImgHead div { 
+        height: 17px; 
+        width: 17px; 
+        position: absolute; 
+        right: 25px; 
+        top: 25px; 
+        background-image: url(../images/close.png); 
+        cursor: pointer; 
+    } 
+
+#canvasFrame { 
+    z-index: 1001; 
+    position: absolute; 
+    left: 75.5px; 
+    top: 56px; 
+    width: 785px; 
+    height: 435px; 
+    background-color: #E1E1E1; 
+} 
+
+#canvas { 
+    left: 0px; 
+    top: 0px; 
+    position: absolute; 
+} 
+
+#toolBar { 
+    position: absolute; 
+    left: 76px; 
+    top: 495px; 
+    width: 785px; 
+    height: 60px; 
+} 
+
+#editToolBar { 
+    position: absolute; 
+    left: 50%; 
+    margin-left: -90px; 
+} 
+
+.editToolButton { 
+    height: 60px; 
+    width: 60px; 
+    display: inline-block; 
+    cursor: pointer; 
+    
+    color: gray; 
+} 
+
+    .editToolButton span { 
+        display: inline-block; 
+        position: absolute; 
+        bottom: 3px; 
+        left: 15px; 
+    } 
+
+.editButtonIcon { 
+    height: 27px; 
+    width: 27px; 
+    position: absolute; 
+    left: 17px; 
+    top: 5px; 
+} 
+
+.span_xzdz { 
+    color: #ad5b97; 
+    cursor: pointer; 
+} 
+
+    .span_xzdz:hover { 
+        color: #bc6ba6; 
+    } 
+
+.span_xzdz_img { 
+    background-image: url(../images/expand_blue.png); 
+    background-repeat: no-repeat; 
+    vertical-align: middle; 
+    width: 16px; 
+    height: 16px; 
+    display: inline-block; 
+    cursor: pointer; 
+} 
+
+:-ms-input-placeholder.input_dtss { 
+    color: #999; 
+} 
+
+.btn_dtss { 
+    background-image: url(../images/bddt_search.png); 
+    width: 42px; 
+    height: 34px; 
+    display: inline-block; 
+    border: none; 
+    border-top-right-radius: 4px; 
+    border-bottom-right-radius: 4px; 
+} 
+
+    .btn_dtss:hover { 
+        background-image: url(../images/bddt_search_hover.png); 
+    } 
+
+.input_dtss { 
+    border: 1px solid #cccccc; 
+    border-right: none; 
+    display: inline-block; 
+    height: 34px; 
+    font-size: 14px; 
+    width: 320px; 
+    padding-left: 12px; 
+    float: left; 
+    border-top-left-radius: 4px; 
+    border-bottom-left-radius: 4px; 
+} 

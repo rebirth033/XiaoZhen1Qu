@@ -1,0 +1,167 @@
+﻿@{
+    Layout = "~/Areas/Business/Views/Shared/SY.cshtml";
+}
+@section Section_Head {
+    <link href="@Url.Content("~/Areas/Business/Css/SY/SY.css")" rel="stylesheet" />
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/SY/SY.js")"></script>
+}
+@section Section_Body {
+    <div class="div_head_nav">
+        <ul class="ul_head_nav">
+            <li id="li_head_sy" class="li_head_nav" style="width: 80px;"><span class="span_head_nav">首页</span></li>
+            <li id="li_head_xzapp" class="li_head_nav"><span class="span_head_nav">小镇APP</span><i class="i_head_nav"></i></li>
+            <li id="li_head_xzgzh" class="li_head_nav"><span class="span_head_nav">小镇公众号</span><i class="i_head_nav"></i></li>
+            <li id="li_head_xcx" class="li_head_nav"><span class="span_head_nav">小程序</span><i class="i_head_nav"></i></li>
+            <li id="li_head_xztm" class="li_head_nav"><span class="span_head_nav">小镇特卖</span></li>
+            <li id="li_head_xzjr" class="li_head_nav"><span class="span_head_nav">小镇装修</span></li>
+            <li id="li_head_xzgy" class="li_head_nav"><span class="span_head_nav">小镇公益</span></li>
+            <li id="li_head_xzfc" class="li_head_nav"><span class="span_head_nav">小镇房产</span></li>
+            <li id="li_head_xzesc" class="li_head_nav"><span class="span_head_nav">小镇卖车</span></li>
+            <li id="li_head_xztg" class="li_head_nav"><span class="span_head_nav">小镇推广</span><i class="i_head_nav"></i></li>
+            <li id="li_head_viphy" class="li_head_nav"><span class="span_head_nav">VIP会员</span><i class="i_head_nav"></i></li>
+        </ul>
+    </div>
+    <div id="div_Body" class="div_body">
+        <div class="div_body_top">
+            <div class="div_body_top_inner">
+                <ul class="ul_body_top">
+                    <li class="li_body_top" onclick="ToEJSY('FCSY')">
+                        <p class="p_body_top_left">
+                            <img class="img_body_top" src="@Url.Content("~/Areas/Business/Css/images/SY/TBDH/body_top_fc2.png")" />
+                        </p>
+                        <p class="p_body_top_left p_body_top_left_dl">房产</p>
+                    </li>
+                    <li class="li_body_top" onclick="ToEJSY('CLSY')">
+                        <p class="p_body_top_left">
+                            <img class="img_body_top" src="@Url.Content("~/Areas/Business/Css/images/SY/TBDH/body_top_cl4.png")" />
+                        </p>
+                        <p class="p_body_top_left p_body_top_left_dl">车辆</p>
+                    </li>
+                    <li class="li_body_top" onclick="ToEJSY('ZPSY')">
+                        <p class="p_body_top_left">
+                            <img class="img_body_top" src="@Url.Content("~/Areas/Business/Css/images/SY/TBDH/body_top_zp2.png")" />
+                        </p>
+                        <p class="p_body_top_left p_body_top_left_dl">招聘</p>
+                    </li>
+                    <li class="li_body_top" onclick="ToEJSY('CWSY')">
+                        <p class="p_body_top_left">
+                            <img class="img_body_top" src="@Url.Content("~/Areas/Business/Css/images/SY/TBDH/body_top_cw2.png")" />
+                        </p>
+                        <p class="p_body_top_left p_body_top_left_dl">宠物</p>
+                    </li>
+                    <li class="li_body_top" onclick="ToEJSY('ESSY')">
+                        <p class="p_body_top_left">
+                            <img class="img_body_top" src="@Url.Content("~/Areas/Business/Css/images/SY/TBDH/body_top_es2.png")" />
+                        </p>
+                        <p class="p_body_top_left p_body_top_left_dl">二手市场</p>
+                    </li>
+                    <li class="li_body_top" onclick="ToEJSY('SHFWSY')">
+                        <p class="p_body_top_left">
+                            <img class="img_body_top" src="@Url.Content("~/Areas/Business/Css/images/SY/TBDH/body_top_shfw3.png")" />
+                        </p>
+                        <p class="p_body_top_left p_body_top_left_dl">生活服务</p>
+                    </li>
+                    <li class="li_body_top" onclick="ToEJSY('SWFWSY')">
+                        <p class="p_body_top_left">
+                            <img class="img_body_top" src="@Url.Content("~/Areas/Business/Css/images/SY/TBDH/body_top_swfw2.png")" />
+                        </p>
+                        <p class="p_body_top_left p_body_top_left_dl">商务服务</p>
+                    </li>
+                    <li class="li_body_top" onclick="ToEJSY('JYPXSY')">
+                        <p class="p_body_top_left">
+                            <img class="img_body_top" src="@Url.Content("~/Areas/Business/Css/images/SY/TBDH/body_top_jypx3.png")" />
+                        </p>
+                        <p class="p_body_top_left p_body_top_left_dl">教育培训</p>
+                    </li>
+                    <li class="li_body_top" onclick="ToEJSY('ZSJMSY')">
+                        <p class="p_body_top_left">
+                            <img class="img_body_top" src="@Url.Content("~/Areas/Business/Css/images/SY/TBDH/body_top_zsjm3.png")" />
+                        </p>
+                        <p class="p_body_top_left p_body_top_left_dl">招商加盟</p>
+                    </li>
+                    <li class="li_body_top" onclick="ToEJSY('PFCGSY')">
+                        <p class="p_body_top_left">
+                            <img class="img_body_top" src="@Url.Content("~/Areas/Business/Css/images/SY/TBDH/body_top_pfcg2.png")" />
+                        </p>
+                        <p class="p_body_top_left p_body_top_left_dl">批发采购</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="div_body_middle">
+            <div id="div_body_middle_left_FC" class="div_body_middle_left_section" style="width: 595px">
+            </div>
+            <div id="div_body_middle_left_CL" class="div_body_middle_left_section" style="width: 595px;margin-right: 0;">
+            </div>
+            <div id="div_body_middle_left_ZP" class="div_body_middle_left_section" style="width: 595px">
+            </div>
+            <div id="div_body_middle_left_ES" class="div_body_middle_left_section" style="width: 595px;margin-right: 0;">
+            </div>
+            <div id="div_body_middle_left_SHFW" class="div_body_middle_left_section" style="width: 595px;">
+            </div>
+            <div id="div_body_middle_left_SWFW" class="div_body_middle_left_section" style="width: 595px;margin-right: 0;">
+            </div>
+            <div id="div_body_middle_left_CW" class="div_body_middle_left_section">
+            </div>
+            <div id="div_body_middle_left_JYPX" class="div_body_middle_left_section">
+            </div>
+            <div id="div_body_middle_left_ZSJM" class="div_body_middle_left_section">
+            </div>
+            <div id="div_body_middle_left_PFCG" class="div_body_middle_left_section" style="margin-right: 0;">
+            </div>
+        </div>
+        <div class="div_body_bottom" style="display: none;">
+        </div>
+    </div>
+    <div id="div_Foot" class="div_foot">
+        <div class="div_foot_left">
+            <img class="img_body_top" src="@Url.Content("~/Areas/Business/Css/images/logo_purple.png")" />
+        </div>
+        <div class="div_foot_right">
+            <p class="p_div_foot_right">
+                关于信息小镇
+                <ul class="ul_div_foot_right">
+                    <li class="li_div_foot_right"><a class="a_div_foot_right">了解信息小镇</a></li>
+                    <li class="li_div_foot_right"><a class="a_div_foot_right">加入信息小镇</a></li>
+                </ul>
+        </div>
+        <div class="div_foot_right">
+            <p class="p_div_foot_right">商户推广</p>
+            <ul class="ul_div_foot_right">
+                <li class="li_div_foot_right"><a class="a_div_foot_right">VIP会员服务</a></li>
+                <li class="li_div_foot_right"><a class="a_div_foot_right">付费推广</a></li>
+                @*<li class="li_div_foot_right"><a class="a_div_foot_right">宠物专区</a></li>
+                    <li class="li_div_foot_right"><a class="a_div_foot_right">全网通</a></li>*@
+            </ul>
+        </div>
+        <div class="div_foot_right">
+            <p class="p_div_foot_right">关注我们</p>
+            <ul class="ul_div_foot_right">
+                <li class="li_div_foot_right"><a class="a_div_foot_right">官方微信</a></li>
+                <li class="li_div_foot_right"><a class="a_div_foot_right">新浪微博</a></li>
+            </ul>
+        </div>
+        <div class="div_foot_right">
+            <p class="p_div_foot_right">服务支持</p>
+            <ul class="ul_div_foot_right">
+                <li class="li_div_foot_right"><a class="a_div_foot_right">用户协议</a></li>
+                <li class="li_div_foot_right"><a class="a_div_foot_right">先行赔付</a></li>
+                <li class="li_div_foot_right"><a class="a_div_foot_right">诚信建设</a></li>
+                <li class="li_div_foot_right"><a class="a_div_foot_right">举报平台</a></li>
+            </ul>
+        </div>
+        <div class="div_foot_right">
+            <p class="p_div_foot_right">帮助中心</p>
+            <ul class="ul_div_foot_right">
+                <li class="li_div_foot_right"><a class="a_div_foot_right" href="http://localhost/infotownlet/Business/BZZX/BZZX?TYPE=CJWT">常见问题</a></li>
+                <li class="li_div_foot_right"><a class="a_div_foot_right" href="http://localhost/infotownlet/Business/BZZX/BZZX?TYPE=LXKF">联系客服</a></li>
+                <li class="li_div_foot_right"><a class="a_div_foot_right" href="http://localhost/infotownlet/Business/BZZX/BZZX?TYPE=YJFK">意见反馈</a></li>
+            </ul>
+        </div>
+        <p class="p_div_foot_bottom"></p>
+    </div>
+    <div class="div_bottom">
+        <p class="p_div_bottom">©2017 福建天问信息技术有限公司 客服电话：400-036-3432 | 021-6430110（周一至周日，9:00-18:00）</p>
+        <p class="p_div_bottom reduce">闽ICP备06019413号 | 闽ICP证B2-20080088 | 闽公网安备31010402000116号</p>
+    </div>
+}

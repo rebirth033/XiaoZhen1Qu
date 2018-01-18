@@ -822,7 +822,7 @@ button.ui-button::-moz-focus-inner {
 	overflow: hidden;
 	right: 0;
 }
-/* more specificity required here to override default borders */
+/* more specificity span_required here to override default borders */
 .ui-spinner a.ui-spinner-button {
 	border-top-style: none;
 	border-bottom-style: none;

@@ -1,0 +1,17 @@
+﻿/*小类标签*/
+.div_row_right_xlbq{position: absolute;font-size: 15px;display: none;margin-top: -4px;margin-left: 183px;width: 700px;height: 408px;border: 2px solid #cccccc;border-radius: 2px;background: #ffffff;}
+.div_row_right_xlbq .div_row_right_xlbq_top{ border-bottom: 2px solid #cccccc;display: block;height: 43px;width: 696px;background-color: #eeeff1;}
+.div_row_right_xlbq .div_row_right_xlbq_top .div_row_right_xlbq_top_qs{ width: 100px;height: 40px;background-color: #eeeff1;padding-top: 5px;display: inline-block;}
+.div_row_right_xlbq .div_row_right_xlbq_top .div_row_right_xlbq_top_qs .img_row_right_xlbq_top_qs{ margin-right: 2px;margin-left: 10px;}
+.div_row_right_xlbq .div_row_right_xlbq_top .div_row_right_xlbq_top_qs .img_row_right_xlbq_top_qs:hover{ cursor: pointer;}
+.div_row_right_xlbq .div_row_right_xlbq_top .img_row_right_xlbq_top_close{cursor: pointer;margin-top: 5px;margin-right: 5px; width: 20px;height: 20px;float: right;display: inline-block;}
+.div_row_right_xlbq .div_row_right_xlbq_left{ display: inline-block;width: 145px;height: 359px;border-right: 2px solid #cccccc;overflow-y: scroll;overflow-x: visible;}
+.div_row_right_xlbq .div_row_right_xlbq_left .ul_row_right_xlbq_left{ padding: 0;width: 126px;margin: 0;}
+.div_row_right_xlbq .div_row_right_xlbq_left .ul_row_right_xlbq_left .li_row_right_xlbq_left{height: 40px;width: 126px;display: block;background-color: #eeeff1;cursor: pointer;padding-top: 8px;padding-left: 50px;}
+.div_row_right_xlbq .div_row_right_xlbq_left .ul_row_right_xlbq_left .li_row_right_xlbq_left .img_row_right_xlbq_left{ margin-right: 2px;}
+.div_row_right_xlbq .div_row_right_xlbq_right{display: none;width: 525px;height: 360px;overflow-y: visible;overflow-x: visible;}
+.div_row_right_xlbq .div_row_right_xlbq_right .ul_row_right_xlbq_right{ width: 549px;height: 100%;padding: 0;margin: 0;overflow-y: scroll;overflow-x: visible;}
+.div_row_right_xlbq .div_row_right_xlbq_right .ul_row_right_xlbq_right .li_row_right_xlbq_right{ width: 250px;height: 40px;display: inline-block;float: left;padding: 4px 10px;cursor: pointer;}
+.div_row_right_xlbq .div_row_right_xlbq_right .ul_row_right_xlbq_right .li_row_right_xlbq_right:hover{background-color: #eeeff1;}
+.div_row_right_xlbq .div_row_right_xlbq_right .ul_row_right_xlbq_right .li_row_right_xlbq_right .img_row_right_xlbq_right{ margin-right: 2px;}
+.div_XLBQ{float: left;width: auto;height: 28px;padding: 2px 8px;border: 1px solid #cccccc;display: inline-block;margin-right: 8px;}

@@ -1,0 +1,58 @@
+﻿@{
+    Layout = "~/Areas/Business/Views/Shared/CXLB.cshtml";
+}
+@section Section_Head {
+    <link href="@Url.Content("~/Areas/Business/Css/CXLB/FCCX.css")" rel="stylesheet" />
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/CXLB/FCCX/FCCX_HZF.js")"></script>
+}
+@section Section_Body {
+    <div id="divCondition" class="div_condition" style="height: 170px;">
+        @*<ul class="ul_condition_head">
+                <li id="li_condition_head_qyzf" class="li_condition_head">区域找房</li>
+                <li id="li_condition_head_dtzf" class="li_condition_head">地铁找房</li>
+                <li id="li_condition_head_xqzf" class="li_condition_head">小区找房</li>
+            </ul>*@
+        <div id="div_condition_body_QY" class="div_condition_body" style="padding-top: 20px;"></div>
+        <div id="div_condition_body_CZJLX" class="div_condition_body"></div>
+        <div id="div_condition_body_ZJ" class="div_condition_body"></div>
+        <div id="div_condition_body_CX" class="div_condition_body"></div>
+        <div id="div_condition_body_ZXQK" class="div_condition_body"></div>
+        <div id="div_condition_body_SF" class="div_condition_body" style="display: none;">
+            <ul id="ul_condition_body_SF" class="ul_condition_body">
+                <li class="li_condition_body_first">身份</li>
+                <li class="li_condition_body">全部</li>
+                <li class="li_condition_body">个人</li>
+                <li class="li_condition_body">经纪人</li>
+            </ul>
+        </div>
+    </div>
+    <div id="divConditionSelect" class="div_condition_select">
+        <ul id="ul_condition_select" class="ul_condition_select">
+            <li class="li_condition_select_first">条件</li>
+        </ul>
+    </div>
+    <div class="div_condition_toggle">
+        <span id="span_condition_toggle" class="span_condition_toggle">更多选项<i id="i_condition_tottle" class="i_condition_tottle"></i></span>
+    </div>
+    <div id="divBody" class="div_body" style="margin-top: 0;">
+        <ul class="ul_body_head">
+            <li class="li_body_head" id="li_body_head_first" onclick="SearchByCondition('ALL')"></li>
+            <li class="li_body_head" onclick="SearchByCondition('GR')">个人</li>
+            <li class="li_body_head" onclick=" SearchByCondition('JJR') ">经纪人</li>
+            <li class="li_body_head_sort li_body_head_sort_item" id="li_body_head_sort_item_ZJ" style="margin-right: 245px;" onclick="OrderByCondition('ZJ',this)">租金<i class="i_body_left_sort_up_gray"></i></li>
+            <li class="li_body_head_sort li_body_head_sort_item li_body_head_sort_item_active" id="li_body_head_sort_item_SJ" onclick="OrderByCondition('SJ',this)">时间<i class="i_body_left_sort_down_orange"></i></li>
+            <li class="li_body_head_sort">排序:</li>
+        </ul>
+        <div id="div_body_left" class="div_body_left">
+            <ul id="ul_body_left" class="ul_body_left"></ul>
+            <div class="div_main_info_bottom">
+                <div class="div_main_info_bottom_fy" id="div_main_info_bottom_fy">
+                </div>
+            </div>
+        </div>
+        <div class="div_body_right">
+            <p class="p_div_body_right">热门推荐</p>
+            <ul id="ul_body_right" class="ul_body_right"></ul>
+        </div>
+    </div>
+}

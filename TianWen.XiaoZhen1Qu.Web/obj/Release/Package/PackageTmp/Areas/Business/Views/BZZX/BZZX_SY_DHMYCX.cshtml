@@ -1,0 +1,90 @@
+﻿@{
+    Layout = "~/Areas/Business/Views/Shared/BZZX.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="@Url.Content("~/Areas/Business/Css/BZZX/BZZX_SY_DHMYCX.css")" rel="stylesheet" />
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/BZZX/BZZX_SY_DHMYCX.js")"></script>
+</head>
+<body>
+    <div class="div_head">
+        <div class="div_head_main">
+            <span class="span_head_main_logo"></span>
+            <span class="span_head_main_bzzx">帮助中心</span>
+        </div>
+    </div>
+    <em class="em_split"></em>
+    <div class="div_body">
+        <div id="div_sjhsr" style="display:block;">
+            <div class="div_content_info">
+                <span class="span_content_info">第一步：输入您的手机号码，点击查询按钮查找信息</span>
+                <div class="div_content_info_inner">
+                    <span class="span_sjhm">
+                        <input id="input_sjhm" maxlength="11" class="input_sjhm" type="text" placeholder="手机号" />
+                        <span class="span_sjhm_cx"></span>
+                    </span>
+                    <input class="input_content" id="input_content_info_cx" value="点击查询" type="button" />
+                    <span class="span_sjhm_info" id="span_sjhm_info"></span>
+                </div>
+            </div>
+            <div class="div_content_info" style="padding-top:20px;">
+                <span class="span_content_info">输入验证码</span>
+                <div class="div_content_info_inner">
+                    <input id="input_txyzm" type="text" style="width: 280px" class="input_yzm" placeholder="图片验证码" />
+                    <img class="img_content_info_yzm" id="imgTXYZM" title="看不清？点击图片换一张" src="@Url.Content("~/Areas/Business/Aspx/png.aspx")" />
+                    <span class="span_content_info_inner_yzm" id="span_content_info_inner_yzm">看不清？</span>
+                </div>
+                <span class="span_txyzm_info" id="span_txyzm_info"></span>
+            </div>
+        </div>
+        <div id="div_htyzm" style="display:none;">
+            <div class="div_content_info">
+                <span class="span_content_info">第二步：回填验证码</span>
+                <div class="div_content_info_inner">
+                    <span class="span_content_info_sjyzm_tip">手机验证码已通过短信发送到您的手机。<span class="span_content_info_sjyzm_tip_inner" id="span_content_info_sjyzm_tip_inner">点击这里重新查找信息</span></span>
+                    <input id="input_sjyzm" type="text" style="width: 280px" class="input_yzm" placeholder="手机验证码" />
+                    <input class="input_content" id="input_content_info_qd" value="确定" type="button" />
+                    <span class="span_sjhm_info" id="span_sjhm_info"></span>
+                </div>
+                <span class="span_txyzm_info" id="span_sjyzm_info"></span>
+            </div>
+            <div class="div_content_info">
+                <span class="span_content_info_sjyzm_bottom_tip">提示：受网络影响，短信发送可能有延迟；信息删除需要几分钟，请耐心等待（<span class="span_content_info_sjyzm_bottom_tip_red">不收取任何通讯费</span>）</span>
+            </div>
+        </div>
+        <div id="div_sdzh" style="display:none;">
+            <div class="div_content_info">
+                <span class="span_content_info">第三步：选择您要删除的信息和锁定的账户</span>
+                <span class="span_content_info_sdzh">以下是<span class="span_content_info_sdzh_sjhm" id="span_content_info_sdzh_sjhm">13675017762</span>查询结果 </span>
+            </div>
+            <div class="div_content_info" style="padding-top:0;">
+                <table class="table_main_info">
+                    <thead>
+                        <tr class="tr_main_info">
+                            <th style="width: 40px;"></th>
+                            <th style="width: 360px;">标题</th>
+                            <th style="width: 250px;">流水号</th>
+                            <th style="width: 250px;">创建时间</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody_main_info_xttz"></tbody>
+                </table>
+                <div class="div_main_info_bottom">
+                    <input class="checkbox_main_info_bottom" id="checkbox_main_info_bottom" type="checkbox" />
+                    <span class="span_main_info_bottom">全选</span>
+                    <input class="input_main_info_bottom" id="input_main_info_bottom_scxzx" type="button" value="删除" />
+                    <span class="span_main_info_bottom_sdzh">
+                        <span class="span_main_info_bottom_sdzh_inner"></span>
+                        <input id="input_main_info_bottom_sdzh" maxlength="11" class="input_main_info_bottom_sdzh" type="button" value="锁定电话号码并删除信息" />
+
+                    </span>
+                    <div class="div_main_info_bottom_fy" id="div_main_info_bottom_fy">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

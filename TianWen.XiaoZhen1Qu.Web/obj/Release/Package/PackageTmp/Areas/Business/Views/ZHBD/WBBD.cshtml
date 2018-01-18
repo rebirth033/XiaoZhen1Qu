@@ -1,0 +1,46 @@
+﻿@{
+    Layout = "~/Areas/Business/Views/Shared/QT.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="@Url.Content("~/Areas/Business/Css/HTGL/WDZH/WBBD.css")" rel="stylesheet" />
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/HTGL/WDZH/WBBD.js")"></script>
+</head>
+<body class="body">
+    <div class="div_content">
+        <div class="div_head">
+            <span class="span_head_left"></span>
+            <span class="span_head_right span_head_right_cursor" id="span_head_right_ewmdl">二维码登录</span>
+            <span class="span_head_right">|</span>
+            <span class="span_head_right span_head_right_cursor" id="span_head_right_zc">注册</span>
+        </div>
+        <div class="div_body">
+            <div class="div_body_title">使用你的微博帐号访问 <span class="div_body_href">信息小镇</span> ，并同时登录微博</div>
+            <div class="div_body_info">
+                <table class="table_div_body">
+                    <tr class="tr_div_body">
+                        <td class="td_div_body">
+                            <span style="display: inline-block; height: 30px;">账&nbsp;&nbsp;&nbsp;&nbsp;号：</span>
+                            <input type="text" id="inputZH" class="input_content" placeholder="请输入账号">
+                        </td>
+                        <td class="Info" id="ZHInfo" style="width: 50%"></td>
+                    </tr>
+                    <tr class="tr_div_body">
+                        <td class="td_div_body">
+                            <span style="display:inline-block; height:30px;">密&nbsp;&nbsp;&nbsp;&nbsp;码：</span>
+                            <input type="text" id="inputMM" class="input_content" placeholder="请输入密码">
+                        </td>
+                        <td class="Info" id="MMInfo" style="width: 50%"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="div_body_split"></div>
+            <div class="div_body_bottom">
+                <input class="input_bottom" id="input_bottom_fh" type="button" value="返回" />
+                <input class="input_bottom" id="input_bottom_dl" type="button" value="登录" />
+            </div>
+        </div>
+    </div>
+</body>
+</html>

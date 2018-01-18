@@ -1,0 +1,109 @@
+﻿
+.div_content {
+    width: 900px;
+}
+
+.div_content_info {
+    width: 600px;
+    height: 60px;
+    margin-bottom: 20px;
+    padding-top: 33px;
+    margin-left: 16%;
+}
+
+.span_content_info_img {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    float: left;
+}
+
+.span_content_info_text {
+    display: inline-block;
+    height: 30px;
+    float: left;
+    padding-left: 5px;
+    padding-top: 3px;
+    font-size: 16px;
+}
+
+.em_content_info {
+    width: 100px;
+    height: 1px;
+    display: inline-block;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 12px;
+}
+
+.span_content_info_one {
+    background-image: url(../images/one-blue.png);
+}
+
+.span_content_info_two {
+    background-image: url(../images/two-blue.png);
+}
+
+.span_content_info_three {
+    background-image: url(../images/three-gray.png);
+}
+
+
+.span_content_info_left {
+    display: inline-block;
+    height: 30px;
+    margin-left: 34px;
+    margin-top: 10px;
+}
+
+.input_content_ljzf {
+    font-size: 14px;
+    width: 135px;
+    height: 40px;
+    cursor: pointer;
+    background: #bc6ba6;
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    margin-left: 58px;
+}
+
+.input_content_ljzf:hover {
+    background: #ad5b97;
+}
+
+.span_content_info_left_zffs {
+    display: inline-block;
+    width: 182px;
+    height: 72px;
+    border: 1px solid #ccc;
+    background-size: 100%;
+    border-radius: 4px;
+    float: left;
+    margin-left: 57px;
+    cursor: pointer;
+}
+
+#span_content_info_left_zffs_zfb {
+    background-image: url(../images/zffs_zfb.png);
+}
+
+#span_content_info_left_zffs_wx {
+    background-image: url(../images/zffs_wx.png);
+}
+
+.span_content_info_qrcode {
+    width: 174px;
+    height: 174px;
+    display: inline-block;
+    margin-left: 47px;
+    float: left;
+}
+
+.p_content_info {
+    display: block;
+    padding-left: 250px;
+}

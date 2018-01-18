@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "XXGLMX";
+    Layout = "~/Areas/Business/Views/Shared/QT.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+
+    <link href="@Url.Content("~/Areas/Business/Css/XXGL/XXGLMX.css")" rel="stylesheet" />
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/HTFB/XXGL/XXGLMX.js")"></script>
+</head>
+<body>
+    <div class="div_main_info">
+        <div class="div_main_info_head">
+            <input type="hidden" id="input_yhxxid" value="" />
+            共<span class="span_main_info_head_gjt" id="span_main_info_head_gjt"></span>条，
+            <span class="span_main_info_head_wdjt" id="span_main_info_head_wdjt"></span>条未读
+            <span class="span_main_info_head_fhsyj" id="span_main_info_head_fhsyj">返回上一级</span>
+            <span class="span_main_info_head_right" id="span_main_info_head_xyt">下一条</span>
+            <span class="span_main_info_head_right" id="span_main_info_head_syt">上一条</span>
+        </div>
+        <div class="div_main_info_info">
+            <table class="table_main_info_info">
+                <tr class="tr_main_info_info">
+                    <td class="td_main_info_info_left">主题：</td>
+                    <td class="td_main_info_info_right" id="td_main_info_info_right_zt"></td>
+                </tr>
+                <tr class="tr_main_info_info">
+                    <td class="td_main_info_info_left">时间：</td>
+                    <td class="td_main_info_info_right" id="td_main_info_info_right_sj"></td>
+                </tr>
+                <tr class="tr_main_info_info">
+                    <td class="td_main_info_info_left">发件人：</td>
+                    <td class="td_main_info_info_right" id="td_main_info_info_right_fjr"></td>
+                </tr>
+                <tr class="tr_main_info_info">
+                    <td class="td_main_info_info" id="td_main_info_info_right_xxxx" colspan="2"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="div_main_info_bottom">
+            共<span class="span_main_info_head_gjt" id="span_main_info_bottom_gjt"></span>条，
+            <span class="span_main_info_head_wdjt" id="span_main_info_bottom_wdjt"></span>条未读
+            <span class="span_main_info_head_fhsyj" id="span_main_info_bottom_fhsyj">返回上一级</span>
+            <span class="span_main_info_head_right" id="span_main_info_bottom_xyt">下一条</span>
+            <span class="span_main_info_head_right" id="span_main_info_bottom_syt">上一条</span>
+        </div>
+    </div>
+</body>
+</html>

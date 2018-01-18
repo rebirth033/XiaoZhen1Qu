@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects  xmlns="http://www.springframework.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.net http://www.springframework.net/xsd/spring-objects.xsd">
+  <object id="FCCXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.FCCXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="FCCXBLL">
+      <ref object="FCCXBLL"/>
+    </property>
+  </object>
+  <object id="CLCXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.CLCXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="CLCXBLL">
+      <ref object="CLCXBLL"/>
+    </property>
+  </object>
+  <object id="CWCXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.CWCXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="CWCXBLL">
+      <ref object="CWCXBLL"/>
+    </property>
+  </object>
+  <object id="ESCXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.ESCXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="ESCXBLL">
+      <ref object="ESCXBLL"/>
+    </property>
+  </object>
+  <object id="QZZPCXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.QZZPCXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="QZZPCXBLL">
+      <ref object="QZZPCXBLL"/>
+    </property>
+  </object>
+  <object id="ZSJMCXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.ZSJMCXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="ZSJMCXBLL">
+      <ref object="ZSJMCXBLL"/>
+    </property>
+  </object>
+  <object id="PFCGCXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.PFCGCXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="PFCGCXBLL">
+      <ref object="PFCGCXBLL"/>
+    </property>
+  </object>
+  <object id="JYPXCXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.JYPXCXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="JYPXCXBLL">
+      <ref object="JYPXCXBLL"/>
+    </property>
+  </object>
+  <object id="NLMFYCXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.NLMFYCXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="NLMFYCXBLL">
+      <ref object="NLMFYCXBLL"/>
+    </property>
+  </object>
+  <object id="SWFWCXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SWFWCXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="SWFWCXBLL">
+      <ref object="SWFWCXBLL"/>
+    </property>
+  </object>
+  <object id="ZXJCCXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.ZXJCCXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="ZXJCCXBLL">
+      <ref object="ZXJCCXBLL"/>
+    </property>
+  </object>
+  <object id="HQSYCXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.HQSYCXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="HQSYCXBLL">
+      <ref object="HQSYCXBLL"/>
+    </property>
+  </object>
+  <object id="LRCXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.LRCXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="LRCXBLL">
+      <ref object="LRCXBLL"/>
+    </property>
+  </object>
+  <object id="LYJDCXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.LYJDCXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="LYJDCXBLL">
+      <ref object="LYJDCXBLL"/>
+    </property>
+  </object>
+  <object id="XXYLCXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.XXYLCXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="XXYLCXBLL">
+      <ref object="XXYLCXBLL"/>
+    </property>
+  </object>
+  <object id="SHFWCXController" type="TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers.SHFWCXController,TianWen.XiaoZhen1Qu.Web" singleton="false" >
+    <property name="SHFWCXBLL">
+      <ref object="SHFWCXBLL"/>
+    </property>
+  </object>
+</objects>
