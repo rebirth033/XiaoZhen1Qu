@@ -6,8 +6,16 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadPFCGCondition() {
-    LoadConditionByTypeNames("'仪表仪器类别'", "CODES_PFCG", "类别", "LB", "100");
-    LoadBody("PFCGXX_YBYQ", currentIndex);
+    LoadConditionByTypeNames("'电子器件类别'", "CODES_PFCG", "类别", "LB", "100");
+}
+//加载URL查询条件
+function LoadURLCondition() {
+    if (getUrlParam("LB") !== null)
+        SelectURLCondition(getUrlParam("LB"));
+    else if (getUrlParam("QY") !== null)
+        SelectURLCondition(getUrlParam("QY"));
+    else
+        LoadBody("PFCGXX_YBYQ", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -21,6 +29,15 @@ function SelectCondition(obj, name) {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
+    LoadBody("PFCGXX_YBYQ", currentIndex);
+    ShowSelectCondition("PFCGXX_YBYQ");
+}
+//选择URL条件
+function SelectURLCondition(obj) {
+    $("#" + obj).parent().find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $("#" + obj).addClass("li_condition_body_active");
     LoadBody("PFCGXX_YBYQ", currentIndex);
     ShowSelectCondition("PFCGXX_YBYQ");
 }

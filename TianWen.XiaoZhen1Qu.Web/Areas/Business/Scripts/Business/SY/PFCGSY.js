@@ -6,8 +6,8 @@
     $(".img_head_left_logo").css("margin-left", "20px");
     $("#li_head_sy").css("background", "#bc6ba6").css("color", "#ffffff");
     $("#div_yhm").bind("click", ShowWDXX);
-    LoadTOP();
-    //LoadDefault();
+    //LoadTOP();
+    LoadDefault();
 });
 //打开查询列表
 function OpenCXLB(lbid, lburl, condition) {
@@ -76,16 +76,15 @@ function LoadDefault() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                LoadItem("服装", xml.fzs, xml.districts);
-                LoadItem("建材", xml.jcs, xml.districts);
-                LoadItem("机械加工", xml.jxjgs, xml.districts);
-                LoadItem("美容保健", xml.mrbjs, xml.districts);
-                LoadItem("礼品饰品", xml.lpsps, xml.districts);
-                LoadItem("家居", xml.jjs, xml.districts);
-                LoadItem("教育培训", xml.jypxs, xml.districts);
-                LoadItem("汽车服务", xml.qcfws, xml.districts);
-                LoadItem("网络通讯", xml.wltxs, xml.districts);
-                LoadItem("农业养殖", xml.nyyzs, xml.districts);
+                LoadItem("商超设备", xml.scsbs, xml.districts);
+                LoadItem("化学品", xml.hxps, xml.districts);
+                LoadItem("电子器件", xml.dzqjs, xml.districts);
+                LoadItem("灯具照明", xml.djzms, xml.districts);
+                LoadItem("食品", xml.sps, xml.districts);
+                LoadItem("礼品", xml.lps, xml.districts);
+                LoadItem("服装鞋包", xml.fzxbs, xml.districts);
+                LoadItem("珠宝饰品", xml.zbsps, xml.districts);
+                LoadItem("手机数码", xml.sjsms, xml.districts);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -101,26 +100,24 @@ function LoadItem(title, list, districts) {
     html += '<p class="p_body_middle_item_left">' + title + '</p>';
     html += '<ul class="ul_body_middle_item_left">';
     for (var i = 0; i < (districts.length > 14 ? 14 : districts.length) ; i++) {
-        if (title === "服装")
+        if (title === "商超设备")
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/PFCGCX/PFCGCX_SCSB" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+        if (title === "化学品")
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/PFCGCX/PFCGCX_HXP" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+        if (title === "电子器件")
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/PFCGCX/PFCGCX_DZQJ" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+        if (title === "灯具照明")
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/PFCGCX/PFCGCX_DJZM" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+        if (title === "食品")
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/PFCGCX/PFCGCX_SP" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+        if (title === "礼品")
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/PFCGCX/PFCGCX_LP" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+        if (title === "服装鞋包")
             html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/PFCGCX/PFCGCX_FZXB" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
-        if (title === "建材")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/PFCGCX/PFCGCX_JC" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
-        if (title === "机械加工")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/PFCGCX/PFCGCX_JXJG" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
-        if (title === "美容保健")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/PFCGCX/PFCGCX_MRBJ" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
-        if (title === "礼品饰品")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/PFCGCX/PFCGCX_LPSP" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
-        if (title === "家居")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/PFCGCX/PFCGCX_JJHB" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
-        if (title === "教育培训")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/PFCGCX/PFCGCX_JYPX" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
-        if (title === "汽车服务")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/PFCGCX/PFCGCX_QCFW" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
-        if (title === "网络通讯")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/PFCGCX/PFCGCX_WLFW" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
-        if (title === "农业养殖")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/PFCGCX/PFCGCX_NY" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+        if (title === "珠宝饰品")
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/PFCGCX/PFCGCX_ZBSP" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+        if (title === "手机数码")
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/PFCGCX/PFCGCX_SJSM" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
     }
     html += '</ul>';
     html += '</div>';
@@ -129,26 +126,24 @@ function LoadItem(title, list, districts) {
     html += '<p class="p_body_middle_item_right">' + title + '</p>';
     html += '<ul class="ul_body_middle_item_right">';
     for (var i = 0; i < (list.length < 8 ? list.length : 8) ; i++) {
-        if (title === "服装")
+        if (title === "商超设备")
+            html += LoadInfo(list[i], "PFCGXX_SCSB");
+        if (title === "化学品")
+            html += LoadInfo(list[i], "PFCGXX_HXP");
+        if (title === "电子器件")
+            html += LoadInfo(list[i], "PFCGXX_DZQJ");
+        if (title === "灯具照明")
+            html += LoadInfo(list[i], "PFCGXX_DJZM");
+        if (title === "食品")
+            html += LoadInfo(list[i], "PFCGXX_SP");
+        if (title === "礼品")
+            html += LoadInfo(list[i], "PFCGXX_LP");
+        if (title === "服装鞋包")
             html += LoadInfo(list[i], "PFCGXX_FZXB");
-        if (title === "建材")
-            html += LoadInfo(list[i], "PFCGXX_JC");
-        if (title === "机械加工")
-            html += LoadInfo(list[i], "PFCGXX_JXJG");
-        if (title === "美容保健")
-            html += LoadInfo(list[i], "PFCGXX_MRBJ");
-        if (title === "礼品饰品")
-            html += LoadInfo(list[i], "PFCGXX_LPSP");
-        if (title === "家居")
-            html += LoadInfo(list[i], "PFCGXX_JJHB");
-        if (title === "教育培训")
-            html += LoadInfo(list[i], "PFCGXX_JYPX");
-        if (title === "汽车服务")
-            html += LoadInfo(list[i], "PFCGXX_QCFW");
-        if (title === "网络通讯")
-            html += LoadInfo(list[i], "PFCGXX_WLFW");
-        if (title === "农业养殖")
-            html += LoadInfo(list[i], "PFCGXX_NY");
+        if (title === "珠宝饰品")
+            html += LoadInfo(list[i], "PFCGXX_ZBSP");
+        if (title === "手机数码")
+            html += LoadInfo(list[i], "PFCGXX_SJSM");
     }
     html += '</ul>';
 

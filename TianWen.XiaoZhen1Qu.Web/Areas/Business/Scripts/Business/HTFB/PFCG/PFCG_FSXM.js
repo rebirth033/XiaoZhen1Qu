@@ -6,7 +6,7 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("服装鞋包类别", "LB", "CODES_PFCG", Bind, "OUTLB", "LB", "");
+            LoadCODESByTYPENAME("服饰鞋帽类别", "LB", "CODES_PFCG", Bind, "OUTLB", "LB", "");
         }
     });
 }
