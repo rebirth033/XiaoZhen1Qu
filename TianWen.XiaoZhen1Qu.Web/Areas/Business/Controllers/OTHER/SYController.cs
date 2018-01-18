@@ -93,5 +93,15 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         {
             return Json(SYBLL.LoadZSJMSY(Session["XZQDM"].ToString(), Session["XZQ"].ToString()));
         }
+
+        public JsonResult LoadPFCGTOP()
+        {
+            return Json(SYBLL.LoadPFCGTOP(Session["XZQDM"].ToString(), Session["XZQ"].ToString()));
+        }
+
+        public JsonResult LoadPFCGSY()
+        {
+            return Json(SYBLL.LoadPFCGSY(Session["XZQDM"].ToString(), Session["XZQ"].ToString()));
+        }
     }
 }

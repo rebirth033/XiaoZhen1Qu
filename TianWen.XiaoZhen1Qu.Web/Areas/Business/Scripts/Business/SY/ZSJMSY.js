@@ -102,7 +102,7 @@ function LoadItem(title, list, districts) {
     html += '<ul class="ul_body_middle_item_left">';
     for (var i = 0; i < (districts.length > 14 ? 14 : districts.length) ; i++) {
         if (title === "服装")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/ZSJMCX/ZSJMCX_FZ" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/ZSJMCX/ZSJMCX_FZXB" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
         if (title === "建材")
             html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/ZSJMCX/ZSJMCX_JC" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
         if (title === "机械加工")
@@ -112,15 +112,15 @@ function LoadItem(title, list, districts) {
         if (title === "礼品饰品")
             html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/ZSJMCX/ZSJMCX_LPSP" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
         if (title === "家居")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/ZSJMCX/ZSJMCX_JJ" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/ZSJMCX/ZSJMCX_JJHB" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
         if (title === "教育培训")
             html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/ZSJMCX/ZSJMCX_JYPX" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
         if (title === "汽车服务")
             html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/ZSJMCX/ZSJMCX_QCFW" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
         if (title === "网络通讯")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/ZSJMCX/ZSJMCX_WLTX" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/ZSJMCX/ZSJMCX_WLFW" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
         if (title === "农业养殖")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/ZSJMCX/ZSJMCX_NYYZ" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/ZSJMCX/ZSJMCX_NY" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
     }
     html += '</ul>';
     html += '</div>';
@@ -130,25 +130,25 @@ function LoadItem(title, list, districts) {
     html += '<ul class="ul_body_middle_item_right">';
     for (var i = 0; i < (list.length < 8 ? list.length : 8) ; i++) {
         if (title === "服装")
-            html += LoadInfo(list[i], "SWFWXX_FZ");
+            html += LoadInfo(list[i], "ZSJMXX_FZXB");
         if (title === "建材")
-            html += LoadInfo(list[i], "SWFWXX_JC");
+            html += LoadInfo(list[i], "ZSJMXX_JC");
         if (title === "机械加工")
-            html += LoadInfo(list[i], "SWFWXX_JXJG");
+            html += LoadInfo(list[i], "ZSJMXX_JXJG");
         if (title === "美容保健")
-            html += LoadInfo(list[i], "SWFWXX_MRBJ");
+            html += LoadInfo(list[i], "ZSJMXX_MRBJ");
         if (title === "礼品饰品")
-            html += LoadInfo(list[i], "SWFWXX_LPSP");
+            html += LoadInfo(list[i], "ZSJMXX_LPSP");
         if (title === "家居")
-            html += LoadInfo(list[i], "SWFWXX_JJ");
+            html += LoadInfo(list[i], "ZSJMXX_JJHB");
         if (title === "教育培训")
-            html += LoadInfo(list[i], "SWFWXX_JYPX");
+            html += LoadInfo(list[i], "ZSJMXX_JYPX");
         if (title === "汽车服务")
-            html += LoadInfo(list[i], "SWFWXX_QCFW");
+            html += LoadInfo(list[i], "ZSJMXX_QCFW");
         if (title === "网络通讯")
-            html += LoadInfo(list[i], "SWFWXX_WLTX");
+            html += LoadInfo(list[i], "ZSJMXX_WLFW");
         if (title === "农业养殖")
-            html += LoadInfo(list[i], "SWFWXX_NYYZ");
+            html += LoadInfo(list[i], "ZSJMXX_NY");
     }
     html += '</ul>';
 

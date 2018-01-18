@@ -12,6 +12,7 @@ using TianWen.XiaoZhen1Qu.Entities.ViewModels.ES;
 using TianWen.XiaoZhen1Qu.Entities.ViewModels.SHFW;
 using TianWen.XiaoZhen1Qu.Entities.ViewModels.SWFW;
 using TianWen.XiaoZhen1Qu.Entities.ViewModels.ZSJM;
+using TianWen.XiaoZhen1Qu.Entities.ViewModels.PFCG;
 using CommonClassLib.Helper;
 
 namespace TianWen.XiaoZhen1Qu.BLL
@@ -700,6 +701,46 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
                 }
                 return new { Result = EnResultType.Success, districts = districts, fzs = fzs, jcs = jcs, jxjgs = jxjgs, mrbjs = mrbjs, lpsps = lpsps, jjs = jjs, jypxs = jypxs, qcfws = qcfws, wltxs = wltxs, nyyzs = nyyzs };
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("error", ex.Message);
+                return new { Result = EnResultType.Failed, Message = "加载失败" };
+            }
+        }
+
+        public object LoadPFCGTOP(string xzqdm, string xzq)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                IList<CODES_XXLB> lb = DAO.GetObjectList<CODES_XXLB>(string.Format("FROM CODES_XXLB WHERE PARENTID = 7 OR FBYM LIKE 'PFCG%'"));
+                IList<CODES_PFCG> xl = DAO.GetObjectList<CODES_PFCG>(string.Format("FROM CODES_PFCG WHERE TYPENAME LIKE '%类别%' ORDER BY CODEORDER"));
+
+                return new { Result = EnResultType.Success, lb = lb, xl = xl };
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("error", ex.Message);
+                return new { Result = EnResultType.Failed, Message = "加载失败" };
+            }
+        }
+
+        public object LoadPFCGSY(string xzqdm, string xzq)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                IList<CODES_DISTRICT> districts = DAO.GetObjectList<CODES_DISTRICT>(string.Format("FROM CODES_DISTRICT WHERE TYPENAME='县区级' AND PARENTID='{0}' ORDER BY CODEORDER", xzqdm));
+
+                dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,pfcg_spjbxx b where a.jcxxid = b.jcxxid ");
+                List<PFCG_SPView> sps = ConvertHelper.DataTableToList<PFCG_SPView>(dt);
+                foreach (var jcxx in sps)
+                {
+                    jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
+                }
+                
+                return new { Result = EnResultType.Success, districts = districts, sps = sps };
             }
             catch (Exception ex)
             {

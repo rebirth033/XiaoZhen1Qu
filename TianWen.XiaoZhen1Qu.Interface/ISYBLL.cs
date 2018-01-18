@@ -38,5 +38,9 @@ namespace TianWen.XiaoZhen1Qu.Interface
         object LoadZSJMTOP(string XZQDM, string XZQ);
 
         object LoadZSJMSY(string XZQDM, string XZQ);
+
+        object LoadPFCGTOP(string XZQDM, string XZQ);
+
+        object LoadPFCGSY(string XZQDM, string XZQ);
     }
 }
