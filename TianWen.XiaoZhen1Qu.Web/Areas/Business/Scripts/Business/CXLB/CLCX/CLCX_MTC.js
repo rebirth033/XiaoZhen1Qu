@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadCLCondition() {
-    LoadConditionByTypeNames("'摩托车品牌','摩托车车型','摩托车价格'", "CODES_CL", "品牌,车型,价格", "PP,CX,JG", "15,15,15");
+    LoadConditionByTypeNames("'摩托车品牌','摩托车车型','摩托车价格'", "CODES_CL", "品牌,车型,价格", "PP,CX,JG", "100,100,100");
 }
 //加载URL查询条件
 function LoadURLCondition() {

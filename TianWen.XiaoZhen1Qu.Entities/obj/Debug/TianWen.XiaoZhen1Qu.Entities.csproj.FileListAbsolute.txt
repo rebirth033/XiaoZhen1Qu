@@ -47,4 +47,3 @@ D:\福建天问信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Entities\o
 F:\福建天问信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Entities\obj\Debug\TianWen.XiaoZhen1Qu.Entities.csprojResolveAssemblyReference.cache
 D:\源代码\TianWen.XiaoZhen1Qu.Entities\bin\Debug\NHibernate.Mapping.Attributes.dll
 D:\源代码\TianWen.XiaoZhen1Qu.Entities\bin\Debug\Iesi.Collections.dll
-D:\源代码\TianWen.XiaoZhen1Qu.Entities\obj\Debug\TianWen.XiaoZhen1Qu.Entities.csprojResolveAssemblyReference.cache

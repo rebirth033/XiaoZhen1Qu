@@ -35,6 +35,10 @@ namespace TianWen.XiaoZhen1Qu.Interface
 
         object LoadSWFWSY(string XZQDM, string XZQ);
 
+        object LoadJYPXTOP(string XZQDM, string XZQ);
+
+        object LoadJYPXSY(string XZQDM, string XZQ);
+
         object LoadZSJMTOP(string XZQDM, string XZQ);
 
         object LoadZSJMSY(string XZQDM, string XZQ);

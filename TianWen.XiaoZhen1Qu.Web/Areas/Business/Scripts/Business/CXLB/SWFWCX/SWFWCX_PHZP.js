@@ -22,7 +22,7 @@ function SelectCondition(obj, name) {
     if (name === "类别" && (obj.innerHTML !== "标牌" && obj.innerHTML !== "LED显示屏" && obj.innerHTML !== "条幅/锦旗/奖牌")) {
         LoadConditionByParentID(obj.id, "CODES_SWFW", "小类", "XL", 15);
         if (obj.innerHTML === "灯箱/招牌") {
-            LoadConditionByTypeNames("'灯箱/招牌材质','灯箱/招牌工艺','是否发光'", "CODES_SWFW", "材质,工艺,是否发光", "CZ,GY,SFFG", "15,15,15");
+            LoadConditionByTypeNames("'灯箱/招牌材质','灯箱/招牌工艺','是否发光'", "CODES_SWFW", "材质,工艺,是否发光", "CZ,GY,SFFG", "100,100,100");
         }
         else {
             $("#ul_condition_body_CZ").remove();
@@ -35,7 +35,7 @@ function SelectCondition(obj, name) {
     if (name === "类别" && (obj.innerHTML === "标牌" || obj.innerHTML === "LED显示屏" || obj.innerHTML === "条幅/锦旗/奖牌")) {
         $("#ul_condition_body_XL").remove();
         if (obj.innerHTML === "标牌") {
-            LoadConditionByTypeNames("'标牌用途','标牌功能','标牌材质'", "CODES_SWFW", "用途,功能,材质", "YT,GN,CZ", "15,15,15");
+            LoadConditionByTypeNames("'标牌用途','标牌功能','标牌材质'", "CODES_SWFW", "用途,功能,材质", "YT,GN,CZ", "100,100,100");
         }
         else {
             $("#ul_condition_body_CZ").remove();

@@ -6,8 +6,16 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadJYPXCondition() {
-    LoadConditionByTypeNames("'学历教育','学历教育形式'", "CODES_JYPX", "类别,形式", "LB,XS", "100,100");
-    LoadBody("JYPXXX_XLJY", currentIndex);
+    LoadConditionByTypeNames("'学历教育类别','学历教育形式'", "CODES_JYPX", "类别,形式", "LB,XS", "100,100");
+}
+//加载URL查询条件
+function LoadURLCondition() {
+    if (getUrlParam("LB") !== null)
+        SelectURLCondition(getUrlParam("LB"));
+    else if (getUrlParam("QY") !== null)
+        SelectURLCondition(getUrlParam("QY"));
+    else
+        LoadBody("JYPXXX_XLJY", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -21,6 +29,15 @@ function SelectCondition(obj, name) {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
+    LoadBody("JYPXXX_XLJY", currentIndex);
+    ShowSelectCondition("JYPXXX_XLJY");
+}
+//选择URL条件
+function SelectURLCondition(obj) {
+    $("#" + obj).parent().find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $("#" + obj).addClass("li_condition_body_active");
     LoadBody("JYPXXX_XLJY", currentIndex);
     ShowSelectCondition("JYPXXX_XLJY");
 }

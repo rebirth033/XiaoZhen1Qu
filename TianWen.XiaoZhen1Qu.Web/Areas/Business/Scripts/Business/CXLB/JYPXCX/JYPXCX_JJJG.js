@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadJYPXCondition() {
-    LoadConditionByTypeNames("'辅导阶段','辅导科目','语言培训教师身份'", "CODES_JYPX", "辅导阶段,辅导科目,教师身份", "FDJD,FDKM,SF", "15,15,15");
+    LoadConditionByTypeNames("'辅导阶段','辅导科目','语言培训教师身份'", "CODES_JYPX", "辅导阶段,辅导科目,教师身份", "FDJD,FDKM,SF", "100,100,100");
     LoadBody("JYPXXX_JJJG", currentIndex);
 }
 //选择条件

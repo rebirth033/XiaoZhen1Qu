@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadLYJDCondition() {
-    LoadConditionByTypeNames("'出境游游玩天数','国内游出游方式','出境游价格'", "CODES_LYJD", "行程天数,出游方式,价格", "XCTS_R,CYFS,MSJ", "15,15,15");
+    LoadConditionByTypeNames("'出境游游玩天数','国内游出游方式','出境游价格'", "CODES_LYJD", "行程天数,出游方式,价格", "XCTS_R,CYFS,MSJ", "100,100,100");
     LoadBody("LYJDXX_CJY", currentIndex);
 }
 //选择条件

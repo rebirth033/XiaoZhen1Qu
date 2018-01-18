@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadHQSYCondition() {
-    LoadConditionByTypeNames("'彩妆造型价格范围','彩妆造型化妆类型','彩妆造型服务形式'", "CODES_HQSY", "价格范围,化妆类型,服务形式", "JG,HZLX,FWXS", "15,15,15");
+    LoadConditionByTypeNames("'彩妆造型价格范围','彩妆造型化妆类型','彩妆造型服务形式'", "CODES_HQSY", "价格范围,化妆类型,服务形式", "JG,HZLX,FWXS", "100,100,100");
     LoadBody("HQSYXX_CZZX", currentIndex);
 }
 //选择条件

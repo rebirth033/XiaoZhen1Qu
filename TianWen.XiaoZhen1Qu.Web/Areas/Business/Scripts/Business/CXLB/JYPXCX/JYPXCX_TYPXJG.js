@@ -7,7 +7,15 @@ $(document).ready(function () {
 //加载条件
 function LoadJYPXCondition() {
     LoadConditionByTypeNames("'体育培训类别','体育培训对象'", "CODES_JYPX", "类别,对象", "LB,DX", "100,100");
-    LoadBody("JYPXXX_TYPXJG", currentIndex);
+}
+//加载URL查询条件
+function LoadURLCondition() {
+    if (getUrlParam("LB") !== null)
+        SelectURLCondition(getUrlParam("LB"));
+    else if (getUrlParam("QY") !== null)
+        SelectURLCondition(getUrlParam("QY"));
+    else
+        LoadBody("JYPXXX_TYPXJG", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -21,6 +29,15 @@ function SelectCondition(obj, name) {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
+    LoadBody("JYPXXX_TYPXJG", currentIndex);
+    ShowSelectCondition("JYPXXX_TYPXJG");
+}
+//选择URL条件
+function SelectURLCondition(obj) {
+    $("#" + obj).parent().find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $("#" + obj).addClass("li_condition_body_active");
     LoadBody("JYPXXX_TYPXJG", currentIndex);
     ShowSelectCondition("JYPXXX_TYPXJG");
 }

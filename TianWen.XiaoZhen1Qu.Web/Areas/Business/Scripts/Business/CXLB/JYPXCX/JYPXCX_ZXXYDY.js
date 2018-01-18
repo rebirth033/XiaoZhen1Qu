@@ -7,7 +7,15 @@ $(document).ready(function () {
 //加载条件
 function LoadJYPXCondition() {
     LoadConditionByTypeNames("'中小学一对一类别','授课形式'", "CODES_JYPX", "类别", "LB", "100");
-    LoadBody("JYPXXX_ZXXYDY", currentIndex);
+}
+//加载URL查询条件
+function LoadURLCondition() {
+    if (getUrlParam("LB") !== null)
+        SelectURLCondition(getUrlParam("LB"));
+    else if (getUrlParam("QY") !== null)
+        SelectURLCondition(getUrlParam("QY"));
+    else
+        LoadBody("JYPXXX_ZXXYDY", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -21,6 +29,15 @@ function SelectCondition(obj, name) {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
+    LoadBody("JYPXXX_ZXXYDY", currentIndex);
+    ShowSelectCondition("JYPXXX_ZXXYDY");
+}
+//选择URL条件
+function SelectURLCondition(obj) {
+    $("#" + obj).parent().find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $("#" + obj).addClass("li_condition_body_active");
     LoadBody("JYPXXX_ZXXYDY", currentIndex);
     ShowSelectCondition("JYPXXX_ZXXYDY");
 }

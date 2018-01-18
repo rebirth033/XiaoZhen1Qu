@@ -7,7 +7,15 @@ $(document).ready(function () {
 //加载条件
 function LoadJYPXCondition() {
     LoadConditionByTypeNames("'设计培训类别','设计培训形式','职业技能培训周期'", "CODES_JYPX", "类别,形式,周期", "LB,XS,ZQ", "10,15,15");
-    LoadBody("JYPXXX_SJPX", currentIndex);
+}
+//加载URL查询条件
+function LoadURLCondition() {
+    if (getUrlParam("LB") !== null)
+        SelectURLCondition(getUrlParam("LB"));
+    else if (getUrlParam("QY") !== null)
+        SelectURLCondition(getUrlParam("QY"));
+    else
+        LoadBody("JYPXXX_SJPX", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -21,6 +29,15 @@ function SelectCondition(obj, name) {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
+    LoadBody("JYPXXX_SJPX", currentIndex);
+    ShowSelectCondition("JYPXXX_SJPX");
+}
+//选择URL条件
+function SelectURLCondition(obj) {
+    $("#" + obj).parent().find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $("#" + obj).addClass("li_condition_body_active");
     LoadBody("JYPXXX_SJPX", currentIndex);
     ShowSelectCondition("JYPXXX_SJPX");
 }

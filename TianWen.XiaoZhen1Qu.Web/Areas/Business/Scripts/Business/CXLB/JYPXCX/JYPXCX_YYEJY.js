@@ -6,8 +6,16 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadJYPXCondition() {
-    LoadConditionByTypeNames("'婴幼儿教育类别','服务类型','婴幼儿教育办学性质'", "CODES_JYPX", "类别,服务类型,办学性质", "LB,FWLX,BXXZ", "15,15,15");
-    LoadBody("JYPXXX_YYEJY", currentIndex);
+    LoadConditionByTypeNames("'婴幼儿教育类别','服务类型','婴幼儿教育办学性质'", "CODES_JYPX", "类别,服务类型,办学性质", "LB,FWLX,BXXZ", "100,100,100");
+}
+//加载URL查询条件
+function LoadURLCondition() {
+    if (getUrlParam("LB") !== null)
+        SelectURLCondition(getUrlParam("LB"));
+    else if (getUrlParam("QY") !== null)
+        SelectURLCondition(getUrlParam("QY"));
+    else
+        LoadBody("JYPXXX_YYEJY", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -21,6 +29,15 @@ function SelectCondition(obj, name) {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
+    LoadBody("JYPXXX_YYEJY", currentIndex);
+    ShowSelectCondition("JYPXXX_YYEJY");
+}
+//选择URL条件
+function SelectURLCondition(obj) {
+    $("#" + obj).parent().find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $("#" + obj).addClass("li_condition_body_active");
     LoadBody("JYPXXX_YYEJY", currentIndex);
     ShowSelectCondition("JYPXXX_YYEJY");
 }

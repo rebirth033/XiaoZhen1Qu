@@ -43,7 +43,7 @@ function LoadDuoX(type, id) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("学历教育", "LB", "CODES_JYPX", Bind, "OUTLB", "LB", "");
+            LoadCODESByTYPENAME("学历教育类别", "LB", "CODES_JYPX", Bind, "OUTLB", "LB", "");
         }
     });
 }

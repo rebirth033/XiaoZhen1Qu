@@ -616,6 +616,45 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
+        public object LoadJYPXTOP(string xzqdm, string xzq)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                IList<CODES_XXLB> lb = DAO.GetObjectList<CODES_XXLB>(string.Format("FROM CODES_XXLB WHERE PARENTID = 11 OR FBYM LIKE 'JYPX%'"));
+                IList<CODES_JYPX> xl = DAO.GetObjectList<CODES_JYPX>(string.Format("FROM CODES_JYPX WHERE TYPENAME LIKE '%类别%' ORDER BY CODEORDER"));
+
+                return new { Result = EnResultType.Success, lb = lb, xl = xl };
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("error", ex.Message);
+                return new { Result = EnResultType.Failed, Message = "加载失败" };
+            }
+        }
+
+        public object LoadJYPXSY(string xzqdm, string xzq)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                IList<CODES_DISTRICT> districts = DAO.GetObjectList<CODES_DISTRICT>(string.Format("FROM CODES_DISTRICT WHERE TYPENAME='县区级' AND PARENTID='{0}' ORDER BY CODEORDER", xzqdm));
+
+                dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,zsjm_fzxbjbxx b where a.jcxxid = b.jcxxid ");
+                List<ZSJM_CYView> fzs = ConvertHelper.DataTableToList<ZSJM_CYView>(dt);
+                foreach (var jcxx in fzs)
+                {
+                    jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
+                }
+                return new { Result = EnResultType.Success, districts = districts, fzs = fzs };
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("error", ex.Message);
+                return new { Result = EnResultType.Failed, Message = "加载失败" };
+            }
+        }
+
         public object LoadZSJMTOP(string xzqdm, string xzq)
         {
             DataTable dt = new DataTable();

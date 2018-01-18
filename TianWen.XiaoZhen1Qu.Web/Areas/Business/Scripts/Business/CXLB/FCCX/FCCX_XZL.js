@@ -22,13 +22,13 @@ function BindConditionNav() {
 //加载出租查询条件
 function LoadCZCondition() {
     RemoveCondition("XZLLX,QY,ZJ,SJ,MJ");
-    LoadConditionByTypeNames("'写字楼类型','商铺租金','写字楼面积'", "CODES_FC", "类型,租金,面积", "XZLLX,ZJ,MJ", "15,15,15");
+    LoadConditionByTypeNames("'写字楼类型','商铺租金','写字楼面积'", "CODES_FC", "类型,租金,面积", "XZLLX,ZJ,MJ", "100,100,100");
 
 }
 //加载出售查询条件
 function LoadCSCondition() {
     RemoveCondition("XZLLX,QY,ZJ,SJ,MJ");
-    LoadConditionByTypeNames("'写字楼类型','商铺售价','写字楼面积'", "CODES_FC", "类型,售价,面积", "XZLLX,SJ,MJ", "15,15,15");
+    LoadConditionByTypeNames("'写字楼类型','商铺售价','写字楼面积'", "CODES_FC", "类型,售价,面积", "XZLLX,SJ,MJ", "100,100,100");
 
 }
 //根据TYPENAME获取字典表

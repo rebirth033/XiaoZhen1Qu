@@ -6,8 +6,16 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadJYPXCondition() {
-    LoadConditionByTypeNames("'语种','专项','级别'", "CODES_JYPX", "语种,专项,级别", "YZ,ZX,JB", "15,15,15");
-    LoadBody("JYPXXX_YYPXJG", currentIndex);
+    LoadConditionByTypeNames("'语种','专项','级别'", "CODES_JYPX", "语种,专项,级别", "YZ,ZX,JB", "100,100,100");
+}
+//加载URL查询条件
+function LoadURLCondition() {
+    if (getUrlParam("LB") !== null)
+        SelectURLCondition(getUrlParam("LB"));
+    else if (getUrlParam("QY") !== null)
+        SelectURLCondition(getUrlParam("QY"));
+    else
+        LoadBody("JYPXXX_YYPXJG", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -21,6 +29,15 @@ function SelectCondition(obj, name) {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
+    LoadBody("JYPXXX_YYPXJG", currentIndex);
+    ShowSelectCondition("JYPXXX_YYPXJG");
+}
+//选择URL条件
+function SelectURLCondition(obj) {
+    $("#" + obj).parent().find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $("#" + obj).addClass("li_condition_body_active");
     LoadBody("JYPXXX_YYPXJG", currentIndex);
     ShowSelectCondition("JYPXXX_YYPXJG");
 }
