@@ -11,6 +11,7 @@ using TianWen.XiaoZhen1Qu.Entities.ViewModels.CW;
 using TianWen.XiaoZhen1Qu.Entities.ViewModels.ES;
 using TianWen.XiaoZhen1Qu.Entities.ViewModels.SHFW;
 using TianWen.XiaoZhen1Qu.Entities.ViewModels.SWFW;
+using TianWen.XiaoZhen1Qu.Entities.ViewModels.ZSJM;
 using CommonClassLib.Helper;
 
 namespace TianWen.XiaoZhen1Qu.BLL
@@ -436,7 +437,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 IList<CODES_LYJD> lyjdxl = DAO.GetObjectList<CODES_LYJD>(string.Format("FROM CODES_LYJD WHERE TYPENAME LIKE '%类别%' ORDER BY CODEORDER"));
                 IList<CODES_HQSY> hqsyxl = DAO.GetObjectList<CODES_HQSY>(string.Format("FROM CODES_HQSY WHERE TYPENAME LIKE '%类别%' ORDER BY CODEORDER"));
                 IList<CODES_XXYL> xxylxl = DAO.GetObjectList<CODES_XXYL>(string.Format("FROM CODES_XXYL WHERE TYPENAME LIKE '%类别%' ORDER BY CODEORDER"));
-                return new { Result = EnResultType.Success, shfwlb = shfwlb, shfwxl = shfwxl, lyjdxl= lyjdxl, hqsyxl= hqsyxl, xxylxl= xxylxl };
+                return new { Result = EnResultType.Success, shfwlb = shfwlb, shfwxl = shfwxl, lyjdxl = lyjdxl, hqsyxl = hqsyxl, xxylxl = xxylxl };
             }
             catch (Exception ex)
             {
@@ -512,7 +513,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 {
                     jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
                 }
-                return new { Result = EnResultType.Success, districts = districts , bjfws = bjfws, bmysfws= bmysfws, bjqxfws= bjqxfws, gdstqlfws= gdstqlfws, shpsfws = shpsfws, jdwxfws= jdwxfws, jjwxfws= jjwxfws, dnwxfws= dnwxfws, smwxfws = smwxfws, fwwxfws = fwwxfws };
+                return new { Result = EnResultType.Success, districts = districts, bjfws = bjfws, bmysfws = bmysfws, bjqxfws = bjqxfws, gdstqlfws = gdstqlfws, shpsfws = shpsfws, jdwxfws = jdwxfws, jjwxfws = jjwxfws, dnwxfws = dnwxfws, smwxfws = smwxfws, fwwxfws = fwwxfws };
             }
             catch (Exception ex)
             {
@@ -606,6 +607,99 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
                 }
                 return new { Result = EnResultType.Success, districts = districts, gszcfws = gszcfws, sbzlfws = sbzlfws, ysbzfws = ysbzfws, phzpfws = phzpfws, sjchfws = sjchfws, ggcmfws = ggcmfws, zhfws = zhfws, lpdzfws = lpdzfws, qdfws = qdfws, wlbxfws = wlbxfws };
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("error", ex.Message);
+                return new { Result = EnResultType.Failed, Message = "加载失败" };
+            }
+        }
+
+        public object LoadZSJMTOP(string xzqdm, string xzq)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                IList<CODES_XXLB> lb = DAO.GetObjectList<CODES_XXLB>(string.Format("FROM CODES_XXLB WHERE PARENTID =6 OR FBYM LIKE 'ZSJM%'"));
+                IList<CODES_ZSJM> xl = DAO.GetObjectList<CODES_ZSJM>(string.Format("FROM CODES_ZSJM WHERE TYPENAME LIKE '%类别%' ORDER BY CODEORDER"));
+
+                return new { Result = EnResultType.Success, lb = lb, xl = xl };
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("error", ex.Message);
+                return new { Result = EnResultType.Failed, Message = "加载失败" };
+            }
+        }
+
+        public object LoadZSJMSY(string xzqdm, string xzq)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                IList<CODES_DISTRICT> districts = DAO.GetObjectList<CODES_DISTRICT>(string.Format("FROM CODES_DISTRICT WHERE TYPENAME='县区级' AND PARENTID='{0}' ORDER BY CODEORDER", xzqdm));
+
+                dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,zsjm_fzxbjbxx b where a.jcxxid = b.jcxxid ");
+                List<ZSJM_CYView> fzs = ConvertHelper.DataTableToList<ZSJM_CYView>(dt);
+                foreach (var jcxx in fzs)
+                {
+                    jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
+                }
+                dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,zsjm_jcjbxx b where a.jcxxid = b.jcxxid ");
+                List<ZSJM_CYView> jcs = ConvertHelper.DataTableToList<ZSJM_CYView>(dt);
+                foreach (var jcxx in jcs)
+                {
+                    jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
+                }
+                dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,zsjm_jxjbxx b where a.jcxxid = b.jcxxid ");
+                List<ZSJM_CYView> jxjgs = ConvertHelper.DataTableToList<ZSJM_CYView>(dt);
+                foreach (var jcxx in jxjgs)
+                {
+                    jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
+                }
+                dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,zsjm_mrbjjbxx b where a.jcxxid = b.jcxxid ");
+                List<ZSJM_CYView> mrbjs = ConvertHelper.DataTableToList<ZSJM_CYView>(dt);
+                foreach (var jcxx in mrbjs)
+                {
+                    jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
+                }
+                dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,zsjm_lpspjbxx b where a.jcxxid = b.jcxxid ");
+                List<ZSJM_CYView> lpsps = ConvertHelper.DataTableToList<ZSJM_CYView>(dt);
+                foreach (var jcxx in lpsps)
+                {
+                    jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
+                }
+                dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,zsjm_jjhbjbxx b where a.jcxxid = b.jcxxid ");
+                List<ZSJM_CYView> jjs = ConvertHelper.DataTableToList<ZSJM_CYView>(dt);
+                foreach (var jcxx in jjs)
+                {
+                    jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
+                }
+                dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,zsjm_jypxjbxx b where a.jcxxid = b.jcxxid ");
+                List<ZSJM_CYView> jypxs = ConvertHelper.DataTableToList<ZSJM_CYView>(dt);
+                foreach (var jcxx in jypxs)
+                {
+                    jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
+                }
+                dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,zsjm_qcfwjbxx b where a.jcxxid = b.jcxxid ");
+                List<ZSJM_CYView> qcfws = ConvertHelper.DataTableToList<ZSJM_CYView>(dt);
+                foreach (var jcxx in qcfws)
+                {
+                    jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
+                }
+                dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,zsjm_wlfwjbxx b where a.jcxxid = b.jcxxid ");
+                List<ZSJM_CYView> wltxs = ConvertHelper.DataTableToList<ZSJM_CYView>(dt);
+                foreach (var jcxx in wltxs)
+                {
+                    jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
+                }
+                dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,zsjm_nyjbxx b where a.jcxxid = b.jcxxid ");
+                List<ZSJM_CYView> nyyzs = ConvertHelper.DataTableToList<ZSJM_CYView>(dt);
+                foreach (var jcxx in nyyzs)
+                {
+                    jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
+                }
+                return new { Result = EnResultType.Success, districts = districts, fzs = fzs, jcs = jcs, jxjgs = jxjgs, mrbjs = mrbjs, lpsps = lpsps, jjs = jjs, jypxs = jypxs, qcfws = qcfws, wltxs = wltxs, nyyzs = nyyzs };
             }
             catch (Exception ex)
             {

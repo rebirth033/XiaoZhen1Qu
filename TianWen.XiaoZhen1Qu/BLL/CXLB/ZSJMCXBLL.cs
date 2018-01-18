@@ -90,7 +90,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "ZSJMXX_LPSP")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,zsjm_lpxspjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
+                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,ZSJM_LPSPjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
                     List<ZSJM_CYView> list = ConvertHelper.DataTableToList<ZSJM_CYView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -287,7 +287,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "ZSJMXX_LPSP")
                 {
-                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,zsjm_lpxspjbxx b where a.jcxxid = b.jcxxid and id = '{0}' order by zxgxsj desc", ID));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,ZSJM_LPSPjbxx b where a.jcxxid = b.jcxxid and id = '{0}' order by zxgxsj desc", ID));
                     List<ZSJM_CYView> list = ConvertHelper.DataTableToList<ZSJM_CYView>(dt);
                     foreach (var jcxx in list)
                     {

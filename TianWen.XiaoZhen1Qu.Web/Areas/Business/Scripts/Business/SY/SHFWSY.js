@@ -20,7 +20,7 @@ function OpenCXLB(lbid, lburl, condition) {
 function OpenXXXX(TYPE, ID, LBID) {
     window.open(getRootPath() + "/Business/" + TYPE.split('_')[0] + "/" + TYPE + "?ID=" + ID + "&LBID=" + LBID + "&TYPE=" + TYPE);
 }
-//加载行业类别
+//加载生活服务类别
 function LoadSHFWTOP() {
     $.ajax({
         type: "POST",
@@ -135,8 +135,26 @@ function LoadItem(title, list, districts) {
     html += '<p class="p_body_middle_item_right">' + title + '</p>';
     html += '<ul class="ul_body_middle_item_right">';
     for (var i = 0; i < (list.length < 8 ? list.length : 8) ; i++) {
-        //if (title === "搬家服务")
-            html += LoadInfo(list[i]);
+        if (title === "搬家服务")
+            html += LoadInfo(list[i], "SHFWXX_BJ");
+        if (title === "保姆月嫂")
+            html += LoadInfo(list[i], "SHFWXX_BMYS");
+        if (title === "保洁清洗")
+            html += LoadInfo(list[i], "SHFWXX_BJQX");
+        if (title === "管道疏通/清理")
+            html += LoadInfo(list[i], "SHFWXX_GDSTQL");
+        if (title === "生活配送")
+            html += LoadInfo(list[i], "SHFWXX_SHPS");
+        if (title === "家电维修")
+            html += LoadInfo(list[i], "SHFWXX_JDWX");
+        if (title === "电脑维修")
+            html += LoadInfo(list[i], "SHFWXX_DNWX");
+        if (title === "房屋维修")
+            html += LoadInfo(list[i], "SHFWXX_FWWX");
+        if (title === "家具维修")
+            html += LoadInfo(list[i], "SHFWXX_JJWX");
+        if (title === "数码维修")
+            html += LoadInfo(list[i], "SHFWXX_SMWX");
 
     }
     html += '</ul>';
@@ -146,10 +164,10 @@ function LoadItem(title, list, districts) {
     html += '</div>';
     $("#div_body_middle").append(html);
 }
-//加载生活服务信息
-function LoadInfo(obj) {
+//加载生活服务_搬家信息
+function LoadInfo(obj, type) {
     var html = "";
-    html += ('<li onclick="OpenXXXX(\'SHFWXX_BJ\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
+    html += ('<li onclick="OpenXXXX(\'' + type + '\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
     html += ('<img class="img_li_body_middle_item_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_middle_item_right_xq" style="height:40px">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_middle_item_right_cs">' + obj.QY + ' - ' + obj.DD + '</p>');

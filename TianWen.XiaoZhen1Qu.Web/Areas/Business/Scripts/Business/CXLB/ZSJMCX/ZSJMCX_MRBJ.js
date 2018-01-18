@@ -9,6 +9,15 @@ function LoadZSJMCondition() {
     LoadConditionByTypeNames("'美容保健类别','投资金额'", "CODES_ZSJM", "类别,投资金额", "LB,TZJE", "100,100");
     LoadBody("ZSJMXX_MRBJ", currentIndex);
 }
+//加载URL查询条件
+function LoadURLCondition() {
+    if (getUrlParam("LB") !== null)
+        SelectURLCondition(getUrlParam("LB"));
+    else if (getUrlParam("QY") !== null)
+        SelectURLCondition(getUrlParam("QY"));
+    else
+        LoadBody("ZSJMXX_MRBJ", currentIndex);
+}
 //选择条件
 function SelectCondition(obj, name) {
     if (name === "类别" && (obj.innerHTML !== "干锅" && obj.innerHTML !== "中餐" && obj.innerHTML !== "粥店")) {
@@ -21,6 +30,15 @@ function SelectCondition(obj, name) {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
+    LoadBody("ZSJMXX_MRBJ", currentIndex);
+    ShowSelectCondition("ZSJMXX_MRBJ");
+}
+//选择URL条件
+function SelectURLCondition(obj) {
+    $("#" + obj).parent().find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $("#" + obj).addClass("li_condition_body_active");
     LoadBody("ZSJMXX_MRBJ", currentIndex);
     ShowSelectCondition("ZSJMXX_MRBJ");
 }

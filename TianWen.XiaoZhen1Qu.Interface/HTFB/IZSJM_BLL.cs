@@ -29,9 +29,9 @@ namespace TianWen.XiaoZhen1Qu.Interface
 
         object LoadZSJM_JYPXJBXX(string ID);
 
-        object SaveZSJM_LPXSPJBXX(JCXX jcxx, ZSJM_LPXSPJBXX dzfjbxx, List<PHOTOS> photos);
+        object SaveZSJM_LPSPJBXX(JCXX jcxx, ZSJM_LPSPJBXX dzfjbxx, List<PHOTOS> photos);
 
-        object LoadZSJM_LPXSPJBXX(string ID);
+        object LoadZSJM_LPSPJBXX(string ID);
 
         object SaveZSJM_MRBJJBXX(JCXX jcxx, ZSJM_MRBJJBXX dzfjbxx, List<PHOTOS> photos);
 

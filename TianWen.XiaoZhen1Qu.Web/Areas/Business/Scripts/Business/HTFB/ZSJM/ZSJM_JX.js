@@ -116,8 +116,8 @@ function LoadJBXX() {
                     SetDuoX("JYMS", xml.Value.ZSJM_JXJBXX.JYMS);
                 if (xml.Value.ZSJM_JXJBXX.FWFW !== null)
                     SetDuoX("FWFW", xml.Value.ZSJM_JXJBXX.FWFW);
-                if ((xml.Value.ZSJM_LPXSPJBXX.LB.indexOf("饰品挂件") !== -1 || xml.Value.ZSJM_LPXSPJBXX.LB.indexOf("礼品") !== -1 || xml.Value.ZSJM_LPXSPJBXX.LB.indexOf("工艺品") !== -1 || xml.Value.ZSJM_LPXSPJBXX.LB.indexOf("珠宝玉器") !== -1) && xml.Value.ZSJM_LPXSPJBXX.LB !== "礼品加工") {
-                    LoadXLByName(xml.Value.ZSJM_LPXSPJBXX.LB, xml.Value.ZSJM_LPXSPJBXX.XL, "CODES_ZSJM");
+                if ((xml.Value.ZSJM_LPSPJBXX.LB.indexOf("饰品挂件") !== -1 || xml.Value.ZSJM_LPSPJBXX.LB.indexOf("礼品") !== -1 || xml.Value.ZSJM_LPSPJBXX.LB.indexOf("工艺品") !== -1 || xml.Value.ZSJM_LPSPJBXX.LB.indexOf("珠宝玉器") !== -1) && xml.Value.ZSJM_LPSPJBXX.LB !== "礼品加工") {
+                    LoadXLByName(xml.Value.ZSJM_LPSPJBXX.LB, xml.Value.ZSJM_LPSPJBXX.XL, "CODES_ZSJM");
                 }
             }
         },

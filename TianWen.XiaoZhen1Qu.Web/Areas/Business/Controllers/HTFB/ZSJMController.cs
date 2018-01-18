@@ -55,7 +55,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             ViewData["YHM"] = Session["YHM"];
             return View();
         }
-        public ActionResult ZSJM_LPXSP()
+        public ActionResult ZSJM_LPSP()
         {
             ViewData["XZQ"] = Session["XZQ"];
             ViewData["XZQDM"] = Session["XZQDM"];
@@ -211,17 +211,17 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return Json(result);
         }
         [ValidateInput(false)]
-        public JsonResult FBZSJM_LPXSPJBXX()
+        public JsonResult FBZSJM_LPSPJBXX()
         {
             YHJBXX yhjbxx = ZSJM_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             string json = Request["Json"];
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
             JCXX jcxx = CreateJCXX(yhjbxx, json);
-            ZSJM_LPXSPJBXX ZSJM_LPXSPjbxx = JsonHelper.ConvertJsonToObject<ZSJM_LPXSPJBXX>(json);
-            ZSJM_LPXSPjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
+            ZSJM_LPSPJBXX ZSJM_LPSPjbxx = JsonHelper.ConvertJsonToObject<ZSJM_LPSPJBXX>(json);
+            ZSJM_LPSPjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = ZSJM_BLL.SaveZSJM_LPXSPJBXX(jcxx, ZSJM_LPXSPjbxx, photos);
+            object result = ZSJM_BLL.SaveZSJM_LPSPJBXX(jcxx, ZSJM_LPSPjbxx, photos);
             return Json(result);
         }
         [ValidateInput(false)]
@@ -387,10 +387,10 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             object result = ZSJM_BLL.LoadZSJM_JYPXJBXX(ID);
             return Json(result);
         }
-        public JsonResult LoadZSJM_LPXSPJBXX()
+        public JsonResult LoadZSJM_LPSPJBXX()
         {
             string ID = Request["ID"];
-            object result = ZSJM_BLL.LoadZSJM_LPXSPJBXX(ID);
+            object result = ZSJM_BLL.LoadZSJM_LPSPJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadZSJM_MRBJJBXX()

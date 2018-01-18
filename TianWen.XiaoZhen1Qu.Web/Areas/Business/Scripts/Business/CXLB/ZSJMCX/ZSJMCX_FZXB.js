@@ -7,7 +7,15 @@ $(document).ready(function () {
 //加载条件
 function LoadZSJMCondition() {
     LoadConditionByTypeNames("'服装鞋包类别','投资金额'", "CODES_ZSJM", "类别,投资金额", "LB,TZJE", "100,100");
-    LoadBody("ZSJMXX_FZXB", currentIndex);
+}
+//加载URL查询条件
+function LoadURLCondition() {
+    if (getUrlParam("LB") !== null)
+        SelectURLCondition(getUrlParam("LB"));
+    else if (getUrlParam("QY") !== null)
+        SelectURLCondition(getUrlParam("QY"));
+    else
+        LoadBody("ZSJMXX_FZXB", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -21,6 +29,15 @@ function SelectCondition(obj, name) {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
+    LoadBody("ZSJMXX_FZXB", currentIndex);
+    ShowSelectCondition("ZSJMXX_FZXB");
+}
+//选择URL条件
+function SelectURLCondition(obj) {
+    $("#" + obj).parent().find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $("#" + obj).addClass("li_condition_body_active");
     LoadBody("ZSJMXX_FZXB", currentIndex);
     ShowSelectCondition("ZSJMXX_FZXB");
 }
@@ -104,7 +121,7 @@ function LoadHotInfo(obj) {
     html += ('<li onclick="OpenXXXX(\'ZSJMXX_FZXB\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_right_xq">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_right_cs">' + obj.QY + '-' + obj.DD + '</p>');
+    html += ('<p class="p_li_body_right_cs">' + obj.LB + '</p>');
     html += ('</li>');
     $("#ul_body_right").append(html);
 }

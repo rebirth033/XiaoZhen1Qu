@@ -20,7 +20,7 @@ function OpenCXLB(lbid, lburl, condition) {
 function OpenXXXX(TYPE, ID, LBID) {
     window.open(getRootPath() + "/Business/" + TYPE.split('_')[0] + "/" + TYPE + "?ID=" + ID + "&LBID=" + LBID + "&TYPE=" + TYPE);
 }
-//加载行业类别
+//加载商务服务类别
 function LoadSWFWTOP() {
     $.ajax({
         type: "POST",
@@ -49,7 +49,7 @@ function LoadSWFWTOP() {
                 html += '</div>';
                 html += '<div class="div_body_top_right">';
                 for (var i = 0; i < xml.shfwlb.length; i++) {
-                    if (xml.shfwlb[i].PARENTID !== 10 && xml.shfwlb[i].FBYM.indexOf("SWFW") !== -1 && xml.shfwlb[i].LBNAME !== "快递服务" && xml.shfwlb[i].LBNAME !== "卡片定制" && xml.shfwlb[i].LBNAME !== "庆典服务" && xml.shfwlb[i].LBNAME !== "律师服务" && xml.shfwlb[i].LBNAME !== "翻译服务" && xml.shfwlb[i].LBNAME !== "会计审计"  && xml.shfwlb[i].LBNAME !== "担保贷款" && xml.shfwlb[i].LBNAME !== "租赁服务") {
+                    if (xml.shfwlb[i].PARENTID !== 10 && xml.shfwlb[i].FBYM.indexOf("SWFW") !== -1 && xml.shfwlb[i].LBNAME !== "快递服务" && xml.shfwlb[i].LBNAME !== "卡片定制" && xml.shfwlb[i].LBNAME !== "庆典服务" && xml.shfwlb[i].LBNAME !== "律师服务" && xml.shfwlb[i].LBNAME !== "翻译服务" && xml.shfwlb[i].LBNAME !== "会计审计" && xml.shfwlb[i].LBNAME !== "担保贷款" && xml.shfwlb[i].LBNAME !== "租赁服务") {
                         html += '<p class="p_body_top_right">' + xml.shfwlb[i].LBNAME + '</p>';
                         html += '<ul class="ul_body_top_right">';
                         for (var j = 0; j < xml.shfwxl.length; j++) {
@@ -108,25 +108,25 @@ function LoadItem(title, list, districts) {
     html += '<ul class="ul_body_middle_item_left">';
     for (var i = 0; i < (districts.length > 14 ? 14 : districts.length) ; i++) {
         if (title === "工商注册")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/SHFWCX/SHFWCX_GSZC" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/SWFWCX/SWFWCX_GSZC" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
         if (title === "商标专利")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/SHFWCX/SHFWCX_SBZL" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/SWFWCX/SWFWCX_SBZL" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
         if (title === "印刷包装")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/SHFWCX/SHFWCX_YSBZ" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/SWFWCX/SWFWCX_YSBZ" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
         if (title === "喷绘招牌")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/SHFWCX/SHFWCX_PHZP" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/SWFWCX/SWFWCX_PHZP" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
         if (title === "设计策划")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/SHFWCX/SHFWCX_SJCH" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/SWFWCX/SWFWCX_SJCH" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
         if (title === "广告传媒")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/SHFWCX/SHFWCX_GGCM" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/SWFWCX/SWFWCX_GGCM" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
         if (title === "展会服务")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/SHFWCX/SHFWCX_ZHFW" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/SWFWCX/SWFWCX_ZHFW" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
         if (title === "礼品定制")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/SHFWCX/SHFWCX_LPDZ" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/SWFWCX/SWFWCX_LPDZ" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
         if (title === "庆典服务")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/SHFWCX/SHFWCX_QDFW" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/SWFWCX/SWFWCX_QDFW" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
         if (title === "网络布线")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/SHFWCX/SHFWCX_WLBX" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/SWFWCX/SWFWCX_WLBX" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
     }
     html += '</ul>';
     html += '</div>';
@@ -135,8 +135,26 @@ function LoadItem(title, list, districts) {
     html += '<p class="p_body_middle_item_right">' + title + '</p>';
     html += '<ul class="ul_body_middle_item_right">';
     for (var i = 0; i < (list.length < 8 ? list.length : 8) ; i++) {
-        html += LoadInfo(list[i]);
-
+        if (title === "工商注册")
+            html += LoadInfo(list[i], "SWFWXX_GSZC");
+        if (title === "商标专利")
+            html += LoadInfo(list[i], "SWFWXX_SBZL");
+        if (title === "印刷包装")
+            html += LoadInfo(list[i], "SWFWXX_YSBZ");
+        if (title === "喷绘招牌")
+            html += LoadInfo(list[i], "SWFWXX_PHZP");
+        if (title === "设计策划")
+            html += LoadInfo(list[i], "SWFWXX_SJCH");
+        if (title === "广告传媒")
+            html += LoadInfo(list[i], "SWFWXX_GGCM");
+        if (title === "展会服务")
+            html += LoadInfo(list[i], "SWFWXX_ZHFW");
+        if (title === "礼品定制")
+            html += LoadInfo(list[i], "SWFWXX_LPDZ");
+        if (title === "庆典服务")
+            html += LoadInfo(list[i], "SWFWXX_QDFW");
+        if (title === "网络布线")
+            html += LoadInfo(list[i], "SWFWXX_WLBX");
     }
     html += '</ul>';
 
@@ -146,9 +164,9 @@ function LoadItem(title, list, districts) {
     $("#div_body_middle").append(html);
 }
 //加载生活服务信息
-function LoadInfo(obj) {
+function LoadInfo(obj, type) {
     var html = "";
-    html += ('<li onclick="OpenXXXX(\'SWFWXX_BJ\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
+    html += ('<li onclick="OpenXXXX(\'' + type + '\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
     html += ('<img class="img_li_body_middle_item_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_middle_item_right_xq" style="height:40px">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_middle_item_right_cs">' + obj.QY + ' - ' + obj.DD + '</p>');

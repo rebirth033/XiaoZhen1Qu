@@ -7,7 +7,15 @@ $(document).ready(function () {
 //加载条件
 function LoadZSJMCondition() {
     LoadConditionByTypeNames("'文体/母婴/儿童类别','投资金额'", "CODES_ZSJM", "类别,投资金额", "LB,TZJE", "100,100");
-    LoadBody("ZSJMXX_MYET", currentIndex);
+}
+//加载URL查询条件
+function LoadURLCondition() {
+    if (getUrlParam("LB") !== null)
+        SelectURLCondition(getUrlParam("LB"));
+    else if (getUrlParam("QY") !== null)
+        SelectURLCondition(getUrlParam("QY"));
+    else
+        LoadBody("ZSJMXX_MYET", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -21,6 +29,15 @@ function SelectCondition(obj, name) {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
+    LoadBody("ZSJMXX_MYET", currentIndex);
+    ShowSelectCondition("ZSJMXX_MYET");
+}
+//选择URL条件
+function SelectURLCondition(obj) {
+    $("#" + obj).parent().find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $("#" + obj).addClass("li_condition_body_active");
     LoadBody("ZSJMXX_MYET", currentIndex);
     ShowSelectCondition("ZSJMXX_MYET");
 }

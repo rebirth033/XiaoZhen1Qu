@@ -7,7 +7,15 @@ $(document).ready(function () {
 //加载条件
 function LoadZSJMCondition() {
     LoadConditionByTypeNames("'农业类别','投资金额'", "CODES_ZSJM", "类别,投资金额", "LB,TZJE", "100,100");
-    LoadBody("ZSJMXX_NY", currentIndex);
+}
+//加载URL查询条件
+function LoadURLCondition() {
+    if (getUrlParam("LB") !== null)
+        SelectURLCondition(getUrlParam("LB"));
+    else if (getUrlParam("QY") !== null)
+        SelectURLCondition(getUrlParam("QY"));
+    else
+        LoadBody("ZSJMXX_NY", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -21,6 +29,15 @@ function SelectCondition(obj, name) {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
+    LoadBody("ZSJMXX_NY", currentIndex);
+    ShowSelectCondition("ZSJMXX_NY");
+}
+//选择URL条件
+function SelectURLCondition(obj) {
+    $("#" + obj).parent().find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $("#" + obj).addClass("li_condition_body_active");
     LoadBody("ZSJMXX_NY", currentIndex);
     ShowSelectCondition("ZSJMXX_NY");
 }

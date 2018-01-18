@@ -6,8 +6,16 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadZSJMCondition() {
-    LoadConditionByTypeNames("'礼品商品类别','投资金额'", "CODES_ZSJM", "类别,投资金额", "LB,TZJE", "100,100");
-    LoadBody("ZSJMXX_LPSP", currentIndex);
+    LoadConditionByTypeNames("'礼品饰品类别','投资金额'", "CODES_ZSJM", "类别,投资金额", "LB,TZJE", "100,100");
+}
+//加载URL查询条件
+function LoadURLCondition() {
+    if (getUrlParam("LB") !== null)
+        SelectURLCondition(getUrlParam("LB"));
+    else if (getUrlParam("QY") !== null)
+        SelectURLCondition(getUrlParam("QY"));
+    else
+        LoadBody("ZSJMXX_LPSP", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -21,6 +29,15 @@ function SelectCondition(obj, name) {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
+    LoadBody("ZSJMXX_LPSP", currentIndex);
+    ShowSelectCondition("ZSJMXX_LPSP");
+}
+//选择URL条件
+function SelectURLCondition(obj) {
+    $("#" + obj).parent().find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $("#" + obj).addClass("li_condition_body_active");
     LoadBody("ZSJMXX_LPSP", currentIndex);
     ShowSelectCondition("ZSJMXX_LPSP");
 }
