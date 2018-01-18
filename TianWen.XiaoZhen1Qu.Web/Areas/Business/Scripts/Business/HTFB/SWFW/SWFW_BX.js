@@ -6,7 +6,7 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("保险类别", "LB", "CODES_SWFW", Bind, "OUTLB", "LB", "");
+            LoadCODESByTYPENAME("保险服务类别", "LB", "CODES_SWFW", Bind, "OUTLB", "LB", "");
         }
         if (type === "XL") {
             LoadXL();

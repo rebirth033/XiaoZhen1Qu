@@ -7,8 +7,15 @@ $(document).ready(function () {
 //加载条件
 function LoadSWFWCondition() {
     LoadConditionByTypeNames("'机械设备维修类别'", "CODES_SWFW", "类别", "LB", "100");
-    LoadDistrict("福州", "350100", "QY");
-    LoadBody("SWFWXX_JXSBWX", currentIndex);
+}
+//加载URL查询条件
+function LoadURLCondition() {
+    if (getUrlParam("LB") !== null)
+        SelectURLCondition(getUrlParam("LB"));
+    else if (getUrlParam("QY") !== null)
+        SelectURLCondition(getUrlParam("QY"));
+    else
+        LoadBody("SWFWXX_DBQZQZ", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -16,6 +23,15 @@ function SelectCondition(obj, name) {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
+    LoadBody("SWFWXX_JXSBWX", currentIndex);
+    ShowSelectCondition("SWFWXX_JXSBWX");
+}
+//选择URL条件
+function SelectURLCondition(obj) {
+    $("#" + obj).parent().find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $("#" + obj).addClass("li_condition_body_active");
     LoadBody("SWFWXX_JXSBWX", currentIndex);
     ShowSelectCondition("SWFWXX_JXSBWX");
 }

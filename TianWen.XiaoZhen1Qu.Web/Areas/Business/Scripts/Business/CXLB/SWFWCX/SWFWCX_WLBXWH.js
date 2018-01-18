@@ -7,7 +7,15 @@ $(document).ready(function () {
 //加载条件
 function LoadSWFWCondition() {
     LoadConditionByTypeNames("'网络布线/维护类别'", "CODES_SWFW", "类别", "LB", "100");
-    LoadBody("SWFWXX_WLBXWH", currentIndex);
+}
+//加载URL查询条件
+function LoadURLCondition() {
+    if (getUrlParam("LB") !== null)
+        SelectURLCondition(getUrlParam("LB"));
+    else if (getUrlParam("QY") !== null)
+        SelectURLCondition(getUrlParam("QY"));
+    else
+        LoadBody("SWFWXX_WLBXWH", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -21,6 +29,15 @@ function SelectCondition(obj, name) {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
+    LoadBody("SWFWXX_WLBXWH", currentIndex);
+    ShowSelectCondition("SWFWXX_WLBXWH");
+}
+//选择URL条件
+function SelectURLCondition(obj) {
+    $("#" + obj).parent().find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $("#" + obj).addClass("li_condition_body_active");
     LoadBody("SWFWXX_WLBXWH", currentIndex);
     ShowSelectCondition("SWFWXX_WLBXWH");
 }

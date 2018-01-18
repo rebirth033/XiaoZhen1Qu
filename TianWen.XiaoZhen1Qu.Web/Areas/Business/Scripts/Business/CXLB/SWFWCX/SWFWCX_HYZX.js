@@ -7,7 +7,15 @@ $(document).ready(function () {
 //加载条件
 function LoadSWFWCondition() {
     LoadConditionByTypeNames("'运送范围','货运通道'", "CODES_SWFW", "运送范围,货运通道", "YSFW,HYTD", "100,100");
-    LoadBody("SWFWXX_HYZX", currentIndex);
+}
+//加载URL查询条件
+function LoadURLCondition() {
+    if (getUrlParam("LB") !== null)
+        SelectURLCondition(getUrlParam("LB"));
+    else if (getUrlParam("QY") !== null)
+        SelectURLCondition(getUrlParam("QY"));
+    else
+        LoadBody("SWFWXX_HYZX", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -21,6 +29,15 @@ function SelectCondition(obj, name) {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
+    LoadBody("SWFWXX_HYZX", currentIndex);
+    ShowSelectCondition("SWFWXX_HYZX");
+}
+//选择URL条件
+function SelectURLCondition(obj) {
+    $("#" + obj).parent().find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $("#" + obj).addClass("li_condition_body_active");
     LoadBody("SWFWXX_HYZX", currentIndex);
     ShowSelectCondition("SWFWXX_HYZX");
 }
