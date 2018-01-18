@@ -20,7 +20,7 @@ function OpenCXLB(lbid, lburl, condition) {
 function OpenXXXX(TYPE, ID, LBID) {
     window.open(getRootPath() + "/Business/" + TYPE.split('_')[0] + "/" + TYPE + "?ID=" + ID + "&LBID=" + LBID + "&TYPE=" + TYPE);
 }
-//加载招商加盟类别
+//加载教育培训类别
 function LoadTOP() {
     $.ajax({
         type: "POST",
@@ -76,15 +76,15 @@ function LoadDefault() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                LoadItem("商超设备", xml.scsbs, xml.districts);
-                LoadItem("化学品", xml.hxps, xml.districts);
-                LoadItem("电子器件", xml.dzqjs, xml.districts);
-                LoadItem("灯具照明", xml.djzms, xml.districts);
-                LoadItem("食品", xml.sps, xml.districts);
-                LoadItem("礼品", xml.lps, xml.districts);
-                LoadItem("服装鞋包", xml.fzxbs, xml.districts);
-                LoadItem("珠宝饰品", xml.zbsps, xml.districts);
-                LoadItem("手机数码", xml.sjsms, xml.districts);
+                LoadItem("家教机构", xml.jjjgs, xml.districts);
+                LoadItem("语言培训", xml.yypxs, xml.districts);
+                LoadItem("艺术培训", xml.yspxs, xml.districts);
+                LoadItem("职业技能培训", xml.zyjnpxs, xml.districts);
+                LoadItem("体育培训", xml.typxs, xml.districts);
+                LoadItem("学历教育", xml.xljys, xml.districts);
+                LoadItem("IT培训", xml.itpxs, xml.districts);
+                LoadItem("设计培训", xml.sjpxs, xml.districts);
+                LoadItem("管理培训", xml.glpxs, xml.districts);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -100,24 +100,24 @@ function LoadItem(title, list, districts) {
     html += '<p class="p_body_middle_item_left">' + title + '</p>';
     html += '<ul class="ul_body_middle_item_left">';
     for (var i = 0; i < (districts.length > 14 ? 14 : districts.length) ; i++) {
-        if (title === "商超设备")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/JYPXCX/JYPXCX_SCSB" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
-        if (title === "化学品")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/JYPXCX/JYPXCX_HXP" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
-        if (title === "电子器件")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/JYPXCX/JYPXCX_DZQJ" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
-        if (title === "灯具照明")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/JYPXCX/JYPXCX_DJZM" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
-        if (title === "食品")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/JYPXCX/JYPXCX_SP" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
-        if (title === "礼品")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/JYPXCX/JYPXCX_LP" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
-        if (title === "服装鞋包")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/JYPXCX/JYPXCX_FZXB" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
-        if (title === "珠宝饰品")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/JYPXCX/JYPXCX_ZBSP" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
-        if (title === "手机数码")
-            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/JYPXCX/JYPXCX_SJSM" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+        if (title === "家教机构")
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/JYPXCX/JYPXCX_JJJG" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+        if (title === "语言培训")
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/JYPXCX/JYPXCX_YYPX" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+        if (title === "艺术培训")
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/JYPXCX/JYPXCX_YSPX" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+        if (title === "职业技能培训")
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/JYPXCX/JYPXCX_ZYJNPX" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+        if (title === "体育培训")
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/JYPXCX/JYPXCX_TYPX" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+        if (title === "学历教育")
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/JYPXCX/JYPXCX_XLJY" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+        if (title === "IT培训")
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/JYPXCX/JYPXCX_ITPX" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+        if (title === "设计培训")
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/JYPXCX/JYPXCX_SJPX" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
+        if (title === "管理培训")
+            html += '<li class="li_body_middle_item_left" onclick="OpenCXLB(' + list[0].LBID + ', \'' + "/JYPXCX/JYPXCX_GLPX" + '\', \'QY=' + districts[i].CODEID + '\')">' + districts[i].CODENAME + '</li>';
     }
     html += '</ul>';
     html += '</div>';
@@ -126,24 +126,24 @@ function LoadItem(title, list, districts) {
     html += '<p class="p_body_middle_item_right">' + title + '</p>';
     html += '<ul class="ul_body_middle_item_right">';
     for (var i = 0; i < (list.length < 8 ? list.length : 8) ; i++) {
-        if (title === "商超设备")
-            html += LoadInfo(list[i], "JYPXXX_SCSB");
-        if (title === "化学品")
-            html += LoadInfo(list[i], "JYPXXX_HXP");
-        if (title === "电子器件")
-            html += LoadInfo(list[i], "JYPXXX_DZQJ");
-        if (title === "灯具照明")
-            html += LoadInfo(list[i], "JYPXXX_DJZM");
-        if (title === "食品")
-            html += LoadInfo(list[i], "JYPXXX_SP");
-        if (title === "礼品")
-            html += LoadInfo(list[i], "JYPXXX_LP");
-        if (title === "服装鞋包")
-            html += LoadInfo(list[i], "JYPXXX_FZXB");
-        if (title === "珠宝饰品")
-            html += LoadInfo(list[i], "JYPXXX_ZBSP");
-        if (title === "手机数码")
-            html += LoadInfo(list[i], "JYPXXX_SJSM");
+        if (title === "家教机构")
+            html += LoadInfo(list[i], "JYPXXX_JJJG");
+        if (title === "语言培训")
+            html += LoadInfo(list[i], "JYPXXX_YYPX");
+        if (title === "艺术培训")
+            html += LoadInfo(list[i], "JYPXXX_YSPX");
+        if (title === "职业技能培训")
+            html += LoadInfo(list[i], "JYPXXX_ZYJNPX");
+        if (title === "体育培训")
+            html += LoadInfo(list[i], "JYPXXX_TYPX");
+        if (title === "学历教育")
+            html += LoadInfo(list[i], "JYPXXX_XLJY");
+        if (title === "IT培训")
+            html += LoadInfo(list[i], "JYPXXX_ITPX");
+        if (title === "设计培训")
+            html += LoadInfo(list[i], "JYPXXX_SJPX");
+        if (title === "管理培训")
+            html += LoadInfo(list[i], "JYPXXX_GLPX");
     }
     html += '</ul>';
 
@@ -152,7 +152,7 @@ function LoadItem(title, list, districts) {
     html += '</div>';
     $("#div_body_middle").append(html);
 }
-//加载生活服务信息
+//加载教育培训信息
 function LoadInfo(obj, type) {
     var html = "";
     html += ('<li onclick="OpenXXXX(\'' + type + '\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
