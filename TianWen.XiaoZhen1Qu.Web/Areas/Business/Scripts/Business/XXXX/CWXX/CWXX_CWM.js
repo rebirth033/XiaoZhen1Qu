@@ -104,7 +104,7 @@ function LoadXQ(obj, BCMSString) {
     html += ('<ul class="ul_body_left_body_xq_xx">');
     for (var i = 0; i < obj.PHOTOS.length; i++) {
         html += ('<li class="li_body_left_body_xq_xx">');
-        html += ('<img class="img_body_left_body_xq_xx" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[i].PHOTONAME + "?j=" + Math.random() + '" />');
+        html += ('<img id="img_body_left_body_xq_xx' + i + '" class="img_body_left_body_xq_xx" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[i].PHOTONAME + "?j=" + Math.random() + '" />');
         html += ('</li>');
     }
     html += ('</ul>');
@@ -124,8 +124,13 @@ function LoadXQ(obj, BCMSString) {
         $("#div_body_left_body_xq_xx").css("height", "710px");
         $("#div_body_left_body_xq_zk").css("display", "block");
     }
-}
 
+    $(".img_body_left_body_xq_xx").each(function () {
+        var natural = getNaturalSize($("#" + this.id)[0]);
+        $("#" + this.id).css("width", (natural.width > 405 ? 405 : natural.width));
+        $("#" + this.id).css("height", (natural.height > 350 ? 350 : natural.height));
+    });
+}
 //加载猜你喜欢
 function LoadCNXH(TYPE) {
     $.ajax({
