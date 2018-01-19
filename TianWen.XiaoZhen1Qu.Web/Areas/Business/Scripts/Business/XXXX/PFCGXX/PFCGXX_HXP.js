@@ -84,7 +84,7 @@ function LoadXQ(obj, BCMSString) {
     html += ('<ul class="ul_body_left_body_xq_xx">');
     for (var i = 0; i < obj.PHOTOS.length; i++) {
         html += ('<li class="li_body_left_body_xq_xx">');
-        html += ('<img class="img_body_left_body_xq_xx" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[i].PHOTONAME + "?j=" + Math.random() + '" />');
+        html += ('<img id="img_body_left_body_xq_xx' + i + '" class="img_body_left_body_xq_xx" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[i].PHOTONAME + "?j=" + Math.random() + '" />');
         html += ('</li>');
     }
     html += ('</ul>');
@@ -98,12 +98,17 @@ function LoadXQ(obj, BCMSString) {
     if (parseInt(RTrimStr($("#div_body_left_body_xq_xx_bcms").css("height"), "px")) > 300) {
         $("#div_body_left_body_xq_xx_bcms").css("height", "300px").css("overflow", "hidden");
         $("#zk").append('<div id="div_body_left_body_xq_zk_bcms" onclick="ToggleBCMS()" class="div_body_left_body_xq_zk_bcms">展开内容<i id="i_body_left_body_xq_zk_bcms" class="i_body_left_body_xq_zk_bcms"></i></div>');
-    }
-
-    if (obj.PHOTOS.length > 4) {
+    }    	
+	if (obj.PHOTOS.length > 4) {
         $("#div_body_left_body_xq_xx").css("height", "710px");
         $("#div_body_left_body_xq_zk").css("display", "block");
     }
+
+    $(".img_body_left_body_xq_xx").each(function () {
+        var natural = getNaturalSize($("#" + this.id)[0]);
+        $("#" + this.id).css("width", (natural.width > 405 ? 405 : natural.width));
+        $("#" + this.id).css("height", (natural.height > 350 ? 350 : natural.height));
+    });
 }
 //加载猜你喜欢
 function LoadCNXH(TYPE) {

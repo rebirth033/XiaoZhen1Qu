@@ -118,12 +118,17 @@ function LoadXQ(obj, BCMSString) {
     if (parseInt(RTrimStr($("#div_body_left_body_xq_xx_bcms").css("height"), "px")) > 300) {
         $("#div_body_left_body_xq_xx_bcms").css("height", "300px").css("overflow", "hidden");
         $("#zk").append('<div id="div_body_left_body_xq_zk_bcms" onclick="ToggleBCMS()" class="div_body_left_body_xq_zk_bcms">展开内容<i id="i_body_left_body_xq_zk_bcms" class="i_body_left_body_xq_zk_bcms"></i></div>');
-    }
-
-    if (obj.PHOTOS.length > 4) {
+    }    	
+	if (obj.PHOTOS.length > 4) {
         $("#div_body_left_body_xq_xx").css("height", "710px");
         $("#div_body_left_body_xq_zk").css("display", "block");
     }
+
+    $(".img_body_left_body_xq_xx").each(function () {
+        var natural = getNaturalSize($("#" + this.id)[0]);
+        $("#" + this.id).css("width", (natural.width > 405 ? 405 : natural.width));
+        $("#" + this.id).css("height", (natural.height > 350 ? 350 : natural.height));
+    });
 
     $(".img_body_left_body_xq_xx").each(function () {
         var natural = getNaturalSize($("#" + this.id)[0]);
