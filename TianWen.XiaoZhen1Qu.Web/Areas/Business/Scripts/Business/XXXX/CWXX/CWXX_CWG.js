@@ -36,7 +36,9 @@ function LoadJBXX(obj) {
     html += ('</div>');
     html += ('<div class="div_body_left_body">');
     html += ('<div class="div_body_left_body_left">');
+    html += ('<div class="div_body_left_body_left_img">');
     html += ('<img id="img_body_left_body_left_show" class="img_body_left_body_left_show" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
+    html += ('</div>');
     html += ('<span onclick="LeftImg()" class="div_body_left_body_left_list_an" style="margin-right: 10px;"><</span>');
     html += ('<div class="div_body_left_body_left_list">');
     html += ('<ul id="ul_body_left_body_left_list" class="ul_body_left_body_left_list">');
