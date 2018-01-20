@@ -93,11 +93,10 @@ function LoadSY_ML() {
                 LoadSY_ML_CWInfo(xml.list, xml.xzq, "CW");
                 LoadSY_MLInfo(xml.list, xml.xzq, "ZP");
                 LoadSY_ML_WXLInfo(xml.list, xml.xzq, "ZSJM");
-                LoadSY_ML_WXLInfo(xml.list, xml.xzq, "PX");
                 LoadSY_ML_SHFWInfo(xml.list, xml.xzq, "SHFW");
                 LoadSY_ML_WXLInfo(xml.list, xml.xzq, "JYPX");
                 LoadSY_ML_WXLInfo(xml.list, xml.xzq, "PFCG");
-                LoadSY_MLInfo(xml.list, xml.xzq, "SWFW");
+                LoadSY_ML_SHFWInfo(xml.list, xml.xzq, "SWFW");
                 LoadSY_MLInfo(xml.list, xml.xzq, "ES");
                 $("#p_body_middle_left_title_FC").css("border-bottom", "2px solid #59d072");
                 $("#p_body_middle_left_title_CL").css("border-bottom", "2px solid #44eea6");
@@ -199,9 +198,9 @@ function LoadSY_ML_WXLInfo(list, xzq, typename) {
             for (var j = 0; j < list.length; j++) {
                 if (list[j].PARENTID === list[i].ID) {
                     if (list[j].ISHOT === "是")
-                        html += ('<li class="li_body_middle_left_section orange" onclick="OpenCXLB(' + list[j].LBID + ',\'' + list[j].LBURL + '\',\'' + list[j].CONDITION + '\')">' + list[j].LBNAME + '</li>');
+                        html += ('<li style="width:90px;" class="li_body_middle_left_section orange" onclick="OpenCXLB(' + list[j].LBID + ',\'' + list[j].LBURL + '\',\'' + list[j].CONDITION + '\')">' + list[j].LBNAME + '</li>');
                     else
-                        html += ('<li class="li_body_middle_left_section" onclick="OpenCXLB(' + list[j].LBID + ',\'' + list[j].LBURL + '\',\'' + list[j].CONDITION + '\')">' + list[j].LBNAME + '</li>');
+                        html += ('<li style="width:90px;" class="li_body_middle_left_section" onclick="OpenCXLB(' + list[j].LBID + ',\'' + list[j].LBURL + '\',\'' + list[j].CONDITION + '\')">' + list[j].LBNAME + '</li>');
                 }
             }
             html += ('</ul>');
@@ -217,11 +216,11 @@ function GetHeight(list, parentid, typename) {
             count++;
         }
     }
-    if (typename === "FC" || typename === "CL" || typename === "ZP" || typename === "ES" || typename === "SWFW") {
+    if (typename === "FC" || typename === "CL" || typename === "ZP" || typename === "ES") {
         height = parseInt((count / 7)) * 30;
         if (count % 7 !== 0) height += 30;
     }
-    else if(typename === "SHFW"){
+    else if (typename === "SHFW" || typename === "SWFW") {
         height = parseInt((count / 6)) * 30;
         if (count % 6 !== 0) height += 30;
     }

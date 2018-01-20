@@ -6,7 +6,7 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LX") {
-            LoadCODESByTYPENAME("婚庆用品类型", "LX", "CODES_HQSY", Bind, "OUTLB", "LX", "");
+            LoadCODESByTYPENAME("婚庆用品类别", "LX", "CODES_HQSY", Bind, "OUTLB", "LX", "");
         }
         if (type === "XL") {
             LoadXL();

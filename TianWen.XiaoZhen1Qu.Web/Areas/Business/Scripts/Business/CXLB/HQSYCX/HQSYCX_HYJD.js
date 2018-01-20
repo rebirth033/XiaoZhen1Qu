@@ -7,16 +7,18 @@ $(document).ready(function () {
 //加载条件
 function LoadHQSYCondition() {
     LoadConditionByTypeNames("'婚宴酒店价格范围','婚宴酒店酒店类型','婚宴酒店容纳桌数','婚宴酒店婚礼类型'", "CODES_HQSY", "价格范围,酒店类型,容纳桌数,婚礼类型", "JGFW,JDLX,RNZS,HLLX", "15,15,15,15");
-    LoadBody("HQSYXX_HYJD", currentIndex);
+}
+//加载URL查询条件
+function LoadURLCondition() {
+    if (getUrlParam("HLLX") !== null)
+        SelectURLCondition(getUrlParam("HLLX"));
+    else if (getUrlParam("QY") !== null)
+        SelectURLCondition(getUrlParam("QY"));
+    else
+        LoadBody("HQSYXX_HYJD", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
-    if (name === "类别" && (obj.innerHTML !== "酒店管理" && obj.innerHTML !== "工程管理" && obj.innerHTML !== "素质拓展" && obj.innerHTML !== "总裁研修")) {
-        LoadConditionByParentID(obj.id, "CODES_HQSY", "小类", "XL",100);
-    }
-    if (name === "类别" && (obj.innerHTML === "酒店管理" || obj.innerHTML === "工程管理" || obj.innerHTML === "素质拓展" || obj.innerHTML === "总裁研修")) {
-        $("#ul_condition_body_XL").remove();
-    }
     $(obj).parent().find(".li_condition_body").each(function () {
         $(this).removeClass("li_condition_body_active");
     });
@@ -24,10 +26,19 @@ function SelectCondition(obj, name) {
     LoadBody("HQSYXX_HYJD", currentIndex);
     ShowSelectCondition("HQSYXX_HYJD");
 }
+//选择URL条件
+function SelectURLCondition(obj) {
+    $("#" + obj).parent().find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $("#" + obj).addClass("li_condition_body_active");
+    LoadBody("HQSYXX_HYJD", currentIndex);
+    ShowSelectCondition("HQSYXX_HYJD");
+}
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("JGFW,XL,CD,QY");
+    var condition = GetAllCondition("JGFW,JDLX,RNZS,HLLX,QY");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/HQSYCX/LoadHQSYXX",
