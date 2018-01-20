@@ -883,5 +883,36 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 return new { Result = EnResultType.Failed, Message = "加载失败" };
             }
         }
+
+        //根据汉字获取关键字
+        public object LoadKeyWordByHZ(string SS, string XZQ)
+        {
+            try
+            {
+                DataTable list = DAO.Repository.GetDataTable(String.Format("select codename from (select codename from codes_fc union select codename from codes_cl union select codename from codes_cw union select codename from codes_es_sjsm union select codename from codes_es_jdjjbg union select codename from codes_es_myfzmr union select codename from codes_es_pwkq union select codename from codes_es_qtes union select codename from codes_es_whyl union select codename from codes_hqsy union select codename from codes_jypx union select codename from codes_lyjd union select codename from codes_nlmfy union select codename from codes_pfcg union select codename from codes_qzzp union select codename from codes_shfw union select codename from codes_swfw union select codename from codes_xxyl union select codename from codes_zsjm union select codename from codes_zxjc) where codename like '%{0}%'", SS, XZQ));
+                IList<CODES_FC> result = list.DataTableToList<CODES_FC>();
+                return new { Result = EnResultType.Success, list = result };
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("error", ex.Message);
+                return new { Result = EnResultType.Failed, Message = "加载失败" };
+            }
+        }
+
+        //根据拼音获取关键字
+        public object LoadKeyWordByPY(string SS, string XZQ)
+        {
+            try
+            {
+                IList<CODES_FC> list = DAO.Repository.GetObjectList<CODES_FC>(String.Format("select codename from codes_fc union select codename from codes_cl union select codename from codes_cw union select codename from codes_es_sjsm union select codename from codes_es_jdjjbg union select codename from codes_es_myfzmr union select codename from codes_es_pwkq union select codename from codes_es_qtes union select codename from codes_es_whyl union select codename from codes_hqsy union select codename from codes_jypx union select codename from codes_lyjd union select codename from codes_nlmfy union select codename from codes_pfcg union select codename from codes_qzzp union select codename from codes_shfw union select codename from codes_swfw union select codename from codes_xxyl union select codename from codes_zsjm union select codename from codes_zxjc where codename like '%{0}%'", SS, XZQ));
+                return new { Result = EnResultType.Success, list = list };
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("error", ex.Message);
+                return new { Result = EnResultType.Failed, Message = "加载失败" };
+            }
+        }
     }
 }

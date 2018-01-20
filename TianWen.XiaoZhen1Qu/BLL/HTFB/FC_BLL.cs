@@ -640,7 +640,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
-        //根据汉子获取小区基本信息
+        //根据汉字获取小区基本信息
         public object LoadXQJBXXSByHZ(string XQMC, string XZQ)
         {
             try

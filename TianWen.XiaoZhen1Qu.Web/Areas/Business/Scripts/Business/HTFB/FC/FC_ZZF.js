@@ -191,6 +191,14 @@ function GetStartIndex(pys, sqmc) {
 function GetStartIndexBySZM(pyszm, sqmc) {
     return pyszm.indexOf(sqmc);
 }
+//选择小区名称
+function SelectXQMC(obj) {
+    var array = obj.innerText.split(' ');
+    $("#XQMC").val(array[0]);
+    $("#XQDZ").val(array[0]);
+    $("#divXQMClist").css("display", "none");
+    ValidateXQMC();
+}
 //加载多选
 function LoadDuoX(type, id) {
     $.ajax({
@@ -232,14 +240,6 @@ function LoadDuoX(type, id) {
 
         }
     });
-}
-//选择小区名称
-function SelectXQMC(obj) {
-    var array = obj.innerText.split(' ');
-    $("#XQMC").val(array[0]);
-    $("#XQDZ").val(array[0]);
-    $("#divXQMClist").css("display", "none");
-    ValidateXQMC();
 }
 //加载
 function LoadJBXX() {

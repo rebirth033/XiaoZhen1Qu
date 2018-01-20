@@ -46,5 +46,9 @@ namespace TianWen.XiaoZhen1Qu.Interface
         object LoadPFCGTOP(string XZQDM, string XZQ);
 
         object LoadPFCGSY(string XZQDM, string XZQ);
+
+        object LoadKeyWordByHZ(string SS, string XZQ);
+
+        object LoadKeyWordByPY(string SS, string XZQ);
     }
 }

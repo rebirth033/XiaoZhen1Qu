@@ -8,6 +8,7 @@ $(document).ready(function () {
     $(".img_head_left_logo").css("margin-left", "20px");
     $("#li_head_sy").css("background", "#bc6ba6").css("color", "#ffffff");
     $("#div_yhm").bind("click", ShowWDXX);
+    $("#SS").bind("keyup", LoadSSJG);
     LoadDefault();
 });
 //首页获取title
@@ -240,4 +241,176 @@ function OpenCXLB(lbid, lburl, condition) {
 //打开二级首页
 function ToEJSY(type) {
     window.open(getRootPath() + "/Business/SY/" + type);
+}
+//加载搜索结果
+function LoadSSJG() {
+    if (event.keyCode === 40) {//按下
+        var lis = $("#divSSJGlist").find("li");
+        for (var i = 0; i < lis.length; i++) {
+            if ($("#divSSJGlist").find("li:eq(" + i + ")").css("background-color") === "rgb(236, 236, 236)") {
+                $("#divSSJGlist").find("li:eq(" + i + ")").css("background-color", "#FFFFFF");
+                $("#divSSJGlist").find("li:eq(" + i + ")").bind("mouseover", function () { $(this).css("background-color", "#ececec"); });
+                $("#divSSJGlist").find("li:eq(" + i + ")").bind("mouseleave", function () { $(this).css("background-color", "#FFFFFF"); });
+                $("#divSSJGlist").find("li:eq(" + (i + 1) + ")").css("background-color", "#ececec");
+                return;
+            }
+        }
+        $("#divSSJGlist").find("li:eq(0)").css("background-color", "#ececec");
+        return;
+    }
+    if (event.keyCode === 38) {//按上
+        var lis = $("#divSSJGlist").find("li");
+        for (var i = 0; i < lis.length; i++) {
+            if ($("#divSSJGlist").find("li:eq(" + i + ")").css("background-color") === "rgb(236, 236, 236)") {
+                if (i !== 0)
+                    $("#divSSJGlist").find("li:eq(" + (i - 1) + ")").css("background-color", "#ececec");
+                $("#divSSJGlist").find("li:eq(" + i + ")").css("background-color", "#FFFFFF");
+                $("#divSSJGlist").find("li:eq(" + i + ")").bind("mouseover", function () { $(this).css("background-color", "#ececec"); });
+                $("#divSSJGlist").find("li:eq(" + i + ")").bind("mouseleave", function () { $(this).css("background-color", "#FFFFFF"); });
+                return;
+            }
+        }
+        $("#divSSJGlist").find("li:eq(" + (lis.length - 1) + ")").css("background-color", "#ececec");
+        return;
+    }
+    if (event.keyCode === 13) {//回车
+        var lis = $("#divSSJGlist").find("li");
+        for (var i = 0; i < lis.length; i++) {
+            if ($("#divSSJGlist").find("li:eq(" + i + ")").css("background-color") === "rgb(236, 236, 236)") {
+                SelectSSJG($("#divSSJGlist").find("li:eq(" + i + ")")[0]);
+                return;
+            }
+        }
+    }
+    var SS = $("#SS").val();
+    if (SS === "") {
+        $("#divSSJGlist").css("display", "none");
+        return;
+    }
+    if (ValidateChinese(SS)) //判断是否是汉字
+        LoadKeyWordByHZ(SS);
+    else
+        LoadKeyWordByPY(SS);
+}
+//根据汉字获取关键字
+function LoadKeyWordByHZ(SS) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/SY/LoadKeyWordByHZ",
+        dataType: "json",
+        data:
+        {
+            SS: SS
+        },
+        success: function (xml) {
+            if (xml.Result === 1 && xml.list.length > 0) {
+                var html = "<ul id='ulSSJG' class='ul_select' style='height:" + (xml.list.length * 34.5) + "px;'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    var index = xml.list[i].CODENAME.indexOf(SS);
+                    var xqmclength = SS.length;
+                    var xqmchtml = "";
+                    if (index === 0)
+                        xqmchtml = "<span style='color:#333333;font-weight:bolder;'>" + SS + "</span>" + "<span style='color:#333333'>" + xml.list[i].CODENAME.substr(xqmclength, xml.list[i].CODENAME.length - SS.length) + "</span>";
+                    else {
+                        xqmchtml = "<span style='color:#333333'>" + xml.list[i].CODENAME.substr(0, index) + "</span>" + "<span style='color:#333333;font-weight:bolder;'>" + xml.list[i].CODENAME.substr(index, xqmclength) + "</span>" + "<span style='color:#333333'>" + xml.list[i].CODENAME.substr(index + xqmclength, xml.list[i].CODENAME.length - index - xqmclength) + "</span>";
+                    }
+                    html += "<li class='li_select' onclick='SelectSSJG(this)'>" + xqmchtml + "&nbsp;&nbsp;<span style='color:#999999;font-size:12px;'>" + (xml.list[i].CODENAME === null ? "" : xml.list[i].CODENAME) + "</span>" + "</li>";
+                }
+                html += "</ul>";
+                $("#divSSJGlist").html(html);
+                $("#divSSJGlist").css("display", "block");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//根据拼音获取关键字
+function LoadKeyWordByPY(SS) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/SY/LoadKeyWordByPY",
+        dataType: "json",
+        data:
+        {
+            SS: SS
+        },
+        success: function (xml) {
+            if (xml.Result === 1 && xml.list.length > 0) {
+                var html = "<ul id='ulSS' class='ul_select' style='height: " + (xml.list.length * 34.5) + "px;width:594px;background-color:#ffffff'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    var index = 0;
+                    var pys = xml.list[i].SSPY.split(' ');
+                    var count = 0;
+                    var sySS = SS;
+
+                    if (xml.list[i].SSPYSZM != null && xml.list[i].SSPYSZM.indexOf(sySS) !== -1) {
+                        index = GetStartIndexBySZM(xml.list[i].SSPYSZM, sySS);
+                        count = sySS.length;
+                    }
+                    else {
+                        index = GetStartIndex(pys, sySS);
+                        for (var j = 0; j < pys.length; j++) {
+                            if (sySS.length > pys[j].length) {
+                                if (sySS.indexOf(pys[j]) !== -1) {
+                                    count++;
+                                    sySS = sySS.substr(pys[j].length, sySS.length - pys[j].length);
+                                }
+                            }
+                            else {
+                                if (pys[j].indexOf(sySS) !== -1 || pys[j].indexOf(sySS) !== -1) {
+                                    count++;
+                                    break;;
+                                }
+                            }
+                        }
+                    }
+                    var getlength = count;
+                    var SShtml = "";
+                    if (index === 0)
+                        SShtml = "<span style='color:#333333;font-weight:bolder;'>" + xml.list[i].SS.substr(0, getlength) + "</span>" + "<span style='color:#333333'>" + xml.list[i].SS.substr(getlength, xml.list[i].SS.length - getlength) + "</span>";
+                    else {
+                        SShtml = "<span style='color:#333333'>" + xml.list[i].SS.substr(0, index) + "</span>" + "<span style='color:#333333;font-weight:bolder;'>" + xml.list[i].SS.substr(index, getlength) + "</span>" + "<span style='color:#333333'>" + xml.list[i].SS.substr(index + getlength, xml.list[i].SS.length - index - getlength) + "</span>";
+                    }
+                    html += "<li class='li_select' onclick='SelectSS(this)'>" + SShtml + "&nbsp;&nbsp;<span style='color:#999999;font-size:12px;'>" + (xml.list[i].XQDZ === null ? "" : xml.list[i].XQDZ) + "</span>" + "</li>";
+                }
+                html += "</ul>";
+                $("#divSSJGlist").html(html);
+                $("#divSSJGlist").css("display", "block");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//获取开始索引
+function GetStartIndex(pys, sqmc) {
+    var index = 0;
+    for (var j = 0; j < pys.length; j++) {
+        if (sqmc.length > pys[j].length) {
+            if (sqmc.indexOf(pys[j]) !== -1) {
+                index = j;
+                break;;
+            }
+        }
+        else {
+            if (pys[j].indexOf(sqmc) !== -1 || pys[j].indexOf(sqmc) !== -1) {
+                index = j;
+                break;;
+            }
+        }
+    }
+    return index;
+}
+//根据首字母获取开始索引
+function GetStartIndexBySZM(pyszm, sqmc) {
+    return pyszm.indexOf(sqmc);
+}
+//选择关键字
+function SelectSSJG(obj) {
+    var array = obj.innerText.split(' ');
+    $("#SS").val(array[0]);
+    $("#divSSJGlist").css("display", "none");
 }

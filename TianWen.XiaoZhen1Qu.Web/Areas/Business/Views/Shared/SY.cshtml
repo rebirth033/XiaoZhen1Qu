@@ -17,7 +17,6 @@
     <script src="@Url.Content("~/Areas/Business/Scripts/Business/Common/Head.js")"></script>
     <script src=@Url.Content("~/Areas/Business/Scripts/Business/Common/CXLB_Common.js")></script>
     @RenderSection("Section_Head", false)
-
 }
 @section Section_Body {
     <div id="divTop" class="div_top">
@@ -58,6 +57,7 @@
                     <input class="span_spaninput_in" id="SS" type="text" placeholder="搜索 房子/车子/工作/服务" />
                     <span class="span_ss">搜索</span>
                 </span>
+                <div id="divSSJGlist" class="div_select_dropdown"></div>
             </div>
             <span class="span_fbxx" id="span_fbxx">免费发布信息</span>
         </div>
