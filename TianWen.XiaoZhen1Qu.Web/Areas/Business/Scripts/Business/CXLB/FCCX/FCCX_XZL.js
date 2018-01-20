@@ -4,6 +4,7 @@ $(document).ready(function () {
     $(".li_condition_head:eq(0)").each(function () { $(this).css("background-color", "#ffffff").css("color", "#bc6ba6"); });
     BindBodyNav();
     LoadCZCondition();
+    LoadHot("FCXX_XZL");
 });
 //绑定查询条件导航
 function BindConditionNav() {
@@ -66,11 +67,10 @@ function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
 function LoadURLCondition() {
     if (getUrlParam("MJ") !== null)
         SelectURLCondition(getUrlParam("MJ"));
+    else if (getUrlParam("XZLLX") !== null)
+        SelectURLCondition(getUrlParam("XZLLX"));
     else
-    {
         LoadBody("FCXX_XZL", currentIndex);
-    }
-    LoadHot("FCXX_XZL");
 }
 //选择条件
 function SelectCondition(obj, name) {
