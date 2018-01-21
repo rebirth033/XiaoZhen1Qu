@@ -5,6 +5,7 @@
     $(".div_bottom").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
     $("#li_head_sy").css("background", "#bc6ba6").css("color", "#ffffff");
     $("#div_yhm").bind("click", ShowWDXX);
+    LoadHeadSearch();
     //LoadDefault();
 });
 //打开查询列表
@@ -17,6 +18,22 @@ function OpenCXLB(lbid, lburl, condition) {
 //打开详细页面
 function OpenXXXX(TYPE, ID, LBID) {
     window.open(getRootPath() + "/Business/" + TYPE.split('_')[0] + "/" + TYPE + "?ID=" + ID + "&LBID=" + LBID + "&TYPE=" + TYPE);
+}
+//加载头部搜索栏关键字
+function LoadHeadSearch() {
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenCXLB(\'13\',\'/FCCX/FCCX_ZZF\',\'null\')">整套出租</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenCXLB(\'14\',\'/FCCX/FCCX_HZF\',\'null\')">单间出租</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenCXLB(\'18\',\'/FCCX/FCCX_XZL\',\'null\')">写字楼租售</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenCXLB(\'17\',\'/FCCX/FCCX_SP\',\'null\')">商铺租售</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenCXLB(\'22\',\'/FCCX/FCCX_CW\',\'null\')">车位租售</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenCXLB(\'13\',\'/FCCX/FCCX_ZZF\',\'FWLD=16\')">精装修</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenCXLB(\'13\',\'/FCCX/FCCX_ZZF\',\'FWLD=119\')">独立卫生间</span>');
 }
 //加载默认
 function LoadDefault() {
