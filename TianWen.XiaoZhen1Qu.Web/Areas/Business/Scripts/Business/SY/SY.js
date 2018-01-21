@@ -9,6 +9,7 @@ $(document).ready(function () {
     $("#li_head_sy").css("background", "#bc6ba6").css("color", "#ffffff");
     $("#div_yhm").bind("click", ShowWDXX);
     $("#SS").bind("keyup", LoadSSJG);
+    $("#span_ss").bind("click", OpenSSJG);
     LoadDefault();
 });
 //首页获取title
@@ -304,8 +305,8 @@ function LoadKeyWordByHZ(SS) {
         },
         success: function (xml) {
             if (xml.Result === 1 && xml.list.length > 0) {
-                var html = "<ul id='ulSSJG' class='ul_select' style='height:" + (xml.list.length * 34.5) + "px;'>";
-                for (var i = 0; i < xml.list.length; i++) {
+                var html = "<ul id='ulSSJG' class='ul_select' style='height:" + (xml.list.length > 10 ? 341 : (xml.list.length * 34.5)) + "px;'>";
+                for (var i = 0; i < (xml.list.length > 10 ? 10 : xml.list.length) ; i++) {
                     var index = xml.list[i].CODENAME.indexOf(SS);
                     var xqmclength = SS.length;
                     var xqmchtml = "";
@@ -314,7 +315,7 @@ function LoadKeyWordByHZ(SS) {
                     else {
                         xqmchtml = "<span style='color:#333333'>" + xml.list[i].CODENAME.substr(0, index) + "</span>" + "<span style='color:#333333;font-weight:bolder;'>" + xml.list[i].CODENAME.substr(index, xqmclength) + "</span>" + "<span style='color:#333333'>" + xml.list[i].CODENAME.substr(index + xqmclength, xml.list[i].CODENAME.length - index - xqmclength) + "</span>";
                     }
-                    html += "<li class='li_select' onclick='SelectSSJG(this)'>" + xqmchtml + "&nbsp;&nbsp;<span style='color:#999999;font-size:12px;'>" + (xml.list[i].CODENAME === null ? "" : xml.list[i].CODENAME) + "</span>" + "</li>";
+                    html += "<li class='li_select' onclick='SelectSSJG(this)'>" + xqmchtml + "&nbsp;&nbsp;<span style='color:#999999;font-size:12px;'>" + (xml.list[i].TYPENAME === null ? "" : xml.list[i].TYPENAME) + "</span>" + "</li>";
                 }
                 html += "</ul>";
                 $("#divSSJGlist").html(html);
@@ -413,4 +414,8 @@ function SelectSSJG(obj) {
     var array = obj.innerText.split(' ');
     $("#SS").val(array[0]);
     $("#divSSJGlist").css("display", "none");
+}
+//打开搜索结果
+function OpenSSJG() {
+
 }

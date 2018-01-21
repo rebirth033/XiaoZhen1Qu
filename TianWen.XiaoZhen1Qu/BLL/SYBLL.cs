@@ -14,6 +14,7 @@ using TianWen.XiaoZhen1Qu.Entities.ViewModels.SWFW;
 using TianWen.XiaoZhen1Qu.Entities.ViewModels.ZSJM;
 using TianWen.XiaoZhen1Qu.Entities.ViewModels.PFCG;
 using TianWen.XiaoZhen1Qu.Entities.ViewModels.JYPX;
+using TianWen.XiaoZhen1Qu.Entities.ViewModels.Common;
 using CommonClassLib.Helper;
 
 namespace TianWen.XiaoZhen1Qu.BLL
@@ -889,8 +890,8 @@ namespace TianWen.XiaoZhen1Qu.BLL
         {
             try
             {
-                DataTable list = DAO.Repository.GetDataTable(String.Format("select codename from (select codename from codes_fc union select codename from codes_cl union select codename from codes_cw union select codename from codes_es_sjsm union select codename from codes_es_jdjjbg union select codename from codes_es_myfzmr union select codename from codes_es_pwkq union select codename from codes_es_qtes union select codename from codes_es_whyl union select codename from codes_hqsy union select codename from codes_jypx union select codename from codes_lyjd union select codename from codes_nlmfy union select codename from codes_pfcg union select codename from codes_qzzp union select codename from codes_shfw union select codename from codes_swfw union select codename from codes_xxyl union select codename from codes_zsjm union select codename from codes_zxjc) where codename like '%{0}%'", SS, XZQ));
-                IList<CODES_FC> result = list.DataTableToList<CODES_FC>();
+                DataTable list = DAO.Repository.GetDataTable(String.Format("select codeid,codename,typename,type from (select codeid,codename,typename,'fc' type from codes_fc union select codeid,codename,typename,'cl' type from codes_cl union select codeid,codename,typename,'cw' type from codes_cw union select codeid,codename,typename,'es_sjsm' type from codes_es_sjsm union select codeid,codename,typename,'es_jdjjbg' type from codes_es_jdjjbg union select codeid,codename,typename,'es_myfzmr' type from codes_es_myfzmr union select codeid,codename,typename,'es_pwkq' type from codes_es_pwkq union select codeid,codename,typename,'es_qtes' type from codes_es_qtes union select codeid,codename,typename,'es_whyl' type from codes_es_whyl union select codeid,codename,typename,'hqsy' type from codes_hqsy union select codeid,codename,typename,'jypx' type from codes_jypx union select codeid,codename,typename,'lyjd' type from codes_lyjd union select codeid,codename,typename,'nlmfy' type from codes_nlmfy union select codeid,codename,typename,'pfcg' type from codes_pfcg union select codeid,codename,typename,'qzzp' type from codes_qzzp union select codeid,codename,typename,'shfw' type from codes_shfw union select codeid,codename,typename,'swfw' type from codes_swfw union select codeid,codename,typename,'xxyl' type from codes_xxyl union select codeid,codename,typename,'zsjm' type from codes_zsjm union select codeid,codename,typename,'zxjc' type from codes_zxjc) where codename like '%{0}%'", SS, XZQ));
+                IList<SSJGView> result = list.DataTableToList<SSJGView>();
                 return new { Result = EnResultType.Success, list = result };
             }
             catch (Exception ex)
