@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadESCondition() {
-    LoadConditionByTypeNames("'二手设备类别','其它二手价格'", "CODES_ES_QTES", "类别,价格", "LB,JG", "100,100");
+    LoadConditionByTypeNames("'二手设备类别','其他二手价格'", "CODES_ES_QTES", "类别,价格", "LB,JG", "100,100");
 }
 //加载URL查询条件
 function LoadURLCondition() {

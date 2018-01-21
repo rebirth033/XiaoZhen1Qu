@@ -288,7 +288,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     }
                     return new { Result = EnResultType.Success, list = listnew, PageCount = PageCount, TotalCount = TotalCount };
                 }
-                if (TYPE == "ESXX_QTES_ESSB")//二手_其它二手_二手设备
+                if (TYPE == "ESXX_QTES_ESSB")//二手_其他二手_二手设备
                 {
                     dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,es_qtes_essbjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
                     var list = ConvertHelper.DataTableToList<ES_JDJJBG_BGSBView>(dt);
@@ -304,7 +304,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     }
                     return new { Result = EnResultType.Success, list = listnew, PageCount = PageCount, TotalCount = TotalCount };
                 }
-                if (TYPE == "ESXX_QTES_CRYP")//二手_其它二手_成人用品
+                if (TYPE == "ESXX_QTES_CRYP")//二手_其他二手_成人用品
                 {
                     dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,es_qtes_crypjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
                     var list = ConvertHelper.DataTableToList<ES_JDJJBG_BGSBView>(dt);
@@ -523,7 +523,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     UpdateLLCS(list[0].JCXXID);
                     return new { Result = EnResultType.Success, list = list, BCMSString = BinaryHelper.BinaryToString(list[0].BCMS), grxxlist = GetGRXX(list[0].YHID) };
                 }
-                if (TYPE == "ESXX_QTES_ESSB") //二手_其它二手_二手设备
+                if (TYPE == "ESXX_QTES_ESSB") //二手_其他二手_二手设备
                 {
                     dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,es_qtes_essbjbxx b where a.jcxxid = b.jcxxid and id = '{0}'  order by zxgxsj desc", ID));
                     List<ES_JDJJBG_BGSBView> list = ConvertHelper.DataTableToList<ES_JDJJBG_BGSBView>(dt);
@@ -534,7 +534,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     UpdateLLCS(list[0].JCXXID);
                     return new { Result = EnResultType.Success, list = list, BCMSString = BinaryHelper.BinaryToString(list[0].BCMS), grxxlist = GetGRXX(list[0].YHID) };
                 }
-                if (TYPE == "ESXX_QTES_CRYP") //二手_其它二手_成人用品
+                if (TYPE == "ESXX_QTES_CRYP") //二手_其他二手_成人用品
                 {
                     dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,es_qtes_crypjbxx b where a.jcxxid = b.jcxxid and id = '{0}'  order by zxgxsj desc", ID));
                     List<ES_JDJJBG_BGSBView> list = ConvertHelper.DataTableToList<ES_JDJJBG_BGSBView>(dt);

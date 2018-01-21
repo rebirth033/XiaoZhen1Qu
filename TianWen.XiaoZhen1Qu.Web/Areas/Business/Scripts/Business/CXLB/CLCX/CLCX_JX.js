@@ -6,8 +6,16 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadCLCondition() {
-    LoadConditionByTypeNames("'驾照','班别'", "CODES_CL", "驾照,班别", "JZ,BB", "100,15");
-    LoadBody("CLXX_JX", currentIndex);
+    LoadConditionByTypeNames("'驾照','班别'", "CODES_CL", "驾照,班别", "JZ,BB", "100,100");
+}
+//加载URL查询条件
+function LoadURLCondition() {
+    if (getUrlParam("JZ") !== null)
+        SelectURLCondition(getUrlParam("JZ"));
+    else if (getUrlParam("QY") !== null)
+        SelectURLCondition(getUrlParam("QY"));
+    else
+        LoadBody("CLXX_JX", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -15,6 +23,15 @@ function SelectCondition(obj, name) {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
+    LoadBody("CLXX_JX", currentIndex);
+    ShowSelectCondition("CLXX_JX");
+}
+//选择URL条件
+function SelectURLCondition(obj) {
+    $("#" + obj).parent().find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $("#" + obj).addClass("li_condition_body_active");
     LoadBody("CLXX_JX", currentIndex);
     ShowSelectCondition("CLXX_JX");
 }

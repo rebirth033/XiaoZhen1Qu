@@ -7,7 +7,15 @@ $(document).ready(function () {
 //加载条件
 function LoadCLCondition() {
     LoadConditionByTypeNames("'驾校类别'", "CODES_CL", ",类别", "LB", "15");
-    LoadBody("CLXX_QCPL", currentIndex);
+}
+//加载URL查询条件
+function LoadURLCondition() {
+    if (getUrlParam("LB") !== null)
+        SelectURLCondition(getUrlParam("LB"));
+    else if (getUrlParam("QY") !== null)
+        SelectURLCondition(getUrlParam("QY"));
+    else
+        LoadBody("CLXX_QCPL", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
