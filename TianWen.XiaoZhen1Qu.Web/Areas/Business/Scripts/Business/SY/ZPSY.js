@@ -6,6 +6,8 @@
     $(".img_head_left_logo").css("margin-left", "20px");
     $("#li_head_sy").css("background", "#bc6ba6").css("color", "#ffffff");
     $("#div_yhm").bind("click", ShowWDXX);
+    $(".li_body_top_left").bind("mouseleave", function () {$(".div_body_top_left_inner").css("display", "none"); });
+    $(".div_body_top_left_inner").css("display", "none");
     //LoadRZZW();
     //LoadHYLB();
     //LoadDefault();
@@ -69,7 +71,7 @@ function LoadHYLB() {
                 for (var i = 0; i < xml.hylb.length; i++) {
                     html += ' <li class="li_body_top_left" onmouseover="OpenZWLB(\'' + xml.hylb[i].CODEID + '\')">';
                     html += '<a class="a_body_top_left">' + xml.hylb[i].CODENAME + '</a>';
-                    html += '<div id="' + xml.hylb[i].CODEID + '" style="top:-' + (parseInt(height) + (i * 10)) + 'px;" class="div_body_top_left_inner">';
+                    html += '<div id="' + xml.hylb[i].CODEID + '" style="top:-' + (parseInt(height) + (i * 50)) + 'px;" class="div_body_top_left_inner">';
 
                     for (var j = 0; j < xml.zwlb.length; j++) {
                         if (xml.zwlb[j].PARENTID === xml.hylb[i].CODEID) {
