@@ -49,8 +49,8 @@ function LoadSHFWTOP() {
                 html += '</div>';
                 html += '<div class="div_body_top_right">';
                 for (var i = 0; i < xml.shfwlb.length; i++) {
-                    if (xml.shfwlb[i].PARENTID !== 9 && xml.shfwlb[i].FBYM.indexOf("SHFW") !== -1 && xml.shfwlb[i].LBNAME !== "手机维修" && xml.shfwlb[i].LBNAME !== "开锁修锁" && xml.shfwlb[i].LBNAME !== "白事服务") {
-                        html += '<p class="p_body_top_right">' + xml.shfwlb[i].LBNAME + '</p>';
+                    if (xml.shfwlb[i].PARENTID !== 9 && xml.shfwlb[i].LBNAME !== "手机维修" && xml.shfwlb[i].LBNAME !== "开锁修锁" && xml.shfwlb[i].LBNAME !== "白事服务") {
+                        html += '<span class="span_body_top_right">' + xml.shfwlb[i].LBNAME + '</span>';
                         html += '<ul class="ul_body_top_right">';
                         for (var j = 0; j < xml.shfwxl.length; j++) {
                             if (xml.shfwxl[j].TYPENAME.indexOf(xml.shfwlb[i].LBNAME) !== -1) {

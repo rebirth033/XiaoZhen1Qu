@@ -435,7 +435,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
             DataTable dt = new DataTable();
             try
             {
-                IList<CODES_XXLB> shfwlb = DAO.GetObjectList<CODES_XXLB>(string.Format("FROM CODES_XXLB WHERE PARENTID = 9 OR FBYM LIKE 'SHFW%' OR FBYM LIKE 'XXYL%' OR FBYM LIKE 'HQSY%' OR FBYM LIKE 'LYJD%'"));
+                IList<CODES_XXLB> shfwlb = DAO.GetObjectList<CODES_XXLB>(string.Format("FROM CODES_XXLB WHERE PARENTID = 9 OR FBYM LIKE 'SHFW%' OR FBYM LIKE 'XXYL%' OR FBYM LIKE 'HQSY%' OR FBYM LIKE 'LYJD%' ORDER BY PARENTID"));
                 IList<CODES_SHFW> shfwxl = DAO.GetObjectList<CODES_SHFW>(string.Format("FROM CODES_SHFW WHERE TYPENAME LIKE '%类别%' ORDER BY CODEORDER"));
                 IList<CODES_LYJD> lyjdxl = DAO.GetObjectList<CODES_LYJD>(string.Format("FROM CODES_LYJD WHERE TYPENAME LIKE '%类别%' ORDER BY CODEORDER"));
                 IList<CODES_HQSY> hqsyxl = DAO.GetObjectList<CODES_HQSY>(string.Format("FROM CODES_HQSY WHERE TYPENAME LIKE '%类别%' ORDER BY CODEORDER"));
