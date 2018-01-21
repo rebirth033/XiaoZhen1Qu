@@ -10,8 +10,8 @@ function LoadHQSYCondition() {
 }
 //加载URL查询条件
 function LoadURLCondition() {
-    if (getUrlParam("LB") !== null)
-        SelectURLCondition(getUrlParam("LB"));
+    if (getUrlParam("TGFW") !== null)
+        SelectURLCondition(getUrlParam("TGFW"));
     else if (getUrlParam("QY") !== null)
         SelectURLCondition(getUrlParam("QY"));
     else

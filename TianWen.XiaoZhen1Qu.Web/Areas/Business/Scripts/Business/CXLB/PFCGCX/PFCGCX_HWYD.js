@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadPFCGCondition() {
-    LoadConditionByTypeNames("'户外运动类别'", "CODES_PFCG", "类别", "LB", "100");
+    LoadConditionByTypeNames("'运动装备类别'", "CODES_PFCG", "类别", "LB", "100");
 }
 //加载URL查询条件
 function LoadURLCondition() {

@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadHQSYCondition() {
-    LoadConditionByTypeNames("'婚宴酒店价格范围','婚纱礼服类型','婚纱礼服材质','婚纱礼服款式','婚纱礼服风格','婚纱礼服颜色'", "CODES_HQSY", "价格范围,类型,材质,款式,风格,颜色", "JG,LX,CZ,KS,FG,YS", "15,15,15,15,15,15");
+    LoadConditionByTypeNames("'婚宴酒店价格范围','婚纱礼服类型','婚纱礼服材质','婚纱礼服款式','婚纱礼服风格','婚纱礼服颜色'", "CODES_HQSY", "价格范围,类型,材质,款式,风格,颜色", "JG,LX,CZ,KS,FG,YS", "100,100,100,100,15,15");
     LoadBody("HQSYXX_HSLF", currentIndex);
 }
 //选择条件

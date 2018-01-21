@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadJYPXCondition() {
-    LoadConditionByTypeNames("'拼班拼课身份','拼班拼课辅导阶段','拼班拼课辅导科目','拼班拼课人数'", "CODES_JYPX", "类别,辅导阶段,辅导科目,拼班人数", "SF,FDJD,FDKM,PBRS", "15,15,15,15");
+    LoadConditionByTypeNames("'拼班拼课身份','拼班拼课辅导阶段','拼班拼课辅导科目','拼班拼课人数'", "CODES_JYPX", "类别,辅导阶段,辅导科目,拼班人数", "SF,FDJD,FDKM,PBRS", "100,100,100,100");
     LoadBody("JYPXXX_PBPK", currentIndex);
 }
 //选择条件

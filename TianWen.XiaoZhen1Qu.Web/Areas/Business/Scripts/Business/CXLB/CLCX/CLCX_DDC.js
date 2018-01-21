@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadCLCondition() {
-    LoadConditionByTypeNames("'电动车品牌','电动车车型','电动车价格','电动车电池电压','电动车电池容量'", "CODES_CL", "品牌,车型,价格,电池电压,电池容量", "PP,CX,JG,DCDY,DCRL", "15,15,15,15,15");
+    LoadConditionByTypeNames("'电动车品牌','电动车车型','电动车价格','电动车电池电压','电动车电池容量'", "CODES_CL", "品牌,车型,价格,电池电压,电池容量", "PP,CX,JG,DCDY,DCRL", "100,100,100,100,15");
 }
 //加载URL查询条件
 function LoadURLCondition() {

@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadHQSYCondition() {
-    LoadConditionByTypeNames("'婚宴酒店价格范围','婚宴酒店酒店类型','婚宴酒店容纳桌数','婚宴酒店婚礼类型'", "CODES_HQSY", "价格范围,酒店类型,容纳桌数,婚礼类型", "JGFW,JDLX,RNZS,HLLX", "15,15,15,15");
+    LoadConditionByTypeNames("'婚宴酒店价格范围','婚宴酒店酒店类型','婚宴酒店容纳桌数','婚宴酒店婚礼类型'", "CODES_HQSY", "价格范围,酒店类型,容纳桌数,婚礼类型", "JGFW,JDLX,RNZS,HLLX", "100,100,100,100");
 }
 //加载URL查询条件
 function LoadURLCondition() {
