@@ -278,7 +278,7 @@ function LoadSSJG() {
         var lis = $("#divSSJGlist").find("li");
         for (var i = 0; i < lis.length; i++) {
             if ($("#divSSJGlist").find("li:eq(" + i + ")").css("background-color") === "rgb(236, 236, 236)") {
-                SelectSSJG($("#divSSJGlist").find("li:eq(" + i + ")")[0]);
+                SelectSSJG($("#divSSJGlist").find("li:eq(" + i + ")").attr("codename"), $("#divSSJGlist").find("li:eq(" + i + ")").attr("codeid"), $("#divSSJGlist").find("li:eq(" + i + ")").attr("url"), $("#divSSJGlist").find("li:eq(" + i + ")").attr("parentid"));
                 return;
             }
         }
@@ -315,7 +315,7 @@ function LoadKeyWordByHZ(SS) {
                     else {
                         xqmchtml = "<span style='color:#333333'>" + xml.list[i].CODENAME.substr(0, index) + "</span>" + "<span style='color:#333333;font-weight:bolder;'>" + xml.list[i].CODENAME.substr(index, xqmclength) + "</span>" + "<span style='color:#333333'>" + xml.list[i].CODENAME.substr(index + xqmclength, xml.list[i].CODENAME.length - index - xqmclength) + "</span>";
                     }
-                    html += "<li class='li_select' onclick='SelectSSJG(\"" + xml.list[i].CODENAME + "\",\"" + xml.list[i].CODEID + "\",\"" + xml.list[i].URL + "\",\"" + xml.list[i].PARENTID + "\")'>" + xqmchtml + "&nbsp;&nbsp;<span style='color:#999999;font-size:12px;'>" + (xml.list[i].TYPENAME === null ? "" : xml.list[i].TYPENAME) + "</span>" + "</li>";
+                    html += "<li class='li_select' codename='" + xml.list[i].CODENAME + "' codeid='" + xml.list[i].CODEID + "' url='" + xml.list[i].URL + "' parentid='" + xml.list[i].PARENTID + "' onclick='SelectSSJG(\"" + xml.list[i].CODENAME + "\",\"" + xml.list[i].CODEID + "\",\"" + xml.list[i].URL + "\",\"" + xml.list[i].PARENTID + "\")'>" + xqmchtml + "&nbsp;&nbsp;<span style='color:#999999;font-size:12px;'>" + (xml.list[i].TYPENAME === null ? "" : xml.list[i].TYPENAME) + "</span>" + "</li>";
                 }
                 html += "</ul>";
                 $("#divSSJGlist").html(html);
@@ -418,7 +418,14 @@ function SelectSSJG(codename, codeid, url, parentid) {
 }
 //打开搜索结果
 function OpenSSJG() {
-    var url = "/" + $("#URL").val().split('_')[0] + "CX/" + $("#URL").val().split('_')[0] + "CX_" + $("#URL").val().split('_')[1];
+    var url = "";
+    if ($("#URL").val().split('_')[0] === "ES") {
+        url = "/" + $("#URL").val().split('_')[0] + "CX/" + $("#URL").val().split('_')[0] + "CX_" + $("#URL").val().split('_')[1] + "_" + $("#URL").val().split('_')[2];
+    }
+    else {
+        url = "/" + $("#URL").val().split('_')[0] + "CX/" + $("#URL").val().split('_')[0] + "CX_" + $("#URL").val().split('_')[1];
+    }
+
     var condition = "";
     OpenCXLB($("#LBID").val(), url, condition)
 }
