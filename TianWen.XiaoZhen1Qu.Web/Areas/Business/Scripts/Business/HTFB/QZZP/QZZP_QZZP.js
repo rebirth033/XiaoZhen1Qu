@@ -17,9 +17,6 @@ function BindClick(type) {
         if (type === "GZNX") {
             LoadCODESByTYPENAME("工作年限", "GZNX", "CODES_QZZP", Bind, "ZPGZNX", "GZNX", "");
         }
-        if (type === "LB") {
-            LoadCODESByTYPENAME($("#spanLBXZ").html().replace("1.", ""), "LB", "CODES_QZZP", Bind, "OUTLB", "LB", "");
-        }
     });
 }
 //加载职位名称
