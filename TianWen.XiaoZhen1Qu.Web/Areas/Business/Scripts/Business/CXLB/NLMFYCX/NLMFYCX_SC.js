@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadNLMFYCondition() {
-    LoadConditionByTypeNames("'水产类别'", "CODES_NLMFY", "类别", "LB", "100");
+    LoadConditionByTypeNames("'渔业水产类别'", "CODES_NLMFY", "类别", "LB", "100");
     LoadBody("NLMFYXX_SC", currentIndex);
 }
 //选择条件
