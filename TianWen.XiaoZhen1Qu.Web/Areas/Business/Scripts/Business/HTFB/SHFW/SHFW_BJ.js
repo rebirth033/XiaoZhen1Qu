@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    LoadDuoX("搬家类别", "LB");
+    LoadDuoX("搬家服务类别", "LB");
 });
 //加载多选
 function LoadDuoX(type, id) {

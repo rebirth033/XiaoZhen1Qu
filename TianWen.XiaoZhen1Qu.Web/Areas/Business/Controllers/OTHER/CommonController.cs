@@ -75,10 +75,11 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             string TBName = Request["TBName"];
             return Json(CommonBLL.LoadCODESByTYPENAMES(TYPENAMES, TBName, Session["XZQDM"].ToString()));
         }
-        public JsonResult LoadChildByCODENAME() {
-            string TYPENAME = Request["TYPENAME"];
+        public JsonResult LoadChildByCODENAME()
+        {
+            string CODENAME = Request["CODENAME"];
             string TBName = Request["TBName"];
-            return Json(CommonBLL.LoadChildByCODENAME(TYPENAME, TBName));
+            return Json(CommonBLL.LoadChildByCODENAME(CODENAME, TBName));
         }
         //加载区域
         public JsonResult LoadQY()

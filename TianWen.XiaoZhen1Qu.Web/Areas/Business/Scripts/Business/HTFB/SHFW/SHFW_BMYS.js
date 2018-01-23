@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    LoadDuoX("月嫂/保姆类别", "LB");
+    LoadDuoX("保姆月嫂类别", "LB");
 });
 //加载多选
 function LoadDuoX(type, id) {

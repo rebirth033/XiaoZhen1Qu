@@ -274,6 +274,8 @@ function ColorChange() {
 function DLCG() {
     if (getUrlParam("To") === "HTGL")
         window.location.href = getRootPath() + "/Business/HTGL/HTGL";
-    else
+    else if (getUrlParam("To") === "SY")
         window.location.href = getRootPath() + "/Business/SY/SY";
+    else
+        window.location.href = window.location.href;
 }
