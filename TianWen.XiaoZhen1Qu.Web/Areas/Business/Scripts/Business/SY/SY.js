@@ -238,6 +238,7 @@ function OpenCXLB(lbid, lburl, condition) {
         window.open(getRootPath() + "/Business" + lburl + "?LBID=" + lbid + "&" + condition);
     else
         window.open(getRootPath() + "/Business" + lburl + "?LBID=" + lbid);
+    $("#LBID").val('');
 }
 //打开二级首页
 function ToEJSY(type) {
@@ -412,12 +413,19 @@ function GetStartIndexBySZM(pyszm, sqmc) {
 //选择关键字
 function SelectSSJG(codename, codeid, url, parentid) {
     $("#SS").val(codename);
-    $("#LBID").val(codeid);
+    $("#LBID").val(parentid);
     $("#URL").val(url);
     $("#divSSJGlist").css("display", "none");
 }
 //打开搜索结果
 function OpenSSJG() {
+    if ($("#LBID").val() !== "")
+        OpenSSJGBySelect();
+    else
+        OpenSSJGByInput();
+}
+//根据下拉框选择的关键字搜索结果
+function OpenSSJGBySelect() {
     var url = "";
     if ($("#URL").val().split('_')[0] === "ES") {
         url = "/" + $("#URL").val().split('_')[0] + "CX/" + $("#URL").val().split('_')[0] + "CX_" + $("#URL").val().split('_')[1] + "_" + $("#URL").val().split('_')[2];
@@ -425,7 +433,35 @@ function OpenSSJG() {
     else {
         url = "/" + $("#URL").val().split('_')[0] + "CX/" + $("#URL").val().split('_')[0] + "CX_" + $("#URL").val().split('_')[1];
     }
-
     var condition = "";
     OpenCXLB($("#LBID").val(), url, condition)
+}
+//根据输入的关键字搜索结果
+function OpenSSJGByInput() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/SY/LoadKeyWordByHZ",
+        dataType: "json",
+        data:
+        {
+            SS: $("#SS").val()
+        },
+        success: function (xml) {
+            if (xml.Result === 1 && xml.list.length > 0) {
+                SelectSSJG(xml.list[0].CODENAME, xml.list[0].CODEID, xml.list[0].URL, xml.list[0].PARENTID);
+                var url = "";
+                if ($("#URL").val().split('_')[0] === "ES") {
+                    url = "/" + $("#URL").val().split('_')[0] + "CX/" + $("#URL").val().split('_')[0] + "CX_" + $("#URL").val().split('_')[1] + "_" + $("#URL").val().split('_')[2];
+                }
+                else {
+                    url = "/" + $("#URL").val().split('_')[0] + "CX/" + $("#URL").val().split('_')[0] + "CX_" + $("#URL").val().split('_')[1];
+                }
+                var condition = "";
+                OpenCXLB($("#LBID").val(), url, condition);
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
 }

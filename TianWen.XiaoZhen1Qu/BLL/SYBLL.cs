@@ -890,8 +890,28 @@ namespace TianWen.XiaoZhen1Qu.BLL
         {
             try
             {
-                //DataTable list = DAO.Repository.GetDataTable(String.Format("select codeid,codename,typename,type from (select codeid,codename,typename,'fc' type from codes_fc union select codeid,codename,typename,'cl' type from codes_cl union select codeid,codename,typename,'cw' type from codes_cw union select codeid,codename,typename,'es_sjsm' type from codes_es_sjsm union select codeid,codename,typename,'es_jdjjbg' type from codes_es_jdjjbg union select codeid,codename,typename,'es_myfzmr' type from codes_es_myfzmr union select codeid,codename,typename,'es_pwkq' type from codes_es_pwkq union select codeid,codename,typename,'es_qtes' type from codes_es_qtes union select codeid,codename,typename,'es_whyl' type from codes_es_whyl union select codeid,codename,typename,'hqsy' type from codes_hqsy union select codeid,codename,typename,'jypx' type from codes_jypx union select codeid,codename,typename,'lyjd' type from codes_lyjd union select codeid,codename,typename,'nlmfy' type from codes_nlmfy union select codeid,codename,typename,'pfcg' type from codes_pfcg union select codeid,codename,typename,'qzzp' type from codes_qzzp union select codeid,codename,typename,'shfw' type from codes_shfw union select codeid,codename,typename,'swfw' type from codes_swfw union select codeid,codename,typename,'xxyl' type from codes_xxyl union select codeid,codename,typename,'zsjm' type from codes_zsjm union select codeid,codename,typename,'zxjc' type from codes_zxjc) where codename like '%{0}%'", SS, XZQ));
-                DataTable list = DAO.Repository.GetDataTable(string.Format("SELECT LBNAME CODENAME, LBID CODEID, FBYM URL, PARENTID PARENTID FROM CODES_XXLB WHERE LBNAME LIKE '%{0}%' AND FBYM IS NOT NULL", SS));
+                DataTable list = DAO.Repository.GetDataTable(String.Format(@"select codeid,codename,typename,lbid parentid,fbym url from 
+(select codeid,codename,typename,n.lbid,fbym from codes_fc n,codes_xxlb m where n.lbid = m.lbid
+union select codeid,codename,typename,n.lbid,fbym from codes_cl n,codes_xxlb m where n.lbid = m.lbid 
+union select codeid,codename,typename,n.lbid,fbym from codes_cw n,codes_xxlb m where n.lbid = m.lbid 
+union select codeid,codename,typename,n.lbid,fbym from codes_es_sjsm n,codes_xxlb m where n.lbid = m.lbid 
+union select codeid,codename,typename,n.lbid,fbym from codes_es_jdjjbg n,codes_xxlb m where n.lbid = m.lbid 
+union select codeid,codename,typename,n.lbid,fbym from codes_es_myfzmr n,codes_xxlb m where n.lbid = m.lbid  
+union select codeid,codename,typename,n.lbid,fbym from codes_es_pwkq n,codes_xxlb m where n.lbid = m.lbid  
+union select codeid,codename,typename,n.lbid,fbym from codes_es_qtes n,codes_xxlb m where n.lbid = m.lbid 
+union select codeid,codename,typename,n.lbid,fbym from codes_es_whyl n,codes_xxlb m where n.lbid = m.lbid 
+union select codeid,codename,typename,n.lbid,fbym from codes_hqsy n,codes_xxlb m where n.lbid = m.lbid 
+union select codeid,codename,typename,n.lbid,fbym from codes_jypx n,codes_xxlb m where n.lbid = m.lbid 
+union select codeid,codename,typename,n.lbid,fbym from codes_lyjd n,codes_xxlb m where n.lbid = m.lbid 
+union select codeid,codename,typename,n.lbid,fbym from codes_nlmfy n,codes_xxlb m where n.lbid = m.lbid 
+union select codeid,codename,typename,n.lbid,fbym from codes_pfcg n,codes_xxlb m where n.lbid = m.lbid 
+union select codeid,codename,typename,n.lbid,fbym from codes_qzzp n,codes_xxlb m where n.lbid = m.lbid 
+union select codeid,codename,typename,n.lbid,fbym from codes_shfw n,codes_xxlb m where n.lbid = m.lbid 
+union select codeid,codename,typename,n.lbid,fbym from codes_swfw n,codes_xxlb m where n.lbid = m.lbid 
+union select codeid,codename,typename,n.lbid,fbym from codes_xxyl n,codes_xxlb m where n.lbid = m.lbid 
+union select codeid,codename,typename,n.lbid,fbym from codes_zsjm n,codes_xxlb m where n.lbid = m.lbid 
+union select codeid,codename,typename,n.lbid,fbym from codes_zxjc n,codes_xxlb m where n.lbid = m.lbid
+union select lbid codeid,lbname codename,lbname typename,lbid,fbym from codes_xxlb where fbym is not null) a where lbid is not null and codename like '%{0}%'", SS, XZQ));
                 IList<SSJGView> result = list.DataTableToList<SSJGView>();
                 return new { Result = EnResultType.Success, list = result };
             }
