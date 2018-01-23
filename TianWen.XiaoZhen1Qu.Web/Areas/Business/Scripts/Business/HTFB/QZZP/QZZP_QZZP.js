@@ -26,11 +26,11 @@ function BindClick(type) {
 function LoadZWMC() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
+        url: getRootPath() + "/Business/Common/LoadChildByCODENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: $("#spanLBXZ").html().replace("1.", ""),
+            CODENAME: $("#spanLBXZ").html().replace("1.", ""),
             TBName: "CODES_QZZP"
         },
         success: function (xml) {

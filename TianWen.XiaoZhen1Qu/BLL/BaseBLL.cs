@@ -236,6 +236,22 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
+        //根据CODENAME获取字典表子节点
+        public object LoadChildByCODENAME(string CODENAME, string TBName)
+        {
+            try
+            {
+                if (TBName == "CODES_QZZP")
+                    return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_QZZP>(String.Format("FROM CODES_QZZP WHERE PARENTID IN( SELECT CODEID FROM CODES_QZZP WHERE CODENAME = '{0}') ORDER BY CODEORDER", CODENAME)) };
+                return new { Result = EnResultType.Failed, Message = "表名未找到" };
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("error", ex.Message);
+                return new { Result = EnResultType.Failed, Message = "加载失败" };
+            }
+        }
+
         //根据SUPERNAME获取行政区
         public object LoadQYBySuperName(string PARENTID)
         {
