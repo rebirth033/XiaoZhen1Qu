@@ -264,6 +264,8 @@ function LoadConditionByParentID(parentid, table, name, id, length) {
                 $("#ul_condition_body_" + id).remove();
                 if (parentid !== "0")
                     LoadCondition(xml.list, name, id, length);
+                if (getUrlParam("XL") !== null && getUrlParam("XL") !== "" && getUrlParam("XL") !== undefined)
+                    SelectURLCondition(getUrlParam("XL"));
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

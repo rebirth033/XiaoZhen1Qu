@@ -43,30 +43,6 @@ function SelectURLCondition(obj) {
     LoadBody("CWXX_CWYPSP", currentIndex);
     ShowSelectCondition("CWXX_CWYPSP");
 }
-//根据PARENTID获取字典表
-function LoadConditionByParentID(parentid, table, name, id, length) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadByParentID",
-        dataType: "json",
-        data:
-        {
-            ParentID: parentid,
-            TBName: table
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                $("#ul_condition_body_" + id).remove();
-                if (parentid !== "0")
-                    LoadCondition(xml.list, name, id, length);
-                SelectURLCondition(getUrlParam("XL"));
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
