@@ -41,8 +41,8 @@ function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
 }
 //加载URL查询条件
 function LoadURLCondition() {
-    if (getUrlParam("FWLD") !== null)
-        SelectURLCondition(getUrlParam("FWLD"));
+    if (getUrlParam("FWLX") !== null)
+        SelectURLCondition(getUrlParam("FWLX"));
     else if (getUrlParam("ZJ") !== null)
         SelectURLCondition(getUrlParam("ZJ"));
     else if (getUrlParam("QY") !== null)

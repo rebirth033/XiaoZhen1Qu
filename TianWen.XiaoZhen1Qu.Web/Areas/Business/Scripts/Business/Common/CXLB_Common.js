@@ -266,6 +266,8 @@ function LoadConditionByParentID(parentid, table, name, id, length) {
                     LoadCondition(xml.list, name, id, length);
                 if (getUrlParam("XL") !== null && getUrlParam("XL") !== "" && getUrlParam("XL") !== undefined)
                     SelectURLCondition(getUrlParam("XL"));
+                if (getUrlParam("XH") !== null && getUrlParam("XH") !== "" && getUrlParam("XH") !== undefined)
+                    SelectURLCondition(getUrlParam("XH"));
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
