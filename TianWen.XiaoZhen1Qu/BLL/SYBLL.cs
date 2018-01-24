@@ -893,6 +893,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 DataTable list = DAO.Repository.GetDataTable(String.Format(@"select codeid,codename,typename,lbid parentid,fbym url,condition from 
 (select codeid,codename,typename,n.lbid,fbym,condition from codes_fc n,codes_xxlb m where n.lbid = m.lbid
 union select codeid,codename,typename,n.lbid,fbym,condition from codes_cl n,codes_xxlb m where n.lbid = m.lbid 
+union select codeid,codename,typename,n.lbid,fbym,condition from codes_cl_jc n,codes_xxlb m where n.lbid = m.lbid 
 union select codeid,codename,typename,n.lbid,fbym,condition from codes_cw n,codes_xxlb m where n.lbid = m.lbid 
 union select codeid,codename,typename,n.lbid,fbym,condition from codes_es_sjsm n,codes_xxlb m where n.lbid = m.lbid 
 union select codeid,codename,typename,n.lbid,fbym,condition from codes_es_jdjjbg n,codes_xxlb m where n.lbid = m.lbid 

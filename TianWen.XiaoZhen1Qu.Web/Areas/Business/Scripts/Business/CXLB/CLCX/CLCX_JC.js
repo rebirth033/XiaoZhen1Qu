@@ -46,12 +46,38 @@ function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
 function LoadURLCondition() {
     if (getUrlParam("JG") !== null)
         SelectURLCondition(getUrlParam("JG"));
-    else if (getUrlParam("PP") !== null)
+    else if (getUrlParam("PP") !== null) {
         SelectURLCondition(getUrlParam("PP"));
+        LoadConditionByParentID(getUrlParam("PP"), "CODES_CL_JC", "车系", "CX");
+    }
     else if (getUrlParam("QY") !== null)
         SelectURLCondition(getUrlParam("QY"));
     else
         LoadBody("CLXX_JC", currentIndex);
+}
+//根据PARENTID获取字典表
+function LoadConditionByParentID(parentid, table, name, id, length) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadByParentID",
+        dataType: "json",
+        data:
+        {
+            ParentID: parentid,
+            TBName: table
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                $("#ul_condition_body_" + id).remove();
+                if (parentid !== "0")
+                    LoadCondition(xml.list, name, id, length);
+                SelectURLCondition(getUrlParam("CX"));
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
 }
 //选择条件
 function SelectCondition(obj, name) {

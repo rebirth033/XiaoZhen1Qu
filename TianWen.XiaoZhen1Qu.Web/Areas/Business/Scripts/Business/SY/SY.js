@@ -415,7 +415,7 @@ function SelectSSJG(codename, codeid, url, parentid, condition) {
     $("#SS").val(codename);
     $("#LBID").val(parentid);
     $("#URL").val(url);
-    $("#CONDITION").val(condition + "=" + codeid);
+    $("#CONDITION").val(condition);
     $("#divSSJGlist").css("display", "none");
 }
 //打开搜索结果

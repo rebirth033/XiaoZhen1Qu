@@ -10,8 +10,10 @@ function LoadCWCondition() {
 }
 //加载URL查询条件
 function LoadURLCondition() {
-    if (getUrlParam("LB") !== null)
+    if (getUrlParam("LB") !== null) {
         SelectURLCondition(getUrlParam("LB"));
+        LoadConditionByParentID(getUrlParam("LB"), "CODES_CW", "小类", "XL");
+    }
     else if (getUrlParam("QY") !== null)
         SelectURLCondition(getUrlParam("QY"));
     else
@@ -37,6 +39,30 @@ function SelectURLCondition(obj) {
     $("#" + obj).addClass("li_condition_body_active");
     LoadBody("CWXX_HNYC", currentIndex);
     ShowSelectCondition("CWXX_HNYC");
+}
+//根据PARENTID获取字典表
+function LoadConditionByParentID(parentid, table, name, id, length) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/Common/LoadByParentID",
+        dataType: "json",
+        data:
+        {
+            ParentID: parentid,
+            TBName: table
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                $("#ul_condition_body_" + id).remove();
+                if (parentid !== "0")
+                    LoadCondition(xml.list, name, id, length);
+                SelectURLCondition(getUrlParam("XL"));
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
 }
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
