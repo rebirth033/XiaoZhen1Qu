@@ -316,7 +316,7 @@ function LoadKeyWordByHZ(SS) {
                     else {
                         xqmchtml = "<span style='color:#333333'>" + xml.list[i].CODENAME.substr(0, index) + "</span>" + "<span style='color:#333333;font-weight:bolder;'>" + xml.list[i].CODENAME.substr(index, xqmclength) + "</span>" + "<span style='color:#333333'>" + xml.list[i].CODENAME.substr(index + xqmclength, xml.list[i].CODENAME.length - index - xqmclength) + "</span>";
                     }
-                    html += "<li class='li_select' codename='" + xml.list[i].CODENAME + "' codeid='" + xml.list[i].CODEID + "' url='" + xml.list[i].URL + "' parentid='" + xml.list[i].PARENTID + "' onclick='SelectSSJG(\"" + xml.list[i].CODENAME + "\",\"" + xml.list[i].CODEID + "\",\"" + xml.list[i].URL + "\",\"" + xml.list[i].PARENTID + "\")'>" + xqmchtml + "&nbsp;&nbsp;<span style='color:#999999;font-size:12px;'>" + (xml.list[i].TYPENAME === null ? "" : xml.list[i].TYPENAME) + "</span>" + "</li>";
+                    html += "<li class='li_select' codename='" + xml.list[i].CODENAME + "' codeid='" + xml.list[i].CODEID + "' url='" + xml.list[i].URL + "' parentid='" + xml.list[i].PARENTID + "' onclick='SelectSSJG(\"" + xml.list[i].CODENAME + "\",\"" + xml.list[i].CODEID + "\",\"" + xml.list[i].URL + "\",\"" + xml.list[i].PARENTID + "\",\"" + xml.list[i].CONDITION + "\")'>" + xqmchtml + "&nbsp;&nbsp;<span style='color:#999999;font-size:12px;'>" + (xml.list[i].TYPENAME === null ? "" : xml.list[i].TYPENAME) + "</span>" + "</li>";
                 }
                 html += "</ul>";
                 $("#divSSJGlist").html(html);
@@ -411,10 +411,11 @@ function GetStartIndexBySZM(pyszm, sqmc) {
     return pyszm.indexOf(sqmc);
 }
 //选择关键字
-function SelectSSJG(codename, codeid, url, parentid) {
+function SelectSSJG(codename, codeid, url, parentid, condition) {
     $("#SS").val(codename);
     $("#LBID").val(parentid);
     $("#URL").val(url);
+    $("#CONDITION").val(condition + "=" + codeid);
     $("#divSSJGlist").css("display", "none");
 }
 //打开搜索结果
@@ -433,7 +434,7 @@ function OpenSSJGBySelect() {
     else {
         url = "/" + $("#URL").val().split('_')[0] + "CX/" + $("#URL").val().split('_')[0] + "CX_" + $("#URL").val().split('_')[1];
     }
-    var condition = "";
+    var condition = $("#CONDITION").val();
     OpenCXLB($("#LBID").val(), url, condition)
 }
 //根据输入的关键字搜索结果

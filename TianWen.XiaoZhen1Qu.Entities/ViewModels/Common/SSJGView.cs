@@ -13,5 +13,6 @@ namespace TianWen.XiaoZhen1Qu.Entities.ViewModels.Common
         public string TYPE { get; set; }
         public string URL { get; set; }
         public decimal PARENTID { get; set; }
+        public string CONDITION { get; set; }
     }
 }
