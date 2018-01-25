@@ -260,7 +260,7 @@ function LoadConditionByParentID(parentid, table, name, id, length) {
             TBName: table
         },
         success: function (xml) {
-            if (xml.Result === 1) {
+            if (xml.Result === 1 && xml.list.length > 0) {
                 $("#ul_condition_body_" + id).remove();
                 if (parentid !== "0")
                     LoadCondition(xml.list, name, id, length);
