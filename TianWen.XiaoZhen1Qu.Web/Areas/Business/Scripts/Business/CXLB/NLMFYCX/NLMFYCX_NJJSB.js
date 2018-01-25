@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadNLMFYCondition() {
-    LoadConditionByTypeNames("'农机具/设备类别'", "CODES_NLMFY", "类别", "LB", "11");
+    LoadConditionByTypeNames("'农机具/设备类别'", "CODES_NLMFY", "类别", "LB", "100");
 }
 //加载URL查询条件
 function LoadURLCondition() {

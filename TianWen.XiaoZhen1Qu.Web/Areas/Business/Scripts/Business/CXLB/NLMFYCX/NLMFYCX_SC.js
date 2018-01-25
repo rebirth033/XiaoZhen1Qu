@@ -7,7 +7,17 @@ $(document).ready(function () {
 //加载条件
 function LoadNLMFYCondition() {
     LoadConditionByTypeNames("'渔业水产类别'", "CODES_NLMFY", "类别", "LB", "100");
-    LoadBody("NLMFYXX_SC", currentIndex);
+}
+//加载URL查询条件
+function LoadURLCondition() {
+    if (getUrlParam("LB") !== null) {
+        SelectURLCondition(getUrlParam("LB"));
+        LoadConditionByParentID(getUrlParam("LB"), "CODES_NLMFY", "小类", "XL", "25");
+    }
+    else if (getUrlParam("QY") !== null)
+        SelectURLCondition(getUrlParam("QY"));
+    else
+        LoadBody("NLMFYXX_SC", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -21,6 +31,15 @@ function SelectCondition(obj, name) {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
+    LoadBody("NLMFYXX_SC", currentIndex);
+    ShowSelectCondition("NLMFYXX_SC");
+}
+//选择URL条件
+function SelectURLCondition(obj) {
+    $("#" + obj).parent().find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $("#" + obj).addClass("li_condition_body_active");
     LoadBody("NLMFYXX_SC", currentIndex);
     ShowSelectCondition("NLMFYXX_SC");
 }
