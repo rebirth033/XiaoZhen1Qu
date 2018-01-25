@@ -6,12 +6,12 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadLYJDCondition() {
-    LoadConditionByTypeNames("'国内游游玩天数','出游类别','出游方式','国内游价格'", "CODES_LYJD", "游玩天数,出游类别,出游方式,价格", "YWTS,CYLB,CYFS,JG_CR", "100,100,100,100");
+    LoadConditionByTypeNames("'国内游游玩天数','出游类别','出游方式','国内游价格'", "CODES_LYJD", "游玩天数,出游类别,出游方式,价格", "YWTS,LB,CYFS,JG_CR", "100,100,100,100");
 }
 //加载URL查询条件
 function LoadURLCondition() {
-    if (getUrlParam("CYLB") !== null)
-        SelectURLCondition(getUrlParam("CYLB"));
+    if (getUrlParam("LB") !== null)
+        SelectURLCondition(getUrlParam("LB"));
     else if (getUrlParam("QY") !== null)
         SelectURLCondition(getUrlParam("QY"));
     else

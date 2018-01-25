@@ -74,10 +74,11 @@ function HandlerTPXX() {
         $(".div_img_body_left_body_left_list_tp").css("background-color", "rgba(0,0,0,0.5)");
         $(this).find(".div_img_body_left_body_left_list_tp").css("background-color", "rgba(0,0,0,0)");
     });
-    
-    var natural = getNaturalSize($("#img_body_left_body_left_show")[0]);
-    $("#img_body_left_body_left_show").css("width", (natural.width > 460 ? 460 : natural.width));
-    $("#img_body_left_body_left_show").css("height", (natural.height > 350 ? 350 : natural.height));
+    if ($("#img_body_left_body_left_show").length > 0) {
+        var natural = getNaturalSize($("#img_body_left_body_left_show")[0]);
+        $("#img_body_left_body_left_show").css("width", (natural.width > 460 ? 460 : natural.width));
+        $("#img_body_left_body_left_show").css("height", (natural.height > 350 ? 350 : natural.height));
+    }
 }
 //图片左侧切换
 function LeftImg() {
