@@ -10,8 +10,10 @@ function LoadPFCGCondition() {
 }
 //加载URL查询条件
 function LoadURLCondition() {
-    if (getUrlParam("LB") !== null)
+    if (getUrlParam("LB") !== null) {
         SelectURLCondition(getUrlParam("LB"));
+        LoadConditionByParentID(getUrlParam("LB"), "CODES_PFCG", "小类", "XL");
+    }s
     else if (getUrlParam("QY") !== null)
         SelectURLCondition(getUrlParam("QY"));
     else
