@@ -120,7 +120,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         }
         public JsonResult LoadKeyWordByPY()
         {
-            return Json(SYBLL.LoadKeyWordByPY(Request["XQMC"], Session["XZQ"].ToString()));
+            return Json(SYBLL.LoadKeyWordByPY(Request["SS"], Session["XZQ"].ToString()));
         }
     }
 }

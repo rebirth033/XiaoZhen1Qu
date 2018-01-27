@@ -340,7 +340,7 @@ function LoadKeyWordByPY(SS) {
         },
         success: function (xml) {
             if (xml.Result === 1 && xml.list.length > 0) {
-                var html = "<ul id='ulSS' class='ul_select' style='height: " + (xml.list.length * 34.5) + "px;width:594px;background-color:#ffffff'>";
+                var html = "<ul id='ulSSJG' class='ul_select' style='height:" + (xml.list.length > 10 ? 341 : (xml.list.length * 34.5)) + "px;'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     var index = 0;
                     var pys = xml.list[i].SSPY.split(' ');
