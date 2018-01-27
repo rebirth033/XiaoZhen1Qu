@@ -279,7 +279,7 @@ function LoadSSJG() {
         var lis = $("#divSSJGlist").find("li");
         for (var i = 0; i < lis.length; i++) {
             if ($("#divSSJGlist").find("li:eq(" + i + ")").css("background-color") === "rgb(236, 236, 236)") {
-                SelectSSJG($("#divSSJGlist").find("li:eq(" + i + ")").attr("codename"), $("#divSSJGlist").find("li:eq(" + i + ")").attr("codeid"), $("#divSSJGlist").find("li:eq(" + i + ")").attr("url"), $("#divSSJGlist").find("li:eq(" + i + ")").attr("parentid"));
+                SelectSSJG($("#divSSJGlist").find("li:eq(" + i + ")").attr("codename"), $("#divSSJGlist").find("li:eq(" + i + ")").attr("codeid"), $("#divSSJGlist").find("li:eq(" + i + ")").attr("url"), $("#divSSJGlist").find("li:eq(" + i + ")").attr("parentid"), $("#divSSJGlist").find("li:eq(" + i + ")").attr("condition"));
                 return;
             }
         }
@@ -316,7 +316,7 @@ function LoadKeyWordByHZ(SS) {
                     else {
                         xqmchtml = "<span style='color:#333333'>" + xml.list[i].CODENAME.substr(0, index) + "</span>" + "<span style='color:#333333;font-weight:bolder;'>" + xml.list[i].CODENAME.substr(index, xqmclength) + "</span>" + "<span style='color:#333333'>" + xml.list[i].CODENAME.substr(index + xqmclength, xml.list[i].CODENAME.length - index - xqmclength) + "</span>";
                     }
-                    html += "<li class='li_select' codename='" + xml.list[i].CODENAME + "' codeid='" + xml.list[i].CODEID + "' url='" + xml.list[i].URL + "' parentid='" + xml.list[i].PARENTID + "' onclick='SelectSSJG(\"" + xml.list[i].CODENAME + "\",\"" + xml.list[i].CODEID + "\",\"" + xml.list[i].URL + "\",\"" + xml.list[i].PARENTID + "\",\"" + xml.list[i].CONDITION + "\")'>" + xqmchtml + "&nbsp;&nbsp;<span style='color:#999999;font-size:12px;'>" + RTrimStr((xml.list[i].TYPENAME === null ? "" : xml.list[i].TYPENAME), "类别") + "</span>" + "</li>";
+                    html += "<li class='li_select' codename='" + xml.list[i].CODENAME + "' codeid='" + xml.list[i].CODEID + "' url='" + xml.list[i].URL + "' parentid='" + xml.list[i].PARENTID + "' condition='" + xml.list[i].CONDITION + "' onclick='SelectSSJG(\"" + xml.list[i].CODENAME + "\",\"" + xml.list[i].CODEID + "\",\"" + xml.list[i].URL + "\",\"" + xml.list[i].PARENTID + "\",\"" + xml.list[i].CONDITION + "\")'>" + xqmchtml + "&nbsp;&nbsp;<span style='color:#999999;font-size:12px;'>" + RTrimStr((xml.list[i].TYPENAME === null ? "" : xml.list[i].TYPENAME), "类别") + "</span>" + "</li>";
                 }
                 html += "</ul>";
                 $("#divSSJGlist").html(html);
@@ -375,7 +375,7 @@ function LoadKeyWordByPY(SS) {
                     else {
                         SShtml = "<span style='color:#333333'>" + xml.list[i].CODENAME.substr(0, index) + "</span>" + "<span style='color:#333333;font-weight:bolder;'>" + xml.list[i].CODENAME.substr(index, getlength) + "</span>" + "<span style='color:#333333'>" + xml.list[i].CODENAME.substr(index + getlength, xml.list[i].CODENAME.length - index - getlength) + "</span>";
                     }
-                    html += "<li class='li_select' onclick='SelectSSJG(\"" + xml.list[i].CODENAME + "\",\"" + xml.list[i].CODEID + "\",\"" + xml.list[i].URL + "\",\"" + xml.list[i].PARENTID + "\",\"" + xml.list[i].CONDITION + "\")'>" + SShtml + "&nbsp;&nbsp;<span style='color:#999999;font-size:12px;'>" + (xml.list[i].TYPENAME === null ? "" : xml.list[i].TYPENAME) + "</span>" + "</li>";
+                    html += "<li class='li_select' codename='" + xml.list[i].CODENAME + "' codeid='" + xml.list[i].CODEID + "' url='" + xml.list[i].URL + "' parentid='" + xml.list[i].PARENTID + "' condition='" + xml.list[i].CONDITION + "' onclick='SelectSSJG(\"" + xml.list[i].CODENAME + "\",\"" + xml.list[i].CODEID + "\",\"" + xml.list[i].URL + "\",\"" + xml.list[i].PARENTID + "\",\"" + xml.list[i].CONDITION + "\")'>" + SShtml + "&nbsp;&nbsp;<span style='color:#999999;font-size:12px;'>" + RTrimStr((xml.list[i].TYPENAME === null ? "" : xml.list[i].TYPENAME), "类别") + "</span>" + "</li>";
                 }
                 html += "</ul>";
                 $("#divSSJGlist").html(html);
@@ -449,7 +449,7 @@ function OpenSSJGByInput() {
         },
         success: function (xml) {
             if (xml.Result === 1 && xml.list.length > 0) {
-                SelectSSJG(xml.list[0].CODENAME, xml.list[0].CODEID, xml.list[0].URL, xml.list[0].PARENTID);
+                SelectSSJG(xml.list[0].CODENAME, xml.list[0].CODEID, xml.list[0].URL, xml.list[0].PARENTID, xml.list[0].CONDITION);
                 var url = "";
                 if ($("#URL").val().split('_')[0] === "ES") {
                     url = "/" + $("#URL").val().split('_')[0] + "CX/" + $("#URL").val().split('_')[0] + "CX_" + $("#URL").val().split('_')[1] + "_" + $("#URL").val().split('_')[2];
@@ -457,8 +457,7 @@ function OpenSSJGByInput() {
                 else {
                     url = "/" + $("#URL").val().split('_')[0] + "CX/" + $("#URL").val().split('_')[0] + "CX_" + $("#URL").val().split('_')[1];
                 }
-                var condition = "";
-                OpenCXLB($("#LBID").val(), url, condition);
+                OpenCXLB($("#LBID").val(), url, $("#CONDITION").val());
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
