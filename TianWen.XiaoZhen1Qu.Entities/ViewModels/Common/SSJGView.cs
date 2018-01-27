@@ -14,5 +14,8 @@ namespace TianWen.XiaoZhen1Qu.Entities.ViewModels.Common
         public string URL { get; set; }
         public decimal PARENTID { get; set; }
         public string CONDITION { get; set; }
+        public string CODENAMEPY { get; set; }
+        public string CODENAMEPYQKG { get; set; }
+        public string CODENAMEPYSZM { get; set; }
     }
 }

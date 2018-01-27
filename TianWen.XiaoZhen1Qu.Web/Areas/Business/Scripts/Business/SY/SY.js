@@ -343,12 +343,12 @@ function LoadKeyWordByPY(SS) {
                 var html = "<ul id='ulSSJG' class='ul_select' style='height:" + (xml.list.length > 10 ? 341 : (xml.list.length * 34.5)) + "px;'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     var index = 0;
-                    var pys = xml.list[i].SSPY.split(' ');
+                    var pys = xml.list[i].CODENAMEPY.split(' ');
                     var count = 0;
                     var sySS = SS;
 
-                    if (xml.list[i].SSPYSZM != null && xml.list[i].SSPYSZM.indexOf(sySS) !== -1) {
-                        index = GetStartIndexBySZM(xml.list[i].SSPYSZM, sySS);
+                    if (xml.list[i].CODENAMEPYSZM != null && xml.list[i].CODENAMEPYSZM.indexOf(sySS) !== -1) {
+                        index = GetStartIndexBySZM(xml.list[i].CODENAMEPYSZM, sySS);
                         count = sySS.length;
                     }
                     else {
@@ -371,11 +371,11 @@ function LoadKeyWordByPY(SS) {
                     var getlength = count;
                     var SShtml = "";
                     if (index === 0)
-                        SShtml = "<span style='color:#333333;font-weight:bolder;'>" + xml.list[i].SS.substr(0, getlength) + "</span>" + "<span style='color:#333333'>" + xml.list[i].SS.substr(getlength, xml.list[i].SS.length - getlength) + "</span>";
+                        SShtml = "<span style='color:#333333;font-weight:bolder;'>" + xml.list[i].CODENAME.substr(0, getlength) + "</span>" + "<span style='color:#333333'>" + xml.list[i].CODENAME.substr(getlength, xml.list[i].CODENAME.length - getlength) + "</span>";
                     else {
-                        SShtml = "<span style='color:#333333'>" + xml.list[i].SS.substr(0, index) + "</span>" + "<span style='color:#333333;font-weight:bolder;'>" + xml.list[i].SS.substr(index, getlength) + "</span>" + "<span style='color:#333333'>" + xml.list[i].SS.substr(index + getlength, xml.list[i].SS.length - index - getlength) + "</span>";
+                        SShtml = "<span style='color:#333333'>" + xml.list[i].CODENAME.substr(0, index) + "</span>" + "<span style='color:#333333;font-weight:bolder;'>" + xml.list[i].CODENAME.substr(index, getlength) + "</span>" + "<span style='color:#333333'>" + xml.list[i].CODENAME.substr(index + getlength, xml.list[i].CODENAME.length - index - getlength) + "</span>";
                     }
-                    html += "<li class='li_select' onclick='SelectSS(this)'>" + SShtml + "&nbsp;&nbsp;<span style='color:#999999;font-size:12px;'>" + (xml.list[i].XQDZ === null ? "" : xml.list[i].XQDZ) + "</span>" + "</li>";
+                    html += "<li class='li_select' onclick='SelectSSJG(\"" + xml.list[i].CODENAME + "\",\"" + xml.list[i].CODEID + "\",\"" + xml.list[i].URL + "\",\"" + xml.list[i].PARENTID + "\",\"" + xml.list[i].CONDITION + "\")'>" + SShtml + "&nbsp;&nbsp;<span style='color:#999999;font-size:12px;'>" + (xml.list[i].TYPENAME === null ? "" : xml.list[i].TYPENAME) + "</span>" + "</li>";
                 }
                 html += "</ul>";
                 $("#divSSJGlist").html(html);

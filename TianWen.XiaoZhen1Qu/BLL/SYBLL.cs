@@ -913,7 +913,7 @@ union select codeid,codename,typename,n.lbid,fbym,condition from codes_xxyl n,co
 union select codeid,codename,typename,n.lbid,fbym,condition from codes_zsjm n,codes_xxlb m where n.lbid = m.lbid 
 union select codeid,codename,typename,n.lbid,fbym,condition from codes_zxjc n,codes_xxlb m where n.lbid = m.lbid
 union select lbid codeid,lbname codename,lbname typename,lbid,fbym,'' condition from codes_xxlb where fbym is not null and parentid not in(89,90)) a 
-where lbid is not null and codename like '%{0}%'", SS, XZQ));
+where lbid is not null and codename like '%{0}%' and ROWNUM <= 10", SS, XZQ));
                 IList<SSJGView> result = list.DataTableToList<SSJGView>();
                 return new { Result = EnResultType.Success, list = result };
             }
@@ -929,31 +929,32 @@ where lbid is not null and codename like '%{0}%'", SS, XZQ));
         {
             try
             {
-                IList<CODES_FC> list = DAO.Repository.GetObjectList<CODES_FC>(String.Format(@"select codeid,codename,typename,lbid parentid,fbym url,condition,codenameqkg,codenamepyszm from 
-(select codeid, codename, typename, n.lbid, fbym, condition, codenameqkg, codenamepyszm from codes_fc n, codes_xxlb m where n.lbid = m.lbid
-union select codeid, codename, typename, n.lbid, fbym, condition, codenameqkg, codenamepyszm from codes_cl n, codes_xxlb m where n.lbid = m.lbid
-union select codeid, codename, typename, n.lbid, fbym, condition, codenameqkg, codenamepyszm from codes_cl_jc n, codes_xxlb m where n.lbid = m.lbid
-union select codeid, codename, typename, n.lbid, fbym, condition, codenameqkg, codenamepyszm from codes_cw n, codes_xxlb m where n.lbid = m.lbid
-union select codeid, codename, typename, n.lbid, fbym, condition, codenameqkg, codenamepyszm from codes_es_sjsm n, codes_xxlb m where n.lbid = m.lbid
-union select codeid, codename, typename, n.lbid, fbym, condition, codenameqkg, codenamepyszm from codes_es_jdjjbg n, codes_xxlb m where n.lbid = m.lbid
-union select codeid, codename, typename, n.lbid, fbym, condition, codenameqkg, codenamepyszm from codes_es_myfzmr n, codes_xxlb m where n.lbid = m.lbid
-union select codeid, codename, typename, n.lbid, fbym, condition, codenameqkg, codenamepyszm from codes_es_pwkq n, codes_xxlb m where n.lbid = m.lbid
-union select codeid, codename, typename, n.lbid, fbym, condition, codenameqkg, codenamepyszm from codes_es_qtes n, codes_xxlb m where n.lbid = m.lbid
-union select codeid, codename, typename, n.lbid, fbym, condition, codenameqkg, codenamepyszm from codes_es_whyl n, codes_xxlb m where n.lbid = m.lbid
-union select codeid, codename, typename, n.lbid, fbym, condition, codenameqkg, codenamepyszm from codes_hqsy n, codes_xxlb m where n.lbid = m.lbid
-union select codeid, codename, typename, n.lbid, fbym, condition, codenameqkg, codenamepyszm from codes_jypx n, codes_xxlb m where n.lbid = m.lbid
-union select codeid, codename, typename, n.lbid, fbym, condition, codenameqkg, codenamepyszm from codes_lyjd n, codes_xxlb m where n.lbid = m.lbid
-union select codeid, codename, typename, n.lbid, fbym, condition, codenameqkg, codenamepyszm from codes_nlmfy n, codes_xxlb m where n.lbid = m.lbid
-union select codeid, codename, typename, n.lbid, fbym, condition, codenameqkg, codenamepyszm from codes_pfcg n, codes_xxlb m where n.lbid = m.lbid
-union select codeid, codename, typename, n.lbid, fbym, condition, codenameqkg, codenamepyszm from codes_qzzp n, codes_xxlb m where n.lbid = m.lbid
-union select codeid, codename, typename, n.lbid, fbym, condition, codenameqkg, codenamepyszm from codes_shfw n, codes_xxlb m where n.lbid = m.lbid
-union select codeid, codename, typename, n.lbid, fbym, condition, codenameqkg, codenamepyszm from codes_swfw n, codes_xxlb m where n.lbid = m.lbid
-union select codeid, codename, typename, n.lbid, fbym, condition, codenameqkg, codenamepyszm from codes_xxyl n, codes_xxlb m where n.lbid = m.lbid
-union select codeid, codename, typename, n.lbid, fbym, condition, codenameqkg, codenamepyszm from codes_zsjm n, codes_xxlb m where n.lbid = m.lbid
-union select codeid, codename, typename, n.lbid, fbym, condition, codenameqkg, codenamepyszm from codes_zxjc n, codes_xxlb m where n.lbid = m.lbid
-union select lbid codeid, lbname codename, lbname typename, lbid, fbym, '' condition, '' codenameqkg, '' codenamepyszm from codes_xxlb where fbym is not null and parentid not in(89, 90)) a
-where lbid is not null and (codenameqkg like '%{0}%' or codenamepyszm like '%{0}%'", SS, XZQ));
-                return new { Result = EnResultType.Success, list = list };
+                DataTable list = DAO.Repository.GetDataTable(String.Format(@"select codeid,codename,typename,lbid parentid,fbym url,condition,codenamepyqkg, codenamepy,codenamepyszm from 
+(select codeid, codename, typename, n.lbid, fbym, condition, codenamepyqkg, codenamepy, codenamepyszm from codes_fc n, codes_xxlb m where n.lbid = m.lbid
+union select codeid, codename, typename, n.lbid, fbym, condition, codenamepyqkg, codenamepy, codenamepyszm from codes_cl n, codes_xxlb m where n.lbid = m.lbid
+union select codeid, codename, typename, n.lbid, fbym, condition, codenamepyqkg, codenamepy, codenamepyszm from codes_cl_jc n, codes_xxlb m where n.lbid = m.lbid
+union select codeid, codename, typename, n.lbid, fbym, condition, codenamepyqkg, codenamepy, codenamepyszm from codes_cw n, codes_xxlb m where n.lbid = m.lbid
+union select codeid, codename, typename, n.lbid, fbym, condition, codenamepyqkg, codenamepy, codenamepyszm from codes_es_sjsm n, codes_xxlb m where n.lbid = m.lbid
+union select codeid, codename, typename, n.lbid, fbym, condition, codenamepyqkg, codenamepy, codenamepyszm from codes_es_jdjjbg n, codes_xxlb m where n.lbid = m.lbid
+union select codeid, codename, typename, n.lbid, fbym, condition, codenamepyqkg, codenamepy, codenamepyszm from codes_es_myfzmr n, codes_xxlb m where n.lbid = m.lbid
+union select codeid, codename, typename, n.lbid, fbym, condition, codenamepyqkg, codenamepy, codenamepyszm from codes_es_pwkq n, codes_xxlb m where n.lbid = m.lbid
+union select codeid, codename, typename, n.lbid, fbym, condition, codenamepyqkg, codenamepy, codenamepyszm from codes_es_qtes n, codes_xxlb m where n.lbid = m.lbid
+union select codeid, codename, typename, n.lbid, fbym, condition, codenamepyqkg, codenamepy, codenamepyszm from codes_es_whyl n, codes_xxlb m where n.lbid = m.lbid
+union select codeid, codename, typename, n.lbid, fbym, condition, codenamepyqkg, codenamepy, codenamepyszm from codes_hqsy n, codes_xxlb m where n.lbid = m.lbid
+union select codeid, codename, typename, n.lbid, fbym, condition, codenamepyqkg, codenamepy, codenamepyszm from codes_jypx n, codes_xxlb m where n.lbid = m.lbid
+union select codeid, codename, typename, n.lbid, fbym, condition, codenamepyqkg, codenamepy, codenamepyszm from codes_lyjd n, codes_xxlb m where n.lbid = m.lbid
+union select codeid, codename, typename, n.lbid, fbym, condition, codenamepyqkg, codenamepy, codenamepyszm from codes_nlmfy n, codes_xxlb m where n.lbid = m.lbid
+union select codeid, codename, typename, n.lbid, fbym, condition, codenamepyqkg, codenamepy, codenamepyszm from codes_pfcg n, codes_xxlb m where n.lbid = m.lbid
+union select codeid, codename, typename, n.lbid, fbym, condition, codenamepyqkg, codenamepy, codenamepyszm from codes_qzzp n, codes_xxlb m where n.lbid = m.lbid
+union select codeid, codename, typename, n.lbid, fbym, condition, codenamepyqkg, codenamepy, codenamepyszm from codes_shfw n, codes_xxlb m where n.lbid = m.lbid
+union select codeid, codename, typename, n.lbid, fbym, condition, codenamepyqkg, codenamepy, codenamepyszm from codes_swfw n, codes_xxlb m where n.lbid = m.lbid
+union select codeid, codename, typename, n.lbid, fbym, condition, codenamepyqkg, codenamepy, codenamepyszm from codes_xxyl n, codes_xxlb m where n.lbid = m.lbid
+union select codeid, codename, typename, n.lbid, fbym, condition, codenamepyqkg, codenamepy, codenamepyszm from codes_zsjm n, codes_xxlb m where n.lbid = m.lbid
+union select codeid, codename, typename, n.lbid, fbym, condition, codenamepyqkg, codenamepy, codenamepyszm from codes_zxjc n, codes_xxlb m where n.lbid = m.lbid
+union select lbid codeid, lbname codename, lbname typename, lbid, fbym, '' condition, '' codenamepyqkg, '' codenamepy,  '' codenamepyszm from codes_xxlb where fbym is not null and parentid not in(89, 90)) a
+where lbid is not null and (codenamepyqkg like '%{0}%' or codenamepyszm like '%{0}%') and ROWNUM <= 10", SS, XZQ));
+                IList<SSJGView> result = list.DataTableToList<SSJGView>();
+                return new { Result = EnResultType.Success, list = result };
             }
             catch (Exception ex)
             {
