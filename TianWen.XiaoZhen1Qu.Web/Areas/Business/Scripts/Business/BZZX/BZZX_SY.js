@@ -19,8 +19,12 @@
     $("#span_left_box_bottom_right_xxshgf").bind("click", OpenXSSYZN);
     $("#span_left_box_bottom_right_mjrm").bind("click", OpenXSSYZN);
 
+    //用户注册与登录
+    $("#span_left_box_bottom_right_rhzcyh").bind("click", OpenYHZCYDL);
     $("#span_left_box_bottom_right_yhmxg").bind("click", OpenYHZCYDL);
-    $("#span_left_box_bottom_right_wfdl").bind("click", OpenYHZCYDL);
+    $("#span_left_box_bottom_right_yhwfdl").bind("click", OpenYHZCYDL);
+    $("#span_left_box_bottom_right_zhdshbd").bind("click", OpenYHZCYDL);
+    $("#span_left_box_bottom_right_zhzx").bind("click", OpenYHZCYDL);
 
     $("#span_left_box_bottom_right_xxzlbbxs").bind("click", OpenXXFBYSC);
     $("#span_left_box_bottom_right_tsxxxshcf").bind("click", OpenXXFBYSC);
