@@ -36,7 +36,7 @@
 
 #canvas {left: 0px;top: 0px;position: absolute;}
 
-.editToolButton {height: 60px;width: 60px;display: inline-block;cursor: pointer; olor: gray;}
+.editToolButton {height: 60px;width: 60px;display: inline-block;cursor: pointer; color: gray;}
 
 .editToolButton span {display:inline-block;position:absolute;bottom:3px;left:15px}
 

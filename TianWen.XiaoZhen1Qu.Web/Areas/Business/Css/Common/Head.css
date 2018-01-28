@@ -27,3 +27,10 @@
 .div_head_nav .ul_head_nav .li_head_nav {background: #ffffff;text-align: center;color: #bc6ba6;height: 37px;font-size: 16px;font-weight: 700;float: left;display: inline-block;padding: 6px 18px;border-top-left-radius: 4px;border-top-right-radius: 4px;}
 .div_head_nav .ul_head_nav .li_head_nav .span_head_nav {cursor: default;}
 .div_head_nav .ul_head_nav .li_head_nav .i_head_nav {background-image: url(images/head_nav_down.png);display: inline-block;width: 14px;height: 14px;margin-left: 5px;}
+
+
+/*搜索结果下拉框*/
+.div_select_dropdown {top:-10px; border-top:none; width: 499px;height:320px; position: relative;z-index: 1001;display:none;}
+.ul_select {width:499px;background-color:#ffffff;text-align: center;display: inline-block;border: 1px solid #bc6ba6;border-top:none;padding-left: 0px;height: 341px;}
+.li_select {height: 34px;text-align: left;width: 497px;display: block;padding-left: 6px;line-height: 34px;font-size: 16px;cursor: pointer;color: #999999;background: #FFFFFF;}
+.li_select:hover {background: #ececec;color: #333333;}

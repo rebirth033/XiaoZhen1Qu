@@ -70,9 +70,3 @@
 #div_body_middle_left_JYPX .li_body_middle_left_section{ height: 55px;}
 #div_body_middle_left_ZSJM .li_body_middle_left_section{ height: 55px;}
 #div_body_middle_left_PFCG .li_body_middle_left_section{ height: 45px;}
-
-/*搜索结果下拉框*/
-.div_select_dropdown {top:-10px; border-top:none; width: 499px;height:320px; position: relative;z-index: 1001;display:none;}
-.ul_select {width:499px;background-color:#ffffff;text-align: center;display: inline-block;border: 1px solid #bc6ba6;border-top:none;padding-left: 0px;height: 341px;}
-.li_select {height: 34px;text-align: left;width: 497px;display: block;padding-left: 6px;line-height: 34px;font-size: 16px;cursor: pointer;color: #999999;background: #FFFFFF;}
-.li_select:hover {background: #ececec;color: #333333;}
