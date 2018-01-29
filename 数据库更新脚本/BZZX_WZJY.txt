@@ -1,0 +1,46 @@
+-- Create table
+create table BZZX_WZJY
+(
+  id   VARCHAR2(50) not null,
+  lb   VARCHAR2(1),
+  yjnr VARCHAR2(600),
+  yhid VARCHAR2(50)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64
+    next 8
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table BZZX_WZJY
+  is '帮助中心_网站建议';
+-- Add comments to the columns 
+comment on column BZZX_WZJY.id
+  is '主键';
+comment on column BZZX_WZJY.lb
+  is '建议类别(0:信息分类建议,1:区域划分建议,2:创意点子,3:其它点子)';
+comment on column BZZX_WZJY.yjnr
+  is '意见内容';
+comment on column BZZX_WZJY.yhid
+  is '用户ID';
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table BZZX_WZJY
+  add primary key (ID)
+  using index 
+  tablespace USERS
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );

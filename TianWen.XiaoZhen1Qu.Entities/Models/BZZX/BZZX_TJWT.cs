@@ -33,11 +33,5 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// /// </summary>
         [Property]
         public virtual string YJNR { get; set; }
-
-        /// <summary>
-        /// 图片
-        /// /// </summary>
-        [Property]
-        public virtual string TP { get; set; }
     }
 }

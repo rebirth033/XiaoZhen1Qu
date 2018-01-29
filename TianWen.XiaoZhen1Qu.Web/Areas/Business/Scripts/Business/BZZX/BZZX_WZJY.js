@@ -1,15 +1,15 @@
 ﻿$(document).ready(function () {
     $("#btnTJJY").bind("click", TJJY);
-    BindYJNR();
     $("#textarea_yjnr").bind("onfocus", InitYJNR);
+    $("#input_upload").bind("change", UploadZP);
+    BindYJNR();
 });
 //初始化意见内容
 function InitYJNR() {
-    if ($("#textarea_yjnr").val().indexOf('意见内容在1000字以内') !== -1) {
+    if ($("#textarea_yjnr").val().indexOf('意见内容在500字以内') !== -1) {
         $("#textarea_yjnr").val('');
     }
 }
-
 //选择问题类型
 function SelectWTLX() {
     $(".span_wtlx_inner_right").each(function () {
@@ -28,19 +28,19 @@ function BindYJNR() {
 //意见内容鼠标键入
 function YJNRFocus() {
     $("#textarea_yjnr").css("color", "#333333");
-    if ($("#textarea_yjnr").val().indexOf("1000字以内") !== -1)
+    if ($("#textarea_yjnr").val().indexOf("500字以内") !== -1)
         $("#textarea_yjnr").html("");
 }
 //问题描述框鼠标移除
 function YJNRBlur() {
     $("#textarea_yjnr").css("color", "#999999");
     if ($("#textarea_yjnr").html() === "") {
-        $("#textarea_yjnr").html("意见内容在1000字以内。\r\n若您的意见被采纳，我们将会通过消息通知您，请关注消息更新记录，请留下您宝贵的意见！");
+        $("#textarea_yjnr").html("意见内容在500字以内。\r\n若您的意见被采纳，我们将会通过消息通知您，请关注消息更新记录，请留下您宝贵的意见！");
     }
 }
 //意见内容检查
 function CheckYJNR() {
-    if ($("#textarea_yjnr").val().indexOf("意见内容在1000字以内") !== -1) {
+    if ($("#textarea_yjnr").val().indexOf("意见内容在500字以内") !== -1) {
         $("#textarea_yjnr").css("border-color", "#F2272D");
         $("#span_yjnrinfo").css("color", "#F2272D");
         $("#span_yjnrinfo").html("意见内容在500字以内，不可为空");
@@ -73,7 +73,7 @@ function TJJY() {
     if (ValidateWZYJ() === false) return;
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/BZZX_WZJY/SaveWZJY",
+        url: getRootPath() + "/Business/BZZX/SaveWZJY",
         dataType: "json",
         data:
         {
@@ -84,6 +84,7 @@ function TJJY() {
         success: function (xml) {
             if (xml.Result === 1) {
                 alert(xml.Message);
+                window.location.href = window.location.href;
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
