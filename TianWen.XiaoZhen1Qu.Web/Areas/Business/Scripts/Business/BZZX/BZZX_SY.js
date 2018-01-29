@@ -79,5 +79,5 @@ function OpenWLFPCS() {
 }
 
 function OpenYYPJKD() {
-    window.open(getRootPath() + "/Business/BZZX/BZZX_SY_KSDH_YYPJKD");
+    window.open(getRootPath() + "/Business/BZZX/BZZX_SY_KSDH_JBYSS");
 }

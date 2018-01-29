@@ -104,7 +104,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return View();
         }
 
-        public ActionResult BZZX_SY_KSDH_YYPJKD()
+        public ActionResult BZZX_SY_KSDH_JBYSS()
         {
             return View();
         }

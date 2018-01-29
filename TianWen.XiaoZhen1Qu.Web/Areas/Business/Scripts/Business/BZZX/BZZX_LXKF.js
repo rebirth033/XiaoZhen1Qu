@@ -18,10 +18,10 @@ function bindHover() {
     $(".span_wtlx_inner_right").each(function () {
         $(this).bind("mouseover", function () {
             $(this).css("background-color", "#bc6ba6").css("font-weight", "700").css("color", "#fff");
-        })
-        $(this).bind("mouseleave", function () {
+        });
+        $(this).bind("mouseleave", function() {
             $(this).css("background-color", "#eBeBeB").css("font-weight", "normal").css("color", "#000");
-        })
+        });
     });
 }
 //绑定具体问题hover事件
@@ -29,16 +29,15 @@ function bindJTWTHover() {
     $(".span_wtjj_inner").each(function () {
         $(this).bind("mouseover", function () {
             $(this).css("color", "#bc6ba6");
-        })
+        });
         $(this).bind("mouseleave", function () {
             $(this).css("color", "#0000cd");
-        })
+        });
     });
 }
 //查询信息被删除原因
 function CKBSCYY() {
     if (!XXBHCheck()) return;
-
 }
 //信息编号检查
 function XXBHCheck() {
@@ -62,43 +61,43 @@ function showWTLX(id) {
     $(".div_wtjj_inner").each(function () {
         $(this).css("display", "none");
     });
-    if (id.indexOf("xxbsc") != -1)
+    if (id.indexOf("xxbsc") !== -1)//信息被删除
         ShowXXBSC();
-    if (id.indexOf("xxbfhxg") != -1)
+    if (id.indexOf("xxbfhxg") !== -1)//信息被返回修改
         ShowXXBFHXG();
-    if (id.indexOf("xxbpflbd") != -1)
+    if (id.indexOf("xxbpflbd") !== -1)
         ShowXXBPFLDB();
-    if (id.indexOf("xxbxs") != -1)
+    if (id.indexOf("xxbxs") !== -1)
         ShowXXBXS();
-    if (id.indexOf("tsjbxjxx") != -1)
+    if (id.indexOf("tsjbxjxx") !== -1)
         ShowTSJBXJXX();
-    if (id.indexOf("mysjhm") != -1)
+    if (id.indexOf("mysjhm") !== -1)
         ShowMYSJHM();
-    if (id.indexOf("qtxxmy") != -1)
+    if (id.indexOf("qtxxmy") !== -1)
         ShowQTXXMY();
-    if (id.indexOf("ssbts") != -1)
+    if (id.indexOf("ssbts") !== -1)
         ShowSSBTS();
-    if (id.indexOf("zhbdj") != -1)
+    if (id.indexOf("zhbdj") !== -1)
         ShowZHBDJ();
-    if (id.indexOf("bpwfczj") != -1)
+    if (id.indexOf("bpwfczj") !== -1)
         ShowBPWFCZJ();
-    if (id.indexOf("bpwessj") != -1)
+    if (id.indexOf("bpwessj") !== -1)
         ShowBPWESSJ();
-    if (id.indexOf("bpwzj") != -1)
+    if (id.indexOf("bpwzj") !== -1)
         ShowBPWZJ();
-    if (id.indexOf("ghrz") != -1)
+    if (id.indexOf("ghrz") !== -1)
         ShowGHRZ();
-    if (id.indexOf("zhmm") != -1)
+    if (id.indexOf("zhmm") !== -1)
         ShowZHMM();
-    if (id.indexOf("zhbd") != -1)
+    if (id.indexOf("zhbd") !== -1)
         ShowZHBD();
-    if (id.indexOf("czwt") != -1)
+    if (id.indexOf("czwt") !== -1)
         ShowCZWT();
-    if (id.indexOf("hzzx") != -1)
+    if (id.indexOf("hzzx") !== -1)
         ShowHZZX();
-    if (id.indexOf("zxzz") != -1)
+    if (id.indexOf("zxzz") !== -1)
         ShowZXZZ();
-    if (id.indexOf("xtwt") != -1)
+    if (id.indexOf("xtwt") !== -1)
         ShowXTWT();
 }
 //信息被删除
@@ -253,139 +252,139 @@ function SelectJTWT() {
 //显示具体问题
 function showJTWT(id) {
     $(".div_qtxxmy_inner").css("display", "none");
-    if (id.indexOf("sfzbmy") != -1) {
+    if (id.indexOf("sfzbmy") !== -1) {
         $("#div_wtjj_inner_sfzbmy").css("display", "block");
     }
-    if (id.indexOf("mygrxx") != -1) {
+    if (id.indexOf("mygrxx") !== -1) {
         $("#div_wtjj_inner_mygrxx").css("display", "block");
     }
-    if (id.indexOf("gsxxbmy") != -1) {
+    if (id.indexOf("gsxxbmy") !== -1) {
         $("#div_wtjj_inner_gsxxbmy").css("display", "block");
     }
-    if (id.indexOf("btswxjwfxx") != -1) {
+    if (id.indexOf("btswxjwfxx") !== -1) {
         $("#div_wtjj_inner_btswxjwfxx").css("display", "block");
     }
-    if (id.indexOf("xxbsczmb") != -1) {
+    if (id.indexOf("xxbsczmb") !== -1) {
         $("#div_wtjj_inner_xxbsczmb").css("display", "block");
     }
-    if (id.indexOf("xxbxs") != -1) {
+    if (id.indexOf("xxbxs") !== -1) {
         $("#div_wtjj_inner_xxbxs").css("display", "block");
     }
-    if (id.indexOf("rhscdgsdpj") != -1) {
+    if (id.indexOf("rhscdgsdpj") !== -1) {
         $("#div_wtjj_inner_rhscdgsdpj").css("display", "block");
     }
-    if (id.indexOf("fbxxstssjzhdj") != -1) {
+    if (id.indexOf("fbxxstssjzhdj") !== -1) {
         $("#div_wtjj_inner_fbxxstssjzhdj").css("display", "block");
     }
-    if (id.indexOf("zhbdjdyyssm") != -1) {
+    if (id.indexOf("zhbdjdyyssm") !== -1) {
         $("#div_wtjj_inner_zhbdjdyyssm").css("display", "block");
     }
-    if (id.indexOf("zhwfdl") != -1) {
+    if (id.indexOf("zhwfdl") !== -1) {
         $("#div_wtjj_inner_zhwfdl").css("display", "block");
     }
-    if (id.indexOf("bpwzjdyy") != -1) {
+    if (id.indexOf("bpwzjdyy") !== -1) {
         $("#div_wtjj_inner_bpwzjdyy").css("display", "block");
     }
-    if (id.indexOf("fbzpxxsbpwzj") != -1) {
+    if (id.indexOf("fbzpxxsbpwzj") !== -1) {
         $("#div_wtjj_inner_fbzpxxsbpwzj").css("display", "block");
     }
-    if (id.indexOf("ksghsjrz") != -1) {
+    if (id.indexOf("ksghsjrz") !== -1) {
         $("#div_wtjj_inner_ksghsjrz").css("display", "block");
     }
-    if (id.indexOf("ksghyx") != -1) {
+    if (id.indexOf("ksghyx") !== -1) {
         $("#div_wtjj_inner_ksghyx").css("display", "block");
     }
-    if (id.indexOf("qxsmrz") != -1) {
+    if (id.indexOf("qxsmrz") !== -1) {
         $("#div_wtjj_inner_qxsmrz").css("display", "block");
     }
-    if (id.indexOf("qxyyzzrz") != -1) {
+    if (id.indexOf("qxyyzzrz") !== -1) {
         $("#div_wtjj_inner_qxyyzzrz").css("display", "block");
     }
-    if (id.indexOf("wfjssjdx") != -1) {
+    if (id.indexOf("wfjssjdx") !== -1) {
         $("#div_wtjj_inner_wfjssjdx").css("display", "block");
     }
-    if (id.indexOf("xyxggsm") != -1) {
+    if (id.indexOf("xyxggsm") !== -1) {
         $("#div_wtjj_inner_xyxggsm").css("display", "block");
     }
-    if (id.indexOf("yyzzrztbg") != -1) {
+    if (id.indexOf("yyzzrztbg") !== -1) {
         $("#div_wtjj_inner_yyzzrztbg").css("display", "block");
     }
-    if (id.indexOf("rhtjyyzzrz") != -1) {
+    if (id.indexOf("rhtjyyzzrz") !== -1) {
         $("#div_wtjj_inner_rhtjyyzzrz").css("display", "block");
     }
-    if (id.indexOf("qxgrsfrz") != -1) {
+    if (id.indexOf("qxgrsfrz") !== -1) {
         $("#div_wtjj_inner_qxgrsfrz").css("display", "block");
     }
-    if (id.indexOf("tszhmmcw") != -1) {
+    if (id.indexOf("tszhmmcw") !== -1) {
         $("#div_wtjj_inner_tszhmmcw").css("display", "block");
     }
-    if (id.indexOf("sjbmyhbbrrz") != -1) {
+    if (id.indexOf("sjbmyhbbrrz") !== -1) {
         $("#div_wtjj_inner_sjbmyhbbrrz").css("display", "block");
     }
-    if (id.indexOf("qtbdqk") != -1) {
+    if (id.indexOf("qtbdqk") !== -1) {
         $("#div_wtjj_inner_qtbdqk").css("display", "block");
     }
-    if (id.indexOf("zhbdxzx") != -1) {
+    if (id.indexOf("zhbdxzx") !== -1) {
         $("#div_wtjj_inner_zhbdxzx").css("display", "block");
     }
-    if (id.indexOf("rhfzzhbd") != -1) {
+    if (id.indexOf("rhfzzhbd") !== -1) {
         $("#div_wtjj_inner_rhfzzhbd").css("display", "block");
     }
-    if (id.indexOf("xykjczfp") != -1) {
+    if (id.indexOf("xykjczfp") !== -1) {
         $("#div_wtjj_inner_xykjczfp").css("display", "block");
     }
-    if (id.indexOf("sqtkdz") != -1) {
+    if (id.indexOf("sqtkdz") !== -1) {
         $("#div_wtjj_inner_sqtkdz").css("display", "block");
     }
-    if (id.indexOf("zdyfk") != -1) {
+    if (id.indexOf("zdyfk") !== -1) {
         $("#div_wtjj_inner_zdyfk").css("display", "block");
     }
     //合作咨询
-    if (id.indexOf("sfzs") != -1) {
+    if (id.indexOf("sfzs") !== -1) {
         $("#div_wtjj_inner_sfzs").css("display", "block");
     }
     //在线增值
-    if (id.indexOf("xcwhy") != -1) {
+    if (id.indexOf("xcwhy") !== -1) {
         $("#div_wtjj_inner_xcwhy").css("display", "block");
     }
-    if (id.indexOf("mjbmyzmb") != -1) {
+    if (id.indexOf("mjbmyzmb") !== -1) {
         $("#div_wtjj_inner_mjbmyzmb").css("display", "block");
     }
     //系统问题
-    if (id.indexOf("xxfbsb") != -1) {
+    if (id.indexOf("xxfbsb") !== -1) {
         $("#div_wtjj_inner_xxfbsb").css("display", "block");
     }
-    if (id.indexOf("dbkwy") != -1) {
+    if (id.indexOf("dbkwy") !== -1) {
         $("#div_wtjj_inner_dbkwy").css("display", "block");
     }
-    if (id.indexOf("nrsrbl") != -1) {
+    if (id.indexOf("nrsrbl") !== -1) {
         $("#div_wtjj_inner_nrsrbl").css("display", "block");
     }
-    if (id.indexOf("qymcwfgh") != -1) {
+    if (id.indexOf("qymcwfgh") !== -1) {
         $("#div_wtjj_inner_qymcwfgh").css("display", "block");
     }
-    if (id.indexOf("xyscxx") != -1) {
+    if (id.indexOf("xyscxx") !== -1) {
         $("#div_wtjj_inner_xyscxx").css("display", "block");
     }
-    if (id.indexOf("zpxggsmc") != -1) {
+    if (id.indexOf("zpxggsmc") !== -1) {
         $("#div_wtjj_inner_zpxggsmc").css("display", "block");
     }
-    if (id.indexOf("sbddxyzm") != -1) {
+    if (id.indexOf("sbddxyzm") !== -1) {
         $("#div_wtjj_inner_sbddxyzm").css("display", "block");
     }
-    if (id.indexOf("xghsjrz") != -1) {
+    if (id.indexOf("xghsjrz") !== -1) {
         $("#div_wtjj_inner_xghsjrz").css("display", "block");
     }
-    if (id.indexOf("yyzzwfsc") != -1) {
+    if (id.indexOf("yyzzwfsc") !== -1) {
         $("#div_wtjj_inner_yyzzwfsc").css("display", "block");
     }
-    if (id.indexOf("yyzzyzbl") != -1) {
+    if (id.indexOf("yyzzyzbl") !== -1) {
         $("#div_wtjj_inner_yyzzyzbl").css("display", "block");
     }
-    if (id.indexOf("xxsxbl") != -1) {
+    if (id.indexOf("xxsxbl") !== -1) {
         $("#div_wtjj_inner_xxsxbl").css("display", "block");
     }
-    if (id.indexOf("yrkyzdnr") != -1) {
+    if (id.indexOf("yrkyzdnr") !== -1) {
         $("#div_wtjj_inner_yrkyzdnr").css("display", "block");
     }
 }

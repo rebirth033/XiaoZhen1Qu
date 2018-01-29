@@ -151,7 +151,7 @@
     <Content Include="Areas\Business\Css\BZZX\BZZX_SY_KSDH_XSSYZN.css" />
     <Content Include="Areas\Business\Css\BZZX\BZZX_SY_KSDH_XXFBYSC.css" />
     <Content Include="Areas\Business\Css\BZZX\BZZX_SY_KSDH_YHZCYDL.css" />
-    <Content Include="Areas\Business\Css\BZZX\BZZX_SY_KSDH_YYPJKD.css" />
+    <Content Include="Areas\Business\Css\BZZX\BZZX_SY_KSDH_JBYSS.css" />
     <Content Include="Areas\Business\Css\BZZX\BZZX_SY_KSDH_ZHDJYXY.css" />
     <Content Include="Areas\Business\Css\BZZX\BZZX_SY_RZSM.css" />
     <Content Include="Areas\Business\Css\BZZX\BZZX_SY_XXBSC.css" />
@@ -257,6 +257,7 @@
     <Content Include="Areas\Business\Css\images\logo_purple_clsy.png" />
     <Content Include="Areas\Business\Css\images\logo_purple_fcsy.png" />
     <Content Include="Areas\Business\Css\images\lxdh.png" />
+    <Content Include="Areas\Business\Css\images\one-purple.png" />
     <Content Include="Areas\Business\Css\images\radio_purple.png" />
     <Content Include="Areas\Business\Css\images\SY\BMFW\sy_bmfw_kdcx.png" />
     <Content Include="Areas\Business\Css\images\SY\TBDH\body_top_cl2.png" />
@@ -290,6 +291,8 @@
     <Content Include="Areas\Business\Css\images\SY\WZJB\QQ图片20171101223342.png" />
     <Content Include="Areas\Business\Css\images\SY\WZJB\QQ图片20171101223345.png" />
     <Content Include="Areas\Business\Css\images\SY\WZJB\QQ图片20171101223348.png" />
+    <Content Include="Areas\Business\Css\images\three-purple.png" />
+    <Content Include="Areas\Business\Css\images\two-purple.png" />
     <Content Include="Areas\Business\Css\images\warn.png" />
     <Content Include="Areas\Business\Css\images\XXXX\FC\xxxx_fc_冰箱.png" />
     <Content Include="Areas\Business\Css\images\XXXX\FC\xxxx_fc_宽带.png" />
@@ -853,7 +856,7 @@
     <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_SY_KSDH_XSSYZN.js" />
     <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_SY_KSDH_XXFBYSC.js" />
     <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_SY_KSDH_YHZCYDL.js" />
-    <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_SY_KSDH_YYPJKD.js" />
+    <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_SY_KSDH_JBYSS.js" />
     <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_SY_KSDH_ZHDJYXY.js" />
     <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_SY_RZSM.js" />
     <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_SY_XXBSC.js" />
@@ -2203,7 +2206,7 @@
     <Content Include="Areas\Business\Views\BZZX\BZZX_SY_KSDH_XXFBYSC.cshtml" />
     <Content Include="Areas\Business\Views\BZZX\BZZX_SY_KSDH_ZHDJYXY.cshtml" />
     <Content Include="Areas\Business\Views\BZZX\BZZX_SY_KSDH_WLFPCS.cshtml" />
-    <Content Include="Areas\Business\Views\BZZX\BZZX_SY_KSDH_YYPJKD.cshtml" />
+    <Content Include="Areas\Business\Views\BZZX\BZZX_SY_KSDH_JBYSS.cshtml" />
     <Content Include="Areas\Business\Views\FC\FC_DZF.cshtml" />
     <Content Include="Areas\Business\Scripts\UEditor\net\config.json" />
     <Content Include="Areas\Business\Scripts\UEditor\net\controller.ashx" />
