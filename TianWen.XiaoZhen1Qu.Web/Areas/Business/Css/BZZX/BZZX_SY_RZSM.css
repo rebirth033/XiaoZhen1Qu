@@ -14,11 +14,13 @@
 
 .div_body {width: 1000px;margin: 0 auto;text-align: left;display: block;}
 
-.div_body_nav {margin-top: 20px;display: block;height: 240px;width: 1000px;}
+.div_body_nav {margin-top: 20px;display: block;height: 160px;width: 1000px;}
 
-.span_body_nav {display: inline-block;width: 500px;height: 34px;float: left;color: #0000cd;padding-top: 3px;font-weight: bold;}
+.span_body_nav {display: inline-block;width: 500px;height: 40px;float: left;color: #0000cd;padding-top: 3px;font-weight: bold;}
 
 .span_body_nav:hover {cursor: pointer;color: #bc6ba6;}
+
+.span_body_nav_inner{ font-weight: 700;font-size: 16px;}
 
 .div_body_nav_title {background-color: #f7f7f7;width: 1000px;height: 34px;border-left: 2px solid #bc6ba6;display: block;margin-top: 20px;padding-left: 10px;padding-top: 4px;font-weight: 700;font-size: 16px;}
 

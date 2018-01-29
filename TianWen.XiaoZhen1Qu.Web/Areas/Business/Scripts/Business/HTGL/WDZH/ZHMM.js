@@ -304,7 +304,7 @@ function GetNumber() {
 function TXYZMTip() {
     $("#TXYZM").css("border-color", "#999");
     $("#TXYZMInfo").css("color", "#999");
-    $("#TXYZMInfo").html('验证码看不清？<span onclick="QHTXYZM()" style="cursor:pointer;text-decoration:none;color:#bc6ba6">换一下？</span>');
+    $("#TXYZMInfo").html('验证码看不清?<span onclick="QHTXYZM()" style="cursor:pointer;text-decoration:none;color:#bc6ba6">换一下?</span>');
 }
 
 function QHTXYZM() {
