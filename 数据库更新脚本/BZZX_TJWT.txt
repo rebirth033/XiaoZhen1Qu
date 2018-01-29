@@ -2,9 +2,10 @@
 create table BZZX_TJWT
 (
   id   VARCHAR2(50) not null,
-  lb   VARCHAR2(1),
+  lb   VARCHAR2(20),
   yjnr VARCHAR2(600),
-  yhid VARCHAR2(50)
+  yhid VARCHAR2(50),
+  xxbh VARCHAR2(50)
 )
 tablespace USERS
   pctfree 10
@@ -12,8 +13,8 @@ tablespace USERS
   maxtrans 255
   storage
   (
-    initial 64
-    next 8
+    initial 16K
+    next 8K
     minextents 1
     maxextents unlimited
   );
@@ -29,6 +30,8 @@ comment on column BZZX_TJWT.yjnr
   is '意见内容';
 comment on column BZZX_TJWT.yhid
   is '用户ID';
+comment on column BZZX_TJWT.xxbh
+  is '信息编号';
 -- Create/Recreate primary, unique and foreign key constraints 
 alter table BZZX_TJWT
   add primary key (ID)

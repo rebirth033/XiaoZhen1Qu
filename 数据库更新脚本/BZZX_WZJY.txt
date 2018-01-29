@@ -2,7 +2,7 @@
 create table BZZX_WZJY
 (
   id   VARCHAR2(50) not null,
-  lb   VARCHAR2(1),
+  lb   VARCHAR2(2),
   yjnr VARCHAR2(600),
   yhid VARCHAR2(50)
 )
@@ -12,8 +12,8 @@ tablespace USERS
   maxtrans 255
   storage
   (
-    initial 64
-    next 8
+    initial 16K
+    next 8K
     minextents 1
     maxextents unlimited
   );

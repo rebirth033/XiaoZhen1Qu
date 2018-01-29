@@ -242,3 +242,7 @@ function OpenCXLB(lbid, lburl, condition) {
 function ToEJSY(type) {
     window.open(getRootPath() + "/Business/SY/" + type);
 }
+//登录
+function OpenDL() {
+    window.location.href = getRootPath() + "/Business/YHDL/YHDL?To=SY";
+}
