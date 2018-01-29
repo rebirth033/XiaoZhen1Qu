@@ -3,24 +3,24 @@ using NHibernate.Mapping.Attributes;
 
 namespace TianWen.XiaoZhen1Qu.Entities.Models
 {
-    public class BZZX_WZJY
+    public class BZZX_TJWT
     {
-        public BZZX_WZJY()
+        public BZZX_TJWT()
         {
-            WZJYID = Guid.NewGuid().ToString("N");
+            ID = Guid.NewGuid().ToString("N");
         }
 
         /// <summary>
-        /// 网站意见ID
+        /// ID
         /// </summary>
         [Id]
-        public virtual string WZJYID { get; set; }
+        public virtual string ID { get; set; }
 
         /// <summary>
         /// 基础信息ID
         /// /// </summary>
         [Property]
-        public virtual string JCXXID { get; set; }
+        public virtual string YHID { get; set; }
 
         /// <summary>
         /// 类别

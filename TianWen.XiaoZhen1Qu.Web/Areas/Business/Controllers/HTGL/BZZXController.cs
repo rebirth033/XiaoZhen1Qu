@@ -1,7 +1,8 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Collections.Generic;
+using System.Web.Mvc;
 using TianWen.XiaoZhen1Qu.Entities.Models;
 using TianWen.XiaoZhen1Qu.Interface;
-using TianWen.XiaoZhen1Qu.Web.Areas.Business.Common;
 
 namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 {
@@ -16,11 +17,6 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         }
 
         public ActionResult BZZX_SY()
-        {
-            return View();
-        }
-
-        public ActionResult BZZX_CJWT()
         {
             return View();
         }
@@ -74,6 +70,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         {
             return View();
         }
+
         public ActionResult BZZX_SY_FTBG()
         {
             return View();
@@ -168,6 +165,32 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             {
                 return Json(new { Result = EnResultType.Failed, Message = "请获取验证码", Type = 1 });
             }
+        }
+
+        public JsonResult SaveTJWT()
+        {
+            YHJBXX yhjbxx = BZZXBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            string yjnr = Request["YJNR"];
+            string fwzp = Request["FWZP"];
+            BZZX_TJWT tjwt = new BZZX_TJWT();
+            tjwt.YJNR = yjnr;
+            tjwt.YHID = yhjbxx.YHID;
+            List<PHOTOS> photos = GetTP(fwzp);
+            object result = BZZXBLL.SaveTJWT(tjwt, photos);
+            return Json(result);
+        }
+
+        public JsonResult SaveWZJY()
+        {
+            YHJBXX yhjbxx = BZZXBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            string yjnr = Request["YJNR"];
+            string fwzp = Request["FWZP"];
+            BZZX_WZJY wzjy = new BZZX_WZJY();
+            wzjy.YJNR = yjnr;
+            wzjy.YHID = yhjbxx.YHID;
+            List<PHOTOS> photos = GetTP(fwzp);
+            object result = BZZXBLL.SaveWZJY(wzjy, photos);
+            return Json(result);
         }
     }
 }

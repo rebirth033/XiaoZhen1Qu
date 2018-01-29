@@ -2073,7 +2073,6 @@
     <Compile Include="Areas\Business\Controllers\OTHER\BaseController.cs" />
     <Compile Include="Areas\Business\Common\QRCodeHelper.cs" />
     <Compile Include="Areas\Business\Controllers\HTGL\BZZXController.cs" />
-    <Compile Include="Areas\Business\Controllers\HTGL\BZZX_WZJYController.cs" />
     <Compile Include="Areas\Business\Controllers\OTHER\CommonController.cs" />
     <Compile Include="Areas\Business\Controllers\CXLB\FCCXController.cs" />
     <Compile Include="Areas\Business\Controllers\OTHER\FBCGController.cs" />

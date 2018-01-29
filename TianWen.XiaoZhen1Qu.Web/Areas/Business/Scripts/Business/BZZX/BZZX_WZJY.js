@@ -43,7 +43,7 @@ function CheckYJNR() {
     if ($("#textarea_yjnr").val().indexOf("意见内容在1000字以内") !== -1) {
         $("#textarea_yjnr").css("border-color", "#F2272D");
         $("#span_yjnrinfo").css("color", "#F2272D");
-        $("#span_yjnrinfo").html("意见内容在15-300字之间，不可为空");
+        $("#span_yjnrinfo").html("意见内容在500字以内，不可为空");
         return false;
     }
     else {

@@ -62,7 +62,7 @@
                 </table>
             </div>
         </div>
-        <div class="div_content" style="margin-top:20px;">
+        <div class="div_content" id="div_step_two" style="margin-top: 20px; display: none;">
             <span class="span_step span_step_second"></span>
             <span class="span_step_text" id="span_step_text_second">请描述您遇到的问题：</span>
         </div>
@@ -80,20 +80,29 @@
                         <tr class="tr_wtjj">
                             <td class="td_wtjj_inner_left" style="vertical-align:top;padding-top:15px;">问题描述：</td>
                             <td class="td_wtjj_inner_right">
-                                <textarea class="textarea_mswt" id="textarea_mswt">请描述您的具体问题，字数在15至300之间</textarea>
+                                <textarea class="textarea_mswt" id="textareaWTMS" maxlength="500">请描述您的具体问题，字数在500字以内</textarea>
                             </td>
                         </tr>
                         <tr class="tr_wtjj">
                             <td class="td_wtjj_inner_left">上传图片：</td>
                             <td class="td_wtjj_inner_right">
-                                <input type="button" value="图片上传" />
-                                <span>已上传图片1/5，最多可上传5张图片，支持：jpg/gif/png格式 </span>
+                                <div id="divFWZPValue" class="div_row_zp" style="display: none;">
+                                    <div id="divImgs1" class="div_row_right" style="display: inline-block; width: 670px;">
+                                        <ul id="ulImgs1" class="ulImgs" style="padding-left: 0px;"></ul>
+                                    </div>
+                                </div>
+                                <div id="div_upload" class="div_upload">
+                                    <form action="" enctype="multipart/form-data" id="myform" method="post">
+                                        <input id="input_upload" unselectable="on" type="file" multiple="multiple" class="file" />
+                                    </form>
+                                </div>
+                                <span>已上传图片<span id="span_ysctp">0</span>/5，最多可上传5张图片，支持：jpg/gif/png格式 </span>
                             </td>
                         </tr>
                         <tr class="tr_wtjj" style="height:65px;vertical-align:top;">
                             <td class="td_wtjj_inner_left"></td>
                             <td class="td_wtjj_inner_right" style="padding-top:10px;">
-                                <input class="button" type="button" value="提交问题" style="width:153px; height:44px" />
+                                <input id="btn_submit" class="button" type="button" value="提交问题" style="width:153px; height:44px" />
                             </td>
                         </tr>
                     </table>
