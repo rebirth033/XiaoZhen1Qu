@@ -9,6 +9,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
     public class BZZXController : BaseController
     {
         public IBZZXBLL BZZXBLL { get; set; }
+
         public IYHJBXXBLL YHJBXXBLL { get; set; }
 
         public ActionResult BZZX()
@@ -170,11 +171,16 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         public JsonResult SaveTJWT()
         {
             YHJBXX yhjbxx = BZZXBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
-            string yjnr = Request["YJNR"];
+            string wtlx = Request["WTLX"];
+            string xxbh = Request["XXBH"];
+            string wtms = Request["WTMS"];
             string fwzp = Request["FWZP"];
             BZZX_TJWT tjwt = new BZZX_TJWT();
-            tjwt.YJNR = yjnr;
+
+            tjwt.YJNR = wtms;
             tjwt.YHID = yhjbxx.YHID;
+            tjwt.XXBH = xxbh;
+            tjwt.LB = wtlx;
             List<PHOTOS> photos = GetTP(fwzp);
             object result = BZZXBLL.SaveTJWT(tjwt, photos);
             return Json(result);

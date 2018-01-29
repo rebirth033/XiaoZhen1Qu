@@ -47,7 +47,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
 
                     DAO.Save(tjwt);
                     transaction.Commit();
-                    return new { Result = EnResultType.Success, Message = "提交成功，感谢您的建议!", Value = new { ID = tjwt.ID } };
+                    return new { Result = EnResultType.Success, Message = "提交成功，感谢您的反馈，我们会在3天内回复您!", Value = new { ID = tjwt.ID } };
                 }
                 catch (Exception ex)
                 {

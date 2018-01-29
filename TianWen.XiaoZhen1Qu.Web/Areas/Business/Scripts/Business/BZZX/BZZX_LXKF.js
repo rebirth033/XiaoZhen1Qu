@@ -1,9 +1,13 @@
 ﻿$(document).ready(function () {
     $(".span_wtlx_inner_right").bind("click", SelectWTLX);
     $("#btn_submit").bind("click", TJWT);
+    $("#input_upload").bind("change", UploadZP);
     bindHover();
     BindWTMS();
 });
+function ValidateZP() {
+    
+}
 //选择问题类型
 function SelectWTLX() {
     $(".span_wtlx_inner_right").each(function () {
@@ -64,6 +68,16 @@ function showWTLX(id) {
     });
     ShowXXBSC($("#" + id).html());
 }
+//获取问题类型
+function GetWTLX() {
+    var wtlx = "";
+    $(".span_wtlx_inner_right").each(function() {
+        if ($(this).css("color") === "rgb(255, 255, 255)") {
+            wtlx = $(this).html();
+        }
+    });
+    return wtlx;
+}
 //信息被删除
 function ShowXXBSC(text) {
     $("#span_step_text_second").html("请输入您的信息编号：<span class=\"span_second_lx\">[" + text + "]</span>");
@@ -88,21 +102,45 @@ function WTMSBlur() {
         $("#textareaWTMS").html("请描述您的具体问题，字数在500字以内");
     }
 }
+//问题描述检查
+function CheckWTMS() {
+    if ($("#textareaWTMS").val().indexOf("问题描述在500字以内") !== -1) {
+        $("#textareaWTMS").css("border-color", "#F2272D");
+        $("#span_wtmsinfo").css("color", "#F2272D");
+        $("#span_wtmsinfo").html("问题描述在500字以内，不可为空");
+        return false;
+    }
+    else {
+        $("#textareaWTMS").css("border-color", "#DEDEDE");
+        $("#span_wtmsinfo").html("");
+        return true;
+    }
+}
+//提交问题验证
+function ValidateTJWT() {
+    if (CheckWTMS())
+        return true;
+    else
+        return false;
+}
 //提交问题
 function TJWT() {
+    if (ValidateTJWT() === false) return;
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/BZZX/SaveTJWT",
         dataType: "json",
         data:
         {
+            WTLX: GetWTLX(),
             XXBH: $("#inputXXBH").val(),
-            WTMS: $("#textareaWTMS").val(),
+            WTMS: $("#textareaWTMS").html(),
             FWZP: GetPhotoUrls()
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                
+                alert(xml.Message);
+                window.location.href = window.location.href;
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
