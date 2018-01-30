@@ -227,6 +227,7 @@
     <Content Include="Areas\Business\Css\HTFB\SHFW\SHFW_SMWX.css" />
     <Content Include="Areas\Business\Css\HTFB\ZSJM\ZSJM_LS.css" />
     <Content Include="Areas\Business\Css\HTFB\ZSJM\ZSJM_HBCP.css" />
+    <Content Include="Areas\Business\Css\images\BZZX\bzzx_fhdb_purple.png" />
     <Content Include="Areas\Business\Css\images\CXLB\cxlb_px_down_gray.png" />
     <Content Include="Areas\Business\Css\images\CXLB\cxlb_px_down_orange.png" />
     <Content Include="Areas\Business\Css\images\CXLB\cxlb_px_up_gray.png" />
