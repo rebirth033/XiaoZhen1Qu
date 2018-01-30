@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     $(".div_content").css("margin-left", (document.documentElement.clientWidth - 1084) / 2);
-    $(".div_head_left").css("margin-left", (document.documentElement.clientWidth - 1084) / 2);
+    $(".div_head_left").css("margin-left", (document.documentElement.clientWidth - 1044) / 2);
     $(".div_top_left").css("margin-left", (document.documentElement.clientWidth - 1084) / 2);
     $(".div_top_right").css("margin-right", (document.documentElement.clientWidth - 1084) / 2);
     $(".span_fbxx").css("margin-right", (document.documentElement.clientWidth - 1084) / 2);
@@ -54,7 +54,6 @@ function HideYHCD() {
     $("#div_top_right_dropdown_yhm").css("display", "none");
     $("#span_top_right_yhm_img").css("background-image", 'url(' + getRootPath() + "/Areas/Business/Css/images/arrow_down.png" + ')');
 }
-//退出
 //退出
 function Exit() {
     $.ajax({
