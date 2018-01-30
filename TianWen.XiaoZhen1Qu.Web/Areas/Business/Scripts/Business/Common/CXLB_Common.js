@@ -370,6 +370,17 @@ function GetJG(jg, dw) {
     else
         return '<span class="span_zj">' + jg + '</span>' + dw;
 }
+//加载计算价格
+function GetCalcJG(jg, mj, dw) {
+    if (jg === "面议")
+        return '';
+    else {
+        if (dw === "元/㎡/月")
+            return '<span class="span_calc_zj">' + parseFloat(parseFloat(jg) / 30 / mj).toFixed(2) + dw + '</span>';
+        if (dw === "元/㎡")
+            return '<span class="span_calc_zj">' + parseFloat(parseFloat(jg) / mj * 10000).toFixed(0) + dw + '</span>';
+    }
+}
 //打开详细页面
 function OpenXXXX(TYPE, ID) {
     window.open(getRootPath() + "/Business/" + TYPE.split('_')[0] + "/" + TYPE + "?ID=" + ID + "&LBID=" + getUrlParam("LBID") + "&TYPE=" + TYPE);

@@ -12,7 +12,7 @@
     $("#span_person_info_right_sj").bind("click", UpdateSJ);
     $("#img_person_info_yx").bind("click", UpdateYX);
     $("#span_person_info_right_yx").bind("click", UpdateYX);
-    $("#btnBDSC").bind("mouseover", function() { $("#div_button_main_photo_child").css("background-color", "#ad5b97") });
+    $("#btnBDSC").bind("mouseover", function () { $("#div_button_main_photo_child").css("background-color", "#ad5b97") });
     $("#btnBDSC").bind("mouseleave", function () { $("#div_button_main_photo_child").css("background-color", "#bc6ba6") });
     Load("BDSC");
 });
@@ -102,8 +102,14 @@ function LoadGRZL() {
 
         },
         success: function (xml) {
-            $("#img_main_photo").attr("src", getRootPath() + "/Areas/Business/Photos/" + xml.YHJBXX.YHID + "/GRZL/" + xml.YHJBXX.TX + "?j=" + Math.random());
-            $("#img_main_photo_middle").attr("src", getRootPath() + "/Areas/Business/Photos/" + xml.YHJBXX.YHID + "/GRZL/" + xml.YHJBXX.TX + "?j=" + Math.random());
+            if (xml.YHJBXX.TX === null) {
+                $("#img_main_photo").attr("src", getRootPath() + "/Areas/Business/Css/images/default_tx.png?j=" + Math.random());
+                $("#img_main_photo_middle").attr("src", getRootPath() + "/Areas/Business/Css/images/default_tx.png?j=" + Math.random());
+            }
+            else {
+                $("#img_main_photo").attr("src", getRootPath() + "/Areas/Business/Photos/" + xml.YHJBXX.YHID + "/GRZL/" + xml.YHJBXX.TX + "?j=" + Math.random());
+                $("#img_main_photo_middle").attr("src", getRootPath() + "/Areas/Business/Photos/" + xml.YHJBXX.YHID + "/GRZL/" + xml.YHJBXX.TX + "?j=" + Math.random());
+            }
             $("#input_person_info_yhm").val(xml.YHJBXX.YHM);
             $("#input_person_info_sj").val(xml.YHJBXX.SJ);
             $("#input_person_info_yx").val(xml.YHJBXX.DZYX);

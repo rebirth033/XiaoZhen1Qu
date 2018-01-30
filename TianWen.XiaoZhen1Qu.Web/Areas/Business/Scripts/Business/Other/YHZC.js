@@ -216,6 +216,8 @@ function Register() {
         success: function (xml) {
             if (xml.Result === 1) {
                 alert("注册成功");
+                window.location.href = getRootPath() + "/Business/SY/SY";
+
             } else {
                 if (xml.Type === 1) {
                     $("#YZM").css("border-color", "#F2272D");

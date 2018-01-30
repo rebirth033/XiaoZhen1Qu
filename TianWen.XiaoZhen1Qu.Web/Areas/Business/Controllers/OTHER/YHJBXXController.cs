@@ -27,6 +27,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
                     string json = Request["Json"];
                     YHJBXX yhjbxx = JsonHelper.ConvertJsonToObject<YHJBXX>(json);
                     object result = YHJBXXBLL.CreateBasic(yhjbxx);
+                    Session["YHM"] = yhjbxx.YHM;
                     return Json(result);
                 }
                 else

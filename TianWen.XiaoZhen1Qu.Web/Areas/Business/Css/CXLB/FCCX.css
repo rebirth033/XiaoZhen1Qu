@@ -59,8 +59,9 @@
 .div_body .div_body_left .ul_body_left .li_body_left .div_li_body_left_center .p_li_body_left_center_dz{ color: #999999;height: 35px;}
 .div_body .div_body_left .ul_body_left .li_body_left .div_li_body_left_center .p_li_body_left_center_nr{ font-size: 16px;color: #999999;height: 45px;overflow: hidden;}
 .div_body .div_body_left .ul_body_left .li_body_left .div_li_body_left_right{ width: 120px;height: 100%;display: inline-block;float: left;padding-top: 10px;}
-.div_body .div_body_left .ul_body_left .li_body_left .div_li_body_left_right .p_li_body_left_right{color: #bc6ba6;font-size: 16px;}
+.div_body .div_body_left .ul_body_left .li_body_left .div_li_body_left_right .p_li_body_left_right{color: #bc6ba6;font-size: 16px;text-align: right;}
 .div_body .div_body_left .ul_body_left .li_body_left .div_li_body_left_right .p_li_body_left_right .span_zj{font-size: 28px;font-weight: 700;margin-right: 5px;}
+.div_body .div_body_left .ul_body_left .li_body_left .div_li_body_left_right .p_li_body_left_right .span_calc_zj{font-size: 16px;color: #333;margin-right: 5px;}
 .div_body .div_body_left .ul_body_left .li_body_left .div_li_body_left_right .span_li_body_left_right{ background-color: #bc6ba6;cursor: pointer;margin-right: 20px;padding: 6px 20px;width: 104px;height: 36px;display: block;float: right;color: #ffffff; }
 .div_body .div_body_left .ul_body_left .li_body_left .div_li_body_left_right .span_li_body_left_right:hover{background-color: #ad5b97;}
 
