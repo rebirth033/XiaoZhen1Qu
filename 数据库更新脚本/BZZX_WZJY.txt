@@ -3,7 +3,7 @@ create table BZZX_WZJY
 (
   id   VARCHAR2(50) not null,
   lb   VARCHAR2(2),
-  yjnr VARCHAR2(600),
+  yjnr VARCHAR2(1000),
   yhid VARCHAR2(50)
 )
 tablespace USERS
