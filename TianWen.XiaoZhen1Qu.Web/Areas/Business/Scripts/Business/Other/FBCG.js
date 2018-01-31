@@ -10,6 +10,7 @@
     $(".div_radio").bind("click", RadioSelect);
     $(".img_radio").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
     $(".div_main_info_zffs_dsfptzf").bind("click", { zffs: "dsfptzf" }, SelectWYZF_YH);
+    $("#span_main_info_body_bottom_xy").bind("click", function() { window.open(getRootPath() + "/Business/BZZX/BZZX_SY_KSDH_ZHDJYXY"); });
     $("#title").html("信息小镇_发布信息_发布成功");
     
     LoadDefault();
