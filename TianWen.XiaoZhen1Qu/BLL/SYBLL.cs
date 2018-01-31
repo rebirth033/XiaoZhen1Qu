@@ -962,5 +962,19 @@ where lbid is not null and (codenamepyqkg like '%{0}%' or codenamepyszm like '%{
                 return new { Result = EnResultType.Failed, Message = "加载失败" };
             }
         }
+
+        public object LoadXXLBByLBID(string lbid)
+        {
+            try
+            {
+                IList<CODES_XXLB> xxlbs = DAO.GetObjectList<CODES_XXLB>(string.Format("FROM CODES_XXLB WHERE LBID='{0}' AND FBYM is not null ORDER BY LBORDER", lbid));
+                return new { Result = EnResultType.Success, list = xxlbs };
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("error", ex.Message);
+                return new { Result = EnResultType.Failed, Message = "加载失败" };
+            }
+        }
     }
 }

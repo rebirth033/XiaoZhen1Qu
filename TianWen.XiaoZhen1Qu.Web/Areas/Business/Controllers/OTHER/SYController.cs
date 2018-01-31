@@ -122,5 +122,11 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         {
             return Json(SYBLL.LoadKeyWordByPY(Request["SS"], Session["XZQ"].ToString()));
         }
+
+        //根据LBID获取信息类别
+        public JsonResult LoadXXLBByLBID()
+        {
+            return Json(SYBLL.LoadXXLBByLBID(Request["LBID"].ToString()));
+        }
     }
 }
