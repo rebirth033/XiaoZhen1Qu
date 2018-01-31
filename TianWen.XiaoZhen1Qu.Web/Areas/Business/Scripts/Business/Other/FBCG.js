@@ -5,6 +5,8 @@
     $("#btnGLXX").bind("click", ToHTGL);
     $("#btnCKXX").bind("click", OpenXXXX);
     $("#btnZFXX").bind("click", FBXX);
+    $(".div_radio").bind("click", RadioSelect);
+    $(".img_radio").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
     $("#title").html("信息小镇_发布信息_发布成功");
     
     LoadDefault();
@@ -69,4 +71,23 @@ function OpenXXXX() {
 //发布信息
 function FBXX() {
     window.open(getRootPath() + "/Business/LBXZ/LBXZ");
+}
+//选择单选
+function RadioSelect() {
+    $(this).parent().find(".img_radio").each(function () {
+        $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+    });
+    $(this).find(".img_radio").each(function () {
+        $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/radio_purple.png");
+        if (this.id === "img_radio_1")
+            $("#span_row_right_zj").html("15元");
+        if (this.id === "img_radio_2")
+            $("#span_row_right_zj").html("28元");
+        if (this.id === "img_radio_3")
+            $("#span_row_right_zj").html("39元");
+        if (this.id === "img_radio_5")
+            $("#span_row_right_zj").html("60元");
+        if (this.id === "img_radio_7")
+            $("#span_row_right_zj").html("77元");
+    });
 }
