@@ -74,7 +74,7 @@ function LoadInfo(obj) {
     if (obj.PHOTOS.length > 0)
         html += ('<img class="img_new_info_body_left" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     else
-        html += ('<img class="img_new_info_body_left" />');
+        html += ('<img class="img_new_info_body_left" src="' + getRootPath() + "/Areas/Business/Css/images/HTGL/no_image.png?j=" + Math.random() + '" />');
     html += ('</div>');
     html += ('<div class="div_new_info_body_left_inner_info">');
     html += ('<span class="span_new_info_body_left_bt">' + obj.BT + '</span>');

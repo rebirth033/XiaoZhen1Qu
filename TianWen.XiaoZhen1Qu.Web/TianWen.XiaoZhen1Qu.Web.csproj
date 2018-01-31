@@ -247,6 +247,7 @@
     <Content Include="Areas\Business\Css\images\HTGL\htgl_rzgl_rlrz.png" />
     <Content Include="Areas\Business\Css\images\HTGL\htgl_rzgl_scsfzrz.png" />
     <Content Include="Areas\Business\Css\images\HTGL\htgl_rzgl_smrz.png" />
+    <Content Include="Areas\Business\Css\images\HTGL\no_image.png" />
     <Content Include="Areas\Business\Css\images\HTGL\scsfzrz.png" />
     <Content Include="Areas\Business\Css\images\HTGL\yyzzdsfrz.png" />
     <Content Include="Areas\Business\Css\images\HTGL\yyzzfrrz.png" />
