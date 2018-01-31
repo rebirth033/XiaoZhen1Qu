@@ -58,9 +58,6 @@ function LoadGRXX(grxx) {
     html += ('<p class="p_div_body_right_yhm">' + grxx.YHM + '</p>');
     html += ('<p class="p_div_body_right_zcsj">注册时间：' + grxx.SQRQ.ToString("yyyy年MM月dd日") + '</p>');
     html += ('<div class="div_div_body_right_yyzz">');
-    html += ('<div class="div_div_div_body_right_yyzz"><i class="i_div_div_body_right_yyzz_sfz"></i><span>身份证</span></div>');
-    html += ('<div class="div_div_div_body_right_yyzz"><i class="i_div_div_body_right_yyzz_yyzz"></i><span>营业执照</span></div>');
-    html += ('<div class="div_div_div_body_right_yyzz"><i class="i_div_div_body_right_yyzz_zmxy"></i><span>芝麻信用</span></div>');
     html += ('</div>');
     html += ('<div class="div_div_body_right_ckxy">查看TA的信用记录</div>');
     html += ('</div>');
