@@ -29,7 +29,7 @@
 .fbcg_gz {text-align: left;color: #a6a6a6;font-size: 12px;line-height: 25px;width: 220px;}
 
 
-.div_zdtg{margin-top: 20px; width: 900px; text-align: center;}
+.div_zdtg{margin-top: 20px; width: 900px; text-align: center;display: none;}
 
 .div_zdtg .div_zdtg_inner{border: 1px solid #e2e2e2; height: auto; width: 100%;}
 

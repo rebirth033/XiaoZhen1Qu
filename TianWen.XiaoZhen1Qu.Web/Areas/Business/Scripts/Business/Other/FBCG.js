@@ -3,8 +3,10 @@
     $("#spanWCFB").css("color", "#bc6ba6");
     $("#emWCFB").css("background", "#bc6ba6");
     $("#btnGLXX").bind("click", ToHTGL);
+    $("#btnZDXX").bind("click", ShowZDTG);
     $("#btnCKXX").bind("click", OpenXXXX);
     $("#btnZFXX").bind("click", FBXX);
+    $("#input_main_info_ljzf").bind("click", LJZD);
     $(".div_radio").bind("click", RadioSelect);
     $(".img_radio").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
     $(".div_main_info_zffs_dsfptzf").bind("click", { zffs: "dsfptzf" }, SelectWYZF_YH);
@@ -96,7 +98,7 @@ function RadioSelect() {
             $("#span_row_right_zj").html("77元");
     });
 }
-
+//选择支付方式
 function SelectWYZF_YH(obj) {
     $("#div_main_info_body_" + obj.data.zffs).find(".img_radio").each(function () {
         $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
@@ -114,4 +116,14 @@ function SelectWYZF_YH(obj) {
         $(this).css("background-image", 'url(' + getRootPath() + '/Areas/Business/Css/images/WDZJ/wdxj_cz_zffs_select.png)');
     });
     $(this).css("border", "1px solid #bc6ba6");
+}
+//显示置顶推广
+function ShowZDTG() {
+    $(".div_zdtg").css("display", "block");
+}
+//立即置顶
+function LJZD() {
+    if ($("#input_main_info_body_bottom")[0].checked === false) {
+        alert("还未阅读并同意协议");
+    }
 }
