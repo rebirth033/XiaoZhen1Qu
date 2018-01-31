@@ -255,8 +255,6 @@
     <Content Include="Areas\Business\Css\images\info_purple.png" />
     <Content Include="Areas\Business\Css\images\info_blue.png" />
     <Content Include="Areas\Business\Css\images\logo_purple.png" />
-    <Content Include="Areas\Business\Css\images\logo_purple_clsy.png" />
-    <Content Include="Areas\Business\Css\images\logo_purple_fcsy.png" />
     <Content Include="Areas\Business\Css\images\lxdh.png" />
     <Content Include="Areas\Business\Css\images\one-purple.png" />
     <Content Include="Areas\Business\Css\images\radio_purple.png" />

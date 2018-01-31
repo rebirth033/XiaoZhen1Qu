@@ -498,10 +498,10 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     msg.SubjectEncoding = Encoding.UTF8;//邮件标题编码 
                     string url =  "http://localhost" + Common.GetVirtualRootPath() + "/Business/GRZL/YXYZCG?para=" + EncryptionHelper.MD5Encrypt64(YHID) + "|" + EncryptionHelper.MD5Encrypt64(CheckCode);
                     StringBuilder sb = new StringBuilder();
-                    sb.AppendFormat(@"<div style='width: 650px; margin-left: 27%; height: 600px; border: 1px solid #bce9f6; '>
-                                <div style='background-color: #5bc0de; width: 100%; height: 80px; vertical-align: middle;'>
+                    sb.AppendFormat(@"<div style='width: 650px; margin-left: 27%; height: 600px; border: 1px solid #bc6ba6; '>
+                                <div style='background-color: #bc6ba6; width: 100%; height: 80px; vertical-align: middle;'>
                                     <div style='float: left; width: 120px; margin-left: 50px; margin-top: 5px;'>
-                                        <img style='width: 100%; text-align: center; color: white; font-size: 25px; float: left;' src='http://localhost/XiaoZhen1Qu/Areas/Business/Css/images/logo.png' />
+                                        <img style='width: 100%; text-align: center; color: white; font-size: 25px; float: left;' src='http://localhost/infotownlet/Areas/Business/Css/images/logo.png' />
                                         <span style='width: 100%; color:#fff; text-align: center; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: white; font-size: 17px; float: left; cursor: default;'>infotownlet.com</span>
                                     </div>
                                 </div>
@@ -512,18 +512,18 @@ namespace TianWen.XiaoZhen1Qu.BLL
                                         认证成功后可获得 50 个信用。信用值越高，每天可发布的信息数量越多，认证后的邮箱<br />
                                         可用于登录和找回密码。<br /><br />
                                     </p>
-                                    <p><a style='color: #5bc0de; font-size: 16px; cursor: pointer' href='{1}' target='_blank'>{1}<br /><br /></a></p>
+                                    <p><a style='color: #bc6ba6; font-size: 16px; cursor: pointer' href='{1}' target='_blank'>{1}<br /><br /></a></p>
                                     <p style='text-align: right'>信息小镇邮件中心</p>
                                     <p style='text-align: right'> {2}</p>
                                 </div>
-                                </div>'", yhjbxx.YHM, url, DateTime.Now.ToShortDateString());
+                                </div>'", yhjbxx.YHM, url, DateTime.Now.ToString("yyyy年MM月dd日"));
                     msg.Body = sb.ToString();
                     msg.BodyEncoding = Encoding.UTF8;//邮件内容编码 
                     msg.IsBodyHtml = true;//是否是HTML邮件
                     msg.Priority = MailPriority.High;//邮件优先级 
 
                     SmtpClient client = new SmtpClient();
-                    client.Credentials = new System.Net.NetworkCredential(YX, "vbfhologcvanbfch");//邮箱用户名，smtp服务授权密码
+                    client.Credentials = new System.Net.NetworkCredential(YX, "mmyqtztqjxwebfjf");//邮箱用户名，smtp服务授权密码,需要开启qq邮箱smtp服务
                     client.Host = "smtp.qq.com";//SMTP服务器地址  
                     client.Port = 587;//SMTP端口，QQ邮箱填写587
                     client.EnableSsl = true;//启用SSL加密  
