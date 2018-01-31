@@ -7,6 +7,7 @@
     $("#btnZFXX").bind("click", FBXX);
     $(".div_radio").bind("click", RadioSelect);
     $(".img_radio").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+    $(".div_main_info_zffs_dsfptzf").bind("click", { zffs: "dsfptzf" }, SelectWYZF_YH);
     $("#title").html("信息小镇_发布信息_发布成功");
     
     LoadDefault();
@@ -14,6 +15,10 @@
 });
 //加载默认
 function LoadDefault() {
+    $("#img_radio_1").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_purple.png");
+    $("#span_row_right_zj").html("15元");
+    $("#div_main_info_zffs_zfbzf").css("border", "1px solid #bc6ba6");
+    $("#img_radio_zfbzf").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_purple.png");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/SY/LoadJCXXByJCXXID",
@@ -90,4 +95,23 @@ function RadioSelect() {
         if (this.id === "img_radio_7")
             $("#span_row_right_zj").html("77元");
     });
+}
+
+function SelectWYZF_YH(obj) {
+    $("#div_main_info_body_" + obj.data.zffs).find(".img_radio").each(function () {
+        $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
+    });
+    $("#div_main_info_body_" + obj.data.zffs).find(".img_select").each(function () {
+        $(this).css("background-image", "");
+    });
+    $("#div_main_info_body_" + obj.data.zffs).find(".div_main_info_zffs_" + obj.data.zffs).each(function () {
+        $(this).css("border", "1px solid #cccccc");
+    });
+    $(this).find(".img_radio").each(function () {
+        $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/radio_purple.png");
+    });
+    $(this).find(".img_select").each(function () {
+        $(this).css("background-image", 'url(' + getRootPath() + '/Areas/Business/Css/images/WDZJ/wdxj_cz_zffs_select.png)');
+    });
+    $(this).css("border", "1px solid #bc6ba6");
 }
