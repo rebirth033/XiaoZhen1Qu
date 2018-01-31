@@ -128,5 +128,11 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         {
             return Json(SYBLL.LoadXXLBByLBID(Request["LBID"].ToString()));
         }
+
+        //根据JCXXID获取基础信息
+        public JsonResult LoadJCXXByJCXXID()
+        {
+            return Json(SYBLL.LoadJCXXByJCXXID(Request["JCXXID"].ToString()));
+        }
     }
 }

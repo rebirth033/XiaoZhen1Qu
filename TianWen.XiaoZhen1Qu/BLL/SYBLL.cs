@@ -976,5 +976,19 @@ where lbid is not null and (codenamepyqkg like '%{0}%' or codenamepyszm like '%{
                 return new { Result = EnResultType.Failed, Message = "加载失败" };
             }
         }
+
+        public object LoadJCXXByJCXXID(string jcxxid)
+        {
+            try
+            {
+                IList<JCXX> jcxxs = DAO.GetObjectList<JCXX>(string.Format("FROM JCXX WHERE JCXXID='{0}'", jcxxid));
+                return new { Result = EnResultType.Success, list = jcxxs };
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("error", ex.Message);
+                return new { Result = EnResultType.Failed, Message = "加载失败" };
+            }
+        }
     }
 }

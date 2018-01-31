@@ -1,8 +1,4 @@
-﻿using System;
-using System.Drawing;
-using System.Web;
-using Gma.QrCodeNet.Encoding;
-using Gma.QrCodeNet.Encoding.Windows.Render;
+﻿using System.Web;
 using TianWen.XiaoZhen1Qu.Web.Areas.Business.Common;
 
 namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Ashx
@@ -12,7 +8,6 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Ashx
     /// </summary>
     public class GenerateQRCode : IHttpHandler
     {
-
         public void ProcessRequest(HttpContext context)
         {
             context.Response.Write(CreateCode(context));

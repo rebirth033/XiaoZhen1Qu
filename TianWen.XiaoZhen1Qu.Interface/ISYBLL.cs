@@ -52,5 +52,7 @@ namespace TianWen.XiaoZhen1Qu.Interface
         object LoadKeyWordByPY(string SS, string XZQ);
 
         object LoadXXLBByLBID(string LBID);
+
+        object LoadJCXXByJCXXID(string JCXXID);
     }
 }

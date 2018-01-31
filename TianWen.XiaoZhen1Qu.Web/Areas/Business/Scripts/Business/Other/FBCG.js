@@ -6,8 +6,27 @@
     $("#btnCKXX").bind("click", OpenXXXX);
     $("#btnZFXX").bind("click", FBXX);
     $("#title").html("信息小镇_发布信息_发布成功");
+    
+    LoadDefault();
     GenerateQRCode();
 });
+//加载默认
+function LoadDefault() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/SY/LoadJCXXByJCXXID",
+        data:
+        {
+            JCXXID: getUrlParam("JCXXID")
+        },
+        success: function (xml) {
+            $("#fbcg_info_navigation").html(xml.list[0].DH);
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
 //生成二维码
 function GenerateQRCode() {
     var qrdata = "君临天华B区5号楼单身公寓一套";
