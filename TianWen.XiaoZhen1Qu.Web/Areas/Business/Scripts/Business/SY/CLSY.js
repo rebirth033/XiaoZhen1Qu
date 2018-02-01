@@ -75,19 +75,19 @@ function LoadItem(title, list, districts) {
     html += '<ul class="ul_body_middle_item_right">';
     for (var i = 0; i < (list.length < 8 ? list.length : 8) ; i++) {
         if (title === "轿车")
-            html += LoadJCInfo(list[i])
+            html += LoadJCInfo(list[i]);
         if (title === "电动车")
-            html += LoadDDCInfo(list[i])
+            html += LoadDDCInfo(list[i]);
         if (title === "摩托车")
-            html += LoadMTCInfo(list[i])
+            html += LoadMTCInfo(list[i]);
         if (title === "货车")
-            html += LoadHCInfo(list[i])
+            html += LoadHCInfo(list[i]);
         if (title === "客车")
-            html += LoadKCInfo(list[i])
+            html += LoadKCInfo(list[i]);
         if (title === "工程车")
-            html += LoadGCCInfo(list[i])
+            html += LoadGCCInfo(list[i]);
         if (title === "自行车")
-            html += LoadZXCInfo(list[i])
+            html += LoadZXCInfo(list[i]);
     }
     html += '</ul>';
 
