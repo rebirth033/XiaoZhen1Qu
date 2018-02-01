@@ -246,3 +246,11 @@ function ToEJSY(type) {
 function OpenDL() {
     window.location.href = getRootPath() + "/Business/YHDL/YHDL?To=SY";
 }
+//拖动滚动条或滚动鼠标轮
+window.onscroll = function () {
+    if (document.body.scrollTop || document.documentElement.scrollTop > 100) {
+        $("#divHideHead").css("display", "block");
+    } else {
+        $("#divHideHead").css("display", "none");
+    }
+}
