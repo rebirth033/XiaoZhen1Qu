@@ -83,7 +83,7 @@ function SaveXTTX() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                alert("头像上传成功");
+                window.wxc.xcConfirm("头像上传成功", window.wxc.xcConfirm.typeEnum.success);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -113,6 +113,7 @@ function LoadGRZL() {
             $("#input_person_info_yhm").val(xml.YHJBXX.YHM);
             $("#input_person_info_sj").val(xml.YHJBXX.SJ);
             $("#input_person_info_yx").val(xml.YHJBXX.DZYX);
+            $("#input_person_info_yhid").val(xml.YHJBXX.YHID);
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
@@ -145,7 +146,8 @@ function Upload() {
 }
 //上传完成事件
 function uploadComplete(evt) {
-    var imagepath = getRootPath() + "/Areas/Business/Photos/" + getUrlParam("YHID") + "/GRZL/" + evt.target.responseText;
+    window.wxc.xcConfirm("头像上传成功", window.wxc.xcConfirm.typeEnum.success);
+    var imagepath = getRootPath() + "/Areas/Business/Photos/" + $("#input_person_info_yhid").val() + "/GRZL/" + evt.target.responseText;
     $("#img_main_photo").attr("src", imagepath + "?j=" + Math.random());
     $("#img_main_photo_middle").attr("src", imagepath + "?j=" + Math.random());
 }

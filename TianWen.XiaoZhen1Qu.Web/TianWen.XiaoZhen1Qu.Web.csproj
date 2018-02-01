@@ -2023,6 +2023,13 @@
     <Content Include="Areas\Business\Scripts\UEditor\ueditor.js" />
     <Content Include="Areas\Business\Scripts\UEditor\ueditor.parse.min.js" />
     <Content Include="Areas\Business\Scripts\underscore.min.js" />
+    <Content Include="Areas\Business\Scripts\xcConfirm\css\xcConfirm.css" />
+    <Content Include="Areas\Business\Scripts\xcConfirm\img\icons.png" />
+    <Content Include="Areas\Business\Scripts\xcConfirm\img\loading.gif" />
+    <Content Include="Areas\Business\Scripts\xcConfirm\img\loading2.gif" />
+    <Content Include="Areas\Business\Scripts\xcConfirm\index.html" />
+    <Content Include="Areas\Business\Scripts\xcConfirm\js\jquery-1.9.1.js" />
+    <Content Include="Areas\Business\Scripts\xcConfirm\js\xcConfirm.js" />
     <Content Include="Config\SpringConfig\BLLCXLB.xml" />
     <Content Include="Config\SpringConfig\BLLGY.xml" />
     <Content Include="Config\SpringConfig\ControllersXXXX.xml" />
@@ -2838,6 +2845,8 @@
     <Content Include="Areas\Business\Views\SY\SWFWSY.cshtml" />
     <Content Include="Areas\Business\Views\SY\PFCGSY.cshtml" />
     <Content Include="Areas\Business\Views\SY\ZSJMSY.cshtml" />
+    <Content Include="Areas\Business\Scripts\xcConfirm\css\.DS_Store" />
+    <Content Include="Areas\Business\Scripts\xcConfirm\js\.DS_Store" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
