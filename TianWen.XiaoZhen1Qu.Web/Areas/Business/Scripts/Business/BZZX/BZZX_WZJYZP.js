@@ -148,7 +148,7 @@ function uploadComplete(evt) {
         $("#ulImgs1").append("<li draggable='true' class='li_img'><img src='" + imagepath + "' class='divImg' /><div class='div_toolbar_wrap'><div class='opacity'></div><div class='toolbar'><a class='edit'></a><a class='delete'></a></div></div></li>");
     }
     else {
-        alert("上传图片不能大于4张");
+        window.wxc.xcConfirm("上传图片不能大于4张", window.wxc.xcConfirm.typeEnum.info);
     }
     BindToolBar();
 }

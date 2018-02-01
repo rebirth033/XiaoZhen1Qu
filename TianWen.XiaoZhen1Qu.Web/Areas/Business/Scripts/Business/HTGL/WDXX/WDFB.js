@@ -117,75 +117,90 @@ function NoInfo(TYPE) {
 }
 //恢复信息
 function Restore(JCXXID) {
-    if (confirm("您确定恢复本条信息吗?")) {
-        $.ajax({
-            type: "POST",
-            url: getRootPath() + "/Business/WDFB/UpdateYHFBXX",
-            dataType: "json",
-            data:
-            {
-                JCXXID: JCXXID,
-                OPTYPE: "RESTORE"
-            },
-            success: function (xml) {
-                if (xml.Result === 1) {
-                    alert("信息恢复成功");
-                    LoadByActive();
-                }
-            },
-            error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+    window.wxc.xcConfirm("您确定恢复本条信息吗?", window.wxc.xcConfirm.typeEnum.warning, {
+        onOk: function (v) {
+            $.ajax({
+                type: "POST",
+                url: getRootPath() + "/Business/WDFB/UpdateYHFBXX",
+                dataType: "json",
+                data:
+                {
+                    JCXXID: JCXXID,
+                    OPTYPE: "RESTORE"
+                },
+                success: function (xml) {
+                    if (xml.Result === 1) {
+                        window.wxc.xcConfirm("信息恢复成功", window.wxc.xcConfirm.typeEnum.success);
+                        LoadByActive();
+                    }
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
-            }
-        });
-    }
+                }
+            });
+        },
+        onClose: function (v) {
+
+        }
+    });
 }
 //删除信息
 function Delete(JCXXID) {
-    if (confirm("您确定彻底删除本条信息吗,删除后将无法恢复")) {
-        $.ajax({
-            type: "POST",
-            url: getRootPath() + "/Business/WDFB/UpdateYHFBXX",
-            dataType: "json",
-            data:
-            {
-                JCXXID: JCXXID,
-                OPTYPE: "DELETE"
-            },
-            success: function (xml) {
-                if (xml.Result === 1) {
-                    alert("信息删除成功");
-                    LoadByActive();
-                }
-            },
-            error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+    window.wxc.xcConfirm("您确定彻底删除本条信息吗,删除后将无法恢复", window.wxc.xcConfirm.typeEnum.warning, {
+        onOk: function (v) {
+            $.ajax({
+                type: "POST",
+                url: getRootPath() + "/Business/WDFB/UpdateYHFBXX",
+                dataType: "json",
+                data:
+                {
+                    JCXXID: JCXXID,
+                    OPTYPE: "DELETE"
+                },
+                success: function (xml) {
+                    if (xml.Result === 1) {
+                        window.wxc.xcConfirm("信息删除成功", window.wxc.xcConfirm.typeEnum.success);
+                        LoadByActive();
+                    }
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
-            }
-        });
-    }
+                }
+            });
+        },
+        onClose: function (v) {
+
+        }
+    });
 }
 //隐藏信息
 function Hide(JCXXID) {
-    if (confirm("您确定恢复本条信息吗?")) {
-        $.ajax({
-            type: "POST",
-            url: getRootPath() + "/Business/WDFB/UpdateYHFBXX",
-            dataType: "json",
-            data:
-            {
-                JCXXID: JCXXID,
-                OPTYPE: "HIDE"
-            },
-            success: function (xml) {
-                if (xml.Result === 1) {
-                    alert("信息隐藏成功");
-                    LoadByActive();
-                }
-            },
-            error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+    window.wxc.xcConfirm("您确定隐藏本条信息吗?", window.wxc.xcConfirm.typeEnum.warning, {
+        onOk: function (v) {
+            $.ajax({
+                type: "POST",
+                url: getRootPath() + "/Business/WDFB/UpdateYHFBXX",
+                dataType: "json",
+                data:
+                {
+                    JCXXID: JCXXID,
+                    OPTYPE: "HIDE"
+                },
+                success: function (xml) {
+                    if (xml.Result === 1) {
+                        window.wxc.xcConfirm("信息隐藏成功", window.wxc.xcConfirm.typeEnum.success);
+                        LoadByActive();
+                    }
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
-            }
-        });
-    }
+                }
+            });
+        },
+        onClose: function (v) {
+
+        }
+    });
 }
 //修改信息
 function Update(JCXXID, LBID) {

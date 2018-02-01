@@ -125,6 +125,6 @@ function ShowZDTG() {
 //立即置顶
 function LJZD() {
     if ($("#input_main_info_body_bottom")[0].checked === false) {
-        alert("还未阅读并同意协议");
+        window.wxc.xcConfirm("还未阅读并同意协议", window.wxc.xcConfirm.typeEnum.info);
     }
 }

@@ -186,7 +186,7 @@ function SCXX(jcxxid) {
             },
             success: function (xml) {
                 if (xml.Result === 1) {
-                    alert("已添加到我的收藏");
+                    window.wxc.xcConfirm("已添加到我的收藏", window.wxc.xcConfirm.typeEnum.success);
                 }
             },
             error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

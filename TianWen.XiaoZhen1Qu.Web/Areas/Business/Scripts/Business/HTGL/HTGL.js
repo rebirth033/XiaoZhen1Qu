@@ -85,7 +85,7 @@ function AutoLogin() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                alert("登录成功");
+                window.wxc.xcConfirm("登录成功", window.wxc.xcConfirm.typeEnum.success);
             } else {
                 window.location.href = getRootPath() + "/Business/YHDL/YHDL";
             }
@@ -314,7 +314,7 @@ function QQBD() {
             },
             success: function (xml) {
                 if (xml.Result === 1) {
-                    alert("QQ绑定成功");
+                    window.wxc.xcConfirm("QQ绑定成功", window.wxc.xcConfirm.typeEnum.success);
                     CloseQQRZ();
                     $("#iframeright").attr("src", getRootPath() + "/Business/ZHBD/ZHBD");
                 }
