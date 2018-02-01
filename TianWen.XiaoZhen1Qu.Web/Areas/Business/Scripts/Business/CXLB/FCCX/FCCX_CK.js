@@ -1,26 +1,12 @@
 ﻿var currentIndex = 1;
 $(document).ready(function () {
     $(".li_condition_head:eq(0)").each(function () { $(this).css("background-color", "#ffffff").css("color", "#bc6ba6"); });
-    BindConditionNav("FCXX_CK");
+    BindConditionNav();
     BindBodyNav();
     LoadCZCondition();
 });
-//加载出租查询条件
-function LoadCZCondition() {
-    RemoveCondition("QY,ZJ,SJ,MJ");
-    LoadConditionByTypeNames("'土地租金','仓库面积'", "CODES_FC", "租金,面积", "ZJ,MJ", "100,100");
-    LoadBody("FCXX_CK", currentIndex);
-    LoadHot("FCXX_CK");
-}
-//加载出售查询条件
-function LoadCSCondition() {
-    RemoveCondition("QY,ZJ,SJ,MJ");
-    LoadConditionByTypeNames("'土地售价','仓库面积'", "CODES_FC", "售价,面积", "ZJ,MJ", "100,100");
-    LoadBody("FCXX_CK", currentIndex);
-    LoadHot("FCXX_CK");
-}
 //绑定查询条件导航
-function BindConditionNav(type) {
+function BindConditionNav() {
     $(".li_condition_head").bind("click", function () {
         $(".li_condition_head").each(function (i) {
             $(this).css("background-color", "#eeeff1").css("color", "#999999");
@@ -33,12 +19,40 @@ function BindConditionNav(type) {
         }
     });
 }
+//加载出租查询条件
+function LoadCZCondition() {
+    RemoveCondition("QY,ZJ,SJ,MJ");
+    LoadConditionByTypeNames("'土地租金','仓库面积'", "CODES_FC", "租金,面积", "ZJ,MJ", "100,100");
+}
+//加载出售查询条件
+function LoadCSCondition() {
+    RemoveCondition("QY,ZJ,SJ,MJ");
+    LoadConditionByTypeNames("'土地售价','仓库面积'", "CODES_FC", "售价,面积", "ZJ,MJ", "100,100");
+}
+//加载URL查询条件
+function LoadURLCondition() {
+    if (getUrlParam("MJ") !== null)
+        SelectURLCondition(getUrlParam("MJ"));
+    else {
+        LoadBody("FCXX_CK", currentIndex);
+    }
+    LoadHot("FCXX_CK");
+}
 //选择条件
 function SelectCondition(obj, name) {
     $(obj).parent().find(".li_condition_body").each(function () {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
+    LoadBody("FCXX_CK", currentIndex);
+    ShowSelectCondition("FCXX_CK");
+}
+//选择URL条件
+function SelectURLCondition(obj) {
+    $("#" + obj).parent().find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $("#" + obj).addClass("li_condition_body_active");
     LoadBody("FCXX_CK", currentIndex);
     ShowSelectCondition("FCXX_CK");
 }
