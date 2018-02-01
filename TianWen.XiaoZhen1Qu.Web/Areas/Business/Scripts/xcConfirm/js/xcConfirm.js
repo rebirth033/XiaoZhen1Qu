@@ -115,7 +115,8 @@
 				$btnArea.append(creatBtnGroup(btn))
 			);
 			$box.attr("id", popId).append($layer).append($popBox);
-			$("body").append($box);
+			//$("body").append($box);
+			parent.$("body").append($box);
 		}
 		
 		function bind(){
@@ -145,8 +146,9 @@
 			if ($input.is(":visible"))
 		        config.onOk(v);
 		    else
-		        config.onOk();
-			$("#" + popId).remove(); 
+			    config.onOk();
+			parent.$("#" + popId).remove();
+			//$("#" + popId).remove(); 
 			config.onClose(eventType.ok);
 		}
 		
@@ -154,13 +156,15 @@
 		function doCancel(){
 			var $o = $(this);
 			config.onCancel();
-			$("#" + popId).remove(); 
+			parent.$("#" + popId).remove();
+			//$("#" + popId).remove(); 
 			config.onClose(eventType.cancel);
 		}
 		
 		//关闭按钮事件
-		function doClose(){
-			$("#" + popId).remove();
+		function doClose() {
+		    parent.$("#" + popId).remove();
+			//$("#" + popId).remove();
 			config.onClose(eventType.close);
 			$(window).unbind("keydown");
 		}
