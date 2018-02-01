@@ -215,8 +215,15 @@ function Register() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                alert("注册成功");
-                window.location.href = getRootPath() + "/Business/SY/SY";
+                window.wxc.xcConfirm("注册成功", window.wxc.xcConfirm.typeEnum.success, {
+                    onOk: function (v) {
+                        window.location.href = getRootPath() + "/Business/SY/SY";
+                    },
+                    onClose: function (v) {
+                        window.location.href = getRootPath() + "/Business/SY/SY";
+                    }
+                });
+                
 
             } else {
                 if (xml.Type === 1) {

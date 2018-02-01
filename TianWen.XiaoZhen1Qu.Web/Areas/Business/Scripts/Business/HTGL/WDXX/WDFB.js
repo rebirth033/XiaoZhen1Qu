@@ -138,9 +138,6 @@ function Restore(JCXXID) {
 
                 }
             });
-        },
-        onClose: function (v) {
-
         }
     });
 }
@@ -167,9 +164,6 @@ function Delete(JCXXID) {
 
                 }
             });
-        },
-        onClose: function (v) {
-
         }
     });
 }
@@ -196,9 +190,6 @@ function Hide(JCXXID) {
 
                 }
             });
-        },
-        onClose: function (v) {
-
         }
     });
 }
