@@ -8,6 +8,7 @@ $(document).ready(function () {
     $(".img_head_left_logo").css("margin-left", "20px");
     $("#li_head_sy").css("background", "#bc6ba6").css("color", "#ffffff");
     $("#div_yhm").bind("click", ShowWDXX);
+    $("#span_hide_fbxx").bind("click", FBXX);
     LoadDefault();
 });
 //首页获取title
