@@ -818,6 +818,7 @@
     <Content Include="Areas\Business\Css\XXXX\XXYL\XXYLXX_DIYSGF.css" />
     <Content Include="Areas\Business\Css\XXXX\XXYL\XXYLXX_HPG.css" />
     <Content Include="Areas\Business\Css\XXXX\XXYL\XXYLXX_YDJS.css" />
+    <Content Include="Areas\Business\Css\XXXX\ZSJM\ZSJMXX_LS.css" />
     <Content Include="Areas\Business\Css\XXXX\ZSJM\ZSJMXX_JJRY.css" />
     <Content Include="Areas\Business\Css\XXXX\ZSJM\ZSJMXX_WLFW.css" />
     <Content Include="Areas\Business\Css\XXXX\ZSJM\ZSJMXX_NY.css" />
@@ -1056,6 +1057,7 @@
     <Content Include="Areas\Business\Scripts\Business\CXLB\XXYLCX\XXYLCX_DIYSGF.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\XXYLCX\XXYLCX_HPG.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\XXYLCX\XXYLCX_YDJS.js" />
+    <Content Include="Areas\Business\Scripts\Business\CXLB\ZSJMCX\ZSJMCX_LS.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\ZSJMCX\ZSJMCX_JJRY.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\ZSJMCX\ZSJMCX_NY.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\ZSJMCX\ZSJMCX_TS.js" />
@@ -1716,6 +1718,7 @@
     <Content Include="Areas\Business\Scripts\Business\XXXX\XXYLXX\XXYLXX_DIYSGF.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\XXYLXX\XXYLXX_HPG.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\XXYLXX\XXYLXX_YDJS.js" />
+    <Content Include="Areas\Business\Scripts\Business\XXXX\ZSJMXX\ZSJMXX_LS.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\ZSJMXX\ZSJMXX_JJRY.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\ZSJMXX\ZSJMXX_QCFW.js" />
     <Content Include="Areas\Business\Scripts\Business\XXXX\ZSJMXX\ZSJMXX_JYPX.js" />
@@ -2852,6 +2855,8 @@
     <Content Include="Areas\Business\Scripts\xcConfirm\js\.DS_Store" />
     <Content Include="Areas\Business\Views\ZSJMCX\ZSJMCX_JJRY.cshtml" />
     <Content Include="Areas\Business\Views\ZSJMXX\ZSJMXX_JJRY.cshtml" />
+    <Content Include="Areas\Business\Views\ZSJMCX\ZSJMCX_LS.cshtml" />
+    <Content Include="Areas\Business\Views\ZSJMXX\ZSJMXX_LS.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

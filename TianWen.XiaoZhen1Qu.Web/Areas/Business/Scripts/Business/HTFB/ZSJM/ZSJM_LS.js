@@ -79,7 +79,7 @@ function PDLB(name, codeid) {
 function LoadJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/ZSJM/LoadZSJM_JJHBJBXX",
+        url: getRootPath() + "/Business/ZSJM/LoadZSJM_LSJBXX",
         dataType: "json",
         data:
         {
@@ -88,27 +88,27 @@ function LoadJBXX() {
         success: function (xml) {
             if (xml.Result === 1) {
                 var jsonObj = new JsonDB("myTabContent");
-                jsonObj.DisplayFromJson("myTabContent", xml.Value.ZSJM_JJHBJBXX);
+                jsonObj.DisplayFromJson("myTabContent", xml.Value.ZSJM_LSJBXX);
                 jsonObj.DisplayFromJson("myTabContent", xml.Value.JCXX);
-                $("#ID").val(xml.Value.ZSJM_JJHBJBXX.ID);
+                $("#ID").val(xml.Value.ZSJM_LSJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
-                $("#spanLB").html(xml.Value.ZSJM_JJHBJBXX.LB);
-                $("#spanQY").html(xml.Value.ZSJM_JJHBJBXX.QY);
-                $("#spanDD").html(xml.Value.ZSJM_JJHBJBXX.DD);
-                $("#spanPPLS").html(xml.Value.ZSJM_JJHBJBXX.PPLS);
-                $("#spanTZJE").html(xml.Value.ZSJM_JJHBJBXX.TZJE);
-                $("#spanQGFDS").html(xml.Value.ZSJM_JJHBJBXX.QGFDS);
-                $("#spanDDMJ").html(xml.Value.ZSJM_JJHBJBXX.DDMJ);
+                $("#spanLB").html(xml.Value.ZSJM_LSJBXX.LB);
+                $("#spanQY").html(xml.Value.ZSJM_LSJBXX.QY);
+                $("#spanDD").html(xml.Value.ZSJM_LSJBXX.DD);
+                $("#spanPPLS").html(xml.Value.ZSJM_LSJBXX.PPLS);
+                $("#spanTZJE").html(xml.Value.ZSJM_LSJBXX.TZJE);
+                $("#spanQGFDS").html(xml.Value.ZSJM_LSJBXX.QGFDS);
+                $("#spanDDMJ").html(xml.Value.ZSJM_LSJBXX.DDMJ);
                 LoadPhotos(xml.Value.Photos);
-                if (xml.Value.ZSJM_JJHBJBXX.SHRQ !== null)
-                    SetDuoX("SHRQ", xml.Value.ZSJM_JJHBJBXX.SHRQ);
-                if (xml.Value.ZSJM_JJHBJBXX.JYMS !== null)
-                    SetDuoX("JYMS", xml.Value.ZSJM_JJHBJBXX.JYMS);
-                if (xml.Value.ZSJM_JJHBJBXX.FWFW !== null)
-                    SetDuoX("FWFW", xml.Value.ZSJM_JJHBJBXX.FWFW);
-                if (xml.Value.ZSJM_JJHBJBXX.LB.indexOf("饰品挂件") !== -1) {
-                    LoadXLByName(xml.Value.ZSJM_JJHBJBXX.LB, xml.Value.ZSJM_JJHBJBXX.XL, "CODES_ZSJM");
+                if (xml.Value.ZSJM_LSJBXX.SHRQ !== null)
+                    SetDuoX("SHRQ", xml.Value.ZSJM_LSJBXX.SHRQ);
+                if (xml.Value.ZSJM_LSJBXX.JYMS !== null)
+                    SetDuoX("JYMS", xml.Value.ZSJM_LSJBXX.JYMS);
+                if (xml.Value.ZSJM_LSJBXX.FWFW !== null)
+                    SetDuoX("FWFW", xml.Value.ZSJM_LSJBXX.FWFW);
+                if (xml.Value.ZSJM_LSJBXX.LB.indexOf("饰品挂件") !== -1) {
+                    LoadXLByName(xml.Value.ZSJM_LSJBXX.LB, xml.Value.ZSJM_LSJBXX.XL, "CODES_ZSJM");
                 }
             }
         },
@@ -140,7 +140,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/ZSJM/FBZSJM_JJHBJBXX",
+        url: getRootPath() + "/Business/ZSJM/FBZSJM_LSJBXX",
         dataType: "json",
         data:
         {
