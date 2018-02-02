@@ -105,8 +105,8 @@ D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu\bin\Debug\
 D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu\bin\Debug\TianWen.Nhibernate.dll
 D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu\bin\Debug\TianWen.XiaoZhen1Qu.Entities.dll
 D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu\bin\Debug\TianWen.XiaoZhen1Qu.Interface.dll
-D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu\bin\Debug\FluentNHibernate.dll
 D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu\bin\Debug\NHibernate.Mapping.Attributes.dll
+D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu\bin\Debug\FluentNHibernate.dll
 D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu\bin\Debug\Iesi.Collections.dll
 D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu\bin\Debug\System.Web.Mvc.dll
 D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu\bin\Debug\Spring.Aop.dll

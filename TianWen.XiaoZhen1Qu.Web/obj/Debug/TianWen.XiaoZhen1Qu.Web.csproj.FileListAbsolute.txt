@@ -180,8 +180,8 @@ D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\Ti
 D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\TianWen.XiaoZhen1Qu.dll
 D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\TianWen.XiaoZhen1Qu.Entities.dll
 D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\TianWen.XiaoZhen1Qu.Interface.dll
-D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\FluentNHibernate.dll
 D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\NHibernate.Mapping.Attributes.dll
+D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\FluentNHibernate.dll
 D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\NHibernate.dll
 D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\Spring.Aop.dll
 D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\Oracle.ManagedDataAccess.dll
