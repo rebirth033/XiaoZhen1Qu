@@ -940,9 +940,9 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
-        public object SaveZSJM_HBCPJBXX(JCXX jcxx, ZSJM_HBCPJBXX ZSJM_HBCPJBXX, List<PHOTOS> photos)
+        public object SaveZSJM_JJRYJBXX(JCXX jcxx, ZSJM_JJRYJBXX ZSJM_JJRYJBXX, List<PHOTOS> photos)
         {
-            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM ZSJM_HBCPJBXX WHERE ID='{0}'", ZSJM_HBCPJBXX.ID));
+            DataTable dt = DAO.Repository.GetDataTable(string.Format("SELECT * FROM ZSJM_JJRYJBXX WHERE ID='{0}'", ZSJM_JJRYJBXX.ID));
             using (ITransaction transaction = DAO.BeginTransaction())
             {
                 try
@@ -950,41 +950,41 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     if (dt.Rows.Count > 0)
                     {
                         SavePhotos(photos, dt.Rows[0]["JCXXID"].ToString());
-                        ZSJM_HBCPJBXX.JCXXID = dt.Rows[0]["JCXXID"].ToString();
+                        ZSJM_JJRYJBXX.JCXXID = dt.Rows[0]["JCXXID"].ToString();
                         jcxx.JCXXID = dt.Rows[0]["JCXXID"].ToString();
                         DAO.Update(jcxx);
-                        DAO.Update(ZSJM_HBCPJBXX);
+                        DAO.Update(ZSJM_JJRYJBXX);
                         transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, ID = ZSJM_HBCPJBXX.ID } };
+                        return new { Result = EnResultType.Success, Message = "修改成功!", Value = new { JCXXID = jcxx.JCXXID, ID = ZSJM_JJRYJBXX.ID } };
                     }
                     else
                     {
                         SavePhotos(photos, jcxx.JCXXID);
-                        ZSJM_HBCPJBXX.JCXXID = jcxx.JCXXID;
+                        ZSJM_JJRYJBXX.JCXXID = jcxx.JCXXID;
                         DAO.Save(jcxx);
-                        DAO.Save(ZSJM_HBCPJBXX);
+                        DAO.Save(ZSJM_JJRYJBXX);
                         transaction.Commit();
-                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, ID = ZSJM_HBCPJBXX.ID } };
+                        return new { Result = EnResultType.Success, Message = "新增成功!", Value = new { JCXXID = jcxx.JCXXID, ID = ZSJM_JJRYJBXX.ID } };
                     }
                 }
                 catch (Exception ex)
                 {
                     transaction.Rollback();
-                    LoggerManager.Error("ZSJM_HBCPJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                    LoggerManager.Error("ZSJM_JJRYJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
                     return new { Result = EnResultType.Failed, Message = "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!", Type = 3 };
                 }
             }
         }
 
-        public object LoadZSJM_HBCPJBXX(string ID)
+        public object LoadZSJM_JJRYJBXX(string ID)
         {
             try
             {
-                ZSJM_HBCPJBXX ZSJM_HBCPJBXX = DAO.GetObjectByID<ZSJM_HBCPJBXX>(ID);
-                if (ZSJM_HBCPJBXX != null)
+                ZSJM_JJRYJBXX ZSJM_JJRYJBXX = DAO.GetObjectByID<ZSJM_JJRYJBXX>(ID);
+                if (ZSJM_JJRYJBXX != null)
                 {
-                    JCXX jcxx = GetJCXXByID(ZSJM_HBCPJBXX.JCXXID);
-                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { ZSJM_HBCPJBXX = ZSJM_HBCPJBXX, BCMSString = BinaryHelper.BinaryToString(ZSJM_HBCPJBXX.BCMS), JCXX = jcxx, Photos = GetPhtosByJCXXID(ZSJM_HBCPJBXX.JCXXID) } };
+                    JCXX jcxx = GetJCXXByID(ZSJM_JJRYJBXX.JCXXID);
+                    return new { Result = EnResultType.Success, Message = "载入成功", Value = new { ZSJM_JJRYJBXX = ZSJM_JJRYJBXX, BCMSString = BinaryHelper.BinaryToString(ZSJM_JJRYJBXX.BCMS), JCXX = jcxx, Photos = GetPhtosByJCXXID(ZSJM_JJRYJBXX.JCXXID) } };
                 }
                 else
                 {
@@ -993,7 +993,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
             catch (Exception ex)
             {
-                LoggerManager.Error("ZSJM_HBCPJBXXBLL", "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                LoggerManager.Error("ZSJM_JJRYJBXXBLL", "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
                 return new
                 {
                     Result = EnResultType.Failed,

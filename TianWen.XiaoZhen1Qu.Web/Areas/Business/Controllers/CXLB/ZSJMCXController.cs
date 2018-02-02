@@ -13,6 +13,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         public ActionResult ZSJMCX_MRBJ() { GetSession(); return View(); }
         public ActionResult ZSJMCX_LPSP() { GetSession(); return View(); }
         public ActionResult ZSJMCX_JJHB() { GetSession(); return View(); }
+        public ActionResult ZSJMCX_JJRY() { GetSession(); return View(); }
         public ActionResult ZSJMCX_JYPX() { GetSession(); return View(); }
         public ActionResult ZSJMCX_QCFW() { GetSession(); return View(); }
         public ActionResult ZSJMCX_WLFW() { GetSession(); return View(); }
