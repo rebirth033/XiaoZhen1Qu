@@ -207,6 +207,7 @@ delete zsjm_cyjbxx;
 delete zsjm_fzxbjbxx;
 delete zsjm_jcjbxx;
 delete zsjm_jjhbjbxx;
+delete zsjm_jjryjbxx;
 delete zsjm_jxjbxx;
 delete zsjm_jypxjbxx;
 delete zsjm_lpspjbxx;
