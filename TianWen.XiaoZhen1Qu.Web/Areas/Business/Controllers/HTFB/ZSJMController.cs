@@ -134,10 +134,10 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             string bcms = Request["BCMS"];
             string fwzp = Request["FWZP"];
             JCXX jcxx = CreateJCXX(yhjbxx, json);
-            ZSJM_CYJBXX ZSJM_CYjbxx = JsonHelper.ConvertJsonToObject<ZSJM_CYJBXX>(json);
-            ZSJM_CYjbxx.BCMS = BinaryHelper.StringToBinary(bcms);
+            ZSJM_CYJBXX ZSJM_CYJBXX = JsonHelper.ConvertJsonToObject<ZSJM_CYJBXX>(json);
+            ZSJM_CYJBXX.BCMS = BinaryHelper.StringToBinary(bcms);
             List<PHOTOS> photos = GetTP(fwzp);
-            object result = ZSJM_BLL.SaveZSJM_CYJBXX(jcxx, ZSJM_CYjbxx, photos);
+            object result = ZSJM_BLL.SaveZSJM_CYJBXX(jcxx, ZSJM_CYJBXX, photos);
             return Json(result);
         }
         [ValidateInput(false)]

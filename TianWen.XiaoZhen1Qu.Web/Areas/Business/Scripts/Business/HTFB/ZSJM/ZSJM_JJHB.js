@@ -10,7 +10,7 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("家居类别", "LB", "CODES_ZSJM", Bind, "JJHBLB", "LB", "");
+            LoadCODESByTYPENAME("环保产品类别", "LB", "CODES_ZSJM", Bind, "JJHBLB", "LB", "");
         }
         if (type === "PPLS") {
             LoadCODESByTYPENAME("品牌历史", "PPLS", "CODES_ZSJM");
@@ -74,13 +74,13 @@ function SelectLB(obj, type, codeid) {
 }
 //判断类别
 function PDLB(name, codeid) {
-    if (name.indexOf("清洁环保") !== -1) {
-        $("#divXL").css("display", "none");
-    }
-    else {
-        $("#divXL").css("display", "");
-        LoadDuoX(name, "XL");
-    }
+    //if (name.indexOf("清洁环保") !== -1) {
+    //    $("#divXL").css("display", "none");
+    //}
+    //else {
+    //    $("#divXL").css("display", "");
+    //    LoadDuoX(name, "XL");
+    //}
 }
 //加载招商加盟_家居环保基本信息
 function LoadJBXX() {
@@ -116,9 +116,9 @@ function LoadJBXX() {
                     SetDuoX("JYMS", xml.Value.ZSJM_JJHBJBXX.JYMS);
                 if (xml.Value.ZSJM_JJHBJBXX.FWFW !== null)
                     SetDuoX("FWFW", xml.Value.ZSJM_JJHBJBXX.FWFW);
-                if (xml.Value.ZSJM_JJHBJBXX.LB.indexOf("家纺床品") !== -1 || xml.Value.ZSJM_JJHBJBXX.LB.indexOf("窗帘布艺") !== -1 || xml.Value.ZSJM_JJHBJBXX.LB.indexOf("家具") !== -1 || xml.Value.ZSJM_JJHBJBXX.LB.indexOf("清洁环保") !== -1) {
-                    LoadXLByName(xml.Value.ZSJM_JJHBJBXX.LB, xml.Value.ZSJM_JJHBJBXX.XL,"CODES_ZSJM");
-                }
+                //if (xml.Value.ZSJM_JJHBJBXX.LB.indexOf("家纺床品") !== -1 || xml.Value.ZSJM_JJHBJBXX.LB.indexOf("窗帘布艺") !== -1 || xml.Value.ZSJM_JJHBJBXX.LB.indexOf("家具") !== -1 || xml.Value.ZSJM_JJHBJBXX.LB.indexOf("清洁环保") !== -1) {
+                //    LoadXLByName(xml.Value.ZSJM_JJHBJBXX.LB, xml.Value.ZSJM_JJHBJBXX.XL,"CODES_ZSJM");
+                //}
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
