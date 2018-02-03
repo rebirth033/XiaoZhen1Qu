@@ -58,6 +58,8 @@ function LoadURLCondition() {
         SelectURLCondition(getUrlParam("FWLD"));
     else if (getUrlParam("SJ") !== null)
         SelectURLCondition(getUrlParam("SJ"));
+    else if (getUrlParam("ZZLX") !== null)
+        SelectURLCondition(getUrlParam("ZZLX"));
     else if (getUrlParam("QY") !== null)
         SelectURLCondition(getUrlParam("QY"));
     else
