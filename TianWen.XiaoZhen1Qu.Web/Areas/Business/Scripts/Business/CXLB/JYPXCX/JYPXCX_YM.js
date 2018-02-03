@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadJYPXCondition() {
-    LoadConditionByTypeNames("'留学国家','移民类别'", "CODES_JYPX", "国家,移民类别", "GJ,YMLB", "13,15");
+    LoadConditionByTypeNames("'留学国家','移民类别'", "CODES_JYPX", "国家,移民类别", "GJ,YMLB", "100,100");
     LoadBody("JYPXXX_YM", currentIndex);
 }
 //选择条件
