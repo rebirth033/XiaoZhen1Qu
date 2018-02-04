@@ -2109,6 +2109,7 @@
     <Compile Include="Areas\Business\Controllers\HTFB\XXYLController.cs" />
     <Compile Include="Areas\Business\Controllers\HTFB\ZSJMController.cs" />
     <Compile Include="Areas\Business\Controllers\HTFB\ZXJCController.cs" />
+    <Compile Include="Areas\Business\Controllers\OTHER\GYWMController.cs" />
     <Compile Include="Areas\Business\Controllers\OTHER\LBXZController.cs" />
     <Compile Include="Areas\Business\Controllers\HTGL\RZGLController.cs" />
     <Compile Include="Areas\Business\Controllers\OTHER\SYController.cs" />
@@ -2857,6 +2858,7 @@
     <Content Include="Areas\Business\Views\ZSJMXX\ZSJMXX_JJRY.cshtml" />
     <Content Include="Areas\Business\Views\ZSJMCX\ZSJMCX_LS.cshtml" />
     <Content Include="Areas\Business\Views\ZSJMXX\ZSJMXX_LS.cshtml" />
+    <Content Include="Areas\Business\Views\GYWM\GYWM.cshtml" />
     <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

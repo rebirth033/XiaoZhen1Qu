@@ -1,0 +1,103 @@
+﻿@{
+    Layout = "~/Areas/Business/Views/Shared/QT.cshtml";
+}
+@section Section_Head {
+    <link href="@Url.Content("~/Areas/Business/Css/HTGL/SHGJ/HFCZ.css")" rel="stylesheet"/>
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/HTGL/SHGJ/HFCZ.js")"></script>
+}
+@section Section_Body {
+    <div class="div_photo">
+        <div class="divstep" id="divHFCZ">
+            <span class="spanstep" id="spanHFCZ">话费充值</span>
+            <em class="emstep" id="emHFCZ"></em>
+        </div>
+        <div class="divstep" id="divLLCZ">
+            <span class="spanstep" id="spanLLCZ">流量充值</span>
+            <em class="emstep" id="emLLCZ"></em>
+        </div>
+        <div class="divstep">
+            <span class="spanstep">&nbsp;</span>
+            <em class="emstep" style="width: 640px;"></em>
+        </div>
+    </div>
+    <div id="div_HFCZ" style="display: block">
+        <div class="div_content">
+            <div class="div_content_info">
+                <table>
+                    <tr>
+                        <td><span class="span_content_info_left">手机号码：</span></td>
+                        <td>
+                            <input class="input_content" id="inputHFSJHM" maxlength="13" type="text" placeholder="请输入手机号码">
+                        </td>
+                        <td>
+                            <span class="span_conent_info" id="span_content_info_hfsj"></span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="div_content_info">
+                <span class="span_content_info_left">话费充值：</span>
+                <span class="span_content_info_HF">30元</span>
+                <span class="span_content_info_HF">50元</span>
+                <span class="span_content_info_HF">100元</span>
+                <span class="span_content_info_HF">200元</span>
+                <span class="span_content_info_HF">300元</span>
+                <span class="span_content_info_HF">500元</span>
+            </div>
+            <div class="div_content_info">
+                <span class="span_content_info_left">共需支付：</span>
+                <span class="span_content_gxzf" id="spanGXZF">0.0元</span>
+                <div class="div_content_info_left">友情提醒：本平台流量和话费不向消费者开具发票</div>
+            </div>
+            <div class="div_content_info">
+                <input class="input_content_ljzf" id="inputHFLJCZ" value="选择支付方式" type="button">
+            </div>
+        </div>
+    </div>
+    <div id="div_LLCZ" style="display: none">
+        <div class="div_content">
+            <div class="div_content_info">
+                <table>
+                    <tr>
+                        <td><span class="span_content_info_left">手机号码：</span></td>
+                        <td>
+                            <input class="input_content" id="inputLLSJHM" maxlength="13" type="text" placeholder="请输入手机号码">
+                        </td>
+                        <td>
+                            <span class="span_conent_info" id="span_content_info_llsj"></span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="div_content_info">
+                <span class="span_content_info_left">流量充值：</span>
+                <span class="span_content_info_LL">10M</span>
+                <span class="span_content_info_LL">30M</span>
+                <span class="span_content_info_LL">70M</span>
+                <span class="span_content_info_LL">100M</span>
+                <span class="span_content_info_LL">300M</span>
+                <span class="span_content_info_LL">500M</span>
+            </div>
+            <div class="div_content_info">
+                <span class="span_content_info_left_space"></span>
+                <span class="span_content_info_LL">1G</span>
+                <span class="span_content_info_LL">2G</span>
+            </div>
+            <div class="div_content_info" style="height: 156px;">
+                <span class="span_content_info_left">流量价格：</span>
+                <span class="span_content_gxzf" id="spanLLJG">0.0元</span>
+                <div class="div_content_info_left" style="height: 108px;">
+                    流量充值说明<br/>
+                    1、生效时间：充值成功即时生效<br/>
+                    2、使用范围：支持全国流量<br/>
+                    3、使用有效期：当月有效<br/>
+                    4、充值次数限制：不限次数<br/>
+                    5、友情提醒：本平台流量和话费不向消费者开具发票<br/>
+                </div>
+            </div>
+            <div class="div_content_info">
+                <input class="input_content_ljzf" id="inputLLLJCZ" value="选择支付方式" type="button">
+            </div>
+        </div>
+    </div>
+}

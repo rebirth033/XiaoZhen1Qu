@@ -48,17 +48,17 @@
 .purple{ color: #bc6ba6 !important;}
 
 /*首页_下部*/
-.div_foot{ width: 1200px;overflow-x: hidden;background: #ffffff;height: 300px;display: block;padding: 20px 10px;margin-top: 10px;}
-.div_foot .div_foot_left{ width: 195px;height: 100%;float: left;border-bottom: 1px solid #cccccc;}
+.div_foot{ width: 1200px;overflow-x: hidden;background: #ffffff;height: 270px;display: block;padding: 20px 10px;margin-top: 10px;}
+.div_foot .div_foot_left{ width: 200px;height: 100%;float: left;border-bottom: 1px solid #cccccc;}
 .div_foot .div_foot_right{ width: 195px;float: left;height: 100%;border-bottom: 1px solid #cccccc;}
 .div_foot .div_foot_right .p_div_foot_right{ font-weight: 700;font-size: 16px;height: 45px;}
 .div_foot .div_foot_right .ul_div_foot_right{width: 195px;padding: 0;}
 .div_foot .div_foot_right .ul_div_foot_right .li_div_foot_right{ height: 30px;color: #999999;font-size: 13px;}
-.div_foot .div_foot_right .ul_div_foot_right .li_div_foot_right .a_div_foot_right{ height: 30px;color: #999999;font-size: 13px;}
-.div_foot .div_foot_right .ul_div_foot_right .li_div_foot_right .a_div_foot_right:hover{ cursor: pointer;color: #bc6ba6;text-decoration: underline;}
+.div_foot .div_foot_right .ul_div_foot_right .li_div_foot_right .a_div_foot_right{ height: 30px;color: #999999;font-size: 13px;cursor: default;text-decoration: none;}
+/*.div_foot .div_foot_right .ul_div_foot_right .li_div_foot_right .a_div_foot_right:hover{ color: #bc6ba6;text-decoration: underline;}*/
 
 /*首页_底部*/
-.div_bottom{width: 1200px;overflow-x: hidden;background: #ffffff;height: 100px;display: block;}
+.div_bottom{width: 1200px;overflow-x: hidden;background: #ffffff;height: 100px;display: block;padding-top: 10px;}
 .div_bottom .p_div_bottom { width: 100%;text-align: center;}
 
 ::-webkit-input-placeholder { color:#999999; }
