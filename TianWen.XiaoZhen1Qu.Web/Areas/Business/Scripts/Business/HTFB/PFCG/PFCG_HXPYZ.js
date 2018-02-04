@@ -3,7 +3,7 @@
 });
 //类别
 function ValidateLB() {
-    if (!ValidateCheck("HXPLB", "忘记选择化学品啦")) return false;
+    if (!ValidateCheck("OUTLB", "忘记选择化学品啦")) return false;
     return true;
 }
 //验证所有
