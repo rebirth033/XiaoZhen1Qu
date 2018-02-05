@@ -1,19 +1,21 @@
 -- Create table
 create table CL_HCJBXX
 (
-  cl_hcjbxxid VARCHAR2(50) not null,
-  jcxxid      VARCHAR2(50),
-  gq          VARCHAR2(20),
-  bcms        blob,
-  jyqy        VARCHAR2(20),
-  jydd        VARCHAR2(20),
-  lb          VARCHAR2(20),
-  jg          VARCHAR2(20),
-  pp          VARCHAR2(20),
-  xslc        VARCHAR2(20),
-  ccyf        VARCHAR2(20),
-  edzz        VARCHAR2(20),
-  ccnx        VARCHAR2(20)
+  id     VARCHAR2(50) not null,
+  jcxxid VARCHAR2(50),
+  qy     VARCHAR2(20),
+  dd     VARCHAR2(20),
+  lb     VARCHAR2(20),
+  jg     VARCHAR2(20),
+  pp     VARCHAR2(20),
+  xslc   VARCHAR2(20),
+  ccyf   VARCHAR2(20),
+  edzz   VARCHAR2(20),
+  ccnf   VARCHAR2(20),
+  bcms   BLOB,
+  cx     VARCHAR2(20),
+  jtdz   VARCHAR2(100),
+  sf     VARCHAR2(20)
 )
 tablespace USERS
   pctfree 10
@@ -21,8 +23,8 @@ tablespace USERS
   maxtrans 255
   storage
   (
-    initial 16K
-    next 1M
+    initial 64
+    next 1
     minextents 1
     maxextents unlimited
   );
@@ -30,18 +32,14 @@ tablespace USERS
 comment on table CL_HCJBXX
   is '车辆_货车';
 -- Add comments to the columns 
-comment on column CL_HCJBXX.cl_hcjbxxid
+comment on column CL_HCJBXX.id
   is '货车基本信息ID';
 comment on column CL_HCJBXX.jcxxid
   is '基础信息ID';
-comment on column CL_HCJBXX.gq
-  is '供求';
-comment on column CL_HCJBXX.bcms
-  is '补充描述';
-comment on column CL_HCJBXX.jyqy
-  is '交易区域';
-comment on column CL_HCJBXX.jydd
-  is '交易地段';
+comment on column CL_HCJBXX.qy
+  is '区域';
+comment on column CL_HCJBXX.dd
+  is '地段';
 comment on column CL_HCJBXX.lb
   is '类别';
 comment on column CL_HCJBXX.jg
@@ -54,5 +52,13 @@ comment on column CL_HCJBXX.ccyf
   is '出厂月份';
 comment on column CL_HCJBXX.edzz
   is '额定载重';
-comment on column CL_HCJBXX.ccnx
-  is '出厂年限';
+comment on column CL_HCJBXX.ccnf
+  is '出厂年份';
+comment on column CL_HCJBXX.bcms
+  is '补充描述';
+comment on column CL_HCJBXX.cx
+  is '车系';
+comment on column CL_HCJBXX.jtdz
+  is '具体地址';
+comment on column CL_HCJBXX.sf
+  is '身份';
