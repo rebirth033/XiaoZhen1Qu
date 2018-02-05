@@ -32,6 +32,12 @@ namespace TianWen.XiaoZhen1Qu.BLL
             {
                 return new { Result = EnResultType.Failed, Message = "用户名已存在!", Type = 2 };
             }
+            o1 = DAO.Repository.ExecuteScalar(string.Format("SELECT COUNT(1) FROM YHJBXX WHERE SJ='{0}'", yhjbxx.SJ));
+
+            if (o1 != null && int.Parse(o1.ToString()) > 0)
+            {
+                return new { Result = EnResultType.Failed, Message = "该手机号已注册过!", Type = 4 };
+            }
             using (ITransaction transaction = DAO.BeginTransaction())
             {
                 try
