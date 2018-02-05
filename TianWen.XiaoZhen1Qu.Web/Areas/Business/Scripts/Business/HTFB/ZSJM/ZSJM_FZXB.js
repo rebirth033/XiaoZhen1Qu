@@ -10,7 +10,7 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("服饰鞋帽类别", "LB", "CODES_ZSJM", Bind, "FZXBLB", "LB", "");
+            LoadCODESByTYPENAME("服装鞋包类别", "LB", "CODES_ZSJM", Bind, "FZXBLB", "LB", "");
         }
         if (type === "PPLS") {
             LoadCODESByTYPENAME("品牌历史", "PPLS", "CODES_ZSJM");

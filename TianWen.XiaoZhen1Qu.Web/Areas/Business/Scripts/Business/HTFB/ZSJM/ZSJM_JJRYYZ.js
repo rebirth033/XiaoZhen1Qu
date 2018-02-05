@@ -6,10 +6,10 @@
 });
 //验证所有
 function ValidateAll() {
-    if (ValidateSelect("CYLB", "LB", "忘记选择类别啦")
+    if (ValidateSelect("JJHBLB", "LB", "忘记选择类别啦")
         & ValidatePPMC()
         & ValidateGSMC()
-        & ValidateSelect("CYTZJE", "TZJE", "忘记选择投资金额啦")
+        & ValidateSelect("JJHBTZJE", "TZJE", "忘记选择投资金额啦")
         & ValidateCheck("FWFW", "忘记选择服务范围啦")
         & ValidateBCMS("BCMS", "忘记填写详情描述啦")
         & ValidateCommon())

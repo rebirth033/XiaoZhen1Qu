@@ -65,7 +65,7 @@ function Exit() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                window.location.href = getRootPath() + "/Business/YHDL/YHDL";
+                window.location.href = getRootPath() + "/Business/SY/SY";
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

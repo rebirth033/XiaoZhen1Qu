@@ -256,3 +256,22 @@ window.onscroll = function () {
         $("#divHideHead").css("display", "none");
     }
 }
+//退出
+function Exit() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/YHDL/Exit",
+        dataType: "json",
+        data: {
+
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                window.location.reload();
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
