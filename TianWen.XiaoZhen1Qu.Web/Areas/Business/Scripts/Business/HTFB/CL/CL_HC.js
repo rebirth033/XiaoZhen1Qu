@@ -101,6 +101,7 @@ function OpenSecond(codeid) {
 //选择款式
 function SelectSecond(cx, ks) {
     $("#spanPP").html(cx + " " + ks);
+    ValidateHCPP();
 }
 //关闭选择品牌框
 function CloseJCPP(count) {
