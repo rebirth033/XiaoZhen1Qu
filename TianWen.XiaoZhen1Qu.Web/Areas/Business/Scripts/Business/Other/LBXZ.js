@@ -1,4 +1,5 @@
 ﻿$(document).ready(function () {
+    $("body").css("height", document.documentElement.clientHeight);
     $(".div_top_left").css("margin-left", (document.documentElement.clientWidth - 940) / 2);
     $(".div_top_right").css("margin-right", (document.documentElement.clientWidth - 940) / 2);
     $(".div_head").css("margin-left", (document.documentElement.clientWidth - 940) / 2);
