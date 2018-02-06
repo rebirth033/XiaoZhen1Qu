@@ -22,16 +22,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         public ActionResult ESCX_WHYL_WTHWYQ() { GetSession(); return View(); }
         public ActionResult ESCX_WHYL_TSYXRJ() { GetSession(); return View(); }
         public ActionResult ESCX_WHYL_WYXNWP() { GetSession(); return View(); }
-        public ActionResult ESCX_PWKQ_YCMP() { GetSession(); return View(); }
-        public ActionResult ESCX_PWKQ_QTKQ() { GetSession(); return View(); }
         public ActionResult ESCX_PWKQ_MPKQ() { GetSession(); return View(); }
-        public ActionResult ESCX_PWKQ_XFKGWQ() { GetSession(); return View(); }
         public ActionResult ESCX_QTES_ESSB() { GetSession(); return View(); }
         public ActionResult ESCX_QTES_CRYP() { GetSession(); return View(); }
 
         public JsonResult LoadESXX()
         {
-            return Json(ESCXBLL.LoadESXX(Request["TYPE"], Request["Condition"], Request["PageIndex"], Request["PageSize"], Request["OrderColumn"], Request["OrderType"]));
+            return Json(ESCXBLL.LoadESXX(Request["TYPE"], Request["Condition"], Request["PageIndex"], Request["PageSize"], Request["OrderColumn"], Request["OrderType"], Session["XZQDM"].ToString()));
         }
     }
 }

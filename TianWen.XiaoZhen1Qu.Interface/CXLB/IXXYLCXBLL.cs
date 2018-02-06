@@ -7,7 +7,7 @@ namespace TianWen.XiaoZhen1Qu.Interface
 {
     public interface IXXYLCXBLL : IBaseBLL
     {
-        object LoadXXYLXX(string TYPE, string Condition, string PageIndex, string PageSize, string OrderColumn, string OrderType);
+        object LoadXXYLXX(string TYPE, string Condition, string PageIndex, string PageSize, string OrderColumn, string OrderType, string XZQDM);
 
         object LoadXXYLXX(string TYPE, string ID);
     }

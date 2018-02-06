@@ -31,7 +31,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public JsonResult LoadPFCGXX()
         {
-            return Json(PFCGCXBLL.LoadPFCGXX(Request["TYPE"], Request["Condition"], Request["PageIndex"], Request["PageSize"], Request["OrderColumn"], Request["OrderType"]));
+            return Json(PFCGCXBLL.LoadPFCGXX(Request["TYPE"], Request["Condition"], Request["PageIndex"], Request["PageSize"], Request["OrderColumn"], Request["OrderType"], Session["XZQDM"].ToString()));
         }
     }
 }

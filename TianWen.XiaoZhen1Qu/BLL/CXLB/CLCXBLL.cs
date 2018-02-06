@@ -13,14 +13,14 @@ namespace TianWen.XiaoZhen1Qu.BLL
     public class CLCXBLL : BaseBLL, ICLCXBLL
     {
         //加载车辆信息
-        public object LoadCLXX(string TYPE, string Condition, string PageIndex, string PageSize, string OrderColumn, string OrderType)
+        public object LoadCLXX(string TYPE, string Condition, string PageIndex, string PageSize, string OrderColumn, string OrderType, string XZQDM)
         {
             try
             {
                 DataTable dt = new DataTable();
                 if (TYPE == "CLXX_JC")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,cl_jcjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,cl_jcjbxx b where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<CL_JCView> list = ConvertHelper.DataTableToList<CL_JCView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -33,7 +33,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "CLXX_HC")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,cl_hcjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,cl_hcjbxx b where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<CL_HCView> list = ConvertHelper.DataTableToList<CL_HCView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -46,7 +46,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "CLXX_KC")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,cl_kcjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,cl_kcjbxx b where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<CL_KCView> list = ConvertHelper.DataTableToList<CL_KCView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -60,7 +60,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "CLXX_MTC")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,cl_mtcjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,cl_mtcjbxx b where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<CL_MTCView> list = ConvertHelper.DataTableToList<CL_MTCView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -73,7 +73,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "CLXX_ZXC")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,cl_zxcjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,cl_zxcjbxx b where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<CL_ZXCView> list = ConvertHelper.DataTableToList<CL_ZXCView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -87,7 +87,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "CLXX_DDC")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,cl_ddcjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,cl_ddcjbxx b where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<CL_DDCView> list = ConvertHelper.DataTableToList<CL_DDCView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -100,7 +100,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "CLXX_SLC")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,cl_slcjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,cl_slcjbxx b where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<CL_SLCView> list = ConvertHelper.DataTableToList<CL_SLCView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -113,7 +113,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "CLXX_GCC")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,cl_gccjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,cl_gccjbxx b where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<CL_GCCView> list = ConvertHelper.DataTableToList<CL_GCCView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -126,7 +126,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "CLXX_ZC")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,cl_zcjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,cl_zcjbxx b where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<CL_ZCView> list = ConvertHelper.DataTableToList<CL_ZCView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -140,7 +140,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "CLXX_DJ")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,cl_DJjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,cl_DJjbxx b where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<CL_DJView> list = ConvertHelper.DataTableToList<CL_DJView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -154,7 +154,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "CLXX_JX")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,cl_jxjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,cl_jxjbxx b where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<CL_JXView> list = ConvertHelper.DataTableToList<CL_JXView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -168,7 +168,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "CLXX_QCPL")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,cl_qcpljbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,cl_qcpljbxx b where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<CL_QCPLView> list = ConvertHelper.DataTableToList<CL_QCPLView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -182,7 +182,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "CLXX_QCWXBY")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,cl_qcwxbyjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,cl_qcwxbyjbxx b where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<CL_QCWXBYView> list = ConvertHelper.DataTableToList<CL_QCWXBYView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -196,7 +196,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "CLXX_GHSPNJYC")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,cl_ghspnjycjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,cl_ghspnjycjbxx b where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<CL_GHSPNJYCView> list = ConvertHelper.DataTableToList<CL_GHSPNJYCView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -210,7 +210,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "CLXX_QCMRZS")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,cl_qcmrzsjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,cl_qcmrzsjbxx b where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<CL_QCMRZSView> list = ConvertHelper.DataTableToList<CL_QCMRZSView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -224,7 +224,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "CLXX_QCGZFH")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,cl_qcgzfhjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,cl_qcgzfhjbxx b where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<CL_QCGZFHView> list = ConvertHelper.DataTableToList<CL_QCGZFHView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -238,7 +238,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "CLXX_QCPJ")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,cl_qcpjjbxx b where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,cl_qcpjjbxx b where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<CL_QCPJView> list = ConvertHelper.DataTableToList<CL_QCPJView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
