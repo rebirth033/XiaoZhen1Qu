@@ -17,6 +17,7 @@ function SelectJZSJ() {
         else
             $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/check_purple.png");
     });
+    ValidateJZSJ();
 }
 //显示职位类别
 function ShowJZLBThird() {

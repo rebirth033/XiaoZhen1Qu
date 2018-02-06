@@ -1,5 +1,5 @@
 ﻿$(document).ready(function() {
-    $("#divZPJZYXQ").find(".div_radio").bind("click", function() { ValidateRadio("ZPJZYXQ", "忘记选择兼职有效期啦"); });
+    $("#divZPJZYXQ").find(".div_radio").bind("click", function () { ValidateRadio("ZPJZYXQ", "忘记选择兼职有效期啦"); });
     $("#DQJZKSSJ").bind("change", function () { ValidateZPDQJZSJ(); });
     $("#DQJZJSSJ").bind("change", function () { ValidateZPDQJZSJ(); });
     $("#ZPRS").bind("blur", ValidateZPRS);
@@ -7,6 +7,18 @@
     $("#XZ").bind("blur", ValidateXZSP);
     $("#XZ").bind("focus", InfoXZ);
 });
+//验证兼职时间
+function ValidateJZSJ() {
+    if (GetJZSJ() === "") {
+        $("#divZPJZSJTip").css("display", "block");
+        $("#divZPJZSJTip").attr("class", "Warn");
+        $("#divZPJZSJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记选择兼职时间啦');
+        return false;
+    } else {
+        $("#divZPJZSJTip").css("display", "none");
+        return true;
+    }
+}
 //验证短期兼职时间
 function ValidateZPDQJZSJ() {
     if (!ValidateDQJZKSSJ()) return false;
@@ -23,6 +35,7 @@ function ValidateXZSP() {
 function ValidateAll() {
     if (ValidateSelect("ZPJZLB", "JZLB", "忘记选择兼职类别啦")
         & ValidateZPRS()
+        & ValidateJZSJ() 
         & ValidateRadio("ZPJZYXQ", "忘记选择兼职有效期啦")
         & ValidateZPDQJZSJ()
         & ValidateXZSP()

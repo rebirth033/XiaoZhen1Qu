@@ -7,7 +7,7 @@ namespace TianWen.XiaoZhen1Qu.Interface
 {
     public interface ICLCXBLL : IBaseBLL
     {
-        object LoadCLXX(string TYPE, string Condition, string PageIndex, string PageSize, string OrderColumn, string OrderType);
+        object LoadCLXX(string TYPE, string Condition, string PageIndex, string PageSize, string OrderColumn, string OrderType, string XZQDM);
 
         object LoadCLXX(string TYPE, string ID);
     }

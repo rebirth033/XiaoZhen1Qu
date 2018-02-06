@@ -13,14 +13,14 @@ namespace TianWen.XiaoZhen1Qu.BLL
     public class SWFWCXBLL : BaseBLL, ISWFWCXBLL
     {
         //加载商务服务列表信息
-        public object LoadSWFWXX(string TYPE, string Condition, string PageIndex, string PageSize, string OrderColumn, string OrderType)
+        public object LoadSWFWXX(string TYPE, string Condition, string PageIndex, string PageSize, string OrderColumn, string OrderType, string XZQDM)
         {
             try
             {
                 DataTable dt = new DataTable();
                 if (TYPE == "SWFWXX_GSZC")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,swfw_gszcjbxx b  where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,swfw_gszcjbxx b  where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<SWFW_GSZCView> list = ConvertHelper.DataTableToList<SWFW_GSZCView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -34,7 +34,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "SWFWXX_SBZL")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,swfw_sbzljbxx b  where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,swfw_sbzljbxx b  where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<SWFW_GSZCView> list = ConvertHelper.DataTableToList<SWFW_GSZCView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -48,7 +48,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "SWFWXX_FLZX")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,swfw_flzxjbxx b  where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,swfw_flzxjbxx b  where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<SWFW_GSZCView> list = ConvertHelper.DataTableToList<SWFW_GSZCView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -62,7 +62,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "SWFWXX_CWKJPG")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,swfw_cwkjpgjbxx b  where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,swfw_cwkjpgjbxx b  where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<SWFW_GSZCView> list = ConvertHelper.DataTableToList<SWFW_GSZCView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -76,7 +76,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "SWFWXX_BX")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,swfw_bxjbxx b  where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,swfw_bxjbxx b  where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<SWFW_GSZCView> list = ConvertHelper.DataTableToList<SWFW_GSZCView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -90,7 +90,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "SWFWXX_TZDB")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,swfw_tzdbjbxx b  where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,swfw_tzdbjbxx b  where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<SWFW_GSZCView> list = ConvertHelper.DataTableToList<SWFW_GSZCView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -104,7 +104,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "SWFWXX_YSBZ")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,swfw_ysbzjbxx b  where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,swfw_ysbzjbxx b  where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<SWFW_GSZCView> list = ConvertHelper.DataTableToList<SWFW_GSZCView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -118,7 +118,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "SWFWXX_PHZP")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,swfw_phzpjbxx b  where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,swfw_phzpjbxx b  where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<SWFW_GSZCView> list = ConvertHelper.DataTableToList<SWFW_GSZCView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -132,7 +132,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "SWFWXX_SJCH")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,swfw_sjchjbxx b  where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,swfw_sjchjbxx b  where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<SWFW_GSZCView> list = ConvertHelper.DataTableToList<SWFW_GSZCView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -146,7 +146,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "SWFWXX_GGCM")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,swfw_ggcmjbxx b  where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,swfw_ggcmjbxx b  where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<SWFW_GSZCView> list = ConvertHelper.DataTableToList<SWFW_GSZCView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -160,7 +160,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "SWFWXX_ZHFW")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,swfw_zhfwjbxx b  where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,swfw_zhfwjbxx b  where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<SWFW_GSZCView> list = ConvertHelper.DataTableToList<SWFW_GSZCView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -174,7 +174,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "SWFWXX_LPDZ")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,swfw_lpdzjbxx b  where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,swfw_lpdzjbxx b  where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<SWFW_GSZCView> list = ConvertHelper.DataTableToList<SWFW_GSZCView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -188,7 +188,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "SWFWXX_ZK")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,swfw_zkjbxx b  where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,swfw_zkjbxx b  where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<SWFW_GSZCView> list = ConvertHelper.DataTableToList<SWFW_GSZCView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -202,7 +202,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "SWFWXX_FYSJ")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,swfw_fysjjbxx b  where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,swfw_fysjjbxx b  where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<SWFW_GSZCView> list = ConvertHelper.DataTableToList<SWFW_GSZCView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -216,7 +216,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "SWFWXX_WLBXWH")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,swfw_wlbxwhjbxx b  where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,swfw_wlbxwhjbxx b  where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<SWFW_GSZCView> list = ConvertHelper.DataTableToList<SWFW_GSZCView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -230,7 +230,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "SWFWXX_WZJSTG")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,swfw_wzjstgjbxx b  where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,swfw_wzjstgjbxx b  where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<SWFW_GSZCView> list = ConvertHelper.DataTableToList<SWFW_GSZCView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -244,7 +244,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "SWFWXX_ZXFW")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,swfw_zxfwjbxx b  where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,swfw_zxfwjbxx b  where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<SWFW_GSZCView> list = ConvertHelper.DataTableToList<SWFW_GSZCView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -258,7 +258,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "SWFWXX_KD")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,swfw_kdjbxx b  where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,swfw_kdjbxx b  where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<SWFW_GSZCView> list = ConvertHelper.DataTableToList<SWFW_GSZCView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -272,7 +272,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "SWFWXX_HYWL")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,swfw_hywljbxx b  where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,swfw_hywljbxx b  where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<SWFW_GSZCView> list = ConvertHelper.DataTableToList<SWFW_GSZCView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -286,7 +286,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "SWFWXX_HYZX")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,swfw_hyzxjbxx b  where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,swfw_hyzxjbxx b  where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<SWFW_HYZXView> list = ConvertHelper.DataTableToList<SWFW_HYZXView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -300,7 +300,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "SWFWXX_BGSBWX")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,swfw_bgsbwxjbxx b  where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,swfw_bgsbwxjbxx b  where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<SWFW_GSZCView> list = ConvertHelper.DataTableToList<SWFW_GSZCView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -314,7 +314,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "SWFWXX_ZL")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,swfw_zljbxx b  where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,swfw_zljbxx b  where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<SWFW_GSZCView> list = ConvertHelper.DataTableToList<SWFW_GSZCView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -328,7 +328,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "SWFWXX_DBQZQZ")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,swfw_dbqzqzjbxx b  where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,swfw_dbqzqzjbxx b  where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<SWFW_GSZCView> list = ConvertHelper.DataTableToList<SWFW_GSZCView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -342,7 +342,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "SWFWXX_JZWX")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,swfw_jzwxjbxx b  where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,swfw_jzwxjbxx b  where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<SWFW_GSZCView> list = ConvertHelper.DataTableToList<SWFW_GSZCView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -356,7 +356,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "SWFWXX_JXSBWX")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,swfw_jxsbwxjbxx b  where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,swfw_jxsbwxjbxx b  where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<SWFW_GSZCView> list = ConvertHelper.DataTableToList<SWFW_GSZCView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -370,7 +370,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "SWFWXX_SYSX")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,swfw_sysxjbxx b  where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,swfw_sysxjbxx b  where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<SWFW_GSZCView> list = ConvertHelper.DataTableToList<SWFW_GSZCView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -384,7 +384,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "SWFWXX_LYQD")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,swfw_lyqdjbxx b  where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,swfw_lyqdjbxx b  where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<SWFW_GSZCView> list = ConvertHelper.DataTableToList<SWFW_GSZCView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -398,7 +398,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "SWFWXX_QMFSSM")
                 {
-                    dt = DAO.Repository.GetDataTable("select a.*,b.* from jcxx a,swfw_qmfssmjbxx b  where a.jcxxid = b.jcxxid " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,swfw_qmfssmjbxx b  where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<SWFW_GSZCView> list = ConvertHelper.DataTableToList<SWFW_GSZCView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;

@@ -101,7 +101,7 @@ function LoadDuoX(type, id) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "YZ") {
-            LoadCODESByTYPENAME("语种", "YZ", "CODES_JYPX");
+            LoadCODESByTYPENAME("语种", "YZ", "CODES_JYPX", Bind, "YYPXYZ", "YZ", "");
         }
     });
 }

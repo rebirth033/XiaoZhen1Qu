@@ -97,7 +97,7 @@ function OpenSecond(codeid) {
 //选择职位
 function SelectSecond(name) {
     $("#spanLB").html(name);
-    ValidateSelect("LB", "LB", "请选择类别");
+    ValidateSelect("OUTLB", "LB", "请选择类别");
 }
 //关闭选择品牌框
 function CloseZWMC(count) {
@@ -128,7 +128,6 @@ function LoadJBXX() {
                 //设置编辑器的内容
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
                 $("#spanLB").html(xml.Value.NLMFY_YLHHJBXX.LB);
-                SetXLBQ(xml.Value.NLMFY_YLHHJBXX.XL);
                 $("#spanQY").html(xml.Value.NLMFY_YLHHJBXX.QY);
                 $("#spanDD").html(xml.Value.NLMFY_YLHHJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
@@ -147,7 +146,6 @@ function FB() {
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
-    obj = jsonObj.AddJson(obj, "XL", "'" + GetDuoX("XL") + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
 

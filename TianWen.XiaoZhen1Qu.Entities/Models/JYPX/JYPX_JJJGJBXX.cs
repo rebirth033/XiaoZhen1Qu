@@ -29,6 +29,12 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string SF { get; set; }
 
         /// <summary>
+        /// 授课形式
+        /// </summary>
+        [Property]
+        public virtual string SKXS { get; set; }
+
+        /// <summary>
         /// 辅导阶段
         /// </summary>
         [Property]

@@ -36,7 +36,6 @@ function LoadJBXX() {
                 //设置编辑器的内容
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
                 $("#spanLB").html(xml.Value.NLMFY_SLSYJBXX.LB);
-                SetXLBQ(xml.Value.NLMFY_YLHHJBXX.XL);
                 $("#spanQY").html(xml.Value.NLMFY_SLSYJBXX.QY);
                 $("#spanDD").html(xml.Value.NLMFY_SLSYJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
@@ -55,7 +54,6 @@ function FB() {
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
-    obj = jsonObj.AddJson(obj, "XL", "'" + GetXLBQ() + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
 

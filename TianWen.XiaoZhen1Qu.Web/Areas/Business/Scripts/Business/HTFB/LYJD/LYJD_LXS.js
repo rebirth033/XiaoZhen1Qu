@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    LoadJBXX();
+    LoadFWFW();
 });
 //加载旅游酒店_旅行社基本信息
 function LoadJBXX() {

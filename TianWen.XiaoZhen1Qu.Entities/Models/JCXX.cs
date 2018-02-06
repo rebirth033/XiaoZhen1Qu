@@ -85,6 +85,12 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual int STATUS { get; set; }
 
         /// <summary>
+        /// 行政区ID
+        /// </summary>
+        [Property]
+        public virtual int XZQDM { get; set; }
+
+        /// <summary>
         /// 信息类别ID
         /// </summary>
         [Property]
