@@ -13,6 +13,7 @@ function ValidateAll() {
         & ValidateSelect("ZPXLYQ", "XLYQ", "忘记选择学历要求啦")
         & ValidateSelect("ZPGZNX", "GZNX", "忘记选择工作年限啦")
         & ValidateBCMS("BCMS", "忘记填写详情描述啦")
+        & ValidateXXDZ() 
         & ValidateCommonWithoutZP())
         return true;
     else

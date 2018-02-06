@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function() { Close("_XZQ"); });
-    LoadJBXX();
+    LoadFWFW();
 });
 //加载生活服务_开锁/换锁/修锁基本信息
 function LoadJBXX() {
