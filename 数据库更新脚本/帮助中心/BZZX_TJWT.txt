@@ -1,0 +1,8 @@
+CREATE TABLE `bzzx_tjwt` (
+  `id` varchar(50) NOT NULL,
+  `lb` varchar(20) DEFAULT NULL,
+  `yjnr` varchar(1000) DEFAULT NULL,
+  `yhid` varchar(50) DEFAULT NULL,
+  `xxbh` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
