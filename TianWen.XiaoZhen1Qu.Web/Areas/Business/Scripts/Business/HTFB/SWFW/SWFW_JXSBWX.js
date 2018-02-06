@@ -17,19 +17,19 @@ function LoadJXSBWXLB() {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='liJXSBWXLB' style='width:150px' onclick='SelectDuoX(this)'><img class='img_JXSBWXLB'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i % 4 === 3) {
+                    if (i % 4 === 3 && i !== xml.list.length-1) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 4) === 0)
-                    $("#divJXSBWXLB").css("height", parseInt(xml.list.length / 4) * 40 + "px");
+                    $("#divJXSBWXLB").css("height", parseInt(xml.list.length / 4) * 45 + "px");
                 else
-                    $("#divJXSBWXLB").css("height", (parseInt(xml.list.length / 4) + 1) * 40 + "px");
+                    $("#divJXSBWXLB").css("height", (parseInt(xml.list.length / 4) + 1) * 45 + "px");
                 html += "</ul>";
                 $("#divJXSBWXLBText").html(html);
                 $(".img_JXSBWXLB").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".liJXSBWXLB").bind("click", function () { ValidateCheck("JXSBWXLB", "忘记选择类别啦"); });
-                LoadJBXX();
+                LoadFWFW();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

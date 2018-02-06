@@ -97,7 +97,7 @@ function OpenSecond(codeid) {
 //选择职位
 function SelectSecond(name) {
     $("#spanLB").html(name);
-    ValidateSelect("LB", "LB", "请选择类别");
+    ValidateSelect("OUTLB", "LB", "请选择类别");
 }
 //关闭选择品牌框
 function CloseZWMC(count) {
@@ -109,7 +109,6 @@ function CloseZWMC(count) {
         $("#div_row_right_jcpp_second").css("display", "none");
     }
 }
-//加载农林牧副渔_畜禽养殖基本信息
 //加载农林牧副渔_农机具/设备基本信息
 function LoadJBXX() {
     $.ajax({
@@ -129,7 +128,6 @@ function LoadJBXX() {
                 //设置编辑器的内容
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
                 $("#spanLB").html(xml.Value.NLMFY_NJJSBJBXX.LB);
-                SetXLBQ(xml.Value.NLMFY_YLHHJBXX.XL);
                 $("#spanQY").html(xml.Value.NLMFY_NJJSBJBXX.QY);
                 $("#spanDD").html(xml.Value.NLMFY_NJJSBJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
@@ -148,7 +146,6 @@ function FB() {
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
-    obj = jsonObj.AddJson(obj, "XL", "'" + GetXLBQ() + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
 
