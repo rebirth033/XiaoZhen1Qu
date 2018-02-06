@@ -50,6 +50,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             jcxx.CJSJ = DateTime.Now;
             jcxx.LXDZ = yhjbxx.TXDZ;
             jcxx.DH = Session["XZQ"] + "-" + GetLBQCByLBID(jcxx.LBID);
+            jcxx.XZQDM = int.Parse(Session["XZQDM"].ToString());
             return jcxx;
         }
 
