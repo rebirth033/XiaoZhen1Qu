@@ -20,7 +20,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Maps.CODES
             Map(x => x.PARENTID, "PARENTID");
             Map(x => x.TYPE, "TYPE");
             Map(x => x.TYPENAME, "TYPENAME");
-            Map(x => x.CONDITION, "CONDITION");
+            Map(x => x.CONDITION, "CONDITIONS");
             Map(x => x.ISHOT, "ISHOT");
             Map(x => x.TYPESHOWNAME, "TYPESHOWNAME");
             Map(x => x.LBURL, "LBURL");
