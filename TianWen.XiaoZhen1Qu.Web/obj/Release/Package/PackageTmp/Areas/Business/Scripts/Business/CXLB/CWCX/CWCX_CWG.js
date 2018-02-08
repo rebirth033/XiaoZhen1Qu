@@ -8,12 +8,32 @@ $(document).ready(function () {
 function LoadCWCondition() {
     LoadConditionByTypeNames("'宠物狗品种','宠物狗年龄','宠物狗价格'", "CODES_CW", "品种,年龄,价格", "PZ,NL,JG", "100,100,100");
 }
+//加载URL查询条件
+function LoadURLCondition() {
+    if (getUrlParam("PZ") !== null)
+        SelectURLCondition(getUrlParam("PZ"));
+    else if (getUrlParam("JG") !== null)
+        SelectURLCondition(getUrlParam("JG"));
+    else if (getUrlParam("QY") !== null)
+        SelectURLCondition(getUrlParam("QY"));
+    else
+        LoadBody("CWXX_CWG", currentIndex);
+}
 //选择条件
 function SelectCondition(obj, name) {
     $(obj).parent().find(".li_condition_body").each(function () {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
+    LoadBody("CWXX_CWG", currentIndex);
+    ShowSelectCondition("CWXX_CWG");
+}
+//选择URL条件
+function SelectURLCondition(obj) {
+    $("#" + obj).parent().find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $("#" + obj).addClass("li_condition_body_active");
     LoadBody("CWXX_CWG", currentIndex);
     ShowSelectCondition("CWXX_CWG");
 }
@@ -33,39 +53,6 @@ function LoadCondition(array, name, id, length) {
     html += '</ul>';
     $("#div_condition_body_" + id).append(html);
     $("#li_condition_body_first_" + id).css("height", (parseInt($("#div_condition_body_" + id).css("height")) - 10));
-}
-//根据TYPENAME获取字典表(私有)
-function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAMES",
-        dataType: "json",
-        data:
-        {
-            TYPENAMES: typenames,
-            TBName: table
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                LoadDistrictCondition(xml.districts, "QY");
-                var typelist = typenames.split(',');
-                var namelist = names.split(',');
-                for (var i = 0; i < typelist.length; i++) {
-                    for (var j = 0; j < namelist.length; j++) {
-                        if (typelist[i].indexOf(namelist[j]) !== -1) {
-                            LoadCondition(_.filter(xml.list, function (value) { return typelist[i].indexOf(value.TYPENAME) !== -1; }), namelist[j], ids.split(',')[j], lengths.split(',')[j]);
-                        }
-                    }
-                }
-                SetCondition("PZ", getUrlParam("PZ"));
-                LoadBody("CWXX_CWG", currentIndex);
-                ShowSelectCondition("CWXX_CWG");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
 }
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {

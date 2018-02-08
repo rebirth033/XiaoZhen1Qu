@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadCLCondition() {
-    LoadConditionByTypeNames("'自行车车型','自行车品牌','自行车尺寸','电动车价格'", "CODES_CL", "车型,品牌,尺寸,价格", "CX,PP,CC,JG", "15,15,15,15");
+    LoadConditionByTypeNames("'自行车车型','自行车品牌','自行车尺寸','电动车价格'", "CODES_CL", "车型,品牌,尺寸,价格", "CX,PP,CC,JG", "100,100,100,100");
 }
 //加载URL查询条件
 function LoadURLCondition() {

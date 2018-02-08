@@ -1,4 +1,5 @@
 ﻿$(document).ready(function () {
+    $("#divSF").find(".div_radio").bind("click", function () { ValidateRadio("SF", ""); });
     $(".div_clys").bind("click", function () { ValidateCLYS(); });
     $("#XSLC").bind("blur", ValidateXSLC);
     $("#XSLC").bind("focus", InfoXSLC);
@@ -18,7 +19,8 @@ function ValidateSCSPSJ() {
 }
 //验证所有
 function ValidateAll() {
-    if (ValidateJCPP()
+    if (ValidateJCPP() 
+        & ValidateRadio("SF", "忘记选择身份啦") 
         & ValidateCLYS()
         & ValidateSCSPSJ()
         & ValidateBCMS("BCMS", "忘记填写详情描述啦")

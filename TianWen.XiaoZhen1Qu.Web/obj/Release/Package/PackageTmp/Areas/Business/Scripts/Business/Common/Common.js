@@ -253,3 +253,19 @@ function OpenXXXX(TYPE, ID) {
 function TruncStr(value, length) {
     return value.length > length ? (value.substr(0, length) + '...') : value;
 }
+
+//获取图片原始尺寸
+function getNaturalSize(Domlement) {
+    //alert(Domlement.naturalWidth)
+    var natureSize = {};
+    if (window.naturalWidth && window.naturalHeight) {
+        natureSize.width = Domlement.naturalWidth;
+        natureSizeheight = Domlement.naturalHeight;
+    } else {
+        var img = new Image();
+        img.src = Domlement.src;
+        natureSize.width = img.width;
+        natureSize.height = img.height;
+    }
+    return natureSize;
+}

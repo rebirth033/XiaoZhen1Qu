@@ -139,6 +139,7 @@ function OpenThird(codeid, cx) {
 //选择款式
 function SelectThird(cx, ks) {
     $("#spanPP").html(cx + " " + ks);
+    ValidateJCPP();
 }
 //关闭选择品牌框
 function CloseJCPP(count) {
@@ -409,7 +410,7 @@ function FB() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                window.location.href = getRootPath() + "/Business/FBCG/FBCG";
+                window.location.href = getRootPath() + "/Business/FBCG/FBCG?LBID=" + getUrlParam("CLICKID") + "&ID=" + xml.Value.ID + "&JCXXID=" + xml.Value.JCXXID;
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

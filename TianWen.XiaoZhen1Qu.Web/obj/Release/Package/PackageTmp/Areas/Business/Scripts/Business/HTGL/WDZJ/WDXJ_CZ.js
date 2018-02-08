@@ -102,7 +102,7 @@ function LoadDivInfo(id) {
     if (id === "divDSFPTZF") {
         var isDSFPTZFFirstLoad = true;
         $("#div_main_info_body_dsfptzf").find(".img_radio").each(function () {
-            if ($(this).attr("src") === getRootPath() + "/Areas/Business/Css/images/radio_blue.png" && this.id.indexOf("wxzf") === -1)
+            if ($(this).attr("src") === getRootPath() + "/Areas/Business/Css/images/radio_purple.png" && this.id.indexOf("wxzf") === -1)
                 isDSFPTZFFirstLoad = false;
         });
         if (isDSFPTZFFirstLoad)
@@ -114,10 +114,10 @@ function LoadDivInfo(id) {
         $("#div_main_info_body_kjzf").css("display", "none");
         $("#div_main_info_body_yhhk").css("display", "none");
     }
-    if (id === "divWYZF") {
+    if (id === "divWYZF") {//网页支付
         var isWYZFFirstLoad = true;
         $("#div_main_info_body_wyzf").find(".img_radio").each(function () {
-            if ($(this).attr("src") === getRootPath() + "/Areas/Business/Css/images/radio_blue.png" && this.id.indexOf("img_radio_wyzf_gsyh") === -1)
+            if ($(this).attr("src") === getRootPath() + "/Areas/Business/Css/images/radio_purple.png" && this.id.indexOf("img_radio_wyzf_gsyh") === -1)
                 isWYZFFirstLoad = false;
         });
         if (isWYZFFirstLoad)
@@ -129,14 +129,14 @@ function LoadDivInfo(id) {
         $("#div_main_info_body_kjzf").css("display", "none");
         $("#div_main_info_body_yhhk").css("display", "none");
     }
-    if (id === "divKJZF") {
+    if (id === "divKJZF") {//快捷支付
         var isKJZFFirstLoad = true;
         $("#div_main_info_body_kjzf").find(".img_radio").each(function () {
-            if ($(this).attr("src") === getRootPath() + "/Areas/Business/Css/images/radio_blue.png" && this.id.indexOf("img_radio_jjkkjzf_gsyh") === -1)
+            if ($(this).attr("src") === getRootPath() + "/Areas/Business/Css/images/radio_purple.png" && this.id.indexOf("img_radio_jjkkjzf_gsyh") === -1)
                 isKJZFFirstLoad = false;
         });
         if (isKJZFFirstLoad)
-        FirstLoad("kjzf");
+            FirstLoad("kjzf");
         $("#div_bottom").css("display", "block");
         $("#div_main_info_body_dsfptzf").css("display", "none");
         $("#div_main_info_body_zfbzf").css("display", "none");
@@ -144,7 +144,7 @@ function LoadDivInfo(id) {
         $("#div_main_info_body_kjzf").css("display", "block");
         $("#div_main_info_body_yhhk").css("display", "none");
     }
-    if (id === "divYHHK") {
+    if (id === "divYHHK") {//银行汇款
         $("#div_bottom").css("display", "none");
         $("#div_main_info_body_dsfptzf").css("display", "none");
         $("#div_main_info_body_zfbzf").css("display", "none");
@@ -153,7 +153,7 @@ function LoadDivInfo(id) {
         $("#div_main_info_body_yhhk").css("display", "block");
     }
 }
-
+//显示服务协议
 function ShowFWXY() {
     $(window.parent.document).find("#shadow").each(function () {
         $(this).css("width", window.parent.document.body.clientWidth);
@@ -166,17 +166,24 @@ function ShowFWXY() {
         $(this).css("top", window.screen.availHeight / 2 - 310);
     });
 }
-
+//检查服务协议
 function CheckFWXY() {
     if ($("#input_main_info_body_bottom").prop("checked") === true) {
         return true;
     }
     else {
-        alert("请仔细阅读《信息小镇现金服务协议》，并点击同意按钮");
+        window.wxc.xcConfirm("请仔细阅读《信息小镇现金服务协议》，并点击同意按钮", window.wxc.xcConfirm.typeEnum.info, {
+            onOk: function (v) {
+
+            },
+            onClose: function (v) {
+
+            }
+        });
         return false;
     }
 }
-
+//检查充值金额
 function CheckCZJE() {
     if (!ValidateCZJE($("#inputCZJE").val())) {
         $("#inputCZJE").css("border-color", "#F2272D");
@@ -205,7 +212,14 @@ function LJZFValidate() {
 
 function LJZF() {
     if (!LJZFValidate()) return;
-    alert("支付成功");
+    window.wxc.xcConfirm("支付成功", window.wxc.xcConfirm.typeEnum.success, {
+        onOk: function (v) {
+            window.location.reload();
+        },
+        onClose: function (v) {
+            window.location.reload();
+        }
+    });
 }
 
 function SelectWYZF_YH(obj) {
@@ -219,11 +233,18 @@ function SelectWYZF_YH(obj) {
         $(this).css("border", "1px solid #cccccc");
     });
     $(this).find(".img_radio").each(function () {
-        $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+        $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/radio_purple.png");
     });
-    $(this).find(".img_select").each(function () {
-        $(this).css("background-image", 'url(' + getRootPath() + '/Areas/Business/Css/images/WDZJ/wdxj_cz_zffs_select.png)');
-    });
+    if (obj.data.zffs === "dsfptzf") {
+        $(this).find(".img_select").each(function () {
+            $(this).css("background-image", 'url(' + getRootPath() + '/Areas/Business/Css/images/WDZJ/wdxj_cz_zffs_select.png)');
+        });
+    }
+    else {
+        $(this).find(".img_select").each(function () {
+            $(this).css("bottom", "17px").css("background-image", 'url(' + getRootPath() + '/Areas/Business/Css/images/WDZJ/wdxj_cz_zffs_select.png)');
+        });
+    }
     $(this).css("border", "1px solid #bc6ba6");
 }
 
@@ -232,7 +253,7 @@ function FirstLoad(zffs) {
         $("#div_main_info_body_dsfptzf").find(".img_radio").each(function () {
             $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
         });
-        $("#img_radio_wxzf").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
+        $("#img_radio_wxzf").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_purple.png");
         $("#img_select_wxzf").css("background-image", 'url(' + getRootPath() + '/Areas/Business/Css/images/WDZJ/wdxj_cz_zffs_select.png)');
         $("#div_main_info_zffs_wxzf").css("border", "1px solid #bc6ba6");
     }
@@ -240,16 +261,16 @@ function FirstLoad(zffs) {
         $("#div_main_info_body_wyzf").find(".img_radio").each(function () {
             $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
         });
-        $("#img_radio_wyzf_gsyh").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-        $("#img_select_wyzf_gsyh").css("background-image", 'url(' + getRootPath() + '/Areas/Business/Css/images/WDZJ/wdxj_cz_zffs_select.png)');
+        $("#img_radio_wyzf_gsyh").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_purple.png");
+        $("#img_select_wyzf_gsyh").css("bottom", "17px").css("background-image", 'url(' + getRootPath() + '/Areas/Business/Css/images/WDZJ/wdxj_cz_zffs_select.png)');
         $("#div_main_info_zffs_wyzf_gsyh").css("border", "1px solid #bc6ba6");
     }
     if (zffs === "kjzf") {
         $("#div_main_info_body_kjzf").find(".img_radio").each(function () {
             $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
         });
-        $("#img_radio_jjkkjzf_gsyh").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_blue.png");
-        $("#img_select_jjkkjzf_gsyh").css("background-image", 'url(' + getRootPath() + '/Areas/Business/Css/images/WDZJ/wdxj_cz_zffs_select.png)');
+        $("#img_radio_jjkkjzf_gsyh").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_purple.png");
+        $("#img_select_jjkkjzf_gsyh").css("bottom", "17px").css("background-image", 'url(' + getRootPath() + '/Areas/Business/Css/images/WDZJ/wdxj_cz_zffs_select.png)');
         $("#div_main_info_zffs_jjkkjzf_gsyh").css("border", "1px solid #bc6ba6");
     }
 }

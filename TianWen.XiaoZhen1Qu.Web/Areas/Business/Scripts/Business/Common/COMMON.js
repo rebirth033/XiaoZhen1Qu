@@ -256,6 +256,7 @@ function TruncStr(value, length) {
 
 //获取图片原始尺寸
 function getNaturalSize(Domlement) {
+    //alert(Domlement.naturalWidth)
     var natureSize = {};
     if (window.naturalWidth && window.naturalHeight) {
         natureSize.width = Domlement.naturalWidth;

@@ -6,7 +6,7 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LX") {
-            LoadCODESByTYPENAME("婚庆用品类型", "LX", "CODES_HQSY", Bind, "OUTLB", "LX", "");
+            LoadCODESByTYPENAME("婚庆用品类别", "LX", "CODES_HQSY", Bind, "OUTLB", "LX", "");
         }
         if (type === "XL") {
             LoadXL();
@@ -109,7 +109,7 @@ function FB() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                window.location.href = getRootPath() + "/Business/FBCG/FBCG";
+                window.location.href = getRootPath() + "/Business/FBCG/FBCG?LBID=" + getUrlParam("CLICKID") + "&ID=" + xml.Value.ID + "&JCXXID=" + xml.Value.JCXXID;
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

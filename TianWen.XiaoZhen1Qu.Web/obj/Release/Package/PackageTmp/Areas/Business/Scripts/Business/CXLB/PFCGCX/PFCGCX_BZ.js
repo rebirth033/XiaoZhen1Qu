@@ -6,12 +6,14 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadPFCGCondition() {
-    LoadConditionByTypeNames("'包装类别','包装用途'", "CODES_PFCG", "类别,用途", "LB,YT", "100,100");
+    LoadConditionByTypeNames("'包装材料','包装用途'", "CODES_PFCG", "材料,用途", "LB,YT", "100,100");
 }
 //加载URL查询条件
 function LoadURLCondition() {
-    if (getUrlParam("LB") !== null)
+    if (getUrlParam("LB") !== null) {
         SelectURLCondition(getUrlParam("LB"));
+        LoadConditionByParentID(getUrlParam("LB"), "CODES_PFCG", "小类", "XL");
+    }
     else if (getUrlParam("QY") !== null)
         SelectURLCondition(getUrlParam("QY"));
     else

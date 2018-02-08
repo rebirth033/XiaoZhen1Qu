@@ -4,6 +4,7 @@ $(document).ready(function () {
     $(".li_condition_head:eq(0)").each(function () { $(this).css("background-color", "#ffffff").css("color", "#bc6ba6"); });
     BindBodyNav();
     LoadCZCondition();
+    LoadHot("FCXX_XZL");
 });
 //绑定查询条件导航
 function BindConditionNav() {
@@ -66,11 +67,10 @@ function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
 function LoadURLCondition() {
     if (getUrlParam("MJ") !== null)
         SelectURLCondition(getUrlParam("MJ"));
+    else if (getUrlParam("XZLLX") !== null)
+        SelectURLCondition(getUrlParam("XZLLX"));
     else
-    {
         LoadBody("FCXX_XZL", currentIndex);
-    }
-    LoadHot("FCXX_XZL");
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -147,6 +147,7 @@ function LoadCZInfo(obj) {
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
     html += ('<p class="p_li_body_left_right">' + GetJG(obj.ZJ, "元/月") + '</p>');
+    html += ('<p class="p_li_body_left_right">' + GetCalcJG(obj.ZJ,obj.MJ, "元/㎡/月") + '</p>');
     html += ('</div>');
     html += ('</li>');
     $("#ul_body_left").append(html);
@@ -166,6 +167,7 @@ function LoadCSInfo(obj) {
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
     html += ('<p class="p_li_body_left_right">' + GetJG(obj.SJ, "万元") + '</p>');
+    html += ('<p class="p_li_body_left_right">' + GetCalcJG(obj.SJ, obj.MJ, "元/㎡") + '</p>');
     html += ('</div>');
     html += ('</li>');
     $("#ul_body_left").append(html);

@@ -3,21 +3,29 @@
 }
 @section Section_Head {
     <link href=@Url.Content("~/Areas/Business/Scripts/bootstrap-3.3.7/css/bootstrap.min.css") rel="stylesheet" />
-    <link href=@Url.Content("~/Areas/Business/Css/Common/PageCommon.css") rel="stylesheet" />
-    <link href="@Url.Content("~/Areas/Business/Css/Common/Top.css" )" rel="stylesheet" />
-    <link href="@Url.Content("~/Areas/Business/Css/Common/XZQ.css")" rel="stylesheet" />
-    <link href="@Url.Content("~/Areas/Business/Css/Common/Head.css" )" rel="stylesheet" />
     <script src=@Url.Content("~/Areas/Business/Scripts/bootstrap-3.3.7/js/bootstrap.min.js")></script>
+
+    <link href=@Url.Content("~/Areas/Business/Scripts/xcConfirm/css/xcConfirm.css") rel="stylesheet" />
+    <script src=@Url.Content("~/Areas/Business/Scripts/xcConfirm/js/xcConfirm.js")></script>
+
     <script src=@Url.Content("~/Areas/Business/Scripts/underscore.min.js")></script>
+    <link href=@Url.Content("~/Areas/Business/Css/Common/PageCommon.css") rel="stylesheet"/>
+
+    <link href="@Url.Content("~/Areas/Business/Css/Common/Top.css")" rel="stylesheet" />
+    <script src="@Url.Content("~/Areas/Business/Scripts/Business/Common/Top.js")"></script>
+
+    <link href="@Url.Content("~/Areas/Business/Css/Common/XZQ.css")" rel="stylesheet" />
+    <script src="@Url.Content("~/Areas/Business/Scripts/Business/Common/XZQ.js")"></script>
+
+    <link href="@Url.Content("~/Areas/Business/Css/Common/Head.css")" rel="stylesheet"/>
+    <script src="@Url.Content("~/Areas/Business/Scripts/Business/Common/Head.js")"></script>
+
     <script src=@Url.Content("~/Areas/Business/Scripts/Business/Common/Common.js")></script>
     <script src=@Url.Content("~/Areas/Business/Scripts/Business/Common/Regular.js")></script>
     <script src=@Url.Content("~/Areas/Business/Scripts/Business/Common/PageJson.js")></script>
-    <script src="@Url.Content("~/Areas/Business/Scripts/Business/Common/XZQ.js")"></script>
-    <script src="@Url.Content("~/Areas/Business/Scripts/Business/Common/Top.js")"></script>
-    <script src="@Url.Content("~/Areas/Business/Scripts/Business/Common/Head.js")"></script>
     <script src=@Url.Content("~/Areas/Business/Scripts/Business/Common/CXLB_Common.js")></script>
+    <script src=@Url.Content("~/Areas/Business/Scripts/Business/Common/SS_Common.js")></script>
     @RenderSection("Section_Head", false)
-
 }
 @section Section_Body {
     <div id="divTop" class="div_top">
@@ -40,7 +48,7 @@
             </span>
             <span class="span_top_right_split"></span>
             <span id="span_grzx" class="span_top_right">
-                我的小镇
+                个人中心
             </span>
             <span class="span_top_right_split"></span>
             <span id="span_bzzx" class="span_top_right">
@@ -55,11 +63,33 @@
         <div class="div_head_right">
             <div class="div_head_right_ss">
                 <span id="spanXSLC" class="span_spaninput_out SRK">
-                    <input class="span_spaninput_in" id="SS" type="text" placeholder="搜索 房子/车子/工作/服务" />
-                    <span class="span_ss">搜索</span>
+                    <input id="SS" class="form-control span_spaninput_in" type="text" placeholder="搜索 房子/车子/工作/服务" />
+                    <input type="hidden" id="LBID" />
+                    <input type="hidden" id="URL" />
+                    <input type="hidden" id="CONDITION" />
+                    <span id="span_ss" class="span_ss">搜索</span>
                 </span>
+                <div id="divSSJGlist" class="div_select_dropdown"></div>
             </div>
             <span class="span_fbxx" id="span_fbxx">免费发布信息</span>
+        </div>
+    </div>
+    <div id="divHideHead" class="div_head_hide">
+        <div class="div_head_hide_left">
+            <span class="img_head_hide_logo">信息小镇</span>
+        </div>
+        <div class="div_head_hide_right">
+            <div class="div_head_hide_right_ss">
+                <span id="spanHideXSLC" class="span_spaninput_out SRK">
+                    <input id="HideSS" class="form-control span_spaninput_in" type="text" placeholder="搜索 房子/车子/工作/服务" />
+                    <input type="hidden" id="HideLBID" />
+                    <input type="hidden" id="HideURL" />
+                    <input type="hidden" id="HideCONDITION" />
+                    <span id="span_hide_ss" class="span_ss">搜索</span>
+                </span>
+                <div id="divHideSSJGlist" class="div_select_dropdown" style="top: 0; border-top: 1px solid #bc6ba6"></div>
+            </div>
+            <span class="span_fbxx" id="span_hide_fbxx">免费发布信息</span>
         </div>
     </div>
     @RenderSection("Section_Body", false)

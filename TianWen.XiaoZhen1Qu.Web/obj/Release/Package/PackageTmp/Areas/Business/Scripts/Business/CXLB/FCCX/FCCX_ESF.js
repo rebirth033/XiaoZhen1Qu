@@ -19,7 +19,7 @@ function LoadHeadSearch() {
 }
 //加载房产查询条件
 function LoadFCCondition() {
-    LoadConditionByTypeNames("'二手房售价','二手房面积','厅室','朝向','住宅类型','装修情况','出售房屋亮点'", "CODES_FC", "售价,面积,厅室,朝向,住宅类型,装修情况,房屋亮点", "SJ,PFM,S,CX,ZZLX,ZXQK,FWLD", "15,15,15,15,15,15,15");
+    LoadConditionByTypeNames("'二手房售价','二手房面积','厅室','朝向','住宅类型','装修情况','出售房屋亮点'", "CODES_FC", "售价,面积,厅室,朝向,住宅类型,装修情况,房屋亮点", "SJ,PFM,S,CX,ZZLX,ZXQK,FWLD", "100,100,100,100,15,15,15");
 }
 //根据TYPENAME获取字典表
 function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
@@ -58,6 +58,8 @@ function LoadURLCondition() {
         SelectURLCondition(getUrlParam("FWLD"));
     else if (getUrlParam("SJ") !== null)
         SelectURLCondition(getUrlParam("SJ"));
+    else if (getUrlParam("ZZLX") !== null)
+        SelectURLCondition(getUrlParam("ZZLX"));
     else if (getUrlParam("QY") !== null)
         SelectURLCondition(getUrlParam("QY"));
     else

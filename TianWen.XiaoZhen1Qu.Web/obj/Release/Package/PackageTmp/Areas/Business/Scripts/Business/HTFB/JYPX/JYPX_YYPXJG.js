@@ -89,7 +89,7 @@ function LoadDuoX(type, id) {
                 if (type === "专项")
                     LoadDuoX("级别", "JB");
                 if (type === "级别")
-                    LoadJBXX();
+                    LoadFWFW();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -101,7 +101,7 @@ function LoadDuoX(type, id) {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "YZ") {
-            LoadCODESByTYPENAME("语种", "YZ", "CODES_JYPX");
+            LoadCODESByTYPENAME("语种", "YZ", "CODES_JYPX", Bind, "YYPXYZ", "YZ", "");
         }
     });
 }
@@ -166,7 +166,7 @@ function FB() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                window.location.href = getRootPath() + "/Business/FBCG/FBCG";
+                window.location.href = getRootPath() + "/Business/FBCG/FBCG?LBID=" + getUrlParam("CLICKID") + "&ID=" + xml.Value.ID + "&JCXXID=" + xml.Value.JCXXID;
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

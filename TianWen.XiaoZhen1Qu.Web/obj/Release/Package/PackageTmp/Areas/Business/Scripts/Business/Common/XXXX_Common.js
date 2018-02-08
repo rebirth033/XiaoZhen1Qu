@@ -58,9 +58,6 @@ function LoadGRXX(grxx) {
     html += ('<p class="p_div_body_right_yhm">' + grxx.YHM + '</p>');
     html += ('<p class="p_div_body_right_zcsj">注册时间：' + grxx.SQRQ.ToString("yyyy年MM月dd日") + '</p>');
     html += ('<div class="div_div_body_right_yyzz">');
-    html += ('<div class="div_div_div_body_right_yyzz"><i class="i_div_div_body_right_yyzz_sfz"></i><span>身份证</span></div>');
-    html += ('<div class="div_div_div_body_right_yyzz"><i class="i_div_div_body_right_yyzz_yyzz"></i><span>营业执照</span></div>');
-    html += ('<div class="div_div_div_body_right_yyzz"><i class="i_div_div_body_right_yyzz_zmxy"></i><span>芝麻信用</span></div>');
     html += ('</div>');
     html += ('<div class="div_div_body_right_ckxy">查看TA的信用记录</div>');
     html += ('</div>');
@@ -73,6 +70,19 @@ function HandlerTPXX() {
         $("#img_body_left_body_left_show").attr("src", $(this).find("img")[0].src);
         $(".div_img_body_left_body_left_list_tp").css("background-color", "rgba(0,0,0,0.5)");
         $(this).find(".div_img_body_left_body_left_list_tp").css("background-color", "rgba(0,0,0,0)");
+    });
+    if ($("#img_body_left_body_left_show").length > 0) {
+        var img = new Image();
+        img.src = $("#img_body_left_body_left_show").attr("src");
+        $("#img_body_left_body_left_show").css("width", ((img.width || img.width === 0) > 460 ? 460 : img.width));
+        $("#img_body_left_body_left_show").css("height", ((img.height || img.height === 0) > 350 ? 350 : img.height));
+    }
+
+    $(".img_body_left_body_xq_xx").each(function () {
+        var img = new Image();
+        img.src = $("#" + this.id).attr("src");
+        $("#" + this.id).css("width", ((img.width > 405 || img.width === 0) ? 405 : img.width));
+        $("#" + this.id).css("height", ((img.height > 350 || img.height === 0) ? 350 : img.height));
     });
 }
 //图片左侧切换
@@ -184,7 +194,7 @@ function SCXX(jcxxid) {
             },
             success: function (xml) {
                 if (xml.Result === 1) {
-                    alert("已添加到我的收藏");
+                    window.wxc.xcConfirm("已添加到我的收藏", window.wxc.xcConfirm.typeEnum.success);
                 }
             },
             error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

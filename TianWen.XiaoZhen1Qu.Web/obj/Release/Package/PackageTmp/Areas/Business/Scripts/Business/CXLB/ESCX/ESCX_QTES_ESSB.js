@@ -6,8 +6,18 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadESCondition() {
-    LoadConditionByTypeNames("'二手设备类别','其它二手价格'", "CODES_ES_QTES", "类别,价格", "LB,JG", "100,100");
-    LoadBody("ESXX_QTES_ESSB", currentIndex);
+    LoadConditionByTypeNames("'二手设备类别','其他二手价格'", "CODES_ES_QTES", "类别,价格", "LB,JG", "100,100");
+}
+//加载URL查询条件
+function LoadURLCondition() {
+    if (getUrlParam("LB") !== null) {
+        SelectURLCondition(getUrlParam("LB"));
+        LoadConditionByParentID(getUrlParam("LB"), "CODES_ES_QTES", "小类", "XL");
+    }
+    else if (getUrlParam("QY") !== null)
+        SelectURLCondition(getUrlParam("QY"));
+    else
+        LoadBody("ESXX_QTES_ESSB", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -21,6 +31,15 @@ function SelectCondition(obj, name) {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
+    LoadBody("ESXX_QTES_ESSB", currentIndex);
+    ShowSelectCondition("ESXX_QTES_ESSB");
+}
+//选择URL条件
+function SelectURLCondition(obj) {
+    $("#" + obj).parent().find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $("#" + obj).addClass("li_condition_body_active");
     LoadBody("ESXX_QTES_ESSB", currentIndex);
     ShowSelectCondition("ESXX_QTES_ESSB");
 }
@@ -104,7 +123,7 @@ function LoadHotInfo(obj) {
     html += ('<li onclick="OpenXXXX(\'ESXX_QTES_ESSB\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_right_xq">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_right_jg">' + GetJG(obj.JG,'元')+'</p>');
+    html += ('<p class="p_li_body_right_jg">' + GetJG(obj.JG, '元') + '</p>');
     html += ('</li>');
     $("#ul_body_right").append(html);
 }

@@ -17,20 +17,17 @@ function BindClick(type) {
         if (type === "GZNX") {
             LoadCODESByTYPENAME("工作年限", "GZNX", "CODES_QZZP", Bind, "ZPGZNX", "GZNX", "");
         }
-        if (type === "LB") {
-            LoadCODESByTYPENAME($("#spanLBXZ").html().replace("1.", ""), "LB", "CODES_QZZP", Bind, "OUTLB", "LB", "");
-        }
     });
 }
 //加载职位名称
 function LoadZWMC() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
+        url: getRootPath() + "/Business/Common/LoadChildByCODENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: $("#spanLBXZ").html().replace("1.", ""),
+            CODENAME: $("#spanLBXZ").html().replace("1.", ""),
             TBName: "CODES_QZZP"
         },
         success: function (xml) {
@@ -235,7 +232,7 @@ function FB() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                window.location.href = getRootPath() + "/Business/FBCG/FBCG";
+                window.location.href = getRootPath() + "/Business/FBCG/FBCG?LBID=" + getUrlParam("CLICKID") + "&ID=" + xml.Value.ID + "&JCXXID=" + xml.Value.JCXXID;
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

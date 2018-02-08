@@ -8,9 +8,9 @@ function ValidateAll() {
     if (ValidateRadio("GQ", "忘记选择供求啦")
         & ValidateSelect("MPKQLB", "LB", "忘记选择类别啦")
         & ValidateCheck("PSFS", "忘记选择配送方式啦")
-        & ValidateYXQZ()
+        //& ValidateYXQZ()
         & ValidateJG()
-        & ValidateSZQY()
+        & ValidateXXDZ()
         & ValidateBCMS("BCMS", "忘记填写详情描述啦")
          & ValidateInput("BT", "标题") & ValidateInput("LXR", "联系人") & ValidateInput("LXDH", "联系电话"))
         return true;

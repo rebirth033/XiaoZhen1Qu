@@ -62,7 +62,7 @@ function LoadJBXX(obj) {
     html += ('</div>');
     html += ('</div>');
     $("#div_body_left").append(html);
-    HandlerTPXX();
+
 }
 //加载详情
 function LoadXQ(obj, BCMSString) {

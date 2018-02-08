@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadHQSYCondition() {
-    LoadConditionByTypeNames("'司仪价格范围','司仪性别','司仪主持风格','司仪从业时间'", "CODES_HQSY", "价格范围,司仪性别,主持风格,从业时间", "JG,SYXB,ZCFG,CYSJ", "15,15,15,15");
+    LoadConditionByTypeNames("'司仪价格范围','司仪性别','司仪主持风格','司仪从业时间'", "CODES_HQSY", "价格范围,司仪性别,主持风格,从业时间", "JG,SYXB,ZCFG,CYSJ", "100,100,100,100");
     LoadBody("HQSYXX_SY", currentIndex);
 }
 //选择条件

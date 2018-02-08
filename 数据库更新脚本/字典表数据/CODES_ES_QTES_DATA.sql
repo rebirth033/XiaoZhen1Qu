@@ -1,0 +1,385 @@
+prompt Importing table codes_es_qtes...
+set feedback off
+set define off
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1, '二手设备类别', '机床车床', '1', 1, null, 170, 'LB=1', 'ji chuang che chuang ', 'jichuangchechuang', 'jccc');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (2, '二手设备类别', '食品加工机械', '2', 2, null, 170, 'LB=2', 'shi pin jia gong ji xie ', 'shipinjiagongjixie', 'spjgjx');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (3, '二手设备类别', '印刷设备', '3', 3, null, 170, 'LB=3', 'yin shua she bei ', 'yinshuashebei', 'yssb');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (4, '二手设备类别', '发电设备', '4', 4, null, 170, 'LB=4', 'fa dian she bei ', 'fadianshebei', 'fdsb');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (5, '二手设备类别', '塑料设备', '5', 5, null, 170, 'LB=5', 'su liao she bei ', 'suliaoshebei', 'slsb');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (6, '二手设备类别', '配件', '6', 6, null, 170, 'LB=6', 'pei jian ', 'peijian', 'pj');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (7, '二手设备类别', '木工', '7', 7, null, 170, 'LB=7', 'mu gong ', 'mugong', 'mg');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (8, '二手设备类别', '化工设备', '8', 8, null, 170, 'LB=8', 'hua gong she bei ', 'huagongshebei', 'hgsb');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (9, '二手设备类别', '仪器仪表', '9', 9, null, 170, 'LB=9', 'yi qi yi biao ', 'yiqiyibiao', 'yqyb');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (10, '二手设备类别', '纺织', '10', 10, null, 170, 'LB=10', 'fang zhi ', 'fangzhi', 'fz');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (11, '二手设备类别', '农用机械', '11', 11, null, 170, 'LB=11', 'nong yong ji xie ', 'nongyongjixie', 'nyjx');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (12, '二手设备类别', '其他', '13', 13, null, 170, 'LB=12', 'qi ta ', 'qita', 'qt');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (13, '二手设备类别', '生产线', '12', 12, null, 170, 'LB=13', 'sheng chan xian ', 'shengchanxian', 'scx');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (15, '机床车床', '雕刻机', '1', 1, 1, 170, 'LB=1&XL=15', 'diao ke ji ', 'diaokeji', 'dkj');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (16, '机床车床', '机床', '2', 2, 1, 170, 'LB=1&XL=16', 'ji chuang ', 'jichuang', 'jc');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (17, '机床车床', '加工中心', '3', 3, 1, 170, 'LB=1&XL=17', 'jia gong zhong xin ', 'jiagongzhongxin', 'jgzx');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (18, '机床车床', '冲床', '4', 4, 1, 170, 'LB=1&XL=18', 'chong chuang ', 'chongchuang', 'cc');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (19, '机床车床', '车床', '5', 5, 1, 170, 'LB=1&XL=19', 'che chuang ', 'chechuang', 'cc');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (20, '机床车床', '剪板机', '6', 6, 1, 170, 'LB=1&XL=20', 'jian ban ji ', 'jianbanji', 'jbj');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (21, '机床车床', '折弯机', '7', 7, 1, 170, 'LB=1&XL=21', 'zhe wan ji ', 'zhewanji', 'zwj');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (22, '机床车床', '磨床', '8', 8, 1, 170, 'LB=1&XL=22', 'mo chuang ', 'mochuang', 'mc');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (23, '机床车床', '铣床', '9', 9, 1, 170, 'LB=1&XL=23', 'xi chuang ', 'xichuang', 'xc');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (24, '机床车床', '其他机床设备', '10', 10, 1, 170, 'LB=1&XL=24', 'qi ta ji chuang she bei ', 'qitajichuangshebei', 'qtjcsb');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (25, '食品加工机械', '厨房设备', '1', 1, 2, 170, 'LB=2&XL=25', 'chu fang she bei ', 'chufangshebei', 'cfsb');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (26, '食品加工机械', '酒店设备', '2', 2, 2, 170, 'LB=2&XL=26', 'jiu dian she bei ', 'jiudianshebei', 'jdsb');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (27, '食品加工机械', '小吃车', '3', 3, 2, 170, 'LB=2&XL=27', 'xiao chi che ', 'xiaochiche', 'xcc');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (28, '食品加工机械', '冷冻设备', '4', 4, 2, 170, 'LB=2&XL=28', 'leng dong she bei ', 'lengdongshebei', 'ldsb');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (29, '食品加工机械', '切片机', '5', 5, 2, 170, 'LB=2&XL=29', 'qie pian ji ', 'qiepianji', 'qpj');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (30, '食品加工机械', '油炸设备', '6', 6, 2, 170, 'LB=2&XL=30', 'you zha she bei ', 'youzhashebei', 'yzsb');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (31, '食品加工机械', '饮料加工设备', '7', 7, 2, 170, 'LB=2&XL=31', 'yin liao jia gong she bei ', 'yinliaojiagongshebei', 'yljgsb');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (32, '食品加工机械', '烘焙设备', '8', 8, 2, 170, 'LB=2&XL=32', 'hong bei she bei ', 'hongbeishebei', 'hbsb');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (33, '食品加工机械', '食品搅拌设备', '9', 9, 2, 170, 'LB=2&XL=33', 'shi pin jiao ban she bei ', 'shipinjiaobanshebei', 'spjbsb');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (34, '食品加工机械', '肉加工设备', '10', 10, 2, 170, 'LB=2&XL=34', 'rou jia gong she bei ', 'roujiagongshebei', 'rjgsb');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (35, '食品加工机械', '果蔬加工设备', '11', 11, 2, 170, 'LB=2&XL=35', 'guo shu jia gong she bei ', 'guoshujiagongshebei', 'gsjgsb');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (36, '食品加工机械', '其他食品加工机械', '12', 12, 2, 170, 'LB=2&XL=36', 'qi ta shi pin jia gong ji xie ', 'qitashipinjiagongjixie', 'qtspjgjx');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (37, '印刷设备', '写真机', '1', 1, 3, 170, 'LB=3&XL=37', 'xie zhen ji ', 'xiezhenji', 'xzj');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (38, '印刷设备', '激光打标机', '2', 2, 3, 170, 'LB=3&XL=38', 'ji guang da biao ji ', 'jiguangdabiaoji', 'jgdbj');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (39, '印刷设备', '印刷机', '3', 3, 3, 170, 'LB=3&XL=39', 'yin shua ji ', 'yinshuaji', 'ysj');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (40, '印刷设备', '激光切割机', '4', 4, 3, 170, 'LB=3&XL=40', 'ji guang qie ge ji ', 'jiguangqiegeji', 'jgqgj');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (41, '印刷设备', '其他印刷设备', '5', 5, 3, 170, 'LB=3&XL=41', 'qi ta yin shua she bei ', 'qitayinshuashebei', 'qtyssb');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (42, '发电设备', '发电机', '1', 1, 4, 170, 'LB=4&XL=42', 'fa dian ji ', 'fadianji', 'fdj');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (43, '发电设备', '空压机', '2', 2, 4, 170, 'LB=4&XL=43', 'kong ya ji ', 'kongyaji', 'kyj');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (44, '发电设备', '风力发电设备', '3', 3, 4, 170, 'LB=4&XL=44', 'feng li fa dian she bei ', 'fenglifadianshebei', 'flfdsb');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (45, '发电设备', '柴油发电设备', '4', 4, 4, 170, 'LB=4&XL=45', 'chai you fa dian she bei ', 'chaiyoufadianshebei', 'cyfdsb');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (46, '发电设备', '汽油发电设备', '5', 5, 4, 170, 'LB=4&XL=46', 'qi you fa dian she bei ', 'qiyoufadianshebei', 'qyfdsb');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (47, '发电设备', '发电机组', '6', 6, 4, 170, 'LB=4&XL=47', 'fa dian ji zu ', 'fadianjizu', 'fdjz');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (48, '发电设备', '变压器', '7', 7, 4, 170, 'LB=4&XL=48', 'bian ya qi ', 'bianyaqi', 'byq');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (49, '发电设备', '其他发电设备', '8', 8, 4, 170, 'LB=4&XL=49', 'qi ta fa dian she bei ', 'qitafadianshebei', 'qtfdsb');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (50, '塑料设备', '注塑机', '1', 1, 5, 170, 'LB=5&XL=50', 'zhu su ji ', 'zhusuji', 'zsj');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (51, '塑料设备', '粉碎机', '2', 2, 5, 170, 'LB=5&XL=51', 'fen sui ji ', 'fensuiji', 'fsj');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (52, '塑料设备', '封口机', '3', 3, 5, 170, 'LB=5&XL=52', 'feng kou ji ', 'fengkouji', 'fkj');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (53, '塑料设备', '成型机', '4', 4, 5, 170, 'LB=5&XL=53', 'cheng xing ji ', 'chengxingji', 'cxj');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (54, '塑料设备', '焊机', '5', 5, 5, 170, 'LB=5&XL=54', 'han ji ', 'hanji', 'hj');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (55, '塑料设备', '其他塑料设备', '6', 6, 5, 170, 'LB=5&XL=55', 'qi ta su liao she bei ', 'qitasuliaoshebei', 'qtslsb');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (56, '配件', '机床配件', '1', 1, 6, 170, 'LB=6&XL=56', 'ji chuang pei jian ', 'jichuangpeijian', 'jcpj');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (57, '配件', '挖机配件', '2', 2, 6, 170, 'LB=6&XL=57', 'wa ji pei jian ', 'wajipeijian', 'wjpj');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (58, '配件', '叉车配件', '3', 3, 6, 170, 'LB=6&XL=58', 'cha che pei jian ', 'chachepeijian', 'ccpj');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (59, '配件', '装载机配件', '4', 4, 6, 170, 'LB=6&XL=59', 'zhuang zai ji pei jian ', 'zhuangzaijipeijian', 'zzjpj');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (60, '配件', '其他配件', '5', 5, 6, 170, 'LB=6&XL=60', 'qi ta pei jian ', 'qitapeijian', 'qtpj');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (61, '木工', '木工生产线', '1', 1, 7, 170, 'LB=7&XL=61', 'mu gong sheng chan xian ', 'mugongshengchanxian', 'mgscx');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (62, '木工', '抛光机', '2', 2, 7, 170, 'LB=7&XL=62', 'pao guang ji ', 'paoguangji', 'pgj');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (63, '木工', '封边机', '3', 3, 7, 170, 'LB=7&XL=63', 'feng bian ji ', 'fengbianji', 'fbj');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (64, '化工设备', '离心机', '1', 1, 8, 170, 'LB=8&XL=64', 'li xin ji ', 'lixinji', 'lxj');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (65, '化工设备', '反应釜', '2', 2, 8, 170, 'LB=8&XL=65', 'fan ying fu ', 'fanyingfu', 'fyf');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (66, '化工设备', '干燥机', '3', 3, 8, 170, 'LB=8&XL=66', 'gan zao ji ', 'ganzaoji', 'gzj');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (67, '化工设备', '搅拌机', '4', 4, 8, 170, 'LB=8&XL=67', 'jiao ban ji ', 'jiaobanji', 'jbj');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (68, '化工设备', '过滤器', '5', 5, 8, 170, 'LB=8&XL=68', 'guo lv qi ', 'guolvqi', 'glq');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (69, '化工设备', '其他化工设备', '6', 6, 8, 170, 'LB=8&XL=69', 'qi ta hua gong she bei ', 'qitahuagongshebei', 'qthgsb');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (70, '仪器仪表', '分析仪', '1', 1, 9, 170, 'LB=9&XL=70', 'fen xi yi ', 'fenxiyi', 'fxy');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (71, '仪器仪表', '检测仪', '2', 2, 9, 170, 'LB=9&XL=71', 'jian ce yi ', 'jianceyi', 'jcy');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (72, '仪器仪表', '地磅', '3', 3, 9, 170, 'LB=9&XL=72', 'di bang ', 'dibang', 'db');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (73, '仪器仪表', '其他仪表设备', '4', 4, 9, 170, 'LB=9&XL=73', 'qi ta yi biao she bei ', 'qitayibiaoshebei', 'qtybsb');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (74, '农用机械', '玉米加工', '1', 1, 11, 170, 'LB=11&XL=74', 'yu mi jia gong ', 'yumijiagong', 'ymjg');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (75, '农用机械', '打包机', '2', 2, 11, 170, 'LB=11&XL=75', 'da bao ji ', 'dabaoji', 'dbj');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (76, '农用机械', '收割机', '3', 3, 11, 170, 'LB=11&XL=76', 'shou ge ji ', 'shougeji', 'sgj');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (77, '农用机械', '其他农用机械', '4', 4, 11, 170, 'LB=11&XL=77', 'qi ta nong yong ji xie ', 'qitanongyongjixie', 'qtnyjx');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (78, '生产线', '工作台', '1', 1, 13, 170, 'LB=13&XL=78', 'gong zuo tai ', 'gongzuotai', 'gzt');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (79, '生产线', '货架', '2', 2, 13, 170, 'LB=13&XL=79', 'huo jia ', 'huojia', 'hj');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (80, '生产线', '其它生产线', '3', 3, 13, 170, 'LB=13&XL=80', 'qi ta sheng chan xian ', 'qitashengchanxian', 'qtscx');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (81, '成人用品类别', '男用器具', '1', 1, null, null, 'LB=81', 'nan yong qi ju ', 'nanyongqiju', 'nyqj');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (82, '成人用品类别', '女用器具', '2', 2, null, null, 'LB=82', 'nv yong qi ju ', 'nvyongqiju', 'nyqj');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (83, '成人用品类别', '情趣用品', '3', 3, null, null, 'LB=83', 'qing qu yong pin ', 'qingquyongpin', 'qqyp');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (84, '成人用品类别', '情趣内衣', '4', 4, null, null, 'LB=84', 'qing qu nei yi ', 'qingquneiyi', 'qqny');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (85, '成人用品类别', '润滑剂', '5', 5, null, null, 'LB=85', 'run hua ji ', 'runhuaji', 'rhj');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (86, '成人用品类别', '计生用品', '6', 6, null, null, 'LB=86', 'ji sheng yong pin ', 'jishengyongpin', 'jsyp');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (87, '成人用品类别', '安全套', '7', 7, null, null, 'LB=87', 'an quan tao ', 'anquantao', 'aqt');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (88, '成人用品类别', '其他成人用品', '8', 8, null, null, 'LB=88', 'qi ta cheng ren yong pin ', 'qitachengrenyongpin', 'qtcryp');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (89, '男用器具', '阴臀倒模', '1', 1, 81, null, 'LB=81&XL=89', 'yin tun dao mo ', 'yintundaomo', 'ytdm');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (90, '男用器具', '性玩偶', '2', 2, 81, null, 'LB=81&XL=90', 'xing wan ou ', 'xingwanou', 'xwo');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (91, '男用器具', '简单便携', '3', 3, 81, null, 'LB=81&XL=91', 'jian dan bian xie ', 'jiandanbianxie', 'jdbx');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (92, '男用器具', '男用穿戴', '4', 4, 81, null, 'LB=81&XL=92', 'nan yong chuan dai ', 'nanyongchuandai', 'nycd');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (93, '男用器具', '仿真乳房', '5', 5, 81, null, 'LB=81&XL=93', 'fang zhen ru fang ', 'fangzhenrufang', 'fzrf');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (94, '男用器具', '充气娃娃', '6', 6, 81, null, 'LB=81&XL=94', 'chong qi wa wa ', 'chongqiwawa', 'cqww');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (95, '男用器具', '飞机杯', '7', 7, 81, null, 'LB=81&XL=95', 'fei ji bei ', 'feijibei', 'fjb');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (96, '男用器具', '延时用品', '8', 8, 81, null, 'LB=81&XL=96', 'yan shi yong pin ', 'yanshiyongpin', 'ysyp');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (97, '男用器具', '其他', '9', 9, 81, null, 'LB=81&XL=97', 'qi ta ', 'qita', 'qt');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (98, '女用器具', '震动棒', '1', 1, 82, null, 'LB=82&XL=98', 'zhen dong bang ', 'zhendongbang', 'zdb');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (99, '女用器具', '阴蒂刺激', '2', 2, 82, null, 'LB=82&XL=99', 'yin di ci ji ', 'yindiciji', 'ydcj');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (100, '女用器具', 'G点后庭', '3', 3, 82, null, 'LB=82&XL=100', 'Gdian hou ting ', 'Gdianhouting', 'Ght');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (101, '女用器具', '女用穿戴', '4', 4, 82, null, 'LB=82&XL=101', 'nv yong chuan dai ', 'nvyongchuandai', 'nycd');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (102, '女用器具', '丰乳挑逗', '5', 5, 82, null, 'LB=82&XL=102', 'feng ru tiao dong ', 'fengrutiaodong', 'frtd');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (103, '女用器具', '跳蛋', '6', 6, 82, null, 'LB=82&XL=103', 'tiao dan ', 'tiaodan', 'td');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (104, '女用器具', '其他', '7', 7, 82, null, 'LB=82&XL=104', 'qi ta ', 'qita', 'qt');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (105, '情趣用品', '激情用具', '1', 1, 83, null, 'LB=83&XL=105', 'ji qing yong ju ', 'jiqingyongju', 'jqyj');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (106, '情趣用品', '情趣跳蛋', '2', 2, 83, null, 'LB=83&XL=106', 'qing qu tiao dan ', 'qingqutiaodan', 'qqtd');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (107, '情趣用品', '另类玩具', '3', 3, 83, null, 'LB=83&XL=107', 'ling lei wan ju ', 'lingleiwanju', 'llwj');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (108, '情趣用品', '延时套环', '4', 4, 83, null, 'LB=83&XL=108', 'yan shi tao huan ', 'yanshitaohuan', 'ysth');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (109, '情趣用品', '催情香水', '5', 5, 83, null, 'LB=83&XL=109', 'cui qing xiang shui ', 'cuiqingxiangshui', 'cqxs');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (110, '情趣用品', '其他', '6', 6, 83, null, 'LB=83&XL=110', 'qi ta ', 'qita', 'qt');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (111, '情趣内衣', '制服诱惑', '1', 1, 84, null, 'LB=84&XL=111', 'zhi fu you huo ', 'zhifuyouhuo', 'zfyh');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (112, '情趣内衣', '丁字裤', '2', 2, 84, null, 'LB=84&XL=112', 'ding zi ku ', 'dingziku', 'dzk');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (113, '情趣内衣', '丝袜美腿', '3', 3, 84, null, 'LB=84&XL=113', 'si wa mei tui ', 'siwameitui', 'swmt');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (114, '情趣内衣', '男士内衣', '4', 4, 84, null, 'LB=84&XL=114', 'nan shi nei yi ', 'nanshineiyi', 'nsny');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (115, '计生用品', '排卵试纸', '1', 1, 86, null, 'LB=86&XL=115', 'pai luan shi zhi ', 'pailuanshizhi', 'plsz');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (116, '计生用品', '早孕试纸', '2', 2, 86, null, 'LB=86&XL=116', 'zao yun shi zhi ', 'zaoyunshizhi', 'zysz');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (117, '计生用品', '体温计/仪器', '3', 3, 86, null, 'LB=86&XL=117', 'ti wen ji /yi qi ', 'tiwenji/yiqi', 'twj/yq');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (118, '计生用品', '其它', '4', 4, 86, null, 'LB=86&XL=118', 'qi ta ', 'qita', 'qt');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (119, '安全套', '零距离', '1', 1, 87, null, 'LB=87&XL=119', 'ling ju li ', 'lingjuli', 'ljl');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (120, '安全套', '杰士邦', '2', 2, 87, null, 'LB=87&XL=120', 'jie shi bang ', 'jieshibang', 'jsb');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (121, '安全套', '杜蕾斯', '3', 3, 87, null, 'LB=87&XL=121', 'dong lei si ', 'dongleisi', 'dls');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (122, '安全套', '第六感', '4', 4, 87, null, 'LB=87&XL=122', 'di liu gan ', 'diliugan', 'dlg');
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (123, '其他二手价格', '100元以下', '1', 1, null, null, null, null, null, null);
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (124, '其他二手价格', '100-150元', '2', 2, null, null, null, null, null, null);
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (125, '其他二手价格', '150-300元', '3', 3, null, null, null, null, null, null);
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (126, '其他二手价格', '500-1000元', '4', 4, null, null, null, null, null, null);
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (127, '其他二手价格', '1000-2000元', '5', 5, null, null, null, null, null, null);
+
+insert into codes_es_qtes (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (128, '其他二手价格', '2000元以上', '6', 6, null, null, null, null, null, null);
+
+prompt Done.

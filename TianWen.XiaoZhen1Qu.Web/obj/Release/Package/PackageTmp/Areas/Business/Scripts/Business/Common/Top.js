@@ -65,7 +65,7 @@ function Exit() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                window.location.href = getRootPath() + "/Business/YHDL/YHDL";
+                window.location.href = getRootPath() + "/Business/SY/SY";
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -134,4 +134,20 @@ function ShowYHCD() {
 function HideYHCD() {
     $("#div_top_right_dropdown_yhm").css("display", "none");
     $("#span_top_right_yhm_img").css("background-image", 'url(' + getRootPath() + "/Areas/Business/Css/images/arrow_down.png" + ')');
+}
+//我的发布
+function ToWDFB() {
+    $("#iframeright").attr("src", getRootPath() + "/Business/WDFB/WDFB");
+}
+//个人资料
+function ToGRZL() {
+    $("#iframeright").attr("src", getRootPath() + "/Business/GRZL/GRZL");
+}
+//我的资金>现金>明细查询
+function ToXJMXCX() {
+    $("#iframeright").attr("src", getRootPath() + "/Business/WDXJ/WDXJ_MXCX");
+}
+//我的资金>现金>充值
+function ToXJCZ() {
+    $("#iframeright").attr("src", getRootPath() + "/Business/WDXJ/WDXJ_CZ");
 }

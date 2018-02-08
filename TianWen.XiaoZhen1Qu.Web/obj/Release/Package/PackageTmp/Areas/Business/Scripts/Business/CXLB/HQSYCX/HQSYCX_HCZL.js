@@ -6,8 +6,16 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadHQSYCondition() {
-    LoadConditionByTypeNames("'婚车租赁价格','婚车品牌','婚车颜色','婚车租赁套餐出租'", "CODES_HQSY", "价格,婚车品牌,婚车颜色.套餐出租", "JGFW,HCPP,HCYS,TCCZ", "15,15,15,15");
-    LoadBody("HQSYXX_HCZL", currentIndex);
+    LoadConditionByTypeNames("'婚车租赁价格','婚车品牌','婚车颜色','婚车租赁套餐出租'", "CODES_HQSY", "价格,婚车品牌,婚车颜色.套餐出租", "JGFW,HCPP,HCYS,TCCZ", "100,100,100,100");
+}
+//加载URL查询条件
+function LoadURLCondition() {
+    if (getUrlParam("HCPP") !== null)
+        SelectURLCondition(getUrlParam("HCPP"));
+    else if (getUrlParam("QY") !== null)
+        SelectURLCondition(getUrlParam("QY"));
+    else
+        LoadBody("HQSYXX_HCZL", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -15,6 +23,15 @@ function SelectCondition(obj, name) {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
+    LoadBody("HQSYXX_HCZL", currentIndex);
+    ShowSelectCondition("HQSYXX_HCZL");
+}
+//选择URL条件
+function SelectURLCondition(obj) {
+    $("#" + obj).parent().find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $("#" + obj).addClass("li_condition_body_active");
     LoadBody("HQSYXX_HCZL", currentIndex);
     ShowSelectCondition("HQSYXX_HCZL");
 }

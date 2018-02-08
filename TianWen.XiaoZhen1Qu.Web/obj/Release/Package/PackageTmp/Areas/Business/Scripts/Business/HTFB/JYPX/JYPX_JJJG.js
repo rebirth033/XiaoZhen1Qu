@@ -68,6 +68,7 @@ function LoadJBXX() {
                 $("#spanQY").html(xml.Value.JYPX_JJJGJBXX.QY);
                 $("#spanDD").html(xml.Value.JYPX_JJJGJBXX.DD);
                 SetDX("SF", xml.Value.JYPX_JJJGJBXX.SF);
+                SetDuoX("SKXS", xml.Value.JYPX_JJJGJBXX.SKXS);
                 SetDuoX("FDJD", xml.Value.JYPX_JJJGJBXX.FDJD);
                 SetDuoX("FDKM", xml.Value.JYPX_JJJGJBXX.FDKM);
                 if (xml.Value.JYPX_JJJGJBXX.FWFW !== null)
@@ -91,6 +92,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "SF", "'" + GetDX("SF") + "'");
+    obj = jsonObj.AddJson(obj, "SKXS", "'" + GetDuoX("SKXS") + "'");
     obj = jsonObj.AddJson(obj, "FDJD", "'" + GetDuoX("FDJD") + "'");
     obj = jsonObj.AddJson(obj, "FDKM", "'" + GetDuoX("FDKM") + "'");
     obj = jsonObj.AddJson(obj, "FWFW", "'" + GetDuoX("FWFW") + "'");
@@ -110,7 +112,7 @@ function FB() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                window.location.href = getRootPath() + "/Business/FBCG/FBCG";
+                window.location.href = getRootPath() + "/Business/FBCG/FBCG?LBID=" + getUrlParam("CLICKID") + "&ID=" + xml.Value.ID + "&JCXXID=" + xml.Value.JCXXID;
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

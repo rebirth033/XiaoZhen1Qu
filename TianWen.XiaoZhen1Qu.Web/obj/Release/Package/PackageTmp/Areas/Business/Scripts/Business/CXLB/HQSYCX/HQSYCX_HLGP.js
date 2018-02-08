@@ -7,7 +7,15 @@ $(document).ready(function () {
 //加载条件
 function LoadHQSYCondition() {
     LoadConditionByTypeNames("'婚宴酒店价格范围','婚礼跟拍类型'", "CODES_HQSY", "价格范围,跟拍类型", "JG,GPLX", "100,100");
-    LoadBody("HQSYXX_HLGP", currentIndex);
+}
+//加载URL查询条件
+function LoadURLCondition() {
+    if (getUrlParam("LB") !== null)
+        SelectURLCondition(getUrlParam("LB"));
+    else if (getUrlParam("QY") !== null)
+        SelectURLCondition(getUrlParam("QY"));
+    else
+        LoadBody("HQSYXX_HLGP", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -15,6 +23,15 @@ function SelectCondition(obj, name) {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
+    LoadBody("HQSYXX_HLGP", currentIndex);
+    ShowSelectCondition("HQSYXX_HLGP");
+}
+//选择URL条件
+function SelectURLCondition(obj) {
+    $("#" + obj).parent().find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $("#" + obj).addClass("li_condition_body_active");
     LoadBody("HQSYXX_HLGP", currentIndex);
     ShowSelectCondition("HQSYXX_HLGP");
 }

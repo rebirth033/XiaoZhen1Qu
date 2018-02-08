@@ -20,7 +20,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 DataTable dt = new DataTable();
                 if (TYPE == "CWXX_CWG")//宠物_宠物狗
                 {
-                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,cw_cwgjbxx b where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,cw_cwgjbxx b where a.jcxxid = b.jcxxid and status = 1 and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<CW_CWGView> list = ConvertHelper.DataTableToList<CW_CWGView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -33,7 +33,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "CWXX_CWM")//宠物_宠物猫
                 {
-                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,cw_cwmjbxx b where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,cw_cwmjbxx b where a.jcxxid = b.jcxxid and status = 1 and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<CW_CWMView> list = ConvertHelper.DataTableToList<CW_CWMView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -46,7 +46,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "CWXX_HNYC")//宠物_花鸟鱼虫
                 {
-                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,cw_hnycjbxx b where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,cw_hnycjbxx b where a.jcxxid = b.jcxxid and status = 1 and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<CW_HNYCView> list = ConvertHelper.DataTableToList<CW_HNYCView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -60,7 +60,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "CWXX_CWFW")//宠物_宠物服务
                 {
-                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,cw_cwfwjbxx b where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,cw_cwfwjbxx b where a.jcxxid = b.jcxxid and status = 1 and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<CW_CWFWView> list = ConvertHelper.DataTableToList<CW_CWFWView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -74,7 +74,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "CWXX_CWYPSP")//宠物_宠物用品食品
                 {
-                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,cw_cwypspjbxx b where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,cw_cwypspjbxx b where a.jcxxid = b.jcxxid and status = 1 and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<CW_CWYPSPView> list = ConvertHelper.DataTableToList<CW_CWYPSPView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -88,7 +88,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "CWXX_CWGY")//宠物_宠物赠送领养
                 {
-                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,CW_CWGYJBXX b where a.jcxxid = b.jcxxid and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,CW_CWGYJBXX b where a.jcxxid = b.jcxxid and status = 1 and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<CW_CWGYView> list = ConvertHelper.DataTableToList<CW_CWGYView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;

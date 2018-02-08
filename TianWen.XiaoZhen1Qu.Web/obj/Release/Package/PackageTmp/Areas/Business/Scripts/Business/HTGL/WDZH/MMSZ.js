@@ -40,8 +40,14 @@ function WCXG() {
                 $("#JMMInfo").css("color", "#F2272D");
                 $("#JMMInfo").html(xml.Message);
             } else {
-                alert("密码修改成功");
-                window.location.reload();
+                window.wxc.xcConfirm("密码修改成功", window.wxc.xcConfirm.typeEnum.success, {
+                    onOk: function (v) {
+                        window.location.reload();
+                    },
+                    onClose: function (v) {
+                        window.location.reload();
+                    }
+                });
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

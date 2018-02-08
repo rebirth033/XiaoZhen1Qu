@@ -10,8 +10,10 @@ function LoadSHFWCondition() {
 }
 //加载URL查询条件
 function LoadURLCondition() {
-    if (getUrlParam("LB") !== null)
+    if (getUrlParam("LB") !== null) {
         SelectURLCondition(getUrlParam("LB"));
+        LoadConditionByParentID(getUrlParam("LB"), "CODES_SHFW", "小类", "XL");
+    }
     else if (getUrlParam("QY") !== null)
         SelectURLCondition(getUrlParam("QY"));
     else

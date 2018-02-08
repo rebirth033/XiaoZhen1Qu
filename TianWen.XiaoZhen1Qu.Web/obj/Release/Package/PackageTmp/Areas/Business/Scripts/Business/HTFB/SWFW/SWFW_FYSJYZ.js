@@ -12,8 +12,8 @@ function ValidateLB() {
 //验证所有
 function ValidateAll() {
     if (ValidateLB()
-        & ValidateSelect("FYSJYZ", "YZ", "忘记选择语种啦")
-
+        & ValidateSelect("YZ", "YZ", "忘记选择语种啦")
+        & ValidateCheck("FWFW", "忘记选择服务范围啦")
         & ValidateBCMS("BCMS", "忘记填写服务介绍啦")
         & ValidateXXDZ()
         & ValidateCommon())

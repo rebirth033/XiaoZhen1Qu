@@ -36,41 +36,6 @@ function LoadDuoX(type, id) {
         }
     });
 }
-//加载服务范围
-function LoadFWFW() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Business/Common/GetDistrictXQJByXZQDM",
-        dataType: "json",
-        data:
-        {
-
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='ulFWPZ'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liFWFW' onclick='SelectDuoX(this)'><img class='img_FWFW'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i % 6 === 5) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
-                    }
-                }
-                if (parseInt(xml.list.length % 6) === 0)
-                    $("#divFWFW").css("height", parseInt(xml.list.length / 6) * 45 + "px");
-                else
-                    $("#divFWFW").css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
-                html += "</ul>";
-                $("#divFWFWText").html(html);
-                $(".img_FWFW").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-                $(".liFWFW").bind("click", function () { ValidateCheck("FWFW", "忘记选择服务范围啦"); });
-                LoadJBXX();
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
 //加载休闲娱乐_商超设备基本信息
 function LoadJBXX() {
     $.ajax({
@@ -129,7 +94,7 @@ function FB() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                window.location.href = getRootPath() + "/Business/FBCG/FBCG";
+                window.location.href = getRootPath() + "/Business/FBCG/FBCG?LBID=" + getUrlParam("CLICKID") + "&ID=" + xml.Value.ID + "&JCXXID=" + xml.Value.JCXXID;
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

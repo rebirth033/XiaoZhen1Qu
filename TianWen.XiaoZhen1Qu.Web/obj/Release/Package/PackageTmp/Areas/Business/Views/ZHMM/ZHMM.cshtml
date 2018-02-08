@@ -6,6 +6,13 @@
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/HTGL/WDZH/ZHMM.js")"></script>
 }
 @section Section_Body {
+    <div class="div_head">
+        <div class="div_head_main">
+            <span class="span_head_main_logo"></span>
+            <span class="span_head_main_bzzx">找回密码</span>
+        </div>
+    </div>
+    <em class="em_split"></em>
     <div class="div_head_inner">
         <div class="divstep" id="divQRZH">
             <span class="spanstep" id="spanQRZH">确认账户</span>
@@ -20,7 +27,7 @@
             <em class="emstep" id="emCZMM"></em>
         </div>
     </div>
-    <div id="myTabContent" class="tab-content">
+    <div id="myTabContent" class="div_content">
         <div id="divFirst" style="display: block">
             <table class="table" style="width: 600px;">
                 <tr>
@@ -30,7 +37,7 @@
                 <tr>
                     <td>
                         <input id="TXYZM" type="text" style="width: 284px" class="form-control input_text" placeholder="图片验证码">
-                        <img id="imgTXYZM" style="height: 34px; vertical-align: top; cursor:pointer" title="看不清？点击图片换一张" src="@Url.Content("~/Areas/Business/Aspx/png.aspx")" />
+                        <img id="imgTXYZM" style="height: 34px; vertical-align: top; cursor: pointer" title="看不清?点击图片换一张" src="@Url.Content("~/Areas/Business/Aspx/png.aspx")" />
                     </td>
                     <td class="Info" id="TXYZMInfo" style="width: 50%"></td>
                 </tr>
@@ -73,6 +80,22 @@
                     <td><input type="button" class="btn btn-info input_text" id="btnThird" value="确定" /></td>
                 </tr>
             </table>
+        </div>
+    </div>
+    <div class="div_bottom">
+        <div class="div_bottom_inner">
+            <span class="span_div_bottom_inner">关于信息小镇</span>
+            <em class="em_div_bottom_inner"></em>
+            <span class="span_div_bottom_inner">联系我们</span>
+            <em class="em_div_bottom_inner"></em>
+            <span class="span_div_bottom_inner">友情链接</span>
+        </div>
+        <div class="div_bottom_inner">
+            <span class="span_div_bottom_inner">推广服务</span>
+            <em class="em_div_bottom_inner"></em>
+            <span class="span_div_bottom_inner">客户服务中心</span>
+            <em class="em_div_bottom_inner"></em>
+            <span class="span_div_bottom_inner">Copyright&nbsp;©&nbsp;&nbsp;www.infotownlet.com</span>
         </div>
     </div>
 }

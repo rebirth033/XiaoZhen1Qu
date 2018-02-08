@@ -5,9 +5,11 @@ $(document).ready(function () {
     $(".div_body").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
     $(".div_foot").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
     $(".div_bottom").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
+    $(".img_head_hide_logo").css("margin-left", (document.documentElement.clientWidth - 1100) / 2);
     $(".img_head_left_logo").css("margin-left", "20px");
     $("#li_head_sy").css("background", "#bc6ba6").css("color", "#ffffff");
     $("#div_yhm").bind("click", ShowWDXX);
+    $("#span_hide_fbxx").bind("click", FBXX);
     LoadDefault();
 });
 //首页获取title
@@ -93,11 +95,10 @@ function LoadSY_ML() {
                 LoadSY_ML_CWInfo(xml.list, xml.xzq, "CW");
                 LoadSY_MLInfo(xml.list, xml.xzq, "ZP");
                 LoadSY_ML_WXLInfo(xml.list, xml.xzq, "ZSJM");
-                LoadSY_ML_WXLInfo(xml.list, xml.xzq, "PX");
                 LoadSY_ML_SHFWInfo(xml.list, xml.xzq, "SHFW");
                 LoadSY_ML_WXLInfo(xml.list, xml.xzq, "JYPX");
                 LoadSY_ML_WXLInfo(xml.list, xml.xzq, "PFCG");
-                LoadSY_MLInfo(xml.list, xml.xzq, "SWFW");
+                LoadSY_ML_SHFWInfo(xml.list, xml.xzq, "SWFW");
                 LoadSY_MLInfo(xml.list, xml.xzq, "ES");
                 $("#p_body_middle_left_title_FC").css("border-bottom", "2px solid #59d072");
                 $("#p_body_middle_left_title_CL").css("border-bottom", "2px solid #44eea6");
@@ -199,9 +200,9 @@ function LoadSY_ML_WXLInfo(list, xzq, typename) {
             for (var j = 0; j < list.length; j++) {
                 if (list[j].PARENTID === list[i].ID) {
                     if (list[j].ISHOT === "是")
-                        html += ('<li class="li_body_middle_left_section orange" onclick="OpenCXLB(' + list[j].LBID + ',\'' + list[j].LBURL + '\',\'' + list[j].CONDITION + '\')">' + list[j].LBNAME + '</li>');
+                        html += ('<li style="width:90px;" class="li_body_middle_left_section orange" onclick="OpenCXLB(' + list[j].LBID + ',\'' + list[j].LBURL + '\',\'' + list[j].CONDITION + '\')">' + list[j].LBNAME + '</li>');
                     else
-                        html += ('<li class="li_body_middle_left_section" onclick="OpenCXLB(' + list[j].LBID + ',\'' + list[j].LBURL + '\',\'' + list[j].CONDITION + '\')">' + list[j].LBNAME + '</li>');
+                        html += ('<li style="width:90px;" class="li_body_middle_left_section" onclick="OpenCXLB(' + list[j].LBID + ',\'' + list[j].LBURL + '\',\'' + list[j].CONDITION + '\')">' + list[j].LBNAME + '</li>');
                 }
             }
             html += ('</ul>');
@@ -217,9 +218,13 @@ function GetHeight(list, parentid, typename) {
             count++;
         }
     }
-    if (typename === "FC" || typename === "CL" || typename === "ZP" || typename === "ES" || typename === "SHFW" || typename === "SWFW") {
+    if (typename === "FC" || typename === "CL" || typename === "ZP" || typename === "ES") {
         height = parseInt((count / 7)) * 30;
         if (count % 7 !== 0) height += 30;
+    }
+    else if (typename === "SHFW" || typename === "SWFW") {
+        height = parseInt((count / 6)) * 30;
+        if (count % 6 !== 0) height += 30;
     }
     else {
         height = parseInt((count / 3)) * 30;
@@ -233,8 +238,40 @@ function OpenCXLB(lbid, lburl, condition) {
         window.open(getRootPath() + "/Business" + lburl + "?LBID=" + lbid + "&" + condition);
     else
         window.open(getRootPath() + "/Business" + lburl + "?LBID=" + lbid);
+    $("#LBID").val('');
 }
 //打开二级首页
 function ToEJSY(type) {
     window.open(getRootPath() + "/Business/SY/" + type);
+}
+//登录
+function OpenDL() {
+    window.location.href = getRootPath() + "/Business/YHDL/YHDL?To=SY";
+}
+//拖动滚动条或滚动鼠标轮
+window.onscroll = function () {
+    if (document.body.scrollTop || document.documentElement.scrollTop > 100) {
+        $("#divHideHead").css("display", "block");
+    } else {
+        $("#divHideHead").css("display", "none");
+    }
+}
+//退出
+function Exit() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Business/YHDL/Exit",
+        dataType: "json",
+        data: {
+
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                window.location.reload();
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
 }

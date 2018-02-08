@@ -6,12 +6,14 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadJYPXCondition() {
-    LoadConditionByTypeNames("'设计培训类别','设计培训形式','职业技能培训周期'", "CODES_JYPX", "类别,形式,周期", "LB,XS,ZQ", "10,15,15");
+    LoadConditionByTypeNames("'设计培训类别','设计培训形式','职业技能培训周期'", "CODES_JYPX", "类别,形式,周期", "LB,XS,ZQ", "100,100,100");
 }
 //加载URL查询条件
 function LoadURLCondition() {
-    if (getUrlParam("LB") !== null)
+    if (getUrlParam("LB") !== null) {
         SelectURLCondition(getUrlParam("LB"));
+        LoadConditionByParentID(getUrlParam("LB"), "CODES_JYPX", "小类", "XL");
+    }
     else if (getUrlParam("QY") !== null)
         SelectURLCondition(getUrlParam("QY"));
     else

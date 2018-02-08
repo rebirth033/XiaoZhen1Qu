@@ -12,8 +12,10 @@ function LoadESCondition() {
 function LoadURLCondition() {
     if (getUrlParam("JG") !== null)
         SelectURLCondition(getUrlParam("JG"));
-    else if (getUrlParam("LB") !== null)
+    else if (getUrlParam("LB") !== null) {
         SelectURLCondition(getUrlParam("LB"));
+        LoadConditionByParentID(getUrlParam("LB"), "CODES_ES_JDJJBG", "小类", "XL");
+    }
     else if (getUrlParam("QY") !== null)
         SelectURLCondition(getUrlParam("QY"));
     else
@@ -21,10 +23,10 @@ function LoadURLCondition() {
 }
 //选择条件
 function SelectCondition(obj, name) {
-    if (name === "类别" && (obj.innerHTML !== "其它家居用品")) {
+    if (name === "类别" && (obj.innerHTML !== "其他家居用品")) {
         LoadConditionByParentID(obj.id, "CODES_ES_JDJJBG", "小类", "XL");
     }
-    if (name === "类别" && (obj.innerHTML === "其它家居用品")) {
+    if (name === "类别" && (obj.innerHTML === "其他家居用品")) {
         $("#ul_condition_body_XL").remove();
     }
     $(obj).parent().find(".li_condition_body").each(function () {

@@ -10,8 +10,10 @@ function LoadSWFWCondition() {
 }
 //加载URL查询条件
 function LoadURLCondition() {
-    if (getUrlParam("LB") !== null)
+    if (getUrlParam("LB") !== null) {
         SelectURLCondition(getUrlParam("LB"));
+        LoadConditionByParentID(getUrlParam("LB"), "CODES_SWFW", "小类", "XL");
+    }
     else if (getUrlParam("QY") !== null)
         SelectURLCondition(getUrlParam("QY"));
     else
@@ -20,7 +22,7 @@ function LoadURLCondition() {
 //选择条件
 function SelectCondition(obj, name) {
     if (name === "类别" && (obj.innerHTML === "视频制作" || obj.innerHTML === "平面设计" || obj.innerHTML === "品牌策划推广" || obj.innerHTML === "工业设计")) {
-        LoadConditionByParentID(obj.id, "CODES_SWFW", "小类", "XL",100);
+        LoadConditionByParentID(obj.id, "CODES_SWFW", "小类", "XL", 100);
     }
     if (name === "类别" && (obj.innerHTML !== "视频制作" && obj.innerHTML !== "平面设计" && obj.innerHTML !== "品牌策划推广" && obj.innerHTML !== "工业设计")) {
         $("#ul_condition_body_XL").remove();

@@ -6,12 +6,14 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadZSJMCondition() {
-    LoadConditionByTypeNames("'服饰鞋帽类别','投资金额'", "CODES_ZSJM", "类别,投资金额", "LB,TZJE", "100,100");
+    LoadConditionByTypeNames("'服装鞋包类别','投资金额'", "CODES_ZSJM", "类别,投资金额", "LB,TZJE", "100,100");
 }
 //加载URL查询条件
 function LoadURLCondition() {
-    if (getUrlParam("LB") !== null)
+    if (getUrlParam("LB") !== null) {
         SelectURLCondition(getUrlParam("LB"));
+        LoadConditionByParentID(getUrlParam("LB"), "CODES_ZSJM", "小类", "XL");
+    }
     else if (getUrlParam("QY") !== null)
         SelectURLCondition(getUrlParam("QY"));
     else

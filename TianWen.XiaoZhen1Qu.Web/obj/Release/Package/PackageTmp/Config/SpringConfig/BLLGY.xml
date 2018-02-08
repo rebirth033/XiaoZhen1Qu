@@ -80,9 +80,4 @@
       <ref object="DAOBase"/>
     </property>
   </object>
-  <object id="BZZX_WZJYBLL" type="TianWen.XiaoZhen1Qu.BLL.BZZX_WZJYBLL,TianWen.XiaoZhen1Qu">
-    <property name="DAO">
-      <ref object="DAOBase"/>
-    </property>
-  </object>
 </objects>

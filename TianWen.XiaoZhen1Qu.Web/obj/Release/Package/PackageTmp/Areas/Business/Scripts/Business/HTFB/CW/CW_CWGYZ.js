@@ -68,7 +68,7 @@ function ValidateZSZS() {
         return false;
     } else {
         if (ValidateDecimal($("#ZSZS").val())) {
-            $("#divCWGNLTip").css("display", "none");
+            $("#divZSZSTip").css("display", "none");
             $("#spanZSZS").css("border-color", "#cccccc");
             return true;
         } else {

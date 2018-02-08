@@ -2,6 +2,9 @@
 $(document).ready(function () {
     //$("#YHM").bind("blur", YHMCheck);
     //$("#TXYZM").bind("blur", TXYZMCheck);
+    $(".div_head_inner").css("margin-left", (document.documentElement.clientWidth - 600) / 2);
+    $(".div_content").css("margin-left", (document.documentElement.clientWidth - 900) / 2);
+    $(".div_content").css("height", (document.documentElement.clientHeight - 230));
     $("#imgTXYZM").bind("click", QHTXYZM);
     $("#TXYZM").bind("focus", TXYZMTip);
     $("#btnHQYZM").bind("click", GetCheckCode);
@@ -10,7 +13,7 @@ $(document).ready(function () {
     $("#btnThird").bind("click", CZMM);
     $("#spanQRZH").css("color", "#bc6ba6");
     $("#emQRZH").css("background", "#bc6ba6");
-    $("#title").html("信息小镇_找回密码")
+    $("#title").html("信息小镇_找回密码");
 });
 //确认账户
 function QRZH() {
@@ -102,10 +105,23 @@ function CZMM() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                alert(xml.Message);
-                ToMMSZ();
+                window.wxc.xcConfirm(xml.Message, window.wxc.xcConfirm.typeEnum.success, {
+                    onOk: function (v) {
+                        ToYHDL();
+                    },
+                    onClose: function (v) {
+                       ToYHDL();
+                    }
+                });
             } else {
-                alert(xml.Message);
+                window.wxc.xcConfirm(xml.Message, window.wxc.xcConfirm.typeEnum.error, {
+                    onOk: function (v) {
+                        //ToMMSZ();
+                    },
+                    onClose: function (v) {
+                        //ToMMSZ();
+                    }
+                });
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -304,13 +320,13 @@ function GetNumber() {
 function TXYZMTip() {
     $("#TXYZM").css("border-color", "#999");
     $("#TXYZMInfo").css("color", "#999");
-    $("#TXYZMInfo").html('验证码看不清？<span onclick="QHTXYZM()" style="cursor:pointer;text-decoration:none;color:#bc6ba6">换一下？</span>');
+    $("#TXYZMInfo").html('验证码看不清?<span onclick="QHTXYZM()" style="cursor:pointer;text-decoration:none;color:#bc6ba6">换一下?</span>');
 }
-
+//切换图形验证码
 function QHTXYZM() {
     $("#imgTXYZM")[0].src = getRootPath() + '/Areas/Business/Aspx/png.aspx?' + Math.random();
 }
-//密码设置
-function ToMMSZ() {
-    window.location.href = getRootPath() + "/Business/GRZL/MMSZ?YHID=" + getUrlParam("YHID");
+//用户登录
+function ToYHDL() {
+    window.location.href = getRootPath() + "/Business/YHDL/YHDL?To=SY";
 }

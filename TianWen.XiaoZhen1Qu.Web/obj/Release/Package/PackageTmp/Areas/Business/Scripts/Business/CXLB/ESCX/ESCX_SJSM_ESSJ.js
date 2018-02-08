@@ -12,8 +12,10 @@ function LoadESCondition() {
 function LoadURLCondition() {
     if (getUrlParam("JG") !== null)
         SelectURLCondition(getUrlParam("JG"));
-    else if (getUrlParam("PP") !== null)
+    else if (getUrlParam("PP") !== null) {
         SelectURLCondition(getUrlParam("PP"));
+        LoadConditionByParentID(getUrlParam("PP"), "CODES_ES_SJSM", "型号", "XH");
+    }
     else if (getUrlParam("QY") !== null)
         SelectURLCondition(getUrlParam("QY"));
     else

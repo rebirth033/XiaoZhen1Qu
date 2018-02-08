@@ -4,7 +4,7 @@
 
 .div_head_main {width: 1000px;height: 75px;margin: 0 auto;text-align: left;}
 
-.span_head_main_logo {background-image: url(../images/logo_purple.png);background-repeat: no-repeat;width: 160px;height: 55px;display: inline-block;margin-top: 20px;float: left;}
+.span_head_main_logo {background-image: url(../images/logo_purple.png);background-repeat: no-repeat;width: 185px;height: 55px;display: inline-block;margin-top: 20px;float: left;}
 
 .span_head_main_bzzx {font: 26px "微软雅黑", "黑体", sans-serif;color: #666;float: left;margin-top: 37px;margin-left: 15px;}
 
@@ -36,7 +36,7 @@
 
 #canvas {left: 0px;top: 0px;position: absolute;}
 
-.editToolButton {height: 60px;width: 60px;display: inline-block;cursor: pointer; olor: gray;}
+.editToolButton {height: 60px;width: 60px;display: inline-block;cursor: pointer; color: gray;}
 
 .editToolButton span {display:inline-block;position:absolute;bottom:3px;left:15px}
 

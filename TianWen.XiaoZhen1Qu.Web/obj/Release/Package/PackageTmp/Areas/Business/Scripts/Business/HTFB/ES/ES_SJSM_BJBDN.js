@@ -45,7 +45,7 @@ function BindClick(type) {
             LoadCODESByTYPENAME("显卡", "XK", "CODES_ES_SJSM");
         }
         if (type === "XL") {
-            LoadCODESByTYPENAME("笔记本配件", "XL", "CODES_ES_SJSM");
+            LoadCODESByTYPENAME("笔记本配件", "XL", "CODES_ES_SJSM", Bind, "BJBLB", "XL", "");
         }
         if (type === "XJ") {
             LoadCODESByTYPENAME("新旧程度", "XJ", "CODES_ES_SJSM", Bind, "XJCD", "XJ", "");
@@ -234,7 +234,7 @@ function FB() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                window.location.href = getRootPath() + "/Business/FBCG/FBCG";
+                window.location.href = getRootPath() + "/Business/FBCG/FBCG?LBID=" + getUrlParam("CLICKID") + "&ID=" + xml.Value.ID + "&JCXXID=" + xml.Value.JCXXID;
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

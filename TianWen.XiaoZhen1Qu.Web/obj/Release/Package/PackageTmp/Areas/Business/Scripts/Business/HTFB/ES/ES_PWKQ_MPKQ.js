@@ -20,7 +20,7 @@ function SelectLB(obj, type, codeid) {
 }
 //判断类别
 function PDLB(name, codeid) {
-    if (name.indexOf("其它卡券") !== -1) {
+    if (name.indexOf("其他卡券") !== -1 || name.indexOf("游乐园门票") !== -1 || name.indexOf("景点门票") !== -1 || name.indexOf("电影票") !== -1) {
         $("#divXL").css("display", "none");
     }
     else {
@@ -163,7 +163,7 @@ function FB() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                window.location.href = getRootPath() + "/Business/FBCG/FBCG";
+                window.location.href = getRootPath() + "/Business/FBCG/FBCG?LBID=" + getUrlParam("CLICKID") + "&ID=" + xml.Value.ID + "&JCXXID=" + xml.Value.JCXXID;
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

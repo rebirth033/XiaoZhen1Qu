@@ -12,8 +12,10 @@ function LoadCLCondition() {
 function LoadURLCondition() {
     if (getUrlParam("JG") !== null)
         SelectURLCondition(getUrlParam("JG"));
-    else if (getUrlParam("PP") !== null)
+    else if (getUrlParam("PP") !== null){
         SelectURLCondition(getUrlParam("PP"));
+        LoadConditionByParentID(getUrlParam("PP"), "CODES_CL", "车系", "CX");
+    }
     else if (getUrlParam("QY") !== null)
         SelectURLCondition(getUrlParam("QY"));
     else

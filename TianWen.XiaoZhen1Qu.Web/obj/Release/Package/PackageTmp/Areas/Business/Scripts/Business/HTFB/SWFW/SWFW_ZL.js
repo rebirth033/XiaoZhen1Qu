@@ -53,7 +53,7 @@ function LoadXL(lbmc, xl) {
                 html += "</ul>";
                 $("#divXLText").html(html);
                 $(".img_XL").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-                $(".liXL").bind("click", function () { ValidateCheck("XL", "忘记选择小类啦"); });
+                //$(".liXL").bind("click", function () { ValidateCheck("XL", "忘记选择小类啦"); });
                 if (xml.list.length === 0)
                     $("#divXL").css("display", "none");
                 else
@@ -124,7 +124,7 @@ function FB() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                window.location.href = getRootPath() + "/Business/FBCG/FBCG";
+                window.location.href = getRootPath() + "/Business/FBCG/FBCG?LBID=" + getUrlParam("CLICKID") + "&ID=" + xml.Value.ID + "&JCXXID=" + xml.Value.JCXXID;
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

@@ -3,13 +3,15 @@
 }
 @section Section_Head {
     <link href=@Url.Content("~/Areas/Business/Scripts/bootstrap-3.3.7/css/bootstrap.min.css") rel="stylesheet" />
+    <script src=@Url.Content("~/Areas/Business/Scripts/bootstrap-3.3.7/js/bootstrap.min.js")></script>
+    <link href=@Url.Content("~/Areas/Business/Scripts/xcConfirm/css/xcConfirm.css") rel="stylesheet" />
+    <script src=@Url.Content("~/Areas/Business/Scripts/xcConfirm/js/xcConfirm.js")></script>
+    <script src=@Url.Content("~/Areas/Business/Scripts/underscore.min.js")></script>
     <link href=@Url.Content("~/Areas/Business/Css/Common/PageCommon.css") rel="stylesheet" />
     <link href="@Url.Content("~/Areas/Business/Css/Common/Top.css" )" rel="stylesheet" />
     <link href="@Url.Content("~/Areas/Business/Css/Common/XZQ.css")" rel="stylesheet" />
     <link href="@Url.Content("~/Areas/Business/Css/Common/Img.css")" rel="stylesheet" />
     <link href="@Url.Content("~/Areas/Business/Css/Common/HTFB_Common.css")" rel="stylesheet" />
-    <script src=@Url.Content("~/Areas/Business/Scripts/bootstrap-3.3.7/js/bootstrap.min.js")></script>
-    <script src=@Url.Content("~/Areas/Business/Scripts/underscore.min.js")></script>
     <script src=@Url.Content("~/Areas/Business/Scripts/UEditor/ueditor.config.js")></script>
     <script src=@Url.Content("~/Areas/Business/Scripts/UEditor/ueditor.all.js")></script>
     <script src=@Url.Content("~/Areas/Business/Scripts/UEditor/lang/zh-cn/zh-cn.js")></script>
@@ -130,7 +132,7 @@
         </table>
         <div id="myTabContent" class="tab-content">
             <div id="username" style="display: block">
-                <table class="table" style="width: 600px;">
+                <table class="table" style="width: 405px; ">
                     <tr>
                         <td>
                             <input type="text" class="form-control input_text" id="YHM" column="YHM" placeholder="请输入用户名">
@@ -151,7 +153,9 @@
                         <td style="text-align: left">
                             <input id="checkMMSFZDDL" type="checkbox" />
                             <span class="spanZDDD">下次自动登录</span>
-                            <a id="aWJMM">忘记密码</a>
+                            <a class="spanWJMM" id="aWJMM">忘记密码</a>
+                            <a class="spanSplit">|</a>
+                            <a class="spanYHZC" id="aYHZC1">用户注册</a>
                         </td>
                     </tr>
                     <tr>
@@ -160,10 +164,10 @@
                 </table>
             </div>
             <div id="cellphone" style="display: none">
-                <table class="table" style="width: 600px;">
+                <table class="table" style="width: 405px; ">
                     <tr>
                         <td id="tdSJH">
-                            <input class="form-control input_text" id="SJH" maxlength="11" type="text" style="width: 266px;" column="SJH" placeholder="请输入手机号">
+                            <input class="form-control input_text" id="SJH" maxlength="11" type="text" style="width: 263px;" column="SJH" placeholder="请输入手机号">
                             <input type="button" class="btn btn-info" id="btnHQYZM" value="获取验证码" />
                         </td>
                     </tr>

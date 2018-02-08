@@ -72,10 +72,18 @@ function HandlerTPXX() {
         $(this).find(".div_img_body_left_body_left_list_tp").css("background-color", "rgba(0,0,0,0)");
     });
     if ($("#img_body_left_body_left_show").length > 0) {
-        var natural = getNaturalSize($("#img_body_left_body_left_show")[0]);
-        $("#img_body_left_body_left_show").css("width", (natural.width > 460 ? 460 : natural.width));
-        $("#img_body_left_body_left_show").css("height", (natural.height > 350 ? 350 : natural.height));
+        var img = new Image();
+        img.src = $("#img_body_left_body_left_show").attr("src");
+        $("#img_body_left_body_left_show").css("width", ((img.width || img.width === 0) > 460 ? 460 : img.width));
+        $("#img_body_left_body_left_show").css("height", ((img.height || img.height === 0) > 350 ? 350 : img.height));
     }
+
+    $(".img_body_left_body_xq_xx").each(function () {
+        var img = new Image();
+        img.src = $("#" + this.id).attr("src");
+        $("#" + this.id).css("width", ((img.width > 405 || img.width === 0) ? 405 : img.width));
+        $("#" + this.id).css("height", ((img.height > 350 || img.height === 0) ? 350 : img.height));
+    });
 }
 //图片左侧切换
 function LeftImg() {

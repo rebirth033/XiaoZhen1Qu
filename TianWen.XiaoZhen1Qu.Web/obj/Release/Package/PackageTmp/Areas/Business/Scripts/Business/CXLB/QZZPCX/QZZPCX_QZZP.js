@@ -49,7 +49,7 @@ function GetHeadNav() {
 }
 //加载条件
 function LoadQZZPCondition() {
-    LoadConditionByTypeNames("'" + getUrlParam("ZWLB") + "类别','每月薪资','职位福利'", "CODES_QZZP", "类别,薪资,福利", "ZWLB,MYXZ,ZWFL", "100,100,100");
+    LoadConditionByTypeNames("'" + (getUrlParam("ZWLB") === null ? "行业" : getUrlParam("ZWLB")) + "类别','每月薪资','职位福利'", "CODES_QZZP", "类别,薪资,福利", "ZWLB,MYXZ,ZWFL", "100,100,100");
 }
 //加载URL查询条件
 function LoadURLCondition() {
@@ -93,7 +93,7 @@ function LoadCondition(array, name, id, length) {
     }
     html += '</ul>';
     $("#div_condition_body_" + id).append(html);
-    $("#li_condition_body_first_" + id).css("height", (parseInt($("#div_condition_body_" + id).css("height")) - 10));
+    $("#li_condition_body_first_" + id).css("height", (parseInt($("#div_condition_body_" + id).css("height")) - 15));
 }
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {

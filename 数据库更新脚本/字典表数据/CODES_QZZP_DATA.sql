@@ -1,0 +1,2020 @@
+prompt Importing table codes_qzzp...
+set feedback off
+set define off
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1, '每月薪资', '1000元以下', '1', 1, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (2, '每月薪资', '1000-2000元', '2', 2, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (3, '每月薪资', '2000-3000元', '3', 3, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (4, '每月薪资', '3000-5000元', '4', 4, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (5, '每月薪资', '5000-8000元', '5', 5, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (6, '每月薪资', '8000-12000元', '6', 6, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (7, '每月薪资', '12000-20000元', '7', 7, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (8, '每月薪资', '20000-25000元', '8', 8, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (9, '每月薪资', '25000元以上', '9', 9, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (10, '每月薪资', '面议', '10', 10, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (11, '学历要求', '不限', '1', 1, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (12, '学历要求', '高中', '2', 2, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (13, '学历要求', '技校', '3', 3, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (14, '学历要求', '中专', '4', 4, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (15, '学历要求', '大专', '5', 5, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (16, '学历要求', '本科', '6', 6, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (17, '学历要求', '硕士', '7', 7, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (18, '学历要求', '博士', '8', 8, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (19, '工作年限', '不限', '1', 1, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (20, '工作年限', '1年以下', '2', 2, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (21, '工作年限', '1-2年', '3', 3, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (22, '工作年限', '3-5年', '4', 4, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (23, '工作年限', '6-7年', '5', 5, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (24, '工作年限', '8-10年', '6', 6, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (25, '工作年限', '10年以上', '7', 7, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (26, '职位福利', '五险一金', '1', 1, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (27, '职位福利', '包吃', '2', 2, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (28, '职位福利', '包住', '3', 3, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (29, '职位福利', '年底双薪', '4', 5, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (30, '职位福利', '双休', '5', 4, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (31, '职位福利', '交通补助', '6', 6, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (32, '职位福利', '饭补', '7', 8, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (33, '职位福利', '话补', '8', 9, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (34, '职位福利', '房补', '9', 7, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (35, '职位福利', '员工体检', '10', 10, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (36, '职位福利', '带薪年假', '11', 11, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (37, '薪资水平单位', '元/小时', '1', 1, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (38, '薪资水平单位', '元/天', '2', 2, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (39, '薪资水平单位', '元/次', '3', 3, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (40, '薪资结算', '日结', '1', 1, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (41, '薪资结算', '周结', '2', 2, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (42, '薪资结算', '月结', '3', 3, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (43, '薪资结算', '完工结算', '4', 4, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (44, '职位类别', '销售/客服/市场/公关', '1', 1, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (45, '职位类别', '人事/行政/后勤/司机', '2', 2, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (46, '职位类别', '生产/制造/机械/质控', '3', 3, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (47, '职位类别', '法律/教育/翻译/出版', '4', 4, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (48, '职位类别', '餐饮/百货/生活/服务', '5', 5, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (49, '职位类别', '医疗/医药/保险', '6', 6, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (50, '职位类别', '金融/银行/财务/管理', '7', 7, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (51, '职位类别', '能源/化工/环保/汽车', '8', 8, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (52, '职位类别', '贸易/采购/物流/仓储', '9', 9, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (53, '职位类别', '广告/设计/娱乐/传媒', '10', 10, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (54, '职位类别', '房产/建筑/装修/物业', '11', 11, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (55, '职位类别', '网络/通讯/电子/软件', '12', 12, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (56, '职位类别', '农林牧渔/其他', '13', 13, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (57, '行业类别', '销售', 'X', 1, 44, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (58, '行业类别', '客服', 'K', 2, 44, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (59, '行业类别', '市场', 'S', 3, 44, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (60, '行业类别', '公关', 'G', 4, 44, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (61, '销售类别', '销售代表', 'X', 1, 57, '是', 89, 'ZWLB=销售&ZWMC=61', 'xiao shou dai biao ', 'xiaoshoudaibiao', 'xsdb');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (62, '销售类别', '销售助理', 'X', 2, 57, '是', 89, 'ZWLB=销售&ZWMC=62', 'xiao shou zhu li ', 'xiaoshouzhuli', 'xszl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (63, '销售类别', '销售经理/主管', 'X', 3, 57, '是', 89, 'ZWLB=销售&ZWMC=63', 'xiao shou jing li /zhu guan ', 'xiaoshoujingli/zhuguan', 'xsjl/zg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (64, '销售类别', '销售总监', 'X', 4, 57, null, 89, 'ZWLB=销售&ZWMC=64', 'xiao shou zong jian ', 'xiaoshouzongjian', 'xszj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (65, '销售类别', '销售顾问', 'X', 5, 57, '是', 89, 'ZWLB=销售&ZWMC=65', 'xiao shou gu wen ', 'xiaoshouguwen', 'xsgw');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (66, '销售类别', '汽车销售', 'Q', 6, 57, '是', 89, 'ZWLB=销售&ZWMC=66', 'qi che xiao shou ', 'qichexiaoshou', 'qcxs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (67, '销售类别', '医药销售', 'Y', 7, 57, '是', 89, 'ZWLB=销售&ZWMC=67', 'yi yao xiao shou ', 'yiyaoxiaoshou', 'yyxs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (68, '销售类别', '器械销售', 'Q', 8, 57, null, 89, 'ZWLB=销售&ZWMC=68', 'qi xie xiao shou ', 'qixiexiaoshou', 'qxxs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (69, '销售类别', '网络销售', 'W', 9, 57, null, 89, 'ZWLB=销售&ZWMC=69', 'wang luo xiao shou ', 'wangluoxiaoshou', 'wlxs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (70, '销售类别', '区域销售', 'Q', 10, 57, null, 89, 'ZWLB=销售&ZWMC=70', 'qu yu xiao shou ', 'quyuxiaoshou', 'qyxs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (72, '销售类别', '渠道专员', 'Q', 12, 57, null, 89, 'ZWLB=销售&ZWMC=72', 'qu dao zhuan yuan ', 'qudaozhuanyuan', 'qdzy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (73, '销售类别', '渠道经理', 'Q', 13, 57, null, 89, 'ZWLB=销售&ZWMC=73', 'qu dao jing li ', 'qudaojingli', 'qdjl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (74, '销售类别', '客户经理', 'K', 14, 57, '是', 89, 'ZWLB=销售&ZWMC=74', 'ke hu jing li ', 'kehujingli', 'khjl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (75, '销售类别', '客户代表', 'K', 15, 57, null, 89, 'ZWLB=销售&ZWMC=75', 'ke hu dai biao ', 'kehudaibiao', 'khdb');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (76, '销售类别', '客户总监', 'K', 16, 57, null, 89, 'ZWLB=销售&ZWMC=76', 'ke hu zong jian ', 'kehuzongjian', 'khzj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (77, '销售类别', '销售其他', 'X', 17, 57, null, 89, 'ZWLB=销售&ZWMC=77', 'xiao shou qi ta ', 'xiaoshouqita', 'xsqt');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (78, '客服类别', '客服专员', 'K', 1, 58, '是', 89, 'ZWLB=客服&ZWMC=78', 'ke fu zhuan yuan ', 'kefuzhuanyuan', 'kfzy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (79, '客服类别', '电话客服', 'D', 2, 58, '是', 89, 'ZWLB=客服&ZWMC=79', 'dian hua ke fu ', 'dianhuakefu', 'dhkf');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (80, '客服类别', '客服经理/主管', 'K', 3, 58, null, 89, 'ZWLB=客服&ZWMC=80', 'ke fu jing li /zhu guan ', 'kefujingli/zhuguan', 'kfjl/zg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (81, '客服类别', '售前/售后客服', 'S', 4, 58, null, 89, 'ZWLB=客服&ZWMC=81', 'shou qian /shou hou ke fu ', 'shouqian/shouhoukefu', 'sq/shkf');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (82, '客服类别', '客户关系', 'K', 5, 58, null, 89, 'ZWLB=客服&ZWMC=82', 'ke hu guan xi ', 'kehuguanxi', 'khgx');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (83, '客服类别', '客服总监', 'K', 6, 58, null, 89, 'ZWLB=客服&ZWMC=83', 'ke fu zong jian ', 'kefuzongjian', 'kfzj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (84, '客服类别', '网络/在线客服', 'W', 7, 58, '是', 89, 'ZWLB=客服&ZWMC=84', 'wang luo /zai xian ke fu ', 'wangluo/zaixiankefu', 'wl/zxkf');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (85, '客服类别', '投诉专员', 'T', 8, 58, null, 89, 'ZWLB=客服&ZWMC=85', 'tou su zhuan yuan ', 'tousuzhuanyuan', 'tszy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (86, '客服类别', '客服其他', 'K', 9, 58, null, 89, 'ZWLB=客服&ZWMC=86', 'ke fu qi ta ', 'kefuqita', 'kfqt');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (87, '市场类别', '市场专员/助理', 'S', 1, 59, '是', 89, 'ZWLB=市场&ZWMC=87', 'shi chang zhuan yuan /zhu li ', 'shichangzhuanyuan/zhuli', 'sczy/zl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (88, '市场类别', '市场经理/主管', 'S', 2, 59, '是', 89, 'ZWLB=市场&ZWMC=88', 'shi chang jing li /zhu guan ', 'shichangjingli/zhuguan', 'scjl/zg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (89, '市场类别', '市场总监', 'S', 3, 59, null, 89, 'ZWLB=市场&ZWMC=89', 'shi chang zong jian ', 'shichangzongjian', 'sczj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (90, '市场类别', '市场营销', 'S', 4, 59, null, 89, 'ZWLB=市场&ZWMC=90', 'shi chang ying xiao ', 'shichangyingxiao', 'scyx');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (91, '市场类别', '市场拓展', 'S', 5, 59, null, 89, 'ZWLB=市场&ZWMC=91', 'shi chang tuo zhan ', 'shichangtuozhan', 'sctz');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (92, '市场类别', '市场调研', 'S', 6, 59, null, 89, 'ZWLB=市场&ZWMC=92', 'shi chang diao yan ', 'shichangdiaoyan', 'scdy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (93, '市场类别', '市场策划', 'S', 7, 59, null, 89, 'ZWLB=市场&ZWMC=93', 'shi chang ce hua ', 'shichangcehua', 'scch');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (94, '市场类别', '业务拓展专员', 'Y', 8, 59, null, 89, 'ZWLB=市场&ZWMC=94', 'ye wu tuo zhan zhuan yuan ', 'yewutuozhanzhuanyuan', 'ywtzzy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (95, '市场类别', '市场其他', 'S', 9, 59, null, 89, 'ZWLB=市场&ZWMC=95', 'shi chang qi ta ', 'shichangqita', 'scqt');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (96, '公关类别', '公关专员/助理', 'G', 1, 60, null, 89, 'ZWLB=公关&ZWMC=96', 'gong guan zhuan yuan /zhu li ', 'gongguanzhuanyuan/zhuli', 'ggzy/zl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (97, '公关类别', '公关经理/主管', 'G', 2, 60, null, 89, 'ZWLB=公关&ZWMC=97', 'gong guan jing li /zhu guan ', 'gongguanjingli/zhuguan', 'ggjl/zg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (98, '公关类别', '公关总监', 'G', 3, 60, null, 89, 'ZWLB=公关&ZWMC=98', 'gong guan zong jian ', 'gongguanzongjian', 'ggzj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (99, '公关类别', '企划经理/主管', 'Q', 4, 60, null, 89, 'ZWLB=公关&ZWMC=99', 'qi hua jing li /zhu guan ', 'qihuajingli/zhuguan', 'qhjl/zg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (100, '公关类别', '活动策划', 'H', 5, 60, null, 89, 'ZWLB=公关&ZWMC=100', 'huo dong ce hua ', 'huodongcehua', 'hdch');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (101, '公关类别', '会展专员', 'H', 6, 60, null, 89, 'ZWLB=公关&ZWMC=101', 'hui zhan zhuan yuan ', 'huizhanzhuanyuan', 'hzzy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (102, '公关类别', '公关其他', 'G', 7, 60, null, 89, 'ZWLB=公关&ZWMC=102', 'gong guan qi ta ', 'gongguanqita', 'ggqt');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (103, '行业类别', '人事', 'R', 1, 45, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (104, '行业类别', '行政', 'X', 2, 45, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (105, '行业类别', '后勤', 'H', 3, 45, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (106, '行业类别', '司机', 'S', 4, 45, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (107, '人事类别', '人事专员/助理', 'R', 1, 103, '是', 89, 'ZWLB=人事&ZWMC=107', 'ren shi zhuan yuan /zhu li ', 'renshizhuanyuan/zhuli', 'rszy/zl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (108, '人事类别', '人事经理/主管', 'R', 2, 103, '是', 89, 'ZWLB=人事&ZWMC=108', 'ren shi jing li /zhu guan ', 'renshijingli/zhuguan', 'rsjl/zg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (109, '人事类别', '人事总监', 'R', 3, 103, null, 89, 'ZWLB=人事&ZWMC=109', 'ren shi zong jian ', 'renshizongjian', 'rszj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (110, '人事类别', '猎头顾问', 'L', 4, 103, null, 89, 'ZWLB=人事&ZWMC=110', 'lie tou gu wen ', 'lietouguwen', 'ltgw');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (111, '人事类别', '培训专员/助理', 'P', 5, 103, '是', 89, 'ZWLB=人事&ZWMC=111', 'pei xun zhuan yuan /zhu li ', 'peixunzhuanyuan/zhuli', 'pxzy/zl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (112, '人事类别', '培训经理/主管', 'P', 6, 103, '是', 89, 'ZWLB=人事&ZWMC=112', 'pei xun jing li /zhu guan ', 'peixunjingli/zhuguan', 'pxjl/zg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (113, '人事类别', '招聘专员/助理', 'Z', 7, 103, '是', 89, 'ZWLB=人事&ZWMC=113', 'zhao pin zhuan yuan /zhu li ', 'zhaopinzhuanyuan/zhuli', 'zpzy/zl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (114, '人事类别', '招聘经理/主管', 'Z', 8, 103, '是', 89, 'ZWLB=人事&ZWMC=114', 'zhao pin jing li /zhu guan ', 'zhaopinjingli/zhuguan', 'zpjl/zg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (115, '行政类别', '文员/秘书', 'W', 1, 104, '是', 89, 'ZWLB=行政&ZWMC=115', 'wen yuan /mi shu ', 'wenyuan/mishu', 'wy/ms');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (116, '行政类别', '前台/接待', 'Q', 2, 104, '是', 89, 'ZWLB=行政&ZWMC=116', 'qian tai /jie dai ', 'qiantai/jiedai', 'qt/jd');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (118, '行政类别', '行政专员/助理', 'X', 4, 104, '是', 89, 'ZWLB=行政&ZWMC=118', 'xing zheng zhuan yuan /zhu li ', 'xingzhengzhuanyuan/zhuli', 'xzzy/zl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (119, '行政类别', '行政经理/主管', 'X', 5, 104, '是', 89, 'ZWLB=行政&ZWMC=119', 'xing zheng jing li /zhu guan ', 'xingzhengjingli/zhuguan', 'xzjl/zg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (120, '行政类别', '行政总监', 'X', 6, 104, null, 89, 'ZWLB=行政&ZWMC=120', 'xing zheng zong jian ', 'xingzhengzongjian', 'xzzj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (121, '行政类别', '经理助理/秘书', 'J', 7, 104, null, 89, 'ZWLB=行政&ZWMC=121', 'jing li zhu li /mi shu ', 'jinglizhuli/mishu', 'jlzl/ms');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (122, '后勤类别', '内勤人员', 'N', 8, 105, null, 89, 'ZWLB=后勤&ZWMC=122', 'nei qin ren yuan ', 'neiqinrenyuan', 'nqry');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (123, '后勤类别', '打字/录入员', 'D', 9, 105, null, 89, 'ZWLB=后勤&ZWMC=123', 'da zi /lu ru yuan ', 'dazi/luruyuan', 'dz/lry');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (124, '后勤类别', '后勤', 'H', 10, 105, null, 89, 'ZWLB=后勤&ZWMC=124', 'hou qin ', 'houqin', 'hq');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (125, '司机类别', '商务司机', 'S', 1, 106, '是', 89, 'ZWLB=司机&ZWMC=125', 'shang wu si ji ', 'shangwusiji', 'swsj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (126, '司机类别', '货运司机', 'H', 2, 106, '是', 89, 'ZWLB=司机&ZWMC=126', 'huo yun si ji ', 'huoyunsiji', 'hysj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (127, '司机类别', '客运司机', 'K', 3, 106, '是', 89, 'ZWLB=司机&ZWMC=127', 'ke yun si ji ', 'keyunsiji', 'kysj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (128, '司机类别', '出租车司机', 'C', 4, 106, '是', 89, 'ZWLB=司机&ZWMC=128', 'chu zu che si ji ', 'chuzuchesiji', 'czcsj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (129, '司机类别', '特种车司机', 'T', 5, 106, '是', 89, 'ZWLB=司机&ZWMC=129', 'te zhong che si ji ', 'tezhongchesiji', 'tzcsj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (130, '司机类别', '驾校教练', 'J', 6, 106, '是', 89, 'ZWLB=司机&ZWMC=130', 'jia xiao jiao lian ', 'jiaxiaojiaolian', 'jxjl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (131, '司机类别', '陪练', 'P', 7, 106, '是', 89, 'ZWLB=司机&ZWMC=131', 'pei lian ', 'peilian', 'pl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (132, '司机类别', '代驾', 'D', 8, 106, null, 89, 'ZWLB=司机&ZWMC=132', 'dai jia ', 'daijia', 'dj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (133, '行业类别', '普工/技工', 'P', 1, 46, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (134, '行业类别', '生产/研发', 'S', 2, 46, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (135, '行业类别', '质控/安防', 'Z', 3, 46, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (136, '行业类别', '机械/仪表仪器', 'J', 4, 46, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (137, '普工/技工类别', '普工', 'P', 1, 133, '是', 89, 'ZWLB=普工/技工&ZWMC=137', 'pu gong ', 'pugong', 'pg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (138, '普工/技工类别', '电工', 'D', 2, 133, '是', 89, 'ZWLB=普工/技工&ZWMC=138', 'dian gong ', 'diangong', 'dg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (139, '普工/技工类别', '木工', 'M', 3, 133, '是', 89, 'ZWLB=普工/技工&ZWMC=139', 'mu gong ', 'mugong', 'mg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (140, '普工/技工类别', '钳工', 'Q', 4, 133, null, 89, 'ZWLB=普工/技工&ZWMC=140', 'qian gong ', 'qiangong', 'qg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (141, '普工/技工类别', '焊工', 'H', 5, 133, null, 89, 'ZWLB=普工/技工&ZWMC=141', 'han gong ', 'hangong', 'hg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (142, '普工/技工类别', '钣金工', 'Z', 6, 133, null, 89, 'ZWLB=普工/技工&ZWMC=142', 'ban jin gong ', 'banjingong', 'bjg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (143, '普工/技工类别', '锅炉工', 'G', 7, 133, null, 89, 'ZWLB=普工/技工&ZWMC=143', 'guo lu gong ', 'guolugong', 'glg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (144, '普工/技工类别', '油漆工', 'Y', 8, 133, null, 89, 'ZWLB=普工/技工&ZWMC=144', 'you qi gong ', 'youqigong', 'yqg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (145, '普工/技工类别', '维修工', 'W', 9, 133, '是', 89, 'ZWLB=普工/技工&ZWMC=145', 'wei xiu gong ', 'weixiugong', 'wxg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (146, '普工/技工类别', '缝纫工', 'F', 10, 133, null, 89, 'ZWLB=普工/技工&ZWMC=146', 'feng ren gong ', 'fengrengong', 'frg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (147, '普工/技工类别', '水暖工', 'S', 11, 133, null, 89, 'ZWLB=普工/技工&ZWMC=147', 'shui nuan gong ', 'shuinuangong', 'sng');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (148, '普工/技工类别', '车工', 'C', 12, 133, null, 89, 'ZWLB=普工/技工&ZWMC=148', 'che gong ', 'chegong', 'cg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (149, '普工/技工类别', '电梯工', 'D', 13, 133, '是', 89, 'ZWLB=普工/技工&ZWMC=149', 'dian ti gong ', 'diantigong', 'dtg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (150, '普工/技工类别', '操作工', 'C', 14, 133, null, 89, 'ZWLB=普工/技工&ZWMC=150', 'cao zuo gong ', 'caozuogong', 'czg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (151, '普工/技工类别', '包装工', 'B', 15, 133, null, 89, 'ZWLB=普工/技工&ZWMC=151', 'bao zhuang gong ', 'baozhuanggong', 'bzg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (152, '普工/技工类别', '水泥工', 'S', 16, 133, null, 89, 'ZWLB=普工/技工&ZWMC=152', 'shui ni gong ', 'shuinigong', 'sng');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (153, '普工/技工类别', '钢筋工', 'G', 17, 133, null, 89, 'ZWLB=普工/技工&ZWMC=153', 'gang jin gong ', 'gangjingong', 'gjg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (154, '普工/技工类别', '管道工', 'G', 18, 133, null, 89, 'ZWLB=普工/技工&ZWMC=154', 'guan dao gong ', 'guandaogong', 'gdg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (155, '普工/技工类别', '纺织工', 'F', 19, 133, null, 89, 'ZWLB=普工/技工&ZWMC=155', 'fang zhi gong ', 'fangzhigong', 'fzg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (156, '普工/技工类别', '装卸工', 'Z', 20, 133, null, 89, 'ZWLB=普工/技工&ZWMC=156', 'zhuang xie gong ', 'zhuangxiegong', 'zxg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (157, '普工/技工类别', '样衣工', 'Y', 21, 133, null, 89, 'ZWLB=普工/技工&ZWMC=157', 'yang yi gong ', 'yangyigong', 'yyg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (158, '普工/技工类别', '染工', 'R', 22, 133, null, 89, 'ZWLB=普工/技工&ZWMC=158', 'ran gong ', 'rangong', 'rg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (159, '普工/技工类别', '瓦工', 'W', 23, 133, null, 89, 'ZWLB=普工/技工&ZWMC=159', 'wa gong ', 'wagong', 'wg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (160, '普工/技工类别', '压工', 'Y', 24, 133, null, 89, 'ZWLB=普工/技工&ZWMC=160', 'ya gong ', 'yagong', 'yg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (161, '普工/技工类别', '组装工', 'Z', 25, 133, null, 89, 'ZWLB=普工/技工&ZWMC=161', 'zu zhuang gong ', 'zuzhuanggong', 'zzg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (162, '普工/技工类别', '普工/技工其他', 'P', 26, 133, null, 89, 'ZWLB=普工/技工&ZWMC=162', 'pu gong /ji gong qi ta ', 'pugong/jigongqita', 'pg/jgqt');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (163, '生产/研发类别', '质量管理', 'Z', 1, 134, null, 89, 'ZWLB=生产/研发&ZWMC=163', 'zhi liang guan li ', 'zhiliangguanli', 'zlgl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (164, '生产/研发类别', '生产组长/主管', 'S', 2, 134, null, 89, 'ZWLB=生产/研发&ZWMC=164', 'sheng chan zu chang /zhu guan ', 'shengchanzuchang/zhuguan', 'sczc/zg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (165, '生产/研发类别', '车间主任', 'C', 3, 134, null, 89, 'ZWLB=生产/研发&ZWMC=165', 'che jian zhu ren ', 'chejianzhuren', 'cjzr');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (166, '生产/研发类别', '生产总监', 'S', 4, 134, null, 89, 'ZWLB=生产/研发&ZWMC=166', 'sheng chan zong jian ', 'shengchanzongjian', 'sczj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (167, '生产/研发类别', '厂长/副厂长', 'C', 5, 134, null, 89, 'ZWLB=生产/研发&ZWMC=167', 'chang chang /fu chang chang ', 'changchang/fuchangchang', 'cc/fcc');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (168, '生产/研发类别', '运营经理/主管', 'Y', 6, 134, null, 89, 'ZWLB=生产/研发&ZWMC=168', 'yun ying jing li /zhu guan ', 'yunyingjingli/zhuguan', 'yyjl/zg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (169, '生产/研发类别', '生产专员', 'S', 7, 134, null, 89, 'ZWLB=生产/研发&ZWMC=169', 'sheng chan zhuan yuan ', 'shengchanzhuanyuan', 'sczy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (170, '生产/研发类别', '技术工程师', 'J', 8, 134, '是', 89, 'ZWLB=生产/研发&ZWMC=170', 'ji shu gong cheng shi ', 'jishugongchengshi', 'jsgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (171, '生产/研发类别', '维修工程师', 'W', 9, 134, null, 89, 'ZWLB=生产/研发&ZWMC=171', 'wei xiu gong cheng shi ', 'weixiugongchengshi', 'wxgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (172, '生产/研发类别', '结构工程师', 'J', 10, 134, null, 89, 'ZWLB=生产/研发&ZWMC=172', 'jie gou gong cheng shi ', 'jiegougongchengshi', 'jggcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (173, '生产/研发类别', '工业工程师', 'G', 11, 134, null, 89, 'ZWLB=生产/研发&ZWMC=173', 'gong ye gong cheng shi ', 'gongyegongchengshi', 'gygcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (174, '生产/研发类别', '材料工程师', 'C', 12, 134, null, 89, 'ZWLB=生产/研发&ZWMC=174', 'cai liao gong cheng shi ', 'cailiaogongchengshi', 'clgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (175, '生产/研发类别', '包装工程师', 'B', 13, 134, null, 89, 'ZWLB=生产/研发&ZWMC=175', 'bao zhuang gong cheng shi ', 'baozhuanggongchengshi', 'bzgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (176, '生产/研发类别', '高级工程师', 'G', 14, 134, '是', 89, 'ZWLB=生产/研发&ZWMC=176', 'gao ji gong cheng shi ', 'gaojigongchengshi', 'gjgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (177, '生产/研发类别', '生产/研发其他', 'S', 15, 134, null, 89, 'ZWLB=生产/研发&ZWMC=177', 'sheng chan /yan fa qi ta ', 'shengchan/yanfaqita', 'sc/yfqt');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (178, '质控/安防类别', '质量管理', 'Z', 1, 135, '是', 89, 'ZWLB=质控/安防&ZWMC=178', 'zhi liang guan li ', 'zhiliangguanli', 'zlgl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (179, '质控/安防类别', '测试经理', 'C', 2, 135, '是', 89, 'ZWLB=质控/安防&ZWMC=179', 'ce shi jing li ', 'ceshijingli', 'csjl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (180, '质控/安防类别', '质量检测员', 'Z', 3, 135, '是', 89, 'ZWLB=质控/安防&ZWMC=180', 'zhi liang jian ce yuan ', 'zhiliangjianceyuan', 'zljcy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (181, '质控/安防类别', '测试工程师', 'C', 4, 135, '是', 89, 'ZWLB=质控/安防&ZWMC=181', 'ce shi gong cheng shi ', 'ceshigongchengshi', 'csgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (182, '质控/安防类别', '安全消防', 'A', 5, 135, null, 89, 'ZWLB=质控/安防&ZWMC=182', 'an quan xiao fang ', 'anquanxiaofang', 'aqxf');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (183, '质控/安防类别', '安全管理', 'A', 6, 135, null, 89, 'ZWLB=质控/安防&ZWMC=183', 'an quan guan li ', 'anquanguanli', 'aqgl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (184, '质控/安防类别', '故障分析专员', 'G', 7, 135, null, 89, 'ZWLB=质控/安防&ZWMC=184', 'gu zhang fen xi zhuan yuan ', 'guzhangfenxizhuanyuan', 'gzfxzy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (185, '质控/安防类别', '质控/安防其他', 'Z', 8, 135, null, 89, 'ZWLB=质控/安防&ZWMC=185', 'zhi kong /an fang qi ta ', 'zhikong/anfangqita', 'zk/afqt');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (186, '机械/仪表仪器类别', '机械工程师', 'J', 1, 136, null, 89, 'ZWLB=机械/仪表仪器&ZWMC=186', 'ji xie gong cheng shi ', 'jixiegongchengshi', 'jxgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (187, '机械/仪表仪器类别', '机电工程师', 'J', 2, 136, null, 89, 'ZWLB=机械/仪表仪器&ZWMC=187', 'ji dian gong cheng shi ', 'jidiangongchengshi', 'jdgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (188, '机械/仪表仪器类别', '版图设计工程师', 'B', 3, 136, null, 89, 'ZWLB=机械/仪表仪器&ZWMC=188', 'ban tu she ji gong cheng shi ', 'bantushejigongchengshi', 'btsjgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (189, '机械/仪表仪器类别', '结构工程师', 'J', 4, 136, '是', 89, 'ZWLB=机械/仪表仪器&ZWMC=189', 'jie gou gong cheng shi ', 'jiegougongchengshi', 'jggcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (190, '机械/仪表仪器类别', '工艺工程师', 'G', 5, 136, null, 89, 'ZWLB=机械/仪表仪器&ZWMC=190', 'gong yi gong cheng shi ', 'gongyigongchengshi', 'gygcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (191, '机械/仪表仪器类别', '气动工程师', 'Q', 6, 136, null, 89, 'ZWLB=机械/仪表仪器&ZWMC=191', 'qi dong gong cheng shi ', 'qidonggongchengshi', 'qdgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (192, '机械/仪表仪器类别', '数控工程师', 'S', 7, 136, '是', 89, 'ZWLB=机械/仪表仪器&ZWMC=192', 'shu kong gong cheng shi ', 'shukonggongchengshi', 'skgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (193, '机械/仪表仪器类别', '设备管理', 'S', 8, 136, null, 89, 'ZWLB=机械/仪表仪器&ZWMC=193', 'she bei guan li ', 'shebeiguanli', 'sbgl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (194, '机械/仪表仪器类别', '设备维修', 'S', 9, 136, null, 89, 'ZWLB=机械/仪表仪器&ZWMC=194', 'she bei wei xiu ', 'shebeiweixiu', 'sbwx');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (195, '机械/仪表仪器类别', '绘图员', 'H', 10, 136, null, 89, 'ZWLB=机械/仪表仪器&ZWMC=195', 'hui tu yuan ', 'huituyuan', 'hty');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (196, '机械/仪表仪器类别', '仪表仪器', 'Y', 11, 136, null, 89, 'ZWLB=机械/仪表仪器&ZWMC=196', 'yi biao yi qi ', 'yibiaoyiqi', 'ybyq');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (197, '机械/仪表仪器类别', '机械其他', 'J', 12, 136, null, 89, 'ZWLB=机械/仪表仪器&ZWMC=197', 'ji xie qi ta ', 'jixieqita', 'jxqt');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (198, '行业类别', '律师/法务', 'L', 1, 47, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (199, '行业类别', '教育培训', 'J', 2, 47, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (200, '行业类别', '翻译', 'F', 3, 47, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (201, '行业类别', '编辑/印刷/出版', 'B', 4, 47, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (202, '律师/法务类别', '律师/律师助理', 'L', 1, 198, '是', 89, 'ZWLB=律师/法务&ZWMC=202', 'lv shi /lv shi zhu li ', 'lvshi/lvshizhuli', 'ls/lszl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (203, '律师/法务类别', '法务专员/助理', 'F', 2, 198, '是', 89, 'ZWLB=律师/法务&ZWMC=203', 'fa wu zhuan yuan /zhu li ', 'fawuzhuanyuan/zhuli', 'fwzy/zl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (204, '律师/法务类别', '法务主管', 'F', 3, 198, null, 89, 'ZWLB=律师/法务&ZWMC=204', 'fa wu zhu guan ', 'fawuzhuguan', 'fwzg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (205, '律师/法务类别', '法律顾问', 'F', 4, 198, '是', 89, 'ZWLB=律师/法务&ZWMC=205', 'fa lv gu wen ', 'falvguwen', 'flgw');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (206, '律师/法务类别', '产权/专利顾问', 'C', 5, 198, null, 89, 'ZWLB=律师/法务&ZWMC=206', 'chan quan /zhuan li gu wen ', 'chanquan/zhuanliguwen', 'cq/zlgw');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (207, '律师/法务类别', '合同管理', 'H', 6, 198, null, 89, 'ZWLB=律师/法务&ZWMC=207', 'he tong guan li ', 'hetongguanli', 'htgl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (208, '教育培训类别', '教师/助教', 'J', 1, 199, '是', 89, 'ZWLB=教育培训&ZWMC=208', 'jiao shi /zhu jiao ', 'jiaoshi/zhujiao', 'js/zj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (209, '教育培训类别', '家教', 'J', 2, 199, '是', 89, 'ZWLB=教育培训&ZWMC=209', 'jia jiao ', 'jiajiao', 'jj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (210, '教育培训类别', '幼教/早教', 'Y', 3, 199, '是', 89, 'ZWLB=教育培训&ZWMC=210', 'you jiao /zao jiao ', 'youjiao/zaojiao', 'yj/zj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (211, '教育培训类别', '培训策划', 'P', 4, 199, '是', 89, 'ZWLB=教育培训&ZWMC=211', 'pei xun ce hua ', 'peixuncehua', 'pxch');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (213, '教育培训类别', '学术研究', 'X', 6, 199, null, 89, 'ZWLB=教育培训&ZWMC=213', 'xue shu yan jiu ', 'xueshuyanjiu', 'xsyj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (213, '教育培训类别', '培训师/讲师', 'P', 5, 199, '是', 89, 'ZWLB=教育培训&ZWMC=213', 'pei xun shi /jiang shi ', 'peixunshi/jiangshi', 'pxs/js');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (214, '教育培训类别', '小学教师', 'X', 7, 199, '是', 89, 'ZWLB=教育培训&ZWMC=214', 'xiao xue jiao shi ', 'xiaoxuejiaoshi', 'xxjs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (215, '教育培训类别', '初中教师', 'C', 8, 199, '是', 89, 'ZWLB=教育培训&ZWMC=215', 'chu zhong jiao shi ', 'chuzhongjiaoshi', 'czjs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (216, '教育培训类别', '高中教师', 'G', 9, 199, '是', 89, 'ZWLB=教育培训&ZWMC=216', 'gao zhong jiao shi ', 'gaozhongjiaoshi', 'gzjs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (217, '教育培训类别', '大学教师', 'D', 10, 199, '是', 89, 'ZWLB=教育培训&ZWMC=217', 'da xue jiao shi ', 'daxuejiaoshi', 'dxjs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (218, '教育培训类别', '职业技术教师', 'Z', 11, 199, '是', 89, 'ZWLB=教育培训&ZWMC=218', 'zhi ye ji shu jiao shi ', 'zhiyejishujiaoshi', 'zyjsjs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (219, '教育培训类别', '兼职教师', 'J', 12, 199, '是', 89, 'ZWLB=教育培训&ZWMC=219', 'jian zhi jiao shi ', 'jianzhijiaoshi', 'jzjs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (220, '教育培训类别', '理科教师', 'L', 13, 199, null, 89, 'ZWLB=教育培训&ZWMC=220', 'li ke jiao shi ', 'likejiaoshi', 'lkjs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (221, '教育培训类别', '文科教师', 'W', 14, 199, null, 89, 'ZWLB=教育培训&ZWMC=221', 'wen ke jiao shi ', 'wenkejiaoshi', 'wkjs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (222, '教育培训类别', '外语教师', 'W', 15, 199, null, 89, 'ZWLB=教育培训&ZWMC=222', 'wai yu jiao shi ', 'waiyujiaoshi', 'wyjs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (223, '教育培训类别', '体育教师', 'T', 16, 199, null, 89, 'ZWLB=教育培训&ZWMC=223', 'ti yu jiao shi ', 'tiyujiaoshi', 'tyjs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (224, '教育培训类别', '音乐/美术教师', 'Y', 17, 199, '是', 89, 'ZWLB=教育培训&ZWMC=224', 'yin le /mei shu jiao shi ', 'yinle/meishujiaoshi', 'yl/msjs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (225, '教育培训类别', '课程顾问', 'K', 18, 199, null, 89, 'ZWLB=教育培训&ZWMC=225', 'ke cheng gu wen ', 'kechengguwen', 'kcgw');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (226, '翻译类别', '英语', 'Y', 1, 200, null, 89, 'ZWLB=翻译&ZWMC=226', 'ying yu ', 'yingyu', 'yy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (227, '翻译类别', '日语', 'R', 2, 200, null, 89, 'ZWLB=翻译&ZWMC=227', 'ri yu ', 'riyu', 'ry');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (228, '翻译类别', '韩语', 'H', 3, 200, null, 89, 'ZWLB=翻译&ZWMC=228', 'han yu ', 'hanyu', 'hy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (229, '翻译类别', '法语', 'F', 4, 200, null, 89, 'ZWLB=翻译&ZWMC=229', 'fa yu ', 'fayu', 'fy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (230, '翻译类别', '德语', 'D', 5, 200, null, 89, 'ZWLB=翻译&ZWMC=230', 'de yu ', 'deyu', 'dy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (231, '翻译类别', '西班牙语', 'X', 6, 200, null, 89, 'ZWLB=翻译&ZWMC=231', 'xi ban ya yu ', 'xibanyayu', 'xbyy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (232, '翻译类别', '俄语', 'E', 7, 200, null, 89, 'ZWLB=翻译&ZWMC=232', 'dong yu ', 'dongyu', 'dy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (233, '翻译类别', '意大利语', 'Y', 8, 200, null, 89, 'ZWLB=翻译&ZWMC=233', 'yi da li yu ', 'yidaliyu', 'ydly');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (234, '翻译类别', '葡萄牙语', 'P', 9, 200, null, 89, 'ZWLB=翻译&ZWMC=234', 'pu tao ya yu ', 'putaoyayu', 'ptyy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (235, '翻译类别', '其他语种', 'Q', 10, 200, null, 89, 'ZWLB=翻译&ZWMC=235', 'qi ta yu zhong ', 'qitayuzhong', 'qtyz');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (236, '编辑/印刷/出版类别', '记者', 'J', 1, 201, null, 89, 'ZWLB=编辑/印刷/出版&ZWMC=236', 'ji zhe ', 'jizhe', 'jz');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (237, '编辑/印刷/出版类别', '编辑/撰稿', 'B', 2, 201, '是', 89, 'ZWLB=编辑/印刷/出版&ZWMC=237', 'bian ji /zhuan gao ', 'bianji/zhuangao', 'bj/zg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (238, '编辑/印刷/出版类别', '出版/发行', 'C', 3, 201, null, 89, 'ZWLB=编辑/印刷/出版&ZWMC=238', 'chu ban /fa xing ', 'chuban/faxing', 'cb/fx');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (239, '编辑/印刷/出版类别', '排版设计', 'P', 4, 201, '是', 89, 'ZWLB=编辑/印刷/出版&ZWMC=239', 'pai ban she ji ', 'paibansheji', 'pbsj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (240, '编辑/印刷/出版类别', '美术编辑', 'M', 5, 201, '是', 89, 'ZWLB=编辑/印刷/出版&ZWMC=240', 'mei shu bian ji ', 'meishubianji', 'msbj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (241, '编辑/印刷/出版类别', '校对员', 'X', 6, 201, null, 89, 'ZWLB=编辑/印刷/出版&ZWMC=241', 'xiao dong yuan ', 'xiaodongyuan', 'xdy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (242, '编辑/印刷/出版类别', '录入员', 'L', 7, 201, null, 89, 'ZWLB=编辑/印刷/出版&ZWMC=242', 'lu ru yuan ', 'luruyuan', 'lry');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (243, '编辑/印刷/出版类别', '装订员', 'Z', 8, 201, null, 89, 'ZWLB=编辑/印刷/出版&ZWMC=243', 'zhuang ding yuan ', 'zhuangdingyuan', 'zdy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (244, '编辑/印刷/出版类别', '作家/编剧', 'Z', 9, 201, null, 89, 'ZWLB=编辑/印刷/出版&ZWMC=244', 'zuo jia /bian ju ', 'zuojia/bianju', 'zj/bj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (245, '编辑/印刷/出版类别', '晒版员', 'S', 10, 201, null, 89, 'ZWLB=编辑/印刷/出版&ZWMC=245', 'shai ban yuan ', 'shaibanyuan', 'sby');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (246, '编辑/印刷/出版类别', '印刷员', 'Y', 11, 201, null, 89, 'ZWLB=编辑/印刷/出版&ZWMC=246', 'yin shua yuan ', 'yinshuayuan', 'ysy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (247, '行业类别', '餐饮', 'C', 1, 48, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (248, '行业类别', '家政/保洁/保安', 'J', 2, 48, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (249, '行业类别', '美容/美发', 'M', 3, 48, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (250, '行业类别', '运动/健身', 'Y', 4, 48, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (252, '行业类别', '旅游/酒店', 'L', 6, 48, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (253, '行业类别', '超市/淘宝/网店', 'C', 7, 48, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (254, '餐饮类别', '服务员', 'F', 1, 247, '是', 89, 'ZWLB=餐饮&ZWMC=254', 'fu wu yuan ', 'fuwuyuan', 'fwy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (255, '餐饮类别', '送餐员', 'S', 2, 247, '是', 89, 'ZWLB=餐饮&ZWMC=255', 'song can yuan ', 'songcanyuan', 'scy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (256, '餐饮类别', '厨师/厨师长', 'C', 3, 247, '是', 89, 'ZWLB=餐饮&ZWMC=256', 'chu shi /chu shi chang ', 'chushi/chushichang', 'cs/csc');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (257, '餐饮类别', '传菜员', 'C', 4, 247, null, 89, 'ZWLB=餐饮&ZWMC=257', 'chuan cai yuan ', 'chuancaiyuan', 'ccy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (258, '餐饮类别', '洗碗工', 'X', 5, 247, null, 89, 'ZWLB=餐饮&ZWMC=258', 'xi wan gong ', 'xiwangong', 'xwg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (259, '餐饮类别', '面点师', 'M', 6, 247, null, 89, 'ZWLB=餐饮&ZWMC=259', 'mian dian shi ', 'miandianshi', 'mds');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (260, '餐饮类别', '茶艺师', 'C', 7, 247, null, 89, 'ZWLB=餐饮&ZWMC=260', 'cha yi shi ', 'chayishi', 'cys');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (261, '餐饮类别', '咖啡师', 'K', 8, 247, null, 89, 'ZWLB=餐饮&ZWMC=261', 'ka fei shi ', 'kafeishi', 'kfs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (262, '餐饮类别', '调酒师', 'D', 9, 247, null, 89, 'ZWLB=餐饮&ZWMC=262', 'diao jiu shi ', 'diaojiushi', 'djs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (263, '餐饮类别', '西点师', 'X', 10, 247, null, 89, 'ZWLB=餐饮&ZWMC=263', 'xi dian shi ', 'xidianshi', 'xds');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (264, '餐饮类别', '烧烤师', 'S', 11, 247, '是', 89, 'ZWLB=餐饮&ZWMC=264', 'shao kao shi ', 'shaokaoshi', 'sks');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (265, '餐饮类别', '吧台员', 'B', 12, 247, '是', 89, 'ZWLB=餐饮&ZWMC=265', 'ba tai yuan ', 'bataiyuan', 'bty');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (266, '餐饮类别', '收银员', 'S', 13, 247, '是', 89, 'ZWLB=餐饮&ZWMC=266', 'shou yin yuan ', 'shouyinyuan', 'syy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (267, '餐饮类别', '迎宾/接待', 'Y', 14, 247, '是', 89, 'ZWLB=餐饮&ZWMC=267', 'ying bin /jie dai ', 'yingbin/jiedai', 'yb/jd');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (268, '餐饮类别', '后厨', 'H', 15, 247, '是', 89, 'ZWLB=餐饮&ZWMC=268', 'hou chu ', 'houchu', 'hc');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (269, '餐饮类别', '杂工', 'Z', 16, 247, '是', 89, 'ZWLB=餐饮&ZWMC=269', 'za gong ', 'zagong', 'zg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (270, '餐饮类别', '学徒', 'X', 17, 247, null, 89, 'ZWLB=餐饮&ZWMC=270', 'xue tu ', 'xuetu', 'xt');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (271, '家政/保洁/保安类别', '保洁', 'B', 1, 248, '是', 89, 'ZWLB=家政/保洁/保安&ZWMC=271', 'bao jie ', 'baojie', 'bj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (272, '家政/保洁/保安类别', '保姆', 'B', 2, 248, '是', 89, 'ZWLB=家政/保洁/保安&ZWMC=272', 'bao mu ', 'baomu', 'bm');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (273, '家政/保洁/保安类别', '月嫂', 'Y', 3, 248, '是', 89, 'ZWLB=家政/保洁/保安&ZWMC=273', 'yue sao ', 'yuesao', 'ys');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (274, '家政/保洁/保安类别', '保安', 'B', 4, 248, '是', 89, 'ZWLB=家政/保洁/保安&ZWMC=274', 'bao an ', 'baoan', 'ba');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (275, '家政/保洁/保安类别', '育婴师', 'Y', 5, 248, '是', 89, 'ZWLB=家政/保洁/保安&ZWMC=275', 'yu ying shi ', 'yuyingshi', 'yys');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (276, '家政/保洁/保安类别', '洗衣工', 'X', 6, 248, null, 89, 'ZWLB=家政/保洁/保安&ZWMC=276', 'xi yi gong ', 'xiyigong', 'xyg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (277, '家政/保洁/保安类别', '钟点工', 'Z', 7, 248, '是', 89, 'ZWLB=家政/保洁/保安&ZWMC=277', 'zhong dian gong ', 'zhongdiangong', 'zdg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (278, '家政/保洁/保安类别', '护工', 'H', 8, 248, null, 89, 'ZWLB=家政/保洁/保安&ZWMC=278', 'hu gong ', 'hugong', 'hg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (279, '家政/保洁/保安类别', '送水工', 'S', 9, 248, null, 89, 'ZWLB=家政/保洁/保安&ZWMC=279', 'song shui gong ', 'songshuigong', 'ssg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (280, '家政/保洁/保安类别', '家电维修工', 'J', 10, 248, null, 89, 'ZWLB=家政/保洁/保安&ZWMC=280', 'jia dian wei xiu gong ', 'jiadianweixiugong', 'jdwxg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (281, '家政/保洁/保安类别', '家庭管家', 'J', 11, 248, null, 89, 'ZWLB=家政/保洁/保安&ZWMC=281', 'jia ting guan jia ', 'jiatingguanjia', 'jtgj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (282, '美容/美发类别', '发型师', 'F', 1, 249, '是', 89, 'ZWLB=美容/美发&ZWMC=282', 'fa xing shi ', 'faxingshi', 'fxs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (283, '美容/美发类别', '美发助理', 'M', 2, 249, null, 89, 'ZWLB=美容/美发&ZWMC=283', 'mei fa zhu li ', 'meifazhuli', 'mfzl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (284, '美容/美发类别', '美甲师', 'M', 3, 249, null, 89, 'ZWLB=美容/美发&ZWMC=284', 'mei jia shi ', 'meijiashi', 'mjs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (285, '美容/美发类别', '美容师', 'M', 4, 249, '是', 89, 'ZWLB=美容/美发&ZWMC=285', 'mei rong shi ', 'meirongshi', 'mrs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (286, '美容/美发类别', '美容顾问', 'M', 5, 249, null, 89, 'ZWLB=美容/美发&ZWMC=286', 'mei rong gu wen ', 'meirongguwen', 'mrgw');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (287, '美容/美发类别', '美容助理', 'M', 6, 249, null, 89, 'ZWLB=美容/美发&ZWMC=287', 'mei rong zhu li ', 'meirongzhuli', 'mrzl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (288, '美容/美发类别', '美容店长', 'M', 7, 249, null, 89, 'ZWLB=美容/美发&ZWMC=288', 'mei rong dian chang ', 'meirongdianchang', 'mrdc');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (289, '美容/美发类别', '洗头工', 'X', 8, 249, '是', 89, 'ZWLB=美容/美发&ZWMC=289', 'xi tou gong ', 'xitougong', 'xtg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (290, '美容/美发类别', '美体师', 'M', 9, 249, null, 89, 'ZWLB=美容/美发&ZWMC=290', 'mei ti shi ', 'meitishi', 'mts');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (291, '美容/美发类别', '美体/瘦身顾问', 'M', 10, 249, null, 89, 'ZWLB=美容/美发&ZWMC=291', 'mei ti /shou shen gu wen ', 'meiti/shoushenguwen', 'mt/ssgw');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (292, '美容/美发类别', '宠物美容', 'C', 11, 249, '是', 89, 'ZWLB=美容/美发&ZWMC=292', 'chong wu mei rong ', 'chongwumeirong', 'cwmr');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (293, '运动/健身类别', '体育教练', 'T', 1, 250, '是', 89, 'ZWLB=运动/健身&ZWMC=293', 'ti yu jiao lian ', 'tiyujiaolian', 'tyjl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (294, '运动/健身类别', '瑜伽老师', 'Z', 2, 250, '是', 89, 'ZWLB=运动/健身&ZWMC=294', 'yu jia lao shi ', 'yujialaoshi', 'yjls');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (295, '运动/健身类别', '健身教练', 'J', 3, 250, '是', 89, 'ZWLB=运动/健身&ZWMC=295', 'jian shen jiao lian ', 'jianshenjiaolian', 'jsjl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (296, '运动/健身类别', '舞蹈老师', 'W', 4, 250, null, 89, 'ZWLB=运动/健身&ZWMC=296', 'wu dao lao shi ', 'wudaolaoshi', 'wdls');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (297, '运动/健身类别', '高尔夫助理', 'G', 5, 250, null, 89, 'ZWLB=运动/健身&ZWMC=297', 'gao dong fu zhu li ', 'gaodongfuzhuli', 'gdfzl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (298, '运动/健身类别', '游泳教练', 'Y', 6, 250, null, 89, 'ZWLB=运动/健身&ZWMC=298', 'you yong jiao lian ', 'youyongjiaolian', 'yyjl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (299, '运动/健身类别', '台球教练', 'T', 7, 250, null, 89, 'ZWLB=运动/健身&ZWMC=299', 'tai qiu jiao lian ', 'taiqiujiaolian', 'tqjl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (300, '运动/健身类别', '搓澡工', 'C', 8, 250, null, 89, 'ZWLB=运动/健身&ZWMC=300', 'cuo zao gong ', 'cuozaogong', 'czg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (301, '运动/健身类别', '足疗师', 'Z', 9, 250, null, 89, 'ZWLB=运动/健身&ZWMC=301', 'zu liao shi ', 'zuliaoshi', 'zls');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (302, '运动/健身类别', '按摩师', 'A', 10, 250, null, 89, 'ZWLB=运动/健身&ZWMC=302', 'an mo shi ', 'anmoshi', 'ams');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (303, '运动/健身类别', '针灸推拿', 'Z', 11, 250, null, 89, 'ZWLB=运动/健身&ZWMC=303', 'zhen jiu tui na ', 'zhenjiutuina', 'zjtn');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (304, '旅游/酒店类别', '酒店前台', 'J', 1, 252, '是', 89, 'ZWLB=旅游/酒店&ZWMC=304', 'jiu dian qian tai ', 'jiudianqiantai', 'jdqt');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (305, '旅游/酒店类别', '酒店服务员', 'J', 2, 252, '是', 89, 'ZWLB=旅游/酒店&ZWMC=305', 'jiu dian fu wu yuan ', 'jiudianfuwuyuan', 'jdfwy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (306, '旅游/酒店类别', '行李员', 'X', 3, 252, null, 89, 'ZWLB=旅游/酒店&ZWMC=306', 'xing li yuan ', 'xingliyuan', 'xly');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (307, '旅游/酒店类别', '大堂经理', 'D', 4, 252, null, 89, 'ZWLB=旅游/酒店&ZWMC=307', 'da tang jing li ', 'datangjingli', 'dtjl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (308, '旅游/酒店类别', '酒店经理', 'J', 5, 252, null, 89, 'ZWLB=旅游/酒店&ZWMC=308', 'jiu dian jing li ', 'jiudianjingli', 'jdjl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (309, '旅游/酒店类别', '酒店管家', 'J', 6, 252, null, 89, 'ZWLB=旅游/酒店&ZWMC=309', 'jiu dian guan jia ', 'jiudianguanjia', 'jdgj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (310, '旅游/酒店类别', '酒店店长', 'J', 7, 252, null, 89, 'ZWLB=旅游/酒店&ZWMC=310', 'jiu dian dian chang ', 'jiudiandianchang', 'jddc');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (311, '旅游/酒店类别', '试睡师', 'S', 8, 252, null, 89, 'ZWLB=旅游/酒店&ZWMC=311', 'shi shui shi ', 'shishuishi', 'sss');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (312, '旅游/酒店类别', '导游', 'D', 9, 252, null, 89, 'ZWLB=旅游/酒店&ZWMC=312', 'dao you ', 'daoyou', 'dy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (313, '旅游/酒店类别', '旅游顾问', 'L', 10, 252, null, 89, 'ZWLB=旅游/酒店&ZWMC=313', 'lv you gu wen ', 'lvyouguwen', 'lygw');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (314, '旅游/酒店类别', '签证专员', 'Q', 11, 252, null, 89, 'ZWLB=旅游/酒店&ZWMC=314', 'qian zheng zhuan yuan ', 'qianzhengzhuanyuan', 'qzzy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (315, '旅游/酒店类别', '订票员', 'D', 12, 252, null, 89, 'ZWLB=旅游/酒店&ZWMC=315', 'ding piao yuan ', 'dingpiaoyuan', 'dpy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (316, '旅游/酒店类别', '旅游计调', 'L', 13, 252, null, 89, 'ZWLB=旅游/酒店&ZWMC=316', 'lv you ji diao ', 'lvyoujidiao', 'lyjd');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (317, '超市/淘宝/网店类别', '营业员', 'Y', 14, 252, '是', 89, 'ZWLB=超市/淘宝/网店&ZWMC=317', 'ying ye yuan ', 'yingyeyuan', 'yyy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (318, '超市/淘宝/网店类别', '收银员', 'S', 1, 253, '是', 89, 'ZWLB=超市/淘宝/网店&ZWMC=318', 'shou yin yuan ', 'shouyinyuan', 'syy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (319, '超市/淘宝/网店类别', '促销员/导购员', 'C', 2, 253, '是', 89, 'ZWLB=超市/淘宝/网店&ZWMC=319', 'cu xiao yuan /dao gou yuan ', 'cuxiaoyuan/daogouyuan', 'cxy/dgy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (320, '超市/淘宝/网店类别', '理货员/陈列员', 'L', 3, 253, '是', 89, 'ZWLB=超市/淘宝/网店&ZWMC=320', 'li huo yuan /chen lie yuan ', 'lihuoyuan/chenlieyuan', 'lhy/cly');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (321, '超市/淘宝/网店类别', '品类管理员', 'P', 4, 253, null, 89, 'ZWLB=超市/淘宝/网店&ZWMC=321', 'pin lei guan li yuan ', 'pinleiguanliyuan', 'plgly');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (322, '超市/淘宝/网店类别', '店长/卖场经理', 'D', 5, 253, null, 89, 'ZWLB=超市/淘宝/网店&ZWMC=322', 'dian chang /mai chang jing li ', 'dianchang/maichangjingli', 'dc/mcjl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (323, '超市/淘宝/网店类别', '淘宝客服', 'T', 6, 253, '是', 89, 'ZWLB=超市/淘宝/网店&ZWMC=323', 'tao bao ke fu ', 'taobaokefu', 'tbkf');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (324, '超市/淘宝/网店类别', '淘宝美工', 'T', 7, 253, '是', 89, 'ZWLB=超市/淘宝/网店&ZWMC=324', 'tao bao mei gong ', 'taobaomeigong', 'tbmg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (325, '超市/淘宝/网店类别', '淘宝店长', 'T', 8, 253, '是', 89, 'ZWLB=超市/淘宝/网店&ZWMC=325', 'tao bao dian chang ', 'taobaodianchang', 'tbdc');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (326, '超市/淘宝/网店类别', '网店推广', 'W', 9, 253, null, 89, 'ZWLB=超市/淘宝/网店&ZWMC=326', 'wang dian tui guang ', 'wangdiantuiguang', 'wdtg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (327, '超市/淘宝/网店类别', '网店编辑', 'W', 10, 253, null, 89, 'ZWLB=超市/淘宝/网店&ZWMC=327', 'wang dian bian ji ', 'wangdianbianji', 'wdbj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (328, '超市/淘宝/网店类别', '活动策划', 'H', 11, 253, null, 89, 'ZWLB=超市/淘宝/网店&ZWMC=328', 'huo dong ce hua ', 'huodongcehua', 'hdch');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (329, '超市/淘宝/网店类别', '网店运营', 'W', 12, 253, null, 89, 'ZWLB=超市/淘宝/网店&ZWMC=329', 'wang dian yun ying ', 'wangdianyunying', 'wdyy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (330, '行业类别', '医药', 'Y', 1, 49, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (331, '行业类别', '医生', 'Y', 2, 49, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (332, '行业类别', '医护管理', 'Y', 3, 49, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (333, '行业类别', '保险', 'B', 4, 49, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (334, '医药类别', '医药研发/生产', 'Y', 1, 330, null, 89, 'ZWLB=医药&ZWMC=334', 'yi yao yan fa /sheng chan ', 'yiyaoyanfa/shengchan', 'yyyf/sc');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (335, '医药类别', '生物工程', 'S', 2, 330, null, 89, 'ZWLB=医药&ZWMC=335', 'sheng wu gong cheng ', 'shengwugongcheng', 'swgc');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (336, '医药类别', '生物制药', 'S', 3, 330, null, 89, 'ZWLB=医药&ZWMC=336', 'sheng wu zhi yao ', 'shengwuzhiyao', 'swzy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (337, '医药类别', '药品临床试验', 'Y', 4, 330, null, 89, 'ZWLB=医药&ZWMC=337', 'yao pin lin chuang shi yan ', 'yaopinlinchuangshiyan', 'yplcsy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (338, '医药类别', '药品生产', 'Y', 5, 330, null, 89, 'ZWLB=医药&ZWMC=338', 'yao pin sheng chan ', 'yaopinshengchan', 'ypsc');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (339, '医药类别', '化学分析员', 'H', 6, 330, null, 89, 'ZWLB=医药&ZWMC=339', 'hua xue fen xi yuan ', 'huaxuefenxiyuan', 'hxfxy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (340, '医药类别', '药品质量管理', 'Y', 7, 330, null, 89, 'ZWLB=医药&ZWMC=340', 'yao pin zhi liang guan li ', 'yaopinzhiliangguanli', 'ypzlgl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (341, '医药类别', '药品招商', 'Y', 8, 330, null, 89, 'ZWLB=医药&ZWMC=341', 'yao pin zhao shang ', 'yaopinzhaoshang', 'ypzs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (342, '医药类别', '药品市场推广', 'Y', 9, 330, null, 89, 'ZWLB=医药&ZWMC=342', 'yao pin shi chang tui guang ', 'yaopinshichangtuiguang', 'ypsctg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (343, '医药类别', '医药代表', 'Y', 10, 330, null, 89, 'ZWLB=医药&ZWMC=343', 'yi yao dai biao ', 'yiyaodaibiao', 'yydb');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (344, '医药类别', '医药销售经理', 'Y', 11, 330, null, 89, 'ZWLB=医药&ZWMC=344', 'yi yao xiao shou jing li ', 'yiyaoxiaoshoujingli', 'yyxsjl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (345, '医药类别', '药店店长', 'Y', 12, 330, null, 89, 'ZWLB=医药&ZWMC=345', 'yao dian dian chang ', 'yaodiandianchang', 'yddc');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (346, '医药类别', '药店营业员', 'Y', 13, 330, null, 89, 'ZWLB=医药&ZWMC=346', 'yao dian ying ye yuan ', 'yaodianyingyeyuan', 'ydyyy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (347, '医生类别', '内科医生', 'N', 1, 331, null, 89, 'ZWLB=医生&ZWMC=347', 'nei ke yi sheng ', 'neikeyisheng', 'nkys');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (348, '医生类别', '外科医生', 'W', 2, 331, null, 89, 'ZWLB=医生&ZWMC=348', 'wai ke yi sheng ', 'waikeyisheng', 'wkys');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (349, '医生类别', '妇产科医生', 'F', 3, 331, null, 89, 'ZWLB=医生&ZWMC=349', 'fu chan ke yi sheng ', 'fuchankeyisheng', 'fckys');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (350, '医生类别', '麻醉医生', 'M', 4, 331, null, 89, 'ZWLB=医生&ZWMC=350', 'ma zui yi sheng ', 'mazuiyisheng', 'mzys');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (351, '医生类别', '五官科医生', 'W', 5, 331, null, 89, 'ZWLB=医生&ZWMC=351', 'wu guan ke yi sheng ', 'wuguankeyisheng', 'wgkys');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (352, '医生类别', '儿科医生', 'E', 6, 331, null, 89, 'ZWLB=医生&ZWMC=352', 'dong ke yi sheng ', 'dongkeyisheng', 'dkys');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (353, '医生类别', '牙科医生', 'Y', 7, 331, null, 89, 'ZWLB=医生&ZWMC=353', 'ya ke yi sheng ', 'yakeyisheng', 'ykys');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (354, '医生类别', '中医医生', 'Z', 7, 331, null, 89, 'ZWLB=医生&ZWMC=354', 'zhong yi yi sheng ', 'zhongyiyisheng', 'zyys');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (355, '医生类别', '放射科医生', 'F', 8, 331, null, 89, 'ZWLB=医生&ZWMC=355', 'fang she ke yi sheng ', 'fangshekeyisheng', 'fskys');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (356, '医生类别', 'B超医生', 'B', 9, 331, null, 89, 'ZWLB=医生&ZWMC=356', 'Bchao yi sheng ', 'Bchaoyisheng', 'Bys');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (357, '医生类别', '整形美容医生', 'Z', 10, 331, null, 89, 'ZWLB=医生&ZWMC=357', 'zheng xing mei rong yi sheng ', 'zhengxingmeirongyisheng', 'zxmrys');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (358, '医生类别', '专科医生', 'Z', 11, 331, null, 89, 'ZWLB=医生&ZWMC=358', 'zhuan ke yi sheng ', 'zhuankeyisheng', 'zkys');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (359, '医生类别', '综合门诊', 'Z', 12, 331, null, 89, 'ZWLB=医生&ZWMC=359', 'zong he men zhen ', 'zonghemenzhen', 'zhmz');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (360, '医生类别', '针灸', 'Z', 13, 331, null, 89, 'ZWLB=医生&ZWMC=360', 'zhen jiu ', 'zhenjiu', 'zj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (361, '医生类别', '推拿', 'T', 14, 331, null, 89, 'ZWLB=医生&ZWMC=361', 'tui na ', 'tuina', 'tn');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (362, '医生类别', '理疗师', 'L', 15, 331, null, 89, 'ZWLB=医生&ZWMC=362', 'li liao shi ', 'liliaoshi', 'lls');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (363, '医生类别', '检验师', 'J', 16, 331, null, 89, 'ZWLB=医生&ZWMC=363', 'jian yan shi ', 'jianyanshi', 'jys');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (364, '医生类别', '化验师', 'H', 17, 331, null, 89, 'ZWLB=医生&ZWMC=364', 'hua yan shi ', 'huayanshi', 'hys');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (365, '医生类别', '药剂师', 'Y', 18, 331, null, 89, 'ZWLB=医生&ZWMC=365', 'yao ji shi ', 'yaojishi', 'yjs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (366, '医护管理类别', '医院管理人员', 'Y', 1, 332, null, 89, 'ZWLB=医护管理&ZWMC=366', 'yi yuan guan li ren yuan ', 'yiyuanguanlirenyuan', 'yyglry');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (367, '医护管理类别', '护士/护理', 'H', 2, 332, null, 89, 'ZWLB=医护管理&ZWMC=367', 'hu shi /hu li ', 'hushi/huli', 'hs/hl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (368, '医护管理类别', '护士长/护理主任', 'H', 3, 332, null, 89, 'ZWLB=医护管理&ZWMC=368', 'hu shi chang /hu li zhu ren ', 'hushichang/hulizhuren', 'hsc/hlzr');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (369, '医护管理类别', '导医', 'D', 4, 332, null, 89, 'ZWLB=医护管理&ZWMC=369', 'dao yi ', 'daoyi', 'dy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (370, '医护管理类别', '医院助理', 'Y', 5, 332, null, 89, 'ZWLB=医护管理&ZWMC=370', 'yi yuan zhu li ', 'yiyuanzhuli', 'yyzl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (371, '保险类别', '保险经纪人', 'B', 1, 333, null, 89, 'ZWLB=保险&ZWMC=371', 'bao xian jing ji ren ', 'baoxianjingjiren', 'bxjjr');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (372, '保险类别', '保险顾问', 'B', 2, 333, null, 89, 'ZWLB=保险&ZWMC=372', 'bao xian gu wen ', 'baoxianguwen', 'bxgw');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (373, '保险类别', '保险精算师', 'B', 3, 333, null, 89, 'ZWLB=保险&ZWMC=373', 'bao xian jing suan shi ', 'baoxianjingsuanshi', 'bxjss');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (374, '保险类别', '保险内勤', 'B', 4, 333, null, 89, 'ZWLB=保险&ZWMC=374', 'bao xian nei qin ', 'baoxianneiqin', 'bxnq');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (375, '保险类别', '契约管理', 'Q', 5, 333, null, 89, 'ZWLB=保险&ZWMC=375', 'qi yue guan li ', 'qiyueguanli', 'qygl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (376, '保险类别', '保险培训师', 'B', 6, 333, null, 89, 'ZWLB=保险&ZWMC=376', 'bao xian pei xun shi ', 'baoxianpeixunshi', 'bxpxs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (377, '保险类别', '保险客户经理', 'B', 7, 333, null, 89, 'ZWLB=保险&ZWMC=377', 'bao xian ke hu jing li ', 'baoxiankehujingli', 'bxkhjl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (378, '保险类别', '保险项目经理', 'B', 8, 333, null, 89, 'ZWLB=保险&ZWMC=378', 'bao xian xiang mu jing li ', 'baoxianxiangmujingli', 'bxxmjl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (379, '行业类别', '金融/银行/证券/投资', 'J', 1, 50, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (380, '行业类别', '财务/审计', 'C', 2, 50, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (381, '行业类别', '高级管理', 'G', 3, 50, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (382, '金融/银行/证券/投资类别', '理财/投资顾问', 'L', 1, 379, null, 89, 'ZWLB=金融/银行/证券/投资&ZWMC=382', 'li cai /tou zi gu wen ', 'licai/touziguwen', 'lc/tzgw');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (383, '金融/银行/证券/投资类别', '证券分析', 'Z', 2, 379, null, 89, 'ZWLB=金融/银行/证券/投资&ZWMC=383', 'zheng quan fen xi ', 'zhengquanfenxi', 'zqfx');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (384, '金融/银行/证券/投资类别', '操盘手', 'C', 3, 379, null, 89, 'ZWLB=金融/银行/证券/投资&ZWMC=384', 'cao pan shou ', 'caopanshou', 'cps');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (385, '金融/银行/证券/投资类别', '银行经理', 'Y', 4, 379, null, 89, 'ZWLB=金融/银行/证券/投资&ZWMC=385', 'yin xing jing li ', 'yinxingjingli', 'yxjl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (386, '金融/银行/证券/投资类别', '信用卡销售', 'X', 5, 379, null, 89, 'ZWLB=金融/银行/证券/投资&ZWMC=386', 'xin yong ka xiao shou ', 'xinyongkaxiaoshou', 'xykxs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (387, '金融/银行/证券/投资类别', '信贷管理', 'X', 6, 379, null, 89, 'ZWLB=金融/银行/证券/投资&ZWMC=387', 'xin dai guan li ', 'xindaiguanli', 'xdgl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (388, '金融/银行/证券/投资类别', '银行柜员', 'Y', 7, 379, null, 89, 'ZWLB=金融/银行/证券/投资&ZWMC=388', 'yin xing gui yuan ', 'yinxingguiyuan', 'yxgy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (389, '金融/银行/证券/投资类别', '融资专员', 'R', 8, 379, null, 89, 'ZWLB=金融/银行/证券/投资&ZWMC=389', 'rong zi zhuan yuan ', 'rongzizhuanyuan', 'rzzy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (390, '金融/银行/证券/投资类别', '融资经理', 'R', 9, 379, null, 89, 'ZWLB=金融/银行/证券/投资&ZWMC=390', 'rong zi jing li ', 'rongzijingli', 'rzjl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (391, '金融/银行/证券/投资类别', '证券/投资客户经理', 'Z', 10, 379, null, 89, 'ZWLB=金融/银行/证券/投资&ZWMC=391', 'zheng quan /tou zi ke hu jing li ', 'zhengquan/touzikehujingli', 'zq/tzkhjl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (392, '金融/银行/证券/投资类别', '证券/投资客户主管', 'Z', 11, 379, null, 89, 'ZWLB=金融/银行/证券/投资&ZWMC=392', 'zheng quan /tou zi ke hu zhu guan ', 'zhengquan/touzikehuzhuguan', 'zq/tzkhzg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (393, '金融/银行/证券/投资类别', '金融产品经理', 'J', 12, 379, null, 89, 'ZWLB=金融/银行/证券/投资&ZWMC=393', 'jin rong chan pin jing li ', 'jinrongchanpinjingli', 'jrcpjl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (394, '金融/银行/证券/投资类别', '金融产品销售', 'J', 13, 379, null, 89, 'ZWLB=金融/银行/证券/投资&ZWMC=394', 'jin rong chan pin xiao shou ', 'jinrongchanpinxiaoshou', 'jrcpxs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (395, '金融/银行/证券/投资类别', '金融服务经理', 'J', 14, 379, null, 89, 'ZWLB=金融/银行/证券/投资&ZWMC=395', 'jin rong fu wu jing li ', 'jinrongfuwujingli', 'jrfwjl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (396, '财务/审计类别', '财务/会计助理', 'C', 1, 380, null, 89, 'ZWLB=财务/审计&ZWMC=396', 'cai wu /hui ji zhu li ', 'caiwu/huijizhuli', 'cw/hjzl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (397, '财务/审计类别', '会计/会计师', 'H', 2, 380, null, 89, 'ZWLB=财务/审计&ZWMC=397', 'hui ji /hui ji shi ', 'huiji/huijishi', 'hj/hjs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (398, '财务/审计类别', '出纳', 'C', 3, 380, null, 89, 'ZWLB=财务/审计&ZWMC=398', 'chu na ', 'chuna', 'cn');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (399, '财务/审计类别', '财务经理/主管', 'C', 4, 380, null, 89, 'ZWLB=财务/审计&ZWMC=399', 'cai wu jing li /zhu guan ', 'caiwujingli/zhuguan', 'cwjl/zg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (400, '财务/审计类别', '财务总监', 'C', 5, 380, null, 89, 'ZWLB=财务/审计&ZWMC=400', 'cai wu zong jian ', 'caiwuzongjian', 'cwzj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (401, '财务/审计类别', '审计专员/助理', 'S', 6, 380, null, 89, 'ZWLB=财务/审计&ZWMC=401', 'shen ji zhuan yuan /zhu li ', 'shenjizhuanyuan/zhuli', 'sjzy/zl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (402, '财务/审计类别', '审计经理/主管', 'S', 7, 380, null, 89, 'ZWLB=财务/审计&ZWMC=402', 'shen ji jing li /zhu guan ', 'shenjijingli/zhuguan', 'sjjl/zg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (403, '财务/审计类别', '税务专员/助理', 'S', 8, 380, null, 89, 'ZWLB=财务/审计&ZWMC=403', 'shui wu zhuan yuan /zhu li ', 'shuiwuzhuanyuan/zhuli', 'swzy/zl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (404, '财务/审计类别', '税务经理/主管', 'S', 9, 380, null, 89, 'ZWLB=财务/审计&ZWMC=404', 'shui wu jing li /zhu guan ', 'shuiwujingli/zhuguan', 'swjl/zg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (405, '财务/审计类别', '财务分析员', 'C', 10, 380, null, 89, 'ZWLB=财务/审计&ZWMC=405', 'cai wu fen xi yuan ', 'caiwufenxiyuan', 'cwfxy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (406, '财务/审计类别', '成本管理', 'C', 11, 380, null, 89, 'ZWLB=财务/审计&ZWMC=406', 'cheng ben guan li ', 'chengbenguanli', 'cbgl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (407, '高级管理类别', '副总经理/副总裁', 'F', 1, 381, null, 89, 'ZWLB=高级管理&ZWMC=407', 'fu zong jing li /fu zong cai ', 'fuzongjingli/fuzongcai', 'fzjl/fzc');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (408, '高级管理类别', '总经理助理/总裁助理', 'Z', 2, 381, null, 89, 'ZWLB=高级管理&ZWMC=408', 'zong jing li zhu li /zong cai zhu li ', 'zongjinglizhuli/zongcaizhuli', 'zjlzl/zczl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (409, '高级管理类别', '合伙人', 'H', 3, 381, null, 89, 'ZWLB=高级管理&ZWMC=409', 'he huo ren ', 'hehuoren', 'hhr');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (410, '高级管理类别', '分公司总经理', 'F', 4, 381, null, 89, 'ZWLB=高级管理&ZWMC=410', 'fen gong si zong jing li ', 'fengongsizongjingli', 'fgszjl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (411, '高级管理类别', '首席执行官（CEO）', 'S', 5, 381, null, 89, 'ZWLB=高级管理&ZWMC=411', 'shou xi zhi xing guan （CEO）', 'shouxizhixingguan（CEO）', 'sxzxg（C）');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (412, '高级管理类别', '首席技术官（CTO）', 'S', 6, 381, null, 89, 'ZWLB=高级管理&ZWMC=412', 'shou xi ji shu guan （CTO）', 'shouxijishuguan（CTO）', 'sxjsg（C）');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (413, '高级管理类别', '首席运营官（COO）', 'S', 7, 381, null, 89, 'ZWLB=高级管理&ZWMC=413', 'shou xi yun ying guan （COO）', 'shouxiyunyingguan（COO）', 'sxyyg（C）');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (414, '高级管理类别', '首席财务官（CFO）', 'S', 8, 381, null, 89, 'ZWLB=高级管理&ZWMC=414', 'shou xi cai wu guan （CFO）', 'shouxicaiwuguan（CFO）', 'sxcwg（C）');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (415, '高级管理类别', '厂长/副厂长', 'C', 9, 381, null, 89, 'ZWLB=高级管理&ZWMC=415', 'chang chang /fu chang chang ', 'changchang/fuchangchang', 'cc/fcc');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (416, '行业类别', '能源/电力', 'N', 1, 51, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (417, '行业类别', '化工', 'H', 2, 51, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (418, '行业类别', '环保', 'H', 3, 51, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (419, '行业类别', '汽车', 'Q', 4, 51, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (420, '能源/电力类别', '石油天然气技术人员', 'S', 1, 416, null, 89, 'ZWLB=能源/电力&ZWMC=420', 'shi you tian ran qi ji shu ren yuan ', 'shiyoutianranqijishurenyuan', 'sytrqjsry');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (421, '能源/电力类别', '水利/水电工程师', 'S', 2, 416, null, 89, 'ZWLB=能源/电力&ZWMC=421', 'shui li /shui dian gong cheng shi ', 'shuili/shuidiangongchengshi', 'sl/sdgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (422, '能源/电力类别', '空调/热能工程师', 'K', 3, 416, null, 89, 'ZWLB=能源/电力&ZWMC=422', 'kong diao /re neng gong cheng shi ', 'kongdiao/renenggongchengshi', 'kd/rngcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (423, '能源/电力类别', '新能源工程师', 'X', 4, 416, null, 89, 'ZWLB=能源/电力&ZWMC=423', 'xin neng yuan gong cheng shi ', 'xinnengyuangongchengshi', 'xnygcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (424, '化工类别', '化工工程师', 'H', 1, 417, null, 89, 'ZWLB=化工&ZWMC=424', 'hua gong gong cheng shi ', 'huagonggongchengshi', 'hggcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (425, '化工类别', '化工实验室研究员', 'H', 2, 417, null, 89, 'ZWLB=化工&ZWMC=425', 'hua gong shi yan shi yan jiu yuan ', 'huagongshiyanshiyanjiuyuan', 'hgsysyjy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (426, '化工类别', '涂料研发工程师', 'T', 3, 417, null, 89, 'ZWLB=化工&ZWMC=426', 'tu liao yan fa gong cheng shi ', 'tuliaoyanfagongchengshi', 'tlyfgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (427, '环保类别', '环境管理/保护', 'H', 1, 418, null, 89, 'ZWLB=环保&ZWMC=427', 'huan jing guan li /bao hu ', 'huanjingguanli/baohu', 'hjgl/bh');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (428, '环保类别', '环境工程技术', 'H', 2, 418, null, 89, 'ZWLB=环保&ZWMC=428', 'huan jing gong cheng ji shu ', 'huanjinggongchengjishu', 'hjgcjs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (429, '环保类别', '环保技术', 'H', 3, 418, null, 89, 'ZWLB=环保&ZWMC=429', 'huan bao ji shu ', 'huanbaojishu', 'hbjs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (430, '环保类别', '环保工程师', 'H', 4, 418, null, 89, 'ZWLB=环保&ZWMC=430', 'huan bao gong cheng shi ', 'huanbaogongchengshi', 'hbgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (431, '环保类别', '环保检测', 'H', 5, 418, null, 89, 'ZWLB=环保&ZWMC=431', 'huan bao jian ce ', 'huanbaojiance', 'hbjc');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (432, '环保类别', '水质检测员', 'S', 6, 418, null, 89, 'ZWLB=环保&ZWMC=432', 'shui zhi jian ce yuan ', 'shuizhijianceyuan', 'szjcy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (433, '环保类别', '环境绿化', 'H', 7, 418, null, 89, 'ZWLB=环保&ZWMC=433', 'huan jing lv hua ', 'huanjinglvhua', 'hjlh');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (434, '汽车类别', '汽车设计工程师', 'Q', 1, 419, null, 89, 'ZWLB=汽车&ZWMC=434', 'qi che she ji gong cheng shi ', 'qicheshejigongchengshi', 'qcsjgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (435, '汽车类别', '汽车机械工程师', 'Q', 2, 419, null, 89, 'ZWLB=汽车&ZWMC=435', 'qi che ji xie gong cheng shi ', 'qichejixiegongchengshi', 'qcjxgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (436, '汽车类别', '汽车电子工程师', 'Q', 3, 419, null, 89, 'ZWLB=汽车&ZWMC=436', 'qi che dian zi gong cheng shi ', 'qichedianzigongchengshi', 'qcdzgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (437, '汽车类别', '汽车装配工程师', 'Q', 4, 419, null, 89, 'ZWLB=汽车&ZWMC=437', 'qi che zhuang pei gong cheng shi ', 'qichezhuangpeigongchengshi', 'qczpgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (438, '汽车类别', '汽车修理工', 'Q', 5, 419, null, 89, 'ZWLB=汽车&ZWMC=438', 'qi che xiu li gong ', 'qichexiuligong', 'qcxlg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (439, '汽车类别', '汽车检验/检测', 'Q', 6, 419, null, 89, 'ZWLB=汽车&ZWMC=439', 'qi che jian yan /jian ce ', 'qichejianyan/jiance', 'qcjy/jc');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (440, '汽车类别', '汽车美容', 'Q', 7, 419, null, 89, 'ZWLB=汽车&ZWMC=440', 'qi che mei rong ', 'qichemeirong', 'qcmr');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (441, '汽车类别', '4S店管理', '4', 8, 419, null, 89, 'ZWLB=汽车&ZWMC=441', '4Sdian guan li ', '4Sdianguanli', '4gl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (442, '汽车类别', '二手车评估师', 'E', 9, 419, null, 89, 'ZWLB=汽车&ZWMC=442', 'dong shou che ping gu shi ', 'dongshouchepinggushi', 'dscpgs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (443, '汽车类别', '总装工程师', 'Z', 10, 419, null, 89, 'ZWLB=汽车&ZWMC=443', 'zong zhuang gong cheng shi ', 'zongzhuanggongchengshi', 'zzgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (444, '汽车类别', '安全性能工程师', 'A', 11, 419, null, 89, 'ZWLB=汽车&ZWMC=444', 'an quan xing neng gong cheng shi ', 'anquanxingnenggongchengshi', 'aqxngcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (445, '汽车类别', '洗车工', 'X', 12, 419, null, 89, 'ZWLB=汽车&ZWMC=445', 'xi che gong ', 'xichegong', 'xcg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (446, '汽车类别', '轮胎工', 'L', 13, 419, null, 89, 'ZWLB=汽车&ZWMC=446', 'lun tai gong ', 'luntaigong', 'ltg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (447, '汽车类别', '停车管理员', 'T', 14, 419, null, 89, 'ZWLB=汽车&ZWMC=447', 'ting che guan li yuan ', 'tingcheguanliyuan', 'tcgly');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (448, '汽车类别', '加油站工作员', 'J', 15, 419, null, 89, 'ZWLB=汽车&ZWMC=448', 'jia you zhan gong zuo yuan ', 'jiayouzhangongzuoyuan', 'jyzgzy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (449, '汽车类别', '汽车喷漆/钣金', 'Q', 16, 419, null, 89, 'ZWLB=汽车&ZWMC=449', 'qi che pen qi /ban jin ', 'qichepenqi/banjin', 'qcpq/bj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (450, '行业类别', '贸易', 'M', 1, 52, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (451, '行业类别', '采购', 'C', 2, 52, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (452, '行业类别', '物流/仓储', 'W', 3, 52, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (453, '贸易类别', '外贸专员/助理', 'W', 1, 450, null, 89, 'ZWLB=贸易&ZWMC=453', 'wai mao zhuan yuan /zhu li ', 'waimaozhuanyuan/zhuli', 'wmzy/zl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (454, '贸易类别', '外贸经理/主管', 'W', 2, 450, null, 89, 'ZWLB=贸易&ZWMC=454', 'wai mao jing li /zhu guan ', 'waimaojingli/zhuguan', 'wmjl/zg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (455, '贸易类别', '报检员', 'B', 3, 450, null, 89, 'ZWLB=贸易&ZWMC=455', 'bao jian yuan ', 'baojianyuan', 'bjy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (456, '贸易类别', '单证员', 'D', 4, 450, null, 89, 'ZWLB=贸易&ZWMC=456', 'dan zheng yuan ', 'danzhengyuan', 'dzy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (457, '贸易类别', '跟单员', 'G', 5, 450, null, 89, 'ZWLB=贸易&ZWMC=457', 'gen dan yuan ', 'gendanyuan', 'gdy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (458, '采购类别', '采购员', 'C', 1, 451, null, 89, 'ZWLB=采购&ZWMC=458', 'cai gou yuan ', 'caigouyuan', 'cgy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (459, '采购类别', '采购助理', 'C', 2, 451, null, 89, 'ZWLB=采购&ZWMC=459', 'cai gou zhu li ', 'caigouzhuli', 'cgzl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (460, '采购类别', '采购经理/主管', 'C', 3, 451, null, 89, 'ZWLB=采购&ZWMC=460', 'cai gou jing li /zhu guan ', 'caigoujingli/zhuguan', 'cgjl/zg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (461, '采购类别', '供应商管理', 'G', 4, 451, null, 89, 'ZWLB=采购&ZWMC=461', 'gong ying shang guan li ', 'gongyingshangguanli', 'gysgl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (462, '物流/仓储类别', '物流专员/助理', 'W', 1, 452, null, 89, 'ZWLB=物流/仓储&ZWMC=462', 'wu liu zhuan yuan /zhu li ', 'wuliuzhuanyuan/zhuli', 'wlzy/zl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (463, '物流/仓储类别', '物流经理/主管', 'W', 2, 452, null, 89, 'ZWLB=物流/仓储&ZWMC=463', 'wu liu jing li /zhu guan ', 'wuliujingli/zhuguan', 'wljl/zg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (464, '物流/仓储类别', '快递员', 'K', 3, 452, null, 89, 'ZWLB=物流/仓储&ZWMC=464', 'kuai di yuan ', 'kuaidiyuan', 'kdy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (465, '物流/仓储类别', '配货员', 'P', 4, 452, null, 89, 'ZWLB=物流/仓储&ZWMC=465', 'pei huo yuan ', 'peihuoyuan', 'phy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (466, '物流/仓储类别', '分拣员', 'F', 5, 452, null, 89, 'ZWLB=物流/仓储&ZWMC=466', 'fen jian yuan ', 'fenjianyuan', 'fjy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (467, '物流/仓储类别', '供应链管理', 'G', 6, 452, null, 89, 'ZWLB=物流/仓储&ZWMC=467', 'gong ying lian guan li ', 'gongyinglianguanli', 'gylgl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (468, '物流/仓储类别', '调度员', 'D', 7, 452, null, 89, 'ZWLB=物流/仓储&ZWMC=468', 'diao dong yuan ', 'diaodongyuan', 'ddy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (469, '物流/仓储类别', '仓库主管/经理', 'C', 8, 452, null, 89, 'ZWLB=物流/仓储&ZWMC=469', 'cang ku zhu guan /jing li ', 'cangkuzhuguan/jingli', 'ckzg/jl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (470, '物流/仓储类别', '装卸/搬运工', 'Z', 9, 452, null, 89, 'ZWLB=物流/仓储&ZWMC=470', 'zhuang xie /ban yun gong ', 'zhuangxie/banyungong', 'zx/byg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (471, '行业类别', '广告/咨询', 'G', 1, 53, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (472, '行业类别', '美术/设计', 'M', 2, 53, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (473, '行业类别', '娱乐/传媒', 'Y', 3, 53, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (474, '广告/咨询类别', '广告设计', 'G', 1, 471, null, 89, 'ZWLB=广告/咨询&ZWMC=474', 'guang gao she ji ', 'guanggaosheji', 'ggsj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (475, '广告/咨询类别', '广告文案', 'G', 2, 471, null, 89, 'ZWLB=广告/咨询&ZWMC=475', 'guang gao wen an ', 'guanggaowenan', 'ggwa');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (476, '广告/咨询类别', '广告经理/总监', 'G', 3, 471, null, 89, 'ZWLB=广告/咨询&ZWMC=476', 'guang gao jing li /zong jian ', 'guanggaojingli/zongjian', 'ggjl/zj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (477, '广告/咨询类别', '广告策划', 'G', 4, 471, null, 89, 'ZWLB=广告/咨询&ZWMC=477', 'guang gao ce hua ', 'guanggaocehua', 'ggch');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (478, '广告/咨询类别', '创意指导', 'C', 5, 471, null, 89, 'ZWLB=广告/咨询&ZWMC=478', 'chuang yi zhi dao ', 'chuangyizhidao', 'cyzd');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (479, '广告/咨询类别', '会展策划', 'H', 6, 471, null, 89, 'ZWLB=广告/咨询&ZWMC=479', 'hui zhan ce hua ', 'huizhancehua', 'hzch');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (480, '广告/咨询类别', '媒介策划', 'M', 7, 471, null, 89, 'ZWLB=广告/咨询&ZWMC=480', 'mei jie ce hua ', 'meijiecehua', 'mjch');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (481, '广告/咨询类别', '咨询经理', 'Z', 8, 471, null, 89, 'ZWLB=广告/咨询&ZWMC=481', 'zi xun jing li ', 'zixunjingli', 'zxjl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (482, '广告/咨询类别', '客户主管', 'K', 9, 471, null, 89, 'ZWLB=广告/咨询&ZWMC=482', 'ke hu zhu guan ', 'kehuzhuguan', 'khzg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (483, '广告/咨询类别', '咨询顾问', 'Z', 10, 471, null, 89, 'ZWLB=广告/咨询&ZWMC=483', 'zi xun gu wen ', 'zixunguwen', 'zxgw');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (484, '广告/咨询类别', '咨询经理/主管', 'Z', 11, 471, null, 89, 'ZWLB=广告/咨询&ZWMC=484', 'zi xun jing li /zhu guan ', 'zixunjingli/zhuguan', 'zxjl/zg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (485, '广告/咨询类别', '专业顾问', 'Z', 12, 471, null, 89, 'ZWLB=广告/咨询&ZWMC=485', 'zhuan ye gu wen ', 'zhuanyeguwen', 'zygw');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (486, '美术/设计类别', '美术编辑/设计', 'M', 1, 472, null, 89, 'ZWLB=美术/设计&ZWMC=486', 'mei shu bian ji /she ji ', 'meishubianji/sheji', 'msbj/sj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (487, '美术/设计类别', '服装设计', 'F', 2, 472, null, 89, 'ZWLB=美术/设计&ZWMC=487', 'fu zhuang she ji ', 'fuzhuangsheji', 'fzsj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (488, '美术/设计类别', '家具/家居设计', 'J', 3, 472, null, 89, 'ZWLB=美术/设计&ZWMC=488', 'jia ju /jia ju she ji ', 'jiaju/jiajusheji', 'jj/jjsj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (489, '美术/设计类别', '平面设计', 'P', 4, 472, null, 89, 'ZWLB=美术/设计&ZWMC=489', 'ping mian she ji ', 'pingmiansheji', 'pmsj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (490, '美术/设计类别', '美术指导', 'M', 5, 472, null, 89, 'ZWLB=美术/设计&ZWMC=490', 'mei shu zhi dao ', 'meishuzhidao', 'mszd');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (491, '美术/设计类别', '店面/展会设计', 'D', 6, 472, null, 89, 'ZWLB=美术/设计&ZWMC=491', 'dian mian /zhan hui she ji ', 'dianmian/zhanhuisheji', 'dm/zhsj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (492, '美术/设计类别', '工艺/珠宝设计', 'G', 7, 472, null, 89, 'ZWLB=美术/设计&ZWMC=492', 'gong yi /zhu bao she ji ', 'gongyi/zhubaosheji', 'gy/zbsj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (493, '美术/设计类别', '多媒体/动画设计', 'D', 8, 472, null, 89, 'ZWLB=美术/设计&ZWMC=493', 'dong mei ti /dong hua she ji ', 'dongmeiti/donghuasheji', 'dmt/dhsj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (494, '美术/设计类别', '包装设计', 'B', 9, 472, null, 89, 'ZWLB=美术/设计&ZWMC=494', 'bao zhuang she ji ', 'baozhuangsheji', 'bzsj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (495, '美术/设计类别', '装修/室内设计', 'Z', 10, 472, null, 89, 'ZWLB=美术/设计&ZWMC=495', 'zhuang xiu /shi nei she ji ', 'zhuangxiu/shineisheji', 'zx/snsj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (496, '美术/设计类别', '舞台美术设计', 'W', 11, 472, null, 89, 'ZWLB=美术/设计&ZWMC=496', 'wu tai mei shu she ji ', 'wutaimeishusheji', 'wtmssj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (497, '美术/设计类别', '原画师', 'Y', 12, 472, null, 89, 'ZWLB=美术/设计&ZWMC=497', 'yuan hua shi ', 'yuanhuashi', 'yhs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (498, '美术/设计类别', '特效设计', 'T', 13, 472, null, 89, 'ZWLB=美术/设计&ZWMC=498', 'te xiao she ji ', 'texiaosheji', 'txsj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (499, '美术/设计类别', '视觉设计', 'S', 14, 472, null, 89, 'ZWLB=美术/设计&ZWMC=499', 'shi jue she ji ', 'shijuesheji', 'sjsj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (500, '美术/设计类别', '园林景观设计', 'Y', 15, 472, null, 89, 'ZWLB=美术/设计&ZWMC=500', 'yuan lin jing guan she ji ', 'yuanlinjingguansheji', 'yljgsj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (501, '娱乐/传媒类别', '主持人', 'Z', 1, 473, null, 89, 'ZWLB=娱乐/传媒&ZWMC=501', 'zhu chi ren ', 'zhuchiren', 'zcr');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (502, '娱乐/传媒类别', '礼仪/迎宾', 'L', 2, 473, null, 89, 'ZWLB=娱乐/传媒&ZWMC=502', 'li yi /ying bin ', 'liyi/yingbin', 'ly/yb');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (503, '娱乐/传媒类别', '酒吧服务员', 'J', 3, 473, null, 89, 'ZWLB=娱乐/传媒&ZWMC=503', 'jiu ba fu wu yuan ', 'jiubafuwuyuan', 'jbfwy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (504, '娱乐/传媒类别', '娱乐厅服务员', 'Y', 4, 473, null, 89, 'ZWLB=娱乐/传媒&ZWMC=504', 'yu le ting fu wu yuan ', 'yuletingfuwuyuan', 'yltfwy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (505, '娱乐/传媒类别', '放映员', 'F', 5, 473, null, 89, 'ZWLB=娱乐/传媒&ZWMC=505', 'fang ying yuan ', 'fangyingyuan', 'fyy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (506, '娱乐/传媒类别', '配音员', 'P', 6, 473, null, 89, 'ZWLB=娱乐/传媒&ZWMC=506', 'pei yin yuan ', 'peiyinyuan', 'pyy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (507, '娱乐/传媒类别', '群主演员', 'Q', 7, 473, null, 89, 'ZWLB=娱乐/传媒&ZWMC=507', 'qun zhu yan yuan ', 'qunzhuyanyuan', 'qzyy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (508, '娱乐/传媒类别', '音效师', 'Y', 8, 473, null, 89, 'ZWLB=娱乐/传媒&ZWMC=508', 'yin xiao shi ', 'yinxiaoshi', 'yxs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (509, '娱乐/传媒类别', '灯光师', 'D', 9, 473, null, 89, 'ZWLB=娱乐/传媒&ZWMC=509', 'deng guang shi ', 'dengguangshi', 'dgs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (510, '娱乐/传媒类别', '编剧', 'B', 10, 473, null, 89, 'ZWLB=娱乐/传媒&ZWMC=510', 'bian ju ', 'bianju', 'bj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (511, '娱乐/传媒类别', '导演', 'D', 11, 473, null, 89, 'ZWLB=娱乐/传媒&ZWMC=511', 'dao yan ', 'daoyan', 'dy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (512, '娱乐/传媒类别', '场务', 'C', 12, 473, null, 89, 'ZWLB=娱乐/传媒&ZWMC=512', 'chang wu ', 'changwu', 'cw');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (513, '娱乐/传媒类别', '后期制作', 'H', 13, 473, null, 89, 'ZWLB=娱乐/传媒&ZWMC=513', 'hou qi zhi zuo ', 'houqizhizuo', 'hqzz');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (514, '娱乐/传媒类别', '摄影师', 'S', 14, 473, null, 89, 'ZWLB=娱乐/传媒&ZWMC=514', 'she ying shi ', 'sheyingshi', 'sys');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (515, '娱乐/传媒类别', '艺人助理', 'Y', 15, 473, null, 89, 'ZWLB=娱乐/传媒&ZWMC=515', 'yi ren zhu li ', 'yirenzhuli', 'yrzl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (516, '娱乐/传媒类别', '艺人经纪人', 'Y', 16, 473, null, 89, 'ZWLB=娱乐/传媒&ZWMC=516', 'yi ren jing ji ren ', 'yirenjingjiren', 'yrjjr');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (517, '娱乐/传媒类别', '签约艺人', 'Q', 17, 473, null, 89, 'ZWLB=娱乐/传媒&ZWMC=517', 'qian yue yi ren ', 'qianyueyiren', 'qyyr');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (518, '娱乐/传媒类别', '影视制片人', 'Y', 18, 473, null, 89, 'ZWLB=娱乐/传媒&ZWMC=518', 'ying shi zhi pian ren ', 'yingshizhipianren', 'yszpr');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (519, '娱乐/传媒类别', '节目编导', 'J', 19, 473, null, 89, 'ZWLB=娱乐/传媒&ZWMC=519', 'jie mu bian dao ', 'jiemubiandao', 'jmbd');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (520, '娱乐/传媒类别', '视频剪辑员', 'S', 20, 473, null, 89, 'ZWLB=娱乐/传媒&ZWMC=520', 'shi pin jian ji yuan ', 'shipinjianjiyuan', 'spjjy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (521, '行业类别', '房产', 'F', 1, 54, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (522, '行业类别', '建筑', 'J', 2, 54, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (523, '行业类别', '装修', 'Z', 3, 54, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (524, '行业类别', '物业', 'W', 4, 54, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (525, '房产类别', '房产销售/中介', 'F', 1, 521, null, 89, 'ZWLB=房产&ZWMC=525', 'fang chan xiao shou /zhong jie ', 'fangchanxiaoshou/zhongjie', 'fcxs/zj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (526, '房产类别', '置业顾问', 'Z', 2, 521, null, 89, 'ZWLB=房产&ZWMC=526', 'zhi ye gu wen ', 'zhiyeguwen', 'zygw');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (527, '房产类别', '房产客服', 'F', 3, 521, null, 89, 'ZWLB=房产&ZWMC=527', 'fang chan ke fu ', 'fangchankefu', 'fckf');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (528, '房产类别', '房产策划', 'F', 4, 521, null, 89, 'ZWLB=房产&ZWMC=528', 'fang chan ce hua ', 'fangchancehua', 'fcch');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (529, '房产类别', '房产评估师', 'F', 5, 521, null, 89, 'ZWLB=房产&ZWMC=529', 'fang chan ping gu shi ', 'fangchanpinggushi', 'fcpgs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (530, '房产类别', '房产店长', 'F', 6, 521, null, 89, 'ZWLB=房产&ZWMC=530', 'fang chan dian chang ', 'fangchandianchang', 'fcdc');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (531, '房产类别', '房产内勤', 'F', 7, 521, null, 89, 'ZWLB=房产&ZWMC=531', 'fang chan nei qin ', 'fangchanneiqin', 'fcnq');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (532, '房产类别', '房产店员', 'F', 8, 521, null, 89, 'ZWLB=房产&ZWMC=532', 'fang chan dian yuan ', 'fangchandianyuan', 'fcdy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (533, '房产类别', '监察人员', 'J', 9, 521, null, 89, 'ZWLB=房产&ZWMC=533', 'jian cha ren yuan ', 'jiancharenyuan', 'jcry');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (534, '建筑类别', '工程项目管理', 'G', 1, 522, null, 89, 'ZWLB=建筑&ZWMC=534', 'gong cheng xiang mu guan li ', 'gongchengxiangmuguanli', 'gcxmgl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (535, '建筑类别', '工程监理', 'G', 2, 522, null, 89, 'ZWLB=建筑&ZWMC=535', 'gong cheng jian li ', 'gongchengjianli', 'gcjl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (536, '建筑类别', '建筑工程师', 'J', 3, 522, null, 89, 'ZWLB=建筑&ZWMC=536', 'jian zhu gong cheng shi ', 'jianzhugongchengshi', 'jzgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (537, '建筑类别', '土木工程师', 'T', 4, 522, null, 89, 'ZWLB=建筑&ZWMC=537', 'tu mu gong cheng shi ', 'tumugongchengshi', 'tmgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (538, '建筑类别', '造价师/预算师', 'Z', 5, 522, null, 89, 'ZWLB=建筑&ZWMC=538', 'zao jia shi /yu suan shi ', 'zaojiashi/yusuanshi', 'zjs/yss');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (539, '建筑类别', '安全管理员', 'A', 6, 522, null, 89, 'ZWLB=建筑&ZWMC=539', 'an quan guan li yuan ', 'anquanguanliyuan', 'aqgly');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (540, '建筑类别', '安防工程师', 'A', 7, 522, null, 89, 'ZWLB=建筑&ZWMC=540', 'an fang gong cheng shi ', 'anfanggongchengshi', 'afgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (541, '建筑类别', '幕墙工程师', 'M', 8, 522, null, 89, 'ZWLB=建筑&ZWMC=541', 'mu qiang gong cheng shi ', 'muqianggongchengshi', 'mqgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (542, '建筑类别', '测绘员/测量员', 'C', 9, 522, null, 89, 'ZWLB=建筑&ZWMC=542', 'ce hui yuan /ce liang yuan ', 'cehuiyuan/celiangyuan', 'chy/cly');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (543, '建筑类别', '岩土工程师', 'Y', 10, 522, null, 89, 'ZWLB=建筑&ZWMC=543', 'yan tu gong cheng shi ', 'yantugongchengshi', 'ytgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (544, '建筑类别', '建筑设计师', 'J', 11, 522, null, 89, 'ZWLB=建筑&ZWMC=544', 'jian zhu she ji shi ', 'jianzhushejishi', 'jzsjs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (545, '建筑类别', '市政工程师', 'S', 12, 522, null, 89, 'ZWLB=建筑&ZWMC=545', 'shi zheng gong cheng shi ', 'shizhenggongchengshi', 'szgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (546, '建筑类别', '综合布线', 'Z', 13, 522, null, 89, 'ZWLB=建筑&ZWMC=546', 'zong he bu xian ', 'zonghebuxian', 'zhbx');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (547, '建筑类别', '市政工程师', 'S', 14, 522, null, 89, 'ZWLB=建筑&ZWMC=547', 'shi zheng gong cheng shi ', 'shizhenggongchengshi', 'szgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (548, '建筑类别', '施工员', 'S', 15, 522, null, 89, 'ZWLB=建筑&ZWMC=548', 'shi gong yuan ', 'shigongyuan', 'sgy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (549, '建筑类别', '爆破工程师', 'B', 16, 522, null, 89, 'ZWLB=建筑&ZWMC=549', 'bao po gong cheng shi ', 'baopogongchengshi', 'bpgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (550, '装修类别', '室内装潢设计', 'S', 1, 523, null, 89, 'ZWLB=装修&ZWMC=550', 'shi nei zhuang huang she ji ', 'shineizhuanghuangsheji', 'snzhsj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (551, '装修类别', '软装设计师', 'R', 2, 523, null, 89, 'ZWLB=装修&ZWMC=551', 'ruan zhuang she ji shi ', 'ruanzhuangshejishi', 'rzsjs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (552, '装修类别', '硬装设计师', 'Y', 3, 523, null, 89, 'ZWLB=装修&ZWMC=552', 'ying zhuang she ji shi ', 'yingzhuangshejishi', 'yzsjs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (553, '装修类别', '橱柜设计师', 'C', 4, 523, null, 89, 'ZWLB=装修&ZWMC=553', 'chu gui she ji shi ', 'chuguishejishi', 'cgsjs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (554, '物业类别', '物业经理/主管', 'W', 1, 524, null, 89, 'ZWLB=物业&ZWMC=554', 'wu ye jing li /zhu guan ', 'wuyejingli/zhuguan', 'wyjl/zg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (555, '物业类别', '物业维修', 'W', 2, 524, null, 89, 'ZWLB=物业&ZWMC=555', 'wu ye wei xiu ', 'wuyeweixiu', 'wywx');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (556, '物业类别', '物业租赁', 'W', 3, 524, null, 89, 'ZWLB=物业&ZWMC=556', 'wu ye zu lin ', 'wuyezulin', 'wyzl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (557, '物业类别', '招商经理/主管', 'Z', 4, 524, null, 89, 'ZWLB=物业&ZWMC=557', 'zhao shang jing li /zhu guan ', 'zhaoshangjingli/zhuguan', 'zsjl/zg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (558, '物业类别', '物业管理', 'W', 5, 524, null, 89, 'ZWLB=物业&ZWMC=558', 'wu ye guan li ', 'wuyeguanli', 'wygl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (559, '行业类别', '计算机/互联网', 'J', 1, 55, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (560, '行业类别', '电子/电气', 'D', 2, 55, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (561, '行业类别', '通讯', 'T', 3, 55, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (562, '计算机/互联网类别', 'PHP开发工程师', 'P', 1, 559, null, 89, 'ZWLB=计算机/互联网&ZWMC=562', 'PHPkai fa gong cheng shi ', 'PHPkaifagongchengshi', 'Pfgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (563, '计算机/互联网类别', '.NET开发工程师', '.', 2, 559, null, 89, 'ZWLB=计算机/互联网&ZWMC=563', '.NETkai fa gong cheng shi ', '.NETkaifagongchengshi', '.Nfgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (564, '计算机/互联网类别', 'JAVA开发工程师', 'J', 3, 559, null, 89, 'ZWLB=计算机/互联网&ZWMC=564', 'JAVAkai fa gong cheng shi ', 'JAVAkaifagongchengshi', 'Jfgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (565, '计算机/互联网类别', 'C开发工程师', 'C', 4, 559, null, 89, 'ZWLB=计算机/互联网&ZWMC=565', 'Ckai fa gong cheng shi ', 'Ckaifagongchengshi', 'Cfgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (566, '计算机/互联网类别', 'C++开发工程师', 'C', 5, 559, null, 89, 'ZWLB=计算机/互联网&ZWMC=566', 'C++kai fa gong cheng shi ', 'C++kaifagongchengshi', 'C++kfgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (567, '计算机/互联网类别', 'C#开发工程师', 'C', 6, 559, null, 89, 'ZWLB=计算机/互联网&ZWMC=567', 'C#kai fa gong cheng shi ', 'C#kaifagongchengshi', 'C#kfgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (568, '计算机/互联网类别', 'Python开发工程师', 'P', 7, 559, null, 89, 'ZWLB=计算机/互联网&ZWMC=568', 'Pythonkai fa gong cheng shi ', 'Pythonkaifagongchengshi', 'Pfgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (569, '计算机/互联网类别', '架构师', 'J', 8, 559, null, 89, 'ZWLB=计算机/互联网&ZWMC=569', 'jia gou shi ', 'jiagoushi', 'jgs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (570, '计算机/互联网类别', 'IOS开发工程师', 'I', 9, 559, null, 89, 'ZWLB=计算机/互联网&ZWMC=570', 'IOSkai fa gong cheng shi ', 'IOSkaifagongchengshi', 'Ifgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (571, '计算机/互联网类别', 'Android开发工程师', 'A', 10, 559, null, 89, 'ZWLB=计算机/互联网&ZWMC=571', 'Androidkai fa gong cheng shi ', 'Androidkaifagongchengshi', 'Afgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (572, '计算机/互联网类别', 'html5开发工程师', 'h', 11, 559, null, 89, 'ZWLB=计算机/互联网&ZWMC=572', 'html5kai fa gong cheng shi ', 'html5kaifagongchengshi', 'hfgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (573, '计算机/互联网类别', '前端开发工程师', 'Q', 12, 559, null, 89, 'ZWLB=计算机/互联网&ZWMC=573', 'qian dong kai fa gong cheng shi ', 'qiandongkaifagongchengshi', 'qdkfgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (574, '计算机/互联网类别', '运维工程师', 'Y', 13, 559, null, 89, 'ZWLB=计算机/互联网&ZWMC=574', 'yun wei gong cheng shi ', 'yunweigongchengshi', 'ywgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (575, '计算机/互联网类别', '网络安全工程师', 'W', 14, 559, null, 89, 'ZWLB=计算机/互联网&ZWMC=575', 'wang luo an quan gong cheng shi ', 'wangluoanquangongchengshi', 'wlaqgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (576, '计算机/互联网类别', '运维经理', 'Y', 15, 559, null, 89, 'ZWLB=计算机/互联网&ZWMC=576', 'yun wei jing li ', 'yunweijingli', 'ywjl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (577, '计算机/互联网类别', 'Mysql数据管理员', 'M', 16, 559, null, 89, 'ZWLB=计算机/互联网&ZWMC=577', 'Mysqlshu ju guan li yuan ', 'Mysqlshujuguanliyuan', 'Mjgly');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (578, '计算机/互联网类别', 'SQL Server数据管理员', 'S', 17, 559, null, 89, 'ZWLB=计算机/互联网&ZWMC=578', 'SQL Servershu ju guan li yuan ', 'SQLServershujuguanliyuan', 'SSjgly');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (579, '计算机/互联网类别', 'Oracle数据管理员', 'O', 18, 559, null, 89, 'ZWLB=计算机/互联网&ZWMC=579', 'Oracleshu ju guan li yuan ', 'Oracleshujuguanliyuan', 'Ojgly');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (580, '计算机/互联网类别', 'Hadoop数据管理员', 'H', 19, 559, null, 89, 'ZWLB=计算机/互联网&ZWMC=580', 'Hadoopshu ju guan li yuan ', 'Hadoopshujuguanliyuan', 'Hjgly');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (581, '计算机/互联网类别', 'DBA', 'D', 20, 559, null, 89, 'ZWLB=计算机/互联网&ZWMC=581', 'DBA', 'DBA', 'D');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (582, '计算机/互联网类别', '项目经理', 'X', 21, 559, null, 89, 'ZWLB=计算机/互联网&ZWMC=582', 'xiang mu jing li ', 'xiangmujingli', 'xmjl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (583, '计算机/互联网类别', '技术经理', 'J', 22, 559, null, 89, 'ZWLB=计算机/互联网&ZWMC=583', 'ji shu jing li ', 'jishujingli', 'jsjl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (584, '计算机/互联网类别', 'CTO(首席技术官)', 'C', 23, 559, null, 89, 'ZWLB=计算机/互联网&ZWMC=584', 'CTO(shou xi ji shu guan )', 'CTO(shouxijishuguan)', 'C(sxjsg)');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (585, '计算机/互联网类别', '软件实施员', 'R', 24, 559, null, 89, 'ZWLB=计算机/互联网&ZWMC=585', 'ruan jian shi shi yuan ', 'ruanjianshishiyuan', 'rjssy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (586, '计算机/互联网类别', '系统分析员', 'X', 25, 559, null, 89, 'ZWLB=计算机/互联网&ZWMC=586', 'xi tong fen xi yuan ', 'xitongfenxiyuan', 'xtfxy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (587, '计算机/互联网类别', '软件测试员', 'R', 26, 559, null, 89, 'ZWLB=计算机/互联网&ZWMC=587', 'ruan jian ce shi yuan ', 'ruanjianceshiyuan', 'rjcsy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (588, '计算机/互联网类别', '移动端测试员', 'Y', 27, 559, null, 89, 'ZWLB=计算机/互联网&ZWMC=588', 'yi dong dong ce shi yuan ', 'yidongdongceshiyuan', 'yddcsy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (589, '计算机/互联网类别', '游戏测试员', 'Y', 28, 559, null, 89, 'ZWLB=计算机/互联网&ZWMC=589', 'you xi ce shi yuan ', 'youxiceshiyuan', 'yxcsy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (590, '计算机/互联网类别', '测试工程师', 'C', 29, 559, null, 89, 'ZWLB=计算机/互联网&ZWMC=590', 'ce shi gong cheng shi ', 'ceshigongchengshi', 'csgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (591, '计算机/互联网类别', '软件产品经理', 'R', 30, 559, null, 89, 'ZWLB=计算机/互联网&ZWMC=591', 'ruan jian chan pin jing li ', 'ruanjianchanpinjingli', 'rjcpjl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (592, '计算机/互联网类别', '移动产品经理', 'Y', 31, 559, null, 89, 'ZWLB=计算机/互联网&ZWMC=592', 'yi dong chan pin jing li ', 'yidongchanpinjingli', 'ydcpjl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (593, '计算机/互联网类别', '产品专员', 'C', 32, 559, null, 89, 'ZWLB=计算机/互联网&ZWMC=593', 'chan pin zhuan yuan ', 'chanpinzhuanyuan', 'cpzy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (594, '计算机/互联网类别', '游戏策划', 'Y', 33, 559, null, 89, 'ZWLB=计算机/互联网&ZWMC=594', 'you xi ce hua ', 'youxicehua', 'yxch');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (595, '计算机/互联网类别', 'UI设计师', 'U', 34, 559, null, 89, 'ZWLB=计算机/互联网&ZWMC=595', 'UIshe ji shi ', 'UIshejishi', 'Ujs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (596, '计算机/互联网类别', '平面设计师', 'P', 35, 559, null, 89, 'ZWLB=计算机/互联网&ZWMC=596', 'ping mian she ji shi ', 'pingmianshejishi', 'pmsjs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (597, '计算机/互联网类别', '网页设计师', 'W', 36, 559, null, 89, 'ZWLB=计算机/互联网&ZWMC=597', 'wang ye she ji shi ', 'wangyeshejishi', 'wysjs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (598, '计算机/互联网类别', '网站美工', 'W', 37, 559, null, 89, 'ZWLB=计算机/互联网&ZWMC=598', 'wang zhan mei gong ', 'wangzhanmeigong', 'wzmg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (599, '计算机/互联网类别', '游戏设计', 'Y', 38, 559, null, 89, 'ZWLB=计算机/互联网&ZWMC=599', 'you xi she ji ', 'youxisheji', 'yxsj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (600, '计算机/互联网类别', '原画设计', 'Y', 39, 559, null, 89, 'ZWLB=计算机/互联网&ZWMC=600', 'yuan hua she ji ', 'yuanhuasheji', 'yhsj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (601, '计算机/互联网类别', '交互设计', 'J', 40, 559, null, 89, 'ZWLB=计算机/互联网&ZWMC=601', 'jiao hu she ji ', 'jiaohusheji', 'jhsj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (602, '计算机/互联网类别', '网站运营', 'W', 41, 559, null, 89, 'ZWLB=计算机/互联网&ZWMC=602', 'wang zhan yun ying ', 'wangzhanyunying', 'wzyy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (603, '计算机/互联网类别', 'SEO', 'S', 42, 559, null, 89, 'ZWLB=计算机/互联网&ZWMC=603', 'SEO', 'SEO', 'S');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (604, '计算机/互联网类别', 'SEM', 'S', 43, 559, null, 89, 'ZWLB=计算机/互联网&ZWMC=604', 'SEM', 'SEM', 'S');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (605, '计算机/互联网类别', '网络推广', 'W', 44, 559, null, 89, 'ZWLB=计算机/互联网&ZWMC=605', 'wang luo tui guang ', 'wangluotuiguang', 'wltg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (606, '计算机/互联网类别', '文案策划', 'W', 45, 559, null, 89, 'ZWLB=计算机/互联网&ZWMC=606', 'wen an ce hua ', 'wenancehua', 'wach');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (607, '计算机/互联网类别', '市场专员', 'S', 46, 559, null, 89, 'ZWLB=计算机/互联网&ZWMC=607', 'shi chang zhuan yuan ', 'shichangzhuanyuan', 'sczy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (608, '计算机/互联网类别', '市场策划', 'S', 47, 559, null, 89, 'ZWLB=计算机/互联网&ZWMC=608', 'shi chang ce hua ', 'shichangcehua', 'scch');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (609, '计算机/互联网类别', '市场经理/主管', 'S', 48, 559, null, 89, 'ZWLB=计算机/互联网&ZWMC=609', 'shi chang jing li /zhu guan ', 'shichangjingli/zhuguan', 'scjl/zg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (610, '电子/电气类别', '电子/电气工程师', 'D', 1, 560, null, 89, 'ZWLB=电子/电气&ZWMC=610', 'dian zi /dian qi gong cheng shi ', 'dianzi/dianqigongchengshi', 'dz/dqgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (611, '电子/电气类别', '自动化工程师', 'Z', 2, 560, null, 89, 'ZWLB=电子/电气&ZWMC=611', 'zi dong hua gong cheng shi ', 'zidonghuagongchengshi', 'zdhgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (612, '电子/电气类别', '无线电工程师', 'W', 3, 560, null, 89, 'ZWLB=电子/电气&ZWMC=612', 'wu xian dian gong cheng shi ', 'wuxiandiangongchengshi', 'wxdgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (613, '电子/电气类别', '测试工程师', 'C', 4, 560, null, 89, 'ZWLB=电子/电气&ZWMC=613', 'ce shi gong cheng shi ', 'ceshigongchengshi', 'csgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (614, '电子/电气类别', '电路工程师', 'D', 5, 560, null, 89, 'ZWLB=电子/电气&ZWMC=614', 'dian lu gong cheng shi ', 'dianlugongchengshi', 'dlgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (615, '电子/电气类别', '音频/视频工程师', 'Y', 6, 560, null, 89, 'ZWLB=电子/电气&ZWMC=615', 'yin pin /shi pin gong cheng shi ', 'yinpin/shipingongchengshi', 'yp/spgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (616, '电子/电气类别', '照明设计工程师', 'Z', 7, 560, null, 89, 'ZWLB=电子/电气&ZWMC=616', 'zhao ming she ji gong cheng shi ', 'zhaomingshejigongchengshi', 'zmsjgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (617, '电子/电气类别', '变压器与磁电工程师', 'B', 8, 560, null, 89, 'ZWLB=电子/电气&ZWMC=617', 'bian ya qi yu ci dian gong cheng shi ', 'bianyaqiyucidiangongchengshi', 'byqycdgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (618, '电子/电气类别', 'IC验证工程师', 'I', 9, 560, null, 89, 'ZWLB=电子/电气&ZWMC=618', 'ICyan zheng gong cheng shi ', 'ICyanzhenggongchengshi', 'Izgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (619, '电子/电气类别', '研发工程师', 'Y', 10, 560, null, 89, 'ZWLB=电子/电气&ZWMC=619', 'yan fa gong cheng shi ', 'yanfagongchengshi', 'yfgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (620, '电子/电气类别', '电子/电器维修工程师', 'D', 11, 560, null, 89, 'ZWLB=电子/电气&ZWMC=620', 'dian zi /dian qi wei xiu gong cheng shi ', 'dianzi/dianqiweixiugongchengshi', 'dz/dqwxgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (621, '电子/电气类别', '集成电路', 'J', 12, 560, null, 89, 'ZWLB=电子/电气&ZWMC=621', 'ji cheng dian lu ', 'jichengdianlu', 'jcdl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (622, '电子/电气类别', '嵌入式软件开发', 'Q', 13, 560, null, 89, 'ZWLB=电子/电气&ZWMC=622', 'qian ru shi ruan jian kai fa ', 'qianrushiruanjiankaifa', 'qrsrjkf');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (623, '电子/电气类别', '嵌入式硬件开发', 'Q', 14, 560, null, 89, 'ZWLB=电子/电气&ZWMC=623', 'qian ru shi ying jian kai fa ', 'qianrushiyingjiankaifa', 'qrsyjkf');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (624, '电子/电气类别', 'FAE现场应用', 'F', 15, 560, null, 89, 'ZWLB=电子/电气&ZWMC=624', 'FAExian chang ying yong ', 'FAExianchangyingyong', 'Fcyy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (625, '电子/电气类别', '激光/光电子技术', 'J', 16, 560, null, 89, 'ZWLB=电子/电气&ZWMC=625', 'ji guang /guang dian zi ji shu ', 'jiguang/guangdianzijishu', 'jg/gdzjs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (626, '电子/电气类别', '光伏系统工程师', 'G', 17, 560, null, 89, 'ZWLB=电子/电气&ZWMC=626', 'guang fu xi tong gong cheng shi ', 'guangfuxitonggongchengshi', 'gfxtgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (627, '电子/电气类别', '电子元器件工程师', 'D', 18, 560, null, 89, 'ZWLB=电子/电气&ZWMC=627', 'dian zi yuan qi jian gong cheng shi ', 'dianziyuanqijiangongchengshi', 'dzyqjgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (628, '电子/电气类别', '安防系统工程师', 'A', 19, 560, null, 89, 'ZWLB=电子/电气&ZWMC=628', 'an fang xi tong gong cheng shi ', 'anfangxitonggongchengshi', 'afxtgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (629, '电子/电气类别', '电子/电器设备工程师', 'D', 20, 560, null, 89, 'ZWLB=电子/电气&ZWMC=629', 'dian zi /dian qi she bei gong cheng shi ', 'dianzi/dianqishebeigongchengshi', 'dz/dqsbgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (630, '通讯类别', '通信技术工程师', 'T', 1, 561, null, 89, 'ZWLB=通讯&ZWMC=630', 'tong xin ji shu gong cheng shi ', 'tongxinjishugongchengshi', 'txjsgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (631, '通讯类别', '算法工程师', 'S', 2, 561, null, 89, 'ZWLB=通讯&ZWMC=631', 'suan fa gong cheng shi ', 'suanfagongchengshi', 'sfgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (632, '通讯类别', '有线传输工程师', 'Y', 3, 561, null, 89, 'ZWLB=通讯&ZWMC=632', 'you xian chuan shu gong cheng shi ', 'youxianchuanshugongchengshi', 'yxcsgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (633, '通讯类别', '无线通信工程师', 'W', 4, 561, null, 89, 'ZWLB=通讯&ZWMC=633', 'wu xian tong xin gong cheng shi ', 'wuxiantongxingongchengshi', 'wxtxgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (634, '通讯类别', '电信网络工程师', 'D', 5, 561, null, 89, 'ZWLB=通讯&ZWMC=634', 'dian xin wang luo gong cheng shi ', 'dianxinwangluogongchengshi', 'dxwlgcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (635, '通讯类别', '通信电源工程师', 'T', 6, 561, null, 89, 'ZWLB=通讯&ZWMC=635', 'tong xin dian yuan gong cheng shi ', 'tongxindianyuangongchengshi', 'txdygcs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (636, '行业类别', '农林牧渔', 'N', 1, 56, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (637, '行业类别', '其他', 'Q', 2, 56, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (640, '农林牧渔类别', '养殖人员', 'Y', 1, 636, null, 89, 'ZWLB=农林牧渔&ZWMC=640', 'yang zhi ren yuan ', 'yangzhirenyuan', 'yzry');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (641, '农林牧渔类别', '养殖主管', 'Y', 2, 636, null, 89, 'ZWLB=农林牧渔&ZWMC=641', 'yang zhi zhu guan ', 'yangzhizhuguan', 'yzzg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (642, '农林牧渔类别', '农艺师', 'N', 3, 636, null, 89, 'ZWLB=农林牧渔&ZWMC=642', 'nong yi shi ', 'nongyishi', 'nys');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (643, '农林牧渔类别', '花艺师', 'H', 4, 636, null, 89, 'ZWLB=农林牧渔&ZWMC=643', 'hua yi shi ', 'huayishi', 'hys');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (644, '农林牧渔类别', '畜牧师', 'X', 5, 636, null, 89, 'ZWLB=农林牧渔&ZWMC=644', 'xu mu shi ', 'xumushi', 'xms');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (645, '农林牧渔类别', '农场场长', 'N', 6, 636, null, 89, 'ZWLB=农林牧渔&ZWMC=645', 'nong chang chang chang ', 'nongchangchangchang', 'nccc');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (646, '农林牧渔类别', '饲料研发', 'S', 7, 636, null, 89, 'ZWLB=农林牧渔&ZWMC=646', 'si liao yan fa ', 'siliaoyanfa', 'slyf');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (647, '农林牧渔类别', '动物育种', 'D', 8, 636, null, 89, 'ZWLB=农林牧渔&ZWMC=647', 'dong wu yu zhong ', 'dongwuyuzhong', 'dwyz');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (648, '农林牧渔类别', '林业技术员', 'L', 9, 636, null, 89, 'ZWLB=农林牧渔&ZWMC=648', 'lin ye ji shu yuan ', 'linyejishuyuan', 'lyjsy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (649, '农林牧渔类别', '饲养员', 'S', 10, 636, null, 89, 'ZWLB=农林牧渔&ZWMC=649', 'si yang yuan ', 'siyangyuan', 'syy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (650, '农林牧渔类别', '兽医', 'S', 11, 636, null, 89, 'ZWLB=农林牧渔&ZWMC=650', 'shou yi ', 'shouyi', 'sy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (651, '其他类别', '储备干部', 'C', 1, 637, null, 89, 'ZWLB=其他&ZWMC=651', 'chu bei gan bu ', 'chubeiganbu', 'cbgb');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (652, '其他类别', '实习生', 'S', 2, 637, null, 89, 'ZWLB=其他&ZWMC=652', 'shi xi sheng ', 'shixisheng', 'sxs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (653, '兼职类别', '网络营销', 'W', 1, null, null, 90, 'JZLB=653', 'wang luo ying xiao ', 'wangluoyingxiao', 'wlyx');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (654, '兼职类别', '生活配送', 'S', 2, null, null, 90, 'JZLB=654', 'sheng huo pei song ', 'shenghuopeisong', 'shps');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (655, '兼职类别', '传单派发', 'C', 3, null, null, 90, 'JZLB=655', 'chuan dan pai fa ', 'chuandanpaifa', 'cdpf');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (656, '兼职类别', '问卷调查', 'W', 4, null, null, 90, 'JZLB=656', 'wen juan diao cha ', 'wenjuandiaocha', 'wjdc');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (657, '兼职类别', '游戏代练', 'Y', 5, null, null, 90, 'JZLB=657', 'you xi dai lian ', 'youxidailian', 'yxdl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (658, '兼职类别', '钟点工', 'Z', 6, null, null, 90, 'JZLB=658', 'zhong dian gong ', 'zhongdiangong', 'zdg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (659, '兼职类别', '家教', 'J', 7, null, null, 90, 'JZLB=659', 'jia jiao ', 'jiajiao', 'jj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (660, '兼职类别', '美工设计', 'M', 8, null, null, 90, 'JZLB=660', 'mei gong she ji ', 'meigongsheji', 'mgsj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (661, '兼职类别', '导游', 'D', 9, null, null, 90, 'JZLB=661', 'dao you ', 'daoyou', 'dy');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (662, '兼职类别', '促销导购', 'C', 10, null, null, 90, 'JZLB=662', 'cu xiao dao gou ', 'cuxiaodaogou', 'cxdg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (663, '兼职类别', '平面模特', 'P', 11, null, null, 90, 'JZLB=663', 'ping mian mo te ', 'pingmianmote', 'pmmt');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (664, '兼职类别', '网店模特', 'W', 12, null, null, 90, 'JZLB=664', 'wang dian mo te ', 'wangdianmote', 'wdmt');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (665, '兼职类别', '艺术老师', 'Y', 13, null, null, 90, 'JZLB=665', 'yi shu lao shi ', 'yishulaoshi', 'ysls');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (666, '兼职类别', '化妆师', 'H', 14, null, null, 90, 'JZLB=666', 'hua zhuang shi ', 'huazhuangshi', 'hzs');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (667, '兼职类别', 'SEO优化', 'S', 15, null, null, 90, 'JZLB=667', 'SEOyou hua ', 'SEOyouhua', 'Sh');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (668, '兼职类别', '护工', 'H', 16, null, null, 90, 'JZLB=668', 'hu gong ', 'hugong', 'hg');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (669, '兼职类别', '演出表演', 'Y', 17, null, null, 90, 'JZLB=669', 'yan chu biao yan ', 'yanchubiaoyan', 'ycby');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (670, '兼职类别', '测试兼职', 'C', 18, null, null, 90, 'JZLB=670', 'ce shi jian zhi ', 'ceshijianzhi', 'csjz');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (671, '兼职类别', '网站开发', 'W', 19, null, null, 90, 'JZLB=671', 'wang zhan kai fa ', 'wangzhankaifa', 'wzkf');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (672, '兼职类别', '网络布线', 'W', 20, null, null, 90, 'JZLB=672', 'wang luo bu xian ', 'wangluobuxian', 'wlbx');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (673, '兼职类别', '汽车陪练', 'Q', 21, null, null, 90, 'JZLB=673', 'qi che pei lian ', 'qichepeilian', 'qcpl');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (674, '兼职类别', '汽车代驾', 'Q', 22, null, null, 90, 'JZLB=674', 'qi che dai jia ', 'qichedaijia', 'qcdj');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (675, '兼职类别', '保洁清洗', 'B', 23, null, null, 90, 'JZLB=675', 'bao jie qing xi ', 'baojieqingxi', 'bjqx');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (676, '兼职类别', '公司注册', 'G', 24, null, null, 90, 'JZLB=676', 'gong si zhu ce ', 'gongsizhuce', 'gszc');
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (677, '兼职类别', '兼职会计', 'J', 25, null, null, 90, 'JZLB=677', 'jian zhi hui ji ', 'jianzhihuiji', 'jzhj');
+
+prompt Done.

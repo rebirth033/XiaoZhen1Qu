@@ -3,20 +3,23 @@
 }
 @section Section_Head {
     <link href=@Url.Content("~/Areas/Business/Scripts/bootstrap-3.3.7/css/bootstrap.min.css") rel="stylesheet" />
+    <script src=@Url.Content("~/Areas/Business/Scripts/bootstrap-3.3.7/js/bootstrap.min.js")></script>
+    <link href=@Url.Content("~/Areas/Business/Scripts/xcConfirm/css/xcConfirm.css") rel="stylesheet" />
+    <script src=@Url.Content("~/Areas/Business/Scripts/xcConfirm/js/xcConfirm.js")></script>
+    <script src=@Url.Content("~/Areas/Business/Scripts/underscore.min.js")></script>
     <link href=@Url.Content("~/Areas/Business/Css/Common/PageCommon.css") rel="stylesheet" />
     <link href="@Url.Content("~/Areas/Business/Css/Common/Top.css" )" rel="stylesheet" />
     <link href="@Url.Content("~/Areas/Business/Css/Common/XZQ.css")" rel="stylesheet" />
     <link href="@Url.Content("~/Areas/Business/Css/Common/Head.css")" rel="stylesheet" />
     <link href="@Url.Content("~/Areas/Business/Css/Common/CXLB_Common.css" )" rel="stylesheet" />
-    <script src=@Url.Content("~/Areas/Business/Scripts/bootstrap-3.3.7/js/bootstrap.min.js")></script>
-    <script src=@Url.Content("~/Areas/Business/Scripts/underscore.min.js")></script>
     <script src=@Url.Content("~/Areas/Business/Scripts/Business/Common/Common.js")></script>
-    <script src=@Url.Content("~/Areas/Business/Scripts/Business/Common/CXLB_Common.js")></script>
     <script src=@Url.Content("~/Areas/Business/Scripts/Business/Common/Regular.js")></script>
     <script src=@Url.Content("~/Areas/Business/Scripts/Business/Common/PageJson.js")></script>
     <script src="@Url.Content("~/Areas/Business/Scripts/Business/Common/XZQ.js")"></script>
     <script src="@Url.Content("~/Areas/Business/Scripts/Business/Common/Top.js")"></script>
     <script src="@Url.Content("~/Areas/Business/Scripts/Business/Common/Head.js")"></script>
+    <script src=@Url.Content("~/Areas/Business/Scripts/Business/Common/CXLB_Common.js")></script>
+    <script src=@Url.Content("~/Areas/Business/Scripts/Business/Common/SS_Common.js")></script>
     @RenderSection("Section_Head", false)
 }
 @section Section_Body {
@@ -55,9 +58,13 @@
         <div class="div_head_right">
             <div class="div_head_right_ss">
                 <span id="spanXSLC" class="span_spaninput_out SRK">
-                    <input class="span_spaninput_in" id="SS" type="text" placeholder="搜索 房子/车子/工作/服务" />
-                    <span class="span_ss">搜索</span>
+                    <input id="SS" class="form-control span_spaninput_in" type="text" placeholder="搜索 房子/车子/工作/服务" />
+                    <input type="hidden" id="LBID" />
+                    <input type="hidden" id="URL" />
+                    <input type="hidden" id="CONDITION" />
+                    <span id="span_ss" class="span_ss">搜索</span>
                 </span>
+                <div id="divSSJGlist" class="div_select_dropdown"></div>
             </div>
             <span class="span_fbxx" id="span_fbxx">免费发布信息</span>
         </div>
@@ -66,7 +73,7 @@
     </div>
     @RenderSection("Section_Body", false)
     <div class="div_bottom">
-        <p class="p_div_bottom">©2017 福建天问信息技术有限公司 客服电话：400-036-3432 | 021-6430110（周一至周日，9:00-18:00）</p>
+        <p class="p_div_bottom">©2017 福建沐晗信息技术有限公司 客服电话：400-036-3432 | 021-6430110（周一至周日，9:00-18:00）</p>
         <p class="p_div_bottom reduce">闽ICP备06019413号 | 闽ICP证B2-20080088 | 闽公网安备31010402000116号</p>
     </div>
 }

@@ -6,8 +6,19 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadHQSYCondition() {
-    LoadConditionByTypeNames("'婚宴酒店价格范围','婚纱礼服类型','婚纱礼服材质','婚纱礼服款式','婚纱礼服风格','婚纱礼服颜色'", "CODES_HQSY", "价格范围,类型,材质,款式,风格,颜色", "JG,LX,CZ,KS,FG,YS", "15,15,15,15,15,15");
+    LoadConditionByTypeNames("'婚宴酒店价格范围','婚纱礼服类型','婚纱礼服材质','婚纱礼服款式','婚纱礼服风格','婚纱礼服颜色'", "CODES_HQSY", "价格范围,类型,材质,款式,风格,颜色", "JG,LX,CZ,KS,FG,YS", "100,100,100,100,100,100");
     LoadBody("HQSYXX_HSLF", currentIndex);
+}
+//加载URL查询条件
+function LoadURLCondition() {
+    if (getUrlParam("LX") !== null)
+        SelectURLCondition(getUrlParam("LX"));
+    else if (getUrlParam("CZ") !== null)
+        SelectURLCondition(getUrlParam("CZ"));
+    else if (getUrlParam("QY") !== null)
+        SelectURLCondition(getUrlParam("QY"));
+    else
+        LoadBody("HQSYXX_HSLF", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -15,6 +26,15 @@ function SelectCondition(obj, name) {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
+    LoadBody("HQSYXX_HSLF", currentIndex);
+    ShowSelectCondition("HQSYXX_HSLF");
+}
+//选择URL条件
+function SelectURLCondition(obj) {
+    $("#" + obj).parent().find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $("#" + obj).addClass("li_condition_body_active");
     LoadBody("HQSYXX_HSLF", currentIndex);
     ShowSelectCondition("HQSYXX_HSLF");
 }

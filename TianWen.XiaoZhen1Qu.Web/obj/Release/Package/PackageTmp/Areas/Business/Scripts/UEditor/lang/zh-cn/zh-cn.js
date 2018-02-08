@@ -126,13 +126,13 @@ UE.I18N['zh-cn'] = {
         'vb':'Visual Basic',
         'xml':'XML'
     },
-    'confirmClear':"确定清空当前文档么？",
+    'confirmClear':"确定清空当前文档么?",
     'contextMenu':{
         'delete':"删除",
         'selectall':"全选",
         'deletecode':"删除代码",
         'cleardoc':"清空文档",
-        'confirmclear':"确定清空当前文档么？",
+        'confirmclear':"确定清空当前文档么?",
         'unlink':"删除超链接",
         'paragraph':"段落格式",
         'edittable':"表格属性",

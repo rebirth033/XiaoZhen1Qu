@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    LoadDuoX("月嫂/保姆类别", "LB");
+    LoadDuoX("保姆月嫂类别", "LB");
 });
 //加载多选
 function LoadDuoX(type, id) {
@@ -95,7 +95,7 @@ function FB() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                window.location.href = getRootPath() + "/Business/FBCG/FBCG";
+                window.location.href = getRootPath() + "/Business/FBCG/FBCG?LBID=" + getUrlParam("CLICKID") + "&ID=" + xml.Value.ID + "&JCXXID=" + xml.Value.JCXXID;
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

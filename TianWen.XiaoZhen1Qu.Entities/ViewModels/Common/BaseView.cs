@@ -10,16 +10,16 @@ namespace TianWen.XiaoZhen1Qu.Entities.ViewModels.Common
         public string JCXXID { get; set; }
         public string BT { get; set; }
         public string YHID { get; set; }
-        public decimal STATUS { get; set; }
+        public int STATUS { get; set; }
         public string XQDZ { get; set; }
         public string LXR { get; set; }
         public string LXDH { get; set; }
-        public decimal LLCS { get; set; }
+        public int LLCS { get; set; }
         public DateTime CJSJ { get; set; }
         public DateTime ZXGXSJ { get; set; }
         public byte[] BCMS { get; set; }
         public string BCMSString { get; set; }
-        public decimal LBID { get; set; }
+        public int LBID { get; set; }
 
         //图片
         public IList<PHOTOS> PHOTOS { get; set; }

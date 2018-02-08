@@ -215,7 +215,14 @@ function Register() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                alert("注册成功");
+                window.wxc.xcConfirm("注册成功", window.wxc.xcConfirm.typeEnum.success, {
+                    onOk: function (v) {
+                        window.location.href = getRootPath() + "/Business/SY/SY";
+                    },
+                    onClose: function (v) {
+                        window.location.href = getRootPath() + "/Business/SY/SY";
+                    }
+                });
             } else {
                 if (xml.Type === 1) {
                     $("#YZM").css("border-color", "#F2272D");
@@ -226,6 +233,16 @@ function Register() {
                     $("#YHM").css("border-color", "#F2272D");
                     $("#YHMInfo").css("color", "#F2272D");
                     $("#YHMInfo").html(xml.Message);
+                }
+                if (xml.Type === 4) {
+                    window.wxc.xcConfirm(xml.Message, window.wxc.xcConfirm.typeEnum.info, {
+                        onOk: function (v) {
+                            window.location.reload();
+                        },
+                        onClose: function (v) {
+                            window.location.reload();
+                        }
+                    });
                 }
             }
         },

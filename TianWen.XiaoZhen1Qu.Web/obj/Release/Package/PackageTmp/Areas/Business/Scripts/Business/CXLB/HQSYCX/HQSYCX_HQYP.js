@@ -6,8 +6,16 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadHQSYCondition() {
-    LoadConditionByTypeNames("'婚庆用品类型','婚庆用品价格'", "CODES_HQSY", "类型,价格范围", "LX,JG", "100,100");
-    LoadBody("HQSYXX_HQYP", currentIndex);
+    LoadConditionByTypeNames("'婚庆用品类别','婚庆用品价格'", "CODES_HQSY", "类别,价格范围", "LB,JG", "100,100");
+}
+//加载URL查询条件
+function LoadURLCondition() {
+    if (getUrlParam("LB") !== null)
+        SelectURLCondition(getUrlParam("LB"));
+    else if (getUrlParam("QY") !== null)
+        SelectURLCondition(getUrlParam("QY"));
+    else
+        LoadBody("HQSYXX_HQYP", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -18,10 +26,19 @@ function SelectCondition(obj, name) {
     LoadBody("HQSYXX_HQYP", currentIndex);
     ShowSelectCondition("HQSYXX_HQYP");
 }
+//选择URL条件
+function SelectURLCondition(obj) {
+    $("#" + obj).parent().find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $("#" + obj).addClass("li_condition_body_active");
+    LoadBody("HQSYXX_HQYP", currentIndex);
+    ShowSelectCondition("HQSYXX_HQYP");
+}
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("LX,JG,QY");
+    var condition = GetAllCondition("LB,JG,QY");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/HQSYCX/LoadHQSYXX",

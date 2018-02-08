@@ -10,19 +10,40 @@ function ValidatePBLB() {
     if (!ValidateSelect("PBLB", "PBXH", "请选择平板型号")) return false;
     return true;
 }
+//验证平板类别
+function ValidatePBPJLB() {
+    if (!ValidateSelect("PBLB", "LB", "请选择类别")) return false;
+    if (!ValidateSelect("PBLB", "XL", "请选择小类")) return false;
+    return true;
+}
 //验证所有
 function ValidateAll() {
-    if (ValidateRadio("SF", "忘记选择身份啦")
-        & ValidatePBLB()
-        & ValidateSelect("XJCD", "XJ", "请选择新旧")
-        & ValidateCheck("PSFS", "忘记选择配送方式啦")
-        & ValidateBCMS("BCMS", "忘记填写详情描述啦")
-        & ValidateSZQY()
-        & ValidateJG()
-        & ValidateXXDZ())
-        return true;
-    else
-        return false;
+    if ($("#spanLB").html() === "平板电脑") {
+        if (ValidateRadio("SF", "忘记选择身份啦")
+            & ValidatePBLB()
+            & ValidateSelect("XJCD", "XJ", "请选择新旧")
+            & ValidateCheck("PSFS", "忘记选择配送方式啦")
+            & ValidateBCMS("BCMS", "忘记填写详情描述啦")
+            & ValidateXXDZ()
+            & ValidateJG()
+            & ValidateCommon())
+            return true;
+        else
+            return false;
+    }
+    else {
+        if (ValidateRadio("SF", "忘记选择身份啦")
+            & ValidatePBPJLB()
+            & ValidateSelect("XJCD", "XJ", "请选择新旧")
+            & ValidateCheck("PSFS", "忘记选择配送方式啦")
+            & ValidateBCMS("BCMS", "忘记填写详情描述啦")
+            & ValidateXXDZ()
+            & ValidateJG()
+            & ValidateCommon())
+            return true;
+        else
+            return false;
+    }
 }
 //验证售价
 function ValidateJG() {

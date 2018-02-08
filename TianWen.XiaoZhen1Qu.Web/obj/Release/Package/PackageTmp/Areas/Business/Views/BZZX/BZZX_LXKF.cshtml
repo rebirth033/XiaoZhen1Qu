@@ -6,6 +6,7 @@
 <head>
     <link href="@Url.Content("~/Areas/Business/Css/BZZX/BZZX_LXKF.css")" rel="stylesheet" />
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/BZZX/BZZX_LXKF.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/BZZX/BZZX_LXKFZP.js")"></script>
 </head>
 <body>
     <div class="div_body">
@@ -30,8 +31,7 @@
                         <td class="td_wtlx_inner_right">
                             <span class="span_wtlx_inner_right" id="span_wtlx_inner_right_tsjbxjxx">投诉举报虚假信息</span>
                             <span class="span_wtlx_inner_right" id="span_wtlx_inner_right_mysjhm">冒用手机号码</span>
-                            <span class="span_wtlx_inner_right" id="span_wtlx_inner_right_qtxxmy">其他信息冒用</span>
-                            <span class="span_wtlx_inner_right" id="span_wtlx_inner_right_ssbts">申诉被投诉</span>
+                            <span class="span_wtlx_inner_right" id="span_wtlx_inner_right_qtxxwt">其他信息问题</span>
                         </td>
                     </tr>
                     <tr class="tr_wtlx">
@@ -63,7 +63,7 @@
                 </table>
             </div>
         </div>
-        <div class="div_content" style="margin-top:20px;">
+        <div class="div_content" id="div_step_two" style="margin-top: 20px; display: none;">
             <span class="span_step span_step_second"></span>
             <span class="span_step_text" id="span_step_text_second">请描述您遇到的问题：</span>
         </div>
@@ -74,496 +74,42 @@
                         <tr class="tr_wtjj">
                             <td class="td_wtjj_inner_left">信息编号：</td>
                             <td class="td_wtjj_inner_right">
-                                <input type="text" id="inputXXBH" class="input_content">
-                                <input class="btn btn-info" id="btnCKBSCYY" type="button" style="margin-top: -3px; width: 123px;" value="查看被删除原因" />
+                                <input type="text" id="inputXXBH" class="input_content" placeholder="请输入信息编号">
                                 <span class="span_ckxxbh">如何查看信息编号?</span>
-                            </td>
-                        </tr>
-                        <tr class="tr_wtjj">
-                            <td class="td_wtjj_inner_left"></td>
-                            <td class="td_wtjj_inner_right" id="td_xxbhinfo"></td>
-                        </tr>
-                        <tr class="tr_wtjj">
-                            <td class="td_wtjj_inner_left"></td>
-                            <td class="td_wtjj_inner_right"></td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="div_wtjj_inner" id="div_xxbfhxg">
-                    <table class="table_wtjj">
-                        <tr class="tr_wtjj" id="tr_xxbh">
-                            <td class="td_wtjj_inner_left">信息编号：</td>
-                            <td class="td_wtjj_inner_right">
-                                <input type="text" id="inputXXBFHXG_XXBH" class="input_content">
-                                <span class="span_ckxxbh">如何查看信息编号?</span>
-                                <span class="span_xxbhinfo"></span>
                             </td>
                         </tr>
                         <tr class="tr_wtjj">
                             <td class="td_wtjj_inner_left" style="vertical-align:top;padding-top:15px;">问题描述：</td>
                             <td class="td_wtjj_inner_right">
-                                <textarea class="textarea_mswt" id="textarea_mswt">请描述您的具体问题，字数在15至300之间</textarea>
+                                <textarea class="textarea_mswt" id="textareaWTMS" maxlength="500">请描述您的具体问题，字数在500字以内</textarea>
+                                <span class="span_info" id="span_wtmsinfo"></span>
                             </td>
                         </tr>
                         <tr class="tr_wtjj">
                             <td class="td_wtjj_inner_left">上传图片：</td>
                             <td class="td_wtjj_inner_right">
-                                <input type="button" value="图片上传" />
-                                <span>已上传图片1/5，最多可上传5张图片，支持：jpg/gif/png格式 </span>
+                                <div class="div_row_zp div_row_zp_value" id="divFWZPValue" style="display: none;">
+                                    <div class="div_row_right" id="divImgs1" style="width: 670px; display: inline-block;">
+                                        <ul class="ulImgs" id="ulImgs1" style="padding-left: 0px;"></ul>
+                                    </div>
+                                </div>
+                                <div class="div_upload" id="div_upload">
+
+                                    <input class="file" id="input_upload" type="file" multiple="multiple" unselectable="on">
+
+                                </div>
+                                <span>最多可上传4张图片，支持：jpg/gif/png格式 </span>
                             </td>
                         </tr>
                         <tr class="tr_wtjj" style="height:65px;vertical-align:top;">
                             <td class="td_wtjj_inner_left"></td>
                             <td class="td_wtjj_inner_right" style="padding-top:10px;">
-                                <input class="button" type="button" value="提交问题" style="width:153px; height:44px" />
+                                <input id="btn_submit" class="button" type="button" value="提交问题" style="width:153px; height:44px" />
                             </td>
                         </tr>
                     </table>
                 </div>
-                <div class="div_wtjj_inner" id="div_qtxxmy" style="display:none;">
-                    <div style="display:block;height:75px;">
-                        <span class="span_wtjj_inner" id="span_wtjj_inner_sfzbmy">1、身份证被冒用</span>
-                        <span class="span_wtjj_inner" id="span_wtjj_inner_mygrxx">2、冒用个人肖像、公司名称等虚假信息</span>
-                        <span class="span_wtjj_inner" id="span_wtjj_inner_gsxxbmy">3、公司信息被冒用</span>
-                    </div>
-                    <div class="div_qtxxmy_inner div_wtjj_inner_sfzbmy" id="div_wtjj_inner_sfzbmy" style="display:none;">
-                        根据您的问题，我们建议您：
-                        <div class="div_wtjj_inner_sfzbmy_inner">
-                            建议您取消或更换实名认证，请点击下方的"填表单，联系客服"按钮，在“描述问题中”填写“相关冒用的信息页面或用户页面的链接”，在“上传照片”中上传公司营业执照、法人身份证原件数码照，以便及时为您提交处理。<br />
-                            <input class="btn btn-info" type="button" style="margin-top: 3px; width: 140px;" value="填表单，联系客服" onclick="TBD()" />
-                        </div>
-                    </div>
-                    <div class="div_qtxxmy_inner div_wtjj_inner_mygrxx" id="div_wtjj_inner_mygrxx" style="display:none;">
-                        根据您的问题，我们建议您：
-                        <div class="div_wtjj_inner_mygrxx_inner">
-                            建议您在您被冒用的对应的信息页面中点击“举报”按钮进行举报并详细说明情况以便核实后处理。具体的按钮位置为： <br />
-                            <span class="span_wtjj_inner_mygrxx_inner"></span>
-                            <input class="btn btn-info" type="button" style="margin-top: 10px; width: 140px;" value="填表单，联系客服" onclick="TBD()" />
-                        </div>
-                    </div>
-                    <div class="div_qtxxmy_inner div_wtjj_inner_gsxxbmy" id="div_wtjj_inner_gsxxbmy" style="display:none;">
-                        根据您的问题，我们建议您：
-                        <div class="div_wtjj_inner_gsxxbmy_inner">
-                            若您的公司信息被冒用，请点击此处快速申诉。<br />
-                            <input class="btn btn-info" type="button" style="margin-top: 10px; width: 140px;" value="填表单，联系客服" onclick="TBD()" />
-                        </div>
-                    </div>
-                </div>
-                <div class="div_wtjj_inner" id="div_ssbts" style="display:none">
-                    <div style="display:block;height:75px;">
-                        <span class="span_wtjj_inner" id="span_wtjj_inner_btswxjwfxx">1、被投诉为虚假违法信息</span>
-                        <span class="span_wtjj_inner" id="span_wtjj_inner_xxbsczmb">2、信息被删除怎么办</span>
-                        <span class="span_wtjj_inner" id="span_wtjj_inner_xxbxs">3、信息不显示/无法刷新怎么办</span>
-                        <span class="span_wtjj_inner" id="span_wtjj_inner_rhscdgsdpj">4、如何删除对公司的评价</span>
-                    </div>
-                    <div class="div_qtxxmy_inner div_wtjj_inner_btswxjwfxx" id="div_wtjj_inner_btswxjwfxx" style="display:none">
-                        根据您的问题，我们建议您：
-                        <div>
-                            如果您的信息被投诉为虚假违法信息，请您确认是否违反信息小镇发帖版规，若有，则请修改信息并重新发布。若查看后发现没有违反相关规定，则请点击下方的“填表单，联系客服”按钮，联系客服人员解决。<br />
-                            <input class="btn btn-info" type="button" style="margin-top: 3px; width: 140px;" value="填表单，联系客服" onclick="TBD()" />
-                        </div>
-                    </div>
-                    <div class="div_qtxxmy_inner div_wtjj_inner_xxbsczmb" id="div_wtjj_inner_xxbsczmb" style="display:none">
-                        根据您的问题，我们建议您：
-                        <div>
-                            请您确认是否违反信息小镇发帖版规，若有，则请修改信息，重新发布。若没有，则建议您在分类上面选择“信息被删除”类型的问题，联系客服处理。<br />
-                            <input class="btn btn-info" type="button" style="margin-top: 3px; width: 140px;" value="填表单，联系客服" onclick="TBD()" />
-                        </div>
-                    </div>
-                    <div class="div_qtxxmy_inner div_wtjj_inner_xxbxs" id="div_wtjj_inner_xxbxs" style="display:none">
-                        根据您的问题，我们建议您：
-                        <div>
-                            请您确认是否违反信息小镇发帖版规，若有，则请修改信息，重新发布。
-                            出现这种情况的用户一般是由于使用多账户发布信息导致信息严重违规且信息靠后显示或删除，信息无法显示、刷新、置顶、推广，如果您有此行为，建议您七个工作日（不包含周六，周日）后固定一个账户及手机号码重新发布信息，给您带来不便请谅解。<br />
-                            <input class="btn btn-info" type="button" style="margin-top: 3px; width: 140px;" value="填表单，联系客服" onclick="TBD()" />
-                        </div>
-                    </div>
-                    <div class="div_qtxxmy_inner div_wtjj_inner_rhscdgsdpj" id="div_wtjj_inner_rhscdgsdpj" style="display:none">
-                        根据您的问题，我们建议您：
-                        <div>
-                            用户给予的评价暂时无法删除，给您带来不便请您谅解。<br />
-                            <input class="btn btn-info" type="button" style="margin-top: 3px; width: 140px;" value="填表单，联系客服" onclick="TBD()" />
-                        </div>
-                    </div>
-                </div>
-                <div class="div_wtjj_inner" id="div_zhbdj" style="display:none">
-                    <div style="display:block;height:75px;">
-                        <span class="span_wtjj_inner" id="span_wtjj_inner_fbxxstssjzhdj">1、发布信息时提示手机账号冻结是怎么回事</span>
-                        <span class="span_wtjj_inner" id="span_wtjj_inner_zhbdjdyyssm">2、账户被冻结的原因是什么</span>
-                        <span class="span_wtjj_inner" id="span_wtjj_inner_zhwfdl">3、账户无法登录</span>
-                    </div>
-                    <div class="div_qtxxmy_inner div_wtjj_inner_fbxxstssjzhdj" id="div_wtjj_inner_fbxxstssjzhdj" style="display:none">
-                        根据您的问题，我们建议您：
-                        <div>
-                            请您点击下方的“填表单，联系客服”按钮，在信息描述中填写被冻结的手机号码，以便核实，给您带来不便敬请谅解。<br />
-                            <input class="btn btn-info" type="button" style="margin-top: 3px; width: 140px;" value="填表单，联系客服" onclick="TBD()" />
-                        </div>
-                    </div>
-                    <div class="div_qtxxmy_inner div_wtjj_inner_zhbdjdyyssm" id="div_wtjj_inner_zhbdjdyyssm" style="display:none;">
-                        根据您的问题，我们建议您：
-                        <div>
-                            &nbsp;&nbsp;&nbsp;&nbsp;您好，发布以下情况的信息，会无法解冻，建议您按照信息小镇发帖版规操作：<br />
-                            &nbsp;&nbsp;&nbsp;&nbsp;1、注册了多个公司信息，是严重违反版规的，针对该账户的公司资料是无法审核通过的，无法解冻。<br />
-                            &nbsp;&nbsp;&nbsp;&nbsp;2、发布的信息由于遭多用户投诉信息与实际描述不符，经过审核将账户电话被冻结无法解冻。<br />
-                            &nbsp;&nbsp;&nbsp;&nbsp;3、在此账户违规操作导致手机被冻结，无法解冻。<br />
-                            &nbsp;&nbsp;&nbsp;&nbsp;4、账户发布违反信息小镇发布版规的内容，将会暂时无法解冻。<br />
-                            &nbsp;&nbsp;&nbsp;&nbsp;以上情况下账户暂时无法解冻，建议按照信息小镇版规操作，去查看<span class="span_href">信息小镇发帖版规 >></span><br />
-                            &nbsp;&nbsp;&nbsp;&nbsp;此外，账户由于冒用他人营业执照发布信息造成系统冻结账户，如需解冻请点击“填表单，联系客服”按钮在上传图片中提供：营业执照副本数码照、税务登记证、组织机构代码证、基本开户许可证及公司法人手持身份证，以上证件必须是原件数码照，否则将不予通过。<br />
-                            <input class="btn btn-info" type="button" style="margin-top: 3px; width: 140px;" value="填表单，联系客服" onclick="TBD()" />
-                        </div>
-                    </div>
-                    <div class="div_qtxxmy_inner div_wtjj_inner_zhwfdl" id="div_wtjj_inner_zhwfdl" style="display:none">
-                        根据您的问题，我们建议您：
-                        <div>
-                            极有可能是您的密码错误，建议您现在去自助<span class="span_href">找回密码 >></span><br />
-                            <input class="btn btn-info" type="button" style="margin-top: 3px; width: 140px;" value="填表单，联系客服" onclick="TBD()" />
-                        </div>
-                    </div>
-                </div>
-                <div class="div_wtjj_inner" id="div_bpwzj" style="display:none">
-                    <div style="display:block;height:75px;">
-                        <span class="span_wtjj_inner" id="span_wtjj_inner_bpwzjdyy">1、被判为职介的原因</span>
-                        <span class="span_wtjj_inner" id="span_wtjj_inner_fbzpxxsbpwzj">2、发布招聘信息时被判为职介</span>
-                    </div>
-                    <div class="div_qtxxmy_inner div_wtjj_inner_bpwzjdyy" id="div_wtjj_inner_bpwzjdyy" style="display:none;">
-                        根据您的问题，我们建议您：
-                        <div>
-                            如果您的账户出现以下情况，会被判为职介：<br />
-                            1.以不同公司名称发布过招聘信息，已经属于职介行为，该行为暂无法帮您修改身份；<br />
-                            2.您发布的信息与您的公司经营范围不符，无法为您修改身份，给您带来的不便请谅解。<br />
-                            <input class="btn btn-info" type="button" style="margin-top: 3px; width: 140px;" value="填表单，联系客服" onclick="TBD()" />
-                        </div>
-                    </div>
-                    <div class="div_qtxxmy_inner div_wtjj_inner_fbzpxxsbpwzj" id="div_wtjj_inner_fbzpxxsbpwzj" style="display:none;">
-                        根据您的问题，我们建议您：
-                        <div>
-                            由于近期招聘类别发现虚假信息较多，发布信息暂时做了调整，发布信息时必须要通过营业执照以及组织机构代码证、税务登记证、开户许可证其中一项，验证成功后才可更改身份：<br />
-                            1.若您的营业执照无法通过认证，并提示公司别名与公司名不一致。则建议您将公司别称填写为与公司名称相同即可；<br />
-                            2.若您还未做营业执照认证，请您完成营业执照认证以便为您核实身份。<br />
-                            <input class="btn btn-info" type="button" style="margin-top: 3px; width: 140px;" value="填表单，联系客服" onclick="TBD()" />
-                        </div>
-                    </div>
-                </div>
-                <div class="div_wtjj_inner" id="div_ghrz" style="display:none">
-                    <div style="display:block;height:180px;">
-                        <span class="span_wtjj_inner" id="span_wtjj_inner_ksghsjrz">1、快速更换/取消手机认证</span>
-                        <span class="span_wtjj_inner" id="span_wtjj_inner_ksghyx">2、快速更换/取消邮箱</span>
-                        <span class="span_wtjj_inner" id="span_wtjj_inner_qxsmrz">3、取消实名认证</span>
-                        <span class="span_wtjj_inner" id="span_wtjj_inner_qxyyzzrz">4、取消/更换营业执照认证</span>
-                        <span class="span_wtjj_inner" id="span_wtjj_inner_wfjssjdx">5、无法接收手机短信，怎么更换手机认证</span>
-                        <span class="span_wtjj_inner" id="span_wtjj_inner_xyxggsm">6、想要修改公司名？</span>
-                        <span class="span_wtjj_inner" id="span_wtjj_inner_yyzzrztbg">7、营业执照认证通不过</span>
-                        <span class="span_wtjj_inner" id="span_wtjj_inner_rhtjyyzzrz">8、如何提交营业执照认证</span>
-                        <span class="span_wtjj_inner" id="span_wtjj_inner_qxgrsfrz">9、取消个人身份认证</span>
-                    </div>
-                    <div class="div_qtxxmy_inner div_wtjj_inner_ksghsjrz" id="div_wtjj_inner_ksghsjrz" style="display:none;">
-                        根据您的问题，我们建议您：
-                        <div>
-                            如需要更换或取消手机认证，您可以去自助快速更换/取消手机认证，立刻解决问题，无需等待。<br />
-                            <input class="btn btn-info" type="button" style="margin-top: 3px; width: 140px;" value="填表单，联系客服" onclick="TBD()" />
-                        </div>
-                    </div>
-                    <div class="div_qtxxmy_inner div_wtjj_inner_ksghyx" id="div_wtjj_inner_ksghyx" style="display:none;">
-                        根据您的问题，我们建议您：
-                        <div>
-                            如需要更换或取消邮箱认证，您可以去自助快速更换/取消邮箱认证，立刻解决问题，无需等待。<br />
-                            <input class="btn btn-info" type="button" style="margin-top: 3px; width: 140px;" value="填表单，联系客服" onclick="TBD()" />
-                        </div>
-                    </div>
-                    <div class="div_qtxxmy_inner div_wtjj_inner_qxsmrz" id="div_wtjj_inner_qxsmrz" style="display:none;">
-                        根据您的问题，我们建议您：
-                        <div>
-                            实名认证，一经认证后不可取消。如有与实名有关的其他问题可点击“填表单，联系客服”进行咨询。<br />
-                            <input class="btn btn-info" type="button" style="margin-top: 3px; width: 140px;" value="填表单，联系客服" onclick="TBD()" />
-                        </div>
-                    </div>
-                    <div class="div_qtxxmy_inner div_wtjj_inner_qxyyzzrz" id="div_wtjj_inner_qxyyzzrz" style="display:none;">
-                        根据您的问题，我们建议您：
-                        <div>
-                            营业执照一经认证通过，无法取消，给您带来不便敬请谅解。<br />
-                            <input class="btn btn-info" type="button" style="margin-top: 3px; width: 140px;" value="填表单，联系客服" onclick="TBD()" />
-                        </div>
-                    </div>
-                    <div class="div_qtxxmy_inner div_wtjj_inner_wfjssjdx" id="div_wtjj_inner_wfjssjdx" style="display:none;">
-                        根据您的问题，我们建议您：
-                        <div>
-                            如您的被绑定的手机号因为丢失、停用而无法接收手机验证短信或需要解绑原手机号，建议您直接点击自助更换/解绑手机，立刻解决问题，无需等待。<br />
-                            <input class="btn btn-info" type="button" style="margin-top: 3px; width: 140px;" value="填表单，联系客服" onclick="TBD()" />
-                        </div>
-                    </div>
-                    <div class="div_qtxxmy_inner div_wtjj_inner_xyxggsm" id="div_wtjj_inner_xyxggsm" style="display:none;">
-                        根据您的问题，我们建议您：
-                        <div>
-                            1、首先请您去认证管理查询您的营业执照是否被认证。<br />
-                            2、如果您的营业执照没有经过验证，则可以通过进行营业执照认证过程中修改公司名称，系统审核通过后会为您自动更改过来（注，只有此一次修改机会）；<br />
-                            3、如果您的营业执照已经认证，则无法更改公司名称，您可以留存该账户，去注册一个新的账户并认证新公司名称。<br />
-                            <input class="btn btn-info" type="button" style="margin-top: 3px; width: 140px;" value="填表单，联系客服" onclick="TBD()" />
-                        </div>
-                    </div>
-                    <div class="div_qtxxmy_inner div_wtjj_inner_yyzzrztbg" id="div_wtjj_inner_yyzzrztbg" style="display:none;">
-                        根据您的问题，我们建议您：
-                        <div>
-                            您好，认证审核时间为2-5个工作日，请您耐心等待。<br />
-                            如果您超过5个工作日仍没有通过验证，请您对照看看是否出现以下问题，并采取对应的解决方案：<br />
-                            （1）上传营业执照时填写的公司名称和别称与证书不符，建议您在上传时填写一致后重新提交；<br />
-                            （2）证书图片不清晰或营业执照非原件副本数码照；<br />
-                            （3）提交信息与证书不符，如，营业执照注册号错误；<br />
-                            （4）证书没有年检章审核；<br />
-                            （5）冒充他人企业，在没有提供证明之前其信息会做删除处理。<br />
-                            如果您存在以上问题，请您修改后再重新上传。<br />
-                            <input class="btn btn-info" type="button" style="margin-top: 3px; width: 140px;" value="填表单，联系客服" onclick="TBD()" />
-                        </div>
-                    </div>
-                    <div class="div_qtxxmy_inner div_wtjj_inner_rhtjyyzzrz" id="div_wtjj_inner_rhtjyyzzrz" style="display:none;">
-                        根据您的问题，我们建议您：
-                        <div>
-                            建议您直接去营业执照认证中填写相应信息上传营业执照照片。<br />
-                            <input class="btn btn-info" type="button" style="margin-top: 3px; width: 140px;" value="填表单，联系客服" onclick="TBD()" />
-                        </div>
-                    </div>
-                    <div class="div_qtxxmy_inner div_wtjj_inner_qxgrsfrz" id="div_wtjj_inner_qxgrsfrz" style="display:none;">
-                        根据您的问题，我们建议您：
-                        <div>
-                            如您想取消实名认证，建议您点击下方的“填表单，联系客服按钮”，在文本框中输入您的身份证号，在“上传图片”选项上传手持身份证半身照，以便及时为您提交处理。<br />
-                            <input class="btn btn-info" type="button" style="margin-top: 3px; width: 140px;" value="填表单，联系客服" onclick="TBD()" />
-                        </div>
-                    </div>
-                </div>
-                <div class="div_wtjj_inner" id="div_zhbd" style="display:none">
-                    <div style="display:block;height:112px;">
-                        <span class="span_wtjj_inner" id="span_wtjj_inner_tszhmmcw">1、提示账户密码错误</span>
-                        <span class="span_wtjj_inner" id="span_wtjj_inner_sjbmyhbbrrz">2、手机被冒用或被别人认证</span>
-                        <span class="span_wtjj_inner" id="span_wtjj_inner_qtbdqk">3、其他被盗情况</span>
-                        <span class="span_wtjj_inner" id="span_wtjj_inner_zhbdxzx">4、账户被盗想注销</span>
-                        <span class="span_wtjj_inner" id="span_wtjj_inner_rhfzzhbd">5、如何防止账户被盗</span>
-                    </div>
-                    <div class="div_qtxxmy_inner div_wtjj_inner_tszhmmcw" id="div_wtjj_inner_tszhmmcw" style="display:none;">
-                        根据您的问题，我们建议您：
-                        <div>
-                            如果您的账户下绑定了手机和邮箱，直接去找回密码重新设置新的密码。此外，为了防止您的账户被盗用，请您不定期修改密码（使用较为复杂的密码）或进行<span class="span_href">实名认证</span>。<br />
-                            <input class="btn btn-info" type="button" style="margin-top: 3px; width: 140px;" value="填表单，联系客服" onclick="TBD()" />
-                        </div>
-                    </div>
-                    <div class="div_qtxxmy_inner div_wtjj_inner_sjbmyhbbrrz" id="div_wtjj_inner_sjbmyhbbrrz" style="display:none;">
-                        根据您的问题，我们建议您：
-                        <div>
-                            如果您的手机号被冒用，建议您直接去自助删除被冒用信息，立即解决问题，无需等待。此操作还可以将号码做屏蔽，屏蔽后此号码则无法在网站中再次发布信息。<br />
-                            <input class="btn btn-info" type="button" style="margin-top: 3px; width: 140px;" value="填表单，联系客服" onclick="TBD()" />
-                        </div>
-                    </div>
-                    <div class="div_qtxxmy_inner div_wtjj_inner_qtbdqk" id="div_wtjj_inner_qtbdqk" style="display:none;">
-                        根据您的问题，我们建议您：
-                        <div>
-                            如果存在其他账户被盗的情况，请您点击下方的“填表单，联系客服”按钮，填写被盗的账号、联系人、电话号码、被盗时间、是否有被盗资金（如有被盗资金请您提供资金总额、该订单号），并详细说明您的问题以便为您提交相关部门处理，给您带来的不便请谅解。<br />
-                            <input class="btn btn-info" type="button" style="margin-top: 3px; width: 140px;" value="填表单，联系客服" onclick="TBD()" />
-                        </div>
-                    </div>
-                    <div class="div_qtxxmy_inner div_wtjj_inner_zhbdxzx" id="div_wtjj_inner_zhbdxzx" style="display:none;">
-                        根据您的问题，我们建议您：
-                        <div>
-                            账户一经注册是无法修改以及注销的，在网站中是具有唯一性的，如果您不再使用此账户，可以将信息删除后，将账户搁置，给您造成的不便请谅解。<br />
-                            <input class="btn btn-info" type="button" style="margin-top: 3px; width: 140px;" value="填表单，联系客服" onclick="TBD()" />
-                        </div>
-                    </div>
-                    <div class="div_qtxxmy_inner div_wtjj_inner_rhfzzhbd" id="div_wtjj_inner_rhfzzhbd" style="display:none;">
-                        根据您的问题，我们建议您：
-                        <div>
-                            为了防止您的账户被盗用，请您不定期修改复杂的密码或进行实名认证。<br />
-                            <input class="btn btn-info" type="button" style="margin-top: 3px; width: 140px;" value="填表单，联系客服" onclick="TBD()" />
-                        </div>
-                    </div>
-                </div>
-                <div class="div_wtjj_inner" id="div_czwt" style="display:none">
-                    <div style="display:block;height:85px;">
-                        <span class="span_wtjj_inner" id="span_wtjj_inner_xykjczfp">1、需要开具充值发票</span>
-                        <span class="span_wtjj_inner" id="span_wtjj_inner_sqtkdz">2、申请的退款什么时间可以到</span>
-                        <span class="span_wtjj_inner" id="span_wtjj_inner_zdyfk">3、置顶已付款，但未显示</span>
-                    </div>
-                    <div class="div_qtxxmy_inner div_wtjj_inner_xykjczfp" id="div_wtjj_inner_xykjczfp" style="display:none;">
-                        根据您的问题，我们建议您：
-                        <div>
-                            请点击下方的“填表单，联系客服”，填写用户名、公司地址、发票抬头、金额、公司名称、收件人姓名、收件人电话和充值时间。提交后，处理时长一般为2-3个工作日，请您耐心等待。提交内容如下图所示： <br />
-                            <input class="btn btn-info" type="button" style="margin-top: 3px; width: 140px;" value="填表单，联系客服" onclick="TBD()" />
-                        </div>
-                    </div>
-                    <div class="div_qtxxmy_inner div_wtjj_inner_sqtkdz" id="div_wtjj_inner_sqtkdz" style="display:none;">
-                        根据您的问题，我们建议您：
-                        <div>
-                            如果您第一次申请退款，卖家同意后，3-10个工作日到账。<br />
-                            第一次申请退款，卖家不进行任何操作，会在14天后系统自动退款。<br />
-                            如第一次申请退款，卖家拒绝，您可以点击第二次退款，卖家再次拒绝退款后，可以申请客服介入，客服介入后会根据买卖双方提供的证据进行判断。<br />
-                            <input class="btn btn-info" type="button" style="margin-top: 3px; width: 140px;" value="填表单，联系客服" onclick="TBD()" />
-                        </div>
-                    </div>
-                    <div class="div_qtxxmy_inner div_wtjj_inner_zdyfk" id="div_wtjj_inner_zdyfk" style="display:none;">
-                        根据您的问题，我们建议您：
-                        <div>
-                            建议您稍后清理电脑缓存后刷新页面查看。 如果您没有取消置顶，而置顶信息却在列表的置顶位置不见了。<br />
-                            这可能是由于：<br />
-                            1.您置顶的信息可能涉及违法、不文明或具有欺骗性的信息，对此类信息，信息小镇有权力删除，删除后的置顶账户余额不予退还。<br />
-                            2.置顶的信息不适合置顶或在发帖者本人要求下，被管理员取消置顶。此种情况下，系统会根据置顶的真实时间，将剩余时间的账户余额退还给用户。<br />
-                            3.置顶中的信息，如果您修改了发布区域，该贴在原区域的置顶自动结束，账户余额不予以退还。 <br />
-                            <input class="btn btn-info" type="button" style="margin-top: 3px; width: 140px;" value="填表单，联系客服" onclick="TBD()" />
-                        </div>
-                    </div>
-                </div>
-                <div class="div_wtjj_inner" id="div_hzzx" style="display:none">
-                    <div style="display:block;height:85px;">
-                        <span class="span_wtjj_inner" id="span_wtjj_inner_sfzs">1、信息小镇网上的招聘、房产、二手、商务等公司是否真实？</span>
-                    </div>
-                    <div class="div_qtxxmy_inner div_wtjj_inner_sfzs" id="div_wtjj_inner_sfzs" style="display:none;">
-                        根据您的问题，我们建议您：
-                        <div>
-                            请点击下方的“填表单，联系客服”，填写用户名、公司地址、发票抬头、金额、公司名称、收件人姓名、收件人电话和充值时间。提交后，处理时长一般为2-3个工作日，请您耐心等待。提交内容如下图所示： <br />
-                            <input class="btn btn-info" type="button" style="margin-top: 3px; width: 140px;" value="填表单，联系客服" onclick="TBD()" />
-                        </div>
-                    </div>
-                </div>
-                <div class="div_wtjj_inner" id="div_zxzz" style="display:none">
-                    <div style="display:block;height:40px;">
-                        <span class="span_wtjj_inner" id="span_wtjj_inner_xcwhy">1、想成为会员</span>
-                        <span class="span_wtjj_inner" id="span_wtjj_inner_mjbmyzmb">2、卖家发货后，买家不满意怎么办</span>
-                    </div>
-                    <div class="div_qtxxmy_inner div_wtjj_inner_xcwhy" id="div_wtjj_inner_xcwhy" style="display:none;">
-                        根据您的问题，我们建议您：
-                        <div>
-                            若您需要付费推广业务，您可以拨打以下咨询电话 招聘推广咨询热线：400-151-1166 本地生活服务推广咨询热线：400-151-1166 房产推广咨询热线：400-858-3660 二手市场推广咨询热线：400-890-8558 二手车推广咨询热线：400-890-0358 宠物推广咨询热线：400-890-8558 <br />
-                            <input class="btn btn-info" type="button" style="margin-top: 3px; width: 140px;" value="填表单，联系客服" onclick="TBD()" />
-                        </div>
-                    </div>
-                    <div class="div_qtxxmy_inner div_wtjj_inner_mjbmyzmb" id="div_wtjj_inner_mjbmyzmb" style="display:none;">
-                        根据您的问题，我们建议您：
-                        <div>
-                            建议您去订单管理申请退款。<br />
-                            如果您第一次申请退款，卖家同意后，3-10个工作日到账。<br />
-                            若，第一次申请退款，卖家不进行任何操作，会在14天后系统自动退款。<br />
-                            若，第一次申请退款，卖家拒绝，您可以点击第二次退款，卖家再次拒绝退款后，可以申请客服介入，客服介入后会根据买卖双方提供的证据进行判断。<br />
-                            <input class="btn btn-info" type="button" style="margin-top: 3px; width: 140px;" value="填表单，联系客服" onclick="TBD()" />
-                        </div>
-                    </div>
-                </div>
-                <div class="div_wtjj_inner" id="div_xtwt" style="display:none">
-                    <div style="display:block;height:200px;">
-                        <span class="span_wtjj_inner" id="span_wtjj_inner_xxfbsb">1、信息发布失败</span>
-                        <span class="span_wtjj_inner" id="span_wtjj_inner_dbkwy">2、打不开网页或信息无法发布或上传</span>
-                        <span class="span_wtjj_inner" id="span_wtjj_inner_nrsrbl">3、写简历时内容输入不了或无法保存</span>
-                        <span class="span_wtjj_inner" id="span_wtjj_inner_qymcwfgh">4、企业名称无法更换</span>
-                        <span class="span_wtjj_inner" id="span_wtjj_inner_xyscxx">5、需要删除信息</span>
-                        <span class="span_wtjj_inner" id="span_wtjj_inner_zpxggsmc">6、招聘修改公司名称</span>
-                        <span class="span_wtjj_inner" id="span_wtjj_inner_sbddxyzm">7、收不到短信验证码</span>
-                        <span class="span_wtjj_inner" id="span_wtjj_inner_xghsjrz">8、手机号已无法使用 想更换/取消手机认证</span>
-                        <span class="span_wtjj_inner" id="span_wtjj_inner_yyzzwfsc">9、营业执照无法上传</span>
-                        <span class="span_wtjj_inner" id="span_wtjj_inner_yyzzyzbl">10、营业执照验证不了</span>
-                        <span class="span_wtjj_inner" id="span_wtjj_inner_xxsxbl">11、信息刷新不了</span>
-                        <span class="span_wtjj_inner" id="span_wtjj_inner_yrkyzdnr">12、在百度上面依然可以找到已删除的内容</span>
-                    </div>
-                    <div class="div_qtxxmy_inner div_wtjj_inner_xxfbsb" id="div_wtjj_inner_xxfbsb" style="display:none;">
-                        根据您的问题，我们建议您：
-                        <div>
-                            请查看具体的<span class="span_href">信息发布失败原因</span>。<br />
-                            <input class="btn btn-info" type="button" style="margin-top: 3px; width: 140px;" value="填表单，联系客服" onclick="TBD()" />
-                        </div>
-                    </div>
-                    <div class="div_qtxxmy_inner div_wtjj_inner_dbkwy" id="div_wtjj_inner_dbkwy" style="display:none;">
-                        根据您的问题，我们建议您：
-                        <div>
-                            建议您清理一下您的IE缓存（操作如下：打开一个网页，在电脑窗口的上方点击工具下的Internet选项，在新窗口常规下的第二项为Internet临时文件中进行删除操作，再点击上方程序与高级一栏，将web重置和还原浏览器默认设置），退出浏览器重试。更换火狐或者IE9的浏览器进行尝试。<br />
-                            <input class="btn btn-info" type="button" style="margin-top: 3px; width: 140px;" value="填表单，联系客服" onclick="TBD()" />
-                        </div>
-                    </div>
-                    <div class="div_qtxxmy_inner div_wtjj_inner_nrsrbl" id="div_wtjj_inner_nrsrbl" style="display:none;">
-                        根据您的问题，我们建议您：
-                        <div>
-                            如果您写简历时无法输入内容或无法保存，建议您清理一下您的IE缓存（操作如下：打开一个网页，在电脑窗口的上方点击工具下的Internet选项，在新窗口常规下的第二项为Internet临时文件中进行删除操作，再点击上方程序与高级一栏，将web重置和还原浏览器默认设置），退出浏览器重试。更换火狐或者IE9的浏览器进行尝试。<br />
-                            <input class="btn btn-info" type="button" style="margin-top: 3px; width: 140px;" value="填表单，联系客服" onclick="TBD()" />
-                        </div>
-                    </div>
-                    <div class="div_qtxxmy_inner div_wtjj_inner_qymcwfgh" id="div_wtjj_inner_qymcwfgh" style="display:none;">
-                        根据您的问题，我们建议您：
-                        <div>
-                            1、首先请您去认证管理查询您的营业执照是否被认证。<br />
-                            2、如果您的营业执照没有经过验证则可以通过进行营业执照认证过程中可以修改公司名称，系统审核通过后会为您自动更改过来（注，只有此一次修改机会；<br />
-                            3、如果您的营业执照已经认证，则无法更改公司名称，您可以留存该账户，注册一个新的账户并认证新公司名称。<br />
-                            <input class="btn btn-info" type="button" style="margin-top: 3px; width: 140px;" value="填表单，联系客服" onclick="TBD()" />
-                        </div>
-                    </div>
-                    <div class="div_qtxxmy_inner div_wtjj_inner_xyscxx" id="div_wtjj_inner_xyscxx" style="display:none;">
-                        根据您的问题，我们建议您：
-                        <div>
-                            建议您直接去<span class="span_href">自助删除信息</span>，立即解决问题，无需等待。<br />
-                            自助删除信息中您有以下三种方式可以选择：<br />
-                            1.<span class="span_href">登录账户修改/删除信息</span>（会员通过用户中心修改/删除自己发布的信息）；<br />
-                            2.<span class="span_href">手机短信删除</span>（电话被冒用或忘记密码可以使用此功能）；<br />
-                            3.拨打电话4007585858 拨通后按号码键 3 直接删除该电话号码下的所有信息。<br />
-                            <input class="btn btn-info" type="button" style="margin-top: 3px; width: 140px;" value="填表单，联系客服" onclick="TBD()" />
-                        </div>
-                    </div>
-                    <div class="div_qtxxmy_inner div_wtjj_inner_zpxggsmc" id="div_wtjj_inner_zpxggsmc" style="display:none;">
-                        根据您的问题，我们建议您：
-                        <div>
-                            请在用户中心的招聘/简历公司资料中填写相关信息。<br />
-                            <input class="btn btn-info" type="button" style="margin-top: 3px; width: 140px;" value="填表单，联系客服" onclick="TBD()" />
-                        </div>
-                    </div>
-                    <div class="div_qtxxmy_inner div_wtjj_inner_sbddxyzm" id="div_wtjj_inner_sbddxyzm" style="display:none;">
-                        根据您的问题，我们建议您：
-                        <div>
-                            如果接收短信验证码的手机未能及时收到，可按以下流程操作：<br />
-                            第一步：使用短信验证时填写的手机或座机号拨打信息小镇专用400电话：4007585858。<br />
-                            第二步：接通电话后，按号码键： 5 进入语音验证码获取通道。<br />
-                            <input class="btn btn-info" type="button" style="margin-top: 3px; width: 140px;" value="填表单，联系客服" onclick="TBD()" />
-                        </div>
-                    </div>
-                    <div class="div_qtxxmy_inner div_wtjj_inner_xghsjrz" id="div_wtjj_inner_xghsjrz" style="display:none;">
-                        根据您的问题，我们建议您：
-                        <div>
-                            建议您去进行<span class="span_href">快速自助人工更换/取消手机认证</span>。立刻解决问题，无需等待。<br />
-                            <input class="btn btn-info" type="button" style="margin-top: 3px; width: 140px;" value="填表单，联系客服" onclick="TBD()" />
-                        </div>
-                    </div>
-                    <div class="div_qtxxmy_inner div_wtjj_inner_yyzzwfsc" id="div_wtjj_inner_yyzzwfsc" style="display:none;">
-                        根据您的问题，我们建议您：
-                        <div>
-                            请您确认以下情况：<br />
-                            1.申请执照认证时执照资料需要填写完整，请您确认下是否有漏填项；<br />
-                            2.图片是否超于10M，如果超于10M，请将图片缩小后重新上传保存（可以ctrl+ALT+A截图）；<br />
-                            3.如果以上均无问题，请您填表单联系客服，提供您上传的执照图片及用户名密码，注明浏览器的版本，以便工作人员为您测试。<br />
-                            <input class="btn btn-info" type="button" style="margin-top: 3px; width: 140px;" value="填表单，联系客服" onclick="TBD()" />
-                        </div>
-                    </div>
-                    <div class="div_qtxxmy_inner div_wtjj_inner_yyzzyzbl" id="div_wtjj_inner_yyzzyzbl" style="display:none;">
-                        根据您的问题，我们建议您：
-                        <div>
-                            您好，认证审核时间为2-5个工作日，如果您超过5个工作日仍没有通过验证，请您对照看看是否出现以下问题：<br />
-                            （1）上传营业执照时填写的公司名称和别称与证书不符，建议您在上传时填写一致后重新提交；<br />
-                            （2）证书图片不清晰或营业执照非原件副本数码照；<br />
-                            （3）提交信息与证书不符，如，营业执照注册号错误；<br />
-                            （4）证书没有年检章审核；<br />
-                            （5）冒充他人企业，在没有提供证明之前其信息会做删除处理。如果您存在以上问题，请您修改后再重新上传。<br />
-                            <input class="btn btn-info" type="button" style="margin-top: 3px; width: 140px;" value="填表单，联系客服" onclick="TBD()" />
-                        </div>
-                    </div>
-                    <div class="div_qtxxmy_inner div_wtjj_inner_xxsxbl" id="div_wtjj_inner_xxsxbl" style="display:none;">
-                        根据您的问题，我们建议您：
-                        <div>
-                            请您检查您是否使用多账号来发布信息导致您的信息靠后显示并无法刷新，此行为是严重违反版规规则的，请您耐心等待,七个工作日之内不要进行任何操作,七个工作日（不包含周六，周日）后固定一个账户及手机号码发布信息。<br />
-                            若不存在以上情况，请您点击下方“填表单，联系客服”按钮，说明具体问题并提交。<br />
-                            <input class="btn btn-info" type="button" style="margin-top: 3px; width: 140px;" value="填表单，联系客服" onclick="TBD()" />
-                        </div>
-                    </div>
-                    <div class="div_qtxxmy_inner div_wtjj_inner_yrkyzdnr" id="div_wtjj_inner_yrkyzdnr" style="display:none;">
-                        根据您的问题，我们建议您：
-                        <div>
-                            百度搜索引擎收录信息都是从各大网站随机抽取的，如您想要删除百度快照信息，建议您去自助删除百度快照,或具体咨询百度公司。<br />
-                            <input class="btn btn-info" type="button" style="margin-top: 3px; width: 140px;" value="填表单，联系客服" onclick="TBD()" />
-                        </div>
-                    </div>
-                </div>
             </div>
-        </div>
-        <div class="div_content div_content_tjkf" id="div_content_tjkf" style="margin-top:20px; display:none">
-            <span class="span_step span_step_third"></span>
-            <span class="span_step_text">描述具体问题提交至客服:（*为必填信息）</span>
         </div>
     </div>
 </body>

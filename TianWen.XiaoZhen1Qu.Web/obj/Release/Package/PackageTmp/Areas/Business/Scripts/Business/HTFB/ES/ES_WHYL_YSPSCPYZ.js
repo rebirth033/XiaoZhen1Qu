@@ -15,7 +15,7 @@ function ValidateAll() {
         & ValidateCheck("PSFS", "忘记选择配送方式啦")
         & ValidateYSPSCPLB()
         & ValidateBCMS("BCMS", "忘记填写详情描述啦")
-        & ValidateSZQY()
+        & ValidateXXDZ()
         & ValidateJG()
         & ValidateCommon())
         return true;

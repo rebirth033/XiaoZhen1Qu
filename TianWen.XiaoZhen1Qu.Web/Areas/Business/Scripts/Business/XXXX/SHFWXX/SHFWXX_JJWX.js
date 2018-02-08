@@ -20,6 +20,7 @@ function LoadDefault() {
                 LoadCNXH("SHFWXX_JJWX");
                 LoadGRXX(xml.grxxlist[0]);
                 LoadJJRTJFY("SHFWXX_JJWX");
+                HandlerTPXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -61,7 +62,7 @@ function LoadJBXX(obj) {
     html += ('</div>');
     html += ('</div>');
     $("#div_body_left").append(html);
-    HandlerTPXX();
+
 }
 //加载详情
 function LoadXQ(obj, BCMSString) {
@@ -100,11 +101,6 @@ function LoadXQ(obj, BCMSString) {
         $("#div_body_left_body_xq_zk").css("display", "block");
     }
 
-    $(".img_body_left_body_xq_xx").each(function () {
-        var natural = getNaturalSize($("#" + this.id)[0]);
-        $("#" + this.id).css("width", (natural.width > 405 ? 405 : natural.width));
-        $("#" + this.id).css("height", (natural.height > 350 ? 350 : natural.height));
-    });
 }
 //加载猜你喜欢
 function LoadCNXH(TYPE) {

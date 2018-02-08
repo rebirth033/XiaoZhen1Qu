@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     $(".div_content").css("margin-left", (document.documentElement.clientWidth - 1084) / 2);
-    $(".div_head_left").css("margin-left", (document.documentElement.clientWidth - 1084) / 2);
+    $(".div_head_left").css("margin-left", (document.documentElement.clientWidth - 1044) / 2);
     $(".div_top_left").css("margin-left", (document.documentElement.clientWidth - 1084) / 2);
     $(".div_top_right").css("margin-right", (document.documentElement.clientWidth - 1084) / 2);
     $(".span_fbxx").css("margin-right", (document.documentElement.clientWidth - 1084) / 2);
@@ -55,7 +55,6 @@ function HideYHCD() {
     $("#span_top_right_yhm_img").css("background-image", 'url(' + getRootPath() + "/Areas/Business/Css/images/arrow_down.png" + ')');
 }
 //退出
-//退出
 function Exit() {
     $.ajax({
         type: "POST",
@@ -86,7 +85,7 @@ function AutoLogin() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                alert("登录成功");
+                window.wxc.xcConfirm("登录成功", window.wxc.xcConfirm.typeEnum.success);
             } else {
                 window.location.href = getRootPath() + "/Business/YHDL/YHDL";
             }
@@ -315,7 +314,7 @@ function QQBD() {
             },
             success: function (xml) {
                 if (xml.Result === 1) {
-                    alert("QQ绑定成功");
+                    window.wxc.xcConfirm("QQ绑定成功", window.wxc.xcConfirm.typeEnum.success);
                     CloseQQRZ();
                     $("#iframeright").attr("src", getRootPath() + "/Business/ZHBD/ZHBD");
                 }

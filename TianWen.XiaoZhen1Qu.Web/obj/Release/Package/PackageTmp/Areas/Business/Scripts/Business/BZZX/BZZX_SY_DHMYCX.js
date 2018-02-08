@@ -124,7 +124,7 @@ function GetCheckCode() {
                 ToHYTZM();
             }
             else {
-                alert("验证码发送失败");
+                window.wxc.xcConfirm("验证码发送失败", window.wxc.xcConfirm.typeEnum.error);
             }
         }
     });

@@ -17,6 +17,8 @@ $(document).ready(function () {
     $("#btnFB").bind("click", FB);
     $("#span_content_info_qCWFWs").bind("click", LoadXZQByGrade);
     $("#btnClose").bind("click", CloseWindow);
+    $("#aWJMM").attr("href", getRootPath() + "/Business/ZHMM/ZHMM");
+    $("#aYHZC1").attr("href", getRootPath() + "/Business/YHJBXX/YHJBXX");
     LoadDefault();
     LoadTXXX();
 });

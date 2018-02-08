@@ -7,7 +7,7 @@
     $("#li_head_sy").css("background", "#bc6ba6").css("color", "#ffffff");
     $("#div_yhm").bind("click", ShowWDXX);
     //LoadTOP();
-    LoadDefault();
+    //LoadDefault();
 });
 //打开查询列表
 function OpenCXLB(lbid, lburl, condition) {

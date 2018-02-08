@@ -7,6 +7,11 @@
     $("#XSLC").bind("blur", ValidateXSLC);
     $("#XSLC").bind("focus", InfoXSLC);
 });
+//验证货车
+function ValidateHCPP() {
+    if (!ValidateSelect("HCPP", "PP", "请选择品牌")) return false;
+    return true;
+}
 //验证出厂年份
 function ValidateHCCCNF() {
     if (!ValidateSelect("HCCCNF", "CCNF", "请选择出厂年份")) return false;
@@ -15,14 +20,15 @@ function ValidateHCCCNF() {
 }
 //验证所有
 function ValidateAll() {
-    if (ValidateRadio("SF", "忘记选择身份啦")
+    if (ValidateRadio("SF", "忘记选择身份啦") 
+           & ValidateHCPP()
            & ValidateSelect("HCLB", "LB", "忘记选择车型啦")
            & ValidateSelect("HCPP", "PP", "忘记选择品牌啦")
            & ValidateHCCCNF()
            & ValidateEDZZ()
            & ValidateXSLC()
            & ValidateBCMS("BCMS", "忘记填写详情描述啦")
-           & ValidateSZQY()
+           & ValidateXXDZ()
            & ValidateJG()
            & ValidateCommon())
         return true;

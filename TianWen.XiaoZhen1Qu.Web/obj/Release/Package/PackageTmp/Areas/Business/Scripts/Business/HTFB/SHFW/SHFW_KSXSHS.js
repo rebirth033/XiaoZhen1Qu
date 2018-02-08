@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     $("body").bind("click", function() { Close("_XZQ"); });
-    LoadJBXX();
+    LoadFWFW();
 });
 //加载生活服务_开锁/换锁/修锁基本信息
 function LoadJBXX() {
@@ -55,7 +55,7 @@ function FB() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                window.location.href = getRootPath() + "/Business/FBCG/FBCG";
+                window.location.href = getRootPath() + "/Business/FBCG/FBCG?LBID=" + getUrlParam("CLICKID") + "&ID=" + xml.Value.ID + "&JCXXID=" + xml.Value.JCXXID;
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

@@ -1,0 +1,3025 @@
+prompt Importing table codes_jypx...
+set feedback off
+set define off
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1, '中小学辅导班类别', '小学', '1', 1, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (2, '中小学辅导班类别', '初中', '2', 2, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (3, '中小学辅导班类别', '高中', '3', 3, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (4, '中小学辅导班类别', '课外英语', '4', 4, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (5, '中小学辅导班类别', '夏冬令营', '5', 5, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (6, '小学', '数学', '1', 1, 1, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (7, '小学', '英语', '2', 2, 1, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (8, '小学', '语文', '3', 3, 1, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (9, '小学', '竞赛', '4', 4, 1, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (10, '初中', '数学', '1', 1, 2, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (11, '初中', '英语', '2', 2, 2, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (12, '初中', '语文', '3', 3, 2, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (13, '初中', '物理', '4', 4, 2, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (14, '初中', '化学', '5', 5, 2, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (15, '初中', '竞赛', '6', 6, 2, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (16, '高中', '数学', '1', 1, 3, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (17, '高中', '英语', '2', 2, 3, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (18, '高中', '语文', '3', 3, 3, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (19, '高中', '物理', '4', 4, 3, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (20, '高中', '化学', '5', 5, 3, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (21, '高中', '史地政生', '6', 6, 3, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (22, '高中', '竞赛', '7', 7, 3, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (23, '高中', '艺考文化课', '8', 8, 3, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (24, '高中', '复读', '9', 9, 3, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (25, '课外英语', '剑桥少儿英语', '1', 1, 4, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (26, '课外英语', '三一口语', '2', 2, 4, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (27, '课外英语', '新概念', '3', 3, 4, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (28, '课外英语', '托福', '4', 4, 4, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (29, '课外英语', '雅思', '5', 5, 4, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (30, '课外英语', 'SAT', '6', 6, 4, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (31, '课外英语', '音标', '7', 7, 4, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (32, '授课形式', '一对一', '1', 1, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (33, '授课形式', '小班', '2', 2, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (34, '授课形式', '大班', '3', 3, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (35, '授课形式', '托管班', '4', 4, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (36, '辅导阶段', '小学', '1', 1, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (37, '辅导阶段', '初中', '2', 2, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (38, '辅导阶段', '高中', '3', 3, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (39, '辅导科目', '数学', '1', 1, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (40, '辅导科目', '英语', '2', 2, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (41, '辅导科目', '语文', '3', 3, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (42, '辅导科目', '物理', '4', 4, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (43, '辅导科目', '化学', '5', 5, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (44, '辅导科目', '史地政生', '6', 6, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (45, '辅导科目', '竞赛', '7', 7, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (46, '中小学一对一类别', '小学', '1', 1, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (47, '中小学一对一类别', '小升初', '2', 2, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (48, '中小学一对一类别', '初中', '3', 3, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (49, '中小学一对一类别', '中考', '4', 4, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (50, '中小学一对一类别', '高中', '5', 5, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (51, '中小学一对一类别', '高考', '6', 6, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (52, '中小学一对一类别', '课外英语', '7', 7, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (53, '小学', '语文', '1', 1, 46, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (54, '小学', '数学', '2', 2, 46, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (55, '小学', '英语', '3', 3, 46, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (56, '小学', '奥数', '4', 4, 46, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (57, '小学', '全科', '5', 5, 46, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (58, '小升初', '语文', '1', 1, 47, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (59, '小升初', '数学', '2', 2, 47, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (60, '小升初', '英语', '3', 3, 47, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (61, '小升初', '奥数', '4', 4, 47, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (62, '小升初', '全科', '5', 5, 47, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (63, '初中', '语文', '1', 1, 48, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (64, '初中', '数学', '2', 2, 48, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (65, '初中', '英语', '3', 3, 48, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (66, '初中', '物理', '4', 4, 48, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (67, '初中', '化学', '5', 5, 48, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (68, '初中', '地理', '6', 6, 48, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (69, '初中', '生物', '7', 7, 48, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (70, '初中', '政治', '8', 8, 48, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (71, '初中', '历史', '9', 9, 48, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (72, '初中', '全科', '10', 10, 48, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (73, '初中', '竞赛', '11', 11, 48, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (74, '中考', '语文', '1', 1, 49, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (75, '中考', '数学', '2', 2, 49, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (76, '中考', '英语', '3', 3, 49, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (77, '中考', '物理', '4', 4, 49, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (78, '中考', '化学', '5', 5, 49, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (79, '中考', '地理', '6', 6, 49, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (80, '中考', '生物', '7', 7, 49, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (81, '中考', '政治', '8', 8, 49, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (82, '中考', '历史', '9', 9, 49, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (83, '中考', '全科', '10', 10, 49, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (84, '高中', '语文', '1', 1, 50, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (85, '高中', '数学', '2', 2, 50, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (86, '高中', '英语', '3', 3, 50, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (87, '高中', '物理', '4', 4, 50, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (88, '高中', '化学', '5', 5, 50, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (89, '高中', '地理', '6', 6, 50, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (90, '高中', '生物', '7', 7, 50, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (91, '高中', '政治', '8', 8, 50, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (92, '高中', '历史', '9', 9, 50, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (93, '高中', '全科', '10', 10, 50, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (94, '高中', '竞赛', '11', 11, 50, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (95, '高考', '语文', '1', 1, 51, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (96, '高考', '数学', '2', 2, 51, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (97, '高考', '英语', '3', 3, 5151, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (98, '高考', '物理', '4', 4, 51, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (99, '高考', '化学', '5', 5, 51, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (100, '高考', '地理', '6', 6, 51, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (101, '高考', '生物', '7', 7, 51, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (102, '高考', '政治', '8', 8, 51, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (103, '高考', '历史', '9', 9, 51, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (104, '高考', '文综', '10', 10, 51, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (105, '高考', '理综', '11', 11, 51, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (106, '高考', '全科', '12', 12, 51, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (107, '课外英语', '剑桥少儿英语', '1', 1, 52, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (108, '课外英语', '三一口语', '2', 2, 52, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (109, '课外英语', '新概念一册', '3', 3, 52, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (110, '课外英语', '新概念二册', '4', 4, 52, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (111, '课外英语', '新概念三册', '5', 5, 52, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (112, '课外英语', '新概念四册', '6', 6, 52, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (113, '课外英语', '托福', '7', 7, 52, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (114, '课外英语', '雅思', '8', 8, 52, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (115, '课外英语', 'SAT', '9', 9, 52, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (116, '课外英语', 'SSAT', '10', 10, 52, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (117, '课外英语', '国际音标', '11', 11, 52, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (118, '课外英语', '自然拼音', '12', 12, 52, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (119, '语种', '英语', '1', 1, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (120, '语种', '汉语', '2', 2, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (121, '语种', '日语', '3', 3, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (122, '语种', '韩语', '4', 4, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (123, '语种', '德语', '5', 5, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (124, '语种', '法语', '6', 6, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (125, '语种', '西班牙语', '7', 7, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (126, '语种', '意大利语', '8', 8, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (127, '语种', '葡萄牙语', '9', 9, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (128, '语种', '泰语', '10', 10, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (129, '语种', '俄语', '11', 11, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (130, '语种', '希腊语', '12', 12, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (131, '语种', '马来语', '13', 13, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (132, '语种', '东干语', '14', 14, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (133, '语种', '丹麦语', '15', 15, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (134, '语种', '乌克兰语', '16', 16, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (135, '语种', '乌尔都语', '17', 17, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (136, '语种', '亚美尼亚语', '18', 18, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (137, '语种', '克罗地亚语', '19', 19, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (138, '语种', '冰岛语', '20', 20, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (139, '语种', '列兹金语', '21', 21, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (140, '语种', '匈牙利语', '22', 22, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (141, '语种', '卡巴尔达语', '23', 23, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (142, '语种', '印古什语', '24', 24, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (143, '语种', '印地语', '25', 25, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (144, '语种', '印度尼西亚语', '26', 26, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (145, '语种', '吉尔吉斯语', '27', 27, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (146, '语种', '哈萨克语', '28', 28, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (147, '语种', '土耳其语', '29', 29, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (148, '语种', '塞尔维亚语', '30', 30, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (149, '语种', '孟加拉语', '31', 31, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (150, '语种', '巴什基尔语', '32', 32, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (151, '语种', '巴利语', '33', 33, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (152, '语种', '巴斯克语', '34', 34, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (153, '语种', '布里亚特语', '35', 35, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (154, '语种', '希伯来语', '36', 36, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (155, '语种', '库梅克语', '37', 37, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (156, '语种', '拉丁语', '38', 38, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (157, '语种', '拉克语', '39', 39, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (158, '语种', '拉脱维亚语', '40', 40, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (159, '语种', '挪威语', '41', 41, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (160, '语种', '捷克语', '42', 42, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (161, '语种', '斯洛文尼亚语', '43', 43, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (162, '语种', '斯瓦西里语', '44', 44, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (163, '语种', '格鲁吉亚语', '45', 45, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (164, '语种', '梵文', '46', 46, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (165, '语种', '波兰语', '47', 47, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (166, '语种', '波斯语', '48', 48, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (167, '语种', '瑞典语', '49', 49, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (168, '语种', '白俄罗斯', '50', 50, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (169, '语种', '科米语', '51', 51, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (170, '语种', '立陶宛语', '52', 52, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (171, '语种', '缅甸语', '53', 53, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (172, '语种', '罗马尼亚语', '54', 54, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (173, '语种', '老挝语', '55', 55, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (174, '语种', '芬兰语', '56', 56, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (175, '语种', '荷兰语', '57', 57, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (176, '语种', '菲律宾语', '58', 58, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (177, '语种', '蒙古语', '59', 59, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (178, '语种', '豪萨语', '60', 60, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (179, '语种', '越南语', '61', 61, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (180, '语种', '达尔金语', '62', 62, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (181, '语种', '阿塞拜疆语', '63', 63, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (182, '语种', '阿尔巴尼亚语', '64', 64, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (183, '语种', '阿尔瓦语', '65', 65, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (184, '语种', '阿布哈兹语', '66', 66, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (185, '语种', '阿拉伯语', '67', 67, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (186, '语种', '阿非利堪斯语', '68', 68, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (187, '语种', '马里语', '69', 69, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (188, '英语', '新概念英语', '1', 1, 119, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (189, '英语', '四六级', '2', 2, 119, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (190, '英语', '托福TOEFL', '3', 3, 119, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (191, '英语', '雅思IELTS', '4', 4, 119, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (192, '英语', 'GRE', '5', 5, 119, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (193, '英语', 'GMAT', '6', 6, 119, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (194, '英语', '商务英语', '7', 7, 119, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (195, '英语', '托业TOEIC', '8', 8, 119, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (196, '英语', 'AP', '9', 9, 119, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (197, '英语', 'SAT', '10', 10, 119, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (198, '英语', 'SSAT', '11', 11, 119, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (199, '英语', '口译翻译', '12', 12, 119, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (200, '英语', '走遍美国', '13', 13, 119, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (201, '英语', '剑桥少儿英语', '14', 14, 119, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (202, '英语', '习思英语', '15', 15, 119, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (203, '英语', '三一口语', '16', 16, 119, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (204, '英语', '职称英语', '17', 17, 119, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (205, '英语', 'BEC', '18', 18, 119, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (206, '英语', '零基础英语', '19', 19, 119, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (207, '英语', '自考英语', '20', 20, 119, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (208, '英语', '专业四级', '21', 21, 119, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (209, '英语', '专业八级', '22', 22, 119, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (210, '英语', '考研英语', '23', 23, 119, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (211, '英语', '企业英语', '24', 24, 119, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (212, '英语', '职场英语', '25', 25, 119, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (213, '英语', '成人英语三级', '26', 26, 119, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (214, '英语', '公共英语PETS', '27', 27, 119, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (215, '英语', 'BETS', '28', 28, 119, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (216, '英语', 'LSAT', '29', 29, 119, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (217, '英语', 'PTE', '30', 30, 119, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (218, '汉语', '普通话', '1', 1, 120, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (219, '汉语', '粤语', '2', 2, 120, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (220, '汉语', '演讲与口才', '3', 3, 120, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (221, '汉语', '对外汉语', '4', 4, 120, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (222, '专项', '词汇', '1', 1, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (223, '专项', '语法', '2', 2, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (224, '专项', '口语', '3', 3, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (225, '专项', '阅读', '4', 4, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (226, '专项', '听力', '5', 5, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (227, '专项', '作文', '6', 6, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (228, '专项', '考试', '7', 7, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (229, '级别', '入门/初级', '1', 1, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (230, '级别', '中级', '2', 2, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (231, '级别', '高级', '3', 3, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (232, '语言培训教学科目', '四六级英语', '1', 1, null, 108, 'LB=232', 'si liu ji ying yu ', 'siliujiyingyu', 'sljyy');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (233, '语言培训教学科目', '托福', '2', 2, null, 108, 'LB=233', 'tuo fu ', 'tuofu', 'tf');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (234, '语言培训教学科目', '雅思', '3', 3, null, 108, 'LB=234', 'ya si ', 'yasi', 'ys');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (235, '语言培训教学科目', '新概念英语', '4', 4, null, 108, 'LB=235', 'xin gai nian ying yu ', 'xingainianyingyu', 'xgnyy');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (236, '语言培训教学科目', '英语口语', '5', 5, null, 108, 'LB=236', 'ying yu kou yu ', 'yingyukouyu', 'yyky');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (237, '语言培训教学科目', '商务英语', '6', 6, null, 108, 'LB=237', 'shang wu ying yu ', 'shangwuyingyu', 'swyy');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (238, '语言培训教学科目', 'GMAT/GRE', '7', 7, null, 108, 'LB=238', 'GMAT/GRE', 'GMAT/GRE', 'G/G');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (239, '语言培训教学科目', '日语', '8', 8, null, 108, 'LB=239', 'ri yu ', 'riyu', 'ry');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (240, '语言培训教学科目', '德语', '9', 9, null, 108, 'LB=240', 'de yu ', 'deyu', 'dy');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (241, '语言培训教学科目', '法语', '10', 10, null, 108, 'LB=241', 'fa yu ', 'fayu', 'fy');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (242, '语言培训教学科目', '意大利语', '11', 11, null, 108, 'LB=242', 'yi da li yu ', 'yidaliyu', 'ydly');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (243, '语言培训教学科目', '西班牙语', '12', 12, null, 108, 'LB=243', 'xi ban ya yu ', 'xibanyayu', 'xbyy');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (244, '语言培训教学科目', '其他小语种', '13', 13, null, 108, 'LB=244', 'qi ta xiao yu zhong ', 'qitaxiaoyuzhong', 'qtxyz');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (245, '职业技能培训类别', '普工/技工/生产', '1', 1, null, 112, 'LB=245', 'pu gong /ji gong /sheng chan ', 'pugong/jigong/shengchan', 'pg/jg/sc');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (246, '职业技能培训类别', '会计/审计/统计', '2', 2, null, 112, 'LB=246', 'hui ji /shen ji /tong ji ', 'huiji/shenji/tongji', 'hj/sj/tj');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (247, '职业技能培训类别', '建筑/房产/物业', '3', 3, null, 112, 'LB=247', 'jian zhu /fang chan /wu ye ', 'jianzhu/fangchan/wuye', 'jz/fc/wy');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (248, '职业技能培训类别', '餐饮/酒店/旅游', '4', 4, null, 112, 'LB=248', 'can yin /jiu dian /lv you ', 'canyin/jiudian/lvyou', 'cy/jd/ly');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (249, '职业技能培训类别', '美容/保健/健身', '5', 5, null, 112, 'LB=249', 'mei rong /bao jian /jian shen ', 'meirong/baojian/jianshen', 'mr/bj/js');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (250, '职业技能培训类别', '教育/人力/市场', '6', 6, null, 112, 'LB=250', 'jiao yu /ren li /shi chang ', 'jiaoyu/renli/shichang', 'jy/rl/sc');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (251, '职业技能培训类别', '医疗/健康/心理', '7', 7, null, 112, 'LB=251', 'yi liao /jian kang /xin li ', 'yiliao/jiankang/xinli', 'yl/jk/xl');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (252, '职业技能培训类别', '育儿/孕妇/产妇', '8', 8, null, 112, 'LB=252', 'yu dong /yun fu /chan fu ', 'yudong/yunfu/chanfu', 'yd/yf/cf');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (253, '职业技能培训类别', '贸易/采购/物流', '9', 9, null, 112, 'LB=253', 'mao yi /cai gou /wu liu ', 'maoyi/caigou/wuliu', 'my/cg/wl');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (254, '职业技能培训类别', '汽车制造/服务', '10', 10, null, 112, 'LB=254', 'qi che zhi zao /fu wu ', 'qichezhizao/fuwu', 'qczz/fw');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (255, '职业技能培训类别', '电器/数码维修', '11', 11, null, 112, 'LB=255', 'dian qi /shu ma wei xiu ', 'dianqi/shumaweixiu', 'dq/smwx');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (256, '职业技能培训类别', '环境/资源/交通', '12', 12, null, 112, 'LB=256', 'huan jing /zi yuan /jiao tong ', 'huanjing/ziyuan/jiaotong', 'hj/zy/jt');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (257, '职业技能培训类别', '金融/证券/保险', '13', 13, null, 112, 'LB=257', 'jin rong /zheng quan /bao xian ', 'jinrong/zhengquan/baoxian', 'jr/zq/bx');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (258, '职业技能培训类别', '农/林/牧/渔', '14', 14, null, 112, 'LB=258', 'nong /lin /mu /yu ', 'nong/lin/mu/yu', 'n/l/m/y');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (259, '职业技能培训类别', '公务员考试', '15', 15, null, 112, 'LB=259', 'gong wu yuan kao shi ', 'gongwuyuankaoshi', 'gwyks');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (260, '职业技能培训类别', '司法考试', '16', 16, null, 112, 'LB=260', 'si fa kao shi ', 'sifakaoshi', 'sfks');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (261, '普工/技工/生产', '电工', '1', 1, 245, 112, 'LB=245&XL=261', 'dian gong ', 'diangong', 'dg');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (262, '普工/技工/生产', '焊工', '2', 2, 245, 112, 'LB=245&XL=262', 'han gong ', 'hangong', 'hg');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (263, '普工/技工/生产', '钳工', '3', 3, 245, 112, 'LB=245&XL=263', 'qian gong ', 'qiangong', 'qg');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (264, '普工/技工/生产', '普工', '4', 4, 245, 112, 'LB=245&XL=264', 'pu gong ', 'pugong', 'pg');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (265, '普工/技工/生产', '叉/铲车工', '5', 5, 245, 112, 'LB=245&XL=265', 'cha /chan che gong ', 'cha/chanchegong', 'c/ccg');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (266, '普工/技工/生产', '管道工', '6', 6, 245, 112, 'LB=245&XL=266', 'guan dao gong ', 'guandaogong', 'gdg');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (267, '普工/技工/生产', '水暖工', '7', 7, 245, 112, 'LB=245&XL=267', 'shui nuan gong ', 'shuinuangong', 'sng');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (268, '普工/技工/生产', '水工', '8', 8, 245, 112, 'LB=245&XL=268', 'shui gong ', 'shuigong', 'sg');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (269, '普工/技工/生产', '制冷工', '9', 9, 245, 112, 'LB=245&XL=269', 'zhi leng gong ', 'zhilenggong', 'zlg');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (270, '普工/技工/生产', '电梯工', '10', 10, 245, 112, 'LB=245&XL=270', 'dian ti gong ', 'diantigong', 'dtg');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (271, '普工/技工/生产', '木工', '11', 11, 245, 112, 'LB=245&XL=271', 'mu gong ', 'mugong', 'mg');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (272, '普工/技工/生产', '瓦工', '12', 12, 245, 112, 'LB=245&XL=272', 'wa gong ', 'wagong', 'wg');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (273, '普工/技工/生产', '司炉工', '13', 13, 245, 112, 'LB=245&XL=273', 'si lu gong ', 'silugong', 'slg');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (274, '普工/技工/生产', '架子工', '14', 14, 245, 112, 'LB=245&XL=274', 'jia zi gong ', 'jiazigong', 'jzg');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (275, '普工/技工/生产', '维修技工', '15', 15, 245, 112, 'LB=245&XL=275', 'wei xiu ji gong ', 'weixiujigong', 'wxjg');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (276, '会计/审计/统计', '会计从业资格', '1', 1, 246, 112, 'LB=246&XL=276', 'hui ji cong ye zi ge ', 'huijicongyezige', 'hjcyzg');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (277, '会计/审计/统计', '注册会计师CPA', '2', 2, 246, 112, 'LB=246&XL=277', 'zhu ce hui ji shi CPA', 'zhucehuijishiCPA', 'zchjsC');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (278, '会计/审计/统计', '初级会计职称', '3', 3, 246, 112, 'LB=246&XL=278', 'chu ji hui ji zhi cheng ', 'chujihuijizhicheng', 'cjhjzc');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (279, '会计/审计/统计', '中级会计职称', '4', 4, 246, 112, 'LB=246&XL=279', 'zhong ji hui ji zhi cheng ', 'zhongjihuijizhicheng', 'zjhjzc');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (280, '会计/审计/统计', '高级会计职称', '5', 5, 246, 112, 'LB=246&XL=280', 'gao ji hui ji zhi cheng ', 'gaojihuijizhicheng', 'gjhjzc');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (281, '会计/审计/统计', '初级经济师', '6', 6, 246, 112, 'LB=246&XL=281', 'chu ji jing ji shi ', 'chujijingjishi', 'cjjjs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (282, '会计/审计/统计', '中级经济师', '7', 7, 246, 112, 'LB=246&XL=282', 'zhong ji jing ji shi ', 'zhongjijingjishi', 'zjjjs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (283, '会计/审计/统计', '高级经济师', '8', 8, 246, 112, 'LB=246&XL=283', 'gao ji jing ji shi ', 'gaojijingjishi', 'gjjjs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (284, '会计/审计/统计', '注册税务师', '9', 9, 246, 112, 'LB=246&XL=284', 'zhu ce shui wu shi ', 'zhuceshuiwushi', 'zcsws');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (285, '会计/审计/统计', '资产评估师', '10', 10, 246, 112, 'LB=246&XL=285', 'zi chan ping gu shi ', 'zichanpinggushi', 'zcpgs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (286, '会计/审计/统计', '统计从业资格', '11', 11, 246, 112, 'LB=246&XL=286', 'tong ji cong ye zi ge ', 'tongjicongyezige', 'tjcyzg');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (287, '会计/审计/统计', '统计师', '12', 12, 246, 112, 'LB=246&XL=287', 'tong ji shi ', 'tongjishi', 'tjs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (288, '会计/审计/统计', '审计师', '13', 13, 246, 112, 'LB=246&XL=288', 'shen ji shi ', 'shenjishi', 'sjs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (289, '会计/审计/统计', '信用管理师', '14', 14, 246, 112, 'LB=246&XL=289', 'xin yong guan li shi ', 'xinyongguanlishi', 'xygls');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (290, '会计/审计/统计', 'ACCA', '15', 15, 246, 112, 'LB=246&XL=290', 'ACCA', 'ACCA', 'A');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (291, '会计/审计/统计', 'CMA', '16', 16, 246, 112, 'LB=246&XL=291', 'CMA', 'CMA', 'C');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (292, '会计/审计/统计', 'CIMA', '17', 17, 246, 112, 'LB=246&XL=292', 'CIMA', 'CIMA', 'C');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (293, '会计/审计/统计', 'CIA', '18', 18, 246, 112, 'LB=246&XL=293', 'CIA', 'CIA', 'C');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (294, '建筑/房产/物业', '一级建造师', '1', 1, 247, 112, 'LB=247&XL=294', 'yi ji jian zao shi ', 'yijijianzaoshi', 'yjjzs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (295, '建筑/房产/物业', '二级建造师', '2', 2, 247, 112, 'LB=247&XL=295', 'dong ji jian zao shi ', 'dongjijianzaoshi', 'djjzs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (296, '建筑/房产/物业', '安全工程师', '3', 3, 247, 112, 'LB=247&XL=296', 'an quan gong cheng shi ', 'anquangongchengshi', 'aqgcs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (297, '建筑/房产/物业', '造价师', '4', 4, 247, 112, 'LB=247&XL=297', 'zao jia shi ', 'zaojiashi', 'zjs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (298, '建筑/房产/物业', '物业管理师', '5', 5, 247, 112, 'LB=247&XL=298', 'wu ye guan li shi ', 'wuyeguanlishi', 'wygls');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (299, '建筑/房产/物业', '监理工程师', '6', 6, 247, 112, 'LB=247&XL=299', 'jian li gong cheng shi ', 'jianligongchengshi', 'jlgcs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (300, '建筑/房产/物业', '房地产估价师', '7', 7, 247, 112, 'LB=247&XL=300', 'fang di chan gu jia shi ', 'fangdichangujiashi', 'fdcgjs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (301, '建筑/房产/物业', '置业顾问', '8', 8, 247, 112, 'LB=247&XL=301', 'zhi ye gu wen ', 'zhiyeguwen', 'zygw');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (302, '建筑/房产/物业', '房地产经纪人', '9', 9, 247, 112, 'LB=247&XL=302', 'fang di chan jing ji ren ', 'fangdichanjingjiren', 'fdcjjr');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (303, '建筑/房产/物业', '岩土工程师', '10', 10, 247, 112, 'LB=247&XL=303', 'yan tu gong cheng shi ', 'yantugongchengshi', 'ytgcs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (304, '建筑/房产/物业', '结构工程师', '11', 11, 247, 112, 'LB=247&XL=304', 'jie gou gong cheng shi ', 'jiegougongchengshi', 'jggcs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (305, '建筑/房产/物业', '质量工程师', '12', 12, 247, 112, 'LB=247&XL=305', 'zhi liang gong cheng shi ', 'zhilianggongchengshi', 'zlgcs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (306, '建筑/房产/物业', '建筑工程师', '13', 13, 247, 112, 'LB=247&XL=306', 'jian zhu gong cheng shi ', 'jianzhugongchengshi', 'jzgcs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (307, '建筑/房产/物业', '安全评价师', '14', 14, 247, 112, 'LB=247&XL=307', 'an quan ping jia shi ', 'anquanpingjiashi', 'aqpjs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (308, '建筑/房产/物业', '房地产策划师', '15', 15, 247, 112, 'LB=247&XL=308', 'fang di chan ce hua shi ', 'fangdichancehuashi', 'fdcchs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (309, '建筑/房产/物业', '预算员', '16', 16, 247, 112, 'LB=247&XL=309', 'yu suan yuan ', 'yusuanyuan', 'ysy');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (310, '建筑/房产/物业', '质检员', '17', 17, 247, 112, 'LB=247&XL=310', 'zhi jian yuan ', 'zhijianyuan', 'zjy');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (311, '建筑/房产/物业', '安全员', '18', 18, 247, 112, 'LB=247&XL=311', 'an quan yuan ', 'anquanyuan', 'aqy');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (312, '建筑/房产/物业', '施工员', '19', 19, 247, 112, 'LB=247&XL=312', 'shi gong yuan ', 'shigongyuan', 'sgy');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (313, '建筑/房产/物业', '材料员', '20', 20, 247, 112, 'LB=247&XL=313', 'cai liao yuan ', 'cailiaoyuan', 'cly');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (314, '建筑/房产/物业', '机械员', '21', 21, 247, 112, 'LB=247&XL=314', 'ji xie yuan ', 'jixieyuan', 'jxy');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (315, '建筑/房产/物业', '测量员', '22', 22, 247, 112, 'LB=247&XL=315', 'ce liang yuan ', 'celiangyuan', 'cly');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (316, '建筑/房产/物业', '资料员', '23', 23, 247, 112, 'LB=247&XL=316', 'zi liao yuan ', 'ziliaoyuan', 'zly');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (317, '餐饮/酒店/旅游', '厨师', '1', 1, 248, 112, 'LB=248&XL=317', 'chu shi ', 'chushi', 'cs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (318, '餐饮/酒店/旅游', '面点师', '2', 2, 248, 112, 'LB=248&XL=318', 'mian dian shi ', 'miandianshi', 'mds');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (319, '餐饮/酒店/旅游', '咖啡师', '3', 3, 248, 112, 'LB=248&XL=319', 'ka fei shi ', 'kafeishi', 'kfs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (320, '餐饮/酒店/旅游', '调酒师', '4', 4, 248, 112, 'LB=248&XL=320', 'diao jiu shi ', 'diaojiushi', 'djs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (321, '餐饮/酒店/旅游', '品酒师', '5', 5, 248, 112, 'LB=248&XL=321', 'pin jiu shi ', 'pinjiushi', 'pjs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (322, '餐饮/酒店/旅游', '茶艺师', '6', 6, 248, 112, 'LB=248&XL=322', 'cha yi shi ', 'chayishi', 'cys');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (323, '餐饮/酒店/旅游', '导游资格', '7', 7, 248, 112, 'LB=248&XL=323', 'dao you zi ge ', 'daoyouzige', 'dyzg');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (324, '餐饮/酒店/旅游', '旅游管理师', '8', 8, 248, 112, 'LB=248&XL=324', 'lv you guan li shi ', 'lvyouguanlishi', 'lygls');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (325, '餐饮/酒店/旅游', '酒店管理师', '9', 9, 248, 112, 'LB=248&XL=325', 'jiu dian guan li shi ', 'jiudianguanlishi', 'jdgls');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (326, '餐饮/酒店/旅游', '酒店职业经理人', '10', 10, 248, 112, 'LB=248&XL=326', 'jiu dian zhi ye jing li ren ', 'jiudianzhiyejingliren', 'jdzyjlr');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (327, '餐饮/酒店/旅游', '餐厅职业经理人', '11', 11, 248, 112, 'LB=248&XL=327', 'can ting zhi ye jing li ren ', 'cantingzhiyejingliren', 'ctzyjlr');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (328, '美容/保健/健身', '美发师', '1', 1, 249, 112, 'LB=249&XL=328', 'mei fa shi ', 'meifashi', 'mfs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (329, '美容/保健/健身', '化妆师', '2', 2, 249, 112, 'LB=249&XL=329', 'hua zhuang shi ', 'huazhuangshi', 'hzs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (330, '美容/保健/健身', '美容师', '3', 3, 249, 112, 'LB=249&XL=330', 'mei rong shi ', 'meirongshi', 'mrs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (331, '美容/保健/健身', '半永久', '4', 4, 249, 112, 'LB=249&XL=331', 'ban yong jiu ', 'banyongjiu', 'byj');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (332, '美容/保健/健身', '美甲师', '5', 5, 249, 112, 'LB=249&XL=332', 'mei jia shi ', 'meijiashi', 'mjs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (333, '美容/保健/健身', '保健按摩师', '6', 6, 249, 112, 'LB=249&XL=333', 'bao jian an mo shi ', 'baojiananmoshi', 'bjams');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (334, '美容/保健/健身', '纹身技师', '7', 7, 249, 112, 'LB=249&XL=334', 'wen shen ji shi ', 'wenshenjishi', 'wsjs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (335, '美容/保健/健身', '刮痧师', '8', 8, 249, 112, 'LB=249&XL=335', 'gua sha shi ', 'guashashi', 'gss');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (336, '美容/保健/健身', '健身教练', '9', 9, 249, 112, 'LB=249&XL=336', 'jian shen jiao lian ', 'jianshenjiaolian', 'jsjl');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (337, '美容/保健/健身', '舞蹈教练', '10', 10, 249, 112, 'LB=249&XL=337', 'wu dao jiao lian ', 'wudaojiaolian', 'wdjl');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (338, '美容/保健/健身', '瑜伽教练', '11', 11, 249, 112, 'LB=249&XL=338', 'yu jia jiao lian ', 'yujiajiaolian', 'yjjl');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (339, '美容/保健/健身', '家具美容师', '12', 12, 249, 112, 'LB=249&XL=339', 'jia ju mei rong shi ', 'jiajumeirongshi', 'jjmrs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (340, '美容/保健/健身', '宠物美容师', '13', 13, 249, 112, 'LB=249&XL=340', 'chong wu mei rong shi ', 'chongwumeirongshi', 'cwmrs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (341, '教育/人力/市场', '教师资格', '1', 1, 250, 112, 'LB=250&XL=341', 'jiao shi zi ge ', 'jiaoshizige', 'jszg');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (342, '教育/人力/市场', '人力资源管理师', '2', 2, 250, 112, 'LB=250&XL=342', 'ren li zi yuan guan li shi ', 'renliziyuanguanlishi', 'rlzygls');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (343, '教育/人力/市场', '摄影师', '3', 3, 250, 112, 'LB=250&XL=343', 'she ying shi ', 'sheyingshi', 'sys');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (344, '教育/人力/市场', '速录师', '4', 4, 250, 112, 'LB=250&XL=344', 'su lu shi ', 'sulushi', 'sls');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (345, '教育/人力/市场', '会展策划师', '5', 5, 250, 112, 'LB=250&XL=345', 'hui zhan ce hua shi ', 'huizhancehuashi', 'hzchs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (346, '教育/人力/市场', '婚礼策划师', '6', 6, 250, 112, 'LB=250&XL=346', 'hun li ce hua shi ', 'hunlicehuashi', 'hlchs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (347, '教育/人力/市场', '营销师', '7', 7, 250, 112, 'LB=250&XL=347', 'ying xiao shi ', 'yingxiaoshi', 'yxs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (348, '教育/人力/市场', '秘书资格', '8', 8, 250, 112, 'LB=250&XL=348', 'mi shu zi ge ', 'mishuzige', 'mszg');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (349, '教育/人力/市场', '企业培训师', '9', 9, 250, 112, 'LB=250&XL=349', 'qi ye pei xun shi ', 'qiyepeixunshi', 'qypxs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (350, '教育/人力/市场', '企业文化师', '10', 10, 250, 112, 'LB=250&XL=350', 'qi ye wen hua shi ', 'qiyewenhuashi', 'qywhs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (351, '教育/人力/市场', '广告策划师', '11', 11, 250, 112, 'LB=250&XL=351', 'guang gao ce hua shi ', 'guanggaocehuashi', 'ggchs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (352, '教育/人力/市场', '礼仪培训师', '12', 12, 250, 112, 'LB=250&XL=352', 'li yi pei xun shi ', 'liyipeixunshi', 'lypxs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (353, '教育/人力/市场', '风水师', '13', 13, 250, 112, 'LB=250&XL=353', 'feng shui shi ', 'fengshuishi', 'fss');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (354, '医疗/健康/心理', '执业药师', '1', 1, 251, 112, 'LB=251&XL=354', 'zhi ye yao shi ', 'zhiyeyaoshi', 'zyys');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (355, '医疗/健康/心理', '执业医师', '2', 2, 251, 112, 'LB=251&XL=355', 'zhi ye yi shi ', 'zhiyeyishi', 'zyys');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (356, '医疗/健康/心理', '助理医师', '3', 3, 251, 112, 'LB=251&XL=356', 'zhu li yi shi ', 'zhuliyishi', 'zlys');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (357, '医疗/健康/心理', '执业护士', '4', 4, 251, 112, 'LB=251&XL=357', 'zhi ye hu shi ', 'zhiyehushi', 'zyhs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (358, '医疗/健康/心理', '心理咨询师', '5', 5, 251, 112, 'LB=251&XL=358', 'xin li zi xun shi ', 'xinlizixunshi', 'xlzxs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (359, '医疗/健康/心理', '心理医生', '6', 6, 251, 112, 'LB=251&XL=359', 'xin li yi sheng ', 'xinliyisheng', 'xlys');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (360, '医疗/健康/心理', '健康管理师', '7', 7, 251, 112, 'LB=251&XL=360', 'jian kang guan li shi ', 'jiankangguanlishi', 'jkgls');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (361, '医疗/健康/心理', '理疗师', '8', 8, 251, 112, 'LB=251&XL=361', 'li liao shi ', 'liliaoshi', 'lls');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (362, '医疗/健康/心理', '验光师', '9', 9, 251, 112, 'LB=251&XL=362', 'yan guang shi ', 'yanguangshi', 'ygs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (363, '医疗/健康/心理', '卫生资格', '10', 10, 251, 112, 'LB=251&XL=363', 'wei sheng zi ge ', 'weishengzige', 'wszg');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (364, '医疗/健康/心理', '宠物医师', '11', 11, 251, 112, 'LB=251&XL=364', 'chong wu yi shi ', 'chongwuyishi', 'cwys');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (365, '医疗/健康/心理', '中药调剂员', '12', 12, 251, 112, 'LB=251&XL=365', 'zhong yao diao ji yuan ', 'zhongyaodiaojiyuan', 'zydjy');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (366, '育儿/孕妇/产妇', '月嫂', '1', 1, 252, 112, 'LB=252&XL=366', 'yue sao ', 'yuesao', 'ys');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (367, '育儿/孕妇/产妇', '催乳师', '2', 2, 252, 112, 'LB=252&XL=367', 'cui ru shi ', 'cuirushi', 'crs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (368, '育儿/孕妇/产妇', '营养师', '3', 3, 252, 112, 'LB=252&XL=368', 'ying yang shi ', 'yingyangshi', 'yys');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (369, '育儿/孕妇/产妇', '育婴师', '4', 4, 252, 112, 'LB=252&XL=369', 'yu ying shi ', 'yuyingshi', 'yys');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (370, '育儿/孕妇/产妇', '胎教师', '5', 5, 252, 112, 'LB=252&XL=370', 'tai jiao shi ', 'taijiaoshi', 'tjs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (371, '育儿/孕妇/产妇', '产后恢复师', '6', 6, 252, 112, 'LB=252&XL=371', 'chan hou hui fu shi ', 'chanhouhuifushi', 'chhfs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (372, '育儿/孕妇/产妇', '小儿推拿师', '7', 7, 252, 112, 'LB=252&XL=372', 'xiao dong tui na shi ', 'xiaodongtuinashi', 'xdtns');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (373, '育儿/孕妇/产妇', '早教师', '8', 8, 252, 112, 'LB=252&XL=373', 'zao jiao shi ', 'zaojiaoshi', 'zjs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (374, '育儿/孕妇/产妇', '婴儿游泳指导师', '9', 9, 252, 112, 'LB=252&XL=374', 'ying dong you yong zhi dao shi ', 'yingdongyouyongzhidaoshi', 'ydyyzds');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (375, '贸易/采购/物流', '报关员', '1', 1, 253, 112, 'LB=253&XL=375', 'bao guan yuan ', 'baoguanyuan', 'bgy');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (376, '贸易/采购/物流', '跟单员', '2', 2, 253, 112, 'LB=253&XL=376', 'gen dan yuan ', 'gendanyuan', 'gdy');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (377, '贸易/采购/物流', '单证员', '3', 3, 253, 112, 'LB=253&XL=377', 'dan zheng yuan ', 'danzhengyuan', 'dzy');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (378, '贸易/采购/物流', '报检员', '4', 4, 253, 112, 'LB=253&XL=378', 'bao jian yuan ', 'baojianyuan', 'bjy');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (379, '贸易/采购/物流', '货运代理人', '5', 5, 253, 112, 'LB=253&XL=379', 'huo yun dai li ren ', 'huoyundailiren', 'hydlr');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (380, '贸易/采购/物流', '采购师', '6', 6, 253, 112, 'LB=253&XL=380', 'cai gou shi ', 'caigoushi', 'cgs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (381, '贸易/采购/物流', '招标师', '7', 7, 253, 112, 'LB=253&XL=381', 'zhao biao shi ', 'zhaobiaoshi', 'zbs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (382, '贸易/采购/物流', '国际商务师', '8', 8, 253, 112, 'LB=253&XL=382', 'guo ji shang wu shi ', 'guojishangwushi', 'gjsws');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (383, '贸易/采购/物流', '外销员', '9', 9, 253, 112, 'LB=253&XL=383', 'wai xiao yuan ', 'waixiaoyuan', 'wxy');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (384, '贸易/采购/物流', '物流员', '10', 10, 253, 112, 'LB=253&XL=384', 'wu liu yuan ', 'wuliuyuan', 'wly');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (385, '汽车制造/服务', '汽车工程师', '1', 1, 254, 112, 'LB=254&XL=385', 'qi che gong cheng shi ', 'qichegongchengshi', 'qcgcs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (386, '汽车制造/服务', '汽车维修技师', '2', 2, 254, 112, 'LB=254&XL=386', 'qi che wei xiu ji shi ', 'qicheweixiujishi', 'qcwxjs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (387, '汽车制造/服务', '二手车评估师', '3', 3, 254, 112, 'LB=254&XL=387', 'dong shou che ping gu shi ', 'dongshouchepinggushi', 'dscpgs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (388, '汽车制造/服务', '汽车美容师', '4', 4, 254, 112, 'LB=254&XL=388', 'qi che mei rong shi ', 'qichemeirongshi', 'qcmrs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (389, '汽车制造/服务', '汽车设计师', '5', 5, 254, 112, 'LB=254&XL=389', 'qi che she ji shi ', 'qicheshejishi', 'qcsjs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (390, '汽车制造/服务', '汽车营销师', '6', 6, 254, 112, 'LB=254&XL=390', 'qi che ying xiao shi ', 'qicheyingxiaoshi', 'qcyxs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (391, '汽车制造/服务', '车险理赔师', '7', 7, 254, 112, 'LB=254&XL=391', 'che xian li pei shi ', 'chexianlipeishi', 'cxlps');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (392, '汽车制造/服务', '汽车经纪人', '8', 8, 254, 112, 'LB=254&XL=392', 'qi che jing ji ren ', 'qichejingjiren', 'qcjjr');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (393, '汽车制造/服务', '汽车改装师', '9', 9, 254, 112, 'LB=254&XL=393', 'qi che gai zhuang shi ', 'qichegaizhuangshi', 'qcgzs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (394, '汽车制造/服务', '汽车检测师', '10', 10, 254, 112, 'LB=254&XL=394', 'qi che jian ce shi ', 'qichejianceshi', 'qcjcs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (395, '汽车制造/服务', '汽车电子工程师', '11', 11, 254, 112, 'LB=254&XL=395', 'qi che dian zi gong cheng shi ', 'qichedianzigongchengshi', 'qcdzgcs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (396, '电器/数码维修', '手机维修', '1', 1, 255, 112, 'LB=255&XL=396', 'shou ji wei xiu ', 'shoujiweixiu', 'sjwx');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (397, '电器/数码维修', '电脑维修', '2', 2, 255, 112, 'LB=255&XL=397', 'dian nao wei xiu ', 'diannaoweixiu', 'dnwx');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (398, '电器/数码维修', '家电维修', '3', 3, 255, 112, 'LB=255&XL=398', 'jia dian wei xiu ', 'jiadianweixiu', 'jdwx');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (399, '电器/数码维修', '相机维修', '4', 4, 255, 112, 'LB=255&XL=399', 'xiang ji wei xiu ', 'xiangjiweixiu', 'xjwx');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (400, '环境/资源/交通', '咨询工程师', '1', 1, 256, 112, 'LB=256&XL=400', 'zi xun gong cheng shi ', 'zixungongchengshi', 'zxgcs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (401, '环境/资源/交通', '环境影响评价师', '2', 2, 256, 112, 'LB=256&XL=401', 'huan jing ying xiang ping jia shi ', 'huanjingyingxiangpingjiashi', 'hjyxpjs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (402, '环境/资源/交通', '土地估价师', '3', 3, 256, 112, 'LB=256&XL=402', 'tu di gu jia shi ', 'tudigujiashi', 'tdgjs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (403, '环境/资源/交通', '环保工程师', '4', 4, 256, 112, 'LB=256&XL=403', 'huan bao gong cheng shi ', 'huanbaogongchengshi', 'hbgcs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (404, '环境/资源/交通', '注册测绘师', '5', 5, 256, 112, 'LB=256&XL=404', 'zhu ce ce hui shi ', 'zhucecehuishi', 'zcchs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (405, '环境/资源/交通', '城市规划师', '6', 6, 256, 112, 'LB=256&XL=405', 'cheng shi gui hua shi ', 'chengshiguihuashi', 'csghs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (406, '环境/资源/交通', '投资建设项目师', '7', 7, 256, 112, 'LB=256&XL=406', 'tou zi jian she xiang mu shi ', 'touzijianshexiangmushi', 'tzjsxms');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (407, '环境/资源/交通', '土地登记代理人', '8', 8, 256, 112, 'LB=256&XL=407', 'tu di deng ji dai li ren ', 'tudidengjidailiren', 'tddjdlr');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (408, '环境/资源/交通', '采矿工程师', '9', 9, 256, 112, 'LB=256&XL=408', 'cai kuang gong cheng shi ', 'caikuanggongchengshi', 'ckgcs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (409, '环境/资源/交通', '地质工程师', '10', 10, 256, 112, 'LB=256&XL=409', 'di zhi gong cheng shi ', 'dizhigongchengshi', 'dzgcs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (410, '环境/资源/交通', '公路监理师', '11', 11, 256, 112, 'LB=256&XL=410', 'gong lu jian li shi ', 'gonglujianlishi', 'gljls');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (411, '环境/资源/交通', '公路造价师', '12', 12, 256, 112, 'LB=256&XL=411', 'gong lu zao jia shi ', 'gongluzaojiashi', 'glzjs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (412, '金融/证券/保险', '证券从业资格', '1', 1, 257, 112, 'LB=257&XL=412', 'zheng quan cong ye zi ge ', 'zhengquancongyezige', 'zqcyzg');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (413, '金融/证券/保险', '银行从业资格', '2', 2, 257, 112, 'LB=257&XL=413', 'yin xing cong ye zi ge ', 'yinxingcongyezige', 'yxcyzg');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (414, '金融/证券/保险', '期货从业资格', '3', 3, 257, 112, 'LB=257&XL=414', 'qi huo cong ye zi ge ', 'qihuocongyezige', 'qhcyzg');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (415, '金融/证券/保险', '基金从业资格', '4', 4, 257, 112, 'LB=257&XL=415', 'ji jin cong ye zi ge ', 'jijincongyezige', 'jjcyzg');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (416, '金融/证券/保险', '保险代理人', '5', 5, 257, 112, 'LB=257&XL=416', 'bao xian dai li ren ', 'baoxiandailiren', 'bxdlr');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (417, '金融/证券/保险', '金融分析师CFA', '6', 6, 257, 112, 'LB=257&XL=417', 'jin rong fen xi shi CFA', 'jinrongfenxishiCFA', 'jrfxsC');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (418, '金融/证券/保险', '金融理财师AFP', '7', 7, 257, 112, 'LB=257&XL=418', 'jin rong li cai shi AFP', 'jinronglicaishiAFP', 'jrlcsA');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (419, '金融/证券/保险', '风险管理师FRM', '8', 8, 257, 112, 'LB=257&XL=419', 'feng xian guan li shi FRM', 'fengxianguanlishiFRM', 'fxglsF');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (420, '金融/证券/保险', '投资分析师CIIA', '9', 9, 257, 112, 'LB=257&XL=420', 'tou zi fen xi shi CIIA', 'touzifenxishiCIIA', 'tzfxsC');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (421, '金融/证券/保险', '理财规划师', '10', 10, 257, 112, 'LB=257&XL=421', 'li cai gui hua shi ', 'licaiguihuashi', 'lcghs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (422, '金融/证券/保险', '拍卖师', '11', 11, 257, 112, 'LB=257&XL=422', 'pai mai shi ', 'paimaishi', 'pms');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (423, '金融/证券/保险', '黄金投资分析师', '12', 12, 257, 112, 'LB=257&XL=423', 'huang jin tou zi fen xi shi ', 'huangjintouzifenxishi', 'hjtzfxs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (424, '金融/证券/保险', '保险精算师', '13', 13, 257, 112, 'LB=257&XL=424', 'bao xian jing suan shi ', 'baoxianjingsuanshi', 'bxjss');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (425, '金融/证券/保险', '数量金融师CQF', '14', 14, 257, 112, 'LB=257&XL=425', 'shu liang jin rong shi CQF', 'shuliangjinrongshiCQF', 'sljrsC');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (426, '农/林/牧/渔', '兽医', '1', 1, 258, 112, 'LB=258&XL=426', 'shou yi ', 'shouyi', 'sy');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (427, '农/林/牧/渔', '园林工程师', '2', 2, 258, 112, 'LB=258&XL=427', 'yuan lin gong cheng shi ', 'yuanlingongchengshi', 'ylgcs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (428, '农/林/牧/渔', '园艺师', '3', 3, 258, 112, 'LB=258&XL=428', 'yuan yi shi ', 'yuanyishi', 'yys');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (429, '农/林/牧/渔', '酿酒师', '4', 4, 258, 112, 'LB=258&XL=429', 'niang jiu shi ', 'niangjiushi', 'njs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (430, '农/林/牧/渔', '畜牧师', '5', 5, 258, 112, 'LB=258&XL=430', 'xu mu shi ', 'xumushi', 'xms');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (431, '农/林/牧/渔', '养殖师', '6', 6, 258, 112, 'LB=258&XL=431', 'yang zhi shi ', 'yangzhishi', 'yzs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (432, '职业技能培训形式', '脱产班', '1', 1, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (433, '职业技能培训形式', '周末班', '2', 2, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (434, '职业技能培训形式', '工作日班', '3', 3, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (435, '职业技能培训形式', '网络班', '4', 4, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (436, '职业技能培训周期', '1个月以内', '1', 1, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (437, '职业技能培训周期', '1-3个月', '2', 2, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (438, '职业技能培训周期', '3-6个月', '3', 3, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (439, '职业技能培训周期', '6个月-1年', '4', 4, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (440, '职业技能培训周期', '1年以上', '5', 5, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (441, '学历教育类别', '考研', '1', 1, null, 115, 'LB=441', 'kao yan ', 'kaoyan', 'ky');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (442, '学历教育类别', '在职研究生', '2', 2, null, 115, 'LB=442', 'zai zhi yan jiu sheng ', 'zaizhiyanjiusheng', 'zzyjs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (443, '学历教育类别', '成人高考', '3', 3, null, 115, 'LB=443', 'cheng ren gao kao ', 'chengrengaokao', 'crgk');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (444, '学历教育类别', '自考', '4', 4, null, 115, 'LB=444', 'zi kao ', 'zikao', 'zk');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (445, '学历教育类别', '远程网络教育', '5', 5, null, 115, 'LB=445', 'yuan cheng wang luo jiao yu ', 'yuanchengwangluojiaoyu', 'ycwljy');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (446, '学历教育类别', '考博', '6', 6, null, 115, 'LB=446', 'kao bo ', 'kaobo', 'kb');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (447, '学历教育类别', '在职博士', '7', 7, null, 115, 'LB=447', 'zai zhi bo shi ', 'zaizhiboshi', 'zzbs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (448, '学历教育类别', '民办学校', '8', 8, null, 115, 'LB=448', 'min ban xue xiao ', 'minbanxuexiao', 'mbxx');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (449, '学历教育类别', '公办学历', '9', 9, null, 115, 'LB=449', 'gong ban xue li ', 'gongbanxueli', 'gbxl');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (450, '学历教育类别', '二学历', '10', 10, null, 115, 'LB=450', 'dong xue li ', 'dongxueli', 'dxl');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (451, '艺术培训教学科目类别', '舞蹈', '1', 1, null, 110, 'LB=451', 'wu dao ', 'wudao', 'wd');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (452, '艺术培训教学科目类别', '乐器', '2', 2, null, 110, 'LB=452', 'le qi ', 'leqi', 'lq');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (453, '艺术培训教学科目类别', '美术', '3', 3, null, 110, 'LB=453', 'mei shu ', 'meishu', 'ms');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (454, '艺术培训教学科目类别', '声乐', '4', 4, null, 110, 'LB=454', 'sheng le ', 'shengle', 'sl');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (455, '艺术培训教学科目类别', '表演', '5', 5, null, 110, 'LB=455', 'biao yan ', 'biaoyan', 'by');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (456, '艺术培训教学科目类别', '礼仪', '6', 6, null, 110, 'LB=456', 'li yi ', 'liyi', 'ly');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (457, '艺术培训教学科目类别', '摄影', '7', 7, null, 110, 'LB=457', 'she ying ', 'sheying', 'sy');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (458, '艺术培训教学科目类别', '艺考', '8', 8, null, 110, 'LB=458', 'yi kao ', 'yikao', 'yk');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (459, '艺术培训教学科目类别', 'DJ', '9', 9, null, 110, 'LB=459', 'DJ', 'DJ', 'D');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (460, '艺术培训教学科目类别', '茶艺', '101', 10, null, 110, 'LB=460', 'cha yi ', 'chayi', 'cy');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (461, '艺术培训教学科目类别', '插花', '111', 11, null, 110, 'LB=461', 'cha hua ', 'chahua', 'ch');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (462, '艺术培训教学科目类别', '烹饪', '121', 12, null, 110, 'LB=462', 'peng ren ', 'pengren', 'pr');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (463, '艺术培训教学科目类别', '魔术', '131', 13, null, 110, 'LB=463', 'mo shu ', 'moshu', 'ms');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (464, '艺术培训教学科目类别', '书法', '141', 14, null, 110, 'LB=464', 'shu fa ', 'shufa', 'sf');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (465, '艺术培训教学科目类别', '风水', '151', 15, null, 110, 'LB=465', 'feng shui ', 'fengshui', 'fs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (466, '艺术培训教学科目类别', '国学', '161', 16, null, 110, 'LB=466', 'guo xue ', 'guoxue', 'gx');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (467, '艺术培训教学科目类别', '形体', '171', 17, null, 110, 'LB=467', 'xing ti ', 'xingti', 'xt');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (468, '艺术培训教学科目类别', '园艺', '181', 18, null, 110, 'LB=468', 'yuan yi ', 'yuanyi', 'yy');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (469, '舞蹈', '肚皮舞', '1', 1, 451, 110, 'LB=451&XL=469', 'dong pi wu ', 'dongpiwu', 'dpw');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (470, '舞蹈', '钢管舞', '2', 2, 451, 110, 'LB=451&XL=470', 'gang guan wu ', 'gangguanwu', 'ggw');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (471, '舞蹈', '街舞', '3', 3, 451, 110, 'LB=451&XL=471', 'jie wu ', 'jiewu', 'jw');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (472, '舞蹈', '拉丁舞', '4', 4, 451, 110, 'LB=451&XL=472', 'la ding wu ', 'ladingwu', 'ldw');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (473, '舞蹈', '爵士舞', '5', 5, 451, 110, 'LB=451&XL=473', 'jue shi wu ', 'jueshiwu', 'jsw');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (474, '舞蹈', '交谊舞', '6', 6, 451, 110, 'LB=451&XL=474', 'jiao yi wu ', 'jiaoyiwu', 'jyw');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (475, '舞蹈', '民族舞', '7', 7, 451, 110, 'LB=451&XL=475', 'min zu wu ', 'minzuwu', 'mzw');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (476, '舞蹈', '中国舞', '8', 8, 451, 110, 'LB=451&XL=476', 'zhong guo wu ', 'zhongguowu', 'zgw');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (477, '舞蹈', '芭蕾舞', '9', 9, 451, 110, 'LB=451&XL=477', 'ba lei wu ', 'baleiwu', 'blw');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (478, '舞蹈', '国标舞', '10', 10, 451, 110, 'LB=451&XL=478', 'guo biao wu ', 'guobiaowu', 'gbw');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (479, '舞蹈', '古典舞', '11', 11, 451, 110, 'LB=451&XL=479', 'gu dian wu ', 'gudianwu', 'gdw');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (480, '舞蹈', '现代舞', '12', 12, 451, 110, 'LB=451&XL=480', 'xian dai wu ', 'xiandaiwu', 'xdw');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (481, '舞蹈', '酒吧领舞', '13', 13, 451, 110, 'LB=451&XL=481', 'jiu ba ling wu ', 'jiubalingwu', 'jblw');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (482, '乐器', '吉他', '1', 1, 452, 110, 'LB=452&XL=482', 'ji ta ', 'jita', 'jt');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (483, '乐器', '钢琴', '2', 2, 452, 110, 'LB=452&XL=483', 'gang qin ', 'gangqin', 'gq');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (484, '乐器', '电子琴', '3', 3, 452, 110, 'LB=452&XL=484', 'dian zi qin ', 'dianziqin', 'dzq');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (485, '乐器', '小提琴', '4', 4, 452, 110, 'LB=452&XL=485', 'xiao ti qin ', 'xiaotiqin', 'xtq');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (486, '乐器', '大提琴', '5', 5, 452, 110, 'LB=452&XL=486', 'da ti qin ', 'datiqin', 'dtq');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (487, '乐器', '架子鼓', '6', 6, 452, 110, 'LB=452&XL=487', 'jia zi gu ', 'jiazigu', 'jzg');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (488, '乐器', '古筝', '7', 7, 452, 110, 'LB=452&XL=488', 'gu zheng ', 'guzheng', 'gz');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (489, '乐器', '二胡', '8', 8, 452, 110, 'LB=452&XL=489', 'dong hu ', 'donghu', 'dh');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (490, '乐器', '笛子', '9', 9, 452, 110, 'LB=452&XL=490', 'di zi ', 'dizi', 'dz');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (491, '乐器', '古琴', '10', 10, 452, 110, 'LB=452&XL=491', 'gu qin ', 'guqin', 'gq');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (492, '乐器', '琵琶', '11', 11, 452, 110, 'LB=452&XL=492', 'pi pa ', 'pipa', 'pp');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (493, '乐器', '扬琴', '12', 12, 452, 110, 'LB=452&XL=493', 'yang qin ', 'yangqin', 'yq');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (494, '乐器', '手风琴', '13', 13, 452, 110, 'LB=452&XL=494', 'shou feng qin ', 'shoufengqin', 'sfq');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (495, '乐器', '葫芦丝', '14', 14, 452, 110, 'LB=452&XL=495', 'hu lu si ', 'hulusi', 'hls');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (496, '乐器', '埙', '15', 15, 452, 110, 'LB=452&XL=496', 'xun ', 'xun', 'x');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (497, '乐器', '箫', '16', 16, 452, 110, 'LB=452&XL=497', 'xiao ', 'xiao', 'x');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (498, '乐器', '打击乐', '17', 17, 452, 110, 'LB=452&XL=498', 'da ji le ', 'dajile', 'djl');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (499, '乐器', '萨克斯', '18', 18, 452, 110, 'LB=452&XL=499', 'sa ke si ', 'sakesi', 'sks');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (500, '乐器', '黑管', '19', 19, 452, 110, 'LB=452&XL=500', 'hei guan ', 'heiguan', 'hg');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (501, '乐器', '双簧管', '20', 20, 452, 110, 'LB=452&XL=501', 'shuang huang guan ', 'shuanghuangguan', 'shg');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (502, '乐器', '贝斯', '21', 21, 452, 110, 'LB=452&XL=502', 'bei si ', 'beisi', 'bs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (503, '美术', '素描', '1', 1, 453, 110, 'LB=453&XL=503', 'su miao ', 'sumiao', 'sm');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (504, '美术', '国画', '2', 2, 453, 110, 'LB=453&XL=504', 'guo hua ', 'guohua', 'gh');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (505, '美术', '油画', '3', 3, 453, 110, 'LB=453&XL=505', 'you hua ', 'youhua', 'yh');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (506, '美术', '雕塑', '4', 4, 453, 110, 'LB=453&XL=506', 'diao su ', 'diaosu', 'ds');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (507, '美术', '陶艺', '5', 5, 453, 110, 'LB=453&XL=507', 'tao yi ', 'taoyi', 'ty');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (508, '美术', '水彩画', '6', 6, 453, 110, 'LB=453&XL=508', 'shui cai hua ', 'shuicaihua', 'sch');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (509, '美术', '沙画', '7', 7, 453, 110, 'LB=453&XL=509', 'sha hua ', 'shahua', 'sh');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (510, '声乐', '通俗唱法', '1', 1, 454, 110, 'LB=454&XL=510', 'tong su chang fa ', 'tongsuchangfa', 'tscf');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (511, '声乐', '民族唱法', '2', 2, 454, 110, 'LB=454&XL=511', 'min zu chang fa ', 'minzuchangfa', 'mzcf');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (512, '声乐', '美声唱法', '3', 3, 454, 110, 'LB=454&XL=512', 'mei sheng chang fa ', 'meishengchangfa', 'mscf');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (513, '声乐', '原生态唱法', '4', 4, 454, 110, 'LB=454&XL=513', 'yuan sheng tai chang fa ', 'yuanshengtaichangfa', 'ystcf');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (514, '对象', '少儿/幼儿', '1', 1, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (515, '对象', '成人', '2', 2, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (516, '体育培训类别', '球类', '1', 1, null, 113, 'LB=516', 'qiu lei ', 'qiulei', 'ql');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (517, '体育培训类别', '瑜伽', '2', 2, null, 113, 'LB=517', 'yu jia ', 'yujia', 'yj');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (518, '体育培训类别', '武术', '3', 3, null, 113, 'LB=518', 'wu shu ', 'wushu', 'ws');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (519, '体育培训类别', '棋类', '4', 4, null, 113, 'LB=519', 'qi lei ', 'qilei', 'ql');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (520, '体育培训类别', '游泳', '5', 5, null, 113, 'LB=520', 'you yong ', 'youyong', 'yy');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (521, '体育培训类别', '健身', '6', 6, null, 113, 'LB=521', 'jian shen ', 'jianshen', 'js');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (522, '体育培训类别', '跆拳道', '7', 7, null, 113, 'LB=522', 'tai quan dao ', 'taiquandao', 'tqd');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (523, '体育培训类别', '健美操', '8', 8, null, 113, 'LB=523', 'jian mei cao ', 'jianmeicao', 'jmc');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (524, '体育培训类别', '溜冰', '9', 9, null, 113, 'LB=524', 'liu bing ', 'liubing', 'lb');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (525, '体育培训类别', '轮滑', '10', 10, null, 113, 'LB=525', 'lun hua ', 'lunhua', 'lh');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (526, '体育培训类别', '滑雪', '11', 11, null, 113, 'LB=526', 'hua xue ', 'huaxue', 'hx');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (527, '体育培训类别', '马术', '12', 12, null, 113, 'LB=527', 'ma shu ', 'mashu', 'ms');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (528, '体育培训类别', '舍宾', '13', 13, null, 113, 'LB=528', 'she bin ', 'shebin', 'sb');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (529, '体育培训类别', '普拉提', '14', 14, null, 113, 'LB=529', 'pu la ti ', 'pulati', 'plt');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (530, '体育培训类别', '攀岩', '15', 15, null, 113, 'LB=530', 'pan yan ', 'panyan', 'py');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (531, '球类', '足球', '1', 1, 516, 113, 'LB=516&XL=531', 'zu qiu ', 'zuqiu', 'zq');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (532, '球类', '篮球', '2', 2, 516, 113, 'LB=516&XL=532', 'lan qiu ', 'lanqiu', 'lq');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (533, '球类', '羽毛球', '3', 3, 516, 113, 'LB=516&XL=533', 'yu mao qiu ', 'yumaoqiu', 'ymq');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (534, '球类', '网球', '4', 4, 516, 113, 'LB=516&XL=534', 'wang qiu ', 'wangqiu', 'wq');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (535, '球类', '乒乓球', '5', 5, 516, 113, 'LB=516&XL=535', 'ping pang qiu ', 'pingpangqiu', 'ppq');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (536, '球类', '台球', '6', 6, 516, 113, 'LB=516&XL=536', 'tai qiu ', 'taiqiu', 'tq');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (537, '球类', '保龄球', '7', 7, 516, 113, 'LB=516&XL=537', 'bao ling qiu ', 'baolingqiu', 'blq');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (538, '球类', '排球', '8', 8, 516, 113, 'LB=516&XL=538', 'pai qiu ', 'paiqiu', 'pq');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (539, '球类', '高尔夫', '9', 9, 516, 113, 'LB=516&XL=539', 'gao dong fu ', 'gaodongfu', 'gdf');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (540, '瑜伽', '减肥瑜伽', '1', 1, 517, 113, 'LB=517&XL=540', 'jian fei yu jia ', 'jianfeiyujia', 'jfyj');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (541, '瑜伽', '孕妇瑜伽', '2', 2, 517, 113, 'LB=517&XL=541', 'yun fu yu jia ', 'yunfuyujia', 'yfyj');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (542, '瑜伽', '高温瑜伽', '3', 3, 517, 113, 'LB=517&XL=542', 'gao wen yu jia ', 'gaowenyujia', 'gwyj');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (543, '武术', '太极拳', '1', 1, 518, 113, 'LB=518&XL=543', 'tai ji quan ', 'taijiquan', 'tjq');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (544, '武术', '咏春拳', '2', 2, 518, 113, 'LB=518&XL=544', 'yong chun quan ', 'yongchunquan', 'ycq');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (545, '武术', '散打', '3', 3, 518, 113, 'LB=518&XL=545', 'san da ', 'sanda', 'sd');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (546, '武术', '防身术', '4', 4, 518, 113, 'LB=518&XL=546', 'fang shen shu ', 'fangshenshu', 'fss');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (547, '武术', '空手道', '5', 5, 518, 113, 'LB=518&XL=547', 'kong shou dao ', 'kongshoudao', 'ksd');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (548, '武术', '搏击', '6', 6, 518, 113, 'LB=518&XL=548', 'bo ji ', 'boji', 'bj');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (549, '武术', '泰拳', '7', 7, 518, 113, 'LB=518&XL=549', 'tai quan ', 'taiquan', 'tq');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (550, '棋类', '围棋', '1', 1, 519, 113, 'LB=519&XL=550', 'wei qi ', 'weiqi', 'wq');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (551, '棋类', '象棋', '2', 2, 519, 113, 'LB=519&XL=551', 'xiang qi ', 'xiangqi', 'xq');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (552, '棋类', '国际象棋', '3', 3, 519, 113, 'LB=519&XL=552', 'guo ji xiang qi ', 'guojixiangqi', 'gjxq');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (553, '体育培训对象', '少儿/幼儿', '1', 1, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (554, '体育培训对象', '成人', '2', 2, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (555, '体育培训对象', '女子', '3', 3, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (556, '体育培训对象', '男子', '4', 4, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (557, 'IT培训类别', '软件开发', '1', 1, null, 116, 'LB=557', 'ruan jian kai fa ', 'ruanjiankaifa', 'rjkf');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (558, 'IT培训类别', '软件测试', '2', 2, null, 116, 'LB=558', 'ruan jian ce shi ', 'ruanjianceshi', 'rjcs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (559, 'IT培训类别', 'IT认证', '3', 3, null, 116, 'LB=559', 'ITren zheng ', 'ITrenzheng', 'Iz');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (560, 'IT培训类别', 'app开发', '4', 4, null, 116, 'LB=560', 'appkai fa ', 'appkaifa', 'af');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (561, 'IT培训类别', '游戏开发', '5', 5, null, 116, 'LB=561', 'you xi kai fa ', 'youxikaifa', 'yxkf');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (562, 'IT培训类别', '网络工程/网络管理', '6', 6, null, 116, 'LB=562', 'wang luo gong cheng /wang luo guan li ', 'wangluogongcheng/wangluoguanli', 'wlgc/wlgl');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (563, 'IT培训类别', '数据库', '7', 7, null, 116, 'LB=563', 'shu ju ku ', 'shujuku', 'sjk');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (564, 'IT培训类别', '网络营销', '8', 8, null, 116, 'LB=564', 'wang luo ying xiao ', 'wangluoyingxiao', 'wlyx');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (565, 'IT培训类别', '办公自动化', '9', 9, null, 116, 'LB=565', 'ban gong zi dong hua ', 'bangongzidonghua', 'bgzdh');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (566, 'IT培训类别', '计算机等级考试', '10', 10, null, 116, 'LB=566', 'ji suan ji deng ji kao shi ', 'jisuanjidengjikaoshi', 'jsjdjks');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (567, 'IT培训类别', '软件水平考试', '11', 11, null, 116, 'LB=567', 'ruan jian shui ping kao shi ', 'ruanjianshuipingkaoshi', 'rjspks');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (568, 'IT培训类别', '计算机职称考试', '12', 12, null, 116, 'LB=568', 'ji suan ji zhi cheng kao shi ', 'jisuanjizhichengkaoshi', 'jsjzcks');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (569, 'IT培训类别', '影视制作', '13', 13, null, 116, 'LB=569', 'ying shi zhi zuo ', 'yingshizhizuo', 'yszz');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (570, 'IT培训类别', '嵌入式开发', '14', 14, null, 116, 'LB=570', 'qian ru shi kai fa ', 'qianrushikaifa', 'qrskf');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (571, 'IT培训类别', '硬件技术/维修', '15', 15, null, 116, 'LB=571', 'ying jian ji shu /wei xiu ', 'yingjianjishu/weixiu', 'yjjs/wx');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (572, 'IT培训类别', 'ERP/CRM', '16', 16, null, 116, 'LB=572', 'ERP/CRM', 'ERP/CRM', 'E/C');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (573, '软件开发', 'Java', '1', 1, 557, 116, 'LB=557&XL=573', 'Java', 'Java', 'J');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (574, '软件开发', 'PHP', '2', 2, 557, 116, 'LB=557&XL=574', 'PHP', 'PHP', 'P');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (575, '软件开发', 'C语言', '3', 3, 557, 116, 'LB=557&XL=575', 'Cyu yan ', 'Cyuyan', 'Cy');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (576, '软件开发', '.Net', '4', 4, 557, 116, 'LB=557&XL=576', '.Net', '.Net', '.N');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (577, '软件开发', 'C++', '5', 5, 557, 116, 'LB=557&XL=577', 'C++', 'C++', 'C++');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (578, '软件开发', 'c#', '6', 6, 557, 116, 'LB=557&XL=578', 'c#', 'c#', 'c#');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (579, '软件开发', 'HTML', '7', 7, 557, 116, 'LB=557&XL=579', 'HTML', 'HTML', 'H');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (580, '软件开发', 'JS', '8', 8, 557, 116, 'LB=557&XL=580', 'JS', 'JS', 'J');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (581, '软件开发', 'CSS', '9', 9, 557, 116, 'LB=557&XL=581', 'CSS', 'CSS', 'C');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (582, '软件开发', 'Python', '10', 10, 557, 116, 'LB=557&XL=582', 'Python', 'Python', 'P');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (583, '软件开发', 'VB', '11', 11, 557, 116, 'LB=557&XL=583', 'VB', 'VB', 'V');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (584, '软件开发', 'ASP', '12', 12, 557, 116, 'LB=557&XL=584', 'ASP', 'ASP', 'A');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (585, '软件开发', 'Ruby', '13', 13, 557, 116, 'LB=557&XL=585', 'Ruby', 'Ruby', 'R');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (586, '软件开发', 'UML', '14', 14, 557, 116, 'LB=557&XL=586', 'UML', 'UML', 'U');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (587, '软件开发', 'Basic', '15', 15, 557, 116, 'LB=557&XL=587', 'Basic', 'Basic', 'B');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (588, '软件开发', 'Fortran', '16', 16, 557, 116, 'LB=557&XL=588', 'Fortran', 'Fortran', 'F');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (589, '软件开发', 'Cobol', '17', 17, 557, 116, 'LB=557&XL=589', 'Cobol', 'Cobol', 'C');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (590, 'IT认证', '微软认证', '1', 1, 559, 116, 'LB=559&XL=590', 'wei ruan ren zheng ', 'weiruanrenzheng', 'wrrz');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (591, 'IT认证', 'Oracle认证', '2', 2, 559, 116, 'LB=559&XL=591', 'Oracleren zheng ', 'Oraclerenzheng', 'Oz');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (592, 'IT认证', '华为认证', '3', 3, 559, 116, 'LB=559&XL=592', 'hua wei ren zheng ', 'huaweirenzheng', 'hwrz');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (593, 'IT认证', 'ACCP认证', '4', 4, 559, 116, 'LB=559&XL=593', 'ACCPren zheng ', 'ACCPrenzheng', 'Az');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (594, 'IT认证', 'H3C认证', '5', 5, 559, 116, 'LB=559&XL=594', 'H3Cren zheng ', 'H3Crenzheng', 'Hz');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (595, 'IT认证', '思科认证', '6', 6, 559, 116, 'LB=559&XL=595', 'si ke ren zheng ', 'sikerenzheng', 'skrz');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (596, 'IT认证', 'JAVA认证', '7', 7, 559, 116, 'LB=559&XL=596', 'JAVAren zheng ', 'JAVArenzheng', 'Jz');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (597, 'IT认证', 'Adobe认证', '8', 8, 559, 116, 'LB=559&XL=597', 'Adoberen zheng ', 'Adoberenzheng', 'Az');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (598, 'IT认证', 'Linux认证', '9', 9, 559, 116, 'LB=559&XL=598', 'Linuxren zheng ', 'Linuxrenzheng', 'Lz');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (599, 'IT认证', 'BENET认证', '10', 10, 559, 116, 'LB=559&XL=599', 'BENETren zheng ', 'BENETrenzheng', 'Bz');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (600, 'IT认证', 'IBM认证', '11', 11, 559, 116, 'LB=559&XL=600', 'IBMren zheng ', 'IBMrenzheng', 'Iz');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (601, 'IT认证', 'SUN认证', '12', 12, 559, 116, 'LB=559&XL=601', 'SUNren zheng ', 'SUNrenzheng', 'Sz');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (602, 'IT认证', 'SAP认证', '13', 13, 559, 116, 'LB=559&XL=602', 'SAPren zheng ', 'SAPrenzheng', 'Sz');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (603, 'IT认证', 'Macromedia认证', '14', 14, 559, 116, 'LB=559&XL=603', 'Macromediaren zheng ', 'Macromediarenzheng', 'Mz');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (604, 'IT认证', 'ARM认证', '15', 15, 559, 116, 'LB=559&XL=604', 'ARMren zheng ', 'ARMrenzheng', 'Az');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (605, 'IT认证', 'PHP认证', '16', 16, 559, 116, 'LB=559&XL=605', 'PHPren zheng ', 'PHPrenzheng', 'Pz');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (606, 'IT认证', 'Symbian认证', '17', 17, 559, 116, 'LB=559&XL=606', 'Symbianren zheng ', 'Symbianrenzheng', 'Sz');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (607, 'IT认证', 'NIIT认证', '18', 18, 559, 116, 'LB=559&XL=607', 'NIITren zheng ', 'NIITrenzheng', 'Nz');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (608, 'IT认证', 'RHCE认证', '19', 19, 559, 116, 'LB=559&XL=608', 'RHCEren zheng ', 'RHCErenzheng', 'Rz');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (609, 'app开发', 'android', '1', 1, 560, 116, 'LB=560&XL=609', 'android', 'android', 'a');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (610, 'app开发', 'ios', '2', 2, 560, 116, 'LB=560&XL=610', 'ios', 'ios', 'i');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (611, 'app开发', 'windows phone', '3', 3, 560, 116, 'LB=560&XL=611', 'windows phone', 'windowsphone', 'wp');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (612, '游戏开发', '网页游戏开发', '1', 1, 561, 116, 'LB=561&XL=612', 'wang ye you xi kai fa ', 'wangyeyouxikaifa', 'wyyxkf');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (613, '游戏开发', '手机游戏开发', '2', 2, 561, 116, 'LB=561&XL=613', 'shou ji you xi kai fa ', 'shoujiyouxikaifa', 'sjyxkf');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (614, '游戏开发', 'flash游戏开发', '3', 3, 561, 116, 'LB=561&XL=614', 'flashyou xi kai fa ', 'flashyouxikaifa', 'fxkf');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (615, '游戏开发', '游戏原画', '4', 4, 561, 116, 'LB=561&XL=615', 'you xi yuan hua ', 'youxiyuanhua', 'yxyh');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (616, '游戏开发', '游戏策划', '5', 5, 561, 116, 'LB=561&XL=616', 'you xi ce hua ', 'youxicehua', 'yxch');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (617, '游戏开发', '游戏特效', '6', 6, 561, 116, 'LB=561&XL=617', 'you xi te xiao ', 'youxitexiao', 'yxtx');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (618, '数据库', 'SQL Server', '1', 1, 563, 116, 'LB=563&XL=618', 'SQL Server', 'SQLServer', 'SS');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (619, '数据库', 'Mysql', '2', 2, 563, 116, 'LB=563&XL=619', 'Mysql', 'Mysql', 'M');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (620, '数据库', 'Access', '3', 3, 563, 116, 'LB=563&XL=620', 'Access', 'Access', 'A');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (621, '数据库', 'Oracle', '4', 4, 563, 116, 'LB=563&XL=621', 'Oracle', 'Oracle', 'O');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (622, '数据库', 'DB2', '5', 5, 563, 116, 'LB=563&XL=622', 'DB2', 'DB2', 'D');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (623, '数据库', 'Sybase', '6', 6, 563, 116, 'LB=563&XL=623', 'Sybase', 'Sybase', 'S');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (624, '数据库', 'vb数据库', '7', 7, 563, 116, 'LB=563&XL=624', 'vbshu ju ku ', 'vbshujuku', 'vjk');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (625, 'IT培训形式', '脱产班', '1', 1, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (626, 'IT培训形式', '周末班', '2', 2, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (627, 'IT培训形式', '网络班', '3', 3, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (628, 'IT培训形式', '工作日班', '4', 4, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (629, 'IT培训形式', '寒暑假班', '5', 5, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (630, '设计培训类别', '室内设计', '1', 1, null, 117, 'LB=630', 'shi nei she ji ', 'shineisheji', 'snsj');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (631, '设计培训类别', '平面设计', '2', 2, null, 117, 'LB=631', 'ping mian she ji ', 'pingmiansheji', 'pmsj');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (632, '设计培训类别', '服装设计', '3', 3, null, 117, 'LB=632', 'fu zhuang she ji ', 'fuzhuangsheji', 'fzsj');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (633, '设计培训类别', '网页设计', '4', 4, null, 117, 'LB=633', 'wang ye she ji ', 'wangyesheji', 'wysj');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (634, '设计培训类别', '广告设计', '5', 5, null, 117, 'LB=634', 'guang gao she ji ', 'guanggaosheji', 'ggsj');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (635, '设计培训类别', '景观设计', '6', 6, null, 117, 'LB=635', 'jing guan she ji ', 'jingguansheji', 'jgsj');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (636, '设计培训类别', '色彩搭配', '7', 7, null, 117, 'LB=636', 'se cai da pei ', 'secaidapei', 'scdp');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (637, '设计培训类别', '包装设计', '8', 8, null, 117, 'LB=637', 'bao zhuang she ji ', 'baozhuangsheji', 'bzsj');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (638, '设计培训类别', '家具设计', '9', 9, null, 117, 'LB=638', 'jia ju she ji ', 'jiajusheji', 'jjsj');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (639, '设计培训类别', '模具设计', '10', 10, null, 117, 'LB=639', 'mo ju she ji ', 'mojusheji', 'mjsj');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (640, '设计培训类别', '园林设计', '11', 11, null, 117, 'LB=640', 'yuan lin she ji ', 'yuanlinsheji', 'ylsj');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (641, '设计培训类别', '形象设计', '12', 12, null, 117, 'LB=641', 'xing xiang she ji ', 'xingxiangsheji', 'xxsj');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (642, '设计培训类别', '会展设计', '13', 13, null, 117, 'LB=642', 'hui zhan she ji ', 'huizhansheji', 'hzsj');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (643, '设计培训类别', '动漫设计', '14', 14, null, 117, 'LB=643', 'dong man she ji ', 'dongmansheji', 'dmsj');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (644, '设计培训类别', '珠宝鉴定', '15', 15, null, 117, 'LB=644', 'zhu bao jian ding ', 'zhubaojianding', 'zbjd');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (645, '设计培训类别', '装饰装潢设计', '16', 16, null, 117, 'LB=645', 'zhuang shi zhuang 潢she ji ', 'zhuangshizhuang潢sheji', 'zsz潢j');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (646, '设计培训类别', '其它设计', '17', 17, null, 117, 'LB=646', 'qi ta she ji ', 'qitasheji', 'qtsj');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (647, '平面设计', 'Photoshop', '1', 1, 631, 117, 'LB=631&XL=647', 'Photoshop', 'Photoshop', 'P');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (648, '平面设计', 'CAD', '2', 2, 631, 117, 'LB=631&XL=648', 'CAD', 'CAD', 'C');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (649, '平面设计', 'Illustrator', '3', 3, 631, 117, 'LB=631&XL=649', 'Illustrator', 'Illustrator', 'I');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (650, '平面设计', 'Coredraw', '4', 4, 631, 117, 'LB=631&XL=650', 'Coredraw', 'Coredraw', 'C');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (651, '设计培训形式', '脱产班', '1', 1, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (652, '设计培训形式', '周末班', '2', 2, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (653, '设计培训形式', '网络班', '3', 3, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (654, '设计培训形式', '工作日班', '4', 4, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (655, '管理培训类别', '管理技能', '1', 1, null, 118, 'LB=655', 'guan li ji neng ', 'guanlijineng', 'gljn');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (656, '管理培训类别', '职业素养', '2', 2, null, 118, 'LB=656', 'zhi ye su yang ', 'zhiyesuyang', 'zysy');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (657, '管理培训类别', '人力行政', '3', 3, null, 118, 'LB=657', 'ren li xing zheng ', 'renlixingzheng', 'rlxz');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (658, '管理培训类别', '生产管理', '4', 4, null, 118, 'LB=658', 'sheng chan guan li ', 'shengchanguanli', 'scgl');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (659, '管理培训类别', '财务管理', '5', 5, null, 118, 'LB=659', 'cai wu guan li ', 'caiwuguanli', 'cwgl');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (660, '管理培训类别', '营销销售', '6', 6, null, 118, 'LB=660', 'ying xiao xiao shou ', 'yingxiaoxiaoshou', 'yxxs');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (661, '管理培训类别', '物流供应链', '7', 7, null, 118, 'LB=661', 'wu liu gong ying lian ', 'wuliugongyinglian', 'wlgyl');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (662, '管理培训类别', '酒店管理', '8', 8, null, 118, 'LB=662', 'jiu dian guan li ', 'jiudianguanli', 'jdgl');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (663, '管理培训类别', '工程管理', '9', 9, null, 118, 'LB=663', 'gong cheng guan li ', 'gongchengguanli', 'gcgl');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (664, '管理培训类别', '素质拓展', '10', 10, null, 118, 'LB=664', 'su zhi tuo zhan ', 'suzhituozhan', 'sztz');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (665, '管理培训类别', '总裁研修', '11', 11, null, 118, 'LB=665', 'zong cai yan xiu ', 'zongcaiyanxiu', 'zcyx');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (667, '管理技能', '领导力', '1', 1, 655, 118, 'LB=655&XL=667', 'ling dao li ', 'lingdaoli', 'ldl');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (668, '管理技能', '项目管理', '2', 2, 655, 118, 'LB=655&XL=668', 'xiang mu guan li ', 'xiangmuguanli', 'xmgl');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (669, '管理技能', '战略管理', '3', 3, 655, 118, 'LB=655&XL=669', 'zhan lue guan li ', 'zhanlueguanli', 'zlgl');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (670, '管理技能', '时间管理', '4', 4, 655, 118, 'LB=655&XL=670', 'shi jian guan li ', 'shijianguanli', 'sjgl');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (671, '管理技能', '危机管理', '5', 5, 655, 118, 'LB=655&XL=671', 'wei ji guan li ', 'weijiguanli', 'wjgl');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (672, '管理技能', '企业文化', '6', 6, 655, 118, 'LB=655&XL=672', 'qi ye wen hua ', 'qiyewenhua', 'qywh');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (673, '职业素养', '礼仪', '1', 1, 656, 118, 'LB=656&XL=673', 'li yi ', 'liyi', 'ly');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (674, '职业素养', '沟通表达', '2', 2, 656, 118, 'LB=656&XL=674', 'gou tong biao da ', 'goutongbiaoda', 'gtbd');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (675, '职业素养', '职业规划', '3', 3, 656, 118, 'LB=656&XL=675', 'zhi ye gui hua ', 'zhiyeguihua', 'zygh');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (676, '职业素养', '办公软件', '4', 4, 656, 118, 'LB=656&XL=676', 'ban gong ruan jian ', 'bangongruanjian', 'bgrj');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (677, '人力行政', '薪酬设计', '1', 1, 657, 118, 'LB=657&XL=677', 'xin chou she ji ', 'xinchousheji', 'xcsj');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (678, '人力行政', '招聘面试', '2', 2, 657, 118, 'LB=657&XL=678', 'zhao pin mian shi ', 'zhaopinmianshi', 'zpms');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (679, '人力行政', '绩效管理', '3', 3, 657, 118, 'LB=657&XL=679', 'ji xiao guan li ', 'jixiaoguanli', 'jxgl');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (680, '人力行政', '行政工作', '4', 4, 657, 118, 'LB=657&XL=680', 'xing zheng gong zuo ', 'xingzhenggongzuo', 'xzgz');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (681, '人力行政', '培训体系', '5', 5, 657, 118, 'LB=657&XL=681', 'pei xun ti xi ', 'peixuntixi', 'pxtx');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (682, '人力行政', '劳动关系', '6', 6, 657, 118, 'LB=657&XL=682', 'lao dong guan xi ', 'laodongguanxi', 'ldgx');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (683, '人力行政', 'EAP', '7', 7, 657, 118, 'LB=657&XL=683', 'EAP', 'EAP', 'E');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (684, '生产管理', '质量管理', '1', 1, 658, 118, 'LB=658&XL=684', 'zhi liang guan li ', 'zhiliangguanli', 'zlgl');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (685, '生产管理', '设备管理', '2', 2, 658, 118, 'LB=658&XL=685', 'she bei guan li ', 'shebeiguanli', 'sbgl');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (686, '生产管理', '安全管理', '3', 3, 658, 118, 'LB=658&XL=686', 'an quan guan li ', 'anquanguanli', 'aqgl');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (687, '生产管理', '现场管理', '4', 4, 658, 118, 'LB=658&XL=687', 'xian chang guan li ', 'xianchangguanli', 'xcgl');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (688, '生产管理', '车间管理', '5', 5, 658, 118, 'LB=658&XL=688', 'che jian guan li ', 'chejianguanli', 'cjgl');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (689, '生产管理', 'PMC', '6', 6, 658, 118, 'LB=658&XL=689', 'PMC', 'PMC', 'P');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (690, '生产管理', 'TPM', '7', 7, 658, 118, 'LB=658&XL=690', 'TPM', 'TPM', 'T');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (691, '生产管理', '6S(5S)', '8', 8, 658, 118, 'LB=658&XL=691', '6S(5S)', '6S(5S)', '6(5)');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (692, '生产管理', 'SPC', '9', 9, 658, 118, 'LB=658&XL=692', 'SPC', 'SPC', 'SPC');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (693, '财务管理', '高管研修', '1', 1, 659, 118, 'LB=659&XL=693', 'gao guan yan xiu ', 'gaoguanyanxiu', 'ggyx');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (694, '财务管理', '非财人员培训', '2', 2, 659, 118, 'LB=659&XL=694', 'fei cai ren yuan pei xun ', 'feicairenyuanpeixun', 'fcrypx');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (695, '财务管理', '预算管理', '3', 3, 659, 118, 'LB=659&XL=695', 'yu suan guan li ', 'yusuanguanli', 'ysgl');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (696, '财务管理', '成本管理', '4', 4, 659, 118, 'LB=659&XL=696', 'cheng ben guan li ', 'chengbenguanli', 'cbgl');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (697, '财务管理', '内部控制', '5', 5, 659, 118, 'LB=659&XL=697', 'nei bu kong zhi ', 'neibukongzhi', 'nbkz');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (698, '财务管理', '现金管理', '6', 6, 659, 118, 'LB=659&XL=698', 'xian jin guan li ', 'xianjinguanli', 'xjgl');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (699, '财务管理', '投融资', '7', 7, 659, 118, 'LB=659&XL=699', 'tou rong zi ', 'tourongzi', 'trz');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (700, '财务管理', '会计准则', '8', 8, 659, 118, 'LB=659&XL=700', 'hui ji zhun ze ', 'huijizhunze', 'hjzz');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (701, '财务管理', '税务管理', '9', 9, 659, 118, 'LB=659&XL=701', 'shui wu guan li ', 'shuiwuguanli', 'swgl');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (702, '财务管理', '信用管理', '10', 10, 659, 118, 'LB=659&XL=702', 'xin yong guan li ', 'xinyongguanli', 'xygl');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (703, '财务管理', '财务工具', '11', 11, 659, 118, 'LB=659&XL=703', 'cai wu gong ju ', 'caiwugongju', 'cwgj');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (704, '营销销售', '销售技能', '1', 1, 660, 118, 'LB=660&XL=704', 'xiao shou ji neng ', 'xiaoshoujineng', 'xsjn');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (705, '营销销售', '市场调研', '2', 2, 660, 118, 'LB=660&XL=705', 'shi chang diao yan ', 'shichangdiaoyan', 'scdy');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (706, '营销销售', '营销策划', '3', 3, 660, 118, 'LB=660&XL=706', 'ying xiao ce hua ', 'yingxiaocehua', 'yxch');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (707, '营销销售', '网络营销', '4', 4, 660, 118, 'LB=660&XL=707', 'wang luo ying xiao ', 'wangluoyingxiao', 'wlyx');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (708, '营销销售', '大客户营销', '5', 5, 660, 118, 'LB=660&XL=708', 'da ke hu ying xiao ', 'dakehuyingxiao', 'dkhyx');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (709, '营销销售', '客服培训', '6', 6, 660, 118, 'LB=660&XL=709', 'ke fu pei xun ', 'kefupeixun', 'kfpx');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (710, '营销销售', '售后服务', '7', 7, 660, 118, 'LB=660&XL=710', 'shou hou fu wu ', 'shouhoufuwu', 'shfw');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (711, '营销销售', '商务谈判', '8', 8, 660, 118, 'LB=660&XL=711', 'shang wu tan pan ', 'shangwutanpan', 'swtp');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (712, '物流供应链', '物流管理', '1', 1, 661, 118, 'LB=661&XL=712', 'wu liu guan li ', 'wuliuguanli', 'wlgl');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (713, '物流供应链', '供应链管理', '2', 2, 661, 118, 'LB=661&XL=713', 'gong ying lian guan li ', 'gongyinglianguanli', 'gylgl');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (714, '物流供应链', '采购管理', '3', 3, 661, 118, 'LB=661&XL=714', 'cai gou guan li ', 'caigouguanli', 'cggl');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (715, '物流供应链', '仓储管理', '4', 4, 661, 118, 'LB=661&XL=715', 'cang chu guan li ', 'cangchuguanli', 'ccgl');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (716, '管理培训场地', '企业内部', '1', 1, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (717, '管理培训场地', '外部场地', '2', 2, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (718, '服务类型', '日托', '1', 1, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (719, '服务类型', '全托', '2', 2, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (720, '婴幼儿教育类别', '学前教育', '1', 1, null, 119, 'LB=720', 'xue qian jiao yu ', 'xueqianjiaoyu', 'xqjy');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (721, '婴幼儿教育类别', '亲子教育', '2', 2, null, 119, 'LB=721', 'qin zi jiao yu ', 'qinzijiaoyu', 'qzjy');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (722, '婴幼儿教育类别', '胎教', '3', 3, null, 119, 'LB=722', 'tai jiao ', 'taijiao', 'tj');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (723, '婴幼儿教育类别', '幼儿园', '4', 4, null, 119, 'LB=723', 'you dong yuan ', 'youdongyuan', 'ydy');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (724, '留学国家', '澳大利亚', 'A', 1, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (725, '留学国家', '埃及', 'A', 2, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (726, '留学国家', '埃塞俄比亚', 'A', 3, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (727, '留学国家', '奥地利', 'A', 4, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (728, '留学国家', '安哥拉', 'A', 5, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (729, '留学国家', '安提瓜巴布达', 'A', 6, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (730, '留学国家', '安道尔', 'A', 7, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (731, '留学国家', '爱尔兰', 'A', 8, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (732, '留学国家', '爱沙尼亚', 'A', 9, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (733, '留学国家', '阿塞拜疆', 'A', 10, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (734, '留学国家', '阿富汗', 'A', 11, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (735, '留学国家', '阿尔及利亚', 'A', 12, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (736, '留学国家', '阿尔巴尼亚', 'A', 13, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (737, '留学国家', '阿曼', 'A', 14, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (738, '留学国家', '阿根廷', 'A', 15, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (739, '留学国家', '阿联酋', 'A', 16, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (740, '留学国家', '阿鲁巴', 'A', 17, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (741, '留学国家', '不丹', 'B', 18, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (742, '留学国家', '伯利兹', 'B', 19, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (743, '留学国家', '保加利亚', 'B', 20, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (744, '留学国家', '冰岛', 'B', 21, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (745, '留学国家', '博茨瓦纳', 'B', 22, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (746, '留学国家', '巴勒斯坦', 'B', 23, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (747, '留学国家', '巴哈马', 'B', 24, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (748, '留学国家', '巴基斯坦', 'B', 25, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (749, '留学国家', '巴巴多斯', 'B', 26, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (750, '留学国家', '巴布亚新几内亚', 'B', 27, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (751, '留学国家', '巴拉圭', 'B', 28, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (752, '留学国家', '巴拿马', 'B', 29, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (753, '留学国家', '巴林', 'B', 30, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (754, '留学国家', '巴西', 'B', 31, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (755, '留学国家', '布基纳法索', 'B', 32, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (756, '留学国家', '布隆迪', 'B', 33, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (757, '留学国家', '比利时', 'B', 34, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (758, '留学国家', '波兰', 'B', 35, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (759, '留学国家', '波多黎各', 'B', 36, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (760, '留学国家', '波黑', 'B', 37, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (761, '留学国家', '玻利维亚', 'B', 38, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (762, '留学国家', '白俄罗斯', 'B', 39, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (763, '留学国家', '百慕大', 'B', 40, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (764, '留学国家', '贝宁', 'B', 41, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (765, '留学国家', '朝鲜', 'C', 42, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (766, '留学国家', '赤道几内亚', 'C', 43, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (767, '留学国家', '德国', 'D', 44, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (768, '留学国家', '东帝汶', 'D', 45, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (769, '留学国家', '丹麦', 'D', 46, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (770, '留学国家', '多哥', 'D', 47, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (771, '留学国家', '多米尼克', 'D', 48, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (772, '留学国家', '多米尼加', 'D', 49, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (773, '留学国家', '俄罗斯', 'E', 50, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (774, '留学国家', '厄瓜多尔', 'E', 51, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (775, '留学国家', '厄立特里亚', 'E', 52, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (776, '留学国家', '法国', 'F', 53, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (777, '留学国家', '佛得角', 'F', 54, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (778, '留学国家', '斐济', 'F', 55, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (779, '留学国家', '芬兰', 'F', 56, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (780, '留学国家', '菲律宾', 'F', 57, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (781, '留学国家', '关岛', 'G', 58, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (782, '留学国家', '冈比亚', 'G', 59, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (783, '留学国家', '刚果(布)', 'G', 60, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (784, '留学国家', '刚果(金)', 'G', 61, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (785, '留学国家', '古巴', 'G', 62, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (786, '留学国家', '古巴共和国', 'G', 63, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (787, '留学国家', '哥伦比亚', 'G', 64, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (788, '留学国家', '哥斯达黎加', 'G', 65, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (789, '留学国家', '圭亚那', 'G', 66, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (790, '留学国家', '格林纳达', 'G', 67, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (791, '留学国家', '格鲁吉亚', '68', 68, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (792, '留学国家', '韩国', 'H', 69, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (793, '留学国家', '荷兰', 'H', 70, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (794, '留学国家', '哈萨克斯坦', 'H', 71, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (795, '留学国家', '洪都拉斯', 'H', 72, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (796, '留学国家', '海地', 'H', 73, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (797, '留学国家', '荷属安的列斯', 'H', 74, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (798, '留学国家', '黑山', 'H', 75, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (799, '留学国家', '加拿大', 'J', 76, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (800, '留学国家', '几内亚', 'J', 77, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (801, '留学国家', '几内亚比绍', 'J', 78, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (802, '留学国家', '加纳', 'J', 79, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (803, '留学国家', '加蓬', 'J', 80, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (804, '留学国家', '吉尔吉斯斯坦', 'J', 81, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (805, '留学国家', '吉布提', 'J', 82, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (806, '留学国家', '基里巴斯', 'J', 83, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (807, '留学国家', '捷克', 'J', 84, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (808, '留学国家', '柬埔寨', 'J', 85, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (809, '留学国家', '津巴布韦', 'J', 86, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (810, '留学国家', '克罗地亚', 'K', 87, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (811, '留学国家', '卡塔尔', 'K', 88, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (812, '留学国家', '喀麦隆', 'K', 89, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (813, '留学国家', '库克群岛', 'K', 90, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (814, '留学国家', '开曼', 'K', 91, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (815, '留学国家', '科威特', 'K', 92, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (816, '留学国家', '科摩罗', 'K', 93, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (817, '留学国家', '科特迪瓦', 'K', 94, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (818, '留学国家', '肯尼亚', 'K', 95, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (819, '留学国家', '列支敦士登', 'L', 96, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (820, '留学国家', '利比亚', 'L', 97, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (821, '留学国家', '利比里亚', 'L', 98, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (822, '留学国家', '卢旺达', 'L', 99, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (823, '留学国家', '卢森堡', 'L', 100, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (824, '留学国家', '拉脱维亚', 'L', 101, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (825, '留学国家', '立陶宛', 'L', 102, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (826, '留学国家', '罗马尼亚', 'L', 103, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (827, '留学国家', '老挝', 'L', 104, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (828, '留学国家', '莱索托', 'L', 105, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (829, '留学国家', '黎巴嫩', 'L', 106, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (830, '留学国家', '美国', 'M', 107, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (831, '留学国家', '马来西亚', 'M', 108, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (832, '留学国家', '墨西哥', 'M', 109, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (833, '留学国家', '孟加拉', 'M', 110, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (834, '留学国家', '密克罗尼西亚', 'M', 111, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (835, '留学国家', '摩尔多瓦', 'M', 112, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (836, '留学国家', '摩洛哥', 'M', 113, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (837, '留学国家', '摩纳哥', 'M', 114, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (838, '留学国家', '毛里塔尼亚', 'M', 115, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (839, '留学国家', '毛里求斯', 'M', 116, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (840, '留学国家', '秘鲁', 'M', 117, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (841, '留学国家', '缅甸', 'M', 118, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (842, '留学国家', '美属维尔京群岛', 'M', 119, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (843, '留学国家', '美属萨摩亚', 'M', 120, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (844, '留学国家', '莫桑比克', 'M', 121, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (845, '留学国家', '蒙古', 'M', 122, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (846, '留学国家', '马其顿', 'M', 123, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (847, '留学国家', '马尔代夫', 'M', 124, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (848, '留学国家', '马拉维', 'M', 125, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (849, '留学国家', '马绍尔群岛', 'M', 126, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (850, '留学国家', '马耳他', 'M', 127, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (851, '留学国家', '马达加斯加', 'M', 128, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (852, '留学国家', '马里', 'M', 129, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (853, '留学国家', '南非', 'N', 130, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (854, '留学国家', '尼加拉瓜', 'N', 131, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (855, '留学国家', '尼日利亚', 'N', 132, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (856, '留学国家', '尼日尔', 'N', 133, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (857, '留学国家', '尼泊尔', 'N', 134, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (858, '留学国家', '挪威', 'N', 135, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (859, '留学国家', '瑙鲁', 'N', 136, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (860, '留学国家', '纳米比亚', 'N', 137, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (861, '留学国家', '帕劳', 'P', 138, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (862, '留学国家', '葡萄牙', 'P', 139, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (863, '留学国家', '其他国家', 'Q', 140, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (864, '留学国家', '日本', 'R', 141, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (865, '留学国家', '瑞士', 'R', 142, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (866, '留学国家', '瑞典', 'R', 143, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (867, '留学国家', '圣卢西亚', 'S', 144, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (868, '留学国家', '圣基茨和尼维斯', 'S', 145, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (869, '留学国家', '圣多美和普林西比', 'S', 146, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (870, '留学国家', '圣文森特和格林纳丁斯', 'S', 147, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (871, '留学国家', '圣马力诺', 'S', 148, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (872, '留学国家', '塞内加尔', 'S', 149, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (873, '留学国家', '塞尔维亚', 'S', 150, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (874, '留学国家', '塞拉利昂', 'S', 151, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (875, '留学国家', '塞浦路斯', 'S', 152, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (876, '留学国家', '塞舌尔', 'S', 153, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (877, '留学国家', '所罗门群岛', 'S', 154, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (878, '留学国家', '斯威士兰', 'S', 155, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (879, '留学国家', '斯洛伐克', 'S', 156, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (880, '留学国家', '斯洛文尼亚', 'S', 157, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (881, '留学国家', '斯里兰卡', 'S', 158, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (882, '留学国家', '沙特阿拉伯', 'S', 159, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (883, '留学国家', '索马里', 'S', 160, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (884, '留学国家', '苏丹', 'S', 161, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (885, '留学国家', '苏里南', 'S', 162, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (886, '留学国家', '萨尔瓦多', 'S', 163, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (887, '留学国家', '萨摩亚', 'S', 164, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (888, '留学国家', '图瓦卢', 'T', 165, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (889, '留学国家', '土库曼斯坦', 'T', 166, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (890, '留学国家', '土耳其', 'T', 167, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (891, '留学国家', '坦桑尼亚', 'T', 168, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (892, '留学国家', '塔吉克斯坦', 'T', 169, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (893, '留学国家', '汤加', 'T', 170, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (894, '留学国家', '泰国', 'T', 171, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (895, '留学国家', '特立尼达和多巴哥', 'T', 172, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (896, '留学国家', '突尼斯', 'T', 173, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (897, '留学国家', '乌克兰', 'W', 174, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (898, '留学国家', '乌兹别克斯坦', 'W', 175, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (899, '留学国家', '乌干达', 'W', 176, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (900, '留学国家', '乌拉圭', 'W', 177, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (901, '留学国家', '危地马拉', 'W', 178, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (902, '留学国家', '委内瑞拉', 'W', 179, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (903, '留学国家', '文莱', 'W', 180, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (904, '留学国家', '瓦努阿图', 'W', 181, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (905, '留学国家', '新加坡', 'X', 182, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (906, '留学国家', '西班牙', 'X', 183, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (907, '留学国家', '新西兰', 'X', 184, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (908, '留学国家', '匈牙利', 'X', 185, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (909, '留学国家', '叙利亚', 'X', 186, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (910, '留学国家', '希腊', 'X', 187, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (911, '留学国家', '英国', 'Y', 188, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (912, '留学国家', '意大利', 'Y', 189, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (913, '留学国家', '也门', 'Y', 190, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (914, '留学国家', '亚美尼亚', 'Y', 191, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (915, '留学国家', '以色列', 'Y', 192, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (916, '留学国家', '伊拉克', 'Y', 193, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (917, '留学国家', '伊朗', 'Y', 194, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (918, '留学国家', '印度', 'Y', 195, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (919, '留学国家', '印度尼西亚', 'Y', 196, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (920, '留学国家', '牙买加', 'Y', 197, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (921, '留学国家', '约旦', 'Y', 198, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (922, '留学国家', '英属维尔京群岛', 'Y', 199, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (923, '留学国家', '英格兰', 'Y', 200, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (924, '留学国家', '越南', 'Y', 201, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (925, '留学国家', '中华台北', 'Z', 202, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (926, '留学国家', '中国', 'Z', 203, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (927, '留学国家', '中国澳门', 'Z', 204, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (928, '留学国家', '中国香港', 'Z', 205, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (929, '留学国家', '中非', 'Z', 206, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (930, '留学国家', '乍得', 'Z', 207, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (931, '留学国家', '智利', 'Z', 208, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (932, '留学国家', '赞比亚', 'Z', 209, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (933, '申请学历', '初中', '1', 1, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (934, '申请学历', '高中', '2', 2, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (935, '申请学历', '专科', '3', 3, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (936, '申请学历', '本科', '4', 4, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (937, '申请学历', '研究生', '5', 5, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (938, '申请学历', '预科', '6', 6, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (939, '申请学历', '语言学校', '7', 7, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (940, '申请学历', 'MBA', '8', 8, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (941, '申请学历', '游学', '9', 9, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (942, '移民类别', '投资移民', '1', 1, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (943, '移民类别', '技术移民', '2', 2, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (944, '移民类别', '劳务移民', '3', 3, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (945, '拼班拼课辅导科目', '语文', '1', 1, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (946, '拼班拼课辅导科目', '数学', '2', 2, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (947, '拼班拼课辅导科目', '英语', '3', 3, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (948, '拼班拼课辅导科目', '物理', '4', 4, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (949, '拼班拼课辅导科目', '化学', '5', 5, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (950, '拼班拼课辅导科目', '史地政生', '6', 6, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (951, '拼班拼课辅导科目', '竞赛', '7', 7, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (952, '拼班拼课辅导科目', '外教', '8', 8, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (953, '拼班拼课辅导科目', '围棋', '9', 9, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (954, '拼班拼课辅导科目', '绘画', '10', 10, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (955, '拼班拼课辅导科目', '京剧', '11', 11, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (956, '拼班拼课辅导科目', '课后托管', '12', 12, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (957, '拼班拼课辅导科目', '珠算', '13', 13, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (958, '拼班拼课辅导科目', '其他', '14', 14, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (959, '语言培训教师身份', '大学生', '1', 1, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (960, '语言培训教师身份', '专业教师', '2', 2, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (961, '语言培训教师身份', '外教', '3', 3, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (962, '语言培训教师身份', '其他', '4', 4, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (963, '艺术培训对象', '少儿/幼儿', '1', 1, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (964, '艺术培训对象', '成人', '2', 2, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (965, '艺术培训教师身份', '大学生', '1', 1, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (966, '艺术培训教师身份', '在校教师', '2', 2, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (967, '艺术培训教师身份', '专职教师', '3', 3, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (968, '体育教练教学科目', '羽毛球', '1', 1, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (969, '体育教练教学科目', '网球', '2', 2, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (970, '体育教练教学科目', '篮球', '3', 3, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (971, '体育教练教学科目', '乒乓球', '4', 4, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (972, '体育教练教学科目', '游泳', '5', 5, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (973, '体育教练教学科目', '围棋', '6', 6, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (974, '体育教练教学科目', '中国象棋', '7', 7, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (975, '体育教练教学科目', '国际象棋', '8', 8, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (976, '体育教练身份', '大学生', '1', 1, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (977, '体育教练身份', '在校教师', '2', 2, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (978, '体育教练身份', '专职教练', '3', 3, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (979, '性别', '男', '1', 1, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (980, '性别', '女 ', '2', 2, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (981, '学历教育形式', '脱产班', '1', 1, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (982, '学历教育形式', '周末班', '2', 2, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (983, '学历教育形式', '网络班', '3', 3, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (984, '学历教育形式', '工作日班', '4', 4, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (985, '婴幼儿教育办学性质', '私立', '1', 1, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (986, '婴幼儿教育办学性质', '公立', '2', 2, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (987, '拼班拼课辅导阶段', '学前', '1', 1, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (988, '拼班拼课辅导阶段', '小学', '2', 2, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (989, '拼班拼课辅导阶段', '初中', '3', 3, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (990, '拼班拼课辅导阶段', '高中', '4', 4, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (991, '拼班拼课辅导阶段', '大学', '5', 5, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (992, '拼班拼课身份', '教育机构', '1', 1, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (993, '拼班拼课身份', '个人教师', '2', 2, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (994, '拼班拼课身份', '家长', '3', 3, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (995, '拼班拼课人数', '5人以下', '1', 1, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (996, '拼班拼课人数', '6-10人', '2', 2, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (997, '拼班拼课人数', '11-15人', '3', 3, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (998, '拼班拼课人数', '16-20人', '4', 4, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (999, '拼班拼课人数', '21人以上', '5', 5, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1001, '家教机构授课形式', '一对一', '1', 1, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1002, '家教机构授课形式', '辅导班', '2', 2, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1003, '家教机构授课形式', '网络教育', '3', 3, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1004, '家教机构授课形式', '其他', '4', 4, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (4501, '艺术培训教学科目类别', '钢琴', '2', 2, null, null, null, null, null, null);
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (6241, '办公自动化', '电脑入门/打字', '1', 1, 565, null, 'XL', 'dian nao ru men /da zi ', 'diannaorumen/dazi', 'dnrm/dz');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (6242, '办公自动化', 'office', '2', 2, 565, null, 'XL', 'office', 'office', 'o');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (6243, '办公自动化', '上网', '3', 3, 565, null, 'XL', 'shang wang ', 'shangwang', 'sw');
+
+insert into codes_jypx (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (7231, '婴幼儿教育类别', '其他', '5', 5, null, null, null, null, null, null);
+
+prompt Done.

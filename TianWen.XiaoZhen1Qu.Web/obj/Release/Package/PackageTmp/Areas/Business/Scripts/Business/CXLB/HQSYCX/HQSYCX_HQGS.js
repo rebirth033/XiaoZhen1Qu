@@ -7,7 +7,15 @@ $(document).ready(function () {
 //加载条件
 function LoadHQSYCondition() {
     LoadConditionByTypeNames("'婚庆公司服务提供','婚庆公司价格'", "CODES_HQSY", "服务提供,价格", "TGFW,JGFW", "100,100");
-    LoadBody("HQSYXX_HQGS", currentIndex);
+}
+//加载URL查询条件
+function LoadURLCondition() {
+    if (getUrlParam("TGFW") !== null)
+        SelectURLCondition(getUrlParam("TGFW"));
+    else if (getUrlParam("QY") !== null)
+        SelectURLCondition(getUrlParam("QY"));
+    else
+        LoadBody("HQSYXX_HQGS", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -15,6 +23,15 @@ function SelectCondition(obj, name) {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
+    LoadBody("HQSYXX_HQGS", currentIndex);
+    ShowSelectCondition("HQSYXX_HQGS");
+}
+//选择URL条件
+function SelectURLCondition(obj) {
+    $("#" + obj).parent().find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $("#" + obj).addClass("li_condition_body_active");
     LoadBody("HQSYXX_HQGS", currentIndex);
     ShowSelectCondition("HQSYXX_HQGS");
 }

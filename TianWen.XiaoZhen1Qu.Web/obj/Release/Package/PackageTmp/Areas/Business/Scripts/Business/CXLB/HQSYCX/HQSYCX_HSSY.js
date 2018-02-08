@@ -6,8 +6,16 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadHQSYCondition() {
-    LoadConditionByTypeNames("'婚纱摄影价格范围','婚纱摄影类型','婚纱摄影拍摄地点','婚纱摄影拍摄风格','婚纱摄影服装套数'", "CODES_HQSY", "价格范围,商家类型,拍摄地点,拍摄风格,服装套数", "JG,YLGZS,PSDD,PSFG,FZTS", "15,15,15,15,15");
-    LoadBody("HQSYXX_HSSY", currentIndex);
+    LoadConditionByTypeNames("'婚纱摄影价格范围','婚纱摄影类型','婚纱摄影拍摄地点','婚纱摄影拍摄风格','婚纱摄影服装套数'", "CODES_HQSY", "价格范围,商家类型,拍摄地点,拍摄风格,服装套数", "JG,YLGZS,PSDD,PSFG,FZTS", "100,100,100,100,15");
+}
+//加载URL查询条件
+function LoadURLCondition() {
+    if (getUrlParam("PSFG") !== null)
+        SelectURLCondition(getUrlParam("PSFG"));
+    else if (getUrlParam("QY") !== null)
+        SelectURLCondition(getUrlParam("QY"));
+    else
+        LoadBody("HQSYXX_HSSY", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -15,6 +23,15 @@ function SelectCondition(obj, name) {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
+    LoadBody("HQSYXX_HSSY", currentIndex);
+    ShowSelectCondition("HQSYXX_HSSY");
+}
+//选择URL条件
+function SelectURLCondition(obj) {
+    $("#" + obj).parent().find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $("#" + obj).addClass("li_condition_body_active");
     LoadBody("HQSYXX_HSSY", currentIndex);
     ShowSelectCondition("HQSYXX_HSSY");
 }

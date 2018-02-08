@@ -60,7 +60,7 @@ function LoadJBXX(obj) {
     html += ('</div>');
     html += ('</div>');
     $("#div_body_left").append(html);
-    HandlerTPXX();
+
 }
 
 var right = 0;

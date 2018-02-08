@@ -25,7 +25,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "divYSCXX")//已隐藏信息
                 {
-                    list = DAO.Repository.GetObjectList<JCXX>(String.Format("FROM JCXX WHERE YHID='{0}' AND LBID != 0 AND STATUS = 0 ORDER BY ZXGXSJ DESC", YHID));
+                    list = DAO.Repository.GetObjectList<JCXX>(String.Format("FROM JCXX WHERE YHID='{0}' AND LBID != 0 AND STATUS = 2 ORDER BY ZXGXSJ DESC", YHID));
                 }
 
                 int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
@@ -57,11 +57,11 @@ namespace TianWen.XiaoZhen1Qu.BLL
             {
                 JCXX jcxx = DAO.GetObjectByID<JCXX>(JCXXID);
                 if (OPTYPE == "DELETE")
-                    jcxx.STATUS = 2;
+                    jcxx.STATUS = 0;
                 if (OPTYPE == "RESTORE")
                     jcxx.STATUS = 1;
                 if (OPTYPE == "HIDE")
-                    jcxx.STATUS = 0;
+                    jcxx.STATUS = 2;
                 DAO.Update(jcxx);
                 return new { Result = EnResultType.Success };
             }

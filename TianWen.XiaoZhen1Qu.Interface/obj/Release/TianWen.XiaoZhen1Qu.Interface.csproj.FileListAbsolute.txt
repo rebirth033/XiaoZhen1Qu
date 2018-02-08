@@ -22,3 +22,15 @@ D:\源代码\TianWen.XiaoZhen1Qu.Interface\bin\Release\TianWen.XiaoZhen1Qu.Entit
 D:\源代码\TianWen.XiaoZhen1Qu.Interface\obj\Release\TianWen.XiaoZhen1Qu.Interface.csprojResolveAssemblyReference.cache
 D:\源代码\TianWen.XiaoZhen1Qu.Interface\obj\Release\TianWen.XiaoZhen1Qu.Interface.dll
 D:\源代码\TianWen.XiaoZhen1Qu.Interface\obj\Release\TianWen.XiaoZhen1Qu.Interface.pdb
+F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Interface\bin\Release\TianWen.XiaoZhen1Qu.Interface.dll
+F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Interface\bin\Release\TianWen.XiaoZhen1Qu.Interface.pdb
+F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Interface\bin\Release\NHibernate.dll
+F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Interface\bin\Release\TianWen.Nhibernate.dll
+F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Interface\bin\Release\TianWen.XiaoZhen1Qu.Entities.dll
+F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Interface\bin\Release\FluentNHibernate.dll
+F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Interface\bin\Release\NHibernate.Mapping.Attributes.dll
+F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Interface\bin\Release\Iesi.Collections.dll
+F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Interface\bin\Release\TianWen.XiaoZhen1Qu.Entities.pdb
+F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Interface\obj\Release\TianWen.XiaoZhen1Qu.Interface.csprojResolveAssemblyReference.cache
+F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Interface\obj\Release\TianWen.XiaoZhen1Qu.Interface.dll
+F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Interface\obj\Release\TianWen.XiaoZhen1Qu.Interface.pdb

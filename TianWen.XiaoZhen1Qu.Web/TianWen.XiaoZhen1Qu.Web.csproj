@@ -2155,7 +2155,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="packages.config" />
     <Content Include="Areas\Business\Views\YHJBXX\YHJBXX.cshtml" />
     <Content Include="Config\log4net.Config" />
     <Content Include="DataSources.config">

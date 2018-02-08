@@ -19,6 +19,7 @@ function LoadDefault() {
                 LoadCNXH("LRXX_MFHF");
                 LoadGRXX(xml.grxxlist[0]);
                 LoadJJRTJFY("LRXX_MFHF");
+                HandlerTPXX();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -34,8 +35,9 @@ function LoadJBXX(obj) {
     html += ('<p class="p_div_body_left_head_ll">' + obj.ZXGXSJ.ToString('yyyy年MM月dd日') + '  ' + obj.LLCS + '次浏览 <span id="span_div_body_left_head_jb" class="span_div_body_left_head_jb">举报</span><span class="span_div_body_left_head_split">|</span><span id="span_div_body_left_head_sc" onclick="SCXX(\'' + obj.JCXXID + '\')" class="span_div_body_left_head_sc">收藏</span></p>');
     html += ('</div>');
     html += ('<div class="div_body_left_body">');
-    html += ('<div class="div_body_left_body_left">');
+    html += ('<div class="div_body_left_body_left">');    html += ('<div class="div_body_left_body_left_img">');
     html += ('<img id="img_body_left_body_left_show" class="img_body_left_body_left_show" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
+    html += ('</div>');
     html += ('<span onclick="LeftImg()" class="div_body_left_body_left_list_an" style="margin-right: 10px;"><</span>');
     html += ('<div class="div_body_left_body_left_list">');
     html += ('<ul id="ul_body_left_body_left_list" class="ul_body_left_body_left_list">');
@@ -76,7 +78,7 @@ function LoadJBXX(obj) {
     html += ('</div>');
     html += ('</div>');
     $("#div_body_left").append(html);
-    HandlerTPXX();
+
 }
 
 var right = 0;
@@ -98,7 +100,7 @@ function LoadXQ(obj, BCMSString) {
     html += ('<ul class="ul_body_left_body_xq_xx">');
     for (var i = 0; i < obj.PHOTOS.length; i++) {
         html += ('<li class="li_body_left_body_xq_xx">');
-        html += ('<img class="img_body_left_body_xq_xx" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[i].PHOTONAME + "?j=" + Math.random() + '" />');
+        html += ('<img id="img_body_left_body_xq_xx' + i + '" class="img_body_left_body_xq_xx" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[i].PHOTONAME + "?j=" + Math.random() + '" />');
         html += ('</li>');
     }
     html += ('</ul>');
@@ -106,11 +108,12 @@ function LoadXQ(obj, BCMSString) {
 
     html += ('<div id="div_body_left_body_xq_zk" onclick="ToggleImg(' + obj.PHOTOS.length + ')" class="div_body_left_body_xq_zk">展开更多图片 共（' + obj.PHOTOS.length + '）张</div>');
     html += ('</div>');
-    $("#div_body_left").append(html);
-    if (obj.PHOTOS.length > 4) {
+    $("#div_body_left").append(html);    	
+	if (obj.PHOTOS.length > 4) {
         $("#div_body_left_body_xq_xx").css("height", "710px");
         $("#div_body_left_body_xq_zk").css("display", "block");
     }
+
 }
 
 //加载猜你喜欢

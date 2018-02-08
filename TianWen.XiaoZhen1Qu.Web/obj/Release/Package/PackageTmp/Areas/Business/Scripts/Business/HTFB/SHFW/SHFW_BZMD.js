@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     $("#divSFSM").find(".div_radio").bind("click", function () { ValidateRadio("SFSM", "忘记选择是否上门啦"); });
-    LoadDuoX("殡葬/墓地类别", "LB");
+    LoadDuoX("白事服务类别", "LB");
 });
 //加载多选
 function LoadDuoX(type, id) {
@@ -100,7 +100,7 @@ function FB() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                window.location.href = getRootPath() + "/Business/FBCG/FBCG";
+                window.location.href = getRootPath() + "/Business/FBCG/FBCG?LBID=" + getUrlParam("CLICKID") + "&ID=" + xml.Value.ID + "&JCXXID=" + xml.Value.JCXXID;
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

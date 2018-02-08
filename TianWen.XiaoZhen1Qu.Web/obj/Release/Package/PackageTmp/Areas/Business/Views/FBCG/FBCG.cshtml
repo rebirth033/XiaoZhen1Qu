@@ -1,5 +1,4 @@
 ﻿@{
-    ViewBag.Title = "发布成功";
     Layout = "~/Areas/Business/Views/Shared/QT.cshtml";
 }
 @section Section_Head {
@@ -31,35 +30,106 @@
                 </tr>
             </table>
         </div>
-        <div id="myTabContent" style="padding-bottom: 150px; margin-top: 20px; width: 900px; text-align: center;">
+        <div id="myTabContent" style="margin-top: 20px; width: 900px; text-align: center;">
             <div style="border: 1px solid #e2e2e2; height: 300px; width: 100%;">
                 <div class="fbcg_left">
                     <div class="fbcg_warning">请勿发布虚假欺诈信息，不然将影响您的个人征信纪录哦～</div>
                     <div class="fbcg_tip">
-                        <img class="fbcg_tip_img"/>发布成功!
+                        <img class="fbcg_tip_img" />发布成功!
                     </div>
                     <div class="fbcg_info">
-                        该信息已发布在 <a class="fbcg_info_navigation">福州 - 房产信息 - 租房</a>您的信息需要审核才能展示，请在个人中心关注信息状态。
+                        该信息已发布在 <a id="fbcg_info_navigation" class="fbcg_info_navigation"></a>类别，您的信息需要通过审核后才能展示，请您在个人中心关注信息状态。
                     </div>
                     <div class="fbcg_main">
                         <a class="btn btn-info fbcg_btn" id="btnCKXX"><span>预览信息</span></a>
                         <a class="btn btn-info fbcg_btn" id="btnGLXX"><span>管理信息</span></a>
                         <a class="btn btn-info fbcg_btn" id="btnZDXX"><span>置顶信息</span></a>
-                        <a class="btn btn-info fbcg_btn" id="btnZFXX"><span>再发一条</span></a>
+                        <a class="btn btn-info fbcg_btn" id="btnZFXX"><span>继续发布</span></a>
                     </div>
                     <div class="fbcg_tg">
-                        使用在线推广，快速提升浏览量，助您快速成交！ <a class="fbcg_info_navigation">了解详情</a>
+                        @*使用在线推广，快速提升浏览量，助您快速成交！ <a class="fbcg_info_navigation">了解详情</a>*@
                     </div>
                 </div>
                 <div class="fbcg_right">
                     <div class="fbcg_share">
-                        <img id="fbcg_share_img" class="fbcg_share_img"/>
+                        <img id="fbcg_share_img" class="fbcg_share_img" />
                     </div>
                     <div class="fbcg_sm">
                         扫码分享信息
                     </div>
                     <div class="fbcg_gz">
                         微信/手机QQ管理信息，获得更多关注
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="ZDTG" class="div_zdtg">
+            <div class="div_zdtg_inner">
+                <p class="p_div_zdtg_inner">置顶推广</p>
+                <div class="div_row">
+                    <div class="div_row_left">
+                        <span class="spanFWCZ">置顶时长：</span>
+                    </div>
+                    <div class="div_row_right">
+                        <div class="div_radio">
+                            <img class="img_radio" id="img_radio_1" /><label class="label_radio">一天</label>
+                        </div>
+                        <div class="div_radio">
+                            <img class="img_radio" id="img_radio_2" /><label class="label_radio">两天</label>
+                        </div>
+                        <div class="div_radio">
+                            <img class="img_radio" id="img_radio_3" /><label class="label_radio">三天</label>
+                        </div>
+                        <div class="div_radio">
+                            <img class="img_radio" id="img_radio_5" /><label class="label_radio">五天</label>
+                        </div>
+                        <div class="div_radio">
+                            <img class="img_radio" id="img_radio_7" /><label class="label_radio">一周</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="div_row">
+                    <div class="div_row_left">
+                        <span class="spanFWCZ">支付总额：</span>
+                    </div>
+                    <div class="div_row_right">
+                        <span id="span_row_right_zj" class="span_row_right_zj"></span>
+                    </div>
+                </div>
+                <div class="div_main_info" id="div_main_info">
+                    <div class="div_main_info_body" id="div_main_info_body_dsfptzf" style="display: block;">
+                        <div class="div_main_info_zffs_dsfptzf" id="div_main_info_zffs_zfbzf">
+                            <img class="img_radio" id="img_radio_zfbzf" src="http://localhost/infotownlet/Areas/Business/Css/images/radio_gray.png">
+                            <img class="img_zffs" id="img_zffs_zfbzf" src="http://localhost/infotownlet/Areas/Business/Css/images/WDZJ/wdxj_cz_zfbzf.png">
+                            <span class="img_select" id="img_select_zfbzf"></span>
+                        </div>
+                        <div class="div_main_info_zffs_dsfptzf" id="div_main_info_zffs_wxzf" style="display: block;">
+                            <img class="img_radio" id="img_radio_wxzf" src="http://localhost/infotownlet/Areas/Business/Css/images/radio_blue.png">
+                            <img class="img_zffs" id="img_zffs_wxzf" src="http://localhost/infotownlet/Areas/Business/Css/images/WDZJ/wdxj_cz_wxzf.png">
+                            <span class="img_select" id="img_select_wxzf" style='background-image: url("http://localhost/infotownlet/Areas/Business/Css/images/WDZJ/wdxj_cz_zffs_select.png");'></span>
+                        </div>
+                    </div>
+                    <div id="div_bottom" style="display: block;">
+                        <div class="div_main_info_body" style="height: 50px;">
+                            <input class="input_main_info_ljzf" id="input_main_info_ljzf" type="button" value="立即置顶">
+                        </div>
+                        <div class="div_main_info_body">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <input class="input_main_info_body_bottom" id="input_main_info_body_bottom" type="checkbox">
+                                        </td>
+                                        <td>
+                                            <span class="span_main_info_body_bottom">已阅读并同意</span>
+                                        </td>
+                                        <td>
+                                            <span class="span_main_info_body_bottom span_main_info_body_bottom_xy" id="span_main_info_body_bottom_xy">《信息小镇现金服务协议》</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>

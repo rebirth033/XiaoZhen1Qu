@@ -6,9 +6,17 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadLYJDCondition() {
-    LoadDistrict("福州", "350100", "QY");
-    LoadConditionByTypeNames("'导游当地人'", "CODES_LYJD", "旅行社", "LXS", "15");
-    LoadBody("LYJDXX_DYDDR", currentIndex);
+    LoadConditionByTypeNames("'导游当地人'", "CODES_LYJD", "旅行社", "LXS", "100");
+}
+//加载URL查询条件
+function LoadURLCondition() {
+    if (getUrlParam("LB") !== null) {
+        SelectURLCondition(getUrlParam("LB"));
+    }
+    else if (getUrlParam("QY") !== null)
+        SelectURLCondition(getUrlParam("QY"));
+    else
+        LoadBody("LYJDXX_DYDDR", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -22,7 +30,7 @@ function SelectCondition(obj, name) {
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("LB,XL,CD,QY");
+    var condition = GetAllCondition("LB,QY");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Business/LYJDCX/LoadLYJDXX",

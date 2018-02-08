@@ -6,6 +6,7 @@
 function ValidateAll() {
     if (ValidateSelect("FWLX", "FWLX", "请选择房屋类型")
         & ValidateBCMS("BCMS", "忘记填写房源描述啦")
+        & ValidateXXDZ() 
         & ValidateCommon())
         return true;
     else

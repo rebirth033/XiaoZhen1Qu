@@ -1,50 +1,35 @@
-﻿.div_head {
-    width: 900px; 
-    text-align: center;
-    height: 48px;
-}
+﻿.div_head {width: 100%;}
 
-.div_head_inner {
-    width: 600px;
-    margin-left: 16%;
-}
+.div_head_inner {width: 600px;}
 
-.divstep {
-    width: 196px;
-    text-align: center;
-    height: 48px;
-    float: left;
-    cursor: default;
-}
+.divstep {width: 196px;text-align: center;height: 48px;float: left;cursor: default;}
 
-.spanstep {
-    font-size: 14px;
-    margin-bottom: 5px;
-    line-height: 40px;
-    color: #cccccc;
-}
+.spanstep {font-size: 14px;margin-bottom: 5px;line-height: 40px;color: #cccccc;}
 
-.emstep {
-    width: 196px;
-    height: 2px;
-    float: left;
-    background: #cccccc;
-}
+.emstep {width: 196px;height: 2px;float: left;background: #cccccc;}
 
-.div_content {
-    width: 900px;
-    margin-top: 20px;
-    text-align: center;
-}
+.div_content {width: 900px;margin-top: 20px;text-align: center;}
 
-.table {
-    margin-left: 26%;
-}
+.table {margin-left: 26%;}
 
-.table tr {
-    height: 40px;
-}
+.table tr {height: 70px;}
 
-.table tr td {
-    vertical-align: middle !important;
-}
+.table tr td {vertical-align: middle !important;}
+
+
+.div_head_main {width: 1000px;height: 75px;margin: 0 auto;text-align: left;}
+
+.span_head_main_logo {background-image: url(../../images/logo_purple.png);background-repeat: no-repeat;width: 185px;height: 55px;display: inline-block;margin-top: 20px;float: left;}
+
+.span_head_main_bzzx {font: 26px "微软雅黑", "黑体", sans-serif;color: #666;float: left;margin-top: 37px;margin-left: 15px;}
+
+.em_split {display: block;height: 1px;width: 100%;background-color: #ccc;margin-top: 20px;}
+
+
+.div_bottom {border-top: 1px solid #cccccc;display: block;text-align: center;height: 100px;color: #333;padding-top: 15px;font-family: Microsoft YaHei, SimHei, Arial, Helvetica, sans-serif;margin-top: 20px;background-color: #000;opacity: 0.5;color: #fff;line-height: 34px;}
+
+.span_div_bottom_inner {font-size: 14px;font-family: "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", tahoma, arial, simhei;}
+
+.span_div_bottom_inner:hover {cursor: pointer;text-decoration: underline}
+
+.em_div_bottom_inner {width: 1px;background-color: #fff;height: 9px;margin: 2px 5px 0px 5px;display: inline-block;}

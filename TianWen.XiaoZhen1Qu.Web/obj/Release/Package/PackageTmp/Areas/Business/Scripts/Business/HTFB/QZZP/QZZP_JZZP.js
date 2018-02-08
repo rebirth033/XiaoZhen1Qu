@@ -17,6 +17,7 @@ function SelectJZSJ() {
         else
             $(this).attr("src", getRootPath() + "/Areas/Business/Css/images/check_purple.png");
     });
+    ValidateJZSJ();
 }
 //显示职位类别
 function ShowJZLBThird() {
@@ -173,7 +174,7 @@ function FB() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                window.location.href = getRootPath() + "/Business/FBCG/FBCG";
+                window.location.href = getRootPath() + "/Business/FBCG/FBCG?LBID=" + getUrlParam("CLICKID") + "&ID=" + xml.Value.ID + "&JCXXID=" + xml.Value.JCXXID;
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

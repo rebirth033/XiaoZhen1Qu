@@ -260,10 +260,14 @@ function LoadConditionByParentID(parentid, table, name, id, length) {
             TBName: table
         },
         success: function (xml) {
-            if (xml.Result === 1) {
+            if (xml.Result === 1 && xml.list.length > 0) {
                 $("#ul_condition_body_" + id).remove();
                 if (parentid !== "0")
                     LoadCondition(xml.list, name, id, length);
+                if (getUrlParam("XL") !== null && getUrlParam("XL") !== "" && getUrlParam("XL") !== undefined)
+                    SelectURLCondition(getUrlParam("XL"));
+                if (getUrlParam("XH") !== null && getUrlParam("XH") !== "" && getUrlParam("XH") !== undefined)
+                    SelectURLCondition(getUrlParam("XH"));
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -276,7 +280,7 @@ function LoadCondition(array, name, id, length) {
     $("#ul_condition_body_" + id).remove();
     var html = "";
     html += '<ul id="ul_condition_body_' + id + '" class="ul_condition_body" style="height:auto;">';
-    if (name === "类别" || name === "小类" || name === "品牌" || name === "车系" || name === "车型" || name === "驾照" || name === "品种" || name === "型号")
+    if (name === "类别" || name === "小类" || name === "品牌" || name === "车系" || name === "车型" || name === "驾照" || name === "品种" || name === "型号" || name === "语种" || name === "用途" || name === "婚车品牌" || name === "国家" || name === "留学国家")
         html += '<li id="li_condition_body_first_' + id + '" class="li_condition_body_first">' + name + '</li>';
     else
         html += '<li class="li_condition_body_first">' + name + '</li>';
@@ -365,6 +369,17 @@ function GetJG(jg, dw) {
         return '<span class="span_zj">面议</span>';
     else
         return '<span class="span_zj">' + jg + '</span>' + dw;
+}
+//加载计算价格
+function GetCalcJG(jg, mj, dw) {
+    if (jg === "面议")
+        return '';
+    else {
+        if (dw === "元/㎡/月")
+            return '<span class="span_calc_zj">' + parseFloat(parseFloat(jg) / 30 / mj).toFixed(2) + dw + '</span>';
+        if (dw === "元/㎡")
+            return '<span class="span_calc_zj">' + parseFloat(parseFloat(jg) / mj * 10000).toFixed(0) + dw + '</span>';
+    }
 }
 //打开详细页面
 function OpenXXXX(TYPE, ID) {

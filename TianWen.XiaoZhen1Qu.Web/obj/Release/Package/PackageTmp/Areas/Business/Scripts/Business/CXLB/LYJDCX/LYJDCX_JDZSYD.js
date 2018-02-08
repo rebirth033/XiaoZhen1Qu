@@ -7,7 +7,16 @@ $(document).ready(function () {
 //加载条件
 function LoadLYJDCondition() {
     LoadConditionByTypeNames("'酒店/住宿预订类别'", "CODES_LYJD", "类别", "LB", "100");
-    LoadBody("LYJDXX_JDZSYD", currentIndex);
+}
+//加载URL查询条件
+function LoadURLCondition() {
+    if (getUrlParam("LB") !== null) {
+        SelectURLCondition(getUrlParam("LB"));
+    }
+    else if (getUrlParam("QY") !== null)
+        SelectURLCondition(getUrlParam("QY"));
+    else
+        LoadBody("LYJDXX_JDZSYD", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -21,6 +30,15 @@ function SelectCondition(obj, name) {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
+    LoadBody("LYJDXX_JDZSYD", currentIndex);
+    ShowSelectCondition("LYJDXX_JDZSYD");
+}
+//选择URL条件
+function SelectURLCondition(obj) {
+    $("#" + obj).parent().find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $("#" + obj).addClass("li_condition_body_active");
     LoadBody("LYJDXX_JDZSYD", currentIndex);
     ShowSelectCondition("LYJDXX_JDZSYD");
 }
