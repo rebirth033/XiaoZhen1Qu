@@ -42,7 +42,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
         {
             try
             {
-                List<CODES_DISTRICT> districts = DAO.GetObjectList<CODES_DISTRICT>(string.Format("FROM CODES_DISTRICT WHERE TYPENAME = '{0}' OR SHORTNAME IN('京','津','沪','渝') ORDER BY TYPENAME DESC, CODEORDER", Grade)).ToList();
+                List<CODES_DISTRICT> districts = DAO.GetObjectList<CODES_DISTRICT>(string.Format("FROM CODES_DISTRICT WHERE TYPENAME = '{0}' OR SHORTNAME IN('京','津','沪','渝') ORDER BY TYPENAME, CODEORDER", Grade)).ToList();
                 return new { Result = EnResultType.Success, list = districts };
             }
             catch (Exception ex)

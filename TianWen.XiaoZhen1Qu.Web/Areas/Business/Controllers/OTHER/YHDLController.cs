@@ -3,7 +3,6 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using TianWen.XiaoZhen1Qu.Entities.Models;
-using TianWen.XiaoZhen1Qu.Web.Areas.Business.Common;
 using TianWen.XiaoZhen1Qu.Interface;
 
 namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
@@ -36,8 +35,6 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
                 {
                     YHJBXX yhjbxx = YHDLBLL.AddUserBySJ(Request["SJ"]);
                     Session["YHM"] = yhjbxx.YHM;
-                    Session["XZQ"] = "福州";
-                    Session["XZQDM"] = "145";
                     return Json(new { Result = EnResultType.Success, Message = "登录成功", YHID = yhjbxx.YHID });
                 }
                 else
@@ -65,8 +62,6 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
                 if (Json(result).Data.ToString().Contains("登录成功"))
                 {
                     Session["YHM"] = YHM;
-                    Session["XZQ"] = "福州";
-                    Session["XZQDM"] = "145";
                 }
                 return Json(result);
             }
@@ -76,8 +71,6 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
                 if (Json(result).Data.ToString().Contains("登录成功"))
                 {
                     Session["YHM"] = YHM;
-                    Session["XZQ"] = "福州";
-                    Session["XZQDM"] = "145";
                 }
                 return Json(result);
             }

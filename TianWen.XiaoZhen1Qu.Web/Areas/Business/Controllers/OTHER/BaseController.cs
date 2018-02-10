@@ -15,9 +15,9 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         {
             if (Session["XZQ"] == null)
             {
-                ViewData["XZQ"] = "福州";
-                Session["XZQ"] = "福州";
-                Session["XZQDM"] = "145";
+                ViewData["XZQ"] = "北京";
+                Session["XZQ"] = "北京";
+                Session["XZQDM"] = "28";
             }
             else
             {
