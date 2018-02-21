@@ -48,7 +48,7 @@ function LoadDefault(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/XXGL/LoadYHXX",
+        url: getRootPath() + "/XXGL/LoadYHXX",
         dataType: "json",
         data:
         {
@@ -108,7 +108,7 @@ function LoadInfo(obj) {
 }
 
 function ShowYHXX(YHXXID) {
-    window.location.href = getRootPath() + "/Business/XXGL/XXGLMX?YHXXID=" + YHXXID + "&YHID=" + getUrlParam("YHID") + "&GJT=" + $("#span_main_info_head_gjt").html() + "&WDJT=" + $("#span_main_info_head_wdjt").html();
+    window.location.href = getRootPath() + "/XXGL/XXGLMX?YHXXID=" + YHXXID + "&YHID=" + getUrlParam("YHID") + "&GJT=" + $("#span_main_info_head_gjt").html() + "&WDJT=" + $("#span_main_info_head_wdjt").html();
 }
 
 function NoInfo(TYPE) {
@@ -127,7 +127,7 @@ function DeleteYHXX(YHXXID) {
     if (confirm("确定要删除吗?")) {
         $.ajax({
             type: "POST",
-            url: getRootPath() + "/Business/XXGL/DeleteYHXX",
+            url: getRootPath() + "/XXGL/DeleteYHXX",
             dataType: "json",
             data:
             {
@@ -149,7 +149,7 @@ function YDYHXX(YHXXID) {
     if (confirm("确定要将这些消息设成已读吗?")) {
         $.ajax({
             type: "POST",
-            url: getRootPath() + "/Business/XXGL/YDYHXX",
+            url: getRootPath() + "/XXGL/YDYHXX",
             dataType: "json",
             data:
             {

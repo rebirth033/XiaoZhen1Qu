@@ -34,7 +34,7 @@ function LoadDefault(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/WDSC/LoadSCXX",
+        url: getRootPath() + "/WDSC/LoadSCXX",
         dataType: "json",
         data:
         {
@@ -85,7 +85,7 @@ function NoInfo(TYPE) {
 function Delete(JCXXID) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/WDSC/DeleteYHSCXX",
+        url: getRootPath() + "/WDSC/DeleteYHSCXX",
         dataType: "json",
         data:
         {
@@ -112,7 +112,7 @@ function LoadByActive() {
 
 //打开详细页面
 function OpenXXXX(TYPE, ID, LBID) {
-    window.open(getRootPath() + "/Business/" + TYPE.split('_')[0] + "/" + TYPE + "?ID=" + ID + "&LBID=" + LBID + "&TYPE=" + TYPE);
+    window.open(getRootPath() + "/" + TYPE.split('_')[0] + "/" + TYPE + "?ID=" + ID + "&LBID=" + LBID + "&TYPE=" + TYPE);
 }
 //加载分页
 function LoadPage(PageCount) {

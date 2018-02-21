@@ -15,7 +15,7 @@ function LoadDL() {
     $("#emXZDL").css("background", "#bc6ba6");
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/LBXZ/LoadDL",
+        url: getRootPath() + "/LBXZ/LoadDL",
         dataType: "json",
         data:
         {
@@ -49,7 +49,7 @@ function LoadXL(LBID, LBNAME) {
     //$("#emXZXL").css("background", "#bc6ba6");
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/LBXZ/LoadXL",
+        url: getRootPath() + "/LBXZ/LoadXL",
         dataType: "json",
         data:
         {
@@ -127,7 +127,7 @@ function LoadXL(LBID, LBNAME) {
 }
 //发布信息
 function FBXX(FBYM, LBID) {
-    window.location.href = getRootPath() + "/Business/" + FBYM.split('_')[0] + "/" + FBYM + "?CLICKID=" + LBID;
+    window.location.href = getRootPath() + "/" + FBYM.split('_')[0] + "/" + FBYM + "?CLICKID=" + LBID;
 }
 //显示用户菜单
 function ShowYHCD() {
@@ -189,17 +189,17 @@ function ShowSHGJ() {
 }
 //退出
 function Exit() {
-    window.location.href = getRootPath() + "/Business/YHDL/YHDL";
+    window.location.href = getRootPath() + "/YHDL/YHDL";
 }
 //我的发布
 function ToWDFB() {
-    window.location.href = getRootPath() + "/Business/HTGL/HTGL";
+    window.location.href = getRootPath() + "/HTGL/HTGL";
 }
 //个人资料
 function ToGRZL() {
-    window.location.href = getRootPath() + "/Business/HTGL/HTGL";
+    window.location.href = getRootPath() + "/HTGL/HTGL";
 }
 //话费充值
 function ToHFCZ() {
-    window.location.href = getRootPath() + "/Business/HTGL/HTGL";
+    window.location.href = getRootPath() + "/HTGL/HTGL";
 }

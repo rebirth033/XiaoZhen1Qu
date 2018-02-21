@@ -45,7 +45,7 @@ function LoadBody(TYPE, PageIndex) {
     var condition = GetAllCondition("PP,XH,JG,QY,SF");
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/ESCX/LoadESXX",
+        url: getRootPath() + "/ESCX/LoadESXX",
         dataType: "json",
         data:
         {
@@ -91,7 +91,7 @@ function LoadInfo(obj) {
 function LoadHot(TYPE) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/ESCX/LoadESXX",
+        url: getRootPath() + "/ESCX/LoadESXX",
         dataType: "json",
         data:
         {

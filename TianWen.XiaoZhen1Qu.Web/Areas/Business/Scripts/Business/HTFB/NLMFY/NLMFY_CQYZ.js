@@ -6,7 +6,7 @@
 function LoadLB() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
+        url: getRootPath() + "/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
@@ -68,7 +68,7 @@ function GoToBQ(tag) {
 function OpenSecond(codeid) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadByParentID",
+        url: getRootPath() + "/Common/LoadByParentID",
         dataType: "json",
         data:
         {
@@ -113,7 +113,7 @@ function CloseZWMC(count) {
 function LoadJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/NLMFY/LoadNLMFY_CQYZJBXX",
+        url: getRootPath() + "/NLMFY/LoadNLMFY_CQYZJBXX",
         dataType: "json",
         data:
         {
@@ -154,7 +154,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/NLMFY/FBNLMFY_CQYZJBXX",
+        url: getRootPath() + "/NLMFY/FBNLMFY_CQYZJBXX",
         dataType: "json",
         data:
         {
@@ -164,7 +164,7 @@ function FB() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                window.location.href = getRootPath() + "/Business/FBCG/FBCG?LBID=" + getUrlParam("CLICKID") + "&ID=" + xml.Value.ID + "&JCXXID=" + xml.Value.JCXXID;
+                window.location.href = getRootPath() + "/FBCG/FBCG?LBID=" + getUrlParam("CLICKID") + "&ID=" + xml.Value.ID + "&JCXXID=" + xml.Value.JCXXID;
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

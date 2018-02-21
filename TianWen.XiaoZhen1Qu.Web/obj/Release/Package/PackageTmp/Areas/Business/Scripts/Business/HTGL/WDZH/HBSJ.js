@@ -15,7 +15,7 @@ function QRYSJYZH() {
     if (!YSJYZMCheck()) return;
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/ZHMM/YZMQR",
+        url: getRootPath() + "/ZHMM/YZMQR",
         dataType: "json",
         data:
         {
@@ -52,7 +52,7 @@ function QRXSJYZH() {
     if (!BDSJValidate()) return;
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/ZHMM/YZMQR",
+        url: getRootPath() + "/ZHMM/YZMQR",
         dataType: "json",
         data:
         {
@@ -83,7 +83,7 @@ function QRXSJYZH() {
 function UpdateSJ() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/GRZL/UpdateSJ",
+        url: getRootPath() + "/GRZL/UpdateSJ",
         dataType: "json",
         data:
         {
@@ -196,7 +196,7 @@ function GetYSJCheckCode(obj) {
         $.ajax({
             type: "POST",
             dataType: "json",
-            url: getRootPath() + "/Business/YHJBXX/GetYZM",
+            url: getRootPath() + "/YHJBXX/GetYZM",
             data: {
                 SJ: $("#" + obj.data.id).val()
             },
@@ -219,7 +219,7 @@ function GetXSJCheckCode(obj) {
         $.ajax({
             type: "POST",
             dataType: "json",
-            url: getRootPath() + "/Business/YHJBXX/GetYZM",
+            url: getRootPath() + "/YHJBXX/GetYZM",
             data: {
                 SJ: $("#" + obj.data.id).val()
             },
@@ -266,5 +266,5 @@ function GetXSJNumber() {
 }
 
 function ToGRZL() {
-    window.location.href = getRootPath() + "/Business/GRZL/GRZL";
+    window.location.href = getRootPath() + "/GRZL/GRZL";
 }

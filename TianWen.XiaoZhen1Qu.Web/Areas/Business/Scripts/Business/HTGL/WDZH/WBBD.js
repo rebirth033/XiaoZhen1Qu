@@ -13,14 +13,14 @@ function ToWBZC() {
 }
 //返回
 function Back() {
-    window.location.href = getRootPath() + "/Business/ZHBD/ZHBD?YHID=" + getUrlParam("YHID");
+    window.location.href = getRootPath() + "/ZHBD/ZHBD?YHID=" + getUrlParam("YHID");
 }
 //微博登录
 function WBDL() {
     if (Validate() === false) return;
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/GRZL/UpdateWB",
+        url: getRootPath() + "/GRZL/UpdateWB",
         dataType: "json",
         data:
         {

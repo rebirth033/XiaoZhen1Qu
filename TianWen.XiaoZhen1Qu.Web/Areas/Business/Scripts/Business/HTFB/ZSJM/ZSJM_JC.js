@@ -30,7 +30,7 @@ function BindClick(type) {
 function LoadDuoX(type, id) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
+        url: getRootPath() + "/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
@@ -80,7 +80,7 @@ function PDLB(name, codeid) {
 function LoadJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/ZSJM/LoadZSJM_JCJBXX",
+        url: getRootPath() + "/ZSJM/LoadZSJM_JCJBXX",
         dataType: "json",
         data:
         {
@@ -143,7 +143,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/ZSJM/FBZSJM_JCJBXX",
+        url: getRootPath() + "/ZSJM/FBZSJM_JCJBXX",
         dataType: "json",
         data:
         {
@@ -153,7 +153,7 @@ function FB() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                window.location.href = getRootPath() + "/Business/FBCG/FBCG?LBID=" + getUrlParam("CLICKID") + "&ID=" + xml.Value.ID + "&JCXXID=" + xml.Value.JCXXID;
+                window.location.href = getRootPath() + "/FBCG/FBCG?LBID=" + getUrlParam("CLICKID") + "&ID=" + xml.Value.ID + "&JCXXID=" + xml.Value.JCXXID;
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

@@ -8,7 +8,7 @@ $(document).ready(function () {
 function GetHeadNav() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SY/LoadSY_ML",
+        url: getRootPath() + "/SY/LoadSY_ML",
         dataType: "json",
         data:
         {
@@ -102,7 +102,7 @@ function LoadBody(TYPE, PageIndex) {
     condition += ",ZWLB:" + getUrlParam("ZWLB");
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/QZZPCX/LoadQZZPXX",
+        url: getRootPath() + "/QZZPCX/LoadQZZPXX",
         dataType: "json",
         data:
         {
@@ -139,7 +139,7 @@ function LoadInfo(obj) {
 function LoadHot(TYPE) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/QZZPCX/LoadQZZPXX",
+        url: getRootPath() + "/QZZPCX/LoadQZZPXX",
         dataType: "json",
         data:
         {

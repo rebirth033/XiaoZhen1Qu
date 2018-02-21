@@ -9,24 +9,24 @@
 });
 //登录
 function OpenDL() {
-    window.location.href = getRootPath() + "/Business/YHDL/YHDL";
+    window.location.href = getRootPath() + "/YHDL/YHDL";
 }
 //注册
 function OpenZC() {
-    window.location.href = getRootPath() + "/Business/YHJBXX/YHJBXX";
+    window.location.href = getRootPath() + "/YHJBXX/YHJBXX";
 }
 //个人中心
 function OpenGRZX() {
     if ($("#input_yhm").val() !== "") {
-        window.open(getRootPath() + "/Business/HTGL/HTGL");
+        window.open(getRootPath() + "/HTGL/HTGL");
     }
     else {
-        window.open(getRootPath() + "/Business/YHDL/YHDL?To=HTGL");
+        window.open(getRootPath() + "/YHDL/YHDL?To=HTGL");
     }
 }
 //帮助中心
 function OpenBZZX() {
-    window.open(getRootPath() + "/Business/BZZX/BZZX");
+    window.open(getRootPath() + "/BZZX/BZZX");
 }
 //加载用户下拉框
 function LoadUser() {
@@ -57,14 +57,14 @@ function LoadUser() {
 function Exit() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/YHDL/Exit",
+        url: getRootPath() + "/YHDL/Exit",
         dataType: "json",
         data: {
 
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                window.location.href = getRootPath() + "/Business/SY/SY";
+                window.location.href = getRootPath() + "/SY/SY";
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -74,7 +74,7 @@ function Exit() {
 }
 //显示我的信息
 function ShowWDXX() {
-    window.open(getRootPath() + "/Business/HTGL/HTGL");
+    window.open(getRootPath() + "/HTGL/HTGL");
     $("#liWDXX").css("font-size", "18px").css("font-weight", "700");
     $("#liWDZH").css("font-size", "16px").css("font-weight", "normal");
     $("#liWDZJ").css("font-size", "16px").css("font-weight", "normal");
@@ -87,7 +87,7 @@ function ShowWDXX() {
 }
 //显示我的账户
 function ShowWDZH() {
-    window.open(getRootPath() + "/Business/HTGL/HTGL");
+    window.open(getRootPath() + "/HTGL/HTGL");
     $("#liWDXX").css("font-size", "16px").css("font-weight", "normal");
     $("#liWDZH").css("font-size", "18px").css("font-weight", "700");
     $("#liWDZJ").css("font-size", "16px").css("font-weight", "normal");
@@ -100,7 +100,7 @@ function ShowWDZH() {
 }
 //显示我的资金
 function ShowWDZJ() {
-    window.open(getRootPath() + "/Business/HTGL/HTGL");
+    window.open(getRootPath() + "/HTGL/HTGL");
     $("#liWDXX").css("font-size", "16px").css("font-weight", "normal");
     $("#liWDZH").css("font-size", "16px").css("font-weight", "normal");
     $("#liWDZJ").css("font-size", "18px").css("font-weight", "700");
@@ -113,7 +113,7 @@ function ShowWDZJ() {
 }
 //显示生活工具
 function ShowSHGJ() {
-    window.open(getRootPath() + "/Business/HTGL/HTGL");
+    window.open(getRootPath() + "/HTGL/HTGL");
     $("#liWDXX").css("font-size", "16px").css("font-weight", "normal");
     $("#liWDZH").css("font-size", "16px").css("font-weight", "normal");
     $("#liWDZJ").css("font-size", "16px").css("font-weight", "normal");
@@ -136,17 +136,17 @@ function HideYHCD() {
 }
 //我的发布
 function ToWDFB() {
-    $("#iframeright").attr("src", getRootPath() + "/Business/WDFB/WDFB");
+    $("#iframeright").attr("src", getRootPath() + "/WDFB/WDFB");
 }
 //个人资料
 function ToGRZL() {
-    $("#iframeright").attr("src", getRootPath() + "/Business/GRZL/GRZL");
+    $("#iframeright").attr("src", getRootPath() + "/GRZL/GRZL");
 }
 //我的资金>现金>明细查询
 function ToXJMXCX() {
-    $("#iframeright").attr("src", getRootPath() + "/Business/WDXJ/WDXJ_MXCX");
+    $("#iframeright").attr("src", getRootPath() + "/WDXJ/WDXJ_MXCX");
 }
 //我的资金>现金>充值
 function ToXJCZ() {
-    $("#iframeright").attr("src", getRootPath() + "/Business/WDXJ/WDXJ_CZ");
+    $("#iframeright").attr("src", getRootPath() + "/WDXJ/WDXJ_CZ");
 }

@@ -7,7 +7,7 @@
 function LoadDuoX(type, id) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
+        url: getRootPath() + "/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
@@ -51,7 +51,7 @@ function BindClick(type) {
 function LoadJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/XXYL/LoadXXYL_HPGJBXX",
+        url: getRootPath() + "/XXYL/LoadXXYL_HPGJBXX",
         dataType: "json",
         data:
         {
@@ -95,7 +95,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/XXYL/FBXXYL_HPGJBXX",
+        url: getRootPath() + "/XXYL/FBXXYL_HPGJBXX",
         dataType: "json",
         data:
         {
@@ -105,7 +105,7 @@ function FB() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                window.location.href = getRootPath() + "/Business/FBCG/FBCG?LBID=" + getUrlParam("CLICKID") + "&ID=" + xml.Value.ID + "&JCXXID=" + xml.Value.JCXXID;
+                window.location.href = getRootPath() + "/FBCG/FBCG?LBID=" + getUrlParam("CLICKID") + "&ID=" + xml.Value.ID + "&JCXXID=" + xml.Value.JCXXID;
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

@@ -6,7 +6,7 @@ $(document).ready(function () {
 function LoadDefault() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/CLXX/LoadCLXX",
+        url: getRootPath() + "/CLXX/LoadCLXX",
         dataType: "json",
         data:
         {
@@ -117,7 +117,7 @@ function LoadXQ(obj, BCMSString) {
 function LoadCNXH(TYPE) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/CLCX/LoadCLXX",
+        url: getRootPath() + "/CLCX/LoadCLXX",
         dataType: "json",
         data:
         {
@@ -161,7 +161,7 @@ function LoadCNXHInfo(obj) {
 function LoadJPTJ(TYPE) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/CLCX/LoadCLXX",
+        url: getRootPath() + "/CLCX/LoadCLXX",
         dataType: "json",
         data:
         {
@@ -204,7 +204,7 @@ function LoadJPTJInfo(obj) {
 function LoadJJRTJFY(TYPE) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/CLCX/LoadCLXX",
+        url: getRootPath() + "/CLCX/LoadCLXX",
         dataType: "json",
         data:
         {

@@ -8,7 +8,7 @@ $(document).ready(function () {
 function GetHeadNav() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SY/LoadSY_ML",
+        url: getRootPath() + "/SY/LoadSY_ML",
         dataType: "json",
         data:
         {
@@ -80,7 +80,7 @@ function SelectURLCondition(obj) {
 function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAMES",
+        url: getRootPath() + "/Common/LoadCODESByTYPENAMES",
         dataType: "json",
         data:
         {
@@ -113,7 +113,7 @@ function LoadBody(TYPE, PageIndex) {
     var condition = GetAllCondition("JZLB,QY");
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/QZZPCX/LoadQZZPXX",
+        url: getRootPath() + "/QZZPCX/LoadQZZPXX",
         dataType: "json",
         data:
         {
@@ -150,7 +150,7 @@ function LoadInfo(obj) {
 function LoadHot(TYPE) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/QZZPCX/LoadQZZPXX",
+        url: getRootPath() + "/QZZPCX/LoadQZZPXX",
         dataType: "json",
         data:
         {

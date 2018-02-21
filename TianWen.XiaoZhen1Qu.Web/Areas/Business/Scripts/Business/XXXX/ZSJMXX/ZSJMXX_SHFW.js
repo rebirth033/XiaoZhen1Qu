@@ -6,7 +6,7 @@ $(document).ready(function () {
 function LoadDefault() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/ZSJMXX/LoadZSJMXX",
+        url: getRootPath() + "/ZSJMXX/LoadZSJMXX",
         dataType: "json",
         data:
         {
@@ -131,7 +131,7 @@ function LoadXQ(obj, BCMSString) {
 function LoadCNXH(TYPE) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/ZSJMCX/LoadZSJMXX",
+        url: getRootPath() + "/ZSJMCX/LoadZSJMXX",
         dataType: "json",
         data:
         {
@@ -173,7 +173,7 @@ function LoadCNXHInfo(obj) {
 function LoadJPTJ(TYPE) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/ZSJMCX/LoadZSJMXX",
+        url: getRootPath() + "/ZSJMCX/LoadZSJMXX",
         dataType: "json",
         data:
         {
@@ -214,7 +214,7 @@ function LoadJPTJInfo(obj) {
 function LoadJJRTJFY(TYPE) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/ZSJMCX/LoadZSJMXX",
+        url: getRootPath() + "/ZSJMCX/LoadZSJMXX",
         dataType: "json",
         data:
         {
@@ -260,7 +260,7 @@ function LoadJJRTJFYInfo(obj) {
 function LoadXGLM() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadXGLM",
+        url: getRootPath() + "/Common/LoadXGLM",
         dataType: "json",
         data:
         {
@@ -290,9 +290,9 @@ function LoadXGLM() {
 //打开相关类目
 function OpenXGLM(lbname, lbid) {
     if (lbname.indexOf("ZSJM_") !== -1)
-        window.open(getRootPath() + "/Business" + "/ZSJMCX/" + lbname.replace("ZSJM_", "ZSJMCX_") + "?LBID=" + lbid);
+        window.open(getRootPath() + "/" + "/ZSJMCX/" + lbname.replace("ZSJM_", "ZSJMCX_") + "?LBID=" + lbid);
 }
 //搜索栏备注导航
 function OpenSS(TYPE, ID) {
-    window.open(getRootPath() + "/Business/ZSJMCX/ZSJMCX_JDJJBG_BGSB?LBID=13" + "&" + TYPE + "=" + ID);
+    window.open(getRootPath() + "/ZSJMCX/ZSJMCX_JDJJBG_BGSB?LBID=13" + "&" + TYPE + "=" + ID);
 }

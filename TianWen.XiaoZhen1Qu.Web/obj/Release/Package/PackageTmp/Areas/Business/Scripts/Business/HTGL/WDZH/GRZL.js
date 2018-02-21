@@ -75,7 +75,7 @@ function LoadSystemPhoto() {
 function SaveXTTX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/GRZL/SaveXTTX",
+        url: getRootPath() + "/GRZL/SaveXTTX",
         dataType: "json",
         data:
         {
@@ -95,7 +95,7 @@ function SaveXTTX() {
 function LoadGRZL() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/GRZL/GetGRZL",
+        url: getRootPath() + "/GRZL/GetGRZL",
         dataType: "json",
         data:
         {
@@ -161,7 +161,7 @@ function uploadComplete(evt) {
 //    } else {
 //        $.ajax({
 //            type: "POST",
-//            url: getRootPath() + "/Business/GRZL/UpdateYHM",
+//            url: getRootPath() + "/GRZL/UpdateYHM",
 //            dataType: "json",
 //            data:
 //            {
@@ -183,9 +183,9 @@ function uploadComplete(evt) {
 //}
 //修改手机
 function UpdateSJ() {
-    window.location.href = getRootPath() + "/Business/GRZL/HBSJ?SJ=" + $("#input_person_info_sj").val();
+    window.location.href = getRootPath() + "/GRZL/HBSJ?SJ=" + $("#input_person_info_sj").val();
 }
 
 function UpdateYX() {
-    window.location.href = getRootPath() + "/Business/GRZL/YXYZ?YX=" + $("#input_person_info_yx").val();
+    window.location.href = getRootPath() + "/GRZL/YXYZ?YX=" + $("#input_person_info_yx").val();
 }

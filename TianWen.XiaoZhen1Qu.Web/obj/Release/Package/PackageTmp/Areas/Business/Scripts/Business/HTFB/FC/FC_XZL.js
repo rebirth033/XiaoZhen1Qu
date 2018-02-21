@@ -52,7 +52,7 @@ function GetGQ() {
 function LoadJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC/LoadFC_XZLJBXX",
+        url: getRootPath() + "/FC/LoadFC_XZLJBXX",
         dataType: "json",
         data:
         {
@@ -112,7 +112,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC/FBFC_XZLJBXX",
+        url: getRootPath() + "/FC/FBFC_XZLJBXX",
         dataType: "json",
         data:
         {
@@ -122,7 +122,7 @@ function FB() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                window.location.href = getRootPath() + "/Business/FBCG/FBCG?LBID=" + getUrlParam("CLICKID") + "&ID=" + xml.Value.ID + "&JCXXID=" + xml.Value.JCXXID;
+                window.location.href = getRootPath() + "/FBCG/FBCG?LBID=" + getUrlParam("CLICKID") + "&ID=" + xml.Value.ID + "&JCXXID=" + xml.Value.JCXXID;
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

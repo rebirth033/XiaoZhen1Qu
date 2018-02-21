@@ -11,19 +11,19 @@
 //打开查询列表
 function OpenCXLB(lbid, lburl, condition) {
     if (condition !== "null" && condition !== null)
-        window.open(getRootPath() + "/Business" + lburl + "?LBID=" + lbid + "&" + condition);
+        window.open(getRootPath() + "/" + lburl + "?LBID=" + lbid + "&" + condition);
     else
-        window.open(getRootPath() + "/Business" + lburl + "?LBID=" + lbid);
+        window.open(getRootPath() + "/" + lburl + "?LBID=" + lbid);
 }
 //打开详细页面
 function OpenXXXX(TYPE, ID, LBID) {
-    window.open(getRootPath() + "/Business/" + TYPE.split('_')[0] + "/" + TYPE + "?ID=" + ID + "&LBID=" + LBID + "&TYPE=" + TYPE);
+    window.open(getRootPath() + "/" + TYPE.split('_')[0] + "/" + TYPE + "?ID=" + ID + "&LBID=" + LBID + "&TYPE=" + TYPE);
 }
 //加载默认
 function LoadDefault() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SY/LoadESSY",
+        url: getRootPath() + "/SY/LoadESSY",
         dataType: "json",
         data:
         {

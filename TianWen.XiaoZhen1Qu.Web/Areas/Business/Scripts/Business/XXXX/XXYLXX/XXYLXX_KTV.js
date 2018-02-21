@@ -6,7 +6,7 @@ $(document).ready(function () {
 function LoadDefault() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/XXYLXX/LoadXXYLXX",
+        url: getRootPath() + "/XXYLXX/LoadXXYLXX",
         dataType: "json",
         data:
         {
@@ -101,7 +101,7 @@ function LoadXQ(obj, BCMSString) {
 function LoadCNXH(TYPE) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/XXYLCX/LoadXXYLXX",
+        url: getRootPath() + "/XXYLCX/LoadXXYLXX",
         dataType: "json",
         data:
         {
@@ -144,7 +144,7 @@ function LoadCNXHInfo(obj) {
 function LoadJPTJ(TYPE) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/XXYLCX/LoadXXYLXX",
+        url: getRootPath() + "/XXYLCX/LoadXXYLXX",
         dataType: "json",
         data:
         {
@@ -186,7 +186,7 @@ function LoadJPTJInfo(obj) {
 function LoadJJRTJFY(TYPE) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/XXYLCX/LoadXXYLXX",
+        url: getRootPath() + "/XXYLCX/LoadXXYLXX",
         dataType: "json",
         data:
         {
@@ -233,7 +233,7 @@ function LoadJJRTJFYInfo(obj) {
 function LoadXGLM() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadXGLM",
+        url: getRootPath() + "/Common/LoadXGLM",
         dataType: "json",
         data:
         {
@@ -269,11 +269,11 @@ function LoadXGLM() {
 //打开相关类目
 function OpenXGLM(lbname, lbid) {
     if (lbname.indexOf("XXYL_") !== -1)
-        window.open(getRootPath() + "/Business" + "/XXYLCX/" + lbname.replace("XXYL_", "XXYLCX_") + "?LBID=" + lbid);
+        window.open(getRootPath() + "/" + "/XXYLCX/" + lbname.replace("XXYL_", "XXYLCX_") + "?LBID=" + lbid);
     if (lbname.indexOf("LYJD_") !== -1)
-        window.open(getRootPath() + "/Business" + "/LYJDCX/" + lbname.replace("LYJD_", "LYJDCX_") + "?LBID=" + lbid);
+        window.open(getRootPath() + "/" + "/LYJDCX/" + lbname.replace("LYJD_", "LYJDCX_") + "?LBID=" + lbid);
 }
 //搜索栏备注导航
 function OpenSS(TYPE, ID) {
-    window.open(getRootPath() + "/Business/XXYLCX/XXYLCX_JDJJBG_BGSB?LBID=13" + "&" + TYPE + "=" + ID);
+    window.open(getRootPath() + "/XXYLCX/XXYLCX_JDJJBG_BGSB?LBID=13" + "&" + TYPE + "=" + ID);
 }

@@ -5,7 +5,7 @@
 function YHYZ(para) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/GRZL/YXYZYBC",
+        url: getRootPath() + "/GRZL/YXYZYBC",
         dataType: "json",
         data:
         {

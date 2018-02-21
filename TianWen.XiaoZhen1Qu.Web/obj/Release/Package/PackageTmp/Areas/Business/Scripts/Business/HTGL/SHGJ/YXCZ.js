@@ -81,7 +81,7 @@ function YXBQActive() {
 function LoadYXMC(SZM) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/YXCZ/LoadYXJBXX",
+        url: getRootPath() + "/YXCZ/LoadYXJBXX",
         dataType: "json",
         data:
         {

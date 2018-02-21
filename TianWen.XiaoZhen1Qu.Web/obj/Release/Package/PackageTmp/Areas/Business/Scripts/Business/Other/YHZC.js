@@ -206,7 +206,7 @@ function Register() {
     var obj = jsonObj.GetJsonObject();
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/YHJBXX/Register",
+        url: getRootPath() + "/YHJBXX/Register",
         dataType: "json",
         data:
         {
@@ -217,10 +217,10 @@ function Register() {
             if (xml.Result === 1) {
                 window.wxc.xcConfirm("注册成功", window.wxc.xcConfirm.typeEnum.success, {
                     onOk: function (v) {
-                        window.location.href = getRootPath() + "/Business/SY/SY";
+                        window.location.href = getRootPath() + "/SY/SY";
                     },
                     onClose: function (v) {
-                        window.location.href = getRootPath() + "/Business/SY/SY";
+                        window.location.href = getRootPath() + "/SY/SY";
                     }
                 });
             } else {
@@ -299,7 +299,7 @@ function DragValidate(dargEle, msgEle) {
 function ValidateYHM() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/YHJBXX/ValidateYHM",
+        url: getRootPath() + "/YHJBXX/ValidateYHM",
         dataType: "json",
         data: {
             YHM: $("#YHM").val()
@@ -332,7 +332,7 @@ function GetCheckCode() {
         $.ajax({
             type: "POST",
             dataType: "json",
-            url: getRootPath() + "/Business/YHJBXX/GetYZM",
+            url: getRootPath() + "/YHJBXX/GetYZM",
             data: {
                 SJ: $("#SJ").val()
             },
@@ -385,5 +385,5 @@ function ValidateCheckCode() {
 }
 
 function OpenSYXY() {
-    window.open(getRootPath() + "/Business/BZZX/BZZX_SY_YHSYXY");
+    window.open(getRootPath() + "/BZZX/BZZX_SY_YHSYXY");
 }

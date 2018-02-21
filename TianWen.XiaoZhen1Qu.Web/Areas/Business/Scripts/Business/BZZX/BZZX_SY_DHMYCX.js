@@ -63,7 +63,7 @@ function SJCX() {
     if (!SJCXValidate()) return;
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/BZZX/SJCX",
+        url: getRootPath() + "/BZZX/SJCX",
         dataType: "json",
         data:
         {
@@ -115,7 +115,7 @@ function GetCheckCode() {
     $.ajax({
         type: "POST",
         dataType: "json",
-        url: getRootPath() + "/Business/YHJBXX/GetYZM",
+        url: getRootPath() + "/YHJBXX/GetYZM",
         data: {
             SJ: $("#input_sjhm").val()
         },
@@ -159,7 +159,7 @@ function YZZH() {
     if (!YZZHValidate()) return;
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/BZZX/YZZH",
+        url: getRootPath() + "/BZZX/YZZH",
         dataType: "json",
         data:
         {
@@ -187,7 +187,7 @@ function LoadDefault(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/WDFB/LoadYHFBXX",
+        url: getRootPath() + "/WDFB/LoadYHFBXX",
         dataType: "json",
         data:
         {

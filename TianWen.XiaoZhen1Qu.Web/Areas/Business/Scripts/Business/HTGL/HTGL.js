@@ -58,14 +58,14 @@ function HideYHCD() {
 function Exit() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/YHDL/Exit",
+        url: getRootPath() + "/YHDL/Exit",
         dataType: "json",
         data: {
 
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                window.location.href = getRootPath() + "/Business/YHDL/YHDL";
+                window.location.href = getRootPath() + "/YHDL/YHDL";
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -77,7 +77,7 @@ function Exit() {
 function AutoLogin() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/YHGL/AutoLogin",
+        url: getRootPath() + "/YHGL/AutoLogin",
         dataType: "json",
         data:
         {
@@ -87,7 +87,7 @@ function AutoLogin() {
             if (xml.Result === 1) {
                 window.wxc.xcConfirm("登录成功", window.wxc.xcConfirm.typeEnum.success);
             } else {
-                window.location.href = getRootPath() + "/Business/YHDL/YHDL";
+                window.location.href = getRootPath() + "/YHDL/YHDL";
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -108,63 +108,63 @@ function LiFocus() {
 }
 //我的发布
 function ToWDFB() {
-    $("#iframeright").attr("src", getRootPath() + "/Business/WDFB/WDFB");
+    $("#iframeright").attr("src", getRootPath() + "/WDFB/WDFB");
 }
 //我的收藏
 function ToWDSC() {
-    $("#iframeright").attr("src", getRootPath() + "/Business/WDSC/WDSC");
+    $("#iframeright").attr("src", getRootPath() + "/WDSC/WDSC");
 }
 //个人资料
 function ToGRZL() {
-    $("#iframeright").attr("src", getRootPath() + "/Business/GRZL/GRZL");
+    $("#iframeright").attr("src", getRootPath() + "/GRZL/GRZL");
 }
 //我的资金>现金>明细查询
 function ToXJMXCX() {
-    $("#iframeright").attr("src", getRootPath() + "/Business/WDXJ/WDXJ_MXCX");
+    $("#iframeright").attr("src", getRootPath() + "/WDXJ/WDXJ_MXCX");
 }
 //我的资金>现金>充值
 function ToXJCZ() {
-    $("#iframeright").attr("src", getRootPath() + "/Business/WDXJ/WDXJ_CZ");
+    $("#iframeright").attr("src", getRootPath() + "/WDXJ/WDXJ_CZ");
 }
 //账号绑定
 function ToZHBD() {
-    $("#iframeright").attr("src", getRootPath() + "/Business/ZHBD/ZHBD");
+    $("#iframeright").attr("src", getRootPath() + "/ZHBD/ZHBD");
 }
 //认证管理
 function ToRZGL() {
-    $("#iframeright").attr("src", getRootPath() + "/Business/RZGL/RZGL");
+    $("#iframeright").attr("src", getRootPath() + "/RZGL/RZGL");
 }
 //密码设置
 function ToMMSZ() {
-    $("#iframeright").attr("src", getRootPath() + "/Business/GRZL/MMSZ");
+    $("#iframeright").attr("src", getRootPath() + "/GRZL/MMSZ");
 }
 //消息管理
 function ToXXGL() {
-    $("#iframeright").attr("src", getRootPath() + "/Business/XXGL/XXGL");
+    $("#iframeright").attr("src", getRootPath() + "/XXGL/XXGL");
 }
 //话费充值
 function ToHFCZ() {
-    $("#iframeright").attr("src", getRootPath() + "/Business/HFCZ/HFCZ");
+    $("#iframeright").attr("src", getRootPath() + "/HFCZ/HFCZ");
 }
 //游戏充值
 function ToYXCZ() {
-    $("#iframeright").attr("src", getRootPath() + "/Business/YXCZ/YXCZ");
+    $("#iframeright").attr("src", getRootPath() + "/YXCZ/YXCZ");
 }
 //违章查询
 function ToWZCX() {
-    $("#iframeright").attr("src", getRootPath() + "/Business/WZCX/WZCX");
+    $("#iframeright").attr("src", getRootPath() + "/WZCX/WZCX");
 }
 //首页
 function OpenSY() {
-    window.open(getRootPath() + "/Business/SY/SY");
+    window.open(getRootPath() + "/SY/SY");
 }
 //帮助中心
 function OpenBZZX() {
-    window.open(getRootPath() + "/Business/BZZX/BZZX");
+    window.open(getRootPath() + "/BZZX/BZZX");
 }
 //类别选择
 function OpenLBXZ() {
-    window.open(getRootPath() + "/Business/LBXZ/LBXZ");
+    window.open(getRootPath() + "/LBXZ/LBXZ");
 }
 //显示我的信息
 function ShowWDXX() {
@@ -305,7 +305,7 @@ function QQBD() {
     $("#div_body_image_qqtx").find(".toolbar").each(function () {
         $.ajax({
             type: "POST",
-            url: getRootPath() + "/Business/GRZL/UpdateQQ",
+            url: getRootPath() + "/GRZL/UpdateQQ",
             dataType: "json",
             data:
             {
@@ -316,7 +316,7 @@ function QQBD() {
                 if (xml.Result === 1) {
                     window.wxc.xcConfirm("QQ绑定成功", window.wxc.xcConfirm.typeEnum.success);
                     CloseQQRZ();
-                    $("#iframeright").attr("src", getRootPath() + "/Business/ZHBD/ZHBD");
+                    $("#iframeright").attr("src", getRootPath() + "/ZHBD/ZHBD");
                 }
             },
             error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

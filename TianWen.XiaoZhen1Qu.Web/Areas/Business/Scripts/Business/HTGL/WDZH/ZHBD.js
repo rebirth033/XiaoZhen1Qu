@@ -5,11 +5,11 @@ $(document).ready(function () {
 });
 
 function SJBD() {
-    window.location.href = getRootPath() + "/Business/GRZL/HBSJ?SJ=" + sj + "&YHID=" + getUrlParam("YHID");
+    window.location.href = getRootPath() + "/GRZL/HBSJ?SJ=" + sj + "&YHID=" + getUrlParam("YHID");
 }
 
 function YXBD() {
-    window.location.href = getRootPath() + "/Business/GRZL/YXYZ?YHID=" + getUrlParam("YHID");
+    window.location.href = getRootPath() + "/GRZL/YXYZ?YHID=" + getUrlParam("YHID");
 }
 
 function QQBD() {
@@ -31,17 +31,17 @@ function QQBD() {
 }
 
 function WBBD() {
-    window.location.href = getRootPath() + "/Business/ZHBD/WBBD?YHID=" + getUrlParam("YHID");
+    window.location.href = getRootPath() + "/ZHBD/WBBD?YHID=" + getUrlParam("YHID");
 }
 
 function WXBD() {
-    window.location.href = getRootPath() + "/Business/ZHBD/WXBD?YHID=" + getUrlParam("YHID");
+    window.location.href = getRootPath() + "/ZHBD/WXBD?YHID=" + getUrlParam("YHID");
 }
 
 function LoadGRZL() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/GRZL/GetGRZL",
+        url: getRootPath() + "/GRZL/GetGRZL",
         dataType: "json",
         data:
         {
@@ -126,7 +126,7 @@ function QQJB() {
     if (confirm("确定要解绑吗?")) {
         $.ajax({
             type: "POST",
-            url: getRootPath() + "/Business/GRZL/UpdateQQ",
+            url: getRootPath() + "/GRZL/UpdateQQ",
             dataType: "json",
             data:
             {
@@ -150,7 +150,7 @@ function WBJB() {
     if (confirm("确定要解绑吗?")) {
         $.ajax({
             type: "POST",
-            url: getRootPath() + "/Business/GRZL/UpdateWB",
+            url: getRootPath() + "/GRZL/UpdateWB",
             dataType: "json",
             data:
             {
@@ -174,7 +174,7 @@ function WXJB() {
     if (confirm("确定要解绑吗?")) {
         $.ajax({
             type: "POST",
-            url: getRootPath() + "/Business/GRZL/UpdateWX",
+            url: getRootPath() + "/GRZL/UpdateWX",
             dataType: "json",
             data:
             {

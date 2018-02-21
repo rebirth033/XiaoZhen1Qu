@@ -27,7 +27,7 @@ function LoadFCCondition() {
 function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAMES",
+        url: getRootPath() + "/Common/LoadCODESByTYPENAMES",
         dataType: "json",
         data:
         {
@@ -89,7 +89,7 @@ function LoadBody(TYPE, PageIndex, OrderColumn, OrderType) {
     var condition = GetAllCondition("QY,S,ZJ,CX,ZXQK,FWLD,SF");
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FCCX/LoadFCXX",
+        url: getRootPath() + "/FCCX/LoadFCXX",
         dataType: "json",
         data:
         {
@@ -137,7 +137,7 @@ function LoadInfo(obj) {
 function LoadHot(TYPE) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FCCX/LoadFCXX",
+        url: getRootPath() + "/FCCX/LoadFCXX",
         dataType: "json",
         data:
         {
@@ -206,5 +206,5 @@ function OrderByCondition(type, obj) {
 }
 //搜索栏备注导航
 function OpenSS(TYPE, ID) {
-    window.open(getRootPath() + "/Business/FCCX/FCCX_ZZF?LBID=13" + "&" + TYPE + "=" + ID);
+    window.open(getRootPath() + "/FCCX/FCCX_ZZF?LBID=13" + "&" + TYPE + "=" + ID);
 }

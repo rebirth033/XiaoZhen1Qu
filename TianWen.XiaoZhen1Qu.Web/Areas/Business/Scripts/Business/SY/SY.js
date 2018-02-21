@@ -83,7 +83,7 @@ function OpenXXXX(LBID, JCXXID) {
 function LoadSY_ML() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SY/LoadSY_ML",
+        url: getRootPath() + "/SY/LoadSY_ML",
         dataType: "json",
         data: {
 
@@ -235,9 +235,9 @@ function GetHeight(list, parentid, typename) {
 //打开查询列表
 function OpenCXLB(lbid, lburl, condition) {
     if (condition !== "null" && condition !== null)
-        window.open(getRootPath() + "/Business" + lburl + "?LBID=" + lbid + "&" + condition);
+        window.open(getRootPath() + "" + lburl + "?LBID=" + lbid + "&" + condition);
     else
-        window.open(getRootPath() + "/Business" + lburl + "?LBID=" + lbid);
+        window.open(getRootPath() + "" + lburl + "?LBID=" + lbid);
     $("#LBID").val('');
 }
 //打开二级首页

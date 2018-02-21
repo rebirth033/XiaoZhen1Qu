@@ -59,25 +59,25 @@ function HideRemark() {
 }
 
 function OpenYHZCYDL() {
-    window.open(getRootPath() + "/Business/BZZX/BZZX_SY_KSDH_YHZCYDL");
+    window.open(getRootPath() + "/BZZX/BZZX_SY_KSDH_YHZCYDL");
 }
 
 function OpenXSSYZN() {
-    window.open(getRootPath() + "/Business/BZZX/BZZX_SY_KSDH_XSSYZN");
+    window.open(getRootPath() + "/BZZX/BZZX_SY_KSDH_XSSYZN");
 }
 
 function OpenRZSM() {
-    window.open(getRootPath() + "/Business/BZZX/BZZX_SY_RZSM");
+    window.open(getRootPath() + "/BZZX/BZZX_SY_RZSM");
 }
 
 function OpenZHDJYXY() {
-    window.open(getRootPath() + "/Business/BZZX/BZZX_SY_KSDH_ZHDJYXY");
+    window.open(getRootPath() + "/BZZX/BZZX_SY_KSDH_ZHDJYXY");
 }
 
 function OpenWLFPCS() {
-    window.open(getRootPath() + "/Business/BZZX/BZZX_SY_KSDH_WLFPCS");
+    window.open(getRootPath() + "/BZZX/BZZX_SY_KSDH_WLFPCS");
 }
 
 function OpenYYPJKD() {
-    window.open(getRootPath() + "/Business/BZZX/BZZX_SY_KSDH_JBYSS");
+    window.open(getRootPath() + "/BZZX/BZZX_SY_KSDH_JBYSS");
 }

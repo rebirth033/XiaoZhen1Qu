@@ -21,7 +21,7 @@ function SelectLB(obj, type, lbid) {
 function LoadJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/NLMFY/LoadNLMFY_SLSYJBXX",
+        url: getRootPath() + "/NLMFY/LoadNLMFY_SLSYJBXX",
         dataType: "json",
         data:
         {
@@ -62,7 +62,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/NLMFY/FBNLMFY_SLSYJBXX",
+        url: getRootPath() + "/NLMFY/FBNLMFY_SLSYJBXX",
         dataType: "json",
         data:
         {
@@ -72,7 +72,7 @@ function FB() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                window.location.href = getRootPath() + "/Business/FBCG/FBCG?LBID=" + getUrlParam("CLICKID") + "&ID=" + xml.Value.ID + "&JCXXID=" + xml.Value.JCXXID;
+                window.location.href = getRootPath() + "/FBCG/FBCG?LBID=" + getUrlParam("CLICKID") + "&ID=" + xml.Value.ID + "&JCXXID=" + xml.Value.JCXXID;
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

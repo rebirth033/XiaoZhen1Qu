@@ -36,7 +36,7 @@ function PDLB(lbmc) {
 function LoadXL() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadByParentID",
+        url: getRootPath() + "/Common/LoadByParentID",
         dataType: "json",
         data:
         {
@@ -68,7 +68,7 @@ function LoadXL() {
 function LoadJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SWFW/LoadSWFW_KDJBXX",
+        url: getRootPath() + "/SWFW/LoadSWFW_KDJBXX",
         dataType: "json",
         data:
         {
@@ -112,7 +112,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SWFW/FBSWFW_KDJBXX",
+        url: getRootPath() + "/SWFW/FBSWFW_KDJBXX",
         dataType: "json",
         data:
         {
@@ -122,7 +122,7 @@ function FB() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                window.location.href = getRootPath() + "/Business/FBCG/FBCG?LBID=" + getUrlParam("CLICKID") + "&ID=" + xml.Value.ID + "&JCXXID=" + xml.Value.JCXXID;
+                window.location.href = getRootPath() + "/FBCG/FBCG?LBID=" + getUrlParam("CLICKID") + "&ID=" + xml.Value.ID + "&JCXXID=" + xml.Value.JCXXID;
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

@@ -17,7 +17,7 @@ function LSSWSSelect() {
 function LoadFLZXLB() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
+        url: getRootPath() + "/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
@@ -53,7 +53,7 @@ function LoadFLZXLB() {
 function LoadJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SWFW/LoadSWFW_FLZXJBXX",
+        url: getRootPath() + "/SWFW/LoadSWFW_FLZXJBXX",
         dataType: "json",
         data:
         {
@@ -96,7 +96,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SWFW/FBSWFW_FLZXJBXX",
+        url: getRootPath() + "/SWFW/FBSWFW_FLZXJBXX",
         dataType: "json",
         data:
         {
@@ -106,7 +106,7 @@ function FB() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                window.location.href = getRootPath() + "/Business/FBCG/FBCG?LBID=" + getUrlParam("CLICKID") + "&ID=" + xml.Value.ID + "&JCXXID=" + xml.Value.JCXXID;
+                window.location.href = getRootPath() + "/FBCG/FBCG?LBID=" + getUrlParam("CLICKID") + "&ID=" + xml.Value.ID + "&JCXXID=" + xml.Value.JCXXID;
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

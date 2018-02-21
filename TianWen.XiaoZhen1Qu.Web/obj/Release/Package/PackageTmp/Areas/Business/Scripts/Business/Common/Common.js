@@ -2,12 +2,10 @@
 function getRootPath() {
     var strFullPath = window.document.location.href;
     var strPath = window.document.location.pathname;
-
     var pos = strFullPath.indexOf(strPath);
     var prePath = strFullPath.substring(0, pos);
     var postPath = strPath.substring(0, strPath.substr(1).indexOf('/') + 1);
-
-    return (prePath + postPath);
+    return (prePath + "/");
 }
 
 //获取对象的文件路径
@@ -208,7 +206,7 @@ function HideYHCD() {
 }
 //重选类别
 function CXLB() {
-    window.location.href = getRootPath() + "/Business/LBXZ/LBXZ";
+    window.location.href = getRootPath() + "/LBXZ/LBXZ";
 }
 //鼠标点击样式
 function ActiveStyle(name) {
@@ -246,7 +244,7 @@ function whichTransitionEvent() {
 
 //打开详细页面
 function OpenXXXX(TYPE, ID) {
-    window.open(getRootPath() + "/Business/" + TYPE.split('_')[0] + "/" + TYPE + "?ID=" + ID);
+    window.open(getRootPath() + "/" + TYPE.split('_')[0] + "/" + TYPE + "?ID=" + ID);
 }
 
 //字符串截断

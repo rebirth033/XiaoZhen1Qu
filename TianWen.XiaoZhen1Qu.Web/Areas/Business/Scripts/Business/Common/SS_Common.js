@@ -108,7 +108,7 @@ function LoadHideSSJG() {
 function LoadKeyWordByHZ(SS) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SY/LoadKeyWordByHZ",
+        url: getRootPath() + "/SY/LoadKeyWordByHZ",
         dataType: "json",
         data:
         {
@@ -142,7 +142,7 @@ function LoadKeyWordByHZ(SS) {
 function LoadHideKeyWordByHZ(SS) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SY/LoadKeyWordByHZ",
+        url: getRootPath() + "/SY/LoadKeyWordByHZ",
         dataType: "json",
         data:
         {
@@ -176,7 +176,7 @@ function LoadHideKeyWordByHZ(SS) {
 function LoadKeyWordByPY(SS) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SY/LoadKeyWordByPY",
+        url: getRootPath() + "/SY/LoadKeyWordByPY",
         dataType: "json",
         data:
         {
@@ -235,7 +235,7 @@ function LoadKeyWordByPY(SS) {
 function LoadHideKeyWordByPY(SS) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SY/LoadKeyWordByPY",
+        url: getRootPath() + "/SY/LoadKeyWordByPY",
         dataType: "json",
         data:
         {
@@ -371,7 +371,7 @@ function OpenHideSSJGBySelect() {
 function OpenSSJGByInput() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SY/LoadKeyWordByHZ",
+        url: getRootPath() + "/SY/LoadKeyWordByHZ",
         dataType: "json",
         data:
         {
@@ -399,7 +399,7 @@ function OpenSSJGByInput() {
 function OpenHideSSJGByInput() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SY/LoadKeyWordByHZ",
+        url: getRootPath() + "/SY/LoadKeyWordByHZ",
         dataType: "json",
         data:
         {
@@ -426,16 +426,16 @@ function OpenHideSSJGByInput() {
 //打开查询列表
 function OpenCXLB(lbid, lburl, condition) {
     if (condition !== "null" && condition !== null)
-        window.open(getRootPath() + "/Business" + lburl + "?LBID=" + lbid + "&" + condition);
+        window.open(getRootPath() + "/" + lburl + "?LBID=" + lbid + "&" + condition);
     else
-        window.open(getRootPath() + "/Business" + lburl + "?LBID=" + lbid);
+        window.open(getRootPath() + "/" + lburl + "?LBID=" + lbid);
     $("#LBID").val('');
 }
 //打开查询列表
 function OpenHideCXLB(lbid, lburl, condition) {
     if (condition !== "null" && condition !== null)
-        window.open(getRootPath() + "/Business" + lburl + "?LBID=" + lbid + "&" + condition);
+        window.open(getRootPath() + "/" + lburl + "?LBID=" + lbid + "&" + condition);
     else
-        window.open(getRootPath() + "/Business" + lburl + "?LBID=" + lbid);
+        window.open(getRootPath() + "/" + lburl + "?LBID=" + lbid);
     $("#HideLBID").val('');
 }

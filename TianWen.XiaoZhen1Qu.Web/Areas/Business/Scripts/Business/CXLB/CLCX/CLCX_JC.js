@@ -13,7 +13,7 @@ function LoadCLCondition() {
 function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAMES",
+        url: getRootPath() + "/Common/LoadCODESByTYPENAMES",
         dataType: "json",
         data:
         {
@@ -115,7 +115,7 @@ function LoadBody(TYPE, PageIndex) {
     var condition = GetAllCondition("PP,CX,JG,PL,LC,BSX,CLYS,SF");
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/CLCX/LoadCLXX",
+        url: getRootPath() + "/CLCX/LoadCLXX",
         dataType: "json",
         data:
         {
@@ -161,7 +161,7 @@ function LoadCL_JCInfo(obj) {
 function LoadHot(TYPE) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/CLCX/LoadCLXX",
+        url: getRootPath() + "/CLCX/LoadCLXX",
         dataType: "json",
         data:
         {

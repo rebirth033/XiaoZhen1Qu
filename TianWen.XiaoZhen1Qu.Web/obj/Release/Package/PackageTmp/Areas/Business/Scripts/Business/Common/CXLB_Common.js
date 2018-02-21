@@ -17,7 +17,7 @@
 function GetHeadNav() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SY/LoadSY_ML",
+        url: getRootPath() + "/SY/LoadSY_ML",
         dataType: "json",
         data:
         {
@@ -221,7 +221,7 @@ function LoadPage(typename, pagecount) {
 function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAMES",
+        url: getRootPath() + "/Common/LoadCODESByTYPENAMES",
         dataType: "json",
         data:
         {
@@ -252,7 +252,7 @@ function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
 function LoadConditionByParentID(parentid, table, name, id, length) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadByParentID",
+        url: getRootPath() + "/Common/LoadByParentID",
         dataType: "json",
         data:
         {
@@ -308,7 +308,7 @@ function SetCondition(type, value) {
 function LoadDistrict(name, code, type) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/GetDistrictBySuperCode",
+        url: getRootPath() + "/Common/GetDistrictBySuperCode",
         dataType: "json",
         data:
         {
@@ -341,7 +341,7 @@ function LoadDistrictCondition(array, type) {
 function FBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/LBXZ/LoadLBByID",
+        url: getRootPath() + "/LBXZ/LoadLBByID",
         dataType: "json",
         data:
         {
@@ -349,7 +349,7 @@ function FBXX() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                window.open(getRootPath() + "/Business/" + xml.list[0].FBYM.split('_')[0] + "/" + xml.list[0].FBYM + "?CLICKID=" + getUrlParam("LBID"));
+                window.open(getRootPath() + "/" + xml.list[0].FBYM.split('_')[0] + "/" + xml.list[0].FBYM + "?CLICKID=" + getUrlParam("LBID"));
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -383,5 +383,5 @@ function GetCalcJG(jg, mj, dw) {
 }
 //打开详细页面
 function OpenXXXX(TYPE, ID) {
-    window.open(getRootPath() + "/Business/" + TYPE.split('_')[0] + "/" + TYPE + "?ID=" + ID + "&LBID=" + getUrlParam("LBID") + "&TYPE=" + TYPE);
+    window.open(getRootPath() + "/" + TYPE.split('_')[0] + "/" + TYPE + "?ID=" + ID + "&LBID=" + getUrlParam("LBID") + "&TYPE=" + TYPE);
 }

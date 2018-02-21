@@ -14,21 +14,21 @@
 function ToSY() {
     $(".span_head_nav_info").css("background-color", "#bc6ba6");
     $("#span_head_nav_info_sy").css("background-color", "#ad5b97");
-    $("#iframeright").attr("src", getRootPath() + "/Business/BZZX/BZZX_SY");
+    $("#iframeright").attr("src", getRootPath() + "/BZZX/BZZX_SY");
 }
 
 //帮助中心_联系客服
 function ToLXKF() {
     $(".span_head_nav_info").css("background-color", "#bc6ba6");
     $("#span_head_nav_info_lxkf").css("background-color", "#ad5b97");
-    $("#iframeright").attr("src", getRootPath() + "/Business/BZZX/BZZX_LXKF");
+    $("#iframeright").attr("src", getRootPath() + "/BZZX/BZZX_LXKF");
 }
 
 //帮助中心_网站建议
 function ToWZJY() {
     $(".span_head_nav_info").css("background-color", "#bc6ba6");
     $("#span_head_nav_info_wzjy").css("background-color", "#ad5b97");
-    $("#iframeright").attr("src", getRootPath() + "/Business/BZZX/BZZX_WZJY");
+    $("#iframeright").attr("src", getRootPath() + "/BZZX/BZZX_WZJY");
 }
 
 //翻转

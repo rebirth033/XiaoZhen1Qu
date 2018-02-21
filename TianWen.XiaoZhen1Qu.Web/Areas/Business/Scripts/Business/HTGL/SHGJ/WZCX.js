@@ -27,7 +27,7 @@ function CloseXZQ() {
 function LoadSJXZQJC() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/GetDistrictByGrade",
+        url: getRootPath() + "/Common/GetDistrictByGrade",
         dataType: "json",
         data:
         {

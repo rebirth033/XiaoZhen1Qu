@@ -6,7 +6,7 @@ $(document).ready(function () {
 function LoadDefault() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FCXX/LoadFCXX",
+        url: getRootPath() + "/FCXX/LoadFCXX",
         dataType: "json",
         data:
         {
@@ -144,7 +144,7 @@ function LoadXQ(obj, BCMSString) {
 function LoadCNXH(TYPE, GQ) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FCCX/LoadFCXX",
+        url: getRootPath() + "/FCCX/LoadFCXX",
         dataType: "json",
         data:
         {
@@ -189,7 +189,7 @@ function LoadCNXHInfo(obj, GQ) {
 function LoadJPTJ(TYPE, GQ) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FCCX/LoadFCXX",
+        url: getRootPath() + "/FCCX/LoadFCXX",
         dataType: "json",
         data:
         {
@@ -233,7 +233,7 @@ function LoadJPTJInfo(obj, GQ) {
 function LoadJJRTJFY(TYPE, GQ) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FCCX/LoadFCXX",
+        url: getRootPath() + "/FCCX/LoadFCXX",
         dataType: "json",
         data:
         {
@@ -282,7 +282,7 @@ function LoadJJRTJFYInfo(obj, GQ) {
 function LoadXGLM() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadXGLM",
+        url: getRootPath() + "/Common/LoadXGLM",
         dataType: "json",
         data:
         {
@@ -318,11 +318,11 @@ function LoadXGLM() {
 //打开相关类目
 function OpenXGLM(lbname, lbid) {
     if (lbname.indexOf("FC_") !== -1)
-        window.open(getRootPath() + "/Business" + "/FCCX/" + lbname.replace("FC_", "FCCX_") + "?LBID=" + lbid);
+        window.open(getRootPath() + "/" + "/FCCX/" + lbname.replace("FC_", "FCCX_") + "?LBID=" + lbid);
     if (lbname.indexOf("LYJD_") !== -1)
-        window.open(getRootPath() + "/Business" + "/LYJDCX/" + lbname.replace("LYJD_", "LYJDCX_") + "?LBID=" + lbid);
+        window.open(getRootPath() + "/" + "/LYJDCX/" + lbname.replace("LYJD_", "LYJDCX_") + "?LBID=" + lbid);
 }
 //搜索栏备注导航
 function OpenSS(TYPE, ID) {
-    window.open(getRootPath() + "/Business/FCCX/FCCX_ZZF?LBID=13" + "&" + TYPE + "=" + ID);
+    window.open(getRootPath() + "/FCCX/FCCX_ZZF?LBID=13" + "&" + TYPE + "=" + ID);
 }

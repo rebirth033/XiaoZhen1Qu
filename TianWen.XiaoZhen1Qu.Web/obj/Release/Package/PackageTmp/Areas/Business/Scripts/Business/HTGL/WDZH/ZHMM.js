@@ -20,7 +20,7 @@ function QRZH() {
     if (!QRZHValidate()) return;
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/ZHMM/QRZH",
+        url: getRootPath() + "/ZHMM/QRZH",
         dataType: "json",
         data:
         {
@@ -58,7 +58,7 @@ function YZZH() {
     if (!YZZHValidate()) return;
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/ZHMM/YZZH",
+        url: getRootPath() + "/ZHMM/YZZH",
         dataType: "json",
         data:
         {
@@ -96,7 +96,7 @@ function CZMM() {
     if (!CZMMValidate()) return;
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/ZHMM/CZMM",
+        url: getRootPath() + "/ZHMM/CZMM",
         dataType: "json",
         data:
         {
@@ -285,7 +285,7 @@ function GetCheckCode() {
         $.ajax({
             type: "POST",
             dataType: "json",
-            url: getRootPath() + "/Business/YHJBXX/GetYZM",
+            url: getRootPath() + "/YHJBXX/GetYZM",
             data: {
                 SJ: $("#SJ").val()
             },
@@ -328,5 +328,5 @@ function QHTXYZM() {
 }
 //用户登录
 function ToYHDL() {
-    window.location.href = getRootPath() + "/Business/YHDL/YHDL?To=SY";
+    window.location.href = getRootPath() + "/YHDL/YHDL?To=SY";
 }

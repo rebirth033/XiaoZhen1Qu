@@ -181,7 +181,7 @@ function LLCZ() {
 function HFSearchMobilePhoneGuiSuArea(mobileNo) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/HFCZ/SearchMobilePhoneGuiSuArea",
+        url: getRootPath() + "/HFCZ/SearchMobilePhoneGuiSuArea",
         dataType: "json",
         data:
         {
@@ -202,7 +202,7 @@ function HFSearchMobilePhoneGuiSuArea(mobileNo) {
 function LLSearchMobilePhoneGuiSuArea(mobileNo) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/HFCZ/SearchMobilePhoneGuiSuArea",
+        url: getRootPath() + "/HFCZ/SearchMobilePhoneGuiSuArea",
         dataType: "json",
         data:
         {
@@ -221,7 +221,7 @@ function LLSearchMobilePhoneGuiSuArea(mobileNo) {
 }
 //转到支付方式页面
 function ToZFFS(mobileNo, type, standard) {
-    window.location.href = getRootPath() + "/Business/HFCZ/ZFFS?MobileNo=" + mobileNo + "&Type=" + type + "&Standard=" + standard;
+    window.location.href = getRootPath() + "/HFCZ/ZFFS?MobileNo=" + mobileNo + "&Type=" + type + "&Standard=" + standard;
 }
 //键入话费手机号触发
 function HFSJKeyUp() {

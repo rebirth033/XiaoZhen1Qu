@@ -10,7 +10,7 @@
 function LoadDefault(TYPE) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/XXGL/LoadYHXXMX",
+        url: getRootPath() + "/XXGL/LoadYHXXMX",
         dataType: "json",
         data:
         {
@@ -38,13 +38,13 @@ function LoadDefault(TYPE) {
 }
 //返回消息管理列表
 function Back() {
-    window.location.href = getRootPath() + "/Business/XXGL/XXGL";
+    window.location.href = getRootPath() + "/XXGL/XXGL";
 }
 //上一条消息明细
 function Up() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/XXGL/LoadUpYHXXMX",
+        url: getRootPath() + "/XXGL/LoadUpYHXXMX",
         dataType: "json",
         data:
         {
@@ -75,7 +75,7 @@ function Down()
 {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/XXGL/LoadDownYHXXMX",
+        url: getRootPath() + "/XXGL/LoadDownYHXXMX",
         dataType: "json",
         data:
         {

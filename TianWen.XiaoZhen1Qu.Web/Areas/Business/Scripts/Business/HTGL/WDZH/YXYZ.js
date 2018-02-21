@@ -35,7 +35,7 @@ function SendEmail() {
     if (EmailValidate() === false) return;
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/GRZL/SendEmail",
+        url: getRootPath() + "/GRZL/SendEmail",
         dataType: "json",
         data:
         {

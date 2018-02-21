@@ -86,7 +86,7 @@ function LoadXQMC() {
 function LoadXQJBXXSByHZ(XQMC) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC/LoadXQJBXXSByHZ",
+        url: getRootPath() + "/FC/LoadXQJBXXSByHZ",
         dataType: "json",
         data:
         {
@@ -120,7 +120,7 @@ function LoadXQJBXXSByHZ(XQMC) {
 function LoadXQJBXXSByPY(XQMC) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC/LoadXQJBXXSByPY",
+        url: getRootPath() + "/FC/LoadXQJBXXSByPY",
         dataType: "json",
         data:
         {
@@ -202,7 +202,7 @@ function GetStartIndexBySZM(pyszm, sqmc) {
 function LoadDuoX(type, id) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
+        url: getRootPath() + "/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
@@ -245,7 +245,7 @@ function SelectXQMC(obj) {
 function LoadJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC/LoadFC_ESFJBXX",
+        url: getRootPath() + "/FC/LoadFC_ESFJBXX",
         dataType: "json",
         data:
         {
@@ -302,7 +302,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FC/FBFC_ESFJBXX",
+        url: getRootPath() + "/FC/FBFC_ESFJBXX",
         dataType: "json",
         data:
         {
@@ -312,7 +312,7 @@ function FB() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                window.location.href = getRootPath() + "/Business/FBCG/FBCG?LBID=" + getUrlParam("CLICKID") + "&ID=" + xml.Value.ID + "&JCXXID=" + xml.Value.JCXXID;
+                window.location.href = getRootPath() + "/FBCG/FBCG?LBID=" + getUrlParam("CLICKID") + "&ID=" + xml.Value.ID + "&JCXXID=" + xml.Value.JCXXID;
             } else {
                 if (xml.Type === 1) {
                     $("#YZM").css("border-color", "#F2272D");

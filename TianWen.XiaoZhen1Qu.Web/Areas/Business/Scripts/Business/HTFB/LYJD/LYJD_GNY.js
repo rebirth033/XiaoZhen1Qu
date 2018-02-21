@@ -43,7 +43,7 @@ function BindClick(type) {
 function LoadJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/LYJD/LoadLYJD_GNYJBXX",
+        url: getRootPath() + "/LYJD/LoadLYJD_GNYJBXX",
         dataType: "json",
         data:
         {
@@ -99,7 +99,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/LYJD/FBLYJD_GNYJBXX",
+        url: getRootPath() + "/LYJD/FBLYJD_GNYJBXX",
         dataType: "json",
         data:
         {
@@ -111,7 +111,7 @@ function FB() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                window.location.href = getRootPath() + "/Business/FBCG/FBCG?LBID=" + getUrlParam("CLICKID") + "&ID=" + xml.Value.ID + "&JCXXID=" + xml.Value.JCXXID;
+                window.location.href = getRootPath() + "/FBCG/FBCG?LBID=" + getUrlParam("CLICKID") + "&ID=" + xml.Value.ID + "&JCXXID=" + xml.Value.JCXXID;
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

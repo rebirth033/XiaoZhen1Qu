@@ -128,7 +128,7 @@ function TJWT() {
     if (ValidateTJWT() === false) return;
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/BZZX/SaveTJWT",
+        url: getRootPath() + "/BZZX/SaveTJWT",
         dataType: "json",
         data:
         {

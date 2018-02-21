@@ -13,7 +13,7 @@ function LoadFCCondition() {
 function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAMES",
+        url: getRootPath() + "/Common/LoadCODESByTYPENAMES",
         dataType: "json",
         data:
         {
@@ -75,7 +75,7 @@ function LoadBody(TYPE, PageIndex, OrderColumn, OrderType) {
     var condition = GetAllCondition("CZJLX,ZJ,QY,CX,ZXQK,SF");
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FCCX/LoadFCXX",
+        url: getRootPath() + "/FCCX/LoadFCXX",
         dataType: "json",
         data:
         {
@@ -123,7 +123,7 @@ function LoadInfo(obj) {
 function LoadHot(TYPE) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FCCX/LoadFCXX",
+        url: getRootPath() + "/FCCX/LoadFCXX",
         dataType: "json",
         data:
         {

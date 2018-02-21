@@ -6,7 +6,7 @@ $(document).ready(function () {
 function LoadDefault() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FCXX/LoadFCXX",
+        url: getRootPath() + "/FCXX/LoadFCXX",
         dataType: "json",
         data:
         {
@@ -124,7 +124,7 @@ function LoadFYXQ(obj, BCMSString) {
 function LoadCNXH(TYPE) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FCCX/LoadFCXX",
+        url: getRootPath() + "/FCCX/LoadFCXX",
         dataType: "json",
         data:
         {
@@ -168,7 +168,7 @@ function LoadCNXHInfo(obj) {
 function LoadJPTJ(TYPE) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FCCX/LoadFCXX",
+        url: getRootPath() + "/FCCX/LoadFCXX",
         dataType: "json",
         data:
         {
@@ -211,7 +211,7 @@ function LoadJPTJInfo(obj) {
 function LoadJJRTJFY(TYPE) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FCCX/LoadFCXX",
+        url: getRootPath() + "/FCCX/LoadFCXX",
         dataType: "json",
         data:
         {
@@ -260,7 +260,7 @@ function LoadJJRTJFYInfo(obj) {
 function LoadXGLM() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadXGLM",
+        url: getRootPath() + "/Common/LoadXGLM",
         dataType: "json",
         data:
         {
@@ -296,7 +296,7 @@ function LoadXGLM() {
 //打开相关类目
 function OpenXGLM(lbname, lbid) {
     if (lbname.indexOf("FC_") !== -1)
-        window.open(getRootPath() + "/Business" + "/FCCX/" + lbname.replace("FC_", "FCCX_") + "?LBID=" + lbid);
+        window.open(getRootPath() + "/" + "/FCCX/" + lbname.replace("FC_", "FCCX_") + "?LBID=" + lbid);
     if (lbname.indexOf("LYJD_") !== -1)
-        window.open(getRootPath() + "/Business" + "/LYJDCX/" + lbname.replace("LYJD_", "LYJDCX_") + "?LBID=" + lbid);
+        window.open(getRootPath() + "/" + "/LYJDCX/" + lbname.replace("LYJD_", "LYJDCX_") + "?LBID=" + lbid);
 }

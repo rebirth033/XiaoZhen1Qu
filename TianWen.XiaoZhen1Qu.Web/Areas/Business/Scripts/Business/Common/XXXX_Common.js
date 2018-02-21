@@ -11,7 +11,7 @@
 function GetHeadNav() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SY/LoadSY_ML",
+        url: getRootPath() + "/SY/LoadSY_ML",
         dataType: "json",
         data:
         {
@@ -134,7 +134,7 @@ function ToggleBCMS() {
 function FBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/LBXZ/LoadLBByID",
+        url: getRootPath() + "/LBXZ/LoadLBByID",
         dataType: "json",
         data:
         {
@@ -142,7 +142,7 @@ function FBXX() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                window.open(getRootPath() + "/Business/" + xml.list[0].FBYM.split('_')[0] + "/" + xml.list[0].FBYM + "?CLICKID=" + getUrlParam("LBID"));
+                window.open(getRootPath() + "/" + xml.list[0].FBYM.split('_')[0] + "/" + xml.list[0].FBYM + "?CLICKID=" + getUrlParam("LBID"));
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -186,7 +186,7 @@ function SCXX(jcxxid) {
     if ($("#input_yhm").val() !== "") {
         $.ajax({
             type: "POST",
-            url: getRootPath() + "/Business/WDSC/SCXX",
+            url: getRootPath() + "/WDSC/SCXX",
             dataType: "json",
             data:
             {
@@ -206,6 +206,6 @@ function SCXX(jcxxid) {
         });
     }
     else {
-        window.open(getRootPath() + "/Business/YHDL/YHDL");
+        window.open(getRootPath() + "/YHDL/YHDL");
     }
 }

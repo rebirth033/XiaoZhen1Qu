@@ -31,7 +31,7 @@ function PDLB(name, xl) {
 function LoadDuoX(type, id, xl) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
+        url: getRootPath() + "/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
@@ -67,7 +67,7 @@ function LoadDuoX(type, id, xl) {
 function LoadJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/ZXJC/LoadZXJC_JZFWJBXX",
+        url: getRootPath() + "/ZXJC/LoadZXJC_JZFWJBXX",
         dataType: "json",
         data:
         {
@@ -113,7 +113,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/ZXJC/FBZXJC_JZFWJBXX",
+        url: getRootPath() + "/ZXJC/FBZXJC_JZFWJBXX",
         dataType: "json",
         data:
         {
@@ -123,7 +123,7 @@ function FB() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                window.location.href = getRootPath() + "/Business/FBCG/FBCG?LBID=" + getUrlParam("CLICKID") + "&ID=" + xml.Value.ID + "&JCXXID=" + xml.Value.JCXXID;
+                window.location.href = getRootPath() + "/FBCG/FBCG?LBID=" + getUrlParam("CLICKID") + "&ID=" + xml.Value.ID + "&JCXXID=" + xml.Value.JCXXID;
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

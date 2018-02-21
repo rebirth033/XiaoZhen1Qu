@@ -48,7 +48,7 @@ function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);var condition = GetAllCondition("CX,PP,JG,QY,SF");
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/CLCX/LoadCLXX",
+        url: getRootPath() + "/CLCX/LoadCLXX",
         dataType: "json",
         data:
         {
@@ -94,7 +94,7 @@ function LoadCL_GCCInfo(obj) {
 function LoadHot(TYPE) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/CLCX/LoadCLXX",
+        url: getRootPath() + "/CLCX/LoadCLXX",
         dataType: "json",
         data:
         {

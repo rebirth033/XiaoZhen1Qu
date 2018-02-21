@@ -19,7 +19,7 @@ function BindXZQClick(type) {
 function LoadXZQByGrade() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/GetDistrictByGrade",
+        url: getRootPath() + "/Common/GetDistrictByGrade",
         dataType: "json",
         data:
         {
@@ -47,7 +47,7 @@ function LoadXZQByGrade() {
 function GetCitys(CODE) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/GetDistrictBySuperCode",
+        url: getRootPath() + "/Common/GetDistrictBySuperCode",
         dataType: "json",
         data:
         {
@@ -73,7 +73,7 @@ function GetCitys(CODE) {
 function SelectXZQ(NAME, CODE) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/QHXZQ",
+        url: getRootPath() + "/Common/QHXZQ",
         dataType: "json",
         data:
         {
@@ -96,7 +96,7 @@ function SelectXZQ(NAME, CODE) {
 function LoadQY() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadQY",
+        url: getRootPath() + "/Common/LoadQY",
         dataType: "json",
         data:
         {
@@ -127,7 +127,7 @@ function LoadQY() {
 function LoadDD() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadDD",
+        url: getRootPath() + "/Common/LoadDD",
         dataType: "json",
         data:
         {

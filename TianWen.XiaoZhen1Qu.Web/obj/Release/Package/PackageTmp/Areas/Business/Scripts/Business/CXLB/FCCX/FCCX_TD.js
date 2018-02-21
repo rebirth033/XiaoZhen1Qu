@@ -58,7 +58,7 @@ function LoadBody(TYPE, PageIndex) {
     }
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FCCX/LoadFCXX",
+        url: getRootPath() + "/FCCX/LoadFCXX",
         dataType: "json",
         data:
         {
@@ -126,7 +126,7 @@ function LoadCSInfo(obj) {
 function LoadHot(TYPE, GQ) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/FCCX/LoadFCXX",
+        url: getRootPath() + "/FCCX/LoadFCXX",
         dataType: "json",
         data:
         {

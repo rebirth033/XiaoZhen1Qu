@@ -121,7 +121,7 @@ function LoadSZMX(PageIndex) {
     currentIndex = parseInt(PageIndex);
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/WDXJ/LoadSZMX",
+        url: getRootPath() + "/WDXJ/LoadSZMX",
         dataType: "json",
         data:
         {
@@ -160,7 +160,7 @@ function LoadDJJDJL(PageIndex) {
     currentDJJDIndex = parseInt(PageIndex);
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/WDXJ/LoadDJJDJL",
+        url: getRootPath() + "/WDXJ/LoadDJJDJL",
         dataType: "json",
         data:
         {
@@ -265,7 +265,7 @@ function SelectSZMXBySJ(obj) {
     currentIndex = parseInt(obj.data.PageIndex);
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/WDXJ/LoadSZMX",
+        url: getRootPath() + "/WDXJ/LoadSZMX",
         dataType: "json",
         data:
         {
@@ -324,7 +324,7 @@ function SelectDJJDJLBySJ(obj) {
     currentIndex = parseInt(obj.data.PageIndex);
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/WDXJ/LoadDJJDJL",
+        url: getRootPath() + "/WDXJ/LoadDJJDJL",
         dataType: "json",
         data:
         {

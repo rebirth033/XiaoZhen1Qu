@@ -73,7 +73,7 @@ function TJJY() {
     if (ValidateWZYJ() === false) return;
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/BZZX/SaveWZJY",
+        url: getRootPath() + "/BZZX/SaveWZJY",
         dataType: "json",
         data:
         {

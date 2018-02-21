@@ -7,7 +7,7 @@
 function LoadGRZL() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/GRZL/GetGRZL",
+        url: getRootPath() + "/GRZL/GetGRZL",
         dataType: "json",
         data:
         {
@@ -26,7 +26,7 @@ function WCXG() {
     if (Validate() === false) return;
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/GRZL/MMCZ",
+        url: getRootPath() + "/GRZL/MMCZ",
         dataType: "json",
         data:
         {
@@ -154,5 +154,5 @@ function QRMMCheck() {
 }
 //调整到找回密码
 function ToZHMM() {
-    window.location.href = getRootPath() + "/Business/ZHMM/ZHMM?YHID=" + getUrlParam("YHID");
+    window.location.href = getRootPath() + "/ZHMM/ZHMM?YHID=" + getUrlParam("YHID");
 }

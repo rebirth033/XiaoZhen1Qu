@@ -32,7 +32,7 @@ function LoadDefault(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/WDFB/LoadYHFBXX",
+        url: getRootPath() + "/WDFB/LoadYHFBXX",
         dataType: "json",
         data:
         {
@@ -121,7 +121,7 @@ function Restore(JCXXID) {
         onOk: function (v) {
             $.ajax({
                 type: "POST",
-                url: getRootPath() + "/Business/WDFB/UpdateYHFBXX",
+                url: getRootPath() + "/WDFB/UpdateYHFBXX",
                 dataType: "json",
                 data:
                 {
@@ -147,7 +147,7 @@ function Delete(JCXXID) {
         onOk: function (v) {
             $.ajax({
                 type: "POST",
-                url: getRootPath() + "/Business/WDFB/UpdateYHFBXX",
+                url: getRootPath() + "/WDFB/UpdateYHFBXX",
                 dataType: "json",
                 data:
                 {
@@ -173,7 +173,7 @@ function Hide(JCXXID) {
         onOk: function (v) {
             $.ajax({
                 type: "POST",
-                url: getRootPath() + "/Business/WDFB/UpdateYHFBXX",
+                url: getRootPath() + "/WDFB/UpdateYHFBXX",
                 dataType: "json",
                 data:
                 {
@@ -197,7 +197,7 @@ function Hide(JCXXID) {
 function Update(JCXXID, LBID) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/GetIDByJCXXIDAndLBID",
+        url: getRootPath() + "/Common/GetIDByJCXXIDAndLBID",
         dataType: "json",
         data:
         {
@@ -206,7 +206,7 @@ function Update(JCXXID, LBID) {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                window.open(getRootPath() + "/Business/" + xml.Value.FBYM.split('_')[0] + "/" + xml.Value.FBYM + "?" + xml.Value.Key + "=" + xml.Value.Value + "&CLICKID=" + xml.Value.LBID);
+                window.open(getRootPath() + "/" + xml.Value.FBYM.split('_')[0] + "/" + xml.Value.FBYM + "?" + xml.Value.Key + "=" + xml.Value.Value + "&CLICKID=" + xml.Value.LBID);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

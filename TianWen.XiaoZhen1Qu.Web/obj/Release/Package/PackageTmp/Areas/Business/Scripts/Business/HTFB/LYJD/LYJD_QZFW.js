@@ -5,7 +5,7 @@
 function LoadDuoX(type, id) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/LoadCODESByTYPENAME",
+        url: getRootPath() + "/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
@@ -40,7 +40,7 @@ function LoadDuoX(type, id) {
 function LoadFWFW() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/GetDistrictXQJByXZQDM",
+        url: getRootPath() + "/Common/GetDistrictXQJByXZQDM",
         dataType: "json",
         data:
         {
@@ -75,7 +75,7 @@ function LoadFWFW() {
 function LoadJBXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/LYJD/LoadLYJD_QZFWJBXX",
+        url: getRootPath() + "/LYJD/LoadLYJD_QZFWJBXX",
         dataType: "json",
         data:
         {
@@ -117,7 +117,7 @@ function FB() {
 
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/LYJD/FBLYJD_QZFWJBXX",
+        url: getRootPath() + "/LYJD/FBLYJD_QZFWJBXX",
         dataType: "json",
         data:
         {
@@ -127,7 +127,7 @@ function FB() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                window.location.href = getRootPath() + "/Business/FBCG/FBCG?LBID=" + getUrlParam("CLICKID") + "&ID=" + xml.Value.ID + "&JCXXID=" + xml.Value.JCXXID;
+                window.location.href = getRootPath() + "/FBCG/FBCG?LBID=" + getUrlParam("CLICKID") + "&ID=" + xml.Value.ID + "&JCXXID=" + xml.Value.JCXXID;
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

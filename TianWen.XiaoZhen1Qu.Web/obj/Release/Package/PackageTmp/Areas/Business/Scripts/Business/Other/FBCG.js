@@ -10,7 +10,7 @@
     $(".div_radio").bind("click", RadioSelect);
     $(".img_radio").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_gray.png");
     $(".div_main_info_zffs_dsfptzf").bind("click", { zffs: "dsfptzf" }, SelectWYZF_YH);
-    $("#span_main_info_body_bottom_xy").bind("click", function() { window.open(getRootPath() + "/Business/BZZX/BZZX_SY_KSDH_ZHDJYXY"); });
+    $("#span_main_info_body_bottom_xy").bind("click", function() { window.open(getRootPath() + "/BZZX/BZZX_SY_KSDH_ZHDJYXY"); });
     $("#title").html("信息小镇_发布信息_发布成功");
     
     LoadDefault();
@@ -24,7 +24,7 @@ function LoadDefault() {
     $("#img_radio_zfbzf").attr("src", getRootPath() + "/Areas/Business/Css/images/radio_purple.png");
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SY/LoadJCXXByJCXXID",
+        url: getRootPath() + "/SY/LoadJCXXByJCXXID",
         data:
         {
             JCXXID: getUrlParam("JCXXID")
@@ -57,19 +57,19 @@ function GenerateQRCode() {
 }
 //管理信息
 function ToHTGL() {
-    window.location.href = getRootPath() + "/Business/HTGL/HTGL";
+    window.location.href = getRootPath() + "/HTGL/HTGL";
 }
 //预览信息
 function OpenXXXX() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SY/LoadXXLBByLBID",
+        url: getRootPath() + "/SY/LoadXXLBByLBID",
         data:
         {
             LBID: getUrlParam("LBID")
         },
         success: function (xml) {
-            window.open(getRootPath() + "/Business/" + xml.list[0].FBYM.split('_')[0] + "XX" + "/" + xml.list[0].FBYM.split('_')[0] + "XX_" + xml.list[0].FBYM.split('_')[1] + "?ID=" + getUrlParam("ID") + "&LBID=" + getUrlParam("LBID"));
+            window.open(getRootPath() + "/" + xml.list[0].FBYM.split('_')[0] + "XX" + "/" + xml.list[0].FBYM.split('_')[0] + "XX_" + xml.list[0].FBYM.split('_')[1] + "?ID=" + getUrlParam("ID") + "&LBID=" + getUrlParam("LBID"));
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
@@ -78,7 +78,7 @@ function OpenXXXX() {
 }
 //发布信息
 function FBXX() {
-    window.open(getRootPath() + "/Business/LBXZ/LBXZ");
+    window.open(getRootPath() + "/LBXZ/LBXZ");
 }
 //选择单选
 function RadioSelect() {

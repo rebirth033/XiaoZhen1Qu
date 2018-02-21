@@ -5,7 +5,7 @@
 function LoadFWFW() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/Common/GetAllDistrictByXZQDM",
+        url: getRootPath() + "/Common/GetAllDistrictByXZQDM",
         dataType: "json",
         data:
         {
