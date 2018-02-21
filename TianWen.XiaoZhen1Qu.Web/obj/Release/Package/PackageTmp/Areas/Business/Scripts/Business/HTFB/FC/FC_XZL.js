@@ -25,12 +25,10 @@ function BindClick(type) {
 function SetGQ(gq) {
     if (gq !== "出售") {
         $("#divZJ").css("display", "block");
-        $("#divKZCGS").css("display", "block");
         $("#divSJ").css("display", "none");
     }
     else {
         $("#divZJ").css("display", "none");
-        $("#divKZCGS").css("display", "none");
         $("#divSJ").css("display", "block");
     }
 }
@@ -43,11 +41,9 @@ function GetGQ() {
     });
     if (value !== "出售") {
         $("#divZJ").css("display", "block");
-        $("#divKZCGS").css("display", "block");
         $("#divSJ").css("display", "none");
     } else {
         $("#divZJ").css("display", "none");
-        $("#divKZCGS").css("display", "none");
         $("#divSJ").css("display", "block");
     }
     return value;

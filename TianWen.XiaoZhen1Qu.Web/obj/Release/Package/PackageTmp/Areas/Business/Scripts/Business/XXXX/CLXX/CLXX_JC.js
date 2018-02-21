@@ -245,7 +245,7 @@ function LoadJJRTJFY(TYPE) {
                 html += ('<div class="div_body_right_jjrtj">');
                 html += ('<p class="p_body_right_jjrtj">该经纪人推荐</p>');
                 html += ('<ul id="ul_body_right_jjrtj" class="ul_body_right_jjrtj">');
-                for (var i = 0; i < 4; i++) {
+                for (var i = 0; i < xml.list.length; i++) {
                     html += LoadJJRTJFYInfo(xml.list[i]);
                 }
                 html += ('</ul>');

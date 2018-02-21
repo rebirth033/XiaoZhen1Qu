@@ -54,7 +54,10 @@ function GetHeadNav() {
 function LoadGRXX(grxx) {
     var html = "";
     html += ('<div class="div_body_right_grxx">');
-    html += ('<img class="img_div_body_right_grxx" src="http://localhost/infotownlet/Areas/Business/Photos/2718ced3-996d-427d-925d-a08e127cc0b8/GRZL/TX.jpg?j=0.3236891655295969" />');
+    if (grxx.TX === null)
+        html += ('<img class="img_div_body_right_grxx" src="' + getRootPath() + "/Areas/Business/Css/images/default_tx.png?j=" + Math.random() + '" />');
+        else
+        html += ('<img class="img_div_body_right_grxx"  src="' + getRootPath() + "/Areas/Business/Photos/" + grxx.YHID + "/GRZL/TX.jpg?j=" + Math.random() + '" />');
     html += ('<p class="p_div_body_right_yhm">' + grxx.YHM + '</p>');
     html += ('<p class="p_div_body_right_zcsj">注册时间：' + grxx.SQRQ.ToString("yyyy年MM月dd日") + '</p>');
     html += ('<div class="div_div_body_right_yyzz">');

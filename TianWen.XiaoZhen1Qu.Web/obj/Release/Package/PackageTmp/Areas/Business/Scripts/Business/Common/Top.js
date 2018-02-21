@@ -39,7 +39,6 @@ function LoadUser() {
         html += '<li class="li_top_right_yhm">我的信息</li>';
         html += '<li class="li_top_right_yhm">我的账户</li>';
         html += '<li class="li_top_right_yhm">我的资金</li>';
-        //html += '<li class="li_top_right_yhm" onclick="ShowSHGJ()">生活工具</li>';
         html += '<li class="li_top_right_yhm" onclick="Exit()">退出</li>';
         html += '</ul>';
         html += '</div>';

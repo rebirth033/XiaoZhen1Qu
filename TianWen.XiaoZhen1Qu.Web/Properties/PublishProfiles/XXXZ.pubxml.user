@@ -6,7 +6,7 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>F:\信息小镇发布</_PublishTargetUrl>
+    <_PublishTargetUrl>D:\信息小镇发布</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="Areas/Business/Ashx/GenerateQRCode.ashx">
@@ -85,7 +85,7 @@
       <publishTime>12/15/2017 15:29:59</publishTime>
     </File>
     <File Include="Areas/Business/Css/Common/Head.css">
-      <publishTime>02/06/2018 15:26:31</publishTime>
+      <publishTime>02/09/2018 20:43:59</publishTime>
     </File>
     <File Include="Areas/Business/Css/Common/HTFB_Common.css">
       <publishTime>02/05/2018 15:12:26</publishTime>
@@ -1531,7 +1531,7 @@
       <publishTime>02/02/2018 17:12:10</publishTime>
     </File>
     <File Include="Areas/Business/Css/SY/SY.css">
-      <publishTime>02/05/2018 08:57:54</publishTime>
+      <publishTime>02/10/2018 11:25:45</publishTime>
     </File>
     <File Include="Areas/Business/Css/SY/ZPSY.css">
       <publishTime>02/01/2018 16:28:52</publishTime>
@@ -2257,7 +2257,7 @@
       <publishTime>01/18/2018 10:53:25</publishTime>
     </File>
     <File Include="Areas/Business/Scripts/Business/Common/Check.js">
-      <publishTime>12/15/2017 15:22:48</publishTime>
+      <publishTime>02/10/2018 10:34:02</publishTime>
     </File>
     <File Include="Areas/Business/Scripts/Business/Common/Common.js">
       <publishTime>02/08/2018 11:08:24</publishTime>
@@ -2290,7 +2290,7 @@
       <publishTime>02/08/2018 10:06:16</publishTime>
     </File>
     <File Include="Areas/Business/Scripts/Business/Common/Top.js">
-      <publishTime>02/06/2018 08:27:40</publishTime>
+      <publishTime>02/10/2018 10:43:07</publishTime>
     </File>
     <File Include="Areas/Business/Scripts/Business/Common/Validate.js">
       <publishTime>02/06/2018 08:27:40</publishTime>
@@ -2299,7 +2299,7 @@
       <publishTime>12/22/2017 15:57:41</publishTime>
     </File>
     <File Include="Areas/Business/Scripts/Business/Common/XXXX_Common.js">
-      <publishTime>02/08/2018 11:22:53</publishTime>
+      <publishTime>02/10/2018 10:34:02</publishTime>
     </File>
     <File Include="Areas/Business/Scripts/Business/Common/XZQ.js">
       <publishTime>01/18/2018 10:53:25</publishTime>
@@ -3211,13 +3211,13 @@
       <publishTime>02/05/2018 10:41:46</publishTime>
     </File>
     <File Include="Areas/Business/Scripts/Business/HTFB/FC/FC_ESF.js">
-      <publishTime>12/28/2017 14:25:13</publishTime>
+      <publishTime>02/10/2018 10:34:02</publishTime>
     </File>
     <File Include="Areas/Business/Scripts/Business/HTFB/FC/FC_ESFYZ.js">
       <publishTime>12/27/2017 16:35:56</publishTime>
     </File>
     <File Include="Areas/Business/Scripts/Business/HTFB/FC/FC_HZF.js">
-      <publishTime>02/05/2018 10:38:11</publishTime>
+      <publishTime>02/10/2018 10:34:02</publishTime>
     </File>
     <File Include="Areas/Business/Scripts/Business/HTFB/FC/FC_HZFYZ.js">
       <publishTime>12/27/2017 08:27:58</publishTime>
@@ -3235,13 +3235,13 @@
       <publishTime>01/02/2018 08:33:47</publishTime>
     </File>
     <File Include="Areas/Business/Scripts/Business/HTFB/FC/FC_XZL.js">
-      <publishTime>01/31/2018 15:02:20</publishTime>
+      <publishTime>02/10/2018 23:02:50</publishTime>
     </File>
     <File Include="Areas/Business/Scripts/Business/HTFB/FC/FC_XZLYZ.js">
-      <publishTime>01/02/2018 08:33:47</publishTime>
+      <publishTime>02/10/2018 23:03:46</publishTime>
     </File>
     <File Include="Areas/Business/Scripts/Business/HTFB/FC/FC_ZZF.js">
-      <publishTime>02/05/2018 10:29:52</publishTime>
+      <publishTime>02/10/2018 10:34:02</publishTime>
     </File>
     <File Include="Areas/Business/Scripts/Business/HTFB/FC/FC_ZZFYZ.js">
       <publishTime>02/05/2018 10:29:46</publishTime>
@@ -4264,7 +4264,7 @@
       <publishTime>01/24/2018 10:29:57</publishTime>
     </File>
     <File Include="Areas/Business/Scripts/Business/SY/SY.js">
-      <publishTime>02/06/2018 08:27:40</publishTime>
+      <publishTime>02/12/2018 22:18:36</publishTime>
     </File>
     <File Include="Areas/Business/Scripts/Business/SY/ZPSY.js">
       <publishTime>01/24/2018 10:29:57</publishTime>
@@ -4291,7 +4291,7 @@
       <publishTime>02/08/2018 11:34:55</publishTime>
     </File>
     <File Include="Areas/Business/Scripts/Business/XXXX/CLXX/CLXX_JC.js">
-      <publishTime>02/08/2018 11:34:55</publishTime>
+      <publishTime>02/10/2018 22:27:39</publishTime>
     </File>
     <File Include="Areas/Business/Scripts/Business/XXXX/CLXX/CLXX_JX.js">
       <publishTime>02/08/2018 11:34:55</publishTime>
@@ -4417,7 +4417,7 @@
       <publishTime>02/08/2018 11:34:55</publishTime>
     </File>
     <File Include="Areas/Business/Scripts/Business/XXXX/FCXX/FCXX_HZF.js">
-      <publishTime>02/08/2018 11:34:55</publishTime>
+      <publishTime>02/10/2018 22:27:43</publishTime>
     </File>
     <File Include="Areas/Business/Scripts/Business/XXXX/FCXX/FCXX_SP.js">
       <publishTime>02/08/2018 11:34:55</publishTime>
@@ -4429,7 +4429,7 @@
       <publishTime>02/08/2018 11:34:55</publishTime>
     </File>
     <File Include="Areas/Business/Scripts/Business/XXXX/FCXX/FCXX_ZZF.js">
-      <publishTime>02/08/2018 11:34:55</publishTime>
+      <publishTime>02/10/2018 10:34:02</publishTime>
     </File>
     <File Include="Areas/Business/Scripts/Business/XXXX/HQSYXX/HQSYXX_CZZX.js">
       <publishTime>02/08/2018 11:34:55</publishTime>
@@ -5719,7 +5719,7 @@
       <publishTime>09/05/2017 14:37:06</publishTime>
     </File>
     <File Include="Areas/Business/Scripts/UEditor/third-party/video-js/video.dev.js">
-      <publishTime>10/19/2017 18:50:05</publishTime>
+      <publishTime>02/10/2018 22:27:40</publishTime>
     </File>
     <File Include="Areas/Business/Scripts/UEditor/third-party/video-js/video.js">
       <publishTime>09/05/2017 14:37:06</publishTime>
@@ -7087,10 +7087,10 @@
       <publishTime>02/01/2018 10:14:46</publishTime>
     </File>
     <File Include="Areas/Business/Views/Shared/CXLB.cshtml">
-      <publishTime>02/06/2018 15:24:10</publishTime>
+      <publishTime>02/12/2018 21:16:38</publishTime>
     </File>
     <File Include="Areas/Business/Views/Shared/HTFB.cshtml">
-      <publishTime>02/06/2018 14:57:33</publishTime>
+      <publishTime>02/10/2018 10:34:02</publishTime>
     </File>
     <File Include="Areas/Business/Views/Shared/QT.cshtml">
       <publishTime>02/05/2018 10:18:56</publishTime>
@@ -7480,37 +7480,37 @@
       <publishTime>12/18/2017 10:10:35</publishTime>
     </File>
     <File Include="Areas/Business/Views/SY/CLSY.cshtml">
-      <publishTime>01/30/2018 17:40:35</publishTime>
+      <publishTime>02/12/2018 21:16:38</publishTime>
     </File>
     <File Include="Areas/Business/Views/SY/CWSY.cshtml">
-      <publishTime>02/05/2018 08:57:55</publishTime>
+      <publishTime>02/12/2018 21:16:38</publishTime>
     </File>
     <File Include="Areas/Business/Views/SY/ESSY.cshtml">
-      <publishTime>01/30/2018 17:40:35</publishTime>
+      <publishTime>02/12/2018 21:16:38</publishTime>
     </File>
     <File Include="Areas/Business/Views/SY/FCSY.cshtml">
-      <publishTime>01/30/2018 17:40:35</publishTime>
+      <publishTime>02/12/2018 21:16:38</publishTime>
     </File>
     <File Include="Areas/Business/Views/SY/JYPXSY.cshtml">
-      <publishTime>01/30/2018 17:40:35</publishTime>
+      <publishTime>02/12/2018 21:16:38</publishTime>
     </File>
     <File Include="Areas/Business/Views/SY/PFCGSY.cshtml">
-      <publishTime>02/02/2018 14:52:43</publishTime>
+      <publishTime>02/12/2018 21:16:38</publishTime>
     </File>
     <File Include="Areas/Business/Views/SY/SHFWSY.cshtml">
-      <publishTime>02/05/2018 08:57:55</publishTime>
+      <publishTime>02/12/2018 21:16:38</publishTime>
     </File>
     <File Include="Areas/Business/Views/SY/SWFWSY.cshtml">
-      <publishTime>01/30/2018 17:40:35</publishTime>
+      <publishTime>02/12/2018 21:16:38</publishTime>
     </File>
     <File Include="Areas/Business/Views/SY/SY.cshtml">
-      <publishTime>02/06/2018 15:20:18</publishTime>
+      <publishTime>02/12/2018 21:16:42</publishTime>
     </File>
     <File Include="Areas/Business/Views/SY/ZPSY.cshtml">
-      <publishTime>02/01/2018 16:54:48</publishTime>
+      <publishTime>02/12/2018 21:16:39</publishTime>
     </File>
     <File Include="Areas/Business/Views/SY/ZSJMSY.cshtml">
-      <publishTime>02/02/2018 16:52:55</publishTime>
+      <publishTime>02/12/2018 21:16:39</publishTime>
     </File>
     <File Include="Areas/Business/Views/WDFB/WDFB.cshtml">
       <publishTime>01/18/2018 10:53:25</publishTime>
@@ -7876,7 +7876,10 @@
       <publishTime>06/13/2017 15:09:38</publishTime>
     </File>
     <File Include="bin/Microsoft.Web.Infrastructure.dll">
-      <publishTime>06/13/2017 15:09:39</publishTime>
+      <publishTime>01/05/2011 15:45:38</publishTime>
+    </File>
+    <File Include="bin/MySql.Data.dll">
+      <publishTime>06/17/2016 18:28:04</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
       <publishTime>09/05/2017 14:37:06</publishTime>
@@ -7936,7 +7939,7 @@
       <publishTime>07/03/2017 18:19:29</publishTime>
     </File>
     <File Include="bin/TianWen.XiaoZhen1Qu.dll">
-      <publishTime>02/08/2018 15:33:54</publishTime>
+      <publishTime>02/12/2018 22:36:16</publishTime>
     </File>
     <File Include="bin/TianWen.XiaoZhen1Qu.Entities.dll">
       <publishTime>02/08/2018 15:33:53</publishTime>
@@ -7945,7 +7948,7 @@
       <publishTime>02/08/2018 15:33:53</publishTime>
     </File>
     <File Include="bin/TianWen.XiaoZhen1Qu.Web.dll">
-      <publishTime>02/08/2018 15:51:45</publishTime>
+      <publishTime>02/12/2018 22:36:17</publishTime>
     </File>
     <File Include="Config/log4net.Config">
       <publishTime>09/05/2017 14:37:06</publishTime>
@@ -7999,7 +8002,7 @@
       <publishTime>06/13/2017 15:09:38</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>02/08/2018 15:34:00</publishTime>
+      <publishTime>02/12/2018 22:36:23</publishTime>
     </File>
   </ItemGroup>
 </Project>

@@ -16,11 +16,13 @@ function GetDuoX(type) {
 }
 //设置多选
 function SetDuoX(type, lbs) {
-    var lbarray = lbs.split(',');
-    for (var i = 0; i < lbarray.length; i++) {
-        $(".li" + type).each(function () {
-            if ($(this).find("label")[0].innerHTML.indexOf(lbarray[i]) !== -1)
-                $(this).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_purple.png");
-        });
+    if (lbs !== "") {
+        var lbarray = lbs.split(',');
+        for (var i = 0; i < lbarray.length; i++) {
+            $(".li" + type).each(function () {
+                if ($(this).find("label")[0].innerHTML.indexOf(lbarray[i]) !== -1)
+                    $(this).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_purple.png");
+            });
+        }
     }
 }

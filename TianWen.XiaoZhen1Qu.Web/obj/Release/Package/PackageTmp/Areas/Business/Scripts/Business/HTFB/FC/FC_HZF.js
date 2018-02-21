@@ -332,7 +332,7 @@ function FB() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                window.location.href = getRootPath() + "/Business/FBCG/FBCG?YHID=" + getUrlParam("YHID");
+                window.location.href = getRootPath() + "/Business/FBCG/FBCG?LBID=" + getUrlParam("CLICKID") + "&ID=" + xml.Value.ID + "&JCXXID=" + xml.Value.JCXXID;
             } else {
                 if (xml.Type === 1) {
                     $("#YZM").css("border-color", "#F2272D");

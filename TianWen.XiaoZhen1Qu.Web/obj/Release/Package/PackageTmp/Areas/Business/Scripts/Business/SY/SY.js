@@ -18,7 +18,7 @@ function GetHeadNav() {
 }
 //发布信息
 function FBXX() {
-    window.open(getRootPath() + "/Business/LBXZ/LBXZ");
+    window.open(getRootPath() + "/LBXZ/LBXZ");
 }
 //加载默认
 function LoadDefault() {
@@ -45,13 +45,13 @@ function LoadHeadSearch() {
 }
 //搜索栏备注导航
 function OpenSS(DL, XL, ID) {
-    window.open(getRootPath() + "/Business/" + DL + "/" + XL + "?LBID=" + ID);
+    window.open(getRootPath() + "/" + DL + "/" + XL + "?LBID=" + ID);
 }
 //打开详细页面
 function OpenXXXX(LBID, JCXXID) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/SY/LoadLBByJCXX",
+        url: getRootPath() + "/SY/LoadLBByJCXX",
         dataType: "json",
         data:
         {
@@ -61,16 +61,16 @@ function OpenXXXX(LBID, JCXXID) {
         success: function (xml) {
             if (xml.Result === 1) {
                 if (LBID === 19) {
-                    window.open(getRootPath() + "/Business/FCXX/FCXX_ZZF?ID=" + xml.id);
+                    window.open(getRootPath() + "/FCXX/FCXX_ZZF?ID=" + xml.id);
                 }
                 if (LBID === 1902) {
-                    window.open(getRootPath() + "/Business/FCXX/FCXX_HZF?ID=" + xml.id);
+                    window.open(getRootPath() + "/FCXX/FCXX_HZF?ID=" + xml.id);
                 }
                 if (LBID === 20) {
-                    window.open(getRootPath() + "/Business/FCXX/FCXX_SP?ID=" + xml.id);
+                    window.open(getRootPath() + "/FCXX/FCXX_SP?ID=" + xml.id);
                 }
                 if (LBID === 21) {
-                    window.open(getRootPath() + "/Business/FCXX/FCXX_ESF?ID=" + xml.id);
+                    window.open(getRootPath() + "/FCXX/FCXX_ESF?ID=" + xml.id);
                 }
             }
         },
@@ -242,11 +242,11 @@ function OpenCXLB(lbid, lburl, condition) {
 }
 //打开二级首页
 function ToEJSY(type) {
-    window.open(getRootPath() + "/Business/SY/" + type);
+    window.open(getRootPath() + "/SY/" + type);
 }
 //登录
 function OpenDL() {
-    window.location.href = getRootPath() + "/Business/YHDL/YHDL?To=SY";
+    window.location.href = getRootPath() + "/YHDL/YHDL?To=SY";
 }
 //拖动滚动条或滚动鼠标轮
 window.onscroll = function () {
@@ -260,7 +260,7 @@ window.onscroll = function () {
 function Exit() {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/Business/YHDL/Exit",
+        url: getRootPath() + "/YHDL/Exit",
         dataType: "json",
         data: {
 

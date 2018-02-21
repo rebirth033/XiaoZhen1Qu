@@ -23,7 +23,7 @@ function LoadDefault() {
         dataType: "json",
         data:
         {
-            TYPE: getUrlParam("TYPE"),
+            TYPE: "FCXX_ZZF",
             ID: getUrlParam("ID")
         },
         success: function (xml) {
@@ -32,9 +32,9 @@ function LoadDefault() {
                 LoadFYXQ(xml.list[0], xml.BCMSString);
                 LoadXQXX(xml.list[0]);
                 LoadDTXX(xml.list[0].XQMC);
-                LoadCNXH(getUrlParam("TYPE"));
+                LoadCNXH("FCXX_ZZF");
                 LoadGRXX(xml.grxxlist[0]);
-                LoadJJRTJFY(getUrlParam("TYPE"));
+                LoadJJRTJFY("FCXX_ZZF");
                 HandlerTPXX();
             }
         },
@@ -51,7 +51,8 @@ function LoadJBXX(obj) {
     html += ('<p class="p_div_body_left_head_ll">' + obj.ZXGXSJ.ToString('yyyy年MM月dd日') + '  ' + obj.LLCS + '次浏览 <span id="span_div_body_left_head_jb" class="span_div_body_left_head_jb">举报</span><span class="span_div_body_left_head_split">|</span><span id="span_div_body_left_head_sc" onclick="SCXX(\'' + obj.JCXXID + '\')" class="span_div_body_left_head_sc">收藏</span></p>');
     html += ('</div>');
     html += ('<div class="div_body_left_body">');
-    html += ('<div class="div_body_left_body_left">');    html += ('<div class="div_body_left_body_left_img">');
+    html += ('<div class="div_body_left_body_left">');
+    html += ('<div class="div_body_left_body_left_img">');
     html += ('<img id="img_body_left_body_left_show" class="img_body_left_body_left_show" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('</div>');
     html += ('<span onclick="LeftImg()" class="div_body_left_body_left_list_an" style="margin-right: 10px;"><</span>');

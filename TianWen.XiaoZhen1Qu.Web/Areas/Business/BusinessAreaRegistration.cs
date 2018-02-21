@@ -20,8 +20,8 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business
         {
             context.MapRoute(
                 "Business_Default",
-                "Business/{controller}/{action}/{id}",
-                new { action = "Index", id = UrlParameter.Optional }
+                "{controller}/{action}/{id}",
+                new { controller = "sy", action = "sy", id = UrlParameter.Optional }
             );
         }
     }
