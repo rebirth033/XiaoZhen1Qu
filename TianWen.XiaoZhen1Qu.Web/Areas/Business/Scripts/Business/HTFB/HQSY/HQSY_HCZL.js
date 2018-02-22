@@ -150,6 +150,7 @@ function GoToBQ(tag) {
 //选择款式
 function SelectTCPP(pp) {
     $("#spanTCPP").html(pp);
+    ValidateSelect("HCZLTCPP", "TCPP", "忘记选择头车品牌啦");
 }
 //关闭选择品牌框
 function CloseTCPP() {
@@ -220,6 +221,7 @@ function GoToBQ(tag) {
 //选择款式
 function SelectGCPP(pp) {
     $("#spanGCPP").html(pp);
+    ValidateSelect("HCZLGCPP", "GCPP", "忘记选择跟车品牌啦");
 }
 //关闭选择品牌框
 function CloseGCPP() {
@@ -276,7 +278,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "TCCZ", "'" + GetDX("TCCZ") + "'");
     obj = jsonObj.AddJson(obj, "MFTGCH", "'" + GetDX("MFTGCH") + "'");
-    obj = jsonObj.AddJson(obj, "tcys", "'" + Gettcys("tcys") + "'");
+    obj = jsonObj.AddJson(obj, "tcys", "'" + GetTCYS("tcys") + "'");
     obj = jsonObj.AddJson(obj, "GCYS", "'" + GetGCYS("GCYS") + "'");
 
     if (getUrlParam("ID") !== null)

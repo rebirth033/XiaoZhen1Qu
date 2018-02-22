@@ -6,7 +6,7 @@
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "LB") {
-            LoadCODESByTYPENAME("体育培训类别", "LB", "CODES_JYPX");
+            LoadCODESByTYPENAME("体育培训类别", "LB", "CODES_JYPX", Bind, "OUTLB", "LB", "");
         }
     });
 }
@@ -37,7 +37,7 @@ function LoadDuoX(type, id) {
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-                $(".li" + id).bind("click", function () { ValidateCheck(id, "忘记选择小类啦"); });
+                $(".li" + id).bind("click", function () { ValidateCheck(id, "忘记选择类别啦"); });
                 if (xml.list.length === 0)
                     $("#div" + id).css("display", "none");
                 else
@@ -94,7 +94,6 @@ function LoadXL(lbmc, xl) {
                 html += "</ul>";
                 $("#divXLText").html(html);
                 $(".img_XL").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-                $(".liXL").bind("click", function () { ValidateCheck("XL", "忘记选择小类啦"); });
                 if (xml.list.length === 0)
                     $("#divXL").css("display", "none");
                 else

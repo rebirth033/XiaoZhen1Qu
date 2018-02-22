@@ -635,7 +635,7 @@ insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENT
 values (241, '婚庆公司价格', '15000-20000元', '4', 4, null, null, null, null, null, null);
 
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
-values (241, '婚庆公司价格', '20000-30000元', '5', 5, null, null, null, null, null, null);
+values (2411, '婚庆公司价格', '20000-30000元', '5', 5, null, null, null, null, null, null);
 
 insert into codes_hqsy (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITION, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
 values (243, '婚庆公司价格', '30000-50000元', '6', 6, null, null, null, null, null, null);
