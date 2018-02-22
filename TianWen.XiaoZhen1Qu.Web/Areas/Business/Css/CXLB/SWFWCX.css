@@ -22,7 +22,7 @@
 .div_condition .div_condition_body .ul_condition_body .span_sj{ font-size: 12px;}
 .div_condition_toggle{ width: 1200px;height: 30px;}
 .div_condition_toggle .span_condition_toggle{ color: #bc6ba6;width: 80px;height: 30px;background-color: transparent;display: inline-block;float: right;cursor: pointer;}
-.div_condition_toggle .span_condition_toggle .i_condition_tottle{width: 12px;height: 12px;display: inline-block;background-image: url(../images/head_nav_down1.png);margin-left: 5px;}
+.div_condition_toggle .span_condition_toggle .i_condition_tottle{width: 12px;height: 12px;display: inline-block;background-image: url(../images/head_nav_down.png);margin-left: 5px;}
 .div_condition_select{background-color: #ffffff;display: none;width: 1200px;height: 40px;border-bottom: 1px solid #cccccc;border-right: 1px solid #cccccc;border-left: 1px solid #cccccc;padding-top: 8px;}
 .div_condition_select .ul_condition_select{display: block;width: 100%;height: 40px;padding: 0;}
 .div_condition_select .ul_condition_select .li_condition_select_first{ font-weight: 700;color: #999999;float: left;font-size: 14px;display: inline-block;width: 80px;height: 100%;padding-left: 20px;}

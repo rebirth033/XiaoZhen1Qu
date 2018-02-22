@@ -1,6 +1,7 @@
 ﻿var curIndex = 1; //当前index
 var temp = 0;
 $(document).ready(function () {
+    $("#cnzz_stat_icon_1272914407").css("display", "none");
     $(".div_head_nav").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
     $(".div_body").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
     $(".div_foot").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
