@@ -3,7 +3,7 @@
 });
 //类别
 function ValidateLB() {
-    if (!ValidateCheck("SCSBLB", "忘记选择商超设备啦")) return false;
+    if (!ValidateCheck("OUTLB", "忘记选择商超设备啦")) return false;
     return true;
 }
 //验证所有

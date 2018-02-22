@@ -1,6 +1,5 @@
 ﻿$(document).ready(function () {
     LoadDuoX("灯具照明类别", "OUTLB");
-    LoadFWFW();
 });
 //加载多选
 function LoadDuoX(type, id) {
@@ -29,6 +28,8 @@ function LoadDuoX(type, id) {
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".li" + id).bind("click", function () { ValidateCheck("OUTLB", "忘记选择类别啦"); });
+                LoadFWFW();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
