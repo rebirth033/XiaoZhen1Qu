@@ -94,7 +94,6 @@ D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu\bin\Debug\
 D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu\bin\Debug\System.Web.WebPages.Razor.dll
 D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu\bin\Debug\System.Web.WebPages.dll
 D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu\bin\Debug\Microsoft.Web.Infrastructure.dll
-D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu\bin\Debug\Common.Logging.dll
 D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu\bin\Debug\System.Web.WebPages.Deployment.dll
 D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu\bin\Debug\TianWen.XiaoZhen1Qu.Entities.pdb
 D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu\bin\Debug\TianWen.XiaoZhen1Qu.Interface.pdb
@@ -125,3 +124,5 @@ F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu\
 F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu\obj\Debug\TianWen.XiaoZhen1Qu.pdb
 D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu\bin\Debug\MySql.Data.dll
 D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu\bin\Debug\MySql.Data.xml
+D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu\bin\Debug\TianWen.Framework.pdb
+D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu\bin\Debug\Common.Logging.dll

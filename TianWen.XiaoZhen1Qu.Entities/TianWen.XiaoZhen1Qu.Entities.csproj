@@ -34,6 +34,9 @@
     <Reference Include="FluentNHibernate">
       <HintPath>..\GlobalBin\FluentNHibernate.dll</HintPath>
     </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\GlobalBin\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="NHibernate">
       <HintPath>..\GlobalBin\NHibernate.dll</HintPath>
     </Reference>

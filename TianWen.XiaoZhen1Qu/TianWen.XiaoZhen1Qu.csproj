@@ -49,9 +49,6 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="TianWen.Framework">
-      <HintPath>..\GlobalBin\TianWen.Framework.dll</HintPath>
-    </Reference>
     <Reference Include="TianWen.Nhibernate, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\GlobalBin\TianWen.Nhibernate.dll</HintPath>
@@ -111,6 +108,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\TianWen.Framework\TianWen.Framework.csproj">
+      <Project>{8626dc66-af76-4afd-afa7-fd6aeefee1d4}</Project>
+      <Name>TianWen.Framework</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TianWen.XiaoZhen1Qu.Entities\TianWen.XiaoZhen1Qu.Entities.csproj">
       <Project>{ea6742ca-453b-405e-aef5-be9363a3e4dd}</Project>
       <Name>TianWen.XiaoZhen1Qu.Entities</Name>

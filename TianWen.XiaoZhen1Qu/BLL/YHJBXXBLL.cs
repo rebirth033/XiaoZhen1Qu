@@ -12,7 +12,6 @@ using System.Drawing.Imaging;
 using System.Linq;
 using System.Net.Mail;
 using System.Text;
-using Microsoft.SqlServer.Server;
 
 namespace TianWen.XiaoZhen1Qu.BLL
 {
@@ -20,7 +19,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
     {
         public DataTable GetYHJBXXListByPage()
         {
-            string sql = "select * from YHJBXX";
+            string sql = "SELECT * FROM YHJBXX";
             return DAO.GetDataTable(sql);
         }
 
@@ -30,12 +29,14 @@ namespace TianWen.XiaoZhen1Qu.BLL
 
             if (o1 != null && int.Parse(o1.ToString()) > 0)
             {
+                LoggerManager.Info("用户创建", "用户：" + yhjbxx.YHM + "用户名已存在");
                 return new { Result = EnResultType.Failed, Message = "用户名已存在!", Type = 2 };
             }
             o1 = DAO.Repository.ExecuteScalar(string.Format("SELECT COUNT(1) FROM YHJBXX WHERE SJ='{0}'", yhjbxx.SJ));
 
             if (o1 != null && int.Parse(o1.ToString()) > 0)
             {
+                LoggerManager.Info("用户创建", "手机号：" + yhjbxx.SJ + "该手机号已注册过");
                 return new { Result = EnResultType.Failed, Message = "该手机号已注册过!", Type = 4 };
             }
             using (ITransaction transaction = DAO.BeginTransaction())
@@ -47,12 +48,13 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     DAO.Save(yhjbxx);
                     DAO.Repository.Session.Flush();
                     transaction.Commit();
+                    LoggerManager.Info("用户创建", "用户：" + yhjbxx.YHM + "创建成功");
                     return new { Result = EnResultType.Success, Message = "保存成功!", Value = new { YHID = yhjbxx.YHID } };
                 }
                 catch (Exception ex)
                 {
                     transaction.Rollback();
-                    LoggerManager.Error("YHJBXXBLL", "保存失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                    LoggerManager.Info("用户创建", "用户：" + yhjbxx.YHM + "创建失败");
                     return new
                     {
                         Result = EnResultType.Failed,

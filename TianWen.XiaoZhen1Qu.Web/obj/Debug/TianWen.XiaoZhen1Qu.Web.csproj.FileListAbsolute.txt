@@ -196,3 +196,4 @@ F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.
 F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Web\obj\Debug\TianWen.XiaoZhen1Qu.Web.dll
 F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Web\obj\Debug\TianWen.XiaoZhen1Qu.Web.pdb
 F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Web\bin\Microsoft.Web.Infrastructure.xml
+D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\TianWen.Framework.pdb
