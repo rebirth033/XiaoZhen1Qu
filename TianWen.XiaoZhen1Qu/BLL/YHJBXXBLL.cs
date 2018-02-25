@@ -79,10 +79,12 @@ namespace TianWen.XiaoZhen1Qu.BLL
                         DAO.Update(yhjbxx);
                         DAO.Repository.Session.Flush();
                         transaction.Commit();
+                        LoggerManager.Info("修改密码", "用户：" + yhjbxx.YHM + "修改密码成功");
                         return new { Result = EnResultType.Success, Message = "修改成功", Value = new { YHID = yhjbxx.YHID } };
                     }
                     else
                     {
+                        LoggerManager.Info("修改密码", "手机号：" + SJ + "修改密码失败,手机号为空或不存在");
                         return new { Result = EnResultType.Failed, Message = "手机号为空或不存在" };
                     }
 
@@ -91,6 +93,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 {
                     transaction.Rollback();
                     LoggerManager.Error("YHJBXXBLL", "修改失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                    LoggerManager.Info("修改密码", "手机号：" + SJ + "修改密码失败【" + ex.InnerException + "】");
                     return new
                     {
                         Result = EnResultType.Failed,
@@ -114,10 +117,12 @@ namespace TianWen.XiaoZhen1Qu.BLL
                         DAO.Update(yhjbxx);
                         DAO.Repository.Session.Flush();
                         transaction.Commit();
+                        LoggerManager.Info("修改用户名", "用户：" + YHM + "修改用户名成功");
                         return new { Result = EnResultType.Success, Message = "修改成功", Value = new { YHID = yhjbxx.YHID } };
                     }
                     else
                     {
+                        LoggerManager.Info("修改用户名", "用户：" + YHM + "修改用户名失败,用户不存在");
                         return new { Result = EnResultType.Failed, Message = "用户不存在" };
                     }
 
@@ -125,7 +130,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 catch (Exception ex)
                 {
                     transaction.Rollback();
-                    LoggerManager.Error("YHJBXXBLL", "修改失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                    LoggerManager.Info("修改用户名", "用户：" + YHM + "修改用户名失败:" + ex.InnerException);
                     return new
                     {
                         Result = EnResultType.Failed,
@@ -149,10 +154,12 @@ namespace TianWen.XiaoZhen1Qu.BLL
                         DAO.Update(yhjbxx);
                         DAO.Repository.Session.Flush();
                         transaction.Commit();
+                        LoggerManager.Info("修改QQ", "用户：" + yhjbxx.YHM + "修改QQ成功");
                         return new { Result = EnResultType.Success, Message = "修改成功", Value = new { YHID = yhjbxx.YHID } };
                     }
                     else
                     {
+                        LoggerManager.Info("修改QQ", "用户：" + YHID + "修改QQ失败,用户不存在");
                         return new { Result = EnResultType.Failed, Message = "用户不存在" };
                     }
 
@@ -160,7 +167,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 catch (Exception ex)
                 {
                     transaction.Rollback();
-                    LoggerManager.Error("YHJBXXBLL", "修改失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                    LoggerManager.Info("修改QQ", "用户：" + YHID + "修改QQ失败:" + ex.InnerException);
                     return new
                     {
                         Result = EnResultType.Failed,
@@ -170,7 +177,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
-        //修改手机号
+        //绑定手机号
         public object UpdateSJ(string YHID, string SJ)
         {
             using (ITransaction transaction = DAO.BeginTransaction())
@@ -184,10 +191,12 @@ namespace TianWen.XiaoZhen1Qu.BLL
                         DAO.Update(yhjbxx);
                         DAO.Repository.Session.Flush();
                         transaction.Commit();
+                        LoggerManager.Info("绑定手机号", "用户：" + YHID + "绑定手机号成功");
                         return new { Result = EnResultType.Success, Message = "绑定成功", Value = new { YHID = yhjbxx.YHID } };
                     }
                     else
                     {
+                        LoggerManager.Info("绑定手机号", "用户：" + YHID + "绑定手机号失败,用户不存在");
                         return new { Result = EnResultType.Failed, Message = "用户不存在" };
                     }
 
@@ -195,7 +204,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 catch (Exception ex)
                 {
                     transaction.Rollback();
-                    LoggerManager.Error("YHJBXXBLL", "绑定失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                    LoggerManager.Info("绑定手机号", "用户：" + YHID + "绑定手机号失败:" + ex.InnerException);
                     return new
                     {
                         Result = EnResultType.Failed,
@@ -219,10 +228,12 @@ namespace TianWen.XiaoZhen1Qu.BLL
                         DAO.Update(yhjbxx);
                         DAO.Repository.Session.Flush();
                         transaction.Commit();
+                        LoggerManager.Info("修改微博", "用户：" + YHID + "修改微博成功");
                         return new { Result = EnResultType.Success, Message = "修改成功", Value = new { YHID = yhjbxx.YHID } };
                     }
                     else
                     {
+                        LoggerManager.Info("修改微博", "用户：" + YHID + "修改微博失败,用户不存在");
                         return new { Result = EnResultType.Failed, Message = "用户不存在" };
                     }
 
@@ -230,7 +241,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 catch (Exception ex)
                 {
                     transaction.Rollback();
-                    LoggerManager.Error("YHJBXXBLL", "修改失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                    LoggerManager.Info("修改微博", "用户：" + YHID + "修改微博失败：" + ex.InnerException);
                     return new
                     {
                         Result = EnResultType.Failed,
@@ -254,10 +265,12 @@ namespace TianWen.XiaoZhen1Qu.BLL
                         DAO.Update(yhjbxx);
                         DAO.Repository.Session.Flush();
                         transaction.Commit();
+                        LoggerManager.Info("修改邮箱", "用户：" + YHID + "修改邮箱成功");
                         return new { Result = EnResultType.Success, Message = "修改成功", Value = new { YHID = yhjbxx.YHID } };
                     }
                     else
                     {
+                        LoggerManager.Info("修改邮箱", "用户：" + YHID + "修改邮箱失败,用户不存在");
                         return new { Result = EnResultType.Failed, Message = "用户不存在" };
                     }
 
@@ -265,7 +278,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 catch (Exception ex)
                 {
                     transaction.Rollback();
-                    LoggerManager.Error("YHJBXXBLL", "修改失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                    LoggerManager.Info("修改邮箱", "用户：" + YHID + "修改邮箱失败:" + ex.InnerException);
                     return new
                     {
                         Result = EnResultType.Failed,
@@ -289,10 +302,12 @@ namespace TianWen.XiaoZhen1Qu.BLL
                         DAO.Update(yhjbxx);
                         DAO.Repository.Session.Flush();
                         transaction.Commit();
+                        LoggerManager.Info("修改微信", "用户：" + YHID + "修改微信成功");
                         return new { Result = EnResultType.Success, Message = "修改成功", Value = new { YHID = yhjbxx.YHID } };
                     }
                     else
                     {
+                        LoggerManager.Info("修改微信", "用户：" + YHID + "修改微信失败,用户不存在");
                         return new { Result = EnResultType.Failed, Message = "用户不存在" };
                     }
 
@@ -300,7 +315,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 catch (Exception ex)
                 {
                     transaction.Rollback();
-                    LoggerManager.Error("YHJBXXBLL", "修改失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                    LoggerManager.Info("修改微信", "用户：" + YHID + "修改微信失败:" + ex.InnerException);
                     return new
                     {
                         Result = EnResultType.Failed,
@@ -310,6 +325,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
+        //修改密码
         public object MMCZ(string YHID, string JMM, string XMM)
         {
             using (ITransaction transaction = DAO.BeginTransaction())
@@ -325,22 +341,25 @@ namespace TianWen.XiaoZhen1Qu.BLL
                             DAO.Update(yhjbxx);
                             DAO.Repository.Session.Flush();
                             transaction.Commit();
+                            LoggerManager.Info("修改密码", "用户：" + YHID + "修改密码成功");
                             return new { Result = EnResultType.Success, Message = "修改成功", Value = new { YHID = yhjbxx.YHID } };
                         }
                         else
                         {
+                            LoggerManager.Info("修改密码", "用户：" + YHID + "修改密码失败,旧密码不正确");
                             return new { Result = EnResultType.Failed, Message = "旧密码不正确", Type = 2 };
                         }
                     }
                     else
                     {
+                        LoggerManager.Info("修改密码", "用户：" + YHID + "修改密码失败，用户不存在");
                         return new { Result = EnResultType.Failed, Message = "用户不存在", Type = 1 };
                     }
                 }
                 catch (Exception ex)
                 {
                     transaction.Rollback();
-                    LoggerManager.Error("YHJBXXBLL", "修改失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                    LoggerManager.Info("修改密码", "用户：" + YHID + "修改密码失败:" + ex.InnerException);
                     return new
                     {
                         Result = EnResultType.Failed,
@@ -419,10 +438,12 @@ namespace TianWen.XiaoZhen1Qu.BLL
 
                         DAO.Repository.Session.Flush();
                         transaction.Commit();
+                        LoggerManager.Info("修改头像", "用户：" + YHID + "上传头像成功");
                         return new { Result = EnResultType.Success, Message = "上传头像成功", Value = new { YHID = yhjbxx.YHID } };
                     }
                     else
                     {
+                        LoggerManager.Info("修改头像", "用户：" + YHID + "修改头像失败,用户不存在");
                         return new { Result = EnResultType.Failed, Message = "用户不存在" };
                     }
 
@@ -430,7 +451,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 catch (Exception ex)
                 {
                     transaction.Rollback();
-                    LoggerManager.Error("YHJBXXBLL", "修改失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                    LoggerManager.Info("修改头像", "用户：" + YHID + "修改头像失败:" + ex.InnerException);
                     return new
                     {
                         Result = EnResultType.Failed,
@@ -481,7 +502,6 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
             catch (Exception ex)
             {
-                LoggerManager.Error("YHJBXXBLL", "修改失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
                 return new
                 {
                     Result = EnResultType.Failed,
@@ -490,6 +510,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
+        //发送邮件
         public object SendEmail(string YHID, string YX, string CheckCode)
         {
             try
@@ -504,7 +525,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     msg.From = new MailAddress(YX, "信息小镇", Encoding.UTF8);
                     msg.Subject = "邮件认证 - 信息小镇";
                     msg.SubjectEncoding = Encoding.UTF8;//邮件标题编码 
-                    string url =  "http://localhost" + Common.GetVirtualRootPath() + "/Business/GRZL/YXYZCG?para=" + EncryptionHelper.MD5Encrypt64(YHID) + "|" + EncryptionHelper.MD5Encrypt64(CheckCode);
+                    string url = "http://localhost" + Common.GetVirtualRootPath() + "/GRZL/YXYZCG?para=" + EncryptionHelper.MD5Encrypt64(YHID) + "|" + EncryptionHelper.MD5Encrypt64(CheckCode);
                     StringBuilder sb = new StringBuilder();
                     sb.AppendFormat(@"<div style='width: 650px; margin-left: 27%; height: 600px; border: 1px solid #bc6ba6; '>
                                 <div style='background-color: #bc6ba6; width: 100%; height: 80px; vertical-align: middle;'>
@@ -537,17 +558,19 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     client.EnableSsl = true;//启用SSL加密  
                     object userState = msg;
                     client.SendAsync(msg, userState);
+                    LoggerManager.Info("发送邮件", "用户：" + YHID + "发送邮件成功");
                     return new { Result = EnResultType.Success, Message = "发送成功", Value = new { YHID = yhjbxx.YHID } };
                 }
                 else
                 {
+                    LoggerManager.Info("发送邮件", "用户：" + YHID + "发送邮件失败,用户不存在");
                     return new { Result = EnResultType.Failed, Message = "用户不存在" };
                 }
 
             }
             catch (Exception ex)
             {
-                LoggerManager.Error("YHJBXXBLL", "修改失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!");
+                LoggerManager.Info("发送邮件", "用户：" + YHID + "发送邮件失败:" + ex.InnerException);
                 return new
                 {
                     Result = EnResultType.Failed,

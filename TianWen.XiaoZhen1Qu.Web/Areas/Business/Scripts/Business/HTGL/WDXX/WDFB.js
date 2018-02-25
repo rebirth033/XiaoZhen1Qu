@@ -83,16 +83,17 @@ function LoadInfo(obj) {
     html += ('</div>');
     html += ('</div>');
     html += ('<div class="div_new_info_body_middle">');
-
-    html += ('<span class="span_new_info_body_middle_common">状态:' + (obj.STATUS === 1 ? '<span class="green">正常显示</span>' : '<span class="red">已隐藏</span>') + '</span>');
+    if (obj.STATUS === 1 || obj.STATUS === 2)
+        html += ('<span class="span_new_info_body_middle_common">状态:' + (obj.STATUS === 1 ? '<span class="green">正常显示</span>' : '<span class="red">已隐藏</span>') + '</span>');
+    if (obj.STATUS === 3)
+        html += ('<span class="span_new_info_body_middle_common">状态:<span class="green">待审核</span></span>');
     html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_read" style="margin-top:10px;">浏览:' + '<span class="purple" style="font-weight:700;">' + obj.LLCS + '次</span>' + '</span>');
     html += ('</div>');
     html += ('<div class="div_new_info_body_right">');
     if (obj.STATUS === 0)
         html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_common_button span_new_info_body_middle_update" onclick="Restore(\'' + obj.JCXXID + '\')">恢复显示</span>');
-    else {
+    if (obj.STATUS === 1){
         html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_common_button span_new_info_body_middle_update" onclick="Update(\'' + obj.JCXXID + '\',\'' + obj.LBID + '\')">修改</span>');
-        //html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_common_button span_new_info_body_middle_refresh">刷新</span>');
         html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_common_button span_new_info_body_middle_top" onclick="Hide(\'' + obj.JCXXID + '\')">隐藏</span>');
         html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_common_button span_new_info_body_middle_delete" onclick="Delete(\'' + obj.JCXXID + '\')">删除</span>');
     }

@@ -45,7 +45,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             JCXX jcxx = JsonHelper.ConvertJsonToObject<JCXX>(json);
             jcxx.YHID = yhjbxx.YHID;
             jcxx.LLCS = 0;
-            jcxx.STATUS = 1;
+            jcxx.STATUS = 3;//待审核
             jcxx.ZXGXSJ = DateTime.Now;
             jcxx.CJSJ = DateTime.Now;
             jcxx.LXDZ = yhjbxx.TXDZ;
