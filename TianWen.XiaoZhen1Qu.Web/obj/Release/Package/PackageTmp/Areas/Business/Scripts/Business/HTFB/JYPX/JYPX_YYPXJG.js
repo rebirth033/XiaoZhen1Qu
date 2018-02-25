@@ -45,7 +45,6 @@ function LoadXL(lbmc, xl) {
                 html += "</ul>";
                 $("#divXLText").html(html);
                 $(".img_XL").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-                $(".liXL").bind("click", function () { ValidateCheck("XL", "忘记选择小类啦"); });
                 if (xml.list.length === 0)
                     $("#divXL").css("display", "none");
                 else
@@ -74,7 +73,7 @@ function LoadDuoX(type, id) {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='li" + id + "' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    html += "<li class='li" + id + "' style='width:140px;' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i % 4 === 3 && i !== (xml.list.length - 1)) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
                     }

@@ -1,7 +1,9 @@
 ﻿//js获取网站根路径(站点及虚拟目录)，获得网站的根目录或虚拟目录的根地址     
 function getRootPath() {
     var strFullPath = window.document.location.href;
+    if (strFullPath === "http://localhost/") strFullPath = "http://localhost/sy/sy";
     var strPath = window.document.location.pathname;
+    if (strPath === "/") strPath = "/sy/sy";
     var pos = strFullPath.indexOf(strPath);
     var prePath = strFullPath.substring(0, pos);
     var postPath = strPath.substring(0, strPath.substr(1).indexOf('/') + 1);

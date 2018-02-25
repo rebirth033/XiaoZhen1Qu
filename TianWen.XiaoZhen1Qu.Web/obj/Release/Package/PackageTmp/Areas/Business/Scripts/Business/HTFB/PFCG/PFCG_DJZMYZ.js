@@ -3,10 +3,7 @@
 });
 //类别
 function ValidateLB() {
-    if (!ValidateSelect("OUTLB", "LB", "忘记选择类别啦")) return false;
-    if ($("#spanLB").html() === "专用灯具") {
-        if (!ValidateSelect("OUTLB", "XL", "忘记选择小类啦")) return false;
-    }
+    if (!ValidateCheck("OUTLB", "忘记选择灯具照明啦")) return false;
     return true;
 }
 //验证所有

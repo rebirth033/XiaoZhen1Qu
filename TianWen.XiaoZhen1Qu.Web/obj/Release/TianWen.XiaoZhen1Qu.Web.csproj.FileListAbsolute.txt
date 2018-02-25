@@ -151,3 +151,4 @@ D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\Ne
 D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\obj\Release\TianWen.XiaoZhen1Qu.Web.csprojResolveAssemblyReference.cache
 D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\obj\Release\TianWen.XiaoZhen1Qu.Web.dll
 D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\obj\Release\TianWen.XiaoZhen1Qu.Web.pdb
+D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\TianWen.Framework.pdb

@@ -266,7 +266,7 @@ namespace TianWen.Framework.Log
 
         public static void Info(string logtitle, string description, Type type, string loggerName)
         {
-            string path = "d:\\log";
+            string path = "c:\\log";
             if (!Directory.Exists(path))//判断是否有该文件              
                 Directory.CreateDirectory(path);
             string logFileName = path + "\\Analysis"+ DateTime.Now.ToString("yyyyMMdd") + ".log";//生成日志文件  

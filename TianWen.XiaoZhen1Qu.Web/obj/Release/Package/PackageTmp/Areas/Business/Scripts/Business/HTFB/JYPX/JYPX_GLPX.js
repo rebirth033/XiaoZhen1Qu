@@ -82,7 +82,6 @@ function LoadXL(lbmc, xl) {
                 html += "</ul>";
                 $("#divXLText").html(html);
                 $(".img_XL").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-                $(".liXL").bind("click", function () { ValidateCheck("XL", "忘记选择小类啦"); });
                 if (xl !== "" && xl !== null && xl !== undefined)
                     SetDuoX("XL", xl);
             }

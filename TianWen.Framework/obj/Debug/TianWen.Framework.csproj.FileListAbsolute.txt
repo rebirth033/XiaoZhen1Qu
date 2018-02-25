@@ -109,6 +109,5 @@ D:\福建沐晗信息技术有限公司\源代码\TianWen.Framework\bin\Debug\My
 D:\福建沐晗信息技术有限公司\源代码\TianWen.Framework\bin\Debug\System.Web.WebPages.Deployment.dll
 D:\福建沐晗信息技术有限公司\源代码\TianWen.Framework\bin\Debug\Iesi.Collections.dll
 D:\福建沐晗信息技术有限公司\源代码\TianWen.Framework\bin\Debug\MySql.Data.xml
-D:\福建沐晗信息技术有限公司\源代码\TianWen.Framework\obj\Debug\TianWen.Framework.csprojResolveAssemblyReference.cache
 D:\福建沐晗信息技术有限公司\源代码\TianWen.Framework\obj\Debug\TianWen.Framework.dll
 D:\福建沐晗信息技术有限公司\源代码\TianWen.Framework\obj\Debug\TianWen.Framework.pdb
