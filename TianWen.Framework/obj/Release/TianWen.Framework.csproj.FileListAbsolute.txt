@@ -18,3 +18,4 @@ D:\福建沐晗信息技术有限公司\源代码\TianWen.Framework\bin\Release\
 D:\福建沐晗信息技术有限公司\源代码\TianWen.Framework\bin\Release\MySql.Data.xml
 D:\福建沐晗信息技术有限公司\源代码\TianWen.Framework\obj\Release\TianWen.Framework.dll
 D:\福建沐晗信息技术有限公司\源代码\TianWen.Framework\obj\Release\TianWen.Framework.pdb
+D:\福建沐晗信息技术有限公司\源代码\TianWen.Framework\obj\Release\TianWen.Framework.csprojResolveAssemblyReference.cache

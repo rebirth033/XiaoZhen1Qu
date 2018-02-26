@@ -1,8 +1,6 @@
 ﻿$(document).ready(function () {
     $("#BT").bind("blur", function () { ValidateInput("BT", "标题"); });
     $("#BT").bind("focus", function () { InfoInput("BT", "请填写标题"); });
-    $("#LXR").bind("blur", function () { ValidateInput("LXR", "联系人"); });
-    $("#LXR").bind("focus", function () { InfoInput("LXR", "请填写联系人"); });
     $("#LXDH").bind("blur", function () { ValidateInput("LXDH", "联系电话"); });
     $("#LXDH").bind("focus", function () { InfoInput("LXDH", "请填写联系电话"); });
     ue.addListener("focus", function (type, event) { InfoBCMS("BCMS", "请填写详情描述"); });

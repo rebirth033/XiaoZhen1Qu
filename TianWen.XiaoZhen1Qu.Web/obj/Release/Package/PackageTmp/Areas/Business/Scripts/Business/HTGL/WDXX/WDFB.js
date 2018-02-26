@@ -93,6 +93,10 @@ function LoadInfo(obj) {
     if (obj.STATUS === 0)
         html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_common_button span_new_info_body_middle_update" onclick="Restore(\'' + obj.JCXXID + '\')">恢复显示</span>');
     if (obj.STATUS === 1){
+        html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_common_button span_new_info_body_middle_top" onclick="Hide(\'' + obj.JCXXID + '\')">隐藏</span>');
+        html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_common_button span_new_info_body_middle_delete" onclick="Delete(\'' + obj.JCXXID + '\')">删除</span>');
+    }
+    if (obj.STATUS === 3) {
         html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_common_button span_new_info_body_middle_update" onclick="Update(\'' + obj.JCXXID + '\',\'' + obj.LBID + '\')">修改</span>');
         html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_common_button span_new_info_body_middle_top" onclick="Hide(\'' + obj.JCXXID + '\')">隐藏</span>');
         html += ('<span class="span_new_info_body_middle_common span_new_info_body_middle_common_button span_new_info_body_middle_delete" onclick="Delete(\'' + obj.JCXXID + '\')">删除</span>');
