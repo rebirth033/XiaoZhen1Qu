@@ -111,3 +111,17 @@ D:\福建沐晗信息技术有限公司\源代码\TianWen.Framework\bin\Debug\Ie
 D:\福建沐晗信息技术有限公司\源代码\TianWen.Framework\bin\Debug\MySql.Data.xml
 D:\福建沐晗信息技术有限公司\源代码\TianWen.Framework\obj\Debug\TianWen.Framework.dll
 D:\福建沐晗信息技术有限公司\源代码\TianWen.Framework\obj\Debug\TianWen.Framework.pdb
+F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.Framework\bin\Debug\TianWen.Framework.dll
+F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.Framework\bin\Debug\TianWen.Framework.pdb
+F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.Framework\bin\Debug\log4net.dll
+F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.Framework\bin\Debug\Spring.Aop.dll
+F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.Framework\bin\Debug\Spring.Core.dll
+F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.Framework\bin\Debug\System.Web.Mvc.dll
+F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.Framework\bin\Debug\Common.Logging.dll
+F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.Framework\bin\Debug\FluentNHibernate.dll
+F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.Framework\bin\Debug\NHibernate.dll
+F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.Framework\bin\Debug\Iesi.Collections.dll
+F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.Framework\bin\Debug\TianWen.Nhibernate.pdb
+F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.Framework\obj\Debug\TianWen.Framework.csprojResolveAssemblyReference.cache
+F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.Framework\obj\Debug\TianWen.Framework.dll
+F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.Framework\obj\Debug\TianWen.Framework.pdb

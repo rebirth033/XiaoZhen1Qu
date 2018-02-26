@@ -59,7 +59,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 if (OPTYPE == "DELETE")
                     jcxx.STATUS = 0;
                 if (OPTYPE == "RESTORE")
-                    jcxx.STATUS = 1;
+                    jcxx.STATUS = 3;
                 if (OPTYPE == "HIDE")
                     jcxx.STATUS = 2;
                 DAO.Update(jcxx);
