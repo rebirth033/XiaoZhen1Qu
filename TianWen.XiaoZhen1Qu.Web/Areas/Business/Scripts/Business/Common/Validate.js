@@ -157,14 +157,14 @@ function ValidateSelect(idout, idin, message) {
 }
 //验证共有
 function ValidateCommon() {
-    if (ValidateInput("BT", "标题") & ValidateZP() & ValidateInput("LXR", "联系人") & ValidateInput("LXDH", "联系电话"))
+    if (ValidateInput("BT", "标题") & ValidateZP() & ValidateInput("LXDH", "联系电话"))
         return true;
     else
         return false;
 }
 //验证共有不包括图片
 function ValidateCommonWithoutZP() {
-    if (ValidateInput("BT", "标题") & ValidateInput("LXR", "联系人") & ValidateInput("LXDH", "联系电话"))
+    if (ValidateInput("BT", "标题") & ValidateInput("LXDH", "联系电话"))
         return true;
     else
         return false;
