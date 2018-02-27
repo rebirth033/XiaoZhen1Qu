@@ -417,6 +417,12 @@ function ValidateCheckCode() {
         $("#YZMInfo").html("请输入正确的手机验证码");
         return false;
     }
+    if (count === 60) {
+        $("#YZM").css("border-color", "#F2272D");
+        $("#YZMInfo").css("color", "#F2272D");
+        $("#YZMInfo").html("验证码过期,请重新获取");
+        return false;
+    }
     else {
         $("#YZM").css("border-color", "#999");
         $("#YZMInfo").html('<img src=' + getRootPath() + '/Areas/Business/Css/images/yes.png />');

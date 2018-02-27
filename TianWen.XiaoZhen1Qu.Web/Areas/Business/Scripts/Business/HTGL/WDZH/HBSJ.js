@@ -164,6 +164,12 @@ function YSJYZMCheck() {
         $("#YSJYZMInfo").html("手机验证码输入格式有误");
         return false;
     }
+    if (ysjcount === 60) {
+        $("#YSJYZM").css("border-color", "#F2272D");
+        $("#YSJYZMInfo").css("color", "#F2272D");
+        $("#YSJYZMInfo").html("验证码过期,请重新获取");
+        return false;
+    }
     else {
         $("#YSJYZM").css("border-color", "#999");
         $("#YSJYZMInfo").html('');
@@ -182,6 +188,12 @@ function XSJYZMCheck() {
         $("#XSJYZM").css("border-color", "#F2272D");
         $("#XSJYZMInfo").css("color", "#F2272D");
         $("#XSJYZMInfo").html("手机验证码输入格式有误");
+        return false;
+    }
+    if (xsjcount === 60) {
+        $("#XSJYZM").css("border-color", "#F2272D");
+        $("#XSJYZMInfo").css("color", "#F2272D");
+        $("#XSJYZMInfo").html("验证码过期,请重新获取");
         return false;
     }
     else {
