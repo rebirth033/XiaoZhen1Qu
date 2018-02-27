@@ -7,7 +7,7 @@ CREATE TABLE `CODES_CW` (
   `parentid` INT(12) DEFAULT NULL,
   `ishot` VARCHAR(10) DEFAULT NULL,
   `lbid` INT(4) DEFAULT NULL,
-  `condition` VARCHAR(20) DEFAULT NULL,
+  `conditions` VARCHAR(20) DEFAULT NULL,
   `codenamepy` VARCHAR(100) DEFAULT NULL,
   `codenamepyqkg` VARCHAR(100) DEFAULT NULL,
   `codenamepyszm` VARCHAR(100) DEFAULT NULL,

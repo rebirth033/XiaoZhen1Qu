@@ -12,7 +12,6 @@ function ValidateWYXNWPLB() {
 function ValidateAll() {
     if (ValidateRadio("SF", "忘记选择身份啦")
         & ValidateSelect("YX", "YX", "请选择游戏")
-        & ValidateCheck("PSFS", "忘记选择配送方式啦")
         & ValidateWYXNWPLB()
         & ValidateBCMS("BCMS", "忘记填写详情描述啦")
         & ValidateXXDZ()

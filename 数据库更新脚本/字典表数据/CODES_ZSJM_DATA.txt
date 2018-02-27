@@ -1,0 +1,1832 @@
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1, '品牌历史', '1年以下', '1', 1, null, null, null, null, null, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (2, '品牌历史', '1-3年', '2', 2, null, null, null, null, null, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (3, '品牌历史', '3-5年', '3', 3, null, null, null, null, null, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (4, '品牌历史', '5-10年', '4', 4, null, null, null, null, null, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (5, '品牌历史', '10年以上', '5', 5, null, null, null, null, null, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (6, '餐饮类别', '面食', '1', 1, null, 54, 'LB=6', 'mian shi ', 'mianshi', 'ms');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (7, '餐饮类别', '火锅', '2', 2, null, 54, 'LB=7', 'huo guo ', 'huoguo', 'hg');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (8, '餐饮类别', '冷饮热饮', '3', 3, null, 54, 'LB=8', 'leng yin re yin ', 'lengyinreyin', 'lyry');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (9, '餐饮类别', '特色小吃', '4', 4, null, 54, 'LB=9', 'te se xiao chi ', 'tesexiaochi', 'tsxc');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (10, '餐饮类别', '卤菜熟食', '5', 5, null, 54, 'LB=10', 'lu cai shu shi ', 'lucaishushi', 'lcss');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (11, '餐饮类别', '蛋糕店', '6', 6, null, 54, 'LB=11', 'dan gao dian ', 'dangaodian', 'dgd');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (12, '餐饮类别', '快餐', '7', 7, null, 54, 'LB=12', 'kuai can ', 'kuaican', 'kc');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (13, '餐饮类别', '干锅', '8', 8, null, 54, 'LB=13', 'gan guo ', 'ganguo', 'gg');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (14, '餐饮类别', '烧烤', '9', 9, null, 54, 'LB=14', 'shao kao ', 'shaokao', 'sk');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (15, '餐饮类别', '中餐', '10', 10, null, 54, 'LB=15', 'zhong can ', 'zhongcan', 'zc');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (16, '餐饮类别', '西餐', '11', 11, null, 54, 'LB=16', 'xi can ', 'xican', 'xc');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (17, '餐饮类别', '粥店', '12', 12, null, 54, 'LB=17', 'zhou dian ', 'zhoudian', 'zd');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (18, '餐饮类别', '地方特产', '13', 13, null, 54, 'LB=18', 'di fang te chan ', 'difangtechan', 'dftc');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (19, '餐饮类别', '烟酒茶饮料', '14', 14, null, 54, 'LB=19', 'yan jiu cha yin liao ', 'yanjiuchayinliao', 'yjcyl');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (20, '餐饮类别', '名酒', '15', 15, null, 54, 'LB=20', 'ming jiu ', 'mingjiu', 'mj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (21, '投资金额', '1万元以下', '1', 1, null, null, null, null, null, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (22, '投资金额', '1-5万元', '2', 2, null, null, null, null, null, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (23, '投资金额', '5-10万元', '3', 3, null, null, null, null, null, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (24, '投资金额', '10-20万元', '4', 4, null, null, null, null, null, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (25, '投资金额', '20-50万元', '5', 5, null, null, null, null, null, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (26, '投资金额', '50万元以上', '6', 6, null, null, null, null, null, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (27, '全国分店数', '10以内', '1', 1, null, null, null, null, null, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (28, '全国分店数', '10~100', '2', 2, null, null, null, null, null, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (29, '全国分店数', '100~500', '3', 3, null, null, null, null, null, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (30, '全国分店数', '500~1000', '4', 4, null, null, null, null, null, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (31, '全国分店数', '1000以上', '5', 5, null, null, null, null, null, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (32, '单店面积', '小于10平方米', '1', 1, null, null, null, null, null, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (33, '单店面积', '10-20平方米', '2', 2, null, null, null, null, null, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (34, '单店面积', '20-50平方米', '3', 3, null, null, null, null, null, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (35, '单店面积', '50-100平方米', '4', 4, null, null, null, null, null, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (36, '单店面积', '100平方米以上', '5', 5, null, null, null, null, null, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (37, '适合人群', '自由创业', '1', 1, null, null, null, null, null, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (38, '适合人群', '在岗投资', '2', 2, null, null, null, null, null, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (39, '适合人群', '网店形式', '3', 3, null, null, null, null, null, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (40, '适合人群', '毕业生创业', '4', 4, null, null, null, null, null, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (43, '服装鞋包类别', '女装', '1', 1, null, 55, 'LB=43', 'nv zhuang ', 'nvzhuang', 'nz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (44, '服装鞋包类别', '男装', '2', 2, null, 55, 'LB=44', 'nan zhuang ', 'nanzhuang', 'nz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (45, '服装鞋包类别', '童装', '3', 3, null, 55, 'LB=45', 'tong zhuang ', 'tongzhuang', 'tz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (46, '服装鞋包类别', '内衣', '4', 4, null, 55, 'LB=46', 'nei yi ', 'neiyi', 'ny');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (47, '服装鞋包类别', '运动装', '5', 5, null, 55, 'LB=47', 'yun dong zhuang ', 'yundongzhuang', 'ydz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (48, '服装鞋包类别', '服饰配件', '6', 6, null, 55, 'LB=48', 'fu shi pei jian ', 'fushipeijian', 'fspj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (49, '服装鞋包类别', '箱包皮具', '7', 7, null, 55, 'LB=49', 'xiang bao pi ju ', 'xiangbaopiju', 'xbpj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (50, '服装鞋包类别', '鞋', '8', 8, null, 55, 'LB=50', 'xie ', 'xie', 'x');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (51, '建材类别', '壁纸', '1', 1, null, 56, 'LB=51', 'bi zhi ', 'bizhi', 'bz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (52, '建材类别', '门窗', '2', 2, null, 56, 'LB=52', 'men chuang ', 'menchuang', 'mc');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (53, '建材类别', '地板瓷砖', '3', 3, null, 56, 'LB=53', 'di ban ci zhuan ', 'dibancizhuan', 'dbcz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (54, '建材类别', '装修材料', '4', 4, null, 56, 'LB=54', 'zhuang xiu cai liao ', 'zhuangxiucailiao', 'zxcl');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (55, '建材类别', '油漆涂料', '5', 5, null, 56, 'LB=55', 'you qi tu liao ', 'youqituliao', 'yqtl');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (56, '建材类别', '厨卫设备', '6', 6, null, 56, 'LB=56', 'chu wei she bei ', 'chuweishebei', 'cwsb');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (57, '建材类别', '灯具灯饰', '7', 7, null, 56, 'LB=57', 'deng ju deng shi ', 'dengjudengshi', 'djds');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (59, '建材类别', '五金', '9', 9, null, 56, 'LB=59', 'wu jin ', 'wujin', 'wj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (60, '机械类别', '食品加工设备', '1', 1, null, 57, 'LB=60', 'shi pin jia gong she bei ', 'shipinjiagongshebei', 'spjgsb');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (61, '机械类别', '农用机械', '2', 2, null, 57, 'LB=61', 'nong yong ji xie ', 'nongyongjixie', 'nyjx');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (62, '机械类别', '工程机械', '3', 3, null, 57, 'LB=62', 'gong cheng ji xie ', 'gongchengjixie', 'gcjx');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (63, '机械类别', '环保机械', '4', 4, null, 57, 'LB=63', 'huan bao ji xie ', 'huanbaojixie', 'hbjx');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (64, '食品加工设备', '烤肠机', '1', 1, 60, 57, 'LB=60&XL=64', 'kao chang ji ', 'kaochangji', 'kcj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (65, '食品加工设备', '榨油机', '2', 2, 60, 57, 'LB=60&XL=65', 'zha you ji ', 'zhayouji', 'zyj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (66, '食品加工设备', '千层饼机器', '3', 3, 60, 57, 'LB=60&XL=66', 'qian ceng bing ji qi ', 'qiancengbingjiqi', 'qcbjq');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (67, '食品加工设备', '蒸馒头机器', '4', 4, 60, 57, 'LB=60&XL=67', 'zheng man tou ji qi ', 'zhengmantoujiqi', 'zmtjq');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (68, '食品加工设备', '面筋成型机', '5', 5, 60, 57, 'LB=60&XL=68', 'mian jin cheng xing ji ', 'mianjinchengxingji', 'mjcxj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (69, '食品加工设备', '自动烧饼机', '6', 6, 60, 57, 'LB=60&XL=69', 'zi dong shao bing ji ', 'zidongshaobingji', 'zdsbj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (70, '食品加工设备', '烤红薯机器', '7', 7, 60, 57, 'LB=60&XL=70', 'kao hong shu ji qi ', 'kaohongshujiqi', 'khsjq');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (71, '食品加工设备', '烙馍机', '8', 8, 60, 57, 'LB=60&XL=71', 'lao mo ji ', 'laomoji', 'lmj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (72, '食品加工设备', '面条机', '9', 9, 60, 57, 'LB=60&XL=72', 'mian tiao ji ', 'miantiaoji', 'mtj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (73, '食品加工设备', '米粉机', '10', 10, 60, 57, 'LB=60&XL=73', 'mi fen ji ', 'mifenji', 'mfj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (74, '食品加工设备', '关东煮机器', '11', 11, 60, 57, 'LB=60&XL=74', 'guan dong zhu ji qi ', 'guandongzhujiqi', 'gdzjq');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (75, '食品加工设备', '单饼机', '12', 12, 60, 57, 'LB=60&XL=75', 'dan bing ji ', 'danbingji', 'dbj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (76, '农用机械', '收割机', '1', 1, 61, 57, 'LB=61&XL=76', 'shou ge ji ', 'shougeji', 'sgj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (77, '农用机械', '采摘机', '2', 2, 61, 57, 'LB=61&XL=77', 'cai zhai ji ', 'caizhaiji', 'czj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (78, '农用机械', '播种机', '3', 3, 61, 57, 'LB=61&XL=78', 'bo zhong ji ', 'bozhongji', 'bzj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (79, '农用机械', '农耕机', '4', 4, 61, 57, 'LB=61&XL=79', 'nong geng ji ', 'nonggengji', 'ngj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (80, '农用机械', '花生收获机', '5', 5, 61, 57, 'LB=61&XL=80', 'hua sheng shou huo ji ', 'huashengshouhuoji', 'hsshj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (81, '农用机械', '玉米剥皮机', '6', 6, 61, 57, 'LB=61&XL=81', 'yu mi bao pi ji ', 'yumibaopiji', 'ymbpj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (82, '工程机械', '玻璃喷砂机', '1', 1, 62, 57, 'LB=62&XL=82', 'bo li pen sha ji ', 'bolipenshaji', 'blpsj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (83, '工程机械', '小型打井机', '2', 2, 62, 57, 'LB=62&XL=83', 'xiao xing da jing ji ', 'xiaoxingdajingji', 'xxdjj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (84, '工程机械', '制钉机', '3', 3, 62, 57, 'LB=62&XL=84', 'zhi ding ji ', 'zhidingji', 'zdj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (85, '工程机械', '鞭炮机', '4', 4, 62, 57, 'LB=62&XL=85', 'bian pao ji ', 'bianpaoji', 'bpj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (86, '环保机械', '辐射消除器', '1', 1, 63, 57, 'LB=63&XL=86', 'fu she xiao chu qi ', 'fushexiaochuqi', 'fsxcq');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (87, '环保机械', '清洁机器', '2', 2, 63, 57, 'LB=63&XL=87', 'qing jie ji qi ', 'qingjiejiqi', 'qjjq');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (88, '环保机械', '洗洁精机器', '3', 3, 63, 57, 'LB=63&XL=88', 'xi jie jing ji qi ', 'xijiejingjiqi', 'xjjjq');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (89, '环保机械', '油烟清洗机', '4', 4, 63, 57, 'LB=63&XL=89', 'you yan qing xi ji ', 'youyanqingxiji', 'yyqxj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (90, '美容保健类别', '化妆品', '1', 1, null, 58, 'LB=90', 'hua zhuang pin ', 'huazhuangpin', 'hzp');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (91, '美容保健类别', '美发美甲', '2', 2, null, 58, 'LB=91', 'mei fa mei jia ', 'meifameijia', 'mfmj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (92, '美容保健类别', '美容SPA', '3', 3, null, 58, 'LB=92', 'mei rong SPA', 'meirongSPA', 'mrS');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (93, '美容保健类别', '美体塑身', '4', 4, null, 58, 'LB=93', 'mei ti su shen ', 'meitisushen', 'mtss');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (94, '美容保健类别', '养生保健', '5', 5, null, 58, 'LB=94', 'yang sheng bao jian ', 'yangshengbaojian', 'ysbj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (95, '化妆品', '面膜', '1', 1, 90, 58, 'LB=90&XL=95', 'mian mo ', 'mianmo', 'mm');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (96, '化妆品', '眼霜', '2', 2, 90, 58, 'LB=90&XL=96', 'yan shuang ', 'yanshuang', 'ys');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (97, '化妆品', '香水', '3', 3, 90, 58, 'LB=90&XL=97', 'xiang shui ', 'xiangshui', 'xs');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (98, '化妆品', '精油', '4', 4, 90, 58, 'LB=90&XL=98', 'jing you ', 'jingyou', 'jy');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (99, '化妆品', '珍珠粉', '5', 5, 90, 58, 'LB=90&XL=99', 'zhen zhu fen ', 'zhenzhufen', 'zzf');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (100, '化妆品', '香薰', '6', 6, 90, 58, 'LB=90&XL=100', 'xiang xun ', 'xiangxun', 'xx');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (101, '化妆品', '彩妆', '7', 7, 90, 58, 'LB=90&XL=101', 'cai zhuang ', 'caizhuang', 'cz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (102, '化妆品', '洗发护发', '8', 8, 90, 58, 'LB=90&XL=102', 'xi fa hu fa ', 'xifahufa', 'xfhf');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (103, '美容SPA', '熏蒸馆', '1', 1, 92, 58, 'LB=92&XL=103', 'xun zheng guan ', 'xunzhengguan', 'xzg');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (104, '美容SPA', '汗蒸房', '2', 2, 92, 58, 'LB=92&XL=104', 'han zheng fang ', 'hanzhengfang', 'hzf');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (105, '美容SPA', '美容院', '3', 3, 92, 58, 'LB=92&XL=105', 'mei rong yuan ', 'meirongyuan', 'mry');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (106, '美容SPA', '中医美容', '4', 4, 92, 58, 'LB=92&XL=106', 'zhong yi mei rong ', 'zhongyimeirong', 'zymr');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (107, '美发美甲', '美甲', '5', 5, 91, 58, 'LB=91&XL=107', 'mei jia ', 'meijia', 'mj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (108, '美容SPA', '祛皱', '6', 6, 92, 58, 'LB=92&XL=108', 'que zhou ', 'quezhou', 'qz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (110, '美容SPA', '祛斑', '7', 7, 92, 58, 'LB=92&XL=110', 'que ban ', 'queban', 'qb');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (111, '美容SPA', '胶原蛋白', '8', 8, 92, 58, 'LB=92&XL=111', 'jiao yuan dan bai ', 'jiaoyuandanbai', 'jydb');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (112, '养生保健', '芦荟胶', '1', 1, 92, 58, 'LB=92&XL=112', 'lu hui jiao ', 'luhuijiao', 'lhj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (113, '养生保健', '火疗', '2', 2, 92, 58, 'LB=92&XL=113', 'huo liao ', 'huoliao', 'hl');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (114, '养生保健', '瑜伽', '3', 3, 92, 58, 'LB=92&XL=114', 'yu jia ', 'yujia', 'yj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (115, '养生保健', '养生馆', '4', 4, 92, 58, 'LB=92&XL=115', 'yang sheng guan ', 'yangshengguan', 'ysg');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (116, '养生保健', '保健品', '5', 5, 92, 58, 'LB=92&XL=116', 'bao jian pin ', 'baojianpin', 'bjp');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (117, '养生保健', '足疗', '6', 6, 92, 58, 'LB=92&XL=117', 'zu liao ', 'zuliao', 'zl');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (118, '养生保健', '桑拿', '7', 7, 92, 58, 'LB=92&XL=118', 'sang na ', 'sangna', 'sn');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (119, '养生保健', '口腔护理', '8', 8, 92, 58, 'LB=92&XL=119', 'kou qiang hu li ', 'kouqianghuli', 'kqhl');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (120, '养生保健', '理疗', '9', 9, 92, 58, 'LB=92&XL=120', 'li liao ', 'liliao', 'll');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (121, '养生保健', '针灸', '10', 10, 92, 58, 'LB=92&XL=121', 'zhen jiu ', 'zhenjiu', 'zj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (122, '养生保健', '拔罐', '11', 11, 92, 58, 'LB=92&XL=122', 'ba guan ', 'baguan', 'bg');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (123, '养生保健', '药浴', '12', 12, 92, 58, 'LB=92&XL=123', 'yao yu ', 'yaoyu', 'yy');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (124, '养生保健', '视力保健', '13', 13, 92, 58, 'LB=92&XL=124', 'shi li bao jian ', 'shilibaojian', 'slbj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (125, '养生保健', '艾灸', '14', 14, 92, 58, 'LB=92&XL=125', 'ai jiu ', 'aijiu', 'aj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (126, '礼品饰品类别', '饰品挂件', '1', 1, null, 59, 'LB=126', 'shi pin gua jian ', 'shipinguajian', 'spgj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (127, '礼品饰品类别', '礼品', '2', 2, null, 59, 'LB=127', 'li pin ', 'lipin', 'lp');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (128, '礼品饰品类别', '工艺品', '3', 3, null, 59, 'LB=128', 'gong yi pin ', 'gongyipin', 'gyp');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (129, '礼品饰品类别', '礼品加工', '4', 4, null, 59, 'LB=129', 'li pin jia gong ', 'lipinjiagong', 'lpjg');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (130, '礼品饰品类别', '珠宝玉器', '5', 5, null, 59, 'LB=130', 'zhu bao yu qi ', 'zhubaoyuqi', 'zbyq');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (131, '饰品挂件', '眼镜', '1', 1, 125, 59, 'LB=125&XL=131', 'yan jing ', 'yanjing', 'yj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (132, '饰品挂件', '十字绣', '2', 2, 125, 59, 'LB=125&XL=132', 'shi zi xiu ', 'shizixiu', 'szx');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (133, '饰品挂件', '木梳', '3', 3, 125, 59, 'LB=125&XL=133', 'mu shu ', 'mushu', 'ms');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (134, '饰品挂件', '银饰', '4', 4, 125, 59, 'LB=125&XL=134', 'yin shi ', 'yinshi', 'ys');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (135, '饰品挂件', '服装配饰', '5', 5, 125, 59, 'LB=125&XL=135', 'fu zhuang pei shi ', 'fuzhuangpeishi', 'fzps');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (136, '饰品挂件', '胸针', '6', 6, 125, 59, 'LB=125&XL=136', 'xiong zhen ', 'xiongzhen', 'xz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (137, '饰品挂件', '毛衣链', '7', 7, 125, 59, 'LB=125&XL=137', 'mao yi lian ', 'maoyilian', 'myl');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (138, '饰品挂件', '手机链', '8', 8, 125, 59, 'LB=125&XL=138', 'shou ji lian ', 'shoujilian', 'sjl');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (139, '饰品挂件', '仿真花', '9', 9, 125, 59, 'LB=125&XL=139', 'fang zhen hua ', 'fangzhenhua', 'fzh');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (140, '饰品挂件', '围巾', '10', 10, 125, 59, 'LB=125&XL=140', 'wei jin ', 'weijin', 'wj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (141, '饰品挂件', '帽子', '11', 11, 125, 59, 'LB=125&XL=141', 'mao zi ', 'maozi', 'mz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (142, '礼品', '打火机', '1', 1, 126, 59, 'LB=126&XL=142', 'da huo ji ', 'dahuoji', 'dhj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (143, '礼品', '刮胡刀', '2', 2, 126, 59, 'LB=126&XL=143', 'gua hu dao ', 'guahudao', 'ghd');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (144, '礼品', '抱枕', '3', 3, 126, 59, 'LB=126&XL=144', 'bao zhen ', 'baozhen', 'bz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (145, '礼品', '创意礼品', '4', 4, 126, 59, 'LB=126&XL=145', 'chuang yi li pin ', 'chuangyilipin', 'cylp');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (146, '礼品', '节日礼品', '5', 5, 126, 59, 'LB=126&XL=146', 'jie ri li pin ', 'jierilipin', 'jrlp');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (147, '礼品', '商务礼品', '6', 6, 126, 59, 'LB=126&XL=147', 'shang wu li pin ', 'shangwulipin', 'swlp');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (148, '礼品', '婚庆礼品', '7', 7, 126, 59, 'LB=126&XL=148', 'hun qing li pin ', 'hunqinglipin', 'hqlp');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (149, '工艺品', '雕塑', '1', 1, 127, 59, 'LB=127&XL=149', 'diao su ', 'diaosu', 'ds');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (150, '工艺品', '陶瓷', '2', 2, 127, 59, 'LB=127&XL=150', 'tao ci ', 'taoci', 'tc');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (151, '工艺品', '炭雕', '3', 3, 127, 59, 'LB=127&XL=151', 'tan diao ', 'tandiao', 'td');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (152, '工艺品', '油画', '4', 4, 127, 59, 'LB=127&XL=152', 'you hua ', 'youhua', 'yh');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (153, '珠宝玉器', '水晶', '1', 1, 129, 59, 'LB=129&XL=153', 'shui jing ', 'shuijing', 'sj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (154, '珠宝玉器', '琥珀', '2', 2, 129, 59, 'LB=129&XL=154', 'hu po ', 'hupo', 'hp');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (155, '珠宝玉器', '玉器', '3', 3, 129, 59, 'LB=129&XL=155', 'yu qi ', 'yuqi', 'yq');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (156, '家居类别', '家居饰品', '1', 1, null, 60, 'LB=156', 'jia ju shi pin ', 'jiajushipin', 'jjsp');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (158, '家居类别', '窗帘布艺', '2', 2, null, 60, 'LB=158', 'chuang lian bu yi ', 'chuanglianbuyi', 'clby');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (159, '家居类别', '家具', '3', 3, null, 60, 'LB=159', 'jia ju ', 'jiaju', 'jj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (160, '家居类别', '卫浴', '4', 4, null, 60, 'LB=160', 'wei yu ', 'weiyu', 'wy');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (161, '家居类别', '厨房用品', '5', 5, null, 60, 'LB=161', 'chu fang yong pin ', 'chufangyongpin', 'cfyp');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (162, '家居类别', '家用电器', '6', 6, null, 60, 'LB=162', 'jia yong dian qi ', 'jiayongdianqi', 'jydq');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (163, '家居类别', '家居用品', '7', 7, null, 60, 'LB=163', 'jia ju yong pin ', 'jiajuyongpin', 'jjyp');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (164, '家居饰品', '画业', '1', 1, 156, 60, 'LB=156&XL=164', 'hua ye ', 'huaye', 'hy');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (165, '家居饰品', '油画', '2', 2, 156, 60, 'LB=156&XL=165', 'you hua ', 'youhua', 'yh');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (166, '家居饰品', '无框画', '3', 3, 156, 60, 'LB=156&XL=166', 'wu kuang hua ', 'wukuanghua', 'wkh');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (167, '窗帘布艺', '窗帘', '1', 1, 157, 60, 'LB=157&XL=167', 'chuang lian ', 'chuanglian', 'cl');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (168, '窗帘布艺', '纱窗', '2', 2, 157, 60, 'LB=157&XL=168', 'sha chuang ', 'shachuang', 'sc');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (169, '窗帘布艺', '蚊帐', '3', 3, 157, 60, 'LB=157&XL=169', 'wen zhang ', 'wenzhang', 'wz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (170, '家具', '茶几', '1', 1, 158, 60, 'LB=158&XL=170', 'cha ji ', 'chaji', 'cj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (171, '家具', '沙发', '1', 1, 158, 60, 'LB=158&XL=171', 'sha fa ', 'shafa', 'sf');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (172, '家具', '床垫', '2', 2, 158, 60, 'LB=158&XL=172', 'chuang dian ', 'chuangdian', 'cd');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (173, '家具', '电脑桌椅', '3', 3, 158, 60, 'LB=158&XL=173', 'dian nao zhuo yi ', 'diannaozhuoyi', 'dnzy');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (174, '家具', '书架', '4', 4, 158, 60, 'LB=158&XL=174', 'shu jia ', 'shujia', 'sj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (175, '家具', '电视柜', '5', 5, 158, 60, 'LB=158&XL=175', 'dian shi gui ', 'dianshigui', 'dsg');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (176, '家具', '床', '6', 6, 158, 60, 'LB=158&XL=176', 'chuang ', 'chuang', 'c');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (177, '家具', '鞋柜', '7', 7, 158, 60, 'LB=158&XL=177', 'xie gui ', 'xiegui', 'xg');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (178, '家具', '衣柜', '8', 8, 158, 60, 'LB=158&XL=178', 'yi gui ', 'yigui', 'yg');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (179, '家具', '整体卧室', '9', 9, 158, 60, 'LB=158&XL=179', 'zheng ti wo shi ', 'zhengtiwoshi', 'ztws');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (180, '家具', '壁柜', '10', 10, 158, 60, 'LB=158&XL=180', 'bi gui ', 'bigui', 'bg');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (181, '家具', '咖啡机', '11', 11, 158, 60, 'LB=158&XL=181', 'ka fei ji ', 'kafeiji', 'kfj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (182, '清洁环保', '饮水机', '1', 1, 159, 6702, 'LB=159&XL=182', 'yin shui ji ', 'yinshuiji', 'ysj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (183, '清洁环保', '清洁环卫用品', '2', 2, 159, 6702, 'LB=159&XL=183', 'qing jie huan wei yong pin ', 'qingjiehuanweiyongpin', 'qjhwyp');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (184, '清洁环保', '空气净化', '3', 3, 159, 6702, 'LB=159&XL=184', 'kong qi jing hua ', 'kongqijinghua', 'kqjh');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (185, '清洁环保', '环保清洁柜 ', '4', 4, 159, 6702, 'LB=159&XL=185', 'huan bao qing jie gui  ', 'huanbaoqingjiegui', 'hbqjg');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (186, '清洁环保', '节能产品', '5', 5, 159, 6702, 'LB=159&XL=186', 'jie neng chan pin ', 'jienengchanpin', 'jncp');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (187, '清洁环保', '净水器', '6', 6, 159, 6702, 'LB=159&XL=187', 'jing shui qi ', 'jingshuiqi', 'jsq');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (188, '清洁环保', '净水设备', '7', 7, 159, 6702, 'LB=159&XL=188', 'jing shui she bei ', 'jingshuishebei', 'jssb');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (189, '教育培训类别', '幼儿园', '1', 1, null, 61, 'LB=189', 'you dong yuan ', 'youdongyuan', 'ydy');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (190, '教育培训类别', '语言培训机构', '2', 2, null, 61, 'LB=190', 'yu yan pei xun ji gou ', 'yuyanpeixunjigou', 'yypxjg');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (200, '汽车服务类别', '车饰用品', '1', 1, null, 62, 'LB=200', 'che shi yong pin ', 'cheshiyongpin', 'csyp');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (201, '汽车服务类别', '汽车维修', '2', 2, null, 62, 'LB=201', 'qi che wei xiu ', 'qicheweixiu', 'qcwx');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (202, '汽车服务类别', '汽车美容', '3', 3, null, 62, 'LB=202', 'qi che mei rong ', 'qichemeirong', 'qcmr');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (203, '汽车服务类别', '洗车', '4', 4, null, 62, 'LB=203', 'xi che ', 'xiche', 'xc');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (204, '汽车服务类别', '汽车用品', '5', 5, null, 62, 'LB=204', 'qi che yong pin ', 'qicheyongpin', 'qcyp');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (205, '汽车服务类别', '汽车电子电器', '6', 6, null, 62, 'LB=205', 'qi che dian zi dian qi ', 'qichedianzidianqi', 'qcdzdq');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (206, '汽车服务类别', '汽车租赁/买卖', '7', 7, null, 62, 'LB=206', 'qi che zu lin /mai mai ', 'qichezulin/maimai', 'qczl/mm');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (207, '汽车维修', '轮胎翻新', '1', 1, 198, 62, 'LB=198&XL=207', 'lun tai fan xin ', 'luntaifanxin', 'ltfx');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (208, '汽车维修', '汽车改造', '2', 2, 198, 62, 'LB=198&XL=208', 'qi che gai zao ', 'qichegaizao', 'qcgz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (209, '汽车维修', '发动机清洗', '3', 3, 198, 62, 'LB=198&XL=209', 'fa dong ji qing xi ', 'fadongjiqingxi', 'fdjqx');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (210, '汽车美容', '汽车贴膜', '1', 1, 199, 62, 'LB=199&XL=210', 'qi che tie mo ', 'qichetiemo', 'qctm');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (211, '汽车美容', '汽车保养', '2', 2, 199, 62, 'LB=199&XL=211', 'qi che bao yang ', 'qichebaoyang', 'qcby');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (212, '汽车美容', '汽车打蜡', '3', 3, 199, 62, 'LB=199&XL=212', 'qi che da la ', 'qichedala', 'qcdl');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (213, '汽车美容', '汽车隔音', '4', 4, 199, 62, 'LB=199&XL=213', 'qi che ge yin ', 'qichegeyin', 'qcgy');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (214, '汽车美容', '汽车封釉', '5', 5, 199, 62, 'LB=199&XL=214', 'qi che feng you ', 'qichefengyou', 'qcfy');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (215, '汽车用品', '汽车音响', '1', 1, 201, 62, 'LB=201&XL=215', 'qi che yin xiang ', 'qicheyinxiang', 'qcyx');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (216, '汽车用品', '汽车灯具', '2', 2, 201, 62, 'LB=201&XL=216', 'qi che deng ju ', 'qichedengju', 'qcdj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (217, '汽车用品', '汽车轮胎', '3', 3, 201, 62, 'LB=201&XL=217', 'qi che lun tai ', 'qicheluntai', 'qclt');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (218, '汽车用品', '自动洗车器', '4', 4, 201, 62, 'LB=201&XL=218', 'zi dong xi che qi ', 'zidongxicheqi', 'zdxcq');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (219, '汽车用品', '发动机', '5', 5, 201, 62, 'LB=201&XL=219', 'fa dong ji ', 'fadongji', 'fdj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (220, '汽车租赁/买卖', '二手车', '1', 1, 203, null, null, null, null, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (221, '汽车租赁/买卖', '租车', '2', 2, 203, null, null, null, null, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (222, '网络服务类别', '网吧', '1', 1, null, 63, 'LB=222', 'wang ba ', 'wangba', 'wb');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (223, '网络服务类别', '网站代理', '2', 2, null, 63, 'LB=223', 'wang zhan dai li ', 'wangzhandaili', 'wzdl');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (224, '网络服务类别', '自助建站', '3', 3, null, 63, 'LB=224', 'zi zhu jian zhan ', 'zizhujianzhan', 'zzjz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (225, '网络服务类别', '淘宝代理', '4', 4, null, 63, 'LB=225', 'tao bao dai li ', 'taobaodaili', 'tbdl');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (226, '网站代理', '网上开店', '1', 1, 220, 63, 'LB=220&XL=226', 'wang shang kai dian ', 'wangshangkaidian', 'wskd');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (227, '网站代理', '网站运营', '2', 2, 220, 63, 'LB=220&XL=227', 'wang zhan yun ying ', 'wangzhanyunying', 'wzyy');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (228, '网站代理', '广告联盟', '3', 3, 220, 63, 'LB=220&XL=228', 'guang gao lian meng ', 'guanggaolianmeng', 'gglm');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (229, '农业类别', '种植养殖', '1', 1, null, 64, 'LB=229', 'zhong zhi yang zhi ', 'zhongzhiyangzhi', 'zzyz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (230, '农业类别', '农业用具', '2', 2, null, 64, 'LB=230', 'nong ye yong ju ', 'nongyeyongju', 'nyyj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (231, '农业类别', '渔具', '3', 3, null, 64, 'LB=231', 'yu ju ', 'yuju', 'yj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (232, '种植养殖', '果品', '1', 1, 226, 64, 'LB=226&XL=232', 'guo pin ', 'guopin', 'gp');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (233, '种植养殖', '花木', '2', 2, 226, 64, 'LB=226&XL=233', 'hua mu ', 'huamu', 'hm');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (234, '种植养殖', '食用菌', '3', 3, 226, 64, 'LB=226&XL=234', 'shi yong jun ', 'shiyongjun', 'syj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (235, '种植养殖', '养猪', '4', 4, 226, 64, 'LB=226&XL=235', 'yang zhu ', 'yangzhu', 'yz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (236, '种植养殖', '养鸡', '5', 5, 226, 64, 'LB=226&XL=236', 'yang ji ', 'yangji', 'yj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (237, '种植养殖', '种菜', '6', 6, 226, 64, 'LB=226&XL=237', 'zhong cai ', 'zhongcai', 'zc');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (238, '特色类别', '移动通讯', '1', 1, null, 64, 'LB=238', 'yi dong tong xun ', 'yidongtongxun', 'ydtx');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (239, '特色类别', '数码电子', '2', 2, null, 64, 'LB=239', 'shu ma dian zi ', 'shumadianzi', 'smdz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (240, '特色类别', '其他', '3', 3, null, 64, 'LB=240', 'qi ta ', 'qita', 'qt');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (241, '特色类别', '技术转让', '4', 4, null, 64, 'LB=241', 'ji shu zhuan rang ', 'jishuzhuanrang', 'jszr');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (242, '特色类别', '生意转让', '5', 5, null, 64, 'LB=242', 'sheng yi zhuan rang ', 'shengyizhuanrang', 'syzr');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (243, '特色类别', '商铺招商', '6', 6, null, 64, 'LB=243', 'shang pu zhao shang ', 'shangpuzhaoshang', 'spzs');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (244, '生活服务类别', '快递物流', '1', 1, null, 66, 'LB=244', 'kuai di wu liu ', 'kuaidiwuliu', 'kdwl');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (245, '生活服务类别', '旅游/票务', '2', 2, null, 66, 'LB=245', 'lv you /piao wu ', 'lvyou/piaowu', 'ly/pw');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (246, '生活服务类别', '干洗', '3', 3, null, 66, 'LB=246', 'gan xi ', 'ganxi', 'gx');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (247, '生活服务类别', '皮革/奢饰品护理', '4', 4, null, 66, 'LB=247', 'pi ge /she shi pin hu li ', 'pige/sheshipinhuli', 'pg/ssphl');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (248, '生活服务类别', '家政服务', '5', 5, null, 66, 'LB=248', 'jia zheng fu wu ', 'jiazhengfuwu', 'jzfw');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (249, '生活服务类别', '酒店', '6', 6, null, 66, 'LB=249', 'jiu dian ', 'jiudian', 'jd');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (250, '生活服务类别', '零售业', '7', 7, null, 66, 'LB=250', 'ling shou ye ', 'lingshouye', 'lsy');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (251, '生活服务类别', '婚庆', '8', 8, null, 66, 'LB=251', 'hun qing ', 'hunqing', 'hq');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (252, '生活服务类别', '娱乐场所', '9', 9, null, 66, 'LB=252', 'yu le chang suo ', 'yulechangsuo', 'ylcs');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (253, '快递物流', '快递', '1', 1, 241, null, null, null, null, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (254, '快递物流', '物流', '2', 2, 241, null, null, null, null, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (255, '旅游/票务', '旅行社', '1', 1, 242, null, null, null, null, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (256, '旅游/票务', '机票', '2', 2, 242, null, null, null, null, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (257, '旅游/票务', '火车票', '3', 3, 242, null, null, null, null, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (258, '零售业', '超市', '1', 1, 247, null, null, null, null, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (259, '零售业', '便利店', '2', 2, 247, null, null, null, null, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (260, '零售业', '两元店', '3', 3, 247, null, null, null, null, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (261, '零售业', '干果店', '4', 4, 247, null, null, null, null, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (262, '零售业', '花店', '5', 5, 247, null, null, null, null, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (263, '文体/母婴/儿童类别', '文体用品', '1', 1, null, 67, 'LB=263', 'wen ti yong pin ', 'wentiyongpin', 'wtyp');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (264, '文体/母婴/儿童类别', '文具加工', '2', 2, null, 67, 'LB=264', 'wen ju jia gong ', 'wenjujiagong', 'wjjg');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (265, '文体/母婴/儿童类别', '母婴儿童用品', '3', 3, null, 67, 'LB=265', 'mu ying dong tong yong pin ', 'muyingdongtongyongpin', 'mydtyp');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (266, '文体用品', '电子书', '1', 1, 263, 67, 'LB=263&XL=266', 'dian zi shu ', 'dianzishu', 'dzs');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (267, '文体用品', '书包', '2', 2, 263, 67, 'LB=263&XL=267', 'shu bao ', 'shubao', 'sb');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (268, '文体用品', '点读机', '3', 3, 263, 67, 'LB=263&XL=268', 'dian dong ji ', 'diandongji', 'ddj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (269, '文体用品', '文具', '4', 4, 263, 67, 'LB=263&XL=269', 'wen ju ', 'wenju', 'wj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (270, '文体用品', '点读笔', '5', 5, 263, 67, 'LB=263&XL=270', 'dian dong bi ', 'diandongbi', 'ddb');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (271, '文体用品', '动漫店', '6', 6, 263, 67, 'LB=263&XL=271', 'dong man dian ', 'dongmandian', 'dmd');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (272, '文体用品', '书吧书店', '7', 7, 263, 67, 'LB=263&XL=272', 'shu ba shu dian ', 'shubashudian', 'sbsd');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (273, '文体用品', '办公用品', '8', 8, 263, 67, 'LB=263&XL=273', 'ban gong yong pin ', 'bangongyongpin', 'bgyp');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (274, '文体用品', '胎教产品', '9', 9, 263, 67, 'LB=263&XL=274', 'tai jiao chan pin ', 'taijiaochanpin', 'tjcp');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (275, '文体用品', '软件书籍', '10', 10, 263, 67, 'LB=263&XL=275', 'ruan jian shu ji ', 'ruanjianshuji', 'rjsj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (276, '母婴儿童用品', '奶粉', '1', 1, 265, 67, 'LB=265&XL=276', 'nai fen ', 'naifen', 'nf');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (277, '母婴儿童用品', '玩具', '2', 2, 265, 67, 'LB=265&XL=277', 'wan ju ', 'wanju', 'wj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (278, '母婴儿童用品', '婴儿床', '3', 3, 265, 67, 'LB=265&XL=278', 'ying dong chuang ', 'yingdongchuang', 'ydc');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (279, '母婴儿童用品', '孕妇装', '4', 4, 265, 67, 'LB=265&XL=279', 'yun fu zhuang ', 'yunfuzhuang', 'yfz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (280, '母婴儿童用品', '婴儿车', '5', 5, 265, 67, 'LB=265&XL=280', 'ying dong che ', 'yingdongche', 'ydc');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (281, '母婴儿童用品', '滑板车', '6', 6, 265, 67, 'LB=265&XL=281', 'hua ban che ', 'huabanche', 'hbc');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (282, '母婴儿童用品', '母婴营养品', '7', 7, 265, 67, 'LB=265&XL=282', 'mu ying ying yang pin ', 'muyingyingyangpin', 'myyyp');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (283, '母婴儿童用品', '纸尿裤', '8', 8, 265, 67, 'LB=265&XL=283', 'zhi niao ku ', 'zhiniaoku', 'znk');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (284, '母婴儿童用品', '儿童电动车', '9', 9, 265, 67, 'LB=265&XL=284', 'dong tong dian dong che ', 'dongtongdiandongche', 'dtddc');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (285, '母婴儿童用品', '婴儿装', '10', 10, 265, 67, 'LB=265&XL=285', 'ying dong zhuang ', 'yingdongzhuang', 'ydz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (286, '母婴儿童用品', '孕婴用品', '11', 11, 265, 67, 'LB=265&XL=286', 'yun ying yong pin ', 'yunyingyongpin', 'yyyp');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (287, '母婴儿童用品', '孕婴食品', '12', 12, 265, 67, 'LB=265&XL=287', 'yun ying shi pin ', 'yunyingshipin', 'yysp');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (288, '面食', '小笼包', '1', 1, 6, 54, 'LB=6&XL=288', 'xiao long bao ', 'xiaolongbao', 'xlb');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (289, '面食', '拉面', '2', 2, 6, 54, 'LB=6&XL=289', 'la mian ', 'lamian', 'lm');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (290, '面食', '麻花', '3', 3, 6, 54, 'LB=6&XL=290', 'ma hua ', 'mahua', 'mh');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (291, '面食', '千层饼', '4', 4, 6, 54, 'LB=6&XL=291', 'qian ceng bing ', 'qiancengbing', 'qcb');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (292, '面食', '酱香饼', '5', 5, 6, 54, 'LB=6&XL=292', 'jiang xiang bing ', 'jiangxiangbing', 'jxb');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (293, '面食', '蛋挞', '6', 6, 6, 54, 'LB=6&XL=293', 'dan ta ', 'danta', 'dt');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (294, '面食', '担担面', '7', 7, 6, 54, 'LB=6&XL=294', 'dan dan mian ', 'dandanmian', 'ddm');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (295, '面食', '小吃车', '8', 8, 6, 54, 'LB=6&XL=295', 'xiao chi che ', 'xiaochiche', 'xcc');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (296, '面食', '热干面', '9', 9, 6, 54, 'LB=6&XL=296', 're gan mian ', 'reganmian', 'rgm');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (297, '面食', '过桥米线', '10', 10, 6, 54, 'LB=6&XL=297', 'guo qiao mi xian ', 'guoqiaomixian', 'gqmx');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (298, '面食', '手抓饼', '11', 11, 6, 54, 'LB=6&XL=298', 'shou zhua bing ', 'shouzhuabing', 'szb');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (299, '面食', '煎饼', '12', 12, 6, 54, 'LB=6&XL=299', 'jian bing ', 'jianbing', 'jb');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (300, '面食', '牛肉面', '13', 13, 6, 54, 'LB=6&XL=300', 'niu rou mian ', 'niuroumian', 'nrm');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (301, '面食', '生煎包', '14', 14, 6, 54, 'LB=6&XL=301', 'sheng jian bao ', 'shengjianbao', 'sjb');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (302, '面食', '灌汤包', '15', 15, 6, 54, 'LB=6&XL=302', 'guan tang bao ', 'guantangbao', 'gtb');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (303, '面食', '擀面皮', '16', 16, 6, 54, 'LB=6&XL=303', 'gan mian pi ', 'ganmianpi', 'gmp');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (304, '面食', '锅盖面', '17', 17, 6, 54, 'LB=6&XL=304', 'guo gai mian ', 'guogaimian', 'ggm');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (305, '面食', '熏肉大饼', '18', 18, 6, 54, 'LB=6&XL=305', 'xun rou da bing ', 'xunroudabing', 'xrdb');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (306, '面食', '罐罐面', '19', 19, 6, 54, 'LB=6&XL=306', 'guan guan mian ', 'guanguanmian', 'ggm');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (307, '面食', '饸饹面', '20', 20, 6, 54, 'LB=6&XL=307', 'he ge mian ', 'hegemian', 'hgm');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (308, '火锅', '羊蝎子火锅', '1', 1, 7, 54, 'LB=7&XL=308', 'yang xie zi huo guo ', 'yangxiezihuoguo', 'yxzhg');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (309, '火锅', '串串香', '2', 2, 7, 54, 'LB=7&XL=309', 'chuan chuan xiang ', 'chuanchuanxiang', 'ccx');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (310, '火锅', '麻辣火锅', '3', 3, 7, 54, 'LB=7&XL=310', 'ma la huo guo ', 'malahuoguo', 'mlhg');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (311, '火锅', '自助火锅', '4', 4, 7, 54, 'LB=7&XL=311', 'zi zhu huo guo ', 'zizhuhuoguo', 'zzhg');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (312, '火锅', '养生火锅', '5', 5, 7, 54, 'LB=7&XL=312', 'yang sheng huo guo ', 'yangshenghuoguo', 'yshg');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (313, '冷饮热饮', '酸奶', '1', 1, 8, 54, 'LB=8&XL=313', 'suan nai ', 'suannai', 'sn');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (314, '冷饮热饮', '冰淇淋', '2', 2, 8, 54, 'LB=8&XL=314', 'bing qi lin ', 'bingqilin', 'bql');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (315, '冷饮热饮', '咖啡', '3', 3, 8, 54, 'LB=8&XL=315', 'ka fei ', 'kafei', 'kf');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (316, '冷饮热饮', '奶茶', '4', 4, 8, 54, 'LB=8&XL=316', 'nai cha ', 'naicha', 'nc');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (317, '冷饮热饮', '豆浆', '5', 5, 8, 54, 'LB=8&XL=317', 'dong jiang ', 'dongjiang', 'dj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (318, '冷饮热饮', '甜品', '6', 6, 8, 54, 'LB=8&XL=318', 'tian pin ', 'tianpin', 'tp');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (319, '冷饮热饮', '糖水店', '7', 7, 8, 54, 'LB=8&XL=319', 'tang shui dian ', 'tangshuidian', 'tsd');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (320, '冷饮热饮', '水果捞', '8', 8, 8, 54, 'LB=8&XL=320', 'shui guo lao ', 'shuiguolao', 'sgl');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (321, '冷饮热饮', '水吧', '9', 9, 8, 54, 'LB=8&XL=321', 'shui ba ', 'shuiba', 'sb');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (322, '特色小吃', '麻辣烫', '1', 1, 9, 54, 'LB=9&XL=322', 'ma la tang ', 'malatang', 'mlt');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (323, '特色小吃', '酸辣粉', '2', 2, 9, 54, 'LB=9&XL=323', 'suan la fen ', 'suanlafen', 'slf');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (324, '特色小吃', '米线米粉', '3', 3, 9, 54, 'LB=9&XL=324', 'mi xian mi fen ', 'mixianmifen', 'mxmf');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (325, '特色小吃', '久久鸭', '4', 4, 9, 54, 'LB=9&XL=325', 'jiu jiu ya ', 'jiujiuya', 'jjy');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (326, '特色小吃', '老鸭汤', '5', 5, 9, 54, 'LB=9&XL=326', 'lao ya tang ', 'laoyatang', 'lyt');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (327, '特色小吃', '土豆粉', '6', 6, 9, 54, 'LB=9&XL=327', 'tu dong fen ', 'tudongfen', 'tdf');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (328, '特色小吃', '瓦罐汤', '7', 7, 9, 54, 'LB=9&XL=328', 'wa guan tang ', 'waguantang', 'wgt');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (329, '特色小吃', '地瓜坊', '8', 8, 9, 54, 'LB=9&XL=329', 'di gua fang ', 'diguafang', 'dgf');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (330, '特色小吃', '驴肉火烧', '9', 9, 9, 54, 'LB=9&XL=330', 'lv rou huo shao ', 'lvrouhuoshao', 'lrhs');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (331, '特色小吃', '麻辣香锅', '10', 10, 9, 54, 'LB=9&XL=331', 'ma la xiang guo ', 'malaxiangguo', 'mlxg');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (332, '特色小吃', '刀削面', '11', 11, 9, 54, 'LB=9&XL=332', 'dao xiao mian ', 'daoxiaomian', 'dxm');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (333, '特色小吃', '凉皮', '12', 12, 9, 54, 'LB=9&XL=333', 'liang pi ', 'liangpi', 'lp');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (334, '特色小吃', '臭豆腐', '13', 13, 9, 54, 'LB=9&XL=334', 'chou dong fu ', 'choudongfu', 'cdf');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (335, '特色小吃', '煎饼果子', '14', 14, 9, 54, 'LB=9&XL=335', 'jian bing guo zi ', 'jianbingguozi', 'jbgz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (336, '特色小吃', '煲仔饭', '15', 15, 9, 54, 'LB=9&XL=336', 'bao zi fan ', 'baozifan', 'bzf');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (337, '特色小吃', '肠粉', '16', 16, 9, 54, 'LB=9&XL=337', 'chang fen ', 'changfen', 'cf');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (338, '特色小吃', '关东煮', '17', 17, 9, 54, 'LB=9&XL=338', 'guan dong zhu ', 'guandongzhu', 'gdz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (339, '特色小吃', '肉夹馍', '18', 18, 9, 54, 'LB=9&XL=339', 'rou jia mo ', 'roujiamo', 'rjm');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (340, '特色小吃', '牛杂', '19', 19, 9, 54, 'LB=9&XL=340', 'niu za ', 'niuza', 'nz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (341, '特色小吃', '烤面筋', '20', 20, 9, 54, 'LB=9&XL=341', 'kao mian jin ', 'kaomianjin', 'kmj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (342, '特色小吃', '烤冷面', '21', 21, 9, 54, 'LB=9&XL=342', 'kao leng mian ', 'kaolengmian', 'klm');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (343, '特色小吃', '薯条', '22', 22, 9, 54, 'LB=9&XL=343', 'shu tiao ', 'shutiao', 'st');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (344, '特色小吃', '冒菜', '23', 23, 9, 54, 'LB=9&XL=344', 'mao cai ', 'maocai', 'mc');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (345, '特色小吃', '羊肉泡馍', '24', 24, 9, 54, 'LB=9&XL=345', 'yang rou pao mo ', 'yangroupaomo', 'yrpm');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (346, '特色小吃', '木桶饭', '25', 25, 9, 54, 'LB=9&XL=346', 'mu tong fan ', 'mutongfan', 'mtf');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (347, '特色小吃', '卤煮火烧', '26', 26, 9, 54, 'LB=9&XL=347', 'lu zhu huo shao ', 'luzhuhuoshao', 'lzhs');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (348, '特色小吃', '排骨米饭', '27', 27, 9, 54, 'LB=9&XL=348', 'pai gu mi fan ', 'paigumifan', 'pgmf');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (349, '特色小吃', '糖炒栗子', '28', 28, 9, 54, 'LB=9&XL=349', 'tang chao li zi ', 'tangchaolizi', 'tclz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (350, '特色小吃', '烤玉米', '29', 29, 9, 54, 'LB=9&XL=350', 'kao yu mi ', 'kaoyumi', 'kym');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (351, '特色小吃', '小碗菜', '30', 30, 9, 54, 'LB=9&XL=351', 'xiao wan cai ', 'xiaowancai', 'xwc');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (352, '特色小吃', '肥肠粉', '31', 31, 9, 54, 'LB=9&XL=352', 'fei chang fen ', 'feichangfen', 'fcf');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (353, '特色小吃', '疯狂土豆', '32', 32, 9, 54, 'LB=9&XL=353', 'feng kuang tu dong ', 'fengkuangtudong', 'fktd');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (354, '特色小吃', '砂锅粉', '33', 33, 9, 54, 'LB=9&XL=354', 'sha guo fen ', 'shaguofen', 'sgf');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (355, '特色小吃', '豆腐脑', '34', 34, 9, 54, 'LB=9&XL=355', 'dong fu nao ', 'dongfunao', 'dfn');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (356, '特色小吃', '炒酸奶', '35', 35, 9, 54, 'LB=9&XL=356', 'chao suan nai ', 'chaosuannai', 'csn');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (357, '特色小吃', '早餐车', '36', 36, 9, 54, 'LB=9&XL=357', 'zao can che ', 'zaocanche', 'zcc');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (358, '卤菜熟食', '夫妻肺片', '1', 1, 10, 54, 'LB=10&XL=358', 'fu qi fei pian ', 'fuqifeipian', 'fqfp');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (359, '卤菜熟食', '廖排骨', '2', 2, 10, 54, 'LB=10&XL=359', 'liao pai gu ', 'liaopaigu', 'lpg');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (360, '卤菜熟食', '叫花鸡', '3', 3, 10, 54, 'LB=10&XL=360', 'jiao hua ji ', 'jiaohuaji', 'jhj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (361, '卤菜熟食', '卤肉', '4', 4, 10, 54, 'LB=10&XL=361', 'lu rou ', 'lurou', 'lr');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (362, '卤菜熟食', '熟食店', '5', 5, 10, 54, 'LB=10&XL=362', 'shu shi dian ', 'shushidian', 'ssd');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (363, '卤菜熟食', '麻辣拌', '6', 6, 10, 54, 'LB=10&XL=363', 'ma la ban ', 'malaban', 'mlb');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (364, '蛋糕店', '西点', '1', 1, 11, 54, 'LB=11&XL=364', 'xi dian ', 'xidian', 'xd');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (365, '蛋糕店', '绿豆酥', '2', 2, 11, 54, 'LB=11&XL=365', 'lv dong su ', 'lvdongsu', 'lds');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (366, '蛋糕店', '面包店', '3', 3, 11, 54, 'LB=11&XL=366', 'mian bao dian ', 'mianbaodian', 'mbd');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (367, '蛋糕店', '枣糕', '4', 4, 11, 54, 'LB=11&XL=367', 'zao gao ', 'zaogao', 'zg');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (368, '蛋糕店', '可丽饼', '5', 5, 11, 54, 'LB=11&XL=368', 'ke li bing ', 'kelibing', 'klb');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (369, '快餐', '汉堡', '1', 1, 12, 54, 'LB=12&XL=369', 'han bao ', 'hanbao', 'hb');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (370, '快餐', '热狗', '2', 2, 12, 54, 'LB=12&XL=370', 're gou ', 'regou', 'rg');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (371, '烧烤', '水晶烧烤', '1', 1, 14, 54, 'LB=14&XL=371', 'shui jing shao kao ', 'shuijingshaokao', 'sjsk');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (372, '烧烤', '自助烧烤', '2', 2, 14, 54, 'LB=14&XL=372', 'zi zhu shao kao ', 'zizhushaokao', 'zzsk');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (373, '烧烤', '无烟烧烤', '3', 3, 14, 54, 'LB=14&XL=373', 'wu yan shao kao ', 'wuyanshaokao', 'wysk');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (374, '烧烤', '铁板烧', '4', 4, 14, 54, 'LB=14&XL=374', 'tie ban shao ', 'tiebanshao', 'tbs');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (375, '烧烤', '烤羊腿', '5', 5, 14, 54, 'LB=14&XL=375', 'kao yang tui ', 'kaoyangtui', 'kyt');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (376, '烧烤', '烤肉', '6', 6, 14, 54, 'LB=14&XL=376', 'kao rou ', 'kaorou', 'kr');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (377, '烧烤', '大排档', '7', 7, 14, 54, 'LB=14&XL=377', 'da pai dang ', 'dapaidang', 'dpd');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (378, '烧烤', '韩式烤肉', '8', 8, 14, 54, 'LB=14&XL=378', 'han shi kao rou ', 'hanshikaorou', 'hskr');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (379, '西餐', '披萨店', '1', 1, 16, 54, 'LB=16&XL=379', 'pi sa dian ', 'pisadian', 'psd');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (380, '西餐', '日本料理', '2', 2, 16, 54, 'LB=16&XL=380', 'ri ben liao li ', 'ribenliaoli', 'rbll');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (381, '西餐', '韩式料理', '3', 3, 16, 54, 'LB=16&XL=381', 'han shi liao li ', 'hanshiliaoli', 'hsll');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (382, '西餐', '寿司店', '4', 4, 16, 54, 'LB=16&XL=382', 'shou si dian ', 'shousidian', 'ssd');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (383, '烟酒茶饮料', '花茶', '1', 1, 19, 54, 'LB=19&XL=383', 'hua cha ', 'huacha', 'hc');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (384, '烟酒茶饮料', '牛奶', '2', 2, 19, 54, 'LB=19&XL=384', 'niu nai ', 'niunai', 'nn');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (385, '烟酒茶饮料', '酸奶', '3', 3, 19, 54, 'LB=19&XL=385', 'suan nai ', 'suannai', 'sn');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (386, '烟酒茶饮料', '茶叶', '4', 4, 19, 54, 'LB=19&XL=386', 'cha ye ', 'chaye', 'cy');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (387, '烟酒茶饮料', '果汁', '5', 5, 19, 54, 'LB=19&XL=387', 'guo zhi ', 'guozhi', 'gz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (388, '烟酒茶饮料', '凉茶', '6', 6, 19, 54, 'LB=19&XL=388', 'liang cha ', 'liangcha', 'lc');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (389, '烟酒茶饮料', '桶装水', '7', 7, 19, 54, 'LB=19&XL=389', 'tong zhuang shui ', 'tongzhuangshui', 'tzs');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (390, '烟酒茶饮料', '瓶装水', '8', 8, 19, 54, 'LB=19&XL=390', 'ping zhuang shui ', 'pingzhuangshui', 'pzs');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (391, '女装', '女式外套', '1', 1, 43, 55, 'LB=43&XL=391', 'nv shi wai tao ', 'nvshiwaitao', 'nswt');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (392, '女装', '品牌女装', '2', 2, 43, 55, 'LB=43&XL=392', 'pin pai nv zhuang ', 'pinpainvzhuang', 'ppnz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (393, '女装', '日韩女装', '3', 3, 43, 55, 'LB=43&XL=393', 'ri han nv zhuang ', 'rihannvzhuang', 'rhnz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (394, '女装', '外贸女装', '4', 4, 43, 55, 'LB=43&XL=394', 'wai mao nv zhuang ', 'waimaonvzhuang', 'wmnz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (395, '女装', '职业女装', '5', 5, 43, 55, 'LB=43&XL=395', 'zhi ye nv zhuang ', 'zhiyenvzhuang', 'zynz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (396, '女装', '韩版女装', '6', 6, 43, 55, 'LB=43&XL=396', 'han ban nv zhuang ', 'hanbannvzhuang', 'hbnz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (397, '女装', '婚纱', '7', 7, 43, 55, 'LB=43&XL=397', 'hun sha ', 'hunsha', 'hs');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (398, '女装', '礼服', '8', 8, 43, 55, 'LB=43&XL=398', 'li fu ', 'lifu', 'lf');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (399, '女装', '羊绒衫', '9', 9, 43, 55, 'LB=43&XL=399', 'yang rong shan ', 'yangrongshan', 'yrs');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (400, '女装', '折扣女装', '10', 10, 43, 55, 'LB=43&XL=400', 'zhe kou nv zhuang ', 'zhekounvzhuang', 'zknz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (401, '女装', '时尚女装', '11', 11, 43, 55, 'LB=43&XL=401', 'shi shang nv zhuang ', 'shishangnvzhuang', 'ssnz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (402, '女装', '休闲女装', '12', 12, 43, 55, 'LB=43&XL=402', 'xiu xian nv zhuang ', 'xiuxiannvzhuang', 'xxnz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (403, '女装', '欧韩女装', '13', 13, 43, 55, 'LB=43&XL=403', 'ou han nv zhuang ', 'ouhannvzhuang', 'ohnz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (404, '女装', '简约女装', '14', 14, 43, 55, 'LB=43&XL=404', 'jian yue nv zhuang ', 'jianyuenvzhuang', 'jynz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (405, '女装', '高级女装', '15', 15, 43, 55, 'LB=43&XL=405', 'gao ji nv zhuang ', 'gaojinvzhuang', 'gjnz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (406, '男装', '品牌男装', '1', 1, 44, 55, 'LB=44&XL=406', 'pin pai nan zhuang ', 'pinpainanzhuang', 'ppnz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (407, '男装', '商务男装', '2', 2, 44, 55, 'LB=44&XL=407', 'shang wu nan zhuang ', 'shangwunanzhuang', 'swnz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (408, '男装', '外贸男装', '3', 3, 44, 55, 'LB=44&XL=408', 'wai mao nan zhuang ', 'waimaonanzhuang', 'wmnz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (409, '男装', '休闲男装', '4', 4, 44, 55, 'LB=44&XL=409', 'xiu xian nan zhuang ', 'xiuxiannanzhuang', 'xxnz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (410, '男装', '职业正装', '5', 5, 44, 55, 'LB=44&XL=410', 'zhi ye zheng zhuang ', 'zhiyezhengzhuang', 'zyzz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (411, '男装', '男装衬衫', '7', 7, 44, 55, 'LB=44&XL=411', 'nan zhuang chen shan ', 'nanzhuangchenshan', 'nzcs');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (412, '男装', '时尚男装', '8', 8, 44, 55, 'LB=44&XL=412', 'shi shang nan zhuang ', 'shishangnanzhuang', 'ssnz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (413, '童装', '品牌童装', '1', 1, 45, 55, 'LB=45&XL=413', 'pin pai tong zhuang ', 'pinpaitongzhuang', 'pptz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (414, '童装', '外贸童装', '2', 2, 45, 55, 'LB=45&XL=414', 'wai mao tong zhuang ', 'waimaotongzhuang', 'wmtz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (415, '童装', '婴幼装', '3', 3, 45, 55, 'LB=45&XL=415', 'ying you zhuang ', 'yingyouzhuang', 'yyz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (416, '童装', '时尚童装', '4', 4, 45, 55, 'LB=45&XL=416', 'shi shang tong zhuang ', 'shishangtongzhuang', 'sstz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (417, '童装', '儿童服装', '5', 5, 45, 55, 'LB=45&XL=417', 'dong tong fu zhuang ', 'dongtongfuzhuang', 'dtfz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (418, '童装', '童鞋', '6', 6, 45, 55, 'LB=45&XL=418', 'tong xie ', 'tongxie', 'tx');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (419, '童装', '韩国童装', '7', 7, 45, 55, 'LB=45&XL=419', 'han guo tong zhuang ', 'hanguotongzhuang', 'hgtz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (419, '内衣', '保暖内衣', '1', 1, 46, 55, 'LB=46&XL=419', 'bao nuan nei yi ', 'baonuanneiyi', 'bnny');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (420, '内衣', '家居服', '2', 2, 46, 55, 'LB=46&XL=420', 'jia ju fu ', 'jiajufu', 'jjf');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (421, '内衣', '内裤', '3', 3, 46, 55, 'LB=46&XL=421', 'nei ku ', 'neiku', 'nk');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (422, '内衣', '品牌内衣', '4', 4, 46, 55, 'LB=46&XL=422', 'pin pai nei yi ', 'pinpaineiyi', 'ppny');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (423, '内衣', '睡衣', '5', 5, 46, 55, 'LB=46&XL=423', 'shui yi ', 'shuiyi', 'sy');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (424, '内衣', '塑身内衣', '6', 6, 46, 55, 'LB=46&XL=424', 'su shen nei yi ', 'sushenneiyi', 'ssny');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (425, '内衣', '袜子', '7', 7, 46, 55, 'LB=46&XL=425', 'wa zi ', 'wazi', 'wz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (426, '内衣', '外贸内衣', '8', 8, 46, 55, 'LB=46&XL=426', 'wai mao nei yi ', 'waimaoneiyi', 'wmny');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (427, '内衣', '文胸', '9', 9, 46, 55, 'LB=46&XL=427', 'wen xiong ', 'wenxiong', 'wx');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (428, '内衣', '生态内衣', '10', 10, 46, 55, 'LB=46&XL=428', 'sheng tai nei yi ', 'shengtaineiyi', 'stny');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (429, '内衣', '调整型内衣', '11', 11, 46, 55, 'LB=46&XL=429', 'diao zheng xing nei yi ', 'diaozhengxingneiyi', 'dzxny');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (430, '内衣', '少女内衣', '12', 12, 46, 55, 'LB=46&XL=430', 'shao nv nei yi ', 'shaonvneiyi', 'snny');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (431, '内衣', '男士内衣', '13', 13, 46, 55, 'LB=46&XL=431', 'nan shi nei yi ', 'nanshineiyi', 'nsny');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (432, '内衣', '美体内衣', '14', 14, 46, 55, 'LB=46&XL=432', 'mei ti nei yi ', 'meitineiyi', 'mtny');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (433, '运动装', '户外运动服', '1', 1, 47, 55, 'LB=47&XL=433', 'hu wai yun dong fu ', 'huwaiyundongfu', 'hwydf');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (434, '运动装', '外贸运动服', '2', 2, 47, 55, 'LB=47&XL=434', 'wai mao yun dong fu ', 'waimaoyundongfu', 'wmydf');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (435, '运动装', '泳装', '3', 3, 47, 55, 'LB=47&XL=435', 'yong zhuang ', 'yongzhuang', 'yz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (436, '运动装', '运动休闲服', '4', 4, 47, 55, 'LB=47&XL=436', 'yun dong xiu xian fu ', 'yundongxiuxianfu', 'ydxxf');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (437, '运动装', '专业运动服', '5', 5, 47, 55, 'LB=47&XL=437', 'zhuan ye yun dong fu ', 'zhuanyeyundongfu', 'zyydf');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (438, '运动装', '冲锋衣', '6', 6, 47, 55, 'LB=47&XL=438', 'chong feng yi ', 'chongfengyi', 'cfy');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (439, '鞋', '帆布鞋', '1', 1, 50, 55, 'LB=50&XL=439', 'fan bu xie ', 'fanbuxie', 'fbx');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (440, '鞋', '男鞋', '2', 2, 50, 55, 'LB=50&XL=440', 'nan xie ', 'nanxie', 'nx');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (441, '鞋', '女鞋', '3', 3, 50, 55, 'LB=50&XL=441', 'nv xie ', 'nvxie', 'nx');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (442, '鞋', '雪地靴', '4', 4, 50, 55, 'LB=50&XL=442', 'xue di xue ', 'xuedixue', 'xdx');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (443, '箱包皮具', '女包男包', '1', 1, 49, 55, 'LB=49&XL=443', 'nv bao nan bao ', 'nvbaonanbao', 'nbnb');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (444, '箱包皮具', '皮具', '2', 2, 49, 55, 'LB=49&XL=444', 'pi ju ', 'piju', 'pj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (445, '箱包皮具', '背包', '3', 3, 49, 55, 'LB=49&XL=445', 'bei bao ', 'beibao', 'bb');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (446, '箱包皮具', '单肩包', '4', 4, 49, 55, 'LB=49&XL=446', 'dan jian bao ', 'danjianbao', 'djb');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (447, '箱包皮具', '钱包', '5', 5, 49, 55, 'LB=49&XL=447', 'qian bao ', 'qianbao', 'qb');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (448, '箱包皮具', '拉杆箱', '6', 6, 49, 55, 'LB=49&XL=448', 'la gan xiang ', 'laganxiang', 'lgx');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (449, '壁纸', '纳米壁纸', '1', 1, 51, 56, 'LB=51&XL=449', 'na mi bi zhi ', 'namibizhi', 'nmbz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (450, '壁纸', '液态壁纸', '2', 2, 51, 56, 'LB=51&XL=450', 'ye tai bi zhi ', 'yetaibizhi', 'ytbz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (451, '壁纸', '壁画墙纸', '3', 3, 51, 56, 'LB=51&XL=451', 'bi hua qiang zhi ', 'bihuaqiangzhi', 'bhqz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (452, '壁纸', '墙艺纸', '4', 4, 51, 56, 'LB=51&XL=452', 'qiang yi zhi ', 'qiangyizhi', 'qyz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (453, '壁纸', '背景墙', '5', 5, 51, 56, 'LB=51&XL=453', 'bei jing qiang ', 'beijingqiang', 'bjq');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (454, '壁纸', '3D背景', '6', 6, 51, 56, 'LB=51&XL=454', '3Dbei jing ', '3Dbeijing', '3j');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (455, '门窗', '木门', '1', 1, 52, 56, 'LB=52&XL=455', 'mu men ', 'mumen', 'mm');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (456, '门窗', '铝窗', '2', 2, 52, 56, 'LB=52&XL=456', 'lv chuang ', 'lvchuang', 'lc');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (457, '门窗', '无框阳台', '3', 3, 52, 56, 'LB=52&XL=457', 'wu kuang yang tai ', 'wukuangyangtai', 'wkyt');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (458, '门窗', '无框窗', '4', 4, 52, 56, 'LB=52&XL=458', 'wu kuang chuang ', 'wukuangchuang', 'wkc');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (459, '门窗', '防盗门', '5', 5, 52, 56, 'LB=52&XL=459', 'fang dao men ', 'fangdaomen', 'fdm');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (460, '门窗', '防盗窗', '6', 6, 52, 56, 'LB=52&XL=460', 'fang dao chuang ', 'fangdaochuang', 'fdc');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (461, '门窗', '安全门', '7', 7, 52, 56, 'LB=52&XL=461', 'an quan men ', 'anquanmen', 'aqm');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (462, '门窗', '立体移门', '8', 8, 52, 56, 'LB=52&XL=462', 'li ti yi men ', 'litiyimen', 'ltym');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (463, '门窗', '铝窗', '9', 9, 52, 56, 'LB=52&XL=463', 'lv chuang ', 'lvchuang', 'lc');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (464, '地板瓷砖', '万能板', '1', 1, 53, 56, 'LB=53&XL=464', 'wan neng ban ', 'wannengban', 'wnb');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (465, '地板瓷砖', '木地板', '2', 2, 53, 56, 'LB=53&XL=465', 'mu di ban ', 'mudiban', 'mdb');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (466, '地板瓷砖', '竹地板', '3', 3, 53, 56, 'LB=53&XL=466', 'zhu di ban ', 'zhudiban', 'zdb');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (467, '地板瓷砖', '瓷砖', '4', 4, 53, 56, 'LB=53&XL=467', 'ci zhuan ', 'cizhuan', 'cz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (468, '地板瓷砖', '陶瓷瓦', '5', 5, 53, 56, 'LB=53&XL=468', 'tao ci wa ', 'taociwa', 'tcw');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (469, '地板瓷砖', '墙砖', '6', 6, 53, 56, 'LB=53&XL=469', 'qiang zhuan ', 'qiangzhuan', 'qz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (470, '装修材料', '防水建材', '1', 1, 54, 56, 'LB=54&XL=470', 'fang shui jian cai ', 'fangshuijiancai', 'fsjc');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (471, '装修材料', '石材板材', '2', 2, 54, 56, 'LB=54&XL=471', 'shi cai ban cai ', 'shicaibancai', 'scbc');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (472, '装修材料', '耐火板', '3', 3, 54, 56, 'LB=54&XL=472', 'nai huo ban ', 'naihuoban', 'nhb');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (473, '装修材料', '防锈产品', '4', 4, 54, 56, 'LB=54&XL=473', 'fang xiu chan pin ', 'fangxiuchanpin', 'fxcp');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (474, '装修材料', '建筑材料', '5', 5, 54, 56, 'LB=54&XL=474', 'jian zhu cai liao ', 'jianzhucailiao', 'jzcl');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (475, '油漆涂料', '环保油漆', '1', 1, 55, 56, 'LB=55&XL=475', 'huan bao you qi ', 'huanbaoyouqi', 'hbyq');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (476, '油漆涂料', '外墙漆', '2', 2, 55, 56, 'LB=55&XL=476', 'wai qiang qi ', 'waiqiangqi', 'wqq');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (477, '油漆涂料', '墙艺漆', '3', 3, 55, 56, 'LB=55&XL=477', 'qiang yi qi ', 'qiangyiqi', 'qyq');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (478, '油漆涂料', '水性漆', '4', 4, 55, 56, 'LB=55&XL=478', 'shui xing qi ', 'shuixingqi', 'sxq');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (479, '油漆涂料', '墙面漆', '5', 5, 55, 56, 'LB=55&XL=479', 'qiang mian qi ', 'qiangmianqi', 'qmq');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (480, '油漆涂料', '工程漆', '6', 6, 55, 56, 'LB=55&XL=480', 'gong cheng qi ', 'gongchengqi', 'gcq');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (481, '油漆涂料', '金属材料', '7', 7, 55, 56, 'LB=55&XL=481', 'jin shu cai liao ', 'jinshucailiao', 'jscl');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (482, '厨卫设备', '热水器', '1', 1, 56, 56, 'LB=56&XL=482', 're shui qi ', 'reshuiqi', 'rsq');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (483, '厨卫设备', '橱柜', '2', 2, 56, 56, 'LB=56&XL=483', 'chu gui ', 'chugui', 'cg');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (484, '厨卫设备', '马桶', '3', 3, 56, 56, 'LB=56&XL=484', 'ma tong ', 'matong', 'mt');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (485, '厨卫设备', '浴缸', '4', 4, 56, 56, 'LB=56&XL=485', 'yu gang ', 'yugang', 'yg');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (486, '灯具灯饰', '日光灯', '1', 1, 57, 56, 'LB=57&XL=486', 'ri guang deng ', 'riguangdeng', 'rgd');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (487, '灯具灯饰', '照明器材', '2', 2, 57, 56, 'LB=57&XL=487', 'zhao ming qi cai ', 'zhaomingqicai', 'zmqc');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (488, '灯具灯饰', '电子灯牌', '3', 3, 57, 56, 'LB=57&XL=488', 'dian zi deng pai ', 'dianzidengpai', 'dzdp');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (489, '灯具灯饰', '水晶灯饰', '4', 4, 57, 56, 'LB=57&XL=489', 'shui jing deng shi ', 'shuijingdengshi', 'sjds');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (490, '灯具灯饰', '装饰灯饰', '5', 5, 57, 56, 'LB=57&XL=490', 'zhuang shi deng shi ', 'zhuangshidengshi', 'zsds');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (491, '灯具灯饰', '吸顶灯', '6', 6, 57, 56, 'LB=57&XL=491', 'xi ding deng ', 'xidingdeng', 'xdd');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (492, '灯具灯饰', '小夜灯', '7', 7, 57, 56, 'LB=57&XL=492', 'xiao ye deng ', 'xiaoyedeng', 'xyd');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (493, '灯具灯饰', '节能灯', '8', 8, 57, 56, 'LB=57&XL=493', 'jie neng deng ', 'jienengdeng', 'jnd');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (494, '灯具灯饰', 'LED灯', '9', 9, 57, 56, 'LB=57&XL=494', 'LEDdeng ', 'LEDdeng', 'L');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (496, '美容保健类别', '保健食品', '11', 11, null, 58, 'LB=496', 'bao jian shi pin ', 'baojianshipin', 'bjsp');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (501, '服装鞋包类别', '牛仔服装', '9', 9, null, 55, 'LB=501', 'niu zi fu zhuang ', 'niuzifuzhuang', 'nzfz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (501, '五金', '水暖五金', '1', 1, 59, 56, 'LB=59&XL=501', 'shui nuan wu jin ', 'shuinuanwujin', 'snwj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (502, '服装鞋包类别', '亲子装', '11', 11, null, 55, 'LB=502', 'qin zi zhuang ', 'qinzizhuang', 'qzz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (502, '五金', '泵阀', '2', 2, 59, 56, 'LB=59&XL=502', 'beng fa ', 'bengfa', 'bf');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (503, '服装鞋包类别', '情侣装', '12', 12, null, 55, 'LB=503', 'qing lv zhuang ', 'qinglvzhuang', 'qlz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (503, '五金', '锁业', '3', 3, 59, 56, 'LB=59&XL=503', 'suo ye ', 'suoye', 'sy');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (504, '服装鞋包类别', '羊绒制品', '13', 13, null, 55, 'LB=504', 'yang rong zhi pin ', 'yangrongzhipin', 'yrzp');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (504, '五金', '五金工具', '4', 4, 59, 56, 'LB=59&XL=504', 'wu jin gong ju ', 'wujingongju', 'wjgj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (505, '五金', '五金建材', '5', 5, 59, 56, 'LB=59&XL=505', 'wu jin jian cai ', 'wujinjiancai', 'wjjc');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (505, '服装鞋包类别', '羽绒制品', '14', 14, null, 55, 'LB=505', 'yu rong zhi pin ', 'yurongzhipin', 'yrzp');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (506, '五金', '电动工具', '6', 6, 59, 56, 'LB=59&XL=506', 'dian dong gong ju ', 'diandonggongju', 'ddgj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (506, '服装鞋包类别', '袜子', '15', 15, null, 55, 'LB=506', 'wa zi ', 'wazi', 'wz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (507, '服装鞋包类别', '泳装', '16', 16, null, 55, 'LB=507', 'yong zhuang ', 'yongzhuang', 'yz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (507, '五金', '电机', '7', 7, 59, 56, 'LB=59&XL=507', 'dian ji ', 'dianji', 'dj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (508, '五金', '减速机', '8', 8, 59, 56, 'LB=59&XL=508', 'jian su ji ', 'jiansuji', 'jsj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (509, '经营模式', '经销', '1', 1, null, null, null, null, null, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (510, '经营模式', '代理', '2', 2, null, null, null, null, null, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (511, '经营模式', '特许', '3', 3, null, null, null, null, null, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (512, '经营模式', '合作', '4', 4, null, null, null, null, null, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (513, '经营模式', '自由连锁', '6', 6, null, null, null, null, null, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (514, '经营模式', '直营', '5', 5, null, null, null, null, null, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (515, '经营模式', '其他', '7', 7, null, null, null, null, null, null);
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (516, '环保产品类别', 'pvc壁纸', '1', 1, null, 6702, 'LB=516', 'pvcbi zhi ', 'pvcbizhi', 'pz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (517, '环保产品类别', '节能设备', '2', 2, null, 6702, 'LB=517', 'jie neng she bei ', 'jienengshebei', 'jnsb');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (518, '环保产品类别', '净水设备', '3', 3, null, 6702, 'LB=518', 'jing shui she bei ', 'jingshuishebei', 'jssb');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (519, '环保产品类别', '空气净化', '4', 4, null, 6702, 'LB=519', 'kong qi jing hua ', 'kongqijinghua', 'kqjh');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (520, '环保产品类别', '能源环保', '5', 5, null, 6702, 'LB=520', 'neng yuan huan bao ', 'nengyuanhuanbao', 'nyhb');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (521, '零售类别', '超市', '1', 1, null, 6701, 'LB=521', 'chao shi ', 'chaoshi', 'cs');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (522, '零售类别', '2元店', '2', 2, null, 6701, 'LB=522', '2yuan dian ', '2yuandian', '2d');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (523, '零售类别', '礼品店', '3', 3, null, 6701, 'LB=523', 'li pin dian ', 'lipindian', 'lpd');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (524, '零售类别', '干果店', '4', 4, null, 6701, 'LB=524', 'gan guo dian ', 'ganguodian', 'ggd');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (525, '零售类别', '精品店', '5', 5, null, 6701, 'LB=525', 'jing pin dian ', 'jingpindian', 'jpd');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (526, '零售类别', '水果店', '6', 6, null, 6701, 'LB=526', 'shui guo dian ', 'shuiguodian', 'sgd');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (527, '零售类别', '花店', '7', 7, null, 6701, 'LB=527', 'hua dian ', 'huadian', 'hd');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (528, '零售类别', '便利店', '8', 8, null, 6701, 'LB=528', 'bian li dian ', 'bianlidian', 'bld');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (591, '建材类别', '采暖设备', '10', 10, null, 56, 'LB=591', 'cai nuan she bei ', 'cainuanshebei', 'cnsb');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (592, '建材类别', '安防设备', '11', 11, null, 56, 'LB=592', 'an fang she bei ', 'anfangshebei', 'afsb');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (631, '机械类别', '包装机械', '5', 5, null, 57, 'LB=631', 'bao zhuang ji xie ', 'baozhuangjixie', 'bzjx');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (632, '机械类别', '服装机械', '6', 6, null, 57, 'LB=632', 'fu zhuang ji xie ', 'fuzhuangjixie', 'fzjx');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (633, '机械类别', '干洗设备', '7', 7, null, 57, 'LB=633', 'gan xi she bei ', 'ganxishebei', 'gxsb');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (634, '机械类别', '化工设备', '8', 8, null, 57, 'LB=634', 'hua gong she bei ', 'huagongshebei', 'hgsb');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (941, '美容保健类别', '中医美容', '6', 6, null, 58, 'LB=941', 'zhong yi mei rong ', 'zhongyimeirong', 'zymr');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (942, '美容保健类别', '足疗汗蒸', '7', 7, null, 58, 'LB=942', 'zu liao han zheng ', 'zuliaohanzheng', 'zlhz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (943, '美容保健类别', '个人护理', '8', 8, null, 58, 'LB=943', 'ge ren hu li ', 'gerenhuli', 'grhl');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (944, '美容保健类别', '美容护肤', '9', 9, null, 58, 'LB=944', 'mei rong hu fu ', 'meironghufu', 'mrhf');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (945, '美容保健类别', '视力保健', '10', 10, null, 58, 'LB=945', 'shi li bao jian ', 'shilibaojian', 'slbj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (947, '美容保健类别', '养生馆', '12', 12, null, 58, 'LB=947', 'yang sheng guan ', 'yangshengguan', 'ysg');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (948, '美容保健类别', '医疗器械', '13', 13, null, 58, 'LB=948', 'yi liao qi xie ', 'yiliaoqixie', 'ylqx');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1601, '卫浴', '热水器', '1', 1, 160, 60, 'LB=160&XL=1601', 're shui qi ', 'reshuiqi', 'rsq');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1602, '卫浴', '浴桶', '2', 2, 160, 60, 'LB=160&XL=1602', 'yu tong ', 'yutong', 'yt');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1603, '卫浴', '马桶', '3', 3, 160, 60, 'LB=160&XL=1603', 'ma tong ', 'matong', 'mt');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1604, '卫浴', '水龙头', '4', 4, 160, 60, 'LB=160&XL=1604', 'shui long tou ', 'shuilongtou', 'slt');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1605, '卫浴', '卫浴散热器', '5', 5, 160, 60, 'LB=160&XL=1605', 'wei yu san re qi ', 'weiyusanreqi', 'wysrq');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1606, '卫浴', '洁身器', '6', 6, 160, 60, 'LB=160&XL=1606', 'jie shen qi ', 'jieshenqi', 'jsq');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1611, '厨房用品', '橱柜', '1', 1, 161, 60, 'LB=161&XL=1611', 'chu gui ', 'chugui', 'cg');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1612, '厨房用品', '吸油烟机', '2', 2, 161, 60, 'LB=161&XL=1612', 'xi you yan ji ', 'xiyouyanji', 'xyyj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1613, '厨房用品', '洗菜机', '3', 3, 161, 60, 'LB=161&XL=1613', 'xi cai ji ', 'xicaiji', 'xcj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1614, '厨房用品', '洗碗机', '4', 4, 161, 60, 'LB=161&XL=1614', 'xi wan ji ', 'xiwanji', 'xwj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1615, '厨房用品', '餐具', '5', 5, 161, 60, 'LB=161&XL=1615', 'can ju ', 'canju', 'cj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1616, '厨房用品', '电磁炉', '6', 6, 161, 60, 'LB=161&XL=1616', 'dian ci lu ', 'diancilu', 'dcl');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1617, '厨房用品', '烟气导流机', '7', 7, 161, 60, 'LB=161&XL=1617', 'yan qi dao liu ji ', 'yanqidaoliuji', 'yqdlj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1618, '厨房用品', '消毒设备', '8', 8, 161, 60, 'LB=161&XL=1618', 'xiao dong she bei ', 'xiaodongshebei', 'xdsb');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1619, '厨房用品', '整体厨房', '9', 9, 161, 60, 'LB=161&XL=1619', 'zheng ti chu fang ', 'zhengtichufang', 'ztcf');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1621, '家用电器', '空调', '1', 1, 162, 60, 'LB=162&XL=1621', 'kong diao ', 'kongdiao', 'kd');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1622, '家用电器', '电视', '2', 2, 162, 60, 'LB=162&XL=1622', 'dian shi ', 'dianshi', 'ds');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1623, '家用电器', '厨卫电器', '3', 3, 162, 60, 'LB=162&XL=1623', 'chu wei dian qi ', 'chuweidianqi', 'cwdq');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1624, '家用电器', '咖啡机', '4', 4, 162, 60, 'LB=162&XL=1624', 'ka fei ji ', 'kafeiji', 'kfj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1625, '家用电器', '洗衣机', '5', 5, 162, 60, 'LB=162&XL=1625', 'xi yi ji ', 'xiyiji', 'xyj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1631, '家居类别', '创意家居', '8', 8, null, 60, 'LB=1631', 'chuang yi jia ju ', 'chuangyijiaju', 'cyjj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1631, '家居用品', '收纳盒', '1', 1, 163, 60, 'LB=163&XL=1631', 'shou na he ', 'shounahe', 'snh');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1632, '家居用品', '水族箱', '2', 2, 163, 60, 'LB=163&XL=1632', 'shui zu xiang ', 'shuizuxiang', 'szx');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1633, '家居用品', '防蝇帘', '3', 3, 163, 60, 'LB=163&XL=1633', 'fang ying lian ', 'fangyinglian', 'fyl');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1634, '家居用品', '刀剪', '4', 4, 163, 60, 'LB=163&XL=1634', 'dao jian ', 'daojian', 'dj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1635, '家居用品', '晾衣架', '5', 5, 163, 60, 'LB=163&XL=1635', 'liang yi jia ', 'liangyijia', 'lyj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1636, '家居用品', '能量杯', '6', 6, 163, 60, 'LB=163&XL=1636', 'neng liang bei ', 'nengliangbei', 'nlb');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1637, '家居用品', '活性炭', '7', 7, 163, 60, 'LB=163&XL=1637', 'huo xing tan ', 'huoxingtan', 'hxt');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1638, '家居用品', '消毒毛巾', '8', 8, 163, 60, 'LB=163&XL=1638', 'xiao dong mao jin ', 'xiaodongmaojin', 'xdmj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1641, '创意家居', '智能家居', '1', 1, 164, 60, 'LB=164&XL=1641', 'zhi neng jia ju ', 'zhinengjiaju', 'znjj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1642, '创意家居', '家居生活馆', '2', 2, 164, 60, 'LB=164&XL=1642', 'jia ju sheng huo guan ', 'jiajushenghuoguan', 'jjshg');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1661, '家居饰品', '装饰画', '4', 4, 156, 60, 'LB=156&XL=1661', 'zhuang shi hua ', 'zhuangshihua', 'zsh');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1662, '家居饰品', '壁画', '5', 5, 156, 60, 'LB=156&XL=1662', 'bi hua ', 'bihua', 'bh');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1901, '教育培训类别', '认证考试机构', '3', 3, null, 61, 'LB=1901', 'ren zheng kao shi ji gou ', 'renzhengkaoshijigou', 'rzksjg');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1902, '教育培训类别', '潜能培训机构', '4', 4, null, 61, 'LB=1902', 'qian neng pei xun ji gou ', 'qiannengpeixunjigou', 'qnpxjg');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1903, '教育培训类别', '技能培训机构', '5', 5, null, 61, 'LB=1903', 'ji neng pei xun ji gou ', 'jinengpeixunjigou', 'jnpxjg');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1904, '教育培训类别', '网络教育机构', '6', 6, null, 61, 'LB=1904', 'wang luo jiao yu ji gou ', 'wangluojiaoyujigou', 'wljyjg');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1905, '教育培训类别', '学习用品代理', '7', 7, null, 61, 'LB=1905', 'xue xi yong pin dai li ', 'xuexiyongpindaili', 'xxypdl');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1906, '教育培训类别', '软件书籍代理', '8', 8, null, 61, 'LB=1906', 'ruan jian shu ji dai li ', 'ruanjianshujidaili', 'rjsjdl');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1907, '教育培训类别', '家教辅导机构', '9', 9, null, 61, 'LB=1907', 'jia jiao fu dao ji gou ', 'jiajiaofudaojigou', 'jjfdjg');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1908, '教育培训类别', '留学机构代理', '10', 10, null, 61, 'LB=1908', 'liu xue ji gou dai li ', 'liuxuejigoudaili', 'lxjgdl');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1909, '教育培训类别', 'IT培训机构', '11', 11, null, 61, 'LB=1909', 'ITpei xun ji gou ', 'ITpeixunjigou', 'Ixjg');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1910, '教育培训类别', '早教', '12', 12, null, 61, 'LB=1910', 'zao jiao ', 'zaojiao', 'zj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (2311, '农业类别', '绿色食品', '4', 4, null, 64, 'LB=2311', 'lv se shi pin ', 'lvseshipin', 'lssp');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (4051, '女装', '淑女装', '16', 16, 43, 55, 'LB=43&XL=4051', 'shu nv zhuang ', 'shunvzhuang', 'snz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (4052, '女装', '公主女装', '17', 17, 43, 55, 'LB=43&XL=4052', 'gong zhu nv zhuang ', 'gongzhunvzhuang', 'gznz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (4053, '女装', '大码女装', '18', 18, 43, 55, 'LB=43&XL=4053', 'da ma nv zhuang ', 'damanvzhuang', 'dmnz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (4061, '男装', '男式外套', '6', 6, 44, 55, 'LB=44&XL=4061', 'nan shi wai tao ', 'nanshiwaitao', 'nswt');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (4121, '男装', '牛仔男装', '9', 9, 44, 55, 'LB=44&XL=4121', 'niu zi nan zhuang ', 'niuzinanzhuang', 'nznz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (4122, '男装', '精品男装', '10', 10, 44, 55, 'LB=44&XL=4122', 'jing pin nan zhuang ', 'jingpinnanzhuang', 'jpnz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (4123, '男装', '韩版男装', '11', 11, 44, 55, 'LB=44&XL=4123', 'han ban nan zhuang ', 'hanbannanzhuang', 'hbnz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (4124, '男装', '潮流男装', '12', 12, 44, 55, 'LB=44&XL=4124', 'chao liu nan zhuang ', 'chaoliunanzhuang', 'clnz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (4125, '男装', '大码男装', '13', 13, 44, 55, 'LB=44&XL=4125', 'da ma nan zhuang ', 'damananzhuang', 'dmnz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (4126, '男装', '商务西装', '14', 14, 44, 55, 'LB=44&XL=4126', 'shang wu xi zhuang ', 'shangwuxizhuang', 'swxz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (4191, '童装', '儿童牛仔', '8', 8, 45, 55, 'LB=45&XL=4191', 'dong tong niu zi ', 'dongtongniuzi', 'dtnz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (4192, '童装', '青少年服装', '9', 9, 45, 55, 'LB=45&XL=4192', 'qing shao nian fu zhuang ', 'qingshaonianfuzhuang', 'qsnfz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (4321, '内衣', '无缝内衣', '15', 15, 46, 55, 'LB=46&XL=4321', 'wu feng nei yi ', 'wufengneiyi', 'wfny');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (4322, '内衣', '纯棉内衣', '16', 16, 46, 55, 'LB=46&XL=4322', 'chun mian nei yi ', 'chunmianneiyi', 'cmny');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (4381, '运动装', '速干衣', '7', 7, 47, 55, 'LB=47&XL=4381', 'su gan yi ', 'suganyi', 'sgy');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (4382, '运动装', '自行车服装', '8', 8, 47, 55, 'LB=47&XL=4382', 'zi xing che fu zhuang ', 'zixingchefuzhuang', 'zxcfz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (4383, '运动装', '滑雪服', '9', 9, 47, 55, 'LB=47&XL=4383', 'hua xue fu ', 'huaxuefu', 'hxf');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (4384, '运动装', '骑马服', '10', 10, 47, 55, 'LB=47&XL=4384', 'qi ma fu ', 'qimafu', 'qmf');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (4385, '运动装', '攀岩服', '11', 11, 47, 55, 'LB=47&XL=4385', 'pan yan fu ', 'panyanfu', 'pyf');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (4386, '运动装', '暴走鞋', '12', 12, 47, 55, 'LB=47&XL=4386', 'bao zou xie ', 'baozouxie', 'bzx');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (4421, '鞋', '运动鞋', '5', 5, 50, 55, 'LB=50&XL=4421', 'yun dong xie ', 'yundongxie', 'ydx');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (4741, '装修材料', '铝合金', '6', 6, 54, 56, 'LB=54&XL=4741', 'lv he jin ', 'lvhejin', 'lhj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (4742, '装修材料', '复合板', '7', 7, 54, 56, 'LB=54&XL=4742', 'fu he ban ', 'fuheban', 'fhb');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (4743, '装修材料', '有色金属', '8', 8, 54, 56, 'LB=54&XL=4743', 'you se jin shu ', 'yousejinshu', 'ysjs');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (4744, '装修材料', '建筑贴膜', '9', 9, 54, 56, 'LB=54&XL=4744', 'jian zhu tie mo ', 'jianzhutiemo', 'jztm');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (4745, '装修材料', '硅藻泥', '10', 10, 54, 56, 'LB=54&XL=4745', 'gui zao ni ', 'guizaoni', 'gzn');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (4746, '装修材料', '建筑玻璃贴', '11', 11, 54, 56, 'LB=54&XL=4746', 'jian zhu bo li tie ', 'jianzhubolitie', 'jzblt');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (4747, '装修材料', '大棚骨架', '12', 12, 54, 56, 'LB=54&XL=4747', 'da peng gu jia ', 'dapenggujia', 'dpgj');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (4748, '装修材料', '铁艺', '13', 13, 54, 56, 'LB=54&XL=4748', 'tie yi ', 'tieyi', 'ty');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (4749, '装修材料', '铜工程', '14', 14, 54, 56, 'LB=54&XL=4749', 'tong gong cheng ', 'tonggongcheng', 'tgc');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (5011, '牛仔服装', '牛仔裤', '1', 1, 501, 55, 'LB=501&XL=5011', 'niu zi ku ', 'niuziku', 'nzk');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (5012, '牛仔服装', '牛仔外套', '2', 2, 501, 55, 'LB=501&XL=5012', 'niu zi wai tao ', 'niuziwaitao', 'nzwt');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (5013, '牛仔服装', '时尚牛仔', '3', 3, 501, 55, 'LB=501&XL=5013', 'shi shang niu zi ', 'shishangniuzi', 'ssnz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (5014, '牛仔服装', '韩版牛仔', '4', 4, 501, 55, 'LB=501&XL=5014', 'han ban niu zi ', 'hanbanniuzi', 'hbnz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (16110, '厨房用品', '环保灶', '10', 10, 161, 60, 'LB=161&XL=16110', 'huan bao zao ', 'huanbaozao', 'hbz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (16111, '厨房用品', '燃气灶', '11', 11, 161, 60, 'LB=161&XL=16111', 'ran qi zao ', 'ranqizao', 'rqz');
+
+insert into codes_zsjm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (16112, '厨房用品', '节能锅', '12', 12, 161, 60, 'LB=161&XL=16112', 'jie neng guo ', 'jienengguo', 'jng');

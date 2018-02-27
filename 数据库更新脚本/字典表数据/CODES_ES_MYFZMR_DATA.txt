@@ -1,0 +1,779 @@
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (1, '母婴/儿童用品/玩具类别', '奶粉/营养辅食', '1', 1, null, 163, 'LB=1', 'nai fen /ying yang fu shi ', 'naifen/yingyangfushi', 'nf/yyfs');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (2, '母婴/儿童用品/玩具类别', '喂养用品', '2', 2, null, 163, 'LB=2', 'wei yang yong pin ', 'weiyangyongpin', 'wyyp');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (3, '母婴/儿童用品/玩具类别', '护理用品', '3', 3, null, 163, 'LB=3', 'hu li yong pin ', 'huliyongpin', 'hlyp');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (4, '母婴/儿童用品/玩具类别', '婴幼服饰', '4', 4, null, 163, 'LB=4', 'ying you fu shi ', 'yingyoufushi', 'yyfs');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (5, '母婴/儿童用品/玩具类别', '婴幼用品', '5', 5, null, 163, 'LB=5', 'ying you yong pin ', 'yingyouyongpin', 'yyyp');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (6, '母婴/儿童用品/玩具类别', '童床童车', '6', 6, null, 163, 'LB=6', 'tong chuang tong che ', 'tongchuangtongche', 'tctc');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (7, '母婴/儿童用品/玩具类别', '玩具', '7', 7, null, 163, 'LB=7', 'wan ju ', 'wanju', 'wj');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (8, '母婴/儿童用品/玩具类别', '早教用品', '8', 8, null, 163, 'LB=8', 'zao jiao yong pin ', 'zaojiaoyongpin', 'zjyp');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (9, '母婴/儿童用品/玩具类别', '孕妈用品', '9', 9, null, 163, 'LB=9', 'yun ma yong pin ', 'yunmayongpin', 'ymyp');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (10, '奶粉/营养辅食', '婴儿奶粉', '1', 1, 1, 163, 'LB=1&XL=10', 'ying dong nai fen ', 'yingdongnaifen', 'ydnf');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (11, '奶粉/营养辅食', '婴幼营养品', '2', 2, 1, 163, 'LB=1&XL=11', 'ying you ying yang pin ', 'yingyouyingyangpin', 'yyyyp');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (12, '奶粉/营养辅食', '辅食', '3', 3, 1, 163, 'LB=1&XL=12', 'fu shi ', 'fushi', 'fs');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (13, '奶粉/营养辅食', '其他奶粉/营养辅食', '4', 4, 1, 163, 'LB=1&XL=13', 'qi ta nai fen /ying yang fu shi ', 'qitanaifen/yingyangfushi', 'qtnf/yyfs');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (14, '喂养用品', '奶瓶', '1', 1, 2, 163, 'LB=2&XL=14', 'nai ping ', 'naiping', 'np');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (15, '喂养用品', '奶嘴', '2', 2, 2, 163, 'LB=2&XL=15', 'nai zui ', 'naizui', 'nz');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (16, '喂养用品', '暖奶器', '3', 3, 2, 163, 'LB=2&XL=16', 'nuan nai qi ', 'nuannaiqi', 'nnq');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (17, '喂养用品', '消毒锅', '4', 4, 2, 163, 'LB=2&XL=17', 'xiao dong guo ', 'xiaodongguo', 'xdg');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (18, '喂养用品', '吸奶器', '5', 5, 2, 163, 'LB=2&XL=18', 'xi nai qi ', 'xinaiqi', 'xnq');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (19, '喂养用品', '水杯/水壶', '6', 6, 2, 163, 'LB=2&XL=19', 'shui bei /shui hu ', 'shuibei/shuihu', 'sb/sh');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (20, '喂养用品', '母乳保鲜袋/盒', '7', 7, 2, 163, 'LB=2&XL=20', 'mu ru bao xian dai /he ', 'murubaoxiandai/he', 'mrbxd/h');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (21, '喂养用品', '其他喂养用品', '8', 8, 2, 163, 'LB=2&XL=21', 'qi ta wei yang yong pin ', 'qitaweiyangyongpin', 'qtwyyp');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (22, '护理用品', '湿巾', '1', 1, 3, 163, 'LB=3&XL=22', 'shi jin ', 'shijin', 'sj');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (23, '护理用品', '婴儿理发器', '2', 2, 3, 163, 'LB=3&XL=23', 'ying dong li fa qi ', 'yingdonglifaqi', 'ydlfq');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (24, '护理用品', '体温计/温度计', '3', 3, 3, 163, 'LB=3&XL=24', 'ti wen ji /wen dong ji ', 'tiwenji/wendongji', 'twj/wdj');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (25, '护理用品', '退热贴', '4', 4, 3, 163, 'LB=3&XL=25', 'tui re tie ', 'tuiretie', 'trt');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (26, '护理用品', '宝宝驱蚊', '5', 5, 3, 163, 'LB=3&XL=26', 'bao bao qu wen ', 'baobaoquwen', 'bbqw');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (27, '护理用品', '其他护理用品', '6', 6, 3, 163, 'LB=3&XL=27', 'qi ta hu li yong pin ', 'qitahuliyongpin', 'qthlyp');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (28, '婴幼服饰', '纸尿裤', '1', 1, 4, 163, 'LB=4&XL=28', 'zhi niao ku ', 'zhiniaoku', 'znk');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (29, '婴幼服饰', '拉拉裤', '2', 2, 4, 163, 'LB=4&XL=29', 'la la ku ', 'lalaku', 'llk');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (30, '婴幼服饰', '婴儿服饰礼盒', '3', 3, 4, 163, 'LB=4&XL=30', 'ying dong fu shi li he ', 'yingdongfushilihe', 'ydfslh');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (31, '婴幼服饰', '婴儿外出服', '4', 4, 4, 163, 'LB=4&XL=31', 'ying dong wai chu fu ', 'yingdongwaichufu', 'ydwcf');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (32, '婴幼服饰', '婴儿内衣', '5', 5, 4, 163, 'LB=4&XL=32', 'ying dong nei yi ', 'yingdongneiyi', 'ydny');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (33, '婴幼服饰', '婴儿鞋帽袜', '6', 6, 4, 163, 'LB=4&XL=33', 'ying dong xie mao wa ', 'yingdongxiemaowa', 'ydxmw');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (34, '婴幼服饰', '其他婴幼服饰', '7', 7, 4, 163, 'LB=4&XL=34', 'qi ta ying you fu shi ', 'qitayingyoufushi', 'qtyyfs');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (35, '婴幼用品', '婴儿背带', '1', 1, 5, 163, 'LB=5&XL=35', 'ying dong bei dai ', 'yingdongbeidai', 'ydbd');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (36, '婴幼用品', '学步带', '2', 2, 5, 163, 'LB=5&XL=36', 'xue bu dai ', 'xuebudai', 'xbd');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (37, '婴幼用品', '游戏垫', '3', 3, 5, 163, 'LB=5&XL=37', 'you xi dian ', 'youxidian', 'yxd');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (38, '婴幼用品', '健身架', '4', 4, 5, 163, 'LB=5&XL=38', 'jian shen jia ', 'jianshenjia', 'jsj');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (39, '婴幼用品', '游泳池', '5', 5, 5, 163, 'LB=5&XL=39', 'you yong chi ', 'youyongchi', 'yyc');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (40, '婴幼用品', '婴儿睡袋', '6', 6, 5, 163, 'LB=5&XL=40', 'ying dong shui dai ', 'yingdongshuidai', 'ydsd');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (41, '婴幼用品', '婴儿浴盆', '7', 7, 5, 163, 'LB=5&XL=41', 'ying dong yu pen ', 'yingdongyupen', 'ydyp');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (42, '婴幼用品', '座便器', '8', 8, 5, 163, 'LB=5&XL=42', 'zuo bian qi ', 'zuobianqi', 'zbq');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (43, '婴幼用品', '其他婴幼用品', '9', 9, 5, 163, 'LB=5&XL=43', 'qi ta ying you yong pin ', 'qitayingyouyongpin', 'qtyyyp');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (44, '童床童车', '婴儿床', '1', 1, 6, 163, 'LB=6&XL=44', 'ying dong chuang ', 'yingdongchuang', 'ydc');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (45, '童床童车', '子母床', '2', 2, 6, 163, 'LB=6&XL=45', 'zi mu chuang ', 'zimuchuang', 'zmc');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (46, '童床童车', '床上用品', '3', 3, 6, 163, 'LB=6&XL=46', 'chuang shang yong pin ', 'chuangshangyongpin', 'csyp');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (47, '童床童车', '婴儿推车', '4', 4, 6, 163, 'LB=6&XL=47', 'ying dong tui che ', 'yingdongtuiche', 'ydtc');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (48, '童床童车', '儿童车', '5', 5, 6, 163, 'LB=6&XL=48', 'dong tong che ', 'dongtongche', 'dtc');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (49, '童床童车', '儿童桌椅/安全座椅', '6', 6, 6, 163, 'LB=6&XL=49', 'dong tong zhuo yi /an quan zuo yi ', 'dongtongzhuoyi/anquanzuoyi', 'dtzy/aqzy');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (50, '童床童车', '其他童床童车', '7', 7, 6, 163, 'LB=6&XL=50', 'qi ta tong chuang tong che ', 'qitatongchuangtongche', 'qttctc');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (51, '玩具', '毛绒玩具', '1', 1, 7, 163, 'LB=7&XL=51', 'mao rong wan ju ', 'maorongwanju', 'mrwj');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (52, '玩具', '木制玩具', '2', 2, 7, 163, 'LB=7&XL=52', 'mu zhi wan ju ', 'muzhiwanju', 'mzwj');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (53, '玩具', '塑胶玩具', '3', 3, 7, 163, 'LB=7&XL=53', 'su jiao wan ju ', 'sujiaowanju', 'sjwj');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (54, '玩具', '模型玩具', '4', 4, 7, 163, 'LB=7&XL=54', 'mo xing wan ju ', 'moxingwanju', 'mxwj');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (55, '玩具', '充气玩具', '5', 5, 7, 163, 'LB=7&XL=55', 'chong qi wan ju ', 'chongqiwanju', 'cqwj');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (56, '玩具', '遥控玩具', '6', 6, 7, 163, 'LB=7&XL=56', 'yao kong wan ju ', 'yaokongwanju', 'ykwj');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (57, '玩具', '益智玩具', '7', 7, 7, 163, 'LB=7&XL=57', 'yi zhi wan ju ', 'yizhiwanju', 'yzwj');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (58, '玩具', '娃娃玩具', '8', 8, 7, 163, 'LB=7&XL=58', 'wa wa wan ju ', 'wawawanju', 'wwwj');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (59, '玩具', '其他玩具', '9', 9, 7, 163, 'LB=7&XL=59', 'qi ta wan ju ', 'qitawanju', 'qtwj');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (60, '早教用品', '挂图卡片', '1', 1, 8, 163, 'LB=8&XL=60', 'gua tu ka pian ', 'guatukapian', 'gtkp');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (61, '早教用品', '早教机', '2', 2, 8, 163, 'LB=8&XL=61', 'zao jiao ji ', 'zaojiaoji', 'zjj');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (62, '早教用品', '早教图书', '3', 3, 8, 163, 'LB=8&XL=62', 'zao jiao tu shu ', 'zaojiaotushu', 'zjts');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (63, '早教用品', '早教音像', '4', 4, 8, 163, 'LB=8&XL=63', 'zao jiao yin xiang ', 'zaojiaoyinxiang', 'zjyx');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (64, '早教用品', '早教课程卡', '5', 5, 8, 163, 'LB=8&XL=64', 'zao jiao ke cheng ka ', 'zaojiaokechengka', 'zjkck');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (65, '早教用品', '点读机', '6', 6, 8, 163, 'LB=8&XL=65', 'dian dong ji ', 'diandongji', 'ddj');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (66, '早教用品', '拼图', '7', 7, 8, 163, 'LB=8&XL=66', 'pin tu ', 'pintu', 'pt');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (67, '早教用品', '画板', '8', 8, 8, 163, 'LB=8&XL=67', 'hua ban ', 'huaban', 'hb');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (68, '早教用品', '其他早教用品', '9', 9, 8, 163, 'LB=8&XL=68', 'qi ta zao jiao yong pin ', 'qitazaojiaoyongpin', 'qtzjyp');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (69, '孕妈用品', '胎心仪', '1', 1, 9, 163, 'LB=9&XL=69', 'tai xin yi ', 'taixinyi', 'txy');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (70, '孕妈用品', '防辐射服', '2', 2, 9, 163, 'LB=9&XL=70', 'fang fu she fu ', 'fangfushefu', 'ffsf');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (71, '孕妈用品', '孕妇装', '3', 3, 9, 163, 'LB=9&XL=71', 'yun fu zhuang ', 'yunfuzhuang', 'yfz');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (72, '孕妈用品', '收腹带', '4', 4, 9, 163, 'LB=9&XL=72', 'shou fu dai ', 'shoufudai', 'sfd');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (73, '孕妈用品', '孕妇枕', '5', 5, 9, 163, 'LB=9&XL=73', 'yun fu zhen ', 'yunfuzhen', 'yfz');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (74, '孕妈用品', '胎教用品', '6', 6, 9, 163, 'LB=9&XL=74', 'tai jiao yong pin ', 'taijiaoyongpin', 'tjyp');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (75, '孕妈用品', '乳垫', '7', 7, 9, 163, 'LB=9&XL=75', 'ru dian ', 'rudian', 'rd');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (76, '孕妈用品', '包/背婴带', '8', 8, 9, 163, 'LB=9&XL=76', 'bao /bei ying dai ', 'bao/beiyingdai', 'b/byd');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (77, '孕妈用品', '其他孕妈用品', '9', 9, 9, 163, 'LB=9&XL=77', 'qi ta yun ma yong pin ', 'qitayunmayongpin', 'qtymyp');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (78, '服装/鞋帽/箱包类别', '服装', '1', 1, null, 164, 'LB=78', 'fu zhuang ', 'fuzhuang', 'fz');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (79, '服装/鞋帽/箱包类别', '鞋', '2', 2, null, 164, 'LB=79', 'xie ', 'xie', 'x');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (80, '服装/鞋帽/箱包类别', '箱包', '3', 3, null, 164, 'LB=80', 'xiang bao ', 'xiangbao', 'xb');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (81, '服装/鞋帽/箱包类别', '配饰', '4', 4, null, 164, 'LB=81', 'pei shi ', 'peishi', 'ps');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (82, '服装/鞋帽/箱包类别', '首饰', '5', 5, null, 164, 'LB=82', 'shou shi ', 'shoushi', 'ss');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (83, '服装/鞋帽/箱包类别', '手表', '6', 6, null, 164, 'LB=83', 'shou biao ', 'shoubiao', 'sb');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (84, '服装', 'T恤', '1', 1, 78, 164, 'LB=78&XL=84', 'Txu ', 'Txu', 'T');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (85, '服装', '衬衫', '2', 2, 78, 164, 'LB=78&XL=85', 'chen shan ', 'chenshan', 'cs');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (86, '服装', '裙子/连衣裙', '3', 3, 78, 164, 'LB=78&XL=86', 'qun zi /lian yi qun ', 'qunzi/lianyiqun', 'qz/lyq');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (87, '服装', '短裤', '4', 4, 78, 164, 'LB=78&XL=87', 'dong ku ', 'dongku', 'dk');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (88, '服装', '西装', '5', 5, 78, 164, 'LB=78&XL=88', 'xi zhuang ', 'xizhuang', 'xz');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (89, '服装', '毛衣', '6', 6, 78, 164, 'LB=78&XL=89', 'mao yi ', 'maoyi', 'my');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (90, '服装', '羽绒服/棉衣', '7', 7, 78, 164, 'LB=78&XL=90', 'yu rong fu /mian yi ', 'yurongfu/mianyi', 'yrf/my');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (91, '服装', '内衣', '8', 8, 78, 164, 'LB=78&XL=91', 'nei yi ', 'neiyi', 'ny');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (92, '服装', '婚纱', '9', 9, 78, 164, 'LB=78&XL=92', 'hun sha ', 'hunsha', 'hs');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (93, '服装', '礼服', '10', 10, 78, 164, 'LB=78&XL=93', 'li fu ', 'lifu', 'lf');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (94, '服装', '童装', '11', 11, 78, 164, 'LB=78&XL=94', 'tong zhuang ', 'tongzhuang', 'tz');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (95, '服装', '皮衣/皮草', '12', 12, 78, 164, 'LB=78&XL=95', 'pi yi /pi cao ', 'piyi/picao', 'py/pc');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (96, '服装', '运动服', '13', 13, 78, 164, 'LB=78&XL=96', 'yun dong fu ', 'yundongfu', 'ydf');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (97, '服装', '夹克', '14', 14, 78, 164, 'LB=78&XL=97', 'jia ke ', 'jiake', 'jk');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (98, '服装', '风衣', '15', 15, 78, 164, 'LB=78&XL=98', 'feng yi ', 'fengyi', 'fy');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (99, '服装', '卫衣', '16', 16, 78, 164, 'LB=78&XL=99', 'wei yi ', 'weiyi', 'wy');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (100, '服装', '牛仔裤', '17', 17, 78, 164, 'LB=78&XL=100', 'niu zi ku ', 'niuziku', 'nzk');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (101, '服装', '西裤', '18', 18, 78, 164, 'LB=78&XL=101', 'xi ku ', 'xiku', 'xk');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (102, '服装', '休闲裤', '19', 19, 78, 164, 'LB=78&XL=102', 'xiu xian ku ', 'xiuxianku', 'xxk');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (103, '服装', '运动裤', '20', 20, 78, 164, 'LB=78&XL=103', 'yun dong ku ', 'yundongku', 'ydk');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (104, '服装', '打底裤', '21', 21, 78, 164, 'LB=78&XL=104', 'da di ku ', 'dadiku', 'ddk');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (105, '服装', '外套', '22', 22, 78, 164, 'LB=78&XL=105', 'wai tao ', 'waitao', 'wt');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (106, '服装', '男装', '23', 23, 78, 164, 'LB=78&XL=106', 'nan zhuang ', 'nanzhuang', 'nz');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (107, '服装', '女装', '24', 24, 78, 164, 'LB=78&XL=107', 'nv zhuang ', 'nvzhuang', 'nz');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (108, '鞋', '休闲鞋', '1', 1, 79, 164, 'LB=79&XL=108', 'xiu xian xie ', 'xiuxianxie', 'xxx');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (109, '鞋', '运动鞋', '2', 2, 79, 164, 'LB=79&XL=109', 'yun dong xie ', 'yundongxie', 'ydx');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (110, '鞋', '帆布鞋', '3', 3, 79, 164, 'LB=79&XL=110', 'fan bu xie ', 'fanbuxie', 'fbx');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (111, '鞋', '高跟鞋', '4', 4, 79, 164, 'LB=79&XL=111', 'gao gen xie ', 'gaogenxie', 'ggx');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (112, '鞋', '板鞋', '5', 5, 79, 164, 'LB=79&XL=112', 'ban xie ', 'banxie', 'bx');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (113, '鞋', '皮鞋', '6', 6, 79, 164, 'LB=79&XL=113', 'pi xie ', 'pixie', 'px');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (114, '鞋', '靴子', '7', 7, 79, 164, 'LB=79&XL=114', 'xue zi ', 'xuezi', 'xz');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (115, '鞋', '凉鞋', '8', 8, 79, 164, 'LB=79&XL=115', 'liang xie ', 'liangxie', 'lx');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (116, '鞋', '拖鞋', '9', 9, 79, 164, 'LB=79&XL=116', 'tuo xie ', 'tuoxie', 'tx');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (117, '鞋', '婚鞋', '10', 10, 79, 164, 'LB=79&XL=117', 'hun xie ', 'hunxie', 'hx');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (118, '鞋', '登山鞋', '11', 11, 79, 164, 'LB=79&XL=118', 'deng shan xie ', 'dengshanxie', 'dsx');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (119, '鞋', '雪地靴', '12', 12, 79, 164, 'LB=79&XL=119', 'xue di xue ', 'xuedixue', 'xdx');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (120, '鞋', '其他', '13', 13, 79, 164, 'LB=79&XL=120', 'qi ta ', 'qita', 'qt');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (121, '箱包', '单肩包', '1', 1, 80, 164, 'LB=80&XL=121', 'dan jian bao ', 'danjianbao', 'djb');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (122, '箱包', '双肩包', '2', 2, 80, 164, 'LB=80&XL=122', 'shuang jian bao ', 'shuangjianbao', 'sjb');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (123, '箱包', '书包', '3', 3, 80, 164, 'LB=80&XL=123', 'shu bao ', 'shubao', 'sb');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (124, '箱包', '公文包', '4', 4, 80, 164, 'LB=80&XL=124', 'gong wen bao ', 'gongwenbao', 'gwb');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (125, '箱包', '钱包', '5', 5, 80, 164, 'LB=80&XL=125', 'qian bao ', 'qianbao', 'qb');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (126, '箱包', '旅行包', '6', 6, 80, 164, 'LB=80&XL=126', 'lv xing bao ', 'lvxingbao', 'lxb');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (127, '箱包', '拉杆箱', '7', 7, 80, 164, 'LB=80&XL=127', 'la gan xiang ', 'laganxiang', 'lgx');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (128, '箱包', '电脑包', '8', 8, 80, 164, 'LB=80&XL=128', 'dian nao bao ', 'diannaobao', 'dnb');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (129, '箱包', '化妆包', '9', 9, 80, 164, 'LB=80&XL=129', 'hua zhuang bao ', 'huazhuangbao', 'hzb');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (130, '箱包', '手提包', '10', 10, 80, 164, 'LB=80&XL=130', 'shou ti bao ', 'shoutibao', 'stb');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (131, '箱包', '登山包', '11', 11, 80, 164, 'LB=80&XL=131', 'deng shan bao ', 'dengshanbao', 'dsb');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (132, '箱包', '皮包', '12', 12, 80, 164, 'LB=80&XL=132', 'pi bao ', 'pibao', 'pb');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (133, '箱包', '其他', '13', 13, 80, 164, 'LB=80&XL=133', 'qi ta ', 'qita', 'qt');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (134, '配饰', '眼镜', '1', 1, 81, 164, 'LB=81&XL=134', 'yan jing ', 'yanjing', 'yj');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (135, '配饰', '帽子', '2', 2, 81, 164, 'LB=81&XL=135', 'mao zi ', 'maozi', 'mz');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (136, '配饰', '领带', '3', 3, 81, 164, 'LB=81&XL=136', 'ling dai ', 'lingdai', 'ld');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (137, '配饰', '围巾', '4', 4, 81, 164, 'LB=81&XL=137', 'wei jin ', 'weijin', 'wj');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (138, '配饰', '手套', '5', 5, 81, 164, 'LB=81&XL=138', 'shou tao ', 'shoutao', 'st');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (139, '配饰', '腰带', '6', 6, 81, 164, 'LB=81&XL=139', 'yao dai ', 'yaodai', 'yd');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (140, '配饰', '袜子', '7', 7, 81, 164, 'LB=81&XL=140', 'wa zi ', 'wazi', 'wz');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (141, '配饰', '其他', '8', 8, 81, 164, 'LB=81&XL=141', 'qi ta ', 'qita', 'qt');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (142, '首饰', '项链', '1', 1, 82, 164, 'LB=82&XL=142', 'xiang lian ', 'xianglian', 'xl');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (143, '首饰', '吊坠', '2', 2, 82, 164, 'LB=82&XL=143', 'diao zhui ', 'diaozhui', 'dz');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (144, '首饰', '耳饰', '3', 3, 82, 164, 'LB=82&XL=144', 'dong shi ', 'dongshi', 'ds');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (145, '首饰', '手链', '4', 4, 82, 164, 'LB=82&XL=145', 'shou lian ', 'shoulian', 'sl');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (146, '首饰', '戒指', '5', 5, 82, 164, 'LB=82&XL=146', 'jie zhi ', 'jiezhi', 'jz');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (147, '首饰', '手镯', '6', 6, 82, 164, 'LB=82&XL=147', 'shou zhuo ', 'shouzhuo', 'sz');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (148, '首饰', '发饰', '7', 7, 82, 164, 'LB=82&XL=148', 'fa shi ', 'fashi', 'fs');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (149, '首饰', '假发', '8', 8, 82, 164, 'LB=82&XL=149', 'jia fa ', 'jiafa', 'jf');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (150, '首饰', '其他', '9', 9, 82, 164, 'LB=82&XL=150', 'qi ta ', 'qita', 'qt');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (151, '手表', '浪琴', '1', 1, 83, 164, 'LB=83&XL=151', 'lang qin ', 'langqin', 'lq');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (152, '手表', '卡西欧', '2', 2, 83, 164, 'LB=83&XL=152', 'ka xi ou ', 'kaxiou', 'kxo');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (153, '手表', '天梭', '3', 3, 83, 164, 'LB=83&XL=153', 'tian suo ', 'tiansuo', 'ts');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (154, '手表', '欧米茄', '4', 4, 83, 164, 'LB=83&XL=154', 'ou mi qie ', 'oumiqie', 'omq');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (155, '手表', '劳力士', '5', 5, 83, 164, 'LB=83&XL=155', 'lao li shi ', 'laolishi', 'lls');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (156, '手表', '斯沃琪', '6', 6, 83, 164, 'LB=83&XL=156', 'si wo qi ', 'siwoqi', 'swq');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (157, '手表', '卡地亚', '7', 7, 83, 164, 'LB=83&XL=157', 'ka di ya ', 'kadiya', 'kdy');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (158, '手表', '西铁城', '8', 8, 83, 164, 'LB=83&XL=158', 'xi tie cheng ', 'xitiecheng', 'xtc');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (159, '手表', '海鸥', '9', 9, 83, 164, 'LB=83&XL=159', 'hai ou ', 'haiou', 'ho');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (160, '手表', '罗西尼', '10', 10, 83, 164, 'LB=83&XL=160', 'luo xi ni ', 'luoxini', 'lxn');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (161, '手表', '精工', '11', 11, 83, 164, 'LB=83&XL=161', 'jing gong ', 'jinggong', 'jg');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (162, '手表', '飞亚达', '12', 12, 83, 164, 'LB=83&XL=162', 'fei ya da ', 'feiyada', 'fyd');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (163, '手表', '依波', '13', 13, 83, 164, 'LB=83&XL=163', 'yi bo ', 'yibo', 'yb');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (164, '手表', '其他', '14', 14, 83, 164, 'LB=83&XL=164', 'qi ta ', 'qita', 'qt');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (165, '服装尺寸', 'XS', '1', 1, null, null, null, null, null, null);
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (166, '服装尺寸', 'S', '2', 2, null, null, null, null, null, null);
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (167, '服装尺寸', 'M', '3', 3, null, null, null, null, null, null);
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (168, '服装尺寸', 'L', '4', 4, null, null, null, null, null, null);
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (169, '服装尺寸', 'XL', '5', 5, null, null, null, null, null, null);
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (170, '服装尺寸', 'XXL', '6', 6, null, null, null, null, null, null);
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (171, '服装尺寸', 'XXXL', '7', 7, null, null, null, null, null, null);
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (172, '服装尺寸', '均码', '8', 8, null, null, null, null, null, null);
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (173, '鞋尺寸', '34', '1', 1, null, null, null, null, null, null);
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (174, '鞋尺寸', '35', '2', 2, null, null, null, null, null, null);
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (175, '鞋尺寸', '36', '3', 3, null, null, null, null, null, null);
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (176, '鞋尺寸', '37', '4', 4, null, null, null, null, null, null);
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (177, '鞋尺寸', '38', '5', 5, null, null, null, null, null, null);
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (178, '鞋尺寸', '39', '6', 6, null, null, null, null, null, null);
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (179, '鞋尺寸', '40', '7', 7, null, null, null, null, null, null);
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (180, '鞋尺寸', '41', '8', 8, null, null, null, null, null, null);
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (181, '鞋尺寸', '42', '9', 9, null, null, null, null, null, null);
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (182, '鞋尺寸', '43', '10', 10, null, null, null, null, null, null);
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (183, '鞋尺寸', '44', '11', 11, null, null, null, null, null, null);
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (184, '鞋尺寸', '45', '12', 12, null, null, null, null, null, null);
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (185, '鞋尺寸', '46', '13', 13, null, null, null, null, null, null);
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (186, '美容/保健类别', '彩妆', '1', 1, null, 165, 'LB=186', 'cai zhuang ', 'caizhuang', 'cz');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (187, '美容/保健类别', '面部护肤', '2', 2, null, 165, 'LB=187', 'mian bu hu fu ', 'mianbuhufu', 'mbhf');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (188, '美容/保健类别', '美容工具', '3', 3, null, 165, 'LB=188', 'mei rong gong ju ', 'meironggongju', 'mrgj');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (189, '美容/保健类别', '美容设施', '4', 4, null, 165, 'LB=189', 'mei rong she shi ', 'meirongsheshi', 'mrss');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (190, '美容/保健类别', '纤体/美体', '5', 5, null, 165, 'LB=190', 'xian ti /mei ti ', 'xianti/meiti', 'xt/mt');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (191, '美容/保健类别', '香水', '6', 6, null, 165, 'LB=191', 'xiang shui ', 'xiangshui', 'xs');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (192, '美容/保健类别', '美发', '7', 7, null, 165, 'LB=192', 'mei fa ', 'meifa', 'mf');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (193, '美容/保健类别', '美甲', '8', 8, null, 165, 'LB=193', 'mei jia ', 'meijia', 'mj');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (194, '美容/保健类别', '保健食品', '9', 9, null, 165, 'LB=194', 'bao jian shi pin ', 'baojianshipin', 'bjsp');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (195, '美容/保健类别', '保健器械', '10', 10, null, 165, 'LB=195', 'bao jian qi xie ', 'baojianqixie', 'bjqx');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (196, '美容/保健类别', '其他美容用品', '11', 11, null, 165, 'LB=196', 'qi ta mei rong yong pin ', 'qitameirongyongpin', 'qtmryp');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (197, '彩妆', '隔离霜', '1', 1, 186, 165, 'LB=186&XL=197', 'ge li shuang ', 'gelishuang', 'gls');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (198, '彩妆', '粉底液', '2', 2, 186, 165, 'LB=186&XL=198', 'fen di ye ', 'fendiye', 'fdy');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (199, '彩妆', '粉饼', '3', 3, 186, 165, 'LB=186&XL=199', 'fen bing ', 'fenbing', 'fb');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (200, '彩妆', '睫毛膏', '4', 4, 186, 165, 'LB=186&XL=200', 'jie mao gao ', 'jiemaogao', 'jmg');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (201, '彩妆', '眼影', '5', 5, 186, 165, 'LB=186&XL=201', 'yan ying ', 'yanying', 'yy');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (202, '彩妆', '口红', '6', 6, 186, 165, 'LB=186&XL=202', 'kou hong ', 'kouhong', 'kh');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (203, '彩妆', '腮红', '7', 7, 186, 165, 'LB=186&XL=203', 'sai hong ', 'saihong', 'sh');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (204, '彩妆', '眼线', '8', 8, 186, 165, 'LB=186&XL=204', 'yan xian ', 'yanxian', 'yx');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (205, '彩妆', '眉笔', '9', 9, 186, 165, 'LB=186&XL=205', 'mei bi ', 'meibi', 'mb');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (206, '彩妆', '其他彩妆', '10', 10, 186, 165, 'LB=186&XL=206', 'qi ta cai zhuang ', 'qitacaizhuang', 'qtcz');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (207, '面部护肤', '洁面', '1', 1, 187, 165, 'LB=187&XL=207', 'jie mian ', 'jiemian', 'jm');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (208, '面部护肤', '化妆水/爽肤水', '2', 2, 187, 165, 'LB=187&XL=208', 'hua zhuang shui /shuang fu shui ', 'huazhuangshui/shuangfushui', 'hzs/sfs');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (209, '面部护肤', '乳液', '3', 3, 187, 165, 'LB=187&XL=209', 'ru ye ', 'ruye', 'ry');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (210, '面部护肤', '面霜', '4', 4, 187, 165, 'LB=187&XL=210', 'mian shuang ', 'mianshuang', 'ms');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (211, '面部护肤', '精华', '5', 5, 187, 165, 'LB=187&XL=211', 'jing hua ', 'jinghua', 'jh');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (212, '面部护肤', '面膜', '6', 6, 187, 165, 'LB=187&XL=212', 'mian mo ', 'mianmo', 'mm');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (213, '面部护肤', '眼部护理', '7', 7, 187, 165, 'LB=187&XL=213', 'yan bu hu li ', 'yanbuhuli', 'ybhl');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (214, '面部护肤', '精油', '8', 8, 187, 165, 'LB=187&XL=214', 'jing you ', 'jingyou', 'jy');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (215, '面部护肤', '其他护肤', '10', 10, 187, 165, 'LB=187&XL=215', 'qi ta hu fu ', 'qitahufu', 'qthf');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (216, '美容工具', '卷发工具', '1', 1, 188, 165, 'LB=188&XL=216', 'juan fa gong ju ', 'juanfagongju', 'jfgj');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (217, '美容工具', '化妆粉扑', '2', 2, 188, 165, 'LB=188&XL=217', 'hua zhuang fen pu ', 'huazhuangfenpu', 'hzfp');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (218, '美容工具', '化妆刷', '3', 3, 188, 165, 'LB=188&XL=218', 'hua zhuang shua ', 'huazhuangshua', 'hzs');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (219, '美容工具', '睫毛夹', '4', 4, 188, 165, 'LB=188&XL=219', 'jie mao jia ', 'jiemaojia', 'jmj');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (220, '美容工具', '修眉刀', '5', 5, 188, 165, 'LB=188&XL=220', 'xiu mei dao ', 'xiumeidao', 'xmd');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (221, '美容工具', '女用剃刀', '6', 6, 188, 165, 'LB=188&XL=221', 'nv yong ti dao ', 'nvyongtidao', 'nytd');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (222, '美容工具', '化妆棉', '7', 7, 188, 165, 'LB=188&XL=222', 'hua zhuang mian ', 'huazhuangmian', 'hzm');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (223, '美容工具', '打泡网', '8', 8, 188, 165, 'LB=188&XL=223', 'da pao wang ', 'dapaowang', 'dpw');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (224, '美容工具', '吸油面纸', '9', 9, 188, 165, 'LB=188&XL=224', 'xi you mian zhi ', 'xiyoumianzhi', 'xymz');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (225, '美容工具', '其他美容工具', '10', 10, 188, 165, 'LB=188&XL=225', 'qi ta mei rong gong ju ', 'qitameironggongju', 'qtmrgj');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (226, '美容设施', '美容床', '1', 1, 189, 165, 'LB=189&XL=226', 'mei rong chuang ', 'meirongchuang', 'mrc');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (227, '美容设施', '按摩床', '2', 2, 189, 165, 'LB=189&XL=227', 'an mo chuang ', 'anmochuang', 'amc');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (228, '美容设施', '美甲沙发', '3', 3, 189, 165, 'LB=189&XL=228', 'mei jia sha fa ', 'meijiashafa', 'mjsf');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (229, '美容设施', '足疗沙发', '4', 4, 189, 165, 'LB=189&XL=229', 'zu liao sha fa ', 'zuliaoshafa', 'zlsf');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (230, '美容设施', '美容推车', '5', 5, 189, 165, 'LB=189&XL=230', 'mei rong tui che ', 'meirongtuiche', 'mrtc');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (231, '美容设施', '其他美容设施', '6', 6, 189, 165, 'LB=189&XL=231', 'qi ta mei rong she shi ', 'qitameirongsheshi', 'qtmrss');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (232, '美发', '洗发', '1', 1, 192, 165, 'LB=192&XL=232', 'xi fa ', 'xifa', 'xf');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (233, '美发', '护发', '2', 2, 192, 165, 'LB=192&XL=233', 'hu fa ', 'hufa', 'hf');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (234, '美发', '美发造型', '3', 3, 192, 165, 'LB=192&XL=234', 'mei fa zao xing ', 'meifazaoxing', 'mfzx');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (235, '美发', '染发', '4', 4, 192, 165, 'LB=192&XL=235', 'ran fa ', 'ranfa', 'rf');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (236, '美发', '其他美发用品', '5', 5, 192, 165, 'LB=192&XL=236', 'qi ta mei fa yong pin ', 'qitameifayongpin', 'qtmfyp');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (237, '美甲', '指甲油', '1', 1, 193, 165, 'LB=193&XL=237', 'zhi jia you ', 'zhijiayou', 'zjy');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (238, '美甲', '护甲油', '2', 2, 193, 165, 'LB=193&XL=238', 'hu jia you ', 'hujiayou', 'hjy');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (239, '美甲', '洗甲水', '3', 3, 193, 165, 'LB=193&XL=239', 'xi jia shui ', 'xijiashui', 'xjs');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (240, '美甲', '其他美甲用品', '4', 4, 193, 165, 'LB=193&XL=240', 'qi ta mei jia yong pin ', 'qitameijiayongpin', 'qtmjyp');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (241, '保健器械', '按摩枕/靠垫', '1', 1, 195, 165, 'LB=195&XL=241', 'an mo zhen /kao dian ', 'anmozhen/kaodian', 'amz/kd');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (242, '保健器械', '按摩棒/锤', '2', 2, 195, 165, 'LB=195&XL=242', 'an mo bang /chui ', 'anmobang/chui', 'amb/c');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (243, '保健器械', '按摩披肩', '3', 3, 195, 165, 'LB=195&XL=243', 'an mo pi jian ', 'anmopijian', 'ampj');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (244, '保健器械', '按摩椅', '4', 4, 195, 165, 'LB=195&XL=244', 'an mo yi ', 'anmoyi', 'amy');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (245, '保健器械', '按摩足疗机', '5', 5, 195, 165, 'LB=195&XL=245', 'an mo zu liao ji ', 'anmozuliaoji', 'amzlj');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (246, '保健器械', '足浴盆', '6', 6, 195, 165, 'LB=195&XL=246', 'zu yu pen ', 'zuyupen', 'zyp');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (247, '保健器械', '拔罐器', '7', 7, 195, 165, 'LB=195&XL=247', 'ba guan qi ', 'baguanqi', 'bgq');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (248, '保健器械', '刮痧片/板', '8', 8, 195, 165, 'LB=195&XL=248', 'gua sha pian /ban ', 'guashapian/ban', 'gsp/b');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (249, '保健器械', '保健护具', '9', 9, 195, 165, 'LB=195&XL=249', 'bao jian hu ju ', 'baojianhuju', 'bjhj');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (250, '保健器械', '血糖仪', '10', 10, 195, 165, 'LB=195&XL=250', 'xue tang yi ', 'xuetangyi', 'xty');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (251, '保健器械', '血压计', '11', 11, 195, 165, 'LB=195&XL=251', 'xue ya ji ', 'xueyaji', 'xyj');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (252, '保健器械', '其他保健用品', '12', 12, 195, 165, 'LB=195&XL=252', 'qi ta bao jian yong pin ', 'qitabaojianyongpin', 'qtbjyp');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (253, '面部护肤', '蒸面器', '9', 9, 187, 165, 'LB=187&XL=253', 'zheng mian qi ', 'zhengmianqi', 'zmq');
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (254, '母婴价格', '100元以下', '1', 1, null, null, null, null, null, null);
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (255, '母婴价格', '100-150元', '2', 2, null, null, null, null, null, null);
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (256, '母婴价格', '150-300元', '3', 3, null, null, null, null, null, null);
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (257, '母婴价格', '300-500元', '4', 4, null, null, null, null, null, null);
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (258, '母婴价格', '500-1000元', '5', 5, null, null, null, null, null, null);
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (259, '母婴价格', '1000-2000元', '6', 6, null, null, null, null, null, null);
+
+insert into codes_es_myfzmr (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (260, '母婴价格', '2000元以上', '7', 7, null, null, null, null, null, null);
