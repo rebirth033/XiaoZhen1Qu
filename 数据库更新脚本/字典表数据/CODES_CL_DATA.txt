@@ -812,6 +812,9 @@ insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID
 values (304, '工程车车型', '长螺旋钻机', 'C', 6, null, null, 191, 'CX=304', 'chang luo xuan zuan ji ', 'changluoxuanzuanji', 'clxzj');
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (30401, '工程车车型', '吊车', 'D', 1, null, null, 191, 'CX=30401', 'diao che', 'diaoche', 'dc');
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
 values (305, '工程车车型', '粉粒物料车', 'F', 1, null, '是', 191, 'CX=305', 'fen li wu liao che ', 'fenliwuliaoche', 'flwlc');
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
