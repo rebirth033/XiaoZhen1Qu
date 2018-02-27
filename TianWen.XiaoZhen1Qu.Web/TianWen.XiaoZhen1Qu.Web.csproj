@@ -229,6 +229,7 @@
     <Content Include="Areas\Business\Css\images\CXLB\cxlb_px_down_orange.png" />
     <Content Include="Areas\Business\Css\images\CXLB\cxlb_px_up_gray.png" />
     <Content Include="Areas\Business\Css\images\CXLB\cxlb_px_up_orange.png" />
+    <Content Include="Areas\Business\Css\images\default_tx.png" />
     <Content Include="Areas\Business\Css\images\HTGL\dgzhrz.png" />
     <Content Include="Areas\Business\Css\images\HTGL\grsfrz.png" />
     <Content Include="Areas\Business\Css\images\HTGL\htgl_delete.png" />
@@ -252,6 +253,7 @@
     <Content Include="Areas\Business\Css\images\HTGL\zmsmrz.png" />
     <Content Include="Areas\Business\Css\images\info_purple.png" />
     <Content Include="Areas\Business\Css\images\info_blue.png" />
+    <Content Include="Areas\Business\Css\images\logo_purple - 朦胧水黑.png" />
     <Content Include="Areas\Business\Css\images\logo_purple.png" />
     <Content Include="Areas\Business\Css\images\lxdh.png" />
     <Content Include="Areas\Business\Css\images\one-purple.png" />
