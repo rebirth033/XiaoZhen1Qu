@@ -58,7 +58,7 @@ function LoadJBXX() {
                 if (xml.Value.ZXJC_GZFWJBXX.LB !== null)
                     SetDuoX("LB", xml.Value.ZXJC_GZFWJBXX.LB);
                 if (xml.Value.ZXJC_GZFWJBXX.FWFW !== null)
-                    SetDuoX("FWFW", xml.Value.ZXJC_GZFWJBXX.FWQY);
+                    SetDuoX("FWFW", xml.Value.ZXJC_GZFWJBXX.FWFW);
                 $("#spanQY").html(xml.Value.ZXJC_GZFWJBXX.QY);
                 $("#spanDD").html(xml.Value.ZXJC_GZFWJBXX.DD);
                 LoadPhotos(xml.Value.Photos);
@@ -77,7 +77,7 @@ function FB() {
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "LB", "'" + GetDuoX("LB")+ "'");
-    obj = jsonObj.AddJson(obj, "FWQY", "'" + GetDuoX("FWFW") + "'");
+    obj = jsonObj.AddJson(obj, "FWFW", "'" + GetDuoX("FWFW") + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
 

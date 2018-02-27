@@ -58,7 +58,7 @@ function LoadJBXX() {
                 if (xml.Value.CW_CWFWJBXX.LB !== null)
                     SetDuoX("LB", xml.Value.CW_CWFWJBXX.LB);
                 if (xml.Value.CW_CWFWJBXX.FWFW !== null)
-                    SetDuoX("FWFW", xml.Value.CW_CWFWJBXX.FWQY);
+                    SetDuoX("FWFW", xml.Value.CW_CWFWJBXX.FWFW);
                 LoadPhotos(xml.Value.Photos);
             }
         },
@@ -75,7 +75,7 @@ function FB() {
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "LB", "'" + GetDuoX("LB") + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "FWQY", "'" + GetDuoX("FWFW") + "'");
+    obj = jsonObj.AddJson(obj, "FWFW", "'" + GetDuoX("FWFW") + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");

@@ -89,7 +89,7 @@ function LoadJBXX() {
                 $("#spanQY").html(xml.Value.CL_ZCJBXX.QY);
                 $("#spanDD").html(xml.Value.CL_ZCJBXX.DD);
                 if (xml.Value.CL_ZCJBXX.FWFW !== null)
-                    SetDuoX("FWFW", xml.Value.CL_ZCJBXX.FWQY);
+                    SetDuoX("FWFW", xml.Value.CL_ZCJBXX.FWFW);
                 LoadPhotos(xml.Value.Photos);
                 if (xml.Value.CL_ZCJBXX.LB.indexOf("大巴（30座以上）") !== -1 || xml.Value.CL_ZCJBXX.LB.indexOf("中巴（30座以下）") !== -1 || xml.Value.CL_ZCJBXX.LB.indexOf("面包车") !== -1
                     || xml.Value.CL_ZCJBXX.LB.indexOf("商务车") !== -1 || xml.Value.CL_ZCJBXX.LB.indexOf("豪华轿车") !== -1 || xml.Value.CL_ZCJBXX.LB.indexOf("普通轿车") !== -1
@@ -114,7 +114,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "XL", "'" + GetDuoX("XL") + "'");
-    obj = jsonObj.AddJson(obj, "FWQY", "'" + GetDuoX("FWFW") + "'");
+    obj = jsonObj.AddJson(obj, "FWFW", "'" + GetDuoX("FWFW") + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");

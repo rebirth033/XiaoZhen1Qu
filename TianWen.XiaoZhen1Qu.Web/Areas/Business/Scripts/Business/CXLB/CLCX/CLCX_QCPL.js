@@ -28,7 +28,7 @@ function SelectCondition(obj, name) {
 }
 //加载查询条件
 function LoadDistrictCondition(array, type) {
-    type = "FWQY";
+    type = "FWFW";
     $("#div_condition_body_" + type).html('');
     var html = "";
     html += '<ul id="ul_condition_body_' + type + '" class="ul_condition_body">';
@@ -42,7 +42,7 @@ function LoadDistrictCondition(array, type) {
 }
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
-    currentIndex = parseInt(PageIndex);var condition = GetAllCondition("LB,PP,FWQY");
+    currentIndex = parseInt(PageIndex); var condition = GetAllCondition("LB,PP,FWFW");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/CLCX/LoadCLXX",

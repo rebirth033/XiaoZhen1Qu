@@ -19,7 +19,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.ViewModels.LYJD
         public string QY { get; set; }
         public string DD { get; set; }
         public string JTDZ { get; set; }
-        public string FWQY { get; set; }
+        public string FWFW { get; set; }
         public string JG { get; set; }
     }
 }

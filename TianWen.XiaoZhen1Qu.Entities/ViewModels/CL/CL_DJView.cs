@@ -13,6 +13,6 @@ namespace TianWen.XiaoZhen1Qu.Entities.ViewModels.CL
         public string DD { get; set; }
         public string LB { get; set; }
         public string JG { get; set; }
-        public string FWQY { get; set; }
+        public string FWFW { get; set; }
     }
 }
