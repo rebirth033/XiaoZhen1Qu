@@ -189,6 +189,7 @@ function SJCheck() {
                 }
             }
         });
+        return true;
     }
 }
 
@@ -339,29 +340,50 @@ function ValidateYHM() {
 }
 
 function GetCheckCode() {
-    if ($("#SJ").val().length === 0) {
+    if (!ValidateCellPhone($("#SJ").val())) {
+        $("#SJ").css("border-color", "#F2272D");
+        $("#SJInfo").css("color", "#F2272D");
+        $("#SJInfo").html("手机号码格式不正确，请重新输入");
+    }
+    else if ($("#SJ").val().length === 0) {
         $("#SJ").css("border-color", "#F2272D");
         $("#SJInfo").css("color", "#F2272D");
         $("#SJInfo").html("请输入手机号");
-        return;
     }
-    if (SJCheck()) {
+    else {
         $.ajax({
             type: "POST",
             dataType: "json",
-            url: getRootPath() + "/YHJBXX/GetYZM",
+            url: getRootPath() + "/YHJBXX/ValidateSJ",
             data: {
                 SJ: $("#SJ").val()
             },
             success: function (xml) {
                 if (xml.Result === 1) {
-                    GetNumber();
-                    return true;
+                    $("#SJ").css("border-color", "#999");
+                    $("#SJInfo").html('<img src=' + getRootPath() + '/Areas/Business/Css/images/yes.png />');
+
+                    $.ajax({
+                        type: "POST",
+                        dataType: "json",
+                        url: getRootPath() + "/YHJBXX/GetYZM",
+                        data: {
+                            SJ: $("#SJ").val()
+                        },
+                        success: function (xml) {
+                            if (xml.Result === 1) {
+                                GetNumber();
+                            }
+                            else {
+                                $("#SJInfo").css("color", "#F2272D");
+                                $("#SJInfo").html(xml.Message);
+                            }
+                        }
+                    });
                 }
                 else {
                     $("#SJInfo").css("color", "#F2272D");
                     $("#SJInfo").html(xml.Message);
-                    return false;
                 }
             }
         });
