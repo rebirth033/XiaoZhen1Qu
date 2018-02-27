@@ -1,7 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Net;
+using System.Text;
+using System.Text.RegularExpressions;
 using System.Web.Mvc;
 using CommonClassLib.Helper;
+using Newtonsoft.Json;
+using Spring.Objects.Factory.Parsing;
 using TianWen.Nhibernate.TianWen.Nhibernate.Repository;
 using TianWen.XiaoZhen1Qu.Entities.Models;
 
@@ -13,6 +19,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public void GetSession()
         {
+            object result = GetAdrByIp("60.205.226.255");
             if (Session["XZQ"] == null)
             {
                 ViewData["XZQ"] = "北京";
@@ -59,6 +66,47 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             CODES_XXLB xl = DataFactory.GetObjectById<CODES_XXLB>(LBID);
             CODES_XXLB dl = DataFactory.GetObjectById<CODES_XXLB>(xl.PARENTID);
             return dl.LBNAME + "-" + xl.LBNAME;
+        }
+
+        public string GetIP()
+        {
+            if (System.Web.HttpContext.Current.Request.ServerVariables["HTTP_VIA"] != null)
+                return System.Web.HttpContext.Current.Request.ServerVariables["HTTP_X_FORWARDED_FOR"].Split(new char[] { ',' })[0];
+            else
+                return System.Web.HttpContext.Current.Request.ServerVariables["REMOTE_ADDR"];
+        }
+
+        public string GetAdrByIp(string ip)
+        {
+            string url = "http://www.cz88.net/ip/";
+            string regStr = "(?<=<span\\s*id=\\\"cz_addr\\\">).*?(?=</span>)";
+
+            //得到网页源码
+            string html = GetPageInfo(url);
+            Regex reg = new Regex(regStr, RegexOptions.None);
+            Match ma = reg.Match(html);
+            html = ma.Value;
+            string[] arr = html.Split(' ');
+            return arr[0];
+        }
+
+        public string GetPageInfo(string url)
+        {
+            try
+            {
+                HttpWebRequest myReq = (HttpWebRequest)HttpWebRequest.Create(url);
+                myReq.Accept =
+                    "image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, application/x-shockwave-flash, application/vnd.ms-excel, application/vnd.ms-powerpoint, application/msword, */*";
+                myReq.UserAgent = "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)";
+                HttpWebResponse myRep = (HttpWebResponse)myReq.GetResponse();
+                Stream myStream = myRep.GetResponseStream();
+                StreamReader sr = new StreamReader(myStream, Encoding.UTF8);
+                return sr.ReadToEnd();
+            }
+            catch (Exception ex)
+            {
+                return "error";
+            }
         }
     }
 }
