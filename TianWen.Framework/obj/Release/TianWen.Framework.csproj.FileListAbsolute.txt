@@ -19,3 +19,16 @@ D:\福建沐晗信息技术有限公司\源代码\TianWen.Framework\bin\Release\
 D:\福建沐晗信息技术有限公司\源代码\TianWen.Framework\obj\Release\TianWen.Framework.dll
 D:\福建沐晗信息技术有限公司\源代码\TianWen.Framework\obj\Release\TianWen.Framework.pdb
 D:\福建沐晗信息技术有限公司\源代码\TianWen.Framework\obj\Release\TianWen.Framework.csprojResolveAssemblyReference.cache
+F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.Framework\bin\Release\TianWen.Framework.dll
+F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.Framework\bin\Release\TianWen.Framework.pdb
+F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.Framework\bin\Release\log4net.dll
+F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.Framework\bin\Release\Spring.Aop.dll
+F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.Framework\bin\Release\Spring.Core.dll
+F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.Framework\bin\Release\System.Web.Mvc.dll
+F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.Framework\bin\Release\Common.Logging.dll
+F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.Framework\bin\Release\FluentNHibernate.dll
+F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.Framework\bin\Release\NHibernate.dll
+F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.Framework\bin\Release\Iesi.Collections.dll
+F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.Framework\obj\Release\TianWen.Framework.csprojResolveAssemblyReference.cache
+F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.Framework\obj\Release\TianWen.Framework.dll
+F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.Framework\obj\Release\TianWen.Framework.pdb

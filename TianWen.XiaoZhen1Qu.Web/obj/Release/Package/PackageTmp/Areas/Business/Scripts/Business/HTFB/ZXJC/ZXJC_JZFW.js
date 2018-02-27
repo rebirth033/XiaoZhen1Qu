@@ -82,8 +82,8 @@ function LoadJBXX() {
                 //设置编辑器的内容
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
                 PDLB(xml.Value.ZXJC_JZFWJBXX.LB, xml.Value.ZXJC_JZFWJBXX.XL);
-                if (xml.Value.ZXJC_JZFWJBXX.FWQY !== null)
-                    SetDuoX("FWFW", xml.Value.ZXJC_JZFWJBXX.FWQY);
+                if (xml.Value.ZXJC_JZFWJBXX.FWFW !== null)
+                    SetDuoX("FWFW", xml.Value.ZXJC_JZFWJBXX.FWFW);
                 $("#spanLB").html(xml.Value.ZXJC_JZFWJBXX.LB);
                 $("#spanQY").html(xml.Value.ZXJC_JZFWJBXX.QY);
                 $("#spanDD").html(xml.Value.ZXJC_JZFWJBXX.DD);
@@ -104,7 +104,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
     obj = jsonObj.AddJson(obj, "XL", "'" + GetDuoX("XL") + "'");
-    obj = jsonObj.AddJson(obj, "FWQY", "'" + GetDuoX("FWFW") + "'");
+    obj = jsonObj.AddJson(obj, "FWFW", "'" + GetDuoX("FWFW") + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
 

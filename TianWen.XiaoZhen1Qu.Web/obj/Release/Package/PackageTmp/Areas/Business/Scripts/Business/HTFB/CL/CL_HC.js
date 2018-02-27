@@ -48,7 +48,7 @@ function LoadHCPP() {
                         html += '<li id="li_row_right_jcpp_first_right_tag_' + BQArray[i] + '" class="li_row_right_jcpp_first_right_tag">' + BQArray[i] + '</li>';
                     for (var j = 0; j < xml.list.length; j++) {
                         if (BQArray[i] === xml.list[j].CODEVALUE)
-                            html += '<li onclick="OpenSecond(\'' + xml.list[j].CODEID + '\')" class="li_row_right_jcpp_first_right_value">' + xml.list[j].CODENAME + '</li>';
+                            html += '<li onclick="SelectSecond(\'' + xml.list[j].CODENAME + '\')" class="li_row_right_jcpp_first_right_value">' + xml.list[j].CODENAME + '</li>';
                     }
                 }
                 html += '</ul>';
@@ -99,8 +99,8 @@ function OpenSecond(codeid) {
     });
 }
 //选择款式
-function SelectSecond(cx, ks) {
-    $("#spanPP").html(cx + " " + ks);
+function SelectSecond(cx) {
+    $("#spanPP").html(cx);
     ValidateHCPP();
 }
 //关闭选择品牌框

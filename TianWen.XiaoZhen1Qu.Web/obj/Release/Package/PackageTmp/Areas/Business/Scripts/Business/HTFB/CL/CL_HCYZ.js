@@ -2,10 +2,10 @@
     $("#divSF").find(".div_radio").bind("click", function () { ValidateRadio("SF", "忘记选择身份啦"); });
     $("#JG").bind("blur", ValidateJG);
     $("#JG").bind("focus", InfoJG);
-    $("#EDZZ").bind("blur", ValidateEDZZ);
-    $("#EDZZ").bind("focus", InfoEDZZ);
-    $("#XSLC").bind("blur", ValidateXSLC);
-    $("#XSLC").bind("focus", InfoXSLC);
+    //$("#EDZZ").bind("blur", ValidateEDZZ);
+    //$("#EDZZ").bind("focus", InfoEDZZ);
+    //$("#XSLC").bind("blur", ValidateXSLC);
+    //$("#XSLC").bind("focus", InfoXSLC);
 });
 //验证货车
 function ValidateHCPP() {
@@ -21,14 +21,12 @@ function ValidateHCCCNF() {
 //验证所有
 function ValidateAll() {
     if (ValidateRadio("SF", "忘记选择身份啦") 
-           & ValidateHCPP()
+           //& ValidateHCPP()
            & ValidateSelect("HCLB", "LB", "忘记选择车型啦")
-           & ValidateSelect("HCPP", "PP", "忘记选择品牌啦")
-           & ValidateHCCCNF()
-           & ValidateEDZZ()
-           & ValidateXSLC()
+           //& ValidateHCCCNF()
+           //& ValidateEDZZ()
+           //& ValidateXSLC()
            & ValidateBCMS("BCMS", "忘记填写详情描述啦")
-           & ValidateXXDZ()
            & ValidateJG()
            & ValidateCommon())
         return true;

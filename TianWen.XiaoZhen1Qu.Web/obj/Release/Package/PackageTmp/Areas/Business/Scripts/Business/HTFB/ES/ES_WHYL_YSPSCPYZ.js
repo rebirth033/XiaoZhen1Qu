@@ -12,7 +12,6 @@ function ValidateYSPSCPLB() {
 //验证所有
 function ValidateAll() {
     if (ValidateRadio("SF", "忘记选择身份啦")
-        & ValidateCheck("PSFS", "忘记选择配送方式啦")
         & ValidateYSPSCPLB()
         & ValidateBCMS("BCMS", "忘记填写详情描述啦")
         & ValidateXXDZ()
@@ -38,7 +37,7 @@ function ValidateJG() {
         } else {
             $("#divJGTip").css("display", "block");
             $("#divJGTip").attr("class", "Warn");
-            $("#divJGTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />价格请填写整数，默认为面议');
+            $("#divJGTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />价格请填写数字，默认为面议');
             $("#spanJG").css("border-color", "#F2272D");
             return false;
         }
@@ -48,6 +47,6 @@ function ValidateJG() {
 function InfoJG() {
     $("#divJGTip").css("display", "block");
     $("#divJGTip").attr("class", "Info");
-    $("#divJGTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />请填写整数，默认为面议');
+    $("#divJGTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />请填写数字，默认为面议');
     $("#spanJG").css("border-color", "#bc6ba6");
 }
