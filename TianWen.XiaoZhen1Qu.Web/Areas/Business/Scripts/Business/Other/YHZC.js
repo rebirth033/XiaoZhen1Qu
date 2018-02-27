@@ -169,9 +169,26 @@ function SJCheck() {
         return false;
     }
     else {
-        $("#SJ").css("border-color", "#999");
-        $("#SJInfo").html('<img src=' + getRootPath() + '/Areas/Business/Css/images/yes.png />');
-        return true;
+        $.ajax({
+            type: "POST",
+            dataType: "json",
+            url: getRootPath() + "/YHJBXX/ValidateSJ",
+            data: {
+                SJ: $("#SJ").val()
+            },
+            success: function (xml) {
+                if (xml.Result === 1) {
+                    $("#SJ").css("border-color", "#999");
+                    $("#SJInfo").html('<img src=' + getRootPath() + '/Areas/Business/Css/images/yes.png />');
+                    return true;
+                }
+                else {
+                    $("#SJInfo").css("color", "#F2272D");
+                    $("#SJInfo").html(xml.Message);
+                    return false;
+                }
+            }
+        });
     }
 }
 
@@ -342,7 +359,8 @@ function GetCheckCode() {
                     return true;
                 }
                 else {
-                    alert("验证码发送失败");
+                    $("#SJInfo").css("color", "#F2272D");
+                    $("#SJInfo").html(xml.Message);
                     return false;
                 }
             }

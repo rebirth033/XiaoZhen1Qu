@@ -5,7 +5,6 @@ using System.Text;
 using System.Web.Mvc;
 using CommonClassLib.Helper;
 using TianWen.XiaoZhen1Qu.Entities.Models;
-using TianWen.XiaoZhen1Qu.Web.Areas.Business.Common;
 using TianWen.XiaoZhen1Qu.Interface;
 
 namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
@@ -43,13 +42,15 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         public JsonResult GetYZM()
         {
             string SJ = Request["SJ"];
+
             Random random = new Random();
-            string checkcode = random.Next(100000, 999999).ToString();//6位验证码
+            string checkcode = random.Next(100000, 999999).ToString(); //6位验证码
             Session["CheckCode"] = checkcode;
             Session["Time"] = DateTime.Now.ToLongTimeString();
 
             string smsText = "您的验证码是:" + checkcode + ",.如果非本人操作，请忽略本短信.";
-            string targeturl = "http://utf8.sms.webchinese.cn/?Uid=rebirth033&Key=c64526354aba20e8f3d4&smsMob=" + SJ + "&smsText=" + smsText;
+            string targeturl = "http://utf8.sms.webchinese.cn/?Uid=rebirth033&Key=c64526354aba20e8f3d4&smsMob=" + SJ +
+                               "&smsText=" + smsText;
 
             HttpWebRequest hr = (HttpWebRequest)WebRequest.Create(targeturl);
             hr.Timeout = 30 * 60 * 1000;
@@ -59,9 +60,22 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             Stream sr = hs.GetResponseStream();
             StreamReader ser = new StreamReader(sr, Encoding.Default);
             string strRet = ser.ReadToEnd();
-
             //return Json(new { Result = EnResultType.Success, YZM = checkcode });
             return Json(new { Result = EnResultType.Success });
+        }
+
+        public JsonResult ValidateSJ()
+        {
+            string SJ = Request["SJ"];
+
+            if (YHJBXXBLL.ValidateSJ(SJ) == "0")
+            {
+                return Json(new { Result = EnResultType.Success });
+            }
+            else
+            {
+                return Json(new { Result = EnResultType.Failed, Message = "手机号已存在" });
+            }
         }
     }
 }

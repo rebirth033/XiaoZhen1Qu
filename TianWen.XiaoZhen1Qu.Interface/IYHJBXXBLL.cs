@@ -9,6 +9,8 @@ namespace TianWen.XiaoZhen1Qu.Interface
 
         DataTable GetYHJBXXListByPage();
 
+        string ValidateSJ(string SJ);
+
         object CreateBasic(YHJBXX yhjbxx);
 
         string GetObjByYHM(string YHM);

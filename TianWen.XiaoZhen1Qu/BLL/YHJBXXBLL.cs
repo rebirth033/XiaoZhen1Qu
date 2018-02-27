@@ -23,6 +23,20 @@ namespace TianWen.XiaoZhen1Qu.BLL
             return DAO.GetDataTable(sql);
         }
 
+        public string ValidateSJ(string SJ)
+        {
+            object o1 = DAO.Repository.ExecuteScalar(string.Format("SELECT COUNT(1) FROM YHJBXX WHERE SJ='{0}'", SJ));
+
+            if (o1 != null && int.Parse(o1.ToString()) > 0)
+            {
+                return "1";
+            }
+            else
+            {
+                return "0";
+            }
+        }
+
         public object CreateBasic(YHJBXX yhjbxx)
         {
             object o1 = DAO.Repository.ExecuteScalar(string.Format("SELECT COUNT(1) FROM YHJBXX WHERE YHM='{0}'", yhjbxx.YHM));
