@@ -50,6 +50,9 @@ insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PAR
 values (17, '平板电脑配件', '其他配件', '5', 5, null, 156, 'XL=17', 'qi ta pei jian ', 'qitapeijian', 'qtpj');
 
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (101, '手机品牌', '飞利浦', '21', 21, null, 154, 'PP=101', 'fei li pu', 'feilipu', 'flp');
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
 values (102, '手机品牌', '苹果', '1', 1, null, 154, 'PP=102', 'ping guo ', 'pingguo', 'pg');
 
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)

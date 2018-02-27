@@ -68,6 +68,6 @@ function ValidateJG() {
 function InfoJG() {
     $("#divJGTip").css("display", "block");
     $("#divJGTip").attr("class", "Info");
-    $("#divJGTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />请填写整数，默认为面议');
+    $("#divJGTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />请填写数字，默认为面议');
     $("#spanJG").css("border-color", "#bc6ba6");
 }
