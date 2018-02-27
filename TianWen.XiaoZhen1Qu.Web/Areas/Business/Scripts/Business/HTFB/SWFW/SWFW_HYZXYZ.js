@@ -82,7 +82,7 @@ function ValidateYSJG() {
         } else {
             $("#divYSJGTip").css("display", "block");
             $("#divYSJGTip").attr("class", "Warn");
-            $("#divYSJGTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />运输价格请填写整数，默认为面议');
+            $("#divYSJGTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />运输价格请填写数字，默认为面议');
             $("#YSJG").css("border-color", "#F2272D");
             return false;
         }
