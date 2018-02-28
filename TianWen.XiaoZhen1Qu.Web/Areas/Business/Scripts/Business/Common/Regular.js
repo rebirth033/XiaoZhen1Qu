@@ -7,6 +7,16 @@ function ValidateCellPhone(value) {
     return true;
 }
 
+//固话验证
+function ValidateTelePhone(value) {
+    var zz = /^(0\d{2}-\d{8}(-\d{1,4})?)|(0\d{3}-\d{7,8}(-\d{1,4})?)$/g;
+    if (value.length > 0) {
+        return zz.test(value);
+    }
+    return true;
+}
+
+
 //邮箱验证
 function ValidateEmail(value) {
     var zz = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+$/g;
@@ -15,7 +25,6 @@ function ValidateEmail(value) {
     }
     return true;
 }
-
 
 //汉字验证
 function ValidateChinese(value) {
