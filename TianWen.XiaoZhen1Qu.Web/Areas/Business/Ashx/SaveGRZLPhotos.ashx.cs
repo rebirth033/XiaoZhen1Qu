@@ -42,6 +42,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Ashx
                         YHJBXX yhjbxx = YHJBXXBLL.GetYHJBXXByYHM(context.Session["YHM"].ToString());
                         string type = context.Request.Form["type"];
                         string filename = context.Request.Form["filename"];
+                        YHJBXXBLL.UpdateTX(yhjbxx.YHID);
                         return ResizeImg(file.InputStream, width, height, yhjbxx.YHID, type, filename);
                     }
                 }
@@ -103,6 +104,8 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Ashx
             byte[] bytes = Convert.FromBase64String(context.Request["data"]);
             fs.Write(bytes, 0, bytes.Length);
             fs.Close();
+            YHJBXX yhjbxx = YHJBXXBLL.GetYHJBXXByYHM(context.Session["YHM"].ToString());
+            YHJBXXBLL.UpdateTX(yhjbxx.YHID);
             return string.Empty;
         }
 

@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     $("#spanBDSC").css("color", "#bc6ba6").css("font-weight", "700");
-    $("#emBDSC").css("background-color", "#bc6ba6").css("height", "2px")
+    $("#emBDSC").css("background-color", "#bc6ba6").css("height", "2px");
     $("#btnTBWXTX").css("display", "block");
     $(".divstep").bind("click", HeadActive);
     $(".li_main_photo_middle_xt").bind("click", LoadSystemPhoto);
@@ -102,7 +102,7 @@ function LoadGRZL() {
 
         },
         success: function (xml) {
-            if (xml.YHJBXX.TX === null) {
+            if (xml.YHJBXX.TX === null || xml.YHJBXX.TX === "") {
                 $("#img_main_photo").attr("src", getRootPath() + "/Areas/Business/Css/images/default_tx.png?j=" + Math.random());
                 $("#img_main_photo_middle").attr("src", getRootPath() + "/Areas/Business/Css/images/default_tx.png?j=" + Math.random());
             }

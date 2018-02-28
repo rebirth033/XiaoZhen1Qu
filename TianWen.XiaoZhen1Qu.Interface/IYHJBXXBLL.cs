@@ -21,6 +21,8 @@ namespace TianWen.XiaoZhen1Qu.Interface
 
         object UpdateTX(string YHID, string TX);
 
+        void UpdateTX(string YHID);
+
         object UpdateYHM(string YHID, string YHM);
 
         object UpdateSJ(string YHID, string SJ);
@@ -37,6 +39,6 @@ namespace TianWen.XiaoZhen1Qu.Interface
 
         object SendEmail(string YHID, string YX, string CheckCode);
 
-        object YHYZ(string YHID_Cryptograph, string CheckCode_Cryptograph);
+        object YHYZ(string YHID_Cryptograph, string CheckCode_Cryptograph, string YX);
     }
 }

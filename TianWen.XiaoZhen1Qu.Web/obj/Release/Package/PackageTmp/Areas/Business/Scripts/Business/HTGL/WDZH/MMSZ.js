@@ -1,7 +1,10 @@
-﻿$(document).ready(function () {
+﻿$(document).ready(function() {
     LoadGRZL();
     $("#input_bottom_wcxg").bind("click", WCXG);
     $("#span_head_wjmm").bind("click", ToZHMM);
+    $("#inputJMM").bind("blur", function () { JMMCheck() });
+    $("#inputXMM").bind("blur", function () { XMMCheck() });
+    $("#inputQRMM").bind("blur", function () { QRMMCheck() });
 });
 //加载个人资料
 function LoadGRZL() {

@@ -9,6 +9,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
     public class GRZLController : BaseController
     {
         public IYHJBXXBLL YHJBXXBLL { get; set; }
+
         public ActionResult GRZL()
         {
             return View();
@@ -84,6 +85,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public JsonResult SendEmail()
         {
+            Session["YX"] = Request["YX"];
             YHJBXX yhjbxx = YHJBXXBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             Random random = new Random();
             string CheckCode = random.Next(100000, 999999).ToString();//6位验证码
@@ -98,7 +100,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
                 string[] values = Request["para"].Split('|');
                 string YHID_Cryptograph = values[0];
                 string CheckCode_Cryptograph = values[1];
-                object result = YHJBXXBLL.YHYZ(YHID_Cryptograph, CheckCode_Cryptograph);
+                object result = YHJBXXBLL.YHYZ(YHID_Cryptograph, CheckCode_Cryptograph,Session["YX"].ToString());
 
                 return Json(result);
             }

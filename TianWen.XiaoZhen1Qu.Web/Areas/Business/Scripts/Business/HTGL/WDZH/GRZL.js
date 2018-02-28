@@ -102,7 +102,7 @@ function LoadGRZL() {
 
         },
         success: function (xml) {
-            if (xml.YHJBXX.TX === null) {
+            if (xml.YHJBXX.TX === null || xml.YHJBXX.TX === "") {
                 $("#img_main_photo").attr("src", getRootPath() + "/Areas/Business/Css/images/default_tx.png?j=" + Math.random());
                 $("#img_main_photo_middle").attr("src", getRootPath() + "/Areas/Business/Css/images/default_tx.png?j=" + Math.random());
             }

@@ -164,6 +164,12 @@ function YSJYZMCheck() {
         $("#YSJYZMInfo").html("手机验证码输入格式有误");
         return false;
     }
+    if (ysjcount === 60) {
+        $("#YSJYZM").css("border-color", "#F2272D");
+        $("#YSJYZMInfo").css("color", "#F2272D");
+        $("#YSJYZMInfo").html("验证码过期,请重新获取");
+        return false;
+    }
     else {
         $("#YSJYZM").css("border-color", "#999");
         $("#YSJYZMInfo").html('');
@@ -182,6 +188,12 @@ function XSJYZMCheck() {
         $("#XSJYZM").css("border-color", "#F2272D");
         $("#XSJYZMInfo").css("color", "#F2272D");
         $("#XSJYZMInfo").html("手机验证码输入格式有误");
+        return false;
+    }
+    if (xsjcount === 60) {
+        $("#XSJYZM").css("border-color", "#F2272D");
+        $("#XSJYZMInfo").css("color", "#F2272D");
+        $("#XSJYZMInfo").html("验证码过期,请重新获取");
         return false;
     }
     else {
@@ -215,25 +227,61 @@ function GetYSJCheckCode(obj) {
 }
 
 function GetXSJCheckCode(obj) {
-    if (XSJCheck($("#" + obj.data.id).val())) {
+    if (!ValidateCellPhone($("#" + obj.data.id).val())) {
+        $("#XSJ").css("border-color", "#F2272D");
+        $("#XSJInfo").css("color", "#F2272D");
+        $("#XSJInfo").html("手机号码格式不正确");
+        return false;
+    }
+    else if ($("#" + obj.data.id).val().length === 0) {
+        $("#XSJ").css("border-color", "#F2272D");
+        $("#XSJInfo").css("color", "#F2272D");
+        $("#XSJInfo").html("请输入手机号");
+        return false;
+    }
+    else {
         $.ajax({
             type: "POST",
             dataType: "json",
-            url: getRootPath() + "/YHJBXX/GetYZM",
+            url: getRootPath() + "/YHJBXX/ValidateSJ",
             data: {
                 SJ: $("#" + obj.data.id).val()
             },
             success: function (xml) {
                 if (xml.Result === 1) {
-                    GetXSJNumber();
-                    return true;
+                    $("#XSJ").css("border-color", "#999");
+                    $("#XSJInfo").html('<img src=' + getRootPath() + '/Areas/Business/Css/images/yes.png />');
+
+                    $.ajax({
+                        type: "POST",
+                        dataType: "json",
+                        url: getRootPath() + "/YHJBXX/GetYZM",
+                        data: {
+                            SJ: $("#" + obj.data.id).val()
+                        },
+                        success: function (xml) {
+                            if (xml.Result === 1) {
+                                GetXSJNumber();
+                                return true;
+                            }
+                            else {
+                                alert("验证码发送失败");
+                                return false;
+                            }
+                        }
+                    });
                 }
                 else {
-                    alert("验证码发送失败");
-                    return false;
+                    $("#XSJInfo").css("color", "#F2272D");
+                    $("#XSJInfo").html(xml.Message);
                 }
             }
         });
+        
+
+        $("#XSJ").css("border-color", "#999");
+        $("#XSJInfo").html('');
+        return true;
     }
 }
 

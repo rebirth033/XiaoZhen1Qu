@@ -180,7 +180,7 @@ function LoadXQXX(obj) {
     html += ('<ul class="ul_body_left_body_xqxx">');
     html += ('<li class="li_body_left_body_xqxx">');
     html += ('<span class="span_body_left_body_xqxx_left">小区名：</span>');
-    html += ('<span class="span_body_left_body_xqxx_right">' + obj.XQMC === null ? "" : obj.XQMC + '</span>');
+    html += ('<span class="span_body_left_body_xqxx_right">' + (obj.XQMC === null ? "" : obj.XQMC) + '</span>');
     html += ('</li>');
     html += ('<li class="li_body_left_body_xqxx">');
     html += ('<span class="span_body_left_body_xqxx_left">所属区域：</span>');
