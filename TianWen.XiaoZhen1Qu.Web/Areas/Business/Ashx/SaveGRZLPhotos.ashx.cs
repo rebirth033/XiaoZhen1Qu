@@ -40,6 +40,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Ashx
                         int width = Convert.ToInt32(context.Request.Form["width"]);
                         int height = Convert.ToInt32(context.Request.Form["height"]);
                         YHJBXX yhjbxx = YHJBXXBLL.GetYHJBXXByYHM(context.Session["YHM"].ToString());
+                        YHJBXXBLL.UpdateTX(yhjbxx.YHID);
                         string type = context.Request.Form["type"];
                         string filename = context.Request.Form["filename"];
                         return ResizeImg(file.InputStream, width, height, yhjbxx.YHID, type, filename);
@@ -103,6 +104,8 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Ashx
             byte[] bytes = Convert.FromBase64String(context.Request["data"]);
             fs.Write(bytes, 0, bytes.Length);
             fs.Close();
+            YHJBXX yhjbxx = YHJBXXBLL.GetYHJBXXByYHM(context.Session["YHM"].ToString());
+            YHJBXXBLL.UpdateTX(yhjbxx.YHID);
             return string.Empty;
         }
 

@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
     $("#BT").bind("blur", function () { ValidateInput("BT", "标题"); });
     $("#BT").bind("focus", function () { InfoInput("BT", "请填写标题"); });
-    $("#LXDH").bind("blur", function () { ValidateInput("LXDH", "联系电话"); });
+    $("#LXDH").bind("blur", function () { ValidateLXDH(); });
     $("#LXDH").bind("focus", function () { InfoInput("LXDH", "请填写联系电话"); });
     ue.addListener("focus", function (type, event) { InfoBCMS("BCMS", "请填写详情描述"); });
     ue.addListener("blur", function (type, event) { ValidateBCMS("BCMS", "忘记填写详情描述啦"); });
@@ -41,8 +41,30 @@ function ValidateJG() {
         } else {
             $("#divJGTip").css("display", "block");
             $("#divJGTip").attr("class", "Warn");
-            $("#divJGTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />价格请填写数字，保留两位小数，默认为面议');
+            $("#divJGTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />价格请填写数字，最多保留两位小数，默认为面议');
             $("#spanJG").css("border-color", "#F2272D");
+            return false;
+        }
+    }
+}
+//验证联系电话
+function ValidateLXDH() {
+    if ($("#LXDH").val() === "" || $("#LXDH").val() === null) {
+        $("#divLXDHTip").css("display", "block");
+        $("#divLXDHTip").attr("class", "Warn");
+        $("#divLXDHTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写联系电话啦');
+        $("#LXDH").css("border-color", "#F2272D");
+        return false;
+    } else {
+        if (ValidateCellPhone($("#LXDH").val()) || ValidateTelePhone($("#LXDH").val())) {
+            $("#divLXDHTip").css("display", "none");
+            $("#LXDH").css("border-color", "#cccccc");
+            return true;
+        } else {
+            $("#divLXDHTip").css("display", "block");
+            $("#divLXDHTip").attr("class", "Warn");
+            $("#divLXDHTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />电话号码格式不正确');
+            $("#LXDH").css("border-color", "#F2272D");
             return false;
         }
     }
@@ -161,14 +183,14 @@ function ValidateSelect(idout, idin, message) {
 }
 //验证共有
 function ValidateCommon() {
-    if (ValidateInput("BT", "标题") & ValidateZP() & ValidateInput("LXDH", "联系电话"))
+    if (ValidateInput("BT", "标题") & ValidateZP() & ValidateLXDH())
         return true;
     else
         return false;
 }
 //验证共有不包括图片
 function ValidateCommonWithoutZP() {
-    if (ValidateInput("BT", "标题") & ValidateInput("LXDH", "联系电话"))
+    if (ValidateInput("BT", "标题") & ValidateLXDH())
         return true;
     else
         return false;
@@ -190,7 +212,7 @@ function ValidateXXDZ() {
 function InfoJG() {
     $("#divJGTip").css("display", "block");
     $("#divJGTip").attr("class", "Info");
-    $("#divJGTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />请填写数字，默认为面议');
+    $("#divJGTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />请填写数字,最多保留两位小数,默认为面议');
     $("#spanJG").css("border-color", "#bc6ba6");
 }
 //提示详情描述

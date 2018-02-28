@@ -475,6 +475,17 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
+        public void UpdateTX(string YHID)
+        {
+            YHJBXX yhjbxx = DAO.GetObjectByID<YHJBXX>(YHID);
+            if (yhjbxx != null)
+            {
+                yhjbxx.TX = "TX.jpg";
+
+                DAO.Update(yhjbxx);
+            }
+        }
+
         public string GetObjByYHM(string YHM)
         {
             object o1 = DAO.Repository.ExecuteScalar(string.Format("SELECT COUNT(1) FROM YHJBXX WHERE YHM='{0}'", YHM));
@@ -533,13 +544,12 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 if (yhjbxx != null)
                 {
                     UpdateYXYZM(YHID, EncryptionHelper.MD5Encrypt64(CheckCode));
-                    UpdateYX(YHID, YX);
                     MailMessage msg = new MailMessage();
                     msg.To.Add(YX);
                     msg.From = new MailAddress(YX, "信息小镇", Encoding.UTF8);
                     msg.Subject = "邮件认证 - 信息小镇";
                     msg.SubjectEncoding = Encoding.UTF8;//邮件标题编码 
-                    string url = "http://localhost" + Common.GetVirtualRootPath() + "/GRZL/YXYZCG?para=" + EncryptionHelper.MD5Encrypt64(YHID) + "|" + EncryptionHelper.MD5Encrypt64(CheckCode);
+                    string url = "http://www.infotownlet.com" + Common.GetVirtualRootPath() + "/GRZL/YXYZCG?para=" + EncryptionHelper.MD5Encrypt64(YHID) + "|" + EncryptionHelper.MD5Encrypt64(CheckCode);
                     StringBuilder sb = new StringBuilder();
                     sb.AppendFormat(@"<div style='width: 650px; margin-left: 27%; height: 600px; border: 1px solid #bc6ba6; '>
                                 <div style='background-color: #bc6ba6; width: 100%; height: 80px; vertical-align: middle;'>
@@ -580,7 +590,6 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     LoggerManager.Info("发送邮件", "用户：" + YHID + "发送邮件失败,用户不存在");
                     return new { Result = EnResultType.Failed, Message = "用户不存在" };
                 }
-
             }
             catch (Exception ex)
             {
@@ -593,7 +602,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
-        public object YHYZ(string YHID_Cryptograph, string CheckCode_Cryptograph)
+        public object YHYZ(string YHID_Cryptograph, string CheckCode_Cryptograph, string YX)
         {
             try
             {
@@ -603,10 +612,12 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     if (EncryptionHelper.MD5Encrypt64(yhjbxx.YHID) == YHID_Cryptograph)
                     {
                         if (yhjbxx.DZYXYZM == CheckCode_Cryptograph)
+                        {
+                            UpdateYX(yhjbxx.YHID, YX);
                             return new { Result = EnResultType.Success, Message = "验证成功", Value = new { YHM = yhjbxx.YHM, DZYX = yhjbxx.DZYX } };
+                        }
                         else
                         {
-                            UpdateYX(yhjbxx.YHID, string.Empty);
                             return new { Result = EnResultType.Failed, Message = "验证失败,链接不正确" };
                         }
                     }

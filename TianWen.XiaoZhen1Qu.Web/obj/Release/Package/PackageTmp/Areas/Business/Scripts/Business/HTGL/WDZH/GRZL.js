@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     $("#spanBDSC").css("color", "#bc6ba6").css("font-weight", "700");
-    $("#emBDSC").css("background-color", "#bc6ba6").css("height", "2px")
+    $("#emBDSC").css("background-color", "#bc6ba6").css("height", "2px");
     $("#btnTBWXTX").css("display", "block");
     $(".divstep").bind("click", HeadActive);
     $(".li_main_photo_middle_xt").bind("click", LoadSystemPhoto);

@@ -77,8 +77,8 @@ function HandlerTPXX() {
     if ($("#img_body_left_body_left_show").length > 0) {
         var img = new Image();
         img.src = $("#img_body_left_body_left_show").attr("src");
-        $("#img_body_left_body_left_show").css("width", ((img.width || img.width === 0) > 460 ? 460 : img.width));
-        $("#img_body_left_body_left_show").css("height", ((img.height || img.height === 0) > 350 ? 350 : img.height));
+        $("#img_body_left_body_left_show").css("width", ((img.width > 460 || img.width === 0) ? 460 : img.width));
+        $("#img_body_left_body_left_show").css("height", ((img.height > 350 || img.height === 0) ? 350 : img.height));
     }
 
     $(".img_body_left_body_xq_xx").each(function () {

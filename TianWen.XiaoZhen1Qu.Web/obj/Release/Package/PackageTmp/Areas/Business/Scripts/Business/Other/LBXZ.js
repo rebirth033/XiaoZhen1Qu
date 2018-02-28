@@ -187,10 +187,6 @@ function ShowSHGJ() {
     $("#ulSHGJ").css("display", "block");
     ToHFCZ();
 }
-//退出
-function Exit() {
-    window.location.href = getRootPath() + "/YHDL/YHDL";
-}
 //我的发布
 function ToWDFB() {
     window.location.href = getRootPath() + "/HTGL/HTGL";

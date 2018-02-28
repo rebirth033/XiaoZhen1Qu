@@ -87,6 +87,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             YHJBXX yhjbxx = YHJBXXBLL.GetYHJBXXByYHM(Session["YHM"].ToString());
             Random random = new Random();
             string CheckCode = random.Next(100000, 999999).ToString();//6位验证码
+            Session["YX"] = Request["YX"];
             object result = YHJBXXBLL.SendEmail(yhjbxx.YHID, Request["YX"], CheckCode);
             return Json(result);
         }
@@ -98,7 +99,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
                 string[] values = Request["para"].Split('|');
                 string YHID_Cryptograph = values[0];
                 string CheckCode_Cryptograph = values[1];
-                object result = YHJBXXBLL.YHYZ(YHID_Cryptograph, CheckCode_Cryptograph);
+                object result = YHJBXXBLL.YHYZ(YHID_Cryptograph, CheckCode_Cryptograph, Session["YX"].ToString());
 
                 return Json(result);
             }

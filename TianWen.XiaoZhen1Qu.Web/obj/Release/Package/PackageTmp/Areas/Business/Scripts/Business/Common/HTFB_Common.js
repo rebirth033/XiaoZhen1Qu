@@ -19,6 +19,7 @@ $(document).ready(function () {
     $("#btnClose").bind("click", CloseWindow);
     $("#aWJMM").attr("href", getRootPath() + "/ZHMM/ZHMM");
     $("#aYHZC1").attr("href", getRootPath() + "/YHJBXX/YHJBXX");
+    $("body").bind("click", function () { CloseByClassID("div_select_dropdown"); });//所有下拉框在点击别处时应该自动收缩
     LoadDefault();
     LoadTXXX();
 });
@@ -110,10 +111,6 @@ function SelectLB(obj, type) {
 function SelectDropdown(obj, type) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
-}
-//退出
-function Exit() {
-    window.location.href = getRootPath() + "/YHDL/YHDL";
 }
 //绑定下拉框
 function Bind(idout, idin, message) {
