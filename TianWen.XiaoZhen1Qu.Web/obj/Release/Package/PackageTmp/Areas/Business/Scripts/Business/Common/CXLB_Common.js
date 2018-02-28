@@ -336,6 +336,7 @@ function LoadDistrictCondition(array, type) {
     }
     html += '</ul>';
     $("#div_condition_body_" + type).append(html);
+    $("#li_condition_body_first_" + type).css("height", (parseInt($("#div_condition_body_" + type).css("height")) - 20));
 }
 //发布信息
 function FBXX() {

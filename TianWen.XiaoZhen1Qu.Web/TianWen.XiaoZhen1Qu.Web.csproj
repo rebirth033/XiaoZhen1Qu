@@ -253,11 +253,13 @@
     <Content Include="Areas\Business\Css\images\HTGL\zmsmrz.png" />
     <Content Include="Areas\Business\Css\images\info_purple.png" />
     <Content Include="Areas\Business\Css\images\info_blue.png" />
+    <Content Include="Areas\Business\Css\images\left.png" />
     <Content Include="Areas\Business\Css\images\logo_purple - 朦胧水黑.png" />
     <Content Include="Areas\Business\Css\images\logo_purple.png" />
     <Content Include="Areas\Business\Css\images\lxdh.png" />
     <Content Include="Areas\Business\Css\images\one-purple.png" />
     <Content Include="Areas\Business\Css\images\radio_purple.png" />
+    <Content Include="Areas\Business\Css\images\right.png" />
     <Content Include="Areas\Business\Css\images\SY\BMFW\sy_bmfw_kdcx.png" />
     <Content Include="Areas\Business\Css\images\SY\TBDH\body_top_cl2.png" />
     <Content Include="Areas\Business\Css\images\SY\TBDH\body_top_cl3.png" />
@@ -2857,7 +2859,7 @@
     <Content Include="Areas\Business\Views\ZSJMCX\ZSJMCX_LS.cshtml" />
     <Content Include="Areas\Business\Views\ZSJMXX\ZSJMXX_LS.cshtml" />
     <Content Include="Areas\Business\Views\GYWM\GYWM.cshtml" />
-    <None Include="Properties\PublishProfiles\XXXZ.pubxml" />
+    <None Include="Properties\PublishProfiles\xxxz.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

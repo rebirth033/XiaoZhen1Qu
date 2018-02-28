@@ -43107,3 +43107,5 @@ values (73290, '街道级', '嵊山', '1', 1, 73284, null);
 
 insert into codes_district (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, SHORTNAME)
 values (73291, '街道级', '五龙', '1', 1, 73284, null);
+
+update codes_district set codeorder = 99 where typename = '县区级' and codename like '%周边%';

@@ -1,7 +1,5 @@
 ﻿$(document).ready(function () {
     $("#divSF").find(".div_radio").bind("click", function () { ValidateRadio("SF", "忘记选择身份啦"); });
-    $("#JG").bind("blur", ValidateJG);
-    $("#JG").bind("focus", InfoJG);
 });
 //验证网游/虚拟物品类别
 function ValidateWYXNWPLB() {

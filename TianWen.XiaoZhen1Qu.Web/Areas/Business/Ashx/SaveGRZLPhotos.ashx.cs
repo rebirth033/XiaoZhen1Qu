@@ -40,6 +40,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Ashx
                         int width = Convert.ToInt32(context.Request.Form["width"]);
                         int height = Convert.ToInt32(context.Request.Form["height"]);
                         YHJBXX yhjbxx = YHJBXXBLL.GetYHJBXXByYHM(context.Session["YHM"].ToString());
+                        YHJBXXBLL.UpdateTX(yhjbxx.YHID);
                         string type = context.Request.Form["type"];
                         string filename = context.Request.Form["filename"];
                         YHJBXXBLL.UpdateTX(yhjbxx.YHID);

@@ -56,7 +56,7 @@ function LoadGRXX(grxx) {
     html += ('<div class="div_body_right_grxx">');
     if (grxx.TX === null)
         html += ('<img class="img_div_body_right_grxx" src="' + getRootPath() + "/Areas/Business/Css/images/default_tx.png?j=" + Math.random() + '" />');
-        else
+    else
         html += ('<img class="img_div_body_right_grxx"  src="' + getRootPath() + "/Areas/Business/Photos/" + grxx.YHID + "/GRZL/TX.jpg?j=" + Math.random() + '" />');
     html += ('<p class="p_div_body_right_yhm">' + grxx.YHM + '</p>');
     html += ('<p class="p_div_body_right_zcsj">注册时间：' + grxx.SQRQ.ToString("yyyy年MM月dd日") + '</p>');
@@ -77,8 +77,8 @@ function HandlerTPXX() {
     if ($("#img_body_left_body_left_show").length > 0) {
         var img = new Image();
         img.src = $("#img_body_left_body_left_show").attr("src");
-        $("#img_body_left_body_left_show").css("width", ((img.width || img.width === 0) > 460 ? 460 : img.width));
-        $("#img_body_left_body_left_show").css("height", ((img.height || img.height === 0) > 350 ? 350 : img.height));
+        $("#img_body_left_body_left_show").css("width", ((img.width > 460 || img.width === 0) ? 460 : img.width));
+        $("#img_body_left_body_left_show").css("height", ((img.height > 350 || img.height === 0) ? 350 : img.height));
     }
 
     $(".img_body_left_body_xq_xx").each(function () {
@@ -207,5 +207,16 @@ function SCXX(jcxxid) {
     }
     else {
         window.open(getRootPath() + "/YHDL/YHDL");
+    }
+}
+//判断非空
+function ValidateNull(value, dw) {
+    if (value === "" || (value.indexOf("请选择") !== -1))
+        return "暂无数据";
+    else {
+        if (dw !== undefined)
+            return value + dw;
+        else
+            return value;
     }
 }

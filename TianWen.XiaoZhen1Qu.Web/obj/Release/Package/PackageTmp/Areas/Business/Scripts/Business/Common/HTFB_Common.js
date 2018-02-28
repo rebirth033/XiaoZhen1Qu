@@ -112,10 +112,6 @@ function SelectDropdown(obj, type) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
 }
-//退出
-function Exit() {
-    window.location.href = getRootPath() + "/YHDL/YHDL";
-}
 //绑定下拉框
 function Bind(idout, idin, message) {
     $("#div" + idout).find(".li_select").bind("click", function () { ValidateSelect(idout, idin, message); });

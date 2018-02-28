@@ -481,6 +481,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
             if (yhjbxx != null)
             {
                 yhjbxx.TX = "TX.jpg";
+
                 DAO.Update(yhjbxx);
             }
         }
@@ -589,7 +590,6 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     LoggerManager.Info("发送邮件", "用户：" + YHID + "发送邮件失败,用户不存在");
                     return new { Result = EnResultType.Failed, Message = "用户不存在" };
                 }
-
             }
             catch (Exception ex)
             {
@@ -611,7 +611,8 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 {
                     if (EncryptionHelper.MD5Encrypt64(yhjbxx.YHID) == YHID_Cryptograph)
                     {
-                        if (yhjbxx.DZYXYZM == CheckCode_Cryptograph) {
+                        if (yhjbxx.DZYXYZM == CheckCode_Cryptograph)
+                        {
                             UpdateYX(yhjbxx.YHID, YX);
                             return new { Result = EnResultType.Success, Message = "验证成功", Value = new { YHM = yhjbxx.YHM, DZYX = yhjbxx.DZYX } };
                         }

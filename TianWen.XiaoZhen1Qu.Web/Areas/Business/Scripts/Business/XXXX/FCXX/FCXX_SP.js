@@ -59,7 +59,7 @@ function LoadJBXX(obj) {
     if (obj.GQ === "出租") {
         html += ('<p class="p_body_left_body_right">');
         html += ('<span class="span_body_left_body_right_left">押付方式：</span>');
-        html += ('<span class="span_body_left_body_right_right">' + obj.YFFS + '</span>');
+        html += ('<span class="span_body_left_body_right_right">' + (obj.YFFS.indexOf("请选择") !== -1 ? "暂无" : obj.YFFS) + '</span>');
         html += ('</p>');
     }
     html += ('<p class="p_body_left_body_right">');
@@ -101,10 +101,10 @@ function LoadXQ(obj, BCMSString) {
     html += ('<div class="div_body_left_body_xq_xx">');
     html += ('<div class="div_body_left_body_xq_xx_left">详细信息</div>');
     html += ('<div class="div_body_left_body_xq_xx_right">');
-    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_left">面宽：</span><span class="span_body_left_body_xq_xx_right">' + (obj.MK === null ? "暂无数据" : obj.MK) + '米</span><span class="span_body_left_body_xq_xx_left">进深：</span><span class="span_body_left_body_xq_xx_right">' + (obj.JS === null ? "暂无数据" : obj.JS) + '米</span></p>');
-    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_left">层高：</span><span class="span_body_left_body_xq_xx_right">' + (obj.CG === null ? "暂无数据" : obj.CG) + '米</span><span class="span_body_left_body_xq_xx_left">楼层：</span><span class="span_body_left_body_xq_xx_right">' + (obj.C === null ? "暂无数据" : obj.C) + '层/共' + (obj.GJC === null ? "暂无数据" : obj.GJC) + '层</span></p>');
-    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_left">电费：</span><span class="span_body_left_body_xq_xx_right">' + (obj.DF === undefined ? "暂无数据" : obj.DF) + '元/度</span><span class="span_body_left_body_xq_xx_left">水费：</span><span class="span_body_left_body_xq_xx_right">' + (obj.SFEI === undefined ? "暂无数据" : obj.SFEI) + '元/吨</span></p>');
-    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_left">物业费：</span><span class="span_body_left_body_xq_xx_right">' + (obj.WYF === undefined ? "暂无数据" : obj.WYF) + '元/平米/月</span></p>');
+    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_left">面宽：</span><span class="span_body_left_body_xq_xx_right">' + (obj.MK === "" ? "暂无数据" : obj.MK + '米') + '</span><span class="span_body_left_body_xq_xx_left">进深：</span><span class="span_body_left_body_xq_xx_right">' + (obj.JS === "" ? "暂无数据" : obj.JS + '米') + '</span></p>');
+    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_left">层高：</span><span class="span_body_left_body_xq_xx_right">' + (obj.CG === "" ? "暂无数据" : obj.CG + '米') + '</span><span class="span_body_left_body_xq_xx_left">楼层：</span><span class="span_body_left_body_xq_xx_right">' + (obj.C === "" ? "暂无数据" : obj.C + '层/共') + '</span></p>');
+    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_left">电费：</span><span class="span_body_left_body_xq_xx_right">' + (obj.DF === "" ? "暂无数据" : obj.DF + '元/度') + '</span><span class="span_body_left_body_xq_xx_left">水费：</span><span class="span_body_left_body_xq_xx_right">' + (obj.SFEI === "" ? "暂无数据" : obj.SFEI + '元/吨') + '</span></p>');
+    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_left">物业费：</span><span class="span_body_left_body_xq_xx_right">' + (obj.WYF === "" ? "暂无数据" : obj.WYF + '元/平米/月') + '</span></p>');
     html += ('</div>');
     html += ('</div>');
     html += ('<div class="div_body_left_body_xq_xx">');

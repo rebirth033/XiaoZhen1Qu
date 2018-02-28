@@ -1,7 +1,5 @@
 ﻿$(document).ready(function () {
     $("#divGQ").find(".div_radio").bind("click", function () { ValidateRadio("GQ", "忘记选择供求啦"); });
-    $("#JG").bind("blur", ValidateJG);
-    $("#JG").bind("focus", InfoJG);
 });
 //验证所有
 function ValidateAll() {
@@ -11,12 +9,12 @@ function ValidateAll() {
         & ValidateJG()
         & ValidateXXDZ()
         & ValidateBCMS("BCMS", "忘记填写详情描述啦")
-         & ValidateInput("BT", "标题") & ValidateInput("LXR", "联系人") & ValidateInput("LXDH", "联系电话"))
+        & ValidateInput("BT", "标题") & ValidateInput("LXDH", "联系电话"))
         return true;
     else
         return false;
 }
-//验证时间
+//有效期限
 function ValidateYXQZ() {
     if ($("#YXQZ").val() === "" || $("#YXQZ").val() === null) {
         $("#divYXQZTip").css("display", "block");

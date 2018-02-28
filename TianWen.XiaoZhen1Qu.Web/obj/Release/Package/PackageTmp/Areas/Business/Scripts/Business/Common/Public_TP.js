@@ -24,13 +24,13 @@ function UploadZP() {
 function uploadComplete(evt) {
     var imagepath = getRootPath() + "/Areas/Business/Photos/" + evt.target.responseText;
     if ($("#ulImgs1").find("img").length < 4)
-        $("#ulImgs1").append("<li draggable='true' class='li_img'><img src='" + imagepath + "' class='divImg' /><div class='div_toolbar_wrap'><div class='delete'>删除</div><div class='edit'>编辑</div></div></li>");
+        $("#ulImgs1").append("<li draggable='true' class='li_img'><img src='" + imagepath + "' class='divImg' /><div class='div_toolbar_wrap'><div class='delete'>删除</div><div class='edit'>预览</div></div></li>");
     else if ($("#ulImgs2").find("img").length < 4)
-        $("#ulImgs2").append("<li draggable='true' class='li_img'><img src='" + imagepath + "' class='divImg' /><div class='div_toolbar_wrap'><div class='delete'>删除</div><div class='edit'>编辑</div></div></li>");
+        $("#ulImgs2").append("<li draggable='true' class='li_img'><img src='" + imagepath + "' class='divImg' /><div class='div_toolbar_wrap'><div class='delete'>删除</div><div class='edit'>预览</div></div></li>");
     else if ($("#ulImgs3").find("img").length < 4)
-        $("#ulImgs3").append("<li draggable='true' class='li_img'><img src='" + imagepath + "' class='divImg' /><div class='div_toolbar_wrap'><div class='delete'>删除</div><div class='edit'>编辑</div></div></li>");
+        $("#ulImgs3").append("<li draggable='true' class='li_img'><img src='" + imagepath + "' class='divImg' /><div class='div_toolbar_wrap'><div class='delete'>删除</div><div class='edit'>预览</div></div></li>");
     else
-        $("#ulImgs4").append("<li draggable='true' class='li_img'><img src='" + imagepath + "' class='divImg' /><div class='div_toolbar_wrap'><div class='delete'>删除</div><div class='edit'>编辑</div></div></li>");
+        $("#ulImgs4").append("<li draggable='true' class='li_img'><img src='" + imagepath + "' class='divImg' /><div class='div_toolbar_wrap'><div class='delete'>删除</div><div class='edit'>预览</div></div></li>");
     ControlUpload();
     ValidateZP();
     BindToolBar();
@@ -76,13 +76,13 @@ function LoadPhotos(photos) {
         $("#divFWZPValue").css("display", "block");
         for (var i = 0; i < photos.length; i++) {
             if (i > 11)
-                $("#ulImgs4").append("<li draggable='true' class='li_img'><img id='ulImgs4_" + (i + 1) + "' src='" + photos[i].PHOTOURL + "' class='divImg' /><div class='div_toolbar_wrap'><div class='delete'>删除</div><div class='edit'>编辑</div></div></li>");
+                $("#ulImgs4").append("<li draggable='true' class='li_img'><img id='ulImgs4_" + (i + 1) + "' src='" + photos[i].PHOTOURL + "' class='divImg' /><div class='div_toolbar_wrap'><div class='delete'>删除</div><div class='edit'>预览</div></div></li>");
             if (i > 7 && i <= 11)
-                $("#ulImgs3").append("<li draggable='true' class='li_img'><img id='ulImgs3_" + (i + 1) + "' src='" + photos[i].PHOTOURL + "' class='divImg' /><div class='div_toolbar_wrap'><div class='delete'>删除</div><div class='edit'>编辑</div></div></li>");
+                $("#ulImgs3").append("<li draggable='true' class='li_img'><img id='ulImgs3_" + (i + 1) + "' src='" + photos[i].PHOTOURL + "' class='divImg' /><div class='div_toolbar_wrap'><div class='delete'>删除</div><div class='edit'>预览</div></div></li>");
             if (i > 3 && i <= 7)
-                $("#ulImgs2").append("<li draggable='true' class='li_img'><img id='ulImgs2_" + (i + 1) + "' src='" + photos[i].PHOTOURL + "' class='divImg' /><div class='div_toolbar_wrap'><div class='delete'>删除</div><div class='edit'>编辑</div></div></li>");
+                $("#ulImgs2").append("<li draggable='true' class='li_img'><img id='ulImgs2_" + (i + 1) + "' src='" + photos[i].PHOTOURL + "' class='divImg' /><div class='div_toolbar_wrap'><div class='delete'>删除</div><div class='edit'>预览</div></div></li>");
             if (i <= 3)
-                $("#ulImgs1").append("<li draggable='true' class='li_img'><img id='ulImgs1_" + (i + 1) + "' src='" + photos[i].PHOTOURL + "' class='divImg' /><div class='div_toolbar_wrap'><div class='delete'>删除</div><div class='edit'>编辑</div></div></li>");
+                $("#ulImgs1").append("<li draggable='true' class='li_img'><img id='ulImgs1_" + (i + 1) + "' src='" + photos[i].PHOTOURL + "' class='divImg' /><div class='div_toolbar_wrap'><div class='delete'>删除</div><div class='edit'>预览</div></div></li>");
         }
         BindToolBar();
         ControlUpload();
@@ -103,8 +103,9 @@ function BindUlImgEdit() {
             var c = $("#canvas")[0];
             var cxt = c.getContext("2d");
             var img = new Image();
-            img.src = $(this).parent().parent().parent().find("img").attr("src");
-            var id = $(this).parent().parent().parent().find("img").attr("id");
+
+            img.src = $(this).parent().parent().find("img").attr("src");
+            var id = $(this).parent().parent().find("img").attr("id");
             img.src = img.src.substr(0, img.src.length - img.src.indexOf('?') - 1);
             img.onload = function () //确保图片已经加载完毕  
             {
@@ -112,7 +113,8 @@ function BindUlImgEdit() {
                 var left = (c.width - img.width * 10) / 2;
                 var top = (c.height - img.height * 10) / 2;
                 cxt.drawImage(img, left, top, img.width * 10, img.height * 10);
-                $("#rotate").bind("click", { src: img.src }, Rotate);
+                $("#rotateleft").bind("click", { src: img.src }, RotateLeft);
+                $("#rotateright").bind("click", { src: img.src }, RotateRight);
                 $("#btnSavePhoto").bind("click", { src: img.src, id: id }, SavePhoto);
             }
         });
@@ -241,8 +243,8 @@ function BindUlImg4Delete() {
         });
     });
 }
-//翻转
-function Rotate(obj) {
+//向右翻转
+function RotateRight(obj) {
     var c = $("#canvas")[0];
     var cxt = c.getContext("2d");
     var x = c.width / 2; //画布宽度的一半
@@ -256,11 +258,30 @@ function Rotate(obj) {
         cxt.translate(x, y);//将绘图原点移到画布中点
         cxt.rotate((Math.PI / 180) * 90);//旋转角度
         cxt.translate(-x, -y);//将画布原点移动
-        var left = (c.width - img.width) / 2;
-        var top = (c.height - img.height) / 2;
-        cxt.drawImage(img, left, top, img.width, img.height);
+        var left = (c.width - img.width*10) / 2;
+        var top = (c.height - img.height * 10) / 2;
+        cxt.drawImage(img, left, top, img.width * 10, img.height * 10);
     }
+}
+//向左翻转
+function RotateLeft(obj) {
+    var c = $("#canvas")[0];
+    var cxt = c.getContext("2d");
+    var x = c.width / 2; //画布宽度的一半
+    var y = c.height / 2;//画布高度的一半
 
+    var img = new Image();
+    img.src = obj.data.src;
+    img.onload = function () //确保图片已经加载完毕  
+    {
+        cxt.clearRect(0, 0, c.width, c.height);
+        cxt.translate(x, y);//将绘图原点移到画布中点
+        cxt.rotate((Math.PI / 180) * -90);//旋转角度
+        cxt.translate(-x, -y);//将画布原点移动
+        var left = (c.width - img.width * 10) / 2;
+        var top = (c.height - img.height * 10) / 2;
+        cxt.drawImage(img, left, top, img.width * 10, img.height * 10);
+    }
 }
 //关闭图片编辑窗口
 function CloseWindow() {

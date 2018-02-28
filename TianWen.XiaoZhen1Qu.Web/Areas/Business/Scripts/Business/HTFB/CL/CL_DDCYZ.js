@@ -21,20 +21,18 @@ function ValidateAll() {
 //验证使用年限
 function ValidateSYNX() {
     if ($("#SYNX").val() === "" || $("#SYNX").val() === null) {
-        $("#divSYNXTip").css("display", "block");
-        $("#divSYNXTip").attr("class", "Warn");
-        $("#divSYNXTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写使用年限啦');
-        $("#spanSYNX").css("border-color", "#F2272D");
-        return false;
+        $("#divSYNXTip").css("display", "none");
+        $("#spanSYNX").css("border-color", "#cccccc");
+        return true;
     } else {
-        if (ValidateNumber($("#SYNX").val())) {
+        if (ValidateDecimalOne($("#SYNX").val())) {
             $("#divSYNXTip").css("display", "none");
             $("#spanSYNX").css("border-color", "#cccccc");
             return true;
         } else {
             $("#divSYNXTip").css("display", "block");
             $("#divSYNXTip").attr("class", "Warn");
-            $("#divSYNXTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />使用年限请填写整数');
+            $("#divSYNXTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />使用年限请填写数字,最多保留一位小数');
             $("#spanSYNX").css("border-color", "#F2272D");
             return false;
         }
@@ -44,6 +42,6 @@ function ValidateSYNX() {
 function InfoSYNX() {
     $("#divSYNXTip").css("display", "block");
     $("#divSYNXTip").attr("class", "Info");
-    $("#divSYNXTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />请填写整数');
+    $("#divSYNXTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />请填写数字,最多保留一位小数');
     $("#spanSYNX").css("border-color", "#bc6ba6");
 }
