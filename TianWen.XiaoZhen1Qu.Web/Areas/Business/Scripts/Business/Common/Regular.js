@@ -48,6 +48,17 @@ function ValidateDecimal(value) {
     return true;
 }
 
+//一位小数的正实数验证
+function ValidateDecimalOne(value) {
+    if (value === "面议")
+        return true;
+    var zz = /^[0-9]+(.[0-9]{1})?$/g;
+    if (value.length > 0) {
+        return zz.test(value);
+    }
+    return true;
+}
+
 //车牌号验证
 function ValidateCPH(value) {
     var zz = /^[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领A-Z]{1}[A-Z]{1}[A-Z0-9]{4}[A-Z0-9挂学警港澳]{1}$/g;
