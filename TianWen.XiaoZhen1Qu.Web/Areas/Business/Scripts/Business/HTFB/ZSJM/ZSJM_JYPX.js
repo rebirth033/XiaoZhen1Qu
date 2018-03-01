@@ -74,12 +74,7 @@ function SelectLB(obj, type, codeid) {
 }
 //判断类别
 function PDLB(name) {
-    if (name.indexOf("教育机构") !== -1) {
-        $("#divXL").css("display", "");
-        LoadDuoX(name, "XL");
-    }
-    else
-        $("#divXL").css("display", "none");
+    $("#divXL").css("display", "none");
 }
 //加载招商加盟_教育培训基本信息
 function LoadJBXX() {
@@ -113,9 +108,6 @@ function LoadJBXX() {
                     SetDuoX("JYMS", xml.Value.ZSJM_JYPXJBXX.JYMS);
                 if (xml.Value.ZSJM_JYPXJBXX.FWFW !== null)
                     SetDuoX("FWFW", xml.Value.ZSJM_JYPXJBXX.FWFW);
-                if (xml.Value.ZSJM_JYPXJBXX.LB.indexOf("教育机构") !== -1) {
-                    LoadXLByName(xml.Value.ZSJM_JYPXJBXX.LB, xml.Value.ZSJM_JYPXJBXX.XL,"CODES_ZSJM");
-                }
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
