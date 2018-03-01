@@ -1,31 +1,42 @@
 ﻿$(document).ready(function () {
-    BindClick("LB");
+    LoadDuoX("办公设备维修类别", "LB");
     $("#divXLBQ").bind("click", function () { LoadXLBQ("CODES_SWFW", "国家"); });
-    LoadJBXX();
 });
-//绑定下拉框
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadCODESByTYPENAME("代办签证/签注类别", "LB", "CODES_SWFW", Bind, "OUTLB", "LB", "");
+//加载多选
+function LoadDuoX(type, id) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Common/LoadCODESByTYPENAME",
+        dataType: "json",
+        data:
+        {
+            TYPENAME: type,
+            TBName: "CODES_SWFW"
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                var html = "<ul class='ulFWPZ'>";
+                for (var i = 0; i < xml.list.length; i++) {
+                    html += "<li class='li" + id + "' style='width:120px;' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    if (i % 5 === 4 && i !== xml.list.length - 1) {
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
+                    }
+                }
+                if (parseInt(xml.list.length % 5) === 0)
+                    $("#div" + id).css("height", parseInt(xml.list.length / 5) * 45 + "px");
+                else
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 5) + 1) * 45 + "px");
+                html += "</ul>";
+                $("#div" + id + "Text").html(html);
+                $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".li" + id).bind("click", function () { ValidateCheck(id, "忘记选择类别啦"); });
+                LoadFWFW();
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
         }
     });
-}
-//选择小类标签
-function SelectXLBQ(obj, codename) {
-    if ($(obj).find("img").attr("src").indexOf("purple") !== -1) {
-        $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-        $("#" + codename).remove();
-    }
-    else {
-        if ($("#spanXLBQ").find(".div_XLBQ").length !== 2) {
-            if ($("#spanXLBQ").html().indexOf("请选择") !== -1) $("#spanXLBQ").html('');
-            $("#spanXLBQ").append('<div id="' + codename + '" class="div_XLBQ">' + codename + '</div>');
-            $(obj).find("img").attr("src", getRootPath() + "/Areas/Business/Css/images/check_purple.png");
-        }
-        else
-            alert("最多只选择2项");
-    }
 }
 //加载商务服务_代办签证/签注基本信息
 function LoadJBXX() {
@@ -51,7 +62,6 @@ function LoadJBXX() {
                 $("#spanDD").html(xml.Value.SWFW_DBQZQZJBXX.DD);
                 SetDX("GRTT", xml.Value.SWFW_DBQZQZJBXX.GRTT);
                 LoadPhotos(xml.Value.Photos);
-                LoadXL(xml.Value.SWFW_DBQZQZJBXX.LB, xml.Value.SWFW_DBQZQZJBXX.XL);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
