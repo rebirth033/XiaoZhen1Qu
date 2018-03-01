@@ -1,7 +1,5 @@
 ﻿$(document).ready(function() {
     $("#divZPJZYXQ").find(".div_radio").bind("click", function () { ValidateRadio("ZPJZYXQ", "忘记选择兼职有效期啦"); });
-    $("#DQJZKSSJ").bind("change", function () { ValidateZPDQJZSJ(); });
-    $("#DQJZJSSJ").bind("change", function () { ValidateZPDQJZSJ(); });
     $("#ZPRS").bind("blur", ValidateZPRS);
     $("#ZPRS").bind("focus", InfoZPRS);
     $("#XZ").bind("blur", ValidateXZSP);
@@ -19,12 +17,6 @@ function ValidateJZSJ() {
         return true;
     }
 }
-//验证短期兼职时间
-function ValidateZPDQJZSJ() {
-    if (!ValidateDQJZKSSJ()) return false;
-    if (!ValidateDQJZJSSJ()) return false;
-    return true;
-}
 //验证薪资水平
 function ValidateXZSP() {
     if (!ValidateXZ()) return false;
@@ -36,12 +28,10 @@ function ValidateAll() {
     if (ValidateSelect("ZPJZLB", "JZLB", "忘记选择兼职类别啦")
         & ValidateZPRS()
         & ValidateJZSJ() 
-        & ValidateRadio("ZPJZYXQ", "忘记选择兼职有效期啦")
-        & ValidateZPDQJZSJ()
         & ValidateXZSP()
-        & ValidateSelect("ZPXZJS", "XZJS", "忘记选择薪资结算啦")
         & ValidateBCMS("BCMS", "忘记填写详情描述啦")
-        & ValidateInput("BT", "标题") & ValidateInput("LXR", "联系人") & ValidateInput("LXDH", "联系电话"))
+        & ValidateXXDZ()
+        & ValidateInput("BT", "标题")& ValidateInput("LXDH", "联系电话"))
         return true;
     else
         return false;
@@ -57,34 +47,6 @@ function ValidateZPRS() {
     } else {
         $("#divZPRSTip").css("display", "none");
         $("#spanZPRS").css("border-color", "#cccccc");
-        return true;
-    }
-}
-//验证短期兼职开始时间
-function ValidateDQJZKSSJ() {
-    if ($("#DQJZKSSJ").val() === "" || $("#DQJZKSSJ").val() === null) {
-        $("#divZPDQJZSJTip").css("display", "block");
-        $("#divZPDQJZSJTip").attr("class", "Warn");
-        $("#divZPDQJZSJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写短期兼职开始时间啦');
-        $("#DQJZKSSJ").css("border-color", "#F2272D");
-        return false;
-    } else {
-        $("#divDQJZSJTip").css("display", "none");
-        $("#DQJZKSSJ").css("border-color", "#cccccc");
-        return true;
-    }
-}
-//验证短期兼职结束时间
-function ValidateDQJZJSSJ() {
-    if ($("#DQJZJSSJ").val() === "" || $("#DQJZJSSJ").val() === null) {
-        $("#divZPDQJZSJTip").css("display", "block");
-        $("#divZPDQJZSJTip").attr("class", "Warn");
-        $("#divZPDQJZSJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写短期兼职结束时间啦');
-        $("#DQJZJSSJ").css("border-color", "#F2272D");
-        return false;
-    } else {
-        $("#divZPDQJZSJTip").css("display", "none");
-        $("#DQJZJSSJ").css("border-color", "#cccccc");
         return true;
     }
 }

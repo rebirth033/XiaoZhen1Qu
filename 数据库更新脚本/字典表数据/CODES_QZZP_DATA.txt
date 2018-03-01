@@ -116,6 +116,9 @@ insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENT
 values (39, '薪资水平单位', '元/次', '3', 3, null, null, null, null, null, null, null);
 
 insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (3901, '薪资水平单位', '元/月', '4', 4, null, null, null, null, null, null, null);
+
+insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
 values (40, '薪资结算', '日结', '1', 1, null, null, null, null, null, null, null);
 
 insert into codes_qzzp (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
