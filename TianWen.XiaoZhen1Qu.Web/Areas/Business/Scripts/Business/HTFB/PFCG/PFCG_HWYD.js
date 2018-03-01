@@ -1,32 +1,14 @@
 ﻿$(document).ready(function () {
-    BindClick("LB");
-    LoadFWFW();
+    LoadDuoX("运动装备类别", "LB");
 });
-//绑定下拉框
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadCODESByTYPENAME("运动装备类别", "LB", "CODES_PFCG", Bind, "OUTLB", "LB", "");
-        }
-    });
-}
-//选择类别下拉框
-function SelectLB(obj, type, codeid) {
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
-    if (type === "LB")
-        PDLB(obj.innerHTML, codeid);
-}
-//判断类别
-function PDLB(name, codeid) {
-    if (name.indexOf("干锅") !== -1) {
-        $("#divXL").css("display", "none");
-    }
-    else {
-        $("#divXL").css("display", "");
-        LoadDuoX(name, "XL");
-    }
-}
+////绑定下拉框
+//function BindClick(type) {
+//    $("#div" + type + "Span").click(function () {
+//        if (type === "LB") {
+//            LoadCODESByTYPENAME("运动装备类别", "LB", "CODES_PFCG", Bind, "OUTLB", "LB", "");
+//        }
+//    });
+//}
 //加载多选
 function LoadDuoX(type, id) {
     $.ajax({
@@ -54,47 +36,8 @@ function LoadDuoX(type, id) {
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载小类
-function LoadXL(lbmc, xl) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Common/LoadCODESByTYPENAME",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: lbmc,
-            TBName: "CODES_PFCG"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='ulFWPZ'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liXL' onclick='SelectDuoX(this)'><img class='img_XL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i % 6 === 5) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
-                    }
-                }
-                if (parseInt(xml.list.length % 6) === 0)
-                    $("#divXL").css("height", parseInt(xml.list.length / 6) * 60 + "px");
-                else
-                    $("#divXL").css("height", (parseInt(xml.list.length / 6) + 1) * 60 + "px");
-                html += "</ul>";
-                $("#divXLText").html(html);
-                $(".img_XL").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-                $(".liXL").bind("click", function () { ValidateCheck("XL", "忘记选择小类啦"); });
-                if (xml.list.length === 0)
-                    $("#divXL").css("display", "none");
-                else
-                    $("#divXL").css("display", "");
-                if (xl !== "" && xl !== null && xl !== undefined)
-                    SetDuoX("XL", xl);
+                $(".li" + id).bind("click", function () { ValidateCheck("LB", "忘记选择类别啦"); });
+                LoadFWFW();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -123,11 +66,9 @@ function LoadJBXX() {
                 $("#spanLB").html(xml.Value.PFCG_HWYDJBXX.LB);
                 $("#spanQY").html(xml.Value.PFCG_HWYDJBXX.QY);
                 $("#spanDD").html(xml.Value.PFCG_HWYDJBXX.DD);
-                LoadXL(xml.Value.PFCG_HWYDJBXX.LB, xml.Value.PFCG_HWYDJBXX.XL);
                 if (xml.Value.PFCG_HWYDJBXX.FWFW !== null)
                     SetDuoX("FWFW", xml.Value.PFCG_HWYDJBXX.FWFW);
                 LoadPhotos(xml.Value.Photos);
-                $("#divXLText").css("display", "");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -142,7 +83,6 @@ function FB() {
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
-    obj = jsonObj.AddJson(obj, "XL", "'" + GetDuoX("XL") + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");

@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    LoadDuoX("化学品类别", "OUTLB");
+    LoadDuoX("化学品类别", "LB");
 });
 //加载多选
 function LoadDuoX(type, id) {

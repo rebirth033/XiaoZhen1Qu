@@ -1,31 +1,6 @@
 ﻿$(document).ready(function () {
     LoadFWFW();
 });
-//绑定下拉框
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadCODESByTYPENAME("电工电料类别", "LB", "CODES_PFCG", Bind, "OUTLB", "LB", "");
-        }
-    });
-}
-//选择类别下拉框
-function SelectLB(obj, type, codeid) {
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
-    if (type === "LB")
-        PDLB(obj.innerHTML, codeid);
-}
-//判断类别
-function PDLB(name, codeid) {
-    if (name.indexOf("干锅") !== -1) {
-        $("#divXL").css("display", "none");
-    }
-    else {
-        $("#divXL").css("display", "");
-        LoadDuoX(name, "XL");
-    }
-}
 //加载多选
 function LoadDuoX(type, id) {
     $.ajax({
