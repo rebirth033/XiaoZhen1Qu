@@ -140,9 +140,9 @@ function LoadBody(TYPE, PageIndex) {
 function LoadInfo(obj) {
     var html = "";
     html += ('<li class="li_body_left" onclick="OpenXXXX(\'QZZPXX_JZZP\',\'' + obj.ID + '\')">');
-    html += ('<div class="div_li_body_left_left">' + obj.XZ + obj.XZDW + '&nbsp;' + obj.XZJS + '</div>');
+    html += ('<div class="div_li_body_left_left">' + obj.XZ + obj.XZDW  + ' </div>');
     html += ('<div class="div_li_body_left_center">' + obj.BT + '</div>');
-    html += ('<div class="div_li_body_left_right">' + obj.ZXGXSJ.ToString("MM月dd日") + '</div>');
+    html += ('<div class="div_li_body_left_right">' + obj.ZXGXSJ.ToString("yyyy年MM月dd日") + '</div>');
     html += ('</li>');
     $("#ul_body_left").append(html);
 }
