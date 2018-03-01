@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-    $("#divSFSM").find(".div_radio").bind("click", function () { ValidateRadio("SFSM", "忘记选择是否上门啦"); });
     LoadDuoX("白事服务类别", "LB");
 });
 //加载多选
@@ -62,7 +61,6 @@ function LoadJBXX() {
                     SetDuoX("FWFW", xml.Value.SHFW_BZMDJBXX.FWFW);
                 $("#spanQY").html(xml.Value.SHFW_BZMDJBXX.QY);
                 $("#spanDD").html(xml.Value.SHFW_BZMDJBXX.DD);
-                SetDX("SFSM", xml.Value.SHFW_BZMDJBXX.SFSM);
                 LoadPhotos(xml.Value.Photos);
             }
         },
@@ -83,7 +81,6 @@ function FB() {
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "XL", "'" + GetDuoX("XL") + "'");
-    obj = jsonObj.AddJson(obj, "SFSM", "'" + GetDX("SFSM") + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");
