@@ -19,7 +19,7 @@ $(document).ready(function () {
     $("#btnClose").bind("click", CloseWindow);
     $("#aWJMM").attr("href", getRootPath() + "/ZHMM/ZHMM");
     $("#aYHZC1").attr("href", getRootPath() + "/YHJBXX/YHJBXX");
-    $("body").bind("click", function () { CloseByClassID("div_select_dropdown"); });//所有下拉框在点击别处时应该自动收缩
+    $("body").bind("click", function () { CloseByClassID("div_select_dropdown"); CloseByClassID("div_bqss"); });//所有下拉框在点击别处时应该自动收缩
     LoadDefault();
     LoadTXXX();
 });

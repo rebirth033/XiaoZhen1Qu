@@ -127,7 +127,25 @@ function LoadJBXX() {
                 $("#spanDD").html(xml.Value.PFCG_AFSBJBXX.DD);
                 SetJZSJ(xml.Value.QZZP_JZZPJBXX.JZSJ);
             } else {
-                $("#spanJZLB").html($("#spanLBXZ").html().replace("1.", ""));
+                $.ajax({
+                    type: "POST",
+                    url: getRootPath() + "/LBXZ/LoadLBByID",
+                    dataType: "json",
+                    data:
+                    {
+                        LBID: getUrlParam("CLICKID")
+                    },
+                    success: function (xml) {
+                        if (xml.Result === 1) {
+                            if (xml.list.length > 0) {
+                                $("#spanJZLB").html(xml.list[0].LBNAME);
+                            }
+                        }
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+                    }
+                });
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
