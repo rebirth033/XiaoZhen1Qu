@@ -1,18 +1,6 @@
 ﻿$(document).ready(function () {
-    $("#div_ly_ls").bind("click", LSSelect);
-    $("#div_ly_lssws").bind("click", LSSWSSelect);
     LoadDuoX("法律咨询类别", "LB");
 });
-//选择律师
-function LSSelect() {
-    $("#divZYZH").css("display", "");
-    $("#divZYJG").css("display", "");
-}
-//选择律师事务所
-function LSSWSSelect() {
-    $("#divZYZH").css("display", "none");
-    $("#divZYJG").css("display", "none");
-}
 //加载多选
 function LoadDuoX(type, id) {
     $.ajax({

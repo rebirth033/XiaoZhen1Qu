@@ -17,7 +17,7 @@ function LoadLB() {
             if (xml.Result === 1) {
                 $("#div_row_right_jcpp_first").html('');
                 var html = "";
-                html += '<span class="p_row_right_jcpp">请选择大类<span onclick="CloseZWMC(1)" class="span_row_right_jcpp">×</span></span>';
+                html += '<span class="p_row_right_jcpp">请选择类别<span onclick="CloseZWMC(1)" class="span_row_right_jcpp">×</span></span>';
                 html += '<div class="div_row_right_jcpp_first_left">';
                 html += '<ul class="ul_row_right_jcpp_first_left">';
                 for (var i = 0; i < BQArray.length; i++) {
