@@ -1,34 +1,34 @@
 ﻿$(document).ready(function () {
-    LoadJXSBWXLB();
+    LoadDuoX("机械设备维修类别", "LB");
 });
-//加载机械设备维修类别
-function LoadJXSBWXLB() {
+//加载多选
+function LoadDuoX(type, id) {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "机械设备维修类别",
+            TYPENAME: type,
             TBName: "CODES_SWFW"
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liJXSBWXLB' style='width:150px' onclick='SelectDuoX(this)'><img class='img_JXSBWXLB'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i % 4 === 3 && i !== xml.list.length-1) {
+                    html += "<li class='li" + id + "' style='width:120px;' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    if (i % 5 === 4 && i !== xml.list.length - 1) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
                     }
                 }
-                if (parseInt(xml.list.length % 4) === 0)
-                    $("#divJXSBWXLB").css("height", parseInt(xml.list.length / 4) * 45 + "px");
+                if (parseInt(xml.list.length % 5) === 0)
+                    $("#div" + id).css("height", parseInt(xml.list.length / 5) * 45 + "px");
                 else
-                    $("#divJXSBWXLB").css("height", (parseInt(xml.list.length / 4) + 1) * 45 + "px");
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 5) + 1) * 45 + "px");
                 html += "</ul>";
-                $("#divJXSBWXLBText").html(html);
-                $(".img_JXSBWXLB").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-                $(".liJXSBWXLB").bind("click", function () { ValidateCheck("JXSBWXLB", "忘记选择类别啦"); });
+                $("#div" + id + "Text").html(html);
+                $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".li" + id).bind("click", function () { ValidateCheck(id, "忘记选择类别啦"); });
                 LoadFWFW();
             }
         },

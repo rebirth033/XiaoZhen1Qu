@@ -1,11 +1,6 @@
 ﻿$(document).ready(function () {
 
 });
-//类别
-function ValidateLB() {
-    if (!ValidateSelect("OUTLB", "LB", "忘记选择类别啦")) return false;
-    return true;
-}
 //营业时间
 function ValidateYYSJ() {
     if (!ValidateSJ_H("YYSJ", "YYKSSJ_H", $("#YYKSSJ_H").val())) return false;
@@ -16,7 +11,7 @@ function ValidateYYSJ() {
 }
 //验证所有
 function ValidateAll() {
-    if (ValidateLB()
+    if (ValidateCheck("LB", "忘记选择类别啦")
         & ValidateYYSJ()
         & ValidateBCMS("BCMS", "忘记填写服务介绍啦")
         & ValidateXXDZ()

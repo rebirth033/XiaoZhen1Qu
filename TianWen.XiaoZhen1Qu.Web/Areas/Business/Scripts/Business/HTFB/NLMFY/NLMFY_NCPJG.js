@@ -17,7 +17,7 @@ function LoadLB() {
             if (xml.Result === 1) {
                 $("#div_row_right_jcpp_first").html('');
                 var html = "";
-                html += '<span class="p_row_right_jcpp">请选择种类<span onclick="CloseZWMC(1)" class="span_row_right_jcpp">×</span></span>';
+                html += '<span class="p_row_right_jcpp">请选择大类<span onclick="CloseZWMC(1)" class="span_row_right_jcpp">×</span></span>';
                 html += '<div class="div_row_right_jcpp_first_left">';
                 html += '<ul class="ul_row_right_jcpp_first_left">';
                 for (var i = 0; i < BQArray.length; i++) {
@@ -44,7 +44,7 @@ function LoadLB() {
                         html += '<li id="li_row_right_jcpp_first_right_tag_' + BQArray[i] + '" class="li_row_right_jcpp_first_right_tag">' + BQArray[i] + '</li>';
                     for (var j = 0; j < xml.list.length; j++) {
                         if (BQArray[i] === xml.list[j].CODEVALUE)
-                            html += '<li onclick="SelectSecond(\'' + xml.list[j].CODENAME + '\')" class="li_row_right_jcpp_first_right_value">' + xml.list[j].CODENAME + '</li>';
+                            html += '<li onclick="OpenSecond(\'' + xml.list[j].CODEID + '\',\'' + xml.list[j].CODENAME + '\')" class="li_row_right_jcpp_first_right_value">' + xml.list[j].CODENAME + '</li>';
                     }
                 }
                 html += '</ul>';
@@ -65,7 +65,8 @@ function GoToBQ(tag) {
     $(".ul_row_right_jcpp_first_right").stop().animate({ scrollTop: len }, 300, "swing", function () { });
 }
 //打开车系列表
-function OpenSecond(codeid) {
+function OpenSecond(codeid, codename) {
+    SelectSecond(codename);
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Common/LoadByParentID",

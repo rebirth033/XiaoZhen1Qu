@@ -1,14 +1,10 @@
 ﻿$(document).ready(function () {
-    $("body").bind("click", function () { Close("_XZQ");});
-    BindClick("LB");
+    LoadDuoX("印刷包装类别", "LB");
     LoadGY();
 });
 //绑定下拉框
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadCODESByTYPENAME("印刷包装类别", "LB", "CODES_SWFW", Bind, "OUTLB", "LB", "");
-        }
         if (type === "CZ") {
             LoadCODESByTYPENAME("材质", "CZ", "CODES_SWFW");
         }
@@ -19,72 +15,35 @@ function BindClick(type) {
             LoadCODESByTYPENAME("包装容器", "BZRQ", "CODES_SWFW");
         }
     });
-}
-//选择类别下拉框
-function SelectLB(obj, type, id) {
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
-    PDLB(obj.innerHTML);
-}
-//判断类别
-function PDLB(lbmc, xl) {
-    if (lbmc === "纸类印刷" || lbmc === "宣传资料印刷") {
-        LoadXL($("#spanLB").html(), xl);
-        $("#divXL").css("display", "");
-        $("#divYSBZCZ").css("display", "none");
-        $("#divYSBZYT").css("display", "none");
-        $("#divYSBZBZRQ").css("display", "none");
-    }
-    else if (lbmc === "包装") {
-        $("#divXL").css("display", "none");
-        $("#divYSBZCZ").css("display", "");
-        $("#divYSBZYT").css("display", "");
-        $("#divYSBZBZRQ").css("display", "");
-        BindClick("CZ");
-        BindClick("YT");
-        BindClick("BZRQ");
-    }
-    else {
-        $("#divXL").css("display", "none");
-        $("#divYSBZCZ").css("display", "none");
-        $("#divYSBZYT").css("display", "none");
-        $("#divYSBZBZRQ").css("display", "none");
-    }
-}
-//加载小类
-function LoadXL(lbmc, xl) {
+}//加载多选
+function LoadDuoX(type, id) {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: lbmc,
+            TYPENAME: type,
             TBName: "CODES_SWFW"
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liXL' style='width:120px;' onclick='SelectDuoX(this)'><img class='img_XL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i === 4 || i === 9) {
+                    html += "<li class='li" + id + "' style='width:120px;' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    if (i % 5 === 4 && i !== xml.list.length - 1) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
                     }
                 }
-                if (parseInt(xml.list.length % 6) === 0)
-                    $("#divXL").css("height", parseInt(xml.list.length / 5) * 60 + "px");
+                if (parseInt(xml.list.length % 5) === 0)
+                    $("#div" + id).css("height", parseInt(xml.list.length / 5) * 45 + "px");
                 else
-                    $("#divXL").css("height", (parseInt(xml.list.length / 5) + 1) * 60 + "px");
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 5) + 1) * 45 + "px");
                 html += "</ul>";
-                $("#divXLText").html(html);
-                $(".img_XL").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-                $(".liXL").bind("click", function () { ValidateCheck("XL", "忘记选择类别啦"); });
-                if (xml.list.length === 0)
-                    $("#divXL").css("display", "none");
-                else
-                    $("#divXL").css("display", "");
-                if (xl !== "" && xl !== null && xl !== undefined)
-                    SetDuoX("XL", xl);
+                $("#div" + id + "Text").html(html);
+                $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".li" + id).bind("click", function () { ValidateCheck(id, "忘记选择类别啦"); });
+                LoadGY();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
