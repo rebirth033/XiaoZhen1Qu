@@ -53,7 +53,7 @@ function LoadDuoX(type, id) {
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-                $(".liSHRQ").bind("click", function () { ValidateCheck("SHRQ", "忘记选择适合人群啦"); });
+
                 if (type === "适合人群")
                     LoadDuoX("经营模式", "JYMS");
                 if (type === "经营模式")
