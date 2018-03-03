@@ -19,7 +19,7 @@ $(document).ready(function () {
     $("#YZM").bind("blur", ValidateCheckCode);
     $("#a_syxy").bind("click", OpenSYXY);
     BindToolTip();
-    $("#title").html("信息小镇_注册页");
+    document.title = "信息小镇_注册页";
 });
 
 function BindToolTip() {

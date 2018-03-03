@@ -6,7 +6,7 @@
     $(".div_content").css("margin-left", (document.documentElement.clientWidth - 940) / 2);
     $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
-    $("#title").html("信息小镇_发布信息");
+    document.title = "信息小镇_发布信息";
     LoadDL();
 });
 //加载大类

@@ -37,7 +37,7 @@
     $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
     $("#span_fbxx").bind("click", OpenLBXZ);
-    $("#title").html("信息小镇_后台管理");
+    document.title = "信息小镇_后台管理";
     if (getUrlParam("Show") === "WDZJ")
         ShowWDZJ();
     else

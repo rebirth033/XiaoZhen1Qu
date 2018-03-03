@@ -17,7 +17,8 @@ $(document).ready(function () {
 });
 //首页获取title
 function GetHeadNav() {
-    $("#title").html("信息小镇_首页");
+    //$("#title").html("信息小镇_首页");
+    document.title = "信息小镇_首页";
 }
 //发布信息
 function FBXX() {
@@ -246,10 +247,6 @@ function OpenCXLB(lbid, lburl, condition) {
 //打开二级首页
 function ToEJSY(type) {
     window.open(getRootPath() + "/SY/" + type);
-}
-//登录
-function OpenDL() {
-    window.location.href = getRootPath() + "/YHDL/YHDL?To=SY";
 }
 //拖动滚动条或滚动鼠标轮
 window.onscroll = function () {

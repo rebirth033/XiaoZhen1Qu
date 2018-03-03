@@ -49,7 +49,7 @@ function GetHeadNav() {
                 }
                 html += ('</ul>');
                 $("#divNav").html(html);
-                $("#title").html(title);
+                document.title = title;
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {

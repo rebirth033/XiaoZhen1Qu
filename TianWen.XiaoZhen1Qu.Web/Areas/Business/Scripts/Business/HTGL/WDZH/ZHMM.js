@@ -13,7 +13,7 @@ $(document).ready(function () {
     $("#btnThird").bind("click", CZMM);
     $("#spanQRZH").css("color", "#bc6ba6");
     $("#emQRZH").css("background", "#bc6ba6");
-    $("#title").html("信息小镇_找回密码");
+    document.title = "信息小镇_找回密码";
 });
 //确认账户
 function QRZH() {
@@ -325,8 +325,4 @@ function TXYZMTip() {
 //切换图形验证码
 function QHTXYZM() {
     $("#imgTXYZM")[0].src = getRootPath() + '/Areas/Business/Aspx/png.aspx?' + Math.random();
-}
-//用户登录
-function ToYHDL() {
-    window.location.href = getRootPath() + "/YHDL/YHDL?To=SY";
 }

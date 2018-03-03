@@ -132,7 +132,7 @@ function LoadTXXX() {
             if (xml.Result === 1) {
                 if (xml.list.length > 0) {
                     $("#spanLBXZ").html("1." + xml.list[0].LBNAME);
-                    $("#title").html("信息小镇_发布" + $("#span_content_info_xzq").html() + xml.list[0].LBNAME + "信息");
+                    document.title = "信息小镇_发布" + $("#span_content_info_xzq").html() + xml.list[0].LBNAME + "信息";
                 }
             }
         },

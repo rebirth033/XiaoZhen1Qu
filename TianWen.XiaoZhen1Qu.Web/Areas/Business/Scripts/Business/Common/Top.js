@@ -9,7 +9,7 @@
 });
 //登录
 function OpenDL() {
-    window.location.href = getRootPath() + "/YHDL/YHDL";
+    window.location.href = getRootPath() + "/YHDL/YHDL?To=SY";
 }
 //注册
 function OpenZC() {
@@ -149,4 +149,8 @@ function ToXJMXCX() {
 //我的资金>现金>充值
 function ToXJCZ() {
     $("#iframeright").attr("src", getRootPath() + "/WDXJ/WDXJ_CZ");
+}
+//用户登录
+function ToYHDL() {
+    window.location.href = getRootPath() + "/YHDL/YHDL?To=SY";
 }
