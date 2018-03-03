@@ -37,7 +37,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                             DAO.Save(zddlxx);
                             DAO.Repository.Session.Flush();
                             transaction.Commit();
-                            LoggerManager.Info("网站登录", "用户："+ YHM  + "登录网站成功");
+                            LoggerManager.Info("网站登录", "用户：" + YHM + "登录网站成功");
                             return new { Result = EnResultType.Success, Message = "登录成功" };
                         }
                         else

@@ -274,3 +274,23 @@ function getNaturalSize(Domlement) {
     }
     return natureSize;
 }
+//自动登录
+function AutoLogin() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/HTGL/AutoLogin",
+        dataType: "json",
+        data:
+        {
+
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                
+            } 
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}

@@ -73,28 +73,6 @@ function Exit() {
         }
     });
 }
-//自动登录
-function AutoLogin() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/YHGL/AutoLogin",
-        dataType: "json",
-        data:
-        {
-
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                window.wxc.xcConfirm("登录成功", window.wxc.xcConfirm.typeEnum.success);
-            } else {
-                window.location.href = getRootPath() + "/YHDL/YHDL";
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
 //菜单激活样式
 function LiFocus() {
     $(".li_left_menu").each(function () {
