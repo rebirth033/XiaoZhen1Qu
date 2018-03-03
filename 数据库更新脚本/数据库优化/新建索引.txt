@@ -47,3 +47,7 @@ CREATE INDEX index_codename ON codes_xxlb(codename);
 CREATE INDEX index_codename ON codes_xxyl(codename); 
 CREATE INDEX index_codename ON codes_zsjm(codename); 
 CREATE INDEX index_codename ON codes_zxjc(codename); 
+
+CREATE INDEX index_xqmc ON codes_xqjbxx(xqmc); 
+
+CREATE INDEX index_cl_pp ON codes_cl_jc(codename); 

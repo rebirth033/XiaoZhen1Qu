@@ -17,6 +17,8 @@ namespace TianWen.XiaoZhen1Qu.Interface
 
         string GetObjByYHMOrSJ(string YHM);
 
+        YHJBXX GetObjBySJ(string SJ);
+
         object UpdatePassword(string MM, string SJ);
 
         object UpdateTX(string YHID, string TX);

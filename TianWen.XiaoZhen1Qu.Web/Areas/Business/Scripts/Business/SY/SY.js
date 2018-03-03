@@ -9,7 +9,9 @@ $(document).ready(function () {
     $(".img_head_hide_logo").css("margin-left", (document.documentElement.clientWidth - 1100) / 2);
     $(".img_head_left_logo").css("margin-left", "20px");
     $("#li_head_sy").css("background", "#bc6ba6").css("color", "#ffffff");
-    $("#div_yhm").bind("click", ShowWDXX);
+    $("#li_top_right_yhm_wdxx").bind("click", ShowWDXX);
+    $("#li_top_right_yhm_wdzh").bind("click", ShowWDXX);
+    $("#li_top_right_yhm_wdzj").bind("click", ShowWDXX);
     $("#span_hide_fbxx").bind("click", FBXX);
     LoadDefault();
 });

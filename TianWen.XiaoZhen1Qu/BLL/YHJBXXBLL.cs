@@ -419,7 +419,6 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
-
         //修改头像
         public object UpdateTX(string YHID, string TX)
         {
@@ -475,6 +474,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
+        //修改头像
         public void UpdateTX(string YHID)
         {
             YHJBXX yhjbxx = DAO.GetObjectByID<YHJBXX>(YHID);
