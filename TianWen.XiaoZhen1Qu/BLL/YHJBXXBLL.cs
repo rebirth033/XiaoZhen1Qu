@@ -554,7 +554,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     sb.AppendFormat(@"<div style='width: 650px; margin-left: 27%; height: 600px; border: 1px solid #bc6ba6; '>
                                 <div style='background-color: #bc6ba6; width: 100%; height: 80px; vertical-align: middle;'>
                                     <div style='float: left; width: 120px; margin-left: 50px; margin-top: 5px;'>
-                                        <img style='width: 100%; text-align: center; color: white; font-size: 25px; float: left;' src='http://www.infotownlet.com/infotownlet/Areas/Business/Css/images/logo.png' />
+                                        <img style='width: 100%; text-align: center; color: white; font-size: 25px; float: left;' src='http://www.infotownlet.com/Areas/Business/Css/images/logo.png' />
                                         <span style='width: 100%; color:#fff; text-align: center; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: white; font-size: 17px; float: left; cursor: default;'>infotownlet.com</span>
                                     </div>
                                 </div>
