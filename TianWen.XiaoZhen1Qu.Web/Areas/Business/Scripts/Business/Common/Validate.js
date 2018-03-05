@@ -49,10 +49,6 @@ function ValidateJG() {
         }
     }
 }
-//验证联系人
-function ValidateLXR() {
-    ValidateInput("LXR", "联系人");
-}
 //验证联系电话
 function ValidateLXDH() {
     if ($("#LXDH").val() === "" || $("#LXDH").val() === null) {
@@ -186,14 +182,14 @@ function ValidateSelect(idout, idin, message) {
 }
 //验证共有
 function ValidateCommon() {
-    if (ValidateInput("BT", "标题") & ValidateZP() & ValidateLXR() & ValidateLXDH())
+    if (ValidateInput("BT", "标题") & ValidateZP() & ValidateInput("LXR", "联系人") & ValidateLXDH())
         return true;
     else
         return false;
 }
 //验证共有不包括图片
 function ValidateCommonWithoutZP() {
-    if (ValidateInput("BT", "标题") & ValidateLXR() & ValidateLXDH())
+    if (ValidateInput("BT", "标题") & ValidateInput("LXR", "联系人") & ValidateLXDH())
         return true;
     else
         return false;
