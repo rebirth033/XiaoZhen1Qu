@@ -55,16 +55,8 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
                 string checkcode = Session["CheckCode"].ToString();
                 if (YZM == checkcode)
                 {
-                    string result = YHJBXXBLL.GetObjByYHMOrSJ(SJ);
-                    if (!string.IsNullOrEmpty(result))
-                    {
-                        Session["SJ"] = SJ;
-                        return Json(new { Result = EnResultType.Success, Message = "验证成功" });
-                    }
-                    else
-                    {
-                        return Json(new { Result = EnResultType.Failed, Message = "手机号不存在，请重新输入", Type = 2 });
-                    }
+                    Session["SJ"] = SJ;
+                    return Json(new { Result = EnResultType.Success, Message = "验证成功" });
                 }
                 else
                 {
@@ -77,10 +69,26 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             }
         }
 
+        public JsonResult YZSJ()
+        {
+            string SJ = Request["SJ"];
+            string DQYHM = Request["DQYHM"];
+            YHJBXX result = YHJBXXBLL.GetYHJBXXByYHMOrSJ(DQYHM);
+            if (result != null && SJ == result.SJ)
+            {
+                Session["SJ"] = result.SJ;
+                return Json(new { Result = EnResultType.Success, Message = "验证成功" });
+            }
+            else
+            {
+                return Json(new { Result = EnResultType.Failed, Message = "手机号与用户名不匹配，请重新输入", Type = 2 });
+            }
+        }
+
         public JsonResult CZMM()
         {
             string MM = Request["MM"];
-            string SJ = Session["SJ"].ToString() ;
+            string SJ = Session["SJ"].ToString();
             object result = YHJBXXBLL.UpdatePassword(MM, SJ);
             return Json(result);
         }

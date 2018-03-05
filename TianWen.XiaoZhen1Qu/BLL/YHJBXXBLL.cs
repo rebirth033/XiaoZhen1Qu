@@ -504,6 +504,15 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 return null;
         }
 
+        public YHJBXX GetYHJBXXByYHMOrSJ(string Value)
+        {
+            IList<YHJBXX> list = DAO.Repository.GetObjectList<YHJBXX>(String.Format("FROM YHJBXX WHERE YHM='{0}' or SJ='{0}'", Value));
+            if (list.Count > 0)
+                return list[0];
+            else
+                return null;
+        }
+
         public string GetObjByYHMOrSJ(string YHM)
         {
             object o1 = DAO.Repository.ExecuteScalar(string.Format("SELECT COUNT(1) FROM YHJBXX WHERE YHM='{0}' or SJ='{0}'", YHM));

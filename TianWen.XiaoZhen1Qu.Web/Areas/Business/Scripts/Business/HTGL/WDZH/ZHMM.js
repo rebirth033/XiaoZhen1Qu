@@ -1,4 +1,5 @@
 ﻿var count = 60;
+var dqyhm = "";
 $(document).ready(function () {
     //$("#YHM").bind("blur", YHMCheck);
     //$("#TXYZM").bind("blur", TXYZMCheck);
@@ -25,7 +26,7 @@ function QRZH() {
         data:
         {
             Value: $("#YHM").val(),
-            TXYZM: $("#TXYZM").val(),
+            TXYZM: $("#TXYZM").val()
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -35,6 +36,7 @@ function QRZH() {
                 $("#emYZZH").css("background", "#bc6ba6");
                 $("#divFirst").css("display", "none");
                 $("#divSecond").css("display", "block");
+                dqyhm = $("#YHM").val();
             } else {
                 if (xml.Type === 1) {
                     $("#TXYZM").css("border-color", "#F2272D");
@@ -49,7 +51,7 @@ function QRZH() {
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-            
+
         }
     });
 }
@@ -62,8 +64,9 @@ function YZZH() {
         dataType: "json",
         data:
         {
+            DQYHM: dqyhm,
             SJ: $("#SJ").val(),
-            YZM: $("#YZM").val(),
+            YZM: $("#YZM").val()
         },
         success: function (xml) {
             if (xml.Result === 1) {
@@ -110,7 +113,7 @@ function CZMM() {
                         ToYHDL();
                     },
                     onClose: function (v) {
-                       ToYHDL();
+                        ToYHDL();
                     }
                 });
             } else {
@@ -125,7 +128,7 @@ function CZMM() {
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-            
+
         }
     });
 }
@@ -196,9 +199,31 @@ function SJCheck() {
         return false;
     }
     else {
-        $("#SJ").css("border-color", "#999");
-        $("#SJInfo").html('');
-        return true;
+        $.ajax({
+            type: "POST",
+            url: getRootPath() + "/ZHMM/YZSJ",
+            dataType: "json",
+            data:
+            {
+                DQYHM: dqyhm,
+                SJ: $("#SJ").val()
+            },
+            success: function (xml) {
+                if (xml.Result === 1) {
+                    $("#SJ").css("border-color", "#999");
+                    $("#SJInfo").html('');
+                    return true;
+                } else {
+                    $("#SJ").css("border-color", "#F2272D");
+                    $("#SJInfo").css("color", "#F2272D");
+                    $("#SJInfo").html(xml.Message);
+                    return false;
+                }
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+            }
+        });
     }
 }
 //验证码检查
