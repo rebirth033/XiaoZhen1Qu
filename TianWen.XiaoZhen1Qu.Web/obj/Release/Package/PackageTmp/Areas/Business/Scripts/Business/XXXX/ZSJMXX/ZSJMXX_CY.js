@@ -44,7 +44,7 @@ function LoadJBXX(obj) {
     if (obj.XL !== null) {
         html += ('<p class="p_body_left_body_right">');
         html += ('<span class="span_body_left_body_right_left">小类：</span>');
-        html += ('<span class="span_body_left_body_right_right">' + obj.XL + '</span>');
+        html += ('<span class="span_body_left_body_right_right">' + ValidateNull(obj.XL) + '</span>');
         html += ('</p>');
     }
     html += ('<p class="p_body_left_body_right">');
@@ -73,7 +73,7 @@ function LoadJBXX(obj) {
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">联系人：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.LXR + '</span>');
+    html += ('<span class="span_body_left_body_right_right">' + ValidateNull(obj.LXR) + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">联系电话：</span>');
@@ -165,7 +165,7 @@ function LoadCNXHInfo(obj) {
     html += ('<li onclick="OpenXXXX(\'ZSJMXX_CY\',\'' + obj.ID + '\')" class="li_body_left_body_cnxh">');
     html += ('<img class="img_li_body_left_body_cnxh" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_left_body_cnxh_xq">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_left_body_cnxh_cs">' + obj.QY + '-' + obj.DD + '</p>');
+    html += ('<p class="p_li_body_left_body_cnxh_cs">' + obj.FWFW + '</p>');
     html += ('</li>');
     return html;
 }
@@ -207,7 +207,7 @@ function LoadJPTJInfo(obj) {
     html += ('<li onclick="OpenXXXX(\'ZSJMXX_CY\',\'' + obj.ID + '\')" class="li_body_left_body_jptj">');
     html += ('<img class="img_li_body_left_body_jptj" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_left_body_jptj_xq">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_left_body_jptj_cs">' + obj.QY + '-' + obj.DD + '</p>');
+    html += ('<p class="p_li_body_left_body_jptj_cs">' + obj.FWFW + '</p>');
     html += ('</li>');
     return html;
 }
@@ -253,7 +253,7 @@ function LoadJJRTJFYInfo(obj) {
     html += ('<img class="img_li_body_right_jjrtj" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<div class="div_li_body_right_jjrtj">');
     html += ('<p class="p_li_body_right_jjrtj_xq">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_right_jjrtj_cs">' + obj.QY + '-' + obj.DD + '</p>');
+    html += ('<p class="p_li_body_right_jjrtj_cs">' + obj.FWFW + '</p>');
     html += ('</div>');
     html += ('</li>');
     return html;

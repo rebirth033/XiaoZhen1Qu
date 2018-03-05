@@ -13,6 +13,7 @@ $(document).ready(function () {
     $("#li_top_right_yhm_wdzh").bind("click", ShowWDXX);
     $("#li_top_right_yhm_wdzj").bind("click", ShowWDXX);
     $("#span_hide_fbxx").bind("click", FBXX);
+    $("body").bind("click", function () { CloseByClassID("div_select_dropdown"); });
     LoadDefault();
 });
 //首页获取title

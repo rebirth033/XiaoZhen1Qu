@@ -42,7 +42,7 @@
 
 .div_select_in {display: inline-block;width: 160px;height: 40px;border-radius: 4px;font-size: 16px;border: none;}
 
-.div_select_dropdown {float: left;width: 150px;position: relative;z-index: 1001;}
+.div_select_dropdown {float: left; width: 150px;position: relative;z-index: 1001;}
 
 .span_select {display: inline-block;width: 130px;height: 30px;text-align: center;margin-top: 4px;}
 

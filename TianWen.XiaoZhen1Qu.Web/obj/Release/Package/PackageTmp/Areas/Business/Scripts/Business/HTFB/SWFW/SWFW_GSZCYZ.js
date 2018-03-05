@@ -1,14 +1,9 @@
 ﻿$(document).ready(function () {
     $("#divGSZCLB").find(".div_radio").bind("click", function () { ValidateRadio("GSZCLB", "忘记选择类别啦"); });
 });
-//类别
-function ValidateLB() {
-    if (!ValidateRadio("GSZCLB", "忘记选择类别啦")) return false;
-    return true;
-}
 //验证所有
 function ValidateAll() {
-    if (ValidateLB()
+    if (ValidateCheck("LB", "忘记选择类别啦")
         & ValidateCheck("FWFW", "忘记选择服务范围啦")
         & ValidateBCMS("BCMS", "忘记填写服务介绍啦")
         & ValidateXXDZ()

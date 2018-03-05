@@ -1,6 +1,4 @@
 ﻿$(document).ready(function () {
-    $("#DQJZKSSJ").datepicker({ minDate: 0 });
-    $("#DQJZJSSJ").datepicker({ minDate: 0 });
     $("td").bind("click", SelectJZSJ);
     LoadJBXX();
     BindClick("JZLB");
@@ -125,16 +123,29 @@ function LoadJBXX() {
                 $("#spanJZLB").html(xml.Value.QZZP_JZZPJBXX.JZLB);
                 $("#spanXZDW").html(xml.Value.QZZP_JZZPJBXX.XZDW);
                 $("#spanXZJS").html(xml.Value.QZZP_JZZPJBXX.XZJS);
-                $("#spanQY").html(xml.Value.QZZP_JZZPJBXX.QY);
-                $("#spanDD").html(xml.Value.QZZP_JZZPJBXX.DD);
-                SetDX("ZPJZYXQ", xml.Value.QZZP_JZZPJBXX.JZYXQ);
+                $("#spanQY").html(xml.Value.PFCG_AFSBJBXX.QY);
+                $("#spanDD").html(xml.Value.PFCG_AFSBJBXX.DD);
                 SetJZSJ(xml.Value.QZZP_JZZPJBXX.JZSJ);
-                if (xml.Value.QZZP_JZZPJBXX.DQJZKSSJ.ToString("yyyy-MM-dd") !== "1-1-1")
-                    $("#DQJZKSSJ").val(xml.Value.QZZP_JZZPJBXX.DQJZKSSJ.ToString("yyyy-MM-dd"));
-                if (xml.Value.QZZP_JZZPJBXX.DQJZJSSJ.ToString("yyyy-MM-dd") !== "1-1-1")
-                    $("#DQJZJSSJ").val(xml.Value.QZZP_JZZPJBXX.DQJZJSSJ.ToString("yyyy-MM-dd"));
             } else {
-                $("#spanJZLB").html($("#spanLBXZ").html().replace("1.", ""));
+                $.ajax({
+                    type: "POST",
+                    url: getRootPath() + "/LBXZ/LoadLBByID",
+                    dataType: "json",
+                    data:
+                    {
+                        LBID: getUrlParam("CLICKID")
+                    },
+                    success: function (xml) {
+                        if (xml.Result === 1) {
+                            if (xml.list.length > 0) {
+                                $("#spanJZLB").html(xml.list[0].LBNAME);
+                            }
+                        }
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+                    }
+                });
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -153,13 +164,8 @@ function FB() {
     obj = jsonObj.AddJson(obj, "XZJS", "'" + $("#spanXZJS").html() + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
-    obj = jsonObj.AddJson(obj, "JZYXQ", "'" + GetDX("ZPJZYXQ") + "'");
     obj = jsonObj.AddJson(obj, "JZSJ", "'" + GetJZSJ() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    if ($("#DQJZKSSJ").val() !== "")
-        obj = jsonObj.AddJson(obj, "DQJZKSSJ", "'" + $("#DQJZKSSJ").val() + "'");
-    if ($("#DQJZJSSJ").val() !== "")
-        obj = jsonObj.AddJson(obj, "DQJZJSSJ", "'" + $("#DQJZJSSJ").val() + "'");
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");
 

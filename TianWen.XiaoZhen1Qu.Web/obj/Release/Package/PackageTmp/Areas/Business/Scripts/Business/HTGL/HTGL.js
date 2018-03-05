@@ -37,7 +37,7 @@
     $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
     $("#span_fbxx").bind("click", OpenLBXZ);
-    $("#title").html("信息小镇_后台管理");
+    document.title = "信息小镇_后台管理";
     if (getUrlParam("Show") === "WDZJ")
         ShowWDZJ();
     else
@@ -65,28 +65,6 @@ function Exit() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                window.location.href = getRootPath() + "/YHDL/YHDL";
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//自动登录
-function AutoLogin() {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/YHGL/AutoLogin",
-        dataType: "json",
-        data:
-        {
-
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                window.wxc.xcConfirm("登录成功", window.wxc.xcConfirm.typeEnum.success);
-            } else {
                 window.location.href = getRootPath() + "/YHDL/YHDL";
             }
         },

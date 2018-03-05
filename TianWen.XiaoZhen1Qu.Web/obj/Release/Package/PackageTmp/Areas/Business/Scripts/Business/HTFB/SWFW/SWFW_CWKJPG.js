@@ -1,34 +1,34 @@
 ﻿$(document).ready(function () {
-    LoadCWKJPGLB();
+    LoadDuoX("财务会计/评估类别", "LB");
 });
-//加载财务会计/评估类别
-function LoadCWKJPGLB() {
+//加载多选
+function LoadDuoX(type, id) {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Common/LoadCODESByTYPENAME",
         dataType: "json",
         data:
         {
-            TYPENAME: "财务会计/评估类别",
+            TYPENAME: type,
             TBName: "CODES_SWFW"
         },
         success: function (xml) {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='liCWKJPGLB' onclick='SelectDuoX(this)'><img class='img_CWKJPGLB'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i % 4 === 3) {
+                    html += "<li class='li" + id + "' style='width:120px;' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    if (i % 4 === 3 && i !== xml.list.length - 1) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
                     }
                 }
-                if (parseInt(xml.list.length % 4) === 0)
-                    $("#divCWKJPGLB").css("height", parseInt(xml.list.length / 4) * 60 + "px");
+                if (parseInt(xml.list.length % 3) === 0)
+                    $("#div" + id).css("height", parseInt(xml.list.length / 4) * 35 + "px");
                 else
-                    $("#divCWKJPGLB").css("height", (parseInt(xml.list.length / 4) + 1) * 60 + "px");
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 4) + 1) * 35 + "px");
                 html += "</ul>";
-                $("#divCWKJPGLBText").html(html);
-                $(".img_CWKJPGLB").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-                $(".liCWKJPGLB").bind("click", function () { ValidateCheck("CWKJPGLB", "忘记选择类别啦"); });
+                $("#div" + id + "Text").html(html);
+                $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".li" + id).bind("click", function () { ValidateCheck(id, "忘记选择类别啦"); });
                 LoadFWFW();
             }
         },

@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     $("#PPMC").bind("blur", ValidatePPMC);
-    $("#PPMC").bind("focus", InfoPPMC);
+    //$("#PPMC").bind("focus", InfoPPMC);
     $("#GSMC").bind("blur", ValidateInput("GSMC", "忘记填写公司名称啦"));
     $("#GSMC").bind("focus", InfoInput("GSMC", "公司名称"));
 });

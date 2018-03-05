@@ -86,14 +86,11 @@ function ValidateBCMS(id, message) {
 //验证具体地址
 function ValidateJTDZ() {
     if ($("#JTDZ").val() === "" || $("#JTDZ").val() === null) {
-        //$("#divSZQYTip").css("display", "block");
-        //$("#divSZQYTip").attr("class", "Warn");
-        //$("#divSZQYTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写具体地址啦');
-        //$("#JTDZ").css("border-color", "#F2272D");
-        //return false;
-        $("#divSZQYTip").css("display", "none");
-        $("#JTDZ").css("border-color", "#cccccc");
-        return true;
+        $("#divSZQYTip").css("display", "block");
+        $("#divSZQYTip").attr("class", "Warn");
+        $("#divSZQYTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写具体地址啦');
+        $("#JTDZ").css("border-color", "#F2272D");
+        return false;
     } else {
         $("#divSZQYTip").css("display", "none");
         $("#JTDZ").css("border-color", "#cccccc");

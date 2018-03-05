@@ -3,7 +3,7 @@
 });
 //类别
 function ValidateLB() {
-    if (!ValidateCheck("DGDLLB", "忘记选择电工电料啦")) return false;
+    if (!ValidateCheck("LB", "忘记选择类别啦")) return false;
     return true;
 }
 //验证所有

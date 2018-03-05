@@ -8,6 +8,11 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
     {
         public ICommonBLL CommonBLL { get; set; }
 
+        public ActionResult CXCommon()
+        {
+            return View();
+        }
+
         //根据基础信息ID和类别ID获取
         public JsonResult GetIDByJCXXIDAndLBID()
         {
@@ -111,6 +116,11 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         {
             string TYPE = Request["TYPE"];
             return Json(CommonBLL.LoadXGLM(TYPE, Session["XZQ"].ToString()));
+        }
+        //加载查询公共信息
+        public JsonResult LoadCommonXX()
+        {
+            return Json(CommonBLL.LoadCommonXX(Request["TYPE"], Request["KEY"], Request["PageIndex"], Request["PageSize"], Request["OrderColumn"], Request["OrderType"], Session["XZQDM"].ToString()));
         }
     }
 }

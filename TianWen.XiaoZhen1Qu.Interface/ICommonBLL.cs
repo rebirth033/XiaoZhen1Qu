@@ -21,5 +21,7 @@ namespace TianWen.XiaoZhen1Qu.Interface
         object GetDistrictXQJByXZQDM(string XZQDM);
 
         object GetAllDistrictByXZQDM(string XZQDM);
+
+        object LoadCommonXX(string TYPE, string KEY, string PageIndex, string PageSize, string OrderColumn, string OrderType, string XZQDM);
     }
 }

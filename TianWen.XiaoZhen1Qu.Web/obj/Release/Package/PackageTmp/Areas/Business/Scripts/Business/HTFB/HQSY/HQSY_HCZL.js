@@ -258,6 +258,8 @@ function LoadJBXX() {
                     Settcys("tcys", xml.Value.HQSY_HCZLJBXX.tcys);
                 if (xml.Value.HQSY_HCZLJBXX.GCYS !== null)
                     SetGCYS("GCYS", xml.Value.HQSY_HCZLJBXX.GCYS);
+                if (xml.Value.HQSY_HCZLJBXX.FWFW !== null)
+                    SetDuoX("FWFW", xml.Value.HQSY_HCZLJBXX.FWFW);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -280,6 +282,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "MFTGCH", "'" + GetDX("MFTGCH") + "'");
     obj = jsonObj.AddJson(obj, "tcys", "'" + GetTCYS("tcys") + "'");
     obj = jsonObj.AddJson(obj, "GCYS", "'" + GetGCYS("GCYS") + "'");
+    obj = jsonObj.AddJson(obj, "FWFW", "'" + GetDuoX("FWFW") + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");

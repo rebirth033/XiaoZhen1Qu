@@ -383,11 +383,12 @@ function OpenSSJGByInput() {
                 var url = "";
                 if ($("#URL").val().split('_')[0] === "ES") {
                     url = "/" + $("#URL").val().split('_')[0] + "CX/" + $("#URL").val().split('_')[0] + "CX_" + $("#URL").val().split('_')[1] + "_" + $("#URL").val().split('_')[2];
-                }
-                else {
+                } else {
                     url = "/" + $("#URL").val().split('_')[0] + "CX/" + $("#URL").val().split('_')[0] + "CX_" + $("#URL").val().split('_')[1];
                 }
                 OpenCXLB($("#LBID").val(), url, $("#CONDITION").val());
+            } else {
+                window.open(getRootPath() + "/Common/CXCommon?ss=" + $("#SS").val());
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

@@ -79,7 +79,7 @@ function LoadJBXX(obj) {
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">联系人：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.LXR + '</span>');
+    html += ('<span class="span_body_left_body_right_right">' + (obj.LXR === "" ? "暂无数据" : obj.LXR) + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">联系电话：</span>');
@@ -101,9 +101,9 @@ function LoadXQ(obj, BCMSString) {
     html += ('<div class="div_body_left_body_xq_xx_left">基本信息</div>');
     html += ('<div class="div_body_left_body_xq_xx_right">');
 
-    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_left">上牌时间：</span><span class="span_body_left_body_xq_xx_right">' + (obj.SPNF === null ? "暂无数据" : (obj.SPNF + obj.SPYF)) + '</span><span class="span_body_left_body_xq_xx_left">年检到期：</span><span class="span_body_left_body_xq_xx_right">' + (obj.NJDQNF === null ? "暂无数据" : obj.NJDQNF) + '</span></p>');
-    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_left">4S店定期保养：</span><span class="span_body_left_body_xq_xx_right">' + (obj.SFDQBY === null ? "暂无数据" : obj.SFDQBY) + '</span><span class="span_body_left_body_xq_xx_left">商业险到期：</span><span class="span_body_left_body_xq_xx_right">' + (obj.SYXDQ === null ? "暂无数据" : obj.SYXDQ)  + '</span></p>');
-    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_left">表显里程：</span><span class="span_body_left_body_xq_xx_right">' + (obj.XSLC === undefined ? "暂无数据" : obj.XSLC) + '万公里</span><span class="span_body_left_body_xq_xx_left">水费：</span><span class="span_body_left_body_xq_xx_right">' + (obj.JQXDQNF === undefined ? "暂无数据" : obj.JQXDQNF) + '</span></p>');
+    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_left">上牌时间：</span><span class="span_body_left_body_xq_xx_right">' + ValidateNull(obj.SPNF) + ValidateNull(obj.SPYF) + '</span><span class="span_body_left_body_xq_xx_left">年检到期：</span><span class="span_body_left_body_xq_xx_right">' + ValidateNull(obj.NJDQNF) + '</span></p>');
+    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_left">4S店定期保养：</span><span class="span_body_left_body_xq_xx_right">' + ValidateNull(obj.SFDQBY) + '</span><span class="span_body_left_body_xq_xx_left">商业险到期：</span><span class="span_body_left_body_xq_xx_right">' + ValidateNull(obj.SYXDQNF) + '</span></p>');
+    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_left">表显里程：</span><span class="span_body_left_body_xq_xx_right">' + ValidateNull(obj.XSLC, "万公里") + '</span><span class="span_body_left_body_xq_xx_left">水费：</span><span class="span_body_left_body_xq_xx_right">' + ValidateNull(obj.JQXDQNF) + '</span></p>');
 
     html += ('</div>');
     html += ('</div>');
@@ -133,8 +133,8 @@ function LoadXQ(obj, BCMSString) {
     if (parseInt(RTrimStr($("#div_body_left_body_xq_xx_bcms").css("height"), "px")) > 300) {
         $("#div_body_left_body_xq_xx_bcms").css("height", "300px").css("overflow", "hidden");
         $("#zk").append('<div id="div_body_left_body_xq_zk_bcms" onclick="ToggleBCMS()" class="div_body_left_body_xq_zk_bcms">展开内容<i id="i_body_left_body_xq_zk_bcms" class="i_body_left_body_xq_zk_bcms"></i></div>');
-    }    	
-	if (obj.PHOTOS.length > 4) {
+    }
+    if (obj.PHOTOS.length > 4) {
         $("#div_body_left_body_xq_xx").css("height", "710px");
         $("#div_body_left_body_xq_zk").css("display", "block");
     }

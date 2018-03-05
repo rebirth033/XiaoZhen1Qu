@@ -85,6 +85,8 @@ function LoadJBXX() {
                     SetDX("HZXL", xml.Value.HQSY_CZZXJBXX.HZXL);
                 if (xml.Value.HQSY_CZZXJBXX.FWXS !== null)
                     SetDX("FWXS", xml.Value.HQSY_CZZXJBXX.FWXS);
+                if (xml.Value.HQSY_CZZXJBXX.FWFW !== null)
+                    SetDuoX("FWFW", xml.Value.HQSY_CZZXJBXX.FWFW);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -104,6 +106,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "HZLX", "'" + GetDX("HZLX") + "'");
     obj = jsonObj.AddJson(obj, "HZXL", "'" + GetDX("HZXL") + "'");
     obj = jsonObj.AddJson(obj, "FWXS", "'" + GetDX("FWXS") + "'");
+    obj = jsonObj.AddJson(obj, "FWFW", "'" + GetDuoX("FWFW") + "'");
 
     if (getUrlParam("ID") !== null)
         obj = jsonObj.AddJson(obj, "ID", "'" + getUrlParam("ID") + "'");

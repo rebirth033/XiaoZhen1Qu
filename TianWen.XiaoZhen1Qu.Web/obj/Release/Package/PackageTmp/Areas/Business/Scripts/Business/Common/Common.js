@@ -1,13 +1,13 @@
 ﻿//js获取网站根路径(站点及虚拟目录)，获得网站的根目录或虚拟目录的根地址     
 function getRootPath() {
     var strFullPath = window.document.location.href;
-    if (strFullPath === "http://localhost/") strFullPath = "http://localhost/sy/sy";
+    if (strFullPath === "http://localhost") strFullPath = "http://localhost/sy/sy";
     var strPath = window.document.location.pathname;
     if (strPath === "/") strPath = "/sy/sy";
     var pos = strFullPath.indexOf(strPath);
     var prePath = strFullPath.substring(0, pos);
     var postPath = strPath.substring(0, strPath.substr(1).indexOf('/') + 1);
-    return (prePath + "/");
+    return (prePath);
 }
 
 //获取对象的文件路径
@@ -273,4 +273,24 @@ function getNaturalSize(Domlement) {
         natureSize.height = img.height;
     }
     return natureSize;
+}
+//自动登录
+function AutoLogin() {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/HTGL/AutoLogin",
+        dataType: "json",
+        data:
+        {
+
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                
+            } 
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
 }

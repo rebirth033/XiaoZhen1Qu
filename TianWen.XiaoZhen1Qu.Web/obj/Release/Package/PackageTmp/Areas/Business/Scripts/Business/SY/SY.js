@@ -9,13 +9,17 @@ $(document).ready(function () {
     $(".img_head_hide_logo").css("margin-left", (document.documentElement.clientWidth - 1100) / 2);
     $(".img_head_left_logo").css("margin-left", "20px");
     $("#li_head_sy").css("background", "#bc6ba6").css("color", "#ffffff");
-    $("#div_yhm").bind("click", ShowWDXX);
+    $("#li_top_right_yhm_wdxx").bind("click", ShowWDXX);
+    $("#li_top_right_yhm_wdzh").bind("click", ShowWDXX);
+    $("#li_top_right_yhm_wdzj").bind("click", ShowWDXX);
     $("#span_hide_fbxx").bind("click", FBXX);
+    $("body").bind("click", function () { CloseByClassID("div_select_dropdown"); });
     LoadDefault();
 });
 //首页获取title
 function GetHeadNav() {
-    $("#title").html("信息小镇_首页");
+    //$("#title").html("信息小镇_首页");
+    document.title = "信息小镇_首页";
 }
 //发布信息
 function FBXX() {
@@ -244,10 +248,6 @@ function OpenCXLB(lbid, lburl, condition) {
 //打开二级首页
 function ToEJSY(type) {
     window.open(getRootPath() + "/SY/" + type);
-}
-//登录
-function OpenDL() {
-    window.location.href = getRootPath() + "/YHDL/YHDL?To=SY";
 }
 //拖动滚动条或滚动鼠标轮
 window.onscroll = function () {

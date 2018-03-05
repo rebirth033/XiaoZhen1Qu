@@ -157,6 +157,7 @@
     <Content Include="Areas\Business\Css\BZZX\BZZX_SY_ZDJS.css" />
     <Content Include="Areas\Business\Css\BZZX\BZZX_SY_ZHMM.css" />
     <Content Include="Areas\Business\Css\BZZX\BZZX_WZJY.css" />
+    <Content Include="Areas\Business\Css\Common\CXCommon.css" />
     <Content Include="Areas\Business\Css\Common\Head.css" />
     <Content Include="Areas\Business\Css\Common\CXLB_Common.css" />
     <Content Include="Areas\Business\Css\CXLB\CLFWCX.css" />
@@ -871,6 +872,7 @@
     <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_LXKFZP.js" />
     <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_WZJYZP.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\BZZX_Common.js" />
+    <Content Include="Areas\Business\Scripts\Business\Common\CXCommon.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\FWFW.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\Head.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\SS_Common.js" />
@@ -2859,6 +2861,7 @@
     <Content Include="Areas\Business\Views\ZSJMCX\ZSJMCX_LS.cshtml" />
     <Content Include="Areas\Business\Views\ZSJMXX\ZSJMXX_LS.cshtml" />
     <Content Include="Areas\Business\Views\GYWM\GYWM.cshtml" />
+    <Content Include="Areas\Business\Views\Shared\CXCommon.cshtml" />
     <None Include="Properties\PublishProfiles\xxxz.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

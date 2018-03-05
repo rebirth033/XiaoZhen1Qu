@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using CommonClassLib.Helper;
 using TianWen.Framework.Log;
 using TianWen.XiaoZhen1Qu.Entities.Models;
+using TianWen.XiaoZhen1Qu.Entities.ViewModels.CL;
 using TianWen.XiaoZhen1Qu.Interface;
 
 namespace TianWen.XiaoZhen1Qu.BLL
@@ -135,7 +137,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
             try
             {
                 int PARENTID = 0;
-                List<CODES_DISTRICT> districts = DAO.GetObjectList<CODES_DISTRICT>(string.Format("FROM CODES_DISTRICT WHERE TYPENAME='县区级' AND PARENTID='{0}' ORDER BY CODEORDER",XZQDM)).ToList();
+                List<CODES_DISTRICT> districts = DAO.GetObjectList<CODES_DISTRICT>(string.Format("FROM CODES_DISTRICT WHERE TYPENAME='县区级' AND PARENTID='{0}' ORDER BY CODEORDER", XZQDM)).ToList();
                 return new { Result = EnResultType.Success, list = districts };
             }
             catch (Exception ex)
@@ -158,14 +160,14 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 List<CODES_DISTRICT> districts = DAO.GetObjectList<CODES_DISTRICT>(string.Format("FROM CODES_DISTRICT")).ToList();
                 foreach (var qy in districts)
                 {
-                    if(qy.PARENTID.ToString() == XZQDM)
+                    if (qy.PARENTID.ToString() == XZQDM)
                         qylist.Add(qy);
                 }
                 foreach (var qy in qylist)
                 {
                     foreach (var dd in districts)
                     {
-                        if(dd.PARENTID == qy.CODEID)
+                        if (dd.PARENTID == qy.CODEID)
                             ddlist.Add(dd);
                     }
                 }
@@ -179,6 +181,30 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     Result = EnResultType.Failed,
                     Message = "载入失败【" + ex.Message + "\r\n" + ex.StackTrace + "】!"
                 };
+            }
+        }
+
+        public object LoadCommonXX(string TYPE, string Condition, string PageIndex, string PageSize, string OrderColumn, string OrderType, string XZQDM)
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+
+                dt = DAO.Repository.GetDataTable(string.Format("select * from jcxx where bt like '%{0}%' and status = 1 and xzqdm = {1}", Condition, XZQDM));
+                List<CL_JCView> list = ConvertHelper.DataTableToList<CL_JCView>(dt);
+                int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
+                int TotalCount = list.Count;
+                var listnew = from p in list.Skip((int.Parse(PageIndex) - 1) * int.Parse(PageSize)).Take(int.Parse(PageSize)) select p;
+                foreach (var jcxx in listnew)
+                {
+                    jcxx.PHOTOS = DAO.Repository.GetObjectList<PHOTOS>(String.Format("FROM PHOTOS WHERE JCXXID='{0}' ORDER BY PHOTONAME", jcxx.JCXXID));
+                }
+                return new { Result = EnResultType.Success, list = listnew, PageCount = PageCount, TotalCount = TotalCount };
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Error("error", ex.Message);
+                return new { Result = EnResultType.Failed, Message = "加载失败" };
             }
         }
     }

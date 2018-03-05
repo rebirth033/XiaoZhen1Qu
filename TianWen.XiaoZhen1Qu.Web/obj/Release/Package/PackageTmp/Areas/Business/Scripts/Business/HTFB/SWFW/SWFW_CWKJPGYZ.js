@@ -1,14 +1,9 @@
 ﻿$(document).ready(function () {
     $(".div_radio").bind("click", function () { ValidateRadio("SFSM", "忘记选择是否上门啦"); });
 });
-//类别
-function ValidateLB() {
-    if (!ValidateCheck("CWKJPGLB", "忘记选择类别啦")) return false;
-    return true;
-}
 //验证所有
 function ValidateAll() {
-    if (ValidateLB()
+    if (ValidateCheck("LB", "忘记选择类别啦")
         & ValidateRadio("SFSM", "忘记选择是否上门啦")
         & ValidateCheck("FWFW", "忘记选择服务范围啦")
         & ValidateBCMS("BCMS", "忘记填写服务介绍啦")

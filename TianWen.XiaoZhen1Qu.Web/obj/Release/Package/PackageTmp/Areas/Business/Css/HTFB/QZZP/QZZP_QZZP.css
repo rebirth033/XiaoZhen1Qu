@@ -2,6 +2,7 @@
 .div_clys:hover {background-color: #ececec;cursor: pointer;}
 .span_clys_left {width: 18px;height: 18px;display: inline-block;border: 1px solid #cccccc;}
 .span_clys_right {display: inline-block;left: 34px;bottom: 10px;position: absolute;font-size: 14px;}
+.div_row_right .div_row_right_jcpp {float: left;position: relative;z-index: 1001;}
 .div_row_right .div_row_right_jcpp .div_row_right_jcpp_item{display: none;z-index: 997;background-color: #ffffff;height: 570px;border: 2px solid #cccccc;margin-top: -5px;border-radius: 2px;}
 .div_row_right .div_row_right_jcpp .div_row_right_jcpp_item .span_row_right_jcpp{cursor: pointer;float: right;width: 20px;height: 20px;display: inline-block;}
 .div_row_right .div_row_right_jcpp .div_row_right_jcpp_first{width: 325px;margin-left: 183px;}

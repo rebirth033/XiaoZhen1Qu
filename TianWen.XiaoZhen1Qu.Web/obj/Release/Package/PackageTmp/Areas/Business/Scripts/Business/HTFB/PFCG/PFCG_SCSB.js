@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    LoadDuoX("商超设备类别", "OUTLB");
+    LoadDuoX("商超设备类别", "LB");
 });
 //加载多选
 function LoadDuoX(type, id) {
@@ -28,7 +28,7 @@ function LoadDuoX(type, id) {
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-                $(".li" + id).bind("click", function () { ValidateCheck("OUTLB", "忘记选择类别啦"); });
+                $(".li" + id).bind("click", function () { ValidateCheck("LB", "忘记选择类别啦"); });
                 LoadFWFW();
             }
         },

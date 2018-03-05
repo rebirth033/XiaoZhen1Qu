@@ -1,20 +1,6 @@
 ﻿$(document).ready(function () {
-    LoadFWFW();
-    BindClick("LB");
+    LoadDuoX("卡券类别", "LB");
 });
-//绑定下拉框
-function BindClick(type) {
-    $("#div" + type + "Span").click(function () {
-        if (type === "LB") {
-            LoadCODESByTYPENAME("卡券类别", "LB", "CODES_PFCG", Bind, "OUTLB", "LB", "");
-        }
-    });
-}
-//选择类别下拉框
-function SelectLB(obj, type, codeid) {
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
-}
 //加载多选
 function LoadDuoX(type, id) {
     $.ajax({
@@ -42,6 +28,8 @@ function LoadDuoX(type, id) {
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
+                $(".li" + id).bind("click", function () { ValidateCheck("LB", "忘记选择类别啦"); });
+                LoadFWFW();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
