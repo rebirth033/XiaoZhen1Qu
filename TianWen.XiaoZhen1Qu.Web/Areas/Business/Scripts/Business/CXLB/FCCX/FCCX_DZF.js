@@ -80,7 +80,7 @@ function LoadBody(TYPE, PageIndex) {
         {
             TYPE: TYPE,
             Condition: condition,
-            PageSize: 5,
+            PageSize: 20,
             PageIndex: PageIndex
         },
         success: function (xml) {
