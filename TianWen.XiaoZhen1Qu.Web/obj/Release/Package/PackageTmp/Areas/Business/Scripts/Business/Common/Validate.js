@@ -223,14 +223,14 @@ function InfoBCMS(id, message) {
 function InfoFWFW() {
     $("#divFWFWTip").css("display", "block");
     $("#divFWFWTip").attr("class", "Info");
-    $("#divFWFWTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />请填写服务区域');
+    $("#divFWFWTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />填写服务区域');
     $("#FWFW").css("border-color", "#bc6ba6");
 }
 //提示具体地址
 function InfoJTDZ() {
     $("#divSZQYTip").css("display", "block");
     $("#divSZQYTip").attr("class", "Info");
-    $("#divSZQYTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />请填写具体地址');
+    $("#divSZQYTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/info_purple.png" class="imgTip" />填写具体地址，长度100字以内');
     $("#JTDZ").css("border-color", "#bc6ba6");
 }
 //提示span输入框

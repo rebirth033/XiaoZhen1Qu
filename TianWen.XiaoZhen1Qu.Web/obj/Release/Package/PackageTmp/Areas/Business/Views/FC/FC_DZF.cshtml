@@ -40,79 +40,66 @@
             <div id="divFWPZText" class="div_row_right" style="position: relative">
             </div>
         </div>
-        <div id="divGJ" class="div_row" style="z-index: 990">
-            <div class="div_row_left font_two">
-                <span class="span_required">&nbsp;</span>
-                <span class="spanFWCZ">格局</span>
+        @*<div id="divGJ" class="div_row" style="z-index: 990">
+                    <div class="div_row_left font_two">
+                        <span class="span_required">&nbsp;</span>
+                        <span class="spanFWCZ">格局</span>
+                    </div>
+                    <div class="div_row_right">
+                        <span id="spanWSS" class="span_spaninput SRK" style="display: inline-block;">
+                            <input id="WSS" maxlength="9" column="WSS" class="input_spaninput spaninput_fontcolor" type="text" style="width: 94px" />
+                            <span class="spaninput_fontcolor">间卧室</span>
+                        </span>
+                        <span id="spanSRCS" class="span_spaninput SRK" style="display: inline-block;">
+                            <input id="SRCS" maxlength="9" column="SRCS" class="input_spaninput spaninput_fontcolor" type="text" style="width: 80px" />
+                            <span class="spaninput_fontcolor">张双人床</span>
+                        </span>
+                        <span id="spanDRCS" class="span_spaninput SRK" style="display: inline-block;">
+                            <input id="DRCS" maxlength="9" column="DRCS" class="input_spaninput spaninput_fontcolor" type="text" style="width: 80px" />
+                            <span class="spaninput_fontcolor">张单人床</span>
+                        </span>
+                        <div id="divGJTip" class="Warn" style="z-index: 989;"></div>
+                    </div>
+                </div>
+            <div id="divRZSJ" class="div_row" style="z-index: 998;">
+                <div class="div_row_left">
+                    <span class="span_required">&nbsp;</span>
+                    <span class="spanFWCZ">入住时间</span>
+                </div>
+                <div class="div_row_right">
+                    <span id="spanRZSJ" class="span_spaninput SRK" style="display: inline-block; width: 100px;">
+                        <input class="input_spaninput" id="RZSJ_H" maxlength="9" column="RZSJ_H" type="text" value="08" style="width: 40px" />
+                        <span class="spaninput_fontcolor">:</span>
+                        <input class="input_spaninput" id="RZSJ_M" maxlength="9" column="RZSJ_M" type="text" value="00" style="width: 40px;" />
+                    </span>
+                </div>
+                <div id="divRZSJTip" class="Warn" style="z-index: 998;"></div>
             </div>
-            <div class="div_row_right">
-                <span id="spanWSS" class="span_spaninput SRK" style="display: inline-block;">
-                    <input id="WSS" maxlength="9" column="WSS" class="input_spaninput spaninput_fontcolor" type="text" style="width: 94px" />
-                    <span class="spaninput_fontcolor">间卧室</span>
-                </span>
-                <span id="spanSRCS" class="span_spaninput SRK" style="display: inline-block;">
-                    <input id="SRCS" maxlength="9" column="SRCS" class="input_spaninput spaninput_fontcolor" type="text" style="width: 80px" />
-                    <span class="spaninput_fontcolor">张双人床</span>
-                </span>
-                <span id="spanDRCS" class="span_spaninput SRK" style="display: inline-block;">
-                    <input id="DRCS" maxlength="9" column="DRCS" class="input_spaninput spaninput_fontcolor" type="text" style="width: 80px" />
-                    <span class="spaninput_fontcolor">张单人床</span>
-                </span>
-                <div id="divGJTip" class="Warn" style="z-index: 989;"></div>
-            </div>
-        </div>
-        <div id="divRZSJ" class="div_row" style="z-index: 998;">
-            <div class="div_row_left">
-                <span class="span_required">&nbsp;</span>
-                <span class="spanFWCZ">入住时间</span>
-            </div>
-            <div class="div_row_right">
-                <span id="spanRZSJ" class="span_spaninput SRK" style="display: inline-block; width: 100px;">
-                    <input class="input_spaninput" id="RZSJ_H" maxlength="9" column="RZSJ_H" type="text" value="08" style="width: 40px" />
-                    <span class="spaninput_fontcolor">:</span>
-                    <input class="input_spaninput" id="RZSJ_M" maxlength="9" column="RZSJ_M" type="text" value="00" style="width: 40px;" />
-                </span>
-            </div>
-            <div id="divRZSJTip" class="Warn" style="z-index: 998;"></div>
-        </div>
-        <div id="divTFSJ" class="div_row" style="z-index: 998;">
-            <div class="div_row_left">
-                <span class="span_required">&nbsp;</span>
-                <span class="spanFWCZ">退房时间</span>
-            </div>
-            <div class="div_row_right">
-                <span id="spanTFSJ" class="span_spaninput SRK" style="display: inline-block; width: 100px;">
-                    <input class="input_spaninput" id="TFSJ_H" maxlength="9" column="TFSJ_H" type="text" value="12" style="width: 40px" />
-                    <span class="spaninput_fontcolor">:</span>
-                    <input class="input_spaninput" id="TFSJ_M" maxlength="9" column="TFSJ_M" type="text" value="00" style="width: 40px;" />
-                </span>
-            </div>
-            <div id="divTFSJTip" class="Warn" style="z-index: 998;"></div>
-        </div>
+            <div id="divTFSJ" class="div_row" style="z-index: 998;">
+                <div class="div_row_left">
+                    <span class="span_required">&nbsp;</span>
+                    <span class="spanFWCZ">退房时间</span>
+                </div>
+                <div class="div_row_right">
+                    <span id="spanTFSJ" class="span_spaninput SRK" style="display: inline-block; width: 100px;">
+                        <input class="input_spaninput" id="TFSJ_H" maxlength="9" column="TFSJ_H" type="text" value="12" style="width: 40px" />
+                        <span class="spaninput_fontcolor">:</span>
+                        <input class="input_spaninput" id="TFSJ_M" maxlength="9" column="TFSJ_M" type="text" value="00" style="width: 40px;" />
+                    </span>
+                </div>
+                <div id="divTFSJTip" class="Warn" style="z-index: 998;"></div>
+            </div>*@
         <div id="divYJ" class="div_row" style="z-index: 995;">
             <div class="div_row_left font_two">
-                <span class="span_required">&nbsp;</span>
-                <span class="spanFWCZ">押金</span>
+                <span class="span_required"></span>
+                <span class="spanFWCZ">租金</span>
             </div>
             <div class="div_row_right">
                 <span id="spanYJ" class="span_spaninput SRK" style="display: inline-block;">
-                    <input class="input_spaninput spaninput_fontcolor" id="YJ" maxlength="9" column="YJ" type="text" />
-                    <span class="spaninput_fontcolor">元</span>
+                    <input class="input_spaninput spaninput_fontcolor" id="YJ" maxlength="9" column="YJ" type="text" style="width: 100px;" />
+                    <span class="spaninput_fontcolor">元/天</span>
                 </span>
                 <div id="divYJTip" class="Warn"></div>
-            </div>
-        </div>
-        <div id="divDJ" class="div_row" style="z-index: 995;">
-            <div class="div_row_left font_two">
-                <span class="span_required">&nbsp;</span>
-                <span class="spanFWCZ">定金</span>
-            </div>
-            <div class="div_row_right">
-                <span id="spanDJ" class="span_spaninput SRK" style="display: inline-block;">
-                    <input class="input_spaninput spaninput_fontcolor" id="DJ" maxlength="9" column="DJ" type="text" />
-                    <span class="spaninput_fontcolor">元</span>
-                </span>
-                <div id="divDJTip" class="Warn"></div>
             </div>
         </div>
         <div id="divFKFS" class="div_row" style="z-index: 988;">
@@ -228,7 +215,7 @@
         </div>
         <div id="divLXR" class="div_row" style="z-index: 989">
             <div class="div_row_left font_three">
-                <span class="span_required">&nbsp;</span><span id="spanLXR"> 联系人</span>
+                <span class="span_required">*</span><span id="spanLXR"> 联系人</span>
             </div>
             <div class="div_row_right">
                 <input id="LXR" maxlength="50" column="LXR" class="input_input SRK" type="text" placeholder="请输入联系人" />
