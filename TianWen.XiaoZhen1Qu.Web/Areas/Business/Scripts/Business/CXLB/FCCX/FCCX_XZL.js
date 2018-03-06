@@ -146,8 +146,8 @@ function LoadCZInfo(obj) {
     html += ('<p class="p_li_body_left_center_dz font_size16">' + '[' + obj.QY + '-' + obj.DD + '] ' + obj.JTDZ + ' ' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
-    html += ('<p class="p_li_body_left_right">' + GetJG(obj.ZJ, "元/月") + '</p>');
     html += ('<p class="p_li_body_left_right">' + GetCalcJG(obj.ZJ,obj.MJ, "元/㎡/月") + '</p>');
+    html += ('<p class="p_li_body_left_right" style="color:#666;">' + GetJG(obj.ZJ, "元/月") + '</p>');
     html += ('</div>');
     html += ('</li>');
     $("#ul_body_left").append(html);
@@ -166,8 +166,8 @@ function LoadCSInfo(obj) {
     html += ('<p class="p_li_body_left_center_dz font_size16">' + '[' + obj.QY + '-' + obj.DD + ']' + obj.JTDZ + ' ' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
-    html += ('<p class="p_li_body_left_right">' + GetJG(obj.SJ, "万元") + '</p>');
     html += ('<p class="p_li_body_left_right">' + GetCalcJG(obj.SJ, obj.MJ, "元/㎡") + '</p>');
+    html += ('<p class="p_li_body_left_right" style="color:#666;">' + GetJG(obj.SJ, "万元") + '</p>');
     html += ('</div>');
     html += ('</li>');
     $("#ul_body_left").append(html);

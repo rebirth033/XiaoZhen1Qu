@@ -144,6 +144,7 @@ function LoadCZInfo(obj) {
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
     html += ('<p class="p_li_body_left_right">' + GetJG(obj.ZJ, obj.ZJDW) + '</p>');
+    html += ('<p class="p_li_body_left_right" style="color:#666;">' + GetCalcJG(obj.ZJ, obj.MJ, "元/㎡/月") + '</p>');
     html += ('</div>');
     html += ('</li>');
     $("#ul_body_left").append(html);
@@ -163,6 +164,7 @@ function LoadCSInfo(obj) {
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
     html += ('<p class="p_li_body_left_right">' + GetJG(obj.SJ, obj.ZJDW) + '</p>');
+    html += ('<p class="p_li_body_left_right" style="color:#666;">' + GetCalcJG(obj.SJ, obj.MJ, "元/㎡") + '</p>');
     html += ('</div>');
     html += ('</li>');
     $("#ul_body_left").append(html);
