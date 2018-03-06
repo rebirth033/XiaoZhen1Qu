@@ -227,7 +227,7 @@ function LoadJJRTJFY(TYPE, GQ) {
         {
             TYPE: TYPE,
             Condition: "STATUS:1,GQ:" + GQ,
-            PageSize: 5,
+            PageSize: 100,
             PageIndex: 1
         },
         success: function (xml) {

@@ -50,7 +50,7 @@ function LoadBody(TYPE, PageIndex) {
         {
             TYPE: TYPE,
             Condition: condition,
-            PageSize: 5,
+            PageSize: 100,
             PageIndex: PageIndex
         },
         success: function (xml) {
@@ -96,7 +96,7 @@ function LoadHot(TYPE) {
         {
             TYPE: TYPE,
             Condition: "STATUS:1",
-            PageSize: 5,
+            PageSize: 100,
             PageIndex: 1
         },
         success: function (xml) {

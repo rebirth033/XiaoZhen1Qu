@@ -78,7 +78,7 @@ function LoadBody(TYPE, PageIndex) {
         {
             TYPE: TYPE,
             Condition: LTrim(condition, ','),
-            PageSize: 5,
+            PageSize: 100,
             PageIndex: PageIndex
         },
         success: function (xml) {
@@ -146,7 +146,7 @@ function LoadHot(TYPE) {
         {
             TYPE: TYPE,
             Condition: "STATUS:1,GQ:" + GetNavCondition(),
-            PageSize: 5,
+            PageSize: 100,
             PageIndex: 1
         },
         success: function (xml) {

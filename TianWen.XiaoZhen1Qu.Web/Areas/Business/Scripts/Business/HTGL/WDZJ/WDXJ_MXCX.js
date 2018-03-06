@@ -130,7 +130,7 @@ function LoadSZMX(PageIndex) {
             ZJLX: ZJLX,
             StartTime: $("#input_kssj").val(),
             EndTime: $("#input_jssj").val(),
-            PageSize: 5,
+            PageSize: 100,
             PageIndex: PageIndex
         },
         success: function (xml) {
@@ -168,7 +168,7 @@ function LoadDJJDJL(PageIndex) {
             LX: LX,
             StartTime: $("#input_djjd_kssj").val(),
             EndTime: $("#input_djjd_jssj").val(),
-            PageSize: 5,
+            PageSize: 100,
             PageIndex: PageIndex
         },
         success: function (xml) {
@@ -274,7 +274,7 @@ function SelectSZMXBySJ(obj) {
             ZJLX: ZJLX,
             StartTime: StartTime,
             EndTime: EndTime,
-            PageSize: 5,
+            PageSize: 100,
             PageIndex: obj.data.PageIndex
         },
         success: function (xml) {
@@ -332,7 +332,7 @@ function SelectDJJDJLBySJ(obj) {
             LX: LX,
             StartTime: StartTime,
             EndTime: EndTime,
-            PageSize: 5,
+            PageSize: 100,
             PageIndex: obj.data.PageIndex
         },
         success: function (xml) {

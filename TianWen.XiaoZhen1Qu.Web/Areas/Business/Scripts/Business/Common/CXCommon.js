@@ -13,7 +13,7 @@ function LoadBody(TYPE, PageIndex) {
         {
             TYPE: TYPE,
             KEY: getUrlParam("ss"),
-            PageSize: 5,
+            PageSize: 100,
             PageIndex: PageIndex
         },
         success: function (xml) {

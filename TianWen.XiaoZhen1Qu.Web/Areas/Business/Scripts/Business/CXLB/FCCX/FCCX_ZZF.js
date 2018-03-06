@@ -95,7 +95,7 @@ function LoadBody(TYPE, PageIndex, OrderColumn, OrderType) {
         {
             TYPE: TYPE,
             Condition: condition,
-            PageSize: 10,
+            PageSize: 100,
             PageIndex: PageIndex,
             OrderColumn: OrderColumn,
             OrderType: OrderType
@@ -143,7 +143,7 @@ function LoadHot(TYPE) {
         {
             TYPE: TYPE,
             Condition: "STATUS:1",
-            PageSize: 5,
+            PageSize: 100,
             PageIndex: 1
         },
         success: function (xml) {

@@ -213,14 +213,14 @@ function ValidateSJ() {
         $("#spanSJ").css("border-color", "#F2272D");
         return false;
     } else {
-        if (ValidateNumber($("#SJ").val())) {
+        if (ValidateDecimal($("#SJ").val())) {
             $("#divSJTip").css("display", "none");
             $("#spanSJ").css("border-color", "#cccccc");
             return true;
         } else {
             $("#divSJTip").css("display", "block");
             $("#divSJTip").attr("class", "Warn");
-            $("#divSJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />售价请填写整数，默认为面议');
+            $("#divSJTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />售价请填写数字，最多两位小数，默认为面议');
             $("#spanSJ").css("border-color", "#F2272D");
             return false;
         }
