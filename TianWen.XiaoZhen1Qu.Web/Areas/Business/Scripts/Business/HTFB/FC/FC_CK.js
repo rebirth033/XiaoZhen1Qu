@@ -75,6 +75,7 @@ function LoadJBXX() {
                 $("#spanQY").html(xml.Value.FC_CKJBXX.QY);
                 $("#spanDD").html(xml.Value.FC_CKJBXX.DD);
                 $("#spanZJDW").html(xml.Value.FC_CKJBXX.ZJDW);
+                $("#SJ").html(xml.Value.FC_CKJBXX.SJ);
                 SetGQ(xml.Value.FC_CKJBXX.GQ);
                 LoadPhotos(xml.Value.Photos);
             }
@@ -91,6 +92,7 @@ function FB() {
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "KZCGS", "'" + $("#spanKZCGS").html() + "'");
+    obj = jsonObj.AddJson(obj, "SJ", "'" + $("#SJ").val() + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     if (GetDX("GQ") === "出租")
