@@ -36,13 +36,16 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         public List<PHOTOS> GetTP(string fwzp)
         {
             List<PHOTOS> photos = new List<PHOTOS>();
-            string[] zps = fwzp.Split(',');
-            foreach (var zp in zps)
+            if (!string.IsNullOrEmpty(fwzp))
             {
-                PHOTOS photo = new PHOTOS();
-                photo.PHOTOURL = zp;
-                photo.PHOTONAME = photo.PHOTOURL.Substring(photo.PHOTOURL.LastIndexOf('/') + 1, photo.PHOTOURL.Length - photo.PHOTOURL.LastIndexOf('/') - 1);
-                photos.Add(photo);
+                string[] zps = fwzp.Split(',');
+                foreach (var zp in zps)
+                {
+                    PHOTOS photo = new PHOTOS();
+                    photo.PHOTOURL = zp;
+                    photo.PHOTONAME = photo.PHOTOURL.Substring(photo.PHOTOURL.LastIndexOf('/') + 1, photo.PHOTOURL.Length - photo.PHOTOURL.LastIndexOf('/') - 1);
+                    photos.Add(photo);
+                }
             }
             return photos;
         }

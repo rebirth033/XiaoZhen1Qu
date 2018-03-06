@@ -17,7 +17,7 @@ function ValidateAll() {
             & ValidateSZQY()
             & ValidateSJ()
             & ValidateMJ()
-            & ValidateCommon())
+            & ValidateCommonWithoutZP())
             return true;
         else
             return false;
@@ -29,7 +29,7 @@ function ValidateAll() {
         & ValidateSZQY()
         & ValidateZJ()
         & ValidateMJ()
-        & ValidateCommon())
+        & ValidateCommonWithoutZP())
             return true;
         else
             return false;
