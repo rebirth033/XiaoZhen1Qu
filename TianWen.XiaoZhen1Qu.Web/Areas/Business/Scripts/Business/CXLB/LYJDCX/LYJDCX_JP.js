@@ -76,7 +76,7 @@ function LoadInfo(obj) {
     html += ('<div class="div_li_body_left_center">');
     html += ('<p class="p_li_body_left_center_bt">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_left_center_nr">' + obj.BCMSString.replace(/<\/?.+?>/g, "") + '</p>');
-    html += ('<p class="p_li_body_left_center_dz">' + obj.QY + '-' + obj.DD + '</p>');
+    html += ('<p class="p_li_body_left_center_dz">' + ValidateNull(obj.QY) + '-' + ValidateNull(obj.DD) + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
     html += ('<p class="p_li_body_left_right"><span class="span_li_body_left_right">联系商家</span></p>');
@@ -116,7 +116,7 @@ function LoadHotInfo(obj) {
     html += ('<li onclick="OpenXXXX(\'LYJDXX_JP\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_right_xq">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_right_cs">' + obj.QY + '-' + obj.DD + '</p>');
+    html += ('<p class="p_li_body_right_cs">' + ValidateNull(obj.QY) + '-' + ValidateNull(obj.DD) + '</p>');
     html += ('</li>');
     $("#ul_body_right").append(html);
 }

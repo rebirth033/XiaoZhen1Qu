@@ -95,7 +95,7 @@ function LoadCZInfo(obj) {
     html += ('<div class="div_li_body_left_center">');
     html += ('<p class="p_li_body_left_center_bt">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_left_center_cs font_size16">' + obj.MJ + '平米</p>');
-    html += ('<p class="p_li_body_left_center_dz font_size16">' + '[' + obj.QY + '-' + obj.DD + '] ' + obj.JTDZ + ' ' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
+    html += ('<p class="p_li_body_left_center_dz font_size16">' + '[' + ValidateNull(obj.QY) + '-' + ValidateNull(obj.DD) + '] ' + obj.JTDZ + ' ' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
     html += ('<p class="p_li_body_left_right">' + GetCalcJG(obj.ZJ, obj.MJ, "元/㎡/月") + '</p>');
@@ -115,7 +115,7 @@ function LoadCSInfo(obj) {
     html += ('<div class="div_li_body_left_center">');
     html += ('<p class="p_li_body_left_center_bt">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_left_center_cs font_size16">' + obj.MJ + '平米</p>');
-    html += ('<p class="p_li_body_left_center_dz font_size16">' + '[' + obj.QY + '-' + obj.DD + ']' + obj.JTDZ + ' ' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
+    html += ('<p class="p_li_body_left_center_dz font_size16">' + '[' + ValidateNull(obj.QY) + '-' + ValidateNull(obj.DD) + ']' + obj.JTDZ + ' ' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
     html += ('<p class="p_li_body_left_right">' + GetCalcJG(obj.SJ, obj.MJ, "元/㎡") + '</p>');
@@ -155,7 +155,7 @@ function LoadHotInfo(obj, GQ) {
     var html = "";
     html += ('<li onclick="OpenXXXX(\'FCXX_TD\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_right_xq">' + obj.QY + '-' + obj.DD + '</p>');
+    html += ('<p class="p_li_body_right_xq">' + ValidateNull(obj.QY) + '-' + ValidateNull(obj.DD) + '</p>');
     html += ('<p class="p_li_body_right_cs">' + obj.MJ + '平米</p>');
     if(GQ === "出租")
         html += ('<p class="p_li_body_right_jg">' + GetJG(obj.ZJ, obj.ZJDW) + '</p>');

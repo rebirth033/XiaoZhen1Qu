@@ -127,7 +127,7 @@ function LoadDZFInfo(obj) {
     html += ('<li onclick="OpenXXXX(\'FCXX_DZF\',\'' + obj.ID + '\',\'' + obj.LBID + '\')" class="li_body_middle_item_right">');
     html += ('<img class="img_li_body_middle_item_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_middle_item_right_xq" style="height:40px;">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_middle_item_right_cs">' + obj.QY + '-' + obj.DD + '</p>');
+    html += ('<p class="p_li_body_middle_item_right_cs">' + ValidateNull(obj.QY) + '-' + ValidateNull(obj.DD) + '</p>');
     html += ('</li>');
     return html;
 }

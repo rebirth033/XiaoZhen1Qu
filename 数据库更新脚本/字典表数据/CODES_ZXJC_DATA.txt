@@ -62,6 +62,39 @@ insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENT
 values (23, '工装服务类别', '展厅装修', '10', 10, null, 131, 'LB=23', 'zhan ting zhuang xiu ', 'zhan ting zhuang xiu ', 'ztzx');
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (2301, '工装服务类别', '学校装修', '11', 11, null, 131, 'LB=23', 'xue xiao zhuang xiu ', 'xue xiao zhuang xiu ', 'xxzx');
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (2302, '工装服务类别', '医院装修', '12', 12, null, 131, 'LB=23', 'yi yuan zhuang xiu ', 'yi yuan zhuang xiu ', 'yyzx');
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (2303, '工装服务类别', '售楼中心装修', '13', 13, null, 131, 'LB=23', 'shou lou zhong xin zhuang xiu ', 'shou lou zhong xin zhuang xiu ', 'slzxzx');
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (2304, '工装服务类别', '幼儿园装修', '14', 14, null, 131, 'LB=23', 'you er yuan zhuang xiu ', 'you er yuan zhuang xiu ', 'yeyzx');
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (2305, '工装服务类别', '服装店装修', '15', 15, null, 131, 'LB=23', 'fu zhuang dian zhuang xiu ', 'fu zhuang dian zhuang xiu ', 'fzdzx');
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (2306, '工装服务类别', '展厅装修', '16', 16, null, 131, 'LB=23', 'zhan ting zhuang xiu ', 'zhan ting zhuang xiu ', 'ztzx');
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (2307, '工装服务类别', '咖啡厅装修', '17', 17, null, 131, 'LB=23', 'ka fei ting zhuang xiu ', 'ka fei ting zhuang xiu ', 'kftzx');
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (2308, '工装服务类别', '餐厅装修', '18', 18, null, 131, 'LB=23', 'can ting zhuang xiu ', 'can ting zhuang xiu ', 'ctzx');
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (2309, '工装服务类别', '美容院装修', '19', 19, null, 131, 'LB=23', 'mei rong yuan zhuang xiu ', 'mei rong yuan zhuang xiu ', 'mryzx');
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (2310, '工装服务类别', '烟酒店装修', '20', 20, null, 131, 'LB=23', 'yan jiu dian zhuang xiu ', 'yan jiu dian zhuang xiu ', 'yjdzx');
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (2311, '工装服务类别', 'KTV装修', '21', 21, null, 131, 'LB=23', 'KTV zhuang xiu ', 'KTV zhuang xiu ', 'ktvzx');
+
+insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
 values (24, '餐饮娱乐装修', '网吧装修', '1', 1, 16, 131, 'LB=16&XL=24', 'wang ba zhuang xiu ', 'wang ba zhuang xiu ', 'wbzx');
 
 insert into codes_zxjc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
