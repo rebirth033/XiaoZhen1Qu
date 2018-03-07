@@ -13,7 +13,7 @@ function ValidateGCCCCNF() {
 function ValidateAll() {
     if (ValidateRadio("SF", "忘记选择身份啦")
            & ValidateSelect("GCCCX", "CX", "忘记选择车型啦")
-           & ValidateGCCCCNF()
+           //& ValidateGCCCCNF()
            & ValidateBCMS("BCMS", "忘记填写详情描述啦")
            & ValidateJG()
            & ValidateCommon())
