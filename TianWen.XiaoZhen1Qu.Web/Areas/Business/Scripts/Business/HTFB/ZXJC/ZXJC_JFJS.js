@@ -55,10 +55,10 @@ function LoadJBXX() {
                 $("#ID").val(xml.Value.ZXJC_JFJSJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
-                if (xml.Value.ZXJC_JCJBXX.LB !== null)
-                    SetDuoX("LB", xml.Value.ZXJC_JCJBXX.LB);
-                if (xml.Value.ZXJC_JCJBXX.FWFW !== null)
-                    SetDuoX("FWFW", xml.Value.ZXJC_JCJBXX.FWFW);
+                if (xml.Value.ZXJC_JFJSJBXX.LB !== null)
+                    SetDuoX("LB", xml.Value.ZXJC_JFJSJBXX.LB);
+                if (xml.Value.ZXJC_JFJSJBXX.FWFW !== null)
+                    SetDuoX("FWFW", xml.Value.ZXJC_JFJSJBXX.FWFW);
                 $("#spanQY").html(xml.Value.ZXJC_JFJSJBXX.QY);
                 $("#spanDD").html(xml.Value.ZXJC_JFJSJBXX.DD);
                 LoadPhotos(xml.Value.Photos);

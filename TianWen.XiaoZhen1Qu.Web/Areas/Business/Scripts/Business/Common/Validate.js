@@ -27,14 +27,11 @@ function ValidateZP() {
 //验证价格
 function ValidateJG() {
     if ($("#JG").val() === "" || $("#JG").val() === null) {
-        //$("#divJGTip").css("display", "block");
-        //$("#divJGTip").attr("class", "Warn");
-        //$("#divJGTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写价格啦');
-        //$("#spanJG").css("border-color", "#F2272D");
-        //return false;
-        $("#divJGTip").css("display", "none");
-        $("#spanJG").css("border-color", "#cccccc");
-        return true;
+        $("#divJGTip").css("display", "block");
+        $("#divJGTip").attr("class", "Warn");
+        $("#divJGTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写价格啦');
+        $("#spanJG").css("border-color", "#F2272D");
+        return false;
     } else {
         if (ValidateDecimal($("#JG").val())) {
             $("#divJGTip").css("display", "none");
