@@ -572,6 +572,9 @@ insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID
 values (211, '货车品牌', '江铃汽车', 'J', 62, null, null, 190, 'PP=211', 'jiang ling qi che ', 'jianglingqiche', 'jlqc');
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (21101, '货车品牌', '解放', 'J', 62, null, null, 190, 'PP=21101', 'jie fang qi che ', 'jiefangqiche', 'jfqc');
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
 values (212, '货车品牌', '开瑞绿卡', 'K', 63, null, null, 190, 'PP=212', 'kai rui lv ka ', 'kairuilvka', 'krlk');
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
