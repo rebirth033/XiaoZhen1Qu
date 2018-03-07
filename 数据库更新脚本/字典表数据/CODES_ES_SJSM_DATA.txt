@@ -116,6 +116,12 @@ insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PAR
 values (122, '手机品牌', '其它品牌', '21', 21, null, 154, 'PP=122', 'qi ta pin pai ', 'qitapinpai', 'qtpp');
 
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (12201, '手机型号', 'iphone8', '0', 0, 102, 154, 'PP=102&XH=12201', 'iphone8', 'iphone8', 'i');
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (12202, '手机型号', 'iphoneX', '0', 0, 102, 154, 'PP=102&XH=12202', 'iphoneX', 'iphoneX', 'i');
+
+insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
 values (123, '手机型号', 'iPhone7', '1', 1, 102, 154, 'PP=102&XH=123', 'iPhone7', 'iPhone7', 'i');
 
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
@@ -2523,9 +2529,6 @@ values (927, '网络设备', '调制解调器', '6', 6, 392, 158, 'LB=392&XL=927', 'diao 
 
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
 values (928, '网络设备', '其他网络设备', '7', 7, 392, 158, 'LB=392&XL=928', 'qi ta wang luo she bei ', 'qitawangluoshebei', 'qtwlsb');
-
-insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
-values (929, '手机型号', 'iphone8', '0', 0, 102, 154, 'PP=102&XH=929', 'iphone8', 'iphone8', 'i');
 
 insert into codes_es_sjsm (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
 values (930, '特色标签', '全新未拆封', '1', 1, null, null, null, null, null, null);

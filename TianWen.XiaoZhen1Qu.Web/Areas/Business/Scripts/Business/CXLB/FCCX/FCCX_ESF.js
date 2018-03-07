@@ -128,7 +128,8 @@ function LoadInfo(obj) {
     html += ('<p class="p_li_body_left_center_dz">' + obj.XQMC + ' ' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
-    html += ('<p class="p_li_body_left_right"><span class="span_zj">' + GetJG(obj.SJ, '万元') + '</span></p>');
+    html += ('<p class="p_li_body_left_right">' + GetJG(obj.SJ, '万元') + '</p>');
+    html += ('<p class="p_li_body_left_right" style="color:#666">' + GetCalcJG(obj.SJ, obj.PFM, "元/㎡") + '</p>');
     html += ('</div>');
     html += ('</li>');
     $("#ul_body_left").append(html);
