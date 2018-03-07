@@ -294,3 +294,14 @@ function AutoLogin() {
         }
     });
 }
+//判断非空
+function ValidateNull(value, dw) {
+    if (value === "" || (value.indexOf("请选择") !== -1))
+        return "暂无数据";
+    else {
+        if (dw !== undefined)
+            return value + dw;
+        else
+            return value;
+    }
+}
