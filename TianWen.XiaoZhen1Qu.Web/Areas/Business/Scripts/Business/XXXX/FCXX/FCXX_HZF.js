@@ -1,6 +1,6 @@
 ﻿var right = 0;
 $(document).ready(function () {
-
+    
 });
 //加载默认
 function LoadDefault() {

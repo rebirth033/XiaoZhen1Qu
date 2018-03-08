@@ -2,7 +2,7 @@
 $(document).ready(function () {
     BindBodyNav();
     LoadFCCondition();
-    LoadHot("FCXX_ZZF");
+    LoadHot("FCXX_HZF");
     LoadHeadSearch();
 });
 //加载头部搜索栏关键字
@@ -95,7 +95,7 @@ function LoadBody(TYPE, PageIndex, OrderColumn, OrderType) {
         {
             TYPE: TYPE,
             Condition: condition,
-            PageSize: 100,
+            PageSize: 50,
             PageIndex: PageIndex,
             OrderColumn: OrderColumn,
             OrderType: OrderType
@@ -162,7 +162,7 @@ function LoadHot(TYPE) {
 //加载热门单条信息
 function LoadHotInfo(obj) {
     var html = "";
-    html += ('<li onclick="OpenXXXX(\'FCXX_ZZF\',\'' + obj.ID + '\')" class="li_body_right">');
+    html += ('<li onclick="OpenXXXX(\'FCXX_HZF\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_right_xq">' + obj.XQMC + '</p>');
     html += ('<p class="p_li_body_right_cs">' + obj.S + '室 / ' + obj.PFM + '平米 / ' + obj.ZXQK + '</p>');
