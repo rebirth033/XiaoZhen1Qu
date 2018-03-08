@@ -126,7 +126,5 @@ D:\源代码\TianWen.Framework\bin\Debug\TianWen.Nhibernate.dll
 D:\源代码\TianWen.Framework\bin\Debug\Microsoft.Web.Infrastructure.dll
 D:\源代码\TianWen.Framework\bin\Debug\FluentNHibernate.dll
 D:\源代码\TianWen.Framework\bin\Debug\NHibernate.dll
-D:\源代码\TianWen.Framework\bin\Debug\MySql.Data.dll
 D:\源代码\TianWen.Framework\bin\Debug\Iesi.Collections.dll
-D:\源代码\TianWen.Framework\bin\Debug\MySql.Data.xml
 D:\源代码\TianWen.Framework\obj\Debug\TianWen.Framework.csprojResolveAssemblyReference.cache

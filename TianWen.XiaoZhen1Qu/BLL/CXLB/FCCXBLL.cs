@@ -60,7 +60,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "FCXX_ESF")
                 {
-                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,fc_esfjbxx b left join CODES_XQJBXX x on trim(b.xqmc) = x.xqmc where a.jcxxid = b.jcxxid and status = 1 and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,fc_esfjbxx b left join CODES_XQJBXX x on trim(b.xqmc) = x.xqmc where a.jcxxid = b.jcxxid and status = 1 and szs = '" + XZQ + "' " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<FC_ESFView> list = ConvertHelper.DataTableToList<FC_ESFView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;

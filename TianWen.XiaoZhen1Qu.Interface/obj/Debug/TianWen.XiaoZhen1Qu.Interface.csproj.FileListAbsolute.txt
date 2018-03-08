@@ -93,5 +93,3 @@ F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.
 F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu.Interface\obj\Debug\TianWen.XiaoZhen1Qu.Interface.pdb
 D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Interface\bin\Debug\MySql.Data.dll
 D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Interface\bin\Debug\MySql.Data.xml
-D:\源代码\TianWen.XiaoZhen1Qu.Interface\bin\Debug\MySql.Data.dll
-D:\源代码\TianWen.XiaoZhen1Qu.Interface\bin\Debug\MySql.Data.xml
