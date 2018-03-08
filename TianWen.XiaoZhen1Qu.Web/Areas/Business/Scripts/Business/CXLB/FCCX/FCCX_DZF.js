@@ -2,7 +2,7 @@
 $(document).ready(function () {
     BindBodyNav();
     LoadFCCondition();
-    LoadHot("FCXX_DZF");
+    LoadHot("FCXX_HZF");
 });
 //加载房产查询条件
 function LoadFCCondition() {
@@ -191,7 +191,7 @@ function LoadHot(TYPE) {
 //加载热门单条信息
 function LoadHotInfo(obj) {
     var html = "";
-    html += ('<li onclick="OpenXXXX(\'FCXX_DZF\',\'' + obj.ID + '\')" class="li_body_right">');
+    html += ('<li onclick="OpenXXXX(\'FCXX_HZF\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_right_xq" style="height:40px;">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_right_cs">' + ValidateNull(obj.QY) + '-' + ValidateNull(obj.DD) + '</p>');
