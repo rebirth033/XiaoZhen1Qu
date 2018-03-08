@@ -632,6 +632,27 @@ insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID
 values (214, '日租短租房屋配置', '寄存行李', '20', 20, null, null, null, null, null, null);
 
 insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (21401, '日租短租房屋配置', '沐浴露洗发水', '21', 21, null, null, null, null, null, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (21402, '日租短租房屋配置', '毛巾浴巾', '22', 22, null, null, null, null, null, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (21403, '日租短租房屋配置', '电梯', '23', 23, null, null, null, null, null, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (21404, '日租短租房屋配置', '24小时热水', '24', 24, null, null, null, null, null, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (21404, '日租短租房屋配置', '牙具香皂', '25', 25, null, null, null, null, null, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (21405, '日租短租房屋配置', '停车位', '26', 26, null, null, null, null, null, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (21406, '日租短租房屋配置', '清洁费', '27', 27, null, null, null, null, null, null);
+
+insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
 values (215, '商铺售价', '50万元以下', '1', 1, null, null, null, null, null, null);
 
 insert into codes_fc (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
