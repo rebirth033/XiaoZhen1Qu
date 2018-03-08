@@ -80,6 +80,7 @@ function LoadJBXX() {
                 $("#spanQY").html(xml.Value.FC_XZLJBXX.QY);
                 $("#spanDD").html(xml.Value.FC_XZLJBXX.DD);
                 $("#spanYFFS").html(xml.Value.FC_XZLJBXX.YFFS);
+                $("#SJ").html(xml.Value.FC_XZLJBXX.SJ);
                 LoadPhotos(xml.Value.Photos);
             }
         },
@@ -96,6 +97,7 @@ function FB() {
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
+    obj = jsonObj.AddJson(obj, "SJ", "'" + $("#SJ").val() + "'");
     obj = jsonObj.AddJson(obj, "YFFS", "'" + $("#spanYFFS").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
     obj = jsonObj.AddJson(obj, "SF", "'" + GetDX("SF") + "'");

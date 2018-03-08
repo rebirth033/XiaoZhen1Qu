@@ -95,7 +95,7 @@ function LoadBody(TYPE, PageIndex, OrderColumn, OrderType) {
         {
             TYPE: TYPE,
             Condition: condition,
-            PageSize: 5,
+            PageSize: 100,
             PageIndex: PageIndex,
             OrderColumn: OrderColumn,
             OrderType: OrderType
@@ -125,10 +125,11 @@ function LoadInfo(obj) {
     html += ('<div class="div_li_body_left_center">');
     html += ('<p class="p_li_body_left_center_bt">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_left_center_cs">' + obj.S + '室' + obj.T + '厅' + obj.W + '卫 / ' + obj.PFM + '平米 / ' + obj.ZXQK + ' / ' + obj.CX + ' / ' + obj.C + '层[共' + obj.GJC + '层]</p>');
-    html += ('<p class="p_li_body_left_center_dz">' + obj.XQMC + obj.XQDZ + ' ' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
+    html += ('<p class="p_li_body_left_center_dz">' + obj.XQMC + ' ' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
-    html += ('<p class="p_li_body_left_right"><span class="span_zj">' + obj.SJ + '</span>万元</p>');
+    html += ('<p class="p_li_body_left_right">' + GetJG(obj.SJ, '万元') + '</p>');
+    html += ('<p class="p_li_body_left_right" style="color:#666">' + GetCalcJG(obj.SJ, obj.PFM, "元/㎡") + '</p>');
     html += ('</div>');
     html += ('</li>');
     $("#ul_body_left").append(html);
@@ -143,7 +144,7 @@ function LoadHot(TYPE) {
         {
             TYPE: TYPE,
             Condition: "STATUS:1",
-            PageSize: 5,
+            PageSize: 100,
             PageIndex: 1
         },
         success: function (xml) {

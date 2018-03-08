@@ -36,8 +36,13 @@ function LoadJBXX(obj) {
     html += ('<p class="p_div_body_left_head_ll">' + obj.ZXGXSJ.ToString('yyyy年MM月dd日') + '  ' + obj.LLCS + '次浏览 <span id="span_div_body_left_head_jb" class="span_div_body_left_head_jb">举报</span><span class="span_div_body_left_head_split">|</span><span id="span_div_body_left_head_sc" onclick="SCXX(\'' + obj.JCXXID + '\')" class="span_div_body_left_head_sc">收藏</span></p>');
     html += ('</div>');
     html += ('<div class="div_body_left_body">');
-    html += ('<div class="div_body_left_body_left">');    html += ('<div class="div_body_left_body_left_img">');
-    html += ('<img id="img_body_left_body_left_show" class="img_body_left_body_left_show" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
+    html += ('<div class="div_body_left_body_left">');
+    html += ('<div class="div_body_left_body_left_img">');
+    if (obj.PHOTOS.length > 0) {
+        html += ('<img id="img_body_left_body_left_show" class="img_body_left_body_left_show" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
+    } else {
+        html += ('<img id="img_body_left_body_left_show" class="img_body_left_body_left_show" src="' + getRootPath() + "/Areas/Business/Css/images/HTGL/no_image.png?j=" + Math.random() + '" />');
+    }
     html += ('</div>');
     html += ('<span onclick="LeftImg()" class="div_body_left_body_left_list_an" style="margin-right: 10px;"><</span>');
     html += ('<div class="div_body_left_body_left_list">');
@@ -66,11 +71,11 @@ function LoadJBXX(obj) {
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">区域：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.QY + '-' + obj.DD + '</span>');
+    html += ('<span class="span_body_left_body_right_right">' + ValidateNull(obj.QY) + '-' + ValidateNull(obj.DD) + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">具体地址：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + (obj.JTDZ === null ? "暂无数据":obj.JTDZ) + '</span>');
+    html += ('<span class="span_body_left_body_right_right">' + (obj.JTDZ === null ? "暂无数据" : obj.JTDZ) + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">联系人：</span>');
@@ -110,7 +115,6 @@ function LoadXQ(obj, BCMSString) {
     }
     html += ('</ul>');
     html += ('</div>');
-
     html += ('<div id="div_body_left_body_xq_zk" onclick="ToggleImg(' + obj.PHOTOS.length + ')" class="div_body_left_body_xq_zk">展开更多图片 共（' + obj.PHOTOS.length + '）张</div>');
     html += ('</div>');
 
@@ -119,8 +123,8 @@ function LoadXQ(obj, BCMSString) {
     if (parseInt(RTrimStr($("#div_body_left_body_xq_xx_bcms").css("height"), "px")) > 300) {
         $("#div_body_left_body_xq_xx_bcms").css("height", "300px").css("overflow", "hidden");
         $("#zk").append('<div id="div_body_left_body_xq_zk_bcms" onclick="ToggleBCMS()" class="div_body_left_body_xq_zk_bcms">展开内容<i id="i_body_left_body_xq_zk_bcms" class="i_body_left_body_xq_zk_bcms"></i></div>');
-    }    	
-	if (obj.PHOTOS.length > 4) {
+    }
+    if (obj.PHOTOS.length > 4) {
         $("#div_body_left_body_xq_xx").css("height", "710px");
         $("#div_body_left_body_xq_zk").css("display", "block");
     }
@@ -164,8 +168,12 @@ function LoadCNXH(TYPE, GQ) {
 function LoadCNXHInfo(obj, GQ) {
     var html = "";
     html += ('<li onclick="OpenXXXX(\'FCXX_CW\',\'' + obj.ID + '\')" class="li_body_left_body_cnxh">');
-    html += ('<img class="img_li_body_left_body_cnxh" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_left_body_cnxh_xq">' + obj.QY + '-' + obj.DD + '</p>');
+    if (obj.PHOTOS.length > 0) {
+        html += ('<img class="img_li_body_left_body_cnxh" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
+    } else {
+        html += ('<img class="img_li_body_left_body_cnxh" src="' + getRootPath() + "/Areas/Business/Css/images/HTGL/no_image.png?j=" + Math.random() + '" />');
+    }
+    html += ('<p class="p_li_body_left_body_cnxh_xq">' + ValidateNull(obj.QY) + '-' + ValidateNull(obj.DD) + '</p>');
     html += ('<p class="p_li_body_left_body_cnxh_cs">' + obj.MJ + '平米</p>');
     html += ('<p class="p_li_body_left_body_cnxh_jg">' + (GQ === "出租" ? GetJG(obj.ZJ, obj.ZJDW) : GetJG(obj.SJ, obj.ZJDW)) + '</p>');
     html += ('</li>');
@@ -208,8 +216,12 @@ function LoadJPTJ(TYPE, GQ) {
 function LoadJPTJInfo(obj, GQ) {
     var html = "";
     html += ('<li onclick="OpenXXXX(\'FCXX_CW\',\'' + obj.ID + '\')" class="li_body_left_body_jptj">');
-    html += ('<img class="img_li_body_left_body_jptj" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<p class="p_li_body_left_body_jptj_xq">' + obj.QY + '-' + obj.DD + '</p>');
+    if (obj.PHOTOS.length > 0) {
+        html += ('<img class="img_li_body_left_body_jptj" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
+    } else {
+        html += ('<img class="img_li_body_left_body_jptj" src="' + getRootPath() + "/Areas/Business/Css/images/HTGL/no_image.png?j=" + Math.random() + '" />');
+    }
+    html += ('<p class="p_li_body_left_body_jptj_xq">' + ValidateNull(obj.QY) + '-' + ValidateNull(obj.DD) + '</p>');
     html += ('<p class="p_li_body_left_body_jptj_cs">' + obj.MJ + '平米</p>');
     html += ('<p class="p_li_body_left_body_jptj_jg">' + (GQ === "出租" ? GetJG(obj.ZJ, obj.ZJDW) : GetJG(obj.SJ, obj.ZJDW)) + '</p>');
     html += ('</li>');
@@ -225,7 +237,7 @@ function LoadJJRTJFY(TYPE, GQ) {
         {
             TYPE: TYPE,
             Condition: "STATUS:1,GQ:" + GQ,
-            PageSize: 5,
+            PageSize: 100,
             PageIndex: 1
         },
         success: function (xml) {
@@ -255,9 +267,13 @@ function LoadJJRTJFY(TYPE, GQ) {
 function LoadJJRTJFYInfo(obj, GQ) {
     var html = "";
     html += ('<li onclick="OpenXXXX(\'FCXX_CW\',\'' + obj.ID + '\')" class="li_body_right_jjrtj">');
-    html += ('<img class="img_li_body_right_jjrtj" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
+    if (obj.PHOTOS.length > 0) {
+        html += ('<img class="img_li_body_right_jjrtj" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
+    } else {
+        html += ('<img class="img_li_body_right_jjrtj" src="' + getRootPath() + "/Areas/Business/Css/images/HTGL/no_image.png?j=" + Math.random() + '" />');
+    }
     html += ('<div class="div_li_body_right_jjrtj">');
-    html += ('<p class="p_li_body_right_jjrtj_xq">' + obj.QY + '-' + obj.DD + '</p>');
+    html += ('<p class="p_li_body_right_jjrtj_xq">' + ValidateNull(obj.QY) + '-' + ValidateNull(obj.DD) + '</p>');
     html += ('<p class="p_li_body_right_jjrtj_cs">' + obj.MJ + '平米</p>');
     html += ('<p class="p_li_body_right_jjrtj_jg">' + (GQ === "出租" ? GetJG(obj.ZJ, obj.ZJDW) : GetJG(obj.SJ, obj.ZJDW)) + '</p>');
     html += ('</div>');

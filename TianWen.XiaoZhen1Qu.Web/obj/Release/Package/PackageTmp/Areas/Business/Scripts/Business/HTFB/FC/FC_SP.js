@@ -146,6 +146,7 @@ function LoadJBXX() {
                 $("#spanDD").html(xml.Value.FC_SPJBXX.DD);
                 $("#spanZJDW").html(xml.Value.FC_SPJBXX.ZJDW);
                 $("#spanYFFS").html(xml.Value.FC_SPJBXX.YFFS);
+                $("#SJ").html(xml.Value.FC_SPJBXX.SJ);
                 SetFL(xml.Value.FC_SPJBXX.FL);
                 SetGQ(xml.Value.FC_SPJBXX.GQ);
                 LoadPhotos(xml.Value.Photos);
@@ -164,6 +165,7 @@ function FB() {
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "SPLX", "'" + $("#spanSPLX").html() + "'");
     obj = jsonObj.AddJson(obj, "JYHY", "'" + $("#spanJYHY").html() + "'");
+    obj = jsonObj.AddJson(obj, "SJ", "'" + $("#SJ").val() + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     if (GetDX("GQ") === "出租")

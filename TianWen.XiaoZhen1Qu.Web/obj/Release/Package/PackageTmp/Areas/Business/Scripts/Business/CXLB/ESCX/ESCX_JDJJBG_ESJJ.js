@@ -19,7 +19,7 @@ function LoadURLCondition() {
     else if (getUrlParam("QY") !== null)
         SelectURLCondition(getUrlParam("QY"));
     else
-        LoadBody("ESXX_JDJJBG_ESJD", currentIndex);
+        LoadBody("ESXX_JDJJBG_ESJJ", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
@@ -57,7 +57,7 @@ function LoadBody(TYPE, PageIndex) {
         {
             TYPE: TYPE,
             Condition: condition,
-            PageSize: 5,
+            PageSize: 100,
             PageIndex: PageIndex
         },
         success: function (xml) {
@@ -103,7 +103,7 @@ function LoadHot(TYPE) {
         {
             TYPE: TYPE,
             Condition: "STATUS:1",
-            PageSize: 5,
+            PageSize: 100,
             PageIndex: 1
         },
         success: function (xml) {

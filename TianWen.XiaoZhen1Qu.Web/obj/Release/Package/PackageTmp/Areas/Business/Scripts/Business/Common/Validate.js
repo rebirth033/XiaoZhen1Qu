@@ -1,7 +1,9 @@
 ﻿$(document).ready(function () {
     $("#BT").bind("blur", function () { ValidateInput("BT", "标题"); });
     $("#BT").bind("focus", function () { InfoInput("BT", "请填写标题"); });
-    $("#LXDH").bind("blur", function () { ValidateLXDH(); });
+    $("#LXR").bind("blur", function () { ValidateInput("LXR", "联系人"); });
+    $("#LXR").bind("focus", function () { InfoInput("LXR", "请填写联系人"); });
+    $("#LXDH").bind("blur", function () { ValidateInput("LXDH", "联系电话"); });
     $("#LXDH").bind("focus", function () { InfoInput("LXDH", "请填写联系电话"); });
     ue.addListener("focus", function (type, event) { InfoBCMS("BCMS", "请填写详情描述"); });
     ue.addListener("blur", function (type, event) { ValidateBCMS("BCMS", "忘记填写详情描述啦"); });
@@ -25,14 +27,11 @@ function ValidateZP() {
 //验证价格
 function ValidateJG() {
     if ($("#JG").val() === "" || $("#JG").val() === null) {
-        //$("#divJGTip").css("display", "block");
-        //$("#divJGTip").attr("class", "Warn");
-        //$("#divJGTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写价格啦');
-        //$("#spanJG").css("border-color", "#F2272D");
-        //return false;
-        $("#divJGTip").css("display", "none");
-        $("#spanJG").css("border-color", "#cccccc");
-        return true;
+        $("#divJGTip").css("display", "block");
+        $("#divJGTip").attr("class", "Warn");
+        $("#divJGTip").html('<img src="' + getRootPath() + '/Areas/Business/Css/images/warn.png" class="imgTip" />忘记填写价格啦');
+        $("#spanJG").css("border-color", "#F2272D");
+        return false;
     } else {
         if (ValidateDecimal($("#JG").val())) {
             $("#divJGTip").css("display", "none");
@@ -180,14 +179,14 @@ function ValidateSelect(idout, idin, message) {
 }
 //验证共有
 function ValidateCommon() {
-    if (ValidateInput("BT", "标题") & ValidateZP() & ValidateLXDH())
+    if (ValidateInput("BT", "标题") & ValidateZP() & ValidateInput("LXR", "联系人") & ValidateLXDH())
         return true;
     else
         return false;
 }
 //验证共有不包括图片
 function ValidateCommonWithoutZP() {
-    if (ValidateInput("BT", "标题") & ValidateLXDH())
+    if (ValidateInput("BT", "标题") & ValidateInput("LXR", "联系人") & ValidateLXDH())
         return true;
     else
         return false;

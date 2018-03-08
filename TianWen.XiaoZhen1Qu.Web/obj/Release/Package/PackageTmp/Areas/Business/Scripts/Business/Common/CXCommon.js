@@ -13,7 +13,7 @@ function LoadBody(TYPE, PageIndex) {
         {
             TYPE: TYPE,
             KEY: getUrlParam("ss"),
-            PageSize: 5,
+            PageSize: 100,
             PageIndex: PageIndex
         },
         success: function (xml) {
@@ -40,7 +40,7 @@ function LoadCX_CommonInfo(obj) {
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
     html += ('<p class="p_li_body_left_center_bt">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_left_center_cs font_size16">' + obj.CX + ' / ' + '［' + obj.QY + '-' + obj.DD + '］ ' + obj.JTDZ + '</p>');
+    html += ('<p class="p_li_body_left_center_cs font_size16">' + obj.CX + ' / ' + '［' + ValidateNull(obj.QY) + '-' + ValidateNull(obj.DD) + '］ ' + obj.JTDZ + '</p>');
     html += ('<p class="p_li_body_left_center_dz font_size16">' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
