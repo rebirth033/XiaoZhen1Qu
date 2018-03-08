@@ -122,6 +122,3 @@ F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.Framework\ob
 F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.Framework\obj\Debug\TianWen.Framework.pdb
 D:\福建沐晗信息技术有限公司\源代码\TianWen.Framework\obj\Debug\TianWen.Framework.csprojResolveAssemblyReference.cache
 F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.Framework\obj\Debug\TianWen.Framework.csprojResolveAssemblyReference.cache
-F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.Framework\bin\Debug\FluentNHibernate.dll
-F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.Framework\bin\Debug\NHibernate.dll
-F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.Framework\bin\Debug\Iesi.Collections.dll
