@@ -58,15 +58,15 @@ function LoadJBXX(obj) {
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">出厂年份：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.CCNF + '</span>');
+    html += ('<span class="span_body_left_body_right_right">' + ValidateNull(obj.CCNF) + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">表显里程：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.XSLC + '万公里</span>');
+    html += ('<span class="span_body_left_body_right_right">' + ValidateNull(obj.XSLC, '万公里') + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">额定载重：</span>');
-    html += ('<span class="span_body_left_body_right_right">' + obj.EDZZ + '吨</span>');
+    html += ('<span class="span_body_left_body_right_right">' + ValidateNull(obj.EDZZ, '吨') + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">看车地址：</span>');
@@ -92,19 +92,19 @@ function LoadXQ(obj, BCMSString) {
     html += ('<div class="div_body_left_body_xq_xx_left">基本信息</div>');
     html += ('<div class="div_body_left_body_xq_xx_right">');
 
-    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_left">出厂时间</span><span class="span_body_left_body_xq_xx_right">' + obj.CCNF + obj.CCYF + '</span></p>');
-    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_left">表显里程</span><span class="span_body_left_body_xq_xx_right">' + obj.XSLC + '</span></p>');
+    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_left">出厂时间：</span><span class="span_body_left_body_xq_xx_right">' + ValidateNull(obj.CCNF) + '</span></p>');
+    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_left">表显里程:</span><span class="span_body_left_body_xq_xx_right">' + ValidateNull(obj.XSLC) + '</span></p>');
 
-    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_left">马力</span><span class="span_body_left_body_xq_xx_right">120匹</span></p>');
-    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_left">变速箱档位数</span><span class="span_body_left_body_xq_xx_right">5</span></p>');
+    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_left">马力：</span><span class="span_body_left_body_xq_xx_right">120匹</span></p>');
+    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_left">变速箱档位数：</span><span class="span_body_left_body_xq_xx_right">5</span></p>');
 
-    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_left">整车重量</span><span class="span_body_left_body_xq_xx_right">4.49吨</span></p>');
-    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_left">额定载重</span><span class="span_body_left_body_xq_xx_right">' + obj.EDZZ + '吨</span></p>');
+    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_left">整车重量：</span><span class="span_body_left_body_xq_xx_right">4.49吨</span></p>');
+    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_left">额定载重：</span><span class="span_body_left_body_xq_xx_right">' + ValidateNull(obj.EDZZ, '吨') + '</span></p>');
 
-    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_left">货箱长度</span><span class="span_body_left_body_xq_xx_right">4.2米</span></p>');
-    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_left">货箱宽度</span><span class="span_body_left_body_xq_xx_right">2.1米</span></p>');
+    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_left">货箱长度：</span><span class="span_body_left_body_xq_xx_right">4.2米</span></p>');
+    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_left">货箱宽度：</span><span class="span_body_left_body_xq_xx_right">2.1米</span></p>');
 
-    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_left">货箱高度</span><span class="span_body_left_body_xq_xx_right">2米</span></p>');
+    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_left">货箱高度：</span><span class="span_body_left_body_xq_xx_right">2米</span></p>');
 
     html += ('</div>');
     html += ('</div>');
