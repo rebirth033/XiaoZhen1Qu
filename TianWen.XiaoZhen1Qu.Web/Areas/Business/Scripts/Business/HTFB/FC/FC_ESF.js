@@ -266,6 +266,7 @@ function LoadJBXX() {
                 $("#spanCQNX").html(xml.Value.FC_ESFJBXX.CQNX);
                 $("#spanCQLX").html(xml.Value.FC_ESFJBXX.CQLX);
                 $("#spanJZND").html(xml.Value.FC_ESFJBXX.JZND);
+                $("#SJ").html(xml.Value.FC_ESFJBXX.SJ);
                 $("#XQDZ").val(xml.Value.FC_ESFJBXX.XQMC);
                 //设置编辑器的内容
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
@@ -287,6 +288,7 @@ function FB() {
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "CX", "'" + $("#spanFWCX").html() + "'");
+    obj = jsonObj.AddJson(obj, "SJ", "'" + $("#SJ").val() + "'");
     obj = jsonObj.AddJson(obj, "ZXQK", "'" + $("#spanZXQK").html() + "'");
     obj = jsonObj.AddJson(obj, "ZZLX", "'" + $("#spanZZLX").html() + "'");
     obj = jsonObj.AddJson(obj, "CQNX", "'" + $("#spanCQNX").html() + "'");

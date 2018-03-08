@@ -2765,6 +2765,9 @@ insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID
 values (950, '汽车美容/装饰类别', '封釉', '4', 4, null, null, 199, 'LB=950', 'feng you ', 'fengyou', 'fy');
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (9501, '汽车美容/装饰类别', '喷漆', '4', 4, null, null, 199, 'LB=9501', 'peng qi', 'pengqi', 'pq');
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
 values (951, '汽车美容/装饰类别', '内饰清洗', '5', 5, null, null, 199, 'LB=951', 'nei shi qing xi ', 'neishiqingxi', 'nsqx');
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
@@ -3252,6 +3255,9 @@ values (1112, '汽车配件类别', '养护用品', '8', 8, null, null, 2001, 'LB=1112', '
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
 values (1113, '汽车配件类别', '改装配件', '9', 9, null, null, 2001, 'LB=1113', 'gai zhuang pei jian ', 'gaizhuangpeijian', 'gzpj');
+
+insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
+values (11131, '汽车配件类别', '车灯', '10', 10, null, null, 2001, 'LB=11131', 'che deng ', 'chedeng', 'cd');
 
 insert into codes_cl (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, ISHOT, LBID, CONDITIONS, CODENAMEPY, CODENAMEPYQKG, CODENAMEPYSZM)
 values (1114, '汽车配件类别', '其他', '10', 10, null, null, 2001, 'LB=1114', 'qi ta ', 'qita', 'qt');
