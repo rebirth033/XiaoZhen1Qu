@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    $("#span_content_info_qhcs").bind("click", LoadXZQByGrade);
+    $("#span_content_info_qhcs").bind("click", ToChangeCity);
     $("body").bind("click", function () { Close("_XZQ");});
     BindXZQClick("QY");
     BindXZQClick("DD");
@@ -167,4 +167,8 @@ function SelectQY(obj, type, code) {
 function SelectDD(obj, type) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
+}
+//跳转切换行政区页面
+function ToChangeCity() {
+    window.location.href = getRootPath() + "/SY/ChangeCity";
 }

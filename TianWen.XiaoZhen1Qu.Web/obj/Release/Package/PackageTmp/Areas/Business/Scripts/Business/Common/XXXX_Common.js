@@ -208,18 +208,4 @@ function SCXX(jcxxid) {
     else {
         window.location.href = getRootPath() + "/YHDL/YHDL?To=SY";
     }
-<<<<<<< HEAD
-}
-//判断非空
-function ValidateNull(value, dw) {
-    if (value === "" || (value.indexOf("请选择") !== -1))
-        return "暂无";
-    else {
-        if (dw !== undefined)
-            return value + dw;
-        else
-            return value;
-    }
-=======
->>>>>>> 4b90082565d3902edf3ba262764c6ad5ab418489
 }
