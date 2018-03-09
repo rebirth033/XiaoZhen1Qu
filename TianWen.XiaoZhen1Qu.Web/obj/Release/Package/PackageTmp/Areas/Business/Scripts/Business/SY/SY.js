@@ -18,7 +18,6 @@ $(document).ready(function () {
 });
 //首页获取title
 function GetHeadNav() {
-    //$("#title").html("信息小镇_首页");
     document.title = "信息小镇_首页";
 }
 //发布信息
