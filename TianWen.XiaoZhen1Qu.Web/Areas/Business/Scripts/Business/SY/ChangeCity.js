@@ -6,7 +6,7 @@
 //加载默认
 function LoadDefault() {
     document.title = "信息小镇_切换城市";
-    LoadCitys();
+    //LoadCitys();
 }
 //加载城市
 function LoadCitys() {
@@ -28,9 +28,9 @@ function LoadCitys() {
                             result += '<div class="div_row"><span class="span_zm">' + array[j] + '</span><span class="span_sf">' + xml.list[i].CODENAME + '</span>';
                             for (var k = 0; k < xml.list.length; k++) {
                                 if (xml.list[k].PARENTID === xml.list[i].CODEID)
-                                    result += '<span class="span_cs">' + xml.list[k].CODENAME + '</span>';
+                                    result += '<span class="span_cs" onclick="SelectCity(\'' + xml.list[k].CODEID + '\',\'' + xml.list[k].CODENAME + '\')">' + xml.list[k].CODENAME + '</span>';
                             }
-                            
+
                             result += '</div>';
                         }
                     }
@@ -41,5 +41,36 @@ function LoadCitys() {
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
 
         }
+    });
+}
+//选择城市
+function SelectCity(codeid, codename) {
+    $.ajax({
+        type: "POST",
+        url: getRootPath() + "/Common/QHXZQ",
+        dataType: "json",
+        data:
+        {
+            XZQ: codename,
+            XZQDM: codeid
+        },
+        success: function (xml) {
+            if (xml.Result === 1) {
+                window.location.href = getRootPath() + "/SY/SY";
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
+
+        }
+    });
+}
+//选择字母
+function SelectZM(zm) {
+    $(".span_zm").each(function () {
+        $(this).css("background-color", "#bc6ba6");
+    });
+    $(".span_zm").each(function () {
+        if (this.innerHTML === zm)
+            $(this).css("background-color", "#ad5b97");
     });
 }

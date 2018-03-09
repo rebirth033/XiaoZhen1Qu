@@ -15,49 +15,491 @@
                 <span id="spanXSLC" class="span_spaninput_out SRK">
                     <input id="SS" class="form-control span_spaninput_in" type="text" placeholder="搜索城市" />
                     <input type="hidden" id="LBID" />
-                    <input type="hidden" id="URL" />
-                    <input type="hidden" id="CONDITION" />
                     <span id="span_ss" class="span_ss">搜索</span>
                 </span>
                 <div id="divSSJGlist" class="div_select_dropdown"></div>
-                <span class="span_head_right_ss">北京</span>
+                <span class="span_head_right_ss" onclick="SelectCity('28', '北京')">北京</span>
                 <span class="span_head_right_ss_split">|</span>
-                <span class="span_head_right_ss">天津</span>
+                <span class="span_head_right_ss" onclick="SelectCity('29', '天津')">天津</span>
                 <span class="span_head_right_ss_split">|</span>
-                <span class="span_head_right_ss">上海</span>
+                <span class="span_head_right_ss" onclick="SelectCity('30', '上海')">上海</span>
                 <span class="span_head_right_ss_split">|</span>
-                <span class="span_head_right_ss">重庆</span>
+                <span class="span_head_right_ss" onclick="SelectCity('31', '重庆')">重庆</span>
                 <span class="span_head_right_ss_split">|</span>
-                <span class="span_head_right_ss">广州</span>
+                <span class="span_head_right_ss" onclick="SelectCity('231', '广州')">广州</span>
                 <span class="span_head_right_ss_split">|</span>
-                <span class="span_head_right_ss">深圳</span>
+                <span class="span_head_right_ss" onclick="SelectCity('232', '深圳')">深圳</span>
                 <span class="span_head_right_ss_split">|</span>
-                <span class="span_head_right_ss">成都</span>
+                <span class="span_head_right_ss" onclick="SelectCity('285', '成都')">成都</span>
                 <span class="span_head_right_ss_split">|</span>
-                <span class="span_head_right_ss">南京</span>
+                <span class="span_head_right_ss" onclick="SelectCity('105', '南京')">南京</span>
                 <span class="span_head_right_ss_split">|</span>
-                <span class="span_head_right_ss">杭州</span>
+                <span class="span_head_right_ss" onclick="SelectCity('118', '杭州')">杭州</span>
                 <span class="span_head_right_ss_split">|</span>
-                <span class="span_head_right_ss">武汉</span>
+                <span class="span_head_right_ss" onclick="SelectCity('200', '武汉')">武汉</span>
             </div>
         </div>
     </div>
     <div class="div_body">
         <div class="div_body_top">
         </div>
-        <div id="div_body_middle" class="div_body_middle">
-            @*<div class="div_row"><span class="span_zm">A</span><span class="span_sf"></span><span class="span_cs"></span></div>
-            <div class="div_row"><span class="span_zm">F</span><span class="span_sf"></span><span class="span_cs"></span></div>
-            <div class="div_row"><span class="span_zm">G</span><span class="span_sf"></span><span class="span_cs"></span></div>
-            <div class="div_row"><span class="span_zm">H</span><span class="span_sf"></span><span class="span_cs"></span></div>
-            <div class="div_row"><span class="span_zm">J</span><span class="span_sf"></span><span class="span_cs"></span></div>
-            <div class="div_row"><span class="span_zm">L</span><span class="span_sf"></span><span class="span_cs"></span></div>
-            <div class="div_row"><span class="span_zm">N</span><span class="span_sf"></span><span class="span_cs"></span></div>
-            <div class="div_row"><span class="span_zm">Q</span><span class="span_sf"></span><span class="span_cs"></span></div>
-            <div class="div_row"><span class="span_zm">S</span><span class="span_sf"></span><span class="span_cs"></span></div>
-            <div class="div_row"><span class="span_zm">X</span><span class="span_sf"></span><span class="span_cs"></span></div>
-            <div class="div_row"><span class="span_zm">Y</span><span class="span_sf"></span><span class="span_cs"></span></div>
-            <div class="div_row"><span class="span_zm">Z</span><span class="span_sf"></span><span class="span_cs"></span></div>*@
+
+        <div class="div_body_middle" id="div_body_middle">
+            <div class="div_row" onmouseover="SelectZM('A')">
+                <span class="span_zm">A</span>
+                <span class="span_sf">安徽</span>
+                <span class="span_cs" onclick="SelectCity('129','合肥')">合肥</span>
+                <span class="span_cs" onclick="SelectCity('130','芜湖')">芜湖</span>
+                <span class="span_cs" onclick="SelectCity('131','蚌埠')">蚌埠</span>
+                <span class="span_cs" onclick="SelectCity('132','阜阳')">阜阳</span>
+                <span class="span_cs" onclick="SelectCity('133','淮南')">淮南</span>
+                <span class="span_cs" onclick="SelectCity('134','安庆')">安庆</span>
+                <span class="span_cs" onclick="SelectCity('135','宿州')">宿州</span>
+                <span class="span_cs" onclick="SelectCity('136','六安')">六安</span>
+                <span class="span_cs" onclick="SelectCity('137','淮北')">淮北</span>
+                <span class="span_cs" onclick="SelectCity('138','滁州')">滁州</span>
+                <span class="span_cs" onclick="SelectCity('139','马鞍山')">马鞍山</span>
+                <span class="span_cs" onclick="SelectCity('140','铜陵')">铜陵</span>
+                <span class="span_cs" onclick="SelectCity('141','宣城')">宣城</span>
+                <span class="span_cs" onclick="SelectCity('142','亳州')">亳州</span>
+                <span class="span_cs" onclick="SelectCity('143','黄山')">黄山</span>
+                <span class="span_cs" onclick="SelectCity('144','池州')">池州</span>
+            </div>
+            <div class="div_row" onmouseover="SelectZM('F')">
+                <span class="span_zm">F</span>
+                <span class="span_sf">福建</span>
+                <span class="span_cs" onclick="SelectCity('145','福州')">福州</span>
+                <span class="span_cs" onclick="SelectCity('146','厦门')">厦门</span>
+                <span class="span_cs" onclick="SelectCity('147','泉州')">泉州</span>
+                <span class="span_cs" onclick="SelectCity('148','莆田')">莆田</span>
+                <span class="span_cs" onclick="SelectCity('149','漳州')">漳州</span>
+                <span class="span_cs" onclick="SelectCity('150','宁德')">宁德</span>
+                <span class="span_cs" onclick="SelectCity('151','三明')">三明</span>
+                <span class="span_cs" onclick="SelectCity('152','南平')">南平</span>
+                <span class="span_cs" onclick="SelectCity('153','龙岩')">龙岩</span>
+            </div>
+            <div class="div_row" style="height: 100px;" onmouseover="SelectZM('G')">
+                <span class="span_zm" style="height: 250px; padding-top: 100px;float: left">G</span>
+                <span class="span_sf" style="height: 100px; padding: 36px 16px;">广东</span>
+                <span class="span_cs" onclick="SelectCity('231','广州')">广州</span>
+                <span class="span_cs" onclick="SelectCity('232','深圳')">深圳</span>
+                <span class="span_cs" onclick="SelectCity('233','东莞')">东莞</span>
+                <span class="span_cs" onclick="SelectCity('234','佛山')">佛山</span>
+                <span class="span_cs" onclick="SelectCity('235','中山')">中山</span>
+                <span class="span_cs" onclick="SelectCity('236','珠海')">珠海</span>
+                <span class="span_cs" onclick="SelectCity('237','惠州')">惠州</span>
+                <span class="span_cs" onclick="SelectCity('238','江门')">江门</span>
+                <span class="span_cs" onclick="SelectCity('239','汕头')">汕头</span>
+                <span class="span_cs" onclick="SelectCity('240','湛江')">湛江</span>
+                <span class="span_cs" onclick="SelectCity('241','肇庆')">肇庆</span>
+                <span class="span_cs" onclick="SelectCity('242','茂名')">茂名</span>
+                <span class="span_cs" onclick="SelectCity('243','揭阳')">揭阳</span>
+                <span class="span_cs" onclick="SelectCity('244','梅州')">梅州</span>
+                <span class="span_cs" onclick="SelectCity('245','清远')">清远</span>
+                <span class="span_cs" onclick="SelectCity('246','阳江')">阳江</span>
+                <span class="span_cs" onclick="SelectCity('247','韶关')">韶关</span>
+                <span class="span_cs" onclick="SelectCity('248','河源')">河源</span>
+                <span class="span_cs" onclick="SelectCity('249','云浮')">云浮</span>
+                <span class="span_cs" onclick="SelectCity('250','汕尾')">汕尾</span>
+                <span class="span_cs" onclick="SelectCity('251','潮州')">潮州</span>
+            </div>
+            <div class="div_row" onmouseover="SelectZM('G')">
+                <span class="span_sf">广西</span>
+                <span class="span_cs" onclick="SelectCity('252','南宁')">南宁</span>
+                <span class="span_cs" onclick="SelectCity('253','柳州')">柳州</span>
+                <span class="span_cs" onclick="SelectCity('254','桂林')">桂林</span>
+                <span class="span_cs" onclick="SelectCity('255','玉林')">玉林</span>
+                <span class="span_cs" onclick="SelectCity('256','梧州')">梧州</span>
+                <span class="span_cs" onclick="SelectCity('257','北海')">北海</span>
+                <span class="span_cs" onclick="SelectCity('258','贵港')">贵港</span>
+                <span class="span_cs" onclick="SelectCity('259','钦州')">钦州</span>
+                <span class="span_cs" onclick="SelectCity('260','百色')">百色</span>
+                <span class="span_cs" onclick="SelectCity('261','河池')">河池</span>
+                <span class="span_cs" onclick="SelectCity('262','来宾')">来宾</span>
+                <span class="span_cs" onclick="SelectCity('263','贺州')">贺州</span>
+                <span class="span_cs" onclick="SelectCity('264','防城港')">防城港</span>
+                <span class="span_cs" onclick="SelectCity('265','崇左')">崇左</span>
+            </div>
+            <div class="div_row" onmouseover="SelectZM('G')">
+                <span class="span_sf">贵州</span>
+                <span class="span_cs" onclick="SelectCity('306','贵阳')">贵阳</span>
+                <span class="span_cs" onclick="SelectCity('307','遵义')">遵义</span>
+                <span class="span_cs" onclick="SelectCity('308','黔东南')">黔东南</span>
+                <span class="span_cs" onclick="SelectCity('309','黔南')">黔南</span>
+                <span class="span_cs" onclick="SelectCity('310','六盘水')">六盘水</span>
+                <span class="span_cs" onclick="SelectCity('311','毕节')">毕节</span>
+                <span class="span_cs" onclick="SelectCity('312','铜仁')">铜仁</span>
+                <span class="span_cs" onclick="SelectCity('313','安顺')">安顺</span>
+                <span class="span_cs" onclick="SelectCity('314','黔西南')">黔西南</span>
+            </div>
+            <div class="div_row" onmouseover="SelectZM('G')">
+                <span class="span_sf">甘肃</span>
+                <span class="span_cs" onclick="SelectCity('348','兰州')">兰州</span>
+                <span class="span_cs" onclick="SelectCity('349','天水')">天水</span>
+                <span class="span_cs" onclick="SelectCity('350','白银')">白银</span>
+                <span class="span_cs" onclick="SelectCity('351','庆阳')">庆阳</span>
+                <span class="span_cs" onclick="SelectCity('352','平凉')">平凉</span>
+                <span class="span_cs" onclick="SelectCity('353','酒泉')">酒泉</span>
+                <span class="span_cs" onclick="SelectCity('354','张掖')">张掖</span>
+                <span class="span_cs" onclick="SelectCity('355','武威')">武威</span>
+                <span class="span_cs" onclick="SelectCity('356','定西')">定西</span>
+                <span class="span_cs" onclick="SelectCity('357','金昌')">金昌</span>
+                <span class="span_cs" onclick="SelectCity('358','陇南')">陇南</span>
+                <span class="span_cs" onclick="SelectCity('359','临夏')">临夏</span>
+                <span class="span_cs" onclick="SelectCity('360','嘉峪关')">嘉峪关</span>
+                <span class="span_cs" onclick="SelectCity('361','甘南')">甘南</span>
+            </div>
+            <div class="div_row" onmouseover="SelectZM('H')">
+                <span class="span_zm" style="height: 350px; padding-top: 140px;float: left">H</span>
+                <span class="span_sf">河北</span>
+                <span class="span_cs" onclick="SelectCity('32','石家庄')">石家庄</span>
+                <span class="span_cs" onclick="SelectCity('33','保定')">保定</span>
+                <span class="span_cs" onclick="SelectCity('34','唐山')">唐山</span>
+                <span class="span_cs" onclick="SelectCity('35','廊坊')">廊坊</span>
+                <span class="span_cs" onclick="SelectCity('36','邯郸')">邯郸</span>
+                <span class="span_cs" onclick="SelectCity('37','秦皇岛')">秦皇岛</span>
+                <span class="span_cs" onclick="SelectCity('38','沧州')">沧州</span>
+                <span class="span_cs" onclick="SelectCity('39','邢台')">邢台</span>
+                <span class="span_cs" onclick="SelectCity('40','衡水')">衡水</span>
+                <span class="span_cs" onclick="SelectCity('41','张家口')">张家口</span>
+                <span class="span_cs" onclick="SelectCity('42','承德')">承德</span>
+                <span class="span_cs" onclick="SelectCity('43','定州')">定州</span>
+                <span class="span_cs" onclick="SelectCity('44','辛集')">辛集</span>
+                <span class="span_cs" onclick="SelectCity('45','雄安新区')">雄安新区</span>
+            </div>
+            <div class="div_row" onmouseover="SelectZM('H')">
+                <span class="span_sf">黑龙江</span>
+                <span class="span_cs" onclick="SelectCity('92','哈尔滨')">哈尔滨</span>
+                <span class="span_cs" onclick="SelectCity('93','大庆')">大庆</span>
+                <span class="span_cs" onclick="SelectCity('94','齐齐哈尔')">齐齐哈尔</span>
+                <span class="span_cs" onclick="SelectCity('95','牡丹江')">牡丹江</span>
+                <span class="span_cs" onclick="SelectCity('96','绥化')">绥化</span>
+                <span class="span_cs" onclick="SelectCity('97','佳木斯')">佳木斯</span>
+                <span class="span_cs" onclick="SelectCity('98','鸡西')">鸡西</span>
+                <span class="span_cs" onclick="SelectCity('99','双鸭山')">双鸭山</span>
+                <span class="span_cs" onclick="SelectCity('100','鹤岗')">鹤岗</span>
+                <span class="span_cs" onclick="SelectCity('101','黑河')">黑河</span>
+                <span class="span_cs" onclick="SelectCity('102','伊春')">伊春</span>
+                <span class="span_cs" onclick="SelectCity('103','七台河')">七台河</span>
+                <span class="span_cs" onclick="SelectCity('104','大兴安岭')">大兴安岭</span>
+            </div>
+            <div class="div_row" onmouseover="SelectZM('H')">
+                <span class="span_sf">河南</span>
+                <span class="span_cs" onclick="SelectCity('182','郑州')">郑州</span>
+                <span class="span_cs" onclick="SelectCity('183','洛阳')">洛阳</span>
+                <span class="span_cs" onclick="SelectCity('184','新乡')">新乡</span>
+                <span class="span_cs" onclick="SelectCity('185','南阳')">南阳</span>
+                <span class="span_cs" onclick="SelectCity('186','许昌')">许昌</span>
+                <span class="span_cs" onclick="SelectCity('187','平顶山')">平顶山</span>
+                <span class="span_cs" onclick="SelectCity('188','安阳')">安阳</span>
+                <span class="span_cs" onclick="SelectCity('189','焦作')">焦作</span>
+                <span class="span_cs" onclick="SelectCity('190','商丘')">商丘</span>
+                <span class="span_cs" onclick="SelectCity('191','开封')">开封</span>
+                <span class="span_cs" onclick="SelectCity('192','濮阳')">濮阳</span>
+                <span class="span_cs" onclick="SelectCity('193','周口')">周口</span>
+                <span class="span_cs" onclick="SelectCity('194','信阳')">信阳</span>
+                <span class="span_cs" onclick="SelectCity('195','驻马店')">驻马店</span>
+                <span class="span_cs" onclick="SelectCity('196','漯河')">漯河</span>
+                <span class="span_cs" onclick="SelectCity('197','三门峡')">三门峡</span>
+                <span class="span_cs" onclick="SelectCity('198','鹤壁')">鹤壁</span>
+                <span class="span_cs" onclick="SelectCity('199','济源')">济源</span>
+            </div>
+            <div class="div_row" onmouseover="SelectZM('H')">
+                <span class="span_sf">湖北</span>
+                <span class="span_cs" onclick="SelectCity('200','武汉')">武汉</span>
+                <span class="span_cs" onclick="SelectCity('201','宜昌')">宜昌</span>
+                <span class="span_cs" onclick="SelectCity('202','襄阳')">襄阳</span>
+                <span class="span_cs" onclick="SelectCity('203','荆州')">荆州</span>
+                <span class="span_cs" onclick="SelectCity('204','十堰')">十堰</span>
+                <span class="span_cs" onclick="SelectCity('205','黄石')">黄石</span>
+                <span class="span_cs" onclick="SelectCity('206','孝感')">孝感</span>
+                <span class="span_cs" onclick="SelectCity('207','黄冈')">黄冈</span>
+                <span class="span_cs" onclick="SelectCity('208','恩施')">恩施</span>
+                <span class="span_cs" onclick="SelectCity('209','荆门')">荆门</span>
+                <span class="span_cs" onclick="SelectCity('210','咸宁')">咸宁</span>
+                <span class="span_cs" onclick="SelectCity('211','鄂州')">鄂州</span>
+                <span class="span_cs" onclick="SelectCity('212','随州')">随州</span>
+                <span class="span_cs" onclick="SelectCity('213','潜江')">潜江</span>
+                <span class="span_cs" onclick="SelectCity('214','天门')">天门</span>
+                <span class="span_cs" onclick="SelectCity('215','仙桃')">仙桃</span>
+                <span class="span_cs" onclick="SelectCity('216','神农架')">神农架</span>
+            </div>
+            <div class="div_row" onmouseover="SelectZM('H')">
+                <span class="span_sf">湖南</span>
+                <span class="span_cs" onclick="SelectCity('217','长沙')">长沙</span>
+                <span class="span_cs" onclick="SelectCity('218','株洲')">株洲</span>
+                <span class="span_cs" onclick="SelectCity('219','益阳')">益阳</span>
+                <span class="span_cs" onclick="SelectCity('220','常德')">常德</span>
+                <span class="span_cs" onclick="SelectCity('221','衡阳')">衡阳</span>
+                <span class="span_cs" onclick="SelectCity('222','湘潭')">湘潭</span>
+                <span class="span_cs" onclick="SelectCity('223','岳阳')">岳阳</span>
+                <span class="span_cs" onclick="SelectCity('224','郴州')">郴州</span>
+                <span class="span_cs" onclick="SelectCity('225','邵阳')">邵阳</span>
+                <span class="span_cs" onclick="SelectCity('226','怀化')">怀化</span>
+                <span class="span_cs" onclick="SelectCity('227','永州')">永州</span>
+                <span class="span_cs" onclick="SelectCity('228','娄底')">娄底</span>
+                <span class="span_cs" onclick="SelectCity('229','湘西')">湘西</span>
+                <span class="span_cs" onclick="SelectCity('230','张家界')">张家界</span>
+            </div>
+            <div class="div_row" style="height: 100px;" onmouseover="SelectZM('H')">
+                <span class="span_sf" style="height: 100px; padding: 36px 16px;">海南</span>
+                <span class="span_cs" onclick="SelectCity('266','海口')">海口</span>
+                <span class="span_cs" onclick="SelectCity('267','三亚')">三亚</span>
+                <span class="span_cs" onclick="SelectCity('268','三沙')">三沙</span>
+                <span class="span_cs" onclick="SelectCity('269','儋州')">儋州</span>
+                <span class="span_cs" onclick="SelectCity('270','文昌')">文昌</span>
+                <span class="span_cs" onclick="SelectCity('271','白沙')">白沙</span>
+                <span class="span_cs" onclick="SelectCity('272','定安')">定安</span>
+                <span class="span_cs" onclick="SelectCity('273','临高')">临高</span>
+                <span class="span_cs" onclick="SelectCity('274','东方')">东方</span>
+                <span class="span_cs" onclick="SelectCity('275','昌江')">昌江</span>
+                <span class="span_cs" onclick="SelectCity('276','琼中')">琼中</span>
+                <span class="span_cs" onclick="SelectCity('277','陵水')">陵水</span>
+                <span class="span_cs" onclick="SelectCity('278','澄迈')">澄迈</span>
+                <span class="span_cs" onclick="SelectCity('279','乐东')">乐东</span>
+                <span class="span_cs" onclick="SelectCity('280','屯昌')">屯昌</span>
+                <span class="span_cs" onclick="SelectCity('281','五指山')">五指山</span>
+                <span class="span_cs" onclick="SelectCity('282','万宁')">万宁</span>
+                <span class="span_cs" onclick="SelectCity('283','保亭')">保亭</span>
+                <span class="span_cs" onclick="SelectCity('284','琼海')">琼海</span>
+            </div>
+            <div class="div_row" onmouseover="SelectZM('J')">
+                <span class="span_zm" style="height: 150px; padding-top: 60px;">J</span>
+                <span class="span_sf">吉林</span>
+                <span class="span_cs" onclick="SelectCity('83','长春')">长春</span>
+                <span class="span_cs" onclick="SelectCity('84','吉林')">吉林</span>
+                <span class="span_cs" onclick="SelectCity('85','四平')">四平</span>
+                <span class="span_cs" onclick="SelectCity('86','延边')">延边</span>
+                <span class="span_cs" onclick="SelectCity('87','松原')">松原</span>
+                <span class="span_cs" onclick="SelectCity('88','白城')">白城</span>
+                <span class="span_cs" onclick="SelectCity('89','通化')">通化</span>
+                <span class="span_cs" onclick="SelectCity('90','白山')">白山</span>
+                <span class="span_cs" onclick="SelectCity('91','辽源')">辽源</span>
+            </div>
+            <div class="div_row" onmouseover="SelectZM('J')">
+                <span class="span_sf">江苏</span>
+                <span class="span_cs" onclick="SelectCity('105','南京')">南京</span>
+                <span class="span_cs" onclick="SelectCity('106','苏州')">苏州</span>
+                <span class="span_cs" onclick="SelectCity('107','无锡')">无锡</span>
+                <span class="span_cs" onclick="SelectCity('108','常州')">常州</span>
+                <span class="span_cs" onclick="SelectCity('109','徐州')">徐州</span>
+                <span class="span_cs" onclick="SelectCity('110','南通')">南通</span>
+                <span class="span_cs" onclick="SelectCity('111','扬州')">扬州</span>
+                <span class="span_cs" onclick="SelectCity('112','盐城')">盐城</span>
+                <span class="span_cs" onclick="SelectCity('113','淮安')">淮安</span>
+                <span class="span_cs" onclick="SelectCity('114','连云港')">连云港</span>
+                <span class="span_cs" onclick="SelectCity('115','泰州')">泰州</span>
+                <span class="span_cs" onclick="SelectCity('116','宿迁')">宿迁</span>
+                <span class="span_cs" onclick="SelectCity('117','镇江')">镇江</span>
+            </div>
+            <div class="div_row" onmouseover="SelectZM('J')">
+                <span class="span_sf">江西</span>
+                <span class="span_cs" onclick="SelectCity('154','南昌')">南昌</span>
+                <span class="span_cs" onclick="SelectCity('155','赣州')">赣州</span>
+                <span class="span_cs" onclick="SelectCity('156','九江')">九江</span>
+                <span class="span_cs" onclick="SelectCity('157','宜春')">宜春</span>
+                <span class="span_cs" onclick="SelectCity('158','吉安')">吉安</span>
+                <span class="span_cs" onclick="SelectCity('159','上饶')">上饶</span>
+                <span class="span_cs" onclick="SelectCity('160','萍乡')">萍乡</span>
+                <span class="span_cs" onclick="SelectCity('161','抚州')">抚州</span>
+                <span class="span_cs" onclick="SelectCity('162','景德镇')">景德镇</span>
+                <span class="span_cs" onclick="SelectCity('163','新余')">新余</span>
+                <span class="span_cs" onclick="SelectCity('164','鹰潭')">鹰潭</span>
+            </div>
+            <div class="div_row" onmouseover="SelectZM('L')">
+                <span class="span_zm">L</span>
+                <span class="span_sf">辽宁</span>
+                <span class="span_cs" onclick="SelectCity('69','沈阳')">沈阳</span>
+                <span class="span_cs" onclick="SelectCity('70','大连')">大连</span>
+                <span class="span_cs" onclick="SelectCity('71','鞍山')">鞍山</span>
+                <span class="span_cs" onclick="SelectCity('72','锦州')">锦州</span>
+                <span class="span_cs" onclick="SelectCity('73','抚顺')">抚顺</span>
+                <span class="span_cs" onclick="SelectCity('74','营口')">营口</span>
+                <span class="span_cs" onclick="SelectCity('75','盘锦')">盘锦</span>
+                <span class="span_cs" onclick="SelectCity('76','朝阳')">朝阳</span>
+                <span class="span_cs" onclick="SelectCity('77','丹东')">丹东</span>
+                <span class="span_cs" onclick="SelectCity('78','辽阳')">辽阳</span>
+                <span class="span_cs" onclick="SelectCity('79','本溪')">本溪</span>
+                <span class="span_cs" onclick="SelectCity('80','葫芦岛')">葫芦岛</span>
+                <span class="span_cs" onclick="SelectCity('81','铁岭')">铁岭</span>
+                <span class="span_cs" onclick="SelectCity('82','阜新')">阜新</span>
+            </div>
+            <div class="div_row" onmouseover="SelectZM('N')">
+                <span class="span_zm" style="height: 100px; padding-top: 35px;">N</span>
+                <span class="span_sf">内蒙</span>
+                <span class="span_cs" onclick="SelectCity('57','呼和浩特')">呼和浩特</span>
+                <span class="span_cs" onclick="SelectCity('58','包头')">包头</span>
+                <span class="span_cs" onclick="SelectCity('59','赤峰')">赤峰</span>
+                <span class="span_cs" onclick="SelectCity('60','鄂尔多斯')">鄂尔多斯</span>
+                <span class="span_cs" onclick="SelectCity('61','通辽')">通辽</span>
+                <span class="span_cs" onclick="SelectCity('62','呼伦贝尔')">呼伦贝尔</span>
+                <span class="span_cs" onclick="SelectCity('63','巴彦淖尔')">巴彦淖尔</span>
+                <span class="span_cs" onclick="SelectCity('64','乌兰察布')">乌兰察布</span>
+                <span class="span_cs" onclick="SelectCity('65','锡林郭勒')">锡林郭勒</span>
+                <span class="span_cs" onclick="SelectCity('66','兴安盟')">兴安盟</span>
+                <span class="span_cs" onclick="SelectCity('67','乌海')">乌海</span>
+                <span class="span_cs" onclick="SelectCity('68','阿拉善')">阿拉善</span>
+            </div>
+            <div class="div_row" onmouseover="SelectZM('N')">
+                <span class="span_sf">宁夏</span>
+                <span class="span_cs" onclick="SelectCity('370','银川')">银川</span>
+                <span class="span_cs" onclick="SelectCity('371','吴忠')">吴忠</span>
+                <span class="span_cs" onclick="SelectCity('372','石嘴山')">石嘴山</span>
+                <span class="span_cs" onclick="SelectCity('373','中卫')">中卫</span>
+                <span class="span_cs" onclick="SelectCity('374','固原')">固原</span>
+            </div>
+            <div class="div_row" onmouseover="SelectZM('Q')">
+                <span class="span_zm">Q</span>
+                <span class="span_sf">青海</span>
+                <span class="span_cs" onclick="SelectCity('362','西宁')">西宁</span>
+                <span class="span_cs" onclick="SelectCity('363','海西')">海西</span>
+                <span class="span_cs" onclick="SelectCity('364','海北')">海北</span>
+                <span class="span_cs" onclick="SelectCity('365','果洛')">果洛</span>
+                <span class="span_cs" onclick="SelectCity('366','海东')">海东</span>
+                <span class="span_cs" onclick="SelectCity('367','黄南')">黄南</span>
+                <span class="span_cs" onclick="SelectCity('368','玉树')">玉树</span>
+                <span class="span_cs" onclick="SelectCity('369','海南')">海南</span>
+            </div>
+            <div class="div_row" onmouseover="SelectZM('S')">
+                <span class="span_zm" style="height: 250px;padding-top: 120px;">S</span>
+                <span class="span_sf">山西</span>
+                <span class="span_cs" onclick="SelectCity('46','太原')">太原</span>
+                <span class="span_cs" onclick="SelectCity('47','临汾')">临汾</span>
+                <span class="span_cs" onclick="SelectCity('48','大同')">大同</span>
+                <span class="span_cs" onclick="SelectCity('49','运城')">运城</span>
+                <span class="span_cs" onclick="SelectCity('50','晋中')">晋中</span>
+                <span class="span_cs" onclick="SelectCity('51','长治')">长治</span>
+                <span class="span_cs" onclick="SelectCity('52','晋城')">晋城</span>
+                <span class="span_cs" onclick="SelectCity('53','阳泉')">阳泉</span>
+                <span class="span_cs" onclick="SelectCity('54','吕梁')">吕梁</span>
+                <span class="span_cs" onclick="SelectCity('55','忻州')">忻州</span>
+                <span class="span_cs" onclick="SelectCity('56','朔州')">朔州</span>
+            </div>
+            <div class="div_row" onmouseover="SelectZM('S')">
+                <span class="span_sf">山东</span>
+                <span class="span_cs" onclick="SelectCity('165','济南')">济南</span>
+                <span class="span_cs" onclick="SelectCity('166','青岛')">青岛</span>
+                <span class="span_cs" onclick="SelectCity('167','烟台')">烟台</span>
+                <span class="span_cs" onclick="SelectCity('168','潍坊')">潍坊</span>
+                <span class="span_cs" onclick="SelectCity('169','临沂')">临沂</span>
+                <span class="span_cs" onclick="SelectCity('170','淄博')">淄博</span>
+                <span class="span_cs" onclick="SelectCity('171','济宁')">济宁</span>
+                <span class="span_cs" onclick="SelectCity('172','泰安')">泰安</span>
+                <span class="span_cs" onclick="SelectCity('173','聊城')">聊城</span>
+                <span class="span_cs" onclick="SelectCity('174','威海')">威海</span>
+                <span class="span_cs" onclick="SelectCity('175','枣庄')">枣庄</span>
+                <span class="span_cs" onclick="SelectCity('176','德州')">德州</span>
+                <span class="span_cs" onclick="SelectCity('177','日照')">日照</span>
+                <span class="span_cs" onclick="SelectCity('178','东营')">东营</span>
+                <span class="span_cs" onclick="SelectCity('179','菏泽')">菏泽</span>
+                <span class="span_cs" onclick="SelectCity('180','滨州')">滨州</span>
+                <span class="span_cs" onclick="SelectCity('181','莱芜')">莱芜</span>
+            </div>
+            <div class="div_row" style="height: 100px" onmouseover="SelectZM('S')">
+                <span class="span_sf" style ="height: 100px; padding-top: 35px;">四川</span>
+                <span class="span_cs" onclick="SelectCity('285','成都')">成都</span>
+                <span class="span_cs" onclick="SelectCity('286','绵阳')">绵阳</span>
+                <span class="span_cs" onclick="SelectCity('287','德阳')">德阳</span>
+                <span class="span_cs" onclick="SelectCity('288','南充')">南充</span>
+                <span class="span_cs" onclick="SelectCity('289','宜宾')">宜宾</span>
+                <span class="span_cs" onclick="SelectCity('290','自贡')">自贡</span>
+                <span class="span_cs" onclick="SelectCity('291','乐山')">乐山</span>
+                <span class="span_cs" onclick="SelectCity('292','泸州')">泸州</span>
+                <span class="span_cs" onclick="SelectCity('293','达州')">达州</span>
+                <span class="span_cs" onclick="SelectCity('294','内江')">内江</span>
+                <span class="span_cs" onclick="SelectCity('295','遂宁')">遂宁</span>
+                <span class="span_cs" onclick="SelectCity('296','攀枝花')">攀枝花</span>
+                <span class="span_cs" onclick="SelectCity('297','眉山')">眉山</span>
+                <span class="span_cs" onclick="SelectCity('298','广安')">广安</span>
+                <span class="span_cs" onclick="SelectCity('299','资阳')">资阳</span>
+                <span class="span_cs" onclick="SelectCity('300','凉山')">凉山</span>
+                <span class="span_cs" onclick="SelectCity('301','广元')">广元</span>
+                <span class="span_cs" onclick="SelectCity('302','雅安')">雅安</span>
+                <span class="span_cs" onclick="SelectCity('303','巴中')">巴中</span>
+                <span class="span_cs" onclick="SelectCity('304','阿坝')">阿坝</span>
+                <span class="span_cs" onclick="SelectCity('305','甘孜')">甘孜</span>
+            </div>
+            <div class="div_row" onmouseover="SelectZM('S')">
+                <span class="span_sf">陕西</span>
+                <span class="span_cs" onclick="SelectCity('338','西安')">西安</span>
+                <span class="span_cs" onclick="SelectCity('339','咸阳')">咸阳</span>
+                <span class="span_cs" onclick="SelectCity('340','宝鸡')">宝鸡</span>
+                <span class="span_cs" onclick="SelectCity('341','渭南')">渭南</span>
+                <span class="span_cs" onclick="SelectCity('342','汉中')">汉中</span>
+                <span class="span_cs" onclick="SelectCity('343','榆林')">榆林</span>
+                <span class="span_cs" onclick="SelectCity('344','延安')">延安</span>
+                <span class="span_cs" onclick="SelectCity('345','安康')">安康</span>
+                <span class="span_cs" onclick="SelectCity('346','商洛')">商洛</span>
+                <span class="span_cs" onclick="SelectCity('347','铜川')">铜川</span>
+            </div>
+            <div class="div_row" onmouseover="SelectZM('X')">
+                <span class="span_zm" style="height: 150px; padding-top: 70px;">X</span>
+                <span class="span_sf">西藏</span>
+                <span class="span_cs" onclick="SelectCity('331','拉萨')">拉萨</span>
+                <span class="span_cs" onclick="SelectCity('332','日喀则')">日喀则</span>
+                <span class="span_cs" onclick="SelectCity('333','山南')">山南</span>
+                <span class="span_cs" onclick="SelectCity('334','林芝')">林芝</span>
+                <span class="span_cs" onclick="SelectCity('335','昌都')">昌都</span>
+                <span class="span_cs" onclick="SelectCity('336','那曲')">那曲</span>
+                <span class="span_cs" onclick="SelectCity('337','阿里')">阿里</span>
+            </div>
+            <div class="div_row" style="height: 100px;" onmouseover="SelectZM('X')">
+                <span class=" span_sf" style="height: 100px; padding-top: 35px;">新疆</span>
+                <span class="span_cs" onclick="SelectCity('375','乌鲁木齐')">乌鲁木齐</span>
+                <span class="span_cs" onclick="SelectCity('376','昌吉')">昌吉</span>
+                <span class="span_cs" onclick="SelectCity('377','巴音郭楞')">巴音郭楞</span>
+                <span class="span_cs" onclick="SelectCity('378','伊犁')">伊犁</span>
+                <span class="span_cs" onclick="SelectCity('379','阿克苏')">阿克苏</span>
+                <span class="span_cs" onclick="SelectCity('380','喀什')">喀什</span>
+                <span class="span_cs" onclick="SelectCity('381','哈密')">哈密</span>
+                <span class="span_cs" onclick="SelectCity('382','克拉玛依')">克拉玛依</span>
+                <span class="span_cs" onclick="SelectCity('383','博尔塔拉')">博尔塔拉</span>
+                <span class="span_cs" onclick="SelectCity('384','吐鲁番')">吐鲁番</span>
+                <span class="span_cs" onclick="SelectCity('385','和田')">和田</span>
+                <span class="span_cs" onclick="SelectCity('386','克孜勒苏')">克孜勒苏</span>
+                <span class="span_cs" onclick="SelectCity('387','塔城')">塔城</span>
+                <span class="span_cs" onclick="SelectCity('388','阿勒泰')">阿勒泰</span>
+                <span class="span_cs" onclick="SelectCity('389','阿拉尔')">阿拉尔</span>
+                <span class="span_cs" onclick="SelectCity('390','图木舒克')">图木舒克</span>
+                <span class="span_cs" onclick="SelectCity('391','石河子')">石河子</span>
+                <span class="span_cs" onclick="SelectCity('392','五家渠')">五家渠</span>
+                <span class="span_cs" onclick="SelectCity('393','铁门关')">铁门关</span>
+            </div>
+            <div class="div_row" onmouseover="SelectZM('Y')">
+                <span class="span_zm">Y</span>
+                <span class="span_sf">云南</span>
+                <span class="span_cs" onclick="SelectCity('315','昆明')">昆明</span>
+                <span class="span_cs" onclick="SelectCity('316','曲靖')">曲靖</span>
+                <span class="span_cs" onclick="SelectCity('317','大理')">大理</span>
+                <span class="span_cs" onclick="SelectCity('318','红河')">红河</span>
+                <span class="span_cs" onclick="SelectCity('319','玉溪')">玉溪</span>
+                <span class="span_cs" onclick="SelectCity('320','丽江')">丽江</span>
+                <span class="span_cs" onclick="SelectCity('321','文山')">文山</span>
+                <span class="span_cs" onclick="SelectCity('322','楚雄')">楚雄</span>
+                <span class="span_cs" onclick="SelectCity('323','西双版纳')">西双版纳</span>
+                <span class="span_cs" onclick="SelectCity('324','昭通')">昭通</span>
+                <span class="span_cs" onclick="SelectCity('325','德宏')">德宏</span>
+                <span class="span_cs" onclick="SelectCity('326','普洱')">普洱</span>
+                <span class="span_cs" onclick="SelectCity('327','保山')">保山</span>
+                <span class="span_cs" onclick="SelectCity('328','临沧')">临沧</span>
+                <span class="span_cs" onclick="SelectCity('329','迪庆')">迪庆</span>
+                <span class="span_cs" onclick="SelectCity('330','怒江')">怒江</span>
+            </div>
+            <div class="div_row" onmouseover="SelectZM('Z')">
+                <span class="span_zm">Z</span>
+                <span class="span_sf">浙江</span>
+                <span class="span_cs" onclick="SelectCity('118','杭州')">杭州</span>
+                <span class="span_cs" onclick="SelectCity('119','宁波')">宁波</span>
+                <span class="span_cs" onclick="SelectCity('120','温州')">温州</span>
+                <span class="span_cs" onclick="SelectCity('121','金华')">金华</span>
+                <span class="span_cs" onclick="SelectCity('122','嘉兴')">嘉兴</span>
+                <span class="span_cs" onclick="SelectCity('123','台州')">台州</span>
+                <span class="span_cs" onclick="SelectCity('124','绍兴')">绍兴</span>
+                <span class="span_cs" onclick="SelectCity('125','湖州')">湖州</span>
+                <span class="span_cs" onclick="SelectCity('126','丽水')">丽水</span>
+                <span class="span_cs" onclick="SelectCity('127','衢州')">衢州</span>
+                <span class="span_cs" onclick="SelectCity('128','舟山')">舟山</span>
+            </div>
         </div>
     </div>
 }
