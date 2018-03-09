@@ -1,0 +1,63 @@
+﻿@{
+    Layout = "~/Areas/Business/Views/Shared/QT.cshtml";
+}
+@section Section_Head {
+    <link href="@Url.Content("~/Areas/Business/Css/SY/ChangeCity.css")" rel="stylesheet" />
+    <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/SY/ChangeCity.js")"></script>
+}
+@section Section_Body {
+    <div id="divHead" class="div_head">
+        <div class="div_head_left">
+            <img class="img_head_left_logo" src="@Url.Content("~/Areas/Business/Css/images/logo_purple.png")" />
+        </div>
+        <div class="div_head_right">
+            <div class="div_head_right_ss">
+                <span id="spanXSLC" class="span_spaninput_out SRK">
+                    <input id="SS" class="form-control span_spaninput_in" type="text" placeholder="搜索城市" />
+                    <input type="hidden" id="LBID" />
+                    <input type="hidden" id="URL" />
+                    <input type="hidden" id="CONDITION" />
+                    <span id="span_ss" class="span_ss">搜索</span>
+                </span>
+                <div id="divSSJGlist" class="div_select_dropdown"></div>
+                <span class="span_head_right_ss">北京</span>
+                <span class="span_head_right_ss_split">|</span>
+                <span class="span_head_right_ss">天津</span>
+                <span class="span_head_right_ss_split">|</span>
+                <span class="span_head_right_ss">上海</span>
+                <span class="span_head_right_ss_split">|</span>
+                <span class="span_head_right_ss">重庆</span>
+                <span class="span_head_right_ss_split">|</span>
+                <span class="span_head_right_ss">广州</span>
+                <span class="span_head_right_ss_split">|</span>
+                <span class="span_head_right_ss">深圳</span>
+                <span class="span_head_right_ss_split">|</span>
+                <span class="span_head_right_ss">成都</span>
+                <span class="span_head_right_ss_split">|</span>
+                <span class="span_head_right_ss">南京</span>
+                <span class="span_head_right_ss_split">|</span>
+                <span class="span_head_right_ss">杭州</span>
+                <span class="span_head_right_ss_split">|</span>
+                <span class="span_head_right_ss">武汉</span>
+            </div>
+        </div>
+    </div>
+    <div class="div_body">
+        <div class="div_body_top">
+        </div>
+        <div id="div_body_middle" class="div_body_middle">
+            @*<div class="div_row"><span class="span_zm">A</span><span class="span_sf"></span><span class="span_cs"></span></div>
+            <div class="div_row"><span class="span_zm">F</span><span class="span_sf"></span><span class="span_cs"></span></div>
+            <div class="div_row"><span class="span_zm">G</span><span class="span_sf"></span><span class="span_cs"></span></div>
+            <div class="div_row"><span class="span_zm">H</span><span class="span_sf"></span><span class="span_cs"></span></div>
+            <div class="div_row"><span class="span_zm">J</span><span class="span_sf"></span><span class="span_cs"></span></div>
+            <div class="div_row"><span class="span_zm">L</span><span class="span_sf"></span><span class="span_cs"></span></div>
+            <div class="div_row"><span class="span_zm">N</span><span class="span_sf"></span><span class="span_cs"></span></div>
+            <div class="div_row"><span class="span_zm">Q</span><span class="span_sf"></span><span class="span_cs"></span></div>
+            <div class="div_row"><span class="span_zm">S</span><span class="span_sf"></span><span class="span_cs"></span></div>
+            <div class="div_row"><span class="span_zm">X</span><span class="span_sf"></span><span class="span_cs"></span></div>
+            <div class="div_row"><span class="span_zm">Y</span><span class="span_sf"></span><span class="span_cs"></span></div>
+            <div class="div_row"><span class="span_zm">Z</span><span class="span_sf"></span><span class="span_cs"></span></div>*@
+        </div>
+    </div>
+}

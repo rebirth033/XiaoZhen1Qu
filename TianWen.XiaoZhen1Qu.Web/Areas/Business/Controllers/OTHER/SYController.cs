@@ -18,6 +18,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         public ActionResult JYPXSY() { GetSession(); return View(); }
         public ActionResult ZSJMSY() { GetSession(); return View(); }
         public ActionResult PFCGSY() { GetSession(); return View(); }
+        public ActionResult ChangeCity() { GetSession(); return View(); }
 
         public JsonResult LoadZXFBXX()
         {
@@ -126,13 +127,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         //根据LBID获取信息类别
         public JsonResult LoadXXLBByLBID()
         {
-            return Json(SYBLL.LoadXXLBByLBID(Request["LBID"].ToString()));
+            return Json(SYBLL.LoadXXLBByLBID(Request["LBID"]));
         }
 
         //根据JCXXID获取基础信息
         public JsonResult LoadJCXXByJCXXID()
         {
-            return Json(SYBLL.LoadJCXXByJCXXID(Request["JCXXID"].ToString()));
+            return Json(SYBLL.LoadJCXXByJCXXID(Request["JCXXID"]));
         }
     }
 }

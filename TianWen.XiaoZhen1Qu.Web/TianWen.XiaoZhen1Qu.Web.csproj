@@ -585,6 +585,7 @@
     <Content Include="Areas\Business\Css\HTFB\SWFW\SWFW_ZK.css" />
     <Content Include="Areas\Business\Css\HTFB\SWFW\SWFW_ZL.css" />
     <Content Include="Areas\Business\Css\HTFB\SWFW\SWFW_ZXFW.css" />
+    <Content Include="Areas\Business\Css\SY\ChangeCity.css" />
     <Content Include="Areas\Business\Css\SY\CLSY.css" />
     <Content Include="Areas\Business\Css\SY\ZPSY.css" />
     <Content Include="Areas\Business\Css\SY\ESSY.css" />
@@ -1453,6 +1454,7 @@
     <Content Include="Areas\Business\Scripts\Business\HTFB\SWFW\SWFW_ZHFWYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\SWFW\SWFW_ZK.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\SWFW\SWFW_ZKYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\SY\ChangeCity.js" />
     <Content Include="Areas\Business\Scripts\Business\SY\CLSY.js" />
     <Content Include="Areas\Business\Scripts\Business\SY\ESSY.js" />
     <Content Include="Areas\Business\Scripts\Business\SY\SHFWSY.js" />
@@ -2862,6 +2864,7 @@
     <Content Include="Areas\Business\Views\ZSJMXX\ZSJMXX_LS.cshtml" />
     <Content Include="Areas\Business\Views\GYWM\GYWM.cshtml" />
     <Content Include="Areas\Business\Views\Shared\CXCommon.cshtml" />
+    <Content Include="Areas\Business\Views\SY\ChangeCity.cshtml" />
     <None Include="Properties\PublishProfiles\xxxz.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
