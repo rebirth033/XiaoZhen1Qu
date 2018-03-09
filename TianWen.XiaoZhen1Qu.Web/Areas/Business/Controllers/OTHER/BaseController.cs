@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IO;
 using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Web.Mvc;
 using CommonClassLib.Helper;
-using Newtonsoft.Json;
-using Spring.Objects.Factory.Parsing;
 using TianWen.Nhibernate.TianWen.Nhibernate.Repository;
 using TianWen.XiaoZhen1Qu.Entities.Models;
 
@@ -19,12 +18,9 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public void GetSession()
         {
-            object result = GetAdrByIp("60.205.226.255");
             if (Session["XZQ"] == null)
             {
-                ViewData["XZQ"] = "北京";
-                Session["XZQ"] = "北京";
-                Session["XZQDM"] = "28";
+                GetIP();
             }
             else
             {
@@ -71,26 +67,22 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             return dl.LBNAME + "-" + xl.LBNAME;
         }
 
-        public string GetIP()
+        public void GetIP()
         {
-            if (System.Web.HttpContext.Current.Request.ServerVariables["HTTP_VIA"] != null)
-                return System.Web.HttpContext.Current.Request.ServerVariables["HTTP_X_FORWARDED_FOR"].Split(new char[] { ',' })[0];
-            else
-                return System.Web.HttpContext.Current.Request.ServerVariables["REMOTE_ADDR"];
-        }
+            try
+            {
+                string temp = GetPageInfo("http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=json");
+                ipobject ipo = JsonHelper.ConvertJsonToObject<ipobject>(temp);
+                ViewData["XZQ"] = ipo.city;
+                Session["XZQ"] = ipo.city;
+                DataTable dt = DataFactory.GetDataTable(string.Format("select codeid from codes_district where codename = '{0}'",ipo.city));
+                if (dt.Rows.Count > 0)
+                    Session["XZQDM"] = dt.Rows[0][0].ToString();
+            }
+            catch (Exception ex)
+            {
 
-        public string GetAdrByIp(string ip)
-        {
-            string url = "http://www.cz88.net/ip/";
-            string regStr = "(?<=<span\\s*id=\\\"cz_addr\\\">).*?(?=</span>)";
-
-            //得到网页源码
-            string html = GetPageInfo(url);
-            Regex reg = new Regex(regStr, RegexOptions.None);
-            Match ma = reg.Match(html);
-            html = ma.Value;
-            string[] arr = html.Split(' ');
-            return arr[0];
+            }
         }
 
         public string GetPageInfo(string url)
@@ -110,6 +102,11 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             {
                 return "error";
             }
+        }
+
+        public class ipobject
+        {
+            public string city { get; set; }
         }
     }
 }
