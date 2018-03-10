@@ -54,8 +54,17 @@ function LoadJBXX(obj) {
     html += ('<span onclick="RightImg(' + obj.PHOTOS.length + ')" class="div_body_left_body_left_list_an">></span>');
     html += ('</div>');
     html += ('<div class="div_body_left_body_right">');
-    html += ('<p class="p_body_left_body_right_first">');
-    html += ('<span class="span_body_left_body_right_zj">' + GetJG(obj.JG, '万元') + '</span>');
+    html += ('<p class="p_body_left_body_right">');
+    html += ('<span class="span_body_left_body_right_left">价格：</span>');
+    html += ('<span class="span_body_left_body_right_right" style="color: #bc6ba6;font-size: 16px;font-weight:700;">' + GetJG(obj.JG, '万元') + '</span>');
+    html += ('</p>');
+    html += ('<p class="p_body_left_body_right">');
+    html += ('<span class="span_body_left_body_right_left">车型：</span>');
+    html += ('<span class="span_body_left_body_right_right">' + obj.PP + '</span>');
+    html += ('</p>');
+    html += ('<p class="p_body_left_body_right">');
+    html += ('<span class="span_body_left_body_right_left">颜色：</span>');
+    html += ('<span class="span_body_left_body_right_right">' + obj.CLYS + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">表显里程：</span>');
@@ -64,14 +73,6 @@ function LoadJBXX(obj) {
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">首次上牌：</span>');
     html += ('<span class="span_body_left_body_right_right">' + obj.SPNF + obj.SPYF + '</span>');
-    html += ('</p>');
-    html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">排量：</span>');
-    html += ('<span class="span_body_left_body_right_right">1.6L</span>');
-    html += ('</p>');
-    html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">变速箱：</span>');
-    html += ('<span class="span_body_left_body_right_right">自动</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">看车地址：</span>');
@@ -103,7 +104,7 @@ function LoadXQ(obj, BCMSString) {
 
     html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_left">上牌时间：</span><span class="span_body_left_body_xq_xx_right">' + ValidateNull(obj.SPNF) + ValidateNull(obj.SPYF) + '</span><span class="span_body_left_body_xq_xx_left">年检到期：</span><span class="span_body_left_body_xq_xx_right">' + ValidateNull(obj.NJDQNF) + '</span></p>');
     html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_left">4S店定期保养：</span><span class="span_body_left_body_xq_xx_right">' + ValidateNull(obj.SFDQBY) + '</span><span class="span_body_left_body_xq_xx_left">商业险到期：</span><span class="span_body_left_body_xq_xx_right">' + ValidateNull(obj.SYXDQNF) + '</span></p>');
-    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_left">表显里程：</span><span class="span_body_left_body_xq_xx_right">' + ValidateNull(obj.XSLC, "万公里") + '</span><span class="span_body_left_body_xq_xx_left">水费：</span><span class="span_body_left_body_xq_xx_right">' + ValidateNull(obj.JQXDQNF) + '</span></p>');
+    html += ('<p class="p_body_left_body_xq_xx_right"><span class="span_body_left_body_xq_xx_left">表显里程：</span><span class="span_body_left_body_xq_xx_right">' + ValidateNull(obj.XSLC, "万公里") + '</span><span class="span_body_left_body_xq_xx_left">交强险到期：</span><span class="span_body_left_body_xq_xx_right">' + ValidateNull(obj.JQXDQNF) + '</span></p>');
 
     html += ('</div>');
     html += ('</div>');
@@ -237,7 +238,7 @@ function LoadJJRTJFY(TYPE) {
         {
             TYPE: TYPE,
             Condition: "STATUS:1",
-            PageSize: 100,
+            PageSize: 4,
             PageIndex: 1
         },
         success: function (xml) {
