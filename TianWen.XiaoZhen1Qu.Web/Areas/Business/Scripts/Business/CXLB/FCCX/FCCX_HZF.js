@@ -128,8 +128,8 @@ function LoadHot(TYPE) {
         data:
         {
             TYPE: TYPE,
-            Condition: "STATUS:1",
-            PageSize: 100,
+            Condition: "STATUS:1,ISHOT:1",
+            PageSize: 10,
             PageIndex: 1
         },
         success: function (xml) {

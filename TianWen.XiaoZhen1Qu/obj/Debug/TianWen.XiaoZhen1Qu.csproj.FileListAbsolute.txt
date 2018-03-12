@@ -128,3 +128,5 @@ D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu\bin\Debug\
 D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu\bin\Debug\Common.Logging.dll
 F:\福建沐晗信息技术有限公司\小镇1区源代码\TianWen.XiaoZhen1Qu\bin\Debug\TianWen.Framework.pdb
 D:\源代码\TianWen.XiaoZhen1Qu\bin\Debug\TianWen.Framework.pdb
+D:\源代码\TianWen.XiaoZhen1Qu\bin\Debug\MySql.Data.dll
+D:\源代码\TianWen.XiaoZhen1Qu\bin\Debug\MySql.Data.xml

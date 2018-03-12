@@ -92,7 +92,7 @@ function LoadHot(TYPE) {
         {
             TYPE: TYPE,
             Condition: "STATUS:1",
-            PageSize: 100,
+            PageSize: 10,
             PageIndex: 1
         },
         success: function (xml) {

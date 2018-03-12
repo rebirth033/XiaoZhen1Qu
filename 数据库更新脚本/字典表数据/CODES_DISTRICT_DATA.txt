@@ -6572,6 +6572,9 @@ insert into codes_district (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PA
 values (61111, '街道级', '东街', '1', 1, 61105, null);
 
 insert into codes_district (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, SHORTNAME)
+values (6111101, '街道级', '五四路', '1', 1, 61105, null);
+
+insert into codes_district (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, SHORTNAME)
 values (61112, '街道级', '大儒世家', '1', 1, 61105, null);
 
 insert into codes_district (CODEID, TYPENAME, CODENAME, CODEVALUE, CODEORDER, PARENTID, SHORTNAME)

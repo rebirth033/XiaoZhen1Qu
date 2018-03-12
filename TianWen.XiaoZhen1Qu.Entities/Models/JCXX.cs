@@ -96,6 +96,12 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         [Property]
         public virtual int LBID { get; set; }
 
+        /// <summary>
+        /// ISHOT
+        /// </summary>
+        [Property]
+        public virtual int ISHOT { get; set; }
+
         public virtual IList<PHOTOS> PHOTOS { get; set; }
     }
 }
