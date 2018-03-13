@@ -260,7 +260,7 @@ function LoadConditionByParentID(parentid, table, name, id, length) {
             TBName: table
         },
         success: function (xml) {
-            if (xml.Result === 1 && xml.list.length > 0) {
+            if (xml.Result === 1) {
                 $("#ul_condition_body_" + id).remove();
                 if (parentid !== "0")
                     LoadCondition(xml.list, name, id, length);
@@ -280,7 +280,7 @@ function LoadCondition(array, name, id, length) {
     $("#ul_condition_body_" + id).remove();
     var html = "";
     html += '<ul id="ul_condition_body_' + id + '" class="ul_condition_body" style="height:auto;">';
-    if (name === "类别" || name === "小类" || name === "品牌" || name === "车系" || name === "车型" || name === "驾照" || name === "品种" || name === "型号" || name === "语种" || name === "用途" || name === "婚车品牌" || name === "国家" || name === "留学国家")
+    if (name === "地段" || name === "类别" || name === "小类" || name === "品牌" || name === "车系" || name === "车型" || name === "驾照" || name === "品种" || name === "型号" || name === "语种" || name === "用途" || name === "婚车品牌" || name === "国家" || name === "留学国家")
         html += '<li id="li_condition_body_first_' + id + '" class="li_condition_body_first">' + name + '</li>';
     else
         html += '<li class="li_condition_body_first">' + name + '</li>';
@@ -290,7 +290,10 @@ function LoadCondition(array, name, id, length) {
     }
     html += '</ul>';
     $("#div_condition_body_" + id).append(html);
-    $("#li_condition_body_first_" + id).css("height", (parseInt($("#div_condition_body_" + id).css("height")) - 20));
+    if (name === "地段")
+        $("#li_condition_body_first_" + id).css("height", (parseInt($("#div_condition_body_" + id).css("height")) + 10));
+    else
+        $("#li_condition_body_first_" + id).css("height", (parseInt($("#div_condition_body_" + id).css("height")) - 20));
 }
 //设置条件
 function SetCondition(type, value) {
@@ -330,9 +333,9 @@ function LoadDistrictCondition(array, type) {
     var html = "";
     html += '<ul id="ul_condition_body_' + type + '" class="ul_condition_body">';
     html += '<li id="li_condition_body_first_QY" class="li_condition_body_first">区域</li>';
-    html += '<li class="li_condition_body li_condition_body_active" onclick="SelectCondition(this)">全部</li>';
+    html += '<li class="li_condition_body li_condition_body_active" onclick="SelectCondition(this,\'QY\')">全部</li>';
     for (var i = 0; i < array.length; i++) {
-        html += '<li id="' + array[i].CODEID + '" class="li_condition_body" onclick="SelectCondition(this)">' + array[i].CODENAME + '</li>';
+        html += '<li id="' + array[i].CODEID + '" class="li_condition_body" onclick="SelectCondition(this,\'QY\')">' + array[i].CODENAME + '</li>';
     }
     html += '</ul>';
     $("#div_condition_body_" + type).append(html);
@@ -379,7 +382,7 @@ function GetCalcJG(jg, mj, dw) {
         if (dw === "元/㎡/月")
             return '<span class="span_calc_zj">' + parseFloat(parseFloat(jg) / 30 / mj).toFixed(2) + '</span>' + dw;
         if (dw === "元/㎡")
-            return '<span class="span_calc_zj">' + parseFloat(parseFloat(jg) / mj * 10000).toFixed(0)+ '</span>' + dw;
+            return '<span class="span_calc_zj">' + parseFloat(parseFloat(jg) / mj * 10000).toFixed(0) + '</span>' + dw;
     }
 }
 //打开详细页面

@@ -20,7 +20,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 DataTable dt = new DataTable();
                 if (TYPE == "FCXX_ZZF")
                 {
-                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,fc_zzfjbxx b left join CODES_XQJBXX x on trim(b.xqmc) = x.xqmc where a.jcxxid = b.jcxxid and szs = '" + XZQ + "' " + GetConditin(Condition.Replace("QY", "SZX")) + GetOrder(OrderColumn, OrderType), XZQDM));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,fc_zzfjbxx b left join CODES_XQJBXX x on trim(b.xqmc) = x.xqmc where a.jcxxid = b.jcxxid and szs = '" + XZQ + "' " + GetConditin(Condition.Replace("QY", "SZX").Replace("DD", "XQDZ")) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<FC_ZZFView> list = ConvertHelper.DataTableToList<FC_ZZFView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -33,7 +33,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "FCXX_HZF")
                 {
-                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,fc_hzfjbxx b left join CODES_XQJBXX x on trim(b.xqmc) = x.xqmc where a.jcxxid = b.jcxxid and szs = '" + XZQ + "' " + GetConditin(Condition.Replace("QY", "SZX")) + GetOrder(OrderColumn, OrderType), XZQDM));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,fc_hzfjbxx b left join CODES_XQJBXX x on trim(b.xqmc) = x.xqmc where a.jcxxid = b.jcxxid and szs = '" + XZQ + "' " + GetConditin(Condition.Replace("QY", "SZX").Replace("DD", "XQDZ")) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<FC_ZZFView> list = ConvertHelper.DataTableToList<FC_ZZFView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
@@ -60,7 +60,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "FCXX_ESF")
                 {
-                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,fc_esfjbxx b left join CODES_XQJBXX x on trim(b.xqmc) = x.xqmc where a.jcxxid = b.jcxxid and status = 1 and szs = '" + XZQ + "' " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,fc_esfjbxx b left join CODES_XQJBXX x on trim(b.xqmc) = x.xqmc where a.jcxxid = b.jcxxid and status = 1 and szs = '" + XZQ + "' " + GetConditin(Condition.Replace("QY", "SZX").Replace("DD", "XQDZ")) + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<FC_ESFView> list = ConvertHelper.DataTableToList<FC_ESFView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;
