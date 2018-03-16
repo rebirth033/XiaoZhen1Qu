@@ -2041,6 +2041,7 @@
     <Content Include="Areas\Business\Scripts\xcConfirm\index.html" />
     <Content Include="Areas\Business\Scripts\xcConfirm\js\jquery-1.9.1.js" />
     <Content Include="Areas\Business\Scripts\xcConfirm\js\xcConfirm.js" />
+    <Content Include="Areas\Business\WebService\YHJBXXService.asmx" />
     <Content Include="Config\SpringConfig\BLLCXLB.xml" />
     <Content Include="Config\SpringConfig\BLLGY.xml" />
     <Content Include="Config\SpringConfig\ControllersXXXX.xml" />
@@ -2153,6 +2154,10 @@
     <Compile Include="Areas\Business\Scripts\UEditor\net\App_Code\NotSupportedHandler.cs" />
     <Compile Include="Areas\Business\Scripts\UEditor\net\App_Code\PathFormater.cs" />
     <Compile Include="Areas\Business\Scripts\UEditor\net\App_Code\UploadHandler.cs" />
+    <Compile Include="Areas\Business\WebService\YHJBXXService.asmx.cs">
+      <DependentUpon>YHJBXXService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
