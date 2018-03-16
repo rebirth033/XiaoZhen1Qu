@@ -48,3 +48,5 @@ D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Interface\
 D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Interface\obj\Release\TianWen.XiaoZhen1Qu.Interface.csprojResolveAssemblyReference.cache
 D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Interface\obj\Release\TianWen.XiaoZhen1Qu.Interface.dll
 D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Interface\obj\Release\TianWen.XiaoZhen1Qu.Interface.pdb
+D:\源代码\TianWen.XiaoZhen1Qu.Interface\bin\Release\MySql.Data.dll
+D:\源代码\TianWen.XiaoZhen1Qu.Interface\bin\Release\MySql.Data.xml

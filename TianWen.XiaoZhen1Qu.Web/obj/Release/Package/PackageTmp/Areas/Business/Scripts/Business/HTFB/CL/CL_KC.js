@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
     LoadJBXX();
     LoadCYLS();
-    $("#divPPText").bind("click", function () { LoadHCPP(); });
+    $("#divPPText").bind("click", function () { LoadKCPP(); });
     BindClick("SPNF");
     BindClick("SPYF");
     BindClick("NJDQNF");
@@ -40,8 +40,8 @@ function BindClick(type) {
         }
     });
 }
-//加载品牌名称
-function LoadHCPP() {
+//加载客车品牌名称
+function LoadKCPP() {
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Common/LoadCODESByTYPENAME",
@@ -103,7 +103,8 @@ function GoToBQ(tag) {
     $(".ul_row_right_jcpp_first_right").stop().animate({ scrollTop: len }, 300, "swing", function () { });
 }
 //打开车系列表
-function OpenSecond(codeid,codename) {
+function OpenSecond(codeid, codename) {
+    $("#spanPP").html(codename);
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Common/LoadByParentID",

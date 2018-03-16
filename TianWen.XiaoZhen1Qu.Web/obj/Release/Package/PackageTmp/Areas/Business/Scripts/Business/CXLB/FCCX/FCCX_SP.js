@@ -178,8 +178,8 @@ function LoadHot(TYPE) {
         data:
         {
             TYPE: TYPE,
-            Condition: "STATUS:1,GQ:" + GetNavCondition(),
-            PageSize: 100,
+            Condition: "STATUS:1,ISHOT:1,GQ:" + GetNavCondition(),
+            PageSize: 10,
             PageIndex: 1
         },
         success: function (xml) {
@@ -202,7 +202,10 @@ function LoadHotInfo(obj) {
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_right_xq">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_right_cs">' + obj.SPLX + ' / ' + obj.MJ + '平米</p>');
-    html += ('<p class="p_li_body_right_jg">' + GetJG(obj.ZJ, obj.ZJDW) + '</p>');
+    if(obj.GQ === "出租")
+        html += ('<p class="p_li_body_right_jg">' + GetJG(obj.ZJ, obj.ZJDW) + '</p>');
+    else
+        html += ('<p class="p_li_body_right_jg">' + GetJG(obj.SJ, obj.ZJDW) + '</p>');
     html += ('</li>');
     $("#ul_body_right").append(html);
 }

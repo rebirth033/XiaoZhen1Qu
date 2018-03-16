@@ -67,6 +67,9 @@ function LoadURLCondition() {
 }
 //选择条件
 function SelectCondition(obj, name) {
+    if (name === "QY") {
+        LoadConditionByParentID(obj.id, "CODES_DISTRICT", "地段", "DD");
+    }
     $(obj).parent().find(".li_condition_body").each(function () {
         $(this).removeClass("li_condition_body_active");
     });
@@ -143,8 +146,8 @@ function LoadHot(TYPE) {
         data:
         {
             TYPE: TYPE,
-            Condition: "STATUS:1",
-            PageSize: 100,
+            Condition: "STATUS:1,ISHOT:1",
+            PageSize: 10,
             PageIndex: 1
         },
         success: function (xml) {
