@@ -11,13 +11,13 @@ namespace TianWen.XiaoZhen1Qu.BLL
     {
         public object CheckLogin(string YHM, string MM, string SessionID)
         {
-            object o1 = DAO.Repository.ExecuteScalar(string.Format("SELECT COUNT(1) FROM YHJBXX WHERE YHM='{0}'", YHM));
+            object o1 = DAO.Repository.ExecuteScalar(string.Format("SELECT COUNT(1) FROM YHJBXX WHERE YHM='{0}' or SJ='{0}'", YHM));
             if (int.Parse(o1.ToString()) == 0)
             {
                 LoggerManager.Info("网站登录", "用户：" + YHM + "登录失败：用户名不存在");
                 return new { Result = EnResultType.Failed, Message = "用户名不存在，请重新输入", Type = 1 };
             }
-            o1 = DAO.Repository.ExecuteScalar(string.Format("SELECT COUNT(1) FROM YHJBXX WHERE YHM='{0}' and MM='{1}'", YHM, EncryptionHelper.MD5Encrypt64(MM)));
+            o1 = DAO.Repository.ExecuteScalar(string.Format("SELECT COUNT(1) FROM YHJBXX WHERE (YHM='{0}' or SJ='{0}') and MM='{1}'", YHM, EncryptionHelper.MD5Encrypt64(MM)));
             if (int.Parse(o1.ToString()) == 0)
             {
                 LoggerManager.Info("网站登录", "用户：" + YHM + "登录失败：密码错误");
