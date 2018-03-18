@@ -86,10 +86,11 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 YHJBXX newobj = new YHJBXX();
                 try
                 {
-                    newobj.MM = EncryptionHelper.MD5Encrypt64(newobj.MM);
+                    newobj.MM = EncryptionHelper.MD5Encrypt64(MM);
                     Random random = new Random();
                     newobj.YHM = "小镇用户" + SJ.Substring(0, 7) + random.Next(100000, 999999).ToString();
                     newobj.SQRQ = DateTime.Now;
+                    newobj.SJ = SJ;
                     DAO.Save(newobj);
                     DAO.Repository.Session.Flush();
                     transaction.Commit();
