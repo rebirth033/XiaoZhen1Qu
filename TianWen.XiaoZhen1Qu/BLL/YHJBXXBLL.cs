@@ -79,6 +79,31 @@ namespace TianWen.XiaoZhen1Qu.BLL
             }
         }
 
+        public YHJBXX CreateBasicBySJ(string SJ,string MM)
+        {
+            using (ITransaction transaction = DAO.BeginTransaction())
+            {
+                YHJBXX newobj = new YHJBXX();
+                try
+                {
+                    newobj.MM = EncryptionHelper.MD5Encrypt64(newobj.MM);
+                    Random random = new Random();
+                    newobj.YHM = "小镇用户" + SJ.Substring(0, 7) + random.Next(100000, 999999).ToString();
+                    newobj.SQRQ = DateTime.Now;
+                    DAO.Save(newobj);
+                    DAO.Repository.Session.Flush();
+                    transaction.Commit();
+                    LoggerManager.Info("用户创建", "用户：" + newobj.YHM + "创建成功");
+                    return newobj;
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    LoggerManager.Info("用户创建", "用户：" + newobj.YHM + "创建失败");
+                    return null;
+                }
+            }
+        }
         //修改密码
         public object UpdatePassword(string MM, string SJ)
         {

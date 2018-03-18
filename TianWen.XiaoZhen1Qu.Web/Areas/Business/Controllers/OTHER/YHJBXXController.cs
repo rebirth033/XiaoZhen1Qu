@@ -39,6 +39,26 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
                 return Json(new { Result = EnResultType.Failed, Message = "请点击获取验证码按钮", Type = 1 });
         }
 
+        public JsonResult SJRegister()
+        {
+            string YZM = Request["YZM"];
+            //生成的验证码被保存到session中
+            if (Session["CheckCode"] != null)
+            {
+                string checkcode = Session["CheckCode"].ToString();
+                if (YZM == checkcode)
+                {
+                    YHJBXX yhjbxx = YHJBXXBLL.CreateBasicBySJ(Request["SJ"], Request["MM"]);
+                    Session["YHM"] = yhjbxx.YHM;
+                    return Json(new { Result = EnResultType.Success });
+                }
+                else
+                    return Json(new { Result = EnResultType.Failed, Message = "验证码错误或过期，请重新获取", Type = 1 });
+            }
+            else
+                return Json(new { Result = EnResultType.Failed, Message = "请点击获取验证码按钮", Type = 1 });
+        }
+
         public JsonResult GetYZM()
         {
             string SJ = Request["SJ"];

@@ -13,6 +13,8 @@ namespace TianWen.XiaoZhen1Qu.Interface
 
         object CreateBasic(YHJBXX yhjbxx);
 
+        YHJBXX CreateBasicBySJ(string SJ,string MM);
+
         string GetObjByYHM(string YHM);
 
         string GetObjByYHMOrSJ(string YHM);
