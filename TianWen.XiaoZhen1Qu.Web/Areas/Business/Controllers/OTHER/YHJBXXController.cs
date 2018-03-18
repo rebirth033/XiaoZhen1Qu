@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using CommonClassLib.Helper;
 using TianWen.XiaoZhen1Qu.Entities.Models;
 using TianWen.XiaoZhen1Qu.Interface;
+using TianWen.Framework.Log;
 
 namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 {
@@ -41,22 +42,37 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public JsonResult SJRegister()
         {
-            string YZM = Request["YZM"];
-            //生成的验证码被保存到session中
-            if (Session["CheckCode"] != null)
+            try
             {
-                string checkcode = Session["CheckCode"].ToString();
-                if (YZM == checkcode)
-                {
-                    YHJBXX yhjbxx = YHJBXXBLL.CreateBasicBySJ(Request["SJ"], Request["MM"]);
-                    Session["YHM"] = yhjbxx.YHM;
-                    return Json(new { Result = EnResultType.Success });
-                }
-                else
-                    return Json(new { Result = EnResultType.Failed, Message = "验证码错误或过期，请重新获取", Type = 1 });
+                //string YZM = Request["YZM"];
+                ////生成的验证码被保存到session中
+                //if (Session["CheckCode"] != null)
+                //{
+                    //string checkcode = Session["CheckCode"].ToString();
+                    //if (YZM == checkcode)
+                    //{
+                        YHJBXX yhjbxx = YHJBXXBLL.CreateBasicBySJ(Request["SJ"], Request["MM"]);
+                        Session["YHM"] = yhjbxx.YHM;
+                        LoggerManager.Info("用户注册成功", "用户：" + yhjbxx.YHM + "创建成功");
+                        return Json(new { Result = EnResultType.Success });
+                    //}
+                    //else
+                    //{
+                    //    LoggerManager.Info("用户注册失败", "验证码错误或过期，请重新获取");
+                    //    return Json(new { Result = EnResultType.Failed, Message = "验证码错误或过期，请重新获取", Type = 1 });
+                    //}
+                //}
+                //else
+                //{
+                //    LoggerManager.Info("用户注册失败", "请点击获取验证码按钮");
+                //    return Json(new { Result = EnResultType.Failed, Message = "请点击获取验证码按钮", Type = 1 });
+                //}
             }
-            else
-                return Json(new { Result = EnResultType.Failed, Message = "请点击获取验证码按钮", Type = 1 });
+            catch (Exception ex)
+            {
+                LoggerManager.Info("用户注册失败", ex.Message);
+                return Json(new { Result = EnResultType.Failed, Message = ex.Message, Type = 1 });
+            }
         }
 
         public JsonResult GetYZM()
