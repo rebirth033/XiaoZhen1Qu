@@ -48,6 +48,7 @@ public class YHZCActivity extends AppCompatActivity implements OnClickListener {
 
     //绑定手机
     public void BindSJ() {
+
         metSJH.addTextChangedListener(new TextWatcher() {
 
             public void afterTextChanged(Editable s) {

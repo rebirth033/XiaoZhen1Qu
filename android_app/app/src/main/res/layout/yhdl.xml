@@ -52,13 +52,10 @@
 
     <EditText
         android:id="@+id/etSJH"
-        android:layout_width="200dp"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginLeft="76dp"
-        android:background="@null"
+        android:background="@drawable/border"
         android:hint="手机号/用户名/邮箱"
-        android:maxLength="11"
-        android:inputType="phone"
         android:maxLines="1"
         android:textSize="22px" />
 
