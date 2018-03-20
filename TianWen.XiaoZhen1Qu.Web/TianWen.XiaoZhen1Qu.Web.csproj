@@ -124,14 +124,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\GlobalBin\TianWen.Nhibernate.dll</HintPath>
     </Reference>
-    <Reference Include="TianWen.Persistence, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\GlobalBin\TianWen.Persistence.dll</HintPath>
-    </Reference>
-    <Reference Include="TianWen.Utility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\GlobalBin\TianWen.Utility.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Business\Aspx\png.aspx" />
