@@ -20,8 +20,8 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_gravity="center_horizontal"
-            android:background="#bc6ba6"
             android:layout_marginBottom="10dp"
+            android:background="#bc6ba6"
             android:orientation="horizontal">
 
             <TextView
@@ -274,6 +274,312 @@
             </LinearLayout>
 
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_gravity="bottom"
+            android:background="@null"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivXZJX"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:src="@drawable/xzjx" />
+
+            <LinearLayout
+                android:layout_width="220dp"
+                android:layout_height="75dp"
+                android:background="@null"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvSZJX"
+                    android:layout_width="220dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="40dp"
+                    android:background="@null"
+                    android:paddingTop="12dp"
+                    android:text="温泉六一北路恒宇国际266平复式带精装修多套选择" />
+
+                <TextView
+                    android:id="@+id/tvSZJXRQ"
+                    android:layout_width="180dp"
+                    android:layout_height="27dp"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="40dp"
+                    android:background="@null"
+                    android:paddingTop="2dp"
+                    android:text="3月19日" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:background="@null"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvCNXH"
+                android:layout_width="223dp"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:paddingTop="13dp"
+                android:text="猜你喜欢"
+                android:textSize="15dp" />
+
+            <ImageView
+                android:id="@+id/ivHYP"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="2dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/hyp" />
+
+            <TextView
+                android:id="@+id/tvHYP"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:paddingTop="13dp"
+                android:text="换一批"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+
+
+        <ScrollView
+            android:id="@+id/sv_channel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="false"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="302dp"
+                android:layout_height="75dp"
+                android:background="@null"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="302dp"
+                    android:layout_height="75dp"
+                    android:background="@null"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="96dp"
+                        android:layout_height="75dp"
+                        android:layout_gravity="top"
+                        android:adjustViewBounds="true"
+                        android:background="@null"
+                        android:paddingLeft="5dp"
+                        android:src="@drawable/cnxh" />
+
+                    <LinearLayout
+                        android:layout_width="220dp"
+                        android:layout_height="75dp"
+                        android:background="@null"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="220dp"
+                            android:layout_height="48dp"
+                            android:layout_marginLeft="40dp"
+                            android:background="@null"
+                            android:paddingTop="12dp"
+                            android:text="温泉六一北路恒宇国际266平复式带精装修多套选择" />
+
+                        <TextView
+                            android:layout_width="180dp"
+                            android:layout_height="27dp"
+                            android:layout_gravity="top"
+                            android:layout_marginLeft="40dp"
+                            android:background="@null"
+                            android:paddingTop="2dp"
+                            android:text="3月19日" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="302dp"
+                    android:layout_height="75dp"
+                    android:background="@null"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="96dp"
+                        android:layout_height="75dp"
+                        android:layout_gravity="top"
+                        android:adjustViewBounds="true"
+                        android:background="@null"
+                        android:paddingLeft="5dp"
+                        android:src="@drawable/cnxh" />
+
+                    <LinearLayout
+                        android:layout_width="220dp"
+                        android:layout_height="75dp"
+                        android:background="@null"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="220dp"
+                            android:layout_height="48dp"
+                            android:layout_marginLeft="40dp"
+                            android:background="@null"
+                            android:paddingTop="12dp"
+                            android:text="温泉六一北路恒宇国际266平复式带精装修多套选择" />
+
+                        <TextView
+                            android:layout_width="180dp"
+                            android:layout_height="27dp"
+                            android:layout_gravity="top"
+                            android:layout_marginLeft="40dp"
+                            android:background="@null"
+                            android:paddingTop="2dp"
+                            android:text="3月19日" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="302dp"
+                    android:layout_height="75dp"
+                    android:background="@null"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="96dp"
+                        android:layout_height="75dp"
+                        android:layout_gravity="top"
+                        android:adjustViewBounds="true"
+                        android:background="@null"
+                        android:paddingLeft="5dp"
+                        android:src="@drawable/cnxh" />
+
+                    <LinearLayout
+                        android:layout_width="220dp"
+                        android:layout_height="75dp"
+                        android:background="@null"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="220dp"
+                            android:layout_height="48dp"
+                            android:layout_marginLeft="40dp"
+                            android:background="@null"
+                            android:paddingTop="12dp"
+                            android:text="温泉六一北路恒宇国际266平复式带精装修多套选择" />
+
+                        <TextView
+                            android:layout_width="180dp"
+                            android:layout_height="27dp"
+                            android:layout_gravity="top"
+                            android:layout_marginLeft="40dp"
+                            android:background="@null"
+                            android:paddingTop="2dp"
+                            android:text="3月19日" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="302dp"
+                    android:layout_height="75dp"
+                    android:background="@null"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="96dp"
+                        android:layout_height="75dp"
+                        android:layout_gravity="top"
+                        android:adjustViewBounds="true"
+                        android:background="@null"
+                        android:paddingLeft="5dp"
+                        android:src="@drawable/cnxh" />
+
+                    <LinearLayout
+                        android:layout_width="220dp"
+                        android:layout_height="75dp"
+                        android:background="@null"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="220dp"
+                            android:layout_height="48dp"
+                            android:layout_marginLeft="40dp"
+                            android:background="@null"
+                            android:paddingTop="12dp"
+                            android:text="温泉六一北路恒宇国际266平复式带精装修多套选择" />
+
+                        <TextView
+                            android:layout_width="180dp"
+                            android:layout_height="27dp"
+                            android:layout_gravity="top"
+                            android:layout_marginLeft="40dp"
+                            android:background="@null"
+                            android:paddingTop="2dp"
+                            android:text="3月19日" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="302dp"
+                    android:layout_height="75dp"
+                    android:background="@null"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="96dp"
+                        android:layout_height="75dp"
+                        android:layout_gravity="top"
+                        android:adjustViewBounds="true"
+                        android:background="@null"
+                        android:paddingLeft="5dp"
+                        android:src="@drawable/cnxh" />
+
+                    <LinearLayout
+                        android:layout_width="220dp"
+                        android:layout_height="75dp"
+                        android:background="@null"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="220dp"
+                            android:layout_height="48dp"
+                            android:layout_marginLeft="40dp"
+                            android:background="@null"
+                            android:paddingTop="12dp"
+                            android:text="温泉六一北路恒宇国际266平复式带精装修多套选择" />
+
+                        <TextView
+                            android:layout_width="180dp"
+                            android:layout_height="27dp"
+                            android:layout_gravity="top"
+                            android:layout_marginLeft="40dp"
+                            android:background="@null"
+                            android:paddingTop="2dp"
+                            android:text="3月19日" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
 
     </LinearLayout>
 

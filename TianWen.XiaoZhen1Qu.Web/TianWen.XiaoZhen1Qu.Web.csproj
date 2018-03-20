@@ -120,9 +120,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\GlobalBin\TianWen.Business.Framework.dll</HintPath>
     </Reference>
-    <Reference Include="TianWen.GloablResource">
-      <HintPath>..\GlobalBin\TianWen.GloablResource.dll</HintPath>
-    </Reference>
     <Reference Include="TianWen.Nhibernate, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\GlobalBin\TianWen.Nhibernate.dll</HintPath>
