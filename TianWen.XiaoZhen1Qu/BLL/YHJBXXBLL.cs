@@ -88,7 +88,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 {
                     newobj.MM = EncryptionHelper.MD5Encrypt64(MM);
                     Random random = new Random();
-                    newobj.YHM = "小镇用户" + SJ.Substring(0, 7) + random.Next(100000, 999999).ToString();
+                    newobj.YHM = "风铃用户" + SJ.Substring(0, 7) + random.Next(100000, 999999).ToString();
                     newobj.SQRQ = DateTime.Now;
                     newobj.SJ = SJ;
                     DAO.Save(newobj);
@@ -581,8 +581,8 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     UpdateYXYZM(YHID, EncryptionHelper.MD5Encrypt64(CheckCode));
                     MailMessage msg = new MailMessage();
                     msg.To.Add(YX);
-                    msg.From = new MailAddress(YX, "信息小镇", Encoding.UTF8);
-                    msg.Subject = "邮件认证 - 信息小镇";
+                    msg.From = new MailAddress(YX, "风铃网", Encoding.UTF8);
+                    msg.Subject = "邮件认证 - 风铃网";
                     msg.SubjectEncoding = Encoding.UTF8;//邮件标题编码 
                     string url = "http://www.infotownlet.com" + Common.GetVirtualRootPath() + "/GRZL/YXYZCG?para=" + EncryptionHelper.MD5Encrypt64(YHID) + "|" + EncryptionHelper.MD5Encrypt64(CheckCode);
                     StringBuilder sb = new StringBuilder();
@@ -594,14 +594,14 @@ namespace TianWen.XiaoZhen1Qu.BLL
                                     </div>
                                 </div>
                                 <div style='width: 600px; text-align: left; height: 520px; font-size: 14px; padding: 30px 20px; line-height: 24px; word-wrap: break-word; font-family:宋体'>
-                                    <p style='margin-bottom: 10px;'>亲爱的信息小镇用户 {0}：</p>
+                                    <p style='margin-bottom: 10px;'>亲爱的风铃网用户 {0}：</p>
                                     <p>
                                         &nbsp;&nbsp;&nbsp;&nbsp;请点击以下链接完成邮件认证（如无法打开请把此链接复制粘贴到浏览器打开）<br />
                                         认证成功后可获得 50 个信用。信用值越高，每天可发布的信息数量越多，认证后的邮箱<br />
                                         可用于登录和找回密码。<br /><br />
                                     </p>
                                     <p><a style='color: #bc6ba6; font-size: 16px; cursor: pointer' href='{1}' target='_blank'>{1}<br /><br /></a></p>
-                                    <p style='text-align: right'>信息小镇邮件中心</p>
+                                    <p style='text-align: right'>风铃网邮件中心</p>
                                     <p style='text-align: right'> {2}</p>
                                 </div>
                                 </div>'", yhjbxx.YHM, url, DateTime.Now.ToString("yyyy年MM月dd日"));

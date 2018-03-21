@@ -172,7 +172,7 @@ function CheckFWXY() {
         return true;
     }
     else {
-        window.wxc.xcConfirm("请仔细阅读《信息小镇现金服务协议》，并点击同意按钮", window.wxc.xcConfirm.typeEnum.info, {
+        window.wxc.xcConfirm("请仔细阅读《风铃网现金服务协议》，并点击同意按钮", window.wxc.xcConfirm.typeEnum.info, {
             onOk: function (v) {
 
             },

@@ -5,7 +5,7 @@
 });
 //加载默认
 function LoadDefault() {
-    document.title = "信息小镇_切换城市";
+    document.title = "风铃网_切换城市";
     //LoadCitys();
 }
 //加载城市

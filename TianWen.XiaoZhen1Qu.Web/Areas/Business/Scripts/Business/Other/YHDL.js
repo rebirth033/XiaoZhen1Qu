@@ -28,7 +28,7 @@ $(document).ready(function () {
         if (curKey === 13) SJDL();
     });
     $("body").css("height", document.documentElement.clientHeight);
-    document.title = "信息小镇_登录页";
+    document.title = "风铃网_登录页";
 });
 
 function Showcellphone() {

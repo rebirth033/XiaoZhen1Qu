@@ -18,7 +18,7 @@ $(document).ready(function () {
 });
 //首页获取title
 function GetHeadNav() {
-    document.title = "信息小镇_首页";
+    document.title = "风铃网_首页";
 }
 //发布信息
 function FBXX() {

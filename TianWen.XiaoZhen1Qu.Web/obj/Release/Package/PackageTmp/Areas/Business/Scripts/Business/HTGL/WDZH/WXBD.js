@@ -4,7 +4,7 @@
 
 //生成二维码
 function GenerateQRCode() {
-    var qrdata = "信息小镇";
+    var qrdata = "风铃网";
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Areas/Business/Ashx/GenerateQRCode.ashx",

@@ -37,7 +37,7 @@
     $("#div_top_right_inner_yhm").bind("mouseover", ShowYHCD);
     $("#div_top_right_inner_yhm").bind("mouseleave", HideYHCD);
     $("#span_fbxx").bind("click", OpenLBXZ);
-    document.title = "信息小镇_后台管理";
+    document.title = "风铃网_后台管理";
     if (getUrlParam("Show") === "WDZJ")
         ShowWDZJ();
     else
@@ -261,7 +261,7 @@ function CloseQQRZ() {
     $("#editImgWindow").css("display", "none");
     $("#shadow").css("display", "none");
 }
-//关闭信息小镇现金服务协议窗口
+//关闭风铃网现金服务协议窗口
 function CloseXJFWXY() {
     $("#XJFWXYWindow").css("display", "none");
     $("#shadow").css("display", "none");

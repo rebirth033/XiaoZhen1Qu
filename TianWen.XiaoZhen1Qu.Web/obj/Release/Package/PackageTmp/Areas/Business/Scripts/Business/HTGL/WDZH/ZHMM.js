@@ -14,7 +14,7 @@ $(document).ready(function () {
     $("#btnThird").bind("click", CZMM);
     $("#spanQRZH").css("color", "#bc6ba6");
     $("#emQRZH").css("background", "#bc6ba6");
-    document.title = "信息小镇_找回密码";
+    document.title = "风铃网_找回密码";
 });
 //确认账户
 function QRZH() {

@@ -1,3 +1,3 @@
 ﻿$(document).ready(function () {
-    document.title = "信息小镇_帮助中心";
+    document.title = "风铃网_帮助中心";
 });

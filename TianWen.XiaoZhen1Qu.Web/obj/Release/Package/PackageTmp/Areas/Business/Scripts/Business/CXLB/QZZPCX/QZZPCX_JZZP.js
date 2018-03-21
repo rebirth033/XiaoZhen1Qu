@@ -18,9 +18,9 @@ function GetHeadNav() {
             if (xml.Result === 1) {
                 var html = "", title = "";
                 html += ('<ul class="ul_nav">');
-                html += ('<li class="li_nav_font">信息小镇</li>');
+                html += ('<li class="li_nav_font">风铃网</li>');
                 html += ('<li class="li_nav_split">></li>');
-                title += "信息小镇";
+                title += "风铃网";
                 for (var i = 0; i < xml.list.length; i++) {
                     if (xml.list[i].LBID === parseInt(getUrlParam("LBID"))) {
                         html += ('<li class="li_nav_font">' + xml.xzq + xml.list[i].TYPESHOWNAME + '</li>');

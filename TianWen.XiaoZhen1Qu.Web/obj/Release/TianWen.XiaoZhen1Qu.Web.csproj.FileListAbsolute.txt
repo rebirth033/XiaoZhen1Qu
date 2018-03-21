@@ -53,8 +53,6 @@ D:\源代码\TianWen.XiaoZhen1Qu.Web\bin\System.Web.WebPages.Razor.dll
 D:\源代码\TianWen.XiaoZhen1Qu.Web\bin\TianWen.Business.Framework.dll
 D:\源代码\TianWen.XiaoZhen1Qu.Web\bin\TianWen.Framework.dll
 D:\源代码\TianWen.XiaoZhen1Qu.Web\bin\TianWen.Nhibernate.dll
-D:\源代码\TianWen.XiaoZhen1Qu.Web\bin\TianWen.Persistence.dll
-D:\源代码\TianWen.XiaoZhen1Qu.Web\bin\TianWen.Utility.dll
 D:\源代码\TianWen.XiaoZhen1Qu.Web\bin\TianWen.XiaoZhen1Qu.dll
 D:\源代码\TianWen.XiaoZhen1Qu.Web\bin\TianWen.XiaoZhen1Qu.Entities.dll
 D:\源代码\TianWen.XiaoZhen1Qu.Web\bin\TianWen.XiaoZhen1Qu.Interface.dll
@@ -62,7 +60,6 @@ D:\源代码\TianWen.XiaoZhen1Qu.Web\bin\NHibernate.Mapping.Attributes.dll
 D:\源代码\TianWen.XiaoZhen1Qu.Web\bin\FluentNHibernate.dll
 D:\源代码\TianWen.XiaoZhen1Qu.Web\bin\NHibernate.dll
 D:\源代码\TianWen.XiaoZhen1Qu.Web\bin\Spring.Aop.dll
-D:\源代码\TianWen.XiaoZhen1Qu.Web\bin\Oracle.ManagedDataAccess.dll
 D:\源代码\TianWen.XiaoZhen1Qu.Web\bin\TianWen.XiaoZhen1Qu.Entities.pdb
 D:\源代码\TianWen.XiaoZhen1Qu.Web\bin\TianWen.XiaoZhen1Qu.Interface.pdb
 D:\源代码\TianWen.XiaoZhen1Qu.Web\bin\TianWen.XiaoZhen1Qu.pdb
