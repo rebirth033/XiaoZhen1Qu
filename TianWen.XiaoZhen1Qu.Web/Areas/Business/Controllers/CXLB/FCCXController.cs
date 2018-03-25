@@ -19,6 +19,14 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
 
         public JsonResult LoadFCXX()
         {
+            string type = Request["TYPE"];
+            string condition = Request["Condition"];
+            string pageindex = Request["PageIndex"];
+            string pagesize = Request["PageSize"];
+            string xzq = Session["XZQ"].ToString();
+            string ordercolumn = Request["OrderColumn"];
+            string ordertype = Request["OrderType"];
+            string xzqdm = Session["XZQDM"].ToString();
             return Json(FCCXBLL.LoadFCXX(Request["TYPE"], Request["Condition"], Request["PageIndex"], Request["PageSize"], Session["XZQ"].ToString(), Request["OrderColumn"], Request["OrderType"], Session["XZQDM"].ToString()));
         }
     }

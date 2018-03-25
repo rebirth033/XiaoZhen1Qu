@@ -1,9 +1,7 @@
 package com.example.administrator.infotownletsecond;
 
 import android.os.AsyncTask;
-import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.graphics.Color;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,6 +11,9 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.content.Intent;
+import android.app.AlertDialog;
+import android.os.Handler;
+import android.os.Bundle;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -57,6 +58,18 @@ public class YHDLActivity extends AppCompatActivity implements OnClickListener {
                 break;
             case R.id.btnDL:
                 YHDL();
+                final AlertDialog dialog = new AlertDialog.Builder(YHDLActivity.this).create();
+                dialog.setTitle("标题");
+                dialog.setMessage("具体信息:");
+                dialog.setCancelable(false);
+                dialog.show();
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        dialog.dismiss();
+                    }
+                }, 1000);
+
                 break;
         }
     }
@@ -75,27 +88,26 @@ public class YHDLActivity extends AppCompatActivity implements OnClickListener {
             // 后台的计算结果将通过该方法传递到UI 线程，并且在界面上展示给用户.
             protected void onPostExecute(Object result) {
                 super.onPostExecute(result);
-
             }
 
             //该方法运行在后台线程中，因此不能在该线程中更新UI，UI线程为主线程
             protected Object doInBackground(String... params) {
                 Object result = null;
-                String targeturl = "http://http://www.infotownlet.com/YHDL/MMLogin";
+                String targeturl = "http://10.0.2.2/YHDL/MMLogin";
                 try {
-                    targeturl = "http://http://www.infotownlet.com/YHDL/MMLogin";
-                    HttpPost getMethod = new HttpPost(targeturl);
+                    HttpPost httpRequest = new HttpPost(targeturl);
                     NameValuePair YHM = new BasicNameValuePair("YHM", metSJH.getText().toString());//把要发送的数据封装在NameValuePair对象中，并设置键值
-                    NameValuePair MM = new BasicNameValuePair("MM",metMM.getText().toString());
+                    NameValuePair MM = new BasicNameValuePair("MM", metMM.getText().toString());
                     List<NameValuePair> parameters = new ArrayList<NameValuePair>();//创建一个集合，存NameValuePair对象的
                     parameters.add(YHM);
                     parameters.add(MM);
-                    getMethod.setEntity(new UrlEncodedFormEntity(parameters, "UTF-8"));
+                    httpRequest.setEntity(new UrlEncodedFormEntity(parameters, "UTF-8"));
                     DefaultHttpClient httpClient = new DefaultHttpClient();
 
-                    HttpResponse response = httpClient.execute(getMethod); //发起GET请求
+                    HttpResponse response = httpClient.execute(httpRequest); //发起GET请求
                     int rescode = response.getStatusLine().getStatusCode(); //获取响应码
                     result = EntityUtils.toString(response.getEntity(), "utf-8");//获取服务器响应内容
+
                 } catch (Exception e) {
                     e.printStackTrace();
                 }

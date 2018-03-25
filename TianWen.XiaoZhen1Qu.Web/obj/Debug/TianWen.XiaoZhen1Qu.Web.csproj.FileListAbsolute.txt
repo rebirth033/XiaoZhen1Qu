@@ -136,8 +136,6 @@ D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\Sy
 D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\TianWen.Business.Framework.dll
 D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\TianWen.Framework.dll
 D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\TianWen.Nhibernate.dll
-D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\TianWen.Persistence.dll
-D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\TianWen.Utility.dll
 D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\TianWen.XiaoZhen1Qu.dll
 D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\TianWen.XiaoZhen1Qu.Entities.dll
 D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\TianWen.XiaoZhen1Qu.Interface.dll
@@ -145,7 +143,6 @@ D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\NH
 D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\FluentNHibernate.dll
 D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\NHibernate.dll
 D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\Spring.Aop.dll
-D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\Oracle.ManagedDataAccess.dll
 D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\TianWen.XiaoZhen1Qu.Entities.pdb
 D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\TianWen.XiaoZhen1Qu.Interface.pdb
 D:\福建沐晗信息技术有限公司\源代码\TianWen.XiaoZhen1Qu.Web\bin\TianWen.XiaoZhen1Qu.pdb
