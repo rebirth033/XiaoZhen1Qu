@@ -87,7 +87,6 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             {
                 realRemoteIP = System.Web.HttpContext.Current.Request.UserHostAddress;
             }
-            realRemoteIP = "112.49.116.237";
             string PostUrl = "http://int.dpool.sina.com.cn/iplookup/iplookup.php?ip=" + realRemoteIP;
             string res = GetDataByPost(PostUrl);//该条请求返回的数据为：res=1\t115.193.210.0\t115.194.201.255\t中国\t浙江\t杭州\t电信
 
