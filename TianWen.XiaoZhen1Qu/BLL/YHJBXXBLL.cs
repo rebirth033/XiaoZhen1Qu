@@ -584,13 +584,13 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     msg.From = new MailAddress(YX, "风铃网", Encoding.UTF8);
                     msg.Subject = "邮件认证 - 风铃网";
                     msg.SubjectEncoding = Encoding.UTF8;//邮件标题编码 
-                    string url = "http://www.infotownlet.com" + Common.GetVirtualRootPath() + "/GRZL/YXYZCG?para=" + EncryptionHelper.MD5Encrypt64(YHID) + "|" + EncryptionHelper.MD5Encrypt64(CheckCode);
+                    string url = "http://www.915fl.com" + Common.GetVirtualRootPath() + "/GRZL/YXYZCG?para=" + EncryptionHelper.MD5Encrypt64(YHID) + "|" + EncryptionHelper.MD5Encrypt64(CheckCode);
                     StringBuilder sb = new StringBuilder();
                     sb.AppendFormat(@"<div style='width: 650px; margin-left: 27%; height: 600px; border: 1px solid #bc6ba6; '>
                                 <div style='background-color: #bc6ba6; width: 100%; height: 80px; vertical-align: middle;'>
                                     <div style='float: left; width: 120px; margin-left: 50px; margin-top: 5px;'>
-                                        <img style='width: 100%; text-align: center; color: white; font-size: 25px; float: left;' src='http://www.infotownlet.com/Areas/Business/Css/images/logo.png' />
-                                        <span style='width: 100%; color:#fff; text-align: center; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: white; font-size: 17px; float: left; cursor: default;'>infotownlet.com</span>
+                                        <img style='width: 100%; text-align: center; color: white; font-size: 25px; float: left;' src='http://www.915fl.com/Areas/Business/Css/images/logo.png' />
+                                        <span style='width: 100%; color:#fff; text-align: center; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: white; font-size: 17px; float: left; cursor: default;'>915fl.com</span>
                                     </div>
                                 </div>
                                 <div style='width: 600px; text-align: left; height: 520px; font-size: 14px; padding: 30px 20px; line-height: 24px; word-wrap: break-word; font-family:宋体'>
