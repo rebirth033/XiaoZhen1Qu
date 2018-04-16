@@ -84,13 +84,10 @@ public class YHDLActivity extends AppCompatActivity implements OnClickListener {
     public void YHDL() {
         new AsyncTask<String, Void, Object>() {
 
-            //在doInBackground 执行完成后，onPostExecute 方法将被UI 线程调用，
-            // 后台的计算结果将通过该方法传递到UI 线程，并且在界面上展示给用户.
             protected void onPostExecute(Object result) {
                 super.onPostExecute(result);
             }
 
-            //该方法运行在后台线程中，因此不能在该线程中更新UI，UI线程为主线程
             protected Object doInBackground(String... params) {
                 Object result = null;
                 String targeturl = "http://10.0.2.2/YHDL/MMLogin";
