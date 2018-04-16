@@ -45,7 +45,7 @@
         android:layout_height="160dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="信息小镇"
+        android:text="风铃网"
         android:textAlignment="center"
         android:textColor="#bc6ba6"
         android:textSize="40dp" />

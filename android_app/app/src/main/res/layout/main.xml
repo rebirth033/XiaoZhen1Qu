@@ -9,12 +9,10 @@
     android:weightSum="1"
     tools:context="com.example.administrator.infotownletsecond.MainActivity">
 
-    <!-- Login progress -->
-
     <ScrollView
         android:id="@+id/sv_channel"
         android:layout_width="match_parent"
-        android:layout_height="453dp"
+        android:layout_height="600dp"
         android:fillViewport="false"
         android:scrollbars="none">
 
@@ -39,7 +37,7 @@
                 android:layout_marginLeft="6dp"
                 android:background="#ffffff"
                 android:paddingTop="12dp"
-                android:textSize="13dp"
+                android:textSize="13sp"
                 android:text=""
                 android:textAlignment="center" />
 
@@ -54,12 +52,12 @@
 
             <EditText
                 android:id="@+id/etSJH"
-                android:layout_width="228dp"
+                android:layout_width="284dp"
                 android:layout_height="42dp"
                 android:layout_gravity="center"
                 android:background="#ffffff"
                 android:hint="找房子 找工作 找服务"
-                android:textSize="22px" />
+                android:textSize="18sp" />
 
             <ImageView
                 android:id="@+id/ivSYS"
@@ -81,7 +79,7 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="78dp"
+                android:layout_width="100dp"
                 android:layout_height="75dp"
                 android:layout_gravity="left|bottom"
                 android:background="@null"
@@ -89,9 +87,9 @@
 
                 <ImageView
                     android:id="@+id/ivZF"
-                    android:layout_width="27dp"
-                    android:layout_height="27dp"
-                    android:layout_marginLeft="22dp"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center|bottom"
                     android:adjustViewBounds="true"
                     android:src="@drawable/zf" />
 
@@ -100,12 +98,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="25dp"
                     android:text="租房"
+                    android:textSize="14sp"
                     android:textAlignment="center" />
 
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="78dp"
+                android:layout_width="100dp"
                 android:layout_height="75dp"
                 android:layout_gravity="left|bottom"
                 android:background="@null"
@@ -113,9 +112,9 @@
 
                 <ImageView
                     android:id="@+id/ivESF"
-                    android:layout_width="27dp"
-                    android:layout_height="27dp"
-                    android:layout_marginLeft="22dp"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center|bottom"
                     android:adjustViewBounds="true"
                     android:src="@drawable/esf" />
 
@@ -123,13 +122,14 @@
                     android:id="@+id/tvESF"
                     android:layout_width="match_parent"
                     android:layout_height="25dp"
+                    android:textSize="14sp"
                     android:text="二手房"
                     android:textAlignment="center" />
 
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="78dp"
+                android:layout_width="100dp"
                 android:layout_height="75dp"
                 android:layout_gravity="left|bottom"
                 android:background="@null"
@@ -137,9 +137,9 @@
 
                 <ImageView
                     android:id="@+id/ivCW"
-                    android:layout_width="27dp"
-                    android:layout_height="27dp"
-                    android:layout_marginLeft="22dp"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center|bottom"
                     android:adjustViewBounds="true"
                     android:src="@drawable/cw" />
 
@@ -153,7 +153,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="78dp"
+                android:layout_width="100dp"
                 android:layout_height="75dp"
                 android:layout_gravity="left|bottom"
                 android:background="@null"
@@ -161,9 +161,9 @@
 
                 <ImageView
                     android:id="@+id/ivSHFW"
-                    android:layout_width="27dp"
-                    android:layout_height="27dp"
-                    android:layout_marginLeft="22dp"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center|bottom"
                     android:adjustViewBounds="true"
                     android:src="@drawable/shfw" />
 
@@ -186,7 +186,7 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="78dp"
+                android:layout_width="100dp"
                 android:layout_height="75dp"
                 android:layout_gravity="left|bottom"
                 android:background="@null"
@@ -194,9 +194,9 @@
 
                 <ImageView
                     android:id="@+id/ivSWFW"
-                    android:layout_width="27dp"
-                    android:layout_height="27dp"
-                    android:layout_marginLeft="22dp"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center|bottom"
                     android:adjustViewBounds="true"
                     android:src="@drawable/swfw" />
 
@@ -210,7 +210,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="78dp"
+                android:layout_width="100dp"
                 android:layout_height="75dp"
                 android:layout_gravity="left|bottom"
                 android:background="@null"
@@ -218,9 +218,9 @@
 
                 <ImageView
                     android:id="@+id/ivESWP"
-                    android:layout_width="27dp"
-                    android:layout_height="27dp"
-                    android:layout_marginLeft="22dp"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center|bottom"
                     android:adjustViewBounds="true"
                     android:src="@drawable/es" />
 
@@ -234,7 +234,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="78dp"
+                android:layout_width="100dp"
                 android:layout_height="75dp"
                 android:layout_gravity="left|bottom"
                 android:background="@null"
@@ -242,9 +242,9 @@
 
                 <ImageView
                     android:id="@+id/ivZP"
-                    android:layout_width="27dp"
-                    android:layout_height="27dp"
-                    android:layout_marginLeft="22dp"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center|bottom"
                     android:adjustViewBounds="true"
                     android:src="@drawable/zp" />
 
@@ -258,7 +258,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="78dp"
+                android:layout_width="100dp"
                 android:layout_height="75dp"
                 android:layout_gravity="left|bottom"
                 android:background="@null"
@@ -266,9 +266,9 @@
 
                 <ImageView
                     android:id="@+id/ivJZ"
-                    android:layout_width="27dp"
-                    android:layout_height="27dp"
-                    android:layout_marginLeft="22dp"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center|bottom"
                     android:adjustViewBounds="true"
                     android:src="@drawable/jz" />
 
@@ -302,14 +302,14 @@
                 android:src="@drawable/fljx" />
 
             <LinearLayout
-                android:layout_width="252dp"
+                android:layout_width="320dp"
                 android:layout_height="75dp"
                 android:background="@null"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/tvSZJX"
-                    android:layout_width="240dp"
+                    android:layout_width="320dp"
                     android:layout_height="48dp"
                     android:layout_marginLeft="40dp"
                     android:background="@null"
@@ -331,26 +331,28 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="313dp"
+            android:layout_width="380dp"
             android:layout_height="48dp"
             android:background="@null"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/tvCNXH"
-                android:layout_width="223dp"
+                android:layout_width="80dp"
                 android:layout_height="48dp"
                 android:background="@null"
                 android:paddingTop="13dp"
+                android:paddingLeft="13dp"
                 android:text="猜你喜欢"
-                android:textSize="15dp" />
+                android:textSize="15sp" />
 
             <ImageView
                 android:id="@+id/ivHYP"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="230dp"
                 android:layout_marginRight="2dp"
+                android:layout_marginTop="13dp"
                 android:adjustViewBounds="true"
                 android:src="@drawable/hyp" />
 
@@ -361,221 +363,59 @@
                 android:background="@null"
                 android:paddingTop="13dp"
                 android:text="换一批"
-                android:textSize="15dp" />
+                android:textSize="15sp" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="302dp"
+            android:id="@+id/llWZJX"
+            android:layout_width="400dp"
             android:layout_height="match_parent"
             android:background="@null"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="302dp"
-                android:layout_height="75dp"
-                android:background="@null"
-                android:orientation="horizontal">
+            <!--<LinearLayout-->
+                <!--android:layout_width="400dp"-->
+                <!--android:layout_height="75dp"-->
+                <!--android:background="@null"-->
+                <!--android:orientation="horizontal">-->
 
-                <ImageView
-                    android:layout_width="96dp"
-                    android:layout_height="75dp"
-                    android:layout_gravity="top"
-                    android:adjustViewBounds="true"
-                    android:background="@null"
-                    android:paddingLeft="5dp"
-                    android:src="@drawable/cnxh" />
+                <!--<ImageView-->
+                    <!--android:layout_width="100dp"-->
+                    <!--android:layout_height="75dp"-->
+                    <!--android:layout_gravity="top"-->
+                    <!--android:adjustViewBounds="true"-->
+                    <!--android:background="@null"-->
+                    <!--android:paddingLeft="5dp"-->
+                    <!--android:src="@drawable/cnxh" />-->
 
-                <LinearLayout
-                    android:layout_width="220dp"
-                    android:layout_height="75dp"
-                    android:background="@null"
-                    android:orientation="vertical">
+                <!--<LinearLayout-->
+                    <!--android:layout_width="300dp"-->
+                    <!--android:layout_height="75dp"-->
+                    <!--android:background="@null"-->
+                    <!--android:orientation="vertical">-->
 
-                    <TextView
-                        android:layout_width="220dp"
-                        android:layout_height="48dp"
-                        android:layout_marginLeft="40dp"
-                        android:background="@null"
-                        android:paddingTop="12dp"
-                        android:text="温泉六一北路恒宇国际266平复式带精装修多套选择" />
+                    <!--<TextView-->
+                        <!--android:layout_width="300dp"-->
+                        <!--android:layout_height="48dp"-->
+                        <!--android:layout_marginLeft="40dp"-->
+                        <!--android:background="@null"-->
+                        <!--android:paddingTop="12dp"-->
+                        <!--android:text="温泉六一北路恒宇国际266平复式带精装修多套选择" />-->
 
-                    <TextView
-                        android:layout_width="180dp"
-                        android:layout_height="310dp"
-                        android:layout_gravity="top"
-                        android:layout_marginLeft="40dp"
-                        android:background="@null"
-                        android:paddingTop="2dp"
-                        android:text="3月19日" />
+                    <!--<TextView-->
+                        <!--android:layout_width="300dp"-->
+                        <!--android:layout_height="310dp"-->
+                        <!--android:layout_gravity="top"-->
+                        <!--android:layout_marginLeft="40dp"-->
+                        <!--android:background="@null"-->
+                        <!--android:paddingTop="2dp"-->
+                        <!--android:text="3月19日" />-->
 
-                </LinearLayout>
+                <!--</LinearLayout>-->
 
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="302dp"
-                android:layout_height="75dp"
-                android:background="@null"
-                android:orientation="horizontal">
+            <!--</LinearLayout>-->
 
-                <ImageView
-                    android:layout_width="96dp"
-                    android:layout_height="75dp"
-                    android:layout_gravity="top"
-                    android:adjustViewBounds="true"
-                    android:background="@null"
-                    android:paddingLeft="5dp"
-                    android:src="@drawable/cnxh" />
-
-                <LinearLayout
-                    android:layout_width="220dp"
-                    android:layout_height="75dp"
-                    android:background="@null"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="220dp"
-                        android:layout_height="48dp"
-                        android:layout_marginLeft="40dp"
-                        android:background="@null"
-                        android:paddingTop="12dp"
-                        android:text="温泉六一北路恒宇国际266平复式带精装修多套选择" />
-
-                    <TextView
-                        android:layout_width="180dp"
-                        android:layout_height="27dp"
-                        android:layout_gravity="top"
-                        android:layout_marginLeft="40dp"
-                        android:background="@null"
-                        android:paddingTop="2dp"
-                        android:text="3月19日" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="302dp"
-                android:layout_height="75dp"
-                android:background="@null"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="96dp"
-                    android:layout_height="75dp"
-                    android:layout_gravity="top"
-                    android:adjustViewBounds="true"
-                    android:background="@null"
-                    android:paddingLeft="5dp"
-                    android:src="@drawable/cnxh" />
-
-                <LinearLayout
-                    android:layout_width="220dp"
-                    android:layout_height="75dp"
-                    android:background="@null"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="220dp"
-                        android:layout_height="48dp"
-                        android:layout_marginLeft="40dp"
-                        android:background="@null"
-                        android:paddingTop="12dp"
-                        android:text="温泉六一北路恒宇国际266平复式带精装修多套选择" />
-
-                    <TextView
-                        android:layout_width="180dp"
-                        android:layout_height="27dp"
-                        android:layout_gravity="top"
-                        android:layout_marginLeft="40dp"
-                        android:background="@null"
-                        android:paddingTop="2dp"
-                        android:text="3月19日" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="302dp"
-                android:layout_height="75dp"
-                android:background="@null"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="96dp"
-                    android:layout_height="75dp"
-                    android:layout_gravity="top"
-                    android:adjustViewBounds="true"
-                    android:background="@null"
-                    android:paddingLeft="5dp"
-                    android:src="@drawable/cnxh" />
-
-                <LinearLayout
-                    android:layout_width="220dp"
-                    android:layout_height="75dp"
-                    android:background="@null"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="220dp"
-                        android:layout_height="48dp"
-                        android:layout_marginLeft="40dp"
-                        android:background="@null"
-                        android:paddingTop="12dp"
-                        android:text="温泉六一北路恒宇国际266平复式带精装修多套选择" />
-
-                    <TextView
-                        android:layout_width="180dp"
-                        android:layout_height="27dp"
-                        android:layout_gravity="top"
-                        android:layout_marginLeft="40dp"
-                        android:background="@null"
-                        android:paddingTop="2dp"
-                        android:text="3月19日" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="302dp"
-                android:layout_height="75dp"
-                android:background="@null"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="96dp"
-                    android:layout_height="75dp"
-                    android:layout_gravity="top"
-                    android:adjustViewBounds="true"
-                    android:background="@null"
-                    android:paddingLeft="5dp"
-                    android:src="@drawable/cnxh" />
-
-                <LinearLayout
-                    android:layout_width="220dp"
-                    android:layout_height="75dp"
-                    android:background="@null"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="220dp"
-                        android:layout_height="48dp"
-                        android:layout_marginLeft="40dp"
-                        android:background="@null"
-                        android:paddingTop="12dp"
-                        android:text="温泉六一北路恒宇国际266平复式带精装修多套选择" />
-
-                    <TextView
-                        android:layout_width="180dp"
-                        android:layout_height="27dp"
-                        android:layout_gravity="top"
-                        android:layout_marginLeft="40dp"
-                        android:background="@null"
-                        android:paddingTop="2dp"
-                        android:text="3月19日" />
-
-                </LinearLayout>
-
-            </LinearLayout>
 
         </LinearLayout>
 
@@ -591,7 +431,7 @@
         android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_width="75dp"
+            android:layout_width="100dp"
             android:layout_height="75dp"
             android:layout_gravity="left|bottom"
             android:background="@null"
@@ -601,7 +441,7 @@
                 android:id="@+id/ivSY"
                 android:layout_width="27dp"
                 android:layout_height="27dp"
-                android:layout_marginLeft="22dp"
+                android:layout_gravity="center|bottom"
                 android:adjustViewBounds="true"
                 android:src="@drawable/sy" />
 
@@ -615,7 +455,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="75dp"
+            android:layout_width="100dp"
             android:layout_height="75dp"
             android:layout_gravity="left|bottom"
             android:background="@null"
@@ -625,7 +465,7 @@
                 android:id="@+id/ivFB"
                 android:layout_width="27dp"
                 android:layout_height="27dp"
-                android:layout_marginLeft="22dp"
+                android:layout_gravity="center|bottom"
                 android:adjustViewBounds="true"
                 android:src="@drawable/fb" />
 
@@ -639,7 +479,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="75dp"
+            android:layout_width="100dp"
             android:layout_height="75dp"
             android:layout_gravity="left|bottom"
             android:background="@null"
@@ -649,7 +489,7 @@
                 android:id="@+id/ivXX"
                 android:layout_width="27dp"
                 android:layout_height="27dp"
-                android:layout_marginLeft="22dp"
+                android:layout_gravity="center|bottom"
                 android:adjustViewBounds="true"
                 android:src="@drawable/xx" />
 
@@ -664,7 +504,7 @@
 
         <LinearLayout
             android:id="@+id/llGRZX"
-            android:layout_width="75dp"
+            android:layout_width="100dp"
             android:layout_height="75dp"
             android:layout_gravity="left|bottom"
             android:background="@null"
@@ -674,7 +514,7 @@
                 android:id="@+id/ivGRZX"
                 android:layout_width="27dp"
                 android:layout_height="27dp"
-                android:layout_marginLeft="22dp"
+                android:layout_gravity="center|bottom"
                 android:adjustViewBounds="true"
                 android:src="@drawable/grzx" />
 

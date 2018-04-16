@@ -65,11 +65,8 @@ public class YHDLActivity extends AppCompatActivity implements OnClickListener {
                 dialog.show();
                 new Handler().postDelayed(new Runnable() {
                     @Override
-                    public void run() {
-                        dialog.dismiss();
-                    }
+                    public void run() {dialog.dismiss();}
                 }, 1000);
-
                 break;
         }
     }
@@ -81,7 +78,9 @@ public class YHDLActivity extends AppCompatActivity implements OnClickListener {
         finish();//关闭当前页面
     }
 
+    //用户登录
     public void YHDL() {
+
         new AsyncTask<String, Void, Object>() {
 
             protected void onPostExecute(Object result) {
@@ -110,6 +109,8 @@ public class YHDLActivity extends AppCompatActivity implements OnClickListener {
                 }
                 return result;
             }
+
         }.execute();
+
     }
 }

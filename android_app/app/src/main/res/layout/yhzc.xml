@@ -45,7 +45,7 @@
         android:layout_height="160dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="信息小镇"
+        android:text="风铃网"
         android:textAlignment="center"
         android:textColor="#bc6ba6"
         android:textSize="40dp" />
@@ -113,7 +113,7 @@
         android:layout_marginTop="15dp"
         android:textSize="18px"
         android:textColor="#9E9E9E"
-        android:text="注册前请阅读《信息小镇服务协议》,注册即表示同意此协议"
+        android:text="注册前请阅读《风铃网服务协议》,注册即表示同意此协议"
         android:textAlignment="center" />
 
     <ProgressBar
