@@ -6,18 +6,15 @@ import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.content.Context;
-import android.os.Message;
 import android.os.StrictMode;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.ActionBar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -25,16 +22,11 @@ import android.widget.TextView;
 import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
 import com.baidu.location.LocationClient;
-import com.baidu.location.LocationClientOption;
-import com.baidu.location.LocationClientOption.LocationMode;
 import com.baidu.location.Poi;
 
-import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
-import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
-import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
@@ -42,44 +34,65 @@ import org.apache.http.util.EntityUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.text.ParsePosition;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.Locale;
+import android.support.v4.app.FragmentPagerAdapter;
 
 public class MainActivity extends AppCompatActivity implements OnClickListener {
     private static Context context;
     private TextView mtvSZCS;
     private LinearLayout mllWZJX;
+    private ViewPager mvpDH;
+    private List<Fragment> mFragmentList = new ArrayList<Fragment>();
+
     private LocationClient mLocationClient;// 定位SDK的核心类
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-        StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().detectDiskReads().detectDiskWrites().detectNetwork().penaltyLog().build());
-        StrictMode.setVmPolicy(new StrictMode.VmPolicy.Builder().detectLeakedSqlLiteObjects().detectLeakedClosableObjects().penaltyLog().penaltyDeath().build());
+        findById();
+        init();
+        //HQDQSZD();
+        //GetWZJX();
+    }
+
+    private void findById() {
         mtvSZCS = (TextView) findViewById(R.id.tvSZCS);
         mllWZJX = (LinearLayout) findViewById(R.id.llWZJX);
-        ViewGroup vg = (ViewGroup) findViewById(R.id.llGRZX);
-        HQDQSZD();
-        vg.setOnClickListener(this);
-        GetWZJX();
+        ViewGroup vgfb = (ViewGroup) findViewById(R.id.llFB);
+        ViewGroup vgxx = (ViewGroup) findViewById(R.id.llXX);
+        ViewGroup vggrzx = (ViewGroup) findViewById(R.id.llGRZX);
+        vgfb.setOnClickListener(this);
+        vgxx.setOnClickListener(this);
+        vggrzx.setOnClickListener(this);
+    }
+
+    private void init() {
+        //解决获取网站资源图片报错问题
+        StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().detectDiskReads().detectDiskWrites().detectNetwork().penaltyLog().build());
+        StrictMode.setVmPolicy(new StrictMode.VmPolicy.Builder().detectLeakedSqlLiteObjects().detectLeakedClosableObjects().penaltyLog().penaltyDeath().build());
     }
 
     //事件监听
     public void onClick(View view) {
         switch (view.getId()) {
+            case R.id.llSY:
+                YMTZ("SY");
+                break;
+            case R.id.llFB:
+                YMTZ("FB");
+                break;
+            case R.id.llXX:
+                YMTZ("XX");
+                break;
             case R.id.llGRZX:
-                TZDLY();
+                YMTZ("GRZX");
                 break;
             case R.id.tvSZCS:
 
@@ -100,6 +113,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
                     e.printStackTrace();
                 }
             }
+
             protected Object doInBackground(String... params) {
                 Object result = null;
                 String targeturl = "http://www.915fl.com/FCCX/LoadFCXXWithoutXZQ";
@@ -148,11 +162,10 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
                 llouter.setLayoutParams(layoutParams);
                 mllWZJX.addView(llouter);
 
-
                 ImageView ivtp = new ImageView(this);
-                ivtp.setLayoutParams(new ViewGroup.LayoutParams(400, 300));
+                ivtp.setLayoutParams(new ViewGroup.LayoutParams(440, 340));
                 ivtp.setScaleType(ImageView.ScaleType.FIT_XY);
-                ivtp
+                ivtp.setPadding(20, 0, 20, 20);
                 //显示在界面上
                 ivtp.setImageBitmap(getHttpBitmap(photoObject.getString("PHOTOURL")));
 
@@ -161,7 +174,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
 
                 TextView tvbt = new TextView(this);
                 tvbt.setWidth(800);
-                tvbt.setHeight(150);
+                tvbt.setHeight(240);
                 tvbt.setText(BT);
 
                 TextView tvgxsj = new TextView(this);
@@ -173,7 +186,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
                 llinner.addView(tvgxsj);
                 llouter.addView(ivtp);
                 llouter.addView(llinner);
-
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -221,6 +233,25 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         Intent intent = new Intent(MainActivity.this, YHDLActivity.class);
         startActivity(intent);
         finish();//关闭当前页面
+    }
+
+    //个人中心
+    public void YMTZ(String id) {
+        if(id == "FB") {
+            Intent intent = new Intent(MainActivity.this, GRZXActivity.class);
+            startActivity(intent);
+            finish();//关闭当前页面
+        }
+        if(id == "XX") {
+            Intent intent = new Intent(MainActivity.this, GRZXActivity.class);
+            startActivity(intent);
+            finish();//关闭当前页面
+        }
+        if(id == "GRZX") {
+            Intent intent = new Intent(MainActivity.this, GRZXActivity.class);
+            startActivity(intent);
+            finish();//关闭当前页面
+        }
     }
 
     //获取当前所在地
