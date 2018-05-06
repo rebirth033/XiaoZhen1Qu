@@ -408,7 +408,7 @@
                 android:layout_height="27dp"
                 android:layout_gravity="center|bottom"
                 android:adjustViewBounds="true"
-                android:src="@drawable/sy" />
+                android:src="@drawable/dbcd_sy" />
 
             <TextView
                 android:id="@+id/tvSY"
@@ -433,7 +433,7 @@
                 android:layout_height="27dp"
                 android:layout_gravity="center|bottom"
                 android:adjustViewBounds="true"
-                android:src="@drawable/fb" />
+                android:src="@drawable/dbcd_fb" />
 
             <TextView
                 android:id="@+id/tvFB"
@@ -458,7 +458,7 @@
                 android:layout_height="27dp"
                 android:layout_gravity="center|bottom"
                 android:adjustViewBounds="true"
-                android:src="@drawable/xx" />
+                android:src="@drawable/dbcd_xx" />
 
             <TextView
                 android:id="@+id/tvXX"
@@ -483,7 +483,7 @@
                 android:layout_height="27dp"
                 android:layout_gravity="center|bottom"
                 android:adjustViewBounds="true"
-                android:src="@drawable/grzx" />
+                android:src="@drawable/dbcd_grzx" />
 
             <TextView
                 android:id="@+id/tvGRZX"

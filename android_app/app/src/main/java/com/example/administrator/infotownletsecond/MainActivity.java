@@ -238,12 +238,12 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
     //个人中心
     public void YMTZ(String id) {
         if(id == "FB") {
-            Intent intent = new Intent(MainActivity.this, GRZXActivity.class);
+            Intent intent = new Intent(MainActivity.this, FBActivity.class);
             startActivity(intent);
             finish();//关闭当前页面
         }
         if(id == "XX") {
-            Intent intent = new Intent(MainActivity.this, GRZXActivity.class);
+            Intent intent = new Intent(MainActivity.this, XXActivity.class);
             startActivity(intent);
             finish();//关闭当前页面
         }
