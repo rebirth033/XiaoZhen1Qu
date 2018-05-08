@@ -18,24 +18,43 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:background="#bc6ba6"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/tvTitle"
-                    android:layout_width="350dp"
-                    android:layout_height="match_parent"
-                    android:paddingLeft="50dp"
-                    android:textSize="20dp"
-                    android:gravity="center"
-                    android:text="选择发布类别" />
 
-                <TextView
-                    android:id="@+id/tvGD"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:text="我的发布" />
+                <ImageView
+                    android:id="@+id/ivBACK"
+                    android:layout_width="18dp"
+                    android:layout_height="42dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:adjustViewBounds="true"
+                    android:background="#bc6ba6"
+                    android:src="@drawable/arrow_back" />
+
+                <EditText
+                    android:id="@+id/etSJH"
+                    android:layout_width="326dp"
+                    android:layout_height="42dp"
+                    android:layout_gravity="center"
+                    android:background="#ffffff"
+                    android:paddingLeft="5dp"
+                    android:hint="找房子 找工作 找服务"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/ivSYS"
+                    android:layout_width="30dp"
+                    android:layout_height="42dp"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:background="#ffffff"
+                    android:paddingRight="5dp"
+                    android:src="@drawable/sys" />
 
             </LinearLayout>
 
@@ -47,15 +66,15 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
-                    android:id="@+id/llFC"
-                    android:layout_width="130dp"
+                    android:id="@+id/llSY_ZF_ZZ"
+                    android:layout_width="100dp"
                     android:layout_height="75dp"
                     android:layout_gravity="left|bottom"
                     android:background="@null"
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/ivFC"
+                        android:id="@+id/ivSY_ZF_ZZ"
                         android:layout_width="27dp"
                         android:layout_height="27dp"
                         android:layout_gravity="center|bottom"
@@ -63,24 +82,24 @@
                         android:src="@drawable/fc" />
 
                     <TextView
-                        android:id="@+id/tvFC"
+                        android:id="@+id/tvSY_ZF_ZZ"
                         android:layout_width="match_parent"
                         android:layout_height="25dp"
-                        android:text="房产"
+                        android:text="整租"
                         android:textAlignment="center" />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/llZP"
-                    android:layout_width="130dp"
+                    android:layout_width="100dp"
                     android:layout_height="75dp"
                     android:layout_gravity="left|bottom"
                     android:background="@null"
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/ivZP"
+                        android:id="@+id/ivSY_ZF_HZ"
                         android:layout_width="27dp"
                         android:layout_height="27dp"
                         android:layout_gravity="center|bottom"
@@ -88,24 +107,24 @@
                         android:src="@drawable/zp" />
 
                     <TextView
-                        android:id="@+id/tvZP"
+                        android:id="@+id/tvSY_ZF_HZ"
                         android:layout_width="match_parent"
                         android:layout_height="25dp"
-                        android:text="招聘"
+                        android:text="合租"
                         android:textAlignment="center" />
 
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/llJZ"
-                    android:layout_width="130dp"
+                    android:id="@+id/llSY_ZF_DZ"
+                    android:layout_width="100dp"
                     android:layout_height="75dp"
                     android:layout_gravity="left|bottom"
                     android:background="@null"
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/ivJZ"
+                        android:id="@+id/ivSY_ZF_DZ"
                         android:layout_width="27dp"
                         android:layout_height="27dp"
                         android:layout_gravity="center|bottom"
@@ -113,10 +132,35 @@
                         android:src="@drawable/jz" />
 
                     <TextView
-                        android:id="@+id/tvJZ"
+                        android:id="@+id/tvSY_ZF_DZ"
                         android:layout_width="match_parent"
                         android:layout_height="25dp"
-                        android:text="兼职"
+                        android:text="短租"
+                        android:textAlignment="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llSY_ZF_GRFY"
+                    android:layout_width="100dp"
+                    android:layout_height="75dp"
+                    android:layout_gravity="left|bottom"
+                    android:background="@null"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/ivSY_ZF_GRFY"
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_gravity="center|bottom"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/jz" />
+
+                    <TextView
+                        android:id="@+id/tvSY_ZF_GRFY"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:text="个人房源"
                         android:textAlignment="center" />
 
                 </LinearLayout>
@@ -131,15 +175,15 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
-                    android:id="@+id/llES"
-                    android:layout_width="130dp"
+                    android:id="@+id/llSY_ZF_XZL"
+                    android:layout_width="100dp"
                     android:layout_height="75dp"
                     android:layout_gravity="left|bottom"
                     android:background="@null"
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/ivES"
+                        android:id="@+id/ivSY_ZF_XZL"
                         android:layout_width="27dp"
                         android:layout_height="27dp"
                         android:layout_gravity="center|bottom"
@@ -147,24 +191,24 @@
                         android:src="@drawable/es" />
 
                     <TextView
-                        android:id="@+id/tvES"
+                        android:id="@+id/tvSY_ZF_XZL"
                         android:layout_width="match_parent"
                         android:layout_height="25dp"
-                        android:text="二手"
+                        android:text="写字楼"
                         android:textAlignment="center" />
 
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/llCL"
-                    android:layout_width="130dp"
+                    android:id="@+id/llSY_ZF_SP"
+                    android:layout_width="100dp"
                     android:layout_height="75dp"
                     android:layout_gravity="left|bottom"
                     android:background="@null"
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/ivCL"
+                        android:id="@+id/ivSY_ZF_SP"
                         android:layout_width="27dp"
                         android:layout_height="27dp"
                         android:layout_gravity="center|bottom"
@@ -172,24 +216,24 @@
                         android:src="@drawable/cl" />
 
                     <TextView
-                        android:id="@+id/tvCL"
+                        android:id="@+id/tvSY_ZF_SP"
                         android:layout_width="match_parent"
                         android:layout_height="25dp"
-                        android:text="车辆"
+                        android:text="商铺"
                         android:textAlignment="center" />
 
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/llSHFW"
-                    android:layout_width="130dp"
+                    android:id="@+id/llSY_ZF_CW"
+                    android:layout_width="100dp"
                     android:layout_height="75dp"
                     android:layout_gravity="left|bottom"
                     android:background="@null"
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/ivSHFW"
+                        android:id="@+id/ivSY_ZF_CW"
                         android:layout_width="27dp"
                         android:layout_height="27dp"
                         android:layout_gravity="center|bottom"
@@ -197,13 +241,56 @@
                         android:src="@drawable/shfw" />
 
                     <TextView
-                        android:id="@+id/tvSHFW"
+                        android:id="@+id/tvSY_ZF_CW"
                         android:layout_width="match_parent"
                         android:layout_height="25dp"
-                        android:text="生活服务"
+                        android:text="车位"
                         android:textAlignment="center" />
 
                 </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llSY_ZF_CF"
+                    android:layout_width="100dp"
+                    android:layout_height="75dp"
+                    android:layout_gravity="left|bottom"
+                    android:background="@null"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/ivSY_ZF_CF"
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_gravity="center|bottom"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/shfw" />
+
+                    <TextView
+                        android:id="@+id/tvSY_ZF_CF"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:text="厂房"
+                        android:textAlignment="center" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="410dp"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvCNXH"
+                    android:layout_width="80dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@null"
+                    android:paddingTop="13dp"
+                    android:text="相关服务"
+                    android:textSize="15sp" />
 
             </LinearLayout>
 
@@ -215,160 +302,101 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
-                    android:id="@+id/llSWFW"
-                    android:layout_width="130dp"
+                    android:id="@+id/llSY_ZF_BJ"
+                    android:layout_width="100dp"
                     android:layout_height="75dp"
                     android:layout_gravity="left|bottom"
                     android:background="@null"
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/ivSWFW"
+                        android:id="@+id/ivSY_ZF_BJ"
                         android:layout_width="27dp"
                         android:layout_height="27dp"
                         android:layout_gravity="center|bottom"
                         android:adjustViewBounds="true"
-                        android:src="@drawable/swfw" />
+                        android:src="@drawable/es" />
 
                     <TextView
-                        android:id="@+id/tvSWFW"
+                        android:id="@+id/tvSY_ZF_BJ"
                         android:layout_width="match_parent"
                         android:layout_height="25dp"
-                        android:text="商务服务"
+                        android:text="搬家"
                         android:textAlignment="center" />
 
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/llCW"
-                    android:layout_width="130dp"
+                    android:id="@+id/llSY_ZF_BAOJ"
+                    android:layout_width="100dp"
                     android:layout_height="75dp"
                     android:layout_gravity="left|bottom"
                     android:background="@null"
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/ivCW"
+                        android:id="@+id/ivSY_ZF_BAOJ"
                         android:layout_width="27dp"
                         android:layout_height="27dp"
                         android:layout_gravity="center|bottom"
                         android:adjustViewBounds="true"
-                        android:src="@drawable/cw" />
+                        android:src="@drawable/cl" />
 
                     <TextView
-                        android:id="@+id/tvCW"
+                        android:id="@+id/tvSY_ZF_BAOJ"
                         android:layout_width="match_parent"
                         android:layout_height="25dp"
-                        android:text="宠物"
+                        android:text="保洁"
                         android:textAlignment="center" />
 
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/llZSJM"
-                    android:layout_width="130dp"
+                    android:id="@+id/llSY_ZF_WX"
+                    android:layout_width="100dp"
                     android:layout_height="75dp"
                     android:layout_gravity="left|bottom"
                     android:background="@null"
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/ivZSJM"
+                        android:id="@+id/ivSY_ZF_WX"
                         android:layout_width="27dp"
                         android:layout_height="27dp"
                         android:layout_gravity="center|bottom"
                         android:adjustViewBounds="true"
-                        android:src="@drawable/fb_zsjm" />
+                        android:src="@drawable/shfw" />
 
                     <TextView
-                        android:id="@+id/tvZSJM"
+                        android:id="@+id/tvSY_ZF_WX"
                         android:layout_width="match_parent"
                         android:layout_height="25dp"
-                        android:text="招商加盟"
-                        android:textAlignment="center" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="75dp"
-                android:layout_gravity="bottom"
-                android:background="@null"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:id="@+id/llJYPX"
-                    android:layout_width="130dp"
-                    android:layout_height="75dp"
-                    android:layout_gravity="left|bottom"
-                    android:background="@null"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/ivJYPX"
-                        android:layout_width="27dp"
-                        android:layout_height="27dp"
-                        android:layout_gravity="center|bottom"
-                        android:adjustViewBounds="true"
-                        android:src="@drawable/jypx" />
-
-                    <TextView
-                        android:id="@+id/tvJYPX"
-                        android:layout_width="match_parent"
-                        android:layout_height="25dp"
-                        android:text="教育培训"
+                        android:text="维修"
                         android:textAlignment="center" />
 
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/llZXJC"
-                    android:layout_width="130dp"
+                    android:id="@+id/llSY_ZF_PS"
+                    android:layout_width="100dp"
                     android:layout_height="75dp"
                     android:layout_gravity="left|bottom"
                     android:background="@null"
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/ivZXJC"
+                        android:id="@+id/ivSY_ZF_PS"
                         android:layout_width="27dp"
                         android:layout_height="27dp"
                         android:layout_gravity="center|bottom"
                         android:adjustViewBounds="true"
-                        android:src="@drawable/zxjc" />
+                        android:src="@drawable/shfw" />
 
                     <TextView
-                        android:id="@+id/tvZXJC"
+                        android:id="@+id/tvSY_ZF_PS"
                         android:layout_width="match_parent"
                         android:layout_height="25dp"
-                        android:text="装修建材"
-                        android:textAlignment="center" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/llPFCG"
-                    android:layout_width="130dp"
-                    android:layout_height="75dp"
-                    android:layout_gravity="left|bottom"
-                    android:background="@null"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/ivPFCG"
-                        android:layout_width="27dp"
-                        android:layout_height="27dp"
-                        android:layout_gravity="center|bottom"
-                        android:adjustViewBounds="true"
-                        android:src="@drawable/pfcg" />
-
-                    <TextView
-                        android:id="@+id/tvPFCG"
-                        android:layout_width="match_parent"
-                        android:layout_height="25dp"
-                        android:text="批发采购"
+                        android:text="配送"
                         android:textAlignment="center" />
 
                 </LinearLayout>
@@ -387,33 +415,8 @@
         android:orientation="horizontal">
 
         <LinearLayout
-            android:id="@+id/llSY"
-            android:layout_width="100dp"
-            android:layout_height="75dp"
-            android:layout_gravity="left|bottom"
-            android:background="@null"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/ivSY"
-                android:layout_width="27dp"
-                android:layout_height="27dp"
-                android:layout_gravity="center|bottom"
-                android:adjustViewBounds="true"
-                android:src="@drawable/dbcd_sy" />
-
-            <TextView
-                android:id="@+id/tvSY"
-                android:layout_width="match_parent"
-                android:layout_height="25dp"
-                android:text="首页"
-                android:textAlignment="center" />
-
-        </LinearLayout>
-
-        <LinearLayout
             android:id="@+id/llFB"
-            android:layout_width="100dp"
+            android:layout_width="130dp"
             android:layout_height="75dp"
             android:layout_gravity="left|bottom"
             android:background="@null"
@@ -431,14 +434,14 @@
                 android:id="@+id/tvFB"
                 android:layout_width="match_parent"
                 android:layout_height="25dp"
-                android:text="发布"
+                android:text="租房"
                 android:textAlignment="center" />
 
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/llXX"
-            android:layout_width="100dp"
+            android:layout_width="130dp"
             android:layout_height="75dp"
             android:layout_gravity="left|bottom"
             android:background="@null"
@@ -456,14 +459,14 @@
                 android:id="@+id/tvXX"
                 android:layout_width="match_parent"
                 android:layout_height="25dp"
-                android:text="消息"
+                android:text="发布"
                 android:textAlignment="center" />
 
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/llGRZX"
-            android:layout_width="100dp"
+            android:layout_width="130dp"
             android:layout_height="75dp"
             android:layout_gravity="left|bottom"
             android:background="@null"
@@ -481,7 +484,7 @@
                 android:id="@+id/tvGRZX"
                 android:layout_width="match_parent"
                 android:layout_height="25dp"
-                android:text="个人中心"
+                android:text="我的"
                 android:textAlignment="center" />
 
         </LinearLayout>

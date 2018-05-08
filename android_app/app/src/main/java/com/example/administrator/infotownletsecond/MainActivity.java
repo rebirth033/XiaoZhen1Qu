@@ -65,6 +65,16 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
     private void findById() {
         mtvSZCS = (TextView) findViewById(R.id.tvSZCS);
         mllWZJX = (LinearLayout) findViewById(R.id.llWZJX);
+
+        ViewGroup vgsy_zf = (ViewGroup) findViewById(R.id.llSY_ZF);
+        ViewGroup vgsy_esf = (ViewGroup) findViewById(R.id.llSY_ESF);
+        ViewGroup vgsy_cw = (ViewGroup) findViewById(R.id.llSY_CW);
+        ViewGroup vgsy_shfw = (ViewGroup) findViewById(R.id.llSY_SHFW);
+        vgsy_zf.setOnClickListener(this);
+        vgsy_esf.setOnClickListener(this);
+        vgsy_cw.setOnClickListener(this);
+        vgsy_shfw.setOnClickListener(this);
+
         ViewGroup vgfb = (ViewGroup) findViewById(R.id.llFB);
         ViewGroup vgxx = (ViewGroup) findViewById(R.id.llXX);
         ViewGroup vggrzx = (ViewGroup) findViewById(R.id.llGRZX);
@@ -93,6 +103,9 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
                 break;
             case R.id.llGRZX:
                 YMTZ("GRZX");
+                break;
+            case R.id.llSY_ZF:
+                YMTZ("SY_ZF");
                 break;
             case R.id.tvSZCS:
 
@@ -249,6 +262,11 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         }
         if(id == "GRZX") {
             Intent intent = new Intent(MainActivity.this, GRZXActivity.class);
+            startActivity(intent);
+            finish();//关闭当前页面
+        }
+        if(id == "SY_ZF") {
+            Intent intent = new Intent(MainActivity.this, SY_ZFActivity.class);
             startActivity(intent);
             finish();//关闭当前页面
         }

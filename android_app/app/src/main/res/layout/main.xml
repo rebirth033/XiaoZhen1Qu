@@ -31,8 +31,8 @@
 
                 <TextView
                     android:id="@+id/tvSZCS"
-                    android:layout_width="44dp"
-                    android:layout_height="42dp"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
                     android:layout_gravity="center"
                     android:layout_marginLeft="6dp"
                     android:background="#ffffff"
@@ -52,7 +52,7 @@
 
                 <EditText
                     android:id="@+id/etSJH"
-                    android:layout_width="284dp"
+                    android:layout_width="304dp"
                     android:layout_height="42dp"
                     android:layout_gravity="center"
                     android:background="#ffffff"
@@ -84,6 +84,7 @@
                     android:orientation="horizontal">
 
                     <LinearLayout
+                        android:id="@+id/llSY_ZF"
                         android:layout_width="100dp"
                         android:layout_height="75dp"
                         android:layout_gravity="left|bottom"
@@ -109,6 +110,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/llSY_ESF"
                         android:layout_width="100dp"
                         android:layout_height="75dp"
                         android:layout_gravity="left|bottom"
@@ -134,6 +136,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/llSY_CW"
                         android:layout_width="100dp"
                         android:layout_height="75dp"
                         android:layout_gravity="left|bottom"
@@ -158,6 +161,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/llSY_SHFW"
                         android:layout_width="100dp"
                         android:layout_height="75dp"
                         android:layout_gravity="left|bottom"
@@ -299,26 +303,26 @@
 
                 <ImageView
                     android:id="@+id/ivXZJX"
-                    android:layout_width="60dp"
+                    android:layout_width="70dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:adjustViewBounds="true"
                     android:background="@null"
-                    android:paddingLeft="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
                     android:paddingTop="5dp"
                     android:src="@drawable/fljx" />
 
                 <LinearLayout
-                    android:layout_width="320dp"
+                    android:layout_width="330dp"
                     android:layout_height="75dp"
                     android:background="@null"
                     android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/tvSZJX"
-                        android:layout_width="320dp"
+                        android:layout_width="300dp"
                         android:layout_height="48dp"
-                        android:layout_marginLeft="40dp"
                         android:background="@null"
                         android:paddingTop="12dp"
                         android:text="温泉六一北路恒宇国际266平复式带精装修多套选择" />
@@ -328,7 +332,6 @@
                         android:layout_width="180dp"
                         android:layout_height="27dp"
                         android:layout_gravity="top"
-                        android:layout_marginLeft="40dp"
                         android:background="@null"
                         android:paddingTop="2dp"
                         android:text="3月19日" />
@@ -338,7 +341,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="380dp"
+                android:layout_width="410dp"
                 android:layout_height="48dp"
                 android:background="@null"
                 android:orientation="horizontal">
@@ -347,8 +350,8 @@
                     android:id="@+id/tvCNXH"
                     android:layout_width="80dp"
                     android:layout_height="48dp"
+                    android:layout_marginLeft="20dp"
                     android:background="@null"
-                    android:paddingLeft="13dp"
                     android:paddingTop="13dp"
                     android:text="猜你喜欢"
                     android:textSize="15sp" />
@@ -357,7 +360,7 @@
                     android:id="@+id/ivHYP"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:layout_marginLeft="230dp"
+                    android:layout_marginLeft="210dp"
                     android:layout_marginRight="2dp"
                     android:layout_marginTop="13dp"
                     android:adjustViewBounds="true"

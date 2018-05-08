@@ -61,7 +61,8 @@
 
         <activity android:name=".GRZXActivity" />
         <activity android:name=".FBActivity" />
-        <activity android:name=".XXActivity"></activity>
+        <activity android:name=".XXActivity" />
+        <activity android:name=".SY_ZFActivity"></activity>
     </application>
 
 </manifest>
