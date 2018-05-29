@@ -1,6 +1,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llSY"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:baselineAligned="false"
@@ -32,7 +33,7 @@
                 <TextView
                     android:id="@+id/tvSZCS"
                     android:layout_width="50dp"
-                    android:layout_height="40dp"
+                    android:layout_height="42dp"
                     android:layout_gravity="center"
                     android:layout_marginLeft="6dp"
                     android:background="#ffffff"
@@ -85,7 +86,7 @@
 
                     <LinearLayout
                         android:id="@+id/llSY_ZF"
-                        android:layout_width="100dp"
+                        android:layout_width="80dp"
                         android:layout_height="75dp"
                         android:layout_gravity="left|bottom"
                         android:background="@null"
@@ -111,7 +112,7 @@
 
                     <LinearLayout
                         android:id="@+id/llSY_ESF"
-                        android:layout_width="100dp"
+                        android:layout_width="80dp"
                         android:layout_height="75dp"
                         android:layout_gravity="left|bottom"
                         android:background="@null"
@@ -137,7 +138,7 @@
 
                     <LinearLayout
                         android:id="@+id/llSY_CW"
-                        android:layout_width="100dp"
+                        android:layout_width="80dp"
                         android:layout_height="75dp"
                         android:layout_gravity="left|bottom"
                         android:background="@null"
@@ -162,7 +163,7 @@
 
                     <LinearLayout
                         android:id="@+id/llSY_SHFW"
-                        android:layout_width="100dp"
+                        android:layout_width="80dp"
                         android:layout_height="75dp"
                         android:layout_gravity="left|bottom"
                         android:background="@null"
@@ -185,6 +186,31 @@
 
                     </LinearLayout>
 
+                    <LinearLayout
+                        android:id="@+id/llSY_ESC"
+                        android:layout_width="80dp"
+                        android:layout_height="75dp"
+                        android:layout_gravity="left|bottom"
+                        android:background="@null"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ivESC"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:layout_gravity="center|bottom"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/esc" />
+
+                        <TextView
+                            android:id="@+id/tvESC"
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:text="二手车"
+                            android:textAlignment="center" />
+
+                    </LinearLayout>
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -195,7 +221,8 @@
                     android:orientation="horizontal">
 
                     <LinearLayout
-                        android:layout_width="100dp"
+                        android:id="@+id/llSY_SWFW"
+                        android:layout_width="80dp"
                         android:layout_height="75dp"
                         android:layout_gravity="left|bottom"
                         android:background="@null"
@@ -219,7 +246,8 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="100dp"
+                        android:id="@+id/llSY_ESWP"
+                        android:layout_width="80dp"
                         android:layout_height="75dp"
                         android:layout_gravity="left|bottom"
                         android:background="@null"
@@ -243,7 +271,8 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="100dp"
+                        android:id="@+id/llSY_ZP"
+                        android:layout_width="80dp"
                         android:layout_height="75dp"
                         android:layout_gravity="left|bottom"
                         android:background="@null"
@@ -267,7 +296,8 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="100dp"
+                        android:id="@+id/llSY_JZ"
+                        android:layout_width="80dp"
                         android:layout_height="75dp"
                         android:layout_gravity="left|bottom"
                         android:background="@null"
@@ -290,6 +320,31 @@
 
                     </LinearLayout>
 
+                    <LinearLayout
+                        android:id="@+id/llSY_XC"
+                        android:layout_width="80dp"
+                        android:layout_height="75dp"
+                        android:layout_gravity="left|bottom"
+                        android:background="@null"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ivXC"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:layout_gravity="center|bottom"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/xc" />
+
+                        <TextView
+                            android:id="@+id/tvXC"
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:text="新车"
+                            android:textAlignment="center" />
+
+                    </LinearLayout>
+
                 </LinearLayout>
 
             </LinearLayout>
@@ -306,10 +361,10 @@
                     android:layout_width="70dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
-                    android:adjustViewBounds="true"
-                    android:background="@null"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
+                    android:adjustViewBounds="true"
+                    android:background="@null"
                     android:paddingTop="5dp"
                     android:src="@drawable/fljx" />
 
@@ -398,7 +453,7 @@
         android:orientation="horizontal">
 
         <LinearLayout
-            android:id="@+id/llSY"
+            android:id="@+id/llSY_Bottom"
             android:layout_width="100dp"
             android:layout_height="75dp"
             android:layout_gravity="left|bottom"

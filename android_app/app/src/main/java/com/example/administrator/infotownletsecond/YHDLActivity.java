@@ -2,12 +2,9 @@ package com.example.administrator.infotownletsecond;
 
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
-import android.graphics.Color;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.content.Intent;
@@ -23,7 +20,6 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
 import org.apache.http.message.BasicNameValuePair;
-import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;

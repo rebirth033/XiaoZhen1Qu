@@ -24,9 +24,9 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <!-- 访问网络，网络定位需要上网 -->
     <uses-permission android:name="android.permission.INTERNET" />
-    <!-- SD卡读取权限，用户写入离线定位数据 -->
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
 
+    <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <!-- <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" /> -->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -62,7 +62,18 @@
         <activity android:name=".GRZXActivity" />
         <activity android:name=".FBActivity" />
         <activity android:name=".XXActivity" />
-        <activity android:name=".SY_ZFActivity"></activity>
+        <activity android:name=".SY_ZFActivity" />
+        <activity
+            android:name=".BaseActivity"
+            android:label="@string/title_activity_base"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".SY_ESFActivity" />
+        <activity android:name=".SY_CWActivity" />
+        <activity android:name=".SY_SHFWActivity" />
+        <activity android:name=".SY_SWFWActivity" />
+        <activity android:name=".SY_ESWPActivity" />
+        <activity android:name=".SY_ZPActivity" />
+        <activity android:name=".SY_JZActivity"></activity>
     </application>
 
 </manifest>

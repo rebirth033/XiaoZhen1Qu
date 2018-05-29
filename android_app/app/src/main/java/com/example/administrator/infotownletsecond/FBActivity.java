@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class FBActivity extends AppCompatActivity implements View.OnClickListener {
+public class FBActivity extends BaseActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

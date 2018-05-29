@@ -1,17 +1,12 @@
 package com.example.administrator.infotownletsecond;
 
+import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.content.Context;
 import android.os.StrictMode;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
-import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
@@ -34,16 +29,10 @@ import org.apache.http.util.EntityUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-import android.support.v4.app.FragmentPagerAdapter;
 
-public class MainActivity extends AppCompatActivity implements OnClickListener {
+public class MainActivity extends BaseActivity implements OnClickListener {
     private static Context context;
     private TextView mtvSZCS;
     private LinearLayout mllWZJX;
@@ -59,21 +48,30 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         findById();
         init();
         //HQDQSZD();
-        //GetWZJX();
+        GetWZJX();
     }
 
     private void findById() {
         mtvSZCS = (TextView) findViewById(R.id.tvSZCS);
+        mtvSZCS.setText("福州");
         mllWZJX = (LinearLayout) findViewById(R.id.llWZJX);
 
         ViewGroup vgsy_zf = (ViewGroup) findViewById(R.id.llSY_ZF);
         ViewGroup vgsy_esf = (ViewGroup) findViewById(R.id.llSY_ESF);
         ViewGroup vgsy_cw = (ViewGroup) findViewById(R.id.llSY_CW);
         ViewGroup vgsy_shfw = (ViewGroup) findViewById(R.id.llSY_SHFW);
+        ViewGroup vgsy_swfw = (ViewGroup) findViewById(R.id.llSY_SWFW);
+        ViewGroup vgsy_eswp = (ViewGroup) findViewById(R.id.llSY_ESWP);
+        ViewGroup vgsy_zp = (ViewGroup) findViewById(R.id.llSY_ZP);
+        ViewGroup vgsy_jz = (ViewGroup) findViewById(R.id.llSY_JZ);
         vgsy_zf.setOnClickListener(this);
         vgsy_esf.setOnClickListener(this);
         vgsy_cw.setOnClickListener(this);
         vgsy_shfw.setOnClickListener(this);
+        vgsy_swfw.setOnClickListener(this);
+        vgsy_eswp.setOnClickListener(this);
+        vgsy_zp.setOnClickListener(this);
+        vgsy_jz.setOnClickListener(this);
 
         ViewGroup vgfb = (ViewGroup) findViewById(R.id.llFB);
         ViewGroup vgxx = (ViewGroup) findViewById(R.id.llXX);
@@ -106,6 +104,27 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
                 break;
             case R.id.llSY_ZF:
                 YMTZ("SY_ZF");
+                break;
+            case R.id.llSY_ESF:
+                YMTZ("SY_ESF");
+                break;
+            case R.id.llSY_CW:
+                YMTZ("SY_CW");
+                break;
+            case R.id.llSY_SHFW:
+                YMTZ("SY_SHFW");
+                break;
+            case R.id.llSY_SWFW:
+                YMTZ("SY_SWFW");
+                break;
+            case R.id.llSY_ESWP:
+                YMTZ("SY_ESWP");
+                break;
+            case R.id.llSY_ZP:
+                YMTZ("SY_ZP");
+                break;
+            case R.id.llSY_JZ:
+                YMTZ("SY_JZ");
                 break;
             case R.id.tvSZCS:
 
@@ -205,42 +224,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         }
     }
 
-    //获取网站资源图片
-    public static Bitmap getHttpBitmap(String url) {
-        URL myFileURL;
-        Bitmap bitmap = null;
-        try {
-            myFileURL = new URL(url);
-            //获得连接
-            HttpURLConnection conn = (HttpURLConnection) myFileURL.openConnection();
-            //设置超时时间为6000毫秒，conn.setConnectionTiem(0);表示没有时间限制
-            conn.setConnectTimeout(6000);
-            //连接设置获得数据流
-            conn.setDoInput(true);
-            //不使用缓存
-            conn.setUseCaches(false);
-            //这句可有可无，没有影响
-            //conn.connect();
-            //得到数据流
-            InputStream is = conn.getInputStream();
-            //解析得到图片
-            bitmap = BitmapFactory.decodeStream(is);
-            //关闭数据流
-            is.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return bitmap;
-    }
-
-    //时间转换
-    public String strToDateLong(String strDate) {
-        strDate = strDate.replace("/Date(", "").replace(")/", "");
-        Date date = new Date(Long.parseLong(strDate));
-        SimpleDateFormat format = new SimpleDateFormat("MM月dd日");
-        return format.format(date);
-    }
-
     //跳转登录页
     public void TZDLY() {
         Intent intent = new Intent(MainActivity.this, YHDLActivity.class);
@@ -268,7 +251,34 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         if(id == "SY_ZF") {
             Intent intent = new Intent(MainActivity.this, SY_ZFActivity.class);
             startActivity(intent);
-            finish();//关闭当前页面
+        }
+        if(id == "SY_ESF") {
+            Intent intent = new Intent(MainActivity.this, SY_ESFActivity.class);
+            startActivity(intent);
+        }
+        if(id == "SY_CW") {
+            Intent intent = new Intent(MainActivity.this, SY_CWActivity.class);
+            startActivity(intent);
+        }
+        if(id == "SY_SHFW") {
+            Intent intent = new Intent(MainActivity.this, SY_SHFWActivity.class);
+            startActivity(intent);
+        }
+        if(id == "SY_SWFW") {
+            Intent intent = new Intent(MainActivity.this, SY_SWFWActivity.class);
+            startActivity(intent);
+        }
+        if(id == "SY_ESWP") {
+            Intent intent = new Intent(MainActivity.this, SY_ESWPActivity.class);
+            startActivity(intent);
+        }
+        if(id == "SY_ZP") {
+            Intent intent = new Intent(MainActivity.this, SY_ZPActivity.class);
+            startActivity(intent);
+        }
+        if(id == "SY_JZ") {
+            Intent intent = new Intent(MainActivity.this, SY_JZActivity.class);
+            startActivity(intent);
         }
     }
 

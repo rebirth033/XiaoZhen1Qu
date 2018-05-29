@@ -169,7 +169,7 @@
                         android:layout_height="27dp"
                         android:layout_gravity="center|bottom"
                         android:adjustViewBounds="true"
-                        android:src="@drawable/cl" />
+                        android:src="@drawable/esc" />
 
                     <TextView
                         android:id="@+id/tvCL"

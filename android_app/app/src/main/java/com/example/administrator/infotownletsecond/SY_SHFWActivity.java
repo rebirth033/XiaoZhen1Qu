@@ -1,22 +1,18 @@
 package com.example.administrator.infotownletsecond;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
-public class SY_ZFActivity extends AppCompatActivity implements View.OnClickListener {
+public class SY_SHFWActivity extends BaseActivity implements View.OnClickListener {
 
     private ImageView mivBACK;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.sy_zf);
+        setContentView(R.layout.sy_shfw);
         findById();
     }
 
@@ -37,7 +33,7 @@ public class SY_ZFActivity extends AppCompatActivity implements View.OnClickList
     //首页_租房
     public void YMTZ(String id) {
         if(id == "BACK") {
-            Intent intent = new Intent(SY_ZFActivity.this,MainActivity.class);
+            Intent intent = new Intent(SY_SHFWActivity.this,MainActivity.class);
             finish();//关闭当前页面
         }
     }
