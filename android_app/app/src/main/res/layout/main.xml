@@ -137,6 +137,56 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/llSY_ESC"
+                        android:layout_width="80dp"
+                        android:layout_height="75dp"
+                        android:layout_gravity="left|bottom"
+                        android:background="@null"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ivESC"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:layout_gravity="center|bottom"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/esc" />
+
+                        <TextView
+                            android:id="@+id/tvESC"
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:text="二手车"
+                            android:textAlignment="center" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llSY_XC"
+                        android:layout_width="80dp"
+                        android:layout_height="75dp"
+                        android:layout_gravity="left|bottom"
+                        android:background="@null"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ivXC"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:layout_gravity="center|bottom"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/xc" />
+
+                        <TextView
+                            android:id="@+id/tvXC"
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:text="新车"
+                            android:textAlignment="center" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
                         android:id="@+id/llSY_CW"
                         android:layout_width="80dp"
                         android:layout_height="75dp"
@@ -160,6 +210,15 @@
                             android:textAlignment="center" />
 
                     </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_gravity="bottom"
+                    android:background="@null"
+                    android:orientation="horizontal">
 
                     <LinearLayout
                         android:id="@+id/llSY_SHFW"
@@ -185,40 +244,6 @@
                             android:textAlignment="center" />
 
                     </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/llSY_ESC"
-                        android:layout_width="80dp"
-                        android:layout_height="75dp"
-                        android:layout_gravity="left|bottom"
-                        android:background="@null"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:id="@+id/ivESC"
-                            android:layout_width="38dp"
-                            android:layout_height="38dp"
-                            android:layout_gravity="center|bottom"
-                            android:adjustViewBounds="true"
-                            android:src="@drawable/esc" />
-
-                        <TextView
-                            android:id="@+id/tvESC"
-                            android:layout_width="match_parent"
-                            android:layout_height="25dp"
-                            android:text="二手车"
-                            android:textAlignment="center" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="75dp"
-                    android:layout_gravity="bottom"
-                    android:background="@null"
-                    android:orientation="horizontal">
 
                     <LinearLayout
                         android:id="@+id/llSY_SWFW"
@@ -320,31 +345,6 @@
 
                     </LinearLayout>
 
-                    <LinearLayout
-                        android:id="@+id/llSY_XC"
-                        android:layout_width="80dp"
-                        android:layout_height="75dp"
-                        android:layout_gravity="left|bottom"
-                        android:background="@null"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:id="@+id/ivXC"
-                            android:layout_width="38dp"
-                            android:layout_height="38dp"
-                            android:layout_gravity="center|bottom"
-                            android:adjustViewBounds="true"
-                            android:src="@drawable/xc" />
-
-                        <TextView
-                            android:id="@+id/tvXC"
-                            android:layout_width="match_parent"
-                            android:layout_height="25dp"
-                            android:text="新车"
-                            android:textAlignment="center" />
-
-                    </LinearLayout>
-
                 </LinearLayout>
 
             </LinearLayout>
@@ -361,35 +361,33 @@
                     android:layout_width="70dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
                     android:adjustViewBounds="true"
                     android:background="@null"
                     android:paddingTop="5dp"
-                    android:src="@drawable/fljx" />
+                    android:src="@drawable/fltt" />
 
                 <LinearLayout
                     android:layout_width="330dp"
                     android:layout_height="75dp"
                     android:background="@null"
+                    android:paddingTop="20dp"
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/tvSZJX"
-                        android:layout_width="300dp"
-                        android:layout_height="48dp"
+                        android:layout_width="330dp"
+                        android:layout_height="23dp"
                         android:background="@null"
-                        android:paddingTop="12dp"
+                        android:paddingTop="2dp"
+                        android:textSize="15dp"
                         android:text="温泉六一北路恒宇国际266平复式带精装修多套选择" />
 
                     <TextView
-                        android:id="@+id/tvSZJXRQ"
-                        android:layout_width="180dp"
-                        android:layout_height="27dp"
-                        android:layout_gravity="top"
+                        android:layout_width="330dp"
+                        android:layout_height="23dp"
                         android:background="@null"
                         android:paddingTop="2dp"
-                        android:text="3月19日" />
+                        android:textSize="15dp"
+                        android:text="万业锦江城两房，一个月仅租3000！小区环境好！居家优！两房" />
 
                 </LinearLayout>
 
@@ -405,17 +403,17 @@
                     android:id="@+id/tvCNXH"
                     android:layout_width="80dp"
                     android:layout_height="48dp"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginLeft="10dp"
                     android:background="@null"
                     android:paddingTop="13dp"
                     android:text="猜你喜欢"
-                    android:textSize="15sp" />
+                    android:textSize="18dp" />
 
                 <ImageView
                     android:id="@+id/ivHYP"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:layout_marginLeft="210dp"
+                    android:layout_marginLeft="230dp"
                     android:layout_marginRight="2dp"
                     android:layout_marginTop="13dp"
                     android:adjustViewBounds="true"
@@ -424,11 +422,12 @@
                 <TextView
                     android:id="@+id/tvHYP"
                     android:layout_width="48dp"
-                    android:layout_height="48dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
                     android:background="@null"
-                    android:paddingTop="13dp"
+                    android:paddingTop="12dp"
                     android:text="换一批"
-                    android:textSize="15sp" />
+                    android:textSize="16dp" />
 
             </LinearLayout>
 
@@ -457,6 +456,7 @@
             android:layout_width="100dp"
             android:layout_height="75dp"
             android:layout_gravity="left|bottom"
+            android:paddingTop="8dp"
             android:background="@null"
             android:orientation="vertical">
 
@@ -466,12 +466,12 @@
                 android:layout_height="27dp"
                 android:layout_gravity="center|bottom"
                 android:adjustViewBounds="true"
-                android:src="@drawable/dbcd_sy" />
+                android:src="@drawable/dbcd_sy_active" />
 
             <TextView
                 android:id="@+id/tvSY"
                 android:layout_width="match_parent"
-                android:layout_height="25dp"
+                android:layout_height="20dp"
                 android:text="首页"
                 android:textAlignment="center" />
 
@@ -482,6 +482,7 @@
             android:layout_width="100dp"
             android:layout_height="75dp"
             android:layout_gravity="left|bottom"
+            android:paddingTop="8dp"
             android:background="@null"
             android:orientation="vertical">
 
@@ -489,14 +490,14 @@
                 android:id="@+id/ivFB"
                 android:layout_width="27dp"
                 android:layout_height="27dp"
-                android:layout_gravity="center|bottom"
+                android:layout_gravity="center"
                 android:adjustViewBounds="true"
                 android:src="@drawable/dbcd_fb" />
 
             <TextView
                 android:id="@+id/tvFB"
                 android:layout_width="match_parent"
-                android:layout_height="25dp"
+                android:layout_height="20dp"
                 android:text="发布"
                 android:textAlignment="center" />
 
@@ -507,6 +508,7 @@
             android:layout_width="100dp"
             android:layout_height="75dp"
             android:layout_gravity="left|bottom"
+            android:paddingTop="8dp"
             android:background="@null"
             android:orientation="vertical">
 
@@ -514,14 +516,14 @@
                 android:id="@+id/ivXX"
                 android:layout_width="27dp"
                 android:layout_height="27dp"
-                android:layout_gravity="center|bottom"
+                android:layout_gravity="center"
                 android:adjustViewBounds="true"
                 android:src="@drawable/dbcd_xx" />
 
             <TextView
                 android:id="@+id/tvXX"
                 android:layout_width="match_parent"
-                android:layout_height="25dp"
+                android:layout_height="20dp"
                 android:text="消息"
                 android:textAlignment="center" />
 
@@ -532,6 +534,7 @@
             android:layout_width="100dp"
             android:layout_height="75dp"
             android:layout_gravity="left|bottom"
+            android:paddingTop="8dp"
             android:background="@null"
             android:orientation="vertical">
 
@@ -539,14 +542,14 @@
                 android:id="@+id/ivGRZX"
                 android:layout_width="27dp"
                 android:layout_height="27dp"
-                android:layout_gravity="center|bottom"
+                android:layout_gravity="center"
                 android:adjustViewBounds="true"
                 android:src="@drawable/dbcd_grzx" />
 
             <TextView
                 android:id="@+id/tvGRZX"
                 android:layout_width="match_parent"
-                android:layout_height="25dp"
+                android:layout_height="20dp"
                 android:text="个人中心"
                 android:textAlignment="center" />
 

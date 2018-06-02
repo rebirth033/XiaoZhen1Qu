@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.view.View;
+import android.widget.ImageView;
 
 import java.io.InputStream;
 import java.net.HttpURLConnection;
@@ -11,7 +13,7 @@ import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class BaseActivity extends Activity {
+public class BaseActivity extends Activity implements View.OnClickListener {
 
     @Override
     public void finish() {
@@ -23,6 +25,14 @@ public class BaseActivity extends Activity {
     public void startActivity(Intent intent) {
         super.startActivity(intent);
         overridePendingTransitionEnter();
+    }
+
+    //事件监听
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.tvSZCS:
+                break;
+        }
     }
 
     /**
@@ -73,5 +83,16 @@ public class BaseActivity extends Activity {
             e.printStackTrace();
         }
         return bitmap;
+    }
+
+    public void resetBottomMenu(){
+        ImageView ivsy_sy = (ImageView) findViewById(R.id.ivSY);
+        ivsy_sy.setImageResource(R.drawable.dbcd_sy);
+        ImageView ivsy_fb = (ImageView) findViewById(R.id.ivFB);
+        ivsy_sy.setImageResource(R.drawable.dbcd_fb);
+        ImageView ivsy_xx = (ImageView) findViewById(R.id.ivXX);
+        ivsy_sy.setImageResource(R.drawable.dbcd_xx);
+        ImageView ivsy_grzx = (ImageView) findViewById(R.id.ivGRZX);
+        ivsy_sy.setImageResource(R.drawable.dbcd_grzx);
     }
 }

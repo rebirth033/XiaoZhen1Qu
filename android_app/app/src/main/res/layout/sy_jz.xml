@@ -69,11 +69,11 @@
 
                     <ImageView
                         android:id="@+id/ivSY_JZ_FJGW"
-                        android:layout_width="27dp"
-                        android:layout_height="27dp"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
                         android:layout_gravity="center|bottom"
                         android:adjustViewBounds="true"
-                        android:src="@drawable/no_image" />
+                        android:src="@drawable/sy_jz_fjgw" />
 
                     <TextView
                         android:id="@+id/tvSY_JZ_FJGW"
@@ -94,11 +94,11 @@
 
                     <ImageView
                         android:id="@+id/ivSY_JZ_KPGW"
-                        android:layout_width="27dp"
-                        android:layout_height="27dp"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
                         android:layout_gravity="center|bottom"
                         android:adjustViewBounds="true"
-                        android:src="@drawable/no_image" />
+                        android:src="@drawable/sy_jz_kpgw" />
 
                     <TextView
                         android:id="@+id/tvSY_JZ_KPGW"
@@ -119,11 +119,11 @@
 
                     <ImageView
                         android:id="@+id/ivSY_JZ_ZMJZ"
-                        android:layout_width="27dp"
-                        android:layout_height="27dp"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
                         android:layout_gravity="center|bottom"
                         android:adjustViewBounds="true"
-                        android:src="@drawable/no_image" />
+                        android:src="@drawable/sy_jz_zmjz" />
 
                     <TextView
                         android:id="@+id/tvSY_JZ_ZMJZ"
@@ -144,11 +144,11 @@
 
                     <ImageView
                         android:id="@+id/ivSY_JZ_XSRW"
-                        android:layout_width="27dp"
-                        android:layout_height="27dp"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
                         android:layout_gravity="center|bottom"
                         android:adjustViewBounds="true"
-                        android:src="@drawable/no_image" />
+                        android:src="@drawable/sy_jz_xsrw" />
 
                     <TextView
                         android:id="@+id/tvSY_JZ_XSRW"

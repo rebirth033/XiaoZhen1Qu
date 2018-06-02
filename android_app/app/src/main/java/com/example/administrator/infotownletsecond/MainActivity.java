@@ -2,6 +2,7 @@ package com.example.administrator.infotownletsecond;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.StrictMode;
@@ -64,6 +65,8 @@ public class MainActivity extends BaseActivity implements OnClickListener {
         ViewGroup vgsy_eswp = (ViewGroup) findViewById(R.id.llSY_ESWP);
         ViewGroup vgsy_zp = (ViewGroup) findViewById(R.id.llSY_ZP);
         ViewGroup vgsy_jz = (ViewGroup) findViewById(R.id.llSY_JZ);
+        ViewGroup vgsy_esc = (ViewGroup) findViewById(R.id.llSY_ESC);
+        ViewGroup vgsy_xc = (ViewGroup) findViewById(R.id.llSY_XC);
         vgsy_zf.setOnClickListener(this);
         vgsy_esf.setOnClickListener(this);
         vgsy_cw.setOnClickListener(this);
@@ -72,6 +75,8 @@ public class MainActivity extends BaseActivity implements OnClickListener {
         vgsy_eswp.setOnClickListener(this);
         vgsy_zp.setOnClickListener(this);
         vgsy_jz.setOnClickListener(this);
+        vgsy_esc.setOnClickListener(this);
+        vgsy_xc.setOnClickListener(this);
 
         ViewGroup vgfb = (ViewGroup) findViewById(R.id.llFB);
         ViewGroup vgxx = (ViewGroup) findViewById(R.id.llXX);
@@ -125,6 +130,12 @@ public class MainActivity extends BaseActivity implements OnClickListener {
                 break;
             case R.id.llSY_JZ:
                 YMTZ("SY_JZ");
+                break;
+            case R.id.llSY_ESC:
+                YMTZ("SY_ESC");
+                break;
+            case R.id.llSY_XC:
+                YMTZ("SY_XC");
                 break;
             case R.id.tvSZCS:
 
@@ -185,7 +196,7 @@ public class MainActivity extends BaseActivity implements OnClickListener {
             for (int i = 0; i < jsonarray.length(); i++) {
                 JSONObject jsonObject = jsonarray.getJSONObject(i);
                 String BT = jsonObject.getString("BT");
-                String ZXGXSJ = jsonObject.getString("ZXGXSJ");
+                String ZJ = jsonObject.getString("ZJ");
                 JSONArray photoarray = new JSONArray(jsonObject.getString("PHOTOS"));
                 JSONObject photoObject = photoarray.getJSONObject(0);
 
@@ -205,17 +216,20 @@ public class MainActivity extends BaseActivity implements OnClickListener {
                 llinner.setOrientation(LinearLayout.VERTICAL);
 
                 TextView tvbt = new TextView(this);
-                tvbt.setWidth(800);
+                tvbt.setWidth(1000);
                 tvbt.setHeight(240);
+                tvbt.setTextSize(18);
                 tvbt.setText(BT);
 
-                TextView tvgxsj = new TextView(this);
-                tvgxsj.setWidth(800);
-                tvgxsj.setHeight(150);
-                tvgxsj.setText(strToDateLong(ZXGXSJ));
+                TextView tvzj = new TextView(this);
+                tvzj.setWidth(1000);
+                tvzj.setHeight(150);
+                tvzj.setTextSize(18);
+                tvzj.setTextColor(Color.parseColor("#bc6ba6"));
+                tvzj.setText(ZJ + "元");
 
                 llinner.addView(tvbt);
-                llinner.addView(tvgxsj);
+                llinner.addView(tvzj);
                 llouter.addView(ivtp);
                 llouter.addView(llinner);
             }
@@ -233,51 +247,68 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 
     //个人中心
     public void YMTZ(String id) {
-        if(id == "FB") {
+        if (id == "FB") {
             Intent intent = new Intent(MainActivity.this, FBActivity.class);
             startActivity(intent);
+            resetBottomMenu();
+            ImageView ivsy_fb = (ImageView) findViewById(R.id.ivFB);
+            ivsy_fb.setImageResource(R.drawable.dbcd_fb_active);
             finish();//关闭当前页面
         }
-        if(id == "XX") {
+        if (id == "XX") {
             Intent intent = new Intent(MainActivity.this, XXActivity.class);
             startActivity(intent);
+            resetBottomMenu();
+            ImageView ivsy_xx = (ImageView) findViewById(R.id.ivXX);
+            ivsy_xx.setImageResource(R.drawable.dbcd_xx_active);
             finish();//关闭当前页面
         }
-        if(id == "GRZX") {
+        if (id == "GRZX") {
             Intent intent = new Intent(MainActivity.this, GRZXActivity.class);
             startActivity(intent);
+            resetBottomMenu();
+            ImageView ivsy_grzx = (ImageView) findViewById(R.id.ivGRZX);
+            ivsy_grzx.setImageResource(R.drawable.dbcd_grzx_active);
             finish();//关闭当前页面
         }
-        if(id == "SY_ZF") {
+        if (id == "SY_ZF") {
             Intent intent = new Intent(MainActivity.this, SY_ZFActivity.class);
             startActivity(intent);
         }
-        if(id == "SY_ESF") {
+        if (id == "SY_ESF") {
             Intent intent = new Intent(MainActivity.this, SY_ESFActivity.class);
             startActivity(intent);
         }
-        if(id == "SY_CW") {
+        if (id == "SY_CW") {
             Intent intent = new Intent(MainActivity.this, SY_CWActivity.class);
             startActivity(intent);
         }
-        if(id == "SY_SHFW") {
+        if (id == "SY_SHFW") {
             Intent intent = new Intent(MainActivity.this, SY_SHFWActivity.class);
             startActivity(intent);
         }
-        if(id == "SY_SWFW") {
+        if (id == "SY_SWFW") {
             Intent intent = new Intent(MainActivity.this, SY_SWFWActivity.class);
             startActivity(intent);
         }
-        if(id == "SY_ESWP") {
+        if (id == "SY_ESWP") {
             Intent intent = new Intent(MainActivity.this, SY_ESWPActivity.class);
             startActivity(intent);
         }
-        if(id == "SY_ZP") {
+        if (id == "SY_ZP") {
             Intent intent = new Intent(MainActivity.this, SY_ZPActivity.class);
             startActivity(intent);
         }
-        if(id == "SY_JZ") {
+        if (id == "SY_JZ") {
             Intent intent = new Intent(MainActivity.this, SY_JZActivity.class);
+            startActivity(intent);
+        }
+        if (id == "SY_ESC") {
+            Intent intent = new Intent(MainActivity.this, SY_ESCActivity.class);
+            startActivity(intent);
+        }
+        if (id == "SY_XC") {
+            Intent intent = new Intent(MainActivity.this, SY_XCActivity.class);
             startActivity(intent);
         }
     }

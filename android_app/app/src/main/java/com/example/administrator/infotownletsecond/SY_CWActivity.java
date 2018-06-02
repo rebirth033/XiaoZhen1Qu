@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-public class SY_CWActivity extends AppCompatActivity implements View.OnClickListener  {
+public class SY_CWActivity extends BaseActivity implements View.OnClickListener  {
 
     private ImageView mivBACK;
 
