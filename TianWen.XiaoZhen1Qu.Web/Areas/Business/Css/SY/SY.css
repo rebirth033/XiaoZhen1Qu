@@ -7,7 +7,7 @@
 .div_body .div_body_top .div_body_top_inner .ul_body_top .li_body_top{ width: 120px;float: left;cursor: pointer;}
 .div_body .div_body_top .div_body_top_inner .ul_body_top .li_body_top .p_body_top_left_dl{padding-left: 10px;}
 .div_body .div_body_top .div_body_top_inner .ul_body_top .li_body_top:hover .p_body_top_left_dl{ cursor: pointer;color: #bc6ba6;text-decoration: underline;}
-.div_body .div_body_top .div_body_top_inner .ul_body_top .li_body_top .img_body_top{ width: 100px;height: 100px;margin-left: 10px;margin-right: 10px;text-align:center;display: block;background-size: 100%; }
+.div_body .div_body_top .div_body_top_inner .ul_body_top .li_body_top .img_body_top{ width: 42px;height: 42px;margin-left: 45px;margin-right: 10px;text-align:center;display: block;background-size: 100%; }
 .div_body .div_body_top .div_body_top_inner .ul_body_top .li_body_top .img_body_top:hover{ transform: scale(1.08);}
 .div_body .div_body_top .div_body_top_inner .ul_body_top .li_body_top .p_body_top_left{display: block;text-align: center;margin: 0;width: 120px;}
 .div_body .div_body_top .div_body_top_inner .ul_body_top .li_body_top .span_body_top_left{font-size: 12px;color: #999;display: inline-block;text-align: center;}
@@ -20,7 +20,7 @@
 .div_body .div_body_middle .div_body_middle_left_section .p_body_middle_left_title_small{font-size: 14px;color: #999999;display: block;height: 25px;}
 
 .div_body .div_body_middle .div_body_middle_left_section .ul_body_middle_left_section{display: block;padding: 0;height: 30px;}
-.div_body .div_body_middle .div_body_middle_left_section .ul_body_middle_left_section .li_body_middle_left_section{display: inline-block;width: 80px;height: 30px;font-size: 15px;float: left;color: #333333;}
+.div_body .div_body_middle .div_body_middle_left_section .ul_body_middle_left_section .li_body_middle_left_section{display: inline-block;width: 80px;height: 30px;font-size: 14px;float: left;color: #333333;}
 .div_body .div_body_middle .div_body_middle_left_section .ul_body_middle_left_section .li_body_middle_left_section:hover{ cursor: pointer;color: #bc6ba6;text-decoration: underline;}
 
 .div_body .div_body_middle .div_body_middle_left_section .span_body_middle_left_title_small_cw{font-size: 14px;color: #999999;display: inline-block;width: 60px;height: 25px;float: left;margin-right: 10px;}
