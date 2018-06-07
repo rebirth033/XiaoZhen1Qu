@@ -94,27 +94,16 @@ function LoadSY_ML() {
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                LoadSY_MLInfo(xml.list, xml.xzq, "FC");
-                LoadSY_MLInfo(xml.list, xml.xzq, "CL");
-                LoadSY_ML_CWInfo(xml.list, xml.xzq, "CW");
-                LoadSY_MLInfo(xml.list, xml.xzq, "ZP");
-                LoadSY_ML_WXLInfo(xml.list, xml.xzq, "ZSJM");
-                LoadSY_ML_SHFWInfo(xml.list, xml.xzq, "SHFW");
-                LoadSY_ML_WXLInfo(xml.list, xml.xzq, "JYPX");
-                LoadSY_ML_WXLInfo(xml.list, xml.xzq, "PFCG");
-                LoadSY_ML_SHFWInfo(xml.list, xml.xzq, "SWFW");
-                LoadSY_MLInfo(xml.list, xml.xzq, "ES");
-                $("#p_body_middle_left_title_FC").css("border-bottom", "2px solid #59d072");
-                $("#p_body_middle_left_title_CL").css("border-bottom", "2px solid #44eea6");
-                $("#p_body_middle_left_title_CW").css("border-bottom", "2px solid #f473de");
-                $("#p_body_middle_left_title_ZP").css("border-bottom", "2px solid #00bfe1");
-                $("#p_body_middle_left_title_ZSJM").css("border-bottom", "2px solid #abc466");
-                $("#p_body_middle_left_title_PX").css("border-bottom", "2px solid #c49966");
-                $("#p_body_middle_left_title_SHFW").css("border-bottom", "2px solid #3dbfe1");
-                $("#p_body_middle_left_title_JYPX").css("border-bottom", "2px solid #fda19d");
-                $("#p_body_middle_left_title_PFCG").css("border-bottom", "2px solid #eb437e");
-                $("#p_body_middle_left_title_SWFW").css("border-bottom", "2px solid #d323e1");
-                $("#p_body_middle_left_title_ES").css("border-bottom", "2px solid #64f4de");
+                //LoadSY_MLInfo(xml.list, xml.xzq, "FC");
+                //LoadSY_MLInfo(xml.list, xml.xzq, "CL");
+                //LoadSY_ML_CWInfo(xml.list, xml.xzq, "CW");
+                //LoadSY_MLInfo(xml.list, xml.xzq, "ZP");
+                //LoadSY_ML_WXLInfo(xml.list, xml.xzq, "ZSJM");
+                //LoadSY_ML_SHFWInfo(xml.list, xml.xzq, "SHFW");
+                //LoadSY_ML_WXLInfo(xml.list, xml.xzq, "JYPX");
+                //LoadSY_ML_WXLInfo(xml.list, xml.xzq, "PFCG");
+                //LoadSY_ML_SHFWInfo(xml.list, xml.xzq, "SWFW");
+                //LoadSY_MLInfo(xml.list, xml.xzq, "ES");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
