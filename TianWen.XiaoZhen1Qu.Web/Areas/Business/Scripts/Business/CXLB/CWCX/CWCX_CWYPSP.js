@@ -12,7 +12,9 @@ function LoadCWCondition() {
 function LoadURLCondition() {
     if (getUrlParam("LB") !== null) {
         SelectURLCondition(getUrlParam("LB"));
-        LoadConditionByParentID(getUrlParam("LB"), "CODES_CW", "小类", "XL");
+	if (getUrlParam("LB") === "159" || getUrlParam("LB") === "161") {
+        	LoadConditionByParentID(getUrlParam("LB"), "CODES_CW", "小类", "XL");
+	}
     }
     else if (getUrlParam("QY") !== null)
         SelectURLCondition(getUrlParam("QY"));
@@ -83,7 +85,7 @@ function LoadCWInfo(obj) {
     html += ('<div class="div_li_body_left_center">');
     html += ('<p class="p_li_body_left_center_bt">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_left_center_nr">' + obj.BCMSString.replace(/<\/?.+?>/g, "") + '</p>');
-    html += ('<p class="p_li_body_left_center_dz font_size16">' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
+    html += ('<p class="p_li_body_left_center_dz">' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
     html += ('<p class="p_li_body_left_right"><span class="span_zj">' + GetJG(obj.JG, '元') + '</span></p>');

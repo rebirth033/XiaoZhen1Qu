@@ -1,7 +1,7 @@
 ﻿//js获取网站根路径(站点及虚拟目录)，获得网站的根目录或虚拟目录的根地址     
 function getRootPath() {
     var strFullPath = window.document.location.href;
-    if (strFullPath === "http://localhost") strFullPath = "http://localhost/sy/sy";
+    if (strFullPath === "http://www.915fl.com") strFullPath = "http://www.915fl.com/sy/sy";
     var strPath = window.document.location.pathname;
     if (strPath === "/") strPath = "/sy/sy";
     var pos = strFullPath.indexOf(strPath);
@@ -212,13 +212,13 @@ function CXLB() {
 }
 //鼠标点击样式
 function ActiveStyle(name) {
-    $("#div" + name + "Text").css("border-top", "2px solid #bc6ba6").css("border-right", "2px solid #bc6ba6").css("border-left", "2px solid #bc6ba6").css("border-bottom", "2px solid #bc6ba6");
-    $("#div" + name).find("ul").css("border-left", "2px solid #bc6ba6").css("border-right", "2px solid #bc6ba6").css("border-bottom", "2px solid #bc6ba6");
+    $("#div" + name + "Text").css("border-top", "1px solid #bc6ba6").css("border-right", "1px solid #bc6ba6").css("border-left", "1px solid #bc6ba6").css("border-bottom", "1px solid #bc6ba6");
+    $("#div" + name).find("ul").css("border-left", "1px solid #bc6ba6").css("border-right", "1px solid #bc6ba6").css("border-bottom", "1px solid #bc6ba6");
 }
 //鼠标离开样式
 function LeaveStyle(name) {
-    $("#div" + name + "Text").css("border-top", "2px solid #cccccc").css("border-right", "2px solid #cccccc").css("border-left", "2px solid #cccccc").css("border-bottom", "2px solid #cccccc");
-    $("#div" + name).find("ul").css("border-left", "2px solid #cccccc").css("border-right", "2px solid #cccccc").css("border-bottom", "2px solid #cccccc");
+    $("#div" + name + "Text").css("border-top", "1px solid #cccccc").css("border-right", "1px solid #cccccc").css("border-left", "1px solid #cccccc").css("border-bottom", "1px solid #cccccc");
+    $("#div" + name).find("ul").css("border-left", "1px solid #cccccc").css("border-right", "1px solid #cccccc").css("border-bottom", "1px solid #cccccc");
 }
 //关闭
 function Close(id) {
@@ -228,7 +228,7 @@ function Close(id) {
 //关闭
 function CloseByClassID(classid) {
     $("." + classid).css("display", "none");
-    $(".div_select_out").css("border-top", "2px solid #cccccc").css("border-right", "2px solid #cccccc").css("border-left", "2px solid #cccccc").css("border-bottom", "2px solid #cccccc");
+    $(".div_select_out").css("border-top", "1px solid #cccccc").css("border-right", "1px solid #cccccc").css("border-left", "1px solid #cccccc").css("border-bottom", "1px solid #cccccc");
 }
 //Transition结束监听事件
 function whichTransitionEvent() {

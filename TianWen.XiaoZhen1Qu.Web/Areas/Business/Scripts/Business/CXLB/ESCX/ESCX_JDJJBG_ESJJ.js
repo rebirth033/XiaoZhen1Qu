@@ -85,7 +85,7 @@ function LoadESInfo(obj) {
     html += ('<div class="div_li_body_left_center">');
     html += ('<p class="p_li_body_left_center_bt">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_left_center_nr">' + obj.BCMSString.replace(/<\/?.+?>/g, "") + '</p>');
-    html += ('<p class="p_li_body_left_center_dz font_size16">' + obj.QY + ' - ' + obj.DD + '&nbsp;&nbsp;&nbsp;&nbsp;' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
+    html += ('<p class="p_li_body_left_center_dz">' + obj.QY + ' - ' + obj.DD + '&nbsp;&nbsp;&nbsp;&nbsp;' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
     html += ('<p class="p_li_body_left_right"><span class="span_zj">' + obj.JG + '</span>元</p>');

@@ -42,6 +42,10 @@ function LoadJBXX(obj) {
     html += ('<span class="span_body_left_body_right_right">' + obj.JZ + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
+    html += ('<span class="span_body_left_body_right_left">驾校名称：</span>');
+    html += ('<span class="span_body_left_body_right_right">' + obj.JXMC + '</span>');
+    html += ('</p>');
+    html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">班别：</span>');
     html += ('<span class="span_body_left_body_right_right">' + obj.BB + '</span>');
     html += ('</p>');

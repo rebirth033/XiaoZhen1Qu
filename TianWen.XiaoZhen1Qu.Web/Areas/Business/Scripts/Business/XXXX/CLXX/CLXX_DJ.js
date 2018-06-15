@@ -37,10 +37,10 @@ function LoadJBXX(obj) {
     html += ('</div>');
     html += ('<div class="div_body_left_body">');
     html += ('<div class="div_body_left_body_right">');
-    html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">价格：</span>');
-    html += ('<span class="span_body_left_body_right_right" style="color:#bc6ba6;font-weight:700;">' + GetJG(obj.JG, '元') + '</span>');
-    html += ('</p>');
+    //html += ('<p class="p_body_left_body_right">');
+    //html += ('<span class="span_body_left_body_right_left">价格：</span>');
+    //html += ('<span class="span_body_left_body_right_right" style="color:#bc6ba6;font-weight:700;">' + GetJG(obj.JG, '元') + '</span>');
+    //html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">类别：</span>');
     html += ('<span class="span_body_left_body_right_right" style="width:240px;display:inline-block;">' + obj.LB + '</span>');
@@ -197,7 +197,7 @@ function LoadJJRTJFY(TYPE) {
         {
             TYPE: TYPE,
             Condition: "STATUS:1",
-            PageSize: 100,
+            PageSize: 4,
             PageIndex: 1
         },
         success: function (xml) {

@@ -2,7 +2,7 @@
 $(document).ready(function () {
     BindBodyNav();
     LoadFCCondition();
-    LoadHot("FCXX_HZF");
+    LoadHot("FCXX_ZZF");
     LoadHeadSearch();
 });
 //加载头部搜索栏关键字
@@ -21,7 +21,7 @@ function LoadHeadSearch() {
 }
 //加载房产查询条件
 function LoadFCCondition() {
-    LoadConditionByTypeNames("'整租房租金','厅室','朝向','装修情况','出租房屋亮点'", "CODES_FC", "租金,厅室,朝向,装修情况,房屋亮点", "ZJ,S,CX,ZXQK,FWLD", "100,100,100,100,15");
+    LoadConditionByTypeNames("'整租房租金','出租方式'", "CODES_FC", "租金,出租方式", "ZJ,CZFS", "100,100");
 }
 //根据TYPENAME获取字典表
 function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {

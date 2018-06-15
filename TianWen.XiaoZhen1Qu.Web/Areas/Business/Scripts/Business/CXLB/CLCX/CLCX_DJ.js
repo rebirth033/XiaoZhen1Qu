@@ -76,10 +76,10 @@ function LoadCL_DJInfo(obj) {
     html += ('<div class="div_li_body_left_center">');
     html += ('<p class="p_li_body_left_center_bt">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_left_center_nr">' + obj.BCMSString.replace(/<\/?.+?>/g, "") + '</p>');
-    html += ('<p class="p_li_body_left_center_dz font_size16">' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
+    html += ('<p class="p_li_body_left_center_dz">' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
-    html += ('<p class="p_li_body_left_right"><span class="span_zj">' + obj.JG + '</span>元</p>');
+    html += ('<p class="p_li_body_left_right"><span class="span_li_body_left_right">联系商家</span></p>');
     html += ('</div>');
     html += ('</li>');
     $("#ul_body_left").append(html);
@@ -116,7 +116,7 @@ function LoadHotInfo(obj) {
     html += ('<li onclick="OpenXXXX(\'CLXX_DJ\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_right_xq">' + obj.BT  + '</p>');
-    html += ('<p class="p_li_body_right_jg">' + GetJG(obj.JG,'元')+'</p>');
+    html += ('<p class="p_li_body_right_cs">' + obj.FWFW + '</p>');
     html += ('</li>');
     $("#ul_body_right").append(html);
 }

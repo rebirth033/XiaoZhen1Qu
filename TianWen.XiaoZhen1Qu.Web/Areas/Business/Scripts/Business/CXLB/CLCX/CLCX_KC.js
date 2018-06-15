@@ -98,8 +98,8 @@ function LoadCL_JCInfo(obj) {
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
     html += ('<p class="p_li_body_left_center_bt">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_left_center_cs font_size16">' + obj.PP.split(' ')[0] + ' / ' + obj.XSLC + '万公里' + ' / ' + obj.CLYS + ' / ' + obj.SPNF + obj.SPYF + '</p>');
-    html += ('<p class="p_li_body_left_center_dz font_size16">' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
+    html += ('<p class="p_li_body_left_center_cs">' + obj.PP.split(' ')[0] + ' / ' + obj.XSLC + '万公里' + ' / ' + obj.CLYS + ' / ' + obj.SPNF + obj.SPYF + '</p>');
+    html += ('<p class="p_li_body_left_center_dz">' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
     html += ('<p class="p_li_body_left_right"><span class="span_zj">' + obj.JG + '</span>万元</p>');

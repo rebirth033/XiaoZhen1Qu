@@ -22,7 +22,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         {
             if (Session["XZQ"] == null)
             {
-                GetUserIp();
+                //GetUserIp();
             }
             else
             {

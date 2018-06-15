@@ -2,14 +2,17 @@
 
 /*首页_主体_上部*/
 .div_body .div_body_top{ width: 1200px;overflow-x: hidden;}
-.div_body .div_body_top .div_body_top_inner{ width: 100%;height: 120px;margin-top: 10px;display: inline-block;float: left;background: #ffffff;padding: 10px 0px;}
+.div_body .div_body_top .div_body_top_inner{ width: 918px;height: 120px;margin-top: 10px;display: inline-block;float: left;background: #ffffff;padding: 10px 0px;}
+.div_body .div_body_top .div_body_top_inner .p_body_middle_left_title{font-size: 18px;border-bottom: 2px solid #bc6ba6;display: block;height: 40px;color: #bc6ba6;font-weight:bold;}
 .div_body .div_body_top .div_body_top_inner .ul_body_top{ padding: 0;}
-.div_body .div_body_top .div_body_top_inner .ul_body_top .li_body_top{ width: 120px;float: left;cursor: pointer;}
-.div_body .div_body_top .div_body_top_inner .ul_body_top .li_body_top .p_body_top_left_dl{padding-left: 10px;}
-.div_body .div_body_top .div_body_top_inner .ul_body_top .li_body_top:hover .p_body_top_left_dl{ cursor: pointer;color: #bc6ba6;text-decoration: underline;}
-.div_body .div_body_top .div_body_top_inner .ul_body_top .li_body_top .img_body_top{ width: 42px;height: 42px;margin-left: 45px;margin-right: 10px;text-align:center;display: block;background-size: 100%; }
-.div_body .div_body_top .div_body_top_inner .ul_body_top .li_body_top .img_body_top:hover{ transform: scale(1.08);}
-.div_body .div_body_top .div_body_top_inner .ul_body_top .li_body_top .p_body_top_left{display: block;text-align: center;margin: 0;width: 120px;}
+.div_body .div_body_top .div_body_top_inner .ul_body_top .li_body_top{ width: 114.75px;float: left;cursor: pointer;border-right:1px solid #f2f2f2;}
+.div_body .div_body_top .div_body_top_inner .ul_body_top .li_body_top_right{ width: 50px;float: left;cursor: pointer;margin-left:10px;}
+.div_body .div_body_top .div_body_top_inner .ul_body_top .li_body_top .p_body_top_left_dl{margin-top: 5px;}
+.div_body .div_body_top .div_body_top_inner .ul_body_top .li_body_top .p_body_top_left:hover{ cursor: pointer;color: #bc6ba6;text-decoration: underline;}
+.div_body .div_body_top .div_body_top_inner .ul_body_top .li_body_top_right .p_body_top_right_dl{margin-top: 5px;font-size:12px;}
+.div_body .div_body_top .div_body_top_inner .ul_body_top .li_body_top .img_body_top{ width: 42px;height: 42px;margin-left: 36.375px;text-align:center;display: block;background-size: 100%; }
+.div_body .div_body_top .div_body_top_inner .ul_body_top .li_body_top_right .img_body_top_right{ width: 32px;height: 32px;margin-left: 9px;text-align:center;display: block;background-size: 100%; }
+.div_body .div_body_top .div_body_top_inner .ul_body_top .li_body_top .p_body_top_left{display: block;text-align: center;margin: 0;width: 114.75px;}
 .div_body .div_body_top .div_body_top_inner .ul_body_top .li_body_top .span_body_top_left{font-size: 12px;color: #999;display: inline-block;text-align: center;}
 .div_body .div_body_top .div_body_top_inner .ul_body_top .li_body_top .span_body_top_left_xl:hover{ cursor: pointer;color: #bc6ba6;text-decoration: underline;}
 
@@ -23,6 +26,11 @@
 .div_body .div_body_middle .div_body_middle_left_section .ul_body_middle_left_section{display: block;padding: 0;height: 30px;}
 .div_body .div_body_middle .div_body_middle_left_section .li_body_middle_left_section{display: inline-block;margin-right:30px;height: 30px;font-size: 14px;float: left;color: #333333;}
 .div_body .div_body_middle .div_body_middle_left_section .li_body_middle_left_section:hover{ cursor: pointer;color: #bc6ba6;text-decoration: underline;}
+
+.ul_body_top_inner{display: inline-block;padding: 0;height: 30px;width: 114.75px;margin-top:10px;text-align:center;}
+.li_body_top_small{display: inline-block;font-size: 12px;text-align:center;color: #999999;}
+.li_body_top_small:hover{ cursor: pointer;color: #bc6ba6;text-decoration: underline;}
+.li_body_top_fg{display: inline-block;font-size: 12px;color: #999999;margin-left:1px;margin-right:1px;}
 
 .div_body .div_body_middle .div_body_middle_left_section .span_body_middle_left_title_small_cw{font-size: 14px;display: inline-block;width: 60px;height: 25px;float: left;margin-right: 10px;}
 .div_body .div_body_middle .div_body_middle_left_section .span_body_middle_left_title_small_cw:hover{ cursor: pointer;color: #bc6ba6;text-decoration: underline;}

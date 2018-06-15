@@ -15,6 +15,7 @@ $(document).ready(function () {
     $("#span_hide_fbxx").bind("click", FBXX);
     $("body").bind("click", function () { CloseByClassID("div_select_dropdown"); });
     LoadDefault();
+    LoadHeadSearch();
 });
 //首页获取title
 function GetHeadNav() {
@@ -27,7 +28,6 @@ function FBXX() {
 //加载默认
 function LoadDefault() {
     LoadSY_ML();
-    LoadHeadSearch();
 }
 //加载头部搜索栏关键字
 function LoadHeadSearch() {
@@ -35,13 +35,13 @@ function LoadHeadSearch() {
     $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
     $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'CLCX\',\'CLCX_JC\',\'185\')">二手车</span>');
     $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
-    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'QZZPCX\',\'QZZPCX_JZ\',\'89\')">兼职</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'QZZPCX\',\'QZZPCX_JZZP\',\'90\')">兼职</span>');
     $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
-    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'ZXJCCX\',\'ZXJCCX_JZFW\',\'130\')">装修服务</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'ZXJCCX\',\'ZXJCCX_JZFW\',\'130\')">家装服务</span>');
     $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
-    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'LYJDCX\',\'LYJDCX_GNY\',\'124\')">旅游度假</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'LYJDCX\',\'LYJDCX_JDZSYD\',\'127\')">酒店住宿</span>');
     $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
-    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'SHFWCX\',\'SHFWCX_GNY\',\'172\')">居民搬家</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'SHFWCX\',\'SHFWCX_BJ\',\'172\')">居民搬家</span>');
     $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
     $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'HQSYCX\',\'HQSYCX_HQGS\',\'136\')">婚庆公司</span>');
     $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');

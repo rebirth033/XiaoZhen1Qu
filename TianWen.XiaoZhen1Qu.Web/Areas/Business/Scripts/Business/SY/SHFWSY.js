@@ -8,6 +8,7 @@
     $("#div_yhm").bind("click", ShowWDXX);
     //LoadSHFWTOP();
     //LoadDefault();
+    LoadHeadSearch();
 });
 //打开查询列表
 function OpenCXLB(lbid, lburl, condition) {
@@ -15,6 +16,20 @@ function OpenCXLB(lbid, lburl, condition) {
         window.open(getRootPath() + "/" + lburl + "?LBID=" + lbid + "&" + condition);
     else
         window.open(getRootPath() + "/" + lburl + "?LBID=" + lbid);
+}
+//加载头部搜索栏关键字
+function LoadHeadSearch() {
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenCXLB(197,\'/CLCX/CLCX_QCWXBY\',\'null\')">保姆月嫂</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenCXLB(174,\'/SHFWCX/SHFWCX_BJQX\',\'null\')">保洁清洗</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenCXLB(197,\'/CLCX/CLCX_QCWXBY\',\'null\')">手机维修</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenCXLB(197,\'/CLCX/CLCX_QCWXBY\',\'null\')">家电维修</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenCXLB(176,\'/SHFWCX/SHFWCX_SHPS\',\'null\')">生活配送</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenCXLB(183,\'/SHFWCX/SHFWCX_KSXSHS\',\'null\')">开锁修锁</span>');
 }
 //打开详细页面
 function OpenXXXX(TYPE, ID, LBID) {

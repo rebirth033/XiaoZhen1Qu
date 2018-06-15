@@ -12,7 +12,7 @@ function LoadSHFWCondition() {
 function LoadURLCondition() {
     if (getUrlParam("LB") !== null) {
         SelectURLCondition(getUrlParam("LB"));
-        LoadConditionByParentID(getUrlParam("LB"), "CODES_SHFW", "小类", "XL");
+        //LoadConditionByParentID(getUrlParam("LB"), "CODES_SHFW", "小类", "XL");
     }
     else if (getUrlParam("QY") !== null)
         SelectURLCondition(getUrlParam("QY"));

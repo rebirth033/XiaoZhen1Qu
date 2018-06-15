@@ -9,6 +9,16 @@ function LoadLYJDCondition() {
     LoadConditionByTypeNames("'周边游行程天数','游玩项目','出游方式','适合人群','周边游价格'", "CODES_LYJD", "行程天数,游玩项目,出游方式,适合人群,价格", "XCTS_R,YWXM,CYFS,SHRQ,MSJ", "100,100,100,100,15");
     LoadBody("LYJDXX_ZBY", currentIndex);
 }
+//加载URL查询条件
+function LoadURLCondition() {
+    if (getUrlParam("YWXM") !== null) {
+        SelectURLCondition(getUrlParam("YWXM"));
+    }
+    else if (getUrlParam("QY") !== null)
+        SelectURLCondition(getUrlParam("QY"));
+    else
+        LoadBody("LYJDXX_ZBY", currentIndex);
+}
 //选择条件
 function SelectCondition(obj, name) {
     if (name === "类别" && (obj.innerHTML !== "酒店管理" && obj.innerHTML !== "工程管理" && obj.innerHTML !== "素质拓展" && obj.innerHTML !== "总裁研修")) {
@@ -21,6 +31,15 @@ function SelectCondition(obj, name) {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
+    LoadBody("LYJDXX_ZBY", currentIndex);
+    ShowSelectCondition("LYJDXX_ZBY");
+}
+//选择URL条件
+function SelectURLCondition(obj) {
+    $("#" + obj).parent().find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $("#" + obj).addClass("li_condition_body_active");
     LoadBody("LYJDXX_ZBY", currentIndex);
     ShowSelectCondition("LYJDXX_ZBY");
 }

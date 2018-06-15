@@ -19,6 +19,26 @@ function LoadURLCondition() {
     else
         LoadBody("CLXX_GCC", currentIndex);
 }
+//加载查询条件
+function LoadCondition(array, name, id, length) {
+    $("#ul_condition_body_" + id).remove();
+    var html = "";
+    html += '<ul id="ul_condition_body_' + id + '" class="ul_condition_body" style="height:auto;">';
+    if (name === "地段" || name === "类别" || name === "小类" || name === "品牌" || name === "车系" || name === "车型" || name === "驾照" || name === "品种" || name === "型号" || name === "语种" || name === "用途" || name === "婚车品牌" || name === "国家" || name === "留学国家")
+        html += '<li id="li_condition_body_first_' + id + '" class="li_condition_body_first">' + name + '</li>';
+    else
+        html += '<li class="li_condition_body_first">' + name + '</li>';
+    html += '<li id="0" class="li_condition_body li_condition_body_active" onclick="SelectCondition(this,\'' + name + '\')">全部</li>';
+    for (var i = 0; i < (array.length > length ? length : array.length) ; i++) {
+        html += '<li id="' + array[i].CODEID + '" class="li_condition_body" onclick="SelectCondition(this,\'' + name + '\')">' + array[i].CODENAME + '</li>';
+    }
+    html += '</ul>';
+    $("#div_condition_body_" + id).append(html);
+    if (name === "车型")
+        $("#li_condition_body_first_" + id).css("height", (parseInt($("#div_condition_body_" + id).css("height")) + 10));
+    else
+        $("#li_condition_body_first_" + id).css("height", (parseInt($("#div_condition_body_" + id).css("height")) - 20));
+}
 //选择条件
 function SelectCondition(obj, name) {
     if (name === "车型" && obj.innerHTML === "挖掘机") {
@@ -81,8 +101,8 @@ function LoadCL_GCCInfo(obj) {
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
     html += ('<p class="p_li_body_left_center_bt">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_left_center_cs font_size16">' + obj.CX + ' / ' + obj.CCNF + ' / ' + obj.XSS + '小时' + '</p>');
-    html += ('<p class="p_li_body_left_center_dz font_size16">' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
+    html += ('<p class="p_li_body_left_center_cs">' + obj.CX + ' / ' + obj.CCNF + ' / ' + obj.XSS + '小时' + '</p>');
+    html += ('<p class="p_li_body_left_center_dz">' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
     html += ('<p class="p_li_body_left_right"><span class="span_zj">' + obj.JG + '</span>万元</p>');

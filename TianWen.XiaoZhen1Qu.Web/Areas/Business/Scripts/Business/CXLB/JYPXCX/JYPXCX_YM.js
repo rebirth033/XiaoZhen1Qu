@@ -9,6 +9,17 @@ function LoadJYPXCondition() {
     LoadConditionByTypeNames("'留学国家','移民类别'", "CODES_JYPX", "国家,移民类别", "GJ,YMLB", "100,100");
     LoadBody("JYPXXX_YM", currentIndex);
 }
+//加载URL查询条件
+function LoadURLCondition() {
+    if (getUrlParam("LB") !== null) {
+        SelectURLCondition(getUrlParam("LB"));
+        LoadConditionByParentID(getUrlParam("LB"), "CODES_JYPX", "小类", "XL");
+    }
+    else if (getUrlParam("QY") !== null)
+        SelectURLCondition(getUrlParam("QY"));
+    else
+        LoadBody("JYPXXX_YM", currentIndex);
+}
 //选择条件
 function SelectCondition(obj, name) {
     if (name === "类别" && (obj.innerHTML !== "干锅" && obj.innerHTML !== "中餐" && obj.innerHTML !== "粥店")) {
@@ -21,6 +32,15 @@ function SelectCondition(obj, name) {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
+    LoadBody("JYPXXX_YM", currentIndex);
+    ShowSelectCondition("JYPXXX_YM");
+}
+//选择URL条件
+function SelectURLCondition(obj) {
+    $("#" + obj).parent().find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $("#" + obj).addClass("li_condition_body_active");
     LoadBody("JYPXXX_YM", currentIndex);
     ShowSelectCondition("JYPXXX_YM");
 }

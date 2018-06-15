@@ -22,7 +22,7 @@ function LoadURLCondition() {
 //选择条件
 function SelectCondition(obj, name) {
     if (name === "类别" && (obj.innerHTML !== "干锅" && obj.innerHTML !== "中餐" && obj.innerHTML !== "粥店")) {
-        LoadConditionByParentID(obj.id, "CODES_ZXJC", "小类", "XL",100);
+        LoadConditionByParentID(obj.id, "CODES_ZXJC", "小类", "XL", 100);
     }
     if (name === "类别" && (obj.innerHTML === "干锅" || obj.innerHTML === "中餐" || obj.innerHTML === "粥店")) {
         $("#ul_condition_body_XL").remove();
@@ -83,7 +83,7 @@ function LoadInfo(obj) {
     html += ('<div class="div_li_body_left_center">');
     html += ('<p class="p_li_body_left_center_bt">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_left_center_nr">' + obj.BCMSString.replace(/<\/?.+?>/g, "") + '</p>');
-    html += ('<p class="p_li_body_left_center_dz">' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
+    html += ('<p class="p_li_body_left_center_dz">' + obj.FWFW + ' / ' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
     html += ('<p class="p_li_body_left_right"><span class="span_li_body_left_right">联系商家</span></p>');
@@ -123,7 +123,7 @@ function LoadHotInfo(obj) {
     html += ('<li onclick="OpenXXXX(\'ZXJCCX_ZXJC\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_right_xq">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_right_cs">' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
+    html += ('<p class="p_li_body_right_cs">' + obj.FWFW + '</p>');
     html += ('</li>');
     $("#ul_body_right").append(html);
 }

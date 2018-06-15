@@ -73,16 +73,20 @@ function LoadInfo(obj) {
     var html = "";
     html += ('<li class="li_body_left" onclick="OpenXXXX(\'CLXX_QCPL\',\'' + obj.ID + '\')">');
     html += ('<div class="div_li_body_left_left">');
-    html += ('<img class="img_li_body_left" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
-    html += ('<div class="div_img_li_body_left_count"><span>' + obj.PHOTOS.length + '图</span></div>');
+    if (obj.PHOTOS.length > 0) {
+        html += ('<img class="img_li_body_left" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
+        html += ('<div class="div_img_li_body_left_count"><span>' + obj.PHOTOS.length + '图</span></div>');
+    } else {
+        html += ('<img class="img_li_body_left" src="' + getRootPath() + "/Areas/Business/Css/images/HTGL/no_image.png?j=" + Math.random() + '" />');
+    }
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
     html += ('<p class="p_li_body_left_center_bt">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_left_center_nr">' + obj.BCMSString.replace(/<\/?.+?>/g, "") + '</p>');
-    html += ('<p class="p_li_body_left_center_dz font_size16">' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
+    html += ('<p class="p_li_body_left_center_dz">' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
-    html += ('<p class="p_li_body_left_right"><span class="span_zj">' + obj.JG + '</span>元</p>');
+    html += ('<p class="p_li_body_left_right">' + GetJG(obj.JG, "元") + '</p>');
     html += ('</div>');
     html += ('</li>');
     $("#ul_body_left").append(html);
