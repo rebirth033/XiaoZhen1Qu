@@ -2806,7 +2806,6 @@
     <Content Include="Areas\Business\Views\CLXX\CLXX_GHSPNJYC.cshtml" />
     <Content Include="Areas\Business\Views\CLXX\CLXX_QCMRZS.cshtml" />
     <Content Include="Areas\Business\Views\FCXX\FCXX_HZF.cshtml" />
-    <Content Include="Areas\Business\Views\FCCX\FCCX_HZF.cshtml" />
     <Content Include="Areas\Business\Views\FC\FC_HZF.cshtml" />
     <Content Include="Areas\Business\Views\FC\FC_CW.cshtml" />
     <Content Include="Areas\Business\Views\FC\FC_CK.cshtml" />
@@ -2859,6 +2858,7 @@
     <Content Include="Areas\Business\Views\GYWM\GYWM.cshtml" />
     <Content Include="Areas\Business\Views\Shared\CXCommon.cshtml" />
     <Content Include="Areas\Business\Views\SY\ChangeCity.cshtml" />
+    <Content Include="Areas\Business\Views\FCCX\FCCX_HZF.cshtml" />
     <None Include="Properties\PublishProfiles\xxxz.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
