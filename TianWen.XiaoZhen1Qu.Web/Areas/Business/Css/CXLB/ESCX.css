@@ -32,7 +32,7 @@
 .div_body .ul_body_head .li_body_head_sort .i_body_left_sort_down_orange{ width: 12px;height: 12px;margin-right: 5px;margin-left: 5px;display: inline-block;background-image: url(../images/CXLB/cxlb_px_down_orange.png)}
 
 /*首页_主体_左部*/
-.div_body .div_body_left{display: inline-block;width: 980px;height: 1800px;background-color: #ffffff;float: left;}
+.div_body .div_body_left{display: inline-block;width: 980px;height: auto;background-color: #ffffff;float: left;}
 .div_body .div_body_left .ul_body_left{ width: 100%;padding: 0;}
 .div_body .div_body_left .ul_body_left .li_body_left{ width: 100%;height: 180px;border-bottom: 1px solid #e6e6e6;padding: 10px;cursor: pointer;}
 .div_body .div_body_left .ul_body_left .li_body_left:hover{ background-color: #f9f9f9;}

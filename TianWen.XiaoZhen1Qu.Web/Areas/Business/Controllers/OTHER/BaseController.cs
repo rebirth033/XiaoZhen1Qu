@@ -22,7 +22,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         {
             if (Session["XZQ"] == null)
             {
-                //GetUserIp();
+                GetUserIp();
             }
             else
             {
@@ -87,16 +87,13 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             {
                 realRemoteIP = System.Web.HttpContext.Current.Request.UserHostAddress;
             }
-            string PostUrl = "http://int.dpool.sina.com.cn/iplookup/iplookup.php?ip=" + realRemoteIP;
-            string res = GetDataByPost(PostUrl);//该条请求返回的数据为：res=1\t115.193.210.0\t115.194.201.255\t中国\t浙江\t杭州\t电信
 
-            string[] arr = getAreaInfoList(res);
-            Session["XZQ"] = arr[1].Trim();
-            DataTable dt =DataFactory.GetDataTable(string.Format("select codeid from codes_district where codename ='{0}'",arr[1].Trim()));
+            Session["XZQ"] = GetIPCitys(realRemoteIP);
+            DataTable dt =DataFactory.GetDataTable(string.Format("select codeid from codes_district where codename ='{0}'", Session["XZQ"]));
             if (dt.Rows.Count > 0)
                 Session["XZQDM"] = dt.Rows[0][0];
-            ViewData["XZQ"] = arr[1].Trim();
-            LoggerManager.Info("用户ID", "用户ip:" + realRemoteIP + ",所在城市:" + arr[1].Trim());
+            ViewData["XZQ"] = Session["XZQ"];
+            LoggerManager.Info("用户ID", "用户ip:" + realRemoteIP + ",所在城市:" + Session["XZQ"]);
         }
 
         public string GetDataByPost(string url)
@@ -117,6 +114,47 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             sr.Close();
             res.Close();
             return backstr;
+        }
+
+        /// <summary>
+        /// 淘宝api
+        /// </summary>
+        /// <param name="strIP"></param>
+        /// <returns></returns>
+        public static string GetIPCitys(string strIP)
+        {
+            try
+            {
+                string Url = "http://ip.taobao.com/service/getIpInfo.php?ip=" + strIP + "";
+
+                System.Net.WebRequest wReq = System.Net.WebRequest.Create(Url);
+                wReq.Timeout = 2000;
+                System.Net.WebResponse wResp = wReq.GetResponse();
+                System.IO.Stream respStream = wResp.GetResponseStream();
+                using (System.IO.StreamReader reader = new System.IO.StreamReader(respStream))
+                {
+                    string jsonText = reader.ReadToEnd();
+                    Newtonsoft.Json.Linq.JObject ja = (Newtonsoft.Json.Linq.JObject)Newtonsoft.Json.JsonConvert.DeserializeObject(jsonText);
+                    if (ja["code"].ToString() == "0")
+                    {
+                        string c = ja["data"]["city"].ToString();
+                        int ci = c.IndexOf('市');
+                        if (ci != -1)
+                        {
+                            c = c.Remove(ci, 1);
+                        }
+                        return c;
+                    }
+                    else
+                    {
+                        return "未知";
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                return ("未知");
+            }
         }
 
         public static string[] getAreaInfoList(string ipData)
