@@ -4,7 +4,23 @@ $(document).ready(function () {
     LoadFCCondition();
     LoadHot("FCXX_ZZF");
     LoadHeadSearch();
+    BindClick("FWCX");
+    BindClick("ZXQK");
 });
+//绑定下拉框
+function BindClick(type) {
+    $("#div" + type + "Span").click(function () {
+        if (type === "FWCX") {
+            LoadCODESByTYPENAME("朝向", "FWCX", "CODES_FC", Bind, "FWCX", "FWCX", "");
+        }
+        if (type === "ZXQK") {
+            LoadCODESByTYPENAME("装修情况", "ZXQK", "CODES_FC", Bind, "ZXQK", "ZXQK", "");
+        }
+        if (type === "ZZLX") {
+            LoadCODESByTYPENAME("住宅类型", "ZZLX", "CODES_FC", Bind, "ZZLX", "ZZLX", "");
+        }
+    });
+}
 //加载头部搜索栏关键字
 function LoadHeadSearch() {
     $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'FWLD\',\'120\')">独立阳台</span>');
@@ -21,7 +37,7 @@ function LoadHeadSearch() {
 }
 //加载房产查询条件
 function LoadFCCondition() {
-    LoadConditionByTypeNames("'整租房租金','出租方式'", "CODES_FC", "租金,出租方式", "ZJ,CZFS", "100,100");
+    LoadConditionByTypeNames("'整租房租金','厅室'", "CODES_FC", "租金,厅室", "ZJ,S", "100,100");
 
 }
 //根据TYPENAME获取字典表

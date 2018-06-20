@@ -4,7 +4,28 @@ $(document).ready(function () {
     LoadFCCondition();
     LoadHot("FCXX_ESF");
     LoadHeadSearch();
+    BindClick("FWCX");
+    BindClick("ZXQK");
+    BindClick("ZZLX");
+    BindClick("FL");
 });
+//绑定下拉框
+function BindClick(type) {
+    $("#div" + type + "Span").click(function () {
+        if (type === "FWCX") {
+            LoadCODESByTYPENAME("朝向", "FWCX", "CODES_FC", Bind, "FWCX", "FWCX", "");
+        }
+        if (type === "ZXQK") {
+            LoadCODESByTYPENAME("装修情况", "ZXQK", "CODES_FC", Bind, "ZXQK", "ZXQK", "");
+        }
+        if (type === "ZZLX") {
+            LoadCODESByTYPENAME("住宅类型", "ZZLX", "CODES_FC", Bind, "ZZLX", "ZZLX", "");
+        }
+	if (type === "FL") {
+            LoadCODESByTYPENAME("房龄", "FL", "CODES_FC", Bind, "FL", "FL", "");
+        }
+    });
+}
 //加载头部搜索栏关键字
 function LoadHeadSearch() {
     $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'FWLD\',\'228\')">紧邻地铁</span>');
@@ -19,7 +40,7 @@ function LoadHeadSearch() {
 }
 //加载房产查询条件
 function LoadFCCondition() {
-    LoadConditionByTypeNames("'二手房售价','二手房面积','厅室','朝向','住宅类型','装修情况','出售房屋亮点'", "CODES_FC", "售价,面积,厅室,朝向,住宅类型,装修情况,房屋亮点", "SJ,PFM,S,CX,ZZLX,ZXQK,FWLD", "100,100,100,100,15,15,15");
+    LoadConditionByTypeNames("'二手房售价','二手房面积','厅室'", "CODES_FC", "售价,面积,厅室", "SJ,PFM,S", "100,100,100");
 }
 //根据TYPENAME获取字典表
 function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {

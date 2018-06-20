@@ -4,10 +4,26 @@ $(document).ready(function () {
     BindBodyNav();
     LoadFCCondition();
     LoadHot("FCXX_HZF");
+    BindClick("FWCX");
+    BindClick("ZXQK");
 });
+//绑定下拉框
+function BindClick(type) {
+    $("#div" + type + "Span").click(function () {
+        if (type === "FWCX") {
+            LoadCODESByTYPENAME("朝向", "FWCX", "CODES_FC", Bind, "FWCX", "FWCX", "");
+        }
+        if (type === "ZXQK") {
+            LoadCODESByTYPENAME("装修情况", "ZXQK", "CODES_FC", Bind, "ZXQK", "ZXQK", "");
+        }
+        if (type === "ZZLX") {
+            LoadCODESByTYPENAME("住宅类型", "ZZLX", "CODES_FC", Bind, "FWQK", "ZZLX", "");
+        }
+    });
+}
 //加载房产查询条件
 function LoadFCCondition() {
-    LoadConditionByTypeNames("'整租房租金','出租间类型','朝向','装修情况'", "CODES_FC", "租金,类型,朝向,装修情况", "ZJ,CZJLX,CX,ZXQK", "100,100,100,100");
+    LoadConditionByTypeNames("'整租房租金','出租间类型'", "CODES_FC", "租金,类型", "ZJ,CZJLX", "100,100");
 }
 //根据TYPENAME获取字典表
 function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {

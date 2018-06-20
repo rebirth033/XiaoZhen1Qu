@@ -43,10 +43,6 @@ function LoadDL() {
 }
 //加载小类
 function LoadXL(LBID, LBNAME) {
-    //$("#spanXZDL").css("color", "#333333");
-    //$("#emXZDL").css("background", "#cccccc");
-    //$("#spanXZXL").css("color", "#bc6ba6");
-    //$("#emXZXL").css("background", "#bc6ba6");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/LBXZ/LoadXL",
@@ -58,7 +54,7 @@ function LoadXL(LBID, LBNAME) {
         success: function (xml) {
             if (xml.Result === 1) {
                 var XLhtml = "", trhtml = "";
-                if (LBNAME === "二手" || LBNAME === "生活服务" || LBNAME === "商务服务" || LBNAME === "车辆" || LBNAME === "房产") {
+                if (LBNAME === "二手" || LBNAME === "生活服务" || LBNAME === "商务服务" || LBNAME === "车辆") {
                     for (var i = 0; i < xml.list.length; i++) {
                         if (xml.list[i].CODES_XXLBS.length > 5)
                             trhtml = "<tr><td class=\"LBFirst\">" + xml.list[i].LBNAME + "</td>";
