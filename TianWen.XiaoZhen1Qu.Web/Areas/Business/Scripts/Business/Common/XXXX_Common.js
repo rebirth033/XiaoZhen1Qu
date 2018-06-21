@@ -68,24 +68,42 @@ function LoadGRXX(grxx) {
 }
 //处理图片信息
 function HandlerTPXX() {
-    $(".div_img_body_left_body_left_list_tp:eq(0)").each(function () { $(this).css("background-color", "rgba(0,0,0,0)") });
+    $(".div_img_body_left_body_left_list_tp:eq(0)").each(function () { 
+	$(this).css("background-color", "rgba(0,0,0,0)") 
+    });
+
     $(".li_body_left_body_left_list_tp").bind("mouseover", function () {
         $("#img_body_left_body_left_show").attr("src", $(this).find("img")[0].src);
         $(".div_img_body_left_body_left_list_tp").css("background-color", "rgba(0,0,0,0.5)");
         $(this).find(".div_img_body_left_body_left_list_tp").css("background-color", "rgba(0,0,0,0)");
     });
     if ($("#img_body_left_body_left_show").length > 0) {
-        var img = new Image();
-        img.src = $("#img_body_left_body_left_show").attr("src");
-        $("#img_body_left_body_left_show").css("width", ((img.width > 460 || img.width === 0) ? 460 : img.width));
+     	var img = new Image();
+     	img.src = $("#img_body_left_body_left_show").attr("src");
+     	$("#img_body_left_body_left_show").css("width", ((img.width > 460 || img.width === 0) ? 460 : img.width));
         $("#img_body_left_body_left_show").css("height", ((img.height > 350 || img.height === 0) ? 350 : img.height));
     }
 
     $(".img_body_left_body_xq_xx").each(function () {
         var img = new Image();
         img.src = $("#" + this.id).attr("src");
-        $("#" + this.id).css("width", ((img.width > 405 || img.width === 0) ? 405 : img.width));
-        $("#" + this.id).css("height", ((img.height > 350 || img.height === 0) ? 350 : img.height));
+
+	var width = img.width;//区域宽度
+        var height = img.height;//区域高度
+	var ratio = 405 / 350;//宽高比
+ 	imgWidth = img.width;//图片实际宽度
+        imgHeight = img.height;//图片实际高度
+        imgRatio = imgWidth / imgHeight;//实际宽高比
+        if (ratio > imgRatio) {
+             showWidth = height * imgRatio;//调整宽度太小
+             $("#" + this.id).attr('width', showWidth).css('margin-left', (width - showWidth) / 2);
+        } else {
+             showHeight = width / imgRatio;//调高度太小
+             $("#" + this.id).attr('height', showHeight).css('margin-top', (height - showHeight) / 2);
+        }
+
+        $("#" + this.id).css("width", 405)
+        $("#" + this.id).css("height", 350);
     });
 }
 //图片左侧切换
@@ -208,4 +226,9 @@ function SCXX(jcxxid) {
     else {
         window.location.href = getRootPath() + "/YHDL/YHDL?To=SY";
     }
+}
+//绑定图片点击预览事件
+function ImgShow() {
+    $("#div_shadow").css("display", "block");
+    $("#div_close").css("display", "block");
 }

@@ -60,7 +60,7 @@ function LoadJBXX(obj) {
     html += ('<ul id="ul_body_left_body_left_list" class="ul_body_left_body_left_list">');
     for (var i = 0; i < obj.PHOTOS.length; i++) {
         html += ('<li class="li_body_left_body_left_list_tp">');
-        html += ('<img class="img_body_left_body_left_list_tp" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[i].PHOTONAME + "?j=" + Math.random() + '" />');
+        html += ('<img class="img_body_left_body_left_list_tp" onclick="ImgShow()" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[i].PHOTONAME + "?j=" + Math.random() + '" />');
         html += ('<div class="div_img_body_left_body_left_list_tp"></div>');
         html += ('</li>');
     }
@@ -151,7 +151,7 @@ function LoadFYXQ(obj, BCMSString) {
     html += ('<ul class="ul_body_left_body_xq_xx">');
     for (var i = 0; i < obj.PHOTOS.length; i++) {
         html += ('<li class="li_body_left_body_xq_xx">');
-        html += ('<img id="img_body_left_body_xq_xx' + i + '" class="img_body_left_body_xq_xx" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[i].PHOTONAME + "?j=" + Math.random() + '" />');
+        html += ('<img id="img_body_left_body_xq_xx' + i + '" onclick="ImgShow()" class="img_body_left_body_xq_xx" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[i].PHOTONAME + "?j=" + Math.random() + '" />');
         html += ('</li>');
     }
     html += ('</ul>');

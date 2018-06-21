@@ -6,6 +6,7 @@ $(document).ready(function () {
     LoadHeadSearch();
     BindClick("FWCX");
     BindClick("ZXQK");
+    BindClick("ZZLX");
 });
 //绑定下拉框
 function BindClick(type) {

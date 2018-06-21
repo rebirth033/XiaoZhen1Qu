@@ -103,7 +103,7 @@
 
 .liFWPZ {display: inline-block;width: 105px;height: 30px;text-align: left;margin-top: 4px;cursor: pointer;}
 
-.ulFWPZ {display: inline-block;padding-left: 0;margin:0;}
+.ulFWPZ {display: inline-block;padding-left: 0;margin:0;height:40px;}
 
 .SRK:focus {border: 1px solid #bc6ba6;color: #333333 !important;}
 
@@ -122,7 +122,7 @@
 
 .ulFWPZ img {width: 16px;height: 16px;cursor: pointer;border: none !important;margin-right: 5px;}
 
-.ulFWPZ li {display: inline-block;width: 105px;height: 30px;text-align: left;margin-top: 4px;cursor: pointer;}
+.ulFWPZ li {display: inline-block;width: 105px;height: 30px;text-align: left;margin-top: 0px;cursor: pointer;}
 
 .div_shadow {display: none;background-color: #000;opacity: 0.5;position: fixed;top: 0;left: 0;z-index: 1100;}
 

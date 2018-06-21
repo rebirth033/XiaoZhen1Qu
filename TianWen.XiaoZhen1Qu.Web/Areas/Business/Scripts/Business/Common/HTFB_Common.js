@@ -157,7 +157,7 @@ function LoadFWFW() {
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='liFWFW' onclick='SelectDuoX(this)'><img class='img_FWFW'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i % 6 === 5) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 173px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 6) === 0)
