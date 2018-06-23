@@ -228,7 +228,30 @@ function SCXX(jcxxid) {
     }
 }
 //绑定图片点击预览事件
-function ImgShow() {
+function ImgShow(obj) {
     $("#div_shadow").css("display", "block");
+    $("#div_show").css("display", "block");
     $("#div_close").css("display", "block");
+    var image = new Image();
+    image.src = obj.src;
+    $("#img_show_middle").attr("width",image.width);
+    $("#img_show_middle").attr("height",image.height);
+    $("#img_show_middle").attr("src",image.src);
+
+    $("#div_show_middle_bottom").html('');
+    var html = ('<ul id="ul_body_left_body_left_list" class="ul_body_left_body_left_list">');
+    for (var i = 0; i < $(".img_body_left_body_left_list_tp").length; i++) {
+        html += ('<li class="li_body_left_body_left_list_tp">');
+        html += ('<img class="img_body_left_body_left_list_tp" src="' + $(".img_body_left_body_left_list_tp")[i].src + '" />');
+        html += ('<div class="div_img_body_left_body_left_list_tp"></div>');
+        html += ('</li>');
+    }
+    html += ('</ul>');
+    $("#div_show_middle_bottom").html(html);
+}
+//图片隐藏
+function ImgHide(){
+    $("#div_shadow").css("display", "none");
+    $("#div_show").css("display", "none");
+    $("#div_close").css("display", "none");
 }

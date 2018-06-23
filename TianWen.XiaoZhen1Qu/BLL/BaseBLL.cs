@@ -531,7 +531,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                                 {
                                     if (array[1].Contains("一"))
                                         condition.AppendFormat(" and S = 1");
-                                    if (array[1].Contains("二"))
+                                    if (array[1].Contains("二") || array[1].Contains("两"))
                                         condition.AppendFormat(" and S = 2");
                                     if (array[1].Contains("三"))
                                         condition.AppendFormat(" and S = 3");
