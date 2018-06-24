@@ -229,6 +229,18 @@ function SCXX(jcxxid) {
 }
 //绑定图片点击预览事件
 function ImgShow(obj) {
+    $("#div_show").html('');
+    var show_html = ('<div class="div_show_left" onclick="LeftShowImg()"><img class="img_show_left" /></div>');
+    show_html += ('<div class="div_show_middle">');
+    show_html += ('<div class="div_show_middle_top">');
+    show_html += ('<img id="img_show_middle" class="img_show_middle" />');
+    show_html += ('</div>');
+    show_html += ('<div class="div_show_middle_bottom" id="div_show_middle_bottom">');
+    show_html += ('</div>');
+    show_html += ('</div>');
+    show_html += ('<div class="div_show_right" onclick="RightShowImg('+$(".img_body_left_body_left_list_tp").length+')"><img class="img_show_right" /></div>');
+    $("#div_show").html(show_html);
+
     $("#div_shadow").css("display", "block");
     $("#div_show").css("display", "block");
     $("#div_close").css("display", "block");
@@ -239,19 +251,45 @@ function ImgShow(obj) {
     $("#img_show_middle").attr("src",image.src);
 
     $("#div_show_middle_bottom").html('');
-    var html = ('<ul id="ul_body_left_body_left_list" class="ul_body_left_body_left_list">');
+    var html = ('<ul id="ul_show_list" class="ul_body_left_body_left_list">');
     for (var i = 0; i < $(".img_body_left_body_left_list_tp").length; i++) {
-        html += ('<li class="li_body_left_body_left_list_tp">');
-        html += ('<img class="img_body_left_body_left_list_tp" src="' + $(".img_body_left_body_left_list_tp")[i].src + '" />');
-        html += ('<div class="div_img_body_left_body_left_list_tp"></div>');
+        html += ('<li class="li_show_tp">');
+        html += ('<img class="img_show_tp" src="' + $(".img_body_left_body_left_list_tp")[i].src + '" />');
+        html += ('<div class="div_show_tp"></div>');
         html += ('</li>');
     }
     html += ('</ul>');
     $("#div_show_middle_bottom").html(html);
+
+    $(".li_show_tp").bind("mouseover", function () {
+        $("#img_show_middle").attr("src", $(this).find("img")[0].src);
+        $(".div_show_tp").css("background-color", "rgba(0,0,0,0.5)");
+        $(this).find(".div_show_tp").css("background-color", "rgba(0,0,0,0)");
+    });
 }
 //图片隐藏
 function ImgHide(){
     $("#div_shadow").css("display", "none");
     $("#div_show").css("display", "none");
     $("#div_close").css("display", "none");
+}
+//图片左侧切换
+function LeftShowImg() {
+    if (right > 0) {
+        right -= 1;
+        $("#ul_show_list").css("transform", "translate3d(-" + right * 100 + "px, 0px, 0px)").css("transition-duration", "500ms");
+        $("#ul_show_list").find(".div_show_tp").css("background-color", "rgba(0,0,0,0.5)");
+        $("#ul_show_list").find(".li_show_tp:eq(" + right + ")").find(".div_show_tp").css("background-color", "rgba(0,0,0,0)");
+        $("#img_show_middle").attr("src", $("#ul_show_list").find(".li_show_tp:eq(" + right + ")").find("img")[0].src);
+    }
+}
+//图片右侧切换
+function RightShowImg(length) {
+    if (right < length - 6) {
+        right += 1;
+        $("#ul_show_list").css("transform", "translate3d(-" + right * 100 + "px, 0px, 0px)").css("transition-duration", "500ms");
+        $("#ul_show_list").find(".div_show_tp").css("background-color", "rgba(0,0,0,0.5)");
+        $("#ul_show_list").find(".li_show_tp:eq(" + right + ")").find(".div_show_tp").css("background-color", "rgba(0,0,0,0)");
+        $("#img_show_middle").attr("src", $("#ul_show_list").find(".li_show_tp:eq(" + right + ")").find("img")[0].src);
+    }
 }
