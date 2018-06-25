@@ -39,9 +39,9 @@ function LoadJBXX(obj) {
     html += ('<div class="div_body_left_body_left">');
     html += ('<div class="div_body_left_body_left_img">');
     if (obj.PHOTOS.length > 0) {
-        html += ('<img id="img_body_left_body_left_show" class="img_body_left_body_left_show" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
+        html += ('<img id="img_body_left_body_left_show" onclick="ImgShow(this)" class="img_body_left_body_left_show" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     } else {
-        html += ('<img id="img_body_left_body_left_show" class="img_body_left_body_left_show" src="' + getRootPath() + "/Areas/Business/Css/images/HTGL/no_image.png?j=" + Math.random() + '" />');
+        html += ('<img id="img_body_left_body_left_show" onclick="ImgShow(this)" class="img_body_left_body_left_show" src="' + getRootPath() + "/Areas/Business/Css/images/HTGL/no_image.png?j=" + Math.random() + '" />');
     }
     html += ('</div>');
     html += ('<span onclick="LeftImg()" class="div_body_left_body_left_list_an" style="margin-right: 10px;"><</span>');
@@ -110,7 +110,7 @@ function LoadXQ(obj, BCMSString) {
     html += ('<ul class="ul_body_left_body_xq_xx">');
     for (var i = 0; i < obj.PHOTOS.length; i++) {
         html += ('<li class="li_body_left_body_xq_xx">');
-        html += ('<img id="img_body_left_body_xq_xx' + i + '" class="img_body_left_body_xq_xx" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[i].PHOTONAME + "?j=" + Math.random() + '" />');
+        html += ('<img id="img_body_left_body_xq_xx' + i + '" onclick="ImgShow(this)" class="img_body_left_body_xq_xx" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[i].PHOTONAME + "?j=" + Math.random() + '" />');
         html += ('</li>');
     }
     html += ('</ul>');
