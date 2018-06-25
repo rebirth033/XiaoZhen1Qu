@@ -122,15 +122,6 @@ function DeleteSelect(obj, tbname) {
         $("#divConditionSelect").css("display", "none");
     LoadBody(tbname, currentIndex);
 }
-//获取查询条件
-function GetCondition(type) {
-    var value = "";
-    $("#ul_condition_body_" + type).find(".li_condition_body").each(function () {
-        if ($(this).css("color") === 'rgb(188, 107, 166)')
-            value = $(this).html();
-    });
-    return value;
-}
 //获取所有查询条件
 function GetAllCondition(conditions) {
     var array = conditions.split(',');
@@ -140,6 +131,21 @@ function GetAllCondition(conditions) {
             condition += array[i] + ":" + GetCondition(array[i]) + ",";
     }
     return RTrim(condition, ',');
+}
+//获取查询条件
+function GetCondition(type) {
+    var value = "";
+    $("#ul_condition_body_" + type).find(".li_condition_body").each(function () {
+        if ($(this).css("color") === 'rgb(188, 107, 166)')
+            value = $(this).html();
+    });
+    if($("#span"+type).length>0){
+        if($("#span"+type).html().indexOf('不限') === -1)
+	    value = $("#span"+type).html();
+        else
+	    value = "全部";
+    }
+    return value;
 }
 //获取导航查询条件
 function GetNavCondition() {
@@ -409,12 +415,11 @@ function LoadCODESByTYPENAME(type, id, table, callback, idout, idin, message) {
                     height = parseInt(xml.list.length * 30) + 1;
                 var html = "<ul class='ul_select' style='overflow-y: scroll; height:" + height + "px'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='li_select' onclick='SelectLB(this,\"" + id + "\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
+                    html += "<li class='li_select' onclick='SelectDropdown(this,\"" + id + "\",\"" + xml.list[i].CODEID + "\")'>" + xml.list[i].CODENAME + "</li>";
                 }
                 html += "</ul>";
                 $("#div" + id).html(html);
                 $("#div" + id).css("display", "block");
-                //ActiveStyle(id);
                 if (callback !== undefined)
                     callback(idout, idin, message);
             }
@@ -432,10 +437,4 @@ function SelectDropdown(obj, type) {
 //绑定下拉框
 function Bind(idout, idin, message) {
     $("#div" + idout).find(".li_select").bind("click", function () { ValidateSelect(idout, idin, message); });
-}
-//选择类别下拉框
-function SelectLB(obj, type) {
-    $("#span" + type).html(obj.innerHTML);
-    $("#div" + type).css("display", "none");
-    LeaveStyle(type);
 }

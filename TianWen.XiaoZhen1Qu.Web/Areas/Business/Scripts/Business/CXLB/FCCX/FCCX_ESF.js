@@ -4,7 +4,7 @@ $(document).ready(function () {
     LoadFCCondition();
     LoadHot("FCXX_ESF");
     LoadHeadSearch();
-    BindClick("FWCX");
+    BindClick("CX");
     BindClick("ZXQK");
     BindClick("ZZLX");
     BindClick("FL");
@@ -12,8 +12,8 @@ $(document).ready(function () {
 //绑定下拉框
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
-        if (type === "FWCX") {
-            LoadCODESByTYPENAME("朝向", "FWCX", "CODES_FC", Bind, "FWCX", "FWCX", "");
+        if (type === "CX") {
+            LoadCODESByTYPENAME("朝向", "CX", "CODES_FC", Bind, "CX", "CX", "");
         }
         if (type === "ZXQK") {
             LoadCODESByTYPENAME("装修情况", "ZXQK", "CODES_FC", Bind, "ZXQK", "ZXQK", "");
@@ -107,10 +107,17 @@ function SelectURLCondition(obj) {
     LoadBody("FCXX_ESF", currentIndex);
     ShowSelectCondition("FCXX_ESF");
 }
+//选择下拉框
+function SelectDropdown(obj, type) {
+    $("#span" + type).html(obj.innerHTML);
+    $("#div" + type).css("display", "none");
+    LoadBody("FCXX_ESF", currentIndex);
+    ShowSelectCondition("FCXX_ESF");
+}
 //加载主体部分
 function LoadBody(TYPE, PageIndex, OrderColumn, OrderType) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("SJ,PFM,QY,S,CX,ZZLX,ZXQK,FWLD,SF");
+    var condition = GetAllCondition("SJ,PFM,QY,S,CX,ZZLX,ZXQK");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/FCCX/LoadFCXX",
