@@ -102,8 +102,13 @@ function ShowSelectCondition(tbname) {
     $(".div_condition_select").css("display", "block");
     $("#ul_condition_select").html('<li class="li_condition_select_first">条件</li>');
     $(".li_condition_body").each(function () {
-        if ($(this).css("color") === "rgb(188, 107, 166)" && $(this).html() !== "全部") {
+        if ($(this).css("color") === "rgb(188, 107, 166)" && $(this).html() !== "全部" && $(this).html().indexOf('span_select') === -1) {
             $("#ul_condition_select").append('<li onclick="DeleteSelect(this,\'' + tbname + '\')" class="li_condition_select"><span>' + $(this).html() + '</span><em>×</em></li>');
+        }
+    });
+    $(".span_select").each(function () {
+        if ($(this).html().indexOf('不限') === -1) {
+            $("#ul_condition_select").append('<li onclick="DeleteSelectDropdown(this,\'' + tbname + '\')" class="li_condition_select"><span>' + $(this).html() + '</span><em>×</em></li>');
         }
     });
 }
@@ -118,6 +123,21 @@ function DeleteSelect(obj, tbname) {
                 else $(this).removeClass("li_condition_body_active");
             });
     });
+    if (HasCondition() === "")
+        $("#divConditionSelect").css("display", "none");
+    LoadBody(tbname, currentIndex);
+}
+//绑定下拉选择条件删除事件
+function DeleteSelectDropdown(obj, tbname) {
+    var select = obj.innerHTML;
+    $(".span_select").each(function () {
+        if (obj.innerHTML.indexOf($(this).html()) !== -1) {
+	    if(this.id === "spanCX") $(this).html('朝向不限');
+	    if(this.id === "spanZXQK") $(this).html('装修不限');
+	    if(this.id === "spanZZLX") $(this).html('类型不限');
+        }
+    });
+    $(obj).css("display", "none");
     if (HasCondition() === "")
         $("#divConditionSelect").css("display", "none");
     LoadBody(tbname, currentIndex);
@@ -161,6 +181,10 @@ function HasCondition() {
     var condition = "";
     $(".li_condition_body").each(function () {
         if (($(this).html() !== "不限" && $(this).html() !== "全部") && $(this).css("color") === "rgb(188, 107, 166)")
+            condition += $(this).html();
+    });
+   $(".span_select").each(function () {
+        if (($(this).html().indexOf('不限') !== -1))
             condition += $(this).html();
     });
     return condition;

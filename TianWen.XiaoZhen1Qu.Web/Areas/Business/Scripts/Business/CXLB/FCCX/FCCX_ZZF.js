@@ -4,15 +4,15 @@ $(document).ready(function () {
     LoadFCCondition();
     LoadHot("FCXX_ZZF");
     LoadHeadSearch();
-    BindClick("FWCX");
+    BindClick("CX");
     BindClick("ZXQK");
     BindClick("ZZLX");
 });
 //绑定下拉框
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
-        if (type === "FWCX") {
-            LoadCODESByTYPENAME("朝向", "FWCX", "CODES_FC", Bind, "FWCX", "FWCX", "");
+        if (type === "CX") {
+            LoadCODESByTYPENAME("朝向", "CX", "CODES_FC", Bind, "CX", "CX", "");
         }
         if (type === "ZXQK") {
             LoadCODESByTYPENAME("装修情况", "ZXQK", "CODES_FC", Bind, "ZXQK", "ZXQK", "");
@@ -74,8 +74,8 @@ function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
 }
 //加载URL查询条件
 function LoadURLCondition() {
-    if (getUrlParam("FWLD") !== null)
-        SelectURLCondition(getUrlParam("FWLD"));
+    if (getUrlParam("ZZLX") !== null)
+        SelectURLCondition(getUrlParam("ZZLX"));
     else if (getUrlParam("ZJ") !== null)
         SelectURLCondition(getUrlParam("ZJ"));
     else if (getUrlParam("QY") !== null)
@@ -104,10 +104,17 @@ function SelectURLCondition(obj) {
     LoadBody("FCXX_ZZF", currentIndex);
     ShowSelectCondition("FCXX_ZZF");
 }
+//选择下拉框
+function SelectDropdown(obj, type) {
+    $("#span" + type).html(obj.innerHTML);
+    $("#div" + type).css("display", "none");
+    LoadBody("FCXX_ZZF", currentIndex);
+    ShowSelectCondition("FCXX_ZZF");
+}
 //加载主体部分
 function LoadBody(TYPE, PageIndex, OrderColumn, OrderType) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("QY,DD,S,ZJ,CX,ZXQK,FWLD,SF");
+    var condition = GetAllCondition("QY,DD,S,ZJ,CX,ZXQK,ZZLX,SF");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/FCCX/LoadFCXX",

@@ -97,7 +97,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// 建筑年代
         /// </summary>
         [Property]
-        public virtual string JZND { get; set; }
+        public virtual int JZND { get; set; }
 
         /// <summary>
         /// 容积率

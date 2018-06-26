@@ -411,7 +411,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     string[] array = conditions[i].Split(':');
                     if (array[1] != "全部")
                     {
-                        if (array[0] == "ZJ" || array[0] == "JG" || array[0] == "SJ" || array[0] == "PFM" || array[0] == "MJ" || array[0] == "NL" || array[0] == "MSJ" || array[0] == "JG_CR" || array[0] == "S")
+                        if (array[0] == "ZJ" || array[0] == "JG" || array[0] == "SJ" || array[0] == "PFM" || array[0] == "MJ" || array[0] == "NL" || array[0] == "MSJ" || array[0] == "JG_CR" || array[0] == "S" || array[0] == "FL")
                         {
                             if (array[1].Contains("万元"))
                             {
@@ -539,6 +539,24 @@ namespace TianWen.XiaoZhen1Qu.BLL
                                         condition.AppendFormat(" and S = 4");
                                 }
                             }
+                            else if (array[1].Contains("年"))
+                            {
+                                if (array[1].Contains("-"))
+                                {
+                                    string[] zjarray = array[1].Substring(0, array[1].IndexOf("年")).Split('-');
+                                    condition.AppendFormat(" and x.jznd >= 2018 - {1} and x.jznd <= 2018 - {0}", zjarray[0], zjarray[1]);
+                                }
+                                else if (array[1].Contains("以上"))
+                                {
+                                    string zjsx = array[1].Substring(0, array[1].IndexOf("年"));
+                                    condition.AppendFormat(" and x.jznd <= 2018 - {0}", zjsx);
+                                }
+                                else
+                                {
+                                    string zjxx = array[1].Substring(0, array[1].IndexOf("年"));
+                                    condition.AppendFormat(" and x.jznd >= 2018 - {0}", zjxx);
+                                }
+                            }
                             else
                             {
                                 if (array[1].Contains("-"))
@@ -557,6 +575,10 @@ namespace TianWen.XiaoZhen1Qu.BLL
                                     condition.AppendFormat(" and {0} <= {1}", array[0], zjxx);
                                 }
                             }
+                        }
+                        else if (array[0] == "CX")
+                        {
+                            condition.AppendFormat(" and {0} like '{1}'", array[0], array[1]);
                         }
                         else
                         {

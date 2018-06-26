@@ -4,14 +4,14 @@ $(document).ready(function () {
     BindBodyNav();
     LoadFCCondition();
     LoadHot("FCXX_HZF");
-    BindClick("FWCX");
+    BindClick("CX");
     BindClick("ZXQK");
 });
 //绑定下拉框
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
-        if (type === "FWCX") {
-            LoadCODESByTYPENAME("朝向", "FWCX", "CODES_FC", Bind, "FWCX", "FWCX", "");
+        if (type === "CX") {
+            LoadCODESByTYPENAME("朝向", "CX", "CODES_FC", Bind, "CX", "CX", "");
         }
         if (type === "ZXQK") {
             LoadCODESByTYPENAME("装修情况", "ZXQK", "CODES_FC", Bind, "ZXQK", "ZXQK", "");
@@ -85,6 +85,13 @@ function SelectURLCondition(obj) {
         $(this).removeClass("li_condition_body_active");
     });
     $("#" + obj).addClass("li_condition_body_active");
+    LoadBody("FCXX_HZF", currentIndex);
+    ShowSelectCondition("FCXX_HZF");
+}
+//选择下拉框
+function SelectDropdown(obj, type) {
+    $("#span" + type).html(obj.innerHTML);
+    $("#div" + type).css("display", "none");
     LoadBody("FCXX_HZF", currentIndex);
     ShowSelectCondition("FCXX_HZF");
 }
