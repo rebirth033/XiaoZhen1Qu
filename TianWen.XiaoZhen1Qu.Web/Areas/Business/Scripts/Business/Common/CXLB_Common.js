@@ -135,6 +135,8 @@ function DeleteSelectDropdown(obj, tbname) {
 	    if(this.id === "spanCX") $(this).html('朝向不限');
 	    if(this.id === "spanZXQK") $(this).html('装修不限');
 	    if(this.id === "spanZZLX") $(this).html('类型不限');
+    	    if(this.id === "spanFL") $(this).html('房龄不限');
+	    if(this.id === "spanFWLD") $(this).html('亮点不限');
         }
     });
     $(obj).css("display", "none");
@@ -180,11 +182,11 @@ function GetNavCondition() {
 function HasCondition() {
     var condition = "";
     $(".li_condition_body").each(function () {
-        if (($(this).html() !== "不限" && $(this).html() !== "全部") && $(this).css("color") === "rgb(188, 107, 166)")
+        if ($(this).html() !== "全部" && $(this).css("color") === "rgb(188, 107, 166)")
             condition += $(this).html();
     });
    $(".span_select").each(function () {
-        if (($(this).html().indexOf('不限') !== -1))
+        if (($(this).html().indexOf('不限') === -1))
             condition += $(this).html();
     });
     return condition;
@@ -460,5 +462,5 @@ function SelectDropdown(obj, type) {
 }
 //绑定下拉框
 function Bind(idout, idin, message) {
-    $("#div" + idout).find(".li_select").bind("click", function () { ValidateSelect(idout, idin, message); });
+    //$("#div" + idout).find(".li_select").bind("click", function () { ValidateSelect(idout, idin, message); });
 }

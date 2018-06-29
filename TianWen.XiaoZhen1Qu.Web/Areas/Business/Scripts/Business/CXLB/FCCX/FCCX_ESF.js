@@ -8,6 +8,7 @@ $(document).ready(function () {
     BindClick("ZXQK");
     BindClick("ZZLX");
     BindClick("FL");
+    BindClick("FWLD");
 });
 //绑定下拉框
 function BindClick(type) {
@@ -24,19 +25,22 @@ function BindClick(type) {
 	if (type === "FL") {
             LoadCODESByTYPENAME("房龄", "FL", "CODES_FC", Bind, "FL", "FL", "");
         }
+        if (type === "FWLD") {
+            LoadCODESByTYPENAME("出售房屋亮点", "FWLD", "CODES_FC", Bind, "FWLD", "FWLD", "");
+        }
     });
 }
 //加载头部搜索栏关键字
 function LoadHeadSearch() {
-    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'FWLD\',\'228\')">紧邻地铁</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'FWLD\',\'紧邻地铁\')">紧邻地铁</span>');
     $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
-    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'FWLD\',\'226\')">精装修</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'FWLD\',\'精装修\')">精装修</span>');
     $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
-    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'FWLD\',\'227\')">南北通透</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'FWLD\',\'南北通透\')">南北通透</span>');
     $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
-    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'ZZLX\',\'18\')">普通住宅</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'ZZLX\',\'普通住宅\')">普通住宅</span>');
     $(".div_head_right_ss").append('<span class="span_head_right_ss_split">|</span>');
-    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'ZZLX\',\'19\')">商住两用</span>');
+    $(".div_head_right_ss").append('<span class="span_head_right_ss" onclick="OpenSS(\'ZZLX\',\'商住两用\')">商住两用</span>');
 }
 //加载房产查询条件
 function LoadFCCondition() {
@@ -76,11 +80,11 @@ function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
 //加载URL查询条件
 function LoadURLCondition() {
     if (getUrlParam("FWLD") !== null)
-        SelectURLCondition(getUrlParam("FWLD"));
+        SelectURLDropdown(getUrlParam("FWLD"),"FWLD");
     else if (getUrlParam("SJ") !== null)
         SelectURLCondition(getUrlParam("SJ"));
     else if (getUrlParam("ZZLX") !== null)
-        SelectURLCondition(getUrlParam("ZZLX"));
+        SelectURLDropdown(getUrlParam("ZZLX"),"ZZLX");
     else if (getUrlParam("QY") !== null)
         SelectURLCondition(getUrlParam("QY"));
     else
@@ -114,10 +118,17 @@ function SelectDropdown(obj, type) {
     LoadBody("FCXX_ESF", currentIndex);
     ShowSelectCondition("FCXX_ESF");
 }
+//选择URL下拉框
+function SelectURLDropdown(obj, type) {
+    $("#span" + type).html(obj);
+    $("#div" + type).css("display", "none");
+    LoadBody("FCXX_ESF", currentIndex);
+    ShowSelectCondition("FCXX_ESF");
+}
 //加载主体部分
 function LoadBody(TYPE, PageIndex, OrderColumn, OrderType) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("SJ,PFM,QY,S,CX,ZZLX,ZXQK,SF");
+    var condition = GetAllCondition("SJ,PFM,QY,S,CX,ZZLX,ZXQK,SF,FWLD");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/FCCX/LoadFCXX",
