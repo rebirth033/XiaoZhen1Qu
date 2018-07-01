@@ -52,6 +52,9 @@ function LoadURLCondition() {
 }
 //选择条件
 function SelectCondition(obj, name) {
+    if (name === "QY") {
+        LoadConditionByParentID(obj.id, "CODES_DISTRICT", "地段", "DD");
+    }
     $(obj).parent().find(".li_condition_body").each(function () {
         $(this).removeClass("li_condition_body_active");
     });
@@ -71,7 +74,7 @@ function SelectURLCondition(obj) {
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("FWLX,ZJ,QY");
+    var condition = GetAllCondition("FWLX,ZJ,QY,DD");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/FCCX/LoadFCXX",

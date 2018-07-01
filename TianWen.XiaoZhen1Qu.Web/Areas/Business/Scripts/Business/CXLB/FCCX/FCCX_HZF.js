@@ -98,7 +98,7 @@ function SelectDropdown(obj, type) {
 //加载主体部分
 function LoadBody(TYPE, PageIndex, OrderColumn, OrderType) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("CZJLX,ZJ,QY,CX,ZXQK,SF");
+    var condition = GetAllCondition("CZJLX,ZJ,QY,DD,CX,ZXQK,SF");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/FCCX/LoadFCXX",

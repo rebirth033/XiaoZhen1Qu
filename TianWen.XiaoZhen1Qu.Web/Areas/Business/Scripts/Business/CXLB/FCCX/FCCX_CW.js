@@ -71,6 +71,9 @@ function LoadURLCondition() {
 }
 //选择条件
 function SelectCondition(obj, name) {
+    if (name === "QY") {
+        LoadConditionByParentID(obj.id, "CODES_DISTRICT", "地段", "DD");
+    }
     $(obj).parent().find(".li_condition_body").each(function () {
         $(this).removeClass("li_condition_body_active");
     });
@@ -90,7 +93,7 @@ function SelectURLCondition(obj) {
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("MJ,QY,SF");
+    var condition = GetAllCondition("MJ,QY,DD,SF");
     if (GetNavCondition() === "出租") {
         condition += ",GQ:出租";
         if (GetCondition("ZJ") !== "")

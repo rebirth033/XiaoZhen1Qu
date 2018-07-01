@@ -72,3 +72,12 @@
 .font_size18{ font-size: 18px;}
 .font_size19{ font-size: 19px;}
 .font_size20{ font-size: 20px;}
+
+.div_select_out {display: inline-block;width: 75px;height: 20px;border: 1px solid #cccccc;position: relative;}
+.div_select_in {display: inline-block;width: 75px;height: 20px;font-size: 12px;border: none;}
+.div_select_dropdown {float: left; width: 75px;position: relative;z-index: 1001;top:0;}
+.span_select {display: inline-block;width: 55px;height: 20px;text-align: center;color:#999999;}
+.span_select_arrow {background-image: url(../images/arrow_down.png);width: 16px;height: 16px;display: inline-block;vertical-align: middle;margin-bottom:2px;}
+.ul_select {border-radius: 0px;margin-left: -1px;text-align: center;width: 75px;display: inline-block;border-left: 1px solid #cccccc;border-right: 1px solid #cccccc;border-bottom: 1px solid #cccccc;padding-left: 0px;height: 341px;}
+.li_select {height: 30px;text-align: left;display: block;line-height: 30px;padding-left:4px;font-size: 12px;cursor: pointer;color: #999999;background: #FFFFFF;width:100%;}
+.li_select:hover {background: #ececec;color: #333333;}

@@ -6,15 +6,60 @@
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/CXLB/CLCX/CLCX_JC.js")"></script>
 }
 @section Section_Body {
-    <div id="divCondition" class="div_condition" style="height: 230px;">
+    <div id="divCondition" class="div_condition">
         <div id="div_condition_body_PP" class="div_condition_body" style="padding-top: 20px;"></div>
         <div id="div_condition_body_CX" class="div_condition_body"></div>
         <div id="div_condition_body_JG" class="div_condition_body"></div>
-        <div id="div_condition_body_CL" class="div_condition_body"></div>
-        <div id="div_condition_body_PL" class="div_condition_body"></div>
-        <div id="div_condition_body_LC" class="div_condition_body"></div>
-        <div id="div_condition_body_BSX" class="div_condition_body"></div>
-        <div id="div_condition_body_CLYS" class="div_condition_body"></div>
+	<div id="div_condition_body_QT" class="div_condition_body">
+		<ul class="ul_condition_body" id="ul_condition_body_CL" style="height: auto;">
+		    <li class="li_condition_body_first">其他</li>
+		    <li class="li_condition_body" style="margin-right:10px;">
+                        <div id="divCLText" class="div_select_out">
+                        <div id="divCLSpan" class="div_select_in">
+                        <span id="spanCL" column="CL" class="span_select spaninput_fontcolor">车龄不限</span>
+                        <div class="span_select_arrow"></div>
+                        </div>
+                        <div id="divCL" class="div_select_dropdown"></div>
+                        </div>
+                    </li>
+ 		    <li class="li_condition_body" style="margin-right:10px;">
+                        <div id="divPLText" class="div_select_out">
+                        <div id="divPLSpan" class="div_select_in">
+                        <span id="spanPL" column="PL" class="span_select spaninput_fontcolor">排量不限</span>
+                        <div class="span_select_arrow"></div>
+                        </div>
+                        <div id="divPL" class="div_select_dropdown"></div>
+                        </div>
+                    </li>
+		    <li class="li_condition_body" style="margin-right:10px;">
+                        <div id="divLCText" class="div_select_out">
+                        <div id="divLCSpan" class="div_select_in">
+                        <span id="spanLC" column="LC" class="span_select spaninput_fontcolor">里程不限</span>
+                        <div class="span_select_arrow"></div>
+                        </div>
+                        <div id="divLC" class="div_select_dropdown"></div>
+                        </div>
+                    </li>
+		    <li class="li_condition_body" style="margin-right:10px;">
+                        <div id="divBSXText" class="div_select_out">
+                        <div id="divBSXSpan" class="div_select_in">
+                        <span id="spanBSX" column="BSX" class="span_select spaninput_fontcolor">变速不限</span>
+                        <div class="span_select_arrow"></div>
+                        </div>
+                        <div id="divBSX" class="div_select_dropdown"></div>
+                        </div>
+                    </li>
+		    <li class="li_condition_body" style="margin-right:10px;">
+                        <div id="divCLYSText" class="div_select_out">
+                        <div id="divCLYSpan" class="div_select_in">
+                        <span id="spanCLYS" column="CLYS" class="span_select spaninput_fontcolor">颜色不限</span>
+                        <div class="span_select_arrow"></div>
+                        </div>
+                        <div id="divCLYS" class="div_select_dropdown"></div>
+                        </div>
+                    </li>
+	        </ul>
+	    </div>
         <div id="div_condition_body_SF" class="div_condition_body" style="display: none;">
             <ul id="ul_condition_body_SF" class="ul_condition_body">
                 <li class="li_condition_body_first">身份</li>
@@ -30,7 +75,6 @@
         </ul>
     </div>
     <div class="div_condition_toggle">
-        <span id="span_condition_toggle" class="span_condition_toggle">更多选项<i id="i_condition_tottle" class="i_condition_tottle"></i></span>
     </div>
     <div id="divBody" class="div_body" style="margin-top: 0;">
         <ul class="ul_body_head">

@@ -74,6 +74,9 @@ function LoadURLCondition() {
 }
 //选择条件
 function SelectCondition(obj, name) {
+    if (name === "QY") {
+        LoadConditionByParentID(obj.id, "CODES_DISTRICT", "地段", "DD");
+    }
     $(obj).parent().find(".li_condition_body").each(function () {
         $(this).removeClass("li_condition_body_active");
     });
@@ -93,7 +96,7 @@ function SelectURLCondition(obj) {
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("XZLLX,MJ,QY,SF");
+    var condition = GetAllCondition("XZLLX,MJ,QY,DD,SF");
     if (GetNavCondition() === "出租") {
         condition += ",GQ:出租";
         if (GetCondition("ZJ") !== "")
@@ -146,8 +149,8 @@ function LoadCZInfo(obj) {
     html += ('<p class="p_li_body_left_center_dz">' + '[' + ValidateNull(obj.QY) + '-' + ValidateNull(obj.DD) + '] ' + obj.JTDZ + ' ' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
-    html += ('<p class="p_li_body_left_right">' + GetCalcJG(obj.ZJ,obj.MJ, "元/㎡/月") + '</p>');
-    html += ('<p class="p_li_body_left_right" style="color:#666;">' + GetJG(obj.ZJ, "元/月") + '</p>');
+    html += ('<p class="p_li_body_left_right">' + GetJG(obj.ZJ, "元/月") + '</p>');
+    html += ('<p class="p_li_body_left_right" style="color:#666;">' + GetCalcJG(obj.ZJ,obj.MJ, "元/㎡/月") + '</p>');
     html += ('</div>');
     html += ('</li>');
     $("#ul_body_left").append(html);
@@ -166,8 +169,8 @@ function LoadCSInfo(obj) {
     html += ('<p class="p_li_body_left_center_dz">' + '[' + ValidateNull(obj.QY) + '-' + ValidateNull(obj.DD) + ']' + obj.JTDZ + ' ' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');
-    html += ('<p class="p_li_body_left_right">' + GetCalcJG(obj.SJ, obj.MJ, "元/㎡") + '</p>');
-    html += ('<p class="p_li_body_left_right" style="color:#666;">' + GetJG(obj.SJ, "万元") + '</p>');
+    html += ('<p class="p_li_body_left_right">' + GetJG(obj.SJ, "万元") + '</p>');
+    html += ('<p class="p_li_body_left_right" style="color:#666;">' + GetCalcJG(obj.SJ, obj.MJ, "元/㎡") + '</p>');
     html += ('</div>');
     html += ('</li>');
     $("#ul_body_left").append(html);

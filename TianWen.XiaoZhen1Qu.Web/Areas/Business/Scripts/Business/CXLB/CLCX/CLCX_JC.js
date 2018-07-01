@@ -4,10 +4,35 @@ $(document).ready(function () {
     LoadCLCondition();
     ToggleCondition();
     LoadHot("CLXX_JC");
+    BindClick("CL");
+    BindClick("PL");
+    BindClick("LC");
+    BindClick("BSX");
+    BindClick("CLYS");
 });
+//绑定下拉框
+function BindClick(type) {
+    $("#div" + type + "Span").click(function () {
+        if (type === "CL") {
+            LoadCODESByTYPENAME("车龄", "CL", "CODES_CL", Bind, "CL", "CL", "");
+        }
+        if (type === "PL") {
+            LoadCODESByTYPENAME("排量", "PL", "CODES_CL", Bind, "PL", "PL", "");
+        }
+        if (type === "LC") {
+            LoadCODESByTYPENAME("里程", "LC", "CODES_CL", Bind, "LC", "LC", "");
+        }
+        if (type === "BSX") {
+            LoadCODESByTYPENAME("变速箱", "BSX", "CODES_CL", Bind, "BSX", "BSX", "");
+        }
+        if (type === "CLYS") {
+            LoadCODESByTYPENAME("车辆颜色", "CLYS", "CODES_CL", Bind, "CLYS", "CLYS", "");
+        }
+    });
+}
 //加载条件
 function LoadCLCondition() {
-    LoadConditionByTypeNames("'轿车品牌','轿车价格','轿车车龄','轿车排量','轿车里程','轿车变速箱','轿车颜色'", "CODES_CL", "品牌,价格,车龄,排量,里程,变速箱,颜色", "PP,JG,CL,PL,LC,BSX,CLYS", "100,100,100,100,100,100,100");
+    LoadConditionByTypeNames("'轿车品牌','轿车价格'", "CODES_CL", "品牌,价格,车龄,排量,里程,变速箱,颜色", "PP,JG", "100,100");
 }
 //根据TYPENAME获取字典表
 function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
@@ -33,7 +58,7 @@ function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
                     }
                 }
                 if (typenames.indexOf("轿车品牌") !== -1)
-                    LoadCondition(xml.jclist, "品牌", "PP", 100);
+                    LoadCondition(xml.jclist, "品牌", "PP", 10);
                 LoadURLCondition();
             }
         },
@@ -75,19 +100,6 @@ function SelectURLCondition(obj) {
     $("#" + obj).addClass("li_condition_body_active");
     LoadBody("CLXX_JC", currentIndex);
     ShowSelectCondition("CLXX_JC");
-}
-//展开收缩条件
-function ToggleCondition() {
-    if ($("#span_condition_toggle").html().indexOf("更多") !== -1) {
-        $(".div_condition").css("height", "auto").css("overflow", "visible");
-        $("#span_condition_toggle").html($("#span_condition_toggle").html().replace("更多", "精简"));
-        $("#i_condition_tottle").css("background-image", "url(" + getRootPath() + "/areas/business/css/images/head_nav_up.png)");
-    }
-    else {
-        $(".div_condition").css("height", "250px").css("overflow", "hidden");
-        $("#span_condition_toggle").html($("#span_condition_toggle").html().replace("精简", "更多"));
-        $("#i_condition_tottle").css("background-image", "url(" + getRootPath() + "/areas/business/css/images/head_nav_down.png)");
-    }
 }
 //加载查询条件
 function LoadCondition(array, name, id, length) {
