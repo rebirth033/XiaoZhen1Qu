@@ -16,6 +16,7 @@
 .div_condition .div_condition_body .ul_condition_body .li_condition_body{ display: inline-block;width: auto;height: 100%;margin-right: 20px;font-size: 12px;margin-bottom:10px;}
 .div_condition .div_condition_body .ul_condition_body .li_condition_body:hover{ cursor: pointer;color: #bc6ba6;text-decoration: underline;}
 .div_condition .div_condition_body .ul_condition_body .li_condition_body_active{color: #bc6ba6;}
+.div_condition .div_condition_body .ul_condition_body .li_condition_body_szm{ display: inline-block;width: auto;height: 100%;margin-right: 20px;font-size: 12px;margin-bottom:10px;color: #999999;}
 .div_condition .div_condition_body .ul_condition_body .input_zj{ width: 60px;margin-right: 5px;}
 .div_condition .div_condition_body .ul_condition_body .span_zj{ font-size: 12px;}
 .div_condition .div_condition_body .ul_condition_body .input_sj{ width: 60px;margin-right: 5px;}

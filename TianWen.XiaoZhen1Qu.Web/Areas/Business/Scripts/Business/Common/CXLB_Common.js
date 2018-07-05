@@ -137,6 +137,11 @@ function DeleteSelectDropdown(obj, tbname) {
 	    if(this.id === "spanZZLX") $(this).html('类型不限');
     	    if(this.id === "spanFL") $(this).html('房龄不限');
 	    if(this.id === "spanFWLD") $(this).html('亮点不限');
+	    if(this.id === "spanCL") $(this).html('车龄不限');
+	    if(this.id === "spanPL") $(this).html('排量不限');
+	    if(this.id === "spanLC") $(this).html('里程不限');
+	    if(this.id === "spanBSX") $(this).html('变速箱不限');
+	    if(this.id === "spanCLYS") $(this).html('颜色不限');
         }
     });
     $(obj).css("display", "none");
@@ -311,22 +316,32 @@ function LoadConditionByParentID(parentid, table, name, id, length) {
 //加载查询条件
 function LoadCondition(array, name, id, length) {
     $("#ul_condition_body_" + id).remove();
-    var html = "";
+    var html = "";var SZM = "";
     html += '<ul id="ul_condition_body_' + id + '" class="ul_condition_body" style="height:auto;">';
-    if (name === "地段" || name === "类别" || name === "小类" || name === "品牌" || name === "车系" || name === "车型" || name === "驾照" || name === "品种" || name === "型号" || name === "语种" || name === "用途" || name === "婚车品牌" || name === "国家" || name === "留学国家")
+    if (name === "类别" || name === "小类" || name === "地段" || name === "品牌" || name === "车系" || name === "车型" || name === "驾照" || name === "品种" || name === "型号" || name === "语种" || name === "用途" || name === "婚车品牌" || name === "国家" || name === "留学国家")
         html += '<li id="li_condition_body_first_' + id + '" class="li_condition_body_first">' + name + '</li>';
     else
         html += '<li class="li_condition_body_first">' + name + '</li>';
     html += '<li id="0" class="li_condition_body li_condition_body_active" onclick="SelectCondition(this,\'' + name + '\')">全部</li>';
     for (var i = 0; i < (array.length > length ? length : array.length) ; i++) {
-        html += '<li id="' + array[i].CODEID + '" class="li_condition_body" onclick="SelectCondition(this,\'' + name + '\')">' + array[i].CODENAME + '</li>';
+	if(name === "地段"){
+	    if(SZM == "" || SZM !== array[i].CODEVALUE){
+	        SZM = array[i].CODEVALUE;
+	        html += '<li class="li_condition_body_szm" style="font-weight:bold;">' + SZM + '</li>';
+	    }
+	    html += '<li id="' + array[i].CODEID + '" class="li_condition_body" onclick="SelectCondition(this,\'' + name + '\')">' + array[i].CODENAME + '</li>';
+	}
+	else
+            html += '<li id="' + array[i].CODEID + '" class="li_condition_body" onclick="SelectCondition(this,\'' + name + '\')">' + array[i].CODENAME + '</li>';
     }
     html += '</ul>';
     $("#div_condition_body_" + id).append(html);
     if (name === "地段")
-        $("#li_condition_body_first_" + id).css("height", (parseInt($("#div_condition_body_" + id).css("height")) - 10));
+        $("#li_condition_body_first_" + id).css("height", (parseInt($("#div_condition_body_" + id).css("height")) + 5));
     else
         $("#li_condition_body_first_" + id).css("height", (parseInt($("#div_condition_body_" + id).css("height")) - 20));
+    if(array.length === 0)
+	$("#ul_condition_body_" + id).remove();
 }
 //设置条件
 function SetCondition(type, value) {
@@ -372,7 +387,7 @@ function LoadDistrictCondition(array, type) {
     }
     html += '</ul>';
     $("#div_condition_body_" + type).append(html);
-    $("#li_condition_body_first_" + type).css("height", (parseInt($("#div_condition_body_" + type).css("height")) - 10));
+    $("#li_condition_body_first_" + type).css("height", (parseInt($("#div_condition_body_" + type).css("height")) - 15));
 }
 //发布信息
 function FBXX() {

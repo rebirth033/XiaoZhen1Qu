@@ -2,7 +2,6 @@
 $(document).ready(function () {
     BindBodyNav();
     LoadCLCondition();
-    ToggleCondition();
     LoadHot("CLXX_JC");
     BindClick("CL");
     BindClick("PL");
@@ -14,25 +13,25 @@ $(document).ready(function () {
 function BindClick(type) {
     $("#div" + type + "Span").click(function () {
         if (type === "CL") {
-            LoadCODESByTYPENAME("车龄", "CL", "CODES_CL", Bind, "CL", "CL", "");
+            LoadCODESByTYPENAME("轿车车龄", "CL", "CODES_CL", Bind, "CL", "CL", "");
         }
         if (type === "PL") {
-            LoadCODESByTYPENAME("排量", "PL", "CODES_CL", Bind, "PL", "PL", "");
+            LoadCODESByTYPENAME("轿车排量", "PL", "CODES_CL", Bind, "PL", "PL", "");
         }
         if (type === "LC") {
-            LoadCODESByTYPENAME("里程", "LC", "CODES_CL", Bind, "LC", "LC", "");
+            LoadCODESByTYPENAME("轿车里程", "LC", "CODES_CL", Bind, "LC", "LC", "");
         }
         if (type === "BSX") {
-            LoadCODESByTYPENAME("变速箱", "BSX", "CODES_CL", Bind, "BSX", "BSX", "");
+            LoadCODESByTYPENAME("轿车变速箱", "BSX", "CODES_CL", Bind, "BSX", "BSX", "");
         }
         if (type === "CLYS") {
-            LoadCODESByTYPENAME("车辆颜色", "CLYS", "CODES_CL", Bind, "CLYS", "CLYS", "");
+            LoadCODESByTYPENAME("轿车颜色", "CLYS", "CODES_CL", Bind, "CLYS", "CLYS", "");
         }
     });
 }
 //加载条件
 function LoadCLCondition() {
-    LoadConditionByTypeNames("'轿车品牌','轿车价格'", "CODES_CL", "品牌,价格,车龄,排量,里程,变速箱,颜色", "PP,JG", "100,100");
+    LoadConditionByTypeNames("'轿车品牌','轿车价格'", "CODES_CL", "品牌,价格", "PP,JG", "15,100");
 }
 //根据TYPENAME获取字典表
 function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
@@ -58,7 +57,7 @@ function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
                     }
                 }
                 if (typenames.indexOf("轿车品牌") !== -1)
-                    LoadCondition(xml.jclist, "品牌", "PP", 10);
+                    LoadCondition(xml.jclist, "品牌", "PP", 15);
                 LoadURLCondition();
             }
         },
@@ -101,6 +100,13 @@ function SelectURLCondition(obj) {
     LoadBody("CLXX_JC", currentIndex);
     ShowSelectCondition("CLXX_JC");
 }
+//选择下拉框
+function SelectDropdown(obj, type) {
+    $("#span" + type).html(obj.innerHTML);
+    $("#div" + type).css("display", "none");
+    LoadBody("CLXX_JC", currentIndex);
+    ShowSelectCondition("CLXX_JC");
+}
 //加载查询条件
 function LoadCondition(array, name, id, length) {
     $("#ul_condition_body_" + id).remove();
@@ -114,6 +120,8 @@ function LoadCondition(array, name, id, length) {
     for (var i = 0; i < (array.length > length ? length : array.length) ; i++) {
         html += '<li id="' + array[i].CODEID + '" class="li_condition_body" onclick="SelectCondition(this,\'' + name + '\')">' + array[i].CODENAME + '</li>';
     }
+    if(name === "品牌")
+        html += '<li class="li_condition_body" onclick="MorePP()">更多</li>';
     html += '</ul>';
     $("#div_condition_body_" + id).append(html);
     if(name === "车系")

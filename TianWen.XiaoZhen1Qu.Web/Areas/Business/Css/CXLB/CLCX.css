@@ -6,7 +6,7 @@
 .div_nav .ul_nav .li_nav_split{ float: left;margin-left: 10px;margin-right: 10px;}
 
 /*首页_头部_查询条件*/
-.div_condition{background-color: #ffffff;display: block;width: 1200px;height: auto;overflow: hidden;border: 1px solid #cccccc;}
+.div_condition{background-color: #ffffff;display: block;width: 1200px;height: auto;overflow: visible;border: 1px solid #cccccc;}
 .div_condition .ul_condition_head{display: block;width: 100%;height: 40px;padding: 0;}
 .div_condition .ul_condition_head .li_condition_head{display: inline-block;float: left;text-align: center;color: #999999;font-size: 16px;width: 100px;height: 40px;padding: 8px 10px;background-color: #eeeff1;cursor: pointer;}
 

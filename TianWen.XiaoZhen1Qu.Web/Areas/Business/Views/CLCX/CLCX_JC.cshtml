@@ -4,6 +4,10 @@
 @section Section_Head {
     <link href="@Url.Content("~/Areas/Business/Css/CXLB/CLCX.css")" rel="stylesheet" />
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/CXLB/CLCX/CLCX_JC.js")"></script>
+    <style type="text/css">
+	#divLC .ul_select{width:95px;}
+	#divBSX .ul_select{width:95px;}
+    </style>
 }
 @section Section_Body {
     <div id="divCondition" class="div_condition">
@@ -32,26 +36,26 @@
                         </div>
                     </li>
 		    <li class="li_condition_body" style="margin-right:10px;">
-                        <div id="divLCText" class="div_select_out">
-                        <div id="divLCSpan" class="div_select_in">
-                        <span id="spanLC" column="LC" class="span_select spaninput_fontcolor">里程不限</span>
+                        <div id="divLCText" class="div_select_out" style="width:95px;">
+                        <div id="divLCSpan" class="div_select_in" style="width:95px;">
+                        <span id="spanLC" column="LC" class="span_select spaninput_fontcolor" style="width:75px;">里程不限</span>
                         <div class="span_select_arrow"></div>
                         </div>
-                        <div id="divLC" class="div_select_dropdown"></div>
+                        <div id="divLC" class="div_select_dropdown" style="width:75px;"></div>
                         </div>
                     </li>
 		    <li class="li_condition_body" style="margin-right:10px;">
-                        <div id="divBSXText" class="div_select_out">
-                        <div id="divBSXSpan" class="div_select_in">
-                        <span id="spanBSX" column="BSX" class="span_select spaninput_fontcolor">变速不限</span>
+                        <div id="divBSXText" class="div_select_out" style="width:95px;">
+                        <div id="divBSXSpan" class="div_select_in" style="width:95px;">
+                        <span id="spanBSX" column="BSX" class="span_select spaninput_fontcolor" style="width:75px;">变速箱不限</span>
                         <div class="span_select_arrow"></div>
                         </div>
-                        <div id="divBSX" class="div_select_dropdown"></div>
+                        <div id="divBSX" class="div_select_dropdown" style="width:75px;"></div>
                         </div>
                     </li>
 		    <li class="li_condition_body" style="margin-right:10px;">
                         <div id="divCLYSText" class="div_select_out">
-                        <div id="divCLYSpan" class="div_select_in">
+                        <div id="divCLYSSpan" class="div_select_in">
                         <span id="spanCLYS" column="CLYS" class="span_select spaninput_fontcolor">颜色不限</span>
                         <div class="span_select_arrow"></div>
                         </div>

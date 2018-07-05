@@ -1,4 +1,5 @@
-﻿$(document).ready(function () {
+﻿var imgIndex = 0;
+$(document).ready(function () {
     $(".div_top_left").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
     $(".div_top_right").css("margin-right", (document.documentElement.clientWidth - 1200) / 2);
     $(".div_nav").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
@@ -66,16 +67,17 @@ function LoadGRXX(grxx) {
     html += ('</div>');
     $("#div_body_right").append(html);
 }
+//点击显示图片
+function ClickShowImg(obj,num){
+	right = num;
+        $("#img_body_left_body_left_show").attr("src", $(obj).parent().find("img")[0].src);
+        $(".div_img_body_left_body_left_list_tp").css("background-color", "rgba(0,0,0,0.5)");
+        $(obj).css("background-color", "rgba(0,0,0,0)");
+}
 //处理图片信息
 function HandlerTPXX() {
     $(".div_img_body_left_body_left_list_tp:eq(0)").each(function () { 
 	$(this).css("background-color", "rgba(0,0,0,0)") 
-    });
-
-    $(".li_body_left_body_left_list_tp").bind("mouseover", function () {
-        $("#img_body_left_body_left_show").attr("src", $(this).find("img")[0].src);
-        $(".div_img_body_left_body_left_list_tp").css("background-color", "rgba(0,0,0,0.5)");
-        $(this).find(".div_img_body_left_body_left_list_tp").css("background-color", "rgba(0,0,0,0)");
     });
     if ($("#img_body_left_body_left_show").length > 0) {
      	var img = new Image();
@@ -107,23 +109,25 @@ function HandlerTPXX() {
     });
 }
 //图片左侧切换
-function LeftImg() {
-    if (right > 0) {
-        right -= 1;
-        $("#ul_body_left_body_left_list").css("transform", "translate3d(-" + right * 100 + "px, 0px, 0px)").css("transition-duration", "500ms");
+function LeftImg(length) {
+    if (imgIndex> 0) {
+	if(imgIndex <= length - 4 && $("#ul_body_left_body_left_list").css("transform").indexOf("-") !== -1)
+            $("#ul_body_left_body_left_list").css("transform", "translate3d(-" + (imgIndex-1) * 100 + "px, 0px, 0px)").css("transition-duration", "500ms");
+        imgIndex -= 1;
         $("#ul_body_left_body_left_list").find(".div_img_body_left_body_left_list_tp").css("background-color", "rgba(0,0,0,0.5)");
-        $("#ul_body_left_body_left_list").find(".li_body_left_body_left_list_tp:eq(" + right + ")").find(".div_img_body_left_body_left_list_tp").css("background-color", "rgba(0,0,0,0)");
-        $("#img_body_left_body_left_show").attr("src", $("#ul_body_left_body_left_list").find(".li_body_left_body_left_list_tp:eq(" + right + ")").find("img")[0].src);
+        $("#ul_body_left_body_left_list").find(".li_body_left_body_left_list_tp:eq(" + imgIndex + ")").find(".div_img_body_left_body_left_list_tp").css("background-color", "rgba(0,0,0,0)");
+        $("#img_body_left_body_left_show").attr("src", $("#ul_body_left_body_left_list").find(".li_body_left_body_left_list_tp:eq(" + imgIndex + ")").find("img")[0].src);
     }
 }
 //图片右侧切换
 function RightImg(length) {
-    if (right < length - 4) {
-        right += 1;
-        $("#ul_body_left_body_left_list").css("transform", "translate3d(-" + right * 100 + "px, 0px, 0px)").css("transition-duration", "500ms");
+    if (imgIndex < length-1) {
+	if(imgIndex >= 3)
+            $("#ul_body_left_body_left_list").css("transform", "translate3d(-" + (imgIndex-2) * 100 + "px, 0px, 0px)").css("transition-duration", "500ms");
+        imgIndex += 1;
         $("#ul_body_left_body_left_list").find(".div_img_body_left_body_left_list_tp").css("background-color", "rgba(0,0,0,0.5)");
-        $("#ul_body_left_body_left_list").find(".li_body_left_body_left_list_tp:eq(" + right + ")").find(".div_img_body_left_body_left_list_tp").css("background-color", "rgba(0,0,0,0)");
-        $("#img_body_left_body_left_show").attr("src", $("#ul_body_left_body_left_list").find(".li_body_left_body_left_list_tp:eq(" + right + ")").find("img")[0].src);
+        $("#ul_body_left_body_left_list").find(".li_body_left_body_left_list_tp:eq(" + imgIndex + ")").find(".div_img_body_left_body_left_list_tp").css("background-color", "rgba(0,0,0,0)");
+        $("#img_body_left_body_left_show").attr("src", $("#ul_body_left_body_left_list").find(".li_body_left_body_left_list_tp:eq(" + imgIndex + ")").find("img")[0].src);
     }
 }
 //伸缩图片
@@ -274,22 +278,29 @@ function ImgHide(){
     $("#div_close").css("display", "none");
 }
 //图片左侧切换
-function LeftShowImg() {
-    if (right > 0) {
-        right -= 1;
-        $("#ul_show_list").css("transform", "translate3d(-" + right * 100 + "px, 0px, 0px)").css("transition-duration", "500ms");
-        $("#ul_show_list").find(".div_show_tp").css("background-color", "rgba(0,0,0,0.5)");
-        $("#ul_show_list").find(".li_show_tp:eq(" + right + ")").find(".div_show_tp").css("background-color", "rgba(0,0,0,0)");
-        $("#img_show_middle").attr("src", $("#ul_show_list").find(".li_show_tp:eq(" + right + ")").find("img")[0].src);
+function LeftShowImg(length) {
+    if (imgIndex > 0) {
+	if(imgIndex <= length - 5)
+            $("#ul_show_lis").css("transform", "translate3d(-" + (imgIndex - 1) * 100 + "px, 0px, 0px)").css("transition-duration", "500ms");
+        imgIndex += 1;
+        $("#ul_show_lis").find(".div_show_tp").css("background-color", "rgba(0,0,0,0.5)");
+        $("#ul_show_lis").find(".li_show_tp:eq(" + imgIndex + ")").find(".div_show_tp").css("background-color", "rgba(0,0,0,0)");
+        $("#img_show_middle").attr("src", $("#ul_show_list").find(".li_show_tp:eq(" + imgIndex + ")").find("img")[0].src);
     }
 }
 //图片右侧切换
 function RightShowImg(length) {
-    if (right < length - 6) {
-        right += 1;
-        $("#ul_show_list").css("transform", "translate3d(-" + right * 100 + "px, 0px, 0px)").css("transition-duration", "500ms");
+    if (imgIndex < length-1) {
+	if(imgIndex >= 4)
+	    $("#ul_show_list").css("transform", "translate3d(-" + (imgIndex-2) * 100 + "px, 0px, 0px)").css("transition-duration", "500ms");
+        imgIndex += 1;
         $("#ul_show_list").find(".div_show_tp").css("background-color", "rgba(0,0,0,0.5)");
-        $("#ul_show_list").find(".li_show_tp:eq(" + right + ")").find(".div_show_tp").css("background-color", "rgba(0,0,0,0)");
-        $("#img_show_middle").attr("src", $("#ul_show_list").find(".li_show_tp:eq(" + right + ")").find("img")[0].src);
+        $("#ul_show_list").find(".li_show_tp:eq(" + imgIndex + ")").find(".div_show_tp").css("background-color", "rgba(0,0,0,0)");
+        $("#img_show_middle").attr("src", $("#ul_show_list").find(".li_show_tp:eq(" + imgIndex + ")").find("img")[0].src);
     }
+
+}
+//显示联系电话
+function ShowLXDH(lxdh) {
+    $("#div_body_left_body_right_lxdh").html('<img class="img_body_left_body_right_lxdh"  src="' + getRootPath() + "/Areas/Business/Css/images/XXXX/GY/xxxx_gy_lxdh.png" + '" /><span class="span_body_left_body_right_lxdh">'+lxdh+'</span>');
 }
