@@ -140,7 +140,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 }
                 if (TYPE == "CLXX_DJ")
                 {
-                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,cl_DJjbxx b where a.jcxxid = b.jcxxid and status = 1 and xzqdm = {0} " + GetConditin(Condition) + GetOrder(OrderColumn, OrderType), XZQDM));
+                    dt = DAO.Repository.GetDataTable(string.Format("select a.*,b.* from jcxx a,cl_DJjbxx b where a.jcxxid = b.jcxxid and status = 1 and xzqdm = {0} " + GetConditin(Condition).Replace("QY","FWFW") + GetOrder(OrderColumn, OrderType), XZQDM));
                     List<CL_DJView> list = ConvertHelper.DataTableToList<CL_DJView>(dt);
                     int PageCount = (list.Count + int.Parse(PageSize) - 1) / int.Parse(PageSize);
                     int TotalCount = list.Count;

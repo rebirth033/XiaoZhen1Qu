@@ -98,7 +98,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// 行驶里程
         /// </summary>
         [Property]
-        public virtual string XSLC { get; set; }
+        public virtual int XSLC { get; set; }
 
         /// <summary>
         /// 价格

@@ -32,7 +32,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.ViewModels.FC
         public string WYF { get; set; }
         public string ZJMJ { get; set; }
         public string ZHS { get; set; }
-        public string JZND { get; set; }
+        public int JZND { get; set; }
         public string RJL { get; set; }
         public string TCW { get; set; }
         public string LHL { get; set; }

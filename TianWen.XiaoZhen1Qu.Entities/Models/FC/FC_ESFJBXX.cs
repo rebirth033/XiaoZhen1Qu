@@ -126,11 +126,5 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         /// </summary>
         [Property]
         public virtual string CQLX { get; set; }
-
-        /// <summary>
-        /// 建筑年代
-        /// </summary>
-        [Property]
-        public virtual string JZND { get; set; }
     }
 }

@@ -23,7 +23,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.ViewModels.CL
         public string JQXDQYF { get; set; }
         public string SFDQBY { get; set; }
         public string SYXDQNF { get; set; }
-        public string XSLC { get; set; }
+        public int XSLC { get; set; }
         public string BHGHFY { get; set; }
         public string ZCFQFK { get; set; }
         public string PZSZSF { get; set; }

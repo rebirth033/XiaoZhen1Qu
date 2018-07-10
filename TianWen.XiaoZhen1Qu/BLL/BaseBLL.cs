@@ -197,7 +197,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 if (TBName == "CODES_CL")
                 {
                     if (TYPENAMES.Contains("轿车品牌"))
-                        return new { Result = EnResultType.Success, districts, jclist = DAO.Repository.GetObjectList<CODES_CL_JC>(String.Format("FROM CODES_CL_JC WHERE TYPENAME in({0}) ORDER BY TYPENAME,CODEORDER", "'轿车品牌'")), list = DAO.Repository.GetObjectList<CODES_CL>(String.Format("FROM CODES_CL WHERE TYPENAME in({0}) ORDER BY TYPENAME,CODEORDER", TYPENAMES)) };
+                        return new { Result = EnResultType.Success, districts, jclist = DAO.Repository.GetObjectList<CODES_CL_JC>(String.Format("FROM CODES_CL_JC WHERE TYPENAME in({0}) and ISHOT = '是' ORDER BY TYPENAME,CODEORDER", "'轿车品牌'")), list = DAO.Repository.GetObjectList<CODES_CL>(String.Format("FROM CODES_CL WHERE TYPENAME in({0}) ORDER BY TYPENAME,CODEORDER", TYPENAMES)) };
                     else
                         return new { Result = EnResultType.Success, districts, list = DAO.Repository.GetObjectList<CODES_CL>(String.Format("FROM CODES_CL WHERE TYPENAME in({0}) ORDER BY TYPENAME,CODEORDER", TYPENAMES)) };
                 }
@@ -411,7 +411,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
                     string[] array = conditions[i].Split(':');
                     if (array[1] != "全部")
                     {
-                        if (array[0] == "ZJ" || array[0] == "JG" || array[0] == "SJ" || array[0] == "PFM" || array[0] == "MJ" || array[0] == "NL" || array[0] == "MSJ" || array[0] == "JG_CR" || array[0] == "S" || array[0] == "FL")
+                        if (array[0] == "ZJ" || array[0] == "JG" || array[0] == "SJ" || array[0] == "PFM" || array[0] == "MJ" || array[0] == "NL" || array[0] == "MSJ" || array[0] == "JG_CR" || array[0] == "S" || array[0] == "FL" || array[0] == "LC" || array[0] == "CL")
                         {
                             if (array[1].Contains("万元"))
                             {
@@ -557,6 +557,24 @@ namespace TianWen.XiaoZhen1Qu.BLL
                                     condition.AppendFormat(" and x.jznd >= 2018 - {0}", zjxx);
                                 }
                             }
+                            else if (array[1].Contains("万公里"))
+                            {
+                                if (array[1].Contains("-"))
+                                {
+                                    string[] zjarray = array[1].Substring(0, array[1].IndexOf("万公里")).Split('-');
+                                    condition.AppendFormat(" and xslc >= {0} and xslc <=  {1}", zjarray[0], zjarray[1]);
+                                }
+                                else if (array[1].Contains("以上"))
+                                {
+                                    string zjsx = array[1].Substring(0, array[1].IndexOf("万公里"));
+                                    condition.AppendFormat(" and xslc >= {0}", zjsx);
+                                }
+                                else
+                                {
+                                    string zjxx = array[1].Substring(0, array[1].IndexOf("万公里"));
+                                    condition.AppendFormat(" and xslc <=  {0}", zjxx);
+                                }
+                            }
                             else
                             {
                                 if (array[1].Contains("-"))
@@ -640,7 +658,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
             try
             {
                 string[] array = TYPE.Split(',');
-                IList<CODES_XXLB> list = DAO.Repository.GetObjectList<CODES_XXLB>(String.Format("FROM CODES_XXLB WHERE FBYM LIKE '{0}_%' OR FBYM LIKE '{1}_%' ORDER BY LBORDER", array[0], array[1]));
+                IList<CODES_XXLB> list = DAO.Repository.GetObjectList<CODES_XXLB>(String.Format("FROM CODES_XXLB WHERE FBYM LIKE '{0}_%' OR FBYM LIKE '{1}_%' ORDER BY LBID", array[0], array[1]));
                 return new { Result = EnResultType.Success, list = list, xzq = XZQ };
             }
             catch (Exception ex)
