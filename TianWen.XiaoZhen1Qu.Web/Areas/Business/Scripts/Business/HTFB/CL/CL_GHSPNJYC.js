@@ -18,7 +18,7 @@ function LoadGHSPNJYC() {
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='liLB' onclick='SelectDuoX(this)'><img class='img_GHSPNJYC'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i % 4 === 3) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 177px'>";
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 175px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 4) === 0)
@@ -29,7 +29,7 @@ function LoadGHSPNJYC() {
                 $("#divLBText").html(html);
                 $(".img_GHSPNJYC").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".liLB").bind("click", function () { ValidateCheck("LB", "忘记选择类别啦"); });
-                //LoadFWFW();
+                LoadFWFW();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

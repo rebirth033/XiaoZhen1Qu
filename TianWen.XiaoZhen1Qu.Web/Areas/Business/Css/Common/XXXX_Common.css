@@ -96,7 +96,6 @@
 .div_body .div_body_left .div_body_left_head .p_div_body_left_head_ll .i_div_body_left_head_sc{ width:20px;height:20px;display:inline-block;background-image:url(../images/XXXX/gy/xxxx_gy_sc.png);background-size:100%;}
 
 .img_body_left_body_left_show{ width: 460px;height: 350px;}
-
 .img_body_left_body_xq_xx{cursor:pointer;}
 
 .div_shadow {display: none;background-color: #000;opacity: 0.9;position: fixed;top: 0;left: 0;z-index: 1100;width: 100%;height: 100%;}
@@ -108,7 +107,6 @@
 .div_show_right .img_show_right{background-image: url(../images/XXXX/GY/xxxx_gy_right.png);width:30px;height:52px;margin-right:40px;top:48%;right:0;position:fixed;}
 .div_show_middle{position: fixed;width:60%;height:100%;left:20%;text-align:center;}
 .div_show_middle_bottom{height:100px;text-align:center;width:100%;overflow:hidden;display:inline-block;}
-
 
 .ul_show_list{width: 2000px;height: 76px;padding: 0;margin-top: 20px;display:inline-block;}
 .li_show_tp{float: left;height: 100px;margin-right: 10px;width: 18%;position: relative;}

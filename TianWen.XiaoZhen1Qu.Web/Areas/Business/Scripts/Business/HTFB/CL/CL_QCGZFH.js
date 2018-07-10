@@ -1,36 +1,6 @@
 ﻿$(document).ready(function () {
     LoadDuoX("汽车改装/防护类别", "LB");
 });
-////绑定下拉框
-//function BindClick(type) {
-//    $("#div" + type + "Span").click(function () {
-//        if (type === "LB") {
-//            LoadCODESByTYPENAME("汽车改装/防护类别", "LB", "CODES_CL", Bind, "OUTLB", "LB", "");
-//        }
-//        if (type === "XL") {
-//            LoadXL();
-//        }
-//    });
-//}
-////选择类别下拉框
-//function SelectLB(obj, type, lbid) {
-//    $("#span" + type).html(obj.innerHTML);
-//    $("#div" + type).css("display", "none");
-//    $("#LBID").val(lbid);
-//    PDLB(obj.innerHTML);
-//}
-////判断类别
-//function PDLB(lbmc) {
-//    if (lbmc === "外观改装" || lbmc === "性能提升") {
-//        BindClick("XL");
-//        $("#spanXL").html("请选择小类");
-//        $("#divXLText").css("display", "");
-//        $("#divXL").css("display", "none");
-//    }
-//    else {
-//        $("#divXLText").css("display", "none");
-//    }
-//}
 //加载多选
 function LoadDuoX(type, id) {
     $.ajax({
@@ -48,7 +18,7 @@ function LoadDuoX(type, id) {
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='li" + id + "' style='width:150px;' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i % 4 === 3 && i !== xml.list.length - 1) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 177px'>";
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 173px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 4) === 0)
@@ -59,7 +29,7 @@ function LoadDuoX(type, id) {
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".li" + id).bind("click", function () { ValidateCheck("LB", "忘记选择类别啦"); });
-                LoadJBXX();
+                LoadFWFW();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

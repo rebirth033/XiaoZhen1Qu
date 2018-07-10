@@ -66,7 +66,7 @@ function LoadBB() {
                 $("#divBBText").html(html);
                 $(".img_BB").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
                 $(".liBB").bind("click", function () { ValidateCheck("BB", "忘记选择班别啦"); });
-                LoadJBXX();
+                LoadFWFW();
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

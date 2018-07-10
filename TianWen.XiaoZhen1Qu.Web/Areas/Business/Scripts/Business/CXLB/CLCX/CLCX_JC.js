@@ -132,7 +132,7 @@ function LoadCondition(array, name, id, length) {
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("PP,CX,JG,PL,LC,BSX,CLYS,SF");
+    var condition = GetAllCondition("PP,CX,JG,PL,LC,BSX,CLYS,SF,CL");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/CLCX/LoadCLXX",
@@ -168,7 +168,7 @@ function LoadCL_JCInfo(obj) {
     html += ('</div>');
     html += ('<div class="div_li_body_left_center">');
     html += ('<p class="p_li_body_left_center_bt">' + obj.BT + '</p>');
-    html += ('<p class="p_li_body_left_center_cs">' + obj.SPNF + ' / ' + obj.XSLC + '万公里' + ' / ' + '2.0升' + ' / ' + '自动' + '</p>');
+    html += ('<p class="p_li_body_left_center_cs">' + obj.SPNF + ' / ' + obj.XSLC + '万公里' + ' / ' + '2.0升' + ' / ' + (obj.BT.indexOf('手动') !== -1 ? "手动" : "自动") + '</p>');
     html += ('<p class="p_li_body_left_center_dz">' + obj.ZXGXSJ.ToString("MM月dd日") + '</p>');
     html += ('</div>');
     html += ('<div class="div_li_body_left_right">');

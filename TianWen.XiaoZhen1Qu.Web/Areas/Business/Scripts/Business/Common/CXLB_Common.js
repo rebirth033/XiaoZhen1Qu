@@ -479,3 +479,8 @@ function SelectDropdown(obj, type) {
 function Bind(idout, idin, message) {
     //$("#div" + idout).find(".li_select").bind("click", function () { ValidateSelect(idout, idin, message); });
 }
+//显示联系电话
+function ShowLXDH(lxdh) {
+    $("#div_shadow").css("display", "block");
+    $("#div_show").css("display", "block");
+}
