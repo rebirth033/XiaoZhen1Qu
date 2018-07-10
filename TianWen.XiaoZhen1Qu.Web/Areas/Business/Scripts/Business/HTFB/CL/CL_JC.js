@@ -270,9 +270,13 @@ function SetCLYS(clys) {
 //选择车辆颜色
 function ActiveCLYS() {
     $(".div_clys").each(function () {
-        $(this).css("border-color", "#cccccc").css("background-color", "#ffffff");;
+        $(this).css("border-color", "#cccccc").css("background-color", "#ffffff");
+        $(this).bind("mouseover",function(){$(this).css("background-color", "#ececec");});
+        $(this).bind("mouseout",function(){$(this).css("background-color", "#ffffff");});
     });
     $(this).css("border-color", "#bc6ba6").css("background-color", "#bc6ba6");
+    $(this).unbind("mouseover").unbind("mouseout");
+
 }
 //选择类别下拉框
 function SelectLB(obj, type) {

@@ -31,7 +31,7 @@ function BindClick(type) {
 }
 //加载条件
 function LoadCLCondition() {
-    LoadConditionByTypeNames("'轿车品牌','轿车价格'", "CODES_CL", "品牌,价格", "PP,JG", "15,100");
+    LoadConditionByTypeNames("'轿车品牌','轿车价格'", "CODES_CL", "品牌,价格", "PP,JG", "18,100");
 }
 //根据TYPENAME获取字典表
 function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
@@ -57,7 +57,7 @@ function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
                     }
                 }
                 if (typenames.indexOf("轿车品牌") !== -1)
-                    LoadCondition(xml.jclist, "品牌", "PP", 15);
+                    LoadCondition(xml.jclist, "品牌", "PP", 18);
                 LoadURLCondition();
             }
         },
@@ -121,7 +121,7 @@ function LoadCondition(array, name, id, length) {
         html += '<li id="' + array[i].CODEID + '" class="li_condition_body" onclick="SelectCondition(this,\'' + name + '\')">' + array[i].CODENAME + '</li>';
     }
     if(name === "品牌")
-        html += '<li class="li_condition_body" onclick="MorePP()">更多</li>';
+        html += '<li class="li_condition_body" onclick="MorePP()" style="color:#2274e0;">更多<div class="span_select_arrow_blue"></div></li>';
     html += '</ul>';
     $("#div_condition_body_" + id).append(html);
     if(name === "车系")
