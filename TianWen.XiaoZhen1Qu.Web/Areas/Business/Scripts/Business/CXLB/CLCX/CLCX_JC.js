@@ -32,7 +32,7 @@ function BindClick(type) {
 }
 //加载条件
 function LoadCLCondition() {
-    LoadConditionByTypeNames("'轿车品牌','轿车价格'", "CODES_CL", "品牌,价格", "PP,JG", "17,100");
+    LoadConditionByTypeNames("'轿车品牌','轿车价格'", "CODES_CL", "品牌,价格", "PP,JG", "20,100");
 }
 //根据TYPENAME获取字典表
 function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
@@ -58,7 +58,7 @@ function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
                     }
                 }
                 if (typenames.indexOf("轿车品牌") !== -1)
-                    LoadCondition(xml.jclist, "品牌", "PP", 17);
+                    LoadCondition(xml.jclist, "品牌", "PP", 20);
                 LoadURLCondition();
             }
         },
@@ -93,10 +93,10 @@ function SelectCondition(obj, name) {
     ShowSelectCondition("CLXX_JC");
 }
 //选择品牌条件
-function SelectPPCondition(obj, name) {
-    if (name === "品牌") {
-        LoadConditionByParentID(obj.id, "CODES_CL_JC", "车系", "CX", 100);
-    }
+function SelectPPCondition(obj) {
+
+    LoadConditionByParentID(obj.id, "CODES_CL_JC", "车系", "CX", 100);
+    return;
     $("#ul_condition_body_PP").find(".li_condition_body").each(function () {
         $(this).removeClass("li_condition_body_active");
     });
@@ -112,7 +112,7 @@ function SelectPPCondition(obj, name) {
     if(hasPP === 0)
         $("#ul_condition_body_PP").append('<li class="li_condition_body li_condition_body_more" id="' + obj.id + '" onclick="SelectCondition(this,\'品牌\')">'+obj.innerHTML+'</li>');
     $("#ul_condition_body_PP").append('<li id="li_condition_body_more" class="li_condition_body" onclick="MorePP()" style="color:#2274e0;">更多<img id="span_select_arrow_blue" class="span_select_arrow_blue" /></li>');
-
+    
     $("#"+obj.id).addClass("li_condition_body_active");
 
     LoadBody("CLXX_JC", currentIndex);
@@ -209,7 +209,7 @@ function LoadJCPP() {
                     }
                     for (var j = 0; j < xml.list.length; j++) {
                         if (BQArray[i] === xml.list[j].CODEVALUE)
-                            html += '<li id="'+xml.list[j].CODEID+'" onclick="SelectPPCondition(this,\'品牌\')" class="li_row_right_jcpp_first_right_value">' + xml.list[j].CODENAME + '</li>';
+                            html += '<li id="'+xml.list[j].CODEID+'" onclick="SelectPPCondition(this)" class="li_row_right_jcpp_first_right_value">' + xml.list[j].CODENAME + '</li>';
                     }
                     html += '</ul>';
                 }

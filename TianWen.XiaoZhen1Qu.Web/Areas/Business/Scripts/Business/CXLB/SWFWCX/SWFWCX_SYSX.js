@@ -1,12 +1,12 @@
 ﻿var currentIndex = 1;
 $(document).ready(function () {
     BindBodyNav();
-    LoadXXYLCondition();
-    LoadHot("XXYLXX_HW");
+    LoadSWFWCondition();
+    LoadHot("SWFWCX_SYSX");
 });
 //加载条件
-function LoadXXYLCondition() {
-    LoadConditionByTypeNames("'户外类别'", "CODES_XXYL", "类别", "LB", "100");
+function LoadSWFWCondition() {
+    LoadConditionByTypeNames("'摄影摄像类别'", "CODES_SWFW", "类别", "LB", "100");
 }
 //加载URL查询条件
 function LoadURLCondition() {
@@ -15,16 +15,22 @@ function LoadURLCondition() {
     else if (getUrlParam("QY") !== null)
         SelectURLCondition(getUrlParam("QY"));
     else
-        LoadBody("XXYLXX_HW", currentIndex);
+        LoadBody("SWFWCX_SYSX", currentIndex);
 }
 //选择条件
 function SelectCondition(obj, name) {
+    if (name === "类别" && (obj.innerHTML !== "干锅" && obj.innerHTML !== "中餐" && obj.innerHTML !== "粥店")) {
+        LoadConditionByParentID(obj.id, "CODES_SWFW", "小类", "XL",100);
+    }
+    if (name === "类别" && (obj.innerHTML === "干锅" || obj.innerHTML === "中餐" || obj.innerHTML === "粥店")) {
+        $("#ul_condition_body_XL").remove();
+    }
     $(obj).parent().find(".li_condition_body").each(function () {
         $(this).removeClass("li_condition_body_active");
     });
     $(obj).addClass("li_condition_body_active");
-    LoadBody("XXYLXX_HW", currentIndex);
-    ShowSelectCondition("XXYLXX_HW");
+    LoadBody("SWFWCX_SYSX", currentIndex);
+    ShowSelectCondition("SWFWCX_SYSX");
 }
 //选择URL条件
 function SelectURLCondition(obj) {
@@ -32,16 +38,16 @@ function SelectURLCondition(obj) {
         $(this).removeClass("li_condition_body_active");
     });
     $("#" + obj).addClass("li_condition_body_active");
-    LoadBody("XXYLXX_HW", currentIndex);
-    ShowSelectCondition("XXYLXX_HW");
+    LoadBody("SWFWCX_SYSX", currentIndex);
+    ShowSelectCondition("SWFWCX_SYSX");
 }
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("LB,QY");
+    var condition = GetAllCondition("LB,XL,TZJE,QY");
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/XXYLCX/LoadXXYLXX",
+        url: getRootPath() + "/SWFWCX/LoadSWFWXX",
         dataType: "json",
         data:
         {
@@ -67,7 +73,7 @@ function LoadBody(TYPE, PageIndex) {
 //加载单条信息
 function LoadInfo(obj) {
     var html = "";
-    html += ('<li class="li_body_left" onclick="OpenXXXX(\'XXYLXX_HW\',\'' + obj.ID + '\')">');
+    html += ('<li class="li_body_left" onclick="OpenXXXX(\'SWFWCX_SYSX\',\'' + obj.ID + '\')">');
     html += ('<div class="div_li_body_left_left">');
     html += ('<img class="img_li_body_left" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<div class="div_img_li_body_left_count"><span>' + obj.PHOTOS.length + '图</span></div>');
@@ -87,7 +93,7 @@ function LoadInfo(obj) {
 function LoadHot(TYPE) {
     $.ajax({
         type: "POST",
-        url: getRootPath() + "/XXYLCX/LoadXXYLXX",
+        url: getRootPath() + "/SWFWCX/LoadSWFWXX",
         dataType: "json",
         data:
         {
@@ -112,7 +118,7 @@ function LoadHot(TYPE) {
 //加载热门单条信息
 function LoadHotInfo(obj) {
     var html = "";
-    html += ('<li onclick="OpenXXXX(\'XXYLXX_HW\',\'' + obj.ID + '\')" class="li_body_right">');
+    html += ('<li onclick="OpenXXXX(\'SWFWCX_SYSX\',\'' + obj.ID + '\')" class="li_body_right">');
     html += ('<img class="img_li_body_right" src="' + getRootPath() + "/Areas/Business/Photos/" + obj.YHID + "/" + obj.PHOTOS[0].PHOTONAME + "?j=" + Math.random() + '" />');
     html += ('<p class="p_li_body_right_xq">' + obj.BT + '</p>');
     html += ('<p class="p_li_body_right_cs">' + ValidateNull(obj.QY) + '-' + ValidateNull(obj.DD) + '</p>');
