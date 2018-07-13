@@ -56,7 +56,7 @@ function LoadJCPP() {
                         html += '<li id="li_row_right_jcpp_first_right_tag_' + BQArray[i] + '" class="li_row_right_jcpp_first_right_tag">' + BQArray[i] + '</li>';
                     for (var j = 0; j < xml.list.length; j++) {
                         if (BQArray[i] === xml.list[j].CODEVALUE)
-                            html += '<li onclick="OpenSecond(\'' + xml.list[j].CODEID + '\')" class="li_row_right_jcpp_first_right_value">' + xml.list[j].CODENAME + '</li>';
+                            html += '<li onclick="OpenSecond(\'' + xml.list[j].CODEID + '\',\'' + xml.list[j].CODENAME + '\')" class="li_row_right_jcpp_first_right_value">' + xml.list[j].CODENAME + '</li>';
                     }
                 }
                 html += '</ul>';
@@ -77,7 +77,8 @@ function GoToBQ(tag) {
     $(".ul_row_right_jcpp_first_right").stop().animate({ scrollTop: len }, 300, "swing", function () { });
 }
 //打开车系列表
-function OpenSecond(codeid) {
+function OpenSecond(codeid, pp) {
+    $("#PP").val(pp);
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Common/LoadByParentID",
@@ -108,6 +109,7 @@ function OpenSecond(codeid) {
 }
 //打开款式列表
 function OpenThird(codeid, cx) {
+    $("#CX").val(cx);
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Common/LoadByParentID",
@@ -139,6 +141,7 @@ function OpenThird(codeid, cx) {
 //选择款式
 function SelectThird(cx, ks) {
     $("#spanPP").html(cx + " " + ks);
+    $("#KS").html(ks);
     ValidateJCPP();
 }
 //关闭选择品牌框
@@ -307,13 +310,13 @@ function LoadDuoX(type, id) {
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='li" + id + "' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i % 6 === 5) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 174px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 6) === 0)
-                    $("#div" + id).css("height", parseInt(xml.list.length / 6) * 60 + "px");
+                    $("#div" + id).css("height", parseInt(xml.list.length / 6) * 45 + "px");
                 else
-                    $("#div" + id).css("height", (parseInt(xml.list.length / 6) + 1) * 60 + "px");
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
@@ -343,7 +346,10 @@ function LoadJBXX() {
                 $("#ID").val(xml.Value.CL_JCJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
-                $("#spanPP").html(xml.Value.CL_JCJBXX.PP);
+                $("#spanPP").html(xml.Value.CL_JCJBXX.CX + xml.Value.CL_JCJBXX.KS);
+                $("#PP").html(xml.Value.CL_JCJBXX.PP);
+                $("#CX").html(xml.Value.CL_JCJBXX.CX);
+                $("#KS").html(xml.Value.CL_JCJBXX.KS);
                 $("#spanSPNF").html(xml.Value.CL_JCJBXX.SPNF);
                 $("#spanSPYF").html(xml.Value.CL_JCJBXX.SPYF);
                 $("#spanNJDQNF").html(xml.Value.CL_JCJBXX.NJDQNF);
@@ -379,7 +385,9 @@ function FB() {
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
-    obj = jsonObj.AddJson(obj, "PP", "'" + $("#spanPP").html() + "'");
+    obj = jsonObj.AddJson(obj, "PP", "'" + $("#PP").val() + "'");
+    obj = jsonObj.AddJson(obj, "CX", "'" + $("#CX").val() + "'");
+    obj = jsonObj.AddJson(obj, "KS", "'" + $("#KS").val() + "'");
     obj = jsonObj.AddJson(obj, "CLYS", "'" + GetCLYS() + "'");
     obj = jsonObj.AddJson(obj, "SPNF", "'" + $("#spanSPNF").html() + "'");
     obj = jsonObj.AddJson(obj, "SPYF", "'" + $("#spanSPYF").html() + "'");

@@ -4,6 +4,9 @@
 @section Section_Head {
     <link href="@Url.Content("~/Areas/Business/Css/CXLB/FCCX.css")" rel="stylesheet" />
     <script type="text/javascript" src="@Url.Content("~/Areas/Business/Scripts/Business/CXLB/FCCX/FCCX_ZZF.js")"></script>
+    <style type="text/css">
+	#divFWLD .ul_select{width:95px;}
+    </style>
 }
 @section Section_Body {
     <div id="divCondition" class="div_condition">
@@ -47,12 +50,12 @@
                         </div>
                     </li>
 		    <li class="li_condition_body" style="margin-right:10px;">
-                        <div id="divFWLDText" class="div_select_out">
-                        <div id="divFWLDSpan" class="div_select_in">
-                        <span id="spanFWLD" column="FWLD" class="span_select spaninput_fontcolor">亮点不限</span>
+                        <div id="divFWLDText" class="div_select_out" style="width:95px;">
+                        <div id="divFWLDSpan" class="div_select_in" style="width:95px;">
+                        <span id="spanFWLD" column="FWLD" class="span_select spaninput_fontcolor" style="width:75px;">亮点不限</span>
                         <div class="span_select_arrow"></div>
                         </div>
-                        <div id="divFWLD" class="div_select_dropdown"></div>
+                        <div id="divFWLD" class="div_select_dropdown" style="width:75px;"></div>
                         </div>
                     </li>
 	        </ul>

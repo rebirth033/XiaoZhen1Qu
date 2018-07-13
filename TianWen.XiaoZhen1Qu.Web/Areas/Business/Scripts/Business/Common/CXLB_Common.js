@@ -1,4 +1,5 @@
-﻿$(document).ready(function () {
+﻿var BQArray = "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z".split(',');
+$(document).ready(function () {
     $(".div_top_left").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
     $(".div_top_right").css("margin-right", (document.documentElement.clientWidth - 1200) / 2);
     $(".div_nav").css("margin-left", (document.documentElement.clientWidth - 1200) / 2);
