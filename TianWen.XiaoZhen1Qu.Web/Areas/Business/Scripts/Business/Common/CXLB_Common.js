@@ -118,11 +118,12 @@ function DeleteSelect(obj, tbname) {
     var select = obj.innerHTML;
     $(obj).css("display", "none");
     $(".li_condition_body").each(function () {
-        if (select.indexOf($(this).html()) !== -1)
+        if (select.indexOf($(this).html()) !== -1){
             $(this).parent().find(".li_condition_body").each(function (index) {
                 if (index === 0) $(this).addClass("li_condition_body_active");
                 else $(this).removeClass("li_condition_body_active");
             });
+	}
     });
     if (HasCondition() === "")
         $("#divConditionSelect").css("display", "none");
@@ -149,6 +150,19 @@ function DeleteSelectDropdown(obj, tbname) {
     if (HasCondition() === "")
         $("#divConditionSelect").css("display", "none");
     LoadBody(tbname, currentIndex);
+}
+//是否有条件
+function HasCondition() {
+    var condition = "";
+    $(".li_condition_body").each(function () {
+        if ($(this).html() !== "全部" && $(this).css("color") === "rgb(188, 107, 166)")
+            condition += $(this).html();
+    });
+    $(".span_select").each(function () {
+        if (($(this).html().indexOf('不限') === -1))
+            condition += $(this).html();
+    });
+    return condition;
 }
 //获取所有查询条件
 function GetAllCondition(conditions) {
@@ -183,19 +197,6 @@ function GetNavCondition() {
             value = $(this).html();
     });
     return value;
-}
-//是否有条件
-function HasCondition() {
-    var condition = "";
-    $(".li_condition_body").each(function () {
-        if ($(this).html() !== "全部" && $(this).css("color") === "rgb(188, 107, 166)")
-            condition += $(this).html();
-    });
-   $(".span_select").each(function () {
-        if (($(this).html().indexOf('不限') === -1))
-            condition += $(this).html();
-    });
-    return condition;
 }
 //展开收缩条件
 function ToggleCondition() {

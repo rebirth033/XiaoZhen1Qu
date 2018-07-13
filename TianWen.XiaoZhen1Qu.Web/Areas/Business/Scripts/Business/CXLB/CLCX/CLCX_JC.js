@@ -32,7 +32,7 @@ function BindClick(type) {
 }
 //加载条件
 function LoadCLCondition() {
-    LoadConditionByTypeNames("'轿车品牌','轿车价格'", "CODES_CL", "品牌,价格", "PP,JG", "18,100");
+    LoadConditionByTypeNames("'轿车品牌','轿车价格'", "CODES_CL", "品牌,价格", "PP,JG", "17,100");
 }
 //根据TYPENAME获取字典表
 function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
@@ -58,7 +58,7 @@ function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
                     }
                 }
                 if (typenames.indexOf("轿车品牌") !== -1)
-                    LoadCondition(xml.jclist, "品牌", "PP", 18);
+                    LoadCondition(xml.jclist, "品牌", "PP", 17);
                 LoadURLCondition();
             }
         },
@@ -92,6 +92,32 @@ function SelectCondition(obj, name) {
     LoadBody("CLXX_JC", currentIndex);
     ShowSelectCondition("CLXX_JC");
 }
+//选择品牌条件
+function SelectPPCondition(obj, name) {
+    if (name === "品牌") {
+        LoadConditionByParentID(obj.id, "CODES_CL_JC", "车系", "CX", 100);
+    }
+    $("#ul_condition_body_PP").find(".li_condition_body").each(function () {
+        $(this).removeClass("li_condition_body_active");
+    });
+    $(".li_condition_body_more").remove();
+    $("#li_condition_body_more").remove();
+    
+    var hasPP = 0;
+    $("#ul_condition_body_PP").find(".li_condition_body").each(function(){
+        if(this.id == obj.id){
+	    hasPP = 1;
+        }
+    });
+    if(hasPP === 0)
+        $("#ul_condition_body_PP").append('<li class="li_condition_body li_condition_body_more" id="' + obj.id + '" onclick="SelectCondition(this,\'品牌\')">'+obj.innerHTML+'</li>');
+    $("#ul_condition_body_PP").append('<li id="li_condition_body_more" class="li_condition_body" onclick="MorePP()" style="color:#2274e0;">更多<img id="span_select_arrow_blue" class="span_select_arrow_blue" /></li>');
+
+    $("#"+obj.id).addClass("li_condition_body_active");
+
+    LoadBody("CLXX_JC", currentIndex);
+    ShowSelectCondition("CLXX_JC");
+}
 //选择URL条件
 function SelectURLCondition(obj) {
     $("#" + obj).parent().find(".li_condition_body").each(function () {
@@ -119,10 +145,10 @@ function LoadCondition(array, name, id, length) {
         html += '<li class="li_condition_body_first">' + name + '</li>';
     html += '<li id="0" class="li_condition_body li_condition_body_active" onclick="SelectCondition(this,\'' + name + '\')">全部</li>';
     for (var i = 0; i < (array.length > length ? length : array.length) ; i++) {
-        html += '<li id="' + array[i].CODEID + '" class="li_condition_body" onclick="SelectCondition(this,\'' + name + '\')">' + array[i].CODENAME + '</li>';
+            html += '<li id="' + array[i].CODEID + '" class="li_condition_body" onclick="SelectCondition(this,\'' + name + '\')">' + array[i].CODENAME + '</li>';
     }
     if(name === "品牌")
-        html += '<li class="li_condition_body" onclick="MorePP()" style="color:#2274e0;">更多<img id="span_select_arrow_blue" class="span_select_arrow_blue" /></li>';
+        html += '<li id="li_condition_body_more" class="li_condition_body" onclick="MorePP()" style="color:#2274e0;">更多<img id="span_select_arrow_blue" class="span_select_arrow_blue" /></li>';
     html += '</ul>';
     $("#div_condition_body_" + id).append(html);
     $("#span_select_arrow_blue").attr("src", getRootPath() + "/Areas/Business/Css/images/arrow_down_blue.png");
@@ -167,7 +193,7 @@ function LoadJCPP() {
                             count++;
                     }
                     if (count !== 0)
-                        html += '<li onclick="GoToBQ(\'' + BQArray[i] + '\')" class="li_row_right_jcpp_first_left">' + BQArray[i] + '</li>';
+                        html += '<li onmouseover="GoToBQ(\'' + BQArray[i] + '\')" class="li_row_right_jcpp_first_left">' + BQArray[i] + '</li>';
                 }
                 html += '</ul>';
                 html += '</div>';
@@ -183,9 +209,9 @@ function LoadJCPP() {
                     }
                     for (var j = 0; j < xml.list.length; j++) {
                         if (BQArray[i] === xml.list[j].CODEVALUE)
-                            html += '<li id="'+xml.list[j].CODEID+'" onclick="SelectCondition(this,\'品牌\')" class="li_row_right_jcpp_first_right_value">' + xml.list[j].CODENAME + '</li>';
+                            html += '<li id="'+xml.list[j].CODEID+'" onclick="SelectPPCondition(this,\'品牌\')" class="li_row_right_jcpp_first_right_value">' + xml.list[j].CODENAME + '</li>';
                     }
-                html += '</ul>';
+                    html += '</ul>';
                 }
 
                 html += '</div>';
@@ -198,6 +224,7 @@ function LoadJCPP() {
         }
     });
 }
+//跳转到标签页
 function GoToBQ(BQ){
     $(".ul_row_right_jcpp_first_right").css("display","none");
     $("#ul_row_right_jcpp_first_right_"+BQ).css("display","block");
@@ -297,4 +324,31 @@ function SearchByCondition(type) {
     if (type === "SJ")
         $("#ul_condition_body_SF").find(".li_condition_body:eq(2)").addClass("li_condition_body_active");
     LoadBody("CLXX_JC", 1);
+}
+function insertHtmlAtCaret(html) {
+    var sel, range;
+    if (window.getSelection) {
+        sel = window.getSelection();
+        if (sel.getRangeAt && sel.rangeCount) {
+                range = sel.getRangeAt(0);
+                range.deleteContents();
+                var el = document.createElement("div");
+                el.innerHTML = html;
+                var frag = document.createDocumentFragment(), node, lastNode;
+                while ( (node = el.firstChild) ) {
+                lastNode = frag.appendChild(node);
+            }
+            range.insertNode(frag);
+            if (lastNode) {
+                range = range.cloneRange();
+                range.setStartAfter(lastNode);
+                range.collapse(true);
+                sel.removeAllRanges();
+                sel.addRange(range);
+            }
+        }
+    } else if (document.selection && document.selection.type != "Control") {
+        // IE < 9
+        document.selection.createRange().pasteHTML(html);
+    }
 }
