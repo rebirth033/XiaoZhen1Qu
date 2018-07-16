@@ -862,7 +862,6 @@
     <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_LXKFZP.js" />
     <Content Include="Areas\Business\Scripts\Business\BZZX\BZZX_WZJYZP.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\BZZX_Common.js" />
-    <Content Include="Areas\Business\Scripts\Business\Common\CXCommon.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\FWFW.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\Head.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\SS_Common.js" />
@@ -2856,7 +2855,6 @@
     <Content Include="Areas\Business\Views\ZSJMCX\ZSJMCX_LS.cshtml" />
     <Content Include="Areas\Business\Views\ZSJMXX\ZSJMXX_LS.cshtml" />
     <Content Include="Areas\Business\Views\GYWM\GYWM.cshtml" />
-    <Content Include="Areas\Business\Views\Shared\CXCommon.cshtml" />
     <Content Include="Areas\Business\Views\SY\ChangeCity.cshtml" />
     <Content Include="Areas\Business\Views\FCCX\FCCX_HZF.cshtml" />
     <None Include="Properties\PublishProfiles\xxxz.pubxml" />
