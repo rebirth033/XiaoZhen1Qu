@@ -52,12 +52,7 @@ function LoadJBXX(obj) {
     html += ('<span class="span_body_left_body_right_left">联系人：</span>');
     html += ('<span class="span_body_left_body_right_right">' + ValidateNull(obj.LXR) + '</span>');
     html += ('</p>');
-    html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">联系电话：</span>');
-    html += ('<span class="span_body_left_body_right_right_lxdh">' + obj.LXDH.substr(0, 4) + '****' + '</span>');
-    html += ('<span class="span_body_left_body_right_right_ckwzdh" onclick="ShowWZDH()">完整电话</span>');
-    html += ('<span class="span_body_left_body_right_wzdh"><span class="span_body_left_body_right_wzdh_lxdh"><i class="i_body_left_body_right_wzdh_lxdh"></i>' + obj.LXDH + '</span><span class="span_body_left_body_right_wzdh_ts">联系时请一定说明在风铃网上看到的哈，谢谢^_^</span><i class="i_body_left_body_right_wzdh_close" onclick="HideWZDH()">×</i></span>');
-    html += ('</p>');
+    html += ('<div class="div_body_left_body_right_lxdh" id="div_body_left_body_right_lxdh" onclick="ShowLXDH(\'' + obj.LXDH + '\')"><img class="img_body_left_body_right_lxdh"  src="' + getRootPath() + "/Areas/Business/Css/images/XXXX/GY/xxxx_gy_lxdh.png" + '" /><span class="span_body_left_body_right_lxdh">联系电话</span></div>');
     html += ('</div>');
     html += ('</div>');
     $("#div_body_left").append(html);
