@@ -32,7 +32,7 @@ function BindClick(type) {
 }
 //加载条件
 function LoadCLCondition() {
-    LoadConditionByTypeNames("'轿车品牌','轿车价格'", "CODES_CL", "品牌,价格", "PP,JG", "20,100");
+    LoadConditionByTypeNames("'轿车品牌','轿车价格'", "CODES_CL", "品牌,价格", "PP,JG", "19,100");
 }
 //根据TYPENAME获取字典表
 function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
@@ -58,7 +58,7 @@ function LoadConditionByTypeNames(typenames, table, names, ids, lengths) {
                     }
                 }
                 if (typenames.indexOf("轿车品牌") !== -1)
-                    LoadCondition(xml.jclist, "品牌", "PP", 20);
+                    LoadCondition(xml.jclist, "品牌", "PP", 19);
                 LoadURLCondition();
             }
         },
@@ -96,7 +96,7 @@ function SelectCondition(obj, name) {
 function SelectPPCondition(obj) {
 
     LoadConditionByParentID(obj.id, "CODES_CL_JC", "车系", "CX", 100);
-    return;
+
     $("#ul_condition_body_PP").find(".li_condition_body").each(function () {
         $(this).removeClass("li_condition_body_active");
     });
