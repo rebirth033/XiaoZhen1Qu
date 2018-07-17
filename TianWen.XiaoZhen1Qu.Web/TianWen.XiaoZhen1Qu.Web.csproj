@@ -868,6 +868,7 @@
     <Content Include="Areas\Business\Scripts\Business\Common\Top.js" />
     <Content Include="Areas\Business\Scripts\Business\Common\XLBQ.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\CLCX\CLCX_DJ.js" />
+    <Content Include="Areas\Business\Scripts\Business\CXLB\CLCX\CLCX_MBC.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\CLCX\CLCX_QCPJ.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\CLCX\CLCX_JX.js" />
     <Content Include="Areas\Business\Scripts\Business\CXLB\CLCX\CLCX_QCPL.js" />
@@ -2857,6 +2858,7 @@
     <Content Include="Areas\Business\Views\GYWM\GYWM.cshtml" />
     <Content Include="Areas\Business\Views\SY\ChangeCity.cshtml" />
     <Content Include="Areas\Business\Views\FCCX\FCCX_HZF.cshtml" />
+    <Content Include="Areas\Business\Views\CLCX\CLCX_MBC.cshtml" />
     <None Include="Properties\PublishProfiles\xxxz.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

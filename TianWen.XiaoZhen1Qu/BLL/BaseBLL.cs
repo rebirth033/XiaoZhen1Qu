@@ -198,11 +198,13 @@ namespace TianWen.XiaoZhen1Qu.BLL
                 {
                     if (TYPENAMES.Contains("轿车品牌"))
                         return new { Result = EnResultType.Success, districts, jclist = DAO.Repository.GetObjectList<CODES_CL_JC>(String.Format("FROM CODES_CL_JC WHERE TYPENAME in({0}) and ISHOT = '是' ORDER BY TYPENAME,CODEORDER", "'轿车品牌'")), list = DAO.Repository.GetObjectList<CODES_CL>(String.Format("FROM CODES_CL WHERE TYPENAME in({0}) ORDER BY TYPENAME,CODEORDER", TYPENAMES)) };
-                    else
+                    else if (TYPENAMES.Contains("工程车车型") || TYPENAMES.Contains("货车品牌") || TYPENAMES.Contains("客车品牌"))
                         return new { Result = EnResultType.Success, districts, list = DAO.Repository.GetObjectList<CODES_CL>(String.Format("FROM CODES_CL WHERE TYPENAME in({0}) ORDER BY TYPENAME,CODEVALUE", TYPENAMES)) };
+                    else
+                        return new { Result = EnResultType.Success, districts, list = DAO.Repository.GetObjectList<CODES_CL>(String.Format("FROM CODES_CL WHERE TYPENAME in({0}) ORDER BY TYPENAME,CODEORDER", TYPENAMES)) };
                 }
                 if (TBName == "CODES_CW")
-                    return new { Result = EnResultType.Success, districts, list = DAO.Repository.GetObjectList<CODES_CW>(String.Format("FROM CODES_CW WHERE TYPENAME in({0}) ORDER BY TYPENAME,CODEORDER", TYPENAMES)) };
+                    return new { Result = EnResultType.Success, districts, list = DAO.Repository.GetObjectList<CODES_CW>(String.Format("FROM CODES_CW WHERE TYPENAME in({0}) ORDER BY TYPENAME,CODEVALUE", TYPENAMES)) };
                 if (TBName == "CODES_CY")
                     return new { Result = EnResultType.Success, districts, list = DAO.Repository.GetObjectList<CODES_CY>(String.Format("FROM CODES_CY WHERE TYPENAME in({0}) ORDER BY TYPENAME,CODEORDER", TYPENAMES)) };
                 if (TBName == "CODES_LR")

@@ -40,15 +40,24 @@ function SelectURLCondition(obj) {
 //加载查询条件
 function LoadCondition(array, name, id, length) {
     $("#ul_condition_body_" + id).remove();
-    var html = "";
+    var html = ""; var SZM = "";
     html += '<ul id="ul_condition_body_' + id + '" class="ul_condition_body" style="height:auto;">';
-    if (name === "类别" || name === "小类" || name === "品牌" || name === "车系" || name === "车型" || name === "驾照" || name === "品种")
+    if (name === "类别" || name === "小类" || name === "品种")
         html += '<li id="li_condition_body_first_' + id + '" class="li_condition_body_first">' + name + '</li>';
     else
         html += '<li class="li_condition_body_first">' + name + '</li>';
     html += '<li id="0" class="li_condition_body li_condition_body_active" onclick="SelectCondition(this,\'' + name + '\')">全部</li>';
     for (var i = 0; i < (array.length > length ? length : array.length) ; i++) {
-        html += '<li id="' + array[i].CODEID + '" class="li_condition_body" onclick="SelectCondition(this,\'' + name + '\')">' + array[i].CODENAME + '</li>';
+        if (name === "品种") {
+            if (SZM == "" || SZM !== array[i].CODEVALUE) {
+                SZM = array[i].CODEVALUE;
+                html += '<li class="li_condition_body_szm" style="font-weight:bold;">' + SZM + '</li>';
+            }
+            html += '<li id="' + array[i].CODEID + '" class="li_condition_body" onclick="SelectCondition(this,\'' + name + '\')">' + array[i].CODENAME + '</li>';
+        }
+        else {
+            html += '<li id="' + array[i].CODEID + '" class="li_condition_body" onclick="SelectCondition(this,\'' + name + '\')">' + array[i].CODENAME + '</li>';
+        }
     }
     html += '</ul>';
     $("#div_condition_body_" + id).append(html);

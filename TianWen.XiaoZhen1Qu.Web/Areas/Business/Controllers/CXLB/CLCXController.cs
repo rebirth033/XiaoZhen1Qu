@@ -12,6 +12,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         public ActionResult CLCX_JC() { GetSession(); return View(); }
         public ActionResult CLCX_HC() { GetSession(); return View(); }
         public ActionResult CLCX_KC() { GetSession(); return View(); }
+        public ActionResult CLCX_MBC() { GetSession(); return View(); }
         public ActionResult CLCX_MTC() { GetSession(); return View(); }
         public ActionResult CLCX_ZXC() { GetSession(); return View(); }
         public ActionResult CLCX_DDC() { GetSession(); return View(); }
