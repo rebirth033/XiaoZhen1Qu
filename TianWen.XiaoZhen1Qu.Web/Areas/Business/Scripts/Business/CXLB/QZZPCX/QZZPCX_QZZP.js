@@ -128,10 +128,13 @@ function LoadBody(TYPE, PageIndex) {
 //加载单条信息
 function LoadInfo(obj) {
     var html = "";
-    html += ('<li class="li_body_left" onclick="OpenXXXX(\'QZZPXX_QZZP\',\'' + obj.ID + '\')">');
-    html += ('<div class="div_li_body_left_left">' + obj.MYXZ + '</div>');
-    html += ('<div class="div_li_body_left_center">' + obj.BT + '</div>');
-    html += ('<div class="div_li_body_left_right">' + obj.ZXGXSJ.ToString("MM月dd日") + '</div>');
+    html += ('<li class="li_body_left">');
+    html += ('<div class="div_li_body_left_left">');
+    html += ('<span class="span_li_body_left_left_top" onclick="OpenXXXX(\'QZZPXX_QZZP\',\'' + obj.ID + '\')">' + obj.BT + '</span>');
+    html += ('<span class="span_li_body_left_left_middle">' + obj.ZWMC + '</span><span class="span_li_body_left_left_middle">|</span><span class="span_li_body_left_left_middle">' + obj.XLYQ + '</span><span class="span_li_body_left_left_middle">|</span><span class="span_li_body_left_left_middle">' + obj.GZNX + '</span></div>');
+    html += ('<div class="div_li_body_left_center">' + obj.GSMC + '</div>');
+    html += ('<div class="div_li_body_left_right">' + obj.MYXZ + '</div>');
+    //.ToString("MM月dd日")
     html += ('</li>');
     $("#ul_body_left").append(html);
 }

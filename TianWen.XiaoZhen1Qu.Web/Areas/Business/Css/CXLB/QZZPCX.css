@@ -34,12 +34,15 @@
 /*首页_主体_左部*/
 .div_body .div_body_left{display: inline-block;width: 980px;height: auto;background-color: #ffffff;float: left;}
 .div_body .div_body_left .ul_body_left{ width: 100%;padding: 0;}
-.div_body .div_body_left .ul_body_left .li_body_left{ width: 100%;height: 50px;border-bottom: 1px solid #e6e6e6;padding: 10px;cursor: pointer;}
+.div_body .div_body_left .ul_body_left .li_body_left{ width: 100%;height: 120px;border-bottom: 1px solid #e6e6e6;padding: 10px;}
 .div_body .div_body_left .ul_body_left .li_body_left:hover{ background-color: #f9f9f9;}
 .div_body .div_body_left .ul_body_left .li_body_left:hover .p_li_body_left_center_bt{ color: #bc6ba6;}
-.div_body .div_body_left .ul_body_left .li_body_left .div_li_body_left_left{padding-left: 20px;width: 150px;float: left;display: inline-block;float: left;font-size: 16px;font-weight: 700;color: #bc6ba6;}
-.div_body .div_body_left .ul_body_left .li_body_left .div_li_body_left_center{ width: 600px;font-size: 16px;float: left;display: inline-block;}
-.div_body .div_body_left .ul_body_left .li_body_left .div_li_body_left_right{ width: 120px;display: inline-block;float: left;font-size: 16px;float: right;}
+.div_body .div_body_left .ul_body_left .li_body_left .div_li_body_left_left{padding-left: 20px;width: 370px;font-size: 16px;height:100%;}
+.div_body .div_body_left .ul_body_left .li_body_left .div_li_body_left_left .span_li_body_left_left_top{cursor:pointer;display:block;}
+.div_body .div_body_left .ul_body_left .li_body_left .div_li_body_left_left .span_li_body_left_left_top:hover{color:#bc6ba6;text-decoration:underline;}
+.div_body .div_body_left .ul_body_left .li_body_left .div_li_body_left_left .span_li_body_left_left_middle{font-size:12px;color:#999999;margin:0 5px 0 0;}
+.div_body .div_body_left .ul_body_left .li_body_left .div_li_body_left_center{ width: 420px;font-size: 12px;}
+.div_body .div_body_left .ul_body_left .li_body_left .div_li_body_left_right{ width: 120px;font-size: 18px;font-weight: 700;color: #bc6ba6;}
 
 /*首页_主体_左部_分页*/
 .div_body .div_body_left .div_main_info_bottom {background-color: #fff;text-align: center;height: 38px;color: #333;font-size: 14px;font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;padding-left: 10px;padding-top: 8px;}
@@ -50,7 +53,7 @@
 
 /*首页_主体_右部*/
 .div_body .div_body_right{display: inline-block;width: 200px;height: 2000px;}
-.div_body .div_body_right .p_div_body_right{ font-size: 18px;float: left;display: block;margin-left: 18px;}
+.div_body .div_body_right .p_div_body_right{ font-size: 16px;float: left;display: block;margin-left: 18px;margin-top:10px;}
 .div_body .div_body_right .ul_body_right{height: 100%;width: 100%;padding: 0;}
 .div_body .div_body_right .ul_body_right .li_body_right{cursor: pointer;width: 180px;height: 210px;border: 1px solid #e6e6e6;padding: 8px;float: left;margin-left: 18px;margin-bottom: 10px;}
 .div_body .div_body_right .ul_body_right .li_body_right:hover .p_li_body_right_xq{ color: #bc6ba6; }

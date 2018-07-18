@@ -6,7 +6,7 @@ $(document).ready(function () {
 });
 //加载条件
 function LoadCWCondition() {
-    LoadConditionByTypeNames("'宠物公益类别'", "CODES_CW", "类别", "LB", "100");
+    LoadConditionByTypeNames("'宠物公益类别'", "CODES_CW", "类别", "GQ", "100");
 }
 //加载URL查询条件
 function LoadURLCondition() {
@@ -39,7 +39,7 @@ function SelectURLCondition(obj) {
 //加载主体部分
 function LoadBody(TYPE, PageIndex) {
     currentIndex = parseInt(PageIndex);
-    var condition = GetAllCondition("LB,QY");
+    var condition = GetAllCondition("GQ,QY");
     $.ajax({
         type: "POST",
         url: getRootPath() + "/CWCX/LoadCWXX",
