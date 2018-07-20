@@ -37,11 +37,14 @@
 .div_body .div_body_left .ul_body_left .li_body_left{ width: 100%;height: 120px;border-bottom: 1px solid #e6e6e6;padding: 10px;}
 .div_body .div_body_left .ul_body_left .li_body_left:hover{ background-color: #f9f9f9;}
 .div_body .div_body_left .ul_body_left .li_body_left:hover .p_li_body_left_center_bt{ color: #bc6ba6;}
-.div_body .div_body_left .ul_body_left .li_body_left .div_li_body_left_left{padding-left: 20px;width: 370px;font-size: 16px;height:100%;}
-.div_body .div_body_left .ul_body_left .li_body_left .div_li_body_left_left .span_li_body_left_left_top{cursor:pointer;display:block;}
+.div_body .div_body_left .ul_body_left .li_body_left .div_li_body_left_left{padding-left: 20px;width: 470px;height:100%;}
+.div_body .div_body_left .ul_body_left .li_body_left .div_li_body_left_left .span_li_body_left_left_top{cursor:pointer;display:block;margin-bottom:10px;font-size:18px;font-weight:700;}
 .div_body .div_body_left .ul_body_left .li_body_left .div_li_body_left_left .span_li_body_left_left_top:hover{color:#bc6ba6;text-decoration:underline;}
-.div_body .div_body_left .ul_body_left .li_body_left .div_li_body_left_left .span_li_body_left_left_middle{font-size:12px;color:#999999;margin:0 5px 0 0;}
-.div_body .div_body_left .ul_body_left .li_body_left .div_li_body_left_center{ width: 420px;font-size: 12px;}
+.div_body .div_body_left .ul_body_left .li_body_left .div_li_body_left_left .span_li_body_left_left_middle{font-size:12px;color:#999999;margin:0 10px 0 0;}
+.div_body .div_body_left .ul_body_left .li_body_left .div_li_body_left_left .span_li_body_left_left_bottom{font-size:12px;color:#bc6ba6;margin:10px 10px 0 0;display:inline-block;}
+.div_body .div_body_left .ul_body_left .li_body_left .div_li_body_left_center{ width: 370px;}
+.div_body .div_body_left .ul_body_left .li_body_left .div_li_body_left_center .span_li_body_left_center_top{display:block;margin-bottom:10px;font-size: 14px;}
+.div_body .div_body_left .ul_body_left .li_body_left .div_li_body_left_center .span_li_body_left_center_center{color:#999999;margin:0 10px 0 0;font-size: 12px;}
 .div_body .div_body_left .ul_body_left .li_body_left .div_li_body_left_right{ width: 120px;font-size: 18px;font-weight: 700;color: #bc6ba6;}
 
 /*首页_主体_左部_分页*/

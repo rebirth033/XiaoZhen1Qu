@@ -393,17 +393,18 @@ function LoadDistrictCondition(array, type) {
 }
 //发布信息
 function FBXX() {
+    var LBID = (getUrlParam("CLICKID") == null ? getUrlParam("LBID") : getUrlParam("CLICKID"));
     $.ajax({
         type: "POST",
         url: getRootPath() + "/LBXZ/LoadLBByID",
         dataType: "json",
         data:
         {
-            LBID: getUrlParam("LBID")
+            LBID: LBID
         },
         success: function (xml) {
             if (xml.Result === 1) {
-                window.open(getRootPath() + "/" + xml.list[0].FBYM.split('_')[0] + "/" + xml.list[0].FBYM + "?CLICKID=" + getUrlParam("LBID"));
+                window.open(getRootPath() + "/" + xml.list[0].FBYM.split('_')[0] + "/" + xml.list[0].FBYM + "?CLICKID=" + LBID);
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数

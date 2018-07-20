@@ -61,7 +61,7 @@ function LoadZWMC() {
                         html += '<li id="li_row_right_jcpp_first_right_tag_' + BQArray[i] + '" class="li_row_right_jcpp_first_right_tag">' + BQArray[i] + '</li>';
                     for (var j = 0; j < xml.list.length; j++) {
                         if (BQArray[i] === xml.list[j].CODEVALUE)
-                            html += '<li onclick="OpenSecond(\'' + xml.list[j].CODEID + '\')" class="li_row_right_jcpp_first_right_value">' + xml.list[j].CODENAME + '</li>';
+                            html += '<li onclick="OpenSecond(\'' + xml.list[j].CODEID + '\',\'' + xml.list[j].CODENAME + '\')" class="li_row_right_jcpp_first_right_value">' + xml.list[j].CODENAME + '</li>';
                     }
                 }
                 html += '</ul>';
@@ -81,8 +81,9 @@ function GoToBQ(tag) {
     var len = document.getElementById("li_row_right_jcpp_first_right_tag_" + tag).offsetTop - 75;//获取div层到页面顶部的高度 
     $(".ul_row_right_jcpp_first_right").stop().animate({ scrollTop: len }, 300, "swing", function () { });
 }
-//打开车系列表
-function OpenSecond(codeid) {
+//打开职位列表
+function OpenSecond(codeid, codename) {
+    $("#ZWLB").val(codename);
     $.ajax({
         type: "POST",
         url: getRootPath() + "/Common/LoadByParentID",
@@ -150,7 +151,7 @@ function LoadDuoX(type, id) {
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='li" + id + "' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i === 4 || i === 9 || i === 14 || i === 19 || i === 24) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 173px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 5) === 0)
@@ -187,6 +188,7 @@ function LoadJBXX() {
                 //设置编辑器的内容
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
                 $("#spanZWMC").html(xml.Value.QZZP_QZZPJBXX.ZWMC);
+   		$("#ZWLB").val(xml.Value.QZZP_QZZPJBXX.ZWLB);
                 $("#spanMYXZ").html(xml.Value.QZZP_QZZPJBXX.MYXZ);
                 $("#spanXLYQ").html(xml.Value.QZZP_QZZPJBXX.XLYQ);
                 $("#spanGZNX").html(xml.Value.QZZP_QZZPJBXX.GZNX);
@@ -209,6 +211,7 @@ function FB() {
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
     obj = jsonObj.AddJson(obj, "ZWMC", "'" + $("#spanZWMC").html() + "'");
+    obj = jsonObj.AddJson(obj, "ZWLB", "'" + $("#ZWLB").val() + "'");
     obj = jsonObj.AddJson(obj, "MYXZ", "'" + $("#spanMYXZ").html() + "'");
     obj = jsonObj.AddJson(obj, "XLYQ", "'" + $("#spanXLYQ").html() + "'");
     obj = jsonObj.AddJson(obj, "GZNX", "'" + $("#spanGZNX").html() + "'");
