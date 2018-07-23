@@ -60,7 +60,7 @@ function LoadJBXX(obj) {
     html += ('<span class="span_body_left_body_right_left">工作地址：</span>');
     html += ('<span class="span_body_left_body_right_right">' + '［' + obj.QY + ' - ' + obj.DD + '］' + obj.JTDZ + '</span>');
     html += ('</p>'); 
-    html += ('<div style="width:280px;height:56px;margin-top:235px;font-size:20px;color:#ffffff;margin-left:40px;padding-top:10px;" class="div_body_left_body_right_lxdh" id="div_body_left_body_right_lxdh" onclick="ShowLXDH(\'' + obj.LXDH + '\')">申请职位</div>');  
+    html += ('<div style="width:280px;height:56px;margin-top:235px;font-size:20px;color:#ffffff;margin-left:40px;padding-top:10px;" class="div_body_left_body_right_lxdh" id="div_body_left_body_right_lxdh">申请职位</div>');  
     html += ('</div>');
     html += ('</div>');
     $("#div_body_left").append(html);
