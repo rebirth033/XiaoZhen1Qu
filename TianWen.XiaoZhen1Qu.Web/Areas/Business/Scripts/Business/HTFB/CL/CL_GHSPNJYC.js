@@ -17,7 +17,7 @@ function LoadGHSPNJYC() {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='liLB' onclick='SelectDuoX(this)'><img class='img_GHSPNJYC'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i % 4 === 3) {
+                    if (i % 4 === 3 && i != xml.list.length - 1) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 175px'>";
                     }
                 }

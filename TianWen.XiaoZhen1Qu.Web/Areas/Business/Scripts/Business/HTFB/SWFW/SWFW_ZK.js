@@ -54,7 +54,7 @@ function LoadKX() {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='liKX' style='width:120px;' onclick='SelectDuoX(this)'><img class='img_KX'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i % 5 === 4) {
+                   if (i % 5 === 4 && i != xml.list.length - 1) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 173px'>";
                     }
                 }

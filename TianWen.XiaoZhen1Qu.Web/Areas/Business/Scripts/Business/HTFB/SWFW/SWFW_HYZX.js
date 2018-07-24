@@ -26,7 +26,7 @@ function LoadZHFS() {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='liZHFS' onclick='SelectDuoX(this)'><img class='img_ZHFS'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i % 4 === 3) {
+                    if (i % 4 === 3 && i != xml.list.length - 1) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 173px'>";
                     }
                 }
@@ -62,7 +62,7 @@ function LoadHWZL() {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='liHWZL' onclick='SelectDuoX(this)'><img class='img_HWZL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i % 4 === 3) {
+                    if (i % 4 === 3 && i != xml.list.length - 1) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 173px'>";
                     }
                 }
@@ -98,7 +98,7 @@ function LoadFWYS() {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='liFWYS' onclick='SelectDuoX(this)'><img class='img_FWYS'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i % 4 === 3) {
+                    if (i % 4 === 3 && i != xml.list.length - 1) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 173px'>";
                     }
                 }
