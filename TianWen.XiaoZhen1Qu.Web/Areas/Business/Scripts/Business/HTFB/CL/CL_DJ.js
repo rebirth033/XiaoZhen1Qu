@@ -18,7 +18,7 @@ function LoadSJSJWPLB() {
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='liSJSJWPLB' onclick='SelectDuoX(this)'><img class='img_SJSJWPLB'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i % 6 === 5) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 183px'>";
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 173px'>";
                     }
                 }
                 html += "</ul>";
