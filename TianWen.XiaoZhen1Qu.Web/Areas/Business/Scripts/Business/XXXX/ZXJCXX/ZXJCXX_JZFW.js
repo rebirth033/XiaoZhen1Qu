@@ -122,6 +122,7 @@ function LoadCNXH(TYPE) {
                 html += ('<ul id="ul_body_left_body_cnxh" class="ul_body_left_body_cnxh">');
                 for (var i = 0; i < xml.list.length; i++) {
                     html += LoadCNXHInfo(xml.list[i]);
+		    if (i === 3) break;
                 }
                 html += ('</ul>');
                 html += ('</div>');
@@ -165,6 +166,7 @@ function LoadJPTJ(TYPE) {
                 html += ('<ul id="ul_body_left_body_jptj" class="ul_body_left_body_jptj">');
                 for (var i = 0; i < xml.list.length; i++) {
                     html += LoadJPTJInfo(xml.list[i]);
+		    if (i === 3) break;
                 }
                 html += ('</ul>');
                 html += ('</div>');
@@ -207,6 +209,7 @@ function LoadJJRTJFY(TYPE) {
                 html += ('<ul id="ul_body_right_jjrtj" class="ul_body_right_jjrtj">');
                 for (var i = 0; i < xml.list.length; i++) {
                     html += LoadJJRTJFYInfo(xml.list[i]);
+		    if (i === 3) break;
                 }
                 html += ('</ul>');
                 html += ('</div>');

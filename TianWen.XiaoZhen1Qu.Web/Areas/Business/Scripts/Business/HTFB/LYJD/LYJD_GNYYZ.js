@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-    $("#divCYLB").find(".div_radio").bind("click", function () { ValidateRadio("CYLB", ""); });
     $("#divCYFS").find(".div_radio").bind("click", function () { ValidateRadio("CYFS", ""); });
     $("#JG_CR").bind("blur", function () { ValidateSpanInput("JG_CR", "价格_成人", "JG"); });
     $("#JG_CR").bind("focus", function () { InfoSpanInput("JG_CR", "请填写价格_成人", "JG"); });
@@ -27,7 +26,6 @@ function ValidateJG() {
 //验证所有
 function ValidateAll() {
     if (ValidateRadio("CYFS", "忘记选择出游方式啦")
-        & ValidateRadio("CYLB", "忘记选择出游类别啦")
         & ValidateWFJT()
         & ValidateXCTS()
         & ValidateJG()
