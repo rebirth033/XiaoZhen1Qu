@@ -54,9 +54,8 @@ function LoadJBXX(obj) {
     html += ('<span onclick="RightImg(' + obj.PHOTOS.length + ')" class="div_body_left_body_left_list_an">></span>');
     html += ('</div>');
     html += ('<div class="div_body_left_body_right">');
-    html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">价格：</span>');
-    html += ('<span class="span_body_left_body_right_right" style="color: #bc6ba6;font-size: 16px;font-weight:700;">' + GetJG(obj.JG, '万元') + '</span>');
+    html += ('<p class="p_body_left_body_right_first">');
+    html += ('<span class="span_body_left_body_right_zj">' + GetJG(obj.JG, '万元') + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
     html += ('<span class="span_body_left_body_right_left">车型：</span>');

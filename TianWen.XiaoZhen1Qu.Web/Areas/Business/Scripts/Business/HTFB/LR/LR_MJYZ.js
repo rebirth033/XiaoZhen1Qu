@@ -5,7 +5,6 @@
 function ValidateAll() {
     if (ValidateCheck("MJLB", "忘记选择类别啦")
         & ValidateBCMS("BCMS", "忘记填写详情描述啦")
-
         & ValidateXXDZ()
         & ValidateCommon())
         return true;
