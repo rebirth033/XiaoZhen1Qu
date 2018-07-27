@@ -26,7 +26,7 @@ body {width: 100%;height: 100%;overflow-x: hidden;background-color: #eeeff1;}
 .div_body .div_body_left .div_body_left_head .p_div_body_left_head_ll{ display: block;color: #999999;height: 30px;padding: 10px;font-size: 14px;}
 
 /*详细信息页_主体_左部_信息主要内容*/
-.div_body .div_body_left .div_body_left_body{ width: 100%;height: auto;margin-top: 20px;font-size: 16px;}
+.div_body .div_body_left .div_body_left_body{ width: 100%;height: auto;margin-top: 20px;font-size: 14px;}
 .div_body .div_body_left .div_body_left_body_right{ width: 100%;height: auto;float: left;margin-bottom:30px;}
 .div_body .div_body_left .div_body_left_body_right .p_body_left_body_right_first{ height: 40px;width: 100%;padding: 0px 70px;}
 .div_body .div_body_left .div_body_left_body_right .span_body_left_body_right_zj{ color: #bc6ba6;font-size: 16px;}
@@ -39,7 +39,7 @@ body {width: 100%;height: 100%;overflow-x: hidden;background-color: #eeeff1;}
 /*详细信息页_主体_左部_详情*/
 .div_body .div_body_left .div_body_left_body_xq{ height: auto;float: left;display: block;width: 100%;}
 .div_body .div_body_left .div_body_left_body_xq .p_body_left_body_xq{ font-size: 18px;font-weight: 700;height: 60px;border-bottom: 1px solid #cccccc;}
-.div_body .div_body_left .div_body_left_body_xq .div_body_left_body_xq_xx{ height: auto;width: 100%;display: block;margin-left: 10px;float: left;font-size: 16px;margin-bottom:10px;}
+.div_body .div_body_left .div_body_left_body_xq .div_body_left_body_xq_xx{ height: auto;width: 100%;display: block;margin-left: 10px;float: left;font-size: 14px;margin-bottom:10px;}
 .div_body .div_body_left .div_body_left_body_xq .div_body_left_body_xq_xx .div_body_left_body_xq_xx_left{ font-size: 16px;float: left;}
 .div_body .div_body_left .div_body_left_body_xq .div_body_left_body_xq_xx .div_body_left_body_xq_xx_right{ margin-left: 20px;color: #666666;float: left;}
 .div_body .div_body_left .div_body_left_body_xq .div_body_left_body_xq_xx .div_body_left_body_xq_xx_right .span_body_left_body_xq_xx_right{width: 96px;text-align: center;display: inline-block;}

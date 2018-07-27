@@ -22,6 +22,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         public ActionResult SHFW_JJWX() { ViewData["XZQ"] = Session["XZQ"]; ViewData["YHM"] = Session["YHM"]; return View(); }
         public ActionResult SHFW_SJWX() { ViewData["XZQ"] = Session["XZQ"]; ViewData["YHM"] = Session["YHM"]; return View(); }
         public ActionResult SHFW_SMWX() { ViewData["XZQ"] = Session["XZQ"]; ViewData["YHM"] = Session["YHM"]; return View(); }
+        public ActionResult SHFW_ESHS() { ViewData["XZQ"] = Session["XZQ"]; ViewData["YHM"] = Session["YHM"]; return View(); }
 
         [ValidateInput(false)]
         public JsonResult FBSHFW_BJJBXX()
@@ -205,6 +206,20 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             object result = SHFW_BLL.SaveSHFW_SMWXJBXX(jcxx, SHFW_SMWXJBXX, photos);
             return Json(result);
         }
+        [ValidateInput(false)]
+        public JsonResult FBSHFW_ESHSJBXX()
+        {
+            YHJBXX yhjbxx = SHFW_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            string json = Request["Json"];
+            string bcms = Request["BCMS"];
+            string fwzp = Request["FWZP"];
+            JCXX jcxx = CreateJCXX(yhjbxx, json);
+            SHFW_ESHSJBXX SHFW_ESHSJBXX = JsonHelper.ConvertJsonToObject<SHFW_ESHSJBXX>(json);
+            SHFW_ESHSJBXX.BCMS = BinaryHelper.StringToBinary(bcms);
+            List<PHOTOS> photos = GetTP(fwzp);
+            object result = SHFW_BLL.SaveSHFW_ESHSJBXX(jcxx, SHFW_ESHSJBXX, photos);
+            return Json(result);
+        }
 
         public JsonResult LoadSHFW_BJJBXX() { string ID = Request["ID"]; object result = SHFW_BLL.LoadSHFW_BJJBXX(ID); return Json(result); }
         public JsonResult LoadSHFW_BZMDJBXX() { string ID = Request["ID"]; object result = SHFW_BLL.LoadSHFW_BZMDJBXX(ID); return Json(result); }
@@ -219,5 +234,6 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         public JsonResult LoadSHFW_JJWXJBXX() { string ID = Request["ID"]; object result = SHFW_BLL.LoadSHFW_JJWXJBXX(ID); return Json(result); }
         public JsonResult LoadSHFW_SJWXJBXX() { string ID = Request["ID"]; object result = SHFW_BLL.LoadSHFW_SJWXJBXX(ID); return Json(result); }
         public JsonResult LoadSHFW_SMWXJBXX() { string ID = Request["ID"]; object result = SHFW_BLL.LoadSHFW_SMWXJBXX(ID); return Json(result); }
+        public JsonResult LoadSHFW_ESHSJBXX() { string ID = Request["ID"]; object result = SHFW_BLL.LoadSHFW_ESHSJBXX(ID); return Json(result); }
     }
 }

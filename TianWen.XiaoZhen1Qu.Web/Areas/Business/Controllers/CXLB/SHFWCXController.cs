@@ -19,6 +19,7 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         public ActionResult SHFWCX_JJWX() { GetSession(); return View(); }
         public ActionResult SHFWCX_SJWX() { GetSession(); return View(); }
         public ActionResult SHFWCX_SMWX() { GetSession(); return View(); }
+        public ActionResult SHFWCX_ESHS() { GetSession(); return View(); }
 
         public JsonResult LoadSHFWXX()
         {
