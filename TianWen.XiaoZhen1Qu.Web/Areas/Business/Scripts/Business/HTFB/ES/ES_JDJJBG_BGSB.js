@@ -39,13 +39,13 @@ function LoadDuoX(type, id) {
                     }
                 }
                 if (parseInt(xml.list.length % 5) === 0)
-                    $("#div" + id).css("height", parseInt(xml.list.length / 5) * 60 + "px");
+                    $("#div" + id).css("height", parseInt(xml.list.length / 5) * 45 + "px");
                 else
-                    $("#div" + id).css("height", (parseInt(xml.list.length / 5) + 1) * 60 + "px");
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 5) + 1) * 45 + "px");
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-
+                $(".li" + id).bind("click", function () { ValidateCheck(id, "忘记选择配送方式啦"); });
                 LoadJBXX();
             }
         },
