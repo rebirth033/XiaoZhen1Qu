@@ -21,7 +21,7 @@ function LoadDuoX(type, id) {
                         html += "</ul><ul class='ulFWPZ' style='margin-left: 173px'>";
                     }
                 }
-                if (parseInt(xml.list.length % 3) === 0)
+                if (parseInt(xml.list.length % 4) === 0)
                     $("#div" + id).css("height", parseInt(xml.list.length / 4) * 35 + "px");
                 else
                     $("#div" + id).css("height", (parseInt(xml.list.length / 4) + 1) * 35 + "px");
@@ -55,7 +55,7 @@ function LoadJBXX() {
                 $("#ID").val(xml.Value.SWFW_CWKJPGJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
-                SetDuoX("CWKJPGLB", xml.Value.SWFW_CWKJPGJBXX.LB);
+                SetDuoX("LB", xml.Value.SWFW_CWKJPGJBXX.LB);
                 SetDX("SFSM", xml.Value.SWFW_CWKJPGJBXX.SFSM);
                 if (xml.Value.SWFW_CWKJPGJBXX.FWFW !== null)
                     SetDuoX("FWFW", xml.Value.SWFW_CWKJPGJBXX.FWFW);
@@ -78,7 +78,7 @@ function FB() {
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");
-    obj = jsonObj.AddJson(obj, "LB", "'" + GetDuoX("CWKJPGLB") + "'");
+    obj = jsonObj.AddJson(obj, "LB", "'" + GetDuoX("LB") + "'");
     obj = jsonObj.AddJson(obj, "SFSM", "'" + GetDX("SFSM") + "'");
     obj = jsonObj.AddJson(obj, "FWFW", "'" + GetDuoX("FWFW") + "'");
 

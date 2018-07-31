@@ -21,10 +21,10 @@ function LoadURLCondition() {
 }
 //选择条件
 function SelectCondition(obj, name) {
-    if (name === "类别" && (obj.innerHTML !== "土特产" && obj.innerHTML !== "蛋制品" && obj.innerHTML !== "果蔬类" && obj.innerHTML !== "粥店" && obj.innerHTML !== "调味品" && obj.innerHTML !== "营养品" && obj.innerHTML !== "阳澄湖大闸蟹" && obj.innerHTML !== "节日礼品")) {
+    if (name === "类别" && (obj.innerHTML !== "土特产" && obj.innerHTML !== "蛋奶制品" && obj.innerHTML !== "果蔬类" && obj.innerHTML !== "粥店" && obj.innerHTML !== "调味品" && obj.innerHTML !== "营养品" && obj.innerHTML !== "阳澄湖大闸蟹" && obj.innerHTML !== "节日礼品")) {
         LoadConditionByParentID(obj.id, "CODES_PFCG", "小类", "XL", 100);
     }
-    if (name === "类别" && (obj.innerHTML === "土特产" || obj.innerHTML === "蛋制品" || obj.innerHTML === "果蔬类" || obj.innerHTML === "粥店" || obj.innerHTML === "调味品" || obj.innerHTML === "营养品" || obj.innerHTML === "阳澄湖大闸蟹" || obj.innerHTML === "节日礼品")) {
+    if (name === "类别" && (obj.innerHTML === "土特产" || obj.innerHTML === "蛋奶制品" || obj.innerHTML === "果蔬类" || obj.innerHTML === "粥店" || obj.innerHTML === "调味品" || obj.innerHTML === "营养品" || obj.innerHTML === "阳澄湖大闸蟹" || obj.innerHTML === "节日礼品")) {
         $("#ul_condition_body_XL").remove();
     }
     $(obj).parent().find(".li_condition_body").each(function () {

@@ -35,6 +35,12 @@ namespace TianWen.XiaoZhen1Qu.Entities.Models
         public virtual string XL { get; set; }
 
         /// <summary>
+        /// 服务范围
+        /// </summary>
+        [Property]
+        public virtual string FWFW { get; set; }
+
+        /// <summary>
         /// 是否上门
         /// </summary>
         [Property]

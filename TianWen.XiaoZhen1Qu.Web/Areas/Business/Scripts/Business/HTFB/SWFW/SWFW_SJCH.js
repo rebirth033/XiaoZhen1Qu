@@ -55,9 +55,9 @@ function LoadJBXX() {
                 $("#ID").val(xml.Value.SWFW_SJCHJBXX.ID);
                 //设置编辑器的内容
                 ue.ready(function () { ue.setContent(xml.Value.BCMSString); });
-                $("#spanLB").html(xml.Value.SWFW_SJCHJBXX.LB);
                 $("#spanQY").html(xml.Value.SWFW_SJCHJBXX.QY);
                 $("#spanDD").html(xml.Value.SWFW_SJCHJBXX.DD);
+		SetDuoX("LB", xml.Value.SWFW_SJCHJBXX.LB)
                 LoadPhotos(xml.Value.Photos);
                 LoadXL(xml.Value.SWFW_SJCHJBXX.LB, xml.Value.SWFW_SJCHJBXX.XL);
             }
@@ -73,7 +73,7 @@ function FB() {
     var jsonObj = new JsonDB("myTabContent");
     var obj = jsonObj.GetJsonObject();
     //手动添加如下字段
-    obj = jsonObj.AddJson(obj, "LB", "'" + $("#spanLB").html() + "'");
+    obj = jsonObj.AddJson(obj, "LB", "'" + GetDuoX("LB") + "'");
     obj = jsonObj.AddJson(obj, "QY", "'" + $("#spanQY").html() + "'");
     obj = jsonObj.AddJson(obj, "DD", "'" + $("#spanDD").html() + "'");
     obj = jsonObj.AddJson(obj, "LBID", "'" + getUrlParam("CLICKID") + "'");

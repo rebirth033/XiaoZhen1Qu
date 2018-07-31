@@ -1,9 +1,15 @@
 ﻿$(document).ready(function () {
 
 });
+//验证轿车
+function ValidateYZ() {
+    if (!ValidateSelect("YZ", "YZ", "请选择语种")) return false;
+    return true;
+}
 //验证所有
 function ValidateAll() {
-    if (ValidateCheck("LB", "忘记选择类别啦")
+    if (ValidateCheck("LB", "忘记选择服务项目啦")
+   	& ValidateYZ()
         & ValidateCheck("FWFW", "忘记选择服务范围啦")
         & ValidateBCMS("BCMS", "忘记填写服务介绍啦")
         & ValidateXXDZ()

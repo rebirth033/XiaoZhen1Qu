@@ -302,5 +302,5 @@ function RightShowImg(length) {
 }
 //显示联系电话
 function ShowLXDH(lxdh) {
-    $("#div_body_left_body_right_lxdh").html('<img class="img_body_left_body_right_lxdh"  src="' + getRootPath() + "/Areas/Business/Css/images/XXXX/GY/xxxx_gy_lxdh.png" + '" /><span class="span_body_left_body_right_lxdh">'+lxdh+'</span>');
+    $("#div_body_left_body_right_lxdh").html('<span class="span_body_left_body_right_lxdh" style="font-size:28px;">'+lxdh+'</span>');
 }
