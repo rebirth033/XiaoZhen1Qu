@@ -11,7 +11,8 @@ function ValidateWTHWYQLB() {
 function ValidateAll() {
     if (ValidateRadio("SF", "忘记选择身份啦")
         & ValidateWTHWYQLB()
-        //& ValidateSelect("XJCD", "XJ", "请选择新旧")
+        & ValidateSelect("XJCD", "XJ", "请选择新旧")
+        & ValidateCheck("PSFS", "忘记选择配送方式啦")
         & ValidateBCMS("BCMS", "忘记填写详情描述啦")
         & ValidateXXDZ()
         & ValidateJG()

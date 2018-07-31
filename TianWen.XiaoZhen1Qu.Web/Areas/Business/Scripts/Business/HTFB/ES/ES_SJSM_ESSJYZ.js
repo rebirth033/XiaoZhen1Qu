@@ -10,7 +10,8 @@ function ValidatePPYXH() {
 //验证所有
 function ValidateAll() {
     if (ValidateRadio("SF", "忘记选择身份啦")
-        //& ValidateSelect("XJCD", "XJ", "忘记选择新旧啦")
+        & ValidateSelect("XJCD", "XJ", "忘记选择新旧啦")
+        & ValidateCheck("PSFS", "忘记选择配送方式啦")
         & ValidateBCMS("BCMS", "忘记填写详情描述啦")
         //& ValidatePPYXH()
         & ValidateXXDZ()
