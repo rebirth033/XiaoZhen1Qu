@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     $("#YXQZ").datepicker({ minDate: 0 });
-    LoadDuoXPSFS("配送方式", "PSFS");
+    LoadDuoX("配送方式", "PSFS", "CODES_ES_SJSM");
     BindClick("LB");
 });
 //绑定下拉框
@@ -25,79 +25,8 @@ function PDLB(name, codeid) {
     }
     else {
         $("#divXL").css("display", "");
-        LoadDuoX(name, "XL");
+        LoadDuoX(name, "XL", "CODES_ES_PWKQ");
     }
-}
-//加载多选
-function LoadDuoX(type, id) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Common/LoadCODESByTYPENAME",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: type,
-            TBName: "CODES_ES_PWKQ"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='ulFWPZ'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='li" + id + "' style='width:140px;' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i % 5 === 4 && (i !== xml.list.length - 1)) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 173px'>";
-                    }
-                }
-                if (parseInt(xml.list.length % 5) === 0)
-                    $("#div" + id).css("height", parseInt(xml.list.length / 5) * 45 + "px");
-                else
-                    $("#div" + id).css("height", (parseInt(xml.list.length / 5) + 1) * 45 + "px");
-                html += "</ul>";
-                $("#div" + id + "Text").html(html);
-                $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-                $(".li" + id).bind("click", function () { ValidateCheck(id, "忘记选择小类啦"); });
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
-}
-//加载多选
-function LoadDuoXPSFS(type, id) {
-    $.ajax({
-        type: "POST",
-        url: getRootPath() + "/Common/LoadCODESByTYPENAME",
-        dataType: "json",
-        data:
-        {
-            TYPENAME: type,
-            TBName: "CODES_ES_SJSM"
-        },
-        success: function (xml) {
-            if (xml.Result === 1) {
-                var html = "<ul class='ulFWPZ'>";
-                for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='li" + id + "' style='width:140px;' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
-                    if (i % 5 === 4 && (i !== xml.list.length - 1)) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 173px'>";
-                    }
-                }
-                if (parseInt(xml.list.length % 5) === 0)
-                    $("#div" + id).css("height", parseInt(xml.list.length / 5) * 45 + "px");
-                else
-                    $("#div" + id).css("height", (parseInt(xml.list.length / 5) + 1) * 45 + "px");
-                html += "</ul>";
-                $("#div" + id + "Text").html(html);
-                $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
-
-                LoadJBXX();
-            }
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
-
-        }
-    });
 }
 //加载票务卡券_电影票基本信息
 function LoadJBXX() {
