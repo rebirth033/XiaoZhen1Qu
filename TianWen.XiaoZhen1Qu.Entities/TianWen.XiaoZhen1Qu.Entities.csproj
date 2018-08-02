@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\Common.cs" />
+    <Compile Include="Common\WaterMark.cs" />
     <Compile Include="Enum\XXLB.cs" />
     <Compile Include="Maps\BZZX\BZZX_TJWT_Map.cs" />
     <Compile Include="Maps\CL\CL_GCCJBXX_Map.cs" />
