@@ -353,7 +353,7 @@ function OpenSSJGBySelect() {
         url = "/" + $("#URL").val().split('_')[0] + "CX/" + $("#URL").val().split('_')[0] + "CX_" + $("#URL").val().split('_')[1];
     }
     var condition = $("#CONDITION").val();
-    OpenCXLB($("#LBID").val(), url, condition);
+    OpenSSLB($("#LBID").val(), url, condition);
 }
 //根据下拉框选择的关键字搜索结果
 function OpenHideSSJGBySelect() {
@@ -365,7 +365,7 @@ function OpenHideSSJGBySelect() {
         url = "/" + $("#HideURL").val().split('_')[0] + "CX/" + $("#HideURL").val().split('_')[0] + "CX_" + $("#HideURL").val().split('_')[1];
     }
     var condition = $("#HideCONDITION").val();
-    OpenHideCXLB($("#HideLBID").val(), url, condition);
+    OpenHideSSLB($("#HideLBID").val(), url, condition);
 }
 //根据输入的关键字搜索结果
 function OpenSSJGByInput() {
@@ -386,7 +386,7 @@ function OpenSSJGByInput() {
                 } else {
                     url = "/" + $("#URL").val().split('_')[0] + "CX/" + $("#URL").val().split('_')[0] + "CX_" + $("#URL").val().split('_')[1];
                 }
-                OpenCXLB($("#LBID").val(), url, $("#CONDITION").val());
+                OpenSSLB($("#LBID").val(), url, $("#CONDITION").val());
             } else {
                 window.open(getRootPath() + "/Common/CXCommon?ss=" + $("#SS").val());
             }
@@ -416,7 +416,7 @@ function OpenHideSSJGByInput() {
                 else {
                     url = "/" + $("#HideURL").val().split('_')[0] + "CX/" + $("#HideURL").val().split('_')[0] + "CX_" + $("#HideURL").val().split('_')[1];
                 }
-                OpenHideCXLB($("#HideLBID").val(), url, $("#HideCONDITION").val());
+                OpenHideSSLB($("#HideLBID").val(), url, $("#HideCONDITION").val());
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { //有错误时的回调函数
@@ -425,18 +425,18 @@ function OpenHideSSJGByInput() {
     });
 }
 //打开查询列表
-function OpenCXLB(lbid, lburl, condition) {
+function OpenSSLB(lbid, lburl, condition) {
     if (condition !== "null" && condition !== null)
-        window.open(getRootPath() + "/" + lburl + "?LBID=" + lbid + "&" + condition);
+        window.location.href = getRootPath() + "/" + lburl + "?LBID=" + lbid + "&" + condition;
     else
-        window.open(getRootPath() + "/" + lburl + "?LBID=" + lbid);
+        window.location.href = getRootPath() + "/" + lburl + "?LBID=" + lbid;
     $("#LBID").val('');
 }
 //打开查询列表
-function OpenHideCXLB(lbid, lburl, condition) {
+function OpenHideSSLB(lbid, lburl, condition) {
     if (condition !== "null" && condition !== null)
-        window.open(getRootPath() + "/" + lburl + "?LBID=" + lbid + "&" + condition);
+        window.location.href = getRootPath() + "/" + lburl + "?LBID=" + lbid + "&" + condition;
     else
-        window.open(getRootPath() + "/" + lburl + "?LBID=" + lbid);
+        window.location.href = getRootPath() + "/" + lburl + "?LBID=" + lbid;
     $("#HideLBID").val('');
 }
