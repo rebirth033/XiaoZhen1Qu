@@ -6,6 +6,7 @@ using System.Web;
 using TianWen.Framework.Common;
 using TianWen.XiaoZhen1Qu.Interface;
 using TianWen.XiaoZhen1Qu.Entities.Models;
+using TianWen.XiaoZhen1Qu.Entities.Common;
 
 namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Ashx
 {
@@ -64,13 +65,14 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Ashx
             Bitmap bmPhoto = new Bitmap(iWidth, iHeight);
 
             Graphics gbmPhoto = Graphics.FromImage(bmPhoto);
-
-            //设置高质量插值法
-            gbmPhoto.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.High;
+            
+            gbmPhoto.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.High;//设置高质量插值法
 
             Color color = Color.FromArgb(255, 250, 255, 249);//背景透明
 
             gbmPhoto.FillRectangle(new SolidBrush(color), new Rectangle(0, 0, iWidth, iHeight));
+            
+            //imgPhoto = WaterMark.AddImageText(imgPhoto, "风铃网", 9, 50, 30, "微软雅黑");//给图片添加文字水印
 
             gbmPhoto.DrawImage(imgPhoto, new Rectangle(0, 0, iWidth, iHeight), new Rectangle(0, 0, imgPhoto.Width, imgPhoto.Height), GraphicsUnit.Pixel);
 

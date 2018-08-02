@@ -232,8 +232,7 @@ namespace TianWen.XiaoZhen1Qu.Entities.Common
             g.Dispose();
             img.Dispose();
         }
-
-        #region 获得当前绝对路径
+        
         /// <summary>
         /// 获得当前绝对路径
         /// </summary>
@@ -259,6 +258,79 @@ namespace TianWen.XiaoZhen1Qu.Entities.Common
                 return System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, strPath);
             }
         }
-        #endregion
+
+        public static Image AddImageText(Image img, string watermarkText, int watermarkStatus, int quality, int fontsize, string fontname = "微软雅黑")
+        {
+
+            Graphics g = Graphics.FromImage(img);
+            Font drawFont = new Font(fontname, fontsize, FontStyle.Regular, GraphicsUnit.Pixel);
+            SizeF crSize;
+            crSize = g.MeasureString(watermarkText, drawFont);
+
+            float xpos = 0;
+            float ypos = 0;
+
+            switch (watermarkStatus)
+            {
+                case 1:
+                    xpos = (float)img.Width * (float).01;
+                    ypos = (float)img.Height * (float).01;
+                    break;
+                case 2:
+                    xpos = ((float)img.Width * (float).50) - (crSize.Width / 2);
+                    ypos = (float)img.Height * (float).01;
+                    break;
+                case 3:
+                    xpos = ((float)img.Width * (float).99) - crSize.Width;
+                    ypos = (float)img.Height * (float).01;
+                    break;
+                case 4:
+                    xpos = (float)img.Width * (float).01;
+                    ypos = ((float)img.Height * (float).50) - (crSize.Height / 2);
+                    break;
+                case 5:
+                    xpos = ((float)img.Width * (float).50) - (crSize.Width / 2);
+                    ypos = ((float)img.Height * (float).50) - (crSize.Height / 2);
+                    break;
+                case 6:
+                    xpos = ((float)img.Width * (float).99) - crSize.Width;
+                    ypos = ((float)img.Height * (float).50) - (crSize.Height / 2);
+                    break;
+                case 7:
+                    xpos = (float)img.Width * (float).01;
+                    ypos = ((float)img.Height * (float).99) - crSize.Height;
+                    break;
+                case 8:
+                    xpos = ((float)img.Width * (float).50) - (crSize.Width / 2);
+                    ypos = ((float)img.Height * (float).99) - crSize.Height;
+                    break;
+                case 9:
+                    xpos = ((float)img.Width * (float).99) - crSize.Width;
+                    ypos = ((float)img.Height * (float).99) - crSize.Height;
+                    break;
+            }
+
+            g.DrawString(watermarkText, drawFont, new SolidBrush(Color.FromArgb(70, Color.White)), xpos + 1, ypos + 1);
+            g.DrawString(watermarkText, drawFont, new SolidBrush(Color.FromArgb(70, Color.White)), xpos, ypos);
+
+            ImageCodecInfo[] codecs = ImageCodecInfo.GetImageEncoders();
+            ImageCodecInfo ici = null;
+            foreach (ImageCodecInfo codec in codecs)
+            {
+                if (codec.MimeType.IndexOf("jpeg") > -1)
+                    ici = codec;
+            }
+            EncoderParameters encoderParams = new EncoderParameters();
+            long[] qualityParam = new long[1];
+            if (quality < 0 || quality > 100)
+                quality = 80;
+
+            qualityParam[0] = quality;
+
+            EncoderParameter encoderParam = new EncoderParameter(System.Drawing.Imaging.Encoder.Quality, qualityParam);
+            encoderParams.Param[0] = encoderParam;
+
+            return img;
+        }
     }
 }

@@ -67,13 +67,6 @@ function LoadGRXX(grxx) {
     html += ('</div>');
     $("#div_body_right").append(html);
 }
-//点击显示图片
-function ClickShowImg(obj,num){
-	right = num;
-        $("#img_body_left_body_left_show").attr("src", $(obj).parent().find("img")[0].src);
-        $(".div_img_body_left_body_left_list_tp").css("background-color", "rgba(0,0,0,0.5)");
-        $(obj).css("background-color", "rgba(0,0,0,0)");
-}
 //处理图片信息
 function HandlerTPXX() {
     $(".div_img_body_left_body_left_list_tp:eq(0)").each(function () { 
@@ -234,7 +227,7 @@ function SCXX(jcxxid) {
 //绑定图片点击预览事件
 function ImgShow(obj) {
     $("#div_show").html('');
-    var show_html = ('<div class="div_show_left" onclick="LeftShowImg()"><img class="img_show_left" /></div>');
+    var show_html = ('<div class="div_show_left" onclick="LeftShowImg('+$(".img_body_left_body_left_list_tp").length+')"><img class="img_show_left" /></div>');
     show_html += ('<div class="div_show_middle">');
     show_html += ('<div class="div_show_middle_top">');
     show_html += ('<img id="img_show_middle" class="img_show_middle" />');
@@ -257,7 +250,7 @@ function ImgShow(obj) {
     $("#div_show_middle_bottom").html('');
     var html = ('<ul id="ul_show_list" class="ul_body_left_body_left_list">');
     for (var i = 0; i < $(".img_body_left_body_xq_xx").length; i++) {
-        html += ('<li class="li_show_tp">');
+        html += ('<li class="li_show_tp" id="'+i+'">');
         html += ('<img class="img_show_tp" src="' + $(".img_body_left_body_xq_xx")[i].src + '" />');
         html += ('<div class="div_show_tp"></div>');
         html += ('</li>');
@@ -266,6 +259,7 @@ function ImgShow(obj) {
     $("#div_show_middle_bottom").html(html);
 
     $(".li_show_tp").bind("mouseover", function () {
+	imgIndex = parseInt(this.id);
         $("#img_show_middle").attr("src", $(this).find("img")[0].src);
         $(".div_show_tp").css("background-color", "rgba(0,0,0,0.5)");
         $(this).find(".div_show_tp").css("background-color", "rgba(0,0,0,0)");
@@ -282,9 +276,9 @@ function LeftShowImg(length) {
     if (imgIndex > 0) {
 	if(imgIndex <= length - 5)
             $("#ul_show_lis").css("transform", "translate3d(-" + (imgIndex - 1) * 100 + "px, 0px, 0px)").css("transition-duration", "500ms");
-        imgIndex += 1;
-        $("#ul_show_lis").find(".div_show_tp").css("background-color", "rgba(0,0,0,0.5)");
-        $("#ul_show_lis").find(".li_show_tp:eq(" + imgIndex + ")").find(".div_show_tp").css("background-color", "rgba(0,0,0,0)");
+        imgIndex -= 1;
+        $("#ul_show_list").find(".div_show_tp").css("background-color", "rgba(0,0,0,0.5)");
+        $("#ul_show_list").find(".li_show_tp:eq(" + imgIndex + ")").find(".div_show_tp").css("background-color", "rgba(0,0,0,0)");
         $("#img_show_middle").attr("src", $("#ul_show_list").find(".li_show_tp:eq(" + imgIndex + ")").find("img")[0].src);
     }
 }
@@ -298,9 +292,16 @@ function RightShowImg(length) {
         $("#ul_show_list").find(".li_show_tp:eq(" + imgIndex + ")").find(".div_show_tp").css("background-color", "rgba(0,0,0,0)");
         $("#img_show_middle").attr("src", $("#ul_show_list").find(".li_show_tp:eq(" + imgIndex + ")").find("img")[0].src);
     }
-
+}
+//鼠标经过显示图片
+function ClickShowImg(obj,num){
+	right = num;
+        imgIndex = num;
+        $("#img_body_left_body_left_show").attr("src", $(obj).parent().find("img")[0].src);
+        $(".div_img_body_left_body_left_list_tp").css("background-color", "rgba(0,0,0,0.5)");
+        $(obj).css("background-color", "rgba(0,0,0,0)");
 }
 //显示联系电话
 function ShowLXDH(lxdh) {
-    $("#div_body_left_body_right_lxdh").html('<span class="span_body_left_body_right_lxdh" style="font-size:28px;">'+lxdh+'</span>');
+    $("#div_body_left_body_right_lxdh").html('<span class="span_body_left_body_right_lxdh" style="font-size:28px;">' + lxdh + '</span>');
 }
