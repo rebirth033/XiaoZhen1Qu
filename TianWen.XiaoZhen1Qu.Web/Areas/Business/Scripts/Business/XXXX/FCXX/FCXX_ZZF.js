@@ -107,7 +107,7 @@ function LoadFYXQ(obj, BCMSString) {
     html += ('<div class="div_body_left_body_xq">');
     html += ('<p class="p_body_left_body_xq">房源详情</p>');
     html += ('<div class="div_body_left_body_xq_xx" style="margin-bottom: 0;">');
-    if (obj.FWPZ !== null) {
+    if (obj.FWPZ !== null && obj.FWPZ !== "") {
         var fwpzarray = obj.FWPZ.split(',');
         html += ('<div class="div_body_left_body_xq_xx_left">房屋配置</div>');
         html += ('<div class="div_body_left_body_xq_xx_right" style="width: 600px;">');
@@ -120,7 +120,7 @@ function LoadFYXQ(obj, BCMSString) {
         html += ('</div>');
         html += ('</div>');
     }
-    if (obj.FWLD !== null) {
+    if (obj.FWLD !== null && obj.FWLD !== "") {
         var fwldarray = obj.FWLD.split(',');
         html += ('<div class="div_body_left_body_xq_xx">');
         html += ('<div class="div_body_left_body_xq_xx_left">房屋亮点</div>');
