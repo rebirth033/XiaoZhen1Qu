@@ -230,7 +230,7 @@ function ImgShow(obj) {
     var show_html = ('<div class="div_show_left" onclick="LeftShowImg('+$(".img_body_left_body_left_list_tp").length+')"><img class="img_show_left" /></div>');
     show_html += ('<div class="div_show_middle">');
     show_html += ('<div class="div_show_middle_top">');
-    show_html += ('<img id="img_show_middle" class="img_show_middle" />');
+    show_html += ('<img id="img_show_middle" class="img_show_middle" onload="DrawImage(this,785,588)" />');
     show_html += ('</div>');
     show_html += ('<div class="div_show_middle_bottom" id="div_show_middle_bottom">');
     show_html += ('</div>');
@@ -243,8 +243,6 @@ function ImgShow(obj) {
     $("#div_close").css("display", "block");
     var image = new Image();
     image.src = obj.src;
-    $("#img_show_middle").attr("width",image.width > 862 ? 862 : image.width);
-    $("#img_show_middle").attr("height",image.height > 496 ? 496 : image.height);
     $("#img_show_middle").attr("src",image.src);
 
     $("#div_show_middle_bottom").html('');

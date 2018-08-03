@@ -1,7 +1,7 @@
 ﻿//js获取网站根路径(站点及虚拟目录)，获得网站的根目录或虚拟目录的根地址     
 function getRootPath() {
     var strFullPath = window.document.location.href;
-    if (strFullPath === "http://www.915fl.com") strFullPath = "http://www.915fl.com/sy/sy";
+    if (strFullPath === "http://www.915fl.com/") strFullPath = "http://www.915fl.com/sy/sy";
     var strPath = window.document.location.pathname;
     if (strPath === "/") strPath = "/sy/sy";
     var pos = strFullPath.indexOf(strPath);
@@ -303,5 +303,37 @@ function ValidateNull(value, dw) {
             return value + dw;
         else
             return value;
+    }
+}
+//图片等比例缩放
+function DrawImage(ImgObj, maxWidth, maxHeight) {
+    var image = new Image();
+    image.src = ImgObj.src;
+    var tempWidth; var tempHeight;;
+
+    if (image.width > 0 && image.height > 0) {
+        if (image.width / image.height >= maxWidth / maxHeight) {
+            if (image.width > maxWidth) {
+                tempWidth = maxWidth;
+                tempHeight = (image.height * maxWidth) / image.width;
+            }
+            else {
+                tempWidth = image.width;
+                tempHeight = image.height;
+            }
+        }
+        else {
+            if (image.height > maxHeight) {
+                tempHeight = maxHeight;
+                tempWidth = (image.width * maxHeight) / image.height;
+            }
+            else {
+                tempWidth = image.width;
+                tempHeight = image.height;
+            }
+        }
+        ImgObj.height = tempHeight;
+        imgobj.width = tempWidth;
+        ImgObj.alt = image.width + "*" + image.height;
     }
 }
