@@ -38,7 +38,7 @@ function LoadJBXX(obj) {
     html += ('<div class="div_body_left_body">');
     html += ('<div class="div_body_left_body_right">');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">类别：</span>');
+    html += ('<span class="span_body_left_body_right_left">类    别：</span>');
     html += ('<span class="span_body_left_body_right_right">' + obj.LB + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
@@ -46,7 +46,7 @@ function LoadJBXX(obj) {
     html += ('<span class="span_body_left_body_right_right">' + (obj.XL === null ? "暂未数据" : obj.XL) + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">联系人：</span>');
+    html += ('<span class="span_body_left_body_right_left">联 系 人：</span>');
     html += ('<span class="span_body_left_body_right_right">' + ValidateNull(obj.LXR) + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');

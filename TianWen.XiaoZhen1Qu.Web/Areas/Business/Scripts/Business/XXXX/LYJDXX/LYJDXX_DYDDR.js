@@ -37,7 +37,7 @@ function LoadJBXX(obj) {
     html += ('<div class="div_body_left_body">');
     html += ('<div class="div_body_left_body_right">');
     html += ('<p class="p_body_left_body_right">');
-    html += ('<span class="span_body_left_body_right_left">类别：</span>');
+    html += ('<span class="span_body_left_body_right_left">类    别：</span>');
     html += ('<span class="span_body_left_body_right_right">' + obj.LB + '</span>');
     html += ('</p>');
     html += ('<p class="p_body_left_body_right">');
