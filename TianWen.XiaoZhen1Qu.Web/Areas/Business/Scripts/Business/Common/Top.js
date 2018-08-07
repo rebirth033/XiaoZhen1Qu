@@ -36,9 +36,9 @@ function LoadUser() {
         html += '<span class="span_top_right_yhm" id="span_top_right_yhm_img"></span>';
         html += '<div class="div_top_right_dropdown_yhm" id="div_top_right_dropdown_yhm">';
         html += '<ul class="ul_top_right_yhm">';
-        html += '<li class="li_top_right_yhm" id="li_top_right_yhm_wdxx">我的信息</li>';
-        html += '<li class="li_top_right_yhm" id="li_top_right_yhm_wdzh">我的账户</li>';
-        html += '<li class="li_top_right_yhm" id="li_top_right_yhm_wdzj">我的资金</li>';
+        html += '<li class="li_top_right_yhm" id="li_top_right_yhm_wdxx" onclick="ShowWDXX()">我的信息</li>';
+        html += '<li class="li_top_right_yhm" id="li_top_right_yhm_wdzh" onclick="ShowWDXX()">我的账户</li>';
+        html += '<li class="li_top_right_yhm" id="li_top_right_yhm_wdzj" onclick="ShowWDXX()">我的资金</li>';
         html += '<li class="li_top_right_yhm" onclick="Exit()">退出</li>';
         html += '</ul>';
         html += '</div>';
