@@ -1,4 +1,4 @@
-﻿.div_clys {width: 70px;height: 35px;border: 1px solid #cccccc;display: inline-block;padding: 5px 6px;border-radius: 4px;position: relative;margin-right: 10px;}
+﻿.div_clys {width: 70px;height: 35px;border: 1px solid #cccccc;display: inline-block;padding: 5px 6px;position: relative;margin-right: 10px;}
 .div_clys:hover {background-color: #ececec;cursor: pointer;}
 .span_clys_left {width: 18px;height: 18px;display: inline-block;border: 1px solid #cccccc;}
 .span_clys_right {display: inline-block;left: 34px;bottom: 10px;position: absolute;font-size: 14px;}

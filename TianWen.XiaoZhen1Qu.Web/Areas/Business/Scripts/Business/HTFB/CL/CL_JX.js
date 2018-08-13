@@ -22,9 +22,9 @@ function LoadJZ() {
                     }
                 }
                 if (parseInt(xml.list.length % 3) === 0)
-                    $("#divJZ").css("height", parseInt(xml.list.length / 3) * 50 + "px");
+                    $("#divJZ").css("height", parseInt(xml.list.length / 3) * 40 + "px");
                 else
-                    $("#divJZ").css("height", (parseInt(xml.list.length / 3) + 1) * 50 + "px");
+                    $("#divJZ").css("height", (parseInt(xml.list.length / 3) + 1) * 40 + "px");
                 html += "</ul>";
                 $("#divJZText").html(html);
                 $(".img_JZ").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
@@ -59,9 +59,9 @@ function LoadBB() {
                     }
                 }
                 if (parseInt(xml.list.length % 4) === 0)
-                    $("#divBB").css("height", parseInt(xml.list.length / 4) * 60 + "px");
+                    $("#divBB").css("height", parseInt(xml.list.length / 4) * 40 + "px");
                 else
-                    $("#divBB").css("height", (parseInt(xml.list.length / 4) + 1) * 60 + "px");
+                    $("#divBB").css("height", (parseInt(xml.list.length / 4) + 1) * 40 + "px");
                 html += "</ul>";
                 $("#divBBText").html(html);
                 $(".img_BB").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");

@@ -34,11 +34,12 @@ function LoadXL() {
         }
     });
 }
-//选择品种下拉框
+//选择类别下拉框
 function SelectLB(obj, type, id) {
     $("#span" + type).html(obj.innerHTML);
     $("#div" + type).css("display", "none");
     $("#LBID").val(id);
+    $("#spanXL").html("请选择小类");
 }
 //绑定下拉框
 function BindClick(type) {

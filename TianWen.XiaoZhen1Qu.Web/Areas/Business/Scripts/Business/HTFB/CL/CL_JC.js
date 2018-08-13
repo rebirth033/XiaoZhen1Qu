@@ -13,12 +13,6 @@
     BindClick("PZSZSF");
     LoadDuoX("车辆加装配置", "CLJZPZ");
     $("#divPPText").bind("click", function () { LoadJCPP(); });
-
-    $(document).click(function(e){
-      var _con = $(".div_row_right_jcpp");   
-      if(!_con.is(e.target) && _con.has(e.target).length === 0)
-         $(".div_row_right_jcpp_item").css("display", "none");
-    });
 });
 //加载品牌名称
 function LoadJCPP() {

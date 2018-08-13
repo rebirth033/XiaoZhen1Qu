@@ -47,9 +47,9 @@ function LoadDuoX(type, id) {
                     }
                 }
                 if (parseInt(xml.list.length % 6) === 0)
-                    $("#div" + id).css("height", parseInt(xml.list.length / 6) * 45 + "px");
+                    $("#div" + id).css("height", parseInt(xml.list.length / 6) * 40 + "px");
                 else
-                    $("#div" + id).css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
+                    $("#div" + id).css("height", (parseInt(xml.list.length / 6) + 1) * 40 + "px");
                 html += "</ul>";
                 $("#div" + id + "Text").html(html);
                 $(".img_" + id).attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");

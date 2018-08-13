@@ -30,6 +30,12 @@ function LoadDefault() {
         $(".div_shadow").css("display", "block");
         $(".div_body_yhdl").css("display", "block");
     }
+    //车辆品牌下来框隐藏处理
+    $(document).click(function(e){
+      var _con = $(".div_row_right_jcpp_item");   
+      if(!_con.is(e.target) && _con.has(e.target).length === 0)
+         $(".div_row_right_jcpp_item").css("display", "none");
+    });
 }
 //根据TYPENAME获取字典表
 function LoadCODESByTYPENAME(type, id, table, callback, idout, idin, message) {
@@ -85,9 +91,9 @@ function LoadXLByName(lb, xl, tbname) {
                     }
                 }
                 if (parseInt(xml.list.length % 5) === 0)
-                    $("#divXL").css("height", parseInt(xml.list.length / 5) * 60 + "px");
+                    $("#divXL").css("height", parseInt(xml.list.length / 5) * 40 + "px");
                 else
-                    $("#divXL").css("height", (parseInt(xml.list.length / 5) + 1) * 60 + "px");
+                    $("#divXL").css("height", (parseInt(xml.list.length / 5) + 1) * 40 + "px");
                 html += "</ul>";
                 $("#divXLText").html(html);
                 $(".img_XL").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");
@@ -161,9 +167,9 @@ function LoadFWFW() {
                     }
                 }
                 if (parseInt(xml.list.length % 6) === 0)
-                    $("#divFWFW").css("height", parseInt(xml.list.length / 6) * 45 + "px");
+                    $("#divFWFW").css("height", parseInt(xml.list.length / 6) * 40 + "px");
                 else
-                    $("#divFWFW").css("height", (parseInt(xml.list.length / 6) + 1) * 45 + "px");
+                    $("#divFWFW").css("height", (parseInt(xml.list.length / 6) + 1) * 40 + "px");
                 html += "</ul>";
                 $("#divFWFWText").html(html);
                 $(".img_FWFW").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");

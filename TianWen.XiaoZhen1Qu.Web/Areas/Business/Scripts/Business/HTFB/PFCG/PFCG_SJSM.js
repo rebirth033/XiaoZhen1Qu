@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    LoadDuoX("安防设备类别", "LB");
+    LoadDuoX("手机数码类别", "LB");
 });
 //加载多选
 function LoadDuoX(type, id) {
