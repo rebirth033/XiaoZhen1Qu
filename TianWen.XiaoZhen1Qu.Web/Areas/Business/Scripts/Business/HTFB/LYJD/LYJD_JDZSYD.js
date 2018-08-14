@@ -1,5 +1,4 @@
-﻿var ue = UE.getEditor('BCMS');
-$(document).ready(function () {
+﻿$(document).ready(function () {
     BindClick("LB");
     LoadJBXX();
 });
@@ -48,9 +47,9 @@ function LoadXL(lbmc, xl) {
                     }
                 }
                 if (parseInt(xml.list.length % 4) === 0)
-                    $("#divXL").css("height", parseInt(xml.list.length / 4) * 60 + "px");
+                    $("#divXL").css("height", parseInt(xml.list.length / 4) * 40 + "px");
                 else
-                    $("#divXL").css("height", (parseInt(xml.list.length / 4) + 1) * 60 + "px");
+                    $("#divXL").css("height", (parseInt(xml.list.length / 4) + 1) * 40 + "px");
                 html += "</ul>";
                 $("#divXLText").html(html);
                 $(".img_XL").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");

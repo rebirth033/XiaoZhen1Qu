@@ -228,7 +228,6 @@ function Close(id) {
 //关闭
 function CloseByClassID(classid) {
     $("." + classid).css("display", "none");
-    $(".div_select_out").css("border-top", "1px solid #cccccc").css("border-right", "1px solid #cccccc").css("border-left", "1px solid #cccccc").css("border-bottom", "1px solid #cccccc");
 }
 //Transition结束监听事件
 function whichTransitionEvent() {

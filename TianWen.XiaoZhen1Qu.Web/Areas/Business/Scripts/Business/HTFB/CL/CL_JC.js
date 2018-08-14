@@ -279,7 +279,6 @@ function ActiveCLYS() {
     });
     $(this).css("border-color", "#bc6ba6").css("background-color", "#bc6ba6");
     $(this).unbind("mouseover").unbind("mouseout");
-
 }
 //选择类别下拉框
 function SelectLB(obj, type) {

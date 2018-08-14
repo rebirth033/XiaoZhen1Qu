@@ -41,9 +41,12 @@ function SetTCYS(tcys) {
 //选择头车颜色
 function ActiveTCYS() {
     $(".div_tcys").each(function () {
-        $(this).css("border-color", "#cccccc").css("background-color", "#ffffff");;
+        $(this).css("border-color", "#cccccc").css("background-color", "#ffffff");
+        $(this).bind("mouseover",function(){$(this).css("background-color", "#ececec");});
+        $(this).bind("mouseout",function(){$(this).css("background-color", "#ffffff");});
     });
     $(this).css("border-color", "#bc6ba6").css("background-color", "#bc6ba6");
+    $(this).unbind("mouseover").unbind("mouseout");
 }
 //加载跟车颜色
 function LoadGCYS() {
@@ -81,9 +84,12 @@ function SetGCYS(tcys) {
 //选择跟车颜色
 function ActiveGCYS() {
     $(".div_gcys").each(function () {
-        $(this).css("border-color", "#cccccc").css("background-color", "#ffffff");;
+        $(this).css("border-color", "#cccccc").css("background-color", "#ffffff");
+        $(this).bind("mouseover",function(){$(this).css("background-color", "#ececec");});
+        $(this).bind("mouseout",function(){$(this).css("background-color", "#ffffff");});
     });
     $(this).css("border-color", "#bc6ba6").css("background-color", "#bc6ba6");
+    $(this).unbind("mouseover").unbind("mouseout");
 }
 //加载品牌名称
 function LoadTCPP() {

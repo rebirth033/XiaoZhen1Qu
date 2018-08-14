@@ -193,14 +193,14 @@ function ValidateCommonWithoutZP() {
 }
 //验证所在区域
 function ValidateSZQY() {
-    //if (!ValidateSelect("SZQY", "QY", "请选择区域")) return false;
-    //if (!ValidateSelect("SZQY", "DD", "请选择地段")) return false;
+    //if (!ValidateSelect("SZQY", "QY", "忘记选择区域啦")) return false;
+    //if (!ValidateSelect("SZQY", "DD", "忘记选择地段啦")) return false;
     return true;
 }
 //验证详细地址
 function ValidateXXDZ() {
-    //if (!ValidateSelect("SZQY", "QY", "请选择区域")) return false;
-    //if (!ValidateSelect("SZQY", "DD", "请选择地段")) return false;
+    if (!ValidateSelect("SZQY", "QY", "忘记选择区域啦")) return false;
+    //if (!ValidateSelect("SZQY", "DD", "忘记选择地段啦")) return false;
     if (!ValidateJTDZ()) return false;
     return true;
 }
