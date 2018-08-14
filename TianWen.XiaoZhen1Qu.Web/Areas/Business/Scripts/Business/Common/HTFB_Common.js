@@ -87,7 +87,7 @@ function LoadXLByName(lb, xl, tbname) {
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='liXL' style='width:120px' onclick='SelectDuoX(this)'><img class='img_XL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                    if (i % 5 === 4 && i != xml.list.length - 1) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 173px'>";
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 174px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 5) === 0)
@@ -163,7 +163,7 @@ function LoadFWFW() {
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='liFWFW' onclick='SelectDuoX(this)'><img class='img_FWFW'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i % 6 === 5 && i != xml.list.length - 1) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 173px'>";
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 174px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 6) === 0)

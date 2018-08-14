@@ -19,7 +19,7 @@ function LoadDuoX(type, id) {
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='li" + id + "' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                    if (i % 5 === 4 && i != xml.list.length - 1) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 173px'>";
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 174px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 5) === 0)
@@ -66,13 +66,13 @@ function LoadXL(lbmc, xl) {
                 for (var i = 0; i < xml.list.length; i++) {
                     html += "<li class='liXL' style='width:140px;' onclick='SelectDuoX(this)'><img class='img_XL'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i % 4 === 3 && i !== (xml.list.length - 1)) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 173px'>";
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 174px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 4) === 0)
-                    $("#divXL").css("height", parseInt(xml.list.length / 4) * 45 + "px");
+                    $("#divXL").css("height", parseInt(xml.list.length / 4) * 40 + "px");
                 else
-                    $("#divXL").css("height", (parseInt(xml.list.length / 4) + 1) * 45 + "px");
+                    $("#divXL").css("height", (parseInt(xml.list.length / 4) + 1) * 40 + "px");
                 html += "</ul>";
                 $("#divXLText").html(html);
                 $(".img_XL").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");

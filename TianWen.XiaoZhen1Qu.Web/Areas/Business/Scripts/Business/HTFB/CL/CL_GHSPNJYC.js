@@ -22,9 +22,9 @@ function LoadGHSPNJYC() {
                     }
                 }
                 if (parseInt(xml.list.length % 4) === 0)
-                    $("#divLB").css("height", parseInt(xml.list.length / 4) * 45 + "px");
+                    $("#divLB").css("height", parseInt(xml.list.length / 4) * 40 + "px");
                 else
-                    $("#divLB").css("height", (parseInt(xml.list.length / 4) + 1) * 45 + "px");
+                    $("#divLB").css("height", (parseInt(xml.list.length / 4) + 1) * 40 + "px");
                 html += "</ul>";
                 $("#divLBText").html(html);
                 $(".img_GHSPNJYC").attr("src", getRootPath() + "/Areas/Business/Css/images/check_gray.png");

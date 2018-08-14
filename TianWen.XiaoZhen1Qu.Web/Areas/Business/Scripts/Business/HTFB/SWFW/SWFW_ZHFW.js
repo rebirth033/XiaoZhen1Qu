@@ -16,9 +16,9 @@ function LoadDuoX(type, id) {
             if (xml.Result === 1) {
                 var html = "<ul class='ulFWPZ'>";
                 for (var i = 0; i < xml.list.length; i++) {
-                    html += "<li class='li" + id + "' style='width:160px;' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
+                    html += "<li class='li" + id + "' style='width:150px;' onclick='SelectDuoX(this)'><img class='img_" + id + "'/><label style='font-weight:normal;'>" + xml.list[i].CODENAME + "</label></li>";
                     if (i % 5 === 4 && i !== xml.list.length - 1) {
-                        html += "</ul><ul class='ulFWPZ' style='margin-left: 173px'>";
+                        html += "</ul><ul class='ulFWPZ' style='margin-left: 174px'>";
                     }
                 }
                 if (parseInt(xml.list.length % 5) === 0)
