@@ -2,7 +2,6 @@
     BindClick("LB");
     LoadJBXX();
 });
-
 //选择类别下拉框
 function SelectLB(obj, type, id) {
     $("#span" + type).html(obj.innerHTML);
