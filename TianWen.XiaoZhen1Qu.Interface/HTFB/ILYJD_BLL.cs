@@ -14,6 +14,10 @@ namespace TianWen.XiaoZhen1Qu.Interface
 
         object LoadLYJD_GNYJBXX(string ID);
 
+        object SaveLYJD_CJYJBXX(JCXX jcxx, LYJD_CJYJBXX dzfjbxx, List<PHOTOS> photos);
+
+        object LoadLYJD_CJYJBXX(string ID);
+
         object SaveLYJD_JDZSYDJBXX(JCXX jcxx, LYJD_JDZSYDJBXX dzfjbxx, List<PHOTOS> photos);
 
         object LoadLYJD_JDZSYDJBXX(string ID);

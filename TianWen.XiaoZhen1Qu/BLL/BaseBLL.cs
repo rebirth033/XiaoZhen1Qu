@@ -22,7 +22,7 @@ namespace TianWen.XiaoZhen1Qu.BLL
             try
             {
                 if (TBName == "CODES_DISTRICT")
-                    return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_DISTRICT>(String.Format("FROM CODES_DISTRICT WHERE PARENTID = '{0}' ORDER BY CODEORDER", ParentID)) };
+                    return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_DISTRICT>(String.Format("FROM CODES_DISTRICT WHERE PARENTID = '{0}' ORDER BY CODEVALUE", ParentID)) };
                 if (TBName == "CODES_ES_SJSM")
                     return new { Result = EnResultType.Success, list = DAO.Repository.GetObjectList<CODES_ES_SJSM>(String.Format("FROM CODES_ES_SJSM WHERE PARENTID = '{0}' ORDER BY CODEORDER", ParentID)) };
                 if (TBName == "CODES_ES_JDJJBG")

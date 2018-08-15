@@ -1172,6 +1172,8 @@
     <Content Include="Areas\Business\Scripts\Business\HTFB\FC\FC_XZLYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\FC\FC_HZF.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\FC\FC_HZFYZ.js" />
+    <Content Include="Areas\Business\Scripts\Business\HTFB\LYJD\LYJD_CJY.js" />
+    <Content Include="Areas\Business\Scripts\Business\HTFB\LYJD\LYJD_CJYYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\LYJD\LYJD_QZFW.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\LYJD\LYJD_QZFWYZ.js" />
     <Content Include="Areas\Business\Scripts\Business\HTFB\SHFW\SHFW_SMWX.js" />
@@ -2866,6 +2868,8 @@
     <Content Include="Areas\Business\Views\CLCX\CLCX_MBC.cshtml" />
     <Content Include="Areas\Business\Views\SHFW\SHFW_ESHS.cshtml" />
     <Content Include="Areas\Business\Views\SHFWCX\SHFWCX_ESHS.cshtml" />
+    <Content Include="Areas\Business\Views\LYJD\LYJD_CJY.cshtml" />
+    <Content Include="Areas\Business\Views\LYJDCX\LYJDCX_CJY.cshtml" />
     <None Include="Areas\Business\Views\SHFWXX\SHFWXX_ESHS.cshtml" />
     <None Include="Properties\PublishProfiles\xxxz.pubxml" />
     <None Include="Web.Debug.config">

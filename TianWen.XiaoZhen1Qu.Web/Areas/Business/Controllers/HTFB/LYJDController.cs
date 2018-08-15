@@ -22,6 +22,12 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             ViewData["YHM"] = Session["YHM"];
             return View();
         }
+        public ActionResult LYJD_CJY()
+        {
+            ViewData["XZQ"] = Session["XZQ"];
+            ViewData["YHM"] = Session["YHM"];
+            return View();
+        }
         public ActionResult LYJD_JDZSYD()
         {
             ViewData["XZQ"] = Session["XZQ"];
@@ -85,6 +91,26 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
             LYJD_GNYjbxx.ZFXM = BinaryHelper.StringToBinary(zfxm);
             List<PHOTOS> photos = GetTP(fwzp);
             object result = LYJD_BLL.SaveLYJD_GNYJBXX(jcxx, LYJD_GNYjbxx, photos);
+            return Json(result);
+        }
+        [ValidateInput(false)]
+        public JsonResult FBLYJD_CJYJBXX()
+        {
+            YHJBXX yhjbxx = LYJD_BLL.GetYHJBXXByYHM(Session["YHM"].ToString());
+            string json = Request["Json"];
+            string xlts = Request["XLTS"];
+            string xcap = Request["XCAP"];
+            string ydxz = Request["YDXZ"];
+            string fybh = Request["FYBH"];
+            string zfxm = Request["ZFXM"];
+            string fwzp = Request["FWZP"];
+            JCXX jcxx = CreateJCXX(yhjbxx, json);
+            LYJD_CJYJBXX LYJD_CJYjbxx = JsonHelper.ConvertJsonToObject<LYJD_CJYJBXX>(json);
+            LYJD_CJYjbxx.XCAP = BinaryHelper.StringToBinary(xcap);
+            LYJD_CJYjbxx.FYBH = BinaryHelper.StringToBinary(fybh);
+            LYJD_CJYjbxx.ZFXM = BinaryHelper.StringToBinary(zfxm);
+            List<PHOTOS> photos = GetTP(fwzp);
+            object result = LYJD_BLL.SaveLYJD_CJYJBXX(jcxx, LYJD_CJYjbxx, photos);
             return Json(result);
         }
         [ValidateInput(false)]
@@ -168,6 +194,12 @@ namespace TianWen.XiaoZhen1Qu.Web.Areas.Business.Controllers
         {
             string ID = Request["ID"];
             object result = LYJD_BLL.LoadLYJD_GNYJBXX(ID);
+            return Json(result);
+        }
+        public JsonResult LoadLYJD_CJYJBXX()
+        {
+            string ID = Request["ID"];
+            object result = LYJD_BLL.LoadLYJD_CJYJBXX(ID);
             return Json(result);
         }
         public JsonResult LoadLYJD_JDZSYDJBXX()

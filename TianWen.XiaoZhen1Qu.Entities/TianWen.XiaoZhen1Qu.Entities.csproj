@@ -161,6 +161,7 @@
     <Compile Include="Maps\JYPX\JYPX_ZXXFDBJBXX_Map.cs" />
     <Compile Include="Maps\JYPX\JYPX_ZXXYDYJBXX_Map.cs" />
     <Compile Include="Maps\JYPX\JYPX_ZYJNPXJBXX_Map.cs" />
+    <Compile Include="Maps\LYJD\LYJD_CJYJBXX_Map.cs" />
     <Compile Include="Maps\LYJD\LYJD_DYDDRBXX_Map.cs" />
     <Compile Include="Maps\LYJD\LYJD_GNYJBXX_Map.cs" />
     <Compile Include="Maps\LYJD\LYJD_JDZSYDJBXX_Map.cs" />
@@ -417,6 +418,7 @@
     <Compile Include="Models\LR\LR_WDJBXX.cs" />
     <Compile Include="Models\LR\LR_WSJBXX.cs" />
     <Compile Include="Models\LR\LR_YJJBXX.cs" />
+    <Compile Include="Models\LYJD\LYJD_CJYJBXX.cs" />
     <Compile Include="Models\LYJD\LYJD_DYDDRJBXX.cs" />
     <Compile Include="Models\LYJD\LYJD_GNYJBXX.cs" />
     <Compile Include="Models\LYJD\LYJD_JDZSYDJBXX.cs" />
