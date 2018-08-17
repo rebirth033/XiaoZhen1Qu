@@ -1,7 +1,0 @@
-导出
-mysqldump -u root -p infotownlet --hex-blob > xxxz.sql;
-
-导入
-1.进入mysql:mysql -u root -p
-2.输入:use infotownlet
-3.输入:source xxxz.sql;
